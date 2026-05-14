@@ -136,32 +136,6 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
 }
 
 .emotion-9 {
-  box-sizing: content-box;
-  color: #FFFFFF;
-  fill: currentColor;
-  height: 1.25rem;
-  max-width: 100%;
-}
-
-@media (min-width: 25rem) {
-  .emotion-9 {
-    height: 1.5rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-9 {
-    height: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast: active),print {
-  .emotion-9 {
-    fill: windowText;
-  }
-}
-
-.emotion-11 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -172,7 +146,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
   margin: 0;
 }
 
-.emotion-12 {
+.emotion-10 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -183,32 +157,32 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-12 {
+  .emotion-10 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-12 {
+  .emotion-10 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-12 {
+  .emotion-10 {
     padding: 0 0.5rem;
   }
 }
 
-.emotion-13 {
+.emotion-11 {
   max-width: 63rem;
   margin: 0 auto;
   padding-top: 0.5rem;
 }
 
-.emotion-14 {
+.emotion-12 {
   border-bottom: 0.0625rem solid #3F3F42;
   -webkit-column-count: 4;
   column-count: 4;
@@ -218,14 +192,14 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-14 {
+  .emotion-12 {
     display: grid;
     grid-auto-flow: column;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-14 {
+  .emotion-12 {
     grid-auto-flow: row;
     -webkit-column-count: 1;
     column-count: 1;
@@ -233,7 +207,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
 }
 
 @media (min-width: 15rem) and (max-width: 37.4375rem) {
-  .emotion-14 {
+  .emotion-12 {
     grid-column-gap: 0.5rem;
     grid-template-columns: repeat(2, 1fr);
     -webkit-column-count: 2;
@@ -242,7 +216,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-14 {
+  .emotion-12 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(3, 1fr);
     -webkit-column-count: 3;
@@ -251,7 +225,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-14 {
+  .emotion-12 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(4, 1fr);
     -webkit-column-count: 4;
@@ -260,7 +234,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
 }
 
 @media (min-width: 80rem) {
-  .emotion-14 {
+  .emotion-12 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(5, 1fr);
     -webkit-column-count: 5;
@@ -268,7 +242,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
   }
 }
 
-.emotion-14>li:first-of-type {
+.emotion-12>li:first-of-type {
   border-bottom: 0.0625rem solid #3F3F42;
   padding: 0.5rem 0;
   margin-bottom: 0.5rem;
@@ -279,37 +253,37 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
 }
 
 @media (min-width: 15rem) and (max-width: 37.4375rem) {
-  .emotion-14 {
+  .emotion-12 {
     grid-template-rows: repeat(4, auto);
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-14 {
+  .emotion-12 {
     grid-template-rows: repeat(3, auto);
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-14 {
+  .emotion-12 {
     grid-template-rows: repeat(3, auto);
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-14 {
+  .emotion-12 {
     grid-template-rows: repeat(3, auto);
   }
 }
 
-.emotion-15 {
+.emotion-13 {
   min-width: 50%;
   -webkit-column-gap: 1rem;
   column-gap: 1rem;
   break-inside: avoid-column;
 }
 
-.emotion-16 {
+.emotion-14 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -320,23 +294,23 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
   display: block;
 }
 
-.emotion-16:hover,
-.emotion-16:focus {
+.emotion-14:hover,
+.emotion-14:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-23 {
+.emotion-21 {
   color: #FFFFFF;
   margin: 0;
   padding: 1rem 0;
 }
 
-.emotion-23 a {
+.emotion-21 a {
   padding: 0;
 }
 
-.emotion-24 {
+.emotion-22 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -347,8 +321,8 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
   display: inline;
 }
 
-.emotion-24:hover,
-.emotion-24:focus {
+.emotion-22:hover,
+.emotion-22:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
@@ -370,28 +344,17 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
           href="/news"
           id="footer"
         >
-          <svg
+          <img
+            alt="BBC News"
             aria-hidden="true"
-            class="emotion-9 emotion-10"
             focusable="false"
-            height="32"
+            height="30"
             id="brandSvgFooter"
-            viewBox="0 0 980 142"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fill-rule="evenodd"
-              stroke="#000"
-              stroke-width=".335"
-              style="stroke: #fff;"
-            >
-              <path
-                d="M0 0v141.732h141.732V0Zm98.839 100.024a23.16 23.16 0 0 1-10.352 7.917 42.088 42.088 0 0 1-16.153 2.787H40.571V31.004h29.92q13.224 0 20.489 5.296 7.261 5.296 7.263 15.22a18.29 18.29 0 0 1-2.602 9.868 17.917 17.917 0 0 1-7.697 6.634 21.248 21.248 0 0 1 10.786 7.415 20.186 20.186 0 0 1 3.74 12.32 20.663 20.663 0 0 1-3.631 12.267Zm-20.272-38.97a9.358 9.358 0 0 0 3.307-7.638q0-9.476-12.901-9.477H56.724v19.847h12.249q6.287 0 9.594-2.732Zm-7.534 15.22H56.724v21.52h14.093q7.261 0 11.166-2.732a9.01 9.01 0 0 0 3.903-7.861q-.001-10.926-14.853-10.927ZM177.166 0v141.732h141.732V0Zm98.838 100.024a23.16 23.16 0 0 1-10.352 7.917 42.088 42.088 0 0 1-16.153 2.787h-31.763V31.004h29.92q13.224 0 20.489 5.296 7.261 5.298 7.263 15.22a18.29 18.29 0 0 1-2.602 9.868 17.917 17.917 0 0 1-7.697 6.634 21.248 21.248 0 0 1 10.786 7.415 20.187 20.187 0 0 1 3.74 12.32 20.663 20.663 0 0 1-3.631 12.267Zm-20.271-38.97a9.358 9.358 0 0 0 3.307-7.638q0-9.476-12.901-9.477H233.89v19.847h12.249q6.287 0 9.594-2.732Zm-7.535 15.22h-14.309v21.52h14.093q7.261 0 11.166-2.732a9.01 9.01 0 0 0 3.903-7.861q-.001-10.926-14.853-10.927Zm106.133 65.459h141.732V0H354.331Zm101.793-36.057a46.238 46.238 0 0 1-11.478 4.316 58.045 58.045 0 0 1-13.729 1.585 50.05 50.05 0 0 1-17.217-2.787 35.175 35.175 0 0 1-12.941-8.033 34.802 34.802 0 0 1-8.102-12.842 48.987 48.987 0 0 1-2.814-17.104 45.738 45.738 0 0 1 2.926-16.776 35.83 35.83 0 0 1 8.44-12.842 37.18 37.18 0 0 1 13.222-8.197 49.66 49.66 0 0 1 17.274-2.842 55.607 55.607 0 0 1 12.547 1.366 46.64 46.64 0 0 1 10.972 3.989v15.519a36.756 36.756 0 0 0-10.016-4.645 40.183 40.183 0 0 0-11.365-1.585 29.66 29.66 0 0 0-14.01 3.06 20.959 20.959 0 0 0-8.89 8.853 29.58 29.58 0 0 0-3.094 14.098 30.845 30.845 0 0 0 2.982 14.154 20.367 20.367 0 0 0 8.664 8.907 28.727 28.727 0 0 0 13.785 3.06 42.724 42.724 0 0 0 22.844-6.448Zm162.072 18.34q-11.596-18.582-23.49-37.242-11.897-18.656-23.49-36.2v73.442h-22.003V17.718h23.192q12.042 17.99 23.713 36.052 11.668 18.063 23.266 36.646V17.718h22.003v106.298Zm44.258-106.298h73.145v19.029h-50.25V59.79h44.601V78.82h-44.601v26.166h53.075v19.03h-75.97Zm177.915 106.298q-5.055-17.987-9.886-35.978-4.833-17.987-9.441-35.978-4.46 17.99-9.217 35.978-4.76 17.99-9.812 35.978H777.78Q770.198 98 763.21 71.386q-6.99-26.61-13.231-53.67h24.976q3.715 20.666 7.88 41.33 4.16 20.668 8.771 40.587 9.959-38.802 18.881-77.456h22.3q4.461 19.032 9.143 37.985 4.683 18.955 9.589 37.836 4.46-19.625 8.623-39.843 4.16-20.216 7.73-40.438h24.531q-6.244 27.06-13.231 53.67-6.99 26.613-14.57 52.629Zm95.37 2.23a78.37 78.37 0 0 1-17.32-1.933 66.24 66.24 0 0 1-16.428-6.096V97.7a63.933 63.933 0 0 0 33.748 9.664q10.109 0 15.387-3.42a10.75 10.75 0 0 0 5.278-9.514 9.755 9.755 0 0 0-2.601-7.211 18.56 18.56 0 0 0-6.913-4.163 99.45 99.45 0 0 0-9.663-2.9 110.65 110.65 0 0 1-15.462-4.756 45.068 45.068 0 0 1-11.299-6.32 23.846 23.846 0 0 1-6.987-8.77 28.942 28.942 0 0 1-2.379-12.265 29.446 29.446 0 0 1 5.129-17.395 32.716 32.716 0 0 1 14.496-11.225q9.366-3.938 22.3-3.94a72.223 72.223 0 0 1 16.651 1.934 67.688 67.688 0 0 1 14.718 5.204v20.219a56.134 56.134 0 0 0-14.792-6.244 63.276 63.276 0 0 0-16.577-2.231q-9.07 0-14.049 3.122a9.935 9.935 0 0 0-4.981 8.92 9.093 9.093 0 0 0 2.379 6.616 17.36 17.36 0 0 0 6.765 4.014q4.383 1.561 10.332 3.048 7.583 1.935 14.124 4.237a45.864 45.864 0 0 1 11.521 5.872 24.459 24.459 0 0 1 7.731 9.069 30.061 30.061 0 0 1 2.75 13.529q0 10.558-5.203 18.063a32.29 32.29 0 0 1-15.016 11.447q-9.813 3.939-23.639 3.94Z"
-              />
-            </g>
-          </svg>
+            src="http://localhost:7080//news/images/brandLogo.svg"
+            style="margin-left: 0.5px;"
+          />
           <span
-            class="emotion-11"
+            class="emotion-9"
             id="BrandLink-footer"
           >
             BBC News
@@ -400,20 +363,20 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
       </div>
     </div>
     <div
-      class="emotion-12"
+      class="emotion-10"
     >
       <div
-        class="emotion-13"
+        class="emotion-11"
       >
         <ul
-          class="emotion-14"
+          class="emotion-12"
           role="list"
         >
           <li
-            class="emotion-15"
+            class="emotion-13"
           >
             <a
-              class="focusIndicatorInvert emotion-16"
+              class="focusIndicatorInvert emotion-14"
               href="https://www.bbc.com/news/help-41670342"
             >
               Why you can trust the BBC
@@ -421,7 +384,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
           </li>
           <li>
             <a
-              class="focusIndicatorInvert emotion-16"
+              class="focusIndicatorInvert emotion-14"
               href="https://www.bbc.com/terms"
             >
               Terms of Use
@@ -429,7 +392,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
           </li>
           <li>
             <a
-              class="focusIndicatorInvert emotion-16"
+              class="focusIndicatorInvert emotion-14"
               href="https://www.bbc.co.uk/aboutthebbc/"
             >
               About the BBC
@@ -437,7 +400,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
           </li>
           <li>
             <a
-              class="focusIndicatorInvert emotion-16"
+              class="focusIndicatorInvert emotion-14"
               href="https://www.bbc.com/privacy/"
             >
               Privacy Policy
@@ -445,7 +408,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
           </li>
           <li>
             <a
-              class="focusIndicatorInvert emotion-16"
+              class="focusIndicatorInvert emotion-14"
               href="https://www.bbc.com/usingthebbc/cookies/"
             >
               Cookies
@@ -453,7 +416,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
           </li>
           <li>
             <a
-              class="focusIndicatorInvert emotion-16"
+              class="focusIndicatorInvert emotion-14"
               href="https://www.bbc.com/accessibility/"
             >
               Accessibility Help
@@ -461,7 +424,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
           </li>
           <li>
             <a
-              class="focusIndicatorInvert emotion-16"
+              class="focusIndicatorInvert emotion-14"
               href="https://www.bbc.com/contact/"
             >
               Contact the BBC
@@ -469,7 +432,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
           </li>
         </ul>
         <p
-          class="emotion-23"
+          class="emotion-21"
         >
           <span
             lang="en-GB"
@@ -480,7 +443,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
           3000 BBC. The BBC is not responsible for the content of external sites.
            
           <a
-            class="focusIndicatorInvert emotion-24"
+            class="focusIndicatorInvert emotion-22"
             href="https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links"
           >
             Read about our approach to external linking.

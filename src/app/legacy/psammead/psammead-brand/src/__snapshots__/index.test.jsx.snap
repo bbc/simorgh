@@ -63,32 +63,6 @@ exports[`Brand should render correctly with link not provided 1`] = `
 }
 
 .emotion-4 {
-  box-sizing: content-box;
-  color: #FFFFFF;
-  fill: currentColor;
-  height: 1.25rem;
-  max-width: 100%;
-}
-
-@media (min-width: 25rem) {
-  .emotion-4 {
-    height: 1.5rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-4 {
-    height: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast: active),print {
-  .emotion-4 {
-    fill: windowText;
-  }
-}
-
-.emotion-6 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -106,25 +80,17 @@ exports[`Brand should render correctly with link not provided 1`] = `
     <div
       class="brand-svg-wrapper emotion-2 emotion-3"
     >
-      <svg
+      <img
+        alt="Default Brand Name"
         aria-hidden="true"
-        class="emotion-4 emotion-5"
         focusable="false"
-        height="32"
+        height="30"
         id="brandSvgHeader"
-        viewBox="0 0 167.95 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <g
-          fill-rule="evenodd"
-        >
-          <path
-            d="M84.32"
-          />
-        </g>
-      </svg>
+        src="/news/images/brandLogo.svg"
+        style="margin-left: 0.5px;"
+      />
       <span
-        class="emotion-6"
+        class="emotion-4"
         id="BrandLink-null"
         role="text"
       >
@@ -237,32 +203,6 @@ exports[`Brand should render correctly with link provided 1`] = `
 }
 
 .emotion-6 {
-  box-sizing: content-box;
-  color: #FFFFFF;
-  fill: currentColor;
-  height: 1.25rem;
-  max-width: 100%;
-}
-
-@media (min-width: 25rem) {
-  .emotion-6 {
-    height: 1.5rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-6 {
-    height: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast: active),print {
-  .emotion-6 {
-    fill: windowText;
-  }
-}
-
-.emotion-8 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -285,25 +225,17 @@ exports[`Brand should render correctly with link provided 1`] = `
         class="brand-link focusIndicatorRemove emotion-4 emotion-5"
         href="https://www.bbc.co.uk/news"
       >
-        <svg
+        <img
+          alt="Default Brand Name"
           aria-hidden="true"
-          class="emotion-6 emotion-7"
           focusable="false"
-          height="32"
+          height="30"
           id="brandSvgHeader"
-          viewBox="0 0 167.95 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill-rule="evenodd"
-          >
-            <path
-              d="M84.32"
-            />
-          </g>
-        </svg>
+          src="/news/images/brandLogo.svg"
+          style="margin-left: 0.5px;"
+        />
         <span
-          class="emotion-8"
+          class="emotion-6"
           id="BrandLink-null"
           role="text"
         >
@@ -385,32 +317,6 @@ exports[`Brand should render correctly with no service Localised Name 1`] = `
 }
 
 .emotion-4 {
-  box-sizing: content-box;
-  color: #FFFFFF;
-  fill: currentColor;
-  height: 1.25rem;
-  max-width: 100%;
-}
-
-@media (min-width: 25rem) {
-  .emotion-4 {
-    height: 1.5rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-4 {
-    height: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast: active),print {
-  .emotion-4 {
-    fill: windowText;
-  }
-}
-
-.emotion-6 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -428,25 +334,17 @@ exports[`Brand should render correctly with no service Localised Name 1`] = `
     <div
       class="brand-svg-wrapper emotion-2 emotion-3"
     >
-      <svg
+      <img
+        alt="BBC News"
         aria-hidden="true"
-        class="emotion-4 emotion-5"
         focusable="false"
-        height="32"
+        height="30"
         id="brandSvgHeader"
-        viewBox="0 0 167.95 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <g
-          fill-rule="evenodd"
-        >
-          <path
-            d="M84.32"
-          />
-        </g>
-      </svg>
+        src="/news/images/brandLogo.svg"
+        style="margin-left: 0.5px;"
+      />
       <span
-        class="emotion-6"
+        class="emotion-4"
         id="BrandLink-null"
       >
         BBC News

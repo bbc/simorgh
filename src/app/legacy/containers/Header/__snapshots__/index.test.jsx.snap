@@ -390,32 +390,6 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
 }
 
 .emotion-23 {
-  box-sizing: content-box;
-  color: #FFFFFF;
-  fill: currentColor;
-  height: 1.25rem;
-  max-width: 100%;
-}
-
-@media (min-width: 25rem) {
-  .emotion-23 {
-    height: 1.5rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-23 {
-    height: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast: active),print {
-  .emotion-23 {
-    fill: windowText;
-  }
-}
-
-.emotion-25 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -426,7 +400,7 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
   margin: 0;
 }
 
-.emotion-26 {
+.emotion-24 {
   position: absolute;
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -448,20 +422,20 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-26 {
+  .emotion-24 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-26 {
+  .emotion-24 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-26:focus {
+.emotion-24:focus {
   -webkit-clip-path: none;
   clip-path: none;
   clip: auto;
@@ -472,24 +446,24 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
 }
 
 @media (min-width: 25rem) {
-  .emotion-26:focus {
+  .emotion-24:focus {
     top: 0.5rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-26 {
+  .emotion-24 {
     padding: 0.5rem;
   }
 }
 
-.emotion-28 {
+.emotion-26 {
   position: relative;
   background-color: #FFFFFF;
 }
 
 @media (min-width: 62.9375rem) {
-  .emotion-28::after {
+  .emotion-26::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -499,11 +473,11 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
   }
 }
 
-.emotion-28 .emotion-44::after {
+.emotion-26 .emotion-42::after {
   left: 0;
 }
 
-.emotion-30 {
+.emotion-28 {
   position: relative;
   max-width: 63.4rem;
   margin: 0 auto;
@@ -511,22 +485,22 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-30 {
+  .emotion-28 {
     margin: 0 0.8rem;
   }
 }
 
 @media (min-width: 66rem) {
-  .emotion-30 {
+  .emotion-28 {
     margin: 0 auto;
   }
 }
 
-.emotion-32 {
+.emotion-30 {
   position: relative;
 }
 
-.emotion-34 {
+.emotion-32 {
   position: relative;
   padding: 0;
   margin: 0;
@@ -537,14 +511,14 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
   width: 2.75rem;
 }
 
-.emotion-34:hover,
-.emotion-34:focus {
+.emotion-32:hover,
+.emotion-32:focus {
   cursor: pointer;
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
-.emotion-34:hover::after,
-.emotion-34:focus::after {
+.emotion-32:hover::after,
+.emotion-32:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -555,36 +529,36 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-34 {
+  .emotion-32 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 20rem) {
-  .emotion-34 {
+  .emotion-32 {
     height: 2.75rem;
     width: 2.75rem;
   }
 }
 
-.emotion-34 svg {
+.emotion-32 svg {
   vertical-align: middle;
 }
 
-.emotion-36 {
+.emotion-34 {
   color: #000000;
   fill: currentColor;
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-36 {
+  .emotion-34 {
     fill: linkText;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-39 {
+  .emotion-37 {
     white-space: nowrap;
     overflow-x: scroll;
     scroll-behavior: auto;
@@ -593,15 +567,15 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
     -ms-overflow-style: none;
   }
 
-  .emotion-39::-webkit-scrollbar {
+  .emotion-37::-webkit-scrollbar {
     display: none;
   }
 
-  .emotion-39:focus-visible {
+  .emotion-37:focus-visible {
     outline: none;
   }
 
-  .emotion-39:focus-visible::after {
+  .emotion-37:focus-visible::after {
     outline: 0.1875rem solid #000000;
     content: '';
     position: absolute;
@@ -609,7 +583,7 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
     height: 100%;
   }
 
-  .emotion-39:after {
+  .emotion-37:after {
     content: ' ';
     height: 100%;
     width: 3rem;
@@ -627,13 +601,13 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
   }
 
   @media (min-width: 25rem) {
-    .emotion-39:after {
+    .emotion-37:after {
       width: 6rem;
     }
   }
 }
 
-.emotion-41 {
+.emotion-39 {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -641,12 +615,12 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-41 {
+  .emotion-39 {
     overflow: hidden;
   }
 }
 
-.emotion-43 {
+.emotion-41 {
   display: inline-block;
   position: relative;
   z-index: 2;
@@ -655,13 +629,13 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-43:last-child {
+  .emotion-41:last-child {
     margin-right: 3rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-43::after {
+  .emotion-41::after {
     content: '';
     position: absolute;
     bottom: -1px;
@@ -671,7 +645,7 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
   }
 }
 
-.emotion-45 {
+.emotion-43 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -687,26 +661,26 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-45 {
+  .emotion-43 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-45 {
+  .emotion-43 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-45 {
+  .emotion-43 {
     padding: 0.75rem 0.5rem;
   }
 }
 
-.emotion-45:hover::after {
+.emotion-43:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -715,18 +689,7 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
   border-bottom: 0.25rem solid #B80000;
 }
 
-.emotion-45:focus::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-bottom: 0.25rem solid #B80000;
-  top: 0;
-  border: 0.1875rem solid #000000;
-}
-
-.emotion-45:focus-visible::after {
+.emotion-43:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -737,7 +700,18 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
   border: 0.1875rem solid #000000;
 }
 
-.emotion-87 {
+.emotion-43:focus-visible::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+  top: 0;
+  border: 0.1875rem solid #000000;
+}
+
+.emotion-85 {
   background-color: #FFFFFF;
   clear: both;
   overflow: hidden;
@@ -749,37 +723,37 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-87 {
+  .emotion-85 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .emotion-87 {
+  .emotion-85 {
     -webkit-transition: none;
     transition: none;
   }
 }
 
-.emotion-89 {
+.emotion-87 {
   list-style-type: none;
   margin: 0;
   padding: 0 0.5rem;
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 
-.emotion-91 {
+.emotion-89 {
   padding: 0.75rem 0;
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 
-.emotion-91:last-child {
+.emotion-89:last-child {
   padding-bottom: 0.25rem;
   border: 0;
 }
 
-.emotion-93 {
+.emotion-91 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -793,40 +767,40 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-93 {
+  .emotion-91 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-93 {
+  .emotion-91 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-93:hover,
-.emotion-93:focus {
+.emotion-91:hover,
+.emotion-91:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   text-decoration-color: #B80000;
 }
 
-.emotion-135 {
+.emotion-133 {
   position: absolute;
   width: calc(100vw - 0.8rem);
   inset-inline-start: 0;
 }
 
 @media (min-width: 1041px) {
-  .emotion-135 {
+  .emotion-133 {
     width: calc(100vw + 0.8rem);
     inset-inline-start: calc(-1 * (100vw - 1014px) / 2);
   }
 }
 
-.emotion-135::after {
+.emotion-133::after {
   content: '';
   position: absolute;
   inset-block-end: 0;
@@ -836,7 +810,7 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
 }
 
 @media (min-width: 1008px) {
-  .emotion-135 {
+  .emotion-133 {
     display: none;
   }
 }
@@ -922,35 +896,24 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
           href="/news"
           id="topPage"
         >
-          <svg
+          <img
+            alt="BBC News"
             aria-hidden="true"
-            class="emotion-23 emotion-24"
             focusable="false"
-            height="32"
+            height="30"
             id="brandSvgHeader"
-            viewBox="0 0 980 142"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fill-rule="evenodd"
-              stroke="#000"
-              stroke-width=".335"
-              style="stroke: #fff;"
-            >
-              <path
-                d="M0 0v141.732h141.732V0Zm98.839 100.024a23.16 23.16 0 0 1-10.352 7.917 42.088 42.088 0 0 1-16.153 2.787H40.571V31.004h29.92q13.224 0 20.489 5.296 7.261 5.296 7.263 15.22a18.29 18.29 0 0 1-2.602 9.868 17.917 17.917 0 0 1-7.697 6.634 21.248 21.248 0 0 1 10.786 7.415 20.186 20.186 0 0 1 3.74 12.32 20.663 20.663 0 0 1-3.631 12.267Zm-20.272-38.97a9.358 9.358 0 0 0 3.307-7.638q0-9.476-12.901-9.477H56.724v19.847h12.249q6.287 0 9.594-2.732Zm-7.534 15.22H56.724v21.52h14.093q7.261 0 11.166-2.732a9.01 9.01 0 0 0 3.903-7.861q-.001-10.926-14.853-10.927ZM177.166 0v141.732h141.732V0Zm98.838 100.024a23.16 23.16 0 0 1-10.352 7.917 42.088 42.088 0 0 1-16.153 2.787h-31.763V31.004h29.92q13.224 0 20.489 5.296 7.261 5.298 7.263 15.22a18.29 18.29 0 0 1-2.602 9.868 17.917 17.917 0 0 1-7.697 6.634 21.248 21.248 0 0 1 10.786 7.415 20.187 20.187 0 0 1 3.74 12.32 20.663 20.663 0 0 1-3.631 12.267Zm-20.271-38.97a9.358 9.358 0 0 0 3.307-7.638q0-9.476-12.901-9.477H233.89v19.847h12.249q6.287 0 9.594-2.732Zm-7.535 15.22h-14.309v21.52h14.093q7.261 0 11.166-2.732a9.01 9.01 0 0 0 3.903-7.861q-.001-10.926-14.853-10.927Zm106.133 65.459h141.732V0H354.331Zm101.793-36.057a46.238 46.238 0 0 1-11.478 4.316 58.045 58.045 0 0 1-13.729 1.585 50.05 50.05 0 0 1-17.217-2.787 35.175 35.175 0 0 1-12.941-8.033 34.802 34.802 0 0 1-8.102-12.842 48.987 48.987 0 0 1-2.814-17.104 45.738 45.738 0 0 1 2.926-16.776 35.83 35.83 0 0 1 8.44-12.842 37.18 37.18 0 0 1 13.222-8.197 49.66 49.66 0 0 1 17.274-2.842 55.607 55.607 0 0 1 12.547 1.366 46.64 46.64 0 0 1 10.972 3.989v15.519a36.756 36.756 0 0 0-10.016-4.645 40.183 40.183 0 0 0-11.365-1.585 29.66 29.66 0 0 0-14.01 3.06 20.959 20.959 0 0 0-8.89 8.853 29.58 29.58 0 0 0-3.094 14.098 30.845 30.845 0 0 0 2.982 14.154 20.367 20.367 0 0 0 8.664 8.907 28.727 28.727 0 0 0 13.785 3.06 42.724 42.724 0 0 0 22.844-6.448Zm162.072 18.34q-11.596-18.582-23.49-37.242-11.897-18.656-23.49-36.2v73.442h-22.003V17.718h23.192q12.042 17.99 23.713 36.052 11.668 18.063 23.266 36.646V17.718h22.003v106.298Zm44.258-106.298h73.145v19.029h-50.25V59.79h44.601V78.82h-44.601v26.166h53.075v19.03h-75.97Zm177.915 106.298q-5.055-17.987-9.886-35.978-4.833-17.987-9.441-35.978-4.46 17.99-9.217 35.978-4.76 17.99-9.812 35.978H777.78Q770.198 98 763.21 71.386q-6.99-26.61-13.231-53.67h24.976q3.715 20.666 7.88 41.33 4.16 20.668 8.771 40.587 9.959-38.802 18.881-77.456h22.3q4.461 19.032 9.143 37.985 4.683 18.955 9.589 37.836 4.46-19.625 8.623-39.843 4.16-20.216 7.73-40.438h24.531q-6.244 27.06-13.231 53.67-6.99 26.613-14.57 52.629Zm95.37 2.23a78.37 78.37 0 0 1-17.32-1.933 66.24 66.24 0 0 1-16.428-6.096V97.7a63.933 63.933 0 0 0 33.748 9.664q10.109 0 15.387-3.42a10.75 10.75 0 0 0 5.278-9.514 9.755 9.755 0 0 0-2.601-7.211 18.56 18.56 0 0 0-6.913-4.163 99.45 99.45 0 0 0-9.663-2.9 110.65 110.65 0 0 1-15.462-4.756 45.068 45.068 0 0 1-11.299-6.32 23.846 23.846 0 0 1-6.987-8.77 28.942 28.942 0 0 1-2.379-12.265 29.446 29.446 0 0 1 5.129-17.395 32.716 32.716 0 0 1 14.496-11.225q9.366-3.938 22.3-3.94a72.223 72.223 0 0 1 16.651 1.934 67.688 67.688 0 0 1 14.718 5.204v20.219a56.134 56.134 0 0 0-14.792-6.244 63.276 63.276 0 0 0-16.577-2.231q-9.07 0-14.049 3.122a9.935 9.935 0 0 0-4.981 8.92 9.093 9.093 0 0 0 2.379 6.616 17.36 17.36 0 0 0 6.765 4.014q4.383 1.561 10.332 3.048 7.583 1.935 14.124 4.237a45.864 45.864 0 0 1 11.521 5.872 24.459 24.459 0 0 1 7.731 9.069 30.061 30.061 0 0 1 2.75 13.529q0 10.558-5.203 18.063a32.29 32.29 0 0 1-15.016 11.447q-9.813 3.939-23.639 3.94Z"
-              />
-            </g>
-          </svg>
+            src="http://localhost:7080//news/images/brandLogo.svg"
+            style="margin-left: 0.5px;"
+          />
           <span
-            class="emotion-25"
+            class="emotion-23"
             id="BrandLink-topPage"
           >
             BBC News
           </span>
         </a>
         <a
-          class="focusIndicatorRemove emotion-26 emotion-27"
+          class="focusIndicatorRemove emotion-24 emotion-25"
           dir="ltr"
           href="#content"
         >
@@ -962,26 +925,26 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
     </div>
   </div>
   <nav
-    class="emotion-28 emotion-29"
+    class="emotion-26 emotion-27"
     dir="ltr"
     role="navigation"
   >
     <div
-      class="emotion-30 emotion-31"
+      class="emotion-28 emotion-29"
     >
       <div
-        class="emotion-32 emotion-33"
+        class="emotion-30 emotion-31"
       >
         <button
           aria-expanded="false"
           aria-label="Sections"
-          class="focusIndicatorRemove emotion-34 emotion-35"
+          class="focusIndicatorRemove emotion-32 emotion-33"
           dir="ltr"
           type="button"
         >
           <svg
             aria-hidden="true"
-            class="emotion-36 emotion-37"
+            class="emotion-34 emotion-35"
             focusable="false"
             height="2.75rem"
             viewBox="0 0 44 44"
@@ -992,147 +955,147 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
             />
           </svg>
           <span
-            class="emotion-25"
+            class="emotion-23"
           >
             Sections
           </span>
         </button>
         <div
-          class="emotion-39 emotion-40"
+          class="emotion-37 emotion-38"
           data-e2e="scrollable-nav"
           dir="ltr"
         >
           <ul
-            class="emotion-41 emotion-42"
+            class="emotion-39 emotion-40"
             role="list"
           >
             <li
-              class="emotion-43 emotion-44"
+              class="emotion-41 emotion-42"
               dir="ltr"
               role="listitem"
             >
               <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
+                class="focusIndicatorRemove emotion-43 emotion-44"
                 href="/news"
               >
                 Home
               </a>
             </li>
             <li
-              class="emotion-43 emotion-44"
+              class="emotion-41 emotion-42"
               dir="ltr"
               role="listitem"
             >
               <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
+                class="focusIndicatorRemove emotion-43 emotion-44"
                 href="/news/uk"
               >
                 UK
               </a>
             </li>
             <li
-              class="emotion-43 emotion-44"
+              class="emotion-41 emotion-42"
               dir="ltr"
               role="listitem"
             >
               <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
+                class="focusIndicatorRemove emotion-43 emotion-44"
                 href="/news/world"
               >
                 World
               </a>
             </li>
             <li
-              class="emotion-43 emotion-44"
+              class="emotion-41 emotion-42"
               dir="ltr"
               role="listitem"
             >
               <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
+                class="focusIndicatorRemove emotion-43 emotion-44"
                 href="/news/business"
               >
                 Business
               </a>
             </li>
             <li
-              class="emotion-43 emotion-44"
+              class="emotion-41 emotion-42"
               dir="ltr"
               role="listitem"
             >
               <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
+                class="focusIndicatorRemove emotion-43 emotion-44"
                 href="/news/politics"
               >
                 Politics
               </a>
             </li>
             <li
-              class="emotion-43 emotion-44"
+              class="emotion-41 emotion-42"
               dir="ltr"
               role="listitem"
             >
               <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
+                class="focusIndicatorRemove emotion-43 emotion-44"
                 href="/news/technology"
               >
                 Tech
               </a>
             </li>
             <li
-              class="emotion-43 emotion-44"
+              class="emotion-41 emotion-42"
               dir="ltr"
               role="listitem"
             >
               <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
+                class="focusIndicatorRemove emotion-43 emotion-44"
                 href="/news/science_and_environment"
               >
                 Science
               </a>
             </li>
             <li
-              class="emotion-43 emotion-44"
+              class="emotion-41 emotion-42"
               dir="ltr"
               role="listitem"
             >
               <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
+                class="focusIndicatorRemove emotion-43 emotion-44"
                 href="/news/health"
               >
                 Health
               </a>
             </li>
             <li
-              class="emotion-43 emotion-44"
+              class="emotion-41 emotion-42"
               dir="ltr"
               role="listitem"
             >
               <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
+                class="focusIndicatorRemove emotion-43 emotion-44"
                 href="/news/education"
               >
                 Family & Education
               </a>
             </li>
             <li
-              class="emotion-43 emotion-44"
+              class="emotion-41 emotion-42"
               dir="ltr"
               role="listitem"
             >
               <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
+                class="focusIndicatorRemove emotion-43 emotion-44"
                 href="/news/entertainment_and_arts"
               >
                 Entertainment & Arts
               </a>
             </li>
             <li
-              class="emotion-43 emotion-44"
+              class="emotion-41 emotion-42"
               dir="ltr"
               role="listitem"
             >
               <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
+                class="focusIndicatorRemove emotion-43 emotion-44"
                 href="/news/stories"
               >
                 Stories
@@ -1142,21 +1105,21 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
         </div>
       </div>
       <div
-        class="emotion-87 emotion-88"
+        class="emotion-85 emotion-86"
         data-e2e="dropdown-nav"
         height="0"
       >
         <ul
-          class="emotion-89 emotion-90"
+          class="emotion-87 emotion-88"
           role="list"
         >
           <li
-            class="emotion-91 emotion-92"
+            class="emotion-89 emotion-90"
             role="listitem"
           >
             <a
               aria-labelledby="dropdownNavigation-home"
-              class="emotion-93 emotion-94"
+              class="emotion-91 emotion-92"
               href="/news"
             >
               <span
@@ -1167,12 +1130,12 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
             </a>
           </li>
           <li
-            class="emotion-91 emotion-92"
+            class="emotion-89 emotion-90"
             role="listitem"
           >
             <a
               aria-labelledby="dropdownNavigation-uk"
-              class="emotion-93 emotion-94"
+              class="emotion-91 emotion-92"
               href="/news/uk"
             >
               <span
@@ -1183,12 +1146,12 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
             </a>
           </li>
           <li
-            class="emotion-91 emotion-92"
+            class="emotion-89 emotion-90"
             role="listitem"
           >
             <a
               aria-labelledby="dropdownNavigation-world"
-              class="emotion-93 emotion-94"
+              class="emotion-91 emotion-92"
               href="/news/world"
             >
               <span
@@ -1199,12 +1162,12 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
             </a>
           </li>
           <li
-            class="emotion-91 emotion-92"
+            class="emotion-89 emotion-90"
             role="listitem"
           >
             <a
               aria-labelledby="dropdownNavigation-business"
-              class="emotion-93 emotion-94"
+              class="emotion-91 emotion-92"
               href="/news/business"
             >
               <span
@@ -1215,12 +1178,12 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
             </a>
           </li>
           <li
-            class="emotion-91 emotion-92"
+            class="emotion-89 emotion-90"
             role="listitem"
           >
             <a
               aria-labelledby="dropdownNavigation-politics"
-              class="emotion-93 emotion-94"
+              class="emotion-91 emotion-92"
               href="/news/politics"
             >
               <span
@@ -1231,12 +1194,12 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
             </a>
           </li>
           <li
-            class="emotion-91 emotion-92"
+            class="emotion-89 emotion-90"
             role="listitem"
           >
             <a
               aria-labelledby="dropdownNavigation-tech"
-              class="emotion-93 emotion-94"
+              class="emotion-91 emotion-92"
               href="/news/technology"
             >
               <span
@@ -1247,12 +1210,12 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
             </a>
           </li>
           <li
-            class="emotion-91 emotion-92"
+            class="emotion-89 emotion-90"
             role="listitem"
           >
             <a
               aria-labelledby="dropdownNavigation-science"
-              class="emotion-93 emotion-94"
+              class="emotion-91 emotion-92"
               href="/news/science_and_environment"
             >
               <span
@@ -1263,12 +1226,12 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
             </a>
           </li>
           <li
-            class="emotion-91 emotion-92"
+            class="emotion-89 emotion-90"
             role="listitem"
           >
             <a
               aria-labelledby="dropdownNavigation-health"
-              class="emotion-93 emotion-94"
+              class="emotion-91 emotion-92"
               href="/news/health"
             >
               <span
@@ -1279,12 +1242,12 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
             </a>
           </li>
           <li
-            class="emotion-91 emotion-92"
+            class="emotion-89 emotion-90"
             role="listitem"
           >
             <a
               aria-labelledby="dropdownNavigation-family-&-education"
-              class="emotion-93 emotion-94"
+              class="emotion-91 emotion-92"
               href="/news/education"
             >
               <span
@@ -1295,12 +1258,12 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
             </a>
           </li>
           <li
-            class="emotion-91 emotion-92"
+            class="emotion-89 emotion-90"
             role="listitem"
           >
             <a
               aria-labelledby="dropdownNavigation-entertainment-&-arts"
-              class="emotion-93 emotion-94"
+              class="emotion-91 emotion-92"
               href="/news/entertainment_and_arts"
             >
               <span
@@ -1311,12 +1274,12 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
             </a>
           </li>
           <li
-            class="emotion-91 emotion-92"
+            class="emotion-89 emotion-90"
             role="listitem"
           >
             <a
               aria-labelledby="dropdownNavigation-stories"
-              class="emotion-93 emotion-94"
+              class="emotion-91 emotion-92"
               href="/news/stories"
             >
               <span
@@ -1329,7 +1292,7 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
         </ul>
       </div>
       <div
-        class="emotion-135 emotion-136"
+        class="emotion-133 emotion-134"
       />
     </div>
   </nav>
@@ -1726,32 +1689,6 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
 }
 
 .emotion-23 {
-  box-sizing: content-box;
-  color: #FFFFFF;
-  fill: currentColor;
-  height: 1.25rem;
-  max-width: 100%;
-}
-
-@media (min-width: 25rem) {
-  .emotion-23 {
-    height: 1.5rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-23 {
-    height: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast: active),print {
-  .emotion-23 {
-    fill: windowText;
-  }
-}
-
-.emotion-25 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -1762,7 +1699,7 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
   margin: 0;
 }
 
-.emotion-26 {
+.emotion-24 {
   position: absolute;
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -1784,20 +1721,20 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-26 {
+  .emotion-24 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-26 {
+  .emotion-24 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-26:focus {
+.emotion-24:focus {
   -webkit-clip-path: none;
   clip-path: none;
   clip: auto;
@@ -1808,24 +1745,24 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
 }
 
 @media (min-width: 25rem) {
-  .emotion-26:focus {
+  .emotion-24:focus {
     top: 0.5rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-26 {
+  .emotion-24 {
     padding: 0.5rem;
   }
 }
 
-.emotion-28 {
+.emotion-26 {
   position: relative;
   background-color: #FFFFFF;
 }
 
 @media (min-width: 62.9375rem) {
-  .emotion-28::after {
+  .emotion-26::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -1835,11 +1772,11 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
   }
 }
 
-.emotion-28 .emotion-44::after {
+.emotion-26 .emotion-42::after {
   left: 0;
 }
 
-.emotion-30 {
+.emotion-28 {
   position: relative;
   max-width: 63.4rem;
   margin: 0 auto;
@@ -1847,22 +1784,22 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-30 {
+  .emotion-28 {
     margin: 0 0.8rem;
   }
 }
 
 @media (min-width: 66rem) {
-  .emotion-30 {
+  .emotion-28 {
     margin: 0 auto;
   }
 }
 
-.emotion-32 {
+.emotion-30 {
   position: relative;
 }
 
-.emotion-34 {
+.emotion-32 {
   position: relative;
   padding: 0;
   margin: 0;
@@ -1873,14 +1810,14 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
   width: 2.75rem;
 }
 
-.emotion-34:hover,
-.emotion-34:focus {
+.emotion-32:hover,
+.emotion-32:focus {
   cursor: pointer;
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
-.emotion-34:hover::after,
-.emotion-34:focus::after {
+.emotion-32:hover::after,
+.emotion-32:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -1891,36 +1828,36 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-34 {
+  .emotion-32 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 20rem) {
-  .emotion-34 {
+  .emotion-32 {
     height: 2.75rem;
     width: 2.75rem;
   }
 }
 
-.emotion-34 svg {
+.emotion-32 svg {
   vertical-align: middle;
 }
 
-.emotion-36 {
+.emotion-34 {
   color: #000000;
   fill: currentColor;
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-36 {
+  .emotion-34 {
     fill: linkText;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-39 {
+  .emotion-37 {
     white-space: nowrap;
     overflow-x: scroll;
     scroll-behavior: auto;
@@ -1929,15 +1866,15 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
     -ms-overflow-style: none;
   }
 
-  .emotion-39::-webkit-scrollbar {
+  .emotion-37::-webkit-scrollbar {
     display: none;
   }
 
-  .emotion-39:focus-visible {
+  .emotion-37:focus-visible {
     outline: none;
   }
 
-  .emotion-39:focus-visible::after {
+  .emotion-37:focus-visible::after {
     outline: 0.1875rem solid #000000;
     content: '';
     position: absolute;
@@ -1945,7 +1882,7 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
     height: 100%;
   }
 
-  .emotion-39:after {
+  .emotion-37:after {
     content: ' ';
     height: 100%;
     width: 3rem;
@@ -1963,13 +1900,13 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
   }
 
   @media (min-width: 25rem) {
-    .emotion-39:after {
+    .emotion-37:after {
       width: 6rem;
     }
   }
 }
 
-.emotion-41 {
+.emotion-39 {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -1977,12 +1914,12 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-41 {
+  .emotion-39 {
     overflow: hidden;
   }
 }
 
-.emotion-43 {
+.emotion-41 {
   display: inline-block;
   position: relative;
   z-index: 2;
@@ -1991,13 +1928,13 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-43:last-child {
+  .emotion-41:last-child {
     margin-right: 3rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-43::after {
+  .emotion-41::after {
     content: '';
     position: absolute;
     bottom: -1px;
@@ -2007,7 +1944,7 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
   }
 }
 
-.emotion-45 {
+.emotion-43 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -2023,26 +1960,26 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-45 {
+  .emotion-43 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-45 {
+  .emotion-43 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-45 {
+  .emotion-43 {
     padding: 0.75rem 0.5rem;
   }
 }
 
-.emotion-45:hover::after {
+.emotion-43:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -2051,18 +1988,7 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
   border-bottom: 0.25rem solid #B80000;
 }
 
-.emotion-45:focus::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-bottom: 0.25rem solid #B80000;
-  top: 0;
-  border: 0.1875rem solid #000000;
-}
-
-.emotion-45:focus-visible::after {
+.emotion-43:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -2073,7 +1999,18 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
   border: 0.1875rem solid #000000;
 }
 
-.emotion-87 {
+.emotion-43:focus-visible::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+  top: 0;
+  border: 0.1875rem solid #000000;
+}
+
+.emotion-85 {
   background-color: #FFFFFF;
   clear: both;
   overflow: hidden;
@@ -2085,37 +2022,37 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-87 {
+  .emotion-85 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .emotion-87 {
+  .emotion-85 {
     -webkit-transition: none;
     transition: none;
   }
 }
 
-.emotion-89 {
+.emotion-87 {
   list-style-type: none;
   margin: 0;
   padding: 0 0.5rem;
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 
-.emotion-91 {
+.emotion-89 {
   padding: 0.75rem 0;
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 
-.emotion-91:last-child {
+.emotion-89:last-child {
   padding-bottom: 0.25rem;
   border: 0;
 }
 
-.emotion-93 {
+.emotion-91 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -2129,40 +2066,40 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-93 {
+  .emotion-91 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-93 {
+  .emotion-91 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-93:hover,
-.emotion-93:focus {
+.emotion-91:hover,
+.emotion-91:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   text-decoration-color: #B80000;
 }
 
-.emotion-135 {
+.emotion-133 {
   position: absolute;
   width: calc(100vw - 0.8rem);
   inset-inline-start: 0;
 }
 
 @media (min-width: 1041px) {
-  .emotion-135 {
+  .emotion-133 {
     width: calc(100vw + 0.8rem);
     inset-inline-start: calc(-1 * (100vw - 1014px) / 2);
   }
 }
 
-.emotion-135::after {
+.emotion-133::after {
   content: '';
   position: absolute;
   inset-block-end: 0;
@@ -2172,7 +2109,7 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
 }
 
 @media (min-width: 1008px) {
-  .emotion-135 {
+  .emotion-133 {
     display: none;
   }
 }
@@ -2258,35 +2195,24 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
           href="/news"
           id="topPage"
         >
-          <svg
+          <img
+            alt="BBC News"
             aria-hidden="true"
-            class="emotion-23 emotion-24"
             focusable="false"
-            height="32"
+            height="30"
             id="brandSvgHeader"
-            viewBox="0 0 980 142"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fill-rule="evenodd"
-              stroke="#000"
-              stroke-width=".335"
-              style="stroke: #fff;"
-            >
-              <path
-                d="M0 0v141.732h141.732V0Zm98.839 100.024a23.16 23.16 0 0 1-10.352 7.917 42.088 42.088 0 0 1-16.153 2.787H40.571V31.004h29.92q13.224 0 20.489 5.296 7.261 5.296 7.263 15.22a18.29 18.29 0 0 1-2.602 9.868 17.917 17.917 0 0 1-7.697 6.634 21.248 21.248 0 0 1 10.786 7.415 20.186 20.186 0 0 1 3.74 12.32 20.663 20.663 0 0 1-3.631 12.267Zm-20.272-38.97a9.358 9.358 0 0 0 3.307-7.638q0-9.476-12.901-9.477H56.724v19.847h12.249q6.287 0 9.594-2.732Zm-7.534 15.22H56.724v21.52h14.093q7.261 0 11.166-2.732a9.01 9.01 0 0 0 3.903-7.861q-.001-10.926-14.853-10.927ZM177.166 0v141.732h141.732V0Zm98.838 100.024a23.16 23.16 0 0 1-10.352 7.917 42.088 42.088 0 0 1-16.153 2.787h-31.763V31.004h29.92q13.224 0 20.489 5.296 7.261 5.298 7.263 15.22a18.29 18.29 0 0 1-2.602 9.868 17.917 17.917 0 0 1-7.697 6.634 21.248 21.248 0 0 1 10.786 7.415 20.187 20.187 0 0 1 3.74 12.32 20.663 20.663 0 0 1-3.631 12.267Zm-20.271-38.97a9.358 9.358 0 0 0 3.307-7.638q0-9.476-12.901-9.477H233.89v19.847h12.249q6.287 0 9.594-2.732Zm-7.535 15.22h-14.309v21.52h14.093q7.261 0 11.166-2.732a9.01 9.01 0 0 0 3.903-7.861q-.001-10.926-14.853-10.927Zm106.133 65.459h141.732V0H354.331Zm101.793-36.057a46.238 46.238 0 0 1-11.478 4.316 58.045 58.045 0 0 1-13.729 1.585 50.05 50.05 0 0 1-17.217-2.787 35.175 35.175 0 0 1-12.941-8.033 34.802 34.802 0 0 1-8.102-12.842 48.987 48.987 0 0 1-2.814-17.104 45.738 45.738 0 0 1 2.926-16.776 35.83 35.83 0 0 1 8.44-12.842 37.18 37.18 0 0 1 13.222-8.197 49.66 49.66 0 0 1 17.274-2.842 55.607 55.607 0 0 1 12.547 1.366 46.64 46.64 0 0 1 10.972 3.989v15.519a36.756 36.756 0 0 0-10.016-4.645 40.183 40.183 0 0 0-11.365-1.585 29.66 29.66 0 0 0-14.01 3.06 20.959 20.959 0 0 0-8.89 8.853 29.58 29.58 0 0 0-3.094 14.098 30.845 30.845 0 0 0 2.982 14.154 20.367 20.367 0 0 0 8.664 8.907 28.727 28.727 0 0 0 13.785 3.06 42.724 42.724 0 0 0 22.844-6.448Zm162.072 18.34q-11.596-18.582-23.49-37.242-11.897-18.656-23.49-36.2v73.442h-22.003V17.718h23.192q12.042 17.99 23.713 36.052 11.668 18.063 23.266 36.646V17.718h22.003v106.298Zm44.258-106.298h73.145v19.029h-50.25V59.79h44.601V78.82h-44.601v26.166h53.075v19.03h-75.97Zm177.915 106.298q-5.055-17.987-9.886-35.978-4.833-17.987-9.441-35.978-4.46 17.99-9.217 35.978-4.76 17.99-9.812 35.978H777.78Q770.198 98 763.21 71.386q-6.99-26.61-13.231-53.67h24.976q3.715 20.666 7.88 41.33 4.16 20.668 8.771 40.587 9.959-38.802 18.881-77.456h22.3q4.461 19.032 9.143 37.985 4.683 18.955 9.589 37.836 4.46-19.625 8.623-39.843 4.16-20.216 7.73-40.438h24.531q-6.244 27.06-13.231 53.67-6.99 26.613-14.57 52.629Zm95.37 2.23a78.37 78.37 0 0 1-17.32-1.933 66.24 66.24 0 0 1-16.428-6.096V97.7a63.933 63.933 0 0 0 33.748 9.664q10.109 0 15.387-3.42a10.75 10.75 0 0 0 5.278-9.514 9.755 9.755 0 0 0-2.601-7.211 18.56 18.56 0 0 0-6.913-4.163 99.45 99.45 0 0 0-9.663-2.9 110.65 110.65 0 0 1-15.462-4.756 45.068 45.068 0 0 1-11.299-6.32 23.846 23.846 0 0 1-6.987-8.77 28.942 28.942 0 0 1-2.379-12.265 29.446 29.446 0 0 1 5.129-17.395 32.716 32.716 0 0 1 14.496-11.225q9.366-3.938 22.3-3.94a72.223 72.223 0 0 1 16.651 1.934 67.688 67.688 0 0 1 14.718 5.204v20.219a56.134 56.134 0 0 0-14.792-6.244 63.276 63.276 0 0 0-16.577-2.231q-9.07 0-14.049 3.122a9.935 9.935 0 0 0-4.981 8.92 9.093 9.093 0 0 0 2.379 6.616 17.36 17.36 0 0 0 6.765 4.014q4.383 1.561 10.332 3.048 7.583 1.935 14.124 4.237a45.864 45.864 0 0 1 11.521 5.872 24.459 24.459 0 0 1 7.731 9.069 30.061 30.061 0 0 1 2.75 13.529q0 10.558-5.203 18.063a32.29 32.29 0 0 1-15.016 11.447q-9.813 3.939-23.639 3.94Z"
-              />
-            </g>
-          </svg>
+            src="http://localhost:7080//news/images/brandLogo.svg"
+            style="margin-left: 0.5px;"
+          />
           <span
-            class="emotion-25"
+            class="emotion-23"
             id="BrandLink-topPage"
           >
             BBC News
           </span>
         </a>
         <a
-          class="focusIndicatorRemove emotion-26 emotion-27"
+          class="focusIndicatorRemove emotion-24 emotion-25"
           dir="ltr"
           href="#content"
         >
@@ -2298,26 +2224,26 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
     </div>
   </div>
   <nav
-    class="emotion-28 emotion-29"
+    class="emotion-26 emotion-27"
     dir="ltr"
     role="navigation"
   >
     <div
-      class="emotion-30 emotion-31"
+      class="emotion-28 emotion-29"
     >
       <div
-        class="emotion-32 emotion-33"
+        class="emotion-30 emotion-31"
       >
         <button
           aria-expanded="false"
           aria-label="Sections"
-          class="focusIndicatorRemove emotion-34 emotion-35"
+          class="focusIndicatorRemove emotion-32 emotion-33"
           dir="ltr"
           type="button"
         >
           <svg
             aria-hidden="true"
-            class="emotion-36 emotion-37"
+            class="emotion-34 emotion-35"
             focusable="false"
             height="2.75rem"
             viewBox="0 0 44 44"
@@ -2328,147 +2254,147 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
             />
           </svg>
           <span
-            class="emotion-25"
+            class="emotion-23"
           >
             Sections
           </span>
         </button>
         <div
-          class="emotion-39 emotion-40"
+          class="emotion-37 emotion-38"
           data-e2e="scrollable-nav"
           dir="ltr"
         >
           <ul
-            class="emotion-41 emotion-42"
+            class="emotion-39 emotion-40"
             role="list"
           >
             <li
-              class="emotion-43 emotion-44"
+              class="emotion-41 emotion-42"
               dir="ltr"
               role="listitem"
             >
               <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
+                class="focusIndicatorRemove emotion-43 emotion-44"
                 href="/news"
               >
                 Home
               </a>
             </li>
             <li
-              class="emotion-43 emotion-44"
+              class="emotion-41 emotion-42"
               dir="ltr"
               role="listitem"
             >
               <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
+                class="focusIndicatorRemove emotion-43 emotion-44"
                 href="/news/uk"
               >
                 UK
               </a>
             </li>
             <li
-              class="emotion-43 emotion-44"
+              class="emotion-41 emotion-42"
               dir="ltr"
               role="listitem"
             >
               <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
+                class="focusIndicatorRemove emotion-43 emotion-44"
                 href="/news/world"
               >
                 World
               </a>
             </li>
             <li
-              class="emotion-43 emotion-44"
+              class="emotion-41 emotion-42"
               dir="ltr"
               role="listitem"
             >
               <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
+                class="focusIndicatorRemove emotion-43 emotion-44"
                 href="/news/business"
               >
                 Business
               </a>
             </li>
             <li
-              class="emotion-43 emotion-44"
+              class="emotion-41 emotion-42"
               dir="ltr"
               role="listitem"
             >
               <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
+                class="focusIndicatorRemove emotion-43 emotion-44"
                 href="/news/politics"
               >
                 Politics
               </a>
             </li>
             <li
-              class="emotion-43 emotion-44"
+              class="emotion-41 emotion-42"
               dir="ltr"
               role="listitem"
             >
               <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
+                class="focusIndicatorRemove emotion-43 emotion-44"
                 href="/news/technology"
               >
                 Tech
               </a>
             </li>
             <li
-              class="emotion-43 emotion-44"
+              class="emotion-41 emotion-42"
               dir="ltr"
               role="listitem"
             >
               <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
+                class="focusIndicatorRemove emotion-43 emotion-44"
                 href="/news/science_and_environment"
               >
                 Science
               </a>
             </li>
             <li
-              class="emotion-43 emotion-44"
+              class="emotion-41 emotion-42"
               dir="ltr"
               role="listitem"
             >
               <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
+                class="focusIndicatorRemove emotion-43 emotion-44"
                 href="/news/health"
               >
                 Health
               </a>
             </li>
             <li
-              class="emotion-43 emotion-44"
+              class="emotion-41 emotion-42"
               dir="ltr"
               role="listitem"
             >
               <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
+                class="focusIndicatorRemove emotion-43 emotion-44"
                 href="/news/education"
               >
                 Family & Education
               </a>
             </li>
             <li
-              class="emotion-43 emotion-44"
+              class="emotion-41 emotion-42"
               dir="ltr"
               role="listitem"
             >
               <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
+                class="focusIndicatorRemove emotion-43 emotion-44"
                 href="/news/entertainment_and_arts"
               >
                 Entertainment & Arts
               </a>
             </li>
             <li
-              class="emotion-43 emotion-44"
+              class="emotion-41 emotion-42"
               dir="ltr"
               role="listitem"
             >
               <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
+                class="focusIndicatorRemove emotion-43 emotion-44"
                 href="/news/stories"
               >
                 Stories
@@ -2478,21 +2404,21 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
         </div>
       </div>
       <div
-        class="emotion-87 emotion-88"
+        class="emotion-85 emotion-86"
         data-e2e="dropdown-nav"
         height="0"
       >
         <ul
-          class="emotion-89 emotion-90"
+          class="emotion-87 emotion-88"
           role="list"
         >
           <li
-            class="emotion-91 emotion-92"
+            class="emotion-89 emotion-90"
             role="listitem"
           >
             <a
               aria-labelledby="dropdownNavigation-home"
-              class="emotion-93 emotion-94"
+              class="emotion-91 emotion-92"
               href="/news"
             >
               <span
@@ -2503,12 +2429,12 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
             </a>
           </li>
           <li
-            class="emotion-91 emotion-92"
+            class="emotion-89 emotion-90"
             role="listitem"
           >
             <a
               aria-labelledby="dropdownNavigation-uk"
-              class="emotion-93 emotion-94"
+              class="emotion-91 emotion-92"
               href="/news/uk"
             >
               <span
@@ -2519,12 +2445,12 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
             </a>
           </li>
           <li
-            class="emotion-91 emotion-92"
+            class="emotion-89 emotion-90"
             role="listitem"
           >
             <a
               aria-labelledby="dropdownNavigation-world"
-              class="emotion-93 emotion-94"
+              class="emotion-91 emotion-92"
               href="/news/world"
             >
               <span
@@ -2535,12 +2461,12 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
             </a>
           </li>
           <li
-            class="emotion-91 emotion-92"
+            class="emotion-89 emotion-90"
             role="listitem"
           >
             <a
               aria-labelledby="dropdownNavigation-business"
-              class="emotion-93 emotion-94"
+              class="emotion-91 emotion-92"
               href="/news/business"
             >
               <span
@@ -2551,12 +2477,12 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
             </a>
           </li>
           <li
-            class="emotion-91 emotion-92"
+            class="emotion-89 emotion-90"
             role="listitem"
           >
             <a
               aria-labelledby="dropdownNavigation-politics"
-              class="emotion-93 emotion-94"
+              class="emotion-91 emotion-92"
               href="/news/politics"
             >
               <span
@@ -2567,12 +2493,12 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
             </a>
           </li>
           <li
-            class="emotion-91 emotion-92"
+            class="emotion-89 emotion-90"
             role="listitem"
           >
             <a
               aria-labelledby="dropdownNavigation-tech"
-              class="emotion-93 emotion-94"
+              class="emotion-91 emotion-92"
               href="/news/technology"
             >
               <span
@@ -2583,12 +2509,12 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
             </a>
           </li>
           <li
-            class="emotion-91 emotion-92"
+            class="emotion-89 emotion-90"
             role="listitem"
           >
             <a
               aria-labelledby="dropdownNavigation-science"
-              class="emotion-93 emotion-94"
+              class="emotion-91 emotion-92"
               href="/news/science_and_environment"
             >
               <span
@@ -2599,12 +2525,12 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
             </a>
           </li>
           <li
-            class="emotion-91 emotion-92"
+            class="emotion-89 emotion-90"
             role="listitem"
           >
             <a
               aria-labelledby="dropdownNavigation-health"
-              class="emotion-93 emotion-94"
+              class="emotion-91 emotion-92"
               href="/news/health"
             >
               <span
@@ -2615,12 +2541,12 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
             </a>
           </li>
           <li
-            class="emotion-91 emotion-92"
+            class="emotion-89 emotion-90"
             role="listitem"
           >
             <a
               aria-labelledby="dropdownNavigation-family-&-education"
-              class="emotion-93 emotion-94"
+              class="emotion-91 emotion-92"
               href="/news/education"
             >
               <span
@@ -2631,12 +2557,12 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
             </a>
           </li>
           <li
-            class="emotion-91 emotion-92"
+            class="emotion-89 emotion-90"
             role="listitem"
           >
             <a
               aria-labelledby="dropdownNavigation-entertainment-&-arts"
-              class="emotion-93 emotion-94"
+              class="emotion-91 emotion-92"
               href="/news/entertainment_and_arts"
             >
               <span
@@ -2647,12 +2573,12 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
             </a>
           </li>
           <li
-            class="emotion-91 emotion-92"
+            class="emotion-89 emotion-90"
             role="listitem"
           >
             <a
               aria-labelledby="dropdownNavigation-stories"
-              class="emotion-93 emotion-94"
+              class="emotion-91 emotion-92"
               href="/news/stories"
             >
               <span
@@ -2665,7 +2591,7 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
         </ul>
       </div>
       <div
-        class="emotion-135 emotion-136"
+        class="emotion-133 emotion-134"
       />
     </div>
   </nav>
@@ -3062,32 +2988,6 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 }
 
 .emotion-23 {
-  box-sizing: content-box;
-  color: #FFFFFF;
-  fill: currentColor;
-  height: 1.25rem;
-  max-width: 100%;
-}
-
-@media (min-width: 25rem) {
-  .emotion-23 {
-    height: 1.5rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-23 {
-    height: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast: active),print {
-  .emotion-23 {
-    fill: windowText;
-  }
-}
-
-.emotion-25 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -3098,7 +2998,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   margin: 0;
 }
 
-.emotion-26 {
+.emotion-24 {
   position: absolute;
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -3120,20 +3020,20 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-26 {
+  .emotion-24 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-26 {
+  .emotion-24 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-26:focus {
+.emotion-24:focus {
   -webkit-clip-path: none;
   clip-path: none;
   clip: auto;
@@ -3144,24 +3044,24 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 }
 
 @media (min-width: 25rem) {
-  .emotion-26:focus {
+  .emotion-24:focus {
     top: 0.5rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-26 {
+  .emotion-24 {
     padding: 0.5rem;
   }
 }
 
-.emotion-28 {
+.emotion-26 {
   position: relative;
   background-color: #FFFFFF;
 }
 
 @media (min-width: 62.9375rem) {
-  .emotion-28::after {
+  .emotion-26::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -3171,11 +3071,11 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   }
 }
 
-.emotion-28 .emotion-44::after {
+.emotion-26 .emotion-42::after {
   left: 0;
 }
 
-.emotion-30 {
+.emotion-28 {
   position: relative;
   max-width: 63.4rem;
   margin: 0 auto;
@@ -3183,22 +3083,22 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-30 {
+  .emotion-28 {
     margin: 0 0.8rem;
   }
 }
 
 @media (min-width: 66rem) {
-  .emotion-30 {
+  .emotion-28 {
     margin: 0 auto;
   }
 }
 
-.emotion-32 {
+.emotion-30 {
   position: relative;
 }
 
-.emotion-34 {
+.emotion-32 {
   position: relative;
   padding: 0;
   margin: 0;
@@ -3209,14 +3109,14 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   width: 2.75rem;
 }
 
-.emotion-34:hover,
-.emotion-34:focus {
+.emotion-32:hover,
+.emotion-32:focus {
   cursor: pointer;
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
-.emotion-34:hover::after,
-.emotion-34:focus::after {
+.emotion-32:hover::after,
+.emotion-32:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -3227,36 +3127,36 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-34 {
+  .emotion-32 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 20rem) {
-  .emotion-34 {
+  .emotion-32 {
     height: 2.75rem;
     width: 2.75rem;
   }
 }
 
-.emotion-34 svg {
+.emotion-32 svg {
   vertical-align: middle;
 }
 
-.emotion-36 {
+.emotion-34 {
   color: #000000;
   fill: currentColor;
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-36 {
+  .emotion-34 {
     fill: linkText;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-39 {
+  .emotion-37 {
     white-space: nowrap;
     overflow-x: scroll;
     scroll-behavior: auto;
@@ -3265,15 +3165,15 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
     -ms-overflow-style: none;
   }
 
-  .emotion-39::-webkit-scrollbar {
+  .emotion-37::-webkit-scrollbar {
     display: none;
   }
 
-  .emotion-39:focus-visible {
+  .emotion-37:focus-visible {
     outline: none;
   }
 
-  .emotion-39:focus-visible::after {
+  .emotion-37:focus-visible::after {
     outline: 0.1875rem solid #000000;
     content: '';
     position: absolute;
@@ -3281,7 +3181,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
     height: 100%;
   }
 
-  .emotion-39:after {
+  .emotion-37:after {
     content: ' ';
     height: 100%;
     width: 3rem;
@@ -3299,13 +3199,13 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   }
 
   @media (min-width: 25rem) {
-    .emotion-39:after {
+    .emotion-37:after {
       width: 6rem;
     }
   }
 }
 
-.emotion-41 {
+.emotion-39 {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -3313,12 +3213,12 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-41 {
+  .emotion-39 {
     overflow: hidden;
   }
 }
 
-.emotion-43 {
+.emotion-41 {
   display: inline-block;
   position: relative;
   z-index: 2;
@@ -3327,13 +3227,13 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-43:last-child {
+  .emotion-41:last-child {
     margin-right: 3rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-43::after {
+  .emotion-41::after {
     content: '';
     position: absolute;
     bottom: -1px;
@@ -3343,7 +3243,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   }
 }
 
-.emotion-45 {
+.emotion-43 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -3359,26 +3259,26 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-45 {
+  .emotion-43 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-45 {
+  .emotion-43 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-45 {
+  .emotion-43 {
     padding: 0.75rem 0.5rem;
   }
 }
 
-.emotion-45:hover::after {
+.emotion-43:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -3387,18 +3287,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   border-bottom: 0.25rem solid #B80000;
 }
 
-.emotion-45:focus::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-bottom: 0.25rem solid #B80000;
-  top: 0;
-  border: 0.1875rem solid #000000;
-}
-
-.emotion-45:focus-visible::after {
+.emotion-43:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -3409,7 +3298,18 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   border: 0.1875rem solid #000000;
 }
 
-.emotion-87 {
+.emotion-43:focus-visible::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+  top: 0;
+  border: 0.1875rem solid #000000;
+}
+
+.emotion-85 {
   background-color: #FFFFFF;
   clear: both;
   overflow: hidden;
@@ -3421,37 +3321,37 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-87 {
+  .emotion-85 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .emotion-87 {
+  .emotion-85 {
     -webkit-transition: none;
     transition: none;
   }
 }
 
-.emotion-89 {
+.emotion-87 {
   list-style-type: none;
   margin: 0;
   padding: 0 0.5rem;
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 
-.emotion-91 {
+.emotion-89 {
   padding: 0.75rem 0;
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 
-.emotion-91:last-child {
+.emotion-89:last-child {
   padding-bottom: 0.25rem;
   border: 0;
 }
 
-.emotion-93 {
+.emotion-91 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -3465,40 +3365,40 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-93 {
+  .emotion-91 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-93 {
+  .emotion-91 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-93:hover,
-.emotion-93:focus {
+.emotion-91:hover,
+.emotion-91:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   text-decoration-color: #B80000;
 }
 
-.emotion-135 {
+.emotion-133 {
   position: absolute;
   width: calc(100vw - 0.8rem);
   inset-inline-start: 0;
 }
 
 @media (min-width: 1041px) {
-  .emotion-135 {
+  .emotion-133 {
     width: calc(100vw + 0.8rem);
     inset-inline-start: calc(-1 * (100vw - 1014px) / 2);
   }
 }
 
-.emotion-135::after {
+.emotion-133::after {
   content: '';
   position: absolute;
   inset-block-end: 0;
@@ -3508,7 +3408,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 }
 
 @media (min-width: 1008px) {
-  .emotion-135 {
+  .emotion-133 {
     display: none;
   }
 }
@@ -3594,35 +3494,24 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
           href="/news"
           id="topPage"
         >
-          <svg
+          <img
+            alt="BBC News"
             aria-hidden="true"
-            class="emotion-23 emotion-24"
             focusable="false"
-            height="32"
+            height="30"
             id="brandSvgHeader"
-            viewBox="0 0 980 142"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fill-rule="evenodd"
-              stroke="#000"
-              stroke-width=".335"
-              style="stroke: #fff;"
-            >
-              <path
-                d="M0 0v141.732h141.732V0Zm98.839 100.024a23.16 23.16 0 0 1-10.352 7.917 42.088 42.088 0 0 1-16.153 2.787H40.571V31.004h29.92q13.224 0 20.489 5.296 7.261 5.296 7.263 15.22a18.29 18.29 0 0 1-2.602 9.868 17.917 17.917 0 0 1-7.697 6.634 21.248 21.248 0 0 1 10.786 7.415 20.186 20.186 0 0 1 3.74 12.32 20.663 20.663 0 0 1-3.631 12.267Zm-20.272-38.97a9.358 9.358 0 0 0 3.307-7.638q0-9.476-12.901-9.477H56.724v19.847h12.249q6.287 0 9.594-2.732Zm-7.534 15.22H56.724v21.52h14.093q7.261 0 11.166-2.732a9.01 9.01 0 0 0 3.903-7.861q-.001-10.926-14.853-10.927ZM177.166 0v141.732h141.732V0Zm98.838 100.024a23.16 23.16 0 0 1-10.352 7.917 42.088 42.088 0 0 1-16.153 2.787h-31.763V31.004h29.92q13.224 0 20.489 5.296 7.261 5.298 7.263 15.22a18.29 18.29 0 0 1-2.602 9.868 17.917 17.917 0 0 1-7.697 6.634 21.248 21.248 0 0 1 10.786 7.415 20.187 20.187 0 0 1 3.74 12.32 20.663 20.663 0 0 1-3.631 12.267Zm-20.271-38.97a9.358 9.358 0 0 0 3.307-7.638q0-9.476-12.901-9.477H233.89v19.847h12.249q6.287 0 9.594-2.732Zm-7.535 15.22h-14.309v21.52h14.093q7.261 0 11.166-2.732a9.01 9.01 0 0 0 3.903-7.861q-.001-10.926-14.853-10.927Zm106.133 65.459h141.732V0H354.331Zm101.793-36.057a46.238 46.238 0 0 1-11.478 4.316 58.045 58.045 0 0 1-13.729 1.585 50.05 50.05 0 0 1-17.217-2.787 35.175 35.175 0 0 1-12.941-8.033 34.802 34.802 0 0 1-8.102-12.842 48.987 48.987 0 0 1-2.814-17.104 45.738 45.738 0 0 1 2.926-16.776 35.83 35.83 0 0 1 8.44-12.842 37.18 37.18 0 0 1 13.222-8.197 49.66 49.66 0 0 1 17.274-2.842 55.607 55.607 0 0 1 12.547 1.366 46.64 46.64 0 0 1 10.972 3.989v15.519a36.756 36.756 0 0 0-10.016-4.645 40.183 40.183 0 0 0-11.365-1.585 29.66 29.66 0 0 0-14.01 3.06 20.959 20.959 0 0 0-8.89 8.853 29.58 29.58 0 0 0-3.094 14.098 30.845 30.845 0 0 0 2.982 14.154 20.367 20.367 0 0 0 8.664 8.907 28.727 28.727 0 0 0 13.785 3.06 42.724 42.724 0 0 0 22.844-6.448Zm162.072 18.34q-11.596-18.582-23.49-37.242-11.897-18.656-23.49-36.2v73.442h-22.003V17.718h23.192q12.042 17.99 23.713 36.052 11.668 18.063 23.266 36.646V17.718h22.003v106.298Zm44.258-106.298h73.145v19.029h-50.25V59.79h44.601V78.82h-44.601v26.166h53.075v19.03h-75.97Zm177.915 106.298q-5.055-17.987-9.886-35.978-4.833-17.987-9.441-35.978-4.46 17.99-9.217 35.978-4.76 17.99-9.812 35.978H777.78Q770.198 98 763.21 71.386q-6.99-26.61-13.231-53.67h24.976q3.715 20.666 7.88 41.33 4.16 20.668 8.771 40.587 9.959-38.802 18.881-77.456h22.3q4.461 19.032 9.143 37.985 4.683 18.955 9.589 37.836 4.46-19.625 8.623-39.843 4.16-20.216 7.73-40.438h24.531q-6.244 27.06-13.231 53.67-6.99 26.613-14.57 52.629Zm95.37 2.23a78.37 78.37 0 0 1-17.32-1.933 66.24 66.24 0 0 1-16.428-6.096V97.7a63.933 63.933 0 0 0 33.748 9.664q10.109 0 15.387-3.42a10.75 10.75 0 0 0 5.278-9.514 9.755 9.755 0 0 0-2.601-7.211 18.56 18.56 0 0 0-6.913-4.163 99.45 99.45 0 0 0-9.663-2.9 110.65 110.65 0 0 1-15.462-4.756 45.068 45.068 0 0 1-11.299-6.32 23.846 23.846 0 0 1-6.987-8.77 28.942 28.942 0 0 1-2.379-12.265 29.446 29.446 0 0 1 5.129-17.395 32.716 32.716 0 0 1 14.496-11.225q9.366-3.938 22.3-3.94a72.223 72.223 0 0 1 16.651 1.934 67.688 67.688 0 0 1 14.718 5.204v20.219a56.134 56.134 0 0 0-14.792-6.244 63.276 63.276 0 0 0-16.577-2.231q-9.07 0-14.049 3.122a9.935 9.935 0 0 0-4.981 8.92 9.093 9.093 0 0 0 2.379 6.616 17.36 17.36 0 0 0 6.765 4.014q4.383 1.561 10.332 3.048 7.583 1.935 14.124 4.237a45.864 45.864 0 0 1 11.521 5.872 24.459 24.459 0 0 1 7.731 9.069 30.061 30.061 0 0 1 2.75 13.529q0 10.558-5.203 18.063a32.29 32.29 0 0 1-15.016 11.447q-9.813 3.939-23.639 3.94Z"
-              />
-            </g>
-          </svg>
+            src="http://localhost:7080//news/images/brandLogo.svg"
+            style="margin-left: 0.5px;"
+          />
           <span
-            class="emotion-25"
+            class="emotion-23"
             id="BrandLink-topPage"
           >
             BBC News
           </span>
         </a>
         <a
-          class="focusIndicatorRemove emotion-26 emotion-27"
+          class="focusIndicatorRemove emotion-24 emotion-25"
           dir="ltr"
           href="#content"
         >
@@ -3634,26 +3523,26 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
     </div>
   </div>
   <nav
-    class="emotion-28 emotion-29"
+    class="emotion-26 emotion-27"
     dir="ltr"
     role="navigation"
   >
     <div
-      class="emotion-30 emotion-31"
+      class="emotion-28 emotion-29"
     >
       <div
-        class="emotion-32 emotion-33"
+        class="emotion-30 emotion-31"
       >
         <button
           aria-expanded="false"
           aria-label="Sections"
-          class="focusIndicatorRemove emotion-34 emotion-35"
+          class="focusIndicatorRemove emotion-32 emotion-33"
           dir="ltr"
           type="button"
         >
           <svg
             aria-hidden="true"
-            class="emotion-36 emotion-37"
+            class="emotion-34 emotion-35"
             focusable="false"
             height="2.75rem"
             viewBox="0 0 44 44"
@@ -3664,147 +3553,147 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
             />
           </svg>
           <span
-            class="emotion-25"
+            class="emotion-23"
           >
             Sections
           </span>
         </button>
         <div
-          class="emotion-39 emotion-40"
+          class="emotion-37 emotion-38"
           data-e2e="scrollable-nav"
           dir="ltr"
         >
           <ul
-            class="emotion-41 emotion-42"
+            class="emotion-39 emotion-40"
             role="list"
           >
             <li
-              class="emotion-43 emotion-44"
+              class="emotion-41 emotion-42"
               dir="ltr"
               role="listitem"
             >
               <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
+                class="focusIndicatorRemove emotion-43 emotion-44"
                 href="/news"
               >
                 Home
               </a>
             </li>
             <li
-              class="emotion-43 emotion-44"
+              class="emotion-41 emotion-42"
               dir="ltr"
               role="listitem"
             >
               <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
+                class="focusIndicatorRemove emotion-43 emotion-44"
                 href="/news/uk"
               >
                 UK
               </a>
             </li>
             <li
-              class="emotion-43 emotion-44"
+              class="emotion-41 emotion-42"
               dir="ltr"
               role="listitem"
             >
               <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
+                class="focusIndicatorRemove emotion-43 emotion-44"
                 href="/news/world"
               >
                 World
               </a>
             </li>
             <li
-              class="emotion-43 emotion-44"
+              class="emotion-41 emotion-42"
               dir="ltr"
               role="listitem"
             >
               <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
+                class="focusIndicatorRemove emotion-43 emotion-44"
                 href="/news/business"
               >
                 Business
               </a>
             </li>
             <li
-              class="emotion-43 emotion-44"
+              class="emotion-41 emotion-42"
               dir="ltr"
               role="listitem"
             >
               <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
+                class="focusIndicatorRemove emotion-43 emotion-44"
                 href="/news/politics"
               >
                 Politics
               </a>
             </li>
             <li
-              class="emotion-43 emotion-44"
+              class="emotion-41 emotion-42"
               dir="ltr"
               role="listitem"
             >
               <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
+                class="focusIndicatorRemove emotion-43 emotion-44"
                 href="/news/technology"
               >
                 Tech
               </a>
             </li>
             <li
-              class="emotion-43 emotion-44"
+              class="emotion-41 emotion-42"
               dir="ltr"
               role="listitem"
             >
               <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
+                class="focusIndicatorRemove emotion-43 emotion-44"
                 href="/news/science_and_environment"
               >
                 Science
               </a>
             </li>
             <li
-              class="emotion-43 emotion-44"
+              class="emotion-41 emotion-42"
               dir="ltr"
               role="listitem"
             >
               <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
+                class="focusIndicatorRemove emotion-43 emotion-44"
                 href="/news/health"
               >
                 Health
               </a>
             </li>
             <li
-              class="emotion-43 emotion-44"
+              class="emotion-41 emotion-42"
               dir="ltr"
               role="listitem"
             >
               <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
+                class="focusIndicatorRemove emotion-43 emotion-44"
                 href="/news/education"
               >
                 Family & Education
               </a>
             </li>
             <li
-              class="emotion-43 emotion-44"
+              class="emotion-41 emotion-42"
               dir="ltr"
               role="listitem"
             >
               <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
+                class="focusIndicatorRemove emotion-43 emotion-44"
                 href="/news/entertainment_and_arts"
               >
                 Entertainment & Arts
               </a>
             </li>
             <li
-              class="emotion-43 emotion-44"
+              class="emotion-41 emotion-42"
               dir="ltr"
               role="listitem"
             >
               <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
+                class="focusIndicatorRemove emotion-43 emotion-44"
                 href="/news/stories"
               >
                 Stories
@@ -3814,21 +3703,21 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
         </div>
       </div>
       <div
-        class="emotion-87 emotion-88"
+        class="emotion-85 emotion-86"
         data-e2e="dropdown-nav"
         height="0"
       >
         <ul
-          class="emotion-89 emotion-90"
+          class="emotion-87 emotion-88"
           role="list"
         >
           <li
-            class="emotion-91 emotion-92"
+            class="emotion-89 emotion-90"
             role="listitem"
           >
             <a
               aria-labelledby="dropdownNavigation-home"
-              class="emotion-93 emotion-94"
+              class="emotion-91 emotion-92"
               href="/news"
             >
               <span
@@ -3839,12 +3728,12 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
             </a>
           </li>
           <li
-            class="emotion-91 emotion-92"
+            class="emotion-89 emotion-90"
             role="listitem"
           >
             <a
               aria-labelledby="dropdownNavigation-uk"
-              class="emotion-93 emotion-94"
+              class="emotion-91 emotion-92"
               href="/news/uk"
             >
               <span
@@ -3855,12 +3744,12 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
             </a>
           </li>
           <li
-            class="emotion-91 emotion-92"
+            class="emotion-89 emotion-90"
             role="listitem"
           >
             <a
               aria-labelledby="dropdownNavigation-world"
-              class="emotion-93 emotion-94"
+              class="emotion-91 emotion-92"
               href="/news/world"
             >
               <span
@@ -3871,12 +3760,12 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
             </a>
           </li>
           <li
-            class="emotion-91 emotion-92"
+            class="emotion-89 emotion-90"
             role="listitem"
           >
             <a
               aria-labelledby="dropdownNavigation-business"
-              class="emotion-93 emotion-94"
+              class="emotion-91 emotion-92"
               href="/news/business"
             >
               <span
@@ -3887,12 +3776,12 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
             </a>
           </li>
           <li
-            class="emotion-91 emotion-92"
+            class="emotion-89 emotion-90"
             role="listitem"
           >
             <a
               aria-labelledby="dropdownNavigation-politics"
-              class="emotion-93 emotion-94"
+              class="emotion-91 emotion-92"
               href="/news/politics"
             >
               <span
@@ -3903,12 +3792,12 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
             </a>
           </li>
           <li
-            class="emotion-91 emotion-92"
+            class="emotion-89 emotion-90"
             role="listitem"
           >
             <a
               aria-labelledby="dropdownNavigation-tech"
-              class="emotion-93 emotion-94"
+              class="emotion-91 emotion-92"
               href="/news/technology"
             >
               <span
@@ -3919,12 +3808,12 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
             </a>
           </li>
           <li
-            class="emotion-91 emotion-92"
+            class="emotion-89 emotion-90"
             role="listitem"
           >
             <a
               aria-labelledby="dropdownNavigation-science"
-              class="emotion-93 emotion-94"
+              class="emotion-91 emotion-92"
               href="/news/science_and_environment"
             >
               <span
@@ -3935,12 +3824,12 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
             </a>
           </li>
           <li
-            class="emotion-91 emotion-92"
+            class="emotion-89 emotion-90"
             role="listitem"
           >
             <a
               aria-labelledby="dropdownNavigation-health"
-              class="emotion-93 emotion-94"
+              class="emotion-91 emotion-92"
               href="/news/health"
             >
               <span
@@ -3951,12 +3840,12 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
             </a>
           </li>
           <li
-            class="emotion-91 emotion-92"
+            class="emotion-89 emotion-90"
             role="listitem"
           >
             <a
               aria-labelledby="dropdownNavigation-family-&-education"
-              class="emotion-93 emotion-94"
+              class="emotion-91 emotion-92"
               href="/news/education"
             >
               <span
@@ -3967,12 +3856,12 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
             </a>
           </li>
           <li
-            class="emotion-91 emotion-92"
+            class="emotion-89 emotion-90"
             role="listitem"
           >
             <a
               aria-labelledby="dropdownNavigation-entertainment-&-arts"
-              class="emotion-93 emotion-94"
+              class="emotion-91 emotion-92"
               href="/news/entertainment_and_arts"
             >
               <span
@@ -3983,12 +3872,12 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
             </a>
           </li>
           <li
-            class="emotion-91 emotion-92"
+            class="emotion-89 emotion-90"
             role="listitem"
           >
             <a
               aria-labelledby="dropdownNavigation-stories"
-              class="emotion-93 emotion-94"
+              class="emotion-91 emotion-92"
               href="/news/stories"
             >
               <span
@@ -4001,7 +3890,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
         </ul>
       </div>
       <div
-        class="emotion-135 emotion-136"
+        class="emotion-133 emotion-134"
       />
     </div>
   </nav>
@@ -4398,32 +4287,6 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 }
 
 .emotion-23 {
-  box-sizing: content-box;
-  color: #FFFFFF;
-  fill: currentColor;
-  height: 1.25rem;
-  max-width: 100%;
-}
-
-@media (min-width: 25rem) {
-  .emotion-23 {
-    height: 1.5rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-23 {
-    height: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast: active),print {
-  .emotion-23 {
-    fill: windowText;
-  }
-}
-
-.emotion-25 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -4434,7 +4297,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   margin: 0;
 }
 
-.emotion-26 {
+.emotion-24 {
   position: absolute;
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -4456,20 +4319,20 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-26 {
+  .emotion-24 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-26 {
+  .emotion-24 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-26:focus {
+.emotion-24:focus {
   -webkit-clip-path: none;
   clip-path: none;
   clip: auto;
@@ -4480,24 +4343,24 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 }
 
 @media (min-width: 25rem) {
-  .emotion-26:focus {
+  .emotion-24:focus {
     top: 0.5rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-26 {
+  .emotion-24 {
     padding: 0.5rem;
   }
 }
 
-.emotion-28 {
+.emotion-26 {
   position: relative;
   background-color: #FFFFFF;
 }
 
 @media (min-width: 62.9375rem) {
-  .emotion-28::after {
+  .emotion-26::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -4507,11 +4370,11 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   }
 }
 
-.emotion-28 .emotion-44::after {
+.emotion-26 .emotion-42::after {
   left: 0;
 }
 
-.emotion-30 {
+.emotion-28 {
   position: relative;
   max-width: 63.4rem;
   margin: 0 auto;
@@ -4519,22 +4382,22 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-30 {
+  .emotion-28 {
     margin: 0 0.8rem;
   }
 }
 
 @media (min-width: 66rem) {
-  .emotion-30 {
+  .emotion-28 {
     margin: 0 auto;
   }
 }
 
-.emotion-32 {
+.emotion-30 {
   position: relative;
 }
 
-.emotion-34 {
+.emotion-32 {
   position: relative;
   padding: 0;
   margin: 0;
@@ -4545,14 +4408,14 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   width: 2.75rem;
 }
 
-.emotion-34:hover,
-.emotion-34:focus {
+.emotion-32:hover,
+.emotion-32:focus {
   cursor: pointer;
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
-.emotion-34:hover::after,
-.emotion-34:focus::after {
+.emotion-32:hover::after,
+.emotion-32:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -4563,36 +4426,36 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-34 {
+  .emotion-32 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 20rem) {
-  .emotion-34 {
+  .emotion-32 {
     height: 2.75rem;
     width: 2.75rem;
   }
 }
 
-.emotion-34 svg {
+.emotion-32 svg {
   vertical-align: middle;
 }
 
-.emotion-36 {
+.emotion-34 {
   color: #000000;
   fill: currentColor;
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-36 {
+  .emotion-34 {
     fill: linkText;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-39 {
+  .emotion-37 {
     white-space: nowrap;
     overflow-x: scroll;
     scroll-behavior: auto;
@@ -4601,15 +4464,15 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
     -ms-overflow-style: none;
   }
 
-  .emotion-39::-webkit-scrollbar {
+  .emotion-37::-webkit-scrollbar {
     display: none;
   }
 
-  .emotion-39:focus-visible {
+  .emotion-37:focus-visible {
     outline: none;
   }
 
-  .emotion-39:focus-visible::after {
+  .emotion-37:focus-visible::after {
     outline: 0.1875rem solid #000000;
     content: '';
     position: absolute;
@@ -4617,7 +4480,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
     height: 100%;
   }
 
-  .emotion-39:after {
+  .emotion-37:after {
     content: ' ';
     height: 100%;
     width: 3rem;
@@ -4635,13 +4498,13 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   }
 
   @media (min-width: 25rem) {
-    .emotion-39:after {
+    .emotion-37:after {
       width: 6rem;
     }
   }
 }
 
-.emotion-41 {
+.emotion-39 {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -4649,12 +4512,12 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-41 {
+  .emotion-39 {
     overflow: hidden;
   }
 }
 
-.emotion-43 {
+.emotion-41 {
   display: inline-block;
   position: relative;
   z-index: 2;
@@ -4663,13 +4526,13 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-43:last-child {
+  .emotion-41:last-child {
     margin-right: 3rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-43::after {
+  .emotion-41::after {
     content: '';
     position: absolute;
     bottom: -1px;
@@ -4679,7 +4542,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   }
 }
 
-.emotion-45 {
+.emotion-43 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -4695,26 +4558,26 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-45 {
+  .emotion-43 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-45 {
+  .emotion-43 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-45 {
+  .emotion-43 {
     padding: 0.75rem 0.5rem;
   }
 }
 
-.emotion-45:hover::after {
+.emotion-43:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -4723,18 +4586,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   border-bottom: 0.25rem solid #B80000;
 }
 
-.emotion-45:focus::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-bottom: 0.25rem solid #B80000;
-  top: 0;
-  border: 0.1875rem solid #000000;
-}
-
-.emotion-45:focus-visible::after {
+.emotion-43:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -4745,7 +4597,18 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   border: 0.1875rem solid #000000;
 }
 
-.emotion-87 {
+.emotion-43:focus-visible::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+  top: 0;
+  border: 0.1875rem solid #000000;
+}
+
+.emotion-85 {
   background-color: #FFFFFF;
   clear: both;
   overflow: hidden;
@@ -4757,37 +4620,37 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-87 {
+  .emotion-85 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .emotion-87 {
+  .emotion-85 {
     -webkit-transition: none;
     transition: none;
   }
 }
 
-.emotion-89 {
+.emotion-87 {
   list-style-type: none;
   margin: 0;
   padding: 0 0.5rem;
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 
-.emotion-91 {
+.emotion-89 {
   padding: 0.75rem 0;
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 
-.emotion-91:last-child {
+.emotion-89:last-child {
   padding-bottom: 0.25rem;
   border: 0;
 }
 
-.emotion-93 {
+.emotion-91 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -4801,40 +4664,40 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-93 {
+  .emotion-91 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-93 {
+  .emotion-91 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-93:hover,
-.emotion-93:focus {
+.emotion-91:hover,
+.emotion-91:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   text-decoration-color: #B80000;
 }
 
-.emotion-135 {
+.emotion-133 {
   position: absolute;
   width: calc(100vw - 0.8rem);
   inset-inline-start: 0;
 }
 
 @media (min-width: 1041px) {
-  .emotion-135 {
+  .emotion-133 {
     width: calc(100vw + 0.8rem);
     inset-inline-start: calc(-1 * (100vw - 1014px) / 2);
   }
 }
 
-.emotion-135::after {
+.emotion-133::after {
   content: '';
   position: absolute;
   inset-block-end: 0;
@@ -4844,7 +4707,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 }
 
 @media (min-width: 1008px) {
-  .emotion-135 {
+  .emotion-133 {
     display: none;
   }
 }
@@ -4930,35 +4793,24 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
           href="/news"
           id="topPage"
         >
-          <svg
+          <img
+            alt="BBC News"
             aria-hidden="true"
-            class="emotion-23 emotion-24"
             focusable="false"
-            height="32"
+            height="30"
             id="brandSvgHeader"
-            viewBox="0 0 980 142"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fill-rule="evenodd"
-              stroke="#000"
-              stroke-width=".335"
-              style="stroke: #fff;"
-            >
-              <path
-                d="M0 0v141.732h141.732V0Zm98.839 100.024a23.16 23.16 0 0 1-10.352 7.917 42.088 42.088 0 0 1-16.153 2.787H40.571V31.004h29.92q13.224 0 20.489 5.296 7.261 5.296 7.263 15.22a18.29 18.29 0 0 1-2.602 9.868 17.917 17.917 0 0 1-7.697 6.634 21.248 21.248 0 0 1 10.786 7.415 20.186 20.186 0 0 1 3.74 12.32 20.663 20.663 0 0 1-3.631 12.267Zm-20.272-38.97a9.358 9.358 0 0 0 3.307-7.638q0-9.476-12.901-9.477H56.724v19.847h12.249q6.287 0 9.594-2.732Zm-7.534 15.22H56.724v21.52h14.093q7.261 0 11.166-2.732a9.01 9.01 0 0 0 3.903-7.861q-.001-10.926-14.853-10.927ZM177.166 0v141.732h141.732V0Zm98.838 100.024a23.16 23.16 0 0 1-10.352 7.917 42.088 42.088 0 0 1-16.153 2.787h-31.763V31.004h29.92q13.224 0 20.489 5.296 7.261 5.298 7.263 15.22a18.29 18.29 0 0 1-2.602 9.868 17.917 17.917 0 0 1-7.697 6.634 21.248 21.248 0 0 1 10.786 7.415 20.187 20.187 0 0 1 3.74 12.32 20.663 20.663 0 0 1-3.631 12.267Zm-20.271-38.97a9.358 9.358 0 0 0 3.307-7.638q0-9.476-12.901-9.477H233.89v19.847h12.249q6.287 0 9.594-2.732Zm-7.535 15.22h-14.309v21.52h14.093q7.261 0 11.166-2.732a9.01 9.01 0 0 0 3.903-7.861q-.001-10.926-14.853-10.927Zm106.133 65.459h141.732V0H354.331Zm101.793-36.057a46.238 46.238 0 0 1-11.478 4.316 58.045 58.045 0 0 1-13.729 1.585 50.05 50.05 0 0 1-17.217-2.787 35.175 35.175 0 0 1-12.941-8.033 34.802 34.802 0 0 1-8.102-12.842 48.987 48.987 0 0 1-2.814-17.104 45.738 45.738 0 0 1 2.926-16.776 35.83 35.83 0 0 1 8.44-12.842 37.18 37.18 0 0 1 13.222-8.197 49.66 49.66 0 0 1 17.274-2.842 55.607 55.607 0 0 1 12.547 1.366 46.64 46.64 0 0 1 10.972 3.989v15.519a36.756 36.756 0 0 0-10.016-4.645 40.183 40.183 0 0 0-11.365-1.585 29.66 29.66 0 0 0-14.01 3.06 20.959 20.959 0 0 0-8.89 8.853 29.58 29.58 0 0 0-3.094 14.098 30.845 30.845 0 0 0 2.982 14.154 20.367 20.367 0 0 0 8.664 8.907 28.727 28.727 0 0 0 13.785 3.06 42.724 42.724 0 0 0 22.844-6.448Zm162.072 18.34q-11.596-18.582-23.49-37.242-11.897-18.656-23.49-36.2v73.442h-22.003V17.718h23.192q12.042 17.99 23.713 36.052 11.668 18.063 23.266 36.646V17.718h22.003v106.298Zm44.258-106.298h73.145v19.029h-50.25V59.79h44.601V78.82h-44.601v26.166h53.075v19.03h-75.97Zm177.915 106.298q-5.055-17.987-9.886-35.978-4.833-17.987-9.441-35.978-4.46 17.99-9.217 35.978-4.76 17.99-9.812 35.978H777.78Q770.198 98 763.21 71.386q-6.99-26.61-13.231-53.67h24.976q3.715 20.666 7.88 41.33 4.16 20.668 8.771 40.587 9.959-38.802 18.881-77.456h22.3q4.461 19.032 9.143 37.985 4.683 18.955 9.589 37.836 4.46-19.625 8.623-39.843 4.16-20.216 7.73-40.438h24.531q-6.244 27.06-13.231 53.67-6.99 26.613-14.57 52.629Zm95.37 2.23a78.37 78.37 0 0 1-17.32-1.933 66.24 66.24 0 0 1-16.428-6.096V97.7a63.933 63.933 0 0 0 33.748 9.664q10.109 0 15.387-3.42a10.75 10.75 0 0 0 5.278-9.514 9.755 9.755 0 0 0-2.601-7.211 18.56 18.56 0 0 0-6.913-4.163 99.45 99.45 0 0 0-9.663-2.9 110.65 110.65 0 0 1-15.462-4.756 45.068 45.068 0 0 1-11.299-6.32 23.846 23.846 0 0 1-6.987-8.77 28.942 28.942 0 0 1-2.379-12.265 29.446 29.446 0 0 1 5.129-17.395 32.716 32.716 0 0 1 14.496-11.225q9.366-3.938 22.3-3.94a72.223 72.223 0 0 1 16.651 1.934 67.688 67.688 0 0 1 14.718 5.204v20.219a56.134 56.134 0 0 0-14.792-6.244 63.276 63.276 0 0 0-16.577-2.231q-9.07 0-14.049 3.122a9.935 9.935 0 0 0-4.981 8.92 9.093 9.093 0 0 0 2.379 6.616 17.36 17.36 0 0 0 6.765 4.014q4.383 1.561 10.332 3.048 7.583 1.935 14.124 4.237a45.864 45.864 0 0 1 11.521 5.872 24.459 24.459 0 0 1 7.731 9.069 30.061 30.061 0 0 1 2.75 13.529q0 10.558-5.203 18.063a32.29 32.29 0 0 1-15.016 11.447q-9.813 3.939-23.639 3.94Z"
-              />
-            </g>
-          </svg>
+            src="http://localhost:7080//news/images/brandLogo.svg"
+            style="margin-left: 0.5px;"
+          />
           <span
-            class="emotion-25"
+            class="emotion-23"
             id="BrandLink-topPage"
           >
             BBC News
           </span>
         </a>
         <a
-          class="focusIndicatorRemove emotion-26 emotion-27"
+          class="focusIndicatorRemove emotion-24 emotion-25"
           dir="ltr"
           href="#content"
         >
@@ -4970,26 +4822,26 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
     </div>
   </div>
   <nav
-    class="emotion-28 emotion-29"
+    class="emotion-26 emotion-27"
     dir="ltr"
     role="navigation"
   >
     <div
-      class="emotion-30 emotion-31"
+      class="emotion-28 emotion-29"
     >
       <div
-        class="emotion-32 emotion-33"
+        class="emotion-30 emotion-31"
       >
         <button
           aria-expanded="false"
           aria-label="Sections"
-          class="focusIndicatorRemove emotion-34 emotion-35"
+          class="focusIndicatorRemove emotion-32 emotion-33"
           dir="ltr"
           type="button"
         >
           <svg
             aria-hidden="true"
-            class="emotion-36 emotion-37"
+            class="emotion-34 emotion-35"
             focusable="false"
             height="2.75rem"
             viewBox="0 0 44 44"
@@ -5000,147 +4852,147 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
             />
           </svg>
           <span
-            class="emotion-25"
+            class="emotion-23"
           >
             Sections
           </span>
         </button>
         <div
-          class="emotion-39 emotion-40"
+          class="emotion-37 emotion-38"
           data-e2e="scrollable-nav"
           dir="ltr"
         >
           <ul
-            class="emotion-41 emotion-42"
+            class="emotion-39 emotion-40"
             role="list"
           >
             <li
-              class="emotion-43 emotion-44"
+              class="emotion-41 emotion-42"
               dir="ltr"
               role="listitem"
             >
               <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
+                class="focusIndicatorRemove emotion-43 emotion-44"
                 href="/news"
               >
                 Home
               </a>
             </li>
             <li
-              class="emotion-43 emotion-44"
+              class="emotion-41 emotion-42"
               dir="ltr"
               role="listitem"
             >
               <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
+                class="focusIndicatorRemove emotion-43 emotion-44"
                 href="/news/uk"
               >
                 UK
               </a>
             </li>
             <li
-              class="emotion-43 emotion-44"
+              class="emotion-41 emotion-42"
               dir="ltr"
               role="listitem"
             >
               <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
+                class="focusIndicatorRemove emotion-43 emotion-44"
                 href="/news/world"
               >
                 World
               </a>
             </li>
             <li
-              class="emotion-43 emotion-44"
+              class="emotion-41 emotion-42"
               dir="ltr"
               role="listitem"
             >
               <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
+                class="focusIndicatorRemove emotion-43 emotion-44"
                 href="/news/business"
               >
                 Business
               </a>
             </li>
             <li
-              class="emotion-43 emotion-44"
+              class="emotion-41 emotion-42"
               dir="ltr"
               role="listitem"
             >
               <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
+                class="focusIndicatorRemove emotion-43 emotion-44"
                 href="/news/politics"
               >
                 Politics
               </a>
             </li>
             <li
-              class="emotion-43 emotion-44"
+              class="emotion-41 emotion-42"
               dir="ltr"
               role="listitem"
             >
               <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
+                class="focusIndicatorRemove emotion-43 emotion-44"
                 href="/news/technology"
               >
                 Tech
               </a>
             </li>
             <li
-              class="emotion-43 emotion-44"
+              class="emotion-41 emotion-42"
               dir="ltr"
               role="listitem"
             >
               <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
+                class="focusIndicatorRemove emotion-43 emotion-44"
                 href="/news/science_and_environment"
               >
                 Science
               </a>
             </li>
             <li
-              class="emotion-43 emotion-44"
+              class="emotion-41 emotion-42"
               dir="ltr"
               role="listitem"
             >
               <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
+                class="focusIndicatorRemove emotion-43 emotion-44"
                 href="/news/health"
               >
                 Health
               </a>
             </li>
             <li
-              class="emotion-43 emotion-44"
+              class="emotion-41 emotion-42"
               dir="ltr"
               role="listitem"
             >
               <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
+                class="focusIndicatorRemove emotion-43 emotion-44"
                 href="/news/education"
               >
                 Family & Education
               </a>
             </li>
             <li
-              class="emotion-43 emotion-44"
+              class="emotion-41 emotion-42"
               dir="ltr"
               role="listitem"
             >
               <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
+                class="focusIndicatorRemove emotion-43 emotion-44"
                 href="/news/entertainment_and_arts"
               >
                 Entertainment & Arts
               </a>
             </li>
             <li
-              class="emotion-43 emotion-44"
+              class="emotion-41 emotion-42"
               dir="ltr"
               role="listitem"
             >
               <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
+                class="focusIndicatorRemove emotion-43 emotion-44"
                 href="/news/stories"
               >
                 Stories
@@ -5150,21 +5002,21 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
         </div>
       </div>
       <div
-        class="emotion-87 emotion-88"
+        class="emotion-85 emotion-86"
         data-e2e="dropdown-nav"
         height="0"
       >
         <ul
-          class="emotion-89 emotion-90"
+          class="emotion-87 emotion-88"
           role="list"
         >
           <li
-            class="emotion-91 emotion-92"
+            class="emotion-89 emotion-90"
             role="listitem"
           >
             <a
               aria-labelledby="dropdownNavigation-home"
-              class="emotion-93 emotion-94"
+              class="emotion-91 emotion-92"
               href="/news"
             >
               <span
@@ -5175,12 +5027,12 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
             </a>
           </li>
           <li
-            class="emotion-91 emotion-92"
+            class="emotion-89 emotion-90"
             role="listitem"
           >
             <a
               aria-labelledby="dropdownNavigation-uk"
-              class="emotion-93 emotion-94"
+              class="emotion-91 emotion-92"
               href="/news/uk"
             >
               <span
@@ -5191,12 +5043,12 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
             </a>
           </li>
           <li
-            class="emotion-91 emotion-92"
+            class="emotion-89 emotion-90"
             role="listitem"
           >
             <a
               aria-labelledby="dropdownNavigation-world"
-              class="emotion-93 emotion-94"
+              class="emotion-91 emotion-92"
               href="/news/world"
             >
               <span
@@ -5207,12 +5059,12 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
             </a>
           </li>
           <li
-            class="emotion-91 emotion-92"
+            class="emotion-89 emotion-90"
             role="listitem"
           >
             <a
               aria-labelledby="dropdownNavigation-business"
-              class="emotion-93 emotion-94"
+              class="emotion-91 emotion-92"
               href="/news/business"
             >
               <span
@@ -5223,12 +5075,12 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
             </a>
           </li>
           <li
-            class="emotion-91 emotion-92"
+            class="emotion-89 emotion-90"
             role="listitem"
           >
             <a
               aria-labelledby="dropdownNavigation-politics"
-              class="emotion-93 emotion-94"
+              class="emotion-91 emotion-92"
               href="/news/politics"
             >
               <span
@@ -5239,12 +5091,12 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
             </a>
           </li>
           <li
-            class="emotion-91 emotion-92"
+            class="emotion-89 emotion-90"
             role="listitem"
           >
             <a
               aria-labelledby="dropdownNavigation-tech"
-              class="emotion-93 emotion-94"
+              class="emotion-91 emotion-92"
               href="/news/technology"
             >
               <span
@@ -5255,12 +5107,12 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
             </a>
           </li>
           <li
-            class="emotion-91 emotion-92"
+            class="emotion-89 emotion-90"
             role="listitem"
           >
             <a
               aria-labelledby="dropdownNavigation-science"
-              class="emotion-93 emotion-94"
+              class="emotion-91 emotion-92"
               href="/news/science_and_environment"
             >
               <span
@@ -5271,12 +5123,12 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
             </a>
           </li>
           <li
-            class="emotion-91 emotion-92"
+            class="emotion-89 emotion-90"
             role="listitem"
           >
             <a
               aria-labelledby="dropdownNavigation-health"
-              class="emotion-93 emotion-94"
+              class="emotion-91 emotion-92"
               href="/news/health"
             >
               <span
@@ -5287,12 +5139,12 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
             </a>
           </li>
           <li
-            class="emotion-91 emotion-92"
+            class="emotion-89 emotion-90"
             role="listitem"
           >
             <a
               aria-labelledby="dropdownNavigation-family-&-education"
-              class="emotion-93 emotion-94"
+              class="emotion-91 emotion-92"
               href="/news/education"
             >
               <span
@@ -5303,12 +5155,12 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
             </a>
           </li>
           <li
-            class="emotion-91 emotion-92"
+            class="emotion-89 emotion-90"
             role="listitem"
           >
             <a
               aria-labelledby="dropdownNavigation-entertainment-&-arts"
-              class="emotion-93 emotion-94"
+              class="emotion-91 emotion-92"
               href="/news/entertainment_and_arts"
             >
               <span
@@ -5319,12 +5171,12 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
             </a>
           </li>
           <li
-            class="emotion-91 emotion-92"
+            class="emotion-89 emotion-90"
             role="listitem"
           >
             <a
               aria-labelledby="dropdownNavigation-stories"
-              class="emotion-93 emotion-94"
+              class="emotion-91 emotion-92"
               href="/news/stories"
             >
               <span
@@ -5337,7 +5189,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
         </ul>
       </div>
       <div
-        class="emotion-135 emotion-136"
+        class="emotion-133 emotion-134"
       />
     </div>
   </nav>
