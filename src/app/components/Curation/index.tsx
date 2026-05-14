@@ -71,9 +71,6 @@ interface CurationProps extends Curation {
   experimentProps?: ComponentExperimentProps;
   curationContentType?: string;
   pageType?: string;
-  associatedContent?: {
-    uri: string;
-  };
 }
 
 export default ({
