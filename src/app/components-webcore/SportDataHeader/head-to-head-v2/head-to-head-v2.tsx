@@ -1,3 +1,4 @@
+import useSportDataPolling from '#app/hooks/useSportDataPolling';
 import Footer from './components/footer';
 import HeadToHeadHeader from './components/head-to-head-header';
 import { HeadToHeadBanner } from './components/head-to-head-banner';
@@ -7,18 +8,24 @@ import { HeadToHeadV2Data } from './types';
 import styles from './index.styles';
 
 export const HeadToHeadV2 = ({
-  data,
+  initialSportData,
   isConciseView,
   shouldShowActions,
   maximumContainerScoreDigits,
   teamBadgePlaceholderFallbackType = 'badge',
+  isLive = false,
 }: {
-  data: HeadToHeadV2Data;
+  initialSportData: HeadToHeadV2Data;
   isConciseView?: boolean;
   shouldShowActions?: boolean;
   maximumContainerScoreDigits?: number;
   teamBadgePlaceholderFallbackType?: 'badge' | 'flag';
+  isLive?: boolean;
 }) => {
+  // TODO - check coclocated hook is checking the right data source
+  const { currentSportData } = useSportDataPolling(initialSportData, isLive);
+  const data = currentSportData;
+
   const hasActions =
     (data?.home?.actions?.length ?? 0) > 0 ||
     (data?.away?.actions?.length ?? 0) > 0;

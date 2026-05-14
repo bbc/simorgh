@@ -142,6 +142,8 @@ export type HeadToHeadV2Data = {
     value?: number;
     additionalInfo?: string;
   };
+
+  urn: string;
 };
 
 export declare const HeadToHeadV2: (props: {

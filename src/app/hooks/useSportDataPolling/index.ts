@@ -1,66 +1,53 @@
 import { useEffect, useState } from 'react';
-import { ComponentProps } from '#nextjs/pages/[service]/live/[id]/LivePageLayout';
 // import makeRequest from './makeRequest/makeRequest';
+import { HeadToHeadV2Data } from '#app/components-webcore/SportDataHeader/head-to-head-v2/types';
 import fakeRequest from './fakeRequest';
 
 export const POLLING_INTERVAL = 5000; // TODO - confirm the polling interval with the team, 5s is just a placeholder for now
 
-// type SportDataEventContent = NonNullable<
-//   ComponentProps['pageData']['sportDataEventContent']
-// >;
-// type SportDataEvent =
-//   SportDataEventContent['content']['data']['sportDataEvent'];
-
-// const isSameSportData = (
-//   currentSportData: SportDataEvent | null,
-//   polledSportData: SportDataEvent,
-// ) => JSON.stringify(currentSportData) === JSON.stringify(polledSportData);
+const isSameSportData = (
+  currentSportData: HeadToHeadV2Data | null,
+  polledSportData: HeadToHeadV2Data,
+) => JSON.stringify(currentSportData) === JSON.stringify(polledSportData);
 
 const useSportDataPolling = (
-  pageData: ComponentProps['pageData'],
+  sportData: HeadToHeadV2Data,
   enableFeature: boolean,
 ) => {
-  const initialSportData =
-    pageData.sportDataEventContent?.content?.data?.sportDataEvent ?? null;
-  const sportDataId = pageData.sportDataEventContent?.id;
-
-  const [currentSportData, setCurrentData] = useState(initialSportData);
+  const sportDataUrn = sportData.urn;
+  const [currentSportData, setCurrentData] =
+    useState<HeadToHeadV2Data>(sportData);
 
   useEffect(() => {
     const timerId = setInterval(async () => {
-      if (enableFeature === false || !sportDataId) return;
-      //   if (currentStreamData?.page?.index !== 1) return; // TODO - confirm with the team if we should only poll when the user is on the first page of the live text stream, this was a requirement for the live text stream polling but may not be relevant for sport data
+      if (enableFeature === false) return;
 
-      // const polledSportsData = await makeRequest(sportDataId);
-      const polledSportsData = fakeRequest(); // TEMP
+      // TEMP
+      const polledSportsData = fakeRequest();
 
       if (polledSportsData != null) {
-        setCurrentData(polledSportsData); // Option C - do not check
-        console.log(
-          'data is polled and set to state, component is re-rendered',
-        ); // logs to show that the component is re-rendering on every poll with the new data, even if the data is unchanged. This is to demonstrate that without the check, we will have unnecessary re-renders which could impact performance.
-        // setCurrentData(currentData => {
-        //   if (isSameSportData(currentData, polledSportsData)) {
-        //     // eslint-disable-next-line no-console
-        //     console.log('data is unchanged, not re-rendering');
-        //     return currentData;
-        //   }
+        setCurrentData(currentData => {
+          if (isSameSportData(currentData, polledSportsData)) {
+            // eslint-disable-next-line no-console
+            console.log('data is unchanged, not re-rendering');
+            return currentData;
+          }
 
-        //   // eslint-disable-next-line no-console
-        //   console.log('data has changed. component is re-rendered');
-        //   return polledSportsData;
-        // }); // option B - checks with logs
-
-        // setCurrentData(currentData =>
-        //   isSameSportData(currentData, polledSportsData)
-        //     ? currentData
-        //     : polledSportsData,
-        // ); // Option B - like A without logs
+          // eslint-disable-next-line no-console
+          console.log('data has changed. component is re-rendered');
+          return polledSportsData;
+        });
       }
+      // REAL
+      //   const polledSportsData = await makeRequest(sportDataId);
+
+      //   if (polledSportsData != null) {
+      //     setCurrentData(polledSportsData);
+      //   }
     }, POLLING_INTERVAL);
 
     return () => clearInterval(timerId);
-  }, [enableFeature, sportDataId]);
+  }, [enableFeature, sportDataUrn]);
 
   return { currentSportData }; // TODO - make more readable?
 };

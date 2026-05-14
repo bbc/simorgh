@@ -14,7 +14,6 @@ import HeadToHeadV2 from '#app/components-webcore/SportDataHeader/head-to-head-v
 import { HeadToHeadV2Data } from '#app/components-webcore/SportDataHeader/head-to-head-v2/types';
 import { PortraitVideoItems } from '#app/models/types/optimo';
 import useLivePagePolling from '#app/hooks/useLivePagePolling';
-import useSportDataPolling from '#app/hooks/useSportDataPolling';
 import useToggle from '#app/hooks/useToggle';
 import isLiveEnv from '#app/lib/utilities/isLive';
 import {
@@ -75,7 +74,7 @@ export type ComponentProps = {
           title: string;
         };
       };
-    } | null;
+    };
   };
 };
 
@@ -115,11 +114,6 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
   const isSportDataLive = sportDataEventContent?.content?.data?.live;
   const sportDataTitle = sportDataEventContent?.content?.data?.title;
   const showSportData = !!sportData && !isLiveEnv();
-
-  const { currentSportData } = useSportDataPolling(
-    pageData,
-    showSportData && isLive,
-  ); // TODO - check that this only runs in correct conditions. Consider colcoating in header?
 
   const {
     url: imageUrl,
@@ -216,9 +210,10 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
         />
         {showSportData && (
           <HeadToHeadV2
-            data={currentSportData || sportData} // TODO - handle null
+            initialSportData={sportData}
             isConciseView={false} // defaulted to false for developement/ MVP
             shouldShowActions={false} // defaulted to false for developement/ MVP
+            isLive={isSportDataLive}
           />
         )}
         <div css={styles.outerGrid}>
