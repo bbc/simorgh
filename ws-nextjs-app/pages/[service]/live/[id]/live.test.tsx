@@ -558,7 +558,9 @@ describe('Live Page', () => {
       render(<Live pageData={mockPageDataWithEmptyPortraitVideoItems} />);
     });
 
-    expect(screen.queryByTestId('portrait-video-carousel')).not.toBeInTheDocument();
+    expect(
+      screen.queryByTestId('portrait-video-carousel'),
+    ).not.toBeInTheDocument();
   });
 
   it('sets the correct og:image meta tag from the post with assetId', () => {
