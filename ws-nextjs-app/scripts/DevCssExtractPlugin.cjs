@@ -111,7 +111,9 @@ class DevCssExtractPlugin {
 
       mkdirSync(dirname(outputPath), { recursive: true });
       writeFileSync(cachePath, JSON.stringify([...cssMap.entries()]), 'utf-8');
+      console.log(`[DevCssExtractPlugin] Wrote CSS cache to ${cachePath} with ${cssMap.size} entries`);
       writeFileSync(outputPath, [...cssMap.values()].join('\n'), 'utf-8');
+      console.log(`[DevCssExtractPlugin] Wrote concatenated CSS to ${outputPath} (${[...cssMap.values()].join('\n').length} bytes)`);
     });
   }
 }
