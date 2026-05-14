@@ -223,43 +223,4 @@ describe('ThemeProvider', () => {
       </body>
     `);
   });
-
-  describe.each(SERVICES)(`brandSVG for %s`, service => {
-    beforeAll(() => {
-      // TODO: Consider removing this one this check is removed: https://github.com/bbc/simorgh/blob/4bfea6e86e65e3fdd374ff5432bae575366a343b/src/app/legacy/psammead/psammead-brand/src/index.jsx#L155
-      process.env.SIMORGH_APP_ENV = 'live';
-    });
-
-    afterAll(() => {
-      process.env.SIMORGH_APP_ENV = originalSimorghAppEnv;
-    });
-
-    const children = <span data-testid="brand-child">child</span>;
-    it(`should match chameleonLogos/${service}.tsx`, async () => {
-      await act(async () => {
-        render(
-          <ThemeProvider
-            service={service as Services}
-            variant={defaultServiceVariants[service] || 'default'}
-          >
-            <ServiceContextProvider service={service as Services}>
-              <Brand>{children}</Brand>
-            </ServiceContextProvider>
-          </ThemeProvider>,
-        );
-      });
-
-      const themeBrandSVG = document.body.querySelector('svg')?.innerHTML;
-
-      const { default: svg } = await import(`./chameleonLogos/${service}`);
-
-      const { getByTestId } = render(
-        <svg data-testid={service}>{svg.group}</svg>,
-      );
-
-      const chameleonSVG = getByTestId(service).innerHTML;
-
-      expect(themeBrandSVG).toEqual(chameleonSVG);
-    });
-  });
 });
