@@ -6,7 +6,8 @@ import { Font, FontFace, FontName } from '#app/models/types/theming';
  */
 
 const REITH_BASE_URL = 'https://static.files.bbci.co.uk/fonts/';
-export const REITH_FONTS_DIR = `${REITH_BASE_URL}reith/2.610/`;
+const FONT_VERSION = '2.610';
+export const REITH_FONTS_DIR = `${REITH_BASE_URL}reith/${FONT_VERSION}/`;
 
 const FONTS_BASE_URL = `https://static.files.bbci.co.uk/ws/simorgh-assets/public/fonts/`;
 const NOTO_SERIF_SINHALA_FONTS_DIR = `${FONTS_BASE_URL}NotoSerifSinhala/v1.00/`;
@@ -257,22 +258,22 @@ export const fontInfo: Record<FontName, FontInfo> = {
   BBCReithSans_W_Bd: {
     ...REITH_SANS_BOLD['@font-face'],
     downloadSrc: `${REITH_FONTS_DIR}BBCReithSans_W_Bd.woff2`,
-    version: '2.610',
+    version: FONT_VERSION,
   },
   BBCReithSans_W_Rg: {
     ...REITH_SANS_REGULAR['@font-face'],
     downloadSrc: `${REITH_FONTS_DIR}BBCReithSans_W_Rg.woff2`,
-    version: '2.610',
+    version: FONT_VERSION,
   },
   BBCReithSerif_WNumbers_Lt: {
     ...REITH_SERIF_LIGHT['@font-face'],
     downloadSrc: `${REITH_FONTS_DIR}subsets/BBCReithSerif_WNumbers_Lt.woff2`,
-    version: '2.610',
+    version: FONT_VERSION,
   },
   BBCReithSerif_W_Md: {
     ...REITH_SERIF_MEDIUM['@font-face'],
     downloadSrc: `${REITH_FONTS_DIR}BBCReithSerif_W_Md.woff2`,
-    version: '2.610',
+    version: FONT_VERSION,
   },
   BBCReithQalam_W_Bd: {
     ...REITH_QALAM_BOLD['@font-face'],
