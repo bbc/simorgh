@@ -449,18 +449,7 @@ export type FontVariant =
   | 'serifBold'
   | 'serifLight';
 
-export type BrandSVG = {
-  width?: number;
-  height?: number;
-  group: JSX.Element;
-  ratio?: number;
-  viewbox?: {
-    height?: number;
-    width?: number;
-    minY?: number;
-    minX?: number;
-  };
-};
+export type BrandSVG = string;
 
 export type GridWidths = {
   240: number;
