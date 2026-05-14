@@ -32,7 +32,7 @@ interface GroupedEventsProps {
   awayName: string;
 }
 
-export const GroupedEvents = ({
+const GroupedEvents = ({
   groupedEvents,
   homeName,
   awayName,
@@ -77,3 +77,5 @@ export const GroupedEvents = ({
     )}
   </div>
 );
+
+export default GroupedEvents;
