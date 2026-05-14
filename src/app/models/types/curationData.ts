@@ -83,6 +83,9 @@ export interface BaseCuration {
   contentType?: string;
   pageTitle?: string;
   mediaCollection?: MediaCollection[];
+  associatedContent?: {
+    uri?: string;
+  };
 }
 
 export interface Curation extends BaseCuration {

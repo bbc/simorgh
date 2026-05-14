@@ -8,6 +8,7 @@ import useOptimizelyVariation, {
   ExperimentType,
 } from '#app/hooks/useOptimizelyVariation';
 import useHydrationDetection from '#app/hooks/useHydrationDetection';
+import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import styles from './index.styles';
 import PortraitVideoModal from '../PortraitVideoModal';
 import { BumpLoader } from '../MediaLoader';
@@ -16,6 +17,7 @@ import PortraitCarouselNavigation from './PortraitVideoCarouselNavigation';
 import Heading from '../Heading';
 import PortraitVideoNoJs from './PortraitVideoNoJs';
 import { PortraitClipMediaBlock } from '../MediaLoader/types';
+import Subheading from '../Curation/Subhead';
 
 type PortraitVideoCarouselProps = {
   title?: string;
@@ -23,6 +25,7 @@ type PortraitVideoCarouselProps = {
   eventTrackingData: EventTrackingData;
   className?: string;
   backgroundColor?: string;
+  link?: string;
 };
 
 const PortraitVideoCarousel = ({
@@ -31,6 +34,7 @@ const PortraitVideoCarousel = ({
   eventTrackingData,
   className,
   backgroundColor,
+  link,
 }: PortraitVideoCarouselProps) => {
   const scrollRef = useRef<HTMLUListElement>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -66,6 +70,8 @@ const PortraitVideoCarousel = ({
 
   const viewTracker = useViewTracker(eventTrackingDataExtended);
 
+  const subheadingClickTracker = useClickTrackerHandler(eventTrackingData);
+
   if (isLite || isAmp) return null;
 
   const handlePromoClick = (index: number) => {
@@ -91,15 +97,21 @@ const PortraitVideoCarousel = ({
         className={className}
         {...viewTracker}
       >
-        {title && (
-          <Heading
-            level={2}
-            size="doublePica"
-            fontVariant="sansBold"
-            css={styles.heading}
-          >
+        {link && title ? (
+          <Subheading link={link} {...subheadingClickTracker}>
             {title}
-          </Heading>
+          </Subheading>
+        ) : (
+          title && (
+            <Heading
+              level={2}
+              size="doublePica"
+              fontVariant="sansBold"
+              css={styles.heading}
+            >
+              {title}
+            </Heading>
+          )
         )}
         <noscript>
           <PortraitVideoNoJs />

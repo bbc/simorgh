@@ -8441,18 +8441,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"compression-webpack-plugin@npm:11.1.0":
-  version: 11.1.0
-  resolution: "compression-webpack-plugin@npm:11.1.0"
-  dependencies:
-    schema-utils: "npm:^4.2.0"
-    serialize-javascript: "npm:^6.0.2"
-  peerDependencies:
-    webpack: ^5.1.0
-  checksum: 10/9068fc0fe8feb3c342043b58d42756006b5e85393bd40356e2bd9b68b70adb77782cd42bda2c84bc26c749d7357ae195b526aad3e6e6ffb51db1a23217bf6357
-  languageName: node
-  linkType: hard
-
 "compression@npm:1.8.1":
   version: 1.8.1
   resolution: "compression@npm:1.8.1"
@@ -8556,21 +8544,6 @@ __metadata:
   version: 2.1.4
   resolution: "cookiejar@npm:2.1.4"
   checksum: 10/4a184f5a0591df8b07d22a43ea5d020eacb4572c383e853a33361a99710437eaa0971716c688684075bbf695b484f5872e9e3f562382e46858716cb7fc8ce3f4
-  languageName: node
-  linkType: hard
-
-"copy-webpack-plugin@npm:13.0.1":
-  version: 13.0.1
-  resolution: "copy-webpack-plugin@npm:13.0.1"
-  dependencies:
-    glob-parent: "npm:^6.0.1"
-    normalize-path: "npm:^3.0.0"
-    schema-utils: "npm:^4.2.0"
-    serialize-javascript: "npm:^6.0.2"
-    tinyglobby: "npm:^0.2.12"
-  peerDependencies:
-    webpack: ^5.1.0
-  checksum: 10/2abf3b85c32556b1cb9ef47f2198f6497ef414505cf42d249e3b7e65185db738756bec85333b4a32865d1c6b09343ea63eb9e8d154c133ddcebb4c7f066be5af
   languageName: node
   linkType: hard
 
@@ -11201,15 +11174,6 @@ __metadata:
   dependencies:
     is-glob: "npm:^4.0.1"
   checksum: 10/32cd106ce8c0d83731966d31517adb766d02c3812de49c30cfe0675c7c0ae6630c11214c54a5ae67aca882cf738d27fd7768f21aa19118b9245950554be07247
-  languageName: node
-  linkType: hard
-
-"glob-parent@npm:^6.0.1":
-  version: 6.0.2
-  resolution: "glob-parent@npm:6.0.2"
-  dependencies:
-    is-glob: "npm:^4.0.3"
-  checksum: 10/c13ee97978bef4f55106b71e66428eb1512e71a7466ba49025fc2aec59a5bfb0954d5abd58fc5ee6c9b076eef4e1f6d3375c2e964b88466ca390da4419a786a8
   languageName: node
   linkType: hard
 
@@ -14345,16 +14309,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next-test-api-route-handler@npm:5.0.4":
-  version: 5.0.4
-  resolution: "next-test-api-route-handler@npm:5.0.4"
+"next-test-api-route-handler@npm:5.0.5":
+  version: 5.0.5
+  resolution: "next-test-api-route-handler@npm:5.0.5"
   dependencies:
     "@whatwg-node/server": "npm:^0.10.18"
     cookie: "npm:^1.1.1"
     core-js: "npm:^3.49.0"
   peerDependencies:
     next: ">=9"
-  checksum: 10/24cc7780d5f5636f9f35e2db3a0d1d80915ae460fd4c72ec74a8ea895450f6eca9a68846e163e55b840a4a00d2a7e7351fbed3fd42e0d371bce2c376bdad2919
+  checksum: 10/e0e197af5449413eebac21b9aa377b337bba38b404a4559b5d086ae8690033767b052f4ec5d7686b762c15904ac796b7b649728e6b44a9eda95a01a3ffe14efa
   languageName: node
   linkType: hard
 
@@ -16388,7 +16352,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"schema-utils@npm:^4.0.0, schema-utils@npm:^4.2.0, schema-utils@npm:^4.3.0":
+"schema-utils@npm:^4.0.0, schema-utils@npm:^4.3.0":
   version: 4.3.2
   resolution: "schema-utils@npm:4.3.2"
   dependencies:
@@ -16784,7 +16748,7 @@ __metadata:
     jest-environment-jsdom: "npm:30.2.0"
     mocha-junit-reporter: "npm:2.2.1"
     next: "npm:16.2.6"
-    next-test-api-route-handler: "npm:5.0.4"
+    next-test-api-route-handler: "npm:5.0.5"
     npm-run-all2: "npm:8.0.4"
     sharp: "npm:0.34.5"
     swc-loader: "npm:0.2.7"
@@ -16868,8 +16832,6 @@ __metadata:
     cli-table: "npm:0.3.11"
     colors: "npm:^1.4.0"
     compression: "npm:1.8.1"
-    compression-webpack-plugin: "npm:11.1.0"
-    copy-webpack-plugin: "npm:13.0.1"
     core-js: "npm:3.46.0"
     crypto: "npm:1.0.1"
     cypress: "npm:15.11.0"
@@ -16932,7 +16894,6 @@ __metadata:
     stream-browserify: "npm:3.0.0"
     strip-ansi: "npm:7.1.2"
     supertest: "npm:7.2.2"
-    terser-webpack-plugin: "npm:5.3.14"
     timemachine: "npm:0.3.2"
     ts-jest: "npm:29.4.9"
     ts-loader: "npm:9.5.7"
@@ -17690,7 +17651,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"terser-webpack-plugin@npm:5.3.14, terser-webpack-plugin@npm:^5.3.14":
+"terser-webpack-plugin@npm:^5.3.14":
   version: 5.3.14
   resolution: "terser-webpack-plugin@npm:5.3.14"
   dependencies:
