@@ -9,7 +9,7 @@ const styles = {
       [`.${OPERA_MINI_CLASSNAME} &`]: {
         display: 'none',
       },
-      '& > h2': {
+      '& > h2:has(a)': {
         marginBottom: 0,
       },
     }),
