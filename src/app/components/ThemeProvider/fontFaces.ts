@@ -6,7 +6,7 @@ import { Font, FontFace, FontName } from '#app/models/types/theming';
  */
 
 const REITH_BASE_URL = 'https://static.files.bbci.co.uk/fonts/';
-export const REITH_FONTS_DIR = `${REITH_BASE_URL}reith/r2.512/`;
+export const REITH_FONTS_DIR = `${REITH_BASE_URL}reith/r2.610/`;
 
 const FONTS_BASE_URL = `https://static.files.bbci.co.uk/ws/simorgh-assets/public/fonts/`;
 const NOTO_SERIF_SINHALA_FONTS_DIR = `${FONTS_BASE_URL}NotoSerifSinhala/v1.00/`;
