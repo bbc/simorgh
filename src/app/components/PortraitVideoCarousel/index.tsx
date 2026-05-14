@@ -97,7 +97,7 @@ const PortraitVideoCarousel = ({
         className={className}
         {...viewTracker}
       >
-        {link ? (
+        {link && title ? (
           <Subheading link={link} {...subheadingClickTracker}>
             {title}
           </Subheading>
