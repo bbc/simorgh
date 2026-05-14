@@ -78,8 +78,6 @@ export const AccountProvider = ({
   const isSignedIn =
     isIdctaAvailable &&
     Boolean(initialConfig?.initialIsSignedIn || signedInToken);
-  const isAccountPromoBannerVisible =
-    initialConfig?.initialIsAccountPromoBannerVisible ?? true;
 
   const isPersonalizationAvailable =
     isIdctaAvailable &&
@@ -100,7 +98,6 @@ export const AccountProvider = ({
       registerUrl,
       settingsUrl,
       forYouUrl,
-      isAccountPromoBannerVisible,
       isPersonalizationAvailable,
       isPersonalizationEnabled,
     }),
@@ -113,7 +110,6 @@ export const AccountProvider = ({
       settingsUrl,
       signInUrl,
       signOutUrl,
-      isAccountPromoBannerVisible,
       isPersonalizationAvailable,
       isPersonalizationEnabled,
     ],

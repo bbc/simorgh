@@ -10,7 +10,6 @@ export type IdctaConfig = {
   signout_url: string;
   foryou_url: string;
   initialIsSignedIn?: boolean;
-  initialIsAccountPromoBannerVisible?: boolean;
   identity: {
     idSignedInCookieName: string;
   };
@@ -25,7 +24,6 @@ export type AccountContextProps = {
   signOutUrl?: string;
   forYouUrl?: string;
   hashedUserId?: string;
-  isAccountPromoBannerVisible: boolean;
   isPersonalizationEnabled: boolean;
   isPersonalizationAvailable: boolean;
 };

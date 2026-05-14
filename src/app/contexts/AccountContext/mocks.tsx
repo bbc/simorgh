@@ -9,7 +9,6 @@ const mockIdctaConfig: IdctaConfig = {
   signout_url: 'https://example.com/signout',
   foryou_url: 'https://example.com/for-you',
   initialIsSignedIn: false,
-  initialIsAccountPromoBannerVisible: true,
   identity: {
     idSignedInCookieName: 'ckns_id',
   },
