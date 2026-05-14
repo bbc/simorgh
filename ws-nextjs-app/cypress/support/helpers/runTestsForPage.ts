@@ -2,7 +2,7 @@
 import { PageTypes } from '#app/models/types/global';
 import handleContinueReadingButton from './handleContinueReadingButton';
 import { ServiceParametersType } from '../../types';
-import getOptimizelyKey from '../../../../cypress/support/helpers/getOptimizelyKey';
+import getOptimizelyKey from './getOptimizelyKey';
 
 type TestType = (props: ServiceParametersType) => void;
 
