@@ -20,7 +20,7 @@
   },
   "scripts": {
     "type-check": "tsc",
-    "amp:validate": "wait-on -t 10000 http://localhost:7081/api/status && node ./scripts/ampHtmlValidator",
+    "amp:validate": "node ./scripts/ampHtmlValidator",
     "build:local": "rm -rf build && cp envConfig/local.env .env && NODE_ENV=production webpack",
     "build": "yarn build:local && yarn type-check && node --experimental-modules ./scripts/bundleSize/runBundleSize.js",
     "build:profile": "rm -rf build && cp envConfig/local.env .env && IS_PROD_PROFILE=true NODE_ENV=production webpack",
@@ -74,7 +74,7 @@
     "test:linkey:cleanup": "find src/app/lib/config/services -type f -name '*.test.js' -delete",
     "updateMinorPatch": "rm -rf node_modules/ && yarn install && npm update && yarn install",
     "webpack:dev:client": "NODE_ENV=development webpack serve --config-name='modern' --hot --env config='client'",
-    "webpack:dev:server": "wait-on ./build/public/modern-loadable-stats-local.json && NODE_ENV=development webpack --watch --progress --env config='server'"
+    "webpack:dev:server": "NODE_ENV=development webpack --watch --progress --env config='server'"
   },
   "repository": {
     "type": "git",
@@ -195,8 +195,6 @@
     "chromatic": "13.1.4",
     "cli-table": "0.3.11",
     "colors": "^1.4.0",
-    "compression-webpack-plugin": "11.1.0",
-    "copy-webpack-plugin": "13.0.1",
     "crypto": "1.0.1",
     "cypress": "15.11.0",
     "cypress-axe": "1.7.0",
@@ -239,16 +237,13 @@
     "stream-browserify": "3.0.0",
     "strip-ansi": "7.1.2",
     "supertest": "7.2.2",
-    "terser-webpack-plugin": "5.3.14",
     "timemachine": "0.3.2",
     "ts-jest": "29.4.9",
     "ts-loader": "9.5.7",
     "typescript": "5.9.3",
-    "wait-on": "9.0.3",
     "webpack": "5.106.2",
     "webpack-bundle-analyzer": "5.3.0",
     "webpack-cli": "7.0.2",
-    "webpack-dev-server": "5.2.3",
     "webpack-merge": "6.0.1",
     "webpack-node-externals": "3.0.0",
     "yaml-js": "0.3.1"
