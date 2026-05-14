@@ -5,9 +5,9 @@ const styles = {
     css({
       ...fontVariants.sansBold,
       ...fontSizes.doublePica,
-      color: isDarkUi ? palette.GREY_2 : palette.GREY_10,
+      color: isDarkUi ? palette.GHOST : palette.GREY_10,
       a: {
-        color: isDarkUi ? palette.GREY_2 : palette.GREY_10,
+        color: isDarkUi ? palette.GHOST : palette.GREY_10,
         textDecoration: 'none',
         display: 'inline-block',
       },
@@ -16,7 +16,7 @@ const styles = {
         position: 'relative',
       },
       'a:visited': {
-        color: isDarkUi ? palette.GREY_2 : palette.GREY_10,
+        color: isDarkUi ? palette.GHOST : palette.GREY_10,
       },
       'a: hover, a:focus': {
         color: palette.POSTBOX,
