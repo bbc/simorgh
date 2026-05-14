@@ -257,22 +257,22 @@ export const fontInfo: Record<FontName, FontInfo> = {
   BBCReithSans_W_Bd: {
     ...REITH_SANS_BOLD['@font-face'],
     downloadSrc: `${REITH_FONTS_DIR}BBCReithSans_W_Bd.woff2`,
-    version: 'r2.512',
+    version: 'r2.610',
   },
   BBCReithSans_W_Rg: {
     ...REITH_SANS_REGULAR['@font-face'],
     downloadSrc: `${REITH_FONTS_DIR}BBCReithSans_W_Rg.woff2`,
-    version: 'r2.512',
+    version: 'r2.610',
   },
   BBCReithSerif_WNumbers_Lt: {
     ...REITH_SERIF_LIGHT['@font-face'],
     downloadSrc: `${REITH_FONTS_DIR}subsets/BBCReithSerif_WNumbers_Lt.woff2`,
-    version: 'r2.512',
+    version: 'r2.610',
   },
   BBCReithSerif_W_Md: {
     ...REITH_SERIF_MEDIUM['@font-face'],
     downloadSrc: `${REITH_FONTS_DIR}BBCReithSerif_W_Md.woff2`,
-    version: 'r2.512',
+    version: 'r2.610',
   },
   BBCReithQalam_W_Bd: {
     ...REITH_QALAM_BOLD['@font-face'],
