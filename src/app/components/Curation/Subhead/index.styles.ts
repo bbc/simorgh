@@ -1,13 +1,13 @@
 import { css, Theme } from '@emotion/react';
 
 const styles = {
-  h2: ({ palette, fontVariants, fontSizes }: Theme) =>
+  h2: ({ palette, fontVariants, fontSizes, isDarkUi }: Theme) =>
     css({
       ...fontVariants.sansBold,
       ...fontSizes.doublePica,
-      color: palette.GREY_10,
+      color: isDarkUi ? palette.GREY_2 : palette.GREY_10,
       a: {
-        color: palette.GREY_10,
+        color: isDarkUi ? palette.GREY_2 : palette.GREY_10,
         textDecoration: 'none',
         display: 'inline-block',
       },
@@ -16,7 +16,7 @@ const styles = {
         position: 'relative',
       },
       'a:visited': {
-        color: palette.GREY_10,
+        color: isDarkUi ? palette.GREY_2 : palette.GREY_10,
       },
       'a: hover, a:focus': {
         color: palette.POSTBOX,
