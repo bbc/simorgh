@@ -1,5 +1,6 @@
-import { Services } from '#app/models/types/global';
 import envs, { EnvironmentConfigType } from '../../../../support/config/envs';
+
+export { getExpectedAtiDestination } from '#app/components/ATIAnalytics/helpers/getExpectedAtiDestination';
 
 export const getATIParamsFromURL = (atiAnalyticsURL: string) => {
   const url = new URL(atiAnalyticsURL);
@@ -127,55 +128,4 @@ export const interceptATIAnalyticsBeacons = () => {
       request.reply({ statusCode: 200 });
     },
   ).as(`${ATI_PAGE_VIEW_REVERB}`);
-};
-
-export const getExpectedAtiDestination = ({
-  service,
-  applicationEnv,
-}: {
-  service: Services;
-  applicationEnv: string;
-}) => {
-  const publicServiceDestinationNames = {
-    news: 'NEWS_PS',
-    cymrufyw: 'NEWS_LANGUAGES_PS',
-    naidheachdan: 'NEWS_LANGUAGES_PS',
-    scotland: 'HOMEPAGE_PS',
-    newsround: 'NEWSROUND',
-    sport: 'SPORT_PS',
-  } as Record<Services, string>;
-
-  const expectedAtiDestinationsForAmp = {
-    WS_NEWS_LANGUAGES: '598342',
-    WS_NEWS_LANGUAGES_TEST: '598343',
-    NEWS_PS:
-      // eslint-disable-next-line no-template-curly-in-string
-      '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598285, 598287)',
-    NEWS_PS_TEST:
-      // eslint-disable-next-line no-template-curly-in-string
-      '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598286, 598288)',
-    NEWS_LANGUAGES_PS:
-      // eslint-disable-next-line no-template-curly-in-string
-      '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598291, 598289)',
-    NEWS_LANGUAGES_PS_TEST:
-      // eslint-disable-next-line no-template-curly-in-string
-      '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598292, 598290)',
-    HOMEPAGE_PS: '598273',
-    HOMEPAGE_PS_TEST: '598274',
-    NEWSROUND: '598293',
-    NEWSROUND_TEST: '598294',
-    SPORT_PS:
-      // eslint-disable-next-line no-template-curly-in-string
-      '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598310, 598308)',
-    SPORT_PS_TEST:
-      // eslint-disable-next-line no-template-curly-in-string
-      '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598311, 598309)',
-  } as Record<string, string>;
-
-  const destinationName =
-    publicServiceDestinationNames[service] ?? 'WS_NEWS_LANGUAGES';
-
-  return expectedAtiDestinationsForAmp[
-    applicationEnv === 'live' ? destinationName : `${destinationName}_TEST`
-  ];
 };

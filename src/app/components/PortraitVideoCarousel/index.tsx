@@ -1,6 +1,7 @@
 import { use, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { RequestContext } from '#app/contexts/RequestContext';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useOptimizelyVariation, {
@@ -17,7 +18,7 @@ import PortraitVideoNoJs from './PortraitVideoNoJs';
 import { PortraitClipMediaBlock } from '../MediaLoader/types';
 
 type PortraitVideoCarouselProps = {
-  title: string;
+  title?: string;
   blocks: PortraitClipMediaBlock[];
   eventTrackingData: EventTrackingData;
   className?: string;
@@ -38,6 +39,7 @@ const PortraitVideoCarousel = ({
   );
 
   const { isLite, isAmp, nonce } = use(RequestContext);
+  const { translations } = use(ServiceContext);
 
   const isHydrated = useHydrationDetection();
 
@@ -82,21 +84,23 @@ const PortraitVideoCarousel = ({
     <>
       <BumpLoader nonce={nonce} />
       <section
-        aria-label={title}
+        aria-label={title || translations.media.watch}
         role="region"
         data-testid="portrait-video-carousel"
         css={styles.section}
         className={className}
         {...viewTracker}
       >
-        <Heading
-          level={2}
-          size="doublePica"
-          fontVariant="sansBold"
-          css={styles.heading}
-        >
-          {title}
-        </Heading>
+        {title && (
+          <Heading
+            level={2}
+            size="doublePica"
+            fontVariant="sansBold"
+            css={styles.heading}
+          >
+            {title}
+          </Heading>
+        )}
         <noscript>
           <PortraitVideoNoJs />
         </noscript>
