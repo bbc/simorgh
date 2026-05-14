@@ -4,7 +4,6 @@ import isLocal from '#app/lib/utilities/isLocal';
 import { IdctaConfig } from '#app/models/types/account';
 import { Toggles, Services } from '#app/models/types/global';
 import { IncomingHttpHeaders } from 'http';
-import { isAccountPromoBannerVisible } from '#app/components/Account/AccountPromotionalBanner/utilities/index';
 import fetchIdctaConfig from '../fetchIdctaConfig';
 
 const logger = nodeLogger(__filename);
@@ -51,13 +50,6 @@ export default async function getIdctaConfig(
 
   const signedInHeader = requestHeaders?.['x-id-oidc-signedin'];
   const initialIsSignedIn = signedInHeader === '1';
-  const initialIsAccountPromoBannerVisible = isAccountPromoBannerVisible(
-    requestHeaders?.cookie ?? '',
-  );
 
-  return {
-    ...config,
-    initialIsSignedIn,
-    initialIsAccountPromoBannerVisible,
-  };
+  return { ...config, initialIsSignedIn };
 }
