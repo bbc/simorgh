@@ -29,10 +29,11 @@ jest.mock('#app/lib/utilities/isLive', () => ({
 jest.mock('#app/components-webcore/SportDataHeader/head-to-head-v2', () => ({
   __esModule: true,
   default: jest.fn(
-    ({ data, isConciseView, shouldShowActions }) => (
+    ({ data, isConciseView, shouldHideBadges, shouldShowActions }) => (
       <div
         data-testid="head-to-head-v2"
         data-concise={String(isConciseView)}
+        data-hide-badges={String(shouldHideBadges)}
         data-show-actions={String(shouldShowActions)}
       >
         {data?.home?.fullName} vs {data?.away?.fullName}
@@ -557,7 +558,9 @@ describe('Live Page', () => {
       render(<Live pageData={mockPageDataWithEmptyPortraitVideoItems} />);
     });
 
-    expect(screen.queryByTestId('portrait-video-carousel')).not.toBeInTheDocument();
+    expect(
+      screen.queryByTestId('portrait-video-carousel'),
+    ).not.toBeInTheDocument();
   });
 
   it('sets the correct og:image meta tag from the post with assetId', () => {
