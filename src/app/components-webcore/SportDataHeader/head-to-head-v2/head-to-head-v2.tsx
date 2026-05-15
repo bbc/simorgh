@@ -13,17 +13,19 @@ export const HeadToHeadV2 = ({
   shouldShowActions,
   maximumContainerScoreDigits,
   teamBadgePlaceholderFallbackType = 'badge',
-  isLive = false,
+  isSportDataLive = false,
 }: {
   initialSportData: HeadToHeadV2Data;
   isConciseView?: boolean;
   shouldShowActions?: boolean;
   maximumContainerScoreDigits?: number;
   teamBadgePlaceholderFallbackType?: 'badge' | 'flag';
-  isLive?: boolean;
+  isSportDataLive?: boolean;
 }) => {
-  // TODO - check coclocated hook is checking the right data source
-  const { currentSportData } = useSportDataPolling(initialSportData, isLive);
+  const { currentSportData } = useSportDataPolling(
+    initialSportData,
+    isSportDataLive,
+  );
   const data = currentSportData;
 
   const hasActions =

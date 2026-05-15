@@ -236,7 +236,7 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
             initialSportData={sportData}
             isConciseView={false} // defaulted to false for developement/ MVP
             shouldShowActions={false} // defaulted to false for developement/ MVP
-            isLive={isSportDataLive}
+            isSportDataLive={isSportDataLive}
           />
         )}
         <div css={styles.outerGrid}>
