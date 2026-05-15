@@ -88,6 +88,7 @@ export const service: DefaultServiceConfig = {
       closeLabel: 'Salir',
     },
     translations: {
+      matchSummary: 'Resumen del partido',
       and: 'y',
       readTime: {
         readTimePrefix: 'Tiempo de lectura',

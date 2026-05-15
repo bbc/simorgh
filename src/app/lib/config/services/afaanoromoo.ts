@@ -62,6 +62,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      matchSummary: 'Cuunfaa Taphaa',
       and: 'fi',
       readTime: {
         readTimePrefix: 'Yeroo dubbisuu',

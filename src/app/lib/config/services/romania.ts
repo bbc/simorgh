@@ -44,6 +44,7 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      matchSummary: 'Rezumatul meciului',
       and: 'și',
       readTime: {
         readTimePrefix: 'Timp de lectură',
