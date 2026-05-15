@@ -128,13 +128,6 @@ exports[`Canonical Media Asset Page Header Navigation link should match text and
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 2`] = `
-{
-  "text": "ببینید",
-  "url": "/persian/watch/bbc_persian_tv/live",
-}
-`;
-
 exports[`Canonical Media Asset Page Main heading should match text 1`] = `"Trump long headline"`;
 
 exports[`Canonical Media Asset Page SEO Apple Touch Icon should match attributes 1`] = `

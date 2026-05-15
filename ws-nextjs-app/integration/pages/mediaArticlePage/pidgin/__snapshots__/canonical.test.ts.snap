@@ -137,13 +137,6 @@ exports[`Canonical Media Article Page Header Navigation link should match text a
 }
 `;
 
-exports[`Canonical Media Article Page Header Navigation link should match text and url 2`] = `
-{
-  "text": "Watch",
-  "url": "/pidgin/topics/c3l19z3k1ert",
-}
-`;
-
 exports[`Canonical Media Article Page Latest Media should match text and url 1`] = `
 {
   "text": "Video, How to vote for Nigeria general election, Duration 1,46",

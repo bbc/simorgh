@@ -83,13 +83,6 @@ exports[`Canonical Live Header Navigation link should match text and url 1`] = `
 }
 `;
 
-exports[`Canonical Live Header Navigation link should match text and url 2`] = `
-{
-  "text": "Gledajte",
-  "url": "/serbian/topics/c44vyp5g049t/lat",
-}
-`;
-
 exports[`Canonical Live Main heading should match text 1`] = `"Live test page"`;
 
 exports[`Canonical Live SEO Apple Touch Icon should match attributes 1`] = `

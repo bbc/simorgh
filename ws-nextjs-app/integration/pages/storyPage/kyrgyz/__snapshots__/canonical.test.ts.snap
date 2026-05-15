@@ -128,13 +128,6 @@ exports[`Canonical Story Page Header Navigation link should match text and url 1
 }
 `;
 
-exports[`Canonical Story Page Header Navigation link should match text and url 2`] = `
-{
-  "text": "Биздин видеолор",
-  "url": "/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=4t",
-}
-`;
-
 exports[`Canonical Story Page Image Caption should match text 1`] = `"Сүрөттүн түшүндүрмөсү, Social media"`;
 
 exports[`Canonical Story Page Image should match snapshot 1`] = `

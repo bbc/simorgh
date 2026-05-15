@@ -182,13 +182,6 @@ exports[`AMP Media Asset Page Header Navigation link should match text and url 1
 }
 `;
 
-exports[`AMP Media Asset Page Header Navigation link should match text and url 2`] = `
-{
-  "text": "Watch",
-  "url": "/pidgin/topics/c3l19z3k1ert",
-}
-`;
-
 exports[`AMP Media Asset Page I can see a bulleted list item 1`] = `"this is the link text"`;
 
 exports[`AMP Media Asset Page I can see a bulleted list item with link 1`] = `"/afrique/23248423"`;

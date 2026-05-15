@@ -120,15 +120,8 @@ exports[`Canonical Most Read Page Header I can see the branding 1`] = `
 
 exports[`Canonical Most Read Page Header Navigation link should match text and url 1`] = `
 {
-  "text": "Page where you dey, Home",
+  "text": "Home",
   "url": "/pidgin",
-}
-`;
-
-exports[`Canonical Most Read Page Header Navigation link should match text and url 2`] = `
-{
-  "text": "Watch",
-  "url": "/pidgin/topics/c3l19z3k1ert",
 }
 `;
 

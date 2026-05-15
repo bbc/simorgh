@@ -122,20 +122,6 @@ exports[`Canonical Live Radio Header Navigation link should match text and url 1
 }
 `;
 
-exports[`Canonical Live Radio Header Navigation link should match text and url 2`] = `
-{
-  "text": "Raba",
-  "url": "/gahuza/topics/cpqx1yvd5ydt",
-}
-`;
-
-exports[`Canonical Live Radio Header Navigation link should match text and url 3`] = `
-{
-  "text": "Uru rupapuro, Umviriza",
-  "url": "/gahuza/bbc_gahuza_radio/liveradio",
-}
-`;
-
 exports[`Canonical Live Radio Main heading should match text 1`] = `"Radio BBC Gahuza"`;
 
 exports[`Canonical Live Radio Media Loader renders a valid container 1`] = `

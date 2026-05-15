@@ -122,13 +122,6 @@ exports[`Canonical Topic Page Header Navigation link should match text and url 1
 }
 `;
 
-exports[`Canonical Topic Page Header Navigation link should match text and url 2`] = `
-{
-  "text": "Watch",
-  "url": "/pidgin/topics/c3l19z3k1ert",
-}
-`;
-
 exports[`Canonical Topic Page Main heading should match text 1`] = `"Donald Trump"`;
 
 exports[`Canonical Topic Page Page content First item in the first curation is the correct headline 1`] = `"Di 34 criminal charges against former US President Donald Trump and di likely punishment"`;

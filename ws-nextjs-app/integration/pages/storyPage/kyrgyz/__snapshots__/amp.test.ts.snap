@@ -176,13 +176,6 @@ exports[`AMP Story Page Header Navigation link should match text and url 1`] = `
 }
 `;
 
-exports[`AMP Story Page Header Navigation link should match text and url 2`] = `
-{
-  "text": "Биздин видеолор",
-  "url": "/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=4t",
-}
-`;
-
 exports[`AMP Story Page Image Caption should match text 1`] = `"Сүрөттүн түшүндүрмөсү, Social media"`;
 
 exports[`AMP Story Page Image should match snapshot 1`] = `

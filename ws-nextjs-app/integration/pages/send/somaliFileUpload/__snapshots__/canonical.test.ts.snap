@@ -83,20 +83,6 @@ exports[`Canonical Send Header Navigation link should match text and url 1`] = `
 }
 `;
 
-exports[`Canonical Send Header Navigation link should match text and url 2`] = `
-{
-  "text": "Daawo",
-  "url": "/somali/topics/c7pl4k5r9xxt",
-}
-`;
-
-exports[`Canonical Send Header Navigation link should match text and url 3`] = `
-{
-  "text": "Dhageyso",
-  "url": "/somali/topics/cn6rqlrkm0pt",
-}
-`;
-
 exports[`Canonical Send UGC form should render a heading 1`] = `"Sorry, this page cannot be loaded."`;
 
 exports[`Canonical Send UGC form should render a submit button 1`] = `"Submit"`;

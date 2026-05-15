@@ -134,13 +134,6 @@ exports[`Canonical Photo Gallery Page Header Navigation link should match text a
 }
 `;
 
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 2`] = `
-{
-  "text": "รับชมวิดีโอ",
-  "url": "/thai/topics/c5ljd3jng4nt",
-}
-`;
-
 exports[`Canonical Photo Gallery Page Image Caption should match text 1`] = `"คำบรรยายภาพ, ประติมานุสรณ์ ม. ธรรมศาสตร์ เป็นพื้นที่ความทรงจำในเหตุการณ์ 6 ตุลา 2519"`;
 
 exports[`Canonical Photo Gallery Page Image should match snapshot 1`] = `

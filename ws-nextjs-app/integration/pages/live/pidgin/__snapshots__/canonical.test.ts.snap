@@ -14,13 +14,6 @@ exports[`Canonical Live Header Navigation link should match text and url 1`] = `
 }
 `;
 
-exports[`Canonical Live Header Navigation link should match text and url 2`] = `
-{
-  "text": "Watch",
-  "url": "/pidgin/topics/c3l19z3k1ert",
-}
-`;
-
 exports[`Canonical Live Media Loader renders a valid container 1`] = `
 <figure
   class="media-container css-hnd6ee"

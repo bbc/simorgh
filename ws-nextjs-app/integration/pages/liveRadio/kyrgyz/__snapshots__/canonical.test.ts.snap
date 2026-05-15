@@ -122,13 +122,6 @@ exports[`Canonical Kyrgyz Live Radio Page Header Navigation link should match te
 }
 `;
 
-exports[`Canonical Kyrgyz Live Radio Page Header Navigation link should match text and url 2`] = `
-{
-  "text": "Биздин видеолор",
-  "url": "/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=4t",
-}
-`;
-
 exports[`Canonical Kyrgyz Live Radio Page Main heading should match text 1`] = `"Би-Би-Си Кыргыз кызматынын радиосу"`;
 
 exports[`Canonical Kyrgyz Live Radio Page Media Loader renders a valid container 1`] = `

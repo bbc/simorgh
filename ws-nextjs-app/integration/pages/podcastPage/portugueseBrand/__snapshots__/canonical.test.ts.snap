@@ -122,20 +122,6 @@ exports[`Canonical Podcast Page Header Navigation link should match text and url
 }
 `;
 
-exports[`Canonical Podcast Page Header Navigation link should match text and url 2`] = `
-{
-  "text": "Assista",
-  "url": "/portuguese/topics/c9y2j35dn2zt",
-}
-`;
-
-exports[`Canonical Podcast Page Header Navigation link should match text and url 3`] = `
-{
-  "text": "Ouça",
-  "url": "/portuguese/topics/cx2ggnx4j72t",
-}
-`;
-
 exports[`Canonical Podcast Page I can see the brand title 1`] = `"Que História!"`;
 
 exports[`Canonical Podcast Page I can see the episode summary 1`] = `"Aos 16 anos, Eve Wiley descobriu que fora concebida com sêmen de doador anônimo. Mas anos depois, após doença de seu filho, fez descoberta chocante sobre sua identidade genética."`;

@@ -85,20 +85,6 @@ exports[`AMP Articles Header Navigation link should match text and url 1`] = `
 }
 `;
 
-exports[`AMP Articles Header Navigation link should match text and url 2`] = `
-{
-  "text": "Kallo",
-  "url": "/hausa/topics/cn09qmz4jryt",
-}
-`;
-
-exports[`AMP Articles Header Navigation link should match text and url 3`] = `
-{
-  "text": "Sauraro",
-  "url": "/hausa/bbc_hausa_radio/liveradio",
-}
-`;
-
 exports[`AMP Articles Image Caption should match text 1`] = `"Bayanan hoto, Wannan hoton gwaji, mallakin BBC, ya nuna taswirar Faransa. Hoton yana cikin katangar ukun farko kuma yana da wannan taken."`;
 
 exports[`AMP Articles Image should match snapshot 1`] = `

@@ -122,20 +122,6 @@ exports[`Canonical On Demand T V Page Header Navigation link should match text a
 }
 `;
 
-exports[`Canonical On Demand T V Page Header Navigation link should match text and url 2`] = `
-{
-  "text": "Kallo",
-  "url": "/hausa/topics/cn09qmz4jryt",
-}
-`;
-
-exports[`Canonical On Demand T V Page Header Navigation link should match text and url 3`] = `
-{
-  "text": "Sauraro",
-  "url": "/hausa/bbc_hausa_radio/liveradio",
-}
-`;
-
 exports[`Canonical On Demand T V Page I can see the brand title 1`] = `"Labaran Talabijin"`;
 
 exports[`Canonical On Demand T V Page I can see the episode summary 1`] = `"Sashen Hausa na BBC ya fara gabatar da shirin talabijin a ranakun Litinin zuwa Juma'a na kowane mako."`;

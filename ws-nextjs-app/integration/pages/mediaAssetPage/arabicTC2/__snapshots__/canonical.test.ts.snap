@@ -125,20 +125,6 @@ exports[`Canonical Media Asset Page Header Navigation link should match text and
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 2`] = `
-{
-  "text": "شاهد",
-  "url": "/arabic/watch/bbc_arabic_tv/live",
-}
-`;
-
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 3`] = `
-{
-  "text": "استمع",
-  "url": "/arabic/topics/cljddp5lw0dt",
-}
-`;
-
 exports[`Canonical Media Asset Page Main heading should match text 1`] = `"شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها"`;
 
 exports[`Canonical Media Asset Page SEO Apple Touch Icon should match attributes 1`] = `

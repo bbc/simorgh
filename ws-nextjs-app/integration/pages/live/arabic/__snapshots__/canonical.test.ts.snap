@@ -13,17 +13,3 @@ exports[`Canonical Live Header Navigation link should match text and url 1`] = `
   "url": "/arabic",
 }
 `;
-
-exports[`Canonical Live Header Navigation link should match text and url 2`] = `
-{
-  "text": "شاهد",
-  "url": "/arabic/watch/bbc_arabic_tv/live",
-}
-`;
-
-exports[`Canonical Live Header Navigation link should match text and url 3`] = `
-{
-  "text": "استمع",
-  "url": "/arabic/topics/cljddp5lw0dt",
-}
-`;
