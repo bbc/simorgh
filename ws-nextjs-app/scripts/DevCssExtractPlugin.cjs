@@ -20,11 +20,10 @@ const decodeCss = css => JSON.parse(`"${css}"`);
 const extractCssFromModule = mod => {
   const resource = mod.resource || '';
   if (!resource || !/\.(scss|css)$/.test(resource)) return null;
-  // Use the public source() API (webpack 5 Source interface) rather than the private _value
-  // property. During HMR incremental rebuilds webpack wraps sources in CachedSource where
-  // _value is undefined, causing extraction to silently fail and stale CSS to be written.
-  // eslint-disable-next-line no-underscore-dangle
-  const sourceValue = mod._source?.source?.() || mod._source?._value || '';
+  // originalSource() is the public NormalModule API (webpack 5) that returns the Source object.
+  // Calling .source() on it uses the documented webpack Source interface to get the string content.
+  // This avoids the private _source._value properties which are not part of the public API.
+  const sourceValue = mod.originalSource?.()?.source?.() ?? '';
   if (typeof sourceValue !== 'string') return null;
   if (!sourceValue.includes('___CSS_LOADER_EXPORT___')) return null;
 
