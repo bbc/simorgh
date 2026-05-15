@@ -49,8 +49,6 @@ module.exports = api => {
               }),
           node: 'current',
         },
-        // analyses code & polyfills only the features that are used, only for the targeted browsers
-        useBuiltIns: 'usage',
       },
     ],
     [
