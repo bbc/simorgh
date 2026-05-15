@@ -19,16 +19,6 @@ const getJestArgs = () =>
     .filter(flag => !flag.startsWith('--onlyRunTests'))
     .filter(flag => !flag.startsWith('--nextJS'));
 
-const getFilesToTest = pageTypes => {
-  if (pageTypes) {
-    const pageTypesRegexp = pageTypes.replace(/,/g, '|');
-    return `./src/integration/pages/(${pageTypesRegexp})/.+?`;
-  }
-  return `./src/integration/pages/.+?`;
-};
-
-const filesToTest = getFilesToTest(argv.pageTypes);
-
 const stopApp = () =>
   new Promise(resolve => {
     const child = exec('yarn stop');
@@ -44,10 +34,7 @@ const buildApp = () =>
   });
 
 const startApp = () => {
-  const portNumber = argv.nextJS ? 7081 : 7080;
-  const pathname = argv.nextJS ? '' : '/status';
-
-  const statusCommand = `sleep 20 && curl http://localhost:${portNumber}${pathname}`;
+  const statusCommand = `sleep 20 && curl http://localhost:${7081}`;
   const initialCommand = `yarn ${isDev ? 'dev' : 'start'}`;
   let errorMsg = '';
 
@@ -67,23 +54,6 @@ const startApp = () => {
   });
 };
 
-const runExpressTests = () =>
-  spawn(
-    'jest',
-    [
-      filesToTest,
-      '--runInBand',
-      '--colors',
-      '--detectOpenHandles',
-      '--forceExit',
-      '--passWithNoTests', // Allows the test suite to pass now all page types are migrated to NextJS
-      ...getJestArgs(),
-    ],
-    {
-      stdio: 'inherit',
-    },
-  );
-
 const runNextJSTests = () =>
   spawn(
     'yarn',
@@ -100,7 +70,7 @@ const runNextJSTests = () =>
 
 const runTests = () =>
   new Promise((resolve, reject) => {
-    const child = argv.nextJS ? runNextJSTests() : runExpressTests();
+    const child = runNextJSTests();
 
     child.on('exit', code => {
       if (code === 1) {
@@ -116,10 +86,8 @@ if (onlyRunTests) {
     process.exit(1);
   });
 } else {
-  if (argv.nextJS) {
-    const nextAppDir = join(path.resolve(), 'ws-nextjs-app');
-    process.chdir(nextAppDir);
-  }
+  const nextAppDir = join(path.resolve(), 'ws-nextjs-app');
+  process.chdir(nextAppDir);
 
   stopApp()
     .then(() => {
