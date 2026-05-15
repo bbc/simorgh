@@ -65,9 +65,6 @@ export type ComponentProps = {
     metadata: { atiAnalytics: ATIData };
     mediaCollections: MediaCollection[] | null;
     portraitVideoItems?: PortraitVideoItems | null;
-    sportDataEvent?: {
-      id: string;
-    } | null;
     sportDataEventContent?: {
       urn: string;
       live: boolean;
