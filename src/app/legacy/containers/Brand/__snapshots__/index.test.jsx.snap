@@ -134,7 +134,7 @@ exports[`BrandContainer should render correctly 1`] = `
         focusable="false"
         height="30"
         id="brandSvgHeader"
-        src="http://localhost:7080//news/images/brandLogo.svg"
+        src="http://localhost:7080/news/images/brandLogo.svg"
         style="margin-left: 0.5px;"
       />
       <span

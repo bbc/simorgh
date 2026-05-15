@@ -1187,7 +1187,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
                 focusable="false"
                 height="30"
                 id="brandSvgHeader"
-                src="http://localhost:7080//news/images/brandLogo.svg"
+                src="http://localhost:7080/news/images/brandLogo.svg"
                 style="margin-left: 0.5px;"
               />
               <span
@@ -1611,7 +1611,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
               focusable="false"
               height="30"
               id="brandSvgFooter"
-              src="http://localhost:7080//news/images/brandLogo.svg"
+              src="http://localhost:7080/news/images/brandLogo.svg"
               style="margin-left: 0.5px;"
             />
             <span
