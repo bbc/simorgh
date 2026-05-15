@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable import/no-relative-packages */
 /* eslint-disable no-console */
 import type {
@@ -50,6 +51,7 @@ class CustomTestEnvironment extends TestEnvironment {
     await super.setup();
 
     try {
+      // @ts-ignore
       const { window, document } = await fetchHtml({
         url: this.url,
         headers: {

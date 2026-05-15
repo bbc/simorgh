@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable no-console */
 import { Window } from 'happy-dom';
 import { operation } from 'retry';
@@ -48,6 +49,7 @@ export default ({ url, headers }) =>
 
         resolve({ window, document });
       } catch (error) {
+        // @ts-ignore
         const isSocketHangUpError = error
           .toString()
           .includes('Error: socket hang up');
