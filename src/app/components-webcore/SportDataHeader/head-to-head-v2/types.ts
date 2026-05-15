@@ -94,7 +94,7 @@ export type Team = {
   /**
    * The fulltime and halftime running scores for the team.
    */
-  runningScore?: RunningScores;
+  runningScore: RunningScores;
   /**
    * Running scores with additional fields.
    */

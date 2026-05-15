@@ -36,7 +36,7 @@ const buildTeamObject = ({
   alignment: 'home' | 'away';
   data: HeadToHeadV2Data;
 }): Team => {
-  const { runningScores } = data[alignment];
+  const { runningScore } = data[alignment];
 
   return {
     id: data[alignment].id,
@@ -44,7 +44,7 @@ const buildTeamObject = ({
     shortName: shortNamesMap(team),
     urn: `urn:bbc:sportsdata:football:team:${team.toLowerCase().split(' ').join('-')}`,
     actions,
-    runningScores,
+    runningScore,
     ...(score && { score, scoreUnconfirmed }),
   };
 };
