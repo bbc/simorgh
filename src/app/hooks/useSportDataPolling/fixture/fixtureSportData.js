@@ -1,4 +1,4 @@
-const sportData1 = {
+export default {
   urn: 'urn:bbc:sportsdata:football:event:s-3y91hnyfjh24yxjhm77a7hy50',
   home: {
     id: 'ej5er0oyngdw138yuumwqbyqt',
@@ -130,5 +130,3 @@ const sportData1 = {
   accessibleEventSummary: 'Bologna 1 , Aston Villa 3 at Full time',
   sportDiscipline: 'football',
 };
-
-export default sportData1;

@@ -117,9 +117,9 @@ export type Team = {
 
 export type HeadToHeadV2Data = {
   /**
-   * The event's unique id.
+   * The event's unique urn.
    */
-  id?: string;
+  urn: string;
   /**
    * The status of the event.
    */
@@ -181,8 +181,6 @@ export type HeadToHeadV2Data = {
     value?: number;
     additionalInfo?: string;
   };
-
-  urn: string; // TODO - fix or remove
   /**
    * The winner of the event.
    */

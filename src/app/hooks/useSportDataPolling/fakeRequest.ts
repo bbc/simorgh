@@ -1,13 +1,6 @@
-import { ComponentProps } from '#nextjs/pages/[service]/live/[id]/LivePageLayout';
-import fixtureData from './fixtureData';
+import fixtureSportData from './fixture/fixtureSportData';
 
-type SportDataEventContent = NonNullable<
-  ComponentProps['pageData']['sportDataEventContent']
->;
-type SportDataEvent =
-  SportDataEventContent['content']['data']['sportDataEvent'];
-
-const initialHomeScore = Number(fixtureData.home.score) || 0;
+const initialHomeScore = Number(fixtureSportData.home.score) || 0;
 let pollCount = 0;
 
 // This is a placeholder function, this will be replaced by a proper fetch statement to the BFF in due time.
@@ -18,16 +11,17 @@ export default () => {
   const incrementedHomeScore = String(initialHomeScore + scoreIncrease);
 
   return {
-    ...fixtureData,
+    ...fixtureSportData,
     home: {
-      ...fixtureData.home,
+      ...fixtureSportData.home,
       score: incrementedHomeScore,
       scoreUnconfirmed: incrementedHomeScore,
       runningScores: {
-        ...fixtureData.home.runningScores,
+        ...fixtureSportData.home.runningScores,
         fulltime: incrementedHomeScore,
         aggregate: incrementedHomeScore,
       },
     },
-  } as unknown as SportDataEvent;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  } as any;
 };

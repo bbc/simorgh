@@ -65,7 +65,11 @@ export type ComponentProps = {
     metadata: { atiAnalytics: ATIData };
     mediaCollections: MediaCollection[] | null;
     portraitVideoItems?: PortraitVideoItems | null;
+    sportDataEvent?: {
+      id: string;
+    } | null;
     sportDataEventContent?: {
+      urn: string;
       live: boolean;
       sportDataEvent: HeadToHeadV2Data;
       title: string;
@@ -112,9 +116,11 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
   const { currentStreamData, hasPendingUpdate, applyPendingUpdate } =
     useLivePagePolling(pageData, livePagePollingEnabled && isLive);
 
-  const sportData = sportDataEventContent?.sportDataEvent;
-  const isSportDataLive = sportDataEventContent?.live;
-  const sportDataTitle = sportDataEventContent?.title;
+  const {
+    sportDataEvent: sportData,
+    live: isSportDataLive,
+    title: sportDataTitle,
+  } = sportDataEventContent || {};
   const showSportData = !!sportData && !isLiveEnv();
 
   const {
