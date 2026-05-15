@@ -19,18 +19,17 @@ import {
   getProcessEnvAppVariables,
 } from '#lib/utilities/getEnvConfig';
 
-import AmpRenderer from '#server/Renderers/AmpRenderer';
-import LiteRenderer from '#server/Renderers/LiteRenderer';
-import litePageTransforms from '#server/Renderers/litePageTransforms';
-
 import NO_JS_CLASSNAME from '#app/lib/noJs.const';
 
 import getPathExtension from '#app/utilities/getPathExtension';
-import ReverbTemplate from '#server/Renderers/ReverbTemplate';
-import ComponentTracking from '#server/Renderers/ComponentTracking';
 import CanonicalToLiteRedirect from '#utilities/CanonicalToLiteRedirect';
 import addOperaMiniClassScript from '#app/lib/utilities/addOperaMiniClassScript';
 import handleServerLogging from '#utilities/handleServerLogging';
+import ComponentTracking from '../renderers/ComponentTracking';
+import ReverbTemplate from '../renderers/ReverbTemplate';
+import litePageTransforms from '../renderers/litePageTransforms';
+import LiteRenderer from '../renderers/LiteRenderer';
+import AmpRenderer from '../renderers/AmpRenderer';
 import derivePageType from '../utilities/derivePageType';
 
 type DocProps = {
