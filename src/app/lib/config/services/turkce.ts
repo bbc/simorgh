@@ -47,6 +47,7 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      matchSummary: 'Maç Özeti',
       and: 've',
       readTime: {
         readTimePrefix: 'Okuma süresi',

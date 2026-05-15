@@ -126,6 +126,7 @@ export const service: SerbianConfig = {
       variant: 'cyr',
     },
     translations: {
+      matchSummary: 'Rezime utakmice',
       and: 'i',
       readTime: {
         readTimePrefix: 'Vreme čitanja',
@@ -523,6 +524,7 @@ export const service: SerbianConfig = {
       variant: 'lat',
     },
     translations: {
+      matchSummary: 'Резиме утакмице',
       and: 'и',
       readTime: {
         readTimePrefix: 'Време читања',

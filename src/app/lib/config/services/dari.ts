@@ -46,6 +46,7 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      matchSummary: 'خلاصه مسابقه',
       and: 'و',
       readTime: {
         readTimePrefix: 'زمان مطالعه',

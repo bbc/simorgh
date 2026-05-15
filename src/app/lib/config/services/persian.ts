@@ -67,6 +67,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      matchSummary: 'خلاصه مسابقه',
       and: 'و',
       pagination: {
         page: 'صفحه',

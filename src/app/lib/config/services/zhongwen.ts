@@ -134,6 +134,7 @@ export const service: ZhongwenConfig = {
       variant: 'trad',
     },
     translations: {
+      matchSummary: '比赛总结',
       and: '和',
       readTime: {
         readTimePrefix: '阅读时间',
@@ -430,6 +431,7 @@ export const service: ZhongwenConfig = {
       variant: 'simp',
     },
     translations: {
+      matchSummary: '比賽總結',
       and: '和',
       readTime: {
         readTimePrefix: '閱讀時間',
