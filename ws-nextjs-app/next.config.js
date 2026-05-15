@@ -1,7 +1,8 @@
 /* eslint-disable no-param-reassign */
 const path = require('path');
 const MomentTimezoneInclude = require('../src/app/legacy/psammead/moment-timezone-include/src');
-const DevCssExtractPlugin = require('./scripts/DevCssExtractPlugin.cjs');
+const DevCssExtractLoader =
+  require.resolve('./scripts/DevCssExtractLoader.cjs');
 
 const assetPrefix =
   process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN +
@@ -88,7 +89,10 @@ module.exports = {
 
     config.resolve.alias = {
       ...config.resolve.alias,
-      '@scss': path.join(__dirname, '../src/app/components/ThemeProviderSCSSModules'),
+      '@scss': path.join(
+        __dirname,
+        '../src/app/components/ThemeProviderSCSSModules',
+      ),
     };
 
     config.plugins.push(
@@ -96,7 +100,23 @@ module.exports = {
     );
 
     if (dev) {
-      config.plugins.push(new DevCssExtractPlugin());
+      // Inject our loader immediately before css-loader in every SCSS rule.
+      // webpack processes the use array right-to-left, so inserting before css-loader
+      // means our loader receives css-loader's JS output — which contains the CSS string
+      // with hashed CSS module class names (e.g. .Subhead_h2__K8gJ6) already applied.
+      const injectExtractLoader = rules => {
+        rules.forEach(rule => {
+          if (rule.oneOf) injectExtractLoader(rule.oneOf);
+          if (!Array.isArray(rule.use)) return;
+          const cssLoaderIndex = rule.use.findIndex(l =>
+            (typeof l === 'string' ? l : l?.loader)?.includes('css-loader'),
+          );
+          if (cssLoaderIndex !== -1) {
+            rule.use.splice(cssLoaderIndex, 0, DevCssExtractLoader);
+          }
+        });
+      };
+      injectExtractLoader(config.module.rules);
     }
 
     /*
