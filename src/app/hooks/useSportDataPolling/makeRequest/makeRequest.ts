@@ -10,7 +10,7 @@ export default async (liveSportDataUrn: string) => {
     const { status } = response;
     const { data } = await response.json();
 
-    if (status === 200 && data.results.length > 0) {
+    if (status === 200 && data) {
       return data;
     }
 
