@@ -6,7 +6,7 @@ const req = {
 };
 
 const res = {
-  on: jest.fn().mockImplementation((event, callback) => callback()),
+  on: jest.fn().mockImplementation((_, callback) => callback()),
 };
 
 const next = jest.fn();
@@ -17,11 +17,18 @@ describe('logResponseTime', () => {
   });
 
   beforeEach(() => {
-    process.hrtime = jest.fn().mockImplementationOnce(() => 'startTime');
+    const hrtimeMock = Object.assign(jest.fn(), {
+      bigint: jest.fn(),
+    });
+
+    (hrtimeMock as jest.Mock).mockImplementationOnce(() => [0, 0]);
+    process.hrtime = hrtimeMock as unknown as NodeJS.HRTime;
   });
 
   it('should log response time in nanoseconds with path', () => {
-    process.hrtime.mockImplementationOnce(() => [1, 12345]);
+    (process.hrtime as unknown as jest.Mock).mockImplementationOnce(() => [
+      1, 12345,
+    ]);
 
     logResponseTime(req, res, next);
 
@@ -30,13 +37,15 @@ describe('logResponseTime', () => {
       path: '/path',
     });
 
-    expect(process.hrtime).toHaveBeenCalledWith('startTime');
+    expect(process.hrtime).toHaveBeenCalledWith([0, 0]);
 
     expect(next).toHaveBeenCalled();
   });
 
   it('should log slow response time in nanoseconds with path', () => {
-    process.hrtime.mockImplementationOnce(() => [3, 12345]);
+    (process.hrtime as unknown as jest.Mock).mockImplementationOnce(() => [
+      3, 12345,
+    ]);
 
     logResponseTime(req, res, next);
 

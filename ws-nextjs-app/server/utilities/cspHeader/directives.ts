@@ -360,7 +360,7 @@ export const generateScriptSrc = ({
   isLive,
   nonce,
   shouldServeRelaxedCsp = false,
-  advertisingCountryScriptsArray = [],
+  advertisingCountryScriptsArray = [] as string[],
 }) => {
   if (shouldServeRelaxedCsp)
     return ["https: 'unsafe-inline' 'unsafe-eval' blob: data: 'self'"];
@@ -418,7 +418,7 @@ export const cspDirectives = ({
 }) => {
   return {
     directives: {
-      'default-src': generateDefaultSrc(shouldServeRelaxedCsp),
+      'default-src': generateDefaultSrc({ shouldServeRelaxedCsp }),
       'child-src': generateChildSrc({ isAmp, shouldServeRelaxedCsp }),
       'connect-src': generateConnectSrc({ isLive, shouldServeRelaxedCsp }),
       'font-src': generateFontSrc({ isAmp, isLive, shouldServeRelaxedCsp }),
