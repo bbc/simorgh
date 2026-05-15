@@ -121,6 +121,10 @@ export type HeadToHeadV2Data = {
    */
   urn: string;
   /**
+   * The event's unique id.
+   */
+  id?: string;
+  /**
    * The status of the event.
    */
   status: EventStatusType;
