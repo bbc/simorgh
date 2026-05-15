@@ -15,15 +15,10 @@ const CSS_CONTENT_REGEX = /\.push\(\[module\.id, "((?:[^"\\]|\\.)*)"[^)]*\)/s;
 const CSS_CONTENT_GLOBAL_REGEX =
   /\.push\(\[module\.id, "((?:[^"\\]|\\.)*)"[^)]*\)/gs;
 
-const decodeCss = css =>
-  css
-    .replace(/\\n/g, '\n')
-    .replace(/\\t/g, '\t')
-    .replace(/\\"/g, '"')
-    .replace(/\\\\/g, '\\');
+const decodeCss = css => JSON.parse(`"${css}"`);
 
 const extractCssFromModule = mod => {
-  const resource = mod.resource || mod.userRequest || '';
+  const resource = mod.resource || '';
   if (!resource || !/\.(scss|css)$/.test(resource)) return null;
   // Use the public source() API (webpack 5 Source interface) rather than the private _value
   // property. During HMR incremental rebuilds webpack wraps sources in CachedSource where
@@ -81,7 +76,7 @@ class DevCssExtractPlugin {
     compiler.hooks.afterCompile.tap(PLUGIN_NAME, compilation => {
       [...compilation.modules].forEach(mod => {
         const css = extractCssFromModule(mod);
-        const resource = mod.resource || mod.userRequest || '';
+        const resource = mod.resource || '';
         if (css) {
           cssMap.set(resource, css);
         }
