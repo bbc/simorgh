@@ -72,17 +72,9 @@ exports[`Canonical Send Footer Paragraphs should match text 1`] = `"© 2026 BBC.
 exports[`Canonical Send Header I can see the branding 1`] = `
 {
   "brandLink": "BBC News, Mundo",
-  "svg": "http://localhost:7081//mundo/images/brandLogo.svg",
+  "svg": "http://localhost:7081/mundo/images/brandLogo.svg",
 }
 `;
-
-exports[`Canonical Send Header Navigation link should match text and url 1`] = `
-{
-  "text": "Noticias",
-  "url": "/mundo",
-}
-`;
-
 
 exports[`Canonical Send UGC form should render a heading 1`] = `"Disculpa, página no encontrada"`;
 

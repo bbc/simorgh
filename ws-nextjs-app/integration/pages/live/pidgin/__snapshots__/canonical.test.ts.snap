@@ -3,14 +3,7 @@
 exports[`Canonical Live Header I can see the branding 1`] = `
 {
   "brandLink": "BBC News, Pidgin",
-  "svg": "http://localhost:7081//pidgin/images/brandLogo.svg",
-}
-`;
-
-exports[`Canonical Live Header Navigation link should match text and url 1`] = `
-{
-  "text": "Home",
-  "url": "/pidgin",
+  "svg": "http://localhost:7081/pidgin/images/brandLogo.svg",
 }
 `;
 

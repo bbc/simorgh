@@ -111,14 +111,7 @@ exports[`Canonical Korean Live Radio Page Footer Paragraphs should match text 1`
 exports[`Canonical Korean Live Radio Page Header I can see the branding 1`] = `
 {
   "brandLink": "BBC News, 코리아",
-  "svg": "http://localhost:7081//korean/images/brandLogo.svg",
-}
-`;
-
-exports[`Canonical Korean Live Radio Page Header Navigation link should match text and url 1`] = `
-{
-  "text": "뉴스",
-  "url": "/korean",
+  "svg": "http://localhost:7081/korean/images/brandLogo.svg",
 }
 `;
 

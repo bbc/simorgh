@@ -114,7 +114,7 @@ exports[`Canonical Articles Footer Paragraphs should match text 1`] = `"© 2026 
 exports[`Canonical Articles Header I can see the branding 1`] = `
 {
   "brandLink": "BBC News, فارسی",
-  "svg": "http://localhost:7081//persian/images/brandLogo.svg",
+  "svg": "http://localhost:7081/persian/images/brandLogo.svg",
 }
 `;
 

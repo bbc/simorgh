@@ -72,14 +72,7 @@ exports[`Canonical Live Footer Paragraphs should match text 1`] = `"© 2026 BBC.
 exports[`Canonical Live Header I can see the branding 1`] = `
 {
   "brandLink": "BBC News, na srpskom",
-  "svg": "http://localhost:7081//serbian/images/brandLogo.svg",
-}
-`;
-
-exports[`Canonical Live Header Navigation link should match text and url 1`] = `
-{
-  "text": "Početna strana",
-  "url": "/serbian/lat",
+  "svg": "http://localhost:7081/serbian/images/brandLogo.svg",
 }
 `;
 

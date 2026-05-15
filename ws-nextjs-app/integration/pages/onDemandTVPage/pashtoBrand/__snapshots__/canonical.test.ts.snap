@@ -111,14 +111,7 @@ exports[`Canonical On Demand T V Page Footer Paragraphs should match text 1`] = 
 exports[`Canonical On Demand T V Page Header I can see the branding 1`] = `
 {
   "brandLink": "BBC News, پښتو",
-  "svg": "http://localhost:7081//pashto/images/brandLogo.svg",
-}
-`;
-
-exports[`Canonical On Demand T V Page Header Navigation link should match text and url 1`] = `
-{
-  "text": "کور پاڼه",
-  "url": "/pashto",
+  "svg": "http://localhost:7081/pashto/images/brandLogo.svg",
 }
 `;
 

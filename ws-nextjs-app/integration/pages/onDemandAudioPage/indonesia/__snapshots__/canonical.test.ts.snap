@@ -111,7 +111,7 @@ exports[`Canonical On Demand Audio Page Footer Paragraphs should match text 1`] 
 exports[`Canonical On Demand Audio Page Header I can see the branding 1`] = `
 {
   "brandLink": "BBC News, Indonesia",
-  "svg": "http://localhost:7081//indonesia/images/brandLogo.svg",
+  "svg": "http://localhost:7081/indonesia/images/brandLogo.svg",
 }
 `;
 

@@ -111,14 +111,7 @@ exports[`Canonical Home Page Footer Paragraphs should match text 1`] = `"© 2026
 exports[`Canonical Home Page Header I can see the branding 1`] = `
 {
   "brandLink": "BBC News, на српском",
-  "svg": "http://localhost:7081//serbian/images/brandLogo.svg",
-}
-`;
-
-exports[`Canonical Home Page Header Navigation link should match text and url 1`] = `
-{
-  "text": "Отворена страница, Почетна страна",
-  "url": "/serbian/cyr",
+  "svg": "http://localhost:7081/serbian/images/brandLogo.svg",
 }
 `;
 

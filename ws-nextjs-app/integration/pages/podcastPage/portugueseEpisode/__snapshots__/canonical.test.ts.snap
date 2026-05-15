@@ -111,14 +111,7 @@ exports[`Canonical Podcast Page Footer Paragraphs should match text 1`] = `"© 2
 exports[`Canonical Podcast Page Header I can see the branding 1`] = `
 {
   "brandLink": "BBC News, Brasil",
-  "svg": "http://localhost:7081//portuguese/images/brandLogo.svg",
-}
-`;
-
-exports[`Canonical Podcast Page Header Navigation link should match text and url 1`] = `
-{
-  "text": "Notícias",
-  "url": "/portuguese",
+  "svg": "http://localhost:7081/portuguese/images/brandLogo.svg",
 }
 `;
 

@@ -46,7 +46,7 @@ export default service => {
       });
     }
 
-    if (service !== 'scotland') {
+    if (service !== 'scotland' && !SERVICES_WITH_NEW_NAV.includes(service)) {
       describe('Navigation link', () => {
         const navList = document.querySelector('header nav [role="list"]');
         const navigationLinks = Array.from(

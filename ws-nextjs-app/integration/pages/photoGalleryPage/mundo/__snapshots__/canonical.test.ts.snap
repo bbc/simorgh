@@ -117,14 +117,7 @@ exports[`Canonical Photo Gallery Page Footer Paragraphs should match text 1`] = 
 exports[`Canonical Photo Gallery Page Header I can see the branding 1`] = `
 {
   "brandLink": "BBC News, Mundo",
-  "svg": "http://localhost:7081//mundo/images/brandLogo.svg",
-}
-`;
-
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 1`] = `
-{
-  "text": "Noticias",
-  "url": "/mundo",
+  "svg": "http://localhost:7081/mundo/images/brandLogo.svg",
 }
 `;
 

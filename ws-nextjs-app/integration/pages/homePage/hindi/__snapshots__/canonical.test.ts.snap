@@ -113,7 +113,7 @@ exports[`Canonical Home Page Footer Paragraphs should match text 2`] = `"© 2026
 exports[`Canonical Home Page Header I can see the branding 1`] = `
 {
   "brandLink": "BBC News, हिंदी",
-  "svg": "http://localhost:7081//hindi/images/brandLogo.svg",
+  "svg": "http://localhost:7081/hindi/images/brandLogo.svg",
 }
 `;
 

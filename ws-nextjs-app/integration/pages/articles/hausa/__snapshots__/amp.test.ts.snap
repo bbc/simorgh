@@ -74,14 +74,7 @@ exports[`AMP Articles Footer Paragraphs should match text 1`] = `"© 2026 BBC. B
 exports[`AMP Articles Header I can see the branding 1`] = `
 {
   "brandLink": "BBC News, Hausa",
-  "svg": "http://localhost:7081//hausa/images/brandLogo.svg",
-}
-`;
-
-exports[`AMP Articles Header Navigation link should match text and url 1`] = `
-{
-  "text": "Labaran Duniya",
-  "url": "/hausa",
+  "svg": "http://localhost:7081/hausa/images/brandLogo.svg",
 }
 `;
 

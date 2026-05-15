@@ -123,14 +123,7 @@ exports[`Canonical On Demand Audio Page Footer Paragraphs should match text 1`] 
 exports[`Canonical On Demand Audio Page Header I can see the branding 1`] = `
 {
   "brandLink": "BBC News, Gahuza",
-  "svg": "http://localhost:7081//gahuza/images/brandLogo.svg",
-}
-`;
-
-exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 1`] = `
-{
-  "text": "Urupapuro rw'itangiriro",
-  "url": "/gahuza",
+  "svg": "http://localhost:7081/gahuza/images/brandLogo.svg",
 }
 `;
 

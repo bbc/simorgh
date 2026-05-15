@@ -165,14 +165,7 @@ exports[`AMP Story Page Footer Paragraphs should match text 1`] = `"© 2026 BBC.
 exports[`AMP Story Page Header I can see the branding 1`] = `
 {
   "brandLink": "BBC News, Кыргыз КызMATы",
-  "svg": "http://localhost:7081//kyrgyz/images/brandLogo.svg",
-}
-`;
-
-exports[`AMP Story Page Header Navigation link should match text and url 1`] = `
-{
-  "text": "Башкы бет",
-  "url": "/kyrgyz",
+  "svg": "http://localhost:7081/kyrgyz/images/brandLogo.svg",
 }
 `;
 

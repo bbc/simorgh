@@ -171,14 +171,7 @@ exports[`AMP Photo Gallery Page Footer Paragraphs should match text 1`] = `"© 2
 exports[`AMP Photo Gallery Page Header I can see the branding 1`] = `
 {
   "brandLink": "BBC News, ไทย",
-  "svg": "http://localhost:7081//thai/images/brandLogo.svg",
-}
-`;
-
-exports[`AMP Photo Gallery Page Header Navigation link should match text and url 1`] = `
-{
-  "text": "หน้าแรก",
-  "url": "/thai",
+  "svg": "http://localhost:7081/thai/images/brandLogo.svg",
 }
 `;
 
