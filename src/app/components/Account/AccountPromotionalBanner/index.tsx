@@ -9,6 +9,7 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
 import useToggle from '#app/hooks/useToggle';
 import addInlineScript from '#app/lib/utilities/addInlineScript';
+import onClient from '#app/lib/utilities/onClient';
 import {
   setAccountPromoBannerDismissed,
   buildAccountBannerClientScript,
@@ -44,7 +45,7 @@ const AccountPromotionalBanner = () => {
 
   return (
     <>
-      {typeof window === 'undefined' && (
+      {!onClient() && (
         <Helmet>
           {addInlineScript({ script: buildAccountBannerClientScript(), nonce })}
         </Helmet>
