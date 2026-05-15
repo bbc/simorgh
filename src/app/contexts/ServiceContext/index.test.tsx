@@ -1,6 +1,6 @@
 import { use } from 'react';
 import { cleanup, render, act } from '@testing-library/react';
-import services from '#nextjs/server/utilities/serviceConfigs';
+import services from '#server/utilities/serviceConfigs';
 import { ServiceContext, ServiceContextProvider } from '.';
 import { Services, Variants } from '../../models/types/global';
 import { Translations } from '../../models/types/translations';

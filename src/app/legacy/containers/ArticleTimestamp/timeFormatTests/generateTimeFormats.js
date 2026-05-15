@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import services from '#nextjs/server/utilities/serviceConfigs';
+import services from '#server/utilities/serviceConfigs';
 import { timestampsFixtures, format } from './testUtils';
 
 const filePath = path.join(__dirname, './expectedFormats.json');
