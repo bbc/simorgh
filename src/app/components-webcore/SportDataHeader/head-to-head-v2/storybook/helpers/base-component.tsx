@@ -36,15 +36,12 @@ const buildTeamObject = ({
   alignment: 'home' | 'away';
   data: HeadToHeadV2Data;
 }): Team => {
-  const { runningScore } = data[alignment];
-
   return {
-    id: data[alignment].id,
+    ...data[alignment],
     fullName: team,
     shortName: shortNamesMap(team),
     urn: `urn:bbc:sportsdata:football:team:${team.toLowerCase().split(' ').join('-')}`,
     actions,
-    runningScore,
     ...(score && { score, scoreUnconfirmed }),
   };
 };
