@@ -1,6 +1,5 @@
 const plugins = [
   '@emotion/babel-plugin',
-  '@babel/plugin-proposal-object-rest-spread', // allows ...spread notation
   '@babel/plugin-syntax-dynamic-import', // allows `await import()` syntax
   '@babel/plugin-proposal-export-default-from',
   '@babel/plugin-transform-runtime',
