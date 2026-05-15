@@ -245,13 +245,9 @@ export default class AppDocument extends Document<DocProps> {
       (this.props as PropsWithNextData).__NEXT_DATA__?.dynamicIds ?? [];
     /* eslint-enable no-underscore-dangle */
 
-    const moduleCss = isAmp || isLite ? getAmpLiteCss(dynamicIds) : '';
-
-    const ampCss = isAmp ? css + moduleCss : css;
-    const liteCss = isLite ? css + moduleCss : css;
-
     switch (true) {
-      case isAmp:
+      case isAmp: {
+        const ampCss = css + getAmpLiteCss(dynamicIds);
         return (
           <AmpRenderer
             bodyContent={<Main />}
@@ -264,7 +260,9 @@ export default class AppDocument extends Document<DocProps> {
             title={title}
           />
         );
-      case isLite:
+      }
+      case isLite: {
+        const liteCss = css + getAmpLiteCss(dynamicIds);
         return (
           <LiteRenderer
             bodyContent={<Main />}
@@ -276,6 +274,7 @@ export default class AppDocument extends Document<DocProps> {
             title={title}
           />
         );
+      }
       default:
         return (
           <Html lang="en-GB" {...htmlAttrs} className={NO_JS_CLASSNAME}>
