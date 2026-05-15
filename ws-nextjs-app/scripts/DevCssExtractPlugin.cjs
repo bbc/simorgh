@@ -10,7 +10,6 @@ const { join, dirname } = require('path');
 
 const PLUGIN_NAME = 'DevCssExtractPlugin';
 const OUTPUT_FILE = 'build/dev-css-modules.css';
-const CACHE_FILE = 'build/dev-css-modules-cache.json';
 
 const CSS_CONTENT_REGEX = /\.push\(\[module\.id, "((?:[^"\\]|\\.)*)"[^)]*\)/s;
 const CSS_CONTENT_GLOBAL_REGEX =
@@ -26,8 +25,12 @@ const decodeCss = css =>
 const extractCssFromModule = mod => {
   const resource = mod.resource || mod.userRequest || '';
   if (!resource || !/\.(scss|css)$/.test(resource)) return null;
+  // Use the public source() API (webpack 5 Source interface) rather than the private _value
+  // property. During HMR incremental rebuilds webpack wraps sources in CachedSource where
+  // _value is undefined, causing extraction to silently fail and stale CSS to be written.
   // eslint-disable-next-line no-underscore-dangle
-  const sourceValue = mod._source?._value || '';
+  const sourceValue = mod._source?.source?.() || mod._source?._value || '';
+  if (typeof sourceValue !== 'string') return null;
   if (!sourceValue.includes('___CSS_LOADER_EXPORT___')) return null;
 
   const match = sourceValue.match(CSS_CONTENT_REGEX);
@@ -72,20 +75,7 @@ class DevCssExtractPlugin {
 
   apply(compiler) {
     const outputPath = join(compiler.context, OUTPUT_FILE);
-    const cachePath = join(compiler.context, CACHE_FILE);
     const buildDevPath = join(compiler.context, 'build/dev');
-
-    if (existsSync(cachePath)) {
-      try {
-        const cachedEntries = JSON.parse(readFileSync(cachePath, 'utf-8'));
-        if (Array.isArray(cachedEntries)) {
-          this.cssMap = new Map(cachedEntries);
-        }
-      } catch {
-        this.cssMap = new Map();
-      }
-    }
-
     const { cssMap } = this;
 
     compiler.hooks.afterCompile.tap(PLUGIN_NAME, compilation => {
@@ -107,13 +97,12 @@ class DevCssExtractPlugin {
         });
       }
 
-      if (cssMap.size === 0) return;
+      if (cssMap.size === 0) {
+        return;
+      }
 
       mkdirSync(dirname(outputPath), { recursive: true });
-      writeFileSync(cachePath, JSON.stringify([...cssMap.entries()]), 'utf-8');
-      console.log(`[DevCssExtractPlugin] Wrote CSS cache to ${cachePath} with ${cssMap.size} entries`);
       writeFileSync(outputPath, [...cssMap.values()].join('\n'), 'utf-8');
-      console.log(`[DevCssExtractPlugin] Wrote concatenated CSS to ${outputPath} (${[...cssMap.values()].join('\n').length} bytes)`);
     });
   }
 }
