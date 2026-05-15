@@ -1037,17 +1037,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-proposal-throw-expressions@npm:7.27.1":
-  version: 7.27.1
-  resolution: "@babel/plugin-proposal-throw-expressions@npm:7.27.1"
-  dependencies:
-    "@babel/helper-plugin-utils": "npm:^7.27.1"
-  peerDependencies:
-    "@babel/core": ^7.0.0-0
-  checksum: 10/3ea6ede9f34e3ccb29c499aa516d65f2da1a13bb2060801d64495056cf771bd2f7fac76c03ed19b164c9d9e23daa347591ed11108aad1cf4c345af49b200fa44
-  languageName: node
-  linkType: hard
-
 "@babel/plugin-syntax-async-generators@npm:^7.8.4":
   version: 7.8.4
   resolution: "@babel/plugin-syntax-async-generators@npm:7.8.4"
@@ -16051,7 +16040,6 @@ __metadata:
   dependencies:
     "@babel/core": "npm:7.29.0"
     "@babel/eslint-parser": "npm:7.28.6"
-    "@babel/plugin-proposal-throw-expressions": "npm:7.27.1"
     "@babel/plugin-transform-runtime": "npm:7.29.0"
     "@babel/polyfill": "npm:7.12.1"
     "@babel/preset-env": "npm:7.29.5"

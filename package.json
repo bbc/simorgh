@@ -101,7 +101,6 @@
   "devDependencies": {
     "@babel/core": "7.29.0",
     "@babel/eslint-parser": "7.28.6",
-    "@babel/plugin-proposal-throw-expressions": "7.27.1",
     "@babel/plugin-transform-runtime": "7.29.0",
     "@babel/polyfill": "7.12.1",
     "@babel/preset-env": "7.29.5",
