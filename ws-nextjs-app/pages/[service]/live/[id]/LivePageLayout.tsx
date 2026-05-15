@@ -49,7 +49,7 @@ export type ComponentProps = {
     } | null;
     summaryPoints: { content: KeyPointsResponse | null };
     liveTextStream: {
-      id: string;
+      id?: string;
       content: StreamResponse | null;
       contributors: string | null;
     };
@@ -214,9 +214,7 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
       />
       <main>
         <Header
-          showLiveLabel={
-            showSportData && !!isSportDataLive ? isSportDataLive : isLive
-          }
+          showLiveLabel={showSportData ? (isSportDataLive ?? isLive) : isLive}
           title={showSportData && !!sportDataTitle ? sportDataTitle : title}
           description={description}
           imageUrl={imageUrl}
