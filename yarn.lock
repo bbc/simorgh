@@ -1028,17 +1028,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-proposal-export-default-from@npm:7.27.1":
-  version: 7.27.1
-  resolution: "@babel/plugin-proposal-export-default-from@npm:7.27.1"
-  dependencies:
-    "@babel/helper-plugin-utils": "npm:^7.27.1"
-  peerDependencies:
-    "@babel/core": ^7.0.0-0
-  checksum: 10/cf9eb3c80bcee3ee82d28f1053db97fa6c6e4dea819f73df5a3cb9155d45efc29914e86353572eab36adfe691ca1573e6e2cddae4edbdd475253044575eb7a24
-  languageName: node
-  linkType: hard
-
 "@babel/plugin-proposal-private-property-in-object@npm:7.21.0-placeholder-for-preset-env.2":
   version: 7.21.0-placeholder-for-preset-env.2
   resolution: "@babel/plugin-proposal-private-property-in-object@npm:7.21.0-placeholder-for-preset-env.2"
@@ -16073,7 +16062,6 @@ __metadata:
   dependencies:
     "@babel/core": "npm:7.29.0"
     "@babel/eslint-parser": "npm:7.28.6"
-    "@babel/plugin-proposal-export-default-from": "npm:7.27.1"
     "@babel/plugin-proposal-throw-expressions": "npm:7.27.1"
     "@babel/plugin-syntax-dynamic-import": "npm:7.8.3"
     "@babel/plugin-transform-runtime": "npm:7.29.0"
