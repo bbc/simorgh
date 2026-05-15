@@ -19,15 +19,15 @@ import {
   getProcessEnvAppVariables,
 } from '#lib/utilities/getEnvConfig';
 
-import AmpRenderer from '#server/Document/Renderers/AmpRenderer';
-import LiteRenderer from '#server/Document/Renderers/LiteRenderer';
-import litePageTransforms from '#server/Document/Renderers/litePageTransforms';
+import AmpRenderer from '#server/Renderers/AmpRenderer';
+import LiteRenderer from '#server/Renderers/LiteRenderer';
+import litePageTransforms from '#server/Renderers/litePageTransforms';
 
 import NO_JS_CLASSNAME from '#app/lib/noJs.const';
 
 import getPathExtension from '#app/utilities/getPathExtension';
-import ReverbTemplate from '#server/Document/Renderers/ReverbTemplate';
-import ComponentTracking from '#server/Document/Renderers/ComponentTracking';
+import ReverbTemplate from '#server/Renderers/ReverbTemplate';
+import ComponentTracking from '#server/Renderers/ComponentTracking';
 import CanonicalToLiteRedirect from '#server/utilities/CanonicalToLiteRedirect';
 import addOperaMiniClassScript from '#app/lib/utilities/addOperaMiniClassScript';
 import handleServerLogging from '#nextjs/utilities/handleServerLogging';
