@@ -5,9 +5,9 @@ import type {
   JestEnvironmentConfig,
 } from '@jest/environment';
 import TestEnvironment from '@happy-dom/jest-environment';
-import getPageTypeFromTestPath from '../../src/integration/utils/getPageTypeFromTestPath';
-import camelCaseToText from '../../src/integration/utils/camelCaseToText';
-import fetchHtml from '../../src/integration/utils/fetchHtml';
+import getPageTypeFromTestPath from './utils/getPageTypeFromTestPath';
+import camelCaseToText from './utils/camelCaseToText';
+import fetchHtml from './utils/fetchHtml';
 
 const shouldPassArticleHeaders = [
   'Story Page',
