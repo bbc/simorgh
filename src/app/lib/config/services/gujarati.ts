@@ -65,6 +65,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      matchSummary: 'મેચનો સારાંશ',
       and: 'અને',
       readTime: {
         readTimePrefix: 'વાંચવાનો સમય',

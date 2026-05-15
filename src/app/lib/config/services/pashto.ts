@@ -49,6 +49,7 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      matchSummary: 'د لوبې لنډیز',
       and: 'او',
       pagination: {
         page: 'پاڼه',
