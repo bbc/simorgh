@@ -20,7 +20,7 @@
   "scripts": {
     "type-check": "tsc",
     "amp:validate": "node ./scripts/ampHtmlValidator",
-    "build:storybook": "storybook build -c .storybook -o storybook_dist",
+    "build:storybook": "rm -rf build && cp envConfig/local.env .env && storybook build -c .storybook -o storybook_dist",
     "setupDevEnv": "cp envConfig/local.env .env && rm -rf envConfig/secret.env && ./scripts/checkSecretEnvVariables.sh",
     "dependencyFreshness": "node ./scripts/dependencyFreshness",
     "esmDependencyCheck": "node ./scripts/esmDependencyCheck.js",
@@ -28,7 +28,7 @@
     "postshrinkwrap": "test -z $CI && ./scripts/packagelockHttps.sh; git update-index --assume-unchanged .env",
     "prepare": "husky install",
     "preinstall": "node scripts/check-package-manager.js",
-    "storybook": "rm -rf build && cp envConfig/local.env .env && NODE_ENV=production && storybook dev -p 9001 -c .storybook",
+    "storybook": "storybook dev -p 9001 -c .storybook",
     "test:local": "yarn test:lint && yarn test:dependencies && yarn test:unit && run-p --race start amp:validate && run-p --race start test:integration:ci",
     "test:dependencies": "node ./scripts/dependencyCheck",
     "test:lint": "eslint --ext .js,jsx,json,ts,tsx ./src ./data ./cypress",
