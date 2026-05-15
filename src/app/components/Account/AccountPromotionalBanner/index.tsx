@@ -61,7 +61,7 @@ const AccountPromotionalBanner = () => {
       setIsDismissed(true);
     }
   }, []);
-
+  // View tracking for the entire banner component
   const viewTracker = useViewTracker({
     componentName: 'account-promotional-banner',
   });
