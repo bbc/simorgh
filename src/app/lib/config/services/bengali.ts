@@ -67,6 +67,7 @@ export const service: DefaultServiceConfig = {
     },
     googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     translations: {
+      matchSummary: 'ম্যাচের সারসংক্ষেপ',
       and: 'এবং',
       readTime: {
         readTimePrefix: 'পড়ার সময়',

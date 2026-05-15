@@ -45,6 +45,7 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      matchSummary: 'Mérkőzés összefoglaló',
       and: 'és',
       pagination: {
         page: 'Lap',

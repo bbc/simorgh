@@ -47,6 +47,7 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      matchSummary: '경기 요약',
       and: '',
       readTime: {
         readTimePrefix: '읽는 시간',

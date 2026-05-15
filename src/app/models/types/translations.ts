@@ -1,5 +1,6 @@
 /* eslint-disable camelcase */
 export interface Translations {
+  matchSummary?: string;
   and?: string;
   pagination?: {
     page?: string;
@@ -68,6 +69,11 @@ export interface Translations {
     500: TranslationsError;
   };
   continueReading?: string;
+  topicDiscovery?: {
+    heading: string;
+    moreFromTopic: string;
+    fetchErrorMessage?: string;
+  };
   readTime?: Partial<{
     readTimePrefix: string;
     quick: string;
