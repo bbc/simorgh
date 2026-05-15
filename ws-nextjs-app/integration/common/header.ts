@@ -28,7 +28,7 @@ export default service => {
 
       expect(brandingTextElement?.textContent).toBeTruthy();
 
-      const svg = logo.querySelector('g path');
+      const svg = logo.getAttribute('src');
       const brandText = brandingTextElement?.textContent ?? '';
 
       expect({
