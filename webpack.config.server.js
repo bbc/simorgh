@@ -1,7 +1,6 @@
 /* eslint-disable global-require */
 const nodeExternals = require('webpack-node-externals');
 const webpack = require('webpack');
-const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = ({ resolvePath, START_DEV_SERVER }) => {
   const serverConfig = {
@@ -47,16 +46,6 @@ module.exports = ({ resolvePath, START_DEV_SERVER }) => {
     serverConfig.plugins = [
       new webpack.HotModuleReplacementPlugin(),
       new StartServerPlugin('server.js'), // only start the server if we've run `yarn dev`
-      new CopyPlugin({
-        patterns: [
-          {
-            from: 'public/**/*',
-            globOptions: {
-              ignore: ['**/images/**'],
-            },
-          },
-        ],
-      }),
     ];
   }
 

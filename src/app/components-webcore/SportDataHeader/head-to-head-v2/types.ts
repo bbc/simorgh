@@ -1,5 +1,16 @@
 import type { JSX } from 'react';
 
+export type EventStatusType =
+  | 'PreEvent'
+  | 'MidEvent'
+  | 'PostEvent'
+  | 'Abandoned'
+  | 'Cancelled'
+  | 'Suspended'
+  | 'Postponed'
+  | 'Delayed'
+  | 'Intermission';
+
 export declare enum EventStatus {
   PreEvent = 'PreEvent',
   MidEvent = 'MidEvent',
@@ -12,7 +23,7 @@ export declare enum EventStatus {
   Intermission = 'Intermission',
 }
 
-type Action = {
+export type Action = {
   type: string;
   typeLabel: {
     value: string;
@@ -24,14 +35,14 @@ type Action = {
   };
 };
 
-type Actions = {
+export type PlayerActions = {
   playerId: string;
   playerName: string;
   actionType: string;
   actions: Action[];
 };
 
-type GroupedActions = {
+export type GroupedActions = {
   /**
    * The name of the grouped action e.g. Penalties, Tries.
    */
@@ -44,9 +55,25 @@ type GroupedActions = {
    * The away team action details.
    */
   awayTeamActions: string[];
+  /**
+   * Accessible home team actions.
+   */
+  homeTeamAccessibleActions?: string[];
+  /**
+   * Accessible away team actions.
+   */
+  awayTeamAccessibleActions?: string[];
 };
 
-type Team = {
+export type RunningScores = {
+  halftime?: string;
+  fulltime?: string;
+  aggregate?: string;
+  penaltyShootout?: string;
+  extratime?: string;
+};
+
+export type Team = {
   /**
    * The Team's unique id.
    */
@@ -67,7 +94,11 @@ type Team = {
   /**
    * The fulltime and halftime running scores for the team.
    */
-  runningScore: { halftime?: string; fulltime?: string };
+  runningScore: RunningScores;
+  /**
+   * Running scores with additional fields.
+   */
+  runningScores?: RunningScores;
   /**
    * The current team score.
    */
@@ -81,14 +112,18 @@ type Team = {
    * The team actions displayed as a summary. Any actions that are available will be rendered.
    * Actions are not rendered in concise view.
    */
-  actions?: Actions[];
+  actions?: PlayerActions[];
 };
 
 export type HeadToHeadV2Data = {
   /**
+   * The event's unique id.
+   */
+  id?: string;
+  /**
    * The status of the event.
    */
-  status: EventStatus;
+  status: EventStatusType;
   /**
    * The date of the event in 'EEE d MMM yyyy' format. E.g. 'Sat 28 Oct 2023'.
    */
@@ -110,6 +145,10 @@ export type HeadToHeadV2Data = {
    */
   periodLabel?: { value: string; accessible: string };
   /**
+   * Period string.
+   */
+  period?: string;
+  /**
    * Actions for the home and away teams grouped by group name.
    * Any grouped actions that are available will be rendered.
    * Actions are not rendered in concise view.
@@ -120,7 +159,7 @@ export type HeadToHeadV2Data = {
    */
   home: Team;
   /**
-   * Details and scores for home team.
+   * Details and scores for away team.
    */
   away: Team;
   /**
@@ -143,29 +182,47 @@ export type HeadToHeadV2Data = {
     additionalInfo?: string;
   };
 
-  urn: string;
+  urn: string; // TODO - fix or remove
+  /**
+   * The winner of the event.
+   */
+  winner?: 'home' | 'away' | 'draw';
+  /**
+   * The series winner (e.g. in multi-leg competitions).
+   */
+  seriesWinner?: 'home' | 'away';
+  /**
+   * Multi-leg competition details.
+   */
+  multiLeg?: {
+    leg: number;
+  };
 };
 
-export declare const HeadToHeadV2: (props: {
+export type BadgePlaceholderFallbackType = 'badge' | 'flag';
+
+export type Alignment = 'home' | 'away';
+
+export type BadgeSize =
+  | number
+  | { small?: number; medium?: number; large?: number };
+
+export interface HeadToHeadV2Props {
   data: HeadToHeadV2Data;
   isConciseView: boolean;
-  shouldHideBadges: boolean;
-  shouldShowActions: boolean;
+  shouldShowActions?: boolean;
   /**
-   * The maximum number of digits (i.e. characters) in any score in a stack of H2Hv2 components. This ensures that
-   * the badges/teams line up horizontally the whole way down the stack, without adding extra padding when not required.
-   *
-   * By default, the central section of H2Hv2 will expand as little as possible to fit the given score.
+   * The maximum number of digits (i.e. characters) in any score in a stack of H2Hv2 components.
+   * This ensures that the badges/teams line up horizontally the whole way down the stack.
    */
   maximumContainerScoreDigits?: number;
   /**
-   * Optional setting for the sport badge's placeholder fallback type when a mapping doesn't exist for a team.
-   *
-   * Used to e.g. fall back to a grey rectangle instead of a badge icon when the page predominantly shows flags.
-   *
+   * Optional setting for the sport badge's placeholder fallback type.
    * @default 'badge'
    */
-  teamBadgePlaceholderFallbackType?: 'badge' | 'flag';
-}) => JSX.Element;
+  teamBadgePlaceholderFallbackType?: BadgePlaceholderFallbackType;
+}
+
+export declare const HeadToHeadV2: (props: HeadToHeadV2Props) => JSX.Element;
 
 export default HeadToHeadV2;

@@ -66,15 +66,10 @@ export type ComponentProps = {
     mediaCollections: MediaCollection[] | null;
     portraitVideoItems?: PortraitVideoItems | null;
     sportDataEventContent?: {
-      id: string;
-      content: {
-        data: {
-          live: boolean;
-          sportDataEvent: HeadToHeadV2Data;
-          title: string;
-        };
-      };
-    };
+      live: boolean;
+      sportDataEvent: HeadToHeadV2Data;
+      title: string;
+    } | null;
   };
 };
 
@@ -83,7 +78,14 @@ interface LivePageProps extends ComponentProps {
 }
 
 const LivePage = ({ pageData, assetId }: LivePageProps) => {
-  const { lang, translations, defaultImage, brandName } = use(ServiceContext);
+  const {
+    lang,
+    translations,
+    defaultImage,
+    brandName,
+    publishingPrinciples,
+    service,
+  } = use(ServiceContext);
   const { canonicalNonUkLink } = use(RequestContext);
   const { enabled: livePagePollingEnabled } = useToggle('livePagePolling');
 
@@ -110,9 +112,9 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
   const { currentStreamData, hasPendingUpdate, applyPendingUpdate } =
     useLivePagePolling(pageData, livePagePollingEnabled && isLive);
 
-  const sportData = sportDataEventContent?.content?.data?.sportDataEvent;
-  const isSportDataLive = sportDataEventContent?.content?.data?.live;
-  const sportDataTitle = sportDataEventContent?.content?.data?.title;
+  const sportData = sportDataEventContent?.sportDataEvent;
+  const isSportDataLive = sportDataEventContent?.live;
+  const sportDataTitle = sportDataEventContent?.title;
   const showSportData = !!sportData && !isLiveEnv();
 
   const {
@@ -141,7 +143,13 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
     : pageSeoTitle;
   const pageDescription = seoDescription || description || pageSeoTitle;
 
+  const publisherUrl = `https://www.bbc.com/${service}`;
+
   const liveBlogPostingSchema = getLiveBlogPostingSchema({
+    publishingPrinciples: publishingPrinciples ?? undefined,
+    publisherUrl,
+    pageHeadline: pageTitle,
+    description: pageDescription,
     posts: liveTextStream?.content?.data.results,
     brandName,
     defaultImage,
@@ -186,14 +194,23 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
         hasAmpPage={false}
       />
       <LinkedDataContainer
-        type="NewsArticle"
+        type="WebPage"
+        entityId={canonicalNonUkLink}
         seoTitle={metaTitle ?? pageTitle}
         headline={metaTitle ?? pageTitle}
         showAuthor
+        isAccessibleForFree
         promoImage={metaImage?.url}
+        description={pageDescription}
+        mainEntityId={liveBlogPostingSchema?.liveBlogPosting?.['@id']}
         {...(datePublished && { datePublished })}
         {...(dateModified && { dateModified })}
-        {...(liveBlogPostingSchema && { entities: [liveBlogPostingSchema] })}
+        {...(liveBlogPostingSchema && {
+          entities: [
+            liveBlogPostingSchema.liveBlogPosting,
+            liveBlogPostingSchema.newsArticle,
+          ],
+        })}
       />
       <main>
         <Header

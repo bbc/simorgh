@@ -65,6 +65,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      matchSummary: 'Soo koobidda ciyaarta',
       and: 'iyo',
       readTime: {
         readTimePrefix: 'Waqtiga akhriska',
