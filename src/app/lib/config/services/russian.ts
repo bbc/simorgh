@@ -109,6 +109,7 @@ const headerFooterTranslations = {
 export const service: DefaultServiceConfig = {
   default: {
     translations: {
+      matchSummary: 'Обзор матча',
       and: 'и',
       readTime: {
         readTimePrefix: 'Время чтения',
