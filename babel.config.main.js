@@ -1,4 +1,4 @@
-const plugins = ['@emotion/babel-plugin', '@babel/plugin-transform-runtime'];
+const plugins = ['@emotion/babel-plugin'];
 
 // allows dynamic `import()` in Node tests.
 if (process.env.NODE_ENV === 'test') {
