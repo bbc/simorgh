@@ -17,7 +17,7 @@ export interface SavedArticle {
 
 const FAVOURITES_CONFIG = {
   activityType: 'favourites',
-  resourceDomain: 'articles',
+  resourceDomain: 'world-service-news',
   resourceType: 'article',
   action: 'favourited',
 } as const;
@@ -29,10 +29,6 @@ const buildGlobalId = (
   resourceDomain = FAVOURITES_CONFIG.resourceDomain,
   resourceType = FAVOURITES_CONFIG.resourceType,
 ): string => `urn:bbc:${resourceDomain}:${resourceType}:${resourceId}`;
-
-const parseArticleID = (articleId: string): string => {
-  return articleId.split(':').pop() || '';
-};
 
 const createFavouritesPayload = ({
   articleId,
@@ -98,7 +94,6 @@ export {
   FAVOURITES_CONFIG,
   buildGlobalId,
   createFavouritesPayload,
-  parseArticleID,
   extractPromoImageFromArticleData,
   buildPromoImageUrl,
 };

@@ -65,6 +65,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      matchSummary: 'Muhtasari wa mechi',
       and: 'na',
       readTime: {
         readTimePrefix: 'Muda wa kusoma',

@@ -1,5 +1,5 @@
 import SERVICES_WITH_NEW_NAV from '#app/components/Navigation/config';
-import getAppEnv from '#cypress/support/helpers/getAppEnv';
+import getAppEnv from '../support/helpers/getAppEnv';
 import config from '../support/config/services';
 import { ServiceParametersType } from '../types';
 

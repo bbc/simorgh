@@ -47,6 +47,7 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      matchSummary: 'Maç Özeti',
       and: 've',
       readTime: {
         readTimePrefix: 'Okuma süresi',
@@ -66,6 +67,11 @@ export const service: DefaultServiceConfig = {
       seeAll: 'Hepsini görüntüle',
       home: 'Ana sayfa',
       continueReading: 'Okumaya devam edin',
+      topicDiscovery: {
+        heading: 'Daha fazlasını keşfet',
+        moreFromTopic: '{topic} hakkında daha fazla',
+        fetchErrorMessage: 'Yüklenemedi. Lütfen daha sonra tekrar deneyin.',
+      },
       currentPage: 'Bulunduğunuz sayfa',
       skipLinkText: 'İçeriğe götür',
       relatedContent: 'İlgili haberler',

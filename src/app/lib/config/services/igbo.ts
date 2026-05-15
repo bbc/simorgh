@@ -64,6 +64,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      matchSummary: 'Nchịkọta Asọmpi',
       and: 'na',
       readTime: {
         readTimePrefix: 'Oge e ji agụ akụkọ',
