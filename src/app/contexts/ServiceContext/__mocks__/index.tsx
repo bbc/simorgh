@@ -1,5 +1,5 @@
 import { createContext, PropsWithChildren } from 'react';
-import services from '#server/utilities/serviceConfigs';
+import services from '#utilities/serviceConfigs';
 import getLangOverride from '../../../lib/utilities/langHandler';
 import { getVariant } from '../../../lib/utilities/variantHandler';
 import { Services, Variants } from '../../../models/types/global';

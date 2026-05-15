@@ -2580,9 +2580,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@bbc/simorgh-getAgent@workspace:ws-nextjs-app/server/utilities/getAgent":
+"@bbc/simorgh-getAgent@workspace:ws-nextjs-app/utilities/getAgent":
   version: 0.0.0-use.local
-  resolution: "@bbc/simorgh-getAgent@workspace:ws-nextjs-app/server/utilities/getAgent"
+  resolution: "@bbc/simorgh-getAgent@workspace:ws-nextjs-app/utilities/getAgent"
   languageName: unknown
   linkType: soft
 

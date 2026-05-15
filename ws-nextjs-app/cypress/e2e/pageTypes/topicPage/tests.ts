@@ -1,4 +1,4 @@
-import serviceConfigs from '#server/utilities/serviceConfigs';
+import serviceConfigs from '#utilities/serviceConfigs';
 import idSanitiser from '#src/app/lib/utilities/idSanitiser';
 import getAppEnv from '../../../support/helpers/getAppEnv';
 

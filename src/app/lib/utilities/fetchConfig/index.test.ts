@@ -5,7 +5,7 @@ const mockAgent = {
   connect: { cert: 'cert', ca: 'ca', key: 'key' },
 } as unknown as Agent;
 
-jest.mock('#server/utilities/getAgent', () => ({
+jest.mock('#utilities/getAgent', () => ({
   __esModule: true,
   default: async () => mockAgent,
 }));

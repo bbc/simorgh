@@ -1,5 +1,5 @@
 /* eslint-disable import/no-unresolved */
-import appConfig from '#server/utilities/serviceConfigs';
+import appConfig from '#utilities/serviceConfigs';
 import { serviceNumerals } from '#app/components/MostRead/Canonical/Rank';
 
 const MOST_READ_EXCLUDED_SERVICES = ['ukchina'];

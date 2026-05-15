@@ -11,7 +11,7 @@
   "workspaces": {
     "packages": [
       "ws-nextjs-app",
-      "ws-nextjs-app/server/utilities/getAgent",
+      "ws-nextjs-app/utilities/getAgent",
       "src/app/routes/utils/fetchDataFromBFF",
       "src/app/routes/utils/fetchPageData",
       "scripts/bundleSize"

@@ -1,4 +1,4 @@
-import appConfig from '#server/utilities/serviceConfigs';
+import appConfig from '#utilities/serviceConfigs';
 import { getMostReadEndpoint } from '#lib/utilities/getUrlHelpers/getMostReadUrls';
 import { serviceNumerals } from '#app/components/MostRead/Canonical/Rank';
 import { Services } from '#app/models/types/global';

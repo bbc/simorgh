@@ -4,7 +4,7 @@ import SERVICES from '#app/lib/config/services';
 import { Services, ServicesVariantsProps } from '#app/models/types/global';
 import * as emotionReact from '@emotion/react';
 import defaultServiceVariants from '#app/lib/config/services/defaultServiceVariants';
-import serviceConfigs from '#server/utilities/serviceConfigs';
+import serviceConfigs from '#utilities/serviceConfigs';
 import getFontFaces, * as fontFaces from './fontFaces';
 import { themes, pwaThemes } from './__mocks__/themes';
 

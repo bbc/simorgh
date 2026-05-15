@@ -24,7 +24,7 @@ import { getSummary } from '#lib/utilities/parseAssetData/index';
 import { Services, PageTypes } from '#app/models/types/global';
 import { Article } from '#app/models/types/optimo';
 import filterForBlockType from '#app/lib/utilities/blockHandlers';
-import services from '#server/utilities/serviceConfigs';
+import services from '#utilities/serviceConfigs';
 import { render, waitFor } from '../react-testing-library-with-providers';
 import { getAuthorTwitterHandle } from '../Byline/utilities';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';

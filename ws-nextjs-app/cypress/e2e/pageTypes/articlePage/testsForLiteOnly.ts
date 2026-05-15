@@ -1,4 +1,4 @@
-import appConfig from '#server/utilities/serviceConfigs';
+import appConfig from '#utilities/serviceConfigs';
 import { ServiceParametersType } from '../../../types';
 
 export const hasInformationPageLinkTranslation = ({
