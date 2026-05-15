@@ -1,15 +1,15 @@
 export default () => {
   describe('Footer', () => {
     it('I can see the BBC branding', () => {
-      const brandingEl = document.querySelector('footer svg');
+      const brandingEl = document.querySelector('#brandSvgFooter');
 
       expect(brandingEl).toBeInTheDocument();
     });
 
     it('I can click on the BBC branding and it would take me to the homepage', () => {
-      const brandingEl = document.querySelector('footer svg');
+      const brandingEl = document.querySelector('#brandSvgFooter');
       const brandingLinkEl = brandingEl.parentNode;
-      const brandingImageEl = brandingLinkEl.querySelector('svg');
+      const brandingImageEl = brandingLinkEl.querySelector('img');
 
       expect(brandingLinkEl.tagName).toEqual('A');
       expect(brandingLinkEl.getAttribute('href')).toMatchSnapshot();
