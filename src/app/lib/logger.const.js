@@ -90,6 +90,9 @@ const logCodes = {
 
   // ThemeProvider error
   THEME_PROVIDER_ERROR: 'theme_provider_error',
+
+  // Build manifest errors
+  BUILD_MANIFEST_CSS_READ_ERROR: 'build_manifest_css_read_error',
 };
 
 module.exports = logCodes;
