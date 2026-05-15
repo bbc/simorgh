@@ -163,7 +163,7 @@ describe('useUASButton', () => {
       expect(mockUasApiRequest).toHaveBeenCalledWith('POST', 'favourites', {
         body: {
           activityType: 'favourites',
-          resourceDomain: 'articles',
+          resourceDomain: 'world-service-news',
           resourceType: 'article',
           resourceId: '123',
           action: 'favourited',
@@ -211,7 +211,7 @@ describe('useUASButton', () => {
       });
 
       expect(mockUasApiRequest).toHaveBeenCalledWith('DELETE', 'favourites', {
-        globalId: 'urn:bbc:articles:article:123',
+        globalId: 'urn:bbc:world-service-news:article:123',
       });
     });
 
