@@ -1,7 +1,7 @@
 import Footer from './components/footer';
 import HeadToHeadHeader from './components/head-to-head-header';
 import { HeadToHeadBanner } from './components/head-to-head-banner';
-import { ConditionalOnwardJourneyLink } from './components/conditional-onward-journey-link';
+import ConditionalOnwardJourneyLink from './components/conditional-onward-journey-link';
 import { Actions } from './components/actions';
 import { HeadToHeadV2Data } from './types';
 import styles from './index.styles';
@@ -39,7 +39,7 @@ export const HeadToHeadV2 = ({
           )}
           <HeadToHeadBanner
             data={data}
-            isConciseView={isConciseView}
+            isConciseView={isConciseView ?? false}
             eventSummary={data.accessibleEventSummary}
             shouldHideBadges={shouldHideBadges}
             maxScoreLength={maximumContainerScoreDigits}
@@ -50,7 +50,6 @@ export const HeadToHeadV2 = ({
           {!isConciseView && (
             <Footer
               venue={data.venue?.name || 'To be confirmed'}
-              status={data.status}
               attendanceValue={data.attendance?.value}
               attendanceInfo={data.attendance?.additionalInfo}
             />

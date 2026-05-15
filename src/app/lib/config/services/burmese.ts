@@ -61,6 +61,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      matchSummary: 'ပွဲအကျဉ်းချုပ်',
       and: 'နှင့်',
       readTime: {
         readTimePrefix: 'ဖတ်ရန်အချိန်',

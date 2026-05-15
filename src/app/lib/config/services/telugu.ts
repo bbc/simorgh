@@ -47,6 +47,7 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      matchSummary: 'మ్యాచ్ సారాంశం',
       and: 'మరియు',
       readTime: {
         readTimePrefix: 'చదివే సమయం',

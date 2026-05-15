@@ -65,6 +65,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      matchSummary: 'Matçın xülasəsi',
       and: 'və',
       readTime: {
         readTimePrefix: 'Oxuma vaxtı',

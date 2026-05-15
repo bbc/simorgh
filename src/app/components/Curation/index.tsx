@@ -204,6 +204,7 @@ export default ({
             blocks={portraitVideo.blocks}
             eventTrackingData={eventTrackingData}
             css={styles.pvCarousel}
+            link={link}
           />
         );
       }

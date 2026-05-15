@@ -61,6 +61,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      matchSummary: 'सामन्याचा सारांश',
       and: 'आणि',
       readTime: {
         readTimePrefix: 'वाचन वेळ',
