@@ -2568,6 +2568,18 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@bbc/simorgh-fetchDataFromBFF@workspace:src/app/routes/utils/fetchDataFromBFF":
+  version: 0.0.0-use.local
+  resolution: "@bbc/simorgh-fetchDataFromBFF@workspace:src/app/routes/utils/fetchDataFromBFF"
+  languageName: unknown
+  linkType: soft
+
+"@bbc/simorgh-fetchPageData@workspace:src/app/routes/utils/fetchPageData":
+  version: 0.0.0-use.local
+  resolution: "@bbc/simorgh-fetchPageData@workspace:src/app/routes/utils/fetchPageData"
+  languageName: unknown
+  linkType: soft
+
 "@bbc/simorgh-getAgent@workspace:ws-nextjs-app/server/utilities/getAgent":
   version: 0.0.0-use.local
   resolution: "@bbc/simorgh-getAgent@workspace:ws-nextjs-app/server/utilities/getAgent"
