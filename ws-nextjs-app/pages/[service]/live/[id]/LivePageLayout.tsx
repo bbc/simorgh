@@ -66,14 +66,9 @@ export type ComponentProps = {
     mediaCollections: MediaCollection[] | null;
     portraitVideoItems?: PortraitVideoItems | null;
     sportDataEventContent?: {
-      id: string;
-      content: {
-        data: {
-          live: boolean;
-          sportDataEvent: HeadToHeadV2Data;
-          title: string;
-        };
-      };
+      live: boolean;
+      sportDataEvent: HeadToHeadV2Data;
+      title: string;
     } | null;
   };
 };
@@ -117,9 +112,9 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
   const { currentStreamData, hasPendingUpdate, applyPendingUpdate } =
     useLivePagePolling(pageData, livePagePollingEnabled && isLive);
 
-  const sportData = sportDataEventContent?.content?.data?.sportDataEvent;
-  const isSportDataLive = sportDataEventContent?.content?.data?.live;
-  const sportDataTitle = sportDataEventContent?.content?.data?.title;
+  const sportData = sportDataEventContent?.sportDataEvent;
+  const isSportDataLive = sportDataEventContent?.live;
+  const sportDataTitle = sportDataEventContent?.title;
   const showSportData = !!sportData && !isLiveEnv();
 
   const {
