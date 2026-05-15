@@ -6,7 +6,7 @@ import nodeLogger from '#lib/logger.node';
 import PageDataParams from '#app/models/types/pageDataParams';
 import { PageTypes } from '#app/models/types/global';
 import getPageData from '#nextjs/utilities/pageRequests/getPageData';
-import logResponseTime from '#src/server/utilities/logResponseTime';
+import logResponseTime from '#server/utilities/logResponseTime';
 import { OK } from '#app/lib/statusCodes.const';
 import { ROUTING_INFORMATION } from '#app/lib/logger.const';
 

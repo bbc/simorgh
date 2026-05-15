@@ -1,7 +1,7 @@
 import { createContext, PropsWithChildren } from 'react';
+import services from '#nextjs/server/utilities/serviceConfigs';
 import getLangOverride from '../../../lib/utilities/langHandler';
 import { getVariant } from '../../../lib/utilities/variantHandler';
-import services from '../../../../server/utilities/serviceConfigs';
 import { Services, Variants } from '../../../models/types/global';
 
 interface Props {

@@ -1,7 +1,7 @@
 import { writeFile } from 'fs';
 
 jest.mock('fs');
-jest.mock('../../../../../server/utilities/serviceConfigs', () => ({
+jest.mock('#nextjs/server/utilities/serviceConfigs', () => ({
   service: {
     default: {
       datetimeLocale: 'en-gb',

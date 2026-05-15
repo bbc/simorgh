@@ -4,11 +4,6 @@ const plugins = [
   '@babel/plugin-syntax-dynamic-import', // allows `await import()` syntax
   '@babel/plugin-proposal-export-default-from',
   '@babel/plugin-transform-runtime',
-  '@loadable/babel-plugin',
-  [
-    'transform-rename-import',
-    { original: 'next/dynamic', replacement: '@loadable/component' },
-  ],
 ];
 
 // allows dynamic `import()` in Node tests.
@@ -56,7 +51,6 @@ module.exports = api => {
         },
         // analyses code & polyfills only the features that are used, only for the targeted browsers
         useBuiltIns: 'usage',
-        corejs: '3',
       },
     ],
     [

@@ -38,7 +38,7 @@
       "#models/*": ["src/app/models/*"],
       "#testHelpers/*": ["src/testHelpers/*"],
       "#pages/*": ["src/app/pages/*"],
-      "#server/*": ["src/server/*"],
+      "#server/*": ["ws-nextjs-app/server/*"],
       "#storybook/*": [".storybook/*"]
     }
   },

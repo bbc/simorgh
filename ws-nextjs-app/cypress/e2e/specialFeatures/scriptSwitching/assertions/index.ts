@@ -1,5 +1,5 @@
 import { Variants } from '#app/models/types/global';
-import serviceConfigs from '#src/server/utilities/serviceConfigs';
+import serviceConfigs from '#server/utilities/serviceConfigs';
 import { ServiceParametersType } from '../../../../types';
 
 import {

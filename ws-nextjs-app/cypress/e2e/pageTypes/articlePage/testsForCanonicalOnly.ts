@@ -1,6 +1,6 @@
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable import/prefer-default-export */
-import appConfig from '#src/server/utilities/serviceConfigs';
+import appConfig from '#server/utilities/serviceConfigs';
 import { Services } from '#app/models/types/global';
 import { ArticleContent, OptimoBlock } from '#app/models/types/optimo';
 import {

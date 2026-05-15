@@ -24,7 +24,7 @@ const mockAgent = {
 
 const mockGetAgent = () => Promise.resolve(mockAgent);
 
-jest.mock('../../../../server/utilities/getAgent', () => jest.fn(mockGetAgent));
+jest.mock('#nextjs/server/utilities/getAgent', () => jest.fn(mockGetAgent));
 
 const localTimeout = 60000;
 

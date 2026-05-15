@@ -10,7 +10,7 @@ import {
   ServiceContext,
   ServiceContextProvider,
 } from '#app/contexts/ServiceContext';
-import services from '#src/server/utilities/serviceConfigs';
+import services from '#server/utilities/serviceConfigs';
 import PromoTimestamp from '#components/Promo/timestamp';
 import ArticleTimestamp from '#containers/ArticleTimestamp';
 import MostReadTimestamp from '#src/app/components/MostRead/Canonical/LastUpdated';
