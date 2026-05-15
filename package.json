@@ -20,6 +20,7 @@
   "scripts": {
     "type-check": "tsc",
     "amp:validate": "node ./scripts/ampHtmlValidator",
+    "build:storybook": "storybook build -c .storybook -o storybook_dist",
     "setupDevEnv": "cp envConfig/local.env .env && rm -rf envConfig/secret.env && ./scripts/checkSecretEnvVariables.sh",
     "dependencyFreshness": "node ./scripts/dependencyFreshness",
     "esmDependencyCheck": "node ./scripts/esmDependencyCheck.js",
