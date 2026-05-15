@@ -103,27 +103,6 @@ exports[`Canonical Articles Header I can see the branding 1`] = `
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 1`] = `
-{
-  "text": "Labaran Duniya",
-  "url": "/hausa",
-}
-`;
-
-exports[`Canonical Articles Header Navigation link should match text and url 2`] = `
-{
-  "text": "Kallo",
-  "url": "/hausa/topics/cn09qmz4jryt",
-}
-`;
-
-exports[`Canonical Articles Header Navigation link should match text and url 3`] = `
-{
-  "text": "Sauraro",
-  "url": "/hausa/bbc_hausa_radio/liveradio",
-}
-`;
-
 exports[`Canonical Articles Image Caption should match text 1`] = `"Bayanan hoto, Wannan hoton gwaji, mallakin BBC, ya nuna taswirar Faransa. Hoton yana cikin katangar ukun farko kuma yana da wannan taken."`;
 
 exports[`Canonical Articles Image should match snapshot 1`] = `

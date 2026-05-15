@@ -121,20 +121,6 @@ exports[`Canonical Articles Header I can see the branding 1`] = `
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 1`] = `
-{
-  "text": "صفحه اول",
-  "url": "/persian",
-}
-`;
-
-exports[`Canonical Articles Header Navigation link should match text and url 2`] = `
-{
-  "text": "ببینید",
-  "url": "/persian/watch/bbc_persian_tv/live",
-}
-`;
-
 exports[`Canonical Articles Image Caption should match text 1`] = `"توضیح تصویر، نوشیدنی‌ها داغ در بسته‌های سربسته توزیع می‌شوند "`;
 
 exports[`Canonical Articles Image Copyright Non BBC should match snapshot 1`] = `
