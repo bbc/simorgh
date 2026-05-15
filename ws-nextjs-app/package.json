@@ -24,6 +24,7 @@
     "test:integration:amp": "NODE_OPTIONS=--no-experimental-strip-types jest --ci --colors --selectProjects='Integration Tests - AMP'",
     "test:integration:lite": "NODE_OPTIONS=--no-experimental-strip-types jest --ci --colors --selectProjects='Integration Tests - Lite'",
     "cypress": "cypress run --browser chrome",
+    "cypress:install": "cypress install",
     "cypress:application": "cypress run --browser chrome --spec ./cypress/e2e/application",
     "cypress:page-types": "cypress run --browser chrome --spec ./cypress/e2e/pageTypes",
     "cypress:special-features": "cypress run --browser chrome --spec ./cypress/e2e/specialFeatures",
