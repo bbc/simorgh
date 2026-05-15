@@ -1092,17 +1092,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-syntax-dynamic-import@npm:7.8.3":
-  version: 7.8.3
-  resolution: "@babel/plugin-syntax-dynamic-import@npm:7.8.3"
-  dependencies:
-    "@babel/helper-plugin-utils": "npm:^7.8.0"
-  peerDependencies:
-    "@babel/core": ^7.0.0-0
-  checksum: 10/ce307af83cf433d4ec42932329fad25fa73138ab39c7436882ea28742e1c0066626d224e0ad2988724c82644e41601cef607b36194f695cb78a1fcdc959637bd
-  languageName: node
-  linkType: hard
-
 "@babel/plugin-syntax-flow@npm:^7.27.1":
   version: 7.27.1
   resolution: "@babel/plugin-syntax-flow@npm:7.27.1"
@@ -16063,7 +16052,6 @@ __metadata:
     "@babel/core": "npm:7.29.0"
     "@babel/eslint-parser": "npm:7.28.6"
     "@babel/plugin-proposal-throw-expressions": "npm:7.27.1"
-    "@babel/plugin-syntax-dynamic-import": "npm:7.8.3"
     "@babel/plugin-transform-runtime": "npm:7.29.0"
     "@babel/polyfill": "npm:7.12.1"
     "@babel/preset-env": "npm:7.29.5"

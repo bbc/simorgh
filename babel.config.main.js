@@ -1,8 +1,4 @@
-const plugins = [
-  '@emotion/babel-plugin',
-  '@babel/plugin-syntax-dynamic-import', // allows `await import()` syntax
-  '@babel/plugin-transform-runtime',
-];
+const plugins = ['@emotion/babel-plugin', '@babel/plugin-transform-runtime'];
 
 // allows dynamic `import()` in Node tests.
 if (process.env.NODE_ENV === 'test') {
