@@ -240,14 +240,16 @@ export default class AppDocument extends Document<DocProps> {
       // eslint-disable-next-line no-underscore-dangle
       __NEXT_DATA__?: NextDataProps;
     };
-    /* eslint-disable no-underscore-dangle */
-    const dynamicIds: Array<string | number> =
-      (this.props as PropsWithNextData).__NEXT_DATA__?.dynamicIds ?? [];
-    /* eslint-enable no-underscore-dangle */
+
+    const getDynamicIds = (): Array<string | number> => {
+      /* eslint-disable no-underscore-dangle */
+      return (this.props as PropsWithNextData).__NEXT_DATA__?.dynamicIds ?? [];
+      /* eslint-enable no-underscore-dangle */
+    };
 
     switch (true) {
       case isAmp: {
-        const ampCss = css + getAmpLiteCss(dynamicIds);
+        const ampCss = css + getAmpLiteCss(getDynamicIds());
         return (
           <AmpRenderer
             bodyContent={<Main />}
@@ -262,7 +264,7 @@ export default class AppDocument extends Document<DocProps> {
         );
       }
       case isLite: {
-        const liteCss = css + getAmpLiteCss(dynamicIds);
+        const liteCss = css + getAmpLiteCss(getDynamicIds());
         return (
           <LiteRenderer
             bodyContent={<Main />}
