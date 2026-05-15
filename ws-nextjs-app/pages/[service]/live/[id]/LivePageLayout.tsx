@@ -49,7 +49,7 @@ export type ComponentProps = {
     } | null;
     summaryPoints: { content: KeyPointsResponse | null };
     liveTextStream: {
-      id?: string;
+      id: string;
       content: StreamResponse | null;
       contributors: string | null;
     };
