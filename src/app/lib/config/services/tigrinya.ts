@@ -64,6 +64,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      matchSummary: 'ሓፈሻዊ ጸብጻብ ግጥሚ',
       and: 'እና',
       readTime: {
         readTimePrefix: 'ንባብ',

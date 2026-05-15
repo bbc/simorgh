@@ -67,6 +67,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      matchSummary: 'मैच का सारांश',
       and: 'और',
       readTime: {
         readTimePrefix: 'पढ़ने का समय',
