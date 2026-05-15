@@ -19,7 +19,7 @@ const USER_ID_COOKIE_KEY = 'ckns_sylphid';
 
 const FAVOURITES_CONFIG = {
   activityType: 'favourites',
-  resourceDomain: 'articles',
+  resourceDomain: 'world-service-news',
   resourceType: 'article',
   action: 'favourited',
 } as const;

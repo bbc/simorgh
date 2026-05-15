@@ -1,5 +1,6 @@
 /* eslint-disable camelcase */
 export interface Translations {
+  matchSummary?: string;
   and?: string;
   pagination?: {
     page?: string;

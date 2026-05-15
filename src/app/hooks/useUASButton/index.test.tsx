@@ -132,7 +132,7 @@ describe('useUASButton', () => {
       });
 
       expect(mockUasApiRequest).toHaveBeenCalledWith('DELETE', 'favourites', {
-        globalId: 'urn:bbc:articles:article:123',
+        globalId: 'urn:bbc:world-service-news:article:123',
       });
     });
 
