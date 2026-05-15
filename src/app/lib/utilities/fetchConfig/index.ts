@@ -2,7 +2,7 @@ import nodeLogger from '#lib/logger.node';
 import { CONFIG_REQUEST_RECEIVED, CONFIG_FETCH_ERROR } from '#lib/logger.const';
 import { LRUCache } from 'lru-cache';
 import { Services, Variants } from '#app/models/types/global';
-import getAgent from '#server/utilities/getAgent';
+import getAgent from '#utilities/getAgent';
 import certsRequired from '#app/routes/utils/certsRequired';
 import { FetchError } from '#app/models/types/fetch';
 import getEnvironment from '#app/routes/utils/getEnvironment';

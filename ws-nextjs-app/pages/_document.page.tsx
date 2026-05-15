@@ -28,9 +28,9 @@ import NO_JS_CLASSNAME from '#app/lib/noJs.const';
 import getPathExtension from '#app/utilities/getPathExtension';
 import ReverbTemplate from '#server/Renderers/ReverbTemplate';
 import ComponentTracking from '#server/Renderers/ComponentTracking';
-import CanonicalToLiteRedirect from '#server/utilities/CanonicalToLiteRedirect';
+import CanonicalToLiteRedirect from '#utilities/CanonicalToLiteRedirect';
 import addOperaMiniClassScript from '#app/lib/utilities/addOperaMiniClassScript';
-import handleServerLogging from '#nextjs/utilities/handleServerLogging';
+import handleServerLogging from '#utilities/handleServerLogging';
 import derivePageType from '../utilities/derivePageType';
 
 type DocProps = {

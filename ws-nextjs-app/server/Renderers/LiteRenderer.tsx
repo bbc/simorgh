@@ -1,6 +1,6 @@
 /* eslint-disable react/no-danger */
 import { ReactElement, PropsWithChildren } from 'react';
-import { OptOutOfLiteRedirect } from '#server/utilities/CanonicalToLiteRedirect';
+import { OptOutOfLiteRedirect } from '#utilities/CanonicalToLiteRedirect';
 import { BaseRendererProps } from './types';
 import ComponentTracking from './ComponentTracking';
 

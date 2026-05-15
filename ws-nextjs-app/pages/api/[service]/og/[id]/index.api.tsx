@@ -4,7 +4,7 @@ import { LIVE_LIGHT } from '#app/components/ThemeProvider/palette';
 import { REITH_FONTS_DIR } from '#app/components/ThemeProvider/fontFaces';
 import { Services } from '#app/models/types/global';
 import { FetchError } from '#app/models/types/fetch';
-import getPageData from '#nextjs/utilities/pageRequests/getPageData';
+import getPageData from '#utilities/pageRequests/getPageData';
 import { ImageResponse } from 'next/og';
 import {
   getArticleId,
@@ -16,8 +16,8 @@ import {
   OK,
 } from '#app/lib/statusCodes.const';
 import defaultServiceVariants from '#app/lib/config/services/defaultServiceVariants';
-import sendCustomMetric from '#server/utilities/customMetrics';
-import { NON_200_RESPONSE } from '#server/utilities/customMetrics/metrics.const';
+import sendCustomMetric from '#utilities/customMetrics';
+import { NON_200_RESPONSE } from '#utilities/customMetrics/metrics.const';
 import nodeLogger from '#lib/logger.node';
 import {
   ROUTING_INFORMATION,
