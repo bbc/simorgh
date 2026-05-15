@@ -10,13 +10,13 @@ Displays the Account Promotional Banner under the header and navigation.
 
 ## Data source
 
-- Uses `AccountContext` to determine signed-in state.
+- Uses `AccountContext` to determine signed-in state and the initial banner visibility (computed on the server from the request cookies, see `utilities.ts`).
 
-## Dismissal storage
+## Avoiding layout shift
 
-- Visibility and dismissal count are tracked via `localStorage` (`account_promotional_banner_dismissals` and `account_promotional_banner_last_dismissed`).
-- On first render the component reads localStorage to decide whether to show the banner.
-- On dismissal the counts are written back to localStorage.
+- Visibility is determined from cookies (`accountPromoDismissals` and `accountPromoLastDismissed`) which are sent with the request, so the initial visibility is computed at SSR.
+- The pre-computed visibility is provided to the banner via `AccountContext.isAccountPromoBannerVisible`, so the server-rendered HTML matches the client's initial render and there is no post-hydration flash.
+- Dismissals are written back to the same cookies on the client.
 
 ## Storybook
 

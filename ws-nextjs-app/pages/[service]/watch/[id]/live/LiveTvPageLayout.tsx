@@ -25,7 +25,6 @@ const renderCuration = ({
     title: curationTitle,
     link,
     position,
-    associatedContent: { uri } = {},
     ...curationProps
   } = curation;
   return (
@@ -34,7 +33,7 @@ const renderCuration = ({
         summaries={summaries || []}
         title={curationTitle}
         position={position}
-        link={link || uri}
+        link={link}
         curationLength={curationLength}
         renderVisuallyHiddenH2Title={position === 0}
         curationId={curationId}

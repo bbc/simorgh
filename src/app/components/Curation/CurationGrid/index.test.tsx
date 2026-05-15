@@ -1,4 +1,3 @@
-import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import { VISUAL_PROMINENCE, Summary } from '#app/models/types/curationData';
 import {
   render,
@@ -6,7 +5,7 @@ import {
 } from '#app/components/react-testing-library-with-providers';
 import CurationGrid from '.';
 
-const eventTrackingData = { componentName: 'simple-curation-grid' };
+const eventTrackingData = { componentName: 'curation-grid' };
 
 const allSummaries = [
   {
@@ -79,51 +78,5 @@ describe('CurationGrid', () => {
       <CurationGrid summaries={[]} eventTrackingData={eventTrackingData} />,
     );
     expect(container).toBeEmptyDOMElement();
-  });
-
-  it('should pass correct eventTrackingData to click tracker for video curationContentType', () => {
-    const spy = jest.spyOn(clickTracking, 'default');
-    const videoEventTrackingData = { componentName: 'video-curation-grid' };
-    render(
-      <CurationGrid
-        summaries={[mediaPromo]}
-        eventTrackingData={videoEventTrackingData}
-      />,
-    );
-    expect(screen.getByText('Standard promo title')).toBeInTheDocument();
-    expect(spy).toHaveBeenCalledWith(
-      expect.objectContaining({
-        componentName: 'video-curation-grid',
-        itemTracker: expect.objectContaining({
-          type: 'video-curation-grid-promo',
-          text: 'Standard promo title',
-          position: 1,
-          resourceId: '2',
-        }),
-      }),
-    );
-    spy.mockRestore();
-  });
-  it('should pass simple-curation-grid and simple-curation-grid-promo to tracking if curationContentType is empty', () => {
-    const spy = jest.spyOn(clickTracking, 'default');
-    render(
-      <CurationGrid
-        summaries={[mediaPromo]}
-        eventTrackingData={eventTrackingData}
-      />,
-    );
-    expect(screen.getByText('Standard promo title')).toBeInTheDocument();
-    expect(spy).toHaveBeenCalledWith(
-      expect.objectContaining({
-        componentName: 'simple-curation-grid',
-        itemTracker: expect.objectContaining({
-          type: 'simple-curation-grid-promo',
-          text: 'Standard promo title',
-          position: 1,
-          resourceId: '2',
-        }),
-      }),
-    );
-    spy.mockRestore();
   });
 });

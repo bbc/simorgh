@@ -9,9 +9,6 @@ const styles = {
       [`.${OPERA_MINI_CLASSNAME} &`]: {
         display: 'none',
       },
-      '& > h2:has(a)': {
-        marginBottom: 0,
-      },
     }),
   heading: ({ palette, mq, spacings }: Theme) =>
     css({

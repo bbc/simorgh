@@ -41,7 +41,9 @@ export default {
     }),
   secondSection: ({ mq }: Theme) =>
     css({
+      display: 'flex',
       gridColumn: '1 / 13',
+      justifyContent: 'center',
 
       [mq.GROUP_4_MIN_WIDTH]: {
         gridColumn: '5 / 13',

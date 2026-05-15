@@ -19,7 +19,6 @@ import articleNewsWithPodcastPromo from '#data/news/articles/crkxdvxzwxk2.json';
 import articleDataWithElectionTag from '#data/mundo/articles/c206j730722o.json';
 import articleDataWithPortraitVideo from '#data/mundo/articles/c1xv2q1gewvo.json';
 import articleDataWithPortraitVideoRTL from '#data/persian/articles/c149pnldynxo.json';
-import articleDataPidginWithMediaCuration from '#data/pidgin/articles/cnd6yxmxvp2o.json';
 import articleWithTopicDiscovery from '#data/portuguese/articles/cgmpgpllnp7o.json';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
@@ -87,7 +86,6 @@ const ComponentWithContext = ({
         podcastPromo: { enabled: podcastEnabled },
         electionBanner: { enabled: electionBanner },
         articleLiteSiteLink: { enabled: articleLiteSiteLinkEnabled },
-        articleVideoCuration: { enabled: true },
       }}
     >
       {/* Service set to news to enable most read. Article data is in english */}
@@ -311,13 +309,4 @@ export const TestArticlePageWithLiteSiteLinkRTL = {
     />
   ),
   tags: ['!dev'],
-};
-
-export const TestArticlePageWithVideoCuration = {
-  render: () => (
-    <ComponentWithContext
-      data={articleDataPidginWithMediaCuration}
-      service="pidgin"
-    />
-  ),
 };

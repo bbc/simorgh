@@ -37,6 +37,12 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: ./scripts/installNodeModules.sh
 
+      - name: Build Simorgh - Express App
+        run: yarn build:local
+
+      - name: Start Simorgh Server - Express App
+        run: nohup node build/server.js > /dev/null 2>&1 &
+
       - name: Build Simorgh - Next.JS App
         working-directory: ./ws-nextjs-app
         run: yarn build:local

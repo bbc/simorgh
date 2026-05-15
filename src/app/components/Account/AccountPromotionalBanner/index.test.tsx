@@ -1,4 +1,5 @@
 import userEvent from '@testing-library/user-event';
+import Cookie from 'js-cookie';
 import {
   render,
   screen,
@@ -6,6 +7,10 @@ import {
 import type { IdctaConfig } from '#app/models/types/account';
 import useToggle from '#app/hooks/useToggle';
 import AccountPromotionalBanner from '.';
+import {
+  ACCOUNT_BANNER_DISMISS_COOKIE,
+  ACCOUNT_BANNER_LAST_DISMISS_COOKIE,
+} from './utilities';
 
 const idctaConfig: IdctaConfig = {
   'id-availability': 'GREEN',
@@ -23,11 +28,15 @@ const idctaConfig: IdctaConfig = {
 
 jest.mock('#app/hooks/useToggle');
 
-const renderWithProviders = (idctaOverrides: Partial<IdctaConfig> = {}) =>
+const renderWithProviders = (
+  idctaOverrides: Partial<IdctaConfig> = {},
+  isAccountPromoBannerVisible = true,
+) =>
   render(<AccountPromotionalBanner />, {
     service: 'ws',
     idctaConfig: {
       ...idctaConfig,
+      initialIsAccountPromoBannerVisible: isAccountPromoBannerVisible,
       ...idctaOverrides,
     },
   });
@@ -35,8 +44,8 @@ const renderWithProviders = (idctaOverrides: Partial<IdctaConfig> = {}) =>
 describe('AccountPromotionalBanner', () => {
   beforeEach(() => {
     (useToggle as jest.Mock).mockReturnValue({ enabled: true });
-    localStorage.removeItem('account_promotional_banner_dismissals');
-    localStorage.removeItem('account_promotional_banner_last_dismissed');
+    Cookie.remove(ACCOUNT_BANNER_DISMISS_COOKIE);
+    Cookie.remove(ACCOUNT_BANNER_LAST_DISMISS_COOKIE);
   });
 
   it('renders when signed out and IDCTA is available', async () => {
@@ -105,58 +114,32 @@ describe('AccountPromotionalBanner', () => {
   });
 
   it('does not render when banner has been previously dismissed', () => {
-    localStorage.setItem('account_promotional_banner_dismissals', '3');
-    renderWithProviders();
+    renderWithProviders({}, false);
 
     expect(
       screen.queryByRole('heading', { name: 'Discover your BBC' }),
     ).not.toBeInTheDocument();
   });
 
-  it('writes dismissal data to localStorage when the close button is clicked', async () => {
+  it('writes dismissal cookies when the close button is clicked', async () => {
     const user = userEvent.setup();
+    const cookieSetSpy = jest.spyOn(Cookie, 'set');
     renderWithProviders();
 
     const closeButton = await screen.findByRole('button', { name: /close/i });
     await user.click(closeButton);
 
-    expect(localStorage.getItem('account_promotional_banner_dismissals')).toBe(
+    expect(cookieSetSpy).toHaveBeenCalledWith(
+      ACCOUNT_BANNER_DISMISS_COOKIE,
       '1',
+      expect.any(Object),
     );
-    expect(
-      Number(localStorage.getItem('account_promotional_banner_last_dismissed')),
-    ).toBeGreaterThan(0);
-  });
-
-  it('does not render when last dismissed is within the interval', () => {
-    const now = Date.now();
-    localStorage.setItem('account_promotional_banner_last_dismissed', `${now}`);
-    renderWithProviders();
-
-    expect(
-      screen.queryByRole('heading', { name: 'Discover your BBC' }),
-    ).not.toBeInTheDocument();
-  });
-
-  it('renders again after the interval has passed', () => {
-    const past = Date.now() - 11 * 24 * 60 * 60 * 1000; // 11 days ago
-    localStorage.setItem(
-      'account_promotional_banner_last_dismissed',
-      `${past}`,
+    expect(cookieSetSpy).toHaveBeenCalledWith(
+      ACCOUNT_BANNER_LAST_DISMISS_COOKIE,
+      expect.any(String),
+      expect.any(Object),
     );
-    renderWithProviders();
 
-    expect(
-      screen.queryByRole('heading', { name: 'Discover your BBC' }),
-    ).toBeInTheDocument();
-  });
-
-  it('treats malformed stored values as zero dismissals', () => {
-    localStorage.setItem('account_promotional_banner_dismissals', 'invalid');
-    renderWithProviders();
-
-    expect(
-      screen.queryByRole('heading', { name: 'Discover your BBC' }),
-    ).toBeInTheDocument();
+    cookieSetSpy.mockRestore();
   });
 });

@@ -1,6 +1,9 @@
 /* eslint-disable import/no-relative-packages */
 import { interceptATIAnalyticsBeacons, COMPONENTS } from '../helpers';
-import { assertATIComponentClickEvent, assertATIComponentViewEvent } from '.';
+import {
+  assertATIComponentClickEvent,
+  assertATIComponentViewEvent,
+} from '../../../../../../cypress/e2e/specialFeatures/atiAnalytics/assertions';
 import { AtiAssertionFnProps } from './type';
 
 const { RECOMMENDATIONS } = COMPONENTS;

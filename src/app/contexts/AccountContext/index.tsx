@@ -69,6 +69,8 @@ export const AccountProvider = ({
   const isSignedIn =
     isIdctaAvailable &&
     Boolean(initialConfig?.initialIsSignedIn || clientSignedInState);
+  const isAccountPromoBannerVisible =
+    initialConfig?.initialIsAccountPromoBannerVisible ?? true;
 
   const value = useMemo(
     () => ({
@@ -79,6 +81,7 @@ export const AccountProvider = ({
       registerUrl,
       settingsUrl,
       forYouUrl,
+      isAccountPromoBannerVisible,
     }),
     [
       forYouUrl,
@@ -88,6 +91,7 @@ export const AccountProvider = ({
       settingsUrl,
       signInUrl,
       signOutUrl,
+      isAccountPromoBannerVisible,
     ],
   );
 

@@ -24,6 +24,7 @@ const withProviders =
               signOutUrl: undefined,
               settingsUrl: undefined,
               forYouUrl: undefined,
+              isAccountPromoBannerVisible: true,
             }}
           >
             <AccountPromotionalBanner />

@@ -6,6 +6,8 @@
 
 const fs = require('fs');
 const crypto = require('crypto');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const LoadablePlugin = require('@loadable/webpack-plugin');
 const webpack = require('webpack');
 const dotenv = require('dotenv');
@@ -23,7 +25,13 @@ if (DOT_ENV_CONFIG.error) {
   throw DOT_ENV_CONFIG.error;
 }
 
-module.exports = ({ resolvePath, IS_PROD, START_DEV_SERVER, BUNDLE_TYPE }) => {
+module.exports = ({
+  resolvePath,
+  IS_PROD,
+  START_DEV_SERVER,
+  IS_PROD_PROFILE,
+  BUNDLE_TYPE,
+}) => {
   const {
     SIMORGH_APP_ENV,
     SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
@@ -86,6 +94,20 @@ module.exports = ({ resolvePath, IS_PROD, START_DEV_SERVER, BUNDLE_TYPE }) => {
     },
     optimization: {
       moduleIds: 'deterministic',
+      minimizer: [
+        new TerserPlugin({
+          terserOptions: {
+            // These options are enabled in production profile builds only and
+            // prevent the discarding or mangling of class and function names.
+            ecma: IS_LEGACY_WEB ? 5 : 2017,
+            keep_classnames: IS_PROD_PROFILE,
+            keep_fnames: IS_PROD_PROFILE,
+            compress: {
+              passes: 2,
+            },
+          },
+        }),
+      ],
       // specify min/max file sizes for each JS chunk for optimal performance
       splitChunks: {
         chunks: 'all',
@@ -171,6 +193,14 @@ module.exports = ({ resolvePath, IS_PROD, START_DEV_SERVER, BUNDLE_TYPE }) => {
       __filename: 'mock',
     },
     plugins: [
+      // copy static files otherwise untouched by Webpack, e.g. favicon
+      ...(BUNDLE_TYPE === 'modern'
+        ? [
+            new CopyWebpackPlugin({
+              patterns: [{ from: 'public' }],
+            }),
+          ]
+        : []),
       new DuplicatePackageCheckerPlugin({
         // Emit compilation warning or error? (Default: `false`)
         emitError: true,
@@ -231,6 +261,22 @@ module.exports = ({ resolvePath, IS_PROD, START_DEV_SERVER, BUNDLE_TYPE }) => {
     ],
   };
 
+  if (IS_PROD) {
+    const CompressionPlugin = require('compression-webpack-plugin');
+
+    clientConfig.plugins.push(
+      /**
+       * Compresses Webpack assets with gzip Content-Encoding.
+       * https://github.com/webpack-contrib/compression-webpack-plugin
+       */
+      new CompressionPlugin({
+        algorithm: 'gzip',
+        test: /\.js$/,
+        threshold: 10240,
+        minRatio: 0.8,
+      }),
+    );
+  }
   if (IS_PROD) {
     const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); // eslint-disable-line
     /**

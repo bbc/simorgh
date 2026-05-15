@@ -45,6 +45,7 @@ const renderHeadToHead = ({
       data={data}
       isConciseView={isConciseView}
       shouldShowActions={shouldShowActions}
+      shouldHideBadges={false}
     />,
   );
 

@@ -58,7 +58,7 @@ const styles = {
     css({
       'span:first-of-type': {
         display: 'inline-flex',
-        overflowWrap: 'anywhere',
+        'overflow-wrap': 'anywhere',
         marginInlineEnd: '0',
         [mq.GROUP_0_MAX_WIDTH]: {
           display: 'inline',

@@ -33,6 +33,7 @@ const withProviders =
             settingsUrl: undefined,
             signOutUrl: undefined,
             forYouUrl: undefined,
+            isAccountPromoBannerVisible: true,
           }}
         >
           <SaveButton

@@ -1,6 +1,6 @@
 /* eslint-disable import/no-relative-packages */
 import { PageTypes } from '#app/models/types/global';
-import { assertPageView } from './assertions';
+import { assertPageView } from '../../../../../cypress/e2e/specialFeatures/atiAnalytics/assertions';
 // TODO: Resolve error which is preventing e2e tests to run
 // import {
 //   assertRecommendationsComponentClick,
@@ -10,10 +10,8 @@ import { assertFeaturesAnalysisComponentClick } from './assertions/featuresAnaly
 import {
   assertScrollableNavigationComponentView,
   assertScrollableNavigationComponentClick,
-  assertDropdownNavigationComponentClick,
-  assertDropdownNavigationComponentView,
-} from './assertions/navigation';
-import { assertLiteSiteSummaryComponentToMainSiteClick } from './assertions/liteSiteSummary';
+} from '../../../../../cypress/e2e/specialFeatures/atiAnalytics/assertions/navigation';
+import { assertLiteSiteSummaryComponentToMainSiteClick } from '../../../../../cypress/e2e/specialFeatures/atiAnalytics/assertions/liteSiteSummary';
 import {
   assertArticleLiteSiteLinkComponentClick,
   assertArticleLiteSiteLinkComponentView,
@@ -30,6 +28,10 @@ import {
   assertSocialEmbedComponentClick,
   assertSocialEmbedComponentView,
 } from './assertions/socialEmbed';
+import {
+  assertDropdownNavigationComponentClick,
+  assertDropdownNavigationComponentView,
+} from './assertions/navigation';
 
 import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
 

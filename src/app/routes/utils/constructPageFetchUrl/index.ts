@@ -178,7 +178,6 @@ const constructPageFetchUrl = ({
   const env = getEnvironment(pathname);
   const isLocal = !env || env === 'local';
   const id = getId({ pageType, service, env, variant })(pathname);
-
   const capitalisedPageType =
     pageType.charAt(0).toUpperCase() + pageType.slice(1);
 
@@ -248,21 +247,35 @@ const constructPageFetchUrl = ({
       case CPS_ASSET:
       case AUDIO_PAGE:
       case TV_PAGE:
-        fetchUrl = Url(`${host}${port}/api/local/${id}`);
+        if (process.env?.NEXTJS) {
+          fetchUrl = Url(`${host}${port}/api/local/${id}`);
+        } else {
+          fetchUrl = Url(`/${id}`);
+        }
         break;
       case HOME_PAGE: {
-        fetchUrl = Url(
-          `${host}${port}/api/local/${service}/homePage/${variant ? `${variant}` : 'index'}`,
-        );
+        if (process.env?.NEXTJS) {
+          fetchUrl = Url(
+            `${host}${port}/api/local/${service}/homePage/${variant ? `${variant}` : 'index'}`,
+          );
+        } else {
+          fetchUrl = Url(`/${service}${variant ? `/${variant}` : ''}`);
+        }
         break;
       }
       case MOST_READ_PAGE:
         fetchUrl = Url(getMostReadEndpoint({ service, variant }).split('.')[0]);
         break;
       case TOPIC_PAGE: {
-        fetchUrl = Url(
-          `${host}${port}/api/local/${service}/topics/${id}${variant ? `/${variant}` : ''}`,
-        );
+        if (process.env?.NEXTJS) {
+          fetchUrl = Url(
+            `${host}${port}/api/local/${service}/topics/${id}${variant ? `/${variant}` : ''}`,
+          );
+        } else {
+          fetchUrl = Url(
+            `/${service}/topics/${id}${variant ? `/${variant}` : ''}`,
+          );
+        }
         break;
       }
       case LIVE_PAGE: {
@@ -287,9 +300,11 @@ const constructPageFetchUrl = ({
         break;
       }
       case LIVE_RADIO_PAGE: {
-        fetchUrl = Url(
-          `${host}${port}/api/local${removeRendererExtension(pathname)}`,
-        );
+        if (process.env?.NEXTJS) {
+          fetchUrl = Url(`${host}${port}/api/local${pathname}`);
+        } else {
+          fetchUrl = Url(`${pathname}`);
+        }
         break;
       }
       case LIVE_TV_PAGE: {

@@ -134,17 +134,17 @@ export default {
         paddingBottom: `${spacings.QUADRUPLE}rem`,
       },
     }),
-  mediaCurationRow: ({ spacings, mq }: Theme) =>
+  adaptiveMediaCurationRow: ({ spacings, mq }: Theme) =>
     css({
       gridColumn: '1 / span 12',
-      margin: `${spacings.TRIPLE}rem ${spacings.FULL}rem ${spacings.TRIPLE}rem`,
+      margin: `0 ${spacings.FULL}rem ${spacings.TRIPLE}rem`,
 
       [mq.GROUP_2_MIN_WIDTH]: {
-        margin: `${spacings.TRIPLE}rem ${spacings.DOUBLE}rem ${spacings.TRIPLE}rem`,
+        margin: `0 ${spacings.DOUBLE}rem ${spacings.TRIPLE}rem`,
       },
 
       [mq.GROUP_4_MIN_WIDTH]: {
-        margin: `${spacings.TRIPLE}rem 0 ${spacings.TRIPLE}rem`,
+        margin: `0 0 ${spacings.TRIPLE}rem`,
       },
     }),
   featuresSection: ({ spacings, mq }: Theme) =>

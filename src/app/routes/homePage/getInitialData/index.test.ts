@@ -41,7 +41,7 @@ describe('Home Page - BFF Fetching', () => {
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'http://localhost/api/local/kyrgyz/homePage/index',
+      path: 'http://localhost/kyrgyz',
       pageType: HOME_PAGE,
       timeout: 60000,
     });
