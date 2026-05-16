@@ -449,8 +449,6 @@ export type FontVariant =
   | 'serifBold'
   | 'serifLight';
 
-export type BrandSVG = string;
-
 export type GridWidths = {
   240: number;
   360: number;
@@ -464,7 +462,6 @@ export type GridWidths = {
 export type ServiceTheme = {
   palette: BrandPalette;
   typography: Typography;
-  brandSVG: BrandSVG;
 };
 
 export type ServicesWithNoVariantsWithPWATypography = {
@@ -524,7 +521,6 @@ declare module '@emotion/react' {
       GROUP_D_MIN_WIDTH: string;
     };
     fontVariants: Record<FontVariant, FontStyles>;
-    brandSVG: BrandSVG;
     gridWidths: GridWidths;
     isDarkUi: boolean;
     isLite: boolean;

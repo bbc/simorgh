@@ -14,5 +14,4 @@ export default {
     fontVariants: helmetFontVariants,
     fontFaces: [],
   },
-  brandSVG,
 };

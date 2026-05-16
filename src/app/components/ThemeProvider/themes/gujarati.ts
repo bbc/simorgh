@@ -7,7 +7,6 @@ import {
 } from '../fontFaces';
 import gujaratiFontVariants from '../fontVariants/gujarati';
 import withThemeProvider from '../withThemeProvider';
-import brandSVG from '../chameleonLogos/gujarati';
 
 export const theme: ServiceTheme = {
   palette: {
@@ -22,7 +21,6 @@ export const theme: ServiceTheme = {
     fontVariants: gujaratiFontVariants,
     fontFaces: [NOTO_SANS_GUJARATI_REGULAR, NOTO_SANS_GUJARATI_BOLD],
   },
-  brandSVG,
 };
 
 export default withThemeProvider(theme);

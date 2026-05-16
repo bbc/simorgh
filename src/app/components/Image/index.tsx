@@ -25,6 +25,7 @@ export type ImageProps = {
   fetchPriority?: 'high';
   hasCaption?: boolean;
   isPortraitOrientation?: boolean;
+  isSvg?: boolean;
 };
 
 const roundNumber = (num: number) => Math.round(num * 100) / 100;
@@ -54,6 +55,7 @@ const Image = ({
   fetchPriority,
   hasCaption,
   isPortraitOrientation,
+  isSvg = false,
 }: PropsWithChildren<ImageProps>) => {
   const { pageType, isLite, isAmp } = use(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -120,8 +122,9 @@ const Image = ({
           ],
         ]}
         style={{
-          paddingBottom: hasFixedAspectRatio ? legacyBrowserAspectRatio : 0,
+          paddingBottom: (hasFixedAspectRatio) ? legacyBrowserAspectRatio : 0,
           ...(!hasCaption && { overflow: 'hidden' }),
+          ...(isSvg && { height: '24px' }),
         }}
       >
         {isAmp ? (
@@ -149,6 +152,15 @@ const Image = ({
               {...(srcSet && { srcSet: imgSrcSet })}
               {...(imgSizes && { sizes: imgSizes })}
               {...(preload && { 'data-hero': 'true' })}
+              {...(isSvg && {
+                style: {
+                  aspectRatio: hasFixedAspectRatio
+                    ? `${aspectRatioX} / ${aspectRatioY}`
+                    : 'auto',
+                  height: '24px',
+                  marginLeft: '0',
+                },
+              })}
             />
           </>
         ) : (
@@ -177,6 +189,7 @@ const Image = ({
                 hasFixedAspectRatio
                   ? styles.imageFixedAspectRatio
                   : styles.imageResponsiveRatio,
+                isSvg && styles.imageSvg,
               ]}
               fetchPriority={fetchPriority}
               style={{

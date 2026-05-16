@@ -4,7 +4,6 @@ import devanagariScript from '../fontScripts/devanagari';
 import { NOTO_SANS_TELUGU_REGULAR, NOTO_SANS_TELUGU_BOLD } from '../fontFaces';
 import teluguFontVariants from '../fontVariants/telugu';
 import withThemeProvider from '../withThemeProvider';
-import brandSVG from '../chameleonLogos/telugu';
 
 export const theme: ServiceTheme = {
   palette: {
@@ -19,7 +18,6 @@ export const theme: ServiceTheme = {
     fontVariants: teluguFontVariants,
     fontFaces: [NOTO_SANS_TELUGU_REGULAR, NOTO_SANS_TELUGU_BOLD],
   },
-  brandSVG,
 };
 
 export default withThemeProvider(theme);
