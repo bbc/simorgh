@@ -91,7 +91,6 @@
     "react-dom": "19.2.5",
     "react-helmet": "6.1.0",
     "react-lazyload": "3.2.1",
-    "react-router-config": "5.1.1",
     "react-router-dom": "5.3.4",
     "undici": "8.1.0",
     "url-parse": "1.5.10",

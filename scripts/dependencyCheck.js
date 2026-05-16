@@ -15,7 +15,6 @@ const options = {
     '@emotion/cache',
     '@emotion/server',
     'aws-embedded-metrics',
-    'react-router-config',
   ],
 };
 

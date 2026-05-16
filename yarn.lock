@@ -14881,18 +14881,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-router-config@npm:5.1.1":
-  version: 5.1.1
-  resolution: "react-router-config@npm:5.1.1"
-  dependencies:
-    "@babel/runtime": "npm:^7.1.2"
-  peerDependencies:
-    react: ">=15"
-    react-router: ">=5"
-  checksum: 10/f7f078665873926e7ca34973035ec39cb8bb2cdcd0b453549b522adf4047869ed0c5fa2bed8b15d79ef86890ccb2c96632672f22636e8c7a8b1c52e36a7a4d4e
-  languageName: node
-  linkType: hard
-
 "react-router-dom@npm:5.3.4":
   version: 5.3.4
   resolution: "react-router-dom@npm:5.3.4"
@@ -15988,7 +15976,6 @@ __metadata:
     react-dom: "npm:19.2.5"
     react-helmet: "npm:6.1.0"
     react-lazyload: "npm:3.2.1"
-    react-router-config: "npm:5.1.1"
     react-router-dom: "npm:5.3.4"
     retry: "npm:0.13.1"
     storybook: "npm:10.3.6"
