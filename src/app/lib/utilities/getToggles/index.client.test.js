@@ -9,15 +9,20 @@ const mockResponse = {
 describe('getToggles', () => {
   const originalConfigURL = process.env.SIMORGH_CONFIG_URL;
 
+  const mockSuccessfulFetchResponse = {
+    ok: true,
+    status: 200,
+    json: jest.fn(async () => mockResponse),
+  };
+
   beforeEach(() => {
     process.env.SIMORGH_CONFIG_URL = 'https://mock-config-endpoint';
-    fetch.mockResponse(JSON.stringify(mockResponse));
+    jest.spyOn(global, 'fetch').mockResolvedValue(mockSuccessfulFetchResponse);
   });
 
   afterEach(() => {
     jest.resetModules();
-    jest.clearAllMocks();
-    fetch.resetMocks();
+    jest.restoreAllMocks();
     process.env.SIMORGH_CONFIG_URL = originalConfigURL;
   });
 
@@ -97,7 +102,11 @@ describe('getToggles', () => {
 
     it('should catch response errors, log them and return default toggles', async () => {
       const errorCode = 500;
-      fetch.mockResponseOnce(errorCode);
+      global.fetch.mockResolvedValueOnce({
+        ok: false,
+        status: errorCode,
+        json: jest.fn(async () => mockResponse),
+      });
 
       const { default: getToggles } = await import('.');
       const toggles = await getToggles('mundo');
@@ -106,8 +115,13 @@ describe('getToggles', () => {
     });
 
     it('should catch errors not related to the response, log them and return default toggles', async () => {
-      const mockInvalidResponse = 'This is not JSON';
-      fetch.mockResponseOnce(mockInvalidResponse);
+      global.fetch.mockResolvedValueOnce({
+        ok: true,
+        status: 200,
+        json: jest.fn(async () => {
+          throw new Error('Invalid JSON response');
+        }),
+      });
 
       const { default: getToggles } = await import('.');
       const toggles = await getToggles('hausa');
