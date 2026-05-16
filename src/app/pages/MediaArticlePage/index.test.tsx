@@ -1,6 +1,5 @@
 import { PropsWithChildren } from 'react';
 import { render, waitFor, screen } from '@testing-library/react';
-import { FetchMock } from 'jest-fetch-mock';
 import { Article } from '#app/models/types/optimo';
 import { Helmet } from 'react-helmet';
 import { ARTICLE_PAGE } from '../../routes/utils/pageTypes';
@@ -69,21 +68,23 @@ const Context = ({
   </ThemeProvider>
 );
 
-const fetchMock = fetch as FetchMock;
-
 describe('MediaArticlePage', () => {
+  const mockMostReadResponse = () =>
+    jest.spyOn(global, 'fetch').mockResolvedValue({
+      json: async () => newsMostReadData,
+    } as Response);
+
   beforeEach(() => {
     process.env.SIMORGH_ICHEF_BASE_URL = 'https://ichef.test.bbci.co.uk';
-
-    fetchMock.resetMocks();
   });
 
   afterEach(() => {
     delete process.env.SIMORGH_ICHEF_BASE_URL;
+    jest.restoreAllMocks();
   });
 
   it('should render a news article correctly', async () => {
-    fetchMock.mockResponse(JSON.stringify(newsMostReadData));
+    mockMostReadResponse();
 
     const { container } = render(
       <Context service="news">
@@ -138,7 +139,7 @@ describe('MediaArticlePage', () => {
   });
 
   it('should NOT render mpu or advert leaderboard', async () => {
-    fetchMock.mockResponse(JSON.stringify(newsMostReadData));
+    mockMostReadResponse();
 
     const { container } = render(
       <Context service="news" adsToggledOn showAdsBasedOnLocation>

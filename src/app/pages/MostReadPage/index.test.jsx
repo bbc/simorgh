@@ -7,8 +7,6 @@ import { render } from '../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import MostReadPage from './MostReadPage';
 
-fetch.mockResponse(JSON.stringify(pidginMostReadData));
-
 jest.mock('#lib/analyticsUtils', () => {
   return {
     ...jest.requireActual('#lib/analyticsUtils'),
@@ -38,6 +36,16 @@ const MostReadPageWithContext = () => (
 );
 
 describe('Most Read Page Main', () => {
+  beforeEach(() => {
+    jest.spyOn(global, 'fetch').mockResolvedValue({
+      json: async () => pidginMostReadData,
+    });
+  });
+
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
+
   it('should match snapshot for most read page', () => {
     const { container } = render(<MostReadPageWithContext service="pidgin" />, {
       service: 'pidgin',
