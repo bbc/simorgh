@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import Url from 'url-parse';
-import { BrowserRouter } from 'react-router-dom';
 import { MOST_READ_PAGE } from '#app/routes/utils/pageTypes';
 import MostReadPage from '.';
 
@@ -29,16 +28,14 @@ const Component = ({ service, variant }) => {
   }
 
   return (
-    <BrowserRouter>
-      <MostReadPage
-        pageType={MOST_READ_PAGE}
-        isAmp={false}
-        pathname={`/${service}/popular/read`}
-        status={200}
-        pageData={pageData}
-        service={service}
-      />
-    </BrowserRouter>
+    <MostReadPage
+      pageType={MOST_READ_PAGE}
+      isAmp={false}
+      pathname={`/${service}/popular/read`}
+      status={200}
+      pageData={pageData}
+      service={service}
+    />
   );
 };
 

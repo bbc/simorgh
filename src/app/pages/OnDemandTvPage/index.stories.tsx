@@ -1,4 +1,3 @@
-import { BrowserRouter } from 'react-router-dom';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
 import { TV_PAGE } from '#app/routes/utils/pageTypes';
 import { StoryArgs, StoryProps } from '#app/models/types/storybook';
@@ -29,18 +28,16 @@ const matchFixtures = (service: Services) => ({
 
 const Component = ({ service, isLite }: StoryProps) => {
   return (
-    <BrowserRouter>
-      <OnDemandTvPage
-        match={matchFixtures(service)}
-        pageData={onDemandTvFixtures[service] || afrique}
-        status={200}
-        service={service}
-        loading={false}
-        error=""
-        pageType={TV_PAGE}
-        isLite={isLite}
-      />
-    </BrowserRouter>
+    <OnDemandTvPage
+      match={matchFixtures(service)}
+      pageData={onDemandTvFixtures[service] || afrique}
+      status={200}
+      service={service}
+      loading={false}
+      error=""
+      pageType={TV_PAGE}
+      isLite={isLite}
+    />
   );
 };
 
@@ -50,7 +47,7 @@ export default {
   decorators: [
     (story: () => unknown) => (
       // @ts-expect-error use default params
-      (<WithTimeMachine>{story()}</WithTimeMachine>)
+      <WithTimeMachine>{story()}</WithTimeMachine>
     ),
   ],
 };

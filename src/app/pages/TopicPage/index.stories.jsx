@@ -1,5 +1,3 @@
-import { MemoryRouter } from 'react-router-dom';
-
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -38,20 +36,18 @@ const Component = ({
             pathname=""
           >
             <UserContextProvider>
-              <MemoryRouter>
-                <TopicPage
-                  status={200}
-                  pageData={{
-                    title: fixture.data.title,
-                    description: fixture.data.description,
-                    imageData: fixture.data.imageData,
-                    images: fixture.data.images,
-                    curations: fixture.data.curations,
-                    activePage: null,
-                    pageCount: null,
-                  }}
-                />
-              </MemoryRouter>
+              <TopicPage
+                status={200}
+                pageData={{
+                  title: fixture.data.title,
+                  description: fixture.data.description,
+                  imageData: fixture.data.imageData,
+                  images: fixture.data.images,
+                  curations: fixture.data.curations,
+                  activePage: null,
+                  pageCount: null,
+                }}
+              />
             </UserContextProvider>
           </RequestContextProvider>
         </ServiceContextProvider>

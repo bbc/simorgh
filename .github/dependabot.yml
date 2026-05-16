@@ -16,8 +16,6 @@ updates:
         update-types: ['version-update:semver-major']
       - dependency-name: '@typescript-eslint/eslint-plugin'
         update-types: ['version-update:semver-major']
-      # https://jira.dev.bbc.co.uk/browse/NEWSWORLDSERVICE-2164: Migrate all page types to Next.js + Lambda to remove Express + EC2 infrastructure
-      - dependency-name: 'react-router-dom'
     labels:
       - 'dependencies'
     groups:
