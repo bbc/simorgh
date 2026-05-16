@@ -125,7 +125,6 @@
     "@types/jest": "30.0.0",
     "@types/js-cookie": "^3.0.3",
     "@types/jsdom": "27.0.0",
-    "@types/loadable__component": "5.13.10",
     "@types/ramda": "0.31.1",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",

@@ -5564,15 +5564,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/loadable__component@npm:5.13.10":
-  version: 5.13.10
-  resolution: "@types/loadable__component@npm:5.13.10"
-  dependencies:
-    "@types/react": "npm:*"
-  checksum: 10/f467735a236478394ea21626dde4230dc63836fc9bbc7d5cae4fde9e0951658cb58f541401e3337b5e5e39cbc9acb7ab706179828930b9be3852db14f8d27b6b
-  languageName: node
-  linkType: hard
-
 "@types/mdx@npm:^2.0.0":
   version: 2.0.13
   resolution: "@types/mdx@npm:2.0.13"
@@ -15636,7 +15627,6 @@ __metadata:
     "@types/jest": "npm:30.0.0"
     "@types/js-cookie": "npm:^3.0.3"
     "@types/jsdom": "npm:27.0.0"
-    "@types/loadable__component": "npm:5.13.10"
     "@types/ramda": "npm:0.31.1"
     "@types/react": "npm:19.2.14"
     "@types/react-dom": "npm:19.2.3"
