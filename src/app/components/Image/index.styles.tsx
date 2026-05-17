@@ -42,7 +42,6 @@ const styles = {
       boxSizing: 'content-box',
       height: `1.25rem`,
       maxWidth: '100%',
-      marginLeft: '0.5px',
       [theme.mq.GROUP_2_MIN_WIDTH]: {
         height: `${24 / 16}rem`,
         marginLeft: '0',
