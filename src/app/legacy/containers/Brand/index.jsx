@@ -1,12 +1,11 @@
 import { use } from 'react';
-import fs from 'fs';
-const path = require('path');
 import styled from '@emotion/styled';
 import Brand from '#psammead/psammead-brand/src';
 import { servicesWithVariants } from '#lib/utilities/variantHandler';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '../../../contexts/RequestContext';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import brandRatios from "./brand-logo-ratios.json";
 
 const {
   SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
@@ -41,13 +40,12 @@ const BrandContainer = ({
 }) => {
   const { product, serviceLocalizedName, service } = use(ServiceContext);
   const { variant, isAmp } = use(RequestContext);
-  const brandRatio = JSON.parse(fs.readFileSync(path.join(__dirname, './brand-logo-ratios.json')))[service];
 
   const brandSVG = `${SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${SIMORGH_PUBLIC_STATIC_ASSETS_PATH}${service}/images/brandLogo.svg`;
   const svgMaxHeight = 24;
   const svgMinHeight = 16;
-  const ratio = brandRatio?.ratio;
-  const svgRatio = ratio ? [brandRatio?.width, brandRatio?.height] : [0, 0];
+  const ratio = brandRatios[service]?.ratio;
+  const svgRatio = ratio ? [brandRatios[service]?.width, brandRatios[service]?.height] : [0, 0];
   const minWidth = ratio ? ratio * svgMinHeight : 0;
   const maxWidth = ratio ? ratio * svgMaxHeight : 0;
 
