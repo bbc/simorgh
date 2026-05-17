@@ -50,7 +50,6 @@ updates:
         patterns:
           - '@storybook/*'
           - 'storybook'
-          - '@esbuild/*'
       webpack-minor-patch:
         patterns:
           - 'webpack'
