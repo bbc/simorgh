@@ -45,7 +45,7 @@ const BrandContainer = ({
   const svgMaxHeight = 24;
   const svgMinHeight = 16;
   const ratio = brandRatios[service]?.ratio;
-  const svgRatio = [brandRatios[service]?.width, brandRatios[service]?.height];
+  const svgRatio = ratio ? [brandRatios[service]?.width, brandRatios[service]?.height] : [0, 0];
   const minWidth = ratio ? ratio * svgMinHeight : undefined;
   const maxWidth = ratio ? ratio * svgMaxHeight : undefined;
 

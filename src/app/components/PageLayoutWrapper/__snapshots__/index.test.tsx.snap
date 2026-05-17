@@ -1749,14 +1749,6 @@ exports[`PageLayoutWrapper should render fonts for arabic 1`] = `
 }
 `;
 
-exports[`PageLayoutWrapper should render fonts for archive 1`] = `
-{
-  "font-family": "ReithSans, Helvetica, Arial, sans-serif",
-  "font-style": "normal",
-  "font-weight": "400",
-}
-`;
-
 exports[`PageLayoutWrapper should render fonts for azeri 1`] = `
 {
   "font-family": "Helmet, Freesans, Helvetica, Arial, sans-serif",
@@ -1776,14 +1768,6 @@ exports[`PageLayoutWrapper should render fonts for bengali 1`] = `
 exports[`PageLayoutWrapper should render fonts for burmese 1`] = `
 {
   "font-family": "Padauk, Arial, Verdana, Geneva, Helvetica, sans-serif",
-  "font-style": "normal",
-  "font-weight": "400",
-}
-`;
-
-exports[`PageLayoutWrapper should render fonts for cymrufyw 1`] = `
-{
-  "font-family": "ReithSans, Helvetica, Arial, sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -1893,33 +1877,9 @@ exports[`PageLayoutWrapper should render fonts for mundo 1`] = `
 }
 `;
 
-exports[`PageLayoutWrapper should render fonts for naidheachdan 1`] = `
-{
-  "font-family": "ReithSans, Helvetica, Arial, sans-serif",
-  "font-style": "normal",
-  "font-weight": "400",
-}
-`;
-
 exports[`PageLayoutWrapper should render fonts for nepali 1`] = `
 {
   "font-family": "Arial, Verdana, Geneva, Helvetica, sans-serif",
-  "font-style": "normal",
-  "font-weight": "400",
-}
-`;
-
-exports[`PageLayoutWrapper should render fonts for news 1`] = `
-{
-  "font-family": "ReithSans, Helvetica, Arial, sans-serif",
-  "font-style": "normal",
-  "font-weight": "400",
-}
-`;
-
-exports[`PageLayoutWrapper should render fonts for newsround 1`] = `
-{
-  "font-family": "ReithSans, Helvetica, Arial, sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -1982,14 +1942,6 @@ exports[`PageLayoutWrapper should render fonts for romania 1`] = `
 `;
 
 exports[`PageLayoutWrapper should render fonts for russian 1`] = `
-{
-  "font-family": "ReithSans, Helvetica, Arial, sans-serif",
-  "font-style": "normal",
-  "font-weight": "400",
-}
-`;
-
-exports[`PageLayoutWrapper should render fonts for scotland 1`] = `
 {
   "font-family": "ReithSans, Helvetica, Arial, sans-serif",
   "font-style": "normal",

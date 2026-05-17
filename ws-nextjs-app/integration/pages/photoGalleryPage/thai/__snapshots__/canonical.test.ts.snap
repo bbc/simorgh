@@ -132,7 +132,7 @@ exports[`Canonical Photo Gallery Page Image Caption should match text 1`] = `"�
 exports[`Canonical Photo Gallery Page Image should match snapshot 1`] = `
 <img
   alt="ดอกไม้ถูกนำมาวางไว้ที่ประติมานุสรณ์"
-  class="css-1seqhu9"
+  class="css-1mx3cz2"
   fetchpriority="high"
   height="549"
   loading="eager"

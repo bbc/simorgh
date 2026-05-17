@@ -134,7 +134,7 @@ exports[`Canonical Articles Image Copyright Non BBC should match snapshot 1`] = 
 exports[`Canonical Articles Image should match snapshot 1`] = `
 <img
   alt="قهوه"
-  class="css-1seqhu9"
+  class="css-1mx3cz2"
   fetchpriority="high"
   height="360"
   loading="eager"
