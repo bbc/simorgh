@@ -1,5 +1,6 @@
 import { use } from 'react';
 import fs from 'fs';
+const path = require('path');
 import styled from '@emotion/styled';
 import Brand from '#psammead/psammead-brand/src';
 import { servicesWithVariants } from '#lib/utilities/variantHandler';
@@ -40,7 +41,7 @@ const BrandContainer = ({
 }) => {
   const { product, serviceLocalizedName, service } = use(ServiceContext);
   const { variant, isAmp } = use(RequestContext);
-  const brandRatio = JSON.parse(fs.readFileSync('./brand-logo-ratios.json'))[service];
+  const brandRatio = JSON.parse(fs.readFileSync(path.join(__dirname, './brand-logo-ratios.json')))[service];
 
   const brandSVG = `${SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${SIMORGH_PUBLIC_STATIC_ASSETS_PATH}${service}/images/brandLogo.svg`;
   const svgMaxHeight = 24;
