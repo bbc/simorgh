@@ -1,6 +1,12 @@
-import stripAnsi from 'strip-ansi';
 import { jest } from '@jest/globals';
 import pageTypeBundleExtractor from './__mocks__/pageTypeBundleExtractor.js';
+
+const stripAnsi = value =>
+  value.replace(
+    // eslint-disable-next-line no-control-regex
+    /[\u001B\u009B][[\]()#;?]*(?:(?:(?:[a-zA-Z\d]*(?:;[a-zA-Z\d]*)*)?\u0007)|(?:(?:\d{1,4}(?:;\d{0,4})*)?[\dA-PR-TZcf-nq-uy=><~]))/g,
+    '',
+  );
 
 jest.unstable_mockModule(
   './pageTypeBundleExtractor',

@@ -167,7 +167,6 @@
     "puppeteer": "24.22.3",
     "retry": "0.13.1",
     "storybook": "10.3.6",
-    "strip-ansi": "7.1.2",
     "supertest": "7.2.2",
     "timemachine": "0.3.2",
     "ts-jest": "29.4.9",
