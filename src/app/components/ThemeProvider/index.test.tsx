@@ -250,7 +250,7 @@ describe('ThemeProvider', () => {
       });
 
       const themeBrandSVG = document.body
-        .querySelector('#brandSvgHeader')
+        .querySelector('#brandSvgHeader img')
         ?.getAttribute('src');
 
       const { default: svg } = await import(`./chameleonLogos/${service}`);

@@ -105,7 +105,6 @@ const StyledBrand = ({
   return svg ? (
     <>
       <Image
-        id={linkId !== 'footer' ? 'brandSvgHeader' : 'brandSvgFooter'}
         preload={linkId !== 'footer'}
         fetchPriority={linkId !== 'footer' ? 'high' : 'low'}
         lazyLoad={linkId === 'footer'}
@@ -145,7 +144,7 @@ const Brand = forwardRef((props, ref) => {
 
   return (
     <Banner svgHeight={svgHeight} scriptLink={scriptLink} {...rest}>
-      <SvgWrapper ref={ref} className="brand-svg-wrapper">
+      <SvgWrapper ref={ref} className="brand-svg-wrapper" id={linkId !== 'footer' ? 'brandSvgHeader' : 'brandSvgFooter'}>
         {url ? (
           <StyledLink
             href={url}

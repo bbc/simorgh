@@ -4,8 +4,8 @@ export default service => {
       const logo = document.getElementById('brandSvgHeader');
       expect(logo).toBeInTheDocument();
 
-      const logoContainer = logo?.parentNode;
-      expect(logoContainer).toBeTruthy();
+      const logoImg = logo?.querySelector('img');
+      expect(logoImg).toBeTruthy();
 
       const possibleBrandingLinks = [
         document.getElementById('topPage'),
@@ -23,7 +23,7 @@ export default service => {
       ).toBeTruthy();
       const brandingText = brandingTextElement?.textContent ?? '';
 
-      const svgPath = logo.querySelector('g path');
+      const svgPath = logo.getAttribute('src');
 
       expect({
         svg: svgPath,

@@ -11,11 +11,11 @@ export default service => {
 
       expect(logo).toBeInTheDocument();
 
-      const parentElement = logo?.parentNode as Element | null;
+      const logoImg = logo?.querySelector('img') as Element | null;
 
-      expect(parentElement).toBeTruthy();
+      expect(logoImg).toBeTruthy();
 
-      if (!logo || !parentElement) return;
+      if (!logo || !logoImg) return;
 
       const brandingLink =
         document.getElementById('topPage') ||
@@ -28,7 +28,7 @@ export default service => {
 
       expect(brandingTextElement?.textContent).toBeTruthy();
 
-      const svg = logo.getAttribute('src');
+      const svg = logoImg.getAttribute('src');
       const brandText = brandingTextElement?.textContent ?? '';
 
       expect({
