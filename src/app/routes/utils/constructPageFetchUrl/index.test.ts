@@ -180,6 +180,7 @@ describe('constructPageFetchUrl', () => {
     ${TOPIC_PAGE}      | ${'ukrainian'} | ${'/ukrainian/topics/foo'}          | ${'Topic ID is invalid'}
     ${TOPIC_PAGE}      | ${'ukrainian'} | ${'/ukrainian/topics/c000000000t'}  | ${'Topic ID is invalid'}
     ${LIVE_RADIO_PAGE} | ${'afrique'}   | ${'/foo'}                           | ${'LiveRadio ID is invalid'}
+    ${LIVE_TV_PAGE}    | ${'afrique'}   | ${'/'}                              | ${'LiveTV ID is invalid'}
     ${'foo'}           | ${'ukrainian'} | ${'/ukrainian/topics/c0000000000t'} | ${'Foo ID is invalid'}
   `(
     `should throw a 500 with message $expected, when pageType $pageType asset ID is incorrect with service of $service`,
