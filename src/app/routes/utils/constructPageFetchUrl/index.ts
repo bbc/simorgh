@@ -211,16 +211,15 @@ const constructPageFetchUrl = ({
     ...(env && { serviceEnv: env }),
   };
 
-  let fetchUrl = new URL(
-    (process.env.BFF_PATH as string) || `http://${process.env.HOSTNAME}`,
-  );
+  const host = `http://${process.env.HOSTNAME || 'localhost'}`;
+
+  let fetchUrl = new URL((process.env.BFF_PATH as string) || host);
 
   Object.entries(queryParameters).forEach(([key, value]) => {
     fetchUrl.searchParams.set(key, String(value));
   });
 
   if (isLocal) {
-    const host = `http://${process.env.HOSTNAME || 'localhost'}`;
     const port = process.env.PORT ? `:${process.env.PORT}` : '';
 
     switch (pageType) {
