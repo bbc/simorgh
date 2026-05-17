@@ -16,8 +16,7 @@ const getJestArgs = () =>
     .slice(2)
     .filter(flag => !flag.startsWith('--pageTypes='))
     .filter(flag => !flag.startsWith('--dev'))
-    .filter(flag => !flag.startsWith('--onlyRunTests'))
-    .filter(flag => !flag.startsWith('--nextJS'));
+    .filter(flag => !flag.startsWith('--onlyRunTests'));
 
 const stopApp = () =>
   new Promise(resolve => {

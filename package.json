@@ -39,8 +39,8 @@
     "test:unit:scripts": "jest --colors --testPathPatterns=\"scripts/bundleSize/\"",
     "test:unit:watch": "yarn test:unit -- --watch",
     "test:unit:updatesnapshots": "NODE_OPTIONS=--experimental-vm-modules jest --updateSnapshot --silent=false --colors --testPathIgnorePatterns=\"src/integration/pages\" \"scripts/bundleSize\" \"puppeteer\" \"ws-nextjs-app\"",
-    "test:integration": "NODE_OPTIONS=\"--no-experimental-strip-types --experimental-vm-modules\" node ws-nextjs-app/integration/utils/runTests.js",
-    "test:integration:updatesnapshots": "NODE_OPTIONS=\"--no-experimental-strip-types --experimental-vm-modules\" node ws-nextjs-app/integration/utils/runTests.js  --updateSnapshot",
+    "test:integration": "NODE_OPTIONS=\"--experimental-vm-modules\" node ws-nextjs-app/integration/utils/runTests.ts",
+    "test:integration:updatesnapshots": "NODE_OPTIONS=\"--experimental-vm-modules\" node ws-nextjs-app/integration/utils/runTests.ts  --updateSnapshot",
     "test:linkey": "node scripts/linkeySetup.js && jest src/app/lib/config/services/*.test.js --verbose true; yarn test:linkey:cleanup",
     "test:linkey:cleanup": "find src/app/lib/config/services -type f -name '*.test.js' -delete",
     "updateMinorPatch": "rm -rf node_modules/ && yarn install && npm update && yarn install"
