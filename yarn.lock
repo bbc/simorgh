@@ -15624,7 +15624,6 @@ __metadata:
     uuid: "npm:13.0.1"
     webpack: "npm:5.106.2"
     winston: "patch:winston@3.8.2#./patches/winston-file-descriptor.patch"
-    yaml-js: "npm:0.3.1"
   languageName: unknown
   linkType: soft
 
@@ -17899,13 +17898,6 @@ __metadata:
   version: 5.0.0
   resolution: "yallist@npm:5.0.0"
   checksum: 10/1884d272d485845ad04759a255c71775db0fac56308764b4c77ea56a20d56679fad340213054c8c9c9c26fcfd4c4b2a90df993b7e0aaf3cdb73c618d1d1a802a
-  languageName: node
-  linkType: hard
-
-"yaml-js@npm:0.3.1":
-  version: 0.3.1
-  resolution: "yaml-js@npm:0.3.1"
-  checksum: 10/87a22235c15e1ebf9981510ff40b0a14ccad7b99bf8e1e2fec28905bfbb3dc528e273accfada2cfb3a237d313fb38575dfc726f718122acdb3f6aba4c7e29961
   languageName: node
   linkType: hard
 

@@ -172,8 +172,7 @@
     "timemachine": "0.3.2",
     "ts-jest": "29.4.9",
     "typescript": "5.9.3",
-    "webpack": "5.106.2",
-    "yaml-js": "0.3.1"
+    "webpack": "5.106.2"
   },
   "spec": {
     "executable": [
