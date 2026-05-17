@@ -211,7 +211,9 @@ const constructPageFetchUrl = ({
     ...(env && { serviceEnv: env }),
   };
 
-  let fetchUrl = new URL(process.env.BFF_PATH as string);
+  let fetchUrl = new URL(
+    (process.env.BFF_PATH as string) || `http://${process.env.HOSTNAME}`,
+  );
 
   Object.entries(queryParameters).forEach(([key, value]) => {
     fetchUrl.searchParams.set(key, String(value));
