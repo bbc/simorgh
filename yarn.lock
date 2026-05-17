@@ -10966,13 +10966,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"intersection-observer@npm:0.12.2":
-  version: 0.12.2
-  resolution: "intersection-observer@npm:0.12.2"
-  checksum: 10/cb1a6369bd1636b3f227d7cb7fec22f5a35b9d8ba9e26303b405d50c54c3ef02c5a547107b1d951e7eb421e192a564222faf4660a21fad69c34dcb9f926c159c
-  languageName: node
-  linkType: hard
-
 "intl-messageformat@npm:^10.5.3":
   version: 10.7.18
   resolution: "intl-messageformat@npm:10.7.18"
@@ -15590,7 +15583,6 @@ __metadata:
     eslint-plugin-react-hooks: "npm:5.2.0"
     happy-dom: "npm:20.9.0"
     husky: "npm:9.1.7"
-    intersection-observer: "npm:0.12.2"
     jalaali-js: "npm:1.2.8"
     jest: "npm:30.3.0"
     jest-environment-jsdom: "npm:30.2.0"
