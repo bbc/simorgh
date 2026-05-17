@@ -26,7 +26,7 @@ export type ImageProps = {
   hasCaption?: boolean;
   isPortraitOrientation?: boolean;
   isSvg?: boolean;
-  id?: string;
+  id?: string | null;
 };
 
 const roundNumber = (num: number) => Math.round(num * 100) / 100;

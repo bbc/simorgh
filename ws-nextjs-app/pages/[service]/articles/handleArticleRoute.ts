@@ -62,7 +62,7 @@ export default async (context: GetServerSidePropsContext) => {
   const { hasRequestSucceeded, status: renderStatus } = shouldRender(
     { pageData: pageData?.article, status },
     service,
-    ['brasil', 'BBCScotland'], // Passport homes to ignore for service validation
+    ['brasil'], // Passport homes to ignore for service validation
   );
 
   // If request has fails or should not be rendered, return non-200 status

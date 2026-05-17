@@ -39,16 +39,6 @@
       "exact date and time with timezone": "12 يوليو/ تموز 2019، 12:55 GMT"
     }
   },
-  "archive": {
-    "default": {
-      "one minute ago": "1 minute ago",
-      "five minutes ago": "5 minutes ago",
-      "one hour ago": "1 hour ago",
-      "five hours ago": "5 hours ago",
-      "exact date": "10 October 2018",
-      "exact date and time with timezone": "12 July 2019, 13:55 BST"
-    }
-  },
   "azeri": {
     "default": {
       "one minute ago": "bir dəqiqə əvvəl",
@@ -77,16 +67,6 @@
       "five hours ago": "လွန်ခဲ့သော ၅ နာရီ က",
       "exact date": "၁၀ အောက်တိုဘာ ၂၀၁၈",
       "exact date and time with timezone": "၁၂ ဇူလိုင် ၂၀၁၉, ၁၂:၅၅ GMT"
-    }
-  },
-  "cymrufyw": {
-    "default": {
-      "one minute ago": "munud yn ôl",
-      "five minutes ago": "5 munud yn ôl",
-      "one hour ago": "awr yn ôl",
-      "five hours ago": "5 awr yn ôl",
-      "exact date": "10 Hydref 2018",
-      "exact date and time with timezone": "12 Gorffennaf 2019, 13:55 BST"
     }
   },
   "dari": {
@@ -219,16 +199,6 @@
       "exact date and time with timezone": "12 julio 2019, 12:55 GMT"
     }
   },
-  "naidheachdan": {
-    "default": {
-      "one minute ago": "bho chionn mionaid",
-      "five minutes ago": "bho chionn 5 mionaidean",
-      "one hour ago": "bho chionn uair",
-      "five hours ago": "bho chionn 5 uairean",
-      "exact date": "10 An Dàmhair 2018",
-      "exact date and time with timezone": "12 An t-Iuchar 2019, 13:55 BST"
-    }
-  },
   "nepali": {
     "default": {
       "one minute ago": "१ मिनेट पहिले",
@@ -237,26 +207,6 @@
       "five hours ago": "५ घण्टा पहिले",
       "exact date": "१० अक्टोबर २०१८",
       "exact date and time with timezone": "१२ जुलाई २०१९, १८:४० +०५४५"
-    }
-  },
-  "news": {
-    "default": {
-      "one minute ago": "1 minute ago",
-      "five minutes ago": "5 minutes ago",
-      "one hour ago": "1 hour ago",
-      "five hours ago": "5 hours ago",
-      "exact date": "10 October 2018",
-      "exact date and time with timezone": "12 July 2019, 13:55 BST"
-    }
-  },
-  "newsround": {
-    "default": {
-      "one minute ago": "1 minute ago",
-      "five minutes ago": "5 minutes ago",
-      "one hour ago": "1 hour ago",
-      "five hours ago": "5 hours ago",
-      "exact date": "10 October 2018",
-      "exact date and time with timezone": "12 July 2019, 13:55 BST"
     }
   },
   "pashto": {
@@ -337,26 +287,6 @@
       "five hours ago": "5 часов назад",
       "exact date": "10 октября 2018",
       "exact date and time with timezone": "12 июля 2019, 12:55 GMT"
-    }
-  },
-  "scotland": {
-    "default": {
-      "one minute ago": "1 minute ago",
-      "five minutes ago": "5 minutes ago",
-      "one hour ago": "1 hour ago",
-      "five hours ago": "5 hours ago",
-      "exact date": "10 October 2018",
-      "exact date and time with timezone": "12 July 2019, 13:55 BST"
-    }
-  },
-  "sport": {
-    "default": {
-      "one minute ago": "1 minute ago",
-      "five minutes ago": "5 minutes ago",
-      "one hour ago": "1 hour ago",
-      "five hours ago": "5 hours ago",
-      "exact date": "10 October 2018",
-      "exact date and time with timezone": "12 July 2019, 13:55 BST"
     }
   },
   "serbian": {

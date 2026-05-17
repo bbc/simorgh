@@ -54,11 +54,9 @@ describe('InlineLink', () => {
     ${'afrique'}      | ${'default'} | ${'Google, externe'}
     ${'amharic'}      | ${'default'} | ${'Google, ውጫዊ'}
     ${'arabic'}       | ${'default'} | ${'Google، خارجي '}
-    ${'archive'}      | ${'default'} | ${'Google, external'}
     ${'azeri'}        | ${'default'} | ${'Google, BBC-dən kənar'}
     ${'bengali'}      | ${'default'} | ${'Google, বাইরের'}
     ${'burmese'}      | ${'default'} | ${'Google, ပြင်ပစာမျက်နှာ'}
-    ${'cymrufyw'}     | ${'default'} | ${'Google, dolen allanol'}
     ${'gahuza'}       | ${'default'} | ${'Google, bivuye ahandi'}
     ${'gujarati'}     | ${'default'} | ${'Google, બહારની'}
     ${'hausa'}        | ${'default'} | ${'Google, waje'}
@@ -70,17 +68,13 @@ describe('InlineLink', () => {
     ${'kyrgyz'}       | ${'default'} | ${'Google, баракчалар'}
     ${'marathi'}      | ${'default'} | ${'Google, बाहेर'}
     ${'mundo'}        | ${'default'} | ${'Google, externo'}
-    ${'naidheachdan'} | ${'default'} | ${'Google, taobh a-muigh'}
     ${'nepali'}       | ${'default'} | ${'Google, बाह्य'}
-    ${'news'}         | ${'default'} | ${'Google, external'}
     ${'pashto'}       | ${'default'} | ${'Google، بهرنی'}
     ${'persian'}      | ${'default'} | ${'Google، خارجی'}
     ${'pidgin'}       | ${'default'} | ${'Google, outside'}
     ${'portuguese'}   | ${'default'} | ${'Google, externo'}
     ${'punjabi'}      | ${'default'} | ${'Google, ਬਾਹਰੀ'}
     ${'russian'}      | ${'default'} | ${'Google, внешняя'}
-    ${'scotland'}     | ${'default'} | ${'Google, external'}
-    ${'sport'}        | ${'default'} | ${'Google, external'}
     ${'sinhala'}      | ${'default'} | ${'Google, බාහිර'}
     ${'somali'}       | ${'default'} | ${'Google, kale'}
     ${'swahili'}      | ${'default'} | ${'Google, ya nje'}

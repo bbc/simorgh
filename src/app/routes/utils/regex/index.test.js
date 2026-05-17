@@ -52,15 +52,8 @@ const shouldNotMatchInvalidRoutes = (routes, pathValue) => {
 
 describe('articlePath', () => {
   const validRoutes = [
-    '/news/articles/c5jje4ejkqvo',
-    '/news/articles/c5jje4ejkqvo.amp',
     '/persian/articles/c7eel0lmr4do',
-    '/news/articles/c5jje4ejkqvo/simp',
-    '/news/articles/c5jje4ejkqvo/trad.amp',
     '/persian/articles/c7eel0lmr4do/lat',
-    '/cymrufyw/erthyglau/c7eel0lmr4do',
-    '/cymrufyw/erthyglau/c7eel0lmr4do.amp',
-    '/naidheachdan/sgeulachdan/c7eel0lmr4do',
   ];
   shouldMatchValidRoutes(validRoutes, articlePath);
 
@@ -68,27 +61,18 @@ describe('articlePath', () => {
     '/iplayer/articles/c5jje4ejkqvo',
     '/news/article/c5jje4ejkqvo.amp',
     '/persian/c7eel0lmr4do',
-    '/news/articles/c12o',
-    '/news/articles/c5jje4ejkqv',
-    '/news/articles/',
-    '/news/articles/c5jje4ejkqvo/foobar',
-    '/news/articles/c5jje4ejkqvo/.amp',
   ];
   shouldNotMatchInvalidRoutes(invalidRoutes, articlePath);
 });
 
 describe('articleDataPath', () => {
   const validRoutes = [
-    '/news/articles/c5jje4ejkqvo.json',
     '/persian/articles/c7eel0lmr4do.json',
-    '/news/articles/c5jje4ejkqvo/lat.json',
     '/persian/articles/c7eel0lmr4do/trad.json',
-    '/cymrufyw/erthyglau/c5jje4ejkqvo.json',
   ];
   shouldMatchValidRoutes(validRoutes, articleDataPath);
 
   const invalidRoutes = [
-    '/news/articles/c5jje4ejkqvo',
     '/persian/articles/c7eel0lmr4do',
     '/iplayer/articles/c7eel0lmr4do.json',
     '/persian/articles/c7eel0lmr4do/.json',
@@ -99,11 +83,8 @@ describe('articleDataPath', () => {
 
 describe('homePagePath', () => {
   const invalidRoutes = [
-    '/news/home',
     '/persian/c5jje4ejkqvo.amp',
     '/iplayer',
-    '/news/foobar',
-    '/news/foobar.amp',
     '/kyrgyz.amp',
     '/serbian/lat.amp',
     '/serbian/cyr.amp',
@@ -113,9 +94,7 @@ describe('homePagePath', () => {
 
 describe('homePageDataPath', () => {
   const invalidRoutes = [
-    '/news/data.json',
     '/iplayer.json',
-    '/news/foobar.json',
     '/persian/.json',
   ];
   shouldNotMatchInvalidRoutes(invalidRoutes, homePageDataPath);
@@ -126,8 +105,6 @@ describe('homePageSwPath', () => {
   shouldMatchValidRoutes(validRoutes, homePageSwPath);
 
   const invalidRoutes = [
-    '/news/sw.js',
-    '/news/articles/sw.js',
     '/persian/sw',
     '/persian/simp/sw.js',
     '/gahuza/articles/sw.js',
@@ -140,14 +117,8 @@ describe('homePageManifestPath', () => {
   shouldMatchValidRoutes(validRoutes, homePageManifestPath);
 
   const invalidRoutes = [
-    '/news/manifest.json',
-    '/sport/manifest.json',
-    '/naidheachdan/manifest.json',
-    '/cymrufyw/manifest.json',
-    '/newsround/manifest.json',
     '/foobar/manifest.json',
     '/foobar/manifest',
-    '/news/trad/sw.js',
     '/persian/articles/manifest.json',
     '/serbian/articles/manifest.json',
   ];
@@ -254,7 +225,6 @@ describe('secondaryColumnDataRegexPath', () => {
     '/foobar/sty-secondary-column.json',
     '/foobar/sty-secondary-column',
     '/foobar/sty-secondary-column.js',
-    '/news/trad/sty-secondary-column.json',
   ];
   shouldNotMatchInvalidRoutes(invalidRoutes, secondaryColumnDataRegexPath);
 });
@@ -300,9 +270,6 @@ describe('cpsAssetPagePath', () => {
     '/zhongwen/simp/test-12345678',
     '/zhongwen/trad/test-12345678',
     '/zhongwen/simp/test-12345678.amp',
-    '/cymrufyw/etholiad-2017-39407507',
-    '/cymrufyw/etholiad-2017-39407507.amp',
-    '/news/world-middle+east-10642960.amp',
   ];
 
   shouldMatchValidRoutes(validRoutes, cpsAssetPagePath);

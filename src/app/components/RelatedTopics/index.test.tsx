@@ -66,17 +66,6 @@ describe('Related Topics', () => {
       );
     });
 
-    it('should construct the correct topics href given a topic id when service=cymrufyw', () => {
-      const { getByText } = render(<RelatedTopics topics={[topic]} />, {
-        service: 'cymrufyw',
-      });
-
-      expect(getByText(topic.topicName)).toHaveAttribute(
-        'href',
-        `https://www.bbc.co.uk/cymrufyw/pynciau/${topic.topicId}`,
-      );
-    });
-
     it('should construct the correct topics href given a topic id', () => {
       const { getByText } = render(<RelatedTopics topics={[topic]} />, {
         service: 'uzbek',

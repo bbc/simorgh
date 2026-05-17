@@ -19,9 +19,6 @@ export const themes: Record<
   arabic: loadable(
     () => import(/* webpackChunkName: "themes-arabic" */ './arabic'),
   ),
-  archive: loadable(
-    () => import(/* webpackChunkName: "themes-archive" */ './archive'),
-  ),
   azeri: loadable(
     () => import(/* webpackChunkName: "themes-azeri" */ './azeri'),
   ),
@@ -30,9 +27,6 @@ export const themes: Record<
   ),
   burmese: loadable(
     () => import(/* webpackChunkName: "themes-burmese" */ './burmese'),
-  ),
-  cymrufyw: loadable(
-    () => import(/* webpackChunkName: "themes-cymrufyw" */ './cymrufyw'),
   ),
   dari: loadable(() => import(/* webpackChunkName: "themes-dari" */ './dari')),
   gahuza: loadable(
@@ -69,16 +63,11 @@ export const themes: Record<
   mundo: loadable(
     () => import(/* webpackChunkName: "themes-mundo" */ './mundo'),
   ),
-  naidheachdan: loadable(
-    () =>
-      import(/* webpackChunkName: "themes-naidheachdan" */ './naidheachdan'),
-  ),
   nepali: loadable(
     () => import(/* webpackChunkName: "themes-nepali" */ './nepali'),
   ),
-  news: loadable(() => import(/* webpackChunkName: "themes-news" */ './news')),
-  newsround: loadable(
-    () => import(/* webpackChunkName: "themes-newsround" */ './newsround'),
+  news: loadable(
+    () => import(/* webpackChunkName: "themes-news" */ './news'),
   ),
   pashto: loadable(
     () => import(/* webpackChunkName: "themes-pashto" */ './pashto'),
@@ -104,9 +93,6 @@ export const themes: Record<
   russian: loadable(
     () => import(/* webpackChunkName: "themes-russian" */ './russian'),
   ),
-  scotland: loadable(
-    () => import(/* webpackChunkName: "themes-scotland" */ './scotland'),
-  ),
   serbian: {
     cyr: loadable(
       () =>
@@ -122,9 +108,6 @@ export const themes: Record<
   ),
   somali: loadable(
     () => import(/* webpackChunkName: "themes-somali" */ './somali'),
-  ),
-  sport: loadable(
-    () => import(/* webpackChunkName: "themes-sport" */ './sport'),
   ),
   swahili: loadable(
     () => import(/* webpackChunkName: "themes-swahili" */ './swahili'),

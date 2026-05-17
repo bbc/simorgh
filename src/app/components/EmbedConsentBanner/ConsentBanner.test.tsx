@@ -54,26 +54,6 @@ describe('Embed Consent Banner - Content', () => {
     expect(anchorTags.length).toBe(2);
   });
 
-  it('should render a consent banner with default content for a service with no translations', () => {
-    render(
-      <ConsentBanner
-        provider="youtube"
-        clickHandler={mockCanonicalClickHandler}
-      />,
-      {
-        service: 'archive',
-      },
-    );
-
-    const heading = screen.getByTestId('banner-heading');
-    const body = screen.getByTestId('banner-body');
-
-    expect(heading.textContent).toEqual('Allow Google YouTube content?');
-    expect(body.textContent).toEqual(
-      "This article contains content provided by Google YouTube.  We ask for your permission before anything is loaded, as they may be using cookies and other technologies.  You may want to read Google YouTube cookie policy and privacy policy before accepting. To view this content choose 'accept and continue'.",
-    );
-  });
-
   it('should render a TikTok consent banner with correct content for Mundo service', () => {
     render(
       <ConsentBanner
