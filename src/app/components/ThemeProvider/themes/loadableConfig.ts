@@ -66,9 +66,7 @@ export const themes: Record<
   nepali: loadable(
     () => import(/* webpackChunkName: "themes-nepali" */ './nepali'),
   ),
-  news: loadable(
-    () => import(/* webpackChunkName: "themes-news" */ './news'),
-  ),
+  news: loadable(() => import(/* webpackChunkName: "themes-news" */ './news')),
   pashto: loadable(
     () => import(/* webpackChunkName: "themes-pashto" */ './pashto'),
   ),

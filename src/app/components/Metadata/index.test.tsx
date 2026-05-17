@@ -136,7 +136,6 @@ const CanonicalMapInternationalOrigin = () => (
 );
 
 describe('Metadata', () => {
-
   it(`should render the canonical link's top level domain as .com for WS article pages`, async () => {
     render(
       <MetadataWithContext
@@ -323,7 +322,6 @@ describe('Metadata', () => {
   });
 
   describe('Snapshot', () => {
-
     it('should match for Persian News & byline twitter handle', () => {
       render(
         <MetadataWithContext

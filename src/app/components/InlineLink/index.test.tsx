@@ -49,52 +49,52 @@ describe('InlineLink', () => {
   );
 
   it.each`
-    service           | variant      | expected
-    ${'afaanoromoo'}  | ${'default'} | ${'Google alaan'}
-    ${'afrique'}      | ${'default'} | ${'Google, externe'}
-    ${'amharic'}      | ${'default'} | ${'Google, ውጫዊ'}
-    ${'arabic'}       | ${'default'} | ${'Google، خارجي '}
-    ${'azeri'}        | ${'default'} | ${'Google, BBC-dən kənar'}
-    ${'bengali'}      | ${'default'} | ${'Google, বাইরের'}
-    ${'burmese'}      | ${'default'} | ${'Google, ပြင်ပစာမျက်နှာ'}
-    ${'gahuza'}       | ${'default'} | ${'Google, bivuye ahandi'}
-    ${'gujarati'}     | ${'default'} | ${'Google, બહારની'}
-    ${'hausa'}        | ${'default'} | ${'Google, waje'}
-    ${'hindi'}        | ${'default'} | ${'Google, बाहरी'}
-    ${'igbo'}         | ${'default'} | ${'Google, na mpụta'}
-    ${'indonesia'}    | ${'default'} | ${'Google, eksternal'}
-    ${'japanese'}     | ${'default'} | ${'Google は外部ページです'}
-    ${'korean'}       | ${'default'} | ${'Google, 외부 사이트'}
-    ${'kyrgyz'}       | ${'default'} | ${'Google, баракчалар'}
-    ${'marathi'}      | ${'default'} | ${'Google, बाहेर'}
-    ${'mundo'}        | ${'default'} | ${'Google, externo'}
-    ${'nepali'}       | ${'default'} | ${'Google, बाह्य'}
-    ${'pashto'}       | ${'default'} | ${'Google، بهرنی'}
-    ${'persian'}      | ${'default'} | ${'Google، خارجی'}
-    ${'pidgin'}       | ${'default'} | ${'Google, outside'}
-    ${'portuguese'}   | ${'default'} | ${'Google, externo'}
-    ${'punjabi'}      | ${'default'} | ${'Google, ਬਾਹਰੀ'}
-    ${'russian'}      | ${'default'} | ${'Google, внешняя'}
-    ${'sinhala'}      | ${'default'} | ${'Google, බාහිර'}
-    ${'somali'}       | ${'default'} | ${'Google, kale'}
-    ${'swahili'}      | ${'default'} | ${'Google, ya nje'}
-    ${'tamil'}        | ${'default'} | ${'Google, வெளி'}
-    ${'telugu'}       | ${'default'} | ${'Google, ఇతర'}
-    ${'thai'}         | ${'default'} | ${'Google, จากภายนอก'}
-    ${'tigrinya'}     | ${'default'} | ${'Google, ደጋዊ'}
-    ${'serbian'}      | ${'cyr'}     | ${'Google, спољна'}
-    ${'serbian'}      | ${'lat'}     | ${'Google, spoljna'}
-    ${'turkce'}       | ${'default'} | ${'Google, dış'}
-    ${'ukchina'}      | ${'simp'}    | ${'Google, 外部'}
-    ${'ukchina'}      | ${'trad'}    | ${'Google, 外部'}
-    ${'ukrainian'}    | ${'default'} | ${'Google, зовнішнє'}
-    ${'urdu'}         | ${'default'} | ${'Google، بیرو'}
-    ${'uzbek'}        | ${'cyr'}     | ${'Google, ташқи'}
-    ${'uzbek'}        | ${'lat'}     | ${'Google, tashqi'}
-    ${'vietnamese'}   | ${'default'} | ${'Google, bên ngoài'}
-    ${'yoruba'}       | ${'default'} | ${'Google, ìta'}
-    ${'zhongwen'}     | ${'simp'}    | ${'Google, 外部'}
-    ${'zhongwen'}     | ${'trad'}    | ${'Google, 外部'}
+    service          | variant      | expected
+    ${'afaanoromoo'} | ${'default'} | ${'Google alaan'}
+    ${'afrique'}     | ${'default'} | ${'Google, externe'}
+    ${'amharic'}     | ${'default'} | ${'Google, ውጫዊ'}
+    ${'arabic'}      | ${'default'} | ${'Google، خارجي '}
+    ${'azeri'}       | ${'default'} | ${'Google, BBC-dən kənar'}
+    ${'bengali'}     | ${'default'} | ${'Google, বাইরের'}
+    ${'burmese'}     | ${'default'} | ${'Google, ပြင်ပစာမျက်နှာ'}
+    ${'gahuza'}      | ${'default'} | ${'Google, bivuye ahandi'}
+    ${'gujarati'}    | ${'default'} | ${'Google, બહારની'}
+    ${'hausa'}       | ${'default'} | ${'Google, waje'}
+    ${'hindi'}       | ${'default'} | ${'Google, बाहरी'}
+    ${'igbo'}        | ${'default'} | ${'Google, na mpụta'}
+    ${'indonesia'}   | ${'default'} | ${'Google, eksternal'}
+    ${'japanese'}    | ${'default'} | ${'Google は外部ページです'}
+    ${'korean'}      | ${'default'} | ${'Google, 외부 사이트'}
+    ${'kyrgyz'}      | ${'default'} | ${'Google, баракчалар'}
+    ${'marathi'}     | ${'default'} | ${'Google, बाहेर'}
+    ${'mundo'}       | ${'default'} | ${'Google, externo'}
+    ${'nepali'}      | ${'default'} | ${'Google, बाह्य'}
+    ${'pashto'}      | ${'default'} | ${'Google، بهرنی'}
+    ${'persian'}     | ${'default'} | ${'Google، خارجی'}
+    ${'pidgin'}      | ${'default'} | ${'Google, outside'}
+    ${'portuguese'}  | ${'default'} | ${'Google, externo'}
+    ${'punjabi'}     | ${'default'} | ${'Google, ਬਾਹਰੀ'}
+    ${'russian'}     | ${'default'} | ${'Google, внешняя'}
+    ${'sinhala'}     | ${'default'} | ${'Google, බාහිර'}
+    ${'somali'}      | ${'default'} | ${'Google, kale'}
+    ${'swahili'}     | ${'default'} | ${'Google, ya nje'}
+    ${'tamil'}       | ${'default'} | ${'Google, வெளி'}
+    ${'telugu'}      | ${'default'} | ${'Google, ఇతర'}
+    ${'thai'}        | ${'default'} | ${'Google, จากภายนอก'}
+    ${'tigrinya'}    | ${'default'} | ${'Google, ደጋዊ'}
+    ${'serbian'}     | ${'cyr'}     | ${'Google, спољна'}
+    ${'serbian'}     | ${'lat'}     | ${'Google, spoljna'}
+    ${'turkce'}      | ${'default'} | ${'Google, dış'}
+    ${'ukchina'}     | ${'simp'}    | ${'Google, 外部'}
+    ${'ukchina'}     | ${'trad'}    | ${'Google, 外部'}
+    ${'ukrainian'}   | ${'default'} | ${'Google, зовнішнє'}
+    ${'urdu'}        | ${'default'} | ${'Google، بیرو'}
+    ${'uzbek'}       | ${'cyr'}     | ${'Google, ташқи'}
+    ${'uzbek'}       | ${'lat'}     | ${'Google, tashqi'}
+    ${'vietnamese'}  | ${'default'} | ${'Google, bên ngoài'}
+    ${'yoruba'}      | ${'default'} | ${'Google, ìta'}
+    ${'zhongwen'}    | ${'simp'}    | ${'Google, 外部'}
+    ${'zhongwen'}    | ${'trad'}    | ${'Google, 外部'}
   `(
     'should render the external inline link with a localised "external" message in the aria-label for the $service service',
     ({ service, variant, expected }) => {

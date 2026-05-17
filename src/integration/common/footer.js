@@ -8,7 +8,7 @@ export default () => {
 
     it('I can click on the BBC branding and it would take me to the homepage', () => {
       const brandingEl = document.querySelector('#brandSvgFooter');
-      const brandingLinkEl = brandingEl.parentNode;
+      const brandingLinkEl = brandingEl.parentNode.parentNode;
       const brandingImageEl = brandingLinkEl.querySelector('img');
 
       expect(brandingLinkEl.tagName).toEqual('A');

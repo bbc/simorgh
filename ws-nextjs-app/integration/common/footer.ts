@@ -11,7 +11,7 @@ export default () => {
       expect(brandingEl).toBeInTheDocument();
       if (!brandingEl) return;
 
-      const brandingLinkEl = brandingEl.parentNode as Element;
+      const brandingLinkEl = brandingEl.parentNode.parentNode as Element;
       const brandingImageEl = brandingLinkEl?.querySelector?.('img');
 
       expect(brandingLinkEl.tagName).toEqual('A');

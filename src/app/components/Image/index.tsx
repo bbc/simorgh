@@ -124,7 +124,7 @@ const Image = ({
           ],
         ]}
         style={{
-          paddingBottom: (hasFixedAspectRatio) ? legacyBrowserAspectRatio : 0,
+          paddingBottom: hasFixedAspectRatio ? legacyBrowserAspectRatio : 0,
           ...(!hasCaption && { overflow: 'hidden' }),
           ...(isSvg && { height: '24px' }),
         }}
@@ -153,7 +153,7 @@ const Image = ({
               attribution={attribution}
               {...(srcSet && { srcSet: imgSrcSet })}
               {...(imgSizes && { sizes: imgSizes })}
-              {...(id && { id: id })}
+              {...(id && { id })}
               {...(preload && { 'data-hero': 'true' })}
               {...(isSvg && {
                 style: {
@@ -183,7 +183,7 @@ const Image = ({
               src={src}
               {...(srcSet && { srcSet: imgSrcSet })}
               {...(imgSizes && { sizes: imgSizes })}
-              {...(id && { id: id })}
+              {...(id && { id })}
               alt={alt}
               loading={lazyLoad ? 'lazy' : 'eager'}
               width={width}

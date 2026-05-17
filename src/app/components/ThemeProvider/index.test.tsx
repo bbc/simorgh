@@ -249,12 +249,14 @@ describe('ThemeProvider', () => {
         );
       });
 
-      const themeBrandSVG = document.body.querySelector('#brandSvgHeader')?.getAttribute('src');
+      const themeBrandSVG = document.body
+        .querySelector('#brandSvgHeader')
+        ?.getAttribute('src');
 
       const { default: svg } = await import(`./chameleonLogos/${service}`);
 
       const { getByTestId } = render(
-        <img data-testid={service} src={svg} />,
+        <img data-testid={service} alt="" src={svg} />,
       );
 
       const chameleonSVG = getByTestId(service).getAttribute('src');

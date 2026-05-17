@@ -35,7 +35,7 @@ const styles = {
   imageResponsiveRatio: css({
     height: '100%',
   }),
-  imageSvg: (theme: Theme) => 
+  imageSvg: (theme: Theme) =>
     css({
       maxHeight: '32px',
       marginLeft: '0.5px',

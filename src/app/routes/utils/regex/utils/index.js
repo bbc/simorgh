@@ -23,9 +23,7 @@ export const getArticleRegex = services => {
 };
 
 const getWorldServices = services => {
-  const publicServices = [
-    'news',
-  ];
+  const publicServices = ['news'];
 
   return services.filter(service => !publicServices.includes(service));
 };

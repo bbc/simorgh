@@ -93,10 +93,7 @@ describe('homePagePath', () => {
 });
 
 describe('homePageDataPath', () => {
-  const invalidRoutes = [
-    '/iplayer.json',
-    '/persian/.json',
-  ];
+  const invalidRoutes = ['/iplayer.json', '/persian/.json'];
   shouldNotMatchInvalidRoutes(invalidRoutes, homePageDataPath);
 });
 
