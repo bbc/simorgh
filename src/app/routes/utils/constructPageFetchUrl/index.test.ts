@@ -40,15 +40,13 @@ describe('constructPageFetchUrl', () => {
       isAmp,
     });
 
-    expect(fetchUrl.query).toEqual({
-      id: 'c0000000000t',
-      page: '2',
-      pageType: 'topic',
-      service: 'ukrainian',
-      serviceEnv: 'live',
-      variant: 'ru-UA',
-      isAmp: true,
-    });
+    expect(fetchUrl.searchParams.get('id')).toBe('c0000000000t');
+    expect(fetchUrl.searchParams.get('page')).toBe('2');
+    expect(fetchUrl.searchParams.get('pageType')).toBe('topic');
+    expect(fetchUrl.searchParams.get('service')).toBe('ukrainian');
+    expect(fetchUrl.searchParams.get('serviceEnv')).toBe('live');
+    expect(fetchUrl.searchParams.get('variant')).toBe('ru-UA');
+    expect(fetchUrl.searchParams.get('isAmp')).toBe('true');
   });
 
   it('should remove .amp from ID', async () => {

@@ -1,6 +1,5 @@
 /* eslint-disable no-shadow */
 import { useEffect, useState } from 'react';
-import Url from 'url-parse';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import { Curation } from '#app/models/types/curationData';
 import { Services } from '#app/models/types/global';
@@ -42,9 +41,7 @@ const Component = ({ service, variant, isLite }: StoryProps) => {
   useEffect(() => {
     const loadPageData = async () => {
       const response = await fetch(
-        new Url(
-          `data/${service}/homePage/${variant === 'default' ? 'index' : variant}.json`,
-        ).toString(),
+        `data/${service}/homePage/${variant === 'default' ? 'index' : variant}.json`,
       );
       const { data } = await response.json();
 

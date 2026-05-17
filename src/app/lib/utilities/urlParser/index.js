@@ -1,11 +1,17 @@
-import Url from 'url-parse';
+const parseUrl = url => {
+  try {
+    return new URL(url);
+  } catch {
+    return new URL(url, 'https://www.bbc.com');
+  }
+};
 
 // Returns the path, excluding any query string params
 export const getUrlPath = url => {
-  return new Url(url).pathname;
+  return parseUrl(url).pathname;
 };
 
 // Returns the query string
 export const getQueryString = url => {
-  return new Url(url).query;
+  return parseUrl(url).search;
 };

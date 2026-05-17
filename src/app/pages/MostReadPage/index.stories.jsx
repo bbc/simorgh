@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import Url from 'url-parse';
 import { MOST_READ_PAGE } from '#app/routes/utils/pageTypes';
 import MostReadPage from '.';
 
@@ -9,11 +8,9 @@ const Component = ({ service, variant }) => {
   useEffect(() => {
     const loadPageData = async () => {
       const response = await fetch(
-        new Url(
-          `data/${service}/mostRead/${
-            variant === 'default' ? 'index' : variant
-          }.json`,
-        ).toString(),
+        `data/${service}/mostRead/${
+          variant === 'default' ? 'index' : variant
+        }.json`,
       );
 
       const { data } = await response.json();
