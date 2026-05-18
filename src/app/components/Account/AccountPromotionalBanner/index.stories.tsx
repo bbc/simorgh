@@ -4,6 +4,7 @@ import { AccountContext } from '#app/contexts/AccountContext';
 import README from './README.md';
 import AccountPromotionalBanner from '.';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
+import { DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS } from './utilities';
 
 type WithProvidersArgs = {
   isSignedIn: boolean;
@@ -43,6 +44,14 @@ export default {
       },
     },
   },
+  decorators: [
+    Story => {
+      document
+        .querySelector('html')
+        ?.classList.add(DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS);
+      return <Story />;
+    },
+  ],
 };
 
 export const SignedOut = withProviders({ isSignedIn: false });
