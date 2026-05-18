@@ -36,10 +36,8 @@ updates:
           - '@emotion/*'
       next:
         patterns:
-          - '@next/*'
           - 'next'
           - 'next-*'
-          - '@img-sharp-*'
       react:
         patterns:
           - 'react'
