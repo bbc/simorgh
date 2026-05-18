@@ -19,16 +19,6 @@ import _OnDemandAudioPage, { OnDemandAudioProps } from './OnDemandAudioPage';
 
 const OnDemandAudioPage = withMediaError(_OnDemandAudioPage);
 
-interface OnDemandAudioFixture {
-  data: unknown;
-}
-
-const getPageDataFromFixture = ({ data }: OnDemandAudioFixture) =>
-  ({
-    externalLinks: [],
-    ...(data as Partial<OnDemandAudioProps['pageData']>),
-  }) as OnDemandAudioProps['pageData'];
-
 const toggles = {
   recentAudioEpisodes: {
     enabled: false,
@@ -92,7 +82,9 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should match snapshot', async () => {
-    const pageData = getPageDataFromFixture(gahuzaOnDemandAudio);
+    const pageData =
+      gahuzaOnDemandAudio?.data as unknown as OnDemandAudioProps['pageData'];
+
     const { container } = await renderPage({
       pageData,
       service: 'gahuza',
@@ -102,7 +94,8 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should show the brand title for OnDemand Radio Pages', async () => {
-    const pageData = getPageDataFromFixture(gahuzaOnDemandAudio);
+    const pageData =
+      gahuzaOnDemandAudio?.data as unknown as OnDemandAudioProps['pageData'];
     const { queryByText, getByTestId } = await renderPage({
       pageData,
       service: 'gahuza',
@@ -115,7 +108,8 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should show the episode title when it is available', async () => {
-    const pageData = getPageDataFromFixture(gahuzaOnDemandAudio);
+    const pageData =
+      gahuzaOnDemandAudio?.data as unknown as OnDemandAudioProps['pageData'];
     const { getByText } = await renderPage({
       pageData,
       service: 'gahuza',
@@ -135,9 +129,9 @@ describe('OnDemand Radio Page ', () => {
 
   it('should show the external links for podcast pages', async () => {
     const pageData = {
-      ...getPageDataFromFixture(gahuzaPodcastPage),
+      ...gahuzaPodcastPage?.data,
       externalLinks: ['https://example.com/listen'],
-    };
+    } as unknown as OnDemandAudioProps['pageData'];
     const { getByText } = await renderPage({
       pageData,
       service: 'gahuza',
@@ -147,7 +141,8 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should show the datestamp correctly for Pashto OnDemand Radio Pages', async () => {
-    const pageData = getPageDataFromFixture(pashtoOnDemandAudio);
+    const pageData =
+      pashtoOnDemandAudio?.data as unknown as OnDemandAudioProps['pageData'];
     const { getByText } = await renderPage({
       pageData,
       service: 'pashto',
@@ -156,7 +151,8 @@ describe('OnDemand Radio Page ', () => {
     expect(getByText('۱۷ می ۲۰۲۱')).toBeInTheDocument();
   });
   it('should show the datestamp correctly for Korean OnDemand Radio Pages', async () => {
-    const pageData = getPageDataFromFixture(koreanOnDemandAudio);
+    const pageData =
+      koreanOnDemandAudio?.data as unknown as OnDemandAudioProps['pageData'];
     const { getByText } = await renderPage({
       pageData,
       service: 'korean',
@@ -166,9 +162,8 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should show the datestamp correctly for Indonesian OnDemand Radio Pages', async () => {
-    const pageDataWithoutVideo = getPageDataFromFixture(
-      indonesianOnDemandAudio,
-    );
+    const pageDataWithoutVideo =
+      indonesianOnDemandAudio?.data as unknown as OnDemandAudioProps['pageData'];
     const { getByText } = await renderPage({
       pageData: pageDataWithoutVideo,
       service: 'indonesia',
@@ -178,7 +173,8 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should show the datestamp correctly for Zhongwen OnDemand Radio Pages', async () => {
-    const pageData = getPageDataFromFixture(zhongwenOnDemandAudio);
+    const pageData =
+      zhongwenOnDemandAudio?.data as unknown as OnDemandAudioProps['pageData'];
 
     const { getByText } = await renderPage({
       pageData,
@@ -190,7 +186,8 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should show the summary for OnDemand Radio Pages', async () => {
-    const pageData = getPageDataFromFixture(gahuzaOnDemandAudioEpisode);
+    const pageData =
+      gahuzaOnDemandAudioEpisode?.data as unknown as OnDemandAudioProps['pageData'];
 
     const { getByTestId } = await renderPage({
       pageData,
@@ -203,7 +200,8 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should show the audio player', async () => {
-    const pageData = getPageDataFromFixture(koreanOnDemandAudio);
+    const pageData =
+      koreanOnDemandAudio?.data as unknown as OnDemandAudioProps['pageData'];
     const { container } = await renderPage({
       pageData,
       service: 'korean',
@@ -216,7 +214,8 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should show the expired content message if episode is expired', async () => {
-    const pageData = getPageDataFromFixture(swahiliExpiredOnDemandAudio);
+    const pageData =
+      swahiliExpiredOnDemandAudio?.data as unknown as OnDemandAudioProps['pageData'];
     const { container, getByText } = await renderPage({
       pageData,
       service: 'swahili',
@@ -234,9 +233,9 @@ describe('OnDemand Radio Page ', () => {
         episodeAvailability: 'not-yet-available',
       },
     };
-    const pageData = getPageDataFromFixture(
-      koreanPageDataWithNotYetAvailableEpisode,
-    );
+    const pageData =
+      koreanPageDataWithNotYetAvailableEpisode.data as unknown as OnDemandAudioProps['pageData'];
+
     const { container, getByText } = await renderPage({
       pageData,
       service: 'korean',
@@ -251,7 +250,8 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should show the radio schedule for the On Demand radio page', async () => {
-    const pageData = getPageDataFromFixture(koreanOnDemandAudio);
+    const pageData =
+      koreanOnDemandAudio?.data as unknown as OnDemandAudioProps['pageData'];
 
     const { getByTestId } = await renderPage({
       pageData,
@@ -262,7 +262,8 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should not show the radio schedule for services without schedules', async () => {
-    const pageData = getPageDataFromFixture(koreanOnDemandAudio);
+    const pageData =
+      koreanOnDemandAudio?.data as unknown as OnDemandAudioProps['pageData'];
 
     renderPage({
       pageData: { ...pageData, radioScheduleData: undefined },
