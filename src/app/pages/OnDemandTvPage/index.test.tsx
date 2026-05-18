@@ -12,6 +12,13 @@ const pageType = TV_PAGE;
 
 const OnDemandTvPage = withMediaError(_OnDemandTvPage);
 
+const toggles = {
+  recentVideoEpisodes: {
+    enabled: false,
+    value: 4,
+  },
+};
+
 interface OnDemandTvFixture {
   data: unknown;
 }
@@ -45,6 +52,7 @@ const renderPage = async ({ pageData, service }: Props) => {
       pathname: '/pathname',
       service,
       statusCode: 200,
+      toggles,
     });
   });
 
