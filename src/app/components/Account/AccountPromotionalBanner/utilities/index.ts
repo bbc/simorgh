@@ -49,7 +49,7 @@ export const setAccountPromoBannerDismissed = (): void => {
 };
 
 export const buildAccountBannerClientScript = (): string => `(() => {
-  if (document.cookie.split(';').some((item) => item.trim().indexOf('ckns_id=') > -1)) {
+  if (document.cookie.split(';').some((item) => item.trim().startsWith('ckns_id='))) {
     return;
   }
 
