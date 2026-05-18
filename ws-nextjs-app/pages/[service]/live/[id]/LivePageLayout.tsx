@@ -89,6 +89,7 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
   } = use(ServiceContext);
   const { canonicalNonUkLink } = use(RequestContext);
   const { enabled: livePagePollingEnabled } = useToggle('livePagePolling');
+  const { enabled: sportHeaderEnabled } = useToggle('showSportDataHeader');
 
   const streamRef = useRef<HTMLDivElement>(null);
   const [isFirstPostVisible, setIsFirstPostVisible] = useState(true);
@@ -118,7 +119,7 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
     live: isSportDataLive,
     title: sportDataTitle,
   } = sportDataEventContent || {};
-  const showSportData = !!sportData && !isLiveEnv();
+  const showSportData = !!sportData && sportHeaderEnabled;
 
   const {
     url: imageUrl,
