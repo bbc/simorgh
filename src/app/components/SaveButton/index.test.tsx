@@ -34,9 +34,9 @@ describe('SaveButton', () => {
     expect(screen.getByText('Save for later')).toBeInTheDocument();
   });
 
-  it('shows saving text when isLoading is true', () => {
-    render(<SaveButton onClick={noop} buttonText="Saving" isLoading />);
-    expect(screen.getByText('Saving')).toBeInTheDocument();
+  it('shows loading text when isLoading is true', () => {
+    render(<SaveButton onClick={noop} buttonText="Loading" isLoading />);
+    expect(screen.getByText('Loading')).toBeInTheDocument();
   });
 
   it('shows saved text when isSaved is true', () => {
@@ -55,5 +55,17 @@ describe('SaveButton', () => {
     );
     await userEvent.hover(screen.getByRole('button'));
     expect(screen.getByText('Remove')).toBeInTheDocument();
+  });
+
+  it('is disabled and shows Saving text when isSaving is true', () => {
+    render(<SaveButton onClick={noop} buttonText="Saving" isSaving />);
+    expect(screen.getByRole('button')).toBeDisabled();
+    expect(screen.getByText('Saving')).toBeInTheDocument();
+  });
+
+  it('is disabled and shows Removing text when isRemoving is true', () => {
+    render(<SaveButton onClick={noop} buttonText="Removing" isRemoving />);
+    expect(screen.getByRole('button')).toBeDisabled();
+    expect(screen.getByText('Removing')).toBeInTheDocument();
   });
 });

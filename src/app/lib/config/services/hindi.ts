@@ -121,10 +121,12 @@ export const service: DefaultServiceConfig = {
         buttonSeparatorText: 'या',
       },
       saveArticleButton: {
+        loading: 'Loading',
         save: 'Save for later',
         saving: 'Saving',
         saved: 'Saved to My News',
         remove: 'Remove',
+        removing: 'Removing',
       },
       gist: 'सारांश',
       error: {

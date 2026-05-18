@@ -43,6 +43,19 @@ const styles = {
         },
       },
     }),
+  mutatingState: ({ palette }: Theme) =>
+    css({
+      backgroundColor: palette.BLACK,
+      color: palette.WHITE,
+      border: `${pixelsToRem(1)}rem solid ${palette.BLACK}`,
+      '& svg': {
+        fill: palette.WHITE,
+      },
+      ':disabled': {
+        backgroundColor: palette.BLACK,
+        cursor: 'not-allowed',
+      },
+    }),
   buttonAnimation: ({ palette }: Theme) =>
     css({
       display: 'block',

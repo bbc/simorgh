@@ -20,12 +20,19 @@ const SaveArticleButton = ({
   const { translations } = useContext(ServiceContext);
   const { saveArticleButton } = translations || {};
   const { assetId: articleId } = parseRoute(pathname);
-  const { showButton, isSaved, isLoading, error, handleSaveAction } =
-    useUASButton({
-      articleId,
-      articleTitle,
-      articlePageData,
-    });
+  const {
+    showButton,
+    isSaved,
+    isLoading,
+    isSaving,
+    isRemoving,
+    error,
+    handleSaveAction,
+  } = useUASButton({
+    articleId,
+    articleTitle,
+    articlePageData,
+  });
 
   if (!showButton) return null;
 
@@ -43,7 +50,12 @@ const SaveArticleButton = ({
     ? saveArticleButton.saved
     : saveArticleButton.save;
 
-  const buttonText = isLoading ? saveArticleButton.saving : buttonLabel;
+  const getButtonText = () => {
+    if (isLoading) return saveArticleButton.loading;
+    if (isSaving) return saveArticleButton.saving;
+    if (isRemoving) return saveArticleButton.removing;
+    return buttonLabel;
+  };
 
   const handleClick = () => {
     handleSaveAction(isSaved ? UASAction.REMOVE : UASAction.SAVE);
@@ -54,9 +66,11 @@ const SaveArticleButton = ({
       <SaveButton
         onClick={handleClick}
         isLoading={isLoading}
+        isSaving={isSaving}
+        isRemoving={isRemoving}
         isSaved={isSaved}
         disabled={isLoading}
-        buttonText={buttonText}
+        buttonText={getButtonText()}
         removeText={saveArticleButton.remove}
       />
     </div>

@@ -27,6 +27,8 @@ interface UseUASButtonReturn {
   showButton: boolean;
   isSaved: boolean;
   isLoading: boolean;
+  isSaving: boolean;
+  isRemoving: boolean;
   error: Error | null;
   handleSaveAction: (action: UASAction) => Promise<void>;
 }
@@ -43,9 +45,10 @@ const useUASButton = ({
 }: UseUASButtonProps): UseUASButtonReturn => {
   const { isSignedIn } = use(AccountContext);
   const { service } = use(ServiceContext);
-  const { enabled: featureToggleOn = false, value: accountService = '' } =
+  const { enabled: featureToggleOn, value: accountService = '' } =
     useToggle('uasPersonalization');
   const [isSaving, setIsSaving] = useState(false);
+  const [isRemoving, setIsRemoving] = useState(false);
   const [saveError, setSaveError] = useState<Error | null>(null);
 
   const isUASEnabled =
@@ -64,13 +67,12 @@ const useUASButton = ({
 
   const handleSaveAction = useCallback(
     async (action: UASAction) => {
-      if (isSaving) return;
+      if (isSaving || isRemoving) return;
 
-      setIsSaving(true);
-      try {
-        setSaveError(null);
-
-        if (action === UASAction.SAVE) {
+      if (action === UASAction.SAVE) {
+        setIsSaving(true);
+        try {
+          setSaveError(null);
           const promoImageBuild = buildPromoImageUrl(promoImageObj);
           const body = createFavouritesPayload({
             articleId,
@@ -82,27 +84,37 @@ const useUASButton = ({
           });
           await uasApiRequest('POST', FAVOURITES_CONFIG.activityType, { body });
           setIsSaved(true);
-        } else {
+        } catch (err) {
+          const saveErr = err instanceof Error ? err : new Error(String(err));
+          setSaveError(saveErr);
+        } finally {
+          setIsSaving(false);
+        }
+      } else {
+        setIsRemoving(true);
+        try {
+          setSaveError(null);
           const globalId = buildGlobalId(articleId);
           await uasApiRequest('DELETE', FAVOURITES_CONFIG.activityType, {
             globalId,
           });
           setIsSaved(false);
+        } catch (err) {
+          const saveErr = err instanceof Error ? err : new Error(String(err));
+          setSaveError(saveErr);
+        } finally {
+          setIsRemoving(false);
         }
-      } catch (err) {
-        const saveErr = err instanceof Error ? err : new Error(String(err));
-        setSaveError(saveErr);
-      } finally {
-        setIsSaving(false);
       }
     },
     [
       articleId,
-      service,
-      articleTitle,
-      promoImageObj,
       articlePageData,
+      articleTitle,
+      isRemoving,
       isSaving,
+      promoImageObj,
+      service,
       setIsSaved,
     ],
   );
@@ -110,7 +122,9 @@ const useUASButton = ({
   return {
     showButton,
     isSaved,
-    isLoading: isLoading || isSaving,
+    isLoading,
+    isSaving,
+    isRemoving,
     error: saveError || error,
     handleSaveAction,
   };

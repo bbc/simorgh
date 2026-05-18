@@ -23,6 +23,8 @@ describe('SaveArticleButton', () => {
       showButton: false,
       isSaved: false,
       isLoading: false,
+      isSaving: false,
+      isRemoving: false,
       error: null,
       handleSaveAction: mockHandleSaveAction,
     });
@@ -38,6 +40,8 @@ describe('SaveArticleButton', () => {
       showButton: true,
       isSaved: false,
       isLoading: false,
+      isSaving: false,
+      isRemoving: false,
       error: null,
       handleSaveAction: mockHandleSaveAction,
     });
@@ -51,6 +55,8 @@ describe('SaveArticleButton', () => {
       showButton: true,
       isSaved: true,
       isLoading: false,
+      isSaving: false,
+      isRemoving: false,
       error: null,
       handleSaveAction: mockHandleSaveAction,
     });
@@ -64,6 +70,26 @@ describe('SaveArticleButton', () => {
       showButton: true,
       isSaved: false,
       isLoading: true,
+      isSaving: false,
+      isRemoving: false,
+      error: null,
+      handleSaveAction: mockHandleSaveAction,
+    });
+
+    render(<SaveArticleButton {...defaultProps} />, { service: 'hindi' });
+    const button = screen.getByRole('button');
+
+    expect(button).toHaveTextContent('Loading');
+    expect(button).toBeDisabled();
+  });
+
+  it('renders saving state and disables button', () => {
+    mockedUseUASButton.mockReturnValue({
+      showButton: true,
+      isSaved: false,
+      isLoading: false,
+      isSaving: true,
+      isRemoving: false,
       error: null,
       handleSaveAction: mockHandleSaveAction,
     });
@@ -75,11 +101,31 @@ describe('SaveArticleButton', () => {
     expect(button).toBeDisabled();
   });
 
+  it('renders removing state and disables button', () => {
+    mockedUseUASButton.mockReturnValue({
+      showButton: true,
+      isSaved: true,
+      isLoading: false,
+      isSaving: false,
+      isRemoving: true,
+      error: null,
+      handleSaveAction: mockHandleSaveAction,
+    });
+
+    render(<SaveArticleButton {...defaultProps} />, { service: 'hindi' });
+    const button = screen.getByRole('button');
+
+    expect(button).toHaveTextContent('Removing');
+    expect(button).toBeDisabled();
+  });
+
   it('calls handleSaveAction with save when button is clicked and not already saved', async () => {
     mockedUseUASButton.mockReturnValue({
       showButton: true,
       isSaved: false,
       isLoading: false,
+      isSaving: false,
+      isRemoving: false,
       error: null,
       handleSaveAction: mockHandleSaveAction,
     });
@@ -96,6 +142,8 @@ describe('SaveArticleButton', () => {
       showButton: true,
       isSaved: false,
       isLoading: false,
+      isSaving: false,
+      isRemoving: false,
       error: null,
       handleSaveAction: mockHandleSaveAction,
     });
