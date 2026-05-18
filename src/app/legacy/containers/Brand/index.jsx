@@ -15,12 +15,6 @@ const {
 const StyledBrand = styled(Brand)`
   position: relative;
   z-index: 1;
-  svg {
-    fill: currentColor;
-    @media screen and (forced-colors: active) {
-      fill: linkText;
-    }
-  }
 `;
 
 export const getBrandPath = (service, variant) => {
