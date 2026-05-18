@@ -76,9 +76,8 @@ interface ComponentProps {
   teamBadgePlaceholderFallbackType?: 'badge' | 'flag';
 }
 
-// @ts-expect-error - PS copy and paste
-const baseData = fixtureData.data.sportDataEventContent.content.data
-  .sportDataEvent as StoryData;
+const baseData = fixtureData.data.sportDataEventContent
+  .sportDataEvent as unknown as StoryData;
 
 const Component = ({
   data,

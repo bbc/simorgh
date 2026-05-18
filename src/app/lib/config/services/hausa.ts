@@ -65,6 +65,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      matchSummary: 'Takaitaccen Bayanin Wasa',
       and: 'da',
       readTime: {
         readTimePrefix: 'Lokacin karatu',
