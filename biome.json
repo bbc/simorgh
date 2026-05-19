@@ -339,7 +339,7 @@
 					"complexity": { "useOptionalChain": "error" },
 					"correctness": {
 						"noInvalidUseBeforeDeclaration": "error",
-						"noUnusedVariables": "warn"
+						"noUnusedVariables": "error"
 					}
 				}
 			}

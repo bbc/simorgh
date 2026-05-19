@@ -49,7 +49,7 @@ const getObserverInstance = (element: HTMLElement) => {
     );
 
     return instance;
-  } catch (e) {
+  } catch (_e) {
     throw new Error('Failed to find IntersectionObserver for element.');
   }
 };
