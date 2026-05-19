@@ -135,7 +135,8 @@
 			"nursery": {
                 "noForIn": "error",
                 "noLoopFunc": "error",
-                "useImportsFirst": "error"
+                "useImportsFirst": "error",
+                "useThisInClassMethods": "error"
             },
 			"performance": { "noAwaitInLoops": "error" },
 			"security": {

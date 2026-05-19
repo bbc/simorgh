@@ -1,4 +1,4 @@
-/* eslint-disable */
+// biome-ignore-all lint/nursery/useThisInClassMethods: we want this
 /*
  * © Jordan Tart https://github.com/jtart
  * https://github.com/jtart/react-universal-app

@@ -9,7 +9,7 @@ describe('addOperaMiniClassScript', () => {
   });
 
   class OperaMiniMock {
-    // eslint-disable-next-line class-methods-use-this
+    // biome-ignore lint/nursery/useThisInClassMethods: we want this
     get [Symbol.toStringTag]() {
       return 'OperaMini';
     }

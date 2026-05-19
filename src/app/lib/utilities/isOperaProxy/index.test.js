@@ -15,7 +15,7 @@ describe('isOperaProxy', () => {
 
   it('returns true when invoked by the opera mini proxy', () => {
     class OperaMiniMock {
-      // eslint-disable-next-line class-methods-use-this
+      // biome-ignore lint/nursery/useThisInClassMethods: we want this
       get [Symbol.toStringTag]() {
         return 'OperaMini';
       }

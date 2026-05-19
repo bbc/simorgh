@@ -1,3 +1,4 @@
+// biome-ignore-all lint/nursery/useThisInClassMethods: we want this
 /* eslint-disable import/no-relative-packages */
 /* eslint-disable no-console */
 import express from 'express';
@@ -50,7 +51,6 @@ logger.debug(
 const removeSensitiveHeaders = headers =>
   omit((process.env.SENSITIVE_HTTP_HEADERS || '').split(','), headers);
 
-/* eslint class-methods-use-this: ["error", { "exceptMethods": ["write"] }] */
 class LoggerStream {
   write(message) {
     logger.info(message.substring(0, message.lastIndexOf('\n')));

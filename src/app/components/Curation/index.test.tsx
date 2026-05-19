@@ -143,8 +143,8 @@ describe('Curation', () => {
 
   it.each(
     Object.entries(components),
-  )(`should render a %s component`, // @ts-expect-error test props types are incompatible now with the updated kyrgyz home page fixture containing billboards
-  (testId: string, { // testId is the key in the components object above
+  )(`should render a %s component`, (testId: string, { // @ts-expect-error test props types are incompatible now with the updated kyrgyz home page fixture containing billboards
+    // testId is the key in the components object above
     visualStyle,
     visualProminence,
     summaries,
