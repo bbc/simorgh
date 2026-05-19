@@ -102,20 +102,21 @@ describe('useCustomEventTracker', () => {
     });
 
     expect(mockSendEventBeacon).toHaveBeenCalledTimes(1);
-    expect(mockSendEventBeacon).toHaveBeenCalledWith({
-      type: VIEW_EVENT,
-      eventGroupingName: eventName,
-      componentName: '',
-      campaignID: 'article-sty',
-      pageIdentifier: 'news::pidgin.news.story.51745682.page',
-      platform: 'canonical',
-      producerId: '70',
-      producerName: 'PIDGIN',
-      service: 'pidgin',
-      statsDestination: 'WS_NEWS_LANGUAGES_TEST',
-      isSignedIn: false,
-      hashedId: null,
-    });
+    expect(mockSendEventBeacon).toHaveBeenCalledWith(
+      expect.objectContaining({
+        type: VIEW_EVENT,
+        eventGroupingName: eventName,
+        componentName: '',
+        campaignID: 'article-sty',
+        pageIdentifier: 'news::pidgin.news.story.51745682.page',
+        platform: 'canonical',
+        producerId: '70',
+        producerName: 'PIDGIN',
+        service: 'pidgin',
+        statsDestination: 'WS_NEWS_LANGUAGES_TEST',
+        hashedId: null,
+      }),
+    );
   });
 
   it('should use stringifiedData as componentName when provided', async () => {

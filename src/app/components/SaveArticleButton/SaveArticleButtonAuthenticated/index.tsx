@@ -24,9 +24,9 @@ const SaveArticleButtonAuthenticated = ({
     articlePageData,
   });
 
-const clickComponentName = `save-article-button-click-${
-  isSaved ? UASAction.REMOVE : UASAction.SAVE
-}`;
+  const clickComponentName = `save-article-button-click-${
+    isSaved ? UASAction.REMOVE : UASAction.SAVE
+  }`;
 
   const viewTracker = useViewTracker({
     componentName: 'save-article-button-view',

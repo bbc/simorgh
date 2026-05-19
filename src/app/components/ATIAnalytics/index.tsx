@@ -1,18 +1,18 @@
 import { use } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
+import { AccountContext } from '#contexts/AccountContext';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import CanonicalATIAnalytics from './canonical';
 import AmpATIAnalytics from './amp';
 import AmpGeo from '../../legacy/components/AmpGeo';
 import { ATIProps } from './types';
 import buildReverbParams from './params';
-import useUserTrackingData from '../../hooks/useUserTrackingData';
 
 const ATIAnalytics = ({ atiData = {} }: ATIProps) => {
   const requestContext = use(RequestContext);
   const serviceContext = use(ServiceContext);
   const { isAmp } = requestContext;
-  const { isSignedIn, hashedId } = useUserTrackingData();
+  const { isSignedIn, hashedUserId: hashedId } = use(AccountContext);
 
   const reverbParams = buildReverbParams({
     requestContext,

@@ -1,8 +1,8 @@
 import { createContext, PropsWithChildren, use, useMemo } from 'react';
 
+import { AccountContext } from '#contexts/AccountContext';
 import { RequestContext } from '../RequestContext';
 import useToggle from '../../hooks/useToggle';
-import useUserTrackingData from '../../hooks/useUserTrackingData';
 import {
   ARTICLE_PAGE,
   MOST_READ_PAGE,
@@ -88,8 +88,7 @@ export const EventTrackingContextProvider = ({
   const serviceContext = use(ServiceContext);
   const { atiAnalyticsProducerId, atiAnalyticsProducerName } = serviceContext;
 
-  const { isSignedIn, hashedId } = useUserTrackingData();
-
+  const { isSignedIn, hashedUserId } = use(AccountContext);
   const { enabled: eventTrackingIsEnabled } = useToggle('eventTracking');
 
   const trackingProps = useMemo(() => {
@@ -105,7 +104,7 @@ export const EventTrackingContextProvider = ({
         producerName: atiAnalyticsProducerName,
         statsDestination,
         isSignedIn,
-        hashedId,
+        hashedId: hashedUserId || null,
       };
     }
     return null;
@@ -118,7 +117,7 @@ export const EventTrackingContextProvider = ({
     platform,
     statsDestination,
     isSignedIn,
-    hashedId,
+    hashedUserId,
   ]);
 
   if (!eventTrackingIsEnabled || !atiData) {
