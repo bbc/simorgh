@@ -41,7 +41,7 @@ export default async function getIdctaConfig(
     return null;
   }
 
-  if (!config?.['id-availability']) {
+  if (!config?.['id-availability'] || !config?.identity.idSignedInCookieName) {
     logger.error('Invalid IDCTA config: missing required fields', {
       config,
     });
@@ -59,7 +59,7 @@ export default async function getIdctaConfig(
     settings_url: config.settings_url,
     signout_url: config.signout_url,
     foryou_url: config.foryou_url,
-    identity: { idSignedInCookieName: config.identity?.idSignedInCookieName },
+    identity: { idSignedInCookieName: config.identity.idSignedInCookieName },
     initialIsSignedIn,
   };
 }
