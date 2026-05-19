@@ -111,7 +111,7 @@ export const service: DefaultServiceConfig = {
       },
       account: {
         signIn: 'साइन इन',
-        forYou: 'आपका अकाउंट',
+        forYou: 'आपका एकाउंट',
         register: 'रजिस्टर',
       },
       accountPromoBanner: {

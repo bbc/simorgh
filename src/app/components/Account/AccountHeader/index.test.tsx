@@ -53,7 +53,7 @@ describe('AccountHeader', () => {
   it('shows Settings when signed in', async () => {
     renderWithProviders({ initialIsSignedIn: true });
 
-    const link = await screen.findByRole('link', { name: 'आपका अकाउंट' });
+    const link = await screen.findByRole('link', { name: 'आपका एकाउंट' });
     expect(link).toHaveAttribute(
       'href',
       expect.stringContaining('https://example.com/settings'),
