@@ -217,9 +217,7 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
       />
       <main>
         <Header
-          showLiveLabel={
-            showSportData && !!isSportDataLive ? isSportDataLive : isLive
-          }
+          showLiveLabel={showSportData ? (isSportDataLive ?? isLive) : isLive}
           title={showSportData && !!sportDataTitle ? sportDataTitle : title}
           description={description}
           imageUrl={imageUrl}

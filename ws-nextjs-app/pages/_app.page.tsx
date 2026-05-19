@@ -28,6 +28,7 @@ import addOnionLocationHeader from '#nextjs/utilities/addOnionLocationHeader';
 import addVaryHeader from '#nextjs/utilities/addVaryHeader';
 import addLinkHeader from '#nextjs/utilities/addLinkHeader';
 import { AccountProvider } from '#app/contexts/AccountContext';
+import QueryProvider from '#app/contexts/QueryContext';
 import getIdctaConfig from '#app/lib/idcta/getIdctaConfig';
 import { IdctaConfig } from '#app/models/types/account';
 import fetchConfig from '#app/lib/utilities/fetchConfig';
@@ -198,17 +199,19 @@ export default class CustomApp extends App<Props> {
                     {RenderChildrenOrError}
                   </ThemeProvider>
                 ) : (
-                  <UserContextProvider>
-                    <ThemeProvider service={service} variant={variant}>
-                      <PageWrapper
-                        navItems={navItems}
-                        pageData={pageData}
-                        status={status}
-                      >
-                        {RenderChildrenOrError}
-                      </PageWrapper>
-                    </ThemeProvider>
-                  </UserContextProvider>
+                  <QueryProvider>
+                    <UserContextProvider>
+                      <ThemeProvider service={service} variant={variant}>
+                        <PageWrapper
+                          navItems={navItems}
+                          pageData={pageData}
+                          status={status}
+                        >
+                          {RenderChildrenOrError}
+                        </PageWrapper>
+                      </ThemeProvider>
+                    </UserContextProvider>
+                  </QueryProvider>
                 )}
               </EventTrackingContextProvider>
             </AccountProvider>
