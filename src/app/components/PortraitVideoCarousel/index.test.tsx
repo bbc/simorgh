@@ -1,4 +1,5 @@
 import { act } from 'react';
+import { service as pidginConfig } from '#lib/config/services/pidgin';
 import Component from '.';
 import { screen, render } from '../react-testing-library-with-providers';
 import fixture from './fixture';
@@ -6,6 +7,8 @@ import fixture from './fixture';
 const eventTrackingData = {
   componentName: 'portrait-video-carousel',
 };
+
+const defaultAriaLabel = pidginConfig.default.translations.media.watch;
 
 describe('PortraitVideoCarousel', () => {
   it('Should contain the expected number of portrait video blocks', async () => {
@@ -27,6 +30,65 @@ describe('PortraitVideoCarousel', () => {
 
     expect(screen.getByRole('heading', { level: 2 })).toHaveTextContent(
       fixture.title,
+    );
+  });
+
+  it('Should render a Subheading with a link when link prop is provided', async () => {
+    const link = '/test-link';
+    await act(async () => {
+      render(
+        <Component
+          {...fixture}
+          link={link}
+          eventTrackingData={eventTrackingData}
+        />,
+      );
+    });
+
+    const heading = screen.getByRole('heading', { level: 2 });
+    expect(heading).toHaveTextContent(fixture.title);
+
+    const linkElement = screen.getByRole('link');
+    expect(linkElement).toHaveAttribute('href', link);
+  });
+
+  it('Should render without a title', async () => {
+    await act(async () => {
+      render(
+        <Component
+          {...fixture}
+          title={undefined}
+          eventTrackingData={eventTrackingData}
+        />,
+        { service: 'pidgin' },
+      );
+    });
+
+    expect(screen.queryByRole('heading', { level: 2 })).not.toBeInTheDocument();
+    expect(screen.getByTestId('portrait-video-carousel')).toHaveAttribute(
+      'aria-label',
+      defaultAriaLabel,
+    );
+  });
+
+  it('Should render without a title if link is provided but title is undefined', async () => {
+    const link = '/test-link';
+    await act(async () => {
+      render(
+        <Component
+          {...fixture}
+          title={undefined}
+          link={link}
+          eventTrackingData={eventTrackingData}
+        />,
+        { service: 'pidgin' },
+      );
+    });
+
+    expect(screen.queryByRole('heading', { level: 2 })).not.toBeInTheDocument();
+    expect(screen.getByTestId('portrait-video-carousel')).toHaveAttribute(
+      'aria-label',
+      defaultAriaLabel,
     );
   });
 

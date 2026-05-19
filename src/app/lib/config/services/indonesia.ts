@@ -67,6 +67,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      matchSummary: 'Ringkasan Pertandingan',
       and: 'dan',
       readTime: {
         readTimePrefix: 'Waktu membaca',
@@ -86,6 +87,7 @@ export const service: DefaultServiceConfig = {
       topicDiscovery: {
         heading: 'Temukan lebih banyak',
         moreFromTopic: 'Selengkapnya dari {topic}',
+        fetchErrorMessage: 'Gagal memuat. Silakan coba lagi nanti.',
       },
       currentPage: 'Halaman saat ini',
       skipLinkText: 'Langsung ke konten',

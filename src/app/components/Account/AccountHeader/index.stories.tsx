@@ -1,44 +1,28 @@
-import ThemeProvider from '#app/components/ThemeProvider';
-import { ServiceContextProvider } from '#app/contexts/ServiceContext';
-import { AccountContext } from '#app/contexts/AccountContext';
 import AccountHeader from '.';
 import BrandContainer from '#app/legacy/containers/Brand';
 import metadata from './metadata.json';
 import readme from './README.md';
+import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
 
-type WithProvidersArgs = {
-  isSignedIn: boolean;
-};
-
-const withProviders =
-  ({ isSignedIn }: WithProvidersArgs) =>
-  () => (
-    <ThemeProvider service="hindi">
-      <ServiceContextProvider service="hindi">
-        <AccountContext.Provider
-          value={{
-            isSignedIn,
-            signInUrl: 'https://example.com/signin',
-            forYouUrl: 'https://example.com/for-you',
-            isIdctaAvailable: true,
-            isAccountPromoBannerVisible: true,
-          }}
-        >
-          <BrandContainer>
-            <AccountHeader />
-          </BrandContainer>
-        </AccountContext.Provider>
-      </ServiceContextProvider>
-    </ThemeProvider>
-  );
 export default {
   title: 'Account/AccountHeader',
   component: AccountHeader,
-  parameters: {
-    metadata,
-    docs: { readme },
+  globals: {
+    service: { service: 'hindi', variant: 'default' },
+    idctaConfig: { ...mockIdctaConfig, isSignedIn: false },
   },
+  parameters: { metadata, docs: { readme } },
 };
 
-export const SignedOut = withProviders({ isSignedIn: false });
-export const SignedIn = withProviders({ isSignedIn: true });
+const Container = () => (
+  <BrandContainer>
+    <AccountHeader />
+  </BrandContainer>
+);
+
+export const SignedOut = () => <Container />;
+export const SignedIn = () => <Container />;
+
+SignedIn.globals = {
+  idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: true },
+};

@@ -47,6 +47,7 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      matchSummary: 'खेलको सारांश',
       and: 'र',
       readTime: {
         readTimePrefix: 'पढ्ने समय',

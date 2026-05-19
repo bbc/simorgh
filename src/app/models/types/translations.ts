@@ -1,5 +1,6 @@
 /* eslint-disable camelcase */
 export interface Translations {
+  matchSummary?: string;
   and?: string;
   pagination?: {
     page?: string;
@@ -71,6 +72,7 @@ export interface Translations {
   topicDiscovery?: {
     heading: string;
     moreFromTopic: string;
+    fetchErrorMessage?: string;
   };
   readTime?: Partial<{
     readTimePrefix: string;

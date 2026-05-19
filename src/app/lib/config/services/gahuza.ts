@@ -60,6 +60,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      matchSummary: 'Incamake y’umukino',
       and: 'na',
       readTime: {
         readTimePrefix: 'Igihe co gusoma',

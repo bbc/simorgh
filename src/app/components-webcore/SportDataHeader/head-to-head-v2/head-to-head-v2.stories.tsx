@@ -72,13 +72,12 @@ interface ComponentProps {
   data: StoryData;
   isConciseView?: boolean;
   shouldShowActions?: boolean;
-  maximumContainerScoreDigits?: string;
+  maximumContainerScoreDigits?: number;
   teamBadgePlaceholderFallbackType?: 'badge' | 'flag';
 }
 
-// @ts-expect-error - PS copy and paste
-const baseData = fixtureData.data.sportDataEventContent.content.data
-  .sportDataEvent as StoryData;
+const baseData = fixtureData.data.sportDataEventContent
+  .sportDataEvent as unknown as StoryData;
 
 const Component = ({
   data,
@@ -88,7 +87,6 @@ const Component = ({
   teamBadgePlaceholderFallbackType = 'badge',
 }: ComponentProps) => {
   return (
-    // @ts-expect-error - PS copy and paste
     <HeadToHeadV2
       data={data}
       isConciseView={isConciseView}

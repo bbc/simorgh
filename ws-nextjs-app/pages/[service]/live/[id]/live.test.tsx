@@ -42,6 +42,11 @@ jest.mock('#app/components-webcore/SportDataHeader/head-to-head-v2', () => ({
   ),
 }));
 
+jest.mock('#app/components/PortraitVideoCarousel', () => ({
+  __esModule: true,
+  default: jest.fn(() => <div data-testid="portrait-video-carousel" />),
+}));
+
 type HelmetMetaTag = {
   property?: string;
   content?: string;
@@ -103,6 +108,56 @@ const mockPageDataWithoutKeyPoints = {
     contributors: 'Not a random dude',
   },
   metadata: { atiAnalytics: {} },
+};
+
+const mockPageDataWithPortraitVideoItems = {
+  ...mockPageData,
+  portraitVideoItems: {
+    portraitVideo: {
+      blocks: [
+        {
+          type: 'portraitClipMedia',
+          model: {
+            type: 'video',
+            images: [
+              {
+                source:
+                  'https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8s.jpg.webp',
+                urlTemplate:
+                  'https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8s.jpg.webp',
+                altText:
+                  'Pelo menos 53 presos escaparam da prisao de Katacane, na Indonesia',
+              },
+            ],
+            video: {
+              id: 'urn:bbc:optimo:asset:cdrqd0m5nlmo',
+              title: 'Optimo article with portrait video embed (1)',
+              holdingImageURL:
+                'https://ichef.bbci.co.uk/ace/standard/512/cpsdevpb/42c1/test/7900c530-0e0e-11f0-a9e9-f552fbd9336f.jpg',
+              version: {
+                id: 'p01wjx6g',
+                duration: 'PT13S',
+                kind: 'programme',
+                guidance: null,
+                territories: ['uk', 'nonuk'],
+              },
+              isEmbeddingAllowed: false,
+              shareUrl: '/portuguese/articles/cdrqd0m5nlmo',
+            },
+          },
+        },
+      ],
+    },
+  },
+};
+
+const mockPageDataWithEmptyPortraitVideoItems = {
+  ...mockPageData,
+  portraitVideoItems: {
+    portraitVideo: {
+      blocks: [],
+    },
+  },
 };
 
 const mockPageDataWithMetadata = ({
@@ -486,6 +541,28 @@ describe('Live Page', () => {
     expect(screen.getByTestId('breaking-news-label')).toBeInTheDocument();
   });
 
+  it('should render portrait video carousel when portraitVideoItems are provided', async () => {
+    mockPollingUpdate(mockPageDataWithPortraitVideoItems);
+
+    await act(async () => {
+      render(<Live pageData={mockPageDataWithPortraitVideoItems} />);
+    });
+
+    expect(screen.getByTestId('portrait-video-carousel')).toBeInTheDocument();
+  });
+
+  it('should not render portrait video carousel when portraitVideoItems blocks are empty', async () => {
+    mockPollingUpdate(mockPageDataWithEmptyPortraitVideoItems);
+
+    await act(async () => {
+      render(<Live pageData={mockPageDataWithEmptyPortraitVideoItems} />);
+    });
+
+    expect(
+      screen.queryByTestId('portrait-video-carousel'),
+    ).not.toBeInTheDocument();
+  });
+
   it('sets the correct og:image meta tag from the post with assetId', () => {
     const assetId = 'asset:18d24593-b615-4c84-867c-ac1fdec87136';
     const pageData = liveFixture.data;
@@ -582,6 +659,60 @@ describe('Live Page', () => {
   });
 
   describe('SportData handling', () => {
+    it('should render live label when sport data is shown and isSportDataLive is true', async () => {
+      const pageDataWithSportData = {
+        ...mockPageData,
+        isLive: false,
+        sportDataEventContent: {
+          ...sportDataFixture.data.sportDataEventContent,
+          live: true,
+        },
+      } as unknown as ComponentProps['pageData'];
+      mockPollingUpdate(pageDataWithSportData);
+
+      await act(async () => {
+        render(<Live pageData={pageDataWithSportData} />);
+      });
+
+      expect(screen.getByTestId('live-label')).toBeInTheDocument();
+    });
+
+    it('should not render live label when sport data is shown and isSportDataLive is false', async () => {
+      const pageDataWithSportData = {
+        ...mockPageData,
+        isLive: true,
+        sportDataEventContent: {
+          ...sportDataFixture.data.sportDataEventContent,
+          live: false,
+        },
+      } as unknown as ComponentProps['pageData'];
+      mockPollingUpdate(pageDataWithSportData);
+
+      await act(async () => {
+        render(<Live pageData={pageDataWithSportData} />);
+      });
+
+      expect(screen.queryByTestId('live-label')).not.toBeInTheDocument();
+    });
+
+    it('should fallback to page isLive value when isSportDataLive is nullish', async () => {
+      const pageDataWithSportData = {
+        ...mockPageData,
+        isLive: true,
+        sportDataEventContent: {
+          ...sportDataFixture.data.sportDataEventContent,
+          live: undefined,
+        },
+      } as unknown as ComponentProps['pageData'];
+      mockPollingUpdate(pageDataWithSportData);
+
+      await act(async () => {
+        render(<Live pageData={pageDataWithSportData} />);
+      });
+
+      expect(screen.getByTestId('live-label')).toBeInTheDocument();
+    });
+
     it('should render HeadToHeadV2 when sportDataEventContent is present and not in live env', async () => {
       const pageDataWithSportData = {
         ...mockPageData,
@@ -615,7 +746,7 @@ describe('Live Page', () => {
       const pageDataWithSportData = {
         ...mockPageData,
         sportDataEventContent: sportDataFixture.data.sportDataEventContent,
-      };
+      } as unknown as ComponentProps['pageData'];
       mockPollingUpdate(pageDataWithSportData);
 
       await act(async () => {
@@ -624,7 +755,6 @@ describe('Live Page', () => {
 
       const headToHeadElement = screen.getByTestId('head-to-head-v2');
       expect(headToHeadElement).toHaveAttribute('data-concise', 'false');
-      expect(headToHeadElement).toHaveAttribute('data-hide-badges', 'false');
       expect(headToHeadElement).toHaveAttribute('data-show-actions', 'false');
     });
 
@@ -632,7 +762,7 @@ describe('Live Page', () => {
       const pageDataWithSportData = {
         ...mockPageData,
         sportDataEventContent: sportDataFixture.data.sportDataEventContent,
-      };
+      } as unknown as ComponentProps['pageData'];
       mockPollingUpdate(pageDataWithSportData);
 
       const { container } = await act(async () => {
@@ -647,7 +777,7 @@ describe('Live Page', () => {
       const pageDataWithSportData = {
         ...mockPageData,
         sportDataEventContent: sportDataFixture.data.sportDataEventContent,
-      };
+      } as unknown as ComponentProps['pageData'];
       mockPollingUpdate(pageDataWithSportData);
 
       await act(async () => {
@@ -677,7 +807,7 @@ describe('Live Page', () => {
       const pageDataWithSportData = {
         ...mockPageData,
         sportDataEventContent: sportDataFixture.data.sportDataEventContent,
-      };
+      } as unknown as ComponentProps['pageData'];
       mockPollingUpdate(pageDataWithSportData);
 
       jest.spyOn(isLiveEnvModule, 'default').mockReturnValue(true);

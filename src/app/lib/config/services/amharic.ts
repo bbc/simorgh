@@ -60,6 +60,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      matchSummary: 'የጨዋታ ማጠቃለያ',
       and: 'እና',
       readTime: {
         readTimePrefix: 'የንባብ ጊዜ',
