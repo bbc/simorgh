@@ -12,6 +12,7 @@ export default {
   args: {
     onClick: () => {},
     isLoading: false,
+    isMutating: false,
     isSaved: false,
     disabled: false,
   },
@@ -26,7 +27,7 @@ export const Unsaved = {
 export const Loading = {
   args: {
     isLoading: true,
-    buttonText: 'Saving',
+    buttonText: 'Loading',
   },
 };
 
@@ -35,5 +36,20 @@ export const Saved = {
     isSaved: true,
     buttonText: 'Saved to My News',
     removeText: 'Remove',
+  },
+};
+
+export const Saving = {
+  args: {
+    isMutating: true,
+    buttonText: 'Saving',
+  },
+};
+
+export const Removing = {
+  args: {
+    isMutating: true,
+    isSaved: true,
+    buttonText: 'Removing',
   },
 };

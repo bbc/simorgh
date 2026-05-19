@@ -10,6 +10,7 @@ import styles from './index.styles';
 export interface SaveButtonProps {
   onClick: () => void;
   isLoading?: boolean;
+  isMutating?: boolean;
   isSaved?: boolean;
   disabled?: boolean;
   buttonText: string;
@@ -20,6 +21,7 @@ export interface SaveButtonProps {
 const SaveButton = ({
   onClick,
   isLoading = false,
+  isMutating = false,
   isSaved = false,
   disabled = false,
   buttonText,
@@ -30,19 +32,20 @@ const SaveButton = ({
 
   return (
     <button
-      css={styles.buttonWrapper}
+      css={(styles.buttonWrapper, isMutating && styles.mutatingState)}
       type="button"
       onClick={onClick}
-      disabled={disabled || isLoading}
+      disabled={disabled || isLoading || isMutating}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onFocus={() => setIsHovered(true)}
       onBlur={() => setIsHovered(false)}
       {...(testId && { 'data-testid': testId })}
     >
-      {isLoading && <Spinner css={styles.buttonAnimation} />}
-      {!isLoading && !isSaved && <BookmarkIcon />}
+      {(isLoading || isMutating) && <Spinner css={styles.buttonAnimation} />}
+      {!isLoading && !isMutating && !isSaved && <BookmarkIcon />}
       {!isLoading &&
+        !isMutating &&
         isSaved &&
         (isHovered ? <Close width="20" height="20" /> : <FilledBookmarkIcon />)}
       {isHovered && isSaved ? removeText : buttonText}
