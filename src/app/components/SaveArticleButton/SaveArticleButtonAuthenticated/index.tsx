@@ -25,7 +25,7 @@ const SaveArticleButtonAuthenticated = ({
   if (!saveArticleButton) return null;
 
   if (error) {
-    // eslint-disable-next-line no-console
+    // biome-ignore lint/suspicious/noConsole: we want this
     console.log('Error fetching saved status for article:', {
       articleId,
       error,

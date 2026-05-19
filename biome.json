@@ -136,7 +136,24 @@
                 "noForIn": "error",
                 "noLoopFunc": "error",
                 "useImportsFirst": "error",
-                "useThisInClassMethods": "error"
+                "useThisInClassMethods": "error",
+                "noUnknownAttribute": {
+                    "level": "error",
+                    "options": {
+                        "ignore": [
+                            "css",
+                            "amp-boilerplate",
+                            "amp-custom",
+                            "custom-element",
+                            "custom-template",
+                            "fallback",
+                            "hrefLang",
+                            "amp-access-hide",
+                            "amp-access",
+                            "amp-access-hide"
+                        ]
+                    }
+                }
             },
 			"performance": { "noAwaitInLoops": "error" },
 			"security": {
@@ -248,14 +265,15 @@
 				"noCommentText": "error",
 				"noCompareNegZero": "error",
 				"noConsole": {
-                  "options": {
-                    "allow": [
-                      "assert",
-                      "error",
-                      "info",
-                      "warn"
-                    ]
-                  }
+				    "level": "error",
+                    "options": {
+                      "allow": [
+                        "assert",
+                        "error",
+                        "info",
+                        "warn"
+                      ]
+                    }
                 },
 				"noControlCharactersInRegex": "error",
 				"noDebugger": "error",

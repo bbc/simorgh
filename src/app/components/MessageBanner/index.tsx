@@ -26,7 +26,6 @@ const MessageBanner = ({
   eventTrackingData,
 }: MessageBannerProps) => {
   // Remove itemCount from groupTracker as it's not needed for MessageBanner
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { itemCount, ...groupTrackerRest } =
     eventTrackingData?.groupTracker || {};
 
