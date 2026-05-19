@@ -39,6 +39,8 @@ const useServiceWorkerRegistration = ({
 
     // If register is not a function, skip
     if (typeof sw.register !== 'function') {
+      // eslint-disable-next-line no-console
+      console.warn('ServiceWorker API exists but register() is not available.');
       return;
     }
 
@@ -64,7 +66,10 @@ const useServiceWorkerRegistration = ({
       });
     };
 
-    initializeServiceWorker().catch(_err => {});
+    initializeServiceWorker().catch(err => {
+      // eslint-disable-next-line no-console
+      console.error('Service worker initialization failed', err);
+    });
   }, [service, normalizedSwPath]);
 };
 

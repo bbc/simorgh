@@ -29,7 +29,7 @@ const PageCompleteTracking = () => {
       // @ts-expect-error current element won't be null
       observer.current.disconnect();
     };
-  }, [initObserver]);
+  }, []);
 
   useEffect(() => {
     if (sendPageCompleteEvent) {

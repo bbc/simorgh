@@ -12,7 +12,9 @@ const useOfflinePageFlag = () => {
     if (typeof window === 'undefined') return;
     try {
       localStorage.setItem(OFFLINE_VISIT_FLAG, 'true');
-    } catch (_error) {}
+    } catch (error) {
+      console.warn('useOfflinePageFlag', error);
+    }
   }, []);
 };
 

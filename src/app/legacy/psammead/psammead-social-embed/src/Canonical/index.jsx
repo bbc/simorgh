@@ -20,7 +20,7 @@ const OEmbed = styled.div`
   ${({ isLive }) => (isLive ? 'flex-wrap: wrap;' : '')}
 `;
 
-const _getOnRenderError = providerName =>
+const getOnRenderError = providerName =>
   `onRender callback function not implemented for ${providerName}`;
 
 /**
@@ -43,7 +43,7 @@ export const providers = (provider, isLive) =>
           window.instgrm.Embeds.process();
         }
       },
-      onLibraryLoad: () => {},
+      onLibraryLoad: () => console.error(getOnRenderError('Instagram')),
     },
     twitter: {
       script: 'https://platform.twitter.com/widgets.js',
@@ -115,7 +115,7 @@ export const providers = (provider, isLive) =>
       }
     `,
       enrich: () => {},
-      onLibraryLoad: () => {},
+      onLibraryLoad: () => console.error(getOnRenderError('YouTube')),
     },
     tiktok: {
       script: `https://www.tiktok.com/embed.js?t=${Date.now()}`,
@@ -126,7 +126,7 @@ export const providers = (provider, isLive) =>
       }
     `,
       enrich: () => {},
-      onLibraryLoad: () => {},
+      onLibraryLoad: () => console.error(getOnRenderError('TikTok')),
     },
     facebook: {
       script: 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v15.0',
@@ -152,7 +152,7 @@ export const providers = (provider, isLive) =>
       }
     `,
       enrich: () => {},
-      onLibraryLoad: () => {},
+      onLibraryLoad: () => console.error(getOnRenderError('Facebook')),
     },
   })[provider];
 
@@ -168,7 +168,7 @@ const CanonicalEmbed = ({ provider, oEmbed, onRender = null }) => {
       onLibraryLoad(onRender);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [hasLoadedLibrary, onRender, onLibraryLoad]);
+  }, [hasLoadedLibrary]);
 
   return (
     <OEmbed

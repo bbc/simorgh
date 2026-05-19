@@ -13,7 +13,7 @@ describe('addInlineScript', () => {
   });
 
   it('should render the script as expected when script is a function', () => {
-    const script = () => {};
+    const script = () => console.log('hello world');
 
     const inlineScript = addInlineScript({ script });
 
@@ -59,7 +59,7 @@ describe('addInlineScript', () => {
     },
   ])('$title', ({ params, expectedParamOutput }) => {
     /* @ts-expect-error:   'printString' is declared but its value is never read. */
-    const script = (printString: string) => {};
+    const script = (printString: string) => console.log(printString);
 
     const inlineScript = addInlineScript({
       script,

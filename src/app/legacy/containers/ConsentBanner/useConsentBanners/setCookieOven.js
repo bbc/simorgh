@@ -11,6 +11,8 @@ export default async policy => {
 
     try {
       await Promise.all(cookieOvenEndpoints.map(endpoint => fetch(endpoint)));
-    } catch (_e) {}
+    } catch (e) {
+      console.error(e);
+    }
   }
 };

@@ -34,7 +34,9 @@ const usePWAOfflineTracking = () => {
 
       trackOfflinePageViewEvent(networkType);
       localStorage.removeItem(OFFLINE_VISIT_FLAG);
-    } catch (_error) {}
+    } catch (_error) {
+      console.error('usePWAOfflineTracking', _error);
+    }
   }, [isOnline, networkType, trackOfflinePageViewEvent]);
 };
 

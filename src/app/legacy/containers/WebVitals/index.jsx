@@ -24,6 +24,7 @@ const WebVitals = ({ pageType }) => {
     : null;
 
   if (!wsPageType) {
+    console.error('Web Vitals: No page type to report');
   }
 
   const webVitalsConfig = {
