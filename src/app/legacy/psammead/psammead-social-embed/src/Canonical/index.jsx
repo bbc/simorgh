@@ -1,5 +1,5 @@
+// biome-ignore-all lint/suspicious/noEmptyBlockStatements: we want this
 // biome-ignore-all lint/security/noDangerouslySetInnerHtml: this is fine
-/* eslint-disable no-console */
 import { memo, use, useEffect } from 'react';
 import styled from '@emotion/styled';
 import { RequestContext } from '#app/contexts/RequestContext';

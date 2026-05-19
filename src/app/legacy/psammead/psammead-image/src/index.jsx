@@ -1,3 +1,4 @@
+// biome-ignore-all lint/suspicious/noEmptyBlockStatements: we want this
 import { use } from 'react';
 import styled from '@emotion/styled';
 import { keyframes, css } from '@emotion/react';

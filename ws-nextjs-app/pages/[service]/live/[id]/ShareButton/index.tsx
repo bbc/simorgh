@@ -1,4 +1,5 @@
 // biome-ignore-all lint/a11y/useValidAriaRole: we want this
+// biome-ignore-all lint/suspicious/noEmptyBlockStatements: we want this
 import type { MouseEvent } from 'react';
 
 import { use, useRef } from 'react';

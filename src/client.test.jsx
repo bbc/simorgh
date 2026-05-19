@@ -1,3 +1,4 @@
+// biome-ignore-all lint/suspicious/noEmptyBlockStatements: we want this
 import * as reactDom from 'react-dom/client';
 import '#testHelpers/loggerMock';
 

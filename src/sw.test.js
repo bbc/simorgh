@@ -1,3 +1,4 @@
+// biome-ignore-all lint/suspicious/noEmptyBlockStatements: we want this
 /* eslint-disable no-restricted-globals */
 /* eslint-disable import/no-unresolved */
 import fs from 'fs';

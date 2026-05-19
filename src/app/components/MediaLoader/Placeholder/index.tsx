@@ -45,7 +45,7 @@ const MediaPlayerPlaceholder = ({
       />
       <PlayButton
         css={styles.playButton}
-        // eslint-disable-next-line @typescript-eslint/no-empty-function
+        // biome-ignore lint/suspicious/noEmptyBlockStatements: we want this
         onClick={() => {}}
         title={title}
         datetime={datetime}

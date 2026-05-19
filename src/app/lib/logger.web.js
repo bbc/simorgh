@@ -1,3 +1,4 @@
+// biome-ignore-all lint/suspicious/noEmptyBlockStatements: we want this
 // biome-ignore-all lint/style/noCommonJs: we want this
 class Logger {
   constructor() {

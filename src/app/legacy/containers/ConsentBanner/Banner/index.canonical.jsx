@@ -1,3 +1,4 @@
+// biome-ignore-all lint/suspicious/noEmptyBlockStatements: we want this
 import { use, useEffect, useRef } from 'react';
 import styled from '@emotion/styled';
 import { ConsentBanner } from '#psammead/psammead-consent-banner/src';

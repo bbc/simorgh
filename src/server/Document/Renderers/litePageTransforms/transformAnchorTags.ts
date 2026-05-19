@@ -72,7 +72,7 @@ export default (html: string) => {
       }
     });
   } catch (_error) {
-    // eslint-disable-next-line @typescript-eslint/no-empty-function
+    // biome-ignore lint/suspicious/noEmptyBlockStatements: we want this
     (() => {})();
   }
 

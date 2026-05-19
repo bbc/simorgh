@@ -1,3 +1,4 @@
+// biome-ignore-all lint/suspicious/noEmptyBlockStatements: we want this
 import { render } from '../../../../components/react-testing-library-with-providers';
 import Banner from './index.canonical';
 

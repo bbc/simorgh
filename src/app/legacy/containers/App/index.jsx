@@ -1,3 +1,4 @@
+// biome-ignore-all lint/suspicious/noEmptyBlockStatements: we want this
 // biome-ignore-all lint/nursery/useThisInClassMethods: we want this
 /*
  * © Jordan Tart https://github.com/jtart

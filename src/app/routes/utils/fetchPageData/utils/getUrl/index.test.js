@@ -1,3 +1,4 @@
+// biome-ignore-all lint/suspicious/noEmptyBlockStatements: we want this
 import getUrl from '.';
 
 describe('getUrl', () => {

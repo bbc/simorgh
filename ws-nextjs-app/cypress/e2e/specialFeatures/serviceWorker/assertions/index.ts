@@ -1,4 +1,4 @@
-/* eslint-disable no-console */
+// biome-ignore-all lint/suspicious/noEmptyBlockStatements: we want this
 /* eslint-disable no-unused-expressions */
 import { Services } from '#app/models/types/global';
 

@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-empty-function */
+// biome-ignore-all lint/suspicious/noEmptyBlockStatements: we want this
 import path from 'ramda/src/path';
 import getAppEnv from '../../../support/helpers/getAppEnv';
 import { mapsWithPreroll, mapsWithoutPreroll } from './config';

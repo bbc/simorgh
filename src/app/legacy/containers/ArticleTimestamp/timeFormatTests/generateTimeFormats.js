@@ -1,3 +1,4 @@
+// biome-ignore-all lint/suspicious/noEmptyBlockStatements: we want this
 import fs from 'fs';
 import path from 'path';
 import { timestampsFixtures, format } from './testUtils';
