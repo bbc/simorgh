@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { HeadToHeadV2Data } from '#app/components-webcore/SportDataHeader/head-to-head-v2/types';
 import makeRequest from './makeRequest/makeRequest';
-// import fakeRequest from './fakeRequest';
 
 export const POLLING_INTERVAL = 15000; // 15s - same polling interval as useLivePagePolling
 
@@ -9,7 +8,7 @@ const useSportDataPolling = (
   sportData: HeadToHeadV2Data,
   enableFeature: boolean,
 ) => {
-  const sportDataUrn = sportData.urn;
+  const sportDataEventUrn = sportData.urn;
   const [currentSportData, setCurrentData] =
     useState<HeadToHeadV2Data>(sportData);
 
@@ -17,7 +16,7 @@ const useSportDataPolling = (
     const timerId = setInterval(async () => {
       if (enableFeature === false) return;
 
-      const polledSportsData = await makeRequest(sportDataUrn);
+      const polledSportsData = await makeRequest(sportDataEventUrn);
 
       if (polledSportsData != null) {
         setCurrentData(polledSportsData);
@@ -25,7 +24,7 @@ const useSportDataPolling = (
     }, POLLING_INTERVAL);
 
     return () => clearInterval(timerId);
-  }, [enableFeature, sportDataUrn]);
+  }, [enableFeature, sportDataEventUrn]);
 
   return { currentSportData };
 };
