@@ -55,6 +55,18 @@ describe('Navigation - Canonical', () => {
       expect(dropdown).toHaveTextContent('Dropdown Items');
     });
 
+    it('should close the menu when focus moves away from the menu area', () => {
+      const { getByRole } = render(navigation);
+
+      const menuButton = getByRole('button', { name: 'menu' });
+      fireEvent.click(menuButton);
+      expect(menuButton).toHaveAttribute('aria-expanded', 'true');
+
+      fireEvent.focusOut(menuButton, { relatedTarget: document.body });
+
+      expect(menuButton).toHaveAttribute('aria-expanded', 'false');
+    });
+
     describe('Top Bar OJs', () => {
       it.each([
         [
