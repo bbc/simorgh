@@ -15,6 +15,8 @@ export interface SavedArticle {
   imageUrl: string;
 }
 
+const USER_ID_COOKIE_KEY = 'ckns_sylphid';
+
 const FAVOURITES_CONFIG = {
   activityType: 'favourites',
   resourceDomain: 'world-service-news',
@@ -91,6 +93,7 @@ const buildPromoImageUrl = (promoImageObj?: {
 };
 
 export {
+  USER_ID_COOKIE_KEY,
   FAVOURITES_CONFIG,
   buildGlobalId,
   createFavouritesPayload,

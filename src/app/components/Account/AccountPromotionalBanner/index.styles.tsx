@@ -1,7 +1,15 @@
 import { type Theme, css } from '@emotion/react';
 import pixelsToRem from '#app/utilities/pixelsToRem';
+import { DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS } from './utilities';
 
 export default {
+  bannerWrapper: () =>
+    css({
+      display: 'none',
+      [`.${DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS} &`]: {
+        display: 'block',
+      },
+    }),
   callToActionLink: ({ mq }) =>
     css({
       padding: '1rem',

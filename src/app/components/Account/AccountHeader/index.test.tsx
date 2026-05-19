@@ -50,7 +50,7 @@ describe('AccountHeader', () => {
     expect(screen.queryByRole('link')).toBeNull();
   });
 
-  it('shows Your Account when signed in', async () => {
+  it('shows Settings when signed in', async () => {
     renderWithProviders({ initialIsSignedIn: true });
 
     const link = await screen.findByRole('link', { name: 'आपका अकाउंट' });
