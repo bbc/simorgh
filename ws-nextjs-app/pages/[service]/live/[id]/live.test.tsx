@@ -29,14 +29,19 @@ jest.mock('#app/lib/utilities/isLive', () => ({
 jest.mock('#app/components-webcore/SportDataHeader/head-to-head-v2', () => ({
   __esModule: true,
   default: jest.fn(
-    ({ data, isConciseView, shouldHideBadges, shouldShowActions }) => (
+    ({
+      initialSportData,
+      isConciseView,
+      shouldHideBadges,
+      shouldShowActions,
+    }) => (
       <div
         data-testid="head-to-head-v2"
         data-concise={String(isConciseView)}
         data-hide-badges={String(shouldHideBadges)}
         data-show-actions={String(shouldShowActions)}
       >
-        {data?.home?.fullName} vs {data?.away?.fullName}
+        {initialSportData?.home?.fullName} vs {initialSportData?.away?.fullName}
       </div>
     ),
   ),
@@ -59,6 +64,7 @@ const mockPageData = {
     block: 'Its a block',
   },
   liveTextStream: {
+    id: 'mock-stream-id',
     content: {
       data: {
         results: [],
@@ -88,6 +94,7 @@ const mockPageDataWithPosts = {
     block: 'Its a block',
   },
   liveTextStream: {
+    id: 'mock-stream-id',
     content: postFixture,
     contributors: 'Not a random dude',
   },
@@ -104,6 +111,7 @@ const mockPageDataWithoutKeyPoints = {
     content: null,
   },
   liveTextStream: {
+    id: 'mock-stream-id',
     content: postFixture,
     contributors: 'Not a random dude',
   },
@@ -116,9 +124,9 @@ const mockPageDataWithPortraitVideoItems = {
     portraitVideo: {
       blocks: [
         {
-          type: 'portraitClipMedia',
+          type: 'portraitClipMedia' as const,
           model: {
-            type: 'video',
+            type: 'video' as const,
             images: [
               {
                 source:
@@ -411,6 +419,7 @@ describe('Live Page', () => {
     const paginatedData = {
       ...mockPageData,
       liveTextStream: {
+        id: 'mock-stream-id',
         content: {
           data: {
             results: [],
@@ -446,6 +455,7 @@ describe('Live Page', () => {
         dateModified: '2024-03-12T11:00:52+00:00',
       },
       liveTextStream: {
+        id: 'mock-stream-id',
         content: {
           data: {
             results: [],
@@ -677,8 +687,7 @@ describe('Live Page', () => {
       expect(screen.getByTestId('live-label')).toBeInTheDocument();
     });
 
-    // TODO before this PR is merged - mock polling for sports data
-    it.skip('should not render live label when sport data is shown and isSportDataLive is false', async () => {
+    it('should not render live label when sport data is shown and isSportDataLive is false', async () => {
       const pageDataWithSportData = {
         ...mockPageData,
         isLive: true,
@@ -718,7 +727,7 @@ describe('Live Page', () => {
       const pageDataWithSportData = {
         ...mockPageData,
         sportDataEventContent: sportDataFixture.data.sportDataEventContent,
-      };
+      } as unknown as ComponentProps['pageData'];
       mockPollingUpdate(pageDataWithSportData);
 
       await act(async () => {
@@ -728,12 +737,11 @@ describe('Live Page', () => {
       expect(screen.getByTestId('head-to-head-v2')).toBeInTheDocument();
     });
 
-    // TODO before this PR is merged - mock polling for sports data
-    it.skip('should pass correct data to HeadToHeadV2 component', async () => {
+    it('should pass correct data to HeadToHeadV2 component', async () => {
       const pageDataWithSportData = {
         ...mockPageData,
         sportDataEventContent: sportDataFixture.data.sportDataEventContent,
-      };
+      } as unknown as ComponentProps['pageData'];
       mockPollingUpdate(pageDataWithSportData);
 
       await act(async () => {
