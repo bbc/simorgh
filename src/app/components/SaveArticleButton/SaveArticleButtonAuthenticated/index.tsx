@@ -1,8 +1,10 @@
-import { use } from 'react';
+import { use, useMemo } from 'react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
 import parseRoute from '#app/routes/utils/parseRoute';
 import useUASButton, { UASAction } from '#app/hooks/useUASButton';
+import useClickTracker from '#app/hooks/useClickTrackerHandler';
+import useViewTracker from '#app/hooks/useViewTracker';
 import SaveButton from '#app/components/SaveButton';
 
 import type { SaveArticleButtonProps } from '../index';
@@ -22,6 +24,25 @@ const SaveArticleButtonAuthenticated = ({
     articlePageData,
   });
 
+  const clickComponentName = useMemo(
+    () =>
+      `save-article-button-click-${
+        isSaved ? UASAction.REMOVE : UASAction.SAVE
+      }`,
+    [isSaved],
+  );
+
+  const viewTracker = useViewTracker({
+    componentName: 'save-article-button-view',
+  });
+
+  const { onClick: onClickTrack } = useClickTracker({
+    componentName: clickComponentName,
+    itemTracker: {
+      resourceId: articleId,
+    },
+  });
+
   if (!saveArticleButton) return null;
 
   if (error) {
@@ -37,20 +58,23 @@ const SaveArticleButtonAuthenticated = ({
     : saveArticleButton.save;
   const buttonText = isLoading ? saveArticleButton.saving : buttonLabel;
 
-  const handleClick = () => {
+  const handleClick = (event?: React.MouseEvent) => {
+    onClickTrack?.(event);
     handleSaveAction(isSaved ? UASAction.REMOVE : UASAction.SAVE);
   };
 
   return (
-    <SaveButton
-      onClick={handleClick}
-      isLoading={isLoading}
-      isSaved={isSaved}
-      disabled={isLoading}
-      buttonText={buttonText}
-      removeText={saveArticleButton.remove}
-      testId="save-article-btn-authorized"
-    />
+    <div {...viewTracker}>
+      <SaveButton
+        onClick={handleClick}
+        isLoading={isLoading}
+        isSaved={isSaved}
+        disabled={isLoading}
+        buttonText={buttonText}
+        removeText={saveArticleButton.remove}
+        testId="save-article-btn-authorized"
+      />
+    </div>
   );
 };
 
