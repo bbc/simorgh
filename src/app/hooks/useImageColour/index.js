@@ -39,7 +39,7 @@ const useImageColour = (
     } catch (_err) {
       setErrorState();
     }
-  }, [url, paletteSize, setErrorState]);
+  }, [url, paletteSize]);
 
   return {
     colour: selectColour({
