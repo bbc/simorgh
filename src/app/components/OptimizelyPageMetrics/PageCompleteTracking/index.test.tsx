@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import type { PropsWithChildren } from 'react';
 import { render, act } from '@testing-library/react';
 import { OptimizelyProvider, type ReactSDKClient } from '@optimizely/react-sdk';

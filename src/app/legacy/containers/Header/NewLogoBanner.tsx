@@ -1,3 +1,4 @@
+// biome-ignore-all lint/a11y/useAnchorContent: we want this
 import { use } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
 import styles from './index.styles';

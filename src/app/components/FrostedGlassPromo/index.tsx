@@ -1,4 +1,4 @@
-/* eslint-disable jsx-a11y/anchor-has-content */
+// biome-ignore-all lint/a11y/useAnchorContent: we want this
 import type { ReactNode } from 'react';
 
 import { type PropsWithChildren, use } from 'react';
@@ -85,7 +85,6 @@ const FrostedGlassPromo = ({
 
   // The ClickableArea component is an anchor ("a") element
   // Anchors cannot be self-closing under the HTML spec
-  /* eslint-disable react/self-closing-comp */
   return (
     <div css={styles.componentWrapper} data-testid={`frosted-promo-${index}`}>
       <a

@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/aria-role */
 import { Children, use, type PropsWithChildren } from 'react';
 import {
   ARTICLE_PAGE,

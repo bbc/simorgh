@@ -30,7 +30,7 @@ describe('getOriginContext', () => {
         .mockImplementation(() => location);
 
       // biome-ignore lint/style/noCommonJs: we want this
-      const getOriginContext = require('./index').default; // eslint-disable-line global-require
+      const getOriginContext = require('./index').default;
 
       expect(getOriginContext(bbcOrigin)).toEqual(expected);
     });
@@ -39,7 +39,7 @@ describe('getOriginContext', () => {
 
 describe('getOriginContext - localhost', () => {
   // biome-ignore lint/style/noCommonJs: we want this
-  const getOriginContext = require('./index').default; // eslint-disable-line global-require
+  const getOriginContext = require('./index').default;
 
   beforeEach(() => {
     process.env.SIMORGH_APP_ENV = 'local';

@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import {
   ARTICLE_PAGE,
   MEDIA_ASSET_PAGE,
