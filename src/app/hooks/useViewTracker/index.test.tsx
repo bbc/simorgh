@@ -1,7 +1,7 @@
-// biome-ignore-all lint/suspicious/noTsIgnore: need to ignore ts errors here
+// biome-ignore-all format: formatting was messing up this file
 
-import { createContext, type ReactNode } from 'react';
-import { OptimizelyProvider, type ReactSDKClient } from '@optimizely/react-sdk';
+import { createContext, ReactNode } from 'react';
+import { OptimizelyProvider, ReactSDKClient } from '@optimizely/react-sdk';
 import {
   renderHook,
   act,
@@ -10,8 +10,8 @@ import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
-import type { ATIData } from '#app/components/ATIAnalytics/types';
-import type { Toggles } from '#app/models/types/global';
+import { ATIData } from '#app/components/ATIAnalytics/types';
+import { Toggles } from '#app/models/types/global';
 import * as serviceContextModule from '../../contexts/ServiceContext';
 import useViewTracker from '.';
 import fixtureData from './fixtureData.json';
@@ -42,13 +42,14 @@ const IntersectionObserver = jest.fn(cb => {
 
 const getObserverInstance = (element: HTMLElement) => {
   try {
-    // @ts-expect-error - Required for testing purposes. Using @ts-expect-error causes github actions to fail.
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore - Required for testing purposes. Using @ts-expect-error causes github actions to fail.
     const [instance] = Array.from(observers).find(([, item]) =>
       item.elements.has(element),
     );
 
     return instance;
-  } catch (_e) {
+  } catch (e) {
     throw new Error('Failed to find IntersectionObserver for element.');
   }
 };
@@ -384,62 +385,62 @@ describe('useViewTracker', () => {
           threshold: 0.8,
           expected: 0.8,
         },
-      ])('should send event to ATI and return correct tracking url when element is $expected or more in view for more than 1 second - $title', async ({
-        threshold,
-        expected,
-      }) => {
-        const { result } = renderHook(
-          () =>
-            useViewTracker({
-              ...trackingData,
-              viewThreshold: threshold,
-            }),
-          {
-            wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
-          },
-        );
-        const element = document.createElement('div');
+      ])(
+        'should send event to ATI and return correct tracking url when element is $expected or more in view for more than 1 second - $title',
+        async ({ threshold, expected }) => {
+          const { result } = renderHook(
+            () =>
+              useViewTracker({
+                ...trackingData,
+                viewThreshold: threshold,
+              }),
+            {
+              wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
+            },
+          );
+          const element = document.createElement('div');
 
-        await result.current.ref(element);
+          await result.current.ref(element);
 
-        const observerInstance = getObserverInstance(element);
+          const observerInstance = getObserverInstance(element);
 
-        act(() => {
-          triggerIntersection({
-            changes: [{ isIntersecting: true }],
-            observer: observerInstance,
+          act(() => {
+            triggerIntersection({
+              changes: [{ isIntersecting: true }],
+              observer: observerInstance,
+            });
           });
-        });
 
-        await act(() => {
-          jest.advanceTimersByTime(1100);
-        });
+          await act(() => {
+            jest.advanceTimersByTime(1100);
+          });
 
-        const [[, options]] = (global.IntersectionObserver as jest.Mock).mock
-          .calls;
+          const [[, options]] = (global.IntersectionObserver as jest.Mock).mock
+            .calls;
 
-        expect(global.IntersectionObserver).toHaveBeenCalledTimes(1);
-        expect(options).toEqual({ threshold: [expected] });
-        expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
-        expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
-          'viewability',
-          '',
-          {
-            event: { action: 'view', category: 'viewability' },
-            group: {
-              name: 'article-sty',
-              type: 'most-read',
+          expect(global.IntersectionObserver).toHaveBeenCalledTimes(1);
+          expect(options).toEqual({ threshold: [expected] });
+          expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
+          expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
+            'viewability',
+            '',
+            {
+              event: { action: 'view', category: 'viewability' },
+              group: {
+                name: 'article-sty',
+                type: 'most-read',
+              },
+              item: {
+                link: 'http://www.bbc.com/pidgin/tori-51745682',
+                name: 'most-read',
+              },
             },
-            item: {
-              link: 'http://www.bbc.com/pidgin/tori-51745682',
-              name: 'most-read',
-            },
-          },
-          undefined,
-          undefined,
-          false,
-        );
-      });
+            undefined,
+            undefined,
+            false,
+          );
+        },
+      );
 
       it('should only send one view event when mutiple elements are viewed', async () => {
         const { result } = renderHook(() => useViewTracker(trackingData), {
@@ -785,53 +786,56 @@ describe('useViewTracker', () => {
               type: 'portrait-video',
             },
           },
-        ])('$title', async ({
-          eventTrackingData,
-          expectedItemEvent,
-          expectedGroupEvent,
-        }) => {
-          const { result } = renderHook(
-            () => useViewTracker(eventTrackingData),
-            {
-              wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
-            },
-          );
-          const element = document.createElement('div');
+        ])(
+          '$title',
+          async ({
+            eventTrackingData,
+            expectedItemEvent,
+            expectedGroupEvent,
+          }) => {
+            const { result } = renderHook(
+              () => useViewTracker(eventTrackingData),
+              {
+                wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
+              },
+            );
+            const element = document.createElement('div');
 
-          await result.current.ref(element);
+            await result.current.ref(element);
 
-          const observerInstance = getObserverInstance(element);
+            const observerInstance = getObserverInstance(element);
 
-          act(() => {
-            triggerIntersection({
-              changes: [{ isIntersecting: true }],
-              observer: observerInstance,
+            act(() => {
+              triggerIntersection({
+                changes: [{ isIntersecting: true }],
+                observer: observerInstance,
+              });
             });
-          });
 
-          await act(() => {
-            jest.advanceTimersByTime(1100);
-          });
+            await act(() => {
+              jest.advanceTimersByTime(1100);
+            });
 
-          const [[, options]] = (global.IntersectionObserver as jest.Mock).mock
-            .calls;
+            const [[, options]] = (global.IntersectionObserver as jest.Mock)
+              .mock.calls;
 
-          expect(global.IntersectionObserver).toHaveBeenCalledTimes(1);
-          expect(options).toEqual({ threshold: [0.5] });
-          expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
-          expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
-            'viewability',
-            '',
-            {
-              event: { action: 'view', category: 'viewability' },
-              group: expectedGroupEvent,
-              item: expectedItemEvent,
-            },
-            undefined,
-            undefined,
-            false,
-          );
-        });
+            expect(global.IntersectionObserver).toHaveBeenCalledTimes(1);
+            expect(options).toEqual({ threshold: [0.5] });
+            expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
+            expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
+              'viewability',
+              '',
+              {
+                event: { action: 'view', category: 'viewability' },
+                group: expectedGroupEvent,
+                item: expectedItemEvent,
+              },
+              undefined,
+              undefined,
+              false,
+            );
+          },
+        );
       });
     });
   });

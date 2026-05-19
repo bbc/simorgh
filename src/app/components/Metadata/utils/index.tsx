@@ -25,7 +25,6 @@ const createIconLinks = (
     if (iconType === 'icon') {
       return (
         <link
-          /* @ts-expect-error:   Property 'key' does not exist on type 'LinkProps & { css?: Interpolation<Theme>; }'.ts(2322) */
           key={key}
           rel="icon"
           type="image/png"
