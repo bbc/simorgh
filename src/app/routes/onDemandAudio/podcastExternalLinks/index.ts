@@ -1,6 +1,6 @@
 import nodeLogger from '#lib/logger.node';
 import { PODCAST_SERVICE_MISSING } from '#lib/logger.const';
-import { PodcastExternalLinksParams, ExternalLinks } from './types';
+import type { PodcastExternalLinksParams, ExternalLinks } from './types';
 
 const logger = nodeLogger(__filename);
 
@@ -32,7 +32,7 @@ export default async ({
       [];
 
     return [...links, getRssLink(brandId), getDownloadLink(versionId)];
-  } catch (err) {
+  } catch (_err) {
     logger.warn(PODCAST_SERVICE_MISSING, {
       service,
       brandId,

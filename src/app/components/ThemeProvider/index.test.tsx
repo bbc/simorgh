@@ -1,9 +1,9 @@
 import { render, act } from '@testing-library/react';
-import { css, Theme } from '@emotion/react';
+import { css, type Theme } from '@emotion/react';
 
 import SERVICES from '#app/lib/config/services';
 import defaultServiceVariants from '#app/lib/config/services/defaultServiceVariants';
-import { Services } from '#app/models/types/global';
+import type { Services } from '#app/models/types/global';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import Brand from '#app/legacy/containers/Brand';
 import ThemeProvider from '.';

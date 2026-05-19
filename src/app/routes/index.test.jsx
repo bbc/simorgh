@@ -15,7 +15,6 @@ import onDemandTvPageJson from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn
 import { ERROR_PAGE, HOME_PAGE } from '#app/routes/utils/pageTypes';
 import * as fetchDataFromBFF from '#app/routes/utils/fetchDataFromBFF';
 import gahuzaOnDemandAudio from '#data/gahuza/bbc_gahuza_radio/p02pcb5c.json';
-// eslint-disable-next-line import/order
 import routes from '.';
 import {
   act,

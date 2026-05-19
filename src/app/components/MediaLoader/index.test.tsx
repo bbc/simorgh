@@ -12,7 +12,7 @@ import {
   onDemandTvBlocks,
   onDemandTvBlocksWithOverrides,
 } from './fixture';
-import { MediaBlock } from './types';
+import type { MediaBlock } from './types';
 import * as buildConfig from './utils/buildSettings';
 
 jest.mock('react', () => ({

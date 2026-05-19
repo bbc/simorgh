@@ -1,5 +1,5 @@
 /* eslint-disable camelcase */
-import { OEmbedProps } from '../types';
+import type { OEmbedProps } from '../types';
 import style from './index.styles';
 
 export default ({ oembed }: OEmbedProps) => {

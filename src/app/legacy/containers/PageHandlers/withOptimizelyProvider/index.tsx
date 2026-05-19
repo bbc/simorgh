@@ -1,10 +1,10 @@
-import { ComponentType, use } from 'react';
+import { type ComponentType, use } from 'react';
 import {
   createInstance,
   OptimizelyProvider,
   setLogger,
 } from '@optimizely/react-sdk';
-import { enums, ListenerPayload } from '@optimizely/optimizely-sdk';
+import { enums, type ListenerPayload } from '@optimizely/optimizely-sdk';
 import Cookie from 'js-cookie';
 import isLive from '#lib/utilities/isLive';
 import onClient from '#lib/utilities/onClient';

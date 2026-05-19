@@ -1,7 +1,7 @@
-/* eslint-disable react/no-danger */
-import { ReactElement, PropsWithChildren } from 'react';
+// biome-ignore-all lint/security/noDangerouslySetInnerHtml: we want this
+import type { ReactElement, PropsWithChildren } from 'react';
 import { OptOutOfLiteRedirect } from '#src/server/utilities/CanonicalToLiteRedirect';
-import { BaseRendererProps } from './types';
+import type { BaseRendererProps } from './types';
 import ComponentTracking from './ComponentTracking';
 
 interface Props extends BaseRendererProps {

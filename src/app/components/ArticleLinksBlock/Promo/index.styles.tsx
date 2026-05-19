@@ -1,6 +1,6 @@
 import { OPERA_MINI_CLASSNAME } from '#app/lib/utilities/addOperaMiniClassScript';
 import pixelsToRem from '#app/utilities/pixelsToRem';
-import { css, Theme } from '@emotion/react';
+import { css, type Theme } from '@emotion/react';
 
 export default {
   link: ({ fontSizes, fontVariants, isDarkUi, palette }: Theme) =>

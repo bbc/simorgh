@@ -53,7 +53,7 @@ const AmpScript = ({ config }: { config: AmpScriptProps }) => {
   return (
     <script
       type="application/json"
-      /* eslint-disable-next-line react/no-danger */
+      // biome-ignore lint/security/noDangerouslySetInnerHtml: we want this
       dangerouslySetInnerHTML={{ __html: JSON.stringify(config) }}
     />
   );

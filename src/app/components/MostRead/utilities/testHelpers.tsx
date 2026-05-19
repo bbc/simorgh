@@ -1,12 +1,12 @@
-import { PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import TEXT_VARIANTS from '#storybook/withServicesDecorator/text-variants';
 import Timestamp from '../../../legacy/psammead/psammead-timestamp/src';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import { MostReadItemWrapper, MostReadLink } from '../Canonical/Item';
 import MostReadRank from '../Canonical/Rank';
-import { Services, Direction } from '../../../models/types/global';
-import { MostReadBaseProps, MostReadData, Size } from '../types';
+import type { Services, Direction } from '../../../models/types/global';
+import type { MostReadBaseProps, MostReadData, Size } from '../types';
 
 const lastUpdated = () => (
   // This will return the provided english translations

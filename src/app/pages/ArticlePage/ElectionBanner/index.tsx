@@ -2,10 +2,10 @@ import { use } from 'react';
 import { RequestContext } from '#app/contexts/RequestContext';
 import AmpIframe from '#app/components/AmpIframe';
 import useToggle from '#app/hooks/useToggle';
-import { Tag } from '#app/components/Metadata/types';
+import type { Tag } from '#app/components/Metadata/types';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
-import { MetadataTaggings } from '#app/models/types/metadata';
+import type { MetadataTaggings } from '#app/models/types/metadata';
 import styles from './index.styles';
 
 type Props = {

@@ -2,7 +2,7 @@ import type { PropsWithChildren } from 'react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
-import { Services } from '#app/models/types/global';
+import type { Services } from '#app/models/types/global';
 import { renderHook } from '../../../../components/react-testing-library-with-providers';
 import constructReverbUrl from '.';
 import { CLICK_EVENT, VIEW_EVENT } from '../../analytics.const';

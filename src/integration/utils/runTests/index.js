@@ -123,22 +123,17 @@ if (onlyRunTests) {
   stopApp()
     .then(() => {
       if (isDev) return Promise.resolve();
-
-      console.log('Building app...');
       return buildApp();
     })
     .then(() => {
-      const text = isDev
+      const _text = isDev
         ? 'Starting app in developer mode...'
         : 'Starting app...';
-
-      console.log(text);
       return startApp();
     })
     .then(
       () =>
         new Promise(resolve => {
-          console.log('Running tests...');
           setTimeout(() => {
             resolve();
           }, 2000);
@@ -149,11 +144,7 @@ if (onlyRunTests) {
       await stopApp();
       process.exit(0);
     })
-    .catch(async error => {
-      console.log(
-        'Running /integration/utils/runTests/index.js returned an error => \n',
-        error,
-      );
+    .catch(async _error => {
       await stopApp();
       process.exit(1);
     });

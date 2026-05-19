@@ -1,5 +1,5 @@
-/* eslint-disable react/no-danger */
-import { ReactElement } from 'react';
+// biome-ignore-all lint/security/noDangerouslySetInnerHtml: we want this
+import type { ReactElement } from 'react';
 import {
   AMP_SCRIPT,
   AMP_NO_SCRIPT,
@@ -7,7 +7,7 @@ import {
   AMP_ANALYTICS_JS,
 } from '#psammead/psammead-assets/src/amp-boilerplate';
 import { AMP_GEO_SCRIPT } from '#components/AmpGeo';
-import { BaseRendererProps } from './types';
+import type { BaseRendererProps } from './types';
 
 interface Props extends BaseRendererProps {
   bodyContent?: ReactElement;

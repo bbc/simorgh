@@ -7,7 +7,7 @@ import EmbedHtml from '../EmbedHtml';
 import EmbedError from '../EmbedError';
 import FlourishEmbed from '../FlourishEmbed';
 import AmpIframeEmbed from '../AmpIframeEmbed';
-import { OEmbedProps } from '../types';
+import type { OEmbedProps } from '../types';
 import ClientSideRiddleEmbed from '../ClientSideRiddleEmbed';
 
 const OEmbedLoader = ({ oembed }: OEmbedProps) => {

@@ -8,7 +8,7 @@ import { ServiceContext } from '../../../contexts/ServiceContext';
 import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
 import adStyles from '../utilities/adSlot.styles';
 import styles from './index.styles';
-import { AdProps, SLOT_TYPES } from '../types';
+import { type AdProps, SLOT_TYPES } from '../types';
 
 const { LEADERBOARD } = SLOT_TYPES;
 

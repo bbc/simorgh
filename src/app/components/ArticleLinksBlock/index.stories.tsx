@@ -11,8 +11,8 @@ import {
 } from './helpers/fixtureData';
 import metadata from './metadata.json';
 import readme from './README.md';
-import { OptimoBlock } from '#app/models/types/optimo';
-import { Direction } from '#app/models/types/global';
+import type { OptimoBlock } from '#app/models/types/optimo';
+import type { Direction } from '#app/models/types/global';
 import { GREY_2 } from '../ThemeProvider/palette';
 
 interface Props {

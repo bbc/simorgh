@@ -14,13 +14,16 @@ import {
   VISUAL_STYLE,
   VISUAL_PROMINENCE,
   INTENT,
-  VisualStyle,
-  VisualProminence,
-  Summary,
+  type VisualStyle,
+  type VisualProminence,
+  type Summary,
 } from '../../models/types/curationData';
-import { MostReadData } from '../MostRead/types';
-import { RadioScheduleData } from '../../models/types/radioSchedule';
-import { MediaCollection, PortraitClipMediaBlock } from '../MediaLoader/types';
+import type { MostReadData } from '../MostRead/types';
+import type { RadioScheduleData } from '../../models/types/radioSchedule';
+import type {
+  MediaCollection,
+  PortraitClipMediaBlock,
+} from '../MediaLoader/types';
 import * as clickTracking from '../../hooks/useClickTrackerHandler';
 
 jest.mock('../ThemeProvider');
@@ -138,87 +141,83 @@ describe('Curation', () => {
   suppressPropWarnings(['children', 'PromoTimestamp', 'undefined']);
   suppressPropWarnings(['timestamp', 'TimestampContainer', 'undefined']);
 
-  it.each(Object.entries(components))(
-    `should render a %s component`,
-    // @ts-expect-error test props types are incompatible now with the updated kyrgyz home page fixture containing billboards
-    (
-      testId: string, // testId is the key in the components object above
+  it.each(
+    Object.entries(components),
+  )(`should render a %s component`, // @ts-expect-error test props types are incompatible now with the updated kyrgyz home page fixture containing billboards
+  (testId: string, { // testId is the key in the components object above
+    visualStyle,
+    visualProminence,
+    summaries,
+    portraitVideo,
+    mostRead,
+    radioSchedule,
+    mediaCollection,
+  }: TestProps) => {
+    const { getByTestId } = render(
+      <Curation
+        position={0}
+        visualStyle={visualStyle}
+        visualProminence={visualProminence}
+        summaries={summaries || []}
+        mostRead={mostRead}
+        radioSchedule={radioSchedule}
+        portraitVideo={portraitVideo}
+        mediaCollection={mediaCollection}
+      />,
       {
-        visualStyle,
-        visualProminence,
-        summaries,
-        portraitVideo,
-        mostRead,
-        radioSchedule,
-        mediaCollection,
-      }: TestProps,
-    ) => {
-      const { getByTestId } = render(
-        <Curation
-          position={0}
-          visualStyle={visualStyle}
-          visualProminence={visualProminence}
-          summaries={summaries || []}
-          mostRead={mostRead}
-          radioSchedule={radioSchedule}
-          portraitVideo={portraitVideo}
-          mediaCollection={mediaCollection}
-        />,
-        {
-          toggles: {
-            mostRead: { enabled: true },
-            homePageRadioSchedule: { enabled: true },
-          },
-          service: 'afrique',
+        toggles: {
+          mostRead: { enabled: true },
+          homePageRadioSchedule: { enabled: true },
         },
-      );
+        service: 'afrique',
+      },
+    );
 
-      expect(getByTestId(testId)).toBeInTheDocument();
-    },
-  );
+    expect(getByTestId(testId)).toBeInTheDocument();
+  });
 
   it.each([
     { visualStyle: BANNER, visualProminence: LOW },
     { visualStyle: BANNER, visualProminence: MINIMUM },
     { visualStyle: BANNER, visualProminence: MAXIMUM },
-  ])(
-    'does not render a component when visualStyle and visualProminence is unsupported: %o',
-    ({ visualStyle, visualProminence }) => {
-      const { container } = render(
-        <Curation
-          position={0}
-          visualStyle={visualStyle}
-          visualProminence={visualProminence}
-        />,
-      );
+  ])('does not render a component when visualStyle and visualProminence is unsupported: %o', ({
+    visualStyle,
+    visualProminence,
+  }) => {
+    const { container } = render(
+      <Curation
+        position={0}
+        visualStyle={visualStyle}
+        visualProminence={visualProminence}
+      />,
+    );
 
-      expect(container).toBeEmptyDOMElement();
-    },
-  );
+    expect(container).toBeEmptyDOMElement();
+  });
 
   it.each([
     { visualStyle: COLLECTION, visualProminence: NORMAL },
     { visualStyle: COLLECTION, visualProminence: HIGH },
     { visualStyle: NONE, visualProminence: NORMAL },
     { visualStyle: NONE, visualProminence: HIGH },
-  ])(
-    'does not render a subheading if there are no promos: %o',
-    ({ visualProminence, visualStyle }) => {
-      const title = 'Do not render';
+  ])('does not render a subheading if there are no promos: %o', ({
+    visualProminence,
+    visualStyle,
+  }) => {
+    const title = 'Do not render';
 
-      const { queryByText } = render(
-        <Curation
-          position={0}
-          visualStyle={visualStyle}
-          visualProminence={visualProminence}
-          title={title}
-          summaries={[]}
-        />,
-      );
+    const { queryByText } = render(
+      <Curation
+        position={0}
+        visualStyle={visualStyle}
+        visualProminence={visualProminence}
+        title={title}
+        summaries={[]}
+      />,
+    );
 
-      expect(queryByText(title)).toBeNull();
-    },
-  );
+    expect(queryByText(title)).toBeNull();
+  });
 
   describe('Message Banner', () => {
     it('should not be displayed if there are no promos', () => {

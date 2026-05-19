@@ -2,7 +2,11 @@ import { use } from 'react';
 import { useTheme } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
-import { Environments, PageTypes, Services } from '#app/models/types/global';
+import type {
+  Environments,
+  PageTypes,
+  Services,
+} from '#app/models/types/global';
 import {
   getArticleId,
   getTipoId,
@@ -22,7 +26,7 @@ import {
   renderAlternateLinks,
   renderAppleItunesApp,
 } from './utils';
-import { IconSizes, MetadataProps, Tag } from './types';
+import type { IconSizes, MetadataProps, Tag } from './types';
 import defaultTranslations from '../LiteSiteSummary/defaultTranslations';
 
 const ENGLISH_SERVICES = ['news', 'sport', 'ws'];

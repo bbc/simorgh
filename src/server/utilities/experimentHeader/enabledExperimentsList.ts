@@ -1,4 +1,4 @@
-import { PageTypes, Services } from '#app/models/types/global';
+import type { PageTypes, Services } from '#app/models/types/global';
 
 /* 
 This is a maintained list of serverside experiments that we are running.

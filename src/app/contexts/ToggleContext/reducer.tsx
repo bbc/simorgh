@@ -1,4 +1,4 @@
-import { Toggles } from '#app/models/types/global';
+import type { Toggles } from '#app/models/types/global';
 import pathOr from 'ramda/src/pathOr';
 
 type ReducerProps = {

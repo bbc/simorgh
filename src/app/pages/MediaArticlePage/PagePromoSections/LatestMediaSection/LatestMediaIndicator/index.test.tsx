@@ -6,7 +6,7 @@ import {
 
 import LatestMediaIndicator from '.';
 import PromoContext from '../../../../../legacy/components/OptimoPromos/PromoContext';
-import { Media } from '../types';
+import type { Media } from '../types';
 
 interface FixtureProps {
   duration: string;

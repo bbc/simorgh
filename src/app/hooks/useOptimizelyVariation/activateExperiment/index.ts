@@ -1,5 +1,5 @@
 import onClient from '#lib/utilities/onClient';
-import { ReactSDKClient } from '@optimizely/react-sdk';
+import type { ReactSDKClient } from '@optimizely/react-sdk';
 
 type Props = {
   optimizely: ReactSDKClient;

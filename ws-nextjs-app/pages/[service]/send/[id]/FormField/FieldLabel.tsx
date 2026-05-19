@@ -32,6 +32,7 @@ export default ({
       className={className}
       htmlFor={forId}
       css={[styles.fieldLabel, useErrorTheme && styles.fieldLabelError]}
+      // biome-ignore lint/security/noDangerouslySetInnerHtml: we want this
       dangerouslySetInnerHTML={{
         __html: required ? labelText : `${labelText} (${optional})`,
       }}

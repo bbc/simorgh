@@ -1,4 +1,4 @@
-/* eslint-disable jsx-a11y/aria-role */
+// biome-ignore-all lint/a11y/useValidAriaRole: we want this
 import { RedCardSVG, SecondYellowCardSVG } from '#app/components/icons';
 import styles from '../index.styles';
 import type { PlayerActions } from '../types';

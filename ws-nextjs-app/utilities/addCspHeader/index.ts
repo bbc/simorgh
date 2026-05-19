@@ -70,8 +70,11 @@ const addCspHeader = ({ ctx, service, toggles }: AddCspHeaderProps) => {
 
   const countryHeader =
     ctx?.req?.headers?.['x-country'] ||
-    ctx?.req?.headers?.['x-bbc-edge-country'] || '';
-  const country = Array.isArray(countryHeader) ? countryHeader[0] : countryHeader;
+    ctx?.req?.headers?.['x-bbc-edge-country'] ||
+    '';
+  const country = Array.isArray(countryHeader)
+    ? countryHeader[0]
+    : countryHeader;
 
   const shouldServeRelaxedCsp =
     hasAdsScripts &&

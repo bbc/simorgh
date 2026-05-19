@@ -6,10 +6,7 @@ describe('Query Validator', () => {
     ['1', true],
     ['50', true],
     ['51', false],
-  ])(
-    'should evaluate a page number %s to %s',
-    (pageNumber, expectedValidationResult) => {
-      expect(isValidPageNumber(pageNumber)).toBe(expectedValidationResult);
-    },
-  );
+  ])('should evaluate a page number %s to %s', (pageNumber, expectedValidationResult) => {
+    expect(isValidPageNumber(pageNumber)).toBe(expectedValidationResult);
+  });
 });

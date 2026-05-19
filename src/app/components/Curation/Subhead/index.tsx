@@ -1,4 +1,4 @@
-import { Fragment, PropsWithChildren, use } from 'react';
+import { Fragment, type PropsWithChildren, use } from 'react';
 
 import styles from './index.styles';
 

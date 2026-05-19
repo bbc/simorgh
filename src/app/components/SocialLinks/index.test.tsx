@@ -1,4 +1,4 @@
-import { Summary } from '#app/models/types/curationData';
+import type { Summary } from '#app/models/types/curationData';
 import {
   render,
   screen,

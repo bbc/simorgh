@@ -1,10 +1,10 @@
 import buildIChefURL from '#lib/utilities/ichefURL';
 import filterForBlockType from '#lib/utilities/blockHandlers';
-import {
+import type {
   OptimoImageBlock,
   OptimoRawImageBlock,
 } from '#app/models/types/optimo';
-import {
+import type {
   AresMediaBlock,
   AresMediaMetadataBlock,
   ConfigBuilderProps,

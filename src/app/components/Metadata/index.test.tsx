@@ -21,15 +21,15 @@ import { data as gahuzaAudioPage } from '#data/gahuza/bbc_gahuza_radio/p02pcb5c.
 import { data as liveRadioPageData } from '#data/korean/bbc_korean_radio/liveradio.json';
 import { data as hindiTVBrand } from '#data/hindi/bbc_hindi_tv/tv_programmes/w13xttlw.json';
 import { getSummary } from '#lib/utilities/parseAssetData/index';
-import { Services, PageTypes } from '#app/models/types/global';
-import { Article } from '#app/models/types/optimo';
+import type { Services, PageTypes } from '#app/models/types/global';
+import type { Article } from '#app/models/types/optimo';
 import filterForBlockType from '#app/lib/utilities/blockHandlers';
 import { render, waitFor } from '../react-testing-library-with-providers';
 import services from '../../../server/utilities/serviceConfigs';
 import { getAuthorTwitterHandle } from '../Byline/utilities';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import MetadataContainer, { OG_EXPERIMENT_SERVICES } from './index';
-import { MetadataProps } from './types';
+import type { MetadataProps } from './types';
 
 const dotComOrigin = 'https://www.bbc.com';
 const dotCoDotUKOrigin = 'https://www.bbc.co.uk';

@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import useViewTracker from '#app/hooks/useViewTracker';
-import { EventTrackingData } from '#app/lib/analyticsUtils/types';
+import type { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useOptimizelyVariation, {
   ExperimentType,
 } from '#app/hooks/useOptimizelyVariation';
@@ -16,7 +16,7 @@ import PortraitVideoPromo from './PortraitVideoPromo';
 import PortraitCarouselNavigation from './PortraitVideoCarouselNavigation';
 import Heading from '../Heading';
 import PortraitVideoNoJs from './PortraitVideoNoJs';
-import { PortraitClipMediaBlock } from '../MediaLoader/types';
+import type { PortraitClipMediaBlock } from '../MediaLoader/types';
 import Subheading from '../Curation/Subhead';
 
 type PortraitVideoCarouselProps = {

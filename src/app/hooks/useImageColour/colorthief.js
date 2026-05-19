@@ -12,35 +12,25 @@ Importing it as an ES6 module seems to be what is recommended in the docs:
 /* eslint-disable */
 if (!t)
   var t = {
-    map: function (t, r) {
+    map: (t, r) => {
       var n = {};
       return r
-        ? t.map(function (t, o) {
-            return (n.index = o), r.call(n, t);
-          })
+        ? t.map((t, o) => ((n.index = o), r.call(n, t)))
         : t.slice();
     },
-    naturalOrder: function (t, r) {
-      return t < r ? -1 : t > r ? 1 : 0;
-    },
-    sum: function (t, r) {
+    naturalOrder: (t, r) => t < r ? -1 : t > r ? 1 : 0,
+    sum: (t, r) => {
       var n = {};
       return t.reduce(
         r
-          ? function (t, o, e) {
-              return (n.index = e), t + r.call(n, o);
-            }
-          : function (t, r) {
-              return t + r;
-            },
+          ? ((t, o, e) => ((n.index = e), t + r.call(n, o)))
+          : ((t, r) => t + r),
         0,
       );
     },
-    max: function (r, n) {
-      return Math.max.apply(null, n ? t.map(r, n) : r);
-    },
+    max: (r, n) => Math.max.apply(null, n ? t.map(r, n) : r),
   };
-var r = (function () {
+var r = (() => {
     var r = 5,
       n = 8 - r,
       o = 1e3;
@@ -54,24 +44,14 @@ var r = (function () {
         r.sort(t), (n = !0);
       }
       return {
-        push: function (t) {
+        push: (t) => {
           r.push(t), (n = !1);
         },
-        peek: function (t) {
-          return n || o(), void 0 === t && (t = r.length - 1), r[t];
-        },
-        pop: function () {
-          return n || o(), r.pop();
-        },
-        size: function () {
-          return r.length;
-        },
-        map: function (t) {
-          return r.map(t);
-        },
-        debug: function () {
-          return n || o(), r;
-        },
+        peek: (t) => (n || o(), void 0 === t && (t = r.length - 1), r[t]),
+        pop: () => (n || o(), r.pop()),
+        size: () => r.length,
+        map: (t) => r.map(t),
+        debug: () => (n || o(), r),
       };
     }
     function u(t, r, n, o, e, i, u) {
@@ -84,19 +64,17 @@ var r = (function () {
         (this.histo = u);
     }
     function a() {
-      this.vboxes = new i(function (r, n) {
-        return t.naturalOrder(
+      this.vboxes = new i((r, n) => t.naturalOrder(
           r.vbox.count() * r.vbox.volume(),
           n.vbox.count() * n.vbox.volume(),
-        );
-      });
+        ));
     }
     function s(r, n) {
       if (n.count()) {
         var o = n.r2 - n.r1 + 1,
           i = n.g2 - n.g1 + 1,
           u = t.max([o, i, n.b2 - n.b1 + 1]);
-        if (1 == n.count()) return [n.copy()];
+        if (n.count() == 1) return [n.copy()];
         var a,
           s,
           h,
@@ -123,10 +101,10 @@ var r = (function () {
             v[a] = f += c;
           }
         return (
-          v.forEach(function (t, r) {
+          v.forEach((t, r) => {
             l[r] = f - t;
           }),
-          (function (t) {
+          ((t) => {
             var r,
               o,
               e,
@@ -240,9 +218,7 @@ var r = (function () {
           this.vboxes.push({ vbox: t, color: t.avg() });
         },
         palette: function () {
-          return this.vboxes.map(function (t) {
-            return t.color;
-          });
+          return this.vboxes.map((t) => t.color);
         },
         size: function () {
           return this.vboxes.size();
@@ -255,9 +231,9 @@ var r = (function () {
         nearest: function (t) {
           for (var r, n, o, e = this.vboxes, i = 0; i < e.size(); i++)
             ((n = Math.sqrt(
-              Math.pow(t[0] - e.peek(i).color[0], 2) +
-                Math.pow(t[1] - e.peek(i).color[1], 2) +
-                Math.pow(t[2] - e.peek(i).color[2], 2),
+              (t[0] - e.peek(i).color[0]) ** 2 +
+                (t[1] - e.peek(i).color[1]) ** 2 +
+                (t[2] - e.peek(i).color[2]) ** 2,
             )) < r ||
               void 0 === r) &&
               ((r = n), (o = e.peek(i).color));
@@ -265,9 +241,7 @@ var r = (function () {
         },
         forcebw: function () {
           var r = this.vboxes;
-          r.sort(function (r, n) {
-            return t.naturalOrder(t.sum(r.color), t.sum(n.color));
-          });
+          r.sort((r, n) => t.naturalOrder(t.sum(r.color), t.sum(n.color)));
           var n = r[0].color;
           n[0] < 5 && n[1] < 5 && n[2] < 5 && (r[0].color = [0, 0, 0]);
           var o = r.length - 1,
@@ -279,21 +253,21 @@ var r = (function () {
         },
       }),
       {
-        quantize: function (h, c) {
+        quantize: (h, c) => {
           if (!h.length || c < 2 || c > 256) return !1;
-          var f = (function (t) {
+          var f = ((t) => {
             var o,
               i = new Array(1 << (3 * r));
             return (
-              t.forEach(function (t) {
+              t.forEach((t) => {
                 (o = e(t[0] >> n, t[1] >> n, t[2] >> n)),
                   (i[o] = (i[o] || 0) + 1);
               }),
               i
             );
           })(h);
-          f.forEach(function () {});
-          var v = (function (t, r) {
+          f.forEach(() => {});
+          var v = ((t, r) => {
               var o,
                 e,
                 i,
@@ -304,7 +278,7 @@ var r = (function () {
                 f = 1e6,
                 v = 0;
               return (
-                t.forEach(function (t) {
+                t.forEach((t) => {
                   (o = t[0] >> n) < a ? (a = o) : o > s && (s = o),
                     (e = t[1] >> n) < h ? (h = e) : e > c && (c = e),
                     (i = t[2] >> n) < f ? (f = i) : i > v && (v = i);
@@ -312,9 +286,7 @@ var r = (function () {
                 new u(a, s, h, c, f, v, r)
               );
             })(h, f),
-            l = new i(function (r, n) {
-              return t.naturalOrder(r.count(), n.count());
-            });
+            l = new i((r, n) => t.naturalOrder(r.count(), n.count()));
           function g(t, r) {
             for (var n, e = t.size(), i = 0; i < o; ) {
               if (e >= r) return;
@@ -330,12 +302,10 @@ var r = (function () {
           }
           l.push(v), g(l, 0.75 * c);
           for (
-            var p = new i(function (r, n) {
-              return t.naturalOrder(
+            var p = new i((r, n) => t.naturalOrder(
                 r.count() * r.volume(),
                 n.count() * n.volume(),
-              );
-            });
+              ));
             l.size();
 
           )
@@ -357,16 +327,16 @@ var r = (function () {
 n.prototype.getImageData = function () {
   return this.context.getImageData(0, 0, this.width, this.height);
 };
-var o = function () {};
+var o = () => {};
 (o.prototype.getColor = function (t, r) {
   return void 0 === r && (r = 10), this.getPalette(t, 5, r)[0];
 }),
-  (o.prototype.getPalette = function (t, o, e) {
-    var i = (function (t) {
+  (o.prototype.getPalette = (t, o, e) => {
+    var i = ((t) => {
         var r = t.colorCount,
           n = t.quality;
         if (void 0 !== r && Number.isInteger(r)) {
-          if (1 === r)
+          if (r === 1)
             throw new Error(
               'colorCount should be between 2 and 20. To get one color, call getColor() instead of getPalette()',
             );
@@ -378,7 +348,7 @@ var o = function () {};
         );
       })({ colorCount: o, quality: e }),
       u = new n(t),
-      a = (function (t, r, n) {
+      a = ((t, r, n) => {
         for (
           var o = t,
             e = [],
@@ -402,20 +372,20 @@ var o = function () {};
     return s ? s.palette() : null;
   }),
   (o.prototype.getColorFromUrl = function (t, r, n) {
-    var o = this,
+    var 
       e = document.createElement('img');
-    e.addEventListener('load', function () {
-      var i = o.getPalette(e, 5, n);
+    e.addEventListener('load', () => {
+      var i = this.getPalette(e, 5, n);
       r(i[0], t);
     }),
       (e.src = t);
   }),
-  (o.prototype.getImageData = function (t, r) {
+  (o.prototype.getImageData = (t, r) => {
     var n = new XMLHttpRequest();
     n.open('GET', t, !0),
       (n.responseType = 'arraybuffer'),
       (n.onload = function () {
-        if (200 == this.status) {
+        if (this.status == 200) {
           var t = new Uint8Array(this.response);
           i = t.length;
           for (var n = new Array(i), o = 0; o < t.length; o++)
@@ -429,7 +399,7 @@ var o = function () {};
   }),
   (o.prototype.getColorAsync = function (t, r, n) {
     var o = this;
-    this.getImageData(t, function (t) {
+    this.getImageData(t, (t) => {
       var e = document.createElement('img');
       e.addEventListener('load', function () {
         var t = o.getPalette(e, 5, n);

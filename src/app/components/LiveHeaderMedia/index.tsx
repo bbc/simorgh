@@ -1,13 +1,13 @@
 import { memo, use, useState } from 'react';
 import Text from '#app/components/Text';
-import { MediaCollection } from '#app/components/MediaLoader/types';
+import type { MediaCollection } from '#app/components/MediaLoader/types';
 import MediaLoader from '#app/components/MediaLoader';
 import filterForBlockType from '#app/lib/utilities/blockHandlers';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
-import { EventTrackingMetadata } from '#app/models/types/eventTracking';
+import type { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import { regexPunctuationSymbols } from '#app/lib/utilities/idSanitiser';
 import { service as newsConfig } from '#lib/config/services/news';
 import styles from './index.styles';

@@ -5,7 +5,7 @@ import useOptimizelyVariation, {
   ExperimentType,
 } from '#app/hooks/useOptimizelyVariation';
 import { singleTextBlock } from '#app/models/blocks';
-import { BylineLinkedData } from '#app/components/LinkedData/types';
+import type { BylineLinkedData } from '#app/components/LinkedData/types';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { RequestContext } from '#contexts/RequestContext';
@@ -18,7 +18,7 @@ import Timestamp from '#containers/ArticleTimestamp';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import SocialEmbedContainer from '#containers/SocialEmbed';
 import MediaLoader from '#app/components/MediaLoader';
-import { MediaBlock } from '#app/components/MediaLoader/types';
+import type { MediaBlock } from '#app/components/MediaLoader/types';
 import { PHOTO_GALLERY_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
 import PortraitVideoCarousel from '#app/components/PortraitVideoCarousel';
 import {
@@ -36,19 +36,19 @@ import extractPromoImage from '#lib/utilities/extractPromoImage';
 import RelatedTopics from '#app/components/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import InlinePodcastPromo from '#containers/PodcastPromo/Inline';
-import {
+import type {
   Article,
   OptimoBlock,
   OptimoBylineBlock,
   OptimoBylineContributorBlock,
 } from '#app/models/types/optimo';
-import { ComponentExperimentProps } from '#app/models/types/global';
+import type { ComponentExperimentProps } from '#app/models/types/global';
 import {
   VISUAL_PROMINENCE,
   VISUAL_STYLE,
 } from '#app/models/types/curationData';
-import { Translations } from '#app/models/types/translations';
-import { Recommendation } from '#app/models/types/onwardJourney';
+import type { Translations } from '#app/models/types/translations';
+import type { Recommendation } from '#app/models/types/onwardJourney';
 
 import ArticleLinksBlock from '#app/components/ArticleLinksBlock';
 import Curation from '#app/components/Curation';
@@ -56,7 +56,7 @@ import Recommendations from '#app/components/Recommendations';
 import ReadTimeArticle from '#app/components/ReadTime';
 import PWAPromotionalBanner from '#app/components/PWAPromotionalBanner';
 import ContinueReadingButton, {
-  ContinueReadingButtonProps,
+  type ContinueReadingButtonProps,
 } from '#app/components/ContinueReadingButton';
 import SaveArticleButton from '#app/components/SaveArticleButton';
 import isLive from '#lib/utilities/isLive';
@@ -84,7 +84,7 @@ import TopicDiscovery from '../../components/TopicDiscovery';
 import Disclaimer from '../../components/Disclaimer';
 import SecondaryColumn from './SecondaryColumn';
 import styles from './ArticlePage.styles';
-import { ComponentToRenderProps, TimeStampProps } from './types';
+import type { ComponentToRenderProps, TimeStampProps } from './types';
 import ArticleHeadline from './ArticleHeadline';
 import {
   isPortraitVideo,
@@ -326,7 +326,7 @@ const ArticlePage = ({
 
   const showPortraitVideoCarousel = Boolean(
     pageData?.portraitVideoItems?.portraitVideo?.blocks?.length &&
-    articlePortraitVideoEnabled,
+      articlePortraitVideoEnabled,
   );
 
   const portraitVideoCarouselTitle =
@@ -348,10 +348,10 @@ const ArticlePage = ({
 
   const showContinueReadingButton = Boolean(
     !isAmp &&
-    !isLite &&
-    !isApp &&
-    hasContinueReadingBlock &&
-    continueReadingButtonToggle,
+      !isLite &&
+      !isApp &&
+      hasContinueReadingBlock &&
+      continueReadingButtonToggle,
   );
 
   const promoImageBlocks =
@@ -424,11 +424,11 @@ const ArticlePage = ({
 
   const showMediaCuration = Boolean(
     !isAmp &&
-    !isLite &&
-    !isApp &&
-    !isPGL &&
-    mediaCurationContent?.summaries?.length &&
-    articleVideoCurationEnabled,
+      !isLite &&
+      !isApp &&
+      !isPGL &&
+      mediaCurationContent?.summaries?.length &&
+      articleVideoCurationEnabled,
   );
 
   // EXPERIMENT: PWA Promotional Banner

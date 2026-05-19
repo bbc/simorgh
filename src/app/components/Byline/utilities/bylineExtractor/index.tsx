@@ -1,9 +1,9 @@
 import pathOr from 'ramda/src/pathOr';
-import {
+import type {
   OptimoBylineContributorBlock,
   OptimoBylineContributorMetadataBlock,
 } from '#app/models/types/optimo';
-import { PageTypes } from '#app/models/types/global';
+import type { PageTypes } from '#app/models/types/global';
 import {
   ARTICLE_PAGE,
   LIVE_PAGE,
@@ -12,10 +12,9 @@ import {
   PHOTO_GALLERY_PAGE,
   STORY_PAGE,
 } from '#app/routes/utils/pageTypes';
-import {
+import type {
   PostContributor,
   PostContributorImage,
-  // eslint-disable-next-line import/no-relative-packages
 } from '../../../../../../ws-nextjs-app/pages/[service]/live/[id]/Post/types';
 import buildIChefURL from '../../../../lib/utilities/ichefURL';
 

@@ -77,7 +77,7 @@ const Stream = ({
     return () => {
       firstPostObserver.disconnect();
     };
-  }, [setIsFirstPostVisible, applyPendingUpdate, streamData]);
+  }, [setIsFirstPostVisible, applyPendingUpdate]);
 
   if (!streamData) return null;
 

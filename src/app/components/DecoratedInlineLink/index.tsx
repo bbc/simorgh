@@ -4,7 +4,7 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import pathOr from 'ramda/src/pathOr';
 import Blocks from '#app/legacy/containers/Blocks';
 import makeRelativeUrlPath from '#app/lib/utilities/makeRelativeUrlPath';
-import { OptimoBlock } from '#app/models/types/optimo';
+import type { OptimoBlock } from '#app/models/types/optimo';
 import styles from './index.style';
 import fragment from '../Fragment';
 

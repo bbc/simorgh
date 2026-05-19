@@ -1,8 +1,8 @@
 /* eslint-disable camelcase */
-import { css, Theme } from '@emotion/react';
+import { css, type Theme } from '@emotion/react';
 import mundoLiveFixture from '#data/mundo/live/c7dkx155e626t.json';
 import LiveHeaderMedia from '.';
-import { MediaCollection } from '../MediaLoader/types';
+import type { MediaCollection } from '../MediaLoader/types';
 import metadata from './metadata.json';
 
 type Props = {

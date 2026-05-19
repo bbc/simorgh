@@ -10,7 +10,7 @@ import {
   fireEvent,
 } from '../react-testing-library-with-providers';
 import blocks from './fixture';
-import { Player, SMPEvent } from '../MediaLoader/types';
+import type { Player, SMPEvent } from '../MediaLoader/types';
 
 const eventTrackingData = {
   componentName: 'portrait-video-modal',

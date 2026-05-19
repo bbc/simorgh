@@ -1,6 +1,6 @@
 /* eslint-disable import/no-unresolved */
-import { OptimizelyContextInterface } from '@optimizely/react-sdk/dist/Context';
-import { EventTrackingData } from '#app/lib/analyticsUtils/types';
+import type { OptimizelyContextInterface } from '@optimizely/react-sdk/dist/Context';
+import type { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import { sendEventBeacon } from '../../../components/ATIAnalytics/beacon';
 
 type OptimizelyParameters =

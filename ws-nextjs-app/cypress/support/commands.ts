@@ -145,7 +145,7 @@ Cypress.Commands.overwrite(
       typeof urlOrOptions === 'string' ? (options ?? {}) : urlOrOptions;
     const { failOnStatusCode = true, headers } = visitOptionsObj;
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    // biome-ignore lint/suspicious/noExplicitAny: we want this
     const originalFnAsAny = originalFn as (...args: any[]) => Cypress.Chainable;
     const runVisit = () => {
       if (typeof urlOrOptions === 'string') {

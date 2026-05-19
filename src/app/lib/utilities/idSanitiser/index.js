@@ -1,6 +1,5 @@
-// prettier-ignore
-/* eslint-disable-next-line no-useless-escape */
-export const regexPunctuationSymbols = /[\[\]\.,\/?¿!$'"%^&*;:{}=\-_`~()؟؛٬«»！，。？、@#￥…（：；）《》“”〔〕’|]/;
+export const regexPunctuationSymbols =
+  /[[\].,/?¿!$'"%^&*;:{}=\-_`~()؟؛٬«»！，。？、@#￥…（：；）《》“”〔〕’|]/;
 const regexPunctuationSymbolsGI = new RegExp(regexPunctuationSymbols, 'gi');
 const regexSpaces = /\s+/g;
 

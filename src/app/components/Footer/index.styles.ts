@@ -1,4 +1,4 @@
-import { css, Theme } from '@emotion/react';
+import { css, type Theme } from '@emotion/react';
 import { FULL } from '../ThemeProvider/spacings';
 import { GROUP_4_MIN_WIDTH_BP } from '../ThemeProvider/mediaQueries';
 

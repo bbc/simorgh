@@ -1,5 +1,5 @@
 import pixelsToRem from '#app/utilities/pixelsToRem';
-import { css, Theme } from '@emotion/react';
+import { css, type Theme } from '@emotion/react';
 
 const styles = {
   buttonWrapper: ({ spacings, mq }: Theme) =>

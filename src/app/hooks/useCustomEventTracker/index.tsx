@@ -72,10 +72,7 @@ const useCustomEventTracker = ({
             experimentName,
             experimentVariant,
           });
-        } catch (error) {
-          // eslint-disable-next-line no-console
-          console.warn('Custom event tracking failed:', error);
-        }
+        } catch (_error) {}
       }
     },
     [

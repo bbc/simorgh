@@ -1,5 +1,5 @@
-import { OptimoBlock } from '#app/models/types/optimo';
-import { Post } from '#nextjs/pages/[service]/live/[id]/Post/types';
+import type { OptimoBlock } from '#app/models/types/optimo';
+import type { Post } from '#nextjs/pages/[service]/live/[id]/Post/types';
 import handleCustomEmbed from '../handleCustomEmbed';
 import handleEmptyParagraphBlocks from '../handleEmptyParagraphBlocks';
 import handleStreamEmbed from '../enrichVivoEmbed';

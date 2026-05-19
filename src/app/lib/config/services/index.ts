@@ -1,4 +1,4 @@
-import { Services } from '#app/models/types/global';
+import type { Services } from '#app/models/types/global';
 
 /**
  * We have opted to use an object instead of an array to circumvent Typescript's non exhaustive array type checking

@@ -1,4 +1,4 @@
-/* eslint-disable react/no-danger */
+// biome-ignore-all lint/security/noDangerouslySetInnerHtml: we want this
 import Document, {
   DocumentContext,
   Head,

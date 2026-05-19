@@ -1,5 +1,5 @@
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
-import { EventTrackingData } from '#app/lib/analyticsUtils/types';
+import type { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import { render, screen } from '../../react-testing-library-with-providers';
 
 import CurationPromo from '.';

@@ -1,4 +1,4 @@
-import { css, Theme } from '@emotion/react';
+import { css, type Theme } from '@emotion/react';
 
 const IMAGE_WIDTH = 184;
 const IMAGE_WIDTH_GROUP_3_MIN_WIDTH = 224;

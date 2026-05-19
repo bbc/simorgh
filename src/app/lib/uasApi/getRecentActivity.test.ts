@@ -1,4 +1,4 @@
-import getRecentActivity, { UasActivityItem } from './getRecentActivity';
+import getRecentActivity, { type UasActivityItem } from './getRecentActivity';
 import uasApiRequest from './index';
 
 jest.mock('./index');

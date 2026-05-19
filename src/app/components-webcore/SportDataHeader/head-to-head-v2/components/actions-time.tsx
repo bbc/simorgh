@@ -27,7 +27,7 @@ const ActionsTime = ({ player }: ActionsTimeProps) => {
   return (
     <>
       {times.map((time, index) => (
-        // eslint-disable-next-line react/no-array-index-key
+        // biome-ignore lint/suspicious/noArrayIndexKey: we want this
         <span aria-hidden key={index}>
           <span css={styles.textBlock}>
             {index === 0 && '('}

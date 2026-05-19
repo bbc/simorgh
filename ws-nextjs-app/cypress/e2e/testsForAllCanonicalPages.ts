@@ -9,19 +9,15 @@ export default ({ service, pageType }: ServiceParametersType) => {
   if (pageType && pageType !== 'errorPage404') {
     describe(`Running testsForAllCanonicalPages for ${service} ${pageType}`, () => {
       if (Cypress.env('SMOKE')) {
-        describe(
-          'ATI',
-          {
-            retries: 3,
-          },
-          () => {
-            it('should have a noscript img tag with the ati url', () => {
-              cy.hasNoscriptImgAtiUrl(
-                (envConfig as EnvironmentConfigType).atiUrl,
-              );
-            });
-          },
-        );
+        describe('ATI', {
+          retries: 3,
+        }, () => {
+          it('should have a noscript img tag with the ati url', () => {
+            cy.hasNoscriptImgAtiUrl(
+              (envConfig as EnvironmentConfigType).atiUrl,
+            );
+          });
+        });
       }
     });
   }

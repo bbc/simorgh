@@ -1,4 +1,4 @@
-import { Curation } from '../../../models/types/curationData';
+import type { Curation } from '../../../models/types/curationData';
 
 export default ({
   curations,
@@ -8,14 +8,13 @@ export default ({
   name: string;
 }) => {
   const itemListElement = curations
-    .map(({ summaries = [] }) =>
+    .flatMap(({ summaries = [] }) =>
       summaries.map(({ link }) => ({
         '@context': 'http://schema.org',
         '@type': 'ListItem',
         url: link,
       })),
     )
-    .flat()
     .map((listItem, index) => {
       return {
         ...listItem,

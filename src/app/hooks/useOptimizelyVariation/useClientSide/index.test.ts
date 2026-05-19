@@ -1,4 +1,6 @@
-import optimizelyReactSdk, { OptimizelyDecision } from '@optimizely/react-sdk';
+import optimizelyReactSdk, {
+  type OptimizelyDecision,
+} from '@optimizely/react-sdk';
 import { renderHook } from '#app/components/react-testing-library-with-providers';
 import useClientSide from '.';
 

@@ -2,7 +2,7 @@ import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import 'moment/locale/hu';
 import '#psammead/moment-timezone-include/tz/Europe/Budapest';
 import withContext from '../../../contexts/utils/withContext';
-import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
+import type { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
 export const service: DefaultServiceConfig = {
   default: {

@@ -1,12 +1,12 @@
 import {
   createContext,
   useReducer,
-  Dispatch,
-  PropsWithChildren,
+  type Dispatch,
+  type PropsWithChildren,
   useMemo,
 } from 'react';
 import defaultToggles from '#lib/config/toggles';
-import { Environments, Toggles } from '#app/models/types/global';
+import type { Environments, Toggles } from '#app/models/types/global';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import toggleReducer from './reducer';
 
@@ -36,7 +36,7 @@ const ToggleContextProvider = ({
       toggleState,
       toggleDispatch,
     }),
-    [toggleState, toggleDispatch],
+    [toggleState],
   );
   return (
     <ToggleContext.Provider value={toggleContextValue}>

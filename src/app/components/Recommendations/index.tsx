@@ -7,8 +7,8 @@ import SkipLinkWrapper from '#components/SkipLinkWrapper';
 
 import { ServiceContext } from '#contexts/ServiceContext';
 import useViewTracker from '#app/hooks/useViewTracker';
-import { Recommendation } from '#app/models/types/onwardJourney';
-import { ComponentExperimentProps } from '#app/models/types/global';
+import type { Recommendation } from '#app/models/types/onwardJourney';
+import type { ComponentExperimentProps } from '#app/models/types/global';
 import styles from './index.styles';
 import RecommendationsItem from './RecommendationsItem';
 

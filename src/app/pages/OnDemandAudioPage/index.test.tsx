@@ -8,7 +8,7 @@ import zhongwenOnDemandAudio from '#data/zhongwen/bbc_cantonese_radio/w172xwswq9
 import getInitialData from '#app/routes/onDemandAudio/getInitialData';
 import withMediaError from '#lib/utilities/episodeAvailability/withMediaError';
 import { AUDIO_PAGE } from '#app/routes/utils/pageTypes';
-import { Services, Variants } from '#app/models/types/global';
+import type { Services, Variants } from '#app/models/types/global';
 
 import * as fetchBFF from '#app/routes/utils/fetchDataFromBFF';
 import gahuzaOnDemandAudio from '#data/gahuza/bbc_gahuza_radio/p02pcb5c.json';
@@ -17,7 +17,9 @@ import {
   act,
   waitFor,
 } from '../../components/react-testing-library-with-providers';
-import _OnDemandAudioPage, { OnDemandAudioProps } from './OnDemandAudioPage';
+import _OnDemandAudioPage, {
+  type OnDemandAudioProps,
+} from './OnDemandAudioPage';
 
 const OnDemandAudioPage = withMediaError(_OnDemandAudioPage);
 

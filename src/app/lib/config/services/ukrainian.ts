@@ -2,8 +2,8 @@ import cyrillic from '../../../components/ThemeProvider/fontScripts/cyrillic';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/uk';
 import withContext from '../../../contexts/utils/withContext';
-import { UkrainianConfig } from '../../../models/types/serviceConfig';
-import { Direction, Services } from '../../../models/types/global';
+import type { UkrainianConfig } from '../../../models/types/serviceConfig';
+import type { Direction, Services } from '../../../models/types/global';
 import russianUkrainianSharedTranslations from './russianUkrainianSharedTranslations';
 
 const secondaryColumnTranslations = {

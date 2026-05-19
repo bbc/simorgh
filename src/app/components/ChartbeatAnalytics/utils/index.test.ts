@@ -23,9 +23,9 @@ import {
   getType,
   getTitle,
   getConfig,
-  GetConfigProps,
+  type GetConfigProps,
 } from '.';
-import { PageTypes, Services } from '../../../models/types/global';
+import type { PageTypes, Services } from '../../../models/types/global';
 
 jest.mock('#lib/utilities/onClient', () =>
   jest.fn().mockImplementation(() => true),

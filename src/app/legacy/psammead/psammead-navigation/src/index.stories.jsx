@@ -123,7 +123,6 @@ const dropdownNavigationStory = (currentPageText, navData, dir) => (
         <DropdownUl>
           {navData.map((item, index) => {
             const { title, url } = item;
-            const active = index === 0;
 
             return (
               <DropdownLi

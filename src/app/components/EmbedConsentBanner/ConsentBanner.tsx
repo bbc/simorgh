@@ -1,4 +1,4 @@
-import { use, MouseEvent } from 'react';
+import { use, type MouseEvent } from 'react';
 import pathOr from 'ramda/src/pathOr';
 
 import { RequestContext } from '#app/contexts/RequestContext';
@@ -6,11 +6,11 @@ import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import Text from '../Text';
 import Paragraph from '../Paragraph';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import { Translations } from '../../models/types/translations';
+import type { Translations } from '../../models/types/translations';
 import useViewTracker from '../../hooks/useViewTracker';
 
 import consentBannerCss from './ConsentBanner.styles';
-import { ConsentBannerProviders, getEventTrackingData } from '.';
+import { type ConsentBannerProviders, getEventTrackingData } from './types';
 
 type BannerUrls = {
   cookiesUrl: {

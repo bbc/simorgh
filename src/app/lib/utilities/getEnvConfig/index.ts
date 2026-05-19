@@ -1,4 +1,4 @@
-import { Environments } from '#app/models/types/global';
+import type { Environments } from '#app/models/types/global';
 import onClient from '../onClient';
 
 export type EnvConfig = ReturnType<typeof getProcessEnvAppVariables>;

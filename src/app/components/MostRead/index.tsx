@@ -3,11 +3,11 @@ import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import { getMostReadEndpoint } from '#app/lib/utilities/getUrlHelpers/getMostReadUrls';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
-import { EventTrackingData } from '#app/lib/analyticsUtils/types';
+import type { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import Canonical from './Canonical';
 import Amp from './Amp';
-import { ColumnLayout, Size, MostReadData } from './types';
+import type { ColumnLayout, Size, MostReadData } from './types';
 import MostReadSection from './Section';
 import MostReadSectionLabel from './Label';
 import { WHITE } from '../ThemeProvider/palette';
@@ -17,7 +17,10 @@ import {
   CORRESPONDENT_STORY_PAGE,
   ARTICLE_PAGE,
 } from '../../routes/utils/pageTypes';
-import { ComponentExperimentProps, PageTypes } from '../../models/types/global';
+import type {
+  ComponentExperimentProps,
+  PageTypes,
+} from '../../models/types/global';
 
 const mostReadAmpPageTypes: PageTypes[] = [
   STORY_PAGE,

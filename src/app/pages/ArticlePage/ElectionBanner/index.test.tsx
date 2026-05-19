@@ -1,6 +1,6 @@
 import { render } from '#app/components/react-testing-library-with-providers';
-import { Tag } from '#app/components/Metadata/types';
-import { MetadataTaggings } from '#app/models/types/metadata';
+import type { Tag } from '#app/components/Metadata/types';
+import type { MetadataTaggings } from '#app/models/types/metadata';
 import ElectionBanner from '.';
 
 const MOCK_ELECTION_THING_ID = '647d5613-e0e2-4ef5-b0ce-b491de38bdbd';
@@ -53,53 +53,53 @@ describe('ElectionBanner', () => {
   describe.each(['canonical', 'amp'])('%s', platform => {
     const isAmp = platform === 'amp';
 
-    it.each(['live', 'test'])(
-      'should use the correct URL for the iframe when SIMORGH_APP_ENV is "%s"',
-      appEnv => {
-        let expectedIframeSrc = '';
-        if (appEnv === 'live') {
-          process.env.SIMORGH_INCLUDES_BASE_URL =
-            'https://www.bbc.com/ws/includes';
-          process.env.SIMORGH_INCLUDES_BASE_AMP_URL =
-            'https://news.files.bbci.co.uk';
-          expectedIframeSrc = MOCK_IFRAME_LIVE_SRC;
-        }
+    it.each([
+      'live',
+      'test',
+    ])('should use the correct URL for the iframe when SIMORGH_APP_ENV is "%s"', appEnv => {
+      let expectedIframeSrc = '';
+      if (appEnv === 'live') {
+        process.env.SIMORGH_INCLUDES_BASE_URL =
+          'https://www.bbc.com/ws/includes';
+        process.env.SIMORGH_INCLUDES_BASE_AMP_URL =
+          'https://news.files.bbci.co.uk';
+        expectedIframeSrc = MOCK_IFRAME_LIVE_SRC;
+      }
 
-        if (appEnv === 'test') {
-          process.env.SIMORGH_INCLUDES_BASE_URL =
-            'https://www.test.bbc.com/ws/includes';
-          process.env.SIMORGH_INCLUDES_BASE_AMP_URL =
-            'https://news.test.files.bbci.co.uk';
-          expectedIframeSrc = MOCK_IFRAME_DEV_SRC;
-        }
+      if (appEnv === 'test') {
+        process.env.SIMORGH_INCLUDES_BASE_URL =
+          'https://www.test.bbc.com/ws/includes';
+        process.env.SIMORGH_INCLUDES_BASE_AMP_URL =
+          'https://news.test.files.bbci.co.uk';
+        expectedIframeSrc = MOCK_IFRAME_DEV_SRC;
+      }
 
-        process.env.SIMORGH_APP_ENV = appEnv;
+      process.env.SIMORGH_APP_ENV = appEnv;
 
-        const { getByTestId } = render(
-          <ElectionBanner aboutTags={mockAboutTags} taggings={mockTaggings} />,
-          {
-            toggles: {
-              electionBanner: { enabled: true },
-            },
-            isAmp,
-            service: 'mundo',
+      const { getByTestId } = render(
+        <ElectionBanner aboutTags={mockAboutTags} taggings={mockTaggings} />,
+        {
+          toggles: {
+            electionBanner: { enabled: true },
           },
-        );
+          isAmp,
+          service: 'mundo',
+        },
+      );
 
-        const wrappingEl = getByTestId(ELEMENT_ID);
+      const wrappingEl = getByTestId(ELEMENT_ID);
 
-        const iframe = wrappingEl.querySelector('iframe, amp-iframe');
-        const iframeSrc = iframe?.getAttribute('src');
+      const iframe = wrappingEl.querySelector('iframe, amp-iframe');
+      const iframeSrc = iframe?.getAttribute('src');
 
-        const domain = isAmp
-          ? process.env.SIMORGH_INCLUDES_BASE_AMP_URL
-          : process.env.SIMORGH_INCLUDES_BASE_URL;
+      const domain = isAmp
+        ? process.env.SIMORGH_INCLUDES_BASE_AMP_URL
+        : process.env.SIMORGH_INCLUDES_BASE_URL;
 
-        expect(iframeSrc).toEqual(
-          `${domain}/${expectedIframeSrc}${isAmp ? '/amp' : ''}`,
-        );
-      },
-    );
+      expect(iframeSrc).toEqual(
+        `${domain}/${expectedIframeSrc}${isAmp ? '/amp' : ''}`,
+      );
+    });
 
     it('should render ElectionBanner when aboutTags contain the correct thingLabel', () => {
       const { getByTestId } = render(

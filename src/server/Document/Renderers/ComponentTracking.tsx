@@ -52,7 +52,7 @@ const ComponentTracking = ({
     <script
       nonce={nonce}
       type="text/javascript"
-      // eslint-disable-next-line react/no-danger
+      // biome-ignore lint/security/noDangerouslySetInnerHtml: we want this
       dangerouslySetInnerHTML={{
         __html: `${trackingScripts({
           enableStaticClickTrackingOnOperaMiniOnly,

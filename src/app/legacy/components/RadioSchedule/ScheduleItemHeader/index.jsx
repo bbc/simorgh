@@ -114,7 +114,7 @@ const ScheduleItemHeader = ({
 
   const content = (
     // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
-    // eslint-disable-next-line jsx-a11y/aria-role
+    // biome-ignore lint/a11y/useValidAriaRole: we want this
     <span role="text" id={`scheduleItem-${id}`}>
       {/* VisuallyHiddenText outside of the Live Label is only present if the state is not live */}
       {listenLabel && (

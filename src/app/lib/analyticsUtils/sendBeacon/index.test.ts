@@ -1,12 +1,12 @@
 /* eslint-disable global-require */
 import loggerMock from '#testHelpers/loggerMock';
 import { ATI_LOGGING_ERROR } from '#app/lib/logger.const';
-import { ReverbBeaconConfig } from '#app/components/ATIAnalytics/types';
+import type { ReverbBeaconConfig } from '#app/components/ATIAnalytics/types';
 import { waitFor } from '#app/components/react-testing-library-with-providers';
 import sendBeacon from './index';
 import * as onClient from '../../utilities/onClient';
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
+// biome-ignore lint/suspicious/noExplicitAny: we want this
 let isOnClient: any;
 
 const reverbMock = {

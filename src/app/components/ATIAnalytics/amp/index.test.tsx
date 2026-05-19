@@ -1,7 +1,7 @@
-/* eslint-disable no-template-curly-in-string */
+// biome-ignore-all lint/suspicious/noTemplateCurlyInString: this is fine
 import { render } from '../../react-testing-library-with-providers';
 import AmpATIAnalytics from '.';
-import { ReverbBeaconConfig } from '../types';
+import type { ReverbBeaconConfig } from '../types';
 
 const splitUrl = (url: string): string[] =>
   url.replace(/&/g, ',').replace(/\?/g, ',').split(',');

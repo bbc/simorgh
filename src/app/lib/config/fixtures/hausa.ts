@@ -1,4 +1,4 @@
-import { TopicsFixtureData } from './types';
+import type { TopicsFixtureData } from './types';
 
 const topics: TopicsFixtureData = {
   headline: 'Duk batutuwa',

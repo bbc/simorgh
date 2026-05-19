@@ -1,8 +1,8 @@
 import { use } from 'react';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import PromoTimestamp from '#components/Promo/timestamp';
-import { OptimoBlock } from '#app/models/types/optimo';
-import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import type { OptimoBlock } from '#app/models/types/optimo';
+import type useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { Chevron, ChevronOrientation } from '#app/components/icons';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import styles from './index.styles';

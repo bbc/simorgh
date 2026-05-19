@@ -1,4 +1,4 @@
-/* eslint-disable jsx-a11y/aria-role */
+// biome-ignore-all lint/a11y/useValidAriaRole: we want this
 import styled from '@emotion/styled';
 import MediaIndicator from './MediaIndicator';
 import { withEpisodeContext } from './helpers';

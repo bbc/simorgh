@@ -266,35 +266,36 @@ describe('withContexts HOC', () => {
           data: null,
         },
       },
-    ])(
-      'should pass data and atiData to the event tracking context provider',
-      async ({ pageType, pageData, componentProps }) => {
-        const fixture = {
-          bbcOrigin: 'https://www.bbc.com',
-          id: 'c0000000000o',
-          service: 'kyrgyz',
-          isAmp: true,
-          isApp: false,
-          pageData,
-          pageType,
-          pathname: '/pathname',
-          status: 200,
-          showAdsBasedOnLocation: true,
-          toggles: {
-            testToggle: {
-              enabled: false,
-            },
+    ])('should pass data and atiData to the event tracking context provider', async ({
+      pageType,
+      pageData,
+      componentProps,
+    }) => {
+      const fixture = {
+        bbcOrigin: 'https://www.bbc.com',
+        id: 'c0000000000o',
+        service: 'kyrgyz',
+        isAmp: true,
+        isApp: false,
+        pageData,
+        pageType,
+        pathname: '/pathname',
+        status: 200,
+        showAdsBasedOnLocation: true,
+        toggles: {
+          testToggle: {
+            enabled: false,
           },
-          serverSideExperiments: [{ experimentName: 'foo', variation: 'bar' }],
-        };
+        },
+        serverSideExperiments: [{ experimentName: 'foo', variation: 'bar' }],
+      };
 
-        await act(async () => render(<ContextsHOC {...fixture} />));
+      await act(async () => render(<ContextsHOC {...fixture} />));
 
-        expect(eventTrackingContextSpy).toHaveBeenCalledWith(
-          expect.objectContaining(componentProps),
-          undefined,
-        );
-      },
-    );
+      expect(eventTrackingContextSpy).toHaveBeenCalledWith(
+        expect.objectContaining(componentProps),
+        undefined,
+      );
+    });
   });
 });

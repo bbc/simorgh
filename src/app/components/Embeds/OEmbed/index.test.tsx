@@ -1,13 +1,13 @@
 import { useMemo } from 'react';
 import { render } from '../../react-testing-library-with-providers';
-import { OEmbedProps } from '../types';
+import type { OEmbedProps } from '../types';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import {
   RequestContext,
-  RequestContextProps,
+  type RequestContextProps,
 } from '../../../contexts/RequestContext';
 import { ARTICLE_PAGE } from '../../../routes/utils/pageTypes';
-import { Services } from '../../../models/types/global';
+import type { Services } from '../../../models/types/global';
 import {
   sampleRiddleProps,
   sampleFlourishStoryProps,

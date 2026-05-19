@@ -6,7 +6,7 @@ import {
 import * as viewTracking from '#app/hooks/useViewTracker';
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import { ServiceConfig } from '#app/models/types/serviceConfig';
+import type { ServiceConfig } from '#app/models/types/serviceConfig';
 import { service as portugueseConfig } from '#app/lib/config/services/portuguese';
 import { service as turkceConfig } from '#app/lib/config/services/turkce';
 import { topicTagsFixture, multipleTopicsFixture } from './fixtures';

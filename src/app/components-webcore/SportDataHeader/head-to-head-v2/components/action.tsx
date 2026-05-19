@@ -1,4 +1,4 @@
-/* eslint-disable jsx-a11y/aria-role */
+// biome-ignore-all lint/a11y/useValidAriaRole: we want this
 import ActionsTime from './actions-time';
 import styles from '../index.styles';
 import type { PlayerActions, Alignment } from '../types';
@@ -11,7 +11,7 @@ interface ActionProps {
 const Action = ({ contestantActions, alignment }: ActionProps) => (
   <ul css={styles.actionList(alignment)}>
     {contestantActions.map((player, index) => (
-      // eslint-disable-next-line react/no-array-index-key
+      // biome-ignore lint/suspicious/noArrayIndexKey: we want this
       <li css={styles.actionItem(alignment)} key={index}>
         <span role="text">{player.playerName} </span>
         <ActionsTime player={player} />

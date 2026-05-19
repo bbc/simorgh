@@ -3,7 +3,7 @@ import '#psammead/moment-timezone-include/tz/GMT';
 import jalaali from '#psammead/psammead-calendars/src';
 import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
 import withContext from '../../../contexts/utils/withContext';
-import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
+import type { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
 export const service: DefaultServiceConfig = {
   default: {
@@ -163,8 +163,7 @@ export const service: DefaultServiceConfig = {
       },
       consentBanner: {
         privacy: {
-          title:
-            'ما سیاست‌های حفظ حریم خصوصی و کوکی‌های خود را به روز کرده‌ایم',
+          title: 'ما سیاست‌های حفظ حریم خصوصی و کوکی‌های خود را به روز کرده‌ایم',
           description: {
             uk: {
               first:

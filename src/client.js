@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-filename-extension  */
 import createCache from '@emotion/cache';
 import { CacheProvider } from '@emotion/react';
 import { loadableReady } from '@loadable/component';
@@ -45,8 +44,6 @@ if (SIMORGH_DATA_PATH === WINDOW_LOCATION_PATH) {
 }
 
 if (process.env.NODE_ENV === 'production') {
-  // eslint-disable-next-line no-console
-  console.log(template, ...templateStyles);
 }
 
 if (module.hot) {

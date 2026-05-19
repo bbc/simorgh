@@ -1,13 +1,14 @@
+// biome-ignore-all lint/correctness/useHookAtTopLevel: we want this
 import {
-  Curation,
+  type Curation,
   VISUAL_STYLE,
   VISUAL_PROMINENCE,
 } from '#app/models/types/curationData';
-import { ComponentExperimentProps } from '#app/models/types/global';
+import type { ComponentExperimentProps } from '#app/models/types/global';
 import RadioSchedule from '#app/legacy/containers/RadioSchedule';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
-import { EventTrackingData } from '#app/lib/analyticsUtils/types';
+import type { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import CurationGrid from './CurationGrid';
 import HierarchicalGrid from './HierarchicalGrid';

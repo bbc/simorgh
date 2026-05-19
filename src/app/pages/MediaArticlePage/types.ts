@@ -1,4 +1,4 @@
-import { OptimoBlock } from '../../models/types/optimo';
+import type { OptimoBlock } from '../../models/types/optimo';
 
 export type ComponentToRenderProps = {
   blocks: OptimoBlock[];

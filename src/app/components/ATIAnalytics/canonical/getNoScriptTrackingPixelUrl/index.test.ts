@@ -1,5 +1,5 @@
 import getNoScriptTrackingPixelUrl from '.';
-import { ReverbBeaconConfig } from '../../types';
+import type { ReverbBeaconConfig } from '../../types';
 
 const mockReverbParams = {
   params: {

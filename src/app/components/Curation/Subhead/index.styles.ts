@@ -1,4 +1,4 @@
-import { css, Theme } from '@emotion/react';
+import { css, type Theme } from '@emotion/react';
 
 const styles = {
   h2: ({ palette, fontVariants, fontSizes, isDarkUi }: Theme) =>

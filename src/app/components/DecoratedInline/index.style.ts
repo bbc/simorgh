@@ -1,4 +1,4 @@
-import { Theme, css } from '@emotion/react';
+import { type Theme, css } from '@emotion/react';
 
 export default {
   inline: ({ spacings }: Theme) =>

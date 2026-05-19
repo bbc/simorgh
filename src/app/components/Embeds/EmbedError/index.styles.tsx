@@ -1,4 +1,4 @@
-import { css, Theme } from '@emotion/react';
+import { css, type Theme } from '@emotion/react';
 import pixelsToRem from '../../../utilities/pixelsToRem';
 
 const styles = {

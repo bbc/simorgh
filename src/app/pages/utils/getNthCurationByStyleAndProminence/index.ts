@@ -1,4 +1,4 @@
-import {
+import type {
   Curation,
   VisualProminence,
   VisualStyle,

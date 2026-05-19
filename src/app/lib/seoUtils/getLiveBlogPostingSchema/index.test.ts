@@ -1,4 +1,4 @@
-import { Post } from '#nextjs/pages/[service]/live/[id]/Post/types';
+import type { Post } from '#nextjs/pages/[service]/live/[id]/Post/types';
 import { samplePost, twitterSamplePost, videoSamplePost } from './fixtures';
 import getLiveBlogPostingSchema from '.';
 

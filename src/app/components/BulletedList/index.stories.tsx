@@ -1,7 +1,7 @@
-import { PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
 
 import { BulletedList, BulletedListItem } from '.';
-import { StoryArgs } from '../../models/types/storybook';
+import type { StoryArgs } from '../../models/types/storybook';
 import readme from './README.md';
 import { POSTBOX } from '../ThemeProvider/palette';
 

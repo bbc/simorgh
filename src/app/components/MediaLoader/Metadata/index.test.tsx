@@ -11,7 +11,7 @@ import {
 } from '#app/routes/utils/pageTypes';
 import Metadata from '.';
 import { aresMediaBlocks } from '../fixture';
-import { MediaBlock } from '../types';
+import type { MediaBlock } from '../types';
 
 describe('Media Loader - Metadata', () => {
   const embedSource =
@@ -63,18 +63,19 @@ describe('Media Loader - Metadata', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it.each([AUDIO_PAGE, TV_PAGE, LIVE_RADIO_PAGE])(
-    'should not render metadata component as the %s page type is not supported',
-    async pageType => {
-      let container;
+  it.each([
+    AUDIO_PAGE,
+    TV_PAGE,
+    LIVE_RADIO_PAGE,
+  ])('should not render metadata component as the %s page type is not supported', async pageType => {
+    let container;
 
-      await act(async () => {
-        ({ container } = render(<Metadata blocks={[]} />, {
-          pageType,
-        }));
-      });
+    await act(async () => {
+      ({ container } = render(<Metadata blocks={[]} />, {
+        pageType,
+      }));
+    });
 
-      expect(container).toBeEmptyDOMElement();
-    },
-  );
+    expect(container).toBeEmptyDOMElement();
+  });
 });

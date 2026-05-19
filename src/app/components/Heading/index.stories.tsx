@@ -1,7 +1,7 @@
-import { FontVariant, GelFontSize } from '#app/models/types/theming';
+import type { FontVariant, GelFontSize } from '#app/models/types/theming';
 import Heading from '.';
 import readme from './README.md';
-import { StoryProps } from '../../models/types/storybook';
+import type { StoryProps } from '../../models/types/storybook';
 
 interface Props extends StoryProps {
   text: string;

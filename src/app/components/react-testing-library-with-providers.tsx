@@ -1,16 +1,21 @@
-import { FC, PropsWithChildren, ReactElement } from 'react';
-import { render, RenderOptions } from '@testing-library/react';
+import type { FC, PropsWithChildren, ReactElement } from 'react';
+import { render, type RenderOptions } from '@testing-library/react';
 
 import { AccountProvider } from '#app/contexts/AccountContext';
-import { IdctaConfig } from '#app/models/types/account';
+import type { IdctaConfig } from '#app/models/types/account';
 import { ServiceContextProvider } from '../contexts/ServiceContext';
 import { RequestContextProvider } from '../contexts/RequestContext';
 import { ToggleContextProvider } from '../contexts/ToggleContext';
 import { UserContextProvider } from '../contexts/UserContext';
 import { EventTrackingContextProvider } from '../contexts/EventTrackingContext';
 import ThemeProvider from './ThemeProvider';
-import { PageTypes, Services, Toggles, Variants } from '../models/types/global';
-import { ATIData } from './ATIAnalytics/types';
+import type {
+  PageTypes,
+  Services,
+  Toggles,
+  Variants,
+} from '../models/types/global';
+import type { ATIData } from './ATIAnalytics/types';
 
 jest.mock('./ThemeProvider');
 

@@ -1,4 +1,4 @@
-import { PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
 import { Helmet } from 'react-helmet';
 import { BrowserRouter } from 'react-router-dom';
 import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
@@ -32,9 +32,9 @@ import {
 } from '#models/blocks/index';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { suppressPropWarnings } from '#app/legacy/psammead/psammead-test-helpers/src';
-import { Services } from '#app/models/types/global';
-import { Curation } from '#app/models/types/curationData';
-import { Article, OptimoBlock } from '#app/models/types/optimo';
+import type { Services } from '#app/models/types/global';
+import type { Curation } from '#app/models/types/curationData';
+import type { Article, OptimoBlock } from '#app/models/types/optimo';
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import * as viewTracking from '#app/hooks/useViewTracker';
 import isLive from '#lib/utilities/isLive';
@@ -1153,54 +1153,51 @@ describe('Article Page', () => {
         isLite: true,
         shouldBeDisplayed: false,
       },
-    ])(
-      '$testScenario',
-      ({
-        toggleEnabled,
-        shouldBeDisplayed,
-        hasContinueReadingBlock,
-        isLite = false,
-      }) => {
-        const continueReadingBlock = {
-          id: 'continue-reading-block',
-          type: 'continueReading',
-          model: {},
-        };
-        const baseBlocks =
-          articleDataPersianWithFourParagraphs.content.model.blocks;
+    ])('$testScenario', ({
+      toggleEnabled,
+      shouldBeDisplayed,
+      hasContinueReadingBlock,
+      isLite = false,
+    }) => {
+      const continueReadingBlock = {
+        id: 'continue-reading-block',
+        type: 'continueReading',
+        model: {},
+      };
+      const baseBlocks =
+        articleDataPersianWithFourParagraphs.content.model.blocks;
 
-        const blocks = hasContinueReadingBlock
-          ? [...baseBlocks, continueReadingBlock]
-          : [...baseBlocks];
+      const blocks = hasContinueReadingBlock
+        ? [...baseBlocks, continueReadingBlock]
+        : [...baseBlocks];
 
-        const pageData: Article = {
-          ...articleDataPersianWithFourParagraphs,
-          content: {
-            ...articleDataPersianWithFourParagraphs.content,
-            model: {
-              ...articleDataPersianWithFourParagraphs.content.model,
-              blocks,
-            },
+      const pageData: Article = {
+        ...articleDataPersianWithFourParagraphs,
+        content: {
+          ...articleDataPersianWithFourParagraphs.content,
+          model: {
+            ...articleDataPersianWithFourParagraphs.content.model,
+            blocks,
           },
-        };
+        },
+      };
 
-        render(<ArticlePage pageData={pageData} />, {
-          service: 'persian',
-          isLite,
-          toggles: { continueReadingButton: { enabled: toggleEnabled } },
-        });
+      render(<ArticlePage pageData={pageData} />, {
+        service: 'persian',
+        isLite,
+        toggles: { continueReadingButton: { enabled: toggleEnabled } },
+      });
 
-        const continueReadingButton = screen.queryByTestId(
-          'continue-reading-button',
-        );
+      const continueReadingButton = screen.queryByTestId(
+        'continue-reading-button',
+      );
 
-        if (shouldBeDisplayed) {
-          expect(continueReadingButton).toBeInTheDocument();
-        } else {
-          expect(continueReadingButton).not.toBeInTheDocument();
-        }
-      },
-    );
+      if (shouldBeDisplayed) {
+        expect(continueReadingButton).toBeInTheDocument();
+      } else {
+        expect(continueReadingButton).not.toBeInTheDocument();
+      }
+    });
   });
   describe('Portrait Video Carousel', () => {
     const portraitVideoItems = {

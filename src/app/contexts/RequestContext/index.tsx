@@ -1,5 +1,5 @@
-import { createContext, PropsWithChildren, useMemo } from 'react';
-import {
+import { createContext, type PropsWithChildren, useMemo } from 'react';
+import type {
   Environments,
   Platforms,
   PageTypes,

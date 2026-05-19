@@ -75,7 +75,7 @@ describe('UserContext cookies', () => {
     ].forEach(({ test, cookiePolicy, result }) => {
       it(`expect ${result} ${test}`, () =>
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignore
+        // @ts-expect-error
         expect(personalisationEnabled(cookiePolicy))[result]());
     });
   });

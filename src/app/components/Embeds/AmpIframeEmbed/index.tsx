@@ -1,6 +1,6 @@
 /* eslint-disable react/destructuring-assignment */
 import AmpIframe from '../../AmpIframe';
-import { ampParams } from '../types';
+import type { ampParams } from '../types';
 import styles from './index.styles';
 
 type Props = {

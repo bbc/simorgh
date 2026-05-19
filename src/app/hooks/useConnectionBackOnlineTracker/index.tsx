@@ -1,7 +1,7 @@
 import { useEffect, useRef, useCallback } from 'react';
 import useNetworkStatusTracker from '../useNetworkStatusTracker';
 import useCustomEventTracker from '../useCustomEventTracker';
-import { NetworkStatus } from '../useNetworkStatusTracker/type';
+import type { NetworkStatus } from '../useNetworkStatusTracker/type';
 
 const BACK_ONLINE_EVENT_NAME = 'network-connection-back-online';
 const DEBOUNCE_DELAY = 10000;

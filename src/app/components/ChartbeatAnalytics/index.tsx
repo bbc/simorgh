@@ -3,8 +3,8 @@ import { RequestContext } from '../../contexts/RequestContext';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import AmpChartbeatBeacon from './amp';
 import CanonicalChartbeatBeacon from './canonical';
-import { GetConfigProps, getConfig } from './utils';
-import { ChartbeatProps } from './types';
+import { type GetConfigProps, getConfig } from './utils';
+import type { ChartbeatProps } from './types';
 
 const ChartbeatAnalytics = ({
   sectionName,

@@ -5,7 +5,7 @@ import useToggle from '#hooks/useToggle';
 import CallToActionLink from '#app/components/CallToActionLink';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Headings from '#containers/Headings';
-import { ComponentToRenderProps } from '../types';
+import type { ComponentToRenderProps } from '../types';
 import styles from './index.styles';
 
 const ArticleHeadline = (props: ComponentToRenderProps) => {

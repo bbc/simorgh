@@ -6,7 +6,7 @@ import LiveTvLayout from './LiveTvPageLayout';
 
 const Component = ({ service }: StoryProps) => (
   // @ts-expect-error partial data required for storybook
-  (<PageLayoutWrapper pageData={liveTvFixture} status={200}>
+  <PageLayoutWrapper pageData={liveTvFixture} status={200}>
     <LiveTvLayout
       pageType={LIVE_TV_PAGE}
       service={service}
@@ -16,7 +16,7 @@ const Component = ({ service }: StoryProps) => (
       status={200}
       timeOnServer={0}
     />
-  </PageLayoutWrapper>)
+  </PageLayoutWrapper>
 );
 
 export default {

@@ -1,3 +1,4 @@
+// biome-ignore-all lint/a11y/useValidAriaRole: we want this
 import styled from '@emotion/styled';
 import {
   GEL_SPACING_HLF,
@@ -131,7 +132,6 @@ const StyledSpan = styled.span`
 
 const CurrentLink = ({ linkId, children: link, currentPageText = null }) => (
   <StyledSpan
-    // eslint-disable-next-line jsx-a11y/aria-role
     role="text"
     // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
     id={`NavigationLinks-${linkId}`}

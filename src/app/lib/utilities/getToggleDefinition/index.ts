@@ -1,4 +1,4 @@
-import { ToggleDefinition, Toggles } from '#app/models/types/global';
+import type { ToggleDefinition, Toggles } from '#app/models/types/global';
 
 const getToggleDefinitions = (
   toggles: Toggles = {},

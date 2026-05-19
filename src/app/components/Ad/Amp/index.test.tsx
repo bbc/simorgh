@@ -3,7 +3,7 @@ import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import AmpAd, { AMP_ACCESS_FETCH } from './index';
 import { render } from '../../react-testing-library-with-providers';
 import { ServiceContext } from '../../../contexts/ServiceContext';
-import { SlotType } from '../types';
+import type { SlotType } from '../types';
 
 const adJsonAttributes = (slotType: SlotType) => ({
   targeting: {

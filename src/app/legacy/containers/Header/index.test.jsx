@@ -193,39 +193,33 @@ describe(`Header`, () => {
           pageType => !supportedUzbekPageTypes.includes(pageType),
         );
 
-        it.each(supportedUzbekPageTypes)(
-          'should render script link when page type is %s',
-          pageType => {
-            const { container } = HeaderContainerWithContext({
-              renderOptions: {
-                pageType,
-                service: 'uzbek',
-                variant,
-              },
-            });
+        it.each(
+          supportedUzbekPageTypes,
+        )('should render script link when page type is %s', pageType => {
+          const { container } = HeaderContainerWithContext({
+            renderOptions: {
+              pageType,
+              service: 'uzbek',
+              variant,
+            },
+          });
 
-            expect(container.querySelectorAll(scriptLinkSelector).length).toBe(
-              1,
-            );
-          },
-        );
+          expect(container.querySelectorAll(scriptLinkSelector).length).toBe(1);
+        });
 
-        it.each(unsupportedUzbekPageTypes)(
-          'should not render script link when page type is %s',
-          pageType => {
-            const { container } = HeaderContainerWithContext({
-              renderOptions: {
-                pageType,
-                service: 'uzbek',
-                variant,
-              },
-            });
+        it.each(
+          unsupportedUzbekPageTypes,
+        )('should not render script link when page type is %s', pageType => {
+          const { container } = HeaderContainerWithContext({
+            renderOptions: {
+              pageType,
+              service: 'uzbek',
+              variant,
+            },
+          });
 
-            expect(container.querySelectorAll(scriptLinkSelector).length).toBe(
-              0,
-            );
-          },
-        );
+          expect(container.querySelectorAll(scriptLinkSelector).length).toBe(0);
+        });
       });
     });
 

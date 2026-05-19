@@ -1,3 +1,4 @@
+// biome-ignore-all lint/security/noDangerouslySetInnerHtml: this is fine
 /* eslint-disable no-console */
 import { memo, use, useEffect } from 'react';
 import styled from '@emotion/styled';
@@ -19,7 +20,7 @@ const OEmbed = styled.div`
   ${({ isLive }) => (isLive ? 'flex-wrap: wrap;' : '')}
 `;
 
-const getOnRenderError = providerName =>
+const _getOnRenderError = providerName =>
   `onRender callback function not implemented for ${providerName}`;
 
 /**
@@ -42,7 +43,7 @@ export const providers = (provider, isLive) =>
           window.instgrm.Embeds.process();
         }
       },
-      onLibraryLoad: () => console.error(getOnRenderError('Instagram')),
+      onLibraryLoad: () => {},
     },
     twitter: {
       script: 'https://platform.twitter.com/widgets.js',
@@ -114,7 +115,7 @@ export const providers = (provider, isLive) =>
       }
     `,
       enrich: () => {},
-      onLibraryLoad: () => console.error(getOnRenderError('YouTube')),
+      onLibraryLoad: () => {},
     },
     tiktok: {
       script: `https://www.tiktok.com/embed.js?t=${Date.now()}`,
@@ -125,7 +126,7 @@ export const providers = (provider, isLive) =>
       }
     `,
       enrich: () => {},
-      onLibraryLoad: () => console.error(getOnRenderError('TikTok')),
+      onLibraryLoad: () => {},
     },
     facebook: {
       script: 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v15.0',
@@ -151,7 +152,7 @@ export const providers = (provider, isLive) =>
       }
     `,
       enrich: () => {},
-      onLibraryLoad: () => console.error(getOnRenderError('Facebook')),
+      onLibraryLoad: () => {},
     },
   })[provider];
 
@@ -167,7 +168,7 @@ const CanonicalEmbed = ({ provider, oEmbed, onRender = null }) => {
       onLibraryLoad(onRender);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [hasLoadedLibrary]);
+  }, [hasLoadedLibrary, onRender, onLibraryLoad]);
 
   return (
     <OEmbed

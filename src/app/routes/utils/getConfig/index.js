@@ -13,7 +13,7 @@ const getConfig = async (service, variant = 'default') => {
     const { service: config } = await import(`#lib/config/services/${service}`);
     serviceConfig = config;
   } catch (e) {
-    logger.error(`Error retrieving config for ${service}`);
+    logger.error(`Error retrieving config for ${service}, ${e}`);
     return {};
   }
 

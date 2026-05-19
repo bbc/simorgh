@@ -1,4 +1,4 @@
-import { ServiceTheme } from '#app/models/types/theming';
+import type { ServiceTheme } from '#app/models/types/theming';
 import { ARCHIVE_BLUE, WHITE } from '../palette';
 import latinScript from '../fontScripts/latin';
 import {

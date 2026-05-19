@@ -1,4 +1,4 @@
-import { PageTypes, Services } from '#app/models/types/global';
+import type { PageTypes, Services } from '#app/models/types/global';
 import { RequestContextProvider } from '#app/contexts/RequestContext';
 import MediaLoaderComponent from '.';
 import {
@@ -7,7 +7,7 @@ import {
   videoClipMediaBlocks,
   legacyMediaBlock,
 } from './fixture';
-import { MediaBlock } from './types';
+import type { MediaBlock } from './types';
 import readme from './README.md';
 
 type Props = {

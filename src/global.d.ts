@@ -63,5 +63,3 @@ declare global {
     }) => void;
   }
 }
-
-export {};

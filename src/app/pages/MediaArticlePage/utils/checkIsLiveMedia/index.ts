@@ -1,9 +1,9 @@
-import {
+import type {
   AresMediaBlock,
   AresMediaMetadataBlock,
 } from '#app/components/MediaLoader/types';
 import filterForBlockType from '#app/lib/utilities/blockHandlers';
-import { OptimoBlock } from '#app/models/types/optimo';
+import type { OptimoBlock } from '#app/models/types/optimo';
 
 const checkIsLiveMedia = (blocks: OptimoBlock[]) => {
   const mediaBlocks = blocks.filter(

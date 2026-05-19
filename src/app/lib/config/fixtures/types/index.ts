@@ -1,6 +1,6 @@
-import { Summary } from '#app/models/types/curationData';
-import { Services } from '#app/models/types/global';
-import { ATIData } from '#app/components/ATIAnalytics/types';
+import type { Summary } from '#app/models/types/curationData';
+import type { Services } from '#app/models/types/global';
+import type { ATIData } from '#app/components/ATIAnalytics/types';
 
 export type Topic = {
   topicName: string;

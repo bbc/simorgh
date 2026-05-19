@@ -1,10 +1,10 @@
-import { ForwardedRef, forwardRef } from 'react';
+import { type ForwardedRef, forwardRef } from 'react';
 import { getIsLive } from '#lib/utilities/getStoryPromoInfo';
 import Promo from '#components/OptimoPromos';
-import { EventTrackingBlock } from '#app/models/types/eventTracking';
+import type { EventTrackingBlock } from '#app/models/types/eventTracking';
 
 import styles from './index.styles';
-import { TopStoryItem } from '../types';
+import type { TopStoryItem } from '../types';
 
 const getArticleTopStoryItem = (item: TopStoryItem) => {
   const overtypedHeadline = item?.headlines?.overtyped ?? '';

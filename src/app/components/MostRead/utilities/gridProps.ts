@@ -1,4 +1,4 @@
-import { ColumnLayout } from '../types';
+import type { ColumnLayout } from '../types';
 
 const mostReadListGridProps = (columnLayout: ColumnLayout) => ({
   enableGelGutters: true,

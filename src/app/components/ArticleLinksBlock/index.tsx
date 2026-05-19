@@ -1,7 +1,7 @@
 import { use } from 'react';
 import useViewTracker from '#hooks/useViewTracker';
 import idSanitiser from '#lib/utilities/idSanitiser';
-import { OptimoBlock } from '#app/models/types/optimo';
+import type { OptimoBlock } from '#app/models/types/optimo';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import SkipLinkWrapper from '#app/legacy/components/SkipLinkWrapper';
 import { ServiceContext } from '../../contexts/ServiceContext';

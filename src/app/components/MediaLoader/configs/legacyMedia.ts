@@ -1,6 +1,6 @@
-import { MediaOverrides } from '#app/models/types/media';
+import type { MediaOverrides } from '#app/models/types/media';
 import filterForBlockType from '#lib/utilities/blockHandlers';
-import {
+import type {
   LegacyMediaBlock,
   ConfigBuilderProps,
   ConfigBuilderReturnProps,

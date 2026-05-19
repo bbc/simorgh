@@ -105,7 +105,7 @@ const LocalisedBrandName = ({
   const brandId = `BrandLink-${linkId}`;
   return serviceLocalisedName ? (
     // id={`BrandLink-${linkId}` is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
-    // eslint-disable-next-line jsx-a11y/aria-role
+    // biome-ignore lint/a11y/useValidAriaRole: we want this
     <VisuallyHiddenText role="text" id={brandId}>
       <span lang="en-GB">{`${product}, `}</span>
       <span>{serviceLocalisedName}</span>

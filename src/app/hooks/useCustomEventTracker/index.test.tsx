@@ -1,4 +1,4 @@
-import { createContext, ReactNode } from 'react';
+import { createContext, type ReactNode } from 'react';
 import {
   renderHook,
   act,
@@ -7,8 +7,8 @@ import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
-import { ATIData } from '#app/components/ATIAnalytics/types';
-import { Toggles } from '#app/models/types/global';
+import type { ATIData } from '#app/components/ATIAnalytics/types';
+import type { Toggles } from '#app/models/types/global';
 import { VIEW_EVENT } from '#app/lib/analyticsUtils/analytics.const';
 import * as serviceContextModule from '../../contexts/ServiceContext';
 import * as beaconModule from '../../components/ATIAnalytics/beacon';

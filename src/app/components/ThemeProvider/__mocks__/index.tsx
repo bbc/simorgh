@@ -1,6 +1,6 @@
 import type { ReactNode, FC } from 'react';
 import defaultServiceVariants from '#app/lib/config/services/defaultServiceVariants';
-import {
+import type {
   Variants,
   ServicesWithVariants,
   ServicesWithNoVariants,

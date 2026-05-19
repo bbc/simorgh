@@ -1,7 +1,7 @@
 import {
   VISUAL_STYLE,
   VISUAL_PROMINENCE,
-  Curation,
+  type Curation,
 } from '#app/models/types/curationData';
 import getComponentName, { COMPONENT_NAMES } from '.';
 import afriqueHomePage from '../../../../../data/afrique/homePage/index.json';

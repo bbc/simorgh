@@ -1,7 +1,6 @@
-import { PropsWithChildren } from 'react';
-import { OptimoBylineBlock } from '#app/models/types/optimo';
-// eslint-disable-next-line import/no-relative-packages
-import { PostContributor } from '../../../../ws-nextjs-app/pages/[service]/live/[id]/Post/types';
+import type { PropsWithChildren } from 'react';
+import type { OptimoBylineBlock } from '#app/models/types/optimo';
+import type { PostContributor } from '../../../../ws-nextjs-app/pages/[service]/live/[id]/Post/types';
 import Timestamp from '../../legacy/containers/ArticleTimestamp';
 import {
   bylineWithNameAndRole,
@@ -18,7 +17,6 @@ import {
   bylineSamplePost,
   bylinesSamplePostWithoutImage,
   bylinesSamplePostWithoutSubtitle,
-  // eslint-disable-next-line import/no-relative-packages
 } from '../../../../ws-nextjs-app/pages/[service]/live/[id]/Post/fixture';
 import Byline from '.';
 import readme from './README.md';
@@ -26,7 +24,7 @@ import metadata from './metadata.json';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { ARTICLE_PAGE, LIVE_PAGE } from '../../routes/utils/pageTypes';
-import { PageTypes, Services, Direction } from '../../models/types/global';
+import type { PageTypes, Services, Direction } from '../../models/types/global';
 import filterForBlockType from '../../lib/utilities/blockHandlers';
 
 interface ComponentProps {

@@ -40,23 +40,25 @@ describe('filterPopularStaleData', () => {
       process.env.SIMORGH_APP_ENV = originalAppEnv;
     });
 
-    it.each(['local', 'test'])(
-      'should make stale data fresh if environment is %s',
-      ({ environment }) => {
-        process.env.SIMORGH_APP_ENV = environment;
-        const staleData = {
-          lastRecordTimeStamp: '2019-11-06T16:28:00Z',
-          generated: '2019-11-06T17:05:17.981Z',
-          records: ['some records'],
-        };
-        const filteredData = filterPopularStaleData({
-          data: staleData,
-          service: 'pidgin',
-          isAmp: true,
-        });
-        expect(nodeLogger.warn).toHaveBeenCalledTimes(0);
-        expect(filteredData).toEqual(staleData);
-      },
-    );
+    it.each([
+      'local',
+      'test',
+    ])('should make stale data fresh if environment is %s', ({
+      environment,
+    }) => {
+      process.env.SIMORGH_APP_ENV = environment;
+      const staleData = {
+        lastRecordTimeStamp: '2019-11-06T16:28:00Z',
+        generated: '2019-11-06T17:05:17.981Z',
+        records: ['some records'],
+      };
+      const filteredData = filterPopularStaleData({
+        data: staleData,
+        service: 'pidgin',
+        isAmp: true,
+      });
+      expect(nodeLogger.warn).toHaveBeenCalledTimes(0);
+      expect(filteredData).toEqual(staleData);
+    });
   });
 });

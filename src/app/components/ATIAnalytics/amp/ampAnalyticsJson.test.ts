@@ -1,6 +1,6 @@
-/* eslint-disable no-template-curly-in-string */
+// biome-ignore-all lint/suspicious/noTemplateCurlyInString: this is fine
 import { getExpectedAtiDestination } from '../helpers/getExpectedAtiDestination';
-import { ReverbBeaconConfig } from '../types';
+import type { ReverbBeaconConfig } from '../types';
 import ampAnalyticsJson from './ampAnalyticsJson';
 
 describe('AMP ATI Analytics', () => {

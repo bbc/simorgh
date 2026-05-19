@@ -1,4 +1,4 @@
-import buildBlocks, { VISIBILITY, ResultItem } from './buildBlocks';
+import buildBlocks, { VISIBILITY, type ResultItem } from './buildBlocks';
 
 type ValidateProps = {
   output: Array<ResultItem> | null;

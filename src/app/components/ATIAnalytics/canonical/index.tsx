@@ -6,14 +6,14 @@ import { addSendStaticBeaconToWindow } from '#app/lib/analyticsUtils/staticATITr
 import sendPageViewBeaconLite from '#app/lib/analyticsUtils/staticATITracking/processClientDeviceAndSendStaticBeacon';
 import sendBeacon from '#app/lib/analyticsUtils/sendBeacon';
 import addInlineScript, {
-  InlineScriptProps,
+  type InlineScriptProps,
 } from '#app/lib/utilities/addInlineScript';
 import usePWAInstallTracker from '#app/hooks/usePWAInstallTracker';
 import { reverbUrlHelper } from '@bbc/reverb-url-helper';
 import useConnectionBackOnlineTracker from '#app/hooks/useConnectionBackOnlineTracker';
 import useConnectionTypeTracker from '#app/hooks/useConnectionTypeTracker';
 import usePWAOfflineTracking from '#app/hooks/usePWAOfflineTracking';
-import { ATIAnalyticsProps } from '../types';
+import type { ATIAnalyticsProps } from '../types';
 import getNoScriptTrackingPixelUrl from './getNoScriptTrackingPixelUrl';
 import sendPageViewBeaconOperaMini from './sendPageViewBeaconOperaMini';
 

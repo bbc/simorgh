@@ -3,7 +3,7 @@ import filterForBlockType from '#lib/utilities/blockHandlers';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import onClient from '#app/lib/utilities/onClient';
 import { GROUP_3_MIN_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
-import {
+import type {
   PortraitClipMediaBlock,
   ConfigBuilderProps,
   ConfigBuilderReturnProps,

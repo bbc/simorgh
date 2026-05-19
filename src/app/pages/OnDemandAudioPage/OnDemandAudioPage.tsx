@@ -11,14 +11,14 @@ import RecentAudioEpisodes from '#containers/EpisodeList/RecentAudioEpisodes';
 import FooterTimestamp from '#containers/OnDemandFooterTimestamp';
 import PodcastExternalLinks from '#containers/PodcastExternalLinks';
 import MediaLoader from '#app/components/MediaLoader';
-import { PageTypes } from '#app/models/types/global';
-import { RadioScheduleData } from '#app/models/types/radioSchedule';
-import { ContentType } from '#app/components/ChartbeatAnalytics/types';
-import {
+import type { PageTypes } from '#app/models/types/global';
+import type { RadioScheduleData } from '#app/models/types/radioSchedule';
+import type { ContentType } from '#app/components/ChartbeatAnalytics/types';
+import type {
   EpisodeAvailability,
   OnDemandAudioBlock,
 } from '#app/models/types/media';
-import { ATIData } from '#app/components/ATIAnalytics/types';
+import type { ATIData } from '#app/components/ATIAnalytics/types';
 import styles from './index.styles';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';

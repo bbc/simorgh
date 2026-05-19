@@ -1,4 +1,4 @@
-import { OEmbedData } from '#app/components/Embeds/types';
+import type { OEmbedData } from '#app/components/Embeds/types';
 import { v4 as uuid } from 'uuid';
 
 export default (aresOEmbedData: OEmbedData) => {

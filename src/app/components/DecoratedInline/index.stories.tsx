@@ -1,4 +1,4 @@
-import { OptimoBlock } from '#app/models/types/optimo';
+import type { OptimoBlock } from '#app/models/types/optimo';
 import DecoratedInlineLink from '.';
 import { persianLink, fragmentBlock } from './fixture';
 

@@ -2,13 +2,13 @@
 import type { ComponentType, PropsWithChildren } from 'react';
 import nodeLogger from '#lib/logger.node';
 import { THEME_PROVIDER_ERROR } from '#app/lib/logger.const';
-import {
+import type {
   LoadableTheme,
   ThemeWithNoVariant,
   ThemeWithVariant,
 } from '#app/models/types/theming';
 import defaultServiceVariants from '../../lib/config/services/defaultServiceVariants';
-import {
+import type {
   ServicesVariantsProps,
   ServicesWithVariants,
   ServicesWithNoVariants,

@@ -2,7 +2,7 @@ import { forwardRef } from 'react';
 
 import BlurredBackground from '#app/components/Image/BlurredBackground';
 import Promo from '../../../../../legacy/components/OptimoPromos';
-import { LatestMediaItemProp } from '../types';
+import type { LatestMediaItemProp } from '../types';
 import LatestMediaIndicator from '../LatestMediaIndicator';
 import styles from './index.styles';
 

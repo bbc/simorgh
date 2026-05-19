@@ -1,9 +1,9 @@
 import fetchDataFromBFF from '#app/routes/utils/fetchDataFromBFF';
-import { InitialDataProps } from '#app/models/types/initialData';
+import type { InitialDataProps } from '#app/models/types/initialData';
 import handleError from '#app/routes/utils/handleError';
 import { BFF_FETCH_ERROR } from '#app/lib/logger.const';
 import nodeLogger from '#app/lib/logger.node';
-import { FetchError } from '#app/models/types/fetch';
+import type { FetchError } from '#app/models/types/fetch';
 import { TV_PAGE } from '#app/routes/utils/pageTypes';
 import isTest from '#app/lib/utilities/isTest';
 import overrideRendererOnTest from '#app/routes/utils/overrideRendererOnTest';

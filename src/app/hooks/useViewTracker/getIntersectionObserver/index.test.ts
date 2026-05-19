@@ -11,7 +11,7 @@ describe('getIntersectionObserver', () => {
     // Mock IntersectionObserver
     const observe = jest.fn();
     const disconnect = jest.fn();
-    // eslint-disable-next-line func-names, @typescript-eslint/no-explicit-any
+    // biome-ignore lint/suspicious/noExplicitAny: we want this
     (window as any).IntersectionObserver = jest.fn(function (this: any) {
       this.observe = observe;
       this.disconnect = disconnect;

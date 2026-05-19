@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import type { ReactNode } from 'react';
 
-import { PropsWithChildren, use } from 'react';
+import { type PropsWithChildren, use } from 'react';
 import pick from 'ramda/src/pick';
 import Lazyload from 'react-lazyload';
 
@@ -14,8 +14,8 @@ import FrostedGlassPanel from './FrostedGlassPanel';
 import withData from './withData';
 
 import styles from './styles';
-import { EventTrackingBlock } from '../../models/types/eventTracking';
-import { PromoProps } from './types';
+import type { EventTrackingBlock } from '../../models/types/eventTracking';
+import type { PromoProps } from './types';
 
 const PANEL_OFFSET = 250;
 

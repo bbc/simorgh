@@ -1,5 +1,5 @@
-import { ReactSDKClient } from '@optimizely/react-sdk';
-import { Platforms, Services } from '#app/models/types/global';
+import type { ReactSDKClient } from '@optimizely/react-sdk';
+import type { Platforms, Services } from '#app/models/types/global';
 import dispatchTrackingRequests from '.';
 
 const sendEventBeaconSpy = jest.spyOn(
@@ -116,16 +116,15 @@ describe('dispatchTrackingRequests', () => {
           },
         },
       },
-    ])(
-      'should not send event to Optimizely when optimizely object exists and $title',
-      async ({ eventTrackingData }) => {
-        await dispatchTrackingRequests(eventTrackingData);
+    ])('should not send event to Optimizely when optimizely object exists and $title', async ({
+      eventTrackingData,
+    }) => {
+      await dispatchTrackingRequests(eventTrackingData);
 
-        expect(sendEventBeaconSpy).toHaveBeenCalled();
+      expect(sendEventBeaconSpy).toHaveBeenCalled();
 
-        expect(defaultOptimizely.track).not.toHaveBeenCalled();
-      },
-    );
+      expect(defaultOptimizely.track).not.toHaveBeenCalled();
+    });
   });
 
   describe('Reverb tracking', () => {
@@ -165,44 +164,43 @@ describe('dispatchTrackingRequests', () => {
           },
         },
       },
-    ])(
-      'should trigger a beacon for a view event when $title',
-      async ({ eventTrackingData }) => {
-        await dispatchTrackingRequests(eventTrackingData);
+    ])('should trigger a beacon for a view event when $title', async ({
+      eventTrackingData,
+    }) => {
+      await dispatchTrackingRequests(eventTrackingData);
 
-        expect(sendEventBeaconSpy).toHaveBeenCalled();
+      expect(sendEventBeaconSpy).toHaveBeenCalled();
 
-        expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
-        expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
-          'viewability',
-          '',
-          {
-            event: { action: 'view', category: 'viewability' },
-            group: {
-              name: 'test group',
-              type: 'portrait-video-modal',
-              item_count: 18,
-              resource_id: 'test-group-id',
-              position: 4,
-            },
-            item: {
-              name: 'portrait-video-modal',
-              attribution: 'advertiser id',
-              link: 'http://example.com',
-              type: 'portrait-video',
-              text: 'Rollercoaster facts... while riding a rollercoaster',
-              media_type: 'video',
-              position: 1,
-              duration: 73000,
-              resource_id: 'test-item-id',
-            },
+      expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
+      expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
+        'viewability',
+        '',
+        {
+          event: { action: 'view', category: 'viewability' },
+          group: {
+            name: 'test group',
+            type: 'portrait-video-modal',
+            item_count: 18,
+            resource_id: 'test-group-id',
+            position: 4,
           },
-          undefined,
-          undefined,
-          false,
-        );
-      },
-    );
+          item: {
+            name: 'portrait-video-modal',
+            attribution: 'advertiser id',
+            link: 'http://example.com',
+            type: 'portrait-video',
+            text: 'Rollercoaster facts... while riding a rollercoaster',
+            media_type: 'video',
+            position: 1,
+            duration: 73000,
+            resource_id: 'test-item-id',
+          },
+        },
+        undefined,
+        undefined,
+        false,
+      );
+    });
 
     it.each([
       {
@@ -279,16 +277,15 @@ describe('dispatchTrackingRequests', () => {
           alwaysInView: false,
         },
       },
-    ])(
-      'should not trigger a beacon for a view event when $title',
-      async ({ eventTrackingData }) => {
-        // @ts-expect-error required to test shouldDispatchEventBeacon false condition
-        await dispatchTrackingRequests(eventTrackingData);
+    ])('should not trigger a beacon for a view event when $title', async ({
+      eventTrackingData,
+    }) => {
+      // @ts-expect-error required to test shouldDispatchEventBeacon false condition
+      await dispatchTrackingRequests(eventTrackingData);
 
-        expect(sendEventBeaconSpy).not.toHaveBeenCalled();
+      expect(sendEventBeaconSpy).not.toHaveBeenCalled();
 
-        expect(reverbMock.userActionEvent).not.toHaveBeenCalled();
-      },
-    );
+      expect(reverbMock.userActionEvent).not.toHaveBeenCalled();
+    });
   });
 });

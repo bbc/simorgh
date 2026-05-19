@@ -1,4 +1,4 @@
-import { MouseEvent, use } from 'react';
+import { type MouseEvent, use } from 'react';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import Link from './Link';

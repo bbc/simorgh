@@ -1,4 +1,4 @@
-import { PromoProps } from './types';
+import type { PromoProps } from './types';
 
 export const promoProps = {
   children:

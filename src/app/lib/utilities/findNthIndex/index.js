@@ -3,24 +3,12 @@ import is from 'ramda/src/is';
 
 const validateInputs = (n, predicate, inputArray) => {
   if (!(Number.isInteger(n) && n > 0)) {
-    console.error(
-      'findNthIndex: expected first argument to be an integer > 0, received',
-      n,
-    );
     return false;
   }
   if (!is(Function, predicate)) {
-    console.error(
-      'findNthIndex: expected second argument to be a function, received',
-      predicate,
-    );
     return false;
   }
   if (!is(Array, inputArray)) {
-    console.error(
-      'findNthIndex: expected third argument to be an array, received',
-      inputArray,
-    );
     return false;
   }
   return true;

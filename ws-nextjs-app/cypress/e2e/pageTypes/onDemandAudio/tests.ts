@@ -5,23 +5,19 @@ import { getEpisodeAvailability } from '../../../support/helpers/onDemandRadioTv
 
 export default ({ service, pageType, path, variant = 'default' }) => {
   describe(`Tests for ${service} ${pageType}`, () => {
-    describe(
-      'Audio Player',
-      {
-        retries: 3,
-      },
-      () => {
-        it('should render a valid media player', () => {
-          cy.getPageDataFromWindow().then(pageData => {
-            if (!getEpisodeAvailability(pageData)) {
-              return cy.log(`Episode is not available: ${path}}`);
-            }
+    describe('Audio Player', {
+      retries: 3,
+    }, () => {
+      it('should render a valid media player', () => {
+        cy.getPageDataFromWindow().then(pageData => {
+          if (!getEpisodeAvailability(pageData)) {
+            return cy.log(`Episode is not available: ${path}}`);
+          }
 
-            cy.get('[data-e2e="media-loader__container"]').should('be.visible');
-          });
+          cy.get('[data-e2e="media-loader__container"]').should('be.visible');
         });
-      },
-    );
+      });
+    });
     describe(`Tests for ${service} ${pageType} ${variant} with toggle use`, () => {
       before(() => {
         cy.getToggles(service);

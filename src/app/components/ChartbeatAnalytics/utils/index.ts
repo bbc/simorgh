@@ -18,13 +18,13 @@ import {
   TV_PAGE,
   LIVE_TV_PAGE,
 } from '../../../routes/utils/pageTypes';
-import {
+import type {
   Environments,
   PageTypes,
   Platforms,
   Services,
 } from '../../../models/types/global';
-import { MetadataTaggings } from '../../../models/types/metadata';
+import type { MetadataTaggings } from '../../../models/types/metadata';
 
 const ID_COOKIE = 'ckns_sylphid';
 

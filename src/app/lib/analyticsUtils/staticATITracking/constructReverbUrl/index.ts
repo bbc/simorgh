@@ -4,7 +4,7 @@ import { buildReverbEventModel } from '#app/components/ATIAnalytics/atiUrl';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
-import { EventTrackingProps } from '#app/lib/analyticsUtils/types';
+import type { EventTrackingProps } from '#app/lib/analyticsUtils/types';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 
 export default ({

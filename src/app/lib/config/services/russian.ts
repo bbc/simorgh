@@ -2,7 +2,7 @@ import cyrillic from '../../../components/ThemeProvider/fontScripts/latin';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/ru';
 import withContext from '../../../contexts/utils/withContext';
-import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
+import type { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 import russianUkrainianSharedTranslations from './russianUkrainianSharedTranslations';
 
 // Translations used in the header and footer elements of the page

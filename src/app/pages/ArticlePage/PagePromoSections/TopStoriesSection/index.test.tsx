@@ -2,7 +2,7 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import * as viewTracking from '#hooks/useViewTracker';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
-import { Services } from '#app/models/types/global';
+import type { Services } from '#app/models/types/global';
 import {
   render,
   screen,
@@ -17,7 +17,7 @@ import {
   tipoLivePageTopStoriesItem,
   topStoriesLiveLabelItem,
 } from './fixture';
-import { TopStoryItem } from './types';
+import type { TopStoryItem } from './types';
 
 type Props = {
   fixtureData: TopStoryItem[];

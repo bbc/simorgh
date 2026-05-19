@@ -1,4 +1,4 @@
-import { Platforms } from '#app/models/types/global';
+import type { Platforms } from '#app/models/types/global';
 import * as genericLabelHelpers from '../../../lib/analyticsUtils';
 import { buildReverbAnalyticsModel, buildReverbEventModel } from '.';
 

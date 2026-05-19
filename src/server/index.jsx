@@ -1,6 +1,5 @@
 /* eslint-disable import/no-relative-packages */
 /* eslint-disable no-console */
-/* eslint-disable camelcase */
 import express from 'express';
 import compression from 'compression';
 import ramdaPath from 'ramda/src/path';
@@ -287,7 +286,6 @@ server.get(
         });
 
         if (isLocal()) {
-          console.error(error);
         }
 
         logger.error(SERVER_SIDE_REQUEST_FAILED, {

@@ -1,3 +1,4 @@
+// biome-ignore-all lint/a11y/useValidAriaRole: we want this
 import { use } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { OptimoBlock } from '#models/types/optimo';
@@ -278,7 +279,6 @@ const Post = ({
   return (
     <article css={styles.postContainer}>
       <Heading id={urn} tabIndex={-1} level={3} css={styles.heading}>
-        {/* eslint-disable-next-line jsx-a11y/aria-role */}
         <span role="text">
           <PostHeaderBanner
             isBreakingNews={isBreakingNews}

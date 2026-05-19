@@ -1,4 +1,4 @@
-import { ServiceTheme } from '#app/models/types/theming';
+import type { ServiceTheme } from '#app/models/types/theming';
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import cyrillicScript from '../fontScripts/cyrillic';
 import helmetFontVariants from '../fontVariants/helmet';

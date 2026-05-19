@@ -2,7 +2,7 @@ import { Global } from '@emotion/react';
 import { use, useEffect, useRef } from 'react';
 import moment from 'moment-timezone';
 import MediaLoader from '#app/components/MediaLoader';
-import {
+import type {
   Player,
   Playlist,
   PlaylistItem,
@@ -11,7 +11,7 @@ import {
 } from '#app/components/MediaLoader/types';
 import { navigationIcons } from '#psammead/psammead-assets/src/svgs';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import { EventTrackingData } from '#app/lib/analyticsUtils/types';
+import type { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useViewTracker from '../../hooks/useViewTracker';
 import useSwipeTracker from '../../hooks/useSwipeTracker';
 import styles from './index.styles';

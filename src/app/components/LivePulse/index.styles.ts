@@ -1,4 +1,4 @@
-import { css, Theme, keyframes } from '@emotion/react';
+import { css, type Theme, keyframes } from '@emotion/react';
 
 const pulseAnimation = keyframes({
   '0%': {

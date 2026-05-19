@@ -1,8 +1,9 @@
-import { PropsWithChildren, use } from 'react';
+// biome-ignore-all lint/a11y/useValidAriaRole: we want this
+import { type PropsWithChildren, use } from 'react';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import styles from './index.styles';
-import { TextProps } from '../LiveLabel/types';
+import type { TextProps } from '../LiveLabel/types';
 
 const Text = ({
   lang = 'en-GB',
@@ -44,7 +45,6 @@ const Text = ({
     <span
       // The id below is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
       id={id}
-      // eslint-disable-next-line jsx-a11y/aria-role
       role="text"
       className={className}
     >

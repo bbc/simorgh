@@ -1,5 +1,5 @@
 import {
-  PropsWithChildren,
+  type PropsWithChildren,
   createContext,
   use,
   useMemo,
@@ -25,7 +25,7 @@ export const LiveRegionContextProvider = ({ children }: PropsWithChildren) => {
       liveRegionItem,
       replaceLiveRegionWith,
     }),
-    [liveRegionItem],
+    [liveRegionItem, replaceLiveRegionWith],
   );
 
   return (

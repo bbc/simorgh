@@ -1,9 +1,9 @@
 import {
   createContext,
-  PropsWithChildren,
+  type PropsWithChildren,
   useState,
-  Dispatch,
-  SetStateAction,
+  type Dispatch,
+  type SetStateAction,
   useMemo,
 } from 'react';
 import Cookie from 'js-cookie';

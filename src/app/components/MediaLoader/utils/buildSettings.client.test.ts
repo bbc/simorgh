@@ -1,4 +1,4 @@
-import { PageTypes, Services } from '#app/models/types/global';
+import type { PageTypes, Services } from '#app/models/types/global';
 import { data as hindiTvProgramme } from '#data/hindi/bbc_hindi_tv/tv_programmes/w13xttlw.json';
 import {
   AUDIO_PAGE,
@@ -29,7 +29,7 @@ import {
   liveTvPageMediaBlock,
   livePagePortraitVideoClipMediaBlock,
 } from '../fixture';
-import {
+import type {
   BuildConfigProps,
   ConfigBuilderReturnProps,
   MediaBlock,

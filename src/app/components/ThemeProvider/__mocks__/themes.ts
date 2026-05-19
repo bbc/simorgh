@@ -1,16 +1,16 @@
 /* eslint-disable no-param-reassign */
-import {
+import type {
   ServicesWithNoVariants,
   ServicesWithVariants,
   Variants,
 } from '#app/models/types/global';
 
-import {
+import type {
   ServicesWithNoVariantsWithPWATypography,
   ServicesWithVariantsWithPWATypography,
   ServiceTheme,
 } from '#app/models/types/theming';
-import { Theme } from '@emotion/react';
+import type { Theme } from '@emotion/react';
 import {
   theme as afaanoromoo,
   pwaTheme as afaanoromooPWA,

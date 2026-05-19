@@ -1,4 +1,4 @@
-import { createContext, PropsWithChildren, use, useMemo } from 'react';
+import { createContext, type PropsWithChildren, use, useMemo } from 'react';
 
 import { RequestContext } from '../RequestContext';
 import useToggle from '../../hooks/useToggle';
@@ -24,10 +24,10 @@ import {
   OFFLINE_PAGE,
   LIVE_TV_PAGE,
 } from '../../routes/utils/pageTypes';
-import { PageTypes } from '../../models/types/global';
-import { EventTrackingContextProps } from '../../models/types/eventTracking';
+import type { PageTypes } from '../../models/types/global';
+import type { EventTrackingContextProps } from '../../models/types/eventTracking';
 import { ServiceContext } from '../ServiceContext';
-import { ATIData } from '../../components/ATIAnalytics/types';
+import type { ATIData } from '../../components/ATIAnalytics/types';
 
 export const EventTrackingContext = createContext<EventTrackingContextProps>(
   {} as EventTrackingContextProps,
@@ -60,10 +60,6 @@ const getCampaignID = (pageType: CampaignPageTypes) => {
   }[pageType];
 
   if (!campaignID) {
-    // eslint-disable-next-line no-console
-    console.warn(
-      `ATI Event Tracking Error: Could not get the page type's campaign name`,
-    );
   }
 
   return campaignID;

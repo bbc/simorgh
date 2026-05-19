@@ -1,9 +1,9 @@
 import moment from 'moment-timezone';
 import formatDuration from '#app/lib/utilities/formatDuration';
-import { Translations } from '#app/models/types/translations';
+import type { Translations } from '#app/models/types/translations';
 import { getPlaceholderSrcSet } from '#app/lib/utilities/srcSet';
-import { MediaType } from '#app/models/types/media';
-import { PlaceholderConfig } from '../../types';
+import type { MediaType } from '#app/models/types/media';
+import type { PlaceholderConfig } from '../../types';
 
 type BuildPlaceholderConfigParams = {
   title: string;

@@ -1,5 +1,5 @@
 import { buildPageReverbParams } from './buildParams';
-import { ReverbDetailsProviders } from '../types';
+import type { ReverbDetailsProviders } from '../types';
 
 export default ({
   requestContext,

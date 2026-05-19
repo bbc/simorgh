@@ -1,11 +1,11 @@
-import { ReactNode } from 'react';
+import type { ReactNode } from 'react';
 import Helmet from 'react-helmet';
 import assocPath from 'ramda/src/assocPath';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { render } from '../react-testing-library-with-providers';
-import { Services } from '../../models/types/global';
+import type { Services } from '../../models/types/global';
 import LinkedData from '.';
 
 interface LinkedDataWithContext {

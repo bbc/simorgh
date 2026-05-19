@@ -1,5 +1,5 @@
-import { ReverbClient } from '#app/models/types/eventTracking';
-import {
+import type { ReverbClient } from '#app/models/types/eventTracking';
+import type {
   ReverbBeaconConfig,
   ReverbEventDetails,
   ReverbPageVars,

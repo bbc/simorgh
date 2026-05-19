@@ -18,7 +18,7 @@ const decodeBase64JsonString = (encodedString: string): unknown => {
   try {
     const decodedValue = window.atob(encodedString);
     return JSON.parse(decodedValue);
-  } catch (error) {
+  } catch (_error) {
     return null;
   }
 };

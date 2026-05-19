@@ -1,4 +1,4 @@
-import { Article } from '#app/models/types/optimo';
+import type { Article } from '#app/models/types/optimo';
 import LatestMediaSection from './PagePromoSections/LatestMediaSection';
 import styles from './MediaArticlePage.styles';
 

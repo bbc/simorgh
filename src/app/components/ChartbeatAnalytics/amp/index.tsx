@@ -1,4 +1,4 @@
-import { AmpChartbeatProps, AmpChartbeatConfig } from '../types';
+import type { AmpChartbeatProps, AmpChartbeatConfig } from '../types';
 
 const chartbeatAmpConfigOptions = (options: AmpChartbeatConfig) => ({
   vars: options,
@@ -7,7 +7,7 @@ const chartbeatAmpConfigOptions = (options: AmpChartbeatConfig) => ({
 const JsonInlinedScript = (data: { vars: AmpChartbeatConfig }) => (
   <script
     type="application/json"
-    /* eslint-disable-next-line react/no-danger */
+    // biome-ignore lint/security/noDangerouslySetInnerHtml: we want this
     dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
   />
 );

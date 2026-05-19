@@ -1,15 +1,15 @@
 import { use } from 'react';
-import { Theme } from '@emotion/react';
+import type { Theme } from '@emotion/react';
 import MediaLoader from '#app/components/MediaLoader';
-import { MediaBlock } from '#app/components/MediaLoader/types';
+import type { MediaBlock } from '#app/components/MediaLoader/types';
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
-import { BylineLinkedData, Tag } from '#app/components/LinkedData/types';
-import {
+import type { BylineLinkedData, Tag } from '#app/components/LinkedData/types';
+import type {
   Article,
   OptimoBylineBlock,
   OptimoBylineContributorBlock,
 } from '#app/models/types/optimo';
-import { MediaOverrides } from '#app/models/types/media';
+import type { MediaOverrides } from '#app/models/types/media';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import useToggle from '../../hooks/useToggle';
 import {
@@ -62,7 +62,7 @@ import RelatedContentSection from '../../components/RelatedContentSection';
 import SecondaryColumn from './SecondaryColumn';
 
 import styles from './MediaArticlePage.styles';
-import { ComponentToRenderProps, TimestampProps } from './types';
+import type { ComponentToRenderProps, TimestampProps } from './types';
 import checkIsLiveMedia from './utils/checkIsLiveMedia';
 
 import { isPortraitVideo } from '../../components/MediaLoader/utils/isPortraitVideo';

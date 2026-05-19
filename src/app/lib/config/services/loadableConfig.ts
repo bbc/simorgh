@@ -1,7 +1,7 @@
-import { ComponentType } from 'react';
-import { ServiceContext } from '#app/contexts/ServiceContext';
+import type { ComponentType } from 'react';
+import type { ServiceContext } from '#app/contexts/ServiceContext';
 import loadable from 'next/dynamic';
-import { Services } from '#app/models/types/global';
+import type { Services } from '#app/models/types/global';
 
 type LoadableService = ComponentType<{
   Context: typeof ServiceContext;

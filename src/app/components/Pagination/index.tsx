@@ -1,4 +1,5 @@
-import { PropsWithChildren, use } from 'react';
+// biome-ignore-all lint/a11y/useValidAriaRole: we want this
+import { type PropsWithChildren, use } from 'react';
 import {
   GROUP_2_MIN_WIDTH_BP,
   GROUP_2_MAX_WIDTH_BP,
@@ -8,7 +9,7 @@ import {
 } from '#app/components/ThemeProvider/mediaQueries';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
-import { Direction } from '#app/models/types/global';
+import type { Direction } from '#app/models/types/global';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import buildBlocks, { VISIBILITY } from './buildBlocks';
 import { Ellipsis, LeftChevron, RightChevron } from '../icons';
@@ -186,7 +187,6 @@ const Pagination = ({
       <div
         css={styles.textSummary}
         data-testid="topic-pagination-summary"
-        // eslint-disable-next-line jsx-a11y/aria-role
         role="text"
       >
         {tokens}

@@ -1,7 +1,12 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-import { Services } from '#app/models/types/global';
+// biome-ignore-all lint/suspicious/noTsIgnore: we want to hide ts errors
+import type { Services } from '#app/models/types/global';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
-import { AppleItunesApp, AlternateLink, IconSizes, IconType } from '../types';
+import type {
+  AppleItunesApp,
+  AlternateLink,
+  IconSizes,
+  IconType,
+} from '../types';
 
 export const getIconAssetUrl = (service: Services, size: string) =>
   `https://static.files.bbci.co.uk/ws/simorgh-assets/public/${service}/images/icons/icon-${size}.png`;
@@ -20,7 +25,7 @@ const createIconLinks = (
     if (iconType === 'icon') {
       return (
         <link
-          /* @ts-ignore:   Property 'key' does not exist on type 'LinkProps & { css?: Interpolation<Theme>; }'.ts(2322) */
+          /* @ts-expect-error:   Property 'key' does not exist on type 'LinkProps & { css?: Interpolation<Theme>; }'.ts(2322) */
           key={key}
           rel="icon"
           type="image/png"
@@ -31,7 +36,6 @@ const createIconLinks = (
     }
 
     return (
-      /* @ts-ignore:   Property 'key' does not exist on type 'LinkProps & { css?: Interpolation<Theme>; }'.ts(2322) */
       <link key={key} rel="apple-touch-icon" sizes={size} href={iconAssetUrl} />
     );
   });
@@ -61,7 +65,6 @@ export const renderAlternateLinks = (link: AlternateLink) => (
     rel="alternate"
     href={link.href}
     hrefLang={link.hrefLang || ''}
-    /* @ts-ignore:   Property 'key' does not exist on type 'LinkProps & { css?: Interpolation<Theme>; }'.ts(2322) */
     key={link.hrefLang}
   />
 );

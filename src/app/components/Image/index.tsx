@@ -1,4 +1,4 @@
-import { Fragment, PropsWithChildren, useState, use } from 'react';
+import { Fragment, type PropsWithChildren, useState, use } from 'react';
 import { Global } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 import styles from './index.styles';

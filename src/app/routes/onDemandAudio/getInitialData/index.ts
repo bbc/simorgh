@@ -1,5 +1,5 @@
 import { BFF_FETCH_ERROR } from '#lib/logger.const';
-import { InitialDataProps } from '#app/models/types/initialData';
+import type { InitialDataProps } from '#app/models/types/initialData';
 import fetchDataFromBFF from '#app/routes/utils/fetchDataFromBFF';
 import overrideRendererOnTest from '#app/routes/utils/overrideRendererOnTest';
 import isTest from '#app/lib/utilities/isTest';
@@ -70,8 +70,8 @@ export default async ({
   } catch ({
     message,
     status = getErrorStatusCode(),
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  }: any | { message: string; status: number }) {
+    // biome-ignore lint: reason
+  }: any) {
     logger.error(BFF_FETCH_ERROR, {
       service,
       status,

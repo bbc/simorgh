@@ -1,6 +1,6 @@
-import { PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
 import styles from './index.styles';
-import { PulseProps } from '../LiveLabel/types';
+import type { PulseProps } from '../LiveLabel/types';
 
 const Pulse = ({ className, width, height }: PropsWithChildren<PulseProps>) => {
   return (

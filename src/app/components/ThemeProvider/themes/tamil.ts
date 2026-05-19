@@ -1,4 +1,4 @@
-import { ServiceTheme } from '#app/models/types/theming';
+import type { ServiceTheme } from '#app/models/types/theming';
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import tamilScript from '../fontScripts/tamil';
 import { NOTO_SANS_TAMIL_BOLD, NOTO_SANS_TAMIL_REGULAR } from '../fontFaces';

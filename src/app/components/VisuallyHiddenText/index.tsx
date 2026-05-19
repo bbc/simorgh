@@ -1,5 +1,5 @@
 import type { ElementType, ReactNode } from 'react';
-import { ComponentPropsWithoutRef } from 'react';
+import type { ComponentPropsWithoutRef } from 'react';
 import styles from './index.styles';
 
 interface VisuallyHiddenTextProps<T extends ElementType> {

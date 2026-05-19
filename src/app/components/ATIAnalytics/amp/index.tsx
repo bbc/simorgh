@@ -1,10 +1,10 @@
 import getAmpAnalyticsJson from './ampAnalyticsJson';
-import { ATIAnalyticsProps, AMPAnalyticsData } from '../types';
+import type { ATIAnalyticsProps, AMPAnalyticsData } from '../types';
 
 const JsonInlinedScript = (data: AMPAnalyticsData) => (
   <script
     type="application/json"
-    /* eslint-disable-next-line react/no-danger */
+    // biome-ignore lint/security/noDangerouslySetInnerHtml: we want this
     dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
   />
 );

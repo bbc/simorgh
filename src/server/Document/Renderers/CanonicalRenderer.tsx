@@ -1,4 +1,4 @@
-/* eslint-disable react/no-danger */
+// biome-ignore-all lint/security/noDangerouslySetInnerHtml: we want this
 import type { ReactElement, ScriptHTMLAttributes } from 'react';
 import IfAboveIE9 from '#app/legacy/components/IfAboveIE9Comment';
 import NO_JS_CLASSNAME from '#app/lib/noJs.const';
@@ -6,7 +6,7 @@ import { getProcessEnvAppVariables } from '#app/lib/utilities/getEnvConfig';
 import serialiseForScript from '#app/lib/utilities/serialiseForScript';
 import CanonicalToLiteRedirect from '#src/server/utilities/CanonicalToLiteRedirect';
 import addOperaMiniClassScript from '#app/lib/utilities/addOperaMiniClassScript';
-import { BaseRendererProps } from './types';
+import type { BaseRendererProps } from './types';
 import ReverbTemplate from './ReverbTemplate';
 import ComponentTracking from './ComponentTracking';
 
@@ -40,7 +40,6 @@ const showScripts = (
       scriptText += `${scriptKey}.setAttribute('id','${scriptProps.id}');`;
       scriptText += `${scriptKey}.setAttribute('type','${scriptProps.type}');`;
       if (nonce) scriptText += `${scriptKey}.setAttribute('nonce','${nonce}');`;
-      /* eslint-disable no-underscore-dangle */
       scriptText += `${scriptKey}.innerHTML = ${JSON.stringify(scriptProps.dangerouslySetInnerHTML?.__html)};`;
       scriptText += `scriptcontainer.appendChild(${scriptKey});`;
     } else {

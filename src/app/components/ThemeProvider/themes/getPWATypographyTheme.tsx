@@ -1,4 +1,4 @@
-import { TypographyScript } from '#models/types/theming';
+import type { TypographyScript } from '#models/types/theming';
 import reithVariants from '../fontVariants/reith';
 import latinScript from '../fontScripts/latin';
 import {

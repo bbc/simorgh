@@ -3,7 +3,7 @@ import { use, useContext } from 'react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
 import parseRoute from '#app/routes/utils/parseRoute';
-import { Article } from '#app/models/types/optimo';
+import type { Article } from '#app/models/types/optimo';
 import SaveButton from '../SaveButton';
 import styles from './index.styles';
 
@@ -32,11 +32,6 @@ const SaveArticleButton = ({
   if (!saveArticleButton) return null;
 
   if (error) {
-    // eslint-disable-next-line no-console
-    console.log('Error fetching saved status for article:', {
-      articleId,
-      error,
-    });
   }
 
   const buttonLabel = isSaved

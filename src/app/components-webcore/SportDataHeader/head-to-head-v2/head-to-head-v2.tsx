@@ -3,7 +3,7 @@ import HeadToHeadHeader from './components/head-to-head-header';
 import { HeadToHeadBanner } from './components/head-to-head-banner';
 import ConditionalOnwardJourneyLink from './components/conditional-onward-journey-link';
 import { Actions } from './components/actions';
-import { HeadToHeadV2Data } from './types';
+import type { HeadToHeadV2Data } from './types';
 import styles from './index.styles';
 
 export const HeadToHeadV2 = ({

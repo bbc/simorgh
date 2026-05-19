@@ -1,4 +1,4 @@
-import { css, Theme } from '@emotion/react';
+import { css, type Theme } from '@emotion/react';
 
 const MIN_TAG_HEIGHT = '2.75rem'; // 44px
 

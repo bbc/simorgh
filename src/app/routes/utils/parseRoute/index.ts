@@ -1,5 +1,5 @@
 import SERVICES from '#lib/config/services';
-import { Services, Variants } from '#app/models/types/global';
+import type { Services, Variants } from '#app/models/types/global';
 
 type Query = string[];
 type Platform = 'cps' | 'articles' | 'tipo';

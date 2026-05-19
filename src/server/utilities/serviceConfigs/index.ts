@@ -5,7 +5,7 @@
   bundle splitting to stop working.
 */
 
-import { ServiceConfig } from '#app/models/types/serviceConfig';
+import type { ServiceConfig } from '#app/models/types/serviceConfig';
 import { service as afaanoromoo } from '../../../app/lib/config/services/afaanoromoo';
 import { service as afrique } from '../../../app/lib/config/services/afrique';
 import { service as amharic } from '../../../app/lib/config/services/amharic';
@@ -60,7 +60,7 @@ import { service as ws } from '../../../app/lib/config/services/ws';
 import { service as yoruba } from '../../../app/lib/config/services/yoruba';
 import { service as zhongwen } from '../../../app/lib/config/services/zhongwen';
 
-import {
+import type {
   ServicesWithNoVariants,
   ServicesWithVariants,
 } from '../../../app/models/types/global';

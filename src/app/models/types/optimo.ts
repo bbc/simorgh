@@ -1,12 +1,12 @@
-import { ATIData } from '#app/components/ATIAnalytics/types';
-import { Tag } from '#app/components/Metadata/types';
-import { MostReadData } from '#app/components/MostRead/types';
-import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
-import { LatestMedia } from '#app/pages/MediaArticlePage/PagePromoSections/LatestMediaSection/types';
-import { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
-import { PageTypes } from './global';
-import { MetadataFormats, MetadataTaggings, TopicTag } from './metadata';
-import { Curation } from './curationData';
+import type { ATIData } from '#app/components/ATIAnalytics/types';
+import type { Tag } from '#app/components/Metadata/types';
+import type { MostReadData } from '#app/components/MostRead/types';
+import type { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
+import type { LatestMedia } from '#app/pages/MediaArticlePage/PagePromoSections/LatestMediaSection/types';
+import type { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
+import type { PageTypes } from './global';
+import type { MetadataFormats, MetadataTaggings, TopicTag } from './metadata';
+import type { Curation } from './curationData';
 
 export type OptimoBlock = {
   type: string;

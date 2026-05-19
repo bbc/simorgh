@@ -2,7 +2,7 @@ import bengali from '../../../components/ThemeProvider/fontScripts/bengali';
 import '#psammead/moment-timezone-include/tz/Asia/Dhaka';
 import '#psammead/psammead-locales/moment/bn';
 import withContext from '../../../contexts/utils/withContext';
-import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
+import type { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
 export const service: DefaultServiceConfig = {
   default: {
@@ -50,8 +50,7 @@ export const service: DefaultServiceConfig = {
     podcastPromo: {
       title: 'বিবিসি বাংলার হোয়াটসঅ্যাপ চ্যানেল',
       brandTitle: 'আপনার হোয়াটসঅ্যাপে বিবিসি বাংলা।',
-      brandDescription:
-        'বিবিসি বাংলার সর্বশেষ খবর ও বিশ্লেষণ এখন সরাসরি আপনার ফোনে।',
+      brandDescription: 'বিবিসি বাংলার সর্বশেষ খবর ও বিশ্লেষণ এখন সরাসরি আপনার ফোনে।',
       image: {
         src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0lqx69m.png',
         alt: 'বিবিসি বাংলার হোয়াটসঅ্যাপ চ্যানেল',
@@ -182,8 +181,7 @@ export const service: DefaultServiceConfig = {
               title:
                 'আমাদের জানান যে এএমপি (AMP) যেসব তথ্য সংগ্রহ করছে তাতে আপনার সম্মতি আছে।',
               description: {
-                first:
-                  'আমরা এবং আমাদের পার্টনাররা যে প্রযুক্তি ব্যবহার করি যেমন এই ',
+                first: 'আমরা এবং আমাদের পার্টনাররা যে প্রযুক্তি ব্যবহার করি যেমন এই ',
                 linkText: 'কুকিগুলো',
                 last: ' তাতে অনলাইনে আপনার বিচরণ স্বচ্ছন্দ হয় এবং শুধু আপনার পছন্দমত বিষয় ও বিজ্ঞাপন যাতে আপনি দেখেন তার জন্য আপনার ব্রাউজিং ডেটা সংগ্রহ করা হয়। আপনি এতে সম্মতি দিচ্ছেন কিনা জানান।',
                 linkUrl:
@@ -281,8 +279,7 @@ export const service: DefaultServiceConfig = {
           text: 'ছবির কপিরাইট',
           linkText: '%provider_name% -এ আরো দেখুন',
           linkTextSuffixVisuallyHidden: ', বিবিসির বাইরের খবর',
-          warningText:
-            'বিবিসি। বাইরের কোন সাইটের তথ্যের জন্য বিবিসি দায়বদ্ধ নয়।',
+          warningText: 'বিবিসি। বাইরের কোন সাইটের তথ্যের জন্য বিবিসি দায়বদ্ধ নয়।',
         },
         skipLink: {
           text: 'Skip %provider_name% post',
@@ -362,8 +359,7 @@ export const service: DefaultServiceConfig = {
           lang: 'en-GB',
         },
       ],
-      copyrightText:
-        'বিবিসি। বাইরের কোন সাইটের তথ্যের জন্য বিবিসি দায়বদ্ধ নয়।',
+      copyrightText: 'বিবিসি। বাইরের কোন সাইটের তথ্যের জন্য বিবিসি দায়বদ্ধ নয়।',
     },
     timezone: 'Asia/Dhaka',
     navigation: [

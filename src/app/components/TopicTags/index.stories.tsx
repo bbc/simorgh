@@ -1,5 +1,5 @@
-import { Services } from '#app/models/types/global';
-import { StoryArgs } from '#app/models/types/storybook';
+import type { Services } from '#app/models/types/global';
+import type { StoryArgs } from '#app/models/types/storybook';
 import readme from './README.md';
 import { TopicTags } from '.';
 

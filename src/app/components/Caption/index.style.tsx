@@ -1,4 +1,4 @@
-import { Theme, css } from '@emotion/react';
+import { type Theme, css } from '@emotion/react';
 import {
   MARGIN_ABOVE_400PX,
   MARGIN_BELOW_400PX,

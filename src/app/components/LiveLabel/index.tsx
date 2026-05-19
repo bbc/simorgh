@@ -1,5 +1,5 @@
-import { PropsWithChildren } from 'react';
-import { LiveLabelProps } from './types';
+import type { PropsWithChildren } from 'react';
+import type { LiveLabelProps } from './types';
 import styles from './index.styles';
 import Text from '../LiveText';
 import Pulse from '../LivePulse';

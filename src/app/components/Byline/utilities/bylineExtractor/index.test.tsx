@@ -3,7 +3,6 @@ import {
   bylinesSamplePostWithoutImage,
   bylineSamplePostWithUnsupportedImage,
   bylinesSamplePostWithoutSubtitle,
-  // eslint-disable-next-line import/no-relative-packages
 } from '../../../../../../ws-nextjs-app/pages/[service]/live/[id]/Post/fixture';
 import {
   bylineWithNoAuthor,

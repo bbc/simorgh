@@ -1,4 +1,4 @@
-import { ServerSideExperiment } from '#app/models/types/global';
+import type { ServerSideExperiment } from '#app/models/types/global';
 
 export default (serverSideExperiments: ServerSideExperiment[]) => {
   return serverSideExperiments

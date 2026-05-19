@@ -4,7 +4,7 @@ import {
   fireEvent,
 } from '../react-testing-library-with-providers';
 import PromotionalBanner from '.';
-import { PromotionalBannerProps } from './index.types';
+import type { PromotionalBannerProps } from './index.types';
 
 describe('PromotionalBanner', () => {
   beforeEach(() => {

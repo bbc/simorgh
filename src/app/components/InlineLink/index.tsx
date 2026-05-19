@@ -1,8 +1,8 @@
-import { use, FC, HTMLAttributes } from 'react';
-import { Theme } from '@emotion/react';
+import { use, type FC, type HTMLAttributes } from 'react';
+import type { Theme } from '@emotion/react';
 import Url from 'url-parse';
 
-import { FontVariant, GelFontSize } from '../../models/types/theming';
+import type { FontVariant, GelFontSize } from '../../models/types/theming';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { styles } from './index.styles';
 

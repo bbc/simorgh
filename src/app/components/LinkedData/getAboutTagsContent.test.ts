@@ -1,4 +1,4 @@
-import { Tag } from './types';
+import type { Tag } from './types';
 import getAboutTagsContent from './getAboutTagsContent';
 
 it('returns undefined if no about tags are provided', () => {

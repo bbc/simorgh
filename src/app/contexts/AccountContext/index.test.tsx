@@ -1,6 +1,6 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+// biome-ignore-all lint/suspicious/noExplicitAny: we want this
 import { use } from 'react';
-import { IdctaConfig } from '#app/models/types/account';
+import type { IdctaConfig } from '#app/models/types/account';
 import { AccountContext } from '.';
 import {
   render,

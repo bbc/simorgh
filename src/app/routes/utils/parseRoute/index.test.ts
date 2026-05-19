@@ -133,14 +133,14 @@ const EXAMPLE_ROUTES = [
 ];
 
 describe('parseRoute', () => {
-  it.each(EXAMPLE_ROUTES)(
-    'should return valid route config for %s route',
-    ({ route, expectedOutput }) => {
-      const result = parseRoute(route);
+  it.each(EXAMPLE_ROUTES)('should return valid route config for %s route', ({
+    route,
+    expectedOutput,
+  }) => {
+    const result = parseRoute(route);
 
-      expect(result).toMatchObject(expectedOutput);
-    },
-  );
+    expect(result).toMatchObject(expectedOutput);
+  });
 
   it('should strip query params from the route URL', () => {
     const route = '/news/av-embeds/67303123?renderer_env=test';

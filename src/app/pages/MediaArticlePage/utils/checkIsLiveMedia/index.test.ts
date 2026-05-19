@@ -1,4 +1,4 @@
-import { OptimoBlock } from '#app/models/types/optimo';
+import type { OptimoBlock } from '#app/models/types/optimo';
 import { pidginPageData, arabicLiveTvPageData } from '../../fixtureData';
 import checkIsLiveMedia from '.';
 

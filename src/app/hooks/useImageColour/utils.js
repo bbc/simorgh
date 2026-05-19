@@ -106,7 +106,7 @@ export const selectColour = ({
     return getMostVibrantColour(
       palette.filter(color => hasSufficientContrast(color)),
     );
-  } catch (e) {
+  } catch (_e) {
     return {
       isFallback: true,
       hex: fallbackColour,

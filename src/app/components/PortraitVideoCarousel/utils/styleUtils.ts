@@ -1,5 +1,5 @@
 import pixelsToRem from '#app/utilities/pixelsToRem';
-import { Theme } from '@emotion/react';
+import type { Theme } from '@emotion/react';
 
 export const PROMO_ITEM_WIDTH_MIN = 147;
 export const NAVIGATION_BUTTON_RATIO = 0.5;

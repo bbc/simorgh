@@ -1,4 +1,4 @@
-import { Curation } from '../../../../models/types/curationData';
+import type { Curation } from '../../../../models/types/curationData';
 
 // constants with names to make this human readable and not just IDs
 const HINDI_PORTRAIT_VIDEO_COLLECTION_ID =

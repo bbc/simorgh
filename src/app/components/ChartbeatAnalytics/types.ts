@@ -1,5 +1,5 @@
-import { Services } from '../../models/types/global';
-import { MetadataTaggings } from '../../models/types/metadata';
+import type { Services } from '../../models/types/global';
+import type { MetadataTaggings } from '../../models/types/metadata';
 
 type ChartbeatConfig = {
   domain: string;
@@ -9,7 +9,6 @@ type ChartbeatConfig = {
   authors?: string;
   virtualReferrer: string | null;
   idSync?: {
-    // eslint-disable-next-line camelcase
     bbc_hid: string;
   };
 };

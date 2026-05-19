@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet';
 import FlourishEmbed from '.';
 import { render } from '../../react-testing-library-with-providers';
-import { OEmbedData } from '../types';
+import type { OEmbedData } from '../types';
 
 describe('EmbedIFrame', () => {
   it('should render an iFrame', async () => {

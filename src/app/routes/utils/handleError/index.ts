@@ -1,4 +1,4 @@
-import { FetchError } from '../../../models/types/fetch';
+import type { FetchError } from '../../../models/types/fetch';
 
 const handleError = (message: string, status: number) => {
   const error = new Error(message) as FetchError;

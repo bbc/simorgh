@@ -22,34 +22,34 @@ describe('LiteRedirect', () => {
       effectiveType: '4g',
       expectedRedirect: false,
     },
-  ])(
-    `When the client is on $effectiveType then expect redirect should be $expectRedirect`,
-    ({ effectiveType, expectedRedirect }) => {
-      const mockWindow = {
-        navigator: {
-          connection: {
-            effectiveType,
-          },
+  ])(`When the client is on $effectiveType then expect redirect should be $expectRedirect`, ({
+    effectiveType,
+    expectedRedirect,
+  }) => {
+    const mockWindow = {
+      navigator: {
+        connection: {
+          effectiveType,
         },
-        location: {
-          replace: jest.fn(),
-          href: 'https://www.somepath.com/',
-          pathname: '/pidgin/articles/czrzwn80zjmo',
-        },
-        localStorage: {
-          setItem: jest.fn(),
-        },
-      } as unknown as Window;
+      },
+      location: {
+        replace: jest.fn(),
+        href: 'https://www.somepath.com/',
+        pathname: '/pidgin/articles/czrzwn80zjmo',
+      },
+      localStorage: {
+        setItem: jest.fn(),
+      },
+    } as unknown as Window;
 
-      redirectScript(mockWindow);
-      const replaceCallStack = (mockWindow.location.replace as jest.Mock).mock
-        .calls[0]?.[0];
+    redirectScript(mockWindow);
+    const replaceCallStack = (mockWindow.location.replace as jest.Mock).mock
+      .calls[0]?.[0];
 
-      const hasRedirected = Boolean(replaceCallStack);
+    const hasRedirected = Boolean(replaceCallStack);
 
-      expect(hasRedirected).toBe(expectedRedirect);
-    },
-  );
+    expect(hasRedirected).toBe(expectedRedirect);
+  });
 
   it('should set the isOptedIntoLiteRedirect cache value to true on inital redirect', () => {
     const mockWindow = {

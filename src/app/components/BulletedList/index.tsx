@@ -1,8 +1,8 @@
 import {
-  FC,
-  PropsWithChildren,
-  HTMLAttributes,
-  ForwardedRef,
+  type FC,
+  type PropsWithChildren,
+  type HTMLAttributes,
+  type ForwardedRef,
   forwardRef,
 } from 'react';
 import { SHADOW } from '../ThemeProvider/palette';

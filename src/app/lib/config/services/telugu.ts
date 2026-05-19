@@ -2,7 +2,7 @@ import devanagari from '../../../components/ThemeProvider/fontScripts/devanagari
 import '#psammead/moment-timezone-include/tz/Asia/Kolkata';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/te';
-import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
+import type { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
 export const service: DefaultServiceConfig = {
   default: {
@@ -94,8 +94,7 @@ export const service: DefaultServiceConfig = {
         404: {
           statusCode: '404',
           title: 'మీరడిగిన సమాచారం అందుబాటులో లేదు',
-          message:
-            'క్షమించండి, మీరు చూడాలనుకున్న సమాచారం ఇవ్వలేకపోతున్నాం. మరోసారి ప్రయత్నించండి.',
+          message: 'క్షమించండి, మీరు చూడాలనుకున్న సమాచారం ఇవ్వలేకపోతున్నాం. మరోసారి ప్రయత్నించండి.',
           solutions: [
             'యూఆర్ఎల్ మరోసారి సరిచూసుకోండి',
             'మీ బ్రౌజర్‌లో ఉన్న రిఫ్రెష్ బటన్‌పై నొక్కండి',
@@ -111,10 +110,7 @@ export const service: DefaultServiceConfig = {
           title: 'ఇంటర్నల్ సర్వర్ ఎర్రర్',
           message:
             'క్షమించండి, మీరు కోరుకున్న పేజీని ఇప్పుడు చూపించలేకపోతున్నాం. మరోసారి ప్రయత్నించండి.',
-          solutions: [
-            'మీ బ్రౌజర్‌లో ఉన్న రిఫ్రెష్ బటన్‌పై నొక్కండి',
-            'కాసేపాగి మళ్లీ ప్రయత్నించండి',
-          ],
+          solutions: ['మీ బ్రౌజర్‌లో ఉన్న రిఫ్రెష్ బటన్‌పై నొక్కండి', 'కాసేపాగి మళ్లీ ప్రయత్నించండి'],
           callToActionFirst: 'ప్రత్యామ్నాయంగా',
           callToActionLinkText: 'BBC News తెలుగు',
           callToActionLast: ' హోమ్ పేజీని చూడండి.',
@@ -227,8 +223,7 @@ export const service: DefaultServiceConfig = {
       media: {
         noJs: 'మీ పరికరంలో మీడియా ప్లేబ్యాక్ సదుపాయం లేదు.',
         contentExpired: 'ఈ కంటెంట్ ఇప్పుడు అందుబాటులో లేదు.',
-        contentNotYetAvailable:
-          'ఈ కంటెంట్ ఇంకా ప్లే చేయడానికి అందుబాటులో లేదు.',
+        contentNotYetAvailable: 'ఈ కంటెంట్ ఇంకా ప్లే చేయడానికి అందుబాటులో లేదు.',
         audio: 'ఆడియో',
         photogallery: 'ఫొటో గ్యాలరీ',
         video: 'వీడియో',
@@ -254,10 +249,8 @@ export const service: DefaultServiceConfig = {
         caption: {
           textPrefixVisuallyHidden: 'వీడియో క్యాప్షన్, ',
           text: 'హెచ్చరిక: థర్డ్ పార్టీ కంటెంట్‌లో ప్రకటనలు ఉండొచ్చు',
-          articleText:
-            'హెచ్చరిక: బయటి సైట్‌ల కంటెంట్‌కు బీబీసీ బాధ్యత వహించదు.',
-          articleAdditionalText:
-            '%provider_name% ఈ సమాచారంలో ప్రకటనలు ఉండొచ్చు.',
+          articleText: 'హెచ్చరిక: బయటి సైట్‌ల కంటెంట్‌కు బీబీసీ బాధ్యత వహించదు.',
+          articleAdditionalText: '%provider_name% ఈ సమాచారంలో ప్రకటనలు ఉండొచ్చు.',
         },
         fallback: {
           text: 'కంటెంట్ అందుబాటులో లేదు',
@@ -341,8 +334,7 @@ export const service: DefaultServiceConfig = {
           lang: 'en-GB',
         },
       ],
-      copyrightText:
-        ' BBC. ఇతర వెబ్‌సైట్లలో సమాచారానికి బీబీసీ బాధ్యత వహించదు.',
+      copyrightText: ' BBC. ఇతర వెబ్‌సైట్లలో సమాచారానికి బీబీసీ బాధ్యత వహించదు.',
       collectiveNewsroomText: 'బీబీసి కోసం కలెక్టివ్ న్యూస్‌రూమ్ ప్రచురణ',
     },
     timezone: 'Asia/Kolkata',

@@ -1,10 +1,10 @@
-import { PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
 import { render, waitFor } from '@testing-library/react';
-import { OptimizelyProvider, ReactSDKClient } from '@optimizely/react-sdk';
+import { OptimizelyProvider, type ReactSDKClient } from '@optimizely/react-sdk';
 
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import { PageTypes, Services } from '#app/models/types/global';
+import type { PageTypes, Services } from '#app/models/types/global';
 
 import PageViewTracking from '.';
 

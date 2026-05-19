@@ -1,4 +1,4 @@
-import { Tag } from './types';
+import type { Tag } from './types';
 
 const checkType = (types?: string[]) => {
   const acceptableTypes = ['core:Person', 'core:Organization', 'core:Place'];

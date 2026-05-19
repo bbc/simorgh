@@ -1,4 +1,3 @@
-/* eslint-disable no-underscore-dangle */
 import colours from 'colors';
 import '@testing-library/jest-dom';
 

@@ -39,7 +39,7 @@ export const serviceWorkerCaching = () => {
           .then(keys => {
             expect(keys).to.include('simorghCache_v1');
           })
-          .catch(err => console.error(err));
+          .catch(_err => {});
       });
     });
 
@@ -56,9 +56,9 @@ export const serviceWorkerCaching = () => {
                   `${JSON.stringify(keys)}`,
                 ).to.have.lengthOf.greaterThan(0);
               })
-              .catch(err => console.error(err));
+              .catch(_err => {});
           })
-          .catch(err => console.error(err));
+          .catch(_err => {});
       });
     });
 
@@ -87,7 +87,7 @@ export const serviceWorkerCaching = () => {
                 ).to.have.lengthOf.greaterThan(0);
               });
             })
-            .catch(err => console.error(err)),
+            .catch(_err => {}),
         );
       });
     });

@@ -4,12 +4,12 @@ import RadioScheduleContainer from '#containers/RadioSchedule';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#components/Grid';
 import MediaLoader from '#app/components/MediaLoader';
-import { ContentType } from '#app/components/ChartbeatAnalytics/types';
+import type { ContentType } from '#app/components/ChartbeatAnalytics/types';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import MetadataContainer from '../../components/Metadata';
 import LinkedData from '../../components/LinkedData';
-import { LiveRadioPageProps } from './types';
+import type { LiveRadioPageProps } from './types';
 
 const LiveRadioPage = ({ pageData }: { pageData: LiveRadioPageProps }) => {
   const {

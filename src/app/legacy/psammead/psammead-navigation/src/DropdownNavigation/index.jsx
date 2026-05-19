@@ -124,7 +124,7 @@ export const DropdownLi = ({
       <StyledDropdownLink href={url} aria-labelledby={ariaId} {...clickTracker}>
         {active && currentPageText ? (
           // ID is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
-          // eslint-disable-next-line jsx-a11y/aria-role
+          // biome-ignore lint/a11y/useValidAriaRole: we want this
           <StyledCurrentLink dir={dir} id={ariaId} role="text">
             <VisuallyHiddenText>{`${currentPageText}, `}</VisuallyHiddenText>
             {children}
@@ -239,7 +239,7 @@ export const AmpMenuButton = ({
     <amp-state id="menuState">
       <script
         type="application/json"
-        /* eslint-disable-next-line react/no-danger */
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: this is fine
         dangerouslySetInnerHTML={{ __html: JSON.stringify(initialState) }}
       />
     </amp-state>

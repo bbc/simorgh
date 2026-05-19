@@ -1,8 +1,8 @@
-/* eslint-disable react/no-danger */
+// biome-ignore-all lint/security/noDangerouslySetInnerHtml: we want this
 import type { ReactElement } from 'react';
-import { EmotionCritical } from '@emotion/server/create-instance';
+import type { EmotionCritical } from '@emotion/server/create-instance';
 
-import { HelmetData } from 'react-helmet';
+import type { HelmetData } from 'react-helmet';
 import LiteRenderer from './Renderers/LiteRenderer';
 import CanonicalRenderer from './Renderers/CanonicalRenderer';
 import AmpRenderer from './Renderers/AmpRenderer';

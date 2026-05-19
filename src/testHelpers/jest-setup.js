@@ -1,4 +1,3 @@
-/* eslint-disable max-classes-per-file */
 import { jest } from '@jest/globals';
 import fetch from 'jest-fetch-mock';
 import path from 'path';

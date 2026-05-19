@@ -1,5 +1,5 @@
 import onDemandTvJson from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn4.json';
-import { FetchMock } from 'jest-fetch-mock';
+import type { FetchMock } from 'jest-fetch-mock';
 import { TV_PAGE } from '#app/routes/utils/pageTypes';
 import isTest from '#app/lib/utilities/isTest';
 import * as fetchBFF from '#app/routes/utils/fetchDataFromBFF';

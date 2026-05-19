@@ -1,12 +1,12 @@
 import { BrowserRouter } from 'react-router-dom';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
 import { TV_PAGE } from '#app/routes/utils/pageTypes';
-import { StoryArgs, StoryProps } from '#app/models/types/storybook';
-import { Services } from '#app/models/types/global';
+import type { StoryArgs, StoryProps } from '#app/models/types/storybook';
+import type { Services } from '#app/models/types/global';
 import { data as afrique } from '#data/afrique/bbc_afrique_tv/tv_programmes/w13xttmz.json';
 import { data as pashto } from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn4.json';
 import { OnDemandTvPage } from '..';
-import { OnDemandTVProps } from './OnDemandTvPage';
+import type { OnDemandTVProps } from './OnDemandTvPage';
 
 const onDemandTvFixtures: {
   pashto: OnDemandTVProps['pageData'];

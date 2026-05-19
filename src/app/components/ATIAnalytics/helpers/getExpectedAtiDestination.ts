@@ -1,6 +1,5 @@
-/* eslint-disable import/prefer-default-export */
-/* eslint-disable no-template-curly-in-string */
-import { Services } from '#app/models/types/global';
+// biome-ignore-all lint/suspicious/noTemplateCurlyInString: this is fine
+import type { Services } from '#app/models/types/global';
 
 const publicServiceDestinationNames = {
   news: 'NEWS_PS',

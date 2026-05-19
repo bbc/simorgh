@@ -28,16 +28,6 @@ export default defineConfig({
       }, {});
 
       config.baseUrl = env.baseUrl;
-
-      // Debugging console logs to see running config
-      /* eslint-disable no-console */
-      console.log('\n\n\n\n\n');
-      console.log('Cypress running config:');
-      console.log('SMOKE:', config.env.SMOKE);
-      console.log('APP_ENV:', config.env.APP_ENV);
-      console.log('Base URL:', config.baseUrl);
-      // console.log('UK:', config.env.UK);
-      console.log('\n\n\n\n\n');
       /* eslint-enable no-console */
 
       const options = {
@@ -89,18 +79,12 @@ export default defineConfig({
 
       on('task', {
         log(message) {
-          // eslint-disable-next-line no-console
-          console.log(message);
           return null;
         },
         table(message) {
-          // eslint-disable-next-line no-console
-          console.table(message);
           return null;
         },
         error(message) {
-          // eslint-disable-next-line no-console
-          console.error(message);
           return null;
         },
       });

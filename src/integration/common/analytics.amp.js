@@ -25,7 +25,6 @@ export default () => {
           const atiUrl = new URL(pageview.replace('${base}', base));
 
           const params = [];
-          // eslint-disable-next-line no-restricted-syntax
           for (const [key, value] of atiUrl.searchParams.entries()) {
             params.push({ [key]: value });
           }

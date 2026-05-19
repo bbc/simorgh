@@ -1,4 +1,4 @@
-import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
+import type { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import {
   topStoriesBlocks,
   topStoriesBlocksWithLiveItem,
@@ -6,7 +6,7 @@ import {
 import metadata from './metadata.json';
 import readme from './README.md';
 import TopBarOJs from '.';
-import { StoryArgs } from '../../models/types/storybook';
+import type { StoryArgs } from '../../models/types/storybook';
 
 interface Props {
   blocks: TopStoryItem[];

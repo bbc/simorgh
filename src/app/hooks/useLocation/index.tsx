@@ -18,7 +18,7 @@ const useLocation = () => {
     return () => {
       window.removeEventListener('popstate', listener);
     };
-  }, []);
+  }, [listener]);
 
   return location;
 };

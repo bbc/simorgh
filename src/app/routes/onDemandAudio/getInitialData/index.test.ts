@@ -1,6 +1,6 @@
 import podcastJson from '#data/gahuza/bbc_gahuza_radio/p07yh8hb.json';
 import { AUDIO_PAGE } from '#app/routes/utils/pageTypes';
-import { FetchMock } from 'jest-fetch-mock';
+import type { FetchMock } from 'jest-fetch-mock';
 import * as fetchBFF from '#app/routes/utils/fetchDataFromBFF';
 import gahuzaOnDemandAudio from '#data/gahuza/bbc_gahuza_radio/p02pcb5c.json';
 import isTest from '#app/lib/utilities/isTest';

@@ -1,4 +1,4 @@
-import { EventTrackingBlock } from '../../../../models/types/eventTracking';
+import type { EventTrackingBlock } from '../../../../models/types/eventTracking';
 
 export type Media = 'video' | 'audio';
 

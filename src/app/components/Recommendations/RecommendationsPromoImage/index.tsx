@@ -1,7 +1,7 @@
 import { createSrcsets } from '#lib/utilities/srcSet';
 import buildIChefURL from '#lib/utilities/ichefURL';
 import Image from '#app/components/Image';
-import { Recommendation } from '#models/types/onwardJourney';
+import type { Recommendation } from '#models/types/onwardJourney';
 
 const RecommendationsImage = ({
   image,

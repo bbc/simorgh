@@ -1,4 +1,4 @@
-import { Services, Variants } from '#app/models/types/global';
+import type { Services, Variants } from '#app/models/types/global';
 
 export type PodcastExternalLinksParams = {
   service: Services;

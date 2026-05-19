@@ -1,5 +1,5 @@
 import pixelsToRem from '#app/utilities/pixelsToRem';
-import { css, Theme } from '@emotion/react';
+import { css, type Theme } from '@emotion/react';
 import NO_JS_CLASSNAME from '#app/lib/noJs.const';
 
 const styles = {

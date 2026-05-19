@@ -213,29 +213,28 @@ describe('Service Worker', () => {
     ];
 
     describe('when cache contains asset', () => {
-      it.each(cacheableAssets)(
-        `should return a cached response for %s`,
-        async assetUrl => {
-          ({ fetchEventHandler } = await import('./service-worker-test'));
+      it.each(
+        cacheableAssets,
+      )(`should return a cached response for %s`, async assetUrl => {
+        ({ fetchEventHandler } = await import('./service-worker-test'));
 
-          const event = {
-            request: new Request(assetUrl),
-            respondWith: jest.fn(),
-          };
+        const event = {
+          request: new Request(assetUrl),
+          respondWith: jest.fn(),
+        };
 
-          await fetchEventHandler(event);
+        await fetchEventHandler(event);
 
-          expect(event.respondWith).toHaveBeenCalled();
+        expect(event.respondWith).toHaveBeenCalled();
 
-          const [eventResponse] = event.respondWith.mock.calls[0];
+        const [eventResponse] = event.respondWith.mock.calls[0];
 
-          const response = await Promise.resolve(eventResponse);
+        const response = await Promise.resolve(eventResponse);
 
-          const responseBody = response.body?.toString();
+        const responseBody = response.body?.toString();
 
-          expect(responseBody).toBe(`${assetUrl}-cached`);
-        },
-      );
+        expect(responseBody).toBe(`${assetUrl}-cached`);
+      });
     });
 
     describe('when cache does not contain asset', () => {
@@ -248,32 +247,31 @@ describe('Service Worker', () => {
         fetchedCache = {};
       });
 
-      it.each(cacheableAssets)(
-        `should fetch %s and cache it`,
-        async assetUrl => {
-          ({ fetchEventHandler } = await import('./service-worker-test'));
+      it.each(
+        cacheableAssets,
+      )(`should fetch %s and cache it`, async assetUrl => {
+        ({ fetchEventHandler } = await import('./service-worker-test'));
 
-          const event = {
-            request: new Request(assetUrl, {
-              mode: 'same-origin',
-            }),
-            respondWith: jest.fn(),
-          };
+        const event = {
+          request: new Request(assetUrl, {
+            mode: 'same-origin',
+          }),
+          respondWith: jest.fn(),
+        };
 
-          const mockResponse = new Response(assetUrl);
-          fetchMock.mockImplementationOnce(() => mockResponse);
+        const mockResponse = new Response(assetUrl);
+        fetchMock.mockImplementationOnce(() => mockResponse);
 
-          await fetchEventHandler(event);
+        await fetchEventHandler(event);
 
-          expect(event.respondWith).toHaveBeenCalled();
+        expect(event.respondWith).toHaveBeenCalled();
 
-          const [eventResponse] = event.respondWith.mock.calls[0];
-          await Promise.resolve(eventResponse);
+        const [eventResponse] = event.respondWith.mock.calls[0];
+        await Promise.resolve(eventResponse);
 
-          expect(fetchMock).toHaveBeenCalledWith(assetUrl);
-          expect(fetchedCache[assetUrl]).toStrictEqual(mockResponse.clone());
-        },
-      );
+        expect(fetchMock).toHaveBeenCalledWith(assetUrl);
+        expect(fetchedCache[assetUrl]).toStrictEqual(mockResponse.clone());
+      });
     });
   });
 

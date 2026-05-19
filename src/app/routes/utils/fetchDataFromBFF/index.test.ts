@@ -1,4 +1,4 @@
-import { Agent } from 'undici';
+import type { Agent } from 'undici';
 import {
   ARTICLE_PAGE,
   CPS_ASSET,

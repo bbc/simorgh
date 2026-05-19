@@ -1,5 +1,5 @@
 import Blocks from '#app/legacy/containers/Blocks';
-import { OptimoBlock } from '#app/models/types/optimo';
+import type { OptimoBlock } from '#app/models/types/optimo';
 import fragment from '../Fragment';
 import InlineLink from '../DecoratedInlineLink';
 import Text from '../Text';

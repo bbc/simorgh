@@ -1,4 +1,5 @@
-import React, { useState, use } from 'react';
+import type React from 'react';
+import { useState, use } from 'react';
 import Navigation from '#psammead/psammead-navigation/src';
 import { ScrollableNavigation } from '#psammead/psammead-navigation/src/ScrollableNavigation';
 import {
@@ -10,8 +11,8 @@ import useMediaQuery from '#hooks/useMediaQuery';
 import { RequestContext } from '#app/contexts/RequestContext';
 import TopBarOJs from '#app/components/TopBarOJs';
 import useToggle from '#app/hooks/useToggle';
-import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
-import { Direction } from '#app/models/types/global';
+import type { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
+import type { Direction } from '#app/models/types/global';
 import styles from './index.styles';
 
 type CanonicalNavigationContainerProps = {

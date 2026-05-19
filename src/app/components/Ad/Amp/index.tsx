@@ -10,10 +10,14 @@ import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
 import AdSlot from './AdSlot';
-import { Direction, PageTypes, Services } from '../../../models/types/global';
+import type {
+  Direction,
+  PageTypes,
+  Services,
+} from '../../../models/types/global';
 import styles from './index.styles';
 import adStyles from '../utilities/adSlot.styles';
-import { AdProps, SLOT_TYPES, SlotType } from '../types';
+import { type AdProps, SLOT_TYPES, type SlotType } from '../types';
 
 const AMP_ACCESS_DATA = (endpoint: string) => ({
   authorization: endpoint,

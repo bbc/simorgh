@@ -285,52 +285,49 @@ describe('FormField', () => {
       wasInvalid: false,
       expectedAria: '',
     },
-  ])(
-    `should apply these attributes: $expectedAria, when attempted submit count is is $attemptCount, required is $required, isValid is $isValid and when the 'previously submitted' flag is $wasInvalid`,
-    async ({
-      attemptedSubmitCount,
-      required,
-      isValid,
-      expectedAria,
-      wasInvalid,
-    }) => {
-      const mockFormState = {
-        testAllyID: {
-          isValid,
-          required,
-          value: '',
-          htmlType: 'text',
-          messageCode: null,
-          wasInvalid,
-        },
-      };
+  ])(`should apply these attributes: $expectedAria, when attempted submit count is is $attemptCount, required is $required, isValid is $isValid and when the 'previously submitted' flag is $wasInvalid`, async ({
+    attemptedSubmitCount,
+    required,
+    isValid,
+    expectedAria,
+    wasInvalid,
+  }) => {
+    const mockFormState = {
+      testAllyID: {
+        isValid,
+        required,
+        value: '',
+        htmlType: 'text',
+        messageCode: null,
+        wasInvalid,
+      },
+    };
 
-      jest.spyOn(FormContext, 'useFormContext').mockImplementationOnce(
-        () =>
-          ({
-            formState: mockFormState,
-            handleChange: () => null,
-            attemptedSubmitCount,
-          }) as unknown as ContextProps,
+    jest.spyOn(FormContext, 'useFormContext').mockImplementationOnce(
+      () =>
+        ({
+          formState: mockFormState,
+          handleChange: () => null,
+          attemptedSubmitCount,
+        }) as unknown as ContextProps,
+    );
+
+    const { container } = await act(() => {
+      return render(
+        <ComponentWithContext
+          props={{
+            id: 'testAllyID',
+            htmlType: 'text',
+            label: 'This is a text field',
+          }}
+          fields={[]}
+        />,
       );
+    });
+    const text = container.querySelector(
+      `input[id=testAllyID][type=text]${expectedAria}`,
+    );
 
-      const { container } = await act(() => {
-        return render(
-          <ComponentWithContext
-            props={{
-              id: 'testAllyID',
-              htmlType: 'text',
-              label: 'This is a text field',
-            }}
-            fields={[]}
-          />,
-        );
-      });
-      const text = container.querySelector(
-        `input[id=testAllyID][type=text]${expectedAria}`,
-      );
-
-      expect(text).toBeInTheDocument();
-    },
-  );
+    expect(text).toBeInTheDocument();
+  });
 });

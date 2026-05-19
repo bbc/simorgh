@@ -2,7 +2,7 @@ import moment from 'moment-timezone';
 
 import buildIChefURL from '#lib/utilities/ichefURL';
 import filterForBlockType from '#lib/utilities/blockHandlers';
-import {
+import type {
   ClipMediaBlock,
   ConfigBuilderProps,
   ConfigBuilderReturnProps,

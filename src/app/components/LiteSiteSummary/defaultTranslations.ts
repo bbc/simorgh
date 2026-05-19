@@ -1,4 +1,4 @@
-import { LiteSiteTranslations } from '../../models/types/translations';
+import type { LiteSiteTranslations } from '../../models/types/translations';
 
 const defaultTranslations: LiteSiteTranslations = {
   onboardingMessage: `You’re viewing a text-only version of this website that uses less data. View the main version of the website including all images and videos.`,

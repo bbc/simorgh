@@ -3,10 +3,10 @@ import { render, screen } from '../react-testing-library-with-providers';
 
 const setCurrentLocation = (location: string) => {
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  /* @ts-ignore  */
+  /* @ts-expect-error  */
   delete window.location;
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  /* @ts-ignore  */
+  /* @ts-expect-error  */
   window.location = new URL(location);
 };
 

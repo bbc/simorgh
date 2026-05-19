@@ -1,13 +1,13 @@
-import { PageTypes, Services } from '#app/models/types/global';
-import {
+import type { PageTypes, Services } from '#app/models/types/global';
+import type {
   MediaType,
   OnDemandAudioBlock,
   OnDemandTVBlock,
   LiveRadioBlock,
   MediaOverrides,
 } from '#app/models/types/media';
-import { OptimoImageBlock } from '#app/models/types/optimo';
-import { Translations } from '#app/models/types/translations';
+import type { OptimoImageBlock } from '#app/models/types/optimo';
+import type { Translations } from '#app/models/types/translations';
 
 export type SMPEvent = {
   playlist?: {

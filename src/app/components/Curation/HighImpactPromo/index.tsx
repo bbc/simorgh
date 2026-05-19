@@ -1,5 +1,5 @@
 import { use } from 'react';
-import { Summary } from '#app/models/types/curationData';
+import type { Summary } from '#app/models/types/curationData';
 import Promo from '#components/Promo';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { RequestContext } from '#app/contexts/RequestContext';

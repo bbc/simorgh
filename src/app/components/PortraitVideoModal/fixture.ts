@@ -1,4 +1,4 @@
-import { PortraitVideoModalProps } from '.';
+import type { PortraitVideoModalProps } from '.';
 
 const blocks = [
   {

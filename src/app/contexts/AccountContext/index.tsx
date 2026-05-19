@@ -1,12 +1,15 @@
 import {
   createContext,
-  PropsWithChildren,
+  type PropsWithChildren,
   use,
   useEffect,
   useMemo,
   useState,
 } from 'react';
-import { AccountContextProps, IdctaConfig } from '#app/models/types/account';
+import type {
+  AccountContextProps,
+  IdctaConfig,
+} from '#app/models/types/account';
 import appendCtaQueryParams from '#app/lib/idcta/appendCtaQueryParams';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';

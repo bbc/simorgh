@@ -7,7 +7,7 @@ import useViewTracker from '../../../../hooks/useViewTracker';
 import generatePromoId from '../../../../lib/utilities/generatePromoId';
 import LatestMediaItem from './LatestMediaItem';
 import styles from './index.styles';
-import { LatestMedia } from './types';
+import type { LatestMedia } from './types';
 
 const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
   const { dir, translations } = use(ServiceContext);

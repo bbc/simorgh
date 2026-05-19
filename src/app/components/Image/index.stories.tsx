@@ -1,6 +1,6 @@
 import { RequestContextProvider } from '#contexts/RequestContext';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
-import Image, { ImageProps } from '.';
+import Image, { type ImageProps } from '.';
 import md from './README.md';
 
 const ImgWithAmp = (props: ImageProps) => (

@@ -2,10 +2,10 @@
 import { useEffect, useState } from 'react';
 import Url from 'url-parse';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
-import { Curation } from '#app/models/types/curationData';
-import { Services } from '#app/models/types/global';
+import type { Curation } from '#app/models/types/curationData';
+import type { Services } from '#app/models/types/global';
 import { MemoryRouter } from 'react-router-dom';
-import { StoryArgs, StoryProps } from '../../models/types/storybook';
+import type { StoryArgs, StoryProps } from '../../models/types/storybook';
 import HomePage from '.';
 
 const ONE_DAY_IN_MILLISECONDS = 24 * 60 * 60 * 1000;

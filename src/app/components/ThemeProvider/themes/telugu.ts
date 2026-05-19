@@ -1,4 +1,4 @@
-import { ServiceTheme } from '#app/models/types/theming';
+import type { ServiceTheme } from '#app/models/types/theming';
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import devanagariScript from '../fontScripts/devanagari';
 import { NOTO_SANS_TELUGU_REGULAR, NOTO_SANS_TELUGU_BOLD } from '../fontFaces';

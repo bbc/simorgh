@@ -1,4 +1,4 @@
-/* eslint-disable react-hooks/rules-of-hooks */
+// biome-ignore-all lint/correctness/useHookAtTopLevel: we want this
 import useServerSide from './useServerSide';
 import useClientSide from './useClientSide';
 

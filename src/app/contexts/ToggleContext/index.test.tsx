@@ -1,7 +1,7 @@
-import { PropsWithChildren, use } from 'react';
+import { type PropsWithChildren, use } from 'react';
 import { render, act } from '@testing-library/react';
 import { queryByText } from '@testing-library/dom';
-import { Toggles } from '../../models/types/global';
+import type { Toggles } from '../../models/types/global';
 import { ToggleContext, ToggleContextProvider } from '.';
 
 jest.mock('#lib/config/toggles', () => ({

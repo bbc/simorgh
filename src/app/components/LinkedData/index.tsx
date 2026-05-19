@@ -3,10 +3,10 @@ import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
 import serialiseForScript from '#lib/utilities/serialiseForScript';
 import getBrandedImage from '#lib/utilities/getBrandedImage';
-import { Services } from '#app/models/types/global';
+import type { Services } from '#app/models/types/global';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import getAboutTagsContent from './getAboutTagsContent';
-import { BylineLinkedData, LinkedDataProps } from './types';
+import type { BylineLinkedData, LinkedDataProps } from './types';
 
 type OrgAuthor = {
   noBylinesPolicy?: string | null | undefined;

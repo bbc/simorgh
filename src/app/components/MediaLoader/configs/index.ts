@@ -7,7 +7,7 @@ import liveRadio from './liveRadio';
 import audio from './audio';
 import legacyMedia from './legacyMedia';
 
-import {
+import type {
   ConfigBuilderReturnProps,
   MediaBlock,
   ConfigBuilderProps,

@@ -1,6 +1,6 @@
-import { Summary } from '#app/models/types/curationData';
+import type { Summary } from '#app/models/types/curationData';
 import Billboard from '.';
-import { StoryArgs } from '../../models/types/storybook';
+import type { StoryArgs } from '../../models/types/storybook';
 import metadata from './metadata.json';
 import readme from './README.md';
 import { kyrgyzBillboard, pidginLiveBillboard } from './fixtures';

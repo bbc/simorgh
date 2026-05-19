@@ -13,7 +13,6 @@ const CanonicalComscoreAnalytics = ({ nonce = null }) => {
 
   useEffect(() => {
     const csUcfr = personalisationEnabled ? '1' : '';
-    /* eslint-disable no-underscore-dangle */
     window._comscore = window._comscore || [];
     window._comscore.push({ c1: '2', c2: '17986528', cs_ucfr: csUcfr });
   }, [personalisationEnabled]);

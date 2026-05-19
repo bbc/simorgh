@@ -2,7 +2,7 @@ import devanagari from '../../../components/ThemeProvider/fontScripts/devanagari
 import '#psammead/moment-timezone-include/tz/Asia/Kolkata';
 import '#psammead/psammead-locales/moment/gu';
 import withContext from '../../../contexts/utils/withContext';
-import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
+import type { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
 export const service: DefaultServiceConfig = {
   default: {
@@ -129,10 +129,7 @@ export const service: DefaultServiceConfig = {
           title: 'ઇન્ટરનલ સર્વર એરર',
           message:
             'માફ કરશો, તમે શોધી રહ્યા છો એ પેજ દર્શાવાઈ રહ્યું નથી. કૃપા કરી ફરી કોશિશ કરો',
-          solutions: [
-            'બ્રાઉઝરનું રિફ્રેશ બટન દબાવો',
-            'થોડા સમય બાદ પ્રયાસ કરો',
-          ],
+          solutions: ['બ્રાઉઝરનું રિફ્રેશ બટન દબાવો', 'થોડા સમય બાદ પ્રયાસ કરો'],
           callToActionFirst: 'વિકલ્પના રૂપે અમારા હોમપેજ ',
           callToActionLinkText: 'BBC News ગુજરાતી',
           callToActionLast: ' પર જાઓ',
@@ -175,8 +172,7 @@ export const service: DefaultServiceConfig = {
             accept: 'ડેટા કલેક્શનની મંજૂરી આપો અને આગળ વધો.',
             reject: 'ડેટા કલેક્શન નાંમજૂર કરો અને આગળ વધો.',
             initial: {
-              title:
-                'તમે એએમપી ડેટા કલેક્શનની સહમતી આપી રહ્યા છો એવી અમને જાણ કરો.',
+              title: 'તમે એએમપી ડેટા કલેક્શનની સહમતી આપી રહ્યા છો એવી અમને જાણ કરો.',
               description: {
                 first:
                   'અમે અને અમારા પાર્ટનર આ પ્રકારની કેટલીક ટેકનિકનો ઉપયોગ કરીએ છીએ ',
@@ -273,8 +269,7 @@ export const service: DefaultServiceConfig = {
           textPrefixVisuallyHidden: 'વીડિયો કૅપ્શન ',
           text: 'થર્ડ પાર્ટી કન્ટેટમાં જાહેરખબર હોય શકે છે',
           articleText: 'બીબીસી બહારની સાઇટ્સના કન્ટેન્ટ માટે જવાબદાર નથી.',
-          articleAdditionalText:
-            '%provider_name% કન્ટેન્ટમાં જાહેરાત હોઈ શકે છે. ',
+          articleAdditionalText: '%provider_name% કન્ટેન્ટમાં જાહેરાત હોઈ શકે છે. ',
         },
         fallback: {
           text: 'આ કન્ટેન્ટ ઉપલબ્ધ નથી',

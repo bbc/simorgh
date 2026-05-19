@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import { Services } from '#app/models/types/global';
+import type { Services } from '#app/models/types/global';
 import TopStoriesSection from '.';
 import {
   topStoriesList,
@@ -14,7 +14,7 @@ import {
 } from './fixture';
 import metadata from './metadata.json';
 import readme from './README.md';
-import { TopStoryItem } from './types';
+import type { TopStoryItem } from './types';
 
 const BackGround = styled.div`
   width: 100%;

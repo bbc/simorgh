@@ -1,5 +1,5 @@
-import { forwardRef, PropsWithChildren } from 'react';
-import { SerializedStyles, Theme } from '@emotion/react';
+import { forwardRef, type PropsWithChildren } from 'react';
+import type { SerializedStyles, Theme } from '@emotion/react';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import LiveLabel from '#app/components/LiveLabel';
 import styles from './index.styles';
@@ -7,13 +7,13 @@ import {
   mostReadListGridProps,
   mostReadItemGridProps,
 } from '../../utilities/gridProps';
-import {
+import type {
   ColumnLayout,
   MostReadItemProps,
   MostReadLinkProps,
   Size,
 } from '../../types';
-import { Direction } from '../../../../models/types/global';
+import type { Direction } from '../../../../models/types/global';
 import Grid from '../../../../legacy/components/Grid';
 
 export const getParentColumns = (columnLayout: ColumnLayout) => {
@@ -67,7 +67,7 @@ export const MostReadLink = ({
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingDataExtended);
 
   return (
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    // biome-ignore lint/suspicious/noExplicitAny: we want this
     <div css={getItemCss({ dir, size }) as any[]} dir={dir}>
       <a
         css={[styles.link, size === 'default' && styles.defaultLink]}

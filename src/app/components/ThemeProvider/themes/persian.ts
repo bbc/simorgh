@@ -1,4 +1,4 @@
-import { ServiceTheme } from '#app/models/types/theming';
+import type { ServiceTheme } from '#app/models/types/theming';
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import arabicScript from '../fontScripts/arabic';
 import { REITH_QALAM_REGULAR, REITH_QALAM_BOLD } from '../fontFaces';

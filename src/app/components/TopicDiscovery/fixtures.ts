@@ -1,4 +1,4 @@
-import { TopicDiscoveryData } from './types';
+import type { TopicDiscoveryData } from './types';
 
 export const topicTagsFixture = [
   {

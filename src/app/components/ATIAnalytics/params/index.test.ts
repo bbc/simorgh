@@ -7,9 +7,9 @@ import {
   HOME_PAGE,
 } from '../../../routes/utils/pageTypes';
 import buildReverbParams from '.';
-import { RequestContextProps } from '../../../contexts/RequestContext';
-import { ServiceConfig } from '../../../models/types/serviceConfig';
-import { ATIData } from '../types';
+import type { RequestContextProps } from '../../../contexts/RequestContext';
+import type { ServiceConfig } from '../../../models/types/serviceConfig';
+import type { ATIData } from '../types';
 
 jest
   .spyOn(document, 'referrer', 'get')

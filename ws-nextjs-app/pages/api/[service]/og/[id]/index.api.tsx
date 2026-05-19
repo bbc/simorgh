@@ -217,32 +217,30 @@ export default async function handler(
     }
 
     const imageResponse = new ImageResponse(
-      (
-        <div
-          style={{
-            display: 'flex',
-            width: '100%',
-            height: '100%',
-            position: 'relative',
-          }}
-        >
-          <BackgroundImage image={backgroundImage} />
-          {badge && (
-            <div
-              style={{
-                position: 'absolute',
-                bottom: 35,
-                right: 25,
-                display: 'flex',
-                flexDirection: 'column',
-                gap: 15,
-              }}
-            >
-              {badge}
-            </div>
-          )}
-        </div>
-      ),
+      <div
+        style={{
+          display: 'flex',
+          width: '100%',
+          height: '100%',
+          position: 'relative',
+        }}
+      >
+        <BackgroundImage image={backgroundImage} />
+        {badge && (
+          <div
+            style={{
+              position: 'absolute',
+              bottom: 35,
+              right: 25,
+              display: 'flex',
+              flexDirection: 'column',
+              gap: 15,
+            }}
+          >
+            {badge}
+          </div>
+        )}
+      </div>,
       {
         width: 1024,
         height: 576,

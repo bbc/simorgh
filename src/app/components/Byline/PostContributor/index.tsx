@@ -1,4 +1,4 @@
-/* eslint-disable jsx-a11y/aria-role */
+// biome-ignore-all lint/a11y/useValidAriaRole: we want this
 import { use } from 'react';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import BylineCss from './index.styles';

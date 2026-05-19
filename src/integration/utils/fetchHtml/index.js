@@ -18,10 +18,6 @@ export default ({ url, headers }) =>
 
     retry.attempt(async currentAttempt => {
       if (currentAttempt > 1) {
-        console.warn(
-          `Error getting HTML from ${url}`,
-          `Retry attempts: ${currentAttempt - 1}`,
-        );
       }
 
       try {

@@ -1,6 +1,6 @@
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
-import { Services } from '#app/models/types/global';
+import type { Services } from '#app/models/types/global';
 import {
   render,
   screen,
@@ -14,7 +14,7 @@ import {
   tipoFormattedTopStoriesItem,
   tipoLivePageTopStoriesItem,
 } from '../fixture';
-import { TopStoryItem } from '../types';
+import type { TopStoryItem } from '../types';
 
 type Props = {
   fixtureData: TopStoryItem;

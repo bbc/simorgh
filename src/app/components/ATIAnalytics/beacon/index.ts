@@ -1,6 +1,6 @@
 import sendBeacon from '../../../lib/analyticsUtils/sendBeacon';
 import { buildReverbEventModel } from '../atiUrl';
-import { ATIEventTrackingProps } from '../types';
+import type { ATIEventTrackingProps } from '../types';
 
 export const sendEventBeacon = async ({
   campaignID,

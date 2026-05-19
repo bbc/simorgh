@@ -1,11 +1,11 @@
-import React from 'react';
+import type React from 'react';
 import Navigation from '#psammead/psammead-navigation/src';
 import { ScrollableNavigation } from '#psammead/psammead-navigation/src/ScrollableNavigation';
 import {
   AmpDropdown,
   AmpMenuButton,
 } from '#psammead/psammead-navigation/src/DropdownNavigation';
-import { Direction } from '#app/models/types/global';
+import type { Direction } from '#app/models/types/global';
 import styles, { HIDDEN_CLASS_NAME } from './index.styles';
 
 const DROPDOWN_ID = 'si-nav-dropdown-menu';

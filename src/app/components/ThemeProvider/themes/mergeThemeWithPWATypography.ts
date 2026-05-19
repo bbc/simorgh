@@ -1,4 +1,4 @@
-import { ServiceTheme } from '#models/types/theming';
+import type { ServiceTheme } from '#models/types/theming';
 
 export default ({
   baseTheme,

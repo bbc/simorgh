@@ -1,4 +1,4 @@
-import { Theme } from '@emotion/react';
+import type { Theme } from '@emotion/react';
 
 import {
   ARCHIVE_BLUE,
@@ -129,7 +129,11 @@ import {
 
 import gridWidths from './gridWidths';
 
-import { BrandPalette, Typography, BrandSVG } from '../../models/types/theming';
+import type {
+  BrandPalette,
+  Typography,
+  BrandSVG,
+} from '../../models/types/theming';
 
 export default ({
   typography,

@@ -1,5 +1,8 @@
 import { use } from 'react';
-import { VISUAL_PROMINENCE, Summary } from '#app/models/types/curationData';
+import {
+  VISUAL_PROMINENCE,
+  type Summary,
+} from '#app/models/types/curationData';
 import extractWorldServiceFromUrl from '#app/lib/utilities/extractWorldServiceFromUrl';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import moment from 'moment';
@@ -8,7 +11,7 @@ import isMedia from '#app/lib/utilities/isMedia';
 import styles from './index.styles';
 import CurationPromo from '../CurationPromo';
 import HighImpactPromo from '../HighImpactPromo';
-import { CurationGridProps } from '../types';
+import type { CurationGridProps } from '../types';
 
 const isHighImpact = ({ visualProminence }: Summary): boolean =>
   visualProminence === VISUAL_PROMINENCE.MAXIMUM;

@@ -10,8 +10,12 @@ import {
   MEDIA_ASSET_PAGE,
   MEDIA_ARTICLE_PAGE,
 } from '#app/routes/utils/pageTypes';
-import { PageTypes } from '#app/models/types/global';
-import { AresMediaBlock, AresMediaMetadataBlock, MediaBlock } from '../types';
+import type { PageTypes } from '#app/models/types/global';
+import type {
+  AresMediaBlock,
+  AresMediaMetadataBlock,
+  MediaBlock,
+} from '../types';
 
 const SUPPORTED_PAGE_TYPES = [
   AV_EMBEDS,

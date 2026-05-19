@@ -1,3 +1,4 @@
+// biome-ignore-all lint/security/noDangerouslySetInnerHtml: this is fine
 const AmpComscoreAnalytics = () => (
   <amp-analytics type="comscore">
     <script

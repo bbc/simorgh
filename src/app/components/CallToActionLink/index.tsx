@@ -1,7 +1,7 @@
-import { PropsWithChildren, useMemo } from 'react';
+import { type PropsWithChildren, useMemo } from 'react';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
-import { EventTrackingData } from '#app/lib/analyticsUtils/types';
-import { FontVariant, GelFontSize } from '../../models/types/theming';
+import type { EventTrackingData } from '#app/lib/analyticsUtils/types';
+import type { FontVariant, GelFontSize } from '../../models/types/theming';
 import Chevron from './Chevron';
 import ButtonLikeWrapper from './ButtonLikeWrapper';
 import Text from './Text';

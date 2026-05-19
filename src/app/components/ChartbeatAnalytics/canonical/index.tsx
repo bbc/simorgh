@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet';
-import { CanonicalChartbeatProps } from '../types';
+import type { CanonicalChartbeatProps } from '../types';
 import { chartbeatSource as defaultChartbeatSource } from '../utils';
 
 const CanonicalChartbeatBeacon = ({

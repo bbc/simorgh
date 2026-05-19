@@ -1,6 +1,6 @@
 import buildIChefURL from '#app/lib/utilities/ichefURL';
-import { OptimoBlock, OptimoImageBlock } from '#app/models/types/optimo';
-import {
+import type { OptimoBlock, OptimoImageBlock } from '#app/models/types/optimo';
+import type {
   Post,
   PostHeadline,
   PostContributor,

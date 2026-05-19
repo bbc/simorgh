@@ -2,7 +2,7 @@ import devanagari from '../../../components/ThemeProvider/fontScripts/devanagari
 import '#psammead/moment-timezone-include/tz/Asia/Kolkata';
 import '#psammead/psammead-locales/moment/hi';
 import withContext from '../../../contexts/utils/withContext';
-import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
+import type { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
 export const service: DefaultServiceConfig = {
   default: {
@@ -51,8 +51,7 @@ export const service: DefaultServiceConfig = {
     podcastPromo: {
       title: 'पॉडकास्ट',
       brandTitle: 'दिनभर: पूरा दिन,पूरी ख़बर (Dinbhar)',
-      brandDescription:
-        'वो राष्ट्रीय और अंतरराष्ट्रीय ख़बरें जो दिनभर सुर्खियां बनीं.',
+      brandDescription: 'वो राष्ट्रीय और अंतरराष्ट्रीय ख़बरें जो दिनभर सुर्खियां बनीं.',
       image: {
         src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p09ds7cb.jpg',
         alt: 'दिनभर',
@@ -116,8 +115,7 @@ export const service: DefaultServiceConfig = {
       },
       accountPromoBanner: {
         title: 'अपना BBC खोजिए',
-        description:
-          'देखने, सुनने और भाग लेने के लिए साइन‑इन करें या खाता बनाएं',
+        description: 'देखने, सुनने और भाग लेने के लिए साइन‑इन करें या खाता बनाएं',
         closeLabel: 'बंद करें',
         buttonSeparatorText: 'या',
       },
@@ -149,10 +147,7 @@ export const service: DefaultServiceConfig = {
           title: 'इंटरनल सर्वर एरर',
           message:
             'माफ़ी चाहते हैं, हम वह पन्ना नहीं दिखा पा रहे हैं जिसे आप ढूँढ रहे हैं. कृपया कोशिश करें:',
-          solutions: [
-            'ब्राउज़र का रिफ़्रेश बटन दबाएं',
-            'कुछ समय बाद कोशिश करें',
-          ],
+          solutions: ['ब्राउज़र का रिफ़्रेश बटन दबाएं', 'कुछ समय बाद कोशिश करें'],
           callToActionFirst: 'विकल्प के तौर पर हमारे ',
           callToActionLinkText: 'होमपेज BBC News हिंदी',
           callToActionLast: ' पर जाएं',
@@ -194,11 +189,9 @@ export const service: DefaultServiceConfig = {
             accept: 'डेटा कलेक्शन की मंजूरी दें और आगे बढ़ें',
             reject: 'डेटा कलेक्शन को नामंज़ूर करें और आगे बढ़ें',
             initial: {
-              title:
-                'हमें बताएँ कि आप एएमपी पर डेटा क्लेक्शन की सहमति दे रहे हैं',
+              title: 'हमें बताएँ कि आप एएमपी पर डेटा क्लेक्शन की सहमति दे रहे हैं',
               description: {
-                first:
-                  'हम और हमारे पार्टनर इस तरह की कुछ तकनीकों का इस्तेमाल करते हैं ',
+                first: 'हम और हमारे पार्टनर इस तरह की कुछ तकनीकों का इस्तेमाल करते हैं ',
                 linkText: 'कुकीज़',
                 last: ' का इस्तेमाल करके हम आपके ब्राउज़िंग डेटा की ज़रिए आपको बेहतर और ख़ास तौर पर आपके लिए सेवाएं देेते हैं. इससे हमें आपको सही कंटेंट और उपयुक्त विज्ञापन दिखाने में मदद मिलती है. हमें बताएं कि क्या आप इस पर राज़ी हैं.',
                 linkUrl:
@@ -300,15 +293,13 @@ export const service: DefaultServiceConfig = {
           text: 'चेतावनी: तीसरे पक्ष की सामग्री में विज्ञापन हो सकते हैं.',
           articleText:
             'चेतावनी: बीबीसी दूसरी वेबसाइट्स की सामग्री के लिए ज़िम्मेदार नहीं है.',
-          articleAdditionalText:
-            '%provider_name% सामग्री में विज्ञापन हो सकते हैं.',
+          articleAdditionalText: '%provider_name% सामग्री में विज्ञापन हो सकते हैं.',
         },
         fallback: {
           text: 'सामग्री् उपलब्ध नहीं है',
           linkText: 'सोशल नेटवर्क पर और देखिए',
           linkTextSuffixVisuallyHidden: ' बाहरी सामग्री',
-          warningText:
-            'बाहरी साइटों की सामग्री के लिए बीबीसी ज़िम्मेदार नहीं है.',
+          warningText: 'बाहरी साइटों की सामग्री के लिए बीबीसी ज़िम्मेदार नहीं है.',
         },
         skipLink: {
           text: 'छोड़िए %provider_name% पोस्ट',
@@ -323,8 +314,7 @@ export const service: DefaultServiceConfig = {
       include: {
         errorMessage:
           'माफ़ी चाहते हैं, हम इस स्टोरी का कुछ हिस्सा लाइटवेट मोबाइल पेज पर नहीं दिखा सकते.',
-        linkText:
-          'आप अगर पूरी स्टोरी देखना चाहते हैं तो हमारे फुल वर्ज़न पर जाएं.',
+        linkText: 'आप अगर पूरी स्टोरी देखना चाहते हैं तो हमारे फुल वर्ज़न पर जाएं.',
       },
       topStoriesTitle: 'टॉप स्टोरी',
       featuresAnalysisTitle: 'ज़रूर पढ़ें',
@@ -349,8 +339,7 @@ export const service: DefaultServiceConfig = {
 
         // Validation
         validationRequired: 'कुछ तो गड़बड़ है',
-        validationInvalidEmail:
-          'कुछ गड़बड़ लग रही है. कृपया आप सही ई-मेल लिखें',
+        validationInvalidEmail: 'कुछ गड़बड़ लग रही है. कृपया आप सही ई-मेल लिखें',
         validationInvalidTelephone: undefined,
         validationFilesNotEnough:
           'यहां आवश्यक फाइलों की संख्या पूरी नहीं है. कृपया भेजने के लिए कम से कम फाइलें अपलोड करें {{minFiles}}.',
@@ -362,8 +351,7 @@ export const service: DefaultServiceConfig = {
           'इस फाइल में कुछ गड़बड़ है. किसी अन्य फाइल का चुनाव करें',
         validationFilesSizeExceeded:
           'खेद है. आपकी फाइलें काफी बड़ी हैं. आप एक बार में केवल 2GB की फाइलें ही अपलोड कर सकते हैं',
-        validationWordLimit:
-          'अधिकतम {{wordLimit}} शब्दों की फाइल ही भेज सकते हैं',
+        validationWordLimit: 'अधिकतम {{wordLimit}} शब्दों की फाइल ही भेज सकते हैं',
 
         // Messaging
         retentionPeriodDays: undefined,
@@ -454,10 +442,8 @@ export const service: DefaultServiceConfig = {
           lang: 'en-GB',
         },
       ],
-      copyrightText:
-        'BBC. बाहरी साइटों की सामग्री के लिए बीबीसी ज़िम्मेदार नहीं है.',
-      collectiveNewsroomText:
-        'बीबीसी के लिए कलेक्टिव न्यूज़रूम की ओर से प्रकाशित',
+      copyrightText: 'BBC. बाहरी साइटों की सामग्री के लिए बीबीसी ज़िम्मेदार नहीं है.',
+      collectiveNewsroomText: 'बीबीसी के लिए कलेक्टिव न्यूज़रूम की ओर से प्रकाशित',
     },
     timezone: 'Asia/Kolkata',
     navigation: [

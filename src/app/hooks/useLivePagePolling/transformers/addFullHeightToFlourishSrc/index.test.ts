@@ -1,4 +1,4 @@
-import { OEmbedData } from '#app/components/Embeds/types';
+import type { OEmbedData } from '#app/components/Embeds/types';
 import * as uuId from 'uuid';
 import addFullHeightToFlourishSrc from '.';
 

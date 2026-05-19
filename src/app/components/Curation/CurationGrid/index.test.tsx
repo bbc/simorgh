@@ -1,5 +1,8 @@
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
-import { VISUAL_PROMINENCE, Summary } from '#app/models/types/curationData';
+import {
+  VISUAL_PROMINENCE,
+  type Summary,
+} from '#app/models/types/curationData';
 import {
   render,
   screen,

@@ -7,11 +7,11 @@ import StyledTvHeadingContainer from '#containers/OnDemandHeading/StyledTvHeadin
 import OnDemandParagraphContainer from '#containers/OnDemandParagraph';
 import RecentVideoEpisodes from '#containers/EpisodeList/RecentVideoEpisodes';
 import FooterTimestamp from '#containers/OnDemandFooterTimestamp';
-import { PageTypes } from '#app/models/types/global';
-import { ContentType } from '#app/components/ChartbeatAnalytics/types';
+import type { PageTypes } from '#app/models/types/global';
+import type { ContentType } from '#app/components/ChartbeatAnalytics/types';
 import MediaLoader from '#app/components/MediaLoader';
-import { OnDemandTVBlock } from '#app/models/types/media';
-import { ATIData } from '#app/components/ATIAnalytics/types';
+import type { OnDemandTVBlock } from '#app/models/types/media';
+import type { ATIData } from '#app/components/ATIAnalytics/types';
 import { RequestContext } from '#app/contexts/RequestContext';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';

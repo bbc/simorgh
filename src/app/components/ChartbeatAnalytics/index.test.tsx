@@ -1,4 +1,4 @@
-import { PropsWithChildren, useMemo } from 'react';
+import { type PropsWithChildren, useMemo } from 'react';
 import { render } from '@testing-library/react';
 import { Helmet } from 'react-helmet';
 import { ARTICLE_PAGE } from '../../routes/utils/pageTypes';
@@ -8,7 +8,7 @@ import { UserContext } from '../../contexts/UserContext';
 import ChartbeatAnalytics from '.';
 import * as testUtils from './utils';
 import * as amp from './amp';
-import { PageTypes, Platforms } from '../../models/types/global';
+import type { PageTypes, Platforms } from '../../models/types/global';
 
 const sendCanonicalChartbeatBeacon = jest.fn();
 

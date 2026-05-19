@@ -1,5 +1,5 @@
 import SERVICES_WITH_NEW_NAV from '#app/components/Navigation/config';
-import { Agent } from 'undici';
+import type { Agent } from 'undici';
 
 const mockAgent = {
   connect: { cert: 'cert', ca: 'ca', key: 'key' },
@@ -95,55 +95,55 @@ describe('fetchConfig', () => {
     expect(global.fetch).toHaveBeenCalledTimes(1);
   });
 
-  it.each(['test', 'live'])(
-    'should include ctx-service-env header when renderer_env=%s',
-    async env => {
-      global.fetch = jest.fn().mockResolvedValue({
-        ok: true,
-        json: async () => mockNavResponse,
-      });
+  it.each([
+    'test',
+    'live',
+  ])('should include ctx-service-env header when renderer_env=%s', async env => {
+    global.fetch = jest.fn().mockResolvedValue({
+      ok: true,
+      json: async () => mockNavResponse,
+    });
 
-      const { default: fetchConfig } = await import('.');
+    const { default: fetchConfig } = await import('.');
 
-      await fetchConfig({
-        service: 'indonesia',
-        pagePath: `/indonesia?renderer_env=${env}`,
-        configType: 'navigation',
-      });
+    await fetchConfig({
+      service: 'indonesia',
+      pagePath: `/indonesia?renderer_env=${env}`,
+      configType: 'navigation',
+    });
 
-      expect(global.fetch).toHaveBeenCalledWith(expect.any(String), {
-        headers: { 'ctx-service-env': env },
-        signal: expect.any(AbortSignal),
-        agent: mockAgent,
-      });
-    },
-  );
+    expect(global.fetch).toHaveBeenCalledWith(expect.any(String), {
+      headers: { 'ctx-service-env': env },
+      signal: expect.any(AbortSignal),
+      agent: mockAgent,
+    });
+  });
 
-  it.each(['test', 'live'])(
-    'should include ctx-service-env header when actual environment is %s without renderer_env param',
-    async env => {
-      process.env.SIMORGH_APP_ENV = env;
+  it.each([
+    'test',
+    'live',
+  ])('should include ctx-service-env header when actual environment is %s without renderer_env param', async env => {
+    process.env.SIMORGH_APP_ENV = env;
 
-      global.fetch = jest.fn().mockResolvedValue({
-        ok: true,
-        json: async () => mockNavResponse,
-      });
+    global.fetch = jest.fn().mockResolvedValue({
+      ok: true,
+      json: async () => mockNavResponse,
+    });
 
-      const { default: fetchConfig } = await import('.');
+    const { default: fetchConfig } = await import('.');
 
-      await fetchConfig({
-        service: 'indonesia',
-        pagePath: `/indonesia`,
-        configType: 'navigation',
-      });
+    await fetchConfig({
+      service: 'indonesia',
+      pagePath: `/indonesia`,
+      configType: 'navigation',
+    });
 
-      expect(global.fetch).toHaveBeenCalledWith(expect.any(String), {
-        headers: { 'ctx-service-env': env },
-        signal: expect.any(AbortSignal),
-        agent: mockAgent,
-      });
-    },
-  );
+    expect(global.fetch).toHaveBeenCalledWith(expect.any(String), {
+      headers: { 'ctx-service-env': env },
+      signal: expect.any(AbortSignal),
+      agent: mockAgent,
+    });
+  });
 
   it('should not include ctx-service-env header when in local environment', async () => {
     global.fetch = jest.fn().mockResolvedValue({
@@ -187,26 +187,25 @@ describe('fetchConfig', () => {
       process.env.SIMORGH_APP_ENV = originalSimorghAppEnv;
     });
 
-    it.each(SERVICES_WITH_NEW_NAV)(
-      'should set the useNewNav param for %s service',
-      async service => {
-        global.fetch = jest.fn().mockResolvedValue({
-          ok: true,
-          json: async () => mockNavResponse,
-        });
+    it.each(
+      SERVICES_WITH_NEW_NAV,
+    )('should set the useNewNav param for %s service', async service => {
+      global.fetch = jest.fn().mockResolvedValue({
+        ok: true,
+        json: async () => mockNavResponse,
+      });
 
-        const { default: fetchConfig } = await import('.');
+      const { default: fetchConfig } = await import('.');
 
-        await fetchConfig({
-          service,
-          pagePath: `/${service}`,
-          configType: 'navigation',
-        });
+      await fetchConfig({
+        service,
+        pagePath: `/${service}`,
+        configType: 'navigation',
+      });
 
-        const fetchUrl = (global.fetch as jest.Mock).mock.calls[0][0];
-        expect(fetchUrl).toContain('useNewNav=true');
-      },
-    );
+      const fetchUrl = (global.fetch as jest.Mock).mock.calls[0][0];
+      expect(fetchUrl).toContain('useNewNav=true');
+    });
 
     it('should set both variant and useNewNav params for a dual-script service', async () => {
       global.fetch = jest.fn().mockResolvedValue({

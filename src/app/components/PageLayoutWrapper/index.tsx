@@ -1,10 +1,10 @@
-import { PropsWithChildren, use } from 'react';
+import { type PropsWithChildren, use } from 'react';
 import { Helmet } from 'react-helmet';
 import GlobalStyles from '#psammead/psammead-styles/src/global-styles';
-import { Navigation, PageTypes } from '#app/models/types/global';
+import type { Navigation, PageTypes } from '#app/models/types/global';
 import appendAdDomainsToCSPHeader from '#app/utilities/appendAdDomainsToCSPHeader';
 import { OFFLINE_PAGE } from '#app/routes/utils/pageTypes';
-import { TopStoryItem } from '../../pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
+import type { TopStoryItem } from '../../pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import WebVitals from '../../legacy/containers/WebVitals';
 import HeaderContainer from '../../legacy/containers/Header';
 import FooterContainer from '../../legacy/containers/Footer';
@@ -14,7 +14,10 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
 import fontFaces from '../ThemeProvider/fontFaces';
 import styles from './index.styles';
-import { OptimoMostReadRecord, CPSMostReadRecord } from '../MostRead/types';
+import type {
+  OptimoMostReadRecord,
+  CPSMostReadRecord,
+} from '../MostRead/types';
 
 type ModelType = {
   blocks?: [

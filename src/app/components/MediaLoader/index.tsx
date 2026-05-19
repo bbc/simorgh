@@ -11,9 +11,9 @@ import {
   MEDIA_ASSET_PAGE,
 } from '#app/routes/utils/pageTypes';
 import filterForBlockType from '#lib/utilities/blockHandlers';
-import { PageTypes } from '#app/models/types/global';
+import type { PageTypes } from '#app/models/types/global';
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
-import {
+import type {
   BumpType,
   EventMapping,
   MediaBlock,
@@ -93,7 +93,7 @@ const AdvertTagLoader = () => {
     };
 
     return () => clearTimeout(timeoutID);
-  }, [queryString]);
+  }, []);
 
   return (
     <Helmet>

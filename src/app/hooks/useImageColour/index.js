@@ -36,10 +36,10 @@ const useImageColour = (
       img.addEventListener('error', setErrorState);
       img.crossOrigin = 'Anonymous';
       img.src = url;
-    } catch (err) {
+    } catch (_err) {
       setErrorState();
     }
-  }, [url, paletteSize]);
+  }, [url, paletteSize, setErrorState]);
 
   return {
     colour: selectColour({

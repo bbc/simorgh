@@ -1,4 +1,4 @@
-import { ServiceTheme } from '#app/models/types/theming';
+import type { ServiceTheme } from '#app/models/types/theming';
 import { NEWSROUND_PURPLE, NEWSROUND_PURPLE_30, WHITE } from '../palette';
 import latinScript from '../fontScripts/latin';
 import {

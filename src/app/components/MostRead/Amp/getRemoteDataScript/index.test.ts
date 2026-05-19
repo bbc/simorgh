@@ -1,4 +1,4 @@
-/* eslint-disable no-eval */
+// biome-ignore-all lint/security/noGlobalEval: this is fine
 import { transformData } from '.';
 import { WesternArabic } from '../../../../legacy/psammead/psammead-locales/src/numerals';
 import { data as pidginMostRead } from '../../../../../../data/pidgin/mostRead/index.json';

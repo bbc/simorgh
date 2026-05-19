@@ -50,14 +50,7 @@ export default function FormScreen({
     } else {
       document.title = title;
     }
-  }, [
-    title,
-    hasValidationErrors,
-    hasAttemptedSubmit,
-    // refocuses on error summary box after every submission attempt
-    attemptedSubmitCount,
-    validationRequired,
-  ]);
+  }, [title, hasValidationErrors, hasAttemptedSubmit, validationRequired]);
 
   const formFields = fields?.map(({ id, label, htmlType }) => (
     <FormField key={id} id={id} label={label} htmlType={htmlType} />
@@ -81,7 +74,7 @@ export default function FormScreen({
       </Heading>
       {description && (
         <div
-          // eslint-disable-next-line react/no-danger
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: we want this
           dangerouslySetInnerHTML={{ __html: description }}
           css={styles.description}
         />
@@ -102,7 +95,7 @@ export default function FormScreen({
             <div css={styles.privacyContainer}>
               <strong css={styles.privacyHeading}>{dataPolicyHeading}</strong>
               <div
-                // eslint-disable-next-line react/no-danger
+                // biome-ignore lint/security/noDangerouslySetInnerHtml: we want this
                 dangerouslySetInnerHTML={{ __html: privacyNotice }}
                 css={styles.privacyNotice}
               />

@@ -1,6 +1,6 @@
-import { CollapsibleNavigationSection } from '#app/components/CollapsibleNavigation/types';
-import { PromotionalBannerConfig } from '#app/components/PromotionalBanner/index.types';
-import {
+import type { CollapsibleNavigationSection } from '#app/components/CollapsibleNavigation/types';
+import type { PromotionalBannerConfig } from '#app/components/PromotionalBanner/index.types';
+import type {
   Services,
   ServicesWithNoVariants,
   SerbianService,
@@ -12,7 +12,7 @@ import {
   Variants,
   Navigation,
 } from './global';
-import { Translations } from './translations';
+import type { Translations } from './translations';
 
 export type DefaultServiceConfig = {
   [_key in ServicesWithNoVariants['variant']]: ServiceConfig;

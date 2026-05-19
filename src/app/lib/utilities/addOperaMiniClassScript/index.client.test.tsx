@@ -1,5 +1,4 @@
-/* eslint-disable no-underscore-dangle */
-/* eslint-disable no-eval */
+// biome-ignore-all lint/security/noGlobalEval: this is fine
 import addOperaMiniClassScript from '.';
 
 const classListAddSpy = jest.spyOn(document.documentElement.classList, 'add');

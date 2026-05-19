@@ -1,4 +1,4 @@
-import { StoryArgs, StoryProps } from '../../models/types/storybook';
+import type { StoryArgs, StoryProps } from '../../models/types/storybook';
 import PortraitVideoCarousel from '.';
 import readme from './README.md';
 import metadata from './metadata.json';

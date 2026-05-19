@@ -19,7 +19,7 @@ describe('generateTimeFormats', () => {
       try {
         // eslint-disable-next-line global-require
         require('./generateTimeFormats');
-      } catch (e) {
+      } catch (_e) {
         hasError = true;
       }
       expect(writeFile).toHaveBeenCalled();
@@ -36,7 +36,7 @@ describe('generateTimeFormats', () => {
       try {
         // eslint-disable-next-line global-require
         require('./generateTimeFormats');
-      } catch (e) {
+      } catch (_e) {
         hasError = true;
       }
       expect(writeFile).toHaveBeenCalled();

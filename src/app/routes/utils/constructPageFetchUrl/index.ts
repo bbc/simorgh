@@ -3,7 +3,7 @@ import pipe from 'ramda/src/pipe';
 import getEnvironment from '#app/routes/utils/getEnvironment';
 import { getMostReadEndpoint } from '#app/lib/utilities/getUrlHelpers/getMostReadUrls';
 import { getUrlPath } from '#lib/utilities/urlParser';
-import {
+import type {
   Services,
   Variants,
   Environments,

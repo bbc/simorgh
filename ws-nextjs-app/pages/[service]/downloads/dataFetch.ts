@@ -15,8 +15,7 @@ const retrieveDownloads = async (service: Services) => {
     return retrieveDownloads().then(data => {
       return data;
     });
-  } catch (e) {
-    console.error(e);
+  } catch (_e) {
     return false;
   }
 };

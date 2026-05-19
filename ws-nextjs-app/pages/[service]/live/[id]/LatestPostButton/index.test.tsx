@@ -41,30 +41,31 @@ describe('LatestPostButton', () => {
       hasPendingUpdate: true,
       shouldButtonBeVisible: false,
     },
-  ])(
-    '$title',
-    async ({ isFirstPostVisible, hasPendingUpdate, shouldButtonBeVisible }) => {
-      const { container } = await act(async () => {
-        return render(
-          <LastestPostButton
-            isFirstPostVisible={isFirstPostVisible}
-            hasPendingUpdate={hasPendingUpdate}
-            streamRef={null}
-          />,
-        );
-      });
-
-      const button = container.querySelector(
-        'button[data-testid="latest-post-button"]',
+  ])('$title', async ({
+    isFirstPostVisible,
+    hasPendingUpdate,
+    shouldButtonBeVisible,
+  }) => {
+    const { container } = await act(async () => {
+      return render(
+        <LastestPostButton
+          isFirstPostVisible={isFirstPostVisible}
+          hasPendingUpdate={hasPendingUpdate}
+          streamRef={null}
+        />,
       );
+    });
 
-      if (shouldButtonBeVisible) {
-        expect(button).not.toBeNull();
-      } else {
-        expect(button).toBeNull();
-      }
-    },
-  );
+    const button = container.querySelector(
+      'button[data-testid="latest-post-button"]',
+    );
+
+    if (shouldButtonBeVisible) {
+      expect(button).not.toBeNull();
+    } else {
+      expect(button).toBeNull();
+    }
+  });
 
   it('should clear after 10 seconds of being visible', async () => {
     const { container } = await act(async () => {

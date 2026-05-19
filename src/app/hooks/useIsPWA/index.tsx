@@ -23,7 +23,7 @@ const useIsPWA = (): boolean => {
       const isWindowControlsOverlay = window.matchMedia(
         '(display-mode: window-controls-overlay)',
       ).matches;
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      // biome-ignore lint/suspicious/noExplicitAny: we want this
       const isIOSStandalone = (window.navigator as any)?.standalone === true;
 
       setIsPWA(

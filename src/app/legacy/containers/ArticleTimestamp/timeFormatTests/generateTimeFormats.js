@@ -29,11 +29,7 @@ const generateTimeFormats = () => {
   const generatedJSON = JSON.stringify(timeFormats, null, 2);
   fs.writeFile(filePath, generatedJSON, 'utf8', error => {
     if (!error) {
-      // eslint-disable-next-line no-console
-      console.info('done');
     } else {
-      // eslint-disable-next-line no-console
-      console.info('An Error Occurred -- ', error);
     }
   });
 };

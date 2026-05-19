@@ -24,8 +24,8 @@ import articleWithTopicDiscovery from '#data/portuguese/articles/cgmpgpllnp7o.js
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
 import { service as newsConfig } from '#app/lib/config/services/news';
-import { Services } from '#app/models/types/global';
-import { StoryArgs, StoryProps } from '#app/models/types/storybook';
+import type { Services } from '#app/models/types/global';
+import type { StoryArgs, StoryProps } from '#app/models/types/storybook';
 import articleDataMultipleContributors from '#data/news/articles/cgrj2g29kzxo.json';
 import ArticlePageComponent from './ArticlePage';
 

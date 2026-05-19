@@ -1,6 +1,6 @@
 import filterForBlockType from '#app/lib/utilities/blockHandlers';
-import { OptimoBlock } from '#app/models/types/optimo';
-import {
+import type { OptimoBlock } from '#app/models/types/optimo';
+import type {
   AresMediaBlock,
   AresMediaMetadataBlock,
   ClipMediaBlock,

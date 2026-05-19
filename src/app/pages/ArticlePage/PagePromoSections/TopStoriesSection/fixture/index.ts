@@ -1,4 +1,4 @@
-import { TopStoryItem } from '../types';
+import type { TopStoryItem } from '../types';
 
 export const topStoriesItem = {
   headlines: {

@@ -1,4 +1,4 @@
-import { PortraitClipMediaBlock } from '../MediaLoader/types';
+import type { PortraitClipMediaBlock } from '../MediaLoader/types';
 
 export const portraitVideoFixture = {
   title: 'Portrait Video Carousel',

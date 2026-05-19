@@ -4,7 +4,7 @@ import {
   videoClipMediaBlocks,
   livePageCaptionBlock,
 } from '../fixture';
-import { MediaBlock } from '../types';
+import type { MediaBlock } from '../types';
 import getCaptionBlock from './getCaptionBlock';
 
 describe('getCaptionBlock', () => {

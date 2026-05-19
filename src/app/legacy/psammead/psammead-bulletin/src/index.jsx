@@ -194,7 +194,7 @@ const Bulletin = ({
                 {headlineText}
               </LiveLabel>
             ) : (
-              // eslint-disable-next-line jsx-a11y/aria-role
+              // biome-ignore lint/a11y/useValidAriaRole: we want this
               <span role="text" id={`bulletin-${sanitisedAriaId}`}>
                 {offScreenText && (
                   <VisuallyHiddenText lang={lang}>

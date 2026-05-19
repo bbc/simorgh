@@ -1,4 +1,4 @@
-/* eslint-disable no-eval */
+// biome-ignore-all lint/security/noGlobalEval: this is fine
 import { addSendStaticBeaconToWindow } from '#app/lib/analyticsUtils/staticATITracking/sendStaticBeacon';
 import sendPageViewBeaconOperaMini from '.';
 

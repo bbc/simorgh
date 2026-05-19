@@ -1,4 +1,4 @@
-import crypto, { BinaryToTextEncoding, Encoding } from 'crypto';
+import crypto, { type BinaryToTextEncoding, type Encoding } from 'crypto';
 
 interface GenerateCSPHashProps {
   script: string;
@@ -21,14 +21,7 @@ const generateCSPHash = ({
       .replace(/=/g, '')
       .replace(/\+/g, '-')
       .replace(/\//g, '_')}`;
-  } catch (err) {
-    // eslint-disable-next-line no-console
-    console.warn(
-      `Failed to create hash with params script = ${script}, 
-      sha = ${sha}, 
-      encoding = ${encoding}, 
-      base = ${base}`,
-    );
+  } catch (_err) {
     return undefined;
   }
 };

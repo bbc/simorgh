@@ -1,5 +1,5 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import { PropsWithChildren } from 'react';
+// biome-ignore-all lint/suspicious/noExplicitAny: we want this
+import type { PropsWithChildren } from 'react';
 
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
@@ -9,7 +9,7 @@ import { STORY_PAGE } from '../../routes/utils/pageTypes';
 import makeRelativeUrlPath from '../../lib/utilities/makeRelativeUrlPath';
 import * as clickTracking from '../../hooks/useClickTrackerHandler';
 import { render } from '../react-testing-library-with-providers';
-import { Services, Variants } from '../../models/types/global';
+import type { Services, Variants } from '../../models/types/global';
 
 import {
   promoProps,
@@ -19,7 +19,7 @@ import {
 } from './fixtures';
 
 import Promo from '.';
-import { PromoProps } from './types';
+import type { PromoProps } from './types';
 
 interface Props extends PromoProps {
   service?: Services;

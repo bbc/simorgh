@@ -11,7 +11,7 @@ import {
   extractPromoImageFromArticleData,
   buildPromoImageUrl,
 } from '#app/lib/uasApi/uasUtility';
-import { Article } from '#app/models/types/optimo';
+import type { Article } from '#app/models/types/optimo';
 import useToggle from '../useToggle';
 
 /** A hook that fetches an article's saved status and controls showing the save UAS button

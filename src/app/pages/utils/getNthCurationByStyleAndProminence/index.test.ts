@@ -1,5 +1,5 @@
 import {
-  Curation,
+  type Curation,
   VISUAL_PROMINENCE,
   VISUAL_STYLE,
 } from '#app/models/types/curationData';

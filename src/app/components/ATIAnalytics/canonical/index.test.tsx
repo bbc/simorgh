@@ -8,7 +8,7 @@ import { addSendStaticBeaconToWindow } from '#app/lib/analyticsUtils/staticATITr
 import processClientDeviceAndSendStaticBeacon from '#app/lib/analyticsUtils/staticATITracking/processClientDeviceAndSendStaticBeacon';
 import * as beacon from '../../../lib/analyticsUtils/sendBeacon';
 import CanonicalATIAnalytics from '.';
-import { ReverbBeaconConfig } from '../types';
+import type { ReverbBeaconConfig } from '../types';
 
 describe('Canonical ATI Analytics', () => {
   afterEach(() => {

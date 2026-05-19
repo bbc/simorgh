@@ -5,13 +5,13 @@ import { Play } from '#app/components/icons';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import moment from 'moment';
 import formatDuration from '#app/lib/utilities/formatDuration';
-import { use, FocusEvent } from 'react';
+import { use, type FocusEvent } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
 import getSrcSets from '#app/utilities/getSrcSets';
-import { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
-import { EventTrackingData } from '#app/lib/analyticsUtils/types';
+import type { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
+import type { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import styles from './index.styles';
 
 const DEFAULT_TRANSLATION = {

@@ -1,7 +1,7 @@
 import { MemoryRouter } from 'react-router-dom';
-import { StoryArgs, StoryProps } from '#app/models/types/storybook';
+import type { StoryArgs, StoryProps } from '#app/models/types/storybook';
 import ThemeProvider from '#app/components/ThemeProvider';
-import { PageTypes, Services } from '#app/models/types/global';
+import type { PageTypes, Services } from '#app/models/types/global';
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { UserContextProvider } from '../../contexts/UserContext';
@@ -24,7 +24,7 @@ const PageWithOptimizely = withOptimizelyProvider(MediaArticlePageComponent);
 const Page = withPageWrapper(PageWithOptimizely);
 
 type Props = {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  // biome-ignore lint/suspicious/noExplicitAny: we want this
   data: any;
   service?: Services;
   isLite?: boolean;

@@ -1,8 +1,8 @@
 import { use } from 'react';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
-import { Summary } from '#app/models/types/curationData';
-import { EventTrackingData } from '#app/lib/analyticsUtils/types';
+import type { Summary } from '#app/models/types/curationData';
+import type { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import Heading from '../Heading';
 import MaskedImage from '../MaskedImage';
 import styles from './index.styles';
