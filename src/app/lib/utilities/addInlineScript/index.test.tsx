@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import addInlineScript from '.';
 
 describe('addInlineScript', () => {
@@ -58,7 +57,6 @@ describe('addInlineScript', () => {
       expectedParamOutput: `"Hello", "There", "World"`,
     },
   ])('$title', ({ params, expectedParamOutput }) => {
-    /* @ts-expect-error:   'printString' is declared but its value is never read. */
     const script = (printString: string) => console.log(printString);
 
     const inlineScript = addInlineScript({
