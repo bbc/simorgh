@@ -84,7 +84,6 @@ const SocialLink = ({
         {...clickTrackerHandler}
       >
         {hasDescription ? (
-          // eslint-disable-next-line jsx-a11y/aria-role
           <span id={linkLabelId}>
             {summary.title}
             <VisuallyHiddenText>{`, ${summary.description}`}</VisuallyHiddenText>

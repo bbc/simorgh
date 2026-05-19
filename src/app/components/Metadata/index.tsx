@@ -220,7 +220,6 @@ const MetadataContainer = ({
       {isoLang &&
         !isEnglishService &&
         alternateLinksWsSites.map(renderAlternateLinks)}
-      {/* eslint-disable-next-line react/no-invalid-html-attribute */}
       {linkToAmpPage && <link rel="amphtml" href={ampLink} />}
       {renderAppleItunesApp({
         iTunesAppId,

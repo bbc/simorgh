@@ -3,7 +3,7 @@ import * as genericLabelHelpers from '../../../lib/analyticsUtils';
 import { buildReverbAnalyticsModel, buildReverbEventModel } from '.';
 
 const mockAndSet = ({ name, source }, response) => {
-  source[name] = jest.fn(); // eslint-disable-line no-param-reassign
+  source[name] = jest.fn();
   source[name].mockImplementation(() => response);
 };
 

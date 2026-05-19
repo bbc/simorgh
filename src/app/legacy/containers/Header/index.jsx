@@ -47,6 +47,7 @@ const Header = ({
 
   // linkId={linkId || 'topPage'} is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
   return (
+    // biome-ignore lint/a11y/noStaticElementInteractions: we want this
     <div onBlur={handleBannerBlur}>
       {showConsentBanner && <ConsentBanner onDismissFocusRef={brandRef} />}
       <BrandContainer

@@ -20,7 +20,7 @@ const mockCalendar = {
 
 describe('Timestamp', () => {
   describe('with no data', () => {
-    console.error = jest.fn(); // eslint-disable-line no-console
+    console.error = jest.fn();
     isNull('should return null', <Timestamp />);
   });
 

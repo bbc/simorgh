@@ -1,6 +1,4 @@
 // biome-ignore-all lint/suspicious/noEmptyBlockStatements: we want this
-/* eslint-disable no-restricted-globals */
-/* eslint-disable import/no-unresolved */
 import fs from 'fs';
 import { join, resolve } from 'path';
 import fetchMock from 'jest-fetch-mock';

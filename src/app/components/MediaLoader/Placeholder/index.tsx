@@ -32,7 +32,8 @@ const MediaPlayerPlaceholder = ({
   } = mediaInfo ?? {};
 
   return (
-    // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
+    // biome-ignore lint/a11y/useKeyWithClickEvents: we want this
+    // biome-ignore lint/a11y/noStaticElementInteractions: we want this
     <div
       onClick={onClick}
       css={styles.placeholder}

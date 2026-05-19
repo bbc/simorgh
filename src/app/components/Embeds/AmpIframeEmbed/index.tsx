@@ -1,4 +1,3 @@
-/* eslint-disable react/destructuring-assignment */
 import AmpIframe from '../../AmpIframe';
 import type { ampParams } from '../types';
 import styles from './index.styles';

@@ -48,7 +48,7 @@ const checkTypesOfExports = (
   actualExportsByName.forEach(actualExportName => {
     const actualExportValue = actualExports[utilityName][actualExportName];
     const expectedExport = expectedExports[utilityName][actualExportName];
-    const typeCheck = typeof actualExportValue === expectedExport; // eslint-disable-line valid-typeof
+    const typeCheck = typeof actualExportValue === expectedExport;
 
     // if this fails it is likely that an export is missing from the unit test expectation
     expect(typeCheck).toBe(true);

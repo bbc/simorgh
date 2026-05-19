@@ -30,11 +30,11 @@
         "noNoninteractiveElementInteractions": "off",
         "noNoninteractiveElementToInteractiveRole": "off",
         "noRedundantRoles": "off",
-        "noStaticElementInteractions": "off",
+        "noStaticElementInteractions": "error",
         "noSvgWithoutTitle": "off",
         "useAriaPropsForRole": "off",
         "useFocusableInteractive": "off",
-        "useKeyWithClickEvents": "off",
+        "useKeyWithClickEvents": "error",
         "useSemanticElements": "off",
         "useValidAriaValues": "off"
       },
@@ -78,6 +78,7 @@
       },
       "style": {
         "noDefaultExport": "off",
+        "noParameterAssign": "error",
         "noJsxLiterals": "off",
         "noNegationElse": "off",
         "noRestrictedGlobals": "error",
@@ -86,6 +87,7 @@
         "useExportsLast": "off"
       },
       "suspicious": {
+        "noAlert": "error",
         "noConsole": {
           "level": "error",
           "options": {
@@ -96,7 +98,12 @@
         "noExportsInTest": "off",
         "noImplicitAnyLet": "off",
         "useAwait": "off",
-        "useIterableCallbackReturn": "off"
+        "useIterableCallbackReturn": {
+            "level": "error",
+            "options": {
+                "checkForEach": false
+            }
+        }
       }
     }
   },

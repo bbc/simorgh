@@ -1,5 +1,4 @@
-/* eslint-disable consistent-return */
-/* eslint-disable array-callback-return */
+// biome-ignore-all lint/suspicious/useIterableCallbackReturn: we want this
 import SERVICES from '#app/lib/config/services';
 import type { Services, ServicesVariantsProps } from '#app/models/types/global';
 import * as emotionReact from '@emotion/react';

@@ -1,4 +1,3 @@
-/* eslint-disable no-template-curly-in-string */
 import {
   LIVE_PAGE,
   STORY_PAGE,
@@ -11,7 +10,6 @@ import {
   bylineSamplePost,
   bylineSamplePostWithoutAuthorName,
   bylineSamplePostWithUnsupportedImage,
-  // eslint-disable-next-line import/no-relative-packages
 } from '../../../../ws-nextjs-app/pages/[service]/live/[id]/Post/fixture';
 import {
   render,
