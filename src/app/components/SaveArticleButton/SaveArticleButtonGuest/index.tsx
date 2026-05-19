@@ -10,7 +10,7 @@ const SaveArticleButtonGuest = () => {
   return (
     <SaveButton
       onClick={() => {
-        // eslint-disable-next-line no-alert
+        // biome-ignore lint/suspicious/noAlert: we want this temporarily
         alert('Please sign in to save articles.');
       }}
       buttonText={translations.saveArticleButton?.save || 'Save'}
