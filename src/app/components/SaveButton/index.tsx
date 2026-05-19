@@ -32,7 +32,7 @@ const SaveButton = ({
 
   return (
     <button
-      css={(styles.buttonWrapper, isMutating && styles.mutatingState)}
+      css={[styles.buttonWrapper, isMutating && styles.mutatingState]}
       type="button"
       onClick={onClick}
       disabled={disabled || isLoading || isMutating}
