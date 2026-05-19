@@ -1,6 +1,6 @@
 import { act, renderHook } from '@testing-library/react';
 import { HeadToHeadV2Data } from '#app/components-webcore/SportDataHeader/head-to-head-v2/types';
-import useSportsDataPolling, { POLLING_INTERVAL } from '.';
+import useSportDataPolling, { POLLING_INTERVAL } from '.';
 import fixtureSportData from './fixture/fixtureSportData';
 import fixtureSportDataUpdate from './fixture/fixtureSportDataUpdate';
 import * as makeRequest from './makeRequest/makeRequest';
@@ -14,7 +14,7 @@ const runPollingInterval = async () => {
   });
 };
 
-describe('useSportsDataPolling', () => {
+describe('useSportDataPolling', () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });
@@ -27,7 +27,7 @@ describe('useSportsDataPolling', () => {
       .mockResolvedValue(fixtureSportDataUpdate);
 
     const { result } = renderHook(() =>
-      useSportsDataPolling(initialSportsData, true),
+      useSportDataPolling(initialSportsData, true),
     );
 
     const { currentSportData } = result.current;
@@ -41,7 +41,7 @@ describe('useSportsDataPolling', () => {
       .spyOn(makeRequest, 'default')
       .mockResolvedValue(null);
 
-    renderHook(() => useSportsDataPolling(initialSportsData, true));
+    renderHook(() => useSportDataPolling(initialSportsData, true));
 
     await runPollingInterval();
 
@@ -55,7 +55,7 @@ describe('useSportsDataPolling', () => {
       .spyOn(makeRequest, 'default')
       .mockResolvedValue(null);
 
-    renderHook(() => useSportsDataPolling(initialSportsData, false));
+    renderHook(() => useSportDataPolling(initialSportsData, false));
 
     await runPollingInterval();
 
@@ -70,7 +70,7 @@ describe('useSportsDataPolling', () => {
     jest.spyOn(makeRequest, 'default').mockResolvedValue(updatedSportsData);
 
     const { result } = renderHook(() =>
-      useSportsDataPolling(initialSportsData, true),
+      useSportDataPolling(initialSportsData, true),
     );
 
     await runPollingInterval();
@@ -84,7 +84,7 @@ describe('useSportsDataPolling', () => {
     jest.spyOn(makeRequest, 'default').mockResolvedValue(null);
 
     const { result } = renderHook(() =>
-      useSportsDataPolling(initialSportsData, true),
+      useSportDataPolling(initialSportsData, true),
     );
 
     await runPollingInterval();
@@ -99,7 +99,7 @@ describe('useSportsDataPolling', () => {
       .mockResolvedValue(null);
 
     const { unmount } = renderHook(() =>
-      useSportsDataPolling(initialSportsData, true),
+      useSportDataPolling(initialSportsData, true),
     );
 
     unmount();

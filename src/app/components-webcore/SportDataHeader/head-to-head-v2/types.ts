@@ -210,7 +210,7 @@ export type BadgeSize =
   | { small?: number; medium?: number; large?: number };
 
 export interface HeadToHeadV2Props {
-  data: HeadToHeadV2Data;
+  initialSportData: HeadToHeadV2Data;
   isConciseView: boolean;
   shouldShowActions?: boolean;
   /**

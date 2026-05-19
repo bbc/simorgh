@@ -66,7 +66,6 @@ export type ComponentProps = {
     mediaCollections: MediaCollection[] | null;
     portraitVideoItems?: PortraitVideoItems | null;
     sportDataEventContent?: {
-      urn: string;
       live: boolean;
       sportDataEvent: HeadToHeadV2Data;
       title: string;
