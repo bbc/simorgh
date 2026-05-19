@@ -27,7 +27,7 @@ export const HeadToHeadV2 = ({
 
   const { currentSportData } = useSportDataPolling(
     initialSportData,
-    sportHeaderPollEnabled && isSportDataLive,
+    Boolean(sportHeaderPollEnabled) && isSportDataLive,
   );
   const data = currentSportData;
 

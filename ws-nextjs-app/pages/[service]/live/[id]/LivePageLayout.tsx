@@ -119,7 +119,7 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
     live: isSportDataLive,
     title: sportDataTitle,
   } = sportDataEventContent || {};
-  const showSportData = !!sportData && sportHeaderEnabled;
+  const showSportData = !!sportData && Boolean(sportHeaderEnabled);
 
   const {
     url: imageUrl,
