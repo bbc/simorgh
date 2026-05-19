@@ -140,7 +140,6 @@ const getTimestampComponent =
             )}
           </>
         )}
-        {/* Temporary SaveArticleButton */}
         <SaveArticleButton
           articleTitle={articleTitle}
           articlePageData={articlePageData}
