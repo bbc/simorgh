@@ -19,7 +19,7 @@ describe('useSportsDataPolling', () => {
     jest.clearAllMocks();
   });
 
-  it('should return the initial stream data on initialisation', () => {
+  it('should return the initial sports data on initialisation', () => {
     const initialSportsData = fixtureSportData as unknown as HeadToHeadV2Data;
 
     jest
