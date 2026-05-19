@@ -17,8 +17,7 @@ const renderFeaturesAnalysis = ({
   content = features,
   bbcOrigin = 'https://www.test.bbc.co.uk',
   isAmp = false,
-} = {}) => {
-  return render(
+} = {}) => render(
     <ServiceContextProvider service="pidgin">
       <RequestContextProvider
         bbcOrigin={bbcOrigin}
@@ -34,12 +33,10 @@ const renderFeaturesAnalysis = ({
       </RequestContextProvider>
     </ServiceContextProvider>,
   );
-};
 
 const renderFeaturesAnalysisNull = ({
   bbcOrigin = 'https://www.test.bbc.co.uk',
-} = {}) => {
-  return render(
+} = {}) => render(
     <ServiceContextProvider service="pidgin">
       <RequestContextProvider
         bbcOrigin={bbcOrigin}
@@ -55,13 +52,11 @@ const renderFeaturesAnalysisNull = ({
       </RequestContextProvider>
     </ServiceContextProvider>,
   );
-};
 
 const renderFeaturesAnalysisNoTitle = ({
   content = features,
   bbcOrigin = 'https://www.test.bbc.co.uk',
-} = {}) => {
-  return render(
+} = {}) => render(
     <ServiceContextProvider service="ws">
       <RequestContextProvider
         bbcOrigin={bbcOrigin}
@@ -77,7 +72,6 @@ const renderFeaturesAnalysisNoTitle = ({
       </RequestContextProvider>
     </ServiceContextProvider>,
   );
-};
 
 jest.mock('#lib/utilities/isLive', () => jest.fn());
 

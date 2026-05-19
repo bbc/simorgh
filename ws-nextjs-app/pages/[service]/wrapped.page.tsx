@@ -140,20 +140,16 @@ const pageLayout = () => {
     words.innerText = new Intl.NumberFormat(locale).format(totalWords);
     const pageTypeCounts = Object.keys(wsWrapped[thisYear].pageTypeCounts)
       .filter(key => ['STY', 'article'].includes(key))
-      .reduce((sum, key) => {
-        return sum + wsWrapped[thisYear].pageTypeCounts[key];
-      }, 0);
+      .reduce((sum, key) => sum + wsWrapped[thisYear].pageTypeCounts[key], 0);
     const article = document.getElementById('article');
     article.innerText = new Intl.NumberFormat(locale).format(pageTypeCounts);
     const _average = document.getElementById('average');
     /// average.innerText = new Intl.NumberFormat(locale, { maximumFractionDigits: 1 }).format(totalWords / pageTypeCounts);
     const topics = Object.keys(wsWrapped[thisYear].topicCounts)
-      .sort((a, b) => {
-        return (
+      .sort((a, b) => (
           wsWrapped[thisYear].topicCounts[a] <
           wsWrapped[thisYear].topicCounts[b]
-        );
-      })
+        ))
       .slice(0, 5);
     const topiclist = document.getElementById('topiclist');
     topiclist.innerHTML = '';
@@ -200,11 +196,9 @@ const pageLayout = () => {
     gctx.lineTo(my_canvas.width, y); // Base line of graph
     gctx.stroke();
 
-    const getGraphYValue = initialValue => {
-      return !initialValue
+    const getGraphYValue = initialValue => !initialValue
         ? initialValue
         : (initialValue / graphMax) * (y - y_gap);
-    };
 
     for (i = 0; i < monthValues.length; i++) {
       gctx.font = '11px "BBC Reith Sans", ReithSerif, Helvetica, sans-serif'; // font for base label showing classes

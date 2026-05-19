@@ -15,12 +15,10 @@ export default ({
         url: link,
       })),
     )
-    .map((listItem, index) => {
-      return {
+    .map((listItem, index) => ({
         ...listItem,
         position: index + 1,
-      };
-    });
+      }));
 
   return {
     itemListElement,

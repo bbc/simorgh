@@ -74,8 +74,7 @@ const PromoListComponent = ({ promoItems, dir = 'ltr', experimentProps }) => {
 
   return (
     <StoryPromoUlFeatures role="list">
-      {promoItems.map((item, promoIndex) => {
-        return (
+      {promoItems.map((item, promoIndex) => (
           <StoryPromoLiFeatures
             key={item.id || item.uri}
             {...viewTracker}
@@ -93,8 +92,7 @@ const PromoListComponent = ({ promoItems, dir = 'ltr', experimentProps }) => {
               sectionType="features-and-analysis"
             />
           </StoryPromoLiFeatures>
-        );
-      })}
+        ))}
     </StoryPromoUlFeatures>
   );
 };

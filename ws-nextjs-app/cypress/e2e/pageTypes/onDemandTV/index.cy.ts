@@ -225,13 +225,11 @@ const atiAnalyticsTestSuites = [
   },
 ];
 
-const liteTestSuites = testSuites.map(testSuite => {
-  return {
+const liteTestSuites = testSuites.map(testSuite => ({
     ...testSuite,
     path: `${testSuite.path}.lite`,
     tests: [e2eTests],
-  };
-});
+  }));
 
 const atiAnalyticsLiteTestSuites = atiAnalyticsTestSuites.map(testSuite => {
   const excludedLiteTests = [

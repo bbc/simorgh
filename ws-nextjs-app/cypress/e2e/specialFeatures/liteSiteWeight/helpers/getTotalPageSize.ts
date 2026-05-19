@@ -19,7 +19,5 @@ export default requests => {
         });
       }
     })
-    .then(() => {
-      return { totalSize: roundTo2Decimals(totalSize), requestSizes };
-    });
+    .then(() => ({ totalSize: roundTo2Decimals(totalSize), requestSizes }));
 };

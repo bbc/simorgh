@@ -94,14 +94,12 @@ export const selectColour = ({
       hexToRgb(contrastColour),
     );
 
-    const hasSufficientContrast = colour => {
-      return (
+    const hasSufficientContrast = colour => (
         contrastRatioFromLuminances(
           contrastColourLuminance,
           getRelativeLuminance(colour),
         ) >= minimumContrast
       );
-    };
 
     return getMostVibrantColour(
       palette.filter(color => hasSufficientContrast(color)),

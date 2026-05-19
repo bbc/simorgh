@@ -85,8 +85,7 @@ const Component = ({
   shouldShowActions = true,
   maximumContainerScoreDigits,
   teamBadgePlaceholderFallbackType = 'badge',
-}: ComponentProps) => {
-  return (
+}: ComponentProps) => (
     <HeadToHeadV2
       data={data}
       isConciseView={isConciseView}
@@ -95,7 +94,6 @@ const Component = ({
       teamBadgePlaceholderFallbackType={teamBadgePlaceholderFallbackType}
     />
   );
-};
 
 export const Default = () => <Component data={baseData} />;
 export const ConciseView = () => (

@@ -21,9 +21,7 @@ export const serviceWorkerIsRegistered = ({
   it('Service Worker is registered', () => {
     cy.window().then(win => {
       win.navigator.serviceWorker.getRegistrations().then(registrations => {
-        const serviceWorkerInScope = registrations.find(registration => {
-          return registration.scope.endsWith(`${service}/`);
-        });
+        const serviceWorkerInScope = registrations.find(registration => registration.scope.endsWith(`${service}/`));
         expect(serviceWorkerInScope).not.to.be.null;
       });
     });

@@ -27,8 +27,7 @@ export const optOutScript = (window: Window) => {
   window.localStorage.setItem('isOptedIntoLiteRedirect', 'false');
 };
 
-export const OptOutOfLiteRedirect = () => {
-  return (
+export const OptOutOfLiteRedirect = () => (
     <script>
       {`
       window.addEventListener('DOMContentLoaded', () => {
@@ -41,16 +40,13 @@ export const OptOutOfLiteRedirect = () => {
       `}
     </script>
   );
-};
 
 // THIS COMPONENT IS ONLY TO BE USED WITH CANONICAL RENDERERS
 // DO NOT USE IT WITH LITE AND AMP RENDERERS
-export default () => {
-  return (
+export default () => (
     <script>
       {`
         (${redirectScript.toString()})(window)
       `}
     </script>
   );
-};

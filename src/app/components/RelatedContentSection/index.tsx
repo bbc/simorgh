@@ -26,13 +26,11 @@ const removeCustomBlocks = pipe(
   last,
 );
 
-const isHeadlineFirst = (item: object) => {
-  return !!pathOr<string>(
+const isHeadlineFirst = (item: object) => !!pathOr<string>(
     '',
     ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
     item,
   );
-};
 
 type Props = {
   content: OptimoBlock[];

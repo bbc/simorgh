@@ -38,9 +38,7 @@ export const isValidDateTime = dateTime => {
 };
 
 // when using the following 2 functions, we recommend using webpack configuration to only load in the relevant timezone, rather than all of moment-timezone
-export const localisedMoment = ({ locale, timestamp }) => {
-  return moment(timestamp).locale(locale);
-};
+export const localisedMoment = ({ locale, timestamp }) => moment(timestamp).locale(locale);
 
 export const formatUnixTimestamp = ({
   format,

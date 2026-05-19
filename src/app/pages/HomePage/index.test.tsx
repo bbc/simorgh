@@ -177,9 +177,7 @@ describe('Home Page', () => {
       service: 'kyrgyz',
     });
 
-    const getLinkedDataOutput = () => {
-      return JSON.parse(Helmet.peek().scriptTags[0].innerHTML);
-    };
+    const getLinkedDataOutput = () => JSON.parse(Helmet.peek().scriptTags[0].innerHTML);
 
     expect(getLinkedDataOutput()).toMatchSnapshot();
   });

@@ -4,8 +4,7 @@ import getAppEnv from '../../../support/helpers/getAppEnv';
 
 const twoYearsAgo = new Date().getFullYear() - 2;
 
-const isArticleLessThanTwoYearsOld = () => {
-  return cy
+const isArticleLessThanTwoYearsOld = () => cy
     .get(`main time`)
     .invoke('attr', 'datetime')
     .then(fullDate => {
@@ -14,7 +13,6 @@ const isArticleLessThanTwoYearsOld = () => {
       const isNewArticle = Number(fullDate.split('-')[0]) > Number(twoYearsAgo);
       return isNewArticle && getAppEnv() === 'live';
     });
-};
 export default ({ service, pageType, isAmp }: ServiceParametersType) => {
   describe(`Running tests for ${service} ${pageType} `, () => {
     describe(`Recommendations on ${service} ${pageType}`, () => {

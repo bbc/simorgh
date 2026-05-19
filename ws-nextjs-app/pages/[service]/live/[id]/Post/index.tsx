@@ -62,8 +62,7 @@ const PostBreakingNewsLabel = ({
 }: {
   isBreakingNews: boolean;
   breakingNewsLabelText?: string;
-}) => {
-  return isBreakingNews ? (
+}) => isBreakingNews ? (
     <>
       <Text
         css={styles.breakingNewsLabel}
@@ -76,7 +75,6 @@ const PostBreakingNewsLabel = ({
       <VisuallyHiddenText>, </VisuallyHiddenText>
     </>
   ) : null;
-};
 
 const PostHeaderBanner = ({
   isBreakingNews,

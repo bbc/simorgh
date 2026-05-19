@@ -220,8 +220,7 @@ export const ConsentBanner = ({
   hidden = null,
 
   headingRef = null,
-}) => {
-  return (
+}) => (
     <Wrapper dir={dir} hidden={hidden} id={id}>
       <CenterWrapper dir={dir}>
         <Title dir={dir} ref={headingRef}>
@@ -242,4 +241,3 @@ export const ConsentBanner = ({
       </CenterWrapper>
     </Wrapper>
   );
-};

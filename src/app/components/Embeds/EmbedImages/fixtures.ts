@@ -457,8 +457,7 @@ const createEmbedImagesFixture = ({
   alt = 'CPS vs Optimo usage. .  .',
   width = 1632,
   height = 1252,
-}: types) => {
-  return {
+}: types) => ({
     blocks: [
       {
         type: 'image',
@@ -605,8 +604,7 @@ const createEmbedImagesFixture = ({
         },
       },
     ],
-  };
-};
+  });
 
 export {
   chartEmbedImages,

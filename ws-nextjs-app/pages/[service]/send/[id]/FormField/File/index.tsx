@@ -48,11 +48,9 @@ export default ({
   const labelId = `label-${id}`;
   const errorBoxId = `${id}-error`;
 
-  useEffect(() => {
-    return () => {
+  useEffect(() => () => {
       clearTimeout(timeoutRef.current as number);
-    };
-  }, []);
+    }, []);
 
   const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
     // Converts FileList to an actual array
@@ -79,9 +77,7 @@ export default ({
       );
 
       if (
-        uploaded.some(uploadedFile => {
-          return newFile.name === uploadedFile.file.name;
-        })
+        uploaded.some(uploadedFile => newFile.name === uploadedFile.file.name)
       ) {
         return duplicateFileNameCheck(newFile, ogFileName, fileNameCount + 1);
       }

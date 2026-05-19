@@ -72,9 +72,7 @@ const getId = ({ pageType, service, variant }: GetIdProps) => {
       getIdFunction = (path: string) => getCpsId(path);
       break;
     case HOME_PAGE:
-      getIdFunction = () => {
-        return service;
-      };
+      getIdFunction = () => service;
       break;
     case MOST_READ_PAGE:
       getIdFunction = () => service;

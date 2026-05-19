@@ -221,7 +221,7 @@
 				"useArrayLiterals": "error",
 				"useBlockStatements": "off",
 				"useCollapsedElseIf": "error",
-				"useConsistentArrowReturn": "off",
+				"useConsistentArrowReturn": "error",
 				"useConsistentBuiltinInstantiation": "off",
 				"useConst": "error",
 				"useDefaultParameterLast": "error",

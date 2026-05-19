@@ -2,11 +2,9 @@ import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import { render } from '../../../../components/react-testing-library-with-providers';
 import { renderProgramCard, uniqueStates } from '../testHelpers/helper';
 
-jest.mock('#lib/analyticsUtils', () => {
-  return {
+jest.mock('#lib/analyticsUtils', () => ({
     ...jest.requireActual('#lib/analyticsUtils'),
-  };
-});
+  }));
 
 describe('ProgramCard', () => {
   suppressPropWarnings(['program', 'ProgramCard']);

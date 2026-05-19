@@ -8,8 +8,7 @@ const { ...compilerOptionsPaths } = compilerOptions.paths;
 
 const createJestConfig = nextJest({ dir: './' });
 
-const buildConfig = async (config: Config): Promise<Config> => {
-  return createJestConfig({
+const buildConfig = async (config: Config): Promise<Config> => createJestConfig({
     ...config,
     testPathIgnorePatterns: [
       ...(config.testPathIgnorePatterns || []),
@@ -17,7 +16,6 @@ const buildConfig = async (config: Config): Promise<Config> => {
       'node_modules',
     ],
   })();
-};
 
 export default async (): Promise<Config> => {
   const canonicalIntegrationTests = await buildConfig({

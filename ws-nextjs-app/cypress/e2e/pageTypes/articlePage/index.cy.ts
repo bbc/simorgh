@@ -431,32 +431,26 @@ const canonicalTestSuites = Cypress.env('SMOKE')
   ? smokeCanonicalTestSuites
   : nonSmokeCanonicalTestSuites;
 
-const ampTestSuites = canonicalTestSuites.map(testSuite => {
-  return {
+const ampTestSuites = canonicalTestSuites.map(testSuite => ({
     ...testSuite,
     path: `${testSuite.path}.amp`,
     tests: [...ampTests],
-  };
-});
+  }));
 
 const liteTestSuites = canonicalTestSuites
   .filter(({ service }) => service !== 'news')
-  .map(testSuite => {
-    return {
+  .map(testSuite => ({
       ...testSuite,
       path: `${testSuite.path}.lite`,
       tests: [liteArticleTests],
-    };
-  });
+    }));
 
-const atiAmpTestSuites = atiAnalyticsTestSuites.map(testSuite => {
-  return {
+const atiAmpTestSuites = atiAnalyticsTestSuites.map(testSuite => ({
     ...testSuite,
     path: getPathWithSuffix({ path: testSuite.path, suffix: '.amp' }),
     applicationType: 'amp',
     tests: [assertPageView],
-  };
-});
+  }));
 
 const atiLiteTestSuites = atiAnalyticsTestSuites
   .filter(({ path, service }) => path !== '/ws/languages' && service !== 'news')

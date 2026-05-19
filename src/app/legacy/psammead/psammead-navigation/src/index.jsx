@@ -232,8 +232,7 @@ const Navigation = ({
   isOpen = false,
   ampOpenClass = '',
   ...props
-}) => {
-  return (
+}) => (
     <StyledNav
       role="navigation"
       dir={dir}
@@ -244,6 +243,5 @@ const Navigation = ({
       <NavWrapper>{children}</NavWrapper>
     </StyledNav>
   );
-};
 
 export default Navigation;

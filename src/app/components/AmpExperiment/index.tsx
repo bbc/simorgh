@@ -62,8 +62,7 @@ const AmpScript = ({ config }: { config: AmpScriptProps }) => {
 const AmpExperiment = ({
   experimentConfig,
   analyticsConfig,
-}: AmpExperimentProps) => {
-  return (
+}: AmpExperimentProps) => (
     <>
       <AmpHead />
       <amp-experiment>
@@ -76,6 +75,5 @@ const AmpExperiment = ({
       )}
     </>
   );
-};
 
 export default AmpExperiment;

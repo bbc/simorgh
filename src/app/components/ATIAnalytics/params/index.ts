@@ -5,6 +5,4 @@ export default ({
   requestContext,
   serviceContext,
   atiData,
-}: ReverbDetailsProviders) => {
-  return buildPageReverbParams({ atiData, requestContext, serviceContext });
-};
+}: ReverbDetailsProviders) => buildPageReverbParams({ atiData, requestContext, serviceContext });

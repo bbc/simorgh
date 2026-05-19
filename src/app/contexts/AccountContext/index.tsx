@@ -45,19 +45,15 @@ export const AccountProvider = ({
     !isLite &&
     !isApp;
 
-  const buildAccountUrl = (url?: string) => {
-    return isIdctaAvailable && url
+  const buildAccountUrl = (url?: string) => isIdctaAvailable && url
       ? appendCtaQueryParams(url, {
           pageToReturnTo,
           lang: locale,
           userOrigin: getIdctaUserOrigin(atiAnalyticsProducerName),
         })
       : initialConfig?.unavailable_url;
-  };
 
-  const getSignedInCookie = (cookieName = 'ckns_id') => {
-    return onClient() ? Cookie.get(cookieName) : false;
-  };
+  const getSignedInCookie = (cookieName = 'ckns_id') => onClient() ? Cookie.get(cookieName) : false;
 
   const signInUrl = buildAccountUrl(initialConfig?.signin_url);
   const registerUrl = buildAccountUrl(initialConfig?.register_url);

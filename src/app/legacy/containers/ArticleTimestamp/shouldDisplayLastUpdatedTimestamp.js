@@ -1,8 +1,6 @@
 import { isLastRelative, isSameDay, isToday } from './helpers';
 
-export const hasBeenUpdated = ({ timeDifferenceMinutes, minutesTolerance }) => {
-  return timeDifferenceMinutes > minutesTolerance;
-};
+export const hasBeenUpdated = ({ timeDifferenceMinutes, minutesTolerance }) => timeDifferenceMinutes > minutesTolerance;
 
 export const publishedAndUpdatedToday = ({ firstPublished, lastPublished }) =>
   isToday(firstPublished) && isSameDay(firstPublished, lastPublished);

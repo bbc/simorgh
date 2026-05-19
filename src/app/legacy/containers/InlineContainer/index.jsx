@@ -5,12 +5,10 @@ import InlineSpan from '../../components/InlineSpan';
 
 const componentsToRender = { fragment, urlLink: InlineLink };
 
-const InlineContainer = ({ blocks, language }) => {
-  return (
+const InlineContainer = ({ blocks, language }) => (
     <InlineSpan lang={language}>
       <Blocks blocks={blocks} componentsToRender={componentsToRender} />
     </InlineSpan>
   );
-};
 
 export default InlineContainer;

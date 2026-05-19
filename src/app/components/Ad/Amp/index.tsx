@@ -56,8 +56,7 @@ const AdContent = ({
   slotType,
   pageType,
   service,
-}: AdContentProps) => {
-  return (
+}: AdContentProps) => (
     <>
       <a
         css={[styles.link, { textAlign: dir === 'ltr' ? 'right' : 'left' }]}
@@ -70,7 +69,6 @@ const AdContent = ({
       <AdSlot service={service} slotType={slotType} pageType={pageType} />
     </>
   );
-};
 
 const AdWithoutPlaceholder = ({
   dir,
@@ -79,8 +77,7 @@ const AdWithoutPlaceholder = ({
   pageType,
   service,
   ariaLabel,
-}: AdContentProps) => {
-  return (
+}: AdContentProps) => (
     <div
       css={styles.display}
       amp-access="toggles.ads.enabled"
@@ -113,7 +110,6 @@ const AdWithoutPlaceholder = ({
       </section>
     </div>
   );
-};
 
 const AdWithPlaceholder = ({
   dir,
@@ -122,8 +118,7 @@ const AdWithPlaceholder = ({
   slotType,
   pageType,
   service,
-}: AdContentProps) => {
-  return (
+}: AdContentProps) => (
     <section
       css={styles.section}
       aria-label={ariaLabel}
@@ -156,7 +151,6 @@ const AdWithPlaceholder = ({
       </div>
     </section>
   );
-};
 
 const AmpAd = ({ slotType }: AdProps) => {
   const { translations, dir, service, showAdPlaceholder } = use(ServiceContext);

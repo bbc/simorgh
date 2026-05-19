@@ -16,8 +16,7 @@ const constructDataFilePath = ({
   pageType,
   id,
   optionalParams,
-}: RequestPathParts) => {
-  return optionalParams && optionalParams.length > 0
+}: RequestPathParts) => optionalParams && optionalParams.length > 0
     ? path.join(
         process.cwd(),
         '..',
@@ -35,7 +34,6 @@ const constructDataFilePath = ({
         pageType as string,
         `${id}.json`,
       );
-};
 
 export default async function handler(
   req: NextApiRequest,

@@ -232,23 +232,19 @@ const canonicalTestSuites = Cypress.env('SMOKE')
   ? canonicalSmokeTestSuites
   : canonicalNonSmokeTestSuites;
 
-const ampTestSuites = [...canonicalTestSuites].map(testSuite => {
-  return {
+const ampTestSuites = [...canonicalTestSuites].map(testSuite => ({
     ...testSuite,
     path: `${testSuite.path}.amp`,
     tests: [...ampTests],
-  };
-});
+  }));
 
 const liteTestSuites = canonicalSmokeTestSuites
   .filter(({ service }) => service !== 'news' && service !== 'hausa')
-  .map(testSuite => {
-    return {
+  .map(testSuite => ({
       ...testSuite,
       path: `${testSuite.path}.lite`,
       tests: [liteArticleTests],
-    };
-  });
+    }));
 
 runTestsForPage({
   pageType: STORY_PAGE,

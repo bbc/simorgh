@@ -20,8 +20,7 @@ const PromotionalBanner = ({
   closeLabel,
   id = 'promotional-banner',
   children,
-}: PromotionalBannerProps) => {
-  return (
+}: PromotionalBannerProps) => (
     <aside css={styles.banner} role="complementary" aria-labelledby={id}>
       <VisuallyHiddenText as="strong" id={id}>
         {bannerLabel}
@@ -96,6 +95,5 @@ const PromotionalBanner = ({
       </div>
     </aside>
   );
-};
 
 export default PromotionalBanner;

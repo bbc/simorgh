@@ -35,16 +35,14 @@ const buildTeamObject = ({
   actions?: Team['actions'];
   alignment: 'home' | 'away';
   data: HeadToHeadV2Data;
-}): Team => {
-  return {
+}): Team => ({
     ...data[alignment],
     fullName: team,
     shortName: shortNamesMap(team),
     urn: `urn:bbc:sportsdata:football:team:${team.toLowerCase().split(' ').join('-')}`,
     actions,
     ...(score && { score, scoreUnconfirmed }),
-  };
-};
+  });
 
 export const HeadToHeadV2ConciseComponent = (args: StoryArgs) => {
   const {

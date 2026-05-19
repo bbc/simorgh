@@ -23,8 +23,6 @@ const Paragraph = styled.p`
   }
 `;
 
-const TopicDescription = ({ children }) => {
-  return <Paragraph>{children}</Paragraph>;
-};
+const TopicDescription = ({ children }) => <Paragraph>{children}</Paragraph>;
 
 export default TopicDescription;

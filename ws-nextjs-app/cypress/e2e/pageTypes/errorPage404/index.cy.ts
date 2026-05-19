@@ -41,12 +41,10 @@ const canonicalTestSuites = [
   },
 ];
 
-const ampTestSuites = [...canonicalTestSuites].map(testSuite => {
-  return {
+const ampTestSuites = [...canonicalTestSuites].map(testSuite => ({
     ...testSuite,
     path: `${testSuite.path}.amp`,
-  };
-});
+  }));
 
 runTestsForPage({
   failOnStatusCode: false,

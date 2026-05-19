@@ -344,13 +344,11 @@ const canonicalTestSuites = Cypress.env('SMOKE')
   ? canonicalSmokeTestSuites
   : canonicalNonSmokeTestSuites;
 
-const ampTestSuites = canonicalTestSuites.map(testSuite => {
-  return {
+const ampTestSuites = canonicalTestSuites.map(testSuite => ({
     ...testSuite,
     path: getPathWithSuffix({ path: testSuite.path, suffix: '.amp' }),
     tests: [...ampTests],
-  };
-});
+  }));
 
 // SKIPPED: We are not able to set page-type headers in cy.click and cy.back
 const liteTestSuites = Cypress.env('SMOKE')
@@ -358,13 +356,11 @@ const liteTestSuites = Cypress.env('SMOKE')
       .filter(
         ({ service }) => !['news', 'sport', 'newsround'].includes(service),
       )
-      .map(testSuite => {
-        return {
+      .map(testSuite => ({
           ...testSuite,
           path: `${testSuite.path}.lite`,
           tests: [liteTests],
-        };
-      })
+        }))
   : [];
 
 runTestsForPage({

@@ -68,8 +68,7 @@ const AllTheProviders: FC<Props> = ({
   isNextJs = false,
   isUK = null,
   idctaConfig = null,
-}: Props) => {
-  return (
+}: Props) => (
     <ToggleContextProvider toggles={toggles}>
       <ServiceContextProvider
         service={service}
@@ -106,7 +105,6 @@ const AllTheProviders: FC<Props> = ({
       </ServiceContextProvider>
     </ToggleContextProvider>
   );
-};
 
 const customRender = (
   ui: ReactElement,

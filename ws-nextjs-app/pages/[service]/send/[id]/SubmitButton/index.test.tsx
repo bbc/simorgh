@@ -7,9 +7,7 @@ import SubmitButton from '.';
 
 describe('SubmitButton', () => {
   it('should render a submit button with correct type', async () => {
-    const { container } = await act(() => {
-      return render(<SubmitButton />, { service: 'news' });
-    });
+    const { container } = await act(() => render(<SubmitButton />, { service: 'news' }));
 
     const button = container.querySelector('button[type=submit]');
 

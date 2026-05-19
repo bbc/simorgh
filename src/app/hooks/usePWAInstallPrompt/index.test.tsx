@@ -9,13 +9,11 @@ interface BeforeInstallPromptEvent extends Event {
   userChoice: Promise<{ outcome: 'accepted' | 'dismissed'; platform: string }>;
 }
 
-const mockEvent = (): BeforeInstallPromptEvent => {
-  return {
+const mockEvent = (): BeforeInstallPromptEvent => ({
     preventDefault: jest.fn(),
     prompt: jest.fn().mockResolvedValue(undefined),
     userChoice: Promise.resolve({ outcome: 'accepted', platform: 'web' }),
-  } as unknown as BeforeInstallPromptEvent;
-};
+  } as unknown as BeforeInstallPromptEvent);
 
 describe('usePWAInstallPrompt', () => {
   beforeEach(() => {

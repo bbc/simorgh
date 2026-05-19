@@ -9,8 +9,7 @@ interface Props {
 }
 
 const GenericMessage = forwardRef<HTMLElement, Props>(
-  ({ heading, children }, ref?) => {
-    return (
+  ({ heading, children }, ref?) => (
       <>
         <Heading
           level={1}
@@ -24,8 +23,7 @@ const GenericMessage = forwardRef<HTMLElement, Props>(
         </Heading>
         {children && <Paragraph>{children}</Paragraph>}
       </>
-    );
-  },
+    ),
 );
 
 export default GenericMessage;

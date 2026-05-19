@@ -11,12 +11,10 @@ const H1 = styled.h1`
   }
 `;
 
-const TopicTitle = ({ children }) => {
-  return (
+const TopicTitle = ({ children }) => (
     <H1 id="content" tabIndex="-1">
       {children}
     </H1>
   );
-};
 
 export default TopicTitle;

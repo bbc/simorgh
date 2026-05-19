@@ -17,8 +17,7 @@ const AmpImgPlaceholderContainer = ({
   fallback,
   placeholder,
   children,
-}) => {
-  return (
+}) => (
     <div
       css={({ palette }) => ({
         backgroundColor: `${darkPlaceholder ? palette.SHADOW : palette.LUNAR}`,
@@ -29,7 +28,6 @@ const AmpImgPlaceholderContainer = ({
       {children}
     </div>
   );
-};
 
 const AmpImgPlaceholder = props => (
   <amp-img
@@ -43,8 +41,7 @@ const AmpImgPlaceholder = props => (
   />
 );
 
-const AmpImgMediaQueries = ({ darkPlaceholder }) => {
-  return (
+const AmpImgMediaQueries = ({ darkPlaceholder }) => (
     <>
       <AmpImgPlaceholder
         media={`(max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX})`}
@@ -66,10 +63,8 @@ const AmpImgMediaQueries = ({ darkPlaceholder }) => {
       />
     </>
   );
-};
 
-const ImagePlaceholderAmp = ({ darkPlaceholder = false }) => {
-  return (
+const ImagePlaceholderAmp = ({ darkPlaceholder = false }) => (
     <>
       <AmpImgPlaceholderContainer
         darkPlaceholder={darkPlaceholder}
@@ -82,6 +77,5 @@ const ImagePlaceholderAmp = ({ darkPlaceholder = false }) => {
       </AmpImgPlaceholderContainer>
     </>
   );
-};
 
 export default ImagePlaceholderAmp;

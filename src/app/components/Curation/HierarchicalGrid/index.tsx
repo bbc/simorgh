@@ -16,8 +16,7 @@ import type { Summary } from '../../../models/types/curationData';
 import { RequestContext } from '../../../contexts/RequestContext';
 import LiveLabel from '../../LiveLabel';
 
-const getStyles = (promoCount: number, i: number, mq: Theme['mq']) => {
-  return css({
+const getStyles = (promoCount: number, i: number, mq: Theme['mq']) => css({
     [mq.GROUP_1_MAX_WIDTH]: {
       ...SMALL[promoCount - 1][i],
     },
@@ -31,7 +30,6 @@ const getStyles = (promoCount: number, i: number, mq: Theme['mq']) => {
       ...DESKTOP[promoCount - 1][i],
     },
   });
-};
 const HiearchicalGrid = ({
   summaries,
   headingLevel,

@@ -12,9 +12,7 @@ const retrieveDownloads = async (service: Services) => {
       const downloads = await response.json();
       return downloads;
     };
-    return retrieveDownloads().then(data => {
-      return data;
-    });
+    return retrieveDownloads().then(data => data);
   } catch (_e) {
     return false;
   }

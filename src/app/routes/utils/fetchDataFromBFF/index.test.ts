@@ -10,12 +10,10 @@ import * as fetchPageData from '#app/routes/utils/fetchPageData';
 import fetchDataFromBFF from '.';
 
 jest.mock('../fetchPageData', () =>
-  jest.fn().mockImplementation(() => {
-    return {
+  jest.fn().mockImplementation(() => ({
       json: { data: {} },
       status: 200,
-    };
-  }),
+    })),
 );
 
 const mockAgent = {

@@ -10,8 +10,7 @@ type Props = {
   };
 };
 
-const EmbedError = ({ message, link }: Props) => {
-  return (
+const EmbedError = ({ message, link }: Props) => (
     <div css={styles.embedDiv} data-e2e="embed-error">
       <Text as="strong" fontVariant="sansRegular" size="longPrimer">
         {message}
@@ -23,6 +22,5 @@ const EmbedError = ({ message, link }: Props) => {
       </div>
     </div>
   );
-};
 
 export default EmbedError;

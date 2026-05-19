@@ -22,8 +22,7 @@ export const BulletedListItem = ({
   children,
   className,
   key,
-}: PropsWithChildren<ListItemProps>) => {
-  return (
+}: PropsWithChildren<ListItemProps>) => (
     <li
       role="listitem"
       className={className}
@@ -33,7 +32,6 @@ export const BulletedListItem = ({
       {children}
     </li>
   );
-};
 
 export const BulletedList: FC<ListProps> = forwardRef(
   (

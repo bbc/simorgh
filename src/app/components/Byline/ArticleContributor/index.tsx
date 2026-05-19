@@ -7,20 +7,15 @@ import Image from '../../Image';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import { RightChevron, LeftChevron } from '../../icons';
 
-const Comma = () => {
-  return <span aria-hidden="true" css={BylineCss.comma} />;
-};
+const Comma = () => <span aria-hidden="true" css={BylineCss.comma} />;
 
-const And = ({ andTranslation }) => {
-  return (
+const And = ({ andTranslation }) => (
     <span aria-hidden="true">
       <Text css={BylineCss.and}>{` ${andTranslation} `}</Text>
     </span>
   );
-};
 
-const AuthorImage = ({ authorImage }) => {
-  return (
+const AuthorImage = ({ authorImage }) => (
     <Image
       css={BylineCss.imageSrc}
       src={authorImage}
@@ -29,7 +24,6 @@ const AuthorImage = ({ authorImage }) => {
       aspectRatio={[1, 1]}
     />
   );
-};
 
 const AuthorTopicUrl = ({
   author,
@@ -37,8 +31,7 @@ const AuthorTopicUrl = ({
   authorTopicUrl,
   isSingleContributor,
   isRtl,
-}) => {
-  return (
+}) => (
     <>
       <VisuallyHiddenText>{`${author}, `}</VisuallyHiddenText>
       <a
@@ -77,10 +70,8 @@ const AuthorTopicUrl = ({
       </a>
     </>
   );
-};
 
-const AuthorName = ({ author, authorName, isSingleContributor }) => {
-  return (
+const AuthorName = ({ author, authorName, isSingleContributor }) => (
     <span role="text">
       <VisuallyHiddenText>{`${author}, `}</VisuallyHiddenText>
       <Text
@@ -95,10 +86,8 @@ const AuthorName = ({ author, authorName, isSingleContributor }) => {
       </Text>
     </span>
   );
-};
 
-const AuthorRole = ({ jobRole, isSingleContributor, role }) => {
-  return (
+const AuthorRole = ({ jobRole, isSingleContributor, role }) => (
     <span role="text">
       <VisuallyHiddenText>{`${role}, `} </VisuallyHiddenText>
       <Text
@@ -109,10 +98,8 @@ const AuthorRole = ({ jobRole, isSingleContributor, role }) => {
       </Text>
     </span>
   );
-};
 
-const AuthorLocation = ({ location, reportingFrom, isSingleContributor }) => {
-  return (
+const AuthorLocation = ({ location, reportingFrom, isSingleContributor }) => (
     <span role="text">
       <VisuallyHiddenText>{`${reportingFrom}, `} </VisuallyHiddenText>
       <Text
@@ -123,7 +110,6 @@ const AuthorLocation = ({ location, reportingFrom, isSingleContributor }) => {
       </Text>
     </span>
   );
-};
 
 const ArticleContributors = ({ contributorValues, isSingleContributor }) => {
   const { translations, dir } = use(ServiceContext);
@@ -142,9 +128,7 @@ const ArticleContributors = ({ contributorValues, isSingleContributor }) => {
 
   const lastContributorIndex = contributorValues.length - 1;
 
-  const isLastContributorNameOnly = (index, jobRole, location) => {
-    return index === lastContributorIndex && !jobRole && !location;
-  };
+  const isLastContributorNameOnly = (index, jobRole, location) => index === lastContributorIndex && !jobRole && !location;
 
   return (
     <>

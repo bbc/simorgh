@@ -217,9 +217,7 @@ describe('Post', () => {
     });
 
     it('should render a twitter embed when provided', async () => {
-      const { container } = await act(async () => {
-        return render(<Post post={twitterSamplePost} />);
-      });
+      const { container } = await act(async () => render(<Post post={twitterSamplePost} />));
 
       expect(
         container.querySelector(
@@ -229,14 +227,12 @@ describe('Post', () => {
     });
 
     it('should render the new media player in a post containing video', async () => {
-      const { container } = await act(async () => {
-        return render(<Post post={videoSamplePost} />, {
+      const { container } = await act(async () => render(<Post post={videoSamplePost} />, {
           id: 'c7p765ynk9qt',
           service: 'pidgin',
           pageType: LIVE_PAGE,
           pathname: '/pidgin/live/c7p765ynk9qt',
-        });
-      });
+        }));
 
       expect(
         container.querySelector('[data-e2e="media-player"]'),
@@ -244,14 +240,12 @@ describe('Post', () => {
     });
 
     it('should render the new media player in a post containing audio', async () => {
-      const { container } = await act(async () => {
-        return render(<Post post={audioSamplePost} />, {
+      const { container } = await act(async () => render(<Post post={audioSamplePost} />, {
           id: 'c7p765ynk9qt',
           service: 'pidgin',
           pageType: LIVE_PAGE,
           pathname: '/pidgin/live/c7p765ynk9qt',
-        });
-      });
+        }));
 
       expect(
         container.querySelector('[data-e2e="media-loader__container"]'),

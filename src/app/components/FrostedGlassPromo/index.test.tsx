@@ -35,8 +35,7 @@ const Component = ({
   service = 'mundo',
   variant,
   ...rest
-}: PropsWithChildren<Props>) => {
-  return (
+}: PropsWithChildren<Props>) => (
     <ServiceContextProvider service={service} variant={variant}>
       <RequestContextProvider
         isAmp={false}
@@ -55,7 +54,6 @@ const Component = ({
       </RequestContextProvider>
     </ServiceContextProvider>
   );
-};
 
 describe('Frosted Glass Promo', () => {
   it('when given props directly', () => {

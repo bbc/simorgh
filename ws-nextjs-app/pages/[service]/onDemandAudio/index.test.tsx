@@ -39,13 +39,11 @@ const mockToggles = {
 
 jest.mock('../../../utilities/pageRequests/getPageData');
 
-jest.mock('react-helmet', () => {
-  return {
+jest.mock('react-helmet', () => ({
     Helmet: ({ children }: { children: React.ReactNode }) => (
       <div>{children}</div>
     ),
-  };
-});
+  }));
 
 interface PageProps {
   pageData: OnDemandAudioProps['pageData'];

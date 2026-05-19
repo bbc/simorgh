@@ -115,8 +115,7 @@ const LocalisedBrandName = ({
   );
 };
 
-const StyledBrand = ({ linkId, product, serviceLocalisedName = null, svg }) => {
-  return svg ? (
+const StyledBrand = ({ linkId, product, serviceLocalisedName = null, svg }) => svg ? (
     <>
       <BrandSvg
         id={linkId !== 'footer' ? 'brandSvgHeader' : 'brandSvgFooter'}
@@ -140,7 +139,6 @@ const StyledBrand = ({ linkId, product, serviceLocalisedName = null, svg }) => {
       />
     </>
   ) : null;
-};
 
 const Brand = forwardRef((props, ref) => {
   const {

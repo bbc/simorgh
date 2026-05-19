@@ -198,8 +198,7 @@ const getTwoColumnCss = ({
   numberOfItems,
   service,
   size,
-}: MultiColumnProps) => {
-  return [
+}: MultiColumnProps) => [
     getOneColumnCss({ numberOfItems, service, size }),
     css({
       [GROUP_3_MIN_WIDTH]: {
@@ -224,15 +223,13 @@ const getTwoColumnCss = ({
       },
     }),
   ];
-};
 
 const getMultiColumnCss = ({
   listIndex,
   numberOfItems,
   service,
   size,
-}: MultiColumnProps) => {
-  return [
+}: MultiColumnProps) => [
     getTwoColumnCss({
       listIndex,
       numberOfItems,
@@ -247,7 +244,6 @@ const getMultiColumnCss = ({
       },
     }),
   ];
-};
 
 export default styles;
 export { getOneColumnCss, getTwoColumnCss, getMultiColumnCss };

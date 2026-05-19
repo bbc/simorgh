@@ -86,12 +86,10 @@ export default ({ service, pageType, variant }: ServiceParametersType) => {
               pageData,
             ) as OptimoBlock[];
 
-            const twitterEmbedBlocks = blocks.filter(block => {
-              return (
+            const twitterEmbedBlocks = blocks.filter(block => (
                 block.type === 'social_embed' &&
                 path(['model', 'blocks', 0, 'type'], block) === 'twitter'
-              );
-            });
+              ));
 
             if (twitterEmbedBlocks.length > 1) {
               const firstTwitterEmbedUrl = path(
@@ -138,12 +136,10 @@ export default ({ service, pageType, variant }: ServiceParametersType) => {
               pageData,
             ) as OptimoBlock[];
 
-            const instagramEmbedBlocks = blocks.filter(block => {
-              return (
+            const instagramEmbedBlocks = blocks.filter(block => (
                 block.type === 'social_embed' &&
                 path(['model', 'blocks', 0, 'type'], block) === 'instagram'
-              );
-            });
+              ));
 
             if (instagramEmbedBlocks.length > 1) {
               const firstInstagramEmbedUrl = path(

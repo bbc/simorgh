@@ -12,8 +12,7 @@ window.require = jest.fn();
 
 describe('AV Embeds Page', () => {
   it('should render the AV Embeds page', async () => {
-    const { getByTestId } = await act(async () => {
-      return render(
+    const { getByTestId } = await act(async () => render(
         <AvEmbedsPage
           pageData={{
             mediaBlock: serbianCyrCps.data.avEmbed.content.model
@@ -24,15 +23,13 @@ describe('AV Embeds Page', () => {
             },
           }}
         />,
-      );
-    });
+      ));
 
     expect(getByTestId('avembeds-mediaplayer')).toBeInTheDocument();
   });
 
   it('should render meta tags on AV Embeds page', async () => {
-    await act(async () => {
-      return render(
+    await act(async () => render(
         <AvEmbedsPage
           pageData={{
             mediaBlock: serbianCyrCps.data.avEmbed.content.model
@@ -48,8 +45,7 @@ describe('AV Embeds Page', () => {
           service: 'serbian',
           variant: 'cyr',
         },
-      );
-    });
+      ));
 
     const helmetMetaTags = Helmet.peek()?.metaTags;
 

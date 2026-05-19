@@ -16,11 +16,9 @@ import type {
 import type { Direction } from '../../../../models/types/global';
 import Grid from '../../../../legacy/components/Grid';
 
-export const getParentColumns = (columnLayout: ColumnLayout) => {
-  return columnLayout !== 'oneColumn'
+export const getParentColumns = (columnLayout: ColumnLayout) => columnLayout !== 'oneColumn'
     ? mostReadListGridProps(columnLayout).columns
     : null;
-};
 
 const getItemCss = ({ dir, size }: { dir: Direction; size: Size }) => {
   const itemCss: Array<(_theme: Theme) => SerializedStyles> = [];

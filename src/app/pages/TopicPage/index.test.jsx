@@ -431,13 +431,11 @@ describe('Topic Page', () => {
     it('should correctly render linked data', () => {
       render(<TopicPage pageData={pidginMultipleItems} />, getOptionParams());
 
-      const getLinkedDataOutput = () => {
-        return JSON.parse(
+      const getLinkedDataOutput = () => JSON.parse(
           Helmet.peek().scriptTags.find(
             ({ type }) => type === 'application/ld+json',
           ).innerHTML,
         );
-      };
 
       expect(getLinkedDataOutput()).toMatchSnapshot();
     });

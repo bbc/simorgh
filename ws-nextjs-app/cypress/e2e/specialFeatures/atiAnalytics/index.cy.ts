@@ -100,14 +100,12 @@ const supportsAmp = ({ contentType }: { contentType: string }) =>
     'static',
   ].includes(contentType);
 
-const ampTestSuites = canonicalTestSuites.filter(supportsAmp).map(testSuite => {
-  return {
+const ampTestSuites = canonicalTestSuites.filter(supportsAmp).map(testSuite => ({
     ...testSuite,
     path: getPathWithSuffix({ path: testSuite.path, suffix: '.amp' }),
     applicationType: 'amp',
     tests: [assertPageView],
-  };
-});
+  }));
 
 const liteTestSuites = canonicalTestSuites
   .filter(({ path }) => path !== '/ws/languages')

@@ -12,8 +12,7 @@ type Props = {
 const trackingScripts = ({
   enableStaticClickTrackingOnOperaMiniOnly,
   trackComponentViews,
-}: Props) => {
-  return `
+}: Props) => `
     window.addEventListener('load', function () {
       var isComponentTrackingEnabled = true;
       var isStaticClickTrackingOnOperaMiniOnlyEnabled = ${enableStaticClickTrackingOnOperaMiniOnly};
@@ -34,7 +33,6 @@ const trackingScripts = ({
       }
     });
   `;
-};
 
 /**
  * Component for injecting component tracking scripts into the page.

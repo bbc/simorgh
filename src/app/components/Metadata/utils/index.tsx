@@ -46,19 +46,15 @@ export const getIconLinks = (service: Services, iconSizes: IconSizes) => {
     return null;
   }
   const iconTypes = Object.keys(iconSizes);
-  return iconTypes.map(iconType => {
-    return createIconLinks(service, iconSizes, iconType);
-  });
+  return iconTypes.map(iconType => createIconLinks(service, iconSizes, iconType));
 };
 
-export const getAppleTouchUrl = (service: Services) => {
-  return [
+export const getAppleTouchUrl = (service: Services) => [
     getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
     getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_PATH,
     service,
     '/images/icons/icon-192x192.png',
   ].join('');
-};
 
 export const renderAlternateLinks = (link: AlternateLink) => (
   <link

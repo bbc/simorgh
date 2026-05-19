@@ -1,3 +1,4 @@
+// biome-ignore-all lint/style/useConsistentArrowReturn: we want this
 import { use, type MouseEvent } from 'react';
 import pathOr from 'ramda/src/pathOr';
 

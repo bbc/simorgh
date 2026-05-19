@@ -17,8 +17,7 @@ const LiveLabelHeader = ({
   className,
   isHeaderImage,
   showSportData,
-}: PropsWithChildren<LiveLabelPromoProps>) => {
-  return (
+}: PropsWithChildren<LiveLabelPromoProps>) => (
     <div
       data-testid="live-label"
       css={showSportData && styles.liveLabelContainer}
@@ -43,6 +42,5 @@ const LiveLabelHeader = ({
       </LiveText>
     </div>
   );
-};
 
 export default LiveLabelHeader;

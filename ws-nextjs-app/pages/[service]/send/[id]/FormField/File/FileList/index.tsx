@@ -69,8 +69,7 @@ export default ({
 
   useEffect(() => {
     Promise.all(
-      files.map(async fileData => {
-        return new Promise(resolve => {
+      files.map(async fileData => new Promise(resolve => {
           const { file } = fileData;
           const fileType = file.type.substring(0, file.type.indexOf('/'));
 
@@ -93,8 +92,7 @@ export default ({
               resolve(DOCUMENT_SVG_DATA_URI);
               break;
           }
-        });
-      }),
+        })),
     ).then(result => setThumbnailState(result as SetStateAction<string[]>));
   }, [files]);
 

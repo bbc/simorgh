@@ -4,8 +4,7 @@ import serbianCyrCps from '#data/serbian/av-embeds/cyr/srbija-68707945.json';
 import { AV_EMBEDS } from '#app/routes/utils/pageTypes';
 import AvEmbedsPage from './AvEmbedsPageLayout';
 
-const Component = () => {
-  return (
+const Component = () => (
     <RequestContextProvider
       pathname="/pathname"
       pageType="avEmbeds"
@@ -33,7 +32,6 @@ const Component = () => {
       />
     </RequestContextProvider>
   );
-};
 
 export default {
   title: 'Pages/AvEmbeds Page',

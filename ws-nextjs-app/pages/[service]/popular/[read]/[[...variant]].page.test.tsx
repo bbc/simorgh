@@ -41,8 +41,7 @@ describe('handleMostReadRoute', () => {
     expect(result.props.pageType).toEqual(MOST_READ_PAGE);
   });
 
-  it('returns correct metadata.atiAnalytics', () => {
-    return handleMostReadRoute(mockGetServerSidePropsContext).then(result => {
+  it('returns correct metadata.atiAnalytics', () => handleMostReadRoute(mockGetServerSidePropsContext).then(result => {
       expect(result.props.pageData.metadata.atiAnalytics).toEqual({
         contentType: 'list-datadriven',
         pageIdentifier: 'pidgin.popular.read.page',
@@ -54,8 +53,7 @@ describe('handleMostReadRoute', () => {
             ?.lastRecordTimeStamp,
         pageTitle: pidginMostReadTopicFixture?.data?.title || null,
       });
-    });
-  });
+    }));
 
   it('returns error props if data fetch returns 500', async () => {
     jest.spyOn(getPageDataModule, 'default').mockResolvedValue({

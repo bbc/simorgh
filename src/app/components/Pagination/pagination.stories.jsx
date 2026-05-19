@@ -1,8 +1,6 @@
 import Pager from '.';
 
-const Component = ({ activePage, pageCount }) => {
-  return <Pager activePage={activePage} pageCount={pageCount} />;
-};
+const Component = ({ activePage, pageCount }) => <Pager activePage={activePage} pageCount={pageCount} />;
 
 export default {
   title: 'Components/Pagination',

@@ -53,13 +53,11 @@ const testSuites = [
   },
 ];
 
-const liteTestSuites = testSuites.map(testSuite => {
-  return {
+const liteTestSuites = testSuites.map(testSuite => ({
     ...testSuite,
     path: `${testSuite.path}.lite`,
     tests: [crossPlatformTests],
-  };
-});
+  }));
 
 const atiAnalyticsTestSuites = [
   {

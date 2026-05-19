@@ -178,8 +178,7 @@ const mockPageDataWithMetadata = ({
   seoDescription?: string;
   datePublished?: string;
   dateModified?: string;
-}) => {
-  return {
+}) => ({
     ...mockPageData,
     title,
     description,
@@ -191,8 +190,7 @@ const mockPageDataWithMetadata = ({
       datePublished,
       dateModified,
     },
-  };
-};
+  });
 
 const mockPollingUpdate = (pageData: ComponentProps['pageData']) => {
   const streamData = pageData.liveTextStream.content
@@ -201,9 +199,7 @@ const mockPollingUpdate = (pageData: ComponentProps['pageData']) => {
   jest.spyOn(useLivePagePolling, 'default').mockReturnValue({
     currentStreamData: streamData,
     hasPendingUpdate: false,
-    applyPendingUpdate: () => {
-      return null;
-    },
+    applyPendingUpdate: () => null,
   });
 };
 
@@ -511,18 +507,14 @@ describe('Live Page', () => {
 
   it('should render the key points section', async () => {
     mockPollingUpdate(mockPageData);
-    const { container } = await act(async () => {
-      return render(<Live pageData={mockPageData} />);
-    });
+    const { container } = await act(async () => render(<Live pageData={mockPageData} />));
 
     expect(container.querySelector('[data-e2e="key-points"]')).toBeTruthy();
   });
 
   it('should not render the key points section when no content is provided', async () => {
     mockPollingUpdate(mockPageDataWithoutKeyPoints);
-    const { container } = await act(async () => {
-      return render(<Live pageData={mockPageDataWithoutKeyPoints} />);
-    });
+    const { container } = await act(async () => render(<Live pageData={mockPageDataWithoutKeyPoints} />));
 
     expect(container.querySelector('[data-e2e="key-points"]')).toBeFalsy();
   });
@@ -711,9 +703,7 @@ describe('Live Page', () => {
       };
       mockPollingUpdate(pageDataWithSportData);
 
-      const { container } = await act(async () => {
-        return render(<Live pageData={pageDataWithSportData} />);
-      });
+      const { container } = await act(async () => render(<Live pageData={pageDataWithSportData} />));
 
       const title = container.querySelector('h1');
       expect(title).toBeInTheDocument();

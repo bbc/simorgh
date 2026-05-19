@@ -11,12 +11,10 @@ jest.mock('next/router', () => ({
   useRouter: () => ({ query: { id: 'u1234' } }),
 }));
 
-jest.mock('#hooks/useAdroidDetection', () => {
-  return {
+jest.mock('#hooks/useAdroidDetection', () => ({
     __esModule: true,
     default: jest.fn().mockReturnValue(false),
-  };
-});
+  }));
 
 jest.mock('../FormContext', () => {
   const originalModule = jest.requireActual('../FormContext');
@@ -60,9 +58,7 @@ describe('ErrorSummaryBox', () => {
           },
         ],
       }));
-    const { container } = await act(() => {
-      return render(<ErrorSummaryBox labelMap={labelMap} />);
-    });
+    const { container } = await act(() => render(<ErrorSummaryBox labelMap={labelMap} />));
 
     const unorderedList = container.querySelector('ul');
     const listItem = container.querySelectorAll('li'); // fix for multiples
@@ -83,9 +79,7 @@ describe('ErrorSummaryBox', () => {
           },
         ],
       }));
-    const { container } = await act(() => {
-      return render(<ErrorSummaryBox labelMap={labelMap} />);
-    });
+    const { container } = await act(() => render(<ErrorSummaryBox labelMap={labelMap} />));
 
     const unorderedList = container.querySelector('ul[role=list]');
     const name = container.querySelector('span>a[href="#txt49018765"'); // add check for nombre
@@ -106,9 +100,7 @@ describe('ErrorSummaryBox', () => {
           },
         ],
       }));
-    const { container } = await act(() => {
-      return render(<ErrorSummaryBox labelMap={labelMap} />);
-    });
+    const { container } = await act(() => render(<ErrorSummaryBox labelMap={labelMap} />));
 
     const inputWithError = container.querySelector('a[href="#txt49018765"]');
     expect(inputWithError).toBeInTheDocument();
@@ -128,9 +120,7 @@ describe('ErrorSummaryBox', () => {
           },
         ],
       }));
-    const { container } = await act(() => {
-      return render(<ErrorSummaryBox labelMap={labelMap} />);
-    });
+    const { container } = await act(() => render(<ErrorSummaryBox labelMap={labelMap} />));
 
     const inputWithError = container.querySelectorAll('span')[1];
     expect(inputWithError).toBeInTheDocument();
@@ -149,9 +139,7 @@ describe('ErrorSummaryBox', () => {
           },
         ],
       }));
-    const { container } = await act(() => {
-      return render(<ErrorSummaryBox labelMap={labelMap} />);
-    });
+    const { container } = await act(() => render(<ErrorSummaryBox labelMap={labelMap} />));
 
     const inputWithError = container.querySelector(
       'a[href="#label-upl130087996"]',

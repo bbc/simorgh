@@ -68,9 +68,7 @@ const reverbPageViews = async ({
   reverbInstance,
 }: {
   reverbInstance: ReverbClient;
-}) => {
-  return reverbInstance.viewEvent();
-};
+}) => reverbInstance.viewEvent();
 
 type ReverbComponentTrackingProps = {
   reverbInstance: ReverbClient;

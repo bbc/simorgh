@@ -70,9 +70,7 @@ const PageLayoutWrapper = ({
       ?.reduce((reducer, block) => {
         const innerBlocks = block?.model?.blocks
           ?.filter(innerBlock => innerBlock.type === 'paragraph')
-          .reduce((innerReducer, p) => {
-            return `${innerReducer} ${p.model?.text}`;
-          }, '');
+          .reduce((innerReducer, p) => `${innerReducer} ${p.model?.text}`, '');
 
         if (!innerBlocks) return reducer;
         return reducer + innerBlocks.split(' ').length;

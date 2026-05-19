@@ -1,8 +1,7 @@
 import type { Services } from '../../../../models/types/global';
 import { serviceNumerals } from '../../Canonical/Rank';
 
-export const transformData = () => {
-  return `
+export const transformData = () => `
     if (data.items.length === 0) {
       throw new Error('Empty records from mostread endpoint');
     }
@@ -11,7 +10,6 @@ export const transformData = () => {
       item.rankTranslation = translations[index + 1];
     });
   `;
-};
 
 export default ({
   endpoint,
@@ -19,8 +17,7 @@ export default ({
 }: {
   endpoint: string;
   service: Services;
-}) => {
-  return `
+}) => `
   const translations = ${JSON.stringify(serviceNumerals(service))}
 
   const getRemoteData = async () => {
@@ -44,4 +41,3 @@ export default ({
 
   exportFunction('getRemoteData', getRemoteData);
   `;
-};

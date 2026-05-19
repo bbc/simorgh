@@ -58,8 +58,7 @@ optimizely?.notificationCenter?.addNotificationListener(
   },
 );
 
-const withOptimizelyProvider = <T,>(Component: ComponentType<T>) => {
-  return props => {
+const withOptimizelyProvider = <T,>(Component: ComponentType<T>) => props => {
     if (disableOptimizely) return <Component {...props} />;
 
     const { service } = use(ServiceContext);
@@ -85,6 +84,5 @@ const withOptimizelyProvider = <T,>(Component: ComponentType<T>) => {
       </OptimizelyProvider>
     );
   };
-};
 
 export default withOptimizelyProvider;

@@ -15,8 +15,7 @@ export const baseCurations = [
   },
 ];
 
-export const curationsWithSummaries = baseCurations.map((curation, index) => {
-  return {
+export const curationsWithSummaries = baseCurations.map((curation, index) => ({
     ...curation,
     summaries: [
       {
@@ -25,5 +24,4 @@ export const curationsWithSummaries = baseCurations.map((curation, index) => {
         link: `https://www.bbc.com/mundo/${index}`,
       },
     ],
-  };
-});
+  }));

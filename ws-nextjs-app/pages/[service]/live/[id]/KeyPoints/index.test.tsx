@@ -12,9 +12,7 @@ const emptyKeyPointsBlocks = emptyKeyPoints.model.blocks;
 
 describe('Key Points', () => {
   it('should render a section with data-e2e, role and aria-label attributes', async () => {
-    const { container } = await act(async () => {
-      return render(<KeyPoints keyPointsContent={singleKeyPointBlocks} />);
-    });
+    const { container } = await act(async () => render(<KeyPoints keyPointsContent={singleKeyPointBlocks} />));
 
     expect(container.querySelector('section')).toHaveAttribute('aria-label');
     expect(container.querySelector('section')).toHaveAttribute(
@@ -60,9 +58,7 @@ describe('Key Points', () => {
   });
 
   it('should not render if there are no key points', async () => {
-    const { container } = await act(async () => {
-      return render(<KeyPoints keyPointsContent={emptyKeyPointsBlocks} />);
-    });
+    const { container } = await act(async () => render(<KeyPoints keyPointsContent={emptyKeyPointsBlocks} />));
 
     expect(container.querySelector('[data-e2e="key-points"]')).toBeFalsy();
   });

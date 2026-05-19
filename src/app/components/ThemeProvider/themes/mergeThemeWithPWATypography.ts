@@ -6,12 +6,10 @@ export default ({
 }: {
   baseTheme: ServiceTheme;
   pwaTheme: Partial<ServiceTheme>;
-}) => {
-  return {
+}) => ({
     ...baseTheme,
     typography: {
       ...baseTheme.typography,
       ...pwaTheme.typography,
     },
-  };
-};
+  });

@@ -40,8 +40,7 @@ const SkipLinkWrapper = ({
   text,
   endTextVisuallyHidden,
   terms,
-}) => {
-  return (
+}) => (
     <Wrapper>
       <SkipLink href={`#${endTextId}`}>{detokenise(text, terms)}</SkipLink>
       {children}
@@ -50,6 +49,5 @@ const SkipLinkWrapper = ({
       </EndText>
     </Wrapper>
   );
-};
 
 export default SkipLinkWrapper;

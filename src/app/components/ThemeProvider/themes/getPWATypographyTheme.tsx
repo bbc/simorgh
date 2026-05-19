@@ -8,8 +8,7 @@ import {
   REITH_SERIF_LIGHT,
 } from '../fontFaces';
 
-export default (script: TypographyScript = latinScript) => {
-  return {
+export default (script: TypographyScript = latinScript) => ({
     typography: {
       script,
       fontFaces: [
@@ -20,5 +19,4 @@ export default (script: TypographyScript = latinScript) => {
       ],
       fontVariants: reithVariants,
     },
-  };
-};
+  });

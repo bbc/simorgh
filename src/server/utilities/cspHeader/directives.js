@@ -53,9 +53,7 @@ const advertisingDirectives = {
   ],
 };
 
-export const advertisingCountryScripts = country => {
-  return advertisingServiceCountryDomains(country).map(data => data?.domain);
-};
+export const advertisingCountryScripts = country => advertisingServiceCountryDomains(country).map(data => data?.domain);
 
 const directives = {
   frameSrc: {
@@ -415,8 +413,7 @@ export const cspDirectives = ({
   nonce = null,
   shouldServeRelaxedCsp = false,
   country = '',
-}) => {
-  return {
+}) => ({
     directives: {
       'default-src': generateDefaultSrc(shouldServeRelaxedCsp),
       'child-src': generateChildSrc({ isAmp, shouldServeRelaxedCsp }),
@@ -437,5 +434,4 @@ export const cspDirectives = ({
       'report-to': 'worldsvc',
       'upgrade-insecure-requests': [],
     },
-  };
-};
+  });
