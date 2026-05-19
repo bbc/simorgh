@@ -1,6 +1,5 @@
 // biome-ignore-all lint/suspicious/noExplicitAny: we want this
 /* eslint-disable import/no-unresolved */
-/* eslint-disable react-hooks/rules-of-hooks */
 import { use, useEffect, useState, useRef, useCallback } from 'react';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { OptimizelyContext } from '@optimizely/react-sdk';

@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import setCookieOven from './setCookieOven';
 
 describe('setCookieOven', () => {

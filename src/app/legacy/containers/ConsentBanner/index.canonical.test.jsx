@@ -1,4 +1,3 @@
-/* eslint-disable global-require */
 import Cookies from 'js-cookie';
 
 import { RequestContextProvider } from '#contexts/RequestContext';

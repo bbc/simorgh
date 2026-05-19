@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import { use, useCallback, useState } from 'react';
 import { OptimizelyContext } from '@optimizely/react-sdk';
 import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';

@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/alt-text */
 import { use, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { UserContext } from '#contexts/UserContext';

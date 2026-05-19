@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/aria-role */
 import { use } from 'react';
 import { useTheme } from '@emotion/react';
 import styled from '@emotion/styled';
