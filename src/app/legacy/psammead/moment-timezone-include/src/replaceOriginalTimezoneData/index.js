@@ -1,3 +1,4 @@
+// biome-ignore-all lint/style/noCommonJs: we want this
 const rawTimezones = require('moment-timezone/data/packed/latest.json');
 const writeToNestedFile = require('../writeToNestedFile');
 

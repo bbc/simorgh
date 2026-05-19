@@ -1,3 +1,4 @@
+// biome-ignore-all lint/style/noCommonJs: we want this
 // biome-ignore-all lint/nursery/useThisInClassMethods: we want this
 import request from 'supertest';
 import * as reactDomServer from 'react-dom/server';

@@ -1,4 +1,4 @@
-/* eslint-disable global-require */
+// biome-ignore-all lint/style/noCommonJs: we want this
 const fs = require('fs');
 
 jest.mock('fs');

@@ -1,3 +1,4 @@
+// biome-ignore-all lint/style/noCommonJs: we want this
 /* eslint-disable no-param-reassign */
 import { defineConfig } from 'cypress';
 import MomentTimezoneInclude from '../src/app/legacy/psammead/moment-timezone-include/src';
@@ -71,7 +72,6 @@ export default defineConfig({
       const logPrinterOptions = {
         defaultTrimLength: 2000,
       };
-      // eslint-disable-next-line global-require, @typescript-eslint/no-var-requires
       require('cypress-terminal-report/src/installLogsPrinter')(
         on,
         logPrinterOptions,

@@ -3,7 +3,7 @@ import type { Platforms, Services } from '#app/models/types/global';
 import dispatchTrackingRequests from '.';
 
 const sendEventBeaconSpy = jest.spyOn(
-  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  // biome-ignore lint/style/noCommonJs: we want this
   require('../../../components/ATIAnalytics/beacon'),
   'sendEventBeacon',
 );

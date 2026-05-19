@@ -17,7 +17,7 @@ describe('generateTimeFormats', () => {
     let hasError = false;
     jest.isolateModules(() => {
       try {
-        // eslint-disable-next-line global-require
+        // biome-ignore lint/style/noCommonJs: we want this
         require('./generateTimeFormats');
       } catch (_e) {
         hasError = true;
@@ -34,7 +34,7 @@ describe('generateTimeFormats', () => {
     let hasError = false;
     jest.isolateModules(() => {
       try {
-        // eslint-disable-next-line global-require
+        // biome-ignore lint/style/noCommonJs: we want this
         require('./generateTimeFormats');
       } catch (_e) {
         hasError = true;

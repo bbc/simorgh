@@ -1,4 +1,4 @@
-/* eslint-disable import/no-dynamic-require, global-require */
+// biome-ignore-all lint/style/noCommonJs: we want this
 const { merge } = require('webpack-merge');
 const fs = require('fs');
 const path = require('path');

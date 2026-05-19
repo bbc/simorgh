@@ -1,3 +1,4 @@
+// biome-ignore-all lint/style/noCommonJs: we want this
 const express = require('express');
 const request = require('supertest');
 const path = require('path');

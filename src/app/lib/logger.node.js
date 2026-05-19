@@ -1,3 +1,4 @@
+// biome-ignore-all lint/style/noCommonJs: we want this
 // Node.js logger utility using winston
 const fs = require('fs');
 const path = require('path');

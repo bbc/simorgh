@@ -1,6 +1,6 @@
+// biome-ignore-all lint/style/noCommonJs: we want this
 // biome-ignore-all lint/nursery/useThisInClassMethods: we want this
 /* eslint-disable import/no-relative-packages */
-/* eslint-disable no-console */
 import express from 'express';
 import compression from 'compression';
 import ramdaPath from 'ramda/src/path';

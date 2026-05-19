@@ -145,7 +145,7 @@
 				"noGlobalEval": "error"
 			},
 			"style": {
-				"noCommonJs": "off",
+				"noCommonJs": "error",
 				"noDefaultExport": "off",
 				"noJsxLiterals": "off",
 				"noNegationElse": "off",

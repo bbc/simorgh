@@ -1,3 +1,4 @@
+// biome-ignore-all lint/style/noCommonJs: we want this
 /* eslint-disable no-param-reassign */
 const MomentTimezoneInclude = require('../src/app/legacy/psammead/moment-timezone-include/src');
 

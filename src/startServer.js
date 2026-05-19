@@ -1,3 +1,4 @@
+// biome-ignore-all lint/style/noCommonJs: we want this
 import cluster from 'cluster';
 import os from 'os';
 

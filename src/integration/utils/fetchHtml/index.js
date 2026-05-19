@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import { Window } from 'happy-dom';
 import { operation } from 'retry';
 import { setDefaultResultOrder } from 'node:dns';

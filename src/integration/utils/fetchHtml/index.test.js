@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import fetchHtml from '.';
 
 const showWarningsInConsole = false; // set to true if you want to see the retry messages in the console when running tests

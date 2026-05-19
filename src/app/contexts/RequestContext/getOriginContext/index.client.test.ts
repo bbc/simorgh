@@ -29,7 +29,7 @@ describe('getOriginContext', () => {
         // @ts-expect-error location can be undefined
         .mockImplementation(() => location);
 
-      // eslint-disable-next-line @typescript-eslint/no-var-requires
+      // biome-ignore lint/style/noCommonJs: we want this
       const getOriginContext = require('./index').default; // eslint-disable-line global-require
 
       expect(getOriginContext(bbcOrigin)).toEqual(expected);
@@ -38,7 +38,7 @@ describe('getOriginContext', () => {
 });
 
 describe('getOriginContext - localhost', () => {
-  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  // biome-ignore lint/style/noCommonJs: we want this
   const getOriginContext = require('./index').default; // eslint-disable-line global-require
 
   beforeEach(() => {

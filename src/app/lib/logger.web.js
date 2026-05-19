@@ -1,4 +1,4 @@
-/* eslint-disable no-console */
+// biome-ignore-all lint/style/noCommonJs: we want this
 
 class Logger {
   constructor() {

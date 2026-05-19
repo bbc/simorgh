@@ -1,3 +1,4 @@
+// biome-ignore-all lint/style/noCommonJs: we want this
 const loggerWeb = require('./logger.web');
 
 const message = 'test message';

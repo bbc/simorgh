@@ -1,3 +1,4 @@
+// biome-ignore-all lint/style/noCommonJs: we want this
 import writeNewTimezoneData from '../writeNewTimezoneData';
 
 jest.mock('../writeNewTimezoneData', () => jest.fn());

@@ -1,3 +1,4 @@
+// biome-ignore-all lint/style/noCommonJs: we want this
 /**
  * When adding or updating values, please ensure that the relevant dashboards (e.g. Sumologic) are updated accordingly.
  */

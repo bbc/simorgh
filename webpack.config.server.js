@@ -1,4 +1,4 @@
-/* eslint-disable global-require */
+// biome-ignore-all lint/style/noCommonJs: we want this
 const nodeExternals = require('webpack-node-externals');
 const webpack = require('webpack');
 

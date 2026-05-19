@@ -1,3 +1,4 @@
+// biome-ignore-all lint/style/noCommonJs: we want this
 import { render } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';

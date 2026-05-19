@@ -1,4 +1,4 @@
-/* eslint-disable global-require, no-console */
+// biome-ignore-all lint/style/noCommonJs: we want this
 /*
   A high level overview of our client-side JavaScript bundling strategy can be found here:
   https://github.com/bbc/simorgh/blob/latest/docs/JavaScript-Bundling-Strategy.md
