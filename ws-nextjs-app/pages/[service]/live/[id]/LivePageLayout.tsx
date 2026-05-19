@@ -15,7 +15,6 @@ import { HeadToHeadV2Data } from '#app/components-webcore/SportDataHeader/head-t
 import { PortraitVideoItems } from '#app/models/types/optimo';
 import useLivePagePolling from '#app/hooks/useLivePagePolling';
 import useToggle from '#app/hooks/useToggle';
-import isLiveEnv from '#app/lib/utilities/isLive';
 import {
   getImageFromPost,
   getHeadlineFromPost,
