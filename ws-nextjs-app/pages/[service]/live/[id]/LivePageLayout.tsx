@@ -214,10 +214,9 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
       />
       <main>
         <Header
-          showLiveLabel={
-            showSportData && isSportDataLive ? isSportDataLive : isLive
-          }
-          title={showSportData && sportDataTitle ? sportDataTitle : title}
+          showLiveLabel={showSportData ? (isSportDataLive ?? isLive) : isLive}
+          // biome-ignore lint/complexity/noExtraBooleanCast: we want this
+          title={showSportData && !!sportDataTitle ? sportDataTitle : title}
           description={description}
           imageUrl={imageUrl}
           imageUrlTemplate={imageUrlTemplate}
