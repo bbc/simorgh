@@ -1,4 +1,4 @@
-import React, { useState, use } from 'react';
+import React, { useState, use, FocusEvent } from 'react';
 import Navigation from '#psammead/psammead-navigation/src';
 import { ScrollableNavigation } from '#psammead/psammead-navigation/src/ScrollableNavigation';
 import {
@@ -43,10 +43,25 @@ const CanonicalNavigationContainer: React.FC<
     }
   });
 
+  const closeMenuWhenFocusLeaves = ({
+    currentTarget,
+    relatedTarget,
+  }: FocusEvent<HTMLDivElement>) => {
+    const focusMovedOutsideMenu = !currentTarget.contains(
+      relatedTarget as HTMLElement,
+    );
+    if (isOpen && focusMovedOutsideMenu) {
+      setIsOpen(false);
+    }
+  };
+
   return (
     <Navigation dir={dir} isOpen={isOpen}>
       <div css={styles.navStack}>
-        <div css={{ position: 'relative', width: '100%' }}>
+        <div
+          css={{ position: 'relative', width: '100%' }}
+          onBlur={closeMenuWhenFocusLeaves}
+        >
           <div css={styles.topRow}>
             <ScrollableNavigation
               dir={dir}
