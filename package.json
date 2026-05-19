@@ -12,8 +12,7 @@
       "ws-nextjs-app",
       "ws-nextjs-app/utilities/getAgent",
       "src/app/routes/utils/fetchDataFromBFF",
-      "src/app/routes/utils/fetchPageData",
-      "scripts/bundleSize"
+      "src/app/routes/utils/fetchPageData"
     ]
   },
   "scripts": {
@@ -34,10 +33,10 @@
     "test:puppeteer": "jest --ci --colors --verbose ./puppeteer",
     "test:puppeteer:local": "PUPPETEER_APP_ENV=local yarn test:puppeteer",
     "test:unit": "test -z $CI && yarn test:unit:local || yarn test:unit:ci",
-    "test:unit:local": "NODE_OPTIONS=--experimental-vm-modules jest --colors --shard=1/1 --testPathIgnorePatterns=\"scripts/bundleSize\" \"puppeteer\" \"ws-nextjs-app\"",
+    "test:unit:local": "NODE_OPTIONS=--experimental-vm-modules jest --colors --shard=1/1 --testPathIgnorePatterns=\"puppeteer\" \"ws-nextjs-app\"",
     "test:unit:ci": "yarn test:unit:local --ci",
     "test:unit:watch": "yarn test:unit -- --watch",
-    "test:unit:updatesnapshots": "NODE_OPTIONS=--experimental-vm-modules jest --updateSnapshot --silent=false --colors --testPathIgnorePatterns=\"src/integration/pages\" \"scripts/bundleSize\" \"puppeteer\" \"ws-nextjs-app\"",
+    "test:unit:updatesnapshots": "NODE_OPTIONS=--experimental-vm-modules jest --updateSnapshot --silent=false --colors --testPathIgnorePatterns=\"src/integration/pages\" \"puppeteer\" \"ws-nextjs-app\"",
     "test:integration": "NODE_OPTIONS=\"--experimental-vm-modules\" node ws-nextjs-app/integration/utils/runTests.ts",
     "test:integration:updatesnapshots": "NODE_OPTIONS=\"--experimental-vm-modules\" node ws-nextjs-app/integration/utils/runTests.ts  --updateSnapshot",
     "test:linkey": "node scripts/linkeySetup.js && jest src/app/lib/config/services/*.test.js --verbose true; yarn test:linkey:cleanup",
