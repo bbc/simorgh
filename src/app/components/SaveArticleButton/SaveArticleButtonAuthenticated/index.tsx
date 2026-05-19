@@ -1,4 +1,4 @@
-import { use, useMemo } from 'react';
+import { use } from 'react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
 import parseRoute from '#app/routes/utils/parseRoute';
@@ -24,13 +24,9 @@ const SaveArticleButtonAuthenticated = ({
     articlePageData,
   });
 
-  const clickComponentName = useMemo(
-    () =>
-      `save-article-button-click-${
-        isSaved ? UASAction.REMOVE : UASAction.SAVE
-      }`,
-    [isSaved],
-  );
+const clickComponentName = `save-article-button-click-${
+  isSaved ? UASAction.REMOVE : UASAction.SAVE
+}`;
 
   const viewTracker = useViewTracker({
     componentName: 'save-article-button-view',

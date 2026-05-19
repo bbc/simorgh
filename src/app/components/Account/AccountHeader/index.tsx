@@ -1,4 +1,4 @@
-import { use, useMemo } from 'react';
+import { use } from 'react';
 import { AccountContext } from '#contexts/AccountContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useHydrationDetection from '#hooks/useHydrationDetection';
@@ -14,10 +14,9 @@ const AccountHeader = () => {
     use(AccountContext);
   const { translations } = use(ServiceContext);
 
-  const clickComponentName = useMemo(
-    () => (isSignedIn ? 'account-header-settings' : 'account-header-sign-in'),
-    [isSignedIn],
-  );
+  const clickComponentName = isSignedIn
+    ? 'account-header-settings'
+    : 'account-header-sign-in';
 
   const viewTracker = useViewTracker({
     componentName: 'account-header',
