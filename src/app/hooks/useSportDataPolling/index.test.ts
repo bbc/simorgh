@@ -21,10 +21,10 @@ describe('useSportDataPolling', () => {
 
   it('should return the initial sports data on initialisation', () => {
     const initialSportsData = fixtureSportData as unknown as HeadToHeadV2Data;
+    const updatedSportsData =
+      fixtureSportDataUpdate as unknown as HeadToHeadV2Data;
 
-    jest
-      .spyOn(makeRequest, 'default')
-      .mockResolvedValue(fixtureSportDataUpdate);
+    jest.spyOn(makeRequest, 'default').mockResolvedValue(updatedSportsData);
 
     const { result } = renderHook(() =>
       useSportDataPolling(initialSportsData, true),
