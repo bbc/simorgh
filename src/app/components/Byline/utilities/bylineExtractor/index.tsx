@@ -41,7 +41,8 @@ const pathOrZeroIndexModelBlocks = (
   return pathOr('', givenPath, block);
 };
 
-const livePageBylineExtractor = (blocks: PostContributor['model'][]) => blocks
+const livePageBylineExtractor = (blocks: PostContributor['model'][]) =>
+  blocks
     .map(contribBlock => {
       const {
         blocks: imagesBlock,
@@ -82,7 +83,8 @@ const livePageBylineExtractor = (blocks: PostContributor['model'][]) => blocks
     })
     .filter(Boolean);
 
-const articlePageBylineExtractor = (blocks: OptimoBylineContributorBlock[]) => blocks
+const articlePageBylineExtractor = (blocks: OptimoBylineContributorBlock[]) =>
+  blocks
     .map(contribBlock => {
       const bylineBlocks = contribBlock?.model?.blocks || [];
 

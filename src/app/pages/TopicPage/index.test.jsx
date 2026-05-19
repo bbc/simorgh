@@ -431,7 +431,8 @@ describe('Topic Page', () => {
     it('should correctly render linked data', () => {
       render(<TopicPage pageData={pidginMultipleItems} />, getOptionParams());
 
-      const getLinkedDataOutput = () => JSON.parse(
+      const getLinkedDataOutput = () =>
+        JSON.parse(
           Helmet.peek().scriptTags.find(
             ({ type }) => type === 'application/ld+json',
           ).innerHTML,

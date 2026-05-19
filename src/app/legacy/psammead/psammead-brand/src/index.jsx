@@ -115,7 +115,8 @@ const LocalisedBrandName = ({
   );
 };
 
-const StyledBrand = ({ linkId, product, serviceLocalisedName = null, svg }) => svg ? (
+const StyledBrand = ({ linkId, product, serviceLocalisedName = null, svg }) =>
+  svg ? (
     <>
       <BrandSvg
         id={linkId !== 'footer' ? 'brandSvgHeader' : 'brandSvgFooter'}

@@ -46,13 +46,15 @@ describe('LatestPostButton', () => {
     hasPendingUpdate,
     shouldButtonBeVisible,
   }) => {
-    const { container } = await act(async () => render(
+    const { container } = await act(async () =>
+      render(
         <LastestPostButton
           isFirstPostVisible={isFirstPostVisible}
           hasPendingUpdate={hasPendingUpdate}
           streamRef={null}
         />,
-      ));
+      ),
+    );
 
     const button = container.querySelector(
       'button[data-testid="latest-post-button"]',
@@ -66,13 +68,15 @@ describe('LatestPostButton', () => {
   });
 
   it('should clear after 10 seconds of being visible', async () => {
-    const { container } = await act(async () => render(
+    const { container } = await act(async () =>
+      render(
         <LastestPostButton
           isFirstPostVisible={false}
           hasPendingUpdate
           streamRef={null}
         />,
-      ));
+      ),
+    );
 
     const button = container.querySelector(
       'button[data-testid="latest-post-button"]',
@@ -98,13 +102,15 @@ describe('LatestPostButton', () => {
       },
     };
 
-    await act(async () => render(
+    await act(async () =>
+      render(
         <LastestPostButton
           isFirstPostVisible={false}
           hasPendingUpdate
           streamRef={streamRefMock as unknown as RefObject<HTMLDivElement>}
         />,
-      ));
+      ),
+    );
 
     const button = screen.getByTestId('latest-post-button');
     fireEvent.click(button);

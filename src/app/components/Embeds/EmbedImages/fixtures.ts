@@ -458,153 +458,153 @@ const createEmbedImagesFixture = ({
   width = 1632,
   height = 1252,
 }: types) => ({
-    blocks: [
-      {
-        type: 'image',
-        model: {
-          blocks: [
-            {
-              type: 'altText',
-              model: {
-                blocks: [
-                  {
-                    type: 'text',
-                    model: {
-                      blocks: [
-                        {
-                          type: 'paragraph',
-                          model: {
-                            text: 'CPS vs Optimo usage. .  .',
-                            blocks: [
-                              {
-                                type: 'fragment',
-                                model: {
-                                  text: 'CPS vs Optimo usage. .  .',
-                                  attributes: [],
-                                },
+  blocks: [
+    {
+      type: 'image',
+      model: {
+        blocks: [
+          {
+            type: 'altText',
+            model: {
+              blocks: [
+                {
+                  type: 'text',
+                  model: {
+                    blocks: [
+                      {
+                        type: 'paragraph',
+                        model: {
+                          text: 'CPS vs Optimo usage. .  .',
+                          blocks: [
+                            {
+                              type: 'fragment',
+                              model: {
+                                text: 'CPS vs Optimo usage. .  .',
+                                attributes: [],
                               },
-                            ],
-                          },
+                            },
+                          ],
                         },
-                      ],
-                    },
+                      },
+                    ],
                   },
-                ],
-              },
+                },
+              ],
             },
-            {
-              type: 'rawImage',
-              model: {
-                height: 852,
-                width: 920,
-                locator: '/idt2/793f648b-b17f-489a-a473-9e5a71f12684/image/460',
-                href: null,
-                originCode: 'idt2',
-                copyrightHolder: 'bbc',
-                suitableForSyndication: true,
-              },
+          },
+          {
+            type: 'rawImage',
+            model: {
+              height: 852,
+              width: 920,
+              locator: '/idt2/793f648b-b17f-489a-a473-9e5a71f12684/image/460',
+              href: null,
+              originCode: 'idt2',
+              copyrightHolder: 'bbc',
+              suitableForSyndication: true,
             },
-          ],
-        },
+          },
+        ],
       },
-      {
-        type: 'image',
-        model: {
-          blocks: [
-            {
-              type: 'altText',
-              model: {
-                blocks: [
-                  {
-                    type: 'text',
-                    model: {
-                      blocks: [
-                        {
-                          type: 'paragraph',
-                          model: {
-                            text: 'CPS vs Optimo usage. .  .',
-                            blocks: [
-                              {
-                                type: 'fragment',
-                                model: {
-                                  text: 'CPS vs Optimo usage. .  .',
-                                  attributes: [],
-                                },
+    },
+    {
+      type: 'image',
+      model: {
+        blocks: [
+          {
+            type: 'altText',
+            model: {
+              blocks: [
+                {
+                  type: 'text',
+                  model: {
+                    blocks: [
+                      {
+                        type: 'paragraph',
+                        model: {
+                          text: 'CPS vs Optimo usage. .  .',
+                          blocks: [
+                            {
+                              type: 'fragment',
+                              model: {
+                                text: 'CPS vs Optimo usage. .  .',
+                                attributes: [],
                               },
-                            ],
-                          },
+                            },
+                          ],
                         },
-                      ],
-                    },
+                      },
+                    ],
                   },
-                ],
-              },
+                },
+              ],
             },
-            {
-              type: 'rawImage',
-              model: {
-                height: 1054,
-                width: 1280,
-                locator: '/idt2/793f648b-b17f-489a-a473-9e5a71f12684/image/640',
-                href: null,
-                originCode: 'idt2',
-                copyrightHolder: 'bbc',
-                suitableForSyndication: true,
-              },
+          },
+          {
+            type: 'rawImage',
+            model: {
+              height: 1054,
+              width: 1280,
+              locator: '/idt2/793f648b-b17f-489a-a473-9e5a71f12684/image/640',
+              href: null,
+              originCode: 'idt2',
+              copyrightHolder: 'bbc',
+              suitableForSyndication: true,
             },
-          ],
-        },
+          },
+        ],
       },
-      {
-        type: 'image',
-        model: {
-          blocks: [
-            {
-              type: 'altText',
-              model: {
-                blocks: [
-                  {
-                    type: 'text',
-                    model: {
-                      blocks: [
-                        {
-                          type: 'paragraph',
-                          model: {
-                            text: alt,
-                            blocks: [
-                              {
-                                type: 'fragment',
-                                model: {
-                                  text: alt,
-                                  attributes: [],
-                                },
+    },
+    {
+      type: 'image',
+      model: {
+        blocks: [
+          {
+            type: 'altText',
+            model: {
+              blocks: [
+                {
+                  type: 'text',
+                  model: {
+                    blocks: [
+                      {
+                        type: 'paragraph',
+                        model: {
+                          text: alt,
+                          blocks: [
+                            {
+                              type: 'fragment',
+                              model: {
+                                text: alt,
+                                attributes: [],
                               },
-                            ],
-                          },
+                            },
+                          ],
                         },
-                      ],
-                    },
+                      },
+                    ],
                   },
-                ],
-              },
+                },
+              ],
             },
-            {
-              type: 'rawImage',
-              model: {
-                height,
-                width,
-                locator,
-                href: null,
-                originCode: 'idt2',
-                copyrightHolder: 'bbc',
-                suitableForSyndication: true,
-              },
+          },
+          {
+            type: 'rawImage',
+            model: {
+              height,
+              width,
+              locator,
+              href: null,
+              originCode: 'idt2',
+              copyrightHolder: 'bbc',
+              suitableForSyndication: true,
             },
-          ],
-        },
+          },
+        ],
       },
-    ],
-  });
+    },
+  ],
+});
 
 export {
   chartEmbedImages,

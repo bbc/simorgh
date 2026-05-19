@@ -62,7 +62,8 @@ const PostBreakingNewsLabel = ({
 }: {
   isBreakingNews: boolean;
   breakingNewsLabelText?: string;
-}) => isBreakingNews ? (
+}) =>
+  isBreakingNews ? (
     <>
       <Text
         css={styles.breakingNewsLabel}

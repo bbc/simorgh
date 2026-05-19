@@ -18,29 +18,29 @@ const LiveLabelHeader = ({
   isHeaderImage,
   showSportData,
 }: PropsWithChildren<LiveLabelPromoProps>) => (
-    <div
-      data-testid="live-label"
-      css={showSportData && styles.liveLabelContainer}
+  <div
+    data-testid="live-label"
+    css={showSportData && styles.liveLabelContainer}
+  >
+    <LivePulse
+      className={className}
+      width="24"
+      height="24"
+      css={styles.liveLabelPulse}
+    />
+    <LiveText
+      lang={lang}
+      id={id}
+      offScreenText={offScreenText}
+      css={[
+        styles.liveLabelText,
+        !showSportData && isHeaderImage && styles.liveLabelTextWithImage,
+        !showSportData && !isHeaderImage && styles.liveLabelTextWithoutImage,
+      ]}
     >
-      <LivePulse
-        className={className}
-        width="24"
-        height="24"
-        css={styles.liveLabelPulse}
-      />
-      <LiveText
-        lang={lang}
-        id={id}
-        offScreenText={offScreenText}
-        css={[
-          styles.liveLabelText,
-          !showSportData && isHeaderImage && styles.liveLabelTextWithImage,
-          !showSportData && !isHeaderImage && styles.liveLabelTextWithoutImage,
-        ]}
-      >
-        {children}
-      </LiveText>
-    </div>
-  );
+      {children}
+    </LiveText>
+  </div>
+);
 
 export default LiveLabelHeader;

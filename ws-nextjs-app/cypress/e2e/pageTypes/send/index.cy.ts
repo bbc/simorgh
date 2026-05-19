@@ -20,9 +20,9 @@ const canonicalTestSuites = [
 ];
 
 const liteTestSuites = canonicalTestSuites.map(testSuite => ({
-    ...testSuite,
-    path: `${testSuite.path}.lite`,
-  }));
+  ...testSuite,
+  path: `${testSuite.path}.lite`,
+}));
 
 const testDetails = {
   pageType: 'send',

@@ -1,6 +1,7 @@
 import type { ServerSideExperiment } from '#app/models/types/global';
 
-export default (serverSideExperiments: ServerSideExperiment[]) => serverSideExperiments
+export default (serverSideExperiments: ServerSideExperiment[]) =>
+  serverSideExperiments
     .reduce((headerNames, experiment) => {
       const { experimentName, enabled } = experiment;
 

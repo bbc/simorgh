@@ -10,13 +10,13 @@ const JsonInlinedScript = (data: AMPAnalyticsData) => (
 );
 
 const AmpATIAnalytics = ({ reverbParams }: ATIAnalyticsProps) => (
-    <amp-analytics data-e2e="ati-amp-analytics">
-      {JsonInlinedScript(
-        getAmpAnalyticsJson({
-          reverbParams,
-        }),
-      )}
-    </amp-analytics>
-  );
+  <amp-analytics data-e2e="ati-amp-analytics">
+    {JsonInlinedScript(
+      getAmpAnalyticsJson({
+        reverbParams,
+      }),
+    )}
+  </amp-analytics>
+);
 
 export default AmpATIAnalytics;

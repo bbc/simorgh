@@ -66,14 +66,16 @@ describe('File', () => {
   });
 
   it('should visually hide the original input with type=file', async () => {
-    const { container } = await act(async () => render(
+    const { container } = await act(async () =>
+      render(
         <FileField
           id="foo"
           name="bar"
           inputState={defaultInputState}
           {...mockDefaultProps}
         />,
-      ));
+      ),
+    );
 
     const inputFile = container.querySelector('#foo');
 
@@ -83,14 +85,16 @@ describe('File', () => {
   it('should click visually hidden input when upload button is clicked', async () => {
     const user = userEvent.setup();
 
-    const { container } = await act(async () => render(
+    const { container } = await act(async () =>
+      render(
         <FileField
           id="foo"
           name="bar"
           inputState={defaultInputState}
           {...mockDefaultProps}
         />,
-      ));
+      ),
+    );
 
     const uploadButton = screen.getByRole('button', {
       name: /choose a file/i,
@@ -136,7 +140,8 @@ describe('File', () => {
   });
 
   it('should call the function to update state when a file is added', async () => {
-    const { container } = await act(async () => render(
+    const { container } = await act(async () =>
+      render(
         <FormContext.Provider value={mockContextValue}>
           <FileField
             id="foo"
@@ -145,7 +150,8 @@ describe('File', () => {
             {...mockDefaultProps}
           />
         </FormContext.Provider>,
-      ));
+      ),
+    );
 
     const inputFile = container.querySelector('#foo') as Element;
     fireEvent.change(inputFile, { target: { files: [mockImgFile] } });

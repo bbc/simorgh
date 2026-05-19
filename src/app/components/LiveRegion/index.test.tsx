@@ -13,7 +13,8 @@ describe('LiveRegion', () => {
     const LIVE_REGION_TEXT_1 = 'foo';
     const LIVE_REGION_TEXT_2 = 'bar';
 
-    const { container } = await act(async () => render(
+    const { container } = await act(async () =>
+      render(
         <LiveRegionContextProvider>
           <LiveRegion />
           <LiveRegionContext.Consumer>
@@ -35,7 +36,8 @@ describe('LiveRegion', () => {
             )}
           </LiveRegionContext.Consumer>
         </LiveRegionContextProvider>,
-      ));
+      ),
+    );
 
     const firstButton = screen.getByRole('button', {
       name: /foo/i,

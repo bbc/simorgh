@@ -36,24 +36,24 @@ const Component = ({
   variant,
   ...rest
 }: PropsWithChildren<Props>) => (
-    <ServiceContextProvider service={service} variant={variant}>
-      <RequestContextProvider
-        isAmp={false}
-        isApp={false}
-        service={service}
-        pathname="/"
-        pageType={STORY_PAGE}
+  <ServiceContextProvider service={service} variant={variant}>
+    <RequestContextProvider
+      isAmp={false}
+      isApp={false}
+      service={service}
+      pathname="/"
+      pageType={STORY_PAGE}
+    >
+      <ToggleContextProvider
+        toggles={{
+          eventTracking: { enabled: false },
+        }}
       >
-        <ToggleContextProvider
-          toggles={{
-            eventTracking: { enabled: false },
-          }}
-        >
-          <Promo {...rest} />
-        </ToggleContextProvider>
-      </RequestContextProvider>
-    </ServiceContextProvider>
-  );
+        <Promo {...rest} />
+      </ToggleContextProvider>
+    </RequestContextProvider>
+  </ServiceContextProvider>
+);
 
 describe('Frosted Glass Promo', () => {
   it('when given props directly', () => {

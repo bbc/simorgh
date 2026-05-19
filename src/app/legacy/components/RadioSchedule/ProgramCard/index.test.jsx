@@ -3,8 +3,8 @@ import { render } from '../../../../components/react-testing-library-with-provid
 import { renderProgramCard, uniqueStates } from '../testHelpers/helper';
 
 jest.mock('#lib/analyticsUtils', () => ({
-    ...jest.requireActual('#lib/analyticsUtils'),
-  }));
+  ...jest.requireActual('#lib/analyticsUtils'),
+}));
 
 describe('ProgramCard', () => {
   suppressPropWarnings(['program', 'ProgramCard']);

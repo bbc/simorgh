@@ -100,7 +100,9 @@ const supportsAmp = ({ contentType }: { contentType: string }) =>
     'static',
   ].includes(contentType);
 
-const ampTestSuites = canonicalTestSuites.filter(supportsAmp).map(testSuite => ({
+const ampTestSuites = canonicalTestSuites
+  .filter(supportsAmp)
+  .map(testSuite => ({
     ...testSuite,
     path: getPathWithSuffix({ path: testSuite.path, suffix: '.amp' }),
     applicationType: 'amp',

@@ -69,30 +69,33 @@ export default ({
 
   useEffect(() => {
     Promise.all(
-      files.map(async fileData => new Promise(resolve => {
-          const { file } = fileData;
-          const fileType = file.type.substring(0, file.type.indexOf('/'));
+      files.map(
+        async fileData =>
+          new Promise(resolve => {
+            const { file } = fileData;
+            const fileType = file.type.substring(0, file.type.indexOf('/'));
 
-          const fileReader = new FileReader();
-          fileReader.onloadend = () => {
-            resolve(fileReader.result);
-          };
+            const fileReader = new FileReader();
+            fileReader.onloadend = () => {
+              resolve(fileReader.result);
+            };
 
-          switch (fileType) {
-            case 'image':
-              fileReader.readAsDataURL(file);
-              break;
-            case 'video':
-              resolve(VIDEO_SVG_DATA_URI);
-              break;
-            case 'audio':
-              resolve(AUDIO_SVG_DATA_URI);
-              break;
-            default:
-              resolve(DOCUMENT_SVG_DATA_URI);
-              break;
-          }
-        })),
+            switch (fileType) {
+              case 'image':
+                fileReader.readAsDataURL(file);
+                break;
+              case 'video':
+                resolve(VIDEO_SVG_DATA_URI);
+                break;
+              case 'audio':
+                resolve(AUDIO_SVG_DATA_URI);
+                break;
+              default:
+                resolve(DOCUMENT_SVG_DATA_URI);
+                break;
+            }
+          }),
+      ),
     ).then(result => setThumbnailState(result as SetStateAction<string[]>));
   }, [files]);
 

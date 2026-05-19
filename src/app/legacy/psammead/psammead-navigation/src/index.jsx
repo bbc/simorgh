@@ -233,15 +233,15 @@ const Navigation = ({
   ampOpenClass = '',
   ...props
 }) => (
-    <StyledNav
-      role="navigation"
-      dir={dir}
-      isOpen={isOpen}
-      ampOpenClass={ampOpenClass}
-      {...props}
-    >
-      <NavWrapper>{children}</NavWrapper>
-    </StyledNav>
-  );
+  <StyledNav
+    role="navigation"
+    dir={dir}
+    isOpen={isOpen}
+    ampOpenClass={ampOpenClass}
+    {...props}
+  >
+    <NavWrapper>{children}</NavWrapper>
+  </StyledNav>
+);
 
 export default Navigation;

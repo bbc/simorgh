@@ -28,8 +28,8 @@ export const optOutScript = (window: Window) => {
 };
 
 export const OptOutOfLiteRedirect = () => (
-    <script>
-      {`
+  <script>
+    {`
       window.addEventListener('DOMContentLoaded', () => {
         document
             .getElementById('go-back-to-canonical-link')
@@ -38,15 +38,15 @@ export const OptOutOfLiteRedirect = () => (
                         });
         });
       `}
-    </script>
-  );
+  </script>
+);
 
 // THIS COMPONENT IS ONLY TO BE USED WITH CANONICAL RENDERERS
 // DO NOT USE IT WITH LITE AND AMP RENDERERS
 export default () => (
-    <script>
-      {`
+  <script>
+    {`
         (${redirectScript.toString()})(window)
       `}
-    </script>
-  );
+  </script>
+);

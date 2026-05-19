@@ -160,18 +160,18 @@ const canonicalTestSuites = Cypress.env('SMOKE')
   : canonicalNonSmokeTestSuites;
 
 const ampTestSuites = canonicalTestSuites.map(testSuite => ({
-    ...testSuite,
-    path: `${testSuite.path}.amp`,
-    tests: [testsForAllPages, testsForAllAMPPages],
-  }));
+  ...testSuite,
+  path: `${testSuite.path}.amp`,
+  tests: [testsForAllPages, testsForAllAMPPages],
+}));
 
 const liteTestSuites = canonicalTestSuites
   .filter(({ service }) => !['news', 'sport', 'newsround'].includes(service))
   .map(testSuite => ({
-      ...testSuite,
-      path: `${testSuite.path}.lite`,
-      tests: [testsForAllPages, liteArticleTests],
-    }));
+    ...testSuite,
+    path: `${testSuite.path}.lite`,
+    tests: [testsForAllPages, liteArticleTests],
+  }));
 
 runTestsForPage({
   pageType: PHOTO_GALLERY_PAGE,

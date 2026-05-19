@@ -9,5 +9,8 @@ export default function removeSensitiveHeaders(headers?: IncomingHttpHeaders) {
 
   return Object.keys(headers)
     ?.filter(objKey => !sensitiveHeadersArray?.includes(objKey))
-    ?.reduce<IncomingHttpHeaders>((newObj, key) => ({ ...newObj, [key]: headers[key] }), {});
+    ?.reduce<IncomingHttpHeaders>(
+      (newObj, key) => ({ ...newObj, [key]: headers[key] }),
+      {},
+    );
 }

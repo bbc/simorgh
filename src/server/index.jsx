@@ -57,7 +57,8 @@ class LoggerStream {
   }
 }
 
-const getDefaultMaxAge = req => req.originalUrl.indexOf('arabic/') !== -1
+const getDefaultMaxAge = req =>
+  req.originalUrl.indexOf('arabic/') !== -1
     ? EXPERIMENTAL_CACHE_TTL
     : NORMAL_CACHE_TTL;
 

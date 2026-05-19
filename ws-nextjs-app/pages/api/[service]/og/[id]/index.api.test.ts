@@ -25,9 +25,9 @@ jest.mock('sharp', () => {
     __esModule: true,
     ...actualSharp,
     default: jest.fn().mockImplementation(() => ({
-        jpeg: jest.fn().mockReturnThis(),
-        toBuffer: jest.fn().mockResolvedValue(Buffer.from([1, 2, 3, 4])),
-      })),
+      jpeg: jest.fn().mockReturnThis(),
+      toBuffer: jest.fn().mockResolvedValue(Buffer.from([1, 2, 3, 4])),
+    })),
   };
 });
 

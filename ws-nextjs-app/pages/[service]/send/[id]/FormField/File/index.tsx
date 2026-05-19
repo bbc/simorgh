@@ -48,9 +48,12 @@ export default ({
   const labelId = `label-${id}`;
   const errorBoxId = `${id}-error`;
 
-  useEffect(() => () => {
+  useEffect(
+    () => () => {
       clearTimeout(timeoutRef.current as number);
-    }, []);
+    },
+    [],
+  );
 
   const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
     // Converts FileList to an actual array

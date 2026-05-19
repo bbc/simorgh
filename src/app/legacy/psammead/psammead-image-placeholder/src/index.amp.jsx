@@ -18,16 +18,16 @@ const AmpImgPlaceholderContainer = ({
   placeholder,
   children,
 }) => (
-    <div
-      css={({ palette }) => ({
-        backgroundColor: `${darkPlaceholder ? palette.SHADOW : palette.LUNAR}`,
-      })}
-      fallback={fallback}
-      placeholder={placeholder}
-    >
-      {children}
-    </div>
-  );
+  <div
+    css={({ palette }) => ({
+      backgroundColor: `${darkPlaceholder ? palette.SHADOW : palette.LUNAR}`,
+    })}
+    fallback={fallback}
+    placeholder={placeholder}
+  >
+    {children}
+  </div>
+);
 
 const AmpImgPlaceholder = props => (
   <amp-img
@@ -42,40 +42,40 @@ const AmpImgPlaceholder = props => (
 );
 
 const AmpImgMediaQueries = ({ darkPlaceholder }) => (
-    <>
-      <AmpImgPlaceholder
-        media={`(max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX})`}
-        width="60px"
-        height="17px"
-        src={darkPlaceholder ? bgImageDark : bgImageRegular}
-      />
-      <AmpImgPlaceholder
-        media={`(min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX})`}
-        width="77px"
-        height="22px"
-        src={darkPlaceholder ? bgImageDark : bgImageRegular}
-      />
-      <AmpImgPlaceholder
-        media={`(min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN})`}
-        width="93px"
-        height="27px"
-        src={darkPlaceholder ? bgImageDark : bgImageRegular}
-      />
-    </>
-  );
+  <>
+    <AmpImgPlaceholder
+      media={`(max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX})`}
+      width="60px"
+      height="17px"
+      src={darkPlaceholder ? bgImageDark : bgImageRegular}
+    />
+    <AmpImgPlaceholder
+      media={`(min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX})`}
+      width="77px"
+      height="22px"
+      src={darkPlaceholder ? bgImageDark : bgImageRegular}
+    />
+    <AmpImgPlaceholder
+      media={`(min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN})`}
+      width="93px"
+      height="27px"
+      src={darkPlaceholder ? bgImageDark : bgImageRegular}
+    />
+  </>
+);
 
 const ImagePlaceholderAmp = ({ darkPlaceholder = false }) => (
-    <>
-      <AmpImgPlaceholderContainer
-        darkPlaceholder={darkPlaceholder}
-        placeholder=""
-      >
-        <AmpImgMediaQueries darkPlaceholder={darkPlaceholder} />
-      </AmpImgPlaceholderContainer>
-      <AmpImgPlaceholderContainer darkPlaceholder={darkPlaceholder} fallback="">
-        <AmpImgMediaQueries darkPlaceholder={darkPlaceholder} />
-      </AmpImgPlaceholderContainer>
-    </>
-  );
+  <>
+    <AmpImgPlaceholderContainer
+      darkPlaceholder={darkPlaceholder}
+      placeholder=""
+    >
+      <AmpImgMediaQueries darkPlaceholder={darkPlaceholder} />
+    </AmpImgPlaceholderContainer>
+    <AmpImgPlaceholderContainer darkPlaceholder={darkPlaceholder} fallback="">
+      <AmpImgMediaQueries darkPlaceholder={darkPlaceholder} />
+    </AmpImgPlaceholderContainer>
+  </>
+);
 
 export default ImagePlaceholderAmp;

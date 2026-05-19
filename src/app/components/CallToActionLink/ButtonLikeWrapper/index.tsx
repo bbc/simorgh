@@ -9,9 +9,9 @@ const ButtonLikeWrapper = ({
   children,
   className,
 }: PropsWithChildren<ButtonLikeWrapperProps>) => (
-    <div css={styles.flexWrapper} className={className}>
-      {children}
-    </div>
-  );
+  <div css={styles.flexWrapper} className={className}>
+    {children}
+  </div>
+);
 
 export default ButtonLikeWrapper;

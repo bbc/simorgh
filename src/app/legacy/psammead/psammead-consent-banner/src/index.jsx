@@ -221,23 +221,23 @@ export const ConsentBanner = ({
 
   headingRef = null,
 }) => (
-    <Wrapper dir={dir} hidden={hidden} id={id}>
-      <CenterWrapper dir={dir}>
-        <Title dir={dir} ref={headingRef}>
-          {title}
-        </Title>
-        {text}
-        <Options dir={dir} role="list">
-          <ListItem dir={dir}>{accept}</ListItem>
-          <ListItem dir={dir}>
-            <span>{reject}</span>
+  <Wrapper dir={dir} hidden={hidden} id={id}>
+    <CenterWrapper dir={dir}>
+      <Title dir={dir} ref={headingRef}>
+        {title}
+      </Title>
+      {text}
+      <Options dir={dir} role="list">
+        <ListItem dir={dir}>{accept}</ListItem>
+        <ListItem dir={dir}>
+          <span>{reject}</span>
+        </ListItem>
+        {hide && (
+          <ListItem className="hide" dir={dir}>
+            <div>{hide}</div>
           </ListItem>
-          {hide && (
-            <ListItem className="hide" dir={dir}>
-              <div>{hide}</div>
-            </ListItem>
-          )}
-        </Options>
-      </CenterWrapper>
-    </Wrapper>
-  );
+        )}
+      </Options>
+    </CenterWrapper>
+  </Wrapper>
+);

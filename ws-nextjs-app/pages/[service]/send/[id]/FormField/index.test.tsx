@@ -37,7 +37,8 @@ describe('FormField', () => {
   });
 
   it('should render a text input with an associated label', async () => {
-    const { container } = await act(() => render(
+    const { container } = await act(() =>
+      render(
         <ComponentWithContext
           props={{
             id: 'testTextID',
@@ -51,7 +52,8 @@ describe('FormField', () => {
             } as unknown as Field,
           ]}
         />,
-      ));
+      ),
+    );
 
     const label = container.querySelector('label[for=testTextID]');
     const text = container.querySelector('input[id=testTextID][type=text]');
@@ -61,7 +63,8 @@ describe('FormField', () => {
   });
 
   it('should render a textarea input with an associated label', async () => {
-    const { container } = await act(() => render(
+    const { container } = await act(() =>
+      render(
         <ComponentWithContext
           props={{
             id: 'testTextAreaID',
@@ -75,7 +78,8 @@ describe('FormField', () => {
             } as unknown as Field,
           ]}
         />,
-      ));
+      ),
+    );
 
     const label = container.querySelector('label[for=testTextAreaID]');
     const textArea = container.querySelector('textarea[id=testTextAreaID]');
@@ -106,7 +110,8 @@ describe('FormField', () => {
         }) as unknown as ContextProps,
     );
 
-    const { container } = await act(() => render(
+    const { container } = await act(() =>
+      render(
         <ComponentWithContext
           props={{
             id: 'testAllyID',
@@ -115,7 +120,8 @@ describe('FormField', () => {
           }}
           fields={[]}
         />,
-      ));
+      ),
+    );
     const textareaWithCorrectAria = container.querySelector(
       `textarea[id=testAllyID][aria-describedby=testAllyID-wordLimit]`,
     );
@@ -126,7 +132,8 @@ describe('FormField', () => {
   });
 
   it('should render an email input with an associated label', async () => {
-    const { container } = await act(() => render(
+    const { container } = await act(() =>
+      render(
         <ComponentWithContext
           props={{
             id: 'testEmailID',
@@ -140,7 +147,8 @@ describe('FormField', () => {
             } as unknown as Field,
           ]}
         />,
-      ));
+      ),
+    );
 
     const label = container.querySelector('label[for=testEmailID]');
     const text = container.querySelector('input[id=testEmailID][type=email]');
@@ -150,7 +158,8 @@ describe('FormField', () => {
   });
 
   it('should render a checkbox input with an associated label', async () => {
-    const { container } = await act(() => render(
+    const { container } = await act(() =>
+      render(
         <ComponentWithContext
           props={{
             id: 'testCheckboxID',
@@ -164,7 +173,8 @@ describe('FormField', () => {
             } as unknown as Field,
           ]}
         />,
-      ));
+      ),
+    );
 
     const label = container.querySelector('label[for=testCheckboxID]');
     const checkboxInput = container.querySelector(
@@ -176,7 +186,8 @@ describe('FormField', () => {
   });
 
   it('should render a tel input with an associated label', async () => {
-    const { container } = await act(() => render(
+    const { container } = await act(() =>
+      render(
         <ComponentWithContext
           props={{
             id: 'testTelID',
@@ -190,7 +201,8 @@ describe('FormField', () => {
             } as unknown as Field,
           ]}
         />,
-      ));
+      ),
+    );
 
     const label = container.querySelector('label[for=testTelID]');
     const telephoneInput = container.querySelector(
@@ -222,7 +234,8 @@ describe('FormField', () => {
         }) as unknown as ContextProps,
     );
 
-    const { container } = await act(() => render(
+    const { container } = await act(() =>
+      render(
         <ComponentWithContext
           props={{
             id: 'testAllyID',
@@ -231,7 +244,8 @@ describe('FormField', () => {
           }}
           fields={[]}
         />,
-      ));
+      ),
+    );
 
     const label = container.querySelector('label[for=testAllyID]');
     const input = container.querySelector('input[id=testAllyID][type=text]');
@@ -298,7 +312,8 @@ describe('FormField', () => {
         }) as unknown as ContextProps,
     );
 
-    const { container } = await act(() => render(
+    const { container } = await act(() =>
+      render(
         <ComponentWithContext
           props={{
             id: 'testAllyID',
@@ -307,7 +322,8 @@ describe('FormField', () => {
           }}
           fields={[]}
         />,
-      ));
+      ),
+    );
     const text = container.querySelector(
       `input[id=testAllyID][type=text]${expectedAria}`,
     );

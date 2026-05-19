@@ -10,10 +10,10 @@ describe('useMediaQuery', () => {
   const mockRemoveListener = jest.fn();
 
   window.matchMedia = jest.fn().mockImplementation(query => ({
-      matches: query === '(max-width: 600px)',
-      addListener: mockAddListener,
-      removeListener: mockRemoveListener,
-    }));
+    matches: query === '(max-width: 600px)',
+    addListener: mockAddListener,
+    removeListener: mockRemoveListener,
+  }));
 
   beforeEach(() => {
     mockAddListener.mockReset();

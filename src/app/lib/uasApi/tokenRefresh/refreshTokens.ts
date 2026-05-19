@@ -1,6 +1,7 @@
 import isLive from '#app/lib/utilities/isLive';
 
-const getSessionUrl = (): string => isLive()
+const getSessionUrl = (): string =>
+  isLive()
     ? 'https://session.bbc.com/session'
     : 'https://session.test.bbc.com/session';
 

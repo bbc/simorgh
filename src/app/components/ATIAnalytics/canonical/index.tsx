@@ -34,7 +34,9 @@ const renderNoScriptTrackingPixel = ({ reverbParams }: ATIAnalyticsProps) => {
   );
 };
 
-const addScript = ({ script, parameters, nonce }: InlineScriptProps) => <Helmet>{addInlineScript({ script, parameters, nonce })}</Helmet>;
+const addScript = ({ script, parameters, nonce }: InlineScriptProps) => (
+  <Helmet>{addInlineScript({ script, parameters, nonce })}</Helmet>
+);
 
 const CanonicalATIAnalytics = ({ reverbParams }: ATIAnalyticsProps) => {
   const { isLite, nonce } = use(RequestContext);

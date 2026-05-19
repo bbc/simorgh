@@ -4,8 +4,8 @@ import { ServiceParametersType } from '../../../types';
 export const hasInformationPageLinkTranslation = ({
   service,
   variant = 'default',
-}: ServiceParametersType) => appConfig[service][variant]?.translations?.liteSite
-    ?.informationPageLink;
+}: ServiceParametersType) =>
+  appConfig[service][variant]?.translations?.liteSite?.informationPageLink;
 
 export default ({ service, pageType, variant }: ServiceParametersType) => {
   describe(`Running testsForLiteOnly for ${service} ${pageType}`, () => {

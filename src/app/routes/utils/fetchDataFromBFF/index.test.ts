@@ -11,9 +11,9 @@ import fetchDataFromBFF from '.';
 
 jest.mock('../fetchPageData', () =>
   jest.fn().mockImplementation(() => ({
-      json: { data: {} },
-      status: 200,
-    })),
+    json: { data: {} },
+    status: 200,
+  })),
 );
 
 const mockAgent = {

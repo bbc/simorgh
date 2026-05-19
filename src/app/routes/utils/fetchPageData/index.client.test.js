@@ -185,7 +185,8 @@ describe('fetchPageData', () => {
         onClientSpy.mockImplementation(() => false);
       });
 
-      it('should return a 500 error code', () => fetchPageData({ path: requestedPathname, pageType }).catch(
+      it('should return a 500 error code', () =>
+        fetchPageData({ path: requestedPathname, pageType }).catch(
           ({ message, status }) => {
             expect(loggerMock.error).toHaveBeenCalledWith(DATA_FETCH_ERROR, {
               error:

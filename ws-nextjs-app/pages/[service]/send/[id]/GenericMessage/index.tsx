@@ -10,20 +10,20 @@ interface Props {
 
 const GenericMessage = forwardRef<HTMLElement, Props>(
   ({ heading, children }, ref?) => (
-      <>
-        <Heading
-          level={1}
-          id="content"
-          tabIndex={-1}
-          css={styles.heading}
-          size="trafalgar"
-          {...(ref && { ref })}
-        >
-          {heading}
-        </Heading>
-        {children && <Paragraph>{children}</Paragraph>}
-      </>
-    ),
+    <>
+      <Heading
+        level={1}
+        id="content"
+        tabIndex={-1}
+        css={styles.heading}
+        size="trafalgar"
+        {...(ref && { ref })}
+      >
+        {heading}
+      </Heading>
+      {children && <Paragraph>{children}</Paragraph>}
+    </>
+  ),
 );
 
 export default GenericMessage;

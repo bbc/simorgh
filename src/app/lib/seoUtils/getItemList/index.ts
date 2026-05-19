@@ -16,9 +16,9 @@ export default ({
       })),
     )
     .map((listItem, index) => ({
-        ...listItem,
-        position: index + 1,
-      }));
+      ...listItem,
+      position: index + 1,
+    }));
 
   return {
     itemListElement,

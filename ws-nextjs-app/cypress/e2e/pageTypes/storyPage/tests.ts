@@ -4,7 +4,8 @@ import getAppEnv from '../../../support/helpers/getAppEnv';
 
 const twoYearsAgo = new Date().getFullYear() - 2;
 
-const isArticleLessThanTwoYearsOld = () => cy
+const isArticleLessThanTwoYearsOld = () =>
+  cy
     .get(`main time`)
     .invoke('attr', 'datetime')
     .then(fullDate => {

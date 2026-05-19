@@ -432,25 +432,25 @@ const canonicalTestSuites = Cypress.env('SMOKE')
   : nonSmokeCanonicalTestSuites;
 
 const ampTestSuites = canonicalTestSuites.map(testSuite => ({
-    ...testSuite,
-    path: `${testSuite.path}.amp`,
-    tests: [...ampTests],
-  }));
+  ...testSuite,
+  path: `${testSuite.path}.amp`,
+  tests: [...ampTests],
+}));
 
 const liteTestSuites = canonicalTestSuites
   .filter(({ service }) => service !== 'news')
   .map(testSuite => ({
-      ...testSuite,
-      path: `${testSuite.path}.lite`,
-      tests: [liteArticleTests],
-    }));
+    ...testSuite,
+    path: `${testSuite.path}.lite`,
+    tests: [liteArticleTests],
+  }));
 
 const atiAmpTestSuites = atiAnalyticsTestSuites.map(testSuite => ({
-    ...testSuite,
-    path: getPathWithSuffix({ path: testSuite.path, suffix: '.amp' }),
-    applicationType: 'amp',
-    tests: [assertPageView],
-  }));
+  ...testSuite,
+  path: getPathWithSuffix({ path: testSuite.path, suffix: '.amp' }),
+  applicationType: 'amp',
+  tests: [assertPageView],
+}));
 
 const atiLiteTestSuites = atiAnalyticsTestSuites
   .filter(({ path, service }) => path !== '/ws/languages' && service !== 'news')

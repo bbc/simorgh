@@ -26,7 +26,8 @@ const removeCustomBlocks = pipe(
   last,
 );
 
-const isHeadlineFirst = (item: object) => !!pathOr<string>(
+const isHeadlineFirst = (item: object) =>
+  !!pathOr<string>(
     '',
     ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
     item,

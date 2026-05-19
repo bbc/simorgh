@@ -63,17 +63,17 @@ const AmpExperiment = ({
   experimentConfig,
   analyticsConfig,
 }: AmpExperimentProps) => (
-    <>
-      <AmpHead />
-      <amp-experiment>
-        <AmpScript config={experimentConfig} />
-      </amp-experiment>
-      {analyticsConfig && (
-        <amp-analytics type="piano">
-          <AmpScript config={analyticsConfig} />
-        </amp-analytics>
-      )}
-    </>
-  );
+  <>
+    <AmpHead />
+    <amp-experiment>
+      <AmpScript config={experimentConfig} />
+    </amp-experiment>
+    {analyticsConfig && (
+      <amp-analytics type="piano">
+        <AmpScript config={analyticsConfig} />
+      </amp-analytics>
+    )}
+  </>
+);
 
 export default AmpExperiment;

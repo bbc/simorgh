@@ -8,10 +8,10 @@ import styles from './index.style';
 const componentsToRender = { fragment, urlLink: InlineLink };
 
 const InlineContainer = ({ blocks, language }: Props) => (
-    <Text css={styles.inline} lang={language}>
-      <Blocks blocks={blocks} componentsToRender={componentsToRender} />
-    </Text>
-  );
+  <Text css={styles.inline} lang={language}>
+    <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+  </Text>
+);
 
 type Props = {
   blocks: OptimoBlock[];

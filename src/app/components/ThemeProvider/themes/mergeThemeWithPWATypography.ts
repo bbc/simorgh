@@ -7,9 +7,9 @@ export default ({
   baseTheme: ServiceTheme;
   pwaTheme: Partial<ServiceTheme>;
 }) => ({
-    ...baseTheme,
-    typography: {
-      ...baseTheme.typography,
-      ...pwaTheme.typography,
-    },
-  });
+  ...baseTheme,
+  typography: {
+    ...baseTheme.typography,
+    ...pwaTheme.typography,
+  },
+});

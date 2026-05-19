@@ -8,7 +8,8 @@ const { ...compilerOptionsPaths } = compilerOptions.paths;
 
 const createJestConfig = nextJest({ dir: './' });
 
-const buildConfig = async (config: Config): Promise<Config> => createJestConfig({
+const buildConfig = async (config: Config): Promise<Config> =>
+  createJestConfig({
     ...config,
     testPathIgnorePatterns: [
       ...(config.testPathIgnorePatterns || []),

@@ -33,11 +33,11 @@ global.Cypress = {
 };
 
 window.matchMedia = jest.fn().mockImplementation(query => ({
-    matches: true,
-    media: query,
-    addListener: jest.fn(),
-    removeListener: jest.fn(),
-  }));
+  matches: true,
+  media: query,
+  addListener: jest.fn(),
+  removeListener: jest.fn(),
+}));
 
 global.IntersectionObserver = class IntersectionObserver {
   constructor(callback, options) {

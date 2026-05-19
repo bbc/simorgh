@@ -199,30 +199,30 @@ const getTwoColumnCss = ({
   service,
   size,
 }: MultiColumnProps) => [
-    getOneColumnCss({ numberOfItems, service, size }),
-    css({
+  getOneColumnCss({ numberOfItems, service, size }),
+  css({
+    [GROUP_3_MIN_WIDTH]: {
+      minWidth: getGroup3WithTwoColumns({
+        listIndex,
+        numberOfItems,
+        supportsGrid: false,
+        service,
+        size,
+      }),
+    },
+    [`@supports (${grid})`]: {
       [GROUP_3_MIN_WIDTH]: {
         minWidth: getGroup3WithTwoColumns({
           listIndex,
           numberOfItems,
-          supportsGrid: false,
+          supportsGrid: true,
           service,
           size,
         }),
       },
-      [`@supports (${grid})`]: {
-        [GROUP_3_MIN_WIDTH]: {
-          minWidth: getGroup3WithTwoColumns({
-            listIndex,
-            numberOfItems,
-            supportsGrid: true,
-            service,
-            size,
-          }),
-        },
-      },
-    }),
-  ];
+    },
+  }),
+];
 
 const getMultiColumnCss = ({
   listIndex,
@@ -230,20 +230,20 @@ const getMultiColumnCss = ({
   service,
   size,
 }: MultiColumnProps) => [
-    getTwoColumnCss({
-      listIndex,
-      numberOfItems,
-      service,
-      size,
-    }),
-    css({
-      [GROUP_5_MIN_WIDTH]: {
-        minWidth: listHasDoubleDigits(numberOfItems)
-          ? isFiveOrTen({ listIndex, service, numberOfItems, size })
-          : getRankMinWidth({ service, numberOfItems, size }).group5,
-      },
-    }),
-  ];
+  getTwoColumnCss({
+    listIndex,
+    numberOfItems,
+    service,
+    size,
+  }),
+  css({
+    [GROUP_5_MIN_WIDTH]: {
+      minWidth: listHasDoubleDigits(numberOfItems)
+        ? isFiveOrTen({ listIndex, service, numberOfItems, size })
+        : getRankMinWidth({ service, numberOfItems, size }).group5,
+    },
+  }),
+];
 
 export default styles;
 export { getOneColumnCss, getTwoColumnCss, getMultiColumnCss };

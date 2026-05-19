@@ -6,9 +6,9 @@ import InlineSpan from '../../components/InlineSpan';
 const componentsToRender = { fragment, urlLink: InlineLink };
 
 const InlineContainer = ({ blocks, language }) => (
-    <InlineSpan lang={language}>
-      <Blocks blocks={blocks} componentsToRender={componentsToRender} />
-    </InlineSpan>
-  );
+  <InlineSpan lang={language}>
+    <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+  </InlineSpan>
+);
 
 export default InlineContainer;

@@ -23,15 +23,15 @@ export const BulletedListItem = ({
   className,
   key,
 }: PropsWithChildren<ListItemProps>) => (
-    <li
-      role="listitem"
-      className={className}
-      css={styles.bulletListItem}
-      key={key}
-    >
-      {children}
-    </li>
-  );
+  <li
+    role="listitem"
+    className={className}
+    css={styles.bulletListItem}
+    key={key}
+  >
+    {children}
+  </li>
+);
 
 export const BulletedList: FC<ListProps> = forwardRef(
   (

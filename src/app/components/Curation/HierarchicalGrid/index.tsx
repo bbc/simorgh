@@ -16,7 +16,8 @@ import type { Summary } from '../../../models/types/curationData';
 import { RequestContext } from '../../../contexts/RequestContext';
 import LiveLabel from '../../LiveLabel';
 
-const getStyles = (promoCount: number, i: number, mq: Theme['mq']) => css({
+const getStyles = (promoCount: number, i: number, mq: Theme['mq']) =>
+  css({
     [mq.GROUP_1_MAX_WIDTH]: {
       ...SMALL[promoCount - 1][i],
     },

@@ -23,12 +23,12 @@ const mockPageDataWithMetadata = ({
   seoTitle?: string;
   seoDescription?: string;
 }) => ({
-    ...mockPageData,
-    title,
-    description,
-    seoTitle,
-    seoDescription,
-  });
+  ...mockPageData,
+  title,
+  description,
+  seoTitle,
+  seoDescription,
+});
 
 describe('Live TV Page', () => {
   beforeEach(() => {

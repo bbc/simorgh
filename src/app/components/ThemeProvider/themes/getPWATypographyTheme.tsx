@@ -9,14 +9,14 @@ import {
 } from '../fontFaces';
 
 export default (script: TypographyScript = latinScript) => ({
-    typography: {
-      script,
-      fontFaces: [
-        REITH_SANS_BOLD,
-        REITH_SANS_REGULAR,
-        REITH_SERIF_MEDIUM,
-        REITH_SERIF_LIGHT,
-      ],
-      fontVariants: reithVariants,
-    },
-  });
+  typography: {
+    script,
+    fontFaces: [
+      REITH_SANS_BOLD,
+      REITH_SANS_REGULAR,
+      REITH_SERIF_MEDIUM,
+      REITH_SERIF_LIGHT,
+    ],
+    fontVariants: reithVariants,
+  },
+});

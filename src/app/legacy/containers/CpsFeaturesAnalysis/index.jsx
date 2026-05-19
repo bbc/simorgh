@@ -75,24 +75,24 @@ const PromoListComponent = ({ promoItems, dir = 'ltr', experimentProps }) => {
   return (
     <StoryPromoUlFeatures role="list">
       {promoItems.map((item, promoIndex) => (
-          <StoryPromoLiFeatures
-            key={item.id || item.uri}
-            {...viewTracker}
-            border={false}
-            role="listitem"
-          >
-            <FrostedGlassPromo
-              item={item}
-              index={promoIndex}
-              dir={dir}
-              displayImage
-              displaySummary={false}
-              serviceDatetimeLocale={serviceDatetimeLocale}
-              eventTrackingData={eventTrackingDataWithOptimizely}
-              sectionType="features-and-analysis"
-            />
-          </StoryPromoLiFeatures>
-        ))}
+        <StoryPromoLiFeatures
+          key={item.id || item.uri}
+          {...viewTracker}
+          border={false}
+          role="listitem"
+        >
+          <FrostedGlassPromo
+            item={item}
+            index={promoIndex}
+            dir={dir}
+            displayImage
+            displaySummary={false}
+            serviceDatetimeLocale={serviceDatetimeLocale}
+            eventTrackingData={eventTrackingDataWithOptimizely}
+            sectionType="features-and-analysis"
+          />
+        </StoryPromoLiFeatures>
+      ))}
     </StoryPromoUlFeatures>
   );
 };

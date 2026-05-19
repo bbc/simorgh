@@ -69,42 +69,42 @@ const AllTheProviders: FC<Props> = ({
   isUK = null,
   idctaConfig = null,
 }: Props) => (
-    <ToggleContextProvider toggles={toggles}>
-      <ServiceContextProvider
+  <ToggleContextProvider toggles={toggles}>
+    <ServiceContextProvider
+      service={service}
+      variant={variant}
+      pageLang={pageLang}
+    >
+      <RequestContextProvider
+        id={id}
+        bbcOrigin={bbcOrigin}
+        pageType={pageType}
+        isAmp={isAmp}
+        isApp={isApp}
+        isLite={isLite}
+        isNextJs={isNextJs}
         service={service}
         variant={variant}
-        pageLang={pageLang}
+        pathname={pathname}
+        derivedPageType={derivedPageType}
+        showAdsBasedOnLocation={showAdsBasedOnLocation}
+        showCookieBannerBasedOnCountry={showCookieBannerBasedOnCountry}
+        statusCode={statusCode}
+        isUK={isUK}
       >
-        <RequestContextProvider
-          id={id}
-          bbcOrigin={bbcOrigin}
-          pageType={pageType}
-          isAmp={isAmp}
-          isApp={isApp}
-          isLite={isLite}
-          isNextJs={isNextJs}
-          service={service}
-          variant={variant}
-          pathname={pathname}
-          derivedPageType={derivedPageType}
-          showAdsBasedOnLocation={showAdsBasedOnLocation}
-          showCookieBannerBasedOnCountry={showCookieBannerBasedOnCountry}
-          statusCode={statusCode}
-          isUK={isUK}
-        >
-          <AccountProvider initialConfig={idctaConfig}>
-            <EventTrackingContextProvider atiData={atiData}>
-              <UserContextProvider>
-                <ThemeProvider service={service} variant={variant}>
-                  {children}
-                </ThemeProvider>
-              </UserContextProvider>
-            </EventTrackingContextProvider>
-          </AccountProvider>
-        </RequestContextProvider>
-      </ServiceContextProvider>
-    </ToggleContextProvider>
-  );
+        <AccountProvider initialConfig={idctaConfig}>
+          <EventTrackingContextProvider atiData={atiData}>
+            <UserContextProvider>
+              <ThemeProvider service={service} variant={variant}>
+                {children}
+              </ThemeProvider>
+            </UserContextProvider>
+          </EventTrackingContextProvider>
+        </AccountProvider>
+      </RequestContextProvider>
+    </ServiceContextProvider>
+  </ToggleContextProvider>
+);
 
 const customRender = (
   ui: ReactElement,

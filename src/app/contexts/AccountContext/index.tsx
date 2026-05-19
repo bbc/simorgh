@@ -26,7 +26,8 @@ type AccountProviderProps = {
   initialConfig: IdctaConfig | null;
 };
 
-const getClientCookie = (cookieName: string) => onClient() ? Cookie.get(cookieName) : undefined;
+const getClientCookie = (cookieName: string) =>
+  onClient() ? Cookie.get(cookieName) : undefined;
 
 export const AccountProvider = ({
   children,
@@ -51,7 +52,8 @@ export const AccountProvider = ({
     !isLite &&
     !isApp;
 
-  const buildAccountUrl = (url?: string) => isIdctaAvailable && url
+  const buildAccountUrl = (url?: string) =>
+    isIdctaAvailable && url
       ? appendCtaQueryParams(url, {
           pageToReturnTo,
           lang: locale,

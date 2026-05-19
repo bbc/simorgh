@@ -16,7 +16,8 @@ import type {
 import type { Direction } from '../../../../models/types/global';
 import Grid from '../../../../legacy/components/Grid';
 
-export const getParentColumns = (columnLayout: ColumnLayout) => columnLayout !== 'oneColumn'
+export const getParentColumns = (columnLayout: ColumnLayout) =>
+  columnLayout !== 'oneColumn'
     ? mostReadListGridProps(columnLayout).columns
     : null;
 

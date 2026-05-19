@@ -272,9 +272,9 @@ describe('buildSettings', () => {
   describe('Portrait Clip Media', () => {
     it('Should return a playlist of portrait video items for the homepage for mobile', () => {
       window.matchMedia = jest.fn().mockImplementation(query => ({
-          matches: true,
-          media: query,
-        }));
+        matches: true,
+        media: query,
+      }));
 
       const result = buildSettings({
         ...baseSettings,
@@ -344,9 +344,9 @@ describe('buildSettings', () => {
 
     it('should return a playlist of portrait video items for the homepage for desktop', () => {
       window.matchMedia = jest.fn().mockImplementation(query => ({
-          matches: false,
-          media: query,
-        }));
+        matches: false,
+        media: query,
+      }));
       const result = buildSettings({
         ...baseSettings,
         blocks: homePagePortraitClipMediaBlocks as MediaBlock[],

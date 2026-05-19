@@ -111,4 +111,5 @@ export const getSecondaryColumnDataRegex = services => {
   return `/:service(${serviceRegex})/sty-secondary-column:variant(${variantRegex})?.json`;
 };
 
-export const getAfricaEyeTVPageRegex = () => `/worldservice/tv/africa_eye/:episodeId(${mediaIdRegex})?:lite(${liteRegex})?`;
+export const getAfricaEyeTVPageRegex = () =>
+  `/worldservice/tv/africa_eye/:episodeId(${mediaIdRegex})?:lite(${liteRegex})?`;

@@ -27,7 +27,9 @@ const StyledClock = styled.span`
   }
 `;
 
-const ClockIcon = ({ dir = 'ltr' }) => <StyledClock dir={dir}>{coreIcons.clock}</StyledClock>;
+const ClockIcon = ({ dir = 'ltr' }) => (
+  <StyledClock dir={dir}>{coreIcons.clock}</StyledClock>
+);
 
 const StyledTimestamp = styled.span`
   display: flex;
@@ -56,18 +58,18 @@ export const StartTimestamp = ({
   locale = 'en-gb',
   dir = 'ltr',
 }) => (
-    <StyledTimestamp dir={dir} aria-hidden="true">
-      <TimestampContainer
-        timestamp={timestamp}
-        dateTimeFormat="YYYY-MM-DD"
-        format="HH:mm"
-        isRelative={false}
-        padding={false}
-        timezone={timezone}
-        locale={locale}
-      />
-    </StyledTimestamp>
-  );
+  <StyledTimestamp dir={dir} aria-hidden="true">
+    <TimestampContainer
+      timestamp={timestamp}
+      dateTimeFormat="YYYY-MM-DD"
+      format="HH:mm"
+      isRelative={false}
+      padding={false}
+      timezone={timezone}
+      locale={locale}
+    />
+  </StyledTimestamp>
+);
 
 const StartTime = ({ timestamp }) => {
   const { locale, timezone, dir } = use(ServiceContext);

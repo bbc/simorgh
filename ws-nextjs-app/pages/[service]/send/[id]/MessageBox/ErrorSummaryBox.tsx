@@ -31,7 +31,9 @@ const ErrorLink = ({ id, labelText }: ListItemsProps) => {
   );
 };
 
-const ErrorLabel = ({ labelText }: ListItemsProps) => <Text css={styles.plainLabel}>{labelText}</Text>;
+const ErrorLabel = ({ labelText }: ListItemsProps) => (
+  <Text css={styles.plainLabel}>{labelText}</Text>
+);
 
 const ErrorSummaryBox = forwardRef(
   ({ labelMap }: ErrorSummaryProps, ref: ForwardedRef<HTMLDivElement>) => {

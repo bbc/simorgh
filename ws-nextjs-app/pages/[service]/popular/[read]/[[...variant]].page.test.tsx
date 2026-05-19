@@ -41,7 +41,8 @@ describe('handleMostReadRoute', () => {
     expect(result.props.pageType).toEqual(MOST_READ_PAGE);
   });
 
-  it('returns correct metadata.atiAnalytics', () => handleMostReadRoute(mockGetServerSidePropsContext).then(result => {
+  it('returns correct metadata.atiAnalytics', () =>
+    handleMostReadRoute(mockGetServerSidePropsContext).then(result => {
       expect(result.props.pageData.metadata.atiAnalytics).toEqual({
         contentType: 'list-datadriven',
         pageIdentifier: 'pidgin.popular.read.page',

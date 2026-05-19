@@ -53,7 +53,8 @@ const advertisingDirectives = {
   ],
 };
 
-export const advertisingCountryScripts = country => advertisingServiceCountryDomains(country).map(data => data?.domain);
+export const advertisingCountryScripts = country =>
+  advertisingServiceCountryDomains(country).map(data => data?.domain);
 
 const directives = {
   frameSrc: {
@@ -414,24 +415,24 @@ export const cspDirectives = ({
   shouldServeRelaxedCsp = false,
   country = '',
 }) => ({
-    directives: {
-      'default-src': generateDefaultSrc(shouldServeRelaxedCsp),
-      'child-src': generateChildSrc({ isAmp, shouldServeRelaxedCsp }),
-      'connect-src': generateConnectSrc({ isLive, shouldServeRelaxedCsp }),
-      'font-src': generateFontSrc({ isAmp, isLive, shouldServeRelaxedCsp }),
-      'frame-src': generateFrameSrc({ isAmp, isLive, shouldServeRelaxedCsp }),
-      'img-src': generateImgSrc({ isAmp, isLive, shouldServeRelaxedCsp }),
-      'script-src': generateScriptSrc({
-        isAmp,
-        isLive,
-        nonce,
-        shouldServeRelaxedCsp,
-        advertisingCountryScriptsArray: advertisingCountryScripts(country),
-      }),
-      'style-src': generateStyleSrc({ isAmp, isLive, shouldServeRelaxedCsp }),
-      'media-src': generateMediaSrc({ shouldServeRelaxedCsp }),
-      'worker-src': generateWorkerSrc({ isAmp, shouldServeRelaxedCsp }),
-      'report-to': 'worldsvc',
-      'upgrade-insecure-requests': [],
-    },
-  });
+  directives: {
+    'default-src': generateDefaultSrc(shouldServeRelaxedCsp),
+    'child-src': generateChildSrc({ isAmp, shouldServeRelaxedCsp }),
+    'connect-src': generateConnectSrc({ isLive, shouldServeRelaxedCsp }),
+    'font-src': generateFontSrc({ isAmp, isLive, shouldServeRelaxedCsp }),
+    'frame-src': generateFrameSrc({ isAmp, isLive, shouldServeRelaxedCsp }),
+    'img-src': generateImgSrc({ isAmp, isLive, shouldServeRelaxedCsp }),
+    'script-src': generateScriptSrc({
+      isAmp,
+      isLive,
+      nonce,
+      shouldServeRelaxedCsp,
+      advertisingCountryScriptsArray: advertisingCountryScripts(country),
+    }),
+    'style-src': generateStyleSrc({ isAmp, isLive, shouldServeRelaxedCsp }),
+    'media-src': generateMediaSrc({ shouldServeRelaxedCsp }),
+    'worker-src': generateWorkerSrc({ isAmp, shouldServeRelaxedCsp }),
+    'report-to': 'worldsvc',
+    'upgrade-insecure-requests': [],
+  },
+});

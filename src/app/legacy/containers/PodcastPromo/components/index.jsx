@@ -15,7 +15,9 @@ const Wrapper = styled.section`
   padding: ${GEL_SPACING_DBL};
 `;
 
-const PodcastPromo = ({ children, ...props }) => <Wrapper {...props}>{children}</Wrapper>;
+const PodcastPromo = ({ children, ...props }) => (
+  <Wrapper {...props}>{children}</Wrapper>
+);
 
 PodcastPromo.Title = Title;
 PodcastPromo.Card = Card;

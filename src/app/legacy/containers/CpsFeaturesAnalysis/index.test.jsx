@@ -17,7 +17,8 @@ const renderFeaturesAnalysis = ({
   content = features,
   bbcOrigin = 'https://www.test.bbc.co.uk',
   isAmp = false,
-} = {}) => render(
+} = {}) =>
+  render(
     <ServiceContextProvider service="pidgin">
       <RequestContextProvider
         bbcOrigin={bbcOrigin}
@@ -36,7 +37,8 @@ const renderFeaturesAnalysis = ({
 
 const renderFeaturesAnalysisNull = ({
   bbcOrigin = 'https://www.test.bbc.co.uk',
-} = {}) => render(
+} = {}) =>
+  render(
     <ServiceContextProvider service="pidgin">
       <RequestContextProvider
         bbcOrigin={bbcOrigin}
@@ -56,7 +58,8 @@ const renderFeaturesAnalysisNull = ({
 const renderFeaturesAnalysisNoTitle = ({
   content = features,
   bbcOrigin = 'https://www.test.bbc.co.uk',
-} = {}) => render(
+} = {}) =>
+  render(
     <ServiceContextProvider service="ws">
       <RequestContextProvider
         bbcOrigin={bbcOrigin}

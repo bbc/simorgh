@@ -179,18 +179,18 @@ const mockPageDataWithMetadata = ({
   datePublished?: string;
   dateModified?: string;
 }) => ({
-    ...mockPageData,
-    title,
-    description,
-    startDateTime,
-    endDateTime,
-    seo: {
-      seoTitle,
-      seoDescription,
-      datePublished,
-      dateModified,
-    },
-  });
+  ...mockPageData,
+  title,
+  description,
+  startDateTime,
+  endDateTime,
+  seo: {
+    seoTitle,
+    seoDescription,
+    datePublished,
+    dateModified,
+  },
+});
 
 const mockPollingUpdate = (pageData: ComponentProps['pageData']) => {
   const streamData = pageData.liveTextStream.content
@@ -507,14 +507,18 @@ describe('Live Page', () => {
 
   it('should render the key points section', async () => {
     mockPollingUpdate(mockPageData);
-    const { container } = await act(async () => render(<Live pageData={mockPageData} />));
+    const { container } = await act(async () =>
+      render(<Live pageData={mockPageData} />),
+    );
 
     expect(container.querySelector('[data-e2e="key-points"]')).toBeTruthy();
   });
 
   it('should not render the key points section when no content is provided', async () => {
     mockPollingUpdate(mockPageDataWithoutKeyPoints);
-    const { container } = await act(async () => render(<Live pageData={mockPageDataWithoutKeyPoints} />));
+    const { container } = await act(async () =>
+      render(<Live pageData={mockPageDataWithoutKeyPoints} />),
+    );
 
     expect(container.querySelector('[data-e2e="key-points"]')).toBeFalsy();
   });
@@ -703,7 +707,9 @@ describe('Live Page', () => {
       };
       mockPollingUpdate(pageDataWithSportData);
 
-      const { container } = await act(async () => render(<Live pageData={pageDataWithSportData} />));
+      const { container } = await act(async () =>
+        render(<Live pageData={pageDataWithSportData} />),
+      );
 
       const title = container.querySelector('h1');
       expect(title).toBeInTheDocument();
