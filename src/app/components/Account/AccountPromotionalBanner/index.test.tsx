@@ -6,6 +6,7 @@ import {
 import type { IdctaConfig } from '#app/models/types/account';
 import useToggle from '#app/hooks/useToggle';
 import AccountPromotionalBanner from '.';
+import { DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS } from './utilities';
 
 const idctaConfig: IdctaConfig = {
   'id-availability': 'GREEN',
@@ -37,9 +38,15 @@ describe('AccountPromotionalBanner', () => {
     (useToggle as jest.Mock).mockReturnValue({ enabled: true });
     localStorage.removeItem('account_promotional_banner_dismissals');
     localStorage.removeItem('account_promotional_banner_last_dismissed');
+    document.documentElement.classList.remove(
+      DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS,
+    );
   });
 
   it('renders when signed out and IDCTA is available', async () => {
+    document.documentElement.classList.add(
+      DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS,
+    );
     renderWithProviders();
 
     expect(
@@ -48,6 +55,9 @@ describe('AccountPromotionalBanner', () => {
   });
 
   it('shows a sign in link when rendered', () => {
+    document.documentElement.classList.add(
+      DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS,
+    );
     renderWithProviders();
 
     const signInLink = screen.getByRole('link', { name: /sign in/i });
@@ -58,6 +68,9 @@ describe('AccountPromotionalBanner', () => {
   });
 
   it('shows a register link when rendered', () => {
+    document.documentElement.classList.add(
+      DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS,
+    );
     renderWithProviders();
 
     const registerLink = screen.getByRole('link', { name: /register/i });
@@ -77,6 +90,9 @@ describe('AccountPromotionalBanner', () => {
 
   it('can be dismissed via close button', async () => {
     const user = userEvent.setup();
+    document.documentElement.classList.add(
+      DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS,
+    );
     renderWithProviders();
 
     const closeButton = await screen.findByRole('button', { name: /close/i });
@@ -115,6 +131,9 @@ describe('AccountPromotionalBanner', () => {
 
   it('writes dismissal data to localStorage when the close button is clicked', async () => {
     const user = userEvent.setup();
+    document.documentElement.classList.add(
+      DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS,
+    );
     renderWithProviders();
 
     const closeButton = await screen.findByRole('button', { name: /close/i });
@@ -144,6 +163,9 @@ describe('AccountPromotionalBanner', () => {
       'account_promotional_banner_last_dismissed',
       `${past}`,
     );
+    document.documentElement.classList.add(
+      DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS,
+    );
     renderWithProviders();
 
     expect(
@@ -153,6 +175,9 @@ describe('AccountPromotionalBanner', () => {
 
   it('treats malformed stored values as zero dismissals', () => {
     localStorage.setItem('account_promotional_banner_dismissals', 'invalid');
+    document.documentElement.classList.add(
+      DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS,
+    );
     renderWithProviders();
 
     expect(
