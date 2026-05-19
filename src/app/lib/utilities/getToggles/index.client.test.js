@@ -118,9 +118,7 @@ describe('getToggles', () => {
       global.fetch.mockResolvedValueOnce({
         ok: true,
         status: 200,
-        json: jest.fn(async () => {
-          throw new Error('Invalid JSON response');
-        }),
+        json: jest.fn(async () => 'this is not json'),
       });
 
       const { default: getToggles } = await import('.');
