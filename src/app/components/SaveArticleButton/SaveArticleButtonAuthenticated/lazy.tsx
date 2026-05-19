@@ -1,7 +1,7 @@
-import loadable from 'next/dynamic';
+import dynamic from 'next/dynamic';
 import SaveArticleButtonGuest from '../SaveArticleButtonGuest';
 
-export default loadable(
+export default dynamic(
   () =>
     import(
       /* webpackChunkName: "save_article_button_authenticated" */
