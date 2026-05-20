@@ -55,6 +55,8 @@ export const buildReverbAnalyticsModel = ({
   timeUpdated,
   experimentName,
   experimentVariant,
+  isSignedIn = false,
+  hashedId = null,
 }: ATIPageTrackingProps): ReverbBeaconConfig => {
   const href = getHref(platform);
   const referrer = getReferrer(platform);
@@ -104,7 +106,8 @@ export const buildReverbAnalyticsModel = ({
         },
       },
       user: {
-        isSignedIn: false,
+        isSignedIn,
+        hashedId,
       },
     },
     eventDetails,
@@ -127,6 +130,8 @@ export const buildReverbEventModel = ({
   itemTracker = {},
   groupTracker = {},
   eventGroupingName,
+  isSignedIn = false,
+  hashedId = null,
 }: ATIEventTrackingProps): ReverbBeaconConfig => {
   const {
     type: itemType,
@@ -160,7 +165,8 @@ export const buildReverbEventModel = ({
         },
       },
       user: {
-        isSignedIn: false,
+        isSignedIn,
+        hashedId,
       },
     },
     eventDetails: {
