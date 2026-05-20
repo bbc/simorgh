@@ -1,3 +1,3 @@
-import bundleSize from "./index.js";
+import bundleSize from './index.js';
 
 bundleSize();

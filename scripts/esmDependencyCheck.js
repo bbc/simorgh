@@ -105,12 +105,12 @@ const simplifyDate = modifiedDate => {
 
 const getRepoFromNpmData = npmData => {
   if (
-    npmData.hasOwnProperty('repository') &&
-    npmData.repository.hasOwnProperty('url')
+    Object.hasOwn(npmData, 'repository') &&
+    Object.hasOwn(npmData.repository, 'url')
   ) {
     return npmData.repository.url;
   }
-  if (npmData.hasOwnProperty('repository')) {
+  if (Object.hasOwn(npmData, 'repository')) {
     return npmData.repository;
   }
   return npmData.url || npmData.homepage;

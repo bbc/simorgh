@@ -2,17 +2,15 @@ import { readFile } from 'fs/promises';
 
 const modernBundleReport = JSON.parse(
   await readFile(
-    new URL('../../reports/modern.webpackBundleReport.json', import.meta.url)
-  )
+    new URL('../../reports/modern.webpackBundleReport.json', import.meta.url),
+  ),
 );
 
 const legacyBundleReport = JSON.parse(
   await readFile(
-    new URL('../../reports/legacy.webpackBundleReport.json', import.meta.url)
-  )
+    new URL('../../reports/legacy.webpackBundleReport.json', import.meta.url),
+  ),
 );
-
-
 
 const bundleReports = {
   modern: modernBundleReport,

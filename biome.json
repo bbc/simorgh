@@ -4,7 +4,7 @@
     "ignoreUnknown": true,
     "includes": [
       "**/*.{ts,tsx,js,jsx}",
-      "!**/tz/**",
+      "!**/tz",
       "!**/colorthief.js",
       "!dirAlias.js",
       "!**/index.stories.jsx",
@@ -85,7 +85,8 @@
         "noRestrictedGlobals": "error",
         "useBlockStatements": "off",
         "useConsistentBuiltinInstantiation": "off",
-        "useExportsLast": "off"
+        "useExportsLast": "off",
+        "useImportType": "off"
       },
       "suspicious": {
         "noAlert": "error",
@@ -100,10 +101,10 @@
         "noImplicitAnyLet": "off",
         "useAwait": "off",
         "useIterableCallbackReturn": {
-            "level": "error",
-            "options": {
-                "checkForEach": false
-            }
+          "level": "error",
+          "options": {
+            "checkForEach": false
+          }
         }
       }
     }
@@ -161,29 +162,17 @@
     "actions": {
       "source": {
         "organizeImports": {
-            "options": {
-                "groups": [
-                    [
-                        ":NODE:",
-                        "react",
-                        "react/**",
-                        "next",
-                        "next/**"
-                    ],
-                    ":BLANK_LINE:",
-                    [
-                        ":PACKAGE:",
-                        "!@bbc/**"
-                    ],
-                    ":BLANK_LINE:",
-                    "@bbc/**",
-                    ":BLANK_LINE:",
-                    [
-                        ":ALIAS:",
-                        ":PATH:"
-                    ]
-                ]
-            }
+          "options": {
+            "groups": [
+              [":NODE:", "react", "react/**", "next", "next/**"],
+              ":BLANK_LINE:",
+              [":PACKAGE:", "!@bbc/**"],
+              ":BLANK_LINE:",
+              "@bbc/**",
+              ":BLANK_LINE:",
+              [":ALIAS:", ":PATH:"]
+            ]
+          }
         }
       }
     }

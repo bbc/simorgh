@@ -54,18 +54,15 @@ const modernBundleReport = {
   },
 };
 
-jest.unstable_mockModule(
-  'fs/promises',
-  () => ({
-    readFile: jest.fn(() => JSON.stringify(modernBundleReport))
-  })
-);
-
-
+jest.unstable_mockModule('fs/promises', () => ({
+  readFile: jest.fn(() => JSON.stringify(modernBundleReport)),
+}));
 
 describe('pageTypeBundleExtractor', () => {
   it('should extract bundles used for an ArticlePage', async () => {
-    const { extractBundlesForPageType } = await import('./pageTypeBundleExtractor.js');
+    const { extractBundlesForPageType } = await import(
+      './pageTypeBundleExtractor.js'
+    );
     const result = extractBundlesForPageType('ArticlePage');
     expect(result).toEqual([
       'modern.../moment-lib-87d47d0c.d5f3ec50.js',
@@ -80,7 +77,9 @@ describe('pageTypeBundleExtractor', () => {
   });
 
   it('should throw error for non-existent page type', async () => {
-    const { extractBundlesForPageType } = await import('./pageTypeBundleExtractor.js');
+    const { extractBundlesForPageType } = await import(
+      './pageTypeBundleExtractor.js'
+    );
     expect(() => {
       extractBundlesForPageType('blah');
     }).toThrow("page type 'blah' not found");

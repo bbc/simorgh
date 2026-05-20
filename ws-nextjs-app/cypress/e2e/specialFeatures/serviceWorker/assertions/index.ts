@@ -77,8 +77,7 @@ export const serviceWorkerCaching = () => {
             .then(keys => {
               cacheableItems.forEach(cachedItem => {
                 const matchingItems = keys
-                  .map(({ url }) => url)
-                  .flat()
+                  .flatMap(({ url }) => url)
                   .filter(url => url.includes(cachedItem));
 
                 expect(
@@ -97,7 +96,7 @@ export const serviceWorkerCaching = () => {
         win.caches.open(SERVICE_WORKER_CACHE).then(simorghCache =>
           simorghCache.keys().then(keys => {
             const matchingCachedItems: string[] = [];
-            const urls = keys.map(({ url }) => url).flat();
+            const urls = keys.flatMap(({ url }) => url);
             cacheableItems.forEach(cachedItem => {
               const matchingItems = urls.filter(url =>
                 url.includes(cachedItem),
