@@ -34,26 +34,18 @@ const styles = {
         outline: `${pixelsToRem(3)}rem solid ${palette.GREY_8}`,
         boxShadow: `0 0 0 ${pixelsToRem(4)}rem ${palette.WHITE}, 0 0 0 ${pixelsToRem(9)}rem ${palette.GREY_8}`,
       },
-      ':disabled': {
-        backgroundColor: palette.GREY_8,
-        color: palette.WHITE,
-        cursor: 'not-allowed',
-        '& svg': {
-          fill: palette.WHITE,
-        },
-      },
     }),
 
   mutatingState: ({ palette }: Theme) =>
     css({
-      backgroundColor: palette.BLACK,
+      backgroundColor: palette.GREY_8,
       color: palette.WHITE,
-      border: `${pixelsToRem(1)}rem solid ${palette.BLACK}`,
+      border: `${pixelsToRem(1)}rem solid ${palette.GREY_8}`,
       '& svg': {
         fill: palette.WHITE,
       },
       ':disabled': {
-        backgroundColor: palette.BLACK,
+        backgroundColor: palette.GREY_8,
         cursor: 'not-allowed',
       },
     }),
