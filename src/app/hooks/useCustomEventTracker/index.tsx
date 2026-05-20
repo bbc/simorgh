@@ -35,6 +35,8 @@ const useCustomEventTracker = ({
     statsDestination,
     campaignID,
     producerName,
+    isSignedIn,
+    hashedId,
   } = extractATITrackingProps({
     eventType: VIEW_EVENT,
   });
@@ -72,6 +74,8 @@ const useCustomEventTracker = ({
             statsDestination,
             experimentName,
             experimentVariant,
+            isSignedIn,
+            hashedId,
           });
         } catch (_error) {}
       }
@@ -88,6 +92,8 @@ const useCustomEventTracker = ({
       statsDestination,
       experimentName,
       experimentVariant,
+      isSignedIn,
+      hashedId,
     ],
   );
 

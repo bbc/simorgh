@@ -1,9 +1,21 @@
 import { buildPageReverbParams } from './buildParams';
-import type { ReverbDetailsProviders } from '../types';
+import { ReverbDetailsProviders } from '../types';
 
 export default ({
   requestContext,
   serviceContext,
   atiData,
-}: ReverbDetailsProviders) =>
-  buildPageReverbParams({ atiData, requestContext, serviceContext });
+  isSignedIn,
+  hashedId,
+}: ReverbDetailsProviders & {
+  isSignedIn?: boolean;
+  hashedId?: string | null;
+}) => {
+  return buildPageReverbParams({
+    atiData,
+    requestContext,
+    serviceContext,
+    isSignedIn,
+    hashedId,
+  });
+};

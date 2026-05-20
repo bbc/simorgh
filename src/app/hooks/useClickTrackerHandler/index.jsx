@@ -53,6 +53,8 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
     experimentVariant,
     groupTracker,
     itemTracker,
+    isSignedIn,
+    hashedId,
   } = extractATITrackingProps({ eventTrackingData, eventType: CLICK_EVENT });
 
   const { trackingIsEnabled } = useTrackingToggle(componentName);
@@ -86,6 +88,7 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
           service,
           statsDestination,
         ].every(Boolean);
+
         if (shouldSendEvent) {
           event.stopPropagation();
           event.preventDefault();
@@ -131,6 +134,8 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
               detailedPlacement,
               ...(groupTracker && { groupTracker }),
               ...(itemTracker && { itemTracker }),
+              isSignedIn,
+              hashedId,
               ...(experimentVariant &&
                 experimentVariant !== 'off' && {
                   experimentName,
@@ -170,6 +175,8 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
       itemTracker,
       experimentName,
       preventNavigation,
+      isSignedIn,
+      hashedId,
     ],
   );
 };

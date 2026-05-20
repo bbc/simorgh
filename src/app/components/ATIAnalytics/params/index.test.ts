@@ -151,6 +151,7 @@ describe('ATIAnalytics params', () => {
           },
           user: {
             isSignedIn: false,
+            hashedId: null,
           },
         },
         eventDetails: {
@@ -188,6 +189,7 @@ describe('ATIAnalytics params', () => {
           },
           user: {
             isSignedIn: false,
+            hashedId: null,
           },
         },
         eventDetails: {
@@ -231,6 +233,7 @@ describe('ATIAnalytics params', () => {
           },
           user: {
             isSignedIn: false,
+            hashedId: null,
           },
         },
         eventDetails: {
@@ -273,6 +276,7 @@ describe('ATIAnalytics params', () => {
           },
           user: {
             isSignedIn: false,
+            hashedId: null,
           },
         },
         eventDetails: {
@@ -316,6 +320,7 @@ describe('ATIAnalytics params', () => {
           },
           user: {
             isSignedIn: false,
+            hashedId: null,
           },
         },
         eventDetails: {

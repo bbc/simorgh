@@ -37,6 +37,8 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     itemTracker,
     viewThreshold,
     alwaysInView = false,
+    isSignedIn,
+    hashedId,
   } = extractATITrackingProps({
     eventTrackingData,
     eventType: VIEW_EVENT,
@@ -78,6 +80,8 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
             advertiserID,
             url,
             detailedPlacement,
+            isSignedIn,
+            hashedId,
             ...(groupTracker && { groupTracker }),
             ...(itemTracker && { itemTracker }),
             ...(experimentVariant &&
@@ -135,6 +139,8 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     itemTracker,
     groupTracker,
     alwaysInView,
+    isSignedIn,
+    hashedId,
   ]);
 
   const viewTracker = useCallback(
