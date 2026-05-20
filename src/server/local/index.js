@@ -1,4 +1,4 @@
-import path from 'path';
+import path from 'node:path';
 import expressStaticGzip from 'express-static-gzip';
 
 import {
@@ -213,7 +213,7 @@ export default server => {
       );
       sendDataFile(res, localComscorePath, next);
     })
-    .get('/ckns_policy/*', (req, res) => {
+    .get('/ckns_policy/*', (_req, res) => {
       // Route to allow the cookie banner to make the cookie oven request
       // without throwing an error due to not being on a bbc domain.
       res.sendStatus(200);

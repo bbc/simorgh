@@ -101,7 +101,7 @@ const gridMediaQueries = ({
       ${enableGelGutters ? `grid-column-gap: ${groups[group].gutterSize};` : ``}
       ${margins[group] ? `padding: 0 ${groups[group].marginSize};` : ``}
       ${
-        gridStartOffset && gridStartOffset[group]
+        gridStartOffset?.[group]
           ? `grid-column-start: ${gridStartOffset[group]};`
           : ``
       }`,
@@ -196,8 +196,8 @@ const outerGridFallback = (
   columnsGroup,
   marginsGroup,
   marginSize,
-  enableGelGutters,
-  gutterSize,
+  _enableGelGutters,
+  _gutterSize,
   gridStartOffset,
   gridStartOffsetGroup,
 ) => `

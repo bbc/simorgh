@@ -78,13 +78,13 @@ export default defineConfig({
       );
 
       on('task', {
-        log(message) {
+        log(_message) {
           return null;
         },
-        table(message) {
+        table(_message) {
           return null;
         },
-        error(message) {
+        error(_message) {
           return null;
         },
       });

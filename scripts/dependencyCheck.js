@@ -1,5 +1,5 @@
 // biome-ignore-all lint/suspicious/noConsole: we want this
-const path = require('path');
+const path = require('node:path');
 const depcheck = require('depcheck');
 
 const options = {

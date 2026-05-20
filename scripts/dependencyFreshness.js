@@ -1,13 +1,13 @@
 // biome-ignore-all lint/suspicious/noConsole: we want this
-const { exec } = require('child_process');
-const fs = require('fs');
+const { exec } = require('node:child_process');
+const fs = require('node:fs');
 const { dependencies, devDependencies } = require('../package.json');
 
 const allDependencies = { ...dependencies, ...devDependencies };
 let dependencyTable = [];
 const datediff = (first, second) =>
   Math.round((second - first) / (1000 * 60 * 60 * 24));
-const dateNow = new Date().getTime();
+const dateNow = Date.now();
 const target = Object.keys(allDependencies).length;
 const downloadsBaseUrl = 'https://api.npmjs.org/downloads/point/last-week/';
 

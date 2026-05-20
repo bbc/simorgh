@@ -1,6 +1,6 @@
 // biome-ignore-all lint/suspicious/noEmptyBlockStatements: we want this
-import fs from 'fs';
-import { join, resolve } from 'path';
+import fs from 'node:fs';
+import { join, resolve } from 'node:path';
 import fetchMock from 'jest-fetch-mock';
 import { createHash } from 'crypto';
 
@@ -520,7 +520,7 @@ describe('Service Worker', () => {
   describe('version', () => {
     const CURRENT_VERSION = {
       number: 'v0.3.5',
-      fileContentHash: '070847d46716da7ddfab8b324e3b8a81',
+      fileContentHash: 'ca3f290182f8a1081bca668b8559eb29',
     };
 
     it(`version number should be ${CURRENT_VERSION.number}`, async () => {

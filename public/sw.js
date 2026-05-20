@@ -37,7 +37,7 @@ const cacheOfflinePageAndResources = async service => {
   if (await cache.match(offlinePageUrl)) return;
 
   const resp = await cacheResource(cache, offlinePageUrl);
-  if (!resp || !resp.ok) return;
+  if (!resp?.ok) return;
 
   const html = await resp.text();
   const scriptSrcs = [

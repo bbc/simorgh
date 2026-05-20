@@ -1,4 +1,4 @@
-import type { ParsedUrlQuery } from 'querystring';
+import type { ParsedUrlQuery } from 'node:querystring';
 import type { PageTypes, Services } from './global';
 
 export default interface PageDataParams extends ParsedUrlQuery {

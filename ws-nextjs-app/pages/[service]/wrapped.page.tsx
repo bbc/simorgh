@@ -2,7 +2,7 @@
 
 import { GetServerSideProps } from 'next';
 import { useEffect, use } from 'react';
-import { ParsedUrlQuery } from 'querystring';
+import { ParsedUrlQuery } from 'node:querystring';
 import omit from 'ramda/src/omit';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { STATIC_PAGE } from '#app/routes/utils/pageTypes';
@@ -24,7 +24,6 @@ import {
   SERVER_SIDE_RENDER_REQUEST_RECEIVED,
 } from '#app/lib/logger.const';
 import { Services, Variants } from '#models/types/global';
-import extractHeaders from '#server/utilities/extractHeaders';
 import styles from './wrappedStyles';
 
 interface PageDataParams extends ParsedUrlQuery {

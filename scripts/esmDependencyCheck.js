@@ -1,7 +1,7 @@
 // biome-ignore-all lint/suspicious/noConsole: we want this
 /* eslint-disable no-prototype-builtins */
-const { exec } = require('child_process');
-const fs = require('fs');
+const { exec } = require('node:child_process');
+const fs = require('node:fs');
 
 const { dependencies, devDependencies } = JSON.parse(
   fs.readFileSync('./package.json'),
@@ -10,7 +10,7 @@ const { dependencies, devDependencies } = JSON.parse(
 const allDependencies = { ...dependencies, ...devDependencies };
 const dependencyTable = [];
 
-const dateNow = new Date().getTime();
+const dateNow = Date.now();
 const datediff = (first, second) =>
   Math.round((second - first) / (1000 * 60 * 60 * 24));
 const gitHubToken = process.env.GITHUB_TOKEN;

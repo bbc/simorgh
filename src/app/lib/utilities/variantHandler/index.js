@@ -9,7 +9,7 @@ export const servicesWithVariants = {
 export const variants = ['simp', 'trad', 'lat', 'cyr', 'default'];
 
 // Remove leading slash from variant
-export const variantSanitiser = variant => variant && variant.replace('/', '');
+export const variantSanitiser = variant => variant?.replace('/', '');
 
 // If service has variants, use it or default to first variant in array
 // If service doesnt have variants, return 'default'

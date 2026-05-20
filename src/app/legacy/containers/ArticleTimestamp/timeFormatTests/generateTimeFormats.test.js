@@ -1,4 +1,4 @@
-import { writeFile } from 'fs';
+import { writeFile } from 'node:fs';
 
 jest.mock('fs');
 jest.mock('../../../../../server/utilities/serviceConfigs', () => ({

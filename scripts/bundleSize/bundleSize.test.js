@@ -36,7 +36,7 @@ jest.unstable_mockModule('chalk', () => ({
 
 const setUpFSMocks = (service1FileSize, service2FileSize) => {
   beforeEach(async () => {
-    const { default: fs } = await import('fs');
+    const { default: fs } = await import('node:fs');
 
     const bundles = [
       'modern.main-12345.js',

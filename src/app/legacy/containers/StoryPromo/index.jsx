@@ -44,7 +44,7 @@ const extractAltText = blocks => {
     if (block.type === 'paragraph') {
       return block.model.text;
     }
-    if (block.model && block.model.blocks) {
+    if (block.model?.blocks) {
       return extractAltText(block.model.blocks);
     }
   }

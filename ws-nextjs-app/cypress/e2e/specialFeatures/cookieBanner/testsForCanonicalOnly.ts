@@ -38,7 +38,7 @@ const assertCookieExpiryDate = (cookieName, timestamp) => {
   });
 };
 
-const inOneYear = (new Date() / 1000 + 60 * 60 * 24 * 365).toFixed();
+const inOneYear = (Date.now() / 1000 + 60 * 60 * 24 * 365).toFixed();
 
 const ensureAllCookieExpiryDates = () => {
   assertCookieExpiryDate('ckns_explicit', inOneYear);

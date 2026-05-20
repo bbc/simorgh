@@ -1,5 +1,5 @@
 import { setGlobalDispatcher, Agent } from 'undici';
-import { createSecureContext } from 'tls';
+import { createSecureContext } from 'node:tls';
 import getCert from './certs';
 
 let agentMemo: Agent;

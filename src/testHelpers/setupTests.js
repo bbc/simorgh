@@ -7,7 +7,7 @@ import '@testing-library/jest-dom';
  *  */
 if (window?._virtualConsole) {
   const listeners = window._virtualConsole.listeners('jsdomError');
-  const originalListener = listeners && listeners[0];
+  const originalListener = listeners?.[0];
 
   window._virtualConsole.removeAllListeners('jsdomError');
 

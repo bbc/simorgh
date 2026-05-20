@@ -87,7 +87,6 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
                               retentionPeriod={settings.retentionPeriodDays}
                             />
                           );
-                        case 'error':
                         default:
                           return <ErrorScreen title={title} />;
                       }

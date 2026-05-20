@@ -47,7 +47,6 @@ const getGridComponent = (componentName: string | null) => {
   switch (componentName) {
     case HIERARCHICAL_CURATION_GRID:
       return HierarchicalGrid;
-    case SIMPLE_CURATION_GRID:
     default:
       return CurationGrid;
   }
@@ -247,8 +246,6 @@ export default ({
         </section>
       ) : null;
     }
-    case SIMPLE_CURATION_GRID:
-    case HIERARCHICAL_CURATION_GRID:
     default:
       if (summaries.length > 0) {
         const viewTracker = useViewTracker({

@@ -3,7 +3,7 @@ import getToggleDefinitions from '#app/lib/utilities/getToggleDefinition';
 import isLocal from '#app/lib/utilities/isLocal';
 import type { IdctaConfig } from '#app/models/types/account';
 import type { Toggles, Services } from '#app/models/types/global';
-import type { IncomingHttpHeaders } from 'http';
+import type { IncomingHttpHeaders } from 'node:http';
 import fetchIdctaConfig from '../fetchIdctaConfig';
 
 const logger = nodeLogger(__filename);

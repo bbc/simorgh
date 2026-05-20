@@ -1,6 +1,6 @@
 // biome-ignore-all lint/style/noCommonJs: we want this
-import cluster from 'cluster';
-import os from 'os';
+import cluster from 'node:cluster';
+import os from 'node:os';
 
 import {
   CLUSTER_PROCESS_START,
@@ -17,7 +17,7 @@ if (DOT_ENV_CONFIG.error) {
 }
 
 // now `process.env.*` variables are set run the rest of the app
-const http = require('http');
+const http = require('node:http');
 const nodeLogger = require('#lib/logger.node');
 const app = require('./server').default;
 

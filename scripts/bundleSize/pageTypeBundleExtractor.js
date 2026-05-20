@@ -1,4 +1,4 @@
-import { readFile } from 'fs/promises';
+import { readFile } from 'node:fs/promises';
 
 const modernBundleReport = JSON.parse(
   await readFile(

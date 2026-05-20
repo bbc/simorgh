@@ -186,10 +186,6 @@ export const getTitle = ({ pageType, title, brandName }: GetTitleProps) => {
     case TV_PAGE:
     case 'index':
       return `${title} - ${brandName}`;
-    case ARTICLE_PAGE:
-    case MEDIA_ASSET_PAGE:
-    case STORY_PAGE:
-    case PHOTO_GALLERY_PAGE:
     default:
       return title;
   }

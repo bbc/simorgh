@@ -46,7 +46,7 @@ const getToggles = async (service, cache) => {
   const { origin } = getOriginContext();
   const url = constructTogglesEndpoint(service, origin);
 
-  const cachedResponse = cache && cache.get(url);
+  const cachedResponse = cache?.get(url);
 
   if (cachedResponse === '') {
     logger.error(CONFIG_RESPONSE_EMPTY_ERROR, {

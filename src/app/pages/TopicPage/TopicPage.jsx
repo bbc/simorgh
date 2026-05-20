@@ -107,7 +107,7 @@ const TopicPage = ({ pageData }) => {
                     topStoriesTitle={topStoriesTitle}
                     position={position}
                     link={link}
-                    curationLength={curations && curations.length}
+                    curationLength={curations?.length}
                     nthCurationByStyleAndProminence={
                       nthCurationByStyleAndProminence
                     }

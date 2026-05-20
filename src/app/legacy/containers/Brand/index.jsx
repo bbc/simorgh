@@ -38,7 +38,7 @@ const BrandContainer = ({
   const { brandSVG } = useTheme();
   const svgMaxHeight = 24;
   const svgMinHeight = 16;
-  const svgRatio = brandSVG && brandSVG.ratio;
+  const svgRatio = brandSVG?.ratio;
   const minWidth = svgRatio * svgMinHeight;
   const maxWidth = svgRatio * svgMaxHeight;
 

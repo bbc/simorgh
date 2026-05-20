@@ -62,29 +62,27 @@ export default (data, service, currentTime) => {
     schedules[latestProgramIndex - 2],
   ];
 
-  const processedSchedule =
-    programsToShow &&
-    programsToShow.map((program = {}) => {
-      const { publishedTimeStart, publishedTimeEnd, publishedTimeDuration } =
-        program;
+  const processedSchedule = programsToShow?.map((program = {}) => {
+    const { publishedTimeStart, publishedTimeEnd, publishedTimeDuration } =
+      program;
 
-      const brandTitle = path(['brand', 'title'], program);
-      const currentState = getProgramState(
-        currentTime,
-        publishedTimeStart,
-        publishedTimeEnd,
-      );
+    const brandTitle = path(['brand', 'title'], program);
+    const currentState = getProgramState(
+      currentTime,
+      publishedTimeStart,
+      publishedTimeEnd,
+    );
 
-      return {
-        id: path(['broadcast', 'pid'], program),
-        state: currentState,
-        startTime: publishedTimeStart,
-        link: getLink(currentState, program, service),
-        brandTitle,
-        summary: path(['episode', 'synopses', 'short'], program),
-        duration: publishedTimeDuration || '',
-      };
-    });
+    return {
+      id: path(['broadcast', 'pid'], program),
+      state: currentState,
+      startTime: publishedTimeStart,
+      link: getLink(currentState, program, service),
+      brandTitle,
+      summary: path(['episode', 'synopses', 'short'], program),
+      duration: publishedTimeDuration || '',
+    };
+  });
 
   return processedSchedule;
 };

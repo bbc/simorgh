@@ -73,7 +73,7 @@ server
   .disable('x-powered-by')
   .use(
     morgan('tiny', {
-      skip: (req, res) => res.statusCode === 200,
+      skip: (_req, res) => res.statusCode === 200,
       stream: new LoggerStream(),
     }),
   )
@@ -90,7 +90,7 @@ server
     }),
   )
   .use(logResponseTime)
-  .get('/status', (req, res) => {
+  .get('/status', (_req, res) => {
     try {
       res.status(200).send('Ok');
     } catch (error) {
@@ -146,7 +146,7 @@ const injectResourceHintsHeader = (req, res, next) => {
   next();
 };
 // Set Referrer-Policy
-const injectReferrerPolicyHeader = (req, res, next) => {
+const injectReferrerPolicyHeader = (_req, res, next) => {
   res.set('Referrer-Policy', 'no-referrer-when-downgrade');
   next();
 };
