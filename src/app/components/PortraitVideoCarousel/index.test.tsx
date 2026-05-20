@@ -48,7 +48,7 @@ describe('PortraitVideoCarousel', () => {
     const heading = screen.getByRole('heading', { level: 2 });
     expect(heading).toHaveTextContent(fixture.title);
 
-    const linkElement = screen.getByRole('link');
+    const linkElement = screen.getByRole('link', { name: fixture.title });
     expect(linkElement).toHaveAttribute('href', link);
   });
 
@@ -122,5 +122,49 @@ describe('PortraitVideoCarousel', () => {
     });
 
     expect(screen.queryByTestId('portrait-video-carousel')).toBeNull();
+  });
+
+  it('Should render a skip link with the correct text', async () => {
+    await act(async () => {
+      render(<Component {...fixture} eventTrackingData={eventTrackingData} />);
+    });
+
+    const skipLink = screen.getByText(
+      `Skip ${fixture.title} and continue reading`,
+    );
+    expect(skipLink).toBeInTheDocument();
+    expect(skipLink).toHaveAttribute('href', '#end-of-portrait-video-carousel');
+  });
+
+  it('Should render the skip link end marker with the correct ID', async () => {
+    const { container } = await act(async () => {
+      return render(
+        <Component {...fixture} eventTrackingData={eventTrackingData} />,
+      );
+    });
+
+    const endMarker = container.querySelector(
+      '#end-of-portrait-video-carousel',
+    );
+    expect(endMarker).toBeInTheDocument();
+    expect(endMarker).toHaveTextContent(`End of ${fixture.title}`);
+  });
+
+  it('Should render skip link with fallback text when no title is provided', async () => {
+    await act(async () => {
+      render(
+        <Component
+          {...fixture}
+          title={undefined}
+          eventTrackingData={eventTrackingData}
+        />,
+        { service: 'pidgin' },
+      );
+    });
+
+    const skipLink = screen.getByText(
+      'Skip Portrait Video Carousel and continue reading',
+    );
+    expect(skipLink).toBeInTheDocument();
   });
 });

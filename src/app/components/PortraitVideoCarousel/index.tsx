@@ -18,6 +18,7 @@ import Heading from '../Heading';
 import PortraitVideoNoJs from './PortraitVideoNoJs';
 import { PortraitClipMediaBlock } from '../MediaLoader/types';
 import Subheading from '../Curation/Subhead';
+import SkipLinkWrapper from '#components/SkipLinkWrapper';
 
 type PortraitVideoCarouselProps = {
   title?: string;
@@ -97,62 +98,69 @@ const PortraitVideoCarousel = ({
         className={className}
         {...viewTracker}
       >
-        {link && title ? (
-          <Subheading link={link} {...subheadingClickTracker}>
-            {title}
-          </Subheading>
-        ) : (
-          title && (
-            <Heading
-              level={2}
-              size="doublePica"
-              fontVariant="sansBold"
-              css={styles.heading}
-            >
+        <SkipLinkWrapper
+          endTextId="end-of-portrait-video-carousel"
+          text="Skip %title% and continue reading"
+          endTextVisuallyHidden="End of %title%"
+          terms={{ '%title%': title || 'Portrait Video Carousel' }}
+        >
+          {link && title ? (
+            <Subheading link={link} {...subheadingClickTracker}>
               {title}
-            </Heading>
-          )
-        )}
-        <noscript>
-          <PortraitVideoNoJs />
-        </noscript>
-        <div css={styles.carouselContainer}>
-          <PortraitCarouselNavigation
-            scrollPaneRef={scrollRef}
-            backgroundColor={backgroundColor}
-          />
-          <ul
-            ref={scrollRef}
-            css={styles.carousel}
-            data-testid="pv-carousel"
-            tabIndex={-1}
-            role="list"
-          >
-            {blocks.map((block, index) => (
-              <PortraitVideoPromo
-                key={block?.model?.video?.id}
-                block={block}
-                onClick={() => handlePromoClick(index)}
-                blockPosition={index}
-                eventTrackingData={eventTrackingDataExtended}
-                playDurationVariation={playDurationVariation}
-                isHydrated={isHydrated}
-              />
-            ))}
-          </ul>
-        </div>
-        {isModalOpen &&
-          selectedVideoIndex !== null &&
-          createPortal(
-            <PortraitVideoModal
-              blocks={blocks}
-              selectedVideoIndex={selectedVideoIndex}
-              onClose={handleCloseModal}
-              nonce={nonce}
-              eventTrackingData={eventTrackingDataExtended}
-            />,
-            document.body,
+            </Subheading>
+          ) : (
+            title && (
+              <Heading
+                level={2}
+                size="doublePica"
+                fontVariant="sansBold"
+                css={styles.heading}
+              >
+                {title}
+              </Heading>
+            )
           )}
+          <noscript>
+            <PortraitVideoNoJs />
+          </noscript>
+          <div css={styles.carouselContainer}>
+            <PortraitCarouselNavigation
+              scrollPaneRef={scrollRef}
+              backgroundColor={backgroundColor}
+            />
+            <ul
+              ref={scrollRef}
+              css={styles.carousel}
+              data-testid="pv-carousel"
+              tabIndex={-1}
+              role="list"
+            >
+              {blocks.map((block, index) => (
+                <PortraitVideoPromo
+                  key={block?.model?.video?.id}
+                  block={block}
+                  onClick={() => handlePromoClick(index)}
+                  blockPosition={index}
+                  eventTrackingData={eventTrackingDataExtended}
+                  playDurationVariation={playDurationVariation}
+                  isHydrated={isHydrated}
+                />
+              ))}
+            </ul>
+          </div>
+          {isModalOpen &&
+            selectedVideoIndex !== null &&
+            createPortal(
+              <PortraitVideoModal
+                blocks={blocks}
+                selectedVideoIndex={selectedVideoIndex}
+                onClose={handleCloseModal}
+                nonce={nonce}
+                eventTrackingData={eventTrackingDataExtended}
+              />,
+              document.body,
+            )}
+        </SkipLinkWrapper>
       </section>
     </>
   );
