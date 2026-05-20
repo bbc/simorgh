@@ -3,6 +3,8 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
 import parseRoute from '#app/routes/utils/parseRoute';
 import useUASButton, { UASAction } from '#app/hooks/useUASButton';
+import useClickTracker from '#app/hooks/useClickTrackerHandler';
+import useViewTracker from '#app/hooks/useViewTracker';
 import SaveButton from '#app/components/SaveButton';
 
 import type { SaveArticleButtonProps } from '../index';
@@ -22,6 +24,21 @@ const SaveArticleButtonAuthenticated = ({
       articleTitle,
       articlePageData,
     });
+
+  const clickComponentName = `save-article-button-click-${
+    isSaved ? UASAction.REMOVE : UASAction.SAVE
+  }`;
+
+  const viewTracker = useViewTracker({
+    componentName: 'save-article-button-view',
+  });
+
+  const { onClick: onClickTrack } = useClickTracker({
+    componentName: clickComponentName,
+    itemTracker: {
+      resourceId: articleId,
+    },
+  });
 
   if (!saveArticleButton) return null;
 
@@ -44,7 +61,8 @@ const SaveArticleButtonAuthenticated = ({
     return buttonLabel;
   };
 
-  const handleClick = () => {
+  const handleClick = (event?: React.MouseEvent) => {
+    onClickTrack?.(event);
     handleSaveAction(isSaved ? UASAction.REMOVE : UASAction.SAVE);
   };
 
