@@ -5,6 +5,7 @@ import { Curation } from '#app/models/types/curationData';
 import { Services } from '#app/models/types/global';
 import { StoryArgs, StoryProps } from '../../models/types/storybook';
 import HomePage from './HomePage';
+import PageLayoutWrapper from '#app/components/PageLayoutWrapper';
 
 const ONE_DAY_IN_MILLISECONDS = 24 * 60 * 60 * 1000;
 
@@ -58,22 +59,25 @@ const Component = ({ service, variant, isLite }: StoryProps) => {
   }
 
   return (
-    <HomePage
-      service={service}
-      variant={variant}
-      pageType={HOME_PAGE}
-      status={200}
-      isAmp={false}
-      isLite={isLite}
-      pathname={`/${service}`}
-      pageData={pageData}
-    />
+    <PageLayoutWrapper pageData={pageData} status={200}>
+      <HomePage
+        service={service}
+        variant={variant}
+        pageType={HOME_PAGE}
+        status={200}
+        isAmp={false}
+        isLite={isLite}
+        pathname={`/${service}`}
+        pageData={pageData}
+      />
+    </PageLayoutWrapper>
   );
 };
 
 export default {
   Component,
   title: 'Pages/Home Page',
+  parameters: { layout: 'fullscreen' },
 };
 
 export const Example = {

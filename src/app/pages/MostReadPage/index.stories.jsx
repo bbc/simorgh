@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { MOST_READ_PAGE } from '#app/routes/utils/pageTypes';
 import MostReadPage from './MostReadPage';
+import PageLayoutWrapper from '#app/components/PageLayoutWrapper';
 
 const Component = ({ service, variant }) => {
   const [pageData, setPageData] = useState({});
@@ -25,20 +26,23 @@ const Component = ({ service, variant }) => {
   }
 
   return (
-    <MostReadPage
-      pageType={MOST_READ_PAGE}
-      isAmp={false}
-      pathname={`/${service}/popular/read`}
-      status={200}
-      pageData={pageData}
-      service={service}
-    />
+    <PageLayoutWrapper pageData={pageData} status={200}>
+      <MostReadPage
+        pageType={MOST_READ_PAGE}
+        isAmp={false}
+        pathname={`/${service}/popular/read`}
+        status={200}
+        pageData={pageData}
+        service={service}
+      />
+    </PageLayoutWrapper>
   );
 };
 
 export default {
   Component,
   title: 'Pages/Most Read Page',
+  parameters: { layout: 'fullscreen' },
 };
 
 export const Example = {
