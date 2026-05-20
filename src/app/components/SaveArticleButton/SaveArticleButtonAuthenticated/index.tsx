@@ -54,7 +54,6 @@ const SaveArticleButtonAuthenticated = ({
       isLoading={isLoading}
       isMutating={isMutating}
       isSaved={isSaved}
-      disabled={isLoading || isMutating}
       buttonText={getButtonText()}
       removeText={saveArticleButton.remove}
       testId="save-article-btn-authorized"
