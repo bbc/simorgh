@@ -18,7 +18,6 @@ export default {
       backgroundColor: `${palette.POSTBOX}`,
       padding: `${spacings.HALF}rem ${spacings.FULL}rem`,
       margin: `${pixelsToRem(2)}rem 0`,
-      // border: `${pixelsToRem(1)}rem solid ${palette.WHITE}`,
     }),
   on: ({ palette }: Theme) =>
     css({
