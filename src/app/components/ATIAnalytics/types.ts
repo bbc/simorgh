@@ -115,6 +115,7 @@ export type ReverbPageVars = {
 
 export type ReverbUserVars = {
   isSignedIn: boolean;
+  hashedId?: string | null;
 };
 
 export type ReverbEventDetails = {
@@ -167,6 +168,8 @@ export interface ATIEventTrackingProps {
   groupTracker?: GroupTracker;
   viewThreshold?: number;
   eventGroupingName?: string;
+  isSignedIn?: boolean;
+  hashedId?: string | null;
 }
 
 export interface ItemTracker {
@@ -210,6 +213,8 @@ export interface ATIPageTrackingProps {
   ampExperimentName?: string;
   experimentName?: string | null;
   experimentVariant?: string | null;
+  isSignedIn?: boolean;
+  hashedId?: string | null;
 }
 
 export interface ATIProps {

@@ -1,4 +1,4 @@
-import { use, useState } from 'react';
+import { use, useState, useCallback } from 'react';
 import { Helmet } from 'react-helmet';
 import Paragraph from '#app/components/Paragraph';
 import PromotionalBanner from '#app/components/PromotionalBanner';
@@ -8,6 +8,8 @@ import { AccountContext } from '#contexts/AccountContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
 import useToggle from '#app/hooks/useToggle';
+import useViewTracker from '#app/hooks/useViewTracker';
+import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import addInlineScript from '#app/lib/utilities/addInlineScript';
 import onClient from '#app/lib/utilities/onClient';
 import {
@@ -28,6 +30,28 @@ const AccountPromotionalBanner = () => {
   const registerText = translations?.account?.register;
   const [isDismissed, setIsDismissed] = useState(false);
 
+  const viewTracker = useViewTracker({
+    componentName: 'account-promotional-banner',
+  });
+
+  const { onClick: onCloseClickTrack } = useClickTrackerHandler({
+    componentName: 'account-promotional-banner-close',
+  });
+
+  const handleCloseClick = useCallback(
+    async (event?: React.MouseEvent) => {
+      if (onCloseClickTrack) {
+        await onCloseClickTrack(event);
+      }
+      setAccountPromoBannerDismissed();
+      setIsDismissed(true);
+      document
+        .querySelector('html')
+        ?.classList.remove(DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS);
+    },
+    [onCloseClickTrack],
+  );
+
   if (
     isDismissed ||
     isSignedIn ||
@@ -47,10 +71,13 @@ const AccountPromotionalBanner = () => {
     <>
       {!onClient() && (
         <Helmet>
-          {addInlineScript({ script: buildAccountBannerClientScript(), nonce })}
+          {addInlineScript({
+            script: buildAccountBannerClientScript(),
+            nonce,
+          })}
         </Helmet>
       )}
-      <div css={styles.bannerWrapper}>
+      <div css={styles.bannerWrapper} {...viewTracker}>
         <PromotionalBanner
           id="account-promotional-banner"
           title={title}
@@ -59,18 +86,15 @@ const AccountPromotionalBanner = () => {
           closeLabel={closeLabel}
           buttonSeparatorText={buttonSeparatorText}
           isDismissible
-          onClose={() => {
-            setAccountPromoBannerDismissed();
-            setIsDismissed(true);
-            document
-              .querySelector('html')
-              ?.classList.remove(DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS);
-          }}
+          onClose={handleCloseClick}
         >
           <CallToActionLink
             url={signInUrl}
             className="focusIndicatorInvert"
             css={[styles.callToActionLink, styles.signInLink]}
+            eventTrackingData={{
+              componentName: 'account-promotional-banner-sign-in',
+            }}
           >
             <CallToActionLink.ButtonLikeWrapper>
               <AccountIcon css={styles.accountIcon} />
@@ -88,6 +112,9 @@ const AccountPromotionalBanner = () => {
             url={registerUrl}
             className="focusIndicatorInvert"
             css={[styles.callToActionLink, styles.registerLink]}
+            eventTrackingData={{
+              componentName: 'account-promotional-banner-register',
+            }}
           >
             <CallToActionLink.ButtonLikeWrapper>
               <CallToActionLink.Text shouldUnderlineOnHoverFocus>
