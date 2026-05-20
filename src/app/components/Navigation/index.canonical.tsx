@@ -50,7 +50,7 @@ const CanonicalNavigationContainer: React.FC<
     const focusMovedOutsideMenu = !currentTarget.contains(
       relatedTarget as HTMLElement,
     );
-    if (isOpen && focusMovedOutsideMenu) {
+    if (isOpen && relatedTarget && focusMovedOutsideMenu) {
       setIsOpen(false);
     }
   };
