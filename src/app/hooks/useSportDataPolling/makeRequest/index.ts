@@ -7,7 +7,7 @@ export default async (
   try {
     const webCdnHost = getEnvConfig().WEB_CDN_URL;
     const encodedUrn = encodeURIComponent(sportDataEventUrn);
-    const fetchUrl = `${webCdnHost}/ws/poll-data/sport?liveSportDataUrn=${encodedUrn}`;
+    const fetchUrl = `${webCdnHost}/ws/poll-data/sport?sportDataEventUrn=${encodedUrn}`;
 
     const response = await fetch(fetchUrl);
     const { status } = response;
