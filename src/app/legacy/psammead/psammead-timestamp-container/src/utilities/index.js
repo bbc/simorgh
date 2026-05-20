@@ -1,3 +1,4 @@
+// biome-ignore-all lint/correctness/useIsNan: we want this
 import moment from 'moment-timezone';
 
 // Note that this next section is globally configuring moment.

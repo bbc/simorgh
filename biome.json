@@ -78,6 +78,9 @@
           }
         }
       },
+      "performance": {
+        "noImgElement": "off"
+      },
       "style": {
         "noDefaultExport": "off",
         "noParameterAssign": "error",
@@ -97,6 +100,7 @@
             "allow": ["assert", "error", "info", "warn"]
           }
         },
+        "noDocumentImportInPage": "off",
         "noDuplicateTestHooks": "off",
         "noExportsInTest": "off",
         "noImplicitAnyLet": "off",

@@ -1,4 +1,5 @@
 // biome-ignore-all lint/style/noCommonJs: we want this
+// biome-ignore-all lint/style/useNodejsImportProtocol: we want this
 const fs = require('fs');
 const mkdirp = require('mkdirp');
 const path = require('path');
