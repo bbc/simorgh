@@ -26,7 +26,6 @@ import styles from './index.styles';
 import MediaLoader from '../MediaLoader';
 
 const {
-  SIMPLE_CURATION_GRID,
   HIERARCHICAL_CURATION_GRID,
   MESSAGE_BANNER,
   NOT_SUPPORTED,
