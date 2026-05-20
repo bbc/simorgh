@@ -15,7 +15,6 @@ import { HeadToHeadV2Data } from '#app/components-webcore/SportDataHeader/head-t
 import { PortraitVideoItems } from '#app/models/types/optimo';
 import useLivePagePolling from '#app/hooks/useLivePagePolling';
 import useToggle from '#app/hooks/useToggle';
-import isLiveEnv from '#app/lib/utilities/isLive';
 import {
   getImageFromPost,
   getHeadlineFromPost,
@@ -88,6 +87,7 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
   } = use(ServiceContext);
   const { canonicalNonUkLink } = use(RequestContext);
   const { enabled: livePagePollingEnabled } = useToggle('livePagePolling');
+  const { enabled: sportHeaderEnabled } = useToggle('showSportDataHeader');
 
   const streamRef = useRef<HTMLDivElement>(null);
   const [isFirstPostVisible, setIsFirstPostVisible] = useState(true);
@@ -117,7 +117,7 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
     live: isSportDataLive,
     title: sportDataTitle,
   } = sportDataEventContent || {};
-  const showSportData = !!sportData && !isLiveEnv();
+  const showSportData = !!sportData && Boolean(sportHeaderEnabled);
 
   const {
     url: imageUrl,

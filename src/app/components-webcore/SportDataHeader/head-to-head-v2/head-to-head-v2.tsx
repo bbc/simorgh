@@ -1,4 +1,5 @@
 import useSportDataPolling from '#app/hooks/useSportDataPolling';
+import useToggle from '#app/hooks/useToggle';
 import Footer from './components/footer';
 import HeadToHeadHeader from './components/head-to-head-header';
 import { HeadToHeadBanner } from './components/head-to-head-banner';
@@ -22,9 +23,11 @@ export const HeadToHeadV2 = ({
   teamBadgePlaceholderFallbackType?: 'badge' | 'flag';
   isSportDataLive?: boolean;
 }) => {
+  const { enabled: sportHeaderPollEnabled } = useToggle('sportDataPolling');
+
   const { currentSportData } = useSportDataPolling(
     initialSportData,
-    isSportDataLive,
+    Boolean(sportHeaderPollEnabled) && isSportDataLive,
   );
 
   const hasActions =
