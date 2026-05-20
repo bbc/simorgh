@@ -24,6 +24,22 @@ interface Props {
   service: Services;
 }
 
+const getPageData = (): OnDemandTVProps['pageData'] => {
+  const maxRecentEpisodes = toggles.recentVideoEpisodes.enabled
+    ? toggles.recentVideoEpisodes.value || 4
+    : 0;
+
+  const recentEpisodes = maxRecentEpisodes
+    ? pashtoPageData?.data?.recentEpisodes?.slice(0, maxRecentEpisodes)
+    : null;
+
+  return {
+    ...(pashtoPageData?.data as unknown as OnDemandTVProps['pageData']),
+    // @ts-expect-error - Mocked data doesn't have all the required fields
+    recentEpisodes,
+  };
+};
+
 const renderPage = async ({ pageData, service }: Props) => {
   let result;
   await act(async () => {
@@ -55,7 +71,7 @@ describe('OnDemand TV Page ', () => {
 
   it('a11y - should render a visually hidden headline', async () => {
     await renderPage({
-      pageData: pashtoPageData?.data as unknown as OnDemandTVProps['pageData'],
+      pageData: getPageData(),
       service: 'pashto',
     });
 
@@ -71,7 +87,7 @@ describe('OnDemand TV Page ', () => {
 
   it('should show the brand title for OnDemand TV Pages', async () => {
     const { getByTestId } = await renderPage({
-      pageData: pashtoPageData?.data as unknown as OnDemandTVProps['pageData'],
+      pageData: getPageData(),
       service: 'pashto',
     });
 
@@ -83,7 +99,7 @@ describe('OnDemand TV Page ', () => {
 
   it('a11y - should aria-hide the title', async () => {
     const { container } = await renderPage({
-      pageData: pashtoPageData?.data as unknown as OnDemandTVProps['pageData'],
+      pageData: getPageData(),
       service: 'pashto',
     });
 
@@ -95,7 +111,7 @@ describe('OnDemand TV Page ', () => {
 
   it('a11y - should have a "content" id on the h1', async () => {
     const { container } = await renderPage({
-      pageData: pashtoPageData?.data as unknown as OnDemandTVProps['pageData'],
+      pageData: getPageData(),
       service: 'pashto',
     });
 
@@ -104,7 +120,7 @@ describe('OnDemand TV Page ', () => {
 
   it('Dark Mode Design - should match snapshot', async () => {
     const { container } = await renderPage({
-      pageData: pashtoPageData?.data as unknown as OnDemandTVProps['pageData'],
+      pageData: getPageData(),
       service: 'pashto',
     });
 
@@ -113,7 +129,7 @@ describe('OnDemand TV Page ', () => {
 
   it('should show the datestamp correctly for Pashto OnDemand TV Pages', async () => {
     const { getByText } = await renderPage({
-      pageData: pashtoPageData?.data as unknown as OnDemandTVProps['pageData'],
+      pageData: getPageData(),
       service: 'pashto',
     });
 
@@ -122,7 +138,7 @@ describe('OnDemand TV Page ', () => {
 
   it('should show the summary for OnDemand TV Pages', async () => {
     const { getByText } = await renderPage({
-      pageData: pashtoPageData?.data as unknown as OnDemandTVProps['pageData'],
+      pageData: getPageData(),
       service: 'pashto',
     });
 
@@ -135,7 +151,7 @@ describe('OnDemand TV Page ', () => {
     process.env.SIMORGH_APP_ENV = 'live';
 
     const { container } = await renderPage({
-      pageData: pashtoPageData?.data as unknown as OnDemandTVProps['pageData'],
+      pageData: getPageData(),
       service: 'pashto',
     });
 
