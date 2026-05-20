@@ -1,3 +1,4 @@
+// biome-ignore-all assist/source/organizeImports: breaks the page
 import { renderRoutes, matchRoutes } from 'react-router-config';
 import { MemoryRouter } from 'react-router-dom';
 
