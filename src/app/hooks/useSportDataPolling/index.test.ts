@@ -3,7 +3,7 @@ import { HeadToHeadV2Data } from '#app/components-webcore/SportDataHeader/head-t
 import useSportDataPolling, { POLLING_INTERVAL } from '.';
 import fixtureSportData from './fixture/fixtureSportData';
 import fixtureSportDataUpdate from './fixture/fixtureSportDataUpdate';
-import * as makeRequest from './makeRequest/makeRequest';
+import * as makeRequest from './makeRequest';
 
 jest.useFakeTimers();
 
