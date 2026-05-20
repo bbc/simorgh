@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { ComponentProps } from '#nextjs/pages/[service]/live/[id]/LivePageLayout';
-import makeRequest from './makeRequest/makeRequest';
+import makeRequest from './makeRequest/index';
 
 export const POLLING_INTERVAL = 15000;
 
