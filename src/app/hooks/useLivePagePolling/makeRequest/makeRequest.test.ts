@@ -1,5 +1,5 @@
 import fixtureStreamDataWithFlourish from '../fixture/fixtureStreamDataWithFlourish';
-import makeRequest from '.';
+import makeRequest from './makeRequest';
 
 jest.mock('uuid', () => ({
   v4: jest.fn().mockReturnValue('uniqueId-1234' as string),
