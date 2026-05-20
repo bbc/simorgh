@@ -6,7 +6,12 @@ export const buildPageATIParams = ({
   atiData,
   requestContext,
   serviceContext,
-}: ATIDataWithContexts) => {
+  isSignedIn = false,
+  hashedId = null,
+}: ATIDataWithContexts & {
+  isSignedIn?: boolean;
+  hashedId?: string | null;
+}) => {
   const { isUK, platform, statsDestination } = requestContext;
   const {
     atiAnalyticsAppName,
@@ -55,6 +60,8 @@ export const buildPageATIParams = ({
     statsDestination,
     timePublished,
     timeUpdated,
+    isSignedIn,
+    hashedId,
     ...(ampExperimentName && { ampExperimentName }),
     ...(experimentName && { experimentName }),
     ...(experimentVariant && { experimentVariant }),
@@ -65,7 +72,18 @@ export const buildPageReverbParams = ({
   atiData,
   requestContext,
   serviceContext,
-}: ATIDataWithContexts) =>
+  isSignedIn,
+  hashedId,
+}: ATIDataWithContexts & {
+  isSignedIn?: boolean;
+  hashedId?: string | null;
+}) =>
   buildReverbAnalyticsModel(
-    buildPageATIParams({ atiData, requestContext, serviceContext }),
+    buildPageATIParams({
+      atiData,
+      requestContext,
+      serviceContext,
+      isSignedIn,
+      hashedId,
+    }),
   );
