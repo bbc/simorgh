@@ -99,7 +99,7 @@ Object.keys(allDependencies).forEach((dep, index) => {
     );
     const dateOfOurVersion = new Date(stdoutJson[ourVersion]);
     const ourFreshness = datediff(dateOfOurVersion.getTime(), dateNow);
-    const mything = +setTimeout(() => {
+    const _mything = +setTimeout(() => {
       collectResults({
         dep,
         modifiedDate,

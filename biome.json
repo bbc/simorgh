@@ -51,6 +51,7 @@
         "noRestrictedElements": "off",
         "noUndeclaredDependencies": "off",
         "noUnusedPrivateClassMembers": "off",
+        "noUnusedVariables": "error",
         "useExhaustiveDependencies": "off",
         "useIsNan": "off",
         "useJsxKeyInIterable": "off"

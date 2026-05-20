@@ -1,6 +1,6 @@
+// biome-ignore-all lint/correctness/noUnusedVariables: version is needed elsewhere
 /* eslint-disable no-useless-return */
 /* eslint-disable import/prefer-default-export */
-/* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 /* eslint-disable no-restricted-globals */
 
