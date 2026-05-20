@@ -5426,6 +5426,55 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tanstack/query-async-storage-persister@npm:5.99.2":
+  version: 5.99.2
+  resolution: "@tanstack/query-async-storage-persister@npm:5.99.2"
+  dependencies:
+    "@tanstack/query-core": "npm:5.99.2"
+    "@tanstack/query-persist-client-core": "npm:5.99.2"
+  checksum: 10/ded733bc77540cb5bbae4ab0288f6ff014ee0c28a5675ec79b174bd41361395e9ad6758f900a317f32890bf08db390f41324ec9f654b1f519471973fce75c34c
+  languageName: node
+  linkType: hard
+
+"@tanstack/query-core@npm:5.99.2":
+  version: 5.99.2
+  resolution: "@tanstack/query-core@npm:5.99.2"
+  checksum: 10/8cd1d070863bcbd647b6b07c6d6926e9637bcf5c2510fa04d59a6c1505fbe3e26c3be2839414cf426f784d3ef7759025b3090f1fc533f60d846e10a8cf554462
+  languageName: node
+  linkType: hard
+
+"@tanstack/query-persist-client-core@npm:5.99.2":
+  version: 5.99.2
+  resolution: "@tanstack/query-persist-client-core@npm:5.99.2"
+  dependencies:
+    "@tanstack/query-core": "npm:5.99.2"
+  checksum: 10/38d17b0e6a05db22161d745da3bc10a7e2a54213f734f24d88956fcd2dea802347a88ec0a4a53364d13caa6818a505fd525e363dea1124b1bc7c73feacae19c6
+  languageName: node
+  linkType: hard
+
+"@tanstack/react-query-persist-client@npm:5.99.2":
+  version: 5.99.2
+  resolution: "@tanstack/react-query-persist-client@npm:5.99.2"
+  dependencies:
+    "@tanstack/query-persist-client-core": "npm:5.99.2"
+  peerDependencies:
+    "@tanstack/react-query": ^5.99.2
+    react: ^18 || ^19
+  checksum: 10/34546660a7fdae25ab593642dcd8b6a80ec4f0ee20df4a7e33534360cbc8d9f64eb3c1284192b79152ebd6b8a71ae6b0b0939d40ef344947c269771b7ec99b55
+  languageName: node
+  linkType: hard
+
+"@tanstack/react-query@npm:5.99.2":
+  version: 5.99.2
+  resolution: "@tanstack/react-query@npm:5.99.2"
+  dependencies:
+    "@tanstack/query-core": "npm:5.99.2"
+  peerDependencies:
+    react: ^18 || ^19
+  checksum: 10/15807a1e91dc6d6c2407c775678c58b7e1cce1a91cbe0d6345b7b228a8c7bee82370ec8bfe5f0fc375748e93cc6dc54097c974100b9c33645b6f1e0cd0436dbe
+  languageName: node
+  linkType: hard
+
 "@testing-library/dom@npm:10.4.1":
   version: 10.4.1
   resolution: "@testing-library/dom@npm:10.4.1"
@@ -15035,9 +15084,9 @@ __metadata:
   linkType: hard
 
 "picomatch@npm:^4.0.2, picomatch@npm:^4.0.3":
-  version: 4.0.3
-  resolution: "picomatch@npm:4.0.3"
-  checksum: 10/57b99055f40b16798f2802916d9c17e9744e620a0db136554af01d19598b96e45e2f00014c91d1b8b13874b80caa8c295b3d589a3f72373ec4aaf54baa5962d5
+  version: 4.0.4
+  resolution: "picomatch@npm:4.0.4"
+  checksum: 10/f6ef80a3590827ce20378ae110ac78209cc4f74d39236370f1780f957b7ee41c12acde0e4651b90f39983506fd2f5e449994716f516db2e9752924aff8de93ce
   languageName: node
   linkType: hard
 
@@ -15600,14 +15649,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:19.2.5":
-  version: 19.2.5
-  resolution: "react-dom@npm:19.2.5"
+"react-dom@npm:19.2.6":
+  version: 19.2.6
+  resolution: "react-dom@npm:19.2.6"
   dependencies:
     scheduler: "npm:^0.27.0"
   peerDependencies:
-    react: ^19.2.5
-  checksum: 10/ba14b022c7191d27b723314b964a1a4d839832e6edd231294097e323973808f97ac647bcf182ab0104e20ae6532dbc36733aec3e8333a1446a7183099c96b255
+    react: ^19.2.6
+  checksum: 10/695122e37dec3460311231ff1f9a96368d74457d4ccf60010eaebc08c3e1c47b054c9267b40d98c689ae99d0c29a340acacfd405016a954a4f11613146191e68
   languageName: node
   linkType: hard
 
@@ -15728,10 +15777,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:19.2.5":
-  version: 19.2.5
-  resolution: "react@npm:19.2.5"
-  checksum: 10/1c3c7ffecb90b7f89a5c3ef635e6811f3a84600097f203b918150cb7e6b0a52915e858e5b4c82317a520dffccfa46ee4819ccf92c59c5b2d6c25cffe258dd20c
+"react@npm:19.2.6":
+  version: 19.2.6
+  resolution: "react@npm:19.2.6"
+  checksum: 10/205f0db93bd6c6485f94471d1c3437ae1d410f322297c76186fe4f658f88a6786bb0805e3cf8f330f24d1daa923b6b610ec63960d2461e9201bca64ca8361db9
   languageName: node
   linkType: hard
 
@@ -16802,6 +16851,9 @@ __metadata:
     "@storybook/builder-webpack5": "npm:10.3.6"
     "@storybook/cli": "npm:10.3.6"
     "@storybook/react-webpack5": "npm:10.3.6"
+    "@tanstack/query-async-storage-persister": "npm:5.99.2"
+    "@tanstack/react-query": "npm:5.99.2"
+    "@tanstack/react-query-persist-client": "npm:5.99.2"
     "@testing-library/dom": "npm:10.4.1"
     "@testing-library/jest-dom": "npm:6.9.1"
     "@testing-library/react": "npm:16.3.1"
@@ -16882,8 +16934,8 @@ __metadata:
     prettier: "npm:3.8.1"
     puppeteer: "npm:24.22.3"
     ramda: "npm:0.32.0"
-    react: "npm:19.2.5"
-    react-dom: "npm:19.2.5"
+    react: "npm:19.2.6"
+    react-dom: "npm:19.2.6"
     react-helmet: "npm:6.1.0"
     react-lazyload: "npm:3.2.1"
     react-router-config: "npm:5.1.1"

@@ -1,10 +1,13 @@
-// TODO - consolidate with other polling?
+import { HeadToHeadV2Data } from '#app/components-webcore/SportDataHeader/head-to-head-v2/types';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 
-export default async (liveSportDataUrn: string) => {
+export default async (
+  sportDataEventUrn: string,
+): Promise<HeadToHeadV2Data | null> => {
   try {
     const webCdnHost = getEnvConfig().WEB_CDN_URL;
-    const fetchUrl = `${webCdnHost}/blah?liveSportDataUrn=${liveSportDataUrn}`; // TODO - to be confirmed
+    const encodedUrn = encodeURIComponent(sportDataEventUrn);
+    const fetchUrl = `${webCdnHost}/ws/poll-data/sport?liveSportDataUrn=${encodedUrn}`;
 
     const response = await fetch(fetchUrl);
     const { status } = response;

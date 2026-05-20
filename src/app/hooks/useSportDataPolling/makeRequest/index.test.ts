@@ -1,5 +1,5 @@
 import fixtureSportDataUpdate from '../fixture/fixtureSportDataUpdate';
-import makeRequest from './makeRequest';
+import makeRequest from '.';
 
 describe('makeRequest', () => {
   it('should return data on a valid 200 response where data exists', async () => {

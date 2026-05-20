@@ -29,11 +29,10 @@ export const HeadToHeadV2 = ({
     initialSportData,
     Boolean(sportHeaderPollEnabled) && isSportDataLive,
   );
-  const data = currentSportData;
 
   const hasActions =
-    (data?.home?.actions?.length ?? 0) > 0 ||
-    (data?.away?.actions?.length ?? 0) > 0;
+    (currentSportData?.home?.actions?.length ?? 0) > 0 ||
+    (currentSportData?.away?.actions?.length ?? 0) > 0;
 
   // TODO: Re-enable badge visibility logic once we have the necessary badge mappings in place
   const shouldHideBadges = true;
@@ -44,26 +43,30 @@ export const HeadToHeadV2 = ({
         <div css={styles.container({ isConciseView })}>
           {!isConciseView && (
             <HeadToHeadHeader
-              date={data.date}
-              status={data.status}
-              tournamentDescriptionLabel={data.tournamentDescriptionLabel}
+              date={currentSportData.date}
+              status={currentSportData.status}
+              tournamentDescriptionLabel={
+                currentSportData.tournamentDescriptionLabel
+              }
             />
           )}
           <HeadToHeadBanner
-            data={data}
+            data={currentSportData}
             isConciseView={isConciseView ?? false}
-            eventSummary={data.accessibleEventSummary}
+            eventSummary={currentSportData.accessibleEventSummary}
             shouldHideBadges={shouldHideBadges}
             maxScoreLength={maximumContainerScoreDigits}
             teamBadgePlaceholderFallbackType={teamBadgePlaceholderFallbackType}
           />
-          {hasActions && shouldShowActions && <Actions data={data} />}
-          {!isConciseView && <Actions data={data} />}
+          {hasActions && shouldShowActions && (
+            <Actions data={currentSportData} />
+          )}
+          {!isConciseView && <Actions data={currentSportData} />}
           {!isConciseView && (
             <Footer
-              venue={data.venue?.name || 'To be confirmed'}
-              attendanceValue={data.attendance?.value}
-              attendanceInfo={data.attendance?.additionalInfo}
+              venue={currentSportData.venue?.name || 'To be confirmed'}
+              attendanceValue={currentSportData.attendance?.value}
+              attendanceInfo={currentSportData.attendance?.additionalInfo}
             />
           )}
         </div>
