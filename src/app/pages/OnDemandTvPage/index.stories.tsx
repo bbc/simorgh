@@ -6,6 +6,7 @@ import { data as pashto } from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn
 import _OnDemandTvPage, { OnDemandTVProps } from './OnDemandTvPage';
 import PageLayoutWrapper from '#app/components/PageLayoutWrapper';
 import withMediaError from '#app/lib/utilities/episodeAvailability/withMediaError';
+import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 
 const OnDemandTvPage = withMediaError(_OnDemandTvPage);
 
@@ -23,16 +24,18 @@ const Component = ({ service, isLite }: StoryProps) => {
   const pageData = onDemandTvFixtures[service] || afrique;
 
   return (
-    <PageLayoutWrapper pageData={pageData} status={200}>
-      <OnDemandTvPage
-        pageData={pageData}
-        service={service}
-        loading={false}
-        error=""
-        pageType={TV_PAGE}
-        isLite={isLite}
-      />
-    </PageLayoutWrapper>
+    <ServiceContextProvider service={service}>
+      <PageLayoutWrapper pageData={pageData} status={200}>
+        <OnDemandTvPage
+          pageData={pageData}
+          service={service}
+          loading={false}
+          error=""
+          pageType={TV_PAGE}
+          isLite={isLite}
+        />
+      </PageLayoutWrapper>
+    </ServiceContextProvider>
   );
 };
 
