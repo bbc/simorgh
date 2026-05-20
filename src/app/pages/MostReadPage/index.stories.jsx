@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { MOST_READ_PAGE } from '#app/routes/utils/pageTypes';
-import MostReadPage from '.';
+import MostReadPage from './MostReadPage';
 
 const Component = ({ service, variant }) => {
   const [pageData, setPageData] = useState({});

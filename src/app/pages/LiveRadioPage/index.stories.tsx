@@ -1,6 +1,6 @@
 import { LIVE_RADIO_PAGE } from '#app/routes/utils/pageTypes';
 import afrique from '#data/afrique/bbc_afrique_radio/liveradio.json';
-import { LiveRadioPage } from '..';
+import LiveRadioPage from './LiveRadioPage';
 
 const Component = () => {
   return (
