@@ -132,7 +132,7 @@ TestLite.globals = {
   service: { service: 'gahuza' },
 };
 
-// TestLite.tags = ['!dev'];
+TestLite.tags = ['!dev'];
 
 TestLite.parameters = {
   chromatic: {
