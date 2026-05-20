@@ -10,6 +10,7 @@ import handleError from '#app/routes/utils/handleError';
 import { PageTypes } from '#app/models/types/global';
 
 import { ArticleMetadata } from '#app/models/types/optimo';
+import blocksToMarkdown from '#app/utilities/blocksToMarkdown';
 import augmentWithDisclaimer from './augmentWithDisclaimer';
 import shouldRender from '../../../utilities/shouldRender';
 import getPageData from '../../../utilities/pageRequests/getPageData';
@@ -40,7 +41,7 @@ export default async (context: GetServerSidePropsContext) => {
 
   const resolvedUrlWithoutQuery = resolvedUrl.split('?')?.[0];
 
-  const { isAmp } = getPathExtension(resolvedUrlWithoutQuery);
+  const { isAmp, isMarkdown } = getPathExtension(resolvedUrlWithoutQuery);
   const { variant } = parseRoute(resolvedUrl);
 
   const { data } = await getPageData({
@@ -102,6 +103,13 @@ export default async (context: GetServerSidePropsContext) => {
     'Cache-Control',
     `public, stale-if-error=90, stale-while-revalidate=30, max-age=${maxAge}`,
   );
+  if (isMarkdown) {
+    const markdown = blocksToMarkdown(data?.pageData?.article.content.model.blocks);
+    context.res.setHeader('Content-Type', 'text/markdown; charset=utf-8');
+    context.res.setHeader('x-markdown-tokens', Math.floor(markdown.length / 3));    
+    context.res.end(markdown);
+    return { props: {} };
+  }
 
   const {
     topStories = null,

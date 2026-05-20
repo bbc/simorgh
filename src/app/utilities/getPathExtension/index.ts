@@ -1,5 +1,5 @@
 import Url from 'url-parse';
-import { APP_REGEX, AMP_REGEX, LITE_REGEX } from '#app/lib/regex.const';
+import { APP_REGEX, AMP_REGEX, LITE_REGEX, MARKDOWN_REGEX } from '#app/lib/regex.const';
 
 export default (url: string) => {
   const { pathname } = new Url(url, true);
@@ -8,5 +8,6 @@ export default (url: string) => {
     isAmp: AMP_REGEX.test(pathname),
     isApp: APP_REGEX.test(pathname),
     isLite: LITE_REGEX.test(pathname),
+    isMarkdown: MARKDOWN_REGEX.test(pathname),
   };
 };
