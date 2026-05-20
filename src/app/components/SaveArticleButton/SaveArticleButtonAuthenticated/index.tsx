@@ -67,15 +67,18 @@ const SaveArticleButtonAuthenticated = ({
   };
 
   return (
-    <SaveButton
-      onClick={handleClick}
-      isLoading={isLoading}
-      isMutating={isMutating}
-      isSaved={isSaved}
-      buttonText={getButtonText()}
-      removeText={saveArticleButton.remove}
-      testId="save-article-btn-authorized"
-    />
+    <div {...viewTracker}>
+      <SaveButton
+        onClick={handleClick}
+        isLoading={isLoading}
+        isMutating={isMutating}
+        isSaved={isSaved}
+        disabled={isLoading}
+        buttonText={getButtonText()}
+        removeText={saveArticleButton.remove}
+        testId="save-article-btn-authorized"
+      />
+    </div>
   );
 };
 
