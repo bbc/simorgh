@@ -164,7 +164,7 @@ describe('OnDemand TV Page ', () => {
 
   it('should show the expired content message if episode is expired', async () => {
     const pageData = {
-      ...pashtoPageData?.data,
+      ...getPageData(),
       episodeAvailability: 'expired',
     } as unknown as OnDemandTVProps['pageData'];
 
@@ -180,7 +180,7 @@ describe('OnDemand TV Page ', () => {
 
   it('should show the future content message if episode is not yet available', async () => {
     const pageData = {
-      ...pashtoPageData?.data,
+      ...getPageData(),
       episodeAvailability: 'not-yet-available',
     } as unknown as OnDemandTVProps['pageData'];
 
