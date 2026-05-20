@@ -4,10 +4,13 @@ import LiveRadioPage from './LiveRadioPage';
 import PageLayoutWrapper from '#app/components/PageLayoutWrapper';
 
 const Component = () => {
+  const pageData = afrique.data;
   return (
-    <PageLayoutWrapper pageData={afrique.data} status={200}>
+    // @ts-expect-error - Fixture data
+    <PageLayoutWrapper pageData={pageData} status={200}>
       <LiveRadioPage
-        pageData={afrique.data}
+        // @ts-expect-error - Fixture data
+        pageData={pageData}
         status={200}
         service="afrique"
         loading={false}

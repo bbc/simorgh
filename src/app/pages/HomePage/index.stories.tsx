@@ -59,6 +59,7 @@ const Component = ({ service, variant, isLite }: StoryProps) => {
   }
 
   return (
+    // @ts-expect-error - Fixture data
     <PageLayoutWrapper pageData={pageData} status={200}>
       <HomePage
         service={service}
@@ -68,6 +69,7 @@ const Component = ({ service, variant, isLite }: StoryProps) => {
         isAmp={false}
         isLite={isLite}
         pathname={`/${service}`}
+        // @ts-expect-error - Fixture data
         pageData={pageData}
       />
     </PageLayoutWrapper>
