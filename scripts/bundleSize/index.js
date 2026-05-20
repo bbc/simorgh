@@ -1,6 +1,6 @@
 #! /usr/bin/env node
+// biome-ignore-all lint/suspicious/noConsole: we want this
 /* eslint-disable import/extensions */
-/* eslint-disable no-console */
 
 import chalk from 'chalk';
 import Table from 'cli-table';

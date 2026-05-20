@@ -6,6 +6,7 @@
       "**/*.{ts,tsx,js,jsx}",
       "!**/tz/**",
       "!**/colorthief.js",
+      "!dirAlias.js",
       "!**/index.stories.jsx",
       "!**/index.stories.tsx",
       "!**/index.amp.stories.jsx",
@@ -159,7 +160,31 @@
     "enabled": true,
     "actions": {
       "source": {
-        "organizeImports": "on"
+        "organizeImports": {
+            "options": {
+                "groups": [
+                    [
+                        ":NODE:",
+                        "react",
+                        "react/**",
+                        "next",
+                        "next/**"
+                    ],
+                    ":BLANK_LINE:",
+                    [
+                        ":PACKAGE:",
+                        "!@bbc/**"
+                    ],
+                    ":BLANK_LINE:",
+                    "@bbc/**",
+                    ":BLANK_LINE:",
+                    [
+                        ":ALIAS:",
+                        ":PATH:"
+                    ]
+                ]
+            }
+        }
       }
     }
   }

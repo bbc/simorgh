@@ -1,5 +1,5 @@
+// biome-ignore-all lint/suspicious/noConsole: we want this
 /* eslint-disable no-prototype-builtins */
-/* eslint-disable no-console */
 const { exec } = require('child_process');
 const fs = require('fs');
 

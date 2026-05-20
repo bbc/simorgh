@@ -1,4 +1,4 @@
-/* eslint-disable no-console */
+// biome-ignore-all lint/suspicious/noConsole: we want this
 const { exec } = require('child_process');
 const fs = require('fs');
 const { dependencies, devDependencies } = require('../package.json');

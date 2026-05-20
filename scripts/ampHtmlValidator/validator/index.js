@@ -1,4 +1,4 @@
-/* eslint-disable no-console */
+// biome-ignore-all lint/suspicious/noConsole: we want this
 const amphtmlValidator = require('amphtml-validator');
 
 const baseUrl = 'http://localhost:7081';
