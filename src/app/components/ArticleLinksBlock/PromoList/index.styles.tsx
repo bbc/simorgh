@@ -1,6 +1,7 @@
+import { css, type Theme } from '@emotion/react';
+
 import { OPERA_MINI_CLASSNAME } from '#app/lib/utilities/addOperaMiniClassScript';
 import pixelsToRem from '#app/utilities/pixelsToRem';
-import { css, type Theme } from '@emotion/react';
 
 export default {
   promo: ({ spacings }: Theme) =>

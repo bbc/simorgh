@@ -1,27 +1,29 @@
 import { use } from 'react';
+
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
-import {
-  formatDuration,
-  formatUnixTimestamp,
-} from '#psammead/psammead-timestamp-container/src/utilities';
-import Timestamp from '#psammead/psammead-timestamp-container/src';
-import SectionLabel from '#psammead/psammead-section-label/src';
-import {
-  GEL_SPACING_DBL,
-  GEL_SPACING_TRPL,
-  GEL_SPACING_QUAD,
-} from '#psammead/gel-foundations/src/spacings';
+
+import EpisodeList from '#containers/EpisodeList';
+import { RequestContext } from '#contexts/RequestContext';
+import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
+import useViewTracker from '#hooks/useViewTracker';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
-import { RequestContext } from '#contexts/RequestContext';
-import EpisodeList from '#containers/EpisodeList';
-import useViewTracker from '#hooks/useViewTracker';
-import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
+import {
+  GEL_SPACING_DBL,
+  GEL_SPACING_QUAD,
+  GEL_SPACING_TRPL,
+} from '#psammead/gel-foundations/src/spacings';
+import SectionLabel from '#psammead/psammead-section-label/src';
+import Timestamp from '#psammead/psammead-timestamp-container/src';
+import {
+  formatDuration,
+  formatUnixTimestamp,
+} from '#psammead/psammead-timestamp-container/src/utilities';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
+import { ServiceContext } from '../../../../contexts/ServiceContext';
 
 const Spacer = styled.aside`
   position: relative;

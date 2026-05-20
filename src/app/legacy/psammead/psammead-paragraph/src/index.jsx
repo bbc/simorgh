@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+
 import { GEL_SPACING_TRPL } from '#psammead/gel-foundations/src/spacings';
 
 const Paragraph = styled.p`

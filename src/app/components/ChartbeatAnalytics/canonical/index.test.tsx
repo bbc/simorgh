@@ -1,7 +1,8 @@
-import { Helmet } from 'react-helmet';
 import { render } from '@testing-library/react';
-import CanonicalChartbeatAnalytics from '.';
+import { Helmet } from 'react-helmet';
+
 import type { CanonicalChartbeatConfig } from '../types';
+import CanonicalChartbeatAnalytics from '.';
 
 describe('CanonicalChartbeatAnalytics', () => {
   afterEach(jest.clearAllMocks);

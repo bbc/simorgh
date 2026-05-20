@@ -1,10 +1,11 @@
 import { Fragment } from 'react';
+
 import MediaIndicator from '#psammead/psammead-media-indicator/src';
 import {
-  IndexAlsos,
   IndexAlso,
-  IndexAlsosUl,
+  IndexAlsos,
   IndexAlsosLi,
+  IndexAlsosUl,
 } from '../src/IndexAlsos/index';
 
 const MAX_NUM_INDEX_ALSOS = 3; // Cap the number of Index Alsos at 3.

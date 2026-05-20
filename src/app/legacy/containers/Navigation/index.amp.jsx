@@ -1,11 +1,12 @@
+import styled from '@emotion/styled';
+
+import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/breakpoints';
 import Navigation from '#psammead/psammead-navigation/src';
-import { ScrollableNavigation } from '#psammead/psammead-navigation/src/ScrollableNavigation';
 import {
   AmpDropdown,
   AmpMenuButton,
 } from '#psammead/psammead-navigation/src/DropdownNavigation';
-import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/breakpoints';
-import styled from '@emotion/styled';
+import { ScrollableNavigation } from '#psammead/psammead-navigation/src/ScrollableNavigation';
 
 const DROPDOWN_ID = 'si-nav-dropdown-menu';
 const NAVIGATION_ID = 'si-nav';

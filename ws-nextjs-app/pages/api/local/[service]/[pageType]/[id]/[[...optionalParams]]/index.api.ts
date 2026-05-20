@@ -1,8 +1,9 @@
 /* eslint-disable import/prefer-default-export */
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { PageTypes, Services } from '#app/models/types/global';
 import { NextApiRequest, NextApiResponse } from 'next';
+
+import { PageTypes, Services } from '#app/models/types/global';
 
 type RequestPathParts = {
   service: Services;

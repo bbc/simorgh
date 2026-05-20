@@ -2,8 +2,8 @@
 import { PageTypes } from '#app/models/types/global';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceParametersType } from '../../../../types';
-import interceptGetRequests from '../helpers/interceptGetRequests';
 import getTotalPageSize from '../helpers/getTotalPageSize';
+import interceptGetRequests from '../helpers/interceptGetRequests';
 import roundTo2Decimals from '../helpers/roundTo2Decimals';
 
 const MAX_PAGE_WEIGHT_KB = 50;

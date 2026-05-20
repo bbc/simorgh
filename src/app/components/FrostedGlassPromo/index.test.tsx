@@ -1,24 +1,21 @@
 // biome-ignore-all lint/suspicious/noExplicitAny: we want this
 import type { PropsWithChildren } from 'react';
 
-import { ToggleContextProvider } from '../../contexts/ToggleContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
-
-import { STORY_PAGE } from '../../routes/utils/pageTypes';
-import makeRelativeUrlPath from '../../lib/utilities/makeRelativeUrlPath';
+import { ToggleContextProvider } from '../../contexts/ToggleContext';
 import * as clickTracking from '../../hooks/useClickTrackerHandler';
-import { render } from '../react-testing-library-with-providers';
+import makeRelativeUrlPath from '../../lib/utilities/makeRelativeUrlPath';
 import type { Services, Variants } from '../../models/types/global';
-
+import { STORY_PAGE } from '../../routes/utils/pageTypes';
+import { render } from '../react-testing-library-with-providers';
+import Promo from '.';
 import {
-  promoProps,
   cpsPromoFixture,
   linkPromoFixture,
   makeOptimoPromoFixture,
+  promoProps,
 } from './fixtures';
-
-import Promo from '.';
 import type { PromoProps } from './types';
 
 interface Props extends PromoProps {

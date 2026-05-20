@@ -1,10 +1,11 @@
 import path from 'ramda/src/path';
-import nodeLogger from '#lib/logger.node';
+
 import { RADIO_SCHEDULE_DATA_INCOMPLETE_ERROR } from '#lib/logger.const';
+import nodeLogger from '#lib/logger.node';
 import {
+  getIsProgramValid,
   getLastProgramIndex,
   isScheduleDataComplete,
-  getIsProgramValid,
 } from './evaluateScheduleData';
 
 const logger = nodeLogger(__filename);

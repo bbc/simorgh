@@ -1,9 +1,9 @@
 import type { MediaOverrides } from '#app/models/types/media';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import type {
-  LegacyMediaBlock,
   ConfigBuilderProps,
   ConfigBuilderReturnProps,
+  LegacyMediaBlock,
 } from '../types';
 import buildPlaceholderConfig from '../utils/buildPlaceholderConfig';
 

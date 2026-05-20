@@ -1,7 +1,7 @@
 // biome-ignore-all lint/suspicious/noTemplateCurlyInString: this is fine
 import { render } from '../../react-testing-library-with-providers';
-import AmpATIAnalytics from '.';
 import type { ReverbBeaconConfig } from '../types';
+import AmpATIAnalytics from '.';
 
 const splitUrl = (url: string): string[] =>
   url.replace(/&/g, ',').replace(/\?/g, ',').split(',');

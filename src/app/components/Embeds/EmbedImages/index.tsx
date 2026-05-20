@@ -1,8 +1,9 @@
 import { type PropsWithChildren, use } from 'react';
+
 import { RequestContext } from '#app/contexts/RequestContext';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
-import styles from './index.styles';
 import Image from '../../Image';
+import styles from './index.styles';
 
 type Props = {
   // biome-ignore lint/suspicious/noExplicitAny: we want this

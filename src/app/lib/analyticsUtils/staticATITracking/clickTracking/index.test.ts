@@ -1,5 +1,5 @@
-import { STATIC_REVERB_CLICK_TRACKING } from '#app/lib/analyticsUtils/analytics.const';
 import { fireEvent } from '#app/components/react-testing-library-with-providers';
+import { STATIC_REVERB_CLICK_TRACKING } from '#app/lib/analyticsUtils/analytics.const';
 import clickTracking from '.';
 
 const createAnchor = ({

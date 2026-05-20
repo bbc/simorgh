@@ -1,9 +1,10 @@
-import UsefulLinks from '#app/components/UsefulLinks';
-import Pagination from '#app/components/Pagination';
-import { ServiceContext } from '#app/contexts/ServiceContext';
 import { useContext } from 'react';
-import MetadataContainer from '#app/components/Metadata';
+
 import ATIAnalytics from '#app/components/ATIAnalytics';
+import MetadataContainer from '#app/components/Metadata';
+import Pagination from '#app/components/Pagination';
+import UsefulLinks from '#app/components/UsefulLinks';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import { TopicsPageProps } from '#app/lib/config/fixtures/types';
 import styles from './index.styles';
 

@@ -1,18 +1,20 @@
 // biome-ignore-all lint/suspicious/noExplicitAny: we want this
 /* eslint-disable import/no-unresolved */
-import { use, useEffect, useState, useRef, useCallback } from 'react';
-import { RequestContext } from '#app/contexts/RequestContext';
+import { use, useCallback, useEffect, useRef, useState } from 'react';
+
 import { OptimizelyContext } from '@optimizely/react-sdk';
+
+import { RequestContext } from '#app/contexts/RequestContext';
 import {
   STATIC_REVERB_VIEW_TRACKING,
   VIEW_EVENT,
 } from '#app/lib/analyticsUtils/analytics.const';
 import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
-import type { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import constructReverbUrl from '#app/lib/analyticsUtils/staticATITracking/constructReverbUrl';
-import useTrackingToggle from '../useTrackingToggle';
+import type { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import dispatchTrackingRequests from '../../lib/analyticsUtils/dispatchTrackingRequests';
+import useTrackingToggle from '../useTrackingToggle';
 import getIntersectionObserver from './getIntersectionObserver';
 
 const VIEWED_DURATION_MS = 1000;

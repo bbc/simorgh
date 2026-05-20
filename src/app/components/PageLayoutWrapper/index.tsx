@@ -1,23 +1,25 @@
 import { type PropsWithChildren, use } from 'react';
+
 import { Helmet } from 'react-helmet';
-import GlobalStyles from '#psammead/psammead-styles/src/global-styles';
+
 import type { Navigation, PageTypes } from '#app/models/types/global';
-import appendAdDomainsToCSPHeader from '#app/utilities/appendAdDomainsToCSPHeader';
 import { OFFLINE_PAGE } from '#app/routes/utils/pageTypes';
-import type { TopStoryItem } from '../../pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
-import WebVitals from '../../legacy/containers/WebVitals';
-import HeaderContainer from '../../legacy/containers/Header';
-import FooterContainer from '../../legacy/containers/Footer';
-import ManifestContainer from '../../legacy/containers/Manifest';
-import ServiceWorker from '../ServiceWorker';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import appendAdDomainsToCSPHeader from '#app/utilities/appendAdDomainsToCSPHeader';
+import GlobalStyles from '#psammead/psammead-styles/src/global-styles';
 import { RequestContext } from '../../contexts/RequestContext';
+import { ServiceContext } from '../../contexts/ServiceContext';
+import FooterContainer from '../../legacy/containers/Footer';
+import HeaderContainer from '../../legacy/containers/Header';
+import ManifestContainer from '../../legacy/containers/Manifest';
+import WebVitals from '../../legacy/containers/WebVitals';
+import type { TopStoryItem } from '../../pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
+import type {
+  CPSMostReadRecord,
+  OptimoMostReadRecord,
+} from '../MostRead/types';
+import ServiceWorker from '../ServiceWorker';
 import fontFaces from '../ThemeProvider/fontFaces';
 import styles from './index.styles';
-import type {
-  OptimoMostReadRecord,
-  CPSMostReadRecord,
-} from '../MostRead/types';
 
 type ModelType = {
   blocks?: [

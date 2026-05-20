@@ -1,8 +1,8 @@
+import { LRUCache } from 'lru-cache';
+
 import { IDCTA_FETCH_ERROR } from '#app/lib/logger.const';
 import nodeLogger from '#app/lib/logger.node';
-
 import type { IdctaConfig } from '#app/models/types/account';
-import { LRUCache } from 'lru-cache';
 import { getIdctaConfigUrl } from '../getIdctaBaseUrl';
 
 const logger = nodeLogger(__filename);

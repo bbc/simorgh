@@ -1,16 +1,18 @@
 /* eslint-disable import/no-unresolved */
 import { useMemo } from 'react';
+
 import * as optimizelyReactSdk from '@optimizely/react-sdk';
 import type { UserInfo } from '@optimizely/react-sdk/dist/utils';
 import { render } from '@testing-library/react';
 import Cookie from 'js-cookie';
+
 import { GROUP_3_MAX_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
-import { ServiceContext } from '#contexts/ServiceContext';
+import type { ServiceConfig } from '#app/models/types/serviceConfig';
 import {
   RequestContext,
   type RequestContextProps,
 } from '#contexts/RequestContext';
-import type { ServiceConfig } from '#app/models/types/serviceConfig';
+import { ServiceContext } from '#contexts/ServiceContext';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import withOptimizelyProvider from '.';
 import { REFERRER_CATEGORIES } from './userAttributes';

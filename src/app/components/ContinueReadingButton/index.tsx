@@ -1,16 +1,17 @@
 import {
-  use,
-  useEffect,
+  type Dispatch,
   type MouseEvent,
   type SetStateAction,
-  type Dispatch,
+  use,
+  useEffect,
 } from 'react';
-import Text from '#app/components/Text';
+
 import { TriangleDown } from '#app/components/icons';
-import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
-import type { EventTrackingData } from '#app/lib/analyticsUtils/types';
-import useViewTracker from '#app/hooks/useViewTracker';
+import Text from '#app/components/Text';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import useViewTracker from '#app/hooks/useViewTracker';
+import type { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import type { ComponentExperimentProps } from '#app/models/types/global';
 import styles from './index.styles';
 

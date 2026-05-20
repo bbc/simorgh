@@ -1,20 +1,21 @@
 import path from 'node:path';
+
 import expressStaticGzip from 'express-static-gzip';
 
 import {
+  africaEyeTVDataPath,
   articleDataPath,
   cpsAssetPageDataPath,
   homePageDataPath,
   legacyAssetPageDataPath,
+  liveRadioDataPath,
   mostReadDataRegexPath,
   onDemandRadioDataPath,
   onDemandTvDataPath,
-  topicDataPath,
-  secondaryColumnDataRegexPath,
-  africaEyeTVDataPath,
-  liveRadioDataPath,
-  podcastEpisodeDataPath,
   podcastBrandDataPath,
+  podcastEpisodeDataPath,
+  secondaryColumnDataRegexPath,
+  topicDataPath,
 } from '#app/routes/utils/regex';
 import { LOCAL_SENDFILE_ERROR } from '#lib/logger.const';
 import nodeLogger from '#lib/logger.node';

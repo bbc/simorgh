@@ -1,9 +1,11 @@
 import { use } from 'react';
+
 import { Helmet } from 'react-helmet';
-import { RequestContext } from '#contexts/RequestContext';
-import serialiseForScript from '#lib/utilities/serialiseForScript';
-import getBrandedImage from '#lib/utilities/getBrandedImage';
+
 import type { Services } from '#app/models/types/global';
+import { RequestContext } from '#contexts/RequestContext';
+import getBrandedImage from '#lib/utilities/getBrandedImage';
+import serialiseForScript from '#lib/utilities/serialiseForScript';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import getAboutTagsContent from './getAboutTagsContent';
 import type { BylineLinkedData, LinkedDataProps } from './types';

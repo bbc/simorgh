@@ -1,5 +1,5 @@
-import type { PageTypes, Platforms, Services } from '../../models/types/global';
 import type { RequestContextProps } from '../../contexts/RequestContext';
+import type { PageTypes, Platforms, Services } from '../../models/types/global';
 import type { ServiceConfig } from '../../models/types/serviceConfig';
 
 export interface AMPAnalyticsData {

@@ -1,8 +1,8 @@
 import { BulletedListItem } from '../../../components/BulletedList';
 import Blocks from '../Blocks';
 import fragment from '../Fragment';
-import InlineLink from '../InlineLink';
 import inline from '../InlineContainer';
+import InlineLink from '../InlineLink';
 
 const withClickHandler = (Component, clickHandler) => props => (
   <Component {...props} onClick={clickHandler} />

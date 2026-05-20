@@ -1,6 +1,8 @@
-import { Global } from '@emotion/react';
 import { use, useEffect, useRef } from 'react';
+
+import { Global } from '@emotion/react';
 import moment from 'moment-timezone';
+
 import MediaLoader from '#app/components/MediaLoader';
 import type {
   Player,
@@ -9,14 +11,14 @@ import type {
   PortraitClipMediaBlock,
   SMPEvent,
 } from '#app/components/MediaLoader/types';
-import { navigationIcons } from '#psammead/psammead-assets/src/svgs';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import type { EventTrackingData } from '#app/lib/analyticsUtils/types';
-import useViewTracker from '../../hooks/useViewTracker';
+import { navigationIcons } from '#psammead/psammead-assets/src/svgs';
 import useSwipeTracker from '../../hooks/useSwipeTracker';
-import styles from './index.styles';
-import VisuallyHiddenText from '../VisuallyHiddenText';
+import useViewTracker from '../../hooks/useViewTracker';
 import { DownArrowIcon, UpArrowIcon } from '../icons';
+import VisuallyHiddenText from '../VisuallyHiddenText';
+import styles from './index.styles';
 
 type ModalTrackingParameters = {
   eventTrackingData: EventTrackingData;

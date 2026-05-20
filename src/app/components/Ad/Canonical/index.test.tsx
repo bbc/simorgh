@@ -1,12 +1,13 @@
 import { BrowserRouter } from 'react-router-dom';
+
 import {
   RequestContext,
   type RequestContextProps,
 } from '#contexts/RequestContext';
 import isLive from '#lib/utilities/isLive';
 import { render } from '../../react-testing-library-with-providers';
-import CanonicalAd, { getBootstrapSrc } from '.';
 import type { SlotType } from '../types';
+import CanonicalAd, { getBootstrapSrc } from '.';
 
 const defaultRequestContextData = {
   showAdsBasedOnLocation: true,

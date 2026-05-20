@@ -1,7 +1,7 @@
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 import styles from '../index.styles';
-import Card from './card';
 import type { PlayerActions } from '../types';
+import Card from './card';
 
 const goalTypesHandled: Record<string, string> = {
   Penalty: 'pen',

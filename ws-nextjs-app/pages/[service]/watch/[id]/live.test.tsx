@@ -1,8 +1,9 @@
 import { Helmet } from 'react-helmet';
+
 import {
+  act,
   render,
   screen,
-  act,
 } from '#app/components/react-testing-library-with-providers';
 import liveTvFixture from '#data/dari/watch/bbc_afghan_tv/live.json';
 import LiveTv from './live/LiveTvPageLayout';

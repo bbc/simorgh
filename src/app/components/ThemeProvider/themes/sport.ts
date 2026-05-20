@@ -1,20 +1,20 @@
 import type { ServiceTheme } from '#app/models/types/theming';
-import {
-  SPORT_YELLOW,
-  BLACK,
-  MIDNIGHT_BLACK,
-  SPORT_YELLOW_30,
-} from '../palette';
-import latinScript from '../fontScripts/latin';
+import brandSVG from '../chameleonLogos/sport';
 import {
   REITH_SANS_BOLD,
   REITH_SANS_REGULAR,
-  REITH_SERIF_MEDIUM,
   REITH_SERIF_LIGHT,
+  REITH_SERIF_MEDIUM,
 } from '../fontFaces';
+import latinScript from '../fontScripts/latin';
 import reithFontVariants from '../fontVariants/reith';
+import {
+  BLACK,
+  MIDNIGHT_BLACK,
+  SPORT_YELLOW,
+  SPORT_YELLOW_30,
+} from '../palette';
 import withThemeProvider from '../withThemeProvider';
-import brandSVG from '../chameleonLogos/sport';
 
 export const theme: ServiceTheme = {
   palette: {

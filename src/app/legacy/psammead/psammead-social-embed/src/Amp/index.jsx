@@ -1,4 +1,5 @@
 import { memo } from 'react';
+
 import { Helmet } from 'react-helmet';
 
 const Instagram = ({ id }) => (

@@ -1,6 +1,6 @@
 import { render } from '../../../components/react-testing-library-with-providers';
-import ParagraphContainer from '.';
 import getUUID from '../../../lib/utilities/getUUID';
+import ParagraphContainer from '.';
 
 const fragmentBlock = (text, attributes = []) => ({
   type: 'fragment',

@@ -1,20 +1,19 @@
 /* eslint-disable no-console */
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import {
+  fireEvent,
   render,
   screen,
   waitFor,
-  fireEvent,
 } from '../../../../components/react-testing-library-with-providers';
 import {
   ARTICLE_PAGE,
-  STORY_PAGE,
   CORRESPONDENT_STORY_PAGE,
+  STORY_PAGE,
 } from '../../../../routes/utils/pageTypes';
-
-import { CanonicalSocialEmbed, AmpSocialEmbed } from './index';
-import fixtures from './fixtures';
 import * as useScript from './Canonical/useScript';
+import fixtures from './fixtures';
+import { AmpSocialEmbed, CanonicalSocialEmbed } from './index';
 
 const useScriptSpy = jest.spyOn(useScript, 'default');
 const mockOnRender = jest.fn();

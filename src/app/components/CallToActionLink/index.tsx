@@ -1,12 +1,13 @@
 import { type PropsWithChildren, useMemo } from 'react';
+
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import type { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import type { FontVariant, GelFontSize } from '../../models/types/theming';
-import Chevron from './Chevron';
 import ButtonLikeWrapper from './ButtonLikeWrapper';
-import Text from './Text';
-import styles from './index.styles';
 import CallToActionLinkContext from './CallToActionLinkContext';
+import Chevron from './Chevron';
+import styles from './index.styles';
+import Text from './Text';
 
 type CallToActionLinkProps = {
   id?: string;

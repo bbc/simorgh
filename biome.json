@@ -167,6 +167,7 @@
     "actions": {
       "source": {
         "organizeImports": {
+          "level": "on",
           "options": {
             "groups": [
               [":NODE:", "react", "react/**", "next", "next/**"],

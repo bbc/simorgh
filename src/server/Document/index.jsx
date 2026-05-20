@@ -1,16 +1,18 @@
 import path from 'node:path';
-import { renderToString, renderToStaticMarkup } from 'react-dom/server';
-import { ChunkExtractor, ChunkExtractorManager } from '@loadable/server';
+
+import createCache from '@emotion/cache';
 import { CacheProvider } from '@emotion/react';
 import createEmotionServer from '@emotion/server/create-instance';
-import createCache from '@emotion/cache';
+import { ChunkExtractor, ChunkExtractorManager } from '@loadable/server';
+import { renderToStaticMarkup, renderToString } from 'react-dom/server';
 import { Helmet } from 'react-helmet';
+
 import { ServerApp } from '#containers/App';
-import DocumentComponent from './component';
 import {
   getLinkAttributes,
   getScriptAttributes,
 } from '../utilities/attributeFunctions';
+import DocumentComponent from './component';
 
 const renderDocument = async ({
   bbcOrigin,

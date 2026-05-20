@@ -1,5 +1,5 @@
-import certsRequired from '.';
 import getEnvironment from '../getEnvironment';
+import certsRequired from '.';
 
 jest.mock('../getEnvironment', () =>
   jest.fn().mockImplementation(() => 'local'),

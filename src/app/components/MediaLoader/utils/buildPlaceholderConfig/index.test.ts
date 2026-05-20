@@ -1,5 +1,5 @@
-import buildPlaceholderConfig from '.';
 import type { PlaceholderConfig } from '../../types';
+import buildPlaceholderConfig from '.';
 
 describe('BuildPlaceholderConfig', () => {
   const title = 'Media Title';

@@ -1,12 +1,13 @@
 // biome-ignore-all lint/suspicious/noExplicitAny: we want this
 import { use } from 'react';
+
 import type { IdctaConfig } from '#app/models/types/account';
-import { AccountContext } from '.';
 import {
   render,
   screen,
   waitFor,
 } from '../../components/react-testing-library-with-providers';
+import { AccountContext } from '.';
 
 const mockIdctaConfig = {
   'id-availability': 'GREEN',

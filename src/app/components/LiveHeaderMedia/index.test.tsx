@@ -1,13 +1,13 @@
 import mundoLiveFixture from '#data/mundo/live/c7dkx155e626t.json';
-import LiveHeaderMedia from '.';
+import * as clickTracking from '../../hooks/useClickTrackerHandler';
+import * as viewTracking from '../../hooks/useViewTracker';
 import type { MediaCollection, Player } from '../MediaLoader/types';
 import {
-  screen,
-  render,
   fireEvent,
+  render,
+  screen,
 } from '../react-testing-library-with-providers';
-import * as viewTracking from '../../hooks/useViewTracker';
-import * as clickTracking from '../../hooks/useClickTrackerHandler';
+import LiveHeaderMedia from '.';
 
 const fixtureData = mundoLiveFixture.data.mediaCollections;
 

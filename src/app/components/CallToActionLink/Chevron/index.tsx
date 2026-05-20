@@ -1,5 +1,7 @@
-import type { SerializedStyles, Theme } from '@emotion/react';
 import { use } from 'react';
+
+import type { SerializedStyles, Theme } from '@emotion/react';
+
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { LeftChevron, RightChevron } from '../../icons';
 import CallToActionLinkContext from '../CallToActionLinkContext';

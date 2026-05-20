@@ -1,7 +1,9 @@
 import { use } from 'react';
-import InlineLink from '#psammead/psammead-inline-link/src';
+
 import pathOr from 'ramda/src/pathOr';
+
 import makeRelativeUrlPath from '#lib/utilities/makeRelativeUrlPath';
+import InlineLink from '#psammead/psammead-inline-link/src';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Blocks from '../Blocks';
 import fragment from '../Fragment';

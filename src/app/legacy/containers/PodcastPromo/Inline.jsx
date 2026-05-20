@@ -1,29 +1,30 @@
 import { use } from 'react';
+
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
-import {
-  GEL_SPACING_HLF,
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-  GEL_SPACING_TRPL,
-  GEL_SPACING_HLF_TRPL,
-  GEL_SPACING_QUIN,
-} from '#psammead/gel-foundations/src/spacings';
+
+import { FORCED_COLOURS } from '#app/components/ThemeProvider/mediaQueries';
+import { RequestContext } from '#app/contexts/RequestContext';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import SkipLinkWrapper from '#components/SkipLinkWrapper';
+import ImageWithPlaceholder from '#containers/ImageWithPlaceholder';
+import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
+import useViewTracker from '#hooks/useViewTracker';
 import {
   GEL_GROUP_0_SCREEN_WIDTH_MAX,
   GEL_GROUP_1_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
-import useViewTracker from '#hooks/useViewTracker';
-import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
-
-import ImageWithPlaceholder from '#containers/ImageWithPlaceholder';
-import SkipLinkWrapper from '#components/SkipLinkWrapper';
+import {
+  GEL_SPACING,
+  GEL_SPACING_DBL,
+  GEL_SPACING_HLF,
+  GEL_SPACING_HLF_TRPL,
+  GEL_SPACING_QUIN,
+  GEL_SPACING_TRPL,
+} from '#psammead/gel-foundations/src/spacings';
 import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import { RequestContext } from '#app/contexts/RequestContext';
-import { FORCED_COLOURS } from '#app/components/ThemeProvider/mediaQueries';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import PromoComponent from './components';
 import getPromo from './shared';

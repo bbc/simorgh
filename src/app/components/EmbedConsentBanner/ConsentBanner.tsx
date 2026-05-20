@@ -1,15 +1,15 @@
 // biome-ignore-all lint/style/useConsistentArrowReturn: we want this
-import { use, type MouseEvent } from 'react';
+import { type MouseEvent, use } from 'react';
+
 import pathOr from 'ramda/src/pathOr';
 
 import { RequestContext } from '#app/contexts/RequestContext';
 import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
-import Text from '../Text';
-import Paragraph from '../Paragraph';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import type { Translations } from '../../models/types/translations';
 import useViewTracker from '../../hooks/useViewTracker';
-
+import type { Translations } from '../../models/types/translations';
+import Paragraph from '../Paragraph';
+import Text from '../Text';
 import consentBannerCss from './ConsentBanner.styles';
 import { type ConsentBannerProviders, getEventTrackingData } from './types';
 

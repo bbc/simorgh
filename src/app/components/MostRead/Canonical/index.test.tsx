@@ -1,20 +1,20 @@
 import type { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import { data as arabicMostReadData } from '../../../../../data/arabic/mostRead/index.json';
-import { data as pidginMostReadData } from '../../../../../data/pidgin/mostRead/index.json';
 import { data as kyrgyzMostReadData } from '../../../../../data/kyrgyz/mostRead/index.json';
+import { data as pidginMostReadData } from '../../../../../data/pidgin/mostRead/index.json';
 import { data as ukrainianMostReadData } from '../../../../../data/ukrainian/mostRead/index.json';
-import { ToggleContextProvider } from '../../../contexts/ToggleContext';
-import * as viewTracking from '../../../hooks/useViewTracker';
-import * as clickTracking from '../../../hooks/useClickTrackerHandler';
-import { render } from '../../react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
-import CanonicalMostRead from '.';
+import { ToggleContextProvider } from '../../../contexts/ToggleContext';
+import * as clickTracking from '../../../hooks/useClickTrackerHandler';
+import * as viewTracking from '../../../hooks/useViewTracker';
 import type { Services } from '../../../models/types/global';
+import { render } from '../../react-testing-library-with-providers';
 import type { MostReadData } from '../types';
 import {
   setFreshPromoTimestamp,
   setStalePromoTimestamp,
 } from '../utilities/testHelpers';
+import CanonicalMostRead from '.';
 
 interface MostReadCanonicalProps {
   service: Services;

@@ -1,8 +1,8 @@
 import type { OptimoBlock } from '#app/models/types/optimo';
 import type { Post } from '#nextjs/pages/[service]/live/[id]/Post/types';
+import handleStreamEmbed from '../enrichVivoEmbed';
 import handleCustomEmbed from '../handleCustomEmbed';
 import handleEmptyParagraphBlocks from '../handleEmptyParagraphBlocks';
-import handleStreamEmbed from '../enrichVivoEmbed';
 
 export default (post: Post): Post => {
   const { blocks } = post.content.model;

@@ -1,5 +1,6 @@
 import { renderHook, waitFor } from '@testing-library/react';
 import { renderHook as renderSSRHook } from '@testing-library/react-hooks/server';
+
 import useServiceWorkerRegistration from './index';
 
 describe('useServiceWorkerRegistration', () => {

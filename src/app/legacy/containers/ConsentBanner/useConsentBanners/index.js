@@ -1,7 +1,8 @@
-import { useReducer, useEffect } from 'react';
-import Cookie from 'js-cookie';
-import useToggle from '#hooks/useToggle';
+import { useEffect, useReducer } from 'react';
 
+import Cookie from 'js-cookie';
+
+import useToggle from '#hooks/useToggle';
 import setCookie from '#lib/utilities/setCookie';
 import setCookieOven from './setCookieOven';
 

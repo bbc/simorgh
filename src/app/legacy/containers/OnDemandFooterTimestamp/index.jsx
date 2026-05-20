@@ -1,8 +1,9 @@
 import { use } from 'react';
-import styled from '@emotion/styled';
-import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
-import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/breakpoints';
 
+import styled from '@emotion/styled';
+
+import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/breakpoints';
+import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const smallScreenMargin = `

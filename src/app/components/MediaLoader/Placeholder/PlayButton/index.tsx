@@ -1,6 +1,6 @@
 import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
-import styles from './index.styles';
 import VisuallyHiddenText from '../../../VisuallyHiddenText';
+import styles from './index.styles';
 
 type Props = {
   className?: string;

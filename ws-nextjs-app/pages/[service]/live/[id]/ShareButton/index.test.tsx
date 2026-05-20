@@ -1,9 +1,10 @@
+import userEvent from '@testing-library/user-event';
+
 import {
+  act,
   render,
   screen,
-  act,
 } from '#app/components/react-testing-library-with-providers';
-import userEvent from '@testing-library/user-event';
 import ShareButton from '.';
 
 const share = jest.fn().mockImplementation(() => Promise.resolve());

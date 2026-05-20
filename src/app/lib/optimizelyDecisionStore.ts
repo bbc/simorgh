@@ -29,9 +29,9 @@ const useActivatedExperiments = () =>
   useSyncExternalStore(subscribe, getSnapshot, getSnapshot);
 
 export {
-  subscribe,
   getSnapshot,
   notifyDecision,
   resetDecisionStore,
+  subscribe,
   useActivatedExperiments,
 };

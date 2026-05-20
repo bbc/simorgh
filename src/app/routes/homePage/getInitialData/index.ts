@@ -1,7 +1,7 @@
-import type { InitialDataProps } from '#app/models/types/initialData';
-import nodeLogger from '#app/lib/logger.node';
 import { BFF_FETCH_ERROR } from '#app/lib/logger.const';
+import nodeLogger from '#app/lib/logger.node';
 import type { FetchError } from '#app/models/types/fetch';
+import type { InitialDataProps } from '#app/models/types/initialData';
 import fetchDataFromBFF from '#app/routes/utils/fetchDataFromBFF';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 

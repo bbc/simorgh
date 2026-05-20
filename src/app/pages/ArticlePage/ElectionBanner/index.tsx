@@ -1,9 +1,10 @@
 import { use } from 'react';
-import { RequestContext } from '#app/contexts/RequestContext';
+
 import AmpIframe from '#app/components/AmpIframe';
-import useToggle from '#app/hooks/useToggle';
 import type { Tag } from '#app/components/Metadata/types';
+import { RequestContext } from '#app/contexts/RequestContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import useToggle from '#app/hooks/useToggle';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import type { MetadataTaggings } from '#app/models/types/metadata';
 import styles from './index.styles';

@@ -1,9 +1,9 @@
 import { render, screen } from '../../react-testing-library-with-providers';
 import Uploader from '.';
 import {
+  missingAresUploader,
   uploader,
   uploaderWithIncorrectType,
-  missingAresUploader,
 } from './fixtures';
 
 describe('Uploader', () => {

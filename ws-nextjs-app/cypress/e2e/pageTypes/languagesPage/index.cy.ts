@@ -1,13 +1,13 @@
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
-import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
-import {
-  assertWSLanguagesPageURNLive,
-  assertWSLanguagesPageURN,
-  assertWSLanguagesPageLocal,
-} from './assertions';
 import runTestsForPage, {
   TestDataType,
 } from '../../../support/helpers/runTestsForPage';
+import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
+import {
+  assertWSLanguagesPageLocal,
+  assertWSLanguagesPageURN,
+  assertWSLanguagesPageURNLive,
+} from './assertions';
 
 const testSuites = [
   {

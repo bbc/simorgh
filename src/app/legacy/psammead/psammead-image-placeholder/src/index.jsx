@@ -1,12 +1,13 @@
 import styled from '@emotion/styled';
-import {
-  BBC_BLOCKS,
-  BBC_BLOCKS_DARK_MODE,
-} from '#psammead/psammead-assets/src/svgs';
+
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
+import {
+  BBC_BLOCKS,
+  BBC_BLOCKS_DARK_MODE,
+} from '#psammead/psammead-assets/src/svgs';
 
 export { default as ImagePlaceholderAmp } from './index.amp';
 

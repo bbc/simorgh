@@ -1,5 +1,5 @@
-import InlineLink from '.';
 import { render, screen } from '../react-testing-library-with-providers';
+import InlineLink from '.';
 
 const setCurrentLocation = (location: string) => {
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment

@@ -1,6 +1,7 @@
-import { useCallback, useEffect, useRef, useState, use } from 'react';
-import { ServiceContext } from '#app/contexts/ServiceContext';
+import { use, useCallback, useEffect, useRef, useState } from 'react';
+
 import { Chevron, ChevronOrientation } from '#app/components/icons';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import styles from './index.styles';
 

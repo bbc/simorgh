@@ -2,9 +2,9 @@ import {
   act,
   render,
 } from '#app/components/react-testing-library-with-providers';
-import SuccessScreen from '.';
 import * as FormContext from '../FormContext';
 import { ContextProps } from '../FormContext';
+import SuccessScreen from '.';
 
 jest.mock('next/router', () => ({
   useRouter: () => ({ query: { id: 'u1234' } }),

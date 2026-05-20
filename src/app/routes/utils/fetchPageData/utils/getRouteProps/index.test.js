@@ -1,6 +1,7 @@
 import reactRouterConfig from 'react-router-config';
-import getPathExtension from '#app/utilities/getPathExtension';
+
 import { ERROR_PAGE } from '#app/routes/utils/pageTypes';
+import getPathExtension from '#app/utilities/getPathExtension';
 import getRouteProps from '.';
 import fallbackServiceParam from './fallbackServiceParam';
 

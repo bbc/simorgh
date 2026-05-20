@@ -1,7 +1,9 @@
 import { use, useEffect } from 'react';
+
 import { Helmet } from 'react-helmet';
-import { UserContext } from '#contexts/UserContext';
+
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import { UserContext } from '#contexts/UserContext';
 
 const CanonicalComscoreAnalytics = ({ nonce = null }) => {
   const { personalisationEnabled } = use(UserContext);

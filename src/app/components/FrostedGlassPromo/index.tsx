@@ -1,21 +1,19 @@
 // biome-ignore-all lint/a11y/useAnchorContent: we want this
 import type { ReactNode } from 'react';
-
 import { type PropsWithChildren, use } from 'react';
+
 import pick from 'ramda/src/pick';
 import Lazyload from 'react-lazyload';
 
-import IMAGE from '../Image';
-import makeRelativeUrlPath from '../../lib/utilities/makeRelativeUrlPath';
-import useClickTrackerHandler from '../../hooks/useClickTrackerHandler';
 import { RequestContext } from '../../contexts/RequestContext';
-
-import FrostedGlassPanel from './FrostedGlassPanel';
-import withData from './withData';
-
-import styles from './styles';
+import useClickTrackerHandler from '../../hooks/useClickTrackerHandler';
+import makeRelativeUrlPath from '../../lib/utilities/makeRelativeUrlPath';
 import type { EventTrackingBlock } from '../../models/types/eventTracking';
+import IMAGE from '../Image';
+import FrostedGlassPanel from './FrostedGlassPanel';
+import styles from './styles';
 import type { PromoProps } from './types';
+import withData from './withData';
 
 const PANEL_OFFSET = 250;
 

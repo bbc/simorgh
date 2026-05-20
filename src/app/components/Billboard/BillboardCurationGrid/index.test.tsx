@@ -1,6 +1,6 @@
 import { render, screen } from '../../react-testing-library-with-providers';
-import BillboardCurationGrid from './index';
 import { pidginLiveBillboard } from '../fixtures';
+import BillboardCurationGrid from './index';
 
 const { summaries } = pidginLiveBillboard;
 

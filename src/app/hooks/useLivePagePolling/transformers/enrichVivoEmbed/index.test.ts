@@ -1,4 +1,5 @@
 import * as uuId from 'uuid';
+
 import type { OptimoBlock } from '#app/models/types/optimo';
 import enrichVivoEmbed from '.';
 

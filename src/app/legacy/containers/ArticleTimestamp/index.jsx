@@ -1,16 +1,17 @@
 import { use } from 'react';
-import Timestamp from '#psammead/psammead-timestamp-container/src';
-import { GridItemMedium, PopOutGridItemMedium } from '#components/Grid';
+
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
+import { GridItemMedium, PopOutGridItemMedium } from '#components/Grid';
+import Timestamp from '#psammead/psammead-timestamp-container/src';
 import { ServiceContext } from '../../../contexts/ServiceContext';
-import { formatDateNumeric } from './timeFormats';
 import {
+  formatType,
   isFirstRelative,
   isLastRelative,
-  formatType,
   isValidDateTime,
 } from './helpers';
 import shouldDisplayLastUpdatedTimestamp from './shouldDisplayLastUpdatedTimestamp';
+import { formatDateNumeric } from './timeFormats';
 
 const ArticleTimestamp = ({
   firstPublished,

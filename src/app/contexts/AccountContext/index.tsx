@@ -6,17 +6,19 @@ import {
   useMemo,
   useState,
 } from 'react';
-import { AccountContextProps, IdctaConfig } from '#app/models/types/account';
-import appendCtaQueryParams from '#app/lib/idcta/appendCtaQueryParams';
-import { ServiceContext } from '#app/contexts/ServiceContext';
-import { RequestContext } from '#app/contexts/RequestContext';
-import onClient from '#app/lib/utilities/onClient';
+
 import Cookie from 'js-cookie';
-import { getIdctaUserOrigin } from '#app/lib/idcta/getIDCTAUserOrigin';
+
+import { RequestContext } from '#app/contexts/RequestContext';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import useToggle from '#app/hooks/useToggle';
-import isLocal from '#app/lib/utilities/isLocal';
-import { USER_ID_COOKIE_KEY } from '#app/lib/uasApi/uasUtility';
+import appendCtaQueryParams from '#app/lib/idcta/appendCtaQueryParams';
+import { getIdctaUserOrigin } from '#app/lib/idcta/getIDCTAUserOrigin';
 import { TOKEN_COOKIE_NAME } from '#app/lib/uasApi/tokenRefresh/tokenManager';
+import { USER_ID_COOKIE_KEY } from '#app/lib/uasApi/uasUtility';
+import isLocal from '#app/lib/utilities/isLocal';
+import onClient from '#app/lib/utilities/onClient';
+import { AccountContextProps, IdctaConfig } from '#app/models/types/account';
 
 export const AccountContext = createContext<AccountContextProps>(
   {} as AccountContextProps,

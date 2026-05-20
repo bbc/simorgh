@@ -1,9 +1,10 @@
 import styled from '@emotion/styled';
+
 import {
-  GEL_SPACING_HLF,
   GEL_SPACING_DBL,
-  GEL_SPACING_TRPL,
+  GEL_SPACING_HLF,
   GEL_SPACING_QUAD,
+  GEL_SPACING_TRPL,
 } from '#psammead/gel-foundations/src/spacings';
 
 const GEL_GROUP_1_WIDTH_260PX = '16.25rem';

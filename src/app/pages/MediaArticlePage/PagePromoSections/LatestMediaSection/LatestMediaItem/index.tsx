@@ -2,8 +2,8 @@ import { forwardRef } from 'react';
 
 import BlurredBackground from '#app/components/Image/BlurredBackground';
 import Promo from '../../../../../legacy/components/OptimoPromos';
-import type { LatestMediaItemProp } from '../types';
 import LatestMediaIndicator from '../LatestMediaIndicator';
+import type { LatestMediaItemProp } from '../types';
 import styles from './index.styles';
 
 const LatestMediaItem = forwardRef<HTMLDivElement, LatestMediaItemProp>(

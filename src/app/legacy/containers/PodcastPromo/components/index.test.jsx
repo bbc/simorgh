@@ -1,5 +1,4 @@
 import { render } from '../../../../components/react-testing-library-with-providers';
-
 import PodcastPromo from '.';
 
 const assertTypeOfElement = (Component, type) => {

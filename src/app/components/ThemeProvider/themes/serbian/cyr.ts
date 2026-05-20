@@ -1,8 +1,9 @@
 import { mergeDeepLeft } from 'ramda';
+
 import cyrillicScript from '../../fontScripts/cyrillic';
 import withThemeProvider from '../../withThemeProvider';
-import serbianTheme from './base';
 import getPWATypographyTheme from '../getPWATypographyTheme';
+import serbianTheme from './base';
 
 export const theme = mergeDeepLeft(
   {

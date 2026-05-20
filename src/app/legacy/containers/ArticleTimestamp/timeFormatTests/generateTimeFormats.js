@@ -1,8 +1,9 @@
 // biome-ignore-all lint/suspicious/noEmptyBlockStatements: we want this
 import fs from 'node:fs';
 import path from 'node:path';
-import { timestampsFixtures, format } from './testUtils';
+
 import services from '../../../../../server/utilities/serviceConfigs';
+import { format, timestampsFixtures } from './testUtils';
 
 const filePath = path.join(__dirname, './expectedFormats.json');
 

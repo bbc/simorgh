@@ -1,9 +1,9 @@
 /* eslint-disable import/no-relative-packages */
-import { interceptATIAnalyticsBeacons, COMPONENTS } from '../helpers';
-import { assertATIComponentClickEvent, assertATIComponentViewEvent } from '.';
-import { AtiAssertionFnProps } from './type';
 
 import runIfToggleEnabled from '../../../../support/helpers/runIfToggleEnabled';
+import { COMPONENTS, interceptATIAnalyticsBeacons } from '../helpers';
+import { assertATIComponentClickEvent, assertATIComponentViewEvent } from '.';
+import { AtiAssertionFnProps } from './type';
 
 const { MOST_READ } = COMPONENTS;
 

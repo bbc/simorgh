@@ -1,6 +1,9 @@
 import { use } from 'react';
+
 import { useTheme } from '@emotion/react';
 import styled from '@emotion/styled';
+
+import RadioSchedule from '#components/RadioSchedule';
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
@@ -8,14 +11,13 @@ import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
 import {
+  GEL_MARGIN_ABOVE_400PX,
   GEL_SPACING,
   GEL_SPACING_DBL,
-  GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
-  GEL_MARGIN_ABOVE_400PX,
+  GEL_SPACING_TRPL,
 } from '#psammead/gel-foundations/src/spacings';
 import SectionLabel from '#psammead/psammead-section-label/src';
-import RadioSchedule from '#components/RadioSchedule';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 
 const RadioScheduleSection = styled.section`

@@ -1,11 +1,12 @@
-import dynamic from 'next/dynamic';
 import { GetServerSideProps } from 'next';
-import { MY_NEWS_PAGE } from '#app/routes/utils/pageTypes';
+import dynamic from 'next/dynamic';
+
+import { NOT_FOUND, OK } from '#app/lib/statusCodes.const';
+import getToggles from '#app/lib/utilities/getToggles/withCache';
 import PageDataParams from '#app/models/types/pageDataParams';
+import { MY_NEWS_PAGE } from '#app/routes/utils/pageTypes';
 import deriveVariant from '#nextjs/utilities/deriveVariant';
 import logResponseTime from '#server/utilities/logResponseTime';
-import getToggles from '#app/lib/utilities/getToggles/withCache';
-import { NOT_FOUND, OK } from '#app/lib/statusCodes.const';
 
 const MyNewsPage = dynamic(() => import('./MyNewsPage'));
 

@@ -1,16 +1,16 @@
 import { use } from 'react';
+
+import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
+import { GridItemMedium } from '#components/Grid';
+import { RequestContext } from '#contexts/RequestContext';
 import {
   AmpSocialEmbed,
   CanonicalSocialEmbed,
 } from '#psammead/psammead-social-embed/src';
-
-import { RequestContext } from '#contexts/RequestContext';
-import { GridItemMedium } from '#components/Grid';
-import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContext } from '../../../contexts/ServiceContext';
-import createTranslations from './common/translations';
 import Wrapper from './common/styles';
-import { getProviderFromSource, getIdFromSource } from './sourceHelpers';
+import createTranslations from './common/translations';
+import { getIdFromSource, getProviderFromSource } from './sourceHelpers';
 
 const SocialEmbedContainer = ({ blocks, source }) => {
   const { isAmp, isLite, pageType } = use(RequestContext);

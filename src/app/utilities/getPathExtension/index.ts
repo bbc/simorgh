@@ -1,5 +1,6 @@
 import Url from 'url-parse';
-import { APP_REGEX, AMP_REGEX, LITE_REGEX } from '#app/lib/regex.const';
+
+import { AMP_REGEX, APP_REGEX, LITE_REGEX } from '#app/lib/regex.const';
 
 export default (url: string) => {
   const { pathname } = new Url(url, true);

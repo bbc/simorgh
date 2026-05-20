@@ -1,8 +1,9 @@
 // biome-ignore-all lint/security/noDangerouslySetInnerHtml: we want this
-import type { ReactElement, PropsWithChildren } from 'react';
+import type { PropsWithChildren, ReactElement } from 'react';
+
 import { OptOutOfLiteRedirect } from '#src/server/utilities/CanonicalToLiteRedirect';
-import type { BaseRendererProps } from './types';
 import ComponentTracking from './ComponentTracking';
+import type { BaseRendererProps } from './types';
 
 interface Props extends BaseRendererProps {
   bodyContent: ReactElement;

@@ -1,6 +1,7 @@
 // biome-ignore-all lint/correctness/useHookAtTopLevel: we want this
-import useServerSide from './useServerSide';
+
 import useClientSide from './useClientSide';
+import useServerSide from './useServerSide';
 
 export enum ExperimentType {
   CLIENT_SIDE = 'client side experiment',

@@ -1,7 +1,7 @@
-import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
-import type { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import type { EventTrackingMetadata } from '#app/models/types/eventTracking';
+import type { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
+import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import LiveLabel from '../../LiveLabel';
 import styles from './index.styles';
 

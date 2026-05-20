@@ -7,30 +7,27 @@ import Document, {
   NextScript,
 } from 'next/document';
 import Script from 'next/script';
-
 import { HTMLAttributes, ReactElement } from 'react';
-import { Helmet, HelmetData } from 'react-helmet';
+
+import createCache from '@emotion/cache';
 import { CacheProvider } from '@emotion/react';
 import createEmotionServer from '@emotion/server/create-instance';
-import createCache from '@emotion/cache';
+import { Helmet, HelmetData } from 'react-helmet';
 
+import NO_JS_CLASSNAME from '#app/lib/noJs.const';
+import addOperaMiniClassScript from '#app/lib/utilities/addOperaMiniClassScript';
+import getPathExtension from '#app/utilities/getPathExtension';
 import {
   EnvConfig,
   getProcessEnvAppVariables,
 } from '#lib/utilities/getEnvConfig';
-
+import handleServerLogging from '#nextjs/utilities/handleServerLogging';
 import AmpRenderer from '#server/Document/Renderers/AmpRenderer';
 import LiteRenderer from '#server/Document/Renderers/LiteRenderer';
 import litePageTransforms from '#server/Document/Renderers/litePageTransforms';
-
-import NO_JS_CLASSNAME from '#app/lib/noJs.const';
-
-import getPathExtension from '#app/utilities/getPathExtension';
-import ReverbTemplate from '#src/server/Document/Renderers/ReverbTemplate';
 import ComponentTracking from '#src/server/Document/Renderers/ComponentTracking';
+import ReverbTemplate from '#src/server/Document/Renderers/ReverbTemplate';
 import CanonicalToLiteRedirect from '#src/server/utilities/CanonicalToLiteRedirect';
-import addOperaMiniClassScript from '#app/lib/utilities/addOperaMiniClassScript';
-import handleServerLogging from '#nextjs/utilities/handleServerLogging';
 import derivePageType from '../utilities/derivePageType';
 
 type DocProps = {

@@ -2,9 +2,10 @@ import noAscendersOrDescenders from '../../../components/ThemeProvider/fontScrip
 import '#psammead/moment-timezone-include/tz/GMT';
 import 'moment/locale/zh-cn';
 import '#psammead/psammead-locales/moment/zh-tw';
+
 import withContext from '../../../contexts/utils/withContext';
-import type { ZhongwenConfig } from '../../../models/types/serviceConfig';
 import type { Direction, Services } from '../../../models/types/global';
+import type { ZhongwenConfig } from '../../../models/types/serviceConfig';
 
 const baseServiceConfig = {
   articleAuthor: `https://www.facebook.com/bbcworldservice/`,

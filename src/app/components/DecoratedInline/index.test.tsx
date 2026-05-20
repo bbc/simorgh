@@ -1,5 +1,5 @@
-import DecoratedInline from '.';
 import { render } from '../react-testing-library-with-providers';
+import DecoratedInline from '.';
 import { persianLink } from './fixture';
 
 describe('InlineContainer', () => {

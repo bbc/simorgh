@@ -1,6 +1,7 @@
 import { LRUCache } from 'lru-cache';
-import withCache from './withCache';
+
 import getToggles from '.';
+import withCache from './withCache';
 
 jest.mock('lru-cache');
 jest.mock('.');

@@ -1,6 +1,7 @@
-import { Component } from 'react';
-import { NextPageContext } from 'next/types';
 import NextError from 'next/error';
+import { NextPageContext } from 'next/types';
+import { Component } from 'react';
+
 import { NOT_FOUND } from '#app/lib/statusCodes.const';
 
 // biome-ignore lint/suspicious/noShadowRestrictedNames: this is fine

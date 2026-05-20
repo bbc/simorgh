@@ -1,13 +1,14 @@
 import { use } from 'react';
+
+import { RequestContext } from '../../contexts/RequestContext';
+import filterForBlockType from '../../lib/utilities/blockHandlers';
 import buildIChefURL from '../../lib/utilities/ichefURL';
 import urlWithPageAnchor from '../../lib/utilities/pageAnchor';
 import { createSrcsets } from '../../lib/utilities/srcSet';
-import filterForBlockType from '../../lib/utilities/blockHandlers';
-import Copyright from '../Copyright';
 import Caption from '../Caption';
+import Copyright from '../Copyright';
 import Image from '../Image';
 import styles from './index.styles';
-import { RequestContext } from '../../contexts/RequestContext';
 
 const DEFAULT_IMAGE_RES = 640;
 const LAZYLOAD_FROM_BLOCK = 4;

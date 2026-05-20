@@ -1,6 +1,7 @@
 import { use } from 'react';
-import Timestamp from '#psammead/psammead-timestamp-container/src';
+
 import isTenHoursAgo from '#lib/utilities/isTenHoursAgo';
+import Timestamp from '#psammead/psammead-timestamp-container/src';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const PromoTimestamp = ({

@@ -1,10 +1,10 @@
-import Footer from './components/footer';
-import HeadToHeadHeader from './components/head-to-head-header';
-import { HeadToHeadBanner } from './components/head-to-head-banner';
-import ConditionalOnwardJourneyLink from './components/conditional-onward-journey-link';
 import { Actions } from './components/actions';
-import type { HeadToHeadV2Data } from './types';
+import ConditionalOnwardJourneyLink from './components/conditional-onward-journey-link';
+import Footer from './components/footer';
+import { HeadToHeadBanner } from './components/head-to-head-banner';
+import HeadToHeadHeader from './components/head-to-head-header';
 import styles from './index.styles';
+import type { HeadToHeadV2Data } from './types';
 
 export const HeadToHeadV2 = ({
   data,

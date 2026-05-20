@@ -1,8 +1,9 @@
 // biome-ignore-all lint/suspicious/noEmptyBlockStatements: we want this
 import fs from 'node:fs';
 import { join, resolve } from 'node:path';
-import fetchMock from 'jest-fetch-mock';
 import { createHash } from 'crypto';
+
+import fetchMock from 'jest-fetch-mock';
 
 const serviceWorker = fs.readFileSync(join(__dirname, '..', 'public/sw.js'));
 

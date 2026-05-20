@@ -1,10 +1,11 @@
 import { useContext } from 'react';
-import { RequestContext } from '#contexts/RequestContext';
+
 import { useActivatedExperiments } from '#app/lib/optimizelyDecisionStore';
-import PageCompleteTracking from './PageCompleteTracking';
-import ScrollDepthTracking from './ScrollDepthTracking';
-import PageViewTracking from './PageViewTracking';
+import { RequestContext } from '#contexts/RequestContext';
 import experimentsForPageMetrics from './experimentsForPageMetrics';
+import PageCompleteTracking from './PageCompleteTracking';
+import PageViewTracking from './PageViewTracking';
+import ScrollDepthTracking from './ScrollDepthTracking';
 
 type Props = {
   trackPageView?: boolean;

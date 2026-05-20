@@ -1,7 +1,10 @@
 import { use } from 'react';
+
 import { useTheme } from '@emotion/react';
 import { Helmet } from 'react-helmet';
-import { RequestContext } from '#contexts/RequestContext';
+
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import isLive from '#app/lib/utilities/isLive';
 import type {
   Environments,
   PageTypes,
@@ -11,23 +14,22 @@ import {
   getArticleId,
   getTipoId,
 } from '#app/routes/utils/constructPageFetchUrl';
-import isLive from '#app/lib/utilities/isLive';
 import {
   ARTICLE_PAGE,
   LIVE_PAGE,
   MEDIA_ARTICLE_PAGE,
 } from '#app/routes/utils/pageTypes';
-import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import defaultTranslations from '../LiteSiteSummary/defaultTranslations';
+import type { IconSizes, MetadataProps, Tag } from './types';
 import {
+  getAppleTouchUrl,
   getIconAssetUrl,
   getIconLinks,
-  getAppleTouchUrl,
   renderAlternateLinks,
   renderAppleItunesApp,
 } from './utils';
-import type { IconSizes, MetadataProps, Tag } from './types';
-import defaultTranslations from '../LiteSiteSummary/defaultTranslations';
 
 const ENGLISH_SERVICES = ['news', 'sport', 'ws'];
 const FACEBOOK_APP_ID = '1609039196070050';

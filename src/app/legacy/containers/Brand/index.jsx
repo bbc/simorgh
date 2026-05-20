@@ -1,10 +1,12 @@
 import { use } from 'react';
-import styled from '@emotion/styled';
-import Brand from '#psammead/psammead-brand/src';
+
 import { useTheme } from '@emotion/react';
+import styled from '@emotion/styled';
+
 import { servicesWithVariants } from '#lib/utilities/variantHandler';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import Brand from '#psammead/psammead-brand/src';
 import { RequestContext } from '../../../contexts/RequestContext';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const StyledBrand = styled(Brand)`
   position: relative;

@@ -1,6 +1,6 @@
 import withOptimizelyProvider from '#app/legacy/containers/PageHandlers/withOptimizelyProvider';
-import HomePage from './HomePage';
 import applyBasicPageHandlers from '../utils/applyBasicPageHandlers';
+import HomePage from './HomePage';
 
 export default applyBasicPageHandlers(HomePage, {
   handlerBeforeContexts: withOptimizelyProvider,

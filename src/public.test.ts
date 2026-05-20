@@ -1,7 +1,8 @@
 import fs from 'node:fs';
-import SERVICES from '#app/lib/config/services';
 import path, { resolve } from 'node:path';
 import { promisify } from 'node:util';
+
+import SERVICES from '#app/lib/config/services';
 import type { Services } from '#app/models/types/global';
 
 const readdir = promisify(fs.readdir);

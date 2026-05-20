@@ -1,9 +1,10 @@
 import { NextPageContext } from 'next/types';
-import { cspDirectives } from '#server/utilities/cspHeader/directives';
+
+import SERVICES from '#app/lib/config/services';
+import { Services, Toggles } from '#app/models/types/global';
 import getPathExtension from '#app/utilities/getPathExtension';
 import isLiveEnv from '#lib/utilities/isLive';
-import { Services, Toggles } from '#app/models/types/global';
-import SERVICES from '#app/lib/config/services';
+import { cspDirectives } from '#server/utilities/cspHeader/directives';
 
 const LOCALHOST_DOMAINS = ['localhost', '127.0.0.1'];
 

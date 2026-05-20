@@ -1,26 +1,27 @@
 // biome-ignore-all lint/a11y/useValidAriaRole: we want this
 import { Fragment, use } from 'react';
-import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
-import PWAPromotionalBanner from '#app/components/PWAPromotionalBanner';
+
 import AccountPromotionalBanner from '#app/components/Account/AccountPromotionalBanner';
+import PWAPromotionalBanner from '#app/components/PWAPromotionalBanner';
+import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
+import Ad from '../../components/Ad';
+import MPU from '../../components/Ad/MPU';
 import ATIAnalytics from '../../components/ATIAnalytics';
+import type { ATIData } from '../../components/ATIAnalytics/types';
+import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
+import HomeCuration from '../../components/Curation';
+import LinkedData from '../../components/LinkedData';
+import MetadataContainer from '../../components/Metadata';
+import { ServiceContext } from '../../contexts/ServiceContext';
+import getItemList from '../../lib/seoUtils/getItemList';
 import type {
   Curation,
   VisualProminence,
   VisualStyle,
 } from '../../models/types/curationData';
-import type { ATIData } from '../../components/ATIAnalytics/types';
-import HomeCuration from '../../components/Curation';
-import Ad from '../../components/Ad';
-import MPU from '../../components/Ad/MPU';
-import { ServiceContext } from '../../contexts/ServiceContext';
-import styles from './index.styles';
-import MetadataContainer from '../../components/Metadata';
-import LinkedData from '../../components/LinkedData';
-import getItemList from '../../lib/seoUtils/getItemList';
-import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
-import getNthCurationByStyleAndProminence from '../utils/getNthCurationByStyleAndProminence';
 import getIndexOfFirstNonBanner from '../utils/getIndexOfFirstNonBanner';
+import getNthCurationByStyleAndProminence from '../utils/getNthCurationByStyleAndProminence';
+import styles from './index.styles';
 
 export interface HomePageProps {
   pageData: {

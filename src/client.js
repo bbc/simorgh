@@ -3,6 +3,7 @@ import createCache from '@emotion/cache';
 import { CacheProvider } from '@emotion/react';
 import { loadableReady } from '@loadable/component';
 import { hydrateRoot } from 'react-dom/client';
+
 import loggerNode from '#lib/logger.node';
 import { ClientApp } from './app/legacy/containers/App';
 

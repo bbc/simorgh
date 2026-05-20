@@ -1,21 +1,21 @@
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
-import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
+import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
 import runTestsForPage, {
   TestDataType,
 } from '../../../support/helpers/runTestsForPage';
-import testsForAllPages from '../../testsForAllPages';
-import testsForAllCanonicalPages from '../../testsForAllCanonicalPages';
-import testsForAllAMPPages from '../../testsForAllAMPPages';
-import ampArticleTests from './testsForAMPOnly';
-import canonicalArticleTests from './testsForCanonicalOnly';
-import liteTests from '../articlePage/testsForLiteOnly';
-import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
+import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
 import {
   assertDropdownNavigationComponentClick,
   assertDropdownNavigationComponentView,
   assertScrollableNavigationComponentClick,
   assertScrollableNavigationComponentView,
 } from '../../specialFeatures/atiAnalytics/assertions/navigation';
+import testsForAllAMPPages from '../../testsForAllAMPPages';
+import testsForAllCanonicalPages from '../../testsForAllCanonicalPages';
+import testsForAllPages from '../../testsForAllPages';
+import liteTests from '../articlePage/testsForLiteOnly';
+import ampArticleTests from './testsForAMPOnly';
+import canonicalArticleTests from './testsForCanonicalOnly';
 
 const canonicalTests = [
   testsForAllPages,

@@ -1,11 +1,12 @@
 import { use } from 'react';
+
 import Paragraph from '#app/components/Paragraph';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import fallbackTranslations from '../fallbackTranslations';
+import InvalidMessageBox from '../MessageBox/InvalidMessageBox';
 import { InputProps } from '../types';
 import Label from './FieldLabel';
 import styles from './styles';
-import InvalidMessageBox from '../MessageBox/InvalidMessageBox';
-import fallbackTranslations from '../fallbackTranslations';
 
 export default ({
   id,

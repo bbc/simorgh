@@ -1,4 +1,4 @@
-import { type Theme, css } from '@emotion/react';
+import { css, type Theme } from '@emotion/react';
 
 export default {
   italicStyle: ({ fontVariants }: Theme) =>

@@ -1,5 +1,6 @@
-import { renderHook, act } from '@testing-library/react';
+import { act, renderHook } from '@testing-library/react';
 import { renderHook as renderSSRHook } from '@testing-library/react-hooks/server';
+
 import type { EffectiveNetworkType } from '#app/models/types/global';
 import useNetworkStatus from './index';
 

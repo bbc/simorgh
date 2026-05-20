@@ -1,19 +1,18 @@
-import loggerMock from '#testHelpers/loggerMock';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import SocialEmbedContainer from '.';
+import loggerMock from '#testHelpers/loggerMock';
 import {
+  fireEvent,
   render,
   screen,
-  fireEvent,
 } from '../../../components/react-testing-library-with-providers';
-
+import SocialEmbedContainer from '.';
 import {
-  twitterBlock,
-  instagramBlock,
-  youtubeBlockEmbed,
-  tiktokBlockEmbed,
   facebookPostBlockEmbed,
   facebookVideoBlockEmbed,
+  instagramBlock,
+  tiktokBlockEmbed,
+  twitterBlock,
+  youtubeBlockEmbed,
 } from './common/fixtures';
 
 describe('SocialEmbedContainer', () => {

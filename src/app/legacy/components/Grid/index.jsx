@@ -1,20 +1,22 @@
 import { forwardRef, use } from 'react';
+
 import styled from '@emotion/styled';
-import GRID from '#psammead/psammead-grid/src';
+
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MAX,
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
 import {
-  GEL_MARGIN_BELOW_400PX,
   GEL_MARGIN_ABOVE_400PX,
+  GEL_MARGIN_BELOW_400PX,
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
+import GRID from '#psammead/psammead-grid/src';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const Grid = forwardRef((props, ref) => {

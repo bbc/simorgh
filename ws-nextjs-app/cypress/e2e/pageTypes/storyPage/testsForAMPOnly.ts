@@ -1,7 +1,7 @@
-import { ServiceParametersType } from '../../../types';
 import runAMPAdsTests from '../../../support/helpers/adsTests/testsForAMPOnly';
-import { ampOnly as mostReadAssertions } from '../../assertions/crossPlatformAssertion';
 import skipOnLocal from '../../../support/helpers/skipOnLocal';
+import { ServiceParametersType } from '../../../types';
+import { ampOnly as mostReadAssertions } from '../../assertions/crossPlatformAssertion';
 
 export default ({ service, pageType, variant }: ServiceParametersType) => {
   describe(`Running testsForAMPOnly for ${service} ${pageType}`, () => {

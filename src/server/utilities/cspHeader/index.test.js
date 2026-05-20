@@ -1,21 +1,19 @@
 import injectCspHeader from '.';
-
 import {
+  advertisingCountryScripts,
+  cspDirectives,
   generateChildSrc,
   generateConnectSrc,
   generateDefaultSrc,
   generateFontSrc,
   generateFrameSrc,
   generateImgSrc,
+  generateMediaSrc,
   generateScriptSrc,
   generateStyleSrc,
-  generateMediaSrc,
   generateWorkerSrc,
-  cspDirectives,
-  advertisingCountryScripts,
 } from './directives';
-
-import { bbcDomains, advertisingServiceCountryDomains } from './domainLists';
+import { advertisingServiceCountryDomains, bbcDomains } from './domainLists';
 
 const nonce = '7088dae1fe17eee6bf8a2ccbcf9ac115';
 

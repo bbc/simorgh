@@ -1,5 +1,6 @@
 // biome-ignore-all lint/suspicious/noConsole: we want this
 import puppeteer from 'puppeteer';
+
 import context from '../context';
 
 const BASE_URL = {

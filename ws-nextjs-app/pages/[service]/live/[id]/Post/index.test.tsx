@@ -1,7 +1,7 @@
 import {
+  act,
   render,
   screen,
-  act,
   within,
 } from '#app/components/react-testing-library-with-providers';
 import postFixture from '#data/pidgin/posts/postFixtureCleaned.json';
@@ -9,10 +9,10 @@ import { LIVE_PAGE } from '#src/app/routes/utils/pageTypes';
 import Post from '.';
 import {
   audioSamplePost,
+  bylineSamplePost,
   samplePost,
   twitterSamplePost,
   videoSamplePost,
-  bylineSamplePost,
 } from './fixture';
 
 const singlePostWithTitle = postFixture.data.results[0];

@@ -1,9 +1,11 @@
 import { useState } from 'react';
+
+import { Helmet } from 'react-helmet';
+
 import {
   act,
   render,
 } from '#app/components/react-testing-library-with-providers';
-import { Helmet } from 'react-helmet';
 import useLocation from '#app/hooks/useLocation';
 import { TV_PAGE } from '#app/routes/utils/pageTypes';
 import MediaPlayer from '.';

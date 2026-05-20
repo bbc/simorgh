@@ -1,4 +1,5 @@
 import Cookie from 'js-cookie';
+
 import { getCookiePolicy, personalisationEnabled } from '.';
 
 const PRIVACY_COOKIE = 'ckns_privacy';

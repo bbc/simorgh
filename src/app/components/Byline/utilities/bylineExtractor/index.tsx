@@ -1,9 +1,10 @@
 import pathOr from 'ramda/src/pathOr';
+
+import type { PageTypes } from '#app/models/types/global';
 import type {
   OptimoBylineContributorBlock,
   OptimoBylineContributorMetadataBlock,
 } from '#app/models/types/optimo';
-import type { PageTypes } from '#app/models/types/global';
 import {
   ARTICLE_PAGE,
   LIVE_PAGE,

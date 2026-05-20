@@ -1,11 +1,12 @@
 import styled from '@emotion/styled';
-import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
+
+import IMAGE from '#app/components/Image';
+import BlurredBackground from '#app/components/Image/BlurredBackground';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
-import IMAGE from '#app/components/Image';
-import BlurredBackground from '#app/components/Image/BlurredBackground';
+import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
 
 const Wrapper = styled.div`
   margin-bottom: ${GEL_SPACING};

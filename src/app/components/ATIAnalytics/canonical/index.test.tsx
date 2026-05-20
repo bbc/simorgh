@@ -1,14 +1,15 @@
 import { Helmet } from 'react-helmet';
+
 import {
-  render,
   act,
+  render,
 } from '#app/components/react-testing-library-with-providers';
-import * as isOperaProxy from '#app/lib/utilities/isOperaProxy';
-import { addSendStaticBeaconToWindow } from '#app/lib/analyticsUtils/staticATITracking/sendStaticBeacon';
 import processClientDeviceAndSendStaticBeacon from '#app/lib/analyticsUtils/staticATITracking/processClientDeviceAndSendStaticBeacon';
+import { addSendStaticBeaconToWindow } from '#app/lib/analyticsUtils/staticATITracking/sendStaticBeacon';
+import * as isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import * as beacon from '../../../lib/analyticsUtils/sendBeacon';
-import CanonicalATIAnalytics from '.';
 import type { ReverbBeaconConfig } from '../types';
+import CanonicalATIAnalytics from '.';
 
 describe('Canonical ATI Analytics', () => {
   afterEach(() => {

@@ -1,7 +1,9 @@
 // biome-ignore-all lint/style/useNodejsImportProtocol: we want this
 import fs from 'fs';
 import path from 'path';
+
 import mkdirp from 'mkdirp';
+
 import writeToNestedFile from '.';
 
 jest.mock('fs', () => ({

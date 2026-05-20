@@ -1,11 +1,12 @@
 // biome-ignore-all lint/security/noDangerouslySetInnerHtml: we want this
 import type { ReactElement } from 'react';
-import type { EmotionCritical } from '@emotion/server/create-instance';
 
+import type { EmotionCritical } from '@emotion/server/create-instance';
 import type { HelmetData } from 'react-helmet';
-import LiteRenderer from './Renderers/LiteRenderer';
-import CanonicalRenderer from './Renderers/CanonicalRenderer';
+
 import AmpRenderer from './Renderers/AmpRenderer';
+import CanonicalRenderer from './Renderers/CanonicalRenderer';
+import LiteRenderer from './Renderers/LiteRenderer';
 import litePageTransforms from './Renderers/litePageTransforms';
 
 type Props = {

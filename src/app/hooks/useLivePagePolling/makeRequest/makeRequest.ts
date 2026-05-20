@@ -1,6 +1,6 @@
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
-import handlePostBlocks from '../transformers/handlePostBlocks';
 import addIndexesToEmbeds from '../transformers/addIndexesToEmbeds';
+import handlePostBlocks from '../transformers/handlePostBlocks';
 
 const transformPost = post => addIndexesToEmbeds(handlePostBlocks(post));
 

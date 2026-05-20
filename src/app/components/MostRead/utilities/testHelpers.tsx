@@ -1,11 +1,12 @@
 import type { PropsWithChildren } from 'react';
+
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import TEXT_VARIANTS from '#storybook/withServicesDecorator/text-variants';
-import Timestamp from '../../../legacy/psammead/psammead-timestamp/src';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import Timestamp from '../../../legacy/psammead/psammead-timestamp/src';
+import type { Direction, Services } from '../../../models/types/global';
 import { MostReadItemWrapper, MostReadLink } from '../Canonical/Item';
 import MostReadRank from '../Canonical/Rank';
-import type { Services, Direction } from '../../../models/types/global';
 import type { MostReadBaseProps, MostReadData, Size } from '../types';
 
 const lastUpdated = () => (

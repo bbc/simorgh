@@ -1,4 +1,5 @@
 import { GetServerSidePropsContext } from 'next';
+
 import pidginHomepageFixtureData from '#data/pidgin/homePage/index.json';
 import * as getPageDataModule from '../../../utilities/pageRequests/getPageData';
 import handleHomepageRoute from './handleHomepageRoute';

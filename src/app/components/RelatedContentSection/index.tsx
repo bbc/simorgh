@@ -1,23 +1,25 @@
 import { use } from 'react';
+
 import { useTheme } from '@emotion/react';
-import SectionLabel from '#psammead/psammead-section-label/src';
-import pathOr from 'ramda/src/pathOr';
-import pathEq from 'ramda/src/pathEq';
-import tail from 'ramda/src/tail';
-import slice from 'ramda/src/slice';
+import filter from 'ramda/src/filter';
 import identity from 'ramda/src/identity';
 import last from 'ramda/src/last';
-import filter from 'ramda/src/filter';
+import pathEq from 'ramda/src/pathEq';
+import pathOr from 'ramda/src/pathOr';
 import pipe from 'ramda/src/pipe';
-import useViewTracker from '#hooks/useViewTracker';
+import slice from 'ramda/src/slice';
+import tail from 'ramda/src/tail';
+
 import type { ComponentExperimentProps } from '#app/models/types/global';
+import useViewTracker from '#hooks/useViewTracker';
+import SectionLabel from '#psammead/psammead-section-label/src';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import styles from './index.styles';
-import generatePromoId from '../../lib/utilities/generatePromoId';
-import RelatedContentItem from './RelatedContentItem';
-import PromoList from '../../legacy/components/OptimoPromos/PromoList';
 import PromoItem from '../../legacy/components/OptimoPromos/PromoItem/index.styles';
+import PromoList from '../../legacy/components/OptimoPromos/PromoList';
+import generatePromoId from '../../lib/utilities/generatePromoId';
 import type { OptimoBlock } from '../../models/types/optimo';
+import styles from './index.styles';
+import RelatedContentItem from './RelatedContentItem';
 
 const BLOCKS_TO_IGNORE = ['wsoj', 'mpu'];
 

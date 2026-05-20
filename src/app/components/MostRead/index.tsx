@@ -1,26 +1,27 @@
 import { use } from 'react';
+
+import type { EventTrackingData } from '#app/lib/analyticsUtils/types';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import { getMostReadEndpoint } from '#app/lib/utilities/getUrlHelpers/getMostReadUrls';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
-import { getMostReadEndpoint } from '#app/lib/utilities/getUrlHelpers/getMostReadUrls';
-import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
-import type { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import Canonical from './Canonical';
-import Amp from './Amp';
-import type { ColumnLayout, Size, MostReadData } from './types';
-import MostReadSection from './Section';
-import MostReadSectionLabel from './Label';
-import { WHITE } from '../ThemeProvider/palette';
 import isLocal from '../../lib/utilities/isLocal';
-import {
-  STORY_PAGE,
-  CORRESPONDENT_STORY_PAGE,
-  ARTICLE_PAGE,
-} from '../../routes/utils/pageTypes';
 import type {
   ComponentExperimentProps,
   PageTypes,
 } from '../../models/types/global';
+import {
+  ARTICLE_PAGE,
+  CORRESPONDENT_STORY_PAGE,
+  STORY_PAGE,
+} from '../../routes/utils/pageTypes';
+import { WHITE } from '../ThemeProvider/palette';
+import Amp from './Amp';
+import Canonical from './Canonical';
+import MostReadSectionLabel from './Label';
+import MostReadSection from './Section';
+import type { ColumnLayout, MostReadData, Size } from './types';
 
 const mostReadAmpPageTypes: PageTypes[] = [
   STORY_PAGE,

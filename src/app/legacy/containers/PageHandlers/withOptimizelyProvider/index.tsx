@@ -1,18 +1,20 @@
 import { type ComponentType, use } from 'react';
+
+import { enums, type ListenerPayload } from '@optimizely/optimizely-sdk';
 import {
   createInstance,
   OptimizelyProvider,
   setLogger,
 } from '@optimizely/react-sdk';
-import { enums, type ListenerPayload } from '@optimizely/optimizely-sdk';
 import Cookie from 'js-cookie';
-import isLive from '#lib/utilities/isLive';
-import onClient from '#lib/utilities/onClient';
+
+import { notifyDecision } from '#app/lib/optimizelyDecisionStore';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
-import { notifyDecision } from '#app/lib/optimizelyDecisionStore';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
+import isLive from '#lib/utilities/isLive';
+import onClient from '#lib/utilities/onClient';
 import isCypress from './isCypress';
 import { getClientTimeOfDay, getReferrer, isMobile } from './userAttributes';
 

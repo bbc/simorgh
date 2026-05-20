@@ -2,28 +2,28 @@ import { AUDIO_PAGE } from '#app/routes/utils/pageTypes';
 import runTestsForPage, {
   TestDataType,
 } from '#nextjs/cypress/support/helpers/runTestsForPage';
-import { assertLiteSiteSummaryComponentToMainSiteClick } from '../../specialFeatures/atiAnalytics/assertions/liteSiteSummary';
 import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
+import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
+import { assertLiteSiteSummaryComponentToMainSiteClick } from '../../specialFeatures/atiAnalytics/assertions/liteSiteSummary';
 import {
-  assertRadioScheduleComponentClick,
-  assertRadioScheduleComponentView,
-} from '../../specialFeatures/atiAnalytics/assertions/radioSchedule';
+  assertPodcastLinksComponentClick,
+  assertPodcastLinksComponentView,
+} from '../../specialFeatures/atiAnalytics/assertions/podcastLinks';
 import {
   assertPodcastPromoComponentClick,
   assertPodcastPromoComponentView,
 } from '../../specialFeatures/atiAnalytics/assertions/podcastPromo';
 import {
+  assertRadioScheduleComponentClick,
+  assertRadioScheduleComponentView,
+} from '../../specialFeatures/atiAnalytics/assertions/radioSchedule';
+import {
   assertRecentAudioEpisodesComponentClick,
   assertRecentAudioEpisodesComponentView,
 } from '../../specialFeatures/atiAnalytics/assertions/recentAudioEpisodes';
-import {
-  assertPodcastLinksComponentClick,
-  assertPodcastLinksComponentView,
-} from '../../specialFeatures/atiAnalytics/assertions/podcastLinks';
-import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
-import e2eTests from './tests';
-import testsForAllPages from '../../testsForAllPages';
 import testsForAllCanonicalPages from '../../testsForAllCanonicalPages';
+import testsForAllPages from '../../testsForAllPages';
+import e2eTests from './tests';
 
 const tests = [e2eTests, testsForAllPages, testsForAllCanonicalPages];
 const testSuites = [

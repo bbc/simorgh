@@ -1,12 +1,12 @@
 import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
 import {
-  render,
-  getByText,
   getByRole,
+  getByText,
+  render,
 } from '../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
-import OnDemandHeadingContainer from '.';
 import { TV_PAGE } from '../../../routes/utils/pageTypes';
+import OnDemandHeadingContainer from '.';
 
 const releaseDateTimeStamp = 1587945600000;
 

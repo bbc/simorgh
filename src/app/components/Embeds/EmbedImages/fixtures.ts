@@ -608,7 +608,7 @@ const createEmbedImagesFixture = ({
 
 export {
   chartEmbedImages,
+  createEmbedImagesFixture,
   mapEmbedImages,
   tableEmbedImages,
-  createEmbedImagesFixture,
 };

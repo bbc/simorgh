@@ -1,10 +1,11 @@
 import { use } from 'react';
-import type { Summary } from '#app/models/types/curationData';
-import Promo from '#components/Promo';
-import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+
 import { RequestContext } from '#app/contexts/RequestContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { getBrandPath } from '#app/legacy/containers/Brand';
+import type { Summary } from '#app/models/types/curationData';
+import Promo from '#components/Promo';
 import styles from './index.styles';
 
 type RelatedTopicLink = {

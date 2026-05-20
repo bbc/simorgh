@@ -1,9 +1,9 @@
 import { use } from 'react';
 
-import { RequestContext } from '#contexts/RequestContext';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
-import type { Recommendation } from '#app/models/types/onwardJourney';
 import type { EventTrackingData } from '#app/lib/analyticsUtils/types';
+import type { Recommendation } from '#app/models/types/onwardJourney';
+import { RequestContext } from '#contexts/RequestContext';
 import RecommendationsImage from '../RecommendationsPromoImage';
 import styles from './index.styles';
 

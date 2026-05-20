@@ -1,13 +1,14 @@
 /* eslint-disable no-console */
 
 import type { ReactNode } from 'react';
-import {
-  renderHook,
-  AllTheProviders,
-} from '#app/components/react-testing-library-with-providers';
-import { HOME_PAGE } from '#app/routes/utils/pageTypes';
+
 import type { ATIData } from '#app/components/ATIAnalytics/types';
+import {
+  AllTheProviders,
+  renderHook,
+} from '#app/components/react-testing-library-with-providers';
 import type { Toggles } from '#app/models/types/global';
+import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import useSwipeTracker from '.';
 import fixtureData from './fixtureData.json';
 

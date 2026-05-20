@@ -1,4 +1,5 @@
 import type { ReactSDKClient } from '@optimizely/react-sdk';
+
 import type { Platforms, Services } from '#app/models/types/global';
 import dispatchTrackingRequests from '.';
 

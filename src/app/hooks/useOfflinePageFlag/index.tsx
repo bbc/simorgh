@@ -18,4 +18,4 @@ const useOfflinePageFlag = () => {
   }, []);
 };
 
-export { useOfflinePageFlag, OFFLINE_VISIT_FLAG };
+export { OFFLINE_VISIT_FLAG, useOfflinePageFlag };

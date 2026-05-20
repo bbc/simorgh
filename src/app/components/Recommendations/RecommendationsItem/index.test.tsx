@@ -1,6 +1,6 @@
 import { render } from '#app/components/react-testing-library-with-providers';
-import RecommendationsItem from '.';
 import recommendationsFixtures from '../fixtures';
+import RecommendationsItem from '.';
 
 describe('RecommendationsItem', () => {
   it('should render a single recommendation with a title and link', () => {

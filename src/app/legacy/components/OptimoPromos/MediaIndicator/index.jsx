@@ -1,7 +1,8 @@
 import { use } from 'react';
+
 import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
-import { MediaIndicatorWrapper, MediaIndicatorAlignment } from './index.styles';
 import PromoContext from '../PromoContext';
+import { MediaIndicatorAlignment, MediaIndicatorWrapper } from './index.styles';
 
 const MediaIndicator = ({ className = '' }) => {
   const { mediaType } = use(PromoContext);

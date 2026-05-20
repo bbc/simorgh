@@ -1,5 +1,5 @@
-import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import Image from '#psammead/psammead-image/src';
+import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import { render } from '../../../../components/react-testing-library-with-providers';
 import Bulletin from '.';
 

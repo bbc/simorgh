@@ -1,6 +1,6 @@
-import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
-import type { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import type { EventTrackingMetadata } from '#app/models/types/eventTracking';
+import type { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
+import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import Promo from '../Promo';
 import styles from './index.styles';
 

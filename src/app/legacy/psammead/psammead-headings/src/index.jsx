@@ -1,13 +1,13 @@
 import styled from '@emotion/styled';
-import {
-  GEL_SPACING_DBL,
-  GEL_SPACING_TRPL,
-  GEL_SPACING_QUAD,
-  GEL_SPACING_QUIN,
-} from '#psammead/gel-foundations/src/spacings';
-import { MEDIA_QUERY_TYPOGRAPHY } from '#psammead/gel-foundations/src/breakpoints';
 
 import { focusIndicatorThickness } from '#app/components/ThemeProvider/focusIndicator';
+import { MEDIA_QUERY_TYPOGRAPHY } from '#psammead/gel-foundations/src/breakpoints';
+import {
+  GEL_SPACING_DBL,
+  GEL_SPACING_QUAD,
+  GEL_SPACING_QUIN,
+  GEL_SPACING_TRPL,
+} from '#psammead/gel-foundations/src/spacings';
 
 export const Headline = styled.h1`
   ${({ theme: { fontSizes } }) => fontSizes.canon};

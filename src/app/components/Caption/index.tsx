@@ -1,15 +1,17 @@
 // biome-ignore-all lint/a11y/useValidAriaRole: we want this
 import { use } from 'react';
+
 import pathOr from 'ramda/src/pathOr';
+
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import Blocks from '#app/legacy/containers/Blocks';
 import type { OptimoBlock } from '#app/models/types/optimo';
 import DecoratedInline from '../DecoratedInline';
-import VisuallyHiddenText from '../VisuallyHiddenText';
-import styles from './index.style';
+import DecoratedInlineLink from '../DecoratedInlineLink';
 import Fragment from '../Fragment';
 import Text from '../Text';
-import DecoratedInlineLink from '../DecoratedInlineLink';
+import VisuallyHiddenText from '../VisuallyHiddenText';
+import styles from './index.style';
 
 const componentsToRender = {
   fragment: Fragment,

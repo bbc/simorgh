@@ -1,33 +1,36 @@
 // biome-ignore-all lint/a11y/useValidAriaRole: we want this
-import { use } from 'react';
-import pathOr from 'ramda/src/pathOr';
-import { OptimoBlock } from '#models/types/optimo';
-import Heading from '#app/components/Heading';
-import Text from '#app/components/Text';
-import Blocks from '#app/legacy/containers/Blocks';
-import Paragraph from '#app/legacy/containers/Paragraph';
-import UnorderedList from '#app/legacy/containers/BulletedList';
-import MediaLoader from '#app/components/MediaLoader';
-import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
-import ImageWithCaption from '#app/components/ImageWithCaption';
-import Byline from '#app/components/Byline';
-import { ServiceContext } from '#app/contexts/ServiceContext';
-import isTenHoursAgo from '#app/lib/utilities/isTenHoursAgo';
-import filterForBlockType from '#app/lib/utilities/blockHandlers';
-import { isPortraitVideo } from '#app/components/MediaLoader/utils/isPortraitVideo';
-import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
-import SocialEmbedContainer from '#app/legacy/containers/SocialEmbed';
-import { MediaBlock } from '#app/components/MediaLoader/types';
+
 import dynamic from 'next/dynamic';
+import { use } from 'react';
+
+import pathOr from 'ramda/src/pathOr';
+
+import Byline from '#app/components/Byline';
+import Heading from '#app/components/Heading';
+import ImageWithCaption from '#app/components/ImageWithCaption';
+import MediaLoader from '#app/components/MediaLoader';
+import { MediaBlock } from '#app/components/MediaLoader/types';
+import { isPortraitVideo } from '#app/components/MediaLoader/utils/isPortraitVideo';
+import Text from '#app/components/Text';
+import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
+import { ServiceContext } from '#app/contexts/ServiceContext';
+import Blocks from '#app/legacy/containers/Blocks';
+import UnorderedList from '#app/legacy/containers/BulletedList';
+import Paragraph from '#app/legacy/containers/Paragraph';
+import SocialEmbedContainer from '#app/legacy/containers/SocialEmbed';
+import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
+import filterForBlockType from '#app/lib/utilities/blockHandlers';
+import isTenHoursAgo from '#app/lib/utilities/isTenHoursAgo';
+import { OptimoBlock } from '#models/types/optimo';
+import ShareButton from '../ShareButton';
 import styles from './styles';
 import {
-  Post as PostType,
-  PostHeadline,
+  ComponentToRenderProps,
   PostContributor,
   PostHeadingBlock,
-  ComponentToRenderProps,
+  PostHeadline,
+  Post as PostType,
 } from './types';
-import ShareButton from '../ShareButton';
 
 const inferBlockIdentifier = ({
   headingItem,

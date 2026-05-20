@@ -1,10 +1,11 @@
 import { GetServerSideProps } from 'next';
 import dynamic from 'next/dynamic';
-import { ARTICLE_PAGE, MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import { PageTypes } from '#app/models/types/global';
+
 import withOptimizelyProvider from '#app/legacy/containers/PageHandlers/withOptimizelyProvider';
-import { ArticlePageProps } from './types';
+import { PageTypes } from '#app/models/types/global';
+import { ARTICLE_PAGE, MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import handleArticleRoute from './handleArticleRoute';
+import { ArticlePageProps } from './types';
 
 const ArticlePage = dynamic(() => import('#app/pages/ArticlePage/ArticlePage'));
 const MediaArticlePage = dynamic(

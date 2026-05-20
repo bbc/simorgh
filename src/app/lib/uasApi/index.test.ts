@@ -1,7 +1,8 @@
 import Cookie from 'js-cookie';
+
 import { getEnvConfig } from '../utilities/getEnvConfig';
-import { refreshTokensIfExpired } from './tokenRefresh/tokenManager';
 import uasApiRequest from './index';
+import { refreshTokensIfExpired } from './tokenRefresh/tokenManager';
 
 jest.mock('js-cookie');
 jest.mock('../utilities/getEnvConfig');

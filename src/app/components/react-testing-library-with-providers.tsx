@@ -1,14 +1,14 @@
 import type { FC, PropsWithChildren, ReactElement } from 'react';
-import { render, type RenderOptions } from '@testing-library/react';
+
+import { type RenderOptions, render } from '@testing-library/react';
 
 import { AccountProvider } from '#app/contexts/AccountContext';
 import type { IdctaConfig } from '#app/models/types/account';
-import { ServiceContextProvider } from '../contexts/ServiceContext';
+import { EventTrackingContextProvider } from '../contexts/EventTrackingContext';
 import { RequestContextProvider } from '../contexts/RequestContext';
+import { ServiceContextProvider } from '../contexts/ServiceContext';
 import { ToggleContextProvider } from '../contexts/ToggleContext';
 import { UserContextProvider } from '../contexts/UserContext';
-import { EventTrackingContextProvider } from '../contexts/EventTrackingContext';
-import ThemeProvider from './ThemeProvider';
 import type {
   PageTypes,
   Services,
@@ -16,6 +16,7 @@ import type {
   Variants,
 } from '../models/types/global';
 import type { ATIData } from './ATIAnalytics/types';
+import ThemeProvider from './ThemeProvider';
 
 jest.mock('./ThemeProvider');
 
@@ -165,4 +166,5 @@ const customRender = (
 };
 
 export * from '@testing-library/react';
-export { customRender as render, AllTheProviders };
+
+export { AllTheProviders, customRender as render };

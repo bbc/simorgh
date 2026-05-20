@@ -1,13 +1,16 @@
 // biome-ignore-all lint/suspicious/noConsole: we want this
 /* eslint-disable no-param-reassign */
-import { defineConfig } from 'cypress';
-import webpackPreprocessor from '@cypress/webpack-preprocessor';
+
 import fs from 'node:fs';
 import path from 'node:path';
-import MomentTimezoneInclude from './src/app/legacy/psammead/moment-timezone-include/src';
-import { webpackDirAlias } from './dirAlias';
-import { DefinePlugin } from 'webpack';
+
+import webpackPreprocessor from '@cypress/webpack-preprocessor';
+import { defineConfig } from 'cypress';
 import dotenv from 'dotenv';
+import { DefinePlugin } from 'webpack';
+
+import { webpackDirAlias } from './dirAlias';
+import MomentTimezoneInclude from './src/app/legacy/psammead/moment-timezone-include/src';
 
 const appDirectory = fs.realpathSync(process.cwd());
 const resolvePath = (relativePath: string) =>

@@ -1,6 +1,6 @@
 import { render } from '../../../../components/react-testing-library-with-providers';
-import Timestamp from '.';
 import { MEDIA_ARTICLE_PAGE } from '../../../../routes/utils/pageTypes';
+import Timestamp from '.';
 
 describe('Timestamp', () => {
   it('should render Timestamp correctly', () => {

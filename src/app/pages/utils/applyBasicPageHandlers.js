@@ -1,9 +1,10 @@
 import pipe from 'ramda/src/pipe';
+
 import withContexts from '#containers/PageHandlers/withContexts';
-import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
-import withError from '#containers/PageHandlers/withError';
 import withData from '#containers/PageHandlers/withData';
+import withError from '#containers/PageHandlers/withError';
 import withHashChangeHandler from '#containers/PageHandlers/withHashChangeHandler';
+import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 
 export default (
   component,

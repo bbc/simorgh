@@ -1,4 +1,4 @@
-import { Theme, css } from '@emotion/react';
+import { css, Theme } from '@emotion/react';
 
 export default {
   timestamp: ({ palette, fontSizes, fontVariants }: Theme) =>

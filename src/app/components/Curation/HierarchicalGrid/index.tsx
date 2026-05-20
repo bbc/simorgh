@@ -1,20 +1,22 @@
 // biome-ignore-all lint/a11y/useValidAriaRole: we want this
 import { use } from 'react';
+
 import { css, type Theme } from '@emotion/react';
 import moment from 'moment';
 import path from 'ramda/src/path';
-import isMediaType from '#app/lib/utilities/isMedia';
+
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
-import VisuallyHiddenText from '../../VisuallyHiddenText';
-import formatDuration from '../../../lib/utilities/formatDuration';
-import Promo from '../../../legacy/components/Promo';
-import { DESKTOP, TABLET, MOBILE, SMALL } from './dataStructures';
-import { styles } from './index.styles';
-import { ServiceContext } from '../../../contexts/ServiceContext';
-import type { CurationGridProps } from '../types';
-import type { Summary } from '../../../models/types/curationData';
+import isMediaType from '#app/lib/utilities/isMedia';
 import { RequestContext } from '../../../contexts/RequestContext';
+import { ServiceContext } from '../../../contexts/ServiceContext';
+import Promo from '../../../legacy/components/Promo';
+import formatDuration from '../../../lib/utilities/formatDuration';
+import type { Summary } from '../../../models/types/curationData';
 import LiveLabel from '../../LiveLabel';
+import VisuallyHiddenText from '../../VisuallyHiddenText';
+import type { CurationGridProps } from '../types';
+import { DESKTOP, MOBILE, SMALL, TABLET } from './dataStructures';
+import { styles } from './index.styles';
 
 const getStyles = (promoCount: number, i: number, mq: Theme['mq']) =>
   css({

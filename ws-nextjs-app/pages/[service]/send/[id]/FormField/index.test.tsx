@@ -3,9 +3,9 @@ import {
   render,
 } from '#app/components/react-testing-library-with-providers';
 import * as FormContext from '../FormContext';
-import FormField, { FormComponentProps } from '.';
-import { Field } from '../types';
 import { ContextProps } from '../FormContext';
+import { Field } from '../types';
+import FormField, { FormComponentProps } from '.';
 
 jest.mock('next/router', () => ({
   useRouter: () => ({ query: { id: 'u1234' } }),

@@ -1,4 +1,5 @@
-import { useRef, useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+
 import useIsPWA from '#app/hooks/useIsPWA';
 
 interface BeforeInstallPromptEvent extends Event {

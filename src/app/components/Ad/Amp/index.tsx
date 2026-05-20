@@ -1,23 +1,25 @@
 import { use } from 'react';
-import { Helmet } from 'react-helmet';
+
 import pathOr from 'ramda/src/pathOr';
+import { Helmet } from 'react-helmet';
+
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { RequestContext } from '#contexts/RequestContext';
 import {
   AMP_ACCESS_JS,
   AMP_ADS_JS,
 } from '#psammead/psammead-assets/src/amp-boilerplate';
-import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { ServiceContext } from '../../../contexts/ServiceContext';
-import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
-import AdSlot from './AdSlot';
 import type {
   Direction,
   PageTypes,
   Services,
 } from '../../../models/types/global';
-import styles from './index.styles';
-import adStyles from '../utilities/adSlot.styles';
 import { type AdProps, SLOT_TYPES, type SlotType } from '../types';
+import adStyles from '../utilities/adSlot.styles';
+import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
+import AdSlot from './AdSlot';
+import styles from './index.styles';
 
 const AMP_ACCESS_DATA = (endpoint: string) => ({
   authorization: endpoint,

@@ -1,5 +1,5 @@
 import { render } from '../../../react-testing-library-with-providers';
-import AdSlot, { getDataSlot, getAssetType } from '.';
+import AdSlot, { getAssetType, getDataSlot } from '.';
 
 describe('getAssetType', () => {
   it('should return an asset type of story given a pageType of STY', () => {

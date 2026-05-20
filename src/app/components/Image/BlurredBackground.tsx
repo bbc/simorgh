@@ -1,5 +1,6 @@
-import { RequestContext } from '#app/contexts/RequestContext';
 import { use } from 'react';
+
+import { RequestContext } from '#app/contexts/RequestContext';
 import styles from './index.styles';
 
 type BlurredBackgroundProps = {

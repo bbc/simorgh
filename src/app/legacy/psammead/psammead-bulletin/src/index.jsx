@@ -1,14 +1,15 @@
 import styled from '@emotion/styled';
+
+import LiveLabel from '#app/components/LiveLabel';
 import {
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
 import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
-import LiveLabel from '#app/components/LiveLabel';
 import { Link } from '#psammead/psammead-story-promo/src';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 import ImageGridItem from './ImageStyles';

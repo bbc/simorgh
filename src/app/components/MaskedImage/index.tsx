@@ -1,10 +1,11 @@
 import { use } from 'react';
-import { ServiceContext } from '#contexts/ServiceContext';
+
 import Image from '#app/components/Image';
 import buildIChefURL from '#app/lib/utilities/ichefURL';
-import { createSrcsets } from '#app/lib/utilities/srcSet';
-import getOriginCode from '#app/lib/utilities/imageSrcHelpers/originCode';
 import getLocator from '#app/lib/utilities/imageSrcHelpers/locator';
+import getOriginCode from '#app/lib/utilities/imageSrcHelpers/originCode';
+import { createSrcsets } from '#app/lib/utilities/srcSet';
+import { ServiceContext } from '#contexts/ServiceContext';
 import styles from './styles';
 
 type Props = {

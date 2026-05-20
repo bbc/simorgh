@@ -1,4 +1,4 @@
-import { getAssetTypeCode, getHeadline, getUrl, getIsLive } from '.';
+import { getAssetTypeCode, getHeadline, getIsLive, getUrl } from '.';
 
 const assetTypeCode = {
   name: "BBC'nin 60 yıllık Türkiye arşivlerini izleyicilerimizle buluşturuyoruz",

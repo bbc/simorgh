@@ -1,22 +1,23 @@
 import { createContext } from 'react';
+
 import { OptimizelyProvider } from '@optimizely/react-sdk';
 import userEvent from '@testing-library/user-event';
-import { STORY_PAGE } from '#app/routes/utils/pageTypes';
-import constructReverbUrl from '#app/lib/analyticsUtils/staticATITracking/constructReverbUrl';
-import * as trackingToggle from '#hooks/useTrackingToggle';
 
-import * as useOptimizelyVariation from '../useOptimizelyVariation';
+import constructReverbUrl from '#app/lib/analyticsUtils/staticATITracking/constructReverbUrl';
+import { STORY_PAGE } from '#app/routes/utils/pageTypes';
+import * as trackingToggle from '#hooks/useTrackingToggle';
 import {
   AllTheProviders,
-  render,
-  renderHook,
   act,
   fireEvent,
+  render,
+  renderHook,
   waitFor,
 } from '../../components/react-testing-library-with-providers';
 import * as serviceContextModule from '../../contexts/ServiceContext';
-import pidginData from './fixtureData/tori-51745682.json';
+import * as useOptimizelyVariation from '../useOptimizelyVariation';
 import useClickTrackerHandler from '.';
+import pidginData from './fixtureData/tori-51745682.json';
 
 const trackingToggleSpy = jest.spyOn(trackingToggle, 'default');
 

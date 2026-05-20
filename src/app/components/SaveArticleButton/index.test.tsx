@@ -1,7 +1,7 @@
-import useUASButton from '#app/hooks/useUASButton';
 import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
+import useUASButton from '#app/hooks/useUASButton';
 import { Article } from '#app/models/types/optimo';
-import { render, screen, act } from '../react-testing-library-with-providers';
+import { act, render, screen } from '../react-testing-library-with-providers';
 import SaveArticleButton from '.';
 
 jest.mock('#app/hooks/useUASButton');

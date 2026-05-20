@@ -3,11 +3,10 @@ import {
   isInProgressStatus,
   isResultStatus,
 } from '../helpers/event-status-groups';
-
+import styles from '../index.styles';
+import type { EventStatusType, HeadToHeadV2Data } from '../types';
 import Time from './fixture-time';
 import Score from './score';
-import styles from '../index.styles';
-import type { HeadToHeadV2Data, EventStatusType } from '../types';
 
 export const shouldShowScores = (statusGroup: EventStatusType) =>
   isInProgressStatus(statusGroup) ||

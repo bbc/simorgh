@@ -1,5 +1,4 @@
-import type { ReactNode } from 'react';
-import type { FC, HTMLAttributes } from 'react';
+import type { FC, HTMLAttributes, ReactNode } from 'react';
 
 import type { FontVariant, GelFontSize } from '../../models/types/theming';
 import Text from '../Text';

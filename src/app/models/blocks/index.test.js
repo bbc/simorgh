@@ -1,15 +1,15 @@
 import {
-  videoBlock,
-  rawVideoBlock,
-  blockContainingText,
-  blockBase,
-  rawImageBlock,
-  stdArrayModelBlock,
   blockArrayModel,
-  imageBlock,
-  rawImageModel,
-  simpleListBlock,
+  blockBase,
+  blockContainingText,
   bylineBlock,
+  imageBlock,
+  rawImageBlock,
+  rawImageModel,
+  rawVideoBlock,
+  simpleListBlock,
+  stdArrayModelBlock,
+  videoBlock,
 } from '.';
 
 const testModel = {

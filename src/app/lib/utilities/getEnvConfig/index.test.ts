@@ -1,5 +1,5 @@
-import { getEnvConfig } from '.';
 import * as onClient from '../onClient';
+import { getEnvConfig } from '.';
 
 const onClientSpy = jest.spyOn(onClient, 'default');
 

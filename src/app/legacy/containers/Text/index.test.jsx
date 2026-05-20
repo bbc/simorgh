@@ -5,8 +5,8 @@ import {
 } from '#psammead/psammead-test-helpers/src';
 import { render } from '../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import { fragmentBlock, paragraphBlock } from './fixtures';
 import TextContainer from './index';
-import { paragraphBlock, fragmentBlock } from './fixtures';
 
 const defaultToggles = {
   eventTracking: {

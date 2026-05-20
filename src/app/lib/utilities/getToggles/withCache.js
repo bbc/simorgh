@@ -1,6 +1,7 @@
 import { LRUCache } from 'lru-cache';
-import getToggles from '.';
+
 import { getEnvConfig } from '../getEnvConfig';
+import getToggles from '.';
 
 const cacheMaxItems = parseInt(
   getEnvConfig().SIMORGH_CONFIG_CACHE_ITEMS ?? 400,

@@ -1,11 +1,13 @@
 /* eslint-disable @typescript-eslint/no-namespace */
-import memoizeWith from 'ramda/src/memoizeWith';
+
 import identity from 'ramda/src/identity';
+import memoizeWith from 'ramda/src/memoizeWith';
+
 import defaultToggles from '#app/lib/config/toggles';
-import testResponseCodeAndRetry from './helpers/testResponseCodeAndRetry';
-import getAppEnv from './helpers/getAppEnv';
 import envConfig, { EnvironmentConfigType } from './config/envs';
+import getAppEnv from './helpers/getAppEnv';
 import handleContinueReadingButton from './helpers/handleContinueReadingButton';
+import testResponseCodeAndRetry from './helpers/testResponseCodeAndRetry';
 
 interface TestResponseCodeAndRetry {
   url: string;

@@ -1,13 +1,14 @@
 import pathOr from 'ramda/src/pathOr';
+
 import getAuthorTwitterHandle from '.';
 import {
   contentBlockWithByline,
   contentBlockWithEmptyLinkFragment,
   contentBlockWithMultipleBylines,
   contentBlockWithMultipleContributors,
+  contentBlockWithMultipleHandlePrefixes,
   contentBlockWithNoByline,
   contentBlockWithNoBylineLink,
-  contentBlockWithMultipleHandlePrefixes,
   contentBlockWithNoHandlePrefixes,
 } from './fixture';
 

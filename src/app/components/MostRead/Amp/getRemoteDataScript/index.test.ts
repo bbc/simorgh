@@ -1,7 +1,8 @@
 // biome-ignore-all lint/security/noGlobalEval: this is fine
-import { transformData } from '.';
-import { WesternArabic } from '../../../../legacy/psammead/psammead-locales/src/numerals';
+
 import { data as pidginMostRead } from '../../../../../../data/pidgin/mostRead/index.json';
+import { WesternArabic } from '../../../../legacy/psammead/psammead-locales/src/numerals';
+import { transformData } from '.';
 
 describe('getRemoteDataScript', () => {
   it('transformData should append rankTranslation to each item', async () => {

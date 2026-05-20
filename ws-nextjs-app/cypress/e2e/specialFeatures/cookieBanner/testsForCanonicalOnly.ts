@@ -1,13 +1,14 @@
 /* eslint-disable cypress/no-unnecessary-waiting */
+
+import visitPage from '../../../support/helpers/visitPage';
 import {
-  getCookieBannerCanonical,
   getCookieBannerAcceptCanonical,
+  getCookieBannerCanonical,
   getCookieBannerRejectCanonical,
   getPrivacyBanner,
   getPrivacyBannerAccept,
   shouldRunBannerTest,
 } from '../utilities/cookiePrivacyBanner';
-import visitPage from '../../../support/helpers/visitPage';
 
 /*
  * The ckns_explicit cookie can have a value of 1 or 2 depending on a user's location.

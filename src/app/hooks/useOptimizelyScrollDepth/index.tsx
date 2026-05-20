@@ -1,4 +1,5 @@
-import { useEffect, useState, use } from 'react';
+import { use, useEffect, useState } from 'react';
+
 import { OptimizelyContext } from '@optimizely/react-sdk';
 
 const getScrollDepth = () =>

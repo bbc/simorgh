@@ -4,8 +4,8 @@ import {
 } from '#psammead/psammead-test-helpers/src';
 import { render } from '../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
-import Paragraph from '.';
 import { TV_PAGE } from '../../../routes/utils/pageTypes';
+import Paragraph from '.';
 
 describe('MediaPageBlocks Paragraph', () => {
   it('should render correctly', () => {

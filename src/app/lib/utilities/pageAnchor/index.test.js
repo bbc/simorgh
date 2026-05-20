@@ -1,5 +1,5 @@
-import urlWithPageAnchor from '.';
 import onClient from '../onClient';
+import urlWithPageAnchor from '.';
 
 let onClientMockRes = true;
 jest.mock('../onClient', () => jest.fn());

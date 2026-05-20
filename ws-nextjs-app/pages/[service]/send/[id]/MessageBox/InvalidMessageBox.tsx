@@ -1,14 +1,15 @@
-import { use, ForwardedRef, forwardRef, PropsWithChildren } from 'react';
-import { ServiceContext } from '#app/contexts/ServiceContext';
+import { ForwardedRef, forwardRef, PropsWithChildren, use } from 'react';
+
 import Text from '#app/components/Text';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
+import { ServiceContext } from '#app/contexts/ServiceContext';
+import fallbackTranslations from '../fallbackTranslations';
 import {
-  InvalidMessageCodes,
   InvalidMessageBoxProps,
+  InvalidMessageCodes,
   ValidationConditions,
 } from '../types';
 import styles from './styles';
-import fallbackTranslations from '../fallbackTranslations';
 
 const ErrorSymbol = () => (
   <svg

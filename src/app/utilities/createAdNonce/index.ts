@@ -1,6 +1,6 @@
+import getToggleDefinitions from '#app/lib/utilities/getToggleDefinition';
 import getUUID from '#app/lib/utilities/getUUID';
 import type { Toggles } from '#app/models/types/global';
-import getToggleDefinitions from '#app/lib/utilities/getToggleDefinition';
 
 interface InjectNonceHeader {
   toggles: Toggles;

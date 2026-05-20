@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
-import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
+
 import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
+import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
 
 const EpisodesText = styled.p`
   display: inline;

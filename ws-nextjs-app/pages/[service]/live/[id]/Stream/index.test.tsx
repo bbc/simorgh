@@ -1,9 +1,9 @@
+import MockIntersectionObserver from '#app/components/intersection-observer-testing-library';
 import {
+  act,
   render,
   screen,
-  act,
 } from '#app/components/react-testing-library-with-providers';
-import MockIntersectionObserver from '#app/components/intersection-observer-testing-library';
 import postsFixture from '#data/pidgin/posts/postFixture.json';
 import Stream from './index';
 

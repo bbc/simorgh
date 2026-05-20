@@ -1,4 +1,4 @@
-import { interceptATIAnalyticsBeacons, COMPONENTS } from '../helpers';
+import { COMPONENTS, interceptATIAnalyticsBeacons } from '../helpers';
 import { assertATIComponentViewEvent } from '.';
 
 const { PORTRAIT_VIDEO_CAROUSEL } = COMPONENTS;

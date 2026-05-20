@@ -1,5 +1,7 @@
 // biome-ignore-all lint/a11y/useValidAriaRole: we want this
 import styled from '@emotion/styled';
+
+import { GHOST } from '#app/components/ThemeProvider/palette';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   MEDIA_QUERY_TYPOGRAPHY,
@@ -8,7 +10,6 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
-import { GHOST } from '#app/components/ThemeProvider/palette';
 
 const minClickableHeightPx = 44;
 const minClickableHeightRem = minClickableHeightPx / 16;

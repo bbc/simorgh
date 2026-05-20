@@ -1,7 +1,8 @@
 import styled from '@emotion/styled';
+
 import {
-  GEL_SPACING_HLF,
   GEL_SPACING_DBL,
+  GEL_SPACING_HLF,
 } from '#psammead/gel-foundations/src/spacings';
 
 const defaultAttrs = {

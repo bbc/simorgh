@@ -1,6 +1,7 @@
 import type { PropsWithChildren } from 'react';
-import styles from './index.styles';
+
 import type { PulseProps } from '../LiveLabel/types';
+import styles from './index.styles';
 
 const Pulse = ({ className, width, height }: PropsWithChildren<PulseProps>) => (
   <svg

@@ -1,6 +1,6 @@
-import type { OptimoBlock } from '#app/models/types/optimo';
-import type { ViewTracker } from '#app/lib/analyticsUtils/types';
 import type useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import type { ViewTracker } from '#app/lib/analyticsUtils/types';
+import type { OptimoBlock } from '#app/models/types/optimo';
 import Promo from '../Promo';
 import styles from './index.styles';
 

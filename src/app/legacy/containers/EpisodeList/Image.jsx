@@ -1,21 +1,21 @@
 import { use } from 'react';
-import omit from 'ramda/src/omit';
+
 import styled from '@emotion/styled';
-import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
-import {
-  GEL_SPACING_HLF,
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-} from '#psammead/gel-foundations/src/spacings';
+import omit from 'ramda/src/omit';
+
+import pixelsToRem from '#app/utilities/pixelsToRem';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
-import pixelsToRem from '#app/utilities/pixelsToRem';
-
+import {
+  GEL_SPACING,
+  GEL_SPACING_DBL,
+  GEL_SPACING_HLF,
+} from '#psammead/gel-foundations/src/spacings';
+import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
 import ImagePlaceholder from '#psammead/psammead-image-placeholder/src';
 import { RequestContext } from '../../../contexts/RequestContext';
-
 import { withEpisodeContext } from './helpers';
 
 const Wrapper = styled.div`

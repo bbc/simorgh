@@ -1,11 +1,11 @@
 import type { PropsWithChildren } from 'react';
-import { render, waitFor } from '@testing-library/react';
+
 import { OptimizelyProvider, type ReactSDKClient } from '@optimizely/react-sdk';
+import { render, waitFor } from '@testing-library/react';
 
-import { RequestContextProvider } from '#contexts/RequestContext';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import type { PageTypes, Services } from '#app/models/types/global';
-
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { RequestContextProvider } from '#contexts/RequestContext';
 import PageViewTracking from '.';
 
 const optimizely = {

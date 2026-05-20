@@ -1,11 +1,13 @@
 import { use } from 'react';
+
 import isEmpty from 'ramda/src/isEmpty';
-import useViewTracker from '#hooks/useViewTracker';
-import type { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
+
 import type { EventTrackingMetadata } from '#app/models/types/eventTracking';
+import type { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
+import useViewTracker from '#hooks/useViewTracker';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import PromoList from './PromoList';
 import styles from './index.styles';
+import PromoList from './PromoList';
 
 interface TopBarOJsProps {
   blocks: TopStoryItem[];

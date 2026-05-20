@@ -1,24 +1,26 @@
 import { use } from 'react';
+
 import styled from '@emotion/styled';
+
+import Grid, { GelPageGrid } from '#components/Grid';
+import IndexPageContainer from '#components/PageLayout/IndexPageContainer';
+import ComscoreAnalytics from '#containers/ComscoreAnalytics';
+import IndexHeading from '#containers/IndexHeading';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MAX,
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
 import {
-  GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
+  GEL_SPACING_TRPL,
 } from '#psammead/gel-foundations/src/spacings';
-import ComscoreAnalytics from '#containers/ComscoreAnalytics';
-import Grid, { GelPageGrid } from '#components/Grid';
-import IndexHeading from '#containers/IndexHeading';
-import IndexPageContainer from '#components/PageLayout/IndexPageContainer';
-import MostRead from '../../components/MostRead/Canonical';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
-import MetadataContainer from '../../components/Metadata';
-import { ServiceContext } from '../../contexts/ServiceContext';
 import LinkedData from '../../components/LinkedData';
+import MetadataContainer from '../../components/Metadata';
+import MostRead from '../../components/MostRead/Canonical';
+import { ServiceContext } from '../../contexts/ServiceContext';
 
 const MarginWrapper = styled.div`
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {

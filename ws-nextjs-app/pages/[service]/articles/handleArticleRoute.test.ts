@@ -1,7 +1,8 @@
-import pidginMediaArticleFixtureData from '#data/pidgin/articles/cvpde7nqj92o.json';
 import { GetServerSidePropsContext } from 'next';
-import * as shouldRender from '../../../utilities/shouldRender';
+
+import pidginMediaArticleFixtureData from '#data/pidgin/articles/cvpde7nqj92o.json';
 import * as getPageDataModule from '../../../utilities/pageRequests/getPageData';
+import * as shouldRender from '../../../utilities/shouldRender';
 import handleArticleRoute from './handleArticleRoute';
 
 jest.mock('../../../utilities/pageRequests/getPageData');

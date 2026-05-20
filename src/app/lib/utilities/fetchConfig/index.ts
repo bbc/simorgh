@@ -1,12 +1,13 @@
-import nodeLogger from '#lib/logger.node';
-import { CONFIG_REQUEST_RECEIVED, CONFIG_FETCH_ERROR } from '#lib/logger.const';
 import { LRUCache } from 'lru-cache';
-import type { Services, Variants } from '#app/models/types/global';
-import getAgent from '#src/server/utilities/getAgent';
-import certsRequired from '#app/routes/utils/certsRequired';
-import type { FetchError } from '#app/models/types/fetch';
-import getEnvironment from '#app/routes/utils/getEnvironment';
+
 import SERVICES_WITH_NEW_NAV from '#app/components/Navigation/config';
+import type { FetchError } from '#app/models/types/fetch';
+import type { Services, Variants } from '#app/models/types/global';
+import certsRequired from '#app/routes/utils/certsRequired';
+import getEnvironment from '#app/routes/utils/getEnvironment';
+import { CONFIG_FETCH_ERROR, CONFIG_REQUEST_RECEIVED } from '#lib/logger.const';
+import nodeLogger from '#lib/logger.node';
+import getAgent from '#src/server/utilities/getAgent';
 import { PRIMARY_DATA_TIMEOUT } from '../getFetchTimeouts';
 
 const logger = nodeLogger(__filename);

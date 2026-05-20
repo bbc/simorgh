@@ -1,9 +1,9 @@
-import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
-import burmeseScript from '../fontScripts/burmese';
-import { PADAUK_BOLD, PADAUK_REGULAR } from '../fontFaces';
-import burmeseFontVariants from '../fontVariants/burmese';
-import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/burmese';
+import { PADAUK_BOLD, PADAUK_REGULAR } from '../fontFaces';
+import burmeseScript from '../fontScripts/burmese';
+import burmeseFontVariants from '../fontVariants/burmese';
+import { GHOST, POSTBOX, POSTBOX_30, WHITE } from '../palette';
+import withThemeProvider from '../withThemeProvider';
 
 export const theme = {
   palette: {

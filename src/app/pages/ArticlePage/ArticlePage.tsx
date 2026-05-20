@@ -1,95 +1,96 @@
 import { use, useState } from 'react';
+
 import { useTheme } from '@emotion/react';
-import useToggle from '#hooks/useToggle';
+
+import ArticleLinksBlock from '#app/components/ArticleLinksBlock';
+import ContinueReadingButton, {
+  type ContinueReadingButtonProps,
+} from '#app/components/ContinueReadingButton';
+import Curation from '#app/components/Curation';
+import type { BylineLinkedData } from '#app/components/LinkedData/types';
+import MediaLoader from '#app/components/MediaLoader';
+import type { MediaBlock } from '#app/components/MediaLoader/types';
+import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
+import PortraitVideoCarousel from '#app/components/PortraitVideoCarousel';
+import PWAPromotionalBanner from '#app/components/PWAPromotionalBanner';
+import ReadTimeArticle from '#app/components/ReadTime';
+import Recommendations from '#app/components/Recommendations';
+import RelatedTopics from '#app/components/RelatedTopics';
+import SaveArticleButton from '#app/components/SaveArticleButton';
 import useOptimizelyVariation, {
   ExperimentType,
 } from '#app/hooks/useOptimizelyVariation';
 import { singleTextBlock } from '#app/models/blocks';
-import type { BylineLinkedData } from '#app/components/LinkedData/types';
-import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
-import ArticleMetadata from '#containers/ArticleMetadata';
-import { RequestContext } from '#contexts/RequestContext';
-import Headings from '#containers/Headings';
-import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
-import gist from '#containers/Gist';
-import text from '#containers/Text';
-import Blocks from '#containers/Blocks';
-import Timestamp from '#containers/ArticleTimestamp';
-import ComscoreAnalytics from '#containers/ComscoreAnalytics';
-import SocialEmbedContainer from '#containers/SocialEmbed';
-import MediaLoader from '#app/components/MediaLoader';
-import type { MediaBlock } from '#app/components/MediaLoader/types';
-import { PHOTO_GALLERY_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
-import PortraitVideoCarousel from '#app/components/PortraitVideoCarousel';
 import {
-  getArticleId,
-  getHeadline,
-  getSummary,
-  getFirstPublished,
-  getLastPublished,
-  getAboutTags,
-  getArticleSection,
-  getMentions,
-  getLang,
-} from '#lib/utilities/parseAssetData';
-import extractPromoImage from '#lib/utilities/extractPromoImage';
-import RelatedTopics from '#app/components/RelatedTopics';
-import NielsenAnalytics from '#containers/NielsenAnalytics';
-import InlinePodcastPromo from '#containers/PodcastPromo/Inline';
+  VISUAL_PROMINENCE,
+  VISUAL_STYLE,
+} from '#app/models/types/curationData';
+import type { ComponentExperimentProps } from '#app/models/types/global';
+import type { Recommendation } from '#app/models/types/onwardJourney';
 import type {
   Article,
   OptimoBlock,
   OptimoBylineBlock,
   OptimoBylineContributorBlock,
 } from '#app/models/types/optimo';
-import type { ComponentExperimentProps } from '#app/models/types/global';
-import {
-  VISUAL_PROMINENCE,
-  VISUAL_STYLE,
-} from '#app/models/types/curationData';
 import type { Translations } from '#app/models/types/translations';
-import type { Recommendation } from '#app/models/types/onwardJourney';
-
-import ArticleLinksBlock from '#app/components/ArticleLinksBlock';
-import Curation from '#app/components/Curation';
-import Recommendations from '#app/components/Recommendations';
-import ReadTimeArticle from '#app/components/ReadTime';
-import PWAPromotionalBanner from '#app/components/PWAPromotionalBanner';
-import ContinueReadingButton, {
-  type ContinueReadingButtonProps,
-} from '#app/components/ContinueReadingButton';
-import SaveArticleButton from '#app/components/SaveArticleButton';
+import { PHOTO_GALLERY_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
+import ArticleMetadata from '#containers/ArticleMetadata';
+import Timestamp from '#containers/ArticleTimestamp';
+import Blocks from '#containers/Blocks';
+import ComscoreAnalytics from '#containers/ComscoreAnalytics';
+import gist from '#containers/Gist';
+import Headings from '#containers/Headings';
+import NielsenAnalytics from '#containers/NielsenAnalytics';
+import InlinePodcastPromo from '#containers/PodcastPromo/Inline';
+import SocialEmbedContainer from '#containers/SocialEmbed';
+import text from '#containers/Text';
+import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
+import { RequestContext } from '#contexts/RequestContext';
+import useToggle from '#hooks/useToggle';
+import extractPromoImage from '#lib/utilities/extractPromoImage';
 import isLive from '#lib/utilities/isLive';
-import ElectionBanner from './ElectionBanner';
-import ImageWithCaption from '../../components/ImageWithCaption';
+import {
+  getAboutTags,
+  getArticleId,
+  getArticleSection,
+  getFirstPublished,
+  getHeadline,
+  getLang,
+  getLastPublished,
+  getMentions,
+  getSummary,
+} from '#lib/utilities/parseAssetData';
 import AdContainer from '../../components/Ad';
-import EmbedImages from '../../components/Embeds/EmbedImages';
-import EmbedHtml from '../../components/Embeds/EmbedHtml';
-import MostRead from '../../components/MostRead';
 import ATIAnalytics from '../../components/ATIAnalytics';
-import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
-import LinkedData from '../../components/LinkedData';
 import Byline from '../../components/Byline';
-import OEmbedLoader from '../../components/Embeds/OEmbed';
-import UnsupportedEmbed from '../../components/Embeds/UnsupportedEmbed';
-import Uploader from '../../components/Embeds/Uploader';
 import {
   bylineExtractor,
   categoryName,
   getAuthorTwitterHandle,
 } from '../../components/Byline/utilities';
-import { ServiceContext } from '../../contexts/ServiceContext';
-import RelatedContentSection from '../../components/RelatedContentSection';
-import TopicDiscovery from '../../components/TopicDiscovery';
+import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import Disclaimer from '../../components/Disclaimer';
-import SecondaryColumn from './SecondaryColumn';
-import styles from './ArticlePage.styles';
-import type { ComponentToRenderProps, TimeStampProps } from './types';
-import ArticleHeadline from './ArticleHeadline';
+import EmbedHtml from '../../components/Embeds/EmbedHtml';
+import EmbedImages from '../../components/Embeds/EmbedImages';
+import OEmbedLoader from '../../components/Embeds/OEmbed';
+import UnsupportedEmbed from '../../components/Embeds/UnsupportedEmbed';
+import Uploader from '../../components/Embeds/Uploader';
+import ImageWithCaption from '../../components/ImageWithCaption';
+import LinkedData from '../../components/LinkedData';
 import {
   isPortraitVideo,
   isPortraitVideoUnderHeadline,
 } from '../../components/MediaLoader/utils/isPortraitVideo';
+import MostRead from '../../components/MostRead';
+import RelatedContentSection from '../../components/RelatedContentSection';
+import TopicDiscovery from '../../components/TopicDiscovery';
+import { ServiceContext } from '../../contexts/ServiceContext';
+import ArticleHeadline from './ArticleHeadline';
+import styles from './ArticlePage.styles';
+import ElectionBanner from './ElectionBanner';
+import SecondaryColumn from './SecondaryColumn';
+import type { ComponentToRenderProps, TimeStampProps } from './types';
 
 const getImageComponent =
   (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (

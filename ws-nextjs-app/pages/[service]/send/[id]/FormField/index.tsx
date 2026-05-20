@@ -1,13 +1,14 @@
 import { ReactElement } from 'react';
-import { HtmlType, InputProps } from '../types';
-import styles from './styles';
+
 import { useFormContext } from '../FormContext';
-import TextInput from './TextInput';
-import EmailInput from './EmailInput';
+import { HtmlType, InputProps } from '../types';
 import Checkbox from './Checkbox';
+import EmailInput from './EmailInput';
+import File from './File';
+import styles from './styles';
 import Telephone from './Telephone';
 import TextArea from './TextArea';
-import File from './File';
+import TextInput from './TextInput';
 
 const FormComponents: Record<
   string,

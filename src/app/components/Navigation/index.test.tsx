@@ -1,16 +1,16 @@
-import { ARTICLE_PAGE, HOME_PAGE } from '#app/routes/utils/pageTypes';
 import LanguageNavigation from '#app/legacy/containers/Navigation/LanguageNavigation';
+import { ARTICLE_PAGE, HOME_PAGE } from '#app/routes/utils/pageTypes';
+import { ServiceContext } from '../../contexts/ServiceContext';
+import * as clickTracking from '../../hooks/useClickTrackerHandler';
+import * as viewTracking from '../../hooks/useViewTracker';
+import { service as indonesiaConfig } from '../../lib/config/services/indonesia';
+import { service as newsConfig } from '../../lib/config/services/news';
 import {
-  render,
   act,
   fireEvent,
+  render,
 } from '../react-testing-library-with-providers';
-import { ServiceContext } from '../../contexts/ServiceContext';
-import { service as newsConfig } from '../../lib/config/services/news';
-import { service as indonesiaConfig } from '../../lib/config/services/indonesia';
 import Navigation from './index';
-import * as viewTracking from '../../hooks/useViewTracker';
-import * as clickTracking from '../../hooks/useClickTrackerHandler';
 
 describe('Navigation', () => {
   const navItems = [

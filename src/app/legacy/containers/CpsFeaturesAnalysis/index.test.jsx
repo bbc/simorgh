@@ -1,17 +1,16 @@
+import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-
-import { STORY_PAGE } from '#app/routes/utils/pageTypes';
-import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import * as viewTracking from '#hooks/useViewTracker';
 import {
-  render,
   act,
+  render,
   waitFor,
 } from '../../../components/react-testing-library-with-providers';
-import features from './fixtures.json';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import FeaturesAnalysis from '.';
+import features from './fixtures.json';
 
 const renderFeaturesAnalysis = ({
   content = features,

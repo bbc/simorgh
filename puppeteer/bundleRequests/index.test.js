@@ -1,8 +1,8 @@
 /* eslint-disable no-underscore-dangle */
 
-import { assertLoadsExpectedBundles } from './assertions';
-import runTestsForPage from '../runTestsForPage';
 import context from '../context';
+import runTestsForPage from '../runTestsForPage';
+import { assertLoadsExpectedBundles } from './assertions';
 
 global.Cypress = { env: () => 'local' };
 

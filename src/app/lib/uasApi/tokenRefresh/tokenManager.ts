@@ -1,4 +1,5 @@
 import Cookie from 'js-cookie';
+
 import onClient from '#app/lib/utilities/onClient';
 import refreshTokens from './refreshTokens';
 

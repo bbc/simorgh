@@ -1,4 +1,5 @@
 import { render } from '@testing-library/react';
+
 import AmpNielsenAnalytics from '.';
 
 describe('Assertions', () => {

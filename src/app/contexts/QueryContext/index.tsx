@@ -1,5 +1,6 @@
-import { Suspense, use, type PropsWithChildren } from 'react';
 import dynamic from 'next/dynamic';
+import { type PropsWithChildren, Suspense, use } from 'react';
+
 import { AccountContext } from '#app/contexts/AccountContext';
 
 const PersistentQueryProvider = dynamic(

@@ -1,10 +1,12 @@
 import { use } from 'react';
+
 import { render } from '@testing-library/react';
+
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
-import * as getStatsDestination from './getStatsDestination';
-import * as getOriginContext from './getOriginContext';
 import * as getEnv from './getEnv';
 import * as getMetaUrls from './getMetaUrls';
+import * as getOriginContext from './getOriginContext';
+import * as getStatsDestination from './getStatsDestination';
 
 // biome-ignore lint/style/noCommonJs: we want this
 const { RequestContextProvider, RequestContext } = require('./index');

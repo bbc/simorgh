@@ -1,4 +1,5 @@
 import { css, type Theme } from '@emotion/react';
+
 import pixelsToRem from '../../utilities/pixelsToRem';
 
 export const focusIndicatorThickness = `${pixelsToRem(3)}rem`; // 3px

@@ -1,11 +1,12 @@
-import moment from 'moment-timezone';
 import styled from '@emotion/styled';
-import MediaIndicator from '#psammead/psammead-media-indicator/src';
-import { GEL_SPACING_HLF } from '#psammead/gel-foundations/src/spacings';
+import moment from 'moment-timezone';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
+
 import formatDuration from '#lib/utilities/formatDuration';
-import { isPgl, isMap } from '../utilities';
+import { GEL_SPACING_HLF } from '#psammead/gel-foundations/src/spacings';
+import MediaIndicator from '#psammead/psammead-media-indicator/src';
+import { isMap, isPgl } from '../utilities';
 
 const getAssetContentTypes = item => {
   const type = pathOr('', ['contentType'], item);

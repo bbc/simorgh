@@ -1,5 +1,5 @@
+import type { AMPAnalyticsData, ATIAnalyticsProps } from '../types';
 import getAmpAnalyticsJson from './ampAnalyticsJson';
-import type { ATIAnalyticsProps, AMPAnalyticsData } from '../types';
 
 const JsonInlinedScript = (data: AMPAnalyticsData) => (
   <script

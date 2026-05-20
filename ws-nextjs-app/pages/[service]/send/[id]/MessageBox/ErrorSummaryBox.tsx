@@ -1,12 +1,13 @@
 import { ForwardedRef, forwardRef } from 'react';
-import { WHITE } from '#app/components/ThemeProvider/palette';
+
 import { BulletedList, BulletedListItem } from '#app/components/BulletedList';
 import Text from '#app/components/Text';
+import { WHITE } from '#app/components/ThemeProvider/palette';
 import useAndroidDetection from '#app/hooks/useAdroidDetection';
 import { useFormContext } from '../FormContext';
+import { InvalidMessageCodes } from '../types';
 import InvalidMessageBox from './InvalidMessageBox';
 import styles from './styles';
-import { InvalidMessageCodes } from '../types';
 
 export type ErrorSummaryProps = {
   labelMap: Record<string, string>;

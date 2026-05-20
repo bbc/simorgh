@@ -1,9 +1,9 @@
 import {
-  ERROR_PAGE,
-  TOPIC_PAGE,
   ARTICLE_PAGE,
+  ERROR_PAGE,
   HOME_PAGE,
   MOST_READ_PAGE,
+  TOPIC_PAGE,
 } from '#app/routes/utils/pageTypes';
 import routes from './index';
 

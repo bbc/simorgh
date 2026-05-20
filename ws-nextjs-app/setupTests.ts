@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
-import { TextEncoder, TextDecoder } from 'node:util';
 import { ReadableStream } from 'node:stream/web';
+import { TextDecoder, TextEncoder } from 'node:util';
 import { MessageChannel, MessagePort } from 'node:worker_threads';
 
 Object.defineProperties(globalThis, {

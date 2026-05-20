@@ -1,7 +1,9 @@
 // biome-ignore-all lint/suspicious/noEmptyBlockStatements: we want this
 import { use } from 'react';
+
+import { css, keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
-import { keyframes, css } from '@emotion/react';
+
 import { RequestContext } from '../../../../contexts/RequestContext';
 import { HOME_PAGE } from '../../../../routes/utils/pageTypes';
 

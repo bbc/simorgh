@@ -1,5 +1,5 @@
-import { EPISODE_STATUS } from '../episodeStatus';
 import ErrorMessage from '../ErrorMessage';
+import { EPISODE_STATUS } from '../episodeStatus';
 
 const getErrorComponent = episodeAvailability => errorProps => (
   <ErrorMessage {...errorProps} episodeAvailability={episodeAvailability} />

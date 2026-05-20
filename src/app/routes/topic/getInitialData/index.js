@@ -1,9 +1,10 @@
 import Url from 'url-parse';
+
+import fetchDataFromBFF from '#app/routes/utils/fetchDataFromBFF';
+import getErrorStatusCode from '#app/routes/utils/fetchPageData/utils/getErrorStatusCode';
+import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
 import { BFF_FETCH_ERROR } from '#lib/logger.const';
 import nodeLogger from '#lib/logger.node';
-import getErrorStatusCode from '#app/routes/utils/fetchPageData/utils/getErrorStatusCode';
-import fetchDataFromBFF from '#app/routes/utils/fetchDataFromBFF';
-import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
 import isTest from '#lib/utilities/isTest';
 
 const logger = nodeLogger(__filename);

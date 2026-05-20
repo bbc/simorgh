@@ -1,6 +1,7 @@
-import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, type Theme } from '@emotion/react';
+
 import { visuallyHiddenStyle } from '#app/lib/styles.const';
+import pixelsToRem from '#app/utilities/pixelsToRem';
 
 const styles = {
   bodyOverflowHidden: () =>

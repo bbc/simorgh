@@ -1,7 +1,8 @@
 import { Helmet } from 'react-helmet';
+
 import {
-  render,
   act,
+  render,
   waitFor,
 } from '../../../react-testing-library-with-providers';
 import AdBootstrapJs from '.';

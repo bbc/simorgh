@@ -1,14 +1,15 @@
 import type { PropsWithChildren } from 'react';
-import {
-  renderHook,
-  act,
-  cleanup,
-} from '#app/components/react-testing-library-with-providers';
 
 import { OptimizelyProvider, type ReactSDKClient } from '@optimizely/react-sdk';
-import { RequestContextProvider } from '#contexts/RequestContext';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+
+import {
+  act,
+  cleanup,
+  renderHook,
+} from '#app/components/react-testing-library-with-providers';
 import type { PageTypes, Services } from '#app/models/types/global';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { RequestContextProvider } from '#contexts/RequestContext';
 import useOptimizelyScrollDepth from '.';
 
 const optimizelyMock = {

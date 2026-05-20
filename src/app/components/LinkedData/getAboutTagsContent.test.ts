@@ -1,5 +1,5 @@
-import type { Tag } from './types';
 import getAboutTagsContent from './getAboutTagsContent';
+import type { Tag } from './types';
 
 it('returns undefined if no about tags are provided', () => {
   const aboutTags: Tag[] = [];

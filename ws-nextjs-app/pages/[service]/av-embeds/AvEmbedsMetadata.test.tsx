@@ -1,10 +1,10 @@
+import { MediaBlock } from '#app/components/MediaLoader/types';
 import {
   render,
   waitFor,
 } from '#app/components/react-testing-library-with-providers';
-import serbianCyrCps from '#data/serbian/av-embeds/cyr/srbija-68707945.json';
 import { AV_EMBEDS } from '#app/routes/utils/pageTypes';
-import { MediaBlock } from '#app/components/MediaLoader/types';
+import serbianCyrCps from '#data/serbian/av-embeds/cyr/srbija-68707945.json';
 import AvEmbedsMetadata from './AvEmbedsMetadata';
 
 const avEmbedsMetadataProps = {

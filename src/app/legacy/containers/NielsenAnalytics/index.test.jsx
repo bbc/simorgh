@@ -1,9 +1,11 @@
 import { useMemo } from 'react';
+
 import { render } from '@testing-library/react';
+
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { UserContext } from '#contexts/UserContext';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import NielsenAnalytics from '.';
 

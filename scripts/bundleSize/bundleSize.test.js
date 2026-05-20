@@ -1,5 +1,6 @@
-import stripAnsi from 'strip-ansi';
 import { jest } from '@jest/globals';
+import stripAnsi from 'strip-ansi';
+
 import pageTypeBundleExtractor from './__mocks__/pageTypeBundleExtractor.js';
 
 jest.unstable_mockModule(

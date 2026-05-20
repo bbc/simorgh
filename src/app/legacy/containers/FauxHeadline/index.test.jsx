@@ -4,8 +4,8 @@ import {
 } from '#psammead/psammead-test-helpers/src';
 import { render } from '../../../components/react-testing-library-with-providers';
 import { textBlock } from '../../../models/blocks';
-import FauxHeadlineContainer from '.';
 import blocksSingleFragment from '../Headings/testHelpers';
+import FauxHeadlineContainer from '.';
 
 describe('FauxHeadline', () => {
   describe('with no data', () => {

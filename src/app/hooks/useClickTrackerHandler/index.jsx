@@ -1,16 +1,18 @@
 import { use, useCallback, useState } from 'react';
+
 import { OptimizelyContext } from '@optimizely/react-sdk';
-import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
+
+import { RequestContext } from '#app/contexts/RequestContext';
+import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import {
   CLICK_EVENT,
   STATIC_REVERB_CLICK_TRACKING,
 } from '#app/lib/analyticsUtils/analytics.const';
-import { RequestContext } from '#app/contexts/RequestContext';
-import useHydrationDetection from '#app/hooks/useHydrationDetection';
+import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
 import constructReverbUrl from '#app/lib/analyticsUtils/staticATITracking/constructReverbUrl';
-import useTrackingToggle from '../useTrackingToggle';
 import { sendEventBeacon } from '../../components/ATIAnalytics/beacon/index';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import useTrackingToggle from '../useTrackingToggle';
 import { isValidClick } from './clickTypes';
 
 // allowlist of onward journey components that should feed the total oj clicks event

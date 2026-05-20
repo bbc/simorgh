@@ -1,6 +1,6 @@
-import nodeLogger from '#lib/logger.node';
 import { PODCAST_SERVICE_MISSING } from '#lib/logger.const';
-import type { PodcastExternalLinksParams, ExternalLinks } from './types';
+import nodeLogger from '#lib/logger.node';
+import type { ExternalLinks, PodcastExternalLinksParams } from './types';
 
 const logger = nodeLogger(__filename);
 

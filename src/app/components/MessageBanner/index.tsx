@@ -1,11 +1,12 @@
 import { useTheme } from '@emotion/react';
+
 import useViewTracker from '#app/hooks/useViewTracker';
 import type { EventTrackingData } from '#app/lib/analyticsUtils/types';
-import Paragraph from '../Paragraph';
+import CallToActionLink from '../CallToActionLink';
 import Heading from '../Heading';
 import Image from '../Image';
+import Paragraph from '../Paragraph';
 import styles from './index.styles';
-import CallToActionLink from '../CallToActionLink';
 
 interface MessageBannerProps {
   heading: string;

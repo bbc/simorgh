@@ -1,4 +1,5 @@
 import { act, renderHook } from '@testing-library/react';
+
 import type { ComponentProps } from '#nextjs/pages/[service]/live/[id]/LivePageLayout';
 import useLivePagePolling, { POLLING_INTERVAL } from '.';
 import fixtureLivePageData from './fixture/fixtureLivePageData';

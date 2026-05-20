@@ -1,18 +1,18 @@
 import { GetServerSidePropsContext } from 'next';
-import { ARTICLE_PAGE, MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import parseRoute from '#app/routes/utils/parseRoute';
-import nodeLogger from '#lib/logger.node';
-import { OK } from '#app/lib/statusCodes.const';
+
 import { ROUTING_INFORMATION } from '#app/lib/logger.const';
-import getPathExtension from '#app/utilities/getPathExtension';
+import { OK } from '#app/lib/statusCodes.const';
+import { PageTypes } from '#app/models/types/global';
+import { ArticleMetadata } from '#app/models/types/optimo';
 import PageDataParams from '#app/models/types/pageDataParams';
 import handleError from '#app/routes/utils/handleError';
-import { PageTypes } from '#app/models/types/global';
-
-import { ArticleMetadata } from '#app/models/types/optimo';
-import augmentWithDisclaimer from './augmentWithDisclaimer';
-import shouldRender from '../../../utilities/shouldRender';
+import { ARTICLE_PAGE, MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import parseRoute from '#app/routes/utils/parseRoute';
+import getPathExtension from '#app/utilities/getPathExtension';
+import nodeLogger from '#lib/logger.node';
 import getPageData from '../../../utilities/pageRequests/getPageData';
+import shouldRender from '../../../utilities/shouldRender';
+import augmentWithDisclaimer from './augmentWithDisclaimer';
 
 const logger = nodeLogger(__filename);
 

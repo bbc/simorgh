@@ -1,11 +1,12 @@
 // biome-ignore-all lint/a11y/useValidAriaRole: we want this
 import { use } from 'react';
+
 import { ServiceContext } from '../../../contexts/ServiceContext';
-import BylineCss from './index.styles';
-import Text from '../../Text';
 import Image from '../../Image';
+import { LeftChevron, RightChevron } from '../../icons';
+import Text from '../../Text';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
-import { RightChevron, LeftChevron } from '../../icons';
+import BylineCss from './index.styles';
 
 const Comma = () => <span aria-hidden="true" css={BylineCss.comma} />;
 

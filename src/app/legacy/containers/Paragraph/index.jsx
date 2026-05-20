@@ -1,14 +1,16 @@
 import { use } from 'react';
-import Paragraph from '#psammead/psammead-paragraph/src';
+
 import styled from '@emotion/styled';
+
+import { GridItemMedium } from '#components/Grid';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
 import { GEL_SPACING_QUIN } from '#psammead/gel-foundations/src/spacings';
-import { GridItemMedium } from '#components/Grid';
+import Paragraph from '#psammead/psammead-paragraph/src';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Blocks from '../Blocks';
 import fragment from '../Fragment';
-import InlineLink from '../InlineLink';
 import Inline from '../InlineContainer';
+import InlineLink from '../InlineLink';
 
 const componentsToRender = { fragment, urlLink: InlineLink, inline: Inline };
 

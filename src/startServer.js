@@ -3,8 +3,8 @@ import cluster from 'node:cluster';
 import os from 'node:os';
 
 import {
-  CLUSTER_PROCESS_START,
   CLUSTER_PROCESS_EXIT,
+  CLUSTER_PROCESS_START,
   SERVER_LISTEN_ERROR,
 } from '#lib/logger.const';
 

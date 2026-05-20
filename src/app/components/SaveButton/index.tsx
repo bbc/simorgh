@@ -1,9 +1,10 @@
 import { useState } from 'react';
+
 import {
-  Spinner,
   BookmarkIcon,
-  FilledBookmarkIcon,
   Close,
+  FilledBookmarkIcon,
+  Spinner,
 } from '#app/components/icons';
 import styles from './index.styles';
 

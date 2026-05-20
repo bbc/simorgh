@@ -1,4 +1,5 @@
 import type { PropsWithChildren } from 'react';
+
 import styles from './index.styles';
 
 type ButtonLikeWrapperProps = {

@@ -1,14 +1,16 @@
-import { useTheme } from '@emotion/react';
 import { use } from 'react';
-import useViewTracker from '#hooks/useViewTracker';
-import SectionLabel from '#psammead/psammead-section-label/src';
+
+import { useTheme } from '@emotion/react';
+
+import type { ComponentExperimentProps } from '#app/models/types/global';
 import PromoItem from '#components/OptimoPromos/PromoItem/index.styles';
 import PromoList from '#components/OptimoPromos/PromoList';
-import type { ComponentExperimentProps } from '#app/models/types/global';
+import useViewTracker from '#hooks/useViewTracker';
+import SectionLabel from '#psammead/psammead-section-label/src';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
+import generatePromoId from '../../../../lib/utilities/generatePromoId';
 import styles from './index.styles';
 import TopStoriesItem from './TopStoriesItem';
-import generatePromoId from '../../../../lib/utilities/generatePromoId';
 import type { TopStoryItem } from './types';
 
 const TopStoriesSection = ({

@@ -1,7 +1,7 @@
-import ActionGrid from './action-grid';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 import styles from '../index.styles';
 import type { GroupedActions as GroupedActionsType } from '../types';
+import ActionGrid from './action-grid';
 
 interface ActionsDisplayProps {
   teamActions: string[];

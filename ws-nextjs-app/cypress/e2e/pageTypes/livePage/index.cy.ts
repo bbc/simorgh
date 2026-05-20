@@ -1,18 +1,18 @@
 import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
-import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
-import mediaPlayerTests from './mediaPlayer';
-import pageVisit from './pageVisit';
-import keyPoints from './keyPoints';
-import testsThatAlwaysRunForAllPages from '../../testsForAllPages';
 import runTestsForPage, {
   TestDataType,
 } from '../../../support/helpers/runTestsForPage';
+import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
 import {
   assertDropdownNavigationComponentClick,
   assertDropdownNavigationComponentView,
   assertScrollableNavigationComponentClick,
   assertScrollableNavigationComponentView,
 } from '../../specialFeatures/atiAnalytics/assertions/navigation';
+import testsThatAlwaysRunForAllPages from '../../testsForAllPages';
+import keyPoints from './keyPoints';
+import mediaPlayerTests from './mediaPlayer';
+import pageVisit from './pageVisit';
 
 const testDetails = [
   {

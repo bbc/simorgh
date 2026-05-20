@@ -4,15 +4,16 @@
 
 import chalk from 'chalk';
 import Table from 'cli-table';
-import sortByBundlesTotalAscending from './sortByBundlesTotalAscending.js';
-import getAverageBundleSize from './getAverageBundleSize.js';
+
+import { MAX_SIZE, MIN_SIZE, VARIANCE } from './bundleSizeConfig.js';
 import createConsoleError from './createConsoleError.js';
+import getAverageBundleSize from './getAverageBundleSize.js';
 import {
   getPageBundleData,
   getServiceConfigBundleData,
   getServiceThemeBundleData,
 } from './getBundleData.js';
-import { MIN_SIZE, MAX_SIZE, VARIANCE } from './bundleSizeConfig.js';
+import sortByBundlesTotalAscending from './sortByBundlesTotalAscending.js';
 
 export default () => {
   const bundleType = process.env.bundleType || 'modern';

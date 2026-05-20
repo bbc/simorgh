@@ -1,4 +1,4 @@
-import TopicPage from './TopicPage';
 import applyBasicPageHandlers from '../utils/applyBasicPageHandlers';
+import TopicPage from './TopicPage';
 
 export default applyBasicPageHandlers(TopicPage);

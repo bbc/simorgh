@@ -1,10 +1,12 @@
 // biome-ignore-all lint/suspicious/noEmptyBlockStatements: we want this
 import { use, useEffect, useRef } from 'react';
+
 import styled from '@emotion/styled';
+
 import { ConsentBanner } from '#psammead/psammead-consent-banner/src';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
-import BannerText from './Text';
 import getDataAttribute from './getDataAttribute';
+import BannerText from './Text';
 
 // Styles to pin the consent banner to the bottom of the view port
 // The z-index ensures the banner is always at the front, the value

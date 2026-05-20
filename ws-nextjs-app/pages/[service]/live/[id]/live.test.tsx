@@ -1,19 +1,20 @@
+import { GetServerSidePropsContext } from 'next';
+
 import { Helmet } from 'react-helmet';
 
+import MockIntersectionObserver from '#app/components/intersection-observer-testing-library';
 import {
+  act,
   render,
   screen,
-  act,
 } from '#app/components/react-testing-library-with-providers';
-import liveFixture from '#data/pidgin/live/c7p765ynk9qt.json';
-import postFixture from '#data/pidgin/posts/postFixture.json';
-import sportDataFixture from '#data/afrique/live/c7gk1vjglxn1t.json';
-import { GetServerSidePropsContext } from 'next';
-import MockIntersectionObserver from '#app/components/intersection-observer-testing-library';
 import * as useLivePagePolling from '#app/hooks/useLivePagePolling';
 import * as isLiveEnvModule from '#app/lib/utilities/isLive';
-import Live, { ComponentProps } from './LivePageLayout';
+import sportDataFixture from '#data/afrique/live/c7gk1vjglxn1t.json';
+import liveFixture from '#data/pidgin/live/c7p765ynk9qt.json';
+import postFixture from '#data/pidgin/posts/postFixture.json';
 import { getServerSideProps } from './[[...variant]].page';
+import Live, { ComponentProps } from './LivePageLayout';
 import { StreamResponse } from './Post/types';
 
 jest.mock('#app/hooks/useLivePagePolling', () => ({

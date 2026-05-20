@@ -1,6 +1,8 @@
 // biome-ignore-all lint/suspicious/noEmptyBlockStatements: we want this
+
+import { act, render } from '@testing-library/react';
 import reactRouterConfig from 'react-router-config';
-import { render, act } from '@testing-library/react';
+
 import getToggles from '#app/lib/utilities/getToggles';
 import routes from '#app/routes';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';

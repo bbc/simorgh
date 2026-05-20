@@ -1,6 +1,7 @@
 import { render } from '@testing-library/react';
-import withMediaError from '.';
+
 import { EPISODE_STATUS } from '../episodeStatus';
+import withMediaError from '.';
 
 jest.mock('../ErrorMessage', () => () => 'Mocked Error Message Component');
 

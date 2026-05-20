@@ -1,9 +1,10 @@
 import { use, useEffect, useRef, useState } from 'react';
-import type { TopicTag } from '#app/models/types/metadata';
-import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+
 import { RequestContext } from '#app/contexts/RequestContext';
-import { OK } from '#app/lib/statusCodes.const';
 import useNearViewport from '#app/hooks/useNearViewport';
+import { OK } from '#app/lib/statusCodes.const';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import type { TopicTag } from '#app/models/types/metadata';
 import type { TopicDiscoveryItem } from '../types';
 
 const { WEB_CDN_URL } = getEnvConfig();

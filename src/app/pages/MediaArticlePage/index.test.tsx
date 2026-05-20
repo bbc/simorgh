@@ -1,18 +1,20 @@
 import type { PropsWithChildren } from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import { render, waitFor, screen } from '@testing-library/react';
+
+import { render, screen, waitFor } from '@testing-library/react';
 import type { FetchMock } from 'jest-fetch-mock';
-import type { Article } from '#app/models/types/optimo';
 import { Helmet } from 'react-helmet';
-import { ARTICLE_PAGE } from '../../routes/utils/pageTypes';
-import { ToggleContextProvider } from '../../contexts/ToggleContext';
+import { BrowserRouter } from 'react-router-dom';
+
+import type { Article } from '#app/models/types/optimo';
+import newsMostReadData from '../../../../data/news/mostRead/index.json';
+import ThemeProvider from '../../components/ThemeProvider';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import newsMostReadData from '../../../../data/news/mostRead/index.json';
-import MediaArticlePage from './MediaArticlePage';
-import ThemeProvider from '../../components/ThemeProvider';
-import { arabicLiveTvPageData, pidginPageData } from './fixtureData';
+import { ToggleContextProvider } from '../../contexts/ToggleContext';
 import type { Services } from '../../models/types/global';
+import { ARTICLE_PAGE } from '../../routes/utils/pageTypes';
+import { arabicLiveTvPageData, pidginPageData } from './fixtureData';
+import MediaArticlePage from './MediaArticlePage';
 
 jest.mock('../../components/ThemeProvider');
 

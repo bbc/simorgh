@@ -1,9 +1,10 @@
-import { matchRoutes } from 'react-router-config';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import { variantSanitiser } from '#lib/utilities/variantHandler';
-import getPathExtension from '#app/utilities/getPathExtension';
+import { matchRoutes } from 'react-router-config';
+
 import routes from '#app/routes';
+import getPathExtension from '#app/utilities/getPathExtension';
+import { variantSanitiser } from '#lib/utilities/variantHandler';
 import fallbackServiceParam from './fallbackServiceParam';
 
 const getNonCanonicalPlatformId = params => {

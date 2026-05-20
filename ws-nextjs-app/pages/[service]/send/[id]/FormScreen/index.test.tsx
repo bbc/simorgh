@@ -1,19 +1,19 @@
 import {
   act,
-  render,
   fireEvent,
+  render,
 } from '#app/components/react-testing-library-with-providers';
-import {
-  title,
-  description,
-  sectionTitle,
-  privacyNotice,
-  fields,
-} from './fixture';
 import * as FormContextModule from '../FormContext';
 import { FormContext } from '../FormContext';
-import Form from '.';
 import { Field, FormScreen, InvalidMessageCodes } from '../types';
+import Form from '.';
+import {
+  description,
+  fields,
+  privacyNotice,
+  sectionTitle,
+  title,
+} from './fixture';
 
 jest.mock('next/router', () => ({
   useRouter: () => ({

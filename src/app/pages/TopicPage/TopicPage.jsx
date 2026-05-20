@@ -1,19 +1,21 @@
 import { Fragment, use } from 'react';
+
 import path from 'ramda/src/path';
+
 import Curation from '#app/components/Curation';
 import AdContainer from '../../components/Ad';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';
-import styles from './index.styles';
 import MetadataContainer from '../../components/Metadata';
-import { ServiceContext } from '../../contexts/ServiceContext';
-import TopicImage from './TopicImage';
-import TopicTitle from './TopicTitle';
-import TopicDescription from './TopicDescription';
 import Pagination from '../../components/Pagination';
+import { ServiceContext } from '../../contexts/ServiceContext';
 import getItemList from '../../lib/seoUtils/getItemList';
 import getNthCurationByStyleAndProminence from '../utils/getNthCurationByStyleAndProminence';
+import styles from './index.styles';
+import TopicDescription from './TopicDescription';
+import TopicImage from './TopicImage';
+import TopicTitle from './TopicTitle';
 
 const TopicPage = ({ pageData }) => {
   const { lang, translations, brandName } = use(ServiceContext);

@@ -1,14 +1,14 @@
 import runTestsForPage, {
   TestDataType,
 } from '../../../support/helpers/runTestsForPage';
-import e2eTests from './tests';
-import testsForAllPages from '../../testsForAllPages';
-import testsForAllCanonicalPages from '../../testsForAllCanonicalPages';
 import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
 import {
   assertRadioScheduleComponentClick,
   assertRadioScheduleComponentView,
 } from '../../specialFeatures/atiAnalytics/assertions/radioSchedule';
+import testsForAllCanonicalPages from '../../testsForAllCanonicalPages';
+import testsForAllPages from '../../testsForAllPages';
+import e2eTests from './tests';
 
 const pageType = 'liveRadio';
 

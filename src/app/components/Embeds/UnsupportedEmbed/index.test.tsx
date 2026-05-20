@@ -1,11 +1,11 @@
-import { render } from '../../react-testing-library-with-providers';
 import { ARTICLE_PAGE } from '../../../routes/utils/pageTypes';
+import { render } from '../../react-testing-library-with-providers';
+import UnsupportedEmbed from '.';
 import {
-  sampleTelescopeProps,
   samplePlayerRaterProps,
   sampleTeamSelectorProps,
+  sampleTelescopeProps,
 } from './fixtures';
-import UnsupportedEmbed from '.';
 
 describe('Unsupported Embed', () => {
   describe('Canonical', () => {

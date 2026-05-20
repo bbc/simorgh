@@ -1,10 +1,10 @@
 import {
-  isAccountPromoBannerVisible,
-  setAccountPromoBannerDismissed,
+  ACCOUNT_BANNER_DISMISS_INTERVAL_MS,
   ACCOUNT_BANNER_DISMISS_KEY,
   ACCOUNT_BANNER_LAST_DISMISS_KEY,
   ACCOUNT_BANNER_MAX_DISMISSALS,
-  ACCOUNT_BANNER_DISMISS_INTERVAL_MS,
+  isAccountPromoBannerVisible,
+  setAccountPromoBannerDismissed,
 } from '.';
 
 describe('AccountPromotionalBanner utilities', () => {

@@ -1,12 +1,12 @@
 import {
-  VISUAL_STYLE,
-  VISUAL_PROMINENCE,
   type Curation,
+  VISUAL_PROMINENCE,
+  VISUAL_STYLE,
 } from '#app/models/types/curationData';
-import getComponentName, { COMPONENT_NAMES } from '.';
 import afriqueHomePage from '../../../../../data/afrique/homePage/index.json';
-import marathiTopic from '../../../../../data/marathi/topics/c1wmk63rjkvt.json';
 import dariHomePage from '../../../../../data/dari/homePage/index.json';
+import marathiTopic from '../../../../../data/marathi/topics/c1wmk63rjkvt.json';
+import getComponentName, { COMPONENT_NAMES } from '.';
 
 const { MINIMUM, LOW, NORMAL, HIGH, MAXIMUM } = VISUAL_PROMINENCE;
 const { NONE, BANNER, COLLECTION, RANKED } = VISUAL_STYLE;

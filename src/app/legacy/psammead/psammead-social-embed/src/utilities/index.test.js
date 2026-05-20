@@ -1,8 +1,8 @@
 import {
-  getProviderName,
-  getCaptionText,
   detokenise,
   dictionaryFactory,
+  getCaptionText,
+  getProviderName,
 } from './index';
 
 describe('getProviderName', () => {

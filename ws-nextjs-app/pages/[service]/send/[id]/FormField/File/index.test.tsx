@@ -1,3 +1,6 @@
+import userEvent from '@testing-library/user-event';
+
+import { LiveRegionContextProvider } from '#app/components/LiveRegion/LiveRegionContext';
 import {
   act,
   fireEvent,
@@ -5,17 +8,14 @@ import {
   screen,
   waitFor,
 } from '#app/components/react-testing-library-with-providers';
-import userEvent from '@testing-library/user-event';
-import { LiveRegionContextProvider } from '#app/components/LiveRegion/LiveRegionContext';
-
+import { FormContext } from '../../FormContext';
+import { FormScreen, HtmlType } from '../../types';
 import FileField from '.';
 import {
   AUDIO_SVG_DATA_URI,
   DOCUMENT_SVG_DATA_URI,
   VIDEO_SVG_DATA_URI,
 } from './svgs';
-import { FormContext } from '../../FormContext';
-import { FormScreen, HtmlType } from '../../types';
 
 const defaultInputState = {
   isValid: true,

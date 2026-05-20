@@ -1,7 +1,7 @@
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
-import snapshotTests from './testHelpers/snapshotTests';
-import { landscape } from './testHelpers/fixtureData';
 import Image, { Img } from '.';
+import { landscape } from './testHelpers/fixtureData';
+import snapshotTests from './testHelpers/snapshotTests';
 
 describe("Image - imported as default 'Image'", () => {
   const props = {

@@ -1,4 +1,5 @@
 import type { JSX } from 'react';
+
 import type { EventTrackingBlock } from '../../models/types/eventTracking';
 
 export type ImageProps = {

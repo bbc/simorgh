@@ -1,37 +1,38 @@
 import App, { AppContext } from 'next/app';
+
+import ErrorPage from '#app//pages/ErrorPage/ErrorPage';
 import { ATIData } from '#app/components/ATIAnalytics/types';
+import PageWrapper from '#app/components/PageLayoutWrapper';
 import ThemeProvider from '#app/components/ThemeProvider';
+import { AccountProvider } from '#app/contexts/AccountContext';
+import { EventTrackingContextProvider } from '#app/contexts/EventTrackingContext';
+import QueryProvider from '#app/contexts/QueryContext';
+import { RequestContextProvider } from '#app/contexts/RequestContext';
+import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
+import { UserContextProvider } from '#app/contexts/UserContext';
+import getIdctaConfig from '#app/lib/idcta/getIdctaConfig';
+import fetchConfig from '#app/lib/utilities/fetchConfig';
+import getToggles from '#app/lib/utilities/getToggles/withCache';
+import { IdctaConfig } from '#app/models/types/account';
 import {
+  Navigation,
   PageTypes,
+  ServerSideExperiment,
   Services,
   Toggles,
   Variants,
-  ServerSideExperiment,
-  Navigation,
 } from '#app/models/types/global';
-import ErrorPage from '#app//pages/ErrorPage/ErrorPage';
-import PageWrapper from '#app/components/PageLayoutWrapper';
-import { ServiceContextProvider } from '#app/contexts/ServiceContext';
-import { RequestContextProvider } from '#app/contexts/RequestContext';
-import { EventTrackingContextProvider } from '#app/contexts/EventTrackingContext';
-import { UserContextProvider } from '#app/contexts/UserContext';
-import extractHeaders from '#src/server/utilities/extractHeaders';
-import { getServerExperiments } from '#src/server/utilities/experimentHeader';
-import getToggles from '#app/lib/utilities/getToggles/withCache';
-import getPathExtension from '#app/utilities/getPathExtension';
 import parseRoute from '#app/routes/utils/parseRoute';
+import getPathExtension from '#app/utilities/getPathExtension';
 import addCspHeader from '#nextjs/utilities/addCspHeader';
-import derivePageType from '#nextjs/utilities/derivePageType';
-import addServiceChainHeader from '#nextjs/utilities/addServiceChainHeader';
-import addOnionLocationHeader from '#nextjs/utilities/addOnionLocationHeader';
-import addVaryHeader from '#nextjs/utilities/addVaryHeader';
 import addLinkHeader from '#nextjs/utilities/addLinkHeader';
-import { AccountProvider } from '#app/contexts/AccountContext';
-import QueryProvider from '#app/contexts/QueryContext';
-import getIdctaConfig from '#app/lib/idcta/getIdctaConfig';
-import { IdctaConfig } from '#app/models/types/account';
-import fetchConfig from '#app/lib/utilities/fetchConfig';
+import addOnionLocationHeader from '#nextjs/utilities/addOnionLocationHeader';
+import addServiceChainHeader from '#nextjs/utilities/addServiceChainHeader';
+import addVaryHeader from '#nextjs/utilities/addVaryHeader';
+import derivePageType from '#nextjs/utilities/derivePageType';
+import { getServerExperiments } from '#src/server/utilities/experimentHeader';
+import extractHeaders from '#src/server/utilities/extractHeaders';
 
 interface Props {
   pageProps: {

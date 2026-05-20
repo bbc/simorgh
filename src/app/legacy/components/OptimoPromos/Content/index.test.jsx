@@ -1,8 +1,10 @@
 import { useMemo } from 'react';
+
 import { render, screen } from '@testing-library/react';
+
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
-import LinkContents from '.';
 import PromoContext from '../PromoContext';
+import LinkContents from '.';
 
 const headlineDefault = 'this is a headline';
 const mediaTypeDefault = 'video';

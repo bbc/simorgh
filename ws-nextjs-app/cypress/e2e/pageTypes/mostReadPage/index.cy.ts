@@ -1,5 +1,8 @@
 import { MOST_READ_PAGE } from '#app/routes/utils/pageTypes';
+import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
 import runTestsForPage from '../../../support/helpers/runTestsForPage';
+import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
+import { assertLiteSiteSummaryComponentToMainSiteClick } from '../../specialFeatures/atiAnalytics/assertions/liteSiteSummary';
 import {
   assertMostReadComponentClick,
   assertMostReadComponentView,
@@ -10,9 +13,6 @@ import {
   assertScrollableNavigationComponentClick,
   assertScrollableNavigationComponentView,
 } from '../../specialFeatures/atiAnalytics/assertions/navigation';
-import { assertLiteSiteSummaryComponentToMainSiteClick } from '../../specialFeatures/atiAnalytics/assertions/liteSiteSummary';
-import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
-import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
 import testsForAllCanonicalPages from '../../testsForAllCanonicalPages';
 import testsForAllPages from '../../testsForAllPages';
 import crossPlatformTests from './tests';

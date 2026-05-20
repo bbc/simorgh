@@ -1,12 +1,12 @@
-import { GHOST } from '../../../components/ThemeProvider/palette';
 import {
   render,
   waitFor,
 } from '../../../components/react-testing-library-with-providers';
+import { GHOST } from '../../../components/ThemeProvider/palette';
 import {
-  ImageWithPlaceholder,
   AmpImageWithPlaceholder,
   AmpImageWithPlaceholderPng,
+  ImageWithPlaceholder,
   LazyLoadImageWithPlaceholder,
 } from './fixtureData';
 

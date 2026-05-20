@@ -1,16 +1,17 @@
 import styled from '@emotion/styled';
+
+import { focusIndicatorThickness } from '#app/components/ThemeProvider/focusIndicator';
+import { GHOST } from '#app/components/ThemeProvider/palette';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
 import {
   GEL_SPACING_DBL,
-  GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
+  GEL_SPACING_TRPL,
 } from '#psammead/gel-foundations/src/spacings';
-import { GHOST } from '#app/components/ThemeProvider/palette';
-import { focusIndicatorThickness } from '#app/components/ThemeProvider/focusIndicator';
-import { PlainTitle, LinkTitle } from './titles';
+import { LinkTitle, PlainTitle } from './titles';
 
 const SectionLabelWrapper = styled.div`
   position: relative;

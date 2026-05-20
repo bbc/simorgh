@@ -1,11 +1,11 @@
 // @ts-nocheck
 
-import { GetServerSideProps } from 'next';
-import { useEffect, use } from 'react';
 import { ParsedUrlQuery } from 'node:querystring';
+import { GetServerSideProps } from 'next';
+import { use, useEffect } from 'react';
+
 import omit from 'ramda/src/omit';
-import { ServiceContext } from '#contexts/ServiceContext';
-import { STATIC_PAGE } from '#app/routes/utils/pageTypes';
+
 import {
   Articles,
   Book,
@@ -15,15 +15,16 @@ import {
   Favourites,
   Words,
 } from '#app/components/icons';
-import nodeLogger from '#lib/logger.node';
-import logResponseTime from '#server/utilities/logResponseTime';
-import isLocal from '#lib/utilities/isLocal';
-
 import {
   ROUTING_INFORMATION,
   SERVER_SIDE_RENDER_REQUEST_RECEIVED,
 } from '#app/lib/logger.const';
+import { STATIC_PAGE } from '#app/routes/utils/pageTypes';
+import { ServiceContext } from '#contexts/ServiceContext';
+import nodeLogger from '#lib/logger.node';
+import isLocal from '#lib/utilities/isLocal';
 import { Services, Variants } from '#models/types/global';
+import logResponseTime from '#server/utilities/logResponseTime';
 import styles from './wrappedStyles';
 
 interface PageDataParams extends ParsedUrlQuery {

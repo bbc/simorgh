@@ -1,11 +1,11 @@
-import type { Article } from '#app/models/types/optimo';
 import CurationGrid from '#app/components/Curation/CurationGrid';
 import Subheading from '#app/components/Curation/Subhead';
-import type { Summary } from '#app/models/types/curationData';
-import type { EventTrackingData } from '#app/lib/analyticsUtils/types';
-import useViewTracker from '#app/hooks/useViewTracker';
-import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import styles from '#app/components/RelatedContentSection/index.styles';
+import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import useViewTracker from '#app/hooks/useViewTracker';
+import type { EventTrackingData } from '#app/lib/analyticsUtils/types';
+import type { Summary } from '#app/models/types/curationData';
+import type { Article } from '#app/models/types/optimo';
 
 const PersonalisedContent = ({
   pageData,

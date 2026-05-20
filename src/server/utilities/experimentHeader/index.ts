@@ -1,4 +1,4 @@
-import getServerExperiments from './getServerSideExperiments';
 import getExperimentVaryHeaders from './getExperimentVaryHeaders';
+import getServerExperiments from './getServerSideExperiments';
 
-export { getServerExperiments, getExperimentVaryHeaders };
+export { getExperimentVaryHeaders, getServerExperiments };
