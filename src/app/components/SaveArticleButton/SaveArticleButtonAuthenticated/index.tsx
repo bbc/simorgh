@@ -18,7 +18,7 @@ const SaveArticleButtonAuthenticated = ({
   const { saveArticleButton } = translations || {};
   const { assetId: articleId } = parseRoute(pathname);
 
-  const { isSaved, isLoading, isMutating, error, handleSaveAction } =
+  const { isSaved, isLoading, isUpdating, error, handleSaveAction } =
     useUASButton({
       articleId,
       articleTitle,
@@ -56,8 +56,8 @@ const SaveArticleButtonAuthenticated = ({
 
   const getButtonText = () => {
     if (isLoading) return saveArticleButton.loading;
-    if (isMutating && isSaved) return saveArticleButton.removing;
-    if (isMutating) return saveArticleButton.saving;
+    if (isUpdating && isSaved) return saveArticleButton.removing;
+    if (isUpdating) return saveArticleButton.saving;
     return buttonLabel;
   };
 
@@ -71,7 +71,7 @@ const SaveArticleButtonAuthenticated = ({
       <SaveButton
         onClick={handleClick}
         isLoading={isLoading}
-        isMutating={isMutating}
+        isUpdating={isUpdating}
         isSaved={isSaved}
         disabled={isLoading}
         buttonText={getButtonText()}

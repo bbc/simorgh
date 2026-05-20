@@ -34,7 +34,7 @@ describe('SaveArticleButton', () => {
       mockedUseUASButton.mockReturnValue({
         isSaved: false,
         isLoading: false,
-        isMutating: false,
+        isUpdating: false,
         error: null,
         handleSaveAction: mockHandleSaveAction,
       });
@@ -59,7 +59,7 @@ describe('SaveArticleButton', () => {
     it('renders loading state and disables button', async () => {
       mockedUseUASButton.mockReturnValue({
         isLoading: true,
-        isMutating: false,
+        isUpdating: false,
       });
 
       await act(async () =>
@@ -75,7 +75,7 @@ describe('SaveArticleButton', () => {
       mockedUseUASButton.mockReturnValue({
         isSaved: false,
         isLoading: false,
-        isMutating: true,
+        isUpdating: true,
         error: null,
         handleSaveAction: mockHandleSaveAction,
       });
@@ -93,7 +93,7 @@ describe('SaveArticleButton', () => {
       mockedUseUASButton.mockReturnValue({
         isSaved: true,
         isLoading: false,
-        isMutating: true,
+        isUpdating: true,
         error: null,
         handleSaveAction: mockHandleSaveAction,
       });

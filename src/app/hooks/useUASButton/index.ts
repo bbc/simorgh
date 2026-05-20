@@ -22,7 +22,7 @@ enum UASAction {
 interface UseUASButtonReturn {
   isSaved: boolean;
   isLoading: boolean;
-  isMutating: boolean;
+  isUpdating: boolean;
   error: Error | null;
   handleSaveAction: (action: UASAction) => void;
 }
@@ -76,7 +76,7 @@ const useUASButton = ({
   return {
     isSaved,
     isLoading,
-    isMutating: mutation.isPending,
+    isUpdating: mutation.isPending,
     error: mutation.error || error,
     handleSaveAction: mutation.mutate,
   };

@@ -36,7 +36,7 @@ const styles = {
       },
     }),
 
-  mutatingState: ({ palette }: Theme) =>
+  updatingState: ({ palette }: Theme) =>
     css({
       backgroundColor: palette.GREY_8,
       color: palette.WHITE,

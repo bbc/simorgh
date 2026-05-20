@@ -12,7 +12,7 @@ export default {
   args: {
     onClick: () => {},
     isLoading: false,
-    isMutating: false,
+    isUpdating: false,
     isSaved: false,
     disabled: false,
   },
@@ -41,14 +41,14 @@ export const Saved = {
 
 export const Saving = {
   args: {
-    isMutating: true,
+    isUpdating: true,
     buttonText: 'Saving',
   },
 };
 
 export const Removing = {
   args: {
-    isMutating: true,
+    isUpdating: true,
     isSaved: true,
     buttonText: 'Removing',
   },
