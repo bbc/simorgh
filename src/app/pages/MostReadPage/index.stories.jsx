@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { MOST_READ_PAGE } from '#app/routes/utils/pageTypes';
 import MostReadPage from './MostReadPage';
 import PageLayoutWrapper from '#app/components/PageLayoutWrapper';
+import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 
 const Component = ({ service, variant }) => {
   const [pageData, setPageData] = useState({});
@@ -26,16 +27,18 @@ const Component = ({ service, variant }) => {
   }
 
   return (
-    <PageLayoutWrapper pageData={pageData} status={200}>
-      <MostReadPage
-        pageType={MOST_READ_PAGE}
-        isAmp={false}
-        pathname={`/${service}/popular/read`}
-        status={200}
-        pageData={pageData}
-        service={service}
-      />
-    </PageLayoutWrapper>
+    <ServiceContextProvider service={service} variant={variant}>
+      <PageLayoutWrapper pageData={pageData} status={200}>
+        <MostReadPage
+          pageType={MOST_READ_PAGE}
+          isAmp={false}
+          pathname={`/${service}/popular/read`}
+          status={200}
+          pageData={pageData}
+          service={service}
+        />
+      </PageLayoutWrapper>
+    </ServiceContextProvider>
   );
 };
 
