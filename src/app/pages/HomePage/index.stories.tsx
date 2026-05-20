@@ -6,6 +6,7 @@ import { Services } from '#app/models/types/global';
 import { StoryArgs, StoryProps } from '../../models/types/storybook';
 import HomePage from './HomePage';
 import PageLayoutWrapper from '#app/components/PageLayoutWrapper';
+import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 
 const ONE_DAY_IN_MILLISECONDS = 24 * 60 * 60 * 1000;
 
@@ -59,20 +60,25 @@ const Component = ({ service, variant, isLite }: StoryProps) => {
   }
 
   return (
-    // @ts-expect-error - Fixture data
-    <PageLayoutWrapper pageData={pageData} status={200}>
-      <HomePage
-        service={service}
-        variant={variant}
-        pageType={HOME_PAGE}
-        status={200}
-        isAmp={false}
-        isLite={isLite}
-        pathname={`/${service}`}
+    <ServiceContextProvider service={service} variant={variant}>
+      <PageLayoutWrapper
         // @ts-expect-error - Fixture data
         pageData={pageData}
-      />
-    </PageLayoutWrapper>
+        status={200}
+      >
+        <HomePage
+          service={service}
+          variant={variant}
+          pageType={HOME_PAGE}
+          status={200}
+          isAmp={false}
+          isLite={isLite}
+          pathname={`/${service}`}
+          // @ts-expect-error - Fixture data
+          pageData={pageData}
+        />
+      </PageLayoutWrapper>
+    </ServiceContextProvider>
   );
 };
 
