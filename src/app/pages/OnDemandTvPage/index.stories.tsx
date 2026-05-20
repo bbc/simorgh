@@ -8,6 +8,7 @@ import PageLayoutWrapper from '#app/components/PageLayoutWrapper';
 import withMediaError from '#app/lib/utilities/episodeAvailability/withMediaError';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import { RequestContextProvider } from '#app/contexts/RequestContext';
+import ThemeProvider from '#app/components/ThemeProvider';
 
 const OnDemandTvPage = withMediaError(_OnDemandTvPage);
 
@@ -32,16 +33,18 @@ const Component = ({ service, isLite }: StoryProps) => {
         pageType={TV_PAGE}
         pathname={`/${service}/tv`}
       >
-        <PageLayoutWrapper pageData={pageData} status={200}>
-          <OnDemandTvPage
-            pageData={pageData}
-            service={service}
-            loading={false}
-            error=""
-            pageType={TV_PAGE}
-            isLite={isLite}
-          />
-        </PageLayoutWrapper>
+        <ThemeProvider service={service}>
+          <PageLayoutWrapper pageData={pageData} status={200}>
+            <OnDemandTvPage
+              pageData={pageData}
+              service={service}
+              loading={false}
+              error=""
+              pageType={TV_PAGE}
+              isLite={isLite}
+            />
+          </PageLayoutWrapper>
+        </ThemeProvider>
       </RequestContextProvider>
     </ServiceContextProvider>
   );

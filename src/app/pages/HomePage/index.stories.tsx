@@ -8,6 +8,7 @@ import HomePage from './HomePage';
 import PageLayoutWrapper from '#app/components/PageLayoutWrapper';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import { RequestContextProvider } from '#app/contexts/RequestContext';
+import ThemeProvider from '#app/components/ThemeProvider';
 
 const ONE_DAY_IN_MILLISECONDS = 24 * 60 * 60 * 1000;
 
@@ -69,23 +70,18 @@ const Component = ({ service, variant, isLite }: StoryProps) => {
         pageType={HOME_PAGE}
         pathname={`/${service}`}
       >
-        <PageLayoutWrapper
-          // @ts-expect-error - Fixture data
-          pageData={pageData}
-          status={200}
-        >
-          <HomePage
-            service={service}
-            variant={variant}
-            pageType={HOME_PAGE}
-            status={200}
-            isAmp={false}
-            isLite={isLite}
-            pathname={`/${service}`}
+        <ThemeProvider service={service} variant={variant}>
+          <PageLayoutWrapper
             // @ts-expect-error - Fixture data
             pageData={pageData}
-          />
-        </PageLayoutWrapper>
+            status={200}
+          >
+            <HomePage
+              // @ts-expect-error - Fixture data
+              pageData={pageData}
+            />
+          </PageLayoutWrapper>
+        </ThemeProvider>
       </RequestContextProvider>
     </ServiceContextProvider>
   );
@@ -136,7 +132,7 @@ TestLite.globals = {
   service: { service: 'gahuza' },
 };
 
-TestLite.tags = ['!dev'];
+// TestLite.tags = ['!dev'];
 
 TestLite.parameters = {
   chromatic: {
