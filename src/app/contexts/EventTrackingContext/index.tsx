@@ -1,9 +1,10 @@
-import { createContext, type PropsWithChildren, use, useMemo } from 'react';
+import { createContext, PropsWithChildren, use, useMemo } from 'react';
 
-import type { ATIData } from '../../components/ATIAnalytics/types';
+import { AccountContext } from '#contexts/AccountContext';
+import { ATIData } from '../../components/ATIAnalytics/types';
 import useToggle from '../../hooks/useToggle';
-import type { EventTrackingContextProps } from '../../models/types/eventTracking';
-import type { PageTypes } from '../../models/types/global';
+import { EventTrackingContextProps } from '../../models/types/eventTracking';
+import { PageTypes } from '../../models/types/global';
 import {
   ARTICLE_PAGE,
   AUDIO_PAGE,
@@ -18,6 +19,7 @@ import {
   MEDIA_ARTICLE_PAGE,
   MEDIA_ASSET_PAGE,
   MOST_READ_PAGE,
+  MY_NEWS_PAGE,
   OFFLINE_PAGE,
   PHOTO_GALLERY_PAGE,
   STATIC_PAGE,
@@ -57,9 +59,11 @@ const getCampaignID = (pageType: CampaignPageTypes) => {
     [AUDIO_PAGE]: 'player-episode',
     [TV_PAGE]: 'player-episode',
     [LIVE_TV_PAGE]: 'live-tv',
+    [MY_NEWS_PAGE]: 'my-news',
   }[pageType];
 
   if (!campaignID) {
+    // eslint-disable-next-line no-console
     console.warn(
       `ATI Event Tracking Error: Could not get the page type's campaign name`,
     );
@@ -84,6 +88,7 @@ export const EventTrackingContextProvider = ({
   const serviceContext = use(ServiceContext);
   const { atiAnalyticsProducerId, atiAnalyticsProducerName } = serviceContext;
 
+  const { isSignedIn, hashedUserId } = use(AccountContext);
   const { enabled: eventTrackingIsEnabled } = useToggle('eventTracking');
 
   const trackingProps = useMemo(() => {
@@ -98,6 +103,8 @@ export const EventTrackingContextProvider = ({
         producerId: atiAnalyticsProducerId,
         producerName: atiAnalyticsProducerName,
         statsDestination,
+        isSignedIn,
+        hashedId: hashedUserId || null,
       };
     }
     return null;
@@ -109,6 +116,8 @@ export const EventTrackingContextProvider = ({
     pageType,
     platform,
     statsDestination,
+    isSignedIn,
+    hashedUserId,
   ]);
 
   if (!eventTrackingIsEnabled || !atiData) {
@@ -119,9 +128,16 @@ export const EventTrackingContextProvider = ({
     );
   }
 
-  const hasRequiredProps = Object.values(
-    trackingProps as EventTrackingContextProps,
-  ).every(Boolean);
+  const hasRequiredProps =
+    trackingProps &&
+    [
+      trackingProps.campaignID,
+      trackingProps.pageIdentifier,
+      trackingProps.platform,
+      trackingProps.producerId,
+      trackingProps.producerName,
+      trackingProps.statsDestination,
+    ].every(Boolean);
 
   return (
     <EventTrackingContext.Provider

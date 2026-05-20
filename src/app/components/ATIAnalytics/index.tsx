@@ -1,5 +1,6 @@
 import { use } from 'react';
 
+import { AccountContext } from '#contexts/AccountContext';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import AmpGeo from '../../legacy/components/AmpGeo';
@@ -12,11 +13,14 @@ const ATIAnalytics = ({ atiData = {} }: ATIProps) => {
   const requestContext = use(RequestContext);
   const serviceContext = use(ServiceContext);
   const { isAmp } = requestContext;
+  const { isSignedIn, hashedUserId: hashedId } = use(AccountContext);
 
   const reverbParams = buildReverbParams({
     requestContext,
     serviceContext,
     atiData,
+    isSignedIn,
+    hashedId,
   });
 
   return isAmp ? (

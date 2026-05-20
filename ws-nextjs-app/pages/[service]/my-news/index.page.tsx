@@ -48,6 +48,9 @@ export const getServerSideProps: GetServerSideProps = async context => {
       pageData: {
         metadata: {
           type: MY_NEWS_PAGE,
+          atiAnalytics: {
+            pageIdentifier: 'my-news.page',
+          },
         },
       },
     },

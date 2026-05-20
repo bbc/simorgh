@@ -55,6 +55,8 @@ describe('Expected use', () => {
 
     expect(trackingData).toEqual({
       campaignID: 'article-sty',
+      hashedId: null,
+      isSignedIn: false,
       pageIdentifier: 'news::pidgin.news.story.51745682.page',
       platform: 'canonical',
       producerId: '70',
@@ -77,6 +79,8 @@ describe('Expected use', () => {
 
     expect(trackingData).toEqual({
       campaignID: 'index-home',
+      hashedId: null,
+      isSignedIn: false,
       pageIdentifier: 'kyrgyz.page',
       platform: 'canonical',
       producerId: '58',

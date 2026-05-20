@@ -2,7 +2,9 @@ import { use } from 'react';
 
 import SaveButton from '#app/components/SaveButton';
 import { RequestContext } from '#app/contexts/RequestContext';
+import useClickTracker from '#app/hooks/useClickTrackerHandler';
 import useUASButton, { UASAction } from '#app/hooks/useUASButton';
+import useViewTracker from '#app/hooks/useViewTracker';
 import parseRoute from '#app/routes/utils/parseRoute';
 import { ServiceContext } from '#contexts/ServiceContext';
 import type { SaveArticleButtonProps } from '../index';
@@ -22,14 +24,24 @@ const SaveArticleButtonAuthenticated = ({
     articlePageData,
   });
 
+  const clickComponentName = `save-article-button-click-${
+    isSaved ? UASAction.REMOVE : UASAction.SAVE
+  }`;
+
+  const viewTracker = useViewTracker({
+    componentName: 'save-article-button-view',
+  });
+
+  const { onClick: onClickTrack } = useClickTracker({
+    componentName: clickComponentName,
+    itemTracker: {
+      resourceId: articleId,
+    },
+  });
+
   if (!saveArticleButton) return null;
 
   if (error) {
-    // biome-ignore lint/suspicious/noConsole: we want this
-    console.log('Error fetching saved status for article:', {
-      articleId,
-      error,
-    });
   }
 
   const buttonLabel = isSaved
@@ -37,20 +49,23 @@ const SaveArticleButtonAuthenticated = ({
     : saveArticleButton.save;
   const buttonText = isLoading ? saveArticleButton.saving : buttonLabel;
 
-  const handleClick = () => {
+  const handleClick = (event?: React.MouseEvent) => {
+    onClickTrack?.(event);
     handleSaveAction(isSaved ? UASAction.REMOVE : UASAction.SAVE);
   };
 
   return (
-    <SaveButton
-      onClick={handleClick}
-      isLoading={isLoading}
-      isSaved={isSaved}
-      disabled={isLoading}
-      buttonText={buttonText}
-      removeText={saveArticleButton.remove}
-      testId="save-article-btn-authorized"
-    />
+    <div {...viewTracker}>
+      <SaveButton
+        onClick={handleClick}
+        isLoading={isLoading}
+        isSaved={isSaved}
+        disabled={isLoading}
+        buttonText={buttonText}
+        removeText={saveArticleButton.remove}
+        testId="save-article-btn-authorized"
+      />
+    </div>
   );
 };
 

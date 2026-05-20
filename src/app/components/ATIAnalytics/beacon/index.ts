@@ -17,6 +17,8 @@ export const sendEventBeacon = async ({
   itemTracker,
   groupTracker,
   eventGroupingName,
+  isSignedIn,
+  hashedId,
 }: ATIEventTrackingProps) => {
   const reverbParams = buildReverbEventModel({
     pageIdentifier,
@@ -33,6 +35,8 @@ export const sendEventBeacon = async ({
     itemTracker,
     groupTracker,
     eventGroupingName,
+    isSignedIn,
+    hashedId,
   });
 
   await sendBeacon(reverbParams);
