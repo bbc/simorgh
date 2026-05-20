@@ -5,12 +5,14 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import { useContext } from 'react';
 import { useRouter } from 'next/router';
 import MetadataContainer from '#app/components/Metadata';
+import ATIAnalytics from '#app/components/ATIAnalytics';
 import useUASRecentActivity from '#app/hooks/useUASRecentActivity';
+import { PageData } from '#app/lib/config/fixtures/types';
 import styles from './styles';
 
 const ITEMS_PER_PAGE = 10;
 
-const MyNewsPage = () => {
+const MyNewsPage = ({ pageData }: { pageData?: PageData }) => {
   const router = useRouter();
   const { translations, lang } = useContext(ServiceContext);
 
@@ -27,6 +29,8 @@ const MyNewsPage = () => {
 
   const pageCount = Math.max(1, Math.ceil(total / ITEMS_PER_PAGE));
   const safeActivePage = Math.min(requestedPage, pageCount);
+
+  const atiAnalytics = pageData?.metadata?.atiAnalytics;
 
   const {
     pageXOfY = 'Page {x} of {y}',
@@ -97,6 +101,7 @@ const MyNewsPage = () => {
 
   return (
     <main css={styles.main}>
+      <ATIAnalytics atiData={atiAnalytics} />
       <MetadataContainer
         title={metadataTitle}
         openGraphType="website"
