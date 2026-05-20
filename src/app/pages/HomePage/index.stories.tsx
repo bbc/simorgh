@@ -108,6 +108,11 @@ export const Example = {
 export const Test = () => <Component service="kyrgyz" variant="default" />;
 
 Test.globals = {
+  toggles: {
+    mostRead: {
+      enabled: true,
+    },
+  },
   service: { service: 'kyrgyz' },
 };
 
