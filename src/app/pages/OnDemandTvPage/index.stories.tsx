@@ -61,17 +61,21 @@ export const Example = {
 };
 
 // This story is for chromatic testing purposes only
-export const Test = {
-  render: (_: StoryArgs, { variant }: StoryProps) => (
-    <Component service="pashto" variant={variant} />
-  ),
-  tags: ['!dev'],
+export const Test = () => <Component service="pashto" variant="default" />;
+
+Test.globals = {
+  service: { service: 'pashto' },
 };
 
+Test.tags = ['!dev'];
+
 // This story is for chromatic testing purposes only
-export const TestLite = {
-  render: (_: StoryArgs, { variant }: StoryProps) => (
-    <Component service="pashto" variant={variant} isLite />
-  ),
-  tags: ['!dev'],
+export const TestLite = () => (
+  <Component service="pashto" variant="default" isLite />
+);
+
+TestLite.globals = {
+  service: { service: 'pashto' },
 };
+
+TestLite.tags = ['!dev'];

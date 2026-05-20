@@ -6,10 +6,14 @@ import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 
 const Component = () => {
   const pageData = afrique.data;
+
   return (
     <ServiceContextProvider service="afrique">
-      // @ts-expect-error - Fixture data
-      <PageLayoutWrapper pageData={pageData} status={200}>
+      <PageLayoutWrapper
+        // @ts-expect-error - Fixture data
+        pageData={pageData}
+        status={200}
+      >
         <LiveRadioPage
           // @ts-expect-error - Fixture data
           pageData={pageData}
@@ -27,6 +31,9 @@ const Component = () => {
 export default {
   Component,
   title: 'Pages/Radio Page',
+  globals: {
+    service: { service: 'afrique' },
+  },
   parameters: {
     chromatic: {
       diffThreshold: 0.2,

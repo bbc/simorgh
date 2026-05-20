@@ -96,31 +96,39 @@ export const Example = {
 };
 
 // This story is for chromatic testing purposes only
-export const Test = {
-  render: (_: StoryArgs, { variant }: StoryProps) => (
-    <Component service="kyrgyz" variant={variant} />
-  ),
-  tags: ['!dev'],
+export const Test = () => <Component service="kyrgyz" variant="default" />;
+
+Test.globals = {
+  service: { service: 'kyrgyz' },
 };
 
-export const TestWSLanguages = {
-  render: (_: StoryArgs, { variant }: StoryProps) => (
-    <Component service="ws" variant={variant} />
-  ),
-  tags: ['!dev'],
+Test.tags = ['!dev'];
+
+export const TestWSLanguages = () => (
+  <Component service="ws" variant="default" />
+);
+
+TestWSLanguages.globals = {
+  service: { service: 'ws' },
 };
 
-export const TestLite = {
-  render: (_: StoryArgs, { variant }: StoryProps) => (
-    <Component service="gahuza" variant={variant} isLite />
-  ),
-  tags: ['!dev'],
-  parameters: {
-    chromatic: {
-      viewports: [
-        399, // Group 1
-        899, // Group 3
-      ],
-    },
+TestWSLanguages.tags = ['!dev'];
+
+export const TestLite = () => (
+  <Component service="gahuza" variant="default" isLite />
+);
+
+TestLite.globals = {
+  service: { service: 'gahuza' },
+};
+
+TestLite.tags = ['!dev'];
+
+TestLite.parameters = {
+  chromatic: {
+    viewports: [
+      399, // Group 1
+      899, // Group 3
+    ],
   },
 };

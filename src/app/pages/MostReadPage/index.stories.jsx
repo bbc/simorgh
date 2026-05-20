@@ -60,7 +60,9 @@ export const Example = {
 };
 
 // This story is for chromatic testing purposes only
-export const Test = (_, { variant }) => (
-  <Component service="pidgin" variant={variant} />
-);
+export const Test = () => <Component service="pidgin" variant="default" />;
+Test.globals = {
+  service: { service: 'pidgin' },
+};
+
 Test.tags = ['!dev'];
