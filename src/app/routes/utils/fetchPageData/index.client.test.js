@@ -184,9 +184,7 @@ describe('fetchPageData', () => {
     beforeEach(() => {
       fetchSpy.mockResolvedValue({
         status: 200,
-        json: jest.fn(async () => {
-          throw new Error(invalidJsonErrorMessage);
-        }),
+        json: jest.fn(() => 'invalid json'),
       });
     });
 
