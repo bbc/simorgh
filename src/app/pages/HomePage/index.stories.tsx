@@ -129,6 +129,11 @@ export const TestLite = () => (
 );
 
 TestLite.globals = {
+  toggles: {
+    mostRead: {
+      enabled: true,
+    },
+  },
   service: { service: 'gahuza' },
 };
 
