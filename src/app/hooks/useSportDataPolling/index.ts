@@ -16,10 +16,10 @@ const useSportDataPolling = (
     const timerId = setInterval(async () => {
       if (enableFeature === false) return;
 
-      const polledSportsData = await makeRequest(sportDataEventUrn);
+      const polledSportData = await makeRequest(sportDataEventUrn);
 
-      if (polledSportsData != null) {
-        setCurrentData(polledSportsData);
+      if (polledSportData != null) {
+        setCurrentData(polledSportData);
       }
     }, POLLING_INTERVAL);
 
