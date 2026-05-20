@@ -1,14 +1,14 @@
 import { use, useId } from 'react';
+
+import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
+import { RequestContext } from '#app/contexts/RequestContext';
+import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import useViewTracker from '#app/hooks/useViewTracker';
+import type { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import getOriginCode from '#app/lib/utilities/imageSrcHelpers/originCode';
 import type { Summary } from '#app/models/types/curationData';
-import { RequestContext } from '#app/contexts/RequestContext';
-import { createSrcsets } from '#lib/utilities/srcSet';
 import getLocator from '#lib/utilities/imageSrcHelpers/locator';
-import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
-import type { EventTrackingData } from '#app/lib/analyticsUtils/types';
-import useViewTracker from '#app/hooks/useViewTracker';
-import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
-
+import { createSrcsets } from '#lib/utilities/srcSet';
 import Heading from '../Heading';
 import Image from '../Image';
 import styles from './index.styles';

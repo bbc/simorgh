@@ -1,12 +1,13 @@
 import { render } from '@testing-library/react';
+
 import { textBlock } from '#models/blocks';
 import {
-  shouldMatchSnapshot,
   isNull,
+  shouldMatchSnapshot,
   suppressPropWarnings,
 } from '#psammead/psammead-test-helpers/src';
-import VisuallyHiddenHeadlineContainer from '.';
 import blocksSingleFragment from '../Headings/testHelpers';
+import VisuallyHiddenHeadlineContainer from '.';
 
 describe('VisuallyHiddenHeadline', () => {
   describe('with no data', () => {

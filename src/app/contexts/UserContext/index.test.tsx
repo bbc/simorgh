@@ -1,8 +1,9 @@
 import { use } from 'react';
 import { render } from '@testing-library/react';
 import Cookie from 'js-cookie';
-import * as onClient from '#app/lib/utilities/onClient';
+
 import * as isOperaProxy from '#app/lib/utilities/isOperaProxy';
+import * as onClient from '#app/lib/utilities/onClient';
 import setCookie from '#app/lib/utilities/setCookie';
 import { UserContext, UserContextProvider } from '.';
 import { getCookiePolicy, personalisationEnabled } from './cookies';

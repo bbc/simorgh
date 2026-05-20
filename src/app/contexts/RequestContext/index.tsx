@@ -1,16 +1,17 @@
 import { createContext, type PropsWithChildren, useMemo } from 'react';
+
 import type {
   Environments,
-  Platforms,
   PageTypes,
+  Platforms,
+  ServerSideExperiment,
   Services,
   Variants,
-  ServerSideExperiment,
 } from '#app/models/types/global';
-import getStatsDestination from './getStatsDestination';
-import getOriginContext from './getOriginContext';
 import getEnv from './getEnv';
 import getMetaUrls from './getMetaUrls';
+import getOriginContext from './getOriginContext';
+import getStatsDestination from './getStatsDestination';
 
 export type RequestContextProps = {
   ampLink: string;

@@ -1,22 +1,23 @@
 import { SetStateAction, use, useEffect, useState } from 'react';
-import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
+
 import { useLiveRegionContext } from '#app/components/LiveRegion/LiveRegionContext';
+import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import { useFormContext } from '../../../FormContext';
+import fallbackTranslations from '../../../fallbackTranslations';
+import InvalidMessageBox from '../../../MessageBox/InvalidMessageBox';
 import {
   FileData,
   InvalidMessageCodes,
   ValidationConditions,
 } from '../../../types';
-import { useFormContext } from '../../../FormContext';
 import styles from '../styles';
 import {
   AUDIO_SVG_DATA_URI,
-  DOCUMENT_SVG_DATA_URI,
   DeleteSvg,
+  DOCUMENT_SVG_DATA_URI,
   VIDEO_SVG_DATA_URI,
 } from '../svgs';
-import InvalidMessageBox from '../../../MessageBox/InvalidMessageBox';
-import fallbackTranslations from '../../../fallbackTranslations';
 
 interface FileListProps {
   files: FileData[];

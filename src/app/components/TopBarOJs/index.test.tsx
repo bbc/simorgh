@@ -1,13 +1,13 @@
-import isLive from '#lib/utilities/isLive';
-import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
+import * as viewTracking from '#hooks/useViewTracker';
+import isLive from '#lib/utilities/isLive';
 import {
+  fireEvent,
   render,
   screen,
-  fireEvent,
 } from '../react-testing-library-with-providers';
-import { topStoriesBlocks } from './helpers/fixtureData';
 import TopBarOJs from '.';
+import { topStoriesBlocks } from './helpers/fixtureData';
 
 jest.mock('#lib/utilities/isLive', () => jest.fn());
 

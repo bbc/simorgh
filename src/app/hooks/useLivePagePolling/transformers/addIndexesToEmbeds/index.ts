@@ -1,12 +1,14 @@
 // biome-ignore-all lint/suspicious/noExplicitAny: we want this
-import type { OptimoBlock } from '#app/models/types/optimo';
-import type { Post } from '#nextjs/pages/[service]/live/[id]/Post/types';
+
 import equals from 'ramda/src/equals';
 import lensPath from 'ramda/src/lensPath';
 import pipe from 'ramda/src/pipe';
 import prop from 'ramda/src/prop';
 import set from 'ramda/src/set';
 import view from 'ramda/src/view';
+
+import type { OptimoBlock } from '#app/models/types/optimo';
+import type { Post } from '#nextjs/pages/[service]/live/[id]/Post/types';
 
 const model = 'model';
 

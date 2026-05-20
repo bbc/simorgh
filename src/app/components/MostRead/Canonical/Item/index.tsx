@@ -1,20 +1,21 @@
 import { forwardRef, type PropsWithChildren } from 'react';
 import type { SerializedStyles, Theme } from '@emotion/react';
-import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
+
 import LiveLabel from '#app/components/LiveLabel';
-import styles from './index.styles';
-import {
-  mostReadListGridProps,
-  mostReadItemGridProps,
-} from '../../utilities/gridProps';
+import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
+import Grid from '../../../../legacy/components/Grid';
+import type { Direction } from '../../../../models/types/global';
 import type {
   ColumnLayout,
   MostReadItemProps,
   MostReadLinkProps,
   Size,
 } from '../../types';
-import type { Direction } from '../../../../models/types/global';
-import Grid from '../../../../legacy/components/Grid';
+import {
+  mostReadItemGridProps,
+  mostReadListGridProps,
+} from '../../utilities/gridProps';
+import styles from './index.styles';
 
 export const getParentColumns = (columnLayout: ColumnLayout) =>
   columnLayout !== 'oneColumn'

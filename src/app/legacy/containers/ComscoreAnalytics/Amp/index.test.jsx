@@ -1,4 +1,5 @@
 import { render } from '@testing-library/react';
+
 import AmpComscore from '.';
 
 describe('Assertions', () => {

@@ -1,5 +1,6 @@
 import { use } from 'react';
 import { reverbUrlHelper } from '@bbc/reverb-url-helper';
+
 import { buildReverbEventModel } from '#app/components/ATIAnalytics/atiUrl';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';

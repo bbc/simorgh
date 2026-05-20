@@ -1,4 +1,5 @@
 import moment from 'moment-timezone';
+
 import isTenHoursAgo from '#lib/utilities/isTenHoursAgo';
 import { formatDate, formatDateAndTime } from './timeFormats';
 
@@ -33,8 +34,8 @@ export const formatType = ({
 };
 
 export const isValidDateTime = dateTime => {
-  if (isNaN(dateTime) || dateTime === null) {
+  if (Number.isNaN(dateTime) || dateTime === null) {
     return false;
   }
-  return !isNaN(new Date(dateTime));
+  return !Number.isNaN(new Date(dateTime));
 };

@@ -1,4 +1,5 @@
 import { NextPageContext } from 'next/types';
+
 import addCspHeader from '.';
 
 const createDocumentContext = (pathname: string, country?: string) => {

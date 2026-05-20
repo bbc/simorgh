@@ -1,5 +1,5 @@
-import getInitialData from '.';
 import { errorPagePath } from '../../utils/regex';
+import getInitialData from '.';
 
 it('should resolve with status 200 and errorCode', async () => {
   const expected = {

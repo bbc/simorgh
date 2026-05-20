@@ -1,10 +1,10 @@
 import {
-  DesktopBigPromo,
   BigPromo,
-  VerticalPromo,
-  TallPromo,
   CompactPromo,
+  DesktopBigPromo,
   HorizontalPromo,
+  TallPromo,
+  VerticalPromo,
 } from './index.styles';
 
 const DESKTOP = [
@@ -353,4 +353,4 @@ const SMALL = [
   ],
 ];
 
-export { DESKTOP, TABLET, MOBILE, SMALL };
+export { DESKTOP, MOBILE, SMALL, TABLET };

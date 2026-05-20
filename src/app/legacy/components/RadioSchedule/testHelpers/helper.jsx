@@ -1,7 +1,7 @@
 import TEXT_VARIANTS from '#storybook/withServicesDecorator/text-variants';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
-import ProgramCard from '../ProgramCard';
 import RadioSchedule from '../index';
+import ProgramCard from '../ProgramCard';
 
 // Will remove and clean up in future PRs
 export const stateTypes = ['live', 'onDemand', 'onDemand', 'next'];

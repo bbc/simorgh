@@ -1,7 +1,11 @@
 // biome-ignore-all lint/a11y/useValidAriaRole: we want this
 import { use } from 'react';
-import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
+import pathOr from 'ramda/src/pathOr';
+
+import idSanitiser from '#app/lib/utilities/idSanitiser';
+import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
+import useViewTracker from '#hooks/useViewTracker';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -11,14 +15,9 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
-
-import useViewTracker from '#hooks/useViewTracker';
-import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
-
-import idSanitiser from '#app/lib/utilities/idSanitiser';
+import VisuallyHiddenText from '../../../components/VisuallyHiddenText';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Link from './Link';
-import VisuallyHiddenText from '../../../components/VisuallyHiddenText';
 
 const EN_GB_LANG = 'en-GB';
 

@@ -1,5 +1,6 @@
-import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
 import styled from '@emotion/styled';
+
+import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
 
 export const MediaIndicatorWrapper = styled.div`
   display: inline-block;

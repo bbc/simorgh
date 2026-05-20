@@ -4,7 +4,7 @@
   https://github.com/bbc/simorgh/blob/latest/docs/JavaScript-Bundling-Strategy.md
  */
 
-const fs = require('fs');
+const fs = require('node:fs');
 const crypto = require('crypto');
 const LoadablePlugin = require('@loadable/webpack-plugin');
 const webpack = require('webpack');
@@ -122,18 +122,20 @@ module.exports = ({ resolvePath, IS_PROD, START_DEV_SERVER, BUNDLE_TYPE }) => {
               );
             },
             name(module) {
-              const rawRequest =
-                module.rawRequest &&
-                module.rawRequest.replace(/^@(\w+)[/\\]/, '$1-');
+              const rawRequest = module.rawRequest?.replace(
+                /^@(\w+)[/\\]/,
+                '$1-',
+              );
               if (rawRequest) return `${rawRequest}-lib`;
 
               const identifier = module.identifier();
               const trimmedIdentifier = /(?:^|[/\\])node_modules[/\\](.*)/.exec(
                 identifier,
               );
-              const processedIdentifier =
-                trimmedIdentifier &&
-                trimmedIdentifier[1].replace(/^@(\w+)[/\\]/, '$1-');
+              const processedIdentifier = trimmedIdentifier?.[1].replace(
+                /^@(\w+)[/\\]/,
+                '$1-',
+              );
 
               return `${processedIdentifier || identifier}-lib`;
             },
@@ -142,7 +144,7 @@ module.exports = ({ resolvePath, IS_PROD, START_DEV_SERVER, BUNDLE_TYPE }) => {
             reuseExistingChunk: true,
           },
           shared: {
-            name(module, chunks) {
+            name(_module, chunks) {
               const chunkName = chunks.map(({ name }) => name).join('-');
               const cryptoName = crypto
                 .createHash('sha1')

@@ -1,6 +1,6 @@
 import { render } from '../../../components/react-testing-library-with-providers';
-import BulletedListItemContainer from './index';
 import { listItemA, listItemB } from '../BulletedList/fixtures';
+import BulletedListItemContainer from './index';
 
 describe('BulletedListItemContainer', () => {
   it('should render text correctly', () => {

@@ -1,10 +1,11 @@
-import { forwardRef, createRef, useMemo } from 'react';
-import { UserContextProvider } from '#contexts/UserContext';
-import { ToggleContext } from '#contexts/ToggleContext';
+import { createRef, forwardRef, useMemo } from 'react';
 import Cookies from 'js-cookie';
+
+import { ToggleContext } from '#contexts/ToggleContext';
+import { UserContextProvider } from '#contexts/UserContext';
 import {
-  render,
   fireEvent,
+  render,
 } from '../../../components/react-testing-library-with-providers';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { service as pidginServiceConfig } from '../../../lib/config/services/pidgin';

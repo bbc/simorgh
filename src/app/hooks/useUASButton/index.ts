@@ -1,18 +1,19 @@
 import { use } from 'react';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import useUASFetchSaveStatus from '#app/hooks/useUASFetchSaveStatus';
+
+import { AccountContext } from '#app/contexts/AccountContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import useUASFetchSaveStatus from '#app/hooks/useUASFetchSaveStatus';
 import uasApiRequest from '#app/lib/uasApi';
+import uasKeys from '#app/lib/uasApi/queryKeys';
 import {
   buildGlobalId,
-  FAVOURITES_CONFIG,
+  buildPromoImageUrl,
   createFavouritesPayload,
   extractPromoImageFromArticleData,
-  buildPromoImageUrl,
+  FAVOURITES_CONFIG,
 } from '#app/lib/uasApi/uasUtility';
 import { Article } from '#app/models/types/optimo';
-import uasKeys from '#app/lib/uasApi/queryKeys';
-import { AccountContext } from '#app/contexts/AccountContext';
 
 enum UASAction {
   SAVE = 'save',

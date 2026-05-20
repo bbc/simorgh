@@ -1,6 +1,6 @@
-import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../../palette';
-import helmetFontVariants from '../../fontVariants/helmet';
 import brandSVG from '../../chameleonLogos/uzbek';
+import helmetFontVariants from '../../fontVariants/helmet';
+import { GHOST, POSTBOX, POSTBOX_30, WHITE } from '../../palette';
 
 export default {
   palette: {

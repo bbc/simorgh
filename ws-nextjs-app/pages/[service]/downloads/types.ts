@@ -1,5 +1,5 @@
-import { Services, Variants } from '#app/models/types/global';
 import { ATIData } from '#app/components/ATIAnalytics/types';
+import { Services, Variants } from '#app/models/types/global';
 
 export type DownloadData = {
   fileCreated: string;

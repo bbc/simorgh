@@ -1,5 +1,5 @@
-import getValidationErrors from './getValidationErrors';
 import { FieldData, OnChangeInputName } from '../../types';
+import getValidationErrors from './getValidationErrors';
 
 const stateData = {
   txt49018765: {

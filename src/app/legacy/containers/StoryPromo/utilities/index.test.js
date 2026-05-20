@@ -1,15 +1,15 @@
 import {
-  PHOTO_GALLERY_PAGE,
   MEDIA_ASSET_PAGE,
+  PHOTO_GALLERY_PAGE,
 } from '#app/routes/utils/pageTypes';
-import { isMap, isPgl, getHeadingTagOverride, buildUniquePromoId } from '.';
 import {
   completeItem,
+  secondaryColumnContentType,
+  secondaryColumnNoAssetURI,
   standardLinkItem,
   tipoFormattedTopStoriesItem,
-  secondaryColumnNoAssetURI,
-  secondaryColumnContentType,
 } from '../helpers/fixtureData';
+import { buildUniquePromoId, getHeadingTagOverride, isMap, isPgl } from '.';
 
 describe('isMap', () => {
   it('should return true if cpsType is MAP', () => {

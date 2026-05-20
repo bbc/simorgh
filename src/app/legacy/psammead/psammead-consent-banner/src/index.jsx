@@ -1,17 +1,17 @@
 import { forwardRef } from 'react';
-
 import styled from '@emotion/styled';
+
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
-  GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
+  GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
-  GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
+  GEL_SPACING_TRPL,
 } from '#psammead/gel-foundations/src/spacings';
 import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
 

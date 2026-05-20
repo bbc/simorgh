@@ -1,4 +1,5 @@
 import { css, type Theme } from '@emotion/react';
+
 import { BORDER_SPACING } from '../../constants';
 
 export default {

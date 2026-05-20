@@ -1,22 +1,22 @@
 import SERVICES from '#app/lib/config/services';
 import {
+  getAfricaEyeTVPageRegex,
   getArticleRegex,
-  getHomePageRegex,
-  getSwRegex,
-  getManifestRegex,
   getCpsAssetRegex,
+  getErrorPageRegex,
+  getHomePageRegex,
+  getLegacyAssetRegex,
   getLiveRadioRegex,
-  getPodcastEpisodeRegex,
-  getPodcastBrandRegex,
+  getManifestRegex,
+  getMostReadDataRegex,
+  getMostReadPageRegex,
   getOnDemandRadioRegex,
   getOnDemandTvRegex,
-  getTopicPageRegex,
-  getErrorPageRegex,
-  getLegacyAssetRegex,
-  getMostReadPageRegex,
-  getMostReadDataRegex,
+  getPodcastBrandRegex,
+  getPodcastEpisodeRegex,
   getSecondaryColumnDataRegex,
-  getAfricaEyeTVPageRegex,
+  getSwRegex,
+  getTopicPageRegex,
 } from './utils';
 
 export const articlePath = getArticleRegex(SERVICES);

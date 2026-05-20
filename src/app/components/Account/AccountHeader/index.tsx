@@ -1,9 +1,10 @@
 import { use } from 'react';
+
+import { AccountIcon } from '#app/components/icons';
+import Text from '#app/components/Text';
 import { AccountContext } from '#contexts/AccountContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useHydrationDetection from '#hooks/useHydrationDetection';
-import Text from '#app/components/Text';
-import { AccountIcon } from '#app/components/icons';
 import styles from './index.styles';
 
 const AccountHeader = () => {

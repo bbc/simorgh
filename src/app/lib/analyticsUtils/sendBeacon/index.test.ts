@@ -1,10 +1,11 @@
 /* eslint-disable global-require */
-import loggerMock from '#testHelpers/loggerMock';
-import { ATI_LOGGING_ERROR } from '#app/lib/logger.const';
+
 import type { ReverbBeaconConfig } from '#app/components/ATIAnalytics/types';
 import { waitFor } from '#app/components/react-testing-library-with-providers';
-import sendBeacon from './index';
+import { ATI_LOGGING_ERROR } from '#app/lib/logger.const';
+import loggerMock from '#testHelpers/loggerMock';
 import * as onClient from '../../utilities/onClient';
+import sendBeacon from './index';
 
 // biome-ignore lint/suspicious/noExplicitAny: we want this
 let isOnClient: any;

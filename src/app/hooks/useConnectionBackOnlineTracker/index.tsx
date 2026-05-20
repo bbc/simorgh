@@ -1,6 +1,7 @@
-import { useEffect, useRef, useCallback } from 'react';
-import useNetworkStatusTracker from '../useNetworkStatusTracker';
+import { useCallback, useEffect, useRef } from 'react';
+
 import useCustomEventTracker from '../useCustomEventTracker';
+import useNetworkStatusTracker from '../useNetworkStatusTracker';
 import type { NetworkStatus } from '../useNetworkStatusTracker/type';
 
 const BACK_ONLINE_EVENT_NAME = 'network-connection-back-online';

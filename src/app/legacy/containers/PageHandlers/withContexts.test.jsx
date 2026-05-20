@@ -1,13 +1,14 @@
-import { render, act } from '@testing-library/react';
-import { ComponentUsingContext } from '#testHelpers/mockComponents';
+import { act, render } from '@testing-library/react';
+
+import { ARTICLE_PAGE, HOME_PAGE } from '#app/routes/utils/pageTypes';
 import getOriginContext from '#contexts/RequestContext/getOriginContext';
 import getStatsDestination from '#contexts/RequestContext/getStatsDestination';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { UserContext } from '#contexts/UserContext';
-import { ARTICLE_PAGE, HOME_PAGE } from '#app/routes/utils/pageTypes';
-import * as serviceContextImports from '../../../contexts/ServiceContext';
-import * as requestContextImports from '../../../contexts/RequestContext';
+import { ComponentUsingContext } from '#testHelpers/mockComponents';
 import * as eventTrackingContextImports from '../../../contexts/EventTrackingContext';
+import * as requestContextImports from '../../../contexts/RequestContext';
+import * as serviceContextImports from '../../../contexts/ServiceContext';
 import WithContexts from './withContexts';
 
 jest.mock('#contexts/RequestContext/getOriginContext', () => jest.fn());

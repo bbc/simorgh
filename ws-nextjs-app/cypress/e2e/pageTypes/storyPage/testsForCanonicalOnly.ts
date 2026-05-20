@@ -1,10 +1,11 @@
 /* eslint-disable cypress/no-unnecessary-waiting */
 import path from 'ramda/src/path';
+
 import { OptimoBlock } from '#app/models/types/optimo';
-import { ServiceParametersType } from '../../../types';
 import runCanonicalAdsTests from '../../../support/helpers/adsTests/testsForCanonicalOnly';
-import { crossPlatform as mostReadAssertions } from '../../assertions/crossPlatformAssertion';
 import skipOnLocal from '../../../support/helpers/skipOnLocal';
+import { ServiceParametersType } from '../../../types';
+import { crossPlatform as mostReadAssertions } from '../../assertions/crossPlatformAssertion';
 
 export default ({ service, pageType, variant }: ServiceParametersType) => {
   describe(`Canonical Tests for ${service} ${pageType}`, () => {

@@ -1,7 +1,8 @@
 // biome-ignore-all lint/suspicious/noEmptyBlockStatements: we want this
 import path from 'ramda/src/path';
+
 import getAppEnv from '../../../support/helpers/getAppEnv';
-import { mapsWithPreroll, mapsWithoutPreroll } from './config';
+import { mapsWithoutPreroll, mapsWithPreroll } from './config';
 
 const environment = getAppEnv();
 

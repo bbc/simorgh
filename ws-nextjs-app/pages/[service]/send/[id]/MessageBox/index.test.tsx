@@ -3,9 +3,9 @@ import {
   render,
 } from '#app/components/react-testing-library-with-providers';
 import * as AndroidDetectionModule from '#hooks/useAdroidDetection';
-import ErrorSummaryBox from './ErrorSummaryBox';
 import * as FormContextModule from '../FormContext';
 import { InvalidMessageCodes } from '../types';
+import ErrorSummaryBox from './ErrorSummaryBox';
 
 jest.mock('next/router', () => ({
   useRouter: () => ({ query: { id: 'u1234' } }),

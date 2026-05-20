@@ -1,15 +1,15 @@
 import { useMemo } from 'react';
 import styled from '@emotion/styled';
-import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
 
-import { EpisodeContext } from './helpers';
-import Episode from './Episode';
-import Link from './Link';
-import Title from './Title';
-import Description from './Description';
+import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
 import DateTimeDuration from './DateTimeDuration';
+import Description from './Description';
+import Episode from './Episode';
+import { EpisodeContext } from './helpers';
 import Image from './Image';
+import Link from './Link';
 import MediaIndicator from './MediaIndicator';
+import Title from './Title';
 
 const StyledEpisodeList = styled.ul`
   list-style: none;

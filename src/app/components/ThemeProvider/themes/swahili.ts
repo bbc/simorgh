@@ -1,8 +1,8 @@
-import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
+import brandSVG from '../chameleonLogos/swahili';
 import latinScript from '../fontScripts/latin';
 import helmetFontVariants from '../fontVariants/helmet';
+import { GHOST, POSTBOX, POSTBOX_30, WHITE } from '../palette';
 import withThemeProvider from '../withThemeProvider';
-import brandSVG from '../chameleonLogos/swahili';
 import getPWATypographyTheme from './getPWATypographyTheme';
 
 export const theme = {

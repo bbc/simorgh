@@ -1,5 +1,6 @@
-import type { OEmbedData } from '#app/components/Embeds/types';
 import { v4 as uuid } from 'uuid';
+
+import type { OEmbedData } from '#app/components/Embeds/types';
 
 export default (aresOEmbedData: OEmbedData) => {
   const { html } = aresOEmbedData;

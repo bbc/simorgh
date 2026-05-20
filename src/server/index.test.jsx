@@ -1,24 +1,26 @@
 // biome-ignore-all lint/style/noCommonJs: we want this
 // biome-ignore-all lint/nursery/useThisInClassMethods: we want this
-import request from 'supertest';
-import * as reactDomServer from 'react-dom/server';
+
 import dotenv from 'dotenv';
+import * as reactDomServer from 'react-dom/server';
+import request from 'supertest';
+
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
+import { HOME_PAGE, LIVE_RADIO_PAGE } from '#app/routes/utils/pageTypes';
 import defaultToggles from '#lib/config/toggles';
-import loggerMock from '#testHelpers/loggerMock';
 import {
   ROUTING_INFORMATION,
   SERVER_SIDE_RENDER_REQUEST_RECEIVED,
   SERVER_SIDE_REQUEST_FAILED,
 } from '#lib/logger.const';
-import { HOME_PAGE, LIVE_RADIO_PAGE } from '#app/routes/utils/pageTypes';
-import Document from './Document/component';
+import loggerMock from '#testHelpers/loggerMock';
 import routes from '../app/routes';
+import createAdNonce from '../app/utilities/createAdNonce';
 import * as renderDocument from './Document';
+import Document from './Document/component';
 import sendCustomMetrics from './utilities/customMetrics';
 import { NON_200_RESPONSE } from './utilities/customMetrics/metrics.const';
 import { getExperimentVaryHeaders } from './utilities/experimentHeader';
-import createAdNonce from '../app/utilities/createAdNonce';
 
 // mimic the logic in `src/index.js` which imports the `server/index.jsx`
 dotenv.config({ path: './envConfig/local.env' });

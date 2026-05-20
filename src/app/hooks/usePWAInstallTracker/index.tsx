@@ -1,8 +1,10 @@
 import { useEffect, useRef } from 'react';
+
 import useOptimizelyVariation, {
   ExperimentType,
 } from '#app/hooks/useOptimizelyVariation';
 import useCustomEventTracker from '../useCustomEventTracker';
+
 /**
  * A hook to track PWA installation events using Reverb Analytics
  */

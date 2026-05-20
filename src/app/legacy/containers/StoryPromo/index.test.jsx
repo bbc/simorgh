@@ -1,33 +1,34 @@
-import { render, cleanup } from '@testing-library/react';
+import { cleanup, render } from '@testing-library/react';
 import deepClone from 'ramda/src/clone';
-import loggerMock from '#testHelpers/loggerMock';
-import { MEDIA_MISSING } from '#lib/logger.const';
+
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { MEDIA_MISSING } from '#lib/logger.const';
 import {
   shouldMatchSnapshot,
   suppressPropWarnings,
 } from '#psammead/psammead-test-helpers/src';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import loggerMock from '#testHelpers/loggerMock';
 import ThemeProvider from '../../../components/ThemeProvider';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import StoryPromoContainer from '.';
 import {
-  completeItem,
-  itemWithOvertypedSummary,
   audioItem,
-  videoItem,
-  liveItem,
-  guideLinkItem,
   audioItemNoDuration,
-  standardLinkItem,
+  completeItem,
   featureLinkItem,
-  podcastLinkItem,
-  itemWithoutImage,
+  guideLinkItem,
   indexAlsosItem,
+  itemWithOvertypedSummary,
+  itemWithoutImage,
+  liveItem,
   mapWithMediaError,
   mapWithoutMediaError,
+  podcastLinkItem,
+  standardLinkItem,
+  videoItem,
 } from './helpers/fixtureData';
-import StoryPromoContainer from '.';
 import { buildUniquePromoId } from './utilities';
 
 jest.mock('../../../components/ThemeProvider');

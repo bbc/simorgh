@@ -1,13 +1,14 @@
 import moment from 'moment-timezone';
-import filterForBlockType from '#lib/utilities/blockHandlers';
+
+import { GROUP_3_MIN_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import onClient from '#app/lib/utilities/onClient';
-import { GROUP_3_MIN_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
+import filterForBlockType from '#lib/utilities/blockHandlers';
 import type {
-  PortraitClipMediaBlock,
   ConfigBuilderProps,
   ConfigBuilderReturnProps,
   PlaylistItem,
+  PortraitClipMediaBlock,
 } from '../types';
 
 export default ({

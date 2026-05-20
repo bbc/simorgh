@@ -1,7 +1,8 @@
 import type { Agent } from 'undici';
-import KyrgyzHomeFixture from '#data/kyrgyz/homePage/index.json';
+
 import * as fetchPageData from '#app/routes/utils/fetchPageData';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
+import KyrgyzHomeFixture from '#data/kyrgyz/homePage/index.json';
 import getInitialData from '.';
 
 process.env.BFF_PATH = 'https://mock-bff-path';

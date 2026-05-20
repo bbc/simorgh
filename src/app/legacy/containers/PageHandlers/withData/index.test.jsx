@@ -1,10 +1,10 @@
+import serbianHomePageData from '#data/serbian/homePage/lat.json';
 import {
   articleDataNews,
   articleDataPersian,
 } from '#pages/ArticlePage/fixtureData';
-import serbianHomePageData from '#data/serbian/homePage/lat.json';
-import WithData from '.';
 import { render } from '../../../../components/react-testing-library-with-providers';
+import WithData from '.';
 
 jest.mock('#pages/ErrorPage/ErrorPage', () => ({ errorCode }) => (
   <h1>This is a {errorCode} error.</h1>

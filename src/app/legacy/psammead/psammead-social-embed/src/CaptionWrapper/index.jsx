@@ -1,10 +1,11 @@
 import { use } from 'react';
 import styled from '@emotion/styled';
-import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
-import { RequestContext } from '#contexts/RequestContext';
+
 import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
-import { visuallyHiddenStyle } from '../../../../../lib/styles.const';
+import { RequestContext } from '#contexts/RequestContext';
+import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
 import { GREY_6 } from '../../../../../components/ThemeProvider/palette';
+import { visuallyHiddenStyle } from '../../../../../lib/styles.const';
 
 const Container = styled.div`
   margin: 0;

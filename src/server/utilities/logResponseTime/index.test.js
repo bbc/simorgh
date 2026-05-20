@@ -6,7 +6,7 @@ const req = {
 };
 
 const res = {
-  on: jest.fn().mockImplementation((event, callback) => callback()),
+  on: jest.fn().mockImplementation((_event, callback) => callback()),
 };
 
 const next = jest.fn();

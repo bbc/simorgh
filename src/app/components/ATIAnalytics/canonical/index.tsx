@@ -1,18 +1,19 @@
-import { useEffect, useState, use } from 'react';
-import { RequestContext } from '#app/contexts/RequestContext';
-import isOperaProxy from '#app/lib/utilities/isOperaProxy';
+import { use, useEffect, useState } from 'react';
+import { reverbUrlHelper } from '@bbc/reverb-url-helper';
 import { Helmet } from 'react-helmet';
-import { addSendStaticBeaconToWindow } from '#app/lib/analyticsUtils/staticATITracking/sendStaticBeacon';
-import sendPageViewBeaconLite from '#app/lib/analyticsUtils/staticATITracking/processClientDeviceAndSendStaticBeacon';
+
+import { RequestContext } from '#app/contexts/RequestContext';
+import useConnectionBackOnlineTracker from '#app/hooks/useConnectionBackOnlineTracker';
+import useConnectionTypeTracker from '#app/hooks/useConnectionTypeTracker';
+import usePWAInstallTracker from '#app/hooks/usePWAInstallTracker';
+import usePWAOfflineTracking from '#app/hooks/usePWAOfflineTracking';
 import sendBeacon from '#app/lib/analyticsUtils/sendBeacon';
+import sendPageViewBeaconLite from '#app/lib/analyticsUtils/staticATITracking/processClientDeviceAndSendStaticBeacon';
+import { addSendStaticBeaconToWindow } from '#app/lib/analyticsUtils/staticATITracking/sendStaticBeacon';
 import addInlineScript, {
   type InlineScriptProps,
 } from '#app/lib/utilities/addInlineScript';
-import usePWAInstallTracker from '#app/hooks/usePWAInstallTracker';
-import { reverbUrlHelper } from '@bbc/reverb-url-helper';
-import useConnectionBackOnlineTracker from '#app/hooks/useConnectionBackOnlineTracker';
-import useConnectionTypeTracker from '#app/hooks/useConnectionTypeTracker';
-import usePWAOfflineTracking from '#app/hooks/usePWAOfflineTracking';
+import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import type { ATIAnalyticsProps } from '../types';
 import getNoScriptTrackingPixelUrl from './getNoScriptTrackingPixelUrl';
 import sendPageViewBeaconOperaMini from './sendPageViewBeaconOperaMini';

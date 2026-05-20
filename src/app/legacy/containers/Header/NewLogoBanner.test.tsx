@@ -1,8 +1,8 @@
-import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import {
   render,
   screen,
 } from '#app/components/react-testing-library-with-providers';
+import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import NewLogoBanner from './NewLogoBanner';
 
 describe('NewLogoBanner', () => {

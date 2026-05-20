@@ -1,7 +1,8 @@
 // biome-ignore-all lint/a11y/useValidAriaRole: we want this
-import ActionsTime from './actions-time';
+
 import styles from '../index.styles';
-import type { PlayerActions, Alignment } from '../types';
+import type { Alignment, PlayerActions } from '../types';
+import ActionsTime from './actions-time';
 
 interface ActionProps {
   contestantActions: PlayerActions[];

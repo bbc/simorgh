@@ -2,31 +2,31 @@ import {
   render,
   screen,
 } from '#app/components/react-testing-library-with-providers';
+import HeadToHead from '../head-to-head-v2';
 import cancelledMockData from '../static-data/event/transformed/cancelled.json';
+import {
+  beforePensAetData,
+  etFirstHalfData,
+  firstHalfAddedTimeData,
+  firstHalf90Data as firstHalfData,
+  inPens90Data,
+  inPensAetData,
+  secondHalf90Data,
+} from '../static-data/event/transformed/mid-event/index';
+import {
+  finishedAetAggData,
+  postEventAETData,
+  postEventAgg90Data,
+  postEventPens90Data,
+  postEventPensAetAggData,
+  postEventPensAetData,
+} from '../static-data/event/transformed/post-event/index';
 import postponedMockData from '../static-data/event/transformed/postponed.json';
-import suspendedMockData from '../static-data/event/transformed/suspended.json';
 import {
   preEventData as preEventMockData,
   preEventNoTeamsOrVenueProvided as preEventNoTeamsMockData,
 } from '../static-data/event/transformed/pre-event/index';
-import {
-  postEventAETData,
-  postEventAgg90Data,
-  postEventPensAetAggData,
-  postEventPens90Data,
-  postEventPensAetData,
-  finishedAetAggData,
-} from '../static-data/event/transformed/post-event/index';
-import {
-  firstHalf90Data as firstHalfData,
-  firstHalfAddedTimeData,
-  etFirstHalfData,
-  inPensAetData,
-  beforePensAetData,
-  inPens90Data,
-  secondHalf90Data,
-} from '../static-data/event/transformed/mid-event/index';
-import HeadToHead from '../head-to-head-v2';
+import suspendedMockData from '../static-data/event/transformed/suspended.json';
 import type { HeadToHeadV2Data } from '../types';
 
 interface RenderOptions {

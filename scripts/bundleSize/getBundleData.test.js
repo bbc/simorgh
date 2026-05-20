@@ -1,6 +1,7 @@
 import { jest } from '@jest/globals';
-import { pages } from './pages.js';
+
 import pageTypeBundleExtractor from './__mocks__/pageTypeBundleExtractor.js';
+import { pages } from './pages.js';
 
 jest.unstable_mockModule(
   './pageTypeBundleExtractor',

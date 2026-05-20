@@ -1,10 +1,10 @@
-import { getFallbackFootballPeriodLabel } from '../helpers/event-summary';
-import { isInProgressStatus } from '../helpers/event-status-groups';
-import { shouldShowScores } from './centre';
-import Period from './period';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
+import { isInProgressStatus } from '../helpers/event-status-groups';
+import { getFallbackFootballPeriodLabel } from '../helpers/event-summary';
 import styles from '../index.styles';
 import type { HeadToHeadV2Data } from '../types';
+import { shouldShowScores } from './centre';
+import Period from './period';
 
 interface MatchProgressProps {
   data: HeadToHeadV2Data;

@@ -1,28 +1,29 @@
-import Url from 'url-parse';
 import pipe from 'ramda/src/pipe';
-import getEnvironment from '#app/routes/utils/getEnvironment';
+import Url from 'url-parse';
+
 import { getMostReadEndpoint } from '#app/lib/utilities/getUrlHelpers/getMostReadUrls';
+import getEnvironment from '#app/routes/utils/getEnvironment';
 import { getUrlPath } from '#lib/utilities/urlParser';
 import type {
-  Services,
-  Variants,
   Environments,
   PageTypes,
+  Services,
+  Variants,
 } from '#models/types/global';
 import handleError from '../handleError';
 import {
   ARTICLE_PAGE,
+  AUDIO_PAGE,
   AV_EMBEDS,
   CPS_ASSET,
   HOME_PAGE,
   LIVE_PAGE,
   LIVE_RADIO_PAGE,
+  LIVE_TV_PAGE,
   MOST_READ_PAGE,
-  AUDIO_PAGE,
   TOPIC_PAGE,
   TV_PAGE,
   UGC_PAGE,
-  LIVE_TV_PAGE,
 } from '../pageTypes';
 import parseRoute from '../parseRoute';
 

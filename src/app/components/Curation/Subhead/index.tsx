@@ -1,10 +1,8 @@
 import { Fragment, type PropsWithChildren, use } from 'react';
 
-import styles from './index.styles';
-
-import { LeftChevron, RightChevron } from '../../icons';
-
 import { ServiceContext } from '../../../contexts/ServiceContext';
+import { LeftChevron, RightChevron } from '../../icons';
+import styles from './index.styles';
 
 interface Props {
   link?: string;

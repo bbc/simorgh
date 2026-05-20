@@ -1,6 +1,7 @@
 import { css, type Theme } from '@emotion/react';
-import pixelsToRem from '#app/utilities/pixelsToRem';
+
 import BASE64_PLACEHOLDER_IMAGE from '#app/components/Image/base64Placeholder';
+import pixelsToRem from '#app/utilities/pixelsToRem';
 
 const IMAGE_SIZE_GROUP_1 = 80;
 const IMAGE_SIZE_GROUP_2 = 55;

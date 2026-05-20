@@ -1,8 +1,9 @@
 import { Global } from '@emotion/react';
+
 import MediaLoader from '#app/components/MediaLoader';
-import { AvEmbedsPageProps } from './types';
-import styles from './styles';
 import AvEmbedsMetadata from './AvEmbedsMetadata';
+import styles from './styles';
+import { AvEmbedsPageProps } from './types';
 
 const AvEmbedsPageLayout = ({ pageData }: AvEmbedsPageProps) => (
   <>

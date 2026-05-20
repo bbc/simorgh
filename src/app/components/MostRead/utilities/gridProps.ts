@@ -49,4 +49,4 @@ const mostReadItemGridProps = (columnLayout: ColumnLayout) => ({
   },
 });
 
-export { mostReadListGridProps, mostReadItemGridProps };
+export { mostReadItemGridProps, mostReadListGridProps };

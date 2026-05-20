@@ -1,5 +1,6 @@
 import { createContext } from 'react';
-import type { GelFontSize, FontVariant } from '../../models/types/theming';
+
+import type { FontVariant, GelFontSize } from '../../models/types/theming';
 
 interface ContextProps {
   size?: GelFontSize;

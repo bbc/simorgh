@@ -1,5 +1,5 @@
-import getItemList from '.';
 import { baseCurations, curationsWithSummaries } from '../testHelpers';
+import getItemList from '.';
 
 describe('SEO Utils | getItemList', () => {
   it('should convert curations into an ItemList object with ListItems', () => {

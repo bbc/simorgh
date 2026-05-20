@@ -1,14 +1,13 @@
+import { blockArrayModel, blockContainingText } from '#models/blocks';
 import {
   isNull,
   suppressPropWarnings,
 } from '#psammead/psammead-test-helpers/src';
-import { blockContainingText, blockArrayModel } from '#models/blocks';
 import {
   render,
   screen,
   waitFor,
 } from '../react-testing-library-with-providers';
-
 import ImageContainer from './index';
 
 describe('Image', () => {

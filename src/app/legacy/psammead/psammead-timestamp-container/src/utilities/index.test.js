@@ -1,11 +1,12 @@
 import moment from 'moment-timezone';
+
+import timestampGenerator from '../helpers/testHelpers';
 import {
   formatDuration,
   formatUnixTimestamp,
   isValidDateTime,
   localisedMoment,
 } from '.';
-import timestampGenerator from '../helpers/testHelpers';
 
 const timezone = 'Europe/London';
 const timestamp = 1539969006000; // 19 October 2018

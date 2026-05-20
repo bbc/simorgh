@@ -1,5 +1,5 @@
-import { render } from '#app/components/react-testing-library-with-providers';
 import type { Tag } from '#app/components/Metadata/types';
+import { render } from '#app/components/react-testing-library-with-providers';
 import type { MetadataTaggings } from '#app/models/types/metadata';
 import ElectionBanner from '.';
 

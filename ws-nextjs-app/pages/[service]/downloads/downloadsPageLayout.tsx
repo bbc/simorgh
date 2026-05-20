@@ -1,9 +1,10 @@
 import { use } from 'react';
-import Heading from '#app/components/Heading';
+
 import ATIAnalytics from '#app/components/ATIAnalytics';
-import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
-import Metadata from '#app/components/Metadata';
 import CallToActionLink from '#app/components/CallToActionLink';
+import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
+import Heading from '#app/components/Heading';
+import Metadata from '#app/components/Metadata';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
 import styles from './styles';

@@ -1,24 +1,25 @@
+import { Helmet } from 'react-helmet';
 import { BrowserRouter } from 'react-router-dom';
-import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
-import { data as mundoBannerVariations } from '#data/mundo/topics/cw90edn9kw4t.json';
+
 import {
   VISUAL_PROMINENCE,
   VISUAL_STYLE,
 } from '#app/models/types/curationData';
-import { Helmet } from 'react-helmet';
 import { data as kyrgyzTopicWithMessageBanners } from '#data/kyrgyz/topics/cvpv9djp9qqt.json';
-import { TOPIC_PAGE } from '../../routes/utils/pageTypes';
+import { data as mundoBannerVariations } from '#data/mundo/topics/cw90edn9kw4t.json';
+import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import { render } from '../../components/react-testing-library-with-providers';
-import TopicPage from './TopicPage';
+import { TOPIC_PAGE } from '../../routes/utils/pageTypes';
 import {
-  pidginMultipleItems,
-  amharicSingleItem,
-  mundoWithBadgeAndDescr,
-  mundoMultipleCurations,
   amharicOnlyTitle,
+  amharicSingleItem,
   amharicSingleItemNoCurationTitle,
+  mundoMultipleCurations,
+  mundoWithBadgeAndDescr,
+  pidginMultipleItems,
   pidginSingleCurationEmptyStringSubheading,
 } from './fixtures';
+import TopicPage from './TopicPage';
 
 jest.mock('../../components/ThemeProvider');
 jest.mock('../../components/ChartbeatAnalytics', () => {

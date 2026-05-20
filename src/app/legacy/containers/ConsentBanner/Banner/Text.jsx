@@ -1,6 +1,7 @@
 import { use } from 'react';
-import { ConsentBannerText } from '#psammead/psammead-consent-banner/src';
+
 import { RequestContext } from '#contexts/RequestContext';
+import { ConsentBannerText } from '#psammead/psammead-consent-banner/src';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 
 const BannerText = ({ uk, international }) => {

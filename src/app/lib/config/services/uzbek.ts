@@ -1,11 +1,12 @@
-import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
 import cyrillic from '../../../components/ThemeProvider/fontScripts/cyrillic';
+import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/uz';
 import '#psammead/psammead-locales/moment/uz-latn';
+
 import withContext from '../../../contexts/utils/withContext';
-import type { UzbekConfig } from '../../../models/types/serviceConfig';
 import type { Direction, Services } from '../../../models/types/global';
+import type { UzbekConfig } from '../../../models/types/serviceConfig';
 
 const baseServiceConfig = {
   articleAuthor: `https://www.facebook.com/bbcnews`,

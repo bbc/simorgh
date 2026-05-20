@@ -1,14 +1,15 @@
 import { use } from 'react';
-import is from 'ramda/src/is';
 import styled from '@emotion/styled';
+import is from 'ramda/src/is';
+
+import { getMimeType } from '#lib/utilities/srcSet';
 import {
-  GEL_SPACING_QUAD,
   GEL_SPACING_DBL,
+  GEL_SPACING_QUAD,
   GEL_SPACING_TRPL,
 } from '#psammead/gel-foundations/src/spacings';
-import { getMimeType } from '#lib/utilities/srcSet';
-import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '../../../contexts/RequestContext';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 import ImageWithPlaceholder from '../ImageWithPlaceholder';
 
 const paddingDir = ({ dir }) => `padding-${dir === 'rtl' ? 'left' : 'right'}`;

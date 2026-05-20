@@ -1,7 +1,8 @@
 import moment from 'moment';
-import styles from './index.styles';
+
 import CurationPromo from '../../Curation/CurationPromo';
 import type { CurationGridProps } from '../../Curation/types';
+import styles from './index.styles';
 
 const BillboardCurationGrid = ({
   summaries,

@@ -1,4 +1,5 @@
 import { render } from '@testing-library/react';
+
 import useOptimizelyScrollDepth from '#hooks/useOptimizelyScrollDepth';
 import ScrollDepthTracking from '.';
 

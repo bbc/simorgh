@@ -1,10 +1,10 @@
 import type { PageTypes, Services } from '#app/models/types/global';
 import type {
+  LiveRadioBlock,
+  MediaOverrides,
   MediaType,
   OnDemandAudioBlock,
   OnDemandTVBlock,
-  LiveRadioBlock,
-  MediaOverrides,
 } from '#app/models/types/media';
 import type { OptimoImageBlock } from '#app/models/types/optimo';
 import type { Translations } from '#app/models/types/translations';

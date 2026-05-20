@@ -1,6 +1,6 @@
-import styles from './index.styles';
 import InlineLink from '../../InlineLink';
 import Text from '../../Text';
+import styles from './index.styles';
 
 type Props = {
   message: string;

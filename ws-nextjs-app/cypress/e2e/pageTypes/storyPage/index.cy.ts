@@ -1,21 +1,21 @@
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
-import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
 import runTestsForPage, {
   TestDataType,
 } from '../../../support/helpers/runTestsForPage';
-import testsForAllPages from '../../testsForAllPages';
-import testsForAllCanonicalPages from '../../testsForAllCanonicalPages';
-import testsForAllAMPPages from '../../testsForAllAMPPages';
-import canonicalAndAmpArticleTests from './tests';
-import ampArticleTests from './testsForAMPOnly';
-import canonicalArticleTests from './testsForCanonicalOnly';
+import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
 import {
   assertDropdownNavigationComponentClick,
   assertDropdownNavigationComponentView,
   assertScrollableNavigationComponentClick,
   assertScrollableNavigationComponentView,
 } from '../../specialFeatures/atiAnalytics/assertions/navigation';
+import testsForAllAMPPages from '../../testsForAllAMPPages';
+import testsForAllCanonicalPages from '../../testsForAllCanonicalPages';
+import testsForAllPages from '../../testsForAllPages';
 import liteArticleTests from '../articlePage/testsForLiteOnly';
+import canonicalAndAmpArticleTests from './tests';
+import ampArticleTests from './testsForAMPOnly';
+import canonicalArticleTests from './testsForCanonicalOnly';
 
 const canonicalTests = [
   testsForAllPages,

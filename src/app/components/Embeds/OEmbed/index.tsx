@@ -1,14 +1,15 @@
 /* eslint-disable camelcase */
 import { memo, use } from 'react';
 import pathOr from 'ramda/src/pathOr';
+
 import { RequestContext } from '../../../contexts/RequestContext';
 import { ServiceContext } from '../../../contexts/ServiceContext';
-import EmbedHtml from '../EmbedHtml';
-import EmbedError from '../EmbedError';
-import FlourishEmbed from '../FlourishEmbed';
 import AmpIframeEmbed from '../AmpIframeEmbed';
-import type { OEmbedProps } from '../types';
 import ClientSideRiddleEmbed from '../ClientSideRiddleEmbed';
+import EmbedError from '../EmbedError';
+import EmbedHtml from '../EmbedHtml';
+import FlourishEmbed from '../FlourishEmbed';
+import type { OEmbedProps } from '../types';
 
 const OEmbedLoader = ({ oembed }: OEmbedProps) => {
   const { isAmp, isLite, canonicalLink, nonce } = use(RequestContext);

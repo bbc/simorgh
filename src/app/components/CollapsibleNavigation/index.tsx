@@ -1,11 +1,12 @@
-import { useState, useRef, Fragment, type ElementType } from 'react';
+import { type ElementType, Fragment, useRef, useState } from 'react';
+
+import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import type { EventTrackingMetadata } from '#app/models/types/eventTracking';
-import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
-import styles from './index.styles';
-import { Close } from '../icons';
-import type { CollapsibleNavigationSection } from './types';
 import Heading from '../Heading';
+import { Close } from '../icons';
+import styles from './index.styles';
+import type { CollapsibleNavigationSection } from './types';
 
 type CollapsibleNavigationProps = {
   navigationSections: CollapsibleNavigationSection[];

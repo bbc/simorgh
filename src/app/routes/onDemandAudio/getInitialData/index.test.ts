@@ -1,10 +1,11 @@
-import podcastJson from '#data/gahuza/bbc_gahuza_radio/p07yh8hb.json';
-import { AUDIO_PAGE } from '#app/routes/utils/pageTypes';
 import type { FetchMock } from 'jest-fetch-mock';
-import * as fetchBFF from '#app/routes/utils/fetchDataFromBFF';
-import gahuzaOnDemandAudio from '#data/gahuza/bbc_gahuza_radio/p02pcb5c.json';
-import isTest from '#app/lib/utilities/isTest';
+
 import defaultToggles from '#app/lib/config/toggles';
+import isTest from '#app/lib/utilities/isTest';
+import * as fetchBFF from '#app/routes/utils/fetchDataFromBFF';
+import { AUDIO_PAGE } from '#app/routes/utils/pageTypes';
+import gahuzaOnDemandAudio from '#data/gahuza/bbc_gahuza_radio/p02pcb5c.json';
+import podcastJson from '#data/gahuza/bbc_gahuza_radio/p07yh8hb.json';
 import gahuzaExternalLinks from '../podcastExternalLinks/gahuza';
 import getInitialData from '.';
 

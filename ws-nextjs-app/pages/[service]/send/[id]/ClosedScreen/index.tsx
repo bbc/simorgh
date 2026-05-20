@@ -1,9 +1,10 @@
 import { use } from 'react';
+
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
+import fallbackTranslations from '../fallbackTranslations';
 import GenericMessage from '../GenericMessage';
 import styles from './styles';
-import fallbackTranslations from '../fallbackTranslations';
 
 type Props = {
   title: string;

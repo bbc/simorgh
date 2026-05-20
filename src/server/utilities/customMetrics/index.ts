@@ -1,4 +1,5 @@
 import { metricScope, Unit } from 'aws-embedded-metrics';
+
 import type { PageTypes } from '#app/models/types/global';
 import onEnvironment from '../onEnvironment';
 

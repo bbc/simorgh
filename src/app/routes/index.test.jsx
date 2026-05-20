@@ -1,4 +1,4 @@
-import { renderRoutes, matchRoutes } from 'react-router-config';
+import { matchRoutes, renderRoutes } from 'react-router-config';
 import { MemoryRouter } from 'react-router-dom';
 
 // test helpers
@@ -6,22 +6,21 @@ import defaultToggles from '#lib/config/toggles';
 
 // components being tested
 
-// mock data
-import gahuzaPodcastPage from '#data/gahuza/bbc_gahuza_radio/p07yh8hb.json';
-import liveRadioPageJson from '#data/afrique/bbc_afrique_radio/liveradio.json';
-import homePageJson from '#data/kyrgyz/homePage/index.json';
-import onDemandTvPageJson from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn4.json';
-
-import { ERROR_PAGE, HOME_PAGE } from '#app/routes/utils/pageTypes';
-import * as fetchDataFromBFF from '#app/routes/utils/fetchDataFromBFF';
-import gahuzaOnDemandAudio from '#data/gahuza/bbc_gahuza_radio/p02pcb5c.json';
-import routes from '.';
 import {
   act,
   render,
   screen,
 } from '#app/components/react-testing-library-with-providers';
+import * as fetchDataFromBFF from '#app/routes/utils/fetchDataFromBFF';
+import { ERROR_PAGE, HOME_PAGE } from '#app/routes/utils/pageTypes';
+import liveRadioPageJson from '#data/afrique/bbc_afrique_radio/liveradio.json';
+import gahuzaOnDemandAudio from '#data/gahuza/bbc_gahuza_radio/p02pcb5c.json';
+// mock data
+import gahuzaPodcastPage from '#data/gahuza/bbc_gahuza_radio/p07yh8hb.json';
+import homePageJson from '#data/kyrgyz/homePage/index.json';
+import onDemandTvPageJson from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn4.json';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
+import routes from '.';
 
 global.performance.getEntriesByName = jest.fn(() => []);
 

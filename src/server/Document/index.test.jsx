@@ -1,7 +1,8 @@
-import * as server from 'react-dom/server';
 import { ChunkExtractor } from '@loadable/server';
-import renderDocument from '.';
+import * as server from 'react-dom/server';
+
 import { ServerApp } from '../../app/legacy/containers/App';
+import renderDocument from '.';
 import DocumentComponent from './component';
 
 jest.mock('@loadable/server', () => ({

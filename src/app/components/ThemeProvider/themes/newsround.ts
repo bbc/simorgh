@@ -1,15 +1,15 @@
 import type { ServiceTheme } from '#app/models/types/theming';
-import { NEWSROUND_PURPLE, NEWSROUND_PURPLE_30, WHITE } from '../palette';
-import latinScript from '../fontScripts/latin';
+import brandSVG from '../chameleonLogos/newsround';
 import {
   REITH_SANS_BOLD,
   REITH_SANS_REGULAR,
-  REITH_SERIF_MEDIUM,
   REITH_SERIF_LIGHT,
+  REITH_SERIF_MEDIUM,
 } from '../fontFaces';
+import latinScript from '../fontScripts/latin';
 import reithFontVariants from '../fontVariants/reith';
+import { NEWSROUND_PURPLE, NEWSROUND_PURPLE_30, WHITE } from '../palette';
 import withThemeProvider from '../withThemeProvider';
-import brandSVG from '../chameleonLogos/newsround';
 
 export const theme: ServiceTheme = {
   palette: {

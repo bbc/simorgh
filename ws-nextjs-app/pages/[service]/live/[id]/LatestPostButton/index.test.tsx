@@ -1,10 +1,11 @@
+import { RefObject } from 'react';
+
 import {
   act,
-  screen,
-  render,
   fireEvent,
+  render,
+  screen,
 } from '#app/components/react-testing-library-with-providers';
-import { RefObject } from 'react';
 import LastestPostButton from '.';
 
 jest.useFakeTimers();

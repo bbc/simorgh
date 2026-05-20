@@ -4,7 +4,7 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-restricted-globals */
 
-const version = 'v0.3.5';
+const _version = 'v0.3.5';
 // Update cache name when changing caching logic / changes in offlinepage.tsx
 const cacheName = 'simorghCache_v4';
 const pwaClients = new Map();
@@ -37,7 +37,7 @@ const cacheOfflinePageAndResources = async service => {
   if (await cache.match(offlinePageUrl)) return;
 
   const resp = await cacheResource(cache, offlinePageUrl);
-  if (!resp || !resp.ok) return;
+  if (!resp?.ok) return;
 
   const html = await resp.text();
   const scriptSrcs = [

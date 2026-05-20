@@ -1,11 +1,13 @@
 // biome-ignore-all lint/style/noCommonJs: we want this
 /* eslint-disable no-param-reassign */
+
 import { defineConfig } from 'cypress';
-import MomentTimezoneInclude from '../src/app/legacy/psammead/moment-timezone-include/src';
 import webpackPreprocessor from '@cypress/webpack-preprocessor';
-import { DefinePlugin } from 'webpack';
 import dotenv from 'dotenv';
+import { DefinePlugin } from 'webpack';
+
 import { webpackDirAlias } from '../dirAlias';
+import MomentTimezoneInclude from '../src/app/legacy/psammead/moment-timezone-include/src';
 
 export default defineConfig({
   // Consider moving 'retries' to a per-test level once we have more tests
@@ -78,13 +80,13 @@ export default defineConfig({
       );
 
       on('task', {
-        log(message) {
+        log(_message) {
           return null;
         },
-        table(message) {
+        table(_message) {
           return null;
         },
-        error(message) {
+        error(_message) {
           return null;
         },
       });

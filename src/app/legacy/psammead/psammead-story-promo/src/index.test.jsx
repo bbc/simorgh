@@ -1,11 +1,12 @@
-import MediaIndicator from '#psammead/psammead-media-indicator/src';
 import styled from '@emotion/styled';
+
 import { GEL_SPACING_HLF } from '#psammead/gel-foundations/src/spacings';
-import { render } from '../../../../components/react-testing-library-with-providers';
+import MediaIndicator from '#psammead/psammead-media-indicator/src';
 import LiveLabel from '../../../../components/LiveLabel';
-import StoryPromo, { Headline, Summary, Link } from './index';
-import relatedItems from '../testHelpers/relatedItems';
+import { render } from '../../../../components/react-testing-library-with-providers';
 import IndexAlsosContainer from '../testHelpers/IndexAlsosContainer';
+import relatedItems from '../testHelpers/relatedItems';
+import StoryPromo, { Headline, Link, Summary } from './index';
 
 const Image = <img src="https://foobar.com/image.png" alt="Alt text" />;
 

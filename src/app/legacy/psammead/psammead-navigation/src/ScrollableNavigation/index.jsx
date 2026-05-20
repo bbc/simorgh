@@ -1,9 +1,10 @@
 import styled from '@emotion/styled';
-import { GEL_SPACING_SEXT } from '#psammead/gel-foundations/src/spacings';
+
 import {
-  GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
+  GEL_GROUP_2_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
+import { GEL_SPACING_SEXT } from '#psammead/gel-foundations/src/spacings';
 import { focusIndicatorThickness } from '../../../../../components/ThemeProvider/focusIndicator';
 
 // Because IE11 can't handle 8-digit hex, need to convert to rgba

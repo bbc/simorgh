@@ -1,10 +1,10 @@
-import useServiceWorkerRegistration from '#app/hooks/useServiceWorkerRegistration';
-import useSendPWAStatus from '#app/hooks/useSendPWAStatus';
 import useIsPWA from '#app/hooks/useIsPWA';
+import useSendPWAStatus from '#app/hooks/useSendPWAStatus';
+import useServiceWorkerRegistration from '#app/hooks/useServiceWorkerRegistration';
 import isLocal from '#app/lib/utilities/isLocal';
-import ServiceWorkerContainer from './index';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { render } from '../react-testing-library-with-providers';
+import ServiceWorkerContainer from './index';
 
 jest.mock('#app/hooks/useServiceWorkerRegistration', () => jest.fn());
 jest.mock('#app/hooks/useSendPWAStatus', () => jest.fn());

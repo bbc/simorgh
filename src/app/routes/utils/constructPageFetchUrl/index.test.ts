@@ -1,7 +1,6 @@
-import constructPageFetchUrl from '.';
 import {
-  AV_EMBEDS,
   ARTICLE_PAGE,
+  AV_EMBEDS,
   CPS_ASSET,
   HOME_PAGE,
   LIVE_PAGE,
@@ -11,6 +10,7 @@ import {
   TV_PAGE,
   UGC_PAGE,
 } from '../pageTypes';
+import constructPageFetchUrl from '.';
 
 process.env.BFF_PATH = 'https://mock-bff-path';
 

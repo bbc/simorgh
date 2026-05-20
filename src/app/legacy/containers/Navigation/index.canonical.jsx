@@ -1,16 +1,17 @@
-import { useState, use } from 'react';
+import { use, useState } from 'react';
 import styled from '@emotion/styled';
+
+import TopBarOJs from '#app/components/TopBarOJs';
+import { RequestContext } from '#app/contexts/RequestContext';
+import useToggle from '#app/hooks/useToggle';
+import useMediaQuery from '#hooks/useMediaQuery';
+import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/breakpoints';
 import Navigation from '#psammead/psammead-navigation/src';
-import { ScrollableNavigation } from '#psammead/psammead-navigation/src/ScrollableNavigation';
 import {
   CanonicalDropdown,
   CanonicalMenuButton,
 } from '#psammead/psammead-navigation/src/DropdownNavigation';
-import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/breakpoints';
-import useMediaQuery from '#hooks/useMediaQuery';
-import { RequestContext } from '#app/contexts/RequestContext';
-import TopBarOJs from '#app/components/TopBarOJs';
-import useToggle from '#app/hooks/useToggle';
+import { ScrollableNavigation } from '#psammead/psammead-navigation/src/ScrollableNavigation';
 
 const ScrollableWrapper = styled.div`
   position: relative;

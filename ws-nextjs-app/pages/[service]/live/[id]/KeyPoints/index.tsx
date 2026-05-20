@@ -1,13 +1,14 @@
 import { use } from 'react';
 import { useTheme } from '@emotion/react';
+
 import Heading from '#app/components/Heading';
-import LegacyText from '#app/legacy/containers/Text';
-import LegacyParagraph from '#app/legacy/containers/Paragraph';
-import BulletedList from '#app/legacy/containers/BulletedList';
 import Blocks from '#app/legacy/containers/Blocks';
+import BulletedList from '#app/legacy/containers/BulletedList';
+import LegacyParagraph from '#app/legacy/containers/Paragraph';
+import LegacyText from '#app/legacy/containers/Text';
 import { ServiceContext } from '#contexts/ServiceContext';
 import styles from './styles';
-import { KeyPointsContent, ComponentToRenderProps } from './types';
+import { ComponentToRenderProps, KeyPointsContent } from './types';
 
 const KeyPoints = ({
   keyPointsContent,

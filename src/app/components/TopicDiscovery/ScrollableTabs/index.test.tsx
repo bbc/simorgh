@@ -1,7 +1,7 @@
 import {
+  fireEvent,
   render,
   screen,
-  fireEvent,
 } from '#app/components/react-testing-library-with-providers';
 import * as clickTrackerHook from '#app/hooks/useClickTrackerHandler';
 import ScrollableTabs from '.';

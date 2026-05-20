@@ -1,13 +1,13 @@
-import type { ReverbClient } from '#app/models/types/eventTracking';
 import type {
   ReverbBeaconConfig,
   ReverbEventDetails,
   ReverbPageVars,
   ReverbUserVars,
 } from '#app/components/ATIAnalytics/types';
-import onClient from '../../utilities/onClient';
-import nodeLogger from '../../logger.node';
+import type { ReverbClient } from '#app/models/types/eventTracking';
 import { ATI_LOGGING_ERROR } from '../../logger.const';
+import nodeLogger from '../../logger.node';
+import onClient from '../../utilities/onClient';
 
 const logger = nodeLogger(__filename);
 

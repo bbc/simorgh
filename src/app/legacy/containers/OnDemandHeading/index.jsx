@@ -1,11 +1,12 @@
 import { Fragment, use } from 'react';
 import styled from '@emotion/styled';
-import { Headline } from '#psammead/psammead-headings/src';
+
 import {
-  MEDIA_QUERY_TYPOGRAPHY,
-  GEL_GROUP_2_SCREEN_WIDTH_MAX,
   GEL_GROUP_1_SCREEN_WIDTH_MIN,
+  GEL_GROUP_2_SCREEN_WIDTH_MAX,
+  MEDIA_QUERY_TYPOGRAPHY,
 } from '#psammead/gel-foundations/src/breakpoints';
+import { Headline } from '#psammead/psammead-headings/src';
 import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
 import VisuallyHiddenText from '../../../components/VisuallyHiddenText';
 import { ServiceContext } from '../../../contexts/ServiceContext';

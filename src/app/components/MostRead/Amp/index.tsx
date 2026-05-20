@@ -1,19 +1,20 @@
 import { use } from 'react';
+import pathOr from 'ramda/src/pathOr';
 import { Helmet } from 'react-helmet';
+
 import {
   AMP_LIST_JS,
   AMP_MUSTACHE_JS,
   AMP_SCRIPT_JS,
 } from '#psammead/psammead-assets/src/amp-boilerplate';
-import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '../../../contexts/ServiceContext';
+import type { Direction } from '../../../models/types/global';
 import { MostReadItemWrapper, MostReadLink } from '../Canonical/Item';
 import MostReadRank from '../Canonical/Rank';
-import generateCSPHash from '../utilities/generateCSPHash';
-import type { Direction } from '../../../models/types/global';
 import type { Size } from '../types';
-import styles from './index.styles';
+import generateCSPHash from '../utilities/generateCSPHash';
 import getRemoteDataScript from './getRemoteDataScript';
+import styles from './index.styles';
 
 interface AmpMostReadProps {
   endpoint: string;

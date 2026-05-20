@@ -1,10 +1,10 @@
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
-import Team from './team';
+import styles from '../index.styles';
+import type { BadgePlaceholderFallbackType, HeadToHeadV2Data } from '../types';
 import Centre from './centre';
 import MatchProgress from './match-progress';
 import PenaltyScores from './penalty-scores';
-import styles from '../index.styles';
-import type { HeadToHeadV2Data, BadgePlaceholderFallbackType } from '../types';
+import Team from './team';
 
 interface ItemWrapperProps {
   data: HeadToHeadV2Data;

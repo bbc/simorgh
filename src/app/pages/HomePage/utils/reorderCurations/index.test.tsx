@@ -1,5 +1,5 @@
-import reorderCurations from './index';
 import type { Curation } from '../../../../models/types/curationData';
+import reorderCurations from './index';
 
 const createCuration = (
   curationId: string,

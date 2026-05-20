@@ -1,13 +1,13 @@
 import {
-  BBC_BLOCKS,
-  BBC_BLOCKS_DARK_MODE,
-} from '#psammead/psammead-assets/src/svgs';
-import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
+import {
+  BBC_BLOCKS,
+  BBC_BLOCKS_DARK_MODE,
+} from '#psammead/psammead-assets/src/svgs';
 
 const bgImageDark = `data:image/svg+xml;base64,${BBC_BLOCKS_DARK_MODE}`;
 const bgImageRegular = `data:image/svg+xml;base64,${BBC_BLOCKS}`;

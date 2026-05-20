@@ -3,8 +3,8 @@ import {
   render,
 } from '#app/components/react-testing-library-with-providers';
 import mundoFixture from '#data/mundo/send/test2qq3x8vt.json';
-import UGCPageLayout from './UGCPageLayout';
 import { PageProps } from './types';
+import UGCPageLayout from './UGCPageLayout';
 
 jest.mock('next/router', () => ({
   useRouter: () => ({

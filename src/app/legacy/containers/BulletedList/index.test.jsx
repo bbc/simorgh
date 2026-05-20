@@ -1,9 +1,9 @@
-import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
+import * as viewTracking from '#hooks/useViewTracker';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import { render } from '../../../components/react-testing-library-with-providers';
-import BulletedListContainer from './index';
 import { listItemD, listItemE, orderedList } from './fixtures';
+import BulletedListContainer from './index';
 
 describe('BulletedListContainer', () => {
   suppressPropWarnings(['blocks', 'supplied']);

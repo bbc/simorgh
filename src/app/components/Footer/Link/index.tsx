@@ -1,5 +1,6 @@
+import { type MouseEvent, useEffect, useState } from 'react';
 import { css } from '@emotion/react';
-import { useState, useEffect, type MouseEvent } from 'react';
+
 import type { FooterLink } from '#app/models/types/serviceConfig';
 import styles from './index.styles';
 

@@ -1,6 +1,7 @@
 import { use } from 'react';
-import ErrorPage from '#pages/ErrorPage/ErrorPage';
+
 import shouldRender from '#nextjs/utilities/shouldRender';
+import ErrorPage from '#pages/ErrorPage/ErrorPage';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 
 const WithData = Component => {

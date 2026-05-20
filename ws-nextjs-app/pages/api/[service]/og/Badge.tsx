@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+
 import { BLACK, WHITE } from '#app/components/ThemeProvider/palette';
 
 type BadgeProps = {

@@ -1,4 +1,5 @@
 import paths from 'ramda/src/paths';
+
 import { ArticleContent } from '#app/models/types/optimo';
 import { LanguagesPageProps } from '../../../pages/ws/types';
 import envConfig, { EnvironmentConfigType } from '../../../support/config/envs';

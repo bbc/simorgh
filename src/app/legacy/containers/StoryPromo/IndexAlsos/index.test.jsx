@@ -1,6 +1,6 @@
 import { render } from '../../../../components/react-testing-library-with-providers';
-import relatedItems from './relatedItems';
 import IndexAlsosContainer from '.';
+import relatedItems from './relatedItems';
 
 describe('Index Alsos', () => {
   describe('Snapshots', () => {

@@ -1,32 +1,32 @@
 // biome-ignore-all lint/correctness/useHookAtTopLevel: we want this
+
+import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import useViewTracker from '#app/hooks/useViewTracker';
+import RadioSchedule from '#app/legacy/containers/RadioSchedule';
+import type { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import {
   type Curation,
-  VISUAL_STYLE,
   VISUAL_PROMINENCE,
+  VISUAL_STYLE,
 } from '#app/models/types/curationData';
 import type { ComponentExperimentProps } from '#app/models/types/global';
-import RadioSchedule from '#app/legacy/containers/RadioSchedule';
-import useViewTracker from '#app/hooks/useViewTracker';
-import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
-import type { EventTrackingData } from '#app/lib/analyticsUtils/types';
-import VisuallyHiddenText from '../VisuallyHiddenText';
-import CurationGrid from './CurationGrid';
-import HierarchicalGrid from './HierarchicalGrid';
-import Subheading from './Subhead';
-import getComponentName, { COMPONENT_NAMES } from './getComponentName';
+import Billboard from '../Billboard';
+import Embed from '../Embeds/OEmbed';
+import MediaLoader from '../MediaLoader';
 import MessageBanner from '../MessageBanner';
 import MostRead from '../MostRead';
-import { GHOST } from '../ThemeProvider/palette';
-import Embed from '../Embeds/OEmbed';
-import Billboard from '../Billboard';
 import PortraitVideoCarousel from '../PortraitVideoCarousel';
-import UsefulLinks from '../UsefulLinks';
 import SocialLinks from '../SocialLinks';
+import { GHOST } from '../ThemeProvider/palette';
+import UsefulLinks from '../UsefulLinks';
+import VisuallyHiddenText from '../VisuallyHiddenText';
+import CurationGrid from './CurationGrid';
+import getComponentName, { COMPONENT_NAMES } from './getComponentName';
+import HierarchicalGrid from './HierarchicalGrid';
 import styles from './index.styles';
-import MediaLoader from '../MediaLoader';
+import Subheading from './Subhead';
 
 const {
-  SIMPLE_CURATION_GRID,
   HIERARCHICAL_CURATION_GRID,
   MESSAGE_BANNER,
   NOT_SUPPORTED,
@@ -47,7 +47,6 @@ const getGridComponent = (componentName: string | null) => {
   switch (componentName) {
     case HIERARCHICAL_CURATION_GRID:
       return HierarchicalGrid;
-    case SIMPLE_CURATION_GRID:
     default:
       return CurationGrid;
   }
@@ -247,8 +246,6 @@ export default ({
         </section>
       ) : null;
     }
-    case SIMPLE_CURATION_GRID:
-    case HIERARCHICAL_CURATION_GRID:
     default:
       if (summaries.length > 0) {
         const viewTracker = useViewTracker({

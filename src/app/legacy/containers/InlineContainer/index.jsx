@@ -1,7 +1,7 @@
+import InlineSpan from '../../components/InlineSpan';
 import Blocks from '../Blocks';
 import fragment from '../Fragment';
 import InlineLink from '../InlineLink';
-import InlineSpan from '../../components/InlineSpan';
 
 const componentsToRender = { fragment, urlLink: InlineLink };
 

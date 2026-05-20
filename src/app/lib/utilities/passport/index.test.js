@@ -1,8 +1,8 @@
 import {
   getCanonicalUrl,
-  matchesCanonicalUrl,
   getPassportHome,
   isValidPassportHome,
+  matchesCanonicalUrl,
 } from '.';
 
 describe('getPassportHome', () => {

@@ -1,11 +1,12 @@
 import styled from '@emotion/styled';
-import Paragraph from '#psammead/psammead-paragraph/src';
-import Image from '#psammead/psammead-image/src';
+
 import {
-  GEL_SPACING_HLF,
   GEL_SPACING,
+  GEL_SPACING_HLF,
 } from '#psammead/gel-foundations/src/spacings';
+import Image from '#psammead/psammead-image/src';
 import MediaIndicator from '#psammead/psammead-media-indicator/src';
+import Paragraph from '#psammead/psammead-paragraph/src';
 
 export const ExampleParagraph = ({ identifier = '1' }) => (
   <Paragraph>

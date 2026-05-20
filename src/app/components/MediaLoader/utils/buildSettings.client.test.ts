@@ -1,5 +1,10 @@
+import { service as afriqueServiceConfig } from '#app/lib/config/services/afrique';
+import { service as arabicServiceConfig } from '#app/lib/config/services/arabic';
+import { service as hausaServiceConfig } from '#app/lib/config/services/hausa';
+import { service as hindiServiceConfig } from '#app/lib/config/services/hindi';
+import { service as mundoServiceConfig } from '#app/lib/config/services/mundo';
+import isLive from '#app/lib/utilities/isLive';
 import type { PageTypes, Services } from '#app/models/types/global';
-import { data as hindiTvProgramme } from '#data/hindi/bbc_hindi_tv/tv_programmes/w13xttlw.json';
 import {
   AUDIO_PAGE,
   LIVE_PAGE,
@@ -7,27 +12,21 @@ import {
   LIVE_TV_PAGE,
   TV_PAGE,
 } from '#app/routes/utils/pageTypes';
-import hausaLiveRadio from '#data/hausa/bbc_hausa_radio/liveradio.json';
 import afriqueRadio from '#data/afrique/bbc_afrique_radio/p030s6dq.json';
-import { service as hausaServiceConfig } from '#app/lib/config/services/hausa';
-import { service as hindiServiceConfig } from '#app/lib/config/services/hindi';
-import { service as afriqueServiceConfig } from '#app/lib/config/services/afrique';
-import { service as mundoServiceConfig } from '#app/lib/config/services/mundo';
-import { service as arabicServiceConfig } from '#app/lib/config/services/arabic';
-import isLive from '#app/lib/utilities/isLive';
-import buildSettings from './buildSettings';
+import hausaLiveRadio from '#data/hausa/bbc_hausa_radio/liveradio.json';
+import { data as hindiTvProgramme } from '#data/hindi/bbc_hindi_tv/tv_programmes/w13xttlw.json';
 import {
-  aresMediaBlocks,
-  videoClipMediaBlocks,
-  audioClipMediaBlocks,
-  homePagePortraitClipMediaBlocks,
-  buildAresMediaPlayerBlock,
   aresMediaBlock,
+  aresMediaBlocks,
   aresMediaLiveStreamBlocks,
+  audioClipMediaBlocks,
+  buildAresMediaPlayerBlock,
+  homePagePortraitClipMediaBlocks,
   legacyMediaBlock,
+  livePagePortraitVideoClipMediaBlock,
   livePageVideoClipMediaBlock,
   liveTvPageMediaBlock,
-  livePagePortraitVideoClipMediaBlock,
+  videoClipMediaBlocks,
 } from '../fixture';
 import type {
   BuildConfigProps,
@@ -35,6 +34,7 @@ import type {
   MediaBlock,
   PlaceholderConfig,
 } from '../types';
+import buildSettings from './buildSettings';
 
 jest.mock('#app/lib/utilities/isLive', () =>
   jest.fn().mockImplementation(() => true),

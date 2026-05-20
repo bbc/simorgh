@@ -1,5 +1,6 @@
-import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, type Theme } from '@emotion/react';
+
+import pixelsToRem from '#app/utilities/pixelsToRem';
 
 const GEL_SPACING_DEC = '5rem';
 const BGC_TRANSITION_DURATION = '300ms';

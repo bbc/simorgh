@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
-import { render } from '@testing-library/react';
 import useWebVitals from '@bbc/web-vitals';
+import { render } from '@testing-library/react';
 
 // Container to test
 

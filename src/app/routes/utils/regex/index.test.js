@@ -1,13 +1,14 @@
 import { matchPath } from 'react-router-dom';
+
 import SERVICES from '#app/lib/config/services';
 import {
   articleDataPath,
   articlePath,
   cpsAssetPageDataPath,
   cpsAssetPagePath,
-  homePagePath,
   homePageDataPath,
   homePageManifestPath,
+  homePagePath,
   homePageSwPath,
   legacyAssetPageDataPath,
   legacyAssetPagePath,
@@ -20,7 +21,6 @@ import {
   secondaryColumnDataRegexPath,
   topicPath,
 } from './index';
-
 import { getHomePageRegex } from './utils/index';
 
 jest.mock('#server/utilities/serviceConfigs', () => ({

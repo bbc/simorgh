@@ -1,14 +1,15 @@
-import deriveVariant from '#nextjs/utilities/deriveVariant';
-import dynamic from 'next/dynamic';
 import { GetServerSideProps } from 'next';
+import dynamic from 'next/dynamic';
+
+import { ROUTING_INFORMATION } from '#app/lib/logger.const';
+import { OK } from '#app/lib/statusCodes.const';
+import { PageTypes } from '#app/models/types/global';
+import PageDataParams from '#app/models/types/pageDataParams';
 import { LIVE_TV_PAGE } from '#app/routes/utils/pageTypes';
 import nodeLogger from '#lib/logger.node';
-import PageDataParams from '#app/models/types/pageDataParams';
-import { PageTypes } from '#app/models/types/global';
+import deriveVariant from '#nextjs/utilities/deriveVariant';
 import getPageData from '#nextjs/utilities/pageRequests/getPageData';
 import logResponseTime from '#src/server/utilities/logResponseTime';
-import { OK } from '#app/lib/statusCodes.const';
-import { ROUTING_INFORMATION } from '#app/lib/logger.const';
 
 const LiveTvLayout = dynamic(() => import('./LiveTvPageLayout'));
 

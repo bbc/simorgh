@@ -1,5 +1,5 @@
-import getAdsAriaLabel from '.';
 import { SLOT_TYPES } from '../../types';
+import getAdsAriaLabel from '.';
 
 describe('getAdsAriaLabel', () => {
   it('should return correct aria label for leaderboard', () => {

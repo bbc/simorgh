@@ -1,9 +1,10 @@
 import type { MouseEventHandler } from 'react';
+
 import Image from '../../Image';
+import type { MediaInfo } from '../types';
+import Guidance from './Guidance';
 import styles from './index.styles';
 import PlayButton from './PlayButton';
-import Guidance from './Guidance';
-import type { MediaInfo } from '../types';
 
 interface Props {
   onClick: MouseEventHandler<HTMLDivElement>;

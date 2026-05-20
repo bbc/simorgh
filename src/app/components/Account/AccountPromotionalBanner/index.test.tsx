@@ -1,10 +1,11 @@
 import userEvent from '@testing-library/user-event';
+
 import {
   render,
   screen,
 } from '#app/components/react-testing-library-with-providers';
-import type { IdctaConfig } from '#app/models/types/account';
 import useToggle from '#app/hooks/useToggle';
+import type { IdctaConfig } from '#app/models/types/account';
 import AccountPromotionalBanner from '.';
 import { DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS } from './utilities';
 

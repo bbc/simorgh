@@ -1,5 +1,5 @@
+import { NOT_FOUND, OK } from '#lib/statusCodes.const';
 import { getPassportHome, isValidPassportHome } from '#lib/utilities/passport';
-import { OK, NOT_FOUND } from '#lib/statusCodes.const';
 
 // checks for pageData, 200 status and if home service from article data fits the service locale
 

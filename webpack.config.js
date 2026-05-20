@@ -1,7 +1,7 @@
 // biome-ignore-all lint/style/noCommonJs: we want this
 const { merge } = require('webpack-merge');
-const fs = require('fs');
-const path = require('path');
+const fs = require('node:fs');
+const path = require('node:path');
 const MomentTimezoneInclude = require('./src/app/legacy/psammead/moment-timezone-include/src');
 const { webpackDirAlias } = require('./dirAlias');
 

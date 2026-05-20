@@ -1,14 +1,14 @@
+import type { ContentType } from '#app/components/ChartbeatAnalytics/types';
+import MediaLoader from '#app/components/MediaLoader';
+import Grid, { GelPageGrid } from '#components/Grid';
+import ComscoreAnalytics from '#containers/ComscoreAnalytics';
+import RadioScheduleContainer from '#containers/RadioSchedule';
 import { Headline } from '#psammead/psammead-headings/src';
 import Paragraph from '#psammead/psammead-paragraph/src';
-import RadioScheduleContainer from '#containers/RadioSchedule';
-import ComscoreAnalytics from '#containers/ComscoreAnalytics';
-import Grid, { GelPageGrid } from '#components/Grid';
-import MediaLoader from '#app/components/MediaLoader';
-import type { ContentType } from '#app/components/ChartbeatAnalytics/types';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
-import MetadataContainer from '../../components/Metadata';
 import LinkedData from '../../components/LinkedData';
+import MetadataContainer from '../../components/Metadata';
 import type { LiveRadioPageProps } from './types';
 
 const LiveRadioPage = ({ pageData }: { pageData: LiveRadioPageProps }) => {

@@ -1,5 +1,6 @@
-import stripAnsi from 'strip-ansi';
 import { jest } from '@jest/globals';
+import stripAnsi from 'strip-ansi';
+
 import pageTypeBundleExtractor from './__mocks__/pageTypeBundleExtractor.js';
 
 jest.unstable_mockModule(
@@ -36,7 +37,7 @@ jest.unstable_mockModule('chalk', () => ({
 
 const setUpFSMocks = (service1FileSize, service2FileSize) => {
   beforeEach(async () => {
-    const { default: fs } = await import('fs');
+    const { default: fs } = await import('node:fs');
 
     const bundles = [
       'modern.main-12345.js',
@@ -102,7 +103,7 @@ describe('bundleSize', () => {
       try {
         const { default: bundleSize } = await import('./index.js');
         bundleSize();
-      } catch (e) {
+      } catch (_e) {
         didThrow = true;
       }
       expect(didThrow).toBe(false);
@@ -112,7 +113,7 @@ describe('bundleSize', () => {
       try {
         const { default: bundleSize } = await import('./index.js');
         bundleSize();
-      } catch (e) {
+      } catch (_e) {
         // silence error
       }
 
@@ -217,7 +218,7 @@ describe('bundleSize', () => {
       try {
         const { default: bundleSize } = await import('./index.js');
         bundleSize();
-      } catch (e) {
+      } catch (_e) {
         didThrow = true;
       }
       expect(didThrow).toBe(true);
@@ -227,7 +228,7 @@ describe('bundleSize', () => {
       try {
         const { default: bundleSize } = await import('./index.js');
         bundleSize();
-      } catch (e) {
+      } catch (_e) {
         // silence error
       }
       expect(global.console.error).toHaveBeenCalledWith(
@@ -244,7 +245,7 @@ describe('bundleSize', () => {
       try {
         const { default: bundleSize } = await import('./index.js');
         bundleSize();
-      } catch (e) {
+      } catch (_e) {
         didThrow = true;
       }
       expect(didThrow).toBe(true);
@@ -254,7 +255,7 @@ describe('bundleSize', () => {
       try {
         const { default: bundleSize } = await import('./index.js');
         bundleSize();
-      } catch (e) {
+      } catch (_e) {
         // silence error
       }
       expect(global.console.error).toHaveBeenCalledWith(

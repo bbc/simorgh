@@ -2,22 +2,23 @@ import { use } from 'react';
 import { useTheme } from '@emotion/react';
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
+
+import EpisodeList from '#containers/EpisodeList';
+import { RequestContext } from '#contexts/RequestContext';
+import {
+  GEL_GROUP_2_SCREEN_WIDTH_MIN,
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
+} from '#psammead/gel-foundations/src/breakpoints';
+import {
+  GEL_SPACING_DBL,
+  GEL_SPACING_TRPL,
+} from '#psammead/gel-foundations/src/spacings';
+import SectionLabel from '#psammead/psammead-section-label/src';
 import Timestamp from '#psammead/psammead-timestamp-container/src';
 import {
   formatDuration,
   formatUnixTimestamp,
 } from '#psammead/psammead-timestamp-container/src/utilities';
-import SectionLabel from '#psammead/psammead-section-label/src';
-import {
-  GEL_SPACING_DBL,
-  GEL_SPACING_TRPL,
-} from '#psammead/gel-foundations/src/spacings';
-import {
-  GEL_GROUP_2_SCREEN_WIDTH_MIN,
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
-} from '#psammead/gel-foundations/src/breakpoints';
-import { RequestContext } from '#contexts/RequestContext';
-import EpisodeList from '#containers/EpisodeList';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 

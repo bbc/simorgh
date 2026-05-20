@@ -1,9 +1,10 @@
 import jalaaliJs from 'jalaali-js';
+
+import { months as pashtoMonths } from '#app/legacy/psammead/psammead-locales/moment/ps';
 import {
   EasternArabic,
   makeNumeralTranslator,
 } from '#psammead/psammead-locales/src/numerals';
-import { months as pashtoMonths } from '#app/legacy/psammead/psammead-locales/moment/ps';
 
 const jalaaliMonths = {
   fa: [

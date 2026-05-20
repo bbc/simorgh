@@ -1,8 +1,9 @@
 import { use } from 'react';
-import styles from './index.styles';
+
+import { ServiceContext } from '../../../contexts/ServiceContext';
 import SectionLabel from '../../../legacy/psammead/psammead-section-label/src';
 import { GREY_2 } from '../../ThemeProvider/palette';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import styles from './index.styles';
 
 interface MostReadSectionLabelProps {
   mobileDivider?: boolean;

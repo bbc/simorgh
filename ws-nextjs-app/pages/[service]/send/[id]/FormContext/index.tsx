@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import {
   createContext,
   FormEvent,
@@ -6,10 +7,9 @@ import {
   useState,
 } from 'react';
 
-import { useRouter } from 'next/router';
 import { OK } from '#app/lib/statusCodes.const';
-import getEnvironment from '#app/routes/utils/getEnvironment';
 import getUUID from '#app/lib/utilities/getUUID';
+import getEnvironment from '#app/routes/utils/getEnvironment';
 import {
   Field,
   FieldData,
@@ -22,8 +22,8 @@ import {
   ValidationError,
 } from '../types';
 import UGCSendError from '../UGCSendError';
-import validateFunctions from './utils/validateFunctions';
 import getValidationErrors from './utils/getValidationErrors';
+import validateFunctions from './utils/validateFunctions';
 
 type SubmissionError = {
   message: string;

@@ -1,24 +1,25 @@
 import type { Component } from 'react';
 import { use } from 'react';
-import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
-import ComscoreAnalytics from '#containers/ComscoreAnalytics';
-import Grid, { GelPageGrid } from '#components/Grid';
-import StyledTvHeadingContainer from '#containers/OnDemandHeading/StyledTvHeadingContainer';
-import OnDemandParagraphContainer from '#containers/OnDemandParagraph';
-import RecentVideoEpisodes from '#containers/EpisodeList/RecentVideoEpisodes';
-import FooterTimestamp from '#containers/OnDemandFooterTimestamp';
-import type { PageTypes } from '#app/models/types/global';
+
+import type { ATIData } from '#app/components/ATIAnalytics/types';
 import type { ContentType } from '#app/components/ChartbeatAnalytics/types';
 import MediaLoader from '#app/components/MediaLoader';
-import type { OnDemandTVBlock } from '#app/models/types/media';
-import type { ATIData } from '#app/components/ATIAnalytics/types';
 import { RequestContext } from '#app/contexts/RequestContext';
+import type { PageTypes } from '#app/models/types/global';
+import type { OnDemandTVBlock } from '#app/models/types/media';
+import Grid, { GelPageGrid } from '#components/Grid';
+import ComscoreAnalytics from '#containers/ComscoreAnalytics';
+import RecentVideoEpisodes from '#containers/EpisodeList/RecentVideoEpisodes';
+import FooterTimestamp from '#containers/OnDemandFooterTimestamp';
+import StyledTvHeadingContainer from '#containers/OnDemandHeading/StyledTvHeadingContainer';
+import OnDemandParagraphContainer from '#containers/OnDemandParagraph';
+import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';
-import { ServiceContext } from '../../contexts/ServiceContext';
 import MetadataContainer from '../../components/Metadata';
 import VisuallyHiddenText from '../../components/VisuallyHiddenText';
+import { ServiceContext } from '../../contexts/ServiceContext';
 import styles from './index.styles';
 
 const getGroups = (

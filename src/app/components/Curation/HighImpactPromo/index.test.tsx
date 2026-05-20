@@ -2,8 +2,8 @@ import {
   render,
   screen,
 } from '#app/components/react-testing-library-with-providers';
-import homePageFixture from '#data/ws/homePage/index.json';
 import type { Services } from '#app/models/types/global';
+import homePageFixture from '#data/ws/homePage/index.json';
 import HighImpactPromo, { type HighImpactPromoProps } from '.';
 
 const { summaries } = homePageFixture.data.curations[0];

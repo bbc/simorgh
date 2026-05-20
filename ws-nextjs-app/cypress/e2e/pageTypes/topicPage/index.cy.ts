@@ -1,23 +1,23 @@
 import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
-import crossPlatformTests from './tests';
-import urlValidationTest from '../../../support/helpers/urlValidationTest';
-import testsForAllCanonicalPages from '../../testsForAllCanonicalPages';
 import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
-import { assertLiteSiteSummaryComponentToMainSiteClick } from '../../specialFeatures/atiAnalytics/assertions/liteSiteSummary';
+import runTestsForPage, {
+  TestDataType,
+} from '../../../support/helpers/runTestsForPage';
+import urlValidationTest from '../../../support/helpers/urlValidationTest';
 import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
+import { assertLiteSiteSummaryComponentToMainSiteClick } from '../../specialFeatures/atiAnalytics/assertions/liteSiteSummary';
+import {
+  assertMessageBannerComponentClick,
+  assertMessageBannerComponentView,
+} from '../../specialFeatures/atiAnalytics/assertions/messageBanner';
 import {
   assertDropdownNavigationComponentClick,
   assertDropdownNavigationComponentView,
   assertScrollableNavigationComponentClick,
   assertScrollableNavigationComponentView,
 } from '../../specialFeatures/atiAnalytics/assertions/navigation';
-import {
-  assertMessageBannerComponentClick,
-  assertMessageBannerComponentView,
-} from '../../specialFeatures/atiAnalytics/assertions/messageBanner';
-import runTestsForPage, {
-  TestDataType,
-} from '../../../support/helpers/runTestsForPage';
+import testsForAllCanonicalPages from '../../testsForAllCanonicalPages';
+import crossPlatformTests from './tests';
 
 const tests = [
   crossPlatformTests,

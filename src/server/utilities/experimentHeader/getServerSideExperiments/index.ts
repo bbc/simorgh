@@ -1,9 +1,10 @@
+import type { IncomingHttpHeaders } from 'node:http';
+
 import type {
   PageTypes,
   ServerSideExperiment,
   Services,
 } from '#app/models/types/global';
-import type { IncomingHttpHeaders } from 'node:http';
 import enabledExperimentList from '../enabledExperimentsList';
 
 type Props = {

@@ -1,5 +1,5 @@
 // biome-ignore-all lint/suspicious/noConsole: we want this
-const fs = require('fs');
+const fs = require('node:fs');
 
 const getCategoryScores = data => {
   const { categories } = data;

@@ -2,7 +2,6 @@ import {
   act,
   render,
 } from '#app/components/react-testing-library-with-providers';
-
 import SubmitButton from '.';
 
 describe('SubmitButton', () => {

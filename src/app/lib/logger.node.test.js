@@ -1,5 +1,5 @@
 // biome-ignore-all lint/style/noCommonJs: we want this
-const fs = require('fs');
+const fs = require('node:fs');
 
 jest.mock('fs');
 

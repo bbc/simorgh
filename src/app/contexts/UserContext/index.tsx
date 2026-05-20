@@ -1,16 +1,17 @@
 import {
   createContext,
-  type PropsWithChildren,
-  useState,
   type Dispatch,
+  type PropsWithChildren,
   type SetStateAction,
   useMemo,
+  useState,
 } from 'react';
 import Cookie from 'js-cookie';
-import onClient from '#app/lib/utilities/onClient';
-import isOperaProxy from '#app/lib/utilities/isOperaProxy';
-import setCookie from '#app/lib/utilities/setCookie';
+
 import getUUID from '#app/lib/utilities/getUUID';
+import isOperaProxy from '#app/lib/utilities/isOperaProxy';
+import onClient from '#app/lib/utilities/onClient';
+import setCookie from '#app/lib/utilities/setCookie';
 import { getCookiePolicy, personalisationEnabled } from './cookies';
 
 export type UserContextProps = {

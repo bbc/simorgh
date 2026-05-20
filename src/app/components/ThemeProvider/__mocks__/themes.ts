@@ -1,16 +1,18 @@
 /* eslint-disable no-param-reassign */
+
+import type { Theme } from '@emotion/react';
+
 import type {
   ServicesWithNoVariants,
   ServicesWithVariants,
   Variants,
 } from '#app/models/types/global';
-
 import type {
   ServicesWithNoVariantsWithPWATypography,
   ServicesWithVariantsWithPWATypography,
   ServiceTheme,
 } from '#app/models/types/theming';
-import type { Theme } from '@emotion/react';
+import getThemeConfig from '../getThemeConfig';
 import {
   theme as afaanoromoo,
   pwaTheme as afaanoromooPWA,
@@ -38,6 +40,7 @@ import { theme as korean } from '../themes/korean';
 import { theme as kyrgyz, pwaTheme as kyrgyzPWA } from '../themes/kyrgyz';
 import { theme as magyarul } from '../themes/magyarul';
 import { theme as marathi } from '../themes/marathi';
+import mergeThemeWithPWATypography from '../themes/mergeThemeWithPWATypography';
 import { theme as mundo } from '../themes/mundo';
 import { theme as naidheachdan } from '../themes/naidheachdan';
 import { theme as nepali } from '../themes/nepali';
@@ -85,13 +88,10 @@ import {
   pwaTheme as uzbekLatPWA,
 } from '../themes/uzbek/lat';
 import { theme as vietnamese } from '../themes/vietnamese';
+import { theme as ws } from '../themes/ws';
 import { theme as yoruba, pwaTheme as yorubaPWA } from '../themes/yoruba';
 import { theme as zhongwenSimp } from '../themes/zhongwen/simp';
 import { theme as zhongwenTrad } from '../themes/zhongwen/trad';
-import { theme as ws } from '../themes/ws';
-
-import getThemeConfig from '../getThemeConfig';
-import mergeThemeWithPWATypography from '../themes/mergeThemeWithPWATypography';
 
 type ServiceThemeWithNoVariant = {
   [_service in ServicesWithNoVariants['service']]: ServiceTheme;

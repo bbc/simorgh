@@ -1,8 +1,8 @@
 /* eslint-disable import/prefer-default-export */
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
-import Action from './action';
 import styles from '../index.styles';
 import type { PlayerActions } from '../types';
+import Action from './action';
 
 interface KeyEventsProps {
   homeKeyEvents: PlayerActions[];

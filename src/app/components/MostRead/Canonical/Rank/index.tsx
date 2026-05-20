@@ -1,6 +1,6 @@
 import {
-  Burmese,
   Bengali,
+  Burmese,
   EasternArabic,
   Nepali,
   WesternArabic,
@@ -8,9 +8,9 @@ import {
 import type { Services } from '../../../../models/types/global';
 import type { ColumnLayout, MostReadRankProps, Size } from '../../types';
 import styles, {
+  getMultiColumnCss,
   getOneColumnCss,
   getTwoColumnCss,
-  getMultiColumnCss,
 } from './index.styles';
 
 export const serviceNumerals = (service: Services) => {

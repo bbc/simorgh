@@ -1,6 +1,6 @@
-import { interceptATIAnalyticsBeacons, COMPONENTS } from '../helpers';
-import { assertATIComponentClickEvent, assertATIComponentViewEvent } from '.';
 import interceptExternalLinks from '../../../../support/helpers/interceptExternalLinks';
+import { COMPONENTS, interceptATIAnalyticsBeacons } from '../helpers';
+import { assertATIComponentClickEvent, assertATIComponentViewEvent } from '.';
 
 const { MESSAGE_BANNER } = COMPONENTS;
 

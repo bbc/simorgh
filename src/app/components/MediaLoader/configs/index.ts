@@ -1,18 +1,17 @@
 import filterForBlockType from '#app/lib/utilities/blockHandlers';
-import livePostClipMedia from './livePostClipMedia';
-import portraitClipMedia from './portraitClipMedia';
-import aresMedia from './aresMedia';
-import tv from './tv';
-import liveRadio from './liveRadio';
-import audio from './audio';
-import legacyMedia from './legacyMedia';
-
 import type {
+  ConfigBuilderProps,
   ConfigBuilderReturnProps,
   MediaBlock,
-  ConfigBuilderProps,
 } from '../types';
+import aresMedia from './aresMedia';
+import audio from './audio';
+import legacyMedia from './legacyMedia';
 import liveMedia from './liveMedia';
+import livePostClipMedia from './livePostClipMedia';
+import liveRadio from './liveRadio';
+import portraitClipMedia from './portraitClipMedia';
+import tv from './tv';
 
 const BLOCK_TYPES = [
   'aresMedia',

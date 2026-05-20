@@ -1,6 +1,6 @@
 import {
-  renderHook,
   act,
+  renderHook,
 } from '../../components/react-testing-library-with-providers';
 import usePWAInstallPrompt from './index';
 

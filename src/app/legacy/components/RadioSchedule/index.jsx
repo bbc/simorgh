@@ -1,13 +1,14 @@
 import { use } from 'react';
 import styled from '@emotion/styled';
+
+import useViewTracker from '#app/hooks/useViewTracker';
 import { GEL_GROUP_3_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
-import { grid } from '#psammead/psammead-styles/src/detection';
 import Grid from '#psammead/psammead-grid/src';
-import useViewTracker from '#app/hooks/useViewTracker';
+import { grid } from '#psammead/psammead-styles/src/detection';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import ProgramCard from './ProgramCard';
 import StartTime from './StartTime';

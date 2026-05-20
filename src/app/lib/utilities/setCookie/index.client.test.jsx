@@ -1,4 +1,5 @@
 import Cookie from 'js-cookie';
+
 import setCookie, { getCookieDomain } from '.';
 
 const cookieSpy = jest.spyOn(Cookie, 'set');

@@ -1,9 +1,9 @@
 import type { PropsWithChildren } from 'react';
-import { render } from '../../react-testing-library-with-providers';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
-import Subhead from '.';
 
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import type { Services } from '../../../models/types/global';
+import { render } from '../../react-testing-library-with-providers';
+import Subhead from '.';
 
 interface Props {
   service?: Services;

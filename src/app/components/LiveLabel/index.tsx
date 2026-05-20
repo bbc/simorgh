@@ -1,8 +1,9 @@
 import type { PropsWithChildren } from 'react';
-import type { LiveLabelProps } from './types';
-import styles from './index.styles';
-import Text from '../LiveText';
+
 import Pulse from '../LivePulse';
+import Text from '../LiveText';
+import styles from './index.styles';
+import type { LiveLabelProps } from './types';
 
 const LiveLabel = ({
   lang = 'en-GB',

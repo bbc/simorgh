@@ -1,16 +1,17 @@
-import type { ReactNode, FC } from 'react';
+import type { FC, ReactNode } from 'react';
 import { use, useMemo } from 'react';
-import { Global, ThemeProvider as EmotionThemeProvider } from '@emotion/react';
+import { ThemeProvider as EmotionThemeProvider, Global } from '@emotion/react';
+
 import useIsPWA from '#app/hooks/useIsPWA';
 import type { ServiceTheme } from '#app/models/types/theming';
-import focusIndicator from './focusIndicator';
 import { RequestContext } from '../../contexts/RequestContext';
+import type { PageTypes } from '../../models/types/global';
 import {
   LIVE_TV_PAGE,
   MEDIA_ARTICLE_PAGE,
   TV_PAGE,
 } from '../../routes/utils/pageTypes';
-import type { PageTypes } from '../../models/types/global';
+import focusIndicator from './focusIndicator';
 import getThemeConfig from './getThemeConfig';
 import mergeThemeWithPWATypography from './themes/mergeThemeWithPWATypography';
 

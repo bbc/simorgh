@@ -1,11 +1,12 @@
 import { use, useState } from 'react';
 import { useTheme } from '@emotion/react';
 import styled from '@emotion/styled';
-import LazyLoad from 'react-lazyload';
-import ImagePlaceholder from '#psammead/psammead-image-placeholder/src';
-import Image, { AmpImg } from '#psammead/psammead-image/src';
 import { Helmet } from 'react-helmet';
+import LazyLoad from 'react-lazyload';
+
 import { RequestContext } from '#contexts/RequestContext';
+import Image, { AmpImg } from '#psammead/psammead-image/src';
+import ImagePlaceholder from '#psammead/psammead-image-placeholder/src';
 
 const LAZYLOAD_OFFSET = 250; // amount of pixels below the viewport to begin loading the image
 

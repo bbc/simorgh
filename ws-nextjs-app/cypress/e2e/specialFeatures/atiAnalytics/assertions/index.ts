@@ -1,16 +1,16 @@
-import { eea, gbOrUnknown } from '#app/lib/utilities/cookieCountries';
 import {
   VIEW_EVENT,
   VIEWABILITY_CLICK_EVENT,
 } from '#app/lib/analyticsUtils/analytics.const';
+import { eea, gbOrUnknown } from '#app/lib/utilities/cookieCountries';
+import environment from '../../../../support/helpers/getAppEnv';
 import {
   ATI_PAGE_VIEW,
   ATI_PAGE_VIEW_REVERB,
   getATIParamsFromURL,
-  interceptATIAnalyticsBeacons,
   getExpectedAtiDestination,
+  interceptATIAnalyticsBeacons,
 } from '../helpers';
-import environment from '../../../../support/helpers/getAppEnv';
 
 const usesReverbViewabilityModel = applicationType =>
   !['lite', 'amp'].includes(applicationType);

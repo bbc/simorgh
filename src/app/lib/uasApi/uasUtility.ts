@@ -1,7 +1,7 @@
-import type { Services } from '#app/models/types/global';
-import type { OptimoRawImageBlock, Article } from '#app/models/types/optimo';
-import buildIChefURL from '#app/lib/utilities/ichefURL';
 import extractPromoImage from '#app/lib/utilities/extractPromoImage';
+import buildIChefURL from '#app/lib/utilities/ichefURL';
+import type { Services } from '#app/models/types/global';
+import type { Article, OptimoRawImageBlock } from '#app/models/types/optimo';
 import type { UasApiRequestBody } from './index';
 
 export interface SavedArticle {
@@ -93,10 +93,10 @@ const buildPromoImageUrl = (promoImageObj?: {
 };
 
 export {
-  USER_ID_COOKIE_KEY,
-  FAVOURITES_CONFIG,
   buildGlobalId,
+  buildPromoImageUrl,
   createFavouritesPayload,
   extractPromoImageFromArticleData,
-  buildPromoImageUrl,
+  FAVOURITES_CONFIG,
+  USER_ID_COOKIE_KEY,
 };

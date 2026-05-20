@@ -1,6 +1,6 @@
 import type { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import type { OptimoBlock } from '#app/models/types/optimo';
-import type { Services, Direction } from '../../models/types/global';
+import type { Direction, Services } from '../../models/types/global';
 
 export type Size = 'default' | 'small';
 

@@ -1,7 +1,8 @@
 import { StaticRouter } from 'react-router-dom';
+
 import {
-  render,
   fireEvent,
+  render,
 } from '../../../components/react-testing-library-with-providers';
 import InlineLinkContainer from './index';
 

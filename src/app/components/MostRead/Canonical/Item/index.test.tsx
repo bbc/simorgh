@@ -1,6 +1,6 @@
 import { render, screen } from '../../../react-testing-library-with-providers';
-import { MostReadLink, getParentColumns } from '.';
 import { getItem, getItemWrapperArray } from '../../utilities/testHelpers';
+import { getParentColumns, MostReadLink } from '.';
 
 describe('MostReadLink', () => {
   const pidginItem = getItem({ service: 'pidgin', withTimestamp: true });

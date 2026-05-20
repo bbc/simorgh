@@ -1,14 +1,15 @@
 import type { PropsWithChildren } from 'react';
-import { renderHook } from '@testing-library/react-hooks/server';
-import { RequestContextProvider } from '#contexts/RequestContext';
 import { OptimizelyProvider, type ReactSDKClient } from '@optimizely/react-sdk';
+import { renderHook } from '@testing-library/react-hooks/server';
+
 import type {
   PageTypes,
   ServerSideExperiment,
   Services,
 } from '#app/models/types/global';
-import useServerSide from '.';
+import { RequestContextProvider } from '#contexts/RequestContext';
 import * as activateExperiment from '../activateExperiment';
+import useServerSide from '.';
 
 const spyActivateExperiment = jest
   .spyOn(activateExperiment, 'default')

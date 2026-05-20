@@ -1,9 +1,10 @@
 import { type MouseEvent, use } from 'react';
+
 import { RequestContext } from '#app/contexts/RequestContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import styles from './index.styles';
 import Link from './Link';
 import List from './List';
-import styles from './index.styles';
 
 const openPrivacyManagerModal = (e: MouseEvent<HTMLAnchorElement>) => {
   e.preventDefault();

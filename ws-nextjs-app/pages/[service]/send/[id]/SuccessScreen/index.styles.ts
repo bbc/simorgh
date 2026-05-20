@@ -1,5 +1,6 @@
-import { getInlineLinkStyles } from '#app/components/InlineLink/index.styles';
 import { css, Theme } from '@emotion/react';
+
+import { getInlineLinkStyles } from '#app/components/InlineLink/index.styles';
 
 export default {
   outerContainer: ({ palette, fontVariants }: Theme) =>

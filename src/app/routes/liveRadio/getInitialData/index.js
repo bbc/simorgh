@@ -1,6 +1,6 @@
+import fetchDataFromBFF from '#app/routes/utils/fetchDataFromBFF';
 import getErrorStatusCode from '#app/routes/utils/fetchPageData/utils/getErrorStatusCode';
 import { LIVE_RADIO_PAGE } from '#app/routes/utils/pageTypes';
-import fetchDataFromBFF from '#app/routes/utils/fetchDataFromBFF';
 import { BFF_FETCH_ERROR } from '#lib/logger.const';
 import nodeLogger from '#lib/logger.node';
 

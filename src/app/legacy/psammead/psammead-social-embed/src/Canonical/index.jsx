@@ -2,6 +2,7 @@
 // biome-ignore-all lint/security/noDangerouslySetInnerHtml: this is fine
 import { memo, use, useEffect } from 'react';
 import styled from '@emotion/styled';
+
 import { RequestContext } from '#app/contexts/RequestContext';
 import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import useScript from './useScript';

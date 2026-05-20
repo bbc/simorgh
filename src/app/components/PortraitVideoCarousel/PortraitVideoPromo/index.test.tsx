@@ -1,11 +1,11 @@
+import type { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
 import {
-  screen,
-  render,
   act,
   fireEvent,
+  render,
+  screen,
 } from '#app/components/react-testing-library-with-providers';
 import * as useViewTrackerHandler from '#app/hooks/useClickTrackerHandler';
-import type { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
 import PortraitVideoPromo from '.';
 
 const eventTrackingData = {

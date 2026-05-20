@@ -1,4 +1,5 @@
 import Url from 'url-parse';
+
 import isLive from '#lib/utilities/isLive';
 
 const getQueryString = query => {

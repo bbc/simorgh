@@ -1,8 +1,8 @@
 import {
-  selectColour,
+  contrastRatioFromLuminances,
   getRelativeLuminance,
   hexToRgb,
-  contrastRatioFromLuminances,
+  selectColour,
 } from './utils';
 
 describe('hexToRgb', () => {

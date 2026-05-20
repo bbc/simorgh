@@ -1,21 +1,22 @@
 import { use, useState } from 'react';
 import { Helmet } from 'react-helmet';
-import Paragraph from '#app/components/Paragraph';
-import PromotionalBanner from '#app/components/PromotionalBanner';
+
 import CallToActionLink from '#app/components/CallToActionLink';
 import { AccountIcon } from '#app/components/icons';
-import { AccountContext } from '#contexts/AccountContext';
-import { ServiceContext } from '#app/contexts/ServiceContext';
+import Paragraph from '#app/components/Paragraph';
+import PromotionalBanner from '#app/components/PromotionalBanner';
 import { RequestContext } from '#app/contexts/RequestContext';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import useToggle from '#app/hooks/useToggle';
 import addInlineScript from '#app/lib/utilities/addInlineScript';
 import onClient from '#app/lib/utilities/onClient';
+import { AccountContext } from '#contexts/AccountContext';
+import styles from './index.styles';
 import {
-  setAccountPromoBannerDismissed,
   buildAccountBannerClientScript,
   DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS,
+  setAccountPromoBannerDismissed,
 } from './utilities';
-import styles from './index.styles';
 
 const AccountPromotionalBanner = () => {
   const { enabled: accountEnabled } = useToggle('account');

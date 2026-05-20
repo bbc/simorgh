@@ -1,18 +1,19 @@
 import { use } from 'react';
-import pathOr from 'ramda/src/pathOr';
-import styled from '@emotion/styled';
 import { useTheme } from '@emotion/react';
-import {
-  GEL_SPACING_HLF,
-  GEL_SPACING_DBL,
-  GEL_SPACING_QUAD,
-  GEL_SPACING_TRPL,
-  GEL_SPACING_HLF_TRPL,
-} from '#psammead/gel-foundations/src/spacings';
-import { GEL_GROUP_3_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
+import styled from '@emotion/styled';
+import pathOr from 'ramda/src/pathOr';
+
+import { GridItemLarge } from '#components/Grid';
 import Blocks from '#containers/Blocks';
 import Text from '#containers/Text';
-import { GridItemLarge } from '#components/Grid';
+import { GEL_GROUP_3_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
+import {
+  GEL_SPACING_DBL,
+  GEL_SPACING_HLF,
+  GEL_SPACING_HLF_TRPL,
+  GEL_SPACING_QUAD,
+  GEL_SPACING_TRPL,
+} from '#psammead/gel-foundations/src/spacings';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import UnorderedList from '../BulletedList';
 

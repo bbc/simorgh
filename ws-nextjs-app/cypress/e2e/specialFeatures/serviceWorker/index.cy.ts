@@ -1,11 +1,11 @@
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
 import runTestsForPage from '../../../support/helpers/runTestsForPage';
 import {
+  serviceWorkerCaching,
   serviceWorkerIsAvailable,
   serviceWorkerIsRegistered,
-  serviceWorkerCaching,
 } from './assertions';
-import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
 
 const tests = [
   serviceWorkerIsAvailable,

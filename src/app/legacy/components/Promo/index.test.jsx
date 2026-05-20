@@ -1,9 +1,9 @@
 import moment from 'moment';
+
 import {
   render,
   screen,
 } from '../../../components/react-testing-library-with-providers';
-
 import Promo from '.';
 
 const Fixture = ({ useLargeImages = false, timestamp = Date.now() }) => (

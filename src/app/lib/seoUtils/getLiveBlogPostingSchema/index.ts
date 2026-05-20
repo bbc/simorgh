@@ -2,8 +2,8 @@ import buildIChefURL from '#app/lib/utilities/ichefURL';
 import type { OptimoBlock, OptimoImageBlock } from '#app/models/types/optimo';
 import type {
   Post,
-  PostHeadline,
   PostContributor,
+  PostHeadline,
 } from '#nextjs/pages/[service]/live/[id]/Post/types';
 
 type ParagraphBlock = OptimoBlock & { model: { text: string } };

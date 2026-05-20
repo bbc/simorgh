@@ -1,12 +1,11 @@
 import {
-  isValidDateTime,
+  formatType,
   isFirstRelative,
   isLastRelative,
   isSameDay,
   isToday,
-  formatType,
+  isValidDateTime,
 } from './helpers';
-
 import { timestampGenerator } from './testHelpers';
 
 const timeLimits = [

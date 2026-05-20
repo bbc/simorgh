@@ -6,9 +6,9 @@ import { render } from '../../../components/react-testing-library-with-providers
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import ArticleTimestamp from '.';
 import {
-  timestampGenerator,
-  sameDayTimestampsGenerator,
   isBritishSummerTime,
+  sameDayTimestampsGenerator,
+  timestampGenerator,
 } from './testHelpers';
 
 const regexDate = /[0-9]{1,2} \w+ [0-9]{4}/;

@@ -1,11 +1,12 @@
 import { use } from 'react';
 import moment from 'moment';
-import { ServiceContext } from '#app/contexts/ServiceContext';
-import type { Services } from '#app/models/types/global';
-import type { EventTrackingData } from '#app/lib/analyticsUtils/types';
-import useViewTracker from '#app/hooks/useViewTracker';
+
 import Text from '#app/components/Text';
+import { ServiceContext } from '#app/contexts/ServiceContext';
+import useViewTracker from '#app/hooks/useViewTracker';
 import { formatDuration } from '#app/legacy/psammead/psammead-timestamp-container/src/utilities';
+import type { EventTrackingData } from '#app/lib/analyticsUtils/types';
+import type { Services } from '#app/models/types/global';
 import styles from './index.styles';
 
 type ReadTimeProps = {

@@ -1,12 +1,12 @@
 import styled from '@emotion/styled';
 import partition from 'ramda/src/partition';
 
-import Image from './image';
-import MediaIcon from './media-icon';
-import Heading from './heading';
+import A from './a';
 import Body from './body';
 import Footer from './footer';
-import A from './a';
+import Heading from './heading';
+import Image from './image';
+import MediaIcon from './media-icon';
 import Timestamp from './timestamp';
 
 const Wrapper = styled.div`

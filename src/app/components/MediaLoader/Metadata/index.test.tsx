@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet';
+
 import {
   act,
   render,
@@ -9,9 +10,9 @@ import {
   LIVE_RADIO_PAGE,
   TV_PAGE,
 } from '#app/routes/utils/pageTypes';
-import Metadata from '.';
 import { aresMediaBlocks } from '../fixture';
 import type { MediaBlock } from '../types';
+import Metadata from '.';
 
 describe('Media Loader - Metadata', () => {
   const embedSource =

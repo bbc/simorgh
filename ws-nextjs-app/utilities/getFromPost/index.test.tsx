@@ -1,6 +1,6 @@
 import { OptimoBlock } from '#models/types/optimo';
-import { getImageFromPost, getHeadlineFromPost } from './index';
 import { Post } from '../../pages/[service]/live/[id]/Post/types';
+import { getHeadlineFromPost, getImageFromPost } from './index';
 
 type OptimoBlockWithBlocks = OptimoBlock & { model: { blocks: OptimoBlock[] } };
 type OptimoBlockWithText = OptimoBlock & { model: { text: string } };

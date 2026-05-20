@@ -1,10 +1,11 @@
+import { useRouter } from 'next/router';
+import { useContext } from 'react';
+
 import CurationGrid from '#app/components/Curation/CurationGrid';
 import Heading from '#app/components/Heading';
+import MetadataContainer from '#app/components/Metadata';
 import Pagination from '#app/components/Pagination';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import { useContext } from 'react';
-import { useRouter } from 'next/router';
-import MetadataContainer from '#app/components/Metadata';
 import useUASRecentActivity from '#app/hooks/useUASRecentActivity';
 import styles from './styles';
 

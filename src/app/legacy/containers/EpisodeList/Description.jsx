@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import { GEL_SPACING_HLF } from '#psammead/gel-foundations/src/spacings';
 
+import { GEL_SPACING_HLF } from '#psammead/gel-foundations/src/spacings';
 import { withEpisodeContext } from './helpers';
 
 const Description = styled.span`

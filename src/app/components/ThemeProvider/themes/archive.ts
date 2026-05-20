@@ -1,15 +1,15 @@
 import type { ServiceTheme } from '#app/models/types/theming';
-import { ARCHIVE_BLUE, WHITE } from '../palette';
-import latinScript from '../fontScripts/latin';
+import brandSVG from '../chameleonLogos/archive';
 import {
   REITH_SANS_BOLD,
   REITH_SANS_REGULAR,
   REITH_SERIF_LIGHT,
   REITH_SERIF_MEDIUM,
 } from '../fontFaces';
+import latinScript from '../fontScripts/latin';
 import reithFontVariants from '../fontVariants/reith';
+import { ARCHIVE_BLUE, WHITE } from '../palette';
 import withThemeProvider from '../withThemeProvider';
-import brandSVG from '../chameleonLogos/archive';
 
 export const theme: ServiceTheme = {
   palette: {

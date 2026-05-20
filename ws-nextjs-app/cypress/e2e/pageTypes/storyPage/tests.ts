@@ -1,6 +1,7 @@
 import path from 'ramda/src/path';
-import { ServiceParametersType } from '../../../types';
+
 import getAppEnv from '../../../support/helpers/getAppEnv';
+import { ServiceParametersType } from '../../../types';
 
 const twoYearsAgo = new Date().getFullYear() - 2;
 

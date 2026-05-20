@@ -1,7 +1,7 @@
 import SERVICES_WITH_NEW_NAV from '#app/components/Navigation/config';
-import getAppEnv from '../support/helpers/getAppEnv';
 import envConfig, { EnvironmentConfigType } from '../support/config/envs';
 import config from '../support/config/services';
+import getAppEnv from '../support/helpers/getAppEnv';
 import { ServiceParametersType } from '../types';
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.

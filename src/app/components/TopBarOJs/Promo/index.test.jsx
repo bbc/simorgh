@@ -1,9 +1,9 @@
 import { render } from '../../react-testing-library-with-providers';
+import TopBarOJs from '..';
 import {
   topStoriesBlocks,
   topStoriesBlocksWithLiveItem,
 } from '../helpers/fixtureData';
-import TopBarOJs from '..';
 
 describe('Top Bar Onward Journey Promo', () => {
   it('should display Top Stories content', () => {

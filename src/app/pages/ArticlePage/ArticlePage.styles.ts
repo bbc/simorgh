@@ -1,5 +1,6 @@
-import NO_JS_CLASSNAME from '#app/lib/noJs.const';
 import { css, type Theme } from '@emotion/react';
+
+import NO_JS_CLASSNAME from '#app/lib/noJs.const';
 import { OPERA_MINI_CLASSNAME } from '#app/lib/utilities/addOperaMiniClassScript';
 import pixelsToRem from '../../utilities/pixelsToRem';
 

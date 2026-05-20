@@ -1,7 +1,7 @@
 import Timestamp from '#psammead/psammead-timestamp/src';
 import {
-  isValidDateTime,
   formatUnixTimestamp,
+  isValidDateTime,
   localisedMoment,
 } from './utilities';
 

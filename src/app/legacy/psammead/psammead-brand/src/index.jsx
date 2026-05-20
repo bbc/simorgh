@@ -1,14 +1,15 @@
 import { forwardRef } from 'react';
 import styled from '@emotion/styled';
+
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
 import {
-  GEL_SPACING_HLF,
   GEL_SPACING,
   GEL_SPACING_DBL,
+  GEL_SPACING_HLF,
 } from '#psammead/gel-foundations/src/spacings';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 

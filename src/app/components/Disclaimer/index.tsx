@@ -1,12 +1,13 @@
-import { use, type PropsWithChildren } from 'react';
+import { type PropsWithChildren, use } from 'react';
 import isEmpty from 'ramda/src/isEmpty';
-import { GridItemLarge } from '../../legacy/components/Grid';
-import { ServiceContext } from '../../contexts/ServiceContext';
+
 import { RequestContext } from '../../contexts/RequestContext';
+import { ServiceContext } from '../../contexts/ServiceContext';
 import useToggle from '../../hooks/useToggle';
+import { GridItemLarge } from '../../legacy/components/Grid';
 import { ARTICLE_PAGE } from '../../routes/utils/pageTypes';
-import Text from '../Text';
 import InlineLink from '../InlineLink';
+import Text from '../Text';
 import styles from './index.styles';
 
 type Props = {

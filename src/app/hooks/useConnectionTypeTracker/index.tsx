@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
-import useNetworkStatusTracker from '../useNetworkStatusTracker';
+
 import useCustomEventTracker from '../useCustomEventTracker';
+import useNetworkStatusTracker from '../useNetworkStatusTracker';
 
 const NETWORK_TYPE_EVENT_NAME = 'network-effective-type';
 

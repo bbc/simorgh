@@ -1,10 +1,10 @@
 import {
+  act,
   render,
   screen,
-  act,
 } from '#app/components/react-testing-library-with-providers';
 import KeyPoints from '.';
-import { singleKeyPoint, multipleKeyPoints, emptyKeyPoints } from './fixture';
+import { emptyKeyPoints, multipleKeyPoints, singleKeyPoint } from './fixture';
 
 const singleKeyPointBlocks = singleKeyPoint.model.blocks;
 const multipleKeyPointsBlocks = multipleKeyPoints.model.blocks;

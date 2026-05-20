@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
 
 const H1 = styled.h1`

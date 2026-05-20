@@ -31,6 +31,6 @@ export const getLinkAttributes = chunk => {
   return {
     crossOrigin,
     rel,
-    ...(chunk && chunk.url && { href: encodeChunkFilename(chunk) }),
+    ...(chunk?.url && { href: encodeChunkFilename(chunk) }),
   };
 };

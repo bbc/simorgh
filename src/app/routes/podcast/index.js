@@ -1,6 +1,6 @@
-import { OnDemandAudioPage } from '#pages';
-import { podcastEpisodePath, podcastBrandPath } from '#app/routes/utils/regex';
 import { AUDIO_PAGE } from '#app/routes/utils/pageTypes';
+import { podcastBrandPath, podcastEpisodePath } from '#app/routes/utils/regex';
+import { OnDemandAudioPage } from '#pages';
 import getInitialData from '../onDemandAudio/getInitialData';
 
 export default {

@@ -1,4 +1,5 @@
 import * as pipe from 'ramda/src/pipe';
+
 import WithContexts from '#app/legacy/containers/PageHandlers/withContexts';
 import applyBasicPageHandlers from './applyBasicPageHandlers';
 

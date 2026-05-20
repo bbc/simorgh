@@ -1,3 +1,7 @@
+import * as clickTracking from '../../hooks/useClickTrackerHandler';
+import * as viewTracking from '../../hooks/useViewTracker';
+import { service as pidginService } from '../../lib/config/services/pidgin';
+import * as MaskedImage from '../MaskedImage';
 import {
   fireEvent,
   render,
@@ -5,10 +9,6 @@ import {
 } from '../react-testing-library-with-providers';
 import Billboard from '.';
 import { kyrgyzBillboard, pidginLiveBillboard } from './fixtures';
-import * as MaskedImage from '../MaskedImage';
-import * as viewTracking from '../../hooks/useViewTracker';
-import * as clickTracking from '../../hooks/useClickTrackerHandler';
-import { service as pidginService } from '../../lib/config/services/pidgin';
 
 describe('Billboard', () => {
   const summary = kyrgyzBillboard.summaries[0];

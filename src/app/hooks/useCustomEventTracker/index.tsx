@@ -1,10 +1,11 @@
 // biome-ignore-all lint/suspicious/noEmptyBlockStatements: we want this
 import { use, useCallback } from 'react';
+
 import { VIEW_EVENT } from '#app/lib/analyticsUtils/analytics.const';
 import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
 import { sendEventBeacon } from '../../components/ATIAnalytics/beacon';
-import useTrackingToggle from '../useTrackingToggle';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import useTrackingToggle from '../useTrackingToggle';
 
 interface CustomEventData {
   eventName: string;

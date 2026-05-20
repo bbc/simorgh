@@ -1,7 +1,7 @@
 import { render } from '#app/components/react-testing-library-with-providers';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import type { ServiceConfig } from '#app/models/types/serviceConfig';
 import type { Services } from '#app/models/types/global';
+import type { ServiceConfig } from '#app/models/types/serviceConfig';
 import * as viewTracking from '../../hooks/useViewTracker';
 import ReadTimeArticle from '.';
 

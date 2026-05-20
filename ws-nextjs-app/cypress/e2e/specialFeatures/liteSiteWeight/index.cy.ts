@@ -10,10 +10,10 @@ import {
   TOPIC_PAGE,
   TV_PAGE,
 } from '#app/routes/utils/pageTypes';
-import assertPageWeight from './assertions/liteSiteWeight';
 import runTestsForPage, {
   TestDataType,
 } from '../../../support/helpers/runTestsForPage';
+import assertPageWeight from './assertions/liteSiteWeight';
 
 const tests = [assertPageWeight];
 const headers = {

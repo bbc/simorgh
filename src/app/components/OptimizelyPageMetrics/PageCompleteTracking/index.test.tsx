@@ -1,11 +1,11 @@
 // biome-ignore-all lint/suspicious/noTsIgnore: this is fine
 import type { PropsWithChildren } from 'react';
-import { render, act } from '@testing-library/react';
 import { OptimizelyProvider, type ReactSDKClient } from '@optimizely/react-sdk';
-import { RequestContextProvider } from '#contexts/RequestContext';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import type { PageTypes, Services } from '#app/models/types/global';
+import { act, render } from '@testing-library/react';
 
+import type { PageTypes, Services } from '#app/models/types/global';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { RequestContextProvider } from '#contexts/RequestContext';
 import PageCompleteTracking from '.';
 
 const optimizely = {

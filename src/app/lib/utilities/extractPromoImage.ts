@@ -1,8 +1,8 @@
-import filterForBlockType from '#lib/utilities/blockHandlers';
 import type {
   OptimoBlock,
   OptimoRawImageBlock,
 } from '#app/models/types/optimo';
+import filterForBlockType from '#lib/utilities/blockHandlers';
 
 interface PromoImageData {
   altText: string;

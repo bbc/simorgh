@@ -1,11 +1,11 @@
+import { fireEvent, render } from '../react-testing-library-with-providers';
 import CanonicalNavigation from './index.canonical';
 import {
-  dropdownTestId,
-  scrollableTestId,
   dropdownListItems,
+  dropdownTestId,
   scrollableListItems,
+  scrollableTestId,
 } from './testHelpers';
-import { render, fireEvent } from '../react-testing-library-with-providers';
 
 const blocks = [{ id: '1', title: 'Story' }];
 

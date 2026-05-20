@@ -1,4 +1,4 @@
-import { getMostReadEndpoint, getLocalMostReadEndpoint } from '.';
+import { getLocalMostReadEndpoint, getMostReadEndpoint } from '.';
 
 describe('getMostReadEndpoint', () => {
   it.each`

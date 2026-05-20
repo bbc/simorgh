@@ -1,9 +1,10 @@
 // biome-ignore-all lint/a11y/useValidAriaRole: we want this
 import { type PropsWithChildren, use } from 'react';
-import VisuallyHiddenText from '../VisuallyHiddenText';
+
 import { ServiceContext } from '../../contexts/ServiceContext';
-import styles from './index.styles';
 import type { TextProps } from '../LiveLabel/types';
+import VisuallyHiddenText from '../VisuallyHiddenText';
+import styles from './index.styles';
 
 const Text = ({
   lang = 'en-GB',

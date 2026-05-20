@@ -1,5 +1,6 @@
-import onClient from '#lib/utilities/onClient';
 import type { ReactSDKClient } from '@optimizely/react-sdk';
+
+import onClient from '#lib/utilities/onClient';
 import activateExperiment from '.';
 
 jest.mock('#lib/utilities/onClient');

@@ -1,11 +1,12 @@
+import { renderHook as renderSSRHook } from '@testing-library/react-hooks/server';
+
 import {
   act,
   renderHook,
 } from '#app/components/react-testing-library-with-providers';
-import { renderHook as renderSSRHook } from '@testing-library/react-hooks/server';
 import useOptimizelyVariation, { ExperimentType } from '.';
-import * as serverSideHook from './useServerSide';
 import * as clientSideHook from './useClientSide';
+import * as serverSideHook from './useServerSide';
 
 describe('useOptimizelyVariation custom hook', () => {
   beforeEach(() => {

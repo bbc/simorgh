@@ -1,11 +1,11 @@
 // biome-ignore-all lint/suspicious/noConsole: we want this
 import { use } from 'react';
+
 import {
   render,
   screen,
 } from '../../components/react-testing-library-with-providers';
-
-import { STORY_PAGE, HOME_PAGE, LIVE_PAGE } from '../../routes/utils/pageTypes';
+import { HOME_PAGE, LIVE_PAGE, STORY_PAGE } from '../../routes/utils/pageTypes';
 import { EventTrackingContext } from '.';
 import fixtureData from './fixtureData.json';
 

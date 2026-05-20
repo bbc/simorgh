@@ -1,18 +1,27 @@
 import { use, useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
-import { RequestContext } from '#contexts/RequestContext';
-import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
+
+import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import useLocation from '#app/hooks/useLocation';
 import useToggle from '#app/hooks/useToggle';
+import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
+import type { PageTypes } from '#app/models/types/global';
 import {
   LIVE_PAGE,
   MEDIA_ARTICLE_PAGE,
   MEDIA_ASSET_PAGE,
 } from '#app/routes/utils/pageTypes';
+import { RequestContext } from '#contexts/RequestContext';
 import filterForBlockType from '#lib/utilities/blockHandlers';
-import type { PageTypes } from '#app/models/types/global';
-import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
+import nodeLogger from '../../lib/logger.node';
+import { getBootstrapSrc } from '../Ad/Canonical';
+import Caption from '../Caption';
+import AmpMediaLoader from './Amp';
+import styles from './index.styles';
+import Message from './Message';
+import Metadata from './Metadata';
+import Placeholder from './Placeholder';
 import type {
   BumpType,
   EventMapping,
@@ -20,17 +29,9 @@ import type {
   MediaPlayerEvents,
   PlayerConfig,
 } from './types';
-import Caption from '../Caption';
-import nodeLogger from '../../lib/logger.node';
 import buildConfig from './utils/buildSettings';
-import Placeholder from './Placeholder';
-import getProducerFromServiceName from './utils/getProducerFromServiceName';
 import getCaptionBlock from './utils/getCaptionBlock';
-import styles from './index.styles';
-import { getBootstrapSrc } from '../Ad/Canonical';
-import Metadata from './Metadata';
-import AmpMediaLoader from './Amp';
-import Message from './Message';
+import getProducerFromServiceName from './utils/getProducerFromServiceName';
 
 const PAGETYPES_IGNORE_PLACEHOLDER: PageTypes[] = [
   LIVE_PAGE,

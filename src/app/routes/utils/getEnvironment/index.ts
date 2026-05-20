@@ -1,6 +1,6 @@
-import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
-
 import Url from 'url-parse';
+
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 
 export default (pathname: string) => {
   const url = new Url(`https://www.bbc.com${pathname}`, true);

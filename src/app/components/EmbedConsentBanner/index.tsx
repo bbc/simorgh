@@ -1,9 +1,9 @@
 import type { JSX } from 'react';
-import { useState, type PropsWithChildren } from 'react';
-import { type ConsentBannerProviders, getEventTrackingData } from './types';
-import ConsentBanner from './ConsentBanner';
+import { type PropsWithChildren, useState } from 'react';
 
 import useClickTrackerHandler from '../../hooks/useClickTrackerHandler';
+import ConsentBanner from './ConsentBanner';
+import { type ConsentBannerProviders, getEventTrackingData } from './types';
 
 export const CONSENT_BANNER_PROVIDERS: ConsentBannerProviders[] = [
   'youtube',
@@ -74,4 +74,4 @@ const EmbedConsentBannerCanonical = ({
   );
 };
 
-export { EmbedConsentBannerCanonical, EmbedConsentBannerAmp };
+export { EmbedConsentBannerAmp, EmbedConsentBannerCanonical };

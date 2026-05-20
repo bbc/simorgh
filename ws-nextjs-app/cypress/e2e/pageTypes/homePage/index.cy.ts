@@ -1,14 +1,13 @@
+import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import runTestsForPage, {
   TestDataType,
 } from '#nextjs/cypress/support/helpers/runTestsForPage';
-import { HOME_PAGE } from '#app/routes/utils/pageTypes';
-import canonicalTests from './testsForCanonicalOnly';
-import testsForAllCanonicalPages from '../../testsForAllCanonicalPages';
 import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
+import urlValidationTest from '../../../support/helpers/urlValidationTest';
 import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
 import {
-  assertBillboardComponentView,
   assertBillboardComponentClick,
+  assertBillboardComponentView,
 } from '../../specialFeatures/atiAnalytics/assertions/billboard';
 import { assertLiteSiteSummaryComponentToMainSiteClick } from '../../specialFeatures/atiAnalytics/assertions/liteSiteSummary';
 import {
@@ -31,7 +30,8 @@ import {
   assertRadioScheduleComponentClick,
   assertRadioScheduleComponentView,
 } from '../../specialFeatures/atiAnalytics/assertions/radioSchedule';
-import urlValidationTest from '../../../support/helpers/urlValidationTest';
+import testsForAllCanonicalPages from '../../testsForAllCanonicalPages';
+import canonicalTests from './testsForCanonicalOnly';
 
 const tests = [urlValidationTest, canonicalTests, testsForAllCanonicalPages];
 

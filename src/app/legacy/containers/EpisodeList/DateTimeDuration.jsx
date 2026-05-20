@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
 
+import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
 import { withEpisodeContext } from './helpers';
 
 const borderStyling = dir => props =>

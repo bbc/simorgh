@@ -1,12 +1,13 @@
 /* eslint-disable consistent-return */
-import loggerMock from '#testHelpers/loggerMock'; // Must be imported before fetchPageData
+
+import isLocal from '#app/lib/utilities/isLocal';
+import * as onClient from '#app/lib/utilities/onClient';
 import {
   DATA_FETCH_ERROR,
   DATA_REQUEST_RECEIVED,
   DATA_RESPONSE_FROM_CACHE,
 } from '#lib/logger.const';
-import isLocal from '#app/lib/utilities/isLocal';
-import * as onClient from '#app/lib/utilities/onClient';
+import loggerMock from '#testHelpers/loggerMock'; // Must be imported before fetchPageData
 import fetchPageData from '.';
 
 const expectedBaseUrl = 'http://localhost:7080';

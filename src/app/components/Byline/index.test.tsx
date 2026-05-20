@@ -1,32 +1,32 @@
 import {
-  LIVE_PAGE,
-  STORY_PAGE,
   ARTICLE_PAGE,
+  LIVE_PAGE,
   MEDIA_ARTICLE_PAGE,
   MEDIA_ASSET_PAGE,
   PHOTO_GALLERY_PAGE,
+  STORY_PAGE,
 } from '#app/routes/utils/pageTypes';
 import {
   bylineSamplePost,
   bylineSamplePostWithoutAuthorName,
   bylineSamplePostWithUnsupportedImage,
 } from '../../../../ws-nextjs-app/pages/[service]/live/[id]/Post/fixture';
+import ArticleTimestamp from '../../legacy/containers/ArticleTimestamp';
+import filterForBlockType from '../../lib/utilities/blockHandlers';
+import {
+  bylineWithLink,
+  bylineWithLinkAndLocation,
+  bylineWithNameAndRole,
+  bylineWithNoAuthor,
+  bylineWithNonPngPhoto,
+  bylineWithPngPhoto,
+} from '../../pages/ArticlePage/fixtureData';
 import {
   render,
   screen,
   within,
 } from '../react-testing-library-with-providers';
 import Byline from '.';
-import ArticleTimestamp from '../../legacy/containers/ArticleTimestamp';
-import {
-  bylineWithNoAuthor,
-  bylineWithNameAndRole,
-  bylineWithLink,
-  bylineWithLinkAndLocation,
-  bylineWithNonPngPhoto,
-  bylineWithPngPhoto,
-} from '../../pages/ArticlePage/fixtureData';
-import filterForBlockType from '../../lib/utilities/blockHandlers';
 
 describe('Byline', () => {
   describe.each([

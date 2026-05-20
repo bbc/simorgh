@@ -1,8 +1,9 @@
 import { GetServerSidePropsContext } from 'next';
-import onDemandTvJson from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn4.json';
-import { Toggles } from '#app/models/types/global';
-import * as isTest from '#app/lib/utilities/isTest';
+
 import * as getTogglesModule from '#app/lib/utilities/getToggles/withCache';
+import * as isTest from '#app/lib/utilities/isTest';
+import { Toggles } from '#app/models/types/global';
+import onDemandTvJson from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn4.json';
 import * as getPageDataModule from '../../../utilities/pageRequests/getPageData';
 import handleOnDemandTvRoute from './handleOnDemandTvRoute';
 

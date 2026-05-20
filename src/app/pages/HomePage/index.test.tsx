@@ -1,20 +1,21 @@
 import { fireEvent } from '@testing-library/react';
-import { BrowserRouter } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import { data as kyrgyzHomePageData } from '#data/kyrgyz/homePage/index.json';
+import { BrowserRouter } from 'react-router-dom';
+
+import { service as pidginServiceConfig } from '#app/lib/config/services/pidgin';
 import { data as afriqueHomePageDataFixture } from '#data/afrique/homePage/index.json';
+import { data as kyrgyzHomePageData } from '#data/kyrgyz/homePage/index.json';
 import { data as pidginHomePageDataFixture } from '#data/pidgin/homePage/index.json';
 import { data as portugueseHomePageDataFixture } from '#data/portuguese/homePage/index.json';
 import { data as wsHomePageData } from '#data/ws/homePage/index.json';
-import { service as pidginServiceConfig } from '#app/lib/config/services/pidgin';
-import useViewTracker from '../../hooks/useViewTracker';
-import useClickTrackerHandler from '../../hooks/useClickTrackerHandler';
 import {
   render,
   screen,
 } from '../../components/react-testing-library-with-providers';
-import HomePage from './HomePage';
+import useClickTrackerHandler from '../../hooks/useClickTrackerHandler';
+import useViewTracker from '../../hooks/useViewTracker';
 import { suppressPropWarnings } from '../../legacy/psammead/psammead-test-helpers/src';
+import HomePage from './HomePage';
 
 jest.mock('../../hooks/useClickTrackerHandler', () => ({
   __esModule: true,

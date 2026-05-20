@@ -1,5 +1,5 @@
-import FragmentComponent from '.';
 import { render } from '../react-testing-library-with-providers';
+import FragmentComponent from '.';
 
 describe('Fragment', () => {
   it('with no attributes', () => {

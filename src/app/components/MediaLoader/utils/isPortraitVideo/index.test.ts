@@ -1,9 +1,9 @@
 import { isPortraitVideo, isPortraitVideoUnderHeadline } from '.';
 import {
-  mediaBlockWithPV,
+  mediaBlockWithInvalidOrientation,
   mediaBlockWithMultipleVersionsTypes,
   mediaBlockWithoutPV,
-  mediaBlockWithInvalidOrientation,
+  mediaBlockWithPV,
 } from './fixtures';
 
 describe('Portrait Video', () => {

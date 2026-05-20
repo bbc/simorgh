@@ -1,14 +1,7 @@
 import { css, type Theme } from '@emotion/react';
-import {
-  singleDigitDefault,
-  singleDigitMedium,
-  singleDigitSmall,
-  doubleDigitDefault,
-  doubleDigitMedium,
-  doubleDigitSmall,
-  smallFontServices,
-  mediumFontServices,
-} from '../../utilities/rankMinWidth';
+
+import { grid } from '../../../../legacy/psammead/psammead-styles/src/detection';
+import type { Services } from '../../../../models/types/global';
 import {
   GROUP_0_MAX_WIDTH,
   GROUP_1_ONLY,
@@ -16,9 +9,17 @@ import {
   GROUP_3_MIN_WIDTH,
   GROUP_5_MIN_WIDTH,
 } from '../../../ThemeProvider/mediaQueries';
-import type { Services } from '../../../../models/types/global';
 import type { Size } from '../../types';
-import { grid } from '../../../../legacy/psammead/psammead-styles/src/detection';
+import {
+  doubleDigitDefault,
+  doubleDigitMedium,
+  doubleDigitSmall,
+  mediumFontServices,
+  singleDigitDefault,
+  singleDigitMedium,
+  singleDigitSmall,
+  smallFontServices,
+} from '../../utilities/rankMinWidth';
 
 /**
  * Interface Definitions
@@ -246,4 +247,4 @@ const getMultiColumnCss = ({
 ];
 
 export default styles;
-export { getOneColumnCss, getTwoColumnCss, getMultiColumnCss };
+export { getMultiColumnCss, getOneColumnCss, getTwoColumnCss };

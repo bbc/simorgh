@@ -1,5 +1,5 @@
-import { ErrorPage } from '#pages';
 import { ERROR_PAGE } from '#app/routes/utils/pageTypes';
+import { ErrorPage } from '#pages';
 
 export default {
   component: ErrorPage,

@@ -1,4 +1,5 @@
 import { NextPageContext } from 'next/types';
+
 import addOnionLocationHeader from '.';
 
 describe('addOnionLocationHeader', () => {

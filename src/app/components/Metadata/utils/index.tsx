@@ -1,9 +1,10 @@
 // biome-ignore-all lint/suspicious/noTsIgnore: we want to hide ts errors
-import type { Services } from '#app/models/types/global';
+
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import type { Services } from '#app/models/types/global';
 import type {
-  AppleItunesApp,
   AlternateLink,
+  AppleItunesApp,
   IconSizes,
   IconType,
 } from '../types';

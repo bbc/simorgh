@@ -1,7 +1,8 @@
 import Cookie from 'js-cookie';
+
 import onClient from '#app/lib/utilities/onClient';
 import refreshTokens from './refreshTokens';
-import { refreshTokensIfExpired, isTokenValidFor } from './tokenManager';
+import { isTokenValidFor, refreshTokensIfExpired } from './tokenManager';
 
 jest.mock('js-cookie');
 jest.mock('#app/lib/utilities/onClient');

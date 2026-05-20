@@ -1,7 +1,7 @@
-import { renderToString, renderToStaticMarkup } from 'react-dom/server.node';
-import { Helmet } from 'react-helmet';
-import { JSDOM } from 'jsdom';
 import dotenv from 'dotenv';
+import { JSDOM } from 'jsdom';
+import { renderToStaticMarkup, renderToString } from 'react-dom/server.node';
+import { Helmet } from 'react-helmet';
 
 import DocumentComponent from './component';
 

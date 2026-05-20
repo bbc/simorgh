@@ -1,7 +1,7 @@
 import {
+  fireEvent,
   render,
   screen,
-  fireEvent,
 } from '../react-testing-library-with-providers';
 import CollapsibleNavigation from './index';
 

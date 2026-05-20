@@ -1,18 +1,19 @@
 import type React from 'react';
-import { useState, use } from 'react';
+import { use, useState } from 'react';
+
+import { GROUP_2_MAX_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
+import TopBarOJs from '#app/components/TopBarOJs';
+import { RequestContext } from '#app/contexts/RequestContext';
+import useToggle from '#app/hooks/useToggle';
+import type { Direction } from '#app/models/types/global';
+import type { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
+import useMediaQuery from '#hooks/useMediaQuery';
 import Navigation from '#psammead/psammead-navigation/src';
-import { ScrollableNavigation } from '#psammead/psammead-navigation/src/ScrollableNavigation';
 import {
   CanonicalDropdown,
   CanonicalMenuButton,
 } from '#psammead/psammead-navigation/src/DropdownNavigation';
-import { GROUP_2_MAX_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
-import useMediaQuery from '#hooks/useMediaQuery';
-import { RequestContext } from '#app/contexts/RequestContext';
-import TopBarOJs from '#app/components/TopBarOJs';
-import useToggle from '#app/hooks/useToggle';
-import type { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
-import type { Direction } from '#app/models/types/global';
+import { ScrollableNavigation } from '#psammead/psammead-navigation/src/ScrollableNavigation';
 import styles from './index.styles';
 
 type CanonicalNavigationContainerProps = {

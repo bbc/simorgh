@@ -1,5 +1,6 @@
-import BASE64_PLACEHOLDER_IMAGE from '#app/components/Image/base64Placeholder';
 import { css, type Theme } from '@emotion/react';
+
+import BASE64_PLACEHOLDER_IMAGE from '#app/components/Image/base64Placeholder';
 
 export default {
   ampIframeWrapper: ({ palette }: Theme) =>

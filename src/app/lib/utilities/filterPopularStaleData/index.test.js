@@ -1,7 +1,7 @@
-import nodeLogger from '#testHelpers/loggerMock';
 import { MOST_READ_STALE_DATA } from '#lib/logger.const';
-import filterPopularStaleData from '.';
+import nodeLogger from '#testHelpers/loggerMock';
 import isLive from '../isLive';
+import filterPopularStaleData from '.';
 
 jest.mock('../isLive', () => jest.fn().mockImplementation(() => false));
 

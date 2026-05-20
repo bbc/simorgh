@@ -1,11 +1,11 @@
 import isLive from '#lib/utilities/isLive';
-import { STORY_PAGE } from '../../../../routes/utils/pageTypes';
 import type { PageTypes, Services } from '../../../../models/types/global';
-import type { SlotType } from '../../types';
+import { STORY_PAGE } from '../../../../routes/utils/pageTypes';
 import {
   GROUP_3_MAX_WIDTH_BP,
   GROUP_4_MIN_WIDTH_BP,
 } from '../../../ThemeProvider/mediaQueries';
+import type { SlotType } from '../../types';
 
 const publicServiceList = ['news', 'sport', 'ws'];
 

@@ -1,4 +1,5 @@
 import path from 'ramda/src/path';
+
 import type { Post } from '#nextjs/pages/[service]/live/[id]/Post/types';
 import addIndexesToEmbeds from '.';
 

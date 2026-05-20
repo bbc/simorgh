@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
+
 import getEffectiveNetworkType from '#app/lib/utilities/getEffectiveNetworkType';
 import type { NetworkStatus } from './type';
 

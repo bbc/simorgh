@@ -1,11 +1,12 @@
 import { use } from 'react';
-import SectionLabel from '#psammead/psammead-section-label/src';
 import styled from '@emotion/styled';
+
+import { GridItemLarge, GridWrapper } from '#components/Grid';
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
 import {
@@ -13,11 +14,10 @@ import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
 } from '#psammead/gel-foundations/src/spacings';
-
-import { GridWrapper, GridItemLarge } from '#components/Grid';
+import SectionLabel from '#psammead/psammead-section-label/src';
+import { GHOST } from '../../../components/ThemeProvider/palette';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import SkipLinkWrapper from '../../components/SkipLinkWrapper';
-import { GHOST } from '../../../components/ThemeProvider/palette';
 
 const Wrapper = styled.div`
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {

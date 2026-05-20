@@ -1,10 +1,10 @@
 import type { FetchMock } from 'jest-fetch-mock';
 
-import { render, act } from '../../react-testing-library-with-providers';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
-import AmpMostRead from '.';
-import type { Services } from '../../../models/types/global';
 import { data as mundoMostReadResponse } from '../../../../../data/mundo/mostRead/mundo.json';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import type { Services } from '../../../models/types/global';
+import { act, render } from '../../react-testing-library-with-providers';
+import AmpMostRead from '.';
 
 interface MostReadAmpWithContextProps {
   service: Services;

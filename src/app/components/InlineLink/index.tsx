@@ -1,9 +1,9 @@
-import { use, type FC, type HTMLAttributes } from 'react';
+import { type FC, type HTMLAttributes, use } from 'react';
 import type { Theme } from '@emotion/react';
 import Url from 'url-parse';
 
-import type { FontVariant, GelFontSize } from '../../models/types/theming';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import type { FontVariant, GelFontSize } from '../../models/types/theming';
 import { styles } from './index.styles';
 
 interface Props extends HTMLAttributes<HTMLElement> {

@@ -1,5 +1,6 @@
-import SERVICES_WITH_NEW_NAV from '#app/components/Navigation/config';
 import type { Agent } from 'undici';
+
+import SERVICES_WITH_NEW_NAV from '#app/components/Navigation/config';
 
 const mockAgent = {
   connect: { cert: 'cert', ca: 'ca', key: 'key' },

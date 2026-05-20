@@ -1,7 +1,7 @@
 import {
+  act,
   render,
   screen,
-  act,
 } from '#app/components/react-testing-library-with-providers';
 import { Summary } from '#app/models/types/curationData';
 import { Services } from '#app/models/types/global';

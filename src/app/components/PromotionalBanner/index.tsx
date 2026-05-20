@@ -1,10 +1,10 @@
-import type { PromotionalBannerProps } from './index.types';
-import styles from './index.styles';
-import { Close } from '../icons';
-import Text from '../Text';
-import Paragraph from '../Paragraph';
 import Heading from '../Heading';
+import { Close } from '../icons';
+import Paragraph from '../Paragraph';
+import Text from '../Text';
 import VisuallyHiddenText from '../VisuallyHiddenText';
+import styles from './index.styles';
+import type { PromotionalBannerProps } from './index.types';
 
 const PromotionalBanner = ({
   title,

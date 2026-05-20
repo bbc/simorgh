@@ -1,4 +1,5 @@
 import { use } from 'react';
+
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
 import type { EventTrackingData, EventTrackingProps } from '../types';
 

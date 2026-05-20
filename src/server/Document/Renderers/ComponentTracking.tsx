@@ -1,7 +1,7 @@
-import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import clickTracking from '#app/lib/analyticsUtils/staticATITracking/clickTracking';
-import viewTracking from '#app/lib/analyticsUtils/staticATITracking/viewTracking';
 import { addProcessClientDeviceAndSendStaticBeaconToWindow } from '#app/lib/analyticsUtils/staticATITracking/processClientDeviceAndSendStaticBeacon';
+import viewTracking from '#app/lib/analyticsUtils/staticATITracking/viewTracking';
+import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 
 type Props = {
   enableStaticClickTrackingOnOperaMiniOnly: boolean;

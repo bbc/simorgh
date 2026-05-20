@@ -1,3 +1,5 @@
+import * as clickTracking from '../../hooks/useClickTrackerHandler';
+import * as viewTracking from '../../hooks/useViewTracker';
 import {
   fireEvent,
   render,
@@ -5,8 +7,6 @@ import {
 } from '../react-testing-library-with-providers';
 import MessageBanner from '.';
 import { kyrgyzMessageBannerOnePromo } from './fixtures';
-import * as viewTracking from '../../hooks/useViewTracker';
-import * as clickTracking from '../../hooks/useClickTrackerHandler';
 
 describe('MessageBanner', () => {
   const summary = kyrgyzMessageBannerOnePromo.summaries[0];

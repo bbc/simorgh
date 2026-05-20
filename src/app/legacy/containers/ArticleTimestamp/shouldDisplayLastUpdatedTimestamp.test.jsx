@@ -2,7 +2,7 @@ import shouldDisplayLastUpdatedTimestamp, {
   hasBeenUpdated,
   publishedAndUpdatedToday,
 } from './shouldDisplayLastUpdatedTimestamp';
-import { timestampGenerator, sameDayTimestampsGenerator } from './testHelpers';
+import { sameDayTimestampsGenerator, timestampGenerator } from './testHelpers';
 
 describe('shouldDisplayLastUpdatedTimestamp functions', () => {
   let mockedDate;

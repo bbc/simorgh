@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
+
 import {
-  startTimeMachine,
   resetTimeMachine,
+  startTimeMachine,
 } from '../../.storybook/time-machine';
+
 // This affects the global Date object for the storybook application, to ensure consistency in chromaticQA testing.
 const WithTimeMachine = ({ children, dateString, timestamp }) => {
   const [componentToRender, setComponentToRender] = useState(null);

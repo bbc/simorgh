@@ -1,12 +1,12 @@
-import type { ReactNode, FC } from 'react';
+import type { FC, ReactNode } from 'react';
+
 import defaultServiceVariants from '#app/lib/config/services/defaultServiceVariants';
 import type {
-  Variants,
-  ServicesWithVariants,
-  ServicesWithNoVariants,
   Services,
+  ServicesWithNoVariants,
+  ServicesWithVariants,
+  Variants,
 } from '#app/models/types/global';
-
 import afaanoromoo from '../themes/afaanoromoo';
 import afrique from '../themes/afrique';
 import amharic from '../themes/amharic';
@@ -60,10 +60,10 @@ import urdu from '../themes/urdu';
 import uzbekCyr from '../themes/uzbek/cyr';
 import uzbekLat from '../themes/uzbek/lat';
 import vietnamese from '../themes/vietnamese';
+import ws from '../themes/ws';
 import yoruba from '../themes/yoruba';
 import zhongwenSimp from '../themes/zhongwen/simp';
 import zhongwenTrad from '../themes/zhongwen/trad';
-import ws from '../themes/ws';
 
 type ThemeComponent = FC<{ children: ReactNode }>;
 

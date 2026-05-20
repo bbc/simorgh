@@ -1,11 +1,11 @@
+import { render } from '../react-testing-library-with-providers';
 import AmpNavigation from './index.amp';
 import {
-  dropdownTestId,
-  scrollableTestId,
   dropdownListItems,
+  dropdownTestId,
   scrollableListItems,
+  scrollableTestId,
 } from './testHelpers';
-import { render } from '../react-testing-library-with-providers';
 
 const navigation = (
   <AmpNavigation

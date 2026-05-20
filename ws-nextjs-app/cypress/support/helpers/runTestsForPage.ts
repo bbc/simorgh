@@ -1,8 +1,8 @@
 /* eslint-disable import/no-relative-packages */
 import { PageTypes } from '#app/models/types/global';
-import handleContinueReadingButton from './handleContinueReadingButton';
 import { ServiceParametersType } from '../../types';
 import getOptimizelyKey from './getOptimizelyKey';
+import handleContinueReadingButton from './handleContinueReadingButton';
 
 type TestType = (props: ServiceParametersType) => void;
 

@@ -1,19 +1,20 @@
 import { memo, use, useState } from 'react';
-import Text from '#app/components/Text';
-import type { MediaCollection } from '#app/components/MediaLoader/types';
+
 import MediaLoader from '#app/components/MediaLoader';
-import filterForBlockType from '#app/lib/utilities/blockHandlers';
-import { ServiceContext } from '#app/contexts/ServiceContext';
+import type { MediaCollection } from '#app/components/MediaLoader/types';
+import Text from '#app/components/Text';
 import { RequestContext } from '#app/contexts/RequestContext';
-import useViewTracker from '#app/hooks/useViewTracker';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
-import type { EventTrackingMetadata } from '#app/models/types/eventTracking';
+import useViewTracker from '#app/hooks/useViewTracker';
+import filterForBlockType from '#app/lib/utilities/blockHandlers';
 import { regexPunctuationSymbols } from '#app/lib/utilities/idSanitiser';
+import type { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import { service as newsConfig } from '#lib/config/services/news';
-import styles from './index.styles';
+import { Close, Play } from '../icons';
 import WARNING_LEVELS from '../MediaLoader/configs/warningLevels';
 import VisuallyHiddenText from '../VisuallyHiddenText';
-import { Close, Play } from '../icons';
+import styles from './index.styles';
 
 type WarningItem = {
   // eslint-disable-next-line camelcase

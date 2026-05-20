@@ -1,16 +1,15 @@
 import { use, useMemo } from 'react';
 
-import Timestamp from '#components/Promo/timestamp';
 import LiveLabel from '#app/components/LiveLabel';
+import Timestamp from '#components/Promo/timestamp';
 import { ServiceContext } from '../../../contexts/ServiceContext';
-
-import Title from './Title';
+import Content from './Content';
+import Image from './Image';
+import { ContentWrapper, PromoWrapper } from './index.styles';
 import Link from './Link';
 import MediaIndicator from './MediaIndicator';
-import Content from './Content';
-import { PromoWrapper, ContentWrapper } from './index.styles';
-import Image from './Image';
 import PromoContext from './PromoContext';
+import Title from './Title';
 
 const Promo = ({
   children,

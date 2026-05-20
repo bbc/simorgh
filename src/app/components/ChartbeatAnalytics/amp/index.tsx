@@ -1,4 +1,4 @@
-import type { AmpChartbeatProps, AmpChartbeatConfig } from '../types';
+import type { AmpChartbeatConfig, AmpChartbeatProps } from '../types';
 
 const chartbeatAmpConfigOptions = (options: AmpChartbeatConfig) => ({
   vars: options,

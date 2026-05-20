@@ -1,6 +1,6 @@
-import { MostReadPage } from '#pages';
-import { mostReadPagePath } from '#app/routes/utils/regex';
 import { MOST_READ_PAGE } from '#app/routes/utils/pageTypes';
+import { mostReadPagePath } from '#app/routes/utils/regex';
+import { MostReadPage } from '#pages';
 import getInitialData from './getInitialData';
 
 export default {

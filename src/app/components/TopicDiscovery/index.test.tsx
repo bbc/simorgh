@@ -1,17 +1,17 @@
 import {
+  fireEvent,
   render,
   screen,
-  fireEvent,
 } from '#app/components/react-testing-library-with-providers';
-import * as viewTracking from '#app/hooks/useViewTracker';
-import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import type { ServiceConfig } from '#app/models/types/serviceConfig';
+import * as clickTracking from '#app/hooks/useClickTrackerHandler';
+import * as viewTracking from '#app/hooks/useViewTracker';
 import { service as portugueseConfig } from '#app/lib/config/services/portuguese';
 import { service as turkceConfig } from '#app/lib/config/services/turkce';
-import { topicTagsFixture, multipleTopicsFixture } from './fixtures';
-import useFetchTopicPromos from './useFetchTopicPromos';
+import type { ServiceConfig } from '#app/models/types/serviceConfig';
 import TopicDiscovery from '.';
+import { multipleTopicsFixture, topicTagsFixture } from './fixtures';
+import useFetchTopicPromos from './useFetchTopicPromos';
 
 jest.mock('./useFetchTopicPromos');
 

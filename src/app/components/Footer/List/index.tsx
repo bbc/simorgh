@@ -1,5 +1,6 @@
-import type { FooterLink } from '#app/models/types/serviceConfig';
 import type { ReactElement } from 'react';
+
+import type { FooterLink } from '#app/models/types/serviceConfig';
 import Link from '../Link';
 import styles, { gridTemplateRows } from './index.styles';
 

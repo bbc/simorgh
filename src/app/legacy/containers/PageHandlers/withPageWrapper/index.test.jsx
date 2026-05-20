@@ -1,7 +1,7 @@
-import { RequestContextProvider } from '#contexts/RequestContext';
-import { UserContextProvider } from '#contexts/UserContext';
-import { ToggleContext } from '#contexts/ToggleContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { RequestContextProvider } from '#contexts/RequestContext';
+import { ToggleContext } from '#contexts/ToggleContext';
+import { UserContextProvider } from '#contexts/UserContext';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import WithPageWrapper from '.';

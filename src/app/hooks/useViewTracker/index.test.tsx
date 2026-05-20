@@ -1,17 +1,20 @@
 // biome-ignore-all format: formatting was messing up this file
+// biome-ignore-all lint/suspicious/noTsIgnore: ts errors
+// @ts-nocheck
 
 import { createContext, ReactNode } from 'react';
 import { OptimizelyProvider, ReactSDKClient } from '@optimizely/react-sdk';
+
+import { ATIData } from '#app/components/ATIAnalytics/types';
 import {
-  renderHook,
   act,
+  renderHook,
 } from '#app/components/react-testing-library-with-providers';
+import { Toggles } from '#app/models/types/global';
+import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { STORY_PAGE } from '#app/routes/utils/pageTypes';
-import { ATIData } from '#app/components/ATIAnalytics/types';
-import { Toggles } from '#app/models/types/global';
 import * as serviceContextModule from '../../contexts/ServiceContext';
 import useViewTracker from '.';
 import fixtureData from './fixtureData.json';
@@ -42,8 +45,7 @@ const IntersectionObserver = jest.fn(cb => {
 
 const getObserverInstance = (element: HTMLElement) => {
   try {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error - Required for testing purposes. Using @ts-expect-error causes github actions to fail.
+    // @ts-ignore - Required for testing purposes. Using @ts-expect-error causes github actions to fail.
     const [instance] = Array.from(observers).find(([, item]) =>
       item.elements.has(element),
     );

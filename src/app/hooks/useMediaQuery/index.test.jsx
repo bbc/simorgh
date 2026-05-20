@@ -1,8 +1,7 @@
 import {
-  renderHook,
   cleanup,
+  renderHook,
 } from '#app/components/react-testing-library-with-providers';
-
 import useMediaQuery from '.';
 
 describe('useMediaQuery', () => {

@@ -1,7 +1,8 @@
 import webpack from 'webpack';
-import writeNewTimezoneData from './writeNewTimezoneData';
-import replaceOriginalTimezoneData from './replaceOriginalTimezoneData';
+
 import MomentTimezoneInclude from '.';
+import replaceOriginalTimezoneData from './replaceOriginalTimezoneData';
+import writeNewTimezoneData from './writeNewTimezoneData';
 
 jest.mock('webpack', () => ({
   NormalModuleReplacementPlugin: jest.fn(),

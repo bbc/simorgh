@@ -1,9 +1,10 @@
 import type { FetchMock } from 'jest-fetch-mock';
-import pashtoPageData from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn4.json';
-import getInitialData from '#app/routes/onDemandTV/getInitialData';
-import withMediaError from '#lib/utilities/episodeAvailability/withMediaError';
-import { TV_PAGE } from '#app/routes/utils/pageTypes';
+
 import type { Services } from '#app/models/types/global';
+import getInitialData from '#app/routes/onDemandTV/getInitialData';
+import { TV_PAGE } from '#app/routes/utils/pageTypes';
+import pashtoPageData from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn4.json';
+import withMediaError from '#lib/utilities/episodeAvailability/withMediaError';
 import {
   act,
   render,

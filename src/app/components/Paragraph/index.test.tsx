@@ -1,5 +1,5 @@
-import Paragraph from '.';
 import { render, screen } from '../react-testing-library-with-providers';
+import Paragraph from '.';
 
 describe('Paragraph', () => {
   it('should render the paragraph text in a p element', async () => {

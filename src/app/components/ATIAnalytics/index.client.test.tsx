@@ -1,24 +1,25 @@
 // biome-ignore-all lint/suspicious/noTemplateCurlyInString: this is fine
-import { articleDataNews } from '#pages/ArticlePage/fixtureData';
-import styUkrainianAssetData from '#data/ukrainian/cpsAssets/news-53561143.json';
-import styUkrainianInRussianAssetData from '#data/ukrainian/cpsAssets/features-russian-53477115.json';
+
 import { ServiceContext } from '#contexts/ServiceContext';
+import styUkrainianInRussianAssetData from '#data/ukrainian/cpsAssets/features-russian-53477115.json';
+import styUkrainianAssetData from '#data/ukrainian/cpsAssets/news-53561143.json';
 import type { ServiceConfig } from '#models/types/serviceConfig';
-import styAssetData from './fixtures/storyPage.json';
-import pglAssetData from './fixtures/photoGalleryPage.json';
-import mapAssetData from './fixtures/mediaAssetPage.json';
-import { render } from '../react-testing-library-with-providers';
+import { articleDataNews } from '#pages/ArticlePage/fixtureData';
 import {
   ARTICLE_PAGE,
+  CORRESPONDENT_STORY_PAGE,
+  MEDIA_ARTICLE_PAGE,
   MEDIA_ASSET_PAGE,
   PHOTO_GALLERY_PAGE,
   STORY_PAGE,
-  CORRESPONDENT_STORY_PAGE,
-  MEDIA_ARTICLE_PAGE,
 } from '../../routes/utils/pageTypes';
+import { render } from '../react-testing-library-with-providers';
 import ATIAnalytics from '.';
 import * as amp from './amp';
 import * as canonical from './canonical';
+import mapAssetData from './fixtures/mediaAssetPage.json';
+import pglAssetData from './fixtures/photoGalleryPage.json';
+import styAssetData from './fixtures/storyPage.json';
 
 const defaultRenderProps = {
   bbcOrigin: 'https://www.test.bbc.co.uk',

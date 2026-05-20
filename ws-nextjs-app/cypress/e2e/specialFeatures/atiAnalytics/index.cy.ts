@@ -1,27 +1,27 @@
 /* eslint-disable import/no-relative-packages */
 import { PageTypes } from '#app/models/types/global';
+import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
+import runTestsForPage, {
+  TestDataType,
+} from '../../../support/helpers/runTestsForPage';
 import { assertPageView } from './assertions';
+import {
+  assertArticleLiteSiteLinkComponentClick,
+  assertArticleLiteSiteLinkComponentView,
+} from './assertions/articleLiteSiteLink';
 // TODO: Resolve error which is preventing e2e tests to run
 // import {
 //   assertRecommendationsComponentClick,
 //   assertRecommendationsComponentView,
 // } from './assertions/recommendations';
 import { assertFeaturesAnalysisComponentClick } from './assertions/featuresAnalysis';
-import {
-  assertScrollableNavigationComponentView,
-  assertScrollableNavigationComponentClick,
-  assertDropdownNavigationComponentClick,
-  assertDropdownNavigationComponentView,
-} from './assertions/navigation';
 import { assertLiteSiteSummaryComponentToMainSiteClick } from './assertions/liteSiteSummary';
 import {
-  assertArticleLiteSiteLinkComponentClick,
-  assertArticleLiteSiteLinkComponentView,
-} from './assertions/articleLiteSiteLink';
-
-import runTestsForPage, {
-  TestDataType,
-} from '../../../support/helpers/runTestsForPage';
+  assertDropdownNavigationComponentClick,
+  assertDropdownNavigationComponentView,
+  assertScrollableNavigationComponentClick,
+  assertScrollableNavigationComponentView,
+} from './assertions/navigation';
 import {
   assertPodcastPromoComponentClick,
   assertPodcastPromoComponentView,
@@ -30,8 +30,6 @@ import {
   assertSocialEmbedComponentClick,
   assertSocialEmbedComponentView,
 } from './assertions/socialEmbed';
-
-import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
 
 const canonicalTestSuites = [
   {

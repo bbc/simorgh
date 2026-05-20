@@ -1,8 +1,7 @@
 import styled from '@emotion/styled';
 
-import { detokenise, dictionaryFactory } from '../utilities';
-
 import { visuallyHiddenStyle } from '../../../../../lib/styles.const';
+import { detokenise, dictionaryFactory } from '../utilities';
 
 const BORDER_WEIGHT = '0.125rem';
 const GEL_SPACING_THREE_QRTS = `0.75rem`;

@@ -1,8 +1,8 @@
-import { RequestContextProvider } from '#contexts/RequestContext';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
+import { RequestContextProvider } from '#contexts/RequestContext';
+import ThemeProvider from '../../../components/ThemeProvider';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import FigureContainer from '.';
-import ThemeProvider from '../../../components/ThemeProvider';
 
 const serviceContextStubNews = {
   imageCaptionOffscreenText: 'Image caption, ',

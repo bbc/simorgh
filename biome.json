@@ -162,13 +162,11 @@
     "actions": {
       "source": {
         "organizeImports": {
+          "level": "on",
           "options": {
             "groups": [
-              [":NODE:", "react", "react/**", "next", "next/**"],
-              ":BLANK_LINE:",
-              [":PACKAGE:", "!@bbc/**"],
-              ":BLANK_LINE:",
-              "@bbc/**",
+              ["cypress", ":NODE:", "react", "react/**", "next", "next/**"],
+              [":PACKAGE:", "@bbc/**"],
               ":BLANK_LINE:",
               [":ALIAS:", ":PATH:"]
             ]

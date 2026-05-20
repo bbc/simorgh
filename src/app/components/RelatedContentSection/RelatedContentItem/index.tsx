@@ -1,12 +1,13 @@
+import isEmpty from 'ramda/src/isEmpty';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import { createSrcsets } from '#lib/utilities/srcSet';
+
+import type { ViewTracker } from '#app/lib/analyticsUtils/types';
 import buildIChefURL from '#app/lib/utilities/ichefURL';
 import Promo from '#components/OptimoPromos';
-import isEmpty from 'ramda/src/isEmpty';
-import type { ViewTracker } from '#app/lib/analyticsUtils/types';
-import styles from './index.styles';
+import { createSrcsets } from '#lib/utilities/srcSet';
 import type { EventTrackingBlock } from '../../../models/types/eventTracking';
+import styles from './index.styles';
 
 type RelatedContentItemProps = {
   item: object;

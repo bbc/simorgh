@@ -1,7 +1,7 @@
 import { render } from '../../../components/react-testing-library-with-providers';
+import { EBON, GHOST } from '../../../components/ThemeProvider/palette';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import CpsOnwardJourney from '.';
-import { GHOST, EBON } from '../../../components/ThemeProvider/palette';
 import '@testing-library/jest-dom';
 
 describe('CpsOnwardJourney', () => {

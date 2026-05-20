@@ -1,4 +1,5 @@
 import type { OptimizelyContextInterface } from '@optimizely/react-sdk/dist/Context';
+
 import type { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import { sendEventBeacon } from '../../../components/ATIAnalytics/beacon';
 

@@ -1,5 +1,5 @@
 /* eslint-disable import/no-relative-packages */
-import { interceptATIAnalyticsBeacons, COMPONENTS } from '../helpers';
+import { COMPONENTS, interceptATIAnalyticsBeacons } from '../helpers';
 import { assertATIComponentClickEvent, assertATIComponentViewEvent } from '.';
 import { AtiAssertionFnProps } from './type';
 

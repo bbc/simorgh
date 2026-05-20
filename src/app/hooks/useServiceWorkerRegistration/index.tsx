@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+
 import onClient from '#lib/utilities/onClient';
 
 interface UseServiceWorkerRegistrationParams {

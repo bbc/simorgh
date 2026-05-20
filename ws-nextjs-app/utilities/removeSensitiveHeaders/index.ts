@@ -1,4 +1,4 @@
-import { IncomingHttpHeaders } from 'http';
+import { IncomingHttpHeaders } from 'node:http';
 
 export default function removeSensitiveHeaders(headers?: IncomingHttpHeaders) {
   if (!headers) return {};

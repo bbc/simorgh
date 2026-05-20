@@ -1,16 +1,16 @@
 import type { CollapsibleNavigationSection } from '#app/components/CollapsibleNavigation/types';
 import type { PromotionalBannerConfig } from '#app/components/PromotionalBanner/index.types';
 import type {
+  ChineseService,
+  Direction,
+  Navigation,
+  SerbianService,
   Services,
   ServicesWithNoVariants,
-  SerbianService,
-  ChineseService,
-  ZhongwenService,
   UkrainianService,
   UzbekService,
-  Direction,
   Variants,
-  Navigation,
+  ZhongwenService,
 } from './global';
 import type { Translations } from './translations';
 

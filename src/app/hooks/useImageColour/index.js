@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
-import ColorThief from './colorthief';
+import { useEffect, useState } from 'react';
 
+import ColorThief from './colorthief';
 import { selectColour } from './utils';
 
 const useImageColour = (

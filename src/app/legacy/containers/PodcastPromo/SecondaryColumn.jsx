@@ -1,15 +1,15 @@
 import { use } from 'react';
 import styled from '@emotion/styled';
+
+import ImageWithPlaceholder from '#containers/ImageWithPlaceholder';
+import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
+import useViewTracker from '#hooks/useViewTracker';
+import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
 } from '#psammead/gel-foundations/src/spacings';
-import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
-import useViewTracker from '#hooks/useViewTracker';
-import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
-
-import ImageWithPlaceholder from '#containers/ImageWithPlaceholder';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import PromoComponent from './components';
 import getPromo from './shared';

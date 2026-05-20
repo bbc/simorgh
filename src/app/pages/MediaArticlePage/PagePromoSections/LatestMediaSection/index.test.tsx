@@ -1,11 +1,10 @@
+import hausaArticle from '../../../../../../data/hausa/articles/cxr0765kxlzo.json';
+import tamilArticle from '../../../../../../data/tamil/articles/c84m2jl4dpzo.json';
 import {
   render,
   screen,
 } from '../../../../components/react-testing-library-with-providers';
-
 import LatestMediaSection from '.';
-import hausaArticle from '../../../../../../data/hausa/articles/cxr0765kxlzo.json';
-import tamilArticle from '../../../../../../data/tamil/articles/c84m2jl4dpzo.json';
 import type { LatestMedia } from './types';
 
 describe('Latest Media Section', () => {

@@ -1,4 +1,5 @@
 import type { Theme } from '@emotion/react';
+
 import { GROUP_2_MAX_WIDTH } from '#app/components/ThemeProvider/mediaQueries';
 import getSrcSets from '.';
 

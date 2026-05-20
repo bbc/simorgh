@@ -1,6 +1,7 @@
 import { type PropsWithChildren, use } from 'react';
-import { render, act } from '@testing-library/react';
 import { queryByText } from '@testing-library/dom';
+import { act, render } from '@testing-library/react';
+
 import type { Toggles } from '../../models/types/global';
 import { ToggleContext, ToggleContextProvider } from '.';
 

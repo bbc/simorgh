@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import detokenise from '#psammead/psammead-detokeniser/src';
 
+import detokenise from '#psammead/psammead-detokeniser/src';
 import { visuallyHiddenStyle } from '../../../lib/styles.const';
 
 const BORDER_WIDTH = '0.125rem';

@@ -1,5 +1,6 @@
-import { isNull } from '#psammead/psammead-test-helpers/src';
 import moment from 'moment';
+
+import { isNull } from '#psammead/psammead-test-helpers/src';
 import { render } from '../../../../components/react-testing-library-with-providers';
 import '#psammead/psammead-locales/moment/ha';
 import Timestamp from '.';

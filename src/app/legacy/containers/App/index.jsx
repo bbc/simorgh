@@ -5,7 +5,8 @@
  * https://github.com/jtart/react-universal-app
  */
 import { Component } from 'react';
-import { StaticRouter, BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, StaticRouter } from 'react-router-dom';
+
 import App from './App';
 
 export class ClientApp extends Component {

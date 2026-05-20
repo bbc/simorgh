@@ -1,15 +1,16 @@
-import { use, Fragment } from 'react';
-import { Curation as CurationType } from '#app/models/types/curationData';
-import Curation from '#app/components/Curation';
-import Heading from '#app/components/Heading';
-import Text from '#app/components/Text';
-import MetadataContainer from '#app/components/Metadata';
-import { ServiceContext } from '#app/contexts/ServiceContext';
+import { Fragment, use } from 'react';
+
 import ATIAnalytics from '#app/components/ATIAnalytics';
 import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
+import Curation from '#app/components/Curation';
+import Heading from '#app/components/Heading';
 import LinkedData from '#app/components/LinkedData';
-import { LiveTVPageProps } from './types';
+import MetadataContainer from '#app/components/Metadata';
+import Text from '#app/components/Text';
+import { ServiceContext } from '#app/contexts/ServiceContext';
+import { Curation as CurationType } from '#app/models/types/curationData';
 import styles from './styles';
+import { LiveTVPageProps } from './types';
 import 'temporal-polyfill/global';
 
 const renderCuration = ({

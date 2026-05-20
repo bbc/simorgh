@@ -1,7 +1,7 @@
-import nodeLogger from '#lib/logger.node';
 import { MOST_READ_STALE_DATA } from '#lib/logger.const';
-import { isDataStale } from './isDataStale';
+import nodeLogger from '#lib/logger.node';
 import isLive from '../isLive';
+import { isDataStale } from './isDataStale';
 
 const logger = nodeLogger(__filename);
 
