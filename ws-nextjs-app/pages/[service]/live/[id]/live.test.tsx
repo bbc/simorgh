@@ -80,7 +80,7 @@ const mockPageData = {
     copyright: 'BBC',
   },
   metadata: { atiAnalytics: {} },
-};
+} as unknown as ComponentProps['pageData'];
 
 const mockPageDataWithPosts = {
   ...liveFixture.data,
@@ -92,7 +92,7 @@ const mockPageDataWithPosts = {
     contributors: 'Not a random dude',
   },
   metadata: { atiAnalytics: {} },
-};
+} as unknown as ComponentProps['pageData'];
 
 const mockPageDataWithoutKeyPoints = {
   ...liveFixture.data,
@@ -108,7 +108,7 @@ const mockPageDataWithoutKeyPoints = {
     contributors: 'Not a random dude',
   },
   metadata: { atiAnalytics: {} },
-};
+} as unknown as ComponentProps['pageData'];
 
 const mockPageDataWithPortraitVideoItems = {
   ...mockPageData,
@@ -149,7 +149,7 @@ const mockPageDataWithPortraitVideoItems = {
       ],
     },
   },
-};
+} as unknown as ComponentProps['pageData'];
 
 const mockPageDataWithEmptyPortraitVideoItems = {
   ...mockPageData,
@@ -191,7 +191,7 @@ const mockPageDataWithMetadata = ({
       datePublished,
       dateModified,
     },
-  };
+  } as unknown as ComponentProps['pageData'];
 };
 
 const mockPollingUpdate = (pageData: ComponentProps['pageData']) => {
@@ -422,7 +422,7 @@ describe('Live Page', () => {
         },
         contributors: 'Not a random dude',
       },
-    };
+    } as unknown as ComponentProps['pageData'];
 
     mockPollingUpdate(paginatedData);
 
@@ -457,7 +457,7 @@ describe('Live Page', () => {
         },
         contributors: 'Not a random dude',
       },
-    };
+    } as unknown as ComponentProps['pageData'];
     mockPollingUpdate(paginatedData);
     await act(async () => {
       render(<Live pageData={paginatedData} />, { service: 'pidgin' });
@@ -717,7 +717,7 @@ describe('Live Page', () => {
       const pageDataWithSportData = {
         ...mockPageData,
         sportDataEventContent: sportDataFixture.data.sportDataEventContent,
-      };
+      } as unknown as ComponentProps['pageData'];
       mockPollingUpdate(pageDataWithSportData);
 
       await act(async () => {
@@ -731,7 +731,7 @@ describe('Live Page', () => {
       const pageDataWithSportData = {
         ...mockPageData,
         sportDataEventContent: sportDataFixture.data.sportDataEventContent,
-      };
+      } as unknown as ComponentProps['pageData'];
       mockPollingUpdate(pageDataWithSportData);
 
       await act(async () => {
