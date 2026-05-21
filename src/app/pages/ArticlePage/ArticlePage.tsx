@@ -241,6 +241,13 @@ const ArticlePage = ({
     experimentType: ExperimentType.CLIENT_SIDE,
   });
 
+  // EXPERIMENT: Topic Discovery
+  const topicDiscoveryExperimentName = 'newswb_ws_topic_discovery_module';
+  const topicDiscoveryVariant = useOptimizelyVariation({
+    experimentName: topicDiscoveryExperimentName,
+    experimentType: ExperimentType.CLIENT_SIDE,
+  });
+
   const getActiveExperimentProps = (
     experimentName: string,
     experimentVariant: string | null,
@@ -256,6 +263,11 @@ const ArticlePage = ({
   const testPageViewsExperimentProps = getActiveExperimentProps(
     testPageViewsExperimentName,
     testPageViewsVariant,
+  );
+
+  const topicDiscoveryExperimentProps = getActiveExperimentProps(
+    topicDiscoveryExperimentName,
+    topicDiscoveryVariant,
   );
 
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
@@ -320,6 +332,10 @@ const ArticlePage = ({
     ...(testPageViewsExperimentProps && {
       experimentName: testPageViewsExperimentProps.experimentName,
       experimentVariant: testPageViewsExperimentProps.experimentVariant,
+    }),
+    ...(topicDiscoveryExperimentProps && {
+      experimentName: topicDiscoveryExperimentProps.experimentName,
+      experimentVariant: topicDiscoveryExperimentProps.experimentVariant,
     }),
   };
 
@@ -492,6 +508,7 @@ const ArticlePage = ({
             <OptimizelyPageMetrics trackPageComplete />
           </main>
           <OptimizelyPageMetrics trackPageView trackPageDepth trackVisit />
+          {/* EXPERIMENT: Topic Discovery */}
           {showTopicDiscovery && (
             <TopicDiscovery
               css={[
