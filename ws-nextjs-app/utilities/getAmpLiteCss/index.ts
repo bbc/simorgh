@@ -85,9 +85,7 @@ const getBuildManifestCss = (page: string): string => {
  * player only rendered when an article contains video), so they cannot be statically
  * known from the page route alone and are not captured in build-manifest.json.
  */
-const getDynamicImportCss = (
-  dynamicIds: Array<string | number>,
-): string => {
+const getDynamicImportCss = (dynamicIds: Array<string | number>): string => {
   if (!dynamicIds.length) return '';
 
   const manifestPath = join(
@@ -116,7 +114,7 @@ const getDynamicImportCss = (
 
     return readCssFiles(cssFiles);
   } catch (e) {
-    logger.error(logCodes.BUILD_MANIFEST_CSS_READ_ERROR, {
+    logger.error(logCodes.DYNAMIC_IMPORT_CSS_READ_ERROR, {
       event: 'dynamic_import_css_read_error',
       message: e instanceof Error ? e.message : String(e),
       stack: e instanceof Error ? e.stack : undefined,

@@ -357,7 +357,7 @@ describe('getAmpLiteCss utilities', () => {
 
       expect(getDynamicImportCss(['some-chunk'])).toBe('');
       expect(loggerMock.error).toHaveBeenCalledWith(
-        'build_manifest_css_read_error',
+        'dynamic_import_css_read_error',
         expect.objectContaining({ event: 'dynamic_import_css_read_error' }),
       );
     });
@@ -370,7 +370,7 @@ describe('getAmpLiteCss utilities', () => {
 
       expect(getDynamicImportCss(['some-chunk'])).toBe('');
       expect(loggerMock.error).toHaveBeenCalledWith(
-        'build_manifest_css_read_error',
+        'dynamic_import_css_read_error',
         expect.objectContaining({ message: 'disk read failed' }),
       );
     });
