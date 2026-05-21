@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable import/no-relative-packages */
 /* eslint-disable no-console */
 import type {
@@ -5,9 +6,9 @@ import type {
   JestEnvironmentConfig,
 } from '@jest/environment';
 import TestEnvironment from '@happy-dom/jest-environment';
-import getPageTypeFromTestPath from '../../src/integration/utils/getPageTypeFromTestPath';
-import camelCaseToText from '../../src/integration/utils/camelCaseToText';
-import fetchHtml from '../../src/integration/utils/fetchHtml';
+import getPageTypeFromTestPath from './utils/getPageTypeFromTestPath';
+import camelCaseToText from './utils/camelCaseToText';
+import fetchHtml from './utils/fetchHtml';
 
 const shouldPassArticleHeaders = [
   'Story Page',
@@ -50,6 +51,7 @@ class CustomTestEnvironment extends TestEnvironment {
     await super.setup();
 
     try {
+      // @ts-ignore
       const { window, document } = await fetchHtml({
         url: this.url,
         headers: {
