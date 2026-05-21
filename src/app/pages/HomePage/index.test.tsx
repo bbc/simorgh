@@ -1,6 +1,5 @@
 import { fireEvent } from '@testing-library/react';
 import { Helmet } from 'react-helmet';
-import { BrowserRouter } from 'react-router-dom';
 
 import { service as pidginServiceConfig } from '#app/lib/config/services/pidgin';
 import { data as afriqueHomePageDataFixture } from '#data/afrique/homePage/index.json';

@@ -1,5 +1,4 @@
 import pipe from 'ramda/src/pipe';
-import Url from 'url-parse';
 
 import { getMostReadEndpoint } from '#app/lib/utilities/getUrlHelpers/getMostReadUrls';
 import getEnvironment from '#app/routes/utils/getEnvironment';

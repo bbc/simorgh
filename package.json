@@ -16,6 +16,7 @@
     ]
   },
   "scripts": {
+    "type-check": "tsc",
     "amp:validate": "node ./scripts/ampHtmlValidator",
     "build:storybook": "rm -rf build && cp envConfig/local.env .env && storybook build -c .storybook -o storybook_dist",
     "setupDevEnv": "cp envConfig/local.env .env && rm -rf envConfig/secret.env && ./scripts/checkSecretEnvVariables.sh",

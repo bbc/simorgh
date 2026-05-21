@@ -226,29 +226,28 @@ describe('Service Worker', () => {
     ];
 
     describe('when cache contains asset', () => {
-      it.each(cacheableAssets)(
-        `should return a cached response for %s`,
-        async assetUrl => {
-          ({ fetchEventHandler } = await import('./service-worker-test'));
+      it.each(
+        cacheableAssets,
+      )(`should return a cached response for %s`, async assetUrl => {
+        ({ fetchEventHandler } = await import('./service-worker-test'));
 
-          const event = {
-            request: new Request(assetUrl),
-            respondWith: jest.fn(),
-          };
+        const event = {
+          request: new Request(assetUrl),
+          respondWith: jest.fn(),
+        };
 
-          await fetchEventHandler(event);
+        await fetchEventHandler(event);
 
-          expect(event.respondWith).toHaveBeenCalled();
+        expect(event.respondWith).toHaveBeenCalled();
 
-          const [eventResponse] = event.respondWith.mock.calls[0];
+        const [eventResponse] = event.respondWith.mock.calls[0];
 
-          const response = await Promise.resolve(eventResponse);
+        const response = await Promise.resolve(eventResponse);
 
-          const responseBody = await response.text();
+        const responseBody = await response.text();
 
-          expect(responseBody).toBe(`${assetUrl}-cached`);
-        },
-      );
+        expect(responseBody).toBe(`${assetUrl}-cached`);
+      });
     });
 
     describe('when cache does not contain asset', () => {
@@ -261,32 +260,31 @@ describe('Service Worker', () => {
         fetchedCache = {};
       });
 
-      it.each(cacheableAssets)(
-        `should fetch %s and cache it`,
-        async assetUrl => {
-          ({ fetchEventHandler } = await import('./service-worker-test'));
+      it.each(
+        cacheableAssets,
+      )(`should fetch %s and cache it`, async assetUrl => {
+        ({ fetchEventHandler } = await import('./service-worker-test'));
 
-          const event = {
-            request: new Request(assetUrl, {
-              mode: 'same-origin',
-            }),
-            respondWith: jest.fn(),
-          };
+        const event = {
+          request: new Request(assetUrl, {
+            mode: 'same-origin',
+          }),
+          respondWith: jest.fn(),
+        };
 
-          const mockResponse = new Response(assetUrl);
-          global.fetch.mockResolvedValueOnce(mockResponse);
+        const mockResponse = new Response(assetUrl);
+        global.fetch.mockResolvedValueOnce(mockResponse);
 
-          await fetchEventHandler(event);
+        await fetchEventHandler(event);
 
-          expect(event.respondWith).toHaveBeenCalled();
+        expect(event.respondWith).toHaveBeenCalled();
 
-          const [eventResponse] = event.respondWith.mock.calls[0];
-          await Promise.resolve(eventResponse);
+        const [eventResponse] = event.respondWith.mock.calls[0];
+        await Promise.resolve(eventResponse);
 
-          expect(global.fetch).toHaveBeenCalledWith(assetUrl);
-          expect(fetchedCache[assetUrl]).toStrictEqual(mockResponse.clone());
-        },
-      );
+        expect(global.fetch).toHaveBeenCalledWith(assetUrl);
+        expect(fetchedCache[assetUrl]).toStrictEqual(mockResponse.clone());
+      });
     });
   });
 
@@ -541,7 +539,7 @@ describe('Service Worker', () => {
   describe('version', () => {
     const CURRENT_VERSION = {
       number: 'v0.3.5',
-      fileContentHash: '0532bfcfb518677f9db098599a23f418',
+      fileContentHash: 'ca3f290182f8a1081bca668b8559eb29',
     };
 
     it(`version number should be ${CURRENT_VERSION.number}`, async () => {
