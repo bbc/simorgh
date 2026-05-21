@@ -5,6 +5,9 @@ const path = require('path');
 
 const writeToNestedFile = (filePath, contents) => {
   const fullFilePath = path.join(__dirname, filePath);
+  const folder = path.dirname(fullFilePath);
+
+  fs.mkdirSync(folder);
 
   fs.writeFileSync(fullFilePath, contents);
 
