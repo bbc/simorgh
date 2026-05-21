@@ -19,6 +19,7 @@ type Props = {
   pageType: PageTypes;
   isAmp?: boolean;
   disableRadioSchedule?: boolean;
+  country?: string | null;
 };
 
 const getPageData = async ({
@@ -31,6 +32,7 @@ const getPageData = async ({
   pageType,
   isAmp,
   disableRadioSchedule,
+  country,
 }: Props) => {
   const path = `${id}${rendererEnv ? `?renderer_env=${rendererEnv}` : ''}`;
   const url = new URL(path, 'https://www.bbc.com');
@@ -51,6 +53,7 @@ const getPageData = async ({
       getAgent,
       isAmp,
       disableRadioSchedule,
+      country,
     }));
   } catch (error: unknown) {
     ({ message, status } = error as FetchError);
