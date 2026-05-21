@@ -17,10 +17,9 @@ const useSportDataPolling = (
       if (enableFeature === false) return;
 
       const polledSportData = await makeRequest(sportDataEventUrn);
-      const polledSportDataEvent = polledSportData?.data?.sportDataEvent;
 
-      if (polledSportDataEvent != null) {
-        setCurrentData(polledSportDataEvent);
+      if (polledSportData != null) {
+        setCurrentData(polledSportData);
       }
     }, POLLING_INTERVAL);
 

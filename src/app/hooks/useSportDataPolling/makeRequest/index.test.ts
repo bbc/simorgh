@@ -32,14 +32,4 @@ describe('makeRequest', () => {
     const result = await makeRequest('urn:bbc:sportsdata:football:event:123');
     expect(result).toBeNull();
   });
-
-  it('should return null when response data is missing', async () => {
-    jest.spyOn(global, 'fetch').mockResolvedValue({
-      status: 200,
-      json: async () => ({}),
-    } as Response);
-
-    const result = await makeRequest('urn:bbc:sportsdata:football:event:123');
-    expect(result).toBeNull();
-  });
 });

@@ -4,7 +4,6 @@ import useSportDataPolling, { POLLING_INTERVAL } from '.';
 import fixtureSportData from './fixture/fixtureSportData';
 import fixtureSportDataUpdate from './fixture/fixtureSportDataUpdate';
 import * as makeRequest from './makeRequest';
-import { SportDataPollingResponse } from './types';
 
 jest.useFakeTimers();
 
@@ -16,21 +15,16 @@ const runPollingInterval = async () => {
 };
 
 describe('useSportDataPolling', () => {
-  const initialSportData =
-    fixtureSportData.data.sportDataEvent as unknown as HeadToHeadV2Data;
-  const updatedSportData =
-    fixtureSportDataUpdate.data.sportDataEvent as unknown as HeadToHeadV2Data;
-  const updatedSportPollingResponse =
-    fixtureSportDataUpdate as unknown as SportDataPollingResponse;
-
   beforeEach(() => {
     jest.clearAllMocks();
   });
 
   it('should return the initial sport data on initialisation', () => {
-    jest
-      .spyOn(makeRequest, 'default')
-      .mockResolvedValue(updatedSportPollingResponse);
+    const initialSportData = fixtureSportData as unknown as HeadToHeadV2Data;
+    const updatedSportData =
+      fixtureSportDataUpdate as unknown as HeadToHeadV2Data;
+
+    jest.spyOn(makeRequest, 'default').mockResolvedValue(updatedSportData);
 
     const { result } = renderHook(() =>
       useSportDataPolling(initialSportData, true),
@@ -42,6 +36,7 @@ describe('useSportDataPolling', () => {
   });
 
   it('should call makeRequest with the sport data urn when polling is enabled', async () => {
+    const initialSportData = fixtureSportData as unknown as HeadToHeadV2Data;
     const makeRequestSpy = jest
       .spyOn(makeRequest, 'default')
       .mockResolvedValue(null);
@@ -55,6 +50,7 @@ describe('useSportDataPolling', () => {
   });
 
   it('should not call makeRequest when polling is disabled', async () => {
+    const initialSportData = fixtureSportData as unknown as HeadToHeadV2Data;
     const makeRequestSpy = jest
       .spyOn(makeRequest, 'default')
       .mockResolvedValue(null);
@@ -67,9 +63,11 @@ describe('useSportDataPolling', () => {
   });
 
   it('should update current sport data when a poll returns new data', async () => {
-    jest
-      .spyOn(makeRequest, 'default')
-      .mockResolvedValue(updatedSportPollingResponse);
+    const initialSportData = fixtureSportData as unknown as HeadToHeadV2Data;
+    const updatedSportData =
+      fixtureSportDataUpdate as unknown as HeadToHeadV2Data;
+
+    jest.spyOn(makeRequest, 'default').mockResolvedValue(updatedSportData);
 
     const { result } = renderHook(() =>
       useSportDataPolling(initialSportData, true),
@@ -81,6 +79,8 @@ describe('useSportDataPolling', () => {
   });
 
   it('should keep current sport data when poll returns null', async () => {
+    const initialSportData = fixtureSportData as unknown as HeadToHeadV2Data;
+
     jest.spyOn(makeRequest, 'default').mockResolvedValue(null);
 
     const { result } = renderHook(() =>
@@ -93,6 +93,7 @@ describe('useSportDataPolling', () => {
   });
 
   it('should clear the polling interval when unmounted', async () => {
+    const initialSportData = fixtureSportData as unknown as HeadToHeadV2Data;
     const makeRequestSpy = jest
       .spyOn(makeRequest, 'default')
       .mockResolvedValue(null);
