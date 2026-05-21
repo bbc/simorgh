@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import Url from 'url-parse';
-import { BrowserRouter } from 'react-router-dom';
 import { MOST_READ_PAGE } from '#app/routes/utils/pageTypes';
-import MostReadPage from '.';
+import MostReadPage from './MostReadPage';
+import PageLayoutWrapper from '#app/components/PageLayoutWrapper';
+import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 
 const Component = ({ service, variant }) => {
   const [pageData, setPageData] = useState({});
@@ -10,11 +10,9 @@ const Component = ({ service, variant }) => {
   useEffect(() => {
     const loadPageData = async () => {
       const response = await fetch(
-        new Url(
-          `data/${service}/mostRead/${
-            variant === 'default' ? 'index' : variant
-          }.json`,
-        ).toString(),
+        `data/${service}/mostRead/${
+          variant === 'default' ? 'index' : variant
+        }.json`,
       );
 
       const { data } = await response.json();
@@ -29,22 +27,25 @@ const Component = ({ service, variant }) => {
   }
 
   return (
-    <BrowserRouter>
-      <MostReadPage
-        pageType={MOST_READ_PAGE}
-        isAmp={false}
-        pathname={`/${service}/popular/read`}
-        status={200}
-        pageData={pageData}
-        service={service}
-      />
-    </BrowserRouter>
+    <ServiceContextProvider service={service} variant={variant}>
+      <PageLayoutWrapper pageData={pageData} status={200}>
+        <MostReadPage
+          pageType={MOST_READ_PAGE}
+          isAmp={false}
+          pathname={`/${service}/popular/read`}
+          status={200}
+          pageData={pageData}
+          service={service}
+        />
+      </PageLayoutWrapper>
+    </ServiceContextProvider>
   );
 };
 
 export default {
   Component,
   title: 'Pages/Most Read Page',
+  parameters: { layout: 'fullscreen' },
 };
 
 export const Example = {
@@ -59,7 +60,9 @@ export const Example = {
 };
 
 // This story is for chromatic testing purposes only
-export const Test = (_, { variant }) => (
-  <Component service="pidgin" variant={variant} />
-);
+export const Test = () => <Component service="pidgin" variant="default" />;
+Test.globals = {
+  service: { service: 'pidgin' },
+};
+
 Test.tags = ['!dev'];
