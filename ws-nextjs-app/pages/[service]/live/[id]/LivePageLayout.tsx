@@ -1,31 +1,32 @@
-import { use, useState, useRef, RefObject } from 'react';
-import { ServiceContext } from '#contexts/ServiceContext';
-import Pagination from '#app/components/Pagination';
-import PortraitVideoCarousel from '#app/components/PortraitVideoCarousel';
-import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
+import { RefObject, use, useRef, useState } from 'react';
+
 import ATIAnalytics from '#app/components/ATIAnalytics';
 import { ATIData } from '#app/components/ATIAnalytics/types';
-import { RequestContext } from '#app/contexts/RequestContext';
-import MetadataContainer from '#app/components/Metadata';
+import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
 import LinkedDataContainer from '#app/components/LinkedData';
-import getLiveBlogPostingSchema from '#app/lib/seoUtils/getLiveBlogPostingSchema';
 import { MediaCollection } from '#app/components/MediaLoader/types';
+import MetadataContainer from '#app/components/Metadata';
+import Pagination from '#app/components/Pagination';
+import PortraitVideoCarousel from '#app/components/PortraitVideoCarousel';
 import HeadToHeadV2 from '#app/components-webcore/SportDataHeader/head-to-head-v2';
 import { HeadToHeadV2Data } from '#app/components-webcore/SportDataHeader/head-to-head-v2/types';
-import { PortraitVideoItems } from '#app/models/types/optimo';
+import { RequestContext } from '#app/contexts/RequestContext';
 import useLivePagePolling from '#app/hooks/useLivePagePolling';
 import useToggle from '#app/hooks/useToggle';
+import getLiveBlogPostingSchema from '#app/lib/seoUtils/getLiveBlogPostingSchema';
+import { PortraitVideoItems } from '#app/models/types/optimo';
+import { ServiceContext } from '#contexts/ServiceContext';
 import {
-  getImageFromPost,
   getHeadlineFromPost,
+  getImageFromPost,
 } from '../../../../utilities/getFromPost';
-import Stream from './Stream';
 import Header from './Header';
 import KeyPoints from './KeyPoints';
-import styles from './styles';
-import { StreamResponse } from './Post/types';
 import { KeyPointsResponse } from './KeyPoints/types';
 import LatestPostButton from './LatestPostButton';
+import { StreamResponse } from './Post/types';
+import Stream from './Stream';
+import styles from './styles';
 
 interface LivePromoImage {
   url: string;
@@ -217,7 +218,7 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
       <main>
         <Header
           showLiveLabel={showSportData ? (isSportDataLive ?? isLive) : isLive}
-          title={showSportData && !!sportDataTitle ? sportDataTitle : title}
+          title={showSportData && sportDataTitle ? sportDataTitle : title}
           description={description}
           imageUrl={imageUrl}
           imageUrlTemplate={imageUrlTemplate}

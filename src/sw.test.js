@@ -1,8 +1,10 @@
 /* eslint-disable no-restricted-globals */
 /* eslint-disable import/no-unresolved */
+
+import { createHash } from 'crypto';
 import fs from 'fs';
 import { join, resolve } from 'path';
-import { createHash } from 'crypto';
+
 import { Request, Response } from 'undici';
 
 const serviceWorker = fs.readFileSync(join(__dirname, '..', 'public/sw.js'));

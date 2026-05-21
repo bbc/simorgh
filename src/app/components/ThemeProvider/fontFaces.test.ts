@@ -1,11 +1,13 @@
 // biome-ignore-all lint/suspicious/useIterableCallbackReturn: this is fine
-import SERVICES from '#app/lib/config/services';
-import { Services, ServicesVariantsProps } from '#app/models/types/global';
+
 import * as emotionReact from '@emotion/react';
+
+import SERVICES from '#app/lib/config/services';
 import defaultServiceVariants from '#app/lib/config/services/defaultServiceVariants';
+import { Services, ServicesVariantsProps } from '#app/models/types/global';
 import serviceConfigs from '#utilities/serviceConfigs';
+import { pwaThemes, themes } from './__mocks__/themes';
 import getFontFaces, * as fontFaces from './fontFaces';
-import { themes, pwaThemes } from './__mocks__/themes';
 
 const themeSpy = jest.spyOn(emotionReact, 'useTheme');
 

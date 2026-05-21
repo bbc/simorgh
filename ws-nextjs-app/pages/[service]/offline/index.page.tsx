@@ -1,7 +1,8 @@
-import dynamic from 'next/dynamic';
 import { GetServerSideProps } from 'next';
-import { OFFLINE_PAGE } from '#app/routes/utils/pageTypes';
+import dynamic from 'next/dynamic';
+
 import PageDataParams from '#app/models/types/pageDataParams';
+import { OFFLINE_PAGE } from '#app/routes/utils/pageTypes';
 import deriveVariant from '#utilities/deriveVariant';
 import extractHeaders from '#utilities/extractHeaders';
 import logResponseTime from '#utilities/logResponseTime';

@@ -1,14 +1,15 @@
 /* eslint-disable react/no-danger */
 import type { ReactElement, ScriptHTMLAttributes } from 'react';
+
 import IfAboveIE9 from '#app/legacy/components/IfAboveIE9Comment';
 import NO_JS_CLASSNAME from '#app/lib/noJs.const';
+import addOperaMiniClassScript from '#app/lib/utilities/addOperaMiniClassScript';
 import { getProcessEnvAppVariables } from '#app/lib/utilities/getEnvConfig';
 import serialiseForScript from '#app/lib/utilities/serialiseForScript';
 import CanonicalToLiteRedirect from '#utilities/CanonicalToLiteRedirect';
-import addOperaMiniClassScript from '#app/lib/utilities/addOperaMiniClassScript';
-import { BaseRendererProps } from './types';
-import ReverbTemplate from './ReverbTemplate';
 import ComponentTracking from './ComponentTracking';
+import ReverbTemplate from './ReverbTemplate';
+import { BaseRendererProps } from './types';
 
 interface Props extends BaseRendererProps {
   data: Record<string, unknown>;

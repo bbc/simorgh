@@ -1,4 +1,5 @@
 import { NextPageContext } from 'next/types';
+
 import addPlatformToRequestChainHeader from '#utilities/addPlatformToRequestChainHeader';
 
 const addServiceChainHeader = ({ ctx }: { ctx: NextPageContext }) => {

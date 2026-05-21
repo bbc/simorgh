@@ -1,4 +1,5 @@
 import { NextPageContext } from 'next/types';
+
 import getAssetOrigins from '#utilities/getAssetOrigins';
 
 const addLinkHeader = ({ ctx }: { ctx: NextPageContext }) => {

@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+
 import { HeadToHeadV2Data } from '#app/components-webcore/SportDataHeader/head-to-head-v2/types';
 import makeRequest from './makeRequest';
 

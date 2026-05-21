@@ -1,12 +1,13 @@
+import { Helmet } from 'react-helmet';
+
+import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
-import { HOME_PAGE } from '#app/routes/utils/pageTypes';
-import { Helmet } from 'react-helmet';
-import { render } from '../react-testing-library-with-providers';
 import {
   ServiceContext,
   ServiceContextProvider,
 } from '../../contexts/ServiceContext';
+import { render } from '../react-testing-library-with-providers';
 import AdContainer from './index';
 
 const context = {

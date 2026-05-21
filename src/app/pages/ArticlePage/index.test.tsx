@@ -1,9 +1,29 @@
 import { PropsWithChildren } from 'react';
-import { Helmet } from 'react-helmet';
+
 import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
+import { Helmet } from 'react-helmet';
+
+import { portraitVideoFixture } from '#app/components/PortraitVideoCarousel/fixture';
+import * as clickTracking from '#app/hooks/useClickTrackerHandler';
+import * as viewTracking from '#app/hooks/useViewTracker';
+import { suppressPropWarnings } from '#app/legacy/psammead/psammead-test-helpers/src';
+import { Curation } from '#app/models/types/curationData';
+import { Services } from '#app/models/types/global';
+import { Article, OptimoBlock } from '#app/models/types/optimo';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
+import { data as newsMostReadData } from '#data/news/mostRead/index.json';
+import { data as persianMostReadData } from '#data/persian/mostRead/index.json';
+import { data as pidginMostReadData } from '#data/pidgin/mostRead/index.json';
+import isLive from '#lib/utilities/isLive';
 import {
+  blockContainingText,
+  singleTextBlock,
+  textBlock,
+} from '#models/blocks/index';
+import {
+  articleDataHindi,
   articleDataNews,
   articleDataNewsWithEmbeds,
   articleDataPersian,
@@ -12,41 +32,23 @@ import {
   articleDataPidginWithAds,
   articleDataPidginWithByline,
   articleDataPidginWithSubByline,
-  articleDataRussianWithPVButNoWatchMomentsTranslation,
   articleDataPortugueseWithPVNotUnderHeadline,
   articleDataPortugueseWithPVUnderHeadline,
-  articleDataHindi,
-  promoSample,
+  articleDataRussianWithPVButNoWatchMomentsTranslation,
   articlePglDataPidgin,
   articleStyDataPidgin,
+  promoSample,
 } from '#pages/ArticlePage/fixtureData';
-import { data as newsMostReadData } from '#data/news/mostRead/index.json';
-import { data as persianMostReadData } from '#data/persian/mostRead/index.json';
-import { data as pidginMostReadData } from '#data/pidgin/mostRead/index.json';
-import { portraitVideoFixture } from '#app/components/PortraitVideoCarousel/fixture';
+import * as ATIAnalytics from '../../components/ATIAnalytics';
 import {
-  textBlock,
-  blockContainingText,
-  singleTextBlock,
-} from '#models/blocks/index';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import { suppressPropWarnings } from '#app/legacy/psammead/psammead-test-helpers/src';
-import { Services } from '#app/models/types/global';
-import { Curation } from '#app/models/types/curationData';
-import { Article, OptimoBlock } from '#app/models/types/optimo';
-import * as clickTracking from '#app/hooks/useClickTrackerHandler';
-import * as viewTracking from '#app/hooks/useViewTracker';
-import isLive from '#lib/utilities/isLive';
-import {
+  act,
   render,
   screen,
   waitFor,
-  act,
 } from '../../components/react-testing-library-with-providers';
+import ThemeProvider from '../../components/ThemeProvider';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ArticlePage from './ArticlePage';
-import ThemeProvider from '../../components/ThemeProvider';
-import * as ATIAnalytics from '../../components/ATIAnalytics';
 
 jest.mock('../../components/ThemeProvider');
 

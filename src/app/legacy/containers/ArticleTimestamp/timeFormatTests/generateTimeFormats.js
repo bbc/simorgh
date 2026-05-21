@@ -1,7 +1,8 @@
 import fs from 'fs';
 import path from 'path';
+
 import services from '#utilities/serviceConfigs';
-import { timestampsFixtures, format } from './testUtils';
+import { format, timestampsFixtures } from './testUtils';
 
 const filePath = path.join(__dirname, './expectedFormats.json');
 

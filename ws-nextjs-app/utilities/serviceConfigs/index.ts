@@ -5,7 +5,6 @@
   bundle splitting to stop working.
 */
 
-import { ServiceConfig } from '#app/models/types/serviceConfig';
 import { service as afaanoromoo } from '#app/lib/config/services/afaanoromoo';
 import { service as afrique } from '#app/lib/config/services/afrique';
 import { service as amharic } from '#app/lib/config/services/amharic';
@@ -41,10 +40,10 @@ import { service as punjabi } from '#app/lib/config/services/punjabi';
 import { service as romania } from '#app/lib/config/services/romania';
 import { service as russian } from '#app/lib/config/services/russian';
 import { service as scotland } from '#app/lib/config/services/scotland';
-import { service as sport } from '#app/lib/config/services/sport';
 import { service as serbian } from '#app/lib/config/services/serbian';
 import { service as sinhala } from '#app/lib/config/services/sinhala';
 import { service as somali } from '#app/lib/config/services/somali';
+import { service as sport } from '#app/lib/config/services/sport';
 import { service as swahili } from '#app/lib/config/services/swahili';
 import { service as tamil } from '#app/lib/config/services/tamil';
 import { service as telugu } from '#app/lib/config/services/telugu';
@@ -59,11 +58,11 @@ import { service as vietnamese } from '#app/lib/config/services/vietnamese';
 import { service as ws } from '#app/lib/config/services/ws';
 import { service as yoruba } from '#app/lib/config/services/yoruba';
 import { service as zhongwen } from '#app/lib/config/services/zhongwen';
-
 import {
   ServicesWithNoVariants,
   ServicesWithVariants,
 } from '#app/models/types/global';
+import { ServiceConfig } from '#app/models/types/serviceConfig';
 
 type ServiceConfigsNoVariants = {
   [_service in ServicesWithNoVariants['service']]: {

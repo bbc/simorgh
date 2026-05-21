@@ -1,8 +1,9 @@
 /* eslint-disable react/no-danger */
-import { ReactElement, PropsWithChildren } from 'react';
+import { PropsWithChildren, ReactElement } from 'react';
+
 import { OptOutOfLiteRedirect } from '#utilities/CanonicalToLiteRedirect';
-import { BaseRendererProps } from './types';
 import ComponentTracking from './ComponentTracking';
+import { BaseRendererProps } from './types';
 
 interface Props extends BaseRendererProps {
   bodyContent: ReactElement;
