@@ -49,8 +49,6 @@ import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ArticlePage from './ArticlePage';
 import ThemeProvider from '../../components/ThemeProvider';
 import * as ATIAnalytics from '../../components/ATIAnalytics';
-import { id } from 'happy-dom/lib/PropertySymbol';
-import { is } from 'ramda';
 
 jest.mock('../../components/ThemeProvider');
 
