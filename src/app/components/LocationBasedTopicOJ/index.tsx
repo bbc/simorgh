@@ -25,19 +25,25 @@ const LocationBasedTopicOJ = ({ pageData }: { pageData: Article }) => {
   const viewTracker = useViewTracker(eventTrackingData);
   const subheadingClickTracker = useClickTrackerHandler(eventTrackingData);
 
+  const sectionHeadingId = 'location-based-topic-oj';
+
   if (!countryCuration) {
     return null;
   }
 
   return (
     <section
-      aria-labelledby="location-based-topic-oj"
+      aria-labelledby={sectionHeadingId}
       role="region"
       {...viewTracker}
       css={styles.relatedContentSection}
     >
       {title && (
-        <Subheading link={link} {...subheadingClickTracker}>
+        <Subheading
+          id={sectionHeadingId}
+          link={link}
+          {...subheadingClickTracker}
+        >
           {title}
         </Subheading>
       )}
