@@ -341,7 +341,7 @@ const ArticlePage = ({
     setIsVideoModalOpen(false);
 
     if (watchArticlePath && typeof window !== 'undefined') {
-      window.location.assign(watchArticlePath);
+      window.history.replaceState(window.history.state, '', watchArticlePath);
     }
   }, [watchArticlePath]);
 
