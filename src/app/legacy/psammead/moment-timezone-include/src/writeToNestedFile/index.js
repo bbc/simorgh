@@ -7,7 +7,7 @@ const writeToNestedFile = (filePath, contents) => {
   const fullFilePath = path.join(__dirname, filePath);
   const folder = path.dirname(fullFilePath);
 
-  if (!fs.existsSync(folder)) fs.mkdirSync(folder, true);
+  if (!fs.existsSync(folder)) fs.mkdirSync(folder, { recursive: true });
 
   fs.writeFileSync(fullFilePath, contents);
 
