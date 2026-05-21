@@ -12,9 +12,10 @@ export default async (
     const response = await fetch(fetchUrl);
     const { status } = response;
     const { data } = await response.json();
+    const sportEventData = data?.sportDataEvent;
 
-    if (status === 200 && data) {
-      return data;
+    if (status === 200 && sportEventData) {
+      return sportEventData;
     }
 
     return null;
