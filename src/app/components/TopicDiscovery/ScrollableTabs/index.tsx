@@ -2,8 +2,9 @@ import { useCallback, useEffect, useRef, useState, use } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { Chevron, ChevronOrientation } from '#app/components/icons';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
-import styles from './index.styles';
 import { ComponentExperimentProps } from '#app/models/types/global';
+
+import styles from './index.styles';
 
 type ScrollableTabsProps = {
   tabs: { id: string; label: string }[];
