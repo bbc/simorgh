@@ -29,6 +29,13 @@ import {
 import suspendedMockData from '../static-data/event/transformed/suspended.json';
 import type { HeadToHeadV2Data } from '../types';
 
+jest.mock('#app/hooks/useSportDataPolling', () => ({
+  __esModule: true,
+  default: jest.fn(initialSportData => ({
+    currentSportData: initialSportData,
+  })),
+}));
+
 interface RenderOptions {
   data: HeadToHeadV2Data;
   isConciseView?: boolean;
@@ -42,7 +49,7 @@ const renderHeadToHead = ({
 }: RenderOptions) =>
   render(
     <HeadToHead
-      data={data}
+      initialSportData={data}
       isConciseView={isConciseView}
       shouldShowActions={shouldShowActions}
     />,

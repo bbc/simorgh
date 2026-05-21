@@ -11,7 +11,7 @@ import sportDataFixture from '#data/afrique/live/c7gk1vjglxn1t.json';
 import { GetServerSidePropsContext } from 'next';
 import MockIntersectionObserver from '#app/components/intersection-observer-testing-library';
 import * as useLivePagePolling from '#app/hooks/useLivePagePolling';
-import * as isLiveEnvModule from '#app/lib/utilities/isLive';
+import useToggle from '#app/hooks/useToggle';
 import Live, { ComponentProps } from './LivePageLayout';
 import { getServerSideProps } from './[[...variant]].page';
 import { StreamResponse } from './Post/types';
@@ -29,14 +29,19 @@ jest.mock('#app/lib/utilities/isLive', () => ({
 jest.mock('#app/components-webcore/SportDataHeader/head-to-head-v2', () => ({
   __esModule: true,
   default: jest.fn(
-    ({ data, isConciseView, shouldHideBadges, shouldShowActions }) => (
+    ({
+      initialSportData,
+      isConciseView,
+      shouldHideBadges,
+      shouldShowActions,
+    }) => (
       <div
         data-testid="head-to-head-v2"
         data-concise={String(isConciseView)}
         data-hide-badges={String(shouldHideBadges)}
         data-show-actions={String(shouldShowActions)}
       >
-        {data?.home?.fullName} vs {data?.away?.fullName}
+        {initialSportData?.home?.fullName} vs {initialSportData?.away?.fullName}
       </div>
     ),
   ),
@@ -45,6 +50,11 @@ jest.mock('#app/components-webcore/SportDataHeader/head-to-head-v2', () => ({
 jest.mock('#app/components/PortraitVideoCarousel', () => ({
   __esModule: true,
   default: jest.fn(() => <div data-testid="portrait-video-carousel" />),
+}));
+
+jest.mock('#app/hooks/useToggle', () => ({
+  __esModule: true,
+  default: jest.fn(() => ({ enabled: true })),
 }));
 
 type HelmetMetaTag = {
@@ -59,6 +69,7 @@ const mockPageData = {
     block: 'Its a block',
   },
   liveTextStream: {
+    id: 'mock-stream-id',
     content: {
       data: {
         results: [],
@@ -88,6 +99,7 @@ const mockPageDataWithPosts = {
     block: 'Its a block',
   },
   liveTextStream: {
+    id: 'mock-stream-id',
     content: postFixture,
     contributors: 'Not a random dude',
   },
@@ -104,6 +116,7 @@ const mockPageDataWithoutKeyPoints = {
     content: null,
   },
   liveTextStream: {
+    id: 'mock-stream-id',
     content: postFixture,
     contributors: 'Not a random dude',
   },
@@ -116,9 +129,9 @@ const mockPageDataWithPortraitVideoItems = {
     portraitVideo: {
       blocks: [
         {
-          type: 'portraitClipMedia',
+          type: 'portraitClipMedia' as const,
           model: {
-            type: 'video',
+            type: 'video' as const,
             images: [
               {
                 source:
@@ -411,6 +424,7 @@ describe('Live Page', () => {
     const paginatedData = {
       ...mockPageData,
       liveTextStream: {
+        id: 'mock-stream-id',
         content: {
           data: {
             results: [],
@@ -446,6 +460,7 @@ describe('Live Page', () => {
         dateModified: '2024-03-12T11:00:52+00:00',
       },
       liveTextStream: {
+        id: 'mock-stream-id',
         content: {
           data: {
             results: [],
@@ -668,6 +683,7 @@ describe('Live Page', () => {
           live: true,
         },
       } as unknown as ComponentProps['pageData'];
+
       mockPollingUpdate(pageDataWithSportData);
 
       await act(async () => {
@@ -803,14 +819,14 @@ describe('Live Page', () => {
       expect(screen.queryByTestId('head-to-head-v2')).not.toBeInTheDocument();
     });
 
-    it('should not render HeadToHeadV2 when in live environment', async () => {
+    it('should not render HeadToHeadV2 when sportHeaderEnabled toggle is disabled', async () => {
       const pageDataWithSportData = {
         ...mockPageData,
         sportDataEventContent: sportDataFixture.data.sportDataEventContent,
       } as unknown as ComponentProps['pageData'];
       mockPollingUpdate(pageDataWithSportData);
 
-      jest.spyOn(isLiveEnvModule, 'default').mockReturnValue(true);
+      (useToggle as jest.Mock).mockReturnValue({ enabled: false });
 
       await act(async () => {
         render(<Live pageData={pageDataWithSportData} />);
@@ -818,7 +834,7 @@ describe('Live Page', () => {
 
       expect(screen.queryByTestId('head-to-head-v2')).not.toBeInTheDocument();
 
-      jest.spyOn(isLiveEnvModule, 'default').mockReturnValue(false);
+      (useToggle as jest.Mock).mockReturnValue({ enabled: true });
     });
 
     it('should render Header when sportDataEventContent is not present', async () => {

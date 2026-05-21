@@ -1,21 +1,21 @@
 // import { BREAKPOINT_VIEWPORTS } from '@bbc/web-gel-foundations';
 // import { INITIAL_VIEWPORTS } from 'storybook/viewport';
 import fixtureData from '#data/afrique/live/c7gk1vjglxn1t.json';
-import HeadToHeadV2 from '.';
-import metadata from './metadata.json';
-import readme from './README.md';
-import abandonedEventData from './static-data/event/transformed/abandoned.json';
 import cancelledEventData from './static-data/event/transformed/cancelled.json';
 import postponedEventData from './static-data/event/transformed/postponed.json';
-import { preEventData } from './static-data/event/transformed/pre-event/index';
+import abandonedEventData from './static-data/event/transformed/abandoned.json';
 import suspendedEventData from './static-data/event/transformed/suspended.json';
-import venuesData from './static-data/premier-league-venues.json';
+import { preEventData } from './static-data/event/transformed/pre-event/index';
 import {
   HeadToHeadV2Component,
   HeadToHeadV2ConciseComponent,
 } from './storybook/helpers/base-component';
-import { SHORT_NAMES } from './storybook/helpers/short-name-map';
+import readme from './README.md';
+import metadata from './metadata.json';
 import type { HeadToHeadV2Data } from './types';
+import HeadToHeadV2 from '.';
+import { SHORT_NAMES } from './storybook/helpers/short-name-map';
+import venuesData from './static-data/premier-league-venues.json';
 
 const { venues } = venuesData;
 
@@ -69,7 +69,7 @@ type StoryData = HeadToHeadV2Data & {
 };
 
 interface ComponentProps {
-  data: StoryData;
+  initialSportData: StoryData;
   isConciseView?: boolean;
   shouldShowActions?: boolean;
   maximumContainerScoreDigits?: number;
@@ -80,24 +80,30 @@ const baseData = fixtureData.data.sportDataEventContent
   .sportDataEvent as unknown as StoryData;
 
 const Component = ({
-  data,
+  initialSportData,
   isConciseView = false,
   shouldShowActions = true,
   maximumContainerScoreDigits,
   teamBadgePlaceholderFallbackType = 'badge',
-}: ComponentProps) => (
-  <HeadToHeadV2
-    data={data}
-    isConciseView={isConciseView}
-    shouldShowActions={shouldShowActions}
-    maximumContainerScoreDigits={maximumContainerScoreDigits}
-    teamBadgePlaceholderFallbackType={teamBadgePlaceholderFallbackType}
-  />
-);
+}: ComponentProps) => {
+  return (
+    <HeadToHeadV2
+      initialSportData={initialSportData}
+      isConciseView={isConciseView}
+      shouldShowActions={shouldShowActions}
+      maximumContainerScoreDigits={maximumContainerScoreDigits}
+      teamBadgePlaceholderFallbackType={teamBadgePlaceholderFallbackType}
+    />
+  );
+};
 
-export const Default = () => <Component data={baseData} />;
+export const Default = () => <Component initialSportData={baseData} />;
 export const ConciseView = () => (
-  <Component data={baseData} isConciseView shouldShowActions={false} />
+  <Component
+    initialSportData={baseData}
+    isConciseView
+    shouldShowActions={false}
+  />
 );
 
 export const CancelledEvent = HeadToHeadV2Component.bind({});
@@ -113,6 +119,7 @@ export const EventWithOnwardJourneyHoverConcise =
 
 // @ts-expect-error - PS copy and paste
 CancelledEvent.args = {
+  urn: 'urn:bbc:sportsdata:football:event:s-3y91hnyfjh24yxjhm77a7hy50',
   home: 'Fulham',
   away: 'Liverpool',
   baseData: cancelledEventData,

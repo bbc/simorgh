@@ -1,33 +1,31 @@
-import { RefObject, use, useRef, useState } from 'react';
-
-import ATIAnalytics from '#app/components/ATIAnalytics';
-import { ATIData } from '#app/components/ATIAnalytics/types';
-import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
-import LinkedDataContainer from '#app/components/LinkedData';
-import { MediaCollection } from '#app/components/MediaLoader/types';
-import MetadataContainer from '#app/components/Metadata';
+import { use, useState, useRef, RefObject } from 'react';
+import { ServiceContext } from '#contexts/ServiceContext';
 import Pagination from '#app/components/Pagination';
 import PortraitVideoCarousel from '#app/components/PortraitVideoCarousel';
+import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
+import ATIAnalytics from '#app/components/ATIAnalytics';
+import { ATIData } from '#app/components/ATIAnalytics/types';
+import { RequestContext } from '#app/contexts/RequestContext';
+import MetadataContainer from '#app/components/Metadata';
+import LinkedDataContainer from '#app/components/LinkedData';
+import getLiveBlogPostingSchema from '#app/lib/seoUtils/getLiveBlogPostingSchema';
+import { MediaCollection } from '#app/components/MediaLoader/types';
 import HeadToHeadV2 from '#app/components-webcore/SportDataHeader/head-to-head-v2';
 import { HeadToHeadV2Data } from '#app/components-webcore/SportDataHeader/head-to-head-v2/types';
-import { RequestContext } from '#app/contexts/RequestContext';
+import { PortraitVideoItems } from '#app/models/types/optimo';
 import useLivePagePolling from '#app/hooks/useLivePagePolling';
 import useToggle from '#app/hooks/useToggle';
-import getLiveBlogPostingSchema from '#app/lib/seoUtils/getLiveBlogPostingSchema';
-import isLiveEnv from '#app/lib/utilities/isLive';
-import { PortraitVideoItems } from '#app/models/types/optimo';
-import { ServiceContext } from '#contexts/ServiceContext';
 import {
-  getHeadlineFromPost,
   getImageFromPost,
+  getHeadlineFromPost,
 } from '../../../../utilities/getFromPost';
+import Stream from './Stream';
 import Header from './Header';
 import KeyPoints from './KeyPoints';
+import styles from './styles';
+import { StreamResponse } from './Post/types';
 import { KeyPointsResponse } from './KeyPoints/types';
 import LatestPostButton from './LatestPostButton';
-import { StreamResponse } from './Post/types';
-import Stream from './Stream';
-import styles from './styles';
 
 interface LivePromoImage {
   url: string;
@@ -89,6 +87,7 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
   } = use(ServiceContext);
   const { canonicalNonUkLink } = use(RequestContext);
   const { enabled: livePagePollingEnabled } = useToggle('livePagePolling');
+  const { enabled: sportHeaderEnabled } = useToggle('showSportDataHeader');
 
   const streamRef = useRef<HTMLDivElement>(null);
   const [isFirstPostVisible, setIsFirstPostVisible] = useState(true);
@@ -113,10 +112,12 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
   const { currentStreamData, hasPendingUpdate, applyPendingUpdate } =
     useLivePagePolling(pageData, livePagePollingEnabled && isLive);
 
-  const sportData = sportDataEventContent?.sportDataEvent;
-  const isSportDataLive = sportDataEventContent?.live;
-  const sportDataTitle = sportDataEventContent?.title;
-  const showSportData = !!sportData && !isLiveEnv();
+  const {
+    sportDataEvent: sportData,
+    live: isSportDataLive,
+    title: sportDataTitle,
+  } = sportDataEventContent || {};
+  const showSportData = !!sportData && Boolean(sportHeaderEnabled);
 
   const {
     url: imageUrl,
@@ -216,7 +217,6 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
       <main>
         <Header
           showLiveLabel={showSportData ? (isSportDataLive ?? isLive) : isLive}
-          // biome-ignore lint/complexity/noExtraBooleanCast: we want this
           title={showSportData && !!sportDataTitle ? sportDataTitle : title}
           description={description}
           imageUrl={imageUrl}
@@ -227,9 +227,10 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
         />
         {showSportData && (
           <HeadToHeadV2
-            data={sportData}
+            initialSportData={sportData}
             isConciseView={false} // defaulted to false for developement/ MVP
             shouldShowActions={false} // defaulted to false for developement/ MVP
+            isSportDataLive={isSportDataLive}
           />
         )}
         <div css={styles.outerGrid}>
