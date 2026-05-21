@@ -1,6 +1,4 @@
-import { FetchMock } from 'jest-fetch-mock';
 import pashtoPageData from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn4.json';
-import getInitialData from '#app/routes/onDemandTV/getInitialData';
 import withMediaError from '#lib/utilities/episodeAvailability/withMediaError';
 import { TV_PAGE } from '#app/routes/utils/pageTypes';
 import { Services } from '#app/models/types/global';
@@ -26,6 +24,22 @@ interface Props {
   service: Services;
 }
 
+const getPageData = (): OnDemandTVProps['pageData'] => {
+  const maxRecentEpisodes = toggles.recentVideoEpisodes.enabled
+    ? toggles.recentVideoEpisodes.value || 4
+    : 0;
+
+  const recentEpisodes = maxRecentEpisodes
+    ? pashtoPageData?.data?.recentEpisodes?.slice(0, maxRecentEpisodes)
+    : null;
+
+  return {
+    ...(pashtoPageData?.data as unknown as OnDemandTVProps['pageData']),
+    // @ts-expect-error - Mocked data doesn't have all the required fields
+    recentEpisodes,
+  };
+};
+
 const renderPage = async ({ pageData, service }: Props) => {
   let result;
   await act(async () => {
@@ -36,13 +50,12 @@ const renderPage = async ({ pageData, service }: Props) => {
       pathname: '/pathname',
       service,
       statusCode: 200,
+      toggles,
     });
   });
 
   return result;
 };
-
-const fetchMock = fetch as FetchMock;
 
 jest.mock('../../components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
@@ -57,17 +70,8 @@ describe('OnDemand TV Page ', () => {
   });
 
   it('a11y - should render a visually hidden headline', async () => {
-    fetchMock.mockResponse(JSON.stringify(pashtoPageData));
-
-    const { pageData } = await getInitialData({
-      path: 'some-ondemand-tv-path',
-      service: 'pashto',
-      pageType,
-      toggles,
-    });
-
     await renderPage({
-      pageData,
+      pageData: getPageData(),
       service: 'pashto',
     });
 
@@ -82,16 +86,8 @@ describe('OnDemand TV Page ', () => {
   });
 
   it('should show the brand title for OnDemand TV Pages', async () => {
-    fetchMock.mockResponse(JSON.stringify(pashtoPageData));
-
-    const { pageData } = await getInitialData({
-      path: 'some-ondemand-tv-path',
-      service: 'pashto',
-      pageType,
-      toggles,
-    });
     const { getByTestId } = await renderPage({
-      pageData,
+      pageData: getPageData(),
       service: 'pashto',
     });
 
@@ -102,16 +98,8 @@ describe('OnDemand TV Page ', () => {
   });
 
   it('a11y - should aria-hide the title', async () => {
-    fetchMock.mockResponse(JSON.stringify(pashtoPageData));
-
-    const { pageData } = await getInitialData({
-      path: 'some-ondemand-tv-path',
-      service: 'pashto',
-      pageType,
-      toggles,
-    });
     const { container } = await renderPage({
-      pageData,
+      pageData: getPageData(),
       service: 'pashto',
     });
 
@@ -122,16 +110,8 @@ describe('OnDemand TV Page ', () => {
   });
 
   it('a11y - should have a "content" id on the h1', async () => {
-    fetchMock.mockResponse(JSON.stringify(pashtoPageData));
-
-    const { pageData } = await getInitialData({
-      path: 'some-ondemand-tv-path',
-      service: 'pashto',
-      pageType,
-      toggles,
-    });
     const { container } = await renderPage({
-      pageData,
+      pageData: getPageData(),
       service: 'pashto',
     });
 
@@ -139,16 +119,8 @@ describe('OnDemand TV Page ', () => {
   });
 
   it('Dark Mode Design - should match snapshot', async () => {
-    fetchMock.mockResponse(JSON.stringify(pashtoPageData));
-
-    const { pageData } = await getInitialData({
-      path: 'some-ondemand-tv-path',
-      service: 'pashto',
-      pageType,
-      toggles,
-    });
     const { container } = await renderPage({
-      pageData,
+      pageData: getPageData(),
       service: 'pashto',
     });
 
@@ -156,16 +128,8 @@ describe('OnDemand TV Page ', () => {
   });
 
   it('should show the datestamp correctly for Pashto OnDemand TV Pages', async () => {
-    fetchMock.mockResponse(JSON.stringify(pashtoPageData));
-
-    const { pageData } = await getInitialData({
-      path: 'some-ondemand-tv-path',
-      service: 'pashto',
-      pageType,
-      toggles,
-    });
     const { getByText } = await renderPage({
-      pageData,
+      pageData: getPageData(),
       service: 'pashto',
     });
 
@@ -173,16 +137,8 @@ describe('OnDemand TV Page ', () => {
   });
 
   it('should show the summary for OnDemand TV Pages', async () => {
-    fetchMock.mockResponse(JSON.stringify(pashtoPageData));
-
-    const { pageData } = await getInitialData({
-      path: 'some-ondemand-tv-path',
-      service: 'pashto',
-      pageType,
-      toggles,
-    });
     const { getByText } = await renderPage({
-      pageData,
+      pageData: getPageData(),
       service: 'pashto',
     });
 
@@ -193,15 +149,9 @@ describe('OnDemand TV Page ', () => {
 
   it('should show the video player', async () => {
     process.env.SIMORGH_APP_ENV = 'live';
-    fetchMock.mockResponse(JSON.stringify(pashtoPageData));
-    const { pageData } = await getInitialData({
-      path: 'some-ondemand-tv-path',
-      service: 'pashto',
-      pageType,
-      toggles,
-    });
+
     const { container } = await renderPage({
-      pageData,
+      pageData: getPageData(),
       service: 'pashto',
     });
 
@@ -213,18 +163,11 @@ describe('OnDemand TV Page ', () => {
   });
 
   it('should show the expired content message if episode is expired', async () => {
-    const pageDataWithExpiredEpisode = {
-      ...pashtoPageData,
-    };
-    pageDataWithExpiredEpisode.data.episodeAvailability = 'expired';
+    const pageData = {
+      ...getPageData(),
+      episodeAvailability: 'expired',
+    } as unknown as OnDemandTVProps['pageData'];
 
-    fetchMock.mockResponse(JSON.stringify(pageDataWithExpiredEpisode));
-    const { pageData } = await getInitialData({
-      path: 'some-ondemand-tv-path',
-      service: 'pashto',
-      pageType,
-      toggles,
-    });
     const { container, getByText } = await renderPage({
       pageData,
       service: 'pashto',
@@ -236,16 +179,11 @@ describe('OnDemand TV Page ', () => {
   });
 
   it('should show the future content message if episode is not yet available', async () => {
-    const pageDataWithFutureEpisode = { ...pashtoPageData };
-    pageDataWithFutureEpisode.data.episodeAvailability = 'not-yet-available';
+    const pageData = {
+      ...getPageData(),
+      episodeAvailability: 'not-yet-available',
+    } as unknown as OnDemandTVProps['pageData'];
 
-    fetchMock.mockResponse(JSON.stringify(pageDataWithFutureEpisode));
-    const { pageData } = await getInitialData({
-      path: 'some-ondemand-tv-path',
-      service: 'pashto',
-      pageType,
-      toggles,
-    });
     const { container, getByText } = await renderPage({
       pageData,
       service: 'pashto',
