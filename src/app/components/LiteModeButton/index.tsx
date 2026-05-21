@@ -24,7 +24,7 @@ export default () => {
     <CallToActionLink
       url={isLite ? canonicalLink : liteLink}
       {...(isLite && { 'data-ignore-lite': true })}
-      css={[style.container, style.containerWithAccount]}
+      css={style.container}
       {...clickTrackerHandler}
     >
       <span css={[style.mode, !isLite && style.on]}>Classic</span>

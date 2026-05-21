@@ -130,8 +130,10 @@ const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
           scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
           css={headerBrandCss}
         >
-          <LiteModeButton />
-          <AccountHeader />
+          <div css={styles.toggleContainer}>
+            <AccountHeader />
+            <LiteModeButton />
+          </div>
         </Header>
       )}
       {isLite && <LiteSiteSummary />}
