@@ -13,7 +13,7 @@ export interface SaveButtonProps {
   isUpdating?: boolean;
   isSaved?: boolean;
   disabled?: boolean;
-  buttonText: string;
+  buttonText?: string;
   removeText?: string;
   testId?: string;
 }
