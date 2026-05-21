@@ -7,19 +7,19 @@ describe('makeRequest', () => {
       jest.fn(() =>
         Promise.resolve({
           status: 200,
-          json: () => Promise.resolve({ data: fixtureSportDataUpdate }),
+          json: () => Promise.resolve(fixtureSportDataUpdate),
         }),
       ) as jest.Mock,
     );
 
     const result = await makeRequest('urn:bbc:sportsdata:football:event:123');
-    expect(result).toStrictEqual(fixtureSportDataUpdate);
+    expect(result).toStrictEqual(fixtureSportDataUpdate.data.sportDataEvent);
   });
 
   it('should return null on non-200 responses', async () => {
     jest.spyOn(global, 'fetch').mockResolvedValue({
       status: 301,
-      json: async () => ({ data: fixtureSportDataUpdate }),
+      json: async () => fixtureSportDataUpdate,
     } as Response);
 
     const result = await makeRequest('urn:bbc:sportsdata:football:event:123');
@@ -28,6 +28,16 @@ describe('makeRequest', () => {
 
   it('should return null when fetch throws', async () => {
     jest.spyOn(global, 'fetch').mockRejectedValue(new Error('Network error'));
+
+    const result = await makeRequest('urn:bbc:sportsdata:football:event:123');
+    expect(result).toBeNull();
+  });
+
+  it('should return null when response data is missing', async () => {
+    jest.spyOn(global, 'fetch').mockResolvedValue({
+      status: 200,
+      json: async () => ({}),
+    } as Response);
 
     const result = await makeRequest('urn:bbc:sportsdata:football:event:123');
     expect(result).toBeNull();

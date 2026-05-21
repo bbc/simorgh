@@ -1,132 +1,140 @@
 export default {
-  urn: 'urn:bbc:sportsdata:football:event:s-3y91hnyfjh24yxjhm77a7hy50',
-  home: {
-    id: 'ej5er0oyngdw138yuumwqbyqt',
-    fullName: 'Bologna',
-    shortName: 'Bologna',
-    urn: 'urn:bbc:sportsdata:football:team:bologna',
-    runningScores: {
-      halftime: '0',
-      fulltime: '2',
-      aggregate: '2',
-    },
-    scoreUnconfirmed: '2',
-    actions: [
-      {
-        playerUrn:
-          'urn:bbc:sportsdata:football:player:s-2bmeynv0dhsc8sjfuaprkexre',
-        playerName: 'J. Rowe',
-        actionType: 'goal',
+  data: {
+    title: 'PSG edge out Bayern in record nine-goal semi-final first leg',
+    live: false,
+    startDateTime: '2026-04-28T17:30:00.000Z',
+    countingServiceDataAverage: 0,
+    sportDataEvent: {
+      urn: 'urn:bbc:sportsdata:football:event:s-3y91hnyfjh24yxjhm77a7hy50',
+      home: {
+        id: 'ej5er0oyngdw138yuumwqbyqt',
+        fullName: 'Bologna',
+        shortName: 'Bologna',
+        urn: 'urn:bbc:sportsdata:football:team:bologna',
+        runningScores: {
+          halftime: '0',
+          fulltime: '2',
+          aggregate: '2',
+        },
+        scoreUnconfirmed: '2',
         actions: [
           {
-            type: 'Goal',
-            typeLabel: { value: 'Goal', accessible: 'Goal' },
-            timeLabel: {
-              value: "90'",
-              accessible: '90 minutes',
-            },
+            playerUrn:
+              'urn:bbc:sportsdata:football:player:s-2bmeynv0dhsc8sjfuaprkexre',
+            playerName: 'J. Rowe',
+            actionType: 'goal',
+            actions: [
+              {
+                type: 'Goal',
+                typeLabel: { value: 'Goal', accessible: 'Goal' },
+                timeLabel: {
+                  value: "90'",
+                  accessible: '90 minutes',
+                },
+              },
+            ],
           },
         ],
+        score: '2',
       },
-    ],
-    score: '2',
-  },
-  away: {
-    id: 'b496gs285it6bheuikox6z9mj',
-    fullName: 'Aston Villa',
-    shortName: 'Aston Villa',
-    urn: 'urn:bbc:sportsdata:football:team:aston-villa',
-    runningScores: {
-      halftime: '1',
-      fulltime: '3',
-      aggregate: '3',
-    },
-    scoreUnconfirmed: '3',
-    actions: [
-      {
-        playerUrn:
-          'urn:bbc:sportsdata:football:player:s-8qys6qtdwgsycxducl062zld5',
-        playerName: 'E. Konsa',
-        actionType: 'goal',
+      away: {
+        id: 'b496gs285it6bheuikox6z9mj',
+        fullName: 'Aston Villa',
+        shortName: 'Aston Villa',
+        urn: 'urn:bbc:sportsdata:football:team:aston-villa',
+        runningScores: {
+          halftime: '1',
+          fulltime: '3',
+          aggregate: '3',
+        },
+        scoreUnconfirmed: '3',
         actions: [
           {
-            type: 'Goal',
-            typeLabel: { value: 'Goal', accessible: 'Goal' },
-            timeLabel: {
-              value: "44'",
-              accessible: '44 minutes',
-            },
-          },
-        ],
-      },
-      {
-        playerUrn:
-          'urn:bbc:sportsdata:football:player:s-5m0j33eoa5c8pqlr0tdf7undh',
-        playerName: 'O. Watkins',
-        actionType: 'goal',
-        actions: [
-          {
-            type: 'Goal',
-            typeLabel: { value: 'Goal', accessible: 'Goal' },
-            timeLabel: {
-              value: "51'",
-              accessible: '51 minutes',
-            },
+            playerUrn:
+              'urn:bbc:sportsdata:football:player:s-8qys6qtdwgsycxducl062zld5',
+            playerName: 'E. Konsa',
+            actionType: 'goal',
+            actions: [
+              {
+                type: 'Goal',
+                typeLabel: { value: 'Goal', accessible: 'Goal' },
+                timeLabel: {
+                  value: "44'",
+                  accessible: '44 minutes',
+                },
+              },
+            ],
           },
           {
-            type: 'Goal',
-            typeLabel: { value: 'Goal', accessible: 'Goal' },
-            timeLabel: {
-              value: "90'+4",
-              accessible: '90 minutes plus 4',
-            },
+            playerUrn:
+              'urn:bbc:sportsdata:football:player:s-5m0j33eoa5c8pqlr0tdf7undh',
+            playerName: 'O. Watkins',
+            actionType: 'goal',
+            actions: [
+              {
+                type: 'Goal',
+                typeLabel: { value: 'Goal', accessible: 'Goal' },
+                timeLabel: {
+                  value: "51'",
+                  accessible: '51 minutes',
+                },
+              },
+              {
+                type: 'Goal',
+                typeLabel: { value: 'Goal', accessible: 'Goal' },
+                timeLabel: {
+                  value: "90'+4",
+                  accessible: '90 minutes plus 4',
+                },
+              },
+            ],
           },
         ],
+        score: '3',
       },
-    ],
-    score: '3',
-  },
-  time: {
-    accessibleTime: '20:00',
-    displayTimeUK: '20:00',
-    timeCertainty: true,
-  },
-  date: 'Thu 9 Apr 2026',
-  tournament: {
-    id: '4c1nfi2j1m731hcay25fcgndq',
-    name: 'UEFA Europa League',
-    disambiguatedName: 'UEFA Europa League',
-    urn: 'urn:bbc:sportsdata:football:tournament:europa-league',
-    thingsGuid: '2afbdda7-71d4-544d-bcc6-d9ff50314b2a',
-  },
-  stage: {
-    id: '7wxuj38kqm8bz3cmi15vu4w7o',
-    name: 'Quarter-finals',
-    urn: '',
-  },
-  multiLeg: {
-    leg: 1,
-    relatedMatchId: 's-9ur6e6w5f4ahyxph7ef4rks2c',
-  },
-  period: 'ft',
-  venue: {
-    id: '2nrn0y55nz9ee7p9adzbb7fta',
-    urn: 'urn:bbc:sportsdata:football:venue:s-2nrn0y55nz9ee7p9adzbb7fta',
-    name: "Stadio Renato Dall'Ara",
-    shortName: "Stadio Renato Dall'Ara",
-  },
-  attendance: { value: 31142 },
-  status: 'PostEvent',
-  periodLabel: { value: 'FT', accessible: 'Full time' },
-  winner: 'away',
-  tournamentDescriptionLabel: 'UEFA Europa League - Quarter-finals',
-  groupedActions: [
-    {
-      groupName: { fullName: 'Assists', shortName: 'Assists' },
-      homeTeamActions: ["J. Lucumí (90')"],
-      awayTeamActions: ["Y. Tielemans (44', 90'+4)", "E. Buendía (51')"],
+      time: {
+        accessibleTime: '20:00',
+        displayTimeUK: '20:00',
+        timeCertainty: true,
+      },
+      date: 'Thu 9 Apr 2026',
+      tournament: {
+        id: '4c1nfi2j1m731hcay25fcgndq',
+        name: 'UEFA Europa League',
+        disambiguatedName: 'UEFA Europa League',
+        urn: 'urn:bbc:sportsdata:football:tournament:europa-league',
+        thingsGuid: '2afbdda7-71d4-544d-bcc6-d9ff50314b2a',
+      },
+      stage: {
+        id: '7wxuj38kqm8bz3cmi15vu4w7o',
+        name: 'Quarter-finals',
+        urn: '',
+      },
+      multiLeg: {
+        leg: 1,
+        relatedMatchId: 's-9ur6e6w5f4ahyxph7ef4rks2c',
+      },
+      period: 'ft',
+      venue: {
+        id: '2nrn0y55nz9ee7p9adzbb7fta',
+        urn: 'urn:bbc:sportsdata:football:venue:s-2nrn0y55nz9ee7p9adzbb7fta',
+        name: "Stadio Renato Dall'Ara",
+        shortName: "Stadio Renato Dall'Ara",
+      },
+      attendance: { value: 31142 },
+      status: 'PostEvent',
+      periodLabel: { value: 'FT', accessible: 'Full time' },
+      winner: 'away',
+      tournamentDescriptionLabel: 'UEFA Europa League - Quarter-finals',
+      groupedActions: [
+        {
+          groupName: { fullName: 'Assists', shortName: 'Assists' },
+          homeTeamActions: ["J. Lucumí (90')"],
+          awayTeamActions: ["Y. Tielemans (44', 90'+4)", "E. Buendía (51')"],
+        },
+      ],
+      accessibleEventSummary: 'Bologna 1 , Aston Villa 3 at Full time',
+      sportDiscipline: 'football',
     },
-  ],
-  accessibleEventSummary: 'Bologna 1 , Aston Villa 3 at Full time',
-  sportDiscipline: 'football',
+  },
 };
