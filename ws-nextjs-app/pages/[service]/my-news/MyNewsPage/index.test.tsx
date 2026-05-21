@@ -5,7 +5,7 @@ import {
   waitFor,
 } from '#app/components/react-testing-library-with-providers';
 import useUASRecentActivity from '#app/hooks/useUASRecentActivity';
-import MyNewsPage from './MyNewsPage';
+import MyNewsPage from '.';
 
 jest.mock('#app/hooks/useUASRecentActivity');
 jest.mock('next/router', () => ({
