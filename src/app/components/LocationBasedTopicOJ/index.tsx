@@ -18,21 +18,23 @@ const LocationBasedTopicOJ = ({ pageData }: { pageData: Article }) => {
       name: title,
       type: 'location-based-topic-oj',
       ...(link && { link }),
-      ...(topicId && { topicId }),
+      ...(topicId && { resourceId: topicId }),
       ...(summaries?.length > 0 && { itemCount: summaries.length }),
     },
   };
+
   const viewTracker = useViewTracker(eventTrackingData);
   const subheadingClickTracker = useClickTrackerHandler(eventTrackingData);
 
-  const sectionHeadingId = 'location-based-topic-oj';
-
-  if (!countryCuration) {
+  if (!countryCuration?.summaries?.length) {
     return null;
   }
 
+  const sectionHeadingId = 'location-based-topic-oj';
+
   return (
     <section
+      data-testid={sectionHeadingId}
       aria-labelledby={sectionHeadingId}
       role="region"
       {...viewTracker}
