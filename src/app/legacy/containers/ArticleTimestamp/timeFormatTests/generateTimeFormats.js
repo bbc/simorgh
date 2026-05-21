@@ -1,9 +1,7 @@
-// biome-ignore-all lint/suspicious/noEmptyBlockStatements: we want this
-import fs from 'node:fs';
-import path from 'node:path';
-
-import services from '../../../../../server/utilities/serviceConfigs';
-import { format, timestampsFixtures } from './testUtils';
+import fs from 'fs';
+import path from 'path';
+import services from '#utilities/serviceConfigs';
+import { timestampsFixtures, format } from './testUtils';
 
 const filePath = path.join(__dirname, './expectedFormats.json');
 
@@ -31,7 +29,11 @@ const generateTimeFormats = () => {
   const generatedJSON = JSON.stringify(timeFormats, null, 2);
   fs.writeFile(filePath, generatedJSON, 'utf8', error => {
     if (!error) {
+      // eslint-disable-next-line no-console
+      console.info('done');
     } else {
+      // eslint-disable-next-line no-console
+      console.info('An Error Occurred -- ', error);
     }
   });
 };

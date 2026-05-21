@@ -1,16 +1,15 @@
-import path from 'node:path';
-import { ReadableStream } from 'node:stream/web';
-import { TextDecoder, TextEncoder } from 'node:util';
-import { MessageChannel, MessagePort } from 'node:worker_threads';
-
+/* eslint-disable max-classes-per-file */
 import { jest } from '@jest/globals';
-import fetch from 'jest-fetch-mock';
+import path from 'path';
+import { TextEncoder, TextDecoder } from 'util';
+import { ReadableStream } from 'node:stream/web';
+import { MessageChannel, MessagePort } from 'node:worker_threads';
 
 global.jest = jest;
 
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
-global.fetch = fetch;
+global.fetch = jest.fn();
 global.ReadableStream = ReadableStream;
 global.MessageChannel = MessageChannel;
 global.MessagePort = MessagePort;
@@ -33,12 +32,14 @@ global.Cypress = {
   env: jest.fn(),
 };
 
-window.matchMedia = jest.fn().mockImplementation(query => ({
-  matches: true,
-  media: query,
-  addListener: jest.fn(),
-  removeListener: jest.fn(),
-}));
+window.matchMedia = jest.fn().mockImplementation(query => {
+  return {
+    matches: true,
+    media: query,
+    addListener: jest.fn(),
+    removeListener: jest.fn(),
+  };
+});
 
 global.IntersectionObserver = class IntersectionObserver {
   constructor(callback, options) {

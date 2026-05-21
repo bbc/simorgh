@@ -1,11 +1,12 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
 
-import { ParsedUrlQuery } from 'node:querystring';
 import { GetServerSideProps } from 'next';
-import { use, useEffect } from 'react';
-
+import { useEffect, use } from 'react';
+import { ParsedUrlQuery } from 'querystring';
 import omit from 'ramda/src/omit';
-
+import { ServiceContext } from '#contexts/ServiceContext';
+import { STATIC_PAGE } from '#app/routes/utils/pageTypes';
 import {
   Articles,
   Book,
@@ -15,16 +16,15 @@ import {
   Favourites,
   Words,
 } from '#app/components/icons';
+import nodeLogger from '#lib/logger.node';
+import logResponseTime from '#utilities/logResponseTime';
+import isLocal from '#lib/utilities/isLocal';
+
 import {
   ROUTING_INFORMATION,
   SERVER_SIDE_RENDER_REQUEST_RECEIVED,
 } from '#app/lib/logger.const';
-import { STATIC_PAGE } from '#app/routes/utils/pageTypes';
-import { ServiceContext } from '#contexts/ServiceContext';
-import nodeLogger from '#lib/logger.node';
-import isLocal from '#lib/utilities/isLocal';
 import { Services, Variants } from '#models/types/global';
-import logResponseTime from '#server/utilities/logResponseTime';
 import styles from './wrappedStyles';
 
 interface PageDataParams extends ParsedUrlQuery {
@@ -140,17 +140,20 @@ const pageLayout = () => {
     words.innerText = new Intl.NumberFormat(locale).format(totalWords);
     const pageTypeCounts = Object.keys(wsWrapped[thisYear].pageTypeCounts)
       .filter(key => ['STY', 'article'].includes(key))
-      .reduce((sum, key) => sum + wsWrapped[thisYear].pageTypeCounts[key], 0);
+      .reduce((sum, key) => {
+        return sum + wsWrapped[thisYear].pageTypeCounts[key];
+      }, 0);
     const article = document.getElementById('article');
     article.innerText = new Intl.NumberFormat(locale).format(pageTypeCounts);
-    const _average = document.getElementById('average');
+    const average = document.getElementById('average');
     /// average.innerText = new Intl.NumberFormat(locale, { maximumFractionDigits: 1 }).format(totalWords / pageTypeCounts);
     const topics = Object.keys(wsWrapped[thisYear].topicCounts)
-      .sort(
-        (a, b) =>
+      .sort((a, b) => {
+        return (
           wsWrapped[thisYear].topicCounts[a] <
-          wsWrapped[thisYear].topicCounts[b],
-      )
+          wsWrapped[thisYear].topicCounts[b]
+        );
+      })
       .slice(0, 5);
     const topiclist = document.getElementById('topiclist');
     topiclist.innerHTML = '';
@@ -163,7 +166,7 @@ const pageLayout = () => {
     const monthValues = [];
     const graphMonths = wsWrapped[thisYear].byMonth;
     const tempMonths = [];
-    const _blah = new Intl.DateTimeFormat();
+    const blah = new Intl.DateTimeFormat();
     for (let i = 0; i <= 11; i++) {
       const date = new Date(`2024-${String(i + 1).padStart(2, '0')}-01`);
       tempMonths.push(
@@ -197,8 +200,11 @@ const pageLayout = () => {
     gctx.lineTo(my_canvas.width, y); // Base line of graph
     gctx.stroke();
 
-    const getGraphYValue = initialValue =>
-      !initialValue ? initialValue : (initialValue / graphMax) * (y - y_gap);
+    const getGraphYValue = initialValue => {
+      return !initialValue
+        ? initialValue
+        : (initialValue / graphMax) * (y - y_gap);
+    };
 
     for (i = 0; i < monthValues.length; i++) {
       gctx.font = '11px "BBC Reith Sans", ReithSerif, Helvetica, sans-serif'; // font for base label showing classes
@@ -224,7 +230,7 @@ const pageLayout = () => {
 
       x += bar_gap;
     }
-  }, [locale, isLocalhost, datetimeLocale]);
+  }, []);
   return (
     <main>
       <div css={styles.outerGrid}>

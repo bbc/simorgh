@@ -1,25 +1,23 @@
-import { Helmet } from 'react-helmet';
-import { BrowserRouter } from 'react-router-dom';
-
+import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
+import { data as mundoBannerVariations } from '#data/mundo/topics/cw90edn9kw4t.json';
 import {
   VISUAL_PROMINENCE,
   VISUAL_STYLE,
 } from '#app/models/types/curationData';
+import { Helmet } from 'react-helmet';
 import { data as kyrgyzTopicWithMessageBanners } from '#data/kyrgyz/topics/cvpv9djp9qqt.json';
-import { data as mundoBannerVariations } from '#data/mundo/topics/cw90edn9kw4t.json';
-import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
-import { render } from '../../components/react-testing-library-with-providers';
 import { TOPIC_PAGE } from '../../routes/utils/pageTypes';
+import { render } from '../../components/react-testing-library-with-providers';
+import TopicPage from './TopicPage';
 import {
-  amharicOnlyTitle,
-  amharicSingleItem,
-  amharicSingleItemNoCurationTitle,
-  mundoMultipleCurations,
-  mundoWithBadgeAndDescr,
   pidginMultipleItems,
+  amharicSingleItem,
+  mundoWithBadgeAndDescr,
+  mundoMultipleCurations,
+  amharicOnlyTitle,
+  amharicSingleItemNoCurationTitle,
   pidginSingleCurationEmptyStringSubheading,
 } from './fixtures';
-import TopicPage from './TopicPage';
 
 jest.mock('../../components/ThemeProvider');
 jest.mock('../../components/ChartbeatAnalytics', () => {
@@ -211,9 +209,7 @@ describe('Topic Page', () => {
       [false, false],
     ].forEach(([adsToggledOn, showAdsBasedOnLocation]) => {
       const { container } = render(
-        <BrowserRouter>
-          <TopicPage pageData={pidginMultipleItems} />
-        </BrowserRouter>,
+        <TopicPage pageData={pidginMultipleItems} />,
         getOptionParams({ adsToggledOn, showAdsBasedOnLocation }),
       );
 
@@ -432,12 +428,13 @@ describe('Topic Page', () => {
     it('should correctly render linked data', () => {
       render(<TopicPage pageData={pidginMultipleItems} />, getOptionParams());
 
-      const getLinkedDataOutput = () =>
-        JSON.parse(
+      const getLinkedDataOutput = () => {
+        return JSON.parse(
           Helmet.peek().scriptTags.find(
             ({ type }) => type === 'application/ld+json',
           ).innerHTML,
         );
+      };
 
       expect(getLinkedDataOutput()).toMatchSnapshot();
     });

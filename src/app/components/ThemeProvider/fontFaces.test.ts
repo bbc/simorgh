@@ -1,13 +1,12 @@
-// biome-ignore-all lint/suspicious/useIterableCallbackReturn: we want this
-
-import * as emotionReact from '@emotion/react';
-
+/* eslint-disable consistent-return */
+/* eslint-disable array-callback-return */
 import SERVICES from '#app/lib/config/services';
+import { Services, ServicesVariantsProps } from '#app/models/types/global';
+import * as emotionReact from '@emotion/react';
 import defaultServiceVariants from '#app/lib/config/services/defaultServiceVariants';
-import type { Services, ServicesVariantsProps } from '#app/models/types/global';
-import serviceConfigs from '#src/server/utilities/serviceConfigs';
-import { pwaThemes, themes } from './__mocks__/themes';
+import serviceConfigs from '#utilities/serviceConfigs';
 import getFontFaces, * as fontFaces from './fontFaces';
+import { themes, pwaThemes } from './__mocks__/themes';
 
 const themeSpy = jest.spyOn(emotionReact, 'useTheme');
 
@@ -156,21 +155,22 @@ describe('Font Faces', () => {
   };
 
   describe('Get Font Faces', () => {
-    describe.each(
-      servicesWithFonts,
-    )('Service with font has expected properties for', service => {
-      const variants = getVariantsForService(service);
+    describe.each(servicesWithFonts)(
+      'Service with font has expected properties for',
+      service => {
+        const variants = getVariantsForService(service);
 
-      if (variants.length > 0) {
-        it.each(variants)(`${service} with variant %s`, variant => {
-          runFontPropertyAssertions(getFonts({ service, variant }));
-        });
-      } else {
-        it(`${service}`, () => {
-          runFontPropertyAssertions(getFonts({ service }));
-        });
-      }
-    });
+        if (variants.length > 0) {
+          it.each(variants)(`${service} with variant %s`, variant => {
+            runFontPropertyAssertions(getFonts({ service, variant }));
+          });
+        } else {
+          it(`${service}`, () => {
+            runFontPropertyAssertions(getFonts({ service }));
+          });
+        }
+      },
+    );
 
     it.each([
       'archive',
@@ -200,19 +200,17 @@ describe('Font Faces', () => {
       ]);
     });
 
-    it.each([
-      'arabic',
-      'pashto',
-      'persian',
-      'urdu',
-    ] as Services[])('returns Reith Qalam fonts for %s', service => {
-      const loadedFonts = getFontNames({ service });
+    it.each(['arabic', 'pashto', 'persian', 'urdu'] as Services[])(
+      'returns Reith Qalam fonts for %s',
+      service => {
+        const loadedFonts = getFontNames({ service });
 
-      expect(loadedFonts).toStrictEqual([
-        'BBCReithQalam_W_Bd',
-        'BBCReithQalam_W_Rg',
-      ]);
-    });
+        expect(loadedFonts).toStrictEqual([
+          'BBCReithQalam_W_Bd',
+          'BBCReithQalam_W_Rg',
+        ]);
+      },
+    );
 
     it('returns Noto Sinhala fonts for sinhala', () => {
       const loadedFonts = getFontNames({ service: 'sinhala' });
@@ -259,17 +257,17 @@ describe('Font Faces', () => {
       ]);
     });
 
-    it.each([
-      'amharic',
-      'tigrinya',
-    ] as Services[])('returns Noto Ethiopic fonts for %s', service => {
-      const loadedFonts = getFontNames({ service });
+    it.each(['amharic', 'tigrinya'] as Services[])(
+      'returns Noto Ethiopic fonts for %s',
+      service => {
+        const loadedFonts = getFontNames({ service });
 
-      expect(loadedFonts).toStrictEqual([
-        'Noto_Sans_Ethiopic',
-        'Noto_Sans_Ethiopic_Bold',
-      ]);
-    });
+        expect(loadedFonts).toStrictEqual([
+          'Noto_Sans_Ethiopic',
+          'Noto_Sans_Ethiopic_Bold',
+        ]);
+      },
+    );
 
     it('returns Padauk fonts for burmese', () => {
       const loadedFonts = getFontNames({ service: 'burmese' });
@@ -328,18 +326,21 @@ describe('Font Faces', () => {
       servicesWithNoFonts.filter(
         service => !servicesWithPWA.includes(service),
       ) as Services[],
-    )('returns no fonts for service without fonts and does not have PWA configured for', service => {
-      const variants = getVariantsForService(service);
+    )(
+      'returns no fonts for service without fonts and does not have PWA configured for',
+      service => {
+        const variants = getVariantsForService(service);
 
-      if (variants.length > 0) {
-        it.each(variants)(`${service} with variant %s`, variant => {
-          expect(getFontNames({ service, variant })).toStrictEqual([]);
-        });
-      } else {
-        it(`${service}`, () => {
-          expect(getFontNames({ service })).toStrictEqual([]);
-        });
-      }
-    });
+        if (variants.length > 0) {
+          it.each(variants)(`${service} with variant %s`, variant => {
+            expect(getFontNames({ service, variant })).toStrictEqual([]);
+          });
+        } else {
+          it(`${service}`, () => {
+            expect(getFontNames({ service })).toStrictEqual([]);
+          });
+        }
+      },
+    );
   });
 });

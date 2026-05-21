@@ -1,11 +1,11 @@
+import appConfig from '#utilities/serviceConfigs';
+import { getMostReadEndpoint } from '#lib/utilities/getUrlHelpers/getMostReadUrls';
 import { serviceNumerals } from '#app/components/MostRead/Canonical/Rank';
 import { Services } from '#app/models/types/global';
-import { getMostReadEndpoint } from '#lib/utilities/getUrlHelpers/getMostReadUrls';
-import appConfig from '#src/server/utilities/serviceConfigs';
-import config from '../../support/config/services';
+import { ServiceParametersType } from '../../types';
 import ampOnlyServices from '../../support/helpers/ampOnlyServices';
 import getAppEnv from '../../support/helpers/getAppEnv';
-import { ServiceParametersType } from '../../types';
+import config from '../../support/config/services';
 
 // news, newsround, and sport are services we serve on amp, but do not want to run most read tests on
 const MOST_READ_EXCLUDED_SERVICES = [...ampOnlyServices, 'ukchina'];

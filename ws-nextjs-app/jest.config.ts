@@ -1,18 +1,20 @@
+/* eslint-disable import/extensions */
 /* eslint-disable import/no-relative-packages */
-
-import nextJest from 'next/jest';
-
-import type { Config } from 'jest';
+import { readFileSync } from 'fs';
 import { pathsToModuleNameMapper } from 'ts-jest';
+import type { Config } from 'jest';
+import nextJest from 'next/jest.js';
 
-import { compilerOptions } from '../tsconfig.json';
+const { compilerOptions } = JSON.parse(
+  readFileSync(new URL('../tsconfig.json', import.meta.url), 'utf8'),
+);
 
 const { ...compilerOptionsPaths } = compilerOptions.paths;
 
 const createJestConfig = nextJest({ dir: './' });
 
-const buildConfig = async (config: Config): Promise<Config> =>
-  createJestConfig({
+const buildConfig = async (config: Config): Promise<Config> => {
+  return createJestConfig({
     ...config,
     testPathIgnorePatterns: [
       ...(config.testPathIgnorePatterns || []),
@@ -20,6 +22,7 @@ const buildConfig = async (config: Config): Promise<Config> =>
       'node_modules',
     ],
   })();
+};
 
 export default async (): Promise<Config> => {
   const canonicalIntegrationTests = await buildConfig({

@@ -1,19 +1,17 @@
 import { act } from '@testing-library/react';
-import { BrowserRouter } from 'react-router-dom';
-
-import { MOST_READ_PAGE } from '#app/routes/utils/pageTypes';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { data as pidginMostReadData } from '#data/pidgin/mostRead/index.json';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
+import { MOST_READ_PAGE } from '#app/routes/utils/pageTypes';
 import { render } from '../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import MostReadPage from './MostReadPage';
 
-fetch.mockResponse(JSON.stringify(pidginMostReadData));
-
-jest.mock('#lib/analyticsUtils', () => ({
-  ...jest.requireActual('#lib/analyticsUtils'),
-}));
+jest.mock('#lib/analyticsUtils', () => {
+  return {
+    ...jest.requireActual('#lib/analyticsUtils'),
+  };
+});
 
 jest.mock('../../components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
@@ -31,15 +29,23 @@ const MostReadPageWithContext = () => (
         service="pidgin"
         statusCode={200}
       >
-        <BrowserRouter>
-          <MostReadPage pageData={pidginMostReadData} />
-        </BrowserRouter>
+        <MostReadPage pageData={pidginMostReadData} />
       </RequestContextProvider>
     </ServiceContextProvider>
   </ToggleContextProvider>
 );
 
 describe('Most Read Page Main', () => {
+  beforeEach(() => {
+    jest.spyOn(global, 'fetch').mockResolvedValue({
+      json: async () => pidginMostReadData,
+    });
+  });
+
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
+
   it('should match snapshot for most read page', () => {
     const { container } = render(<MostReadPageWithContext service="pidgin" />, {
       service: 'pidgin',

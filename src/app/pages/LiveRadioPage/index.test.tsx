@@ -1,16 +1,14 @@
-import { BrowserRouter } from 'react-router-dom';
-
-import type { Services } from '#app/models/types/global';
-import type { LiveRadioBlock } from '#app/models/types/media';
-import { LIVE_RADIO_PAGE } from '#app/routes/utils/pageTypes';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
+import { LIVE_RADIO_PAGE } from '#app/routes/utils/pageTypes';
+import { Services } from '#app/models/types/global';
+import { LiveRadioBlock } from '#app/models/types/media';
 import afriquePageData from '#data/afrique/bbc_afrique_radio/liveradio.json';
 import { data as kyrgyzPageData } from '#data/kyrgyz/bbc_kyrgyz_radio/liveradio.json';
 import { render } from '../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import LiveRadioPage from './LiveRadioPage';
-import type { LiveRadioPageProps } from './types';
+import { LiveRadioPageProps } from './types';
 
 type Props = {
   pageData: LiveRadioPageProps;
@@ -19,21 +17,19 @@ type Props = {
 };
 
 const Page = ({ pageData, service, lang }: Props) => (
-  <BrowserRouter>
-    <ToggleContextProvider toggles={{ liveRadioSchedule: { enabled: true } }}>
-      <ServiceContextProvider service={service} pageLang={lang}>
-        <RequestContextProvider
-          bbcOrigin="https://www.test.bbc.com"
-          pageType={LIVE_RADIO_PAGE}
-          pathname="/pathname"
-          service={service}
-          statusCode={200}
-        >
-          <LiveRadioPage pageData={pageData} />
-        </RequestContextProvider>
-      </ServiceContextProvider>
-    </ToggleContextProvider>
-  </BrowserRouter>
+  <ToggleContextProvider toggles={{ liveRadioSchedule: { enabled: true } }}>
+    <ServiceContextProvider service={service} pageLang={lang}>
+      <RequestContextProvider
+        bbcOrigin="https://www.test.bbc.com"
+        pageType={LIVE_RADIO_PAGE}
+        pathname="/pathname"
+        service={service}
+        statusCode={200}
+      >
+        <LiveRadioPage pageData={pageData} />
+      </RequestContextProvider>
+    </ServiceContextProvider>
+  </ToggleContextProvider>
 );
 
 jest.mock('../../components/ChartbeatAnalytics', () => {

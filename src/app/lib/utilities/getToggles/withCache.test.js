@@ -13,14 +13,20 @@ describe('withCache', () => {
         testToggle: { enabled: true },
       },
     };
-    fetch.mockResponseOnce(JSON.stringify(mockMundoResponse));
+
+    jest.spyOn(global, 'fetch').mockResolvedValueOnce({
+      json: async () => mockMundoResponse,
+    });
 
     const mockPidginResponse = {
       toggles: {
         testToggle: { enabled: true },
       },
     };
-    fetch.mockResponseOnce(JSON.stringify(mockPidginResponse));
+
+    jest.spyOn(global, 'fetch').mockResolvedValueOnce({
+      json: async () => mockPidginResponse,
+    });
 
     withCache('mundo');
     withCache('pidgin');

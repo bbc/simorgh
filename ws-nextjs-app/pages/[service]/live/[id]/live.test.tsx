@@ -1,20 +1,19 @@
-import { GetServerSidePropsContext } from 'next';
-
 import { Helmet } from 'react-helmet';
 
-import MockIntersectionObserver from '#app/components/intersection-observer-testing-library';
 import {
-  act,
   render,
   screen,
+  act,
 } from '#app/components/react-testing-library-with-providers';
-import * as useLivePagePolling from '#app/hooks/useLivePagePolling';
-import * as isLiveEnvModule from '#app/lib/utilities/isLive';
-import sportDataFixture from '#data/afrique/live/c7gk1vjglxn1t.json';
 import liveFixture from '#data/pidgin/live/c7p765ynk9qt.json';
 import postFixture from '#data/pidgin/posts/postFixture.json';
-import { getServerSideProps } from './[[...variant]].page';
+import sportDataFixture from '#data/afrique/live/c7gk1vjglxn1t.json';
+import { GetServerSidePropsContext } from 'next';
+import MockIntersectionObserver from '#app/components/intersection-observer-testing-library';
+import * as useLivePagePolling from '#app/hooks/useLivePagePolling';
+import * as isLiveEnvModule from '#app/lib/utilities/isLive';
 import Live, { ComponentProps } from './LivePageLayout';
+import { getServerSideProps } from './[[...variant]].page';
 import { StreamResponse } from './Post/types';
 
 jest.mock('#app/hooks/useLivePagePolling', () => ({
@@ -81,7 +80,7 @@ const mockPageData = {
     copyright: 'BBC',
   },
   metadata: { atiAnalytics: {} },
-};
+} as unknown as ComponentProps['pageData'];
 
 const mockPageDataWithPosts = {
   ...liveFixture.data,
@@ -93,7 +92,7 @@ const mockPageDataWithPosts = {
     contributors: 'Not a random dude',
   },
   metadata: { atiAnalytics: {} },
-};
+} as unknown as ComponentProps['pageData'];
 
 const mockPageDataWithoutKeyPoints = {
   ...liveFixture.data,
@@ -109,7 +108,7 @@ const mockPageDataWithoutKeyPoints = {
     contributors: 'Not a random dude',
   },
   metadata: { atiAnalytics: {} },
-};
+} as unknown as ComponentProps['pageData'];
 
 const mockPageDataWithPortraitVideoItems = {
   ...mockPageData,
@@ -150,7 +149,7 @@ const mockPageDataWithPortraitVideoItems = {
       ],
     },
   },
-};
+} as unknown as ComponentProps['pageData'];
 
 const mockPageDataWithEmptyPortraitVideoItems = {
   ...mockPageData,
@@ -179,19 +178,21 @@ const mockPageDataWithMetadata = ({
   seoDescription?: string;
   datePublished?: string;
   dateModified?: string;
-}) => ({
-  ...mockPageData,
-  title,
-  description,
-  startDateTime,
-  endDateTime,
-  seo: {
-    seoTitle,
-    seoDescription,
-    datePublished,
-    dateModified,
-  },
-});
+}) => {
+  return {
+    ...mockPageData,
+    title,
+    description,
+    startDateTime,
+    endDateTime,
+    seo: {
+      seoTitle,
+      seoDescription,
+      datePublished,
+      dateModified,
+    },
+  } as unknown as ComponentProps['pageData'];
+};
 
 const mockPollingUpdate = (pageData: ComponentProps['pageData']) => {
   const streamData = pageData.liveTextStream.content
@@ -200,7 +201,9 @@ const mockPollingUpdate = (pageData: ComponentProps['pageData']) => {
   jest.spyOn(useLivePagePolling, 'default').mockReturnValue({
     currentStreamData: streamData,
     hasPendingUpdate: false,
-    applyPendingUpdate: () => null,
+    applyPendingUpdate: () => {
+      return null;
+    },
   });
 };
 
@@ -419,7 +422,7 @@ describe('Live Page', () => {
         },
         contributors: 'Not a random dude',
       },
-    };
+    } as unknown as ComponentProps['pageData'];
 
     mockPollingUpdate(paginatedData);
 
@@ -454,7 +457,7 @@ describe('Live Page', () => {
         },
         contributors: 'Not a random dude',
       },
-    };
+    } as unknown as ComponentProps['pageData'];
     mockPollingUpdate(paginatedData);
     await act(async () => {
       render(<Live pageData={paginatedData} />, { service: 'pidgin' });
@@ -508,18 +511,18 @@ describe('Live Page', () => {
 
   it('should render the key points section', async () => {
     mockPollingUpdate(mockPageData);
-    const { container } = await act(async () =>
-      render(<Live pageData={mockPageData} />),
-    );
+    const { container } = await act(async () => {
+      return render(<Live pageData={mockPageData} />);
+    });
 
     expect(container.querySelector('[data-e2e="key-points"]')).toBeTruthy();
   });
 
   it('should not render the key points section when no content is provided', async () => {
     mockPollingUpdate(mockPageDataWithoutKeyPoints);
-    const { container } = await act(async () =>
-      render(<Live pageData={mockPageDataWithoutKeyPoints} />),
-    );
+    const { container } = await act(async () => {
+      return render(<Live pageData={mockPageDataWithoutKeyPoints} />);
+    });
 
     expect(container.querySelector('[data-e2e="key-points"]')).toBeFalsy();
   });
@@ -714,7 +717,7 @@ describe('Live Page', () => {
       const pageDataWithSportData = {
         ...mockPageData,
         sportDataEventContent: sportDataFixture.data.sportDataEventContent,
-      };
+      } as unknown as ComponentProps['pageData'];
       mockPollingUpdate(pageDataWithSportData);
 
       await act(async () => {
@@ -728,7 +731,7 @@ describe('Live Page', () => {
       const pageDataWithSportData = {
         ...mockPageData,
         sportDataEventContent: sportDataFixture.data.sportDataEventContent,
-      };
+      } as unknown as ComponentProps['pageData'];
       mockPollingUpdate(pageDataWithSportData);
 
       await act(async () => {
@@ -762,9 +765,9 @@ describe('Live Page', () => {
       } as unknown as ComponentProps['pageData'];
       mockPollingUpdate(pageDataWithSportData);
 
-      const { container } = await act(async () =>
-        render(<Live pageData={pageDataWithSportData} />),
-      );
+      const { container } = await act(async () => {
+        return render(<Live pageData={pageDataWithSportData} />);
+      });
 
       const title = container.querySelector('h1');
       expect(title).toBeInTheDocument();

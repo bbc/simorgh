@@ -1,11 +1,11 @@
 import { GetServerSideProps } from 'next';
 import dynamic from 'next/dynamic';
-
-import getToggles from '#app/lib/utilities/getToggles/withCache';
-import PageDataParams from '#app/models/types/pageDataParams';
 import { DOWNLOADS_PAGE } from '#app/routes/utils/pageTypes';
-import deriveVariant from '#nextjs/utilities/deriveVariant';
-import logResponseTime from '#server/utilities/logResponseTime';
+import logResponseTime from '#utilities/logResponseTime';
+
+import deriveVariant from '#utilities/deriveVariant';
+import PageDataParams from '#app/models/types/pageDataParams';
+import getToggles from '#app/lib/utilities/getToggles/withCache';
 import dataFetch from './dataFetch';
 
 const downloadsPageLayout = dynamic(() => import('./downloadsPageLayout'));

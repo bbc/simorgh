@@ -1,20 +1,19 @@
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable import/prefer-default-export */
-
+import appConfig from '#utilities/serviceConfigs';
+import { Services } from '#app/models/types/global';
+import { ArticleContent, OptimoBlock } from '#app/models/types/optimo';
 import {
   AresMediaBlock,
   AresMediaMetadataBlock,
   CaptionBlock,
 } from '#app/components/MediaLoader/types';
-import { Services } from '#app/models/types/global';
-import { ArticleContent, OptimoBlock } from '#app/models/types/optimo';
-import appConfig from '#src/server/utilities/serviceConfigs';
-import chartbeatTests from '../../../support/helpers/chartbeatTests';
 import getAppEnv from '../../../support/helpers/getAppEnv';
-import runIfToggleEnabled from '../../../support/helpers/runIfToggleEnabled';
 import { ServiceParametersType } from '../../../types';
+import { getBlockData, getBlockByType, getVideoEmbedUrl } from './helpers';
+import runIfToggleEnabled from '../../../support/helpers/runIfToggleEnabled';
+import chartbeatTests from '../../../support/helpers/chartbeatTests';
 import { crossPlatform } from '../../assertions/crossPlatformAssertion';
-import { getBlockByType, getBlockData, getVideoEmbedUrl } from './helpers';
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
 const serviceHasCaption = (service: Services) => service === 'news';

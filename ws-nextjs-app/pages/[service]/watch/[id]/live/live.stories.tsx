@@ -22,6 +22,7 @@ const Component = ({ service }: StoryProps) => (
 export default {
   title: 'Pages/Live TV Page',
   Component,
+  parameters: { layout: 'fullscreen' },
 };
 
 export const Example = (_: StoryArgs, { service, variant }: StoryProps) => (

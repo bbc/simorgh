@@ -33,6 +33,7 @@ const Component = ({ pageData }: ComponentProps) => (
 export default {
   title: 'Pages/Live Page',
   Component,
+  parameters: { layout: 'fullscreen' },
 };
 
 export const Example = () => <Component pageData={mockPageData} />;

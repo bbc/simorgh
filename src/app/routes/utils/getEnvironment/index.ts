@@ -1,11 +1,8 @@
-import Url from 'url-parse';
-
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 
 export default (pathname: string) => {
-  const url = new Url(`https://www.bbc.com${pathname}`, true);
-
-  const rendererEnv = url?.query?.renderer_env;
+  const url = new URL(pathname, 'https://www.bbc.com');
+  const rendererEnv = url.searchParams.get('renderer_env');
 
   switch (rendererEnv) {
     case 'test':

@@ -1,7 +1,7 @@
 /* eslint-disable import/prefer-default-export */
-import appConfig from '#src/server/utilities/serviceConfigs';
-import envConfig, { EnvironmentConfigType } from '../../../support/config/envs';
+import appConfig from '#utilities/serviceConfigs';
 import { ServiceParametersType } from '../../../types';
+import envConfig, { EnvironmentConfigType } from '../../../support/config/envs';
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
 export default ({

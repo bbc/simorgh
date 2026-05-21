@@ -1,7 +1,7 @@
 import { NextPageContext } from 'next/types';
 
 import { ServerSideExperiment } from '#app/models/types/global';
-import { getExperimentVaryHeaders } from '#src/server/utilities/experimentHeader';
+import { getExperimentVaryHeaders } from '#utilities/experimentHeader';
 
 const addVaryHeader = ({
   ctx,

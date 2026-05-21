@@ -31,11 +31,6 @@ const defaultToggleState = {
   },
 };
 
-jest.mock('react-router-dom', () => ({
-  ...jest.requireActual('react-router-dom'),
-  useRouteMatch: () => ({ path: '/news', params: {} }),
-}));
-
 const HeaderContainerWithContext = ({ renderOptions }) =>
   render(<HeaderContainer />, {
     toggles: defaultToggleState,

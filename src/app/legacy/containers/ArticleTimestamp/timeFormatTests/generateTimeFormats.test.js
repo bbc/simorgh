@@ -1,7 +1,7 @@
 import { writeFile } from 'node:fs';
 
 jest.mock('fs');
-jest.mock('../../../../../server/utilities/serviceConfigs', () => ({
+jest.mock('#utilities/serviceConfigs', () => ({
   service: {
     default: {
       datetimeLocale: 'en-gb',

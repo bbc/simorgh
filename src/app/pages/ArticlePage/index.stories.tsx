@@ -21,16 +21,15 @@ import articleDataWithPortraitVideo from '#data/mundo/articles/c1xv2q1gewvo.json
 import articleDataWithPortraitVideoRTL from '#data/persian/articles/c149pnldynxo.json';
 import articleDataPidginWithMediaCuration from '#data/pidgin/articles/cnd6yxmxvp2o.json';
 import articleWithTopicDiscovery from '#data/portuguese/articles/cgmpgpllnp7o.json';
-import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
 import { service as newsConfig } from '#app/lib/config/services/news';
 import type { Services } from '#app/models/types/global';
 import type { StoryArgs, StoryProps } from '#app/models/types/storybook';
 import articleDataMultipleContributors from '#data/news/articles/cgrj2g29kzxo.json';
 import ArticlePageComponent from './ArticlePage';
+import PageLayoutWrapper from '#app/components/PageLayoutWrapper';
 
-const PageWithOptimizely = withOptimizelyProvider(ArticlePageComponent);
-const Page = withPageWrapper(PageWithOptimizely);
+const Page = withOptimizelyProvider(ArticlePageComponent);
 
 const serviceContextMock = {
   ...newsConfig.default,
@@ -102,14 +101,16 @@ const ComponentWithContext = ({
           isUK
         >
           <ThemeProvider service={service}>
-            <Page
-              pageData={{
-                ...data.article,
-                secondaryColumn: data.secondaryData,
-                mostRead: data.secondaryData.mostRead,
-              }}
-              showTopicDiscoveryComponent={showTopicDiscoveryComponent}
-            />
+            <PageLayoutWrapper pageData={data.article} status={200}>
+              <Page
+                pageData={{
+                  ...data.article,
+                  secondaryColumn: data.secondaryData,
+                  mostRead: data.secondaryData.mostRead,
+                }}
+                showTopicDiscoveryComponent={showTopicDiscoveryComponent}
+              />
+            </PageLayoutWrapper>
           </ThemeProvider>
         </RequestContextProvider>
       </ServiceContextProvider>
@@ -148,13 +149,15 @@ const ComponentWithServiceContext = ({
         value={memoisedServiceContext}
       >
         <ThemeProvider service={service}>
-          <Page
-            pageData={{
-              ...data.article,
-              secondaryColumn: data.secondaryData,
-              mostRead: data.secondaryData.mostRead,
-            }}
-          />
+          <PageLayoutWrapper pageData={data.article} status={200}>
+            <Page
+              pageData={{
+                ...data.article,
+                secondaryColumn: data.secondaryData,
+                mostRead: data.secondaryData.mostRead,
+              }}
+            />
+          </PageLayoutWrapper>
         </ThemeProvider>
       </ServiceContext.Provider>
     </ToggleContextProvider>

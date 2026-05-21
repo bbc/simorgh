@@ -1,5 +1,5 @@
+import serviceConfigs from '#utilities/serviceConfigs';
 import idSanitiser from '#src/app/lib/utilities/idSanitiser';
-import serviceConfigs from '#src/server/utilities/serviceConfigs';
 import getAppEnv from '../../../support/helpers/getAppEnv';
 
 export default ({ service, pageType, variant = 'default', path }) => {

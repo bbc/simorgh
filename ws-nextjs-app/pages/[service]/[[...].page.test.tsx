@@ -7,7 +7,7 @@ import handleHomepageRoute from './homepage/handleHomepageRoute';
 import handleOnDemandAudioRoute from './onDemandAudio/handleOnDemandAudioRoute';
 import handleOnDemandTvRoute from './onDemandTv/handleOnDemandTvRoute';
 
-jest.mock('#server/utilities/logResponseTime', () => ({
+jest.mock('#utilities/logResponseTime', () => ({
   __esModule: true,
   default: jest.fn(),
 }));

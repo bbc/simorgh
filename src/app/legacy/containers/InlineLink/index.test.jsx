@@ -1,8 +1,6 @@
-import { StaticRouter } from 'react-router-dom';
-
 import {
-  fireEvent,
   render,
+  fireEvent,
 } from '../../../components/react-testing-library-with-providers';
 import InlineLinkContainer from './index';
 
@@ -16,14 +14,12 @@ const fragmentBlock = (text, attributes = []) => ({
 });
 
 const InlineLinkContext = ({ locator, isExternal, blocks, onClick }) => (
-  <StaticRouter>
-    <InlineLinkContainer
-      locator={locator}
-      blocks={blocks}
-      isExternal={isExternal}
-      onClick={onClick}
-    />
-  </StaticRouter>
+  <InlineLinkContainer
+    locator={locator}
+    blocks={blocks}
+    isExternal={isExternal}
+    onClick={onClick}
+  />
 );
 
 describe('InlineLinkContainer', () => {

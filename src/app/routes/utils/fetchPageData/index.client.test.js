@@ -18,6 +18,13 @@ const fullLivePath = 'https://mock-bff.api.bbc.com/simorgh-bff?pageType=bob';
 const expectedUrl = `${expectedBaseUrl}${requestedPathname}.json`;
 const pageType = 'Fetch Page Data';
 const requestOrigin = 'Jest Test';
+const mockSuccessJson = {
+  metadata: {},
+  content: {},
+  promo: {},
+};
+const invalidJsonErrorMessage =
+  'invalid json response body at  reason: Unexpected end of JSON input';
 
 jest.mock('#app/lib/utilities/isLocal', () => jest.fn());
 
@@ -29,24 +36,24 @@ jest.mock('#app/lib/utilities/onClient', () => ({
 const onClientSpy = jest.spyOn(onClient, 'default');
 
 const timeoutSpy = jest.spyOn(AbortSignal, 'timeout');
+const fetchSpy = jest.spyOn(global, 'fetch');
+
+const mockFetchResponse = ({ status = 200, json = mockSuccessJson } = {}) => ({
+  status,
+  json: jest.fn(async () => json),
+});
 
 describe('fetchPageData', () => {
   afterEach(() => {
+    fetchSpy.mockReset();
     jest.clearAllMocks();
-    fetch.resetMocks();
     timeoutSpy.mockClear();
     onClientSpy.mockClear();
   });
 
   describe('data request received logging', () => {
     beforeEach(() => {
-      fetch.mockResponse(
-        JSON.stringify({
-          metadata: {},
-          content: {},
-          promo: {},
-        }),
-      );
+      fetchSpy.mockResolvedValue(mockFetchResponse());
     });
 
     it('should always log data url and path', async () => {
@@ -82,13 +89,7 @@ describe('fetchPageData', () => {
 
   describe('Successful fetch', () => {
     beforeEach(() => {
-      fetch.mockResponse(
-        JSON.stringify({
-          metadata: {},
-          content: {},
-          promo: {},
-        }),
-      );
+      fetchSpy.mockResolvedValue(mockFetchResponse());
     });
 
     const fetchOptions = expect.objectContaining({
@@ -165,7 +166,9 @@ describe('fetchPageData', () => {
       });
 
       it('should handle a rejected Ares fetch and return an error the Simorgh app can handle', () => {
-        fetch.mockRejectedValue(new Error('Failed to fetch'), { status: 500 });
+        fetchSpy.mockRejectedValue(new Error('Failed to fetch'), {
+          status: 500,
+        });
 
         return fetchPageData({ path: requestedPathname, pageType }).catch(
           ({ message, status }) =>
@@ -179,7 +182,12 @@ describe('fetchPageData', () => {
   });
 
   describe('Request returns 200 status code, but invalid JSON', () => {
-    fetch.mockResponse('Some Invalid JSON');
+    beforeEach(() => {
+      fetchSpy.mockResolvedValue({
+        status: 200,
+        json: jest.fn(() => 'invalid json'),
+      });
+    });
 
     describe('on server', () => {
       beforeEach(() => {
@@ -190,8 +198,7 @@ describe('fetchPageData', () => {
         fetchPageData({ path: requestedPathname, pageType }).catch(
           ({ message, status }) => {
             expect(loggerMock.error).toHaveBeenCalledWith(DATA_FETCH_ERROR, {
-              error:
-                'invalid json response body at  reason: Unexpected end of JSON input',
+              error: invalidJsonErrorMessage,
               status: 500,
               data: expectedUrl,
               path: requestedPathname,
@@ -199,8 +206,7 @@ describe('fetchPageData', () => {
             });
 
             expect({ message, status }).toEqual({
-              message:
-                'invalid json response body at  reason: Unexpected end of JSON input',
+              message: invalidJsonErrorMessage,
               status: 500,
             });
           },
@@ -217,14 +223,14 @@ describe('fetchPageData', () => {
           return await fetchPageData({ path: requestedPathname, pageType });
         } catch ({ message, status }) {
           expect(loggerMock.error).toHaveBeenCalledWith(DATA_FETCH_ERROR, {
-            error: `invalid json response body at  reason: Unexpected end of JSON input`,
+            error: invalidJsonErrorMessage,
             status: 502,
             data: expectedUrl,
             path: requestedPathname,
             pageType,
           });
           expect({ message, status }).toEqual({
-            message: `invalid json response body at  reason: Unexpected end of JSON input`,
+            message: invalidJsonErrorMessage,
             status: 502,
           });
         }
@@ -234,7 +240,7 @@ describe('fetchPageData', () => {
 
   describe('Request returns a 404 status code', () => {
     it('should return the status code as 404', async () => {
-      fetch.mockResponse('Not found', { status: 404 });
+      fetchSpy.mockResolvedValueOnce(mockFetchResponse({ status: 404 }));
 
       return fetchPageData({ path: requestedPathname, pageType }).catch(
         ({ message, status }) => {
@@ -254,7 +260,7 @@ describe('fetchPageData', () => {
       });
 
       it('should log, and return the status code as 500', async () => {
-        fetch.mockResponse("I'm a teapot", { status: 418 });
+        fetchSpy.mockResolvedValueOnce(mockFetchResponse({ status: 418 }));
 
         return fetchPageData({ path: requestedPathname, pageType }).catch(
           ({ message, status }) => {
@@ -276,7 +282,7 @@ describe('fetchPageData', () => {
       });
 
       it('should log, and propogate the status code as 500', async () => {
-        fetch.mockResponse('Error', { status: 500 });
+        fetchSpy.mockResolvedValueOnce(mockFetchResponse({ status: 500 }));
 
         return fetchPageData({ path: requestedPathname, pageType }).catch(
           ({ message, status }) => {
@@ -304,7 +310,7 @@ describe('fetchPageData', () => {
     });
 
     it('should log, and return the status code as 502', async () => {
-      fetch.mockResponse("I'm a teapot", { status: 418 });
+      fetchSpy.mockResolvedValueOnce(mockFetchResponse({ status: 418 }));
 
       return fetchPageData({ path: requestedPathname, pageType }).catch(
         ({ message, status }) => {
@@ -325,7 +331,7 @@ describe('fetchPageData', () => {
     });
 
     it('should log, and propagate the status code as 502', async () => {
-      fetch.mockResponse('Internal server error', { status: 500 });
+      fetchSpy.mockResolvedValueOnce(mockFetchResponse({ status: 500 }));
       return fetchPageData({ path: requestedPathname, pageType }).catch(
         ({ message, status }) => {
           expect(loggerMock.error).toHaveBeenCalledWith(DATA_FETCH_ERROR, {
@@ -356,7 +362,11 @@ describe('fetchPageData', () => {
     cache.set('http://localhost:7080/path/to/asset.json', response);
 
     beforeEach(() => {
-      fetch.mockResponse(response);
+      fetchSpy.mockResolvedValue(
+        mockFetchResponse({
+          json: JSON.parse(response),
+        }),
+      );
     });
 
     it('does not use a cached response on local environment', async () => {

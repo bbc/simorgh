@@ -1,15 +1,14 @@
 import { GetServerSidePropsContext } from 'next';
 import dynamic from 'next/dynamic';
-
-import { ROUTING_INFORMATION } from '#app/lib/logger.const';
-import { OK } from '#app/lib/statusCodes.const';
-import isTest from '#app/lib/utilities/isTest';
-import PageDataParams from '#app/models/types/pageDataParams';
-import handleError from '#app/routes/utils/handleError';
 import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
 import nodeLogger from '#lib/logger.node';
-import deriveVariant from '#nextjs/utilities/deriveVariant';
-import logResponseTime from '#server/utilities/logResponseTime';
+import logResponseTime from '#utilities/logResponseTime';
+import { ROUTING_INFORMATION } from '#app/lib/logger.const';
+import { OK } from '#app/lib/statusCodes.const';
+import PageDataParams from '#app/models/types/pageDataParams';
+import deriveVariant from '#utilities/deriveVariant';
+import isTest from '#app/lib/utilities/isTest';
+import handleError from '#app/routes/utils/handleError';
 import getPageData from '../../../../utilities/pageRequests/getPageData';
 
 const TopicPage = dynamic(() => import('#app/pages/TopicPage/TopicPage'));
