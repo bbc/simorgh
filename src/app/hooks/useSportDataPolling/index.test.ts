@@ -16,10 +16,10 @@ const runPollingInterval = async () => {
 };
 
 describe('useSportDataPolling', () => {
-  const initialSportData =
-    fixtureSportData.data.sportDataEvent as unknown as HeadToHeadV2Data;
-  const updatedSportData =
-    fixtureSportDataUpdate.data.sportDataEvent as unknown as HeadToHeadV2Data;
+  const initialSportData = fixtureSportData.data
+    .sportDataEvent as unknown as HeadToHeadV2Data;
+  const updatedSportData = fixtureSportDataUpdate.data
+    .sportDataEvent as unknown as HeadToHeadV2Data;
   const updatedSportPollingResponse =
     fixtureSportDataUpdate as unknown as SportDataPollingResponse;
 
