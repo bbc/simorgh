@@ -16,19 +16,32 @@ export default {
       alignItems: 'center',
       justifyContent: 'center',
       overflowY: 'auto',
-      padding: `${spacings.FULL}rem`,
+      paddingBlockStart: `${pixelsToRem(76)}rem`,
+      paddingBlockEnd: `${spacings.FULL}rem`,
+      paddingInline: `${spacings.FULL}rem`,
       backgroundColor: 'rgba(0, 0, 0, 0.92)',
       color: palette.WHITE,
     }),
-  closeButton: ({ mq, palette, spacings }: Theme) =>
+  modalContent: ({ mq }: Theme) =>
+    css({
+      position: 'relative',
+      width: '100%',
+      maxWidth: `${pixelsToRem(1008)}rem`,
+
+      [mq.GROUP_4_MIN_WIDTH]: {
+        width: '80vw',
+      },
+    }),
+  closeButton: ({ mq, palette }: Theme) =>
     css({
       position: 'absolute',
-      top: `${spacings.FULL}rem`,
-      insetInlineEnd: `${spacings.FULL}rem`,
-      minWidth: `${pixelsToRem(44)}rem`,
-      minHeight: `${pixelsToRem(44)}rem`,
+      top: `-${pixelsToRem(60)}rem`,
+      insetInlineEnd: 0,
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
       border: `${pixelsToRem(2)}rem solid ${palette.WHITE}`,
-      padding: `${spacings.HALF}rem`,
+      padding: 0,
       backgroundColor: palette.BLACK,
       color: palette.WHITE,
       cursor: 'pointer',
@@ -44,8 +57,7 @@ export default {
 
       svg: {
         display: 'block',
-        width: `${pixelsToRem(24)}rem`,
-        height: `${pixelsToRem(24)}rem`,
+        color: palette.WHITE,
         fill: 'currentColor',
 
         [mq.FORCED_COLOURS]: {
@@ -53,14 +65,9 @@ export default {
         },
       },
     }),
-  mediaWrapper: ({ mq }: Theme) =>
+  mediaWrapper: () =>
     css({
       width: '100%',
-      maxWidth: `${pixelsToRem(1008)}rem`,
-
-      [mq.GROUP_4_MIN_WIDTH]: {
-        width: '80vw',
-      },
 
       '.media-container': {
         margin: 0,

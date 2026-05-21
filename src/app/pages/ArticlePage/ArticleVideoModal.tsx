@@ -106,21 +106,23 @@ const ArticleVideoModal = ({ articleContentRef, blocks, onClose }: Props) => {
         id="article-video-modal"
         css={styles.modal}
       >
-        <button
-          ref={closeButtonRef}
-          type="button"
-          css={styles.closeButton}
-          className="focusIndicatorInvert"
-          onClick={onClose}
-        >
-          {navigationIcons.cross}
-          <VisuallyHiddenText>{closeVideo}</VisuallyHiddenText>
-        </button>
-        <div css={styles.mediaWrapper}>
-          {/* Reuse mediaArticle behaviour so /watch opens SMP rather than the article placeholder. */}
-          <RequestContext.Provider value={mediaRequestContext}>
-            <MediaLoader blocks={blocks} />
-          </RequestContext.Provider>
+        <div css={styles.modalContent}>
+          <button
+            ref={closeButtonRef}
+            type="button"
+            css={styles.closeButton}
+            className="focusIndicatorInvert"
+            onClick={onClose}
+          >
+            {navigationIcons.cross}
+            <VisuallyHiddenText>{closeVideo}</VisuallyHiddenText>
+          </button>
+          <div css={styles.mediaWrapper}>
+            {/* Reuse mediaArticle behaviour so /watch opens SMP rather than the article placeholder. */}
+            <RequestContext.Provider value={mediaRequestContext}>
+              <MediaLoader blocks={blocks} />
+            </RequestContext.Provider>
+          </div>
         </div>
         <button
           ref={endOfContentButtonRef}
