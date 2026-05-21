@@ -1,9 +1,9 @@
-import { HeadToHeadV2Data } from '#app/components-webcore/SportDataHeader/head-to-head-v2/types';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import { SportDataPollingResponse } from '../types';
 
 export default async (
   sportDataEventUrn: string,
-): Promise<HeadToHeadV2Data | null> => {
+): Promise<SportDataPollingResponse | null> => {
   try {
     const webCdnHost = getEnvConfig().WEB_CDN_URL;
     const encodedUrn = encodeURIComponent(sportDataEventUrn);
