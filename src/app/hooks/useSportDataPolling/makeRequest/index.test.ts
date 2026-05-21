@@ -7,7 +7,10 @@ describe('makeRequest', () => {
       jest.fn(() =>
         Promise.resolve({
           status: 200,
-          json: () => Promise.resolve({ data: fixtureSportDataUpdate }),
+          json: () =>
+            Promise.resolve({
+              data: { sportDataEvent: fixtureSportDataUpdate },
+            }),
         }),
       ) as jest.Mock,
     );
@@ -19,7 +22,7 @@ describe('makeRequest', () => {
   it('should return null on non-200 responses', async () => {
     jest.spyOn(global, 'fetch').mockResolvedValue({
       status: 301,
-      json: async () => ({ data: fixtureSportDataUpdate }),
+      json: async () => ({ data: { sportDataEvent: fixtureSportDataUpdate } }),
     } as Response);
 
     const result = await makeRequest('urn:bbc:sportsdata:football:event:123');
@@ -36,7 +39,7 @@ describe('makeRequest', () => {
   it('should return null when response data is missing', async () => {
     jest.spyOn(global, 'fetch').mockResolvedValue({
       status: 200,
-      json: async () => ({}),
+      json: async () => ({ data: {} }),
     } as Response);
 
     const result = await makeRequest('urn:bbc:sportsdata:football:event:123');
