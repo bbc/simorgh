@@ -38,6 +38,7 @@ import { Article, OptimoBlock } from '#app/models/types/optimo';
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import * as viewTracking from '#app/hooks/useViewTracker';
 import isLive from '#lib/utilities/isLive';
+import LocationBasedTopicOJ from '#app/components/LocationBasedTopicOJ';
 import {
   render,
   screen,
@@ -48,6 +49,8 @@ import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ArticlePage from './ArticlePage';
 import ThemeProvider from '../../components/ThemeProvider';
 import * as ATIAnalytics from '../../components/ATIAnalytics';
+import { id } from 'happy-dom/lib/PropertySymbol';
+import { is } from 'ramda';
 
 jest.mock('../../components/ThemeProvider');
 
@@ -1374,6 +1377,105 @@ describe('Article Page', () => {
         service: 'portuguese',
       });
       expect(queryByTestId('topic-discovery')).not.toBeInTheDocument();
+    });
+  });
+
+  describe('LocationBasedTopicOJ', () => {
+    afterEach(() => {
+      jest.resetAllMocks();
+    });
+
+    const mockCountryCuration = {
+      title: 'Najeriya',
+      topicId: 'topic-1',
+      curationId: 'curation-1',
+      curationType: 'vivo-stream',
+      link: '/hausa/topics/topic-1',
+      summaries: [
+        {
+          id: 'summary-1',
+          firstPublished: '2025-05-21',
+          lastPublished: '2025-05-21',
+          title: 'Promo Title 1',
+          link: '/promo-link-1',
+          imageUrl: 'promo-image.jpg',
+          type: 'article',
+        },
+        {
+          id: 'summary-2',
+          firstPublished: '2025-05-21',
+          lastPublished: '2025-05-21',
+          title: 'Promo Title 2',
+          link: '/promo-link-2',
+          imageUrl: 'promo-image.jpg',
+          type: 'article',
+        },
+      ],
+    };
+    it('renders nothing if countryCuration is undefined', () => {
+      const pageData = {
+        ...articleDataNews,
+        countryCuration: undefined,
+      };
+      const { container } = render(
+        <LocationBasedTopicOJ pageData={pageData} />,
+      );
+      expect(container).toBeEmptyDOMElement();
+    });
+
+    it('renders section and subheading when countryCuration is present', () => {
+      const pageData = {
+        ...articleDataNews,
+        countryCuration: mockCountryCuration,
+      };
+      render(
+        <LocationBasedTopicOJ
+          // @ts-expect-error: Test fixture data does not need to match Article type exactly
+          pageData={pageData}
+        />,
+      );
+      expect(screen.getByRole('region')).toBeInTheDocument();
+      expect(screen.getByText('Najeriya')).toBeInTheDocument();
+      expect(screen.getByText('Promo Title 1')).toBeInTheDocument();
+      expect(screen.getByText('Promo Title 2')).toBeInTheDocument();
+    });
+
+    it('should render LocationBasedTopicOJ when isLive is false (test env)', () => {
+      jest.mocked(isLive).mockImplementationOnce(() => false);
+
+      const pageData = {
+        ...articleDataNews,
+        countryCuration: mockCountryCuration,
+      };
+
+      const { queryByTestId } = render(
+        <ArticlePage
+          // @ts-expect-error: Test fixture data does not need to match Article type exactly
+          pageData={pageData}
+        />,
+        { service: 'hausa' },
+      );
+
+      expect(queryByTestId('location-based-topic-oj')).toBeInTheDocument();
+    });
+
+    it('should NOT render LocationBasedTopicOj when isLive is true (live env)', () => {
+      jest.mocked(isLive).mockImplementationOnce(() => true);
+
+      const pageData = {
+        ...articleDataNews,
+        countryCuration: mockCountryCuration,
+      };
+
+      const { queryByTestId } = render(
+        <ArticlePage
+          // @ts-expect-error: Test fixture data does not need to match Article type exactly
+          pageData={pageData}
+        />,
+        { service: 'hausa' },
+      );
+
+      expect(queryByTestId('location-based-topic-oj')).not.toBeInTheDocument();
     });
   });
 });
