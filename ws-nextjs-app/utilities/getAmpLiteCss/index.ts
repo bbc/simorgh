@@ -3,6 +3,13 @@ import { join } from 'path';
 import nodeLogger from '#lib/logger.node';
 import logCodes from '#app/lib/logger.const';
 
+/**
+ * Public API for this module: getAmpLiteCss (default export)
+ *
+ * Returns CSS to inline for AMP/Lite SSR.
+ * Helper functions below are implementation details exported only for testing.
+ */
+
 // CSS file paths differ depending on the environment:
 //
 // Production (yarn start):
@@ -15,12 +22,12 @@ import logCodes from '#app/lib/logger.const';
 // We check both locations in order, so the same code handles all environments.
 const CSS_SEARCH_ROOTS = ['public/_next', 'build'];
 
-export const resolveCssFilePath = (file: string): string | null =>
+const resolveCssFilePath = (file: string): string | null =>
   CSS_SEARCH_ROOTS.map(root => join(process.cwd(), root, file)).find(
     existsSync,
   ) ?? null;
 
-export const readCssFiles = (files: string[]): string =>
+const readCssFiles = (files: string[]): string =>
   files
     .map(resolveCssFilePath)
     .filter((filePath): filePath is string => filePath !== null)
@@ -42,7 +49,7 @@ const logger = nodeLogger(__filename);
  * react-loadable-manifest.json instead and this function returns '' for every request.
  * It is retained as a safety net for any future statically-imported CSS.
  */
-export const getBuildManifestCss = (page: string): string => {
+const getBuildManifestCss = (page: string): string => {
   const manifestPath = join(process.cwd(), 'build/build-manifest.json');
   if (!existsSync(manifestPath)) return '';
 
@@ -78,7 +85,7 @@ export const getBuildManifestCss = (page: string): string => {
  * player only rendered when an article contains video), so they cannot be statically
  * known from the page route alone and are not captured in build-manifest.json.
  */
-export const getDynamicImportCss = (
+const getDynamicImportCss = (
   dynamicIds: Array<string | number>,
 ): string => {
   if (!dynamicIds.length) return '';
@@ -146,3 +153,12 @@ const getAmpLiteCss = ({
 };
 
 export default getAmpLiteCss;
+
+// Internal helpers exported only for testing purposes.
+// The public API is the default export (getAmpLiteCss).
+export {
+  resolveCssFilePath,
+  readCssFiles,
+  getBuildManifestCss,
+  getDynamicImportCss,
+};
