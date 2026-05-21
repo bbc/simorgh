@@ -23,12 +23,18 @@ const OJ_COMPONENT_NAMES = [
   'most-read',
   // media curation renders as simple-curation-grid tracking events
   'simple-curation-grid',
+  'newswb_ws_topic_discovery_module',
+  'topic-discovery-more-from-link',
+  'topics',
 ];
 
 // handle the total oj clicks event to specific onward journey experiments
 const OJ_OPTIMIZELY_EXPERIMENTS = ['newswb_ws_topic_discovery_module'];
 
-const OJ_OPTIMIZELY_CLICK_EVENT = 'oj_clicks';
+const OJ_OPTIMIZELY_CLICK_EVENT = [
+  'oj_clicks',
+  'topic-discovery-more-from-link',
+];
 
 // only fire the total oj clicks event when the component and experiment are in scope
 const shouldTrackOjClick = (componentName, experimentName) =>
