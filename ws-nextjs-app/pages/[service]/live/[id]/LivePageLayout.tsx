@@ -87,7 +87,8 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
   } = use(ServiceContext);
   const { canonicalNonUkLink } = use(RequestContext);
   const { enabled: livePagePollingEnabled } = useToggle('livePagePolling');
-  const { enabled: sportHeaderEnabled } = useToggle('showSportDataHeader');
+  // const { enabled: sportHeaderEnabled } = useToggle('showSportDataHeader');
+  const sportHeaderEnabled = true;
 
   const streamRef = useRef<HTMLDivElement>(null);
   const [isFirstPostVisible, setIsFirstPostVisible] = useState(true);
@@ -230,7 +231,7 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
             initialSportData={sportData}
             isConciseView={false} // defaulted to false for developement/ MVP
             shouldShowActions={false} // defaulted to false for developement/ MVP
-            isSportDataLive={isSportDataLive}
+            isSportDataLive
           />
         )}
         <div css={styles.outerGrid}>
