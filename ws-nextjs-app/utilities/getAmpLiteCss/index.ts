@@ -108,7 +108,12 @@ export const getDynamicImportCss = (
     ];
 
     return readCssFiles(cssFiles);
-  } catch {
+  } catch (e) {
+    logger.error(logCodes.BUILD_MANIFEST_CSS_READ_ERROR, {
+      event: 'dynamic_import_css_read_error',
+      message: e instanceof Error ? e.message : String(e),
+      stack: e instanceof Error ? e.stack : undefined,
+    });
     return '';
   }
 };

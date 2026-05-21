@@ -356,6 +356,23 @@ describe('getAmpLiteCss utilities', () => {
       readFileSyncMock.mockReturnValue('not valid json');
 
       expect(getDynamicImportCss(['some-chunk'])).toBe('');
+      expect(loggerMock.error).toHaveBeenCalledWith(
+        'build_manifest_css_read_error',
+        expect.objectContaining({ event: 'dynamic_import_css_read_error' }),
+      );
+    });
+
+    it('logs an error and returns empty string when readFileSync throws', () => {
+      existsSyncMock.mockImplementation((p: string) => p === manifestPath);
+      readFileSyncMock.mockImplementation(() => {
+        throw new Error('disk read failed');
+      });
+
+      expect(getDynamicImportCss(['some-chunk'])).toBe('');
+      expect(loggerMock.error).toHaveBeenCalledWith(
+        'build_manifest_css_read_error',
+        expect.objectContaining({ message: 'disk read failed' }),
+      );
     });
   });
 
