@@ -7,12 +7,14 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import ScrollableTabs from './ScrollableTabs';
 import styles from './index.styles';
 import useFetchTopicPromos from './useFetchTopicPromos';
+import { ComponentExperimentProps } from '#app/models/types/global';
 
 type ExtractedTopic = Pick<TopicTag, 'topicId' | 'topicName' | 'topicUrl'>;
 
 type TopicDiscoveryProps = {
   topics: ExtractedTopic[];
   className?: string;
+  experimentProps?: ComponentExperimentProps;
 };
 
 const HEADING_ID = 'topic-discovery-heading';
@@ -21,7 +23,11 @@ const eventTrackingData = {
   componentName: 'topic-discovery',
 };
 
-const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
+const TopicDiscovery = ({
+  topics,
+  className,
+  experimentProps,
+}: TopicDiscoveryProps) => {
   const { translations } = use(ServiceContext);
   const {
     heading = 'Discover more',
@@ -43,6 +49,7 @@ const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
 
   const moreFromLinkClickTracker = useClickTrackerHandler({
     componentName: 'topic-discovery-more-from-link',
+    experimentProps,
   });
 
   if (!topics || topics.length === 0) return null;
