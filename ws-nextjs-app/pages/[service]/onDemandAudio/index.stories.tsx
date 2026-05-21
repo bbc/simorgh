@@ -1,10 +1,10 @@
-import { BrowserRouter } from 'react-router-dom';
 import { StoryArgs, StoryProps } from '#app/models/types/storybook';
 import koreanAudioResponse from '#data/korean/bbc_korean_radio/w3ct1vk5.json';
 import gahuzaAudioResponse from '#data/gahuza/bbc_gahuza_radio/p02pcb5c.json';
 import portugueseAudioResponse from '#data/portuguese/podcasts/p07r3r3t.json';
 import _OnDemandAudioPage from './OnDemandAudioLayout';
 import withMediaError from '#app/lib/utilities/episodeAvailability/withMediaError';
+import PageLayoutWrapper from '#app/components/PageLayoutWrapper';
 
 const OnDemandAudioPage = withMediaError(_OnDemandAudioPage);
 
@@ -56,12 +56,11 @@ const onDemandAudioFixtures = {
 };
 
 const Component = ({ service }: StoryProps) => {
+  const pageData = onDemandAudioFixtures[service] || gahuza;
   return (
-    <BrowserRouter>
-      <OnDemandAudioPage
-        pageData={onDemandAudioFixtures[service] || gahuza}
-      />
-    </BrowserRouter>
+    <PageLayoutWrapper pageData={pageData} status={200}>
+      <OnDemandAudioPage pageData={pageData} />
+    </PageLayoutWrapper>
   );
 };
 
@@ -72,6 +71,7 @@ export default {
     chromatic: {
       diffThreshold: 0.2,
     },
+    layout: 'fullscreen',
   },
 };
 

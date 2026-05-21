@@ -13,7 +13,7 @@ import { EventTrackingContextProvider } from '../src/app/contexts/EventTrackingC
 import withServicesDecorator from './withServicesDecorator';
 import pageDataFixture from '../data/news/articles/c0g992jmmkko.json';
 import { RequestContextProvider } from '../src/app/contexts/RequestContext';
-import serviceConfigs from '../src/server/utilities/serviceConfigs';
+import serviceConfigs from '#utilities/serviceConfigs';
 import {
   NOTO_SANS_ETHIOPIC_BOLD,
   NOTO_SANS_ETHIOPIC_REGULAR,
