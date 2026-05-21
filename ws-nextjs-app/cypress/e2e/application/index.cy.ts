@@ -1,5 +1,5 @@
 import SERVICES from '#app/lib/config/services';
-import appConfig from '#server/utilities/serviceConfigs';
+import appConfig from '#utilities/serviceConfigs';
 
 const PUBLIC_SERVICES = [
   'archive',

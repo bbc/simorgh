@@ -80,7 +80,7 @@ const mockPageData = {
     copyright: 'BBC',
   },
   metadata: { atiAnalytics: {} },
-};
+} as unknown as ComponentProps['pageData'];
 
 const mockPageDataWithPosts = {
   ...liveFixture.data,
@@ -92,7 +92,7 @@ const mockPageDataWithPosts = {
     contributors: 'Not a random dude',
   },
   metadata: { atiAnalytics: {} },
-};
+} as unknown as ComponentProps['pageData'];
 
 const mockPageDataWithoutKeyPoints = {
   ...liveFixture.data,
@@ -108,7 +108,7 @@ const mockPageDataWithoutKeyPoints = {
     contributors: 'Not a random dude',
   },
   metadata: { atiAnalytics: {} },
-};
+} as unknown as ComponentProps['pageData'];
 
 const mockPageDataWithPortraitVideoItems = {
   ...mockPageData,
@@ -149,7 +149,7 @@ const mockPageDataWithPortraitVideoItems = {
       ],
     },
   },
-};
+} as unknown as ComponentProps['pageData'];
 
 const mockPageDataWithEmptyPortraitVideoItems = {
   ...mockPageData,
@@ -191,7 +191,7 @@ const mockPageDataWithMetadata = ({
       datePublished,
       dateModified,
     },
-  };
+  } as unknown as ComponentProps['pageData'];
 };
 
 const mockPollingUpdate = (pageData: ComponentProps['pageData']) => {
@@ -422,7 +422,7 @@ describe('Live Page', () => {
         },
         contributors: 'Not a random dude',
       },
-    };
+    } as unknown as ComponentProps['pageData'];
 
     mockPollingUpdate(paginatedData);
 
@@ -457,7 +457,7 @@ describe('Live Page', () => {
         },
         contributors: 'Not a random dude',
       },
-    };
+    } as unknown as ComponentProps['pageData'];
     mockPollingUpdate(paginatedData);
     await act(async () => {
       render(<Live pageData={paginatedData} />, { service: 'pidgin' });
@@ -659,11 +659,65 @@ describe('Live Page', () => {
   });
 
   describe('SportData handling', () => {
+    it('should render live label when sport data is shown and isSportDataLive is true', async () => {
+      const pageDataWithSportData = {
+        ...mockPageData,
+        isLive: false,
+        sportDataEventContent: {
+          ...sportDataFixture.data.sportDataEventContent,
+          live: true,
+        },
+      } as unknown as ComponentProps['pageData'];
+      mockPollingUpdate(pageDataWithSportData);
+
+      await act(async () => {
+        render(<Live pageData={pageDataWithSportData} />);
+      });
+
+      expect(screen.getByTestId('live-label')).toBeInTheDocument();
+    });
+
+    it('should not render live label when sport data is shown and isSportDataLive is false', async () => {
+      const pageDataWithSportData = {
+        ...mockPageData,
+        isLive: true,
+        sportDataEventContent: {
+          ...sportDataFixture.data.sportDataEventContent,
+          live: false,
+        },
+      } as unknown as ComponentProps['pageData'];
+      mockPollingUpdate(pageDataWithSportData);
+
+      await act(async () => {
+        render(<Live pageData={pageDataWithSportData} />);
+      });
+
+      expect(screen.queryByTestId('live-label')).not.toBeInTheDocument();
+    });
+
+    it('should fallback to page isLive value when isSportDataLive is nullish', async () => {
+      const pageDataWithSportData = {
+        ...mockPageData,
+        isLive: true,
+        sportDataEventContent: {
+          ...sportDataFixture.data.sportDataEventContent,
+          live: undefined,
+        },
+      } as unknown as ComponentProps['pageData'];
+      mockPollingUpdate(pageDataWithSportData);
+
+      await act(async () => {
+        render(<Live pageData={pageDataWithSportData} />);
+      });
+
+      expect(screen.getByTestId('live-label')).toBeInTheDocument();
+    });
+
     it('should render HeadToHeadV2 when sportDataEventContent is present and not in live env', async () => {
       const pageDataWithSportData = {
         ...mockPageData,
         sportDataEventContent: sportDataFixture.data.sportDataEventContent,
-      };
+      } as unknown as ComponentProps['pageData'];
       mockPollingUpdate(pageDataWithSportData);
 
       await act(async () => {
@@ -677,7 +731,7 @@ describe('Live Page', () => {
       const pageDataWithSportData = {
         ...mockPageData,
         sportDataEventContent: sportDataFixture.data.sportDataEventContent,
-      };
+      } as unknown as ComponentProps['pageData'];
       mockPollingUpdate(pageDataWithSportData);
 
       await act(async () => {
@@ -692,7 +746,7 @@ describe('Live Page', () => {
       const pageDataWithSportData = {
         ...mockPageData,
         sportDataEventContent: sportDataFixture.data.sportDataEventContent,
-      };
+      } as unknown as ComponentProps['pageData'];
       mockPollingUpdate(pageDataWithSportData);
 
       await act(async () => {
@@ -708,7 +762,7 @@ describe('Live Page', () => {
       const pageDataWithSportData = {
         ...mockPageData,
         sportDataEventContent: sportDataFixture.data.sportDataEventContent,
-      };
+      } as unknown as ComponentProps['pageData'];
       mockPollingUpdate(pageDataWithSportData);
 
       const { container } = await act(async () => {
@@ -723,7 +777,7 @@ describe('Live Page', () => {
       const pageDataWithSportData = {
         ...mockPageData,
         sportDataEventContent: sportDataFixture.data.sportDataEventContent,
-      };
+      } as unknown as ComponentProps['pageData'];
       mockPollingUpdate(pageDataWithSportData);
 
       await act(async () => {
@@ -753,7 +807,7 @@ describe('Live Page', () => {
       const pageDataWithSportData = {
         ...mockPageData,
         sportDataEventContent: sportDataFixture.data.sportDataEventContent,
-      };
+      } as unknown as ComponentProps['pageData'];
       mockPollingUpdate(pageDataWithSportData);
 
       jest.spyOn(isLiveEnvModule, 'default').mockReturnValue(true);

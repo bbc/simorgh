@@ -1,6 +1,5 @@
 import { use, FC, HTMLAttributes } from 'react';
 import { Theme } from '@emotion/react';
-import Url from 'url-parse';
 
 import { FontVariant, GelFontSize } from '../../models/types/theming';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -33,7 +32,7 @@ const InlineLink: FC<Props> = ({
   ...htmlAttributes
 }: Props) => {
   const { externalLinkText } = use(ServiceContext);
-  const { hostname } = new Url(to);
+  const { hostname } = new URL(to, 'https://www.bbc.com');
   const isExternalLink =
     hostname && !bbcDomains.some(bbcDomain => hostname === bbcDomain);
   const linkProps = {
