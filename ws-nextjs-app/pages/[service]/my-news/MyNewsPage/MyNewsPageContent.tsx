@@ -18,7 +18,7 @@ interface MyNewsPageContentProps {
 const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
   const { translations, lang } = use(ServiceContext);
 
-  const activePage = Number(page) || 1;
+  const activePage = Math.max(1, Number(page) || 1);
   const startIndex = (activePage - 1) * ITEMS_PER_PAGE;
 
   const { savedArticles, total, isLoading, error } = useUASRecentActivity({
