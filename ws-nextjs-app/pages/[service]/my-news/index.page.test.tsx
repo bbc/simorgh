@@ -4,7 +4,7 @@ import { MY_NEWS_PAGE } from '#app/routes/utils/pageTypes';
 import { getServerSideProps } from './index.page';
 
 jest.mock('#app/lib/utilities/getToggles/withCache');
-jest.mock('#server/utilities/logResponseTime', () => jest.fn());
+jest.mock('#utilities/logResponseTime', () => jest.fn());
 
 const mockGetToggles = getTogglesModule.default as jest.MockedFunction<
   typeof getTogglesModule.default

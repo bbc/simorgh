@@ -1,6 +1,5 @@
 import { PropsWithChildren } from 'react';
 import { Helmet } from 'react-helmet';
-import { BrowserRouter } from 'react-router-dom';
 import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
@@ -118,29 +117,27 @@ const Context = ({
   };
 
   return (
-    <BrowserRouter>
-      <ThemeProvider service={service} variant="default">
-        <ToggleContextProvider
-          toggles={{
-            mostRead: { enabled: mostReadToggledOn },
-            ads: { enabled: adsToggledOn },
-            podcastPromo: { enabled: promo != null },
-            eventTracking: { enabled: false },
-            preloadLeadImage: { enabled: false },
-            topBarOJs: { enabled: false },
-            articlePortraitVideo: { enabled: false },
-            articleVideoCuration: { enabled: false },
-            continueReadingButton: { enabled: false },
-          }}
-        >
-          <RequestContextProvider {...appInput}>
-            <ServiceContextProvider service={service}>
-              {children}
-            </ServiceContextProvider>
-          </RequestContextProvider>
-        </ToggleContextProvider>
-      </ThemeProvider>
-    </BrowserRouter>
+    <ThemeProvider service={service} variant="default">
+      <ToggleContextProvider
+        toggles={{
+          mostRead: { enabled: mostReadToggledOn },
+          ads: { enabled: adsToggledOn },
+          podcastPromo: { enabled: promo != null },
+          eventTracking: { enabled: false },
+          preloadLeadImage: { enabled: false },
+          topBarOJs: { enabled: false },
+          articlePortraitVideo: { enabled: false },
+          articleVideoCuration: { enabled: false },
+          continueReadingButton: { enabled: false },
+        }}
+      >
+        <RequestContextProvider {...appInput}>
+          <ServiceContextProvider service={service}>
+            {children}
+          </ServiceContextProvider>
+        </RequestContextProvider>
+      </ToggleContextProvider>
+    </ThemeProvider>
   );
 };
 
