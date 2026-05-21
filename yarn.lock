@@ -7205,13 +7205,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chalk@npm:5.6.2":
-  version: 5.6.2
-  resolution: "chalk@npm:5.6.2"
-  checksum: 10/1b2f48f6fba1370670d5610f9cd54c391d6ede28f4b7062dd38244ea5768777af72e5be6b74fb6c6d54cb84c4a2dff3f3afa9b7cb5948f7f022cfd3d087989e0
-  languageName: node
-  linkType: hard
-
 "chalk@npm:^4.0.0, chalk@npm:^4.1.0, chalk@npm:^4.1.2":
   version: 4.1.2
   resolution: "chalk@npm:4.1.2"
@@ -7377,15 +7370,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cli-table@npm:0.3.11":
-  version: 0.3.11
-  resolution: "cli-table@npm:0.3.11"
-  dependencies:
-    colors: "npm:1.0.3"
-  checksum: 10/1cf68fcc717cc7fa4a5fdac6722bcd756883201068a65a8a4550b800e9e6ae107c5b350821128d604cb3eb6a977619bc673e616ff402c3ddc179deb4d00626f7
-  languageName: node
-  linkType: hard
-
 "cli-truncate@npm:^2.1.0":
   version: 2.1.0
   resolution: "cli-truncate@npm:2.1.0"
@@ -7506,13 +7490,6 @@ __metadata:
   version: 2.0.20
   resolution: "colorette@npm:2.0.20"
   checksum: 10/0b8de48bfa5d10afc160b8eaa2b9938f34a892530b2f7d7897e0458d9535a066e3998b49da9d21161c78225b272df19ae3a64d6df28b4c9734c0e55bbd02406f
-  languageName: node
-  linkType: hard
-
-"colors@npm:1.0.3":
-  version: 1.0.3
-  resolution: "colors@npm:1.0.3"
-  checksum: 10/8d81835f217ffca6de6665c8dd9ed132c562d108d4ba842d638c7cb5f8127cff47cb1b54c6bbea49e22eaa7b56caee6b85278dde9c2564f8a0eaef161e028ae0
   languageName: node
   linkType: hard
 
@@ -10430,18 +10407,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-junit@npm:16.0.0":
-  version: 16.0.0
-  resolution: "jest-junit@npm:16.0.0"
-  dependencies:
-    mkdirp: "npm:^1.0.4"
-    strip-ansi: "npm:^6.0.1"
-    uuid: "npm:^8.3.2"
-    xml: "npm:^1.0.1"
-  checksum: 10/2c33ee8bfd0c83b9aa1f8ba5905084890d5f519d294ccc2829d778ac860d5adffffec75d930f44f1d498aa8370c783e0aa6a632d947fb7e81205f0e7b926669d
-  languageName: node
-  linkType: hard
-
 "jest-leak-detector@npm:30.3.0":
   version: 30.3.0
   resolution: "jest-leak-detector@npm:30.3.0"
@@ -11769,15 +11734,6 @@ __metadata:
   bin:
     mkdirp: dist/cjs/src/bin.js
   checksum: 10/16fd79c28645759505914561e249b9a1f5fe3362279ad95487a4501e4467abeb714fd35b95307326b8fd03f3c7719065ef11a6f97b7285d7888306d1bd2232ba
-  languageName: node
-  linkType: hard
-
-"mkdirp@npm:^1.0.4":
-  version: 1.0.4
-  resolution: "mkdirp@npm:1.0.4"
-  bin:
-    mkdirp: bin/cmd.js
-  checksum: 10/d71b8dcd4b5af2fe13ecf3bd24070263489404fe216488c5ba7e38ece1f54daf219e72a833a3a2dc404331e870e9f44963a33399589490956bff003a3404d3b2
   languageName: node
   linkType: hard
 
@@ -13844,7 +13800,6 @@ __metadata:
     cypress-multi-reporters: "npm:2.0.5"
     cypress-terminal-report: "npm:7.2.1"
     jest: "npm:30.3.0"
-    jest-environment-jsdom: "npm:30.2.0"
     mocha-junit-reporter: "npm:2.2.1"
     next: "npm:16.2.6"
     next-test-api-route-handler: "npm:5.0.5"
@@ -13905,9 +13860,7 @@ __metadata:
     babel-jest: "npm:30.3.0"
     babel-loader: "npm:10.1.1"
     babel-plugin-dynamic-import-node: "npm:2.3.3"
-    chalk: "npm:5.6.2"
     chromatic: "npm:13.1.4"
-    cli-table: "npm:0.3.11"
     colors: "npm:^1.4.0"
     crypto: "npm:1.0.1"
     cypress: "npm:15.11.0"
@@ -13922,7 +13875,6 @@ __metadata:
     jest: "npm:30.3.0"
     jest-environment-jsdom: "npm:30.2.0"
     jest-expect-message: "npm:1.1.3"
-    jest-junit: "npm:16.0.0"
     js-cookie: "npm:3.0.5"
     jsdom: "npm:27.0.0"
     lighthouse: "npm:13.0.1"
@@ -13932,7 +13884,6 @@ __metadata:
     mocha-junit-reporter: "npm:2.2.1"
     moment: "npm:2.30.1"
     moment-timezone: "npm:0.6.0"
-    npm-run-all2: "npm:8.0.4"
     puppeteer: "npm:24.22.3"
     ramda: "npm:0.32.0"
     react: "npm:19.2.6"
@@ -13942,7 +13893,6 @@ __metadata:
     retry: "npm:0.13.1"
     storybook: "npm:10.3.6"
     supertest: "npm:7.2.2"
-    timemachine: "npm:0.3.2"
     ts-jest: "npm:29.4.9"
     typescript: "npm:5.9.3"
     undici: "npm:8.1.0"
@@ -14681,13 +14631,6 @@ __metadata:
   version: 2.3.8
   resolution: "through@npm:2.3.8"
   checksum: 10/5da78346f70139a7d213b65a0106f3c398d6bc5301f9248b5275f420abc2c4b1e77c2abc72d218dedc28c41efb2e7c312cb76a7730d04f9c2d37d247da3f4198
-  languageName: node
-  linkType: hard
-
-"timemachine@npm:0.3.2":
-  version: 0.3.2
-  resolution: "timemachine@npm:0.3.2"
-  checksum: 10/65a40a820c1b79688621b39be962896a969e8ce1755897b097b6b0d6986f6c2431535036f094ff624bec1750c2d2335a02fd664165a18d8d364ac1dd6c0f0c50
   languageName: node
   linkType: hard
 
