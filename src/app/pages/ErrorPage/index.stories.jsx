@@ -1,11 +1,14 @@
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ErrorPage from './ErrorPage';
 import ThemeProvider from '../../components/ThemeProvider';
+import PageLayoutWrapper from '../../components/PageLayoutWrapper';
 
 const Component = ({ service = 'news', status = 404 } = {}) => (
   <ThemeProvider service={service}>
     <ServiceContextProvider service={service}>
-      <ErrorPage errorCode={status} />
+      <PageLayoutWrapper pageData={{}} status={status}>
+        <ErrorPage errorCode={status} />
+      </PageLayoutWrapper>
     </ServiceContextProvider>
   </ThemeProvider>
 );
@@ -13,6 +16,7 @@ const Component = ({ service = 'news', status = 404 } = {}) => (
 export default {
   Component,
   title: 'Pages/Error Page',
+  parameters: { layout: 'fullscreen' },
 };
 
 export const News404 = () => <Component />;
