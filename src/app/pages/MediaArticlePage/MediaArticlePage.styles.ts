@@ -97,6 +97,29 @@ export default {
         },
       },
     }),
+  watchLink: ({ fontSizes, fontVariants, mq, palette, spacings }: Theme) =>
+    css({
+      display: 'inline-block',
+      margin: `${spacings.FULL}rem ${spacings.DOUBLE}rem ${spacings.DOUBLE}rem`,
+      padding: `${spacings.FULL}rem ${spacings.DOUBLE}rem`,
+      backgroundColor: palette.POSTBOX,
+      color: palette.WHITE,
+      textDecoration: 'none',
+      ...fontSizes.pica,
+      ...fontVariants.sansBold,
+
+      '&:visited': {
+        color: palette.WHITE,
+      },
+
+      '&:hover, &:focus': {
+        textDecoration: 'underline',
+      },
+
+      [mq.GROUP_4_MIN_WIDTH]: {
+        marginInline: 0,
+      },
+    }),
   mostReadSection: ({ spacings, mq, gridWidths }: Theme) =>
     css({
       [mq.GROUP_1_MAX_WIDTH]: {

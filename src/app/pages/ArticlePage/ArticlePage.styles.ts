@@ -214,25 +214,4 @@ export default {
         padding: 0,
       },
     }),
-  watchLink: ({ fontSizes, fontVariants, palette, spacings }: Theme) => [
-    css({
-      display: 'inline-block',
-      marginBlock: `${spacings.FULL}rem ${spacings.DOUBLE}rem`,
-      padding: `${spacings.FULL}rem ${spacings.DOUBLE}rem`,
-      backgroundColor: palette.POSTBOX,
-      color: palette.WHITE,
-      textDecoration: 'none',
-      ...fontSizes.pica,
-      ...fontVariants.sansBold,
-
-      '&:visited': {
-        color: palette.WHITE,
-      },
-
-      '&:hover, &:focus': {
-        textDecoration: 'underline',
-      },
-    }),
-    commonMarginSpacing,
-  ],
 };

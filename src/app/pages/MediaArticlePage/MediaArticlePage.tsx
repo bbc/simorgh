@@ -1,4 +1,4 @@
-import { use } from 'react';
+import { use, useCallback, useRef, useState } from 'react';
 import { Theme } from '@emotion/react';
 import MediaLoader from '#app/components/MediaLoader';
 import { MediaBlock } from '#app/components/MediaLoader/types';
@@ -6,6 +6,7 @@ import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 import { BylineLinkedData, Tag } from '#app/components/LinkedData/types';
 import {
   Article,
+  OptimoBlock,
   OptimoBylineBlock,
   OptimoBylineContributorBlock,
 } from '#app/models/types/optimo';
@@ -66,23 +67,63 @@ import { ComponentToRenderProps, TimestampProps } from './types';
 import checkIsLiveMedia from './utils/checkIsLiveMedia';
 
 import { isPortraitVideo } from '../../components/MediaLoader/utils/isPortraitVideo';
+import MediaArticleVideoModal from './MediaArticleVideoModal';
+
+type VideoBlock = OptimoBlock & {
+  model: {
+    blocks?: MediaBlock[];
+  };
+};
+
+const optimoArticleIdRegex = /(c[a-zA-Z0-9]{10,}o)/;
+
+const getOptimoArticleId = (pageData: Article) =>
+  pageData?.metadata?.locators?.canonicalUrl?.match(
+    /\/articles\/(c[a-zA-Z0-9]{10,}o)/,
+  )?.[1] ?? pageData?.metadata?.id?.match(optimoArticleIdRegex)?.[1];
+
+const getFirstVideoBlock = (blocks: OptimoBlock[]) =>
+  blocks.find(
+    (block): block is VideoBlock =>
+      block.type === 'video' &&
+      Array.isArray((block.model as { blocks?: unknown[] })?.blocks),
+  );
 
 const getAudioVideoComponent =
-  (isCpsMap: boolean) => (props: ComponentToRenderProps) => {
+  ({
+    isCpsMap,
+    watchUrl,
+    watchVideoBlocks,
+    watchText,
+  }: {
+    isCpsMap: boolean;
+    watchUrl?: string | null;
+    watchVideoBlocks?: MediaBlock[];
+    watchText?: string;
+  }) =>
+  (props: ComponentToRenderProps) => {
     const { blocks } = props;
     const isPortrait = isPortraitVideo(blocks as MediaBlock[]);
     const className = isPortrait ? 'portrait-media-loader' : '';
+    const showWatchLink = watchUrl && blocks === watchVideoBlocks;
 
     return (
-      <div
-        css={({ spacings }: Theme) => [
-          `padding-top: ${spacings.TRIPLE}rem`,
-          isCpsMap && styles.cafMediaPlayer,
-          isPortrait && styles.portraitVideoPlayer,
-        ]}
-      >
-        <MediaLoader blocks={blocks as MediaBlock[]} className={className} />
-      </div>
+      <>
+        <div
+          css={({ spacings }: Theme) => [
+            `padding-top: ${spacings.TRIPLE}rem`,
+            isCpsMap && styles.cafMediaPlayer,
+            isPortrait && styles.portraitVideoPlayer,
+          ]}
+        >
+          <MediaLoader blocks={blocks as MediaBlock[]} className={className} />
+        </div>
+        {showWatchLink && (
+          <a css={styles.watchLink} href={watchUrl}>
+            {watchText}
+          </a>
+        )}
+      </>
     );
   };
 
@@ -140,14 +181,26 @@ const getTimestampComponent =
   (showTimestamp: boolean) => (props: TimestampProps) =>
     showTimestamp ? <Timestamp {...props} popOut={false} /> : null;
 
-const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
-  const { pageType } = use(RequestContext);
+const MediaArticlePage = ({
+  pageData,
+  openVideoModal = false,
+  watchArticlePath = null,
+}: {
+  pageData: Article;
+  openVideoModal?: boolean;
+  watchArticlePath?: string | null;
+}) => {
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(openVideoModal);
+  const pageContentRef = useRef<HTMLDivElement>(null);
+  const { isApp, isAmp, isLite, pageType, pathname } = use(RequestContext);
 
   const {
     articleAuthor,
     isTrustProjectParticipant,
     showRelatedTopics,
     brandName,
+    translations,
+    service,
   } = use(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
 
@@ -158,6 +211,20 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
   const aboutTags = getAboutTags(pageData) as Tag[];
   const topics = pageData?.metadata?.topics ?? [];
   const blocks = pageData?.content?.model?.blocks ?? [];
+  const firstVideoBlock = getFirstVideoBlock(blocks);
+  const firstVideoBlocks = firstVideoBlock?.model?.blocks ?? [];
+  const optimoArticleId = getOptimoArticleId(pageData);
+  const isWatchRoute = pathname?.includes('/watch/');
+  const watchUrl =
+    service === 'hindi' &&
+    optimoArticleId &&
+    firstVideoBlock &&
+    !isWatchRoute &&
+    !isAmp &&
+    !isLite &&
+    !isApp
+      ? `/${service}/watch/${optimoArticleId}`
+      : null;
 
   const bylineBlock = blocks.find(
     block => block.type === 'byline',
@@ -216,13 +283,26 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const showTimestamp = Boolean(!hasByline && !isLiveMedia);
 
+  const closeVideoModal = useCallback(() => {
+    setIsVideoModalOpen(false);
+
+    if (watchArticlePath && typeof window !== 'undefined') {
+      window.history.replaceState(window.history.state, '', watchArticlePath);
+    }
+  }, [watchArticlePath]);
+
   const componentsToRender = {
     fauxHeadline,
     visuallyHiddenHeadline,
     headline: headings,
     subheadline: headings,
-    audio: getAudioVideoComponent(isCpsMap),
-    video: getAudioVideoComponent(isCpsMap),
+    audio: getAudioVideoComponent({ isCpsMap }),
+    video: getAudioVideoComponent({
+      isCpsMap,
+      watchUrl,
+      watchVideoBlocks: firstVideoBlocks,
+      watchText: translations.media.watch,
+    }),
     legacyMedia: getLegacyMediaComponent(isCpsMap, headline),
     text,
     byline: getBylineComponent(
@@ -244,7 +324,18 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
   // metrics are gated by experimentsForPageMetrics; add map experiment names there when ready
   // flags mirror article page for page views per visit tracking
   return (
-    <div css={styles.pageWrapper}>
+    <div ref={pageContentRef} css={styles.pageWrapper}>
+      {isVideoModalOpen &&
+        firstVideoBlocks.length > 0 &&
+        !isAmp &&
+        !isLite &&
+        !isApp && (
+          <MediaArticleVideoModal
+            pageContentRef={pageContentRef}
+            blocks={firstVideoBlocks}
+            onClose={closeVideoModal}
+          />
+        )}
       <ATIAnalytics atiData={atiData} />
       <ChartbeatAnalytics
         categoryName={pageData?.metadata?.passport?.category?.categoryName}

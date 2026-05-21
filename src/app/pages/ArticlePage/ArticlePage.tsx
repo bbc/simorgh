@@ -1,4 +1,4 @@
-import { use, useCallback, useRef, useState } from 'react';
+import { use, useState } from 'react';
 import { useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import useOptimizelyVariation, {
@@ -90,27 +90,6 @@ import {
   isPortraitVideo,
   isPortraitVideoUnderHeadline,
 } from '../../components/MediaLoader/utils/isPortraitVideo';
-import ArticleVideoModal from './ArticleVideoModal';
-
-type VideoBlock = OptimoBlock & {
-  model: {
-    blocks?: MediaBlock[];
-  };
-};
-
-const optimoArticleIdRegex = /(c[a-zA-Z0-9]{10,}o)/;
-
-const getOptimoArticleId = (pageData: Article) =>
-  pageData?.metadata?.locators?.canonicalUrl?.match(
-    /\/articles\/(c[a-zA-Z0-9]{10,}o)/,
-  )?.[1] ?? pageData?.metadata?.id?.match(optimoArticleIdRegex)?.[1];
-
-const getFirstVideoBlock = (blocks: OptimoBlock[]) =>
-  blocks.find(
-    (block): block is VideoBlock =>
-      block.type === 'video' &&
-      Array.isArray((block.model as { blocks?: unknown[] })?.blocks),
-  );
 
 const getImageComponent =
   (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (
@@ -194,12 +173,7 @@ const getHeadlineComponent = (props: ComponentToRenderProps) => (
 );
 
 const getVideoComponent =
-  (
-    translations: Translations,
-    pageBlocks: OptimoBlock[],
-    watchUrl?: string | null,
-    watchVideoBlocks?: MediaBlock[],
-  ) =>
+  (translations: Translations, pageBlocks: OptimoBlock[]) =>
   (props: ComponentToRenderProps) => {
     const { blocks } = props;
 
@@ -209,17 +183,11 @@ const getVideoComponent =
       isPortraitVideo(blocks as MediaBlock[]) &&
       title &&
       !isPortraitVideoUnderHeadline(pageBlocks, blocks as MediaBlock[]);
-    const showWatchLink = watchUrl && blocks === watchVideoBlocks;
 
     return (
       <>
         {showTitle && <strong css={styles.portraitVideoTitle}>{title}</strong>}
         <MediaLoader blocks={blocks as MediaBlock[]} />
-        {showWatchLink && (
-          <a css={styles.watchLink} href={watchUrl}>
-            {translations.media.watch}
-          </a>
-        )}
       </>
     );
   };
@@ -241,18 +209,12 @@ const getContinueReadingButton =
 const ArticlePage = ({
   pageData,
   showTopicDiscoveryComponent = false,
-  openVideoModal = false,
-  watchArticlePath = null,
 }: {
   pageData: Article;
   showTopicDiscoveryComponent?: boolean;
-  openVideoModal?: boolean;
-  watchArticlePath?: string | null;
 }) => {
   const [showAllContent, setShowAllContent] = useState(false);
-  const [isVideoModalOpen, setIsVideoModalOpen] = useState(openVideoModal);
-  const articleContentRef = useRef<HTMLDivElement>(null);
-  const { isApp, isAmp, isLite, pageType, pathname } = use(RequestContext);
+  const { isApp, isAmp, isLite, pageType } = use(RequestContext);
 
   const {
     articleAuthor,
@@ -260,7 +222,6 @@ const ArticlePage = ({
     showRelatedTopics,
     brandName,
     translations,
-    service,
   } = use(ServiceContext);
 
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
@@ -320,30 +281,8 @@ const ArticlePage = ({
   const aboutTags = getAboutTags(pageData);
   const topics = pageData?.metadata?.topics ?? [];
   const blocks = pageData?.content?.model?.blocks ?? [];
-  const firstVideoBlock = getFirstVideoBlock(blocks);
-  const firstVideoBlocks = firstVideoBlock?.model?.blocks ?? [];
-  const optimoArticleId = getOptimoArticleId(pageData);
-  const isWatchRoute = pathname?.includes('/watch/');
-  const watchUrl =
-    service === 'hindi' &&
-    optimoArticleId &&
-    firstVideoBlock &&
-    !isWatchRoute &&
-    !isAmp &&
-    !isLite &&
-    !isApp
-      ? `/${service}/watch/${optimoArticleId}`
-      : null;
   const mediaCurationContent = pageData?.secondaryColumn?.mediaCuration;
   const startsWithHeading = blocks?.[0]?.type === 'headline' || false;
-
-  const closeVideoModal = useCallback(() => {
-    setIsVideoModalOpen(false);
-
-    if (watchArticlePath && typeof window !== 'undefined') {
-      window.history.replaceState(window.history.state, '', watchArticlePath);
-    }
-  }, [watchArticlePath]);
 
   const bylineBlock = blocks.find(
     (block): block is OptimoBylineBlock =>
@@ -429,7 +368,7 @@ const ArticlePage = ({
     headline: getHeadlineComponent,
     subheadline: Headings,
     audio: MediaLoader,
-    video: getVideoComponent(translations, blocks, watchUrl, firstVideoBlocks),
+    video: getVideoComponent(translations, blocks),
     text,
     image: getImageComponent(preloadLeadImageToggle),
     timestamp: getTimestampComponent(
@@ -496,18 +435,7 @@ const ArticlePage = ({
     !isTopBarOJsEnabled || !pageData?.secondaryColumn?.topStories?.length;
 
   return (
-    <div ref={articleContentRef} css={styles.pageWrapper}>
-      {isVideoModalOpen &&
-        firstVideoBlocks.length > 0 &&
-        !isAmp &&
-        !isLite &&
-        !isApp && (
-          <ArticleVideoModal
-            articleContentRef={articleContentRef}
-            blocks={firstVideoBlocks}
-            onClose={closeVideoModal}
-          />
-        )}
+    <div css={styles.pageWrapper}>
       {/* EXPERIMENT: PWA Promotional Banner */}
       {shouldRenderPWAPromotionalBanner && <PWAPromotionalBanner />}
       <ATIAnalytics atiData={atiData} />

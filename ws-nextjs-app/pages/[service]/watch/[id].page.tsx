@@ -83,14 +83,29 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   const props = await result.props;
   const status = props?.status;
+  const isMediaArticlePage = props?.pageType === MEDIA_ARTICLE_PAGE;
+
+  if (status === OK && !isMediaArticlePage) {
+    context.res.statusCode = NOT_FOUND;
+
+    return {
+      props: {
+        ...props,
+        pageType: ARTICLE_PAGE,
+        pathname: watchPath,
+        status: NOT_FOUND,
+        timeOnServer: Date.now(),
+      },
+    };
+  }
 
   return {
     props: {
       ...props,
       id: articlePath,
-      openVideoModal: status === OK,
+      openVideoModal: status === OK && isMediaArticlePage,
       pathname: watchPath,
-      watchArticlePath: articlePath,
+      watchArticlePath: isMediaArticlePage ? articlePath : null,
     },
   };
 };

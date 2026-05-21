@@ -1,18 +1,15 @@
 import { Global } from '@emotion/react';
 import { createPortal } from 'react-dom';
-import { type RefObject, use, useEffect, useMemo, useRef } from 'react';
+import { type RefObject, use, useEffect, useRef } from 'react';
 import { navigationIcons } from '#psammead/psammead-assets/src/svgs';
 import MediaLoader from '#app/components/MediaLoader';
 import { MediaBlock, Player } from '#app/components/MediaLoader/types';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import {
-  RequestContext,
-  type RequestContextProps,
-} from '#app/contexts/RequestContext';
-import { MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
-import styles from './ArticleVideoModal.styles';
+import styles from './MediaArticleVideoModal.styles';
+
+const modalId = 'media-article-video-modal';
 
 const getAllPlayerInstances = () => {
   if (typeof window === 'undefined') return [];
@@ -24,13 +21,12 @@ const getAllPlayerInstances = () => {
 };
 
 type Props = {
-  articleContentRef: RefObject<HTMLDivElement | null>;
+  pageContentRef: RefObject<HTMLDivElement | null>;
   blocks: MediaBlock[];
   onClose: () => void;
 };
 
-const ArticleVideoModal = ({ articleContentRef, blocks, onClose }: Props) => {
-  const requestContext = use(RequestContext);
+const MediaArticleVideoModal = ({ pageContentRef, blocks, onClose }: Props) => {
   const {
     translations: {
       media: {
@@ -43,14 +39,6 @@ const ArticleVideoModal = ({ articleContentRef, blocks, onClose }: Props) => {
   const isHydrated = useHydrationDetection();
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const endOfContentButtonRef = useRef<HTMLButtonElement>(null);
-
-  const mediaRequestContext = useMemo<RequestContextProps>(
-    () => ({
-      ...requestContext,
-      pageType: MEDIA_ARTICLE_PAGE,
-    }),
-    [requestContext],
-  );
 
   useEffect(() => {
     if (!isHydrated) return undefined;
@@ -77,22 +65,22 @@ const ArticleVideoModal = ({ articleContentRef, blocks, onClose }: Props) => {
       }
     };
 
-    const modal = document.getElementById('article-video-modal');
-    const articleContent = articleContentRef.current;
+    const modal = document.getElementById(modalId);
+    const pageContent = pageContentRef.current;
 
     closeButtonRef.current?.focus();
-    articleContent?.setAttribute('inert', 'true');
+    pageContent?.setAttribute('inert', 'true');
     modal?.addEventListener('keydown', handleKeyDown);
 
     return () => {
-      articleContent?.removeAttribute('inert');
+      pageContent?.removeAttribute('inert');
       modal?.removeEventListener('keydown', handleKeyDown);
 
       getAllPlayerInstances().forEach(player => {
         player.pause();
       });
     };
-  }, [articleContentRef, isHydrated, onClose]);
+  }, [isHydrated, onClose, pageContentRef]);
 
   if (!isHydrated) return null;
 
@@ -103,7 +91,7 @@ const ArticleVideoModal = ({ articleContentRef, blocks, onClose }: Props) => {
         role="dialog"
         aria-modal="true"
         aria-label={modalLabel}
-        id="article-video-modal"
+        id={modalId}
         css={styles.modal}
       >
         <div css={styles.modalContent}>
@@ -118,10 +106,7 @@ const ArticleVideoModal = ({ articleContentRef, blocks, onClose }: Props) => {
             <VisuallyHiddenText>{closeVideo}</VisuallyHiddenText>
           </button>
           <div css={styles.mediaWrapper}>
-            {/* Reuse mediaArticle behaviour so /watch opens SMP rather than the article placeholder. */}
-            <RequestContext.Provider value={mediaRequestContext}>
-              <MediaLoader blocks={blocks} />
-            </RequestContext.Provider>
+            <MediaLoader blocks={blocks} />
           </div>
         </div>
         <button
@@ -139,4 +124,4 @@ const ArticleVideoModal = ({ articleContentRef, blocks, onClose }: Props) => {
   );
 };
 
-export default ArticleVideoModal;
+export default MediaArticleVideoModal;
