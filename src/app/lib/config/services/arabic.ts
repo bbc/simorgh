@@ -51,7 +51,8 @@ export const service: DefaultServiceConfig = {
     podcastPromo: {
       title: 'البودكاست',
       brandTitle: 'يستحق الانتباه',
-      brandDescription: 'شرح معمق لأبرز الأحداث والموضوعات، لمساعدتك على فهم أهم المتغيرات حولك وأثرها على حياتك',
+      brandDescription:
+        'شرح معمق لأبرز الأحداث والموضوعات، لمساعدتك على فهم أهم المتغيرات حولك وأثرها على حياتك',
       image: {
         src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0h6dt4s.jpg',
         alt: 'يستحق الانتباه',
