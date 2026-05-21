@@ -12,7 +12,7 @@ import MyNewsPageLoading from './MyNewsPageLoading';
 const ITEMS_PER_PAGE = 10;
 
 interface MyNewsPageContentProps {
-  page?: number | string;
+  page?: string;
 }
 
 const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {

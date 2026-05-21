@@ -5,19 +5,20 @@ import {
   waitFor,
 } from '#app/components/react-testing-library-with-providers';
 import useUASRecentActivity from '#app/hooks/useUASRecentActivity';
+import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
 import MyNewsPage from '.';
 
 jest.mock('#app/hooks/useUASRecentActivity');
-jest.mock('next/router', () => ({
-  useRouter: () => ({
-    query: { service: 'hindi' },
-    push: jest.fn(),
-  }),
-}));
 
 const mockUseRecentActivity = useUASRecentActivity as jest.MockedFunction<
   typeof useUASRecentActivity
 >;
+
+const renderOptions = {
+  service: 'hindi' as const,
+  toggles: { uasPersonalization: { enabled: true, value: 'hindi' } },
+  idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: true },
+};
 
 const mockSavedArticles = [
   {
@@ -43,10 +44,16 @@ const mockSavedArticles = [
 describe('MyNewsPage', () => {
   beforeEach(() => {
     jest.clearAllMocks();
+    mockUseRecentActivity.mockReturnValue({
+      savedArticles: [],
+      total: 0,
+      isLoading: false,
+      error: null,
+    });
   });
 
   it('should render loading state initially', async () => {
-    mockUseRecentActivity.mockReturnValueOnce({
+    mockUseRecentActivity.mockReturnValue({
       savedArticles: [],
       total: 0,
       isLoading: true,
@@ -54,14 +61,14 @@ describe('MyNewsPage', () => {
     });
 
     await act(async () => {
-      render(<MyNewsPage />);
+      render(<MyNewsPage />, renderOptions);
     });
 
     expect(screen.getByText('Loading your articles...')).toBeInTheDocument();
   });
 
   it('should render saved articles after fetching', async () => {
-    mockUseRecentActivity.mockReturnValueOnce({
+    mockUseRecentActivity.mockReturnValue({
       savedArticles: mockSavedArticles,
       total: 2,
       isLoading: false,
@@ -69,7 +76,7 @@ describe('MyNewsPage', () => {
     });
 
     await act(async () => {
-      render(<MyNewsPage />);
+      render(<MyNewsPage />, renderOptions);
     });
 
     await waitFor(() => {
@@ -79,43 +86,40 @@ describe('MyNewsPage', () => {
   });
 
   it('should display empty state when no articles', async () => {
-    mockUseRecentActivity.mockReturnValueOnce({
-      savedArticles: [],
-      total: 0,
-      isLoading: false,
-      error: null,
-    });
-
     await act(async () => {
-      render(<MyNewsPage />);
-    });
-
-    await waitFor(() => {
-      expect(screen.getByText('No saved articles yet')).toBeInTheDocument();
-    });
-  });
-
-  it('should display error state when API fails', async () => {
-    mockUseRecentActivity.mockReturnValueOnce({
-      savedArticles: [],
-      total: 0,
-      isLoading: false,
-      error: 'Failed to load articles',
-    });
-
-    await act(async () => {
-      render(<MyNewsPage />);
+      render(<MyNewsPage />, renderOptions);
     });
 
     await waitFor(() => {
       expect(
-        screen.getByText('Error loading articles: Failed to load articles'),
+        screen.getByText("You haven't saved any articles yet"),
+      ).toBeInTheDocument();
+    });
+  });
+
+  it('should display error state when API fails', async () => {
+    mockUseRecentActivity.mockReturnValue({
+      savedArticles: [],
+      total: 0,
+      isLoading: false,
+      error: new Error('Failed to load articles'),
+    });
+
+    await act(async () => {
+      render(<MyNewsPage />, renderOptions);
+    });
+
+    await waitFor(() => {
+      expect(
+        screen.getByText(
+          'This content does not seem to be working. Please try again later.',
+        ),
       ).toBeInTheDocument();
     });
   });
 
   it('should render pagination when pageCount > 1', async () => {
-    mockUseRecentActivity.mockReturnValueOnce({
+    mockUseRecentActivity.mockReturnValue({
       savedArticles: Array.from({ length: 25 }, (_, i) => ({
         id: `id-${i}`,
         title: `Article ${i}`,
@@ -131,36 +135,25 @@ describe('MyNewsPage', () => {
     });
 
     await act(async () => {
-      render(<MyNewsPage />);
+      render(<MyNewsPage />, renderOptions);
     });
 
     await waitFor(() => {
-      // Check for pagination navigation element
       expect(screen.getByRole('navigation')).toBeInTheDocument();
-      // Check that page 2 link exists
       expect(screen.getByRole('link', { name: '2' })).toBeInTheDocument();
     });
   });
 
   it('should call useUASRecentActivity with correct pagination params', async () => {
-    mockUseRecentActivity.mockReturnValueOnce({
-      savedArticles: mockSavedArticles,
-      total: 2,
-      isLoading: false,
-      error: null,
-    });
-
     await act(async () => {
-      render(<MyNewsPage />);
+      render(<MyNewsPage />, renderOptions);
     });
 
-    await waitFor(() => {
-      expect(mockUseRecentActivity).toHaveBeenCalledWith(
-        expect.objectContaining({
-          itemsPerPage: 10,
-          startIndex: 0,
-        }),
-      );
-    });
+    expect(mockUseRecentActivity).toHaveBeenCalledWith(
+      expect.objectContaining({
+        itemsPerPage: 10,
+        startIndex: 0,
+      }),
+    );
   });
 });
