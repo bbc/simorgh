@@ -162,6 +162,7 @@ export interface UrlConstructParams {
   disableRadioSchedule?: boolean;
   mediaId?: string | null;
   lang?: string | null;
+  country?: string | null;
 }
 
 const constructPageFetchUrl = ({
@@ -174,6 +175,7 @@ const constructPageFetchUrl = ({
   disableRadioSchedule,
   mediaId,
   lang,
+  country,
 }: UrlConstructParams) => {
   const env = getEnvironment(pathname);
   const isLocal = !env || env === 'local';
@@ -210,6 +212,9 @@ const constructPageFetchUrl = ({
       lang,
     }),
     ...(env && { serviceEnv: env }),
+    ...(country && {
+      country,
+    }),
   };
 
   let fetchUrl = Url(process.env.BFF_PATH as string).set(
