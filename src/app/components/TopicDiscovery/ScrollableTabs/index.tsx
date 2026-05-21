@@ -3,12 +3,14 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import { Chevron, ChevronOrientation } from '#app/components/icons';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import styles from './index.styles';
+import { ComponentExperimentProps } from '#app/models/types/global';
 
 type ScrollableTabsProps = {
   tabs: { id: string; label: string }[];
   activeTabId: string;
   onTabChange: (tabId: string) => void;
   labelledBy: string;
+  experimentProps?: ComponentExperimentProps;
 };
 
 const ScrollableTabs = ({
@@ -16,6 +18,7 @@ const ScrollableTabs = ({
   activeTabId,
   onTabChange,
   labelledBy,
+  experimentProps,
 }: ScrollableTabsProps) => {
   const { dir } = use(ServiceContext);
   const tabListRef = useRef<HTMLDivElement>(null);
@@ -107,6 +110,7 @@ const ScrollableTabs = ({
           const clickTrackerHandler = getClickTrackerHandler({
             componentName: `topic-discovery-tab-${tab.id}`,
             preventNavigation: true,
+            experimentProps,
           });
 
           return (
