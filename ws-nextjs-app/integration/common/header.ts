@@ -11,7 +11,7 @@ export default service => {
 
       expect(logo).toBeInTheDocument();
 
-      const logoImg = logo?.querySelector('img') as Element | null;
+      const logoImg = logo?.querySelector('img');
 
       expect(logoImg).toBeTruthy();
 

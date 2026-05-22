@@ -115,13 +115,6 @@ exports[`Canonical On Demand Audio Page Header I can see the branding 1`] = `
 }
 `;
 
-exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 1`] = `
-{
-  "text": "Berita",
-  "url": "/indonesia",
-}
-`;
-
 exports[`Canonical On Demand Audio Page I can see the brand title 1`] = `"Dunia Pagi Ini"`;
 
 exports[`Canonical On Demand Audio Page I can see the episode summary 1`] = `"Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia."`;

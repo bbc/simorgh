@@ -10,11 +10,9 @@ import { service as afaanoromoo } from '#app/lib/config/services/afaanoromoo';
 import { service as afrique } from '#app/lib/config/services/afrique';
 import { service as amharic } from '#app/lib/config/services/amharic';
 import { service as arabic } from '#app/lib/config/services/arabic';
-import { service as archive } from '#app/lib/config/services/archive';
 import { service as azeri } from '#app/lib/config/services/azeri';
 import { service as bengali } from '#app/lib/config/services/bengali';
 import { service as burmese } from '#app/lib/config/services/burmese';
-import { service as cymrufyw } from '#app/lib/config/services/cymrufyw';
 import { service as dari } from '#app/lib/config/services/dari';
 import { service as gahuza } from '#app/lib/config/services/gahuza';
 import { service as gujarati } from '#app/lib/config/services/gujarati';
@@ -28,10 +26,8 @@ import { service as kyrgyz } from '#app/lib/config/services/kyrgyz';
 import { service as magyarul } from '#app/lib/config/services/magyarul';
 import { service as marathi } from '#app/lib/config/services/marathi';
 import { service as mundo } from '#app/lib/config/services/mundo';
-import { service as naidheachdan } from '#app/lib/config/services/naidheachdan';
 import { service as nepali } from '#app/lib/config/services/nepali';
 import { service as news } from '#app/lib/config/services/news';
-import { service as newsround } from '#app/lib/config/services/newsround';
 import { service as pashto } from '#app/lib/config/services/pashto';
 import { service as persian } from '#app/lib/config/services/persian';
 import { service as pidgin } from '#app/lib/config/services/pidgin';
@@ -40,8 +36,6 @@ import { service as portuguese } from '#app/lib/config/services/portuguese';
 import { service as punjabi } from '#app/lib/config/services/punjabi';
 import { service as romania } from '#app/lib/config/services/romania';
 import { service as russian } from '#app/lib/config/services/russian';
-import { service as scotland } from '#app/lib/config/services/scotland';
-import { service as sport } from '#app/lib/config/services/sport';
 import { service as serbian } from '#app/lib/config/services/serbian';
 import { service as sinhala } from '#app/lib/config/services/sinhala';
 import { service as somali } from '#app/lib/config/services/somali';
@@ -82,11 +76,9 @@ const servicesNoVariants: ServiceConfigsNoVariants = {
   afrique,
   amharic,
   arabic,
-  archive,
   azeri,
   bengali,
   burmese,
-  cymrufyw,
   dari,
   gahuza,
   gujarati,
@@ -100,10 +92,8 @@ const servicesNoVariants: ServiceConfigsNoVariants = {
   magyarul,
   marathi,
   mundo,
-  naidheachdan,
   nepali,
   news,
-  newsround,
   pashto,
   persian,
   pidgin,
@@ -112,8 +102,6 @@ const servicesNoVariants: ServiceConfigsNoVariants = {
   punjabi,
   romania,
   russian,
-  sport,
-  scotland,
   sinhala,
   somali,
   swahili,

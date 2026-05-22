@@ -8,6 +8,10 @@ const publicServiceDestinationNames = {
 } as Record<Services, string>;
 
 const expectedAtiDestinationsForAmp = {
+  NEWS_PS:
+    '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598285, 644937)',
+  NEWS_PS_TEST:
+    '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598286, 598288)',
   WS_NEWS_LANGUAGES: '598342',
   WS_NEWS_LANGUAGES_TEST: '598343',
   NEWS_LANGUAGES_GNL: 646753,

@@ -45,6 +45,8 @@ describe('AMP ATI Analytics', () => {
       ${'local'}  | ${'WS_NEWS_LANGUAGES_TEST'}  | ${'news-gahuza'}   | ${'gahuza'}   | ${'https://logws1363.ati-host.net/hit.xiti?'}
       ${'test'}   | ${'WS_NEWS_LANGUAGES_TEST'}  | ${'news-gahuza'}   | ${'gahuza'}   | ${'https://logws1363.ati-host.net/hit.xiti?'}
       ${'live'}   | ${'WS_NEWS_LANGUAGES'}       | ${'news-gahuza'}   | ${'gahuza'}   | ${'https://a1.api.bbc.co.uk/hit.xiti?'}
+      ${'live'}   | ${'NEWS_PS'}                 | ${'news'}          | ${'news'}     | ${'https://a1.api.bbc.co.uk/hit.xiti?'}
+      ${'test'}   | ${'NEWS_PS_TEST'}            | ${'news'}          | ${'news'}     | ${'https://logws1363.ati-host.net/hit.xiti?'}
       ${'live'}   | ${'NEWS_LANGUAGES_GNL'}      | ${'news-japanese'} | ${'japanese'} | ${'https://a1.api.bbc.co.uk/hit.xiti?'}
       ${'test'}   | ${'NEWS_LANGUAGES_GNL_TEST'} | ${'news-japanese'} | ${'japanese'} | ${'https://logws1363.ati-host.net/hit.xiti?'}
     `(

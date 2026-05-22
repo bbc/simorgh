@@ -63,6 +63,36 @@ exports[`Brand should render correctly with link not provided 1`] = `
 }
 
 .emotion-4 {
+  position: relative;
+  height: 100%;
+}
+
+.emotion-5 {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  max-height: 32px;
+  margin-left: 0.5px;
+  box-sizing: content-box;
+  height: 1.25rem;
+  max-width: 100%;
+}
+
+@media (min-width: 25rem) {
+  .emotion-5 {
+    height: 1.5rem;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-5 {
+    height: 1.875rem;
+    margin-left: 0;
+  }
+}
+
+.emotion-6 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -79,18 +109,25 @@ exports[`Brand should render correctly with link not provided 1`] = `
   >
     <div
       class="brand-svg-wrapper emotion-2 emotion-3"
+      id="brandSvgHeader"
     >
-      <img
-        alt="Default Brand Name"
-        aria-hidden="true"
-        focusable="false"
-        height="30"
-        id="brandSvgHeader"
-        src="/news/images/brandLogo.svg"
-        style="margin-left: 0.5px;"
-      />
-      <span
+      <div
         class="emotion-4"
+        style="padding-bottom: 0px; overflow: hidden; height: 24px;"
+      >
+        <img
+          alt="Default Brand Name"
+          class="emotion-5"
+          fetchpriority="high"
+          height="30"
+          loading="eager"
+          src="/news/images/brandLogo.svg"
+          style="aspect-ratio: auto;"
+          width="0"
+        />
+      </div>
+      <span
+        class="emotion-6"
         id="BrandLink-null"
         role="text"
       >
@@ -203,6 +240,36 @@ exports[`Brand should render correctly with link provided 1`] = `
 }
 
 .emotion-6 {
+  position: relative;
+  height: 100%;
+}
+
+.emotion-7 {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  max-height: 32px;
+  margin-left: 0.5px;
+  box-sizing: content-box;
+  height: 1.25rem;
+  max-width: 100%;
+}
+
+@media (min-width: 25rem) {
+  .emotion-7 {
+    height: 1.5rem;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-7 {
+    height: 1.875rem;
+    margin-left: 0;
+  }
+}
+
+.emotion-8 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -219,23 +286,30 @@ exports[`Brand should render correctly with link provided 1`] = `
   >
     <div
       class="brand-svg-wrapper emotion-2 emotion-3"
+      id="brandSvgHeader"
     >
       <a
         aria-labelledby="BrandLink-null"
         class="brand-link focusIndicatorRemove emotion-4 emotion-5"
         href="https://www.bbc.co.uk/news"
       >
-        <img
-          alt="Default Brand Name"
-          aria-hidden="true"
-          focusable="false"
-          height="30"
-          id="brandSvgHeader"
-          src="/news/images/brandLogo.svg"
-          style="margin-left: 0.5px;"
-        />
-        <span
+        <div
           class="emotion-6"
+          style="padding-bottom: 0px; overflow: hidden; height: 24px;"
+        >
+          <img
+            alt="Default Brand Name"
+            class="emotion-7"
+            fetchpriority="high"
+            height="30"
+            loading="eager"
+            src="/news/images/brandLogo.svg"
+            style="aspect-ratio: auto;"
+            width="0"
+          />
+        </div>
+        <span
+          class="emotion-8"
           id="BrandLink-null"
           role="text"
         >
@@ -317,6 +391,36 @@ exports[`Brand should render correctly with no service Localised Name 1`] = `
 }
 
 .emotion-4 {
+  position: relative;
+  height: 100%;
+}
+
+.emotion-5 {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  max-height: 32px;
+  margin-left: 0.5px;
+  box-sizing: content-box;
+  height: 1.25rem;
+  max-width: 100%;
+}
+
+@media (min-width: 25rem) {
+  .emotion-5 {
+    height: 1.5rem;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-5 {
+    height: 1.875rem;
+    margin-left: 0;
+  }
+}
+
+.emotion-6 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -333,18 +437,25 @@ exports[`Brand should render correctly with no service Localised Name 1`] = `
   >
     <div
       class="brand-svg-wrapper emotion-2 emotion-3"
+      id="brandSvgHeader"
     >
-      <img
-        alt="BBC News"
-        aria-hidden="true"
-        focusable="false"
-        height="30"
-        id="brandSvgHeader"
-        src="/news/images/brandLogo.svg"
-        style="margin-left: 0.5px;"
-      />
-      <span
+      <div
         class="emotion-4"
+        style="padding-bottom: 0px; overflow: hidden; height: 24px;"
+      >
+        <img
+          alt="BBC News"
+          class="emotion-5"
+          fetchpriority="high"
+          height="30"
+          loading="eager"
+          src="/news/images/brandLogo.svg"
+          style="aspect-ratio: auto;"
+          width="0"
+        />
+      </div>
+      <span
+        class="emotion-6"
         id="BrandLink-null"
       >
         BBC News

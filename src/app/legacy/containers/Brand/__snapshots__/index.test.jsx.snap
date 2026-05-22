@@ -38,16 +38,6 @@ exports[`BrandContainer should render correctly 1`] = `
   }
 }
 
-.emotion-1 svg {
-  fill: currentColor;
-}
-
-@media screen and (forced-colors: active) {
-  .emotion-1 svg {
-    fill: linkText;
-  }
-}
-
 .emotion-3 {
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -107,6 +97,36 @@ exports[`BrandContainer should render correctly 1`] = `
 }
 
 .emotion-7 {
+  position: relative;
+  height: 0;
+}
+
+.emotion-8 {
+  width: 100%;
+  object-fit: cover;
+  height: auto;
+  max-height: 32px;
+  margin-left: 0.5px;
+  box-sizing: content-box;
+  height: 1.25rem;
+  max-width: 100%;
+}
+
+@media (min-width: 25rem) {
+  .emotion-8 {
+    height: 1.5rem;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-8 {
+    height: 1.875rem;
+    margin-left: 0;
+  }
+}
+
+.emotion-9 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -122,23 +142,30 @@ exports[`BrandContainer should render correctly 1`] = `
 >
   <div
     class="brand-svg-wrapper emotion-3 emotion-4"
+    id="brandSvgHeader"
   >
     <a
       aria-labelledby="BrandLink-null"
       class="brand-link focusIndicatorRemove emotion-5 emotion-6"
       href="/news"
     >
-      <img
-        alt="BBC News"
-        aria-hidden="true"
-        focusable="false"
-        height="30"
-        id="brandSvgHeader"
-        src="http://localhost:7080/news/images/brandLogo.svg"
-        style="margin-left: 0.5px;"
-      />
-      <span
+      <div
         class="emotion-7"
+        style="padding-bottom: 14.49%; overflow: hidden; height: 24px;"
+      >
+        <img
+          alt="BBC News"
+          class="emotion-8"
+          fetchpriority="high"
+          height="30"
+          loading="eager"
+          src="http://localhost:7080/news/images/brandLogo.svg"
+          style="aspect-ratio: 980 / 142;"
+          width="207.04225352112675"
+        />
+      </div>
+      <span
+        class="emotion-9"
         id="BrandLink-null"
       >
         BBC News

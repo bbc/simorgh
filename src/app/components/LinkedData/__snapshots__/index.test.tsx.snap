@@ -41,9 +41,9 @@ exports[`LinkedData bylineLinkedData should change author contents and locationC
         "@type": "NewsMediaOrganization",
         "logo": {
           "@type": "ImageObject",
-          "height": 16,
-          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/publisher-nx16.png",
-          "width": 103,
+          "height": 576,
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png",
+          "width": 1024,
         },
         "name": "BBC News",
         "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
@@ -81,9 +81,9 @@ exports[`LinkedData should correctly render linked data for Ondemand Radio page 
         "@type": "NewsMediaOrganization",
         "logo": {
           "@type": "ImageObject",
-          "height": 16,
-          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/publisher-nx16.png",
-          "width": 103,
+          "height": 576,
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png",
+          "width": 1024,
         },
         "name": "BBC News",
         "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
@@ -145,66 +145,14 @@ exports[`LinkedData should correctly render linked data for Photo Gallery page 1
         "@type": "NewsMediaOrganization",
         "logo": {
           "@type": "ImageObject",
-          "height": 16,
-          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/publisher-nx16.png",
-          "width": 103,
+          "height": 576,
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png",
+          "width": 1024,
         },
         "name": "BBC News",
         "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
       },
       "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png",
-      "url": "https://www.test.bbc.com/pathname",
-    },
-  ],
-}
-`;
-
-exports[`LinkedData should correctly render linked data for article pages for service with no trust project markup 1`] = `
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Article",
-      "author": {
-        "@type": "Organization",
-        "logo": {
-          "@type": "ImageObject",
-          "height": 576,
-          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/scotland/images/metadata/poster-1024x576.png",
-          "width": 1024,
-        },
-        "name": "BBC",
-      },
-      "dateModified": "2018-01-01T13:00:00.000Z",
-      "datePublished": "2018-01-01T12:01:00.000Z",
-      "headline": "Article Headline for SEO",
-      "image": {
-        "@type": "ImageObject",
-        "height": 576,
-        "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/scotland/images/metadata/poster-1024x576.png",
-        "width": 1024,
-      },
-      "inLanguage": {
-        "@type": "Language",
-        "alternateName": "en-GB",
-        "name": "English",
-      },
-      "mainEntityOfPage": {
-        "@id": "https://www.test.bbc.com/pathname",
-        "@type": "WebPage",
-        "name": "Royal wedding 2018: Bouquet laid on tomb of unknown warrior",
-      },
-      "publisher": {
-        "@type": "Organization",
-        "logo": {
-          "@type": "ImageObject",
-          "height": 576,
-          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/scotland/images/metadata/poster-1024x576.png",
-          "width": 1024,
-        },
-        "name": "BBC",
-      },
-      "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/scotland/images/metadata/poster-1024x576.png",
       "url": "https://www.test.bbc.com/pathname",
     },
   ],
@@ -251,9 +199,9 @@ exports[`LinkedData should correctly render linked data for articles 1`] = `
         "@type": "NewsMediaOrganization",
         "logo": {
           "@type": "ImageObject",
-          "height": 16,
-          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/publisher-nx16.png",
-          "width": 103,
+          "height": 576,
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png",
+          "width": 1024,
         },
         "name": "BBC News",
         "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
@@ -305,9 +253,9 @@ exports[`LinkedData should correctly render linked data for articles with byline
         "@type": "NewsMediaOrganization",
         "logo": {
           "@type": "ImageObject",
-          "height": 16,
-          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/publisher-nx16.png",
-          "width": 103,
+          "height": 576,
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png",
+          "width": 1024,
         },
         "name": "BBC News",
         "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
@@ -345,9 +293,9 @@ exports[`LinkedData should correctly render linked data for home pages 1`] = `
         "@type": "NewsMediaOrganization",
         "logo": {
           "@type": "ImageObject",
-          "height": 16,
-          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/publisher-nx16.png",
-          "width": 103,
+          "height": 576,
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png",
+          "width": 1024,
         },
         "name": "BBC News",
         "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
@@ -388,9 +336,9 @@ exports[`LinkedData should correctly render linked data for podcast episode page
         "@type": "NewsMediaOrganization",
         "logo": {
           "@type": "ImageObject",
-          "height": 16,
-          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/publisher-nx16.png",
-          "width": 103,
+          "height": 576,
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png",
+          "width": 1024,
         },
         "name": "BBC News",
         "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
@@ -454,60 +402,6 @@ exports[`LinkedData should correctly render linked data for radio pages 1`] = `
 }
 `;
 
-exports[`LinkedData should correctly render publisherLogo for news 1`] = `
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Article",
-      "author": {
-        "@type": "NewsMediaOrganization",
-        "logo": {
-          "@type": "ImageObject",
-          "height": 576,
-          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png",
-          "width": 1024,
-        },
-        "name": "BBC News",
-        "noBylinesPolicy": "https://www.bbc.com/news/help-41670342#authorexpertise",
-      },
-      "dateModified": "2018-01-01T13:00:00.000Z",
-      "datePublished": "2018-01-01T12:01:00.000Z",
-      "headline": "Article Headline for SEO",
-      "image": {
-        "@type": "ImageObject",
-        "height": 576,
-        "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png",
-        "width": 1024,
-      },
-      "inLanguage": {
-        "@type": "Language",
-        "alternateName": "en-GB",
-        "name": "English",
-      },
-      "mainEntityOfPage": {
-        "@id": "https://www.test.bbc.com/pathname",
-        "@type": "WebPage",
-        "name": "Royal wedding 2018: Bouquet laid on tomb of unknown warrior",
-      },
-      "publisher": {
-        "@type": "NewsMediaOrganization",
-        "logo": {
-          "@type": "ImageObject",
-          "height": 16,
-          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/publisher-nx16.png",
-          "width": 103,
-        },
-        "name": "BBC News",
-        "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
-      },
-      "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png",
-      "url": "https://www.test.bbc.com/pathname",
-    },
-  ],
-}
-`;
-
 exports[`LinkedData should correctly render publisherLogo for non-news services 1`] = `
 {
   "@context": "https://schema.org",
@@ -562,58 +456,6 @@ exports[`LinkedData should correctly render publisherLogo for non-news services 
 }
 `;
 
-exports[`LinkedData should correctly render publisherLogo for sport 1`] = `
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Article",
-      "author": {
-        "@type": "Organization",
-        "logo": {
-          "@type": "ImageObject",
-          "height": 576,
-          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/sport/images/metadata/poster-1024x576.png",
-          "width": 1024,
-        },
-        "name": "BBC",
-      },
-      "dateModified": "2018-01-01T13:00:00.000Z",
-      "datePublished": "2018-01-01T12:01:00.000Z",
-      "headline": "Article Headline for SEO",
-      "image": {
-        "@type": "ImageObject",
-        "height": 576,
-        "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/sport/images/metadata/poster-1024x576.png",
-        "width": 1024,
-      },
-      "inLanguage": {
-        "@type": "Language",
-        "alternateName": "en-GB",
-        "name": "English",
-      },
-      "mainEntityOfPage": {
-        "@id": "https://www.test.bbc.com/pathname",
-        "@type": "WebPage",
-        "name": "Royal wedding 2018: Bouquet laid on tomb of unknown warrior",
-      },
-      "publisher": {
-        "@type": "Organization",
-        "logo": {
-          "@type": "ImageObject",
-          "height": 16,
-          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/sport/images/metadata/publisher-nx16.png",
-          "width": 108,
-        },
-        "name": "BBC",
-      },
-      "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/sport/images/metadata/poster-1024x576.png",
-      "url": "https://www.test.bbc.com/pathname",
-    },
-  ],
-}
-`;
-
 exports[`LinkedData showAuthor should exclude author from article when false 1`] = `
 {
   "@context": "https://schema.org",
@@ -643,9 +485,9 @@ exports[`LinkedData showAuthor should exclude author from article when false 1`]
         "@type": "NewsMediaOrganization",
         "logo": {
           "@type": "ImageObject",
-          "height": 16,
-          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/publisher-nx16.png",
-          "width": 103,
+          "height": 576,
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png",
+          "width": 1024,
         },
         "name": "BBC News",
         "publishingPrinciples": "https://www.bbc.com/news/help-41670342",

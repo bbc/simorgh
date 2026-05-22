@@ -3,10 +3,16 @@ import { css, Theme } from '@emotion/react';
 
 import SERVICES from '#app/lib/config/services';
 import defaultServiceVariants from '#app/lib/config/services/defaultServiceVariants';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { Services } from '#app/models/types/global';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import Brand from '#app/legacy/containers/Brand';
 import ThemeProvider from '.';
+
+const {
+  SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
+  SIMORGH_PUBLIC_STATIC_ASSETS_PATH,
+} = getEnvConfig();
 
 const originalSimorghAppEnv = process.env.SIMORGH_APP_ENV;
 
@@ -253,7 +259,7 @@ describe('ThemeProvider', () => {
         .querySelector('#brandSvgHeader img')
         ?.getAttribute('src');
 
-      const { default: svg } = await import(`./chameleonLogos/${service}`);
+      const svg = `${SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${SIMORGH_PUBLIC_STATIC_ASSETS_PATH}${service}/images/brandLogo.svg`;
 
       const { getByTestId } = render(
         <img data-testid={service} alt="" src={svg} />,
