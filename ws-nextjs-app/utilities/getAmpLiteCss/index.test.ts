@@ -5,6 +5,7 @@ import getAmpLiteCss, {
   readCssFiles,
   getBuildManifestCss,
   getDynamicImportCss,
+  resetManifestCaches,
 } from '.';
 
 jest.mock('fs');
@@ -27,6 +28,7 @@ describe('getAmpLiteCss utilities', () => {
 
   afterEach(() => {
     jest.clearAllMocks();
+    resetManifestCaches();
     process.env.NODE_ENV = originalNodeEnv;
   });
 

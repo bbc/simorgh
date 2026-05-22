@@ -36,6 +36,37 @@ const readCssFiles = (files: string[]): string =>
 
 const logger = nodeLogger(__filename);
 
+type BuildManifest = { pages: Record<string, string[]> };
+type LoadableManifest = Record<string, { id: number; files: string[] }>;
+
+// Manifest cache keyed by absolute file path. Manifests are static in production
+// (never change at runtime), so parsing once and caching avoids repeated readFileSync
+// + JSON.parse on every AMP/Lite request.
+const manifestCache = new Map<string, BuildManifest | LoadableManifest>();
+
+const loadManifest = <T extends BuildManifest | LoadableManifest>(
+  manifestPath: string,
+  errorCode: string,
+): T | null => {
+  if (manifestCache.has(manifestPath))
+    return manifestCache.get(manifestPath) as T;
+
+  if (!existsSync(manifestPath)) return null;
+
+  try {
+    const parsed: T = JSON.parse(readFileSync(manifestPath, 'utf-8'));
+    manifestCache.set(manifestPath, parsed);
+    return parsed;
+  } catch (e) {
+    logger.error(errorCode, {
+      event: errorCode,
+      message: e instanceof Error ? e.message : String(e),
+      stack: e instanceof Error ? e.stack : undefined,
+    });
+    return null;
+  }
+};
+
 /**
  * Returns CSS for static page dependencies from Next.js's built-in build-manifest.json.
  *
@@ -50,32 +81,22 @@ const logger = nodeLogger(__filename);
  * It is retained as a safety net for any future statically-imported CSS.
  */
 const getBuildManifestCss = (page: string): string => {
-  const manifestPath = join(process.cwd(), 'build/build-manifest.json');
-  if (!existsSync(manifestPath)) return '';
+  const manifest = loadManifest<BuildManifest>(
+    join(process.cwd(), 'build/build-manifest.json'),
+    logCodes.BUILD_MANIFEST_CSS_READ_ERROR,
+  );
+  if (!manifest) return '';
 
-  try {
-    const manifest: { pages: Record<string, string[]> } = JSON.parse(
-      readFileSync(manifestPath, 'utf-8'),
-    );
+  const cssFiles = [
+    ...new Set(
+      [
+        ...(manifest.pages?.['/_app'] ?? []),
+        ...(manifest.pages?.[page] ?? []),
+      ].filter(f => f.endsWith('.css')),
+    ),
+  ];
 
-    const cssFiles = [
-      ...new Set(
-        [
-          ...(manifest.pages?.['/_app'] ?? []),
-          ...(manifest.pages?.[page] ?? []),
-        ].filter(f => f.endsWith('.css')),
-      ),
-    ];
-
-    return readCssFiles(cssFiles);
-  } catch (e) {
-    logger.error(logCodes.BUILD_MANIFEST_CSS_READ_ERROR, {
-      event: 'build_manifest_css_read_error',
-      message: e instanceof Error ? e.message : String(e),
-      stack: e instanceof Error ? e.stack : undefined,
-    });
-    return '';
-  }
+  return readCssFiles(cssFiles);
 };
 
 /**
@@ -88,39 +109,26 @@ const getBuildManifestCss = (page: string): string => {
 const getDynamicImportCss = (dynamicIds: Array<string | number>): string => {
   if (!dynamicIds.length) return '';
 
-  const manifestPath = join(
-    process.cwd(),
-    'build/react-loadable-manifest.json',
+  const manifest = loadManifest<LoadableManifest>(
+    join(process.cwd(), 'build/react-loadable-manifest.json'),
+    logCodes.DYNAMIC_IMPORT_CSS_READ_ERROR,
   );
+  if (!manifest) return '';
 
-  if (!existsSync(manifestPath)) return '';
+  const dynamicIdSet = new Set(dynamicIds.map(String));
 
-  try {
-    const manifest: Record<string, { id: number; files: string[] }> =
-      JSON.parse(readFileSync(manifestPath, 'utf-8'));
+  const cssFiles = [
+    ...new Set(
+      Object.entries(manifest)
+        .filter(
+          ([chunkKey, chunk]) =>
+            dynamicIdSet.has(chunkKey) || dynamicIdSet.has(String(chunk.id)),
+        )
+        .flatMap(([, chunk]) => chunk.files.filter(f => f.endsWith('.css'))),
+    ),
+  ];
 
-    const dynamicIdSet = new Set(dynamicIds.map(String));
-
-    const cssFiles = [
-      ...new Set(
-        Object.entries(manifest)
-          .filter(
-            ([chunkKey, chunk]) =>
-              dynamicIdSet.has(chunkKey) || dynamicIdSet.has(String(chunk.id)),
-          )
-          .flatMap(([, chunk]) => chunk.files.filter(f => f.endsWith('.css'))),
-      ),
-    ];
-
-    return readCssFiles(cssFiles);
-  } catch (e) {
-    logger.error(logCodes.DYNAMIC_IMPORT_CSS_READ_ERROR, {
-      event: 'dynamic_import_css_read_error',
-      message: e instanceof Error ? e.message : String(e),
-      stack: e instanceof Error ? e.stack : undefined,
-    });
-    return '';
-  }
+  return readCssFiles(cssFiles);
 };
 
 /**
@@ -154,6 +162,10 @@ export default getAmpLiteCss;
 
 // Internal helpers exported only for testing purposes.
 // The public API is the default export (getAmpLiteCss).
+export const resetManifestCaches = (): void => {
+  manifestCache.clear();
+};
+
 export {
   resolveCssFilePath,
   readCssFiles,
