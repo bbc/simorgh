@@ -1,20 +1,25 @@
 import { use } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
+import { ComponentExperimentProps } from '#app/models/types/global';
 import { TopicTag } from '#app/models/types/metadata';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
 import styles from './index.styles';
 
-const eventTrackingData = {
-  componentName: 'topics',
-};
-
-export const TopicTags = ({
-  tags,
-}: {
+interface TopicTagsProps {
   tags: Pick<TopicTag, 'topicName' | 'topicId'>[];
-}) => {
+  experimentProps?: ComponentExperimentProps;
+}
+
+export const TopicTags = ({ tags, experimentProps }: TopicTagsProps) => {
+  const componentName = 'topics';
+
+  const eventTrackingData = {
+    componentName,
+    ...(experimentProps && experimentProps),
+  };
+
   const viewTracker = useViewTracker(eventTrackingData);
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
 
