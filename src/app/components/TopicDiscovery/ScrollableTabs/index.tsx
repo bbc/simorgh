@@ -111,7 +111,7 @@ const ScrollableTabs = ({
           const clickTrackerHandler = getClickTrackerHandler({
             componentName: `topic-discovery-tab-${tab.id}`,
             preventNavigation: true,
-            experimentProps,
+            ...(experimentProps && experimentProps),
           });
 
           return (
