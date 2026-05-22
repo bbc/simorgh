@@ -2,8 +2,8 @@
 /* eslint-disable import/no-unresolved */
 import fs from 'fs';
 import { join, resolve } from 'path';
-import fetchMock from 'jest-fetch-mock';
 import { createHash } from 'crypto';
+import { Request, Response } from 'undici';
 
 const serviceWorker = fs.readFileSync(join(__dirname, '..', 'public/sw.js'));
 
@@ -20,6 +20,14 @@ describe('Service Worker', () => {
   let fetchEventHandler;
 
   beforeAll(() => {
+    if (!global.Request) {
+      global.Request = Request;
+    }
+
+    if (!global.Response) {
+      global.Response = Response;
+    }
+
     Object.defineProperty(navigator, 'serviceWorker', {
       value: {
         ready: Promise.resolve({}),
@@ -34,7 +42,11 @@ describe('Service Worker', () => {
 
   afterEach(() => {
     jest.clearAllMocks();
-    fetchMock.resetMocks();
+    jest.restoreAllMocks();
+  });
+
+  beforeEach(() => {
+    jest.spyOn(global, 'fetch').mockResolvedValue(new Response('ok'));
   });
 
   describe('webp', () => {
@@ -82,7 +94,7 @@ describe('Service Worker', () => {
           await fetchEventHandler(event);
 
           expect(event.respondWith).toHaveBeenCalled();
-          expect(fetchMock).toHaveBeenCalledWith(expectedUrl, {
+          expect(global.fetch).toHaveBeenCalledWith(expectedUrl, {
             mode: 'no-cors',
           });
         },
@@ -140,7 +152,7 @@ describe('Service Worker', () => {
         await fetchEventHandler(event);
 
         expect(event.respondWith).not.toHaveBeenCalled();
-        expect(fetchMock).not.toHaveBeenCalled();
+        expect(global.fetch).not.toHaveBeenCalled();
       });
     });
   });
@@ -179,15 +191,16 @@ describe('Service Worker', () => {
           ({ fetchEventHandler } = await import('./service-worker-test'));
 
           const event = {
-            request: new Request(assetUrl, {
+            request: {
+              url: assetUrl,
               mode: 'same-origin',
-            }),
+            },
             respondWith: jest.fn(),
           };
 
           await fetchEventHandler(event);
 
-          expect(fetchMock).not.toHaveBeenCalled();
+          expect(global.fetch).not.toHaveBeenCalled();
           expect(event.respondWith).not.toHaveBeenCalled();
         },
       );
@@ -231,7 +244,7 @@ describe('Service Worker', () => {
 
           const response = await Promise.resolve(eventResponse);
 
-          const responseBody = response.body?.toString();
+          const responseBody = await response.text();
 
           expect(responseBody).toBe(`${assetUrl}-cached`);
         },
@@ -261,7 +274,7 @@ describe('Service Worker', () => {
           };
 
           const mockResponse = new Response(assetUrl);
-          fetchMock.mockImplementationOnce(() => mockResponse);
+          global.fetch.mockResolvedValueOnce(mockResponse);
 
           await fetchEventHandler(event);
 
@@ -270,7 +283,7 @@ describe('Service Worker', () => {
           const [eventResponse] = event.respondWith.mock.calls[0];
           await Promise.resolve(eventResponse);
 
-          expect(fetchMock).toHaveBeenCalledWith(assetUrl);
+          expect(global.fetch).toHaveBeenCalledWith(assetUrl);
           expect(fetchedCache[assetUrl]).toStrictEqual(mockResponse.clone());
         },
       );
@@ -310,7 +323,7 @@ describe('Service Worker', () => {
     });
 
     it('caches offline page  when PWA is installed', async () => {
-      fetchMock.mockResolvedValueOnce(
+      global.fetch.mockResolvedValueOnce(
         new Response('<html></html>', { status: 200 }),
       );
 
@@ -328,7 +341,9 @@ describe('Service Worker', () => {
         expect.stringContaining('/offline'),
         expect.any(Response),
       );
-      expect(fetchMock).toHaveBeenCalledWith('https://bbc.com/mundo/offline');
+      expect(global.fetch).toHaveBeenCalledWith(
+        'https://bbc.com/mundo/offline',
+      );
     });
 
     it('does not cache offline page when PWA is not installed', async () => {
@@ -354,7 +369,6 @@ describe('Service Worker', () => {
 
     beforeEach(async () => {
       jest.resetModules();
-      fetchMock.resetMocks();
 
       global.self = {
         addEventListener: jest.fn(),
@@ -403,7 +417,7 @@ describe('Service Worker', () => {
       });
 
       // Network failure
-      fetchMock.mockRejectedValueOnce(new Error('Network error'));
+      global.fetch.mockRejectedValueOnce(new Error('Network error'));
 
       const request = new Request('https://bbc.com/mundo');
       Object.defineProperty(request, 'mode', { value: 'navigate' });
@@ -426,8 +440,8 @@ describe('Service Worker', () => {
       expect(await response.text()).toBe('offline page');
     });
 
-    it('should throw error in navigation mode if resolved request status code is 5xx', async () => {
-      fetchMock.mockResolvedValueOnce(
+    it('should return an error response in navigation mode if resolved request status code is 5xx', async () => {
+      global.fetch.mockResolvedValueOnce(
         new Response('Server Error', { status: 500 }),
       );
 
@@ -448,11 +462,13 @@ describe('Service Worker', () => {
       await fetchEventHandler(event);
 
       expect(event.respondWith).toHaveBeenCalled();
-      await expect(respondWithPromise).rejects.toThrow();
+      const response = await respondWithPromise;
+      expect(response.type).toBe('error');
+      expect(response.status).toBe(0);
     });
 
-    it('should throw error when navigation mode fails if user is non-pwa', async () => {
-      fetchMock.mockRejectedValueOnce(new Error('Network error'));
+    it('should return an error response when navigation mode fails for a non-PWA user', async () => {
+      global.fetch.mockRejectedValueOnce(new Error('Network error'));
 
       const request = new Request('https://bbc.com/mundo');
       Object.defineProperty(request, 'mode', { value: 'navigate' });
@@ -471,7 +487,9 @@ describe('Service Worker', () => {
       await fetchEventHandler(event);
 
       expect(event.respondWith).toHaveBeenCalled();
-      await expect(respondWithPromise).rejects.toThrow();
+      const response = await respondWithPromise;
+      expect(response.type).toBe('error');
+      expect(response.status).toBe(0);
     });
 
     it('should gracefully handle failed request if PWA offline mode', async () => {
@@ -481,7 +499,7 @@ describe('Service Worker', () => {
       });
 
       // Fail a navigation request to set isPWADeviceOffline = true
-      fetchMock.mockRejectedValueOnce(new Error('Network error'));
+      global.fetch.mockRejectedValueOnce(new Error('Network error'));
 
       const navRequest = new Request('https://bbc.com/mundo');
       Object.defineProperty(navRequest, 'mode', { value: 'navigate' });
@@ -500,7 +518,7 @@ describe('Service Worker', () => {
       await navRespondWithPromise;
 
       // Test non-navigation request
-      fetchMock.mockRejectedValueOnce(new Error('Asset fetch failed'));
+      global.fetch.mockRejectedValueOnce(new Error('Asset fetch failed'));
 
       const assetRequest = new Request('https://bbc.com/asset.js');
       let assetRespondWithPromise;

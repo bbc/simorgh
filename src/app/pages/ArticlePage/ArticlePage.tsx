@@ -140,7 +140,6 @@ const getTimestampComponent =
             )}
           </>
         )}
-        {/* Temporary SaveArticleButton */}
         <SaveArticleButton
           articleTitle={articleTitle}
           articlePageData={articlePageData}
@@ -236,7 +235,7 @@ const ArticlePage = ({
   } = useTheme();
 
   // test experiment to verify if page views are being tracked correctly
-  const testPageViewsExperimentName = 'test_page_views_aa';
+  const testPageViewsExperimentName = 'test_page_views_aa_2';
   const testPageViewsVariant = useOptimizelyVariation({
     experimentName: testPageViewsExperimentName,
     experimentType: ExperimentType.CLIENT_SIDE,

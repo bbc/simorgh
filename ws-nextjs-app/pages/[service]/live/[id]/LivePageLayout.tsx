@@ -15,7 +15,6 @@ import { HeadToHeadV2Data } from '#app/components-webcore/SportDataHeader/head-t
 import { PortraitVideoItems } from '#app/models/types/optimo';
 import useLivePagePolling from '#app/hooks/useLivePagePolling';
 import useToggle from '#app/hooks/useToggle';
-import isLiveEnv from '#app/lib/utilities/isLive';
 import {
   getImageFromPost,
   getHeadlineFromPost,
@@ -66,14 +65,9 @@ export type ComponentProps = {
     mediaCollections: MediaCollection[] | null;
     portraitVideoItems?: PortraitVideoItems | null;
     sportDataEventContent?: {
-      id: string;
-      content: {
-        data: {
-          live: boolean;
-          sportDataEvent: HeadToHeadV2Data;
-          title: string;
-        };
-      };
+      live: boolean;
+      sportDataEvent: HeadToHeadV2Data;
+      title: string;
     } | null;
   };
 };
@@ -93,6 +87,7 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
   } = use(ServiceContext);
   const { canonicalNonUkLink } = use(RequestContext);
   const { enabled: livePagePollingEnabled } = useToggle('livePagePolling');
+  const { enabled: sportHeaderEnabled } = useToggle('showSportDataHeader');
 
   const streamRef = useRef<HTMLDivElement>(null);
   const [isFirstPostVisible, setIsFirstPostVisible] = useState(true);
@@ -117,10 +112,12 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
   const { currentStreamData, hasPendingUpdate, applyPendingUpdate } =
     useLivePagePolling(pageData, livePagePollingEnabled && isLive);
 
-  const sportData = sportDataEventContent?.content?.data?.sportDataEvent;
-  const isSportDataLive = sportDataEventContent?.content?.data?.live;
-  const sportDataTitle = sportDataEventContent?.content?.data?.title;
-  const showSportData = !!sportData && !isLiveEnv();
+  const {
+    sportDataEvent: sportData,
+    live: isSportDataLive,
+    title: sportDataTitle,
+  } = sportDataEventContent || {};
+  const showSportData = !!sportData && Boolean(sportHeaderEnabled);
 
   const {
     url: imageUrl,
@@ -219,9 +216,7 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
       />
       <main>
         <Header
-          showLiveLabel={
-            showSportData && !!isSportDataLive ? isSportDataLive : isLive
-          }
+          showLiveLabel={showSportData ? (isSportDataLive ?? isLive) : isLive}
           title={showSportData && !!sportDataTitle ? sportDataTitle : title}
           description={description}
           imageUrl={imageUrl}
@@ -232,9 +227,10 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
         />
         {showSportData && (
           <HeadToHeadV2
-            data={sportData}
+            initialSportData={sportData}
             isConciseView={false} // defaulted to false for developement/ MVP
             shouldShowActions={false} // defaulted to false for developement/ MVP
+            isSportDataLive={isSportDataLive}
           />
         )}
         <div css={styles.outerGrid}>

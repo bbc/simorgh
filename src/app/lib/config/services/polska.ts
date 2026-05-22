@@ -44,6 +44,7 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      matchSummary: 'Podsumowanie meczu',
       and: 'i',
       pagination: {
         page: 'Strona',

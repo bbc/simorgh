@@ -1,3 +1,5 @@
+import useSportDataPolling from '#app/hooks/useSportDataPolling';
+import useToggle from '#app/hooks/useToggle';
 import Footer from './components/footer';
 import HeadToHeadHeader from './components/head-to-head-header';
 import { HeadToHeadBanner } from './components/head-to-head-banner';
@@ -7,21 +9,30 @@ import { HeadToHeadV2Data } from './types';
 import styles from './index.styles';
 
 export const HeadToHeadV2 = ({
-  data,
+  initialSportData,
   isConciseView,
   shouldShowActions,
   maximumContainerScoreDigits,
   teamBadgePlaceholderFallbackType = 'badge',
+  isSportDataLive = false,
 }: {
-  data: HeadToHeadV2Data;
+  initialSportData: HeadToHeadV2Data;
   isConciseView?: boolean;
   shouldShowActions?: boolean;
   maximumContainerScoreDigits?: number;
   teamBadgePlaceholderFallbackType?: 'badge' | 'flag';
+  isSportDataLive?: boolean;
 }) => {
+  const { enabled: sportHeaderPollEnabled } = useToggle('sportDataPolling');
+
+  const { currentSportData } = useSportDataPolling(
+    initialSportData,
+    Boolean(sportHeaderPollEnabled) && isSportDataLive,
+  );
+
   const hasActions =
-    (data?.home?.actions?.length ?? 0) > 0 ||
-    (data?.away?.actions?.length ?? 0) > 0;
+    (currentSportData?.home?.actions?.length ?? 0) > 0 ||
+    (currentSportData?.away?.actions?.length ?? 0) > 0;
 
   // TODO: Re-enable badge visibility logic once we have the necessary badge mappings in place
   const shouldHideBadges = true;
@@ -32,26 +43,30 @@ export const HeadToHeadV2 = ({
         <div css={styles.container({ isConciseView })}>
           {!isConciseView && (
             <HeadToHeadHeader
-              date={data.date}
-              status={data.status}
-              tournamentDescriptionLabel={data.tournamentDescriptionLabel}
+              date={currentSportData.date}
+              status={currentSportData.status}
+              tournamentDescriptionLabel={
+                currentSportData.tournamentDescriptionLabel
+              }
             />
           )}
           <HeadToHeadBanner
-            data={data}
+            data={currentSportData}
             isConciseView={isConciseView ?? false}
-            eventSummary={data.accessibleEventSummary}
+            eventSummary={currentSportData.accessibleEventSummary}
             shouldHideBadges={shouldHideBadges}
             maxScoreLength={maximumContainerScoreDigits}
             teamBadgePlaceholderFallbackType={teamBadgePlaceholderFallbackType}
           />
-          {hasActions && shouldShowActions && <Actions data={data} />}
-          {!isConciseView && <Actions data={data} />}
+          {hasActions && shouldShowActions && (
+            <Actions data={currentSportData} />
+          )}
+          {!isConciseView && <Actions data={currentSportData} />}
           {!isConciseView && (
             <Footer
-              venue={data.venue?.name || 'To be confirmed'}
-              attendanceValue={data.attendance?.value}
-              attendanceInfo={data.attendance?.additionalInfo}
+              venue={currentSportData.venue?.name || 'To be confirmed'}
+              attendanceValue={currentSportData.attendance?.value}
+              attendanceInfo={currentSportData.attendance?.additionalInfo}
             />
           )}
         </div>

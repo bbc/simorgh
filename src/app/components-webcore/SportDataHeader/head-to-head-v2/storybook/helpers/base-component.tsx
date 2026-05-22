@@ -36,15 +36,12 @@ const buildTeamObject = ({
   alignment: 'home' | 'away';
   data: HeadToHeadV2Data;
 }): Team => {
-  const { runningScore } = data[alignment];
-
   return {
-    id: data[alignment].id,
+    ...data[alignment],
     fullName: team,
     shortName: shortNamesMap(team),
     urn: `urn:bbc:sportsdata:football:team:${team.toLowerCase().split(' ').join('-')}`,
     actions,
-    runningScore,
     ...(score && { score, scoreUnconfirmed }),
   };
 };
@@ -99,7 +96,7 @@ export const HeadToHeadV2ConciseComponent = (args: StoryArgs) => {
 
   return (
     <HeadToHeadV2
-      data={updatedStoryBookControls}
+      initialSportData={updatedStoryBookControls}
       isConciseView
       shouldShowActions={false}
     />
@@ -156,7 +153,7 @@ export const HeadToHeadV2Component = (args: StoryArgs) => {
 
   return (
     <HeadToHeadV2
-      data={updatedStoryBookControls}
+      initialSportData={updatedStoryBookControls}
       isConciseView={false}
       shouldShowActions={false}
     />

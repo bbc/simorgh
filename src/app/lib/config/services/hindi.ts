@@ -67,6 +67,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      matchSummary: 'मैच का सारांश',
       and: 'और',
       readTime: {
         readTimePrefix: 'पढ़ने का समय',
@@ -109,9 +110,9 @@ export const service: DefaultServiceConfig = {
         title: 'File Download',
       },
       account: {
-        signIn: 'लॉग‑इन',
-        forYou: 'आपका अकाउंट',
-        register: 'रजिस्टर करें',
+        signIn: 'साइन इन',
+        forYou: 'आपका एकाउंट',
+        register: 'रजिस्टर',
       },
       accountPromoBanner: {
         title: 'अपना BBC खोजिए',
@@ -121,10 +122,12 @@ export const service: DefaultServiceConfig = {
         buttonSeparatorText: 'या',
       },
       saveArticleButton: {
+        loading: 'Loading',
         save: 'Save for later',
         saving: 'Saving',
         saved: 'Saved to My News',
         remove: 'Remove',
+        removing: 'Removing',
       },
       gist: 'सारांश',
       error: {
