@@ -1,5 +1,3 @@
-import { JSDOM } from 'jsdom';
-
 import {
   render,
   screen,
@@ -10,9 +8,10 @@ import Image from '.';
 import BASE64_PLACEHOLDER_IMAGE from './base64Placeholder';
 
 const removeStyles = (el: HTMLElement) => {
-  const dom = new JSDOM(el.innerHTML.replace(/class=".+?"/gm, ''));
+  const template = document.createElement('template');
+  template.innerHTML = el.innerHTML.replace(/class=".+?"/gm, '');
 
-  return dom.window.document.body.firstChild;
+  return template.content.firstChild;
 };
 
 const Fixture = ({ ...props }) => (
