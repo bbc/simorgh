@@ -19,15 +19,16 @@ type TopicDiscoveryProps = {
 
 const HEADING_ID = 'topic-discovery-heading';
 
-const eventTrackingData = {
-  componentName: 'topic-discovery',
-};
-
 const TopicDiscovery = ({
   topics,
   className,
   experimentProps,
 }: TopicDiscoveryProps) => {
+  const eventTrackingData = {
+    componentName: 'topic-discovery',
+    ...(experimentProps && experimentProps),
+  };
+
   const { translations } = use(ServiceContext);
   const {
     heading = 'Discover more',
@@ -49,7 +50,7 @@ const TopicDiscovery = ({
 
   const moreFromLinkClickTracker = useClickTrackerHandler({
     componentName: 'topic-discovery-more-from-link',
-    experimentProps,
+    ...(experimentProps && experimentProps),
   });
 
   if (!topics || topics.length === 0) return null;
@@ -83,6 +84,7 @@ const TopicDiscovery = ({
         activeTabId={activeTabId}
         onTabChange={setActiveTabId}
         labelledBy={HEADING_ID}
+        experimentProps={experimentProps}
       />
       <div
         role="tabpanel"
