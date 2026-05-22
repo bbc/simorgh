@@ -45,6 +45,18 @@ describe('SaveButton', () => {
     expect(screen.getByText('Saved to My News')).toBeInTheDocument();
   });
 
+  it('is disabled and shows Saving text when isUpdating is true', () => {
+    render(<SaveButton onClick={noop} buttonText="Saving" isUpdating />);
+    expect(screen.getByRole('button')).toBeDisabled();
+    expect(screen.getByText('Saving')).toBeInTheDocument();
+  });
+
+  it('is disabled and shows Removing text when isUpdating is true', () => {
+    render(<SaveButton onClick={noop} buttonText="Removing" isUpdating />);
+    expect(screen.getByRole('button')).toBeDisabled();
+    expect(screen.getByText('Removing')).toBeInTheDocument();
+  });
+
   it('shows removeText when hovered and saved', async () => {
     render(
       <SaveButton

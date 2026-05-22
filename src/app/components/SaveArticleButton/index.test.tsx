@@ -34,19 +34,20 @@ describe('SaveArticleButton', () => {
       mockedUseUASButton.mockReturnValue({
         isSaved: false,
         isLoading: false,
+        isUpdating: false,
         error: null,
         handleSaveAction: mockHandleSaveAction,
       });
     });
 
-    it('renders "Save for later" when not saved', async () => {
+    it('renders Save for later when not saved', async () => {
       await act(async () =>
         render(<SaveArticleButton {...defaultProps} />, signedInRenderOptions),
       );
       expect(screen.getByRole('button')).toHaveTextContent('Save for later');
     });
 
-    it('renders "Saved to My News" when saved', async () => {
+    it('renders Saved to My News when saved', async () => {
       mockedUseUASButton.mockReturnValue({ isSaved: true });
 
       await act(async () =>
@@ -58,6 +59,25 @@ describe('SaveArticleButton', () => {
     it('renders loading state and disables button', async () => {
       mockedUseUASButton.mockReturnValue({
         isLoading: true,
+        isUpdating: false,
+      });
+
+      await act(async () =>
+        render(<SaveArticleButton {...defaultProps} />, signedInRenderOptions),
+      );
+      const button = screen.getByRole('button');
+
+      expect(button).toHaveTextContent('Loading');
+      expect(button).toBeDisabled();
+    });
+
+    it('renders saving state and disables button', async () => {
+      mockedUseUASButton.mockReturnValue({
+        isSaved: false,
+        isLoading: false,
+        isUpdating: true,
+        error: null,
+        handleSaveAction: mockHandleSaveAction,
       });
 
       await act(async () =>
@@ -66,6 +86,24 @@ describe('SaveArticleButton', () => {
       const button = screen.getByRole('button');
 
       expect(button).toHaveTextContent('Saving');
+      expect(button).toBeDisabled();
+    });
+
+    it('renders removing state and disables button', async () => {
+      mockedUseUASButton.mockReturnValue({
+        isSaved: true,
+        isLoading: false,
+        isUpdating: true,
+        error: null,
+        handleSaveAction: mockHandleSaveAction,
+      });
+
+      await act(async () =>
+        render(<SaveArticleButton {...defaultProps} />, signedInRenderOptions),
+      );
+      const button = screen.getByRole('button');
+
+      expect(button).toHaveTextContent('Removing');
       expect(button).toBeDisabled();
     });
 
@@ -118,7 +156,7 @@ describe('SaveArticleButton', () => {
       idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: false },
     };
 
-    it('renders guest save button', () => {
+    it('renders guest save button', async () => {
       render(<SaveArticleButton {...defaultProps} />, signedOutRenderOptions);
       expect(screen.getByTestId('save-article-btn-guest')).toBeInTheDocument();
     });
