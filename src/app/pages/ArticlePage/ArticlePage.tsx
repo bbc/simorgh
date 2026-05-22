@@ -515,6 +515,7 @@ const ArticlePage = ({
                   : []),
               ]}
               topics={topics}
+              experimentProps={topicDiscoveryExperimentProps || undefined}
             />
           )}
           {showRelatedTopicsComponent && (
