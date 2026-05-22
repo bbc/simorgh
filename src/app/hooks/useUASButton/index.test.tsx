@@ -71,6 +71,7 @@ describe('useUASButton', () => {
     mockUseUASFetchSaveStatus.mockReturnValue({
       isSaved: false,
       isLoading: false,
+      isUpdating: false,
       error: null,
     });
 

@@ -56,10 +56,12 @@ export interface Translations {
     buttonSeparatorText: string;
   };
   saveArticleButton?: {
+    loading: string;
     save: string;
     saving: string;
     saved: string;
     remove: string;
+    removing: string;
   };
   error: {
     home?: string;
