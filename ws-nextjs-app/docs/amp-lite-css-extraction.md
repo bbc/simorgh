@@ -32,6 +32,12 @@ A custom webpack loader (`ws-nextjs-app/scripts/DevCssExtractLoader.cjs`) is inj
 4. Each module's extracted CSS is stored in an in-memory `Map` keyed by file path. This map persists across HMR (Hot Module Rebuild) rebuilds within the same process, so unchanged files are retained without re-processing.
 5. On every change, the full concatenated CSS is written to `build/dev-css-modules.css`.
 
+**Global (non-module) SCSS — theme variables and font faces:**
+
+Next.js uses `ignore-loader` (`next/dist/compiled/ignore-loader`) for global SCSS files on the server (e.g. `fontVariants/reith.scss`, `palette.scss`, `fontFaces/*.scss`) since the server doesn't inject stylesheets into the document. This means the CSS custom properties (`:root {}`) and `@font-face` declarations defined by theme files would never reach `DevCssExtractLoader` via the CSS-module path above.
+
+To capture these, `next.config.js` also replaces `ignore-loader` rules for global SCSS files on the server dev build with a `sass-loader → css-loader → DevCssExtractLoader` chain. The resulting module is still discarded server-side (the JS export is unused), but `DevCssExtractLoader` intercepts the `css-loader` JS output and writes the CSS into `build/dev-css-modules.css` alongside the CSS module output.
+
 > **Why after `css-loader` and not before?** Extracting before `css-loader` (e.g. from the raw SCSS output of `sass-loader`) would yield un-scoped class names (e.g. `.h2`) that don't match any elements in the rendered HTML. The hashed names are only available after `css-loader` has processed the file.
 
 **Loader position in `next.config.js`:**

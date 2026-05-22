@@ -3,6 +3,10 @@ const path = require('path');
 const MomentTimezoneInclude = require('../src/app/legacy/psammead/moment-timezone-include/src');
 const DevCssExtractLoader =
   require.resolve('./scripts/DevCssExtractLoader.cjs');
+const {
+  injectExtractLoader,
+  replaceIgnoreLoaderForScss,
+} = require('./scripts/webpackDevLoaderUtils.cjs');
 
 const assetPrefix =
   process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN +
@@ -104,19 +108,27 @@ module.exports = {
       // webpack processes the use array right-to-left, so inserting before css-loader
       // means our loader receives css-loader's JS output — which contains the CSS string
       // with hashed CSS module class names (e.g. .Subhead_h2__K8gJ6) already applied.
-      const injectExtractLoader = rules => {
-        rules.forEach(rule => {
-          if (rule.oneOf) injectExtractLoader(rule.oneOf);
-          if (!Array.isArray(rule.use)) return;
-          const cssLoaderIndex = rule.use.findIndex(l =>
-            (typeof l === 'string' ? l : l?.loader)?.includes('css-loader'),
-          );
-          if (cssLoaderIndex !== -1) {
-            rule.use.splice(cssLoaderIndex, 0, DevCssExtractLoader);
-          }
-        });
-      };
-      injectExtractLoader(config.module.rules);
+      injectExtractLoader(config.module.rules, DevCssExtractLoader);
+
+      if (isServer) {
+        // On the server, Next.js uses ignore-loader for global (non-module) SCSS
+        // files, so DevCssExtractLoader never runs for them and :root {} custom
+        // properties (CSS variables) and @font-face declarations from theme files
+        // are never written to dev-css-modules.css. Replace those ignore-loader
+        // rules with a sass-loader → css-loader → DevCssExtractLoader chain so
+        // the global CSS is captured for AMP/Lite inlining alongside CSS modules.
+        const sassLoaderPath = require.resolve('sass-loader');
+        const cssLoaderPath = require.resolve('css-loader');
+
+        replaceIgnoreLoaderForScss(config.module.rules, [
+          DevCssExtractLoader,
+          {
+            loader: cssLoaderPath,
+            options: { modules: false, url: false, import: false },
+          },
+          { loader: sassLoaderPath },
+        ]);
+      }
     }
 
     /*
