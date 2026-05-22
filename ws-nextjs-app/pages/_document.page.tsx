@@ -127,7 +127,7 @@ export default class AppDocument extends Document<DocProps> {
     };
 
     switch (true) {
-      case isAmp: {
+      case isAmp && pageType === 'article': {
         const ampCss = css + getAmpLiteCss(getNextData());
         return (
           <AmpRenderer
