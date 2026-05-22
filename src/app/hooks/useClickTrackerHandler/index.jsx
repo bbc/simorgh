@@ -31,10 +31,7 @@ const OJ_COMPONENT_NAMES = [
 // handle the total oj clicks event to specific onward journey experiments
 const OJ_OPTIMIZELY_EXPERIMENTS = ['newswb_ws_topic_discovery_module'];
 
-const OJ_OPTIMIZELY_CLICK_EVENT = [
-  'oj_clicks',
-  'topic-discovery-more-from-link',
-];
+const OJ_OPTIMIZELY_CLICK_EVENT = ['oj_clicks'];
 
 // only fire the total oj clicks event when the component and experiment are in scope
 const shouldTrackOjClick = (componentName, experimentName) =>
