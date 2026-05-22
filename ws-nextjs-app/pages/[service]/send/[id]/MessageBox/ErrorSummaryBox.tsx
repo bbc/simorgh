@@ -3,7 +3,7 @@ import { ForwardedRef, forwardRef } from 'react';
 import { BulletedList, BulletedListItem } from '#app/components/BulletedList';
 import Text from '#app/components/Text';
 import { WHITE } from '#app/components/ThemeProvider/palette';
-import useAndroidDetection from '#app/hooks/useAdroidDetection';
+import useAndroidDetection from '#app/hooks/useAndroidDetection';
 import { useFormContext } from '../FormContext';
 import { InvalidMessageCodes } from '../types';
 import InvalidMessageBox from './InvalidMessageBox';

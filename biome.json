@@ -48,6 +48,7 @@
       },
       "correctness": {
         "noNodejsModules": "off",
+        "noReactPropAssignments": "error",
         "noRestrictedElements": "off",
         "noUndeclaredDependencies": "off",
         "noUnusedPrivateClassMembers": "off",
