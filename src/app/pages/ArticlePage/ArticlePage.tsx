@@ -405,7 +405,11 @@ const ArticlePage = ({
     group: gist,
     links: ArticleLinksBlock,
     mpu: getMpuComponent(allowAdvertising),
-    wsoj: ({ data }: { data: Recommendation[] }) => getWsojComponent({ data }),
+    wsoj: ({ data }: { data: Recommendation[] }) =>
+      getWsojComponent({
+        data,
+        experimentProps: topicDiscoveryExperimentProps,
+      }),
     disclaimer: DisclaimerWithPaddingOverride,
     podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
     ...(showContinueReadingButton && {
@@ -528,6 +532,7 @@ const ArticlePage = ({
               ]}
               topics={topics}
               mobileDivider={false}
+              experimentProps={topicDiscoveryExperimentProps || undefined}
             />
           )}
           {showPortraitVideoCarousel && (
@@ -536,7 +541,10 @@ const ArticlePage = ({
               css={styles.portraitVideoCarousel}
             />
           )}
-          <RelatedContentSection content={blocks} />
+          <RelatedContentSection
+            content={blocks}
+            experimentProps={topicDiscoveryExperimentProps || undefined}
+          />
           {showMediaCuration && (
             <div css={styles.mediaCurationRow}>
               <div data-testid="media-curation">
@@ -557,7 +565,12 @@ const ArticlePage = ({
           )}
         </div>
 
-        {!isApp && !isPGL && <SecondaryColumn pageData={pageData} />}
+        {!isApp && !isPGL && (
+          <SecondaryColumn
+            pageData={pageData}
+            experimentProps={topicDiscoveryExperimentProps || undefined}
+          />
+        )}
       </div>
 
       {!isApp && !isPGL && (
@@ -568,6 +581,7 @@ const ArticlePage = ({
           size="default"
           headingBackgroundColour={GREY_2}
           mobileDivider={showRelatedTopicsComponent}
+          experimentProps={topicDiscoveryExperimentProps || undefined}
         />
       )}
     </div>
