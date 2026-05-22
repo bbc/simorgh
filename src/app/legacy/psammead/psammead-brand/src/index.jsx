@@ -95,11 +95,16 @@ const LocalisedBrandName = ({
   );
 };
 
-const StyledBrand = ({ linkId, product, aspectRatio, serviceLocalisedName = null, svg }) => {
+const StyledBrand = ({
+  linkId,
+  product,
+  aspectRatio,
+  serviceLocalisedName = null,
+  svg,
+}) => {
   return svg ? (
     <>
       <Image
-        id={linkId !== 'footer' ? 'brandSvgHeader' : 'brandSvgFooter'}
         preload={linkId !== 'footer'}
         fetchPriority={linkId !== 'footer' ? 'high' : 'low'}
         lazyLoad={linkId === 'footer'}
@@ -108,10 +113,10 @@ const StyledBrand = ({ linkId, product, aspectRatio, serviceLocalisedName = null
         focusable="false"
         aria-hidden="true"
         height="30"
-        width={aspectRatio ? (aspectRatio[0] * (30 / aspectRatio[1])) : 0}
-        style={{"marginLeft": "0.5px"}}
+        width={aspectRatio ? aspectRatio[0] * (30 / aspectRatio[1]) : 0}
+        style={{ marginLeft: '0.5px' }}
         imageSrcSet={false}
-        isSvg={true}
+        isSvg
         placeholder={false}
         aspectRatio={aspectRatio}
       />
@@ -126,7 +131,6 @@ const StyledBrand = ({ linkId, product, aspectRatio, serviceLocalisedName = null
 
 const Brand = forwardRef((props, ref) => {
   const {
-    svgHeight,
     maxWidth,
     minWidth,
     url = null,
@@ -136,10 +140,9 @@ const Brand = forwardRef((props, ref) => {
     children,
     ...rest
   } = props;
-
   return (
-    <Banner svgHeight={svgHeight} scriptLink={scriptLink} {...rest}>
-      <SvgWrapper ref={ref} className="brand-svg-wrapper">
+    <Banner scriptLink={scriptLink} {...rest}>
+      <SvgWrapper ref={ref} className="brand-svg-wrapper" id={linkId !== 'footer' ? 'brandSvgHeader' : 'brandSvgFooter'}>
         {url ? (
           <StyledLink
             href={url}

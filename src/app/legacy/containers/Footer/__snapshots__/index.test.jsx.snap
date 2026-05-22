@@ -67,16 +67,6 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
   }
 }
 
-.emotion-3 svg {
-  fill: currentColor;
-}
-
-@media screen and (forced-colors: active) {
-  .emotion-3 svg {
-    fill: linkText;
-  }
-}
-
 .emotion-5 {
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -136,6 +126,36 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
 }
 
 .emotion-9 {
+  position: relative;
+  height: 0;
+}
+
+.emotion-10 {
+  width: 100%;
+  object-fit: cover;
+  height: auto;
+  max-height: 32px;
+  margin-left: 0.5px;
+  box-sizing: content-box;
+  height: 1.25rem;
+  max-width: 100%;
+}
+
+@media (min-width: 25rem) {
+  .emotion-10 {
+    height: 1.5rem;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-10 {
+    height: 1.875rem;
+    margin-left: 0;
+  }
+}
+
+.emotion-11 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -146,7 +166,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
   margin: 0;
 }
 
-.emotion-10 {
+.emotion-12 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -157,32 +177,32 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-10 {
+  .emotion-12 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-10 {
+  .emotion-12 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-10 {
+  .emotion-12 {
     padding: 0 0.5rem;
   }
 }
 
-.emotion-11 {
+.emotion-13 {
   max-width: 63rem;
   margin: 0 auto;
   padding-top: 0.5rem;
 }
 
-.emotion-12 {
+.emotion-14 {
   border-bottom: 0.0625rem solid #3F3F42;
   -webkit-column-count: 4;
   column-count: 4;
@@ -192,14 +212,14 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-12 {
+  .emotion-14 {
     display: grid;
     grid-auto-flow: column;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-12 {
+  .emotion-14 {
     grid-auto-flow: row;
     -webkit-column-count: 1;
     column-count: 1;
@@ -207,7 +227,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
 }
 
 @media (min-width: 15rem) and (max-width: 37.4375rem) {
-  .emotion-12 {
+  .emotion-14 {
     grid-column-gap: 0.5rem;
     grid-template-columns: repeat(2, 1fr);
     -webkit-column-count: 2;
@@ -216,7 +236,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-12 {
+  .emotion-14 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(3, 1fr);
     -webkit-column-count: 3;
@@ -225,7 +245,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-12 {
+  .emotion-14 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(4, 1fr);
     -webkit-column-count: 4;
@@ -234,7 +254,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
 }
 
 @media (min-width: 80rem) {
-  .emotion-12 {
+  .emotion-14 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(5, 1fr);
     -webkit-column-count: 5;
@@ -242,7 +262,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
   }
 }
 
-.emotion-12>li:first-of-type {
+.emotion-14>li:first-of-type {
   border-bottom: 0.0625rem solid #3F3F42;
   padding: 0.5rem 0;
   margin-bottom: 0.5rem;
@@ -253,37 +273,37 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
 }
 
 @media (min-width: 15rem) and (max-width: 37.4375rem) {
-  .emotion-12 {
+  .emotion-14 {
     grid-template-rows: repeat(4, auto);
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-12 {
+  .emotion-14 {
     grid-template-rows: repeat(3, auto);
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-12 {
+  .emotion-14 {
     grid-template-rows: repeat(3, auto);
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-12 {
+  .emotion-14 {
     grid-template-rows: repeat(3, auto);
   }
 }
 
-.emotion-13 {
+.emotion-15 {
   min-width: 50%;
   -webkit-column-gap: 1rem;
   column-gap: 1rem;
   break-inside: avoid-column;
 }
 
-.emotion-14 {
+.emotion-16 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -294,23 +314,23 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
   display: block;
 }
 
-.emotion-14:hover,
-.emotion-14:focus {
+.emotion-16:hover,
+.emotion-16:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-21 {
+.emotion-23 {
   color: #FFFFFF;
   margin: 0;
   padding: 1rem 0;
 }
 
-.emotion-21 a {
+.emotion-23 a {
   padding: 0;
 }
 
-.emotion-22 {
+.emotion-24 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -321,8 +341,8 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
   display: inline;
 }
 
-.emotion-22:hover,
-.emotion-22:focus {
+.emotion-24:hover,
+.emotion-24:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
@@ -334,9 +354,11 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
   >
     <div
       class="emotion-2 emotion-3 emotion-4"
+      height="24"
     >
       <div
         class="brand-svg-wrapper emotion-5 emotion-6"
+        id="brandSvgFooter"
       >
         <a
           aria-labelledby="BrandLink-footer"
@@ -344,17 +366,23 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
           href="/news"
           id="footer"
         >
-          <img
-            alt="BBC News"
-            aria-hidden="true"
-            focusable="false"
-            height="30"
-            id="brandSvgFooter"
-            src="http://localhost:7080/news/images/brandLogo.svg"
-            style="margin-left: 0.5px;"
-          />
-          <span
+          <div
             class="emotion-9"
+            style="padding-bottom: 14.49%; overflow: hidden; height: 24px;"
+          >
+            <img
+              alt="BBC News"
+              class="emotion-10"
+              fetchpriority="low"
+              height="30"
+              loading="lazy"
+              src="http://localhost:7080/news/images/brandLogo.svg"
+              style="aspect-ratio: 980 / 142;"
+              width="207.04225352112675"
+            />
+          </div>
+          <span
+            class="emotion-11"
             id="BrandLink-footer"
           >
             BBC News
@@ -363,20 +391,20 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
       </div>
     </div>
     <div
-      class="emotion-10"
+      class="emotion-12"
     >
       <div
-        class="emotion-11"
+        class="emotion-13"
       >
         <ul
-          class="emotion-12"
+          class="emotion-14"
           role="list"
         >
           <li
-            class="emotion-13"
+            class="emotion-15"
           >
             <a
-              class="focusIndicatorInvert emotion-14"
+              class="focusIndicatorInvert emotion-16"
               href="https://www.bbc.com/news/help-41670342"
             >
               Why you can trust the BBC
@@ -384,7 +412,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
           </li>
           <li>
             <a
-              class="focusIndicatorInvert emotion-14"
+              class="focusIndicatorInvert emotion-16"
               href="https://www.bbc.com/terms"
             >
               Terms of Use
@@ -392,7 +420,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
           </li>
           <li>
             <a
-              class="focusIndicatorInvert emotion-14"
+              class="focusIndicatorInvert emotion-16"
               href="https://www.bbc.co.uk/aboutthebbc/"
             >
               About the BBC
@@ -400,7 +428,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
           </li>
           <li>
             <a
-              class="focusIndicatorInvert emotion-14"
+              class="focusIndicatorInvert emotion-16"
               href="https://www.bbc.com/privacy/"
             >
               Privacy Policy
@@ -408,7 +436,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
           </li>
           <li>
             <a
-              class="focusIndicatorInvert emotion-14"
+              class="focusIndicatorInvert emotion-16"
               href="https://www.bbc.com/usingthebbc/cookies/"
             >
               Cookies
@@ -416,7 +444,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
           </li>
           <li>
             <a
-              class="focusIndicatorInvert emotion-14"
+              class="focusIndicatorInvert emotion-16"
               href="https://www.bbc.com/accessibility/"
             >
               Accessibility Help
@@ -424,7 +452,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
           </li>
           <li>
             <a
-              class="focusIndicatorInvert emotion-14"
+              class="focusIndicatorInvert emotion-16"
               href="https://www.bbc.com/contact/"
             >
               Contact the BBC
@@ -432,7 +460,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
           </li>
         </ul>
         <p
-          class="emotion-21"
+          class="emotion-23"
         >
           <span
             lang="en-GB"
@@ -443,7 +471,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
           3000 BBC. The BBC is not responsible for the content of external sites.
            
           <a
-            class="focusIndicatorInvert emotion-22"
+            class="focusIndicatorInvert emotion-24"
             href="https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links"
           >
             Read about our approach to external linking.

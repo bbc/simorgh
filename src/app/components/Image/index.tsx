@@ -26,7 +26,6 @@ export type ImageProps = {
   hasCaption?: boolean;
   isPortraitOrientation?: boolean;
   isSvg?: boolean;
-  id?: string;
 };
 
 const roundNumber = (num: number) => Math.round(num * 100) / 100;
@@ -57,7 +56,6 @@ const Image = ({
   hasCaption,
   isPortraitOrientation,
   isSvg = false,
-  id = null,
 }: PropsWithChildren<ImageProps>) => {
   const { pageType, isLite, isAmp } = use(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -153,7 +151,6 @@ const Image = ({
               attribution={attribution}
               {...(srcSet && { srcSet: imgSrcSet })}
               {...(imgSizes && { sizes: imgSizes })}
-              {...(id && { id: id })}
               {...(preload && { 'data-hero': 'true' })}
               {...(isSvg && {
                 style: {
@@ -183,7 +180,6 @@ const Image = ({
               src={src}
               {...(srcSet && { srcSet: imgSrcSet })}
               {...(imgSizes && { sizes: imgSizes })}
-              {...(id && { id: id })}
               alt={alt}
               loading={lazyLoad ? 'lazy' : 'eager'}
               width={width}
