@@ -59,6 +59,7 @@ import ContinueReadingButton, {
   ContinueReadingButtonProps,
 } from '#app/components/ContinueReadingButton';
 import SaveArticleButton from '#app/components/SaveArticleButton';
+import isLive from '#lib/utilities/isLive';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -437,7 +438,8 @@ const ArticlePage = ({
   );
 
   // EXPERIMENT: Topic Discovery
-  const showTopicDiscovery = showTopicDiscoveryComponent && !isAmp && !isLite;
+  const showTopicDiscovery =
+    showTopicDiscoveryComponent && !isAmp && !isLite && !isLive();
 
   const showMediaCuration = Boolean(
     !isAmp &&
