@@ -6,6 +6,8 @@ import writeToNestedFile from '.';
 
 jest.mock('fs', () => ({
   writeFileSync: jest.fn(),
+  existsSync: jest.fn(),
+  mkdirSync: jest.fn(),
 }));
 
 jest.mock('../writeNewTimezoneData', () => jest.fn());
