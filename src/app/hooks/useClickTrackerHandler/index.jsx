@@ -31,7 +31,7 @@ const OJ_COMPONENT_NAMES = [
 // handle the total oj clicks event to specific onward journey experiments
 const OJ_OPTIMIZELY_EXPERIMENTS = ['newswb_ws_topic_discovery_module'];
 
-const OJ_OPTIMIZELY_CLICK_EVENT = ['oj_clicks'];
+const OJ_OPTIMIZELY_CLICK_EVENTS = ['oj_clicks', 'topic_clicks'];
 
 // only fire the total oj clicks event when the component and experiment are in scope
 const shouldTrackOjClick = (componentName, experimentName) =>
@@ -113,11 +113,13 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
 
             // send the extra optimizely event for the total oj clicks metric
             if (shouldTrackOjClick(componentName, experimentName)) {
-              optimizely.track(
-                OJ_OPTIMIZELY_CLICK_EVENT,
-                optimizely.user.id,
-                overrideAttributes,
-              );
+              OJ_OPTIMIZELY_CLICK_EVENTS.forEach(eventName => {
+                optimizely.track(
+                  eventName,
+                  optimizely.user.id,
+                  overrideAttributes,
+                );
+              });
             }
           }
 
