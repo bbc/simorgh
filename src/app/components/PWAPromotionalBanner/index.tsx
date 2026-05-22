@@ -4,7 +4,7 @@ import PromotionalBanner from '#app/components/PromotionalBanner';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import useAndroidDetection from '#app/hooks/useAdroidDetection';
+import useAndroidDetection from '#app/hooks/useAndroidDetection';
 import useClickTracker from '#app/hooks/useClickTrackerHandler';
 import useCustomEventTracker from '#app/hooks/useCustomEventTracker';
 import useIsPWA from '#app/hooks/useIsPWA';
