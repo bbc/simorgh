@@ -82,7 +82,7 @@ const Header = ({
   }
 
   return (
-    <div css={styles.headerContainer}>
+    <div css={[styles.headerContainer, styles.headerContainerForcedColours]}>
       <div css={styles.backgroundContainer}>
         <div css={styles.backgroundColor} />
       </div>

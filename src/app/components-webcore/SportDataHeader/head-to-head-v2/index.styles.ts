@@ -33,10 +33,13 @@ export default {
   // ==================== Main Wrapper (Theme-based) ====================
   wrapper:
     ({ isConciseView }: { isConciseView?: boolean }) =>
-    ({ palette }: Theme) =>
+    ({ palette, mq }: Theme) =>
       css({
         background: isConciseView ? palette.GREY_15 : palette.GREY_16,
         borderLeft: `medium none ${palette.LIVE_CORE}`,
+        [mq.FORCED_COLOURS]: {
+          borderBottom: `solid ${pixelsToRem(1)}rem transparent`,
+        },
       }),
   container:
     ({ isConciseView }: { isConciseView?: boolean }) =>
