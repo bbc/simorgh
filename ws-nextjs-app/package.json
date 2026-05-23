@@ -38,8 +38,6 @@
     "playwright:errorPage404:test": "yarn playwright:e2e:test playwright/pageTypes/errorPage404/errorPage404.spec.ts",
     "playwright:errorPage404:live": "yarn playwright:e2e:live playwright/pageTypes/errorPage404/errorPage404.spec.ts",
     "playwright:errorPage404:ui": "yarn playwright:e2e:ui playwright/pageTypes/errorPage404/errorPage404.spec.ts",
-    "playwright:errorPage404:cypress-structure": "yarn playwright:e2e:live playwright/pageTypes/errorPage404/errorPage404.cypress-structure.spec.ts",
-    "playwright:errorPage404:cypress-structure:ui": "APP_ENV=live playwright test playwright/pageTypes/errorPage404/errorPage404.cypress-structure.spec.ts",
     "cypress:onefile": "CYPRESS_APP_ENV=live CYPRESS_SMOKE=false cypress run --spec './cypress/e2e/articlePage/*'",
     "cypress:oneserviceandonefile": "CYPRESS_APP_ENV=live CYPRESS_SMOKE=false CYPRESS_ONLY_SERVICE=mundo cypress run  --spec './cypress/e2e/articlePage/*'",
     "cypress:interactive": "cypress open --browser chrome",
