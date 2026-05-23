@@ -1,0 +1,80 @@
+name: Playwright E2E - Page Types
+on:
+  pull_request:
+    branches:
+      - '**'
+permissions:
+  contents: read
+
+jobs:
+  playwright-run:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [22.x]
+    env:
+      CI: true
+      LOG_LEVEL: 'error'
+      APP_ENV: 'local'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: yarn
+
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Add bbc.com domain
+        run: sudo echo "127.0.0.1 localhost.bbc.com" | sudo tee -a /etc/hosts
+
+      - name: Install dependencies
+        run: yarn install --immutable
+
+      - name: Install Playwright browser
+        working-directory: ws-nextjs-app
+        run: npx playwright install --with-deps chromium
+
+      - name: Build Simorgh NextJS app
+        working-directory: ws-nextjs-app
+        run: yarn build
+
+      - name: Start Simorgh NextJS app and run Playwright tests
+        working-directory: ws-nextjs-app
+        run: |
+          set -euo pipefail
+          yarn start > /tmp/simorgh-nextjs.log 2>&1 &
+          SERVER_PID=$!
+
+          cleanup() {
+            kill "$SERVER_PID" || true
+          }
+          trap cleanup EXIT
+
+          for i in $(seq 1 120); do
+            if curl -fsS "http://127.0.0.1:7081" >/dev/null; then
+              break
+            fi
+            if [ "$i" -eq 120 ]; then
+              echo "Server failed to start"
+              cat /tmp/simorgh-nextjs.log || true
+              exit 1
+            fi
+          done
+
+          yarn playwright:errorPage404
+
+      - name: Upload Playwright test artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-error-page404-artifacts
+          path: |
+            ws-nextjs-app/playwright-report
+            ws-nextjs-app/test-results
+          if-no-files-found: ignore
