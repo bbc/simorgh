@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { AppEnv, errorPage404Suites } from './suites';
 import appConfig from '../../../utilities/serviceConfigs';
+import getEnvConfig from '../../../cypress/support/config/envs';
 
 const appEnvFromProcess = (process.env.APP_ENV || 'local') as AppEnv;
 
@@ -15,206 +16,201 @@ const baseURL =
 
 const shouldRunForEnv = (runforEnv: AppEnv[]) =>
   runforEnv.includes(appEnvFromProcess);
+const shouldIncludeStandaloneErrorRoutes = getEnvConfig(
+  appEnvFromProcess,
+  false,
+).standaloneErrorPages;
 
 const getServiceConfig = (service: string, variant?: string) => {
   return appConfig[service as keyof typeof appConfig][variant || 'default'];
 };
 
-test.describe('errorPage404', () => {
-  test.describe('canonical status checks', () => {
-    errorPage404Suites.canonical.forEach(testSuite => {
-      test(`${testSuite.service}${testSuite.variant ? ` (${testSuite.variant})` : ''} returns 404 HTML`, async ({
-        request,
-      }) => {
-        test.skip(
-          !shouldRunForEnv(testSuite.runforEnv),
-          `Skipped for APP_ENV=${appEnvFromProcess}`,
-        );
+const assert404HtmlResponse = async ({
+  request,
+  path,
+}: {
+  request: Parameters<Parameters<typeof test>[1]>[0]['request'];
+  path: string;
+}) => {
+  const response = await request.get(`${baseURL}${path}`);
+  const contentType = response.headers()['content-type'] || '';
 
-        const response = await request.get(`${baseURL}${testSuite.path}`);
-        const contentType = response.headers()['content-type'] || '';
-
-        expect(
-          response.status(),
-          `Unexpected status for ${testSuite.path}`,
-        ).toBe(404);
-        expect(
-          contentType,
-          `Unexpected content-type for ${testSuite.path}`,
-        ).toContain('text/html');
-      });
-    });
-  });
-
-  test.describe('amp status checks', () => {
-    errorPage404Suites.amp.forEach(testSuite => {
-      test(`${testSuite.service}${testSuite.variant ? ` (${testSuite.variant})` : ''} AMP returns 404 HTML`, async ({
-        request,
-      }) => {
-        test.skip(
-          !shouldRunForEnv(testSuite.runforEnv),
-          `Skipped for APP_ENV=${appEnvFromProcess}`,
-        );
-
-        const response = await request.get(`${baseURL}${testSuite.path}`);
-        const contentType = response.headers()['content-type'] || '';
-
-        expect(
-          response.status(),
-          `Unexpected status for ${testSuite.path}`,
-        ).toBe(404);
-        expect(
-          contentType,
-          `Unexpected content-type for ${testSuite.path}`,
-        ).toContain('text/html');
-      });
-    });
-  });
-
-  test.describe('canonical UI smoke checks', () => {
-    errorPage404Suites.canonical.forEach(testSuite => {
-      test(`${testSuite.service}${testSuite.variant ? ` (${testSuite.variant})` : ''} renders a basic 404 page shell`, async ({
-        page,
-      }) => {
-        test.skip(
-          !shouldRunForEnv(testSuite.runforEnv),
-          `Skipped for APP_ENV=${appEnvFromProcess}`,
-        );
-
-        const response = await page.goto(`${baseURL}${testSuite.path}`, {
-          waitUntil: 'domcontentloaded',
-        });
-        const serviceConfig = getServiceConfig(
-          testSuite.service,
-          testSuite.variant,
-        );
-        const title = serviceConfig.translations.error[404].title;
-        const pageTitle = `${title} - ${serviceConfig.brandName}`;
-        const description = title;
-        const ctaUrl =
-          serviceConfig.translations.error[404].callToActionLinkUrl;
-
-        expect(
-          response?.status(),
-          `Unexpected page status for ${testSuite.path}`,
-        ).toBe(404);
-        await expect(page.locator('h1')).toContainText(title);
-        await expect(page.locator(`a[href="${ctaUrl}"]`)).toBeVisible();
-        await expect(page).toHaveTitle(pageTitle);
-        await expect(
-          page.locator('meta[name="og:description"]'),
-        ).toHaveAttribute('content', description);
-        await expect(page.locator('meta[name="og:title"]')).toHaveAttribute(
-          'content',
-          pageTitle,
-        );
-        await expect(
-          page.locator('meta[name="twitter:description"]'),
-        ).toHaveAttribute('content', description);
-        await expect(
-          page.locator('meta[name="twitter:title"]'),
-        ).toHaveAttribute('content', pageTitle);
-        await expect(page.locator('html')).toHaveAttribute(
-          'lang',
-          serviceConfig.lang,
-        );
-      });
-    });
-  });
-});
+  expect(response.status()).toBe(404);
+  expect(contentType).toContain('text/html');
+};
 
 test.describe('errorPage404', () => {
-  errorPage404Suites.canonical.forEach(testSuite => {
+  const allSuites = [
+    ...errorPage404Suites.canonical,
+    ...errorPage404Suites.amp,
+  ];
+
+  allSuites.forEach(testSuite => {
     const suiteName = `${testSuite.service}${
       testSuite.variant ? ` (${testSuite.variant})` : ''
     }`;
+    const testLabel = `${baseURL}${testSuite.path}`;
 
-    test.describe(`Tests for ${suiteName} errorPage404`, () => {
-      test(`Test we get a 404 for ${suiteName}`, async ({ request }) => {
-        test.skip(
-          !shouldRunForEnv(testSuite.runforEnv),
-          `Skipped for APP_ENV=${appEnvFromProcess}`,
-        );
-
-        const response = await request.get(`${baseURL}${testSuite.path}`);
-        const contentType = response.headers()['content-type'] || '';
-
-        expect(response.status()).toBe(404);
-        expect(contentType).toContain('text/html');
-      });
-
-      test.describe(`Error Page Tests for ${suiteName}`, () => {
-        test(`should display correct 404 content for ${suiteName}`, async ({
-          page,
-          request,
-        }) => {
+    test.describe(testLabel, () => {
+      test.describe(`Tests for ${suiteName} errorPage404`, () => {
+        test('should return a 404 error code', async ({ request }) => {
           test.skip(
             !shouldRunForEnv(testSuite.runforEnv),
             `Skipped for APP_ENV=${appEnvFromProcess}`,
           );
 
-          const serviceConfig = getServiceConfig(
-            testSuite.service,
-            testSuite.variant,
-          );
-          const title = serviceConfig.translations.error[404].title;
-          const pageTitle = `${title} - ${serviceConfig.brandName}`;
-          const description = title;
-          const ctaUrl =
-            serviceConfig.translations.error[404].callToActionLinkUrl;
+          await assert404HtmlResponse({ request, path: testSuite.path });
+        });
 
-          const apiResponse = await request.get(`${baseURL}${testSuite.path}`);
-          expect(apiResponse.status()).toBe(404);
+        test.describe(`${suiteName} Error Page Tests`, () => {
+          test('should display the expected error title on screen', async ({
+            page,
+          }) => {
+            test.skip(
+              !shouldRunForEnv(testSuite.runforEnv),
+              `Skipped for APP_ENV=${appEnvFromProcess}`,
+            );
 
-          const pageResponse = await page.goto(`${baseURL}${testSuite.path}`, {
-            waitUntil: 'domcontentloaded',
+            const serviceConfig = getServiceConfig(
+              testSuite.service,
+              testSuite.variant,
+            );
+            const title = serviceConfig.translations.error[404].title;
+
+            await page.goto(`${baseURL}${testSuite.path}`, {
+              waitUntil: 'domcontentloaded',
+            });
+
+            await expect(page.locator('h1')).toContainText(title);
           });
 
-          expect(pageResponse?.status()).toBe(404);
-          await expect(page.locator('h1')).toContainText(title);
-          await expect(page.locator(`a[href="${ctaUrl}"]`)).toBeVisible();
-          await expect(page).toHaveTitle(pageTitle);
-          await expect(
-            page.locator('meta[name="og:description"]'),
-          ).toHaveAttribute('content', description);
-          await expect(page.locator('meta[name="og:title"]')).toHaveAttribute(
-            'content',
-            pageTitle,
+          test('should have an inline link to the homepage', async ({
+            page,
+          }) => {
+            test.skip(
+              !shouldRunForEnv(testSuite.runforEnv),
+              `Skipped for APP_ENV=${appEnvFromProcess}`,
+            );
+
+            const serviceConfig = getServiceConfig(
+              testSuite.service,
+              testSuite.variant,
+            );
+            const ctaUrl =
+              serviceConfig.translations.error[404].callToActionLinkUrl;
+
+            await page.goto(`${baseURL}${testSuite.path}`, {
+              waitUntil: 'domcontentloaded',
+            });
+
+            await expect(page.locator(`a[href="${ctaUrl}"]`)).toBeVisible();
+          });
+
+          test('should have correct title and description metadata', async ({
+            page,
+          }) => {
+            test.skip(
+              !shouldRunForEnv(testSuite.runforEnv),
+              `Skipped for APP_ENV=${appEnvFromProcess}`,
+            );
+
+            const serviceConfig = getServiceConfig(
+              testSuite.service,
+              testSuite.variant,
+            );
+            const description = serviceConfig.translations.error[404].title;
+            const title = serviceConfig.translations.error[404].title;
+            const pageTitle = `${title} - ${serviceConfig.brandName}`;
+
+            await page.goto(`${baseURL}${testSuite.path}`, {
+              waitUntil: 'domcontentloaded',
+            });
+
+            await expect(page).toHaveTitle(pageTitle);
+            await expect(
+              page.locator('meta[name="og:description"]'),
+            ).toHaveAttribute('content', description);
+            await expect(page.locator('meta[name="og:title"]')).toHaveAttribute(
+              'content',
+              pageTitle,
+            );
+            await expect(
+              page.locator('meta[name="twitter:description"]'),
+            ).toHaveAttribute('content', description);
+            await expect(
+              page.locator('meta[name="twitter:title"]'),
+            ).toHaveAttribute('content', pageTitle);
+          });
+
+          test('should have lang attribute', async ({ page }) => {
+            test.skip(
+              !shouldRunForEnv(testSuite.runforEnv),
+              `Skipped for APP_ENV=${appEnvFromProcess}`,
+            );
+
+            const serviceConfig = getServiceConfig(
+              testSuite.service,
+              testSuite.variant,
+            );
+
+            await page.goto(`${baseURL}${testSuite.path}`, {
+              waitUntil: 'domcontentloaded',
+            });
+
+            await expect(page.locator('html')).toHaveAttribute(
+              'lang',
+              serviceConfig.lang,
+            );
+          });
+        });
+
+        if (shouldIncludeStandaloneErrorRoutes) {
+          test.describe.skip(`${suiteName} error page routes`, () => {
+            test(`/${testSuite.service}/404 should have response code 200`, async ({
+              request,
+            }) => {
+              const response = await request.get(
+                `${baseURL}/${testSuite.service}/404`,
+              );
+
+              expect(response.status()).toBe(200);
+            });
+
+            test(`/${testSuite.service}/500 should have response code 200`, async ({
+              request,
+            }) => {
+              const response = await request.get(
+                `${baseURL}/${testSuite.service}/500`,
+              );
+
+              expect(response.status()).toBe(200);
+            });
+          });
+        }
+      });
+
+      test.describe(`Canonical Tests for ${suiteName} errorPage404`, () => {
+        test('should return a 404 error code', async ({ request }) => {
+          test.skip(
+            !shouldRunForEnv(testSuite.runforEnv),
+            `Skipped for APP_ENV=${appEnvFromProcess}`,
           );
-          await expect(
-            page.locator('meta[name="twitter:description"]'),
-          ).toHaveAttribute('content', description);
-          await expect(
-            page.locator('meta[name="twitter:title"]'),
-          ).toHaveAttribute('content', pageTitle);
-          await expect(page.locator('html')).toHaveAttribute(
-            'lang',
-            serviceConfig.lang,
-          );
+
+          await assert404HtmlResponse({ request, path: testSuite.path });
         });
       });
 
-      test.describe.skip(`Standalone error routes for ${suiteName}`, () => {
-        test(`/${testSuite.service}/404 should return 200`, async ({
-          request,
-        }) => {
-          const response = await request.get(
-            `${baseURL}/${testSuite.service}/404`,
+      test.describe(`Amp Tests for ${suiteName} errorPage404`, () => {
+        test('should return a 404 error code', async ({ request }) => {
+          test.skip(
+            !shouldRunForEnv(testSuite.runforEnv),
+            `Skipped for APP_ENV=${appEnvFromProcess}`,
           );
-          const contentType = response.headers()['content-type'] || '';
-          expect(response.status()).toBe(200);
-          expect(contentType).toContain('text/html');
-        });
 
-        test(`/${testSuite.service}/500 should return 200`, async ({
-          request,
-        }) => {
-          const response = await request.get(
-            `${baseURL}/${testSuite.service}/500`,
-          );
-          const contentType = response.headers()['content-type'] || '';
-          expect(response.status()).toBe(200);
-          expect(contentType).toContain('text/html');
+          await assert404HtmlResponse({
+            request,
+            path: `${testSuite.path}.amp`,
+          });
         });
       });
     });
