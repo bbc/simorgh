@@ -1,14 +1,13 @@
 // biome-ignore-all lint/style/noCommonJs: we want this
 // biome-ignore-all lint/style/useNodejsImportProtocol: we want this
 const fs = require('fs');
-const mkdirp = require('mkdirp');
 const path = require('path');
 
 const writeToNestedFile = (filePath, contents) => {
   const fullFilePath = path.join(__dirname, filePath);
   const folder = path.dirname(fullFilePath);
 
-  mkdirp.sync(folder);
+  if (!fs.existsSync(folder)) fs.mkdirSync(folder, { recursive: true });
 
   fs.writeFileSync(fullFilePath, contents);
 

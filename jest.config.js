@@ -65,16 +65,7 @@ const puppeteerTests = {
 module.exports = {
   projects: [unitTests, clientUnitTests, puppeteerTests],
   reporters: [
-    'default',
-    [
-      'jest-junit',
-      {
-        suiteName: 'Jest Tests',
-        outputDirectory: 'reports/jest',
-        uniqueOutputName: 'true',
-        ancestorSeparator: ' › ',
-      },
-    ],
+    'default'
   ],
   fakeTimers: {
     enableGlobally: true,

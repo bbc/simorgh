@@ -1,16 +1,19 @@
 // biome-ignore-all lint/suspicious/noConsole: we want this
-import { JSDOM } from 'jsdom';
 
 const getManifestFile = async url => {
   const response = await fetch(url);
-
   const html = await response.text();
 
-  const {
-    window: { document },
-  } = new JSDOM(html);
+  // 1. Isolate the <link> tag that has rel="manifest"
+  const linkTagMatch = html.match(/<link[^>]*rel=["']manifest["'][^>]*>/i);
 
-  return document.querySelector('link[rel="manifest"]').getAttribute('href');
+  if (linkTagMatch) {
+    // 2. Extract the href attribute from that specific tag
+    const hrefMatch = linkTagMatch[0].match(/href=["']([^"']+)["']/i);
+    return hrefMatch ? hrefMatch[1] : null;
+  }
+
+  return null;
 };
 
 export default async () => {

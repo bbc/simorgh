@@ -1,4 +1,4 @@
-import timemachine from 'timemachine';
+import timemachine from './timemachine';
 /*
 timemachine is a node module which overrides the system time for a repo. There are components on storybook with date and time which varies according to current date and time. This causes inconsistency across chromaticqa tests hence the use of this dependency.
 */
