@@ -33,6 +33,12 @@ const Component = ({ pageData }: ComponentProps) => (
 export default {
   title: 'Pages/Live Page',
   Component,
+  globals: {
+    toggles: {
+      showSportDataHeader: { enabled: true },
+    },
+  },
+  parameters: { layout: 'fullscreen' },
 };
 
 export const Example = () => <Component pageData={mockPageData} />;

@@ -1,4 +1,3 @@
-import { StaticRouter } from 'react-router-dom';
 import {
   render,
   fireEvent,
@@ -15,14 +14,12 @@ const fragmentBlock = (text, attributes = []) => ({
 });
 
 const InlineLinkContext = ({ locator, isExternal, blocks, onClick }) => (
-  <StaticRouter>
-    <InlineLinkContainer
-      locator={locator}
-      blocks={blocks}
-      isExternal={isExternal}
-      onClick={onClick}
-    />
-  </StaticRouter>
+  <InlineLinkContainer
+    locator={locator}
+    blocks={blocks}
+    isExternal={isExternal}
+    onClick={onClick}
+  />
 );
 
 describe('InlineLinkContainer', () => {

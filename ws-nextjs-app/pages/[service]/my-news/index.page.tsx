@@ -2,8 +2,8 @@ import dynamic from 'next/dynamic';
 import { GetServerSideProps } from 'next';
 import { MY_NEWS_PAGE } from '#app/routes/utils/pageTypes';
 import PageDataParams from '#app/models/types/pageDataParams';
-import deriveVariant from '#nextjs/utilities/deriveVariant';
-import logResponseTime from '#server/utilities/logResponseTime';
+import deriveVariant from '#utilities/deriveVariant';
+import logResponseTime from '#utilities/logResponseTime';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
 import { NOT_FOUND, OK } from '#app/lib/statusCodes.const';
 
