@@ -56,24 +56,23 @@ describe('LocationBasedTopicOJ', () => {
         pageData={basePageData}
       />,
     );
-    const region = screen.getByRole('region', {
-      name: 'Najeriya',
+    const subheadingLink = screen.getByRole('link', {
+      name: /Najeriya/i,
     });
-    expect(region).toBeInTheDocument();
-    expect(screen.getByText('Najeriya')).toBeInTheDocument();
-    expect(screen.getByText('Promo Title')).toBeInTheDocument();
+    expect(subheadingLink).toHaveAttribute('href', '/hausa/topics/topic-1');
   });
 
-  it('renders the subheading as a link if link is provided', () => {
+  it('renders the promos for the articles provided in the curation', () => {
     render(
       <LocationBasedTopicOJ
         // @ts-expect-error: Test fixture data does not need to match Article type exactly
         pageData={basePageData}
       />,
     );
-    const subheadingLink = screen.getByRole('link', {
-      name: /Najeriya/i,
+    const promoLink = screen.getByRole('link', {
+      name: /Promo Title/i,
     });
-    expect(subheadingLink).toHaveAttribute('href', '/hausa/topics/topic-1');
+    expect(promoLink).toBeInTheDocument();
+    expect(promoLink).toHaveAttribute('href', '/promo-link');
   });
 });
