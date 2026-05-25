@@ -30,10 +30,13 @@ export default {
       padding: `${spacings.HALF}rem`,
     }),
 
-  signInLink: ({ palette, spacings }: Theme) =>
+  signInLink: ({ palette, spacings, mq }: Theme) =>
     css({
       height: `${pixelsToRem(44)}rem`,
       padding: `${spacings.HALF}rem`,
+      [mq.GROUP_1_MIN_WIDTH]: {
+        padding: `${spacings.FULL}rem`,
+      },
       color: palette.WHITE,
       textDecorationThickness: `${pixelsToRem(1)}rem`,
       backgroundColor: palette.SERVICE_NEUTRAL_CORE,
