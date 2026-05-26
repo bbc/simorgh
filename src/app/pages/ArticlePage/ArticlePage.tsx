@@ -260,11 +260,6 @@ const ArticlePage = ({
         }
       : null;
 
-  const testPageViewsExperimentProps = getActiveExperimentProps(
-    testPageViewsExperimentName,
-    testPageViewsVariant,
-  );
-
   const topicDiscoveryExperimentProps = getActiveExperimentProps(
     topicDiscoveryExperimentName,
     topicDiscoveryVariant,
@@ -329,10 +324,6 @@ const ArticlePage = ({
   const atiData = {
     ...atiAnalytics,
     ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
-    ...(testPageViewsExperimentProps && {
-      experimentName: testPageViewsExperimentProps.experimentName,
-      experimentVariant: testPageViewsExperimentProps.experimentVariant,
-    }),
     ...(topicDiscoveryExperimentProps && {
       experimentName: topicDiscoveryExperimentProps.experimentName,
       experimentVariant: topicDiscoveryExperimentProps.experimentVariant,
