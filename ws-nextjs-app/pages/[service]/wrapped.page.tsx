@@ -2,11 +2,11 @@
 // @ts-nocheck
 
 import { GetServerSideProps } from 'next';
-import { useEffect, use } from 'react';
 import { ParsedUrlQuery } from 'querystring';
+import { use, useEffect } from 'react';
+
 import omit from 'ramda/src/omit';
-import { ServiceContext } from '#contexts/ServiceContext';
-import { STATIC_PAGE } from '#app/routes/utils/pageTypes';
+
 import {
   Articles,
   Book,
@@ -16,15 +16,16 @@ import {
   Favourites,
   Words,
 } from '#app/components/icons';
-import nodeLogger from '#lib/logger.node';
-import logResponseTime from '#utilities/logResponseTime';
-import isLocal from '#lib/utilities/isLocal';
-
 import {
   ROUTING_INFORMATION,
   SERVER_SIDE_RENDER_REQUEST_RECEIVED,
 } from '#app/lib/logger.const';
+import { STATIC_PAGE } from '#app/routes/utils/pageTypes';
+import { ServiceContext } from '#contexts/ServiceContext';
+import nodeLogger from '#lib/logger.node';
+import isLocal from '#lib/utilities/isLocal';
 import { Services, Variants } from '#models/types/global';
+import logResponseTime from '#utilities/logResponseTime';
 import styles from './wrappedStyles';
 
 interface PageDataParams extends ParsedUrlQuery {
@@ -145,7 +146,7 @@ const pageLayout = () => {
       }, 0);
     const article = document.getElementById('article');
     article.innerText = new Intl.NumberFormat(locale).format(pageTypeCounts);
-    const average = document.getElementById('average');
+    // const average = document.getElementById('average');
     /// average.innerText = new Intl.NumberFormat(locale, { maximumFractionDigits: 1 }).format(totalWords / pageTypeCounts);
     const topics = Object.keys(wsWrapped[thisYear].topicCounts)
       .sort((a, b) => {
@@ -166,7 +167,6 @@ const pageLayout = () => {
     const monthValues = [];
     const graphMonths = wsWrapped[thisYear].byMonth;
     const tempMonths = [];
-    const blah = new Intl.DateTimeFormat();
     for (let i = 0; i <= 11; i++) {
       const date = new Date(`2024-${String(i + 1).padStart(2, '0')}-01`);
       tempMonths.push(

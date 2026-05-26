@@ -1,33 +1,34 @@
 import { Helmet } from 'react-helmet';
+
+import filterForBlockType from '#app/lib/utilities/blockHandlers';
+import { PageTypes, Services } from '#app/models/types/global';
+import { Article } from '#app/models/types/optimo';
 import {
   ARTICLE_PAGE,
+  AUDIO_PAGE,
   HOME_PAGE,
-  STORY_PAGE,
+  LIVE_PAGE,
+  LIVE_RADIO_PAGE,
+  MEDIA_ARTICLE_PAGE,
   MEDIA_ASSET_PAGE,
   PHOTO_GALLERY_PAGE,
-  LIVE_RADIO_PAGE,
-  AUDIO_PAGE,
+  STORY_PAGE,
   TV_PAGE,
-  LIVE_PAGE,
-  MEDIA_ARTICLE_PAGE,
 } from '#app/routes/utils/pageTypes';
+import { RequestContextProvider } from '#contexts/RequestContext';
+import { data as gahuzaAudioPage } from '#data/gahuza/bbc_gahuza_radio/p02pcb5c.json';
+import { data as hindiTVBrand } from '#data/hindi/bbc_hindi_tv/tv_programmes/w13xttlw.json';
+import { data as liveRadioPageData } from '#data/korean/bbc_korean_radio/liveradio.json';
+import { getSummary } from '#lib/utilities/parseAssetData/index';
 import {
   articleDataNews,
   articleDataPersian,
   articleDataPidginWithByline,
 } from '#pages/ArticlePage/fixtureData';
-import { RequestContextProvider } from '#contexts/RequestContext';
-import { data as gahuzaAudioPage } from '#data/gahuza/bbc_gahuza_radio/p02pcb5c.json';
-import { data as liveRadioPageData } from '#data/korean/bbc_korean_radio/liveradio.json';
-import { data as hindiTVBrand } from '#data/hindi/bbc_hindi_tv/tv_programmes/w13xttlw.json';
-import { getSummary } from '#lib/utilities/parseAssetData/index';
-import { Services, PageTypes } from '#app/models/types/global';
-import { Article } from '#app/models/types/optimo';
-import filterForBlockType from '#app/lib/utilities/blockHandlers';
 import services from '#utilities/serviceConfigs';
-import { render, waitFor } from '../react-testing-library-with-providers';
-import { getAuthorTwitterHandle } from '../Byline/utilities';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import { getAuthorTwitterHandle } from '../Byline/utilities';
+import { render, waitFor } from '../react-testing-library-with-providers';
 import MetadataContainer, { OG_EXPERIMENT_SERVICES } from './index';
 import { MetadataProps } from './types';
 

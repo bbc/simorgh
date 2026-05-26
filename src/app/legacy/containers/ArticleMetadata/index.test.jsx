@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet';
+
 import {
   articleDataNews,
   articleDataPersian,

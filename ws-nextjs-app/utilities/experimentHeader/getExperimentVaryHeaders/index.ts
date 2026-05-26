@@ -1,7 +1,7 @@
-import { ServerSideExperiment } from '#app/models/types/global';
+import type { ServerSideExperiment } from '#app/models/types/global';
 
-export default (serverSideExperiments: ServerSideExperiment[]) => {
-  return serverSideExperiments
+export default (serverSideExperiments: ServerSideExperiment[]) =>
+  serverSideExperiments
     .reduce((headerNames, experiment) => {
       const { experimentName, enabled } = experiment;
 
@@ -11,4 +11,3 @@ export default (serverSideExperiments: ServerSideExperiment[]) => {
       return headerNames;
     }, '')
     .slice(0, -2);
-};

@@ -1,10 +1,13 @@
+// biome-ignore-all lint/style/noCommonJs: we want this
 /* eslint-disable no-param-reassign */
-import { defineConfig } from 'cypress';
-import MomentTimezoneInclude from '../src/app/legacy/psammead/moment-timezone-include/src';
+
 import webpackPreprocessor from '@cypress/webpack-preprocessor';
-import { DefinePlugin } from 'webpack';
+import { defineConfig } from 'cypress';
 import dotenv from 'dotenv';
+import { DefinePlugin } from 'webpack';
+
 import { webpackDirAlias } from '../dirAlias';
+import MomentTimezoneInclude from '../src/app/legacy/psammead/moment-timezone-include/src';
 
 export default defineConfig({
   // Consider moving 'retries' to a per-test level once we have more tests
@@ -28,16 +31,6 @@ export default defineConfig({
       }, {});
 
       config.baseUrl = env.baseUrl;
-
-      // Debugging console logs to see running config
-      /* eslint-disable no-console */
-      console.log('\n\n\n\n\n');
-      console.log('Cypress running config:');
-      console.log('SMOKE:', config.env.SMOKE);
-      console.log('APP_ENV:', config.env.APP_ENV);
-      console.log('Base URL:', config.baseUrl);
-      // console.log('UK:', config.env.UK);
-      console.log('\n\n\n\n\n');
       /* eslint-enable no-console */
 
       const options = {
@@ -81,26 +74,19 @@ export default defineConfig({
       const logPrinterOptions = {
         defaultTrimLength: 2000,
       };
-      // eslint-disable-next-line global-require, @typescript-eslint/no-var-requires
       require('cypress-terminal-report/src/installLogsPrinter')(
         on,
         logPrinterOptions,
       );
 
       on('task', {
-        log(message) {
-          // eslint-disable-next-line no-console
-          console.log(message);
+        log(_message) {
           return null;
         },
-        table(message) {
-          // eslint-disable-next-line no-console
-          console.table(message);
+        table(_message) {
           return null;
         },
-        error(message) {
-          // eslint-disable-next-line no-console
-          console.error(message);
+        error(_message) {
           return null;
         },
       });

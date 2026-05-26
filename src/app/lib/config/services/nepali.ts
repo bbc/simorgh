@@ -2,7 +2,7 @@ import devanagari from '../../../components/ThemeProvider/fontScripts/devanagari
 import '#psammead/moment-timezone-include/tz/Asia/Kathmandu';
 import '#psammead/psammead-locales/moment/ne';
 import withContext from '../../../contexts/utils/withContext';
-import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
+import type { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
 export const service: DefaultServiceConfig = {
   default: {
@@ -74,12 +74,10 @@ export const service: DefaultServiceConfig = {
         onboardingMessage:
           'तपाईँ अहिले हाम्रो वेबसाइटको थोरै डेटा प्रयोग हुने ‘टेक्स्ट-ओन्ली’ साइटमा हुनुहुन्छ। सबै तस्बिर र भिडिओसहित मूल वेबसाइटमा जान यहाँ क्लिक गर्नुहोस्।',
         toMainSite: 'मूल वेबसाइट तथा पूरा संस्करणमा जानुहोस्।',
-        informationPage:
-          'हाम्रो वेबसाइटको थोरै डेटा प्रयोग हुने संस्करणबारे थप जान्नुहोस्।',
+        informationPage: 'हाम्रो वेबसाइटको थोरै डेटा प्रयोग हुने संस्करणबारे थप जान्नुहोस्।',
         informationPageLink: 'https://www.bbc.com/nepali/articles/c3w44py8q72o',
         dataSaving: 'थोरै डेटा खपत गर्ने गरी पढ्न मिल्ने संस्करण हेर्नुहोस्।',
-        articleDataSavingLinkText:
-          'थोरै डेटा खपत गर्ने गरी पढ्न मिल्ने संस्करण हेर्नुहोस्।',
+        articleDataSavingLinkText: 'थोरै डेटा खपत गर्ने गरी पढ्न मिल्ने संस्करण हेर्नुहोस्।',
       },
       mediaAssetPage: {
         mediaPlayer: 'मिडिया प्लेअर',
@@ -122,10 +120,7 @@ export const service: DefaultServiceConfig = {
           title: 'सर्भरमा समस्या देखियो।',
           message:
             'माफ गर्नुहोस्। तपाईँले खोज्नुभएको सामग्री हामीले देखाउन सकेनौँ। निम्न उपायहरू गर्नुहोस्:',
-          solutions: [
-            'Refresh थिच्नुहोस्',
-            'केही समयपछि पुन: प्रयास गर्नुहोस्।',
-          ],
+          solutions: ['Refresh थिच्नुहोस्', 'केही समयपछि पुन: प्रयास गर्नुहोस्।'],
           callToActionFirst: 'अथवा ',
           callToActionLinkText: 'BBC News नेपाली',
           callToActionLast: 'को होमपेजमा जानुहोस्।',
@@ -258,10 +253,8 @@ export const service: DefaultServiceConfig = {
         caption: {
           textPrefixVisuallyHidden: 'भिडिओ क्याप्शन सुरु हुँदैछ, ',
           text: 'चेतावनी: तेस्रो पक्षको सामग्रीमा विज्ञापन हुनसक्छ',
-          articleText:
-            'चेतावनी: बाह्य वेबसाइटका सामग्रीप्रति बीबीसी जिम्मेवार हुने छैन।',
-          articleAdditionalText:
-            '%provider_name% का सामग्रीमा विज्ञापन हुन सक्छन्।',
+          articleText: 'चेतावनी: बाह्य वेबसाइटका सामग्रीप्रति बीबीसी जिम्मेवार हुने छैन।',
+          articleAdditionalText: '%provider_name% का सामग्रीमा विज्ञापन हुन सक्छन्।',
         },
         fallback: {
           text: 'सामग्री उपलब्ध छैन',
@@ -345,8 +338,7 @@ export const service: DefaultServiceConfig = {
           lang: 'en-GB',
         },
       ],
-      copyrightText:
-        'बीबीसी। अन्य वेबसाइटका सामग्रीहरूका लागि बीबीसी जिम्मेवार छैन।',
+      copyrightText: 'बीबीसी। अन्य वेबसाइटका सामग्रीहरूका लागि बीबीसी जिम्मेवार छैन।',
     },
     timezone: 'Asia/Kathmandu',
     navigation: [

@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
-import { Services } from '../../models/types/global';
-import { OptimoBlock } from '../../models/types/optimo';
+import type { Services } from '../../models/types/global';
+import type { OptimoBlock } from '../../models/types/optimo';
 
 import RelatedContentSection from '.';
 import {

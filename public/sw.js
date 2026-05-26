@@ -1,6 +1,6 @@
+// biome-ignore-all lint/correctness/noUnusedVariables: version is needed elsewhere
 /* eslint-disable no-useless-return */
 /* eslint-disable import/prefer-default-export */
-/* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 /* eslint-disable no-restricted-globals */
 
@@ -37,7 +37,7 @@ const cacheOfflinePageAndResources = async service => {
   if (await cache.match(offlinePageUrl)) return;
 
   const resp = await cacheResource(cache, offlinePageUrl);
-  if (!resp || !resp.ok) return;
+  if (!resp?.ok) return;
 
   const html = await resp.text();
   const scriptSrcs = [

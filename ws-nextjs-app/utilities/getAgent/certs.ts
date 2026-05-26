@@ -1,4 +1,4 @@
-import { promises as fs, PathLike } from 'fs';
+import { promises as fs, type PathLike } from 'node:fs';
 
 type LoadFiles = {
   caPath: PathLike;

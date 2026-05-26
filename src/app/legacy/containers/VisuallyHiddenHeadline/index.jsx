@@ -1,4 +1,5 @@
 import path from 'ramda/src/path';
+
 import VisuallyHiddenText from '../../../components/VisuallyHiddenText';
 
 const VisuallyHiddenHeadline = props => (

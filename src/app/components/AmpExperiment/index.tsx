@@ -53,7 +53,7 @@ const AmpScript = ({ config }: { config: AmpScriptProps }) => {
   return (
     <script
       type="application/json"
-      /* eslint-disable-next-line react/no-danger */
+      // biome-ignore lint/security/noDangerouslySetInnerHtml: we want this
       dangerouslySetInnerHTML={{ __html: JSON.stringify(config) }}
     />
   );
@@ -62,20 +62,18 @@ const AmpScript = ({ config }: { config: AmpScriptProps }) => {
 const AmpExperiment = ({
   experimentConfig,
   analyticsConfig,
-}: AmpExperimentProps) => {
-  return (
-    <>
-      <AmpHead />
-      <amp-experiment>
-        <AmpScript config={experimentConfig} />
-      </amp-experiment>
-      {analyticsConfig && (
-        <amp-analytics type="piano">
-          <AmpScript config={analyticsConfig} />
-        </amp-analytics>
-      )}
-    </>
-  );
-};
+}: AmpExperimentProps) => (
+  <>
+    <AmpHead />
+    <amp-experiment>
+      <AmpScript config={experimentConfig} />
+    </amp-experiment>
+    {analyticsConfig && (
+      <amp-analytics type="piano">
+        <AmpScript config={analyticsConfig} />
+      </amp-analytics>
+    )}
+  </>
+);
 
 export default AmpExperiment;

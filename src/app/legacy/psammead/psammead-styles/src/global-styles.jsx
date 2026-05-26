@@ -1,4 +1,4 @@
-import { Global, css } from '@emotion/react';
+import { css, Global } from '@emotion/react';
 
 const boxSizing = `/* Box Sizing https://bit.ly/1A91I0J */
     html {

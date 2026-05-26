@@ -1,27 +1,28 @@
 import pipe from 'ramda/src/pipe';
-import getEnvironment from '#app/routes/utils/getEnvironment';
+
 import { getMostReadEndpoint } from '#app/lib/utilities/getUrlHelpers/getMostReadUrls';
+import getEnvironment from '#app/routes/utils/getEnvironment';
 import { getUrlPath } from '#lib/utilities/urlParser';
-import {
-  Services,
-  Variants,
+import type {
   Environments,
   PageTypes,
+  Services,
+  Variants,
 } from '#models/types/global';
 import handleError from '../handleError';
 import {
   ARTICLE_PAGE,
+  AUDIO_PAGE,
   AV_EMBEDS,
   CPS_ASSET,
   HOME_PAGE,
   LIVE_PAGE,
   LIVE_RADIO_PAGE,
+  LIVE_TV_PAGE,
   MOST_READ_PAGE,
-  AUDIO_PAGE,
   TOPIC_PAGE,
   TV_PAGE,
   UGC_PAGE,
-  LIVE_TV_PAGE,
 } from '../pageTypes';
 import parseRoute from '../parseRoute';
 
@@ -71,9 +72,7 @@ const getId = ({ pageType, service, variant }: GetIdProps) => {
       getIdFunction = (path: string) => getCpsId(path);
       break;
     case HOME_PAGE:
-      getIdFunction = () => {
-        return service;
-      };
+      getIdFunction = () => service;
       break;
     case MOST_READ_PAGE:
       getIdFunction = () => service;

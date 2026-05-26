@@ -1,7 +1,8 @@
 import { renderHook } from '@testing-library/react';
-import useConnectionTypeTracker from '.';
+
 import useCustomEventTracker from '../useCustomEventTracker';
 import useNetworkStatusTracker from '../useNetworkStatusTracker';
+import useConnectionTypeTracker from '.';
 
 jest.mock('../useTrackingToggle', () => ({
   __esModule: true,

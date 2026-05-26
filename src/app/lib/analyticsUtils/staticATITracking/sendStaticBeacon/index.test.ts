@@ -1,4 +1,4 @@
-/* eslint-disable no-eval */
+// biome-ignore-all lint/security/noGlobalEval: this is fine
 import sendStaticBeacon, { addSendStaticBeaconToWindow } from '.';
 
 let XMLHttpRequestSpy: jest.SpyInstance<XMLHttpRequest | undefined, []>;

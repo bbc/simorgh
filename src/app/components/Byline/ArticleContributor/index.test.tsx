@@ -1,17 +1,17 @@
 import {
+  bylineWithLink,
+  bylineWithLinkAndLocation,
+  bylineWithNameAndRole,
+  bylineWithPngPhoto,
+} from '../../../pages/ArticlePage/fixtureData';
+import { ARTICLE_PAGE } from '../../../routes/utils/pageTypes';
+import {
   render,
   screen,
   within,
 } from '../../react-testing-library-with-providers';
-import Contributors from '.';
 import bylineExtractor from '../utilities/bylineExtractor';
-import {
-  bylineWithNameAndRole,
-  bylineWithLink,
-  bylineWithLinkAndLocation,
-  bylineWithPngPhoto,
-} from '../../../pages/ArticlePage/fixtureData';
-import { ARTICLE_PAGE } from '../../../routes/utils/pageTypes';
+import Contributors from '.';
 
 describe('Article Contributors', () => {
   it('Should render contributors correctly when only required data is passed', () => {

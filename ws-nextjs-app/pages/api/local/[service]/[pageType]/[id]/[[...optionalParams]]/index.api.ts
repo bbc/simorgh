@@ -1,8 +1,9 @@
 /* eslint-disable import/prefer-default-export */
 import fs from 'node:fs/promises';
-import path from 'path';
-import { PageTypes, Services } from '#app/models/types/global';
+import path from 'node:path';
 import { NextApiRequest, NextApiResponse } from 'next';
+
+import { PageTypes, Services } from '#app/models/types/global';
 
 type RequestPathParts = {
   service: Services;
@@ -16,8 +17,8 @@ const constructDataFilePath = ({
   pageType,
   id,
   optionalParams,
-}: RequestPathParts) => {
-  return optionalParams && optionalParams.length > 0
+}: RequestPathParts) =>
+  optionalParams && optionalParams.length > 0
     ? path.join(
         process.cwd(),
         '..',
@@ -35,7 +36,6 @@ const constructDataFilePath = ({
         pageType as string,
         `${id}.json`,
       );
-};
 
 export default async function handler(
   req: NextApiRequest,

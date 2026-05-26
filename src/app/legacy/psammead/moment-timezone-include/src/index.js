@@ -1,3 +1,4 @@
+// biome-ignore-all lint/style/noCommonJs: we want this
 const webpack = require('webpack');
 const writeNewTimezoneData = require('./writeNewTimezoneData');
 const replaceOriginalTimezoneData = require('./replaceOriginalTimezoneData');

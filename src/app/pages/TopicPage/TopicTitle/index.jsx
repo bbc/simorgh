@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
 
 const H1 = styled.h1`
@@ -11,12 +12,10 @@ const H1 = styled.h1`
   }
 `;
 
-const TopicTitle = ({ children }) => {
-  return (
-    <H1 id="content" tabIndex="-1">
-      {children}
-    </H1>
-  );
-};
+const TopicTitle = ({ children }) => (
+  <H1 id="content" tabIndex="-1">
+    {children}
+  </H1>
+);
 
 export default TopicTitle;

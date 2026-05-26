@@ -1,4 +1,4 @@
-import { bbcDomains, advertisingServiceCountryDomains } from './domainLists';
+import { advertisingServiceCountryDomains, bbcDomains } from './domainLists';
 
 const advertisingDirectives = {
   frameSrc: [

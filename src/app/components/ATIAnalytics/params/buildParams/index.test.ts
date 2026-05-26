@@ -1,6 +1,6 @@
 import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
-import { RequestContextProps } from '../../../../contexts/RequestContext';
-import { ServiceConfig } from '../../../../models/types/serviceConfig';
+import type { RequestContextProps } from '../../../../contexts/RequestContext';
+import type { ServiceConfig } from '../../../../models/types/serviceConfig';
 import { buildPageATIParams } from '.';
 
 jest
@@ -94,8 +94,7 @@ describe('implementation of buildPageATIParams', () => {
       ldpThingLabels: 'Refugees%20and%20asylum%20seekers~Myanmar~Military',
       nationsProducer: null,
       pageIdentifier: 'burmese.articles.c9wxnzvwp3mo.page',
-      pageTitle:
-        'ဇူလိုင်လ ၁၃ ရက်ထိပ်တန်းသတင်းများ- ဒုက္ခသည်စခန်းဗုံးကြဲခံရလို့ ထိုင်းကိုထွက်ပြေးသူတွေဆက်ရှိ ',
+      pageTitle: 'ဇူလိုင်လ ၁၃ ရက်ထိပ်တန်းသတင်းများ- ဒုက္ခသည်စခန်းဗုံးကြဲခံရလို့ ထိုင်းကိုထွက်ပြေးသူတွေဆက်ရှိ ',
       timePublished: '2023-07-13T05:03:56.214Z',
       timeUpdated: '2023-07-13T08:35:47.388Z',
     };
@@ -116,8 +115,7 @@ describe('implementation of buildPageATIParams', () => {
       libraryVersion: 'simorgh',
       nationsProducer: null,
       pageIdentifier: 'burmese.articles.c9wxnzvwp3mo.page',
-      pageTitle:
-        'ဇူလိုင်လ ၁၃ ရက်ထိပ်တန်းသတင်းများ- ဒုက္ခသည်စခန်းဗုံးကြဲခံရလို့ ထိုင်းကိုထွက်ပြေးသူတွေဆက်ရှိ ',
+      pageTitle: 'ဇူလိုင်လ ၁၃ ရက်ထိပ်တန်းသတင်းများ- ဒုက္ခသည်စခန်းဗုံးကြဲခံရလို့ ထိုင်းကိုထွက်ပြေးသူတွေဆက်ရှိ ',
       platform: 'canonical',
       producerId: 'atiAnalyticsProducerId',
       producerName: 'atiAnalyticsProducerName',

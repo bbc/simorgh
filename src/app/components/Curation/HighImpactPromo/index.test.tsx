@@ -2,9 +2,9 @@ import {
   render,
   screen,
 } from '#app/components/react-testing-library-with-providers';
+import type { Services } from '#app/models/types/global';
 import homePageFixture from '#data/ws/homePage/index.json';
-import { Services } from '#app/models/types/global';
-import HighImpactPromo, { HighImpactPromoProps } from '.';
+import HighImpactPromo, { type HighImpactPromoProps } from '.';
 
 const { summaries } = homePageFixture.data.curations[0];
 const promoFixtureData = summaries?.[0] as HighImpactPromoProps;

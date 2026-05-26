@@ -1,18 +1,18 @@
-import { CollapsibleNavigationSection } from '#app/components/CollapsibleNavigation/types';
-import { PromotionalBannerConfig } from '#app/components/PromotionalBanner/index.types';
-import {
+import type { CollapsibleNavigationSection } from '#app/components/CollapsibleNavigation/types';
+import type { PromotionalBannerConfig } from '#app/components/PromotionalBanner/index.types';
+import type {
+  ChineseService,
+  Direction,
+  Navigation,
+  SerbianService,
   Services,
   ServicesWithNoVariants,
-  SerbianService,
-  ChineseService,
-  ZhongwenService,
   UkrainianService,
   UzbekService,
-  Direction,
   Variants,
-  Navigation,
+  ZhongwenService,
 } from './global';
-import { Translations } from './translations';
+import type { Translations } from './translations';
 
 export type DefaultServiceConfig = {
   [_key in ServicesWithNoVariants['variant']]: ServiceConfig;

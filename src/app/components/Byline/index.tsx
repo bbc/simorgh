@@ -1,5 +1,6 @@
-/* eslint-disable jsx-a11y/aria-role */
-import { Children, use, PropsWithChildren } from 'react';
+import { Children, type PropsWithChildren, use } from 'react';
+
+import type { OptimoBylineBlock } from '#app/models/types/optimo';
 import {
   ARTICLE_PAGE,
   LIVE_PAGE,
@@ -8,16 +9,14 @@ import {
   PHOTO_GALLERY_PAGE,
   STORY_PAGE,
 } from '#app/routes/utils/pageTypes';
-import { OptimoBylineBlock } from '#app/models/types/optimo';
-// eslint-disable-next-line import/no-relative-packages
-import { PostContributor as LivePageContributor } from '../../../../ws-nextjs-app/pages/[service]/live/[id]/Post/types';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import type { PostContributor as LivePageContributor } from '../../../../ws-nextjs-app/pages/[service]/live/[id]/Post/types';
 import { RequestContext } from '../../contexts/RequestContext';
+import { ServiceContext } from '../../contexts/ServiceContext';
 import VisuallyHiddenText from '../VisuallyHiddenText';
-import BylineCss from './index.styles';
-import bylineExtractor from './utilities/bylineExtractor';
 import ArticleContributor from './ArticleContributor';
+import BylineCss from './index.styles';
 import PostContributor from './PostContributor';
+import bylineExtractor from './utilities/bylineExtractor';
 
 type BylineBlock =
   | OptimoBylineBlock['model']
@@ -92,7 +91,7 @@ const Byline = ({
           </li>
           {children &&
             Children.map(children, (child, index) => (
-              // eslint-disable-next-line react/no-array-index-key
+              // biome-ignore lint/suspicious/noArrayIndexKey: we want this
               <li key={index}>{child}</li>
             ))}
         </ul>

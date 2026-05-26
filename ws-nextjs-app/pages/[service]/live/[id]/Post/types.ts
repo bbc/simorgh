@@ -1,7 +1,7 @@
 import {
+  OptimoAltTextBlock,
   OptimoBlock,
   OptimoRawImageBlock,
-  OptimoAltTextBlock,
 } from '#models/types/optimo';
 
 interface Link {

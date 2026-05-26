@@ -156,4 +156,4 @@ const pidginLiveBillboard = {
   visualStyle: 'BANNER',
 };
 
-export { kyrgyzLiveBillboard, kyrgyzBillboard, pidginLiveBillboard };
+export { kyrgyzBillboard, kyrgyzLiveBillboard, pidginLiveBillboard };

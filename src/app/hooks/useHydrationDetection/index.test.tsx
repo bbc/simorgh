@@ -1,8 +1,9 @@
-import {
-  waitFor,
-  renderHook,
-} from '#app/components/react-testing-library-with-providers';
 import { renderHook as renderSSRHook } from '@testing-library/react-hooks/server';
+
+import {
+  renderHook,
+  waitFor,
+} from '#app/components/react-testing-library-with-providers';
 import useHydrationDetection from '.';
 
 describe('useHydrationDetection', () => {

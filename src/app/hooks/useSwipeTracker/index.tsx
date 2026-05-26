@@ -1,14 +1,15 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+// biome-ignore-all lint/suspicious/noExplicitAny: we want this
 /* eslint-disable import/no-unresolved */
 /* eslint-disable react-hooks/rules-of-hooks */
 import { use, useCallback } from 'react';
+
 import { VIEW_EVENT } from '#app/lib/analyticsUtils/analytics.const';
 import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
-import { EventTrackingData } from '#app/lib/analyticsUtils/types';
-import useTrackingToggle from '../useTrackingToggle';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import type { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import { EventTrackingContext } from '../../contexts/EventTrackingContext';
+import { ServiceContext } from '../../contexts/ServiceContext';
 import dispatchTrackingRequests from '../../lib/analyticsUtils/dispatchTrackingRequests';
+import useTrackingToggle from '../useTrackingToggle';
 
 const getComponentSwipeTracker = (eventTrackingData?: EventTrackingData) => {
   const { service } = use(ServiceContext);

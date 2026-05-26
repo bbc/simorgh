@@ -1,7 +1,7 @@
 import { render } from '../../../components/react-testing-library-with-providers';
-import { renderRadioSchedule } from './testHelpers/helper';
-import * as viewTracking from '../../../hooks/useViewTracker';
 import * as clickTracking from '../../../hooks/useClickTrackerHandler';
+import * as viewTracking from '../../../hooks/useViewTracker';
+import { renderRadioSchedule } from './testHelpers/helper';
 
 describe('RadioSchedule', () => {
   it('should render ltr radio schedules correctly', () => {

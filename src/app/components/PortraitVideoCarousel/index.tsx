@@ -1,23 +1,25 @@
 import { use, useRef, useState } from 'react';
+
 import { createPortal } from 'react-dom';
+
 import { RequestContext } from '#app/contexts/RequestContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import useViewTracker from '#app/hooks/useViewTracker';
-import { EventTrackingData } from '#app/lib/analyticsUtils/types';
+import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import useOptimizelyVariation, {
   ExperimentType,
 } from '#app/hooks/useOptimizelyVariation';
-import useHydrationDetection from '#app/hooks/useHydrationDetection';
-import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
-import styles from './index.styles';
-import PortraitVideoModal from '../PortraitVideoModal';
-import { BumpLoader } from '../MediaLoader';
-import PortraitVideoPromo from './PortraitVideoPromo';
-import PortraitCarouselNavigation from './PortraitVideoCarouselNavigation';
-import Heading from '../Heading';
-import PortraitVideoNoJs from './PortraitVideoNoJs';
-import { PortraitClipMediaBlock } from '../MediaLoader/types';
+import useViewTracker from '#app/hooks/useViewTracker';
+import type { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import Subheading from '../Curation/Subhead';
+import Heading from '../Heading';
+import { BumpLoader } from '../MediaLoader';
+import type { PortraitClipMediaBlock } from '../MediaLoader/types';
+import PortraitVideoModal from '../PortraitVideoModal';
+import styles from './index.styles';
+import PortraitCarouselNavigation from './PortraitVideoCarouselNavigation';
+import PortraitVideoNoJs from './PortraitVideoNoJs';
+import PortraitVideoPromo from './PortraitVideoPromo';
 
 type PortraitVideoCarouselProps = {
   title?: string;

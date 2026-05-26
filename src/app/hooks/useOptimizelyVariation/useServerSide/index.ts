@@ -1,5 +1,7 @@
-import { OptimizelyContext } from '@optimizely/react-sdk';
 import { useContext } from 'react';
+
+import { OptimizelyContext } from '@optimizely/react-sdk';
+
 import { RequestContext } from '#app/contexts/RequestContext';
 import activateExperiment from '../activateExperiment';
 

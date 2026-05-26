@@ -1,15 +1,15 @@
-import defaultToggles from '#lib/config/toggles';
-import constructTogglesEndpoint from '#contexts/ToggleContext/utils/constructTogglesEndpoint';
-import nodeLogger from '#lib/logger.node';
-import {
-  CONFIG_REQUEST_RECEIVED,
-  CONFIG_FETCH_ERROR,
-  CONFIG_ERROR,
-  TOGGLE_API_RESPONSE_TIME,
-  CONFIG_RESPONSE_EMPTY_ERROR,
-} from '#lib/logger.const';
-import onClient from '#lib/utilities/onClient';
 import getOriginContext from '#contexts/RequestContext/getOriginContext';
+import constructTogglesEndpoint from '#contexts/ToggleContext/utils/constructTogglesEndpoint';
+import defaultToggles from '#lib/config/toggles';
+import {
+  CONFIG_ERROR,
+  CONFIG_FETCH_ERROR,
+  CONFIG_REQUEST_RECEIVED,
+  CONFIG_RESPONSE_EMPTY_ERROR,
+  TOGGLE_API_RESPONSE_TIME,
+} from '#lib/logger.const';
+import nodeLogger from '#lib/logger.node';
+import onClient from '#lib/utilities/onClient';
 import { getEnvConfig } from '../getEnvConfig';
 
 const logger = nodeLogger(__filename);
@@ -46,7 +46,7 @@ const getToggles = async (service, cache) => {
   const { origin } = getOriginContext();
   const url = constructTogglesEndpoint(service, origin);
 
-  const cachedResponse = cache && cache.get(url);
+  const cachedResponse = cache?.get(url);
 
   if (cachedResponse === '') {
     logger.error(CONFIG_RESPONSE_EMPTY_ERROR, {

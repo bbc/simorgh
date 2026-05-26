@@ -1,35 +1,30 @@
-/* eslint-disable jsx-a11y/aria-role */
+// biome-ignore-all lint/a11y/useValidAriaRole: we want this
 import { use } from 'react';
+
 import { ServiceContext } from '../../../contexts/ServiceContext';
-import BylineCss from './index.styles';
-import Text from '../../Text';
 import Image from '../../Image';
+import { LeftChevron, RightChevron } from '../../icons';
+import Text from '../../Text';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
-import { RightChevron, LeftChevron } from '../../icons';
+import BylineCss from './index.styles';
 
-const Comma = () => {
-  return <span aria-hidden="true" css={BylineCss.comma} />;
-};
+const Comma = () => <span aria-hidden="true" css={BylineCss.comma} />;
 
-const And = ({ andTranslation }) => {
-  return (
-    <span aria-hidden="true">
-      <Text css={BylineCss.and}>{` ${andTranslation} `}</Text>
-    </span>
-  );
-};
+const And = ({ andTranslation }) => (
+  <span aria-hidden="true">
+    <Text css={BylineCss.and}>{` ${andTranslation} `}</Text>
+  </span>
+);
 
-const AuthorImage = ({ authorImage }) => {
-  return (
-    <Image
-      css={BylineCss.imageSrc}
-      src={authorImage}
-      alt=""
-      placeholder={false}
-      aspectRatio={[1, 1]}
-    />
-  );
-};
+const AuthorImage = ({ authorImage }) => (
+  <Image
+    css={BylineCss.imageSrc}
+    src={authorImage}
+    alt=""
+    placeholder={false}
+    aspectRatio={[1, 1]}
+  />
+);
 
 const AuthorTopicUrl = ({
   author,
@@ -37,93 +32,79 @@ const AuthorTopicUrl = ({
   authorTopicUrl,
   isSingleContributor,
   isRtl,
-}) => {
-  return (
-    <>
-      <VisuallyHiddenText>{`${author}, `}</VisuallyHiddenText>
-      <a
-        css={[
-          BylineCss.link,
-          isSingleContributor
-            ? BylineCss.linkSingleContributor
-            : BylineCss.linkMultipleContributor,
-        ]}
-        href={authorTopicUrl}
-        className="focusIndicatorReducedWidth"
-      >
-        <Text
-          className="byline-link"
-          size="bodyCopy"
-          fontVariant="sansBold"
-          css={[
-            BylineCss.author,
-            isSingleContributor && BylineCss.authorSingleContributor,
-          ]}
-        >
-          {authorName}
-        </Text>
-        {isSingleContributor &&
-          (isRtl ? (
-            <LeftChevron
-              className="byline-link"
-              css={BylineCss.authorChevron}
-            />
-          ) : (
-            <RightChevron
-              className="byline-link"
-              css={BylineCss.authorChevron}
-            />
-          ))}
-      </a>
-    </>
-  );
-};
-
-const AuthorName = ({ author, authorName, isSingleContributor }) => {
-  return (
-    <span role="text">
-      <VisuallyHiddenText>{`${author}, `}</VisuallyHiddenText>
+}) => (
+  <>
+    <VisuallyHiddenText>{`${author}, `}</VisuallyHiddenText>
+    <a
+      css={[
+        BylineCss.link,
+        isSingleContributor
+          ? BylineCss.linkSingleContributor
+          : BylineCss.linkMultipleContributor,
+      ]}
+      href={authorTopicUrl}
+      className="focusIndicatorReducedWidth"
+    >
       <Text
+        className="byline-link"
+        size="bodyCopy"
+        fontVariant="sansBold"
         css={[
           BylineCss.author,
           isSingleContributor && BylineCss.authorSingleContributor,
         ]}
-        fontVariant="sansBold"
-        size="bodyCopy"
       >
         {authorName}
       </Text>
-    </span>
-  );
-};
+      {isSingleContributor &&
+        (isRtl ? (
+          <LeftChevron className="byline-link" css={BylineCss.authorChevron} />
+        ) : (
+          <RightChevron className="byline-link" css={BylineCss.authorChevron} />
+        ))}
+    </a>
+  </>
+);
 
-const AuthorRole = ({ jobRole, isSingleContributor, role }) => {
-  return (
-    <span role="text">
-      <VisuallyHiddenText>{`${role}, `} </VisuallyHiddenText>
-      <Text
-        css={BylineCss.jobRole}
-        {...(isSingleContributor ? { size: 'brevier' } : { size: 'bodyCopy' })}
-      >
-        {jobRole}
-      </Text>
-    </span>
-  );
-};
+const AuthorName = ({ author, authorName, isSingleContributor }) => (
+  <span role="text">
+    <VisuallyHiddenText>{`${author}, `}</VisuallyHiddenText>
+    <Text
+      css={[
+        BylineCss.author,
+        isSingleContributor && BylineCss.authorSingleContributor,
+      ]}
+      fontVariant="sansBold"
+      size="bodyCopy"
+    >
+      {authorName}
+    </Text>
+  </span>
+);
 
-const AuthorLocation = ({ location, reportingFrom, isSingleContributor }) => {
-  return (
-    <span role="text">
-      <VisuallyHiddenText>{`${reportingFrom}, `} </VisuallyHiddenText>
-      <Text
-        css={[BylineCss.locationText]}
-        {...(isSingleContributor ? { size: 'brevier' } : { size: 'bodyCopy' })}
-      >
-        {location}
-      </Text>
-    </span>
-  );
-};
+const AuthorRole = ({ jobRole, isSingleContributor, role }) => (
+  <span role="text">
+    <VisuallyHiddenText>{`${role}, `} </VisuallyHiddenText>
+    <Text
+      css={BylineCss.jobRole}
+      {...(isSingleContributor ? { size: 'brevier' } : { size: 'bodyCopy' })}
+    >
+      {jobRole}
+    </Text>
+  </span>
+);
+
+const AuthorLocation = ({ location, reportingFrom, isSingleContributor }) => (
+  <span role="text">
+    <VisuallyHiddenText>{`${reportingFrom}, `} </VisuallyHiddenText>
+    <Text
+      css={[BylineCss.locationText]}
+      {...(isSingleContributor ? { size: 'brevier' } : { size: 'bodyCopy' })}
+    >
+      {location}
+    </Text>
+  </span>
+);
 
 const ArticleContributors = ({ contributorValues, isSingleContributor }) => {
   const { translations, dir } = use(ServiceContext);
@@ -142,9 +123,8 @@ const ArticleContributors = ({ contributorValues, isSingleContributor }) => {
 
   const lastContributorIndex = contributorValues.length - 1;
 
-  const isLastContributorNameOnly = (index, jobRole, location) => {
-    return index === lastContributorIndex && !jobRole && !location;
-  };
+  const isLastContributorNameOnly = (index, jobRole, location) =>
+    index === lastContributorIndex && !jobRole && !location;
 
   return (
     <>

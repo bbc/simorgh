@@ -2,9 +2,9 @@ import {
   act,
   render,
 } from '#app/components/react-testing-library-with-providers';
-import SuccessScreen from '.';
 import * as FormContext from '../FormContext';
 import { ContextProps } from '../FormContext';
+import SuccessScreen from '.';
 
 jest.mock('next/router', () => ({
   useRouter: () => ({ query: { id: 'u1234' } }),
@@ -28,15 +28,15 @@ describe('SuccessScreen', () => {
   });
 
   it('Should have a h1', async () => {
-    const { container } = await act(() => {
-      return render(
+    const { container } = await act(() =>
+      render(
         <SuccessScreen
           title={MOCK_TITLE}
           replyEmailAddress={MOCK_EMAIL}
           retentionPeriod={MOCK_RETENTION_PERIOD}
         />,
-      );
-    });
+      ),
+    );
     const h1 = container.querySelector('h1');
 
     expect(h1?.innerHTML).toBe('Message sent');
@@ -50,8 +50,8 @@ describe('SuccessScreen', () => {
         }) as unknown as ContextProps,
     );
 
-    const { container } = await act(() => {
-      return render(
+    const { container } = await act(() =>
+      render(
         <FormContext.FormContextProvider fields={[]}>
           <SuccessScreen
             title={MOCK_TITLE}
@@ -59,22 +59,22 @@ describe('SuccessScreen', () => {
             retentionPeriod={MOCK_RETENTION_PERIOD}
           />
         </FormContext.FormContextProvider>,
-      );
-    });
+      ),
+    );
 
     expect(container.innerHTML).toContain(`TestSubmissionID`);
   });
 
   it('Should have a retention policy if a retention period is provided', async () => {
-    const { container } = await act(() => {
-      return render(
+    const { container } = await act(() =>
+      render(
         <SuccessScreen
           title={MOCK_TITLE}
           replyEmailAddress={MOCK_EMAIL}
           retentionPeriod={MOCK_RETENTION_PERIOD}
         />,
-      );
-    });
+      ),
+    );
 
     expect(container.innerHTML).toContain(
       `We'll keep your submission for up to 270 days – and if we don't use it we'll then delete it and any other information you sent us.`,
@@ -82,15 +82,15 @@ describe('SuccessScreen', () => {
   });
 
   it('Should not have a retention policy if retention period is not provided', async () => {
-    const { container } = await act(() => {
-      return render(
+    const { container } = await act(() =>
+      render(
         <SuccessScreen
           title={MOCK_TITLE}
           replyEmailAddress={MOCK_EMAIL}
           retentionPeriod=""
         />,
-      );
-    });
+      ),
+    );
 
     expect(container.innerHTML).not.toContain(
       `We'll keep your submission for up to 270 days – and if we don't use it we'll then delete it and any other information you sent us.`,
@@ -98,15 +98,15 @@ describe('SuccessScreen', () => {
   });
 
   it('Should have an clause for removal services if reply email address is provided', async () => {
-    const { container } = await act(() => {
-      return render(
+    const { container } = await act(() =>
+      render(
         <SuccessScreen
           title={MOCK_TITLE}
           replyEmailAddress={MOCK_EMAIL}
           retentionPeriod={MOCK_RETENTION_PERIOD}
         />,
-      );
-    });
+      ),
+    );
 
     const emailAnchor = container.querySelector(
       'a[href="mailto:test@bbc.co.uk"]',
@@ -120,15 +120,15 @@ describe('SuccessScreen', () => {
   });
 
   it('Should not have clause for removal services if reply email addres is not provided', async () => {
-    const { container } = await act(() => {
-      return render(
+    const { container } = await act(() =>
+      render(
         <SuccessScreen
           title={MOCK_TITLE}
           replyEmailAddress=""
           retentionPeriod={MOCK_RETENTION_PERIOD}
         />,
-      );
-    });
+      ),
+    );
 
     const emailAnchor = container.querySelector(
       'a[href="mailto:test@bbc.co.uk"]',
@@ -142,15 +142,15 @@ describe('SuccessScreen', () => {
   });
 
   it('Should have a privacy policy link', async () => {
-    const { container } = await act(() => {
-      return render(
+    const { container } = await act(() =>
+      render(
         <SuccessScreen
           title={MOCK_TITLE}
           replyEmailAddress={MOCK_EMAIL}
           retentionPeriod={MOCK_RETENTION_PERIOD}
         />,
-      );
-    });
+      ),
+    );
 
     const policyAnchor = container.querySelector(
       'a[href="https://www.bbc.com/privacy/"]',

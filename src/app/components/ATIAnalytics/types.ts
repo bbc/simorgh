@@ -1,7 +1,6 @@
-/* eslint-disable camelcase */
-import { PageTypes, Platforms, Services } from '../../models/types/global';
-import { RequestContextProps } from '../../contexts/RequestContext';
-import { ServiceConfig } from '../../models/types/serviceConfig';
+import type { RequestContextProps } from '../../contexts/RequestContext';
+import type { PageTypes, Platforms, Services } from '../../models/types/global';
+import type { ServiceConfig } from '../../models/types/serviceConfig';
 
 export interface AMPAnalyticsData {
   transport: {
@@ -41,7 +40,6 @@ export interface PageData {
     analyticsLabels?: {
       counterName?: string;
       contentId?: string;
-      // eslint-disable-next-line camelcase
       nations_producer?: string;
       pageIdentifier?: string;
       pageTitle?: string;

@@ -1,6 +1,6 @@
+import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
 import getToggleDefinitions from '#app/lib/utilities/getToggleDefinition';
 import isLocal from '#app/lib/utilities/isLocal';
-import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
 import fetchIdctaConfig from '../fetchIdctaConfig';
 import getIdctaConfig from '.';
 

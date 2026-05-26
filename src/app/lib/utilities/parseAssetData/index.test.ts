@@ -1,13 +1,14 @@
 import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
+
 import { articleDataNews } from '#pages/ArticlePage/fixtureData';
 import {
-  getHeadline,
-  getFirstPublished,
-  getLastPublished,
   getAboutTags,
   getArticleSection,
-  getMentions,
+  getFirstPublished,
+  getHeadline,
   getLang,
+  getLastPublished,
+  getMentions,
   getSummary,
 } from '.';
 

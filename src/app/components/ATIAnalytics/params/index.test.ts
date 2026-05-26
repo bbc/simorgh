@@ -1,15 +1,14 @@
-/* eslint-disable no-console */
+import type { RequestContextProps } from '../../../contexts/RequestContext';
+import type { ServiceConfig } from '../../../models/types/serviceConfig';
 import {
   ARTICLE_PAGE,
+  HOME_PAGE,
+  MEDIA_ARTICLE_PAGE,
   MEDIA_ASSET_PAGE,
   PHOTO_GALLERY_PAGE,
-  MEDIA_ARTICLE_PAGE,
-  HOME_PAGE,
 } from '../../../routes/utils/pageTypes';
+import type { ATIData } from '../types';
 import buildReverbParams from '.';
-import { RequestContextProps } from '../../../contexts/RequestContext';
-import { ServiceConfig } from '../../../models/types/serviceConfig';
-import { ATIData } from '../types';
 
 jest
   .spyOn(document, 'referrer', 'get')

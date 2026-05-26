@@ -1,6 +1,7 @@
 import { screen } from '@testing-library/react';
+
 import { render } from '#app/components/react-testing-library-with-providers';
-import { IdctaConfig } from '#app/models/types/account';
+import type { IdctaConfig } from '#app/models/types/account';
 import AccountHeader from '.';
 
 jest.mock('#hooks/useHydrationDetection', () => ({

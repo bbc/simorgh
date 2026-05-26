@@ -1,8 +1,7 @@
 import { FieldData, FileData, InvalidMessageCodes } from '../../types';
 
-const wasPreviouslyInvalidCheck = (wasInvalid: boolean, isValid: boolean) => {
-  return wasInvalid || !isValid;
-};
+const wasPreviouslyInvalidCheck = (wasInvalid: boolean, isValid: boolean) =>
+  wasInvalid || !isValid;
 
 const isStringEmpty = (str: string) =>
   str == null || str.replaceAll(/\s/g, '').length <= 0;

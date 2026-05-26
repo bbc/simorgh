@@ -1,13 +1,15 @@
 import { use } from 'react';
+
 import styled from '@emotion/styled';
-import pathOr from 'ramda/src/pathOr';
 import moment from 'moment';
-import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
-import detokenise from '#psammead/psammead-detokeniser/src';
+import pathOr from 'ramda/src/pathOr';
+
 import LiveLabel from '#app/components/LiveLabel';
-import { Link } from '#psammead/psammead-story-promo/src';
-import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
+import detokenise from '#psammead/psammead-detokeniser/src';
+import { Link } from '#psammead/psammead-story-promo/src';
+import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import durationDictionary, { programStateConfig } from '../utilities';
@@ -114,7 +116,7 @@ const ScheduleItemHeader = ({
 
   const content = (
     // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
-    // eslint-disable-next-line jsx-a11y/aria-role
+    // biome-ignore lint/a11y/useValidAriaRole: we want this
     <span role="text" id={`scheduleItem-${id}`}>
       {/* VisuallyHiddenText outside of the Live Label is only present if the state is not live */}
       {listenLabel && (

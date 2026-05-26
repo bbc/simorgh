@@ -1,7 +1,7 @@
 import isLive from '#app/lib/utilities/isLive';
 import getAuthHeaders from './getAuthHeaders';
-import type { ActivityType } from './uasUtility';
 import { refreshTokensIfExpired } from './tokenRefresh/tokenManager';
+import type { ActivityType } from './uasUtility';
 
 export type UasMethod = 'POST' | 'DELETE' | 'GET';
 

@@ -1,21 +1,21 @@
 // import { BREAKPOINT_VIEWPORTS } from '@bbc/web-gel-foundations';
 // import { INITIAL_VIEWPORTS } from 'storybook/viewport';
 import fixtureData from '#data/afrique/live/c7gk1vjglxn1t.json';
+import HeadToHeadV2 from '.';
+import metadata from './metadata.json';
+import readme from './README.md';
+import abandonedEventData from './static-data/event/transformed/abandoned.json';
 import cancelledEventData from './static-data/event/transformed/cancelled.json';
 import postponedEventData from './static-data/event/transformed/postponed.json';
-import abandonedEventData from './static-data/event/transformed/abandoned.json';
-import suspendedEventData from './static-data/event/transformed/suspended.json';
 import { preEventData } from './static-data/event/transformed/pre-event/index';
+import suspendedEventData from './static-data/event/transformed/suspended.json';
+import venuesData from './static-data/premier-league-venues.json';
 import {
   HeadToHeadV2Component,
   HeadToHeadV2ConciseComponent,
 } from './storybook/helpers/base-component';
-import readme from './README.md';
-import metadata from './metadata.json';
-import type { HeadToHeadV2Data } from './types';
-import HeadToHeadV2 from '.';
 import { SHORT_NAMES } from './storybook/helpers/short-name-map';
-import venuesData from './static-data/premier-league-venues.json';
+import type { HeadToHeadV2Data } from './types';
 
 const { venues } = venuesData;
 

@@ -1,6 +1,6 @@
-import { Post } from '#nextjs/pages/[service]/live/[id]/Post/types';
-import { samplePost, twitterSamplePost, videoSamplePost } from './fixtures';
+import type { Post } from '#nextjs/pages/[service]/live/[id]/Post/types';
 import getLiveBlogPostingSchema from '.';
+import { samplePost, twitterSamplePost, videoSamplePost } from './fixtures';
 
 const posts = [samplePost, twitterSamplePost, videoSamplePost] as Post[];
 

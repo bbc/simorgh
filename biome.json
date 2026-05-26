@@ -1,0 +1,187 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.4.15/schema.json",
+  "files": {
+    "ignoreUnknown": true,
+    "includes": [
+      "**/*.{ts,tsx,js,jsx}",
+      "!**/tz",
+      "!**/colorthief.js",
+      "!dirAlias.js",
+      "!**/index.stories.jsx",
+      "!**/index.stories.tsx",
+      "!**/index.amp.stories.jsx",
+      "!!**/psammead-locales/moment",
+      "!!**/integration/**/*",
+      "!.storybook/**/*"
+    ]
+  },
+  "formatter": {
+    "indentStyle": "space",
+    "useEditorconfig": true
+  },
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
+  "linter": {
+    "rules": {
+      "a11y": {
+        "noInteractiveElementToNoninteractiveRole": "off",
+        "noNoninteractiveElementInteractions": "off",
+        "noNoninteractiveElementToInteractiveRole": "off",
+        "noRedundantRoles": "off",
+        "noStaticElementInteractions": "error",
+        "noSvgWithoutTitle": "off",
+        "useAriaPropsForRole": "off",
+        "useFocusableInteractive": "off",
+        "useKeyWithClickEvents": "error",
+        "useSemanticElements": "off",
+        "useValidAriaValues": "off"
+      },
+      "complexity": {
+        "noImplicitCoercions": "off",
+        "noUselessCatch": "off",
+        "noUselessCatchBinding": "off",
+        "useLiteralKeys": "off",
+        "useMaxParams": "off"
+      },
+      "correctness": {
+        "noNodejsModules": "off",
+        "noReactPropAssignments": "error",
+        "noRestrictedElements": "off",
+        "noUndeclaredDependencies": "off",
+        "noUnusedPrivateClassMembers": "off",
+        "noUnusedVariables": "error",
+        "useExhaustiveDependencies": "off",
+        "useIsNan": "off",
+        "useJsxKeyInIterable": "off"
+      },
+      "nursery": {
+        "noForIn": "error",
+        "noLoopFunc": "error",
+        "useImportsFirst": "error",
+        "useThisInClassMethods": "error",
+        "noUnknownAttribute": {
+          "level": "error",
+          "options": {
+            "ignore": [
+              "css",
+              "amp-boilerplate",
+              "amp-custom",
+              "custom-element",
+              "custom-template",
+              "fallback",
+              "hrefLang",
+              "amp-access-hide",
+              "amp-access"
+            ]
+          }
+        }
+      },
+      "performance": {
+        "noImgElement": "off"
+      },
+      "style": {
+        "noDefaultExport": "off",
+        "noParameterAssign": "error",
+        "noJsxLiterals": "off",
+        "noNegationElse": "off",
+        "noRestrictedGlobals": "error",
+        "useBlockStatements": "off",
+        "useConsistentBuiltinInstantiation": "off",
+        "useExportsLast": "off",
+        "useImportType": "off"
+      },
+      "suspicious": {
+        "noAlert": "error",
+        "noConsole": {
+          "level": "error",
+          "options": {
+            "allow": ["assert", "error", "info", "warn"]
+          }
+        },
+        "noDocumentImportInPage": "off",
+        "noDuplicateTestHooks": "off",
+        "noExportsInTest": "off",
+        "noImplicitAnyLet": "off",
+        "useAwait": "off",
+        "useIterableCallbackReturn": {
+          "level": "error",
+          "options": {
+            "checkForEach": false
+          }
+        }
+      }
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "arrowParentheses": "asNeeded"
+    },
+    "globals": [
+      "it",
+      "describe",
+      "expect",
+      "jest",
+      "before",
+      "beforeAll",
+      "beforeEach",
+      "after",
+      "afterAll",
+      "afterEach",
+      "Cypress",
+      "cy",
+      "service",
+      "test"
+    ]
+  },
+  "html": {
+    "formatter": {
+      "indentScriptAndStyle": false,
+      "selfCloseVoidElements": "always"
+    }
+  },
+  "overrides": [
+    {
+      "includes": [
+        "*/cypress/**/*.js",
+        "*/cypress/**/*.ts",
+        "*.cy.js",
+        "*.cy.ts"
+      ],
+      "linter": {
+        "rules": {
+          "suspicious": {
+            "noUnusedExpressions": "off"
+          },
+          "style": {
+            "noDefaultExport": "off"
+          }
+        }
+      }
+    }
+  ],
+  "assist": {
+    "enabled": true,
+    "actions": {
+      "source": {
+        "organizeImports": {
+          "level": "on",
+          "options": {
+            "groups": [
+              [":NODE:", "react", "react/**", "next", "next/**"],
+              ":BLANK_LINE:",
+              [":PACKAGE:", "!@bbc/**"],
+              ":BLANK_LINE:",
+              "@bbc/**",
+              ":BLANK_LINE:",
+              [":ALIAS:", ":PATH:"]
+            ]
+          }
+        }
+      }
+    }
+  }
+}

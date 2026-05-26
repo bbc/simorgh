@@ -1,9 +1,11 @@
-import { Fragment, PropsWithChildren, useState, use } from 'react';
+import { Fragment, type PropsWithChildren, use, useState } from 'react';
+
 import { Global } from '@emotion/react';
 import { Helmet } from 'react-helmet';
-import styles from './index.styles';
+
 import { RequestContext } from '../../contexts/RequestContext';
 import { HOME_PAGE } from '../../routes/utils/pageTypes';
+import styles from './index.styles';
 
 export type ImageProps = {
   alt: string;

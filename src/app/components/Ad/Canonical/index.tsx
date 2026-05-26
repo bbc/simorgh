@@ -1,14 +1,16 @@
-import { useEffect, use } from 'react';
-import { Helmet } from 'react-helmet';
+import { use, useEffect } from 'react';
+
 import pathOr from 'ramda/src/pathOr';
+import { Helmet } from 'react-helmet';
+
 import useLocation from '#hooks/useLocation';
-import isLive from '../../../lib/utilities/isLive';
-import useOperaMiniDetection from '../../../hooks/useOperaMiniDetection';
 import { ServiceContext } from '../../../contexts/ServiceContext';
-import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
+import useOperaMiniDetection from '../../../hooks/useOperaMiniDetection';
+import isLive from '../../../lib/utilities/isLive';
+import { type AdProps, SLOT_TYPES } from '../types';
 import adStyles from '../utilities/adSlot.styles';
+import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
 import styles from './index.styles';
-import { AdProps, SLOT_TYPES } from '../types';
 
 const { LEADERBOARD } = SLOT_TYPES;
 

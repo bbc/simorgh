@@ -1,9 +1,10 @@
 import { use } from 'react';
+
 import Text from '#app/components/Text';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import fallbackTranslations from '../fallbackTranslations';
 import { InputProps } from '../types';
 import styles from './styles';
-import fallbackTranslations from '../fallbackTranslations';
 
 type Props = {
   id?: InputProps['id'];
@@ -32,6 +33,7 @@ export default ({
       className={className}
       htmlFor={forId}
       css={[styles.fieldLabel, useErrorTheme && styles.fieldLabelError]}
+      // biome-ignore lint/security/noDangerouslySetInnerHtml: we want this
       dangerouslySetInnerHTML={{
         __html: required ? labelText : `${labelText} (${optional})`,
       }}

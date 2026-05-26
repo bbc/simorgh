@@ -1,5 +1,6 @@
 import { useTheme } from '@emotion/react';
-import { Font, FontFace, FontName } from '#app/models/types/theming';
+
+import type { Font, FontFace, FontName } from '#app/models/types/theming';
 
 /**
  * Font Directories

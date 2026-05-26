@@ -1,11 +1,13 @@
 import { use } from 'react';
+
 import moment from 'moment-timezone';
 import pathOr from 'ramda/src/pathOr';
+
 import formatDuration from '#lib/utilities/formatDuration';
 import { getHeadline } from '#lib/utilities/getStoryPromoInfo';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
-import { isPgl, isMap } from '../utilities';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
+import { ServiceContext } from '../../../../contexts/ServiceContext';
+import { isMap, isPgl } from '../utilities';
 
 const LinkContents = ({ item, isInline = false, id }) => {
   const {
@@ -55,7 +57,7 @@ const LinkContents = ({ item, isInline = false, id }) => {
   return (
     // role="text" is required to correct a text splitting bug on iOS VoiceOver.
     // ID is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
-    // eslint-disable-next-line jsx-a11y/aria-role
+    // biome-ignore lint/a11y/useValidAriaRole: we want this
     <span role="text" id={id}>
       {mediaType && <VisuallyHiddenText>{`${mediaType}, `}</VisuallyHiddenText>}
       <span>{headline}</span>

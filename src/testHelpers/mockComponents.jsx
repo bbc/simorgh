@@ -1,6 +1,5 @@
 import { use } from 'react';
 
-// eslint-disable-next-line import/prefer-default-export
 export const ComponentUsingContext = ({ context }) => {
   const value = use(context);
   /* JSON.stringify returns functions as null, so for the case of the font
@@ -8,7 +7,7 @@ export const ComponentUsingContext = ({ context }) => {
      replace null with identify-able strings using the funciton names */
   return (
     <span>
-      {JSON.stringify(value, (key, val) =>
+      {JSON.stringify(value, (_key, val) =>
         typeof val === 'function' ? `*function - ${val.name}*` : val,
       )}
     </span>

@@ -1,4 +1,4 @@
-/* eslint-disable no-console */
+// biome-ignore-all lint/suspicious/noConsole: we want this
 import { JSDOM } from 'jsdom';
 
 const getManifestFile = async url => {

@@ -1,4 +1,4 @@
-import { getProviderFromSource, getIdFromSource } from './sourceHelpers';
+import { getIdFromSource, getProviderFromSource } from './sourceHelpers';
 
 describe('sourceHelpers', () => {
   const TWITTER_SOURCE =

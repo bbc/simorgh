@@ -1,4 +1,5 @@
-import { PropsWithChildren, use } from 'react';
+import { type PropsWithChildren, use } from 'react';
+
 import useToggle from '#app/hooks/useToggle';
 import { RequestContext } from '../../../contexts/RequestContext';
 import styles from './index.styles';
@@ -31,7 +32,7 @@ const EmbedHtml = ({ embeddableContent }: PropsWithChildren<Props>) => {
         isUSElectionBanner && styles.electionBannerOverrides,
       ]}
       suppressHydrationWarning
-      // eslint-disable-next-line react/no-danger
+      // biome-ignore lint/security/noDangerouslySetInnerHtml: we want this
       dangerouslySetInnerHTML={{ __html: embeddableContent }}
       data-testid="embed"
     />

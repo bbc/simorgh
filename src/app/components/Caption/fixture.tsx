@@ -1,5 +1,5 @@
+import type { OptimoBlock } from '#app/models/types/optimo';
 import { blockContainingText } from '#models/blocks';
-import { OptimoBlock } from '#app/models/types/optimo';
 
 const generateUUID = () => Math.random().toString(16).slice(2);
 

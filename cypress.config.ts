@@ -1,12 +1,16 @@
+// biome-ignore-all lint/suspicious/noConsole: we want this
 /* eslint-disable no-param-reassign */
-import { defineConfig } from 'cypress';
+
+import fs from 'node:fs';
+import path from 'node:path';
+
 import webpackPreprocessor from '@cypress/webpack-preprocessor';
-import fs from 'fs';
-import path from 'path';
-import MomentTimezoneInclude from './src/app/legacy/psammead/moment-timezone-include/src';
-import { webpackDirAlias } from './dirAlias';
-import { DefinePlugin } from 'webpack';
+import { defineConfig } from 'cypress';
 import dotenv from 'dotenv';
+import { DefinePlugin } from 'webpack';
+
+import { webpackDirAlias } from './dirAlias';
+import MomentTimezoneInclude from './src/app/legacy/psammead/moment-timezone-include/src';
 
 const appDirectory = fs.realpathSync(process.cwd());
 const resolvePath = (relativePath: string) =>
@@ -40,7 +44,6 @@ export default defineConfig({
       config.baseUrl = env.baseUrl;
 
       // Debugging console logs to see running config
-      /* eslint-disable no-console */
       console.log('\n\n\n\n\n');
       console.log('Cypress running config:');
       console.log('SMOKE:', config.env.SMOKE);
@@ -49,7 +52,6 @@ export default defineConfig({
       console.log('ONLY_SERVICE:', config.env.ONLY_SERVICE || '');
       console.log('SKIP_EU:', Boolean(config.env.SKIP_EU));
       console.log('\n\n\n\n\n');
-      /* eslint-enable no-console */
 
       const options = {
         webpackOptions: {

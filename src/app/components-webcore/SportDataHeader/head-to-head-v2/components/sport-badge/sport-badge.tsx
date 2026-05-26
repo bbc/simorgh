@@ -1,6 +1,6 @@
-import { getImage } from './badges-map';
 import styles from '../../index.styles';
 import type { BadgePlaceholderFallbackType, BadgeSize } from '../../types';
+import { getImage } from './badges-map';
 
 const getTestId = (id?: string): string => {
   const urnId =

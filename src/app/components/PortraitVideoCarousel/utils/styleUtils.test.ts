@@ -1,4 +1,5 @@
-import { Theme } from '@emotion/react';
+import type { Theme } from '@emotion/react';
+
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import {
   calculatePromoWidth,

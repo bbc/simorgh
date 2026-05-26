@@ -1,5 +1,5 @@
-import { OptimoBlock } from '#app/models/types/optimo';
-import { instagram, youtube, twitter } from './providerMarkup';
+import type { OptimoBlock } from '#app/models/types/optimo';
+import { instagram, twitter, youtube } from './providerMarkup';
 
 export interface CustomEmbedBlock {
   type: 'customEmbed';

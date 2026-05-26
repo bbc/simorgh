@@ -7,11 +7,12 @@ import {
   useRef,
   useState,
 } from 'react';
+
 import Heading from '#app/components/Heading';
 import Paragraph from '#app/components/Paragraph';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { StreamResponse } from '../Post/types';
 import Post from '../Post';
+import { StreamResponse } from '../Post/types';
 import styles from './styles';
 
 type Props = {
@@ -77,7 +78,7 @@ const Stream = ({
     return () => {
       firstPostObserver.disconnect();
     };
-  }, [setIsFirstPostVisible, applyPendingUpdate, streamData]);
+  }, [setIsFirstPostVisible, applyPendingUpdate]);
 
   if (!streamData) return null;
 

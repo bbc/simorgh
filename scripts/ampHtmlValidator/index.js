@@ -1,4 +1,4 @@
-/* eslint-disable no-console */
+// biome-ignore-all lint/suspicious/noConsole: we want this
 /* eslint-disable import/extensions */
 import checkManifest from './checkManifest/index.js';
 import { runValidator } from './validator/index.js';

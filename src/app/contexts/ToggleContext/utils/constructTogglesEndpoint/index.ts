@@ -1,5 +1,5 @@
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
-import { Services } from '#app/models/types/global';
+import type { Services } from '#app/models/types/global';
 
 export default (service: Services, origin: string | null) => {
   const requestOrigin = origin || 'https://www.test.bbc.com';

@@ -1,25 +1,26 @@
 import { use, useRef, useState } from 'react';
-import SkipLink from '#psammead/psammead-brand/src/SkipLink';
-import { RequestContext } from '#contexts/RequestContext';
-import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
+
+import AccountHeader from '#app/components/Account/AccountHeader';
 import ScriptLink from '#app/components/Header/ScriptLink';
+import LiteSiteSummary from '#app/components/LiteSiteSummary';
+import SERVICES_WITH_NEW_NAV from '#app/components/Navigation/config';
 import {
   ARTICLE_PAGE,
-  HOME_PAGE,
-  TOPIC_PAGE,
   ERROR_PAGE,
+  HOME_PAGE,
   LIVE_PAGE,
+  TOPIC_PAGE,
 } from '#app/routes/utils/pageTypes';
-import LiteSiteSummary from '#app/components/LiteSiteSummary';
+import { RequestContext } from '#contexts/RequestContext';
+import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
+import SkipLink from '#psammead/psammead-brand/src/SkipLink';
 import NewNavigationContainer from '#src/app/components/Navigation';
 import LegacyNavigationContainer from '#src/app/legacy/containers/Navigation';
-import AccountHeader from '#app/components/Account/AccountHeader';
-import SERVICES_WITH_NEW_NAV from '#app/components/Navigation/config';
 import { ServiceContext } from '../../../contexts/ServiceContext';
-import ConsentBanner from '../ConsentBanner';
 import BrandContainer from '../Brand';
-import NewLogoBanner from './NewLogoBanner';
+import ConsentBanner from '../ConsentBanner';
 import styles from './index.styles';
+import NewLogoBanner from './NewLogoBanner';
 
 const Header = ({
   brandRef,
@@ -47,6 +48,7 @@ const Header = ({
 
   // linkId={linkId || 'topPage'} is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
   return (
+    // biome-ignore lint/a11y/noStaticElementInteractions: we want this
     <div onBlur={handleBannerBlur}>
       {showConsentBanner && <ConsentBanner onDismissFocusRef={brandRef} />}
       <BrandContainer

@@ -106,7 +106,7 @@ export {
   ArabicLiveSVG,
   ArabicMostReadSVG,
   ArabicTopStoriesSVG,
+  HindiLiveSVG,
   HindiMostReadSVG,
   HindiTopStoriesSVG,
-  HindiLiveSVG,
 };

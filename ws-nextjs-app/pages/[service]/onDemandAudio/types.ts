@@ -1,12 +1,13 @@
+import { Component } from 'react';
+
 import { ATIData } from '#app/components/ATIAnalytics/types';
 import { ContentType } from '#app/components/ChartbeatAnalytics/types';
 import { PageTypes } from '#app/models/types/global';
 import {
-  OnDemandAudioBlock,
   EpisodeAvailability,
+  OnDemandAudioBlock,
 } from '#app/models/types/media';
 import { RadioScheduleData } from '#app/models/types/radioSchedule';
-import { Component } from 'react';
 
 export interface OnDemandAudioProps {
   pageData: {

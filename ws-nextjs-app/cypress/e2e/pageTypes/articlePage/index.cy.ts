@@ -1,67 +1,66 @@
 /* eslint-disable import/no-relative-packages */
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
+import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
 import runTestsForPage, {
   TestDataType,
 } from '../../../support/helpers/runTestsForPage';
-import testsForAllPages from '../../testsForAllPages';
-import testsForAllCanonicalPages from '../../testsForAllCanonicalPages';
-import testsForAllAMPPages from '../../testsForAllAMPPages';
-import canonicalAndAmpArticleTests from './tests';
-import ampArticleTests from './testsForAMPOnly';
-import canonicalArticleTests from './testsForCanonicalOnly';
-import liteArticleTests from './testsForLiteOnly';
-
+import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
 import {
-  assertContinueReadingButtonComponentClick,
-  assertContinueReadingButtonComponentView,
-} from '../../specialFeatures/atiAnalytics/assertions/continueReadingButton';
-import {
-  assertTopBarOJComponentClick,
-  assertTopBarOJComponentView,
-} from '../../specialFeatures/atiAnalytics/assertions/topBarOjs';
+  assertArticleLinksBlockComponentClick,
+  assertArticleLinksBlockComponentView,
+} from '../../specialFeatures/atiAnalytics/assertions/articleLinksBlock';
 import {
   assertArticleLiteSiteLinkComponentClick,
   assertArticleLiteSiteLinkComponentView,
 } from '../../specialFeatures/atiAnalytics/assertions/articleLiteSiteLink';
 import {
-  assertTopStoriesComponentClick,
-  assertTopStoriesComponentView,
-} from '../../specialFeatures/atiAnalytics/assertions/topStories';
+  assertContinueReadingButtonComponentClick,
+  assertContinueReadingButtonComponentView,
+} from '../../specialFeatures/atiAnalytics/assertions/continueReadingButton';
 import {
   assertFeaturesAnalysisComponentClick,
   assertFeaturesAnalysisComponentView,
 } from '../../specialFeatures/atiAnalytics/assertions/featuresAnalysis';
 import {
-  assertPodcastPromoComponentClick,
-  assertPodcastPromoComponentView,
-} from '../../specialFeatures/atiAnalytics/assertions/podcastPromo';
-import {
-  assertRelatedTopicsComponentClick,
-  assertRelatedTopicsComponentView,
-} from '../../specialFeatures/atiAnalytics/assertions/relatedTopics';
-import {
-  assertRelatedContentComponentClick,
-  assertRelatedContentComponentView,
-} from '../../specialFeatures/atiAnalytics/assertions/relatedContent';
+  assertLatestMediaComponentClick,
+  assertLatestMediaComponentView,
+} from '../../specialFeatures/atiAnalytics/assertions/latestMedia';
+import { assertLiteSiteSummaryComponentToMainSiteClick } from '../../specialFeatures/atiAnalytics/assertions/liteSiteSummary';
 import {
   assertMostReadComponentClick,
   assertMostReadComponentView,
 } from '../../specialFeatures/atiAnalytics/assertions/mostRead';
 import {
-  assertLatestMediaComponentClick,
-  assertLatestMediaComponentView,
-} from '../../specialFeatures/atiAnalytics/assertions/latestMedia';
+  assertPodcastPromoComponentClick,
+  assertPodcastPromoComponentView,
+} from '../../specialFeatures/atiAnalytics/assertions/podcastPromo';
+import {
+  assertRelatedContentComponentClick,
+  assertRelatedContentComponentView,
+} from '../../specialFeatures/atiAnalytics/assertions/relatedContent';
+import {
+  assertRelatedTopicsComponentClick,
+  assertRelatedTopicsComponentView,
+} from '../../specialFeatures/atiAnalytics/assertions/relatedTopics';
 import {
   assertSocialEmbedComponentClick,
   assertSocialEmbedComponentView,
 } from '../../specialFeatures/atiAnalytics/assertions/socialEmbed';
 import {
-  assertArticleLinksBlockComponentClick,
-  assertArticleLinksBlockComponentView,
-} from '../../specialFeatures/atiAnalytics/assertions/articleLinksBlock';
-import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
-import { assertLiteSiteSummaryComponentToMainSiteClick } from '../../specialFeatures/atiAnalytics/assertions/liteSiteSummary';
+  assertTopBarOJComponentClick,
+  assertTopBarOJComponentView,
+} from '../../specialFeatures/atiAnalytics/assertions/topBarOjs';
+import {
+  assertTopStoriesComponentClick,
+  assertTopStoriesComponentView,
+} from '../../specialFeatures/atiAnalytics/assertions/topStories';
+import testsForAllAMPPages from '../../testsForAllAMPPages';
+import testsForAllCanonicalPages from '../../testsForAllCanonicalPages';
+import testsForAllPages from '../../testsForAllPages';
+import canonicalAndAmpArticleTests from './tests';
+import ampArticleTests from './testsForAMPOnly';
+import canonicalArticleTests from './testsForCanonicalOnly';
+import liteArticleTests from './testsForLiteOnly';
 
 const canonicalTests = [
   testsForAllPages,
@@ -431,32 +430,26 @@ const canonicalTestSuites = Cypress.env('SMOKE')
   ? smokeCanonicalTestSuites
   : nonSmokeCanonicalTestSuites;
 
-const ampTestSuites = canonicalTestSuites.map(testSuite => {
-  return {
-    ...testSuite,
-    path: `${testSuite.path}.amp`,
-    tests: [...ampTests],
-  };
-});
+const ampTestSuites = canonicalTestSuites.map(testSuite => ({
+  ...testSuite,
+  path: `${testSuite.path}.amp`,
+  tests: [...ampTests],
+}));
 
 const liteTestSuites = canonicalTestSuites
   .filter(({ service }) => service !== 'news')
-  .map(testSuite => {
-    return {
-      ...testSuite,
-      path: `${testSuite.path}.lite`,
-      tests: [liteArticleTests],
-    };
-  });
-
-const atiAmpTestSuites = atiAnalyticsTestSuites.map(testSuite => {
-  return {
+  .map(testSuite => ({
     ...testSuite,
-    path: getPathWithSuffix({ path: testSuite.path, suffix: '.amp' }),
-    applicationType: 'amp',
-    tests: [assertPageView],
-  };
-});
+    path: `${testSuite.path}.lite`,
+    tests: [liteArticleTests],
+  }));
+
+const atiAmpTestSuites = atiAnalyticsTestSuites.map(testSuite => ({
+  ...testSuite,
+  path: getPathWithSuffix({ path: testSuite.path, suffix: '.amp' }),
+  applicationType: 'amp',
+  tests: [assertPageView],
+}));
 
 const atiLiteTestSuites = atiAnalyticsTestSuites
   .filter(({ path, service }) => path !== '/ws/languages' && service !== 'news')

@@ -1,21 +1,19 @@
-/* eslint-disable jsx-a11y/anchor-has-content */
+// biome-ignore-all lint/a11y/useAnchorContent: we want this
 import type { ReactNode } from 'react';
+import { type PropsWithChildren, use } from 'react';
 
-import { PropsWithChildren, use } from 'react';
 import pick from 'ramda/src/pick';
 import Lazyload from 'react-lazyload';
 
-import IMAGE from '../Image';
-import makeRelativeUrlPath from '../../lib/utilities/makeRelativeUrlPath';
-import useClickTrackerHandler from '../../hooks/useClickTrackerHandler';
 import { RequestContext } from '../../contexts/RequestContext';
-
+import useClickTrackerHandler from '../../hooks/useClickTrackerHandler';
+import makeRelativeUrlPath from '../../lib/utilities/makeRelativeUrlPath';
+import type { EventTrackingBlock } from '../../models/types/eventTracking';
+import IMAGE from '../Image';
 import FrostedGlassPanel from './FrostedGlassPanel';
-import withData from './withData';
-
 import styles from './styles';
-import { EventTrackingBlock } from '../../models/types/eventTracking';
-import { PromoProps } from './types';
+import type { PromoProps } from './types';
+import withData from './withData';
 
 const PANEL_OFFSET = 250;
 
@@ -85,7 +83,6 @@ const FrostedGlassPromo = ({
 
   // The ClickableArea component is an anchor ("a") element
   // Anchors cannot be self-closing under the HTML spec
-  /* eslint-disable react/self-closing-comp */
   return (
     <div css={styles.componentWrapper} data-testid={`frosted-promo-${index}`}>
       <a

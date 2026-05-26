@@ -1,27 +1,28 @@
+// biome-ignore-all format: formatting was messing up this file
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
-import fixture from '../../../../data/pidgin/topics/c95y35941vrt.json';
-import mundoFixture from '../../../../data/mundo/topics/c1en6xwmpkvt.json';
-import kyrgyzFixture from '../../../../data/kyrgyz/topics/cvpv9djp9qqt.json';
+import afriqueHomePage from '../../../../data/afrique/homePage/index.json';
+import dariHomePage from '../../../../data/dari/homePage/index.json';
 import kyrgyzHomePage from '../../../../data/kyrgyz/homePage/index.json';
 import { data as kyrgyzMostRead } from '../../../../data/kyrgyz/mostRead/index.json';
-import afriqueHomePage from '../../../../data/afrique/homePage/index.json';
-import portugueseHomePage from '../../../../data/portuguese/homePage/index.json';
-import dariHomePage from '../../../../data/dari/homePage/index.json';
+import kyrgyzFixture from '../../../../data/kyrgyz/topics/cvpv9djp9qqt.json';
+import mundoFixture from '../../../../data/mundo/topics/c1en6xwmpkvt.json';
 import pidginArticlePage from '../../../../data/pidgin/articles/cnd6yxmxvp2o.json';
-import { render } from '../react-testing-library-with-providers';
-import Curation from '.';
+import fixture from '../../../../data/pidgin/topics/c95y35941vrt.json';
+import portugueseHomePage from '../../../../data/portuguese/homePage/index.json';
+import * as clickTracking from '../../hooks/useClickTrackerHandler';
 import {
-  VISUAL_STYLE,
-  VISUAL_PROMINENCE,
   INTENT,
-  VisualStyle,
-  VisualProminence,
   Summary,
+  VISUAL_PROMINENCE,
+  VISUAL_STYLE,
+  VisualProminence,
+  VisualStyle,
 } from '../../models/types/curationData';
-import { MostReadData } from '../MostRead/types';
 import { RadioScheduleData } from '../../models/types/radioSchedule';
 import { MediaCollection, PortraitClipMediaBlock } from '../MediaLoader/types';
-import * as clickTracking from '../../hooks/useClickTrackerHandler';
+import { MostReadData } from '../MostRead/types';
+import { render } from '../react-testing-library-with-providers';
+import Curation from '.';
 
 jest.mock('../ThemeProvider');
 

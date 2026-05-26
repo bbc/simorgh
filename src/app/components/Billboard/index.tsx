@@ -1,16 +1,17 @@
 import { use } from 'react';
-import useViewTracker from '#app/hooks/useViewTracker';
+
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
-import { Summary } from '#app/models/types/curationData';
-import { EventTrackingData } from '#app/lib/analyticsUtils/types';
+import useViewTracker from '#app/hooks/useViewTracker';
+import type { EventTrackingData } from '#app/lib/analyticsUtils/types';
+import type { Summary } from '#app/models/types/curationData';
+import { ServiceContext } from '../../contexts/ServiceContext';
 import Heading from '../Heading';
-import MaskedImage from '../MaskedImage';
-import styles from './index.styles';
-import Text from '../Text';
 import LivePulse from '../LivePulse';
 import LiveText from '../LiveText';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import MaskedImage from '../MaskedImage';
+import Text from '../Text';
 import BillboardCurationGrid from './BillboardCurationGrid';
+import styles from './index.styles';
 
 interface BillboardProps {
   heading: string;

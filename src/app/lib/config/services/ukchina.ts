@@ -1,9 +1,10 @@
 import noAscendersOrDescenders from '../../../components/ThemeProvider/fontScripts/noAscOrDesc';
 import '#psammead/moment-timezone-include/tz/GMT';
 import 'moment/locale/zh-cn';
+
 import withContext from '../../../contexts/utils/withContext';
-import { ChineseConfig } from '../../../models/types/serviceConfig';
-import { Direction, Services } from '../../../models/types/global';
+import type { Direction, Services } from '../../../models/types/global';
+import type { ChineseConfig } from '../../../models/types/serviceConfig';
 
 const baseServiceConfig = {
   articleAuthor: 'https://www.facebook.com/bbcnews',

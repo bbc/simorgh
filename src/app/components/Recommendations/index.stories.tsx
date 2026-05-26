@@ -1,9 +1,9 @@
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
-import { Recommendation } from '#app/models/types/onwardJourney';
+import type { Recommendation } from '#app/models/types/onwardJourney';
 import ThemeProvider from '#app/components/ThemeProvider';
 
-import { Services } from '#app/models/types/global';
+import type { Services } from '#app/models/types/global';
 import Recommendations from '.';
 import recommendationsFixtures from './fixtures';
 

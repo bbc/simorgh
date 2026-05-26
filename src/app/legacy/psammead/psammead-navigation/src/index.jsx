@@ -1,18 +1,20 @@
+// biome-ignore-all lint/a11y/useValidAriaRole: we want this
 import styled from '@emotion/styled';
-import {
-  GEL_SPACING_HLF,
-  GEL_SPACING,
-  GEL_SPACING_SEXT,
-} from '#psammead/gel-foundations/src/spacings';
+
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
-import { NAV_BAR_TOP_BOTTOM_SPACING } from './DropdownNavigation';
+import {
+  GEL_SPACING,
+  GEL_SPACING_HLF,
+  GEL_SPACING_SEXT,
+} from '#psammead/gel-foundations/src/spacings';
 import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
+import { NAV_BAR_TOP_BOTTOM_SPACING } from './DropdownNavigation';
 
 const SPACING_AROUND_NAV_ITEMS = `${NAV_BAR_TOP_BOTTOM_SPACING}rem`; // 12px
 const CURRENT_ITEM_HOVER_BORDER = '0.3125rem'; // 5px
@@ -131,7 +133,6 @@ const StyledSpan = styled.span`
 
 const CurrentLink = ({ linkId, children: link, currentPageText = null }) => (
   <StyledSpan
-    // eslint-disable-next-line jsx-a11y/aria-role
     role="text"
     // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
     id={`NavigationLinks-${linkId}`}
@@ -232,18 +233,16 @@ const Navigation = ({
   isOpen = false,
   ampOpenClass = '',
   ...props
-}) => {
-  return (
-    <StyledNav
-      role="navigation"
-      dir={dir}
-      isOpen={isOpen}
-      ampOpenClass={ampOpenClass}
-      {...props}
-    >
-      <NavWrapper>{children}</NavWrapper>
-    </StyledNav>
-  );
-};
+}) => (
+  <StyledNav
+    role="navigation"
+    dir={dir}
+    isOpen={isOpen}
+    ampOpenClass={ampOpenClass}
+    {...props}
+  >
+    <NavWrapper>{children}</NavWrapper>
+  </StyledNav>
+);
 
 export default Navigation;

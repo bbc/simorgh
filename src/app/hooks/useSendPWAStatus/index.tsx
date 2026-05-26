@@ -28,7 +28,6 @@ const useSendPWAStatus = (isPWA: boolean) => {
     // Listen for SW taking control
     sw.addEventListener('controllerchange', sendPWAStatus);
 
-    // eslint-disable-next-line consistent-return
     return () => {
       sw.removeEventListener('controllerchange', sendPWAStatus);
     };

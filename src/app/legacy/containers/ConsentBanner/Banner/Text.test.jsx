@@ -1,5 +1,5 @@
-import { RequestContextProvider } from '#contexts/RequestContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { RequestContextProvider } from '#contexts/RequestContext';
 import { render } from '../../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import BannerText from './Text';

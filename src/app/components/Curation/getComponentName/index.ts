@@ -1,7 +1,7 @@
 import {
-  VISUAL_STYLE,
+  type Curation,
   VISUAL_PROMINENCE,
-  Curation,
+  VISUAL_STYLE,
 } from '#app/models/types/curationData';
 
 export const COMPONENT_NAMES = {

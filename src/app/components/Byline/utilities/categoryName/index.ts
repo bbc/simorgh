@@ -1,6 +1,7 @@
-import pathOr from 'ramda/src/pathOr';
 import isEmpty from 'ramda/src/isEmpty';
-import {
+import pathOr from 'ramda/src/pathOr';
+
+import type {
   MetadataFormats,
   MetadataTaggings,
 } from '../../../../models/types/metadata';

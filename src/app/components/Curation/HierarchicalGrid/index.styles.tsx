@@ -1,4 +1,5 @@
-import { css, Theme } from '@emotion/react';
+import { css, type Theme } from '@emotion/react';
+
 import { GROUP_1_MAX_WIDTH } from '#app/components/ThemeProvider/mediaQueries';
 
 const styles = {
@@ -185,11 +186,11 @@ const HorizontalPromo = css({
 });
 
 export {
-  styles,
-  DesktopBigPromo,
   BigPromo,
-  VerticalPromo,
-  TallPromo,
   CompactPromo,
+  DesktopBigPromo,
   HorizontalPromo,
+  styles,
+  TallPromo,
+  VerticalPromo,
 };

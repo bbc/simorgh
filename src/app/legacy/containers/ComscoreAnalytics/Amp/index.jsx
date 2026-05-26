@@ -1,8 +1,8 @@
+// biome-ignore-all lint/security/noDangerouslySetInnerHtml: this is fine
 const AmpComscoreAnalytics = () => (
   <amp-analytics type="comscore">
     <script
       type="application/json"
-      /* eslint-disable-next-line react/no-danger */
       dangerouslySetInnerHTML={{
         __html: JSON.stringify({
           vars: {

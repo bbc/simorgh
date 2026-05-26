@@ -1,6 +1,7 @@
+import { css, type Theme } from '@emotion/react';
+
 import { MAX_NAV_ITEM_HEIGHT } from '#app/components/Navigation/index.styles';
 import pixelsToRem from '#app/utilities/pixelsToRem';
-import { css, Theme } from '@emotion/react';
 
 const SVG_WRAPPER_MAX_WIDTH_ABOVE_1280PX = '63rem';
 const LOGO_ASPECT_RATIO = 168 / 48;

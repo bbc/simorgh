@@ -1,13 +1,14 @@
 import {
   createContext,
-  useReducer,
-  Dispatch,
-  PropsWithChildren,
+  type Dispatch,
+  type PropsWithChildren,
   useMemo,
+  useReducer,
 } from 'react';
-import defaultToggles from '#lib/config/toggles';
-import { Environments, Toggles } from '#app/models/types/global';
+
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import type { Environments, Toggles } from '#app/models/types/global';
+import defaultToggles from '#lib/config/toggles';
 import toggleReducer from './reducer';
 
 const environment = (getEnvConfig().SIMORGH_APP_ENV || 'local') as Environments;
@@ -36,7 +37,7 @@ const ToggleContextProvider = ({
       toggleState,
       toggleDispatch,
     }),
-    [toggleState, toggleDispatch],
+    [toggleState],
   );
   return (
     <ToggleContext.Provider value={toggleContextValue}>
@@ -47,4 +48,4 @@ const ToggleContextProvider = ({
 
 const ToggleContextConsumer = ToggleContext.Consumer;
 
-export { ToggleContext, ToggleContextProvider, ToggleContextConsumer };
+export { ToggleContext, ToggleContextConsumer, ToggleContextProvider };

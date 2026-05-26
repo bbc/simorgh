@@ -1,30 +1,31 @@
 import Cookie from 'js-cookie';
 import find from 'ramda/src/find';
-import propSatisfies from 'ramda/src/propSatisfies';
 import includes from 'ramda/src/includes';
-import onClient from '../../../lib/utilities/onClient';
+import propSatisfies from 'ramda/src/propSatisfies';
+
 import { getReferrer } from '../../../lib/analyticsUtils';
-import {
-  ARTICLE_PAGE,
-  MOST_READ_PAGE,
-  MEDIA_ASSET_PAGE,
-  PHOTO_GALLERY_PAGE,
-  STORY_PAGE,
-  TOPIC_PAGE,
-  LIVE_PAGE,
-  MEDIA_ARTICLE_PAGE,
-  LIVE_RADIO_PAGE,
-  AUDIO_PAGE,
-  TV_PAGE,
-  LIVE_TV_PAGE,
-} from '../../../routes/utils/pageTypes';
-import {
+import onClient from '../../../lib/utilities/onClient';
+import type {
   Environments,
   PageTypes,
   Platforms,
   Services,
 } from '../../../models/types/global';
-import { MetadataTaggings } from '../../../models/types/metadata';
+import type { MetadataTaggings } from '../../../models/types/metadata';
+import {
+  ARTICLE_PAGE,
+  AUDIO_PAGE,
+  LIVE_PAGE,
+  LIVE_RADIO_PAGE,
+  LIVE_TV_PAGE,
+  MEDIA_ARTICLE_PAGE,
+  MEDIA_ASSET_PAGE,
+  MOST_READ_PAGE,
+  PHOTO_GALLERY_PAGE,
+  STORY_PAGE,
+  TOPIC_PAGE,
+  TV_PAGE,
+} from '../../../routes/utils/pageTypes';
 
 const ID_COOKIE = 'ckns_sylphid';
 
@@ -186,10 +187,6 @@ export const getTitle = ({ pageType, title, brandName }: GetTitleProps) => {
     case TV_PAGE:
     case 'index':
       return `${title} - ${brandName}`;
-    case ARTICLE_PAGE:
-    case MEDIA_ASSET_PAGE:
-    case STORY_PAGE:
-    case PHOTO_GALLERY_PAGE:
     default:
       return title;
   }

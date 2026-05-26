@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
-import useNetworkStatusTracker from '../useNetworkStatusTracker';
+
 import useCustomEventTracker from '../useCustomEventTracker';
+import useNetworkStatusTracker from '../useNetworkStatusTracker';
 import { OFFLINE_VISIT_FLAG } from '../useOfflinePageFlag';
 
 const OFFLINE_PAGE_VIEW_EVENT_NAME = 'pwa-offline-page-view';
@@ -34,9 +35,8 @@ const usePWAOfflineTracking = () => {
 
       trackOfflinePageViewEvent(networkType);
       localStorage.removeItem(OFFLINE_VISIT_FLAG);
-    } catch (error) {
-      // eslint-disable-next-line no-console
-      console.error('usePWAOfflineTracking', error);
+    } catch (_error) {
+      console.error('usePWAOfflineTracking', _error);
     }
   }, [isOnline, networkType, trackOfflinePageViewEvent]);
 };

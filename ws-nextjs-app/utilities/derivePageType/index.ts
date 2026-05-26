@@ -1,26 +1,26 @@
+import SERVICES from '#app/lib/config/services';
 import { PageTypes } from '#app/models/types/global';
 import {
-  ARTICLE_PAGE,
-  AV_EMBEDS,
-  DOWNLOADS_PAGE,
-  LIVE_PAGE,
-  UGC_PAGE,
-  HOME_PAGE,
-  UNKNOWN_PAGE,
-  TOPIC_PAGE,
-  AUDIO_PAGE,
-  TV_PAGE,
-  MOST_READ_PAGE,
-  LIVE_RADIO_PAGE,
-} from '#app/routes/utils/pageTypes';
-import {
+  isCpsIdCheck,
   isOptimoIdCheck,
   isTipoIdCheck,
-  isCpsIdCheck,
   isUgcIdCheck,
   removeRendererExtension,
 } from '#app/routes/utils/constructPageFetchUrl';
-import SERVICES from '#app/lib/config/services';
+import {
+  ARTICLE_PAGE,
+  AUDIO_PAGE,
+  AV_EMBEDS,
+  DOWNLOADS_PAGE,
+  HOME_PAGE,
+  LIVE_PAGE,
+  LIVE_RADIO_PAGE,
+  MOST_READ_PAGE,
+  TOPIC_PAGE,
+  TV_PAGE,
+  UGC_PAGE,
+  UNKNOWN_PAGE,
+} from '#app/routes/utils/pageTypes';
 import { servicesWithVariants } from '#lib/utilities/variantHandler';
 
 const isHomePagePath = (pathname: string) =>

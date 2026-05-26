@@ -1,8 +1,8 @@
 import PageLayoutWrapper from '#app/components/PageLayoutWrapper';
-import liveFixture from '#data/pidgin/live/c7p765ynk9qt.json';
-import liveFixtureWithLiveMedia from '#data/mundo/live/c7dkx155e626t.json';
 import liveFixtureWithSportDataHeader from '#data/afrique/live/c7gk1vjglxn1t.json';
+import liveFixtureWithLiveMedia from '#data/mundo/live/c7dkx155e626t.json';
 import liveFixtureWithPortraitVideoCarousel from '#data/mundo/live/cjnk1wrpkdk7t.json';
+import liveFixture from '#data/pidgin/live/c7p765ynk9qt.json';
 import postFixture from '#data/pidgin/posts/postFixtureCleaned.json';
 import Live, { ComponentProps } from './LivePageLayout';
 

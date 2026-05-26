@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/named
-import { getUrlPath, getQueryString } from '.';
+import { getQueryString, getUrlPath } from '.';
 
 const queryString = '?param=test&qs=1';
 const partialRequestUrl = 'foo/bar';

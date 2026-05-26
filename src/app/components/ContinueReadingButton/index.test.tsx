@@ -1,7 +1,7 @@
+import * as clickTracking from '../../hooks/useClickTrackerHandler';
+import * as viewTracking from '../../hooks/useViewTracker';
 import { fireEvent, render } from '../react-testing-library-with-providers';
 import ContinueReadingButton from './index';
-import * as viewTracking from '../../hooks/useViewTracker';
-import * as clickTracking from '../../hooks/useClickTrackerHandler';
 
 describe('ContinueReadingButton', () => {
   const mockSetShowAllContent = jest.fn();

@@ -1,6 +1,6 @@
-import * as viewTracking from '#hooks/useViewTracker';
-import * as clickTracking from '#hooks/useClickTrackerHandler';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
+import * as clickTracking from '#hooks/useClickTrackerHandler';
+import * as viewTracking from '#hooks/useViewTracker';
 import { render } from '../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import PodcastExternalLinks from '.';

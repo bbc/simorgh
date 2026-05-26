@@ -1,5 +1,5 @@
-import { data as pidginArticleData } from '#data/pidgin/articles/cw0x29n2pvqo.json';
 import { data as mundoLiveData } from '#data/mundo/live/cemn2qq3x8vt.json';
+import { data as pidginArticleData } from '#data/pidgin/articles/cw0x29n2pvqo.json';
 import { extractArticleData, extractLiveData } from '.';
 
 describe('extractArticleData', () => {

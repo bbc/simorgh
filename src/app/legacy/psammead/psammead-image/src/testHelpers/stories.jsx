@@ -1,11 +1,12 @@
 import { storiesOf } from '@storybook/react-webpack5';
+
 import notes from '../../README.md';
 import {
   custom,
   landscape,
+  noFallbackSrcset,
   portrait,
   square,
-  noFallbackSrcset,
 } from './fixtureData';
 
 export function getProps(image, includeHeight, type) {

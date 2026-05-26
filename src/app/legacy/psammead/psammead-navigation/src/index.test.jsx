@@ -1,7 +1,7 @@
 import { render } from '../../../../components/react-testing-library-with-providers';
-import { ScrollableNavigation } from './ScrollableNavigation';
-import Navigation, { NavigationUl, NavigationLi } from './index';
 import igboNavData from '../testHelpers/igbo';
+import Navigation, { NavigationLi, NavigationUl } from './index';
+import { ScrollableNavigation } from './ScrollableNavigation';
 
 const navigationUlComponent = (
   <NavigationUl>

@@ -1,12 +1,13 @@
 import { use } from 'react';
+
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import { RequestContext } from '../../contexts/RequestContext';
+import { ServiceContext } from '../../contexts/ServiceContext';
+import CallToActionLink from '../CallToActionLink';
 import Paragraph from '../Paragraph';
 import Text from '../Text';
-import { ServiceContext } from '../../contexts/ServiceContext';
-import { RequestContext } from '../../contexts/RequestContext';
-import styles from './index.styles';
 import defaultTranslations from './defaultTranslations';
-import CallToActionLink from '../CallToActionLink';
+import styles from './index.styles';
 
 const LiteSiteSummary = () => {
   const { translations } = use(ServiceContext);

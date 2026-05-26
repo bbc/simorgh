@@ -1,6 +1,6 @@
 import { render } from '../../../../components/react-testing-library-with-providers';
 import Grid from '.';
-import { ExampleParagraph, ExampleFigure, ExampleImage } from './testHelpers';
+import { ExampleFigure, ExampleImage, ExampleParagraph } from './testHelpers';
 
 describe('Grid component', () => {
   it('should render Grid with Grid items', () => {

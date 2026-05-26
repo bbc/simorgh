@@ -1,7 +1,7 @@
 import { blockContainingText, singleTextBlock } from '#models/blocks';
 import {
-  shouldMatchSnapshot,
   isNull,
+  shouldMatchSnapshot,
 } from '#psammead/psammead-test-helpers/src';
 import Blocks from './index';
 

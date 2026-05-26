@@ -1,12 +1,13 @@
 import { use, useEffect, useRef } from 'react';
+
 import Heading from '#app/components/Heading';
 import Paragraph from '#app/components/Paragraph';
 import Text from '#app/components/Text';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import styles from './index.styles';
-import TickSvg from './svgs';
 import { useFormContext } from '../FormContext';
 import fallbackTranslations from '../fallbackTranslations';
+import styles from './index.styles';
+import TickSvg from './svgs';
 
 type Props = {
   title: string;

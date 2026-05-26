@@ -1,20 +1,19 @@
 import type { ElementType } from 'react';
-import { PropsWithChildren, use } from 'react';
+import { type PropsWithChildren, use } from 'react';
+
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import pick from 'ramda/src/pick';
 
-import PromoTimestamp from '../../legacy/components/Promo/timestamp';
-import getOriginCode from '../../lib/utilities/imageSrcHelpers/originCode';
-import getLocator from '../../lib/utilities/imageSrcHelpers/locator';
-import buildIChefURL from '../../lib/utilities/ichefURL';
-
-import { createSrcsets } from '../../lib/utilities/srcSet';
 import { RequestContext } from '../../contexts/RequestContext';
-
+import PromoTimestamp from '../../legacy/components/Promo/timestamp';
+import buildIChefURL from '../../lib/utilities/ichefURL';
+import getLocator from '../../lib/utilities/imageSrcHelpers/locator';
+import getOriginCode from '../../lib/utilities/imageSrcHelpers/originCode';
+import { createSrcsets } from '../../lib/utilities/srcSet';
+import type { OptimoBlock } from '../../models/types/optimo';
 import styles from './styles';
-import { FormattedPromo, ImageProps, PromoProps } from './types';
-import { OptimoBlock } from '../../models/types/optimo';
+import type { FormattedPromo, ImageProps, PromoProps } from './types';
 
 const defaultImageProps = {
   height: null,
@@ -163,7 +162,7 @@ const normalise = (props: PromoProps): FormattedPromo => {
 const validate = (props: FormattedPromo) => {
   try {
     return [props.children, props.image, props.url].every(Boolean);
-  } catch (e) {
+  } catch (_e) {
     return false;
   }
 };

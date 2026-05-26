@@ -1,9 +1,10 @@
 import { useTheme } from '@emotion/react';
+
+import type { ComponentExperimentProps } from '#app/models/types/global';
+import type { Article } from '#app/models/types/optimo';
 import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
-import { Article } from '#app/models/types/optimo';
-import { ComponentExperimentProps } from '#app/models/types/global';
-import TopStoriesSection from './PagePromoSections/TopStoriesSection';
 import styles from './ArticlePage.styles';
+import TopStoriesSection from './PagePromoSections/TopStoriesSection';
 
 const SecondaryColumn = ({
   pageData,

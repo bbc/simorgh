@@ -1,4 +1,4 @@
-import { OptimoBlock } from '#app/models/types/optimo';
+import type { OptimoBlock } from '#app/models/types/optimo';
 
 export const fragmentBlock = (text: string, attributes = []) => ({
   id: '113144',

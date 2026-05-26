@@ -2,7 +2,7 @@ import tamil from '../../../components/ThemeProvider/fontScripts/tamil';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/ta';
 import withContext from '../../../contexts/utils/withContext';
-import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
+import type { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
 export const service: DefaultServiceConfig = {
   default: {
@@ -150,8 +150,7 @@ export const service: DefaultServiceConfig = {
       },
       consentBanner: {
         privacy: {
-          title:
-            'எமது தனியுரிமை மற்றும் குக்கி கொள்கைகளை நாங்கள் மேம்படுத்தியுள்ளோம்.',
+          title: 'எமது தனியுரிமை மற்றும் குக்கி கொள்கைகளை நாங்கள் மேம்படுத்தியுள்ளோம்.',
           description: {
             uk: {
               first:
@@ -247,8 +246,7 @@ export const service: DefaultServiceConfig = {
       media: {
         noJs: 'ஒலிபரப்பு மென்பொருள் உங்கள் கணினியில் இல்லை',
         contentExpired: 'இந்த நிகழ்ச்சி இனி கிடைக்காது.',
-        contentNotYetAvailable:
-          'இந்த நிகழ்ச்சி இன்னும் கேட்க தயாராக்கப்படவில்லை.',
+        contentNotYetAvailable: 'இந்த நிகழ்ச்சி இன்னும் கேட்க தயாராக்கப்படவில்லை.',
         audio: 'ஒலி',
         photogallery: 'படத் தொகுப்பு',
         video: 'காணொளி',
@@ -283,15 +281,13 @@ export const service: DefaultServiceConfig = {
           text: 'எச்சரிக்கை: வெளியார் தகவல்களில் விளம்பரங்கள் இருக்கலாம்',
           articleText:
             'எச்சரிக்கை: வெளியார் தளங்களில் உள்ள பதிவுகளுக்கு பிபிசி பொறுப்பேற்காது',
-          articleAdditionalText:
-            '%provider_name%பதிவில் விளம்பரங்கள் இருக்கக்கூடும்',
+          articleAdditionalText: '%provider_name%பதிவில் விளம்பரங்கள் இருக்கக்கூடும்',
         },
         fallback: {
           text: 'தகவல் இல்லை',
           linkText: 'மேலதிக விவரங்களைக் காண %provider_name%',
           linkTextSuffixVisuallyHidden: ', வெளி இணைப்பு',
-          warningText:
-            'வெளியார் இணைய தளங்களின் உள்ளடக்கத்துக்கு பிபிசி பொறுப்பாகாது.',
+          warningText: 'வெளியார் இணைய தளங்களின் உள்ளடக்கத்துக்கு பிபிசி பொறுப்பாகாது.',
         },
         skipLink: {
           text: '%provider_name% பதிவை கடந்து செல்ல',
@@ -306,8 +302,7 @@ export const service: DefaultServiceConfig = {
       include: {
         errorMessage:
           'மன்னிக்கவும், குறைந்த இணையத்தை பயன்படுத்தும் இந்த பக்கத்தில் கட்டுரையின் இந்த பகுதியை காணவியலாது. ',
-        linkText:
-          'முழு உள்ளடக்கத்தையும் காண இந்த பக்கத்தின் அசல் வடிவத்தை காணவும்.',
+        linkText: 'முழு உள்ளடக்கத்தையும் காண இந்த பக்கத்தின் அசல் வடிவத்தை காணவும்.',
       },
       topStoriesTitle: 'முக்கிய செய்திகள்',
       featuresAnalysisTitle: 'சிறப்புச் செய்திகள்',
@@ -340,8 +335,7 @@ export const service: DefaultServiceConfig = {
           'அதிக கோப்புகள் உள்ளன. நீங்கள் {{maxFiles}} கோப்புகள் சேர்க்கலாம்.',
         validationFilesInvalidType:
           'இந்த வகை கோப்புகளை நாங்கள் பயன்படுத்துவதில்லை. {{fileTypes}} சேர்க்கவும்.',
-        validationFilesTooSmall:
-          'இந்த கோப்பு சரியாக இல்லை. வேறு ஒன்றை முயற்சிக்கவும்.',
+        validationFilesTooSmall: 'இந்த கோப்பு சரியாக இல்லை. வேறு ஒன்றை முயற்சிக்கவும்.',
         validationFilesSizeExceeded:
           'கோப்பின் அளவு பெரிதாக உள்ளது. அதிகபட்சம் 2 ஜி.பி  பதிவேற்றலாம்',
         validationWordLimit: 'அதிகட்சம் {{wordLimit}} சொற்கள்',

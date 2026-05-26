@@ -1,5 +1,6 @@
-import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
 import styled from '@emotion/styled';
+
+import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
 
 const PromoItem = styled.li`
   height: 100%;

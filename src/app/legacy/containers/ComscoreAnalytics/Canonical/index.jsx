@@ -1,8 +1,9 @@
-/* eslint-disable jsx-a11y/alt-text */
 import { use, useEffect } from 'react';
+
 import { Helmet } from 'react-helmet';
-import { UserContext } from '#contexts/UserContext';
+
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import { UserContext } from '#contexts/UserContext';
 
 const CanonicalComscoreAnalytics = ({ nonce = null }) => {
   const { personalisationEnabled } = use(UserContext);
@@ -13,7 +14,6 @@ const CanonicalComscoreAnalytics = ({ nonce = null }) => {
 
   useEffect(() => {
     const csUcfr = personalisationEnabled ? '1' : '';
-    /* eslint-disable no-underscore-dangle */
     window._comscore = window._comscore || [];
     window._comscore.push({ c1: '2', c2: '17986528', cs_ucfr: csUcfr });
   }, [personalisationEnabled]);

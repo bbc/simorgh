@@ -13,10 +13,9 @@ const useOfflinePageFlag = () => {
     try {
       localStorage.setItem(OFFLINE_VISIT_FLAG, 'true');
     } catch (error) {
-      // eslint-disable-next-line no-console
       console.warn('useOfflinePageFlag', error);
     }
   }, []);
 };
 
-export { useOfflinePageFlag, OFFLINE_VISIT_FLAG };
+export { OFFLINE_VISIT_FLAG, useOfflinePageFlag };

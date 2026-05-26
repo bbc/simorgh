@@ -1,4 +1,4 @@
-import { ServiceTheme } from '#models/types/theming';
+import type { ServiceTheme } from '#models/types/theming';
 
 export default ({
   baseTheme,
@@ -6,12 +6,10 @@ export default ({
 }: {
   baseTheme: ServiceTheme;
   pwaTheme: Partial<ServiceTheme>;
-}) => {
-  return {
-    ...baseTheme,
-    typography: {
-      ...baseTheme.typography,
-      ...pwaTheme.typography,
-    },
-  };
-};
+}) => ({
+  ...baseTheme,
+  typography: {
+    ...baseTheme.typography,
+    ...pwaTheme.typography,
+  },
+});

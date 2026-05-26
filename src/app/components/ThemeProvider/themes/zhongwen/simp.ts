@@ -1,4 +1,4 @@
-import { ServiceTheme } from '#app/models/types/theming';
+import type { ServiceTheme } from '#app/models/types/theming';
 import withThemeProvider from '../../withThemeProvider';
 import zhongwenTheme from './base';
 

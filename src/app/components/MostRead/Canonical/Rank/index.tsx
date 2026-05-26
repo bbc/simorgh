@@ -1,16 +1,16 @@
 import {
-  Burmese,
   Bengali,
+  Burmese,
   EasternArabic,
   Nepali,
   WesternArabic,
 } from '../../../../legacy/psammead/psammead-locales/src/numerals';
-import { Services } from '../../../../models/types/global';
-import { ColumnLayout, MostReadRankProps, Size } from '../../types';
+import type { Services } from '../../../../models/types/global';
+import type { ColumnLayout, MostReadRankProps, Size } from '../../types';
 import styles, {
+  getMultiColumnCss,
   getOneColumnCss,
   getTwoColumnCss,
-  getMultiColumnCss,
 } from './index.styles';
 
 export const serviceNumerals = (service: Services) => {

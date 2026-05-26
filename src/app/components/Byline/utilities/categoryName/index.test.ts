@@ -1,9 +1,10 @@
 import clone from 'ramda/src/clone';
-import categoryName from '.';
+
 import {
-  passportTaggings,
   passportPredicatesFormats,
+  passportTaggings,
 } from '../../../../pages/ArticlePage/fixtureData';
+import categoryName from '.';
 
 describe('categoryName', () => {
   it('should return NewsArticle when a service is not a Trust Project participant', () => {
@@ -52,31 +53,31 @@ describe('categoryName', () => {
     expect(schemaDotOrgType).toEqual('NewsArticle');
   });
 
-  test.each([[[]], [undefined]])(
-    'should return NewsArticle when taggings are not present',
-    taggings => {
-      const schemaDotOrgType = categoryName(
-        true,
-        taggings,
-        passportPredicatesFormats,
-      );
+  test.each([
+    [[]],
+    [undefined],
+  ])('should return NewsArticle when taggings are not present', taggings => {
+    const schemaDotOrgType = categoryName(
+      true,
+      taggings,
+      passportPredicatesFormats,
+    );
 
-      expect(schemaDotOrgType).toEqual('NewsArticle');
-    },
-  );
+    expect(schemaDotOrgType).toEqual('NewsArticle');
+  });
 
-  test.each([[[]], [undefined]])(
-    'should return NewsArticle when predicates formats are not present',
-    predicatesFormats => {
-      const schemaDotOrgType = categoryName(
-        true,
-        passportTaggings,
-        predicatesFormats,
-      );
+  test.each([
+    [[]],
+    [undefined],
+  ])('should return NewsArticle when predicates formats are not present', predicatesFormats => {
+    const schemaDotOrgType = categoryName(
+      true,
+      passportTaggings,
+      predicatesFormats,
+    );
 
-      expect(schemaDotOrgType).toEqual('NewsArticle');
-    },
-  );
+    expect(schemaDotOrgType).toEqual('NewsArticle');
+  });
 
   test.each([
     [
@@ -111,30 +112,27 @@ describe('categoryName', () => {
       'http://www.bbc.co.uk/things/a057c92f-2d7e-4997-8310-80ca621d19fa#id',
       'ReportageNewsArticle',
     ],
-  ])(
-    'when the thing ID is set to %p it should return type %p',
-    (typeId, expectedSchemaDotOrgType) => {
-      let testTaggings = clone(passportTaggings);
+  ])('when the thing ID is set to %p it should return type %p', (typeId, expectedSchemaDotOrgType) => {
+    let testTaggings = clone(passportTaggings);
 
-      testTaggings.shift();
+    testTaggings.shift();
 
-      testTaggings = [
-        ...testTaggings,
-        {
-          predicate: 'http://www.bbc.co.uk/ontologies/creativework/format',
-          value: typeId,
-        },
-      ];
-      const testFormats = [
-        {
-          ...passportPredicatesFormats[0],
-          value: typeId,
-        },
-      ];
+    testTaggings = [
+      ...testTaggings,
+      {
+        predicate: 'http://www.bbc.co.uk/ontologies/creativework/format',
+        value: typeId,
+      },
+    ];
+    const testFormats = [
+      {
+        ...passportPredicatesFormats[0],
+        value: typeId,
+      },
+    ];
 
-      const schemaDotOrgType = categoryName(true, testTaggings, testFormats);
+    const schemaDotOrgType = categoryName(true, testTaggings, testFormats);
 
-      expect(schemaDotOrgType).toEqual(expectedSchemaDotOrgType);
-    },
-  );
+    expect(schemaDotOrgType).toEqual(expectedSchemaDotOrgType);
+  });
 });

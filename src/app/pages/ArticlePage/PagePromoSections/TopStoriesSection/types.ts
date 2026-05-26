@@ -1,5 +1,5 @@
-import { MetadataTaggings } from '#app/models/types/metadata';
-import { OptimoBlock } from '#app/models/types/optimo';
+import type { MetadataTaggings } from '#app/models/types/metadata';
+import type { OptimoBlock } from '#app/models/types/optimo';
 
 export type PromoHeadlineBlock = {
   type: string;

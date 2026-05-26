@@ -1,11 +1,12 @@
 import { useTheme } from '@emotion/react';
+
 import useViewTracker from '#app/hooks/useViewTracker';
-import { EventTrackingData } from '#app/lib/analyticsUtils/types';
-import Paragraph from '../Paragraph';
+import type { EventTrackingData } from '#app/lib/analyticsUtils/types';
+import CallToActionLink from '../CallToActionLink';
 import Heading from '../Heading';
 import Image from '../Image';
+import Paragraph from '../Paragraph';
 import styles from './index.styles';
-import CallToActionLink from '../CallToActionLink';
 
 interface MessageBannerProps {
   heading: string;
@@ -26,7 +27,6 @@ const MessageBanner = ({
   eventTrackingData,
 }: MessageBannerProps) => {
   // Remove itemCount from groupTracker as it's not needed for MessageBanner
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { itemCount, ...groupTrackerRest } =
     eventTrackingData?.groupTracker || {};
 

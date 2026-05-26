@@ -1,3 +1,5 @@
+// biome-ignore-all lint/complexity/useArrowFunction: we want this
+
 /* eslint-disable no-var */
 /* eslint-disable vars-on-top */
 /* eslint-disable func-names */

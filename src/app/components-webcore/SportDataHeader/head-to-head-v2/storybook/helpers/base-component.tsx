@@ -1,4 +1,5 @@
 import moment from 'moment';
+
 import { HeadToHeadV2 } from '../../head-to-head-v2';
 import type { HeadToHeadV2Data } from '../../types';
 import { shortNamesMap } from './short-name-map';
@@ -35,16 +36,14 @@ const buildTeamObject = ({
   actions?: Team['actions'];
   alignment: 'home' | 'away';
   data: HeadToHeadV2Data;
-}): Team => {
-  return {
-    ...data[alignment],
-    fullName: team,
-    shortName: shortNamesMap(team),
-    urn: `urn:bbc:sportsdata:football:team:${team.toLowerCase().split(' ').join('-')}`,
-    actions,
-    ...(score && { score, scoreUnconfirmed }),
-  };
-};
+}): Team => ({
+  ...data[alignment],
+  fullName: team,
+  shortName: shortNamesMap(team),
+  urn: `urn:bbc:sportsdata:football:team:${team.toLowerCase().split(' ').join('-')}`,
+  actions,
+  ...(score && { score, scoreUnconfirmed }),
+});
 
 export const HeadToHeadV2ConciseComponent = (args: StoryArgs) => {
   const {

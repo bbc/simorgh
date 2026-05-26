@@ -1,4 +1,4 @@
-import { Platforms } from './global';
+import type { Platforms } from './global';
 
 // Types consolidated into ATIAnalytics/types.ts. Use EventTrackingData everywhere.
 export type ReverbClient = {

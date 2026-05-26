@@ -7,8 +7,8 @@
   Excludes the fonts and images directories as these are served from the CDN/static-assets route.
 */
 
-import { cpSync } from 'fs';
-import { basename } from 'path';
+import { cpSync } from 'node:fs';
+import { basename } from 'node:path';
 
 const EXCLUDED_DIRS = ['fonts', 'images'];
 

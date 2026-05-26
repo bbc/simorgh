@@ -1,7 +1,8 @@
-import { ServiceContext } from '#contexts/ServiceContext';
-import SaveButton from '#app/components/SaveButton';
 import { use } from 'react';
+
+import SaveButton from '#app/components/SaveButton';
 import useHydrationDetection from '#app/hooks/useHydrationDetection';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 // TODO: This will contain the guest user experience for the SaveArticleButton,
 // which will likely involve prompting the user to sign in or create an account to save articles.
@@ -18,7 +19,7 @@ const SaveArticleButtonGuest = () => {
   return (
     <SaveButton
       onClick={() => {
-        // eslint-disable-next-line no-alert
+        // biome-ignore lint/suspicious/noAlert: we want this temporarily
         alert('Please sign in to save articles.');
       }}
       buttonText={getButtonText()}

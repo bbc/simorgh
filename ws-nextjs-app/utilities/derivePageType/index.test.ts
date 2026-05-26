@@ -1,16 +1,16 @@
 import {
-  LIVE_PAGE,
-  UGC_PAGE,
+  ARTICLE_PAGE,
+  AUDIO_PAGE,
   AV_EMBEDS,
   DOWNLOADS_PAGE,
-  ARTICLE_PAGE,
   HOME_PAGE,
-  UNKNOWN_PAGE,
-  TOPIC_PAGE,
-  AUDIO_PAGE,
-  TV_PAGE,
-  MOST_READ_PAGE,
+  LIVE_PAGE,
   LIVE_RADIO_PAGE,
+  MOST_READ_PAGE,
+  TOPIC_PAGE,
+  TV_PAGE,
+  UGC_PAGE,
+  UNKNOWN_PAGE,
 } from '#app/routes/utils/pageTypes';
 import derivePageType from '.';
 

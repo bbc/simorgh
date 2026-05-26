@@ -1,14 +1,16 @@
 import { forwardRef } from 'react';
+
 import styled from '@emotion/styled';
+
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
 import {
-  GEL_SPACING_HLF,
   GEL_SPACING,
   GEL_SPACING_DBL,
+  GEL_SPACING_HLF,
 } from '#psammead/gel-foundations/src/spacings';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 
@@ -105,7 +107,7 @@ const LocalisedBrandName = ({
   const brandId = `BrandLink-${linkId}`;
   return serviceLocalisedName ? (
     // id={`BrandLink-${linkId}` is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
-    // eslint-disable-next-line jsx-a11y/aria-role
+    // biome-ignore lint/a11y/useValidAriaRole: we want this
     <VisuallyHiddenText role="text" id={brandId}>
       <span lang="en-GB">{`${product}, `}</span>
       <span>{serviceLocalisedName}</span>
@@ -115,8 +117,8 @@ const LocalisedBrandName = ({
   );
 };
 
-const StyledBrand = ({ linkId, product, serviceLocalisedName = null, svg }) => {
-  return svg ? (
+const StyledBrand = ({ linkId, product, serviceLocalisedName = null, svg }) =>
+  svg ? (
     <>
       <BrandSvg
         id={linkId !== 'footer' ? 'brandSvgHeader' : 'brandSvgFooter'}
@@ -140,7 +142,6 @@ const StyledBrand = ({ linkId, product, serviceLocalisedName = null, svg }) => {
       />
     </>
   ) : null;
-};
 
 const Brand = forwardRef((props, ref) => {
   const {

@@ -1,9 +1,11 @@
 import { use } from 'react';
-import { cleanup, render, act } from '@testing-library/react';
+
+import { act, cleanup, render } from '@testing-library/react';
+
 import services from '#utilities/serviceConfigs';
-import { ServiceContext, ServiceContextProvider } from '.';
 import { Services, Variants } from '../../models/types/global';
 import { Translations } from '../../models/types/translations';
+import { ServiceContext, ServiceContextProvider } from '.';
 
 // Unmock service context which is mocked globally in jest-setup.js
 jest.unmock('./index');

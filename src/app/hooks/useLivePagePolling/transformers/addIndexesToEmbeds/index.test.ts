@@ -1,5 +1,6 @@
 import path from 'ramda/src/path';
-import { Post } from '#nextjs/pages/[service]/live/[id]/Post/types';
+
+import type { Post } from '#nextjs/pages/[service]/live/[id]/Post/types';
 import addIndexesToEmbeds from '.';
 
 const textBlock = {

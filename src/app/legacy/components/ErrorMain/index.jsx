@@ -1,9 +1,10 @@
 import styled from '@emotion/styled';
+
+import { REITH_SANS } from '#app/components/ThemeProvider/fontFamilies';
+import Grid, { GelPageGrid } from '#components/Grid';
+import idSanitiser from '#lib/utilities/idSanitiser';
 import InlineLink from '#psammead/psammead-inline-link/src';
 import Paragraph from '#psammead/psammead-paragraph/src';
-import idSanitiser from '#lib/utilities/idSanitiser';
-import Grid, { GelPageGrid } from '#components/Grid';
-import { REITH_SANS } from '#app/components/ThemeProvider/fontFamilies';
 
 const StatusCode = styled.span`
   ${({ theme: { fontSizes } }) => fontSizes.paragon};

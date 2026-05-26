@@ -1,10 +1,10 @@
 import {
   aresMediaBlocks,
   aresMediaCaptionBlock,
-  videoClipMediaBlocks,
   livePageCaptionBlock,
+  videoClipMediaBlocks,
 } from '../fixture';
-import { MediaBlock } from '../types';
+import type { MediaBlock } from '../types';
 import getCaptionBlock from './getCaptionBlock';
 
 describe('getCaptionBlock', () => {

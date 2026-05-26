@@ -2,7 +2,7 @@ import sinhalese from '../../../components/ThemeProvider/fontScripts/sinhalese';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/si';
 import withContext from '../../../contexts/utils/withContext';
-import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
+import type { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
 export const service: DefaultServiceConfig = {
   default: {
@@ -88,13 +88,11 @@ export const service: DefaultServiceConfig = {
         onboardingMessage:
           'ඔබ මේ දකින්නේ අවම ඩේටා ප්‍රමාණයක් භාවිත කරන මෙම වෙබ් අඩවියේ පෙළ පමණක් කියවිය හැකි අනුවාදයකි. රූප සහ වීඩියෝ අන්තර්ගත අපගේ මුලික වෙබ් අඩවිය මෙතැනින් නරඹන්න.',
         toMainSite: 'ප්‍රධාන වෙබ් අඩවියට ගෙන යන්න',
-        informationPage:
-          'අවම ඩේටා ප්‍රමාණයක් භාවිතා කරන මෙම වෙබ් පිටු පිළිබඳ වැඩිදුර කියවන්න',
+        informationPage: 'අවම ඩේටා ප්‍රමාණයක් භාවිතා කරන මෙම වෙබ් පිටු පිළිබඳ වැඩිදුර කියවන්න',
         informationPageLink:
           'https://www.bbc.com/sinhala/articles/c4gdp0d3mzpo',
         dataSaving: 'අවම ඩේටා ප්‍රමාණයක් භාවිත කිරීමට පෙළ පමණක් කියවන්න',
-        articleDataSavingLinkText:
-          'අවම ඩේටා ප්‍රමාණයක් භාවිත කිරීමට පෙළ පමණක් කියවන්න',
+        articleDataSavingLinkText: 'අවම ඩේටා ප්‍රමාණයක් භාවිත කිරීමට පෙළ පමණක් කියවන්න',
       },
       mediaAssetPage: {
         mediaPlayer: 'මීඩියා ධාවකය',
@@ -120,8 +118,7 @@ export const service: DefaultServiceConfig = {
         404: {
           statusCode: '404',
           title: 'පිටුව සොයාගත නොහැක',
-          message:
-            'කණගාටුයි, ඔබ සොයන පිටුව ගෙන ඒමට අපට නොහැක. කරුණාකර උත්සාහ කරන්න:',
+          message: 'කණගාටුයි, ඔබ සොයන පිටුව ගෙන ඒමට අපට නොහැක. කරුණාකර උත්සාහ කරන්න:',
           solutions: [
             'url නැවත පරීක්ෂා කෙරෙමින් පවතී',
             'ඔබේ බ්‍රවුසරයේ යළි පණගැන්වීම් බොත්තම තද කෙරෙමින් පවතී',
@@ -246,8 +243,7 @@ export const service: DefaultServiceConfig = {
       },
       media: {
         noJs: 'මෙහි කිසිවක් අඩංගු නැත.',
-        contentExpired:
-          'ඔබේ දුරකථනයේ හෝ පරිගණකයේ මෙය වාදනය කිරීමට අදාළ මෘදුකාංග නැත',
+        contentExpired: 'ඔබේ දුරකථනයේ හෝ පරිගණකයේ මෙය වාදනය කිරීමට අදාළ මෘදුකාංග නැත',
         contentNotYetAvailable: 'මෙහි ඇති දෑ සවන්දීම සඳහා තවම සූදානම් නැත.',
         audio: 'හඬ',
         photogallery: 'ඡායාරූප ගැලරිය ',

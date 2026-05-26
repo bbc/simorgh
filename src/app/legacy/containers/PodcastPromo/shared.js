@@ -1,4 +1,5 @@
 import path from 'ramda/src/path';
+
 import makeRelativeUrlPath from '#lib/utilities/makeRelativeUrlPath';
 import { getMimeType } from '#lib/utilities/srcSet';
 

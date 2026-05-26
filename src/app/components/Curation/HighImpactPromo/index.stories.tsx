@@ -1,6 +1,6 @@
 import fixture from '#data/ws/homePage/index.json';
 import HighImpactPromo from '.';
-import { BaseCuration, Summary } from '#app/models/types/curationData';
+import type { BaseCuration, Summary } from '#app/models/types/curationData';
 import metadata from './metadata.json';
 import readme from './README.md';
 

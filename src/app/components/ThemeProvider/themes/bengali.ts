@@ -1,13 +1,13 @@
-import { ServiceTheme } from '#app/models/types/theming';
-import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
-import bengaliScript from '../fontScripts/bengali';
+import type { ServiceTheme } from '#app/models/types/theming';
+import brandSVG from '../chameleonLogos/bengali';
 import {
   NOTO_SERIF_BENGALI_BOLD,
   NOTO_SERIF_BENGALI_REGULAR,
 } from '../fontFaces';
+import bengaliScript from '../fontScripts/bengali';
 import bengaliFontVariants from '../fontVariants/bengali';
+import { GHOST, POSTBOX, POSTBOX_30, WHITE } from '../palette';
 import withThemeProvider from '../withThemeProvider';
-import brandSVG from '../chameleonLogos/bengali';
 
 export const theme: ServiceTheme = {
   palette: {

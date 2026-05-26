@@ -1,5 +1,5 @@
-import { Direction } from '../../../../models/types/global';
-import { SLOT_TYPES, SlotType } from '../../types';
+import type { Direction } from '../../../../models/types/global';
+import { SLOT_TYPES, type SlotType } from '../../types';
 
 interface AdsAriaLabelProps {
   label: string;

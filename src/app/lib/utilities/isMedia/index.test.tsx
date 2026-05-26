@@ -1,4 +1,4 @@
-import isMedia, { MEDIA_TYPES, MediaType } from '.';
+import isMedia, { MEDIA_TYPES, type MediaType } from '.';
 
 describe('isMedia', () => {
   it('should return true for valid media types', () => {

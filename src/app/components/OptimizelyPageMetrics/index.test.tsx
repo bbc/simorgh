@@ -1,12 +1,14 @@
-import { act, PropsWithChildren } from 'react';
+import { act, type PropsWithChildren } from 'react';
+
 import { screen, waitFor } from '@testing-library/react';
+
 import { RequestContextProvider } from '#app/contexts/RequestContext';
-import { PageTypes, Services } from '#app/models/types/global';
-import { ARTICLE_PAGE, HOME_PAGE } from '#app/routes/utils/pageTypes';
 import {
   notifyDecision,
   resetDecisionStore,
 } from '#app/lib/optimizelyDecisionStore';
+import type { PageTypes, Services } from '#app/models/types/global';
+import { ARTICLE_PAGE, HOME_PAGE } from '#app/routes/utils/pageTypes';
 import { render } from '../react-testing-library-with-providers';
 import OptimizelyPageMetrics from '.';
 import experimentsForPageMetrics from './experimentsForPageMetrics';

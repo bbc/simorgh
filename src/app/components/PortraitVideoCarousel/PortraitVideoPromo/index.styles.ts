@@ -1,13 +1,14 @@
-import { css, Theme } from '@emotion/react';
+import { css, type Theme } from '@emotion/react';
+
+import {
+  twoPixelFocusIndicatorStyle,
+  twoPixelFocusIndicatorThickness,
+} from '#app/components/ThemeProvider/focusIndicator';
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import {
-  twoPixelFocusIndicatorThickness,
-  twoPixelFocusIndicatorStyle,
-} from '#app/components/ThemeProvider/focusIndicator';
-import {
   calculatePromoWidth,
-  PROMO_ITEM_WIDTH_MIN,
   getContainerQuery,
+  PROMO_ITEM_WIDTH_MIN,
 } from '../utils/styleUtils';
 
 const styles = {

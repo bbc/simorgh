@@ -1,5 +1,6 @@
-import { FooterLink } from '#app/models/types/serviceConfig';
-import { ReactElement } from 'react';
+import type { ReactElement } from 'react';
+
+import type { FooterLink } from '#app/models/types/serviceConfig';
 import Link from '../Link';
 import styles, { gridTemplateRows } from './index.styles';
 
@@ -36,7 +37,7 @@ export default ({
         </li>
       )}
       {elements.map((elem, index) => (
-        // eslint-disable-next-line react/no-array-index-key
+        // biome-ignore lint/suspicious/noArrayIndexKey: we want this
         <li key={index}>{elem}</li>
       ))}
     </ul>

@@ -1,6 +1,6 @@
 import { LIVE_TV_PAGE } from '#app/routes/utils/pageTypes';
-import { assertLiveTvPage } from './assertions';
 import runTestsForPage from '../../../support/helpers/runTestsForPage';
+import { assertLiveTvPage } from './assertions';
 
 const testSuites = [
   {

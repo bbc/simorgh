@@ -1,4 +1,4 @@
-import { Services } from '#app/models/types/global';
+import type { Services } from '#app/models/types/global';
 import SERVICES from '#lib/config/services';
 
 const RESTRICTED_ON_SOFT_LAUNCH = ['/ws/languages'];
@@ -71,8 +71,8 @@ export default (html: string) => {
         );
       }
     });
-  } catch (error) {
-    // eslint-disable-next-line @typescript-eslint/no-empty-function
+  } catch (_error) {
+    // biome-ignore lint/suspicious/noEmptyBlockStatements: we want this
     (() => {})();
   }
 

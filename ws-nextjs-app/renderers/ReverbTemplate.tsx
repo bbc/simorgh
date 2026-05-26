@@ -6,7 +6,7 @@ const ReverbTemplate = ({ nonce }: { nonce?: string | null }) => {
   return (
     <script
       {...(nonce ? { nonce } : {})}
-      // eslint-disable-next-line react/no-danger
+      // biome-ignore lint/security/noDangerouslySetInnerHtml: we want this
       dangerouslySetInnerHTML={{
         __html: `
             window.__reverb = {};

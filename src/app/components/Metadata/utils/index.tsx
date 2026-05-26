@@ -1,7 +1,13 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-import { Services } from '#app/models/types/global';
+// biome-ignore-all lint/suspicious/noTsIgnore: we want to hide ts errors
+
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
-import { AppleItunesApp, AlternateLink, IconSizes, IconType } from '../types';
+import type { Services } from '#app/models/types/global';
+import type {
+  AlternateLink,
+  AppleItunesApp,
+  IconSizes,
+  IconType,
+} from '../types';
 
 export const getIconAssetUrl = (service: Services, size: string) =>
   `https://static.files.bbci.co.uk/ws/simorgh-assets/public/${service}/images/icons/icon-${size}.png`;
@@ -20,7 +26,6 @@ const createIconLinks = (
     if (iconType === 'icon') {
       return (
         <link
-          /* @ts-ignore:   Property 'key' does not exist on type 'LinkProps & { css?: Interpolation<Theme>; }'.ts(2322) */
           key={key}
           rel="icon"
           type="image/png"
@@ -31,7 +36,6 @@ const createIconLinks = (
     }
 
     return (
-      /* @ts-ignore:   Property 'key' does not exist on type 'LinkProps & { css?: Interpolation<Theme>; }'.ts(2322) */
       <link key={key} rel="apple-touch-icon" sizes={size} href={iconAssetUrl} />
     );
   });
@@ -42,26 +46,24 @@ export const getIconLinks = (service: Services, iconSizes: IconSizes) => {
     return null;
   }
   const iconTypes = Object.keys(iconSizes);
-  return iconTypes.map(iconType => {
-    return createIconLinks(service, iconSizes, iconType);
-  });
+  return iconTypes.map(iconType =>
+    createIconLinks(service, iconSizes, iconType),
+  );
 };
 
-export const getAppleTouchUrl = (service: Services) => {
-  return [
+export const getAppleTouchUrl = (service: Services) =>
+  [
     getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
     getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_PATH,
     service,
     '/images/icons/icon-192x192.png',
   ].join('');
-};
 
 export const renderAlternateLinks = (link: AlternateLink) => (
   <link
     rel="alternate"
     href={link.href}
     hrefLang={link.hrefLang || ''}
-    /* @ts-ignore:   Property 'key' does not exist on type 'LinkProps & { css?: Interpolation<Theme>; }'.ts(2322) */
     key={link.hrefLang}
   />
 );

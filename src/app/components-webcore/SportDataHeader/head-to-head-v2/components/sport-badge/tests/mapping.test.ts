@@ -2,18 +2,18 @@ import type { BadgePlaceholderFallbackType } from '../../../types';
 import { getImage, hasMapping } from '../badges-map';
 
 describe('get image', () => {
-  test.each<BadgePlaceholderFallbackType>(['badge', 'flag'])(
-    'returns fallback if URN or ID is not mapped, use placeholder fallback is true and placeholder fallback type is "%s"',
-    placeholderFallbackType => {
-      const src = getImage({
-        id: 'urn:bbc:sportsdata:blitzball:team:super-team',
-        usePlaceholderFallback: true,
-        placeholderFallbackType,
-      });
+  test.each<BadgePlaceholderFallbackType>([
+    'badge',
+    'flag',
+  ])('returns fallback if URN or ID is not mapped, use placeholder fallback is true and placeholder fallback type is "%s"', placeholderFallbackType => {
+    const src = getImage({
+      id: 'urn:bbc:sportsdata:blitzball:team:super-team',
+      usePlaceholderFallback: true,
+      placeholderFallbackType,
+    });
 
-      expect(src).not.toBeUndefined();
-    },
-  );
+    expect(src).not.toBeUndefined();
+  });
 
   test('returns undefined if URN or ID is not mapped and use placeholder fallback is falsy', () => {
     expect(

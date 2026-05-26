@@ -1,9 +1,9 @@
-import { ServiceTheme } from '#app/models/types/theming';
-import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
+import type { ServiceTheme } from '#app/models/types/theming';
+import brandSVG from '../chameleonLogos/thai';
 import thaiScript from '../fontScripts/thai';
 import thaiFontVariants from '../fontVariants/thai';
+import { GHOST, POSTBOX, POSTBOX_30, WHITE } from '../palette';
 import withThemeProvider from '../withThemeProvider';
-import brandSVG from '../chameleonLogos/thai';
 
 export const theme: ServiceTheme = {
   palette: {

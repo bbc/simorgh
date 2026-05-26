@@ -1,39 +1,35 @@
 /* eslint-disable import/prefer-default-export */
-import type { ReactNode } from 'react';
-import { LIVE_LIGHT } from '#app/components/ThemeProvider/palette';
-import { REITH_FONTS_DIR } from '#app/components/ThemeProvider/fontFaces';
-import { Services } from '#app/models/types/global';
-import { FetchError } from '#app/models/types/fetch';
-import getPageData from '#utilities/pageRequests/getPageData';
+
+import { NextApiRequest, NextApiResponse } from 'next';
 import { ImageResponse } from 'next/og';
+import type { ReactNode } from 'react';
+
+import sharp from 'sharp';
+
+import { REITH_FONTS_DIR } from '#app/components/ThemeProvider/fontFaces';
+import { LIVE_LIGHT } from '#app/components/ThemeProvider/palette';
+import defaultServiceVariants from '#app/lib/config/services/defaultServiceVariants';
 import {
-  getArticleId,
-  getTipoId,
-} from '#app/routes/utils/constructPageFetchUrl';
+  ROUTING_INFORMATION,
+  SERVER_SIDE_REQUEST_FAILED,
+} from '#app/lib/logger.const';
 import {
   INTERNAL_SERVER_ERROR,
   NOT_FOUND,
   OK,
 } from '#app/lib/statusCodes.const';
-import defaultServiceVariants from '#app/lib/config/services/defaultServiceVariants';
+import { FetchError } from '#app/models/types/fetch';
+import { Services } from '#app/models/types/global';
+import {
+  getArticleId,
+  getTipoId,
+} from '#app/routes/utils/constructPageFetchUrl';
+import nodeLogger from '#lib/logger.node';
 import sendCustomMetric from '#utilities/customMetrics';
 import { NON_200_RESPONSE } from '#utilities/customMetrics/metrics.const';
-import nodeLogger from '#lib/logger.node';
-import {
-  ROUTING_INFORMATION,
-  SERVER_SIDE_REQUEST_FAILED,
-} from '#app/lib/logger.const';
-import sharp from 'sharp';
-import { NextApiRequest, NextApiResponse } from 'next';
-import Badge from '../Badge';
-import {
-  extractArticleData,
-  extractLiveData,
-  pageTypeToLog,
-  responseNotFound,
-  responseServerError,
-} from '../utils';
+import getPageData from '#utilities/pageRequests/getPageData';
 import BackgroundImage from '../BackgroundImage';
+import Badge from '../Badge';
 import {
   ArabicLiveSVG,
   ArabicMostReadSVG,
@@ -42,6 +38,13 @@ import {
   HindiMostReadSVG,
   HindiTopStoriesSVG,
 } from '../NonLatinBadges';
+import {
+  extractArticleData,
+  extractLiveData,
+  pageTypeToLog,
+  responseNotFound,
+  responseServerError,
+} from '../utils';
 
 const logger = nodeLogger(__filename);
 

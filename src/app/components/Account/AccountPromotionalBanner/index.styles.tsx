@@ -1,4 +1,5 @@
-import { Theme, css } from '@emotion/react';
+import { css, type Theme } from '@emotion/react';
+
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import { DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS } from './utilities';
 

@@ -1,3 +1,4 @@
+// biome-ignore-all lint/style/noCommonJs: we want this
 const regexes = {
   AMP_REGEX: /\.amp$/,
   APP_REGEX: /\.app$/,

@@ -1,6 +1,6 @@
-import pageVisit from './pageVisit';
-import testsThatAlwaysRunForAllPages from '../../testsForAllPages';
 import runTestsForPage from '../../../support/helpers/runTestsForPage';
+import testsThatAlwaysRunForAllPages from '../../testsForAllPages';
+import pageVisit from './pageVisit';
 
 const canonicalTestSuites = [
   {
@@ -19,12 +19,10 @@ const canonicalTestSuites = [
   },
 ];
 
-const liteTestSuites = canonicalTestSuites.map(testSuite => {
-  return {
-    ...testSuite,
-    path: `${testSuite.path}.lite`,
-  };
-});
+const liteTestSuites = canonicalTestSuites.map(testSuite => ({
+  ...testSuite,
+  path: `${testSuite.path}.lite`,
+}));
 
 const testDetails = {
   pageType: 'send',

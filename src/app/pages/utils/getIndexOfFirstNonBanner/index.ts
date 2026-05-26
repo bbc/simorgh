@@ -1,7 +1,4 @@
-import { Curation, VISUAL_STYLE } from '#app/models/types/curationData';
+import { type Curation, VISUAL_STYLE } from '#app/models/types/curationData';
 
-export default (curations: Curation[]) => {
-  return curations.findIndex(
-    ({ visualStyle }) => visualStyle !== VISUAL_STYLE.BANNER,
-  );
-};
+export default (curations: Curation[]) =>
+  curations.findIndex(({ visualStyle }) => visualStyle !== VISUAL_STYLE.BANNER);

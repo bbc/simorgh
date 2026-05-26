@@ -4,8 +4,9 @@ import readme from './README.md';
 import {
   EmbedConsentBannerCanonical,
   EmbedConsentBannerAmp,
-  ConsentBannerProviders,
 } from '.';
+
+import { type ConsentBannerProviders } from './types';
 
 interface Props {
   isAmp?: boolean;

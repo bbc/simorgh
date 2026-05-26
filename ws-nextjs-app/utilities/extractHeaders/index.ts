@@ -1,4 +1,5 @@
-import { IncomingHttpHeaders } from 'http';
+import type { IncomingHttpHeaders } from 'node:http';
+
 import { COUNTRIES_WITH_COOKIE_BANNER } from '#app/lib/utilities/cookieCountries';
 
 const extractHeaders = (headers: IncomingHttpHeaders) => {

@@ -1,11 +1,11 @@
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import ThemeProvider from '#app/components/ThemeProvider';
-import { Services } from '#app/models/types/global';
+import type { Services } from '#app/models/types/global';
 import fixture from '#data/kyrgyz/topics/cvpv9djp9qqt.json';
 import {
-  Curation,
-  Summary,
+  type Curation,
+  type Summary,
   VISUAL_STYLE,
   VISUAL_PROMINENCE,
 } from '#app/models/types/curationData';

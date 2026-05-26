@@ -1,20 +1,20 @@
-import buildIChefURL from '#lib/utilities/ichefURL';
-import filterForBlockType from '#lib/utilities/blockHandlers';
-import {
+import type {
   OptimoImageBlock,
   OptimoRawImageBlock,
 } from '#app/models/types/optimo';
-import {
+import filterForBlockType from '#lib/utilities/blockHandlers';
+import buildIChefURL from '#lib/utilities/ichefURL';
+import type {
   AresMediaBlock,
   AresMediaMetadataBlock,
   ConfigBuilderProps,
   ConfigBuilderReturnProps,
   PlaylistItem,
 } from '../types';
-import getCaptionBlock from '../utils/getCaptionBlock';
 import buildPlaceholderConfig from '../utils/buildPlaceholderConfig';
-import shouldDisplayAds from '../utils/shouldDisplayAds';
+import getCaptionBlock from '../utils/getCaptionBlock';
 import getMediaOrientation from '../utils/getMediaOrientation';
+import shouldDisplayAds from '../utils/shouldDisplayAds';
 import { getAmpIframeUrl, getExternalEmbedUrl } from '../utils/urlConstructors';
 
 const DEFAULT_WIDTH = 512;

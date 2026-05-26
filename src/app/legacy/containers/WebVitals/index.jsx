@@ -1,12 +1,12 @@
 // Hooks
 import { use } from 'react';
-import useWebVitals from '@bbc/web-vitals';
-import useToggle from '#hooks/useToggle';
 
-// Contexts
-import { UserContext } from '#contexts/UserContext';
+import useWebVitals from '@bbc/web-vitals';
 
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+// Contexts
+import { UserContext } from '#contexts/UserContext';
+import useToggle from '#hooks/useToggle';
 
 const WebVitals = ({ pageType }) => {
   const { personalisationEnabled } = use(UserContext);
@@ -24,7 +24,6 @@ const WebVitals = ({ pageType }) => {
     : null;
 
   if (!wsPageType) {
-    // eslint-disable-next-line no-console
     console.error('Web Vitals: No page type to report');
   }
 

@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
+
 import getEffectiveNetworkType from '#app/lib/utilities/getEffectiveNetworkType';
-import { NetworkStatus } from './type';
+import type { NetworkStatus } from './type';
 
 /**
  * A hook to monitor and provide real-time network connectivity status.
@@ -64,7 +65,7 @@ const useNetworkStatusTracker = (): NetworkStatus => {
         connection.removeEventListener('change', handleConnectionChange);
       }
     };
-  }, []);
+  }, [handleOnline, handleOffline, handleConnectionChange]);
 
   return networkStatus;
 };

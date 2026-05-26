@@ -1,3 +1,6 @@
+import userEvent from '@testing-library/user-event';
+
+import { LiveRegionContextProvider } from '#app/components/LiveRegion/LiveRegionContext';
 import {
   act,
   fireEvent,
@@ -5,17 +8,14 @@ import {
   screen,
   waitFor,
 } from '#app/components/react-testing-library-with-providers';
-import userEvent from '@testing-library/user-event';
-import { LiveRegionContextProvider } from '#app/components/LiveRegion/LiveRegionContext';
-
+import { FormContext } from '../../FormContext';
+import { FormScreen, HtmlType } from '../../types';
 import FileField from '.';
 import {
   AUDIO_SVG_DATA_URI,
   DOCUMENT_SVG_DATA_URI,
   VIDEO_SVG_DATA_URI,
 } from './svgs';
-import { FormContext } from '../../FormContext';
-import { FormScreen, HtmlType } from '../../types';
 
 const defaultInputState = {
   isValid: true,
@@ -66,16 +66,16 @@ describe('File', () => {
   });
 
   it('should visually hide the original input with type=file', async () => {
-    const { container } = await act(async () => {
-      return render(
+    const { container } = await act(async () =>
+      render(
         <FileField
           id="foo"
           name="bar"
           inputState={defaultInputState}
           {...mockDefaultProps}
         />,
-      );
-    });
+      ),
+    );
 
     const inputFile = container.querySelector('#foo');
 
@@ -85,16 +85,16 @@ describe('File', () => {
   it('should click visually hidden input when upload button is clicked', async () => {
     const user = userEvent.setup();
 
-    const { container } = await act(async () => {
-      return render(
+    const { container } = await act(async () =>
+      render(
         <FileField
           id="foo"
           name="bar"
           inputState={defaultInputState}
           {...mockDefaultProps}
         />,
-      );
-    });
+      ),
+    );
 
     const uploadButton = screen.getByRole('button', {
       name: /choose a file/i,
@@ -140,8 +140,8 @@ describe('File', () => {
   });
 
   it('should call the function to update state when a file is added', async () => {
-    const { container } = await act(async () => {
-      return render(
+    const { container } = await act(async () =>
+      render(
         <FormContext.Provider value={mockContextValue}>
           <FileField
             id="foo"
@@ -150,8 +150,8 @@ describe('File', () => {
             {...mockDefaultProps}
           />
         </FormContext.Provider>,
-      );
-    });
+      ),
+    );
 
     const inputFile = container.querySelector('#foo') as Element;
     fireEvent.change(inputFile, { target: { files: [mockImgFile] } });

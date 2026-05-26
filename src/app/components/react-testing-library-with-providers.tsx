@@ -1,16 +1,22 @@
-import { FC, PropsWithChildren, ReactElement } from 'react';
-import { render, RenderOptions } from '@testing-library/react';
+import type { FC, PropsWithChildren, ReactElement } from 'react';
+
+import { type RenderOptions, render } from '@testing-library/react';
 
 import { AccountProvider } from '#app/contexts/AccountContext';
-import { IdctaConfig } from '#app/models/types/account';
-import { ServiceContextProvider } from '../contexts/ServiceContext';
+import type { IdctaConfig } from '#app/models/types/account';
+import { EventTrackingContextProvider } from '../contexts/EventTrackingContext';
 import { RequestContextProvider } from '../contexts/RequestContext';
+import { ServiceContextProvider } from '../contexts/ServiceContext';
 import { ToggleContextProvider } from '../contexts/ToggleContext';
 import { UserContextProvider } from '../contexts/UserContext';
-import { EventTrackingContextProvider } from '../contexts/EventTrackingContext';
+import type {
+  PageTypes,
+  Services,
+  Toggles,
+  Variants,
+} from '../models/types/global';
+import type { ATIData } from './ATIAnalytics/types';
 import ThemeProvider from './ThemeProvider';
-import { PageTypes, Services, Toggles, Variants } from '../models/types/global';
-import { ATIData } from './ATIAnalytics/types';
 
 jest.mock('./ThemeProvider');
 
@@ -63,45 +69,43 @@ const AllTheProviders: FC<Props> = ({
   isNextJs = false,
   isUK = null,
   idctaConfig = null,
-}: Props) => {
-  return (
-    <ToggleContextProvider toggles={toggles}>
-      <ServiceContextProvider
+}: Props) => (
+  <ToggleContextProvider toggles={toggles}>
+    <ServiceContextProvider
+      service={service}
+      variant={variant}
+      pageLang={pageLang}
+    >
+      <RequestContextProvider
+        id={id}
+        bbcOrigin={bbcOrigin}
+        pageType={pageType}
+        isAmp={isAmp}
+        isApp={isApp}
+        isLite={isLite}
+        isNextJs={isNextJs}
         service={service}
         variant={variant}
-        pageLang={pageLang}
+        pathname={pathname}
+        derivedPageType={derivedPageType}
+        showAdsBasedOnLocation={showAdsBasedOnLocation}
+        showCookieBannerBasedOnCountry={showCookieBannerBasedOnCountry}
+        statusCode={statusCode}
+        isUK={isUK}
       >
-        <RequestContextProvider
-          id={id}
-          bbcOrigin={bbcOrigin}
-          pageType={pageType}
-          isAmp={isAmp}
-          isApp={isApp}
-          isLite={isLite}
-          isNextJs={isNextJs}
-          service={service}
-          variant={variant}
-          pathname={pathname}
-          derivedPageType={derivedPageType}
-          showAdsBasedOnLocation={showAdsBasedOnLocation}
-          showCookieBannerBasedOnCountry={showCookieBannerBasedOnCountry}
-          statusCode={statusCode}
-          isUK={isUK}
-        >
-          <AccountProvider initialConfig={idctaConfig}>
-            <EventTrackingContextProvider atiData={atiData}>
-              <UserContextProvider>
-                <ThemeProvider service={service} variant={variant}>
-                  {children}
-                </ThemeProvider>
-              </UserContextProvider>
-            </EventTrackingContextProvider>
-          </AccountProvider>
-        </RequestContextProvider>
-      </ServiceContextProvider>
-    </ToggleContextProvider>
-  );
-};
+        <AccountProvider initialConfig={idctaConfig}>
+          <EventTrackingContextProvider atiData={atiData}>
+            <UserContextProvider>
+              <ThemeProvider service={service} variant={variant}>
+                {children}
+              </ThemeProvider>
+            </UserContextProvider>
+          </EventTrackingContextProvider>
+        </AccountProvider>
+      </RequestContextProvider>
+    </ServiceContextProvider>
+  </ToggleContextProvider>
+);
 
 const customRender = (
   ui: ReactElement,
@@ -162,4 +166,5 @@ const customRender = (
 };
 
 export * from '@testing-library/react';
-export { customRender as render, AllTheProviders };
+
+export { AllTheProviders, customRender as render };

@@ -1,8 +1,9 @@
 import { Helmet } from 'react-helmet';
+
 import {
+  act,
   render,
   screen,
-  act,
 } from '#app/components/react-testing-library-with-providers';
 import liveTvFixture from '#data/dari/watch/bbc_afghan_tv/live.json';
 import LiveTv from './live/LiveTvPageLayout';
@@ -22,15 +23,13 @@ const mockPageDataWithMetadata = ({
   description?: string;
   seoTitle?: string;
   seoDescription?: string;
-}) => {
-  return {
-    ...mockPageData,
-    title,
-    description,
-    seoTitle,
-    seoDescription,
-  };
-};
+}) => ({
+  ...mockPageData,
+  title,
+  description,
+  seoTitle,
+  seoDescription,
+});
 
 describe('Live TV Page', () => {
   beforeEach(() => {

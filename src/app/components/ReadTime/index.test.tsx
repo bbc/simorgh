@@ -1,7 +1,7 @@
 import { render } from '#app/components/react-testing-library-with-providers';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import { ServiceConfig } from '#app/models/types/serviceConfig';
-import { Services } from '#app/models/types/global';
+import type { Services } from '#app/models/types/global';
+import type { ServiceConfig } from '#app/models/types/serviceConfig';
 import * as viewTracking from '../../hooks/useViewTracker';
 import ReadTimeArticle from '.';
 
@@ -118,27 +118,24 @@ describe('ReadTime', () => {
         locale: 'bn',
         expectedReadTime: 'পড়ার সময়: ৯ মিনিট',
       },
-    ])(
-      'should format the read time to its localized $serviceName version',
-      ({
+    ])('should format the read time to its localized $serviceName version', ({
+      readTimeValue,
+      serviceName,
+      serviceConfig,
+      locale,
+      expectedReadTime,
+    }) => {
+      const { getByText } = ReadTimeWithContext({
         readTimeValue,
-        serviceName,
-        serviceConfig,
-        locale,
-        expectedReadTime,
-      }) => {
-        const { getByText } = ReadTimeWithContext({
-          readTimeValue,
-          contextStub: generateServiceContextStub(
-            serviceName as Services,
-            serviceConfig,
-            locale,
-          ),
-        });
+        contextStub: generateServiceContextStub(
+          serviceName as Services,
+          serviceConfig,
+          locale,
+        ),
+      });
 
-        expect(getByText(expectedReadTime)).toBeInTheDocument();
-      },
-    );
+      expect(getByText(expectedReadTime)).toBeInTheDocument();
+    });
 
     it('should not render when translations are missing', () => {
       const { queryByTestId } = ReadTimeWithContext({

@@ -1,6 +1,6 @@
-import { ReverbClient } from '#models/types/eventTracking';
 import { BumpType, Player } from '#app/components/MediaLoader/types';
 import { EffectiveNetworkType } from '#app/models/types/global';
+import { ReverbClient } from '#models/types/eventTracking';
 
 declare global {
   interface Navigator {
@@ -63,5 +63,3 @@ declare global {
     }) => void;
   }
 }
-
-export {};

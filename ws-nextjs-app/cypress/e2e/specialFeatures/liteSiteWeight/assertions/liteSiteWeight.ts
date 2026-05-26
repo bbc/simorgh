@@ -2,8 +2,8 @@
 import { PageTypes } from '#app/models/types/global';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceParametersType } from '../../../../types';
-import interceptGetRequests from '../helpers/interceptGetRequests';
 import getTotalPageSize from '../helpers/getTotalPageSize';
+import interceptGetRequests from '../helpers/interceptGetRequests';
 import roundTo2Decimals from '../helpers/roundTo2Decimals';
 
 const MAX_PAGE_WEIGHT_KB = 50;
@@ -15,12 +15,11 @@ const PAGE_TYPE_PAGE_WEIGHT_MAPPING = {
 const getMaxPageWeight = (pageType: PageTypes) =>
   PAGE_TYPE_PAGE_WEIGHT_MAPPING[pageType] || MAX_PAGE_WEIGHT_KB;
 
-const formatTableData = (sizes: { url: string; size: number }[]) => {
-  return sizes.map(({ url, size }) => ({
+const formatTableData = (sizes: { url: string; size: number }[]) =>
+  sizes.map(({ url, size }) => ({
     Request: url,
     'Request Size (KB)': roundTo2Decimals(size),
   }));
-};
 
 export default ({ path, pageType, headers }: ServiceParametersType) => {
   describe('', () => {

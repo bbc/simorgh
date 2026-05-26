@@ -1,19 +1,20 @@
 import { fireEvent } from '@testing-library/dom';
-import { RequestContextProvider } from '#contexts/RequestContext';
+
 import { ARTICLE_PAGE, HOME_PAGE } from '#app/routes/utils/pageTypes';
+import { RequestContextProvider } from '#contexts/RequestContext';
 import {
-  render,
   act,
+  render,
 } from '../../../components/react-testing-library-with-providers';
 import {
-  ServiceContextProvider,
   ServiceContext,
+  ServiceContextProvider,
 } from '../../../contexts/ServiceContext';
-import { service as newsConfig } from '../../../lib/config/services/news';
-import { service as indonesiaConfig } from '../../../lib/config/services/indonesia';
-import Navigation from './index';
-import * as viewTracking from '../../../hooks/useViewTracker';
 import * as clickTracking from '../../../hooks/useClickTrackerHandler';
+import * as viewTracking from '../../../hooks/useViewTracker';
+import { service as indonesiaConfig } from '../../../lib/config/services/indonesia';
+import { service as newsConfig } from '../../../lib/config/services/news';
+import Navigation from './index';
 
 describe('Navigation Container', () => {
   it('should correctly render amp navigation', () => {

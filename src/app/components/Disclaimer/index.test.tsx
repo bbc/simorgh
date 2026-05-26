@@ -1,5 +1,5 @@
-import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { ServiceContext } from '#contexts/ServiceContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { render, screen } from '../react-testing-library-with-providers';
 import DisclaimerComponent from '.';
 

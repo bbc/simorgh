@@ -23,22 +23,23 @@ describe('validateFunctions', () => {
       inputValue: ' HEllo world!   ',
       expectedValid: true,
     },
-  ])(
-    'text',
-    ({ inputRequired, inputValue, expectedValid: expectedInvalid }) => {
-      it(`should return a ${expectedInvalid} invalid value on a user input of ${inputValue} and a required field of ${inputRequired}`, () => {
-        const textData = {
-          isValid: false,
-          required: inputRequired,
-          value: inputValue,
-          type: 'text',
-        } as unknown as FieldData;
+  ])('text', ({
+    inputRequired,
+    inputValue,
+    expectedValid: expectedInvalid,
+  }) => {
+    it(`should return a ${expectedInvalid} invalid value on a user input of ${inputValue} and a required field of ${inputRequired}`, () => {
+      const textData = {
+        isValid: false,
+        required: inputRequired,
+        value: inputValue,
+        type: 'text',
+      } as unknown as FieldData;
 
-        const result = validateFunctions.text(textData);
-        expect(result.isValid).toBe(expectedInvalid);
-      });
-    },
-  );
+      const result = validateFunctions.text(textData);
+      expect(result.isValid).toBe(expectedInvalid);
+    });
+  });
 
   describe.each([
     {
@@ -71,22 +72,23 @@ describe('validateFunctions', () => {
       inputValue: 'helloworld',
       expectedValid: false,
     },
-  ])(
-    'email',
-    ({ inputRequired, inputValue, expectedValid: expectedInvalid }) => {
-      it(`should return a ${expectedInvalid} invalid value on a user input of ${inputValue} and a required field of ${inputRequired}`, () => {
-        const textData = {
-          isValid: false,
-          required: inputRequired,
-          value: inputValue,
-          type: 'email',
-        } as unknown as FieldData;
+  ])('email', ({
+    inputRequired,
+    inputValue,
+    expectedValid: expectedInvalid,
+  }) => {
+    it(`should return a ${expectedInvalid} invalid value on a user input of ${inputValue} and a required field of ${inputRequired}`, () => {
+      const textData = {
+        isValid: false,
+        required: inputRequired,
+        value: inputValue,
+        type: 'email',
+      } as unknown as FieldData;
 
-        const result = validateFunctions.email(textData);
-        expect(result.isValid).toBe(expectedInvalid);
-      });
-    },
-  );
+      const result = validateFunctions.email(textData);
+      expect(result.isValid).toBe(expectedInvalid);
+    });
+  });
 
   describe.each([
     {
@@ -198,36 +200,33 @@ describe('validateFunctions', () => {
       expectedMessageCode: InvalidMessageCodes.FileTooBig,
       testMessage: 'File size total too big.',
     },
-  ])(
-    'file',
-    ({
-      inputRequired,
-      inputValue,
-      expectedValid: expectedInvalid,
-      minFileCount = 0,
-      maxFileCount = 3,
-      expectedMessageCode,
-      testMessage,
-    }) => {
-      it(`${testMessage}`, () => {
-        const textData = {
-          min: minFileCount,
-          max: maxFileCount,
-          isValid: false,
-          required: inputRequired,
-          value: inputValue.map(fileData => ({
-            file: fileData,
-          })),
-          fileTypes: ['image/jpeg'],
-          type: 'file',
-        } as unknown as FieldData;
+  ])('file', ({
+    inputRequired,
+    inputValue,
+    expectedValid: expectedInvalid,
+    minFileCount = 0,
+    maxFileCount = 3,
+    expectedMessageCode,
+    testMessage,
+  }) => {
+    it(`${testMessage}`, () => {
+      const textData = {
+        min: minFileCount,
+        max: maxFileCount,
+        isValid: false,
+        required: inputRequired,
+        value: inputValue.map(fileData => ({
+          file: fileData,
+        })),
+        fileTypes: ['image/jpeg'],
+        type: 'file',
+      } as unknown as FieldData;
 
-        const result = validateFunctions.file(textData);
-        expect(result.isValid).toBe(expectedInvalid);
-        expect(result.messageCode).toBe(expectedMessageCode);
-      });
-    },
-  );
+      const result = validateFunctions.file(textData);
+      expect(result.isValid).toBe(expectedInvalid);
+      expect(result.messageCode).toBe(expectedMessageCode);
+    });
+  });
 
   describe.each([
     {
@@ -271,30 +270,27 @@ describe('validateFunctions', () => {
       ],
       testMessage: 'File too small.',
     },
-  ])(
-    'individual files',
-    ({
-      inputRequired,
-      inputValue,
-      expectedValid: expectedInvalid,
-      expectedValue,
-      testMessage,
-    }) => {
-      it(`${testMessage}`, () => {
-        const textData = {
-          min: 0,
-          max: 3,
-          isValid: false,
-          required: inputRequired,
-          value: inputValue,
-          fileTypes: ['image/jpeg'],
-          type: 'file',
-        } as unknown as FieldData;
+  ])('individual files', ({
+    inputRequired,
+    inputValue,
+    expectedValid: expectedInvalid,
+    expectedValue,
+    testMessage,
+  }) => {
+    it(`${testMessage}`, () => {
+      const textData = {
+        min: 0,
+        max: 3,
+        isValid: false,
+        required: inputRequired,
+        value: inputValue,
+        fileTypes: ['image/jpeg'],
+        type: 'file',
+      } as unknown as FieldData;
 
-        const result = validateFunctions.file(textData);
-        expect(result.isValid).toBe(expectedInvalid);
-        expect(result.value).toStrictEqual(expectedValue);
-      });
-    },
-  );
+      const result = validateFunctions.file(textData);
+      expect(result.isValid).toBe(expectedInvalid);
+      expect(result.value).toStrictEqual(expectedValue);
+    });
+  });
 });

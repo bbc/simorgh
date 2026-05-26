@@ -1,12 +1,13 @@
 import {
-  ElementType,
-  ComponentPropsWithoutRef,
+  type ComponentPropsWithoutRef,
+  type ElementType,
+  type ForwardedRef,
   forwardRef,
-  ForwardedRef,
 } from 'react';
-import { Theme } from '@emotion/react';
 
-import { GelFontSize, FontVariant } from '../../models/types/theming';
+import type { Theme } from '@emotion/react';
+
+import type { FontVariant, GelFontSize } from '../../models/types/theming';
 
 interface Props<T extends React.ElementType> {
   as?: T;

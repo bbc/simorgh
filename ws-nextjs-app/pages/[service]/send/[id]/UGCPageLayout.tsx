@@ -1,16 +1,17 @@
 import { use } from 'react';
+
 import Metadata from '#app/components/Metadata';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import styles from './styles';
-import { PageProps } from './types';
+import ClosedScreen from './ClosedScreen';
+import ErrorScreen from './ErrorScreen';
 import { FormContext, FormContextProvider } from './FormContext';
 import FormScreen from './FormScreen';
-import SuccessScreen from './SuccessScreen';
-import ErrorScreen from './ErrorScreen';
-import UploadingScreen from './UploadingScreen';
-import GenericMessage from './GenericMessage';
 import fallbackTranslations from './fallbackTranslations';
-import ClosedScreen from './ClosedScreen';
+import GenericMessage from './GenericMessage';
+import SuccessScreen from './SuccessScreen';
+import styles from './styles';
+import { PageProps } from './types';
+import UploadingScreen from './UploadingScreen';
 
 const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
   const {
@@ -87,7 +88,6 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
                               retentionPeriod={settings.retentionPeriodDays}
                             />
                           );
-                        case 'error':
                         default:
                           return <ErrorScreen title={title} />;
                       }

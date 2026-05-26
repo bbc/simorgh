@@ -1,5 +1,5 @@
-/* eslint-disable no-console */
-const fs = require('fs');
+// biome-ignore-all lint/suspicious/noConsole: we want this
+const fs = require('node:fs');
 
 const getCategoryScores = data => {
   const { categories } = data;

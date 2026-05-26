@@ -1,5 +1,5 @@
-import { Services } from '#app/models/types/global';
 import { OK } from '#app/lib/statusCodes.const';
+import { Services } from '#app/models/types/global';
 
 const retrieveDownloads = async (service: Services) => {
   const fetchURl = `https://ws-downloads.files.bbci.co.uk/downloads-data-${service}.json`;
@@ -12,11 +12,8 @@ const retrieveDownloads = async (service: Services) => {
       const downloads = await response.json();
       return downloads;
     };
-    return retrieveDownloads().then(data => {
-      return data;
-    });
-  } catch (e) {
-    console.error(e);
+    return retrieveDownloads().then(data => data);
+  } catch (_e) {
     return false;
   }
 };

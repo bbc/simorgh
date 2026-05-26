@@ -1,8 +1,8 @@
-import { Summary } from '#app/models/types/curationData';
 import {
   render,
   screen,
 } from '#app/components/react-testing-library-with-providers';
+import type { Summary } from '#app/models/types/curationData';
 import SocialLinks from '.';
 
 const eventTrackingData = {

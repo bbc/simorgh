@@ -1,4 +1,4 @@
-import { interceptATIAnalyticsBeacons, COMPONENTS } from '../helpers';
+import { COMPONENTS, interceptATIAnalyticsBeacons } from '../helpers';
 import { assertATIComponentClickEvent, assertATIComponentViewEvent } from '.';
 
 const { RADIO_SCHEDULE } = COMPONENTS;

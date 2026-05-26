@@ -33,25 +33,25 @@ describe('getAssetOrigins', () => {
         '/russian/articles/c0000000001o.amp',
       ],
     },
-  ])(
-    'should return the asset origins as an array for $environment environment for AMP and LITE pages',
-    ({ environment, pagePath }) => {
-      process.env.SIMORGH_APP_ENV = environment;
+  ])('should return the asset origins as an array for $environment environment for AMP and LITE pages', ({
+    environment,
+    pagePath,
+  }) => {
+    process.env.SIMORGH_APP_ENV = environment;
 
-      pagePath.forEach(path => {
-        expect(getAssetOrigins(path)).toEqual({
-          dnsPrefetchOrigins: [
-            'http://some.ati.static.host.net',
-            ...analyticsOrigins,
-          ],
-          preconnectOrigins: [
-            'https://ichef.bbci.co.uk',
-            'http://some.statichost.net',
-          ],
-        });
+    pagePath.forEach(path => {
+      expect(getAssetOrigins(path)).toEqual({
+        dnsPrefetchOrigins: [
+          'http://some.ati.static.host.net',
+          ...analyticsOrigins,
+        ],
+        preconnectOrigins: [
+          'https://ichef.bbci.co.uk',
+          'http://some.statichost.net',
+        ],
       });
-    },
-  );
+    });
+  });
 
   it.each([
     {
@@ -74,26 +74,26 @@ describe('getAssetOrigins', () => {
         '/russian/articles/c0000000001o',
       ],
     },
-  ])(
-    'should return the asset origins as an array for $environment environment for CANONICAL pages',
-    ({ environment, pagePath }) => {
-      process.env.SIMORGH_APP_ENV = environment;
+  ])('should return the asset origins as an array for $environment environment for CANONICAL pages', ({
+    environment,
+    pagePath,
+  }) => {
+    process.env.SIMORGH_APP_ENV = environment;
 
-      pagePath.forEach(path => {
-        expect(getAssetOrigins(path)).toEqual({
-          dnsPrefetchOrigins: [
-            'http://some.ati.static.host.net',
-            ...analyticsOrigins,
-            'https://mybbc-analytics.files.bbci.co.uk',
-          ],
-          preconnectOrigins: [
-            'https://ichef.bbci.co.uk',
-            'http://some.statichost.net',
-          ],
-        });
+    pagePath.forEach(path => {
+      expect(getAssetOrigins(path)).toEqual({
+        dnsPrefetchOrigins: [
+          'http://some.ati.static.host.net',
+          ...analyticsOrigins,
+          'https://mybbc-analytics.files.bbci.co.uk',
+        ],
+        preconnectOrigins: [
+          'https://ichef.bbci.co.uk',
+          'http://some.statichost.net',
+        ],
       });
-    },
-  );
+    });
+  });
 
   afterEach(() => {
     delete process.env.SIMORGH_APP_ENV;

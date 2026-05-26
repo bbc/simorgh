@@ -1,16 +1,16 @@
+import type { Player, SMPEvent } from '../MediaLoader/types';
+import {
+  fireEvent,
+  render,
+  screen,
+} from '../react-testing-library-with-providers';
 import Component, {
+  getPlayerInstance,
+  playbackEndedCallback,
   playlistLoadedCallback,
   statsNavigationCallback,
-  playbackEndedCallback,
-  getPlayerInstance,
 } from '.';
-import {
-  screen,
-  render,
-  fireEvent,
-} from '../react-testing-library-with-providers';
 import blocks from './fixture';
-import { Player, SMPEvent } from '../MediaLoader/types';
 
 const eventTrackingData = {
   componentName: 'portrait-video-modal',

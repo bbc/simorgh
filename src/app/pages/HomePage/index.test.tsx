@@ -1,19 +1,20 @@
 import { fireEvent } from '@testing-library/react';
 import { Helmet } from 'react-helmet';
-import { data as kyrgyzHomePageData } from '#data/kyrgyz/homePage/index.json';
+
+import { service as pidginServiceConfig } from '#app/lib/config/services/pidgin';
 import { data as afriqueHomePageDataFixture } from '#data/afrique/homePage/index.json';
+import { data as kyrgyzHomePageData } from '#data/kyrgyz/homePage/index.json';
 import { data as pidginHomePageDataFixture } from '#data/pidgin/homePage/index.json';
 import { data as portugueseHomePageDataFixture } from '#data/portuguese/homePage/index.json';
 import { data as wsHomePageData } from '#data/ws/homePage/index.json';
-import { service as pidginServiceConfig } from '#app/lib/config/services/pidgin';
-import useViewTracker from '../../hooks/useViewTracker';
-import useClickTrackerHandler from '../../hooks/useClickTrackerHandler';
 import {
   render,
   screen,
 } from '../../components/react-testing-library-with-providers';
-import HomePage from './HomePage';
+import useClickTrackerHandler from '../../hooks/useClickTrackerHandler';
+import useViewTracker from '../../hooks/useViewTracker';
 import { suppressPropWarnings } from '../../legacy/psammead/psammead-test-helpers/src';
+import HomePage from './HomePage';
 
 jest.mock('../../hooks/useClickTrackerHandler', () => ({
   __esModule: true,
@@ -176,9 +177,8 @@ describe('Home Page', () => {
       service: 'kyrgyz',
     });
 
-    const getLinkedDataOutput = () => {
-      return JSON.parse(Helmet.peek().scriptTags[0].innerHTML);
-    };
+    const getLinkedDataOutput = () =>
+      JSON.parse(Helmet.peek().scriptTags[0].innerHTML);
 
     expect(getLinkedDataOutput()).toMatchSnapshot();
   });
@@ -721,25 +721,26 @@ describe('Home Page', () => {
           },
           click: true,
         },
-      ])(
-        'calls click tracking handler with correct data for $description',
-        ({ getElement, getExpectedData, click }) => {
-          render(<HomePage pageData={afriqueHomePageData} />, {
-            service: 'afrique',
-          });
+      ])('calls click tracking handler with correct data for $description', ({
+        getElement,
+        getExpectedData,
+        click,
+      }) => {
+        render(<HomePage pageData={afriqueHomePageData} />, {
+          service: 'afrique',
+        });
 
-          const element = getElement();
-          expect(element).toBeInTheDocument();
+        const element = getElement();
+        expect(element).toBeInTheDocument();
 
-          if (click) {
-            fireEvent.click(element);
-          }
+        if (click) {
+          fireEvent.click(element);
+        }
 
-          expect(useClickTrackerHandler as jest.Mock).toHaveBeenCalledWith(
-            getExpectedData(afriqueHomePageData),
-          );
-        },
-      );
+        expect(useClickTrackerHandler as jest.Mock).toHaveBeenCalledWith(
+          getExpectedData(afriqueHomePageData),
+        );
+      });
     });
 
     describe('Simple curation - click tracking', () => {
@@ -796,39 +797,40 @@ describe('Home Page', () => {
           },
           click: true,
         },
-      ])(
-        'calls click tracking handler with correct data for $description',
-        ({ getElement, getExpectedData, click }) => {
-          // @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations
-          render(<HomePage pageData={pidginHomePageDataFixture} />, {
-            service: 'pidgin',
-          });
+      ])('calls click tracking handler with correct data for $description', ({
+        getElement,
+        getExpectedData,
+        click,
+      }) => {
+        // @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations
+        render(<HomePage pageData={pidginHomePageDataFixture} />, {
+          service: 'pidgin',
+        });
 
-          const element = getElement();
-          expect(element).toBeInTheDocument();
-          if (click) {
-            fireEvent.click(element);
-          }
+        const element = getElement();
+        expect(element).toBeInTheDocument();
+        if (click) {
+          fireEvent.click(element);
+        }
 
-          const calls = (useClickTrackerHandler as jest.Mock).mock.calls
-            .map(([arg]) => arg)
-            .filter(Boolean);
+        const calls = (useClickTrackerHandler as jest.Mock).mock.calls
+          .map(([arg]) => arg)
+          .filter(Boolean);
 
-          const expected = getExpectedData(pidginHomePageDataFixture);
+        const expected = getExpectedData(pidginHomePageDataFixture);
 
-          // Use asymmetricMatch if using expect.objectContaining, else fallback to deep match
-          const matchingCall = calls.find(call =>
-            expected.asymmetricMatch
-              ? expected.asymmetricMatch(call)
-              : call.componentName === expected.componentName &&
-                call.itemTracker &&
-                call.groupTracker &&
-                call.itemTracker.text === expected.itemTracker.text,
-          );
+        // Use asymmetricMatch if using expect.objectContaining, else fallback to deep match
+        const matchingCall = calls.find(call =>
+          expected.asymmetricMatch
+            ? expected.asymmetricMatch(call)
+            : call.componentName === expected.componentName &&
+              call.itemTracker &&
+              call.groupTracker &&
+              call.itemTracker.text === expected.itemTracker.text,
+        );
 
-          expect(matchingCall).toBeTruthy();
-        },
-      );
+        expect(matchingCall).toBeTruthy();
+      });
     });
     describe('Useful Links - click tracking', () => {
       beforeEach(() => {

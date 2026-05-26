@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
+
 import { useDecision } from '@optimizely/react-sdk';
 
 type Props = {

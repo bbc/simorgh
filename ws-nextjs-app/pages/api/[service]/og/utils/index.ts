@@ -1,3 +1,5 @@
+import { NextApiResponse } from 'next';
+
 import { ROUTING_INFORMATION } from '#app/lib/logger.const';
 import { INTERNAL_SERVER_ERROR, NOT_FOUND } from '#app/lib/statusCodes.const';
 import filterForBlockType from '#app/lib/utilities/blockHandlers';
@@ -6,7 +8,6 @@ import { Services } from '#app/models/types/global';
 import { Article } from '#app/models/types/optimo';
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import nodeLogger from '#lib/logger.node';
-import { NextApiResponse } from 'next';
 
 const logger = nodeLogger(__filename);
 

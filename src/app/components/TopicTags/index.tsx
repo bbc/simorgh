@@ -1,9 +1,10 @@
 import { use } from 'react';
-import { ServiceContext } from '#app/contexts/ServiceContext';
+
 import { RequestContext } from '#app/contexts/RequestContext';
-import { TopicTag } from '#app/models/types/metadata';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
+import type { TopicTag } from '#app/models/types/metadata';
 import styles from './index.styles';
 
 const eventTrackingData = {

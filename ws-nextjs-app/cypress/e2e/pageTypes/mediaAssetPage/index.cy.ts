@@ -1,21 +1,21 @@
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
-import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
+import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
 import runTestsForPage, {
   TestDataType,
 } from '../../../support/helpers/runTestsForPage';
-import testsForAllPages from '../../testsForAllPages';
-import testsForAllCanonicalPages from '../../testsForAllCanonicalPages';
-import testsForAllAMPPages from '../../testsForAllAMPPages';
-import ampArticleTests from './testsForAMPOnly';
-import canonicalArticleTests from './testsForCanonicalOnly';
-import liteTests from '../articlePage/testsForLiteOnly';
-import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
+import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
 import {
   assertDropdownNavigationComponentClick,
   assertDropdownNavigationComponentView,
   assertScrollableNavigationComponentClick,
   assertScrollableNavigationComponentView,
 } from '../../specialFeatures/atiAnalytics/assertions/navigation';
+import testsForAllAMPPages from '../../testsForAllAMPPages';
+import testsForAllCanonicalPages from '../../testsForAllCanonicalPages';
+import testsForAllPages from '../../testsForAllPages';
+import liteTests from '../articlePage/testsForLiteOnly';
+import ampArticleTests from './testsForAMPOnly';
+import canonicalArticleTests from './testsForCanonicalOnly';
 
 const canonicalTests = [
   testsForAllPages,
@@ -344,13 +344,11 @@ const canonicalTestSuites = Cypress.env('SMOKE')
   ? canonicalSmokeTestSuites
   : canonicalNonSmokeTestSuites;
 
-const ampTestSuites = canonicalTestSuites.map(testSuite => {
-  return {
-    ...testSuite,
-    path: getPathWithSuffix({ path: testSuite.path, suffix: '.amp' }),
-    tests: [...ampTests],
-  };
-});
+const ampTestSuites = canonicalTestSuites.map(testSuite => ({
+  ...testSuite,
+  path: getPathWithSuffix({ path: testSuite.path, suffix: '.amp' }),
+  tests: [...ampTests],
+}));
 
 // SKIPPED: We are not able to set page-type headers in cy.click and cy.back
 const liteTestSuites = Cypress.env('SMOKE')
@@ -358,13 +356,11 @@ const liteTestSuites = Cypress.env('SMOKE')
       .filter(
         ({ service }) => !['news', 'sport', 'newsround'].includes(service),
       )
-      .map(testSuite => {
-        return {
-          ...testSuite,
-          path: `${testSuite.path}.lite`,
-          tests: [liteTests],
-        };
-      })
+      .map(testSuite => ({
+        ...testSuite,
+        path: `${testSuite.path}.lite`,
+        tests: [liteTests],
+      }))
   : [];
 
 runTestsForPage({

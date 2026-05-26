@@ -1,19 +1,19 @@
 import {
   act,
-  render,
   fireEvent,
+  render,
 } from '#app/components/react-testing-library-with-providers';
-import {
-  title,
-  description,
-  sectionTitle,
-  privacyNotice,
-  fields,
-} from './fixture';
 import * as FormContextModule from '../FormContext';
 import { FormContext } from '../FormContext';
-import Form from '.';
 import { Field, FormScreen, InvalidMessageCodes } from '../types';
+import Form from '.';
+import {
+  description,
+  fields,
+  privacyNotice,
+  sectionTitle,
+  title,
+} from './fixture';
 
 jest.mock('next/router', () => ({
   useRouter: () => ({
@@ -48,8 +48,8 @@ describe('Form', () => {
       .spyOn(FormContextModule, 'useFormContext')
       .mockImplementationOnce(() => mockContextValue);
 
-    const { container } = await act(() => {
-      return render(
+    const { container } = await act(() =>
+      render(
         <Form
           title={title}
           description={description}
@@ -57,8 +57,8 @@ describe('Form', () => {
           privacyNotice={privacyNotice}
           fields={fields as Field[]}
         />,
-      );
-    });
+      ),
+    );
     const form = container.querySelector('form');
     expect(form).toBeInTheDocument();
   });
@@ -66,8 +66,8 @@ describe('Form', () => {
     const handleSubmit = jest.fn(e => e.preventDefault());
     const handleChange = jest.fn();
     const handleFocusOut = jest.fn();
-    const { container } = await act(() => {
-      return render(
+    const { container } = await act(() =>
+      render(
         <FormContext.Provider
           value={{
             formState: {},
@@ -92,8 +92,8 @@ describe('Form', () => {
           />
           ,
         </FormContext.Provider>,
-      );
-    });
+      ),
+    );
     const submitButton = container.querySelector('button');
     fireEvent.click(submitButton as HTMLButtonElement);
     expect(handleSubmit).toHaveBeenCalled();
@@ -129,8 +129,8 @@ describe('Form', () => {
         ],
         attemptedSubmitCount: 1,
       }));
-    const { container } = await act(() => {
-      return render(
+    const { container } = await act(() =>
+      render(
         <Form
           title={title}
           description={description}
@@ -138,8 +138,8 @@ describe('Form', () => {
           privacyNotice={privacyNotice}
           fields={fields as Field[]}
         />,
-      );
-    });
+      ),
+    );
     const errorSummary = container.querySelector('strong[id=errorSummaryBox]');
     expect(errorSummary).toBeInTheDocument();
   });
@@ -154,8 +154,8 @@ describe('Form', () => {
         ...mockContextValue,
         attemptedSubmitCount: 1,
       }));
-    const { container } = await act(() => {
-      return render(
+    const { container } = await act(() =>
+      render(
         <Form
           title={title}
           description={description}
@@ -163,8 +163,8 @@ describe('Form', () => {
           privacyNotice={privacyNotice}
           fields={fields as Field[]}
         />,
-      );
-    });
+      ),
+    );
     const errorSummmary = container.querySelector('strong[id=errorSummaryBox]');
     expect(errorSummmary).toBeNull();
   });

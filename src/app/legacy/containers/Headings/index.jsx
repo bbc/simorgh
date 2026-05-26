@@ -1,11 +1,12 @@
-import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
-import { Headline, SubHeading } from '#psammead/psammead-headings/src';
+import pathOr from 'ramda/src/pathOr';
+
+import { GridItemLarge, GridItemMedium } from '#components/Grid';
 import idSanitiser from '#lib/utilities/idSanitiser';
-import { GridItemMedium, GridItemLarge } from '#components/Grid';
+import { Headline, SubHeading } from '#psammead/psammead-headings/src';
+import Blocks from '../Blocks';
 import Fragment from '../Fragment';
 import InlineContainer from '../InlineContainer';
-import Blocks from '../Blocks';
 
 const StyledHeadline = styled(Headline)`
   :focus {

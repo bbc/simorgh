@@ -1,4 +1,4 @@
-import { EventStatus, HeadToHeadV2Data } from '../types';
+import type { EventStatus, HeadToHeadV2Data } from '../types';
 
 const ftFallback = { value: 'FT', accessible: 'Full time' };
 const aetFallback = { value: 'AET', accessible: 'After extra time' };

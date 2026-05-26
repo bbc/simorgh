@@ -1,22 +1,24 @@
 import { use } from 'react';
+
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
-import {
-  StoryPromoLi,
-  StoryPromoUl,
-} from '#psammead/psammead-story-promo-list/src';
+
 import useViewTracker from '#hooks/useViewTracker';
 import {
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
 } from '#psammead/gel-foundations/src/spacings';
+import {
+  StoryPromoLi,
+  StoryPromoUl,
+} from '#psammead/psammead-story-promo-list/src';
+import FrostedGlassPromo from '../../../components/FrostedGlassPromo/lazy';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import CpsOnwardJourney from '../CpsOnwardJourney';
-import FrostedGlassPromo from '../../../components/FrostedGlassPromo/lazy';
 
 const eventTrackingData = {
   block: {
@@ -74,27 +76,25 @@ const PromoListComponent = ({ promoItems, dir = 'ltr', experimentProps }) => {
 
   return (
     <StoryPromoUlFeatures role="list">
-      {promoItems.map((item, promoIndex) => {
-        return (
-          <StoryPromoLiFeatures
-            key={item.id || item.uri}
-            {...viewTracker}
-            border={false}
-            role="listitem"
-          >
-            <FrostedGlassPromo
-              item={item}
-              index={promoIndex}
-              dir={dir}
-              displayImage
-              displaySummary={false}
-              serviceDatetimeLocale={serviceDatetimeLocale}
-              eventTrackingData={eventTrackingDataWithOptimizely}
-              sectionType="features-and-analysis"
-            />
-          </StoryPromoLiFeatures>
-        );
-      })}
+      {promoItems.map((item, promoIndex) => (
+        <StoryPromoLiFeatures
+          key={item.id || item.uri}
+          {...viewTracker}
+          border={false}
+          role="listitem"
+        >
+          <FrostedGlassPromo
+            item={item}
+            index={promoIndex}
+            dir={dir}
+            displayImage
+            displaySummary={false}
+            serviceDatetimeLocale={serviceDatetimeLocale}
+            eventTrackingData={eventTrackingDataWithOptimizely}
+            sectionType="features-and-analysis"
+          />
+        </StoryPromoLiFeatures>
+      ))}
     </StoryPromoUlFeatures>
   );
 };

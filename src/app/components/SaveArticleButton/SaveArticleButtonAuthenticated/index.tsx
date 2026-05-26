@@ -1,12 +1,12 @@
 import { use } from 'react';
-import { ServiceContext } from '#contexts/ServiceContext';
-import { RequestContext } from '#app/contexts/RequestContext';
-import parseRoute from '#app/routes/utils/parseRoute';
-import useUASButton, { UASAction } from '#app/hooks/useUASButton';
-import useClickTracker from '#app/hooks/useClickTrackerHandler';
-import useViewTracker from '#app/hooks/useViewTracker';
-import SaveButton from '#app/components/SaveButton';
 
+import SaveButton from '#app/components/SaveButton';
+import { RequestContext } from '#app/contexts/RequestContext';
+import useClickTracker from '#app/hooks/useClickTrackerHandler';
+import useUASButton, { UASAction } from '#app/hooks/useUASButton';
+import useViewTracker from '#app/hooks/useViewTracker';
+import parseRoute from '#app/routes/utils/parseRoute';
+import { ServiceContext } from '#contexts/ServiceContext';
 import type { SaveArticleButtonProps } from '../index';
 
 const SaveArticleButtonAuthenticated = ({
@@ -43,7 +43,7 @@ const SaveArticleButtonAuthenticated = ({
   if (!saveArticleButton) return null;
 
   if (error) {
-    // eslint-disable-next-line no-console
+    // biome-ignore lint/suspicious/noConsole: we want this
     console.log('Error fetching saved status for article:', {
       articleId,
       error,

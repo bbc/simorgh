@@ -1,11 +1,18 @@
-import { use, useEffect, MouseEvent, SetStateAction, Dispatch } from 'react';
-import Text from '#app/components/Text';
+import {
+  type Dispatch,
+  type MouseEvent,
+  type SetStateAction,
+  use,
+  useEffect,
+} from 'react';
+
 import { TriangleDown } from '#app/components/icons';
-import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
-import { EventTrackingData } from '#app/lib/analyticsUtils/types';
-import useViewTracker from '#app/hooks/useViewTracker';
+import Text from '#app/components/Text';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import { ComponentExperimentProps } from '#app/models/types/global';
+import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import useViewTracker from '#app/hooks/useViewTracker';
+import type { EventTrackingData } from '#app/lib/analyticsUtils/types';
+import type { ComponentExperimentProps } from '#app/models/types/global';
 import styles from './index.styles';
 
 export type ContinueReadingButtonProps = {

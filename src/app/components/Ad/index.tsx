@@ -1,10 +1,11 @@
 import { use } from 'react';
-import useToggle from '#hooks/useToggle';
+
 import { RequestContext } from '#contexts/RequestContext';
+import useToggle from '#hooks/useToggle';
 import AmpAd from './Amp';
 import CanonicalAd from './Canonical';
-import { AdProps } from './types';
 import AdBootstrapJs from './Canonical/AdBootstrapJs';
+import type { AdProps } from './types';
 
 const AdContainer = ({ slotType, className, adcampaign }: AdProps) => {
   const { isAmp, isLite, showAdsBasedOnLocation, nonce } = use(RequestContext);

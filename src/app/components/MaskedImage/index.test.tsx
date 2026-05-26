@@ -1,7 +1,7 @@
 import {
+  act,
   render,
   screen,
-  act,
   waitFor,
 } from '#app/components/react-testing-library-with-providers';
 import MaskedImage from './index';

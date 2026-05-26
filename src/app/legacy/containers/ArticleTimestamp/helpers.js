@@ -1,4 +1,6 @@
+// biome-ignore-all lint/correctness/useIsNan: we want this
 import moment from 'moment-timezone';
+
 import isTenHoursAgo from '#lib/utilities/isTenHoursAgo';
 import { formatDate, formatDateAndTime } from './timeFormats';
 
@@ -33,9 +35,8 @@ export const formatType = ({
 };
 
 export const isValidDateTime = dateTime => {
-  // eslint-disable-next-line no-restricted-globals
   if (isNaN(dateTime) || dateTime === null) {
     return false;
   }
-  return !isNaN(new Date(dateTime)); // eslint-disable-line no-restricted-globals
+  return !isNaN(new Date(dateTime));
 };

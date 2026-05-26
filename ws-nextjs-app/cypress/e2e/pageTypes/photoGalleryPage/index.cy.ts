@@ -1,18 +1,18 @@
 import { PHOTO_GALLERY_PAGE } from '#app/routes/utils/pageTypes';
-import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
 import runTestsForPage, {
   TestDataType,
 } from '../../../support/helpers/runTestsForPage';
-import testsForAllPages from '../../testsForAllPages';
-import testsForAllCanonicalPages from '../../testsForAllCanonicalPages';
-import testsForAllAMPPages from '../../testsForAllAMPPages';
-import liteArticleTests from '../articlePage/testsForLiteOnly';
+import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
 import {
   assertDropdownNavigationComponentClick,
   assertDropdownNavigationComponentView,
   assertScrollableNavigationComponentClick,
   assertScrollableNavigationComponentView,
 } from '../../specialFeatures/atiAnalytics/assertions/navigation';
+import testsForAllAMPPages from '../../testsForAllAMPPages';
+import testsForAllCanonicalPages from '../../testsForAllCanonicalPages';
+import testsForAllPages from '../../testsForAllPages';
+import liteArticleTests from '../articlePage/testsForLiteOnly';
 
 const tests = [testsForAllPages, testsForAllCanonicalPages];
 
@@ -159,23 +159,19 @@ const canonicalTestSuites = Cypress.env('SMOKE')
   ? canonicalSmokeTestSuites
   : canonicalNonSmokeTestSuites;
 
-const ampTestSuites = canonicalTestSuites.map(testSuite => {
-  return {
-    ...testSuite,
-    path: `${testSuite.path}.amp`,
-    tests: [testsForAllPages, testsForAllAMPPages],
-  };
-});
+const ampTestSuites = canonicalTestSuites.map(testSuite => ({
+  ...testSuite,
+  path: `${testSuite.path}.amp`,
+  tests: [testsForAllPages, testsForAllAMPPages],
+}));
 
 const liteTestSuites = canonicalTestSuites
   .filter(({ service }) => !['news', 'sport', 'newsround'].includes(service))
-  .map(testSuite => {
-    return {
-      ...testSuite,
-      path: `${testSuite.path}.lite`,
-      tests: [testsForAllPages, liteArticleTests],
-    };
-  });
+  .map(testSuite => ({
+    ...testSuite,
+    path: `${testSuite.path}.lite`,
+    tests: [testsForAllPages, liteArticleTests],
+  }));
 
 runTestsForPage({
   pageType: PHOTO_GALLERY_PAGE,

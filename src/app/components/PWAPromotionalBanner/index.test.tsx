@@ -1,7 +1,7 @@
-import { render, act } from '../react-testing-library-with-providers';
-import PWAPromotionalBanner from './index';
-import { PromotionalBannerConfig } from '../PromotionalBanner/index.types';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import type { PromotionalBannerConfig } from '../PromotionalBanner/index.types';
+import { act, render } from '../react-testing-library-with-providers';
+import PWAPromotionalBanner from './index';
 
 const baseBanner: PromotionalBannerConfig = {
   title: 'Install our app',

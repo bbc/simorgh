@@ -1,16 +1,18 @@
-import { use, Fragment } from 'react';
+import { Fragment, use } from 'react';
+
 import pathOr from 'ramda/src/pathOr';
-import MediaIndicator from '#psammead/psammead-media-indicator/src';
-import {
-  IndexAlsos,
-  IndexAlso,
-  IndexAlsosUl,
-  IndexAlsosLi,
-} from '#psammead/psammead-story-promo/src/IndexAlsos';
+
 import {
   MEDIA_ASSET_PAGE,
   PHOTO_GALLERY_PAGE,
 } from '#app/routes/utils/pageTypes';
+import MediaIndicator from '#psammead/psammead-media-indicator/src';
+import {
+  IndexAlso,
+  IndexAlsos,
+  IndexAlsosLi,
+  IndexAlsosUl,
+} from '#psammead/psammead-story-promo/src/IndexAlsos';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 
 const MAX_NUM_INDEX_ALSOS = 3; // Cap the number of Index Alsos at 3.

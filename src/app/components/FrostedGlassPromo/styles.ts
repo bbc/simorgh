@@ -1,4 +1,4 @@
-import { css, Theme } from '@emotion/react';
+import { css, type Theme } from '@emotion/react';
 
 const BLUR_RADIUS = 15;
 const scaleAmount = 1 + BLUR_RADIUS / 100;

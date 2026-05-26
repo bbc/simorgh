@@ -1,9 +1,10 @@
+import { Helmet } from 'react-helmet';
+
 import {
+  act,
   render,
   screen,
-  act,
 } from '#app/components/react-testing-library-with-providers';
-import { Helmet } from 'react-helmet';
 import OfflinePage from './OfflinePage';
 
 describe('OfflinePage', () => {

@@ -1,4 +1,4 @@
-import { OptimoBlock } from '#app/models/types/optimo';
+import type { OptimoBlock } from '#app/models/types/optimo';
 
 export type Block = Omit<OptimoBlock, 'model'> & {
   model: { blocks: OptimoBlock[] };

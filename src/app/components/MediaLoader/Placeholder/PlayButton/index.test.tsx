@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-empty-function */
+// biome-ignore-all lint/suspicious/noEmptyBlockStatements: we want this
 import { render } from '#app/components/react-testing-library-with-providers';
 import PlayButton from './index';
 

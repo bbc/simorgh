@@ -1,6 +1,6 @@
-import { ATIData } from '#app/components/ATIAnalytics/types';
-import { ChartbeatProps } from '#app/components/ChartbeatAnalytics/types';
-import { LiveRadioBlock } from '#app/models/types/media';
+import type { ATIData } from '#app/components/ATIAnalytics/types';
+import type { ChartbeatProps } from '#app/components/ChartbeatAnalytics/types';
+import type { LiveRadioBlock } from '#app/models/types/media';
 
 export type LiveRadioPageProps = {
   language: string;

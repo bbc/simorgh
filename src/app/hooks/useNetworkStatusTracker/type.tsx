@@ -1,4 +1,4 @@
-import { EffectiveNetworkType } from '#app/models/types/global';
+import type { EffectiveNetworkType } from '#app/models/types/global';
 
 export type NetworkStatus = {
   isOnline: boolean;

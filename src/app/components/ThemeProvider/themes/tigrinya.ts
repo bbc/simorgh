@@ -1,13 +1,13 @@
-import { ServiceTheme } from '#app/models/types/theming';
-import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
-import noAscOrDescScript from '../fontScripts/noAscOrDesc';
+import type { ServiceTheme } from '#app/models/types/theming';
+import brandSVG from '../chameleonLogos/tigrinya';
 import {
   NOTO_SANS_ETHIOPIC_BOLD,
   NOTO_SANS_ETHIOPIC_REGULAR,
 } from '../fontFaces';
+import noAscOrDescScript from '../fontScripts/noAscOrDesc';
 import tigrinyaFontVariants from '../fontVariants/tigrinya';
+import { GHOST, POSTBOX, POSTBOX_30, WHITE } from '../palette';
 import withThemeProvider from '../withThemeProvider';
-import brandSVG from '../chameleonLogos/tigrinya';
 
 export const theme: ServiceTheme = {
   palette: {

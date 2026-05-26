@@ -1,3 +1,4 @@
+// biome-ignore-all lint/security/noDangerouslySetInnerHtml: this is fine
 import styled from '@emotion/styled';
 
 const Wrapper = styled.div`

@@ -2,7 +2,7 @@ import gurmukhi from '../../../components/ThemeProvider/fontScripts/gurmukhi';
 import '#psammead/psammead-locales/moment/pa-in';
 import '#psammead/moment-timezone-include/tz/Asia/Kolkata';
 import withContext from '../../../contexts/utils/withContext';
-import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
+import type { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
 export const service: DefaultServiceConfig = {
   default: {
@@ -154,11 +154,9 @@ export const service: DefaultServiceConfig = {
             accept: 'ਡਾਟਾ ਕਲੈਕਸ਼ਨ ਦੀ ਮਨਜ਼ੂਰੀ ਦੋ ਤੇ ਅੱਗੇ ਵਧੋ',
             reject: 'ਡਾਟਾ ਕਲੈਕਸ਼ਨ ਨੂੰ ਨਾਮਨਜ਼ੂਰ ਕਰੋ ਤੇ ਅੱਗੇ ਵਧੋ',
             initial: {
-              title:
-                'ਸਾਨੂੰ ਦੱਸੋ ਕਿ ਤੁਸੀਂ ਏਐਮਪੀ ’ਤੇ ਡਾਟਾ ਕਲੈਕਸ਼ਨ ਦੀ ਸਹਿਮਤੀ ਦੇ ਰਹੇ ਹੋ',
+              title: 'ਸਾਨੂੰ ਦੱਸੋ ਕਿ ਤੁਸੀਂ ਏਐਮਪੀ ’ਤੇ ਡਾਟਾ ਕਲੈਕਸ਼ਨ ਦੀ ਸਹਿਮਤੀ ਦੇ ਰਹੇ ਹੋ',
               description: {
-                first:
-                  'ਅਸੀਂ ਅਤੇ ਸਾਡੇ ਭਾਈਵਾਲ ਤਕਨੀਕ ਦੀ ਵਰਤੋਂ ਕਰਦੇ ਹਾਂ, ਜਿਵੇਂ ਕਿ ',
+                first: 'ਅਸੀਂ ਅਤੇ ਸਾਡੇ ਭਾਈਵਾਲ ਤਕਨੀਕ ਦੀ ਵਰਤੋਂ ਕਰਦੇ ਹਾਂ, ਜਿਵੇਂ ਕਿ ',
                 linkText: 'ਕੁਕੀਜ਼',
                 last: ' ਅਤੇ ਤੁਹਾਨੂੰ ਸਭ ਤੋਂ ਵਧੀਆ ਆਨਲਾਈਨ ਤਜਰਬਾ ਦੇਣ ਲਈ ਤੇ ਤੁਹਾਨੂੰ ਦਿਖਾਈ ਗਈ ਸਾਮਗਰੀ ਅਤੇ ਇਸ਼ਤਿਹਾਰਾਂ ਨੂੰ ਨਿੱਜੀ ਕਰਨ ਲਈ ਬ੍ਰਾਊਜ਼ਰ ਡਾਟਾ ਨੂੰ ਇਕੱਠਾ ਕਰਦੇ ਹਾਂ। ਜੇਕਰ ਤੁਸੀਂ ਸਹਿਮਤ ਹੋ ਤਾਂ ਸਾਨੂੰ ਦੱਸੋ।',
                 linkUrl:
@@ -167,8 +165,7 @@ export const service: DefaultServiceConfig = {
               manage: 'ਸੈਟਿੰਗਸ ਮੈਨੇਜ ਕਰੋ',
             },
             manage: {
-              title:
-                "ਏਐਮਪੀ ਪੇਜ ਦੀ ਸੈਟਿੰਗਸ 'ਤੇ ਜਾ ਕੇ ਆਪਣੀ ਮਨਜ਼ੂਰੀ ਨੂੰ ਮੈਨੇਜ ਕਰੋ",
+              title: "ਏਐਮਪੀ ਪੇਜ ਦੀ ਸੈਟਿੰਗਸ 'ਤੇ ਜਾ ਕੇ ਆਪਣੀ ਮਨਜ਼ੂਰੀ ਨੂੰ ਮੈਨੇਜ ਕਰੋ",
               description: {
                 para1:
                   'ਇਹ ਸੈਟਿੰਗਸ ਸਿਰਫ਼ ਏਐਮਪੀ ਪੰਨਿਆਂ ਲਈ ਹੀ ਹਨ, ਤੁਹਾਡੇ ਤੋਂ ਤੁਹਾਡੀ ਪਸੰਦ ਦੁਬਾਰਾ ਪੁੱਛੀ ਜਾ ਸਕਦੀ ਹੈ। ਜੇ ਤੁਸੀਂ ਬਿਨਾਂ ਏਐਮਪੀ ਵਾਲੇ ਬੀਬੀਸੀ ਪੰਨੇ ’ਤੇ ਜਾਂਦੇ ਹੋ।',
@@ -246,8 +243,7 @@ export const service: DefaultServiceConfig = {
         caption: {
           textPrefixVisuallyHidden: 'ਵੀਡੀਓ ਕੈਪਸ਼ਨ, ',
           text: "ਚਿਤਾਵਨੀ: ਬਾਹਰੀ ਸਾਈਟਾਂ ਦੀ ਸਮਗਰੀ 'ਚ ਇਸ਼ਤਿਹਾਰ ਹੋ ਸਕਦੇ ਹਨ",
-          articleText:
-            'ਚਿਤਾਵਨੀ: ਬੀਬੀਸੀ ਦੂਜੀਆਂ ਵੈਬਸਾਈਟਸ ਦੀ ਸਮੱਗਰੀ ਲਈ ਜ਼ਿੰਮੇਵਾਰ ਨਹੀਂ ਹੈ।',
+          articleText: 'ਚਿਤਾਵਨੀ: ਬੀਬੀਸੀ ਦੂਜੀਆਂ ਵੈਬਸਾਈਟਸ ਦੀ ਸਮੱਗਰੀ ਲਈ ਜ਼ਿੰਮੇਵਾਰ ਨਹੀਂ ਹੈ।',
           articleAdditionalText:
             '%provider_name% ਦੀ ਸਮੱਗਰੀ ਵਿੱਚ ਵਿਗਿਆਪਨ ਹੋ ਸਕਦਾ ਹੈ',
         },

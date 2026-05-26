@@ -1,4 +1,5 @@
 import Cookie from 'js-cookie';
+
 import onClient from '#lib/utilities/onClient';
 
 export const getAppType = platform => {

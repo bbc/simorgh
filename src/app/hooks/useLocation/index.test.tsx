@@ -1,6 +1,8 @@
-import { renderHook } from '#app/components/react-testing-library-with-providers';
-import { fireEvent } from '@testing-library/react';
 import { useState } from 'react';
+
+import { fireEvent } from '@testing-library/react';
+
+import { renderHook } from '#app/components/react-testing-library-with-providers';
 import useLocation, * as useLocationObj from '.';
 
 jest.mock('react', () => ({

@@ -1,71 +1,65 @@
 import { use } from 'react';
-import { Theme } from '@emotion/react';
+
+import type { Theme } from '@emotion/react';
+
+import type { BylineLinkedData, Tag } from '#app/components/LinkedData/types';
 import MediaLoader from '#app/components/MediaLoader';
-import { MediaBlock } from '#app/components/MediaLoader/types';
-import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
-import { BylineLinkedData, Tag } from '#app/components/LinkedData/types';
-import {
+import type { MediaBlock } from '#app/components/MediaLoader/types';
+import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
+import type { MediaOverrides } from '#app/models/types/media';
+import type {
   Article,
   OptimoBylineBlock,
   OptimoBylineContributorBlock,
 } from '#app/models/types/optimo';
-import { MediaOverrides } from '#app/models/types/media';
-import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
-import useToggle from '../../hooks/useToggle';
-import {
-  getArticleId,
-  getHeadline,
-  getSummary,
-  getFirstPublished,
-  getLastPublished,
-  getAboutTags,
-  getArticleSection,
-  getMentions,
-  getLang,
-} from '../../lib/utilities/parseAssetData';
-import filterForBlockType from '../../lib/utilities/blockHandlers';
-
+import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 import ArticleLinksBlock from '../../components/ArticleLinksBlock';
-
-import headings from '../../legacy/containers/Headings';
-import visuallyHiddenHeadline from '../../legacy/containers/VisuallyHiddenHeadline';
-import gist from '../../legacy/containers/Gist';
-import text from '../../legacy/containers/Text';
-import ImageWithCaption from '../../components/ImageWithCaption';
-import Blocks from '../../legacy/containers/Blocks';
-import Timestamp from '../../legacy/containers/ArticleTimestamp';
 import ATIAnalytics from '../../components/ATIAnalytics';
-import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
-import ComscoreAnalytics from '../../legacy/containers/ComscoreAnalytics';
-import SocialEmbedContainer from '../../legacy/containers/SocialEmbed';
-import fauxHeadline from '../../legacy/containers/FauxHeadline';
-import RelatedTopics from '../../components/RelatedTopics';
-import NielsenAnalytics from '../../legacy/containers/NielsenAnalytics';
-import ArticleMetadata from '../../legacy/containers/ArticleMetadata';
-import EmbedImages from '../../components/Embeds/EmbedImages';
-import EmbedHtml from '../../components/Embeds/EmbedHtml';
-import OEmbedLoader from '../../components/Embeds/OEmbed';
-
-import LinkedData from '../../components/LinkedData';
 import Byline from '../../components/Byline';
-
 import {
   bylineExtractor,
   categoryName,
   getAuthorTwitterHandle,
 } from '../../components/Byline/utilities';
-
-import { ServiceContext } from '../../contexts/ServiceContext';
-import { RequestContext } from '../../contexts/RequestContext';
-import RelatedContentSection from '../../components/RelatedContentSection';
-
-import SecondaryColumn from './SecondaryColumn';
-
-import styles from './MediaArticlePage.styles';
-import { ComponentToRenderProps, TimestampProps } from './types';
-import checkIsLiveMedia from './utils/checkIsLiveMedia';
-
+import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
+import EmbedHtml from '../../components/Embeds/EmbedHtml';
+import EmbedImages from '../../components/Embeds/EmbedImages';
+import OEmbedLoader from '../../components/Embeds/OEmbed';
+import ImageWithCaption from '../../components/ImageWithCaption';
+import LinkedData from '../../components/LinkedData';
 import { isPortraitVideo } from '../../components/MediaLoader/utils/isPortraitVideo';
+import RelatedContentSection from '../../components/RelatedContentSection';
+import RelatedTopics from '../../components/RelatedTopics';
+import { RequestContext } from '../../contexts/RequestContext';
+import { ServiceContext } from '../../contexts/ServiceContext';
+import useToggle from '../../hooks/useToggle';
+import ArticleMetadata from '../../legacy/containers/ArticleMetadata';
+import Timestamp from '../../legacy/containers/ArticleTimestamp';
+import Blocks from '../../legacy/containers/Blocks';
+import ComscoreAnalytics from '../../legacy/containers/ComscoreAnalytics';
+import fauxHeadline from '../../legacy/containers/FauxHeadline';
+import gist from '../../legacy/containers/Gist';
+import headings from '../../legacy/containers/Headings';
+import NielsenAnalytics from '../../legacy/containers/NielsenAnalytics';
+import SocialEmbedContainer from '../../legacy/containers/SocialEmbed';
+import text from '../../legacy/containers/Text';
+import visuallyHiddenHeadline from '../../legacy/containers/VisuallyHiddenHeadline';
+import filterForBlockType from '../../lib/utilities/blockHandlers';
+import {
+  getAboutTags,
+  getArticleId,
+  getArticleSection,
+  getFirstPublished,
+  getHeadline,
+  getLang,
+  getLastPublished,
+  getMentions,
+  getSummary,
+} from '../../lib/utilities/parseAssetData';
+import styles from './MediaArticlePage.styles';
+import SecondaryColumn from './SecondaryColumn';
+import type { ComponentToRenderProps, TimestampProps } from './types';
+import checkIsLiveMedia from './utils/checkIsLiveMedia';
 
 const getAudioVideoComponent =
   (isCpsMap: boolean) => (props: ComponentToRenderProps) => {

@@ -1,5 +1,7 @@
+// biome-ignore-all lint/complexity/useArrowFunction: we want this
+// biome-ignore-all lint/correctness/noUnusedVariables: we want this
+
 /* eslint-disable no-unused-vars */
-/* eslint-disable no-var */
 /* eslint-disable vars-on-top */
 /* eslint-disable func-names */
 

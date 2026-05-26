@@ -1,11 +1,12 @@
-/* eslint-disable jsx-a11y/aria-role */
+// biome-ignore-all lint/a11y/useValidAriaRole: we want this
+// biome-ignore-all lint/suspicious/noEmptyBlockStatements: we want this
 import type { MouseEvent } from 'react';
-
 import { use, useRef } from 'react';
-import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
-import useViewTracker from '#app/hooks/useViewTracker';
+
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import useViewTracker from '#app/hooks/useViewTracker';
 import styles from './styles';
 
 const ShareSvg = () => (
@@ -62,10 +63,7 @@ const ShareButton = ({
         url: shareUrl,
         title: headline,
       });
-    } catch (error) {
-      // eslint-disable-next-line no-console
-      console.log('Error sharing', error);
-    }
+    } catch (_error) {}
 
     setTimeout(() => focusRef.current?.focus(), 0);
   };

@@ -1,14 +1,9 @@
-import { type JSX } from 'react';
-import { useState, PropsWithChildren } from 'react';
-import ConsentBanner from './ConsentBanner';
+import type { JSX } from 'react';
+import { type PropsWithChildren, useState } from 'react';
 
-import { SocialEmbedProviders } from '../../models/types/global';
 import useClickTrackerHandler from '../../hooks/useClickTrackerHandler';
-
-export type ConsentBannerProviders = Extract<
-  SocialEmbedProviders,
-  'youtube' | 'tiktok' | 'twitter' | 'facebook' | 'instagram'
->;
+import ConsentBanner from './ConsentBanner';
+import { type ConsentBannerProviders, getEventTrackingData } from './types';
 
 export const CONSENT_BANNER_PROVIDERS: ConsentBannerProviders[] = [
   'youtube',
@@ -17,10 +12,6 @@ export const CONSENT_BANNER_PROVIDERS: ConsentBannerProviders[] = [
   'instagram',
   'twitter',
 ];
-
-export const getEventTrackingData = (provider: ConsentBannerProviders) => ({
-  componentName: `social-consent-banner-${provider}`,
-});
 
 type ConsentBannerProps = {
   provider: ConsentBannerProviders;
@@ -83,4 +74,4 @@ const EmbedConsentBannerCanonical = ({
   );
 };
 
-export { EmbedConsentBannerCanonical, EmbedConsentBannerAmp };
+export { EmbedConsentBannerAmp, EmbedConsentBannerCanonical };

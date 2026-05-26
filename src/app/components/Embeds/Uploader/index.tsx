@@ -1,10 +1,11 @@
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
+
 import CallToActionLink from '#app/components/CallToActionLink';
+import idSanitiser from '../../../lib/utilities/idSanitiser';
 import Paragraph from '../../Paragraph';
 import Text from '../../Text';
 import styles from './index.styles';
-import idSanitiser from '../../../lib/utilities/idSanitiser';
 
 interface UploaderProps {
   blocks?: object[];

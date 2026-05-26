@@ -1,8 +1,8 @@
 import { render } from '../../react-testing-library-with-providers';
-import { pidginPromos as fixture } from './fixtures';
-import mediaFixture from './mediaFixtures';
-import liveFixtures from './liveFixtures';
 import HierarchicalGrid from '.';
+import { pidginPromos as fixture } from './fixtures';
+import liveFixtures from './liveFixtures';
+import mediaFixture from './mediaFixtures';
 
 const minimalEventTrackingData = { componentName: 'test-component' };
 

@@ -1,5 +1,5 @@
 import filterForBlockType from '#lib/utilities/blockHandlers';
-import { ConfigBuilderProps, ConfigBuilderReturnProps } from '../types';
+import type { ConfigBuilderProps, ConfigBuilderReturnProps } from '../types';
 import AUDIO_UI_CONFIG from './constants';
 
 export default ({

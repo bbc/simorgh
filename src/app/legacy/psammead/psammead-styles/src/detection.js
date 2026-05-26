@@ -1,5 +1,3 @@
-/* eslint-disable import/prefer-default-export */
-
 /* In an ideal world; this would just be `@supports (display: grid)`.
  * This is not an ideal world. This is a world where some mobile vendor forked
  * Firefox 48 which had WIP grid support disabled behind a feature flag, and

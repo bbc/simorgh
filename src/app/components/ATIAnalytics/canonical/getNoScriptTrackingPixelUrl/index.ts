@@ -1,5 +1,6 @@
 import { reverbUrlHelper } from '@bbc/reverb-url-helper';
-import { ATIAnalyticsProps } from '../../types';
+
+import type { ATIAnalyticsProps } from '../../types';
 
 const getNoScriptTrackingPixelUrl = ({ reverbParams }: ATIAnalyticsProps) =>
   reverbUrlHelper.getTrackingPixelSrc(reverbParams);

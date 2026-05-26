@@ -220,42 +220,40 @@ describe('addProcessClientDeviceAndSendStaticBeaconToWindow script', () => {
           reverbUrl: 'https://logws1363.xiti.net/?',
         },
       },
-    ])(
-      'Adds marketing parameters to the beacon URL - $type',
-      ({ sendBeaconProps }) => {
-        window.location.search =
-          '?at_campaign=tactical&at_medium=display_ad&at_campaign_type=paid&at_content=ls&at_marketing_tactic=tactical&at_product=persian&at_genre=politics&at_ptr_name=bbc&at_objective=acquisition&at_audience_motivation=gmp&at_demographic=A9&at_format=image&at_creation=tactical_psiphon_a9&at_bbc_team=8ms&utm_source=mktg&utm_campaign=tacticalps';
-        window.location.pathname = '/persian.lite';
+    ])('Adds marketing parameters to the beacon URL - $type', ({
+      sendBeaconProps,
+    }) => {
+      window.location.search =
+        '?at_campaign=tactical&at_medium=display_ad&at_campaign_type=paid&at_content=ls&at_marketing_tactic=tactical&at_product=persian&at_genre=politics&at_ptr_name=bbc&at_objective=acquisition&at_audience_motivation=gmp&at_demographic=A9&at_format=image&at_creation=tactical_psiphon_a9&at_bbc_team=8ms&utm_source=mktg&utm_campaign=tacticalps';
+      window.location.pathname = '/persian.lite';
 
-        window.processClientDeviceAndSendStaticBeacon(sendBeaconProps);
+      window.processClientDeviceAndSendStaticBeacon(sendBeaconProps);
 
-        const callParam = (window.sendStaticBeacon as jest.Mock).mock
-          .calls[0][0];
-        const parsedATIParams = Object.fromEntries(
-          new URLSearchParams(callParam),
-        );
-        expect(parsedATIParams).toEqual(
-          expect.objectContaining({
-            src_campaign: 'tactical',
-            src_medium: 'display_ad',
-            src_campaign_type: 'paid',
-            src_content: 'ls',
-            src_marketing_tactic: 'tactical',
-            src_product: 'persian',
-            src_genre: 'politics',
-            src_ptr_name: 'bbc',
-            src_objective: 'acquisition',
-            src_audience_motivation: 'gmp',
-            src_demographic: 'A9',
-            src_format: 'image',
-            src_creation: 'tactical_psiphon_a9',
-            src_bbc_team: '8ms',
-            utm_source: 'mktg',
-            utm_campaign: 'tacticalps',
-          }),
-        );
-      },
-    );
+      const callParam = (window.sendStaticBeacon as jest.Mock).mock.calls[0][0];
+      const parsedATIParams = Object.fromEntries(
+        new URLSearchParams(callParam),
+      );
+      expect(parsedATIParams).toEqual(
+        expect.objectContaining({
+          src_campaign: 'tactical',
+          src_medium: 'display_ad',
+          src_campaign_type: 'paid',
+          src_content: 'ls',
+          src_marketing_tactic: 'tactical',
+          src_product: 'persian',
+          src_genre: 'politics',
+          src_ptr_name: 'bbc',
+          src_objective: 'acquisition',
+          src_audience_motivation: 'gmp',
+          src_demographic: 'A9',
+          src_format: 'image',
+          src_creation: 'tactical_psiphon_a9',
+          src_bbc_team: '8ms',
+          utm_source: 'mktg',
+          utm_campaign: 'tacticalps',
+        }),
+      );
+    });
 
     it.each([
       {
@@ -306,27 +304,25 @@ describe('addProcessClientDeviceAndSendStaticBeaconToWindow script', () => {
           reverbUrl: 'https://logws1363.xiti.net/?',
         },
       },
-    ])(
-      'Does not add garbage params as marketing parameters to the beacon URL - $type',
-      ({ sendBeaconProps }) => {
-        window.location.search =
-          '?at_campaign=tactical&at_medium=display_ad&at_campaign_type=paid&at_content=ls&at_marketing_tactic=tactical&at_product=persian&at_genre=politics&at_ptr_name=bbc&at_objective=acquisition&at_audience_motivation=gmp&at_demographic=A9&at_format=image&at_creation=tactical_psiphon_a9&at_bbc_team=8ms&utm_source=mktg&utm_campaign=tacticalps&garbage=should_not_be_included';
-        window.location.pathname = '/persian.lite';
+    ])('Does not add garbage params as marketing parameters to the beacon URL - $type', ({
+      sendBeaconProps,
+    }) => {
+      window.location.search =
+        '?at_campaign=tactical&at_medium=display_ad&at_campaign_type=paid&at_content=ls&at_marketing_tactic=tactical&at_product=persian&at_genre=politics&at_ptr_name=bbc&at_objective=acquisition&at_audience_motivation=gmp&at_demographic=A9&at_format=image&at_creation=tactical_psiphon_a9&at_bbc_team=8ms&utm_source=mktg&utm_campaign=tacticalps&garbage=should_not_be_included';
+      window.location.pathname = '/persian.lite';
 
-        window.processClientDeviceAndSendStaticBeacon(sendBeaconProps);
+      window.processClientDeviceAndSendStaticBeacon(sendBeaconProps);
 
-        const callParam = (window.sendStaticBeacon as jest.Mock).mock
-          .calls[0][0];
-        const parsedATIParams = Object.fromEntries(
-          new URLSearchParams(callParam),
-        );
-        expect(parsedATIParams).not.toEqual(
-          expect.objectContaining({
-            garbage: 'should_not_be_included',
-          }),
-        );
-      },
-    );
+      const callParam = (window.sendStaticBeacon as jest.Mock).mock.calls[0][0];
+      const parsedATIParams = Object.fromEntries(
+        new URLSearchParams(callParam),
+      );
+      expect(parsedATIParams).not.toEqual(
+        expect.objectContaining({
+          garbage: 'should_not_be_included',
+        }),
+      );
+    });
     it('Calls sendStaticBeacon() with the correct url', () => {
       document.cookie =
         'atuserid={"val":"userCookieId"}; path=/; max-age=397; Secure;';

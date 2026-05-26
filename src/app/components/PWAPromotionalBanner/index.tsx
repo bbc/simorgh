@@ -1,17 +1,18 @@
-import { useState, use, useCallback } from 'react';
-import usePWAInstallPrompt from '#app/hooks/usePWAInstallPrompt';
+import { use, useCallback, useState } from 'react';
+
 import PromotionalBanner from '#app/components/PromotionalBanner';
-import { ServiceContext } from '#app/contexts/ServiceContext';
+import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import { RequestContext } from '#app/contexts/RequestContext';
+import { ServiceContext } from '#app/contexts/ServiceContext';
+import useAndroidDetection from '#app/hooks/useAndroidDetection';
+import useClickTracker from '#app/hooks/useClickTrackerHandler';
+import useCustomEventTracker from '#app/hooks/useCustomEventTracker';
+import useIsPWA from '#app/hooks/useIsPWA';
 import useOptimizelyVariation, {
   ExperimentType,
 } from '#app/hooks/useOptimizelyVariation';
-import useAndroidDetection from '#app/hooks/useAdroidDetection';
-import useClickTracker from '#app/hooks/useClickTrackerHandler';
+import usePWAInstallPrompt from '#app/hooks/usePWAInstallPrompt';
 import useViewTracker from '#app/hooks/useViewTracker';
-import useCustomEventTracker from '#app/hooks/useCustomEventTracker';
-import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
-import useIsPWA from '#app/hooks/useIsPWA';
 
 const PWA_PROMOTIONAL_BANNER_EXPERIMENT_NAME = 'newswb_ws_pwa_promo_prompt';
 const PWA_BANNER_DISMISS_KEY = 'pwa_promotional_banner_dismissals';

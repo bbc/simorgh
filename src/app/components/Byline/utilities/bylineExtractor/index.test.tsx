@@ -1,22 +1,21 @@
 import {
   bylineSamplePost,
-  bylinesSamplePostWithoutImage,
   bylineSamplePostWithUnsupportedImage,
+  bylinesSamplePostWithoutImage,
   bylinesSamplePostWithoutSubtitle,
-  // eslint-disable-next-line import/no-relative-packages
 } from '../../../../../../ws-nextjs-app/pages/[service]/live/[id]/Post/fixture';
+import filterForBlockType from '../../../../lib/utilities/blockHandlers';
 import {
-  bylineWithNoAuthor,
   bylineWithLink,
-  bylineWithNonPngPhoto,
   bylineWithMultipleContributors,
+  bylineWithNoAuthor,
+  bylineWithNonPngPhoto,
 } from '../../../../pages/ArticlePage/fixtureData';
 import {
   ARTICLE_PAGE,
   LIVE_PAGE,
   MEDIA_ARTICLE_PAGE,
 } from '../../../../routes/utils/pageTypes';
-import filterForBlockType from '../../../../lib/utilities/blockHandlers';
 import bylineExtractor from '.';
 
 describe('bylineExtractor', () => {

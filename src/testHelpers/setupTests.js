@@ -1,4 +1,3 @@
-/* eslint-disable no-underscore-dangle */
 import colours from 'colors';
 import '@testing-library/jest-dom';
 
@@ -8,7 +7,7 @@ import '@testing-library/jest-dom';
  *  */
 if (window?._virtualConsole) {
   const listeners = window._virtualConsole.listeners('jsdomError');
-  const originalListener = listeners && listeners[0];
+  const originalListener = listeners?.[0];
 
   window._virtualConsole.removeAllListeners('jsdomError');
 
@@ -109,7 +108,6 @@ const didSuppressWarning = (message, ...rest) => {
   return false;
 };
 
-// eslint-disable-next-line no-console
 console.error = (message, ...rest) => {
   if (didSuppressWarning(message, ...rest)) return;
 
@@ -132,7 +130,6 @@ Please fix the following:
 global.setImmediate =
   global.setImmediate || ((fn, ...args) => global.setTimeout(fn, 0, ...args));
 
-// eslint-disable-next-line no-console
 console.warn = (message, ...rest) => {
   if (didSuppressWarning(message, ...rest)) return;
   warn(message, ...rest);

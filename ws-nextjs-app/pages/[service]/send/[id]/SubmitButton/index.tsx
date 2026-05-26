@@ -1,7 +1,8 @@
 import { use } from 'react';
+
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import styles from './styles';
 import fallbackTranslations from '../fallbackTranslations';
+import styles from './styles';
 
 const Submit = () => {
   const {

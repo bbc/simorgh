@@ -1,17 +1,18 @@
 /* eslint-disable no-param-reassign */
 import type { ComponentType, PropsWithChildren } from 'react';
-import nodeLogger from '#lib/logger.node';
+
 import { THEME_PROVIDER_ERROR } from '#app/lib/logger.const';
-import {
+import type {
   LoadableTheme,
   ThemeWithNoVariant,
   ThemeWithVariant,
 } from '#app/models/types/theming';
+import nodeLogger from '#lib/logger.node';
 import defaultServiceVariants from '../../lib/config/services/defaultServiceVariants';
-import {
+import type {
   ServicesVariantsProps,
-  ServicesWithVariants,
   ServicesWithNoVariants,
+  ServicesWithVariants,
 } from '../../models/types/global';
 import themes from './themes/loadableConfig';
 import fallBackTheme from './themes/news';

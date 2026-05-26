@@ -3,9 +3,9 @@ import {
   render,
 } from '#app/components/react-testing-library-with-providers';
 import * as FormContext from '../FormContext';
-import FormField, { FormComponentProps } from '.';
-import { Field } from '../types';
 import { ContextProps } from '../FormContext';
+import { Field } from '../types';
+import FormField, { FormComponentProps } from '.';
 
 jest.mock('next/router', () => ({
   useRouter: () => ({ query: { id: 'u1234' } }),
@@ -37,8 +37,8 @@ describe('FormField', () => {
   });
 
   it('should render a text input with an associated label', async () => {
-    const { container } = await act(() => {
-      return render(
+    const { container } = await act(() =>
+      render(
         <ComponentWithContext
           props={{
             id: 'testTextID',
@@ -52,8 +52,8 @@ describe('FormField', () => {
             } as unknown as Field,
           ]}
         />,
-      );
-    });
+      ),
+    );
 
     const label = container.querySelector('label[for=testTextID]');
     const text = container.querySelector('input[id=testTextID][type=text]');
@@ -63,8 +63,8 @@ describe('FormField', () => {
   });
 
   it('should render a textarea input with an associated label', async () => {
-    const { container } = await act(() => {
-      return render(
+    const { container } = await act(() =>
+      render(
         <ComponentWithContext
           props={{
             id: 'testTextAreaID',
@@ -78,8 +78,8 @@ describe('FormField', () => {
             } as unknown as Field,
           ]}
         />,
-      );
-    });
+      ),
+    );
 
     const label = container.querySelector('label[for=testTextAreaID]');
     const textArea = container.querySelector('textarea[id=testTextAreaID]');
@@ -110,8 +110,8 @@ describe('FormField', () => {
         }) as unknown as ContextProps,
     );
 
-    const { container } = await act(() => {
-      return render(
+    const { container } = await act(() =>
+      render(
         <ComponentWithContext
           props={{
             id: 'testAllyID',
@@ -120,8 +120,8 @@ describe('FormField', () => {
           }}
           fields={[]}
         />,
-      );
-    });
+      ),
+    );
     const textareaWithCorrectAria = container.querySelector(
       `textarea[id=testAllyID][aria-describedby=testAllyID-wordLimit]`,
     );
@@ -132,8 +132,8 @@ describe('FormField', () => {
   });
 
   it('should render an email input with an associated label', async () => {
-    const { container } = await act(() => {
-      return render(
+    const { container } = await act(() =>
+      render(
         <ComponentWithContext
           props={{
             id: 'testEmailID',
@@ -147,8 +147,8 @@ describe('FormField', () => {
             } as unknown as Field,
           ]}
         />,
-      );
-    });
+      ),
+    );
 
     const label = container.querySelector('label[for=testEmailID]');
     const text = container.querySelector('input[id=testEmailID][type=email]');
@@ -158,8 +158,8 @@ describe('FormField', () => {
   });
 
   it('should render a checkbox input with an associated label', async () => {
-    const { container } = await act(() => {
-      return render(
+    const { container } = await act(() =>
+      render(
         <ComponentWithContext
           props={{
             id: 'testCheckboxID',
@@ -173,8 +173,8 @@ describe('FormField', () => {
             } as unknown as Field,
           ]}
         />,
-      );
-    });
+      ),
+    );
 
     const label = container.querySelector('label[for=testCheckboxID]');
     const checkboxInput = container.querySelector(
@@ -186,8 +186,8 @@ describe('FormField', () => {
   });
 
   it('should render a tel input with an associated label', async () => {
-    const { container } = await act(() => {
-      return render(
+    const { container } = await act(() =>
+      render(
         <ComponentWithContext
           props={{
             id: 'testTelID',
@@ -201,8 +201,8 @@ describe('FormField', () => {
             } as unknown as Field,
           ]}
         />,
-      );
-    });
+      ),
+    );
 
     const label = container.querySelector('label[for=testTelID]');
     const telephoneInput = container.querySelector(
@@ -234,8 +234,8 @@ describe('FormField', () => {
         }) as unknown as ContextProps,
     );
 
-    const { container } = await act(() => {
-      return render(
+    const { container } = await act(() =>
+      render(
         <ComponentWithContext
           props={{
             id: 'testAllyID',
@@ -244,8 +244,8 @@ describe('FormField', () => {
           }}
           fields={[]}
         />,
-      );
-    });
+      ),
+    );
 
     const label = container.querySelector('label[for=testAllyID]');
     const input = container.querySelector('input[id=testAllyID][type=text]');
@@ -285,52 +285,49 @@ describe('FormField', () => {
       wasInvalid: false,
       expectedAria: '',
     },
-  ])(
-    `should apply these attributes: $expectedAria, when attempted submit count is is $attemptCount, required is $required, isValid is $isValid and when the 'previously submitted' flag is $wasInvalid`,
-    async ({
-      attemptedSubmitCount,
-      required,
-      isValid,
-      expectedAria,
-      wasInvalid,
-    }) => {
-      const mockFormState = {
-        testAllyID: {
-          isValid,
-          required,
-          value: '',
-          htmlType: 'text',
-          messageCode: null,
-          wasInvalid,
-        },
-      };
+  ])(`should apply these attributes: $expectedAria, when attempted submit count is is $attemptCount, required is $required, isValid is $isValid and when the 'previously submitted' flag is $wasInvalid`, async ({
+    attemptedSubmitCount,
+    required,
+    isValid,
+    expectedAria,
+    wasInvalid,
+  }) => {
+    const mockFormState = {
+      testAllyID: {
+        isValid,
+        required,
+        value: '',
+        htmlType: 'text',
+        messageCode: null,
+        wasInvalid,
+      },
+    };
 
-      jest.spyOn(FormContext, 'useFormContext').mockImplementationOnce(
-        () =>
-          ({
-            formState: mockFormState,
-            handleChange: () => null,
-            attemptedSubmitCount,
-          }) as unknown as ContextProps,
-      );
+    jest.spyOn(FormContext, 'useFormContext').mockImplementationOnce(
+      () =>
+        ({
+          formState: mockFormState,
+          handleChange: () => null,
+          attemptedSubmitCount,
+        }) as unknown as ContextProps,
+    );
 
-      const { container } = await act(() => {
-        return render(
-          <ComponentWithContext
-            props={{
-              id: 'testAllyID',
-              htmlType: 'text',
-              label: 'This is a text field',
-            }}
-            fields={[]}
-          />,
-        );
-      });
-      const text = container.querySelector(
-        `input[id=testAllyID][type=text]${expectedAria}`,
-      );
+    const { container } = await act(() =>
+      render(
+        <ComponentWithContext
+          props={{
+            id: 'testAllyID',
+            htmlType: 'text',
+            label: 'This is a text field',
+          }}
+          fields={[]}
+        />,
+      ),
+    );
+    const text = container.querySelector(
+      `input[id=testAllyID][type=text]${expectedAria}`,
+    );
 
-      expect(text).toBeInTheDocument();
-    },
-  );
+    expect(text).toBeInTheDocument();
+  });
 });

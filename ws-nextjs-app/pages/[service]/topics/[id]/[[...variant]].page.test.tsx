@@ -1,4 +1,5 @@
 import { GetServerSidePropsContext } from 'next';
+
 import pidginTopicFixtureData from '#data/pidgin/topics/c95y35941vrt.json';
 import * as getPageDataModule from '../../../../utilities/pageRequests/getPageData';
 import { getServerSideProps as handleTopicRoute } from './[[...variant]].page';

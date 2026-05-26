@@ -8,7 +8,7 @@ export default (url, isCompressed) => {
         throw new Error(stderr);
       }
     })
-    .then(({ stdout: size }) => {
-      return Number.isNaN(size) ? 0 : parseFloat(size) / 1024;
-    });
+    .then(({ stdout: size }) =>
+      Number.isNaN(size) ? 0 : parseFloat(size) / 1024,
+    );
 };

@@ -1,4 +1,4 @@
-import { Services, Variants } from './global';
+import type { Services, Variants } from './global';
 
 export type StoryArgs = Record<string, string | number | boolean>;
 

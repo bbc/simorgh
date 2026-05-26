@@ -1,11 +1,12 @@
 import { use, useState } from 'react';
+
 import Heading from '#app/components/Heading';
-import Text from '#app/components/Text';
 import LiveHeaderMedia from '#app/components/LiveHeaderMedia';
+import MaskedImage from '#app/components/MaskedImage';
 import { MediaCollection } from '#app/components/MediaLoader/types';
+import Text from '#app/components/Text';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import MaskedImage from '#app/components/MaskedImage';
 import LiveLabelHeader from './LiveLabelHeader';
 import styles from './styles';
 

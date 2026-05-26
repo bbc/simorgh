@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import detokenise from '#psammead/psammead-detokeniser/src';
 
+import detokenise from '#psammead/psammead-detokeniser/src';
 import { visuallyHiddenStyle } from '../../../lib/styles.const';
 
 const BORDER_WIDTH = '0.125rem';
@@ -40,16 +40,14 @@ const SkipLinkWrapper = ({
   text,
   endTextVisuallyHidden,
   terms,
-}) => {
-  return (
-    <Wrapper>
-      <SkipLink href={`#${endTextId}`}>{detokenise(text, terms)}</SkipLink>
-      {children}
-      <EndText tabIndex="-1" id={endTextId}>
-        {detokenise(endTextVisuallyHidden, terms)}
-      </EndText>
-    </Wrapper>
-  );
-};
+}) => (
+  <Wrapper>
+    <SkipLink href={`#${endTextId}`}>{detokenise(text, terms)}</SkipLink>
+    {children}
+    <EndText tabIndex="-1" id={endTextId}>
+      {detokenise(endTextVisuallyHidden, terms)}
+    </EndText>
+  </Wrapper>
+);
 
 export default SkipLinkWrapper;

@@ -1,11 +1,11 @@
-import { OEmbedData } from '#app/components/Embeds/types';
-import {
+import type { OEmbedData } from '#app/components/Embeds/types';
+import type {
   MediaCollection,
   PortraitClipMediaBlock,
 } from '#app/components/MediaLoader/types';
-import { RadioScheduleData } from '#app/models/types/radioSchedule';
-import { EventTrackingData } from '#app/lib/analyticsUtils/types';
-import { MostReadData } from '../../components/MostRead/types';
+import type { EventTrackingData } from '#app/lib/analyticsUtils/types';
+import type { RadioScheduleData } from '#app/models/types/radioSchedule';
+import type { MostReadData } from '../../components/MostRead/types';
 
 // This maps to the Summary type definition from the BFF
 interface BaseSummary {

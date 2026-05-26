@@ -1,9 +1,11 @@
+// biome-ignore-all lint/suspicious/noEmptyBlockStatements: we want this
 import { use, useCallback } from 'react';
+
 import { VIEW_EVENT } from '#app/lib/analyticsUtils/analytics.const';
 import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
 import { sendEventBeacon } from '../../components/ATIAnalytics/beacon';
-import useTrackingToggle from '../useTrackingToggle';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import useTrackingToggle from '../useTrackingToggle';
 
 interface CustomEventData {
   eventName: string;
@@ -76,10 +78,7 @@ const useCustomEventTracker = ({
             isSignedIn,
             hashedId,
           });
-        } catch (error) {
-          // eslint-disable-next-line no-console
-          console.warn('Custom event tracking failed:', error);
-        }
+        } catch (_error) {}
       }
     },
     [

@@ -1,8 +1,8 @@
-import nodeLogger from '#lib/logger.node';
 import {
   SERVER_RESPONSE_TIME,
   SLOW_SERVER_RESPONSE_TIME,
 } from '#lib/logger.const';
+import nodeLogger from '#lib/logger.node';
 
 const logger = nodeLogger(__filename);
 const NS_PER_SEC = 1e9;

@@ -1,6 +1,7 @@
+import { css, Theme } from '@emotion/react';
+
 import { focusIndicatorThickness } from '#app/components/ThemeProvider/focusIndicator';
 import pixelsToRem from '#app/utilities/pixelsToRem';
-import { Theme, css } from '@emotion/react';
 
 export default {
   focusIndicatorErrorSummary: ({ palette }: Theme) =>

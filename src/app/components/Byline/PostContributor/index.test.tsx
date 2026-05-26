@@ -1,14 +1,13 @@
-// eslint-disable-next-line import/no-relative-packages
 import { bylineSamplePost } from '../../../../../ws-nextjs-app/pages/[service]/live/[id]/Post/fixture';
+import filterForBlockType from '../../../lib/utilities/blockHandlers';
+import { LIVE_PAGE } from '../../../routes/utils/pageTypes';
 import {
   render,
   screen,
   within,
 } from '../../react-testing-library-with-providers';
-import Contributors from '.';
 import bylineExtractor from '../utilities/bylineExtractor';
-import filterForBlockType from '../../../lib/utilities/blockHandlers';
-import { LIVE_PAGE } from '../../../routes/utils/pageTypes';
+import Contributors from '.';
 
 const {
   header: {

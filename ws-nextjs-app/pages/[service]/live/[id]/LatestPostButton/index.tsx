@@ -1,6 +1,7 @@
 import { RefObject, use, useEffect, useState } from 'react';
-import { ServiceContext } from '#app/contexts/ServiceContext';
+
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './styles';
 
 const TEN_SECONDS = 10 * 1000;

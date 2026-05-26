@@ -1,24 +1,22 @@
+import type { AMPAnalyticsData, ATIAnalyticsProps } from '../types';
 import getAmpAnalyticsJson from './ampAnalyticsJson';
-import { ATIAnalyticsProps, AMPAnalyticsData } from '../types';
 
 const JsonInlinedScript = (data: AMPAnalyticsData) => (
   <script
     type="application/json"
-    /* eslint-disable-next-line react/no-danger */
+    // biome-ignore lint/security/noDangerouslySetInnerHtml: we want this
     dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
   />
 );
 
-const AmpATIAnalytics = ({ reverbParams }: ATIAnalyticsProps) => {
-  return (
-    <amp-analytics data-e2e="ati-amp-analytics">
-      {JsonInlinedScript(
-        getAmpAnalyticsJson({
-          reverbParams,
-        }),
-      )}
-    </amp-analytics>
-  );
-};
+const AmpATIAnalytics = ({ reverbParams }: ATIAnalyticsProps) => (
+  <amp-analytics data-e2e="ati-amp-analytics">
+    {JsonInlinedScript(
+      getAmpAnalyticsJson({
+        reverbParams,
+      }),
+    )}
+  </amp-analytics>
+);
 
 export default AmpATIAnalytics;

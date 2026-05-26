@@ -1,12 +1,11 @@
 import findLastIndex from 'ramda/src/findLastIndex';
-import propSatisfies from 'ramda/src/propSatisfies';
 import path from 'ramda/src/path';
+import propSatisfies from 'ramda/src/propSatisfies';
 
-export const getLastProgramIndex = ({ schedules, currentTime }) => {
-  return findLastIndex(
+export const getLastProgramIndex = ({ schedules, currentTime }) =>
+  findLastIndex(
     propSatisfies(time => time < currentTime, 'publishedTimeStart'),
   )(schedules);
-};
 
 export const isScheduleDataComplete = ({
   schedules,

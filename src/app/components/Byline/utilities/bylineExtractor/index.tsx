@@ -1,9 +1,10 @@
 import pathOr from 'ramda/src/pathOr';
-import {
+
+import type { PageTypes } from '#app/models/types/global';
+import type {
   OptimoBylineContributorBlock,
   OptimoBylineContributorMetadataBlock,
 } from '#app/models/types/optimo';
-import { PageTypes } from '#app/models/types/global';
 import {
   ARTICLE_PAGE,
   LIVE_PAGE,
@@ -12,10 +13,9 @@ import {
   PHOTO_GALLERY_PAGE,
   STORY_PAGE,
 } from '#app/routes/utils/pageTypes';
-import {
+import type {
   PostContributor,
   PostContributorImage,
-  // eslint-disable-next-line import/no-relative-packages
 } from '../../../../../../ws-nextjs-app/pages/[service]/live/[id]/Post/types';
 import buildIChefURL from '../../../../lib/utilities/ichefURL';
 
@@ -42,8 +42,8 @@ const pathOrZeroIndexModelBlocks = (
   return pathOr('', givenPath, block);
 };
 
-const livePageBylineExtractor = (blocks: PostContributor['model'][]) => {
-  return blocks
+const livePageBylineExtractor = (blocks: PostContributor['model'][]) =>
+  blocks
     .map(contribBlock => {
       const {
         blocks: imagesBlock,
@@ -83,10 +83,9 @@ const livePageBylineExtractor = (blocks: PostContributor['model'][]) => {
       };
     })
     .filter(Boolean);
-};
 
-const articlePageBylineExtractor = (blocks: OptimoBylineContributorBlock[]) => {
-  return blocks
+const articlePageBylineExtractor = (blocks: OptimoBylineContributorBlock[]) =>
+  blocks
     .map(contribBlock => {
       const bylineBlocks = contribBlock?.model?.blocks || [];
 
@@ -139,7 +138,6 @@ const articlePageBylineExtractor = (blocks: OptimoBylineContributorBlock[]) => {
       };
     })
     .filter(Boolean);
-};
 
 const bylineExtractor = ({
   blocks,

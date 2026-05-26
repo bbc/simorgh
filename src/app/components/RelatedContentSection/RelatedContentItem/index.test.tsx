@@ -1,10 +1,11 @@
 import { render, screen } from '@testing-library/react';
+
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import type { Services } from '../../../models/types/global';
 import ThemeProvider from '../../ThemeProvider';
-import RelatedContentItem from '.';
 import { RelatedContentData, RelatedContentItemWithCaption } from '../fixture';
-import { Services } from '../../../models/types/global';
+import RelatedContentItem from '.';
 
 jest.mock('../../ThemeProvider');
 

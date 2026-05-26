@@ -1,6 +1,7 @@
-import pathOr from 'ramda/src/pathOr';
 import assocPath from 'ramda/src/assocPath';
 import insert from 'ramda/src/insert';
+import pathOr from 'ramda/src/pathOr';
+
 import { Article, OptimoBlock } from '#app/models/types/optimo';
 
 const getBlocks = pathOr([], ['content', 'model', 'blocks']);

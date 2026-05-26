@@ -1,17 +1,19 @@
+import { type FocusEvent, use } from 'react';
+
 import { useTheme } from '@emotion/react';
-import Image from '#app/components/Image';
-import Text from '#app/components/Text';
-import { Play } from '#app/components/icons';
-import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import moment from 'moment';
-import formatDuration from '#app/lib/utilities/formatDuration';
-import { use, FocusEvent } from 'react';
+
+import Image from '#app/components/Image';
+import { Play } from '#app/components/icons';
+import type { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
+import Text from '#app/components/Text';
+import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
+import type { EventTrackingData } from '#app/lib/analyticsUtils/types';
+import formatDuration from '#app/lib/utilities/formatDuration';
 import getSrcSets from '#app/utilities/getSrcSets';
-import { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
-import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import styles from './index.styles';
 
 const DEFAULT_TRANSLATION = {

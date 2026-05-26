@@ -1,10 +1,11 @@
 import { memo } from 'react';
-import styled from '@emotion/styled';
-import {
-  GEL_SPACING_DBL,
-  GEL_SPACING,
-} from '#psammead/gel-foundations/src/spacings';
 
+import styled from '@emotion/styled';
+
+import {
+  GEL_SPACING,
+  GEL_SPACING_DBL,
+} from '#psammead/gel-foundations/src/spacings';
 import { detokenise, dictionaryFactory } from '../utilities';
 
 const BORDER_WEIGHT = '0.0625rem';

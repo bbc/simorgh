@@ -1,15 +1,15 @@
-import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
+import * as viewTracking from '#hooks/useViewTracker';
+import { MEDIA_ARTICLE_PAGE } from '../../routes/utils/pageTypes';
 import { render } from '../react-testing-library-with-providers';
-import {
-  threeLinks,
-  oneLinkOnly,
-  oneLinkWithNoTitle,
-  moreThanThreeLinks,
-} from './helpers/fixtureData';
 import ArticleLinksBlock from '.';
 import { edOjA, edOjB } from './fixtures';
-import { MEDIA_ARTICLE_PAGE } from '../../routes/utils/pageTypes';
+import {
+  moreThanThreeLinks,
+  oneLinkOnly,
+  oneLinkWithNoTitle,
+  threeLinks,
+} from './helpers/fixtureData';
 
 describe('Article Links Block', () => {
   describe('Mid Page Article Links Block', () => {

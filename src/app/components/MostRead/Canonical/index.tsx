@@ -1,14 +1,15 @@
 import { use } from 'react';
-import { shouldRenderLastUpdated } from '#lib/utilities/filterPopularStaleData/isDataStale';
+
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import { EventTrackingData } from '#app/lib/analyticsUtils/types';
+import type { EventTrackingData } from '#app/lib/analyticsUtils/types';
+import { shouldRenderLastUpdated } from '#lib/utilities/filterPopularStaleData/isDataStale';
 import useViewTracker from '../../../hooks/useViewTracker';
-import { MostReadLink, MostReadItemWrapper } from './Item';
+import type { Direction } from '../../../models/types/global';
+import type { ColumnLayout, MostReadData, Size } from '../types';
+import { MostReadItemWrapper, MostReadLink } from './Item';
+import LastUpdated from './LastUpdated';
 import MostReadList from './List';
 import MostReadRank from './Rank';
-import LastUpdated from './LastUpdated';
-import { ColumnLayout, MostReadData, Size } from '../types';
-import { Direction } from '../../../models/types/global';
 
 interface MostReadProps {
   columnLayout?: ColumnLayout;

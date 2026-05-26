@@ -72,8 +72,7 @@ class CustomTestEnvironment extends TestEnvironment {
         document: { value: document },
         fetch: { value: fetch },
       });
-    } catch (e) {
-      console.error(e);
+    } catch (_e) {
     }
   }
 

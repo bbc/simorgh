@@ -2,7 +2,7 @@ import burmese from '../../../components/ThemeProvider/fontScripts/burmese';
 import '#psammead/moment-timezone-include/tz/GMT';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/my';
-import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
+import type { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
 export const service: DefaultServiceConfig = {
   default: {
@@ -87,8 +87,7 @@ export const service: DefaultServiceConfig = {
       liteSite: {
         onboardingMessage: `ဒေတာကုန်ကျမှုလျှော့ချနိုင်ရန်အတွက် ယခုဝက်ဘ်ဆိုက်မှ စာမျက်နှာများကို ရုပ်ပုံမပါ စာသားဖြင့်သာတင်ဆက်ပေးထားပါသည်။ ရုပ်ပုံ ဗီဒီယိုများနှင့် ကြည့်လိုလျှင် မူလစာမျက်နှာတွင်ကြည့်နိုင်ပါသည်။`,
         toMainSite: 'ပင်မဝက်ဘ်ဆိုက်သို့သွားရန်။',
-        informationPage:
-          'ဒေတာကုန်ကျမှုသက်သာစေသည့် ဤဝက်ဘ်ဆိုက်အကြောင်းထပ်မံသိလိုလျှင်',
+        informationPage: 'ဒေတာကုန်ကျမှုသက်သာစေသည့် ဤဝက်ဘ်ဆိုက်အကြောင်းထပ်မံသိလိုလျှင်',
         informationPageLink:
           'https://www.bbc.com/burmese/articles/cwy69wyx71go',
         dataSaving: 'ဒေတာကုန်ကျမှုသက်သာစေသည့် ဝက်ဘ်စာမျက်နှာ',
@@ -132,8 +131,7 @@ export const service: DefaultServiceConfig = {
         500: {
           statusCode: '၅၀၀',
           title: 'ဘီဘီစီဆာဗာ၏ အမှား',
-          message:
-            'သင်ရှာနေသော စာမျက်နှာကို လောလောဆယ် ရှာမတွေ့ပါ။ ဒီမှာ ကြိုးစားကြည့်ပါ။',
+          message: 'သင်ရှာနေသော စာမျက်နှာကို လောလောဆယ် ရှာမတွေ့ပါ။ ဒီမှာ ကြိုးစားကြည့်ပါ။',
           solutions: [
             'အသစ်ဖွင့်ရန် ဘရောင်ဆာမှ refresh ခလုတ်ကို နှိပ်ပါ။',
             'ခဏနေလျင် ပြန်လာကြည့်ပါ။',
@@ -154,8 +152,7 @@ export const service: DefaultServiceConfig = {
       },
       consentBanner: {
         privacy: {
-          title:
-            'ကိုယ်ရေးအချက်အလက်လုံခြုံမှုနှင့် ကွတ်ကီးအသုံးပြုမှု မူဝါဒများ အသစ်ပြင်ဆင်ထားပါသည်။',
+          title: 'ကိုယ်ရေးအချက်အလက်လုံခြုံမှုနှင့် ကွတ်ကီးအသုံးပြုမှု မူဝါဒများ အသစ်ပြင်ဆင်ထားပါသည်။',
           description: {
             uk: {
               first:
@@ -192,8 +189,7 @@ export const service: DefaultServiceConfig = {
               manage: 'လိုလားချက်များကို သတ်မှတ်/ပြောင်းလဲရန်',
             },
             manage: {
-              title:
-                'AMP စာမျက်နှာများပေါ်တွင် သဘောတူခွင့်ပြုချက်များပြောင်းလဲရန်',
+              title: 'AMP စာမျက်နှာများပေါ်တွင် သဘောတူခွင့်ပြုချက်များပြောင်းလဲရန်',
               description: {
                 para1:
                   'ယခုသတ်မှတ်ချက်များမှာ AMP စာမျက်နှာများအတွက်သာဖြစ်သည်။ AMP မဟုတ်သည့် အခြား ဘီဘီစီစာမျက်နှာများ သွားကြည့်လျင် မိမိစိတ်ကြိုက်သတ်မှတ်ချက်များကို ပြန်လည်ပြောင်းလဲခိုင်းနိုင်ပါသည်။',
@@ -206,8 +202,7 @@ export const service: DefaultServiceConfig = {
                   text: 'မိမိတို့စာမျက်နှာများအလုပ်လုပ်ရန် မရှိမဖြစ်လိုအပ်သောအချက်များ သင့်စက်ထဲတွင် သိုမှီးထားခြင်းနှင့်ပတ်သက်၍ နောက်ထပ်သိလိုပါက ဖတ်ရှုရန်',
                   url: 'https://www.bbc.com/usingthebbc/cookies/strictly-necessary-cookies/',
                 },
-                para5:
-                  'သင်သဘောတူထားသောနှစ်ခြိုက်သည့်ပုံစံများကို သင့်စက်ထဲတွင် သိမ်းဆည်းထားပါသည်။',
+                para5: 'သင်သဘောတူထားသောနှစ်ခြိုက်သည့်ပုံစံများကို သင့်စက်ထဲတွင် သိမ်းဆည်းထားပါသည်။',
                 heading3: 'နောက်ထပ် အချက်အလက်ကောက်ယူခြင်း',
                 para6:
                   'AMP စာမျက်နှာများပေါ်တွင်အချက်အလက်ကောက်ယူခြင်းကို သင့်ဘက်မှသဘောတူခဲ့လျှင် သင်ယူကေအပြင်ဘက်တွင်ရှိစဉ် သင့်အတွက်သီးသန့်ပို့သော ကြော်ငြာများကို ပြသရန်လည်း မိမိတို့အား သဘောတူ ခွင့်ပြုခြင်းဖြစ်ပါသည်။',
@@ -226,16 +221,14 @@ export const service: DefaultServiceConfig = {
             title: 'ကွတ်ကီးများအသုံးပြုမှုကို သဘောတူမတူ ပြောပါ။',
             description: {
               uk: {
-                first:
-                  'ပရိသတ်များ အွန်လိုင်းတွင် အကောင်းဆုံးသုံးနိုင်ရန် မိမိတို့ ',
+                first: 'ပရိသတ်များ အွန်လိုင်းတွင် အကောင်းဆုံးသုံးနိုင်ရန် မိမိတို့ ',
                 linkText: 'နှင့် ကွတ်ကီးများ',
                 last: ' ကို အသုံးပြုပါသည်။ ယင်းကွတ်ကီးများ အားလုံးကို သဘောတူမတူ ပြောပြပါ။',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               international: {
-                first:
-                  'ပရိသတ်များ အွန်လိုင်းတွင် အကောင်းဆုံးသုံးနိုင်ရန် မိမိတို့ ',
+                first: 'ပရိသတ်များ အွန်လိုင်းတွင် အကောင်းဆုံးသုံးနိုင်ရန် မိမိတို့ ',
                 linkText: 'နှင့် ကွတ်ကီးများ',
                 last: ' ကို အသုံးပြုပါသည်။ ယင်းကွတ်ကီးများ အားလုံးကို သဘောတူမတူ ပြောပြပါ။',
                 linkUrl:
@@ -287,8 +280,7 @@ export const service: DefaultServiceConfig = {
           text: 'သတိပေးချက်- ဘီဘီစီပြင်ပ ဝက်ဆိုက်များမှ ဖော်ပြချက်များတွင် ကြော်ငြာများပါနိုင်ပါသည်။',
           articleText:
             'သတိပေးချက်- ပြင်ပဝက်ဆိုက်များတွင်ပါဝင်သောအကြောင်းအရာများအတွက် ဘီဘီစီကတာဝန်မယူပါ။',
-          articleAdditionalText:
-            '%provider_name% တွင်ကြော်ငြာများပါဝင်နိုင်ပါသည်။',
+          articleAdditionalText: '%provider_name% တွင်ကြော်ငြာများပါဝင်နိုင်ပါသည်။',
         },
         fallback: {
           text: 'ကြည့်ရန် မရနိုင်သေးပါ။',

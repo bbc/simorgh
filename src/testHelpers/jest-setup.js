@@ -1,9 +1,11 @@
 /* eslint-disable max-classes-per-file */
-import { jest } from '@jest/globals';
-import path from 'path';
-import { TextEncoder, TextDecoder } from 'util';
+
 import { ReadableStream } from 'node:stream/web';
 import { MessageChannel, MessagePort } from 'node:worker_threads';
+import path from 'path';
+import { TextDecoder, TextEncoder } from 'util';
+
+import { jest } from '@jest/globals';
 
 global.jest = jest;
 

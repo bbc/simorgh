@@ -1,6 +1,7 @@
 import { renderHook } from '@testing-library/react';
 import { renderHook as renderSSRHook } from '@testing-library/react-hooks/server';
-import { useOfflinePageFlag, OFFLINE_VISIT_FLAG } from './index';
+
+import { OFFLINE_VISIT_FLAG, useOfflinePageFlag } from './index';
 
 describe('useOfflinePageFlag', () => {
   beforeEach(() => {

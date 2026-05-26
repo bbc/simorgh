@@ -1,20 +1,20 @@
+import type { Services } from '#app/models/types/global';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
-import { Services } from '#app/models/types/global';
 import {
   render,
   screen,
 } from '../../../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../../../contexts/ServiceContext';
-import TopStoriesItem from '.';
 import {
+  tipoFormattedTopStoriesItem,
+  tipoLivePageTopStoriesItem,
   topStoriesItem,
   topStoriesLiveLabelItem,
   topStoriesMediaContentItem,
-  tipoFormattedTopStoriesItem,
-  tipoLivePageTopStoriesItem,
 } from '../fixture';
-import { TopStoryItem } from '../types';
+import type { TopStoryItem } from '../types';
+import TopStoriesItem from '.';
 
 type Props = {
   fixtureData: TopStoryItem;

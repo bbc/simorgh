@@ -1,14 +1,7 @@
-import { css, Theme } from '@emotion/react';
-import {
-  singleDigitDefault,
-  singleDigitMedium,
-  singleDigitSmall,
-  doubleDigitDefault,
-  doubleDigitMedium,
-  doubleDigitSmall,
-  smallFontServices,
-  mediumFontServices,
-} from '../../utilities/rankMinWidth';
+import { css, type Theme } from '@emotion/react';
+
+import { grid } from '../../../../legacy/psammead/psammead-styles/src/detection';
+import type { Services } from '../../../../models/types/global';
 import {
   GROUP_0_MAX_WIDTH,
   GROUP_1_ONLY,
@@ -16,9 +9,17 @@ import {
   GROUP_3_MIN_WIDTH,
   GROUP_5_MIN_WIDTH,
 } from '../../../ThemeProvider/mediaQueries';
-import { Services } from '../../../../models/types/global';
-import { Size } from '../../types';
-import { grid } from '../../../../legacy/psammead/psammead-styles/src/detection';
+import type { Size } from '../../types';
+import {
+  doubleDigitDefault,
+  doubleDigitMedium,
+  doubleDigitSmall,
+  mediumFontServices,
+  singleDigitDefault,
+  singleDigitMedium,
+  singleDigitSmall,
+  smallFontServices,
+} from '../../utilities/rankMinWidth';
 
 /**
  * Interface Definitions
@@ -198,56 +199,52 @@ const getTwoColumnCss = ({
   numberOfItems,
   service,
   size,
-}: MultiColumnProps) => {
-  return [
-    getOneColumnCss({ numberOfItems, service, size }),
-    css({
+}: MultiColumnProps) => [
+  getOneColumnCss({ numberOfItems, service, size }),
+  css({
+    [GROUP_3_MIN_WIDTH]: {
+      minWidth: getGroup3WithTwoColumns({
+        listIndex,
+        numberOfItems,
+        supportsGrid: false,
+        service,
+        size,
+      }),
+    },
+    [`@supports (${grid})`]: {
       [GROUP_3_MIN_WIDTH]: {
         minWidth: getGroup3WithTwoColumns({
           listIndex,
           numberOfItems,
-          supportsGrid: false,
+          supportsGrid: true,
           service,
           size,
         }),
       },
-      [`@supports (${grid})`]: {
-        [GROUP_3_MIN_WIDTH]: {
-          minWidth: getGroup3WithTwoColumns({
-            listIndex,
-            numberOfItems,
-            supportsGrid: true,
-            service,
-            size,
-          }),
-        },
-      },
-    }),
-  ];
-};
+    },
+  }),
+];
 
 const getMultiColumnCss = ({
   listIndex,
   numberOfItems,
   service,
   size,
-}: MultiColumnProps) => {
-  return [
-    getTwoColumnCss({
-      listIndex,
-      numberOfItems,
-      service,
-      size,
-    }),
-    css({
-      [GROUP_5_MIN_WIDTH]: {
-        minWidth: listHasDoubleDigits(numberOfItems)
-          ? isFiveOrTen({ listIndex, service, numberOfItems, size })
-          : getRankMinWidth({ service, numberOfItems, size }).group5,
-      },
-    }),
-  ];
-};
+}: MultiColumnProps) => [
+  getTwoColumnCss({
+    listIndex,
+    numberOfItems,
+    service,
+    size,
+  }),
+  css({
+    [GROUP_5_MIN_WIDTH]: {
+      minWidth: listHasDoubleDigits(numberOfItems)
+        ? isFiveOrTen({ listIndex, service, numberOfItems, size })
+        : getRankMinWidth({ service, numberOfItems, size }).group5,
+    },
+  }),
+];
 
 export default styles;
-export { getOneColumnCss, getTwoColumnCss, getMultiColumnCss };
+export { getMultiColumnCss, getOneColumnCss, getTwoColumnCss };

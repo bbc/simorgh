@@ -1,19 +1,20 @@
 import { render, screen } from '@testing-library/react';
+
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import * as viewTracking from '#hooks/useViewTracker';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import type { Services } from '../../models/types/global';
+import type { OptimoBlock } from '../../models/types/optimo';
 import ThemeProvider from '../ThemeProvider';
 import RelatedContentSection from '.';
 import {
-  RelatedContentList,
-  RelatedContentSingleItem,
   RelatedContentCustomLabel,
+  RelatedContentList,
   RelatedContentListWithMPU,
   RelatedContentListWithWSOJ,
+  RelatedContentSingleItem,
 } from './fixture';
-import { Services } from '../../models/types/global';
-import { OptimoBlock } from '../../models/types/optimo';
 
 jest.mock('../ThemeProvider');
 

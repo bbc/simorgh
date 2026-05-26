@@ -2,7 +2,7 @@ import thai from '../../../components/ThemeProvider/fontScripts/thai';
 import '#psammead/moment-timezone-include/tz/Asia/Bangkok';
 import '#psammead/psammead-locales/moment/th';
 import withContext from '../../../contexts/utils/withContext';
-import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
+import type { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
 export const service: DefaultServiceConfig = {
   default: {
@@ -93,8 +93,7 @@ export const service: DefaultServiceConfig = {
         404: {
           statusCode: '404',
           title: 'ไม่พบเนื้อหา',
-          message:
-            'ขออภัย เราไม่สามารถแสดงเนื้อหาที่คุณกำลังค้นหาได้ กรุณาลอง:',
+          message: 'ขออภัย เราไม่สามารถแสดงเนื้อหาที่คุณกำลังค้นหาได้ กรุณาลอง:',
           solutions: [
             'ตรวจสอบชื่อเว็บไซต์ ',
             'กดปุ่มรีเฟรชในบราวเซอร์ของคุณ',
@@ -108,12 +107,8 @@ export const service: DefaultServiceConfig = {
         500: {
           statusCode: '500',
           title: 'เกิดข้อผิดพลาดภายในเซิร์ฟเวอร์ ',
-          message:
-            'ขออภัย เราไม่สามารถแสดงเนื้อหาที่คุณกำลังค้นหาได้ กรุณาลอง:',
-          solutions: [
-            'กดปุ่มรีเฟรชในบราวเซอร์ของคุณ',
-            'กลับเข้ามาใหม่ในภายหลัง',
-          ],
+          message: 'ขออภัย เราไม่สามารถแสดงเนื้อหาที่คุณกำลังค้นหาได้ กรุณาลอง:',
+          solutions: ['กดปุ่มรีเฟรชในบราวเซอร์ของคุณ', 'กลับเข้ามาใหม่ในภายหลัง'],
           callToActionFirst: 'กรุณาเข้าไปที่โฮมเพจของ ',
           callToActionLinkText: 'บีบีซีไทย',
           callToActionLast: '',
@@ -148,8 +143,7 @@ export const service: DefaultServiceConfig = {
             accept: 'ยอมรับการเก็บข้อมูลและดูเว็บต่อ',
             reject: 'ปฏิเสธการเก็บข้อมูลและดูเว็บต่อ',
             initial: {
-              title:
-                'กรุณาแจ้งให้เราทราบว่า คุณยอมรับการเก็บข้อมูลบนหน้าเว็บ AMP',
+              title: 'กรุณาแจ้งให้เราทราบว่า คุณยอมรับการเก็บข้อมูลบนหน้าเว็บ AMP',
               description: {
                 first: 'เราและพันธมิตรใช้เทคโนโลยี อย่างเช่น ',
                 linkText: 'คุกกีส์',
@@ -236,8 +230,7 @@ export const service: DefaultServiceConfig = {
         caption: {
           textPrefixVisuallyHidden: 'คำบรรยายวิดีโอ, ',
           text: 'คำเตือน:เนื้อหาภายนอกอาจมีโฆษณา',
-          articleText:
-            'คำเตือน: บีบีซีไม่มีส่วนรับผิดชอบต่อเนื้อหาที่มาจากภายนอก',
+          articleText: 'คำเตือน: บีบีซีไม่มีส่วนรับผิดชอบต่อเนื้อหาที่มาจากภายนอก',
           articleAdditionalText: 'เนื้อหาจาก %provider_name% อาจมีโฆษณา ',
         },
         fallback: {

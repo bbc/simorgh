@@ -1,5 +1,6 @@
+import { css, type Theme } from '@emotion/react';
+
 import pixelsToRem from '#app/utilities/pixelsToRem';
-import { css, Theme } from '@emotion/react';
 import { GROUP_B_MIN_WIDTH } from '../ThemeProvider/fontMediaQueries';
 
 export const HIDDEN_CLASS_NAME = 'si-nav-scrollable-hidden';

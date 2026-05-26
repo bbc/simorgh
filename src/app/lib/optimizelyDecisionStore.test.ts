@@ -1,8 +1,8 @@
 import {
-  subscribe,
   getSnapshot,
   notifyDecision,
   resetDecisionStore,
+  subscribe,
 } from './optimizelyDecisionStore';
 
 describe('optimizelyDecisionStore', () => {

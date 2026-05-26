@@ -1,9 +1,10 @@
+import type { IncomingHttpHeaders } from 'node:http';
+
 import nodeLogger from '#app/lib/logger.node';
 import getToggleDefinitions from '#app/lib/utilities/getToggleDefinition';
 import isLocal from '#app/lib/utilities/isLocal';
-import { IdctaConfig } from '#app/models/types/account';
-import { Toggles, Services } from '#app/models/types/global';
-import { IncomingHttpHeaders } from 'http';
+import type { IdctaConfig } from '#app/models/types/account';
+import type { Services, Toggles } from '#app/models/types/global';
 import fetchIdctaConfig from '../fetchIdctaConfig';
 
 const logger = nodeLogger(__filename);

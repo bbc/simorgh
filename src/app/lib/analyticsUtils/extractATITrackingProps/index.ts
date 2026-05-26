@@ -1,6 +1,7 @@
 import { use } from 'react';
+
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
-import { EventTrackingData, EventTrackingProps } from '../types';
+import type { EventTrackingData, EventTrackingProps } from '../types';
 
 export default ({
   eventTrackingData,

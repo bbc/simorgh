@@ -1,31 +1,32 @@
 import Cookie from 'js-cookie';
+
 import onClient from '../../../lib/utilities/onClient';
+import type { PageTypes, Services } from '../../../models/types/global';
 import {
   ARTICLE_PAGE,
-  MOST_READ_PAGE,
+  AUDIO_PAGE,
+  LIVE_PAGE,
+  LIVE_RADIO_PAGE,
+  LIVE_TV_PAGE,
+  MEDIA_ARTICLE_PAGE,
   MEDIA_ASSET_PAGE,
+  MOST_READ_PAGE,
   PHOTO_GALLERY_PAGE,
   STORY_PAGE,
   TOPIC_PAGE,
-  MEDIA_ARTICLE_PAGE,
-  LIVE_PAGE,
-  LIVE_RADIO_PAGE,
-  AUDIO_PAGE,
   TV_PAGE,
-  LIVE_TV_PAGE,
   UNKNOWN_PAGE,
 } from '../../../routes/utils/pageTypes';
 import {
-  chartbeatUID,
-  useCanonical,
-  getSylphidCookie,
   buildSections,
-  getType,
-  getTitle,
+  chartbeatUID,
+  type GetConfigProps,
   getConfig,
-  GetConfigProps,
+  getSylphidCookie,
+  getTitle,
+  getType,
+  useCanonical,
 } from '.';
-import { PageTypes, Services } from '../../../models/types/global';
 
 jest.mock('#lib/utilities/onClient', () =>
   jest.fn().mockImplementation(() => true),

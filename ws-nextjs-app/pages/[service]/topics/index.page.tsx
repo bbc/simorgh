@@ -1,9 +1,10 @@
-import dynamic from 'next/dynamic';
 import { GetServerSideProps } from 'next';
-import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
-import PageDataParams from '#app/models/types/pageDataParams';
-import deriveVariant from '#utilities/deriveVariant';
+import dynamic from 'next/dynamic';
+
 import { Topic } from '#app/lib/config/fixtures/types';
+import PageDataParams from '#app/models/types/pageDataParams';
+import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
+import deriveVariant from '#utilities/deriveVariant';
 
 const TopicsPageComponent = dynamic(() => import('./TopicsIndexPage'));
 

@@ -1,6 +1,7 @@
-/* eslint-disable react-hooks/rules-of-hooks */
-import useServerSide from './useServerSide';
+// biome-ignore-all lint/correctness/useHookAtTopLevel: we want this
+
 import useClientSide from './useClientSide';
+import useServerSide from './useServerSide';
 
 export enum ExperimentType {
   CLIENT_SIDE = 'client side experiment',

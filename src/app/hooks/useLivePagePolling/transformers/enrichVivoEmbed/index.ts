@@ -1,5 +1,5 @@
-import { OEmbedData } from '#app/components/Embeds/types';
-import { OptimoBlock } from '#app/models/types/optimo';
+import type { OEmbedData } from '#app/components/Embeds/types';
+import type { OptimoBlock } from '#app/models/types/optimo';
 import addFullHeightToFlourishSrc from '../addFullHeightToFlourishSrc';
 
 export interface NativeVivoEmbed {

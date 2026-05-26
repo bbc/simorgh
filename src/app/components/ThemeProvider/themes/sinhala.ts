@@ -1,13 +1,13 @@
-import { ServiceTheme } from '#app/models/types/theming';
-import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
-import sinhaleseScript from '../fontScripts/sinhalese';
+import type { ServiceTheme } from '#app/models/types/theming';
+import brandSVG from '../chameleonLogos/sinhala';
 import {
   NOTO_SERIF_SINHALA_BOLD,
   NOTO_SERIF_SINHALA_REGULAR,
 } from '../fontFaces';
+import sinhaleseScript from '../fontScripts/sinhalese';
 import sinhalaFontVariants from '../fontVariants/sinhala';
+import { GHOST, POSTBOX, POSTBOX_30, WHITE } from '../palette';
 import withThemeProvider from '../withThemeProvider';
-import brandSVG from '../chameleonLogos/sinhala';
 
 export const theme: ServiceTheme = {
   palette: {

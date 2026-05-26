@@ -1,13 +1,14 @@
 import { use } from 'react';
-import useViewTracker from '#hooks/useViewTracker';
-import idSanitiser from '#lib/utilities/idSanitiser';
-import { OptimoBlock } from '#app/models/types/optimo';
+
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import SkipLinkWrapper from '#app/legacy/components/SkipLinkWrapper';
+import type { OptimoBlock } from '#app/models/types/optimo';
+import useViewTracker from '#hooks/useViewTracker';
+import idSanitiser from '#lib/utilities/idSanitiser';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import styles from './index.styles';
 import Promo from './Promo';
 import PromoList from './PromoList';
-import styles from './index.styles';
 
 interface ArticleLinksBlockProps {
   blocks: OptimoBlock[];

@@ -1,4 +1,4 @@
-/* eslint-disable no-console */
+// biome-ignore-all lint/suspicious/noEmptyBlockStatements: we want this
 /* eslint-disable no-unused-expressions */
 import { Services } from '#app/models/types/global';
 
@@ -21,9 +21,9 @@ export const serviceWorkerIsRegistered = ({
   it('Service Worker is registered', () => {
     cy.window().then(win => {
       win.navigator.serviceWorker.getRegistrations().then(registrations => {
-        const serviceWorkerInScope = registrations.find(registration => {
-          return registration.scope.endsWith(`${service}/`);
-        });
+        const serviceWorkerInScope = registrations.find(registration =>
+          registration.scope.endsWith(`${service}/`),
+        );
         expect(serviceWorkerInScope).not.to.be.null;
       });
     });
@@ -39,7 +39,7 @@ export const serviceWorkerCaching = () => {
           .then(keys => {
             expect(keys).to.include('simorghCache_v1');
           })
-          .catch(err => console.error(err));
+          .catch(_err => {});
       });
     });
 
@@ -56,9 +56,9 @@ export const serviceWorkerCaching = () => {
                   `${JSON.stringify(keys)}`,
                 ).to.have.lengthOf.greaterThan(0);
               })
-              .catch(err => console.error(err));
+              .catch(_err => {});
           })
-          .catch(err => console.error(err));
+          .catch(_err => {});
       });
     });
 
@@ -77,8 +77,7 @@ export const serviceWorkerCaching = () => {
             .then(keys => {
               cacheableItems.forEach(cachedItem => {
                 const matchingItems = keys
-                  .map(({ url }) => url)
-                  .flat()
+                  .flatMap(({ url }) => url)
                   .filter(url => url.includes(cachedItem));
 
                 expect(
@@ -87,7 +86,7 @@ export const serviceWorkerCaching = () => {
                 ).to.have.lengthOf.greaterThan(0);
               });
             })
-            .catch(err => console.error(err)),
+            .catch(_err => {}),
         );
       });
     });
@@ -97,7 +96,7 @@ export const serviceWorkerCaching = () => {
         win.caches.open(SERVICE_WORKER_CACHE).then(simorghCache =>
           simorghCache.keys().then(keys => {
             const matchingCachedItems: string[] = [];
-            const urls = keys.map(({ url }) => url).flat();
+            const urls = keys.flatMap(({ url }) => url);
             cacheableItems.forEach(cachedItem => {
               const matchingItems = urls.filter(url =>
                 url.includes(cachedItem),

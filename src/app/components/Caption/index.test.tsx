@@ -1,11 +1,11 @@
-import { OptimoBlock } from '#app/models/types/optimo';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import { ServiceConfig } from '#app/models/types/serviceConfig';
-import CaptionContainer from '.';
+import type { OptimoBlock } from '#app/models/types/optimo';
+import type { ServiceConfig } from '#app/models/types/serviceConfig';
 import { render } from '../react-testing-library-with-providers';
+import CaptionContainer from '.';
 import captionBlock, {
-  captionBlock3Paragraphs,
   blocksWithInline,
+  captionBlock3Paragraphs,
 } from './fixture';
 
 const newsServiceContextStub = {

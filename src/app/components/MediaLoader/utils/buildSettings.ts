@@ -1,9 +1,9 @@
-import onClient from '#app/lib/utilities/onClient';
-import isLive from '#app/lib/utilities/isLive';
 import filterForBlockType from '#app/lib/utilities/blockHandlers';
+import isLive from '#app/lib/utilities/isLive';
+import onClient from '#app/lib/utilities/onClient';
 import { LIVE_TV_PAGE } from '#app/routes/utils/pageTypes';
-import { BuildConfigProps, PlayerConfig } from '../types';
 import configForMediaBlockType from '../configs';
+import type { BuildConfigProps, PlayerConfig } from '../types';
 
 const isTestRequested = () => {
   if (isLive()) {

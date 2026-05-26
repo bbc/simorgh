@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
@@ -23,8 +24,6 @@ const Paragraph = styled.p`
   }
 `;
 
-const TopicDescription = ({ children }) => {
-  return <Paragraph>{children}</Paragraph>;
-};
+const TopicDescription = ({ children }) => <Paragraph>{children}</Paragraph>;
 
 export default TopicDescription;

@@ -1,18 +1,18 @@
-/* eslint-disable jsx-a11y/aria-role */
+// biome-ignore-all lint/a11y/useValidAriaRole: we want this
 import { use } from 'react';
+
 import moment from 'moment';
 import path from 'ramda/src/path';
-import formatDuration from '#app/lib/utilities/formatDuration';
-import Promo from '#components/Promo';
-import { Summary } from '#app/models/types/curationData';
+
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import formatDuration from '#app/lib/utilities/formatDuration';
 import isMediaType from '#app/lib/utilities/isMedia';
-import VisuallyHiddenText from '../../VisuallyHiddenText';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import type { Summary } from '#app/models/types/curationData';
+import Promo from '#components/Promo';
 import { RequestContext } from '../../../contexts/RequestContext';
-
+import { ServiceContext } from '../../../contexts/ServiceContext';
 import LiveLabel from '../../LiveLabel';
-
+import VisuallyHiddenText from '../../VisuallyHiddenText';
 import styles from './index.styles';
 
 const CurationPromo = ({

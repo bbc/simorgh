@@ -1,4 +1,4 @@
-import { MediaBlock } from '../../types';
+import type { MediaBlock } from '../../types';
 
 export const mediaBlockWithPV: MediaBlock[] = [
   {

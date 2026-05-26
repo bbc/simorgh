@@ -1,24 +1,23 @@
-import {
-  firstHalf90Data,
-  secondHalf90Data,
-  firstHalfAggData,
-  etFirstHalfData,
-  inPensAetData,
-  beforePensData,
-  beforePensAetData,
-  beforeEtData,
-  inPens90Data,
-  secondLegETData,
-  secondLegAETInPensData,
-} from './static-data/event/transformed/mid-event';
 import { HeadToHeadV2 } from './head-to-head-v2';
-import { SHORT_NAMES } from './storybook/helpers/short-name-map';
+import {
+  beforeEtData,
+  beforePensAetData,
+  beforePensData,
+  etFirstHalfData,
+  firstHalf90Data,
+  firstHalfAggData,
+  inPens90Data,
+  inPensAetData,
+  secondHalf90Data,
+  secondLegAETInPensData,
+  secondLegETData,
+} from './static-data/event/transformed/mid-event';
+import venuesData from './static-data/premier-league-venues.json';
 import {
   HeadToHeadV2Component,
   HeadToHeadV2ConciseComponent,
 } from './storybook/helpers/base-component';
-
-import venuesData from './static-data/premier-league-venues.json';
+import { SHORT_NAMES } from './storybook/helpers/short-name-map';
 
 const { venues } = venuesData;
 

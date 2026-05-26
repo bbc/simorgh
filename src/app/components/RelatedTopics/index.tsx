@@ -1,10 +1,11 @@
 import { use } from 'react';
-import SectionLabel from '#psammead/psammead-section-label/src';
+
 import { GREY_2 } from '#app/components/ThemeProvider/palette';
+import TopicTags from '#app/components/TopicTags';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import TopicTags from '#app/components/TopicTags';
-import { TopicTag } from '#app/models/types/metadata';
+import type { TopicTag } from '#app/models/types/metadata';
+import SectionLabel from '#psammead/psammead-section-label/src';
 import styles from './index.styles';
 
 interface RelatedTopicsProps {

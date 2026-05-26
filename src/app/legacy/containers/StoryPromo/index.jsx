@@ -1,35 +1,37 @@
 import { use } from 'react';
+
 import styled from '@emotion/styled';
-import StoryPromo, {
-  Headline,
-  Summary,
-  Link,
-} from '#psammead/psammead-story-promo/src';
-import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
 import pathOr from 'ramda/src/pathOr';
+
 import LiveLabel from '#app/components/LiveLabel';
-import ImagePlaceholder from '#psammead/psammead-image-placeholder/src';
+import { MEDIA_ASSET_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
+import PromoTimestamp from '#components/Promo/timestamp';
 import { RequestContext } from '#contexts/RequestContext';
-import { createSrcsets } from '#lib/utilities/srcSet';
-import buildIChefURL from '#lib/utilities/ichefURL';
-import getOriginCode from '#lib/utilities/imageSrcHelpers/originCode';
-import getLocator from '#lib/utilities/imageSrcHelpers/locator';
+import { MEDIA_MISSING } from '#lib/logger.const';
+import loggerNode from '#lib/logger.node';
 import {
   getAssetTypeCode,
   getHeadline,
-  getUrl,
   getIsLive,
+  getUrl,
 } from '#lib/utilities/getStoryPromoInfo';
-import loggerNode from '#lib/logger.node';
-import { MEDIA_MISSING } from '#lib/logger.const';
-import { MEDIA_ASSET_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
-import PromoTimestamp from '#components/Promo/timestamp';
+import buildIChefURL from '#lib/utilities/ichefURL';
+import getLocator from '#lib/utilities/imageSrcHelpers/locator';
+import getOriginCode from '#lib/utilities/imageSrcHelpers/originCode';
+import { createSrcsets } from '#lib/utilities/srcSet';
+import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
+import ImagePlaceholder from '#psammead/psammead-image-placeholder/src';
+import StoryPromo, {
+  Headline,
+  Link,
+  Summary,
+} from '#psammead/psammead-story-promo/src';
+import Image from '../../../components/Image';
+import IndexAlsosContainer from './IndexAlsos';
 import LinkContents from './LinkContents';
 import MediaIndicatorContainer from './MediaIndicator';
-import IndexAlsosContainer from './IndexAlsos';
-import { getHeadingTagOverride, buildUniquePromoId } from './utilities';
-import Image from '../../../components/Image';
 import useCombinedClickTrackerHandler from './useCombinedClickTrackerHandler';
+import { buildUniquePromoId, getHeadingTagOverride } from './utilities';
 
 const logger = loggerNode(__filename);
 
@@ -39,14 +41,12 @@ const SingleColumnStoryPromo = styled(StoryPromo)`
   }
 `;
 
-// eslint-disable-next-line consistent-return
 const extractAltText = blocks => {
-  // eslint-disable-next-line no-restricted-syntax
   for (const block of blocks) {
     if (block.type === 'paragraph') {
       return block.model.text;
     }
-    if (block.model && block.model.blocks) {
+    if (block.model?.blocks) {
       return extractAltText(block.model.blocks);
     }
   }

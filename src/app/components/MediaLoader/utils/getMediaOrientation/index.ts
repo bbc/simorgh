@@ -1,4 +1,4 @@
-import { Orientations } from '../../types';
+import type { Orientations } from '../../types';
 
 const ORIENTATION_MAPPING: Record<string, Orientations> = {
   PORTRAIT: 'portrait',

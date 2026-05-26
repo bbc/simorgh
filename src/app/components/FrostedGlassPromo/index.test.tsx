@@ -1,25 +1,22 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import { PropsWithChildren } from 'react';
+// biome-ignore-all lint/suspicious/noExplicitAny: we want this
+import type { PropsWithChildren } from 'react';
 
-import { ToggleContextProvider } from '../../contexts/ToggleContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
-
-import { STORY_PAGE } from '../../routes/utils/pageTypes';
-import makeRelativeUrlPath from '../../lib/utilities/makeRelativeUrlPath';
+import { ToggleContextProvider } from '../../contexts/ToggleContext';
 import * as clickTracking from '../../hooks/useClickTrackerHandler';
+import makeRelativeUrlPath from '../../lib/utilities/makeRelativeUrlPath';
+import type { Services, Variants } from '../../models/types/global';
+import { STORY_PAGE } from '../../routes/utils/pageTypes';
 import { render } from '../react-testing-library-with-providers';
-import { Services, Variants } from '../../models/types/global';
-
+import Promo from '.';
 import {
-  promoProps,
   cpsPromoFixture,
   linkPromoFixture,
   makeOptimoPromoFixture,
+  promoProps,
 } from './fixtures';
-
-import Promo from '.';
-import { PromoProps } from './types';
+import type { PromoProps } from './types';
 
 interface Props extends PromoProps {
   service?: Services;
@@ -35,27 +32,25 @@ const Component = ({
   service = 'mundo',
   variant,
   ...rest
-}: PropsWithChildren<Props>) => {
-  return (
-    <ServiceContextProvider service={service} variant={variant}>
-      <RequestContextProvider
-        isAmp={false}
-        isApp={false}
-        service={service}
-        pathname="/"
-        pageType={STORY_PAGE}
+}: PropsWithChildren<Props>) => (
+  <ServiceContextProvider service={service} variant={variant}>
+    <RequestContextProvider
+      isAmp={false}
+      isApp={false}
+      service={service}
+      pathname="/"
+      pageType={STORY_PAGE}
+    >
+      <ToggleContextProvider
+        toggles={{
+          eventTracking: { enabled: false },
+        }}
       >
-        <ToggleContextProvider
-          toggles={{
-            eventTracking: { enabled: false },
-          }}
-        >
-          <Promo {...rest} />
-        </ToggleContextProvider>
-      </RequestContextProvider>
-    </ServiceContextProvider>
-  );
-};
+        <Promo {...rest} />
+      </ToggleContextProvider>
+    </RequestContextProvider>
+  </ServiceContextProvider>
+);
 
 describe('Frosted Glass Promo', () => {
   it('when given props directly', () => {

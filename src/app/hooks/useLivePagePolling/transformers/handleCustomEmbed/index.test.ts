@@ -1,4 +1,4 @@
-import handleCustomEmbed, { CustomEmbedBlock } from '.';
+import handleCustomEmbed, { type CustomEmbedBlock } from '.';
 
 const twitterCustomEmbedFixture = {
   type: 'customEmbed',

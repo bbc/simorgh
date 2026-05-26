@@ -1,4 +1,6 @@
-import { Agent } from 'undici';
+import type { Agent } from 'undici';
+
+import * as fetchPageData from '#app/routes/utils/fetchPageData';
 import {
   ARTICLE_PAGE,
   CPS_ASSET,
@@ -6,16 +8,13 @@ import {
   MOST_READ_PAGE,
   TOPIC_PAGE,
 } from '#app/routes/utils/pageTypes';
-import * as fetchPageData from '#app/routes/utils/fetchPageData';
 import fetchDataFromBFF from '.';
 
 jest.mock('../fetchPageData', () =>
-  jest.fn().mockImplementation(() => {
-    return {
-      json: { data: {} },
-      status: 200,
-    };
-  }),
+  jest.fn().mockImplementation(() => ({
+    json: { data: {} },
+    status: 200,
+  })),
 );
 
 const mockAgent = {

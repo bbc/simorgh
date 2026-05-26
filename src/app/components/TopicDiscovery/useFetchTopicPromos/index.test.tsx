@@ -1,12 +1,13 @@
-import { PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
+
 import {
   renderHook,
   waitFor,
 } from '#app/components/react-testing-library-with-providers';
 import { RequestContextProvider } from '#app/contexts/RequestContext';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
-import { Variants } from '#app/models/types/global';
 import useNearViewport from '#app/hooks/useNearViewport';
+import type { Variants } from '#app/models/types/global';
 import { multipleTopicsFixture } from '../fixtures';
 import useFetchTopicPromos from '.';
 

@@ -6,8 +6,7 @@ export const MEDIA_TYPES = {
 
 export type MediaType = (typeof MEDIA_TYPES)[keyof typeof MEDIA_TYPES];
 
-const isMedia = (type: string): boolean => {
-  return Object.values(MEDIA_TYPES).includes(type as MediaType);
-};
+const isMedia = (type: string): boolean =>
+  Object.values(MEDIA_TYPES).includes(type as MediaType);
 
 export default isMedia;

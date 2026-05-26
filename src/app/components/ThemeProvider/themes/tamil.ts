@@ -1,10 +1,10 @@
-import { ServiceTheme } from '#app/models/types/theming';
-import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
-import tamilScript from '../fontScripts/tamil';
-import { NOTO_SANS_TAMIL_BOLD, NOTO_SANS_TAMIL_REGULAR } from '../fontFaces';
-import tamilFontVariants from '../fontVariants/tamil';
-import withThemeProvider from '../withThemeProvider';
+import type { ServiceTheme } from '#app/models/types/theming';
 import brandSVG from '../chameleonLogos/tamil';
+import { NOTO_SANS_TAMIL_BOLD, NOTO_SANS_TAMIL_REGULAR } from '../fontFaces';
+import tamilScript from '../fontScripts/tamil';
+import tamilFontVariants from '../fontVariants/tamil';
+import { GHOST, POSTBOX, POSTBOX_30, WHITE } from '../palette';
+import withThemeProvider from '../withThemeProvider';
 
 export const theme: ServiceTheme = {
   palette: {

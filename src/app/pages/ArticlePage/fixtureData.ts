@@ -1,7 +1,7 @@
-import {
+import type {
   Article,
-  OptimoBylineContributorBlock,
   OptimoBlock,
+  OptimoBylineContributorBlock,
 } from '#app/models/types/optimo';
 import {
   blockContainingText,

@@ -1,6 +1,6 @@
 import { render, screen } from '../../react-testing-library-with-providers';
-import { chartEmbedImages, createEmbedImagesFixture } from './fixtures';
 import EmbedImages from '.';
+import { chartEmbedImages, createEmbedImagesFixture } from './fixtures';
 
 describe('EmbedImages', () => {
   beforeEach(() => {

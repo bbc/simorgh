@@ -1,13 +1,14 @@
 import { use } from 'react';
+
 import SectionLabel from '#psammead/psammead-section-label/src';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
+import useViewTracker from '../../../../hooks/useViewTracker';
 import PromoItem from '../../../../legacy/components/OptimoPromos/PromoItem/index.styles';
 import PromoList from '../../../../legacy/components/OptimoPromos/PromoList';
-import useViewTracker from '../../../../hooks/useViewTracker';
 import generatePromoId from '../../../../lib/utilities/generatePromoId';
-import LatestMediaItem from './LatestMediaItem';
 import styles from './index.styles';
-import { LatestMedia } from './types';
+import LatestMediaItem from './LatestMediaItem';
+import type { LatestMedia } from './types';
 
 const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
   const { dir, translations } = use(ServiceContext);

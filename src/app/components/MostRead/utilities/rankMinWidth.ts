@@ -5,7 +5,7 @@ import {
   SEXTUPLE,
   TRIPLE,
 } from '../../ThemeProvider/spacings';
-import { Size } from '../types';
+import type { Size } from '../types';
 
 // Services with fonts that have glyphs thinner than the majority of other fonts.
 // This was mainly based on the old overrides (ie. Any group0 value < 2rem).

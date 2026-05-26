@@ -1,16 +1,18 @@
 import { cloneElement, useRef } from 'react';
+
 import styled from '@emotion/styled';
-import { navigationIcons } from '#psammead/psammead-assets/src/svgs';
-import {
-  GEL_SPACING_HLF,
-  GEL_SPACING,
-  GEL_SPACING_HLF_TRPL,
-} from '#psammead/gel-foundations/src/spacings';
 import { Helmet } from 'react-helmet';
+
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_B_MIN_WIDTH,
 } from '#psammead/gel-foundations/src/breakpoints';
+import {
+  GEL_SPACING,
+  GEL_SPACING_HLF,
+  GEL_SPACING_HLF_TRPL,
+} from '#psammead/gel-foundations/src/spacings';
+import { navigationIcons } from '#psammead/psammead-assets/src/svgs';
 import VisuallyHiddenText from '../../../../../components/VisuallyHiddenText';
 
 export const NAV_BAR_TOP_BOTTOM_SPACING = 0.75; // 12px
@@ -124,7 +126,7 @@ export const DropdownLi = ({
       <StyledDropdownLink href={url} aria-labelledby={ariaId} {...clickTracker}>
         {active && currentPageText ? (
           // ID is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
-          // eslint-disable-next-line jsx-a11y/aria-role
+          // biome-ignore lint/a11y/useValidAriaRole: we want this
           <StyledCurrentLink dir={dir} id={ariaId} role="text">
             <VisuallyHiddenText>{`${currentPageText}, `}</VisuallyHiddenText>
             {children}
@@ -239,7 +241,7 @@ export const AmpMenuButton = ({
     <amp-state id="menuState">
       <script
         type="application/json"
-        /* eslint-disable-next-line react/no-danger */
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: this is fine
         dangerouslySetInnerHTML={{ __html: JSON.stringify(initialState) }}
       />
     </amp-state>

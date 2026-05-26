@@ -1,6 +1,6 @@
 import { render } from '../../../../../components/react-testing-library-with-providers';
-import relatedItems from '../../testHelpers/relatedItems';
 import IndexAlsosContainer from '../../testHelpers/IndexAlsosContainer';
+import relatedItems from '../../testHelpers/relatedItems';
 
 describe('Index Alsos', () => {
   it('should render multiple correctly', () => {

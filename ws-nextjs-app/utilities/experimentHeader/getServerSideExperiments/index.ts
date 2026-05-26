@@ -1,9 +1,10 @@
-import {
+import type { IncomingHttpHeaders } from 'node:http';
+
+import type {
   PageTypes,
   ServerSideExperiment,
   Services,
 } from '#app/models/types/global';
-import { IncomingHttpHeaders } from 'node:http';
 import enabledExperimentList from '../enabledExperimentsList';
 
 type Props = {
@@ -12,8 +13,8 @@ type Props = {
   pageType: PageTypes;
 };
 
-export default ({ headers, service, pageType }: Props) => {
-  return Object.entries(headers).reduce<ServerSideExperiment[]>(
+export default ({ headers, service, pageType }: Props) =>
+  Object.entries(headers).reduce<ServerSideExperiment[]>(
     (result, [header, content]) => {
       if (header.startsWith('mvt-')) {
         const experimentName = header.slice(4);
@@ -49,4 +50,3 @@ export default ({ headers, service, pageType }: Props) => {
     },
     [],
   );
-};

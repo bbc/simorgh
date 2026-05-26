@@ -1,4 +1,5 @@
-import { css, Theme } from '@emotion/react';
+import { css, type Theme } from '@emotion/react';
+
 import pixelsToRem from '../../../utilities/pixelsToRem';
 
 // Constants for grid areas

@@ -1,17 +1,23 @@
 import { use } from 'react';
+
 import { Helmet } from 'react-helmet';
-import filterForBlockType from '#app/lib/utilities/blockHandlers';
+
 import { RequestContext } from '#app/contexts/RequestContext';
+import filterForBlockType from '#app/lib/utilities/blockHandlers';
+import type { PageTypes } from '#app/models/types/global';
 import {
   ARTICLE_PAGE,
   AV_EMBEDS,
-  STORY_PAGE,
   CORRESPONDENT_STORY_PAGE,
-  MEDIA_ASSET_PAGE,
   MEDIA_ARTICLE_PAGE,
+  MEDIA_ASSET_PAGE,
+  STORY_PAGE,
 } from '#app/routes/utils/pageTypes';
-import { PageTypes } from '#app/models/types/global';
-import { AresMediaBlock, AresMediaMetadataBlock, MediaBlock } from '../types';
+import type {
+  AresMediaBlock,
+  AresMediaMetadataBlock,
+  MediaBlock,
+} from '../types';
 
 const SUPPORTED_PAGE_TYPES = [
   AV_EMBEDS,

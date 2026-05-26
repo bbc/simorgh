@@ -1,30 +1,32 @@
 import type { Component } from 'react';
 import { use } from 'react';
-import path from 'ramda/src/path';
+
 import is from 'ramda/src/is';
-import ComscoreAnalytics from '#containers/ComscoreAnalytics';
-import StyledRadioHeadingContainer from '#containers/OnDemandHeading/StyledRadioHeadingContainer';
-import OnDemandParagraphContainer from '#containers/OnDemandParagraph';
-import EpisodeImage from '#containers/OnDemandImage';
-import RadioScheduleContainer from '#containers/RadioSchedule';
-import RecentAudioEpisodes from '#containers/EpisodeList/RecentAudioEpisodes';
-import FooterTimestamp from '#containers/OnDemandFooterTimestamp';
-import PodcastExternalLinks from '#containers/PodcastExternalLinks';
+import path from 'ramda/src/path';
+
+import type { ATIData } from '#app/components/ATIAnalytics/types';
+import type { ContentType } from '#app/components/ChartbeatAnalytics/types';
 import MediaLoader from '#app/components/MediaLoader';
-import { PageTypes } from '#app/models/types/global';
-import { RadioScheduleData } from '#app/models/types/radioSchedule';
-import { ContentType } from '#app/components/ChartbeatAnalytics/types';
-import {
+import type { PageTypes } from '#app/models/types/global';
+import type {
   EpisodeAvailability,
   OnDemandAudioBlock,
 } from '#app/models/types/media';
-import { ATIData } from '#app/components/ATIAnalytics/types';
-import styles from './index.styles';
+import type { RadioScheduleData } from '#app/models/types/radioSchedule';
+import ComscoreAnalytics from '#containers/ComscoreAnalytics';
+import RecentAudioEpisodes from '#containers/EpisodeList/RecentAudioEpisodes';
+import FooterTimestamp from '#containers/OnDemandFooterTimestamp';
+import StyledRadioHeadingContainer from '#containers/OnDemandHeading/StyledRadioHeadingContainer';
+import EpisodeImage from '#containers/OnDemandImage';
+import OnDemandParagraphContainer from '#containers/OnDemandParagraph';
+import PodcastExternalLinks from '#containers/PodcastExternalLinks';
+import RadioScheduleContainer from '#containers/RadioSchedule';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
-import MetadataContainer from '../../components/Metadata';
 import LinkedData from '../../components/LinkedData';
+import MetadataContainer from '../../components/Metadata';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import styles from './index.styles';
 
 const SKIP_LINK_ANCHOR_ID = 'content';
 

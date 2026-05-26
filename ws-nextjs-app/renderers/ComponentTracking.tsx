@@ -1,7 +1,7 @@
-import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import clickTracking from '#app/lib/analyticsUtils/staticATITracking/clickTracking';
-import viewTracking from '#app/lib/analyticsUtils/staticATITracking/viewTracking';
 import { addProcessClientDeviceAndSendStaticBeaconToWindow } from '#app/lib/analyticsUtils/staticATITracking/processClientDeviceAndSendStaticBeacon';
+import viewTracking from '#app/lib/analyticsUtils/staticATITracking/viewTracking';
+import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 
 type Props = {
   enableStaticClickTrackingOnOperaMiniOnly: boolean;
@@ -12,8 +12,7 @@ type Props = {
 const trackingScripts = ({
   enableStaticClickTrackingOnOperaMiniOnly,
   trackComponentViews,
-}: Props) => {
-  return `
+}: Props) => `
     window.addEventListener('load', function () {
       var isComponentTrackingEnabled = true;
       var isStaticClickTrackingOnOperaMiniOnlyEnabled = ${enableStaticClickTrackingOnOperaMiniOnly};
@@ -34,7 +33,6 @@ const trackingScripts = ({
       }
     });
   `;
-};
 
 /**
  * Component for injecting component tracking scripts into the page.
@@ -52,7 +50,7 @@ const ComponentTracking = ({
     <script
       nonce={nonce}
       type="text/javascript"
-      // eslint-disable-next-line react/no-danger
+      // biome-ignore lint/security/noDangerouslySetInnerHtml: we want this
       dangerouslySetInnerHTML={{
         __html: `${trackingScripts({
           enableStaticClickTrackingOnOperaMiniOnly,

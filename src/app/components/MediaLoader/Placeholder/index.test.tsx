@@ -1,7 +1,7 @@
 import {
-  render,
   fireEvent,
   getByText,
+  render,
 } from '#app/components/react-testing-library-with-providers';
 import Placeholder from '.';
 

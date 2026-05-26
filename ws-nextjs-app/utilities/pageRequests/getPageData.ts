@@ -1,11 +1,11 @@
 import { BFF_FETCH_ERROR } from '#app/lib/logger.const';
 import { FetchError } from '#app/models/types/fetch';
+import { PageTypes, Services, Variants } from '#app/models/types/global';
+import fetchDataFromBFF from '#app/routes/utils/fetchDataFromBFF';
+import nodeLogger from '#lib/logger.node';
 import sendCustomMetric from '#utilities/customMetrics';
 import { NON_200_RESPONSE } from '#utilities/customMetrics/metrics.const';
 import getAgent from '#utilities/getAgent';
-import fetchDataFromBFF from '#app/routes/utils/fetchDataFromBFF';
-import nodeLogger from '#lib/logger.node';
-import { PageTypes, Services, Variants } from '#app/models/types/global';
 
 const logger = nodeLogger(__filename);
 

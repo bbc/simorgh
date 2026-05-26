@@ -7,29 +7,27 @@ import Document, {
   NextScript,
 } from 'next/document';
 import Script from 'next/script';
-
 import { HTMLAttributes, ReactElement } from 'react';
-import { Helmet, HelmetData } from 'react-helmet';
+
+import createCache from '@emotion/cache';
 import { CacheProvider } from '@emotion/react';
 import createEmotionServer from '@emotion/server/create-instance';
-import createCache from '@emotion/cache';
+import { Helmet, HelmetData } from 'react-helmet';
 
+import NO_JS_CLASSNAME from '#app/lib/noJs.const';
+import addOperaMiniClassScript from '#app/lib/utilities/addOperaMiniClassScript';
+import getPathExtension from '#app/utilities/getPathExtension';
 import {
   EnvConfig,
   getProcessEnvAppVariables,
 } from '#lib/utilities/getEnvConfig';
-
-import NO_JS_CLASSNAME from '#app/lib/noJs.const';
-
-import getPathExtension from '#app/utilities/getPathExtension';
 import CanonicalToLiteRedirect from '#utilities/CanonicalToLiteRedirect';
-import addOperaMiniClassScript from '#app/lib/utilities/addOperaMiniClassScript';
 import handleServerLogging from '#utilities/handleServerLogging';
-import ComponentTracking from '../renderers/ComponentTracking';
-import ReverbTemplate from '../renderers/ReverbTemplate';
-import litePageTransforms from '../renderers/litePageTransforms';
-import LiteRenderer from '../renderers/LiteRenderer';
 import AmpRenderer from '../renderers/AmpRenderer';
+import ComponentTracking from '../renderers/ComponentTracking';
+import LiteRenderer from '../renderers/LiteRenderer';
+import litePageTransforms from '../renderers/litePageTransforms';
+import ReverbTemplate from '../renderers/ReverbTemplate';
 import derivePageType from '../utilities/derivePageType';
 
 type DocProps = {

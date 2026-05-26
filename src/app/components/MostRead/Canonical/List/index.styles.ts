@@ -1,4 +1,5 @@
 import { css } from '@emotion/react';
+
 import {
   GROUP_3_MIN_WIDTH,
   GROUP_5_MIN_WIDTH,

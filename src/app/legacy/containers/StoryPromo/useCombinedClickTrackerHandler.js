@@ -1,7 +1,7 @@
 import path from 'ramda/src/path';
 
-import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import { STATIC_ATI_CLICK_TRACKING } from '#app/lib/analyticsUtils/analytics.const';
+import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 
 const useCombinedClickTrackerHandler = eventTrackingData => {
   const blockData = path(['block'], eventTrackingData);

@@ -1,12 +1,13 @@
-import { RefObject } from 'react';
+import type { RefObject } from 'react';
+
 import {
   act,
-  screen,
-  render,
   fireEvent,
+  render,
+  screen,
 } from '#app/components/react-testing-library-with-providers';
-import PortraitCarouselNavigation from '.';
 import { PROMO_ITEM_WIDTH_MIN } from '../utils/styleUtils';
+import PortraitCarouselNavigation from '.';
 
 jest.useFakeTimers();
 

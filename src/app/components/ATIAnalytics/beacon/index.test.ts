@@ -10,7 +10,6 @@ const reverbMock = {
   userActionEvent: jest.fn(),
 };
 
-// eslint-disable-next-line no-underscore-dangle
 window.__reverb = {
   __reverbLoadedPromise: Promise.resolve(reverbMock),
 };

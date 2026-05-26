@@ -1,16 +1,17 @@
+// biome-ignore-all lint/suspicious/noEmptyBlockStatements: we want this
 import {
-  render,
   fireEvent,
   getByRole,
+  render,
 } from '../../../../../components/react-testing-library-with-providers';
-import {
-  CanonicalDropdown,
-  DropdownUl,
-  DropdownLi,
-  CanonicalMenuButton,
-  AmpMenuButton,
-} from './index';
 import pidginNavData from '../../testHelpers/pidgin';
+import {
+  AmpMenuButton,
+  CanonicalDropdown,
+  CanonicalMenuButton,
+  DropdownLi,
+  DropdownUl,
+} from './index';
 
 const dropdownList = (
   <DropdownUl role="list">

@@ -1,15 +1,16 @@
 import { ChangeEvent, use, useEffect, useRef } from 'react';
+
 import { useLiveRegionContext } from '#app/components/LiveRegion/LiveRegionContext';
 import Text from '#app/components/Text';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import Label from '../FieldLabel';
-import { InputProps, FileData } from '../../types';
 import { useFormContext } from '../../FormContext';
+import fallbackTranslations from '../../fallbackTranslations';
+import InvalidMessageBox from '../../MessageBox/InvalidMessageBox';
+import { FileData, InputProps } from '../../types';
+import Label from '../FieldLabel';
+import FileList from './FileList';
 import styles from './styles';
 import { UploadSvg } from './svgs';
-import FileList from './FileList';
-import InvalidMessageBox from '../../MessageBox/InvalidMessageBox';
-import fallbackTranslations from '../../fallbackTranslations';
 
 export default ({
   id,
@@ -48,11 +49,12 @@ export default ({
   const labelId = `label-${id}`;
   const errorBoxId = `${id}-error`;
 
-  useEffect(() => {
-    return () => {
+  useEffect(
+    () => () => {
       clearTimeout(timeoutRef.current as number);
-    };
-  }, []);
+    },
+    [],
+  );
 
   const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
     // Converts FileList to an actual array
@@ -79,9 +81,7 @@ export default ({
       );
 
       if (
-        uploaded.some(uploadedFile => {
-          return newFile.name === uploadedFile.file.name;
-        })
+        uploaded.some(uploadedFile => newFile.name === uploadedFile.file.name)
       ) {
         return duplicateFileNameCheck(newFile, ogFileName, fileNameCount + 1);
       }

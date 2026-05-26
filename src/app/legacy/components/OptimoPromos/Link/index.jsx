@@ -1,8 +1,9 @@
 import { use } from 'react';
+
 import useCombinedClickTrackerHandler from '#containers/StoryPromo/useCombinedClickTrackerHandler';
 import makeRelativeUrlPath from '../../../../lib/utilities/makeRelativeUrlPath';
-import StyledLink from './index.styles';
 import PromoContext from '../PromoContext';
+import StyledLink from './index.styles';
 
 const Link = ({ className = '', children }) => {
   const { to, eventTrackingData, ariaLabelledBy } = use(PromoContext);

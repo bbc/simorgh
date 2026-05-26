@@ -1,9 +1,9 @@
-import { ServiceTheme } from '#app/models/types/theming';
-import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
+import type { ServiceTheme } from '#app/models/types/theming';
+import brandSVG from '../chameleonLogos/somali';
 import latinScript from '../fontScripts/latin';
 import helmetFontVariants from '../fontVariants/helmet';
+import { GHOST, POSTBOX, POSTBOX_30, WHITE } from '../palette';
 import withThemeProvider from '../withThemeProvider';
-import brandSVG from '../chameleonLogos/somali';
 import getPWATypographyTheme from './getPWATypographyTheme';
 
 export const theme: ServiceTheme = {

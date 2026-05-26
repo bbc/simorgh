@@ -1,9 +1,10 @@
-import compose from 'ramda/src/compose';
 import { render } from '@testing-library/react';
+import compose from 'ramda/src/compose';
+
 import {
   MEDIA_ASSET_PAGE,
-  STORY_PAGE,
   PHOTO_GALLERY_PAGE,
+  STORY_PAGE,
 } from '#app/routes/utils/pageTypes';
 import {
   shouldMatchSnapshot,

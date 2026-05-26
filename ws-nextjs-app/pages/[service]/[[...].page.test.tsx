@@ -1,8 +1,8 @@
 import { GetServerSidePropsContext } from 'next/types';
 
 import { getServerSideProps } from './[[...]].page';
-import handleAvRoute from './av-embeds/handleAvRoute';
 import handleArticleRoute from './articles/handleArticleRoute';
+import handleAvRoute from './av-embeds/handleAvRoute';
 import handleHomepageRoute from './homepage/handleHomepageRoute';
 import handleOnDemandAudioRoute from './onDemandAudio/handleOnDemandAudioRoute';
 import handleOnDemandTvRoute from './onDemandTv/handleOnDemandTvRoute';

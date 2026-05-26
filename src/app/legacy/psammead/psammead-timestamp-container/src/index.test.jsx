@@ -1,5 +1,6 @@
-import { isNull } from '#psammead/psammead-test-helpers/src';
 import moment from 'moment';
+
+import { isNull } from '#psammead/psammead-test-helpers/src';
 import { render } from '../../../../components/react-testing-library-with-providers';
 import '#psammead/psammead-locales/moment/ha';
 import Timestamp from '.';
@@ -20,7 +21,7 @@ const mockCalendar = {
 
 describe('Timestamp', () => {
   describe('with no data', () => {
-    console.error = jest.fn(); // eslint-disable-line no-console
+    console.error = jest.fn();
     isNull('should return null', <Timestamp />);
   });
 

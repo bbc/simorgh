@@ -1,6 +1,8 @@
+// biome-ignore-all lint/style/noCommonJs: we want this
 import { render } from '@testing-library/react';
-import { RequestContextProvider } from '#contexts/RequestContext';
+
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { RequestContextProvider } from '#contexts/RequestContext';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 
 jest.mock('./index.canonical', () => () => <div>Canonical Cookie banner</div>);

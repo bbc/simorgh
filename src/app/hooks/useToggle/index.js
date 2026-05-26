@@ -1,4 +1,5 @@
 import { use } from 'react';
+
 import { ToggleContext } from '#contexts/ToggleContext';
 
 const useToggle = toggleName => {

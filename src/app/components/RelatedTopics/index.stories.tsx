@@ -1,4 +1,4 @@
-import { StoryArgs, StoryProps } from '#app/models/types/storybook';
+import type { StoryArgs, StoryProps } from '#app/models/types/storybook';
 import RelatedTopics from '.';
 import readme from './README.md';
 import mundoArticle from '#data/mundo/articles/cddylv9g8z0o.json';

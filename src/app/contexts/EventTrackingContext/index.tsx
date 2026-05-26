@@ -1,35 +1,35 @@
-import { createContext, PropsWithChildren, use, useMemo } from 'react';
+import { createContext, type PropsWithChildren, use, useMemo } from 'react';
 
 import { AccountContext } from '#contexts/AccountContext';
-import { RequestContext } from '../RequestContext';
+import type { ATIData } from '../../components/ATIAnalytics/types';
 import useToggle from '../../hooks/useToggle';
+import type { EventTrackingContextProps } from '../../models/types/eventTracking';
+import type { PageTypes } from '../../models/types/global';
 import {
   ARTICLE_PAGE,
-  MOST_READ_PAGE,
-  MEDIA_ASSET_PAGE,
-  STORY_PAGE,
-  PHOTO_GALLERY_PAGE,
-  CORRESPONDENT_STORY_PAGE,
-  TOPIC_PAGE,
-  LIVE_PAGE,
-  MEDIA_ARTICLE_PAGE,
-  HOME_PAGE,
-  CPS_ASSET,
-  STATIC_PAGE,
-  UGC_PAGE,
-  AV_EMBEDS,
-  DOWNLOADS_PAGE,
-  LIVE_RADIO_PAGE,
-  TV_PAGE,
   AUDIO_PAGE,
-  OFFLINE_PAGE,
+  AV_EMBEDS,
+  CORRESPONDENT_STORY_PAGE,
+  CPS_ASSET,
+  DOWNLOADS_PAGE,
+  HOME_PAGE,
+  LIVE_PAGE,
+  LIVE_RADIO_PAGE,
   LIVE_TV_PAGE,
+  MEDIA_ARTICLE_PAGE,
+  MEDIA_ASSET_PAGE,
+  MOST_READ_PAGE,
   MY_NEWS_PAGE,
+  OFFLINE_PAGE,
+  PHOTO_GALLERY_PAGE,
+  STATIC_PAGE,
+  STORY_PAGE,
+  TOPIC_PAGE,
+  TV_PAGE,
+  UGC_PAGE,
 } from '../../routes/utils/pageTypes';
-import { PageTypes } from '../../models/types/global';
-import { EventTrackingContextProps } from '../../models/types/eventTracking';
+import { RequestContext } from '../RequestContext';
 import { ServiceContext } from '../ServiceContext';
-import { ATIData } from '../../components/ATIAnalytics/types';
 
 export const EventTrackingContext = createContext<EventTrackingContextProps>(
   {} as EventTrackingContextProps,
@@ -63,7 +63,6 @@ const getCampaignID = (pageType: CampaignPageTypes) => {
   }[pageType];
 
   if (!campaignID) {
-    // eslint-disable-next-line no-console
     console.warn(
       `ATI Event Tracking Error: Could not get the page type's campaign name`,
     );

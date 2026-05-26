@@ -1,6 +1,7 @@
 import path from 'ramda/src/path';
-import serviceConfig from '../../config/services';
+
 import { ServiceParametersType } from '../../../types';
+import serviceConfig from '../../config/services';
 import { ServiceConfigDataType } from '../../config/settings';
 
 export default ({ service }: ServiceParametersType) => {

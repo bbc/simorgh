@@ -1,5 +1,6 @@
 import { renderHook } from '@testing-library/react';
 import { renderHook as renderSSRHook } from '@testing-library/react-hooks/server';
+
 import useSendPWAStatus from './index';
 
 describe('useSendPWAStatus', () => {

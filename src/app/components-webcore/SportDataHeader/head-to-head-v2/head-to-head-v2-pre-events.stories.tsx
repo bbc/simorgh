@@ -1,18 +1,16 @@
 // import { BREAKPOINT_VIEWPORTS } from '@bbc/web-gel-foundations';
 // import { INITIAL_VIEWPORTS } from 'storybook/viewport';
-import { preEventData } from './static-data/event/transformed/pre-event/index';
 
 // import mdx from './head-to-head-v2.mdx';
 // import metadata from './metadata.json';
 import { HeadToHeadV2 } from './head-to-head-v2';
-import { SHORT_NAMES } from './storybook/helpers/short-name-map';
-
+import { preEventData } from './static-data/event/transformed/pre-event/index';
+import venuesData from './static-data/premier-league-venues.json';
 import {
   HeadToHeadV2Component,
   HeadToHeadV2ConciseComponent,
 } from './storybook/helpers/base-component';
-
-import venuesData from './static-data/premier-league-venues.json';
+import { SHORT_NAMES } from './storybook/helpers/short-name-map';
 
 const { venues } = venuesData;
 

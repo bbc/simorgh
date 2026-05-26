@@ -1,10 +1,11 @@
 /* eslint-disable cypress/no-unnecessary-waiting */
 import path from 'ramda/src/path';
+
 import { OptimoBlock } from '#app/models/types/optimo';
-import { ServiceParametersType } from '../../../types';
 import runCanonicalAdsTests from '../../../support/helpers/adsTests/testsForCanonicalOnly';
-import { crossPlatform as mostReadAssertions } from '../../assertions/crossPlatformAssertion';
 import skipOnLocal from '../../../support/helpers/skipOnLocal';
+import { ServiceParametersType } from '../../../types';
+import { crossPlatform as mostReadAssertions } from '../../assertions/crossPlatformAssertion';
 
 export default ({ service, pageType, variant }: ServiceParametersType) => {
   describe(`Canonical Tests for ${service} ${pageType}`, () => {
@@ -86,12 +87,11 @@ export default ({ service, pageType, variant }: ServiceParametersType) => {
               pageData,
             ) as OptimoBlock[];
 
-            const twitterEmbedBlocks = blocks.filter(block => {
-              return (
+            const twitterEmbedBlocks = blocks.filter(
+              block =>
                 block.type === 'social_embed' &&
-                path(['model', 'blocks', 0, 'type'], block) === 'twitter'
-              );
-            });
+                path(['model', 'blocks', 0, 'type'], block) === 'twitter',
+            );
 
             if (twitterEmbedBlocks.length > 1) {
               const firstTwitterEmbedUrl = path(
@@ -138,12 +138,11 @@ export default ({ service, pageType, variant }: ServiceParametersType) => {
               pageData,
             ) as OptimoBlock[];
 
-            const instagramEmbedBlocks = blocks.filter(block => {
-              return (
+            const instagramEmbedBlocks = blocks.filter(
+              block =>
                 block.type === 'social_embed' &&
-                path(['model', 'blocks', 0, 'type'], block) === 'instagram'
-              );
-            });
+                path(['model', 'blocks', 0, 'type'], block) === 'instagram',
+            );
 
             if (instagramEmbedBlocks.length > 1) {
               const firstInstagramEmbedUrl = path(

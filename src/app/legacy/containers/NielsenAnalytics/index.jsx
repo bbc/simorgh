@@ -1,4 +1,5 @@
 import { use } from 'react';
+
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import AmpNielsenAnalytics from './Amp';
@@ -40,9 +41,7 @@ const NielsenAnalytics = () => {
    */
 
   const assetid = pathname.split('.')[0];
-  const capitalise = word => {
-    return `${word[0].toUpperCase()}${word.substr(1)}`;
-  };
+  const capitalise = word => `${word[0].toUpperCase()}${word.substr(1)}`;
   let section = `BBC ${capitalise(service)}`;
   const sectionSplit = assetid.split('/');
   const lastSection = sectionSplit[sectionSplit.length - 1];

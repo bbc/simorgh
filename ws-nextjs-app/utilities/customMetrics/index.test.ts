@@ -1,6 +1,5 @@
-/* eslint-disable import/first */
-/* eslint-disable import/order */
-import sendCustomMetric, { Params } from '.';
+// biome-ignore-all lint/nursery/useImportsFirst: we want this
+import sendCustomMetric, { type Params } from '.';
 
 const metricParams = {
   metricName: 'Metric Name',

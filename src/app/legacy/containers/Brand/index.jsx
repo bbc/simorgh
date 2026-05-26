@@ -1,10 +1,12 @@
 import { use } from 'react';
-import styled from '@emotion/styled';
-import Brand from '#psammead/psammead-brand/src';
+
 import { useTheme } from '@emotion/react';
+import styled from '@emotion/styled';
+
 import { servicesWithVariants } from '#lib/utilities/variantHandler';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import Brand from '#psammead/psammead-brand/src';
 import { RequestContext } from '../../../contexts/RequestContext';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const StyledBrand = styled(Brand)`
   position: relative;
@@ -38,7 +40,7 @@ const BrandContainer = ({
   const { brandSVG } = useTheme();
   const svgMaxHeight = 24;
   const svgMinHeight = 16;
-  const svgRatio = brandSVG && brandSVG.ratio;
+  const svgRatio = brandSVG?.ratio;
   const minWidth = svgRatio * svgMinHeight;
   const maxWidth = svgRatio * svgMaxHeight;
 

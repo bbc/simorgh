@@ -1,14 +1,15 @@
 import styled from '@emotion/styled';
+
+import {
+  GEL_GROUP_3_SCREEN_WIDTH_MAX,
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+  GEL_GROUP_5_SCREEN_WIDTH_MIN,
+} from '#psammead/gel-foundations/src/breakpoints';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
-import {
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
-  GEL_GROUP_3_SCREEN_WIDTH_MAX,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-  GEL_GROUP_5_SCREEN_WIDTH_MIN,
-} from '#psammead/gel-foundations/src/breakpoints';
 import { grid } from '#psammead/psammead-styles/src/detection';
 
 const twoOfSixColumnsMaxWidthScaleable = `33.33%`;

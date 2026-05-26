@@ -1,3 +1,1 @@
-export default num => {
-  return parseFloat(num.toFixed(2));
-};
+export default num => parseFloat(num.toFixed(2));

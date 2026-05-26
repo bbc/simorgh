@@ -1,5 +1,5 @@
-/* eslint-disable no-console */
-const path = require('path');
+// biome-ignore-all lint/suspicious/noConsole: we want this
+const path = require('node:path');
 const depcheck = require('depcheck');
 
 const options = {

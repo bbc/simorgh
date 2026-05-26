@@ -1,4 +1,4 @@
-import { Agent } from 'undici';
+import type { Agent } from 'undici';
 
 export interface FetchError extends Error {
   status: number;

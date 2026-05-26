@@ -1,15 +1,16 @@
-import { useEffect, useRef, use } from 'react';
+import { use, useEffect, useRef } from 'react';
+
 import Heading from '#app/components/Heading';
-import { LiveRegionContextProvider } from '#app/components/LiveRegion/LiveRegionContext';
 import LiveRegion from '#app/components/LiveRegion';
+import { LiveRegionContextProvider } from '#app/components/LiveRegion/LiveRegionContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { useFormContext } from '../FormContext';
-import { Field } from '../types';
 import FormField from '../FormField';
-import styles from './styles';
-import Submit from '../SubmitButton';
 import fallbackTranslations from '../fallbackTranslations';
 import ErrorSummaryBox from '../MessageBox/ErrorSummaryBox';
+import Submit from '../SubmitButton';
+import { Field } from '../types';
+import styles from './styles';
 
 type Props = {
   title: string;
@@ -50,14 +51,7 @@ export default function FormScreen({
     } else {
       document.title = title;
     }
-  }, [
-    title,
-    hasValidationErrors,
-    hasAttemptedSubmit,
-    // refocuses on error summary box after every submission attempt
-    attemptedSubmitCount,
-    validationRequired,
-  ]);
+  }, [title, hasValidationErrors, hasAttemptedSubmit, validationRequired]);
 
   const formFields = fields?.map(({ id, label, htmlType }) => (
     <FormField key={id} id={id} label={label} htmlType={htmlType} />
@@ -81,7 +75,7 @@ export default function FormScreen({
       </Heading>
       {description && (
         <div
-          // eslint-disable-next-line react/no-danger
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: we want this
           dangerouslySetInnerHTML={{ __html: description }}
           css={styles.description}
         />
@@ -102,7 +96,7 @@ export default function FormScreen({
             <div css={styles.privacyContainer}>
               <strong css={styles.privacyHeading}>{dataPolicyHeading}</strong>
               <div
-                // eslint-disable-next-line react/no-danger
+                // biome-ignore lint/security/noDangerouslySetInnerHtml: we want this
                 dangerouslySetInnerHTML={{ __html: privacyNotice }}
                 css={styles.privacyNotice}
               />

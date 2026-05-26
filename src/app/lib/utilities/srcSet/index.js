@@ -45,7 +45,6 @@ export const createSrcsets = ({
     requiredResolutions.push(originalImageWidth);
   }
 
-  // eslint-disable-next-line prefer-const
   let [primarySrcset, fallbackSrcset] = [true, false].map(() =>
     requiredResolutions
       .map(

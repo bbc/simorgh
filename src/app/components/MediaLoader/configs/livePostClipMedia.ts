@@ -1,17 +1,17 @@
 import moment from 'moment-timezone';
 
-import buildIChefURL from '#lib/utilities/ichefURL';
 import filterForBlockType from '#lib/utilities/blockHandlers';
-import {
+import buildIChefURL from '#lib/utilities/ichefURL';
+import type {
   ClipMediaBlock,
   ConfigBuilderProps,
   ConfigBuilderReturnProps,
   PlaylistItem,
 } from '../types';
-import getCaptionBlock from '../utils/getCaptionBlock';
 import buildPlaceholderConfig from '../utils/buildPlaceholderConfig';
-import shouldDisplayAds from '../utils/shouldDisplayAds';
+import getCaptionBlock from '../utils/getCaptionBlock';
 import getMediaOrientation from '../utils/getMediaOrientation';
+import shouldDisplayAds from '../utils/shouldDisplayAds';
 import { getExternalEmbedUrl } from '../utils/urlConstructors';
 import AUDIO_UI_CONFIG from './constants';
 

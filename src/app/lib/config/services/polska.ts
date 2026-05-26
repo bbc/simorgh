@@ -2,7 +2,7 @@ import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/l
 import '#psammead/moment-timezone-include/tz/Europe/Warsaw';
 import '#psammead/psammead-locales/moment/pl-pl';
 import withContext from '../../../contexts/utils/withContext';
-import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
+import type { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
 export const service: DefaultServiceConfig = {
   default: {

@@ -1,11 +1,11 @@
 import { use, useEffect, useRef, useState } from 'react';
-import { TopicTag } from '#app/models/types/metadata';
-import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+
 import { RequestContext } from '#app/contexts/RequestContext';
-import { OK } from '#app/lib/statusCodes.const';
 import useNearViewport from '#app/hooks/useNearViewport';
-import { ServiceContext } from '#app/contexts/ServiceContext';
-import { TopicDiscoveryItem } from '../types';
+import { OK } from '#app/lib/statusCodes.const';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import type { TopicTag } from '#app/models/types/metadata';
+import type { TopicDiscoveryItem } from '../types';
 
 const { WEB_CDN_URL } = getEnvConfig();
 
@@ -18,10 +18,6 @@ type Props = {
 
 const useFetchTopicPromos = ({ activeTabId }: Props) => {
   const { service, variant } = use(RequestContext);
-  const { translations } = use(ServiceContext);
-
-  const { fetchErrorMessage = 'Failed to load' } =
-    translations.topicDiscovery || {};
 
   const promosCacheRef = useRef<
     Record<TopicTag['topicId'], TopicDiscoveryItem[]>
@@ -77,7 +73,7 @@ const useFetchTopicPromos = ({ activeTabId }: Props) => {
             setIsLoading(false);
             setIsError(true);
           }
-        } catch (error) {
+        } catch (_error) {
           setTopicPromos([]);
           setIsLoading(false);
           setIsError(true);
@@ -90,7 +86,7 @@ const useFetchTopicPromos = ({ activeTabId }: Props) => {
     return () => {
       abortController?.abort();
     };
-  }, [activeTabId, isNearViewport, service, variant, fetchErrorMessage]);
+  }, [activeTabId, isNearViewport, service, variant]);
 
   return { topicPromos, isLoading, isError };
 };

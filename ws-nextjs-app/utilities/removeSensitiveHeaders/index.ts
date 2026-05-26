@@ -1,4 +1,4 @@
-import { IncomingHttpHeaders } from 'http';
+import { IncomingHttpHeaders } from 'node:http';
 
 export default function removeSensitiveHeaders(headers?: IncomingHttpHeaders) {
   if (!headers) return {};
@@ -9,7 +9,8 @@ export default function removeSensitiveHeaders(headers?: IncomingHttpHeaders) {
 
   return Object.keys(headers)
     ?.filter(objKey => !sensitiveHeadersArray?.includes(objKey))
-    ?.reduce<IncomingHttpHeaders>((newObj, key) => {
-      return { ...newObj, [key]: headers[key] };
-    }, {});
+    ?.reduce<IncomingHttpHeaders>(
+      (newObj, key) => ({ ...newObj, [key]: headers[key] }),
+      {},
+    );
 }

@@ -1,23 +1,25 @@
-import { forwardRef, Children, cloneElement } from 'react';
+import { Children, cloneElement, forwardRef } from 'react';
+
 import styled from '@emotion/styled';
-import {
-  GEL_MARGIN_BELOW_400PX,
-  GEL_GUTTER_BELOW_600PX,
-  GEL_MARGIN_ABOVE_400PX,
-  GEL_GUTTER_ABOVE_600PX,
-} from '#psammead/gel-foundations/src/spacings';
+
 import {
   GEL_GROUP_0_SCREEN_WIDTH_MAX,
-  GEL_GROUP_1_SCREEN_WIDTH_MIN,
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
-  GEL_GROUP_2_SCREEN_WIDTH_MIN,
+  GEL_GROUP_1_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
+  GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MAX,
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
+import {
+  GEL_GUTTER_ABOVE_600PX,
+  GEL_GUTTER_BELOW_600PX,
+  GEL_MARGIN_ABOVE_400PX,
+  GEL_MARGIN_BELOW_400PX,
+} from '#psammead/gel-foundations/src/spacings';
 
 const groups = {
   group0: {
@@ -101,7 +103,7 @@ const gridMediaQueries = ({
       ${enableGelGutters ? `grid-column-gap: ${groups[group].gutterSize};` : ``}
       ${margins[group] ? `padding: 0 ${groups[group].marginSize};` : ``}
       ${
-        gridStartOffset && gridStartOffset[group]
+        gridStartOffset?.[group]
           ? `grid-column-start: ${gridStartOffset[group]};`
           : ``
       }`,
@@ -196,8 +198,8 @@ const outerGridFallback = (
   columnsGroup,
   marginsGroup,
   marginSize,
-  enableGelGutters,
-  gutterSize,
+  _enableGelGutters,
+  _gutterSize,
   gridStartOffset,
   gridStartOffsetGroup,
 ) => `

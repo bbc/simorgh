@@ -1,5 +1,7 @@
+// biome-ignore-all lint/style/noCommonJs: we want this
 /* eslint-disable no-template-curly-in-string */
 import Cookie from 'js-cookie';
+
 import onClient from '../utilities/onClient';
 
 let isOnClient = true;

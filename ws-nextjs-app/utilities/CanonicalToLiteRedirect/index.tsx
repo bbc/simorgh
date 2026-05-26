@@ -27,10 +27,9 @@ export const optOutScript = (window: Window) => {
   window.localStorage.setItem('isOptedIntoLiteRedirect', 'false');
 };
 
-export const OptOutOfLiteRedirect = () => {
-  return (
-    <script>
-      {`
+export const OptOutOfLiteRedirect = () => (
+  <script>
+    {`
       window.addEventListener('DOMContentLoaded', () => {
         document
             .getElementById('go-back-to-canonical-link')
@@ -39,18 +38,15 @@ export const OptOutOfLiteRedirect = () => {
                         });
         });
       `}
-    </script>
-  );
-};
+  </script>
+);
 
 // THIS COMPONENT IS ONLY TO BE USED WITH CANONICAL RENDERERS
 // DO NOT USE IT WITH LITE AND AMP RENDERERS
-export default () => {
-  return (
-    <script>
-      {`
+export default () => (
+  <script>
+    {`
         (${redirectScript.toString()})(window)
       `}
-    </script>
-  );
-};
+  </script>
+);

@@ -1,7 +1,8 @@
 import { act } from 'react';
+
 import { service as pidginConfig } from '#lib/config/services/pidgin';
+import { render, screen } from '../react-testing-library-with-providers';
 import Component from '.';
-import { screen, render } from '../react-testing-library-with-providers';
 import fixture from './fixture';
 
 const eventTrackingData = {

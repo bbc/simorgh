@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet';
+
+import type { OEmbedData } from '../types';
 import styles from './index.styles';
-import { OEmbedData } from '../types';
 
 const FlourishEmbed = (props: OEmbedData, nonce?: string | null) => {
   const { width, height, iFrameSrc, iFrameTitle, iFrameId, sizeAdjustScript } =

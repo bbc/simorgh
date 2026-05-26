@@ -1,7 +1,7 @@
 import PageLayoutWrapper from '#app/components/PageLayoutWrapper';
-import { StoryProps, StoryArgs } from '#app/models/types/storybook';
-import { data as liveTvFixture } from '#data/dari/watch/bbc_afghan_tv/live.json';
+import { StoryArgs, StoryProps } from '#app/models/types/storybook';
 import { LIVE_TV_PAGE } from '#app/routes/utils/pageTypes';
+import { data as liveTvFixture } from '#data/dari/watch/bbc_afghan_tv/live.json';
 import LiveTvLayout from './LiveTvPageLayout';
 
 const Component = ({ service }: StoryProps) => (

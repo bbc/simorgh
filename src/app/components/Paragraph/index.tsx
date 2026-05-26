@@ -1,7 +1,6 @@
-import type { ReactNode } from 'react';
-import { FC, HTMLAttributes } from 'react';
+import type { FC, HTMLAttributes, ReactNode } from 'react';
 
-import { FontVariant, GelFontSize } from '../../models/types/theming';
+import type { FontVariant, GelFontSize } from '../../models/types/theming';
 import Text from '../Text';
 
 interface Props extends HTMLAttributes<HTMLElement> {

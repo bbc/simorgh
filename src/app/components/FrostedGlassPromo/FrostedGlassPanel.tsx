@@ -1,8 +1,8 @@
+import type { PropsWithChildren } from 'react';
+
 import { useTheme } from '@emotion/react';
-import { PropsWithChildren } from 'react';
 
 import useImageColour from '../../hooks/useImageColour';
-
 import styles from './styles';
 
 const BLUR_RADIUS = 15;

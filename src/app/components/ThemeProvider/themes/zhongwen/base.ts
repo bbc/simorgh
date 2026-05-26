@@ -1,7 +1,7 @@
-import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../../palette';
+import brandSVG from '../../chameleonLogos/zhongwen';
 import noAscOrDescScript from '../../fontScripts/noAscOrDesc';
 import chineseFontVariants from '../../fontVariants/chinese';
-import brandSVG from '../../chameleonLogos/zhongwen';
+import { GHOST, POSTBOX, POSTBOX_30, WHITE } from '../../palette';
 
 export default {
   palette: {

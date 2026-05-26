@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import is from 'ramda/src/is';
 
 const validateInputs = (n, predicate, inputArray) => {

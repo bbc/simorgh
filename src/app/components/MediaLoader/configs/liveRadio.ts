@@ -1,11 +1,11 @@
-import filterForBlockType from '#lib/utilities/blockHandlers';
-import {
+import type {
   LiveRadioBlock,
   LiveRadioHeadingBlock,
   LiveRadioParagraphBlock,
   LiveRadioVersionBlock,
 } from '#app/models/types/media';
-import { ConfigBuilderProps, ConfigBuilderReturnProps } from '../types';
+import filterForBlockType from '#lib/utilities/blockHandlers';
+import type { ConfigBuilderProps, ConfigBuilderReturnProps } from '../types';
 import AUDIO_UI_CONFIG from './constants';
 
 export default ({

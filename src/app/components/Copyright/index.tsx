@@ -1,8 +1,9 @@
-/* eslint-disable jsx-a11y/aria-role */
-import { PropsWithChildren, use } from 'react';
+// biome-ignore-all lint/a11y/useValidAriaRole: we want this
+import { type PropsWithChildren, use } from 'react';
+
 import { ServiceContext } from '../../contexts/ServiceContext';
-import VisuallyHiddenText from '../VisuallyHiddenText';
 import Text from '../Text';
+import VisuallyHiddenText from '../VisuallyHiddenText';
 import styles from './index.styles';
 
 const CopyrightContainer = ({ children }: PropsWithChildren) => {

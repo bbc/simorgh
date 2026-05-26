@@ -1,6 +1,6 @@
-import { OptimoBlock } from '#app/models/types/optimo';
-import { ViewTracker } from '#app/lib/analyticsUtils/types';
-import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import type useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import type { ViewTracker } from '#app/lib/analyticsUtils/types';
+import type { OptimoBlock } from '#app/models/types/optimo';
 import Promo from '../Promo';
 import styles from './index.styles';
 
@@ -20,7 +20,7 @@ const PromoList = ({ blocks, viewTracker, clickTracker }: PromoListProps) => {
           return (
             <li
               css={styles.list}
-              // eslint-disable-next-line react/no-array-index-key
+              // biome-ignore lint/suspicious/noArrayIndexKey: we want this
               key={index}
             >
               <Promo block={block} clickTracker={clickTracker} />

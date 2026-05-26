@@ -1,26 +1,27 @@
-import { forwardRef, PropsWithChildren } from 'react';
-import { SerializedStyles, Theme } from '@emotion/react';
-import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
+import { forwardRef, type PropsWithChildren } from 'react';
+
+import type { SerializedStyles, Theme } from '@emotion/react';
+
 import LiveLabel from '#app/components/LiveLabel';
-import styles from './index.styles';
-import {
-  mostReadListGridProps,
-  mostReadItemGridProps,
-} from '../../utilities/gridProps';
-import {
+import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
+import Grid from '../../../../legacy/components/Grid';
+import type { Direction } from '../../../../models/types/global';
+import type {
   ColumnLayout,
   MostReadItemProps,
   MostReadLinkProps,
   Size,
 } from '../../types';
-import { Direction } from '../../../../models/types/global';
-import Grid from '../../../../legacy/components/Grid';
+import {
+  mostReadItemGridProps,
+  mostReadListGridProps,
+} from '../../utilities/gridProps';
+import styles from './index.styles';
 
-export const getParentColumns = (columnLayout: ColumnLayout) => {
-  return columnLayout !== 'oneColumn'
+export const getParentColumns = (columnLayout: ColumnLayout) =>
+  columnLayout !== 'oneColumn'
     ? mostReadListGridProps(columnLayout).columns
     : null;
-};
 
 const getItemCss = ({ dir, size }: { dir: Direction; size: Size }) => {
   const itemCss: Array<(_theme: Theme) => SerializedStyles> = [];
@@ -67,7 +68,7 @@ export const MostReadLink = ({
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingDataExtended);
 
   return (
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    // biome-ignore lint/suspicious/noExplicitAny: we want this
     <div css={getItemCss({ dir, size }) as any[]} dir={dir}>
       <a
         css={[styles.link, size === 'default' && styles.defaultLink]}

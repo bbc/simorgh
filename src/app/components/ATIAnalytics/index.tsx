@@ -1,12 +1,13 @@
 import { use } from 'react';
-import { RequestContext } from '#contexts/RequestContext';
+
 import { AccountContext } from '#contexts/AccountContext';
+import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import CanonicalATIAnalytics from './canonical';
-import AmpATIAnalytics from './amp';
 import AmpGeo from '../../legacy/components/AmpGeo';
-import { ATIProps } from './types';
+import AmpATIAnalytics from './amp';
+import CanonicalATIAnalytics from './canonical';
 import buildReverbParams from './params';
+import type { ATIProps } from './types';
 
 const ATIAnalytics = ({ atiData = {} }: ATIProps) => {
   const requestContext = use(RequestContext);

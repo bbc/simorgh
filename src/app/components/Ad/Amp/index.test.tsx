@@ -1,9 +1,9 @@
-import { RequestContextProvider } from '#contexts/RequestContext';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
-import AmpAd, { AMP_ACCESS_FETCH } from './index';
-import { render } from '../../react-testing-library-with-providers';
+import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContext } from '../../../contexts/ServiceContext';
-import { SlotType } from '../types';
+import { render } from '../../react-testing-library-with-providers';
+import type { SlotType } from '../types';
+import AmpAd, { AMP_ACCESS_FETCH } from './index';
 
 const adJsonAttributes = (slotType: SlotType) => ({
   targeting: {

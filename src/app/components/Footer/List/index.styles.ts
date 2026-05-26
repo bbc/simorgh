@@ -1,6 +1,7 @@
-import { css, Theme } from '@emotion/react';
+import { css, type Theme } from '@emotion/react';
+
+import type { FooterLink } from '#app/models/types/serviceConfig';
 import { grid } from '#psammead/psammead-styles/src/detection';
-import { FooterLink } from '#app/models/types/serviceConfig';
 import {
   GROUP_1_AND_GROUP_2,
   GROUP_3_ONLY,

@@ -1,4 +1,4 @@
-import { variantSanitiser, getVariant } from '.';
+import { getVariant, variantSanitiser } from '.';
 
 describe('variantSanitiser', () => {
   it('should remove leading slash', () => {

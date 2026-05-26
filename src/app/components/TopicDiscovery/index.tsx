@@ -1,11 +1,12 @@
-import { useState, use } from 'react';
+import { use, useState } from 'react';
+
 import CurationGrid from '#app/components/Curation/CurationGrid';
-import useViewTracker from '#app/hooks/useViewTracker';
-import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
-import { TopicTag } from '#app/models/types/metadata';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import ScrollableTabs from './ScrollableTabs';
+import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import useViewTracker from '#app/hooks/useViewTracker';
+import type { TopicTag } from '#app/models/types/metadata';
 import styles from './index.styles';
+import ScrollableTabs from './ScrollableTabs';
 import useFetchTopicPromos from './useFetchTopicPromos';
 
 type ExtractedTopic = Pick<TopicTag, 'topicId' | 'topicName' | 'topicUrl'>;
@@ -90,7 +91,7 @@ const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
                 <>
                   <div css={styles.skeletonGrid} aria-live="polite">
                     {Array.from({ length: 4 }).map((_, index) => (
-                      // eslint-disable-next-line react/no-array-index-key
+                      // biome-ignore lint/suspicious/noArrayIndexKey: we want this
                       <div key={index} css={styles.skeletonCard} aria-hidden>
                         <div css={styles.skeletonImage} />
                         <div css={styles.skeletonTextLines}>

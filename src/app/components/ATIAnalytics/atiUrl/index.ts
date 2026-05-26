@@ -13,7 +13,7 @@ import {
   onOnionTld,
   sanitise,
 } from '../../../lib/analyticsUtils';
-import {
+import type {
   ATIEventTrackingProps,
   ATIPageTrackingProps,
   ReverbBeaconConfig,

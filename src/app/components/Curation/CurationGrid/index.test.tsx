@@ -1,9 +1,12 @@
-import * as clickTracking from '#app/hooks/useClickTrackerHandler';
-import { VISUAL_PROMINENCE, Summary } from '#app/models/types/curationData';
 import {
   render,
   screen,
 } from '#app/components/react-testing-library-with-providers';
+import * as clickTracking from '#app/hooks/useClickTrackerHandler';
+import {
+  type Summary,
+  VISUAL_PROMINENCE,
+} from '#app/models/types/curationData';
 import CurationGrid from '.';
 
 const eventTrackingData = { componentName: 'simple-curation-grid' };

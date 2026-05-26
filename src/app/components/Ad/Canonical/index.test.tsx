@@ -1,8 +1,8 @@
 import { RequestContext, RequestContextProps } from '#contexts/RequestContext';
 import isLive from '#lib/utilities/isLive';
 import { render } from '../../react-testing-library-with-providers';
-import CanonicalAd, { getBootstrapSrc } from '.';
 import { SlotType } from '../types';
+import CanonicalAd, { getBootstrapSrc } from '.';
 
 const defaultRequestContextData = {
   showAdsBasedOnLocation: true,

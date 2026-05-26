@@ -1,8 +1,8 @@
-import { getQueryString, getUrlPath } from '#lib/utilities/urlParser';
-import onClient from '#lib/utilities/onClient';
-import isLive from '#lib/utilities/isLive';
 import { AMP_REGEX, APP_REGEX } from '#app/lib/regex.const';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import isLive from '#lib/utilities/isLive';
+import onClient from '#lib/utilities/onClient';
+import { getQueryString, getUrlPath } from '#lib/utilities/urlParser';
 import getBaseUrl from '../getBaseUrl';
 
 const baseUrl = onClient()

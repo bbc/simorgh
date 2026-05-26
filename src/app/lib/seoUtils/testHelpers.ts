@@ -15,15 +15,13 @@ export const baseCurations = [
   },
 ];
 
-export const curationsWithSummaries = baseCurations.map((curation, index) => {
-  return {
-    ...curation,
-    summaries: [
-      {
-        title: `Title ${index}`,
-        type: `Type ${index}`,
-        link: `https://www.bbc.com/mundo/${index}`,
-      },
-    ],
-  };
-});
+export const curationsWithSummaries = baseCurations.map((curation, index) => ({
+  ...curation,
+  summaries: [
+    {
+      title: `Title ${index}`,
+      type: `Type ${index}`,
+      link: `https://www.bbc.com/mundo/${index}`,
+    },
+  ],
+}));

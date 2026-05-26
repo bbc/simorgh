@@ -1,16 +1,18 @@
 import { PropsWithChildren } from 'react';
-import { render, waitFor, screen } from '@testing-library/react';
-import { Article } from '#app/models/types/optimo';
+
+import { render, screen, waitFor } from '@testing-library/react';
 import { Helmet } from 'react-helmet';
-import { ARTICLE_PAGE } from '../../routes/utils/pageTypes';
-import { ToggleContextProvider } from '../../contexts/ToggleContext';
+
+import { Article } from '#app/models/types/optimo';
+import newsMostReadData from '../../../../data/news/mostRead/index.json';
+import ThemeProvider from '../../components/ThemeProvider';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import newsMostReadData from '../../../../data/news/mostRead/index.json';
-import MediaArticlePage from './MediaArticlePage';
-import ThemeProvider from '../../components/ThemeProvider';
-import { arabicLiveTvPageData, pidginPageData } from './fixtureData';
+import { ToggleContextProvider } from '../../contexts/ToggleContext';
 import { Services } from '../../models/types/global';
+import { ARTICLE_PAGE } from '../../routes/utils/pageTypes';
+import { arabicLiveTvPageData, pidginPageData } from './fixtureData';
+import MediaArticlePage from './MediaArticlePage';
 
 jest.mock('../../components/ThemeProvider');
 

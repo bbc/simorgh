@@ -1,4 +1,5 @@
-import { useState, use, useEffect, useRef } from 'react';
+import { use, useEffect, useRef, useState } from 'react';
+
 import { OptimizelyContext } from '@optimizely/react-sdk';
 
 const PageCompleteTracking = () => {

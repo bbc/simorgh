@@ -4,7 +4,7 @@ import {
 } from '#app/contexts/ServiceContext';
 
 import Subheading from '.';
-import { StoryProps, StoryArgs } from '#models/types/storybook';
+import type { StoryProps, StoryArgs } from '#models/types/storybook';
 
 const Component = (_: StoryArgs, { service, variant }: StoryProps) => {
   return (

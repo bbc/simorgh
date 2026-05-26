@@ -27,54 +27,48 @@ export default ({ service, pageType }: ServiceParametersType) => {
       }
     });
 
-    describe(
-      'Image Tests',
-      {
-        retries: 3,
-      },
-      () => {
-        const pageTypesNoImages = ['liveRadio', 'errorPage404'];
-        // live radio pages and error pages do not have an image
-        if (pageType && !pageTypesNoImages.includes(pageType)) {
-          it('should have webp images on pages', () => {
-            cy.document().then(doc => {
-              const images = doc.querySelectorAll(
-                'amp-img[src*="ichef."], img[src*="ichef."]',
+    describe('Image Tests', {
+      retries: 3,
+    }, () => {
+      const pageTypesNoImages = ['liveRadio', 'errorPage404'];
+      // live radio pages and error pages do not have an image
+      if (pageType && !pageTypesNoImages.includes(pageType)) {
+        it('should have webp images on pages', () => {
+          cy.document().then(doc => {
+            const images = doc.querySelectorAll(
+              'amp-img[src*="ichef."], img[src*="ichef."]',
+            );
+            if (images.length === 0) {
+              cy.log('No images on page');
+            } else {
+              // on amp there are hidden embed images, so we check only ichef ones
+              cy.get('amp-img[src*="ichef."], img[src*="ichef."]').each(
+                $img => {
+                  // when you use a .each loop or other JS function that take a callback function (here with $img that is executed for each image element)
+                  // you leave the Cypress command queue and are using plain JS. Using .wrap converts
+                  // the JQuery element into a Cypress wrapped element so we can execute Cypress commands on it
+
+                  // Images are lazy loaded so we need to scroll to them, check they have loaded before getting currentSrc
+                  // eslint-disable-next-line cypress/unsafe-to-chain-command
+                  cy.wrap($img).then($el => {
+                    // Check if the element and all its parents are visible
+                    const isVisible = Cypress.$($el).is(':visible');
+
+                    if (isVisible) {
+                      cy.wrap($el)
+                        .invoke('attr', 'src')
+                        .then(src => {
+                          cy.log(src ?? '');
+                          expect((src ?? '').endsWith('.webp')).to.equal(true);
+                        });
+                    }
+                  });
+                },
               );
-              if (images.length === 0) {
-                cy.log('No images on page');
-              } else {
-                // on amp there are hidden embed images, so we check only ichef ones
-                cy.get('amp-img[src*="ichef."], img[src*="ichef."]').each(
-                  $img => {
-                    // when you use a .each loop or other JS function that take a callback function (here with $img that is executed for each image element)
-                    // you leave the Cypress command queue and are using plain JS. Using .wrap converts
-                    // the JQuery element into a Cypress wrapped element so we can execute Cypress commands on it
-
-                    // Images are lazy loaded so we need to scroll to them, check they have loaded before getting currentSrc
-                    // eslint-disable-next-line cypress/unsafe-to-chain-command
-                    cy.wrap($img).then($el => {
-                      // Check if the element and all its parents are visible
-                      const isVisible = Cypress.$($el).is(':visible');
-
-                      if (isVisible) {
-                        cy.wrap($el)
-                          .invoke('attr', 'src')
-                          .then(src => {
-                            cy.log(src ?? '');
-                            expect((src ?? '').endsWith('.webp')).to.equal(
-                              true,
-                            );
-                          });
-                      }
-                    });
-                  },
-                );
-              }
-            });
+            }
           });
-        }
-      },
-    );
+        });
+      }
+    });
   });
 };

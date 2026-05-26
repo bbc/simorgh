@@ -2,7 +2,7 @@
    see table on this issue https://github.com/bbc/simorgh/issues/2995
 */
 
-import { Environments, Services } from '#app/models/types/global';
+import type { Environments, Services } from '#app/models/types/global';
 
 type Props = {
   isUK?: boolean | null;

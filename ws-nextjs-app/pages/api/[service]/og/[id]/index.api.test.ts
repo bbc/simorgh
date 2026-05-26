@@ -24,12 +24,10 @@ jest.mock('sharp', () => {
   return {
     __esModule: true,
     ...actualSharp,
-    default: jest.fn().mockImplementation(() => {
-      return {
-        jpeg: jest.fn().mockReturnThis(),
-        toBuffer: jest.fn().mockResolvedValue(Buffer.from([1, 2, 3, 4])),
-      };
-    }),
+    default: jest.fn().mockImplementation(() => ({
+      jpeg: jest.fn().mockReturnThis(),
+      toBuffer: jest.fn().mockResolvedValue(Buffer.from([1, 2, 3, 4])),
+    })),
   };
 });
 

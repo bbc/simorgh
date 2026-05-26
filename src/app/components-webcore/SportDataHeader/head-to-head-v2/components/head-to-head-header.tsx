@@ -10,14 +10,14 @@ const formatTournamentDescriptionLabel = (
   return tournamentGroupsArray.map((element, i) => {
     if (tournamentGroupsArray.length === i + 1) {
       return (
-        // eslint-disable-next-line react/no-array-index-key
+        // biome-ignore lint/suspicious/noArrayIndexKey: we want this
         <div css={styles.competitionFormatter} key={`tournament_part_${i}`}>
           {element}
         </div>
       );
     }
     return (
-      // eslint-disable-next-line react/no-array-index-key
+      // biome-ignore lint/suspicious/noArrayIndexKey: we want this
       <div css={styles.competitionFormatter} key={`tournament_part_${i}`}>
         {element} -{' '}
       </div>

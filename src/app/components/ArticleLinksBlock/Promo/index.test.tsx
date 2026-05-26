@@ -1,7 +1,7 @@
-import { render } from '../../react-testing-library-with-providers';
-import { PromoSingleBlock, oneLinkWithTimestamp } from '../helpers/fixtureData';
-import Promo from '.';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import { render } from '../../react-testing-library-with-providers';
+import { oneLinkWithTimestamp, PromoSingleBlock } from '../helpers/fixtureData';
+import Promo from '.';
 
 const ArticleLinksBlock = ({ block }) => (
   <ServiceContextProvider service="pidgin">

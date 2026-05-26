@@ -1,5 +1,5 @@
-/* eslint-disable no-console */
-
+// biome-ignore-all lint/suspicious/noEmptyBlockStatements: we want this
+// biome-ignore-all lint/style/noCommonJs: we want this
 class Logger {
   constructor() {
     if (process.env.NODE_ENV === 'production') {
@@ -13,8 +13,11 @@ class Logger {
       this.error = (event, message) => console.error({ event, message });
       this.warn = (event, message) => console.warn({ event, message });
       this.info = (event, message) => console.info({ event, message });
+      // biome-ignore lint/suspicious/noConsole: we want this
       this.verbose = (event, message) => console.log({ event, message });
+      // biome-ignore lint/suspicious/noConsole: we want this
       this.debug = (event, message) => console.debug({ event, message });
+      // biome-ignore lint/suspicious/noConsole: we want this
       this.silly = (event, message) => console.log({ event, message });
     }
   }

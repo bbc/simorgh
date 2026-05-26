@@ -1,4 +1,5 @@
 import { renderHook } from '@testing-library/react';
+
 import * as useCustomEventTrackerModule from '../useCustomEventTracker';
 import usePWAInstallTracker from '.';
 

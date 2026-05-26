@@ -1,12 +1,12 @@
+import certsRequired from '#app/routes/utils/certsRequired';
 import constructPageFetchUrl from '#app/routes/utils/constructPageFetchUrl';
-import getEnvironment from '#app/routes/utils/getEnvironment';
-import { Services, Variants, PageTypes } from '#models/types/global';
 import fetchPageData from '#app/routes/utils/fetchPageData';
 import getErrorStatusCode from '#app/routes/utils/fetchPageData/utils/getErrorStatusCode';
+import getEnvironment from '#app/routes/utils/getEnvironment';
 import { BFF_FETCH_ERROR } from '#lib/logger.const';
-import { FetchError, GetAgent } from '#models/types/fetch';
 import nodeLogger from '#lib/logger.node';
-import certsRequired from '#app/routes/utils/certsRequired';
+import type { FetchError, GetAgent } from '#models/types/fetch';
+import type { PageTypes, Services, Variants } from '#models/types/global';
 
 const logger = nodeLogger(__filename);
 

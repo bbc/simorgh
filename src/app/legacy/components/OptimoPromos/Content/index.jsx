@@ -1,5 +1,7 @@
 import { use } from 'react';
+
 import moment from 'moment';
+
 import formatDuration from '#app/lib/utilities/formatDuration';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
@@ -52,7 +54,7 @@ const Content = ({
   return (
     // role="text" is required to correct a text splitting bug on iOS VoiceOver.
     // ID is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
-    // eslint-disable-next-line jsx-a11y/aria-role
+    // biome-ignore lint/a11y/useValidAriaRole: we want this
     <span role="text" id={ariaLabelledBy}>
       {announcedMediaType && (
         <VisuallyHiddenText>{`${announcedMediaType}, `}</VisuallyHiddenText>

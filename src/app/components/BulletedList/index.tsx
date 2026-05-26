@@ -1,10 +1,11 @@
 import {
-  FC,
-  PropsWithChildren,
-  HTMLAttributes,
-  ForwardedRef,
+  type FC,
+  type ForwardedRef,
   forwardRef,
+  type HTMLAttributes,
+  type PropsWithChildren,
 } from 'react';
+
 import { SHADOW } from '../ThemeProvider/palette';
 import styles from './index.styles';
 
@@ -22,18 +23,16 @@ export const BulletedListItem = ({
   children,
   className,
   key,
-}: PropsWithChildren<ListItemProps>) => {
-  return (
-    <li
-      role="listitem"
-      className={className}
-      css={styles.bulletListItem}
-      key={key}
-    >
-      {children}
-    </li>
-  );
-};
+}: PropsWithChildren<ListItemProps>) => (
+  <li
+    role="listitem"
+    className={className}
+    css={styles.bulletListItem}
+    key={key}
+  >
+    {children}
+  </li>
+);
 
 export const BulletedList: FC<ListProps> = forwardRef(
   (

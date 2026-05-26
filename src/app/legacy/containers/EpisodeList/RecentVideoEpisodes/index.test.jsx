@@ -2,9 +2,9 @@ import {
   act,
   render,
 } from '../../../../components/react-testing-library-with-providers';
+import { TV_PAGE } from '../../../../routes/utils/pageTypes';
 import RecentVideoEpisodes from '.';
 import { afrique } from './fixtures';
-import { TV_PAGE } from '../../../../routes/utils/pageTypes';
 
 const RecentVideoEpisodesWithContext = ({ episodes }) => (
   <RecentVideoEpisodes masterBrand="bbc_afrique_tv" episodes={episodes} />

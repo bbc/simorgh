@@ -1,9 +1,9 @@
+import MockIntersectionObserver from '#app/components/intersection-observer-testing-library';
 import {
+  act,
   render,
   screen,
-  act,
 } from '#app/components/react-testing-library-with-providers';
-import MockIntersectionObserver from '#app/components/intersection-observer-testing-library';
 import postsFixture from '#data/pidgin/posts/postFixture.json';
 import Stream from './index';
 
@@ -41,13 +41,9 @@ describe('Live Page Stream', () => {
         <Stream
           streamData={mockStreamContentEmpty}
           contributors={null}
-          setIsFirstPostVisible={() => {
-            return null;
-          }}
+          setIsFirstPostVisible={() => null}
           streamRef={null}
-          applyPendingUpdate={() => {
-            return null;
-          }}
+          applyPendingUpdate={() => null}
         />,
       );
     });
@@ -61,13 +57,9 @@ describe('Live Page Stream', () => {
         <Stream
           streamData={mockStreamContentSingle}
           contributors={null}
-          setIsFirstPostVisible={() => {
-            return null;
-          }}
+          setIsFirstPostVisible={() => null}
           streamRef={null}
-          applyPendingUpdate={() => {
-            return null;
-          }}
+          applyPendingUpdate={() => null}
         />,
       );
     });
@@ -86,13 +78,9 @@ describe('Live Page Stream', () => {
         <Stream
           streamData={mockStreamDataMoreThanOne}
           contributors={null}
-          setIsFirstPostVisible={() => {
-            return null;
-          }}
+          setIsFirstPostVisible={() => null}
           streamRef={null}
-          applyPendingUpdate={() => {
-            return null;
-          }}
+          applyPendingUpdate={() => null}
         />,
       );
     });
@@ -130,13 +118,9 @@ describe('Live Page Stream', () => {
         <Stream
           streamData={mockStreamContentSingle}
           contributors="Not a random dude"
-          setIsFirstPostVisible={() => {
-            return null;
-          }}
+          setIsFirstPostVisible={() => null}
           streamRef={null}
-          applyPendingUpdate={() => {
-            return null;
-          }}
+          applyPendingUpdate={() => null}
         />,
       );
     });
@@ -149,13 +133,9 @@ describe('Live Page Stream', () => {
         <Stream
           streamData={mockStreamContentSingle}
           contributors={null}
-          setIsFirstPostVisible={() => {
-            return null;
-          }}
+          setIsFirstPostVisible={() => null}
           streamRef={null}
-          applyPendingUpdate={() => {
-            return null;
-          }}
+          applyPendingUpdate={() => null}
         />,
       );
     });
@@ -171,13 +151,9 @@ describe('Live Page Stream', () => {
         <Stream
           streamData={mockStreamContentSingle}
           contributors={null}
-          setIsFirstPostVisible={() => {
-            return null;
-          }}
+          setIsFirstPostVisible={() => null}
           streamRef={null}
-          applyPendingUpdate={() => {
-            return null;
-          }}
+          applyPendingUpdate={() => null}
         />,
       );
     });
@@ -194,13 +170,9 @@ describe('Live Page Stream', () => {
         <Stream
           streamData={mockStreamContentSingle}
           contributors={null}
-          setIsFirstPostVisible={() => {
-            return null;
-          }}
+          setIsFirstPostVisible={() => null}
           streamRef={null}
-          applyPendingUpdate={() => {
-            return null;
-          }}
+          applyPendingUpdate={() => null}
         />,
       );
     });

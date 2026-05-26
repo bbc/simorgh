@@ -1,4 +1,5 @@
-import { css, Theme } from '@emotion/react';
+import { css, type Theme } from '@emotion/react';
+
 import NO_JS_CLASSNAME from '#app/lib/noJs.const';
 
 const GUIDANCE_BACKGROUND = 'rgba(34, 34, 34, 0.75)';

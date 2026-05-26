@@ -2,31 +2,31 @@ import {
   render,
   screen,
 } from '#app/components/react-testing-library-with-providers';
+import HeadToHead from '../head-to-head-v2';
 import cancelledMockData from '../static-data/event/transformed/cancelled.json';
+import {
+  beforePensAetData,
+  etFirstHalfData,
+  firstHalfAddedTimeData,
+  firstHalf90Data as firstHalfData,
+  inPens90Data,
+  inPensAetData,
+  secondHalf90Data,
+} from '../static-data/event/transformed/mid-event/index';
+import {
+  finishedAetAggData,
+  postEventAETData,
+  postEventAgg90Data,
+  postEventPens90Data,
+  postEventPensAetAggData,
+  postEventPensAetData,
+} from '../static-data/event/transformed/post-event/index';
 import postponedMockData from '../static-data/event/transformed/postponed.json';
-import suspendedMockData from '../static-data/event/transformed/suspended.json';
 import {
   preEventData as preEventMockData,
   preEventNoTeamsOrVenueProvided as preEventNoTeamsMockData,
 } from '../static-data/event/transformed/pre-event/index';
-import {
-  postEventAETData,
-  postEventAgg90Data,
-  postEventPensAetAggData,
-  postEventPens90Data,
-  postEventPensAetData,
-  finishedAetAggData,
-} from '../static-data/event/transformed/post-event/index';
-import {
-  firstHalf90Data as firstHalfData,
-  firstHalfAddedTimeData,
-  etFirstHalfData,
-  inPensAetData,
-  beforePensAetData,
-  inPens90Data,
-  secondHalf90Data,
-} from '../static-data/event/transformed/mid-event/index';
-import HeadToHead from '../head-to-head-v2';
+import suspendedMockData from '../static-data/event/transformed/suspended.json';
 import type { HeadToHeadV2Data } from '../types';
 
 jest.mock('#app/hooks/useSportDataPolling', () => ({
@@ -59,153 +59,153 @@ const asH2HData = (data: unknown) => data as HeadToHeadV2Data;
 
 describe('Skipped Tests for MVP', () => {
   // skipped - we do not support concise view in MVP
-  describe.each([true, false])(
-    'head to head concise view %s',
-    isConciseView => {
-      test.skip('renders the component of PreEvent status with data', () => {
-        const { queryByText, getAllByText, queryAllByText } = renderHeadToHead({
-          data: asH2HData(preEventMockData),
-          isConciseView,
-        });
-        const homeTeam = queryAllByText('Fulham');
-        const awayTeam = queryAllByText('Liverpool');
-        const time = getAllByText('12:30');
-        const conciseSummary = queryByText(
-          'Fulham versus Liverpool kick off 12:30',
-        );
-
-        expect(homeTeam).toHaveLength(3);
-        expect(awayTeam).toHaveLength(3);
-        expect(time[0]).toBeInTheDocument();
-        expect(conciseSummary).toBeInTheDocument();
+  describe.each([
+    true,
+    false,
+  ])('head to head concise view %s', isConciseView => {
+    test.skip('renders the component of PreEvent status with data', () => {
+      const { queryByText, getAllByText, queryAllByText } = renderHeadToHead({
+        data: asH2HData(preEventMockData),
+        isConciseView,
       });
+      const homeTeam = queryAllByText('Fulham');
+      const awayTeam = queryAllByText('Liverpool');
+      const time = getAllByText('12:30');
+      const conciseSummary = queryByText(
+        'Fulham versus Liverpool kick off 12:30',
+      );
 
-      test.skip('does render the aggregate score if it is the Leg 2 of a game in Concise View', () => {
-        const { queryByText } = renderHeadToHead({
-          data: asH2HData({
-            ...postEventAgg90Data,
-            multiLeg: {
-              leg: 2,
-              relatedMatchId: 's-8pprp8nrcr6o7y6yvkfjten84',
-              aggregateWinnerId: 's-9q0arba2kbnywth8bkxlhgmdr',
-            },
-          }),
-          isConciseView,
-        });
-        const aggScore = queryByText('(Agg 1-2)');
-        const a11yAggScore = queryByText(
-          'Aggregate score Southampton 1 , Liverpool 2',
-        );
+      expect(homeTeam).toHaveLength(3);
+      expect(awayTeam).toHaveLength(3);
+      expect(time[0]).toBeInTheDocument();
+      expect(conciseSummary).toBeInTheDocument();
+    });
 
-        expect(aggScore).toBeInTheDocument();
-        expect(a11yAggScore).toBeInTheDocument();
+    test.skip('does render the aggregate score if it is the Leg 2 of a game in Concise View', () => {
+      const { queryByText } = renderHeadToHead({
+        data: asH2HData({
+          ...postEventAgg90Data,
+          multiLeg: {
+            leg: 2,
+            relatedMatchId: 's-8pprp8nrcr6o7y6yvkfjten84',
+            aggregateWinnerId: 's-9q0arba2kbnywth8bkxlhgmdr',
+          },
+        }),
+        isConciseView,
       });
+      const aggScore = queryByText('(Agg 1-2)');
+      const a11yAggScore = queryByText(
+        'Aggregate score Southampton 1 , Liverpool 2',
+      );
 
-      test.skip('does not render the aggregate score if it is the Leg 1 of a game in Concise View', () => {
-        const { queryByText } = renderHeadToHead({
-          data: asH2HData({
-            ...postEventAgg90Data,
-            multiLeg: {
-              leg: 1,
-              relatedMatchId: 's-8pprp8nrcr6o7y6yvkfjten84',
-              aggregateWinnerId: 's-9q0arba2kbnywth8bkxlhgmdr',
-            },
-          }),
-          isConciseView,
-        });
-        const aggScore = queryByText('(Agg 1-2)');
-        const a11yAggScore = queryByText(
-          'Aggregate score Southampton 1 , Liverpool 2',
-        );
+      expect(aggScore).toBeInTheDocument();
+      expect(a11yAggScore).toBeInTheDocument();
+    });
 
-        expect(aggScore).not.toBeInTheDocument();
-        expect(a11yAggScore).not.toBeInTheDocument();
+    test.skip('does not render the aggregate score if it is the Leg 1 of a game in Concise View', () => {
+      const { queryByText } = renderHeadToHead({
+        data: asH2HData({
+          ...postEventAgg90Data,
+          multiLeg: {
+            leg: 1,
+            relatedMatchId: 's-8pprp8nrcr6o7y6yvkfjten84',
+            aggregateWinnerId: 's-9q0arba2kbnywth8bkxlhgmdr',
+          },
+        }),
+        isConciseView,
       });
+      const aggScore = queryByText('(Agg 1-2)');
+      const a11yAggScore = queryByText(
+        'Aggregate score Southampton 1 , Liverpool 2',
+      );
 
-      test.skip('renders the head to head of MidEvent status', () => {
-        const { queryByText, getAllByText } = renderHeadToHead({
-          data: asH2HData(firstHalfData),
-          isConciseView,
-        });
-        const homeTeamName = getAllByText('Liepāja');
-        const awayTeamName = getAllByText('Gjilani');
-        const homeScore = getAllByText('0');
-        const homeUnconfirmedScore = getAllByText('1');
-        const awayScore = getAllByText('0');
-        const time = queryByText("9'");
+      expect(aggScore).not.toBeInTheDocument();
+      expect(a11yAggScore).not.toBeInTheDocument();
+    });
 
-        expect(homeTeamName).toHaveLength(3);
-        expect(awayTeamName).toHaveLength(3);
-        expect(homeScore[0]).toBeInTheDocument();
-        expect(homeUnconfirmedScore[0]).toBeInTheDocument();
-        expect(awayScore[0]).toBeInTheDocument();
-        expect(time).toBeInTheDocument();
+    test.skip('renders the head to head of MidEvent status', () => {
+      const { queryByText, getAllByText } = renderHeadToHead({
+        data: asH2HData(firstHalfData),
+        isConciseView,
       });
+      const homeTeamName = getAllByText('Liepāja');
+      const awayTeamName = getAllByText('Gjilani');
+      const homeScore = getAllByText('0');
+      const homeUnconfirmedScore = getAllByText('1');
+      const awayScore = getAllByText('0');
+      const time = queryByText("9'");
 
-      test.skip('renders the head to head of MidEvent with added time', () => {
-        const { queryByText } = renderHeadToHead({
-          data: asH2HData(firstHalfAddedTimeData),
-          isConciseView,
-        });
-        const period = queryByText('45 minutes plus 2 , in progress');
-        const matchProgress = queryByText("45'+2");
+      expect(homeTeamName).toHaveLength(3);
+      expect(awayTeamName).toHaveLength(3);
+      expect(homeScore[0]).toBeInTheDocument();
+      expect(homeUnconfirmedScore[0]).toBeInTheDocument();
+      expect(awayScore[0]).toBeInTheDocument();
+      expect(time).toBeInTheDocument();
+    });
 
-        expect(period).toBeInTheDocument();
-        expect(matchProgress).toBeInTheDocument();
+    test.skip('renders the head to head of MidEvent with added time', () => {
+      const { queryByText } = renderHeadToHead({
+        data: asH2HData(firstHalfAddedTimeData),
+        isConciseView,
       });
+      const period = queryByText('45 minutes plus 2 , in progress');
+      const matchProgress = queryByText("45'+2");
 
-      test.skip('renders the head to head of PostEvent with added time', () => {
-        const { queryByText, getByText } = renderHeadToHead({
-          data: asH2HData(postEventAETData),
-          isConciseView,
-        });
-        const period = queryByText('AET');
-        const homeScore = getByText('1');
-        const awayScore = getByText('2');
-        const a11yAETPeriod = queryByText('After extra time');
-        const a11ySummary = queryByText(
-          /Southampton 1 , Liverpool 2 After extra time/,
-        );
+      expect(period).toBeInTheDocument();
+      expect(matchProgress).toBeInTheDocument();
+    });
 
-        expect(homeScore).toBeInTheDocument();
-        expect(awayScore).toBeInTheDocument();
-        expect(period).toBeInTheDocument();
-        expect(a11ySummary).toBeInTheDocument();
-        expect(a11yAETPeriod).toBeInTheDocument();
+    test.skip('renders the head to head of PostEvent with added time', () => {
+      const { queryByText, getByText } = renderHeadToHead({
+        data: asH2HData(postEventAETData),
+        isConciseView,
       });
+      const period = queryByText('AET');
+      const homeScore = getByText('1');
+      const awayScore = getByText('2');
+      const a11yAETPeriod = queryByText('After extra time');
+      const a11ySummary = queryByText(
+        /Southampton 1 , Liverpool 2 After extra time/,
+      );
 
-      test.skip('renders the head to head with FT scores and AET of PostEvent including penalties', () => {
-        const { queryByText, container } = renderHeadToHead({
-          data: asH2HData(postEventPensAetData),
-          isConciseView,
-        });
-        const period = queryByText('AET');
-        const a11yAetPeriod = queryByText('After extra time');
-        const a11yPenScore = queryByText('Southampton win 5 - 3 on penalties');
-        const a11ySummary = queryByText(
-          /Southampton 1 , Liverpool 1 After extra time , Southampton win 5 - 3 on penalties/,
-        );
+      expect(homeScore).toBeInTheDocument();
+      expect(awayScore).toBeInTheDocument();
+      expect(period).toBeInTheDocument();
+      expect(a11ySummary).toBeInTheDocument();
+      expect(a11yAETPeriod).toBeInTheDocument();
+    });
 
-        expect(container).toHaveTextContent('Southampton win 5-3 on pens');
-        expect(period).toBeInTheDocument();
-        expect(a11ySummary).toBeInTheDocument();
-        expect(a11yAetPeriod).toBeInTheDocument();
-        expect(a11yPenScore).toBeInTheDocument();
+    test.skip('renders the head to head with FT scores and AET of PostEvent including penalties', () => {
+      const { queryByText, container } = renderHeadToHead({
+        data: asH2HData(postEventPensAetData),
+        isConciseView,
       });
+      const period = queryByText('AET');
+      const a11yAetPeriod = queryByText('After extra time');
+      const a11yPenScore = queryByText('Southampton win 5 - 3 on penalties');
+      const a11ySummary = queryByText(
+        /Southampton 1 , Liverpool 1 After extra time , Southampton win 5 - 3 on penalties/,
+      );
 
-      test.skip('renders a concise event summary', () => {
-        const { getByText } = renderHeadToHead({
-          data: asH2HData(preEventMockData),
-          isConciseView,
-        });
-        const conciseEventSummary = getByText(
-          'Fulham versus Liverpool kick off 12:30',
-        );
+      expect(container).toHaveTextContent('Southampton win 5-3 on pens');
+      expect(period).toBeInTheDocument();
+      expect(a11ySummary).toBeInTheDocument();
+      expect(a11yAetPeriod).toBeInTheDocument();
+      expect(a11yPenScore).toBeInTheDocument();
+    });
 
-        expect(conciseEventSummary).toBeInTheDocument();
+    test.skip('renders a concise event summary', () => {
+      const { getByText } = renderHeadToHead({
+        data: asH2HData(preEventMockData),
+        isConciseView,
       });
-    },
-  );
+      const conciseEventSummary = getByText(
+        'Fulham versus Liverpool kick off 12:30',
+      );
+
+      expect(conciseEventSummary).toBeInTheDocument();
+    });
+  });
 
   // skipped - we do not support OJ path in MVP
   test.skip('does not wrap the card with a link when not given an onward journey path', () => {
@@ -809,19 +809,18 @@ describe('Head to Head Component', () => {
       },
       text: 'match is second leg in a multi-leg tie and seriesWinner is undefined',
     },
-  ])(
-    'renders head to head without penalty scores for match with penalties when $text',
-    ({ props }) => {
-      renderHeadToHead({
-        data: asH2HData({ ...postEventPensAetAggData, ...props }),
-      });
+  ])('renders head to head without penalty scores for match with penalties when $text', ({
+    props,
+  }) => {
+    renderHeadToHead({
+      data: asH2HData({ ...postEventPensAetAggData, ...props }),
+    });
 
-      const fullTime = screen.getByText('FT 1-1');
+    const fullTime = screen.getByText('FT 1-1');
 
-      expect(fullTime).toBeInTheDocument();
-      expect(screen.queryByTestId('penalties-text')).not.toBeInTheDocument();
-    },
-  );
+    expect(fullTime).toBeInTheDocument();
+    expect(screen.queryByTestId('penalties-text')).not.toBeInTheDocument();
+  });
 
   test('renders the value of Attendance', () => {
     renderHeadToHead({

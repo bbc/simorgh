@@ -1,8 +1,8 @@
 // import React from 'react';
 import {
+  act,
   render,
   screen,
-  act,
 } from '#app/components/react-testing-library-with-providers';
 // import { createSize } from '@bbc/web-gel-foundations';
 import SportBadge from '../index';

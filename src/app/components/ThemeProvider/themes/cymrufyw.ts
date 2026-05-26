@@ -1,15 +1,15 @@
-import { ServiceTheme } from '#app/models/types/theming';
-import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
-import latinWithDiacriticsScript from '../fontScripts/latinWithDiacritics';
+import type { ServiceTheme } from '#app/models/types/theming';
+import brandSVG from '../chameleonLogos/cymrufyw';
 import {
   REITH_SANS_BOLD,
   REITH_SANS_REGULAR,
   REITH_SERIF_LIGHT,
   REITH_SERIF_MEDIUM,
 } from '../fontFaces';
+import latinWithDiacriticsScript from '../fontScripts/latinWithDiacritics';
 import reithFontVariants from '../fontVariants/reith';
+import { GHOST, POSTBOX, POSTBOX_30, WHITE } from '../palette';
 import withThemeProvider from '../withThemeProvider';
-import brandSVG from '../chameleonLogos/cymrufyw';
 
 export const theme: ServiceTheme = {
   palette: {

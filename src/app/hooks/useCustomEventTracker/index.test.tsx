@@ -1,17 +1,18 @@
-import { createContext, ReactNode } from 'react';
+import { createContext, type ReactNode } from 'react';
+
+import type { ATIData } from '#app/components/ATIAnalytics/types';
 import {
-  renderHook,
   act,
+  renderHook,
 } from '#app/components/react-testing-library-with-providers';
+import { VIEW_EVENT } from '#app/lib/analyticsUtils/analytics.const';
+import type { Toggles } from '#app/models/types/global';
+import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { STORY_PAGE } from '#app/routes/utils/pageTypes';
-import { ATIData } from '#app/components/ATIAnalytics/types';
-import { Toggles } from '#app/models/types/global';
-import { VIEW_EVENT } from '#app/lib/analyticsUtils/analytics.const';
-import * as serviceContextModule from '../../contexts/ServiceContext';
 import * as beaconModule from '../../components/ATIAnalytics/beacon';
+import * as serviceContextModule from '../../contexts/ServiceContext';
 import useCustomEventTracker from '.';
 
 const atiAnalyticsFixture = {

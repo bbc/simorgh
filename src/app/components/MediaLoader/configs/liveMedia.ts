@@ -1,9 +1,10 @@
-import filterForBlockType from '#lib/utilities/blockHandlers';
 import moment from 'moment';
-import { LIVE_TV_PAGE } from '#app/routes/utils/pageTypes';
-import onClient from '#app/lib/utilities/onClient';
+
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
-import { ConfigBuilderProps, ConfigBuilderReturnProps } from '../types';
+import onClient from '#app/lib/utilities/onClient';
+import { LIVE_TV_PAGE } from '#app/routes/utils/pageTypes';
+import filterForBlockType from '#lib/utilities/blockHandlers';
+import type { ConfigBuilderProps, ConfigBuilderReturnProps } from '../types';
 
 export default ({
   blocks,

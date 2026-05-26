@@ -1,4 +1,4 @@
-import { Toggles } from '#app/models/types/global';
+import type { Toggles } from '#app/models/types/global';
 import generateNonceValue from '.';
 
 const MOCK_UUID = '12345678-abcd-1fed-0123-a1b2c3d4e5f6';

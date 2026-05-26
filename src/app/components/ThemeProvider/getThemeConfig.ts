@@ -1,5 +1,66 @@
-import { Theme } from '@emotion/react';
+import type { Theme } from '@emotion/react';
 
+import type {
+  BrandPalette,
+  BrandSVG,
+  Typography,
+} from '../../models/types/theming';
+import {
+  GROUP_A_MAX_WIDTH,
+  GROUP_B_MAX_WIDTH,
+  GROUP_B_MIN_WIDTH,
+  GROUP_B_ONLY,
+  GROUP_D_MIN_WIDTH,
+} from './fontMediaQueries';
+import {
+  getAtlasSize,
+  getBodyCopySize,
+  getBrevierSize,
+  getCanonSize,
+  getDoublePicaSize,
+  getElephantSize,
+  getFoolscapSize,
+  getGreatPrimerSize,
+  getImperialSize,
+  getLongPrimerSize,
+  getMinionSize,
+  getParagonSize,
+  getPicaSize,
+  getRoyalSize,
+  getTrafalgarSize,
+} from './fontSizes';
+import {
+  getSansBold,
+  getSansBoldItalic,
+  getSansLight,
+  getSansRegular,
+  getSansRegularItalic,
+  getSerifBold,
+  getSerifLight,
+  getSerifMedium,
+  getSerifMediumItalic,
+  getSerifRegular,
+} from './fontVariants';
+import gridWidths from './gridWidths';
+import {
+  FORCED_COLOURS,
+  GROUP_0_MAX_WIDTH,
+  GROUP_1_AND_GROUP_2,
+  GROUP_1_MAX_WIDTH,
+  GROUP_1_MIN_WIDTH,
+  GROUP_1_ONLY,
+  GROUP_2_MAX_WIDTH,
+  GROUP_2_MIN_WIDTH,
+  GROUP_2_ONLY,
+  GROUP_3_MAX_WIDTH,
+  GROUP_3_MIN_WIDTH,
+  GROUP_3_ONLY,
+  GROUP_4_MAX_WIDTH,
+  GROUP_4_MIN_WIDTH,
+  GROUP_4_ONLY,
+  GROUP_5_MIN_WIDTH,
+  POINTER,
+} from './mediaQueries';
 import {
   ARCHIVE_BLUE,
   BLACK,
@@ -31,14 +92,15 @@ import {
   GREY_16,
   KINGFISHER,
   LE_TEAL,
+  LIVE_CORE,
+  LIVE_DARK,
   LIVE_LIGHT,
   LIVE_MEDIUM,
-  LIVE_DARK,
-  LIVE_CORE,
   LUNAR,
   LUNAR_LIGHT,
   METAL,
   MIDNIGHT_BLACK,
+  NEUTRAL_LIGHT,
   NEWSROUND_PURPLE,
   NEWSROUND_PURPLE_30,
   OAT_LHT,
@@ -48,7 +110,6 @@ import {
   POSTBOX,
   POSTBOX_30,
   RHINO,
-  NEUTRAL_LIGHT,
   SERVICE_NEUTRAL_CORE,
   SERVICE_NEUTRAL_DARK,
   SHADOW,
@@ -63,73 +124,14 @@ import {
   WHITE,
 } from './palette';
 import {
-  GROUP_0_MAX_WIDTH,
-  GROUP_1_MAX_WIDTH,
-  GROUP_1_MIN_WIDTH,
-  GROUP_1_ONLY,
-  GROUP_2_MAX_WIDTH,
-  GROUP_2_MIN_WIDTH,
-  GROUP_2_ONLY,
-  GROUP_1_AND_GROUP_2,
-  GROUP_3_MAX_WIDTH,
-  GROUP_3_MIN_WIDTH,
-  GROUP_3_ONLY,
-  GROUP_4_MAX_WIDTH,
-  GROUP_4_MIN_WIDTH,
-  GROUP_4_ONLY,
-  GROUP_5_MIN_WIDTH,
-  FORCED_COLOURS,
-  POINTER,
-} from './mediaQueries';
-import {
-  HALF,
-  FULL,
   DOUBLE,
-  TRIPLE,
+  FULL,
+  HALF,
   QUADRUPLE,
   QUINTUPLE,
   SEXTUPLE,
+  TRIPLE,
 } from './spacings';
-import {
-  getAtlasSize,
-  getElephantSize,
-  getImperialSize,
-  getRoyalSize,
-  getFoolscapSize,
-  getCanonSize,
-  getTrafalgarSize,
-  getParagonSize,
-  getDoublePicaSize,
-  getGreatPrimerSize,
-  getBodyCopySize,
-  getPicaSize,
-  getLongPrimerSize,
-  getBrevierSize,
-  getMinionSize,
-} from './fontSizes';
-import {
-  getSansRegular,
-  getSansRegularItalic,
-  getSansBold,
-  getSansBoldItalic,
-  getSansLight,
-  getSerifRegular,
-  getSerifMedium,
-  getSerifMediumItalic,
-  getSerifBold,
-  getSerifLight,
-} from './fontVariants';
-import {
-  GROUP_A_MAX_WIDTH,
-  GROUP_B_MAX_WIDTH,
-  GROUP_B_MIN_WIDTH,
-  GROUP_B_ONLY,
-  GROUP_D_MIN_WIDTH,
-} from './fontMediaQueries';
-
-import gridWidths from './gridWidths';
-
-import { BrandPalette, Typography, BrandSVG } from '../../models/types/theming';
 
 export default ({
   typography,

@@ -1,9 +1,10 @@
 import type { MouseEventHandler } from 'react';
+
 import Image from '../../Image';
+import type { MediaInfo } from '../types';
+import Guidance from './Guidance';
 import styles from './index.styles';
 import PlayButton from './PlayButton';
-import Guidance from './Guidance';
-import { MediaInfo } from '../types';
 
 interface Props {
   onClick: MouseEventHandler<HTMLDivElement>;
@@ -32,7 +33,8 @@ const MediaPlayerPlaceholder = ({
   } = mediaInfo ?? {};
 
   return (
-    // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
+    // biome-ignore lint/a11y/useKeyWithClickEvents: we want this
+    // biome-ignore lint/a11y/noStaticElementInteractions: we want this
     <div
       onClick={onClick}
       css={styles.placeholder}
@@ -45,7 +47,7 @@ const MediaPlayerPlaceholder = ({
       />
       <PlayButton
         css={styles.playButton}
-        // eslint-disable-next-line @typescript-eslint/no-empty-function
+        // biome-ignore lint/suspicious/noEmptyBlockStatements: we want this
         onClick={() => {}}
         title={title}
         datetime={datetime}

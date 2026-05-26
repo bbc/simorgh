@@ -1,6 +1,6 @@
 import {
-  renderHook,
   act,
+  renderHook,
 } from '#app/components/react-testing-library-with-providers';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import useToggle from '.';

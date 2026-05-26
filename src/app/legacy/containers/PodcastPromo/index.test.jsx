@@ -2,15 +2,13 @@ import dissocPath from 'ramda/src/dissocPath';
 import identity from 'ramda/src/identity';
 
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-
-import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
-
+import * as viewTracking from '#hooks/useViewTracker';
 import { render } from '../../../components/react-testing-library-with-providers';
-import { service as russianServiceConfig } from '../../../lib/config/services/russian';
-import { service as burmeseServiceConfig } from '../../../lib/config/services/burmese';
-import { service as amharicServiceConfig } from '../../../lib/config/services/amharic';
 import { ServiceContext } from '../../../contexts/ServiceContext';
+import { service as amharicServiceConfig } from '../../../lib/config/services/amharic';
+import { service as burmeseServiceConfig } from '../../../lib/config/services/burmese';
+import { service as russianServiceConfig } from '../../../lib/config/services/russian';
 import { InlinePodcastPromo, SecondaryColumnPodcastPromo } from '.';
 
 const PromoWithContext = ({

@@ -18,7 +18,7 @@ exports[`Topic page with badge image, description and multiple curations with h2
 exports[`Topic page with badge image, description and multiple curations with h2 headings should display the topic badge image 1`] = `
 <img
   alt=""
-  class="css-u2xnxo e1vorejc0"
+  class="css-u2xnxo exgo87f0"
   data-testid="topic-badge"
   src="https://ichef.bbci.co.uk/ace/standard/128/cpsdevpb/f407/test/75380e10-4f96-11ed-9488-854f10e82c4c.jpg"
 />

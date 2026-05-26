@@ -16,17 +16,13 @@ export default ({ service, pageType }) =>
       });
     });
 
-    describe(
-      'Audio Player',
-      {
-        retries: 3,
-      },
-      () => {
-        it('should render a valid media player', () => {
-          cy.get('[data-e2e="media-loader__container"]').should('exist');
-        });
-      },
-    );
+    describe('Audio Player', {
+      retries: 3,
+    }, () => {
+      it('should render a valid media player', () => {
+        cy.get('[data-e2e="media-loader__container"]').should('exist');
+      });
+    });
 
     chartbeatTests();
 

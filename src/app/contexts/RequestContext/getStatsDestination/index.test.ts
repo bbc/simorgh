@@ -1,4 +1,4 @@
-import { Environments, Services } from '#app/models/types/global';
+import type { Environments, Services } from '#app/models/types/global';
 import getStatsDestination from '.';
 
 describe('getStatsDestination', () => {

@@ -1,9 +1,8 @@
+// biome-ignore-all lint/security/noDangerouslySetInnerHtml: we want this
 const IfAboveIE9 = ({ children }) => (
   <>
-    {/* eslint-disable-next-line react/no-danger */}
     <div dangerouslySetInnerHTML={{ __html: '<!--[if !IE]><!-->' }} />
     {children}
-    {/* eslint-disable-next-line react/no-danger */}
     <div dangerouslySetInnerHTML={{ __html: '<!--<![endif]-->' }} />
   </>
 );

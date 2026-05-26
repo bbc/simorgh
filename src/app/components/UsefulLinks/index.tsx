@@ -1,7 +1,7 @@
-import { Summary } from '#app/models/types/curationData';
-import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
-import { EventTrackingMetadata } from '#app/models/types/eventTracking';
+import useViewTracker from '#app/hooks/useViewTracker';
+import type { Summary } from '#app/models/types/curationData';
+import type { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import Heading from '../Heading';
 import styles from './index.styles';
 

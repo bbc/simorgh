@@ -1,11 +1,12 @@
 import { use } from 'react';
+
+import { AccountIcon } from '#app/components/icons';
+import Text from '#app/components/Text';
+import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import useViewTracker from '#app/hooks/useViewTracker';
 import { AccountContext } from '#contexts/AccountContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useHydrationDetection from '#hooks/useHydrationDetection';
-import Text from '#app/components/Text';
-import { AccountIcon } from '#app/components/icons';
-import useViewTracker from '#app/hooks/useViewTracker';
-import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import styles from './index.styles';
 
 const AccountHeader = () => {

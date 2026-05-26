@@ -1,22 +1,22 @@
 import { use, useId } from 'react';
+
 import { RequestContext } from '#contexts/RequestContext';
 import {
-  EmbedConsentBannerCanonical,
   EmbedConsentBannerAmp,
+  EmbedConsentBannerCanonical,
 } from '../../../../components/EmbedConsentBanner';
-import SkipLinkWrapper from './SkipLinkWrapper';
-import CaptionWrapper from './CaptionWrapper';
-import Notice from './Notice';
-
-import CanonicalEmbed from './Canonical';
-import AmpElements from './Amp';
-import { getCaptionText } from './utilities';
 import {
   ARTICLE_PAGE,
-  STORY_PAGE,
   CORRESPONDENT_STORY_PAGE,
   LIVE_PAGE,
+  STORY_PAGE,
 } from '../../../../routes/utils/pageTypes';
+import AmpElements from './Amp';
+import CanonicalEmbed from './Canonical';
+import CaptionWrapper from './CaptionWrapper';
+import Notice from './Notice';
+import SkipLinkWrapper from './SkipLinkWrapper';
+import { getCaptionText } from './utilities';
 
 const checkIsSupportedProvider = (provider, pageType) => {
   // Optimo Articles support all social media providers

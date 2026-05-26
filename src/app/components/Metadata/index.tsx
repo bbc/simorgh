@@ -1,29 +1,35 @@
 import { use } from 'react';
+
 import { useTheme } from '@emotion/react';
 import { Helmet } from 'react-helmet';
-import { RequestContext } from '#contexts/RequestContext';
-import { Environments, PageTypes, Services } from '#app/models/types/global';
+
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import isLive from '#app/lib/utilities/isLive';
+import type {
+  Environments,
+  PageTypes,
+  Services,
+} from '#app/models/types/global';
 import {
   getArticleId,
   getTipoId,
 } from '#app/routes/utils/constructPageFetchUrl';
-import isLive from '#app/lib/utilities/isLive';
 import {
   ARTICLE_PAGE,
   LIVE_PAGE,
   MEDIA_ARTICLE_PAGE,
 } from '#app/routes/utils/pageTypes';
-import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import defaultTranslations from '../LiteSiteSummary/defaultTranslations';
+import type { IconSizes, MetadataProps, Tag } from './types';
 import {
+  getAppleTouchUrl,
   getIconAssetUrl,
   getIconLinks,
-  getAppleTouchUrl,
   renderAlternateLinks,
   renderAppleItunesApp,
 } from './utils';
-import { IconSizes, MetadataProps, Tag } from './types';
-import defaultTranslations from '../LiteSiteSummary/defaultTranslations';
 
 const ENGLISH_SERVICES = ['news', 'sport', 'ws'];
 const FACEBOOK_APP_ID = '1609039196070050';
@@ -216,7 +222,6 @@ const MetadataContainer = ({
       {isoLang &&
         !isEnglishService &&
         alternateLinksWsSites.map(renderAlternateLinks)}
-      {/* eslint-disable-next-line react/no-invalid-html-attribute */}
       {linkToAmpPage && <link rel="amphtml" href={ampLink} />}
       {renderAppleItunesApp({
         iTunesAppId,

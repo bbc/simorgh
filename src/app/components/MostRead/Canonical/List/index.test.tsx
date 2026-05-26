@@ -1,6 +1,6 @@
 import { render } from '../../../react-testing-library-with-providers';
-import MostReadList from '.';
 import { getItemWrapperArray } from '../../utilities/testHelpers';
+import MostReadList from '.';
 
 describe('MostReadList', () => {
   it('should render with ltr news items with correct dir', () => {

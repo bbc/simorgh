@@ -1,6 +1,7 @@
-import { css, Theme } from '@emotion/react';
+import { css, type Theme } from '@emotion/react';
+
+import type { ServiceConfig } from '#app/models/types/serviceConfig';
 import pixelsToRem from '#app/utilities/pixelsToRem';
-import { ServiceConfig } from '#app/models/types/serviceConfig';
 
 type Heights = NonNullable<
   NonNullable<ServiceConfig['electionBanner']>['heights']

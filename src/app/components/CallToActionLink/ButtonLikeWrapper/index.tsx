@@ -1,4 +1,5 @@
-import { PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
+
 import styles from './index.styles';
 
 type ButtonLikeWrapperProps = {
@@ -8,12 +9,10 @@ type ButtonLikeWrapperProps = {
 const ButtonLikeWrapper = ({
   children,
   className,
-}: PropsWithChildren<ButtonLikeWrapperProps>) => {
-  return (
-    <div css={styles.flexWrapper} className={className}>
-      {children}
-    </div>
-  );
-};
+}: PropsWithChildren<ButtonLikeWrapperProps>) => (
+  <div css={styles.flexWrapper} className={className}>
+    {children}
+  </div>
+);
 
 export default ButtonLikeWrapper;

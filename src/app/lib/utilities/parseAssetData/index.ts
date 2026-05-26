@@ -1,4 +1,4 @@
-import { Article } from '#app/models/types/optimo';
+import type { Article } from '#app/models/types/optimo';
 
 const getISOStringDate = (date: number) => new Date(date).toISOString();
 

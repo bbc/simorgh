@@ -1,8 +1,9 @@
-import { useCallback, use, useEffect, useState, RefObject } from 'react';
-import { ServiceContext } from '#app/contexts/ServiceContext';
+import { type RefObject, use, useCallback, useEffect, useState } from 'react';
+
 import { Chevron, ChevronOrientation } from '#app/components/icons';
-import styles from './index.styles';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import { PROMO_ITEM_WIDTH_MIN } from '../utils/styleUtils';
+import styles from './index.styles';
 
 const DEFAULT_TRANSLATION = {
   previous: 'Scroll to previous item',

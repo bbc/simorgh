@@ -1,8 +1,10 @@
 import { use } from 'react';
+
 import Helmet from 'react-helmet';
-import { ServiceContext } from '#contexts/ServiceContext';
-import ErrorMain from '#app/legacy/components/ErrorMain';
+
 import { useOfflinePageFlag } from '#app/hooks/useOfflinePageFlag';
+import ErrorMain from '#app/legacy/components/ErrorMain';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const OfflinePage = () => {
   const { service, dir } = use(ServiceContext);

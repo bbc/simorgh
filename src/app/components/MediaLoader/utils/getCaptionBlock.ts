@@ -1,6 +1,6 @@
 import filterForBlockType from '#app/lib/utilities/blockHandlers';
-import { PageTypes } from '#app/models/types/global';
-import { CaptionBlock, MediaBlock } from '../types';
+import type { PageTypes } from '#app/models/types/global';
+import type { CaptionBlock, MediaBlock } from '../types';
 
 export default function getCaptionBlock(
   blocks: MediaBlock[],

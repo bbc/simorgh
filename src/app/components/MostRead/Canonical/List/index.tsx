@@ -1,9 +1,10 @@
-import { PropsWithChildren, use } from 'react';
+import { type PropsWithChildren, use } from 'react';
+
+import { ServiceContext } from '../../../../contexts/ServiceContext';
 import Grid from '../../../../legacy/psammead/psammead-grid/src';
+import type { MostReadBaseProps } from '../../types';
 import { mostReadListGridProps } from '../../utilities/gridProps';
 import * as styles from './index.styles';
-import { MostReadBaseProps } from '../../types';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
 
 const MostReadList = ({
   numberOfItems,

@@ -1,20 +1,25 @@
-import { PropsWithChildren, use } from 'react';
+import { type PropsWithChildren, use } from 'react';
+
 import { Helmet } from 'react-helmet';
-import GlobalStyles from '#psammead/psammead-styles/src/global-styles';
-import { Navigation, PageTypes } from '#app/models/types/global';
-import appendAdDomainsToCSPHeader from '#app/utilities/appendAdDomainsToCSPHeader';
+
+import type { Navigation, PageTypes } from '#app/models/types/global';
 import { OFFLINE_PAGE } from '#app/routes/utils/pageTypes';
-import { TopStoryItem } from '../../pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
-import WebVitals from '../../legacy/containers/WebVitals';
-import HeaderContainer from '../../legacy/containers/Header';
-import FooterContainer from '../../legacy/containers/Footer';
-import ManifestContainer from '../../legacy/containers/Manifest';
-import ServiceWorker from '../ServiceWorker';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import appendAdDomainsToCSPHeader from '#app/utilities/appendAdDomainsToCSPHeader';
+import GlobalStyles from '#psammead/psammead-styles/src/global-styles';
 import { RequestContext } from '../../contexts/RequestContext';
+import { ServiceContext } from '../../contexts/ServiceContext';
+import FooterContainer from '../../legacy/containers/Footer';
+import HeaderContainer from '../../legacy/containers/Header';
+import ManifestContainer from '../../legacy/containers/Manifest';
+import WebVitals from '../../legacy/containers/WebVitals';
+import type { TopStoryItem } from '../../pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
+import type {
+  CPSMostReadRecord,
+  OptimoMostReadRecord,
+} from '../MostRead/types';
+import ServiceWorker from '../ServiceWorker';
 import fontFaces from '../ThemeProvider/fontFaces';
 import styles from './index.styles';
-import { OptimoMostReadRecord, CPSMostReadRecord } from '../MostRead/types';
 
 type ModelType = {
   blocks?: [
@@ -67,9 +72,7 @@ const PageLayoutWrapper = ({
       ?.reduce((reducer, block) => {
         const innerBlocks = block?.model?.blocks
           ?.filter(innerBlock => innerBlock.type === 'paragraph')
-          .reduce((innerReducer, p) => {
-            return `${innerReducer} ${p.model?.text}`;
-          }, '');
+          .reduce((innerReducer, p) => `${innerReducer} ${p.model?.text}`, '');
 
         if (!innerBlocks) return reducer;
         return reducer + innerBlocks.split(' ').length;

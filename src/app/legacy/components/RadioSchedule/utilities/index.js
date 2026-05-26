@@ -1,11 +1,11 @@
 import { formatDuration } from '#psammead/psammead-timestamp-container/src/utilities';
 import {
   EBON,
+  LIVE_DARK,
+  METAL,
+  POSTBOX,
   SHADOW,
   WHITE,
-  METAL,
-  LIVE_DARK,
-  POSTBOX,
 } from '../../../../components/ThemeProvider/palette';
 
 export const programStateConfig = {

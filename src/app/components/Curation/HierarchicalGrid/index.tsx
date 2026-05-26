@@ -1,23 +1,25 @@
-/* eslint-disable jsx-a11y/aria-role */
+// biome-ignore-all lint/a11y/useValidAriaRole: we want this
 import { use } from 'react';
-import { css, Theme } from '@emotion/react';
+
+import { css, type Theme } from '@emotion/react';
 import moment from 'moment';
 import path from 'ramda/src/path';
-import isMediaType from '#app/lib/utilities/isMedia';
-import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
-import VisuallyHiddenText from '../../VisuallyHiddenText';
-import formatDuration from '../../../lib/utilities/formatDuration';
-import Promo from '../../../legacy/components/Promo';
-import { DESKTOP, TABLET, MOBILE, SMALL } from './dataStructures';
-import { styles } from './index.styles';
-import { ServiceContext } from '../../../contexts/ServiceContext';
-import { CurationGridProps } from '../types';
-import { Summary } from '../../../models/types/curationData';
-import { RequestContext } from '../../../contexts/RequestContext';
-import LiveLabel from '../../LiveLabel';
 
-const getStyles = (promoCount: number, i: number, mq: Theme['mq']) => {
-  return css({
+import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import isMediaType from '#app/lib/utilities/isMedia';
+import { RequestContext } from '../../../contexts/RequestContext';
+import { ServiceContext } from '../../../contexts/ServiceContext';
+import Promo from '../../../legacy/components/Promo';
+import formatDuration from '../../../lib/utilities/formatDuration';
+import type { Summary } from '../../../models/types/curationData';
+import LiveLabel from '../../LiveLabel';
+import VisuallyHiddenText from '../../VisuallyHiddenText';
+import type { CurationGridProps } from '../types';
+import { DESKTOP, MOBILE, SMALL, TABLET } from './dataStructures';
+import { styles } from './index.styles';
+
+const getStyles = (promoCount: number, i: number, mq: Theme['mq']) =>
+  css({
     [mq.GROUP_1_MAX_WIDTH]: {
       ...SMALL[promoCount - 1][i],
     },
@@ -31,7 +33,6 @@ const getStyles = (promoCount: number, i: number, mq: Theme['mq']) => {
       ...DESKTOP[promoCount - 1][i],
     },
   });
-};
 const HiearchicalGrid = ({
   summaries,
   headingLevel,

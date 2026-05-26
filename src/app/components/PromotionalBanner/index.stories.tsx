@@ -3,10 +3,10 @@ import {
   ServiceContext,
 } from '#app/contexts/ServiceContext';
 import PromotionalBannerComponent from '.';
-import { StoryProps } from '../../models/types/storybook';
+import type { StoryProps } from '../../models/types/storybook';
 import metadata from './metadata.json';
 import readme from './README.md';
-import { PromotionalBannerConfig } from './index.types';
+import type { PromotionalBannerConfig } from './index.types';
 
 const ComponentWithContext = ({
   service = 'mundo',

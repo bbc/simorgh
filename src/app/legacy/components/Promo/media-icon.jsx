@@ -1,8 +1,9 @@
-import moment from 'moment-timezone';
 import styled from '@emotion/styled';
+import moment from 'moment-timezone';
+
+import formatDuration from '#lib/utilities/formatDuration';
 import { GEL_SPACING_HLF } from '#psammead/gel-foundations/src/spacings';
 import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
-import formatDuration from '#lib/utilities/formatDuration';
 
 export const TYPES = {
   VIDEO: 'video',

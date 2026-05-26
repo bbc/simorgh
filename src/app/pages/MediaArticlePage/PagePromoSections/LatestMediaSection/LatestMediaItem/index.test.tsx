@@ -1,13 +1,13 @@
 import { useMemo } from 'react';
+
 import {
   render,
   screen,
 } from '../../../../../components/react-testing-library-with-providers';
-
-import LatestMediaItem from '.';
 import PromoContext from '../../../../../legacy/components/OptimoPromos/PromoContext';
-import { EventTrackingBlock } from '../../../../../models/types/eventTracking';
-import { LatestMedia, Media } from '../types';
+import type { EventTrackingBlock } from '../../../../../models/types/eventTracking';
+import type { LatestMedia, Media } from '../types';
+import LatestMediaItem from '.';
 
 interface FixtureProps {
   mediaType?: Media;

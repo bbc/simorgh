@@ -1,5 +1,6 @@
 import type { ComponentType, JSX } from 'react';
-import {
+
+import type {
   SerbianService,
   ServicesWithNoVariants,
   ServicesWithVariants,

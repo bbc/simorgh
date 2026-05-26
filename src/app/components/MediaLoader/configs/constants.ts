@@ -1,4 +1,4 @@
-import { PlayerUiConfig } from '../types';
+import type { PlayerUiConfig } from '../types';
 
 const AUDIO_UI_CONFIG: PlayerUiConfig = {
   skin: 'audio',

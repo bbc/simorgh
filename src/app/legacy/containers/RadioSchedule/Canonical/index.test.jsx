@@ -1,13 +1,13 @@
-import arabicRadioScheduleData from '#data/arabic/bbc_arabic_radio/schedule.json';
-import { RequestContextProvider } from '#contexts/RequestContext';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
+import { RequestContextProvider } from '#contexts/RequestContext';
+import arabicRadioScheduleData from '#data/arabic/bbc_arabic_radio/schedule.json';
 import {
-  render,
   act,
+  render,
 } from '../../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
-import RadioSchedule from '.';
 import processRadioSchedule from '../utilities/processRadioSchedule';
+import RadioSchedule from '.';
 
 const RadioScheduleWithContext = ({ radioSchedule, lang }) => (
   <RequestContextProvider

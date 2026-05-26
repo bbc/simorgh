@@ -1,10 +1,9 @@
 import isLive from '#app/lib/utilities/isLive';
 
-const getSessionUrl = (): string => {
-  return isLive()
+const getSessionUrl = (): string =>
+  isLive()
     ? 'https://session.bbc.com/session'
     : 'https://session.test.bbc.com/session';
-};
 
 const refreshTokens = async (): Promise<Response> => {
   const url = getSessionUrl();

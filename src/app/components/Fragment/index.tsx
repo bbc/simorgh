@@ -1,4 +1,5 @@
-import { PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
+
 import styles from './index.style';
 
 const bold = ({ children }: PropsWithChildren) => <b>{children}</b>;

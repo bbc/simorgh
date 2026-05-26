@@ -1,5 +1,5 @@
-import { OptimoBlock } from '#app/models/types/optimo';
-import { pidginPageData, arabicLiveTvPageData } from '../../fixtureData';
+import type { OptimoBlock } from '#app/models/types/optimo';
+import { arabicLiveTvPageData, pidginPageData } from '../../fixtureData';
 import checkIsLiveMedia from '.';
 
 describe('checkIsLiveMedia', () => {

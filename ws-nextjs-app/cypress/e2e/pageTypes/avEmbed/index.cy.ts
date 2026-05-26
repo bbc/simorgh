@@ -1,5 +1,5 @@
-import pageVisit from './pageVisit';
 import runTestsForPage from '../../../support/helpers/runTestsForPage';
+import pageVisit from './pageVisit';
 
 const testDetails = {
   pageType: 'avEmbed',

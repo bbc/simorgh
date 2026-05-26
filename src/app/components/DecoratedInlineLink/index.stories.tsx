@@ -1,4 +1,4 @@
-import { OptimoBlock } from '#app/models/types/optimo';
+import type { OptimoBlock } from '#app/models/types/optimo';
 import DecoratedInlineLink from '.';
 
 const Component = ({
@@ -85,7 +85,6 @@ export const InlineLinkWithOnClick = () => (
     ]}
     locator=""
     isExternal
-    // eslint-disable-next-line no-alert
     onClick={() => alert('HELLO WORLD!')}
   />
 );

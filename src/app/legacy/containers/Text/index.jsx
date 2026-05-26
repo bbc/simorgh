@@ -1,6 +1,6 @@
-import paragraph from '../Paragraph';
-import unorderedList from '../BulletedList';
 import Blocks from '../Blocks';
+import unorderedList from '../BulletedList';
+import paragraph from '../Paragraph';
 
 const TextContainer = ({
   blocks,

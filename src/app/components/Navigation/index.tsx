@@ -1,17 +1,23 @@
-import React, { use } from 'react';
-import { NavigationUl, NavigationLi } from '#psammead/psammead-navigation/src';
-import {
-  DropdownUl,
-  DropdownLi,
-} from '#psammead/psammead-navigation/src/DropdownNavigation';
+import type React from 'react';
+import { use } from 'react';
+
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
+import type {
+  Direction,
+  Navigation,
+  PageTypes,
+} from '#app/models/types/global';
+import type { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { Direction, Navigation, PageTypes } from '#app/models/types/global';
-import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
-import Canonical from './index.canonical';
+import { NavigationLi, NavigationUl } from '#psammead/psammead-navigation/src';
+import {
+  DropdownLi,
+  DropdownUl,
+} from '#psammead/psammead-navigation/src/DropdownNavigation';
 import Amp from './index.amp';
+import Canonical from './index.canonical';
 import styles from './index.styles';
 
 const getTopItemA11yProps = ({

@@ -1,10 +1,10 @@
-import { ServiceTheme } from '#app/models/types/theming';
-import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
-import arabicScript from '../fontScripts/arabic';
-import { REITH_QALAM_REGULAR, REITH_QALAM_BOLD } from '../fontFaces';
-import reithQalamFontVariants from '../fontVariants/reithQalam';
-import withThemeProvider from '../withThemeProvider';
+import type { ServiceTheme } from '#app/models/types/theming';
 import brandSVG from '../chameleonLogos/dari';
+import { REITH_QALAM_BOLD, REITH_QALAM_REGULAR } from '../fontFaces';
+import arabicScript from '../fontScripts/arabic';
+import reithQalamFontVariants from '../fontVariants/reithQalam';
+import { GHOST, POSTBOX, POSTBOX_30, WHITE } from '../palette';
+import withThemeProvider from '../withThemeProvider';
 
 export const theme: ServiceTheme = {
   palette: {

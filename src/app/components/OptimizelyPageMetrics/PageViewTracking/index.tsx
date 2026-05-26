@@ -1,4 +1,5 @@
-import { useState, useContext, useEffect } from 'react';
+import { useContext, useEffect, useState } from 'react';
+
 import { OptimizelyContext } from '@optimizely/react-sdk';
 
 const PAGE_VIEW_EVENT_NAME = 'page-views';

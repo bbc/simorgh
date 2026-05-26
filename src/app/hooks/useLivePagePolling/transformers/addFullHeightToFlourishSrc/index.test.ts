@@ -1,5 +1,6 @@
-import { OEmbedData } from '#app/components/Embeds/types';
 import * as uuId from 'uuid';
+
+import type { OEmbedData } from '#app/components/Embeds/types';
 import addFullHeightToFlourishSrc from '.';
 
 jest.mock('uuid', () => ({

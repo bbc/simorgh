@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+
 import getRecentActivity from '#app/lib/uasApi/getRecentActivity';
 import type { SavedArticle } from '#app/lib/uasApi/uasUtility';
 

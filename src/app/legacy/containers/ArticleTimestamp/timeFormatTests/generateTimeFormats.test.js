@@ -1,4 +1,4 @@
-import { writeFile } from 'fs';
+import { writeFile } from 'node:fs';
 
 jest.mock('fs');
 jest.mock('#utilities/serviceConfigs', () => ({
@@ -17,9 +17,9 @@ describe('generateTimeFormats', () => {
     let hasError = false;
     jest.isolateModules(() => {
       try {
-        // eslint-disable-next-line global-require
+        // biome-ignore lint/style/noCommonJs: we want this
         require('./generateTimeFormats');
-      } catch (e) {
+      } catch (_e) {
         hasError = true;
       }
       expect(writeFile).toHaveBeenCalled();
@@ -34,9 +34,9 @@ describe('generateTimeFormats', () => {
     let hasError = false;
     jest.isolateModules(() => {
       try {
-        // eslint-disable-next-line global-require
+        // biome-ignore lint/style/noCommonJs: we want this
         require('./generateTimeFormats');
-      } catch (e) {
+      } catch (_e) {
         hasError = true;
       }
       expect(writeFile).toHaveBeenCalled();

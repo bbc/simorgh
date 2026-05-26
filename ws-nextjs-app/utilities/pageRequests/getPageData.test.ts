@@ -1,5 +1,5 @@
-import * as fetchPageData from '#app/routes/utils/fetchPageData';
 import * as fetchDataFromBFF from '#app/routes/utils/fetchDataFromBFF';
+import * as fetchPageData from '#app/routes/utils/fetchPageData';
 import getPageData from './getPageData';
 
 const agent = { cert: 'cert', ca: 'ca', key: 'key' };

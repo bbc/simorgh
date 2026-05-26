@@ -1,5 +1,5 @@
 import MessageBanner from '.';
-import { StoryProps, StoryArgs } from '../../models/types/storybook';
+import type { StoryProps, StoryArgs } from '../../models/types/storybook';
 import readme from './README.md';
 
 interface Props extends StoryProps {

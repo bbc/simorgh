@@ -2,7 +2,7 @@ import devanagari from '../../../components/ThemeProvider/fontScripts/devanagari
 import '#psammead/moment-timezone-include/tz/Asia/Kolkata';
 import '#psammead/psammead-locales/moment/mr';
 import withContext from '../../../contexts/utils/withContext';
-import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
+import type { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
 export const service: DefaultServiceConfig = {
   default: {
@@ -49,8 +49,7 @@ export const service: DefaultServiceConfig = {
     podcastPromo: {
       title: 'बीबीसी मराठी व्हॉट्सॲपवर',
       brandTitle: 'बीबीसी न्यूज मराठी आता व्हॉट्सॲपवर',
-      brandDescription:
-        'तुमच्या कामाच्या गोष्टी आणि बातम्या आता थेट तुमच्या फोनवर',
+      brandDescription: 'तुमच्या कामाच्या गोष्टी आणि बातम्या आता थेट तुमच्या फोनवर',
       image: {
         src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0kptdp6.jpg',
         alt: 'BBC News मराठी आत्ताच फॉलो करा WhatsApp कर',
@@ -82,8 +81,7 @@ export const service: DefaultServiceConfig = {
       topicDiscovery: {
         heading: 'अधिक शोधा',
         moreFromTopic: '{topic} मधील अधिक',
-        fetchErrorMessage:
-          'लोड करण्यात अयशस्वी. कृपया नंतर पुन्हा प्रयत्न करा.',
+        fetchErrorMessage: 'लोड करण्यात अयशस्वी. कृपया नंतर पुन्हा प्रयत्न करा.',
       },
       currentPage: 'सध्याचे पान',
       skipLinkText: 'थेट मजकुरावर जा',
@@ -132,10 +130,7 @@ export const service: DefaultServiceConfig = {
           title: 'अंतर्गत सर्व्हरमध्ये बिघाड',
           message:
             'माफ करा, तुम्ही शोधत असलेलं पृष्ठ आम्हाला सापडले नाही. कृपया प्रयत्न करा:',
-          solutions: [
-            'तुमच्या ब्राऊझरमध्ये रिफ्रेश बटण दाबा',
-            'थोड्या वेळाने परत या',
-          ],
+          solutions: ['तुमच्या ब्राऊझरमध्ये रिफ्रेश बटण दाबा', 'थोड्या वेळाने परत या'],
           callToActionFirst: 'किंवा, ',
           callToActionLinkText: 'बीबीसी न्यूज मराठी',
           callToActionLast: 'च्या होमपेजला भेट द्या.',
