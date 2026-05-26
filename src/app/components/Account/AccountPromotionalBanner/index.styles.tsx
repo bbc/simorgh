@@ -35,7 +35,7 @@ export default {
       height: `${pixelsToRem(44)}rem`,
       padding: `${spacings.HALF}rem`,
       [mq.GROUP_1_MIN_WIDTH]: {
-        padding: `${spacings.FULL}rem`,
+        paddingInline: `${spacings.FULL}rem`,
       },
       color: palette.WHITE,
       textDecorationThickness: `${pixelsToRem(1)}rem`,
