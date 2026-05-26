@@ -77,9 +77,8 @@ export const service: DefaultServiceConfig = {
         settings: 'Settings',
       },
       accountPromoBanner: {
-        title: 'Discover your BBC',
-        description:
-          'Sign in or create an account to watch, listen and join in',
+        title: 'Your very own BBC',
+        description: 'Sign In or create an account for free',
         closeLabel: 'Close',
         buttonSeparatorText: 'or',
       },
