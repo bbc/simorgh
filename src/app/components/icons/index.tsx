@@ -332,6 +332,7 @@ export const RedCardSVG = ({ className }: { className?: string }) => (
     viewBox="0 0 9.22 13.36"
     xmlns="http://www.w3.org/2000/svg"
     className={className}
+    height="1rem"
   >
     <path d="m-12.94 265.76h8.47v11.82h-8.47z" fill="#f51a5a" />
     <path d="m-28.07 272.58h8.47v11.82h-8.47z" fill="#f51a5a" />
@@ -353,6 +354,7 @@ export const SecondYellowCardSVG = ({ className }: { className?: string }) => (
     viewBox="0 0 14.84 17.91"
     xmlns="http://www.w3.org/2000/svg"
     className={className}
+    height="1.20rem"
   >
     <path d="m21.09 265.76h8.47v11.82h-8.47z" fill="#f51a5a" />
     <path d="m5.97 272.58h8.47v11.82h-8.47z" fill="#f51a5a" />
