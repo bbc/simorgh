@@ -1,12 +1,45 @@
-import {
-  renderHook,
-  waitFor,
-} from '#app/components/react-testing-library-with-providers';
-import getRecentActivity from '#app/lib/uasApi/getRecentActivity';
+import { use } from 'react';
+import { renderHook } from '#app/components/react-testing-library-with-providers';
+import getRecentActivity, {
+  RecentActivityData,
+} from '#app/lib/uasApi/getRecentActivity';
 import type { SavedArticle } from '#app/lib/uasApi/uasUtility';
+import uasKeys from '#app/lib/uasApi/queryKeys';
+import { AccountContext } from '#app/contexts/AccountContext';
 import useUASRecentActivity from '.';
 
 jest.mock('#app/lib/uasApi/getRecentActivity');
+jest.mock('react', () => ({
+  ...jest.requireActual('react'),
+  use: jest.fn(),
+}));
+
+let mockQueryFn: (opts: { signal: AbortSignal }) => Promise<RecentActivityData>;
+let mockQueryKey: readonly unknown[];
+let mockEnabled: boolean | undefined;
+let mockUseQueryReturn: {
+  data: RecentActivityData | undefined;
+  isLoading: boolean;
+  error: Error | null;
+} = {
+  data: undefined,
+  isLoading: false,
+  error: null,
+};
+
+jest.mock('@tanstack/react-query', () => ({
+  ...jest.requireActual('@tanstack/react-query'),
+  useQuery: (config: {
+    queryFn: (opts: { signal: AbortSignal }) => Promise<RecentActivityData>;
+    queryKey: readonly unknown[];
+    enabled: boolean;
+  }) => {
+    mockQueryFn = config.queryFn;
+    mockQueryKey = config.queryKey;
+    mockEnabled = config.enabled;
+    return mockUseQueryReturn;
+  },
+}));
 
 const mockGetRecentActivity = getRecentActivity as jest.MockedFunction<
   typeof getRecentActivity
@@ -38,36 +71,31 @@ const mockSavedArticles: SavedArticle[] = [
 describe('useUASRecentActivity', () => {
   beforeEach(() => {
     jest.clearAllMocks();
+    mockUseQueryReturn = { data: undefined, isLoading: false, error: null };
+
+    (use as jest.Mock).mockImplementation((context: unknown) => {
+      if (context === AccountContext) return { hashedUserId: 'user-123' };
+      return {};
+    });
   });
 
   describe('data fetching', () => {
-    it('should fetch and return saved articles on mount', async () => {
-      mockGetRecentActivity.mockResolvedValueOnce({
+    it('should return saved articles and total from query data', () => {
+      mockUseQueryReturn.data = {
         savedArticles: mockSavedArticles,
         total: 25,
         itemsPerPage: 10,
         startIndex: 0,
-      });
+      };
 
       const { result } = renderHook(() => useUASRecentActivity());
-
-      await waitFor(() => {
-        expect(result.current.isLoading).toBe(false);
-      });
 
       expect(result.current.savedArticles).toEqual(mockSavedArticles);
       expect(result.current.total).toBe(25);
       expect(result.current.error).toBeNull();
     });
 
-    it('should accept custom itemsPerPage and startIndex', async () => {
-      mockGetRecentActivity.mockResolvedValueOnce({
-        savedArticles: [mockSavedArticles[1]],
-        total: 15,
-        itemsPerPage: 20,
-        startIndex: 10,
-      });
-
+    it('should pass custom itemsPerPage and startIndex to getRecentActivity', async () => {
       renderHook(() =>
         useUASRecentActivity({
           itemsPerPage: 20,
@@ -75,29 +103,18 @@ describe('useUASRecentActivity', () => {
         }),
       );
 
-      await waitFor(() => {
-        expect(mockGetRecentActivity).toHaveBeenCalledWith(
-          expect.objectContaining({
-            itemsPerPage: 20,
-            startIndex: 10,
-          }),
-        );
-      });
+      await mockQueryFn({ signal: new AbortController().signal });
+
+      expect(mockGetRecentActivity).toHaveBeenCalledWith(
+        expect.objectContaining({
+          itemsPerPage: 20,
+          startIndex: 10,
+        }),
+      );
     });
 
-    it('should handle empty article list', async () => {
-      mockGetRecentActivity.mockResolvedValueOnce({
-        savedArticles: [],
-        total: 0,
-        itemsPerPage: 10,
-        startIndex: 0,
-      });
-
+    it('should return empty defaults when query has no data', () => {
       const { result } = renderHook(() => useUASRecentActivity());
-
-      await waitFor(() => {
-        expect(result.current.isLoading).toBe(false);
-      });
 
       expect(result.current.savedArticles).toEqual([]);
       expect(result.current.total).toBe(0);
@@ -105,177 +122,48 @@ describe('useUASRecentActivity', () => {
     });
   });
 
-  describe('error handling', () => {
-    it('should handle fetch errors gracefully', async () => {
-      const errorMessage = 'Network error';
-      mockGetRecentActivity.mockRejectedValueOnce(new Error(errorMessage));
+  it('should return the error from the query', () => {
+    const error = new Error('Network error');
+    mockUseQueryReturn.error = error;
 
-      const { result } = renderHook(() => useUASRecentActivity());
+    const { result } = renderHook(() => useUASRecentActivity());
 
-      await waitFor(() => {
-        expect(result.current.isLoading).toBe(false);
-      });
-
-      expect(result.current.error).toBe(errorMessage);
-      expect(result.current.savedArticles).toEqual([]);
-    });
-
-    it('should handle non-Error exceptions with default message', async () => {
-      mockGetRecentActivity.mockRejectedValueOnce('String error');
-
-      const { result } = renderHook(() => useUASRecentActivity());
-
-      await waitFor(() => {
-        expect(result.current.isLoading).toBe(false);
-      });
-
-      expect(result.current.error).toBe('Failed to load articles');
-    });
-
-    it('should not set error on AbortError', async () => {
-      const abortError = new Error('Request aborted');
-      abortError.name = 'AbortError';
-      mockGetRecentActivity.mockRejectedValueOnce(abortError);
-
-      const { result } = renderHook(() => useUASRecentActivity());
-
-      await waitFor(() => {
-        expect(result.current.isLoading).toBe(false);
-      });
-
-      expect(result.current.error).toBeNull();
-    });
+    expect(result.current.error).toBe(error);
+    expect(result.current.savedArticles).toEqual([]);
   });
 
-  describe('loading state', () => {
-    it('should start with loading state and transition to loaded', async () => {
-      mockGetRecentActivity.mockResolvedValueOnce({
-        savedArticles: mockSavedArticles,
-        total: 25,
-        itemsPerPage: 10,
-        startIndex: 0,
-      });
-
-      const { result } = renderHook(() => useUASRecentActivity());
-
-      expect(result.current.isLoading).toBe(true);
-
-      await waitFor(() => {
-        expect(result.current.isLoading).toBe(false);
-      });
-
-      expect(result.current.savedArticles).toEqual(mockSavedArticles);
+  it('should be disabled when hashedUserId is empty', () => {
+    (use as jest.Mock).mockImplementation((context: unknown) => {
+      if (context === AccountContext) return { hashedUserId: '' };
+      return {};
     });
+
+    renderHook(() => useUASRecentActivity());
+
+    expect(mockEnabled).toBe(false);
   });
 
-  describe('abort controller', () => {
-    it('should pass AbortSignal to getRecentActivity', async () => {
-      mockGetRecentActivity.mockResolvedValueOnce({
-        savedArticles: mockSavedArticles,
-        total: 25,
-        itemsPerPage: 10,
-        startIndex: 0,
-      });
+  it('should be enabled when hashedUserId is present', () => {
+    renderHook(() => useUASRecentActivity());
 
-      renderHook(() => useUASRecentActivity());
-
-      await waitFor(() => {
-        expect(mockGetRecentActivity).toHaveBeenCalledWith(
-          expect.objectContaining({
-            signal: expect.any(AbortSignal),
-          }),
-        );
-      });
-    });
-
-    it('should abort request on component unmount', async () => {
-      mockGetRecentActivity.mockResolvedValueOnce({
-        savedArticles: mockSavedArticles,
-        total: 25,
-        itemsPerPage: 10,
-        startIndex: 0,
-      });
-
-      const abortSpy = jest.spyOn(AbortController.prototype, 'abort');
-
-      const { unmount } = renderHook(() => useUASRecentActivity());
-
-      await waitFor(() => {
-        expect(mockGetRecentActivity).toHaveBeenCalled();
-      });
-
-      unmount();
-
-      expect(abortSpy).toHaveBeenCalled();
-      abortSpy.mockRestore();
-    });
+    expect(mockEnabled).toBe(true);
   });
 
-  describe('dependency array', () => {
-    it('should refetch when startIndex changes', async () => {
-      mockGetRecentActivity.mockResolvedValue({
-        savedArticles: mockSavedArticles,
-        total: 25,
-        itemsPerPage: 10,
-        startIndex: 0,
-      });
+  it('should include hashedUserId and startIndex in the query key', () => {
+    renderHook(() => useUASRecentActivity({ startIndex: 10 }));
 
-      const { rerender } = renderHook(
-        ({ startIndex }: { startIndex: number }) =>
-          useUASRecentActivity({ startIndex }),
-        {
-          initialProps: { startIndex: 0 },
-        },
-      );
+    expect(mockQueryKey).toEqual(uasKeys.favouritesPage('user-123', 10));
+  });
 
-      await waitFor(() => {
-        expect(mockGetRecentActivity).toHaveBeenCalledTimes(1);
-      });
+  it('should pass AbortSignal to getRecentActivity', async () => {
+    const { signal } = new AbortController();
 
-      rerender({ startIndex: 10 });
+    renderHook(() => useUASRecentActivity());
 
-      await waitFor(() => {
-        expect(mockGetRecentActivity).toHaveBeenCalledTimes(2);
-      });
+    await mockQueryFn({ signal });
 
-      expect(mockGetRecentActivity).toHaveBeenLastCalledWith(
-        expect.objectContaining({
-          startIndex: 10,
-        }),
-      );
-    });
-
-    it('should refetch when itemsPerPage changes', async () => {
-      mockGetRecentActivity.mockResolvedValue({
-        savedArticles: mockSavedArticles,
-        total: 25,
-        itemsPerPage: 10,
-        startIndex: 0,
-      });
-
-      const { rerender } = renderHook(
-        ({ itemsPerPage }: { itemsPerPage: number }) =>
-          useUASRecentActivity({ itemsPerPage }),
-        {
-          initialProps: { itemsPerPage: 10 },
-        },
-      );
-
-      await waitFor(() => {
-        expect(mockGetRecentActivity).toHaveBeenCalledTimes(1);
-      });
-
-      rerender({ itemsPerPage: 20 });
-
-      await waitFor(() => {
-        expect(mockGetRecentActivity).toHaveBeenCalledTimes(2);
-      });
-
-      expect(mockGetRecentActivity).toHaveBeenLastCalledWith(
-        expect.objectContaining({
-          itemsPerPage: 20,
-        }),
-      );
-    });
+    expect(mockGetRecentActivity).toHaveBeenCalledWith(
+      expect.objectContaining({ signal }),
+    );
   });
 });
