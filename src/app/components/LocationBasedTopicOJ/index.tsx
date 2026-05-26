@@ -1,4 +1,4 @@
-import { Article, CountryCuration } from '#app/models/types/optimo';
+import { Article } from '#app/models/types/optimo';
 import CurationGrid from '#app/components/Curation/CurationGrid';
 import Subheading from '#app/components/Curation/Subhead';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
@@ -7,7 +7,7 @@ import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import styles from '#app/components/RelatedContentSection/index.styles';
 
 const LocationBasedTopicOJ = ({ pageData }: { pageData: Article }) => {
-  const countryCuration = pageData?.countryCuration as CountryCuration;
+  const countryCuration = pageData?.countryCuration;
 
   const { title, summaries = [], link, topicId } = countryCuration || {};
 
