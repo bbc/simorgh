@@ -1,4 +1,4 @@
-import React, { useState, use, FocusEvent } from 'react';
+import React, { useState, use, KeyboardEvent } from 'react';
 import Navigation from '#psammead/psammead-navigation/src';
 import { ScrollableNavigation } from '#psammead/psammead-navigation/src/ScrollableNavigation';
 import {
@@ -43,14 +43,19 @@ const CanonicalNavigationContainer: React.FC<
     }
   });
 
-  const closeMenuWhenFocusLeaves = ({
+  const closeMenuOnTabOut = ({
+    key,
+    shiftKey,
     currentTarget,
-    relatedTarget,
-  }: FocusEvent<HTMLDivElement>) => {
-    const focusMovedOutsideMenu = !currentTarget.contains(
-      relatedTarget as HTMLElement,
+  }: KeyboardEvent) => {
+    if (key !== 'Tab' || shiftKey) return;
+
+    const focusableItems = currentTarget.querySelectorAll<HTMLElement>(
+      'a[href], button:not([disabled])',
     );
-    if (isOpen && relatedTarget && focusMovedOutsideMenu) {
+    const lastItem = focusableItems[focusableItems.length - 1];
+
+    if (document.activeElement === lastItem) {
       setIsOpen(false);
     }
   };
@@ -58,10 +63,7 @@ const CanonicalNavigationContainer: React.FC<
   return (
     <Navigation dir={dir} isOpen={isOpen}>
       <div css={styles.navStack}>
-        <div
-          css={{ position: 'relative', width: '100%' }}
-          onBlur={closeMenuWhenFocusLeaves}
-        >
+        <div css={{ position: 'relative', width: '100%' }}>
           <div css={styles.topRow}>
             <ScrollableNavigation
               dir={dir}
@@ -80,9 +82,11 @@ const CanonicalNavigationContainer: React.FC<
               />
             )}
           </div>
-          <CanonicalDropdown isOpen={isOpen} css={styles.dropdown}>
-            {dropdownListItems}
-          </CanonicalDropdown>
+          <div role="presentation" onKeyDown={closeMenuOnTabOut}>
+            <CanonicalDropdown isOpen={isOpen} css={styles.dropdown}>
+              {dropdownListItems}
+            </CanonicalDropdown>
+          </div>
         </div>
         <div css={styles.lowerNavWrapper}>
           <ScrollableNavigation

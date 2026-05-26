@@ -52,17 +52,19 @@ describe('Navigation - Canonical', () => {
       expect(menuButton).toHaveAttribute('aria-expanded', 'true');
 
       const dropdown = getByTestId(dropdownTestId);
-      expect(dropdown).toHaveTextContent('Dropdown Items');
+      expect(dropdown).toHaveTextContent('Item 1');
     });
 
-    it('should close the menu when focus moves away from the menu area', () => {
+    it('should close the menu when Tab is pressed on the last dropdown item', () => {
       const { getByRole } = render(navigation);
 
       const menuButton = getByRole('button', { name: 'menu' });
       fireEvent.click(menuButton);
       expect(menuButton).toHaveAttribute('aria-expanded', 'true');
 
-      fireEvent.focusOut(menuButton, { relatedTarget: document.body });
+      const lastLink = getByRole('link', { name: 'Item 2' });
+      lastLink.focus();
+      fireEvent.keyDown(lastLink, { key: 'Tab' });
 
       expect(menuButton).toHaveAttribute('aria-expanded', 'false');
     });
