@@ -44,7 +44,13 @@ const PortraitVideoCarousel = ({
   );
 
   const { isLite, isAmp, nonce } = use(RequestContext);
-  const { translations } = use(ServiceContext);
+  const { translations, recommendations } = use(ServiceContext);
+
+  const { skipLink: skipLinkTranslations } = recommendations || {};
+  const {
+    text: skipLinkText = 'Skip %title% and continue reading',
+    endTextVisuallyHidden = 'End of %title%',
+  } = skipLinkTranslations || {};
 
   const isHydrated = useHydrationDetection();
 
@@ -100,8 +106,8 @@ const PortraitVideoCarousel = ({
       >
         <SkipLinkWrapper
           endTextId="end-of-portrait-video-carousel"
-          text="Skip %title% and continue reading"
-          endTextVisuallyHidden="End of %title%"
+          text={skipLinkText}
+          endTextVisuallyHidden={endTextVisuallyHidden}
           terms={{ '%title%': title || 'Portrait Video Carousel' }}
         >
           {link && title ? (
