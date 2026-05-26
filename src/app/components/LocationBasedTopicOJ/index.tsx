@@ -35,7 +35,7 @@ const LocationBasedTopicOJ = ({ pageData }: { pageData: Article }) => {
   return (
     <section
       data-testid={sectionHeadingId}
-      aria-labelledby={sectionHeadingId}
+      {...(title && { 'aria-labelledby': sectionHeadingId })}
       role="region"
       {...viewTracker}
       css={styles.relatedContentSection}
