@@ -571,7 +571,18 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
               data-testid="dropdown"
             >
               <li>
-                Dropdown Items
+                <a
+                  href="/item1"
+                >
+                  Item 1
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/item2"
+                >
+                  Item 2
+                </a>
               </li>
             </ul>
           </div>

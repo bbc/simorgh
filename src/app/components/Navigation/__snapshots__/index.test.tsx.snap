@@ -3392,30 +3392,34 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
             </button>
           </div>
           <div
-            class="emotion-28 emotion-29"
-            data-e2e="dropdown-nav"
-            height="0"
+            role="presentation"
           >
-            <ul
-              class="emotion-30 emotion-31"
+            <div
+              class="emotion-28 emotion-29"
+              data-e2e="dropdown-nav"
+              height="0"
             >
-              <li
-                class="emotion-32 emotion-33"
-                role="listitem"
+              <ul
+                class="emotion-30 emotion-31"
               >
-                <a
-                  aria-labelledby="dropdownNavigation-home"
-                  class="emotion-34 emotion-35"
-                  href="/news"
+                <li
+                  class="emotion-32 emotion-33"
+                  role="listitem"
                 >
-                  <span
-                    id="dropdownNavigation-home"
+                  <a
+                    aria-labelledby="dropdownNavigation-home"
+                    class="emotion-34 emotion-35"
+                    href="/news"
                   >
-                    Home
-                  </span>
-                </a>
-              </li>
-            </ul>
+                    <span
+                      id="dropdownNavigation-home"
+                    >
+                      Home
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <div
@@ -4172,30 +4176,34 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
             </button>
           </div>
           <div
-            class="emotion-25 emotion-26"
-            data-e2e="dropdown-nav"
-            height="0"
+            role="presentation"
           >
-            <ul
-              class="emotion-27 emotion-28"
+            <div
+              class="emotion-25 emotion-26"
+              data-e2e="dropdown-nav"
+              height="0"
             >
-              <li
-                class="emotion-29 emotion-30"
-                role="listitem"
+              <ul
+                class="emotion-27 emotion-28"
               >
-                <a
-                  aria-labelledby="dropdownNavigation-home"
-                  class="emotion-31 emotion-32"
-                  href="/news"
+                <li
+                  class="emotion-29 emotion-30"
+                  role="listitem"
                 >
-                  <span
-                    id="dropdownNavigation-home"
+                  <a
+                    aria-labelledby="dropdownNavigation-home"
+                    class="emotion-31 emotion-32"
+                    href="/news"
                   >
-                    Home
-                  </span>
-                </a>
-              </li>
-            </ul>
+                    <span
+                      id="dropdownNavigation-home"
+                    >
+                      Home
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <div
@@ -5041,30 +5049,34 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
             </button>
           </div>
           <div
-            class="emotion-28 emotion-29"
-            data-e2e="dropdown-nav"
-            height="0"
+            role="presentation"
           >
-            <ul
-              class="emotion-30 emotion-31"
+            <div
+              class="emotion-28 emotion-29"
+              data-e2e="dropdown-nav"
+              height="0"
             >
-              <li
-                class="emotion-32 emotion-33"
-                role="listitem"
+              <ul
+                class="emotion-30 emotion-31"
               >
-                <a
-                  aria-labelledby="dropdownNavigation-home"
-                  class="emotion-34 emotion-35"
-                  href="/news"
+                <li
+                  class="emotion-32 emotion-33"
+                  role="listitem"
                 >
-                  <span
-                    id="dropdownNavigation-home"
+                  <a
+                    aria-labelledby="dropdownNavigation-home"
+                    class="emotion-34 emotion-35"
+                    href="/news"
                   >
-                    Home
-                  </span>
-                </a>
-              </li>
-            </ul>
+                    <span
+                      id="dropdownNavigation-home"
+                    >
+                      Home
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <div
