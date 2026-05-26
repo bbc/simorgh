@@ -70,6 +70,9 @@ const useUASButton = ({
         uasKeys.favouriteStatus(hashedUserId, articleId),
         action === UASAction.SAVE,
       );
+      queryClient.invalidateQueries({
+        queryKey: uasKeys.favouritesList(hashedUserId),
+      });
     },
   });
 
