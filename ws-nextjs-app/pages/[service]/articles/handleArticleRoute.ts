@@ -10,6 +10,7 @@ import handleError from '#app/routes/utils/handleError';
 import { PageTypes } from '#app/models/types/global';
 
 import { ArticleMetadata } from '#app/models/types/optimo';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import augmentWithDisclaimer from './augmentWithDisclaimer';
 import shouldRender from '../../../utilities/shouldRender';
 import getPageData from '../../../utilities/pageRequests/getPageData';
@@ -45,6 +46,8 @@ export default async (context: GetServerSidePropsContext) => {
 
   const country = reqHeaders['x-country']?.toString()?.toLowerCase() || null;
 
+  const shouldFetchCountryCuration = getEnvConfig().SIMORGH_APP_ENV !== 'live';
+
   const { data } = await getPageData({
     id: resolvedUrlWithoutQuery,
     service,
@@ -53,7 +56,7 @@ export default async (context: GetServerSidePropsContext) => {
     resolvedUrl: resolvedUrlWithoutQuery,
     pageType: ARTICLE_PAGE,
     isAmp,
-    country,
+    ...(shouldFetchCountryCuration && country && { country }),
   });
 
   const { pageData, status } = data;
