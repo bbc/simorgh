@@ -22,14 +22,13 @@ const OJ_COMPONENT_NAMES = [
   'related-content',
   'most-read',
   // media curation renders as simple-curation-grid tracking events
-  'simple-curation-grid',
-  'topic-discovery',
+  'topic-discovery-curation-grid-promo',
   'topic-discovery-more-from-link',
   'topics',
 ];
 
 const TOPIC_COMPONENT_NAMES = [
-  'topic-discovery',
+  'topic-discovery-curation-grid-promo',
   'topic-discovery-more-from-link',
   'topics',
 ];
