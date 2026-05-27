@@ -27,14 +27,25 @@ const resolveCssFilePath = (file: string): string | null =>
     existsSync,
   ) ?? null;
 
+const logger = nodeLogger(__filename);
+
 const readCssFiles = (files: string[]): string =>
   files
-    .map(resolveCssFilePath)
+    .map(file => {
+      const filePath = resolveCssFilePath(file);
+      if (filePath === null) {
+        logger.warn(logCodes.BUILD_MANIFEST_CSS_READ_ERROR, {
+          file,
+          rootsChecked: CSS_SEARCH_ROOTS.map(root =>
+            join(process.cwd(), root, file),
+          ),
+        });
+      }
+      return filePath;
+    })
     .filter((filePath): filePath is string => filePath !== null)
     .map(filePath => readFileSync(filePath, 'utf-8'))
     .join('');
-
-const logger = nodeLogger(__filename);
 
 type BuildManifest = { pages: Record<string, string[]> };
 type LoadableManifest = Record<string, { id: number; files: string[] }>;

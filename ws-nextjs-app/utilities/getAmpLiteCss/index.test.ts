@@ -90,6 +90,23 @@ describe('getAmpLiteCss utilities', () => {
       expect(readCssFiles(['static/css/a.css'])).toBe('');
     });
 
+    it('logs a warning when a referenced CSS file cannot be resolved', () => {
+      existsSyncMock.mockReturnValue(false);
+
+      readCssFiles(['static/css/missing.css']);
+
+      expect(loggerMock.warn).toHaveBeenCalledWith(
+        expect.any(String),
+        expect.objectContaining({
+          file: 'static/css/missing.css',
+          rootsChecked: [
+            '/app/public/_next/static/css/missing.css',
+            '/app/build/static/css/missing.css',
+          ],
+        }),
+      );
+    });
+
     it('includes only the resolvable files when some cannot be found', () => {
       existsSyncMock.mockImplementation((p: string) =>
         p.includes('static/css/found.css'),
