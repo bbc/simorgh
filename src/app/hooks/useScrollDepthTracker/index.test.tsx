@@ -8,7 +8,7 @@ import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import { ATIData } from '#app/components/ATIAnalytics/types';
 import { Toggles } from '#app/models/types/global';
 import * as serviceContextModule from '../../contexts/ServiceContext';
-import useScrollDepthTracker from '.';
+import useScrollDepthTracker, { getHomePageBounds } from '.';
 import fixtureData from '../useViewTracker/fixtureData.json';
 
 process.env.SIMORGH_ATI_BASE_URL = 'https://logws1363.ati-host.net?';
@@ -602,6 +602,204 @@ describe('useScrollDepthTracker', () => {
         'article-scroll-depth-25',
         'article-scroll-depth-50',
       ]);
+    });
+  });
+
+  describe('using home page bounds (header to footer)', () => {
+    // The hook calls getHomePageBounds once at effect setup, which queries the
+    // document for <header> and <footer>. We mock document.querySelector so
+    // the tests control where those landmarks appear on the page.
+    //
+    // Setup for these tests:
+    //   header bottom: 100px  (page coordinates)
+    //   footer top:   1100px
+    //   trackable range: 1000px  (100 → 1100)
+    //   viewport height: 100px (VIEWPORT_HEIGHT constant)
+    //
+    //   25% depth: scrollY = 250  (viewportBottom 350 = 100 + 250)
+    //   50% depth: scrollY = 500
+    //   75% depth: scrollY = 750
+    //  100% depth: scrollY = 1000  (viewportBottom 1100 = footer top)
+
+    const HEADER_BOTTOM = 100;
+    const FOOTER_TOP = 1100;
+
+    // buildPageLandmarks mocks document.querySelector so that 'header' and
+    // 'footer' return fake elements at fixed page positions.
+    const buildPageLandmarks = ({
+      headerBottom = HEADER_BOTTOM,
+      footerTop = FOOTER_TOP,
+    }: {
+      headerBottom?: number | null;
+      footerTop?: number | null;
+    } = {}) => {
+      jest
+        .spyOn(document, 'querySelector')
+        .mockImplementation(selector => {
+          if (selector === 'header' && headerBottom !== null) {
+            const header = document.createElement('header');
+            header.getBoundingClientRect = jest.fn(
+              () =>
+                ({
+                  bottom: headerBottom - window.scrollY,
+                  top: 0,
+                  height: headerBottom,
+                  left: 0,
+                  right: 0,
+                  width: 0,
+                  x: 0,
+                  y: 0,
+                  toJSON: jest.fn(),
+                }) as DOMRect,
+            );
+            return header;
+          }
+          if (selector === 'footer' && footerTop !== null) {
+            const footer = document.createElement('footer');
+            footer.getBoundingClientRect = jest.fn(
+              () =>
+                ({
+                  top: footerTop - window.scrollY,
+                  bottom: footerTop - window.scrollY + 100,
+                  height: 100,
+                  left: 0,
+                  right: 0,
+                  width: 0,
+                  x: 0,
+                  y: 0,
+                  toJSON: jest.fn(),
+                }) as DOMRect,
+            );
+            return footer;
+          }
+          return null;
+        });
+    };
+
+    afterEach(() => {
+      jest.restoreAllMocks();
+    });
+
+    it('fires a single event when the user scrolls to 25% of the content area', async () => {
+      buildPageLandmarks();
+
+      const { result } = renderHook(
+        () =>
+          useScrollDepthTracker('homepage-scroll-depth', true, getHomePageBounds),
+        { wrapper: props => wrapper({ ...props, atiData: atiAnalytics }) },
+      );
+
+      // The tracked element is just the <main> container — getHomePageBounds
+      // ignores it and queries the document for header/footer instead.
+      const element = buildElement();
+
+      act(() => {
+        result.current(element);
+      });
+
+      // scrollY=250: viewportBottom (250 + 100) = 350px = header bottom (100) + 25% of 1000px
+      await act(async () => {
+        simulateScroll(250);
+      });
+
+      expect(mockDispatchTrackingRequests).toHaveBeenCalledTimes(1);
+      expect(mockDispatchTrackingRequests).toHaveBeenCalledWith(
+        expect.objectContaining({
+          reverbParameters: expect.objectContaining({
+            componentName: 'homepage-scroll-depth-25',
+          }),
+        }),
+      );
+    });
+
+    it('does not count scrolling through the header as content reading depth', async () => {
+      buildPageLandmarks();
+
+      const { result } = renderHook(
+        () =>
+          useScrollDepthTracker('homepage-scroll-depth', true, getHomePageBounds),
+        { wrapper: props => wrapper({ ...props, atiData: atiAnalytics }) },
+      );
+
+      const element = buildElement();
+
+      act(() => {
+        result.current(element);
+      });
+
+      // scrollY=0: viewportBottom (0 + 100) = 100px, exactly the bottom of the header.
+      // The user has not entered the content area at all, so 0% depth.
+      await act(async () => {
+        simulateScroll(0);
+      });
+
+      expect(mockDispatchTrackingRequests).not.toHaveBeenCalled();
+    });
+
+    it('fires all four events when the user scrolls through all the content to the footer', async () => {
+      buildPageLandmarks();
+
+      const { result } = renderHook(
+        () =>
+          useScrollDepthTracker('homepage-scroll-depth', true, getHomePageBounds),
+        { wrapper: props => wrapper({ ...props, atiData: atiAnalytics }) },
+      );
+
+      const element = buildElement();
+
+      act(() => {
+        result.current(element);
+      });
+
+      // scrollY=1000: viewportBottom (1000 + 100) = 1100px = footer top, so 100% depth
+      await act(async () => {
+        simulateScroll(1000);
+      });
+
+      expect(mockDispatchTrackingRequests).toHaveBeenCalledTimes(4);
+
+      const calledComponentNames = mockDispatchTrackingRequests.mock.calls.map(
+        ([{ reverbParameters }]) => reverbParameters.componentName,
+      );
+
+      expect(calledComponentNames).toEqual([
+        'homepage-scroll-depth-25',
+        'homepage-scroll-depth-50',
+        'homepage-scroll-depth-75',
+        'homepage-scroll-depth-100',
+      ]);
+    });
+
+    it('uses the top of the page as the tracking start if no header is found', async () => {
+      // Without a header, startY defaults to 0 and the full document is measured.
+      // footer top = 1100, so the trackable range is 0 → 1100 (1100px).
+      // 25% = 275px from the top → scrollY = 275 - 100 = 175
+      buildPageLandmarks({ headerBottom: null });
+
+      const { result } = renderHook(
+        () =>
+          useScrollDepthTracker('homepage-scroll-depth', true, getHomePageBounds),
+        { wrapper: props => wrapper({ ...props, atiData: atiAnalytics }) },
+      );
+
+      const element = buildElement();
+
+      act(() => {
+        result.current(element);
+      });
+
+      await act(async () => {
+        simulateScroll(175);
+      });
+
+      expect(mockDispatchTrackingRequests).toHaveBeenCalledTimes(1);
+      expect(mockDispatchTrackingRequests).toHaveBeenCalledWith(
+        expect.objectContaining({
+          reverbParameters: expect.objectContaining({
+            componentName: 'homepage-scroll-depth-25',
+          }),
+        }),
+      );
     });
   });
 
