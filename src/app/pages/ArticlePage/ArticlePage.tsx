@@ -60,7 +60,6 @@ import ContinueReadingButton, {
   ContinueReadingButtonProps,
 } from '#app/components/ContinueReadingButton';
 import SaveArticleButton from '#app/components/SaveArticleButton';
-import { parseArticleID } from '#app/lib/uasApi/uasUtility';
 import useScrollDepthTracker from '#app/hooks/useScrollDepthTracker';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
