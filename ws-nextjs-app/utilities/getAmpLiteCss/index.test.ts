@@ -117,6 +117,22 @@ describe('getAmpLiteCss utilities', () => {
         readCssFiles(['static/css/missing.css', 'static/css/found.css']),
       ).toBe('.found{}');
     });
+
+    it('logs an error and skips a file when readFileSync throws', () => {
+      existsSyncMock.mockReturnValue(true);
+      readFileSyncMock.mockImplementation((p: string) => {
+        if (p.includes('bad.css')) throw new Error('permission denied');
+        return '.good{}';
+      });
+
+      expect(readCssFiles(['static/css/bad.css', 'static/css/good.css'])).toBe(
+        '.good{}',
+      );
+      expect(loggerMock.error).toHaveBeenCalledWith(
+        expect.any(String),
+        expect.objectContaining({ message: 'permission denied' }),
+      );
+    });
   });
 
   describe('getBuildManifestCss', () => {

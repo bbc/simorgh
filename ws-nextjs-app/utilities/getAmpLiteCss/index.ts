@@ -30,22 +30,29 @@ const resolveCssFilePath = (file: string): string | null =>
 const logger = nodeLogger(__filename);
 
 const readCssFiles = (files: string[]): string =>
-  files
-    .map(file => {
-      const filePath = resolveCssFilePath(file);
-      if (filePath === null) {
-        logger.warn(logCodes.BUILD_MANIFEST_CSS_READ_ERROR, {
-          file,
-          rootsChecked: CSS_SEARCH_ROOTS.map(root =>
-            join(process.cwd(), root, file),
-          ),
-        });
-      }
-      return filePath;
-    })
-    .filter((filePath): filePath is string => filePath !== null)
-    .map(filePath => readFileSync(filePath, 'utf-8'))
-    .join('');
+  files.reduce((css, file) => {
+    const filePath = resolveCssFilePath(file);
+
+    if (filePath === null) {
+      logger.warn(logCodes.BUILD_MANIFEST_CSS_READ_ERROR, {
+        file,
+        rootsChecked: CSS_SEARCH_ROOTS.map(root =>
+          join(process.cwd(), root, file),
+        ),
+      });
+      return css;
+    }
+
+    try {
+      return css + readFileSync(filePath, 'utf-8');
+    } catch (e) {
+      logger.error(logCodes.BUILD_MANIFEST_CSS_READ_ERROR, {
+        file: filePath,
+        message: e instanceof Error ? e.message : String(e),
+      });
+      return css;
+    }
+  }, '');
 
 type BuildManifest = { pages: Record<string, string[]> };
 type LoadableManifest = Record<string, { id: number; files: string[] }>;
