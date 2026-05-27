@@ -10,15 +10,18 @@ const SCROLL_DEPTH_THRESHOLDS = [25, 50, 75, 100] as const;
 
 type ScrollDepthThreshold = (typeof SCROLL_DEPTH_THRESHOLDS)[number];
 
-// A function that receives the tracked element and returns the vertical range
-// (in page coordinates) over which scroll depth should be measured.
+// Describes the vertical range of a page that counts as readable content,
+// expressed as Y positions in page coordinates (pixels from the top of the
+// document, not the top of the screen). The tracked element is passed in so
+// the function can query its size and position if needed.
 export type GetTrackingBounds = (element: HTMLElement) => {
   startY: number;
   endY: number;
 };
 
-// Article pages: start below the hero image (if present), end at the bottom of
-// the article element.
+// For article pages. Tracking starts from the bottom of the hero image so that
+// scrolling through the image does not count as reading. If there is no hero
+// image the full article element is measured instead.
 export const getArticleBounds: GetTrackingBounds = element => {
   const heroFigure = element.querySelector('figure');
   const startY = heroFigure
@@ -29,8 +32,9 @@ export const getArticleBounds: GetTrackingBounds = element => {
   return { startY, endY };
 };
 
-// Home pages: start below the page header, end at the top of the page footer.
-// Falls back to the full document height if either landmark is not found.
+// For home pages. Tracking starts where the page header ends and stops where
+// the footer begins, so only the curated content area is measured. Falls back
+// to the full document if either landmark element is not found.
 export const getHomePageBounds: GetTrackingBounds = () => {
   const header = document.querySelector('header');
   const footer = document.querySelector('footer');
@@ -43,18 +47,19 @@ export const getHomePageBounds: GetTrackingBounds = () => {
   return { startY, endY };
 };
 
-// uses whichever bounds it is given to calculate scroll depth, so it can be used on both article and home pages (or any other page with appropriate bounds functions)
-const getScrollDepthPercent = (
-  element: HTMLElement,
-  getBounds: GetTrackingBounds,
-) => {
-  const { startY: trackingStartY, endY: trackingEndY } = getBounds(element);
-  const trackingHeight = trackingEndY - trackingStartY;
+// Returns what percentage of the trackable range (startY to endY) the user
+// has scrolled through. Uses the bottom edge of the viewport as the reading
+// position — a threshold is reached when the bottom of the screen passes it.
+const getScrollDepthPercent = (startY: number, endY: number) => {
+  const trackingHeight = endY - startY;
 
   if (trackingHeight <= 0) return 0;
 
+  // The Y position of the bottom edge of what is currently visible on screen
   const viewportBottom = window.scrollY + window.innerHeight;
-  const scrolledPast = viewportBottom - trackingStartY;
+
+  // How many pixels of the trackable range have passed the bottom of the screen
+  const scrolledPast = viewportBottom - startY;
   return Math.min(100, Math.max(0, (scrolledPast / trackingHeight) * 100));
 };
 
@@ -65,7 +70,7 @@ const useScrollDepthTracker = (
 ) => {
   const { isAmp, isLite } = use(RequestContext);
   const { service } = use(ServiceContext);
-  const { trackingIsEnabled } = useTrackingToggle(componentName); // this is in the togglrd config to enable/disable trackong across the site
+  const { trackingIsEnabled } = useTrackingToggle(componentName);
 
   const {
     campaignID,
@@ -87,18 +92,26 @@ const useScrollDepthTracker = (
 
   useEffect(() => {
     sentThresholds.current.clear();
-  }, [mainElement]); // clears thresholds when the main element changes, such as when navigating to a new page
+  // Reset when the tracked element changes so a new article or page navigation
+  // starts fresh from 0% rather than inheriting the previous element's state.
+  }, [mainElement]);
 
   useEffect(() => {
     if (!mainElement || !shouldTrack) return undefined;
 
     tickingRef.current = false;
 
-    const checkDepth = () => {
-      if (sentThresholds.current.size === SCROLL_DEPTH_THRESHOLDS.length)
-        return; // if all scroll depth events have been sent, no need to calculate further
+    // Measure the trackable boundaries once when tracking begins. Page landmarks
+    // (header, footer, hero image) don't move while the user scrolls, so there
+    // is no need to re-measure on every animation frame.
+    const { startY, endY } = getBounds(mainElement);
 
-      const depth = getScrollDepthPercent(mainElement, getBounds);
+    const checkDepth = () => {
+      // All four thresholds have already fired so there is nothing left to track
+      if (sentThresholds.current.size === SCROLL_DEPTH_THRESHOLDS.length)
+        return;
+
+      const depth = getScrollDepthPercent(startY, endY);
 
       SCROLL_DEPTH_THRESHOLDS.forEach(threshold => {
         if (depth >= threshold && !sentThresholds.current.has(threshold)) {
@@ -139,7 +152,6 @@ const useScrollDepthTracker = (
   }, [
     campaignID,
     componentName,
-    getBounds,
     mainElement,
     pageIdentifier,
     platform,
