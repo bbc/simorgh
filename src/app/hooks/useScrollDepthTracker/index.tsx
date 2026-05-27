@@ -11,9 +11,10 @@ const SCROLL_DEPTH_THRESHOLDS = [25, 50, 75, 100] as const;
 type ScrollDepthThreshold = (typeof SCROLL_DEPTH_THRESHOLDS)[number];
 
 const getScrollDepthPercent = (element: HTMLElement) => {
-  const firstFigure = element.querySelector('figure');
-  const trackingStartY = firstFigure
-    ? firstFigure.getBoundingClientRect().bottom + window.scrollY
+  const heroFigure = element.querySelector('figure');
+  // starts tracking after the hero image if it exists, otherwise starts at the top of the element
+  const trackingStartY = heroFigure
+    ? heroFigure.getBoundingClientRect().bottom + window.scrollY
     : element.getBoundingClientRect().top + window.scrollY;
   const trackingEndY =
     element.getBoundingClientRect().top + window.scrollY + element.offsetHeight;
@@ -29,7 +30,7 @@ const getScrollDepthPercent = (element: HTMLElement) => {
 const useScrollDepthTracker = (componentName: string, enabled = true) => {
   const { isAmp, isLite } = use(RequestContext);
   const { service } = use(ServiceContext);
-  const { trackingIsEnabled } = useTrackingToggle(componentName);
+  const { trackingIsEnabled } = useTrackingToggle(componentName); // this is in the togglrd config to enable/disable trackong across the site
 
   const {
     campaignID,
@@ -44,16 +45,24 @@ const useScrollDepthTracker = (componentName: string, enabled = true) => {
   });
 
   const sentThresholds = useRef(new Set<ScrollDepthThreshold>());
+  const tickingRef = useRef(false);
   const [mainElement, setMainElement] = useState<HTMLElement | null>(null);
 
   const shouldTrack = enabled && trackingIsEnabled && !isAmp && !isLite;
 
   useEffect(() => {
+    sentThresholds.current.clear();
+  }, [mainElement]); // clears thresholds when the main element changes, such as when navigating to a new page
+
+  useEffect(() => {
     if (!mainElement || !shouldTrack) return undefined;
 
-    sentThresholds.current.clear();
+    tickingRef.current = false;
 
-    const handleScroll = () => {
+    const checkDepth = () => {
+      if (sentThresholds.current.size === SCROLL_DEPTH_THRESHOLDS.length)
+        return; // if all scroll depth events have been sent, no need to calculate further
+
       const depth = getScrollDepthPercent(mainElement);
 
       SCROLL_DEPTH_THRESHOLDS.forEach(threshold => {
@@ -79,6 +88,13 @@ const useScrollDepthTracker = (componentName: string, enabled = true) => {
           });
         }
       });
+      tickingRef.current = false;
+    };
+
+    const handleScroll = () => {
+      if (tickingRef.current) return;
+      tickingRef.current = true;
+      requestAnimationFrame(checkDepth);
     };
 
     handleScroll();
