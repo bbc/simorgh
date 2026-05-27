@@ -1,18 +1,21 @@
-'use strict';
-
 /**
  * Traverses webpack module rules and inserts `loaderPath` immediately before
  * css-loader in every rule whose `use` array contains css-loader.
  * webpack processes loaders right-to-left, so a loader inserted before
  * css-loader at index N receives css-loader's JS output.
  */
+const isCssLoader = loaderEntry => {
+  const name =
+    typeof loaderEntry === 'string' ? loaderEntry : loaderEntry?.loader;
+  if (!name) return false;
+  return name === 'css-loader' || /[/]css-loader[/]/.test(name);
+};
+
 const injectExtractLoader = (rules, loaderPath) => {
   rules.forEach(rule => {
     if (rule.oneOf) injectExtractLoader(rule.oneOf, loaderPath);
     if (!Array.isArray(rule.use)) return;
-    const cssLoaderIndex = rule.use.findIndex(l =>
-      (typeof l === 'string' ? l : l?.loader)?.includes('css-loader'),
-    );
+    const cssLoaderIndex = rule.use.findIndex(isCssLoader);
     if (cssLoaderIndex !== -1) {
       rule.use.splice(cssLoaderIndex, 0, loaderPath);
     }
