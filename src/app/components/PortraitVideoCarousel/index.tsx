@@ -52,6 +52,8 @@ const PortraitVideoCarousel = ({
     endTextVisuallyHidden = 'End of %title%',
   } = skipLinkTranslations || {};
 
+  const fallbackTitle = translations?.media?.video || 'Video';
+
   const isHydrated = useHydrationDetection();
 
   // EXPERIMENT: Homepage Portrait Video 2
@@ -108,7 +110,7 @@ const PortraitVideoCarousel = ({
           endTextId="end-of-portrait-video-carousel"
           text={skipLinkText}
           endTextVisuallyHidden={endTextVisuallyHidden}
-          terms={{ '%title%': title || 'Portrait Video Carousel' }}
+          terms={{ '%title%': title || fallbackTitle }}
         >
           {link && title ? (
             <Subheading link={link} {...subheadingClickTracker}>

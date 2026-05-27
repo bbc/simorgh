@@ -162,9 +162,7 @@ describe('PortraitVideoCarousel', () => {
       );
     });
 
-    const skipLink = screen.getByText(
-      'Skip Portrait Video Carousel and continue reading',
-    );
+    const skipLink = screen.getByText('Skip Video and continue reading');
     expect(skipLink).toBeInTheDocument();
   });
 });
