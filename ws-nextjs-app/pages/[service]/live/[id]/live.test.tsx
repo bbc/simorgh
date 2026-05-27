@@ -711,14 +711,11 @@ describe('Live Page', () => {
       expect(screen.queryByTestId('live-label')).not.toBeInTheDocument();
     });
 
-    it('should fallback to page isLive value when isSportDataLive is nullish', async () => {
+    it('should fallback to page isLive value when sportDataEventContent is nullish', async () => {
       const pageDataWithSportData = {
         ...mockPageData,
         isLive: true,
-        sportDataEventContent: {
-          ...sportDataFixture.data.sportDataEventContent,
-          live: undefined,
-        },
+        sportDataEventContent: null,
       } as unknown as ComponentProps['pageData'];
       mockPollingUpdate(pageDataWithSportData);
 
@@ -727,6 +724,28 @@ describe('Live Page', () => {
       });
 
       expect(screen.getByTestId('live-label')).toBeInTheDocument();
+    });
+
+    it('should fallback to page isLive value when sportHeaderEnabled toggle is disabled', async () => {
+      const pageDataWithSportData = {
+        ...mockPageData,
+        isLive: false,
+        sportDataEventContent: {
+          ...sportDataFixture.data.sportDataEventContent,
+          live: true,
+        },
+      } as unknown as ComponentProps['pageData'];
+      mockPollingUpdate(pageDataWithSportData);
+
+      (useToggle as jest.Mock).mockReturnValue({ enabled: false });
+
+      await act(async () => {
+        render(<Live pageData={pageDataWithSportData} />);
+      });
+
+      expect(screen.queryByTestId('live-label')).not.toBeInTheDocument();
+
+      (useToggle as jest.Mock).mockReturnValue({ enabled: true });
     });
 
     it('should render HeadToHeadV2 when sportDataEventContent is present and not in live env', async () => {
