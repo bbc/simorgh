@@ -22,6 +22,7 @@ enum UASAction {
 interface UseUASButtonReturn {
   isSaved: boolean;
   isLoading: boolean;
+  isUpdating: boolean;
   error: Error | null;
   handleSaveAction: (action: UASAction) => void;
 }
@@ -69,12 +70,16 @@ const useUASButton = ({
         uasKeys.favouriteStatus(hashedUserId, articleId),
         action === UASAction.SAVE,
       );
+      queryClient.invalidateQueries({
+        queryKey: uasKeys.favouritesList(hashedUserId),
+      });
     },
   });
 
   return {
     isSaved,
-    isLoading: isLoading || mutation.isPending,
+    isLoading,
+    isUpdating: mutation.isPending,
     error: mutation.error || error,
     handleSaveAction: mutation.mutate,
   };
