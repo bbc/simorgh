@@ -4,7 +4,6 @@ import isLocal from '#app/lib/utilities/isLocal';
 import { IdctaConfig } from '#app/models/types/account';
 import { Toggles, Services } from '#app/models/types/global';
 import { IncomingHttpHeaders } from 'http';
-import { isAccountPromoBannerVisible } from '#app/components/Account/AccountPromotionalBanner/utilities/index';
 import fetchIdctaConfig from '../fetchIdctaConfig';
 
 const logger = nodeLogger(__filename);
@@ -42,7 +41,7 @@ export default async function getIdctaConfig(
     return null;
   }
 
-  if (!config?.['id-availability']) {
+  if (!config?.['id-availability'] || !config?.identity.idSignedInCookieName) {
     logger.error('Invalid IDCTA config: missing required fields', {
       config,
     });
@@ -51,13 +50,16 @@ export default async function getIdctaConfig(
 
   const signedInHeader = requestHeaders?.['x-id-oidc-signedin'];
   const initialIsSignedIn = signedInHeader === '1';
-  const initialIsAccountPromoBannerVisible = isAccountPromoBannerVisible(
-    requestHeaders?.cookie ?? '',
-  );
 
   return {
-    ...config,
+    'id-availability': config['id-availability'],
+    unavailable_url: config.unavailable_url,
+    signin_url: config.signin_url,
+    register_url: config.register_url,
+    settings_url: config.settings_url,
+    signout_url: config.signout_url,
+    foryou_url: config.foryou_url,
+    identity: { idSignedInCookieName: config.identity.idSignedInCookieName },
     initialIsSignedIn,
-    initialIsAccountPromoBannerVisible,
   };
 }

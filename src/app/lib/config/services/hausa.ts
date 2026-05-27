@@ -65,6 +65,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      matchSummary: 'Takaitaccen Bayanin Wasa',
       and: 'da',
       readTime: {
         readTimePrefix: 'Lokacin karatu',
@@ -82,6 +83,12 @@ export const service: DefaultServiceConfig = {
       seeAll: 'Duba su baki daya',
       home: 'Labaran Duniya',
       continueReading: 'Ci gaba da karantawa',
+      topicDiscovery: {
+        heading: 'Gano ƙarin abubuwa',
+        moreFromTopic: 'Ƙarin labarai daga {topic}',
+        fetchErrorMessage:
+          'An kasa lodawa. Da fatan za a sake gwadawa daga baya.',
+      },
       currentPage: 'Shafin da ake ciki',
       skipLinkText: 'Tsallaka zuwa abubuwan da ke ciki',
       relatedContent: 'Karin bayani',

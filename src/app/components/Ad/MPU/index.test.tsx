@@ -1,4 +1,3 @@
-import { BrowserRouter } from 'react-router-dom';
 import { render } from '../../react-testing-library-with-providers';
 import MPU from '.';
 
@@ -10,12 +9,10 @@ const toggles = {
 
 describe('MPU', () => {
   it('should render without gel margins at all breakpoints and gel padding at smaller breakpoints', async () => {
-    const { container } = render(
-      <BrowserRouter>
-        <MPU />
-      </BrowserRouter>,
-      { toggles, showAdsBasedOnLocation: true },
-    );
+    const { container } = render(<MPU />, {
+      toggles,
+      showAdsBasedOnLocation: true,
+    });
 
     expect(container).toMatchSnapshot();
   });

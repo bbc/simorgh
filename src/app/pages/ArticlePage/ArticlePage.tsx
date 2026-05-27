@@ -21,7 +21,6 @@ import MediaLoader from '#app/components/MediaLoader';
 import { MediaBlock } from '#app/components/MediaLoader/types';
 import { PHOTO_GALLERY_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
 import PortraitVideoCarousel from '#app/components/PortraitVideoCarousel';
-
 import {
   getArticleId,
   getHeadline,
@@ -62,6 +61,7 @@ import ContinueReadingButton, {
 import SaveArticleButton from '#app/components/SaveArticleButton';
 import { parseArticleID } from '#app/lib/uasApi/uasUtility';
 import useScrollDepthTracker from '#app/hooks/useScrollDepthTracker';
+import isLive from '#lib/utilities/isLive';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -82,6 +82,7 @@ import {
 } from '../../components/Byline/utilities';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import RelatedContentSection from '../../components/RelatedContentSection';
+import TopicDiscovery from '../../components/TopicDiscovery';
 import Disclaimer from '../../components/Disclaimer';
 import SecondaryColumn from './SecondaryColumn';
 import styles from './ArticlePage.styles';
@@ -109,7 +110,6 @@ const getTimestampComponent =
     lastPublished: string,
     readTimeValue: number | undefined,
     readTimeTranslations: Translations['readTime'],
-    articleId: string,
     articleTitle: string,
     articlePageData?: Article,
   ) =>
@@ -142,9 +142,7 @@ const getTimestampComponent =
             )}
           </>
         )}
-        {/* Temporary SaveArticleButton */}
         <SaveArticleButton
-          articleId={parseArticleID(articleId)}
           articleTitle={articleTitle}
           articlePageData={articlePageData}
         />
@@ -210,7 +208,13 @@ const getContinueReadingButton =
     />
   );
 
-const ArticlePage = ({ pageData }: { pageData: Article }) => {
+const ArticlePage = ({
+  pageData,
+  showTopicDiscoveryComponent = false,
+}: {
+  pageData: Article;
+  showTopicDiscoveryComponent?: boolean;
+}) => {
   const [showAllContent, setShowAllContent] = useState(false);
   const { isApp, isAmp, isLite, pageType } = use(RequestContext);
 
@@ -233,21 +237,12 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   } = useTheme();
 
   // test experiment to verify if page views are being tracked correctly
-  const testPageViewsExperimentName = 'test_page_views_aa';
+  const testPageViewsExperimentName = 'test_page_views_aa_2';
   const testPageViewsVariant = useOptimizelyVariation({
     experimentName: testPageViewsExperimentName,
     experimentType: ExperimentType.CLIENT_SIDE,
   });
 
-  // time of day 2 experiment for articles
-  const timeOfDayArticleExperimentName = 'newswb_ws_tod_article_2';
-  const timeOfDayArticleVariant = useOptimizelyVariation({
-    experimentName: timeOfDayArticleExperimentName,
-    experimentType: ExperimentType.CLIENT_SIDE,
-  });
-  const isAdaptiveTimeOfDayVariant =
-    timeOfDayArticleVariant === 'adaptive_variation';
-  // build one shared experiment payload so all oj components use the same values
   const getActiveExperimentProps = (
     experimentName: string,
     experimentVariant: string | null,
@@ -265,11 +260,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     testPageViewsVariant,
   );
 
-  const timeOfDayExperimentProps = getActiveExperimentProps(
-    timeOfDayArticleExperimentName,
-    timeOfDayArticleVariant,
-  );
-
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
 
@@ -282,13 +272,15 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const { enabled: articlePortraitVideoEnabled } = useToggle(
     'articlePortraitVideo',
   );
+  const { enabled: articleVideoCurationEnabled } = useToggle(
+    'articleVideoCuration',
+  );
 
   const headline = getHeadline(pageData) ?? '';
   const description = getSummary(pageData) || getHeadline(pageData);
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
-  const articleId = getArticleId(pageData) ?? '';
   const topics = pageData?.metadata?.topics ?? [];
   const blocks = pageData?.content?.model?.blocks ?? [];
   const mediaCurationContent = pageData?.secondaryColumn?.mediaCuration;
@@ -327,10 +319,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const atiData = {
     ...atiAnalytics,
     ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
-    ...(timeOfDayExperimentProps && {
-      experimentName: timeOfDayExperimentProps.experimentName,
-      experimentVariant: timeOfDayExperimentProps.experimentVariant,
-    }),
     ...(testPageViewsExperimentProps && {
       experimentName: testPageViewsExperimentProps.experimentName,
       experimentVariant: testPageViewsExperimentProps.experimentVariant,
@@ -398,7 +386,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       lastPublished,
       readTimeValue,
       translations.readTime,
-      articleId,
       headline,
       pageData,
     ),
@@ -411,17 +398,13 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     group: gist,
     links: ArticleLinksBlock,
     mpu: getMpuComponent(allowAdvertising),
-    wsoj: ({ data }: { data: Recommendation[] }) =>
-      getWsojComponent({ data, experimentProps: timeOfDayExperimentProps }),
+    wsoj: ({ data }: { data: Recommendation[] }) => getWsojComponent({ data }),
     disclaimer: DisclaimerWithPaddingOverride,
     podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
     ...(showContinueReadingButton && {
       continueReading: getContinueReadingButton({
         showAllContent,
         setShowAllContent,
-        ...(timeOfDayExperimentProps && {
-          experimentProps: timeOfDayExperimentProps,
-        }),
       }),
     }),
   };
@@ -436,16 +419,23 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     ? blocks
     : [visuallyHiddenBlock, ...blocks];
 
-  const showTopics = Boolean(showRelatedTopics && topics.length > 0);
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
-  // show media curation only when the user is in adaptive variation
-  const showAdaptiveMediaCuration = Boolean(
+
+  const showRelatedTopicsComponent = Boolean(
+    showRelatedTopics && topics.length > 0 && !showTopicDiscoveryComponent,
+  );
+
+  // EXPERIMENT: Topic Discovery
+  const showTopicDiscovery =
+    showTopicDiscoveryComponent && !isAmp && !isLite && !isLive();
+
+  const showMediaCuration = Boolean(
     !isAmp &&
     !isLite &&
     !isApp &&
     !isPGL &&
-    isAdaptiveTimeOfDayVariant &&
-    mediaCurationContent?.summaries?.length,
+    mediaCurationContent?.summaries?.length &&
+    articleVideoCurationEnabled,
   );
 
   // EXPERIMENT: PWA Promotional Banner
@@ -510,7 +500,17 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             <OptimizelyPageMetrics trackPageComplete />
           </main>
           <OptimizelyPageMetrics trackPageView trackPageDepth trackVisit />
-          {showTopics && (
+          {showTopicDiscovery && (
+            <TopicDiscovery
+              css={[
+                ...(showContinueReadingButton
+                  ? [!showAllContent && styles.hideTopicDiscovery]
+                  : []),
+              ]}
+              topics={topics}
+            />
+          )}
+          {showRelatedTopicsComponent && (
             <RelatedTopics
               css={[
                 styles.relatedTopics,
@@ -528,40 +528,28 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               css={styles.portraitVideoCarousel}
             />
           )}
-          <RelatedContentSection
-            content={blocks}
-            {...(timeOfDayExperimentProps && {
-              experimentProps: timeOfDayExperimentProps,
-            })}
-          />
-        </div>
-        {showAdaptiveMediaCuration && (
-          <div css={styles.adaptiveMediaCurationRow}>
-            <div data-testid="adaptive-media-curation">
-              <Curation
-                visualStyle={VISUAL_STYLE.FEED}
-                visualProminence={VISUAL_PROMINENCE.NORMAL}
-                summaries={mediaCurationContent?.summaries}
-                title={mediaCurationContent?.title}
-                position={mediaCurationContent?.position || 0}
-                curationId={mediaCurationContent?.curationId}
-                curationLength={mediaCurationContent?.summaries?.length || 0}
-                link={mediaCurationContent?.link}
-                {...(timeOfDayExperimentProps && {
-                  experimentProps: timeOfDayExperimentProps,
-                })}
-              />
+          <RelatedContentSection content={blocks} />
+          {showMediaCuration && (
+            <div css={styles.mediaCurationRow}>
+              <div data-testid="media-curation">
+                <Curation
+                  visualStyle={VISUAL_STYLE.FEED}
+                  visualProminence={VISUAL_PROMINENCE.NORMAL}
+                  summaries={mediaCurationContent?.summaries}
+                  title={mediaCurationContent?.title}
+                  position={mediaCurationContent?.position || 0}
+                  curationId={mediaCurationContent?.curationId}
+                  curationLength={1}
+                  link={mediaCurationContent?.link}
+                  curationContentType="video"
+                  pageType={pageType}
+                />
+              </div>
             </div>
-          </div>
-        )}
-        {!isApp && !isPGL && (
-          <SecondaryColumn
-            pageData={pageData}
-            {...(timeOfDayExperimentProps && {
-              experimentProps: timeOfDayExperimentProps,
-            })}
-          />
-        )}
+          )}
+        </div>
+
+        {!isApp && !isPGL && <SecondaryColumn pageData={pageData} />}
       </div>
 
       {!isApp && !isPGL && (
@@ -571,10 +559,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           columnLayout="twoColumn"
           size="default"
           headingBackgroundColour={GREY_2}
-          mobileDivider={showTopics}
-          {...(timeOfDayExperimentProps && {
-            experimentProps: timeOfDayExperimentProps,
-          })}
+          mobileDivider={showRelatedTopicsComponent}
         />
       )}
     </div>

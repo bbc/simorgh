@@ -15,9 +15,11 @@ export interface SavedArticle {
   imageUrl: string;
 }
 
+const USER_ID_COOKIE_KEY = 'ckns_sylphid';
+
 const FAVOURITES_CONFIG = {
   activityType: 'favourites',
-  resourceDomain: 'articles',
+  resourceDomain: 'world-service-news',
   resourceType: 'article',
   action: 'favourited',
 } as const;
@@ -29,10 +31,6 @@ const buildGlobalId = (
   resourceDomain = FAVOURITES_CONFIG.resourceDomain,
   resourceType = FAVOURITES_CONFIG.resourceType,
 ): string => `urn:bbc:${resourceDomain}:${resourceType}:${resourceId}`;
-
-const parseArticleID = (articleId: string): string => {
-  return articleId.split(':').pop() || '';
-};
 
 const createFavouritesPayload = ({
   articleId,
@@ -95,10 +93,10 @@ const buildPromoImageUrl = (promoImageObj?: {
 };
 
 export {
+  USER_ID_COOKIE_KEY,
   FAVOURITES_CONFIG,
   buildGlobalId,
   createFavouritesPayload,
-  parseArticleID,
   extractPromoImageFromArticleData,
   buildPromoImageUrl,
 };
