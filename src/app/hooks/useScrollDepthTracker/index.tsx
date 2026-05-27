@@ -10,14 +10,45 @@ const SCROLL_DEPTH_THRESHOLDS = [25, 50, 75, 100] as const;
 
 type ScrollDepthThreshold = (typeof SCROLL_DEPTH_THRESHOLDS)[number];
 
-const getScrollDepthPercent = (element: HTMLElement) => {
+// A function that receives the tracked element and returns the vertical range
+// (in page coordinates) over which scroll depth should be measured.
+export type GetTrackingBounds = (element: HTMLElement) => {
+  startY: number;
+  endY: number;
+};
+
+// Article pages: start below the hero image (if present), end at the bottom of
+// the article element.
+export const getArticleBounds: GetTrackingBounds = element => {
   const heroFigure = element.querySelector('figure');
-  // starts tracking after the hero image if it exists, otherwise starts at the top of the element
-  const trackingStartY = heroFigure
+  const startY = heroFigure
     ? heroFigure.getBoundingClientRect().bottom + window.scrollY
     : element.getBoundingClientRect().top + window.scrollY;
-  const trackingEndY =
+  const endY =
     element.getBoundingClientRect().top + window.scrollY + element.offsetHeight;
+  return { startY, endY };
+};
+
+// Home pages: start below the page header, end at the top of the page footer.
+// Falls back to the full document height if either landmark is not found.
+export const getHomePageBounds: GetTrackingBounds = () => {
+  const header = document.querySelector('header');
+  const footer = document.querySelector('footer');
+  const startY = header
+    ? header.getBoundingClientRect().bottom + window.scrollY
+    : 0;
+  const endY = footer
+    ? footer.getBoundingClientRect().top + window.scrollY
+    : document.documentElement.scrollHeight;
+  return { startY, endY };
+};
+
+// uses whichever bounds it is given to calculate scroll depth, so it can be used on both article and home pages (or any other page with appropriate bounds functions)
+const getScrollDepthPercent = (
+  element: HTMLElement,
+  getBounds: GetTrackingBounds,
+) => {
+  const { startY: trackingStartY, endY: trackingEndY } = getBounds(element);
   const trackingHeight = trackingEndY - trackingStartY;
 
   if (trackingHeight <= 0) return 0;
@@ -27,7 +58,11 @@ const getScrollDepthPercent = (element: HTMLElement) => {
   return Math.min(100, Math.max(0, (scrolledPast / trackingHeight) * 100));
 };
 
-const useScrollDepthTracker = (componentName: string, enabled = true) => {
+const useScrollDepthTracker = (
+  componentName: string,
+  enabled = true,
+  getBounds: GetTrackingBounds = getArticleBounds,
+) => {
   const { isAmp, isLite } = use(RequestContext);
   const { service } = use(ServiceContext);
   const { trackingIsEnabled } = useTrackingToggle(componentName); // this is in the togglrd config to enable/disable trackong across the site
@@ -63,7 +98,7 @@ const useScrollDepthTracker = (componentName: string, enabled = true) => {
       if (sentThresholds.current.size === SCROLL_DEPTH_THRESHOLDS.length)
         return; // if all scroll depth events have been sent, no need to calculate further
 
-      const depth = getScrollDepthPercent(mainElement);
+      const depth = getScrollDepthPercent(mainElement, getBounds);
 
       SCROLL_DEPTH_THRESHOLDS.forEach(threshold => {
         if (depth >= threshold && !sentThresholds.current.has(threshold)) {
@@ -104,6 +139,7 @@ const useScrollDepthTracker = (componentName: string, enabled = true) => {
   }, [
     campaignID,
     componentName,
+    getBounds,
     mainElement,
     pageIdentifier,
     platform,
