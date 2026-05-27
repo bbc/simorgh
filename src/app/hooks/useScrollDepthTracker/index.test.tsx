@@ -134,7 +134,6 @@ const buildElement = ({
   return element;
 };
 
-
 // simulateScroll sets the mocked window.scrollY value and fires a scroll event,
 // which mimics the user scrolling the page to a specific position.
 const simulateScroll = (scrollY: number) => {
@@ -633,47 +632,45 @@ describe('useScrollDepthTracker', () => {
       headerBottom?: number | null;
       footerTop?: number | null;
     } = {}) => {
-      jest
-        .spyOn(document, 'querySelector')
-        .mockImplementation(selector => {
-          if (selector === 'header' && headerBottom !== null) {
-            const header = document.createElement('header');
-            header.getBoundingClientRect = jest.fn(
-              () =>
-                ({
-                  bottom: headerBottom - window.scrollY,
-                  top: 0,
-                  height: headerBottom,
-                  left: 0,
-                  right: 0,
-                  width: 0,
-                  x: 0,
-                  y: 0,
-                  toJSON: jest.fn(),
-                }) as DOMRect,
-            );
-            return header;
-          }
-          if (selector === 'footer' && footerTop !== null) {
-            const footer = document.createElement('footer');
-            footer.getBoundingClientRect = jest.fn(
-              () =>
-                ({
-                  top: footerTop - window.scrollY,
-                  bottom: footerTop - window.scrollY + 100,
-                  height: 100,
-                  left: 0,
-                  right: 0,
-                  width: 0,
-                  x: 0,
-                  y: 0,
-                  toJSON: jest.fn(),
-                }) as DOMRect,
-            );
-            return footer;
-          }
-          return null;
-        });
+      jest.spyOn(document, 'querySelector').mockImplementation(selector => {
+        if (selector === 'header' && headerBottom !== null) {
+          const header = document.createElement('header');
+          header.getBoundingClientRect = jest.fn(
+            () =>
+              ({
+                bottom: headerBottom - window.scrollY,
+                top: 0,
+                height: headerBottom,
+                left: 0,
+                right: 0,
+                width: 0,
+                x: 0,
+                y: 0,
+                toJSON: jest.fn(),
+              }) as DOMRect,
+          );
+          return header;
+        }
+        if (selector === 'footer' && footerTop !== null) {
+          const footer = document.createElement('footer');
+          footer.getBoundingClientRect = jest.fn(
+            () =>
+              ({
+                top: footerTop - window.scrollY,
+                bottom: footerTop - window.scrollY + 100,
+                height: 100,
+                left: 0,
+                right: 0,
+                width: 0,
+                x: 0,
+                y: 0,
+                toJSON: jest.fn(),
+              }) as DOMRect,
+          );
+          return footer;
+        }
+        return null;
+      });
     };
 
     afterEach(() => {
@@ -685,7 +682,11 @@ describe('useScrollDepthTracker', () => {
 
       const { result } = renderHook(
         () =>
-          useScrollDepthTracker('homepage-scroll-depth', true, getHomePageBounds),
+          useScrollDepthTracker(
+            'homepage-scroll-depth',
+            true,
+            getHomePageBounds,
+          ),
         { wrapper: props => wrapper({ ...props, atiData: atiAnalytics }) },
       );
 
@@ -717,7 +718,11 @@ describe('useScrollDepthTracker', () => {
 
       const { result } = renderHook(
         () =>
-          useScrollDepthTracker('homepage-scroll-depth', true, getHomePageBounds),
+          useScrollDepthTracker(
+            'homepage-scroll-depth',
+            true,
+            getHomePageBounds,
+          ),
         { wrapper: props => wrapper({ ...props, atiData: atiAnalytics }) },
       );
 
@@ -741,7 +746,11 @@ describe('useScrollDepthTracker', () => {
 
       const { result } = renderHook(
         () =>
-          useScrollDepthTracker('homepage-scroll-depth', true, getHomePageBounds),
+          useScrollDepthTracker(
+            'homepage-scroll-depth',
+            true,
+            getHomePageBounds,
+          ),
         { wrapper: props => wrapper({ ...props, atiData: atiAnalytics }) },
       );
 
@@ -778,7 +787,11 @@ describe('useScrollDepthTracker', () => {
 
       const { result } = renderHook(
         () =>
-          useScrollDepthTracker('homepage-scroll-depth', true, getHomePageBounds),
+          useScrollDepthTracker(
+            'homepage-scroll-depth',
+            true,
+            getHomePageBounds,
+          ),
         { wrapper: props => wrapper({ ...props, atiData: atiAnalytics }) },
       );
 

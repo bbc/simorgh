@@ -2,6 +2,9 @@ import { Fragment, use } from 'react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import PWAPromotionalBanner from '#app/components/PWAPromotionalBanner';
 import AccountPromotionalBanner from '#app/components/Account/AccountPromotionalBanner';
+import useScrollDepthTracker, {
+  getHomePageBounds,
+} from '#app/hooks/useScrollDepthTracker';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import {
   Curation,
@@ -18,9 +21,6 @@ import MetadataContainer from '../../components/Metadata';
 import LinkedData from '../../components/LinkedData';
 import getItemList from '../../lib/seoUtils/getItemList';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
-import useScrollDepthTracker, {
-  getHomePageBounds,
-} from '#app/hooks/useScrollDepthTracker';
 import getNthCurationByStyleAndProminence from '../utils/getNthCurationByStyleAndProminence';
 import getIndexOfFirstNonBanner from '../utils/getIndexOfFirstNonBanner';
 

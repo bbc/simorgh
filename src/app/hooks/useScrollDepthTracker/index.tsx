@@ -92,8 +92,8 @@ const useScrollDepthTracker = (
 
   useEffect(() => {
     sentThresholds.current.clear();
-  // Reset when the tracked element changes so a new article or page navigation
-  // starts fresh from 0% rather than inheriting the previous element's state.
+    // Reset when the tracked element changes so a new article or page navigation
+    // starts fresh from 0% rather than inheriting the previous element's state.
   }, [mainElement]);
 
   useEffect(() => {
@@ -149,6 +149,7 @@ const useScrollDepthTracker = (
     window.addEventListener('scroll', handleScroll, { passive: true });
 
     return () => window.removeEventListener('scroll', handleScroll);
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- getBounds is intentionally omitted: it is called once at effect setup to cache the bounds, not on every scroll frame
   }, [
     campaignID,
     componentName,
