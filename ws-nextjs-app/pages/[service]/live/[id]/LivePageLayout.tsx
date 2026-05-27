@@ -114,7 +114,7 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
 
   const {
     sportDataEvent: sportData,
-    live: isSportDataLive,
+    live: isSportDataLive = false,
     title: sportDataTitle,
   } = sportDataEventContent || {};
   const showSportData = !!sportData && Boolean(sportHeaderEnabled);
@@ -216,7 +216,7 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
       />
       <main>
         <Header
-          showLiveLabel={showSportData ? (isSportDataLive ?? isLive) : isLive}
+          showLiveLabel={showSportData ? isSportDataLive : isLive}
           title={showSportData && !!sportDataTitle ? sportDataTitle : title}
           description={description}
           imageUrl={imageUrl}
