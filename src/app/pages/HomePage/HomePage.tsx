@@ -18,6 +18,9 @@ import MetadataContainer from '../../components/Metadata';
 import LinkedData from '../../components/LinkedData';
 import getItemList from '../../lib/seoUtils/getItemList';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
+import useScrollDepthTracker, {
+  getHomePageBounds,
+} from '#app/hooks/useScrollDepthTracker';
 import getNthCurationByStyleAndProminence from '../utils/getNthCurationByStyleAndProminence';
 import getIndexOfFirstNonBanner from '../utils/getIndexOfFirstNonBanner';
 
@@ -55,6 +58,12 @@ const HomePage = ({ pageData }: HomePageProps) => {
   } = pageData;
   const { curations } = pageData;
 
+  const scrollDepthRef = useScrollDepthTracker(
+    'homepage-scroll-depth',
+    true,
+    getHomePageBounds,
+  );
+
   const metadataTitle = seoTitle || homePageTitle;
   const metadataDescription = seoDescription || description;
 
@@ -80,7 +89,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
         entities={[itemList]}
       />
       <Ad slotType="leaderboard" />
-      <main role="main" css={styles.main}>
+      <main role="main" css={styles.main} ref={scrollDepthRef}>
         <ATIAnalytics atiData={atiAnalytics} />
         <VisuallyHiddenText id="content" tabIndex={-1} as="h1">
           {/* eslint-disable-next-line jsx-a11y/aria-role */}
