@@ -21,7 +21,6 @@ const OJ_COMPONENT_NAMES = [
   'features',
   'related-content',
   'most-read',
-  // media curation renders as simple-curation-grid tracking events
   'topic-discovery-curation-grid-promo',
   'topic-discovery-more-from-link',
   'topics',
