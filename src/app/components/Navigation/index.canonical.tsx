@@ -1,4 +1,4 @@
-import React, { useState, use, KeyboardEvent } from 'react';
+import React, { useState, use, useRef, KeyboardEvent } from 'react';
 import Navigation from '#psammead/psammead-navigation/src';
 import { ScrollableNavigation } from '#psammead/psammead-navigation/src/ScrollableNavigation';
 import {
@@ -36,6 +36,7 @@ const CanonicalNavigationContainer: React.FC<
   const { isLite } = use(RequestContext);
   const { enabled: topBarOJsEnabled } = useToggle('topBarOJs');
   const [isOpen, setIsOpen] = useState(false);
+  const bottomScrollableNavRef = useRef<HTMLDivElement>(null);
 
   useMediaQuery(`(max-width: ${GROUP_2_MAX_WIDTH_BP}rem)`, event => {
     if (!event.matches) {
@@ -43,21 +44,33 @@ const CanonicalNavigationContainer: React.FC<
     }
   });
 
-  const closeMenuOnTabOut = ({
-    key,
-    shiftKey,
-    currentTarget,
-  }: KeyboardEvent) => {
-    if (key !== 'Tab' || shiftKey) return;
+  const closeMenuOnTabOut = (event: KeyboardEvent) => {
+    const { currentTarget } = event;
 
-    const focusableItems = currentTarget.querySelectorAll<HTMLElement>(
+    const dropdownItems = currentTarget.querySelectorAll(
       'a[href], button:not([disabled])',
     );
-    const lastItem = focusableItems[focusableItems.length - 1];
+    const lastDropdownItem = dropdownItems[dropdownItems.length - 1];
 
-    if (document.activeElement === lastItem) {
-      setIsOpen(false);
-    }
+    if (document.activeElement !== lastDropdownItem) return;
+
+    const allFocusableItems = Array.from(
+      document.querySelectorAll('a[href], button:not([disabled])'),
+    );
+    const lastDropdownIndex = allFocusableItems.indexOf(lastDropdownItem);
+    const itemsAfterDropdown = allFocusableItems.slice(lastDropdownIndex + 1);
+
+    const nextPageItem = itemsAfterDropdown.find(
+      item =>
+        !currentTarget.contains(item) &&
+        !bottomScrollableNavRef.current?.contains(item),
+    );
+
+    if (!nextPageItem) return;
+
+    event.preventDefault();
+    setIsOpen(false);
+    (nextPageItem as HTMLElement).focus();
   };
 
   return (
@@ -88,7 +101,7 @@ const CanonicalNavigationContainer: React.FC<
             </CanonicalDropdown>
           </div>
         </div>
-        <div css={styles.lowerNavWrapper}>
+        <div css={styles.lowerNavWrapper} ref={bottomScrollableNavRef}>
           <ScrollableNavigation
             dir={dir}
             css={styles.bottomRowItems}
