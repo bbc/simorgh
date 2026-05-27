@@ -419,6 +419,19 @@ describe('getAmpLiteCss utilities', () => {
           '',
         );
       });
+
+      it('logs a warning when dev-css-modules.css does not exist', () => {
+        existsSyncMock.mockReturnValue(false);
+
+        getAmpLiteCss({ page: '/articles/page', dynamicIds: [] });
+
+        expect(loggerMock.warn).toHaveBeenCalledWith(
+          expect.any(String),
+          expect.objectContaining({
+            path: devCssPath,
+          }),
+        );
+      });
     });
 
     describe('in production', () => {

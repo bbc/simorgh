@@ -163,7 +163,15 @@ const getAmpLiteCss = ({
   const devCssPath = join(process.cwd(), 'build/dev-css-modules.css');
 
   if (!isProd) {
-    return existsSync(devCssPath) ? readFileSync(devCssPath, 'utf-8') : '';
+    if (!existsSync(devCssPath)) {
+      logger.warn(logCodes.BUILD_MANIFEST_CSS_READ_ERROR, {
+        message:
+          'Dev CSS file not found. AMP/Lite pages may be missing styles. Try deleting the build directory and restarting your dev server.',
+        path: devCssPath,
+      });
+      return '';
+    }
+    return readFileSync(devCssPath, 'utf-8');
   }
 
   return getBuildManifestCss(page) + getDynamicImportCss(dynamicIds);
