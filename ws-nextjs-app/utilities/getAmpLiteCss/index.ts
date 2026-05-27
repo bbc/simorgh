@@ -29,6 +29,19 @@ const resolveCssFilePath = (file: string): string | null =>
 
 const logger = nodeLogger(__filename);
 
+const safeReadFile = (filePath: string, logCode: string): string | null => {
+  try {
+    return readFileSync(filePath, 'utf-8');
+  } catch (e) {
+    logger.error(logCode, {
+      file: filePath,
+      message: e instanceof Error ? e.message : String(e),
+      stack: e instanceof Error ? e.stack : undefined,
+    });
+    return null;
+  }
+};
+
 const readCssFiles = (files: string[]): string =>
   files.reduce((css, file) => {
     const filePath = resolveCssFilePath(file);
@@ -43,15 +56,11 @@ const readCssFiles = (files: string[]): string =>
       return css;
     }
 
-    try {
-      return css + readFileSync(filePath, 'utf-8');
-    } catch (e) {
-      logger.error(logCodes.BUILD_MANIFEST_CSS_READ_ERROR, {
-        file: filePath,
-        message: e instanceof Error ? e.message : String(e),
-      });
-      return css;
-    }
+    const content = safeReadFile(
+      filePath,
+      logCodes.BUILD_MANIFEST_CSS_READ_ERROR,
+    );
+    return content !== null ? css + content : css;
   }, '');
 
 type BuildManifest = { pages: Record<string, string[]> };
@@ -71,8 +80,11 @@ const loadManifest = <T extends BuildManifest | LoadableManifest>(
 
   if (!existsSync(manifestPath)) return null;
 
+  const content = safeReadFile(manifestPath, errorCode);
+  if (content === null) return null;
+
   try {
-    const parsed: T = JSON.parse(readFileSync(manifestPath, 'utf-8'));
+    const parsed: T = JSON.parse(content);
     manifestCache.set(manifestPath, parsed);
     return parsed;
   } catch (e) {
@@ -178,7 +190,9 @@ const getAmpLiteCss = ({
       });
       return '';
     }
-    return readFileSync(devCssPath, 'utf-8');
+    return (
+      safeReadFile(devCssPath, logCodes.BUILD_MANIFEST_CSS_READ_ERROR) ?? ''
+    );
   }
 
   return getBuildManifestCss(page) + getDynamicImportCss(dynamicIds);
