@@ -1,12 +1,9 @@
 import { createContext, ReactNode } from 'react';
-import { OptimizelyProvider, ReactSDKClient } from '@optimizely/react-sdk';
 import {
+  AllTheProviders,
   renderHook,
   act,
 } from '#app/components/react-testing-library-with-providers';
-import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
-import { RequestContextProvider } from '#contexts/RequestContext';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import { ATIData } from '#app/components/ATIAnalytics/types';
 import { Toggles } from '#app/models/types/global';
@@ -22,16 +19,12 @@ jest.mock('#app/lib/analyticsUtils/dispatchTrackingRequests', () => ({
   default: (...args: unknown[]) => mockDispatchTrackingRequests(...args),
 }));
 
-const defaultOptimizely = {
-  track: jest.fn(),
-  user: { attributes: { foo: 'bar' }, id: 'test' },
-} as unknown as ReactSDKClient;
-
 const {
   metadata: { atiAnalytics },
 } = fixtureData;
 
 // viewport height used in tests; keeps scroll maths simple.
+// 1000px element with 100px viewport means each 25% scroll depth is exactly 250px of scrolling, and we can easily calculate the scrollY value needed to reach each threshold.
 // With documentTop=0 and innerHeight=100 on a 1000px element:
 //   initial mount (scrollY=0): depth = 10% → no thresholds triggered
 //   25% depth: scrollY=150  (viewportBottom=250)
@@ -52,6 +45,10 @@ beforeAll(() => {
     writable: true,
     configurable: true,
   });
+  window.requestAnimationFrame = (cb: FrameRequestCallback) => {
+    cb(0);
+    return 0;
+  };
 });
 
 beforeEach(() => {
@@ -76,6 +73,9 @@ const defaultToggles: Toggles = {
   },
 };
 
+// wrapper provides all the React context providers that useScrollDepthTracker
+// depends on: request info (isAmp, isLite), service config, feature toggles,
+// and ATI analytics data. Pass atiData to enable tracking events to fire.
 const wrapper = ({
   atiData,
   children,
@@ -89,26 +89,23 @@ const wrapper = ({
   isAmp?: boolean;
   isLite?: boolean;
 }) => (
-  <OptimizelyProvider optimizely={defaultOptimizely} isServerSide>
-    <RequestContextProvider
-      bbcOrigin="https://www.test.bbc.com"
-      pageType={STORY_PAGE}
-      isAmp={isAmp}
-      isLite={isLite}
-      service="pidgin"
-      pathname="/pidgin/tori-51745682"
-    >
-      <serviceContextModule.ServiceContextProvider service="pidgin">
-        <ToggleContextProvider toggles={toggles}>
-          <EventTrackingContextProvider atiData={atiData}>
-            {children}
-          </EventTrackingContextProvider>
-        </ToggleContextProvider>
-      </serviceContextModule.ServiceContextProvider>
-    </RequestContextProvider>
-  </OptimizelyProvider>
+  <AllTheProviders
+    bbcOrigin="https://www.test.bbc.com"
+    pageType={STORY_PAGE}
+    isAmp={isAmp}
+    isLite={isLite}
+    service="pidgin"
+    pathname="/pidgin/tori-51745682"
+    toggles={toggles}
+    atiData={atiData}
+  >
+    {children}
+  </AllTheProviders>
 );
 
+// buildElement creates a fake DOM element with a fixed size and scroll position.
+// We have to mock offsetHeight and getBoundingClientRect because jsdom (the
+// browser environment used in Jest) does not perform real layout calculations.
 const buildElement = ({
   offsetHeight = 1000,
   documentTop = 0,
@@ -137,18 +134,17 @@ const buildElement = ({
   return element;
 };
 
-// depth formula: (innerHeight - getBoundingClientRect().top) / offsetHeight * 100
-// With documentTop=0 and innerHeight=100:
-//  25%  → scrollY=150  (viewportBottom=250)
-//  50%  → scrollY=400
-//  75%  → scrollY=650
-//  100% → scrollY=900
 
+// simulateScroll sets the mocked window.scrollY value and fires a scroll event,
+// which mimics the user scrolling the page to a specific position.
 const simulateScroll = (scrollY: number) => {
   mockScrollY = scrollY;
   window.dispatchEvent(new Event('scroll'));
 };
 
+// buildElementWithFigure creates a fake article element that contains a hero
+// image (<figure>) at the top. The hook measures scroll depth from the bottom
+// of the hero image, so the user has to scroll past it before any events fire.
 const buildElementWithFigure = ({
   elementHeight = 1000,
   figureHeight = 300,
@@ -201,8 +197,8 @@ const buildElementWithFigure = ({
 };
 
 describe('useScrollDepthTracker', () => {
-  describe('threshold events', () => {
-    it('sends a view event when 25% of the element has been scrolled past', async () => {
+  describe('firing events at scroll depth thresholds', () => {
+    it('fires a single event when the user scrolls to 25% depth', async () => {
       const { result } = renderHook(
         () => useScrollDepthTracker('article-scroll-depth'),
         { wrapper: props => wrapper({ ...props, atiData: atiAnalytics }) },
@@ -210,11 +206,12 @@ describe('useScrollDepthTracker', () => {
 
       const element = buildElement({ offsetHeight: 1000, documentTop: 0 });
 
+      // Pass the element to the hook's ref callback to start the scroll listener
       act(() => {
         result.current(element);
       });
 
-      // scroll so viewport bottom is at 25% of element (scrollY=150, viewportBottom=250)
+      // scrollY=150 means the viewport bottom (150 + 100) reaches 250px, which is 25% of 1000px
       await act(async () => {
         simulateScroll(150);
       });
@@ -230,7 +227,7 @@ describe('useScrollDepthTracker', () => {
       );
     });
 
-    it('sends view events for all thresholds when 100% is reached', async () => {
+    it('fires all four threshold events in order when the user scrolls to the bottom', async () => {
       const { result } = renderHook(
         () => useScrollDepthTracker('article-scroll-depth'),
         { wrapper: props => wrapper({ ...props, atiData: atiAnalytics }) },
@@ -242,11 +239,12 @@ describe('useScrollDepthTracker', () => {
         result.current(element);
       });
 
-      // scroll so viewport bottom reaches the end of the element (scrollY=900, viewportBottom=1000)
+      // scrollY=900 means the viewport bottom (900 + 100) reaches 1000px, the end of the element
       await act(async () => {
         simulateScroll(900);
       });
 
+      // All four thresholds should have been crossed in a single scroll event
       expect(mockDispatchTrackingRequests).toHaveBeenCalledTimes(4);
 
       const calledComponentNames = mockDispatchTrackingRequests.mock.calls.map(
@@ -261,7 +259,7 @@ describe('useScrollDepthTracker', () => {
       ]);
     });
 
-    it('only fires each threshold event once even when scrolled past multiple times', async () => {
+    it('does not re-send a threshold event if the user scrolls back up and then down again', async () => {
       const { result } = renderHook(
         () => useScrollDepthTracker('article-scroll-depth'),
         { wrapper: props => wrapper({ ...props, atiData: atiAnalytics }) },
@@ -273,23 +271,27 @@ describe('useScrollDepthTracker', () => {
         result.current(element);
       });
 
+      // First scroll to the bottom — all 4 thresholds should fire
       await act(async () => {
         simulateScroll(900);
       });
 
+      // Scroll back to the top
       await act(async () => {
         simulateScroll(0);
       });
 
+      // Scroll to the bottom again — no additional events should fire
       await act(async () => {
         simulateScroll(900);
       });
 
+      // Each threshold is stored in a Set, so it can only be recorded once per session
       expect(mockDispatchTrackingRequests).toHaveBeenCalledTimes(4);
     });
   });
 
-  describe('tracking not enabled', () => {
+  describe('when tracking is disabled or unavailable', () => {
     it('does not send events when the eventTracking toggle is disabled', async () => {
       const disabledToggles: Toggles = {
         eventTracking: { enabled: false },
@@ -320,7 +322,12 @@ describe('useScrollDepthTracker', () => {
       expect(mockDispatchTrackingRequests).not.toHaveBeenCalled();
     });
 
-    it('does not send events when enabled is false', async () => {
+    it('does not send events when the hook is disabled via the enabled parameter', async () => {
+      // In ArticlePage, `enabled` is set to false when a "Continue Reading" button is
+      // visible — the article content below the fold is hidden, so there is nothing
+      // meaningful to track. This test passes `false` as the second argument to
+      // simulate that state, then scrolls to 100% depth and confirms that no events
+      // fire regardless of scroll position.
       const { result } = renderHook(
         () => useScrollDepthTracker('article-scroll-depth', false),
         { wrapper: props => wrapper({ ...props, atiData: atiAnalytics }) },
@@ -339,7 +346,7 @@ describe('useScrollDepthTracker', () => {
       expect(mockDispatchTrackingRequests).not.toHaveBeenCalled();
     });
 
-    it('starts sending events once enabled changes from false to true', async () => {
+    it('begins sending events immediately when the hook becomes enabled (after clicking continue reading)', async () => {
       let enabled = false;
 
       const { result, rerender } = renderHook(
@@ -353,12 +360,15 @@ describe('useScrollDepthTracker', () => {
         result.current(element);
       });
 
+      // Scroll to the bottom while disabled — nothing should fire
       await act(async () => {
         simulateScroll(900);
       });
 
       expect(mockDispatchTrackingRequests).not.toHaveBeenCalled();
 
+      // Enable tracking — the hook immediately checks the current scroll position
+      // and fires all thresholds that have already been exceeded
       enabled = true;
       rerender();
 
@@ -409,12 +419,13 @@ describe('useScrollDepthTracker', () => {
       expect(mockDispatchTrackingRequests).not.toHaveBeenCalled();
     });
 
-    it('does not send events when the element is null', async () => {
+    it('does not send events before a DOM element has been attached', async () => {
       const { result } = renderHook(
         () => useScrollDepthTracker('article-scroll-depth'),
         { wrapper: props => wrapper({ ...props, atiData: atiAnalytics }) },
       );
 
+      // Pass null instead of an element — the hook has nothing to measure against
       act(() => {
         result.current(null);
       });
@@ -427,7 +438,7 @@ describe('useScrollDepthTracker', () => {
     });
   });
 
-  describe('lead image offset', () => {
+  describe('excluding the hero image from scroll depth', () => {
     // With a 300px figure at the top of a 1000px element and viewport height=100:
     // trackingStart = 300, trackingEnd = 1000, trackingHeight = 700
     // 25%  = 300 + 175 = 475  → scrollY = 475 - 100 = 375
@@ -435,12 +446,15 @@ describe('useScrollDepthTracker', () => {
     // 75%  = 300 + 525 = 825  → scrollY = 725
     // 100% = 1000             → scrollY = 900
 
-    it('starts tracking from the bottom of the first figure, not the top of the element', async () => {
+    it('starts the depth measurement from the bottom of the hero image, not the top of the article', async () => {
       const { result } = renderHook(
         () => useScrollDepthTracker('article-scroll-depth'),
         { wrapper: props => wrapper({ ...props, atiData: atiAnalytics }) },
       );
 
+      // 300px hero image at the top of a 1000px article.
+      // The trackable area is 700px (300px–1000px), so 25% = 475px from the top.
+      // scrollY needed: 475 - viewportHeight (100) = 375
       const element = buildElementWithFigure({
         elementHeight: 1000,
         figureHeight: 300,
@@ -451,7 +465,7 @@ describe('useScrollDepthTracker', () => {
         result.current(element);
       });
 
-      // Scrolled to 25% of trackable area (below the figure)
+      // Scroll to the 25% mark of the trackable area below the hero image
       await act(async () => {
         simulateScroll(375);
       });
@@ -466,7 +480,7 @@ describe('useScrollDepthTracker', () => {
       );
     });
 
-    it('does not fire 25% when viewport bottom is still within the lead image', async () => {
+    it('does not count scrolling through the hero image as article reading depth', async () => {
       const { result } = renderHook(
         () => useScrollDepthTracker('article-scroll-depth'),
         { wrapper: props => wrapper({ ...props, atiData: atiAnalytics }) },
@@ -482,7 +496,8 @@ describe('useScrollDepthTracker', () => {
         result.current(element);
       });
 
-      // scrollY=200: viewportBottom=300, which is only at the bottom of the figure (0% of text)
+      // scrollY=200: viewport bottom (200 + 100) = 300px, exactly the bottom of the 300px hero image.
+      // The user has not yet scrolled into the article text at all, so 0% depth.
       await act(async () => {
         simulateScroll(200);
       });
@@ -490,7 +505,7 @@ describe('useScrollDepthTracker', () => {
       expect(mockDispatchTrackingRequests).not.toHaveBeenCalled();
     });
 
-    it('sends all four events when the element without a figure is fully scrolled', async () => {
+    it('measures from the top of the article when there is no hero image', async () => {
       const { result } = renderHook(
         () => useScrollDepthTracker('article-scroll-depth'),
         { wrapper: props => wrapper({ ...props, atiData: atiAnalytics }) },
@@ -508,6 +523,85 @@ describe('useScrollDepthTracker', () => {
       });
 
       expect(mockDispatchTrackingRequests).toHaveBeenCalledTimes(4);
+    });
+  });
+
+  describe('when the tracked element or enabled state changes', () => {
+    it('starts tracking from zero when the user navigates to a new article', async () => {
+      const { result } = renderHook(
+        () => useScrollDepthTracker('article-scroll-depth'),
+        { wrapper: props => wrapper({ ...props, atiData: atiAnalytics }) },
+      );
+
+      const firstElement = buildElement({ offsetHeight: 1000, documentTop: 0 });
+
+      // Attach the first element and scroll to the bottom
+      act(() => {
+        result.current(firstElement);
+      });
+
+      await act(async () => {
+        simulateScroll(900);
+      });
+
+      expect(mockDispatchTrackingRequests).toHaveBeenCalledTimes(4);
+
+      const secondElement = buildElement({
+        offsetHeight: 1000,
+        documentTop: 0,
+      });
+
+      // Attach a new element — this resets the sent thresholds Set so they can fire again
+      act(() => {
+        result.current(secondElement);
+      });
+
+      await act(async () => {
+        simulateScroll(900);
+      });
+
+      // 4 from the first element + 4 from the second element
+      expect(mockDispatchTrackingRequests).toHaveBeenCalledTimes(8);
+    });
+
+    it('reports all scroll depth the user had already reached at the moment they click continue reading', async () => {
+      let enabled = false;
+
+      const { result, rerender } = renderHook(
+        () => useScrollDepthTracker('article-scroll-depth', enabled),
+        { wrapper: props => wrapper({ ...props, atiData: atiAnalytics }) },
+      );
+
+      const element = buildElement({ offsetHeight: 1000, documentTop: 0 });
+
+      act(() => {
+        result.current(element);
+      });
+
+      // The user scrolls to 50% while the continue reading button is blocking the page
+      await act(async () => {
+        simulateScroll(400);
+      });
+
+      // Tracking is off, so nothing fires yet
+      expect(mockDispatchTrackingRequests).not.toHaveBeenCalled();
+
+      // The user clicks continue reading — tracking turns on.
+      // The hook immediately evaluates the current scroll position and fires
+      // all thresholds that have already been exceeded (25% and 50%).
+      enabled = true;
+      rerender();
+
+      expect(mockDispatchTrackingRequests).toHaveBeenCalledTimes(2);
+
+      const calledComponentNames = mockDispatchTrackingRequests.mock.calls.map(
+        ([{ reverbParameters }]) => reverbParameters.componentName,
+      );
+
+      expect(calledComponentNames).toEqual([
+        'article-scroll-depth-25',
+        'article-scroll-depth-50',
+      ]);
     });
   });
 
