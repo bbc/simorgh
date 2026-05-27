@@ -126,7 +126,10 @@ const TopicDiscovery = ({
                 <>
                   <CurationGrid
                     summaries={topicPromos}
-                    eventTrackingData={eventTrackingData}
+                    eventTrackingData={{
+                      componentName: 'topic-discovery-curation-grid',
+                      ...(experimentProps && experimentProps),
+                    }}
                   />
                   <a
                     css={styles.moreFromLink}
