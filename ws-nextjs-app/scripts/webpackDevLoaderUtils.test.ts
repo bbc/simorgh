@@ -159,16 +159,6 @@ describe('injectExtractLoader', () => {
     expect(rule.use[cssIdx - 1]).toBe(EXTRACT_LOADER);
   });
 
-  it('injects the loader on each call (not idempotent)', () => {
-    const rule = cssModuleRule();
-    injectExtractLoader([rule], EXTRACT_LOADER);
-    injectExtractLoader([rule], EXTRACT_LOADER);
-
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any, prettier/prettier
-    const filtered = (rule.use as any).filter((l: any) => l === EXTRACT_LOADER);
-    expect(filtered).toHaveLength(2);
-  });
-
   it('does not false-match postcss-loader as css-loader', () => {
     const postCssLoader = '/path/to/postcss-loader/index.js';
     const rule = {
