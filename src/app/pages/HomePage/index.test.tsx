@@ -26,6 +26,16 @@ jest.mock('../../hooks/useViewTracker', () => ({
   default: jest.fn(),
 }));
 
+// useScrollDepthTracker is mocked here because the real hook has internal
+// state (shouldTrack) that triggers a re-render via useEffect. In React 18
+// StrictMode, this causes useViewTracker to be called twice per render,
+// breaking the viewability analytics tests that assert exact call counts.
+// The hook's own behaviour is covered in useScrollDepthTracker/index.test.tsx.
+jest.mock('../../hooks/useScrollDepthTracker', () => ({
+  __esModule: true,
+  default: jest.fn(() => jest.fn()),
+}));
+
 jest.mock('../../components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>Chartbeat Analytics</div>;
   return ChartbeatAnalytics;
