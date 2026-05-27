@@ -18,6 +18,7 @@ jest.mock('react', () => ({
 }));
 
 const mockSetQueryData = jest.fn();
+const mockInvalidateQueries = jest.fn();
 
 jest.mock('@tanstack/react-query', () => {
   let capturedMutationConfig: {
@@ -28,7 +29,10 @@ jest.mock('@tanstack/react-query', () => {
 
   return {
     ...jest.requireActual('@tanstack/react-query'),
-    useQueryClient: () => ({ setQueryData: mockSetQueryData }),
+    useQueryClient: () => ({
+      setQueryData: mockSetQueryData,
+      invalidateQueries: mockInvalidateQueries,
+    }),
     useMutation: (config: {
       mutationFn?: (action: string) => Promise<unknown>;
       onSuccess?: (result: unknown, action: string) => void;
@@ -164,6 +168,18 @@ describe('useUASButton', () => {
       });
 
       expect(mockSetQueryData).not.toHaveBeenCalled();
+    });
+
+    it('invalidates favouritesList cache on successful save', async () => {
+      const { result } = renderHook(() => useUASButton(defaultProps));
+
+      await act(async () => {
+        await result.current.handleSaveAction(UASAction.SAVE);
+      });
+
+      expect(mockInvalidateQueries).toHaveBeenCalledWith({
+        queryKey: uasKeys.favouritesList('user-123'),
+      });
     });
   });
 });

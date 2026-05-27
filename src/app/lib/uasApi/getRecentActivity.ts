@@ -54,16 +54,18 @@ const transformActivityToSavedArticle = (
   description: `${item?.metaData?.service || 'BBC'}`,
 });
 
-const getRecentActivity = async ({
-  itemsPerPage = 10,
-  startIndex = 0,
-  signal,
-}: GetRecentActivityParams): Promise<{
+export type RecentActivityData = {
   savedArticles: SavedArticle[];
   total: number;
   itemsPerPage: number;
   startIndex: number;
-}> => {
+};
+
+const getRecentActivity = async ({
+  itemsPerPage = 10,
+  startIndex = 0,
+  signal,
+}: GetRecentActivityParams): Promise<RecentActivityData> => {
   try {
     const response = await uasApiRequest(
       'GET',
