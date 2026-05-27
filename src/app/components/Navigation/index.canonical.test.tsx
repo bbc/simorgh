@@ -55,8 +55,15 @@ describe('Navigation - Canonical', () => {
       expect(dropdown).toHaveTextContent('Item 1');
     });
 
-    it('should close the menu when Tab is pressed on the last dropdown item', () => {
-      const { getByRole } = render(navigation);
+    it('should close the menu and move focus to the first item on the page when Tab is pressed on the last dropdown item', () => {
+      const { getByRole } = render(
+        <>
+          {navigation}
+          <main>
+            <a href="/first-article">First article</a>
+          </main>
+        </>,
+      );
 
       const menuButton = getByRole('button', { name: 'menu' });
       fireEvent.click(menuButton);
@@ -67,6 +74,9 @@ describe('Navigation - Canonical', () => {
       fireEvent.keyDown(lastLink, { key: 'Tab' });
 
       expect(menuButton).toHaveAttribute('aria-expanded', 'false');
+      expect(document.activeElement).toBe(
+        getByRole('link', { name: 'First article' }),
+      );
     });
 
     describe('Top Bar OJs', () => {
