@@ -729,10 +729,10 @@ describe('Live Page', () => {
     it('should fallback to page isLive value when sportHeaderEnabled toggle is disabled', async () => {
       const pageDataWithSportData = {
         ...mockPageData,
-        isLive: false,
+        isLive: true,
         sportDataEventContent: {
           ...sportDataFixture.data.sportDataEventContent,
-          live: true,
+          live: false,
         },
       } as unknown as ComponentProps['pageData'];
       mockPollingUpdate(pageDataWithSportData);
@@ -743,7 +743,7 @@ describe('Live Page', () => {
         render(<Live pageData={pageDataWithSportData} />);
       });
 
-      expect(screen.queryByTestId('live-label')).not.toBeInTheDocument();
+      expect(screen.queryByTestId('live-label')).toBeInTheDocument();
 
       (useToggle as jest.Mock).mockReturnValue({ enabled: true });
     });
