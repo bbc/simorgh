@@ -743,7 +743,7 @@ describe('Live Page', () => {
         render(<Live pageData={pageDataWithSportData} />);
       });
 
-      expect(screen.queryByTestId('live-label')).toBeInTheDocument();
+      expect(screen.getByTestId('live-label')).toBeInTheDocument();
 
       (useToggle as jest.Mock).mockReturnValue({ enabled: true });
     });
