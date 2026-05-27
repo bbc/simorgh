@@ -66,6 +66,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      matchSummary: 'Resumo da partida',
       and: 'e',
       readTime: {
         readTimePrefix: 'Tempo de leitura',
@@ -84,6 +85,11 @@ export const service: DefaultServiceConfig = {
       seeAll: 'Ver todos',
       home: 'Início',
       continueReading: 'Continue lendo',
+      topicDiscovery: {
+        heading: 'Descubra mais',
+        moreFromTopic: 'Mais de {topic}',
+        fetchErrorMessage: 'Falha ao carregar. Tente novamente mais tarde.',
+      },
       currentPage: 'Página atual',
       skipLinkText: 'Vá para o conteúdo',
       relatedContent: 'Histórias relacionadas',

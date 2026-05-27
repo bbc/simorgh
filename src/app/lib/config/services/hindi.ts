@@ -50,16 +50,16 @@ export const service: DefaultServiceConfig = {
     googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     podcastPromo: {
       title: 'पॉडकास्ट',
-      brandTitle: 'कहानी ज़िंदगी की',
+      brandTitle: 'दिनभर: पूरा दिन,पूरी ख़बर (Dinbhar)',
       brandDescription:
-        'मशहूर हस्तियों की कहानी पूरी तसल्ली और इत्मीनान से इरफ़ान के साथ.',
+        'वो राष्ट्रीय और अंतरराष्ट्रीय ख़बरें जो दिनभर सुर्खियां बनीं.',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0l8hm5m.jpg',
-        alt: 'पॉडकास्ट: कहानी ज़िंदगी की',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p09ds7cb.jpg',
+        alt: 'दिनभर',
       },
       linkLabel: {
         text: 'एपिसोड',
-        href: 'https://www.bbc.com/hindi/podcasts/p08s9wv2',
+        href: 'https://www.bbc.com/hindi/podcasts/p09ds7zx',
       },
       skipLink: {
         text: 'छोड़कर %title% आगे बढ़ें',
@@ -67,6 +67,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      matchSummary: 'मैच का सारांश',
       and: 'और',
       readTime: {
         readTimePrefix: 'पढ़ने का समय',
@@ -109,22 +110,23 @@ export const service: DefaultServiceConfig = {
         title: 'File Download',
       },
       account: {
-        signIn: 'लॉग‑इन',
-        forYou: 'आपका अकाउंट',
-        register: 'रजिस्टर करें',
+        signIn: 'साइन इन',
+        forYou: 'आपका एकाउंट',
+        register: 'रजिस्टर',
       },
       accountPromoBanner: {
-        title: 'अपना BBC खोजिए',
-        description:
-          'देखने, सुनने और भाग लेने के लिए साइन‑इन करें या खाता बनाएं',
+        title: 'आपका अपना BBC',
+        description: 'लॉग इन करें या निःशुल्क नया खाता बनाएं',
         closeLabel: 'बंद करें',
         buttonSeparatorText: 'या',
       },
       saveArticleButton: {
+        loading: 'Loading',
         save: 'Save for later',
         saving: 'Saving',
         saved: 'Saved to My News',
         remove: 'Remove',
+        removing: 'Removing',
       },
       gist: 'सारांश',
       error: {

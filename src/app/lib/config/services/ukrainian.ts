@@ -63,6 +63,7 @@ const baseServiceConfig = {
     },
   },
   translations: {
+    matchSummary: 'Огляд матчу',
     and: 'i',
     readTime: {
       readTimePrefix: 'Час прочитання',

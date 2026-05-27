@@ -47,6 +47,7 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      matchSummary: 'Match Summary',
       and: 'and',
       readTime: {
         readTimePrefix: 'Read am in',

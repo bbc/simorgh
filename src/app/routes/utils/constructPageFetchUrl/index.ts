@@ -1,4 +1,3 @@
-import Url from 'url-parse';
 import pipe from 'ramda/src/pipe';
 import getEnvironment from '#app/routes/utils/getEnvironment';
 import { getMostReadEndpoint } from '#app/lib/utilities/getUrlHelpers/getMostReadUrls';
@@ -141,7 +140,7 @@ const getId = ({ pageType, service, variant }: GetIdProps) => {
     case LIVE_TV_PAGE:
       getIdFunction = (path: string) => {
         // example path: /dari/watch/bbc_afghan_tv/live
-        const [tv] = path.split('/').slice(-2);
+        const [tv] = path.split('/').filter(Boolean).slice(-2);
         return tv;
       };
       break;
@@ -178,6 +177,7 @@ const constructPageFetchUrl = ({
   const env = getEnvironment(pathname);
   const isLocal = !env || env === 'local';
   const id = getId({ pageType, service, env, variant })(pathname);
+
   const capitalisedPageType =
     pageType.charAt(0).toUpperCase() + pageType.slice(1);
 
@@ -211,13 +211,15 @@ const constructPageFetchUrl = ({
     ...(env && { serviceEnv: env }),
   };
 
-  let fetchUrl = Url(process.env.BFF_PATH as string).set(
-    'query',
-    queryParameters,
-  );
+  const host = `http://${process.env.HOSTNAME || 'localhost'}`;
+
+  let fetchUrl = new URL((process.env.BFF_PATH as string) || host);
+
+  Object.entries(queryParameters).forEach(([key, value]) => {
+    fetchUrl.searchParams.set(key, String(value));
+  });
 
   if (isLocal) {
-    const host = `http://${process.env.HOSTNAME || 'localhost'}`;
     const port = process.env.PORT ? `:${process.env.PORT}` : '';
 
     switch (pageType) {
@@ -225,20 +227,20 @@ const constructPageFetchUrl = ({
         const { assetId, platform } = parseRoute(pathname);
 
         if (platform === 'articles') {
-          fetchUrl = Url(
+          fetchUrl = new URL(
             `${host}${port}/api/local/${service}/articles/${assetId}${variant ? `/${variant}` : ''}`,
           );
           break;
         }
 
         if (platform === 'cps') {
-          fetchUrl = Url(
+          fetchUrl = new URL(
             `${host}${port}/api/local/${service}/cpsAssets/${variant ? `${variant}/` : ''}${assetId}`,
           );
           break;
         }
 
-        fetchUrl = Url(
+        fetchUrl = new URL(
           `${host}${port}/api/local/${service}/legacyAssets/${variant ? `${variant}/` : ''}${assetId}`,
         );
 
@@ -247,68 +249,57 @@ const constructPageFetchUrl = ({
       case CPS_ASSET:
       case AUDIO_PAGE:
       case TV_PAGE:
-        if (process.env?.NEXTJS) {
-          fetchUrl = Url(`${host}${port}/api/local/${id}`);
-        } else {
-          fetchUrl = Url(`/${id}`);
-        }
+        fetchUrl = new URL(`${host}${port}/api/local/${id}`);
         break;
       case HOME_PAGE: {
-        if (process.env?.NEXTJS) {
-          fetchUrl = Url(
-            `${host}${port}/api/local/${service}/homePage/${variant ? `${variant}` : 'index'}`,
-          );
-        } else {
-          fetchUrl = Url(`/${service}${variant ? `/${variant}` : ''}`);
-        }
+        fetchUrl = new URL(
+          `${host}${port}/api/local/${service}/homePage/${variant ? `${variant}` : 'index'}`,
+        );
         break;
       }
       case MOST_READ_PAGE:
-        fetchUrl = Url(getMostReadEndpoint({ service, variant }).split('.')[0]);
+        fetchUrl = new URL(
+          getMostReadEndpoint({ service, variant }).split('.')[0],
+          host,
+        );
         break;
       case TOPIC_PAGE: {
-        if (process.env?.NEXTJS) {
-          fetchUrl = Url(
-            `${host}${port}/api/local/${service}/topics/${id}${variant ? `/${variant}` : ''}`,
-          );
-        } else {
-          fetchUrl = Url(
-            `/${service}/topics/${id}${variant ? `/${variant}` : ''}`,
-          );
-        }
+        fetchUrl = new URL(
+          `${host}${port}/api/local/${service}/topics/${id}${variant ? `/${variant}` : ''}`,
+        );
         break;
       }
       case LIVE_PAGE: {
         const [liveID] = pathname.split('.');
         const variantPath = variant ? `/${variant}` : '';
         // pathname is the ID of the Live page without /service/live/, and supports both Tipo & CPS IDs
-        fetchUrl = Url(
+        fetchUrl = new URL(
           `${host}${port}/api/local/${service}/live/${liveID}${variantPath}`,
         );
         break;
       }
       case UGC_PAGE: {
-        fetchUrl = Url(`${host}${port}/api/local/${service}/send/${id}`);
+        fetchUrl = new URL(`${host}${port}/api/local/${service}/send/${id}`);
         break;
       }
       case AV_EMBEDS: {
         const parsedRoute = parseRoute(pathname);
 
-        fetchUrl = Url(
+        fetchUrl = new URL(
           `${host}${port}/api/local/${parsedRoute.service}/av-embeds/${parsedRoute.variant ? `${parsedRoute?.variant}/` : ''}${parsedRoute.assetId}${parsedRoute.mediaId ? `/${parsedRoute.mediaDelimiter}/${parsedRoute.mediaId}` : ''}${parsedRoute.lang ? `/${parsedRoute.lang}` : ''}`,
         );
         break;
       }
       case LIVE_RADIO_PAGE: {
-        if (process.env?.NEXTJS) {
-          fetchUrl = Url(`${host}${port}/api/local${pathname}`);
-        } else {
-          fetchUrl = Url(`${pathname}`);
-        }
+        fetchUrl = new URL(
+          `${host}${port}/api/local${removeRendererExtension(pathname)}`,
+        );
         break;
       }
       case LIVE_TV_PAGE: {
-        fetchUrl = Url(`${host}${port}/api/local/${service}/watch/${id}/live`);
+        fetchUrl = new URL(
+          `${host}${port}/api/local/${service}/watch/${id}/live`,
+        );
         break;
       }
       default:

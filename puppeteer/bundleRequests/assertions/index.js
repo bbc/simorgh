@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 /* eslint-disable no-underscore-dangle */
 import { localBaseUrl } from '#testHelpers/config';
 import context from '../../context';
@@ -35,19 +36,5 @@ export const assertLoadsExpectedBundles = ({ service }) => {
           ),
         );
       });
-  });
-};
-
-export const assertLoadsModernBundles = ({ service }) => {
-  it('loads at least 1 modern service bundle', () => {
-    const serviceRegex = getServiceBundleRegex(service);
-
-    const serviceMatches = context.page.__requests.filter(url =>
-      url.match(
-        new RegExp(`(\\/static\\/js\\/modern.${serviceRegex}.*.js)`, 'g'),
-      ),
-    );
-
-    expect(serviceMatches.length).toBeGreaterThanOrEqual(1);
   });
 };

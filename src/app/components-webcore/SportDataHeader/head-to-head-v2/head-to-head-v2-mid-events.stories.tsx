@@ -12,7 +12,7 @@ import {
   secondLegAETInPensData,
 } from './static-data/event/transformed/mid-event';
 import { HeadToHeadV2 } from './head-to-head-v2';
-import { shortNamesMap } from './storybook/helpers/short-name-map';
+import { SHORT_NAMES } from './storybook/helpers/short-name-map';
 import {
   HeadToHeadV2Component,
   HeadToHeadV2ConciseComponent,
@@ -40,11 +40,11 @@ export default {
   parameters: { chromatic: { disable: true } },
   argTypes: {
     home: {
-      options: Object.keys(shortNamesMap()),
+      options: Object.keys(SHORT_NAMES),
       control: { type: 'select' },
     },
     away: {
-      options: Object.keys(shortNamesMap()),
+      options: Object.keys(SHORT_NAMES),
       control: { type: 'select' },
     },
     venue: {

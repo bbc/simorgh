@@ -65,6 +65,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      matchSummary: 'Résumé du match',
       and: 'et',
       readTime: {
         readTimePrefix: 'Temps de lecture',

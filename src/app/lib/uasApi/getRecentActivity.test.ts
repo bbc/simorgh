@@ -24,7 +24,7 @@ const mockActivityResponse = {
       activityType: 'favourites',
       resourceId: 'article1',
       resourceType: 'article',
-      resourceDomain: 'articles',
+      resourceDomain: 'world-service-news',
       created: '2026-02-15T18:30:05Z',
       action: 'favourited',
       metaData: {
@@ -33,13 +33,13 @@ const mockActivityResponse = {
         title: 'Article Title 1',
         locatorUrl: '/hindi/articles/article1',
       },
-      '@id': 'urn:bbc:articles:article:article1',
+      '@id': 'urn:bbc:world-service-news:article:article1',
     } as UasActivityItem,
     {
       activityType: 'favourites',
       resourceId: 'article2',
       resourceType: 'article',
-      resourceDomain: 'articles',
+      resourceDomain: 'world-service-news',
       created: '2026-02-12T11:12:52Z',
       action: 'favourited',
       metaData: {
@@ -48,7 +48,7 @@ const mockActivityResponse = {
         title: 'Article Title 2',
         locatorUrl: '/Hindi/articles/article2',
       },
-      '@id': 'urn:bbc:articles:article:article2',
+      '@id': 'urn:bbc:world-service-news:article:article2',
     } as UasActivityItem,
   ],
 };
@@ -97,7 +97,7 @@ describe('getRecentActivity', () => {
       queryParams: {
         startIndex: 10,
         items: 10,
-        resourceDomain: 'articles',
+        resourceDomain: 'world-service-news',
         resourceType: 'article',
         action: 'favourited',
       },
@@ -116,7 +116,7 @@ describe('getRecentActivity', () => {
       queryParams: {
         startIndex: 0,
         items: 10,
-        resourceDomain: 'articles',
+        resourceDomain: 'world-service-news',
         resourceType: 'article',
         action: 'favourited',
       },
@@ -148,11 +148,11 @@ describe('getRecentActivity', () => {
           activityType: 'favourites',
           resourceId: 'article1',
           resourceType: 'article',
-          resourceDomain: 'articles',
+          resourceDomain: 'world-service-news',
           created: '2026-02-15T18:30:05Z',
           action: 'favourited',
           metaData: {},
-          '@id': 'urn:bbc:articles:article:article1',
+          '@id': 'urn:bbc:world-service-news:article:article1',
         } as UasActivityItem,
       ],
     };
@@ -182,7 +182,7 @@ describe('getRecentActivity', () => {
       queryParams: {
         startIndex: 0,
         items: 10,
-        resourceDomain: 'articles',
+        resourceDomain: 'world-service-news',
         resourceType: 'article',
         action: 'favourited',
       },

@@ -1,63 +1,28 @@
-import useUASButton, { UASAction } from '#app/hooks/useUASButton';
-import { useContext } from 'react';
-import { ServiceContext } from '#contexts/ServiceContext';
+import { use } from 'react';
+import { AccountContext } from '#contexts/AccountContext';
 import { Article } from '#app/models/types/optimo';
-import SaveButton from '../SaveButton';
+import SaveArticleButtonAuthenticated from './SaveArticleButtonAuthenticated/lazy';
+import SaveArticleButtonGuest from './SaveArticleButtonGuest';
 import styles from './index.styles';
 
 export interface SaveArticleButtonProps {
-  articleId: string;
   articleTitle: string;
   articlePageData?: Article;
 }
 
-const SaveArticleButton = ({
-  articleId,
-  articleTitle,
-  articlePageData,
-}: SaveArticleButtonProps) => {
-  const { showButton, isSaved, isLoading, error, handleSaveAction } =
-    useUASButton({
-      articleId,
-      articleTitle,
-      articlePageData,
-    });
+const SaveArticleButton = (props: SaveArticleButtonProps) => {
+  const { isPersonalizationAvailable, isPersonalizationEnabled } =
+    use(AccountContext);
 
-  const { translations } = useContext(ServiceContext);
-  const { saveArticleButton } = translations || {};
-
-  if (!showButton) return null;
-
-  if (!saveArticleButton) return null;
-
-  if (error) {
-    // eslint-disable-next-line no-console
-    console.log('Error fetching saved status for article:', {
-      articleId,
-      error,
-    });
-  }
-
-  const buttonLabel = isSaved
-    ? saveArticleButton.saved
-    : saveArticleButton.save;
-
-  const buttonText = isLoading ? saveArticleButton.saving : buttonLabel;
-
-  const handleClick = () => {
-    handleSaveAction(isSaved ? UASAction.REMOVE : UASAction.SAVE);
-  };
+  if (!isPersonalizationAvailable) return null;
 
   return (
     <div css={styles.buttonWrapper}>
-      <SaveButton
-        onClick={handleClick}
-        isLoading={isLoading}
-        isSaved={isSaved}
-        disabled={isLoading}
-        buttonText={buttonText}
-        removeText={saveArticleButton.remove}
-      />
+      {isPersonalizationEnabled ? (
+        <SaveArticleButtonAuthenticated {...props} />
+      ) : (
+        <SaveArticleButtonGuest />
+      )}
     </div>
   );
 };

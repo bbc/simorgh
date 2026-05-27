@@ -60,6 +60,7 @@ export const service: DefaultServiceConfig = {
     swPath: '/sw.js',
     homePageTitle: 'Àbáwọlé',
     translations: {
+      matchSummary: 'Akopọ Ere',
       and: 'ati',
       pagination: {
         previousPage: 'Ìṣájú',
