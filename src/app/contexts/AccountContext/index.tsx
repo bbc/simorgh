@@ -13,6 +13,10 @@ import { RequestContext } from '#app/contexts/RequestContext';
 import onClient from '#app/lib/utilities/onClient';
 import Cookie from 'js-cookie';
 import { getIdctaUserOrigin } from '#app/lib/idcta/getIDCTAUserOrigin';
+import useToggle from '#app/hooks/useToggle';
+import isLocal from '#app/lib/utilities/isLocal';
+import { USER_ID_COOKIE_KEY } from '#app/lib/uasApi/uasUtility';
+import { TOKEN_COOKIE_NAME } from '#app/lib/uasApi/tokenRefresh/tokenManager';
 
 export const AccountContext = createContext<AccountContextProps>(
   {} as AccountContextProps,
@@ -22,6 +26,10 @@ type AccountProviderProps = {
   initialConfig: IdctaConfig | null;
 };
 
+const getClientCookie = (cookieName: string) => {
+  return onClient() ? Cookie.get(cookieName) : undefined;
+};
+
 export const AccountProvider = ({
   children,
   initialConfig,
@@ -29,6 +37,9 @@ export const AccountProvider = ({
   const { locale, atiAnalyticsProducerName } = use(ServiceContext);
   const { isAmp = false, isApp = false, isLite = false } = use(RequestContext);
   const [pageToReturnTo, setPageToReturnTo] = useState<string | null>(null);
+  const { service } = use(ServiceContext);
+  const { enabled: isPersonalizationToggleEnabled, value: accountService } =
+    useToggle('uasPersonalization');
 
   useEffect(() => {
     setPageToReturnTo(window.location.href);
@@ -52,28 +63,34 @@ export const AccountProvider = ({
       : initialConfig?.unavailable_url;
   };
 
-  const getSignedInCookie = (cookieName = 'ckns_id') => {
-    return onClient() ? Cookie.get(cookieName) : false;
-  };
-
   const signInUrl = buildAccountUrl(initialConfig?.signin_url);
   const registerUrl = buildAccountUrl(initialConfig?.register_url);
   const settingsUrl = buildAccountUrl(initialConfig?.settings_url);
   const signOutUrl = buildAccountUrl(initialConfig?.signout_url);
   const forYouUrl = buildAccountUrl(initialConfig?.foryou_url);
 
-  const clientSignedInState = getSignedInCookie(
-    initialConfig?.identity?.idSignedInCookieName,
+  const signedInToken = getClientCookie(
+    initialConfig?.identity?.idSignedInCookieName || TOKEN_COOKIE_NAME,
   );
+
+  const hashedUserId = getClientCookie(USER_ID_COOKIE_KEY);
 
   const isSignedIn =
     isIdctaAvailable &&
-    Boolean(initialConfig?.initialIsSignedIn || clientSignedInState);
-  const isAccountPromoBannerVisible =
-    initialConfig?.initialIsAccountPromoBannerVisible ?? true;
+    Boolean(initialConfig?.initialIsSignedIn || signedInToken);
+
+  const isPersonalizationAvailable =
+    isIdctaAvailable &&
+    isPersonalizationToggleEnabled &&
+    (isLocal()
+      ? accountService?.toString().split('|').includes(service)
+      : true);
+
+  const isPersonalizationEnabled = isPersonalizationAvailable && isSignedIn;
 
   const value = useMemo(
     () => ({
+      hashedUserId,
       isIdctaAvailable,
       isSignedIn,
       signInUrl,
@@ -81,9 +98,11 @@ export const AccountProvider = ({
       registerUrl,
       settingsUrl,
       forYouUrl,
-      isAccountPromoBannerVisible,
+      isPersonalizationAvailable,
+      isPersonalizationEnabled,
     }),
     [
+      hashedUserId,
       forYouUrl,
       isIdctaAvailable,
       isSignedIn,
@@ -91,7 +110,8 @@ export const AccountProvider = ({
       settingsUrl,
       signInUrl,
       signOutUrl,
-      isAccountPromoBannerVisible,
+      isPersonalizationAvailable,
+      isPersonalizationEnabled,
     ],
   );
 

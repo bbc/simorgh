@@ -65,6 +65,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      matchSummary: 'போட்டி சுருக்கம்',
       and: 'மற்றும்',
       readTime: {
         readTimePrefix: 'வாசிக்கும் நேரம்',
@@ -414,7 +415,7 @@ export const service: DefaultServiceConfig = {
           text: 'பிபிசி பற்றி',
         },
         {
-          href: 'https://www.bbc.com/tamil/institutional-37286684',
+          href: 'https://www.bbc.com/tamil/articles/cgme0ml382zo',
           text: 'தனியுரிமை கொள்கை',
         },
         {

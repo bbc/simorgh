@@ -69,6 +69,8 @@ const exitFakeScreenCallback = () => {
 interface CurationProps extends Curation {
   // keep this local so we do not change the shared bff curation data shape
   experimentProps?: ComponentExperimentProps;
+  curationContentType?: string;
+  pageType?: string;
 }
 
 export default ({
@@ -89,6 +91,8 @@ export default ({
   curationId,
   mediaCollection,
   experimentProps,
+  curationContentType,
+  pageType,
 }: CurationProps) => {
   const componentName = getComponentName({
     visualStyle,
@@ -96,6 +100,7 @@ export default ({
     radioSchedule,
     embed,
     mediaCollection,
+    curationContentType,
   });
 
   const GridComponent = getGridComponent(componentName);
@@ -116,14 +121,14 @@ export default ({
     isLive: summaryIsLive,
     title: linkText,
   } = firstSummary || {};
-  // flatten this once so the tracking object stays easy to read below
+
   const experimentTrackingProps = experimentProps || {};
 
   const eventTrackingData: EventTrackingData = {
     componentName,
     groupTracker: {
       name: curationSubheading,
-      type: `${componentName}`,
+      type: componentName,
       position: position + 1,
       ...(link && { link }),
       ...(curationId && { resourceId: curationId }),
@@ -199,6 +204,7 @@ export default ({
             blocks={portraitVideo.blocks}
             eventTrackingData={eventTrackingData}
             css={styles.pvCarousel}
+            link={link}
           />
         );
       }
@@ -252,7 +258,13 @@ export default ({
         const curationSubheadingClickTracker =
           useClickTrackerHandler(eventTrackingData);
 
-        return curationLength > 1 ? (
+        // Show heading if more than one curation, or if only one and pageType is 'article'
+        const shouldShowHeading = curationLength > 1 || pageType === 'article';
+
+        const gridHeadingLevel =
+          pageType === 'article' || curationLength > 1 ? 3 : 2;
+
+        return shouldShowHeading ? (
           <section aria-labelledby={id} role="region">
             <div {...viewTracker}>
               {curationSubheading &&
@@ -271,7 +283,7 @@ export default ({
                 ))}
               <GridComponent
                 summaries={summaries}
-                headingLevel={3}
+                headingLevel={gridHeadingLevel}
                 isFirstCuration={isFirstCuration}
                 eventTrackingData={eventTrackingData}
               />
@@ -281,7 +293,7 @@ export default ({
           <div {...viewTracker}>
             <GridComponent
               summaries={summaries}
-              headingLevel={2} // if there is only one curation, all promos should be h2, and no subheading
+              headingLevel={2}
               isFirstCuration={isFirstCuration}
               eventTrackingData={eventTrackingData}
             />

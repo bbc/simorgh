@@ -14,7 +14,7 @@ import readme from './README.md';
 import metadata from './metadata.json';
 import type { HeadToHeadV2Data } from './types';
 import HeadToHeadV2 from '.';
-import { shortNamesMap } from './storybook/helpers/short-name-map';
+import { SHORT_NAMES } from './storybook/helpers/short-name-map';
 import venuesData from './static-data/premier-league-venues.json';
 
 const { venues } = venuesData;
@@ -45,11 +45,11 @@ export default {
   },
   argTypes: {
     home: {
-      options: Object.keys(shortNamesMap()),
+      options: Object.keys(SHORT_NAMES),
       control: { type: 'select' },
     },
     away: {
-      options: Object.keys(shortNamesMap()),
+      options: Object.keys(SHORT_NAMES),
       control: { type: 'select' },
     },
     venue: {
@@ -69,28 +69,26 @@ type StoryData = HeadToHeadV2Data & {
 };
 
 interface ComponentProps {
-  data: StoryData;
+  initialSportData: StoryData;
   isConciseView?: boolean;
   shouldShowActions?: boolean;
-  maximumContainerScoreDigits?: string;
+  maximumContainerScoreDigits?: number;
   teamBadgePlaceholderFallbackType?: 'badge' | 'flag';
 }
 
-// @ts-expect-error - PS copy and paste
-const baseData = fixtureData.data.sportDataEventContent.content.data
-  .sportDataEvent as StoryData;
+const baseData = fixtureData.data.sportDataEventContent
+  .sportDataEvent as unknown as StoryData;
 
 const Component = ({
-  data,
+  initialSportData,
   isConciseView = false,
   shouldShowActions = true,
   maximumContainerScoreDigits,
   teamBadgePlaceholderFallbackType = 'badge',
 }: ComponentProps) => {
   return (
-    // @ts-expect-error - PS copy and paste
     <HeadToHeadV2
-      data={data}
+      initialSportData={initialSportData}
       isConciseView={isConciseView}
       shouldShowActions={shouldShowActions}
       maximumContainerScoreDigits={maximumContainerScoreDigits}
@@ -99,9 +97,13 @@ const Component = ({
   );
 };
 
-export const Default = () => <Component data={baseData} />;
+export const Default = () => <Component initialSportData={baseData} />;
 export const ConciseView = () => (
-  <Component data={baseData} isConciseView shouldShowActions={false} />
+  <Component
+    initialSportData={baseData}
+    isConciseView
+    shouldShowActions={false}
+  />
 );
 
 export const CancelledEvent = HeadToHeadV2Component.bind({});
@@ -117,6 +119,7 @@ export const EventWithOnwardJourneyHoverConcise =
 
 // @ts-expect-error - PS copy and paste
 CancelledEvent.args = {
+  urn: 'urn:bbc:sportsdata:football:event:s-3y91hnyfjh24yxjhm77a7hy50',
   home: 'Fulham',
   away: 'Liverpool',
   baseData: cancelledEventData,

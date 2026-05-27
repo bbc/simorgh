@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { use, useState } from 'react';
 import Heading from '#app/components/Heading';
 import Text from '#app/components/Text';
 import LiveHeaderMedia from '#app/components/LiveHeaderMedia';
 import { MediaCollection } from '#app/components/MediaLoader/types';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import MaskedImage from '#app/components/MaskedImage';
 import LiveLabelHeader from './LiveLabelHeader';
 import styles from './styles';
@@ -30,6 +31,9 @@ const Header = ({
   const [isMediaOpen, setLiveMediaOpen] = useState(false);
   const isHeaderImage = !!imageUrl && !!imageUrlTemplate && !!imageWidth;
   const isWithImageLayout = isHeaderImage || !!mediaCollections;
+  const {
+    translations: { matchSummary = 'Match Summary' },
+  } = use(ServiceContext);
 
   const watchVideoClickHandler = () => {
     setLiveMediaOpen(!isMediaOpen);
@@ -70,15 +74,14 @@ const Header = ({
               <VisuallyHiddenText>{title}</VisuallyHiddenText>
             )}
           </Heading>
-          {/* TODO - translations needed. Added H2 for accessibility reasons, matches PS */}
-          <VisuallyHiddenText as="h2">Match Summary</VisuallyHiddenText>
+          <VisuallyHiddenText as="h2">{matchSummary}</VisuallyHiddenText>
         </div>
       </div>
     );
   }
 
   return (
-    <div css={styles.headerContainer}>
+    <div css={[styles.headerContainer, styles.headerContainerForcedColours]}>
       <div css={styles.backgroundContainer}>
         <div css={styles.backgroundColor} />
       </div>

@@ -61,6 +61,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      matchSummary: 'सामन्याचा सारांश',
       and: 'आणि',
       readTime: {
         readTimePrefix: 'वाचन वेळ',
@@ -78,6 +79,12 @@ export const service: DefaultServiceConfig = {
       seeAll: 'सर्व पाहा',
       home: 'बातम्या',
       continueReading: 'पुढे वाचा',
+      topicDiscovery: {
+        heading: 'अधिक शोधा',
+        moreFromTopic: '{topic} मधील अधिक',
+        fetchErrorMessage:
+          'लोड करण्यात अयशस्वी. कृपया नंतर पुन्हा प्रयत्न करा.',
+      },
       currentPage: 'सध्याचे पान',
       skipLinkText: 'थेट मजकुरावर जा',
       relatedContent: 'संबंधित मजकूर',

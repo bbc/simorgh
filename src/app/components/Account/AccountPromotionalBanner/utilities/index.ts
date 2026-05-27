@@ -1,62 +1,81 @@
-import setCookie from '#app/lib/utilities/setCookie';
+const ONE_DAY_IN_MS = 24 * 60 * 60 * 1000;
 
-export const ACCOUNT_BANNER_DISMISS_COOKIE = 'accountPromoDismissals';
-export const ACCOUNT_BANNER_LAST_DISMISS_COOKIE = 'accountPromoLastDismissed';
+export const ACCOUNT_BANNER_DISMISS_KEY =
+  'account_promotional_banner_dismissals';
+export const ACCOUNT_BANNER_LAST_DISMISS_KEY =
+  'account_promotional_banner_last_dismissed';
 export const ACCOUNT_BANNER_MAX_DISMISSALS = 3;
-export const ACCOUNT_BANNER_DISMISS_INTERVAL_MS = 10 * 24 * 60 * 60 * 1000; // 10 days
+export const ACCOUNT_BANNER_DISMISS_INTERVAL_MS = 10 * ONE_DAY_IN_MS;
+export const DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS =
+  'display-account-promotional-banner';
 
-const getCookieValue = (cookieString: string, name: string): string | null => {
-  if (!cookieString) return null;
-  const match = cookieString
-    .split(';')
-    .map(cookie => cookie.trim())
-    .find(cookie => cookie.startsWith(`${name}=`));
-  return match ? decodeURIComponent(match.slice(name.length + 1)) : null;
-};
+export const isAccountPromoBannerVisible = ({
+  cookies,
+  dismissalCount,
+  lastDismissed,
+}: {
+  cookies: string;
+  dismissalCount: string | null;
+  lastDismissed: string | null;
+}): boolean => {
+  if (cookies.split(';').some(item => item.trim().startsWith('ckns_id='))) {
+    return false;
+  }
 
-const parseIntOrZero = (value: string | null) =>
-  parseInt(value ?? '0', 10) || 0;
+  const count = Number(dismissalCount);
+  const effectiveCount = Number.isNaN(count) ? 0 : count;
 
-/**
- * Determines whether the account promotional banner should be visible based on the
- * dismissal cookies in the provided cookie string.
- *
- * Designed to run on both the server (pass `req.headers.cookie`) and the client
- * (pass `document.cookie`), so that SSR output matches the post-hydration render
- * and avoids a layout shift.
- */
-export const isAccountPromoBannerVisible = (cookieHeader = ''): boolean => {
-  const dismissals = parseIntOrZero(
-    getCookieValue(cookieHeader, ACCOUNT_BANNER_DISMISS_COOKIE),
-  );
-  const lastDismissed = parseIntOrZero(
-    getCookieValue(cookieHeader, ACCOUNT_BANNER_LAST_DISMISS_COOKIE),
-  );
+  if (effectiveCount >= ACCOUNT_BANNER_MAX_DISMISSALS) {
+    return false;
+  }
 
-  if (dismissals >= ACCOUNT_BANNER_MAX_DISMISSALS) return false;
+  const lastDismissedMs = Number(lastDismissed);
   if (
-    lastDismissed &&
-    Date.now() - lastDismissed < ACCOUNT_BANNER_DISMISS_INTERVAL_MS
+    lastDismissedMs &&
+    Date.now() - lastDismissedMs < ACCOUNT_BANNER_DISMISS_INTERVAL_MS
   ) {
     return false;
   }
+
   return true;
 };
 
-export const setAccountPromoBannerDismissed = () => {
-  if (typeof document === 'undefined') return;
-
-  const dismissals =
-    parseIntOrZero(
-      getCookieValue(document.cookie, ACCOUNT_BANNER_DISMISS_COOKIE),
-    ) + 1;
-
-  setCookie({
-    name: ACCOUNT_BANNER_DISMISS_COOKIE,
-    value: String(dismissals),
-  });
-  setCookie({
-    name: ACCOUNT_BANNER_LAST_DISMISS_COOKIE,
-    value: String(Date.now()),
-  });
+export const setAccountPromoBannerDismissed = (): void => {
+  const stored = localStorage.getItem(ACCOUNT_BANNER_DISMISS_KEY);
+  const count = Number(stored);
+  const effectiveCount = Number.isNaN(count) ? 0 : count;
+  localStorage.setItem(ACCOUNT_BANNER_DISMISS_KEY, String(effectiveCount + 1));
+  localStorage.setItem(ACCOUNT_BANNER_LAST_DISMISS_KEY, String(Date.now()));
 };
+
+export const buildAccountBannerClientScript = (): string => `(() => {
+  if (document.cookie.split(';').some((item) => item.trim().startsWith('ckns_id='))) {
+    return;
+  }
+
+  function localStorageIsAvailable() {
+    try {
+      var storage = window && window.localStorage;
+      if (typeof storage.getItem === 'function') {
+        return true;
+      }
+      return false;
+    } catch (error) {
+      return false;
+    }
+  }
+
+  if (localStorageIsAvailable()) {
+    var dismissCount = Number(window.localStorage.getItem('${ACCOUNT_BANNER_DISMISS_KEY}'));
+    if (dismissCount >= ${ACCOUNT_BANNER_MAX_DISMISSALS}) {
+      return;
+    }
+
+    var lastDismissedDate = Number(window.localStorage.getItem('${ACCOUNT_BANNER_LAST_DISMISS_KEY}'));
+    if (lastDismissedDate && Date.now() - lastDismissedDate < ${ACCOUNT_BANNER_DISMISS_INTERVAL_MS}) {
+      return;
+    }
+  }
+
+  document.querySelector('html').classList.add('${DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS}');
+})()`;
