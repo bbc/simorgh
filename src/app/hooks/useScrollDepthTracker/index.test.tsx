@@ -134,7 +134,6 @@ const buildElement = ({
   return element;
 };
 
-
 // simulateScroll sets the mocked window.scrollY value and fires a scroll event,
 // which mimics the user scrolling the page to a specific position.
 const simulateScroll = (scrollY: number) => {
