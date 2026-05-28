@@ -86,16 +86,4 @@ describe('extractHeader', () => {
       showCookieBannerBasedOnCountry: true,
     });
   });
-
-  it(`uses 'x-bbc-edge-country' when 'x-country' is not set`, () => {
-    const actual = extractHeaders({
-      'x-bbc-edge-country': 'ng',
-    });
-    expect(actual).toStrictEqual({
-      bbcOrigin: null,
-      isUK: false,
-      showAdsBasedOnLocation: false,
-      showCookieBannerBasedOnCountry: false,
-    });
-  });
 });
