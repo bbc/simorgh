@@ -14,7 +14,7 @@ import logCodes from '#app/lib/logger.const';
 //
 // Production (yarn start):
 //   - Server chdir's into build/standalone/ws-nextjs-app/
-//   - Static CSS files are under public/_next/ (copied by copyStaticFiles build step)
+//   - Static CSS files are under public/_next/ (copied by all build scripts via copyStaticFiles)
 //
 // Development (yarn dev) and build-time:
 //   - CSS chunks are written to build/ directory relative to project root
