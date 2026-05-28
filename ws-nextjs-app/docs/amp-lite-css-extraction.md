@@ -90,11 +90,11 @@ inlined CSS = emotion critical CSS
 
 ## Where this runs in `_document.page.tsx`
 
-CSS extraction is isolated to the `isAmp` and `isLite` branches of the `render()` switch. Canonical renders never call `getAmpLiteCss` or access `__NEXT_DATA__`, so an error in the extraction logic cannot affect the default page experience.
+CSS extraction is isolated to the `isAmp` (article only — AMP is only supported for articles) and `isLite` branches of the `render()` switch. Canonical renders never call `getAmpLiteCss` or access `__NEXT_DATA__`, so an error in the extraction logic cannot affect the default page experience.
 
 ```tsx
 switch (true) {
-  case isAmp: {
+  case isAmp && pageType === 'article': {
     const ampCss = css + getAmpLiteCss(getNextData());
     // ...
   }
