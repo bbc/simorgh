@@ -44,7 +44,14 @@ export default async (context: GetServerSidePropsContext) => {
   const { isAmp } = getPathExtension(resolvedUrlWithoutQuery);
   const { variant } = parseRoute(resolvedUrl);
 
-  const country = reqHeaders['x-country']?.toString()?.toLowerCase() || null;
+  const countryHeader =
+    reqHeaders['x-country'] ?? reqHeaders['x-bbc-edge-country'];
+  const country = countryHeader
+    ? (Array.isArray(countryHeader)
+        ? countryHeader[0]
+        : countryHeader
+      ).toLowerCase()
+    : null;
 
   const shouldFetchCountryCuration = getEnvConfig().SIMORGH_APP_ENV !== 'live';
 
