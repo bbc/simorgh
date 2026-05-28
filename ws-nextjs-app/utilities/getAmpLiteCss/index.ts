@@ -29,6 +29,19 @@ const resolveCssFilePath = (file: string): string | null =>
 
 const logger = nodeLogger(__filename);
 
+type BuildManifest = { pages: Record<string, string[]> };
+type LoadableManifest = Record<string, { id: number; files: string[] }>;
+
+// Manifest cache keyed by absolute file path. Manifests are static in production
+// (never change at runtime), so parsing once and caching avoids repeated readFileSync
+// + JSON.parse on every AMP/Lite request.
+const manifestCache = new Map<string, BuildManifest | LoadableManifest>();
+
+// CSS file content cache keyed by resolved absolute file path. CSS chunk files are
+// also static after build, so caching their contents avoids repeated synchronous
+// disk reads for the same chunk on every AMP/Lite request.
+const cssFileCache = new Map<string, string>();
+
 const safeReadFile = (filePath: string, logCode: string): string | null => {
   try {
     return readFileSync(filePath, 'utf-8');
@@ -56,20 +69,20 @@ const readCssFiles = (files: string[]): string =>
       return css;
     }
 
+    if (cssFileCache.has(filePath)) {
+      return css + (cssFileCache.get(filePath) ?? '');
+    }
+
     const content = safeReadFile(
       filePath,
       logCodes.BUILD_MANIFEST_CSS_READ_ERROR,
     );
-    return content !== null ? css + content : css;
+    if (content !== null) {
+      cssFileCache.set(filePath, content);
+      return css + content;
+    }
+    return css;
   }, '');
-
-type BuildManifest = { pages: Record<string, string[]> };
-type LoadableManifest = Record<string, { id: number; files: string[] }>;
-
-// Manifest cache keyed by absolute file path. Manifests are static in production
-// (never change at runtime), so parsing once and caching avoids repeated readFileSync
-// + JSON.parse on every AMP/Lite request.
-const manifestCache = new Map<string, BuildManifest | LoadableManifest>();
 
 const loadManifest = <T extends BuildManifest | LoadableManifest>(
   manifestPath: string,
@@ -204,6 +217,7 @@ export default getAmpLiteCss;
 // The public API is the default export (getAmpLiteCss).
 export const resetManifestCaches = (): void => {
   manifestCache.clear();
+  cssFileCache.clear();
 };
 
 export {

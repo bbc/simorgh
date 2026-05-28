@@ -133,6 +133,18 @@ describe('getAmpLiteCss utilities', () => {
         expect.objectContaining({ message: 'permission denied' }),
       );
     });
+
+    it('reads each CSS file from disk only once across multiple calls (cache hit)', () => {
+      existsSyncMock.mockImplementation((p: string) =>
+        p.includes('public/_next'),
+      );
+      readFileSyncMock.mockReturnValue('.cached{}');
+
+      readCssFiles(['static/css/a.css']);
+      readCssFiles(['static/css/a.css']);
+
+      expect(readFileSyncMock).toHaveBeenCalledTimes(1);
+    });
   });
 
   describe('getBuildManifestCss', () => {
