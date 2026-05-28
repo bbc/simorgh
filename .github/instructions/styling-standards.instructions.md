@@ -42,20 +42,14 @@ applyTo: "**"
 
 ```
 // index.tsx
-const Switch = ({ isChecked, onToggle }: SwitchProps) => {
-  const handleToggle = () => {
-    onToggle(!isChecked);
-  };
-
+const Switch = ({ isChecked }: SwitchProps) => {
   return (
-    <div css={style.switch} onClick={handleToggle}>
-      <div
-        css={[
-          styles.slider,
-          isChecked ? styles.selectedSlider : styles.unSelectedSlider,
-        ]}
-      />
-    </div>
+    <div
+      css={[
+        styles.slider,
+        isChecked ? styles.selectedSlider : styles.unSelectedSlider,
+      ]}
+    />
   );
 };
 ```
