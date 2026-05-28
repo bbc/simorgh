@@ -45,7 +45,7 @@ export default async (context: GetServerSidePropsContext) => {
   const { variant } = parseRoute(resolvedUrl);
 
   const countryHeader =
-    reqHeaders['x-country'] ?? reqHeaders['x-bbc-edge-country'];
+    reqHeaders['x-country'] || reqHeaders['x-bbc-edge-country'];
   const country = countryHeader
     ? (Array.isArray(countryHeader) ? countryHeader[0] : countryHeader)
         .toString()
