@@ -114,7 +114,8 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
           optimizely &&
           sendOptimizelyEvents &&
           experimentVariant &&
-          experimentVariant !== 'off' &&
+          trackingIsEnabled &&
+          (!eventSent || alwaysInView) &&
           shouldTrackTopicView(componentName, experimentName)
         ) {
           const overrideAttributes = optimizely.user.attributes;

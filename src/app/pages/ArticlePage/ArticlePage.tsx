@@ -59,6 +59,7 @@ import ContinueReadingButton, {
   ContinueReadingButtonProps,
 } from '#app/components/ContinueReadingButton';
 import SaveArticleButton from '#app/components/SaveArticleButton';
+import isLive from '#lib/utilities/isLive';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -245,7 +246,7 @@ const ArticlePage = ({
     experimentName: string,
     experimentVariant: string | null,
   ): ComponentExperimentProps | null =>
-    experimentVariant && experimentVariant !== 'off'
+    experimentVariant
       ? {
           sendOptimizelyEvents: true,
           experimentName,
@@ -257,6 +258,8 @@ const ArticlePage = ({
     topicDiscoveryExperimentName,
     topicDiscoveryVariant,
   );
+  const isTopicDiscoveryVariant =
+    topicDiscoveryVariant && topicDiscoveryVariant !== 'off';
 
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
@@ -317,10 +320,11 @@ const ArticlePage = ({
   const atiData = {
     ...atiAnalytics,
     ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
-    ...(topicDiscoveryExperimentProps && {
-      experimentName: topicDiscoveryExperimentProps.experimentName,
-      experimentVariant: topicDiscoveryExperimentProps.experimentVariant,
-    }),
+    ...(isTopicDiscoveryVariant &&
+      topicDiscoveryExperimentProps && {
+        experimentName: topicDiscoveryExperimentProps.experimentName,
+        experimentVariant: topicDiscoveryExperimentProps.experimentVariant,
+      }),
   };
 
   const showPortraitVideoCarousel = Boolean(
@@ -417,12 +421,15 @@ const ArticlePage = ({
 
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
 
-  const showRelatedTopicsComponent = Boolean(
-    showRelatedTopics && topics.length > 0 && !showTopicDiscoveryComponent,
-  );
+  const showTopicDiscovery =
+    (showTopicDiscoveryComponent || isTopicDiscoveryVariant) &&
+    !isAmp &&
+    !isLite &&
+    !isLive();
 
-  // EXPERIMENT: Topic Discovery
-  const showTopicDiscovery = showTopicDiscoveryComponent && !isAmp && !isLite;
+  const showRelatedTopicsComponent = Boolean(
+    showRelatedTopics && topics.length > 0 && !showTopicDiscovery,
+  );
 
   const showMediaCuration = Boolean(
     !isAmp &&

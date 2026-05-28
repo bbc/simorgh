@@ -106,19 +106,16 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
           event.stopPropagation();
           event.preventDefault();
 
-          if (
-            optimizely &&
-            experimentVariant &&
-            experimentVariant !== 'off' &&
-            sendOptimizelyEvents
-          ) {
+          if (optimizely && experimentVariant && sendOptimizelyEvents) {
             const overrideAttributes = optimizely?.user.attributes;
 
-            optimizely.track(
-              `${componentName}-clicks`,
-              optimizely.user.id,
-              overrideAttributes,
-            );
+            if (experimentVariant !== 'off') {
+              optimizely.track(
+                `${componentName}-clicks`,
+                optimizely.user.id,
+                overrideAttributes,
+              );
+            }
 
             // send the extra optimizely event for the total oj clicks metric
             if (shouldTrackOjClick(componentName, experimentName)) {
