@@ -7,7 +7,7 @@ applyTo: "**"
 ## Rules
 - Write self-documenting code. Try to avoid comments by using descriptive variable / function names, split functionality into smaller functions.
 - We use React.
-- We use Emotion for styling and we use the object styles syntax.
+- We use Emotion for styling.
 - Components should:
   - Be functional components
   - Use typed props
@@ -26,7 +26,7 @@ applyTo: "**"
 ## Folder structure and examples
 Each React component should have its own folder under the root `./src/app/components/`, and each folder should contain:
 - An index.tsx file that contains the react component. 
-- An index.style.tsx file that contains styling related functions.  
+- An index.style.tsx file that contains styling related functions.
 - An index.test.tsx file that contains the unit tests. 
 - An index.stories.tsx file that contains a respective storybook component.
   - If you can use arg and argType parameters where necessary, but omit them for very basic components. 

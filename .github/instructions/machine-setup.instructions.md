@@ -2,12 +2,7 @@
 description: "New Starter Machine Setup"
 applyTo: "**"
 ---
-# Component Standards
+# New Starter Machine Setup
 
 ## Rules
-
-## Coding Best Practices
-
-## Testing
-
-
+- All engineers require certificates to carry out work. 
