@@ -149,8 +149,20 @@ const getBuildManifestCss = (page: string): string => {
 const getDynamicImportCss = (dynamicIds: Array<string | number>): string => {
   if (!dynamicIds.length) return '';
 
+  const manifestPath = join(
+    process.cwd(),
+    'build/react-loadable-manifest.json',
+  );
+
+  if (!existsSync(manifestPath)) {
+    logger.warn(logCodes.DYNAMIC_IMPORT_CSS_READ_ERROR, {
+      message: `React loadable manifest not found at ${manifestPath}; returning no dynamic CSS for AMP/Lite render`,
+    });
+    return '';
+  }
+
   const manifest = loadManifest<LoadableManifest>(
-    join(process.cwd(), 'build/react-loadable-manifest.json'),
+    manifestPath,
     logCodes.DYNAMIC_IMPORT_CSS_READ_ERROR,
   );
   if (!manifest) return '';

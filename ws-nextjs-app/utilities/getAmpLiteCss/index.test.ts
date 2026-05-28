@@ -303,10 +303,16 @@ describe('getAmpLiteCss utilities', () => {
       expect(existsSyncMock).not.toHaveBeenCalled();
     });
 
-    it('returns empty string when react-loadable-manifest.json does not exist', () => {
+    it('logs a warning and returns empty string when react-loadable-manifest.json does not exist', () => {
       existsSyncMock.mockReturnValue(false);
 
       expect(getDynamicImportCss(['some-chunk'])).toBe('');
+      expect(loggerMock.warn).toHaveBeenCalledWith(
+        'dynamic_import_css_read_error',
+        expect.objectContaining({
+          message: expect.stringContaining('React loadable manifest not found'),
+        }),
+      );
     });
 
     it('matches chunks by chunkKey and returns their CSS', () => {
