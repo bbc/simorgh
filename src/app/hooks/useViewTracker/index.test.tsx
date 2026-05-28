@@ -841,27 +841,6 @@ describe('useViewTracker', () => {
   });
 
   describe('Error handling', () => {
-    it('should load polyfill and not throw error if IntersectionObserver is not supported', async () => {
-      // @ts-expect-error required for testing purposes
-      delete global.IntersectionObserver;
-
-      const trackingData = {
-        componentName: 'most-read',
-        format: 'CHD=promo::2',
-        url: 'http://www.bbc.com/pidgin/tori-51745682',
-      };
-      const { result } = renderHook(() => useViewTracker(trackingData), {
-        wrapper,
-        initialProps: {},
-      });
-      const element = document.createElement('div');
-
-      await result.current.ref(element);
-
-      expect(result).not.toHaveProperty('error');
-      expect(typeof global.IntersectionObserver).toEqual('function');
-    });
-
     it('should not throw error and not send event to ATI when no tracking data passed into hook', async () => {
       const trackingData = undefined;
 

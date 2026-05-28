@@ -1,8 +1,7 @@
-import { use, useCallback, useState } from 'react';
+import { use } from 'react';
+import { useMutation, useQueryClient } from '@tanstack/react-query';
 import useUASFetchSaveStatus from '#app/hooks/useUASFetchSaveStatus';
-import { AccountContext } from '#app/contexts/AccountContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import isLocal from '#app/lib/utilities/isLocal';
 import uasApiRequest from '#app/lib/uasApi';
 import {
   buildGlobalId,
@@ -12,11 +11,8 @@ import {
   buildPromoImageUrl,
 } from '#app/lib/uasApi/uasUtility';
 import { Article } from '#app/models/types/optimo';
-import useToggle from '../useToggle';
-
-/** A hook that fetches an article's saved status and controls showing the save UAS button
- * based on feature toggles and sign in status,
- * with room to later expand for toggling the save state based on user actions. */
+import uasKeys from '#app/lib/uasApi/queryKeys';
+import { AccountContext } from '#app/contexts/AccountContext';
 
 enum UASAction {
   SAVE = 'save',
@@ -24,95 +20,68 @@ enum UASAction {
 }
 
 interface UseUASButtonReturn {
-  showButton: boolean;
   isSaved: boolean;
   isLoading: boolean;
+  isUpdating: boolean;
   error: Error | null;
-  handleSaveAction: (action: UASAction) => Promise<void>;
+  handleSaveAction: (action: UASAction) => void;
 }
-interface UseUASButtonProps {
+export interface UseUASButtonProps {
   articleId: string;
   articleTitle: string;
   articlePageData?: Article;
 }
 
+// NOTE: Using this hook anywhere in the app will eagerly pull TanStack Query into the bundle.
+// All TanStack-related code must live exclusively inside the lazy boundary.
 const useUASButton = ({
   articleId,
   articleTitle,
   articlePageData,
 }: UseUASButtonProps): UseUASButtonReturn => {
-  const { isSignedIn } = use(AccountContext);
   const { service } = use(ServiceContext);
-  const { enabled: featureToggleOn = false, value: accountService = '' } =
-    useToggle('uasPersonalization');
-  const [isSaving, setIsSaving] = useState(false);
-  const [saveError, setSaveError] = useState<Error | null>(null);
+  const { hashedUserId = '' } = use(AccountContext);
+  const queryClient = useQueryClient();
+  const { isSaved, isLoading, error } = useUASFetchSaveStatus(articleId);
 
-  const isUASEnabled =
-    featureToggleOn &&
-    (isLocal()
-      ? accountService?.toString().split('|').includes(service)
-      : true);
-
-  const showButton = isUASEnabled && isSignedIn;
-
-  const { isSaved, isLoading, error, setIsSaved } = useUASFetchSaveStatus(
-    showButton ? articleId : '',
-  );
-
-  const promoImageObj = extractPromoImageFromArticleData(articlePageData);
-
-  const handleSaveAction = useCallback(
-    async (action: UASAction) => {
-      if (isSaving) return;
-
-      setIsSaving(true);
-      try {
-        setSaveError(null);
-
-        if (action === UASAction.SAVE) {
-          const promoImageBuild = buildPromoImageUrl(promoImageObj);
-          const body = createFavouritesPayload({
-            articleId,
-            service,
-            articleTitle,
-            promoImage: promoImageBuild,
-            promoImageAltText: promoImageObj?.altText || '',
-            locatorUrl: articlePageData?.metadata?.locators?.canonicalUrl || '',
-          });
-          await uasApiRequest('POST', FAVOURITES_CONFIG.activityType, { body });
-          setIsSaved(true);
-        } else {
-          const globalId = buildGlobalId(articleId);
-          await uasApiRequest('DELETE', FAVOURITES_CONFIG.activityType, {
-            globalId,
-          });
-          setIsSaved(false);
-        }
-      } catch (err) {
-        const saveErr = err instanceof Error ? err : new Error(String(err));
-        setSaveError(saveErr);
-      } finally {
-        setIsSaving(false);
+  const mutation = useMutation({
+    mutationFn: async (action: UASAction) => {
+      if (action === UASAction.SAVE) {
+        const promoImageObj = extractPromoImageFromArticleData(articlePageData);
+        const promoImageBuild = buildPromoImageUrl(promoImageObj);
+        const body = createFavouritesPayload({
+          articleId,
+          service,
+          articleTitle,
+          promoImage: promoImageBuild,
+          promoImageAltText: promoImageObj?.altText || '',
+          locatorUrl: articlePageData?.metadata?.locators?.canonicalUrl || '',
+        });
+        await uasApiRequest('POST', FAVOURITES_CONFIG.activityType, { body });
+      } else {
+        const globalId = buildGlobalId(articleId);
+        await uasApiRequest('DELETE', FAVOURITES_CONFIG.activityType, {
+          globalId,
+        });
       }
     },
-    [
-      articleId,
-      service,
-      articleTitle,
-      promoImageObj,
-      articlePageData,
-      isSaving,
-      setIsSaved,
-    ],
-  );
+    onSuccess: (_, action) => {
+      queryClient.setQueryData(
+        uasKeys.favouriteStatus(hashedUserId, articleId),
+        action === UASAction.SAVE,
+      );
+      queryClient.invalidateQueries({
+        queryKey: uasKeys.favouritesList(hashedUserId),
+      });
+    },
+  });
 
   return {
-    showButton,
     isSaved,
-    isLoading: isLoading || isSaving,
-    error: saveError || error,
-    handleSaveAction,
+    isLoading,
+    isUpdating: mutation.isPending,
+    error: mutation.error || error,
+    handleSaveAction: mutation.mutate,
   };
 };
 

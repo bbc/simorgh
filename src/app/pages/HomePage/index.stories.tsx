@@ -1,12 +1,14 @@
 /* eslint-disable no-shadow */
 import { useEffect, useState } from 'react';
-import Url from 'url-parse';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import { Curation } from '#app/models/types/curationData';
 import { Services } from '#app/models/types/global';
-import { MemoryRouter } from 'react-router-dom';
 import { StoryArgs, StoryProps } from '../../models/types/storybook';
-import HomePage from '.';
+import HomePage from './HomePage';
+import PageLayoutWrapper from '#app/components/PageLayoutWrapper';
+import { ServiceContextProvider } from '#app/contexts/ServiceContext';
+import { RequestContextProvider } from '#app/contexts/RequestContext';
+import ThemeProvider from '#app/components/ThemeProvider';
 
 const ONE_DAY_IN_MILLISECONDS = 24 * 60 * 60 * 1000;
 
@@ -43,9 +45,7 @@ const Component = ({ service, variant, isLite }: StoryProps) => {
   useEffect(() => {
     const loadPageData = async () => {
       const response = await fetch(
-        new Url(
-          `data/${service}/homePage/${variant === 'default' ? 'index' : variant}.json`,
-        ).toString(),
+        `data/${service}/homePage/${variant === 'default' ? 'index' : variant}.json`,
       );
       const { data } = await response.json();
 
@@ -62,24 +62,35 @@ const Component = ({ service, variant, isLite }: StoryProps) => {
   }
 
   return (
-    <MemoryRouter>
-      <HomePage
+    <ServiceContextProvider service={service} variant={variant}>
+      <RequestContextProvider
+        isLite={isLite}
         service={service}
         variant={variant}
         pageType={HOME_PAGE}
-        status={200}
-        isAmp={false}
-        isLite={isLite}
         pathname={`/${service}`}
-        pageData={pageData}
-      />
-    </MemoryRouter>
+      >
+        <ThemeProvider service={service} variant={variant}>
+          <PageLayoutWrapper
+            // @ts-expect-error - Fixture data
+            pageData={pageData}
+            status={200}
+          >
+            <HomePage
+              // @ts-expect-error - Fixture data
+              pageData={pageData}
+            />
+          </PageLayoutWrapper>
+        </ThemeProvider>
+      </RequestContextProvider>
+    </ServiceContextProvider>
   );
 };
 
 export default {
   Component,
   title: 'Pages/Home Page',
+  parameters: { layout: 'fullscreen' },
 };
 
 export const Example = {
@@ -90,31 +101,49 @@ export const Example = {
 };
 
 // This story is for chromatic testing purposes only
-export const Test = {
-  render: (_: StoryArgs, { variant }: StoryProps) => (
-    <Component service="kyrgyz" variant={variant} />
-  ),
-  tags: ['!dev'],
-};
+export const Test = () => <Component service="kyrgyz" variant="default" />;
 
-export const TestWSLanguages = {
-  render: (_: StoryArgs, { variant }: StoryProps) => (
-    <Component service="ws" variant={variant} />
-  ),
-  tags: ['!dev'],
-};
-
-export const TestLite = {
-  render: (_: StoryArgs, { variant }: StoryProps) => (
-    <Component service="gahuza" variant={variant} isLite />
-  ),
-  tags: ['!dev'],
-  parameters: {
-    chromatic: {
-      viewports: [
-        399, // Group 1
-        899, // Group 3
-      ],
+Test.globals = {
+  toggles: {
+    mostRead: {
+      enabled: true,
     },
+  },
+  service: { service: 'kyrgyz' },
+};
+
+Test.tags = ['!dev'];
+
+export const TestWSLanguages = () => (
+  <Component service="ws" variant="default" />
+);
+
+TestWSLanguages.globals = {
+  service: { service: 'ws' },
+};
+
+TestWSLanguages.tags = ['!dev'];
+
+export const TestLite = () => (
+  <Component service="gahuza" variant="default" isLite />
+);
+
+TestLite.globals = {
+  toggles: {
+    mostRead: {
+      enabled: true,
+    },
+  },
+  service: { service: 'gahuza' },
+};
+
+TestLite.tags = ['!dev'];
+
+TestLite.parameters = {
+  chromatic: {
+    viewports: [
+      399, // Group 1
+      899, // Group 3
+    ],
   },
 };

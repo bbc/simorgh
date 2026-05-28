@@ -5,12 +5,10 @@ import indonesianOnDemandAudio from '#data/indonesia/bbc_indonesian_radio/w172xy
 import swahiliExpiredOnDemandAudio from '#data/swahili/bbc_swahili_radio/w3ct1y1s.json';
 import koreanOnDemandAudio from '#data/korean/bbc_korean_radio/w3ct1vk5.json';
 import zhongwenOnDemandAudio from '#data/zhongwen/bbc_cantonese_radio/w172xwswq9t42v6.json';
-import getInitialData from '#app/routes/onDemandAudio/getInitialData';
 import withMediaError from '#lib/utilities/episodeAvailability/withMediaError';
 import { AUDIO_PAGE } from '#app/routes/utils/pageTypes';
 import { Services, Variants } from '#app/models/types/global';
 
-import * as fetchBFF from '#app/routes/utils/fetchDataFromBFF';
 import gahuzaOnDemandAudio from '#data/gahuza/bbc_gahuza_radio/p02pcb5c.json';
 import {
   render,
@@ -41,6 +39,34 @@ interface PageProps {
   variant?: Variants;
   lang?: string;
 }
+
+interface GetPageDataProps {
+  data: OnDemandAudioProps['pageData'];
+  isPodcast?: boolean;
+  externalLinks?: string[];
+}
+
+const getPageData = ({
+  data,
+  isPodcast = false,
+  externalLinks = [],
+}: GetPageDataProps): OnDemandAudioProps['pageData'] => {
+  const recentEpisodesConfig = isPodcast
+    ? toggles.recentPodcastEpisodes
+    : toggles.recentAudioEpisodes;
+
+  const recentEpisodes = recentEpisodesConfig.enabled
+    ? data.recentEpisodes?.slice(0, recentEpisodesConfig.value)
+    : null;
+
+  return {
+    ...data,
+    externalLinks,
+    // @ts-expect-error - Mocked data doesn't have all the required fields
+    recentEpisodes,
+    ...(!toggles.onDemandRadioSchedule.enabled && { radioScheduleData: null }),
+  };
+};
 
 const renderPage = async ({
   pageData,
@@ -84,16 +110,10 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should match snapshot', async () => {
-    jest
-      .spyOn(fetchBFF, 'default')
-      .mockResolvedValueOnce({ json: gahuzaOnDemandAudio, status: 200 });
-
-    const { pageData } = await getInitialData({
-      path: 'some-podcast-path',
-      pageType: AUDIO_PAGE,
-      service: 'gahuza',
-      toggles,
+    const pageData = getPageData({
+      data: gahuzaOnDemandAudio?.data as unknown as OnDemandAudioProps['pageData'],
     });
+
     const { container } = await renderPage({
       pageData,
       service: 'gahuza',
@@ -103,15 +123,8 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should show the brand title for OnDemand Radio Pages', async () => {
-    jest
-      .spyOn(fetchBFF, 'default')
-      .mockResolvedValueOnce({ json: gahuzaOnDemandAudio, status: 200 });
-
-    const { pageData } = await getInitialData({
-      path: 'some-podcast-path',
-      pageType: AUDIO_PAGE,
-      service: 'gahuza',
-      toggles,
+    const pageData = getPageData({
+      data: gahuzaOnDemandAudio?.data as unknown as OnDemandAudioProps['pageData'],
     });
     const { queryByText, getByTestId } = await renderPage({
       pageData,
@@ -125,15 +138,8 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should show the episode title when it is available', async () => {
-    jest
-      .spyOn(fetchBFF, 'default')
-      .mockResolvedValueOnce({ json: gahuzaOnDemandAudio, status: 200 });
-
-    const { pageData } = await getInitialData({
-      path: 'some-podcast-path',
-      pageType: AUDIO_PAGE,
-      service: 'gahuza',
-      toggles,
+    const pageData = getPageData({
+      data: gahuzaOnDemandAudio?.data as unknown as OnDemandAudioProps['pageData'],
     });
     const { getByText } = await renderPage({
       pageData,
@@ -153,15 +159,10 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should show the external links for podcast pages', async () => {
-    jest
-      .spyOn(fetchBFF, 'default')
-      .mockResolvedValueOnce({ json: gahuzaPodcastPage, status: 200 });
-
-    const { pageData } = await getInitialData({
-      path: 'some-podcast-path',
-      pageType: AUDIO_PAGE,
-      service: 'gahuza',
-      toggles,
+    const pageData = getPageData({
+      data: gahuzaPodcastPage?.data as unknown as OnDemandAudioProps['pageData'],
+      isPodcast: true,
+      externalLinks: ['https://example.com/listen'],
     });
     const { getByText } = await renderPage({
       pageData,
@@ -172,15 +173,8 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should show the datestamp correctly for Pashto OnDemand Radio Pages', async () => {
-    jest
-      .spyOn(fetchBFF, 'default')
-      .mockResolvedValueOnce({ json: pashtoOnDemandAudio, status: 200 });
-
-    // @ts-expect-error partial data required for testing purposes
-    const { pageData } = await getInitialData({
-      path: 'some-ondemand-radio-path',
-      pageType: AUDIO_PAGE,
-      toggles,
+    const pageData = getPageData({
+      data: pashtoOnDemandAudio?.data as unknown as OnDemandAudioProps['pageData'],
     });
     const { getByText } = await renderPage({
       pageData,
@@ -190,15 +184,8 @@ describe('OnDemand Radio Page ', () => {
     expect(getByText('۱۷ می ۲۰۲۱')).toBeInTheDocument();
   });
   it('should show the datestamp correctly for Korean OnDemand Radio Pages', async () => {
-    jest
-      .spyOn(fetchBFF, 'default')
-      .mockResolvedValueOnce({ json: koreanOnDemandAudio, status: 200 });
-
-    // @ts-expect-error partial data required for testing purposes
-    const { pageData } = await getInitialData({
-      path: 'some-ondemand-radio-path',
-      pageType: AUDIO_PAGE,
-      toggles,
+    const pageData = getPageData({
+      data: koreanOnDemandAudio?.data as unknown as OnDemandAudioProps['pageData'],
     });
     const { getByText } = await renderPage({
       pageData,
@@ -209,15 +196,8 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should show the datestamp correctly for Indonesian OnDemand Radio Pages', async () => {
-    jest
-      .spyOn(fetchBFF, 'default')
-      .mockResolvedValueOnce({ json: indonesianOnDemandAudio, status: 200 });
-
-    // @ts-expect-error partial data required for testing purposes
-    const { pageData: pageDataWithoutVideo } = await getInitialData({
-      path: 'some-ondemand-radio-path',
-      pageType: AUDIO_PAGE,
-      toggles,
+    const pageDataWithoutVideo = getPageData({
+      data: indonesianOnDemandAudio?.data as unknown as OnDemandAudioProps['pageData'],
     });
     const { getByText } = await renderPage({
       pageData: pageDataWithoutVideo,
@@ -228,15 +208,8 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should show the datestamp correctly for Zhongwen OnDemand Radio Pages', async () => {
-    jest
-      .spyOn(fetchBFF, 'default')
-      .mockResolvedValueOnce({ json: zhongwenOnDemandAudio, status: 200 });
-
-    // @ts-expect-error partial data required for testing purposes
-    const { pageData } = await getInitialData({
-      path: 'some-ondemand-radio-path',
-      pageType: AUDIO_PAGE,
-      toggles,
+    const pageData = getPageData({
+      data: zhongwenOnDemandAudio?.data as unknown as OnDemandAudioProps['pageData'],
     });
 
     const { getByText } = await renderPage({
@@ -249,15 +222,8 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should show the summary for OnDemand Radio Pages', async () => {
-    jest
-      .spyOn(fetchBFF, 'default')
-      .mockResolvedValueOnce({ json: gahuzaOnDemandAudioEpisode, status: 200 });
-
-    // @ts-expect-error partial data required for testing purposes
-    const { pageData } = await getInitialData({
-      path: 'some-ondemand-radio-path',
-      pageType: AUDIO_PAGE,
-      toggles,
+    const pageData = getPageData({
+      data: gahuzaOnDemandAudioEpisode?.data as unknown as OnDemandAudioProps['pageData'],
     });
 
     const { getByTestId } = await renderPage({
@@ -271,15 +237,8 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should show the audio player', async () => {
-    jest
-      .spyOn(fetchBFF, 'default')
-      .mockResolvedValueOnce({ json: koreanOnDemandAudio, status: 200 });
-
-    // @ts-expect-error partial data required for testing purposes
-    const { pageData } = await getInitialData({
-      path: 'some-ondemand-radio-path',
-      pageType: AUDIO_PAGE,
-      toggles,
+    const pageData = getPageData({
+      data: koreanOnDemandAudio?.data as unknown as OnDemandAudioProps['pageData'],
     });
     const { container } = await renderPage({
       pageData,
@@ -293,16 +252,8 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should show the expired content message if episode is expired', async () => {
-    jest.spyOn(fetchBFF, 'default').mockResolvedValueOnce({
-      json: swahiliExpiredOnDemandAudio,
-      status: 200,
-    });
-
-    // @ts-expect-error partial data required for testing purposes
-    const { pageData } = await getInitialData({
-      path: 'some-ondemand-radio-path',
-      pageType: AUDIO_PAGE,
-      toggles,
+    const pageData = getPageData({
+      data: swahiliExpiredOnDemandAudio?.data as unknown as OnDemandAudioProps['pageData'],
     });
     const { container, getByText } = await renderPage({
       pageData,
@@ -316,22 +267,14 @@ describe('OnDemand Radio Page ', () => {
 
   it("should show the 'content not yet available' message if episode is not yet available", async () => {
     const koreanPageDataWithNotYetAvailableEpisode = {
-      data: {
-        ...koreanOnDemandAudio.data,
-        episodeAvailability: 'not-yet-available',
-      },
+      ...getPageData({
+        data: koreanOnDemandAudio.data as unknown as OnDemandAudioProps['pageData'],
+      }),
+      episodeAvailability: 'not-yet-available',
     };
-    jest.spyOn(fetchBFF, 'default').mockResolvedValueOnce({
-      json: koreanPageDataWithNotYetAvailableEpisode,
-      status: 200,
-    });
-    // @ts-expect-error partial data required for testing purposesx
+    const pageData =
+      koreanPageDataWithNotYetAvailableEpisode as unknown as OnDemandAudioProps['pageData'];
 
-    const { pageData } = await getInitialData({
-      path: 'some-ondemand-radio-path',
-      pageType: AUDIO_PAGE,
-      toggles,
-    });
     const { container, getByText } = await renderPage({
       pageData,
       service: 'korean',
@@ -346,14 +289,8 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should show the radio schedule for the On Demand radio page', async () => {
-    jest
-      .spyOn(fetchBFF, 'default')
-      .mockResolvedValueOnce({ json: koreanOnDemandAudio, status: 200 });
-    // @ts-expect-error partial data required for testing purposes
-    const { pageData } = await getInitialData({
-      path: 'some-ondemand-radio-path',
-      pageType: AUDIO_PAGE,
-      toggles,
+    const pageData = getPageData({
+      data: koreanOnDemandAudio?.data as unknown as OnDemandAudioProps['pageData'],
     });
 
     const { getByTestId } = await renderPage({
@@ -365,14 +302,8 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should not show the radio schedule for services without schedules', async () => {
-    jest
-      .spyOn(fetchBFF, 'default')
-      .mockResolvedValueOnce({ json: koreanOnDemandAudio, status: 200 });
-    // @ts-expect-error partial data required for testing purposes
-    const { pageData } = await getInitialData({
-      path: 'some-ondemand-radio-path',
-      pageType: AUDIO_PAGE,
-      toggles,
+    const pageData = getPageData({
+      data: koreanOnDemandAudio?.data as unknown as OnDemandAudioProps['pageData'],
     });
 
     renderPage({
