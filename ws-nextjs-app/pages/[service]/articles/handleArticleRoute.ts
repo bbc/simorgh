@@ -109,7 +109,7 @@ export default async (context: GetServerSidePropsContext) => {
     latestMedia = null,
     mostRead = null,
     billboardCuration = null,
-    mediaCuration = null,
+    videoCuration: mediaCuration = null,
     portraitVideoItems = null,
   } = secondaryData || {};
 
