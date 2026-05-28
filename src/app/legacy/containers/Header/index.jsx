@@ -88,6 +88,8 @@ const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
 
   const shouldUseNewNav = SERVICES_WITH_NEW_NAV.includes(service);
 
+  const shouldShowNewLogoBanner = shouldUseNewNav || service === 'ws';
+
   let shouldRenderScriptSwitch = false;
 
   if (scriptLink) {
@@ -112,7 +114,7 @@ const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
 
   return (
     <header role="banner" lang={serviceLang}>
-      {shouldUseNewNav && <NewLogoBanner />}
+      {shouldShowNewLogoBanner && <NewLogoBanner />}
       {isAmp ? (
         <Header
           linkId="brandLink"
