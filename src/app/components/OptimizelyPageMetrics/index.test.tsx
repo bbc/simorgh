@@ -68,6 +68,7 @@ describe('OptimizelyPageMetrics', () => {
       activeExperiments: ['mockExperiment1', 'mockExperiment2'],
     });
     notifyDecision('mockExperiment1');
+    notifyDecision('mockExperiment2');
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp>
         <OptimizelyPageMetrics
@@ -93,6 +94,7 @@ describe('OptimizelyPageMetrics', () => {
       activeExperiments: ['mockExperiment1', 'mockExperiment2'],
     });
     notifyDecision('mockExperiment1');
+    notifyDecision('mockExperiment2');
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news">
         <OptimizelyPageMetrics />
@@ -113,6 +115,7 @@ describe('OptimizelyPageMetrics', () => {
       activeExperiments: ['mockExperiment1', 'mockExperiment2'],
     });
     notifyDecision('mockExperiment1');
+    notifyDecision('mockExperiment2');
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news">
         <OptimizelyPageMetrics trackPageComplete />
@@ -127,6 +130,7 @@ describe('OptimizelyPageMetrics', () => {
       activeExperiments: ['mockExperiment1', 'mockExperiment2'],
     });
     notifyDecision('mockExperiment1');
+    notifyDecision('mockExperiment2');
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news">
         <OptimizelyPageMetrics trackPageDepth />
@@ -141,6 +145,7 @@ describe('OptimizelyPageMetrics', () => {
       activeExperiments: ['mockExperiment1', 'mockExperiment2'],
     });
     notifyDecision('mockExperiment1');
+    notifyDecision('mockExperiment2');
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news">
         <OptimizelyPageMetrics trackPageView />
@@ -155,6 +160,7 @@ describe('OptimizelyPageMetrics', () => {
       activeExperiments: ['mockExperiment1', 'mockExperiment2'],
     });
     notifyDecision('mockExperiment1');
+    notifyDecision('mockExperiment2');
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news">
         <OptimizelyPageMetrics
@@ -206,6 +212,7 @@ describe('OptimizelyPageMetrics', () => {
       activeExperiments: ['mockExperiment1', 'mockExperiment2'],
     });
     notifyDecision('mockExperiment1');
+    notifyDecision('mockExperiment2');
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news">
         <OptimizelyPageMetrics trackPageComplete trackPageDepth trackPageView />
@@ -222,6 +229,27 @@ describe('OptimizelyPageMetrics', () => {
       activeExperiments: ['invalidExperiment'],
     });
     notifyDecision('someOtherExperiment');
+    render(
+      <ContextWrap pageType={ARTICLE_PAGE} service="news">
+        <OptimizelyPageMetrics
+          trackPageComplete
+          trackPageDepth
+          trackPageView
+          trackVisit
+        />
+      </ContextWrap>,
+    );
+    expect(
+      screen.queryByTestId('page-complete-tracking'),
+    ).not.toBeInTheDocument();
+  });
+
+  it('should not include tracking when one experiment has not sent a notification decision', () => {
+    experimentsForPageMetrics.push({
+      pageType: ARTICLE_PAGE,
+      activeExperiments: ['mockExperiment1', 'mockExperiment2'],
+    });
+    notifyDecision('mockExperiment1');
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news">
         <OptimizelyPageMetrics
