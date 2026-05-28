@@ -21,6 +21,7 @@ description: "General guide for Simorgh"
 - Page handlers set status and headers on `context.res`; preserve this behavior because downstream infrastructure relies on response metadata.
 
 ## Local developer workflows
+- If not already done so, make sure BFF_PATH="https://fabl.api.bbci.co.uk/module/simorgh-bff" is set as an environment variable using `export BFF_PATH="https://fabl.api.bbci.co.uk/module/simorgh-bff"`, otherwise use `BFF_PATH="http://localhost:3210/module/simorgh-bff"` if the user would like this app to connect to fabl running locally.
 - Use Node from `.nvmrc` (`v22.18.0`), then install deps with `yarn` at repo root.
 - Main local run path: `cd ws-nextjs-app && yarn dev` (runs on `http://localhost:7081`).
 - Useful routes: `/pidgin`, `/news/articles/c6v11qzyv8po`, `/pidgin/live/c7p765ynk9qt`.

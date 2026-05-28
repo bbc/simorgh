@@ -7,7 +7,11 @@ applyTo: "./src/app/components"
 ## Rules
 - Write self-documenting code. Try to avoid comments by using descriptive variable / function names, split functionality into smaller functions.
 - We use React.
-- We use Emotion for styling, adopting the object styles syntax so follow that syntax when writing CSS for components.
+- We use Emotion for styling and we use the object styles syntax.
+- Components should:
+  - Be functional components
+  - Use typed props
+  - Avoid internal side effects
 
 ## Coding Best Practices
 - Don't have lots of logic in your tests, prefer to test the output of a function rather than the implementation.
@@ -26,4 +30,97 @@ applyTo: "./src/app/components"
   - An index.test.tsx file that contains the unit tests. 
   - An index.stories.tsx file that contains a respective storybook component. 
   - A metadata.json file that contains storybook related information.  
-  - A good example of a component that follows these standards is `./src/app/components/ReadTime`
+
+Here is an example of a component called `HelloWorld`, that renders a formatted user defined text after a user defined number of seconds.
+
+1. The component will go in `./src/app/components/HelloWorld`
+2. The index.tsx file will contain the following code:
+```
+import { use, useEffect, useState } from 'react';
+import { ServiceContext } from '#app/contexts/ServiceContext';
+import Text from '#app/components/Text';
+import styles from './index.styles';
+import Heading from '../Heading';
+
+type HelloWorldProps = {
+  textToRender: string;
+  renderAfter: number;
+};
+
+export default ({ textToRender, renderAfter }: HelloWorldProps) => {
+  const { service } = use(ServiceContext);
+  const [showText, setShowText] = useState(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setShowText(true);
+    }, renderAfter);
+
+    return () => clearTimeout(timeout);
+  }, [renderAfter]);
+
+  if (!showText) return null;
+
+  return (
+    <>
+      <Heading level={2}>You are on {service}</Heading>
+      <Text css={styles.text} size="brevier">
+        {textToRender}
+      </Text>
+    </>
+  );
+};
+```
+
+3. The index.style.tsx file will contain the following code:
+```
+import { css, Theme } from '@emotion/react';
+
+export default {
+  text: ({ palette }: Theme) =>
+    css({
+      color: palette.GREY_6,
+    }),
+};
+```
+
+4. The index.test.tsx file will contain the following code:
+```
+import {
+  act,
+  render,
+} from '#app/components/react-testing-library-with-providers';
+import HelloWorld from '.';
+
+jest.useFakeTimers();
+
+describe('HelloWorld', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
+  describe('formatting behaviour', () => {
+    it.each([
+      { text: 'Hello World' },
+      { text: 'Goodbye World' },
+      { text: 'Good Evevning World' },
+    ])(`should render the service and the text $text`, async ({ text }) => {
+      const { container } = await act(async () => {
+        return render(<HelloWorld textToRender={text} renderAfter={1000} />, {
+          service: 'pidgin',
+        });
+      });
+
+      act(() => {
+        jest.runAllTimers();
+      });
+
+      const resultingHeading = container.querySelector('h2');
+      const resultingText = container.querySelector('span');
+
+      expect(resultingHeading?.innerHTML).toBe('You are on pidgin');
+      expect(resultingText?.innerHTML).toBe(text);
+    });
+  });
+});
+```
