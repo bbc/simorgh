@@ -70,9 +70,14 @@ const geoLocate = (conf: EnvironmentConfigType, isUk = false) => {
   };
 };
 
-const environmentConfig = config satisfies Record<Environment, EnvironmentConfigType>;
+const environmentConfig = config satisfies Record<
+  Environment,
+  EnvironmentConfigType
+>;
 
-const isEnvironment = (value: string | boolean | undefined): value is Environment =>
+const isEnvironment = (
+  value: string | boolean | undefined,
+): value is Environment =>
   value === 'live' || value === 'test' || value === 'local';
 
 const getCypressEnvironmentReader = () => {
