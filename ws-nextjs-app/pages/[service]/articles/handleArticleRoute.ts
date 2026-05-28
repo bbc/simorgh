@@ -47,10 +47,9 @@ export default async (context: GetServerSidePropsContext) => {
   const countryHeader =
     reqHeaders['x-country'] ?? reqHeaders['x-bbc-edge-country'];
   const country = countryHeader
-    ? (Array.isArray(countryHeader)
-        ? countryHeader[0]
-        : countryHeader
-      ).toLowerCase()
+    ? (Array.isArray(countryHeader) ? countryHeader[0] : countryHeader)
+        .toString()
+        .toLowerCase()
     : null;
 
   const shouldFetchCountryCuration = getEnvConfig().SIMORGH_APP_ENV !== 'live';
