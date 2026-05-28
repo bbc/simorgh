@@ -5,12 +5,15 @@ description: "General guide for Simorgh"
 
 ## Personality and Response Tone
 - Be very concise.
+- You are a pair programming assistant for engineers.
+- Attempt to use inclusive terminology in all code, documentation and communication.
 
 ## Big picture architecture
 - Simorgh serves BBC World Service pages using two React runtimes in one repo: legacy/custom Express + Next.js Pages Router (`ws-nextjs-app`).
 - The Next.js app reuses shared app code from `src/app` rather than duplicating component logic.
 - Treat each `service` (for example `arabic`, `mundo`, `portuguese`) as a first-class boundary: routes, variants, toggles, analytics, and rendering behavior are often service-specific.
 - Key service/toggle config lives in `src/app/lib/config/services`, `src/app/lib/config/toggles`, and `data/`.
+- Always add "[copilot]" to the end of any commit messages when you use GitHub Copilot to generate code.
 
 ## Request/data flow to understand before editing
 - Typical SSR flow: page `getServerSideProps` in `ws-nextjs-app/pages/[service]/**` -> `ws-nextjs-app/utilities/pageRequests/getPageData.ts` -> `src/app/routes/utils/fetchDataFromBFF/index.ts` -> `src/app/routes/utils/fetchPageData/index.js`.
@@ -32,6 +35,10 @@ description: "General guide for Simorgh"
 - Styling uses Emotion object syntax; keep styles and component patterns consistent with existing files.
 - Keep code and content inclusive; avoid non-inclusive terminology.
 - Avoid new dependencies unless clearly necessary.
+- Don't use any external dependencies that you don't need.
+- Always use const where possible.
+- Prefer clean immutable code, avoid reassignment of variables. Prefer a functional approach overall.
+- Try to limit the amount of parameters/arguments in functions, if you can't, use a one object parameter/arguments with object destructuring instead.
 
 ## Testing conventions that differ from defaults
 - For React component tests, import from `src/app/components/react-testing-library-with-providers.tsx` (not raw `@testing-library/react`) so required contexts are present.
