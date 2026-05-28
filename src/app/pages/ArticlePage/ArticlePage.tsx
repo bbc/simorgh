@@ -90,6 +90,7 @@ import {
   isPortraitVideo,
   isPortraitVideoUnderHeadline,
 } from '../../components/MediaLoader/utils/isPortraitVideo';
+import LocationBasedTopicOJ from '../../components/LocationBasedTopicOJ';
 
 const getImageComponent =
   (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (
@@ -430,6 +431,14 @@ const ArticlePage = ({
     articleVideoCurationEnabled,
   );
 
+  const showCountryCuration = Boolean(
+    !isAmp &&
+    !isLite &&
+    !isApp &&
+    !isLive() &&
+    pageData?.countryCuration?.summaries?.length,
+  );
+
   // EXPERIMENT: PWA Promotional Banner
   const shouldRenderPWAPromotionalBanner =
     !isTopBarOJsEnabled || !pageData?.secondaryColumn?.topStories?.length;
@@ -520,6 +529,7 @@ const ArticlePage = ({
               css={styles.portraitVideoCarousel}
             />
           )}
+          {showCountryCuration && <LocationBasedTopicOJ pageData={pageData} />}
           <RelatedContentSection content={blocks} />
           {showMediaCuration && (
             <div css={styles.mediaCurationRow}>
