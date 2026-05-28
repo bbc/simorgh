@@ -145,4 +145,41 @@ describe('uasApiRequest', () => {
     // Verify that fetch was never called since token validation failed
     expect(global.fetch).not.toHaveBeenCalled();
   });
+
+  it('should skip refresh when isRefreshAvailable is false', async () => {
+    (global.fetch as jest.Mock).mockResolvedValue({
+      ok: true,
+      json: () => Promise.resolve({ success: true }),
+    });
+
+    const activityType = 'favourites';
+    await uasApiRequest('GET', activityType, { isRefreshAvailable: false });
+
+    expect(refreshTokensIfExpired).not.toHaveBeenCalled();
+    expect(global.fetch).toHaveBeenCalled();
+  });
+
+  it('should call refresh when isRefreshAvailable is true', async () => {
+    (global.fetch as jest.Mock).mockResolvedValue({
+      ok: true,
+      json: () => Promise.resolve({ success: true }),
+    });
+
+    const activityType = 'favourites';
+    await uasApiRequest('GET', activityType, { isRefreshAvailable: true });
+
+    expect(refreshTokensIfExpired).toHaveBeenCalled();
+  });
+
+  it('should call refresh when isRefreshAvailable is not provided', async () => {
+    (global.fetch as jest.Mock).mockResolvedValue({
+      ok: true,
+      json: () => Promise.resolve({ success: true }),
+    });
+
+    const activityType = 'favourites';
+    await uasApiRequest('GET', activityType);
+
+    expect(refreshTokensIfExpired).toHaveBeenCalled();
+  });
 });

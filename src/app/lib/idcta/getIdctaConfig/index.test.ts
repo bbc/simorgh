@@ -149,4 +149,23 @@ describe('getIdctaConfig', () => {
 
     expect(result?.initialIsSignedIn).toBe(false);
   });
+
+  it('should include availability.refresh when present in config', async () => {
+    mockFetchIdctaConfig.mockResolvedValue({
+      ...mockIdctaConfig,
+      availability: { refresh: 'GREEN' },
+    });
+
+    const result = await getIdctaConfig(mockToggles, mockService);
+
+    expect(result?.availability).toEqual({ refresh: 'GREEN' });
+  });
+
+  it('should include availability as undefined when not present in config', async () => {
+    mockFetchIdctaConfig.mockResolvedValue(mockIdctaConfig);
+
+    const result = await getIdctaConfig(mockToggles, mockService);
+
+    expect(result?.availability).toEqual(mockIdctaConfig.availability);
+  });
 });

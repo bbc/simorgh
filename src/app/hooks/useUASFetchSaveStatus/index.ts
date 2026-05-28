@@ -15,10 +15,14 @@ interface UseUASFetchSaveStatusReturn {
   error: Error | null;
 }
 
-const fetchSaveStatus = async (articleId: string): Promise<boolean> => {
+const fetchSaveStatus = async (
+  articleId: string,
+  isRefreshAvailable: boolean,
+): Promise<boolean> => {
   const globalId = buildGlobalId(articleId);
   const response = await uasApiRequest('GET', FAVOURITES_CONFIG.activityType, {
     globalId,
+    isRefreshAvailable,
   });
   return response.ok && response.status !== HTTP_NO_CONTENT;
 };
@@ -26,7 +30,7 @@ const fetchSaveStatus = async (articleId: string): Promise<boolean> => {
 const useUASFetchSaveStatus = (
   articleId: string,
 ): UseUASFetchSaveStatusReturn => {
-  const { hashedUserId = '' } = use(AccountContext);
+  const { hashedUserId = '', isRefreshAvailable } = use(AccountContext);
 
   const {
     data: isSaved = false,
@@ -34,7 +38,7 @@ const useUASFetchSaveStatus = (
     error,
   } = useQuery({
     queryKey: uasKeys.favouriteStatus(hashedUserId, articleId),
-    queryFn: () => fetchSaveStatus(articleId),
+    queryFn: () => fetchSaveStatus(articleId, isRefreshAvailable),
     enabled: !!articleId,
   });
 
