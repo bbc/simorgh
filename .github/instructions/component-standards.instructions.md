@@ -1,6 +1,6 @@
 ---
 description: "Component Standards"
-applyTo: "./src/app/components"
+applyTo: "**"
 ---
 # Component Standards
 
@@ -24,7 +24,7 @@ applyTo: "./src/app/components"
 - Avoid repeating test cases and use `it.each([])()` where possible. 
 
 ## Folder structure and examples
-Each React component should have its own folder, and each folder should contain:
+Each React component should have its own folder under the root `./src/app/components/`, and each folder should contain:
 - An index.tsx file that contains the react component. 
 - An index.style.tsx file that contains styling related functions.  
 - An index.test.tsx file that contains the unit tests. 
