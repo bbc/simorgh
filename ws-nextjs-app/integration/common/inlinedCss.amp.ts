@@ -28,5 +28,13 @@ export default () => {
       expect(css).toContain('@font-face');
       expect(css).toContain('font-family:ReithSans');
     });
+
+    it('should inline CSS module component rules (hashed class names)', () => {
+      const css = getAmpCustomStyle()?.textContent ?? '';
+
+      // CSS module class names follow the pattern: ComponentName_localName__hash
+      // This confirms CSS module extraction is working, not just global SCSS
+      expect(css).toMatch(/\.[A-Za-z]+_[a-zA-Z]+__[A-Za-z0-9]+/);
+    });
   });
 };
