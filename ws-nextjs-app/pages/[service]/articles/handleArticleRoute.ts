@@ -10,6 +10,7 @@ import handleError from '#app/routes/utils/handleError';
 import { PageTypes } from '#app/models/types/global';
 
 import { ArticleMetadata } from '#app/models/types/optimo';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import augmentWithDisclaimer from './augmentWithDisclaimer';
 import shouldRender from '../../../utilities/shouldRender';
 import getPageData from '../../../utilities/pageRequests/getPageData';
@@ -43,6 +44,10 @@ export default async (context: GetServerSidePropsContext) => {
   const { isAmp } = getPathExtension(resolvedUrlWithoutQuery);
   const { variant } = parseRoute(resolvedUrl);
 
+  const country = reqHeaders['x-country']?.toString()?.toLowerCase() || null;
+
+  const shouldFetchCountryCuration = getEnvConfig().SIMORGH_APP_ENV !== 'live';
+
   const { data } = await getPageData({
     id: resolvedUrlWithoutQuery,
     service,
@@ -51,6 +56,7 @@ export default async (context: GetServerSidePropsContext) => {
     resolvedUrl: resolvedUrlWithoutQuery,
     pageType: ARTICLE_PAGE,
     isAmp,
+    ...(shouldFetchCountryCuration && country && { country }),
   });
 
   const { pageData, status } = data;
@@ -91,8 +97,6 @@ export default async (context: GetServerSidePropsContext) => {
     throw handleError('Article data is malformed', 500);
   }
 
-  const country = reqHeaders['x-country']?.toString()?.toLowerCase() || null;
-
   const { article, secondaryData } = data?.pageData || {};
   const isArticleOlderThanSixHours =
     Date.now() - article.metadata.lastPublished > 21600000;
@@ -111,6 +115,7 @@ export default async (context: GetServerSidePropsContext) => {
     billboardCuration = null,
     videoCuration: mediaCuration = null,
     portraitVideoItems = null,
+    countryCuration = null,
   } = secondaryData || {};
 
   const transformedArticleData = transformPageData()(article);
@@ -138,6 +143,7 @@ export default async (context: GetServerSidePropsContext) => {
         },
         mostRead,
         portraitVideoItems,
+        countryCuration,
       },
       pageType: derivedPageType,
       pathname: resolvedUrlWithoutQuery,
