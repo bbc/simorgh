@@ -55,12 +55,12 @@ const safeReadFile = (filePath: string, logCode: string): string | null => {
   }
 };
 
-const readCssFiles = (files: string[]): string =>
+const readCssFiles = (files: string[], logCode: string): string =>
   files.reduce((css, file) => {
     const filePath = resolveCssFilePath(file);
 
     if (filePath === null) {
-      logger.warn(logCodes.BUILD_MANIFEST_CSS_READ_ERROR, {
+      logger.warn(logCode, {
         file,
         rootsChecked: CSS_SEARCH_ROOTS.map(root =>
           join(process.cwd(), root, file),
@@ -73,10 +73,7 @@ const readCssFiles = (files: string[]): string =>
       return css + (cssFileCache.get(filePath) ?? '');
     }
 
-    const content = safeReadFile(
-      filePath,
-      logCodes.BUILD_MANIFEST_CSS_READ_ERROR,
-    );
+    const content = safeReadFile(filePath, logCode);
     if (content !== null) {
       cssFileCache.set(filePath, content);
       return css + content;
@@ -139,7 +136,7 @@ const getBuildManifestCss = (page: string): string => {
     ),
   ];
 
-  return readCssFiles(cssFiles);
+  return readCssFiles(cssFiles, logCodes.BUILD_MANIFEST_CSS_READ_ERROR);
 };
 
 /**
@@ -171,7 +168,7 @@ const getDynamicImportCss = (dynamicIds: Array<string | number>): string => {
     ),
   ];
 
-  return readCssFiles(cssFiles);
+  return readCssFiles(cssFiles, logCodes.DYNAMIC_IMPORT_CSS_READ_ERROR);
 };
 
 /**

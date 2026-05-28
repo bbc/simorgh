@@ -1,4 +1,5 @@
 import loggerMock from '#testHelpers/loggerMock';
+import logCodes from '#app/lib/logger.const';
 import { existsSync, readFileSync } from 'fs';
 import getAmpLiteCss, {
   resolveCssFilePath,
@@ -65,7 +66,7 @@ describe('getAmpLiteCss utilities', () => {
 
   describe('readCssFiles', () => {
     it('returns empty string for an empty files array', () => {
-      expect(readCssFiles([])).toBe('');
+      expect(readCssFiles([], logCodes.BUILD_MANIFEST_CSS_READ_ERROR)).toBe('');
     });
 
     it('returns concatenated CSS for all resolved files', () => {
@@ -78,22 +79,33 @@ describe('getAmpLiteCss utilities', () => {
         return '';
       });
 
-      expect(readCssFiles(['static/css/a.css', 'static/css/b.css'])).toBe(
-        '.class-a{color:red}.class-b{color:blue}',
-      );
+      expect(
+        readCssFiles(
+          ['static/css/a.css', 'static/css/b.css'],
+          logCodes.BUILD_MANIFEST_CSS_READ_ERROR,
+        ),
+      ).toBe('.class-a{color:red}.class-b{color:blue}');
     });
 
     it('skips files that cannot be resolved to a path on disk', () => {
       existsSyncMock.mockReturnValue(false);
       readFileSyncMock.mockReturnValue('.foo{color:red}');
 
-      expect(readCssFiles(['static/css/a.css'])).toBe('');
+      expect(
+        readCssFiles(
+          ['static/css/a.css'],
+          logCodes.BUILD_MANIFEST_CSS_READ_ERROR,
+        ),
+      ).toBe('');
     });
 
     it('logs a warning when a referenced CSS file cannot be resolved', () => {
       existsSyncMock.mockReturnValue(false);
 
-      readCssFiles(['static/css/missing.css']);
+      readCssFiles(
+        ['static/css/missing.css'],
+        logCodes.BUILD_MANIFEST_CSS_READ_ERROR,
+      );
 
       expect(loggerMock.warn).toHaveBeenCalledWith(
         expect.any(String),
@@ -114,7 +126,10 @@ describe('getAmpLiteCss utilities', () => {
       readFileSyncMock.mockReturnValue('.found{}');
 
       expect(
-        readCssFiles(['static/css/missing.css', 'static/css/found.css']),
+        readCssFiles(
+          ['static/css/missing.css', 'static/css/found.css'],
+          logCodes.BUILD_MANIFEST_CSS_READ_ERROR,
+        ),
       ).toBe('.found{}');
     });
 
@@ -125,9 +140,12 @@ describe('getAmpLiteCss utilities', () => {
         return '.good{}';
       });
 
-      expect(readCssFiles(['static/css/bad.css', 'static/css/good.css'])).toBe(
-        '.good{}',
-      );
+      expect(
+        readCssFiles(
+          ['static/css/bad.css', 'static/css/good.css'],
+          logCodes.BUILD_MANIFEST_CSS_READ_ERROR,
+        ),
+      ).toBe('.good{}');
       expect(loggerMock.error).toHaveBeenCalledWith(
         expect.any(String),
         expect.objectContaining({ message: 'permission denied' }),
@@ -140,8 +158,14 @@ describe('getAmpLiteCss utilities', () => {
       );
       readFileSyncMock.mockReturnValue('.cached{}');
 
-      readCssFiles(['static/css/a.css']);
-      readCssFiles(['static/css/a.css']);
+      readCssFiles(
+        ['static/css/a.css'],
+        logCodes.BUILD_MANIFEST_CSS_READ_ERROR,
+      );
+      readCssFiles(
+        ['static/css/a.css'],
+        logCodes.BUILD_MANIFEST_CSS_READ_ERROR,
+      );
 
       expect(readFileSyncMock).toHaveBeenCalledTimes(1);
     });
