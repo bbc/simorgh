@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { AppEnv, errorPage404Suites } from './suites';
 import appConfig from '../../../utilities/serviceConfigs';
-import getEnvConfig from '../../../cypress/support/config/envs';
+import { getEnvConfig } from '../../../cypress/support/config/envs';
 
 const appEnvFromProcess = (process.env.APP_ENV || 'local') as AppEnv;
 
