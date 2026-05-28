@@ -33,7 +33,7 @@ const OptimizelyPageMetrics = ({
   const isInExperiment =
     optimizelyExperimentsEnabled &&
     Boolean(
-      experimentsForPageType?.some(name => activatedExperiments.has(name)),
+      experimentsForPageType?.every(name => activatedExperiments.has(name)),
     );
 
   if (!isInExperiment) {
