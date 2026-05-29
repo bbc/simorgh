@@ -375,21 +375,6 @@ export const service: DefaultServiceConfig = {
         closedHeading: 'Está encerrado',
         closedDescription: 'Foi encerrado em {{date}}.',
       },
-    },
-    promotionalBanner: {
-      title: 'Acesse a BBC News Brasil com um toque',
-      description:
-        'Inclua um atalho para a BBC News Brasil na sua tela para um acesso mais fácil e rápido',
-      buttonSeparatorText: 'ou',
-      bannerLabel: 'Banner promocional',
-      closeLabel: 'Sair',
-      primaryButton: {
-        longText: 'Inclua um atalho na sua tela',
-        text: 'Adicionar',
-      },
-      secondaryButton: {
-        text: 'Pular por enquanto',
-      },
       sportTeamNames: {
         algeria: 'Argélia',
         argentina: 'Argentina',
@@ -439,6 +424,21 @@ export const service: DefaultServiceConfig = {
         uruguay: 'Uruguai',
         usa: 'Estados Unidos',
         uzbekistan: 'Uzbequistão',
+      },
+    },
+    promotionalBanner: {
+      title: 'Acesse a BBC News Brasil com um toque',
+      description:
+        'Inclua um atalho para a BBC News Brasil na sua tela para um acesso mais fácil e rápido',
+      buttonSeparatorText: 'ou',
+      bannerLabel: 'Banner promocional',
+      closeLabel: 'Sair',
+      primaryButton: {
+        longText: 'Inclua um atalho na sua tela',
+        text: 'Adicionar',
+      },
+      secondaryButton: {
+        text: 'Pular por enquanto',
       },
     },
     mostRead: {
