@@ -32,7 +32,7 @@ const Team = ({
 
   const teamIdentifier = urn?.split(':').pop();
   const teamTranslation = teamIdentifier
-    ? translations?.[teamIdentifier]
+    ? translations?.sportTeamNames?.[teamIdentifier]
     : undefined;
   const fullNameTranslation = teamTranslation || name;
   const shortNameTranslation = teamTranslation || shortName;
