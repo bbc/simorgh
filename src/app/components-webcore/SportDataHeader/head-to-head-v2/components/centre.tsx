@@ -25,7 +25,7 @@ const Played = ({ data }: PlayedProps) => {
   const { service } = use(ServiceContext);
   const numerals = getServiceNumerals(service);
   const translateScore = (score?: string) =>
-    (score && numerals[score]) || score;
+    score?.replace(/\d/g, digit => numerals[Number(digit)] ?? digit);
 
   return (
     <Score
