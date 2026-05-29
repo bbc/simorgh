@@ -1,9 +1,11 @@
+import { use } from 'react';
+import { ServiceContext } from '../../../../contexts/ServiceContext';
 import {
   isCalledOffStatus,
   isInProgressStatus,
   isResultStatus,
 } from '../helpers/event-status-groups';
-
+import getTranslatedNumerals from '../helpers/getTranslatedNumerals';
 import Time from './fixture-time';
 import Score from './score';
 import styles from '../index.styles';
@@ -19,15 +21,18 @@ interface PlayedProps {
   data: HeadToHeadV2Data;
 }
 
-const Played = ({ data }: PlayedProps) => (
-  <Score
-    status={data.status}
-    home={data.home.score}
-    homeScoreUnconfirmed={data.home.scoreUnconfirmed}
-    away={data.away.score}
-    awayScoreUnconfirmed={data.away.scoreUnconfirmed}
-  />
-);
+const Played = ({ data }: PlayedProps) => {
+  const { service } = use(ServiceContext);
+  return (
+    <Score
+      status={data.status}
+      home={getTranslatedNumerals({ score: data.home.score, service })}
+      homeScoreUnconfirmed={data.home.scoreUnconfirmed}
+      away={getTranslatedNumerals({ score: data.away.score, service })}
+      awayScoreUnconfirmed={data.away.scoreUnconfirmed}
+    />
+  );
+};
 
 interface CentreProps {
   data: HeadToHeadV2Data;
