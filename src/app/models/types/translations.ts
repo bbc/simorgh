@@ -242,6 +242,7 @@ export interface Translations {
     previous?: string;
     next?: string;
   };
+  sportTeamNames?: Record<string, string>;
 }
 
 export interface TranslationsError {
