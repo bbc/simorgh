@@ -32,7 +32,7 @@
     "playwright:e2e:chrome": "APP_ENV=local PLAYWRIGHT_CHANNEL=chrome playwright test --headed",
     "playwright:e2e:test": "APP_ENV=test playwright test",
     "playwright:e2e:live": "APP_ENV=live playwright test",
-    "playwright:e2e:ui": "APP_ENV=local playwright test",
+    "playwright:e2e:ui": "APP_ENV=local playwright test --ui",
     "playwright:errorPage404": "yarn playwright:e2e playwright/pageTypes/errorPage404/errorPage404.spec.ts",
     "playwright:errorPage404:chrome": "yarn playwright:e2e:chrome playwright/pageTypes/errorPage404/errorPage404.spec.ts",
     "playwright:errorPage404:test": "yarn playwright:e2e:test playwright/pageTypes/errorPage404/errorPage404.spec.ts",

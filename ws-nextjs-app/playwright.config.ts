@@ -12,6 +12,10 @@ const baseUrlByEnv: Record<string, string> = {
 const baseURL =
   process.env.PLAYWRIGHT_BASE_URL || baseUrlByEnv[appEnv] || baseUrlByEnv.local;
 
+const reporter = process.env.CI
+  ? [['list'], ['html', { open: 'never' }]]
+  : [['list']];
+
 export default defineConfig({
   testDir: './playwright',
   timeout: 30_000,
@@ -21,5 +25,5 @@ export default defineConfig({
     trace: 'retain-on-failure',
     ...(playwrightChannel ? { channel: playwrightChannel } : {}),
   },
-  reporter: [['list']],
+  reporter,
 });
