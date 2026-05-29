@@ -128,6 +128,14 @@ export const service: DefaultServiceConfig = {
         remove: 'Remove',
         removing: 'Removing',
       },
+      myNews: {
+        title: 'My News',
+        description: 'My saved articles',
+        loadingArticles: 'Loading...',
+        noArticles: "You haven't saved any articles yet",
+        errorText:
+          'This content does not seem to be working. Please try again later.',
+      },
       gist: 'सारांश',
       error: {
         404: {

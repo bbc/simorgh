@@ -1,4 +1,5 @@
-import { css } from '@emotion/react';
+import { css, Theme } from '@emotion/react';
+import pixelsToRem from '#app/utilities/pixelsToRem';
 
 const styles = {
   main: ({ spacings, mq }) =>
@@ -13,9 +14,23 @@ const styles = {
     margin: '0 auto',
   }),
 
-  heading: css({
-    padding: '2rem 0',
-  }),
+  heading: ({ spacings, mq }: Theme) =>
+    css({
+      marginTop: `${spacings.TRIPLE}rem`,
+      marginBottom: `${spacings.TRIPLE}rem`,
+      [mq.GROUP_3_MIN_WIDTH]: {
+        marginTop: `${spacings.QUINTUPLE}rem`,
+        marginBottom: `${spacings.SEXTUPLE}rem`,
+      },
+    }),
+
+  subheading: ({ spacings, mq }: Theme) =>
+    css({
+      marginBottom: `${spacings.DOUBLE}rem`,
+      [mq.GROUP_3_MIN_WIDTH]: {
+        marginBottom: `${pixelsToRem(20)}rem`,
+      },
+    }),
 };
 
 export default styles;
