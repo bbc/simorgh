@@ -91,6 +91,7 @@ import {
   isPortraitVideo,
   isPortraitVideoUnderHeadline,
 } from '../../components/MediaLoader/utils/isPortraitVideo';
+import LocationBasedTopicOJ from '../../components/LocationBasedTopicOJ';
 
 const getImageComponent =
   (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (
@@ -420,13 +421,15 @@ const ArticlePage = ({
 
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
 
+  const isLivePage = isLive();
+
   const showRelatedTopicsComponent = Boolean(
     showRelatedTopics && topics.length > 0 && !showTopicDiscoveryComponent,
   );
 
   // EXPERIMENT: Topic Discovery
   const showTopicDiscovery =
-    showTopicDiscoveryComponent && !isAmp && !isLite && !isLive();
+    showTopicDiscoveryComponent && !isAmp && !isLite && !isLivePage;
 
   const showMediaCuration = Boolean(
     !isAmp &&
@@ -435,6 +438,14 @@ const ArticlePage = ({
     !isPGL &&
     mediaCurationContent?.summaries?.length &&
     articleVideoCurationEnabled,
+  );
+
+  const showCountryCuration = Boolean(
+    !isAmp &&
+    !isLite &&
+    !isApp &&
+    !isLivePage &&
+    pageData?.countryCuration?.summaries?.length,
   );
 
   // EXPERIMENT: PWA Promotional Banner
@@ -527,6 +538,7 @@ const ArticlePage = ({
               css={styles.portraitVideoCarousel}
             />
           )}
+          {showCountryCuration && <LocationBasedTopicOJ pageData={pageData} />}
           <RelatedContentSection content={blocks} />
           {showMediaCuration && (
             <div css={styles.mediaCurationRow}>
