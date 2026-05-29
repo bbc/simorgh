@@ -1,4 +1,4 @@
-import { defineConfig } from '@playwright/test';
+import { defineConfig, type ReporterDescription } from '@playwright/test';
 
 const appEnv = process.env.APP_ENV || 'local';
 const playwrightChannel = process.env.PLAYWRIGHT_CHANNEL;
@@ -12,7 +12,7 @@ const baseUrlByEnv: Record<string, string> = {
 const baseURL =
   process.env.PLAYWRIGHT_BASE_URL || baseUrlByEnv[appEnv] || baseUrlByEnv.local;
 
-const reporter = process.env.CI
+const reporter: ReporterDescription[] = process.env.CI
   ? [['list'], ['html', { open: 'never' }]]
   : [['list']];
 
