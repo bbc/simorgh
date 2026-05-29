@@ -421,13 +421,15 @@ const ArticlePage = ({
 
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
 
+  const isLivePage = isLive();
+
   const showRelatedTopicsComponent = Boolean(
     showRelatedTopics && topics.length > 0 && !showTopicDiscoveryComponent,
   );
 
   // EXPERIMENT: Topic Discovery
   const showTopicDiscovery =
-    showTopicDiscoveryComponent && !isAmp && !isLite && !isLive();
+    showTopicDiscoveryComponent && !isAmp && !isLite && !isLivePage;
 
   const showMediaCuration = Boolean(
     !isAmp &&
@@ -442,7 +444,7 @@ const ArticlePage = ({
     !isAmp &&
     !isLite &&
     !isApp &&
-    !isLive() &&
+    !isLivePage &&
     pageData?.countryCuration?.summaries?.length,
   );
 
