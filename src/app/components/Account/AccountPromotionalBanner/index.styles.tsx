@@ -78,4 +78,54 @@ export default {
         color: palette.WHITE,
       },
     }),
+
+  modal: css({
+    position: 'fixed',
+    inset: 0,
+    zIndex: 2147483647,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '100%',
+    height: '100%',
+  }),
+
+  backdrop: css({
+    position: 'absolute',
+    inset: 0,
+    backgroundColor: 'rgba(20, 20, 20, 0.9)',
+    backdropFilter: 'blur(0.2rem)',
+  }),
+
+  modalContent: css({
+    position: 'relative',
+    zIndex: 1,
+    width: '90%',
+    maxWidth: '34rem',
+    borderRadius: '0.5rem',
+    overflow: 'hidden',
+    backgroundColor: '#1a1a1a',
+  }),
+
+  modalImageSide: ({ palette }: Theme) =>
+    css({
+      width: '100%',
+      height: '20rem',
+      overflow: 'hidden',
+      flexShrink: 0,
+      background: `linear-gradient(to bottom left, ${palette.POSTBOX} 0%, ${palette.BLACK} 50%, ${palette.POSTBOX} 100%)`,
+      '& img': {
+        width: '100%',
+        height: '100%',
+        objectFit: 'cover',
+        display: 'block',
+      },
+    }),
+
+  image: css({
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
+    display: 'block',
+  }),
 };
