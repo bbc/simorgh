@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect, type APIRequestContext } from '@playwright/test';
 import { AppEnv, errorPage404Suites } from './suites';
 import appConfig from '../../../utilities/serviceConfigs';
 import { getEnvConfig } from '../../../cypress/support/config/envs';
@@ -29,7 +29,7 @@ const assert404HtmlResponse = async ({
   request,
   path,
 }: {
-  request: Parameters<Parameters<typeof test>[1]>[0]['request'];
+  request: APIRequestContext;
   path: string;
 }) => {
   const response = await request.get(`${baseURL}${path}`);
@@ -187,31 +187,6 @@ test.describe('errorPage404', () => {
             });
           });
         }
-      });
-
-      test.describe(`Canonical Tests for ${suiteName} errorPage404`, () => {
-        test('should return a 404 error code', async ({ request }) => {
-          test.skip(
-            !shouldRunForEnv(testSuite.runforEnv),
-            `Skipped for APP_ENV=${appEnvFromProcess}`,
-          );
-
-          await assert404HtmlResponse({ request, path: testSuite.path });
-        });
-      });
-
-      test.describe(`Amp Tests for ${suiteName} errorPage404`, () => {
-        test('should return a 404 error code', async ({ request }) => {
-          test.skip(
-            !shouldRunForEnv(testSuite.runforEnv),
-            `Skipped for APP_ENV=${appEnvFromProcess}`,
-          );
-
-          await assert404HtmlResponse({
-            request,
-            path: `${testSuite.path}.amp`,
-          });
-        });
       });
     });
   });
