@@ -1,11 +1,11 @@
 import { use } from 'react';
+import getServiceNumerals from '#app/components/MostRead/utilities/getServiceNumerals';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import {
   isCalledOffStatus,
   isInProgressStatus,
   isResultStatus,
 } from '../helpers/event-status-groups';
-import getTranslatedNumerals from '../helpers/getTranslatedNumerals';
 import Time from './fixture-time';
 import Score from './score';
 import styles from '../index.styles';
@@ -23,12 +23,16 @@ interface PlayedProps {
 
 const Played = ({ data }: PlayedProps) => {
   const { service } = use(ServiceContext);
+  const numerals = getServiceNumerals(service);
+  const translateScore = (score?: string) =>
+    (score && numerals[score]) || score;
+
   return (
     <Score
       status={data.status}
-      home={getTranslatedNumerals({ score: data.home.score, service })}
+      home={translateScore(data.home.score)}
       homeScoreUnconfirmed={data.home.scoreUnconfirmed}
-      away={getTranslatedNumerals({ score: data.away.score, service })}
+      away={translateScore(data.away.score)}
       awayScoreUnconfirmed={data.away.scoreUnconfirmed}
     />
   );
