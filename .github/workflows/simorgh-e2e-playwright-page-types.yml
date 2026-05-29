@@ -57,7 +57,7 @@ jobs:
           trap cleanup EXIT
 
           for i in $(seq 1 120); do
-            if curl -fsS "http://127.0.0.1:7081" >/dev/null; then
+            if curl -fsS "http://127.0.0.1:7081/api/status" >/dev/null; then
               break
             fi
             if [ "$i" -eq 120 ]; then
@@ -65,6 +65,7 @@ jobs:
               cat /tmp/simorgh-nextjs.log || true
               exit 1
             fi
+            sleep 1
           done
 
           yarn playwright:errorPage404
