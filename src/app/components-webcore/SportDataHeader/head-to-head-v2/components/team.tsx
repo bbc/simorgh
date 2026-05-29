@@ -1,3 +1,5 @@
+import { use } from 'react';
+import { ServiceContext } from '#contexts/ServiceContext';
 import SportBadge from './sport-badge/index';
 import TeamName from './team-name';
 import styles from '../index.styles';
@@ -26,6 +28,15 @@ const Team = ({
   shouldHideBadges,
   badgePlaceholderFallbackType,
 }: TeamProps) => {
+  const { translations } = use(ServiceContext);
+
+  const teamIdentifier = urn?.split(':').pop();
+  const teamTranslation = teamIdentifier
+    ? translations?.[teamIdentifier]
+    : undefined;
+  const fullNameTranslation = teamTranslation || name;
+  const shortNameTranslation = teamTranslation || shortName;
+
   const size: BadgeSize = isConciseView
     ? { small: 20, medium: 24, large: 24 }
     : { small: 40, medium: 44, large: 44 };
@@ -33,8 +44,8 @@ const Team = ({
     return (
       <div css={styles.team(isConciseView, shouldHideBadges, 'home')}>
         <TeamName
-          fullName={name}
-          shortName={shortName}
+          fullName={fullNameTranslation}
+          shortName={shortNameTranslation}
           isConciseView={isConciseView}
           shouldHideBadges={shouldHideBadges}
         />
@@ -60,8 +71,8 @@ const Team = ({
         />
       )}
       <TeamName
-        fullName={name}
-        shortName={shortName}
+        fullName={fullNameTranslation}
+        shortName={shortNameTranslation}
         isConciseView={isConciseView}
         shouldHideBadges={shouldHideBadges}
       />
