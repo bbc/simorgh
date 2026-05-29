@@ -43,6 +43,7 @@ const BrandContainer = ({
   const maxWidth = svgRatio * svgMaxHeight;
 
   const brandPath = getBrandPath(service, variant);
+  const isLanguagesPage = service === 'ws';
 
   return (
     <StyledBrand
@@ -56,6 +57,7 @@ const BrandContainer = ({
       skipLink={skipLink}
       scriptLink={scriptLink}
       ref={brandRef}
+      isLanguagesPage={isLanguagesPage}
       {...props}
     >
       {children}
