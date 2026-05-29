@@ -36,17 +36,20 @@ const Banner = styled.div`
   align-items: stretch;
 
   @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
-    min-height: ${60 / 16}rem;
+    min-height: ${props =>
+      props.isLanguagesPage ? `${44 / 16}rem` : `${60 / 16}rem`};
     padding: 0 ${GEL_SPACING};
   }
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    min-height: ${60 / 16}rem;
+    min-height: ${props =>
+      props.isLanguagesPage ? `${44 / 16}rem` : `${60 / 16}rem`};
     padding: 0 ${GEL_SPACING_DBL};
   }
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    min-height: ${64 / 16}rem;
+    min-height: ${props =>
+      props.isLanguagesPage ? `${44 / 16}rem` : `${64 / 16}rem`};
   }
 `;
 
@@ -152,6 +155,7 @@ const Brand = forwardRef((props, ref) => {
     skipLink = null,
     linkId = null,
     children,
+    serviceLocalisedName,
     ...rest
   } = props;
 
