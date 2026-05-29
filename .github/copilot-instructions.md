@@ -13,7 +13,6 @@ description: "General guide for Simorgh"
 - The Next.js app reuses shared app code from `src/app` rather than duplicating component logic.
 - Treat each `service` (for example `arabic`, `mundo`, `portuguese`) as a first-class boundary: routes, variants, toggles, analytics, and rendering behavior are often service-specific.
 - Key service/toggle config lives in `src/app/lib/config/services`, `src/app/lib/config/toggles`, and `data/`.
-- Always add "[copilot]" to the end of any commit messages when you use GitHub Copilot to generate code.
 
 ## Request/data flow to understand before editing
 - Typical SSR flow: page `getServerSideProps` in `ws-nextjs-app/pages/[service]/**` -> `ws-nextjs-app/utilities/pageRequests/getPageData.ts` -> `src/app/routes/utils/fetchDataFromBFF/index.ts` -> `src/app/routes/utils/fetchPageData/index.js`.
@@ -24,9 +23,9 @@ description: "General guide for Simorgh"
 - If not already done so, make sure BFF_PATH="https://fabl.api.bbci.co.uk/module/simorgh-bff" is set as an environment variable using `export BFF_PATH="https://fabl.api.bbci.co.uk/module/simorgh-bff"`, otherwise use `BFF_PATH="http://localhost:3210/module/simorgh-bff"` if the user would like this app to connect to fabl running locally.
 - Use Node from `.nvmrc` (`v22.18.0`), then install deps with `yarn` at repo root.
 - Main local run path: `cd ws-nextjs-app && yarn dev` (runs on `http://localhost:7081`).
-- Useful routes: `/pidgin`, `/news/articles/c6v11qzyv8po`, `/pidgin/live/c7p765ynk9qt`.
+- Useful routes: `/pidgin`, `/news/articles/c6v11qzyv8po`, `/pidgin/live/c7p765ynk9qt`. Add `?renderer_env=live` or `?renderer_env=test` to request live and test assets respectively. 
 - Lint/unit from root: `yarn test:lint`, `yarn test:unit`, `yarn test`.
-- Next.js integration tests from root: `yarn test:integration`.
+- Next.js integration tests from root: `yarn test:integration --nextJS`.
 - E2E from root: `yarn test:e2e` (or `yarn test:e2e:interactive`).
 - Storybook from root: `yarn storybook` (port `9001`).
 
