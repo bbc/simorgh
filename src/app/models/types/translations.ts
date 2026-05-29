@@ -1,6 +1,5 @@
 /* eslint-disable camelcase */
 export interface Translations {
-  matchSummary?: string;
   and?: string;
   pagination?: {
     page?: string;
@@ -242,7 +241,10 @@ export interface Translations {
     previous?: string;
     next?: string;
   };
-  sportTeamNames?: Record<string, string>;
+  sport: {
+    matchSummary?: string;
+    worldCupTeamNames?: Record<string, string>;
+  };
 }
 
 export interface TranslationsError {
