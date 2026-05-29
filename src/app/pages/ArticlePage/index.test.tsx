@@ -1455,7 +1455,7 @@ describe('Article Page', () => {
     });
 
     it('should NOT render LocationBasedTopicOj when isLive is true (live env)', () => {
-      jest.mocked(isLive).mockImplementationOnce(() => true);
+      jest.mocked(isLive).mockImplementation(() => true);
 
       const pageData = {
         ...articleDataNews,
