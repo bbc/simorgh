@@ -281,7 +281,6 @@ describe('TopicDiscovery', () => {
         itemTracker: {
           type: 'topic-discovery-more-from-link',
           text: `Mais de ${topicTagsFixture[0].topicName}`,
-          position: 1,
           resourceId: topicTagsFixture[0].topicId,
         },
       });

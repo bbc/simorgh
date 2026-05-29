@@ -69,7 +69,6 @@ const TopicDiscovery = ({
       text: currentTopic
         ? moreFromTopic.replace('{topic}', currentTopic.topicName)
         : undefined,
-      position: 1,
       resourceId: currentTopic?.topicId,
     },
     ...(experimentProps && experimentProps),
