@@ -56,8 +56,8 @@ export const getFallbackFootballPeriodLabel = (
       : '';
 
     return {
-      value: `Penalties${scoreText}`,
-      accessible: `Penalties ${accessibleText}`,
+      value: `Penalties${scoreText}`, // hard coded
+      accessible: `Penalties ${accessibleText}`, // hard coded
     };
   }
 

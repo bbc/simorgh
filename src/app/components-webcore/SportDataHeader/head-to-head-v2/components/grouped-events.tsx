@@ -1,3 +1,5 @@
+import { use } from 'react';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import ActionGrid from './action-grid';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 import styles from '../index.styles';
@@ -31,51 +33,62 @@ interface GroupedEventsProps {
   homeName: string;
   awayName: string;
 }
-
 const GroupedEvents = ({
   groupedEvents,
   homeName,
   awayName,
-}: GroupedEventsProps) => (
-  <div css={styles.groupedEventsWrapper}>
-    {groupedEvents.map(
-      ({
-        groupName,
-        homeTeamActions,
-        homeTeamAccessibleActions,
-        awayTeamActions,
-        awayTeamAccessibleActions,
-      }) => (
-        <div css={styles.actionWrapper} key={groupName.fullName}>
-          <ActionGrid>
-            <div css={styles.groupLabel}>{groupName.fullName}</div>
-            <div css={styles.groupedHomeEvent}>
-              {homeTeamActions.length > 0 && (
-                <>
-                  <VisuallyHiddenText>{`${homeName},`}</VisuallyHiddenText>
-                  <ActionsDisplay
-                    teamActions={homeTeamActions}
-                    teamAccessibleActions={homeTeamAccessibleActions}
-                  />
-                </>
-              )}
+}: GroupedEventsProps) => {
+  const { translations } = use(ServiceContext);
+  const assistTranslation = translations?.sport?.assists;
+
+  return (
+    <div css={styles.groupedEventsWrapper}>
+      {groupedEvents.map(
+        ({
+          groupName,
+          homeTeamActions,
+          homeTeamAccessibleActions,
+          awayTeamActions,
+          awayTeamAccessibleActions,
+        }) => {
+          const displayName =
+            groupName.fullName === 'Assists' && assistTranslation
+              ? assistTranslation
+              : groupName.fullName;
+
+          return (
+            <div css={styles.actionWrapper} key={groupName.fullName}>
+              <ActionGrid>
+                <div css={styles.groupLabel}>{displayName}</div>
+                <div css={styles.groupedHomeEvent}>
+                  {homeTeamActions.length > 0 && (
+                    <>
+                      <VisuallyHiddenText>{`${homeName},`}</VisuallyHiddenText>
+                      <ActionsDisplay
+                        teamActions={homeTeamActions}
+                        teamAccessibleActions={homeTeamAccessibleActions}
+                      />
+                    </>
+                  )}
+                </div>
+                <div css={styles.groupedAwayEvent}>
+                  {awayTeamActions.length > 0 && (
+                    <>
+                      <VisuallyHiddenText>{`${awayName},`}</VisuallyHiddenText>
+                      <ActionsDisplay
+                        teamActions={awayTeamActions}
+                        teamAccessibleActions={awayTeamAccessibleActions}
+                      />
+                    </>
+                  )}
+                </div>
+              </ActionGrid>
             </div>
-            <div css={styles.groupedAwayEvent}>
-              {awayTeamActions.length > 0 && (
-                <>
-                  <VisuallyHiddenText>{`${awayName},`}</VisuallyHiddenText>
-                  <ActionsDisplay
-                    teamActions={awayTeamActions}
-                    teamAccessibleActions={awayTeamAccessibleActions}
-                  />
-                </>
-              )}
-            </div>
-          </ActionGrid>
-        </div>
-      ),
-    )}
-  </div>
-);
+          );
+        },
+      )}
+    </div>
+  );
+};
 
 export default GroupedEvents;

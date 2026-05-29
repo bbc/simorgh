@@ -44,6 +44,7 @@ const PenaltyScores = ({ data }: PenaltyScoresProps) => {
         data-testid="penalties-text"
       >
         <span css={styles.winningTeamName}>{`${winnerOnPenaltiesName}`}</span>
+        {/* // hard coded */}
         {` win ${winnerOnPenaltiesScore}-${loserOnPenaltiesScore} on pens`}
       </div>
     </div>

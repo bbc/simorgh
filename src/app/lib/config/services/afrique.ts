@@ -309,6 +309,9 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'À la une',
       featuresAnalysisTitle: 'Le choix de la rédaction',
+      sport: {
+        assists: 'Passes décisives',
+      },
     },
     mostRead: {
       header: 'Les plus populaires',
