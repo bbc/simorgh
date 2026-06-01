@@ -140,7 +140,15 @@ const sendBeacon = async (reverbBeaconConfig: ReverbBeaconConfig) => {
         eventDetails,
       } = reverbBeaconConfig;
 
-      await setReverbPageValues({ pageVars: page, userVars: user });
+      // Only set window.bbcpage for page view events. Component events
+      // (sectionView, sectionClick) are built by buildReverbEventModel which
+      // intentionally omits page-level fields like x8. Calling
+      // setReverbPageValues with that minimal params.page would overwrite
+      // window.bbcpage and corrupt any concurrent page view beacon that has
+      // not yet been read by the Reverb SDK.
+      if (eventDetails.eventName === 'pageView') {
+        await setReverbPageValues({ pageVars: page, userVars: user });
+      }
 
       await callReverb(eventDetails);
     } catch (error) {
