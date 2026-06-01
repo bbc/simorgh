@@ -130,8 +130,10 @@ export const service: DefaultServiceConfig = {
       },
       myNews: {
         title: 'My News',
+        guestTitle: 'Welcome to My News',
         description: 'My saved articles',
-        loadingArticles: 'Loading...',
+        guestDescription:
+          'Sign in to save stories in My News, and read them when it suits you.',
         noArticles: "You haven't saved any articles yet",
         errorText:
           'This content does not seem to be working. Please try again later.',

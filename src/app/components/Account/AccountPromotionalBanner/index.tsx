@@ -1,9 +1,7 @@
 import { use, useState, useCallback } from 'react';
 import { Helmet } from 'react-helmet';
-import Paragraph from '#app/components/Paragraph';
 import PromotionalBanner from '#app/components/PromotionalBanner';
-import CallToActionLink from '#app/components/CallToActionLink';
-import { AccountIcon } from '#app/components/icons';
+import AccountActionButtons from '#app/components/Account/AccountActionButtons';
 import { AccountContext } from '#contexts/AccountContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
@@ -26,8 +24,6 @@ const AccountPromotionalBanner = () => {
   const { translations } = use(ServiceContext);
   const { nonce } = use(RequestContext);
   const accountPromoBannerTranslations = translations?.accountPromoBanner;
-  const signInText = translations?.account?.signIn;
-  const registerText = translations?.account?.register;
   const [isDismissed, setIsDismissed] = useState(false);
 
   const viewTracker = useViewTracker({
@@ -88,40 +84,10 @@ const AccountPromotionalBanner = () => {
           isDismissible
           onClose={handleCloseClick}
         >
-          <CallToActionLink
-            url={signInUrl}
-            className="focusIndicatorInvert"
-            css={[styles.callToActionLink, styles.signInLink]}
-            eventTrackingData={{
-              componentName: 'account-promotional-banner-sign-in',
-            }}
-          >
-            <CallToActionLink.ButtonLikeWrapper>
-              <AccountIcon css={styles.accountIcon} />
-              <CallToActionLink.Text shouldUnderlineOnHoverFocus>
-                {signInText}
-              </CallToActionLink.Text>
-            </CallToActionLink.ButtonLikeWrapper>
-          </CallToActionLink>
-
-          <Paragraph size="bodyCopy" css={styles.buttonSeparatorText}>
-            {buttonSeparatorText}
-          </Paragraph>
-
-          <CallToActionLink
-            url={registerUrl}
-            className="focusIndicatorInvert"
-            css={[styles.callToActionLink, styles.registerLink]}
-            eventTrackingData={{
-              componentName: 'account-promotional-banner-register',
-            }}
-          >
-            <CallToActionLink.ButtonLikeWrapper>
-              <CallToActionLink.Text shouldUnderlineOnHoverFocus>
-                {registerText}
-              </CallToActionLink.Text>
-            </CallToActionLink.ButtonLikeWrapper>
-          </CallToActionLink>
+          <AccountActionButtons
+            signInComponentName="account-promotional-banner-sign-in"
+            registerComponentName="account-promotional-banner-register"
+          />
         </PromotionalBanner>
       </div>
     </>

@@ -65,8 +65,9 @@ export interface Translations {
   };
   myNews?: {
     title: string;
+    guestTitle: string;
     description: string;
-    loadingArticles: string;
+    guestDescription: string;
     noArticles: string;
     errorText: string;
   };
