@@ -95,32 +95,38 @@ export default {
     inset: 0,
     backgroundColor: 'rgba(20, 20, 20, 0.9)',
     backdropFilter: 'blur(0.2rem)',
+    zIndex: 0,
   }),
 
-  modalContent: css({
-    position: 'relative',
-    zIndex: 1,
-    width: '90%',
-    maxWidth: '34rem',
-    borderRadius: '0.5rem',
-    overflow: 'hidden',
-    backgroundColor: '#1a1a1a',
-  }),
-
-  modalImageSide: ({ palette }: Theme) =>
+  modalContent: ({ palette }: Theme) =>
     css({
-      width: '100%',
-      height: '20rem',
+      position: 'relative',
+      zIndex: 1,
+      width: '90%',
+      maxWidth: '34rem',
       overflow: 'hidden',
-      flexShrink: 0,
+      display: 'flex',
+      flexDirection: 'column',
       background: `linear-gradient(to bottom left, ${palette.POSTBOX} 0%, ${palette.BLACK} 50%, ${palette.POSTBOX} 100%)`,
-      '& img': {
-        width: '100%',
-        height: '100%',
-        objectFit: 'cover',
-        display: 'block',
+      '& aside': {
+        background: 'transparent',
+        backgroundImage: 'none',
       },
     }),
+
+  modalImageSide: css({
+    width: '100%',
+    height: '20rem',
+    overflow: 'hidden',
+    flexShrink: 0,
+    position: 'relative',
+    '& img': {
+      width: '100%',
+      height: '100%',
+      objectFit: 'cover',
+      display: 'block',
+    },
+  }),
 
   image: css({
     width: '100%',
