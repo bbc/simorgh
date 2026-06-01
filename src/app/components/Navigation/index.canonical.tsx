@@ -1,4 +1,4 @@
-import React, { useState, use, useRef, KeyboardEvent } from 'react';
+import React, { useState, use, useEffect, useRef, FocusEvent } from 'react';
 import Navigation from '#psammead/psammead-navigation/src';
 import { ScrollableNavigation } from '#psammead/psammead-navigation/src/ScrollableNavigation';
 import {
@@ -36,7 +36,9 @@ const CanonicalNavigationContainer: React.FC<
   const { isLite } = use(RequestContext);
   const { enabled: topBarOJsEnabled } = useToggle('topBarOJs');
   const [isOpen, setIsOpen] = useState(false);
-  // const bottomScrollableNavRef = useRef<HTMLDivElement>(null);
+
+  const dropDownNavRef = useRef<HTMLDivElement>(null);
+  const bottomScrollableNavRef = useRef<HTMLDivElement>(null);
 
   useMediaQuery(`(max-width: ${GROUP_2_MAX_WIDTH_BP}rem)`, event => {
     if (!event.matches) {
@@ -44,34 +46,45 @@ const CanonicalNavigationContainer: React.FC<
     }
   });
 
-  // const closeMenuOnTabOut = (event: KeyboardEvent) => {
-  //   const { currentTarget } = event;
+  useEffect(() => {
+    const handleOnBlur = (event: FocusEvent) => {
+      const { currentTarget } = event;
 
-  //   const dropdownItems = currentTarget.querySelectorAll(
-  //     'a[href], button:not([disabled])',
-  //   );
-  //   const lastDropdownItem = dropdownItems[dropdownItems.length - 1];
+      const allFocusableItems = Array.from(
+        document.querySelectorAll('a[href], button:not([disabled])'),
+      );
+      const lastDropdownIndex = allFocusableItems.indexOf(currentTarget);
+      const itemsAfterDropdown = allFocusableItems.slice(lastDropdownIndex + 1);
+      const nextPageItem = itemsAfterDropdown.find(
+        item =>
+          !currentTarget.contains(item) &&
+          !bottomScrollableNavRef.current?.contains(item),
+      );
+      if (!nextPageItem) return;
+      event.preventDefault();
+      setIsOpen(false);
+      (nextPageItem as HTMLElement).focus();
+    };
 
-  //   if (document.activeElement !== lastDropdownItem) return;
+    const dropDownNav = dropDownNavRef.current;
+    const dropdownItems = dropDownNav?.querySelectorAll(
+      'a[href], button:not([disabled])',
+    );
+    const lastDropdownItem = dropdownItems
+      ? dropdownItems[dropdownItems.length - 1]
+      : null;
 
-  //   const allFocusableItems = Array.from(
-  //     document.querySelectorAll('a[href], button:not([disabled])'),
-  //   );
-  //   const lastDropdownIndex = allFocusableItems.indexOf(lastDropdownItem);
-  //   const itemsAfterDropdown = allFocusableItems.slice(lastDropdownIndex + 1);
+    if (lastDropdownItem) {
+      lastDropdownItem.addEventListener('blur', handleOnBlur);
+    }
 
-  //   const nextPageItem = itemsAfterDropdown.find(
-  //     item =>
-  //       !currentTarget.contains(item) &&
-  //       !bottomScrollableNavRef.current?.contains(item),
-  //   );
-
-  //   if (!nextPageItem) return;
-
-  //   event.preventDefault();
-  //   setIsOpen(false);
-  //   (nextPageItem as HTMLElement).focus();
-  // };
+    // Cleanup event listener when the component unmounts
+    return () => {
+      if (lastDropdownItem) {
+        lastDropdownItem.removeEventListener('onblur', handleOnBlur);
+      }
+    };
+  }, []);
 
   return (
     <Navigation dir={dir} isOpen={isOpen}>
@@ -95,15 +108,13 @@ const CanonicalNavigationContainer: React.FC<
               />
             )}
           </div>
-          <div role="presentation">
-            {/* onKeyDown={closeMenuOnTabOut} */}
+          <div role="presentation" ref={dropDownNavRef}>
             <CanonicalDropdown isOpen={isOpen} css={styles.dropdown}>
               {dropdownListItems}
             </CanonicalDropdown>
           </div>
         </div>
-        <div css={styles.lowerNavWrapper}>
-          {/* ref={bottomScrollableNavRef} */}
+        <div css={styles.lowerNavWrapper} ref={bottomScrollableNavRef}>
           <ScrollableNavigation
             dir={dir}
             css={styles.bottomRowItems}
