@@ -80,9 +80,7 @@ const uasApiRequest = async (
     queryParams,
   );
 
-  if (isRefreshAvailable !== false) {
-    await refreshTokensIfExpired();
-  }
+  await refreshTokensIfExpired(isRefreshAvailable);
 
   const headers: HeadersInit = {
     ...getAuthHeaders(),

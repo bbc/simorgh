@@ -161,11 +161,14 @@ describe('getIdctaConfig', () => {
     expect(result?.availability).toEqual({ refresh: 'GREEN' });
   });
 
-  it('should include availability as undefined when not present in config', async () => {
-    mockFetchIdctaConfig.mockResolvedValue(mockIdctaConfig);
+  it('should set availability to undefined when availability is not present in config', async () => {
+    mockFetchIdctaConfig.mockResolvedValue({
+      ...mockIdctaConfig,
+      availability: undefined,
+    });
 
     const result = await getIdctaConfig(mockToggles, mockService);
 
-    expect(result?.availability).toEqual(mockIdctaConfig.availability);
+    expect(result?.availability).toBeUndefined();
   });
 });

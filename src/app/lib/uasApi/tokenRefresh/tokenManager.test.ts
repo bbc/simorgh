@@ -53,7 +53,7 @@ describe('refreshTokensIfExpired', () => {
 
   it('does nothing when not running on the client', async () => {
     mockOnClient.mockReturnValue(false);
-    await refreshTokensIfExpired();
+    await refreshTokensIfExpired(true);
     expect(mockRefreshTokens).not.toHaveBeenCalled();
   });
 
@@ -61,7 +61,7 @@ describe('refreshTokensIfExpired', () => {
     const validToken = createTestToken(ONE_HOUR_FROM_NOW);
     mockCookieGet.mockReturnValue(validToken);
 
-    await refreshTokensIfExpired();
+    await refreshTokensIfExpired(true);
 
     expect(mockRefreshTokens).not.toHaveBeenCalled();
   });
@@ -69,7 +69,7 @@ describe('refreshTokensIfExpired', () => {
   it('triggers refresh when ckns_id cookie is missing', async () => {
     mockCookieGet.mockReturnValue(undefined);
 
-    await refreshTokensIfExpired();
+    await refreshTokensIfExpired(true);
 
     expect(mockRefreshTokens).toHaveBeenCalledTimes(1);
   });
@@ -78,7 +78,7 @@ describe('refreshTokensIfExpired', () => {
     const expiredToken = createTestToken(ONE_HOUR_AGO);
     mockCookieGet.mockReturnValue(expiredToken);
 
-    await refreshTokensIfExpired();
+    await refreshTokensIfExpired(true);
 
     expect(mockRefreshTokens).toHaveBeenCalledTimes(1);
   });
@@ -87,7 +87,7 @@ describe('refreshTokensIfExpired', () => {
     const soonExpiringToken = createTestToken(FOUR_MINUTES_FROM_NOW);
     mockCookieGet.mockReturnValue(soonExpiringToken);
 
-    await refreshTokensIfExpired();
+    await refreshTokensIfExpired(true);
 
     expect(mockRefreshTokens).toHaveBeenCalledTimes(1);
   });
@@ -96,8 +96,37 @@ describe('refreshTokensIfExpired', () => {
     mockCookieGet.mockReturnValue(undefined);
     mockRefreshTokens.mockRejectedValue(new Error('Network error'));
 
-    await expect(refreshTokensIfExpired()).rejects.toThrow(
+    await expect(refreshTokensIfExpired(true)).rejects.toThrow(
       'Error while ensuring tokens: Network error',
     );
+  });
+
+  describe('when isRefreshAvailable is false or undefined', () => {
+    it('does not call refresh and resolves when token is still valid', async () => {
+      const validToken = createTestToken(ONE_HOUR_FROM_NOW);
+      mockCookieGet.mockReturnValue(validToken);
+
+      await refreshTokensIfExpired(false);
+      await refreshTokensIfExpired(undefined);
+
+      expect(mockRefreshTokens).not.toHaveBeenCalled();
+    });
+
+    it('throws when token is invalid and refresh is unavailable', async () => {
+      mockCookieGet.mockReturnValue(undefined);
+
+      await expect(refreshTokensIfExpired(false)).rejects.toThrow(
+        'Token refresh is unavailable and existing tokens are invalid',
+      );
+    });
+
+    it('throws when token is expired and refresh is unavailable', async () => {
+      const expiredToken = createTestToken(ONE_HOUR_AGO);
+      mockCookieGet.mockReturnValue(expiredToken);
+
+      await expect(refreshTokensIfExpired(undefined)).rejects.toThrow(
+        'Token refresh is unavailable and existing tokens are invalid',
+      );
+    });
   });
 });

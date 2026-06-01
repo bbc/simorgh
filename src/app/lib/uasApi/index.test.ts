@@ -138,48 +138,31 @@ describe('uasApiRequest', () => {
 
     const activityType = 'favourites';
 
-    await expect(uasApiRequest('GET', activityType)).rejects.toThrow(
-      'Token refresh failed',
-    );
+    await expect(
+      uasApiRequest('GET', activityType, { isRefreshAvailable: true }),
+    ).rejects.toThrow('Token refresh failed');
 
     // Verify that fetch was never called since token validation failed
     expect(global.fetch).not.toHaveBeenCalled();
   });
 
-  it('should skip refresh when isRefreshAvailable is false', async () => {
+  it('should always call refreshTokensIfExpired, passing isRefreshAvailable', async () => {
     (global.fetch as jest.Mock).mockResolvedValue({
       ok: true,
       json: () => Promise.resolve({ success: true }),
     });
 
-    const activityType = 'favourites';
-    await uasApiRequest('GET', activityType, { isRefreshAvailable: false });
+    await uasApiRequest('GET', 'favourites', { isRefreshAvailable: false });
+    expect(refreshTokensIfExpired).toHaveBeenCalledWith(false);
 
-    expect(refreshTokensIfExpired).not.toHaveBeenCalled();
-    expect(global.fetch).toHaveBeenCalled();
-  });
+    (refreshTokensIfExpired as jest.Mock).mockClear();
 
-  it('should call refresh when isRefreshAvailable is true', async () => {
-    (global.fetch as jest.Mock).mockResolvedValue({
-      ok: true,
-      json: () => Promise.resolve({ success: true }),
-    });
+    await uasApiRequest('GET', 'favourites', { isRefreshAvailable: true });
+    expect(refreshTokensIfExpired).toHaveBeenCalledWith(true);
 
-    const activityType = 'favourites';
-    await uasApiRequest('GET', activityType, { isRefreshAvailable: true });
+    (refreshTokensIfExpired as jest.Mock).mockClear();
 
-    expect(refreshTokensIfExpired).toHaveBeenCalled();
-  });
-
-  it('should call refresh when isRefreshAvailable is not provided', async () => {
-    (global.fetch as jest.Mock).mockResolvedValue({
-      ok: true,
-      json: () => Promise.resolve({ success: true }),
-    });
-
-    const activityType = 'favourites';
-    await uasApiRequest('GET', activityType);
-
-    expect(refreshTokensIfExpired).toHaveBeenCalled();
+    await uasApiRequest('GET', 'favourites');
+    expect(refreshTokensIfExpired).toHaveBeenCalledWith(undefined);
   });
 });
