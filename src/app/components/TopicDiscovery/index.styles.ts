@@ -33,6 +33,8 @@ const styles = {
         width: `calc(50% - ${spacings.FULL}rem)`,
         marginInlineEnd: `${spacings.DOUBLE}rem`,
         borderTop: 'none',
+        marginBottom: `${spacings.HALF}rem`,
+
         paddingTop: 0,
 
         '&:nth-of-type(2n)': {
@@ -143,6 +145,9 @@ const styles = {
       color: palette.GREY_10,
       margin: 0,
     }),
+  list: {
+    marginBottom: '-2rem',
+  },
 };
 
 export default styles;
