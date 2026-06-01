@@ -1,4 +1,4 @@
-import React, { useState, use, useEffect, useRef, FocusEvent } from 'react';
+import React, { useState, use, useEffect, useRef } from 'react';
 import Navigation from '#psammead/psammead-navigation/src';
 import { ScrollableNavigation } from '#psammead/psammead-navigation/src/ScrollableNavigation';
 import {
@@ -47,8 +47,9 @@ const CanonicalNavigationContainer: React.FC<
   });
 
   useEffect(() => {
-    const handleOnBlur = (event: FocusEvent) => {
-      const { currentTarget } = event;
+    const handleOnBlur = (event: Event) => {
+      const currentTarget = event.currentTarget as HTMLElement | null;
+      if (!currentTarget) return;
 
       const allFocusableItems = Array.from(
         document.querySelectorAll('a[href], button:not([disabled])'),
@@ -81,7 +82,7 @@ const CanonicalNavigationContainer: React.FC<
     // Cleanup event listener when the component unmounts
     return () => {
       if (lastDropdownItem) {
-        lastDropdownItem.removeEventListener('onblur', handleOnBlur);
+        lastDropdownItem.removeEventListener('blur', handleOnBlur);
       }
     };
   }, []);
