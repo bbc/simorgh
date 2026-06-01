@@ -100,12 +100,11 @@ export default {
     zIndex: 0,
   }),
 
-  modalContent: ({ palette }: Theme) =>
+  modalContent: ({ palette, mq }: Theme) =>
     css({
       position: 'relative',
       zIndex: 1,
-      width: '90%',
-      maxWidth: '34rem',
+      width: '80%',
       overflow: 'hidden',
       display: 'flex',
       flexDirection: 'column',
@@ -114,8 +113,19 @@ export default {
         background: 'transparent',
         backgroundImage: 'none',
       },
+      '& aside > div > div': {
+        alignItems: 'center',
+        textAlign: 'center',
+        paddingInlineStart: '1rem',
+        paddingInlineEnd: '1rem',
+      },
       '& aside button[type="button"]:last-child': {
         display: 'none',
+      },
+      [mq.GROUP_0_MAX_WIDTH]: {
+        '& aside > div > div:first-child': {
+          paddingTop: '3rem',
+        },
       },
     }),
 
@@ -137,24 +147,34 @@ export default {
       justifyContent: 'center',
     }),
 
-  modalImageSide: css({
-    width: '100%',
-    height: '20rem',
-    overflow: 'hidden',
-    flexShrink: 0,
-    position: 'relative',
-    '& img': {
+  modalImageSide: ({ mq }: Theme) =>
+    css({
       width: '100%',
+      overflow: 'hidden',
+      flexShrink: 0,
+      position: 'relative',
+      alignSelf: 'center',
+      [mq.GROUP_0_MAX_WIDTH]: {
+        display: 'none',
+      },
+      [mq.GROUP_3_MIN_WIDTH]: {
+        width: '60%',
+      },
+      '& img': {
+        width: '100%',
+        height: '100%',
+        objectFit: 'cover',
+        display: 'block',
+      },
+    }),
+
+  image: ({ spacings }: Theme) =>
+    css({
+      width: '100%',
+      maxWidth: `${pixelsToRem(450)}rem`,
       height: '100%',
       objectFit: 'cover',
       display: 'block',
-    },
-  }),
-
-  image: css({
-    width: '100%',
-    height: '100%',
-    objectFit: 'cover',
-    display: 'block',
-  }),
+      margin: `${spacings.QUADRUPLE}rem ${spacings.DOUBLE}rem ${spacings.DOUBLE}rem`,
+    }),
 };
