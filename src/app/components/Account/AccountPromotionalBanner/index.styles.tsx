@@ -10,7 +10,8 @@ export default {
         display: 'block',
       },
     }),
-  callToActionLink: ({ mq }) =>
+
+  callToActionLink: ({ mq }: Theme) =>
     css({
       padding: '1rem',
       display: 'inline-flex',
@@ -61,6 +62,7 @@ export default {
         fill: 'ButtonText',
       },
     }),
+
   registerLink: ({ palette }: Theme) =>
     css({
       height: `${pixelsToRem(44)}rem`,
@@ -112,6 +114,27 @@ export default {
         background: 'transparent',
         backgroundImage: 'none',
       },
+      '& aside button[type="button"]:last-child': {
+        display: 'none',
+      },
+    }),
+
+  closeButton: ({ palette }: Theme) =>
+    css({
+      position: 'absolute',
+      top: '0.5rem',
+      insetInlineEnd: '0.5rem',
+      background: 'none',
+      border: 'none',
+      color: palette.WHITE,
+      fill: palette.WHITE,
+      cursor: 'pointer',
+      zIndex: 2,
+      width: `${pixelsToRem(44)}rem`,
+      height: `${pixelsToRem(44)}rem`,
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
     }),
 
   modalImageSide: css({

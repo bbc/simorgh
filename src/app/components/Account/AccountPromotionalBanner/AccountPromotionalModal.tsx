@@ -3,6 +3,7 @@ import { useEffect, useMemo } from 'react';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 import ThemeProvider from '#app/components/ThemeProvider';
 import { AccountContext } from '#app/contexts/AccountContext';
+import { Close } from '#app/components/icons';
 import AccountPromotionalBanner from '.';
 import styles from './index.styles';
 import { DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS } from './utilities';
@@ -104,6 +105,14 @@ const AccountPromotionalBannerModal = ({
           css={styles.backdrop}
         />
         <div css={styles.modalContent}>
+          <button
+            type="button"
+            onClick={onClose}
+            css={styles.closeButton}
+            aria-label="Close modal"
+          >
+            <Close />
+          </button>
           <div css={styles.modalImageSide}>
             <img
               src="/images/globeImage.png"
