@@ -36,7 +36,7 @@ const CanonicalNavigationContainer: React.FC<
   const { isLite } = use(RequestContext);
   const { enabled: topBarOJsEnabled } = useToggle('topBarOJs');
   const [isOpen, setIsOpen] = useState(false);
-  const bottomScrollableNavRef = useRef<HTMLDivElement>(null);
+  // const bottomScrollableNavRef = useRef<HTMLDivElement>(null);
 
   useMediaQuery(`(max-width: ${GROUP_2_MAX_WIDTH_BP}rem)`, event => {
     if (!event.matches) {
@@ -44,34 +44,34 @@ const CanonicalNavigationContainer: React.FC<
     }
   });
 
-  const closeMenuOnTabOut = (event: KeyboardEvent) => {
-    const { currentTarget } = event;
+  // const closeMenuOnTabOut = (event: KeyboardEvent) => {
+  //   const { currentTarget } = event;
 
-    const dropdownItems = currentTarget.querySelectorAll(
-      'a[href], button:not([disabled])',
-    );
-    const lastDropdownItem = dropdownItems[dropdownItems.length - 1];
+  //   const dropdownItems = currentTarget.querySelectorAll(
+  //     'a[href], button:not([disabled])',
+  //   );
+  //   const lastDropdownItem = dropdownItems[dropdownItems.length - 1];
 
-    if (document.activeElement !== lastDropdownItem) return;
+  //   if (document.activeElement !== lastDropdownItem) return;
 
-    const allFocusableItems = Array.from(
-      document.querySelectorAll('a[href], button:not([disabled])'),
-    );
-    const lastDropdownIndex = allFocusableItems.indexOf(lastDropdownItem);
-    const itemsAfterDropdown = allFocusableItems.slice(lastDropdownIndex + 1);
+  //   const allFocusableItems = Array.from(
+  //     document.querySelectorAll('a[href], button:not([disabled])'),
+  //   );
+  //   const lastDropdownIndex = allFocusableItems.indexOf(lastDropdownItem);
+  //   const itemsAfterDropdown = allFocusableItems.slice(lastDropdownIndex + 1);
 
-    const nextPageItem = itemsAfterDropdown.find(
-      item =>
-        !currentTarget.contains(item) &&
-        !bottomScrollableNavRef.current?.contains(item),
-    );
+  //   const nextPageItem = itemsAfterDropdown.find(
+  //     item =>
+  //       !currentTarget.contains(item) &&
+  //       !bottomScrollableNavRef.current?.contains(item),
+  //   );
 
-    if (!nextPageItem) return;
+  //   if (!nextPageItem) return;
 
-    event.preventDefault();
-    setIsOpen(false);
-    (nextPageItem as HTMLElement).focus();
-  };
+  //   event.preventDefault();
+  //   setIsOpen(false);
+  //   (nextPageItem as HTMLElement).focus();
+  // };
 
   return (
     <Navigation dir={dir} isOpen={isOpen}>
@@ -95,13 +95,15 @@ const CanonicalNavigationContainer: React.FC<
               />
             )}
           </div>
-          <div role="presentation" onKeyDown={closeMenuOnTabOut}>
+          <div role="presentation">
+            {/* onKeyDown={closeMenuOnTabOut} */}
             <CanonicalDropdown isOpen={isOpen} css={styles.dropdown}>
               {dropdownListItems}
             </CanonicalDropdown>
           </div>
         </div>
-        <div css={styles.lowerNavWrapper} ref={bottomScrollableNavRef}>
+        <div css={styles.lowerNavWrapper}>
+          {/* ref={bottomScrollableNavRef} */}
           <ScrollableNavigation
             dir={dir}
             css={styles.bottomRowItems}

@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import React, { use, useRef } from 'react';
 import { NavigationUl, NavigationLi } from '#psammead/psammead-navigation/src';
 import {
   DropdownUl,
@@ -60,7 +60,43 @@ type RenderListItemsArgs = {
   viewTracker?: ReturnType<typeof useViewTracker>;
   pageType?: PageTypes;
   navType?: 'top' | 'bottom' | 'dropdown';
+  bottomScrollableNavRef?: React.RefObject<HTMLDivElement>;
 };
+
+const isLastListItem = ({ index, totalNavigationItems }) =>
+  index === totalNavigationItems - 1;
+
+const onBlurHandler =
+  (bottomScrollableNavRef: React.RefObject<HTMLDivElement>) =>
+  (event: FocusEvent<HTMLDivElement>) => {
+    const { currentTarget } = event;
+
+    const lastDropdownItem = currentTarget.querySelectorAll(
+      'a[href], button:not([disabled])',
+    );
+
+    const allFocusableItems = Array.from(
+      document.querySelectorAll('a[href], button:not([disabled])'),
+    );
+    const lastDropdownIndex = allFocusableItems.indexOf(lastDropdownItem);
+    const itemsAfterDropdown = allFocusableItems.slice(lastDropdownIndex + 1);
+
+    const nextPageItem = itemsAfterDropdown.find(
+      item =>
+        !currentTarget.contains(item) &&
+        !bottomScrollableNavRef.current?.contains(item),
+    );
+
+    console.log('&&&&&&&&&&&&&&&&&&&&&');
+    console.log('+++++++++++++++++++++');
+    console.log('bottomScrollableNavRef');
+    console.log('+++++++++++++++++++++');
+    console.log(bottomScrollableNavRef.current);
+    console.log('nextPageItem');
+    console.log('+++++++++++++++++++++');
+    console.log(nextPageItem);
+    console.log('&&&&&&&&&&&&&&&&&&&&&');
+  };
 
 const renderListItems = ({
   Li,
@@ -72,6 +108,7 @@ const renderListItems = ({
   viewTracker,
   pageType,
   navType,
+  bottomScrollableNavRef,
 }: RenderListItemsArgs) =>
   navigation.map((item, index) => {
     const { title, url } = item;
@@ -89,6 +126,10 @@ const renderListItems = ({
         clickTracker={clickTracker}
         {...(viewTracker && { viewTracker })}
         {...(navType === 'top' ? a11yProps : {})}
+        {...(isLastListItem({
+          index,
+          totalNavigationItems: navigation.length,
+        }) && { onBlurHandler: onBlurHandler(bottomScrollableNavRef) })}
       >
         {title}
       </Li>
@@ -179,6 +220,8 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
   navItems,
   propsForTopBarOJComponent,
 }) => {
+  const bottomScrollableNavRef = useRef<HTMLDivElement>(null);
+
   const { isAmp, isLite, pageType, canonicalLink, origin } =
     use(RequestContext);
 
@@ -262,7 +305,7 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
   );
 
   const bottomScrollableListItems = (
-    <NavigationUl>
+    <NavigationUl ref={bottomScrollableNavRef}>
       {renderListItems({
         Li: NavigationLi,
         navigation: bottomItems,
@@ -294,6 +337,7 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
         clickTracker: dropdownNavClickTrackerHandler,
         viewTracker: dropdownNavViewTracker,
         pageType,
+        bottomScrollableNavRef,
       })}
     </DropdownUl>
   );
