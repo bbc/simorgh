@@ -79,7 +79,6 @@ const CanonicalNavigationContainer: React.FC<
       lastDropdownItem.addEventListener('blur', handleOnBlur);
     }
 
-    // Cleanup event listener when the component unmounts
     return () => {
       if (lastDropdownItem) {
         lastDropdownItem.removeEventListener('blur', handleOnBlur);
