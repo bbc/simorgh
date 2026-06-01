@@ -86,7 +86,7 @@
     "react-dom": "19.2.6",
     "react-helmet": "6.1.0",
     "react-lazyload": "3.2.1",
-    "undici": "8.1.0",
+    "undici": "8.3.0",
     "uuid": "13.0.1",
     "winston": "patch:winston@3.8.2#./patches/winston-file-descriptor.patch"
   },
