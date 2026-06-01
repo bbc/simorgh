@@ -5,7 +5,7 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 
 import ATIAnalytics from '#app/components/ATIAnalytics';
 import MetadataContainer from '#app/components/Metadata';
-import styles from '../styles';
+import styles from './styles';
 import { MyNewsPageProps } from '../types';
 import MyNewsPageGuest from './MyNewsPageGuest';
 import MyNewsPageLoading from './MyNewsPageLoading';

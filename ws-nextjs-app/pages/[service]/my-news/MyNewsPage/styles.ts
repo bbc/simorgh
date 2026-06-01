@@ -31,6 +31,16 @@ const styles = {
         marginBottom: `${pixelsToRem(20)}rem`,
       },
     }),
+
+  spinnerWrapper: css({
+    display: 'flex',
+    justifyContent: 'center',
+  }),
+
+  spinner: css({
+    height: `${pixelsToRem(32)}rem`,
+    width: `${pixelsToRem(32)}rem`,
+  }),
 };
 
 export default styles;

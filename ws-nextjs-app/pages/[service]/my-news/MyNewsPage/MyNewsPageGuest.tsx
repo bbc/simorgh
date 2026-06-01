@@ -2,7 +2,7 @@ import { use } from 'react';
 import Heading from '#app/components/Heading';
 import Text from '#app/components/Text';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import styles from '../styles';
+import styles from './styles';
 
 // TODO: Placeholder component to be updated.
 const MyNewsPageGuest = () => {
@@ -11,7 +11,7 @@ const MyNewsPageGuest = () => {
   return (
     <>
       <Heading level={1} css={styles.heading}>
-        {translations?.myNews?.errorText}
+        {translations?.myNews?.title}
       </Heading>
       <Text size="doublePica" fontVariant="sansBold">
         Please sign in to view your saved articles.

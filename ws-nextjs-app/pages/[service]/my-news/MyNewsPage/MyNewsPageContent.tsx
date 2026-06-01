@@ -6,7 +6,7 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import { use } from 'react';
 import useUASRecentActivity from '#app/hooks/useUASRecentActivity';
 import Text from '#app/components/Text';
-import styles from '../styles';
+import styles from './styles';
 import MyNewsPageLoading from './MyNewsPageLoading';
 
 const ITEMS_PER_PAGE = 16;
@@ -53,8 +53,6 @@ const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
   if (isLoading) {
     return <MyNewsPageLoading />;
   }
-
-  console.log({ title });
 
   const renderContent = () => {
     if (error) {
