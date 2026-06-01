@@ -71,7 +71,7 @@ const onBlurHandler =
   (event: FocusEvent<HTMLDivElement>) => {
     const { currentTarget } = event;
 
-    const lastDropdownItem = currentTarget.querySelectorAll(
+    const lastDropdownItem = currentTarget.querySelector(
       'a[href], button:not([disabled])',
     );
 
@@ -89,13 +89,19 @@ const onBlurHandler =
 
     console.log('&&&&&&&&&&&&&&&&&&&&&');
     console.log('+++++++++++++++++++++');
-    console.log('bottomScrollableNavRef');
+    console.log('itemsAfterDropdown');
     console.log('+++++++++++++++++++++');
-    console.log(bottomScrollableNavRef.current);
-    console.log('nextPageItem');
+    console.log(itemsAfterDropdown[0]);
     console.log('+++++++++++++++++++++');
     console.log(nextPageItem);
+    console.log('+++++++++++++++++++++');
     console.log('&&&&&&&&&&&&&&&&&&&&&');
+
+    if (!nextPageItem) return;
+
+    event.preventDefault();
+    // setIsOpen(false);
+    (nextPageItem as HTMLElement).focus();
   };
 
 const renderListItems = ({
@@ -126,10 +132,11 @@ const renderListItems = ({
         clickTracker={clickTracker}
         {...(viewTracker && { viewTracker })}
         {...(navType === 'top' ? a11yProps : {})}
-        {...(isLastListItem({
-          index,
-          totalNavigationItems: navigation.length,
-        }) && { onBlurHandler: onBlurHandler(bottomScrollableNavRef) })}
+        {...(navType === 'dropdown' &&
+          isLastListItem({
+            index,
+            totalNavigationItems: navigation.length,
+          }) && { onBlurHandler: onBlurHandler(bottomScrollableNavRef) })}
       >
         {title}
       </Li>
@@ -337,6 +344,7 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
         clickTracker: dropdownNavClickTrackerHandler,
         viewTracker: dropdownNavViewTracker,
         pageType,
+        navType: 'dropdown',
         bottomScrollableNavRef,
       })}
     </DropdownUl>
