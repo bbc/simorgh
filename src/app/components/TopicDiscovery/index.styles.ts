@@ -145,9 +145,6 @@ const styles = {
       color: palette.GREY_10,
       margin: 0,
     }),
-  list: {
-    marginBottom: '-2rem',
-  },
 };
 
 export default styles;
