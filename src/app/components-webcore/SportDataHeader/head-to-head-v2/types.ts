@@ -87,10 +87,9 @@ export type Team = {
    */
   shortName: string;
   /**
-   * The urn for the team. This is used to lookup the team badge.
-   * If no urn is provided or a badge does not exist, a placeholder badge is used.
+   * The urn for the team. This is used for creating test-ids.
    */
-  urn?: string;
+  urn: string;
   /**
    * The fulltime and halftime running scores for the team.
    */
@@ -113,6 +112,10 @@ export type Team = {
    * Actions are not rendered in concise view.
    */
   actions?: PlayerActions[];
+  /**
+   * Either a badge or flag ichef image url, or a badge placeholder image url passed down from the BFF.
+   */
+  imageSrc: string | null;
 };
 
 export type HeadToHeadV2Data = {
