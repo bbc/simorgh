@@ -25,130 +25,6 @@ Please familiarise yourself with our:
 
 NB there is further documentation colocated with relevant code. The above list is an index of the top-level documentation of our repo.
 
-## Simorgh Overview
-
-### A High Level User Journey
-
-#### The initial page load - Server Side Render (SSR)
-
-A request to a BBC home page (for example https://www.bbc.com/mundo) is passed on to the Simorgh application from a proprietary routing and caching service (called Mozart).
-
-The request matches a route in our express server using a regex match (`homePagePath`). If the URL matches the pre-defined regex pattern for a home page we fetch some params from the route using the `getRouteProps` function. This returns the service, isAmp, route and match properties. Route is a react-router route that defines a method to fetch the initial JSON used to render the page and the React container in which to render i.e. `HomePage`, this is typically called `getInitialData`
-
-Once data is returned we pull the status code and pass all of this data as props to our main document using `renderDocument`.
-
-The Document passes the URL, JSON data, BBC Origin, isAmp and the service to the main App container and the result is rendered to a string using reacts own `renderToString` method. This string is then passed to DocumentComponent as the main app along with the assets array, style tags (the output from styled components) and any scripts/links that need to be added to the head. This is then rendered to static HTML markup using reacts own `renderToStaticMarkup` and sent back to the user as static HTML. Included in this response are links to our JS bundles which a users device will download to bootstrap the single page application (SPA) for subsequent journeys.
-
-Now that the raw HTML has been downloaded, the client-side JS file kicks in and hydrates the initial response with the client side application. During this process react uses the initial JSON payload (available on the global window object `SIMORGH_DATA`) to hydrate the original markup returned by ReactDOMServer. React expects that the rendered content is identical between the server and the client (This is why we send the initial JSON payload with the SSR page, so the hydration phase runs with the same data that the server render used).
-
-### Rendering a Page
-
-The JSON payload for an article consists of a number of Blocks. Each block is an object which represents an element on the page, this could be a Heading, an Image, a Paragraph etc. Each of these blocks has a block type and a block type will match up to a specific container in Simorgh e.g. blockType: image will match to the Image container.
-
-The ArticleMain container will iterate over each JSON block, match it against its corresponding react container and pass the data via props. These containers are where the logic for rendering each block type sits. It is at this point where we use the installed frontend components from the Psammead component library. For example the Image container will import the Figure container, and Figure will import and use the psammead-image and the psammead-image-placeholder components. An image on an article will generally have a caption, so the Figure container will import the caption container which may include more frontend components from Psammead to render a caption on top of the image.
-
-This process is repeated for each block within an article, ultimately rendering the main body of a news article using a combination of React containers for the business logic and React components for the frontend markup.
-
-### A Page Render Lifecycle
-
-Each render is passed through a set of HOC's (Higher Order Components) to enhance the page, these HOC's are;
-
-- withVariant
-- withContexts
-- withPageWrapper
-- withError
-- withData
-- withHashChangeHandler
-
-With a selection of page types passed through withOptimizelyProvider, that enables usage of Optimizely in the selected page types.
-
-#### withVariant
-
-The variant HOC ensures that services that have variants (e.g. `simp`, `lat`) always redirects to a url that renders the appropriate variant.
-
-If a user navigates to a url without providing the variant, and variant is set in cookie, the cookie variant page is rendered. Otherwise, the default variant page is rendered
-
-If a user navigates to a url with a variant, and variant is set in cookie, the cookie variant page is rendered. Otherwise, the requested variant page is rendered.
-
-#### withContexts
-
-The withContexts HOC is a wrapper that provides access to the different context providers available in the application. Any child component inside of these context providers has access to the context data via the `use` hook.
-
-#### withPageWrapper
-
-The page wrapper HOC simply wraps the Article containers with a layout, at present we only have a single page layout. This layout includes the header, footer and context providers rendering the main body as a child between the header and the footer.
-
-#### withError
-
-The error HOC checks the error prop passed in, if error is set to null the Article container is simply returned.
-
-If error is set to true the Error component is returned, giving the user a visual indication of the error e.g. a 500 error page.
-
-#### withData
-
-Assuming the other HOC's have returned the original Article container the data HOC will run some validation checks on the JSON data passed in via the data prop. If all of the checks are satisfied the ArticleContainer will be returned with a single `pageData` prop. This pageData props will house the JSON data to be rendered e.g. the Optimo blocks for a given article.
-
-#### withHashChangeHandler
-
-The withHashChangeHandler HOC is a wrapper applied to all pages that checks for changes to the URL hash value. Pages include accessibility controls to skip content should the user choose to do so, this utilises the URL hash to skip users to specific areas of the page. Due to the nature of the client side routing, changes to the URL results in a re-render. This causes some unsightly UI flickering for some components, specifically media and social embeds. This HOC applies checks to the URL so see if a re-render is necessary, or if not preventing a re-render using `React.memo`.
-
-#### withOptimizelyProvider
-
-The withOptimizelyProvider HOC returns components that have been enhanced with access to an Optimizely client, that is used to run our A/B testing. This is done to limit bundle sizes, as we seperate some of our bundles by page type, that means if we're only running A/B testing on certain page types, we can prevent polluting page type bundles with the weight of the SDK library we use for Optimizely.
-
-withOptimizelyProvider should be added as the value of the `handlerBeforeContexts` object key within [applyBasicPageHandlers.js](https://github.com/bbc/simorgh/tree/latest/src/app/pages/utils/applyBasicPageHandlers.js#L8), as the `ckns_mvt` is [set within the UserContext](https://github.com/bbc/simorgh/tree/latest/src/app/contexts/UserContext/index.tsx#L33), so the `withOptimizelyProvider` HOC needs to be applied in the correct order alongside the [withContexts](https://github.com/bbc/simorgh/tree/latest/src/app/pages/utils/applyBasicPageHandlers.js#L13) HOC. This makes the `ckns_mvt` available on first time visits to pass into the `OptimizelyProvider`, along with attributes such as `service`, which is used for determining when Optimizely should enable an experiment.
-
-Example for Article page:
-
-```jsx
-import withOptimizelyProvider from '#app/legacy/containers/PageHandlers/withOptimizelyProvider';
-import ArticlePage from './ArticlePage';
-import applyBasicPageHandlers from '../utils/applyBasicPageHandlers';
-
-export default applyBasicPageHandlers(ArticlePage, {
-  handlerBeforeContexts: withOptimizelyProvider,
-});
-```
-
-### Adding a new Page type
-
-When adding a new page type there are several parts required.
-
-#### 1) Fixture data should be added to `/data/{{service}}/{{pageType}}/`
-
-- This should be done for each service using the page type.
-- [Fixture data example](https://github.com/bbc/simorgh/blob/latest/data/igbo/articles)
-
-#### 2) Serving the fixture data on local development
-
-- The fixture data for the page type should be available on the same route as the page with a `.json` suffix
-  - EG: The `localhost:7080/igbo.json` should have the data to build the index page `localhost:7080/igbo`
-- To match the correct route we will need a new regex [here](https://github.com/bbc/simorgh/blob/5de59c6207d46b11c3af68c58a620e250aff3a1a/src/app/routes/regex/index.js)
-- Then we need to add an Express route similar to [this](https://github.com/bbc/simorgh/blob/5de59c6207d46b11c3af68c58a620e250aff3a1a/src/server/index.jsx#L107-L113)
-
-#### 3) Create a new container for the page type
-
-- Similar to [this](https://github.com/bbc/simorgh/blob/latest/src/app/pages/ArticlePage/index.jsx) we require a top level container that will act as the entry point for the page routing. Each page type should have its own container.
-  - The container should render a `main` element with a [`flex-grow: 1;` css declaration](https://github.com/bbc/simorgh/blob/8e19f820ec0de4abd18a4d13e62dd5d843a064c0/src/app/containers/ArticleMain/index.jsx#L39), this is to ensure it grows to fill the space between the visual header and footer, the [root div](https://github.com/bbc/simorgh/blob/8e19f820ec0de4abd18a4d13e62dd5d843a064c0/src/server/Document/component.jsx#L31) using a [flexbox 'sticky footer' implementation](https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Sticky_footers#Alternate_method).
-
-#### 4) Add new pre-processing rules if required.
-
-- If required for the new page type you can add pre-processing rules [here](https://github.com/bbc/simorgh/tree/latest/src/app/lib/utilities/preprocessor/rules). These are needed for use cases where we want to manipulate the data before it is received by the container for the page.
-  - EG: On the articles routes [unique ID's](https://github.com/bbc/simorgh/blob/2db3185cd8c5c076bc004b03bb6e8dad62b0c109/src/app/routes/fetchPageData/article/index.js#L19) are added to each block in the payload
-
-#### 5) Add a new route to the react router config
-
-- This should be done for AMP and Canonical pages together
-- [Route example](https://github.com/bbc/simorgh/blob/2db3185cd8c5c076bc004b03bb6e8dad62b0c109/src/app/routes/index.js#L22-L28)
-
-#### 6) Add Cypress E2E tests for the new page type
-
-- This requires config in `cypress/support/config/settings.js` for every service (even if to set the new page type to undefined)
-- If required bespoke tests for the page type should be added inside of `cypress/integration/pages/`
-- If bespoke tests are added under `cypress/integration/pages/` you must ensure the e2e pipelines are updated to run the new spec [Test e2e Pipeline](https://github.com/bbc/simorgh/blob/latest/Jenkinsfile-e2e-test) & [Live e2e Pipeline](https://github.com/bbc/simorgh/blob/latest/Jenkinsfile-e2e)
-
-NB: With this many steps it is suggested to have multiple PRs when adding a new page type as to not have a singular huge PR. However, if Cypress tests (#6) are not added in the same PR as the page routing (#5) they should immediately follow the page routing PR, ideally these should be handled in a single PR.
-
 ## Before Installation
 
 Please read:
@@ -180,13 +56,13 @@ yarn install
 
 ## Local Development
 
-To run this application locally, with hot-reloading, run
+To run this application locally, with hot-reloading:
 
 ```
-yarn dev:all
+cd ws-nextjs-app
+yarn dev
 ```
 
-The express application will start on [http://localhost:7080](http://localhost:7080).
 The nextJS application will start on [http://localhost:7081](http://localhost:7081).
 
 Once the application is running, you can visit a valid route, e.g. http://localhost:7081/pidgin.
@@ -325,7 +201,7 @@ We use [Cypress](https://www.cypress.io/) for our end-to-end tests. To run the [
 yarn test:e2e
 ```
 
-It will spin up a production server on port 7080 and run the Cypress tests against that.
+It will spin up a production server on port 7081 and run the Cypress tests against that.
 To run the smoke tests interactively, run:
 
 ```

@@ -117,6 +117,10 @@ export type Team = {
 
 export type HeadToHeadV2Data = {
   /**
+   * The event's unique urn.
+   */
+  urn: string;
+  /**
    * The event's unique id.
    */
   id?: string;
@@ -206,7 +210,7 @@ export type BadgeSize =
   | { small?: number; medium?: number; large?: number };
 
 export interface HeadToHeadV2Props {
-  data: HeadToHeadV2Data;
+  initialSportData: HeadToHeadV2Data;
   isConciseView: boolean;
   shouldShowActions?: boolean;
   /**

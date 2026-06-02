@@ -1,7 +1,5 @@
 import { PropsWithChildren } from 'react';
-import { BrowserRouter } from 'react-router-dom';
 import { render, waitFor, screen } from '@testing-library/react';
-import { FetchMock } from 'jest-fetch-mock';
 import { Article } from '#app/models/types/optimo';
 import { Helmet } from 'react-helmet';
 import { ARTICLE_PAGE } from '../../routes/utils/pageTypes';
@@ -39,54 +37,54 @@ const Context = ({
   mostReadToggledOn = true,
   showAdsBasedOnLocation = false,
 }: PropsWithChildren<ContextProps>) => (
-  <BrowserRouter>
-    <ThemeProvider service={service} variant="default">
-      <ToggleContextProvider
-        toggles={{
-          mostRead: {
-            enabled: mostReadToggledOn,
-          },
-          ads: {
-            enabled: adsToggledOn,
-          },
-        }}
+  <ThemeProvider service={service} variant="default">
+    <ToggleContextProvider
+      toggles={{
+        mostRead: {
+          enabled: mostReadToggledOn,
+        },
+        ads: {
+          enabled: adsToggledOn,
+        },
+      }}
+    >
+      <RequestContextProvider
+        bbcOrigin="https://www.test.bbc.co.uk"
+        id="c0000000000o"
+        isAmp={false}
+        isApp={false}
+        pageType={ARTICLE_PAGE}
+        pathname="/pathname"
+        service={service}
+        statusCode={200}
+        showAdsBasedOnLocation={showAdsBasedOnLocation}
+        isUK
       >
-        <RequestContextProvider
-          bbcOrigin="https://www.test.bbc.co.uk"
-          id="c0000000000o"
-          isAmp={false}
-          isApp={false}
-          pageType={ARTICLE_PAGE}
-          pathname="/pathname"
-          service={service}
-          statusCode={200}
-          showAdsBasedOnLocation={showAdsBasedOnLocation}
-          isUK
-        >
-          <ServiceContextProvider service={service}>
-            {children}
-          </ServiceContextProvider>
-        </RequestContextProvider>
-      </ToggleContextProvider>
-    </ThemeProvider>
-  </BrowserRouter>
+        <ServiceContextProvider service={service}>
+          {children}
+        </ServiceContextProvider>
+      </RequestContextProvider>
+    </ToggleContextProvider>
+  </ThemeProvider>
 );
 
-const fetchMock = fetch as FetchMock;
-
 describe('MediaArticlePage', () => {
+  const mockMostReadResponse = () =>
+    jest.spyOn(global, 'fetch').mockResolvedValue({
+      json: async () => newsMostReadData,
+    } as Response);
+
   beforeEach(() => {
     process.env.SIMORGH_ICHEF_BASE_URL = 'https://ichef.test.bbci.co.uk';
-
-    fetchMock.resetMocks();
   });
 
   afterEach(() => {
     delete process.env.SIMORGH_ICHEF_BASE_URL;
+    jest.restoreAllMocks();
   });
 
   it('should render a news article correctly', async () => {
-    fetchMock.mockResponse(JSON.stringify(newsMostReadData));
+    mockMostReadResponse();
 
     const { container } = render(
       <Context service="news">
@@ -141,7 +139,7 @@ describe('MediaArticlePage', () => {
   });
 
   it('should NOT render mpu or advert leaderboard', async () => {
-    fetchMock.mockResponse(JSON.stringify(newsMostReadData));
+    mockMostReadResponse();
 
     const { container } = render(
       <Context service="news" adsToggledOn showAdsBasedOnLocation>

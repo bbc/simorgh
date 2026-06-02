@@ -31,7 +31,7 @@ declare global {
         }
       | object;
     bbcuser: {
-      getHashedId: () => null;
+      getHashedId: () => Promise<string | null>;
       isSignedIn: () => Promise<boolean>;
     };
     __reverb: {

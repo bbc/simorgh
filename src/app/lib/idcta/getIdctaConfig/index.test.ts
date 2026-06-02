@@ -1,5 +1,6 @@
 import getToggleDefinitions from '#app/lib/utilities/getToggleDefinition';
 import isLocal from '#app/lib/utilities/isLocal';
+import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
 import fetchIdctaConfig from '../fetchIdctaConfig';
 import getIdctaConfig from '.';
 
@@ -19,13 +20,6 @@ describe('getIdctaConfig', () => {
     },
   };
   const mockService = 'mundo';
-  const mockIdctaConfig = {
-    idctaBaseUrl: 'https://idcta.test.api.bbc.com/idcta',
-    signInUrl: '/signin',
-    registerUrl: '/register',
-    'id-availability': 'GREEN',
-    initialIsSignedIn: false,
-  };
 
   beforeEach(() => {
     jest.clearAllMocks();
@@ -129,6 +123,21 @@ describe('getIdctaConfig', () => {
     const result = await getIdctaConfig(mockToggles, mockService, {});
 
     expect(result?.initialIsSignedIn).toBe(false);
+  });
+
+  it('should strip extra fields not required by AccountContext', async () => {
+    mockFetchIdctaConfig.mockResolvedValue({
+      ...mockIdctaConfig,
+      accessTokenUrl: 'https://bbc.com/access_token',
+      announce_url: 'https://bbc.com/announce',
+      randomData: 'should be stripped',
+    });
+
+    const result = await getIdctaConfig(mockToggles, mockService);
+
+    expect(result).not.toHaveProperty('accessTokenUrl');
+    expect(result).not.toHaveProperty('announce_url');
+    expect(result).not.toHaveProperty('randomData');
   });
 
   it('should set initialIsSignedIn to false when x-id-oidc-signedin header has an invalid value', async () => {

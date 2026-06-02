@@ -1,4 +1,3 @@
-import { BrowserRouter } from 'react-router-dom';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
@@ -179,9 +178,7 @@ describe('Ad Container', () => {
               showAdsBasedOnLocation
             >
               <ToggleContext.Provider value={toggleContextMock}>
-                <BrowserRouter>
-                  <AdContainer slotType="leaderboard" />
-                </BrowserRouter>
+                <AdContainer slotType="leaderboard" />
               </ToggleContext.Provider>
             </RequestContextProvider>
           </ServiceContextProvider>,
@@ -204,9 +201,7 @@ describe('Ad Container', () => {
               showAdsBasedOnLocation
             >
               <ToggleContext.Provider value={toggleContextMock}>
-                <BrowserRouter>
-                  <AdContainer slotType="mpu" />
-                </BrowserRouter>
+                <AdContainer slotType="mpu" />
               </ToggleContext.Provider>
             </RequestContextProvider>
           </ServiceContextProvider>,
@@ -405,9 +400,7 @@ describe('Ad Container', () => {
             showAdsBasedOnLocation
           >
             <ToggleContext.Provider value={toggleContextMock}>
-              <BrowserRouter>
-                <AdContainer slotType="leaderboard" />
-              </BrowserRouter>
+              <AdContainer slotType="leaderboard" />
             </ToggleContext.Provider>
           </RequestContextProvider>
         </ServiceContext.Provider>,
@@ -453,9 +446,7 @@ describe('Ad Container', () => {
             nonce={nonce}
           >
             <ToggleContext.Provider value={toggleContextMock}>
-              <BrowserRouter>
-                <AdContainer slotType="leaderboard" />
-              </BrowserRouter>
+              <AdContainer slotType="leaderboard" />
             </ToggleContext.Provider>
           </RequestContextProvider>
         </ServiceContext.Provider>,

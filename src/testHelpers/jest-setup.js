@@ -1,6 +1,5 @@
 /* eslint-disable max-classes-per-file */
 import { jest } from '@jest/globals';
-import fetch from 'jest-fetch-mock';
 import path from 'path';
 import { TextEncoder, TextDecoder } from 'util';
 import { ReadableStream } from 'node:stream/web';
@@ -10,7 +9,7 @@ global.jest = jest;
 
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
-global.fetch = fetch;
+global.fetch = jest.fn();
 global.ReadableStream = ReadableStream;
 global.MessageChannel = MessageChannel;
 global.MessagePort = MessagePort;

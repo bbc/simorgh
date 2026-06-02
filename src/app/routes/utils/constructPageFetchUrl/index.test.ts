@@ -30,6 +30,7 @@ describe('constructPageFetchUrl', () => {
     const variant = 'ru-UA';
     const page = '2';
     const isAmp = true;
+    const country = 'ua';
 
     const fetchUrl = constructPageFetchUrl({
       pathname,
@@ -38,17 +39,17 @@ describe('constructPageFetchUrl', () => {
       variant,
       page,
       isAmp,
+      country,
     });
 
-    expect(fetchUrl.query).toEqual({
-      id: 'c0000000000t',
-      page: '2',
-      pageType: 'topic',
-      service: 'ukrainian',
-      serviceEnv: 'live',
-      variant: 'ru-UA',
-      isAmp: true,
-    });
+    expect(fetchUrl.searchParams.get('id')).toBe('c0000000000t');
+    expect(fetchUrl.searchParams.get('page')).toBe('2');
+    expect(fetchUrl.searchParams.get('pageType')).toBe('topic');
+    expect(fetchUrl.searchParams.get('service')).toBe('ukrainian');
+    expect(fetchUrl.searchParams.get('serviceEnv')).toBe('live');
+    expect(fetchUrl.searchParams.get('variant')).toBe('ru-UA');
+    expect(fetchUrl.searchParams.get('isAmp')).toBe('true');
+    expect(fetchUrl.searchParams.get('country')).toBe('ua');
   });
 
   it('should remove .amp from ID', async () => {
@@ -182,7 +183,7 @@ describe('constructPageFetchUrl', () => {
     ${TOPIC_PAGE}      | ${'ukrainian'} | ${'/ukrainian/topics/foo'}          | ${'Topic ID is invalid'}
     ${TOPIC_PAGE}      | ${'ukrainian'} | ${'/ukrainian/topics/c000000000t'}  | ${'Topic ID is invalid'}
     ${LIVE_RADIO_PAGE} | ${'afrique'}   | ${'/foo'}                           | ${'LiveRadio ID is invalid'}
-    ${LIVE_TV_PAGE}    | ${'afrique'}   | ${'/afrique'}                       | ${'LiveTV ID is invalid'}
+    ${LIVE_TV_PAGE}    | ${'afrique'}   | ${'/'}                              | ${'LiveTV ID is invalid'}
     ${'foo'}           | ${'ukrainian'} | ${'/ukrainian/topics/c0000000000t'} | ${'Foo ID is invalid'}
   `(
     `should throw a 500 with message $expected, when pageType $pageType asset ID is incorrect with service of $service`,

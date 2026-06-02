@@ -10,9 +10,9 @@ import filterForBlockType from '#app/lib/utilities/blockHandlers';
 import nodeLogger from '#lib/logger.node';
 import { OK } from '#app/lib/statusCodes.const';
 import { BFF_FETCH_ERROR, ROUTING_INFORMATION } from '#app/lib/logger.const';
-import sendCustomMetric from '#server/utilities/customMetrics';
-import { NON_200_RESPONSE } from '#server/utilities/customMetrics/metrics.const';
-import getAgent from '#server/utilities/getAgent';
+import sendCustomMetric from '#utilities/customMetrics';
+import { NON_200_RESPONSE } from '#utilities/customMetrics/metrics.const';
+import getAgent from '#utilities/getAgent';
 
 const logger = nodeLogger(__filename);
 

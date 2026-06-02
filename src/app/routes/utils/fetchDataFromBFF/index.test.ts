@@ -24,7 +24,7 @@ const mockAgent = {
 
 const mockGetAgent = () => Promise.resolve(mockAgent);
 
-jest.mock('../../../../server/utilities/getAgent', () => jest.fn(mockGetAgent));
+jest.mock('#utilities/getAgent', () => jest.fn(mockGetAgent));
 
 const localTimeout = 60000;
 
@@ -74,6 +74,28 @@ describe('Fetch Data from BFF', () => {
         });
       },
     );
+
+    it('should invoke the BFF with the country code when provided', async () => {
+      const fetchPageDataSpy = jest.spyOn(fetchPageData, 'default');
+      const path = '/pidgin/articles/cwl08rd38p6o';
+
+      process.env.SIMORGH_APP_ENV = 'test';
+
+      await fetchDataFromBFF({
+        pathname: path,
+        pageType: ARTICLE_PAGE,
+        service: 'pidgin',
+        getAgent: mockGetAgent,
+        country: 'ng',
+      });
+
+      expect(fetchPageDataSpy).toHaveBeenCalledWith({
+        pageType: ARTICLE_PAGE,
+        path: 'https://mock-bff-path/?id=cwl08rd38p6o&service=pidgin&pageType=article&serviceEnv=test&country=ng',
+        agent: mockAgent,
+        optHeaders: { 'ctx-service-env': 'test' },
+      });
+    });
   });
 
   describe('for a CPS Asset', () => {

@@ -49,16 +49,17 @@ export const service: DefaultServiceConfig = {
     showRelatedTopics: true,
     googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     podcastPromo: {
-      title: 'يستحق الانتباه',
-      brandTitle: 'قناتنا الرسمية على واتساب',
-      brandDescription: 'تابعوا التغطية الشاملة من بي بي سي نيوز عربي',
+      title: 'البودكاست',
+      brandTitle: 'يستحق الانتباه',
+      brandDescription:
+        'شرح معمق لأبرز الأحداث والموضوعات، لمساعدتك على فهم أهم المتغيرات حولك وأثرها على حياتك',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0lkrxsb.jpg',
-        alt: 'بي بي سي نيوز عربي على تطبيقWhatsApp ',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0h6dt4s.jpg',
+        alt: 'يستحق الانتباه',
       },
       linkLabel: {
-        text: 'اضغط هنا',
-        href: 'https://www.whatsapp.com/channel/0029Val8KlE5a24BsTvuVd2e',
+        text: 'الحلقات',
+        href: 'https://www.bbc.com/arabic/podcasts/p0h6d6nm',
       },
       skipLink: {
         text: 'تخطى %title% وواصل القراءة',

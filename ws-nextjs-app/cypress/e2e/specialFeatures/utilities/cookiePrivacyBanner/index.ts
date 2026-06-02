@@ -1,4 +1,4 @@
-import appConfig from '#server/utilities/serviceConfigs';
+import appConfig from '#utilities/serviceConfigs';
 
 export const getPrivacyBanner = (service, variant) =>
   cy.contains(
