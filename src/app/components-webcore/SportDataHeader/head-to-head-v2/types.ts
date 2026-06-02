@@ -219,11 +219,6 @@ export interface HeadToHeadV2Props {
    * This ensures that the badges/teams line up horizontally the whole way down the stack.
    */
   maximumContainerScoreDigits?: number;
-  /**
-   * Optional setting for the sport badge's placeholder fallback type.
-   * @default 'badge'
-   */
-  teamBadgePlaceholderFallbackType?: BadgePlaceholderFallbackType;
 }
 
 export declare const HeadToHeadV2: (props: HeadToHeadV2Props) => JSX.Element;
