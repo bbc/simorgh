@@ -208,11 +208,22 @@ describe('useUASButton', () => {
         savedMetadata: mockMetadata,
       });
 
+      const mockUseUASMetadataSync = jest.requireMock(
+        '#app/hooks/useUASMetadataSync',
+      ).default as jest.Mock;
+
       renderHook(() => useUASButton(defaultProps));
 
-      // The hook should be called and useUASMetadataSync should be invoked
-      // This is verified through the mock
-      expect(mockUseUASFetchSaveStatus).toHaveBeenCalled();
+      expect(mockUseUASMetadataSync).toHaveBeenCalledWith(
+        expect.objectContaining({
+          articlePageData: defaultProps.articlePageData,
+          articleId: '123',
+          service: 'hindi',
+          isSaved: true,
+          savedArticleMetadata: mockMetadata,
+          onMetadataOutOfDate: expect.any(Function),
+        }),
+      );
     });
 
     it('invalidates both status and list queries on successful metadata sync', async () => {
@@ -228,11 +239,24 @@ describe('useUASButton', () => {
         savedMetadata: mockMetadata,
       });
 
-      const { result } = renderHook(() => useUASButton(defaultProps));
+      const mockUseUASMetadataSync = jest.requireMock(
+        '#app/hooks/useUASMetadataSync',
+      ).default as jest.Mock;
 
-      // The hook should call invalidateQueries when metadata sync is triggered
-      // This verifies the cache invalidation pattern
-      expect(result.current.isSaved).toBe(true);
+      renderHook(() => useUASButton(defaultProps));
+
+      const { onMetadataOutOfDate } = mockUseUASMetadataSync.mock.calls[0][0];
+
+      await act(async () => {
+        await onMetadataOutOfDate();
+      });
+
+      expect(mockInvalidateQueries).toHaveBeenCalledWith({
+        queryKey: uasKeys.favouriteStatus('user-123', '123'),
+      });
+      expect(mockInvalidateQueries).toHaveBeenCalledWith({
+        queryKey: uasKeys.favouritesList('user-123'),
+      });
     });
   });
 });
