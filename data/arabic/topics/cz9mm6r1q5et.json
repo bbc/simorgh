@@ -1,0 +1,1159 @@
+{
+  "data": {
+    "title": "فيديو",
+    "description": "",
+    "seoDescription": "Can you please add a SEO description, this wil be shown in search results so may 'sell' your page to users",
+    "imageData": null,
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "video",
+            "duration": "PT2M52S",
+            "isLive": false,
+            "title": "ما تفاصيل الأجسام الطائرة المجهولة التي يتحدث عنها البنتاغون؟",
+            "firstPublished": "2026-05-23T15:25:11.433Z",
+            "lastPublished": "2026-05-23T15:25:11.433Z",
+            "link": "https://www.bbc.com/arabic/articles/clypd2823v5o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/89da/live/58654160-56bb-11f1-89a3-d1f559421220.jpg.webp",
+            "description": "نشرت وزارة الدفاع الأمريكية \"البنتاغون\" عشرات الملفات المتعلقة بالأجسام الطائرة المجهولة\n",
+            "imageAlt": "أجسام مجهولة في السماء",
+            "isPortraitImage": false,
+            "id": "clypd2823v5o",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "الولايات المتحدة",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/cqywj95q3wpt",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/cqywj95q3wpt"
+              }
+            }
+          },
+          {
+            "type": "video",
+            "duration": "PT6M32S",
+            "isLive": false,
+            "title": "لماذا تُصيب فيروسات الحيوانات البشر بوتيرة أكبر؟",
+            "firstPublished": "2026-05-24T11:05:30.826Z",
+            "lastPublished": "2026-05-24T11:05:30.826Z",
+            "link": "https://www.bbc.com/arabic/articles/c5y0wdvdwd9o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/53a5/live/48603410-575f-11f1-b682-cf91850925ea.jpg.webp",
+            "description": "يتوقع العلماء أن يكون الوباء القادم على الأرجح ناجماً عن فيروس ينتقل من الحيوانات.",
+            "imageAlt": "لماذا تُصيب فيروسات الحيوانات البشر بوتيرة أكبر؟",
+            "isPortraitImage": false,
+            "id": "c5y0wdvdwd9o",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "أزمة وباء ايبولا",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/c1gdq3k04dpt",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/c1gdq3k04dpt"
+              }
+            }
+          },
+          {
+            "type": "video",
+            "duration": "PT5M35S",
+            "isLive": false,
+            "title": "راؤول كاسترو، حكاية رئيس كوبا السابق الذي تلاحقه واشنطن",
+            "firstPublished": "2026-05-22T16:15:11.017Z",
+            "lastPublished": "2026-05-22T16:15:11.017Z",
+            "link": "https://www.bbc.com/arabic/articles/c4gv874d0y8o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/9202/live/d49ae8f0-55f0-11f1-8b8c-6d33e1d5abb6.jpg.webp",
+            "description": "وجهت الولايات المتحدة اتهامات إلى الرئيس الكوبي السابق راؤول كاسترو، بالتآمر لقتل مواطنين أمريكيين وبجرائم أخرى. فمن هو راؤول كاسترو، ولماذا تتهمه واشنطن بقتل أمريكيين؟",
+            "imageAlt": "الرئيس الكوبي السابق راؤول كاسترو",
+            "isPortraitImage": false,
+            "id": "c4gv874d0y8o",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "الولايات المتحدة",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/cqywj95q3wpt",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/cqywj95q3wpt"
+              }
+            }
+          },
+          {
+            "type": "video",
+            "duration": "PT2M51S",
+            "isLive": false,
+            "title": "اتهامات لسيارات بالتجسس على سائقيها، ما الذي يحدث؟",
+            "firstPublished": "2026-05-21T11:15:56.800Z",
+            "lastPublished": "2026-05-21T11:15:56.800Z",
+            "link": "https://www.bbc.com/arabic/articles/ckgpvnwkyn7o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/edf8/live/f2e9ab80-5446-11f1-8b8c-6d33e1d5abb6.jpg.webp",
+            "description": "من وزنك وتعابير وجهك إلى وجهتك اليومية، تجمع السيارات الحديثة كماً هائلاً من البيانات عنك دون أن تدرك ذلك… وقد يمتد تأثير هذه المعلومات إلى أمور عملية مثل تحديد كلفة التأمين الخاصة بك.",
+            "imageAlt": "سيارات",
+            "isPortraitImage": false,
+            "id": "ckgpvnwkyn7o",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "علوم",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/cg7265n4w6pt",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/cg7265n4w6pt"
+              }
+            }
+          },
+          {
+            "type": "video",
+            "duration": "PT3M51S",
+            "isLive": false,
+            "title": "مسيرات الألياف الضوئية، تحدٍ جديد في ساحات المعارك",
+            "firstPublished": "2026-05-09T11:07:00.620Z",
+            "lastPublished": "2026-05-09T11:07:00.620Z",
+            "link": "https://www.bbc.com/arabic/articles/c4g7262kdkjo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/5ecc/live/e5d95840-4b96-11f1-b55d-0f258dce1735.jpg.webp",
+            "description": "شهد صناعة الطائرات المسيرة نمواً كبيراً في الحرب الروسية الأوكرانية، و طور الطرفان أنظمة تحاول التصدي لها، ما دفع لظهور مسيرات جديدة يصعب التشويش عليها وهي مسيرات الألياف الضوئية.",
+            "imageAlt": "مسيرات الألياف الضوئية",
+            "isPortraitImage": false,
+            "id": "c4g7262kdkjo",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "الولايات المتحدة",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/cqywj95q3wpt",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/cqywj95q3wpt"
+              }
+            }
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:766ce171-6b87-4287-9fc2-7301d1a34953",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "visualProminence": "HIGH",
+        "title": "آخر الفيديوهات",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "video",
+            "duration": "PT3M44S",
+            "isLive": false,
+            "title": "هل تصبح سوريا ممراً للطاقة بديلاً عن مضيق هرمز؟",
+            "firstPublished": "2026-05-13T14:55:40.567Z",
+            "lastPublished": "2026-05-13T14:55:40.567Z",
+            "link": "https://www.bbc.com/arabic/articles/c7756r7jv22o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/fb55/live/8da756e0-4ed9-11f1-bd52-e755d604ece4.jpg.webp",
+            "description": "تروج الحكومة السورية لمبادرتين رئيسيتين: مشروع البحار الأربعة وخطة 4+1.\nما هي هذه المبادرات؟ ",
+            "imageAlt": "خطة البحار الأربعة",
+            "isPortraitImage": false,
+            "id": "c7756r7jv22o",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "مضيق هرمز",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/cwyqqe9wgwyt",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/cwyqqe9wgwyt"
+              }
+            }
+          },
+          {
+            "type": "video",
+            "duration": "PT2M43S",
+            "isLive": false,
+            "title": "الإمارات تعلن تعرضها لهجمات إيرانية على الفجيرة، فما أهمية ميناء الفجيرة؟",
+            "firstPublished": "2026-05-05T14:00:23.876Z",
+            "lastPublished": "2026-05-05T14:00:23.876Z",
+            "link": "https://www.bbc.com/arabic/articles/c5yxe9ejz60o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/a95d/live/58c10ed0-488a-11f1-b55d-0f258dce1735.jpg.webp",
+            "description": "تعتمد الإمارات على الفجيرة ضمن استراتيجية أوسع لتنويع منافذها البحرية وتقليل الاعتماد على مضيق هرمز.",
+            "imageAlt": "ميناء الفجيرة ومحمد بن زايد",
+            "isPortraitImage": false,
+            "id": "c5yxe9ejz60o",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "الولايات المتحدة",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/cqywj95q3wpt",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/cqywj95q3wpt"
+              }
+            }
+          },
+          {
+            "type": "video",
+            "duration": "PT3M37S",
+            "isLive": false,
+            "title": "هل تستفيد الجزائر وليبيا من أزمة مضيق هرمز؟",
+            "firstPublished": "2026-04-21T14:26:31.362Z",
+            "lastPublished": "2026-04-21T14:26:31.362Z",
+            "link": "https://www.bbc.com/arabic/articles/c3r3e9v8n9jo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/758e/live/e80df2a0-3d8c-11f1-bd52-e755d604ece4.jpg.webp",
+            "description": "تبحث الكثير من الدول حول العالم عن بدائل لاستيراد النفط والغاز، بعد الحرب الأمريكية الإسرائيلية مع إيران، وتعثر مرور ناقلات النفط عبر مضيق هرمز",
+            "imageAlt": "غاز الجزائر ونفط ليبيا ",
+            "isPortraitImage": false,
+            "id": "c3r3e9v8n9jo",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "الولايات المتحدة",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/cqywj95q3wpt",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/cqywj95q3wpt"
+              }
+            }
+          },
+          {
+            "type": "video",
+            "duration": "PT3M49S",
+            "isLive": false,
+            "title": "ما هي الممرات المائية التي تفرض رسوماً للعبور؟",
+            "firstPublished": "2026-04-12T12:31:43.445Z",
+            "lastPublished": "2026-04-12T12:31:43.445Z",
+            "link": "https://www.bbc.com/arabic/articles/c2lwrnrwxplo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/4b92/live/46601aa0-366b-11f1-879d-1b2f5c3919b8.jpg.webp",
+            "description": "مع استمرار التوترات في مضيق هرمز، ونية إيران فرض رسوم على السفن العابرة للممر المائي الاستراتيجي، فما آلية تحصيل الرسوم على بعض أهم الممرات المائية في العالم؟",
+            "imageAlt": "قناة بنما",
+            "isPortraitImage": false,
+            "id": "c2lwrnrwxplo",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "مضيق هرمز",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/cwyqqe9wgwyt",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/cwyqqe9wgwyt"
+              }
+            }
+          },
+          {
+            "type": "video",
+            "duration": "PT6M27S",
+            "isLive": false,
+            "title": "عندما حظرت السعودية ودول عربية أخرى النفط عن الولايات المتحدة",
+            "firstPublished": "2026-04-01T15:03:13.213Z",
+            "lastPublished": "2026-04-01T15:03:13.213Z",
+            "link": "https://www.bbc.com/arabic/articles/c98kpl3dx34o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/127c/live/e5501570-2d15-11f1-b297-95b0a0a8331e.jpg.webp",
+            "description": "لفهم حجم الأزمة الحالية، نتوقف عند صدمة النفط في السبعينيات وكيف غيرت أنماط الحياة الأمريكية.\n",
+            "imageAlt": "الملك فيصل",
+            "isPortraitImage": false,
+            "id": "c98kpl3dx34o",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "الولايات المتحدة",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/cqywj95q3wpt",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/cqywj95q3wpt"
+              }
+            }
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:45c6319c-fbb4-4444-88b6-129c56d56646",
+        "curationType": "tipo-curation",
+        "position": 1,
+        "visualProminence": "HIGH",
+        "title": "الشرق الأوسط وشمال أفريقيا",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "video",
+            "duration": "PT1M24S",
+            "isLive": false,
+            "title": "حرب إيران: التضليل بألعاب الفيديو",
+            "firstPublished": "2026-03-12T10:27:17.615Z",
+            "lastPublished": "2026-03-12T10:27:17.615Z",
+            "link": "https://www.bbc.com/arabic/articles/c3rz0gxpeggo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/a1a0/live/f445e9f0-1dfd-11f1-801d-ed3cff6bf876.jpg.webp",
+            "description": "انتشرت مقاطع فيديو مضللة مؤخراً عبر مواقع التواصل الاجتماعي تظهر مسيرات إيرانية تلاحق مقاتلات أمريكية حصدت ملايين المشاهدات..  فريق بي بي سي تقصي الحقائق ومزيد من التفاصيل",
+            "imageAlt": "ألعاب فيديو أم حرب إيران؟",
+            "isPortraitImage": false,
+            "id": "c3rz0gxpeggo",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "الولايات المتحدة",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/cqywj95q3wpt",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/cqywj95q3wpt"
+              }
+            }
+          },
+          {
+            "type": "video",
+            "duration": "PT3M6S",
+            "isLive": false,
+            "title": "ما تفاصيل قصف مدرسة الأطفال في إيران؟ | بي بي سي تقصي الحقائق",
+            "firstPublished": "2026-03-10T08:33:16.944Z",
+            "lastPublished": "2026-03-10T08:33:16.944Z",
+            "link": "https://www.bbc.com/arabic/articles/cyv902nr95no",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/2e03/live/dff6fd20-1c60-11f1-9120-a910fc22c6ac.jpg.webp",
+            "description": "فريق بي بي سي لتقصي الحقائق، بحث في تفاصيل القصف الذي استهدف مدرسة في إيران بداية الحرب.",
+            "imageAlt": "بي بي سي تقصي الحقائق",
+            "isPortraitImage": false,
+            "id": "cyv902nr95no",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "الولايات المتحدة",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/cqywj95q3wpt",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/cqywj95q3wpt"
+              }
+            }
+          },
+          {
+            "type": "video",
+            "duration": "PT1M43S",
+            "isLive": false,
+            "title": "صور وفيديوهات مزيفة حول الحرب في إيران والمنطقة | بي بي سي تقصي الحقائق",
+            "firstPublished": "2026-03-06T11:12:00.194Z",
+            "lastPublished": "2026-03-06T11:12:00.194Z",
+            "link": "https://www.bbc.com/arabic/articles/crl415ke74eo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/a158/live/18b30e40-194d-11f1-9120-a910fc22c6ac.jpg.webp",
+            "description": "كشف فريق بي بي سي لتقصّي الحقائق عدد من المقاطع والصور المزيفة المتداولة على وسائل التواصل الاجتماعي حول الحرب في إيران والمنطقة.",
+            "imageAlt": "فيديوهات حرب بالذكاء الاصطناعي",
+            "isPortraitImage": false,
+            "id": "crl415ke74eo",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "الولايات المتحدة",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/cqywj95q3wpt",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/cqywj95q3wpt"
+              }
+            }
+          },
+          {
+            "type": "video",
+            "duration": "PT2M12S",
+            "isLive": false,
+            "title": "صور وفيديوهات مضللة لمظاهرات إيران | بي بي سي تقصي الحقائق",
+            "firstPublished": "2026-01-03T10:40:00.374Z",
+            "lastPublished": "2026-01-03T10:40:00.374Z",
+            "link": "https://www.bbc.com/arabic/articles/cqj20d9x0xko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/1b78/live/ad824b10-e88f-11f0-aae2-2191c0e48a3b.jpg.webp",
+            "description": "منذ بدء احتجاجات إيران الأحد الماضي انتشرت مقاطع فيديو وصور مضللة وأخرى مولدة بالذكاء الاصطناعي عبر مواقع التواصل الاجتماعي.",
+            "imageAlt": "مظاهرات إيران",
+            "isPortraitImage": false,
+            "id": "cqj20d9x0xko",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "مظاهرة",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/c8y94k3j7k8t",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/c8y94k3j7k8t"
+              }
+            }
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:f483d6d2-2c07-4de5-ad0d-f6dd4c8bf908",
+        "curationType": "tipo-curation",
+        "position": 2,
+        "visualProminence": "NORMAL",
+        "title": "بي بي سي - تقصي الحقائق",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "video",
+            "duration": "PT3M29S",
+            "isLive": false,
+            "title": "بوتين في الصين مجدداً، ما الذي يجمعه مع شي جين بينغ؟",
+            "firstPublished": "2026-05-20T11:27:06.081Z",
+            "lastPublished": "2026-05-20T11:27:06.081Z",
+            "link": "https://www.bbc.com/arabic/articles/c1e2vzepvxxo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/b0d0/live/114ce8e0-543c-11f1-89a3-d1f559421220.jpg.webp",
+            "description": "في كل زيارة لبوتين إلى الصين، يسعى الرئيس الروسي وشي جين بينغ إلى إظهار صداقة لا مثيل لها بينهما.",
+            "imageAlt": "بوتين وشي جين بينغ",
+            "isPortraitImage": false,
+            "id": "c1e2vzepvxxo",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "الولايات المتحدة",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/cqywj95q3wpt",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/cqywj95q3wpt"
+              }
+            }
+          },
+          {
+            "type": "video",
+            "duration": "PT3M10S",
+            "isLive": false,
+            "title": "لماذا يستغني المسؤولون الأمريكيون عن هواتفهم الشخصية داخل الصين؟",
+            "firstPublished": "2026-05-15T15:38:02.804Z",
+            "lastPublished": "2026-05-15T15:38:02.804Z",
+            "link": "https://www.bbc.com/arabic/articles/crep5v9w2nyo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/d77e/live/b3c06e70-5073-11f1-8b8c-6d33e1d5abb6.jpg.webp",
+            "description": "كشفت تقارير أمريكية أن مسؤولين رافقوا الرئيس الأمريكي دونالد ترامب خلال زيارته إلى الصين استغنوا عن هواتفهم الشخصية، واعتمدوا بدلاً منها على \"هواتف نظيفة\" وأجهزة مؤقتة محدودة البيانات، ضمن إجراءات أمنية رقمية مشددة. \nلكن لماذا يُطلب من هؤلاء المسؤولين التخلي عن هواتفهم الشخصية عند دخولهم الصين؟",
+            "imageAlt": "الرئيس الأمريكي والصيني",
+            "isPortraitImage": false,
+            "id": "crep5v9w2nyo",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "الولايات المتحدة",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/cqywj95q3wpt",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/cqywj95q3wpt"
+              }
+            }
+          },
+          {
+            "type": "video",
+            "duration": "PT3M2S",
+            "isLive": false,
+            "title": "فيروس هانتا، هل نحن أمام سيناريو يشبه تفشي وباء كورونا؟",
+            "firstPublished": "2026-05-12T13:23:30.922Z",
+            "lastPublished": "2026-05-12T13:23:30.922Z",
+            "link": "https://www.bbc.com/arabic/articles/cj9pvrdlyexo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/dd3d/live/1175c590-4e05-11f1-b55d-0f258dce1735.jpg.webp",
+            "description": "بعد تسجيل عدد من الإصابات والوفيات بفيروس هانتا على متن السفينة السياحية \"إم في هونديوس\"، بدأت التساؤلات حول خطورة هذا الفيروس وما إذا كان العالم سيشهد انتشاراً له. فهل نحن أمام سيناريو يشبه ما تسبب به فيروس كورونا، أم لا؟",
+            "imageAlt": "فيروس هانتا",
+            "isPortraitImage": false,
+            "id": "cj9pvrdlyexo",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "فيروس كورونا",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/cmlnz92mdy7t",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/cmlnz92mdy7t"
+              }
+            }
+          },
+          {
+            "type": "video",
+            "duration": "PT2M13S",
+            "isLive": false,
+            "title": "نواب حزب العمال يوجهون إنذاراً لستارمر بعد الهزيمة الانتخابية الساحقة، هل يستطيع قلب الأمور لصالحه؟",
+            "firstPublished": "2026-05-10T15:19:10.378Z",
+            "lastPublished": "2026-05-10T15:19:10.378Z",
+            "link": "https://www.bbc.com/arabic/articles/c5ye84km11eo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/eb4b/live/26b44090-4c83-11f1-b55d-0f258dce1735.jpg.webp",
+            "description": "صرحت النائبة عن حزب العمال كاثرين ويست بأنها تفضل أن يتقدم أحد أعضاء مجلس الوزراء ليحل محل كير ستارمر، وذلك بعدما تعرض الحزب لهزيمة في انتخابات محلية لصالح حزب الإصلاح البريطاني وحزب الخضر.",
+            "imageAlt": "كير ستارمر",
+            "isPortraitImage": false,
+            "id": "c5ye84km11eo",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "سياسة",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/cg7265n4rvgt",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/cg7265n4rvgt"
+              }
+            }
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:b08192f6-b14e-46da-9942-c54a035db2fc",
+        "curationType": "tipo-curation",
+        "position": 3,
+        "visualProminence": "NORMAL",
+        "title": "في العمق",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "video",
+            "duration": "PT3M12S",
+            "isLive": false,
+            "title": "لماذا يطفئ ملايين الأشخاص أضواء منازلهم في يوم محدد من العام؟",
+            "firstPublished": "2026-03-28T14:55:01.638Z",
+            "lastPublished": "2026-03-28T14:55:01.638Z",
+            "link": "https://www.bbc.com/arabic/articles/c0mjw8k2e48o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/cf24/live/be489130-2ab5-11f1-b297-95b0a0a8331e.jpg.webp",
+            "description": "تهدف حملة ساعة الأرض العالمية إلى رفع مستوى الوعي حول آثار تغير المناخ. وقد بدأت في أستراليا عام 2007، ويشارك فيها الآن أشخاص في نحو 190 دولة.",
+            "imageAlt": "ساعة الأرض",
+            "isPortraitImage": false,
+            "id": "c0mjw8k2e48o",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "التغير المناخي",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/c1gdq3kq8nzt",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/c1gdq3kq8nzt"
+              }
+            }
+          },
+          {
+            "type": "video",
+            "duration": "PT2M57S",
+            "isLive": false,
+            "title": "ساعة القيامة، كل ما تريد معرفته عنها",
+            "firstPublished": "2026-01-29T11:21:26.003Z",
+            "lastPublished": "2026-01-29T11:21:26.003Z",
+            "link": "https://www.bbc.com/arabic/articles/cly9r1w0n10o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/d32d/live/8a3326f0-fd04-11f0-b7e1-afb6d0884c18.jpg.webp",
+            "description": "أعلنت ألكسندرا بيل الرئيسة والمديرة التنفيذية، لنشرة علماء الذرة، أنه تم تحريك ساعة القيامة إلى 85 ثانية قبل منتصف الليل في 27 يناير/كانون الثاني 2026. فما السبب وماذا يعني ذلك؟",
+            "imageAlt": "صورة لساعة القيامة",
+            "isPortraitImage": false,
+            "id": "cly9r1w0n10o",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "الولايات المتحدة",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/cqywj95q3wpt",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/cqywj95q3wpt"
+              }
+            }
+          },
+          {
+            "type": "video",
+            "duration": "PT2M29S",
+            "isLive": false,
+            "title": "\"غازات سامة\" تخنق أهالي قابس التونسية",
+            "firstPublished": "2025-10-21T08:54:31.393Z",
+            "lastPublished": "2025-10-21T08:54:31.393Z",
+            "link": "https://www.bbc.com/arabic/articles/c1d0474v4kdo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/42ce/live/328db4d0-ae5b-11f0-b2a1-6f537f66f9aa.jpg.webp",
+            "description": "دعا الاتحاد العام التونسي للشغل، أكبر منظمة نقابية في تونس، إلى إضراب عام في ولاية قابس جنوب شرق البلاد، احتجاجاً على التلوّث البيئي الناجم عن الوحدات التابعة للمجمّع الكيميائي بالمدينة.",
+            "imageAlt": "مصانع في تونس",
+            "isPortraitImage": false,
+            "id": "c1d0474v4kdo",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "التغير المناخي",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/c1gdq3kq8nzt",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/c1gdq3kq8nzt"
+              }
+            }
+          },
+          {
+            "type": "video",
+            "duration": "PT2M28S",
+            "isLive": false,
+            "title": "فيضانات النيل تغرق منازل ومدناً مصرية",
+            "firstPublished": "2025-10-05T14:44:41.031Z",
+            "lastPublished": "2025-10-05T14:44:41.031Z",
+            "link": "https://www.bbc.com/arabic/articles/cx2xdd198ezo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/f072/live/777b2df0-a1fb-11f0-928c-71dbb8619e94.jpg.webp",
+            "description": "ألقت وزارة الموارد المائية والري المصرية اللوم على إثيوبيا، معتبرة أن الفيضانات ناجمة عن \"تصرفات أحادية وغير مسؤولة\" في إدارة سد النهضة.",
+            "imageAlt": "فيضانات النيل",
+            "isPortraitImage": false,
+            "id": "cx2xdd198ezo",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "إثيوبيا",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/c8y94kx9gwvt",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/c8y94kx9gwvt"
+              }
+            }
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:e01e0149-162d-40d6-998c-70aab76249c9",
+        "curationType": "tipo-curation",
+        "position": 4,
+        "visualProminence": "NORMAL",
+        "title": "التغير المناخي",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "video",
+            "duration": "PT2M58S",
+            "isLive": false,
+            "title": "ما علاقة الأرجل الاصطناعية للعارضة لورين فاسر بالدورة الشهرية؟",
+            "firstPublished": "2026-05-07T15:36:33.169Z",
+            "lastPublished": "2026-05-07T15:36:33.169Z",
+            "link": "https://www.bbc.com/arabic/articles/cx21e1r4625o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/4e57/live/50aaaac0-4a2a-11f1-ac78-2112837ce2aa.jpg.webp",
+            "description": "ظهرت العارضة والناشطة لورين فاسر في حفل Met Gala 2026 بإطلالة لافتة، وخسرت لورين ساقها اليمنى عام 2012 ثم اليسرى عام 2018، بعد إصابتها بمتلازمة الصدمة التسممية نتيجة استخدام خاطئ لمنتجات الدورة الشهرية وتحديداً السدادات القطنية.",
+            "imageAlt": "العارضة لورين فاسر",
+            "isPortraitImage": false,
+            "id": "cx21e1r4625o",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "شؤون المرأة",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/c404vr23qydt",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/c404vr23qydt"
+              }
+            }
+          },
+          {
+            "type": "video",
+            "duration": "PT5M1S",
+            "isLive": false,
+            "title": "هل خففت إيران قيود فرض الحجاب على النساء؟",
+            "firstPublished": "2026-04-17T12:50:08.949Z",
+            "lastPublished": "2026-04-17T12:50:08.949Z",
+            "link": "https://www.bbc.com/arabic/articles/c393298909xo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/854e/live/d20601c0-3a5b-11f1-879d-1b2f5c3919b8.jpg.webp",
+            "description": "تزايدت مؤخراً رؤية سيدات دون حجاب على رؤوسهن في العاصمة الإيرانية طهران، وهو ما يثير تساؤلات حول إلزامية الحجاب، وما إذا تم تخفيف القوانين أم لا.",
+            "imageAlt": "صورة لسيدة إيرانية محجبة وأخرى دون حجاب",
+            "isPortraitImage": false,
+            "id": "c393298909xo",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "شؤون المرأة",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/c404vr23qydt",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/c404vr23qydt"
+              }
+            }
+          },
+          {
+            "type": "video",
+            "duration": "PT2M46S",
+            "isLive": false,
+            "title": "انتعاش سوق التصميم المحلي مع تحول ملابس رمضان إلى \"تريند\" سنوي",
+            "firstPublished": "2026-03-18T12:07:51.159Z",
+            "lastPublished": "2026-03-18T12:07:51.159Z",
+            "link": "https://www.bbc.com/arabic/articles/cvgkgnvrp18o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/370c/live/b55173d0-22c2-11f1-b297-95b0a0a8331e.jpg.webp",
+            "description": "مع تصدر الأزياء \"الرمضانية\" لمنصات التواصل الاجتماعي، يبرز تساؤل حول مدى حضور الهوية الوطنية في هذه التصاميم أمام غلبة الأنماط الوافدة.",
+            "imageAlt": "ملابس رمضان",
+            "isPortraitImage": false,
+            "id": "cvgkgnvrp18o",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "الإسلام",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/cg7265qq09rt",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/cg7265qq09rt"
+              }
+            }
+          },
+          {
+            "type": "video",
+            "duration": "PT2M55S",
+            "isLive": false,
+            "title": "إدانة متسلق جبال نمساوي بعد وفاة صديقته متجمدة على جبل غروسغلوكنر، ما الذي حدث؟",
+            "firstPublished": "2026-02-22T14:52:29.657Z",
+            "lastPublished": "2026-02-22T14:52:29.657Z",
+            "link": "https://www.bbc.com/arabic/articles/c0mg8pvrz4wo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/aef9/live/6f317210-0ffd-11f1-801d-ed3cff6bf876.jpg.webp",
+            "description": "حُكم على الرجل، الذي لم يُكشف عن اسمه الكامل، امتثالاً لقوانين الخصوصية النمساوية، بالسجن خمسة أشهر مع وقف التنفيذ، وغُرِّم 9600 يورو.",
+            "imageAlt": "جبل غروسغلوكنر",
+            "isPortraitImage": false,
+            "id": "c0mg8pvrz4wo",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "رياضة",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/cyx5kw7g1j2t",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/cyx5kw7g1j2t"
+              }
+            }
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:aa281684-fd16-4b0d-8c8b-f92e11233ee7",
+        "curationType": "tipo-curation",
+        "position": 5,
+        "visualProminence": "NORMAL",
+        "title": "شؤون المرأة",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "video",
+            "duration": "PT2M45S",
+            "isLive": false,
+            "title": "الهواتف تحول الحج إلى \"تريند\" عالمي يحصد ملايين المشاهدات",
+            "firstPublished": "2026-05-26T08:43:39.176Z",
+            "lastPublished": "2026-05-26T08:43:39.176Z",
+            "link": "https://www.bbc.com/arabic/articles/ckgppe826lno",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/7e1b/live/b5359e10-58de-11f1-8b8c-6d33e1d5abb6.jpg.webp",
+            "description": "بينما تلهج ألسنة الحجيج بالذكر والدعاء، ترتفع آلاف الهواتف الذكية لتوثيق كل لحظة، لتحول الفريضة إلى \"تريند\" عالمي يحصد ملايين المشاهدات.",
+            "imageAlt": "الهواتف تحول الحج إلى \"تريند\" عالمي يحصد ملايين المشاهدات",
+            "isPortraitImage": false,
+            "id": "ckgppe826lno",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "مكة",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/cjgn728g6zgt",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/cjgn728g6zgt"
+              }
+            }
+          },
+          {
+            "type": "video",
+            "duration": "PT3M48S",
+            "isLive": false,
+            "title": "ما قصة الخميرة \"محسن\"؟ وما سر انتشار خبز الساوردو مؤخراً؟",
+            "firstPublished": "2026-05-24T09:06:39.599Z",
+            "lastPublished": "2026-05-24T09:06:39.599Z",
+            "link": "https://www.bbc.com/arabic/articles/cm2pkl89jz1o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/828f/live/44ef4380-574f-11f1-89a3-d1f559421220.jpg.webp",
+            "description": "من \"محسن\" إلى \"بهية” و\"فرحة\"... خمائر طبيعية بأسماء أشخاص وأعمار مختلفة قد تمتد لسنوات، يعاملها أصحابها كأنها فرد من العائلة.",
+            "imageAlt": "ما قصة الخميرة \"محسن\"؟",
+            "isPortraitImage": false,
+            "id": "cm2pkl89jz1o",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "مصر",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/cnq681wzd36t",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/cnq681wzd36t"
+              }
+            }
+          },
+          {
+            "type": "video",
+            "duration": "PT4M35S",
+            "isLive": false,
+            "title": "أوجه تشابه كثيرة بين اتفاق 1983 ومفاوضات اليوم بين لبنان وإسرائيل",
+            "firstPublished": "2026-05-18T13:14:10.131Z",
+            "lastPublished": "2026-05-18T13:14:10.131Z",
+            "link": "https://www.bbc.com/arabic/articles/cx21enlv0yno",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/0840/live/84d8aab0-52bb-11f1-89a3-d1f559421220.jpg.webp",
+            "description": "ينخرط لبنان وإسرائيل بمفاوضات جديدة في ظل انقسام هائل بشأن هذا المسار في البلاد.",
+            "imageAlt": "أوجه تشابه كثيرة بين اتفاق 1983 ومفاوضات اليوم بين لبنان وإسرائيل",
+            "isPortraitImage": false,
+            "id": "cx21enlv0yno",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "إسرائيل",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/c340qj3x1rnt",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/c340qj3x1rnt"
+              }
+            }
+          },
+          {
+            "type": "video",
+            "duration": "PT7M22S",
+            "isLive": false,
+            "title": "هل يكتب تحالف الانفصاليين والجهاديين في مالي نهاية النظام العسكري؟",
+            "firstPublished": "2026-05-17T07:20:28.560Z",
+            "lastPublished": "2026-05-17T07:20:28.560Z",
+            "link": "https://www.bbc.com/arabic/articles/cdepgzxn502o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/d1fb/live/2a39fc90-51c0-11f1-8b8c-6d33e1d5abb6.jpg.webp",
+            "description": "ينظر إلى العملية العسكرية الأخيرة في مالي على أنها تطور غير مسبوق يفتح الباب أمام مرحلة جديدة تتعاظم فيها الإمكانيات العسكرية لجماعات تسعى لإسقاط النظام في مالي.",
+            "imageAlt": "مالي: هل يكتب تحالف الانفصاليين والجهاديين نهاية النظام العسكري؟",
+            "isPortraitImage": false,
+            "id": "cdepgzxn502o",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "مالي",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/cqywj95yg0vt",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/cqywj95yg0vt"
+              }
+            }
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:280df6b0-320e-49f0-9931-6c3375ba575e",
+        "curationType": "tipo-curation",
+        "position": 6,
+        "visualProminence": "NORMAL",
+        "title": "مراسلون",
+        "visualStyle": "COLLECTION"
+      }
+    ],
+    "activePage": 1,
+    "pageCount": 1,
+    "metadata": {
+      "analytics": {
+        "name": "arabic.topics.cz9mm6r1q5et.page",
+        "producer": "ARABIC"
+      },
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:cz9mm6r1q5et",
+        "contentType": "index-category",
+        "pageIdentifier": "arabic.topics.cz9mm6r1q5et.page",
+        "pageTitle": "فيديو"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}

@@ -33,6 +33,23 @@ const styles = {
         },
       },
     }),
+  inSituPromo: () =>
+    css({
+      position: 'relative',
+    }),
+  inSituMedia: ({ spacings }: Theme) =>
+    css({
+      marginBottom: `${spacings.FULL}rem`,
+      '.media-container': {
+        margin: 0,
+      },
+    }),
+  headlineLink: () =>
+    css({
+      '&::before': {
+        display: 'none',
+      },
+    }),
   list: ({ mq, spacings, isLite }: Theme) =>
     css({
       padding: 0,

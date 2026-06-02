@@ -7,6 +7,7 @@ import { ROUTING_INFORMATION } from '#app/lib/logger.const';
 import PageDataParams from '#app/models/types/pageDataParams';
 import handleError from '#app/routes/utils/handleError';
 import getPageData from '../../../utilities/pageRequests/getPageData';
+import enrichCurationsWithInSituPlayback from '../../../utilities/enrichCurationsWithInSituPlayback';
 
 const logger = nodeLogger(__filename);
 
@@ -83,6 +84,13 @@ export default async (context: GetServerSidePropsContext) => {
     pageType: HOME_PAGE,
   });
 
+  const curations = await enrichCurationsWithInSituPlayback({
+    curations: pageData.curations ?? null,
+    service,
+    variant: variant || null,
+    rendererEnv,
+  });
+
   return {
     props: {
       id: resolvedUrlWithoutQuery,
@@ -90,7 +98,7 @@ export default async (context: GetServerSidePropsContext) => {
         title: pageData.title ?? null,
         seoTitle: pageData.seoTitle ?? null,
         metadata: { ...pageData.metadata, type: HOME_PAGE },
-        curations: pageData.curations ?? null,
+        curations,
         description: pageData.description ?? null,
         seoDescription: pageData.seoDescription ?? null,
       },
