@@ -47,7 +47,7 @@ const ItemWrapper = ({
         </div>
         <div css={styles.teamAway} data-participant-id={data.away.id}>
           <Team
-            urn={data.home.urn}
+            urn={data.away.urn}
             alignment="away"
             name={data.away.fullName}
             shortName={data.away.shortName}
