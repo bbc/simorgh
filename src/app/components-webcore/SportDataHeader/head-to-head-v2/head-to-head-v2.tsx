@@ -1,7 +1,5 @@
 import useSportDataPolling from '#app/hooks/useSportDataPolling';
 import useToggle from '#app/hooks/useToggle';
-import Footer from './components/footer';
-import HeadToHeadHeader from './components/head-to-head-header';
 import { HeadToHeadBanner } from './components/head-to-head-banner';
 import ConditionalOnwardJourneyLink from './components/conditional-onward-journey-link';
 import { Actions } from './components/actions';
@@ -41,15 +39,6 @@ export const HeadToHeadV2 = ({
     <div css={styles.wrapper({ isConciseView })}>
       <ConditionalOnwardJourneyLink>
         <div css={styles.container({ isConciseView })}>
-          {!isConciseView && (
-            <HeadToHeadHeader
-              date={currentSportData.date}
-              status={currentSportData.status}
-              tournamentDescriptionLabel={
-                currentSportData.tournamentDescriptionLabel
-              }
-            />
-          )}
           <HeadToHeadBanner
             data={currentSportData}
             isConciseView={isConciseView ?? false}
@@ -62,13 +51,6 @@ export const HeadToHeadV2 = ({
             <Actions data={currentSportData} />
           )}
           {!isConciseView && <Actions data={currentSportData} />}
-          {!isConciseView && (
-            <Footer
-              venue={currentSportData.venue?.name || 'To be confirmed'}
-              attendanceValue={currentSportData.attendance?.value}
-              attendanceInfo={currentSportData.attendance?.additionalInfo}
-            />
-          )}
         </div>
       </ConditionalOnwardJourneyLink>
     </div>
