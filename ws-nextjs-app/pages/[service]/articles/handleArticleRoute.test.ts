@@ -115,4 +115,19 @@ describe('handleArticleRoute', () => {
       },
     });
   });
+
+  it('uses x-bbc-edge-country header when x-country is not set', async () => {
+    const mockCountryHeaderRequest = {
+      ...mockGetServerSidePropsContext,
+      req: {
+        headers: {
+          'x-bbc-edge-country': 'NG',
+        },
+      } as unknown as GetServerSidePropsContext['req'],
+    };
+
+    const result = await handleArticleRoute(mockCountryHeaderRequest);
+
+    expect(result.props.country).toEqual('ng');
+  });
 });

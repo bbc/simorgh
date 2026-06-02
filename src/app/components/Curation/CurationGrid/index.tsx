@@ -35,7 +35,12 @@ const CurationGrid = ({
   const buildPromoEventTrackingData = (promo: Summary, i: number) => {
     const componentName =
       eventTrackingData?.componentName || 'simple-curation-grid';
+
     const promoType = `${componentName}-promo`;
+    const trackingComponentName =
+      componentName === 'topic-discovery-curation-grid'
+        ? promoType
+        : componentName;
     return {
       itemTracker: {
         type: promoType,
@@ -48,6 +53,7 @@ const CurationGrid = ({
         }),
       },
       ...eventTrackingData,
+      componentName: trackingComponentName,
     };
   };
 
