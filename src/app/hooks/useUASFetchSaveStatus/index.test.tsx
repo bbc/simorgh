@@ -13,17 +13,26 @@ jest.mock('react', () => ({
   use: jest.fn(),
 }));
 
-let mockQueryFn: () => Promise<boolean>;
+let mockQueryFn: () => Promise<{
+  isSaved: boolean;
+  metadata?: Record<string, unknown>;
+}>;
 let mockEnabled: boolean | undefined;
 let mockUseQueryReturn = {
-  data: false,
+  data: { isSaved: false },
   isLoading: false,
   error: null as Error | null,
 };
 
 jest.mock('@tanstack/react-query', () => ({
   ...jest.requireActual('@tanstack/react-query'),
-  useQuery: (config: { queryFn: () => Promise<boolean>; enabled: boolean }) => {
+  useQuery: (config: {
+    queryFn: () => Promise<{
+      isSaved: boolean;
+      metadata?: Record<string, unknown>;
+    }>;
+    enabled: boolean;
+  }) => {
     mockQueryFn = config.queryFn;
     mockEnabled = config.enabled;
     return mockUseQueryReturn;
@@ -37,7 +46,11 @@ describe('useUASFetchSaveStatus', () => {
   const defaultArticleId = '123';
 
   beforeEach(() => {
-    mockUseQueryReturn = { data: false, isLoading: false, error: null };
+    mockUseQueryReturn = {
+      data: { isSaved: false },
+      isLoading: false,
+      error: null,
+    };
 
     (use as jest.Mock).mockImplementation((context: unknown) => {
       if (context === AccountContext) return { hashedUserId: 'user-123' };
@@ -52,7 +65,7 @@ describe('useUASFetchSaveStatus', () => {
   test('returns isSaved = true when API returns 200', async () => {
     mockBuildGlobalId.mockReturnValue('global-123');
     mockUasApiRequest.mockResolvedValue({ ok: true, status: 200 });
-    mockUseQueryReturn.data = true;
+    mockUseQueryReturn.data = { isSaved: true };
 
     const { result } = renderHook(() =>
       useUASFetchSaveStatus(defaultArticleId),
@@ -103,5 +116,41 @@ describe('useUASFetchSaveStatus', () => {
     renderHook(() => useUASFetchSaveStatus(''));
     expect(mockEnabled).toBe(false);
     expect(mockUasApiRequest).not.toHaveBeenCalled();
+  });
+
+  test('returns savedMetadata when article is saved', async () => {
+    const mockMetadata = {
+      title: 'Test Article',
+      promoImage: 'https://ichef.bbc.co.uk/image.jpg',
+      locatorUrl: 'https://bbc.com/article',
+    };
+    mockBuildGlobalId.mockReturnValue('global-123');
+    mockUseQueryReturn.data = {
+      isSaved: true,
+      metadata: mockMetadata,
+    } as unknown as { isSaved: boolean };
+
+    const { result } = renderHook(() =>
+      useUASFetchSaveStatus(defaultArticleId),
+    );
+
+    await waitFor(() => expect(result.current.isLoading).toBe(false));
+
+    expect(result.current.isSaved).toBe(true);
+    expect(result.current.savedMetadata).toEqual(mockMetadata);
+  });
+
+  test('returns undefined savedMetadata when article is not saved', async () => {
+    mockBuildGlobalId.mockReturnValue('global-123');
+    mockUseQueryReturn.data = { isSaved: false };
+
+    const { result } = renderHook(() =>
+      useUASFetchSaveStatus(defaultArticleId),
+    );
+
+    await waitFor(() => expect(result.current.isLoading).toBe(false));
+
+    expect(result.current.isSaved).toBe(false);
+    expect(result.current.savedMetadata).toBeUndefined();
   });
 });

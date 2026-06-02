@@ -13,9 +13,7 @@ const personalizationToggle = {
 };
 
 describe('SaveArticleButton', () => {
-  const defaultProps = {
-    articleTitle: 'Test Article Title',
-  };
+  const defaultProps = {};
 
   const mockHandleSaveAction = jest.fn();
 
@@ -117,7 +115,7 @@ describe('SaveArticleButton', () => {
       expect(mockHandleSaveAction).toHaveBeenCalledTimes(1);
     });
 
-    it('passes articleId and title to useUASButton hook', async () => {
+    it('passes articleId to useUASButton hook', async () => {
       const articlePageData = {
         metadata: {
           locators: {
@@ -141,7 +139,6 @@ describe('SaveArticleButton', () => {
 
       expect(mockedUseUASButton).toHaveBeenCalledWith(
         expect.objectContaining({
-          articleTitle: 'Test Article Title',
           articlePageData,
           articleId: 'c1l97706v5mo',
         }),
