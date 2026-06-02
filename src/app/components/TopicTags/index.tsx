@@ -1,27 +1,66 @@
 import { use } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
+import { ComponentExperimentProps } from '#app/models/types/global';
 import { TopicTag } from '#app/models/types/metadata';
+import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
 import styles from './index.styles';
 
-const eventTrackingData = {
-  componentName: 'topics',
+interface TopicTagsProps {
+  tags: Pick<TopicTag, 'topicName' | 'topicId'>[];
+  experimentProps?: ComponentExperimentProps;
+}
+
+type TopicTagLinkProps = {
+  tag: Pick<TopicTag, 'topicName' | 'topicId'>;
+  href: string;
+  position: number;
+  eventTrackingData: EventTrackingData;
 };
 
-export const TopicTags = ({
-  tags,
-}: {
-  tags: Pick<TopicTag, 'topicName' | 'topicId'>[];
-}) => {
-  const viewTracker = useViewTracker(eventTrackingData);
-  const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
+const TopicTagLink = ({
+  tag,
+  href,
+  position,
+  eventTrackingData,
+}: TopicTagLinkProps) => {
+  const clickTrackerHandler = useClickTrackerHandler({
+    ...eventTrackingData,
+    itemTracker: {
+      type: 'topics-link',
+      text: tag.topicName,
+      position,
+      resourceId: tag.topicId,
+    },
+  });
 
-  if (tags?.length === 0) return null;
+  return (
+    <a href={href} {...clickTrackerHandler}>
+      {tag.topicName}
+    </a>
+  );
+};
 
+export const TopicTags = ({ tags, experimentProps }: TopicTagsProps) => {
+  const componentName = 'topics';
   const { service, translations } = use(ServiceContext);
   const { variant } = use(RequestContext);
+  const heading = translations?.relatedTopics ?? 'Related Topics';
+  const eventTrackingData = {
+    componentName,
+    groupTracker: {
+      name: heading,
+      type: componentName,
+      itemCount: tags.length,
+    },
+    ...(experimentProps && experimentProps),
+  };
+
+  const viewTracker = useViewTracker(eventTrackingData);
+
+  if (tags?.length === 0) return null;
 
   const getTopicPageUrl = (id: string) => {
     const isPublicService = ['news', 'cymrufyw', 'naidheachdan'];
@@ -40,11 +79,14 @@ export const TopicTags = ({
       data-testid="topic-tags-multiple"
       {...viewTracker}
     >
-      {tags.map(tag => (
+      {tags.map((tag, index) => (
         <li key={tag.topicId} css={styles.topicTagItem}>
-          <a href={getTopicPageUrl(tag.topicId)} {...clickTrackerHandler}>
-            {tag.topicName}
-          </a>
+          <TopicTagLink
+            tag={tag}
+            href={getTopicPageUrl(tag.topicId)}
+            position={index + 1}
+            eventTrackingData={eventTrackingData}
+          />
         </li>
       ))}
     </ul>
@@ -55,9 +97,12 @@ export const TopicTags = ({
       {...viewTracker}
     >
       <div css={styles.topicTagItem}>
-        <a href={getTopicPageUrl(tags[0].topicId)} {...clickTrackerHandler}>
-          {tags[0].topicName}
-        </a>
+        <TopicTagLink
+          tag={tags[0]}
+          href={getTopicPageUrl(tags[0].topicId)}
+          position={1}
+          eventTrackingData={eventTrackingData}
+        />
       </div>
     </div>
   );
