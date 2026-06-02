@@ -293,4 +293,17 @@ describe('translateSportData', () => {
     expect(screen.getAllByText('Angleterre').length).toBeGreaterThan(0);
     expect(screen.queryByText('England')).not.toBeInTheDocument();
   });
+
+  it('should return the data unchanged if no translations are available', () => {
+    render(
+      <HeadToHeadV2
+        initialSportData={originalData as unknown as HeadToHeadV2Data}
+      />,
+      {
+        service: 'cymrufyw',
+      },
+    );
+
+    expect(screen.queryAllByText('England').length).toBeGreaterThan(0);
+  });
 });
