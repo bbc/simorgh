@@ -126,7 +126,11 @@ const buildMetadataFieldExtractors = (
   promoImage: () =>
     buildPromoImageUrl(extractPromoImageFromArticleData(articlePageData)),
   promoImageAltText: () => {
+    const { altText } = extractPromoImageFromArticleData(articlePageData);
+    return altText;
+  },
   locatorUrl: () => articlePageData?.metadata?.locators?.canonicalUrl || '',
+});
 
 /**
  * Extracts current live metadata from article page data.

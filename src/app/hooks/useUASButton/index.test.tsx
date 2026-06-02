@@ -8,6 +8,7 @@ import uasApiRequest from '#app/lib/uasApi';
 import uasKeys from '#app/lib/uasApi/queryKeys';
 import { AccountContext } from '#app/contexts/AccountContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import useUASMetadataSync from '#app/hooks/useUASMetadataSync/index';
 import useUASButton, { UASAction, UseUASButtonProps } from './index';
 
 jest.mock('#app/hooks/useUASFetchSaveStatus');
@@ -60,6 +61,7 @@ jest.mock('@tanstack/react-query', () => {
 
 const mockUseUASFetchSaveStatus = useUASFetchSaveStatus as jest.Mock;
 const mockUasApiRequest = uasApiRequest as jest.Mock;
+const mockUseUASMetadataSync = useUASMetadataSync as jest.Mock;
 
 describe('useUASButton', () => {
   const defaultProps = {
@@ -208,10 +210,6 @@ describe('useUASButton', () => {
         savedMetadata: mockMetadata,
       });
 
-      const mockUseUASMetadataSync = jest.requireMock(
-        '#app/hooks/useUASMetadataSync',
-      ).default as jest.Mock;
-
       renderHook(() => useUASButton(defaultProps));
 
       expect(mockUseUASMetadataSync).toHaveBeenCalledWith(
@@ -238,10 +236,6 @@ describe('useUASButton', () => {
         error: null,
         savedMetadata: mockMetadata,
       });
-
-      const mockUseUASMetadataSync = jest.requireMock(
-        '#app/hooks/useUASMetadataSync',
-      ).default as jest.Mock;
 
       renderHook(() => useUASButton(defaultProps));
 
