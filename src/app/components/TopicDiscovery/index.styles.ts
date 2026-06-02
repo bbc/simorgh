@@ -5,8 +5,11 @@ import NO_JS_CLASSNAME from '#app/lib/noJs.const';
 const styles = {
   section: ({ spacings, mq }: Theme) =>
     css({
-      padding: `0 ${spacings.DOUBLE}rem ${spacings.DOUBLE}rem ${spacings.DOUBLE}rem`,
+      padding: `0 ${spacings.DOUBLE}rem 0 ${spacings.DOUBLE}rem`,
 
+      [mq.GROUP_1_MAX_WIDTH]: {
+        padding: `0 ${spacings.FULL}rem 0 ${spacings.FULL}rem`,
+      },
       [mq.GROUP_4_MIN_WIDTH]: {
         padding: 0,
       },
@@ -33,8 +36,6 @@ const styles = {
         width: `calc(50% - ${spacings.FULL}rem)`,
         marginInlineEnd: `${spacings.DOUBLE}rem`,
         borderTop: 'none',
-        marginBottom: `${spacings.HALF}rem`,
-
         paddingTop: 0,
 
         '&:nth-of-type(2n)': {
@@ -131,7 +132,7 @@ const styles = {
       ...fontSizes.longPrimer,
       color: palette.GREY_10,
       display: 'inline-block',
-      marginTop: `${spacings.DOUBLE}rem`,
+      paddingTop: `${spacings.DOUBLE}rem`,
       textDecoration: 'none',
 
       '&:hover': {
