@@ -201,6 +201,7 @@ export default {
     css({
       padding: `0 ${pixelsToRem(8)}rem`,
       marginBottom: `${spacings.DOUBLE}rem`,
+      marginTop: `${spacings.DOUBLE}rem`,
       [mq.GROUP_1_MIN_WIDTH]: {
         marginBottom: `${spacings.TRIPLE}rem`,
       },
