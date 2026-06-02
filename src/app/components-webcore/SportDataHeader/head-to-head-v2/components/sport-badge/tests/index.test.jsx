@@ -45,7 +45,7 @@ test('does not render an image for an invalid src', async () => {
   expect(screen.queryByRole('img')).not.toBeInTheDocument();
 });
 
-test('does not render an image where an id is not provided and a placeholder fallback should not be rendered', async () => {
+test('does not render an image where an urn is not provided and a placeholder fallback should not be rendered', async () => {
   await act(async () => {
     render(<SportBadge />);
   });

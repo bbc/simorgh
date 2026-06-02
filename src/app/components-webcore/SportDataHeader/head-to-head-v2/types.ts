@@ -204,8 +204,6 @@ export type HeadToHeadV2Data = {
   };
 };
 
-export type BadgePlaceholderFallbackType = 'badge' | 'flag';
-
 export type Alignment = 'home' | 'away';
 
 export type BadgeSize =

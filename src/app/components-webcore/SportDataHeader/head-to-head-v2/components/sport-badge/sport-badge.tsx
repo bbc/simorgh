@@ -1,5 +1,5 @@
 import styles from '../../index.styles';
-import type { BadgePlaceholderFallbackType, BadgeSize } from '../../types';
+import type { BadgeSize } from '../../types';
 
 const getTestId = (id?: string): string => {
   const urnId =
@@ -11,10 +11,8 @@ const getTestId = (id?: string): string => {
 interface SportBadgeProps {
   size: BadgeSize;
   urn: string;
-  src?: string;
+  src: string | null;
   alt?: string;
-  usePlaceholderFallback?: boolean;
-  placeholderFallbackType?: BadgePlaceholderFallbackType;
   isConciseView?: boolean;
 }
 
