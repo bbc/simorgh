@@ -4,7 +4,7 @@ import Centre from './centre';
 import MatchProgress from './match-progress';
 import PenaltyScores from './penalty-scores';
 import styles from '../index.styles';
-import type { HeadToHeadV2Data, BadgePlaceholderFallbackType } from '../types';
+import type { HeadToHeadV2Data } from '../types';
 
 interface ItemWrapperProps {
   data: HeadToHeadV2Data;
@@ -70,7 +70,6 @@ interface HeadToHeadBannerProps {
   eventSummary: string;
   shouldHideBadges: boolean;
   maxScoreLength?: number;
-  teamBadgePlaceholderFallbackType?: BadgePlaceholderFallbackType;
 }
 
 export const HeadToHeadBanner = ({
