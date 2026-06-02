@@ -136,6 +136,11 @@ describe('Related Topics', () => {
   describe('Event Tracking', () => {
     const eventTrackingData = {
       componentName: 'topics',
+      groupTracker: {
+        itemCount: 1,
+        name: 'Temas relacionados',
+        type: 'topics',
+      },
     };
 
     it('should call the click tracker with the correct params', () => {
@@ -145,7 +150,15 @@ describe('Related Topics', () => {
         { service: 'mundo' },
       );
 
-      expect(clickTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
+      expect(clickTrackerSpy).toHaveBeenCalledWith({
+        ...eventTrackingData,
+        itemTracker: {
+          position: 1,
+          resourceId: 'id',
+          text: 'topic',
+          type: 'topics-link',
+        },
+      });
     });
 
     it('should call the view tracker with the correct params', () => {
