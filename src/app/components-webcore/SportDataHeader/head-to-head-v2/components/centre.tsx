@@ -1,13 +1,18 @@
+import dynamic from 'next/dynamic';
+
 import {
   isCalledOffStatus,
   isInProgressStatus,
   isResultStatus,
 } from '../helpers/event-status-groups';
 
-import Time from './fixture-time';
 import Score from './score';
 import styles from '../index.styles';
 import type { HeadToHeadV2Data, EventStatusType } from '../types';
+import getLocalisedDate from '../helpers/get-localised-date';
+
+// Required as the .toLocaleTimeString() JS is called client-side which causes hydration errors
+const Time = dynamic(() => import('./fixture-time'), { ssr: false });
 
 export const shouldShowScores = (statusGroup: EventStatusType) =>
   isInProgressStatus(statusGroup) ||
@@ -35,14 +40,24 @@ interface CentreProps {
 }
 
 const Centre = ({ data, maxScoreLength }: CentreProps) => {
-  const { status } = data;
+  const { status, date, time } = data;
+
+  const localisedTime = getLocalisedDate(date, time.displayTimeUK);
+  const newTimeObject = {
+    displayTimeUK: localisedTime,
+    accessibleTime: localisedTime,
+  };
+
+  console.log(date, time.displayTimeUK, 'original time in data');
+  console.log(localisedTime, 'localised time');
 
   return (
     <div css={styles.centre(maxScoreLength)}>
       {shouldShowScores(status) ? (
-        <Played data={data} />
+        // Removed for testing
+        <Time time={newTimeObject || time} />
       ) : (
-        <Time time={data.time} />
+        <Played data={data} />
       )}
     </div>
   );
