@@ -113,7 +113,7 @@ export type Team = {
    */
   actions?: PlayerActions[];
   /**
-   * Either a badge or flag ichef image url, or a badge placeholder image url passed down from the BFF.
+   * Either a badge or flag iChef image URL, or a badge placeholder image URL passed down from the BFF.
    */
   imageSrc: string | null;
 };
