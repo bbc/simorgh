@@ -71,7 +71,7 @@ describe('Navigation - Canonical', () => {
 
       const lastLink = getByRole('link', { name: 'Item 2' });
       lastLink.focus();
-      fireEvent.keyDown(lastLink, { key: 'Tab' });
+      fireEvent.blur(lastLink, { key: 'Tab' });
 
       expect(menuButton).toHaveAttribute('aria-expanded', 'false');
       expect(document.activeElement).toBe(
