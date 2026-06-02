@@ -37,13 +37,40 @@ export const HeadToHeadV2 = ({
   // TODO: Re-enable badge visibility logic once we have the necessary badge mappings in place
   const shouldHideBadges = true;
 
+  const randoDate = 'Sat 23 June 2026';
+  const randoTime = '16:00';
+
+  // Extract parts
+  const [, day, month, year] = randoDate.split(' ');
+
+  // Build a proper Date object including time
+  const dateObj = new Date(`${month} ${day} ${year} ${randoTime}`);
+
+  // Format date
+  const localisedDate = dateObj.toLocaleDateString(undefined, {
+    weekday: 'short',
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric',
+  });
+
+  // Format time
+  const localisedTime = dateObj.toLocaleTimeString(undefined, {
+    hour: '2-digit',
+    minute: '2-digit',
+  });
+
+  // Final output
+  const finalDateTime = `${localisedDate} ${localisedTime}`;
+  console.log(finalDateTime);
+
   return (
     <div css={styles.wrapper({ isConciseView })}>
       <ConditionalOnwardJourneyLink>
         <div css={styles.container({ isConciseView })}>
           {!isConciseView && (
             <HeadToHeadHeader
-              date={currentSportData.date}
+              date={finalDateTime}
               status={currentSportData.status}
               tournamentDescriptionLabel={
                 currentSportData.tournamentDescriptionLabel
