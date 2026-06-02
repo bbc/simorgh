@@ -241,7 +241,7 @@ export interface Translations {
     previous?: string;
     next?: string;
   };
-  sport: {
+  sport?: {
     matchSummary?: string;
     worldCupTeamNames?: Record<string, string>;
   };
