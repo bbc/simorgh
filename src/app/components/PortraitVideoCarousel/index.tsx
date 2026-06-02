@@ -9,6 +9,7 @@ import useOptimizelyVariation, {
 } from '#app/hooks/useOptimizelyVariation';
 import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import SkipLinkWrapper from '#components/SkipLinkWrapper';
 import styles from './index.styles';
 import PortraitVideoModal from '../PortraitVideoModal';
 import { BumpLoader } from '../MediaLoader';
@@ -18,7 +19,6 @@ import Heading from '../Heading';
 import PortraitVideoNoJs from './PortraitVideoNoJs';
 import { PortraitClipMediaBlock } from '../MediaLoader/types';
 import Subheading from '../Curation/Subhead';
-import SkipLinkWrapper from '#components/SkipLinkWrapper';
 
 type PortraitVideoCarouselProps = {
   title?: string;
