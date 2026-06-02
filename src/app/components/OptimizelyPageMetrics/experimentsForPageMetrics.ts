@@ -10,14 +10,12 @@ type ExperimentsForPageTypeMetrics = {
 
 const experimentsForPageMetrics: ExperimentsForPageTypeMetrics = [
   {
-    // include tod2 so page-level metrics also fire on article pages for this experiment
     pageType: ARTICLE_PAGE,
-    activeExperiments: ['newswb_ws_tod_article_2', 'test_page_views_aa_2'],
+    activeExperiments: ['newswb_ws_topic_discovery_module'],
   },
   {
-    // include media article pages so page metrics still count after clicking into a video page
     pageType: MEDIA_ARTICLE_PAGE,
-    activeExperiments: ['newswb_ws_tod_article_2'],
+    activeExperiments: ['newswb_ws_topic_discovery_module'],
   },
 ];
 
