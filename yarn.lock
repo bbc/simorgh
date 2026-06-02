@@ -6765,10 +6765,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ansi-regex@npm:^6.0.1":
-  version: 6.1.0
-  resolution: "ansi-regex@npm:6.1.0"
-  checksum: 10/495834a53b0856c02acd40446f7130cb0f8284f4a39afdab20d5dc42b2e198b1196119fe887beed8f9055c4ff2055e3b2f6d4641d0be018cdfb64fedf6fc1aac
+"ansi-regex@npm:^6.2.2":
+  version: 6.2.2
+  resolution: "ansi-regex@npm:6.2.2"
+  checksum: 10/9b17ce2c6daecc75bcd5966b9ad672c23b184dc3ed9bf3c98a0702f0d2f736c15c10d461913568f2cf527a5e64291c7473358885dd493305c84a1cfed66ba94f
   languageName: node
   linkType: hard
 
@@ -15869,7 +15869,7 @@ __metadata:
     timemachine: "npm:0.3.2"
     ts-jest: "npm:29.4.9"
     typescript: "npm:5.9.3"
-    undici: "npm:8.1.0"
+    undici: "npm:8.3.0"
     uuid: "npm:13.0.1"
     webpack: "npm:5.106.2"
     winston: "patch:winston@3.8.2#./patches/winston-file-descriptor.patch"
@@ -16265,11 +16265,11 @@ __metadata:
   linkType: hard
 
 "strip-ansi@npm:^7.0.1":
-  version: 7.1.0
-  resolution: "strip-ansi@npm:7.1.0"
+  version: 7.2.0
+  resolution: "strip-ansi@npm:7.2.0"
   dependencies:
-    ansi-regex: "npm:^6.0.1"
-  checksum: 10/475f53e9c44375d6e72807284024ac5d668ee1d06010740dec0b9744f2ddf47de8d7151f80e5f6190fc8f384e802fdf9504b76a7e9020c9faee7103623338be2
+    ansi-regex: "npm:^6.2.2"
+  checksum: 10/96da3bc6d73cfba1218625a3d66cf7d37a69bf0920d8735b28f9eeaafcdb6c1fe8440e1ae9eb1ba0ca355dbe8702da872e105e2e939fa93e7851b3cb5dd7d316
   languageName: node
   linkType: hard
 
@@ -17237,10 +17237,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici@npm:8.1.0":
-  version: 8.1.0
-  resolution: "undici@npm:8.1.0"
-  checksum: 10/cc16474d6c3378297f040520e1df83611c6eebe8a11019ecad04d561adf4e2cf1dd72d37110682f871c2147d191a952c5e98fcd884b3249931b222ac8c334081
+"undici@npm:8.3.0":
+  version: 8.3.0
+  resolution: "undici@npm:8.3.0"
+  checksum: 10/812a8643c2506bcfa7d9d163864965e95fd1b7e5803431ad072321a6f80511d6fd800913eb4846ca3f19102287342f31f9fad142f40c89d897d6ecb81d61843c
   languageName: node
   linkType: hard
 
