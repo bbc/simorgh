@@ -12,7 +12,8 @@ const styles = {
       alignItems: 'center',
       justifyContent: 'flex-start',
       gap: `${spacings.FULL}rem`,
-      margin: `${spacings.DOUBLE}rem 0`,
+      marginTop: `${spacings.DOUBLE}rem`,
+      marginBottom: `${spacings.TRIPLE}rem`,
       flexWrap: 'wrap',
       [mq.GROUP_1_MAX_WIDTH]: {
         flexDirection: 'row',

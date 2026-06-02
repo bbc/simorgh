@@ -33,6 +33,7 @@ const AccountActionButtons = ({
         className="focusIndicatorInvert"
         css={[styles.callToActionLink, styles.signInLink]}
         eventTrackingData={{ componentName: signInComponentName }}
+        data-testid={signInComponentName}
       >
         <CallToActionLink.ButtonLikeWrapper>
           <AccountIcon css={styles.accountIcon} />
@@ -63,6 +64,7 @@ const AccountActionButtons = ({
           onLightBackground && styles.registerLinkOnLightBackground,
         ]}
         eventTrackingData={{ componentName: registerComponentName }}
+        data-testid={registerComponentName}
       >
         <CallToActionLink.ButtonLikeWrapper>
           <CallToActionLink.Text shouldUnderlineOnHoverFocus>

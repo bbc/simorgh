@@ -9,7 +9,7 @@ import Text from '#app/components/Text';
 import styles from './styles';
 import MyNewsPageLoading from './MyNewsPageLoading';
 
-const ITEMS_PER_PAGE = 10;
+const ITEMS_PER_PAGE = 24;
 
 interface MyNewsPageContentProps {
   page?: string;

@@ -13,7 +13,7 @@ const MyNewsPageLoading = () => {
         {translations?.myNews?.title}
       </Heading>
       <div css={styles.spinnerWrapper}>
-        <Spinner css={styles.spinner} />
+        <Spinner css={styles.spinner} testId="my-news-page-loading-spinner" />
       </div>
     </>
   );
