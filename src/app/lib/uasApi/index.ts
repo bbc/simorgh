@@ -21,7 +21,7 @@ interface UasRequestOptions {
   globalId?: string;
   signal?: AbortSignal;
   queryParams?: Record<string, string | number>;
-  isRefreshAvailable?: boolean;
+  isRefreshAvailable: boolean;
 }
 
 const getUasHost = () =>
@@ -69,10 +69,10 @@ const uasApiRequest = async (
     signal,
     queryParams,
     isRefreshAvailable,
-  }: UasRequestOptions = {},
+  }: UasRequestOptions,
 ): Promise<Response> => {
   // Basic validation to ensure required parameters are present based on method
-  validateRequest(method, { body, globalId });
+  validateRequest(method, { body, globalId, isRefreshAvailable });
 
   const url = buildUrl(
     activityType,

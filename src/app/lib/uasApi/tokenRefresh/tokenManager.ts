@@ -50,23 +50,18 @@ const hasValidTokens = (): boolean => {
 
 // Ensure tokens are valid before making the API request.
 // This will refresh tokens if they are expired or about to expire.
-// If isRefreshAvailable is false, refresh is skipped — but throws if tokens are
-// already invalid, since the request will fail without a valid token.
+// If isRefreshAvailable is false and tokens are already invalid, throws since
+// the request will fail without a valid token and refresh cannot be attempted.
 export const refreshTokensIfExpired = async (
-  isRefreshAvailable?: boolean,
+  isRefreshAvailable: boolean,
 ): Promise<void> => {
-  if (!onClient()) return;
+  if (!onClient() || hasValidTokens()) return;
 
   if (!isRefreshAvailable) {
-    if (!hasValidTokens()) {
-      throw new Error(
-        'Token refresh is unavailable and existing tokens are invalid',
-      );
-    }
-    return;
+    throw new Error(
+      'Token refresh is unavailable and existing tokens are invalid',
+    );
   }
-
-  if (hasValidTokens()) return;
 
   // If refresh is already in progress, wait for it instead of starting a new one
   if (tokenRefreshPromise) {

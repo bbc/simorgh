@@ -33,7 +33,9 @@ describe('uasApiRequest', () => {
     });
 
     const activityType = 'favourites';
-    const response = await uasApiRequest('GET', activityType);
+    const response = await uasApiRequest('GET', activityType, {
+      isRefreshAvailable: true,
+    });
 
     expect(global.fetch).toHaveBeenCalledWith(
       `https://activity.test.api.bbc.com/my/${activityType}`,
@@ -61,7 +63,10 @@ describe('uasApiRequest', () => {
       metaData: { key: 'value' },
     };
 
-    const response = await uasApiRequest('POST', activityType, { body });
+    const response = await uasApiRequest('POST', activityType, {
+      body,
+      isRefreshAvailable: true,
+    });
 
     expect(global.fetch).toHaveBeenCalledWith(
       `https://activity.test.api.bbc.com/my/${activityType}`,
@@ -87,7 +92,10 @@ describe('uasApiRequest', () => {
     const activityType = 'favourites';
     const globalId = '12345';
 
-    await uasApiRequest('DELETE', activityType, { globalId });
+    await uasApiRequest('DELETE', activityType, {
+      globalId,
+      isRefreshAvailable: true,
+    });
 
     expect(global.fetch).toHaveBeenCalledWith(
       `https://activity.test.api.bbc.com/my/${activityType}/${encodeURIComponent(globalId)}`,
@@ -109,9 +117,9 @@ describe('uasApiRequest', () => {
 
     const activityType = 'favourites';
 
-    await expect(uasApiRequest('GET', activityType)).rejects.toThrow(
-      'UAS request failed with status 500',
-    );
+    await expect(
+      uasApiRequest('GET', activityType, { isRefreshAvailable: true }),
+    ).rejects.toThrow('UAS request failed with status 500');
   });
 
   it('should throw an error when API key is missing', async () => {
@@ -123,9 +131,9 @@ describe('uasApiRequest', () => {
 
     const activityType = 'favourites';
 
-    await expect(uasApiRequest('GET', activityType)).rejects.toThrow(
-      'Missing UAS public API key',
-    );
+    await expect(
+      uasApiRequest('GET', activityType, { isRefreshAvailable: true }),
+    ).rejects.toThrow('Missing UAS public API key');
 
     // Verify that fetch was never called since authentication failed
     expect(global.fetch).not.toHaveBeenCalled();
@@ -159,10 +167,5 @@ describe('uasApiRequest', () => {
 
     await uasApiRequest('GET', 'favourites', { isRefreshAvailable: true });
     expect(refreshTokensIfExpired).toHaveBeenCalledWith(true);
-
-    (refreshTokensIfExpired as jest.Mock).mockClear();
-
-    await uasApiRequest('GET', 'favourites');
-    expect(refreshTokensIfExpired).toHaveBeenCalledWith(undefined);
   });
 });

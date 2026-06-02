@@ -37,6 +37,7 @@ interface GetRecentActivityParams {
   itemsPerPage?: number;
   startIndex?: number;
   signal?: AbortSignal;
+  isRefreshAvailable: boolean;
 }
 
 const transformActivityToSavedArticle = (
@@ -65,6 +66,7 @@ const getRecentActivity = async ({
   itemsPerPage = 10,
   startIndex = 0,
   signal,
+  isRefreshAvailable,
 }: GetRecentActivityParams): Promise<RecentActivityData> => {
   try {
     const response = await uasApiRequest(
@@ -79,6 +81,7 @@ const getRecentActivity = async ({
           action: FAVOURITES_CONFIG.action,
         },
         signal,
+        isRefreshAvailable,
       },
     );
 
