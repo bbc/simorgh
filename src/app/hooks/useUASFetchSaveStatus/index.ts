@@ -39,7 +39,7 @@ const fetchSaveStatusWithMetadata = async (
       isSaved: true,
       metadata: responseData.metaData,
     };
-  } catch (error) {
+  } catch {
     return { isSaved: true, metadata: undefined };
   }
 };
