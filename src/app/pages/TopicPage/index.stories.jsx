@@ -1,5 +1,3 @@
-import { MemoryRouter } from 'react-router-dom';
-
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -12,17 +10,25 @@ import persianTopicWithMessageBanners from '#data/persian/topics/cyy2zqnqn67t.js
 import arabicTopicWithMessageBanners from '#data/arabic/topics/cng9qem66p5t.json';
 import tamilTopicWithMessageBanners from '#data/tamil/topics/c03dm2xmzzpt.json';
 import mundoTopicWithMessageBannerVariations from '#data/mundo/topics/cw90edn9kw4t.json';
-import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
-import Page from './TopicPage';
+import TopicPage from './TopicPage';
 import ThemeProvider from '../../components/ThemeProvider';
-
-const TopicPage = withPageWrapper(Page);
+import PageLayoutWrapper from '#app/components/PageLayoutWrapper';
 
 const Component = ({
   service,
   variant = 'default',
   fixture = defaultTopic,
 }) => {
+  const pageData = {
+    title: fixture.data.title,
+    description: fixture.data.description,
+    imageData: fixture.data.imageData,
+    images: fixture.data.images,
+    curations: fixture.data.curations,
+    activePage: null,
+    pageCount: null,
+  };
+
   return (
     <ThemeProvider service={service} variant={variant}>
       <ToggleContextProvider
@@ -38,20 +44,9 @@ const Component = ({
             pathname=""
           >
             <UserContextProvider>
-              <MemoryRouter>
-                <TopicPage
-                  status={200}
-                  pageData={{
-                    title: fixture.data.title,
-                    description: fixture.data.description,
-                    imageData: fixture.data.imageData,
-                    images: fixture.data.images,
-                    curations: fixture.data.curations,
-                    activePage: null,
-                    pageCount: null,
-                  }}
-                />
-              </MemoryRouter>
+              <PageLayoutWrapper pageData={pageData} status={200}>
+                <TopicPage status={200} pageData={pageData} />
+              </PageLayoutWrapper>
             </UserContextProvider>
           </RequestContextProvider>
         </ServiceContextProvider>

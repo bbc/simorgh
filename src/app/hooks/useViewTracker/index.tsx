@@ -18,6 +18,18 @@ import getIntersectionObserver from './getIntersectionObserver';
 
 const VIEWED_DURATION_MS = 1000;
 
+const TOPIC_VIEW_COMPONENT_NAMES = ['topic-discovery', 'topics'];
+const TOPIC_OPTIMIZELY_EXPERIMENTS = ['newswb_ws_topic_discovery_module'];
+const TOPIC_OPTIMIZELY_VIEW_EVENTS = ['topic_views'];
+
+const shouldTrackTopicView = (
+  componentName: string,
+  experimentName: string | undefined,
+) =>
+  TOPIC_VIEW_COMPONENT_NAMES.includes(componentName) &&
+  !!experimentName &&
+  TOPIC_OPTIMIZELY_EXPERIMENTS.includes(experimentName);
+
 const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
   const {
     componentName,
@@ -38,6 +50,8 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     itemTracker,
     viewThreshold,
     alwaysInView = false,
+    isSignedIn,
+    hashedId,
   } = extractATITrackingProps({
     eventTrackingData,
     eventType: VIEW_EVENT,
@@ -79,6 +93,8 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
             advertiserID,
             url,
             detailedPlacement,
+            isSignedIn,
+            hashedId,
             ...(groupTracker && { groupTracker }),
             ...(itemTracker && { itemTracker }),
             ...(experimentVariant &&
@@ -93,6 +109,24 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
             alwaysInView,
           },
         });
+
+        if (
+          optimizely &&
+          sendOptimizelyEvents &&
+          experimentVariant &&
+          trackingIsEnabled &&
+          (!eventSent || alwaysInView) &&
+          shouldTrackTopicView(componentName, experimentName)
+        ) {
+          const overrideAttributes = optimizely.user.attributes;
+          TOPIC_OPTIMIZELY_VIEW_EVENTS.forEach(eventName => {
+            optimizely.track(
+              eventName,
+              optimizely.user.id as string,
+              overrideAttributes,
+            );
+          });
+        }
 
         if (!alwaysInView) {
           setEventSent(true);
@@ -136,6 +170,8 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     itemTracker,
     groupTracker,
     alwaysInView,
+    isSignedIn,
+    hashedId,
   ]);
 
   const viewTracker = useCallback(

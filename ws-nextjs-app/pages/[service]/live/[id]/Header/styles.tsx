@@ -2,11 +2,14 @@ import { css, Theme } from '@emotion/react';
 import pixelsToRem from '../../../../../../src/app/utilities/pixelsToRem';
 
 export default {
-  headerContainer: ({ mq }: Theme) =>
+  headerContainer: () =>
     css({
       display: 'flex',
       flexDirection: 'column',
       position: 'relative',
+    }),
+  headerContainerForcedColours: ({ mq }: Theme) =>
+    css({
       [mq.FORCED_COLOURS]: {
         borderBottom: `solid ${pixelsToRem(1)}rem transparent`,
       },

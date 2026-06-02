@@ -23,4 +23,7 @@ export type AccountContextProps = {
   settingsUrl?: string;
   signOutUrl?: string;
   forYouUrl?: string;
+  hashedUserId?: string;
+  isPersonalizationEnabled: boolean;
+  isPersonalizationAvailable: boolean;
 };
