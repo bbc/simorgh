@@ -39,7 +39,7 @@ test('can render a badge with an empty alt attribute', async () => {
 
 test('does not render an image for an invalid src', async () => {
   await act(async () => {
-    render(<SportBadge id="invalid-id" src={null} />);
+    render(<SportBadge urn="invalid-id" src={null} />);
   });
 
   expect(screen.queryByRole('img')).not.toBeInTheDocument();
