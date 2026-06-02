@@ -64,7 +64,16 @@ describe('MyNewsPage', () => {
       render(<MyNewsPage />, renderOptions);
     });
 
-    expect(screen.getByTestId('my-news-page-spinner')).toBeInTheDocument();
+    const spinnerWrapper = screen.getByTestId('my-news-page-spinner');
+    const spinnerSvg = spinnerWrapper.querySelector('svg');
+
+    expect(spinnerWrapper).toBeInTheDocument();
+    expect(spinnerSvg).toBeInTheDocument();
+    expect(spinnerSvg).not.toBeNull();
+
+    if (spinnerSvg) {
+      expect(getComputedStyle(spinnerSvg).animationName).not.toBe('none');
+    }
   });
 
   it('should render saved articles after fetching', async () => {

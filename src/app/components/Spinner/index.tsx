@@ -3,15 +3,10 @@ import styles from './index.styles';
 
 interface SpinnerProps {
   className?: string;
-  testId?: string;
 }
 
-const Spinner = ({ className, testId }: SpinnerProps) => (
-  <SpinnerIcon
-    css={styles.spinner}
-    className={className}
-    data-testid={testId}
-  />
+const Spinner = ({ className }: SpinnerProps) => (
+  <SpinnerIcon css={styles.spinner} className={className} />
 );
 
 export default Spinner;

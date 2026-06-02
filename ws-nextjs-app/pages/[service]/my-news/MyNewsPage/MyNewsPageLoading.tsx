@@ -12,8 +12,8 @@ const MyNewsPageLoading = () => {
       <Heading level={1} css={styles.heading}>
         {translations?.myNews?.title}
       </Heading>
-      <div css={styles.spinnerWrapper}>
-        <Spinner css={styles.spinner} testId="my-news-page-loading-spinner" />
+      <div css={styles.spinnerWrapper} data-testid="my-news-page-spinner">
+        <Spinner css={styles.spinner} />
       </div>
     </>
   );
