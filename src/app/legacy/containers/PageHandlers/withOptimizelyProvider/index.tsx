@@ -52,7 +52,11 @@ optimizely?.notificationCenter?.addNotificationListener(
     const decisionEventDispatched =
       notification.decisionInfo?.decisionEventDispatched;
 
-    if (decisionEventDispatched && variationKey !== 'off' && flagKey) {
+    if (
+      decisionEventDispatched &&
+      flagKey &&
+      (variationKey !== 'off' || flagKey === 'newswb_ws_topic_discovery_module')
+    ) {
       notifyDecision(flagKey);
     }
   },

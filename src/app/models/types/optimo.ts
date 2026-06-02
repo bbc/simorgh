@@ -6,7 +6,7 @@ import { LatestMedia } from '#app/pages/MediaArticlePage/PagePromoSections/Lates
 import { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
 import { PageTypes } from './global';
 import { MetadataFormats, MetadataTaggings, TopicTag } from './metadata';
-import { Curation } from './curationData';
+import { Curation, Summary } from './curationData';
 
 export type OptimoBlock = {
   type: string;
@@ -161,6 +161,15 @@ export type PortraitVideoItems = {
   };
 };
 
+export type CountryCuration = {
+  topicId: string;
+  title: string;
+  curationId: string;
+  curationType: string;
+  link: string;
+  summaries: Summary[];
+};
+
 export type Article = {
   content: ArticleContent;
   metadata: ArticleMetadata;
@@ -170,4 +179,5 @@ export type Article = {
   recommendations?: Recommendation[];
   relatedContent?: RelatedContent;
   portraitVideoItems?: PortraitVideoItems;
+  countryCuration?: CountryCuration;
 };

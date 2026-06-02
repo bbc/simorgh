@@ -1,4 +1,5 @@
 import { Direction } from '#app/models/types/global';
+import pixelsToRem from '#app/utilities/pixelsToRem';
 
 export const Ellipsis = () => (
   <svg
@@ -265,7 +266,7 @@ export const DownArrowIcon = () => (
   </svg>
 );
 
-export const AccountIcon = ({ className }: { className?: string }) => (
+export const AccountIconRounded = ({ className }: { className?: string }) => (
   <svg
     width="24"
     height="24"
@@ -276,6 +277,23 @@ export const AccountIcon = ({ className }: { className?: string }) => (
     aria-hidden="true"
   >
     <path d="M12 17.2501C9.525 17.2501 7.65 15.3751 7.65 12.9001C7.65 10.4251 9.525 8.5501 12 8.5501C14.4 8.5501 16.35 10.4251 16.35 12.9001C16.35 15.3751 14.4 17.2501 12 17.2501ZM23.25 12.9751C23.25 6.6751 18.3 1.7251 12 1.7251C5.625 1.7251 0.75 6.6751 0.75 12.9751C0.75 16.8751 2.625 20.3251 5.55 22.2751C6.975 20.1751 9.3 18.8251 12 18.8251C14.7 18.8251 17.025 20.1751 18.45 22.2751C21.375 20.2501 23.25 16.8751 23.25 12.9751Z" />
+  </svg>
+);
+
+export const AccountIcon = ({ className }: { className?: string }) => (
+  <svg
+    viewBox="0 0 32 32"
+    width="20"
+    height="18"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+    focusable="false"
+    aria-hidden="true"
+  >
+    <path
+      fillRule="evenodd"
+      d="M16 17.5a7.88 7.88 0 0 1-8-7.75A7.88 7.88 0 0 1 16 2a7.88 7.88 0 0 1 8 7.75 7.88 7.88 0 0 1-8 7.75M2 30c0-5.883 7.519-10 14.014-10C22.48 20 30 24.12 30 29.994c0 .005-28 .007-28 .005"
+    />
   </svg>
 );
 
@@ -332,6 +350,10 @@ export const RedCardSVG = ({ className }: { className?: string }) => (
     viewBox="0 0 9.22 13.36"
     xmlns="http://www.w3.org/2000/svg"
     className={className}
+    width={`${pixelsToRem(11)}rem`}
+    height={`${pixelsToRem(16)}rem`}
+    focusable="false"
+    aria-hidden="true"
   >
     <path d="m-12.94 265.76h8.47v11.82h-8.47z" fill="#f51a5a" />
     <path d="m-28.07 272.58h8.47v11.82h-8.47z" fill="#f51a5a" />
@@ -353,6 +375,10 @@ export const SecondYellowCardSVG = ({ className }: { className?: string }) => (
     viewBox="0 0 14.84 17.91"
     xmlns="http://www.w3.org/2000/svg"
     className={className}
+    width={`${pixelsToRem(16)}rem`}
+    height={`${pixelsToRem(19)}rem`}
+    focusable="false"
+    aria-hidden="true"
   >
     <path d="m21.09 265.76h8.47v11.82h-8.47z" fill="#f51a5a" />
     <path d="m5.97 272.58h8.47v11.82h-8.47z" fill="#f51a5a" />

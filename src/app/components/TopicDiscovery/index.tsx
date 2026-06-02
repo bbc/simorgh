@@ -4,6 +4,7 @@ import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { TopicTag } from '#app/models/types/metadata';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import { ComponentExperimentProps } from '#app/models/types/global';
 import ScrollableTabs from './ScrollableTabs';
 import styles from './index.styles';
 import useFetchTopicPromos from './useFetchTopicPromos';
@@ -13,15 +14,16 @@ type ExtractedTopic = Pick<TopicTag, 'topicId' | 'topicName' | 'topicUrl'>;
 type TopicDiscoveryProps = {
   topics: ExtractedTopic[];
   className?: string;
+  experimentProps?: ComponentExperimentProps;
 };
 
 const HEADING_ID = 'topic-discovery-heading';
 
-const eventTrackingData = {
-  componentName: 'topic-discovery',
-};
-
-const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
+const TopicDiscovery = ({
+  topics,
+  className,
+  experimentProps,
+}: TopicDiscoveryProps) => {
   const { translations } = use(ServiceContext);
   const {
     heading = 'Discover more',
@@ -30,6 +32,24 @@ const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
   } = translations.topicDiscovery || {};
 
   const [activeTabId, setActiveTabId] = useState(topics?.[0]?.topicId || '');
+  const activeTopic = topics?.find(topic => topic.topicId === activeTabId);
+  const currentTopic = activeTopic || topics?.[0];
+  const tabs = topics
+    ? topics.map(topic => ({
+        id: topic.topicId,
+        label: topic.topicName,
+      }))
+    : [];
+  const groupTracker = {
+    name: heading,
+    type: 'topic-discovery',
+    ...(topics?.length > 0 && { itemCount: topics.length }),
+  };
+  const eventTrackingData = {
+    componentName: 'topic-discovery',
+    groupTracker,
+    ...(experimentProps && experimentProps),
+  };
 
   const { topicPromos, isLoading, isError } = useFetchTopicPromos({
     activeTabId,
@@ -43,18 +63,19 @@ const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
 
   const moreFromLinkClickTracker = useClickTrackerHandler({
     componentName: 'topic-discovery-more-from-link',
+    groupTracker,
+    itemTracker: {
+      type: 'topic-discovery-more-from-link',
+      text: currentTopic
+        ? moreFromTopic.replace('{topic}', currentTopic.topicName)
+        : undefined,
+      resourceId: currentTopic?.topicId,
+    },
+    ...(experimentProps && experimentProps),
   });
 
   if (!topics || topics.length === 0) return null;
-
-  const activeTopic = topics.find(
-    topic => topic.topicId === activeTabId,
-  ) as ExtractedTopic;
-
-  const tabs = topics.map(topic => ({
-    id: topic.topicId,
-    label: topic.topicName,
-  }));
+  const selectedTopic = currentTopic as ExtractedTopic;
 
   const showLoadingState = Boolean(isLoading && !isError);
   const showErrorMessage = Boolean(!isLoading && isError);
@@ -76,6 +97,8 @@ const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
         activeTabId={activeTabId}
         onTabChange={setActiveTabId}
         labelledBy={HEADING_ID}
+        groupTracker={groupTracker}
+        experimentProps={experimentProps}
       />
       <div
         role="tabpanel"
@@ -117,15 +140,27 @@ const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
                 <>
                   <CurationGrid
                     summaries={topicPromos}
-                    eventTrackingData={eventTrackingData}
+                    eventTrackingData={{
+                      componentName: 'topic-discovery-curation-grid',
+                      groupTracker: {
+                        name: selectedTopic.topicName,
+                        type: 'topic-discovery-curation-grid',
+                        link: selectedTopic.topicUrl,
+                        resourceId: selectedTopic.topicId,
+                        ...(topicPromos?.length > 0 && {
+                          itemCount: topicPromos.length,
+                        }),
+                      },
+                      ...(experimentProps && experimentProps),
+                    }}
                   />
                   <a
                     css={styles.moreFromLink}
-                    href={activeTopic?.topicUrl}
+                    href={selectedTopic.topicUrl}
                     data-testid="topic-discovery-more-from"
                     {...moreFromLinkClickTracker}
                   >
-                    {moreFromTopic.replace('{topic}', activeTopic.topicName)}
+                    {moreFromTopic.replace('{topic}', selectedTopic.topicName)}
                   </a>
                 </>
               );
