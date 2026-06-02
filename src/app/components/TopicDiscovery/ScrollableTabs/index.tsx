@@ -2,6 +2,9 @@ import { useCallback, useEffect, useRef, useState, use } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { Chevron, ChevronOrientation } from '#app/components/icons';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import { ComponentExperimentProps } from '#app/models/types/global';
+import { EventTrackingData } from '#app/lib/analyticsUtils/types';
+
 import styles from './index.styles';
 
 type ScrollableTabsProps = {
@@ -9,6 +12,8 @@ type ScrollableTabsProps = {
   activeTabId: string;
   onTabChange: (tabId: string) => void;
   labelledBy: string;
+  groupTracker?: EventTrackingData['groupTracker'];
+  experimentProps?: ComponentExperimentProps;
 };
 
 const ScrollableTabs = ({
@@ -16,6 +21,8 @@ const ScrollableTabs = ({
   activeTabId,
   onTabChange,
   labelledBy,
+  groupTracker,
+  experimentProps,
 }: ScrollableTabsProps) => {
   const { dir } = use(ServiceContext);
   const tabListRef = useRef<HTMLDivElement>(null);
@@ -101,12 +108,20 @@ const ScrollableTabs = ({
         aria-labelledby={labelledBy}
         css={styles.tabList}
       >
-        {tabs.map(tab => {
+        {tabs.map((tab, index) => {
           const isActive = tab.id === activeTabId;
 
           const clickTrackerHandler = getClickTrackerHandler({
-            componentName: `topic-discovery-tab-${tab.id}`,
+            componentName: 'topic-discovery-tab',
+            groupTracker,
+            itemTracker: {
+              type: 'topic-discovery-tab',
+              text: tab.label,
+              position: index + 1,
+              resourceId: tab.id,
+            },
             preventNavigation: true,
+            ...(experimentProps && experimentProps),
           });
 
           return (
