@@ -271,13 +271,67 @@ const translatedData = {
   sportDiscipline: 'football',
 };
 
+// example pre game
+
+const originalDataPreEvent = {
+  id: '78bis3qan491aqnwxn71ix6oq',
+  eventGroupingLabel: 'England - Premier League',
+  startDateTime: '2022-08-06T11:30:00Z',
+  tournamentId: '2kwbbcootiqqgmrzs6o5inle5',
+  status: 'PreEvent',
+  periodLabel: { value: 'Scheduled', accessible: 'Scheduled' },
+  venue: { name: 'Craven Cottage', shortName: 'Craven Cottage' },
+  tournament: {
+    id: '2kwbbcootiqqgmrzs6o5inle5',
+    name: 'Premier League',
+    urn: 'urn:bbc:sportsdata:football:tournament:2kwbbcootiqqgmrzs6o5inle5',
+  },
+  tournamentDescriptionLabel: 'Premier League',
+  home: {
+    fullName: 'Fulham',
+    shortName: 'Fulham',
+    urn: 'urn:bbc:sportsdata:football:team:fulham',
+    actions: [],
+  },
+  away: {
+    fullName: 'Liverpool',
+    shortName: 'Liverpool',
+    urn: 'urn:bbc:sportsdata:football:team:liverpool',
+    actions: [],
+  },
+  time: {
+    accessibleTime: '12:30',
+    displayTimeUK: '12:30',
+    timeCertainty: true,
+  },
+  date: 'Sat 6 Aug 2022',
+  accessibleEventSummary: 'Fulham versus Liverpool kick off 12:30',
+  tipoTopicId: 'cvp5j5ndx5nt',
+  onwardJourneyLink: '/sport/football/live/cvp5j5ndx5nt',
+};
+
+// example mid game
+
+// example post game - inc pens
+
 describe('translateSportData', () => {
   it('should translate the sport data correctly', () => {
     const result = translateSportData(
       originalData as unknown as HeadToHeadV2Data,
       afriqueServiceConfig.default.translations,
+      'persian', // typify
     );
     expect(result).toStrictEqual(translatedData);
+  });
+
+  // tidy
+  it('should handle pre event', () => {
+    const result = translateSportData(
+      originalDataPreEvent as unknown as HeadToHeadV2Data,
+      afriqueServiceConfig.default.translations,
+      'persian', // typify
+    );
+    expect(result).toStrictEqual(originalDataPreEvent);
   });
 
   it('should render the translated team names correctly', () => {
