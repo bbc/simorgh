@@ -31,10 +31,6 @@ const handleExtraTime = (
   return `${minuteLabel} ${sportTranslations?.et || 'ET'}`;
 };
 
-// const getPeriodLabel // PENS, HT, AET, FT, // others like scheduled N/A
-// // used in src/app/components-webcore/SportDataHeader/head-to-head-v2/helpers/event-summary.ts
-// const periodlabel as numbers // 9', "114' ET", "45'+2"
-// period component uses getFallbackFootballPeriodLabel
 const translatePeriodLabel = (
   label: string | undefined,
   sportTranslations: Translations['sport'],
@@ -56,16 +52,13 @@ const translatePeriodLabel = (
   return periodLabelLookup[label as keyof typeof periodLabelLookup];
 };
 
-// groupedActions - // groupName: { fullName: 'Assists', shortName: 'Assists' },
-// I don't know if we will get groupedActions array with more than one object
-// but I can add a test simulating this
 const translateGroupedActionsName = (
   groupedActionName: string,
   sportTranslations: Translations['sport'],
 ) => {
   const groupedActionsLookup = {
     Assists: sportTranslations?.assists,
-    Penalties: sportTranslations?.penalties, // maybe YAGNI?
+    Penalties: sportTranslations?.penalties,
   };
   return (
     groupedActionsLookup[
@@ -78,18 +71,19 @@ const translateRunningScores = (
   runningScores: Record<string, string>,
   numerals: [string],
 ) => {
-  const scoreFields = [
+  const scoreFields = new Set([
     'halftime',
     'fulltime',
     'aggregate',
     'extratime',
     'penaltyShootout',
-  ]; // check if others
+  ]);
 
   return Object.fromEntries(
-    scoreFields
-      .filter(key => runningScores?.[key] != null)
-      .map(key => [key, translateScore(runningScores[key], numerals)]),
+    Object.entries(runningScores).map(([key, value]) => [
+      key,
+      scoreFields.has(key) ? translateScore(value, numerals) : value,
+    ]),
   );
 };
 
@@ -134,8 +128,6 @@ const translateSportData = (
     };
   });
 
-  // lots of refactoring opportunities here to reduce repetition once tests are written
-  // numeral tests should always fallback to english - double check this
   return {
     ...data,
     home: {
@@ -174,7 +166,7 @@ const translateSportData = (
     },
     ...(data.periodLabel && {
       periodLabel: {
-        ...(periodLabelTranslation && { translation: periodLabelTranslation }), // only add translation field if we have a translation
+        ...(periodLabelTranslation && { translation: periodLabelTranslation }),
         ...data.periodLabel,
       },
     }),

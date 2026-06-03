@@ -7,6 +7,7 @@ import beforePens from '#app/components-webcore/SportDataHeader/head-to-head-v2/
 import firstHalf90 from '#app/components-webcore/SportDataHeader/head-to-head-v2/static-data/event/transformed/mid-event/first-half-90.json';
 import etFirstHalf from '#app/components-webcore/SportDataHeader/head-to-head-v2/static-data/event/transformed/mid-event/et-first-half.json';
 import halfTime from '#app/components-webcore/SportDataHeader/head-to-head-v2/static-data/event/transformed/mid-event/half-time.json';
+import secondLegAetPens from '#app/components-webcore/SportDataHeader/head-to-head-v2/static-data/event/transformed/mid-event/second-leg-aet-pens.json';
 import aet from '#src/app/components-webcore/SportDataHeader/head-to-head-v2/static-data/event/transformed/post-event/aet.json';
 import postEvent from '#src/app/components-webcore/SportDataHeader/head-to-head-v2/static-data/event/transformed/post-event/post-event.json';
 import translateSportData from './translateSportData';
@@ -39,13 +40,12 @@ const translationsWithMissingTranslations = {
 };
 
 describe('TranslateSportData', () => {
-  // test case: if no sport translations, return data unchanged
   it('should return the data unchanged if no sport translations are available', () => {
     const result = translateSportData(
       fixtureData.data.sportDataEventContent
         .sportDataEvent as unknown as HeadToHeadV2Data,
       {} as Translations,
-      'afrique', // typify
+      'afrique',
     );
     expect(result).toStrictEqual(
       fixtureData.data.sportDataEventContent.sportDataEvent,
@@ -56,7 +56,7 @@ describe('TranslateSportData', () => {
     const result = translateSportData(
       preEvent as unknown as HeadToHeadV2Data,
       afriqueServiceConfig.default.translations,
-      'afrique', // typify
+      'afrique',
     );
     expect(result).toStrictEqual(preEvent);
   });
@@ -157,6 +157,61 @@ describe('TranslateSportData', () => {
         aggregate: '3',
         fulltime: '3',
         halftime: '1',
+      });
+    });
+
+    it('should handle all possible running scores fields', () => {
+      const result = translateSportData(
+        secondLegAetPens as unknown as HeadToHeadV2Data,
+        afriqueServiceConfig.default.translations,
+        'persian',
+      );
+      expect(result.home.runningScores).toStrictEqual({
+        aggregate: '۴',
+        extratime: '۲',
+        fulltime: '۲',
+        halftime: '۲',
+        penaltyShootout: '۲',
+      });
+      expect(result.away.runningScores).toStrictEqual({
+        aggregate: '۳',
+        extratime: '۲',
+        fulltime: '۲',
+        halftime: '۲',
+        penaltyShootout: '۲',
+      });
+    });
+
+    it('should return unknown running scores fields unchanged', () => {
+      const fixtureDataWithUnknownRunningScoreField = {
+        ...secondLegAetPens,
+        home: {
+          ...secondLegAetPens.home,
+          runningScores: {
+            fulltime: '1',
+            blah: '0',
+          },
+        },
+        away: {
+          ...secondLegAetPens.away,
+          runningScores: {
+            fulltime: '1',
+            blah: '2',
+          },
+        },
+      };
+      const result = translateSportData(
+        fixtureDataWithUnknownRunningScoreField as unknown as HeadToHeadV2Data,
+        afriqueServiceConfig.default.translations,
+        'persian',
+      );
+      expect(result.home.runningScores).toStrictEqual({
+        blah: '0',
+        fulltime: '۱',
+      });
+      expect(result.away.runningScores).toStrictEqual({
+        blah: '2',
+        fulltime: '۱',
       });
     });
   });
@@ -275,6 +330,47 @@ describe('TranslateSportData', () => {
       expect(result.groupedActions?.[0].groupName).toStrictEqual({
         fullName: 'Assists',
         shortName: 'Assists',
+      });
+    });
+
+    it('should handle multiple grouped actions', () => {
+      const dataWithMultipleGroupedActions = {
+        ...fixtureDataDefault,
+        groupedActions: [
+          {
+            groupName: { fullName: 'Assists', shortName: 'Assists' },
+            homeTeamActions: [],
+          },
+          {
+            groupName: { fullName: 'Penalties', shortName: 'Penalties' },
+            homeTeamActions: [],
+          },
+          {
+            groupName: {
+              fullName: 'something else',
+              shortName: 'something else',
+            },
+            homeTeamActions: [],
+          },
+        ],
+      } as unknown as HeadToHeadV2Data;
+
+      const result = translateSportData(
+        dataWithMultipleGroupedActions,
+        afriqueServiceConfig.default.translations,
+        'afrique',
+      );
+      expect(result.groupedActions?.[0].groupName).toStrictEqual({
+        fullName: 'Passes décisives',
+        shortName: 'Passes décisives',
+      });
+      expect(result.groupedActions?.[1].groupName).toStrictEqual({
+        fullName: 'Tirs au but',
+        shortName: 'Tirs au but',
+      });
+      expect(result.groupedActions?.[2].groupName).toStrictEqual({
+        fullName: 'something else',
+        shortName: 'something else',
       });
     });
   });
