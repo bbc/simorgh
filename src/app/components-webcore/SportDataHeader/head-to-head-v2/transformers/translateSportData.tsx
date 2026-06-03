@@ -16,6 +16,11 @@ const translateSportData = (
   translations: Translations,
 ) => {
   const sportTranslations = translations?.sport;
+
+  if (!sportTranslations) {
+    return data;
+  }
+
   const homeTeamTranslation = fetchTeamNameTranslation(
     data.home?.urn,
     sportTranslations,

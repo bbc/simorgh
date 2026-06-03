@@ -301,7 +301,7 @@ export const service: DefaultServiceConfig = {
           ghana: 'Orilẹede Ghana',
           haiti: 'Orilẹede Haiti',
           iran: 'Orilẹede Iran',
-          iraq: 'Orilẹede Iran',
+          iraq: 'Orilẹede Iraq',
           'ivory-coast': 'Orilẹede Cote d‘ivoire',
           japan: 'Orilẹede Japan',
           jordan: 'Orilẹede Jordan',

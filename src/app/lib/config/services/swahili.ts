@@ -338,7 +338,7 @@ export const service: DefaultServiceConfig = {
           haiti: 'Haiti',
           iran: 'Iran',
           iraq: 'Iraq',
-          'ivory-coast': "Cote d'voire",
+          'ivory-coast': "Cote d'Ivoire",
           japan: 'Japan',
           jordan: 'Jordan',
           mexico: 'Mexico',
