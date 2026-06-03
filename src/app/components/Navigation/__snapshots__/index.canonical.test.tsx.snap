@@ -543,17 +543,32 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
             </button>
           </div>
           <div
-            class="emotion-14 emotion-15"
-            data-e2e="dropdown-nav"
-            height="0"
+            role="presentation"
           >
-            <ul
-              data-testid="dropdown"
+            <div
+              class="emotion-14 emotion-15"
+              data-e2e="dropdown-nav"
+              height="0"
             >
-              <li>
-                Dropdown Items
-              </li>
-            </ul>
+              <ul
+                data-testid="dropdown"
+              >
+                <li>
+                  <a
+                    href="/item1"
+                  >
+                    Item 1
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/item2"
+                  >
+                    Item 2
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <div
