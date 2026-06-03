@@ -398,6 +398,15 @@ export const service: DefaultServiceConfig = {
       },
       sport: {
         matchSummary: 'Resumen del partido',
+        assists: 'Asistencias',
+        penalties: 'Penales',
+        ht: 'Final del primer tiempo',
+        ft: 'Final del partido',
+        et: 'Tiempo adicional',
+        afterExtraTime: 'Después del tiempo adicional',
+        penaltyAbbreviation: 'PEN',
+        venue: 'Estadio',
+        attendance: 'Asistencia',
         worldCupTeamNames: {
           algeria: 'Argelia',
           argentina: 'Argentina',

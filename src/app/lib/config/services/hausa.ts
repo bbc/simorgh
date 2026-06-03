@@ -385,6 +385,13 @@ export const service: DefaultServiceConfig = {
       },
       sport: {
         matchSummary: 'Takaitaccen Bayanin Wasa',
+        penalties: 'Fenariti',
+        ht: 'Hutun rabin lokaci',
+        et: 'Karin lokaci',
+        afterExtraTime: 'Bayan karin lokaci',
+        penaltyAbbreviation: 'FEN',
+        venue: 'Filin wasa',
+        attendance: 'Yawan ƴan kallo',
         worldCupTeamNames: {
           algeria: 'Algeriya',
           argentina: 'Argentina',

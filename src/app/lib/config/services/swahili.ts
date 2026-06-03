@@ -314,6 +314,15 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'Gumzo mitandaoni',
       sport: {
         matchSummary: 'Muhtasari wa mechi',
+        assists: 'Pasi za mabao',
+        penalties: 'Penalti',
+        ht: 'Mwisho wa kipindi cha kwanza',
+        ft: 'Mwisho wa mechi',
+        et: 'Muda wa mapumziko',
+        afterExtraTime: 'Baada ya muda wa nyongeza',
+        penaltyAbbreviation: 'PEN',
+        venue: 'Uwanja',
+        attendance: 'Idadi ya watazamaji',
         worldCupTeamNames: {
           algeria: 'Algeria',
           argentina: 'Argentina',

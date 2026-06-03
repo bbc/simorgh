@@ -282,6 +282,15 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'Seçtiklerimiz',
       sport: {
         matchSummary: 'Maç Özeti',
+        assists: 'Asistler',
+        penalties: 'Penaltılar',
+        ht: 'İlk yarı sonu',
+        ft: 'Maç sonu',
+        et: 'Uzatma',
+        afterExtraTime: 'Uzatmalardan sonra',
+        penaltyAbbreviation: 'pen',
+        venue: 'Stadyum',
+        attendance: 'Seyirci sayısı',
         worldCupTeamNames: {
           algeria: 'Cezayir',
           argentina: 'Arjantin',
