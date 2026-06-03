@@ -73,7 +73,6 @@ export const getFallbackFootballPeriodLabel = ({
       ? ` ${homeRunningScores?.penaltyShootout}-${awayRunningScores?.penaltyShootout}`
       : '';
 
-    // insert translations for penaltieis
     return {
       value: `${penaltiesTranslation}${scoreText}`,
       accessible: `${penaltiesTranslation} ${accessibleText}`,
@@ -102,7 +101,6 @@ export const getFallbackFootballPeriodLabel = ({
   return labels;
 };
 
-// this isn't currently used anywhere
 export const getConciseFootballEventSummary = ({
   time,
   status,

@@ -54,7 +54,6 @@ const MatchProgress = ({ data, isConciseView }: MatchProgressProps) => {
           </div>
         </>
       )}
-      {/* // observe this */}
       {shouldDisplayPeriod && (
         <>
           <VisuallyHiddenText>
