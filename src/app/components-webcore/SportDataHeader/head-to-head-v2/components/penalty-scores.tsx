@@ -13,7 +13,8 @@ const PenaltyScores = ({ data }: PenaltyScoresProps) => {
 
   const { translations } = use(ServiceContext);
   const { winOnPenalties } = translations?.sport || {};
-  const { prefix = 'wins', suffix = 'on penalties' } = winOnPenalties || {};
+  const { prefix = 'win', suffix = 'on penalties' } = winOnPenalties ?? {};
+  const shortSuffix = suffix === 'on penalties' ? 'on pens' : suffix;
 
   const isPostEvent = status?.toLowerCase() === 'postevent';
   const hasWinner = winner !== undefined;
@@ -50,7 +51,7 @@ const PenaltyScores = ({ data }: PenaltyScoresProps) => {
         data-testid="penalties-text"
       >
         <span css={styles.winningTeamName}>{`${winnerOnPenaltiesName}`}</span>
-        {` ${prefix} ${winnerOnPenaltiesScore}-${loserOnPenaltiesScore} ${suffix}`}
+        {` ${prefix} ${winnerOnPenaltiesScore}-${loserOnPenaltiesScore} ${shortSuffix}`}
       </div>
     </div>
   );

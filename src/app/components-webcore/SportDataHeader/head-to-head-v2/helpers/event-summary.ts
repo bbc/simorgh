@@ -2,6 +2,7 @@ import { Translations } from '#app/models/types/translations';
 import { EventStatus, HeadToHeadV2Data } from '../types';
 
 const ftFallback = { value: 'FT', accessible: 'Full time' };
+const aetFallback = { value: 'AET', accessible: 'After extra time' };
 
 type PeriodLabel = { value: string; accessible: string; translation?: string };
 
@@ -40,7 +41,6 @@ type FallbackPeriodLabelParams = {
   translations?: Translations['sport'];
 };
 
-// this looks used
 export const getFallbackFootballPeriodLabel = ({
   labels,
   status,
@@ -54,8 +54,8 @@ export const getFallbackFootballPeriodLabel = ({
 
   const {
     penalties: penaltiesTranslation = 'Penalties',
-    afterExtraTime: aetTranslation = 'After extra time',
-    ft: ftTranslation = 'Full time',
+    afterExtraTime: aetTranslation,
+    ft: ftTranslation,
   } = translations || {};
 
   if (status?.toLowerCase() === 'midevent' && isPens) {
@@ -81,9 +81,22 @@ export const getFallbackFootballPeriodLabel = ({
   }
 
   if (isPens) {
+    const aetTranslatedFallback = aetTranslation
+      ? {
+          value: aetTranslation,
+          accessible: aetTranslation,
+        }
+      : aetFallback;
+    const ftTranslatedFallback = ftTranslation
+      ? {
+          value: ftTranslation,
+          accessible: ftTranslation,
+        }
+      : ftFallback;
+
     return homeRunningScores?.extratime && awayRunningScores?.extratime
-      ? { value: `${aetTranslation}`, accessible: `${aetTranslation}` }
-      : { value: `${ftTranslation}`, accessible: `${ftTranslation}` };
+      ? aetTranslatedFallback
+      : ftTranslatedFallback;
   }
 
   return labels;
