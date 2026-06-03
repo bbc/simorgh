@@ -40,9 +40,9 @@ const Centre = ({ data, maxScoreLength }: CentreProps) => {
   return (
     <div css={styles.centre(maxScoreLength)}>
       {shouldShowScores(status) ? (
-        <Played data={data} />
+        <Time date={data.date} time={data.time} />
       ) : (
-        <Time time={data.time} />
+        <Time date={data.date} time={data.time} />
       )}
     </div>
   );
