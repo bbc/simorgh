@@ -10,4 +10,5 @@ export default interface PageDataParams extends ParsedUrlQuery {
   renderer_env?: string;
   resolvedUrl: string;
   pageType: PageTypes;
+  country?: string;
 }
