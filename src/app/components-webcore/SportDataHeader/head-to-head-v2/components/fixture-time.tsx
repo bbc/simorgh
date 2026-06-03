@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-// import onClient from '#app/lib/utilities/onClient';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 import styles from '../index.styles';
 import getLocalisedTime from '../helpers/localise-time';
@@ -15,27 +14,20 @@ interface TimeProps {
 }
 
 const Time = ({ date, time }: TimeProps) => {
-  const [localisedTime, setLocalisedTime] = useState<string | null>(null);
+  const [localisedTime, setLocalisedTime] = useState(time.displayTimeUK);
 
   useEffect(() => {
-    setLocalisedTime(getLocalisedTime(date, time.displayTimeUK));
-  }, [date, time.displayTimeUK]);
-
-  const displayedTime = localisedTime ?? time.displayTimeUK;
+    const clientTime = getLocalisedTime(date, time.displayTimeUK);
+    setLocalisedTime(clientTime);
+  }, []);
 
   return (
     <>
-      <time
-        css={styles.fixtureTime}
-        aria-hidden="true"
-        suppressHydrationWarning
-      >
-        {displayedTime}
+      <time css={styles.fixtureTime} aria-hidden="true">
+        {localisedTime}
       </time>
 
-      <VisuallyHiddenText suppressHydrationWarning>
-        {displayedTime}
-      </VisuallyHiddenText>
+      <VisuallyHiddenText>{localisedTime}</VisuallyHiddenText>
     </>
   );
 };
