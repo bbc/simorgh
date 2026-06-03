@@ -51,7 +51,7 @@ export default {
         padding: isConciseView ? '8px' : '0',
         ...(!isConciseView && { paddingBottom: `${pixelsToRem(24)}rem` }),
         [mq.GROUP_2_MAX_WIDTH]: {
-          paddingTop: isConciseView ? '8px' : '0',
+          paddingTop: '8px',
           ...(!isConciseView && { paddingBottom: `${pixelsToRem(8)}rem` }),
         },
         paddingBlockStart: `${pixelsToRem(24)}rem`,
