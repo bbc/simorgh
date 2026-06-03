@@ -362,6 +362,15 @@ export const service: DefaultServiceConfig = {
       },
       sport: {
         matchSummary: 'ملخص المباراة',
+        assists: 'تمريرات حاسمة',
+        penalties: 'العقوبات',
+        ht: 'نهاية الشوط الأول',
+        ft: 'نهاية المباراة',
+        et: 'وقت إضافي',
+        afterExtraTime: 'بعد الوقت الإضافي',
+        penaltyAbbreviation: 'ر.ت.',
+        venue: 'الملعب',
+        attendance: 'الجمهور',
         worldCupTeamNames: {
           algeria: 'الجزائر',
           argentina: 'الأرجنتين',

@@ -242,6 +242,15 @@ export interface Translations {
     next?: string;
   };
   sport?: {
+    assists?: string;
+    penalties?: string;
+    ht?: string;
+    ft?: string;
+    et?: string;
+    afterExtraTime?: string;
+    penaltyAbbreviation?: string;
+    venue?: string;
+    attendance?: string;
     matchSummary?: string;
     worldCupTeamNames?: Record<string, string>;
   };
