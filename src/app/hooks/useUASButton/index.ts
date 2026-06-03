@@ -76,24 +76,33 @@ const useUASButton = ({
         if (!articlePageData) {
           throw new Error('Article data is required to save');
         }
-        await saveOrUpdateArticleMetadata({
+        return saveOrUpdateArticleMetadata({
           articlePageData,
           articleId,
           service,
         });
-      } else {
-        const globalId = buildGlobalId(articleId);
-        await uasApiRequest('DELETE', FAVOURITES_CONFIG.activityType, {
-          globalId,
-        });
       }
+      const globalId = buildGlobalId(articleId);
+      const response = await uasApiRequest(
+        'DELETE',
+        FAVOURITES_CONFIG.activityType,
+        {
+          globalId,
+        },
+      );
+      if (!response.ok) {
+        throw new Error(`Failed to remove article: ${response.status}`);
+      }
+
+      return undefined;
     },
-    onSuccess: (_, action) => {
+    onSuccess: (metadata, action) => {
       const isSavedAction = action === UASAction.SAVE;
       queryClient.setQueryData(
         uasKeys.favouriteStatus(hashedUserId, articleId),
         {
           isSaved: isSavedAction,
+          metadata: isSavedAction ? metadata : undefined,
         },
       );
       queryClient.invalidateQueries({

@@ -42,6 +42,10 @@ const useUASMetadataSync = ({
   const hasSyncedRef = useRef(false);
 
   useEffect(() => {
+    hasSyncedRef.current = false;
+  }, [articleId]);
+
+  useEffect(() => {
     if (!isSaved || !articlePageData || !savedArticleMetadata) {
       hasSyncedRef.current = false;
       return;
