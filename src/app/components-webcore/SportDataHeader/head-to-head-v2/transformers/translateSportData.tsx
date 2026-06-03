@@ -1,7 +1,7 @@
 import { Services } from '#app/models/types/global';
 import { Translations } from '#app/models/types/translations';
 import getServiceNumerals from '#app/components/MostRead/utilities/getServiceNumerals';
-import { HeadToHeadV2Data } from '../types';
+import { HeadToHeadV2Data, Team } from '../types';
 
 const translateTeamName = (
   urn: string | undefined,
@@ -15,6 +15,70 @@ const translateTeamName = (
 
 const translateScore = (score: string, numerals: [string]) => {
   return score?.replace(/\d/g, digit => numerals[Number(digit)] ?? digit);
+};
+
+// //
+// // I want to handle
+// // 114' ET
+// // 98' ET
+// // 45'+2
+// const translateMinutes = (label: string | undefined, numerals: [string]) => {
+//   // regex check for minutes that assigns 114' ET to minutes and any value afterwards to labelSuffix that doesn;t have to be ET, so it can handle both 114' ET and 45'+2
+//   const minutesMatch = label?.trim().match(/^(\d+'(?:\+\d+)?)(?:\s*(ET))?$/);
+
+//   const minutes = minutesMatch ? minutesMatch[1] : undefined;
+
+//   const addedMinutes = minutes?.includes('+')
+//     ? minutes.split('+')[1]
+//     : undefined;
+
+//   if (!minutes && !addedMinutes) {
+//     return label;
+//   }
+
+//   const translatedMinutes = minutes?.replace(
+//     /\d/g,
+//     digit => numerals[Number(digit)] ?? digit,
+//   );
+//   const translatedAddedMinutes = addedMinutes?.replace(
+//     /\d/g,
+//     digit => numerals[Number(digit)] ?? digit,
+//   );
+
+//   return label
+//     ?.replace(minutes, translatedMinutes || minutes)
+//     .replace(addedMinutes || '', translatedAddedMinutes || addedMinutes || '');
+// };
+
+// // I want to handle
+// // 114' ET
+// // 98' ET
+// // 45'+2
+const translateMinutes = (label: string | undefined, numerals: string[]) => {
+  if (!label) return label; // hmm?
+
+  const match = label.trim().match(/^(\d+)(?:'(\+\d+)?)?(?:\s*(.*))?$/);
+
+  if (!match) return label;
+
+  const [_, baseMinutes, addedPart, suffix] = match;
+
+  const translateDigits = (str: string) =>
+    str.replace(/\d/g, d => numerals[Number(d)] ?? d);
+
+  let result = translateDigits(baseMinutes);
+
+  if (addedPart) {
+    result += `'${translateDigits(addedPart)}`;
+  } else {
+    result += `'`;
+  }
+
+  if (suffix) {
+    result += ` ${suffix}`;
+  }
+
+  return result;
 };
 
 const handleExtraTime = (
@@ -34,8 +98,16 @@ const handleExtraTime = (
 const translatePeriodLabel = (
   label: string | undefined,
   sportTranslations: Translations['sport'],
+  numerals: [string],
 ) => {
-  const extraTimePeriodLabel = handleExtraTime(label, sportTranslations);
+  const labelMinutesTranslation = translateMinutes(label, numerals);
+
+  console.log('labelMinutesTranslation', labelMinutesTranslation);
+
+  const extraTimePeriodLabel = handleExtraTime(
+    labelMinutesTranslation,
+    sportTranslations,
+  );
 
   if (extraTimePeriodLabel) {
     return extraTimePeriodLabel;
@@ -49,7 +121,21 @@ const translatePeriodLabel = (
     PENS: sportTranslations?.penaltyAbbreviation,
   };
 
-  return periodLabelLookup[label as keyof typeof periodLabelLookup];
+  return periodLabelLookup[
+    labelMinutesTranslation as keyof typeof periodLabelLookup
+  ];
+  // rename
+  //   const lookupResult =
+  //     periodLabelLookup[label as keyof typeof periodLabelLookup];
+
+  //   const translatedMinutes = translateMinutes(label, numerals);
+
+  //   const translatedExtraTimeMinutes = translateMinutes(
+  //     extraTimePeriodLabel,
+  //     numerals,
+  //   );
+
+  //   return lookupResult || translatedMinutes || translatedExtraTimeMinutes;
 };
 
 const translateGroupedActionsName = (
@@ -87,6 +173,25 @@ const translateRunningScores = (
   );
 };
 
+const transformTeam = (
+  team: Team,
+  teamNameTranslation: string | undefined,
+  numerals: [string],
+) => ({
+  ...team,
+  fullName: teamNameTranslation || team.fullName,
+  shortName: teamNameTranslation || team.shortName,
+  ...(team.score && {
+    score: translateScore(team.score, numerals),
+  }),
+  ...(team.scoreUnconfirmed && {
+    scoreUnconfirmed: translateScore(team.scoreUnconfirmed, numerals),
+  }),
+  ...(team.runningScores && {
+    runningScores: translateRunningScores(team.runningScores, numerals),
+  }),
+});
+
 const translateSportData = (
   data: HeadToHeadV2Data,
   translations: Translations,
@@ -111,6 +216,7 @@ const translateSportData = (
   const periodLabelTranslation = translatePeriodLabel(
     data.periodLabel?.value,
     sportTranslations,
+    numerals,
   );
 
   const groupedActionsTranslation = data.groupedActions?.map(group => {
@@ -130,40 +236,8 @@ const translateSportData = (
 
   return {
     ...data,
-    home: {
-      ...data.home,
-      fullName: homeTeamTranslation || data.home.fullName,
-      shortName: homeTeamTranslation || data.home.shortName,
-      ...(data.home.score && {
-        score: translateScore(data.home.score, numerals),
-      }),
-      ...(data.home.scoreUnconfirmed && {
-        scoreUnconfirmed: translateScore(data.home.scoreUnconfirmed, numerals),
-      }),
-      ...(data.home.runningScores && {
-        runningScores: translateRunningScores(
-          data.home.runningScores,
-          numerals,
-        ),
-      }),
-    },
-    away: {
-      ...data.away,
-      fullName: awayTeamTranslation || data.away.fullName,
-      shortName: awayTeamTranslation || data.away.shortName,
-      ...(data.away.score && {
-        score: translateScore(data.away.score, numerals),
-      }),
-      ...(data.away.scoreUnconfirmed && {
-        scoreUnconfirmed: translateScore(data.away.scoreUnconfirmed, numerals),
-      }),
-      ...(data.away.runningScores && {
-        runningScores: translateRunningScores(
-          data.away.runningScores,
-          numerals,
-        ),
-      }),
-    },
+    home: transformTeam(data.home, homeTeamTranslation, numerals),
+    away: transformTeam(data.away, awayTeamTranslation, numerals),
     ...(data.periodLabel && {
       periodLabel: {
         ...(periodLabelTranslation && { translation: periodLabelTranslation }),

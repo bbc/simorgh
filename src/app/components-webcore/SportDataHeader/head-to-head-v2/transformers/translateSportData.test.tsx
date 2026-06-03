@@ -1,5 +1,6 @@
 import { Translations } from '#app/models/types/translations';
 import { service as afriqueServiceConfig } from '#app/lib/config/services/afrique';
+import { service as persianServiceConfig } from '#app/lib/config/services/persian';
 import fixtureData from '#data/afrique/live/c7gk1vjglxn1t.json';
 import preEvent from '#app/components-webcore/SportDataHeader/head-to-head-v2/static-data/event/transformed/pre-event/pre-event.json';
 import beforeExtraTime from '#app/components-webcore/SportDataHeader/head-to-head-v2/static-data/event/transformed/mid-event/before-extra-time.json';
@@ -7,6 +8,7 @@ import beforePens from '#app/components-webcore/SportDataHeader/head-to-head-v2/
 import firstHalf90 from '#app/components-webcore/SportDataHeader/head-to-head-v2/static-data/event/transformed/mid-event/first-half-90.json';
 import etFirstHalf from '#app/components-webcore/SportDataHeader/head-to-head-v2/static-data/event/transformed/mid-event/et-first-half.json';
 import halfTime from '#app/components-webcore/SportDataHeader/head-to-head-v2/static-data/event/transformed/mid-event/half-time.json';
+import firstHalfAddedTime from '#app/components-webcore/SportDataHeader/head-to-head-v2/static-data/event/transformed/mid-event/first-half-added-time.json';
 import secondLegAetPens from '#app/components-webcore/SportDataHeader/head-to-head-v2/static-data/event/transformed/mid-event/second-leg-aet-pens.json';
 import aet from '#src/app/components-webcore/SportDataHeader/head-to-head-v2/static-data/event/transformed/post-event/aet.json';
 import postEvent from '#src/app/components-webcore/SportDataHeader/head-to-head-v2/static-data/event/transformed/post-event/post-event.json';
@@ -99,11 +101,11 @@ describe('TranslateSportData', () => {
     });
   });
 
-  describe('Numerals', () => {
+  describe('Scores and Running Scores', () => {
     it('should update the scores to non western service numerals for applicable service', () => {
       const result = translateSportData(
         fixtureDataDefault,
-        afriqueServiceConfig.default.translations,
+        persianServiceConfig.default.translations,
         'persian',
       );
       expect(result.home.score).toEqual('۱');
@@ -127,7 +129,7 @@ describe('TranslateSportData', () => {
     it('should update the running scores to non western service numerals for applicable service', () => {
       const result = translateSportData(
         fixtureDataDefault,
-        afriqueServiceConfig.default.translations,
+        persianServiceConfig.default.translations,
         'persian',
       );
       expect(result.home.runningScores).toStrictEqual({
@@ -163,7 +165,7 @@ describe('TranslateSportData', () => {
     it('should handle all possible running scores fields', () => {
       const result = translateSportData(
         secondLegAetPens as unknown as HeadToHeadV2Data,
-        afriqueServiceConfig.default.translations,
+        persianServiceConfig.default.translations,
         'persian',
       );
       expect(result.home.runningScores).toStrictEqual({
@@ -202,7 +204,7 @@ describe('TranslateSportData', () => {
       };
       const result = translateSportData(
         fixtureDataWithUnknownRunningScoreField as unknown as HeadToHeadV2Data,
-        afriqueServiceConfig.default.translations,
+        persianServiceConfig.default.translations,
         'persian',
       );
       expect(result.home.runningScores).toStrictEqual({
@@ -304,6 +306,69 @@ describe('TranslateSportData', () => {
       expect(result.periodLabel).toStrictEqual({
         value: "9'",
         accessible: '9 minutes',
+      });
+    });
+
+    it('should return the period label unchanged when translations are not found', () => {
+      const result = translateSportData(
+        halfTime as unknown as HeadToHeadV2Data,
+        translationsWithMissingTranslations,
+        'afrique',
+      );
+      expect(result.periodLabel).toStrictEqual({
+        accessible: halfTime.periodLabel.accessible,
+        value: halfTime.periodLabel.value,
+      });
+    });
+
+    describe('Numerals', () => {
+      // this should fail
+      it('should return the period label minutes to non western service numerals for applicable service', () => {
+        const result = translateSportData(
+          firstHalf90 as unknown as HeadToHeadV2Data,
+          persianServiceConfig.default.translations,
+          'persian',
+        );
+        expect(result.periodLabel).toStrictEqual({
+          value: "9'",
+          accessible: '9 minutes',
+        });
+      });
+      // this should fail
+      it('should update the period label with extra time to non western service numerals for applicable service', () => {
+        const result = translateSportData(
+          firstHalfAddedTime as unknown as HeadToHeadV2Data,
+          persianServiceConfig.default.translations,
+          'persian',
+        );
+        expect(result.periodLabel).toStrictEqual({
+          value: "45'+2",
+          accessible: '45 minutes plus 2',
+        });
+      });
+
+      it('should update the period label with extra time to a western service numerals for applicable service', () => {
+        const result = translateSportData(
+          firstHalfAddedTime as unknown as HeadToHeadV2Data,
+          afriqueServiceConfig.default.translations,
+          'afrique',
+        );
+        expect(result.periodLabel).toStrictEqual({
+          value: "45'+2",
+          accessible: '45 minutes plus 2',
+        });
+      });
+
+      it('should update the period label in extra time to non western service numerals for applicable service', () => {
+        const result = translateSportData(
+          etFirstHalf as unknown as HeadToHeadV2Data,
+          persianServiceConfig.default.translations,
+          'persian',
+        );
+        expect(result.periodLabel).toStrictEqual({
+          accessible: 'blah',
+          value: 'bleh',
+        });
       });
     });
   });
