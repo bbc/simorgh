@@ -98,7 +98,7 @@ const translateSportData = (
   translations: Translations,
   service: Services,
 ) => {
-  const numerals: [string] = getServiceNumerals(service); // check type
+  const numerals: [string] = getServiceNumerals(service);
   const sportTranslations = translations?.sport;
 
   if (!sportTranslations) {

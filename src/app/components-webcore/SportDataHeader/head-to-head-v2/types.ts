@@ -147,7 +147,7 @@ export type HeadToHeadV2Data = {
   /**
    * The current period of the event e.g FT, HT.
    */
-  periodLabel?: { value: string; accessible: string };
+  periodLabel?: { value: string; translation?: string; accessible: string };
   /**
    * Period string.
    */

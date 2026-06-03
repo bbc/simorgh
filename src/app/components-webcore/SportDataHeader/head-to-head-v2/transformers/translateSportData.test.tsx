@@ -1,490 +1,281 @@
-import { screen } from '@testing-library/react';
-import { render } from '#app/components/react-testing-library-with-providers';
+import { Translations } from '#app/models/types/translations';
 import { service as afriqueServiceConfig } from '#app/lib/config/services/afrique';
+import fixtureData from '#data/afrique/live/c7gk1vjglxn1t.json';
+import preEvent from '#app/components-webcore/SportDataHeader/head-to-head-v2/static-data/event/transformed/pre-event/pre-event.json';
+import beforeExtraTime from '#app/components-webcore/SportDataHeader/head-to-head-v2/static-data/event/transformed/mid-event/before-extra-time.json';
+import beforePens from '#app/components-webcore/SportDataHeader/head-to-head-v2/static-data/event/transformed/mid-event/before-pens.json';
+import firstHalf90 from '#app/components-webcore/SportDataHeader/head-to-head-v2/static-data/event/transformed/mid-event/first-half-90.json';
+import etFirstHalf from '#app/components-webcore/SportDataHeader/head-to-head-v2/static-data/event/transformed/mid-event/et-first-half.json';
+import halfTime from '#app/components-webcore/SportDataHeader/head-to-head-v2/static-data/event/transformed/mid-event/half-time.json';
+import aet from '#src/app/components-webcore/SportDataHeader/head-to-head-v2/static-data/event/transformed/post-event/aet.json';
+import postEvent from '#src/app/components-webcore/SportDataHeader/head-to-head-v2/static-data/event/transformed/post-event/post-event.json';
 import translateSportData from './translateSportData';
-import HeadToHeadV2 from '../head-to-head-v2';
 import { HeadToHeadV2Data } from '../types';
 
-const originalData = {
-  urn: 'urn:bbc:sportsdata:football:event:s-3y91hnyfjh24yxjhm77a7hy50',
+const fixtureDataDefault = fixtureData.data.sportDataEventContent
+  .sportDataEvent as unknown as HeadToHeadV2Data;
+
+const fixtureDataWithWorldCupTeamNames = {
+  ...fixtureData.data.sportDataEventContent.sportDataEvent,
   home: {
-    id: 'ej5er0oyngdw138yuumwqbyqt',
+    ...fixtureData.data.sportDataEventContent.sportDataEvent.home,
     fullName: 'England',
     shortName: 'England',
     urn: 'urn:bbc:sportsdata:football:team:england',
-    runningScores: {
-      halftime: '0',
-      fulltime: '1',
-      aggregate: '1',
-    },
-    scoreUnconfirmed: '1',
-    actions: [
-      {
-        playerUrn:
-          'urn:bbc:sportsdata:football:player:s-2bmeynv0dhsc8sjfuaprkexre',
-        playerName: 'J. Rowe',
-        actionType: 'goal',
-        actions: [
-          {
-            type: 'Goal',
-            typeLabel: { value: 'Goal', accessible: 'Goal' },
-            timeLabel: {
-              value: "90'",
-              accessible: '90 minutes',
-            },
-          },
-        ],
-      },
-    ],
-    score: '1',
   },
   away: {
-    id: 'b496gs285it6bheuikox6z9mj',
+    ...fixtureData.data.sportDataEventContent.sportDataEvent.away,
     fullName: 'Germany',
     shortName: 'Germany',
     urn: 'urn:bbc:sportsdata:football:team:germany',
-    runningScores: {
-      halftime: '1',
-      fulltime: '3',
-      aggregate: '3',
-    },
-    scoreUnconfirmed: '3',
-    actions: [
-      {
-        playerUrn:
-          'urn:bbc:sportsdata:football:player:s-8qys6qtdwgsycxducl062zld5',
-        playerName: 'E. Konsa',
-        actionType: 'goal',
-        actions: [
-          {
-            type: 'Goal',
-            typeLabel: { value: 'Goal', accessible: 'Goal' },
-            timeLabel: {
-              value: "44'",
-              accessible: '44 minutes',
-            },
-          },
-        ],
-      },
-      {
-        playerUrn:
-          'urn:bbc:sportsdata:football:player:s-5m0j33eoa5c8pqlr0tdf7undh',
-        playerName: 'O. Watkins',
-        actionType: 'goal',
-        actions: [
-          {
-            type: 'Goal',
-            typeLabel: { value: 'Goal', accessible: 'Goal' },
-            timeLabel: {
-              value: "51'",
-              accessible: '51 minutes',
-            },
-          },
-          {
-            type: 'Goal',
-            typeLabel: { value: 'Goal', accessible: 'Goal' },
-            timeLabel: {
-              value: "90'+4",
-              accessible: '90 minutes plus 4',
-            },
-          },
-        ],
-      },
-    ],
-    score: '3',
   },
-  time: {
-    accessibleTime: '20:00',
-    displayTimeUK: '20:00',
-    timeCertainty: true,
+} as unknown as HeadToHeadV2Data;
+
+const translationsWithMissingTranslations = {
+  ...afriqueServiceConfig.default.translations,
+  sport: {
+    matchSummary: 'matchSummary',
   },
-  date: 'Thu 9 Apr 2026',
-  tournament: {
-    id: '4c1nfi2j1m731hcay25fcgndq',
-    name: 'UEFA Europa League',
-    disambiguatedName: 'UEFA Europa League',
-    urn: 'urn:bbc:sportsdata:football:tournament:europa-league',
-    thingsGuid: '2afbdda7-71d4-544d-bcc6-d9ff50314b2a',
-  },
-  stage: {
-    id: '7wxuj38kqm8bz3cmi15vu4w7o',
-    name: 'Quarter-finals',
-    urn: '',
-  },
-  multiLeg: {
-    leg: 1,
-    relatedMatchId: 's-9ur6e6w5f4ahyxph7ef4rks2c',
-  },
-  period: 'ft',
-  venue: {
-    id: '2nrn0y55nz9ee7p9adzbb7fta',
-    urn: 'urn:bbc:sportsdata:football:venue:s-2nrn0y55nz9ee7p9adzbb7fta',
-    name: "Stadio Renato Dall'Ara",
-    shortName: "Stadio Renato Dall'Ara",
-  },
-  attendance: { value: 31142 },
-  status: 'PostEvent',
-  periodLabel: { value: 'FT', accessible: 'Full time' },
-  winner: 'away',
-  tournamentDescriptionLabel: 'UEFA Europa League - Quarter-finals',
-  groupedActions: [
-    {
-      groupName: { fullName: 'Assists', shortName: 'Assists' },
-      homeTeamActions: ["J. Lucumí (90')"],
-      awayTeamActions: ["Y. Tielemans (44', 90'+4)", "E. Buendía (51')"],
-    },
-  ],
-  accessibleEventSummary: 'Bologna 1 , Aston Villa 3 at Full time',
-  sportDiscipline: 'football',
 };
 
-const translatedData = {
-  urn: 'urn:bbc:sportsdata:football:event:s-3y91hnyfjh24yxjhm77a7hy50',
-  home: {
-    id: 'ej5er0oyngdw138yuumwqbyqt',
-    fullName: 'Angleterre',
-    shortName: 'Angleterre',
-    urn: 'urn:bbc:sportsdata:football:team:england',
-    runningScores: {
-      halftime: '0',
-      fulltime: '1',
-      aggregate: '1',
-    },
-    scoreUnconfirmed: '1',
-    actions: [
-      {
-        playerUrn:
-          'urn:bbc:sportsdata:football:player:s-2bmeynv0dhsc8sjfuaprkexre',
-        playerName: 'J. Rowe',
-        actionType: 'goal',
-        actions: [
-          {
-            type: 'Goal',
-            typeLabel: { value: 'Goal', accessible: 'Goal' },
-            timeLabel: {
-              value: "90'",
-              accessible: '90 minutes',
-            },
-          },
-        ],
-      },
-    ],
-    score: '1',
-  },
-  away: {
-    id: 'b496gs285it6bheuikox6z9mj',
-    fullName: 'Allemagne',
-    shortName: 'Allemagne',
-    urn: 'urn:bbc:sportsdata:football:team:germany',
-    runningScores: {
-      halftime: '1',
-      fulltime: '3',
-      aggregate: '3',
-    },
-    scoreUnconfirmed: '3',
-    actions: [
-      {
-        playerUrn:
-          'urn:bbc:sportsdata:football:player:s-8qys6qtdwgsycxducl062zld5',
-        playerName: 'E. Konsa',
-        actionType: 'goal',
-        actions: [
-          {
-            type: 'Goal',
-            typeLabel: { value: 'Goal', accessible: 'Goal' },
-            timeLabel: {
-              value: "44'",
-              accessible: '44 minutes',
-            },
-          },
-        ],
-      },
-      {
-        playerUrn:
-          'urn:bbc:sportsdata:football:player:s-5m0j33eoa5c8pqlr0tdf7undh',
-        playerName: 'O. Watkins',
-        actionType: 'goal',
-        actions: [
-          {
-            type: 'Goal',
-            typeLabel: { value: 'Goal', accessible: 'Goal' },
-            timeLabel: {
-              value: "51'",
-              accessible: '51 minutes',
-            },
-          },
-          {
-            type: 'Goal',
-            typeLabel: { value: 'Goal', accessible: 'Goal' },
-            timeLabel: {
-              value: "90'+4",
-              accessible: '90 minutes plus 4',
-            },
-          },
-        ],
-      },
-    ],
-    score: '3',
-  },
-  time: {
-    accessibleTime: '20:00',
-    displayTimeUK: '20:00',
-    timeCertainty: true,
-  },
-  date: 'Thu 9 Apr 2026',
-  tournament: {
-    id: '4c1nfi2j1m731hcay25fcgndq',
-    name: 'UEFA Europa League',
-    disambiguatedName: 'UEFA Europa League',
-    urn: 'urn:bbc:sportsdata:football:tournament:europa-league',
-    thingsGuid: '2afbdda7-71d4-544d-bcc6-d9ff50314b2a',
-  },
-  stage: {
-    id: '7wxuj38kqm8bz3cmi15vu4w7o',
-    name: 'Quarter-finals',
-    urn: '',
-  },
-  multiLeg: {
-    leg: 1,
-    relatedMatchId: 's-9ur6e6w5f4ahyxph7ef4rks2c',
-  },
-  period: 'ft',
-  venue: {
-    id: '2nrn0y55nz9ee7p9adzbb7fta',
-    urn: 'urn:bbc:sportsdata:football:venue:s-2nrn0y55nz9ee7p9adzbb7fta',
-    name: "Stadio Renato Dall'Ara",
-    shortName: "Stadio Renato Dall'Ara",
-  },
-  attendance: { value: 31142 },
-  status: 'PostEvent',
-  periodLabel: { value: 'FT', accessible: 'Full time' },
-  winner: 'away',
-  tournamentDescriptionLabel: 'UEFA Europa League - Quarter-finals',
-  groupedActions: [
-    {
-      groupName: { fullName: 'Assists', shortName: 'Assists' },
-      homeTeamActions: ["J. Lucumí (90')"],
-      awayTeamActions: ["Y. Tielemans (44', 90'+4)", "E. Buendía (51')"],
-    },
-  ],
-  accessibleEventSummary: 'Bologna 1 , Aston Villa 3 at Full time',
-  sportDiscipline: 'football',
-};
-
-// example pre game
-
-const originalDataPreEvent = {
-  id: '78bis3qan491aqnwxn71ix6oq',
-  eventGroupingLabel: 'England - Premier League',
-  startDateTime: '2022-08-06T11:30:00Z',
-  tournamentId: '2kwbbcootiqqgmrzs6o5inle5',
-  status: 'PreEvent',
-  periodLabel: { value: 'Scheduled', accessible: 'Scheduled' },
-  venue: { name: 'Craven Cottage', shortName: 'Craven Cottage' },
-  tournament: {
-    id: '2kwbbcootiqqgmrzs6o5inle5',
-    name: 'Premier League',
-    urn: 'urn:bbc:sportsdata:football:tournament:2kwbbcootiqqgmrzs6o5inle5',
-  },
-  tournamentDescriptionLabel: 'Premier League',
-  home: {
-    fullName: 'Fulham',
-    shortName: 'Fulham',
-    urn: 'urn:bbc:sportsdata:football:team:fulham',
-    actions: [],
-  },
-  away: {
-    fullName: 'Liverpool',
-    shortName: 'Liverpool',
-    urn: 'urn:bbc:sportsdata:football:team:liverpool',
-    actions: [],
-  },
-  time: {
-    accessibleTime: '12:30',
-    displayTimeUK: '12:30',
-    timeCertainty: true,
-  },
-  date: 'Sat 6 Aug 2022',
-  accessibleEventSummary: 'Fulham versus Liverpool kick off 12:30',
-  tipoTopicId: 'cvp5j5ndx5nt',
-  onwardJourneyLink: '/sport/football/live/cvp5j5ndx5nt',
-};
-
-// example mid game
-
-// example post game - inc pens
-
-// example post game - with ET
-const originalDataMidEventWithET = {
-  id: '3n1x4716kyvjqbh4hdw42atjb',
-  eventGroupingLabel:
-    'Europe - UEFA Europa Conference League - 1st Qualifying Round',
-  startDateTime: '2022-07-14T14:00:00Z',
-  tournamentId: 'c7b8o53flg36wbuevfzy3lb10',
-  status: 'MidEvent',
-  period: 'et-firsthalf',
-  periodLabel: {
-    value: " 98' ET",
-    accessible: '98 minutes extra time',
-  },
-  venue: {
-    name: 'Stadions Daugava',
-    shortName: 'Stadions Daugava',
-  },
-  tournament: {
-    id: 'c7b8o53flg36wbuevfzy3lb10',
-    name: 'UEFA Europa Conference League',
-    urn: 'urn:bbc:sportsdata:football:tournament:c7b8o53flg36wbuevfzy3lb10',
-  },
-  tournamentDescriptionLabel: 'UEFA Europa Conference League',
-  home: {
-    fullName: 'Liepāja',
-    shortName: 'Liepāja',
-    urn: 'urn:bbc:sportsdata:football:team:liepja',
-    score: '2',
-    runningScores: {
-      halftime: '1',
-      fulltime: '2',
-      extratime: '2',
-    },
-    actions: [
-      {
-        actionType: 'goal',
-        playerId: '2k62450281k97i0qtrw18vkd1',
-        playerName: 'A. Karašausks',
-        actions: [
-          {
-            type: 'Goal',
-            typeLabel: {
-              value: 'Goal',
-              accessible: 'Goal',
-            },
-            timeLabel: {
-              value: "13'",
-              accessible: '13 minutes',
-            },
-          },
-          {
-            type: 'Goal',
-            typeLabel: {
-              value: 'Goal',
-              accessible: 'Goal',
-            },
-            timeLabel: {
-              value: "85'",
-              accessible: '85 minutes',
-            },
-          },
-        ],
-      },
-    ],
-  },
-  away: {
-    fullName: 'Gjilani',
-    shortName: 'Gjilani',
-    urn: 'urn:bbc:sportsdata:football:team:gjilani',
-    score: '2',
-    runningScores: {
-      halftime: '1',
-      fulltime: '2',
-      extratime: '2',
-    },
-    actions: [
-      {
-        actionType: 'goal',
-        playerId: '1dmfp2ow658dsv0re73r62ndh',
-        playerName: 'B. Krasniqi',
-        actions: [
-          {
-            type: 'Goal',
-            typeLabel: {
-              value: 'Goal',
-              accessible: 'Goal',
-            },
-            timeLabel: {
-              value: "33'",
-              accessible: '33 minutes',
-            },
-          },
-          {
-            type: 'Goal',
-            typeLabel: {
-              value: 'Goal',
-              accessible: 'Goal',
-            },
-            timeLabel: {
-              value: "65'",
-              accessible: '65 minutes',
-            },
-          },
-        ],
-      },
-    ],
-  },
-  time: {
-    accessibleTime: '15:00',
-    displayTimeUK: '15:00',
-    timeCertainty: true,
-  },
-  date: 'Thu 14 Jul 2022',
-  accessibleEventSummary: 'Liepāja 2 , Gjilani 2 Extra time in progress',
-};
-
-describe('translateSportData', () => {
-  it('should translate the sport data correctly', () => {
+describe('TranslateSportData', () => {
+  // test case: if no sport translations, return data unchanged
+  it('should return the data unchanged if no sport translations are available', () => {
     const result = translateSportData(
-      originalData as unknown as HeadToHeadV2Data,
-      afriqueServiceConfig.default.translations,
-      'persian', // typify
+      fixtureData.data.sportDataEventContent
+        .sportDataEvent as unknown as HeadToHeadV2Data,
+      {} as Translations,
+      'afrique', // typify
     );
-    expect(result).toStrictEqual(translatedData);
+    expect(result).toStrictEqual(
+      fixtureData.data.sportDataEventContent.sportDataEvent,
+    );
   });
 
-  // tidy
-  it('should handle pre event', () => {
+  it('should return pre event unchanged since there are no applicable translations', () => {
     const result = translateSportData(
-      originalDataPreEvent as unknown as HeadToHeadV2Data,
-      afriqueServiceConfig.default.translations,
-      'persian', // typify
-    );
-    expect(result).toStrictEqual(originalDataPreEvent);
-  });
-
-  // originalDataMidEventWithET
-  // tidy - will fail
-  it('should handle post event with ET', () => {
-    const result = translateSportData(
-      originalDataMidEventWithET as unknown as HeadToHeadV2Data,
+      preEvent as unknown as HeadToHeadV2Data,
       afriqueServiceConfig.default.translations,
       'afrique', // typify
     );
-    expect(result).toStrictEqual(originalDataMidEventWithET);
+    expect(result).toStrictEqual(preEvent);
   });
 
-  it('should render the translated team names correctly', () => {
-    render(
-      <HeadToHeadV2
-        initialSportData={originalData as unknown as HeadToHeadV2Data}
-      />,
-      {
-        service: 'afrique',
-      },
-    );
+  describe('Team names', () => {
+    it('should translate the team names correctly when translations are available', () => {
+      const result = translateSportData(
+        fixtureDataWithWorldCupTeamNames,
+        afriqueServiceConfig.default.translations,
+        'afrique',
+      );
+      expect(result.home.fullName).toEqual('Angleterre');
+      expect(result.home.shortName).toEqual('Angleterre');
+      expect(result.away.fullName).toEqual('Allemagne');
+      expect(result.away.shortName).toEqual('Allemagne');
+    });
 
-    expect(screen.getAllByText('Angleterre').length).toBeGreaterThan(0);
-    expect(screen.queryByText('England')).not.toBeInTheDocument();
+    it('should return the team names unchanged when translations are not available', () => {
+      const result = translateSportData(
+        fixtureDataWithWorldCupTeamNames,
+        translationsWithMissingTranslations,
+        'afrique',
+      );
+      expect(result.home.fullName).toEqual('England');
+      expect(result.home.shortName).toEqual('England');
+      expect(result.away.fullName).toEqual('Germany');
+      expect(result.away.shortName).toEqual('Germany');
+    });
+
+    it('should return the team names unchanged when translations are not found', () => {
+      const result = translateSportData(
+        fixtureDataDefault,
+        afriqueServiceConfig.default.translations,
+        'afrique',
+      );
+      expect(result.home.fullName).toEqual('Bologna');
+      expect(result.home.shortName).toEqual('Bologna');
+      expect(result.away.fullName).toEqual('Aston Villa');
+      expect(result.away.shortName).toEqual('Aston Villa');
+    });
   });
 
-  it('should return the data unchanged if no translations are available', () => {
-    render(
-      <HeadToHeadV2
-        initialSportData={originalData as unknown as HeadToHeadV2Data}
-      />,
-      {
-        service: 'cymrufyw',
-      },
-    );
+  describe('Numerals', () => {
+    it('should update the scores to non western service numerals for applicable service', () => {
+      const result = translateSportData(
+        fixtureDataDefault,
+        afriqueServiceConfig.default.translations,
+        'persian',
+      );
+      expect(result.home.score).toEqual('۱');
+      expect(result.home.scoreUnconfirmed).toEqual('۱');
+      expect(result.away.score).toEqual('۳');
+      expect(result.away.scoreUnconfirmed).toEqual('۳');
+    });
 
-    expect(screen.queryAllByText('England').length).toBeGreaterThan(0);
+    it('should update the scores to western service numerals for applicable service', () => {
+      const result = translateSportData(
+        fixtureDataDefault,
+        afriqueServiceConfig.default.translations,
+        'afrique',
+      );
+      expect(result.home.score).toEqual('1');
+      expect(result.home.scoreUnconfirmed).toEqual('1');
+      expect(result.away.score).toEqual('3');
+      expect(result.away.scoreUnconfirmed).toEqual('3');
+    });
+
+    it('should update the running scores to non western service numerals for applicable service', () => {
+      const result = translateSportData(
+        fixtureDataDefault,
+        afriqueServiceConfig.default.translations,
+        'persian',
+      );
+      expect(result.home.runningScores).toStrictEqual({
+        aggregate: '۱',
+        fulltime: '۱',
+        halftime: '۰',
+      });
+      expect(result.away.runningScores).toStrictEqual({
+        aggregate: '۳',
+        fulltime: '۳',
+        halftime: '۱',
+      });
+    });
+
+    it('should update the running scores to western service numerals for applicable service', () => {
+      const result = translateSportData(
+        fixtureDataDefault,
+        afriqueServiceConfig.default.translations,
+        'afrique',
+      );
+      expect(result.home.runningScores).toStrictEqual({
+        aggregate: '1',
+        fulltime: '1',
+        halftime: '0',
+      });
+      expect(result.away.runningScores).toStrictEqual({
+        aggregate: '3',
+        fulltime: '3',
+        halftime: '1',
+      });
+    });
+  });
+
+  describe('Period label', () => {
+    it('should add translation for Extra Time', () => {
+      const result = translateSportData(
+        beforeExtraTime as unknown as HeadToHeadV2Data,
+        afriqueServiceConfig.default.translations,
+        'afrique',
+      );
+      expect(result.periodLabel).toStrictEqual({
+        accessible: beforeExtraTime.periodLabel.accessible,
+        translation: 'Prolongation',
+        value: beforeExtraTime.periodLabel.value,
+      });
+    });
+
+    it('should add translation for Extra Time with minute count', () => {
+      const result = translateSportData(
+        etFirstHalf as unknown as HeadToHeadV2Data,
+        afriqueServiceConfig.default.translations,
+        'afrique',
+      );
+      expect(result.periodLabel).toStrictEqual({
+        accessible: etFirstHalf.periodLabel.accessible,
+        translation: "98' Prolongation",
+        value: etFirstHalf.periodLabel.value,
+      });
+    });
+
+    it('should add translation for Penalties', () => {
+      const result = translateSportData(
+        beforePens as unknown as HeadToHeadV2Data,
+        afriqueServiceConfig.default.translations,
+        'afrique',
+      );
+      expect(result.periodLabel).toStrictEqual({
+        accessible: beforePens.periodLabel.accessible,
+        translation: 'PEN',
+        value: beforePens.periodLabel.value,
+      });
+    });
+
+    it('should add translation for Half Time', () => {
+      const result = translateSportData(
+        halfTime as unknown as HeadToHeadV2Data,
+        afriqueServiceConfig.default.translations,
+        'afrique',
+      );
+      expect(result.periodLabel).toStrictEqual({
+        accessible: halfTime.periodLabel.accessible,
+        translation: 'Mi-temps',
+        value: halfTime.periodLabel.value,
+      });
+    });
+
+    it('should add translation for After Extra Time', () => {
+      const result = translateSportData(
+        aet as unknown as HeadToHeadV2Data,
+        afriqueServiceConfig.default.translations,
+        'afrique',
+      );
+      expect(result.periodLabel).toStrictEqual({
+        accessible: aet.periodLabel.accessible,
+        translation: 'Après prolongation',
+        value: aet.periodLabel.value,
+      });
+    });
+
+    it('should add translation for Full Time', () => {
+      const result = translateSportData(
+        postEvent as unknown as HeadToHeadV2Data,
+        afriqueServiceConfig.default.translations,
+        'afrique',
+      );
+      expect(result.periodLabel).toStrictEqual({
+        accessible: postEvent.periodLabel.accessible,
+        translation: 'Fin du match',
+        value: postEvent.periodLabel.value,
+      });
+    });
+
+    it('should return the period label unchanged when no translation is available', () => {
+      const result = translateSportData(
+        firstHalf90 as unknown as HeadToHeadV2Data,
+        afriqueServiceConfig.default.translations,
+        'afrique',
+      );
+      expect(result.periodLabel).toStrictEqual({
+        value: "9'",
+        accessible: '9 minutes',
+      });
+    });
+  });
+
+  describe('Grouped actions', () => {
+    it('should add translation for group action name assists', () => {
+      const result = translateSportData(
+        fixtureDataDefault,
+        afriqueServiceConfig.default.translations,
+        'afrique',
+      );
+      expect(result.groupedActions?.[0].groupName).toStrictEqual({
+        fullName: 'Passes décisives',
+        shortName: 'Passes décisives',
+      });
+    });
+
+    it('should return the group name unchanged when no translation is available', () => {
+      const result = translateSportData(
+        fixtureDataDefault,
+        translationsWithMissingTranslations,
+        'afrique',
+      );
+      expect(result.groupedActions?.[0].groupName).toStrictEqual({
+        fullName: 'Assists',
+        shortName: 'Assists',
+      });
+    });
   });
 });
