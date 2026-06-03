@@ -52,6 +52,9 @@ rule.use.splice(cssLoaderIndex, 0, DevCssExtractLoader);
 
 `getAmpLiteCss` reads the entire `build/dev-css-modules.css` file and inlines it. This is intentionally a full dump — in development correctness is prioritised over payload size, and the file only exists locally.
 
+### Cautionary Note
+This solution is quite complex as [identified in review](https://github.com/bbc/simorgh/pull/13992#pullrequestreview-4389134898), we may wish to remove this solution if it becomes difficult to maintain. It is tightly coupled to Next implementation details so if changes are frequently made it may not be economical to maintain. In this case we could fallback to using a production build for amp and lite pages to test css changes.
+
 ---
 
 ## Production
