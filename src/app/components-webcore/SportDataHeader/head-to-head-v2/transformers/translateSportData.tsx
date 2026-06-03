@@ -17,43 +17,6 @@ const translateScore = (score: string, numerals: [string]) => {
   return score?.replace(/\d/g, digit => numerals[Number(digit)] ?? digit);
 };
 
-// //
-// // I want to handle
-// // 114' ET
-// // 98' ET
-// // 45'+2
-// const translateMinutes = (label: string | undefined, numerals: [string]) => {
-//   // regex check for minutes that assigns 114' ET to minutes and any value afterwards to labelSuffix that doesn;t have to be ET, so it can handle both 114' ET and 45'+2
-//   const minutesMatch = label?.trim().match(/^(\d+'(?:\+\d+)?)(?:\s*(ET))?$/);
-
-//   const minutes = minutesMatch ? minutesMatch[1] : undefined;
-
-//   const addedMinutes = minutes?.includes('+')
-//     ? minutes.split('+')[1]
-//     : undefined;
-
-//   if (!minutes && !addedMinutes) {
-//     return label;
-//   }
-
-//   const translatedMinutes = minutes?.replace(
-//     /\d/g,
-//     digit => numerals[Number(digit)] ?? digit,
-//   );
-//   const translatedAddedMinutes = addedMinutes?.replace(
-//     /\d/g,
-//     digit => numerals[Number(digit)] ?? digit,
-//   );
-
-//   return label
-//     ?.replace(minutes, translatedMinutes || minutes)
-//     .replace(addedMinutes || '', translatedAddedMinutes || addedMinutes || '');
-// };
-
-// // I want to handle
-// // 114' ET
-// // 98' ET
-// // 45'+2
 const translateMinutes = (label: string | undefined, numerals: string[]) => {
   if (!label) return label; // hmm?
 
@@ -96,22 +59,18 @@ const handleExtraTime = (
 };
 
 const translatePeriodLabel = (
-  label: string | undefined,
+  periodLabel: HeadToHeadV2Data['periodLabel'] | undefined,
   sportTranslations: Translations['sport'],
   numerals: [string],
 ) => {
-  const labelMinutesTranslation = translateMinutes(label, numerals);
+  if (!periodLabel) return null;
 
-  console.log('labelMinutesTranslation', labelMinutesTranslation);
+  const labelMinutesTranslation = translateMinutes(periodLabel.value, numerals);
 
   const extraTimePeriodLabel = handleExtraTime(
     labelMinutesTranslation,
     sportTranslations,
   );
-
-  if (extraTimePeriodLabel) {
-    return extraTimePeriodLabel;
-  }
 
   const periodLabelLookup = {
     HT: sportTranslations?.ht,
@@ -121,21 +80,20 @@ const translatePeriodLabel = (
     PENS: sportTranslations?.penaltyAbbreviation,
   };
 
-  return periodLabelLookup[
-    labelMinutesTranslation as keyof typeof periodLabelLookup
-  ];
-  // rename
-  //   const lookupResult =
-  //     periodLabelLookup[label as keyof typeof periodLabelLookup];
+  const lookupResult =
+    periodLabelLookup[
+      labelMinutesTranslation as keyof typeof periodLabelLookup
+    ];
 
-  //   const translatedMinutes = translateMinutes(label, numerals);
+  const hasTranslatedValue = Boolean(lookupResult || extraTimePeriodLabel);
 
-  //   const translatedExtraTimeMinutes = translateMinutes(
-  //     extraTimePeriodLabel,
-  //     numerals,
-  //   );
-
-  //   return lookupResult || translatedMinutes || translatedExtraTimeMinutes;
+  return {
+    ...periodLabel,
+    ...(hasTranslatedValue && {
+      translation: extraTimePeriodLabel || lookupResult,
+    }),
+    ...(labelMinutesTranslation && { value: labelMinutesTranslation }),
+  };
 };
 
 const translateGroupedActionsName = (
@@ -214,7 +172,7 @@ const translateSportData = (
   );
 
   const periodLabelTranslation = translatePeriodLabel(
-    data.periodLabel?.value,
+    data.periodLabel,
     sportTranslations,
     numerals,
   );
@@ -238,12 +196,7 @@ const translateSportData = (
     ...data,
     home: transformTeam(data.home, homeTeamTranslation, numerals),
     away: transformTeam(data.away, awayTeamTranslation, numerals),
-    ...(data.periodLabel && {
-      periodLabel: {
-        ...(periodLabelTranslation && { translation: periodLabelTranslation }),
-        ...data.periodLabel,
-      },
-    }),
+    ...(data.periodLabel && { periodLabel: periodLabelTranslation }),
     ...(data.groupedActions && {
       groupedActions: groupedActionsTranslation,
     }),

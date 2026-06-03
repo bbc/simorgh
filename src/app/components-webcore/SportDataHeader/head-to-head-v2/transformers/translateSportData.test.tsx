@@ -241,7 +241,7 @@ describe('TranslateSportData', () => {
       expect(result.periodLabel).toStrictEqual({
         accessible: etFirstHalf.periodLabel.accessible,
         translation: "98' Prolongation",
-        value: etFirstHalf.periodLabel.value,
+        value: "98' ET", // not an exact match for fixture since the function trims white space
       });
     });
 
@@ -322,7 +322,6 @@ describe('TranslateSportData', () => {
     });
 
     describe('Numerals', () => {
-      // this should fail
       it('should return the period label minutes to non western service numerals for applicable service', () => {
         const result = translateSportData(
           firstHalf90 as unknown as HeadToHeadV2Data,
@@ -330,11 +329,11 @@ describe('TranslateSportData', () => {
           'persian',
         );
         expect(result.periodLabel).toStrictEqual({
-          value: "9'",
+          value: "۹'",
           accessible: '9 minutes',
         });
       });
-      // this should fail
+
       it('should update the period label with extra time to non western service numerals for applicable service', () => {
         const result = translateSportData(
           firstHalfAddedTime as unknown as HeadToHeadV2Data,
@@ -342,7 +341,7 @@ describe('TranslateSportData', () => {
           'persian',
         );
         expect(result.periodLabel).toStrictEqual({
-          value: "45'+2",
+          value: "۴۵'+۲",
           accessible: '45 minutes plus 2',
         });
       });
@@ -366,8 +365,8 @@ describe('TranslateSportData', () => {
           'persian',
         );
         expect(result.periodLabel).toStrictEqual({
-          accessible: 'blah',
-          value: 'bleh',
+          accessible: '98 minutes extra time',
+          value: "۹۸' ET", // to do - add these translations for now
         });
       });
     });
