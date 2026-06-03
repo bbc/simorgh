@@ -49,12 +49,15 @@ export default {
         fontFeatureSettings: "'ss01' off",
         color: palette.LUNAR_LIGHT,
         padding: isConciseView ? '8px' : '0',
+        paddingBlockStart: `${pixelsToRem(24)}rem`,
         ...(!isConciseView && { paddingBottom: `${pixelsToRem(24)}rem` }),
         [mq.GROUP_2_MAX_WIDTH]: {
-          paddingTop: '8px',
-          ...(!isConciseView && { paddingBottom: `${pixelsToRem(8)}rem` }),
+          paddingTop: isConciseView ? '8px' : '0',
+          ...(!isConciseView && {
+            paddingBottom: `${pixelsToRem(8)}rem`,
+            paddingTop: `${pixelsToRem(24)}rem`,
+          }),
         },
-        paddingBlockStart: `${pixelsToRem(24)}rem`,
       }),
 
   // ==================== Action Grid ====================
