@@ -291,6 +291,10 @@ export const service: DefaultServiceConfig = {
         penaltyAbbreviation: 'pen',
         venue: 'Stadyum',
         attendance: 'Seyirci sayısı',
+        winOnPenalties: {
+          prefix: 'penaltılarla',
+          suffix: 'kazanır',
+        },
         worldCupTeamNames: {
           algeria: 'Cezayir',
           argentina: 'Arjantin',

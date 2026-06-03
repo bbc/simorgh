@@ -323,6 +323,10 @@ export const service: DefaultServiceConfig = {
         penaltyAbbreviation: 'PEN',
         venue: 'Uwanja',
         attendance: 'Idadi ya watazamaji',
+        winOnPenalties: {
+          prefix: 'inashinda kwa penalti',
+          suffix: '',
+        },
         worldCupTeamNames: {
           algeria: 'Algeria',
           argentina: 'Argentina',

@@ -371,6 +371,10 @@ export const service: DefaultServiceConfig = {
         penaltyAbbreviation: 'ر.ت.',
         venue: 'الملعب',
         attendance: 'الجمهور',
+        winOnPenalties: {
+          prefix: 'يفوز',
+          suffix: 'بركلات الترجيح',
+        },
         worldCupTeamNames: {
           algeria: 'الجزائر',
           argentina: 'الأرجنتين',

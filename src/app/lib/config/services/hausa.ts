@@ -392,6 +392,10 @@ export const service: DefaultServiceConfig = {
         penaltyAbbreviation: 'FEN',
         venue: 'Filin wasa',
         attendance: 'Yawan ƴan kallo',
+        winOnPenalties: {
+          prefix: 'ta yi nasara',
+          suffix: 'a fenariti',
+        },
         worldCupTeamNames: {
           algeria: 'Algeriya',
           argentina: 'Argentina',

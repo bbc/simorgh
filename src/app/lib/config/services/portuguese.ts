@@ -385,6 +385,10 @@ export const service: DefaultServiceConfig = {
         penaltyAbbreviation: 'PEN',
         venue: 'Local',
         attendance: 'Público',
+        winOnPenalties: {
+          prefix: 'vence por',
+          suffix: 'nos pênaltis',
+        },
         worldCupTeamNames: {
           algeria: 'Argélia',
           argentina: 'Argentina',

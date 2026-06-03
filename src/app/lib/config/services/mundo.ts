@@ -407,6 +407,10 @@ export const service: DefaultServiceConfig = {
         penaltyAbbreviation: 'PEN',
         venue: 'Estadio',
         attendance: 'Asistencia',
+        winOnPenalties: {
+          prefix: 'gana',
+          suffix: 'por penales',
+        },
         worldCupTeamNames: {
           algeria: 'Argelia',
           argentina: 'Argentina',
