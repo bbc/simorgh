@@ -323,7 +323,7 @@ export const service: DefaultServiceConfig = {
           tunisia: 'ਟਿਊਨੇਸ਼ੀਆ',
           turkey: 'ਤੁਰਕੀ',
           uruguay: 'ਉਰੂਗੇ',
-          usa: 'ਸੰਯੁਕਤ ਰਾਸ਼ਟਰ',
+          usa: 'ਸੰਯੁਕਤ ਰਾਜ ਅਮਰੀਕਾ',
           uzbekistan: 'ਉਜ਼ਬੇਕਿਸਤਾਨ',
         },
       },

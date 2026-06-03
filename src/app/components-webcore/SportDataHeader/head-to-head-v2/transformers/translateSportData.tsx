@@ -100,6 +100,11 @@ const translateSportData = (
 ) => {
   const numerals: [string] = getServiceNumerals(service); // check type
   const sportTranslations = translations?.sport;
+
+  if (!sportTranslations) {
+    return data;
+  }
+
   const homeTeamTranslation = translateTeamName(
     data.home?.urn,
     sportTranslations,
