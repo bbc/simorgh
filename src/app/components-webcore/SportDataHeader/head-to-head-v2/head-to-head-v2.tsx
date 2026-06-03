@@ -14,14 +14,12 @@ export const HeadToHeadV2 = ({
   isConciseView,
   shouldShowActions,
   maximumContainerScoreDigits,
-  teamBadgePlaceholderFallbackType = 'badge',
   isSportDataLive = false,
 }: {
   initialSportData: HeadToHeadV2Data;
   isConciseView?: boolean;
   shouldShowActions?: boolean;
   maximumContainerScoreDigits?: number;
-  teamBadgePlaceholderFallbackType?: 'badge' | 'flag';
   isSportDataLive?: boolean;
 }) => {
   const { enabled: sportHeaderPollEnabled } = useToggle('sportDataPolling');
@@ -54,7 +52,6 @@ export const HeadToHeadV2 = ({
             eventSummary={translatedSportData.accessibleEventSummary}
             shouldHideBadges={shouldHideBadges}
             maxScoreLength={maximumContainerScoreDigits}
-            teamBadgePlaceholderFallbackType={teamBadgePlaceholderFallbackType}
           />
           {hasActions && shouldShowActions && (
             <Actions data={translatedSportData} />
