@@ -35,22 +35,22 @@ const Banner = styled.div`
   display: flex;
   align-items: stretch;
 
-  ${props =>
-    !props.isLanguagesPage &&
-    `
   @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
-    min-height: ${60 / 16}rem;
+    min-height: ${props =>
+      props.isLanguagesPage ? `${44 / 16}rem` : `${60 / 16}rem`};
     padding: 0 ${GEL_SPACING};
   }
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    min-height: ${60 / 16}rem;
+    min-height: ${props =>
+      props.isLanguagesPage ? `${44 / 16}rem` : `${60 / 16}rem`};
     padding: 0 ${GEL_SPACING_DBL};
   }
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    min-height: ${64 / 16}rem;
-}`}
+    min-height: ${props =>
+      props.isLanguagesPage ? `${44 / 16}rem` : `${64 / 16}rem`};
+  }
 `;
 
 const StyledLink = styled.a`
@@ -92,7 +92,7 @@ const BrandSvg = styled.svg`
   }
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    height: ${30 / 16}rem;
+    ${props => (props.isLanguagesPage ? `${20 / 16}rem` : `${30 / 16}rem`)};
   }
 
   @media screen and (-ms-high-contrast: active), print {
