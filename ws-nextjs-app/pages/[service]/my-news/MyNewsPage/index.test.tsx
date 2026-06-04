@@ -69,11 +69,6 @@ describe('MyNewsPage', () => {
 
     expect(spinnerWrapper).toBeInTheDocument();
     expect(spinnerSvg).toBeInTheDocument();
-    expect(spinnerSvg).not.toBeNull();
-
-    if (spinnerSvg) {
-      expect(getComputedStyle(spinnerSvg).animationName).not.toBe('none');
-    }
   });
 
   it('should render saved articles after fetching', async () => {

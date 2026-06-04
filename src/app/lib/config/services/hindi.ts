@@ -137,6 +137,7 @@ export const service: DefaultServiceConfig = {
         noArticles: "You haven't saved any articles yet",
         errorText:
           'This content does not seem to be working. Please try again later.',
+        loading: 'Loading',
       },
       gist: 'सारांश',
       error: {

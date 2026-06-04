@@ -70,6 +70,7 @@ export interface Translations {
     guestDescription: string;
     noArticles: string;
     errorText: string;
+    loading: string;
   };
   error: {
     home?: string;
