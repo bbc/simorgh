@@ -567,7 +567,7 @@ describe('TranslateSportData', () => {
       });
     });
 
-    it('should handle multiple grouped actions', () => {
+    it('should handle groupName for multiple grouped actions', () => {
       const dataWithMultipleGroupedActions = {
         ...fixtureDataDefault,
         groupedActions: [
@@ -606,6 +606,33 @@ describe('TranslateSportData', () => {
         fullName: 'something else',
         shortName: 'something else',
       });
+    });
+
+    it('should update grouped actions with non western service numerals for applicable service', () => {
+      const result = translateSportData(
+        fixtureDataDefault,
+        persianServiceConfig.default.translations,
+        'persian',
+      );
+      const expectedGroupActions = [
+        [
+          {
+            awayTeamActions: ["Y. Tielemans (۴۴', ۹۰'+۴)", "E. Buendía (۵۱')"],
+            groupName: { fullName: 'پاس گل', shortName: 'پاس گل' },
+            homeTeamActions: ["J. Lucumí (۹۰')"],
+          },
+        ],
+      ];
+      expect(result.groupedActions).toStrictEqual(expectedGroupActions);
+    });
+
+    it('should return grouped actions unchanged for services with western numerals', () => {
+      const result = translateSportData(
+        fixtureDataDefault,
+        translationsWithMissingTranslations,
+        'afrique',
+      );
+      expect(result.groupedActions).toStrictEqual(result.groupedActions);
     });
   });
 });

@@ -4,6 +4,30 @@ import getServiceNumerals from '#app/components/MostRead/utilities/getServiceNum
 import { WesternArabic } from '#app/legacy/psammead/psammead-locales/src/numerals';
 import { HeadToHeadV2Data, Team } from '../types';
 
+const translateDigits = (value: string, numerals: string[]) =>
+  value.replace(/\d/g, digit => numerals[Number(digit)] ?? digit);
+
+const translateObject = <T,>(obj: T, numerals: string[]): T => {
+  if (typeof obj === 'string') {
+    return translateDigits(obj, numerals) as T;
+  }
+
+  if (Array.isArray(obj)) {
+    return obj.map(item => translateObject(item, numerals)) as T;
+  }
+
+  if (obj && typeof obj === 'object') {
+    return Object.fromEntries(
+      Object.entries(obj).map(([key, value]) => [
+        key,
+        translateObject(value, numerals),
+      ]),
+    ) as T;
+  }
+
+  return obj;
+};
+
 const translateMinutes = (label: string | undefined, numerals: string[]) => {
   if (!label) {
     return label;
@@ -17,12 +41,9 @@ const translateMinutes = (label: string | undefined, numerals: string[]) => {
 
   const [, minutes, addedMinutes, suffix] = match;
 
-  const translateDigits = (value: string) =>
-    value.replace(/\d/g, digit => numerals[Number(digit)] ?? digit);
-
-  const translatedMinutes = translateDigits(minutes);
+  const translatedMinutes = translateDigits(minutes, numerals);
   const translatedAddedMinutes = addedMinutes
-    ? translateDigits(addedMinutes)
+    ? translateDigits(addedMinutes, numerals)
     : undefined;
   const translatedTime = translatedAddedMinutes
     ? `${translatedMinutes}'${translatedAddedMinutes}`
@@ -48,7 +69,7 @@ const handleExtraTimeLabel = (
 const translatePeriodLabel = (
   label: string | undefined,
   sportTranslations: Translations['sport'],
-  numerals: [string],
+  numerals: string[],
 ) => {
   if (!label) return null;
 
@@ -67,12 +88,12 @@ const translatePeriodLabel = (
 
   const shouldTranslateMinutes = numerals !== WesternArabic && !lookupResult;
 
-  const tranlatedMinutes =
+  const translatedMinutes =
     extraTimeLabel && shouldTranslateMinutes
       ? translateMinutes(extraTimeLabel, numerals)
       : shouldTranslateMinutes && translateMinutes(label, numerals);
 
-  return lookupResult || tranlatedMinutes || extraTimeLabel;
+  return lookupResult || translatedMinutes || extraTimeLabel;
 };
 
 const translateGroupedActionsName = (
@@ -90,13 +111,13 @@ const translateGroupedActionsName = (
   );
 };
 
-const translateScore = (score: string, numerals: [string]) => {
+const translateScore = (score: string, numerals: string[]) => {
   return score?.replace(/\d/g, digit => numerals[Number(digit)] ?? digit);
 };
 
 const translateRunningScores = (
   runningScores: Record<string, string>,
-  numerals: [string],
+  numerals: string[],
 ) => {
   const scoreFields = new Set([
     'halftime',
@@ -127,7 +148,7 @@ const translateTeamName = (
 const transformTeam = (
   team: Team,
   teamNameTranslation: string | undefined,
-  numerals: [string],
+  numerals: string[],
 ) => {
   const shouldTranslateMinutes = numerals !== WesternArabic;
 
@@ -167,7 +188,8 @@ const translateSportData = (
   translations: Translations,
   service: Services,
 ) => {
-  const numerals: [string] = getServiceNumerals(service);
+  const numerals: string[] = getServiceNumerals(service);
+  const shouldTranslateMinutes = numerals !== WesternArabic;
   const sportTranslations = translations?.sport;
 
   if (!sportTranslations) {
@@ -201,6 +223,22 @@ const translateSportData = (
         fullName: translatedGroupName,
         shortName: translatedGroupName,
       },
+      ...(shouldTranslateMinutes && {
+        homeTeamActions: translateObject(group.homeTeamActions, numerals),
+        awayTeamActions: translateObject(group.awayTeamActions, numerals),
+        ...(group.homeTeamAccessibleActions && {
+          homeTeamAccessibleActions: translateObject(
+            group.homeTeamAccessibleActions,
+            numerals,
+          ),
+        }),
+        ...(group.awayTeamAccessibleActions && {
+          awayTeamAccessibleActions: translateObject(
+            group.awayTeamAccessibleActions,
+            numerals,
+          ),
+        }),
+      }),
     };
   });
 
