@@ -3,6 +3,7 @@ import { RequestContext } from '#contexts/RequestContext';
 import styles from './index.styles';
 
 const GLOBAL_LANGUAGES_PATH = '/ws/languages';
+const BBC_HOMEPAGE_PATH = 'https://www.bbc.com';
 
 const isGlobalLanguageHomepage = (inputPathname?: string) => {
   if (!inputPathname) return false;
@@ -15,7 +16,7 @@ const NewLogoBanner = () => {
   const { pathname } = use(RequestContext);
 
   const logoHref = isGlobalLanguageHomepage(pathname)
-    ? '/'
+    ? BBC_HOMEPAGE_PATH
     : GLOBAL_LANGUAGES_PATH;
 
   return (
