@@ -253,8 +253,8 @@ export interface Translations {
     attendance?: string;
     matchSummary?: string;
     winOnPenalties?: {
-      prefix: string;
-      suffix: string;
+      prefix?: string;
+      suffix?: string;
     };
     worldCupTeamNames?: Record<string, string>;
   };
