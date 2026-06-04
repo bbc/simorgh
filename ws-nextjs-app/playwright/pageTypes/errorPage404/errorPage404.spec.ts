@@ -1,7 +1,6 @@
 import { test, expect, type APIRequestContext } from '@playwright/test';
 import { AppEnv, errorPage404Suites } from './suites';
 import appConfig from '../../../utilities/serviceConfigs';
-import { getEnvConfig } from '../../../cypress/support/config/envs';
 
 const appEnvFromProcess = (process.env.APP_ENV || 'local') as AppEnv;
 
@@ -16,10 +15,6 @@ const baseURL =
 
 const shouldRunForEnv = (runforEnv: AppEnv[]) =>
   runforEnv.includes(appEnvFromProcess);
-const shouldIncludeStandaloneErrorRoutes = getEnvConfig(
-  appEnvFromProcess,
-  false,
-).standaloneErrorPages;
 
 const getServiceConfig = (service: string, variant?: string) => {
   return appConfig[service as keyof typeof appConfig][variant || 'default'];
@@ -75,7 +70,7 @@ test.describe('errorPage404', () => {
               testSuite.service,
               testSuite.variant,
             );
-            const title = serviceConfig.translations.error[404].title;
+            const { title } = serviceConfig.translations.error[404];
 
             await page.goto(`${baseURL}${testSuite.path}`, {
               waitUntil: 'domcontentloaded',
@@ -118,8 +113,7 @@ test.describe('errorPage404', () => {
               testSuite.service,
               testSuite.variant,
             );
-            const description = serviceConfig.translations.error[404].title;
-            const title = serviceConfig.translations.error[404].title;
+            const { title } = serviceConfig.translations.error[404];
             const pageTitle = `${title} - ${serviceConfig.brandName}`;
 
             await page.goto(`${baseURL}${testSuite.path}`, {
@@ -129,14 +123,14 @@ test.describe('errorPage404', () => {
             await expect(page).toHaveTitle(pageTitle);
             await expect(
               page.locator('meta[name="og:description"]'),
-            ).toHaveAttribute('content', description);
+            ).toHaveAttribute('content', title);
             await expect(page.locator('meta[name="og:title"]')).toHaveAttribute(
               'content',
               pageTitle,
             );
             await expect(
               page.locator('meta[name="twitter:description"]'),
-            ).toHaveAttribute('content', description);
+            ).toHaveAttribute('content', title);
             await expect(
               page.locator('meta[name="twitter:title"]'),
             ).toHaveAttribute('content', pageTitle);
@@ -163,30 +157,6 @@ test.describe('errorPage404', () => {
             );
           });
         });
-
-        if (shouldIncludeStandaloneErrorRoutes) {
-          test.describe.skip(`${suiteName} error page routes`, () => {
-            test(`/${testSuite.service}/404 should have response code 200`, async ({
-              request,
-            }) => {
-              const response = await request.get(
-                `${baseURL}/${testSuite.service}/404`,
-              );
-
-              expect(response.status()).toBe(200);
-            });
-
-            test(`/${testSuite.service}/500 should have response code 200`, async ({
-              request,
-            }) => {
-              const response = await request.get(
-                `${baseURL}/${testSuite.service}/500`,
-              );
-
-              expect(response.status()).toBe(200);
-            });
-          });
-        }
       });
     });
   });

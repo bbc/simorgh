@@ -105,4 +105,6 @@ const getCurrentEnvConfig = () => {
   );
 };
 
-export default getCurrentEnvConfig();
+export default getCypressEnvironmentReader()
+  ? getCurrentEnvConfig()
+  : (env: Environment, uk = false) => getEnvConfig(env, uk);

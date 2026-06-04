@@ -26,11 +26,13 @@ cd ws-nextjs-app
 npx playwright install --with-deps chromium
 ```
 
-If you plan to run real Chrome channel tests:
+If you plan to run tests against the locally installed Google Chrome browser (rather than the bundled Chromium build), install the Chrome channel too:
 
 ```
 npx playwright install chrome
 ```
+
+> "Channel" here is Playwright's term for a specific browser distribution (e.g. `chrome`, `msedge`). By default Playwright runs against its bundled Chromium build; setting a channel switches to a real installed browser instead.
 
 ## Environment model
 

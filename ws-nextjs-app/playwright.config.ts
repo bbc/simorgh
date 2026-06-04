@@ -18,7 +18,7 @@ const reporter: ReporterDescription[] = process.env.CI
 
 export default defineConfig({
   testDir: './playwright',
-  timeout: 30_000,
+  timeout: 15_000,
   retries: appEnv === 'live' ? 2 : 1,
   use: {
     baseURL,
