@@ -42,20 +42,20 @@ export default {
       }),
   container:
     ({ isConciseView }: { isConciseView?: boolean }) =>
-    ({ mq, palette }: Theme) =>
+    ({ mq, palette, spacings }: Theme) =>
       css({
         fontFamily: 'ReithSans, Helvetica, Arial, freesans, sans-serif',
         fontWeight: 400,
         fontFeatureSettings: "'ss01' off",
         color: palette.LUNAR_LIGHT,
-        padding: isConciseView ? '8px' : '0',
-        paddingBlockStart: `${pixelsToRem(24)}rem`,
-        ...(!isConciseView && { paddingBottom: `${pixelsToRem(24)}rem` }),
+        padding: isConciseView ? `${spacings.FULL}rem` : 0,
+        paddingBlockStart: `${spacings.TRIPLE}rem`,
+        ...(!isConciseView && { paddingBottom: `${spacings.TRIPLE}rem` }),
         [mq.GROUP_2_MAX_WIDTH]: {
-          paddingTop: isConciseView ? '8px' : '0',
+          paddingTop: isConciseView ? `${spacings.FULL}rem` : 0,
           ...(!isConciseView && {
-            paddingBottom: `${pixelsToRem(8)}rem`,
-            paddingTop: `${pixelsToRem(24)}rem`,
+            paddingBottom: `${spacings.FULL}rem`,
+            paddingTop: `${spacings.TRIPLE}rem`,
           }),
         },
       }),
