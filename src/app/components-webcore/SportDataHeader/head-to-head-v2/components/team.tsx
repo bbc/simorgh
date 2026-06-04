@@ -1,34 +1,31 @@
 import SportBadge from './sport-badge/index';
 import TeamName from './team-name';
 import styles from '../index.styles';
-import type {
-  Alignment,
-  BadgePlaceholderFallbackType,
-  BadgeSize,
-} from '../types';
+import type { Alignment, BadgeSize } from '../types';
 
 interface TeamProps {
   alignment: Alignment;
   name: string;
   shortName: string;
-  urn?: string;
   isConciseView: boolean;
-  shouldHideBadges: boolean;
-  badgePlaceholderFallbackType?: BadgePlaceholderFallbackType;
+  imageUrl: string | null;
+  urn: string;
 }
 
 const Team = ({
   alignment,
   name,
   shortName,
-  urn,
   isConciseView,
-  shouldHideBadges,
-  badgePlaceholderFallbackType,
+  imageUrl,
+  urn,
 }: TeamProps) => {
   const size: BadgeSize = isConciseView
     ? { small: 20, medium: 24, large: 24 }
     : { small: 40, medium: 44, large: 44 };
+
+  const shouldHideBadges = !imageUrl;
+
   if (alignment === 'home') {
     return (
       <div css={styles.team(isConciseView, shouldHideBadges, 'home')}>
@@ -40,10 +37,10 @@ const Team = ({
         />
         {!shouldHideBadges && (
           <SportBadge
-            id={urn}
+            urn={urn}
+            src={imageUrl}
             size={size}
             isConciseView={isConciseView}
-            placeholderFallbackType={badgePlaceholderFallbackType}
           />
         )}
       </div>
@@ -53,10 +50,10 @@ const Team = ({
     <div css={styles.team(isConciseView, shouldHideBadges, 'away')}>
       {!shouldHideBadges && (
         <SportBadge
-          id={urn}
+          urn={urn}
+          src={imageUrl}
           size={size}
           isConciseView={isConciseView}
-          placeholderFallbackType={badgePlaceholderFallbackType}
         />
       )}
       <TeamName
