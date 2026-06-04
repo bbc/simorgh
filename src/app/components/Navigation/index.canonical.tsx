@@ -8,8 +8,8 @@ import {
 import { GROUP_2_MAX_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
 import useMediaQuery from '#hooks/useMediaQuery';
 import { RequestContext } from '#app/contexts/RequestContext';
-// import TopBarOJs from '#app/components/TopBarOJs';
-// import useToggle from '#app/hooks/useToggle';
+import TopBarOJs from '#app/components/TopBarOJs';
+import useToggle from '#app/hooks/useToggle';
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import { Direction } from '#app/models/types/global';
 import styles from './index.styles';
@@ -31,10 +31,10 @@ const CanonicalNavigationContainer: React.FC<
   topScrollableListItems,
   bottomScrollableListItems,
   dropdownListItems,
-  // blocks,
+  blocks,
 }) => {
   const { isLite } = use(RequestContext);
-  // const { enabled: topBarOJsEnabled } = useToggle('topBarOJs');
+  const { enabled: topBarOJsEnabled } = useToggle('topBarOJs');
   const [isOpen, setIsOpen] = useState(false);
 
   const dropDownNavRef = useRef<HTMLDivElement>(null);
@@ -61,12 +61,6 @@ const CanonicalNavigationContainer: React.FC<
           !dropDownNavRef.current?.contains(item) &&
           !bottomScrollableNavRef.current?.contains(item),
       );
-
-      console.log('+++++++++++++++++++++');
-      console.log('nextPageItem');
-      console.log('+++++++++++++++++++++');
-      console.log(nextPageItem);
-      console.log('+++++++++++++++++++++');
 
       if (!nextPageItem) return;
       event.preventDefault();
@@ -132,7 +126,7 @@ const CanonicalNavigationContainer: React.FC<
         </div>
       </div>
       <div css={styles.bottomDivider} />
-      {/* {topBarOJsEnabled && <TopBarOJs blocks={blocks ?? []} />} */}
+      {topBarOJsEnabled && <TopBarOJs blocks={blocks ?? []} />}
     </Navigation>
   );
 };
