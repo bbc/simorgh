@@ -53,7 +53,8 @@ describe('useUASFetchSaveStatus', () => {
     };
 
     (use as jest.Mock).mockImplementation((context: unknown) => {
-      if (context === AccountContext) return { hashedUserId: 'user-123' };
+      if (context === AccountContext)
+        return { hashedUserId: 'user-123', isRefreshAvailable: true };
       return {};
     });
   });

@@ -36,7 +36,7 @@ const useUASButton = ({
   articlePageData,
 }: UseUASButtonProps): UseUASButtonReturn => {
   const { service } = use(ServiceContext);
-  const { hashedUserId = '' } = use(AccountContext);
+  const { hashedUserId = '', isRefreshAvailable } = use(AccountContext);
   const queryClient = useQueryClient();
   const { isSaved, isLoading, error, savedMetadata } =
     useUASFetchSaveStatus(articleId);
@@ -56,6 +56,7 @@ const useUASButton = ({
           articlePageData,
           articleId,
           service,
+          isRefreshAvailable,
         });
         // Invalidate cache to fetch updated metadata
         queryClient.invalidateQueries({
@@ -80,6 +81,7 @@ const useUASButton = ({
           articlePageData,
           articleId,
           service,
+          isRefreshAvailable,
         });
       }
       const globalId = buildGlobalId(articleId);
@@ -88,6 +90,7 @@ const useUASButton = ({
         FAVOURITES_CONFIG.activityType,
         {
           globalId,
+          isRefreshAvailable,
         },
       );
       if (!response.ok) {

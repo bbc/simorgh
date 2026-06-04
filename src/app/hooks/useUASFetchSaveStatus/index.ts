@@ -23,10 +23,12 @@ interface SavedArticleDetail {
 
 const fetchSaveStatusWithMetadata = async (
   articleId: string,
+  isRefreshAvailable: boolean,
 ): Promise<{ isSaved: boolean; metadata?: Record<string, unknown> }> => {
   const globalId = buildGlobalId(articleId);
   const response = await uasApiRequest('GET', FAVOURITES_CONFIG.activityType, {
     globalId,
+    isRefreshAvailable,
   });
 
   if (!response.ok || response.status === HTTP_NO_CONTENT) {
@@ -47,7 +49,7 @@ const fetchSaveStatusWithMetadata = async (
 const useUASFetchSaveStatus = (
   articleId: string,
 ): UseUASFetchSaveStatusReturn => {
-  const { hashedUserId = '' } = use(AccountContext);
+  const { hashedUserId = '', isRefreshAvailable } = use(AccountContext);
 
   const {
     data = { isSaved: false },
@@ -55,7 +57,7 @@ const useUASFetchSaveStatus = (
     error,
   } = useQuery({
     queryKey: uasKeys.favouriteStatus(hashedUserId, articleId),
-    queryFn: () => fetchSaveStatusWithMetadata(articleId),
+    queryFn: () => fetchSaveStatusWithMetadata(articleId, isRefreshAvailable),
     enabled: !!articleId,
   });
   return {
