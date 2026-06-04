@@ -9,9 +9,7 @@ import saveOrUpdateArticleMetadata from '#app/lib/uasApi/saveOrUpdateArticleMeta
 import { Article } from '#app/models/types/optimo';
 import uasKeys from '#app/lib/uasApi/queryKeys';
 import { AccountContext } from '#app/contexts/AccountContext';
-import nodeLogger from '#lib/logger.node';
 
-const logger = nodeLogger(__filename);
 enum UASAction {
   SAVE = 'save',
   REMOVE = 'remove',
@@ -66,7 +64,8 @@ const useUASButton = ({
           queryKey: uasKeys.favouritesList(hashedUserId),
         });
       } catch {
-        logger.error('Failed to sync updated article metadata with UAS');
+        // eslint-disable-next-line no-console
+        console.error('Failed to sync updated article metadata with UAS');
       }
     },
   });

@@ -67,6 +67,7 @@ describe('saveOrUpdateArticleMetadata', () => {
       articlePageData: mockArticlePageData,
       articleId: mockArticleId,
       service: 'hindi',
+      isRefreshAvailable: true,
     });
 
     expect(mockExtractPromoImageFromArticleData).toHaveBeenCalledWith(
@@ -79,6 +80,7 @@ describe('saveOrUpdateArticleMetadata', () => {
       articlePageData: mockArticlePageData,
       articleId: mockArticleId,
       service: 'hindi',
+      isRefreshAvailable: true,
     });
 
     expect(mockBuildPromoImageUrl).toHaveBeenCalledWith(mockPromoImageObj);
@@ -89,6 +91,7 @@ describe('saveOrUpdateArticleMetadata', () => {
       articlePageData: mockArticlePageData,
       articleId: mockArticleId,
       service: 'portuguese',
+      isRefreshAvailable: true,
     });
 
     expect(mockCreateFavouritesPayload).toHaveBeenCalledWith({
@@ -106,12 +109,13 @@ describe('saveOrUpdateArticleMetadata', () => {
       articlePageData: mockArticlePageData,
       articleId: mockArticleId,
       service: 'hindi',
+      isRefreshAvailable: true,
     });
 
     expect(mockUasApiRequest).toHaveBeenCalledWith(
       'POST',
       FAVOURITES_CONFIG.activityType,
-      { body: mockPayload },
+      { body: mockPayload, isRefreshAvailable: true },
     );
   });
 
@@ -132,6 +136,7 @@ describe('saveOrUpdateArticleMetadata', () => {
       articlePageData: minimalArticleData,
       articleId: mockArticleId,
       service: 'hindi',
+      isRefreshAvailable: true,
     });
 
     expect(mockUasApiRequest).toHaveBeenCalled();
@@ -146,6 +151,7 @@ describe('saveOrUpdateArticleMetadata', () => {
         articlePageData: mockArticlePageData,
         articleId: mockArticleId,
         service: 'hindi',
+        isRefreshAvailable: true,
       }),
     ).rejects.toThrow('API request failed');
   });
@@ -161,6 +167,7 @@ describe('saveOrUpdateArticleMetadata', () => {
       articlePageData: mockArticlePageData,
       articleId: mockArticleId,
       service,
+      isRefreshAvailable: true,
     });
 
     expect(mockCreateFavouritesPayload).toHaveBeenCalledWith(
@@ -180,6 +187,7 @@ describe('saveOrUpdateArticleMetadata', () => {
       articlePageData: mockArticlePageData,
       articleId: mockArticleId,
       service: 'hindi',
+      isRefreshAvailable: true,
     });
 
     expect(mockUasApiRequest).toHaveBeenCalledWith(
@@ -199,6 +207,7 @@ describe('saveOrUpdateArticleMetadata', () => {
       articlePageData: mockArticlePageData,
       articleId: mockArticleId,
       service: 'hindi',
+      isRefreshAvailable: true,
     });
 
     expect(mockUasApiRequest).toHaveBeenCalledWith(

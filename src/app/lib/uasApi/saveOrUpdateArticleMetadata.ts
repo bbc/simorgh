@@ -13,12 +13,14 @@ interface SaveOrUpdateArticleMetadataParams {
   articlePageData: Article;
   articleId: string;
   service: Services;
+  isRefreshAvailable: boolean;
 }
 
 const saveOrUpdateArticleMetadata = async ({
   articlePageData,
   articleId,
   service,
+  isRefreshAvailable,
 }: SaveOrUpdateArticleMetadataParams): Promise<Record<string, unknown>> => {
   const promoImageObj = extractPromoImageFromArticleData(articlePageData);
   const promoImageUrl = buildPromoImageUrl(promoImageObj);
@@ -36,6 +38,7 @@ const saveOrUpdateArticleMetadata = async ({
   // UAS will determine whether to create a new entry or update the existing one based on the unique resourceId provided in the payload.
   const response = await uasApiRequest('POST', FAVOURITES_CONFIG.activityType, {
     body,
+    isRefreshAvailable,
   });
 
   // Only return metadata if POST was successful
