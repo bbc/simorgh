@@ -60,7 +60,7 @@ jobs:
             exit 1
           fi
 
-          yarn playwright:errorPage404
+          yarn playwright:e2e
 
       - name: Upload Playwright test artifacts
         if: always()
