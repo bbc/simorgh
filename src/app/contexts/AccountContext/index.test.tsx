@@ -181,4 +181,85 @@ describe('AccountContext', () => {
     expect(context.isSignedIn).toBe(false);
     expect(context.signInUrl).toBeUndefined();
   });
+
+  it('should set isRefreshAvailable to true when IDCTA is available and availability.refresh is GREEN', () => {
+    const config = {
+      ...mockIdctaConfig,
+      availability: { refresh: 'GREEN' },
+    } as IdctaConfig;
+
+    render(<TestComponent />, {
+      idctaConfig: config,
+      service: 'hindi',
+    });
+
+    const testEl = screen.getByTestId('test-component');
+    const context = JSON.parse(testEl.textContent as string);
+
+    expect(context.isRefreshAvailable).toBe(true);
+  });
+
+  it('should set isRefreshAvailable to false when availability.refresh is RED', () => {
+    const config = {
+      ...mockIdctaConfig,
+      availability: { refresh: 'RED' },
+    } as IdctaConfig;
+
+    render(<TestComponent />, {
+      idctaConfig: config,
+      service: 'hindi',
+    });
+
+    const testEl = screen.getByTestId('test-component');
+    const context = JSON.parse(testEl.textContent as string);
+
+    expect(context.isRefreshAvailable).toBe(false);
+  });
+
+  it('should set isRefreshAvailable to false when availability.refresh is missing', () => {
+    const config = {
+      ...mockIdctaConfig,
+      availability: undefined,
+    } as IdctaConfig;
+
+    render(<TestComponent />, {
+      idctaConfig: config,
+      service: 'hindi',
+    });
+
+    const testEl = screen.getByTestId('test-component');
+    const context = JSON.parse(testEl.textContent as string);
+
+    expect(context.isRefreshAvailable).toBe(false);
+  });
+
+  it('should set isRefreshAvailable to false when IDCTA is not available even if availability.refresh is GREEN', () => {
+    const config = {
+      ...mockIdctaConfig,
+      'id-availability': 'RED',
+      availability: { refresh: 'GREEN' },
+    } as IdctaConfig;
+
+    render(<TestComponent />, {
+      idctaConfig: config,
+      service: 'hindi',
+    });
+
+    const testEl = screen.getByTestId('test-component');
+    const context = JSON.parse(testEl.textContent as string);
+
+    expect(context.isRefreshAvailable).toBe(false);
+  });
+
+  it('should set isRefreshAvailable to false when initialConfig is null', () => {
+    render(<TestComponent />, {
+      idctaConfig: null,
+      service: 'hindi',
+    });
+
+    const testEl = screen.getByTestId('test-component');
+    const context = JSON.parse(testEl.textContent as string);
+
+    expect(context.isRefreshAvailable).toBe(false);
+  });
 });

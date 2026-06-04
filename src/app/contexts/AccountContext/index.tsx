@@ -88,10 +88,14 @@ export const AccountProvider = ({
 
   const isPersonalizationEnabled = isPersonalizationAvailable && isSignedIn;
 
+  const isRefreshAvailable =
+    isIdctaAvailable && initialConfig?.availability?.refresh === 'GREEN';
+
   const value = useMemo(
     () => ({
       hashedUserId,
       isIdctaAvailable,
+      isRefreshAvailable,
       isSignedIn,
       signInUrl,
       signOutUrl,
@@ -105,6 +109,7 @@ export const AccountProvider = ({
       hashedUserId,
       forYouUrl,
       isIdctaAvailable,
+      isRefreshAvailable,
       isSignedIn,
       registerUrl,
       settingsUrl,
