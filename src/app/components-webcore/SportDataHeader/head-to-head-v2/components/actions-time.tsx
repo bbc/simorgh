@@ -5,7 +5,6 @@ import styles from '../index.styles';
 import Card from './card';
 import type { PlayerActions } from '../types';
 
-// TODO - get a translation for this
 const goalTypesHandled: Record<string, string> = {
   'Own Goal': 'og',
 };
