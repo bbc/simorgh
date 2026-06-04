@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react';
 import {
   buildCurrentMetadata,
-  buildMetadataFieldExtractors,
   compareMetadataWithSaved,
 } from '#app/lib/uasApi/uasUtility';
 import type { Article } from '#app/models/types/optimo';
@@ -56,7 +55,6 @@ const useUASMetadataSync = ({
       return;
     }
 
-    const fieldExtractors = buildMetadataFieldExtractors(articlePageData);
     const currentMetadata = buildCurrentMetadata(articlePageData, {
       articleId,
       service,
@@ -64,13 +62,13 @@ const useUASMetadataSync = ({
     const comparisonResult = compareMetadataWithSaved(
       currentMetadata,
       savedArticleMetadata,
-      fieldExtractors,
     );
 
     if (comparisonResult.hasChanges) {
       hasSyncedRef.current = true;
       onMetadataOutOfDate?.();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [
     articlePageData,
     articleId,

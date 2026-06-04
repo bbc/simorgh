@@ -39,36 +39,36 @@ const useUASButton = ({
   const { isSaved, isLoading, error, savedMetadata } =
     useUASFetchSaveStatus(articleId);
 
-  useUASMetadataSync({
-    articlePageData,
-    articleId,
-    service,
-    isSaved,
-    savedArticleMetadata: savedMetadata,
-    onMetadataOutOfDate: async () => {
-      if (!articlePageData) {
-        return;
-      }
-      try {
-        await saveOrUpdateArticleMetadata({
-          articlePageData,
-          articleId,
-          service,
-          isRefreshAvailable,
-        });
-        // Invalidate cache to fetch updated metadata
-        queryClient.invalidateQueries({
-          queryKey: uasKeys.favouriteStatus(hashedUserId, articleId),
-        });
-        queryClient.invalidateQueries({
-          queryKey: uasKeys.favouritesList(hashedUserId),
-        });
-      } catch {
-        // eslint-disable-next-line no-console
-        console.error('Failed to sync updated article metadata with UAS');
-      }
-    },
-  });
+  // useUASMetadataSync({
+  //   articlePageData,
+  //   articleId,
+  //   service,
+  //   isSaved,
+  //   savedArticleMetadata: savedMetadata,
+  //   onMetadataOutOfDate: async () => {
+  //     if (!articlePageData) {
+  //       return;
+  //     }
+  //     try {
+  //       await saveOrUpdateArticleMetadata({
+  //         articlePageData,
+  //         articleId,
+  //         service,
+  //         isRefreshAvailable,
+  //       });
+  //       // Invalidate cache to fetch updated metadata
+  //       queryClient.invalidateQueries({
+  //         queryKey: uasKeys.favouriteStatus(hashedUserId, articleId),
+  //       });
+  //       queryClient.invalidateQueries({
+  //         queryKey: uasKeys.favouritesList(hashedUserId),
+  //       });
+  //     } catch {
+  //       // eslint-disable-next-line no-console
+  //       console.error('Failed to sync updated article metadata with UAS');
+  //     }
+  //   },
+  // });
 
   const mutation = useMutation({
     mutationFn: async (action: UASAction) => {
@@ -113,6 +113,20 @@ const useUASButton = ({
     },
   });
 
+  const handleMetadataOutOfDate = () => {
+    if (articlePageData) {
+      mutation.mutate(UASAction.SAVE);
+    }
+  };
+
+  useUASMetadataSync({
+    articlePageData,
+    articleId,
+    service,
+    isSaved,
+    savedArticleMetadata: savedMetadata,
+    onMetadataOutOfDate: handleMetadataOutOfDate,
+  });
   return {
     isSaved,
     isLoading,

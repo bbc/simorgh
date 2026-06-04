@@ -226,34 +226,5 @@ describe('useUASButton', () => {
         }),
       );
     });
-
-    it('invalidates both status and list queries on successful metadata sync', async () => {
-      const mockMetadata = {
-        title: 'Old Title',
-        promoImage: 'https://ichef.bbc.co.uk/image.jpg',
-      };
-
-      mockUseUASFetchSaveStatus.mockReturnValue({
-        isSaved: true,
-        isLoading: false,
-        error: null,
-        savedMetadata: mockMetadata,
-      });
-
-      renderHook(() => useUASButton(defaultProps));
-
-      const { onMetadataOutOfDate } = mockUseUASMetadataSync.mock.calls[0][0];
-
-      await act(async () => {
-        await onMetadataOutOfDate();
-      });
-
-      expect(mockInvalidateQueries).toHaveBeenCalledWith({
-        queryKey: uasKeys.favouriteStatus('user-123', '123'),
-      });
-      expect(mockInvalidateQueries).toHaveBeenCalledWith({
-        queryKey: uasKeys.favouritesList('user-123'),
-      });
-    });
   });
 });

@@ -5,8 +5,6 @@ import useUASMetadataSync from './index';
 jest.mock('#app/lib/uasApi/uasUtility');
 
 const mockBuildCurrentMetadata = uasUtility.buildCurrentMetadata as jest.Mock;
-const mockBuildMetadataFieldExtractors =
-  uasUtility.buildMetadataFieldExtractors as jest.Mock;
 const mockCompareMetadataWithSaved =
   uasUtility.compareMetadataWithSaved as jest.Mock;
 
@@ -41,11 +39,8 @@ describe('useUASMetadataSync', () => {
       title: 'New Title',
       promoImage: 'https://ichef.bbc.co.uk/image.jpg',
     });
-    mockBuildMetadataFieldExtractors.mockReturnValue({});
     mockCompareMetadataWithSaved.mockReturnValue({
       hasChanges: false,
-      changedFields: [],
-      fieldDetails: {},
     });
   });
 
@@ -65,23 +60,6 @@ describe('useUASMetadataSync', () => {
       articleId: 'c123456789o',
       service: 'hindi',
     });
-  });
-
-  it('calls buildMetadataFieldExtractors with articlePageData', () => {
-    renderHook(() =>
-      useUASMetadataSync({
-        articlePageData: mockArticlePageData,
-        articleId: 'c123456789o',
-        service: 'portuguese',
-        isSaved: true,
-        savedArticleMetadata: mockSavedMetadata,
-        onMetadataOutOfDate: mockOnMetadataOutOfDate,
-      }),
-    );
-
-    expect(mockBuildMetadataFieldExtractors).toHaveBeenCalledWith(
-      mockArticlePageData,
-    );
   });
 
   it('calls compareMetadataWithSaved with current and saved metadata', () => {
@@ -105,21 +83,12 @@ describe('useUASMetadataSync', () => {
     expect(mockCompareMetadataWithSaved).toHaveBeenCalledWith(
       currentMetadata,
       mockSavedMetadata,
-      {},
     );
   });
 
   it('calls onMetadataOutOfDate when metadata has changes', () => {
     mockCompareMetadataWithSaved.mockReturnValue({
       hasChanges: true,
-      changedFields: ['title', 'promoImage'],
-      fieldDetails: {
-        title: { old: 'Old Title', new: 'New Title' },
-        promoImage: {
-          old: 'https://ichef.bbc.co.uk/old.jpg',
-          new: 'https://ichef.bbc.co.uk/new.jpg',
-        },
-      },
     });
 
     renderHook(() =>
@@ -139,8 +108,6 @@ describe('useUASMetadataSync', () => {
   it('does not call onMetadataOutOfDate when metadata has no changes', () => {
     mockCompareMetadataWithSaved.mockReturnValue({
       hasChanges: false,
-      changedFields: [],
-      fieldDetails: {},
     });
 
     renderHook(() =>
@@ -274,8 +241,6 @@ describe('useUASMetadataSync', () => {
   it('handles missing onMetadataOutOfDate callback gracefully', () => {
     mockCompareMetadataWithSaved.mockReturnValue({
       hasChanges: true,
-      changedFields: ['title'],
-      fieldDetails: { title: { old: 'Old', new: 'New' } },
     });
 
     expect(() => {
