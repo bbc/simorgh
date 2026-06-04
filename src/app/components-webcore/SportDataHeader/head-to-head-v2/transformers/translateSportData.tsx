@@ -1,6 +1,7 @@
 import { Services } from '#app/models/types/global';
 import { Translations } from '#app/models/types/translations';
 import getServiceNumerals from '#app/components/MostRead/utilities/getServiceNumerals';
+import { WesternArabic } from '#app/legacy/psammead/psammead-locales/src/numerals';
 import { HeadToHeadV2Data, Team } from '../types';
 
 const translateTeamName = (
@@ -44,7 +45,7 @@ const translateMinutes = (label: string | undefined, numerals: string[]) => {
   return result;
 };
 
-const handleExtraTime = (
+const handleExtraTimeLabel = (
   label: string | undefined,
   sportTranslations: Translations['sport'],
 ) => {
@@ -59,16 +60,14 @@ const handleExtraTime = (
 };
 
 const translatePeriodLabel = (
-  periodLabel: HeadToHeadV2Data['periodLabel'] | undefined,
+  periodLabel: HeadToHeadV2Data['periodLabel'] | undefined, // turn back to string
   sportTranslations: Translations['sport'],
   numerals: [string],
 ) => {
   if (!periodLabel) return null;
 
-  const labelMinutesTranslation = translateMinutes(periodLabel.value, numerals);
-
-  const extraTimePeriodLabel = handleExtraTime(
-    labelMinutesTranslation,
+  const extraTimeLabel = handleExtraTimeLabel(
+    periodLabel.value,
     sportTranslations,
   );
 
@@ -81,18 +80,24 @@ const translatePeriodLabel = (
   };
 
   const lookupResult =
-    periodLabelLookup[
-      labelMinutesTranslation as keyof typeof periodLabelLookup
-    ];
+    periodLabelLookup[periodLabel.value as keyof typeof periodLabelLookup];
 
-  const hasTranslatedValue = Boolean(lookupResult || extraTimePeriodLabel);
+  const shouldTranslateMinutes = numerals !== WesternArabic && !lookupResult;
+
+  const tranlatedMinutes =
+    extraTimeLabel && shouldTranslateMinutes
+      ? translateMinutes(extraTimeLabel, numerals)
+      : shouldTranslateMinutes && translateMinutes(periodLabel.value, numerals);
+
+  const hasTranslatedValue = Boolean(
+    lookupResult || tranlatedMinutes || extraTimeLabel,
+  );
 
   return {
     ...periodLabel,
     ...(hasTranslatedValue && {
-      translation: extraTimePeriodLabel || lookupResult,
+      translation: lookupResult || tranlatedMinutes || extraTimeLabel,
     }),
-    ...(labelMinutesTranslation && { value: labelMinutesTranslation }),
   };
 };
 
@@ -156,6 +161,7 @@ const translateSportData = (
   service: Services,
 ) => {
   const numerals: [string] = getServiceNumerals(service);
+  // const shouldTranslateMinutes = numerals !== WesternArabic;
   const sportTranslations = translations?.sport;
 
   if (!sportTranslations) {
@@ -196,7 +202,7 @@ const translateSportData = (
     ...data,
     home: transformTeam(data.home, homeTeamTranslation, numerals),
     away: transformTeam(data.away, awayTeamTranslation, numerals),
-    ...(data.periodLabel && { periodLabel: periodLabelTranslation }),
+    ...(data.periodLabel && { periodLabel: periodLabelTranslation }), // change back
     ...(data.groupedActions && {
       groupedActions: groupedActionsTranslation,
     }),

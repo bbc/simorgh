@@ -232,19 +232,6 @@ describe('TranslateSportData', () => {
       });
     });
 
-    it('should add translation for Extra Time with minute count', () => {
-      const result = translateSportData(
-        etFirstHalf as unknown as HeadToHeadV2Data,
-        afriqueServiceConfig.default.translations,
-        'afrique',
-      );
-      expect(result.periodLabel).toStrictEqual({
-        accessible: etFirstHalf.periodLabel.accessible,
-        translation: "98' Prolongation",
-        value: "98' ET", // not an exact match for fixture since the function trims white space
-      });
-    });
-
     it('should add translation for Penalties', () => {
       const result = translateSportData(
         beforePens as unknown as HeadToHeadV2Data,
@@ -297,15 +284,16 @@ describe('TranslateSportData', () => {
       });
     });
 
-    it('should return the period label unchanged when no translation is available', () => {
+    it('should return the period label unchanged when no translation is found in periodLabelLookup', () => {
       const result = translateSportData(
         firstHalf90 as unknown as HeadToHeadV2Data,
         afriqueServiceConfig.default.translations,
         'afrique',
       );
+      expect(result.periodLabel?.value).toEqual("9'");
       expect(result.periodLabel).toStrictEqual({
-        value: "9'",
-        accessible: '9 minutes',
+        value: firstHalf90.periodLabel.value,
+        accessible: firstHalf90.periodLabel.accessible,
       });
     });
 
@@ -316,57 +304,91 @@ describe('TranslateSportData', () => {
         'afrique',
       );
       expect(result.periodLabel).toStrictEqual({
+        value: 'halfTime.periodLabel.value',
         accessible: halfTime.periodLabel.accessible,
-        value: halfTime.periodLabel.value,
       });
     });
 
-    describe('Numerals', () => {
-      it('should return the period label minutes to non western service numerals for applicable service', () => {
+    describe('Numerals and extra time', () => {
+      it('should add a translation for minutes to non western service numerals for applicable service', () => {
         const result = translateSportData(
           firstHalf90 as unknown as HeadToHeadV2Data,
           persianServiceConfig.default.translations,
           'persian',
         );
+        expect(result.periodLabel?.value).toEqual("9'");
         expect(result.periodLabel).toStrictEqual({
-          value: "۹'",
-          accessible: '9 minutes',
+          value: firstHalf90.periodLabel.value,
+          translation: "۹'",
+          accessible: firstHalf90.periodLabel.accessible,
         });
       });
 
-      it('should update the period label with extra time to non western service numerals for applicable service', () => {
+      it('should add a translation for minutes with extra time to non western service numerals for applicable service', () => {
         const result = translateSportData(
           firstHalfAddedTime as unknown as HeadToHeadV2Data,
           persianServiceConfig.default.translations,
           'persian',
         );
+        expect(result.periodLabel?.value).toEqual("45'+2");
         expect(result.periodLabel).toStrictEqual({
-          value: "۴۵'+۲",
-          accessible: '45 minutes plus 2',
+          value: firstHalfAddedTime.periodLabel.value,
+          translation: "۴۵'+۲",
+          accessible: firstHalfAddedTime.periodLabel.accessible,
         });
       });
 
-      it('should update the period label with extra time to a western service numerals for applicable service', () => {
+      it('should not add a translation for minutes with extra time to a western service numerals for applicable service', () => {
         const result = translateSportData(
           firstHalfAddedTime as unknown as HeadToHeadV2Data,
           afriqueServiceConfig.default.translations,
           'afrique',
         );
+        expect(result.periodLabel?.value).toEqual("45'+2");
         expect(result.periodLabel).toStrictEqual({
-          value: "45'+2",
-          accessible: '45 minutes plus 2',
+          value: firstHalfAddedTime.periodLabel.value,
+          accessible: firstHalfAddedTime.periodLabel.accessible,
         });
       });
 
-      it('should update the period label in extra time to non western service numerals for applicable service', () => {
+      it('should add translation for extra time text only to western service numerals for applicable service 1', () => {
+        const result = translateSportData(
+          etFirstHalf as unknown as HeadToHeadV2Data,
+          afriqueServiceConfig.default.translations,
+          'afrique',
+        );
+        expect(result.periodLabel?.value).toEqual(" 98' ET");
+        expect(result.periodLabel).toStrictEqual({
+          accessible: etFirstHalf.periodLabel.accessible,
+          translation: "98' Prolongation",
+          value: etFirstHalf.periodLabel.value,
+        });
+      });
+
+      it('should add a translation for extra time text only to western service numerals for applicable service 2', () => {
+        const result = translateSportData(
+          etFirstHalf as unknown as HeadToHeadV2Data,
+          persianServiceConfig.default.translations,
+          'arabic',
+        );
+        expect(result.periodLabel?.value).toEqual(" 98' ET");
+        expect(result.periodLabel).toStrictEqual({
+          value: etFirstHalf.periodLabel.value,
+          accessible: etFirstHalf.periodLabel.accessible,
+          translation: "98' وقت اضافه",
+        });
+      });
+
+      it('should add a translation for minutes in extra time to non western service numerals for applicable service', () => {
         const result = translateSportData(
           etFirstHalf as unknown as HeadToHeadV2Data,
           persianServiceConfig.default.translations,
           'persian',
         );
         expect(result.periodLabel).toStrictEqual({
-          accessible: '98 minutes extra time',
-          value: "۹۸' ET", // to do - add these translations for now
+          value: etFirstHalf.periodLabel.value,
+          accessible: etFirstHalf.periodLabel.accessible,
+          translation: "۹۸' وقت اضافه",
         });
       });
     });
