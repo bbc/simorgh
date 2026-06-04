@@ -4,45 +4,31 @@ import getServiceNumerals from '#app/components/MostRead/utilities/getServiceNum
 import { WesternArabic } from '#app/legacy/psammead/psammead-locales/src/numerals';
 import { HeadToHeadV2Data, Team } from '../types';
 
-const translateTeamName = (
-  urn: string | undefined,
-  sportTranslations: Translations['sport'],
-) => {
-  const teamIdentifier = urn?.split(':').pop();
-  return teamIdentifier
-    ? sportTranslations?.worldCupTeamNames?.[teamIdentifier]
-    : undefined;
-};
-
-const translateScore = (score: string, numerals: [string]) => {
-  return score?.replace(/\d/g, digit => numerals[Number(digit)] ?? digit);
-};
-
 const translateMinutes = (label: string | undefined, numerals: string[]) => {
-  if (!label) return label; // hmm?
+  if (!label) {
+    return label;
+  }
 
   const match = label.trim().match(/^(\d+)(?:'(\+\d+)?)?(?:\s*(.*))?$/);
 
-  if (!match) return label;
-
-  const [_, baseMinutes, addedPart, suffix] = match;
-
-  const translateDigits = (str: string) =>
-    str.replace(/\d/g, d => numerals[Number(d)] ?? d);
-
-  let result = translateDigits(baseMinutes);
-
-  if (addedPart) {
-    result += `'${translateDigits(addedPart)}`;
-  } else {
-    result += `'`;
+  if (!match) {
+    return label;
   }
 
-  if (suffix) {
-    result += ` ${suffix}`;
-  }
+  const [, minutes, addedMinutes, suffix] = match;
 
-  return result;
+  const translateDigits = (value: string) =>
+    value.replace(/\d/g, digit => numerals[Number(digit)] ?? digit);
+
+  const translatedMinutes = translateDigits(minutes);
+  const translatedAddedMinutes = addedMinutes
+    ? translateDigits(addedMinutes)
+    : undefined;
+  const translatedTime = translatedAddedMinutes
+    ? `${translatedMinutes}'${translatedAddedMinutes}`
+    : `${translatedMinutes}'`;
+
+  return suffix ? `${translatedTime} ${suffix}` : translatedTime;
 };
 
 const handleExtraTimeLabel = (
@@ -60,16 +46,13 @@ const handleExtraTimeLabel = (
 };
 
 const translatePeriodLabel = (
-  periodLabel: HeadToHeadV2Data['periodLabel'] | undefined, // turn back to string
+  label: string | undefined,
   sportTranslations: Translations['sport'],
   numerals: [string],
 ) => {
-  if (!periodLabel) return null;
+  if (!label) return null;
 
-  const extraTimeLabel = handleExtraTimeLabel(
-    periodLabel.value,
-    sportTranslations,
-  );
+  const extraTimeLabel = handleExtraTimeLabel(label, sportTranslations);
 
   const periodLabelLookup = {
     HT: sportTranslations?.ht,
@@ -80,25 +63,16 @@ const translatePeriodLabel = (
   };
 
   const lookupResult =
-    periodLabelLookup[periodLabel.value as keyof typeof periodLabelLookup];
+    periodLabelLookup[label as keyof typeof periodLabelLookup];
 
   const shouldTranslateMinutes = numerals !== WesternArabic && !lookupResult;
 
   const tranlatedMinutes =
     extraTimeLabel && shouldTranslateMinutes
       ? translateMinutes(extraTimeLabel, numerals)
-      : shouldTranslateMinutes && translateMinutes(periodLabel.value, numerals);
+      : shouldTranslateMinutes && translateMinutes(label, numerals);
 
-  const hasTranslatedValue = Boolean(
-    lookupResult || tranlatedMinutes || extraTimeLabel,
-  );
-
-  return {
-    ...periodLabel,
-    ...(hasTranslatedValue && {
-      translation: lookupResult || tranlatedMinutes || extraTimeLabel,
-    }),
-  };
+  return lookupResult || tranlatedMinutes || extraTimeLabel;
 };
 
 const translateGroupedActionsName = (
@@ -114,6 +88,10 @@ const translateGroupedActionsName = (
       groupedActionName as keyof typeof groupedActionsLookup
     ] || groupedActionName
   );
+};
+
+const translateScore = (score: string, numerals: [string]) => {
+  return score?.replace(/\d/g, digit => numerals[Number(digit)] ?? digit);
 };
 
 const translateRunningScores = (
@@ -134,6 +112,16 @@ const translateRunningScores = (
       scoreFields.has(key) ? translateScore(value, numerals) : value,
     ]),
   );
+};
+
+const translateTeamName = (
+  urn: string | undefined,
+  sportTranslations: Translations['sport'],
+) => {
+  const teamIdentifier = urn?.split(':').pop();
+  return teamIdentifier
+    ? sportTranslations?.worldCupTeamNames?.[teamIdentifier]
+    : undefined;
 };
 
 const transformTeam = (
@@ -178,7 +166,7 @@ const translateSportData = (
   );
 
   const periodLabelTranslation = translatePeriodLabel(
-    data.periodLabel,
+    data.periodLabel?.value,
     sportTranslations,
     numerals,
   );
@@ -202,7 +190,12 @@ const translateSportData = (
     ...data,
     home: transformTeam(data.home, homeTeamTranslation, numerals),
     away: transformTeam(data.away, awayTeamTranslation, numerals),
-    ...(data.periodLabel && { periodLabel: periodLabelTranslation }), // change back
+    ...(data.periodLabel && {
+      periodLabel: {
+        ...(periodLabelTranslation && { translation: periodLabelTranslation }),
+        ...data.periodLabel,
+      },
+    }),
     ...(data.groupedActions && {
       groupedActions: groupedActionsTranslation,
     }),
