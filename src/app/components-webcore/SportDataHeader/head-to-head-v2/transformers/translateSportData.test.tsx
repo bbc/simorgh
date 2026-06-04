@@ -304,7 +304,7 @@ describe('TranslateSportData', () => {
         'afrique',
       );
       expect(result.periodLabel).toStrictEqual({
-        value: 'halfTime.periodLabel.value',
+        value: halfTime.periodLabel.value,
         accessible: halfTime.periodLabel.accessible,
       });
     });
