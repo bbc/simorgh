@@ -1,14 +1,12 @@
 import { forwardRef } from 'react';
 import styled from '@emotion/styled';
 import {
-  GEL_GROUP_1_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,
-  GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 
@@ -34,23 +32,6 @@ const Banner = styled.div`
   padding: 0 ${GEL_SPACING};
   display: flex;
   align-items: stretch;
-
-  @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
-    min-height: ${props =>
-      props.isLanguagesPage ? `${44 / 16}rem` : `${60 / 16}rem`};
-    padding: 0 ${GEL_SPACING};
-  }
-
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    min-height: ${props =>
-      props.isLanguagesPage ? `${44 / 16}rem` : `${60 / 16}rem`};
-    padding: 0 ${GEL_SPACING_DBL};
-  }
-
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    min-height: ${props =>
-      props.isLanguagesPage ? `${44 / 16}rem` : `${64 / 16}rem`};
-  }
 `;
 
 const StyledLink = styled.a`
