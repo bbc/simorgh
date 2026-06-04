@@ -54,6 +54,7 @@ export default {
           paddingTop: isConciseView ? '8px' : '0',
           ...(!isConciseView && { paddingBottom: `${pixelsToRem(8)}rem` }),
         },
+        paddingBlockStart: `${pixelsToRem(24)}rem`,
       }),
 
   // ==================== Action Grid ====================
@@ -154,58 +155,6 @@ export default {
       lineHeight: 1.08,
       paddingInline: `${pixelsToRem(32)}rem`,
     },
-  }),
-
-  // ==================== Footer ====================
-  footer: css({
-    fontSize: `${pixelsToRem(14)}rem`,
-    lineHeight: 1.2857142857142858,
-    paddingBlockEnd: `${pixelsToRem(16)}rem`,
-    textAlign: 'center',
-    [`@media (min-width: ${pixelsToRem(600)}rem)`]: {
-      fontSize: '1rem',
-      lineHeight: 1.375,
-      paddingBlockEnd: `${pixelsToRem(8)}rem`,
-    },
-  }),
-
-  footerTextWrapper: css({
-    display: 'inline-block',
-    fontSize: `${pixelsToRem(13)}rem`,
-    '&:not(:first-child)': {
-      marginInlineStart: `${pixelsToRem(8)}rem`,
-    },
-  }),
-
-  venue: css({
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center',
-    paddingBlockEnd: `${pixelsToRem(4)}rem`,
-  }),
-
-  attendanceValue: css({
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center',
-    flexWrap: 'wrap',
-  }),
-
-  venueLabel: css({
-    color: '#a8a8a8',
-    paddingInlineEnd: `${pixelsToRem(4)}rem`,
-  }),
-
-  attendanceLabel: css({
-    color: '#a8a8a8',
-    paddingInlineEnd: `${pixelsToRem(4)}rem`,
-  }),
-
-  horizontalRule: css({
-    width: `${pixelsToRem(12)}rem`,
-    border: 'none',
-    borderBlockStart: `${pixelsToRem(1)}rem solid #FFD230`,
-    paddingBlockEnd: `${pixelsToRem(4)}rem`,
   }),
 
   // ==================== Grouped Events ====================
@@ -314,72 +263,6 @@ export default {
 
   matchProgressContainer: css({
     gridArea: 'progress',
-  }),
-
-  // ==================== Head-to-Head Header ====================
-  headerWrapper: (isLive: boolean) =>
-    css({
-      display: 'flex',
-      justifyContent: 'center',
-      flexDirection: 'column',
-      fontSize: `${pixelsToRem(14)}rem`,
-      lineHeight: 1.2857142857142858,
-      paddingBlockEnd: `${pixelsToRem(16)}rem`,
-      paddingBlockStart: isLive ? 0 : `${pixelsToRem(16)}rem`,
-      [`@media (min-width: ${pixelsToRem(600)}rem)`]: {
-        flexDirection: 'row',
-        fontSize: '1rem',
-        lineHeight: 1.375,
-        paddingBlockStart: isLive
-          ? `${pixelsToRem(8)}rem`
-          : `${pixelsToRem(24)}rem`,
-      },
-    }),
-
-  dateWrapper: css({
-    display: 'flex',
-    justifyContent: 'flex-end',
-    flexDirection: 'column',
-    [`@media (min-width: ${pixelsToRem(600)}rem)`]: {
-      flexDirection: 'row',
-    },
-  }),
-
-  dateHeader: css({
-    display: 'flex',
-    justifyContent: 'center',
-    paddingBlockEnd: `${pixelsToRem(4)}rem`,
-    [`@media (min-width: ${pixelsToRem(600)}rem)`]: {
-      paddingBlockEnd: 0,
-    },
-  }),
-
-  interpunct: css({
-    color: '#a8a8a8',
-    display: 'none',
-    [`@media (min-width: ${pixelsToRem(600)}rem)`]: {
-      display: 'inline',
-      paddingInline: `${pixelsToRem(8)}rem`,
-    },
-  }),
-
-  tournamentHeader: css({
-    display: 'flex',
-    justifyContent: 'center',
-    flexWrap: 'wrap',
-  }),
-
-  date: css({
-    color: '#a8a8a8',
-    flexShrink: 0,
-  }),
-
-  competitionFormatter: css({
-    whiteSpace: 'pre',
-    overflow: 'hidden',
-    textOverflow: 'ellipsis',
-    padding: 0,
-    flexShrink: 1,
   }),
 
   // ==================== Key Events ====================
