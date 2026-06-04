@@ -26,11 +26,15 @@ const AccountActionButtons = ({
 
   if (!signInUrl || !registerUrl) return null;
 
+  const focusIndicatorClassName = onLightBackground
+    ? undefined
+    : 'focusIndicatorInvert';
+
   return (
     <>
       <CallToActionLink
         url={signInUrl}
-        className="focusIndicatorInvert"
+        className={focusIndicatorClassName}
         css={[styles.callToActionLink, styles.signInLink]}
         eventTrackingData={{ componentName: signInComponentName }}
         data-testid={signInComponentName}
@@ -57,7 +61,7 @@ const AccountActionButtons = ({
 
       <CallToActionLink
         url={registerUrl}
-        className="focusIndicatorInvert"
+        className={focusIndicatorClassName}
         css={[
           styles.callToActionLink,
           styles.registerLink,
