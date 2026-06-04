@@ -128,20 +128,29 @@ const transformTeam = (
   team: Team,
   teamNameTranslation: string | undefined,
   numerals: [string],
-) => ({
-  ...team,
-  fullName: teamNameTranslation || team.fullName,
-  shortName: teamNameTranslation || team.shortName,
-  ...(team.score && {
-    score: translateScore(team.score, numerals),
-  }),
-  ...(team.scoreUnconfirmed && {
-    scoreUnconfirmed: translateScore(team.scoreUnconfirmed, numerals),
-  }),
-  ...(team.runningScores && {
-    runningScores: translateRunningScores(team.runningScores, numerals),
-  }),
-});
+) => {
+  const shouldTranslateMinutes = numerals !== WesternArabic;
+  return {
+    ...team,
+    fullName: teamNameTranslation || team.fullName,
+    shortName: teamNameTranslation || team.shortName,
+    ...(team.score && {
+      score: shouldTranslateMinutes
+        ? translateScore(team.score, numerals)
+        : team.score,
+    }),
+    ...(team.scoreUnconfirmed && {
+      scoreUnconfirmed: shouldTranslateMinutes
+        ? translateScore(team.scoreUnconfirmed, numerals)
+        : team.scoreUnconfirmed,
+    }),
+    ...(team.runningScores && {
+      runningScores: shouldTranslateMinutes
+        ? translateRunningScores(team.runningScores, numerals)
+        : team.runningScores,
+    }),
+  };
+};
 
 const translateSportData = (
   data: HeadToHeadV2Data,
@@ -149,7 +158,6 @@ const translateSportData = (
   service: Services,
 ) => {
   const numerals: [string] = getServiceNumerals(service);
-  // const shouldTranslateMinutes = numerals !== WesternArabic;
   const sportTranslations = translations?.sport;
 
   if (!sportTranslations) {
