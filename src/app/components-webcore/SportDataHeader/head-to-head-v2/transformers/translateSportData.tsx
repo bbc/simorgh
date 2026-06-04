@@ -75,16 +75,6 @@ const translatePeriodLabel = (
   return lookupResult || tranlatedMinutes || extraTimeLabel;
 };
 
-// render tranlated?
-// grouped actions
-//        "groupedActions": [
-//   {
-//     "groupName": { "fullName": "Assists", "shortName": "Assists" },
-//     "homeTeamActions": ["J. Lucumí (90')"],
-//     "awayTeamActions": ["Y. Tielemans (44', 90'+4)", "E. Buendía (51')"]
-//   }
-// ],
-
 const translateGroupedActionsName = (
   groupedActionName: string,
   sportTranslations: Translations['sport'],
@@ -184,7 +174,6 @@ const translateSportData = (
     return data;
   }
 
-  // doing this here to avoid passing translations to func
   const homeTeamTranslation = translateTeamName(
     data.home?.urn,
     sportTranslations,
