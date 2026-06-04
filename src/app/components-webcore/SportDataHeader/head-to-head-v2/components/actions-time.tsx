@@ -1,23 +1,39 @@
+import { use } from 'react';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 import styles from '../index.styles';
 import Card from './card';
 import type { PlayerActions } from '../types';
 
+// TODO - get a translation for this
 const goalTypesHandled: Record<string, string> = {
-  Penalty: 'pen',
   'Own Goal': 'og',
 };
 
-const displayGoalType = (goalType: string) =>
-  goalTypesHandled[goalType] ? ` ${goalTypesHandled[goalType]}` : '';
+const displayGoalType = (goalType: string, penaltiesTranslation: string) => {
+  if (goalType === 'Penalty') {
+    return ` ${penaltiesTranslation}`;
+  }
+
+  if (goalTypesHandled[goalType]) {
+    return ` ${goalTypesHandled[goalType]}`;
+  }
+
+  return '';
+};
 
 interface ActionsTimeProps {
   player: PlayerActions;
 }
 
 const ActionsTime = ({ player }: ActionsTimeProps) => {
+  const { translations } = use(ServiceContext);
+  const penaltiesTranslation =
+    translations?.sport?.penaltyAbbreviation || 'pen';
+
   const times = player.actions.map(
-    action => `${action.timeLabel.value}${displayGoalType(action.type)}`,
+    action =>
+      `${action.timeLabel.translated || action.timeLabel.value}${displayGoalType(action.type, penaltiesTranslation)}`,
   );
   const timesAccessible = player.actions
     .map(

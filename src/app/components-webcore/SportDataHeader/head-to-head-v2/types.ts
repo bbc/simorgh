@@ -32,6 +32,7 @@ export type Action = {
   timeLabel: {
     value: string;
     accessible: string;
+    translated?: string;
   };
 };
 

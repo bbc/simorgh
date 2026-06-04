@@ -218,6 +218,154 @@ describe('TranslateSportData', () => {
     });
   });
 
+  describe('Player Actions', () => {
+    it('should add a translation for minutes to non western service numerals for applicable service', () => {
+      const result = translateSportData(
+        fixtureDataDefault,
+        persianServiceConfig.default.translations,
+        'persian',
+      );
+      const expected = [
+        {
+          playerUrn:
+            'urn:bbc:sportsdata:football:player:s-2bmeynv0dhsc8sjfuaprkexre',
+          playerName: 'J. Rowe',
+          actionType: 'goal',
+          actions: [
+            {
+              type: 'Goal',
+              typeLabel: { value: 'Goal', accessible: 'Goal' },
+              timeLabel: {
+                value: "90'",
+                translated: "۹۰'",
+                accessible: '90 minutes',
+              },
+            },
+          ],
+        },
+      ];
+      expect(result.home.actions).toStrictEqual(expected);
+    });
+
+    it('should handle multiple actions for a team', () => {
+      const result = translateSportData(
+        secondLegAetPens as unknown as HeadToHeadV2Data,
+        persianServiceConfig.default.translations,
+        'persian',
+      );
+      const expected = [
+        {
+          actionType: 'goal',
+          playerId: '1dmfp2ow658dsv0re73r62ndh',
+          playerName: 'B. Krasniqi',
+          actions: [
+            {
+              type: 'Penalty',
+              typeLabel: {
+                value: 'Penalty',
+                accessible: 'Penalty',
+              },
+              timeLabel: {
+                value: "23'",
+                translated: "۲۳'",
+                accessible: '23 minutes',
+              },
+            },
+          ],
+        },
+        {
+          playerId: '6r4adhp9hu4ux7egwgd8j2thx',
+          playerName: 'N. Redmond',
+          actionType: 'goal',
+          actions: [
+            {
+              type: 'Penalty',
+              typeLabel: {
+                value: 'Penalty',
+                accessible: 'Penalty',
+              },
+              timeLabel: {
+                value: "30'",
+                translated: "۳۰'",
+                accessible: '30 minutes',
+              },
+            },
+          ],
+        },
+      ];
+      expect(result.home.actions).toStrictEqual(expected);
+    });
+    it('should handle multiple actions for a player', () => {
+      const result = translateSportData(
+        secondLegAetPens as unknown as HeadToHeadV2Data,
+        persianServiceConfig.default.translations,
+        'persian',
+      );
+      const expected = [
+        {
+          actionType: 'goal',
+          participantId: '3rutx3wc2j6q3qq8uqdn8pdja',
+          playerId: '7uufcg0dvus42emi9yev9i9cl',
+          playerName: 'N. Belaković',
+          actions: [
+            {
+              type: 'Goal',
+              typeLabel: {
+                value: 'Goal',
+                accessible: 'Goal',
+              },
+              timeLabel: {
+                value: "23'",
+                accessible: '23 minutes',
+                translated: "۲۳'",
+              },
+            },
+            {
+              type: 'Penalty',
+              typeLabel: {
+                value: 'Penalty',
+                accessible: 'Penalty',
+              },
+              timeLabel: {
+                value: "27'",
+                accessible: '27 minutes',
+                translated: "۲۷'",
+              },
+            },
+          ],
+        },
+      ];
+      expect(result.away.actions).toStrictEqual(expected);
+    });
+
+    it('should not add a translation for minutes to western service numerals for applicable service', () => {
+      const result = translateSportData(
+        fixtureDataDefault,
+        afriqueServiceConfig.default.translations,
+        'afrique',
+      );
+      const expected = [
+        {
+          playerUrn:
+            'urn:bbc:sportsdata:football:player:s-2bmeynv0dhsc8sjfuaprkexre',
+          playerName: 'J. Rowe',
+          actionType: 'goal',
+          actions: [
+            {
+              type: 'Goal',
+              typeLabel: { value: 'Goal', accessible: 'Goal' },
+              timeLabel: {
+                value: "90'",
+                accessible: '90 minutes',
+              },
+            },
+          ],
+        },
+      ];
+      expect(result.home.actions).toStrictEqual(expected);
+    });
+  });
+
   describe('Period label', () => {
     it('should add translation for Extra Time', () => {
       const result = translateSportData(

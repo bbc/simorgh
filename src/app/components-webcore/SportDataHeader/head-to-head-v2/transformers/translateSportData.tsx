@@ -75,6 +75,16 @@ const translatePeriodLabel = (
   return lookupResult || tranlatedMinutes || extraTimeLabel;
 };
 
+// render tranlated?
+// grouped actions
+//        "groupedActions": [
+//   {
+//     "groupName": { "fullName": "Assists", "shortName": "Assists" },
+//     "homeTeamActions": ["J. Lucumí (90')"],
+//     "awayTeamActions": ["Y. Tielemans (44', 90'+4)", "E. Buendía (51')"]
+//   }
+// ],
+
 const translateGroupedActionsName = (
   groupedActionName: string,
   sportTranslations: Translations['sport'],
@@ -130,24 +140,34 @@ const transformTeam = (
   numerals: [string],
 ) => {
   const shouldTranslateMinutes = numerals !== WesternArabic;
+
   return {
     ...team,
     fullName: teamNameTranslation || team.fullName,
     shortName: teamNameTranslation || team.shortName,
-    ...(team.score && {
-      score: shouldTranslateMinutes
-        ? translateScore(team.score, numerals)
-        : team.score,
-    }),
-    ...(team.scoreUnconfirmed && {
-      scoreUnconfirmed: shouldTranslateMinutes
-        ? translateScore(team.scoreUnconfirmed, numerals)
-        : team.scoreUnconfirmed,
-    }),
-    ...(team.runningScores && {
-      runningScores: shouldTranslateMinutes
-        ? translateRunningScores(team.runningScores, numerals)
-        : team.runningScores,
+    ...(shouldTranslateMinutes && {
+      ...(team.score && {
+        score: translateScore(team.score, numerals),
+      }),
+      ...(team.scoreUnconfirmed && {
+        scoreUnconfirmed: translateScore(team.scoreUnconfirmed, numerals),
+      }),
+      ...(team.runningScores && {
+        runningScores: translateRunningScores(team.runningScores, numerals),
+      }),
+
+      ...(team.actions && {
+        actions: team.actions.map(playerAction => ({
+          ...playerAction,
+          actions: playerAction.actions.map(action => ({
+            ...action,
+            timeLabel: {
+              ...action.timeLabel,
+              translated: translateMinutes(action.timeLabel.value, numerals),
+            },
+          })),
+        })),
+      }),
     }),
   };
 };
@@ -164,6 +184,7 @@ const translateSportData = (
     return data;
   }
 
+  // doing this here to avoid passing translations to func
   const homeTeamTranslation = translateTeamName(
     data.home?.urn,
     sportTranslations,
