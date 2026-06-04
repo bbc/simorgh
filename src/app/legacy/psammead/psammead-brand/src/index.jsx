@@ -92,7 +92,8 @@ const BrandSvg = styled.svg`
   }
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    ${props => (props.isLanguagesPage ? `${20 / 16}rem` : `${30 / 16}rem`)};
+    height: ${props =>
+      props.isLanguagesPage ? `${24 / 16}rem` : `${30 / 16}rem`};
   }
 
   @media screen and (-ms-high-contrast: active), print {
@@ -118,7 +119,13 @@ const LocalisedBrandName = ({
   );
 };
 
-const StyledBrand = ({ linkId, product, serviceLocalisedName = null, svg }) => {
+const StyledBrand = ({
+  linkId,
+  product,
+  serviceLocalisedName = null,
+  svg,
+  isLanguagesPage = false,
+}) => {
   return svg ? (
     <>
       <BrandSvg
@@ -133,6 +140,7 @@ const StyledBrand = ({ linkId, product, serviceLocalisedName = null, svg }) => {
         focusable="false"
         aria-hidden="true"
         height="32"
+        isLanguagesPage={isLanguagesPage}
       >
         {svg.group}
       </BrandSvg>
