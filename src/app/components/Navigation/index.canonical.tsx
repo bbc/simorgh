@@ -57,9 +57,7 @@ const CanonicalNavigationContainer: React.FC<
       const lastDropdownIndex = allFocusableItems.indexOf(currentTarget);
       const itemsAfterDropdown = allFocusableItems.slice(lastDropdownIndex + 1);
       const nextPageItem = itemsAfterDropdown.find(
-        item =>
-          !currentTarget.contains(item) &&
-          !bottomScrollableNavRef.current?.contains(item),
+        item => !bottomScrollableNavRef.current?.contains(item),
       );
       if (!nextPageItem) return;
       event.preventDefault();
