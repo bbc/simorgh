@@ -1,5 +1,6 @@
 import { renderHook } from '#app/components/react-testing-library-with-providers';
 import * as uasUtility from '#app/lib/uasApi/uasUtility';
+import { Article } from '#app/models/types/optimo';
 import useUASMetadataSync from './index';
 
 jest.mock('#app/lib/uasApi/uasUtility');
@@ -23,7 +24,7 @@ describe('useUASMetadataSync', () => {
     },
     content: [{ type: 'text', model: { blocks: [{ text: 'Content' }] } }],
     mostRead: [],
-  } as unknown as import('#app/models/types/optimo').Article;
+  } as unknown as Article;
 
   const mockSavedMetadata = {
     title: 'Old Title',
