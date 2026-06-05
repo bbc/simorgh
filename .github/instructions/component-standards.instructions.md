@@ -1,6 +1,6 @@
 ---
 description: "Component Standards"
-applyTo: "**"
+applyTo: "src/app/components/**"
 ---
 # Component Standards
 

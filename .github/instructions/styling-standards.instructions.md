@@ -1,6 +1,6 @@
 ---
 description: "Styling Standards"
-applyTo: "**"
+applyTo: "src/app/components/**"
 ---
 # Styling Standards
 
