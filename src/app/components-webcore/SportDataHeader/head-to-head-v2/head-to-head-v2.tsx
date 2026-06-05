@@ -1,59 +1,59 @@
-import Footer from './components/footer';
-import HeadToHeadHeader from './components/head-to-head-header';
+import { use } from 'react';
+import { ServiceContext } from '#app/contexts/ServiceContext';
+import useSportDataPolling from '#app/hooks/useSportDataPolling';
+import useToggle from '#app/hooks/useToggle';
 import { HeadToHeadBanner } from './components/head-to-head-banner';
 import ConditionalOnwardJourneyLink from './components/conditional-onward-journey-link';
 import { Actions } from './components/actions';
 import { HeadToHeadV2Data } from './types';
 import styles from './index.styles';
+import translateSportData from './transformers/translateSportData';
 
 export const HeadToHeadV2 = ({
-  data,
+  initialSportData,
   isConciseView,
   shouldShowActions,
   maximumContainerScoreDigits,
-  teamBadgePlaceholderFallbackType = 'badge',
+  isSportDataLive = false,
 }: {
-  data: HeadToHeadV2Data;
+  initialSportData: HeadToHeadV2Data;
   isConciseView?: boolean;
   shouldShowActions?: boolean;
   maximumContainerScoreDigits?: number;
-  teamBadgePlaceholderFallbackType?: 'badge' | 'flag';
+  isSportDataLive?: boolean;
 }) => {
-  const hasActions =
-    (data?.home?.actions?.length ?? 0) > 0 ||
-    (data?.away?.actions?.length ?? 0) > 0;
+  const { enabled: sportHeaderPollEnabled } = useToggle('sportDataPolling');
+  const { translations } = use(ServiceContext);
 
-  // TODO: Re-enable badge visibility logic once we have the necessary badge mappings in place
-  const shouldHideBadges = true;
+  const { currentSportData } = useSportDataPolling(
+    initialSportData,
+    Boolean(sportHeaderPollEnabled) && isSportDataLive,
+  );
+
+  const hasActions =
+    (currentSportData?.home?.actions?.length ?? 0) > 0 ||
+    (currentSportData?.away?.actions?.length ?? 0) > 0;
+
+  const translatedSportData = translateSportData(
+    currentSportData,
+    translations,
+  );
 
   return (
     <div css={styles.wrapper({ isConciseView })}>
       <ConditionalOnwardJourneyLink>
         <div css={styles.container({ isConciseView })}>
-          {!isConciseView && (
-            <HeadToHeadHeader
-              date={data.date}
-              status={data.status}
-              tournamentDescriptionLabel={data.tournamentDescriptionLabel}
-            />
-          )}
           <HeadToHeadBanner
-            data={data}
+            data={translatedSportData}
             isConciseView={isConciseView ?? false}
-            eventSummary={data.accessibleEventSummary}
-            shouldHideBadges={shouldHideBadges}
+            eventSummary={translatedSportData.accessibleEventSummary}
+            shouldHideBadges={isConciseView ?? false}
             maxScoreLength={maximumContainerScoreDigits}
-            teamBadgePlaceholderFallbackType={teamBadgePlaceholderFallbackType}
           />
-          {hasActions && shouldShowActions && <Actions data={data} />}
-          {!isConciseView && <Actions data={data} />}
-          {!isConciseView && (
-            <Footer
-              venue={data.venue?.name || 'To be confirmed'}
-              attendanceValue={data.attendance?.value}
-              attendanceInfo={data.attendance?.additionalInfo}
-            />
+          {hasActions && shouldShowActions && (
+            <Actions data={translatedSportData} />
           )}
+          {!isConciseView && <Actions data={translatedSportData} />}
         </div>
       </ConditionalOnwardJourneyLink>
     </div>

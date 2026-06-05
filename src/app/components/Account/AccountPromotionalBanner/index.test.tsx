@@ -50,7 +50,7 @@ describe('AccountPromotionalBanner', () => {
     renderWithProviders();
 
     expect(
-      await screen.findByRole('heading', { name: 'Discover your BBC' }),
+      await screen.findByRole('heading', { name: 'Your very own BBC' }),
     ).toBeInTheDocument();
   });
 
@@ -84,7 +84,7 @@ describe('AccountPromotionalBanner', () => {
     renderWithProviders({ initialIsSignedIn: true });
 
     expect(
-      screen.queryByRole('heading', { name: 'Discover your BBC' }),
+      screen.queryByRole('heading', { name: 'Your very own BBC' }),
     ).not.toBeInTheDocument();
   });
 
@@ -99,7 +99,7 @@ describe('AccountPromotionalBanner', () => {
     await user.click(closeButton);
 
     expect(
-      screen.queryByRole('heading', { name: 'Discover your BBC' }),
+      screen.queryByRole('heading', { name: 'Your very own BBC' }),
     ).not.toBeInTheDocument();
   });
 
@@ -107,7 +107,7 @@ describe('AccountPromotionalBanner', () => {
     renderWithProviders({ 'id-availability': 'RED' });
 
     expect(
-      screen.queryByRole('heading', { name: 'Discover your BBC' }),
+      screen.queryByRole('heading', { name: 'Your very own BBC' }),
     ).not.toBeInTheDocument();
   });
 
@@ -116,7 +116,7 @@ describe('AccountPromotionalBanner', () => {
     renderWithProviders();
 
     expect(
-      screen.queryByRole('heading', { name: 'Discover your BBC' }),
+      screen.queryByRole('heading', { name: 'Your very own BBC' }),
     ).not.toBeInTheDocument();
   });
 
@@ -125,7 +125,7 @@ describe('AccountPromotionalBanner', () => {
     renderWithProviders();
 
     expect(
-      screen.queryByRole('heading', { name: 'Discover your BBC' }),
+      screen.queryByRole('heading', { name: 'Your very own BBC' }),
     ).not.toBeInTheDocument();
   });
 
@@ -153,7 +153,7 @@ describe('AccountPromotionalBanner', () => {
     renderWithProviders();
 
     expect(
-      screen.queryByRole('heading', { name: 'Discover your BBC' }),
+      screen.queryByRole('heading', { name: 'Your very own BBC' }),
     ).not.toBeInTheDocument();
   });
 
@@ -169,7 +169,7 @@ describe('AccountPromotionalBanner', () => {
     renderWithProviders();
 
     expect(
-      screen.queryByRole('heading', { name: 'Discover your BBC' }),
+      screen.queryByRole('heading', { name: 'Your very own BBC' }),
     ).toBeInTheDocument();
   });
 
@@ -181,7 +181,7 @@ describe('AccountPromotionalBanner', () => {
     renderWithProviders();
 
     expect(
-      screen.queryByRole('heading', { name: 'Discover your BBC' }),
+      screen.queryByRole('heading', { name: 'Your very own BBC' }),
     ).toBeInTheDocument();
   });
 });

@@ -3,7 +3,7 @@ import { AccountContext } from '#contexts/AccountContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useHydrationDetection from '#hooks/useHydrationDetection';
 import Text from '#app/components/Text';
-import { AccountIcon } from '#app/components/icons';
+import { AccountIconRounded } from '#app/components/icons';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import styles from './index.styles';
@@ -44,7 +44,7 @@ const AccountHeader = () => {
         fontVariant="sansBold"
         onClick={onClickTrack}
       >
-        <AccountIcon css={styles.icon} />
+        <AccountIconRounded css={styles.icon} />
         {label}
       </Text>
     </div>

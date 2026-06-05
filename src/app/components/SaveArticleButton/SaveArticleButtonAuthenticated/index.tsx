@@ -18,11 +18,12 @@ const SaveArticleButtonAuthenticated = ({
   const { saveArticleButton } = translations || {};
   const { assetId: articleId } = parseRoute(pathname);
 
-  const { isSaved, isLoading, error, handleSaveAction } = useUASButton({
-    articleId,
-    articleTitle,
-    articlePageData,
-  });
+  const { isSaved, isLoading, isUpdating, error, handleSaveAction } =
+    useUASButton({
+      articleId,
+      articleTitle,
+      articlePageData,
+    });
 
   const clickComponentName = `save-article-button-click-${
     isSaved ? UASAction.REMOVE : UASAction.SAVE
@@ -52,7 +53,13 @@ const SaveArticleButtonAuthenticated = ({
   const buttonLabel = isSaved
     ? saveArticleButton.saved
     : saveArticleButton.save;
-  const buttonText = isLoading ? saveArticleButton.saving : buttonLabel;
+
+  const getButtonText = () => {
+    if (isLoading) return saveArticleButton.loading;
+    if (isUpdating && isSaved) return saveArticleButton.removing;
+    if (isUpdating) return saveArticleButton.saving;
+    return buttonLabel;
+  };
 
   const handleClick = (event?: React.MouseEvent) => {
     onClickTrack?.(event);
@@ -64,9 +71,10 @@ const SaveArticleButtonAuthenticated = ({
       <SaveButton
         onClick={handleClick}
         isLoading={isLoading}
+        isUpdating={isUpdating}
         isSaved={isSaved}
         disabled={isLoading}
-        buttonText={buttonText}
+        buttonText={getButtonText()}
         removeText={saveArticleButton.remove}
         testId="save-article-btn-authorized"
       />

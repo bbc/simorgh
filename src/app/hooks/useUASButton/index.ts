@@ -22,6 +22,7 @@ enum UASAction {
 interface UseUASButtonReturn {
   isSaved: boolean;
   isLoading: boolean;
+  isUpdating: boolean;
   error: Error | null;
   handleSaveAction: (action: UASAction) => void;
 }
@@ -39,7 +40,7 @@ const useUASButton = ({
   articlePageData,
 }: UseUASButtonProps): UseUASButtonReturn => {
   const { service } = use(ServiceContext);
-  const { hashedUserId = '' } = use(AccountContext);
+  const { hashedUserId = '', isRefreshAvailable } = use(AccountContext);
   const queryClient = useQueryClient();
   const { isSaved, isLoading, error } = useUASFetchSaveStatus(articleId);
 
@@ -56,11 +57,15 @@ const useUASButton = ({
           promoImageAltText: promoImageObj?.altText || '',
           locatorUrl: articlePageData?.metadata?.locators?.canonicalUrl || '',
         });
-        await uasApiRequest('POST', FAVOURITES_CONFIG.activityType, { body });
+        await uasApiRequest('POST', FAVOURITES_CONFIG.activityType, {
+          body,
+          isRefreshAvailable,
+        });
       } else {
         const globalId = buildGlobalId(articleId);
         await uasApiRequest('DELETE', FAVOURITES_CONFIG.activityType, {
           globalId,
+          isRefreshAvailable,
         });
       }
     },
@@ -69,12 +74,16 @@ const useUASButton = ({
         uasKeys.favouriteStatus(hashedUserId, articleId),
         action === UASAction.SAVE,
       );
+      queryClient.invalidateQueries({
+        queryKey: uasKeys.favouritesList(hashedUserId),
+      });
     },
   });
 
   return {
     isSaved,
-    isLoading: isLoading || mutation.isPending,
+    isLoading,
+    isUpdating: mutation.isPending,
     error: mutation.error || error,
     handleSaveAction: mutation.mutate,
   };

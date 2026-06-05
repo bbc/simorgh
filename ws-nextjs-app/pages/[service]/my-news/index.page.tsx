@@ -10,7 +10,11 @@ import { NOT_FOUND, OK } from '#app/lib/statusCodes.const';
 const MyNewsPage = dynamic(() => import('./MyNewsPage'));
 
 export const getServerSideProps: GetServerSideProps = async context => {
-  const { service, variant: variantFromUrl } = context.query as PageDataParams;
+  const {
+    service,
+    variant: variantFromUrl,
+    page,
+  } = context.query as PageDataParams;
   const variant = deriveVariant(variantFromUrl);
 
   const toggles = await getToggles(service);
@@ -44,6 +48,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
       status: OK,
       timeOnServer: Date.now(),
       pathname: `/${service}/my-news`,
+      page: page || null,
       pageData: {
         metadata: {
           type: MY_NEWS_PAGE,

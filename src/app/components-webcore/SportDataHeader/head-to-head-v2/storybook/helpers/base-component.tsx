@@ -96,7 +96,7 @@ export const HeadToHeadV2ConciseComponent = (args: StoryArgs) => {
 
   return (
     <HeadToHeadV2
-      data={updatedStoryBookControls}
+      initialSportData={updatedStoryBookControls}
       isConciseView
       shouldShowActions={false}
     />
@@ -153,7 +153,7 @@ export const HeadToHeadV2Component = (args: StoryArgs) => {
 
   return (
     <HeadToHeadV2
-      data={updatedStoryBookControls}
+      initialSportData={updatedStoryBookControls}
       isConciseView={false}
       shouldShowActions={false}
     />

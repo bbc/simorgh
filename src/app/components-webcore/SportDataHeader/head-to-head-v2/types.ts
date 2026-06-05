@@ -87,10 +87,9 @@ export type Team = {
    */
   shortName: string;
   /**
-   * The urn for the team. This is used to lookup the team badge.
-   * If no urn is provided or a badge does not exist, a placeholder badge is used.
+   * The urn for the team. This is used for creating test-ids.
    */
-  urn?: string;
+  urn: string;
   /**
    * The fulltime and halftime running scores for the team.
    */
@@ -113,9 +112,17 @@ export type Team = {
    * Actions are not rendered in concise view.
    */
   actions?: PlayerActions[];
+  /**
+   * Either a badge or flag iChef image URL, or a badge placeholder image URL passed down from the BFF.
+   */
+  imageSrc: string | null;
 };
 
 export type HeadToHeadV2Data = {
+  /**
+   * The event's unique urn.
+   */
+  urn: string;
   /**
    * The event's unique id.
    */
@@ -197,8 +204,6 @@ export type HeadToHeadV2Data = {
   };
 };
 
-export type BadgePlaceholderFallbackType = 'badge' | 'flag';
-
 export type Alignment = 'home' | 'away';
 
 export type BadgeSize =
@@ -206,7 +211,7 @@ export type BadgeSize =
   | { small?: number; medium?: number; large?: number };
 
 export interface HeadToHeadV2Props {
-  data: HeadToHeadV2Data;
+  initialSportData: HeadToHeadV2Data;
   isConciseView: boolean;
   shouldShowActions?: boolean;
   /**
@@ -214,11 +219,6 @@ export interface HeadToHeadV2Props {
    * This ensures that the badges/teams line up horizontally the whole way down the stack.
    */
   maximumContainerScoreDigits?: number;
-  /**
-   * Optional setting for the sport badge's placeholder fallback type.
-   * @default 'badge'
-   */
-  teamBadgePlaceholderFallbackType?: BadgePlaceholderFallbackType;
 }
 
 export declare const HeadToHeadV2: (props: HeadToHeadV2Props) => JSX.Element;

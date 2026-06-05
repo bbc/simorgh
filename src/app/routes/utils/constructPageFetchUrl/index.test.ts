@@ -30,6 +30,7 @@ describe('constructPageFetchUrl', () => {
     const variant = 'ru-UA';
     const page = '2';
     const isAmp = true;
+    const country = 'ua';
 
     const fetchUrl = constructPageFetchUrl({
       pathname,
@@ -38,6 +39,7 @@ describe('constructPageFetchUrl', () => {
       variant,
       page,
       isAmp,
+      country,
     });
 
     expect(fetchUrl.searchParams.get('id')).toBe('c0000000000t');
@@ -47,6 +49,7 @@ describe('constructPageFetchUrl', () => {
     expect(fetchUrl.searchParams.get('serviceEnv')).toBe('live');
     expect(fetchUrl.searchParams.get('variant')).toBe('ru-UA');
     expect(fetchUrl.searchParams.get('isAmp')).toBe('true');
+    expect(fetchUrl.searchParams.get('country')).toBe('ua');
   });
 
   it('should remove .amp from ID', async () => {
