@@ -140,7 +140,7 @@ const StyledBrand = ({
         focusable="false"
         aria-hidden="true"
         height="32"
-        isLanguagesPage={isLanguagesPage}
+        isLanguagesPage={isLanguagesPage && linkId !== 'footer'}
       >
         {svg.group}
       </BrandSvg>
