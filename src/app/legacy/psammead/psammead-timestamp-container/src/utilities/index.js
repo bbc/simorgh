@@ -1,4 +1,27 @@
+import 'temporal-polyfill/global';
 import moment from 'moment-timezone';
+
+const createDateAdapter = () => ({
+  // Temporary seam for gradual Temporal adoption in follow-up PRs.
+  createLocalisedMoment: ({ locale, timestamp }) =>
+    moment(timestamp).locale(locale),
+  createMomentInTimezone: ({ locale, timestamp, timezone }) =>
+    moment(timestamp).locale(locale).tz(timezone),
+  formatDuration: ({ duration, format, locale }) => {
+    const defaultDurationFormat = duration?.includes('H') ? 'h:mm:ss' : 'mm:ss';
+    const durationInMilliseconds = moment.duration(duration).asMilliseconds();
+
+    return moment
+      .utc(durationInMilliseconds)
+      .locale(locale)
+      .format(format || defaultDurationFormat);
+  },
+  // Exposed to make Temporal available at runtime without changing behavior yet.
+  toTemporalInstant: timestamp =>
+    globalThis.Temporal?.Instant?.fromEpochMilliseconds(timestamp),
+});
+
+const dateAdapter = createDateAdapter();
 
 // Note that this next section is globally configuring moment.
 // It is not possible to configure these on specific moment instances.
@@ -20,12 +43,11 @@ moment.relativeTimeThreshold('d', 30);
 moment.relativeTimeThreshold('M', 12);
 
 export const formatDuration = ({ duration, format, locale = 'en-gb' }) => {
-  const defaultDurationFormat = duration?.includes('H') ? 'h:mm:ss' : 'mm:ss';
-  const durationInMilliseconds = moment.duration(duration).asMilliseconds();
-  return moment
-    .utc(durationInMilliseconds)
-    .locale(locale)
-    .format(format || defaultDurationFormat);
+  return dateAdapter.formatDuration({
+    duration,
+    format,
+    locale,
+  });
 };
 
 // if the date is invalid return false - https://stackoverflow.com/questions/1353684/detecting-an-invalid-date-date-instance-in-javascript#answer-1353711
@@ -39,7 +61,10 @@ export const isValidDateTime = dateTime => {
 
 // when using the following 2 functions, we recommend using webpack configuration to only load in the relevant timezone, rather than all of moment-timezone
 export const localisedMoment = ({ locale, timestamp }) => {
-  return moment(timestamp).locale(locale);
+  return dateAdapter.createLocalisedMoment({
+    locale,
+    timestamp,
+  });
 };
 
 export const formatUnixTimestamp = ({
@@ -51,7 +76,11 @@ export const formatUnixTimestamp = ({
 }) => {
   if (!timestamp) return undefined;
 
-  const momentObj = moment(timestamp).locale(locale).tz(timezone);
+  const momentObj = dateAdapter.createMomentInTimezone({
+    locale,
+    timestamp,
+    timezone,
+  });
 
   if (isRelative) {
     return momentObj.fromNow();
