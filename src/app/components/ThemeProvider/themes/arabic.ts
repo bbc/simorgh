@@ -4,7 +4,6 @@ import arabicScript from '../fontScripts/arabic';
 import { REITH_QALAM_BOLD, REITH_QALAM_REGULAR } from '../fontFaces';
 import reithQalamFontVariants from '../fontVariants/reithQalam';
 import withThemeProvider from '../withThemeProvider';
-import brandSVG from '../chameleonLogos/arabic';
 
 export const theme: ServiceTheme = {
   palette: {
@@ -19,7 +18,6 @@ export const theme: ServiceTheme = {
     fontVariants: reithQalamFontVariants,
     fontFaces: [REITH_QALAM_REGULAR, REITH_QALAM_BOLD],
   },
-  brandSVG,
 };
 
 export default withThemeProvider(theme);

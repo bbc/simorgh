@@ -7,7 +7,6 @@ import {
 } from '../fontFaces';
 import sinhalaFontVariants from '../fontVariants/sinhala';
 import withThemeProvider from '../withThemeProvider';
-import brandSVG from '../chameleonLogos/sinhala';
 
 export const theme: ServiceTheme = {
   palette: {
@@ -22,7 +21,6 @@ export const theme: ServiceTheme = {
     fontVariants: sinhalaFontVariants,
     fontFaces: [NOTO_SERIF_SINHALA_REGULAR, NOTO_SERIF_SINHALA_BOLD],
   },
-  brandSVG,
 };
 
 export default withThemeProvider(theme);

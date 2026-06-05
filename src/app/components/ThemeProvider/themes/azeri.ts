@@ -2,7 +2,6 @@ import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import latinWithDiacriticsScript from '../fontScripts/latinWithDiacritics';
 import helmetFontVariants from '../fontVariants/helmet';
 import withThemeProvider from '../withThemeProvider';
-import brandSVG from '../chameleonLogos/azeri';
 import getPWATypographyTheme from './getPWATypographyTheme';
 
 export const theme = {
@@ -18,7 +17,6 @@ export const theme = {
     fontFaces: [],
     fontVariants: helmetFontVariants,
   },
-  brandSVG,
 };
 
 export const pwaTheme = getPWATypographyTheme(latinWithDiacriticsScript);

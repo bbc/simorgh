@@ -3,7 +3,6 @@ import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import latinWithDiacriticsScript from '../fontScripts/latinWithDiacritics';
 import helmetFontVariants from '../fontVariants/helmet';
 import withThemeProvider from '../withThemeProvider';
-import brandSVG from '../chameleonLogos/vietnamese';
 
 export const theme: ServiceTheme = {
   palette: {
@@ -18,7 +17,6 @@ export const theme: ServiceTheme = {
     fontVariants: helmetFontVariants,
     fontFaces: [],
   },
-  brandSVG,
 };
 
 export default withThemeProvider(theme);

@@ -63,7 +63,7 @@ export const TopicTags = ({ tags, experimentProps }: TopicTagsProps) => {
   if (tags?.length === 0) return null;
 
   const getTopicPageUrl = (id: string) => {
-    const isPublicService = ['news', 'cymrufyw', 'naidheachdan'];
+    const isPublicService = ['news'];
     const hostname = `https://www.bbc.${isPublicService.includes(service) ? 'co.uk' : 'com'}`;
     const topicsPath = translations?.topicsPath ?? 'topics';
 

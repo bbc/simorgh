@@ -9,7 +9,6 @@ import {
 } from '../fontFaces';
 import withThemeProvider from '../withThemeProvider';
 import reithVariants from '../fontVariants/reith';
-import brandSVG from '../chameleonLogos/mundo';
 
 export const theme: ServiceTheme = {
   palette: {
@@ -29,7 +28,6 @@ export const theme: ServiceTheme = {
     ],
     fontVariants: reithVariants,
   },
-  brandSVG,
 };
 
 export default withThemeProvider(theme);

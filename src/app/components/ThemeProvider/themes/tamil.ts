@@ -4,7 +4,6 @@ import tamilScript from '../fontScripts/tamil';
 import { NOTO_SANS_TAMIL_BOLD, NOTO_SANS_TAMIL_REGULAR } from '../fontFaces';
 import tamilFontVariants from '../fontVariants/tamil';
 import withThemeProvider from '../withThemeProvider';
-import brandSVG from '../chameleonLogos/tamil';
 
 export const theme: ServiceTheme = {
   palette: {
@@ -19,7 +18,6 @@ export const theme: ServiceTheme = {
     fontVariants: tamilFontVariants,
     fontFaces: [NOTO_SANS_TAMIL_REGULAR, NOTO_SANS_TAMIL_BOLD],
   },
-  brandSVG,
 };
 
 export default withThemeProvider(theme);

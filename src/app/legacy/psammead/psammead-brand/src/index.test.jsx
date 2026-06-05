@@ -4,19 +4,6 @@ import { POSTBOX, WHITE } from '../../../../components/ThemeProvider/palette';
 import { render } from '../../../../components/react-testing-library-with-providers';
 import Brand from '.';
 
-const svg = {
-  group: (
-    <g fillRule="evenodd">
-      <path d="M84.32" />
-    </g>
-  ),
-  viewbox: {
-    height: 24,
-    width: 167.95,
-  },
-  ratio: 6.9979,
-};
-
 describe('Brand', () => {
   suppressPropWarnings(['linkId', 'StyledBrand', 'null']);
   suppressPropWarnings(['linkId', 'LocalisedBrandName', 'null']);
@@ -29,7 +16,7 @@ describe('Brand', () => {
         svgHeight={24}
         maxWidth={280}
         minWidth={180}
-        svg={svg}
+        svg="/news/images/brandLogo.svg"
         url="https://www.bbc.co.uk/news"
         backgroundColour={POSTBOX}
         logoColour={WHITE}
@@ -43,7 +30,7 @@ describe('Brand', () => {
       <Brand
         product="Default Brand Name"
         serviceLocalisedName="Service"
-        svg={svg}
+        svg="/news/images/brandLogo.svg"
         svgHeight={24}
         maxWidth={280}
         minWidth={180}
@@ -58,7 +45,7 @@ describe('Brand', () => {
     const { container } = render(
       <Brand
         product="BBC News"
-        svg={svg}
+        svg="/news/images/brandLogo.svg"
         svgHeight={24}
         maxWidth={280}
         minWidth={180}
@@ -78,7 +65,7 @@ describe('Brand', () => {
           svgHeight={24}
           maxWidth={280}
           minWidth={180}
-          svg={svg}
+          svg="/news/images/brandLogo.svg"
           url="https://www.bbc.co.uk/news"
           backgroundColour={POSTBOX}
           logoColour={WHITE}
@@ -97,7 +84,7 @@ describe('Brand', () => {
           svgHeight={24}
           maxWidth={280}
           minWidth={180}
-          svg={svg}
+          svg="/news/images/brandLogo.svg"
           url="https://www.bbc.co.uk/news"
           backgroundColour={POSTBOX}
           logoColour={WHITE}
@@ -114,7 +101,7 @@ describe('Brand', () => {
           svgHeight={24}
           maxWidth={280}
           minWidth={180}
-          svg={svg}
+          svg="/news/images/brandLogo.svg"
           url="https://www.bbc.co.uk/news"
           backgroundColour={POSTBOX}
           logoColour={WHITE}
@@ -141,7 +128,7 @@ describe('Brand', () => {
             svgHeight={24}
             maxWidth={280}
             minWidth={180}
-            svg={svg}
+            svg="/news/images/brandLogo.svg"
             url="https://www.bbc.co.uk/news"
             backgroundColour={POSTBOX}
             logoColour={WHITE}
@@ -162,7 +149,7 @@ describe('Brand', () => {
       const { container } = render(
         <Brand
           product="BBC News"
-          svg={svg}
+          svg="/news/images/brandLogo.svg"
           url="https://www.bbc.co.uk/news"
           svgHeight={24}
           maxWidth={280}

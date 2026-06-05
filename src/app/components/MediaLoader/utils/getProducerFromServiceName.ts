@@ -10,9 +10,6 @@ const getProducerFromServiceName = (serviceName: string | null) => {
     zhongwen: 'CHINESE',
     ukchina: 'UK_CHINA',
     afaanoromoo: 'AFAAN_OROMOO',
-    cymrufyw: 'WALES',
-    newyddion: 'WALES',
-    naidheachdan: 'SCOTLAND',
   }[serviceName.toLowerCase()];
 
   return replacementProducerName || serviceName.toUpperCase();

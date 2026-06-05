@@ -18,11 +18,9 @@ import {
 import { theme as afrique, pwaTheme as afriquePWA } from '../themes/afrique';
 import { theme as amharic } from '../themes/amharic';
 import { theme as arabic } from '../themes/arabic';
-import { theme as archive } from '../themes/archive';
 import { theme as azeri, pwaTheme as azeriPWA } from '../themes/azeri';
 import { theme as bengali } from '../themes/bengali';
 import { theme as burmese } from '../themes/burmese';
-import { theme as cymrufyw } from '../themes/cymrufyw';
 import { theme as dari } from '../themes/dari';
 import { theme as gahuza, pwaTheme as gahuzaPWA } from '../themes/gahuza';
 import { theme as gujarati } from '../themes/gujarati';
@@ -39,10 +37,8 @@ import { theme as kyrgyz, pwaTheme as kyrgyzPWA } from '../themes/kyrgyz';
 import { theme as magyarul } from '../themes/magyarul';
 import { theme as marathi } from '../themes/marathi';
 import { theme as mundo } from '../themes/mundo';
-import { theme as naidheachdan } from '../themes/naidheachdan';
 import { theme as nepali } from '../themes/nepali';
 import { theme as news } from '../themes/news';
-import { theme as newsround } from '../themes/newsround';
 import { theme as pashto } from '../themes/pashto';
 import { theme as persian } from '../themes/persian';
 import { theme as pidgin, pwaTheme as pidginPWA } from '../themes/pidgin';
@@ -51,7 +47,6 @@ import { theme as portuguese } from '../themes/portuguese';
 import { theme as punjabi } from '../themes/punjabi';
 import { theme as romania } from '../themes/romania';
 import { theme as russian } from '../themes/russian';
-import { theme as scotland } from '../themes/scotland';
 import {
   theme as serbianCyr,
   pwaTheme as serbianCyrPWA,
@@ -62,7 +57,6 @@ import {
 } from '../themes/serbian/lat';
 import { theme as sinhala } from '../themes/sinhala';
 import { theme as somali, pwaTheme as somaliPWA } from '../themes/somali';
-import { theme as sport } from '../themes/sport';
 import { theme as swahili, pwaTheme as swahiliPWA } from '../themes/swahili';
 import { theme as tamil } from '../themes/tamil';
 import { theme as telugu } from '../themes/telugu';
@@ -108,11 +102,9 @@ const themesNoVariants: ServiceThemeWithNoVariant = {
   afrique,
   amharic,
   arabic,
-  archive,
   azeri,
   bengali,
   burmese,
-  cymrufyw,
   dari,
   gahuza,
   gujarati,
@@ -126,10 +118,8 @@ const themesNoVariants: ServiceThemeWithNoVariant = {
   magyarul,
   marathi,
   mundo,
-  naidheachdan,
   nepali,
   news,
-  newsround,
   pashto,
   persian,
   pidgin,
@@ -138,10 +128,8 @@ const themesNoVariants: ServiceThemeWithNoVariant = {
   punjabi,
   romania,
   russian,
-  scotland,
   sinhala,
   somali,
-  sport,
   swahili,
   tamil,
   telugu,

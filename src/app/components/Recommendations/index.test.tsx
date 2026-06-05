@@ -42,13 +42,4 @@ describe('Recommendations', () => {
     const listEl = document.querySelector('ul');
     expect(listEl).not.toBeInTheDocument();
   });
-
-  it('should not render recommendations for a service that has Most Read disabled', () => {
-    render(<Recommendations data={recommendationsFixtures} />, {
-      service: 'cymrufyw',
-    });
-
-    const listEl = document.querySelector('ul');
-    expect(listEl).not.toBeInTheDocument();
-  });
 });

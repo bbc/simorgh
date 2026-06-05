@@ -7,9 +7,6 @@ describe('getProducerFromServiceName', () => {
       ['MUNDO', 'MUNDO'],
       ['indonesia', 'INDONESIAN'],
       ['turkce', 'TURKISH'],
-      ['cymrufyw', 'WALES'],
-      ['newyddion', 'WALES'],
-      ['naidheachdan', 'SCOTLAND'],
       [null, ''],
     ];
 

@@ -10,6 +10,7 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
+import Image from '#app/components/Image';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 
 const SVG_WRAPPER_MAX_WIDTH_ABOVE_1280PX = '63rem';
@@ -76,27 +77,6 @@ const StyledLink = styled.a`
   }
 `;
 
-// `currentColor` has been used to address high contrast mode in Firefox.
-const BrandSvg = styled.svg`
-  box-sizing: content-box;
-  color: ${props => props.theme.palette.BRAND_LOGO};
-  fill: currentColor;
-  height: ${20 / 16}rem;
-  max-width: 100%;
-
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    height: ${24 / 16}rem;
-  }
-
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    height: ${30 / 16}rem;
-  }
-
-  @media screen and (-ms-high-contrast: active), print {
-    fill: windowText;
-  }
-`;
-
 const LocalisedBrandName = ({
   linkId = null,
   product,
@@ -115,24 +95,31 @@ const LocalisedBrandName = ({
   );
 };
 
-const StyledBrand = ({ linkId, product, serviceLocalisedName = null, svg }) => {
+const StyledBrand = ({
+  linkId,
+  product,
+  aspectRatio,
+  serviceLocalisedName = null,
+  svg,
+}) => {
   return svg ? (
     <>
-      <BrandSvg
-        id={linkId !== 'footer' ? 'brandSvgHeader' : 'brandSvgFooter'}
-        viewBox={[
-          svg.viewbox.minX || 0,
-          svg.viewbox.minY || 0,
-          svg.viewbox.width,
-          svg.viewbox.height,
-        ].join(' ')}
-        xmlns="http://www.w3.org/2000/svg"
+      <Image
+        preload={linkId !== 'footer'}
+        fetchPriority={linkId !== 'footer' ? 'high' : 'low'}
+        lazyLoad={linkId === 'footer'}
+        src={svg}
+        alt={product}
         focusable="false"
         aria-hidden="true"
-        height="32"
-      >
-        {svg.group}
-      </BrandSvg>
+        height="30"
+        width={aspectRatio ? aspectRatio[0] * (30 / aspectRatio[1]) : 0}
+        style={{ marginLeft: '0.5px' }}
+        imageSrcSet={false}
+        isSvg
+        placeholder={false}
+        aspectRatio={aspectRatio}
+      />
       <LocalisedBrandName
         linkId={linkId}
         product={product}
@@ -157,7 +144,7 @@ const Brand = forwardRef((props, ref) => {
 
   return (
     <Banner svgHeight={svgHeight} scriptLink={scriptLink} {...rest}>
-      <SvgWrapper ref={ref} className="brand-svg-wrapper">
+      <SvgWrapper ref={ref} className="brand-svg-wrapper" id={linkId !== 'footer' ? 'brandSvgHeader' : 'brandSvgFooter'}>
         {url ? (
           <StyledLink
             href={url}

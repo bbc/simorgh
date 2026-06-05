@@ -7,7 +7,6 @@ import {
 } from '../fontFaces';
 import tigrinyaFontVariants from '../fontVariants/tigrinya';
 import withThemeProvider from '../withThemeProvider';
-import brandSVG from '../chameleonLogos/tigrinya';
 
 export const theme: ServiceTheme = {
   palette: {
@@ -22,7 +21,6 @@ export const theme: ServiceTheme = {
     fontVariants: tigrinyaFontVariants,
     fontFaces: [NOTO_SANS_ETHIOPIC_REGULAR, NOTO_SANS_ETHIOPIC_BOLD],
   },
-  brandSVG,
 };
 
 export default withThemeProvider(theme);

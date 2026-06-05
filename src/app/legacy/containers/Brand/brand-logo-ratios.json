@@ -1,0 +1,242 @@
+{
+  "afaanoromoo": {
+    "width": 1420,
+    "height": 135,
+    "ratio": 10.518518518518519
+  },
+  "afrique": {
+    "width": 970,
+    "height": 135,
+    "ratio": 7.185185185185185
+  },
+  "amharic": {
+    "width": 750,
+    "height": 135,
+    "ratio": 5.555555555555555
+  },
+  "arabic": {
+    "width": 704,
+    "height": 135,
+    "ratio": 5.214814814814815
+  },
+  "azeri": {
+    "width": 1410,
+    "height": 135,
+    "ratio": 10.444444444444445
+  },
+  "bengali": {
+    "width": 790,
+    "height": 135,
+    "ratio": 5.851851851851852
+  },
+  "burmese": {
+    "width": 720,
+    "height": 135,
+    "ratio": 5.333333333333333
+  },
+  "dari": {
+    "width": 675,
+    "height": 135,
+    "ratio": 5
+  },
+  "gahuza": {
+    "width": 970,
+    "height": 135,
+    "ratio": 7.185185185185185
+  },
+  "gujarati": {
+    "width": 825,
+    "height": 145,
+    "ratio": 5.689655172413793
+  },
+  "hausa": {
+    "width": 875,
+    "height": 135,
+    "ratio": 6.481481481481482
+  },
+  "hindi": {
+    "width": 1258,
+    "height": 145,
+    "ratio": 8.675862068965516
+  },
+  "igbo": {
+    "width": 755,
+    "height": 135,
+    "ratio": 5.592592592592593
+  },
+  "indonesia": {
+    "width": 1100,
+    "height": 135,
+    "ratio": 8.148148148148149
+  },
+  "japanese": {
+    "width": 830,
+    "height": 135,
+    "ratio": 6.148148148148148
+  },
+  "korean": {
+    "width": 815,
+    "height": 135,
+    "ratio": 6.037037037037037
+  },
+  "kyrgyz": {
+    "width": 1550,
+    "height": 135,
+    "ratio": 11.481481481481481
+  },
+  "magyarul": {
+    "width": 1095,
+    "height": 135,
+    "ratio": 8.11111111111111
+  },
+  "marathi": {
+    "width": 745,
+    "height": 135,
+    "ratio": 5.518518518518518
+  },
+  "mundo": {
+    "width": 910,
+    "height": 135,
+    "ratio": 6.7407407407407405
+  },
+  "nepali": {
+    "width": 770,
+    "height": 135,
+    "ratio": 5.703703703703703
+  },
+  "news": {
+    "width": 980,
+    "height": 142,
+    "ratio": 6.901408450704225
+  },
+  "pashto": {
+    "width": 740,
+    "height": 135,
+    "ratio": 5.481481481481482
+  },
+  "persian": {
+    "width": 785,
+    "height": 150,
+    "ratio": 5.233333333333333
+  },
+  "pidgin": {
+    "width": 850,
+    "height": 135,
+    "ratio": 6.296296296296297
+  },
+  "polska": {
+    "width": 930,
+    "height": 135,
+    "ratio": 6.888888888888889
+  },
+  "portuguese": {
+    "width": 870,
+    "height": 135,
+    "ratio": 6.444444444444445
+  },
+  "punjabi": {
+    "width": 770,
+    "height": 135,
+    "ratio": 5.703703703703703
+  },
+  "romania": {
+    "width": 290,
+    "height": 40,
+    "ratio": 7.25
+  },
+  "russian": {
+    "width": 1525,
+    "height": 135,
+    "ratio": 11.296296296296296
+  },
+  "serbian": {
+    "width": 1200,
+    "height": 135,
+    "ratio": 8.88888888888889
+  },
+  "sinhala": {
+    "width": 830,
+    "height": 135,
+    "ratio": 6.148148148148148
+  },
+  "somali": {
+    "width": 905,
+    "height": 135,
+    "ratio": 6.703703703703703
+  },
+  "sport": {
+    "width": 1043,
+    "height": 145,
+    "ratio": 7.1931034482758625
+  },
+  "swahili": {
+    "width": 935,
+    "height": 135,
+    "ratio": 6.925925925925926
+  },
+  "tamil": {
+    "width": 780,
+    "height": 135,
+    "ratio": 5.777777777777778
+  },
+  "telugu": {
+    "width": 825,
+    "height": 135,
+    "ratio": 6.111111111111111
+  },
+  "thai": {
+    "width": 675,
+    "height": 135,
+    "ratio": 5
+  },
+  "tigrinya": {
+    "width": 755,
+    "height": 135,
+    "ratio": 5.592592592592593
+  },
+  "turkce": {
+    "width": 925,
+    "height": 135,
+    "ratio": 6.851851851851852
+  },
+  "ukchina": {
+    "width": 680,
+    "height": 135,
+    "ratio": 5.037037037037037
+  },
+  "ukrainian": {
+    "width": 990,
+    "height": 135,
+    "ratio": 7.333333333333333
+  },
+  "urdu": {
+    "width": 670,
+    "height": 145,
+    "ratio": 4.620689655172414
+  },
+  "uzbek": {
+    "width": 892,
+    "height": 135,
+    "ratio": 6.607407407407408
+  },
+  "vietnamese": {
+    "width": 1100,
+    "height": 135,
+    "ratio": 8.148148148148149
+  },
+  "ws": {
+    "width": 1940,
+    "height": 145,
+    "ratio": 13.379310344827585
+  },
+  "yoruba": {
+    "width": 957,
+    "height": 135,
+    "ratio": 7.088888888888889
+  },
+  "zhongwen": {
+    "width": 680,
+    "height": 135,
+    "ratio": 5.037037037037037
+  }
+}

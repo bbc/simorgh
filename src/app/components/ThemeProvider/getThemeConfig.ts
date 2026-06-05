@@ -129,18 +129,16 @@ import {
 
 import gridWidths from './gridWidths';
 
-import { BrandPalette, Typography, BrandSVG } from '../../models/types/theming';
+import { BrandPalette, Typography } from '../../models/types/theming';
 
 export default ({
   typography,
-  brandSVG,
   palette,
   isLite,
   isDarkUi,
 }: {
   typography: Typography;
   palette: BrandPalette;
-  brandSVG: BrandSVG;
   isLite: boolean;
   isDarkUi: boolean;
   usePWATypography?: boolean;
@@ -286,7 +284,6 @@ export default ({
       QUINTUPLE,
       SEXTUPLE,
     },
-    brandSVG,
     gridWidths,
     isLite,
     isDarkUi,

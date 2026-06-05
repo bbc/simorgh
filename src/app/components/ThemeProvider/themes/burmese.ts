@@ -3,7 +3,6 @@ import burmeseScript from '../fontScripts/burmese';
 import { PADAUK_BOLD, PADAUK_REGULAR } from '../fontFaces';
 import burmeseFontVariants from '../fontVariants/burmese';
 import withThemeProvider from '../withThemeProvider';
-import brandSVG from '../chameleonLogos/burmese';
 
 export const theme = {
   palette: {
@@ -18,7 +17,6 @@ export const theme = {
     fontVariants: burmeseFontVariants,
     fontFaces: [PADAUK_BOLD, PADAUK_REGULAR],
   },
-  brandSVG,
 };
 
 export default withThemeProvider(theme);

@@ -29,7 +29,6 @@ describe('extractServiceFromUrl', () => {
         expected: 'mundo',
       },
       { url: 'https://www.bbc.com/news', expected: 'news' },
-      { url: 'https://www.bbc.com/sport', expected: 'sport' },
       {
         url: 'https://www.bbc.com/vietnamese/articles/cpgqngyexq7o',
         expected: 'vietnamese',

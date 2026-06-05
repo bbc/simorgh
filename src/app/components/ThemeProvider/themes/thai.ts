@@ -3,7 +3,6 @@ import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import thaiScript from '../fontScripts/thai';
 import thaiFontVariants from '../fontVariants/thai';
 import withThemeProvider from '../withThemeProvider';
-import brandSVG from '../chameleonLogos/thai';
 
 export const theme: ServiceTheme = {
   palette: {
@@ -18,7 +17,6 @@ export const theme: ServiceTheme = {
     fontVariants: thaiFontVariants,
     fontFaces: [],
   },
-  brandSVG,
 };
 
 export default withThemeProvider(theme);

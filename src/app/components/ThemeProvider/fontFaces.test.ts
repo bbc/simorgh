@@ -173,20 +173,13 @@ describe('Font Faces', () => {
     );
 
     it.each([
-      'archive',
-      'cymrufyw',
       'magyarul',
       'mundo',
-      'naidheachdan',
-      'news',
-      'newsround',
       'mundo',
       'polska',
       'portuguese',
       'romania',
       'russian',
-      'scotland',
-      'sport',
       'turkce',
       'ws',
     ] as Services[])('returns Reith fonts for %s', service => {

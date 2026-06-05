@@ -3,7 +3,6 @@ import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import devanagariScript from '../fontScripts/devanagari';
 import hindiFontVariants from '../fontVariants/hindi';
 import withThemeProvider from '../withThemeProvider';
-import brandSVG from '../chameleonLogos/hindi';
 
 export const theme: ServiceTheme = {
   palette: {
@@ -18,7 +17,6 @@ export const theme: ServiceTheme = {
     fontVariants: hindiFontVariants,
     fontFaces: [],
   },
-  brandSVG,
 };
 
 export default withThemeProvider(theme);

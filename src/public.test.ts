@@ -14,15 +14,7 @@ const listFiles = async ({
   suffix?: string;
 }) => readdir(resolve(`./public/${service}${suffix}`));
 
-const PUBLIC_SERVICES = [
-  'archive',
-  'cymrufyw',
-  'news',
-  'newsround',
-  'naidheachdan',
-  'scotland',
-  'sport',
-];
+const PUBLIC_SERVICES = ['news'];
 
 const iconNames = [
   'icon-72x72.png',

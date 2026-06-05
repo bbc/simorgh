@@ -250,36 +250,6 @@ describe('LinkedData', () => {
     expect(getLinkedDataOutput()).toMatchSnapshot();
   });
 
-  it('should correctly render linked data for article pages for service with no trust project markup', () => {
-    render(
-      <Context service="scotland">
-        <LinkedData {...propsForArticle} />
-      </Context>,
-    );
-
-    expect(getLinkedDataOutput()).toMatchSnapshot();
-  });
-
-  it('should correctly render publisherLogo for news', () => {
-    render(
-      <Context>
-        <LinkedData {...propsForArticle} />
-      </Context>,
-    );
-
-    expect(getLinkedDataOutput()).toMatchSnapshot();
-  });
-
-  it('should correctly render publisherLogo for sport', () => {
-    render(
-      <Context service="sport">
-        <LinkedData {...propsForArticle} />
-      </Context>,
-    );
-
-    expect(getLinkedDataOutput()).toMatchSnapshot();
-  });
-
   it('should correctly render publisherLogo for non-news services', () => {
     render(
       <Context service="mundo">

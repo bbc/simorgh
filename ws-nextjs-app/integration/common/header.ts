@@ -11,11 +11,11 @@ export default service => {
 
       expect(logo).toBeInTheDocument();
 
-      const parentElement = logo?.parentNode as Element | null;
+      const logoImg = logo?.querySelector('img');
 
-      expect(parentElement).toBeTruthy();
+      expect(logoImg).toBeTruthy();
 
-      if (!logo || !parentElement) return;
+      if (!logo || !logoImg) return;
 
       const brandingLink =
         document.getElementById('topPage') ||
@@ -28,7 +28,7 @@ export default service => {
 
       expect(brandingTextElement?.textContent).toBeTruthy();
 
-      const svg = logo.querySelector('g path');
+      const svg = logoImg.getAttribute('src');
       const brandText = brandingTextElement?.textContent ?? '';
 
       expect({
@@ -46,7 +46,7 @@ export default service => {
       });
     }
 
-    if (service !== 'scotland') {
+    if (service !== 'scotland' && !SERVICES_WITH_NEW_NAV.includes(service)) {
       describe('Navigation link', () => {
         const navList = document.querySelector('header nav [role="list"]');
         const navigationLinks = Array.from(

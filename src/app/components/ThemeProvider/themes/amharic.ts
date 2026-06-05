@@ -7,7 +7,6 @@ import {
 } from '../fontFaces';
 import amharicFontVariants from '../fontVariants/amharic';
 import withThemeProvider from '../withThemeProvider';
-import brandSVG from '../chameleonLogos/amharic';
 
 export const theme: ServiceTheme = {
   palette: {
@@ -22,7 +21,6 @@ export const theme: ServiceTheme = {
     fontVariants: amharicFontVariants,
     fontFaces: [NOTO_SANS_ETHIOPIC_REGULAR, NOTO_SANS_ETHIOPIC_BOLD],
   },
-  brandSVG,
 };
 
 export default withThemeProvider(theme);
