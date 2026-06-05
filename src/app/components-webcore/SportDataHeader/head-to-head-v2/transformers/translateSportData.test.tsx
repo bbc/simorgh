@@ -608,31 +608,63 @@ describe('TranslateSportData', () => {
       });
     });
 
-    it('should update grouped actions with non western service numerals for applicable service', () => {
+    it('should translate minutes in grouped actions with non western service numerals for applicable service', () => {
       const result = translateSportData(
         fixtureDataDefault,
         persianServiceConfig.default.translations,
         'persian',
       );
       const expectedGroupActions = [
-        [
-          {
-            awayTeamActions: ["Y. Tielemans (۴۴', ۹۰'+۴)", "E. Buendía (۵۱')"],
-            groupName: { fullName: 'پاس گل', shortName: 'پاس گل' },
-            homeTeamActions: ["J. Lucumí (۹۰')"],
-          },
-        ],
+        {
+          awayTeamActions: ["Y. Tielemans (۴۴', ۹۰'+۴)", "E. Buendía (۵۱')"],
+          groupName: { fullName: 'پاس گل', shortName: 'پاس گل' },
+          homeTeamActions: ["J. Lucumí (۹۰')"],
+        },
       ];
       expect(result.groupedActions).toStrictEqual(expectedGroupActions);
     });
 
-    it('should return grouped actions unchanged for services with western numerals', () => {
+    it('should not translate minutes in grouped actions for services with western numerals', () => {
       const result = translateSportData(
         fixtureDataDefault,
         translationsWithMissingTranslations,
         'afrique',
       );
       expect(result.groupedActions).toStrictEqual(result.groupedActions);
+    });
+
+    it('should return teamAccessibleActions unchanged', () => {
+      const fixtureDataWithAccessibleActions = {
+        ...fixtureDataDefault,
+        groupedActions: [
+          {
+            groupName: {
+              fullName: 'Assists',
+              shortName: 'Assists',
+            },
+            homeTeamActions: [],
+            homeTeamAccessibleActions: [],
+            awayTeamActions: ["L. Trossard (6')"],
+            awayTeamAccessibleActions: ['L. Trossard (6 minutes)'],
+          },
+        ],
+      };
+
+      const result = translateSportData(
+        fixtureDataWithAccessibleActions,
+        persianServiceConfig.default.translations,
+        'persian',
+      );
+      const expectedGroupActions = [
+        {
+          awayTeamAccessibleActions: ['L. Trossard (6 minutes)'],
+          awayTeamActions: ["L. Trossard (۶')"],
+          groupName: { fullName: 'پاس گل', shortName: 'پاس گل' },
+          homeTeamAccessibleActions: [],
+          homeTeamActions: [],
+        },
+      ];
+      expect(result.groupedActions).toStrictEqual(expectedGroupActions);
     });
   });
 });

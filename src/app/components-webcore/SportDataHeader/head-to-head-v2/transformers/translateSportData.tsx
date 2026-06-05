@@ -7,20 +7,21 @@ import { HeadToHeadV2Data, Team } from '../types';
 const translateDigits = (value: string, numerals: string[]) =>
   value.replace(/\d/g, digit => numerals[Number(digit)] ?? digit);
 
-const translateObject = <T,>(obj: T, numerals: string[]): T => {
+// Recursively translates minute labels within grouped actions, which can be nested objects or arrays
+const translateGroupActionMinutes = <T,>(obj: T, numerals: string[]): T => {
   if (typeof obj === 'string') {
     return translateDigits(obj, numerals) as T;
   }
 
   if (Array.isArray(obj)) {
-    return obj.map(item => translateObject(item, numerals)) as T;
+    return obj.map(item => translateGroupActionMinutes(item, numerals)) as T;
   }
 
   if (obj && typeof obj === 'object') {
     return Object.fromEntries(
       Object.entries(obj).map(([key, value]) => [
         key,
-        translateObject(value, numerals),
+        translateGroupActionMinutes(value, numerals),
       ]),
     ) as T;
   }
@@ -224,20 +225,14 @@ const translateSportData = (
         shortName: translatedGroupName,
       },
       ...(shouldTranslateMinutes && {
-        homeTeamActions: translateObject(group.homeTeamActions, numerals),
-        awayTeamActions: translateObject(group.awayTeamActions, numerals),
-        ...(group.homeTeamAccessibleActions && {
-          homeTeamAccessibleActions: translateObject(
-            group.homeTeamAccessibleActions,
-            numerals,
-          ),
-        }),
-        ...(group.awayTeamAccessibleActions && {
-          awayTeamAccessibleActions: translateObject(
-            group.awayTeamAccessibleActions,
-            numerals,
-          ),
-        }),
+        homeTeamActions: translateGroupActionMinutes(
+          group.homeTeamActions,
+          numerals,
+        ),
+        awayTeamActions: translateGroupActionMinutes(
+          group.awayTeamActions,
+          numerals,
+        ),
       }),
     };
   });
