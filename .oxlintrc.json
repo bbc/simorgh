@@ -1,11 +1,6 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": [
-    "react",
-    "typescript",
-    "import",
-    "jsx-a11y"
-  ],
+  "plugins": ["react", "typescript", "import", "jsx-a11y"],
   "jsPlugins": [
     "eslint-plugin-no-only-tests",
     "eslint-plugin-cypress",
@@ -69,7 +64,8 @@
             "caughtErrorsIgnorePattern": "^_"
           }
         ],
-        "typescript/prefer-optional-chain": "error"
+        "typescript/prefer-optional-chain": "error",
+        "import/prefer-default-export": "error"
       }
     }
   ]
