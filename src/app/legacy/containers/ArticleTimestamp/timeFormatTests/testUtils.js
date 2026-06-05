@@ -51,3 +51,22 @@ export const format = ({ datetimeLocale, timezone, fixture, altCalendar }) => {
 
   return formatted;
 };
+
+export const formatTimestamp = ({
+  datetimeLocale,
+  timezone,
+  time,
+  altCalendar,
+  dateTimeFormat = formatDateAndTime,
+}) => {
+  const dateWithTimezone = moment.tz(time, timezone).locale(datetimeLocale);
+  const formatted = dateWithTimezone.format(dateTimeFormat(datetimeLocale));
+
+  if (altCalendar) {
+    const altCalendarFormatted = altCalendar.formatDate(dateWithTimezone);
+
+    return `${altCalendarFormatted} - ${formatted}`;
+  }
+
+  return formatted;
+};

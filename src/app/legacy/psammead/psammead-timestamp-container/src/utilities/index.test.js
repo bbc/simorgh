@@ -88,6 +88,7 @@ describe('Timestamp utility functions', () => {
       expect(result).toEqual('1 January 2017');
     });
     it('should return relative timestamp if isRelative is true', () => {
+      const nowSpy = jest.spyOn(Date, 'now').mockReturnValue(1704110400000); // 1 January 2024 12:00:00 UTC
       const nineHoursAgo = timestampGenerator({ hours: 9 });
       const output = formatUnixTimestamp({
         timestamp: nineHoursAgo,
@@ -98,6 +99,7 @@ describe('Timestamp utility functions', () => {
       });
       const expectedOutput = '9 hours ago';
       expect(output).toEqual(expectedOutput);
+      nowSpy.mockRestore();
     });
 
     it('should return timestamp with format if format is provided', () => {
@@ -132,10 +134,60 @@ describe('Timestamp utility functions', () => {
       });
       expect(result).toBeUndefined();
     });
+
+    it('should correctly format timezone labels around DST start in Europe/London', () => {
+      const beforeDSTStart = Date.UTC(2021, 2, 28, 0, 30, 0); // 00:30 GMT
+      const afterDSTStart = Date.UTC(2021, 2, 28, 1, 30, 0); // 02:30 BST
+
+      expect(
+        formatUnixTimestamp({
+          timestamp: beforeDSTStart,
+          format: 'D MMMM YYYY, HH:mm z',
+          timezone,
+          locale,
+        }),
+      ).toEqual('28 March 2021, 00:30 GMT');
+
+      expect(
+        formatUnixTimestamp({
+          timestamp: afterDSTStart,
+          format: 'D MMMM YYYY, HH:mm z',
+          timezone,
+          locale,
+        }),
+      ).toEqual('28 March 2021, 02:30 BST');
+    });
+
+    it('should correctly format timezone labels around DST end in Europe/London', () => {
+      const beforeDSTEnd = Date.UTC(2021, 9, 31, 0, 30, 0); // 01:30 BST
+      const afterDSTEnd = Date.UTC(2021, 9, 31, 1, 30, 0); // 01:30 GMT
+
+      expect(
+        formatUnixTimestamp({
+          timestamp: beforeDSTEnd,
+          format: 'D MMMM YYYY, HH:mm z',
+          timezone,
+          locale,
+        }),
+      ).toEqual('31 October 2021, 01:30 BST');
+
+      expect(
+        formatUnixTimestamp({
+          timestamp: afterDSTEnd,
+          format: 'D MMMM YYYY, HH:mm z',
+          timezone,
+          locale,
+        }),
+      ).toEqual('31 October 2021, 01:30 GMT');
+    });
   });
 });
 
 describe('Moment configuration', () => {
+  afterEach(() => {
+    moment.now = () => Date.now();
+  });
+
   it('rounds down', () => {
     const wouldOtherwiseRoundUp = moment()
       .subtract(59, 'minutes')
@@ -237,6 +289,43 @@ describe('Moment configuration', () => {
       .add(5, 'days');
     // default moment configuration would return 'a month ago'
     expect(allButAYear.fromNow()).toEqual('11 months ago');
+  });
+
+  it('uses configured threshold boundaries between minutes/hours/days/months/years', () => {
+    const fixedNow = Date.UTC(2022, 6, 15, 12, 0, 0);
+    moment.now = jest.fn().mockImplementation(() => fixedNow);
+
+    const fiftyNineMinutesFiftyNineSeconds = moment(
+      fixedNow - (59 * 60 + 59) * 1000,
+    );
+    expect(fiftyNineMinutesFiftyNineSeconds.fromNow()).toEqual(
+      '59 minutes ago',
+    );
+
+    const sixtyMinutes = moment(fixedNow - 60 * 60 * 1000);
+    expect(sixtyMinutes.fromNow()).toEqual('an hour ago');
+
+    const allButOneDay = moment(
+      fixedNow - (23 * 60 * 60 + 59 * 60 + 59) * 1000,
+    );
+    expect(allButOneDay.fromNow()).toEqual('23 hours ago');
+
+    const oneDay = moment(fixedNow - 24 * 60 * 60 * 1000);
+    expect(oneDay.fromNow()).toEqual('a day ago');
+
+    const allButOneMonth = moment(
+      fixedNow - (29 * 24 * 60 * 60 + 23 * 60 * 60 + 59 * 60 + 59) * 1000,
+    );
+    expect(allButOneMonth.fromNow()).toEqual('29 days ago');
+
+    const thirtyDays = moment(fixedNow - 30 * 24 * 60 * 60 * 1000);
+    expect(thirtyDays.fromNow()).toEqual('a month ago');
+
+    const elevenMonths = moment(fixedNow).subtract(11, 'months');
+    expect(elevenMonths.fromNow()).toEqual('11 months ago');
+
+    const twelveMonths = moment(fixedNow).subtract(12, 'months');
+    expect(twelveMonths.fromNow()).toEqual('a year ago');
   });
 
   describe('formatDuration', () => {
