@@ -5,20 +5,19 @@ import styles from '../index.styles';
 import Card from './card';
 import type { PlayerActions } from '../types';
 
-const displayGoalType = (
-  goalType: string,
-  penaltiesTranslation: string,
-  ownGoalTranslation: string,
-) => {
-  if (goalType === 'Penalty') {
-    return ` ${penaltiesTranslation}`;
-  }
+const getDisplayGoalType = ({
+  penaltiesTranslation,
+  ownGoalTranslation,
+}: {
+  penaltiesTranslation: string;
+  ownGoalTranslation: string;
+}) => {
+  const goalTypeTranslations: Record<string, string> = {
+    Penalty: ` ${penaltiesTranslation}`,
+    'Own Goal': ` ${ownGoalTranslation}`,
+  };
 
-  if (goalType === 'Own Goal') {
-    return ` ${ownGoalTranslation}`;
-  }
-
-  return '';
+  return (goalType: string) => goalTypeTranslations[goalType] || '';
 };
 
 interface ActionsTimeProps {
@@ -29,12 +28,16 @@ const ActionsTime = ({ player }: ActionsTimeProps) => {
   const { translations } = use(ServiceContext);
   const penaltiesTranslation =
     translations?.sport?.penaltyAbbreviation || 'pen';
-
   const ownGoalTranslation = translations?.sport?.ownGoal || 'og';
+
+  const displayGoalType = getDisplayGoalType({
+    penaltiesTranslation,
+    ownGoalTranslation,
+  });
 
   const times = player.actions.map(
     action =>
-      `${action.timeLabel.translated || action.timeLabel.value}${displayGoalType(action.type, penaltiesTranslation, ownGoalTranslation)}`,
+      `${action.timeLabel.translated || action.timeLabel.value}${displayGoalType(action.type)}`,
   );
   const timesAccessible = player.actions
     .map(
