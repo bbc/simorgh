@@ -30,7 +30,7 @@ export default {
   headerBrand: ({ mq, spacings }: Theme) =>
     css({
       minHeight: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
-
+      zIndex: 999,
       [mq.GROUP_1_MIN_WIDTH]: {
         minHeight: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
       },
@@ -84,6 +84,7 @@ export default {
     }),
   toggleContainer: () =>
     css({
+      position: 'relative',
       display: 'flex',
       flexDirection: 'row-reverse',
     }),

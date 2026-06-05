@@ -167,7 +167,7 @@ export default {
       top: '100%',
       left: '0',
       width: '100%',
-      zIndex: 99999,
+      zIndex: 99,
 
       borderBottom: `${pixelsToRem(3)}rem solid ${palette.POSTBOX}`,
 
