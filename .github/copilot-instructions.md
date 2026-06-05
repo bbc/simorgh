@@ -52,3 +52,6 @@ description: "General guide for Simorgh"
 - Do not assume one default service behavior applies globally; call out service impact in PR notes.
 - Update `AGENTS.md` when you discover non-obvious pitfalls for future agents.
 - If committing with Copilot-authored changes, append `[copilot]` to commit messages.
+
+## Instruction Updates
+- Do automatically update any instructions and READ_MEs when you notice any relevant changes. 
