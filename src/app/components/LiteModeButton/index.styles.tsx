@@ -4,7 +4,6 @@ import { focusIndicatorThickness } from '../ThemeProvider/focusIndicator';
 
 const BORDER_WIDTH = pixelsToRem(1);
 const SWITCH_MIN_WDITH = '2.7rem';
-const DIALOGUE_POINTER_WIDTH = '0.25rem';
 const DIALOGUE_WIDTH = '15rem';
 
 export default {
@@ -77,9 +76,9 @@ export default {
         '&::after': {
           content: '""',
           position: 'absolute',
-          borderLeft: `${DIALOGUE_POINTER_WIDTH}  solid transparent`,
-          borderRight: `${DIALOGUE_POINTER_WIDTH}  solid transparent`,
-          borderBottom: `${DIALOGUE_POINTER_WIDTH} solid ${palette.WHITE}`,
+          borderLeft: `${spacings.HALF}rem solid transparent`,
+          borderRight: `${spacings.HALF}rem solid transparent`,
+          borderBottom: `${spacings.HALF}rem solid ${palette.WHITE}`,
           top: '100%',
           left: '50%',
           transform: 'translateX(-50%)',

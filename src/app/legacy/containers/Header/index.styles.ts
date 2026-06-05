@@ -88,4 +88,11 @@ export default {
       display: 'flex',
       flexDirection: 'row-reverse',
     }),
+  removeLiteSiteOnboarding: ({ mq }: Theme) =>
+    css({
+      [mq.GROUP_3_MIN_WIDTH]: {
+        display: 'block',
+      },
+      display: 'none',
+    }),
 };

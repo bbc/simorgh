@@ -3,8 +3,8 @@ import { RequestContext } from '#app/contexts/RequestContext';
 import { AUDIO_PAGE, MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { PageTypes } from '#app/models/types/global';
-import CallToActionLink from '../CallToActionLink';
-import style from './index.styles';
+import CallToActionLink from '../../CallToActionLink';
+import style from '../index.styles';
 
 const ignoreList = [MEDIA_ARTICLE_PAGE, AUDIO_PAGE] as PageTypes[];
 
