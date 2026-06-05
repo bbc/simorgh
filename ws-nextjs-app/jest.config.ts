@@ -69,6 +69,7 @@ export default async (): Promise<Config> => {
       '**/__tests__/**/*.{js,jsx,ts,tsx}',
       '**/?(*.)+(spec|test).{js,jsx,ts,tsx}',
       '!**/integration/!(utils)/**/*',
+      '!**/playwright/**/*',
     ],
   });
 
