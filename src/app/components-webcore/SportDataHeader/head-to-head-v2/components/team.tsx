@@ -10,6 +10,7 @@ interface TeamProps {
   isConciseView: boolean;
   imageUrl: string | null;
   urn: string;
+  hideBadges?: boolean;
 }
 
 const Team = ({
@@ -19,12 +20,13 @@ const Team = ({
   isConciseView,
   imageUrl,
   urn,
+  hideBadges,
 }: TeamProps) => {
   const size: BadgeSize = isConciseView
     ? { small: 20, medium: 24, large: 24 }
     : { small: 40, medium: 44, large: 44 };
 
-  const shouldHideBadges = !imageUrl;
+  const shouldHideBadges = hideBadges || !imageUrl;
 
   if (alignment === 'home') {
     return (

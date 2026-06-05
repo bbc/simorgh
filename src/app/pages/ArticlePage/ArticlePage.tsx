@@ -420,8 +420,7 @@ const ArticlePage = ({
     (showTopicDiscoveryComponent ||
       topicDiscoveryVariant === 'topic_discovery') &&
     !isAmp &&
-    !isLite &&
-    !isLive();
+    !isLite;
 
   const showRelatedTopicsComponent = Boolean(
     showRelatedTopics && topics.length > 0 && !showTopicDiscovery,
