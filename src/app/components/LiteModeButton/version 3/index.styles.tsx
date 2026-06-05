@@ -6,16 +6,23 @@ const SWITCH_BORDER_PADDING = pixelsToRem(2);
 const SWITCH_MIN_WDITH = '2.7rem';
 
 export default {
-  container: ({ palette, spacings, mq }: Theme) =>
+  container: ({ spacings, mq }: Theme) =>
     css({
       [mq.GROUP_3_MIN_WIDTH]: {
         display: 'none',
       },
       display: 'flex',
-      background: palette.BLACK,
       padding: `${spacings.FULL}rem`,
       alignItems: 'center',
       columnGap: `${spacings.HALF}rem`,
+    }),
+  liteBackground: ({ palette }: Theme) =>
+    css({
+      background: `linear-gradient(${palette.BLACK}, ${palette.BLUEJAY});`,
+    }),
+  standardBackground: ({ palette }: Theme) =>
+    css({
+      background: `linear-gradient(${palette.BLACK}, ${palette.STORM});`,
     }),
   onboardingContainer: () =>
     css({

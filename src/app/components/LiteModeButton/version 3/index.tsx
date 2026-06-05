@@ -31,7 +31,12 @@ export default () => {
     'Lite loads a stripped back version of this page for faster loading times and lower data usage.';
 
   return (
-    <div css={style.container}>
+    <div
+      css={[
+        style.container,
+        isLite ? style.liteBackground : style.standardBackground,
+      ]}
+    >
       <div css={style.onboardingContainer}>
         {informationPageLink && (
           <CallToActionLink
