@@ -58,9 +58,10 @@ const CanonicalNavigationContainer: React.FC<
       const itemsAfterDropdown = allFocusableItems.slice(lastDropdownIndex + 1);
       const nextPageItem = itemsAfterDropdown.find(
         item =>
-          !currentTarget.contains(item) &&
+          !dropDownNavRef.current?.contains(item) &&
           !bottomScrollableNavRef.current?.contains(item),
       );
+
       if (!nextPageItem) return;
       event.preventDefault();
       setIsOpen(false);
