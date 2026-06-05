@@ -91,6 +91,8 @@ describe('useUASMetadataSync', () => {
       hasChanges: true,
     });
 
+    const mockCallback = jest.fn();
+
     renderHook(() =>
       useUASMetadataSync({
         articlePageData: mockArticlePageData,
@@ -98,11 +100,11 @@ describe('useUASMetadataSync', () => {
         service: 'hindi',
         isSaved: true,
         savedArticleMetadata: mockSavedMetadata,
-        onMetadataOutOfDate: mockOnMetadataOutOfDate,
+        onMetadataOutOfDate: mockCallback,
       }),
     );
 
-    expect(mockOnMetadataOutOfDate).toHaveBeenCalled();
+    expect(mockCallback).toHaveBeenCalled();
   });
 
   it('does not call onMetadataOutOfDate when metadata has no changes', () => {
@@ -170,6 +172,12 @@ describe('useUASMetadataSync', () => {
   });
 
   it('prevents duplicate syncs on same article load', () => {
+    mockCompareMetadataWithSaved.mockReturnValue({
+      hasChanges: true,
+    });
+
+    const stableCallback = jest.fn();
+
     const { rerender } = renderHook(() =>
       useUASMetadataSync({
         articlePageData: mockArticlePageData,
@@ -177,19 +185,27 @@ describe('useUASMetadataSync', () => {
         service: 'hindi',
         isSaved: true,
         savedArticleMetadata: mockSavedMetadata,
-        onMetadataOutOfDate: mockOnMetadataOutOfDate,
+        onMetadataOutOfDate: stableCallback,
       }),
     );
 
     expect(mockCompareMetadataWithSaved).toHaveBeenCalledTimes(1);
+    expect(stableCallback).toHaveBeenCalledTimes(1);
 
     // Rerender with same props - should not sync again due to hasSyncedRef
     rerender();
 
     expect(mockCompareMetadataWithSaved).toHaveBeenCalledTimes(1);
+    expect(stableCallback).toHaveBeenCalledTimes(1);
   });
 
   it('allows new sync when article changes', () => {
+    mockCompareMetadataWithSaved.mockReturnValue({
+      hasChanges: true,
+    });
+
+    const stableCallback = jest.fn();
+
     const { rerender } = renderHook(
       ({ articleId }: { articleId: string }) =>
         useUASMetadataSync({
@@ -198,7 +214,7 @@ describe('useUASMetadataSync', () => {
           service: 'hindi',
           isSaved: true,
           savedArticleMetadata: mockSavedMetadata,
-          onMetadataOutOfDate: mockOnMetadataOutOfDate,
+          onMetadataOutOfDate: stableCallback,
         }),
       { initialProps: { articleId: 'c123456789o' } },
     );
@@ -212,6 +228,12 @@ describe('useUASMetadataSync', () => {
   });
 
   it('resets sync state when saved state changes from true to false', () => {
+    mockCompareMetadataWithSaved.mockReturnValue({
+      hasChanges: true,
+    });
+
+    const stableCallback = jest.fn();
+
     const { rerender } = renderHook(
       ({ isSaved }: { isSaved: boolean }) =>
         useUASMetadataSync({
@@ -220,7 +242,7 @@ describe('useUASMetadataSync', () => {
           service: 'hindi',
           isSaved,
           savedArticleMetadata: mockSavedMetadata,
-          onMetadataOutOfDate: mockOnMetadataOutOfDate,
+          onMetadataOutOfDate: stableCallback,
         }),
       { initialProps: { isSaved: true } },
     );

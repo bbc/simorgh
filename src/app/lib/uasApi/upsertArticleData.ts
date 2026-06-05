@@ -16,7 +16,7 @@ interface SaveOrUpdateArticleMetadataParams {
   isRefreshAvailable: boolean;
 }
 
-const saveOrUpdateArticleMetadata = async ({
+const upsertArticleData = async ({
   articlePageData,
   articleId,
   service,
@@ -46,8 +46,7 @@ const saveOrUpdateArticleMetadata = async ({
     throw new Error(`Failed to save article metadata: ${response.status}`);
   }
 
-  // Return the metadata that was just saved to avoid an extra GET call
   return buildCurrentMetadata(articlePageData, { articleId, service });
 };
 
-export default saveOrUpdateArticleMetadata;
+export default upsertArticleData;

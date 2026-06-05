@@ -100,13 +100,13 @@ interface MetadataComparisonResult {
 /**
  * Extracts current live metadata from article page data.
  *
- * This metadata is used for comparison against what's already saved in UAS
- * to detect if updates are needed.
+ * To add a new field: add it to the returned object below.
+ * The compareMetadataWithSaved function will automatically include it.
  *
- * @param articlePageData - The current article being viewed
- * @param articleId - The article's unique identifier
- * @param service - The BBC service (e.g., 'arabic', 'portuguese')
- * @returns Object containing current metadata for all tracked fields
+ * @param articlePageData - Current article being viewed
+ * @param articleId - Article's unique identifier
+ * @param service - BBC service name (e.g., 'arabic', 'portuguese')
+ * @returns Object with tracked metadata fields
  */
 const buildCurrentMetadata = (
   articlePageData: Article,
@@ -124,13 +124,14 @@ const buildCurrentMetadata = (
 };
 
 /**
- * Compares current article metadata against saved metadata to detect changes.
+ * Compares current article metadata against saved metadata.
  *
- * Used by metadata sync system to determine if an article needs updating in UAS.
+ * Uses Ramda's whereEq for structural equality. New fields added to
+ * buildCurrentMetadata() are automatically included in comparisons.
  *
- * @param currentMetadata - Live metadata extracted from article
+ * @param currentMetadata - Live metadata from article
  * @param savedMetadata - Metadata stored in UAS
- * @returns Comparison result with hasChanges flag
+ * @returns Object with hasChanges flag
  */
 const compareMetadataWithSaved = (
   currentMetadata: Record<string, unknown>,

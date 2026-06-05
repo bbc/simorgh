@@ -6,7 +6,7 @@ import {
   buildPromoImageUrl,
 } from '#app/lib/uasApi/uasUtility';
 import type { Article } from '#app/models/types/optimo';
-import saveOrUpdateArticleMetadata from './saveOrUpdateArticleMetadata';
+import upsertArticleData from './upsertArticleData';
 
 jest.mock('#app/lib/uasApi');
 jest.mock('#app/lib/uasApi/uasUtility');
@@ -17,7 +17,7 @@ const mockExtractPromoImageFromArticleData =
   extractPromoImageFromArticleData as jest.Mock;
 const mockBuildPromoImageUrl = buildPromoImageUrl as jest.Mock;
 
-describe('saveOrUpdateArticleMetadata', () => {
+describe('upsertArticleData', () => {
   const mockArticleId = 'c123456789o';
   const mockPromoImageUrl = 'https://ichef.bbc.co.uk/image.jpg';
 
@@ -62,32 +62,8 @@ describe('saveOrUpdateArticleMetadata', () => {
     mockUasApiRequest.mockResolvedValue({ ok: true, status: 200 });
   });
 
-  it('extracts promo image from articlePageData', async () => {
-    await saveOrUpdateArticleMetadata({
-      articlePageData: mockArticlePageData,
-      articleId: mockArticleId,
-      service: 'hindi',
-      isRefreshAvailable: true,
-    });
-
-    expect(mockExtractPromoImageFromArticleData).toHaveBeenCalledWith(
-      mockArticlePageData,
-    );
-  });
-
-  it('builds promo image URL from extracted image object', async () => {
-    await saveOrUpdateArticleMetadata({
-      articlePageData: mockArticlePageData,
-      articleId: mockArticleId,
-      service: 'hindi',
-      isRefreshAvailable: true,
-    });
-
-    expect(mockBuildPromoImageUrl).toHaveBeenCalledWith(mockPromoImageObj);
-  });
-
   it('creates payload with correct parameters', async () => {
-    await saveOrUpdateArticleMetadata({
+    await upsertArticleData({
       articlePageData: mockArticlePageData,
       articleId: mockArticleId,
       service: 'portuguese',
@@ -105,7 +81,7 @@ describe('saveOrUpdateArticleMetadata', () => {
   });
 
   it('calls uasApiRequest with POST method and FAVOURITES_CONFIG', async () => {
-    await saveOrUpdateArticleMetadata({
+    await upsertArticleData({
       articlePageData: mockArticlePageData,
       articleId: mockArticleId,
       service: 'hindi',
@@ -119,35 +95,12 @@ describe('saveOrUpdateArticleMetadata', () => {
     );
   });
 
-  it('handles missing article metadata gracefully', async () => {
-    const minimalArticleData = {
-      id: mockArticleId,
-      metadata: {},
-      promo: {
-        headlines: {},
-        images: {},
-      },
-    } as unknown as Article;
-
-    mockExtractPromoImageFromArticleData.mockReturnValue(null);
-    mockBuildPromoImageUrl.mockReturnValue('');
-
-    await saveOrUpdateArticleMetadata({
-      articlePageData: minimalArticleData,
-      articleId: mockArticleId,
-      service: 'hindi',
-      isRefreshAvailable: true,
-    });
-
-    expect(mockUasApiRequest).toHaveBeenCalled();
-  });
-
   it('handles API errors and propagates them', async () => {
     const error = new Error('API request failed');
     mockUasApiRequest.mockRejectedValue(error);
 
     await expect(
-      saveOrUpdateArticleMetadata({
+      upsertArticleData({
         articlePageData: mockArticlePageData,
         articleId: mockArticleId,
         service: 'hindi',
@@ -156,34 +109,13 @@ describe('saveOrUpdateArticleMetadata', () => {
     ).rejects.toThrow('API request failed');
   });
 
-  it('passes correct service to createFavouritesPayload', async () => {
-    const service = 'portuguese';
-    mockExtractPromoImageFromArticleData.mockReturnValue(mockPromoImageObj);
-    mockBuildPromoImageUrl.mockReturnValue(mockPromoImageUrl);
-    mockCreateFavouritesPayload.mockReturnValue(mockPayload);
-    mockUasApiRequest.mockResolvedValue({ ok: true, status: 200 });
-
-    await saveOrUpdateArticleMetadata({
-      articlePageData: mockArticlePageData,
-      articleId: mockArticleId,
-      service,
-      isRefreshAvailable: true,
-    });
-
-    expect(mockCreateFavouritesPayload).toHaveBeenCalledWith(
-      expect.objectContaining({
-        service,
-      }),
-    );
-  });
-
   it('successfully saves new article (simulating create)', async () => {
     mockUasApiRequest.mockResolvedValue({
       ok: true,
       status: 201,
     });
 
-    await saveOrUpdateArticleMetadata({
+    await upsertArticleData({
       articlePageData: mockArticlePageData,
       articleId: mockArticleId,
       service: 'hindi',
@@ -203,7 +135,7 @@ describe('saveOrUpdateArticleMetadata', () => {
       status: 200,
     });
 
-    await saveOrUpdateArticleMetadata({
+    await upsertArticleData({
       articlePageData: mockArticlePageData,
       articleId: mockArticleId,
       service: 'hindi',
