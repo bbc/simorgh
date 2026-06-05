@@ -37,6 +37,7 @@ interface GetRecentActivityParams {
   itemsPerPage?: number;
   startIndex?: number;
   signal?: AbortSignal;
+  isRefreshAvailable: boolean;
 }
 
 const transformActivityToSavedArticle = (
@@ -54,16 +55,19 @@ const transformActivityToSavedArticle = (
   description: `${item?.metaData?.service || 'BBC'}`,
 });
 
-const getRecentActivity = async ({
-  itemsPerPage = 10,
-  startIndex = 0,
-  signal,
-}: GetRecentActivityParams): Promise<{
+export type RecentActivityData = {
   savedArticles: SavedArticle[];
   total: number;
   itemsPerPage: number;
   startIndex: number;
-}> => {
+};
+
+const getRecentActivity = async ({
+  itemsPerPage = 10,
+  startIndex = 0,
+  signal,
+  isRefreshAvailable,
+}: GetRecentActivityParams): Promise<RecentActivityData> => {
   try {
     const response = await uasApiRequest(
       'GET',
@@ -77,6 +81,7 @@ const getRecentActivity = async ({
           action: FAVOURITES_CONFIG.action,
         },
         signal,
+        isRefreshAvailable,
       },
     );
 

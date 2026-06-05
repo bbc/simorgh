@@ -69,37 +69,38 @@ type StoryData = HeadToHeadV2Data & {
 };
 
 interface ComponentProps {
-  data: StoryData;
+  initialSportData: StoryData;
   isConciseView?: boolean;
   shouldShowActions?: boolean;
   maximumContainerScoreDigits?: number;
-  teamBadgePlaceholderFallbackType?: 'badge' | 'flag';
 }
 
 const baseData = fixtureData.data.sportDataEventContent
   .sportDataEvent as unknown as StoryData;
 
 const Component = ({
-  data,
+  initialSportData,
   isConciseView = false,
   shouldShowActions = true,
   maximumContainerScoreDigits,
-  teamBadgePlaceholderFallbackType = 'badge',
 }: ComponentProps) => {
   return (
     <HeadToHeadV2
-      data={data}
+      initialSportData={initialSportData}
       isConciseView={isConciseView}
       shouldShowActions={shouldShowActions}
       maximumContainerScoreDigits={maximumContainerScoreDigits}
-      teamBadgePlaceholderFallbackType={teamBadgePlaceholderFallbackType}
     />
   );
 };
 
-export const Default = () => <Component data={baseData} />;
+export const Default = () => <Component initialSportData={baseData} />;
 export const ConciseView = () => (
-  <Component data={baseData} isConciseView shouldShowActions={false} />
+  <Component
+    initialSportData={baseData}
+    isConciseView
+    shouldShowActions={false}
+  />
 );
 
 export const CancelledEvent = HeadToHeadV2Component.bind({});
@@ -115,6 +116,7 @@ export const EventWithOnwardJourneyHoverConcise =
 
 // @ts-expect-error - PS copy and paste
 CancelledEvent.args = {
+  urn: 'urn:bbc:sportsdata:football:event:s-3y91hnyfjh24yxjhm77a7hy50',
   home: 'Fulham',
   away: 'Liverpool',
   baseData: cancelledEventData,

@@ -32,7 +32,7 @@ const Header = ({
   const isHeaderImage = !!imageUrl && !!imageUrlTemplate && !!imageWidth;
   const isWithImageLayout = isHeaderImage || !!mediaCollections;
   const {
-    translations: { matchSummary = 'Match Summary' },
+    translations: { sport: { matchSummary = 'Match Summary' } = {} },
   } = use(ServiceContext);
 
   const watchVideoClickHandler = () => {
@@ -81,7 +81,7 @@ const Header = ({
   }
 
   return (
-    <div css={styles.headerContainer}>
+    <div css={[styles.headerContainer, styles.headerContainerForcedColours]}>
       <div css={styles.backgroundContainer}>
         <div css={styles.backgroundColor} />
       </div>
