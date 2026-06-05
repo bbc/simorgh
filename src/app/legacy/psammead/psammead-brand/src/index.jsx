@@ -168,11 +168,13 @@ const Brand = forwardRef((props, ref) => {
     ...rest
   } = props;
 
+  const isLanguagesPageHeader = isLanguagesPage && linkId !== 'footer';
+
   return (
     <Banner
       svgHeight={svgHeight}
       scriptLink={scriptLink}
-      isLanguagesPage={isLanguagesPage}
+      isLanguagesPage={isLanguagesPageHeader}
       {...rest}
     >
       <SvgWrapper ref={ref} className="brand-svg-wrapper">
