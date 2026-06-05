@@ -405,6 +405,7 @@ export const service: DefaultServiceConfig = {
         et: 'Tiempo adicional',
         afterExtraTime: 'Después del tiempo adicional',
         penaltyAbbreviation: 'PEN',
+        ownGoal: 'gol en contra',
         venue: 'Estadio',
         attendance: 'Asistencia',
         winOnPenalties: {

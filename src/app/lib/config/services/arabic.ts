@@ -369,6 +369,7 @@ export const service: DefaultServiceConfig = {
         et: 'وقت إضافي',
         afterExtraTime: 'بعد الوقت الإضافي',
         penaltyAbbreviation: 'ر.ت.',
+        ownGoal: 'هدف عكسي',
         venue: 'الملعب',
         attendance: 'الجمهور',
         winOnPenalties: {

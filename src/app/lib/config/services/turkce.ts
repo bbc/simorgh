@@ -289,6 +289,7 @@ export const service: DefaultServiceConfig = {
         et: 'Uzatma',
         afterExtraTime: 'Uzatmalardan sonra',
         penaltyAbbreviation: 'pen',
+        ownGoal: 'kendi kalesine gol',
         venue: 'Stadyum',
         attendance: 'Seyirci sayısı',
         winOnPenalties: {

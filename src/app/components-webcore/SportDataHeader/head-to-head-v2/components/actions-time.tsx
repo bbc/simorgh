@@ -5,17 +5,17 @@ import styles from '../index.styles';
 import Card from './card';
 import type { PlayerActions } from '../types';
 
-const goalTypesHandled: Record<string, string> = {
-  'Own Goal': 'og',
-};
-
-const displayGoalType = (goalType: string, penaltiesTranslation: string) => {
+const displayGoalType = (
+  goalType: string,
+  penaltiesTranslation: string,
+  ownGoalTranslation: string,
+) => {
   if (goalType === 'Penalty') {
     return ` ${penaltiesTranslation}`;
   }
 
-  if (goalTypesHandled[goalType]) {
-    return ` ${goalTypesHandled[goalType]}`;
+  if (goalType === 'Own Goal') {
+    return ` ${ownGoalTranslation}`;
   }
 
   return '';
@@ -30,9 +30,11 @@ const ActionsTime = ({ player }: ActionsTimeProps) => {
   const penaltiesTranslation =
     translations?.sport?.penaltyAbbreviation || 'pen';
 
+  const ownGoalTranslation = translations?.sport?.ownGoal || 'og';
+
   const times = player.actions.map(
     action =>
-      `${action.timeLabel.translated || action.timeLabel.value}${displayGoalType(action.type, penaltiesTranslation)}`,
+      `${action.timeLabel.translated || action.timeLabel.value}${displayGoalType(action.type, penaltiesTranslation, ownGoalTranslation)}`,
   );
   const timesAccessible = player.actions
     .map(

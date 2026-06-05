@@ -321,6 +321,7 @@ export const service: DefaultServiceConfig = {
         et: 'Muda wa mapumziko',
         afterExtraTime: 'Baada ya muda wa nyongeza',
         penaltyAbbreviation: 'PEN',
+        ownGoal: 'bao la kujifunga',
         venue: 'Uwanja',
         attendance: 'Idadi ya watazamaji',
         winOnPenalties: {

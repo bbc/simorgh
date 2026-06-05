@@ -317,6 +317,7 @@ export const service: DefaultServiceConfig = {
         et: 'Prolongation',
         afterExtraTime: 'Après prolongation',
         penaltyAbbreviation: 'PEN',
+        ownGoal: 'but contre son camp',
         venue: 'Stade',
         attendance: 'Affluence',
         winOnPenalties: {

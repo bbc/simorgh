@@ -383,6 +383,7 @@ export const service: DefaultServiceConfig = {
         et: 'Prorrogação',
         afterExtraTime: 'Após a prorrogação',
         penaltyAbbreviation: 'PEN',
+        ownGoal: 'Gol contra',
         venue: 'Local',
         attendance: 'Público',
         winOnPenalties: {

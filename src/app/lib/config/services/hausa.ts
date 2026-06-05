@@ -390,6 +390,7 @@ export const service: DefaultServiceConfig = {
         et: 'Karin lokaci',
         afterExtraTime: 'Bayan karin lokaci',
         penaltyAbbreviation: 'FEN',
+        ownGoal: 'kwallo a ragar kai',
         venue: 'Filin wasa',
         attendance: 'Yawan ƴan kallo',
         winOnPenalties: {

@@ -249,6 +249,7 @@ export interface Translations {
     et?: string;
     afterExtraTime?: string;
     penaltyAbbreviation?: string;
+    ownGoal?: string;
     venue?: string;
     attendance?: string;
     matchSummary?: string;

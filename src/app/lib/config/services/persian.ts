@@ -398,6 +398,7 @@ export const service: DefaultServiceConfig = {
         et: 'وقت اضافه',
         afterExtraTime: 'پس از وقت اضافه',
         penaltyAbbreviation: 'پن',
+        ownGoal: 'گل به خودی',
         winOnPenalties: {
           prefix: 'با پنالتی',
           suffix: 'پیروز می‌شود',
