@@ -37,6 +37,7 @@ const ItemWrapper = ({
             shortName={data.home.shortName}
             isConciseView={isConciseView}
             imageUrl={data.home.imageSrc}
+            hideBadges={shouldHideBadges}
           />
         </div>
         <div css={styles.scores}>
@@ -53,6 +54,7 @@ const ItemWrapper = ({
             shortName={data.away.shortName}
             isConciseView={isConciseView}
             imageUrl={data.away.imageSrc}
+            hideBadges={shouldHideBadges}
           />
         </div>
         <div css={styles.matchProgressContainer}>
