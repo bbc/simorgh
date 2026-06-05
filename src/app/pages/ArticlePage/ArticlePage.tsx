@@ -60,6 +60,7 @@ import ContinueReadingButton, {
 } from '#app/components/ContinueReadingButton';
 import SaveArticleButton from '#app/components/SaveArticleButton';
 import isLive from '#lib/utilities/isLive';
+import BoilerPlateComponent from '#app/components/BoilerPlateComponent';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -502,6 +503,7 @@ const ArticlePage = ({
       <ElectionBanner aboutTags={aboutTags} taggings={taggings} />
       <div css={styles.grid}>
         <div css={!isPGL ? styles.primaryColumn : styles.pglColumn}>
+          <BoilerPlateComponent textToRender="My Fantastic Component!" />
           <main css={styles.mainContent} role="main">
             <Blocks
               blocks={articleBlocks}

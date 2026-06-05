@@ -2,6 +2,7 @@ import { Fragment, use } from 'react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import PWAPromotionalBanner from '#app/components/PWAPromotionalBanner';
 import AccountPromotionalBanner from '#app/components/Account/AccountPromotionalBanner';
+import BoilerPlateComponent from '#app/components/BoilerPlateComponent';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import {
   Curation,
@@ -63,6 +64,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
   return (
     <>
       {/* EXPERIMENT: PWA Promotional Banner */}
+
       <PWAPromotionalBanner />
       <AccountPromotionalBanner />
       <ChartbeatAnalytics title={title} />
@@ -90,6 +92,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
         </VisuallyHiddenText>
         <div css={styles.inner}>
           <div css={styles.margins}>
+            <BoilerPlateComponent textToRender="My Amazing Component for Home Pages" />
             {curations.map(
               (
                 {
