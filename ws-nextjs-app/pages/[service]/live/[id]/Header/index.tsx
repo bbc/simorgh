@@ -32,7 +32,7 @@ const Header = ({
   const isHeaderImage = !!imageUrl && !!imageUrlTemplate && !!imageWidth;
   const isWithImageLayout = isHeaderImage || !!mediaCollections;
   const {
-    translations: { matchSummary = 'Match Summary' },
+    translations: { sport: { matchSummary = 'Match Summary' } = {} },
   } = use(ServiceContext);
 
   const watchVideoClickHandler = () => {
