@@ -1,4 +1,4 @@
-import appConfig from '#src/server/utilities/serviceConfigs';
+import appConfig from '#utilities/serviceConfigs';
 import { getMostReadEndpoint } from '#lib/utilities/getUrlHelpers/getMostReadUrls';
 import { serviceNumerals } from '#app/components/MostRead/Canonical/Rank';
 import { Services } from '#app/models/types/global';
@@ -44,7 +44,7 @@ export const crossPlatform = ({
               const expectedMostReadRank = serviceNumerals(serviceID);
               cy.get('[data-e2e="most-read"]').scrollIntoView();
               cy.get('[data-e2e="most-read"]')
-                .find('li span')
+                .find('li span[data-e2e="most-read-rank"]')
                 .each(($el, index) => {
                   expect($el.text()).equal(expectedMostReadRank[index + 1]);
                 });

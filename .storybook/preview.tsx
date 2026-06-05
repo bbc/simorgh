@@ -13,7 +13,7 @@ import { EventTrackingContextProvider } from '../src/app/contexts/EventTrackingC
 import withServicesDecorator from './withServicesDecorator';
 import pageDataFixture from '../data/news/articles/c0g992jmmkko.json';
 import { RequestContextProvider } from '../src/app/contexts/RequestContext';
-import serviceConfigs from '../src/server/utilities/serviceConfigs';
+import serviceConfigs from '#utilities/serviceConfigs';
 import {
   NOTO_SANS_ETHIOPIC_BOLD,
   NOTO_SANS_ETHIOPIC_REGULAR,
@@ -36,6 +36,7 @@ import {
   REITH_SERIF_LIGHT,
   REITH_SERIF_MEDIUM,
 } from '../src/app/components/ThemeProvider/fontFaces';
+import { AccountProvider } from '#app/contexts/AccountContext';
 
 const services = Object.entries(serviceConfigs)
   .sort()
@@ -211,7 +212,7 @@ const preview: Preview = {
       );
     },
     (Story, context) => (
-      <ToggleContextProvider toggles={{}}>
+      <ToggleContextProvider toggles={context.globals.toggles || {}}>
         <ServiceContextProvider
           service={context.globals.service.service}
           variant={context.globals.service.variant}
@@ -227,14 +228,16 @@ const preview: Preview = {
               // @ts-expect-error - mock data for Storybook
               pageData={pageDataFixture}
             >
-              <UserContextProvider>
-                <ThemeProvider
-                  service={context.globals.service.service}
-                  variant={context.globals.service.variant}
-                >
-                  <Story />
-                </ThemeProvider>
-              </UserContextProvider>
+              <AccountProvider initialConfig={context.globals.idctaConfig}>
+                <UserContextProvider>
+                  <ThemeProvider
+                    service={context.globals.service.service}
+                    variant={context.globals.service.variant}
+                  >
+                    <Story />
+                  </ThemeProvider>
+                </UserContextProvider>
+              </AccountProvider>
             </EventTrackingContextProvider>
           </RequestContextProvider>
         </ServiceContextProvider>

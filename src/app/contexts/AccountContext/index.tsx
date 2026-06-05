@@ -13,6 +13,10 @@ import { RequestContext } from '#app/contexts/RequestContext';
 import onClient from '#app/lib/utilities/onClient';
 import Cookie from 'js-cookie';
 import { getIdctaUserOrigin } from '#app/lib/idcta/getIDCTAUserOrigin';
+import useToggle from '#app/hooks/useToggle';
+import isLocal from '#app/lib/utilities/isLocal';
+import { USER_ID_COOKIE_KEY } from '#app/lib/uasApi/uasUtility';
+import { TOKEN_COOKIE_NAME } from '#app/lib/uasApi/tokenRefresh/tokenManager';
 
 export const AccountContext = createContext<AccountContextProps>(
   {} as AccountContextProps,
@@ -22,8 +26,8 @@ type AccountProviderProps = {
   initialConfig: IdctaConfig | null;
 };
 
-const getSignedInCookie = (cookieName = 'ckns_id') => {
-  return onClient() ? Cookie.get(cookieName) : false;
+const getClientCookie = (cookieName: string) => {
+  return onClient() ? Cookie.get(cookieName) : undefined;
 };
 
 export const AccountProvider = ({
@@ -33,6 +37,9 @@ export const AccountProvider = ({
   const { locale, atiAnalyticsProducerName } = use(ServiceContext);
   const { isAmp = false, isApp = false, isLite = false } = use(RequestContext);
   const [pageToReturnTo, setPageToReturnTo] = useState<string | null>(null);
+  const { service } = use(ServiceContext);
+  const { enabled: isPersonalizationToggleEnabled, value: accountService } =
+    useToggle('uasPersonalization');
 
   useEffect(() => {
     setPageToReturnTo(window.location.href);
@@ -62,34 +69,54 @@ export const AccountProvider = ({
   const signOutUrl = buildAccountUrl(initialConfig?.signout_url);
   const forYouUrl = buildAccountUrl(initialConfig?.foryou_url);
 
-  // TODO: initialIsSignedIn is always false in test/live env due to filtered cookie header,
-  // it will be improved to detect signed-in status server side in the future
-  // Ticket: https://bbc.atlassian.net/browse/WS-2388
-  const clientSignedInState = getSignedInCookie(
-    initialConfig?.identity?.idSignedInCookieName,
+  const signedInToken = getClientCookie(
+    initialConfig?.identity?.idSignedInCookieName || TOKEN_COOKIE_NAME,
   );
+
+  const hashedUserId = getClientCookie(USER_ID_COOKIE_KEY);
+
   const isSignedIn =
     isIdctaAvailable &&
-    Boolean(initialConfig?.initialIsSignedIn || clientSignedInState);
+    Boolean(initialConfig?.initialIsSignedIn || signedInToken);
+
+  const isPersonalizationAvailable =
+    isIdctaAvailable &&
+    isPersonalizationToggleEnabled &&
+    (isLocal()
+      ? accountService?.toString().split('|').includes(service)
+      : true);
+
+  const isPersonalizationEnabled = isPersonalizationAvailable && isSignedIn;
+
+  const isRefreshAvailable =
+    isIdctaAvailable && initialConfig?.availability?.refresh === 'GREEN';
 
   const value = useMemo(
     () => ({
+      hashedUserId,
       isIdctaAvailable,
+      isRefreshAvailable,
       isSignedIn,
       signInUrl,
       signOutUrl,
       registerUrl,
       settingsUrl,
       forYouUrl,
+      isPersonalizationAvailable,
+      isPersonalizationEnabled,
     }),
     [
+      hashedUserId,
       forYouUrl,
       isIdctaAvailable,
+      isRefreshAvailable,
       isSignedIn,
       registerUrl,
       settingsUrl,
       signInUrl,
       signOutUrl,
+      isPersonalizationAvailable,
+      isPersonalizationEnabled,
     ],
   );
 

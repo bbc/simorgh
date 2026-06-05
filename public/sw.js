@@ -4,7 +4,7 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-restricted-globals */
 
-const version = 'v0.3.4';
+const version = 'v0.3.5';
 // Update cache name when changing caching logic / changes in offlinepage.tsx
 const cacheName = 'simorghCache_v4';
 const pwaClients = new Map();
@@ -53,7 +53,7 @@ const cacheOfflinePageAndResources = async service => {
 
 const CACHEABLE_FILES = [
   // Reverb
-  'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/reverb-3.11.0.js',
+  'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/reverb-3.12.0.js',
   // Smart Tag
   'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/smarttag-5.29.4.min.js',
   // Fonts

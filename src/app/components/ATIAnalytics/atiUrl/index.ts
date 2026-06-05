@@ -1,4 +1,3 @@
-import { getClientTimeOfDay } from '#app/legacy/containers/PageHandlers/withOptimizelyProvider/userAttributes';
 import {
   CLICK_EVENT,
   VIEW_EVENT,
@@ -18,17 +17,6 @@ import {
   ATIPageTrackingProps,
   ReverbBeaconConfig,
 } from '../types';
-
-// EXPERIMENT: Time of day v2 - Function to add time of day suffix to experiment variant
-const getExperimentVariantSuffix = (experimentName?: string | null) => {
-  if (experimentName === 'newswb_ws_tod_article_2') {
-    const timeOfDay = getClientTimeOfDay();
-
-    if (timeOfDay) return `_${timeOfDay}`;
-  }
-
-  return '';
-};
 
 /*
  * For AMP pages, certain browser and device values are determined
@@ -55,6 +43,8 @@ export const buildReverbAnalyticsModel = ({
   timeUpdated,
   experimentName,
   experimentVariant,
+  isSignedIn = false,
+  hashedId = null,
 }: ATIPageTrackingProps): ReverbBeaconConfig => {
   const href = getHref(platform);
   const referrer = getReferrer(platform);
@@ -66,9 +56,6 @@ export const buildReverbAnalyticsModel = ({
   const eventDetails = {
     eventName: 'pageView' as ReverbBeaconConfig['eventDetails']['eventName'],
   };
-
-  // EXPERIMENT: Time of day v2 - Append the client time of day to the end of 'mv_creation';
-  const experimentVariantSuffix = getExperimentVariantSuffix(experimentName);
 
   const reverbVariables = {
     params: {
@@ -99,12 +86,13 @@ export const buildReverbAnalyticsModel = ({
           ...(experimentVariant &&
             experimentName && {
               mv_test: experimentName,
-              mv_creation: `${experimentVariant}${experimentVariantSuffix}`,
+              mv_creation: experimentVariant,
             }),
         },
       },
       user: {
-        isSignedIn: false,
+        isSignedIn,
+        hashedId,
       },
     },
     eventDetails,
@@ -127,6 +115,8 @@ export const buildReverbEventModel = ({
   itemTracker = {},
   groupTracker = {},
   eventGroupingName,
+  isSignedIn = false,
+  hashedId = null,
 }: ATIEventTrackingProps): ReverbBeaconConfig => {
   const {
     type: itemType,
@@ -146,9 +136,6 @@ export const buildReverbEventModel = ({
     link,
   } = groupTracker;
 
-  // EXPERIMENT: Time of day v2 - Append the client time of day to the end of 'engine_id';
-  const experimentVariantSuffix = getExperimentVariantSuffix(experimentName);
-
   return {
     params: {
       page: {
@@ -160,7 +147,8 @@ export const buildReverbEventModel = ({
         },
       },
       user: {
-        isSignedIn: false,
+        isSignedIn,
+        hashedId,
       },
     },
     eventDetails: {
@@ -195,9 +183,7 @@ export const buildReverbEventModel = ({
       ...(experimentVariant && {
         experience: {
           engine_type: ['experimentation'],
-          engine_id: [
-            `optimizely.${experimentName}.${experimentVariant}${experimentVariantSuffix}`,
-          ],
+          engine_id: [`optimizely.${experimentName}.${experimentVariant}`],
         },
       }),
     },

@@ -77,6 +77,12 @@ export default {
   scriptLink: {
     enabled: true,
   },
+  sportDataPolling: {
+    enabled: true,
+  },
+  showSportDataHeader: {
+    enabled: true,
+  },
   topBarOJs: {
     enabled: true,
   },

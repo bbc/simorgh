@@ -3,13 +3,13 @@ import { AUDIO_PAGE } from '#app/routes/utils/pageTypes';
 import PageDataParams from '#app/models/types/pageDataParams';
 import parseRoute from '#app/routes/utils/parseRoute';
 import { NOT_FOUND, OK } from '#app/lib/statusCodes.const';
-import getPageData from '#nextjs/utilities/pageRequests/getPageData';
+import getPageData from '#utilities/pageRequests/getPageData';
 import nodeLogger from '#lib/logger.node';
 import { ROUTING_INFORMATION } from '#app/lib/logger.const';
 import handleError from '#app/routes/utils/handleError';
-import getPodcastExternalLinks from '#app/routes/onDemandAudio/podcastExternalLinks';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
 import isTest from '#app/lib/utilities/isTest';
+import getPodcastExternalLinks from './podcastExternalLinks';
 
 const logger = nodeLogger(__filename);
 

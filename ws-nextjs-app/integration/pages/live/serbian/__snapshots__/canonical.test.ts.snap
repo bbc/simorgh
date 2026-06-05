@@ -137,7 +137,8 @@ exports[`Canonical Live SEO Linked data should match text 1`] = `
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "NewsArticle",
+      "@id": "http://localhost:7081/serbian/live/media-23179005/lat",
+      "@type": "WebPage",
       "author": {
         "@type": "NewsMediaOrganization",
         "logo": {
@@ -151,6 +152,7 @@ exports[`Canonical Live SEO Linked data should match text 1`] = `
       },
       "dateModified": "2018-01-10T15:00:00.000Z",
       "datePublished": "2018-01-10T15:00:00.000Z",
+      "description": "Live test page",
       "headline": "Live test page",
       "image": {
         "@type": "ImageObject",
@@ -162,6 +164,10 @@ exports[`Canonical Live SEO Linked data should match text 1`] = `
         "@type": "Language",
         "alternateName": "sr-latn",
         "name": "Serbian",
+      },
+      "isAccessibleForFree": true,
+      "mainEntity": {
+        "@id": "http://localhost:7081/serbian/live/media-23179005/lat#liveblog",
       },
       "mainEntityOfPage": {
         "@id": "http://localhost:7081/serbian/live/media-23179005/lat",
@@ -183,10 +189,81 @@ exports[`Canonical Live SEO Linked data should match text 1`] = `
       "url": "http://localhost:7081/serbian/live/media-23179005/lat",
     },
     {
+      "@id": "http://localhost:7081/serbian/live/media-23179005/lat#liveblog",
       "@type": "LiveBlogPosting",
+      "author": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png",
+        },
+        "name": "BBC News na srpskom",
+        "publishingPrinciples": "https://www.bbc.com/serbian/lat/institutional-50173730",
+        "url": "https://www.bbc.com/serbian",
+      },
       "coverageEndTime": "2018-01-10T22:00:00.000Z",
       "coverageStartTime": "2018-01-10T15:00:00.000Z",
+      "dateModified": "2018-01-10T22:00:00.000Z",
+      "datePublished": "2018-01-10T15:00:00.000Z",
+      "headline": "Live test page",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png",
+      },
+      "isAccessibleForFree": true,
       "liveBlogUpdate": [],
+      "mainEntityOfPage": {
+        "@id": "http://localhost:7081/serbian/live/media-23179005/lat",
+      },
+      "publisher": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png",
+        },
+        "name": "BBC News na srpskom",
+        "publishingPrinciples": "https://www.bbc.com/serbian/lat/institutional-50173730",
+        "url": "https://www.bbc.com/serbian",
+      },
+      "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png",
+      "url": "http://localhost:7081/serbian/live/media-23179005/lat",
+    },
+    {
+      "@id": "http://localhost:7081/serbian/live/media-23179005/lat#newsarticle",
+      "@type": "NewsArticle",
+      "author": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png",
+        },
+        "name": "BBC News na srpskom",
+        "publishingPrinciples": "https://www.bbc.com/serbian/lat/institutional-50173730",
+        "url": "https://www.bbc.com/serbian",
+      },
+      "dateModified": "2018-01-10T22:00:00.000Z",
+      "datePublished": "2018-01-10T15:00:00.000Z",
+      "description": "Live test page",
+      "headline": "Live test page",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png",
+      },
+      "isAccessibleForFree": true,
+      "mainEntityOfPage": {
+        "@id": "http://localhost:7081/serbian/live/media-23179005/lat",
+      },
+      "publisher": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png",
+        },
+        "name": "BBC News na srpskom",
+        "publishingPrinciples": "https://www.bbc.com/serbian/lat/institutional-50173730",
+        "url": "https://www.bbc.com/serbian",
+      },
+      "url": "http://localhost:7081/serbian/live/media-23179005/lat",
     },
   ],
 }

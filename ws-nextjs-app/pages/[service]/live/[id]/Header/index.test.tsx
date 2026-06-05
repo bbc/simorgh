@@ -109,5 +109,19 @@ describe('Live Page Header', () => {
 
       expect(tabIndex).toEqual('-1');
     });
+    it('should render a translated match summary H2 for sport data headers', async () => {
+      await act(async () => {
+        render(<Header title="I am a title" showLiveLabel showSportData />, {
+          service: 'afaanoromoo',
+        });
+      });
+
+      expect(
+        screen.getByRole('heading', {
+          level: 2,
+          name: 'Cuunfaa Taphaa',
+        }),
+      ).toBeInTheDocument();
+    });
   });
 });

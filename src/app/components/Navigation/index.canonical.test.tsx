@@ -52,7 +52,31 @@ describe('Navigation - Canonical', () => {
       expect(menuButton).toHaveAttribute('aria-expanded', 'true');
 
       const dropdown = getByTestId(dropdownTestId);
-      expect(dropdown).toHaveTextContent('Dropdown Items');
+      expect(dropdown).toHaveTextContent('Item 1');
+    });
+
+    it('should close the menu and move focus to the first item on the page when Tab is pressed on the last dropdown item', () => {
+      const { getByRole } = render(
+        <>
+          {navigation}
+          <main>
+            <a href="/first-article">First article</a>
+          </main>
+        </>,
+      );
+
+      const menuButton = getByRole('button', { name: 'menu' });
+      fireEvent.click(menuButton);
+      expect(menuButton).toHaveAttribute('aria-expanded', 'true');
+
+      const lastLink = getByRole('link', { name: 'Item 2' });
+      lastLink.focus();
+      fireEvent.blur(lastLink, { key: 'Tab' });
+
+      expect(menuButton).toHaveAttribute('aria-expanded', 'false');
+      expect(document.activeElement).toBe(
+        getByRole('link', { name: 'First article' }),
+      );
     });
 
     describe('Top Bar OJs', () => {

@@ -20,14 +20,31 @@ interface UasRequestOptions {
   body?: UasApiRequestBody;
   globalId?: string;
   signal?: AbortSignal;
+  queryParams?: Record<string, string | number>;
+  isRefreshAvailable: boolean;
 }
 
 const getUasHost = () =>
   isLive() ? 'activity.api.bbc.com' : 'activity.test.api.bbc.com';
 
-const buildUrl = (activityType: string, globalId?: string) => {
+const buildUrl = (
+  activityType: string,
+  globalId?: string,
+  queryParams?: Record<string, string | number>,
+) => {
   const base = `https://${getUasHost()}/my/${activityType}`;
-  return globalId ? `${base}/${encodeURIComponent(globalId)}` : base;
+  const urlPath = globalId ? `${base}/${encodeURIComponent(globalId)}` : base;
+
+  if (!queryParams || Object.keys(queryParams).length === 0) {
+    return urlPath;
+  }
+
+  const url = new URL(urlPath);
+  Object.entries(queryParams).forEach(([key, value]) => {
+    url.searchParams.append(key, String(value));
+  });
+
+  return url.toString();
 };
 
 const validateRequest = (method: UasMethod, options: UasRequestOptions) => {
@@ -46,13 +63,24 @@ const validateRequest = (method: UasMethod, options: UasRequestOptions) => {
 const uasApiRequest = async (
   method: UasMethod,
   activityType: ActivityType,
-  { body, globalId, signal }: UasRequestOptions = {},
+  {
+    body,
+    globalId,
+    signal,
+    queryParams,
+    isRefreshAvailable,
+  }: UasRequestOptions,
 ): Promise<Response> => {
-  validateRequest(method, { body, globalId });
+  // Basic validation to ensure required parameters are present based on method
+  validateRequest(method, { body, globalId, isRefreshAvailable });
 
-  const url = buildUrl(activityType, method !== 'POST' ? globalId : undefined);
+  const url = buildUrl(
+    activityType,
+    method !== 'POST' ? globalId : undefined,
+    queryParams,
+  );
 
-  await refreshTokensIfExpired();
+  await refreshTokensIfExpired(isRefreshAvailable);
 
   const headers: HeadersInit = {
     ...getAuthHeaders(),

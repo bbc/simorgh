@@ -21,7 +21,7 @@ Afrique, Arabic, Azeri, Bengali, Gahuza, Hausa, Hindi, Indonesia, Japanese, Kyrg
 
 Given you are using Chrome browser.
 
-1. Download [ModHeader Chrome extension](https://www.google.com/search?q=modheader+chrome+pass+boolean\&rlz=1C5CHFA_enGB762GB762\&oq=modheader\&aqs=chrome.0.69i59l2j69i57j69i60j69i61j69i60j69i65l2.1039j0j7\&sourceid=chrome\&ie=UTF-8)
+1. Download [ModHeader Chrome extension](https://www.google.com/search?q=modheader+chrome+pass+boolean&rlz=1C5CHFA_enGB762GB762&oq=modheader&aqs=chrome.0.69i59l2j69i57j69i60j69i61j69i60j69i65l2.1039j0j7&sourceid=chrome&ie=UTF-8)
 
 2. With the ModHeader extension, add a header of `BBC-Adverts` with the value `true`.
 
@@ -55,7 +55,7 @@ If you are unable to set a proxy on one of the Windows a11y laptops, you won't b
 
    e.g. `SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN=http://192.168.0.50:7080`
 
-3. Disable the `upgrade-insecure-requests` directive from the [cspHeader](https://github.com/bbc/simorgh/blob/latest/src/server/utilities/cspHeader/index.js#L419)
+3. Disable the `upgrade-insecure-requests` directive from the [cspHeader](https://github.com/bbc/simorgh/blob/latest/src/ws-nextjs-app/utilities/cspHeader/index.ts#L419)
 
 4. If you can't set the `BBC-Adverts` header in the Windows laptop, you will need to remove [this](https://github.com/bbc/simorgh/blob/latest/src/app/containers/Ad/Canonical/index.jsx#L63) condition from the codebase to be able to render the ad
 

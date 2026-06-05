@@ -100,6 +100,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                   link,
                   position,
                   visualStyle,
+                  associatedContent: { uri } = {},
                   ...curationProps
                 }: Curation,
                 index: number,
@@ -122,7 +123,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       title={curationTitle}
                       topStoriesTitle={topStoriesTitle}
                       position={position}
-                      link={link}
+                      link={link || uri}
                       curationLength={curations?.length}
                       nthCurationByStyleAndProminence={
                         nthCurationByStyleAndProminence

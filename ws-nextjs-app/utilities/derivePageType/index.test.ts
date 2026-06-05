@@ -10,6 +10,7 @@ import {
   AUDIO_PAGE,
   TV_PAGE,
   MOST_READ_PAGE,
+  LIVE_RADIO_PAGE,
 } from '#app/routes/utils/pageTypes';
 import derivePageType from '.';
 
@@ -114,6 +115,12 @@ describe('derivePageType', () => {
     const pathname = '/pidgin/popular/read';
     const result = derivePageType(pathname);
     expect(result).toEqual(MOST_READ_PAGE);
+  });
+
+  it('should return LIVE_RADIO_PAGE if pathname includes live-radio', () => {
+    const pathname = '/hausa/bbc_hausa_radio/liveradio';
+    const result = derivePageType(pathname);
+    expect(result).toEqual(LIVE_RADIO_PAGE);
   });
 
   it('should return Unknown if pathname does not include live or send', () => {

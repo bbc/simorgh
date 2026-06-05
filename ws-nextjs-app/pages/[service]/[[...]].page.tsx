@@ -3,7 +3,6 @@ import dynamic from 'next/dynamic';
 import { IncomingHttpHeaders } from 'node:http';
 
 import SERVICES from '#app/lib/config/services';
-import logResponseTime from '#server/utilities/logResponseTime';
 import {
   AV_EMBEDS,
   ARTICLE_PAGE,
@@ -14,19 +13,22 @@ import {
   HOME_PAGE,
   AUDIO_PAGE,
   TV_PAGE,
+  LIVE_RADIO_PAGE,
 } from '#app/routes/utils/pageTypes';
 import { PageTypes } from '#app/models/types/global';
 import PageDataParams from '#app/models/types/pageDataParams';
-import deriveVariant from '#nextjs/utilities/deriveVariant';
+import deriveVariant from '#utilities/deriveVariant';
 import withOptimizelyProvider from '#app/legacy/containers/PageHandlers/withOptimizelyProvider';
 import { HomePageProps } from '#app/pages/HomePage/HomePage';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
-import derivePageType from '#nextjs/utilities/derivePageType';
+import derivePageType from '#utilities/derivePageType';
+import { LiveRadioPageProps } from '#app/pages/LiveRadioPage/types';
 
 // AV Embeds
 import withMediaError from '#app/lib/utilities/episodeAvailability/withMediaError';
 import { OnDemandTVProps } from '#app/pages/OnDemandTvPage/OnDemandTvPage';
 import { NOT_FOUND } from '#app/lib/statusCodes.const';
+import logResponseTime from '#utilities/logResponseTime';
 import handleAvRoute from './av-embeds/handleAvRoute';
 import { AvEmbedsPageProps } from './av-embeds/types';
 // Articles (Optimo + CPS)
@@ -39,6 +41,8 @@ import handleOnDemandAudioRoute from './onDemandAudio/handleOnDemandAudioRoute';
 import { OnDemandAudioProps } from './onDemandAudio/types';
 // On Demand TV
 import handleOnDemandTvRoute from './onDemandTv/handleOnDemandTvRoute';
+// Live Radio
+import handleLiveRadioRoute from './liveRadio/handleLiveRadioRoute';
 
 // Dynamic imports of page layouts
 const AvEmbedsPageLayout = dynamic(
@@ -54,6 +58,10 @@ const OnDemandAudioPage = dynamic(
 );
 const OnDemandTvPage = dynamic(
   () => import('#app/pages/OnDemandTvPage/OnDemandTvPage'),
+);
+
+const LiveRadioPage = dynamic(
+  () => import('#app/pages/LiveRadioPage/LiveRadioPage'),
 );
 
 const getPageType = ({
@@ -87,6 +95,7 @@ const ROUTE_HANDLERS = {
   [HOME_PAGE]: handleHomepageRoute,
   [AUDIO_PAGE]: handleOnDemandAudioRoute,
   [TV_PAGE]: handleOnDemandTvRoute,
+  [LIVE_RADIO_PAGE]: handleLiveRadioRoute,
 };
 
 export const getServerSideProps: GetServerSideProps = async context => {
@@ -129,7 +138,8 @@ type PageProps = {
   ArticlePageProps &
   HomePageProps &
   OnDemandAudioProps &
-  OnDemandTVProps;
+  OnDemandTVProps &
+  LiveRadioPageProps;
 
 export default function PageTypeToRender({ pageType, ...props }: PageProps) {
   switch (pageType) {
@@ -149,6 +159,8 @@ export default function PageTypeToRender({ pageType, ...props }: PageProps) {
       return withMediaError(OnDemandAudioPage)({ ...props });
     case TV_PAGE:
       return withMediaError(OnDemandTvPage)({ ...props });
+    case LIVE_RADIO_PAGE:
+      return withMediaError(LiveRadioPage)({ ...props });
     // Home Page
     case HOME_PAGE:
       return withOptimizelyProvider(HomePage)({ ...props });

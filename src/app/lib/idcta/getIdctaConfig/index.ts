@@ -3,7 +3,7 @@ import getToggleDefinitions from '#app/lib/utilities/getToggleDefinition';
 import isLocal from '#app/lib/utilities/isLocal';
 import { IdctaConfig } from '#app/models/types/account';
 import { Toggles, Services } from '#app/models/types/global';
-import hasCookie from '#app/lib/utilities/hasCookie';
+import { IncomingHttpHeaders } from 'http';
 import fetchIdctaConfig from '../fetchIdctaConfig';
 
 const logger = nodeLogger(__filename);
@@ -12,13 +12,14 @@ const logger = nodeLogger(__filename);
  * Gets IDCTA config with toggle validation and config verification
  * @param toggles - Feature toggles
  * @param service - Service name
- * @param cookieHeader - Cookie header from request
+ * @param requestHeaders - Request headers
  * @returns Validated IdctaConfig with initialIsSignedIn or null
  */
+
 export default async function getIdctaConfig(
   toggles: Toggles,
   service: Services,
-  cookieHeader?: string,
+  requestHeaders?: IncomingHttpHeaders,
 ): Promise<IdctaConfig | null> {
   const toggleDefinitions = getToggleDefinitions(toggles);
   const { enabled: isAccountEnabled, value: accountService = '' } =
@@ -40,19 +41,26 @@ export default async function getIdctaConfig(
     return null;
   }
 
-  if (!config?.['id-availability']) {
+  if (!config?.['id-availability'] || !config?.identity.idSignedInCookieName) {
     logger.error('Invalid IDCTA config: missing required fields', {
       config,
     });
     return null;
   }
 
-  const cookieName = config?.identity?.idSignedInCookieName;
-  const initialIsSignedIn = Boolean(
-    cookieHeader && cookieName
-      ? hasCookie(cookieHeader, cookieName)
-      : undefined,
-  );
+  const signedInHeader = requestHeaders?.['x-id-oidc-signedin'];
+  const initialIsSignedIn = signedInHeader === '1';
 
-  return { ...config, initialIsSignedIn };
+  return {
+    'id-availability': config['id-availability'],
+    availability: config.availability,
+    unavailable_url: config.unavailable_url,
+    signin_url: config.signin_url,
+    register_url: config.register_url,
+    settings_url: config.settings_url,
+    signout_url: config.signout_url,
+    foryou_url: config.foryou_url,
+    identity: { idSignedInCookieName: config.identity.idSignedInCookieName },
+    initialIsSignedIn,
+  };
 }

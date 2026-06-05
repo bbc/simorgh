@@ -130,7 +130,7 @@ const PostHeading = ({
     headline: (props: { blocks: PostHeadline['model'] }) => {
       const { blocks } = props;
 
-      const headingText = blocks?.[0].model?.blocks?.[0]?.model?.text;
+      const headingText = blocks?.[0]?.model?.blocks?.[0]?.model?.text;
 
       return (
         <Text
@@ -146,7 +146,7 @@ const PostHeading = ({
     subheadline: (props: { blocks: PostHeadline['model'] }) => {
       const { blocks } = props;
 
-      const headingText = blocks?.[0].model?.blocks?.[0]?.model?.text;
+      const headingText = blocks?.[0]?.model?.blocks?.[0]?.model?.text;
 
       return (
         <>
@@ -293,7 +293,7 @@ const Post = ({
       <div css={styles.postContent}>
         <PostContent contentBlocks={contentBlocks} />
       </div>
-      {hasShareApi && (
+      {hasShareApi && firstHeadingText && (
         <ShareButton
           eventTrackingData={{
             componentName: urn,

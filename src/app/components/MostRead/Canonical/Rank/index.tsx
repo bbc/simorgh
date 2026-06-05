@@ -78,6 +78,7 @@ const MostReadRank = ({
   return (
     <div css={columnCss} dir={dir}>
       <span
+        data-e2e="most-read-rank"
         css={[
           styles.span,
           size === 'small' ? styles.smallFont : styles.defaultFont,

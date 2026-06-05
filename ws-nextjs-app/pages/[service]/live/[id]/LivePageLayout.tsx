@@ -1,6 +1,7 @@
 import { use, useState, useRef, RefObject } from 'react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Pagination from '#app/components/Pagination';
+import PortraitVideoCarousel from '#app/components/PortraitVideoCarousel';
 import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
 import ATIAnalytics from '#app/components/ATIAnalytics';
 import { ATIData } from '#app/components/ATIAnalytics/types';
@@ -9,6 +10,9 @@ import MetadataContainer from '#app/components/Metadata';
 import LinkedDataContainer from '#app/components/LinkedData';
 import getLiveBlogPostingSchema from '#app/lib/seoUtils/getLiveBlogPostingSchema';
 import { MediaCollection } from '#app/components/MediaLoader/types';
+import HeadToHeadV2 from '#app/components-webcore/SportDataHeader/head-to-head-v2';
+import { HeadToHeadV2Data } from '#app/components-webcore/SportDataHeader/head-to-head-v2/types';
+import { PortraitVideoItems } from '#app/models/types/optimo';
 import useLivePagePolling from '#app/hooks/useLivePagePolling';
 import useToggle from '#app/hooks/useToggle';
 import {
@@ -59,6 +63,12 @@ export type ComponentProps = {
     endDateTime?: string;
     metadata: { atiAnalytics: ATIData };
     mediaCollections: MediaCollection[] | null;
+    portraitVideoItems?: PortraitVideoItems | null;
+    sportDataEventContent?: {
+      live: boolean;
+      sportDataEvent: HeadToHeadV2Data;
+      title: string;
+    } | null;
   };
 };
 
@@ -67,9 +77,17 @@ interface LivePageProps extends ComponentProps {
 }
 
 const LivePage = ({ pageData, assetId }: LivePageProps) => {
-  const { lang, translations, defaultImage, brandName } = use(ServiceContext);
+  const {
+    lang,
+    translations,
+    defaultImage,
+    brandName,
+    publishingPrinciples,
+    service,
+  } = use(ServiceContext);
   const { canonicalNonUkLink } = use(RequestContext);
   const { enabled: livePagePollingEnabled } = useToggle('livePagePolling');
+  const { enabled: sportHeaderEnabled } = useToggle('showSportDataHeader');
 
   const streamRef = useRef<HTMLDivElement>(null);
   const [isFirstPostVisible, setIsFirstPostVisible] = useState(true);
@@ -87,10 +105,19 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
     headerImage,
     promoImage,
     mediaCollections,
+    portraitVideoItems,
+    sportDataEventContent,
   } = pageData;
 
   const { currentStreamData, hasPendingUpdate, applyPendingUpdate } =
     useLivePagePolling(pageData, livePagePollingEnabled && isLive);
+
+  const {
+    sportDataEvent: sportData,
+    live: isSportDataLive = false,
+    title: sportDataTitle,
+  } = sportDataEventContent || {};
+  const showSportData = !!sportData && Boolean(sportHeaderEnabled);
 
   const {
     url: imageUrl,
@@ -118,7 +145,13 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
     : pageSeoTitle;
   const pageDescription = seoDescription || description || pageSeoTitle;
 
+  const publisherUrl = `https://www.bbc.com/${service}`;
+
   const liveBlogPostingSchema = getLiveBlogPostingSchema({
+    publishingPrinciples: publishingPrinciples ?? undefined,
+    publisherUrl,
+    pageHeadline: pageTitle,
+    description: pageDescription,
     posts: liveTextStream?.content?.data.results,
     brandName,
     defaultImage,
@@ -144,6 +177,9 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
 
   const metaTitle = headlineFromPost || pageTitle;
 
+  const showPortraitVideoCarousel =
+    portraitVideoItems && portraitVideoItems.portraitVideo.blocks.length > 0;
+
   return (
     <>
       <ATIAnalytics atiData={atiAnalytics} />
@@ -160,25 +196,43 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
         hasAmpPage={false}
       />
       <LinkedDataContainer
-        type="NewsArticle"
+        type="WebPage"
+        entityId={canonicalNonUkLink}
         seoTitle={metaTitle ?? pageTitle}
         headline={metaTitle ?? pageTitle}
         showAuthor
+        isAccessibleForFree
         promoImage={metaImage?.url}
+        description={pageDescription}
+        mainEntityId={liveBlogPostingSchema?.liveBlogPosting?.['@id']}
         {...(datePublished && { datePublished })}
         {...(dateModified && { dateModified })}
-        {...(liveBlogPostingSchema && { entities: [liveBlogPostingSchema] })}
+        {...(liveBlogPostingSchema && {
+          entities: [
+            liveBlogPostingSchema.liveBlogPosting,
+            liveBlogPostingSchema.newsArticle,
+          ],
+        })}
       />
       <main>
         <Header
-          showLiveLabel={isLive}
-          title={title}
+          showLiveLabel={showSportData ? isSportDataLive : isLive}
+          title={showSportData && !!sportDataTitle ? sportDataTitle : title}
           description={description}
           imageUrl={imageUrl}
           imageUrlTemplate={imageUrlTemplate}
           imageWidth={imageWidth}
           mediaCollections={mediaCollections}
+          showSportData={showSportData}
         />
+        {showSportData && (
+          <HeadToHeadV2
+            initialSportData={sportData}
+            isConciseView={false} // defaulted to false for developement/ MVP
+            shouldShowActions={false} // defaulted to false for developement/ MVP
+            isSportDataLive={isSportDataLive}
+          />
+        )}
         <div css={styles.outerGrid}>
           <div css={styles.firstSection}>
             {keyPoints && (
@@ -186,6 +240,15 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
             )}
           </div>
           <div css={styles.secondSection}>
+            {showPortraitVideoCarousel && (
+              <PortraitVideoCarousel
+                blocks={portraitVideoItems.portraitVideo.blocks}
+                eventTrackingData={{
+                  componentName: 'portrait-video-carousel-live',
+                  groupTracker: { name: translations.media.watch },
+                }}
+              />
+            )}
             <Stream
               streamData={currentStreamData}
               contributors={liveTextStream.contributors}

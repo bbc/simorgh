@@ -54,6 +54,14 @@ export interface Translations {
     closeLabel: string;
     buttonSeparatorText: string;
   };
+  saveArticleButton?: {
+    loading: string;
+    save: string;
+    saving: string;
+    saved: string;
+    remove: string;
+    removing: string;
+  };
   error: {
     home?: string;
     currentPage?: string;
@@ -62,6 +70,11 @@ export interface Translations {
     500: TranslationsError;
   };
   continueReading?: string;
+  topicDiscovery?: {
+    heading: string;
+    moreFromTopic: string;
+    fetchErrorMessage?: string;
+  };
   readTime?: Partial<{
     readTimePrefix: string;
     quick: string;
@@ -227,6 +240,10 @@ export interface Translations {
   carousel?: {
     previous?: string;
     next?: string;
+  };
+  sport?: {
+    matchSummary?: string;
+    worldCupTeamNames?: Record<string, string>;
   };
 }
 

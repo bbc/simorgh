@@ -1,9 +1,6 @@
 /* eslint-disable no-underscore-dangle */
 
-import {
-  assertLoadsExpectedBundles,
-  assertLoadsModernBundles,
-} from './assertions';
+import { assertLoadsExpectedBundles } from './assertions';
 import runTestsForPage from '../runTestsForPage';
 import context from '../context';
 
@@ -23,21 +20,21 @@ const testSuites = [
     path: '/pidgin',
     service: 'pidgin',
     runforEnv: ['local'],
-    tests: [assertLoadsExpectedBundles, assertLoadsModernBundles],
+    tests: [assertLoadsExpectedBundles],
   },
   {
     path: '/serbian/cyr',
     service: 'serbian',
     runforEnv: 'local',
     variant: 'cyr',
-    tests: [assertLoadsExpectedBundles, assertLoadsModernBundles],
+    tests: [assertLoadsExpectedBundles],
   },
   {
     path: '/serbian/lat',
     service: 'serbian',
     runforEnv: 'local',
     variant: 'lat',
-    tests: [assertLoadsExpectedBundles, assertLoadsModernBundles],
+    tests: [assertLoadsExpectedBundles],
   },
 ];
 

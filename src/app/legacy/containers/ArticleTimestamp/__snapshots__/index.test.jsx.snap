@@ -112,6 +112,17 @@ exports[`ArticleTimestamp should render a 'created' Timestamp correctly 1`] = `
 }
 
 .emotion-3 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-4 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #545658;
@@ -123,20 +134,20 @@ exports[`ArticleTimestamp should render a 'created' Timestamp correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-3 {
+  .emotion-4 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-3 {
+  .emotion-4 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-3:last-child {
+.emotion-4:last-child {
   padding-bottom: 1rem;
 }
 
@@ -145,8 +156,13 @@ exports[`ArticleTimestamp should render a 'created' Timestamp correctly 1`] = `
     class="emotion-0 emotion-1 emotion-2"
     dir="ltr"
   >
+    <span
+      class="emotion-3"
+    >
+      Published 
+    </span>
     <time
-      class="emotion-3 emotion-4"
+      class="emotion-4 emotion-5"
       datetime="2018-07-07"
     >
       7 July 2018
@@ -267,6 +283,17 @@ exports[`ArticleTimestamp should render both a 'created' and an 'updated' Timest
 }
 
 .emotion-3 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-4 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #545658;
@@ -278,20 +305,20 @@ exports[`ArticleTimestamp should render both a 'created' and an 'updated' Timest
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-3 {
+  .emotion-4 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-3 {
+  .emotion-4 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-3:last-child {
+.emotion-4:last-child {
   padding-bottom: 1rem;
 }
 
@@ -300,15 +327,20 @@ exports[`ArticleTimestamp should render both a 'created' and an 'updated' Timest
     class="emotion-0 emotion-1 emotion-2"
     dir="ltr"
   >
+    <span
+      class="emotion-3"
+    >
+      Published 
+    </span>
     <time
-      class="emotion-3 emotion-4"
+      class="emotion-4 emotion-5"
       datetime="2018-07-07"
     >
       7 July 2018
     </time>
     <div>
       <time
-        class="emotion-3 emotion-4"
+        class="emotion-4 emotion-5"
         datetime="2019-03-15"
       >
         Updated 15 March 2019
@@ -430,6 +462,17 @@ exports[`ArticleTimestamp should render with a prefix 1`] = `
 }
 
 .emotion-3 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-4 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #545658;
@@ -441,20 +484,20 @@ exports[`ArticleTimestamp should render with a prefix 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-3 {
+  .emotion-4 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-3 {
+  .emotion-4 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-3:last-child {
+.emotion-4:last-child {
   padding-bottom: 1rem;
 }
 
@@ -463,15 +506,20 @@ exports[`ArticleTimestamp should render with a prefix 1`] = `
     class="emotion-0 emotion-1 emotion-2"
     dir="ltr"
   >
+    <span
+      class="emotion-3"
+    >
+      Fecha de publicación 
+    </span>
     <time
-      class="emotion-3 emotion-4"
+      class="emotion-4 emotion-5"
       datetime="2018-07-07"
     >
       7 julio 2018
     </time>
     <div>
       <time
-        class="emotion-3 emotion-4"
+        class="emotion-4 emotion-5"
         datetime="2019-03-15"
       >
         Actualizado 15 marzo 2019
@@ -593,6 +641,17 @@ exports[`ArticleTimestamp should render with a suffix 1`] = `
 }
 
 .emotion-3 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-4 {
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: #545658;
@@ -604,20 +663,20 @@ exports[`ArticleTimestamp should render with a suffix 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-3 {
+  .emotion-4 {
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-3 {
+  .emotion-4 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
-.emotion-3:last-child {
+.emotion-4:last-child {
   padding-bottom: 1rem;
 }
 
@@ -626,15 +685,20 @@ exports[`ArticleTimestamp should render with a suffix 1`] = `
     class="emotion-0 emotion-1 emotion-2"
     dir="ltr"
   >
+    <span
+      class="emotion-3"
+    >
+      Published 
+    </span>
     <time
-      class="emotion-3 emotion-4"
+      class="emotion-4 emotion-5"
       datetime="2018-07-07"
     >
       ७ जुलाई २०१८
     </time>
     <div>
       <time
-        class="emotion-3 emotion-4"
+        class="emotion-4 emotion-5"
         datetime="2019-03-15"
       >
         १५ मार्च २०१९ अद्यावधिक
@@ -756,6 +820,17 @@ exports[`ArticleTimestamp should render with no suffix or prefix 1`] = `
 }
 
 .emotion-3 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-4 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #545658;
@@ -767,20 +842,20 @@ exports[`ArticleTimestamp should render with no suffix or prefix 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-3 {
+  .emotion-4 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-3 {
+  .emotion-4 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-3:last-child {
+.emotion-4:last-child {
   padding-bottom: 1rem;
 }
 
@@ -789,8 +864,13 @@ exports[`ArticleTimestamp should render with no suffix or prefix 1`] = `
     class="emotion-0 emotion-1 emotion-2"
     dir="ltr"
   >
+    <span
+      class="emotion-3"
+    >
+      Fecha de publicación 
+    </span>
     <time
-      class="emotion-3 emotion-4"
+      class="emotion-4 emotion-5"
       datetime="2018-07-07"
     >
       7 julio 2018

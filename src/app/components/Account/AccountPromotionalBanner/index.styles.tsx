@@ -1,7 +1,15 @@
 import { Theme, css } from '@emotion/react';
 import pixelsToRem from '#app/utilities/pixelsToRem';
+import { DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS } from './utilities';
 
 export default {
+  bannerWrapper: () =>
+    css({
+      display: 'none',
+      [`.${DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS} &`]: {
+        display: 'block',
+      },
+    }),
   callToActionLink: ({ mq }) =>
     css({
       padding: '1rem',
@@ -22,10 +30,13 @@ export default {
       padding: `${spacings.HALF}rem`,
     }),
 
-  signInLink: ({ palette, spacings }: Theme) =>
+  signInLink: ({ palette, spacings, mq }: Theme) =>
     css({
       height: `${pixelsToRem(44)}rem`,
       padding: `${spacings.HALF}rem`,
+      [mq.GROUP_1_MIN_WIDTH]: {
+        paddingInline: `${spacings.FULL}rem`,
+      },
       color: palette.WHITE,
       textDecorationThickness: `${pixelsToRem(1)}rem`,
       backgroundColor: palette.SERVICE_NEUTRAL_CORE,
