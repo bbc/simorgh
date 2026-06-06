@@ -21,12 +21,17 @@ const useUASRecentActivity = ({
   itemsPerPage = 10,
   startIndex = 0,
 }: UseRecentActivityParams = {}): UseRecentActivityReturn => {
-  const { hashedUserId = '' } = use(AccountContext);
+  const { hashedUserId = '', isRefreshAvailable } = use(AccountContext);
 
   const { data, isLoading, error } = useQuery({
     queryKey: uasKeys.favouritesPage(hashedUserId, startIndex),
     queryFn: ({ signal }) =>
-      getRecentActivity({ itemsPerPage, startIndex, signal }),
+      getRecentActivity({
+        itemsPerPage,
+        startIndex,
+        signal,
+        isRefreshAvailable,
+      }),
     enabled: !!hashedUserId,
   });
 

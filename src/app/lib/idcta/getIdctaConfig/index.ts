@@ -53,6 +53,7 @@ export default async function getIdctaConfig(
 
   return {
     'id-availability': config['id-availability'],
+    availability: config.availability,
     unavailable_url: config.unavailable_url,
     signin_url: config.signin_url,
     register_url: config.register_url,

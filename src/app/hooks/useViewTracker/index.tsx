@@ -20,7 +20,7 @@ const VIEWED_DURATION_MS = 1000;
 
 const TOPIC_VIEW_COMPONENT_NAMES = ['topic-discovery', 'topics'];
 const TOPIC_OPTIMIZELY_EXPERIMENTS = ['newswb_ws_topic_discovery_module'];
-const TOPIC_OPTIMIZELY_VIEW_EVENTS = ['topic_views'];
+const TOPIC_OPTIMIZELY_VIEW_EVENTS = ['topic-views'];
 
 const shouldTrackTopicView = (
   componentName: string,

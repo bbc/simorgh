@@ -4,14 +4,13 @@ import Centre from './centre';
 import MatchProgress from './match-progress';
 import PenaltyScores from './penalty-scores';
 import styles from '../index.styles';
-import type { HeadToHeadV2Data, BadgePlaceholderFallbackType } from '../types';
+import type { HeadToHeadV2Data } from '../types';
 
 interface ItemWrapperProps {
   data: HeadToHeadV2Data;
   isConciseView: boolean;
   shouldHideBadges: boolean;
   maxScoreLength?: number;
-  teamBadgePlaceholderFallbackType?: BadgePlaceholderFallbackType;
 }
 
 const ItemWrapper = ({
@@ -19,11 +18,11 @@ const ItemWrapper = ({
   isConciseView,
   shouldHideBadges,
   maxScoreLength,
-  teamBadgePlaceholderFallbackType,
 }: ItemWrapperProps) => {
   const shouldDisplayPenScores =
     data.home.runningScores?.penaltyShootout &&
     data.away.runningScores?.penaltyShootout;
+
   return (
     <>
       <div
@@ -32,13 +31,13 @@ const ItemWrapper = ({
       >
         <div css={styles.teamHome} data-participant-id={data.home.id}>
           <Team
+            urn={data.home.urn}
             alignment="home"
             name={data.home.fullName}
             shortName={data.home.shortName}
-            urn={data.home.urn}
             isConciseView={isConciseView}
-            shouldHideBadges={shouldHideBadges}
-            badgePlaceholderFallbackType={teamBadgePlaceholderFallbackType}
+            imageUrl={data.home.imageSrc}
+            hideBadges={shouldHideBadges}
           />
         </div>
         <div css={styles.scores}>
@@ -49,13 +48,13 @@ const ItemWrapper = ({
         </div>
         <div css={styles.teamAway} data-participant-id={data.away.id}>
           <Team
+            urn={data.away.urn}
             alignment="away"
             name={data.away.fullName}
             shortName={data.away.shortName}
-            urn={data.away.urn}
             isConciseView={isConciseView}
-            shouldHideBadges={shouldHideBadges}
-            badgePlaceholderFallbackType={teamBadgePlaceholderFallbackType}
+            imageUrl={data.away.imageSrc}
+            hideBadges={shouldHideBadges}
           />
         </div>
         <div css={styles.matchProgressContainer}>
@@ -73,7 +72,6 @@ interface HeadToHeadBannerProps {
   eventSummary: string;
   shouldHideBadges: boolean;
   maxScoreLength?: number;
-  teamBadgePlaceholderFallbackType?: BadgePlaceholderFallbackType;
 }
 
 export const HeadToHeadBanner = ({
@@ -82,7 +80,6 @@ export const HeadToHeadBanner = ({
   eventSummary,
   shouldHideBadges,
   maxScoreLength,
-  teamBadgePlaceholderFallbackType,
 }: HeadToHeadBannerProps) => (
   <>
     <VisuallyHiddenText>{eventSummary}</VisuallyHiddenText>
@@ -91,7 +88,6 @@ export const HeadToHeadBanner = ({
       isConciseView={isConciseView}
       shouldHideBadges={shouldHideBadges}
       maxScoreLength={maxScoreLength}
-      teamBadgePlaceholderFallbackType={teamBadgePlaceholderFallbackType}
     />
   </>
 );

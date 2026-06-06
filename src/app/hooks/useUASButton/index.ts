@@ -40,7 +40,7 @@ const useUASButton = ({
   articlePageData,
 }: UseUASButtonProps): UseUASButtonReturn => {
   const { service } = use(ServiceContext);
-  const { hashedUserId = '' } = use(AccountContext);
+  const { hashedUserId = '', isRefreshAvailable } = use(AccountContext);
   const queryClient = useQueryClient();
   const { isSaved, isLoading, error } = useUASFetchSaveStatus(articleId);
 
@@ -57,11 +57,15 @@ const useUASButton = ({
           promoImageAltText: promoImageObj?.altText || '',
           locatorUrl: articlePageData?.metadata?.locators?.canonicalUrl || '',
         });
-        await uasApiRequest('POST', FAVOURITES_CONFIG.activityType, { body });
+        await uasApiRequest('POST', FAVOURITES_CONFIG.activityType, {
+          body,
+          isRefreshAvailable,
+        });
       } else {
         const globalId = buildGlobalId(articleId);
         await uasApiRequest('DELETE', FAVOURITES_CONFIG.activityType, {
           globalId,
+          isRefreshAvailable,
         });
       }
     },
