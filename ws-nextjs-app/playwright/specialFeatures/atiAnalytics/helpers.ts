@@ -47,18 +47,16 @@ export const COMPONENTS = {
 export const isPageViewRequest =
   (reverbAtiUrl: string) =>
   (request: Request): boolean => {
-    const { url } = request;
-    if (!url().includes(new URL(reverbAtiUrl).hostname)) return false;
-    const params = new URLSearchParams(new URL(url()).search);
+    if (!request.url().includes(new URL(reverbAtiUrl).hostname)) return false;
+    const params = new URLSearchParams(new URL(request.url()).search);
     return params.get('x8') === 'simorgh';
   };
 
 export const isViewabilityViewRequest =
   (reverbAtiUrl: string, component: string) =>
   (request: Request): boolean => {
-    const { url } = request;
-    if (!url().includes(new URL(reverbAtiUrl).hostname)) return false;
-    const params = new URLSearchParams(new URL(url()).search);
+    if (!request.url().includes(new URL(reverbAtiUrl).hostname)) return false;
+    const params = new URLSearchParams(new URL(request.url()).search);
     const events = params.get('events');
     if (!events) return false;
     return (
@@ -70,9 +68,8 @@ export const isViewabilityViewRequest =
 export const isViewabilityClickRequest =
   (reverbAtiUrl: string, component: string) =>
   (request: Request): boolean => {
-    const { url } = request;
-    if (!url().includes(new URL(reverbAtiUrl).hostname)) return false;
-    const params = new URLSearchParams(new URL(url()).search);
+    if (!request.url().includes(new URL(reverbAtiUrl).hostname)) return false;
+    const params = new URLSearchParams(new URL(request.url()).search);
     const events = params.get('events');
     if (!events) return false;
     return (
