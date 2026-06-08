@@ -1,6 +1,5 @@
-import { getImage } from './badges-map';
 import styles from '../../index.styles';
-import type { BadgePlaceholderFallbackType, BadgeSize } from '../../types';
+import type { BadgeSize } from '../../types';
 
 const getTestId = (id?: string): string => {
   const urnId =
@@ -11,22 +10,14 @@ const getTestId = (id?: string): string => {
 
 interface SportBadgeProps {
   size: BadgeSize;
-  id?: string;
+  urn: string;
+  src: string | null;
   alt?: string;
-  usePlaceholderFallback?: boolean;
-  placeholderFallbackType?: BadgePlaceholderFallbackType;
   isConciseView?: boolean;
 }
 
-const SportBadge = ({
-  size,
-  id,
-  alt = '',
-  usePlaceholderFallback = true,
-  placeholderFallbackType = 'badge',
-}: SportBadgeProps) => {
-  const testId = getTestId(id);
-  const src = getImage({ id, usePlaceholderFallback, placeholderFallbackType });
+const SportBadge = ({ urn, size, src, alt = '' }: SportBadgeProps) => {
+  const testId = getTestId(urn);
 
   if (!src) return null;
 
@@ -35,7 +26,6 @@ const SportBadge = ({
       css={styles.badgeContainer(size)}
       data-testid={`badge-container-${testId}`}
     >
-      {/* Empty alt string should hide images from assistive technology, but won't hide certain SVG contents in some browsers - e.g. Safari */}
       <img
         css={styles.badgeImage}
         alt={alt}
