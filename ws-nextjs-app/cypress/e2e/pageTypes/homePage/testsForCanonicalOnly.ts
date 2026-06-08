@@ -102,6 +102,7 @@ export default ({ service }) => {
       });
     });
 
+    // Skipping this one due to a bug caused by repeatedly opening and closing the modal (caused by the two previous tests opening and closing the modal)
     it.skip('should close the modal when the Escape key is pressed', () => {
       cy.get('body').then($body => {
         if ($body.find('[data-testid="portrait-video-carousel"]').length > 0) {
