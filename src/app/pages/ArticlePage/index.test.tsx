@@ -38,6 +38,8 @@ import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import * as viewTracking from '#app/hooks/useViewTracker';
 import isLive from '#lib/utilities/isLive';
 import LocationBasedTopicOJ from '#app/components/LocationBasedTopicOJ';
+import useScrollDepthTracker from '#app/hooks/useScrollDepthTracker';
+import useMediaQuery from '#hooks/useMediaQuery';
 import {
   render,
   screen,
@@ -72,6 +74,9 @@ jest.mock('#app/lib/utilities/onClient', () => ({
   onClient: jest.fn(() => true),
 }));
 jest.mock('#lib/utilities/isLive', () => jest.fn());
+
+jest.mock('#app/hooks/useScrollDepthTracker', () => jest.fn(() => null));
+jest.mock('#hooks/useMediaQuery', () => jest.fn());
 
 const input = {
   bbcOrigin: 'https://www.test.bbc.co.uk',
@@ -1471,6 +1476,214 @@ describe('Article Page', () => {
       );
 
       expect(queryByTestId('location-based-topic-oj')).not.toBeInTheDocument();
+    });
+  });
+
+  describe('Scroll Depth Tracking', () => {
+    const continueReadingBlock = {
+      id: 'continue-reading-block',
+      type: 'continueReading',
+      model: {},
+    };
+
+    const baseBlocks =
+      articleDataPersianWithFourParagraphs.content.model.blocks;
+
+    describe('with Continue Reading Button', () => {
+      let mockUseMediaQuery: jest.Mock;
+      let mockUseScrollDepthTracker: jest.Mock;
+      let mediaQueryCallback: ((mediaQueryList: any) => void) | null;
+
+      beforeEach(() => {
+        mockUseMediaQuery = jest.mocked(useMediaQuery);
+        mockUseScrollDepthTracker = jest.mocked(useScrollDepthTracker);
+        mediaQueryCallback = null;
+
+        // Capture the callback passed to useMediaQuery
+        mockUseMediaQuery.mockImplementation((query, callback) => {
+          mediaQueryCallback = callback;
+        });
+
+        mockUseScrollDepthTracker.mockReturnValue(null);
+      });
+
+      it('should enable scroll tracking immediately on desktop viewport (GROUP_4_MIN_WIDTH+)', () => {
+        const pageData: Article = {
+          ...articleDataPersianWithFourParagraphs,
+          content: {
+            ...articleDataPersianWithFourParagraphs.content,
+            model: {
+              ...articleDataPersianWithFourParagraphs.content.model,
+              blocks: [...baseBlocks, continueReadingBlock],
+            },
+          },
+        };
+
+        render(<ArticlePage pageData={pageData} />, {
+          service: 'persian',
+          toggles: { continueReadingButton: { enabled: true } },
+        });
+
+        // Simulate desktop viewport (1008px+)
+        if (mediaQueryCallback) {
+          act(() => {
+            mediaQueryCallback!({ matches: true });
+          });
+        }
+
+        // Scroll tracking should be enabled even though button exists
+        expect(mockUseScrollDepthTracker).toHaveBeenCalledWith(
+          'article-scroll-depth',
+          true,
+        );
+      });
+
+      it('should disable scroll tracking when button is collapsed on mobile viewport', () => {
+        const pageData: Article = {
+          ...articleDataPersianWithFourParagraphs,
+          content: {
+            ...articleDataPersianWithFourParagraphs.content,
+            model: {
+              ...articleDataPersianWithFourParagraphs.content.model,
+              blocks: [...baseBlocks, continueReadingBlock],
+            },
+          },
+        };
+
+        render(<ArticlePage pageData={pageData} />, {
+          service: 'persian',
+          toggles: { continueReadingButton: { enabled: true } },
+        });
+
+        // Simulate mobile viewport (<1008px)
+        if (mediaQueryCallback) {
+          act(() => {
+            mediaQueryCallback!({ matches: false });
+          });
+        }
+
+        // Scroll tracking should be disabled when button exists and is not clicked
+        expect(mockUseScrollDepthTracker).toHaveBeenCalledWith(
+          'article-scroll-depth',
+          false,
+        );
+      });
+
+      it('should enable scroll tracking when Continue Reading button is clicked on mobile', async () => {
+        const pageData: Article = {
+          ...articleDataPersianWithFourParagraphs,
+          content: {
+            ...articleDataPersianWithFourParagraphs.content,
+            model: {
+              ...articleDataPersianWithFourParagraphs.content.model,
+              blocks: [...baseBlocks, continueReadingBlock],
+            },
+          },
+        };
+
+        render(<ArticlePage pageData={pageData} />, {
+          service: 'persian',
+          toggles: { continueReadingButton: { enabled: true } },
+        });
+
+        // Simulate mobile viewport (<1008px)
+        if (mediaQueryCallback) {
+          act(() => {
+            mediaQueryCallback!({ matches: false });
+          });
+        }
+
+        const continueReadingButton = screen.getByTestId(
+          'continue-reading-button',
+        );
+
+        expect(continueReadingButton).toBeInTheDocument();
+
+        // Click the button to expand content
+        await act(async () => {
+          continueReadingButton.click();
+        });
+
+        // After button click with showAllContent = true, scroll tracking should be enabled
+        await waitFor(() => {
+          expect(mockUseScrollDepthTracker).toHaveBeenCalledWith(
+            'article-scroll-depth',
+            true,
+          );
+        });
+      });
+    });
+
+    describe('without Continue Reading Button', () => {
+      let mockUseScrollDepthTracker: jest.Mock;
+
+      beforeEach(() => {
+        mockUseScrollDepthTracker = jest.mocked(useScrollDepthTracker);
+        mockUseScrollDepthTracker.mockReturnValue(null);
+      });
+
+      it('should enable scroll tracking immediately when no Continue Reading block is present', () => {
+        const pageData: Article = {
+          ...articleDataPersianWithFourParagraphs,
+          content: {
+            ...articleDataPersianWithFourParagraphs.content,
+            model: {
+              ...articleDataPersianWithFourParagraphs.content.model,
+              blocks: baseBlocks, // No continue reading block
+            },
+          },
+        };
+
+        render(<ArticlePage pageData={pageData} />, {
+          service: 'persian',
+          toggles: { continueReadingButton: { enabled: true } },
+        });
+
+        // Scroll tracking should be enabled from the start
+        expect(mockUseScrollDepthTracker).toHaveBeenCalledWith(
+          'article-scroll-depth',
+          true,
+        );
+      });
+
+      it('should enable scroll tracking immediately when toggle is disabled', () => {
+        const pageData: Article = {
+          ...articleDataPersianWithFourParagraphs,
+          content: {
+            ...articleDataPersianWithFourParagraphs.content,
+            model: {
+              ...articleDataPersianWithFourParagraphs.content.model,
+              blocks: [...baseBlocks, continueReadingBlock],
+            },
+          },
+        };
+
+        render(<ArticlePage pageData={pageData} />, {
+          service: 'persian',
+          toggles: { continueReadingButton: { enabled: false } },
+        });
+
+        // Scroll tracking should be enabled because button toggle is off
+        expect(mockUseScrollDepthTracker).toHaveBeenCalledWith(
+          'article-scroll-depth',
+          true,
+        );
+      });
+    });
+
+    it('should listen to the correct media query breakpoint', () => {
+      const pageData = articleDataPersianWithFourParagraphs;
+      const mockUseMediaQuery = jest.mocked(useMediaQuery);
+
+      render(<ArticlePage pageData={pageData} />, {
+        service: 'persian',
+      });
+
+      // Should listen to GROUP_4_MIN_WIDTH breakpoint (1008px+)
+      expect(mockUseMediaQuery).toHaveBeenCalledWith(
+        expect.stringContaining('min-width'),
+        expect.any(Function),
+      );
     });
   });
 });
