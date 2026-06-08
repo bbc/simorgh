@@ -1499,6 +1499,10 @@ describe('Article Page', () => {
         mockUseScrollDepthTracker = jest.mocked(useScrollDepthTracker);
         mediaQueryCallback = null;
 
+        jest
+          .spyOn(clickTracking, 'default')
+          .mockReturnValue({ onClick: jest.fn() });
+
         // Capture the callback passed to useMediaQuery
         mockUseMediaQuery.mockImplementation((query, callback) => {
           mediaQueryCallback = callback;
