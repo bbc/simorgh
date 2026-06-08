@@ -1,6 +1,8 @@
-import { use, useState } from 'react';
+import { use, useState, useCallback } from 'react';
 import { useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
+import useMediaQuery from '#hooks/useMediaQuery';
+import { GROUP_4_MIN_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
 import useOptimizelyVariation, {
   ExperimentType,
 } from '#app/hooks/useOptimizelyVariation';
@@ -216,7 +218,18 @@ const ArticlePage = ({
   showTopicDiscoveryComponent?: boolean;
 }) => {
   const [showAllContent, setShowAllContent] = useState(false);
+  const [isDesktopViewport, setIsDesktopViewport] = useState(false);
   const { isApp, isAmp, isLite, pageType } = use(RequestContext);
+
+  // Track when viewport enters GROUP_4_MIN_WIDTH (1008px+) where button is hidden
+  const handleDesktopMediaQueryChange = useCallback(mediaQueryList => {
+    setIsDesktopViewport(mediaQueryList.matches);
+  }, []);
+
+  useMediaQuery(
+    `(min-width: ${GROUP_4_MIN_WIDTH_BP}rem)`,
+    handleDesktopMediaQueryChange,
+  );
 
   const {
     articleAuthor,
@@ -236,10 +249,10 @@ const ArticlePage = ({
     palette: { GREY_2 },
   } = useTheme();
 
-  // test experiment to verify if page views are being tracked correctly
-  const testPageViewsExperimentName = 'test_page_views_aa_2';
-  const testPageViewsVariant = useOptimizelyVariation({
-    experimentName: testPageViewsExperimentName,
+  // EXPERIMENT: Topic Discovery
+  const topicDiscoveryExperimentName = 'newswb_ws_topic_discovery_module';
+  const topicDiscoveryVariant = useOptimizelyVariation({
+    experimentName: topicDiscoveryExperimentName,
     experimentType: ExperimentType.CLIENT_SIDE,
   });
 
@@ -247,7 +260,7 @@ const ArticlePage = ({
     experimentName: string,
     experimentVariant: string | null,
   ): ComponentExperimentProps | null =>
-    experimentVariant && experimentVariant !== 'off'
+    experimentVariant
       ? {
           sendOptimizelyEvents: true,
           experimentName,
@@ -255,10 +268,12 @@ const ArticlePage = ({
         }
       : null;
 
-  const testPageViewsExperimentProps = getActiveExperimentProps(
-    testPageViewsExperimentName,
-    testPageViewsVariant,
+  const topicDiscoveryExperimentProps = getActiveExperimentProps(
+    topicDiscoveryExperimentName,
+    topicDiscoveryVariant,
   );
+  const isTopicDiscoveryVariant =
+    topicDiscoveryVariant && topicDiscoveryVariant !== 'off';
 
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
@@ -319,10 +334,11 @@ const ArticlePage = ({
   const atiData = {
     ...atiAnalytics,
     ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
-    ...(testPageViewsExperimentProps && {
-      experimentName: testPageViewsExperimentProps.experimentName,
-      experimentVariant: testPageViewsExperimentProps.experimentVariant,
-    }),
+    ...(isTopicDiscoveryVariant &&
+      topicDiscoveryExperimentProps && {
+        experimentName: topicDiscoveryExperimentProps.experimentName,
+        experimentVariant: topicDiscoveryExperimentProps.experimentVariant,
+      }),
   };
 
   const showPortraitVideoCarousel = Boolean(
@@ -355,7 +371,10 @@ const ArticlePage = ({
     continueReadingButtonToggle,
   );
 
-  const scrollDepthEnabled = !showContinueReadingButton || showAllContent;
+  // On desktop (GROUP_4+), all content is visible, so enable scroll tracking immediately
+  // On mobile/tablet, only enable tracking when button is clicked and content is expanded
+  const scrollDepthEnabled =
+    isDesktopViewport || !showContinueReadingButton || showAllContent;
   const scrollDepthRef = useScrollDepthTracker(
     'article-scroll-depth',
     scrollDepthEnabled,
@@ -398,7 +417,11 @@ const ArticlePage = ({
     group: gist,
     links: ArticleLinksBlock,
     mpu: getMpuComponent(allowAdvertising),
-    wsoj: ({ data }: { data: Recommendation[] }) => getWsojComponent({ data }),
+    wsoj: ({ data }: { data: Recommendation[] }) =>
+      getWsojComponent({
+        data,
+        experimentProps: topicDiscoveryExperimentProps,
+      }),
     disclaimer: DisclaimerWithPaddingOverride,
     podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
     ...(showContinueReadingButton && {
@@ -423,13 +446,15 @@ const ArticlePage = ({
 
   const isLivePage = isLive();
 
-  const showRelatedTopicsComponent = Boolean(
-    showRelatedTopics && topics.length > 0 && !showTopicDiscoveryComponent,
-  );
-
-  // EXPERIMENT: Topic Discovery
   const showTopicDiscovery =
-    showTopicDiscoveryComponent && !isAmp && !isLite && !isLivePage;
+    (showTopicDiscoveryComponent ||
+      topicDiscoveryVariant === 'topic_discovery') &&
+    !isAmp &&
+    !isLite;
+
+  const showRelatedTopicsComponent = Boolean(
+    showRelatedTopics && topics.length > 0 && !showTopicDiscovery,
+  );
 
   const showMediaCuration = Boolean(
     !isAmp &&
@@ -510,6 +535,7 @@ const ArticlePage = ({
             <OptimizelyPageMetrics trackPageComplete />
           </main>
           <OptimizelyPageMetrics trackPageView trackPageDepth trackVisit />
+          {/* EXPERIMENT: Topic Discovery */}
           {showTopicDiscovery && (
             <TopicDiscovery
               css={[
@@ -518,6 +544,7 @@ const ArticlePage = ({
                   : []),
               ]}
               topics={topics}
+              experimentProps={topicDiscoveryExperimentProps || undefined}
             />
           )}
           {showRelatedTopicsComponent && (
@@ -530,6 +557,7 @@ const ArticlePage = ({
               ]}
               topics={topics}
               mobileDivider={false}
+              experimentProps={topicDiscoveryExperimentProps || undefined}
             />
           )}
           {showPortraitVideoCarousel && (
@@ -539,7 +567,10 @@ const ArticlePage = ({
             />
           )}
           {showCountryCuration && <LocationBasedTopicOJ pageData={pageData} />}
-          <RelatedContentSection content={blocks} />
+          <RelatedContentSection
+            content={blocks}
+            experimentProps={topicDiscoveryExperimentProps || undefined}
+          />
           {showMediaCuration && (
             <div css={styles.mediaCurationRow}>
               <div data-testid="media-curation">
@@ -560,7 +591,12 @@ const ArticlePage = ({
           )}
         </div>
 
-        {!isApp && !isPGL && <SecondaryColumn pageData={pageData} />}
+        {!isApp && !isPGL && (
+          <SecondaryColumn
+            pageData={pageData}
+            experimentProps={topicDiscoveryExperimentProps || undefined}
+          />
+        )}
       </div>
 
       {!isApp && !isPGL && (
@@ -571,6 +607,7 @@ const ArticlePage = ({
           size="default"
           headingBackgroundColour={GREY_2}
           mobileDivider={showRelatedTopicsComponent}
+          experimentProps={topicDiscoveryExperimentProps || undefined}
         />
       )}
     </div>
