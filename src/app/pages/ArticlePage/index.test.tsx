@@ -1492,7 +1492,7 @@ describe('Article Page', () => {
     describe('with Continue Reading Button', () => {
       let mockUseMediaQuery: jest.Mock;
       let mockUseScrollDepthTracker: jest.Mock;
-      let mediaQueryCallback: ((mediaQueryList: any) => void) | null;
+      let mediaQueryCallback: ((mediaQueryList: MediaQueryList) => void) | null;
 
       beforeEach(() => {
         mockUseMediaQuery = jest.mocked(useMediaQuery);
@@ -1507,7 +1507,7 @@ describe('Article Page', () => {
         mockUseScrollDepthTracker.mockReturnValue(null);
       });
 
-      it('should enable scroll tracking immediately on desktop viewport (GROUP_4_MIN_WIDTH+)', () => {
+      it('should enable scroll tracking immediately on desktop viewport (GROUP_4_MIN_WIDTH+)', async () => {
         const pageData: Article = {
           ...articleDataPersianWithFourParagraphs,
           content: {
@@ -1524,21 +1524,22 @@ describe('Article Page', () => {
           toggles: { continueReadingButton: { enabled: true } },
         });
 
-        // Simulate desktop viewport (1008px+)
         if (mediaQueryCallback) {
           act(() => {
-            mediaQueryCallback!({ matches: true });
+            // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+            mediaQueryCallback!({ matches: true } as MediaQueryList);
           });
         }
 
-        // Scroll tracking should be enabled even though button exists
-        expect(mockUseScrollDepthTracker).toHaveBeenCalledWith(
-          'article-scroll-depth',
-          true,
-        );
+        await waitFor(() => {
+          expect(mockUseScrollDepthTracker).toHaveBeenCalledWith(
+            'article-scroll-depth',
+            true,
+          );
+        });
       });
 
-      it('should disable scroll tracking when button is collapsed on mobile viewport', () => {
+      it('should disable scroll tracking when button is collapsed on mobile viewport', async () => {
         const pageData: Article = {
           ...articleDataPersianWithFourParagraphs,
           content: {
@@ -1555,18 +1556,19 @@ describe('Article Page', () => {
           toggles: { continueReadingButton: { enabled: true } },
         });
 
-        // Simulate mobile viewport (<1008px)
         if (mediaQueryCallback) {
           act(() => {
-            mediaQueryCallback!({ matches: false });
+            // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+            mediaQueryCallback!({ matches: false } as MediaQueryList);
           });
         }
 
-        // Scroll tracking should be disabled when button exists and is not clicked
-        expect(mockUseScrollDepthTracker).toHaveBeenCalledWith(
-          'article-scroll-depth',
-          false,
-        );
+        await waitFor(() => {
+          expect(mockUseScrollDepthTracker).toHaveBeenCalledWith(
+            'article-scroll-depth',
+            false,
+          );
+        });
       });
 
       it('should enable scroll tracking when Continue Reading button is clicked on mobile', async () => {
@@ -1586,10 +1588,10 @@ describe('Article Page', () => {
           toggles: { continueReadingButton: { enabled: true } },
         });
 
-        // Simulate mobile viewport (<1008px)
         if (mediaQueryCallback) {
           act(() => {
-            mediaQueryCallback!({ matches: false });
+            // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+            mediaQueryCallback!({ matches: false } as MediaQueryList);
           });
         }
 
@@ -1600,7 +1602,7 @@ describe('Article Page', () => {
         expect(continueReadingButton).toBeInTheDocument();
 
         // Click the button to expand content
-        await act(async () => {
+        act(() => {
           continueReadingButton.click();
         });
 
@@ -1681,7 +1683,7 @@ describe('Article Page', () => {
 
       // Should listen to GROUP_4_MIN_WIDTH breakpoint (1008px+)
       expect(mockUseMediaQuery).toHaveBeenCalledWith(
-        expect.stringContaining('min-width'),
+        '(min-width: 63rem)',
         expect.any(Function),
       );
     });

@@ -222,7 +222,7 @@ const ArticlePage = ({
   const { isApp, isAmp, isLite, pageType } = use(RequestContext);
 
   // Track when viewport enters GROUP_4_MIN_WIDTH (1008px+) where button is hidden
-  const handleDesktopMediaQueryChange = useCallback((mediaQueryList) => {
+  const handleDesktopMediaQueryChange = useCallback(mediaQueryList => {
     setIsDesktopViewport(mediaQueryList.matches);
   }, []);
 
