@@ -1,6 +1,8 @@
-import { use, useState } from 'react';
+import { use, useState, useCallback } from 'react';
 import { useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
+import useMediaQuery from '#hooks/useMediaQuery';
+import { GROUP_4_MIN_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
 import useOptimizelyVariation, {
   ExperimentType,
 } from '#app/hooks/useOptimizelyVariation';
@@ -216,7 +218,18 @@ const ArticlePage = ({
   showTopicDiscoveryComponent?: boolean;
 }) => {
   const [showAllContent, setShowAllContent] = useState(false);
+  const [isDesktopViewport, setIsDesktopViewport] = useState(false);
   const { isApp, isAmp, isLite, pageType } = use(RequestContext);
+
+  // Track when viewport enters GROUP_4_MIN_WIDTH (1008px+) where button is hidden
+  const handleDesktopMediaQueryChange = useCallback((mediaQueryList) => {
+    setIsDesktopViewport(mediaQueryList.matches);
+  }, []);
+
+  useMediaQuery(
+    `(min-width: ${GROUP_4_MIN_WIDTH_BP}rem)`,
+    handleDesktopMediaQueryChange,
+  );
 
   const {
     articleAuthor,
@@ -358,7 +371,10 @@ const ArticlePage = ({
     continueReadingButtonToggle,
   );
 
-  const scrollDepthEnabled = !showContinueReadingButton || showAllContent;
+  // On desktop (GROUP_4+), all content is visible, so enable scroll tracking immediately
+  // On mobile/tablet, only enable tracking when button is clicked and content is expanded
+  const scrollDepthEnabled =
+    isDesktopViewport || !showContinueReadingButton || showAllContent;
   const scrollDepthRef = useScrollDepthTracker(
     'article-scroll-depth',
     scrollDepthEnabled,
