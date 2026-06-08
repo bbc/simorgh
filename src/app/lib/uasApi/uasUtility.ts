@@ -98,6 +98,20 @@ interface MetadataComparisonResult {
 }
 
 /**
+ * Extracts headline text from article content blocks.
+ */
+const extractHeadlineFromBlocks = (
+  blocks?: Array<Record<string, unknown>>,
+): string | null => {
+  const headlineBlock = blocks?.find(block => block?.type === 'headline');
+  const headlineText = (
+    headlineBlock as Record<string, Record<string, unknown>>
+  )?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
+
+  return headlineText ?? null;
+};
+
+/**
  * Extracts current live metadata from article page data.
  *
  * To add a new field: add it to the returned object below.
@@ -113,10 +127,12 @@ const buildCurrentMetadata = (
   { articleId, service }: { articleId: string; service: Services },
 ): Record<string, unknown> => {
   const promoImage = extractPromoImageFromArticleData(articlePageData);
+  const contentBlocks = articlePageData?.content?.model?.blocks;
+  const headline = extractHeadlineFromBlocks(contentBlocks);
   return {
     articleId,
     service,
-    title: articlePageData?.promo?.headlines?.seoHeadline,
+    title: headline,
     promoImage: buildPromoImageUrl(promoImage),
     promoImageAltText: promoImage?.altText,
     locatorUrl: articlePageData?.metadata?.locators?.canonicalUrl ?? '',
@@ -149,6 +165,7 @@ export {
   buildPromoImageUrl,
   buildCurrentMetadata,
   compareMetadataWithSaved,
+  extractHeadlineFromBlocks,
 };
 
 export type { MetadataComparisonResult };

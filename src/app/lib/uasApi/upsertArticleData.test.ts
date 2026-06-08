@@ -9,7 +9,15 @@ import type { Article } from '#app/models/types/optimo';
 import upsertArticleData from './upsertArticleData';
 
 jest.mock('#app/lib/uasApi');
-jest.mock('#app/lib/uasApi/uasUtility');
+jest.mock('#app/lib/uasApi/uasUtility', () => {
+  const actual = jest.requireActual('#app/lib/uasApi/uasUtility');
+  return {
+    ...actual,
+    createFavouritesPayload: jest.fn(),
+    extractPromoImageFromArticleData: jest.fn(),
+    buildPromoImageUrl: jest.fn(),
+  };
+});
 
 const mockUasApiRequest = uasApiRequest as jest.Mock;
 const mockCreateFavouritesPayload = createFavouritesPayload as jest.Mock;
@@ -26,6 +34,30 @@ describe('upsertArticleData', () => {
     metadata: {
       locators: {
         canonicalUrl: 'https://bbc.com/article',
+      },
+    },
+    content: {
+      model: {
+        blocks: [
+          {
+            type: 'headline',
+            model: {
+              blocks: [
+                {
+                  model: {
+                    blocks: [
+                      {
+                        model: {
+                          text: 'Test Article Headline',
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+        ],
       },
     },
     promo: {
@@ -73,7 +105,7 @@ describe('upsertArticleData', () => {
     expect(mockCreateFavouritesPayload).toHaveBeenCalledWith({
       articleId: mockArticleId,
       service: 'portuguese',
-      articleTitle: 'Test Article',
+      articleTitle: 'Test Article Headline',
       promoImage: mockPromoImageUrl,
       promoImageAltText: 'Test image',
       locatorUrl: 'https://bbc.com/article',
