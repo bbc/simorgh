@@ -120,6 +120,7 @@ exports[`ArticleTimestamp should render a 'created' Timestamp correctly 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-4 {
@@ -291,6 +292,7 @@ exports[`ArticleTimestamp should render both a 'created' and an 'updated' Timest
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-4 {
@@ -470,6 +472,7 @@ exports[`ArticleTimestamp should render with a prefix 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-4 {
@@ -649,6 +652,7 @@ exports[`ArticleTimestamp should render with a suffix 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-4 {
@@ -828,6 +832,7 @@ exports[`ArticleTimestamp should render with no suffix or prefix 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-4 {
