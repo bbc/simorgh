@@ -1,6 +1,5 @@
 /* eslint-disable camelcase */
 export interface Translations {
-  matchSummary?: string;
   and?: string;
   pagination?: {
     page?: string;
@@ -62,6 +61,15 @@ export interface Translations {
     saved: string;
     remove: string;
     removing: string;
+  };
+  myNews?: {
+    title: string;
+    guestTitle: string;
+    description: string;
+    guestDescription: string;
+    noArticles: string;
+    errorText: string;
+    loading: string;
   };
   error: {
     home?: string;
@@ -241,6 +249,10 @@ export interface Translations {
   carousel?: {
     previous?: string;
     next?: string;
+  };
+  sport?: {
+    matchSummary?: string;
+    worldCupTeamNames?: Record<string, string>;
   };
 }
 
