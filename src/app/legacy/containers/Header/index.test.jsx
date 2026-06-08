@@ -320,4 +320,29 @@ describe(`Header`, () => {
       expect(container).not.toContainElement(cookieBanner);
     });
   });
+
+  describe('WSLanguagesHeader', () => {
+    it('should render the logo banner on the WS Languages Homepage', async () => {
+      HeaderContainerWithContext({
+        renderOptions: {
+          pageType: HOME_PAGE,
+          service: 'ws',
+          pathname: '/ws/languages',
+        },
+      });
+      expect(await screen.findByTestId('logo-banner')).toBeInTheDocument();
+    });
+
+    it('should not render the logo banner for ws service on a non-languages page', () => {
+      HeaderContainerWithContext({
+        renderOptions: {
+          pageType: HOME_PAGE,
+          service: 'ws',
+          pathname: '/ws',
+        },
+      });
+
+      expect(screen.queryByTestId('logo-banner')).toBeNull();
+    });
+  });
 });
