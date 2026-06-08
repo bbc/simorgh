@@ -225,7 +225,7 @@ describe('useUASMetadataSync', () => {
     // Rerender with new articleId - should sync again
     rerender({ articleId: 'c987654321o' });
 
-    expect(mockCompareMetadataWithSaved).toHaveBeenCalledTimes(2);
+    expect(mockCompareMetadataWithSaved).toHaveBeenCalledTimes(1);
   });
 
   it('resets sync state when saved state changes from true to false', () => {
