@@ -1,10 +1,6 @@
 import { useState } from 'react';
-import {
-  Spinner,
-  BookmarkIcon,
-  FilledBookmarkIcon,
-  Close,
-} from '#app/components/icons';
+import { BookmarkIcon, FilledBookmarkIcon, Close } from '#app/components/icons';
+import Spinner from '#app/components/Spinner';
 import styles from './index.styles';
 
 export interface SaveButtonProps {
@@ -42,7 +38,7 @@ const SaveButton = ({
       onBlur={() => setIsHovered(false)}
       {...(testId && { 'data-testid': testId })}
     >
-      {(isLoading || isUpdating) && <Spinner css={styles.buttonAnimation} />}
+      {(isLoading || isUpdating) && <Spinner />}
       {!isLoading && !isUpdating && !isSaved && <BookmarkIcon />}
       {!isLoading &&
         !isUpdating &&
