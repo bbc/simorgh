@@ -103,12 +103,9 @@ describe('upsertArticleData', () => {
     });
 
     expect(mockCreateFavouritesPayload).toHaveBeenCalledWith({
+      articlePageData: mockArticlePageData,
       articleId: mockArticleId,
       service: 'portuguese',
-      articleTitle: 'Test Article Headline',
-      promoImage: mockPromoImageUrl,
-      promoImageAltText: 'Test image',
-      locatorUrl: 'https://bbc.com/article',
     });
   });
 

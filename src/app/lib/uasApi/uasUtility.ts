@@ -3,6 +3,7 @@ import type { Services } from '#app/models/types/global';
 import type { OptimoRawImageBlock, Article } from '#app/models/types/optimo';
 import buildIChefURL from '#app/lib/utilities/ichefURL';
 import extractPromoImage from '#app/lib/utilities/extractPromoImage';
+import filterForBlockType from '#app/lib/utilities/blockHandlers';
 import type { UasApiRequestBody } from './index';
 
 export interface SavedArticle {
@@ -32,36 +33,6 @@ const buildGlobalId = (
   resourceDomain = FAVOURITES_CONFIG.resourceDomain,
   resourceType = FAVOURITES_CONFIG.resourceType,
 ): string => `urn:bbc:${resourceDomain}:${resourceType}:${resourceId}`;
-
-const createFavouritesPayload = ({
-  articleId,
-  service,
-  articleTitle,
-  promoImage,
-  promoImageAltText,
-  locatorUrl,
-}: {
-  articleId: string;
-  service: Services;
-  articleTitle: string;
-  promoImage?: string;
-  promoImageAltText?: string;
-  locatorUrl?: string;
-}): UasApiRequestBody => ({
-  activityType: FAVOURITES_CONFIG.activityType,
-  resourceDomain: FAVOURITES_CONFIG.resourceDomain,
-  resourceType: FAVOURITES_CONFIG.resourceType,
-  resourceId: articleId,
-  action: FAVOURITES_CONFIG.action,
-  metaData: {
-    service,
-    articleId,
-    title: articleTitle,
-    promoImage: promoImage || '',
-    promoImageAltText: promoImageAltText || '',
-    locatorUrl: locatorUrl || '',
-  },
-});
 
 const extractPromoImageFromArticleData = (articlePageData?: Article) => {
   const promoImageBlocks =
@@ -103,10 +74,9 @@ interface MetadataComparisonResult {
 const extractHeadlineFromBlocks = (
   blocks?: Array<Record<string, unknown>>,
 ): string | null => {
-  const headlineBlock = blocks?.find(block => block?.type === 'headline');
-  const headlineText = (
-    headlineBlock as Record<string, Record<string, unknown>>
-  )?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
+  const headlineBlock = filterForBlockType(blocks, 'headline');
+  const headlineText =
+    headlineBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
 
   return headlineText ?? null;
 };
@@ -154,6 +124,26 @@ const compareMetadataWithSaved = (
   savedMetadata: Record<string, unknown>,
 ): MetadataComparisonResult => ({
   hasChanges: !whereEq(currentMetadata, savedMetadata),
+});
+
+const createFavouritesPayload = ({
+  articleId,
+  service,
+  articlePageData,
+}: {
+  articleId: string;
+  service: Services;
+  articlePageData: Article;
+}): UasApiRequestBody => ({
+  activityType: FAVOURITES_CONFIG.activityType,
+  resourceDomain: FAVOURITES_CONFIG.resourceDomain,
+  resourceType: FAVOURITES_CONFIG.resourceType,
+  resourceId: articleId,
+  action: FAVOURITES_CONFIG.action,
+  metaData: buildCurrentMetadata(articlePageData, {
+    articleId,
+    service,
+  }),
 });
 
 export {

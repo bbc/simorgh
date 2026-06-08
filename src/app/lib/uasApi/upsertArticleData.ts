@@ -2,10 +2,7 @@ import uasApiRequest from '#app/lib/uasApi';
 import {
   FAVOURITES_CONFIG,
   createFavouritesPayload,
-  extractPromoImageFromArticleData,
-  buildPromoImageUrl,
   buildCurrentMetadata,
-  extractHeadlineFromBlocks,
 } from '#app/lib/uasApi/uasUtility';
 import type { Article } from '#app/models/types/optimo';
 import type { Services } from '#app/models/types/global';
@@ -23,18 +20,10 @@ const upsertArticleData = async ({
   service,
   isRefreshAvailable,
 }: SaveOrUpdateArticleMetadataParams): Promise<Record<string, unknown>> => {
-  const promoImageObj = extractPromoImageFromArticleData(articlePageData);
-  const promoImageUrl = buildPromoImageUrl(promoImageObj);
-  const contentBlocks = articlePageData?.content?.model?.blocks;
-  const headlineText = extractHeadlineFromBlocks(contentBlocks) || '';
-
   const body = createFavouritesPayload({
+    articlePageData,
     articleId,
     service,
-    articleTitle: headlineText,
-    promoImage: promoImageUrl,
-    promoImageAltText: promoImageObj?.altText || '',
-    locatorUrl: articlePageData.metadata.locators?.canonicalUrl || '',
   });
   // POST can do both create and update operations in UAS,
   // so we can use the same endpoint for both saving a new article and updating an existing one.
