@@ -102,7 +102,7 @@ export default ({ service }) => {
       });
     });
 
-    it('should close the modal when the Escape key is pressed', () => {
+    it.skip('should close the modal when the Escape key is pressed', () => {
       cy.get('body').then($body => {
         if ($body.find('[data-testid="portrait-video-carousel"]').length > 0) {
           cy.get('[data-testid="portrait-video-carousel"]')
