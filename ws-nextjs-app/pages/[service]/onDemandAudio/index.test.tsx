@@ -35,6 +35,9 @@ const mockToggles = {
   onDemandRadioSchedule: {
     enabled: true,
   },
+  podcastSeoImprovements: {
+    enabled: true,
+  },
 };
 
 jest.mock('../../../utilities/pageRequests/getPageData');
@@ -184,6 +187,161 @@ describe('OnDemand Radio Page ', () => {
     expect(webPageSchema?.mainEntity).toEqual({
       '@id': podcastEpisodeId,
     });
+  });
+
+  it('should include contentUrl and encodingFormat in associatedMedia when toggle is enabled and download link is present', async () => {
+    const mockCtx = {
+      ...mockGetServerSidePropsContext,
+      resolvedUrl: '/gahuza/bbc_gahuza_radio/podcasts/p07yh8hb/p0k4x0jm',
+    } satisfies GetServerSidePropsContext;
+    jest.spyOn(getPageDataModule, 'default').mockResolvedValue({
+      data: {
+        pageData: gahuzaPodcastPage.data,
+        status: 200,
+      },
+    });
+
+    const result = await handleOnDemandAudioRoute(mockCtx);
+
+    const downloadUrl =
+      'https://open.live.bbc.co.uk/mediaselector/6/redir/version/2.0/mediaset/audio-nondrm-download-low/proto/https/vpid/p0k4x06p.mp3';
+    const pageDataWithDownloadLink = {
+      ...result.props.pageData,
+      externalLinks: [
+        ...result.props.pageData.externalLinks,
+        { linkText: 'Download', linkUrl: downloadUrl, linkType: 'download' },
+      ],
+    };
+
+    const { container } = await renderPage({
+      pageData: pageDataWithDownloadLink,
+      service: 'gahuza',
+      pathname: '/gahuza/bbc_gahuza_radio/podcasts/p07yh8hb/p0k4x0jm',
+      toggles: { ...mockToggles, podcastSeoImprovements: { enabled: true } },
+    });
+
+    const linkedDataScript = container.querySelector(
+      'script[type="application/ld+json"]',
+    );
+    const linkedData = JSON.parse(linkedDataScript?.textContent ?? '{}') as {
+      '@graph'?: Array<Record<string, unknown>>;
+    };
+    const graph = linkedData['@graph'] ?? [];
+
+    const podcastEpisode = graph.find(
+      graphEntry => graphEntry['@type'] === 'PodcastEpisode',
+    ) as Record<string, unknown> | undefined;
+
+    const associatedMedia = podcastEpisode?.associatedMedia as
+      | Record<string, unknown>
+      | undefined;
+
+    expect(associatedMedia?.contentUrl).toMatch(
+      /^https:\/\/open\.live\.bbc\.co\.uk\/mediaselector\//,
+    );
+    expect(associatedMedia?.encodingFormat).toBe('audio/mpeg');
+  });
+
+  it('should not include contentUrl in associatedMedia when toggle is disabled', async () => {
+    const mockCtx = {
+      ...mockGetServerSidePropsContext,
+      resolvedUrl: '/gahuza/bbc_gahuza_radio/podcasts/p07yh8hb/p0k4x0jm',
+    } satisfies GetServerSidePropsContext;
+    jest.spyOn(getPageDataModule, 'default').mockResolvedValue({
+      data: {
+        pageData: gahuzaPodcastPage.data,
+        status: 200,
+      },
+    });
+
+    const result = await handleOnDemandAudioRoute(mockCtx);
+
+    const pageDataWithDownloadLink = {
+      ...result.props.pageData,
+      externalLinks: [
+        ...result.props.pageData.externalLinks,
+        {
+          linkText: 'Download',
+          linkUrl:
+            'https://open.live.bbc.co.uk/mediaselector/6/redir/version/2.0/mediaset/audio-nondrm-download-low/proto/https/vpid/p0k4x06p.mp3',
+          linkType: 'download',
+        },
+      ],
+    };
+
+    const { container } = await renderPage({
+      pageData: pageDataWithDownloadLink,
+      service: 'gahuza',
+      pathname: '/gahuza/bbc_gahuza_radio/podcasts/p07yh8hb/p0k4x0jm',
+      toggles: { ...mockToggles, podcastSeoImprovements: { enabled: false } },
+    });
+
+    const linkedDataScript = container.querySelector(
+      'script[type="application/ld+json"]',
+    );
+    const linkedData = JSON.parse(linkedDataScript?.textContent ?? '{}') as {
+      '@graph'?: Array<Record<string, unknown>>;
+    };
+    const graph = linkedData['@graph'] ?? [];
+
+    const podcastEpisode = graph.find(
+      graphEntry => graphEntry['@type'] === 'PodcastEpisode',
+    ) as Record<string, unknown> | undefined;
+
+    const associatedMedia = podcastEpisode?.associatedMedia as
+      | Record<string, unknown>
+      | undefined;
+
+    expect(associatedMedia?.contentUrl).toBeUndefined();
+    expect(associatedMedia?.encodingFormat).toBeUndefined();
+  });
+
+  it('should not include contentUrl in associatedMedia when no download link is present', async () => {
+    const mockCtx = {
+      ...mockGetServerSidePropsContext,
+      resolvedUrl: '/gahuza/bbc_gahuza_radio/podcasts/p07yh8hb/p0k4x0jm',
+    } satisfies GetServerSidePropsContext;
+    jest.spyOn(getPageDataModule, 'default').mockResolvedValue({
+      data: {
+        pageData: gahuzaPodcastPage.data,
+        status: 200,
+      },
+    });
+
+    const result = await handleOnDemandAudioRoute(mockCtx);
+
+    const pageDataWithNoDownloadLink = {
+      ...result.props.pageData,
+      externalLinks: result.props.pageData.externalLinks.filter(
+        (link: { linkType: string }) => link.linkType !== 'download',
+      ),
+    };
+
+    const { container } = await renderPage({
+      pageData: pageDataWithNoDownloadLink,
+      service: 'gahuza',
+      pathname: '/gahuza/bbc_gahuza_radio/podcasts/p07yh8hb/p0k4x0jm',
+      toggles: { ...mockToggles, podcastSeoImprovements: { enabled: true } },
+    });
+
+    const linkedDataScript = container.querySelector(
+      'script[type="application/ld+json"]',
+    );
+    const linkedData = JSON.parse(linkedDataScript?.textContent ?? '{}') as {
+      '@graph'?: Array<Record<string, unknown>>;
+    };
+    const graph = linkedData['@graph'] ?? [];
+
+    const podcastEpisode = graph.find(
+      graphEntry => graphEntry['@type'] === 'PodcastEpisode',
+    ) as Record<string, unknown> | undefined;
+
+    const associatedMedia = podcastEpisode?.associatedMedia as
+      | Record<string, unknown>
+      | undefined;
+
+    expect(associatedMedia?.contentUrl).toBeUndefined();
+    expect(associatedMedia?.encodingFormat).toBeUndefined();
   });
 
   it('should show the brand title for OnDemand Radio Pages', async () => {
