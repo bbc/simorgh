@@ -7,6 +7,7 @@ import Promo from '#components/Promo';
 import { Summary } from '#app/models/types/curationData';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import isMediaType from '#app/lib/utilities/isMedia';
+import { MY_NEWS_PAGE } from '#app/routes/utils/pageTypes';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '../../../contexts/RequestContext';
@@ -30,8 +31,10 @@ const CurationPromo = ({
   eventTrackingData,
   isPortraitImage,
 }: Summary) => {
-  const { isAmp, isLite } = use(RequestContext);
+  const { isAmp, isLite, pageType } = use(RequestContext);
   const { translations } = use(ServiceContext);
+
+  const shouldShowFallbackPlaceholder = !imageUrl && pageType === MY_NEWS_PAGE;
 
   const audioTranslation = path(['media', 'audio'], translations);
   const videoTranslation = path(['media', 'video'], translations);
@@ -55,7 +58,7 @@ const CurationPromo = ({
 
   return (
     <Promo css={styles.promo} className="">
-      {imageUrl && (
+      {(imageUrl || shouldShowFallbackPlaceholder) && (
         <Promo.Image
           src={imageUrl}
           alt={imageAlt}
