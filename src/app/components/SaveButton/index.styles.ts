@@ -1,10 +1,5 @@
-import { css, Theme, keyframes } from '@emotion/react';
+import { css, Theme } from '@emotion/react';
 import pixelsToRem from '#app/utilities/pixelsToRem';
-
-const spinAnimation = keyframes({
-  '0%': { transform: 'rotate(0deg)' },
-  '100%': { transform: 'rotate(360deg)' },
-});
 
 const styles = {
   buttonWrapper: ({ palette, spacings, fontVariants, fontSizes }: Theme) =>
@@ -48,13 +43,6 @@ const styles = {
         backgroundColor: palette.GREY_8,
         cursor: 'not-allowed',
       },
-    }),
-
-  buttonAnimation: ({ palette }: Theme) =>
-    css({
-      display: 'block',
-      animation: `${spinAnimation} 1s linear 0s infinite normal none running`,
-      '& svg': { fill: palette.WHITE },
     }),
 };
 
