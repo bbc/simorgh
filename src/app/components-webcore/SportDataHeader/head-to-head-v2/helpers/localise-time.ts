@@ -1,4 +1,4 @@
-import 'temporal-polyfill/global';
+import 'temporal-polyfill';
 
 const getLocalisedTime = (inputDate, inputTime) => {
   const [, day, monthName, year] = inputDate.split(' ');

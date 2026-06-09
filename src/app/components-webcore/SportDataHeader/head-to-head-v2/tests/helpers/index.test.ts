@@ -1,4 +1,4 @@
-import 'temporal-polyfill/global';
+import 'temporal-polyfill';
 import getLocalisedTime from '../../helpers/localise-time';
 
 describe('getLocalisedTime', () => {
