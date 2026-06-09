@@ -17,32 +17,13 @@ const runningScoreFields = new Set([
 const translateDigits = (value: string, numerals: string[]) =>
   value.replace(/\d/g, digit => numerals[Number(digit)] ?? digit);
 
-const translateGroupActionMinutes = (actions: string[], numerals: string[]) =>
-  actions.map(action => translateDigits(action, numerals));
+// Translates digits within grouped actions strings (e.g. "Y. Tielemans (44', 90'+4)", "E. Buendía (51')")
+const translateGroupActionMinutes = (
+  actions: string[] | undefined,
+  numerals: string[],
+) => actions?.map(action => translateDigits(action, numerals));
 
-// // Recursively translates minute labels within grouped actions, which can be nested objects or arrays
-// const translateGroupActionMinutes = <T,>(obj: T, numerals: string[]): T => {
-//   if (typeof obj === 'string') {
-//     return translateDigits(obj, numerals) as T;
-//   }
-
-//   if (Array.isArray(obj)) {
-//     return obj.map(item => translateGroupActionMinutes(item, numerals)) as T;
-//   }
-
-//   if (obj && typeof obj === 'object') {
-//     return Object.fromEntries(
-//       Object.entries(obj).map(([key, value]) => [
-//         key,
-//         translateGroupActionMinutes(value, numerals),
-//       ]),
-//     ) as T;
-//   }
-
-//   return obj;
-// };
-
-// translates Minutes in period label (e.g. 45', 45'+2, 98' ET) and player actions (e.g. 9')
+// Translates Minutes in period label (e.g. 45', 45'+2, 98' ET) and player actions (e.g. 9')
 const translateMinutes = (label: string | undefined, numerals: string[]) => {
   if (!label) {
     return label;

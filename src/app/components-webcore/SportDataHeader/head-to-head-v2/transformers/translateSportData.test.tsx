@@ -608,6 +608,63 @@ describe('TranslateSportData', () => {
       });
     });
 
+    it('should handle translated numerals for multiple grouped actions', () => {
+      const dataWithMultipleGroupedActions = {
+        ...fixtureDataDefault,
+        groupedActions: [
+          {
+            groupName: { fullName: 'Assists', shortName: 'Assists' },
+            homeTeamActions: ["J. Lucumí (90')"],
+            awayTeamActions: ["Y. Tielemans (44', 90'+4)", "E. Buendía (51')"],
+          },
+          {
+            groupName: { fullName: 'Penalties', shortName: 'Penalties' },
+            homeTeamActions: ["J. Lucumí (90')"],
+            awayTeamActions: ["Y. Tielemans (44', 90'+4)", "E. Buendía (51')"],
+          },
+          {
+            groupName: {
+              fullName: 'something else',
+              shortName: 'something else',
+            },
+            homeTeamActions: [],
+          },
+        ],
+      } as unknown as HeadToHeadV2Data;
+
+      const result = translateSportData(
+        dataWithMultipleGroupedActions,
+        persianServiceConfig.default.translations,
+        'persian',
+      );
+      expect(result.groupedActions).toStrictEqual([
+        {
+          groupName: {
+            fullName: 'پاس گل',
+            shortName: 'پاس گل',
+          },
+          homeTeamActions: ["J. Lucumí (۹۰')"],
+          awayTeamActions: ["Y. Tielemans (۴۴', ۹۰'+۴)", "E. Buendía (۵۱')"],
+        },
+        {
+          groupName: {
+            fullName: 'پنالتی',
+            shortName: 'پنالتی',
+          },
+          homeTeamActions: ["J. Lucumí (۹۰')"],
+          awayTeamActions: ["Y. Tielemans (۴۴', ۹۰'+۴)", "E. Buendía (۵۱')"],
+        },
+        {
+          groupName: {
+            fullName: 'something else',
+            shortName: 'something else',
+          },
+          homeTeamActions: [],
+          awayTeamActions: undefined,
+        },
+      ]);
+    });
+
     it('should translate minutes in grouped actions with non western service numerals for applicable service', () => {
       const result = translateSportData(
         fixtureDataDefault,
