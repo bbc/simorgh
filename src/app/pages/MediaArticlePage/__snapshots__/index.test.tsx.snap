@@ -44,6 +44,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-5 {
