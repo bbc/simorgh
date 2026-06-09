@@ -34,7 +34,13 @@ const translateMinutes = (label: string | undefined, numerals: string[]) => {
     return label;
   }
 
-  const match = label.trim().match(/^(\d+)(?:'(\+\d+)?)?(?:\s*(.*))?$/);
+  // 30'
+  // 90' +2
+  // 10' ET
+  // 9' pen
+  const regexCheckWithMeaningfulName = /^(\d+)(?:'(\+\d+)?)?(?:\s*(.*))?$/; // to do
+
+  const match = label.trim().match(regexCheckWithMeaningfulName);
 
   if (!match) {
     return label;
@@ -67,14 +73,19 @@ const handleExtraTimeLabel = (
   return `${minuteLabel} ${sportTranslations?.et || 'ET'}`;
 };
 
+// Stage of the game: HT, FT, ET, AET, PENS or minute labels like 45', 90' +2, 10' ET, 9' pen
 const translatePeriodLabel = (
-  label: string | undefined,
+  periodLabel: { value: string; accessible: string },
   sportTranslations: Translations['sport'],
   numerals: string[],
+  shouldTranslateMinutes: boolean,
 ) => {
-  if (!label) return null;
+  if (!periodLabel) return null;
 
-  const extraTimeLabel = handleExtraTimeLabel(label, sportTranslations);
+  const extraTimeLabel = handleExtraTimeLabel(
+    periodLabel.value,
+    sportTranslations,
+  );
 
   const periodLabelLookup = {
     HT: sportTranslations?.ht,
@@ -85,31 +96,14 @@ const translatePeriodLabel = (
   };
 
   const lookupResult =
-    periodLabelLookup[label as keyof typeof periodLabelLookup];
-
-  const shouldTranslateMinutes = numerals !== WesternArabic && !lookupResult;
+    periodLabelLookup[periodLabel.value as keyof typeof periodLabelLookup];
 
   const translatedMinutes =
     extraTimeLabel && shouldTranslateMinutes
       ? translateMinutes(extraTimeLabel, numerals)
-      : shouldTranslateMinutes && translateMinutes(label, numerals);
+      : shouldTranslateMinutes && translateMinutes(periodLabel.value, numerals);
 
   return lookupResult || translatedMinutes || extraTimeLabel;
-};
-
-const translateGroupedActionsName = (
-  groupedActionName: string,
-  sportTranslations: Translations['sport'],
-) => {
-  const groupedActionsLookup = {
-    Assists: sportTranslations?.assists,
-    Penalties: sportTranslations?.penalties,
-  };
-  return (
-    groupedActionsLookup[
-      groupedActionName as keyof typeof groupedActionsLookup
-    ] || groupedActionName
-  );
 };
 
 const translateScore = (score: string, numerals: string[]) => {
@@ -138,21 +132,18 @@ const translateRunningScores = (
 
 const translateTeamName = (
   urn: string | undefined,
-  sportTranslations: Translations['sport'],
+  worldCupTeamNames: Record<string, string> | undefined,
 ) => {
   const teamIdentifier = urn?.split(':').pop();
-  return teamIdentifier
-    ? sportTranslations?.worldCupTeamNames?.[teamIdentifier]
-    : undefined;
+  return teamIdentifier ? worldCupTeamNames?.[teamIdentifier] : undefined;
 };
 
 const transformTeam = (
   team: Team,
   teamNameTranslation: string | undefined,
   numerals: string[],
+  shouldTranslateMinutes: boolean,
 ) => {
-  const shouldTranslateMinutes = numerals !== WesternArabic;
-
   return {
     ...team,
     fullName: teamNameTranslation || team.fullName,
@@ -184,45 +175,48 @@ const transformTeam = (
   };
 };
 
-const translateSportData = (
-  data: HeadToHeadV2Data,
-  translations: Translations,
-  service: Services,
+// e.g. Assists or Passes Décisives
+//         "groupedActions": [
+//   {
+//     "groupName": { "fullName": "Assists", "shortName": "Assists" },
+//     "homeTeamActions": ["J. Lucumí (90')"],
+//     "awayTeamActions": ["Y. Tielemans (44', 90'+4)", "E. Buendía (51')"]
+//   }
+// ],
+const translateGroupedActions = (
+  groupedActions,
+  penaltyTranslation,
+  assistsTranslation,
+  numerals,
+  shouldTranslateMinutes,
 ) => {
-  const numerals: string[] = getServiceNumerals(service);
-  const shouldTranslateMinutes = numerals !== WesternArabic;
-  const sportTranslations = translations?.sport;
+  groupedActions?.map(group => {
+    // const translatedGroupName = translateGroupedActionsName(
+    //   group.groupName.fullName,
+    //   penaltyTranslation,
+    //   assistsTranslation,
+    // );
 
-  if (!sportTranslations) {
-    return data;
-  }
-
-  const homeTeamTranslation = translateTeamName(
-    data.home?.urn,
-    sportTranslations,
-  );
-  const awayTeamTranslation = translateTeamName(
-    data.away?.urn,
-    sportTranslations,
-  );
-
-  const periodLabelTranslation = translatePeriodLabel(
-    data.periodLabel?.value,
-    sportTranslations,
-    numerals,
-  );
-
-  const groupedActionsTranslation = data.groupedActions?.map(group => {
-    const translatedGroupName = translateGroupedActionsName(
-      group.groupName.fullName,
-      sportTranslations,
-    );
+    // const translateGroupedActionsName = (
+    //   groupedActionName: string,
+    //   sportTranslations: Translations['sport'],
+    // ) => {
+    //   const groupedActionsLookup = {
+    //     Assists: assistsTranslation,
+    //     Penalties: penaltyTranslation,
+    //   };
+    //   return (
+    //     groupedActionsLookup[
+    //       groupedActionName as keyof typeof groupedActionsLookup
+    //     ] || groupedActionName
+    //   );
+    // };
 
     return {
       ...group,
       groupName: {
-        fullName: translatedGroupName,
-        shortName: translatedGroupName,
+        // fullName: translatedGroupName,
+        // shortName: translatedGroupName,
       },
       ...(shouldTranslateMinutes && {
         homeTeamActions: translateGroupActionMinutes(
@@ -236,19 +230,61 @@ const translateSportData = (
       }),
     };
   });
+};
+
+const translateSportData = (
+  data: HeadToHeadV2Data,
+  translations: Translations,
+  service: Services,
+) => {
+  const numerals: string[] = getServiceNumerals(service);
+  const sportTranslations = translations?.sport;
+  const shouldTranslateMinutes = numerals !== WesternArabic;
+
+  if (!sportTranslations) {
+    return data;
+  }
+
+  const homeTeamTranslation = translateTeamName(
+    data.home?.urn,
+    sportTranslations.worldCupTeamNames,
+  );
+
+  const awayTeamTranslation = translateTeamName(
+    data.away?.urn,
+    sportTranslations.worldCupTeamNames,
+  );
 
   return {
     ...data,
-    home: transformTeam(data.home, homeTeamTranslation, numerals),
-    away: transformTeam(data.away, awayTeamTranslation, numerals),
+    home: transformTeam(
+      data.home,
+      homeTeamTranslation,
+      numerals,
+      shouldTranslateMinutes,
+    ),
+    away: transformTeam(
+      data.away,
+      awayTeamTranslation,
+      numerals,
+      shouldTranslateMinutes,
+    ),
     ...(data.periodLabel && {
-      periodLabel: {
-        ...(periodLabelTranslation && { translation: periodLabelTranslation }),
-        ...data.periodLabel,
-      },
+      periodLabel: translatePeriodLabel(
+        data.periodLabel,
+        sportTranslations,
+        numerals,
+        shouldTranslateMinutes,
+      ),
     }),
     ...(data.groupedActions && {
-      groupedActions: groupedActionsTranslation,
+      groupedActions: translateGroupedActions(
+        data.groupedActions,
+        sportTranslations.penalties,
+        sportTranslations.assists,
+        numerals,
+        shouldTranslateMinutes,
+      ),
     }),
   };
 };
