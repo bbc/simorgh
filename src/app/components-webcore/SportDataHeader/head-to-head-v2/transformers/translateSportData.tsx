@@ -2,7 +2,7 @@ import { Services } from '#app/models/types/global';
 import { Translations } from '#app/models/types/translations';
 import getServiceNumerals from '#app/components/MostRead/utilities/getServiceNumerals';
 import { WesternArabic } from '#app/legacy/psammead/psammead-locales/src/numerals';
-import { GroupedActions, HeadToHeadV2Data, Team } from '../types';
+import { HeadToHeadV2Data, Team } from '../types';
 
 const translateDigits = (value: string, numerals: string[]) =>
   value.replace(/\d/g, digit => numerals[Number(digit)] ?? digit);
@@ -183,59 +183,6 @@ const transformTeam = (
   };
 };
 
-// e.g. Penalties or Assists
-const translateGroupedActionsName = ({
-  groupedActionName,
-  penaltyTranslation,
-  assistsTranslation,
-}: {
-  groupedActionName: string;
-  penaltyTranslation?: string;
-  assistsTranslation?: string;
-}) => {
-  const groupedActionsLookup: Record<string, string | undefined> = {
-    Assists: assistsTranslation,
-    Penalties: penaltyTranslation,
-  };
-
-  return groupedActionsLookup[groupedActionName] || groupedActionName;
-};
-
-// E.g. grouped actions by type (Assists, Penalties) with translated group names and translated minute labels within the actions
-const translateGroupedActions = (
-  groupedActions: GroupedActions[] | undefined,
-  penaltyTranslation: string | undefined,
-  assistsTranslation: string | undefined,
-  numerals: string[],
-  shouldTranslateMinutes: boolean,
-) => {
-  return groupedActions?.map(group => {
-    const translatedGroupName = translateGroupedActionsName({
-      groupedActionName: group.groupName.fullName,
-      penaltyTranslation,
-      assistsTranslation,
-    });
-
-    return {
-      ...group,
-      groupName: {
-        fullName: translatedGroupName,
-        shortName: translatedGroupName,
-      },
-      ...(shouldTranslateMinutes && {
-        homeTeamActions: translateGroupActionMinutes(
-          group.homeTeamActions,
-          numerals,
-        ),
-        awayTeamActions: translateGroupActionMinutes(
-          group.awayTeamActions,
-          numerals,
-        ),
-      }),
-    };
-  });
-};
-
 const translateSportData = (
   data: HeadToHeadV2Data,
   translations: Translations,
@@ -272,13 +219,34 @@ const translateSportData = (
       ),
     }),
     ...(data.groupedActions && {
-      groupedActions: translateGroupedActions(
-        data.groupedActions,
-        sportTranslations.penalties,
-        sportTranslations.assists,
-        numerals,
-        shouldTranslateMinutes,
-      ),
+      groupedActions: data.groupedActions.map(group => {
+        const groupedActionsLookup: Record<string, string | undefined> = {
+          Assists: sportTranslations.assists,
+          Penalties: sportTranslations.penalties,
+        };
+
+        const translatedGroupName =
+          groupedActionsLookup[group.groupName.fullName] ||
+          group.groupName.fullName;
+
+        return {
+          ...group,
+          groupName: {
+            fullName: translatedGroupName,
+            shortName: translatedGroupName,
+          },
+          ...(shouldTranslateMinutes && {
+            homeTeamActions: translateGroupActionMinutes(
+              group.homeTeamActions,
+              numerals,
+            ),
+            awayTeamActions: translateGroupActionMinutes(
+              group.awayTeamActions,
+              numerals,
+            ),
+          }),
+        };
+      }),
     }),
   };
 };
