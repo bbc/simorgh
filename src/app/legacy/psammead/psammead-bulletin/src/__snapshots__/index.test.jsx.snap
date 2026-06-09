@@ -127,6 +127,7 @@ exports[`Bulletin should render audio correctly 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-13 {
@@ -445,6 +446,7 @@ exports[`Bulletin should render audio correctly with lang prop passed in 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-13 {
@@ -813,6 +815,7 @@ exports[`Bulletin should render live audio correctly 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-16 {
@@ -1208,6 +1211,7 @@ exports[`Bulletin should render live video correctly 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-16 {
@@ -1558,6 +1562,7 @@ exports[`Bulletin should render radio bulletin without ariaId 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-13 {
@@ -1876,6 +1881,7 @@ exports[`Bulletin should render radio bulletin without summary correctly 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-13 {
@@ -2160,6 +2166,7 @@ exports[`Bulletin should render video correctly 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-13 {

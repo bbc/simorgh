@@ -122,6 +122,7 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 <div>
