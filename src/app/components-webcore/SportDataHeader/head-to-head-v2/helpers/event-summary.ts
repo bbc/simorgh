@@ -80,18 +80,20 @@ export const getFallbackFootballPeriodLabel = ({
   }
 
   if (isPens) {
-    const aetTranslatedFallback = aetTranslation
-      ? {
-          value: aetTranslation,
-          accessible: aetTranslation,
-        }
-      : aetFallback;
-    const ftTranslatedFallback = ftTranslation
-      ? {
-          value: ftTranslation,
-          accessible: ftTranslation,
-        }
-      : ftFallback;
+    const aetTranslatedFallback = {
+      ...aetFallback,
+      ...(aetTranslation && {
+        translation: 'aetTranslation',
+        accessible: ftTranslation,
+      }),
+    };
+    const ftTranslatedFallback = {
+      ...ftFallback,
+      ...(ftTranslation && {
+        translation: ftTranslation,
+        accessible: ftTranslation,
+      }),
+    };
 
     return homeRunningScores?.extratime && awayRunningScores?.extratime
       ? aetTranslatedFallback
