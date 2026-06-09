@@ -146,10 +146,12 @@ const translateTeamName = (
 
 const transformTeam = (
   team: Team,
-  teamNameTranslation: string | undefined,
+  worldCupTeamNames: Record<string, string> | undefined,
   numerals: string[],
   shouldTranslateMinutes: boolean,
 ) => {
+  const teamNameTranslation = translateTeamName(team.urn, worldCupTeamNames);
+
   return {
     ...team,
     fullName: teamNameTranslation || team.fullName,
@@ -247,27 +249,17 @@ const translateSportData = (
     return data;
   }
 
-  const homeTeamTranslation = translateTeamName(
-    data.home?.urn,
-    sportTranslations.worldCupTeamNames,
-  );
-
-  const awayTeamTranslation = translateTeamName(
-    data.away?.urn,
-    sportTranslations.worldCupTeamNames,
-  );
-
   return {
     ...data,
     home: transformTeam(
       data.home,
-      homeTeamTranslation,
+      sportTranslations.worldCupTeamNames,
       numerals,
       shouldTranslateMinutes,
     ),
     away: transformTeam(
       data.away,
-      awayTeamTranslation,
+      sportTranslations.worldCupTeamNames,
       numerals,
       shouldTranslateMinutes,
     ),
