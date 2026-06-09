@@ -83,15 +83,13 @@ export const getFallbackFootballPeriodLabel = ({
     const aetTranslatedFallback = {
       ...aetFallback,
       ...(aetTranslation && {
-        translation: 'aetTranslation',
-        accessible: ftTranslation,
+        translation: aetTranslation,
       }),
     };
     const ftTranslatedFallback = {
       ...ftFallback,
       ...(ftTranslation && {
         translation: ftTranslation,
-        accessible: ftTranslation,
       }),
     };
 
