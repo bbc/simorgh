@@ -37,7 +37,7 @@ export type Action = {
 };
 
 export type PlayerActions = {
-  playerId: string;
+  playerId?: string;
   playerName: string;
   actionType: string;
   actions: Action[];
