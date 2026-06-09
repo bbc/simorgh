@@ -8,8 +8,7 @@ This repository is in scope of the BBC's Security Disclosure Policy provided the
 
 - The repository is not archived. 
 - The security issue affects the default branch of the repository. Issues affecting forks or non-default branches are out of scope unless they are secrets such as API keys. 
-- The scopes detailed within the responsible disclosure policy (https://www.bbc.com/backstage/security-disclosure-policy/) are also met 
-- [TEAM TO ADD OTHER SCOPE CRITERIA HERE] 
+- The scopes detailed within the responsible disclosure policy (https://www.bbc.com/backstage/security-disclosure-policy/) are also met
 
 ### How to Report 
 
