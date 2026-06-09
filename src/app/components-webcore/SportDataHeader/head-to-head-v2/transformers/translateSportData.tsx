@@ -2,7 +2,7 @@ import { Services } from '#app/models/types/global';
 import { Translations } from '#app/models/types/translations';
 import getServiceNumerals from '#app/components/MostRead/utilities/getServiceNumerals';
 import { WesternArabic } from '#app/legacy/psammead/psammead-locales/src/numerals';
-import { HeadToHeadV2Data, Team } from '../types';
+import { GroupedActions, HeadToHeadV2Data, Team } from '../types';
 
 const translateDigits = (value: string, numerals: string[]) =>
   value.replace(/\d/g, digit => numerals[Number(digit)] ?? digit);
@@ -29,18 +29,17 @@ const translateGroupActionMinutes = <T,>(obj: T, numerals: string[]): T => {
   return obj;
 };
 
+// translates Minutes in period label (e.g. 45', 45'+2, 98' ET) and player actions (e.g. 9')
 const translateMinutes = (label: string | undefined, numerals: string[]) => {
   if (!label) {
     return label;
   }
 
-  // 30'
-  // 90' +2
-  // 10' ET
-  // 9' pen
-  const regexCheckWithMeaningfulName = /^(\d+)(?:'(\+\d+)?)?(?:\s*(.*))?$/; // to do
+  // E.g. 30', 90'+4, 98' ET
+  const isMinutesOnlyOrPlusMinutesOrWithExtraTime =
+    /^(\d+)(?:'(\+\d+)?)?(?:\s*(.*))?$/;
 
-  const match = label.trim().match(regexCheckWithMeaningfulName);
+  const match = label.trim().match(isMinutesOnlyOrPlusMinutesOrWithExtraTime);
 
   if (!match) {
     return label;
@@ -59,6 +58,7 @@ const translateMinutes = (label: string | undefined, numerals: string[]) => {
   return suffix ? `${translatedTime} ${suffix}` : translatedTime;
 };
 
+// E.g. translates "ET" part of "10' ET"
 const handleExtraTimeLabel = (
   label: string | undefined,
   sportTranslations: Translations['sport'],
@@ -73,7 +73,8 @@ const handleExtraTimeLabel = (
   return `${minuteLabel} ${sportTranslations?.et || 'ET'}`;
 };
 
-// Stage of the game: HT, FT, ET, AET, PENS or minute labels like 45', 90' +2, 10' ET, 9' pen
+// Stage of the game: HT, FT, ET, AET, PENS or minute labels like 45', 45'+2, 98' ET
+// returns text (e.g. PEN), else minutes (e.g. 45' or 45'+2), else minutes with ET label (e.g. 98' ET)
 const translatePeriodLabel = (
   periodLabel: { value: string; accessible: string },
   sportTranslations: Translations['sport'],
@@ -175,48 +176,44 @@ const transformTeam = (
   };
 };
 
-// e.g. Assists or Passes Décisives
-//         "groupedActions": [
-//   {
-//     "groupName": { "fullName": "Assists", "shortName": "Assists" },
-//     "homeTeamActions": ["J. Lucumí (90')"],
-//     "awayTeamActions": ["Y. Tielemans (44', 90'+4)", "E. Buendía (51')"]
-//   }
-// ],
-const translateGroupedActions = (
-  groupedActions,
+// e.g. Penalties or Assists
+const translateGroupedActionsName = ({
+  groupedActionName,
   penaltyTranslation,
   assistsTranslation,
-  numerals,
-  shouldTranslateMinutes,
-) => {
-  groupedActions?.map(group => {
-    // const translatedGroupName = translateGroupedActionsName(
-    //   group.groupName.fullName,
-    //   penaltyTranslation,
-    //   assistsTranslation,
-    // );
+}: {
+  groupedActionName: string;
+  penaltyTranslation?: string;
+  assistsTranslation?: string;
+}) => {
+  const groupedActionsLookup: Record<string, string | undefined> = {
+    Assists: assistsTranslation,
+    Penalties: penaltyTranslation,
+  };
 
-    // const translateGroupedActionsName = (
-    //   groupedActionName: string,
-    //   sportTranslations: Translations['sport'],
-    // ) => {
-    //   const groupedActionsLookup = {
-    //     Assists: assistsTranslation,
-    //     Penalties: penaltyTranslation,
-    //   };
-    //   return (
-    //     groupedActionsLookup[
-    //       groupedActionName as keyof typeof groupedActionsLookup
-    //     ] || groupedActionName
-    //   );
-    // };
+  return groupedActionsLookup[groupedActionName] || groupedActionName;
+};
+
+// E.g. grouped actions by type (Assists, Penalties) with translated group names and translated minute labels within the actions
+const translateGroupedActions = (
+  groupedActions: GroupedActions[] | undefined,
+  penaltyTranslation: string | undefined,
+  assistsTranslation: string | undefined,
+  numerals: string[],
+  shouldTranslateMinutes: boolean,
+) => {
+  return groupedActions?.map(group => {
+    const translatedGroupName = translateGroupedActionsName({
+      groupedActionName: group.groupName.fullName,
+      penaltyTranslation,
+      assistsTranslation,
+    });
 
     return {
       ...group,
       groupName: {
-        // fullName: translatedGroupName,
-        // shortName: translatedGroupName,
+        fullName: translatedGroupName,
+        shortName: translatedGroupName,
       },
       ...(shouldTranslateMinutes && {
         homeTeamActions: translateGroupActionMinutes(
