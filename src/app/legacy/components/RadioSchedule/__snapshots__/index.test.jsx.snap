@@ -473,6 +473,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-31 {
@@ -1777,6 +1778,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-31 {
