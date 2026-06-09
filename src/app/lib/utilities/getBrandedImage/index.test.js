@@ -48,7 +48,7 @@ describe('CpsMetadata get branded image', () => {
     const service = 'russian';
     const actual = getBrandedImage(locator, service);
     const expected =
-      'https://ichef.bbci.co.uk/news/1200/branded_korean/729E/test/_63724392_gettyimages-1098075358.jpg';
+      'https://ichef.bbci.co.uk/news/1200/branded_russian/729E/test/_63724392_gettyimages-1098075358.jpg';
 
     expect(actual).toEqual(expected);
   });
