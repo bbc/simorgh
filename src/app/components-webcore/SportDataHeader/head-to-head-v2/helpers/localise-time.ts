@@ -20,8 +20,6 @@ const getLocalisedTime = (inputDate, inputTime) => {
       'Dec',
     ].indexOf(monthName) + 1;
 
-  console.log(inputDate, inputTime, 'original input');
-
   const ukDateTime = Temporal.ZonedDateTime.from({
     timeZone: 'Europe/London',
     year: Number(year),
@@ -31,8 +29,6 @@ const getLocalisedTime = (inputDate, inputTime) => {
     minute,
   });
 
-  console.log(ukDateTime.toString(), 'temporal time');
-
   const userLocalDateTime = ukDateTime
     .withTimeZone(Temporal.Now.timeZoneId())
     .toLocaleString(undefined, {
@@ -41,8 +37,6 @@ const getLocalisedTime = (inputDate, inputTime) => {
       hour12: false,
       numberingSystem: 'latn',
     });
-
-  console.log(userLocalDateTime, 'user local time (only hours)');
 
   return userLocalDateTime;
 };
