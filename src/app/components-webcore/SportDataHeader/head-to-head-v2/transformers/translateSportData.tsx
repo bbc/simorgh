@@ -4,8 +4,6 @@ import getServiceNumerals from '#app/components/MostRead/utilities/getServiceNum
 import { WesternArabic } from '#app/legacy/psammead/psammead-locales/src/numerals';
 import { HeadToHeadV2Data, Team } from '../types';
 
-const minutesLabelPattern = /^(\d+)(?:'(\+\d+)?)?(?:\s*(.*))?$/;
-const extraTimeLabelPattern = /^(\d+'(?:\+\d+)?)\s*ET$/;
 const runningScoreFields = new Set([
   'halftime',
   'fulltime',
@@ -23,52 +21,6 @@ const translateGroupActionMinutes = (
   numerals: string[],
 ) => actions?.map(action => translateDigits(action, numerals));
 
-// Translates Minutes in period label (e.g. 45', 45'+2, 98' ET) and player actions (e.g. 9')
-const translateMinutes = (label: string | undefined, numerals: string[]) => {
-  if (!label) {
-    return label;
-  }
-
-  // Matches recognised minutes pattern (e.g. 30', 90'+4, 98' ET) and returns parsed array
-  // E.g. splits 90'+4 into [90', +4']. Or splits "98' ET" into [98', undefined, 'ET']
-  const parsedMinutesLabel = label.trim().match(minutesLabelPattern);
-
-  if (!parsedMinutesLabel) {
-    return label;
-  }
-
-  const [, minutes, addedMinutes, suffix] = parsedMinutesLabel;
-
-  const translatedMinutes = translateDigits(minutes, numerals);
-  const translatedAddedMinutes = addedMinutes
-    ? translateDigits(addedMinutes, numerals)
-    : undefined;
-  const translatedTime = translatedAddedMinutes
-    ? `${translatedMinutes}'${translatedAddedMinutes}`
-    : `${translatedMinutes}'`;
-
-  return suffix ? `${translatedTime} ${suffix}` : translatedTime;
-};
-
-// E.g. translates "ET" part of "10' ET"
-const handleExtraTimeLabel = (
-  label: string | undefined,
-  sportTranslations: Translations['sport'],
-) => {
-  // Matches recognised ET minutes pattern (e.g. 98' ET) and returns parsed array
-  // Splits "98' ET" into [98' ET, 98', ET]
-  const parsedExtraTimeLabel = label?.trim().match(extraTimeLabelPattern);
-
-  if (!parsedExtraTimeLabel) {
-    return undefined;
-  }
-
-  const [, minuteLabel] = parsedExtraTimeLabel;
-  return `${minuteLabel} ${sportTranslations?.et || 'ET'}`;
-};
-
-// Stage of the game: HT, FT, ET, AET, PENS or minute labels like 45', 45'+2, 98' ET
-// returns text (e.g. FT), else minutes (e.g. 45' or 45'+2), else minutes with ET label (e.g. 98' ET)
 const translatePeriodLabel = (
   periodLabel: { value: string; translation?: string; accessible: string },
   sportTranslations: Translations['sport'],
@@ -77,12 +29,7 @@ const translatePeriodLabel = (
 ) => {
   if (!periodLabel.value) return undefined;
 
-  const extraTimeLabel = handleExtraTimeLabel(
-    periodLabel.value,
-    sportTranslations,
-  );
-
-  const periodLabelLookup = {
+  const periodLabelLookup: Record<string, string | undefined> = {
     HT: sportTranslations?.ht,
     FT: sportTranslations?.ft,
     ET: sportTranslations?.et,
@@ -90,24 +37,46 @@ const translatePeriodLabel = (
     PENS: sportTranslations?.penaltyAbbreviation,
   };
 
-  const lookupResult =
-    periodLabelLookup[periodLabel.value as keyof typeof periodLabelLookup];
+  const lookupResult = periodLabelLookup[periodLabel.value];
+  if (lookupResult) {
+    return {
+      ...periodLabel,
+      translation: lookupResult,
+    };
+  }
 
-  const translatedMinutes =
-    extraTimeLabel && shouldTranslateMinutes
-      ? translateMinutes(extraTimeLabel, numerals)
-      : shouldTranslateMinutes && translateMinutes(periodLabel.value, numerals);
+  if (!shouldTranslateMinutes) {
+    return periodLabel;
+  }
 
-  const translatedValue = lookupResult || translatedMinutes || extraTimeLabel;
+  const value = periodLabel.value.trim();
+
+  if (value.endsWith(' ET')) {
+    const minuteLabel = value.slice(0, -3);
+    return {
+      ...periodLabel,
+      translation: `${translateDigits(minuteLabel, numerals)} ${sportTranslations?.et || 'ET'}`,
+    };
+  }
+
+  const [minutesPart, suffixPart] = value.split(/\s+/, 2);
+  const [minutes, addedMinutes] = minutesPart.split("'", 2);
+
+  if (!minutes) {
+    return periodLabel;
+  }
+
+  const translatedMinutes = translateDigits(minutes, numerals);
+  const translatedAddedMinutes = addedMinutes
+    ? `'${translateDigits(addedMinutes.replace('+', ''), numerals)}`
+    : '';
 
   return {
     ...periodLabel,
-    ...(translatedValue && { translation: translatedValue }),
+    translation: suffixPart
+      ? `${translatedMinutes}'${translatedAddedMinutes} ${suffixPart}`
+      : `${translatedMinutes}'${translatedAddedMinutes}`,
   };
-};
-
-const translateScore = (score: string, numerals: string[]) => {
-  return score?.replace(/\d/g, digit => numerals[Number(digit)] ?? digit);
 };
 
 const translateRunningScores = (
@@ -117,7 +86,7 @@ const translateRunningScores = (
   return Object.fromEntries(
     Object.entries(runningScores).map(([key, value]) => [
       key,
-      runningScoreFields.has(key) ? translateScore(value, numerals) : value,
+      runningScoreFields.has(key) ? translateDigits(value, numerals) : value,
     ]),
   );
 };
@@ -144,10 +113,10 @@ const transformTeam = (
     shortName: teamNameTranslation || team.shortName,
     ...(shouldTranslateMinutes && {
       ...(team.score && {
-        score: translateScore(team.score, numerals),
+        score: translateDigits(team.score, numerals),
       }),
       ...(team.scoreUnconfirmed && {
-        scoreUnconfirmed: translateScore(team.scoreUnconfirmed, numerals),
+        scoreUnconfirmed: translateDigits(team.scoreUnconfirmed, numerals),
       }),
       ...(team.runningScores && {
         runningScores: translateRunningScores(team.runningScores, numerals),
@@ -160,7 +129,7 @@ const transformTeam = (
             ...action,
             timeLabel: {
               ...action.timeLabel,
-              translated: translateMinutes(action.timeLabel.value, numerals),
+              translated: translateDigits(action.timeLabel.value, numerals),
             },
           })),
         })),
