@@ -104,7 +104,12 @@ const translatePeriodLabel = (
       ? translateMinutes(extraTimeLabel, numerals)
       : shouldTranslateMinutes && translateMinutes(periodLabel.value, numerals);
 
-  return lookupResult || translatedMinutes || extraTimeLabel;
+  const translatedValue = lookupResult || translatedMinutes || extraTimeLabel;
+
+  return {
+    ...periodLabel,
+    ...(translatedValue && { translation: translatedValue }),
+  };
 };
 
 const translateScore = (score: string, numerals: string[]) => {
