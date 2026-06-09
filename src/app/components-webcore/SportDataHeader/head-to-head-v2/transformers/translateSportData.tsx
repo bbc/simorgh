@@ -35,17 +35,20 @@ const translateMinutes = (label: string | undefined, numerals: string[]) => {
     return label;
   }
 
-  // E.g. 30', 90'+4, 98' ET
+  // Matches recognised minutes pattern (e.g. 30', 90'+4, 98' ET) and returns parsed array
+  // E.g. splits 90'+4 into [90', +4']. Or splits "98' ET" into [98', undefined, 'ET']
   const isMinutesOnlyOrPlusMinutesOrWithExtraTime =
     /^(\d+)(?:'(\+\d+)?)?(?:\s*(.*))?$/;
 
-  const match = label.trim().match(isMinutesOnlyOrPlusMinutesOrWithExtraTime);
+  const parsedTimeLabelParts = label
+    .trim()
+    .match(isMinutesOnlyOrPlusMinutesOrWithExtraTime);
 
-  if (!match) {
+  if (!parsedTimeLabelParts) {
     return label;
   }
 
-  const [, minutes, addedMinutes, suffix] = match;
+  const [, minutes, addedMinutes, suffix] = parsedTimeLabelParts;
 
   const translatedMinutes = translateDigits(minutes, numerals);
   const translatedAddedMinutes = addedMinutes
@@ -196,17 +199,19 @@ const translateSportData = (
     return data;
   }
 
+  const { worldCupTeamNames, assists, penalties } = sportTranslations;
+
   return {
     ...data,
     home: transformTeam(
       data.home,
-      sportTranslations.worldCupTeamNames,
+      worldCupTeamNames,
       numerals,
       shouldTranslateMinutes,
     ),
     away: transformTeam(
       data.away,
-      sportTranslations.worldCupTeamNames,
+      worldCupTeamNames,
       numerals,
       shouldTranslateMinutes,
     ),
@@ -221,8 +226,8 @@ const translateSportData = (
     ...(data.groupedActions && {
       groupedActions: data.groupedActions.map(group => {
         const groupedActionsLookup: Record<string, string | undefined> = {
-          Assists: sportTranslations.assists,
-          Penalties: sportTranslations.penalties,
+          Assists: assists,
+          Penalties: penalties,
         };
 
         const translatedGroupName =
