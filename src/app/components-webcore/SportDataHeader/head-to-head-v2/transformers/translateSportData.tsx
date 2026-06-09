@@ -63,32 +63,16 @@ const translatePeriodLabel = (
   }
 
   if (!shouldTranslateMinutes) {
-    // returns original minute label if we shouldn't translate minutes (e.g. "45'", "45'+2")
+    // returns original minute label (e.g. "45'", "45'+2")
     return periodLabel;
   }
 
-  const [minutesPart, suffixPart] = value.split(/\s+/, 2);
-  const [minutes, addedMinutes] = minutesPart.split("'", 2);
+  const translatedMinuteLabel = translateDigits(value, numerals);
 
-  if (!minutes) {
-    return periodLabel;
-  }
-
-  const translatedMinutes = translateDigits(minutes, numerals);
-  const translatedMinuteLabel = addedMinutes
-    ? `${translatedMinutes}'${translateDigits(addedMinutes, numerals)}`
-    : `${translatedMinutes}'`;
-
-  console.log(suffixPart);
-  console.log(translatedMinutes);
-  console.log(translatedMinuteLabel);
-
-  // returns translated minute label (e.g. "45'", "45'+2", "90' +2")
+  // returns translated minute label (e.g. "45'", "45'+2")
   return {
     ...periodLabel,
-    translation: suffixPart
-      ? `${translatedMinuteLabel} ${suffixPart}`
-      : translatedMinuteLabel,
+    translation: translatedMinuteLabel,
   };
 };
 const translateRunningScores = (
