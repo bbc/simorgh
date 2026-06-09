@@ -76,12 +76,12 @@ const handleExtraTimeLabel = (
 // Stage of the game: HT, FT, ET, AET, PENS or minute labels like 45', 45'+2, 98' ET
 // returns text (e.g. PEN), else minutes (e.g. 45' or 45'+2), else minutes with ET label (e.g. 98' ET)
 const translatePeriodLabel = (
-  periodLabel: { value: string; accessible: string },
+  periodLabel: { value: string; translation?: string; accessible: string },
   sportTranslations: Translations['sport'],
   numerals: string[],
   shouldTranslateMinutes: boolean,
 ) => {
-  if (!periodLabel) return null;
+  if (!periodLabel.value) return undefined;
 
   const extraTimeLabel = handleExtraTimeLabel(
     periodLabel.value,
