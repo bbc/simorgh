@@ -10,6 +10,7 @@ import etFirstHalf from '#app/components-webcore/SportDataHeader/head-to-head-v2
 import halfTime from '#app/components-webcore/SportDataHeader/head-to-head-v2/static-data/event/transformed/mid-event/half-time.json';
 import firstHalfAddedTime from '#app/components-webcore/SportDataHeader/head-to-head-v2/static-data/event/transformed/mid-event/first-half-added-time.json';
 import secondLegAetPens from '#app/components-webcore/SportDataHeader/head-to-head-v2/static-data/event/transformed/mid-event/second-leg-aet-pens.json';
+import secondLegEt from '#app/components-webcore/SportDataHeader/head-to-head-v2/static-data/event/transformed/mid-event/second-leg-et.json';
 import aet from '#src/app/components-webcore/SportDataHeader/head-to-head-v2/static-data/event/transformed/post-event/aet.json';
 import postEvent from '#src/app/components-webcore/SportDataHeader/head-to-head-v2/static-data/event/transformed/post-event/post-event.json';
 import translateSportData from './translateSportData';
@@ -524,6 +525,20 @@ describe('TranslateSportData', () => {
           value: etFirstHalf.periodLabel.value,
           accessible: etFirstHalf.periodLabel.accessible,
           translation: "98' وقت اضافه",
+        });
+      });
+
+      it('should handle numbers up to 3 digits in extra time', () => {
+        const result = translateSportData(
+          secondLegEt as unknown as HeadToHeadV2Data,
+          persianServiceConfig.default.translations,
+          'arabic',
+        );
+        expect(result.periodLabel?.value).toEqual("114' ET");
+        expect(result.periodLabel).toStrictEqual({
+          value: secondLegEt.periodLabel.value,
+          accessible: secondLegEt.periodLabel.accessible,
+          translation: "114' وقت اضافه",
         });
       });
 

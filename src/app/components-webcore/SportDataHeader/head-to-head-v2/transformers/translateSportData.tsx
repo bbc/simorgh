@@ -15,12 +15,13 @@ const runningScoreFields = new Set([
 const translateDigits = (value: string, numerals: string[]) =>
   value.replace(/\d/g, digit => numerals[Number(digit)] ?? digit);
 
-// Translates digits within grouped actions strings (e.g. "Y. Tielemans (44', 90'+4)", "E. Buendía (51')")
+// Grouped actions like Assists (e.g. "Y. Tielemans (44', 90'+4)", "E. Buendía (51')")
 const translateGroupActionMinutes = (
   actions: string[] | undefined,
   numerals: string[],
 ) => actions?.map(action => translateDigits(action, numerals));
 
+// Period label is stage of the game: HT, FT, ET, AET, PENS or minute labels like 45', 45'+2, 98' ET
 const translatePeriodLabel = (
   periodLabel: { value: string; translation?: string; accessible: string },
   sportTranslations: Translations['sport'],
@@ -29,7 +30,9 @@ const translatePeriodLabel = (
 ) => {
   if (!periodLabel.value) return undefined;
 
-  const periodLabelLookup: Record<string, string | undefined> = {
+  const value = periodLabel.value.trim();
+
+  const periodLabelTextLookup: Record<string, string | undefined> = {
     HT: sportTranslations?.ht,
     FT: sportTranslations?.ft,
     ET: sportTranslations?.et,
@@ -37,26 +40,31 @@ const translatePeriodLabel = (
     PENS: sportTranslations?.penaltyAbbreviation,
   };
 
-  const lookupResult = periodLabelLookup[periodLabel.value];
-  if (lookupResult) {
+  const periodLabelText = periodLabelTextLookup[value];
+  if (periodLabelText) {
+    // Returns translated text (e.g. FT)
     return {
       ...periodLabel,
-      translation: lookupResult,
+      translation: periodLabelText,
+    };
+  }
+
+  if (value.endsWith('ET')) {
+    // Returns translated minutes with ET (e.g. "98' ET" "114' ET")
+    const minuteLabel = value.slice(0, -3).trim();
+    const translatedMinuteLabel = shouldTranslateMinutes
+      ? translateDigits(minuteLabel, numerals)
+      : minuteLabel;
+
+    return {
+      ...periodLabel,
+      translation: `${translatedMinuteLabel} ${sportTranslations?.et || 'ET'}`,
     };
   }
 
   if (!shouldTranslateMinutes) {
+    // returns original minute label if we shouldn't translate minutes (e.g. "45'", "45'+2")
     return periodLabel;
-  }
-
-  const value = periodLabel.value.trim();
-
-  if (value.endsWith(' ET')) {
-    const minuteLabel = value.slice(0, -3);
-    return {
-      ...periodLabel,
-      translation: `${translateDigits(minuteLabel, numerals)} ${sportTranslations?.et || 'ET'}`,
-    };
   }
 
   const [minutesPart, suffixPart] = value.split(/\s+/, 2);
@@ -67,18 +75,22 @@ const translatePeriodLabel = (
   }
 
   const translatedMinutes = translateDigits(minutes, numerals);
-  const translatedAddedMinutes = addedMinutes
-    ? `'${translateDigits(addedMinutes.replace('+', ''), numerals)}`
-    : '';
+  const translatedMinuteLabel = addedMinutes
+    ? `${translatedMinutes}'${translateDigits(addedMinutes, numerals)}`
+    : `${translatedMinutes}'`;
 
+  console.log(suffixPart);
+  console.log(translatedMinutes);
+  console.log(translatedMinuteLabel);
+
+  // returns translated minute label (e.g. "45'", "45'+2", "90' +2")
   return {
     ...periodLabel,
     translation: suffixPart
-      ? `${translatedMinutes}'${translatedAddedMinutes} ${suffixPart}`
-      : `${translatedMinutes}'${translatedAddedMinutes}`,
+      ? `${translatedMinuteLabel} ${suffixPart}`
+      : translatedMinuteLabel,
   };
 };
-
 const translateRunningScores = (
   runningScores: Record<string, string>,
   numerals: string[],
