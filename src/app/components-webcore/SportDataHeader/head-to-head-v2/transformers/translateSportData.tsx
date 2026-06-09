@@ -4,30 +4,43 @@ import getServiceNumerals from '#app/components/MostRead/utilities/getServiceNum
 import { WesternArabic } from '#app/legacy/psammead/psammead-locales/src/numerals';
 import { HeadToHeadV2Data, Team } from '../types';
 
+const minutesLabelPattern = /^(\d+)(?:'(\+\d+)?)?(?:\s*(.*))?$/;
+const extraTimeLabelPattern = /^(\d+'(?:\+\d+)?)\s*ET$/;
+const runningScoreFields = new Set([
+  'halftime',
+  'fulltime',
+  'aggregate',
+  'extratime',
+  'penaltyShootout',
+]);
+
 const translateDigits = (value: string, numerals: string[]) =>
   value.replace(/\d/g, digit => numerals[Number(digit)] ?? digit);
 
-// Recursively translates minute labels within grouped actions, which can be nested objects or arrays
-const translateGroupActionMinutes = <T,>(obj: T, numerals: string[]): T => {
-  if (typeof obj === 'string') {
-    return translateDigits(obj, numerals) as T;
-  }
+const translateGroupActionMinutes = (actions: string[], numerals: string[]) =>
+  actions.map(action => translateDigits(action, numerals));
 
-  if (Array.isArray(obj)) {
-    return obj.map(item => translateGroupActionMinutes(item, numerals)) as T;
-  }
+// // Recursively translates minute labels within grouped actions, which can be nested objects or arrays
+// const translateGroupActionMinutes = <T,>(obj: T, numerals: string[]): T => {
+//   if (typeof obj === 'string') {
+//     return translateDigits(obj, numerals) as T;
+//   }
 
-  if (obj && typeof obj === 'object') {
-    return Object.fromEntries(
-      Object.entries(obj).map(([key, value]) => [
-        key,
-        translateGroupActionMinutes(value, numerals),
-      ]),
-    ) as T;
-  }
+//   if (Array.isArray(obj)) {
+//     return obj.map(item => translateGroupActionMinutes(item, numerals)) as T;
+//   }
 
-  return obj;
-};
+//   if (obj && typeof obj === 'object') {
+//     return Object.fromEntries(
+//       Object.entries(obj).map(([key, value]) => [
+//         key,
+//         translateGroupActionMinutes(value, numerals),
+//       ]),
+//     ) as T;
+//   }
+
+//   return obj;
+// };
 
 // translates Minutes in period label (e.g. 45', 45'+2, 98' ET) and player actions (e.g. 9')
 const translateMinutes = (label: string | undefined, numerals: string[]) => {
@@ -37,18 +50,13 @@ const translateMinutes = (label: string | undefined, numerals: string[]) => {
 
   // Matches recognised minutes pattern (e.g. 30', 90'+4, 98' ET) and returns parsed array
   // E.g. splits 90'+4 into [90', +4']. Or splits "98' ET" into [98', undefined, 'ET']
-  const isMinutesOnlyOrPlusMinutesOrWithExtraTime =
-    /^(\d+)(?:'(\+\d+)?)?(?:\s*(.*))?$/;
+  const parsedMinutesLabel = label.trim().match(minutesLabelPattern);
 
-  const parsedTimeLabelParts = label
-    .trim()
-    .match(isMinutesOnlyOrPlusMinutesOrWithExtraTime);
-
-  if (!parsedTimeLabelParts) {
+  if (!parsedMinutesLabel) {
     return label;
   }
 
-  const [, minutes, addedMinutes, suffix] = parsedTimeLabelParts;
+  const [, minutes, addedMinutes, suffix] = parsedMinutesLabel;
 
   const translatedMinutes = translateDigits(minutes, numerals);
   const translatedAddedMinutes = addedMinutes
@@ -66,18 +74,20 @@ const handleExtraTimeLabel = (
   label: string | undefined,
   sportTranslations: Translations['sport'],
 ) => {
-  const extraTimeMatch = label?.trim().match(/^(\d+'(?:\+\d+)?)\s*ET$/);
+  // Matches recognised ET minutes pattern (e.g. 98' ET) and returns parsed array
+  // Splits "98' ET" into [98' ET, 98', ET]
+  const parsedExtraTimeLabel = label?.trim().match(extraTimeLabelPattern);
 
-  if (!extraTimeMatch) {
+  if (!parsedExtraTimeLabel) {
     return undefined;
   }
 
-  const [, minuteLabel] = extraTimeMatch;
+  const [, minuteLabel] = parsedExtraTimeLabel;
   return `${minuteLabel} ${sportTranslations?.et || 'ET'}`;
 };
 
 // Stage of the game: HT, FT, ET, AET, PENS or minute labels like 45', 45'+2, 98' ET
-// returns text (e.g. PEN), else minutes (e.g. 45' or 45'+2), else minutes with ET label (e.g. 98' ET)
+// returns text (e.g. FT), else minutes (e.g. 45' or 45'+2), else minutes with ET label (e.g. 98' ET)
 const translatePeriodLabel = (
   periodLabel: { value: string; translation?: string; accessible: string },
   sportTranslations: Translations['sport'],
@@ -123,18 +133,10 @@ const translateRunningScores = (
   runningScores: Record<string, string>,
   numerals: string[],
 ) => {
-  const scoreFields = new Set([
-    'halftime',
-    'fulltime',
-    'aggregate',
-    'extratime',
-    'penaltyShootout',
-  ]);
-
   return Object.fromEntries(
     Object.entries(runningScores).map(([key, value]) => [
       key,
-      scoreFields.has(key) ? translateScore(value, numerals) : value,
+      runningScoreFields.has(key) ? translateScore(value, numerals) : value,
     ]),
   );
 };
@@ -200,6 +202,10 @@ const translateSportData = (
   }
 
   const { worldCupTeamNames, assists, penalties } = sportTranslations;
+  const groupedActionsLookup: Record<string, string | undefined> = {
+    Assists: assists,
+    Penalties: penalties,
+  };
 
   return {
     ...data,
@@ -225,11 +231,6 @@ const translateSportData = (
     }),
     ...(data.groupedActions && {
       groupedActions: data.groupedActions.map(group => {
-        const groupedActionsLookup: Record<string, string | undefined> = {
-          Assists: assists,
-          Penalties: penalties,
-        };
-
         const translatedGroupName =
           groupedActionsLookup[group.groupName.fullName] ||
           group.groupName.fullName;
