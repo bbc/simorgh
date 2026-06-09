@@ -26,9 +26,10 @@ interface ActionsTimeProps {
 
 const ActionsTime = ({ player }: ActionsTimeProps) => {
   const { translations } = use(ServiceContext);
-  const penaltiesTranslation =
-    translations?.sport?.penaltyAbbreviation || 'pen';
-  const ownGoalTranslation = translations?.sport?.ownGoal || 'og';
+  const {
+    penaltyAbbreviation: penaltiesTranslation = 'pen',
+    ownGoal: ownGoalTranslation = 'og',
+  } = translations?.sport ?? {};
 
   const displayGoalType = getDisplayGoalType({
     penaltiesTranslation,
