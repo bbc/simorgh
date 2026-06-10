@@ -91,6 +91,22 @@ export const ExtraTimeSecondLegConcise = HeadToHeadV2ConciseComponent.bind({});
 export const InPenaltiesAfterExtraTimeSecondLegConcise =
   HeadToHeadV2ConciseComponent.bind({});
 
+export const InPenaltiesAfterExtraTimeSecondLegTest =
+  HeadToHeadV2Component.bind({
+    tags: ['!dev'],
+    parameters: {
+      chromatic: {
+        viewports: [
+          399, // Group 1
+          899, // Group 3
+        ],
+      },
+    },
+    globals: {
+      service: { service: 'persian', variant: 'default' },
+    },
+  });
+
 // @ts-expect-error - PS copy and paste
 FirstHalfOf90Mins.args = {
   home: 'Arsenal',
@@ -282,6 +298,23 @@ ExtraTimeSecondLeg.args = {
 
 // @ts-expect-error - PS copy and paste
 InPenaltiesAfterExtraTimeSecondLeg.args = {
+  home: 'Arsenal',
+  homeScore: '2',
+  away: 'Aston Villa',
+  awayScore: '2',
+  baseData: getBaseDataWithEuropaLeagueTournament(secondLegAETInPensData),
+  date: new Date('2023-01-01T13:00:00Z'),
+  venue: 'Emirates Stadium',
+  tournament: {
+    name: 'UEFA Europa League',
+    urn: 'urn:bbc:sportsdata:football:tournament:europa-league',
+  },
+  homeActions: secondLegAETInPensData.home.actions,
+  awayActions: secondLegAETInPensData.away.actions,
+};
+
+// @ts-expect-error - PS copy and paste
+InPenaltiesAfterExtraTimeSecondLegTest.args = {
   home: 'Arsenal',
   homeScore: '2',
   away: 'Aston Villa',
