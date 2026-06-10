@@ -146,6 +146,7 @@ exports[`ProgramCard should render correctly for live 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-13 {
@@ -434,6 +435,7 @@ exports[`ProgramCard should render correctly for next 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-7 {
@@ -758,6 +760,7 @@ exports[`ProgramCard should render correctly for onDemand 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-10 {
@@ -1056,6 +1059,7 @@ exports[`ProgramCard should render correctly in RTL 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-10 {
@@ -1403,6 +1407,7 @@ exports[`ProgramCard should render correctly without summary 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-13 {

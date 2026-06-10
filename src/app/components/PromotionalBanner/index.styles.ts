@@ -64,7 +64,6 @@ const styles = {
     css({
       display: 'flex',
       alignItems: 'center',
-      justifyContent: 'flex-start',
       gap: `${spacings.FULL}rem`,
       marginTop: `${spacings.DOUBLE}rem`,
       flexWrap: 'wrap',
