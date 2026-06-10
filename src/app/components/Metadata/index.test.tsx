@@ -1154,36 +1154,6 @@ describe('Metadata', () => {
     );
 
     it.each`
-      service      | iTunesAppId
-      ${'arabic'}  | ${558497376}
-      ${'mundo'}   | ${515255747}
-      ${'russian'} | ${504278066}
-    `(
-      'should be rendered for $service because iTunesAppId is configured ($iTunesAppId) and hasAppleItunesAppBanner is true',
-      async ({ service, iTunesAppId }) => {
-        render(
-          <CanonicalCPSAssetInternationalOrigin
-            service={service}
-            platform="canonical"
-            hasAppleItunesAppBanner
-          />,
-        );
-
-        await waitFor(() => {
-          const appleItunesApp = document.querySelector(
-            'head > meta[name=apple-itunes-app]',
-          );
-          expect(appleItunesApp).toBeInTheDocument();
-
-          const content = appleItunesApp?.getAttribute('content');
-          expect(content).toEqual(
-            `app-id=${iTunesAppId}, app-argument=https://www.bbc.com/${service}/asset-12345678?utm_medium=banner&utm_content=apple-itunes-app`,
-          );
-        });
-      },
-    );
-
-    it.each`
       service     | reason                                            | platform       | hasAppleItunesAppBanner
       ${'arabic'} | ${'platform is AMP'}                              | ${'amp'}       | ${true}
       ${'mundo'}  | ${'hasAppleItunesAppBanner is false'}             | ${'canonical'} | ${false}

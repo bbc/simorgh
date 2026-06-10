@@ -34,9 +34,6 @@ export const HeadToHeadV2 = ({
     (currentSportData?.home?.actions?.length ?? 0) > 0 ||
     (currentSportData?.away?.actions?.length ?? 0) > 0;
 
-  // TODO: Re-enable badge visibility logic once we have the necessary badge mappings in place
-  const shouldHideBadges = true;
-
   const translatedSportData = translateSportData(
     currentSportData,
     translations,
@@ -50,7 +47,7 @@ export const HeadToHeadV2 = ({
             data={translatedSportData}
             isConciseView={isConciseView ?? false}
             eventSummary={translatedSportData.accessibleEventSummary}
-            shouldHideBadges={shouldHideBadges}
+            shouldHideBadges={isConciseView ?? false}
             maxScoreLength={maximumContainerScoreDigits}
           />
           {hasActions && shouldShowActions && (
