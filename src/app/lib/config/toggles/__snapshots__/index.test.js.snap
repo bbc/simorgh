@@ -162,9 +162,6 @@ exports[`Toggles Config when application environment is local should contain cor
   "podcastPromo": {
     "enabled": true,
   },
-  "podcastSeoImprovements": {
-    "enabled": true,
-  },
   "preloadLeadImage": {
     "enabled": true,
   },

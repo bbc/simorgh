@@ -18,7 +18,6 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { ContentType } from '#app/components/ChartbeatAnalytics/types';
 import ContinueReadingButton from '#app/components/ContinueReadingButton';
-import useToggle from '#app/hooks/useToggle';
 import styles from './index.styles';
 import { OnDemandAudioProps } from './types';
 
@@ -56,10 +55,6 @@ const OnDemandAudioPage = ({
   const { serviceName } = use(ServiceContext);
   const { isLite, pathname, canonicalNonUkLink } = use(RequestContext);
 
-  const { enabled: podcastSeoImprovementsEnabled } = useToggle(
-    'podcastSeoImprovements',
-  );
-
   const isPodcastEpisodePage =
     /\/podcasts\/(?!programmes\/)[^/]+\/[^/]+(?:\.lite)?$/.test(pathname);
 
@@ -86,10 +81,7 @@ const OnDemandAudioPage = ({
     link =>
       link.linkType === 'download' && link.linkUrl?.startsWith('https://'),
   );
-  const contentUrl =
-    podcastSeoImprovementsEnabled && downloadLink
-      ? downloadLink.linkUrl
-      : undefined;
+  const contentUrl = downloadLink ? downloadLink.linkUrl : undefined;
 
   const audioEntities = !mediaIsAvailable
     ? []
