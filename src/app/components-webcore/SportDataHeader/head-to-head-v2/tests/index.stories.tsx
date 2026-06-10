@@ -1,4 +1,11 @@
-import { secondLegAETInPensData } from '../static-data/event/transformed/mid-event';
+import {
+  secondLegAETInPensData,
+  etFirstHalfData,
+} from '../static-data/event/transformed/mid-event';
+import {
+  postEventData,
+  postEventPens90Data,
+} from '../static-data/event/transformed/post-event';
 import { HeadToHeadV2 } from '../head-to-head-v2';
 import { HeadToHeadV2Data } from '../types';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
@@ -30,11 +37,6 @@ export const TestInPenaltiesAfterExtraTimeSecondLegAfrique = {
       service={'afrique'}
     />
   ),
-  parameters: {
-    chromatic: {
-      viewports: [899],
-    },
-  },
   tags: ['!dev'],
 };
 
@@ -45,11 +47,65 @@ export const TestInPenaltiesAfterExtraTimeSecondLegPersian = {
       service={'persian'}
     />
   ),
-  parameters: {
-    chromatic: {
-      viewports: [899],
-    },
-  },
   tags: ['!dev'],
-  globals: {},
+};
+
+export const TestEtFirstHalfDataAfrique = {
+  render: () => (
+    <Component
+      data={etFirstHalfData as unknown as HeadToHeadV2Data}
+      service={'afrique'}
+    />
+  ),
+  tags: ['!dev'],
+};
+
+export const TestEtFirstHalfDataPersian = {
+  render: () => (
+    <Component
+      data={etFirstHalfData as unknown as HeadToHeadV2Data}
+      service={'persian'}
+    />
+  ),
+  tags: ['!dev'],
+};
+
+export const TestFullTimeAfrique = {
+  render: () => (
+    <Component
+      data={postEventData as unknown as HeadToHeadV2Data}
+      service={'afrique'}
+    />
+  ),
+  tags: ['!dev'],
+};
+
+export const TestFullTimePersian = {
+  render: () => (
+    <Component
+      data={postEventData as unknown as HeadToHeadV2Data}
+      service={'persian'}
+    />
+  ),
+  tags: ['!dev'],
+};
+
+export const TestPenaltiesAfter90MinsAfrique = {
+  render: () => (
+    <Component
+      data={postEventPens90Data as unknown as HeadToHeadV2Data}
+      service={'afrique'}
+    />
+  ),
+  tags: ['!dev'],
+};
+
+export const TestPenaltiesAfter90MinsPersian = {
+  render: () => (
+    <Component
+      data={postEventPens90Data as unknown as HeadToHeadV2Data}
+      service={'persian'}
+    />
+  ),
+  tags: ['!dev'],
 };
