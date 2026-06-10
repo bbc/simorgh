@@ -61,9 +61,6 @@ export default {
   podcastPromo: {
     enabled: false,
   },
-  podcastSeoImprovements: {
-    enabled: false,
-  },
   recentAudioEpisodes: {
     enabled: true,
     value: 4,
