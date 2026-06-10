@@ -286,6 +286,18 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'अन‌ि यो पनि',
       sport: {
         matchSummary: 'खेलको सारांश',
+        assists: 'असिस्ट',
+        penalties: 'पेनाल्टी',
+        ht: 'पहिलो हाफ समाप्त',
+        ft: 'खेल समाप्त',
+        et: 'अतिरिक्त समय',
+        afterExtraTime: 'अतिरिक्त समयपछि',
+        penaltyAbbreviation: 'पेन',
+        ownGoal: 'आत्मघाती गोल',
+        winOnPenalties: {
+          prefix: 'पेनाल्टीमा',
+          suffix: 'ले जित्छ',
+        },
         worldCupTeamNames: {
           algeria: 'अल्जिरिया',
           argentina: 'आर्जेन्टिना',

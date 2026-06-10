@@ -353,6 +353,18 @@ export const service: DefaultServiceConfig = {
       },
       sport: {
         matchSummary: 'የጨዋታ ማጠቃለያ',
+        assists: 'አስተላላፊ አግባብ',
+        penalties: 'ፔናልቲ',
+        ht: 'እረፍት (ከፍተኛ ጊዜ)',
+        ft: 'ጨዋታ መጨረሻ',
+        et: 'ተጨማሪ ጊዜ',
+        afterExtraTime: 'ከተጨማሪ ጊዜ በኋላ',
+        penaltyAbbreviation: 'ፔና',
+        ownGoal: 'ራስ ግብ',
+        winOnPenalties: {
+          prefix: '',
+          suffix: 'በፔናልቲ ያሸንፋል',
+        },
         worldCupTeamNames: {
           algeria: 'አልጄሪያ',
           argentina: 'አርጀንቲና',

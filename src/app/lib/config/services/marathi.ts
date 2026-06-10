@@ -299,6 +299,18 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'नवीनतम',
       sport: {
         matchSummary: 'सामन्याचा सारांश',
+        assists: 'असिस्ट',
+        penalties: 'पेनल्टी',
+        ht: 'पहिला अर्धा संपला',
+        ft: 'सामना समाप्त',
+        et: 'अतिरिक्त वेळ',
+        afterExtraTime: 'अतिरिक्त वेळेनंतर',
+        penaltyAbbreviation: 'पेन',
+        ownGoal: 'आत्मघाती गोल',
+        winOnPenalties: {
+          prefix: 'पेनल्टीवर',
+          suffix: 'ने जिंकतो',
+        },
         worldCupTeamNames: {
           algeria: 'अल्जेरिया',
           argentina: 'अंर्जेंटिना',
