@@ -247,6 +247,7 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-25 {
@@ -680,6 +681,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-26 {
@@ -995,6 +997,7 @@ exports[`StoryPromo Container should render audio promoType leading on amp 1`] =
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-10 {
@@ -1562,6 +1565,7 @@ exports[`StoryPromo Container should render audio promoType top on amp 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-25 {
@@ -1978,6 +1982,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-22 {
@@ -2396,6 +2401,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-23 {
@@ -2700,6 +2706,7 @@ exports[`StoryPromo Container should render audio with no duration promoType lea
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-9 {
@@ -3248,6 +3255,7 @@ exports[`StoryPromo Container should render audio with no duration promoType top
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-22 {
@@ -6882,6 +6890,7 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-19 {
@@ -7272,6 +7281,7 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-20 {
@@ -7610,6 +7620,7 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-12 {
@@ -8100,6 +8111,7 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-19 {
@@ -8503,6 +8515,7 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-23 {
@@ -14080,6 +14093,7 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-25 {
@@ -14520,6 +14534,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-26 {
@@ -14842,6 +14857,7 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-10 {
@@ -15416,6 +15432,7 @@ exports[`StoryPromo Container should render video promoType top on amp 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-25 {

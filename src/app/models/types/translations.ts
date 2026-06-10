@@ -62,6 +62,15 @@ export interface Translations {
     remove: string;
     removing: string;
   };
+  myNews?: {
+    title: string;
+    guestTitle: string;
+    description: string;
+    guestDescription: string;
+    noArticles: string;
+    errorText: string;
+    loading: string;
+  };
   error: {
     home?: string;
     currentPage?: string;

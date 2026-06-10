@@ -228,6 +228,7 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-26 {
