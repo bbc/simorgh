@@ -37,7 +37,6 @@ const getBaseDataWithEuropaLeagueTournament = baseData => ({
 export default {
   title: 'Components/Live Page Sport Data Header/Head To Head V2 - Mid event',
   component: HeadToHeadV2,
-  parameters: { chromatic: { disable: true } },
   argTypes: {
     home: {
       options: Object.keys(SHORT_NAMES),
@@ -58,38 +57,78 @@ export default {
   },
 };
 
-export const FirstHalfOf90Mins = HeadToHeadV2Component.bind({});
+export const FirstHalfOf90Mins = HeadToHeadV2Component.bind({
+  parameters: { chromatic: { disable: true } },
+});
 export const FirstHalfOf90MinsWithHomeScoreUnconfirmed =
-  HeadToHeadV2Component.bind({});
-export const SecondHalfOf90Mins = HeadToHeadV2Component.bind({});
-export const InPenaltiesAfter90Mins = HeadToHeadV2Component.bind({});
-export const ExtraTime = HeadToHeadV2Component.bind({});
-export const InPenaltiesAfterExtraTime = HeadToHeadV2Component.bind({});
-export const BeforePensAfterExtraTime = HeadToHeadV2Component.bind({});
-export const BeforeEt = HeadToHeadV2Component.bind({});
-export const FirstHalfOf90MinsSecondLeg = HeadToHeadV2Component.bind({});
-export const ExtraTimeSecondLeg = HeadToHeadV2Component.bind({});
-export const InPenaltiesAfterExtraTimeSecondLeg = HeadToHeadV2Component.bind(
-  {},
-);
-export const BeforePens = HeadToHeadV2Component.bind({});
-export const FirstHalfOf90MinsConcise = HeadToHeadV2ConciseComponent.bind({});
-export const SecondHalfOf90MinsConcise = HeadToHeadV2ConciseComponent.bind({});
-export const InPenaltiesAfter90MinsConcise = HeadToHeadV2ConciseComponent.bind(
-  {},
-);
-export const ExtraTimeConcise = HeadToHeadV2ConciseComponent.bind({});
+  HeadToHeadV2Component.bind({ parameters: { chromatic: { disable: true } } });
+export const SecondHalfOf90Mins = HeadToHeadV2Component.bind({
+  parameters: { chromatic: { disable: true } },
+});
+export const InPenaltiesAfter90Mins = HeadToHeadV2Component.bind({
+  parameters: { chromatic: { disable: true } },
+});
+export const ExtraTime = HeadToHeadV2Component.bind({
+  parameters: { chromatic: { disable: true } },
+});
+export const InPenaltiesAfterExtraTime = HeadToHeadV2Component.bind({
+  parameters: { chromatic: { disable: true } },
+});
+export const BeforePensAfterExtraTime = HeadToHeadV2Component.bind({
+  parameters: { chromatic: { disable: true } },
+});
+export const BeforeEt = HeadToHeadV2Component.bind({
+  parameters: { chromatic: { disable: true } },
+});
+export const FirstHalfOf90MinsSecondLeg = HeadToHeadV2Component.bind({
+  parameters: { chromatic: { disable: true } },
+});
+export const ExtraTimeSecondLeg = HeadToHeadV2Component.bind({
+  parameters: { chromatic: { disable: true } },
+});
+export const InPenaltiesAfterExtraTimeSecondLeg = HeadToHeadV2Component.bind({
+  parameters: { chromatic: { disable: true } },
+});
+export const BeforePens = HeadToHeadV2Component.bind({
+  parameters: { chromatic: { disable: true } },
+});
+export const FirstHalfOf90MinsConcise = HeadToHeadV2ConciseComponent.bind({
+  parameters: { chromatic: { disable: true } },
+});
+export const SecondHalfOf90MinsConcise = HeadToHeadV2ConciseComponent.bind({
+  parameters: { chromatic: { disable: true } },
+});
+export const InPenaltiesAfter90MinsConcise = HeadToHeadV2ConciseComponent.bind({
+  parameters: { chromatic: { disable: true } },
+});
+export const ExtraTimeConcise = HeadToHeadV2ConciseComponent.bind({
+  parameters: { chromatic: { disable: true } },
+});
 export const InPenaltiesAfterExtraTimeConcise =
-  HeadToHeadV2ConciseComponent.bind({});
-export const BeforePensConcise = HeadToHeadV2ConciseComponent.bind({});
+  HeadToHeadV2ConciseComponent.bind({
+    parameters: { chromatic: { disable: true } },
+  });
+export const BeforePensConcise = HeadToHeadV2ConciseComponent.bind({
+  parameters: { chromatic: { disable: true } },
+});
 export const BeforePensAfterExtraTimeConcise =
-  HeadToHeadV2ConciseComponent.bind({});
-export const BeforeEtConcise = HeadToHeadV2ConciseComponent.bind({});
+  HeadToHeadV2ConciseComponent.bind({
+    parameters: { chromatic: { disable: true } },
+  });
+export const BeforeEtConcise = HeadToHeadV2ConciseComponent.bind({
+  parameters: { chromatic: { disable: true } },
+});
 export const FirstHalfOf90MinsSecondLegConcise =
-  HeadToHeadV2ConciseComponent.bind({});
-export const ExtraTimeSecondLegConcise = HeadToHeadV2ConciseComponent.bind({});
+  HeadToHeadV2ConciseComponent.bind({
+    parameters: { chromatic: { disable: true } },
+  });
+export const ExtraTimeSecondLegConcise = HeadToHeadV2ConciseComponent.bind({
+  parameters: { chromatic: { disable: true } },
+});
 export const InPenaltiesAfterExtraTimeSecondLegConcise =
-  HeadToHeadV2ConciseComponent.bind({});
+  HeadToHeadV2ConciseComponent.bind({
+    parameters: { chromatic: { disable: true } },
+  });
 
 export const InPenaltiesAfterExtraTimeSecondLegTest =
   HeadToHeadV2Component.bind({
