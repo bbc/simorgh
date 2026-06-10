@@ -92,40 +92,6 @@ export const ExtraTimeSecondLegConcise = HeadToHeadV2ConciseComponent.bind({});
 export const InPenaltiesAfterExtraTimeSecondLegConcise =
   HeadToHeadV2ConciseComponent.bind({});
 
-export const TestInPenaltiesAfterExtraTimeSecondLegAfrique = {
-  render: () => (
-    <HeadToHeadV2
-      initialSportData={secondLegAETInPensData as unknown as HeadToHeadV2Data}
-    />
-  ),
-  parameters: {
-    chromatic: {
-      viewports: [899],
-    },
-  },
-  tags: ['!dev'],
-  globals: {
-    service: { service: 'persian', variant: 'default' },
-  },
-};
-
-export const TestInPenaltiesAfterExtraTimeSecondLegPersian = {
-  render: () => (
-    <HeadToHeadV2
-      initialSportData={secondLegAETInPensData as unknown as HeadToHeadV2Data}
-    />
-  ),
-  parameters: {
-    chromatic: {
-      viewports: [899],
-    },
-  },
-  tags: ['!dev'],
-  globals: {
-    service: { service: 'persian', variant: 'default' },
-  },
-};
-
 // @ts-expect-error - PS copy and paste
 FirstHalfOf90Mins.args = {
   home: 'Arsenal',
