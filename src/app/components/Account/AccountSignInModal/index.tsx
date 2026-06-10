@@ -85,9 +85,9 @@ const AccountSignInModal = ({
   const imagesPath = `${staticAssetsPath}images`;
 
   // const signInImageVariables = {
-  //   '--sign-in-image-mobile': `url(${imagesPath}/news_mobile_image.png)`,
-  //   '--sign-in-image-tablet': `url(${imagesPath}/news_tablet_image.png)`,
-  //   '--sign-in-image-desktop': `url(${imagesPath}/news_desktop_image.png)`,
+  //   '--sign-in-image-mobile': `url(${imagesPath}/news_mobile_image.webp)`,
+  //   '--sign-in-image-tablet': `url(${imagesPath}/news_tablet_image.webp)`,
+  //   '--sign-in-image-desktop': `url(${imagesPath}/news_desktop_image.webp)`,
   // } as React.CSSProperties;
 
   const signInImageVariables = {
