@@ -141,6 +141,7 @@ exports[`BrandContainer should render correctly 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 <div

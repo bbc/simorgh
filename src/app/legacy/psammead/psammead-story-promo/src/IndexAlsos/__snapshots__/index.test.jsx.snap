@@ -16,6 +16,7 @@ exports[`Index Alsos should render multiple correctly 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-3 {
@@ -222,6 +223,7 @@ exports[`Index Alsos should render one correctly 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-3 {

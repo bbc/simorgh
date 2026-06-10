@@ -1389,6 +1389,7 @@ exports[`StoryPromo - Top Story should render with multiple Index Alsos correctl
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-17 {
@@ -1824,6 +1825,7 @@ exports[`StoryPromo - Top Story should render with one Index Also correctly 1`] 
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-17 {
@@ -2229,6 +2231,7 @@ exports[`StoryPromo should render Live promo correctly 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-16 {
@@ -2550,6 +2553,7 @@ exports[`StoryPromo should render a RTL Live promo correctly 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-16 {
