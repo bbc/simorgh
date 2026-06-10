@@ -63,13 +63,13 @@ const translatePeriodLabel = (
   }
 
   if (!shouldTranslateMinutes) {
-    // returns original minute label (e.g. "45'", "45'+2")
+    // Returns original minute label (e.g. "45'", "45'+2")
     return periodLabel;
   }
 
   const translatedMinuteLabel = translateDigits(value, numerals);
 
-  // returns translated minute label (e.g. "45'", "45'+2")
+  // Returns translated minute label (e.g. "45'", "45'+2")
   return {
     ...periodLabel,
     translation: translatedMinuteLabel,

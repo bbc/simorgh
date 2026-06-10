@@ -1,5 +1,9 @@
 import { render } from '#app/components/react-testing-library-with-providers';
+import { service as afriqueServiceConfig } from '#app/lib/config/services/afrique';
 import ActionsTime from '../actions-time';
+import PenaltyScores from '../penalty-scores';
+import Period from '../period';
+import ScoreDetails from '../score-details';
 
 describe('Sports Data Header Components', () => {
   describe('Actions Time', () => {
@@ -141,6 +145,173 @@ describe('Sports Data Header Components', () => {
         );
         expect(container).toHaveTextContent("۲۳'");
         expect(container).toHaveTextContent("۲۷' پن");
+      });
+    });
+  });
+
+  describe('Penalty Scores', () => {
+    describe('translations', () => {
+      it('should render translated penalty scores text when translations are provided', () => {
+        const { getByTestId } = render(
+          <PenaltyScores
+            data={{
+              status: 'PostEvent',
+              winner: 'home',
+              // @ts-expect-error - partial data for test
+              home: {
+                fullName: 'Team A',
+                runningScores: {
+                  penaltyShootout: '5',
+                },
+              },
+              // @ts-expect-error - partial data for test
+              away: {
+                fullName: 'Team B',
+                runningScores: {
+                  penaltyShootout: '4',
+                },
+              },
+            }}
+          />,
+          { service: 'afrique' },
+        );
+        const penaltiesText = getByTestId('penalties-text');
+        expect(penaltiesText).toHaveTextContent(
+          'Team A gagne 5-4 aux tirs au but',
+        );
+      });
+
+      it('should render default penalty scores text when no translations are provided', () => {
+        const { getByTestId } = render(
+          <PenaltyScores
+            data={{
+              status: 'PostEvent',
+              winner: 'home',
+              // @ts-expect-error - partial data for test
+              home: {
+                fullName: 'Team A',
+                runningScores: {
+                  penaltyShootout: '5',
+                },
+              },
+              // @ts-expect-error - partial data for test
+              away: {
+                fullName: 'Team B',
+                runningScores: {
+                  penaltyShootout: '4',
+                },
+              },
+            }}
+          />,
+        );
+        const penaltiesText = getByTestId('penalties-text');
+        expect(penaltiesText).toHaveTextContent('Team A win 5-4 on pens');
+      });
+    });
+  });
+
+  describe('Period', () => {
+    describe('translations', () => {
+      it('should render translated period label if translations are provided', () => {
+        const { getByText } = render(
+          <Period
+            status="MidEvent"
+            labels={{
+              value: 'ET',
+              accessible: 'Match going to Extra Time',
+              translation: 'Prolongation',
+            }}
+          />,
+          { service: 'afrique' },
+        );
+        const periodLabel = getByText('Prolongation');
+        expect(periodLabel).toBeInTheDocument();
+      });
+
+      it('should render default period label if no translated value is provided', () => {
+        const { getByText } = render(
+          <Period
+            status="MidEvent"
+            labels={{
+              value: 'ET',
+              accessible: 'Match going to Extra Time',
+            }}
+          />,
+        );
+        const periodLabel = getByText('ET');
+        expect(periodLabel).toBeInTheDocument();
+      });
+    });
+  });
+
+  describe('Score Details', () => {
+    describe('translations', () => {
+      it('should render translated score details if translations are provided', () => {
+        const { getByText } = render(
+          <ScoreDetails
+            homeName="Team A"
+            awayName="Team B"
+            homeRunningScores={{
+              halftime: '0',
+              fulltime: '1',
+              extratime: '1',
+              penaltyShootout: '4',
+            }}
+            awayRunningScores={{
+              halftime: '1',
+              fulltime: '1',
+              extratime: '1',
+              penaltyShootout: '3',
+            }}
+            translations={afriqueServiceConfig.default.translations.sport}
+          />,
+          { service: 'afrique' },
+        );
+        const fullTimeVisuallyHiddenLabel = getByText(
+          'Fin du match Team A 1 , Team B 1',
+        );
+        const fullTimeLabel = getByText('Fin du match 1-1');
+        const halfTimeVisuallyHiddenLabel = getByText(
+          'Mi-temps Team A 0 , Team B 1',
+        );
+        const halfTimeLabel = getByText('Mi-temps 0-1');
+        expect(fullTimeVisuallyHiddenLabel).toBeInTheDocument();
+        expect(fullTimeLabel).toBeInTheDocument();
+        expect(halfTimeVisuallyHiddenLabel).toBeInTheDocument();
+        expect(halfTimeLabel).toBeInTheDocument();
+      });
+
+      it('should render default score details if no translations are provided', () => {
+        const { getByText } = render(
+          <ScoreDetails
+            homeName="Team A"
+            awayName="Team B"
+            homeRunningScores={{
+              halftime: '0',
+              fulltime: '1',
+              extratime: '1',
+              penaltyShootout: '4',
+            }}
+            awayRunningScores={{
+              halftime: '1',
+              fulltime: '1',
+              extratime: '1',
+              penaltyShootout: '3',
+            }}
+          />,
+        );
+        const fullTimeVisuallyHiddenLabel = getByText(
+          'Full Time Team A 1 , Team B 1',
+        );
+        const fullTimeLabel = getByText('FT 1-1');
+        const halfTimeVisuallyHiddenLabel = getByText(
+          'Half Time Team A 0 , Team B 1',
+        );
+        const halfTimeLabel = getByText('HT 0-1');
+        expect(fullTimeVisuallyHiddenLabel).toBeInTheDocument();
+        expect(fullTimeLabel).toBeInTheDocument();
+        expect(halfTimeVisuallyHiddenLabel).toBeInTheDocument();
+        expect(halfTimeLabel).toBeInTheDocument();
       });
     });
   });

@@ -2765,6 +2765,7 @@ exports[`Article Page should render a news article with headline in the middle c
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 @media (max-width: 14.9375rem) {
@@ -3172,6 +3173,7 @@ exports[`Article Page should render a news article without headline correctly 1`
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 @media (max-width: 14.9375rem) {

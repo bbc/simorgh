@@ -4,9 +4,6 @@ import { RequestContext } from '#app/contexts/RequestContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
-import useOptimizelyVariation, {
-  ExperimentType,
-} from '#app/hooks/useOptimizelyVariation';
 import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import SkipLinkWrapper from '#components/SkipLinkWrapper';
@@ -56,25 +53,12 @@ const PortraitVideoCarousel = ({
 
   const isHydrated = useHydrationDetection();
 
-  // EXPERIMENT: Homepage Portrait Video 2
-  const playDurationExperimentName = 'newswb_ws_homepage_portrait_video';
-  const playDurationVariation =
-    useOptimizelyVariation({
-      experimentName: playDurationExperimentName,
-      experimentType: ExperimentType.CLIENT_SIDE,
-    }) ?? undefined;
-
   const eventTrackingDataExtended = {
     ...eventTrackingData,
     groupTracker: {
       ...eventTrackingData?.groupTracker,
       itemCount: blocks.length,
     },
-    ...(playDurationVariation && {
-      sendOptimizelyEvents: true,
-      experimentName: playDurationExperimentName,
-      experimentVariation: playDurationVariation,
-    }),
   };
 
   const viewTracker = useViewTracker(eventTrackingDataExtended);
@@ -150,7 +134,6 @@ const PortraitVideoCarousel = ({
                   onClick={() => handlePromoClick(index)}
                   blockPosition={index}
                   eventTrackingData={eventTrackingDataExtended}
-                  playDurationVariation={playDurationVariation}
                   isHydrated={isHydrated}
                 />
               ))}

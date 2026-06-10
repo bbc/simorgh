@@ -10,6 +10,7 @@ exports[`VisuallyHiddenText should render off screen text for screen readers 1`]
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 <span
@@ -29,6 +30,7 @@ exports[`VisuallyHiddenText should render off screen text for screen readers as 
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 <h1
@@ -48,6 +50,7 @@ exports[`VisuallyHiddenText should render off screen text for screen readers as 
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 <h1

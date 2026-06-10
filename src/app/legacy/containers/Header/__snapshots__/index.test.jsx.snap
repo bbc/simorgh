@@ -424,6 +424,7 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-26 {
@@ -1760,6 +1761,7 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-26 {
@@ -3096,6 +3098,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-26 {
@@ -4432,6 +4435,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-26 {
