@@ -290,6 +290,18 @@ const baseServiceConfig = {
     relatedTopics: 'Також на цю тему',
     sport: {
       matchSummary: 'Огляд матчу',
+      assists: 'Асисти',
+      penalties: 'Пенальті',
+      ht: 'Кінець першого тайму',
+      ft: 'Кінець матчу',
+      et: 'Додатковий час',
+      afterExtraTime: 'Після додаткового часу',
+      penaltyAbbreviation: 'пен',
+      ownGoal: 'автогол',
+      winOnPenalties: {
+        prefix: 'виграє',
+        suffix: 'по пенальті',
+      },
       worldCupTeamNames: {
         algeria: 'Алжир',
         argentina: 'Аргентина',

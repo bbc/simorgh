@@ -278,6 +278,18 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'Èyí tí ó ṣẹ̀ṣẹ̀dé',
       sport: {
         matchSummary: 'Akopọ Ere',
+        assists: 'Iranlọwọ',
+        penalties: 'Penariti',
+        ht: 'Ipari idaji akọkọ',
+        ft: 'Ipari ere',
+        et: 'Akoko afikun',
+        afterExtraTime: 'Lẹ́yìn àkókò àfikún',
+        penaltyAbbreviation: 'PEN',
+        ownGoal: 'góòlù ara ẹni',
+        winOnPenalties: {
+          prefix: 'ṣẹ́gun',
+          suffix: 'ní penariti',
+        },
         worldCupTeamNames: {
           algeria: 'Orilẹede Algeria',
           argentina: 'Orilẹede Argentina',
