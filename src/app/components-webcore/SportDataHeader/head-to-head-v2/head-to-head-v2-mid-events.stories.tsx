@@ -19,6 +19,7 @@ import {
 } from './storybook/helpers/base-component';
 
 import venuesData from './static-data/premier-league-venues.json';
+import { HeadToHeadV2Data } from './types';
 
 const { venues } = venuesData;
 
@@ -91,21 +92,39 @@ export const ExtraTimeSecondLegConcise = HeadToHeadV2ConciseComponent.bind({});
 export const InPenaltiesAfterExtraTimeSecondLegConcise =
   HeadToHeadV2ConciseComponent.bind({});
 
-export const InPenaltiesAfterExtraTimeSecondLegTest =
-  HeadToHeadV2Component.bind({
-    tags: ['!dev'],
-    parameters: {
-      chromatic: {
-        viewports: [
-          399, // Group 1
-          899, // Group 3
-        ],
-      },
+export const TestInPenaltiesAfterExtraTimeSecondLegAfrique = {
+  render: () => (
+    <HeadToHeadV2
+      initialSportData={secondLegAETInPensData as unknown as HeadToHeadV2Data}
+    />
+  ),
+  parameters: {
+    chromatic: {
+      viewports: [899],
     },
-    globals: {
-      service: { service: 'persian', variant: 'default' },
+  },
+  tags: ['!dev'],
+  globals: {
+    service: { service: 'persian', variant: 'default' },
+  },
+};
+
+export const TestInPenaltiesAfterExtraTimeSecondLegPersian = {
+  render: () => (
+    <HeadToHeadV2
+      initialSportData={secondLegAETInPensData as unknown as HeadToHeadV2Data}
+    />
+  ),
+  parameters: {
+    chromatic: {
+      viewports: [899],
     },
-  });
+  },
+  tags: ['!dev'],
+  globals: {
+    service: { service: 'persian', variant: 'default' },
+  },
+};
 
 // @ts-expect-error - PS copy and paste
 FirstHalfOf90Mins.args = {
@@ -298,23 +317,6 @@ ExtraTimeSecondLeg.args = {
 
 // @ts-expect-error - PS copy and paste
 InPenaltiesAfterExtraTimeSecondLeg.args = {
-  home: 'Arsenal',
-  homeScore: '2',
-  away: 'Aston Villa',
-  awayScore: '2',
-  baseData: getBaseDataWithEuropaLeagueTournament(secondLegAETInPensData),
-  date: new Date('2023-01-01T13:00:00Z'),
-  venue: 'Emirates Stadium',
-  tournament: {
-    name: 'UEFA Europa League',
-    urn: 'urn:bbc:sportsdata:football:tournament:europa-league',
-  },
-  homeActions: secondLegAETInPensData.home.actions,
-  awayActions: secondLegAETInPensData.away.actions,
-};
-
-// @ts-expect-error - PS copy and paste
-InPenaltiesAfterExtraTimeSecondLegTest.args = {
   home: 'Arsenal',
   homeScore: '2',
   away: 'Aston Villa',
