@@ -333,6 +333,18 @@ export const service: DefaultServiceConfig = {
       },
       sport: {
         matchSummary: 'Podsumowanie meczu',
+        assists: 'Asysty',
+        penalties: 'Rzuty karne',
+        ht: 'Koniec pierwszej połowy',
+        ft: 'Koniec meczu',
+        et: 'Dogrywka',
+        afterExtraTime: 'Po dogrywce',
+        penaltyAbbreviation: 'k.',
+        ownGoal: 'gol samobójczy',
+        winOnPenalties: {
+          prefix: 'wygrywa',
+          suffix: 'w rzutach karnych',
+        },
         worldCupTeamNames: {
           algeria: 'Algieria',
           argentina: 'Argentyna',
