@@ -303,6 +303,18 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'අලුත්ම',
       sport: {
         matchSummary: 'තරඟ සාරාංශය',
+        assists: 'ඇසිස්ට්',
+        penalties: 'පෙනල්ටි',
+        ht: 'පළමු අර්ධය අවසන්',
+        ft: 'තරඟය අවසන්',
+        et: 'අමතර කාලය',
+        afterExtraTime: 'අමතර කාලයෙන් පසු',
+        penaltyAbbreviation: 'පෙන්',
+        ownGoal: 'ස්වයං ගෝලය',
+        winOnPenalties: {
+          prefix: 'පෙනල්ටි',
+          suffix: 'න් ජය ලබයි',
+        },
         worldCupTeamNames: {
           algeria: 'ඇල්ජීරියා',
           argentina: 'ආජන්ටිනා',
