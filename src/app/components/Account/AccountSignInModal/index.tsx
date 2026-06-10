@@ -92,11 +92,11 @@ const AccountSignInModal = ({
 
   const signInImageVariables = {
     '--sign-in-image-mobile':
-      'url(https://raw.githubusercontent.com/bbc/simorgh/bfa8114d3c068fea3a7eaf952912c5a7c5f45fda/public/images/news_mobile_image.png)',
+      'url(https://raw.githubusercontent.com/bbc/simorgh/2b8b3cd5ac254a544b8450326f676b66fe43b8e4/public/images/news_mobile_image.webp)',
     '--sign-in-image-tablet':
-      'url(https://raw.githubusercontent.com/bbc/simorgh/bfa8114d3c068fea3a7eaf952912c5a7c5f45fda/public/images/news_tablet_image.png)',
+      'url(https://raw.githubusercontent.com/bbc/simorgh/2b8b3cd5ac254a544b8450326f676b66fe43b8e4/public/images/news_tablet_image.webp)',
     '--sign-in-image-desktop':
-      'url(https://raw.githubusercontent.com/bbc/simorgh/bfa8114d3c068fea3a7eaf952912c5a7c5f45fda/public/images/news_desktop_image.png)',
+      'url(https://raw.githubusercontent.com/bbc/simorgh/2b8b3cd5ac254a544b8450326f676b66fe43b8e4/public/images/news_desktop_image.webp)',
   } as React.CSSProperties;
   return (
     <>
