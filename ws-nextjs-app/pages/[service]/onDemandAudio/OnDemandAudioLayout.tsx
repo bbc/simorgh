@@ -116,8 +116,8 @@ const OnDemandAudioPage = ({
               '@id': audioId,
               name: episodeTitle || promoBrandTitle,
               description: summary,
-              ...(contentUrl && {
-                contentUrl,
+              ...(downloadLink?.linkUrl && {
+                contentUrl: downloadLink.linkUrl,
                 encodingFormat: 'audio/mpeg',
               }),
               duration: durationISO8601,
