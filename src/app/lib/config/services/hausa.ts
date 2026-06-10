@@ -385,8 +385,10 @@ export const service: DefaultServiceConfig = {
       },
       sport: {
         matchSummary: 'Takaitaccen Bayanin Wasa',
+        assists: 'Ba da ƙwallo a ci',
         penalties: 'Fenariti',
         ht: 'Hutun rabin lokaci',
+        ft: 'Gama Wasa',
         et: 'Karin lokaci',
         afterExtraTime: 'Bayan karin lokaci',
         penaltyAbbreviation: 'FEN',

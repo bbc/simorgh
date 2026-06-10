@@ -409,6 +409,18 @@ export const service: DefaultServiceConfig = {
       },
       sport: {
         matchSummary: 'मैच का सारांश',
+        assists: 'असिस्ट',
+        penalties: 'पेनल्टी',
+        ht: 'हाफ टाइम (पहला हाफ समाप्त)',
+        ft: 'मैच समाप्त',
+        et: 'अतिरिक्त समय',
+        afterExtraTime: 'अतिरिक्त समय के बाद',
+        penaltyAbbreviation: 'पेन',
+        ownGoal: 'आत्मघाती गोल',
+        winOnPenalties: {
+          prefix: 'पेनल्टी में',
+          suffix: 'से जीतती है',
+        },
         worldCupTeamNames: {
           algeria: 'अल्जीरिया',
           argentina: 'अर्जेंटीना',

@@ -349,6 +349,18 @@ export const service: ZhongwenConfig = {
       latestMediaTitle: '最新',
       sport: {
         matchSummary: '比赛总结',
+        assists: '助攻',
+        penalties: '点球',
+        ht: '上半场结束',
+        ft: '全场结束',
+        et: '加时赛',
+        afterExtraTime: '加时赛后',
+        penaltyAbbreviation: '点',
+        ownGoal: '乌龙球',
+        winOnPenalties: {
+          prefix: '通过点球',
+          suffix: '取胜',
+        },
         worldCupTeamNames: {
           algeria: '阿尔及利亚',
           argentina: '阿根廷',
@@ -697,6 +709,18 @@ export const service: ZhongwenConfig = {
       latestMediaTitle: '最新',
       sport: {
         matchSummary: '比賽總結',
+        assists: '助攻',
+        penalties: '點球',
+        ht: '上半場結束',
+        ft: '全場結束',
+        et: '加時賽',
+        afterExtraTime: '加時賽後',
+        penaltyAbbreviation: '點',
+        ownGoal: '烏龍球',
+        winOnPenalties: {
+          prefix: '通過點球',
+          suffix: '獲勝',
+        },
         worldCupTeamNames: {
           algeria: '阿爾及利亞',
           argentina: '阿根廷',

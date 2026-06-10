@@ -299,6 +299,18 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'Соңку',
       sport: {
         matchSummary: 'Оюндун жыйынтыгы',
+        assists: 'Пас берүү',
+        penalties: 'Пенальти',
+        ht: 'Биринчи тайм аягы',
+        ft: 'Оюндун аягы',
+        et: 'Кошумча убакыт',
+        afterExtraTime: 'Кошумча убакыттан кийин',
+        penaltyAbbreviation: 'ПЕН',
+        ownGoal: 'өз дарбазасына гол',
+        winOnPenalties: {
+          prefix: 'пенальтиде',
+          suffix: 'менен жеңди',
+        },
         worldCupTeamNames: {
           algeria: 'Алжир',
           argentina: 'Аргентина',
