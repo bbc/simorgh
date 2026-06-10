@@ -3,7 +3,7 @@ import SaveButton from '#app/components/SaveButton';
 import { use, useState } from 'react';
 import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import { AccountContext } from '#app/contexts/AccountContext';
-import AccountPromotionalBannerModal from '#app/components/Account/AccountPromotionalBanner/AccountPromotionalModal';
+import AccountSignInModal from '#app/components/Account/AccountSignInModal';
 
 const SaveArticleButtonGuest = () => {
   const { translations } = use(ServiceContext);
@@ -27,7 +27,7 @@ const SaveArticleButtonGuest = () => {
         isLoading={!isHydrated}
       />
       {isModalOpen && (
-        <AccountPromotionalBannerModal
+        <AccountSignInModal
           onClose={() => setIsModalOpen(false)}
           signInUrl={signInUrl}
           registerUrl={registerUrl}

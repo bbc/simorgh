@@ -4,25 +4,30 @@ import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 import ThemeProvider from '#app/components/ThemeProvider';
 import { AccountContext } from '#app/contexts/AccountContext';
 import { Close } from '#app/components/icons';
-import AccountPromotionalBanner from '.';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import useTrappedFocus from '#app/hooks/useTrappedFocus';
+import AccountPromotionalBanner from '../AccountPromotionalBanner';
 import styles from './index.styles';
-import { DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS } from './utilities';
+import { DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS } from '../AccountPromotionalBanner/utilities';
 
-type AccountPromotionalBannerModalProps = {
+type AccountSignInModalProps = {
   onClose: () => void;
   signInUrl: string | undefined;
   registerUrl: string | undefined;
 };
 
-const AccountPromotionalBannerModal = ({
+const AccountSignInModal = ({
   onClose,
   signInUrl,
   registerUrl,
-}: AccountPromotionalBannerModalProps) => {
+}: AccountSignInModalProps) => {
+  const { containerRef, firstElementRef } = useTrappedFocus<
+    HTMLDivElement,
+    HTMLButtonElement
+  >();
+
   useEffect(() => {
-    const modal = document.getElementById(
-      'account-promotional-banner-modal-container',
-    );
+    const modal = document.getElementById('account-sign-in-modal-container');
     const reactRootElement = document.getElementById('root');
 
     const handleBackdropClick = (event: MouseEvent | TouchEvent) => {
@@ -76,9 +81,14 @@ const AccountPromotionalBannerModal = ({
     [signInUrl, registerUrl],
   );
 
-  const handleBackdropKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter' || e.key === ' ') onClose();
-  };
+  const staticAssetsPath = `${getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_PATH}`;
+  const imagesPath = `${staticAssetsPath}images`;
+
+  const signInImageVariables = {
+    '--sign-in-image-mobile': `url(${imagesPath}/news_mobile_image.png)`,
+    '--sign-in-image-tablet': `url(${imagesPath}/news_tablet_image.png)`,
+    '--sign-in-image-desktop': `url(${imagesPath}/news_desktop_image.png)`,
+  } as React.CSSProperties;
 
   return (
     <>
@@ -94,18 +104,16 @@ const AccountPromotionalBannerModal = ({
         aria-modal="true"
         aria-label="Sign in to BBC"
         css={styles.modal}
-        id="account-promotional-banner-modal-container"
+        id="account-sign-in-modal-container"
       >
+        <div aria-hidden="true" onClick={onClose} css={styles.backdrop} />
         <div
-          role="button"
-          tabIndex={0}
-          aria-label="Close modal"
-          onClick={onClose}
-          onKeyDown={handleBackdropKeyDown}
-          css={styles.backdrop}
-        />
-        <div css={styles.modalContent}>
+          ref={containerRef}
+          css={styles.modalContent}
+          style={signInImageVariables}
+        >
           <button
+            ref={firstElementRef}
             type="button"
             onClick={onClose}
             css={styles.closeButton}
@@ -113,18 +121,12 @@ const AccountPromotionalBannerModal = ({
           >
             <Close />
           </button>
-          <div css={styles.modalImageSide}>
-            <img
-              src="/images/globeImage.png"
-              alt=""
-              aria-hidden="true"
-              css={styles.image}
-            />
-          </div>
           <ToggleContextProvider>
             <ThemeProvider service="ws">
               <AccountContext.Provider value={accountContextValue}>
-                <AccountPromotionalBanner />
+                <AccountPromotionalBanner
+                  styleOverrides={styles.promotionalBannerOverrides}
+                />
               </AccountContext.Provider>
             </ThemeProvider>
           </ToggleContextProvider>
@@ -134,4 +136,4 @@ const AccountPromotionalBannerModal = ({
   );
 };
 
-export default AccountPromotionalBannerModal;
+export default AccountSignInModal;

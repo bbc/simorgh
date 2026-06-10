@@ -1,7 +1,9 @@
 import { use, useState, useCallback } from 'react';
 import { Helmet } from 'react-helmet';
+import type { Interpolation, Theme } from '@emotion/react';
 import Paragraph from '#app/components/Paragraph';
 import PromotionalBanner from '#app/components/PromotionalBanner';
+import type { PromotionalBannerStyleOverrides } from '#app/components/PromotionalBanner/index.types';
 import CallToActionLink from '#app/components/CallToActionLink';
 import { AccountIcon } from '#app/components/icons';
 import { AccountContext } from '#contexts/AccountContext';
@@ -19,7 +21,15 @@ import {
 } from './utilities';
 import styles from './index.styles';
 
-const AccountPromotionalBanner = () => {
+type AccountPromotionalBannerProps = {
+  styleOverrides?: PromotionalBannerStyleOverrides & {
+    signInImage?: Interpolation<Theme>;
+  };
+};
+
+const AccountPromotionalBanner = ({
+  styleOverrides,
+}: AccountPromotionalBannerProps) => {
   const { enabled: accountEnabled } = useToggle('account');
   const { isSignedIn, isIdctaAvailable, signInUrl, registerUrl } =
     use(AccountContext);
@@ -66,6 +76,9 @@ const AccountPromotionalBanner = () => {
 
   const { title, description, closeLabel, buttonSeparatorText } =
     accountPromoBannerTranslations;
+  const { signInImage, ...promotionalBannerStyleOverrides } =
+    styleOverrides ?? {};
+  const signInBannerImage = <div css={signInImage} aria-hidden="true" />;
 
   return (
     <>
@@ -85,6 +98,8 @@ const AccountPromotionalBanner = () => {
           bannerLabel={title}
           closeLabel={closeLabel}
           buttonSeparatorText={buttonSeparatorText}
+          topImage={signInBannerImage}
+          styleOverrides={promotionalBannerStyleOverrides}
           isDismissible
           onClose={handleCloseClick}
         >
