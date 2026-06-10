@@ -188,6 +188,12 @@ describe('TopicDiscovery', () => {
   });
 
   describe('analytics', () => {
+    const groupTracker = {
+      itemCount: 4,
+      name: 'Descubra mais',
+      type: 'topic-discovery',
+    };
+
     it('should call useViewTracker with topic-discovery component name', () => {
       const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
 
@@ -197,6 +203,7 @@ describe('TopicDiscovery', () => {
 
       expect(viewTrackerSpy).toHaveBeenCalledWith({
         componentName: 'topic-discovery',
+        groupTracker,
       });
 
       viewTrackerSpy.mockRestore();
@@ -232,7 +239,14 @@ describe('TopicDiscovery', () => {
       });
 
       const expectedCalls = topicTagsFixture.map(topic => ({
-        componentName: `topic-discovery-tab-${topic.topicId}`,
+        componentName: 'topic-discovery-tab',
+        groupTracker,
+        itemTracker: {
+          type: 'topic-discovery-tab',
+          text: topic.topicName,
+          position: topicTagsFixture.indexOf(topic) + 1,
+          resourceId: topic.topicId,
+        },
         preventNavigation: true,
       }));
 
@@ -263,6 +277,12 @@ describe('TopicDiscovery', () => {
 
       expect(clickTracking.default).toHaveBeenCalledWith({
         componentName: 'topic-discovery-more-from-link',
+        groupTracker,
+        itemTracker: {
+          type: 'topic-discovery-more-from-link',
+          text: `Mais de ${topicTagsFixture[0].topicName}`,
+          resourceId: topicTagsFixture[0].topicId,
+        },
       });
     });
   });

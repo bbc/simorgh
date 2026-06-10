@@ -73,7 +73,6 @@ interface ComponentProps {
   isConciseView?: boolean;
   shouldShowActions?: boolean;
   maximumContainerScoreDigits?: number;
-  teamBadgePlaceholderFallbackType?: 'badge' | 'flag';
 }
 
 const baseData = fixtureData.data.sportDataEventContent
@@ -84,7 +83,6 @@ const Component = ({
   isConciseView = false,
   shouldShowActions = true,
   maximumContainerScoreDigits,
-  teamBadgePlaceholderFallbackType = 'badge',
 }: ComponentProps) => {
   return (
     <HeadToHeadV2
@@ -92,7 +90,6 @@ const Component = ({
       isConciseView={isConciseView}
       shouldShowActions={shouldShowActions}
       maximumContainerScoreDigits={maximumContainerScoreDigits}
-      teamBadgePlaceholderFallbackType={teamBadgePlaceholderFallbackType}
     />
   );
 };
