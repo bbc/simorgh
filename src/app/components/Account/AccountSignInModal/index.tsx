@@ -84,12 +84,20 @@ const AccountSignInModal = ({
   const staticAssetsPath = `${getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_PATH}`;
   const imagesPath = `${staticAssetsPath}images`;
 
-  const signInImageVariables = {
-    '--sign-in-image-mobile': `url(${imagesPath}/news_mobile_image.png)`,
-    '--sign-in-image-tablet': `url(${imagesPath}/news_tablet_image.png)`,
-    '--sign-in-image-desktop': `url(${imagesPath}/news_desktop_image.png)`,
-  } as React.CSSProperties;
+  // const signInImageVariables = {
+  //   '--sign-in-image-mobile': `url(${imagesPath}/news_mobile_image.png)`,
+  //   '--sign-in-image-tablet': `url(${imagesPath}/news_tablet_image.png)`,
+  //   '--sign-in-image-desktop': `url(${imagesPath}/news_desktop_image.png)`,
+  // } as React.CSSProperties;
 
+  const signInImageVariables = {
+    '--sign-in-image-mobile':
+      'url(https://raw.githubusercontent.com/bbc/simorgh/bfa8114d3c068fea3a7eaf952912c5a7c5f45fda/public/images/news_mobile_image.png)',
+    '--sign-in-image-tablet':
+      'url(https://raw.githubusercontent.com/bbc/simorgh/bfa8114d3c068fea3a7eaf952912c5a7c5f45fda/public/images/news_tablet_image.png)',
+    '--sign-in-image-desktop':
+      'url(https://raw.githubusercontent.com/bbc/simorgh/bfa8114d3c068fea3a7eaf952912c5a7c5f45fda/public/images/news_desktop_image.png)',
+  } as React.CSSProperties;
   return (
     <>
       <Global

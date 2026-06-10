@@ -210,7 +210,7 @@ export default {
         width: '100%',
         marginTop: `${pixelsToRem(36)}rem`,
         alignSelf: 'start',
-        aspectRatio: '395 / 328',
+        aspectRatio: '274 / 400;',
         backgroundImage: 'var(--sign-in-image-desktop)',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
