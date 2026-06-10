@@ -95,7 +95,7 @@ export default ({
 
             cy.intercept(
               {
-                url: `https://cdn.optimizely.com/datafiles/${getOptimizelyKey()}.json`,
+                url: `https://cdn.optimizely.com/**`,
               },
               request => {
                 request.reply({ statusCode: 404 });
