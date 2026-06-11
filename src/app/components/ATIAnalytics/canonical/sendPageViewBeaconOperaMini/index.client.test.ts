@@ -19,7 +19,7 @@ describe('sendPageViewBeaconOperaMini', () => {
     send: jest.fn(),
   };
 
-  eval(addSendStaticBeaconToWindow());
+  addSendStaticBeaconToWindow();
 
   beforeEach(() => {
     documentReferrerSpy = jest.spyOn(document, 'referrer', 'get');
