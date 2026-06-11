@@ -27,13 +27,15 @@ const SaveArticleButtonGuest = () => {
         testId="save-article-btn-guest"
         isLoading={!isHydrated}
       />
-      {isModalOpen && (
-        <AccountSignInModal
-          onClose={() => setIsModalOpen(false)}
-          signInUrl={signInUrl}
-          registerUrl={registerUrl}
-        />
-      )}
+      {isModalOpen &&
+        createPortal(
+          <AccountSignInModal
+            onClose={() => setIsModalOpen(false)}
+            signInUrl={signInUrl}
+            registerUrl={registerUrl}
+          />,
+          document.body,
+        )}
     </>
   );
 };
