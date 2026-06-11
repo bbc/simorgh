@@ -23,7 +23,7 @@ applyTo: "src/app/components/**"
 
 - Use standard functions and move any conditional checks to the parent React component where the style is used:
 ```
-// index.style.tsx
+// index.styles.tsx
   slider: () =>
     css({
       '&::before': {
