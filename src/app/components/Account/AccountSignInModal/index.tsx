@@ -4,7 +4,7 @@ import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 import ThemeProvider from '#app/components/ThemeProvider';
 import { AccountContext } from '#app/contexts/AccountContext';
 import { Close } from '#app/components/icons';
-// import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import useTrappedFocus from '#app/hooks/useTrappedFocus';
 import AccountPromotionalBanner from '../AccountPromotionalBanner';
 import styles from './index.styles';
@@ -82,23 +82,15 @@ const AccountSignInModal = ({
     [signInUrl, registerUrl],
   );
 
-  // const staticAssetsPath = `${getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_PATH}`;
-  // const imagesPath = `${staticAssetsPath}images`;
-
-  // const signInImageVariables = {
-  //   '--sign-in-image-mobile': `url(${imagesPath}/news_mobile_image.webp)`,
-  //   '--sign-in-image-tablet': `url(${imagesPath}/news_tablet_image.webp)`,
-  //   '--sign-in-image-desktop': `url(${imagesPath}/news_desktop_image.webp)`,
-  // } as React.CSSProperties;
+  const staticAssetsPath = `${getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_PATH}`;
+  const imagesPath = `${staticAssetsPath}images`;
 
   const signInImageVariables = {
-    '--sign-in-image-mobile':
-      'url(https://raw.githubusercontent.com/bbc/simorgh/2b8b3cd5ac254a544b8450326f676b66fe43b8e4/public/images/news_mobile_image.webp)',
-    '--sign-in-image-tablet':
-      'url(https://raw.githubusercontent.com/bbc/simorgh/2b8b3cd5ac254a544b8450326f676b66fe43b8e4/public/images/news_tablet_image.webp)',
-    '--sign-in-image-desktop':
-      'url(https://raw.githubusercontent.com/bbc/simorgh/2b8b3cd5ac254a544b8450326f676b66fe43b8e4/public/images/news_desktop_image.webp)',
+    '--sign-in-image-mobile': `url(${imagesPath}/news_mobile_image.webp)`,
+    '--sign-in-image-tablet': `url(${imagesPath}/news_tablet_image.webp)`,
+    '--sign-in-image-desktop': `url(${imagesPath}/news_desktop_image.webp)`,
   } as React.CSSProperties;
+
   return (
     <>
       <Global
