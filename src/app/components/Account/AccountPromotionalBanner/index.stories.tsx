@@ -32,10 +32,16 @@ SignedIn.globals = {
   idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: true },
 };
 
-export const SignedOutModal = () => (
-  <AccountSignInModal
-    onClose={() => {}}
-    signInUrl="https://example.com/signin"
-    registerUrl="https://example.com/register"
-  />
-);
+export const SignedOutModal = () => {
+  const [isOpen, setIsOpen] = useState(true);
+
+  if (!isOpen) return null;
+
+  return (
+    <AccountSignInModal
+      onClose={() => setIsOpen(false)}
+      signInUrl="https://example.com/signin"
+      registerUrl="https://example.com/register"
+    />
+  );
+};
