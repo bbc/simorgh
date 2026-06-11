@@ -25,9 +25,9 @@ applyTo: "src/app/components/**"
 
 ## Folder structure and examples
 Each React component should have its own folder under the root `./src/app/components/`, and each folder should contain:
-- An index.tsx file that contains the react component. 
-- An index.style.tsx file that contains styling related functions.
-- An index.test.tsx file that contains the unit tests. 
+- An index.tsx file that contains the react component.
+- An index.styles.tsx file that contains styling related functions.
+- An index.test.tsx file that contains the unit tests.
 - An index.stories.tsx file that contains a respective storybook component.
   - If you can use arg and argType parameters where necessary, but omit them for very basic components. 
 - A metadata.json file that contains storybook and A11Y related information.
