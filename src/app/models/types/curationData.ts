@@ -43,6 +43,7 @@ export interface Summary extends BaseSummary {
   eventTrackingData?: EventTrackingData;
   visualProminence?: VisualProminence | string;
   isPortraitImage?: boolean;
+  relatedTopic?: RelatedTopic | null;
 }
 
 export const VISUAL_STYLE = {
