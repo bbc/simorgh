@@ -2,8 +2,9 @@ import { use } from 'react';
 import { Helmet } from 'react-helmet';
 import ErrorMain from '#components/ErrorMain';
 import { useTheme } from '@emotion/react';
+import { ARTICLE_PAGE, MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import DeleteSavedArticleIfDeleted from '#app/components/DeleteSavedArticleIfDeleted';
 import { ServiceContext } from '../../contexts/ServiceContext';
-
 /*
  * MVP Metadata for the error
  * This will be refactored out in https://github.com/bbc/simorgh/issues/1350
@@ -32,7 +33,7 @@ const ErrorMetadata = ({ dir, lang, messaging, brandName, themeColor }) => {
   );
 };
 
-const ErrorPage = ({ errorCode }) => {
+const ErrorPage = ({ errorCode, pageType }) => {
   const { brandName, dir, lang, translations } = use(ServiceContext);
   const messaging = translations.error[errorCode] || translations.error[500];
 
@@ -40,8 +41,13 @@ const ErrorPage = ({ errorCode }) => {
     palette: { BRAND_BACKGROUND },
   } = useTheme();
 
+  // Only render DeleteSavedArticleIfDeleted for article pages
+  const isArticlePage =
+    pageType === ARTICLE_PAGE || pageType === MEDIA_ARTICLE_PAGE;
+
   return (
     <>
+      {isArticlePage && <DeleteSavedArticleIfDeleted errorCode={errorCode} />}
       <ErrorMetadata
         brandName={brandName}
         dir={dir}
