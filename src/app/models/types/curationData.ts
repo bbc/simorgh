@@ -23,6 +23,18 @@ interface BaseSummary {
   position?: number;
 }
 
+export type RelatedTopicLink = {
+  url: string;
+  scheme?: string;
+  host?: string;
+  path?: string;
+};
+
+export type RelatedTopic = {
+  link: RelatedTopicLink;
+  title: string;
+};
+
 export interface Summary extends BaseSummary {
   mediaType?: 'audio' | 'video' | 'photogallery';
   lazy?: boolean;
