@@ -106,7 +106,7 @@ const AccountSignInModal = ({
           >
             <Close />
           </button>
-          <ThemeProvider service="ws">
+          <ThemeProvider service={service}>
             <AccountContext.Provider value={accountContextValue}>
               <SignInPromotionalBanner />
             </AccountContext.Provider>
