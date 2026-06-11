@@ -75,7 +75,7 @@ export default ({ textToRender, renderAfter }: HelloWorldProps) => {
 };
 ```
 
-3. The index.style.tsx file will contain the following code:
+3. The index.styles.tsx file will contain the following code:
 ```
 import { css, Theme } from '@emotion/react';
 
