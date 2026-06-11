@@ -302,6 +302,18 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'Arrimhii u danbeeyey',
       sport: {
         matchSummary: 'Soo koobidda ciyaarta',
+        assists: 'Caawin',
+        penalties: 'Rigoore',
+        ht: 'Qaybta hore dhammaatay',
+        ft: 'Ciyaarta dhammaatay',
+        et: 'Waqti dheeri',
+        afterExtraTime: 'Ka dib waqtiga dheeraadka',
+        penaltyAbbreviation: 'PEN',
+        ownGoal: 'gool iskiis',
+        winOnPenalties: {
+          prefix: 'ku badisay rigoore',
+          suffix: '',
+        },
         worldCupTeamNames: {
           algeria: 'Algeriya',
           argentina: 'Argentina',
