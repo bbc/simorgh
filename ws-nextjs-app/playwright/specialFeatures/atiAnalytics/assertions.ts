@@ -57,25 +57,53 @@ const assertATIPageViewParamsExist = (
 const fieldIsValidString = (field: unknown): boolean =>
   typeof field === 'string' && field.trim().length > 0;
 
+/* eslint-disable camelcase */
+type ViewabilityGroup = {
+  name?: unknown;
+  type?: unknown;
+  link?: unknown;
+  item_count?: unknown;
+  resource_id?: unknown;
+  position?: unknown;
+};
+
+type ViewabilityItem = {
+  name?: unknown;
+  link?: unknown;
+  advertiser_id?: unknown;
+  type?: unknown;
+  text?: unknown;
+  position?: unknown;
+  duration?: unknown;
+  media_type?: unknown;
+  label?: unknown;
+  resource_id?: unknown;
+};
+/* eslint-enable camelcase */
+
+type ViewabilityEventPayload = {
+  name?: unknown;
+  data?: {
+    group?: ViewabilityGroup;
+    event?: { category?: unknown; action?: unknown };
+    item?: ViewabilityItem;
+  };
+};
+
 const validateViewabilityEventDetails = (
   payload: string,
   actionType: string,
 ): boolean => {
-  const arr = JSON.parse(payload) as Record<string, unknown>[];
+  const arr = JSON.parse(payload) as ViewabilityEventPayload[];
 
   return arr.some(event => {
     if (event.name !== `viewability.${actionType}`) return false;
 
-    const data = event.data as Record<string, Record<string, unknown>>;
-    const group = data?.group ?? {};
-    const ev = data?.event ?? {};
-    const item = data?.item ?? {};
+    const group: ViewabilityGroup = event.data?.group ?? {};
+    const ev = event.data?.event ?? {};
+    const item: ViewabilityItem = event.data?.item ?? {};
 
-    if (
-      (ev as Record<string, string>).category !== 'viewability' ||
-      (ev as Record<string, string>).action !== actionType
-    )
-      return false;
+    if (ev.category !== 'viewability' || ev.action !== actionType) return false;
 
     return (
       fieldIsValidString(group.name) &&
@@ -119,6 +147,7 @@ const assertViewabilityEventParams = (
   ).toBe(true);
 
   const eventContext = JSON.parse(params.context) as Array<{
+    // eslint-disable-next-line camelcase
     data: { page: { $: string }; site: { level2_id: string } };
   }>;
   expect(eventContext[0].data.page.$).toBe(pageIdentifier);
@@ -162,9 +191,12 @@ export const assertScrollableNavigationComponentView = async ({
   applicationType,
   appEnv,
 }: AtiAssertionFnProps) => {
-  const { reverbAtiUrl } = getATIUrls(appEnv);
+  const { atiUrl, reverbAtiUrl } = getATIUrls(appEnv);
   const viewPromise = page.waitForRequest(
-    isViewabilityViewRequest(reverbAtiUrl, COMPONENTS.SCROLLABLE_NAVIGATION),
+    isViewabilityViewRequest(
+      [reverbAtiUrl, atiUrl],
+      COMPONENTS.SCROLLABLE_NAVIGATION,
+    ),
   );
 
   await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
@@ -176,7 +208,13 @@ export const assertScrollableNavigationComponentView = async ({
   const request = await viewPromise;
   const params = getATIParamsFromURL(request.url());
 
-  assertViewabilityEventParams(params, pageIdentifier, siteId, applicationType, 'view');
+  assertViewabilityEventParams(
+    params,
+    pageIdentifier,
+    siteId,
+    applicationType,
+    'view',
+  );
 };
 
 export const assertScrollableNavigationComponentClick = async ({
@@ -188,21 +226,30 @@ export const assertScrollableNavigationComponentClick = async ({
   applicationType,
   appEnv,
 }: AtiAssertionFnProps) => {
-  const { reverbAtiUrl } = getATIUrls(appEnv);
+  const { atiUrl, reverbAtiUrl } = getATIUrls(appEnv);
 
   await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
   await page.locator('[data-e2e="scrollable-nav"]').scrollIntoViewIfNeeded();
 
   const [request] = await Promise.all([
     page.waitForRequest(
-      isViewabilityClickRequest(reverbAtiUrl, COMPONENTS.SCROLLABLE_NAVIGATION),
+      isViewabilityClickRequest(
+        [reverbAtiUrl, atiUrl],
+        COMPONENTS.SCROLLABLE_NAVIGATION,
+      ),
     ),
     page.locator('[data-e2e="scrollable-nav"]').locator('a').last().click(),
   ]);
 
   const params = getATIParamsFromURL(request.url());
 
-  assertViewabilityEventParams(params, pageIdentifier, siteId, applicationType, 'select');
+  assertViewabilityEventParams(
+    params,
+    pageIdentifier,
+    siteId,
+    applicationType,
+    'select',
+  );
 };
 
 export const assertDropdownNavigationComponentView = async ({
@@ -214,9 +261,12 @@ export const assertDropdownNavigationComponentView = async ({
   applicationType,
   appEnv,
 }: AtiAssertionFnProps) => {
-  const { reverbAtiUrl } = getATIUrls(appEnv);
+  const { atiUrl, reverbAtiUrl } = getATIUrls(appEnv);
   const viewPromise = page.waitForRequest(
-    isViewabilityViewRequest(reverbAtiUrl, COMPONENTS.DROPDOWN_NAVIGATION),
+    isViewabilityViewRequest(
+      [reverbAtiUrl, atiUrl],
+      COMPONENTS.DROPDOWN_NAVIGATION,
+    ),
   );
 
   await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
@@ -226,7 +276,13 @@ export const assertDropdownNavigationComponentView = async ({
   const request = await viewPromise;
   const params = getATIParamsFromURL(request.url());
 
-  assertViewabilityEventParams(params, pageIdentifier, siteId, applicationType, 'view');
+  assertViewabilityEventParams(
+    params,
+    pageIdentifier,
+    siteId,
+    applicationType,
+    'view',
+  );
 };
 
 export const assertDropdownNavigationComponentClick = async ({
@@ -238,7 +294,7 @@ export const assertDropdownNavigationComponentClick = async ({
   applicationType,
   appEnv,
 }: AtiAssertionFnProps) => {
-  const { reverbAtiUrl } = getATIUrls(appEnv);
+  const { atiUrl, reverbAtiUrl } = getATIUrls(appEnv);
 
   await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
   await page.setViewportSize({ width: 320, height: 480 });
@@ -246,12 +302,21 @@ export const assertDropdownNavigationComponentClick = async ({
 
   const [request] = await Promise.all([
     page.waitForRequest(
-      isViewabilityClickRequest(reverbAtiUrl, COMPONENTS.DROPDOWN_NAVIGATION),
+      isViewabilityClickRequest(
+        [reverbAtiUrl, atiUrl],
+        COMPONENTS.DROPDOWN_NAVIGATION,
+      ),
     ),
     page.locator('[data-e2e="dropdown-nav"]').locator('a').first().click(),
   ]);
 
   const params = getATIParamsFromURL(request.url());
 
-  assertViewabilityEventParams(params, pageIdentifier, siteId, applicationType, 'select');
+  assertViewabilityEventParams(
+    params,
+    pageIdentifier,
+    siteId,
+    applicationType,
+    'select',
+  );
 };

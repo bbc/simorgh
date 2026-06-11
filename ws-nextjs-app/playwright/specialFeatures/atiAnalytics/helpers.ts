@@ -52,10 +52,15 @@ export const isPageViewRequest =
     return params.get('x8') === 'simorgh';
   };
 
+const requestMatchesAnyHost = (request: Request, hosts: string[]): boolean => {
+  const requestUrl = request.url();
+  return hosts.some(host => requestUrl.includes(new URL(host).hostname));
+};
+
 export const isViewabilityViewRequest =
-  (reverbAtiUrl: string, component: string) =>
+  (hosts: string[], component: string) =>
   (request: Request): boolean => {
-    if (!request.url().includes(new URL(reverbAtiUrl).hostname)) return false;
+    if (!requestMatchesAnyHost(request, hosts)) return false;
     const params = new URLSearchParams(new URL(request.url()).search);
     const events = params.get('events');
     if (!events) return false;
@@ -66,9 +71,9 @@ export const isViewabilityViewRequest =
   };
 
 export const isViewabilityClickRequest =
-  (reverbAtiUrl: string, component: string) =>
+  (hosts: string[], component: string) =>
   (request: Request): boolean => {
-    if (!request.url().includes(new URL(reverbAtiUrl).hostname)) return false;
+    if (!requestMatchesAnyHost(request, hosts)) return false;
     const params = new URLSearchParams(new URL(request.url()).search);
     const events = params.get('events');
     if (!events) return false;

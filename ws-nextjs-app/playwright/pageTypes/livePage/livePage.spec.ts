@@ -122,7 +122,9 @@ test.describe('livePage', () => {
             await expect(
               mediaLoader.locator('[data-e2e="media-player"]'),
             ).toBeVisible();
-            await expect(page.locator('smp-toucan-player').first()).toBeVisible();
+            await expect(
+              page.locator('smp-toucan-player').first(),
+            ).toBeVisible();
           });
 
           test('should render a visible caption', async ({ page }) => {
@@ -168,10 +170,17 @@ test.describe('livePage', () => {
             if (!hasTopicTags) return;
 
             const firstTag = topicTagsSection.locator('a').first();
-            const topicTitle = await firstTag.textContent();
+            const topicTitle = (await firstTag.textContent())?.trim();
+
+            expect(
+              topicTitle,
+              'first topic tag should have non-empty text',
+            ).toBeTruthy();
 
             await firstTag.click();
-            await expect(page.locator('h1')).toContainText(topicTitle ?? '');
+            await expect(page.locator('h1')).toContainText(
+              topicTitle as string,
+            );
           });
         });
       });
