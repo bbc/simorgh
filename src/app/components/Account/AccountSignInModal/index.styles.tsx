@@ -72,7 +72,6 @@ export default {
         [GROUP_A_MAX_WIDTH]: {
           paddingInlineStart: `${spacings.FULL}rem`,
           paddingInlineEnd: `${spacings.FULL}rem`,
-          paddingBottom: `${pixelsToRem(20)}rem`,
         },
         // 600px - 1007px
         [GROUP_3_ONLY]: {
@@ -125,46 +124,25 @@ export default {
 
     description: ({ fontSizes }: Theme) =>
       css({
+        paddingTop: `${pixelsToRem(16)}rem`,
+        marginTop: 0,
         // 0px - 319px
         [GROUP_A_MAX_WIDTH]: {
           ...fontSizes.longPrimer,
           paddingTop: `${pixelsToRem(6)}rem`,
         },
-        // 320px - 599px
-        [GROUP_B_ONLY]: {
-          paddingTop: `${pixelsToRem(16)}rem`,
-          marginTop: 0,
-        },
-        // 600px - 1007px
-        [GROUP_3_ONLY]: {
-          paddingTop: `${pixelsToRem(16)}rem`,
-          marginTop: 0,
-        },
-        // 1008px and above
-        [GROUP_4_MIN_WIDTH]: {
-          paddingTop: `${pixelsToRem(16)}rem`,
-          marginTop: 0,
-        },
       }),
 
     actionsContainer: css({
+      marginTop: `${pixelsToRem(32)}rem`,
       // 0px - 319px
       [GROUP_A_MAX_WIDTH]: {
         marginTop: `${pixelsToRem(20)}rem`,
-      },
-      // 320px - 599px
-      [GROUP_B_ONLY]: {
-        marginTop: `${pixelsToRem(32)}rem`,
-      },
-      // 600px - 1007px
-      [GROUP_3_ONLY]: {
-        marginTop: `${pixelsToRem(32)}rem`,
       },
       // 1008px and above
       [GROUP_4_MIN_WIDTH]: {
         gridRow: '2 / 4',
         width: '100%',
-        marginTop: `${pixelsToRem(32)}rem`,
         paddingBottom: 0,
       },
     }),
@@ -178,41 +156,31 @@ export default {
       // 320px and above
       [GROUP_B_MIN_WIDTH]: {
         display: 'block',
+        width: '100%',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
       },
       // 320px - 599px
       [GROUP_B_ONLY]: {
         marginBottom: `${pixelsToRem(20)}rem`,
         marginTop: `${pixelsToRem(16)}rem`,
-        width: '100%',
         aspectRatio: '256 / 242',
         backgroundImage: 'var(--sign-in-image-mobile)',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
       },
       // 600px - 1007px
       [GROUP_3_ONLY]: {
         marginBottom: `${pixelsToRem(24)}rem`,
         marginTop: `${pixelsToRem(16)}rem`,
-        display: 'block',
-        width: '100%',
         aspectRatio: '395 / 328',
         backgroundImage: 'var(--sign-in-image-tablet)',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
       },
       // 1008px and above
       [GROUP_4_MIN_WIDTH]: {
         gridColumn: 2,
         gridRow: '1 / span 2',
-        display: 'block',
-        width: '100%',
         aspectRatio: '274 / 400',
         backgroundImage: 'var(--sign-in-image-desktop)',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
       },
     }),
   },
