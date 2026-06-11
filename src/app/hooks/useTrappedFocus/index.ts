@@ -43,7 +43,9 @@ const useTrappedFocus = <
             firstElementRef.current?.focus();
           }
         }
-      } catch (error) {} // eslint-disable-line no-empty
+      } catch {
+        return;
+      }
     };
 
     window.addEventListener('focus', focusListenerWithErrorWrapper, true);
