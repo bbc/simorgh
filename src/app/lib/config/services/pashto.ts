@@ -298,6 +298,18 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'ځانګړي مطالب',
       sport: {
         matchSummary: 'د لوبې لنډیز',
+        assists: 'اسسټ',
+        penalties: 'پنالټي',
+        ht: 'د لومړۍ نیمایي پای',
+        ft: 'د لوبې پای',
+        et: 'اضافي وخت',
+        afterExtraTime: 'له اضافي وخت وروسته',
+        penaltyAbbreviation: 'پن',
+        ownGoal: 'خپل ګول',
+        winOnPenalties: {
+          prefix: 'په پنالټیو کې',
+          suffix: 'سره ګټي',
+        },
         worldCupTeamNames: {
           algeria: 'الجزایر',
           argentina: 'ارجنتاين',

@@ -23,7 +23,7 @@ export const HeadToHeadV2 = ({
   isSportDataLive?: boolean;
 }) => {
   const { enabled: sportHeaderPollEnabled } = useToggle('sportDataPolling');
-  const { translations } = use(ServiceContext);
+  const { translations, service } = use(ServiceContext);
 
   const { currentSportData } = useSportDataPolling(
     initialSportData,
@@ -37,6 +37,7 @@ export const HeadToHeadV2 = ({
   const translatedSportData = translateSportData(
     currentSportData,
     translations,
+    service,
   );
 
   return (

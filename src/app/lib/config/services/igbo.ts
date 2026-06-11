@@ -298,6 +298,18 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'Kachasị ọhụrụ',
       sport: {
         matchSummary: 'Nchịkọta Asọmpi',
+        assists: 'Nye enyemaka',
+        penalties: 'Penariti',
+        ht: 'Ngwụcha ọkara mbụ',
+        ft: 'Ngwụcha egwuregwu',
+        et: 'Oge mgbakwunye',
+        afterExtraTime: 'Mgbe oge mgbakwunye gachara',
+        penaltyAbbreviation: 'PEN',
+        ownGoal: 'goolu megide onwe',
+        winOnPenalties: {
+          prefix: 'meriri penariti',
+          suffix: '',
+        },
         worldCupTeamNames: {
           algeria: 'Algeria',
           argentina: 'Agentina',
