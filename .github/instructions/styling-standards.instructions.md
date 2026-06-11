@@ -9,7 +9,7 @@ applyTo: "src/app/components/**"
 - We use object style syntax.
 - Do not use curried functions like this: 
 ```
-  // index.style.tsx
+  // index.styles.tsx
   checkedSlider:
     (isChecked: boolean) =>
     ({ palette }: Theme) =>
