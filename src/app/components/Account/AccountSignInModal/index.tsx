@@ -88,13 +88,7 @@ const AccountSignInModal = ({
 
   return (
     <>
-      <Global
-        styles={css`
-          body {
-            overflow: hidden;
-          }
-        `}
-      />
+      <Global styles={{ body: { overflow: 'hidden' } }} />
       <div
         role="dialog"
         aria-modal="true"

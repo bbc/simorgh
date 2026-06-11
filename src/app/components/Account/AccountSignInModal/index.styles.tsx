@@ -48,10 +48,6 @@ export default {
       [GROUP_A_MAX_WIDTH]: {
         width: `${pixelsToRem(222)}rem`,
       },
-      // 320px - 599px
-      [GROUP_B_ONLY]: {
-        width: `${pixelsToRem(288)}rem`,
-      },
       // 600px - 1007px
       [GROUP_3_ONLY]: {
         width: `${pixelsToRem(510)}rem`,
