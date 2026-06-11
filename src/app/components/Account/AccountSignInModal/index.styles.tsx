@@ -118,7 +118,7 @@ export default {
         },
         // 1008px and above
         [GROUP_4_MIN_WIDTH]: {
-          marginTop: `${pixelsToRem(36)}rem`,
+          marginTop: `${pixelsToRem(90)}rem`,
           paddingTop: 0,
         },
       }),
@@ -162,9 +162,9 @@ export default {
       },
       // 1008px and above
       [GROUP_4_MIN_WIDTH]: {
-        gridRow: 2,
+        gridRow: '2 / 4',
         width: '100%',
-        marginTop: 0,
+        marginTop: `${pixelsToRem(32)}rem`,
         paddingBottom: 0,
       },
     }),
@@ -208,9 +208,7 @@ export default {
         gridRow: '1 / span 2',
         display: 'block',
         width: '100%',
-        marginTop: `${pixelsToRem(36)}rem`,
-        alignSelf: 'start',
-        aspectRatio: '274 / 400;',
+        aspectRatio: '274 / 400',
         backgroundImage: 'var(--sign-in-image-desktop)',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
