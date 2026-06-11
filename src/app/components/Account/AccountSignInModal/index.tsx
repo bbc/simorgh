@@ -25,7 +25,7 @@ const AccountSignInModal = ({
     HTMLButtonElement
   >();
 
-  const { translations } = use(ServiceContext);
+  const { translations, service } = use(ServiceContext);
   const closeLabel = translations.accountPromoBanner?.closeLabel ?? 'Close';
   const titleLabel = translations.accountPromoBanner?.title ?? 'Sign in to BBC';
 
