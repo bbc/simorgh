@@ -136,11 +136,11 @@ const sendBeacon = async (reverbBeaconConfig: ReverbBeaconConfig) => {
   if (onClient()) {
     try {
       const {
-        params: { page, user },
+        // params: { page, user },
         eventDetails,
       } = reverbBeaconConfig;
 
-      await setReverbPageValues({ pageVars: page, userVars: user });
+      // await setReverbPageValues({ pageVars: page, userVars: user });
 
       await callReverb(eventDetails);
     } catch (error) {
