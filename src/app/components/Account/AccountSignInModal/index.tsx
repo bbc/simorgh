@@ -1,12 +1,11 @@
-import { css, Global } from '@emotion/react';
+import { Global } from '@emotion/react';
 import { useEffect, useMemo, use } from 'react';
-import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 import ThemeProvider from '#app/components/ThemeProvider';
 import { AccountContext } from '#app/contexts/AccountContext';
 import { Close } from '#app/components/icons';
 import useTrappedFocus from '#app/hooks/useTrappedFocus';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import AccountPromotionalBanner from '../AccountPromotionalBanner';
+import SignInPromotionalBanner from '../SignInPromotionalBanner';
 import styles from './index.styles';
 import { DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS } from '../AccountPromotionalBanner/utilities';
 
@@ -107,15 +106,11 @@ const AccountSignInModal = ({
           >
             <Close />
           </button>
-          <ToggleContextProvider>
-            <ThemeProvider service="ws">
-              <AccountContext.Provider value={accountContextValue}>
-                <AccountPromotionalBanner
-                  styleOverrides={styles.promotionalBannerOverrides}
-                />
-              </AccountContext.Provider>
-            </ThemeProvider>
-          </ToggleContextProvider>
+          <ThemeProvider service="ws">
+            <AccountContext.Provider value={accountContextValue}>
+              <SignInPromotionalBanner />
+            </AccountContext.Provider>
+          </ThemeProvider>
         </div>
       </div>
     </>
