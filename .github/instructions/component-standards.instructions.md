@@ -148,7 +148,7 @@ const Component = ({ textToRender, renderAfter }: HelloWorldProps) => (
 
 export default {
   title: 'Components/HelloWorld',
-  Component,
+  component: HelloWorld,
   parameters: {
     docs: { readme },
     metadata,
@@ -157,14 +157,14 @@ export default {
     textToRender: 'Example Text',
     renderAfter: 1000,
   },
-  argTypes:{
+  argTypes: {
     renderAfter: {
       control: {
         type: 'select',
       },
       options: [1000, 2000, 3000, 4000],
-    }
-  }
+    },
+  },
 };
 
 export const ExampleHelloWorld = Component;
