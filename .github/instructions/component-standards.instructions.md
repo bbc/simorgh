@@ -106,7 +106,7 @@ describe('HelloWorld', () => {
     it.each([
       { text: 'Hello World' },
       { text: 'Goodbye World' },
-      { text: 'Good Evevning World' },
+      { text: 'Good Evening World' },
     ])(`should render the service and the text $text`, async ({ text }) => {
       const { container } = await act(async () => {
         return render(<HelloWorld textToRender={text} renderAfter={1000} />, {
