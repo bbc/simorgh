@@ -44,7 +44,9 @@ const useTrappedFocus = <
           event.preventDefault();
           firstFocusable?.focus();
         }
-      } catch (error) {} // eslint-disable-line no-empty
+      } catch {
+        return;
+      }
     };
 
     document.addEventListener('keydown', handleKeyDown);
