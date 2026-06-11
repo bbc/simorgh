@@ -69,6 +69,7 @@ const AccountSignInModal = ({
     () => ({
       isSignedIn: false,
       isIdctaAvailable: true,
+      isRefreshAvailable: false,
       signInUrl,
       registerUrl,
       isPersonalizationAvailable: false,
