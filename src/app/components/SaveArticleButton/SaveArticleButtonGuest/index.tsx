@@ -4,6 +4,7 @@ import { use, useState } from 'react';
 import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import { AccountContext } from '#app/contexts/AccountContext';
 import AccountSignInModal from '#app/components/Account/AccountSignInModal';
+import { createPortal } from 'react-dom';
 
 const SaveArticleButtonGuest = () => {
   const { translations } = use(ServiceContext);
@@ -26,13 +27,15 @@ const SaveArticleButtonGuest = () => {
         testId="save-article-btn-guest"
         isLoading={!isHydrated}
       />
-      {isModalOpen && (
-        <AccountSignInModal
-          onClose={() => setIsModalOpen(false)}
-          signInUrl={signInUrl}
-          registerUrl={registerUrl}
-        />
-      )}
+      {isModalOpen &&
+        createPortal(
+          <AccountSignInModal
+            onClose={() => setIsModalOpen(false)}
+            signInUrl={signInUrl}
+            registerUrl={registerUrl}
+          />,
+          document.body,
+        )}
     </>
   );
 };

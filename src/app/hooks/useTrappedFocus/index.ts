@@ -14,43 +14,44 @@ const useTrappedFocus = <
 
   useEffect(() => {
     const onDismissFocusElement = document.activeElement as HTMLElement | null;
-    let currentModalFocusRef: Element | null = null;
 
-    const focusListenerWithErrorWrapper = (event: FocusEvent) => {
+    const getFocusableElements = (): HTMLElement[] => {
+      if (!containerRef.current) return [];
+      return Array.from(
+        containerRef.current.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR),
+      );
+    };
+
+    const getFirstFocusable = (): HTMLElement | null =>
+      firstElementRef.current ?? getFocusableElements()[0] ?? null;
+
+    const getLastFocusable = (): HTMLElement | null =>
+      lastElementRef.current ?? getFocusableElements().pop() ?? null;
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key !== 'Tab') return;
+
       try {
-        if (!containerRef.current) return;
+        const firstFocusable = getFirstFocusable();
+        const lastFocusable = getLastFocusable();
 
-        const isInModal = containerRef.current.contains(event.target as Node);
-
-        if (isInModal && event.target !== containerRef.current) {
-          currentModalFocusRef = event.target as Element;
-        } else {
-          const wasFirstElementFocused =
-            currentModalFocusRef === firstElementRef.current;
-
-          const lastElement: HTMLElement | null =
-            lastElementRef.current ??
-            Array.from(
-              containerRef.current.querySelectorAll<HTMLElement>(
-                FOCUSABLE_SELECTOR,
-              ),
-            ).pop() ??
-            null;
-
-          if (wasFirstElementFocused) {
-            lastElement?.focus();
-          } else {
-            firstElementRef.current?.focus();
+        if (event.shiftKey) {
+          if (document.activeElement === firstFocusable) {
+            event.preventDefault();
+            lastFocusable?.focus();
           }
+        } else if (document.activeElement === lastFocusable) {
+          event.preventDefault();
+          firstFocusable?.focus();
         }
       } catch (error) {} // eslint-disable-line no-empty
     };
 
-    window.addEventListener('focus', focusListenerWithErrorWrapper, true);
+    document.addEventListener('keydown', handleKeyDown);
     firstElementRef.current?.focus();
 
     return () => {
-      window.removeEventListener('focus', focusListenerWithErrorWrapper, true);
+      document.removeEventListener('keydown', handleKeyDown);
       onDismissFocusElement?.focus();
     };
   }, []);

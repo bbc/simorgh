@@ -25,36 +25,9 @@ const AccountSignInModal = ({
     HTMLButtonElement
   >();
 
-  const { translations } = use(ServiceContext);
+  const { translations, service } = use(ServiceContext);
   const closeLabel = translations.accountPromoBanner?.closeLabel ?? 'Close';
   const titleLabel = translations.accountPromoBanner?.title ?? 'Sign in to BBC';
-
-  useEffect(() => {
-    const modal = document.getElementById('account-sign-in-modal-container');
-    const reactRootElement = document.getElementById('root');
-
-    const handleBackdropClick = (event: MouseEvent | TouchEvent) => {
-      if (event.target === event.currentTarget) onClose();
-    };
-
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') onClose();
-    };
-
-    if (modal) {
-      reactRootElement?.setAttribute('inert', 'true');
-      modal.addEventListener('mousedown', handleBackdropClick);
-      modal.addEventListener('touchstart', handleBackdropClick);
-      modal.addEventListener('keydown', handleKeyDown);
-    }
-
-    return () => {
-      reactRootElement?.removeAttribute('inert');
-      modal?.removeEventListener('mousedown', handleBackdropClick);
-      modal?.removeEventListener('touchstart', handleBackdropClick);
-      modal?.removeEventListener('keydown', handleKeyDown);
-    };
-  }, [onClose]);
 
   useEffect(() => {
     document
@@ -106,7 +79,7 @@ const AccountSignInModal = ({
           >
             <Close />
           </button>
-          <ThemeProvider service="ws">
+          <ThemeProvider service={service}>
             <AccountContext.Provider value={accountContextValue}>
               <SignInPromotionalBanner />
             </AccountContext.Provider>
