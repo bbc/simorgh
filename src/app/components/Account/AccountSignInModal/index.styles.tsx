@@ -9,6 +9,13 @@ import {
   GROUP_4_MIN_WIDTH,
 } from '#app/components/ThemeProvider/mediaQueries';
 import pixelsToRem from '#app/utilities/pixelsToRem';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+
+const {
+  SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
+  SIMORGH_PUBLIC_STATIC_ASSETS_PATH,
+} = getEnvConfig();
+const imagesPath = `${SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${SIMORGH_PUBLIC_STATIC_ASSETS_PATH}images`;
 
 export default {
   modal: css({
@@ -166,21 +173,21 @@ export default {
         marginBottom: `${pixelsToRem(20)}rem`,
         marginTop: `${pixelsToRem(16)}rem`,
         aspectRatio: '256 / 242',
-        backgroundImage: 'var(--sign-in-image-mobile)',
+        backgroundImage: `url(${imagesPath}/news_mobile_image.webp)`,
       },
       // 600px - 1007px
       [GROUP_3_ONLY]: {
         marginBottom: `${pixelsToRem(24)}rem`,
         marginTop: `${pixelsToRem(16)}rem`,
         aspectRatio: '395 / 328',
-        backgroundImage: 'var(--sign-in-image-tablet)',
+        backgroundImage: `url(${imagesPath}/news_tablet_image.webp)`,
       },
       // 1008px and above
       [GROUP_4_MIN_WIDTH]: {
         gridColumn: 2,
         gridRow: '1 / span 2',
         aspectRatio: '274 / 400',
-        backgroundImage: 'var(--sign-in-image-desktop)',
+        backgroundImage: `url(${imagesPath}/news_desktop_image.webp)`,
       },
     }),
   },

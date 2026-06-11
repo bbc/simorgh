@@ -1,11 +1,11 @@
 import { css, Global } from '@emotion/react';
-import { useEffect, useMemo } from 'react';
+import { useEffect, useMemo, use } from 'react';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 import ThemeProvider from '#app/components/ThemeProvider';
 import { AccountContext } from '#app/contexts/AccountContext';
 import { Close } from '#app/components/icons';
-import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import useTrappedFocus from '#app/hooks/useTrappedFocus';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import AccountPromotionalBanner from '../AccountPromotionalBanner';
 import styles from './index.styles';
 import { DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS } from '../AccountPromotionalBanner/utilities';
@@ -25,6 +25,10 @@ const AccountSignInModal = ({
     HTMLDivElement,
     HTMLButtonElement
   >();
+
+  const { translations } = use(ServiceContext);
+  const closeLabel = translations.accountPromoBanner?.closeLabel ?? 'Close';
+  const titleLabel = translations.accountPromoBanner?.title ?? 'Sign in to BBC';
 
   useEffect(() => {
     const modal = document.getElementById('account-sign-in-modal-container');
@@ -82,15 +86,6 @@ const AccountSignInModal = ({
     [signInUrl, registerUrl],
   );
 
-  const staticAssetsPath = `${getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_PATH}`;
-  const imagesPath = `${staticAssetsPath}images`;
-
-  const signInImageVariables = {
-    '--sign-in-image-mobile': `url(${imagesPath}/news_mobile_image.webp)`,
-    '--sign-in-image-tablet': `url(${imagesPath}/news_tablet_image.webp)`,
-    '--sign-in-image-desktop': `url(${imagesPath}/news_desktop_image.webp)`,
-  } as React.CSSProperties;
-
   return (
     <>
       <Global
@@ -103,22 +98,18 @@ const AccountSignInModal = ({
       <div
         role="dialog"
         aria-modal="true"
-        aria-label="Sign in to BBC"
+        aria-label={titleLabel}
         css={styles.modal}
         id="account-sign-in-modal-container"
       >
         <div aria-hidden="true" onClick={onClose} css={styles.backdrop} />
-        <div
-          ref={containerRef}
-          css={styles.modalContent}
-          style={signInImageVariables}
-        >
+        <div ref={containerRef} css={styles.modalContent}>
           <button
             ref={firstElementRef}
             type="button"
             onClick={onClose}
             css={styles.closeButton}
-            aria-label="Close modal"
+            aria-label={closeLabel}
           >
             <Close />
           </button>
