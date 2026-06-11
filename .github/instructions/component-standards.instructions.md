@@ -16,7 +16,7 @@ applyTo: "src/app/components/**"
 ## Coding Best Practices
 - Don't have lots of logic in your tests, prefer to test the output of a function rather than the implementation.
 - Follow the KISS principle (Keep it Simple Stupid).
-- Resuse our existing `./src/app/components/Heading`, `./src/app/components/Paragraph`, `./src/app/components/Text`, `./src/app/components/Image`, `./src/app/components/InlineLink` components as opposed to the native React alternatives. 
+- Reuse our existing `./src/app/components/Heading`, `./src/app/components/Paragraph`, `./src/app/components/Text`, `./src/app/components/Image`, `./src/app/components/InlineLink` components as opposed to the native React alternatives.
 
 ## Testing
 - Use jest.
