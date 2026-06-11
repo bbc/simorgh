@@ -87,7 +87,7 @@ const HiearchicalGrid = ({
             (promo.type === 'audio' && `${audioTranslation}, `) ||
             (promo.type === 'video' && `${videoTranslation}, `) ||
             (promo.type === 'photogallery' && `${photoGalleryTranslation}, `);
-          const { isLive } = promo;
+          const { isLive, relatedTopic } = promo;
 
           const promoEventTrackingData = buildPromoEventTrackingData(promo, i);
           const clickTrackerHandler = getClickTrackerHandler(
@@ -174,6 +174,11 @@ const HiearchicalGrid = ({
                     {promo.lastPublished}
                   </Promo.Timestamp>
                 ) : null}
+                {relatedTopic && (
+                  <Promo.A href={relatedTopic.link.url}>
+                    {relatedTopic.title}
+                  </Promo.A>
+                )}
               </Promo>
             </li>
           );
