@@ -54,4 +54,4 @@ description: "General guide for Simorgh"
 - If committing with Copilot-authored changes, append `[copilot]` to commit messages.
 
 ## Instruction Updates
-- Do automatically update any instructions and READ_MEs when you notice any relevant changes. 
+- Automatically update any instructions and READMEs when you notice any relevant changes.
