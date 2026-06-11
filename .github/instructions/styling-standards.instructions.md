@@ -14,7 +14,7 @@ applyTo: "src/app/components/**"
     (isChecked: boolean) =>
     ({ palette }: Theme) =>
       css({
-        backgroundColor: `${isChecked} ? ${palette.GREY_6}: ${palette.POSTBOX}`,
+        backgroundColor: isChecked ? palette.GREY_6 : palette.POSTBOX,
         '&::before': {
           transform: 'translateX(20px)',
         },
