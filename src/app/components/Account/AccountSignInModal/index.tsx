@@ -4,7 +4,7 @@ import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 import ThemeProvider from '#app/components/ThemeProvider';
 import { AccountContext } from '#app/contexts/AccountContext';
 import { Close } from '#app/components/icons';
-import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+// import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import useTrappedFocus from '#app/hooks/useTrappedFocus';
 import AccountPromotionalBanner from '../AccountPromotionalBanner';
 import styles from './index.styles';
@@ -81,8 +81,8 @@ const AccountSignInModal = ({
     [signInUrl, registerUrl],
   );
 
-  const staticAssetsPath = `${getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_PATH}`;
-  const imagesPath = `${staticAssetsPath}images`;
+  // const staticAssetsPath = `${getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_PATH}`;
+  // const imagesPath = `${staticAssetsPath}images`;
 
   // const signInImageVariables = {
   //   '--sign-in-image-mobile': `url(${imagesPath}/news_mobile_image.webp)`,
