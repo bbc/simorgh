@@ -1,4 +1,6 @@
 /* eslint-disable import/prefer-default-export */
+import { use } from 'react';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import GroupedEvents from './grouped-events';
 import ActionGrid from './action-grid';
 import ScoreDetails from './score-details';
@@ -10,6 +12,8 @@ interface ActionsProps {
 }
 
 export const Actions = ({ data }: ActionsProps) => {
+  const { translations } = use(ServiceContext);
+
   const homeKeyEvents = data.home?.actions || [];
   const awayKeyEvents = data.away?.actions || [];
 
@@ -25,6 +29,7 @@ export const Actions = ({ data }: ActionsProps) => {
           awayName={data.away.fullName}
           homeRunningScores={data.home.runningScores}
           awayRunningScores={data.away.runningScores}
+          translations={translations?.sport}
         />
         {hasKeyEvents && (
           <KeyEvents

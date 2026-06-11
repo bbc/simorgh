@@ -1,5 +1,7 @@
+import { useEffect, useState } from 'react';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 import styles from '../index.styles';
+import getLocalisedTime from '../helpers/localise-time';
 
 interface TimeData {
   displayTimeUK: string;
@@ -7,16 +9,27 @@ interface TimeData {
 }
 
 interface TimeProps {
+  date: string;
   time: TimeData;
 }
 
-const Time = ({ time }: TimeProps) => (
-  <>
-    <time css={styles.fixtureTime} aria-hidden="true">
-      {time.displayTimeUK}
-    </time>
-    <VisuallyHiddenText>{time.accessibleTime}</VisuallyHiddenText>
-  </>
-);
+const Time = ({ date, time }: TimeProps) => {
+  const [localisedTime, setLocalisedTime] = useState(time.displayTimeUK);
+
+  useEffect(() => {
+    const clientTime = getLocalisedTime(date, time.displayTimeUK);
+    setLocalisedTime(clientTime);
+  }, []);
+
+  return (
+    <>
+      <time css={styles.fixtureTime} aria-hidden="true">
+        {localisedTime}
+      </time>
+
+      <VisuallyHiddenText>{localisedTime}</VisuallyHiddenText>
+    </>
+  );
+};
 
 export default Time;

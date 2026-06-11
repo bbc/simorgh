@@ -5,7 +5,7 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 
 import ATIAnalytics from '#app/components/ATIAnalytics';
 import MetadataContainer from '#app/components/Metadata';
-import styles from '../styles';
+import styles from './styles';
 import { MyNewsPageProps } from '../types';
 import MyNewsPageGuest from './MyNewsPageGuest';
 import MyNewsPageLoading from './MyNewsPageLoading';
@@ -18,14 +18,14 @@ const MyNewsPageContent = dynamic(() => import('./MyNewsPageContent'), {
 const MyNewsPage = ({ pageData, page }: MyNewsPageProps) => {
   const { isPersonalizationAvailable, isPersonalizationEnabled } =
     use(AccountContext);
-  const { lang } = use(ServiceContext);
+  const { lang, translations } = use(ServiceContext);
 
-  if (!isPersonalizationAvailable) return null;
+  if (!isPersonalizationAvailable || !translations?.myNews) return null;
 
   return (
     <main css={styles.main}>
       <MetadataContainer
-        title="My News"
+        title={translations?.myNews?.title}
         lang={lang}
         openGraphType="website"
         hasAmpPage={false}

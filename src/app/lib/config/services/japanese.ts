@@ -261,6 +261,18 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: '読み物・解説',
       latestMediaTitle: '最新動画',
       sport: {
+        assists: 'アシスト',
+        penalties: 'PK',
+        ht: '前半終了',
+        ft: '試合終了',
+        et: '延長戦',
+        afterExtraTime: '延長戦後',
+        penaltyAbbreviation: 'PK',
+        ownGoal: 'オウンゴール',
+        winOnPenalties: {
+          prefix: 'はPK戦で',
+          suffix: 'で勝利',
+        },
         worldCupTeamNames: {
           algeria: 'アルジェリア',
           argentina: 'アルゼンチン',

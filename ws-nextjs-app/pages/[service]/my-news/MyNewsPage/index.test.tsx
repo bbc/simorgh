@@ -64,7 +64,11 @@ describe('MyNewsPage', () => {
       render(<MyNewsPage />, renderOptions);
     });
 
-    expect(screen.getByText('Loading your articles...')).toBeInTheDocument();
+    const spinnerWrapper = screen.getByTestId('my-news-page-spinner');
+    const spinnerSvg = spinnerWrapper.querySelector('svg');
+
+    expect(spinnerWrapper).toBeInTheDocument();
+    expect(spinnerSvg).toBeInTheDocument();
   });
 
   it('should render saved articles after fetching', async () => {
@@ -151,9 +155,23 @@ describe('MyNewsPage', () => {
 
     expect(mockUseRecentActivity).toHaveBeenCalledWith(
       expect.objectContaining({
-        itemsPerPage: 10,
+        itemsPerPage: 24,
         startIndex: 0,
       }),
     );
+  });
+
+  it('should render guest page with action buttons when user is not logged in', async () => {
+    await act(async () => {
+      render(<MyNewsPage />, {
+        ...renderOptions,
+        idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: false },
+      });
+    });
+
+    expect(
+      screen.getByTestId('my-news-guest-sign-in-link'),
+    ).toBeInTheDocument();
+    expect(screen.getByTestId('my-news-register-link')).toBeInTheDocument();
   });
 });
