@@ -29,7 +29,7 @@ Each React component should have its own folder under the root `./src/app/compon
 - An index.styles.tsx file that contains styling related functions.
 - An index.test.tsx file that contains the unit tests.
 - An index.stories.tsx file that contains a respective storybook component.
-  - If you can use arg and argType parameters where necessary, but omit them for very basic components. 
+  - If you can, use `args` and `argTypes` where necessary, but omit them for very basic components.
 - A metadata.json file that contains storybook and A11Y related information.
   - This contains links to A11Y related documents that engineers will manually write up.  
 - A README.md file that contains a rough outline of what this component does.
