@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { Services } from '#app/models/types/global';
 import { isLiveStatus } from '../helpers/event-status-groups';
 import { getLocalisedDate } from '../helpers/localise-datetime';
@@ -26,14 +27,19 @@ const HeadToHeadHeader = ({
   status,
   service,
 }: HeadToHeadHeaderProps) => {
-  const userLocalDateTime = getLocalisedDate(date, time.displayTimeUK, service);
+  const [localisedDate, setLocalisedDate] = useState(date);
+
+  useEffect(() => {
+    const clientDate = getLocalisedDate(date, time.displayTimeUK, service);
+    setLocalisedDate(clientDate);
+  }, [date, time.displayTimeUK, service]);
 
   return (
     <div css={styles.headerWrapper(isLiveStatus(status))}>
       {!isLiveStatus(status) && (
         <div css={styles.dateWrapper}>
           <div css={styles.dateHeader}>
-            <time css={styles.date}>{userLocalDateTime}</time>
+            <time css={styles.date}>{localisedDate}</time>
           </div>
           <div css={styles.interpunct} aria-hidden>
             ‧
