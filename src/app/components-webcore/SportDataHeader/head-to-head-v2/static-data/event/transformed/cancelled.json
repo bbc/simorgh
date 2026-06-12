@@ -6,22 +6,34 @@
   "urn": "urn:bbc:sportsdata:football:event:78bis3qan491aqnwxn71ix6o2",
   "sport": "football",
   "status": "Cancelled",
-  "periodLabel": { "value": "Match Cancelled", "accessible": "Match Cancelled" },
+  "periodLabel": {
+    "value": "Match Cancelled",
+    "accessible": "Match Cancelled"
+  },
   "participants": [
     {
       "id": "hzqh7z0mdl3v7gwete66syxp",
       "urn": "urn:bbc:sportsdata:football:team:fulham",
-      "name": { "fullName": "Fulham", "shortName": "Fulham" },
+      "name": {
+        "fullName": "Fulham",
+        "shortName": "Fulham"
+      },
       "alignment": "home"
     },
     {
       "id": "c8h9bw1l82s06h77xxrelzhur",
       "urn": "urn:bbc:sportsdata:football:team:liverpool",
-      "name": { "fullName": "Liverpool", "shortName": "Liverpool" },
+      "name": {
+        "fullName": "Liverpool",
+        "shortName": "Liverpool"
+      },
       "alignment": "away"
     }
   ],
-  "venue": { "name": "Craven Cottage", "shortName": "Craven Cottage" },
+  "venue": {
+    "name": "Craven Cottage",
+    "shortName": "Craven Cottage"
+  },
   "tournament": {
     "id": "2kwbbcootiqqgmrzs6o5inle5",
     "name": "Premier League",
@@ -44,7 +56,11 @@
     "shortName": "Liverpool",
     "urn": "urn:bbc:sportsdata:football:team:liverpool"
   },
-  "time": "12:30",
+  "time": {
+    "accessibleTime": "12:30",
+    "displayTimeUK": "12:30",
+    "timeCertainty": true
+  },
   "date": "Sat 6 Aug 2022",
   "accessibleEventSummary": ""
 }
