@@ -360,6 +360,18 @@ export const service: SerbianConfig = {
       },
       sport: {
         matchSummary: 'Rezime utakmice',
+        assists: 'Asistencije',
+        penalties: 'Penali',
+        ht: 'Kraj prvog poluvremena',
+        ft: 'Kraj utakmice',
+        et: 'Produžetak',
+        afterExtraTime: 'Posle produžetaka',
+        penaltyAbbreviation: 'pen',
+        ownGoal: 'autogol',
+        winOnPenalties: {
+          prefix: 'pobeđuje',
+          suffix: 'na penale',
+        },
         worldCupTeamNames: {
           algeria: 'Alžir',
           argentina: 'Argentina',
@@ -809,6 +821,18 @@ export const service: SerbianConfig = {
       },
       sport: {
         matchSummary: 'Резиме утакмице',
+        assists: 'Асистенције',
+        penalties: 'Пенали',
+        ht: 'Крај првог полувремена',
+        ft: 'Крај утакмице',
+        et: 'Продужетак',
+        afterExtraTime: 'После продужетака',
+        penaltyAbbreviation: 'пен',
+        ownGoal: 'аутогол',
+        winOnPenalties: {
+          prefix: 'побеђује',
+          suffix: 'на пенале',
+        },
         worldCupTeamNames: {
           algeria: 'Алжир',
           argentina: 'Аргентина',

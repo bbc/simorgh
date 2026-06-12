@@ -109,7 +109,6 @@ const getTimestampComponent =
     lastPublished: string,
     readTimeValue: number | undefined,
     readTimeTranslations: Translations['readTime'],
-    articleTitle: string,
     articlePageData?: Article,
   ) =>
   (props: ComponentToRenderProps & TimeStampProps) => {
@@ -141,10 +140,7 @@ const getTimestampComponent =
             )}
           </>
         )}
-        <SaveArticleButton
-          articleTitle={articleTitle}
-          articlePageData={articlePageData}
-        />
+        <SaveArticleButton articlePageData={articlePageData} />
       </>
     );
   };
@@ -382,7 +378,6 @@ const ArticlePage = ({
       lastPublished,
       readTimeValue,
       translations.readTime,
-      headline,
       pageData,
     ),
     social: SocialEmbedContainer,
@@ -425,8 +420,7 @@ const ArticlePage = ({
     (showTopicDiscoveryComponent ||
       topicDiscoveryVariant === 'topic_discovery') &&
     !isAmp &&
-    !isLite &&
-    !isLive();
+    !isLite;
 
   const showRelatedTopicsComponent = Boolean(
     showRelatedTopics && topics.length > 0 && !showTopicDiscovery,

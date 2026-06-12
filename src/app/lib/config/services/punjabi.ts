@@ -276,6 +276,18 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'ਬਿਲਕੁਲ ਨਵਾਂ',
       sport: {
         matchSummary: 'ਮੈਚ ਦਾ ਸਾਰ',
+        assists: 'ਅਸਿਸਟ',
+        penalties: 'ਪੈਨਲਟੀ',
+        ht: 'ਪਹਿਲੇ ਹਾਫ ਦਾ ਅੰਤ',
+        ft: 'ਮੈਚ ਖਤਮ',
+        et: 'ਵਾਧੂ ਸਮਾਂ',
+        afterExtraTime: 'ਵਾਧੂ ਸਮੇਂ ਤੋਂ ਬਾਅਦ',
+        penaltyAbbreviation: 'ਪੈਨ',
+        ownGoal: 'ਆਪਣਾ ਹੀ ਗੋਲ',
+        winOnPenalties: {
+          prefix: 'ਪੈਨਲਟੀ ਵਿੱਚ',
+          suffix: 'ਨਾਲ ਜਿੱਤਦਾ ਹੈ',
+        },
         worldCupTeamNames: {
           algeria: 'ਅਲਜੀਰੀਆ',
           argentina: 'ਅਰਜਨਟੀਨਾ',

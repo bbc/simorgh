@@ -284,6 +284,18 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'తాజా వార్తలు',
       sport: {
         matchSummary: 'మ్యాచ్ సారాంశం',
+        assists: 'అసిస్టులు',
+        penalties: 'పెనాల్టీలు',
+        ht: 'మొదటి అర్ధం ముగింపు',
+        ft: 'మ్యాచ్ ముగింపు',
+        et: 'అదనపు సమయం',
+        afterExtraTime: 'అదనపు సమయం తరువాత',
+        penaltyAbbreviation: 'పెన్',
+        ownGoal: 'స్వయంగా గోల్',
+        winOnPenalties: {
+          prefix: 'పెనాల్టీలలో',
+          suffix: 'తో గెలుస్తుంది',
+        },
         worldCupTeamNames: {
           algeria: 'అల్జీరియా',
           argentina: 'అర్జెంటీనా',

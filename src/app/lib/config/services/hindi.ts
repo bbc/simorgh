@@ -127,6 +127,17 @@ export const service: DefaultServiceConfig = {
         remove: 'Remove',
         removing: 'Removing',
       },
+      myNews: {
+        title: 'My News',
+        guestTitle: 'Welcome to My News',
+        description: 'My saved articles',
+        guestDescription:
+          'Sign in to save stories in My News, and read them when it suits you.',
+        noArticles: "You haven't saved any articles yet",
+        errorText:
+          'This content does not seem to be working. Please try again later.',
+        loading: 'Loading',
+      },
       gist: 'सारांश',
       error: {
         404: {
@@ -398,6 +409,18 @@ export const service: DefaultServiceConfig = {
       },
       sport: {
         matchSummary: 'मैच का सारांश',
+        assists: 'असिस्ट',
+        penalties: 'पेनल्टी',
+        ht: 'हाफ टाइम (पहला हाफ समाप्त)',
+        ft: 'मैच समाप्त',
+        et: 'अतिरिक्त समय',
+        afterExtraTime: 'अतिरिक्त समय के बाद',
+        penaltyAbbreviation: 'पेन',
+        ownGoal: 'आत्मघाती गोल',
+        winOnPenalties: {
+          prefix: 'पेनल्टी में',
+          suffix: 'से जीतती है',
+        },
         worldCupTeamNames: {
           algeria: 'अल्जीरिया',
           argentina: 'अर्जेंटीना',

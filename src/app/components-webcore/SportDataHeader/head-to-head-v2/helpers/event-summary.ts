@@ -1,9 +1,10 @@
+import { Translations } from '#app/models/types/translations';
 import { EventStatus, HeadToHeadV2Data } from '../types';
 
 const ftFallback = { value: 'FT', accessible: 'Full time' };
 const aetFallback = { value: 'AET', accessible: 'After extra time' };
 
-type PeriodLabel = { value: string; accessible: string };
+type PeriodLabel = { value: string; accessible: string; translation?: string };
 
 type RunningScores = {
   halftime?: string;
@@ -30,15 +31,32 @@ type EventSummaryParams = {
   period?: string;
 };
 
-export const getFallbackFootballPeriodLabel = (
-  labels: PeriodLabel,
-  status: EventStatus | string,
-  homeRunningScores?: RunningScores,
-  awayRunningScores?: RunningScores,
-  homeName?: string,
-  awayName?: string,
-): PeriodLabel => {
+type FallbackPeriodLabelParams = {
+  labels: PeriodLabel;
+  status: EventStatus | string;
+  homeRunningScores?: RunningScores;
+  awayRunningScores?: RunningScores;
+  homeName?: string;
+  awayName?: string;
+  translations?: Translations['sport'];
+};
+
+export const getFallbackFootballPeriodLabel = ({
+  labels,
+  status,
+  homeRunningScores,
+  awayRunningScores,
+  homeName,
+  awayName,
+  translations,
+}: FallbackPeriodLabelParams): PeriodLabel => {
   const isPens = labels?.value?.toLowerCase() === 'pens';
+
+  const {
+    penalties: penaltiesTranslation = 'Penalties',
+    afterExtraTime: aetTranslation,
+    ft: ftTranslation,
+  } = translations || {};
 
   if (status?.toLowerCase() === 'midevent' && isPens) {
     const accessibleText = [
@@ -56,15 +74,28 @@ export const getFallbackFootballPeriodLabel = (
       : '';
 
     return {
-      value: `Penalties${scoreText}`,
-      accessible: `Penalties ${accessibleText}`,
+      value: `${penaltiesTranslation}${scoreText}`,
+      accessible: `${penaltiesTranslation} ${accessibleText}`,
     };
   }
 
   if (isPens) {
+    const aetTranslatedFallback = {
+      ...aetFallback,
+      ...(aetTranslation && {
+        translation: aetTranslation,
+      }),
+    };
+    const ftTranslatedFallback = {
+      ...ftFallback,
+      ...(ftTranslation && {
+        translation: ftTranslation,
+      }),
+    };
+
     return homeRunningScores?.extratime && awayRunningScores?.extratime
-      ? aetFallback
-      : ftFallback;
+      ? aetTranslatedFallback
+      : ftTranslatedFallback;
   }
 
   return labels;
@@ -149,12 +180,12 @@ export const getConciseFootballEventSummary = ({
       summary.push('at');
     }
 
-    const fallbackPeriod = getFallbackFootballPeriodLabel(
-      periodLabel ?? ftFallback,
+    const fallbackPeriod = getFallbackFootballPeriodLabel({
+      labels: periodLabel ?? ftFallback,
       status,
-      home.runningScores,
-      away.runningScores,
-    );
+      homeRunningScores: home.runningScores,
+      awayRunningScores: away.runningScores,
+    });
 
     summary.push(fallbackPeriod.accessible);
 

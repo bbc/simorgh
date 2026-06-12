@@ -303,6 +303,7 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-16 {
