@@ -89,12 +89,23 @@ const styles = {
       ...fontSizes.longPrimer,
       color: palette.GREY_10,
       display: 'flex',
-      alignItems: 'baseline',
+      alignItems: 'center',
       flexWrap: 'wrap',
-      gap: `${spacings.HALF}rem`,
+      gap: 0,
 
       '.promo-timestamp': {
         marginTop: 0,
+        display: 'inline-flex',
+        alignItems: 'center',
+
+        '&::before': {
+          content: '""',
+          width: '2px',
+          height: '2px',
+          borderRadius: '50%',
+          backgroundColor: palette.GREY_10,
+          marginInline: `${spacings.HALF}rem`,
+        },
       },
     }),
 
@@ -102,7 +113,8 @@ const styles = {
     css({
       ...fontSizes.longPrimer,
       color: palette.GREY_10,
-      display: 'inline',
+      display: 'inline-flex',
+      alignItems: 'center',
       marginTop: 0,
       textDecoration: 'none',
       '&:hover, &:focus': {
