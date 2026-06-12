@@ -7,7 +7,6 @@ interface HeadToHeadHeaderProps {
   tournament?: string;
   stage?: string;
   status: EventStatusType;
-  period?: string;
 }
 
 const HeadToHeadHeader = ({
