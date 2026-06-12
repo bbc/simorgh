@@ -1,5 +1,10 @@
 import { test, expect, type APIRequestContext } from '@playwright/test';
-import { AppEnv, livePageSuites } from './suites';
+import { livePageSuites } from './suites';
+import {
+  appEnvFromProcess,
+  baseURL,
+  shouldRunForEnv,
+} from '../../utilities/env';
 import {
   assertPageView,
   assertScrollableNavigationComponentView,
@@ -7,25 +12,6 @@ import {
   assertDropdownNavigationComponentView,
   assertDropdownNavigationComponentClick,
 } from '../../specialFeatures/atiAnalytics/assertions';
-
-const baseUrlByEnv: Record<AppEnv, string> = {
-  local: 'http://localhost:7081',
-  test: 'https://www.test.bbc.com',
-  live: 'https://www.bbc.com',
-};
-
-const isAppEnv = (value: string | undefined): value is AppEnv =>
-  value !== undefined && value in baseUrlByEnv;
-
-const appEnvFromProcess: AppEnv = isAppEnv(process.env.APP_ENV)
-  ? process.env.APP_ENV
-  : 'local';
-
-const baseURL =
-  process.env.PLAYWRIGHT_BASE_URL || baseUrlByEnv[appEnvFromProcess];
-
-const shouldRunForEnv = (runforEnv: AppEnv[]) =>
-  runforEnv.includes(appEnvFromProcess);
 
 const assert200HtmlResponse = async ({
   request,
