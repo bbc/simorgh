@@ -4,7 +4,10 @@ import {
   OptimizelyProvider,
   setLogger,
 } from '@optimizely/react-sdk';
-import { NOTIFICATION_TYPES, ListenerPayload } from '@optimizely/optimizely-sdk';
+import {
+  NOTIFICATION_TYPES,
+  ListenerPayload,
+} from '@optimizely/optimizely-sdk';
 import Cookie from 'js-cookie';
 import isLive from '#lib/utilities/isLive';
 import onClient from '#lib/utilities/onClient';
