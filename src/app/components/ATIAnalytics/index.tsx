@@ -4,9 +4,8 @@ import { ReverbParamsContext } from '#app/contexts/ReverbParamsContext';
 import CanonicalATIAnalytics from './canonical';
 import AmpATIAnalytics from './amp';
 import AmpGeo from '../../legacy/components/AmpGeo';
-import { ATIProps } from './types';
 
-const ATIAnalytics = ({ atiData = {} }: ATIProps) => {
+const ATIAnalytics = () => {
   const requestContext = use(RequestContext);
   const { isAmp } = requestContext;
 
