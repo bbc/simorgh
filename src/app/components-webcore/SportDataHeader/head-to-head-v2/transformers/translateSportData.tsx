@@ -185,14 +185,18 @@ const translateSportData = (
         shouldTranslateMinutes,
       ),
     }),
-    tournament: {
-      ...data.tournament,
-      name: tournamentLookup[data.tournament.name] || data.tournament.name,
-    },
-    stage: {
-      ...data.stage,
-      name: stageLookup[data.stage.name] || data.stage.name,
-    },
+    ...(data.tournament && {
+      tournament: {
+        ...data.tournament,
+        name: tournamentLookup[data.tournament.name] || data.tournament.name,
+      },
+    }),
+    ...(data.stage && {
+      stage: {
+        ...data.stage,
+        name: stageLookup[data.stage.name] || data.stage.name,
+      },
+    }),
     ...(data.groupedActions && {
       groupedActions: data.groupedActions.map(group => {
         const translatedGroupName =
