@@ -84,12 +84,26 @@ const styles = {
       verticalAlign: 'text-top',
     }),
 
-  relatedTopicLink: ({ palette, fontSizes, spacings }: Theme) =>
+  metadataAndTopicData: ({ spacings, palette, fontSizes }: Theme) =>
     css({
       ...fontSizes.longPrimer,
       color: palette.GREY_10,
-      display: 'block',
-      marginTop: `${spacings.HALF}rem`,
+      display: 'flex',
+      alignItems: 'baseline',
+      flexWrap: 'wrap',
+      gap: `${spacings.HALF}rem`,
+
+      '.promo-timestamp': {
+        marginTop: 0,
+      },
+    }),
+
+  relatedTopicLink: ({ palette, fontSizes }: Theme) =>
+    css({
+      ...fontSizes.longPrimer,
+      color: palette.GREY_10,
+      display: 'inline',
+      marginTop: 0,
       textDecoration: 'none',
       '&:hover, &:focus': {
         textDecoration: 'underline',
