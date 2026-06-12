@@ -203,7 +203,7 @@ export type HeadToHeadV2Data = {
   multiLeg?: {
     leg: number;
   };
-  stage: {
+  stage?: {
     id: string;
     name: string;
     urn?: string;
