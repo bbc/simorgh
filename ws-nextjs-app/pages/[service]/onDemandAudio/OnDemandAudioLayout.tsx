@@ -77,7 +77,7 @@ const OnDemandAudioPage = ({
     ? new Date(availableFrom).toISOString()
     : new Date(releaseDateTimeStamp).toISOString();
 
-  const downloadLink = externalLinks.find(
+  const downloadLink = externalLinks?.find(
     link =>
       link.linkType === 'download' && link.linkUrl?.startsWith('https://'),
   );
