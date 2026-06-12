@@ -395,6 +395,12 @@ export const service: DefaultServiceConfig = {
           usa: 'Stany Zjednoczone',
           uzbekistan: 'Uzbekistan',
         },
+        tournaments: {
+          fifaWorldCup: 'Mistrzostwa świata w piłce nożnej',
+        },
+        stages: {
+          groupStage: 'Faza grupowa',
+        },
       },
     },
     mostRead: {

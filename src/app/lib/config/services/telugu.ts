@@ -346,6 +346,12 @@ export const service: DefaultServiceConfig = {
           usa: 'అమెరికా సంయుక్త రాష్ట్రాలు',
           uzbekistan: 'ఉజ్బెకిస్తాన్',
         },
+        tournaments: {
+          fifaWorldCup: 'FIFA World Cup',
+        },
+        stages: {
+          groupStage: 'గ్రూప్ స్టేజ్',
+        },
       },
     },
     mostRead: {
