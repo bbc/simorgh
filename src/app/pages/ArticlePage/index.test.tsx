@@ -1,6 +1,5 @@
 import { PropsWithChildren } from 'react';
 import { Helmet } from 'react-helmet';
-import { BrowserRouter } from 'react-router-dom';
 import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
@@ -35,9 +34,10 @@ import { suppressPropWarnings } from '#app/legacy/psammead/psammead-test-helpers
 import { Services } from '#app/models/types/global';
 import { Curation } from '#app/models/types/curationData';
 import { Article, OptimoBlock } from '#app/models/types/optimo';
-import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import * as viewTracking from '#app/hooks/useViewTracker';
+import isLive from '#lib/utilities/isLive';
+import LocationBasedTopicOJ from '#app/components/LocationBasedTopicOJ';
 import {
   render,
   screen,
@@ -71,6 +71,7 @@ jest.mock('#app/lib/utilities/onClient', () => ({
   default: jest.fn(),
   onClient: jest.fn(() => true),
 }));
+jest.mock('#lib/utilities/isLive', () => jest.fn());
 
 const input = {
   bbcOrigin: 'https://www.test.bbc.co.uk',
@@ -116,27 +117,27 @@ const Context = ({
   };
 
   return (
-    <BrowserRouter>
-      <ThemeProvider service={service} variant="default">
-        <ToggleContextProvider
-          toggles={{
-            mostRead: {
-              enabled: mostReadToggledOn,
-            },
-            ads: {
-              enabled: adsToggledOn,
-            },
-            podcastPromo: { enabled: promo != null },
-          }}
-        >
-          <RequestContextProvider {...appInput}>
-            <ServiceContextProvider service={service}>
-              {children}
-            </ServiceContextProvider>
-          </RequestContextProvider>
-        </ToggleContextProvider>
-      </ThemeProvider>
-    </BrowserRouter>
+    <ThemeProvider service={service} variant="default">
+      <ToggleContextProvider
+        toggles={{
+          mostRead: { enabled: mostReadToggledOn },
+          ads: { enabled: adsToggledOn },
+          podcastPromo: { enabled: promo != null },
+          eventTracking: { enabled: false },
+          preloadLeadImage: { enabled: false },
+          topBarOJs: { enabled: false },
+          articlePortraitVideo: { enabled: false },
+          articleVideoCuration: { enabled: false },
+          continueReadingButton: { enabled: false },
+        }}
+      >
+        <RequestContextProvider {...appInput}>
+          <ServiceContextProvider service={service}>
+            {children}
+          </ServiceContextProvider>
+        </RequestContextProvider>
+      </ToggleContextProvider>
+    </ThemeProvider>
   );
 };
 
@@ -149,8 +150,6 @@ afterEach(() => {
 });
 
 describe('Article Page', () => {
-  const mockUseOptimizelyVariation = useOptimizelyVariation as jest.Mock;
-
   beforeEach(() => {
     jest.clearAllMocks();
   });
@@ -1021,16 +1020,7 @@ describe('Article Page', () => {
     });
   });
 
-  describe('Adaptive media curation', () => {
-    beforeEach(() => {
-      // force the article tod2 variant in these tests so adaptive curation can render.
-      mockUseOptimizelyVariation.mockReturnValue('adaptive_variation');
-    });
-
-    afterEach(() => {
-      mockUseOptimizelyVariation.mockReset();
-    });
-
+  describe('Media curation', () => {
     const mediaCurationFixture: Curation = {
       title: 'वीडियो',
       visualProminence: 'NORMAL',
@@ -1081,51 +1071,49 @@ describe('Article Page', () => {
 
     it('renders media curation after related content when related content is present', () => {
       const { queryByTestId, container } = render(
-        <Context service="hindi">
-          <ArticlePage pageData={pageDataWithMediaCurationAndRelatedContent} />
-        </Context>,
+        <ArticlePage pageData={pageDataWithMediaCurationAndRelatedContent} />,
+        {
+          service: 'hindi',
+          toggles: { articleVideoCuration: { enabled: true } },
+        },
       );
 
       const relatedContentSection = container.querySelector(
         '[data-e2e="related-content-heading"]',
       );
-      const adaptiveMediaCuration = queryByTestId('adaptive-media-curation');
+      const mediaCuration = queryByTestId('media-curation');
 
       expect(relatedContentSection).toBeInTheDocument();
-      expect(adaptiveMediaCuration).toBeInTheDocument();
+      expect(mediaCuration).toBeInTheDocument();
       expect(
         (relatedContentSection as Element).compareDocumentPosition(
-          adaptiveMediaCuration as Node,
+          mediaCuration as Node,
         ),
       ).toBe(Node.DOCUMENT_POSITION_FOLLOWING);
     });
 
-    it.skip('passes the active experiment to ati analytics when the adaptive variant is on', () => {
-      render(
-        <Context service="hindi">
-          <ArticlePage pageData={pageDataWithMediaCurationAndRelatedContent} />
-        </Context>,
+    it('does not render media curation when toggle is off, even if data is present', () => {
+      const { queryByTestId } = render(
+        <ArticlePage pageData={pageDataWithMediaCurationAndRelatedContent} />,
+        {
+          service: 'hindi',
+          toggles: { articleVideoCuration: { enabled: false } },
+        },
       );
 
-      expect(atiAnalyticsSpy).toHaveBeenCalledWith(
-        expect.objectContaining({
-          atiData: expect.objectContaining({
-            experimentName: 'newswb_ws_tod_article_2',
-            experimentVariant: 'adaptive_variation',
-          }),
-        }),
-        undefined,
-      );
+      expect(queryByTestId('media-curation')).not.toBeInTheDocument();
     });
 
     it('does not render media curation when data is missing', () => {
       const { queryByTestId } = render(
-        <Context service="hindi">
-          <ArticlePage pageData={articleDataHindi} />
-        </Context>,
+        <ArticlePage pageData={articleDataHindi} />,
+        {
+          service: 'hindi',
+          toggles: { articleVideoCuration: { enabled: true } },
+        },
       );
 
-      expect(queryByTestId('adaptive-media-curation')).not.toBeInTheDocument();
+      expect(queryByTestId('media-curation')).not.toBeInTheDocument();
     });
   });
 
@@ -1345,6 +1333,144 @@ describe('Article Page', () => {
         const carousels = screen.getAllByTestId('portrait-video-carousel');
         expect(carousels[0]).toHaveAttribute('aria-label', fallbackTitle);
       });
+    });
+  });
+  describe('TopicDiscovery visibility on test only', () => {
+    afterEach(() => {
+      jest.resetAllMocks();
+    });
+
+    const data = {
+      ...articleDataPidgin,
+      metadata: {
+        ...articleDataPidgin.metadata,
+        topics: [
+          {
+            topicId: '1',
+            topicName: 'Topic 1',
+          },
+          {
+            topicId: '2',
+            topicName: 'Topic 2',
+          },
+        ],
+      },
+    } as Article;
+
+    it('should render TopicDiscovery when isLive is false (test env)', () => {
+      jest.mocked(isLive).mockImplementationOnce(() => false);
+      const { queryByTestId } = render(
+        <ArticlePage pageData={data} showTopicDiscoveryComponent />,
+        { service: 'portuguese' },
+      );
+      expect(queryByTestId('topic-discovery')).toBeInTheDocument();
+    });
+
+    it('should NOT render TopicDiscovery when isLive is true (live env)', () => {
+      jest.mocked(isLive).mockImplementationOnce(() => true);
+      const { queryByTestId } = render(<ArticlePage pageData={data} />, {
+        service: 'portuguese',
+      });
+      expect(queryByTestId('topic-discovery')).not.toBeInTheDocument();
+    });
+  });
+
+  describe('LocationBasedTopicOJ', () => {
+    afterEach(() => {
+      jest.resetAllMocks();
+    });
+
+    const mockCountryCuration = {
+      title: 'Najeriya',
+      topicId: 'topic-1',
+      curationId: 'curation-1',
+      curationType: 'vivo-stream',
+      link: '/hausa/topics/topic-1',
+      summaries: [
+        {
+          id: 'summary-1',
+          firstPublished: '2025-05-21',
+          lastPublished: '2025-05-21',
+          title: 'Promo Title 1',
+          link: '/promo-link-1',
+          imageUrl: 'promo-image.jpg',
+          type: 'article',
+        },
+        {
+          id: 'summary-2',
+          firstPublished: '2025-05-21',
+          lastPublished: '2025-05-21',
+          title: 'Promo Title 2',
+          link: '/promo-link-2',
+          imageUrl: 'promo-image.jpg',
+          type: 'article',
+        },
+      ],
+    };
+    it('renders nothing if countryCuration is undefined', () => {
+      const pageData = {
+        ...articleDataNews,
+        countryCuration: undefined,
+      };
+      const { container } = render(
+        <LocationBasedTopicOJ pageData={pageData} />,
+      );
+      expect(container).toBeEmptyDOMElement();
+    });
+
+    it('renders section and subheading when countryCuration is present', () => {
+      const pageData = {
+        ...articleDataNews,
+        countryCuration: mockCountryCuration,
+      };
+      render(
+        <LocationBasedTopicOJ
+          // @ts-expect-error: Test fixture data does not need to match Article type exactly
+          pageData={pageData}
+        />,
+      );
+      expect(screen.getByRole('region')).toBeInTheDocument();
+      expect(screen.getByText('Najeriya')).toBeInTheDocument();
+      expect(screen.getByText('Promo Title 1')).toBeInTheDocument();
+      expect(screen.getByText('Promo Title 2')).toBeInTheDocument();
+    });
+
+    it('should render LocationBasedTopicOJ when isLive is false (test env)', () => {
+      jest.mocked(isLive).mockImplementationOnce(() => false);
+
+      const pageData = {
+        ...articleDataNews,
+        countryCuration: mockCountryCuration,
+      };
+
+      const { queryByTestId } = render(
+        <ArticlePage
+          // @ts-expect-error: Test fixture data does not need to match Article type exactly
+          pageData={pageData}
+        />,
+        { service: 'hausa' },
+      );
+
+      expect(queryByTestId('location-based-topic-oj')).toBeInTheDocument();
+    });
+
+    it('should NOT render LocationBasedTopicOj when isLive is true (live env)', () => {
+      jest.mocked(isLive).mockImplementationOnce(() => true);
+
+      const pageData = {
+        ...articleDataNews,
+        countryCuration: mockCountryCuration,
+      };
+
+      const { queryByTestId } = render(
+        <ArticlePage
+          // @ts-expect-error: Test fixture data does not need to match Article type exactly
+          pageData={pageData}
+        />,
+        { service: 'hausa' },
+      );
+
+      expect(queryByTestId('location-based-topic-oj')).not.toBeInTheDocument();
     });
   });
 });

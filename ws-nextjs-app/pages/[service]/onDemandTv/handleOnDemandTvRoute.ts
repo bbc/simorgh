@@ -3,7 +3,7 @@ import { TV_PAGE } from '#app/routes/utils/pageTypes';
 import PageDataParams from '#app/models/types/pageDataParams';
 import parseRoute from '#app/routes/utils/parseRoute';
 import { NOT_FOUND, OK } from '#app/lib/statusCodes.const';
-import getPageData from '#nextjs/utilities/pageRequests/getPageData';
+import getPageData from '#utilities/pageRequests/getPageData';
 import nodeLogger from '#lib/logger.node';
 import { ROUTING_INFORMATION } from '#app/lib/logger.const';
 import handleError from '#app/routes/utils/handleError';
@@ -87,7 +87,7 @@ export default async (context: GetServerSidePropsContext) => {
 
   context.res.setHeader(
     'Cache-Control',
-    'public, stale-if-error=600, stale-while-revalidate=240, max-age=180',
+    'public, stale-if-error=300, stale-while-revalidate=120, max-age=30',
   );
 
   routingInfoLogger(ROUTING_INFORMATION, {

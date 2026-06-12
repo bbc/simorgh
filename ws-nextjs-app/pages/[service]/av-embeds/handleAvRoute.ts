@@ -10,9 +10,9 @@ import filterForBlockType from '#app/lib/utilities/blockHandlers';
 import nodeLogger from '#lib/logger.node';
 import { OK } from '#app/lib/statusCodes.const';
 import { BFF_FETCH_ERROR, ROUTING_INFORMATION } from '#app/lib/logger.const';
-import sendCustomMetric from '#server/utilities/customMetrics';
-import { NON_200_RESPONSE } from '#server/utilities/customMetrics/metrics.const';
-import getAgent from '#server/utilities/getAgent';
+import sendCustomMetric from '#utilities/customMetrics';
+import { NON_200_RESPONSE } from '#utilities/customMetrics/metrics.const';
+import getAgent from '#utilities/getAgent';
 
 const logger = nodeLogger(__filename);
 
@@ -27,7 +27,7 @@ export default async (context: GetServerSidePropsContext) => {
 
   context.res.setHeader(
     'Cache-Control',
-    'public, stale-if-error=900, stale-while-revalidate=600, max-age=600',
+    'public, stale-if-error=90, stale-while-revalidate=30, max-age=30',
   );
 
   // Remove x-frame-options header to allow embedding

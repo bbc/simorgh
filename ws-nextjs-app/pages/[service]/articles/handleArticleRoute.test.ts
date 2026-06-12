@@ -57,7 +57,7 @@ describe('handleArticleRoute', () => {
 
     expect(mockSetHeader).toHaveBeenCalledWith(
       'Cache-Control',
-      expect.stringContaining('max-age=480'),
+      expect.stringContaining('max-age=90'),
     );
   });
 
@@ -68,7 +68,7 @@ describe('handleArticleRoute', () => {
 
     expect(mockSetHeader).toHaveBeenCalledWith(
       'Cache-Control',
-      expect.stringContaining('max-age=120'),
+      expect.stringContaining('max-age=45'),
     );
   });
 
@@ -114,5 +114,20 @@ describe('handleArticleRoute', () => {
         variant: null,
       },
     });
+  });
+
+  it('uses x-bbc-edge-country header when x-country is not set', async () => {
+    const mockCountryHeaderRequest = {
+      ...mockGetServerSidePropsContext,
+      req: {
+        headers: {
+          'x-bbc-edge-country': 'NG',
+        },
+      } as unknown as GetServerSidePropsContext['req'],
+    };
+
+    const result = await handleArticleRoute(mockCountryHeaderRequest);
+
+    expect(result.props.country).toEqual('ng');
   });
 });

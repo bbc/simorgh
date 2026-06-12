@@ -220,6 +220,7 @@ exports[`OnDemand TV Page  Dark Mode Design - should match snapshot 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-7 {
@@ -1101,6 +1102,7 @@ exports[`OnDemand TV Page  should show the expired content message if episode is
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-7 {
@@ -1751,6 +1753,7 @@ exports[`OnDemand TV Page  should show the future content message if episode is 
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-7 {

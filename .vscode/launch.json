@@ -5,24 +5,10 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "type": "node",
-      "runtimeVersion": "22",
-      "request": "launch",
-      "name": "Debug Express App",
-      "program": "${workspaceFolder}/node_modules/webpack/bin/webpack.js",
-      "args": [
-        "--watch", "--progress", "--env" , "config='server'"
-      ],
-      "env" : { "NODE_ENV" : "development" },
-      "skipFiles": [
-        "${workspaceFolder}/node_modules/**/*",
-      ]
-    },
-    {
       "name": "Debug Next.js: server-side",
       "type": "node-terminal",
       "request": "launch",
       "command": "cd ws-nextjs-app && nvm use && yarn dev"
-    },
+    }
   ]
 }

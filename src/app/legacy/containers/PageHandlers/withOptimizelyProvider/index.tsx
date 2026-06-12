@@ -33,7 +33,7 @@ const getUserId = () => {
 const optimizely = createInstance({
   sdkKey: getEnvConfig().SIMORGH_OPTIMIZELY_SDK_KEY,
   eventBatchSize: 10,
-  eventFlushInterval: 1000,
+  eventFlushInterval: 100,
 });
 
 optimizely?.notificationCenter?.addNotificationListener(
@@ -52,7 +52,11 @@ optimizely?.notificationCenter?.addNotificationListener(
     const decisionEventDispatched =
       notification.decisionInfo?.decisionEventDispatched;
 
-    if (decisionEventDispatched && variationKey !== 'off' && flagKey) {
+    if (
+      decisionEventDispatched &&
+      flagKey &&
+      (variationKey !== 'off' || flagKey === 'newswb_ws_topic_discovery_module')
+    ) {
       notifyDecision(flagKey);
     }
   },

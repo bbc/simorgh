@@ -1,6 +1,6 @@
-import appConfig from '#src/server/utilities/serviceConfigs';
+import appConfig from '#utilities/serviceConfigs';
 import { getMostReadEndpoint } from '#lib/utilities/getUrlHelpers/getMostReadUrls';
-import { serviceNumerals } from '#app/components/MostRead/Canonical/Rank';
+import serviceNumerals from '#app/components/MostRead/utilities/getServiceNumerals';
 import { Services } from '#app/models/types/global';
 import { ServiceParametersType } from '../../types';
 import ampOnlyServices from '../../support/helpers/ampOnlyServices';

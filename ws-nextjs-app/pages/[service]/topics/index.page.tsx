@@ -2,7 +2,7 @@ import dynamic from 'next/dynamic';
 import { GetServerSideProps } from 'next';
 import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
 import PageDataParams from '#app/models/types/pageDataParams';
-import deriveVariant from '#nextjs/utilities/deriveVariant';
+import deriveVariant from '#utilities/deriveVariant';
 import { Topic } from '#app/lib/config/fixtures/types';
 
 const TopicsPageComponent = dynamic(() => import('./TopicsIndexPage'));
@@ -37,7 +37,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
     );
     context.res.setHeader(
       'Cache-Control',
-      'public, stale-if-error=2400, stale-while-revalidate=960, max-age=600',
+      'public, stale-if-error=2400, stale-while-revalidate=960, max-age=240',
     );
 
     const PAGE_SIZE = 100;

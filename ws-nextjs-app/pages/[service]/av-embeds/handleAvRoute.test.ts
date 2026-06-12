@@ -4,9 +4,7 @@ import russianFixtureData from '#data/russian/av-embeds/features-49881797/pid/p0
 import handleAvRoute from './handleAvRoute';
 
 const agent = { cert: 'cert', ca: 'ca', key: 'key' };
-jest.mock('#server/utilities/getAgent', () =>
-  jest.fn(() => Promise.resolve(agent)),
-);
+jest.mock('#utilities/getAgent', () => jest.fn(() => Promise.resolve(agent)));
 
 jest.mock('#app/routes/utils/fetchPageData');
 
@@ -97,7 +95,7 @@ describe('Handle AV Route', () => {
 
     expect(mockGetServerSidePropsContext.res.setHeader).toHaveBeenCalledWith(
       'Cache-Control',
-      'public, stale-if-error=900, stale-while-revalidate=600, max-age=600',
+      'public, stale-if-error=90, stale-while-revalidate=30, max-age=30',
     );
   });
 
@@ -108,7 +106,7 @@ describe('Handle AV Route', () => {
 
     expect(mockGetServerSidePropsContext.res.setHeader).toHaveBeenCalledWith(
       'Cache-Control',
-      'public, stale-if-error=900, stale-while-revalidate=600, max-age=600',
+      'public, stale-if-error=90, stale-while-revalidate=30, max-age=30',
     );
   });
 });

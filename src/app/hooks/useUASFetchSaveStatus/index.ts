@@ -1,71 +1,71 @@
-import { useEffect, useState } from 'react';
+import { use } from 'react';
+import { useQuery } from '@tanstack/react-query';
 import uasApiRequest from '#app/lib/uasApi';
 import { buildGlobalId, FAVOURITES_CONFIG } from '#app/lib/uasApi/uasUtility';
 import { HTTP_NO_CONTENT } from '#app/lib/statusCodes.const';
+import uasKeys from '#app/lib/uasApi/queryKeys';
+import { AccountContext } from '#app/contexts/AccountContext';
 
-/** A hook that fetches an article’s saved status from the UAS API,
- * returning the saved status, loading state, and any error encountered. */
+/** A hook that fetches an article's saved status from the UAS API,
+ * also returning saved article metadata if available.
+ * Returns the saved status, loading state, error, and metadata. */
 
 interface UseUASFetchSaveStatusReturn {
   isSaved: boolean;
   isLoading: boolean;
   error: Error | null;
-  setIsSaved: (value: boolean) => void;
+  savedMetadata?: Record<string, unknown>;
 }
+
+interface SavedArticleDetail {
+  metaData?: Record<string, unknown>;
+}
+
+const fetchSaveStatusWithMetadata = async (
+  articleId: string,
+  isRefreshAvailable: boolean,
+): Promise<{ isSaved: boolean; metadata?: Record<string, unknown> }> => {
+  const globalId = buildGlobalId(articleId);
+  const response = await uasApiRequest('GET', FAVOURITES_CONFIG.activityType, {
+    globalId,
+    isRefreshAvailable,
+  });
+
+  if (!response.ok || response.status === HTTP_NO_CONTENT) {
+    return { isSaved: false };
+  }
+
+  try {
+    const responseData = (await response.json()) as SavedArticleDetail;
+    return {
+      isSaved: true,
+      metadata: responseData.metaData,
+    };
+  } catch {
+    return { isSaved: true, metadata: undefined };
+  }
+};
 
 const useUASFetchSaveStatus = (
   articleId: string,
 ): UseUASFetchSaveStatusReturn => {
-  const [isSaved, setIsSaved] = useState(false);
-  const [isLoading, setLoading] = useState(false);
-  const [error, setError] = useState<Error | null>(null);
+  const { hashedUserId = '', isRefreshAvailable } = use(AccountContext);
 
-  useEffect(() => {
-    if (!articleId) return;
-    const abortController = new AbortController();
-
-    const fetchArticleSaveStatus = async (): Promise<void> => {
-      setLoading(true);
-      setError(null);
-
-      try {
-        const globalId = buildGlobalId(articleId);
-        const response = await uasApiRequest(
-          'GET',
-          FAVOURITES_CONFIG.activityType,
-          {
-            globalId,
-            signal: abortController.signal,
-          },
-        );
-
-        // If response is successful and not 204 (No Content), article is saved
-        // 204 means no content found - article not saved
-        const articleIsSaved =
-          response.ok && response.status !== HTTP_NO_CONTENT;
-        setIsSaved(articleIsSaved);
-      } catch (err) {
-        // If the request was aborted, don't update state
-        const isAbort = (err as { name?: string })?.name === 'AbortError';
-        if (isAbort) return;
-
-        // If API call fails or returns error, treat as not saved
-        setError(err instanceof Error ? err : new Error('Unknown error'));
-        setIsSaved(false);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchArticleSaveStatus();
-
-    // eslint-disable-next-line consistent-return
-    return () => {
-      abortController.abort();
-    };
-  }, [articleId]);
-
-  return { isSaved, isLoading, error, setIsSaved };
+  const {
+    data = { isSaved: false },
+    isLoading,
+    error,
+  } = useQuery({
+    queryKey: uasKeys.favouriteStatus(hashedUserId, articleId),
+    queryFn: () => fetchSaveStatusWithMetadata(articleId, isRefreshAvailable),
+    enabled: !!articleId,
+  });
+  return {
+    isSaved: data.isSaved,
+    isLoading,
+    error: error as Error | null,
+    savedMetadata: data.metadata,
+  };
 };
 
 export default useUASFetchSaveStatus;

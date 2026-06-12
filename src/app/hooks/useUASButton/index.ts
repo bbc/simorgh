@@ -1,22 +1,14 @@
-import { use, useCallback, useState } from 'react';
+import { use } from 'react';
+import { useMutation, useQueryClient } from '@tanstack/react-query';
 import useUASFetchSaveStatus from '#app/hooks/useUASFetchSaveStatus';
-import { AccountContext } from '#app/contexts/AccountContext';
+import useUASMetadataSync from '#app/hooks/useUASMetadataSync';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import isLocal from '#app/lib/utilities/isLocal';
 import uasApiRequest from '#app/lib/uasApi';
-import {
-  buildGlobalId,
-  FAVOURITES_CONFIG,
-  createFavouritesPayload,
-  extractPromoImageFromArticleData,
-  buildPromoImageUrl,
-} from '#app/lib/uasApi/uasUtility';
-import type { SaveArticleButtonProps } from '#app/components/SaveArticleButton';
-import useToggle from '../useToggle';
-
-/** A hook that fetches an article's saved status and controls showing the save UAS button
- * based on feature toggles and sign in status,
- * with room to later expand for toggling the save state based on user actions. */
+import { buildGlobalId, FAVOURITES_CONFIG } from '#app/lib/uasApi/uasUtility';
+import { Article } from '#app/models/types/optimo';
+import uasKeys from '#app/lib/uasApi/queryKeys';
+import { AccountContext } from '#app/contexts/AccountContext';
+import upsertArticleData from '#app/lib/uasApi/upsertArticleData';
 
 enum UASAction {
   SAVE = 'save',
@@ -24,90 +16,92 @@ enum UASAction {
 }
 
 interface UseUASButtonReturn {
-  showButton: boolean;
   isSaved: boolean;
   isLoading: boolean;
+  isUpdating: boolean;
   error: Error | null;
-  handleSaveAction: (action: UASAction) => Promise<void>;
+  handleSaveAction: (action: UASAction) => void;
+}
+export interface UseUASButtonProps {
+  articleId: string;
+  articlePageData?: Article;
 }
 
+// NOTE: Using this hook anywhere in the app will eagerly pull TanStack Query into the bundle.
+// All TanStack-related code must live exclusively inside the lazy boundary.
 const useUASButton = ({
   articleId,
-  articleTitle,
   articlePageData,
-}: SaveArticleButtonProps): UseUASButtonReturn => {
-  const { isSignedIn } = use(AccountContext);
+}: UseUASButtonProps): UseUASButtonReturn => {
   const { service } = use(ServiceContext);
-  const { enabled: featureToggleOn = false, value: accountService = '' } =
-    useToggle('uasPersonalization');
-  const [isSaving, setIsSaving] = useState(false);
-  const [saveError, setSaveError] = useState<Error | null>(null);
+  const { hashedUserId = '', isRefreshAvailable } = use(AccountContext);
+  const queryClient = useQueryClient();
+  const { isSaved, isLoading, error, savedMetadata } =
+    useUASFetchSaveStatus(articleId);
 
-  const isUASEnabled =
-    featureToggleOn &&
-    (isLocal()
-      ? accountService?.toString().split('|').includes(service)
-      : true);
-
-  const showButton = isUASEnabled && isSignedIn;
-
-  const { isSaved, isLoading, error, setIsSaved } = useUASFetchSaveStatus(
-    showButton ? articleId : '',
-  );
-
-  const promoImageObj = extractPromoImageFromArticleData(articlePageData);
-
-  const handleSaveAction = useCallback(
-    async (action: UASAction) => {
-      if (isSaving) return;
-
-      setIsSaving(true);
-      try {
-        setSaveError(null);
-
-        if (action === UASAction.SAVE) {
-          const promoImageBuild = buildPromoImageUrl(promoImageObj);
-          const body = createFavouritesPayload({
-            articleId,
-            service,
-            articleTitle,
-            promoImage: promoImageBuild,
-            promoImageAltText: promoImageObj?.altText || '',
-            locatorUrl: articlePageData?.metadata?.locators?.canonicalUrl || '',
-          });
-          await uasApiRequest('POST', FAVOURITES_CONFIG.activityType, { body });
-          setIsSaved(true);
-        } else {
-          const globalId = buildGlobalId(articleId);
-          await uasApiRequest('DELETE', FAVOURITES_CONFIG.activityType, {
-            globalId,
-          });
-          setIsSaved(false);
+  const mutation = useMutation({
+    mutationFn: async (action: UASAction) => {
+      if (action === UASAction.SAVE) {
+        if (!articlePageData) {
+          throw new Error('Article data is required to save');
         }
-      } catch (err) {
-        const saveErr = err instanceof Error ? err : new Error(String(err));
-        setSaveError(saveErr);
-      } finally {
-        setIsSaving(false);
+        return upsertArticleData({
+          articlePageData,
+          articleId,
+          service,
+          isRefreshAvailable,
+        });
       }
-    },
-    [
-      articleId,
-      service,
-      articleTitle,
-      promoImageObj,
-      articlePageData,
-      isSaving,
-      setIsSaved,
-    ],
-  );
+      const globalId = buildGlobalId(articleId);
+      const response = await uasApiRequest(
+        'DELETE',
+        FAVOURITES_CONFIG.activityType,
+        {
+          globalId,
+          isRefreshAvailable,
+        },
+      );
+      if (!response.ok) {
+        throw new Error(`Failed to remove article: ${response.status}`);
+      }
 
-  return {
-    showButton,
+      return undefined;
+    },
+    onSuccess: (metadata, action) => {
+      const isSavedAction = action === UASAction.SAVE;
+      queryClient.setQueryData(
+        uasKeys.favouriteStatus(hashedUserId, articleId),
+        {
+          isSaved: isSavedAction,
+          metadata: isSavedAction ? metadata : undefined,
+        },
+      );
+      queryClient.invalidateQueries({
+        queryKey: uasKeys.favouritesList(hashedUserId),
+      });
+    },
+  });
+
+  const handleMetadataOutOfDate = () => {
+    if (articlePageData) {
+      mutation.mutate(UASAction.SAVE);
+    }
+  };
+
+  useUASMetadataSync({
+    articlePageData,
+    articleId,
+    service,
     isSaved,
-    isLoading: isLoading || isSaving,
-    error: saveError || error,
-    handleSaveAction,
+    savedArticleMetadata: savedMetadata,
+    onMetadataOutOfDate: handleMetadataOutOfDate,
+  });
+  return {
+    isSaved,
+    isLoading,
+    isUpdating: mutation.isPending,
+    error: mutation.error || error,
+    handleSaveAction: mutation.mutate,
   };
 };
 

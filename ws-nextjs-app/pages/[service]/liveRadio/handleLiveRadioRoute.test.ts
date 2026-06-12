@@ -157,7 +157,7 @@ describe('handleLiveRadioRoute', () => {
 
     expect(mockSetHeader).toHaveBeenCalledWith(
       'Cache-Control',
-      expect.stringContaining('max-age=120'),
+      expect.stringContaining('max-age=30'),
     );
   });
 

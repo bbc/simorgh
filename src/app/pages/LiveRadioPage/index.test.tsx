@@ -1,4 +1,3 @@
-import { BrowserRouter } from 'react-router-dom';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { LIVE_RADIO_PAGE } from '#app/routes/utils/pageTypes';
@@ -18,21 +17,19 @@ type Props = {
 };
 
 const Page = ({ pageData, service, lang }: Props) => (
-  <BrowserRouter>
-    <ToggleContextProvider toggles={{ liveRadioSchedule: { enabled: true } }}>
-      <ServiceContextProvider service={service} pageLang={lang}>
-        <RequestContextProvider
-          bbcOrigin="https://www.test.bbc.com"
-          pageType={LIVE_RADIO_PAGE}
-          pathname="/pathname"
-          service={service}
-          statusCode={200}
-        >
-          <LiveRadioPage pageData={pageData} />
-        </RequestContextProvider>
-      </ServiceContextProvider>
-    </ToggleContextProvider>
-  </BrowserRouter>
+  <ToggleContextProvider toggles={{ liveRadioSchedule: { enabled: true } }}>
+    <ServiceContextProvider service={service} pageLang={lang}>
+      <RequestContextProvider
+        bbcOrigin="https://www.test.bbc.com"
+        pageType={LIVE_RADIO_PAGE}
+        pathname="/pathname"
+        service={service}
+        statusCode={200}
+      >
+        <LiveRadioPage pageData={pageData} />
+      </RequestContextProvider>
+    </ServiceContextProvider>
+  </ToggleContextProvider>
 );
 
 jest.mock('../../components/ChartbeatAnalytics', () => {

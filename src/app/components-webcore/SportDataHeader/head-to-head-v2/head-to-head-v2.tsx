@@ -1,0 +1,64 @@
+import { use } from 'react';
+import { ServiceContext } from '#app/contexts/ServiceContext';
+import useSportDataPolling from '#app/hooks/useSportDataPolling';
+import useToggle from '#app/hooks/useToggle';
+import { HeadToHeadBanner } from './components/head-to-head-banner';
+import ConditionalOnwardJourneyLink from './components/conditional-onward-journey-link';
+import { Actions } from './components/actions';
+import { HeadToHeadV2Data } from './types';
+import styles from './index.styles';
+import translateSportData from './transformers/translateSportData';
+
+export const HeadToHeadV2 = ({
+  initialSportData,
+  isConciseView,
+  shouldShowActions,
+  maximumContainerScoreDigits,
+  isSportDataLive = false,
+}: {
+  initialSportData: HeadToHeadV2Data;
+  isConciseView?: boolean;
+  shouldShowActions?: boolean;
+  maximumContainerScoreDigits?: number;
+  isSportDataLive?: boolean;
+}) => {
+  const { enabled: sportHeaderPollEnabled } = useToggle('sportDataPolling');
+  const { translations, service } = use(ServiceContext);
+
+  const { currentSportData } = useSportDataPolling(
+    initialSportData,
+    Boolean(sportHeaderPollEnabled) && isSportDataLive,
+  );
+
+  const hasActions =
+    (currentSportData?.home?.actions?.length ?? 0) > 0 ||
+    (currentSportData?.away?.actions?.length ?? 0) > 0;
+
+  const translatedSportData = translateSportData(
+    currentSportData,
+    translations,
+    service,
+  );
+
+  return (
+    <div css={styles.wrapper({ isConciseView })}>
+      <ConditionalOnwardJourneyLink>
+        <div css={styles.container({ isConciseView })}>
+          <HeadToHeadBanner
+            data={translatedSportData}
+            isConciseView={isConciseView ?? false}
+            eventSummary={translatedSportData.accessibleEventSummary}
+            shouldHideBadges={isConciseView ?? false}
+            maxScoreLength={maximumContainerScoreDigits}
+          />
+          {hasActions && shouldShowActions && (
+            <Actions data={translatedSportData} />
+          )}
+          {!isConciseView && <Actions data={translatedSportData} />}
+        </div>
+      </ConditionalOnwardJourneyLink>
+    </div>
+  );
+};
+
+export default HeadToHeadV2;

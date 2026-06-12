@@ -2,11 +2,11 @@ import { GetServerSidePropsContext } from 'next';
 import dynamic from 'next/dynamic';
 import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
 import nodeLogger from '#lib/logger.node';
-import logResponseTime from '#server/utilities/logResponseTime';
+import logResponseTime from '#utilities/logResponseTime';
 import { ROUTING_INFORMATION } from '#app/lib/logger.const';
 import { OK } from '#app/lib/statusCodes.const';
 import PageDataParams from '#app/models/types/pageDataParams';
-import deriveVariant from '#nextjs/utilities/deriveVariant';
+import deriveVariant from '#utilities/deriveVariant';
 import isTest from '#app/lib/utilities/isTest';
 import handleError from '#app/routes/utils/handleError';
 import getPageData from '../../../../utilities/pageRequests/getPageData';
@@ -80,7 +80,7 @@ export const getServerSideProps = async (
 
   context.res.setHeader(
     'Cache-Control',
-    'public, stale-if-error=2400, stale-while-revalidate=960, max-age=600',
+    'public, stale-if-error=2400, stale-while-revalidate=960, max-age=240',
   );
 
   routingInfoLogger(ROUTING_INFORMATION, {

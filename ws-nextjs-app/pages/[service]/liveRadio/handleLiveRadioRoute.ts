@@ -5,7 +5,7 @@ import { GetServerSidePropsContext } from 'next';
 import PageDataParams from '#app/models/types/pageDataParams';
 import parseRoute from '#app/routes/utils/parseRoute';
 import { NOT_FOUND, OK } from '#app/lib/statusCodes.const';
-import getPageData from '#nextjs/utilities/pageRequests/getPageData';
+import getPageData from '#utilities/pageRequests/getPageData';
 import handleError from '#app/routes/utils/handleError';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
 
@@ -81,7 +81,7 @@ export default async (context: GetServerSidePropsContext) => {
 
   context.res.setHeader(
     'Cache-Control',
-    'public, stale-if-error=300, stale-while-revalidate=120, max-age=120',
+    'public, stale-if-error=300, stale-while-revalidate=120, max-age=30',
   );
 
   routingInfoLogger(ROUTING_INFORMATION, {

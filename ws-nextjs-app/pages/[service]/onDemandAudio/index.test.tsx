@@ -93,7 +93,7 @@ jest.mock('#app/components/ChartbeatAnalytics', () => {
 });
 
 jest.mock('#app/components/ATIAnalytics', () => () => <div>ATI Analytics</div>);
-jest.mock('#app/routes/onDemandAudio/podcastExternalLinks', () => ({
+jest.mock('#nextjs/pages/[service]/onDemandAudio/podcastExternalLinks', () => ({
   __esModule: true,
   default: jest.fn().mockResolvedValue([
     {

@@ -55,10 +55,21 @@ export interface Translations {
     buttonSeparatorText: string;
   };
   saveArticleButton?: {
+    loading: string;
     save: string;
     saving: string;
     saved: string;
     remove: string;
+    removing: string;
+  };
+  myNews?: {
+    title: string;
+    guestTitle: string;
+    description: string;
+    guestDescription: string;
+    noArticles: string;
+    errorText: string;
+    loading: string;
   };
   error: {
     home?: string;
@@ -68,6 +79,11 @@ export interface Translations {
     500: TranslationsError;
   };
   continueReading?: string;
+  topicDiscovery?: {
+    heading: string;
+    moreFromTopic: string;
+    fetchErrorMessage?: string;
+  };
   readTime?: Partial<{
     readTimePrefix: string;
     quick: string;
@@ -233,6 +249,24 @@ export interface Translations {
   carousel?: {
     previous?: string;
     next?: string;
+  };
+  sport?: {
+    assists?: string;
+    penalties?: string;
+    ht?: string;
+    ft?: string;
+    et?: string;
+    afterExtraTime?: string;
+    penaltyAbbreviation?: string;
+    ownGoal?: string;
+    venue?: string;
+    attendance?: string;
+    matchSummary?: string;
+    winOnPenalties?: {
+      prefix?: string;
+      suffix?: string;
+    };
+    worldCupTeamNames?: Record<string, string>;
   };
 }
 

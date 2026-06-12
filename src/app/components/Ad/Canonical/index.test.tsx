@@ -1,4 +1,3 @@
-import { BrowserRouter } from 'react-router-dom';
 import { RequestContext, RequestContextProps } from '#contexts/RequestContext';
 import isLive from '#lib/utilities/isLive';
 import { render } from '../../react-testing-library-with-providers';
@@ -19,11 +18,9 @@ const CanonicalAdWithContext = ({
   // @ts-expect-error require partial data for testing purposes
   requestContext = defaultRequestContextData,
 }: CanonicalAdWithContextProps) => (
-  <BrowserRouter>
-    <RequestContext.Provider value={requestContext}>
-      <CanonicalAd slotType={slotType} />
-    </RequestContext.Provider>
-  </BrowserRouter>
+  <RequestContext.Provider value={requestContext}>
+    <CanonicalAd slotType={slotType} />
+  </RequestContext.Provider>
 );
 
 describe('CanonicalAds Ads', () => {

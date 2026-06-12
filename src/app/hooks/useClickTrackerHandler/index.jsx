@@ -21,18 +21,30 @@ const OJ_COMPONENT_NAMES = [
   'features',
   'related-content',
   'most-read',
-  // media curation renders as simple-curation-grid tracking events
-  'simple-curation-grid',
+  'topic-discovery-curation-grid-promo',
+  'topic-discovery-more-from-link',
+  'topics',
+];
+
+const TOPIC_COMPONENT_NAMES = [
+  'topic-discovery-curation-grid-promo',
+  'topic-discovery-more-from-link',
+  'topics',
 ];
 
 // handle the total oj clicks event to specific onward journey experiments
-const OJ_OPTIMIZELY_EXPERIMENTS = ['newswb_ws_tod_article_2'];
+const OJ_OPTIMIZELY_EXPERIMENTS = ['newswb_ws_topic_discovery_module'];
 
-const OJ_OPTIMIZELY_CLICK_EVENT = 'oj_clicks';
+const OJ_OPTIMIZELY_CLICK_EVENTS = ['oj_clicks'];
+const TOPIC_OPTIMIZELY_CLICK_EVENTS = ['topic_clicks'];
 
 // only fire the total oj clicks event when the component and experiment are in scope
 const shouldTrackOjClick = (componentName, experimentName) =>
   OJ_COMPONENT_NAMES.includes(componentName) &&
+  OJ_OPTIMIZELY_EXPERIMENTS.includes(experimentName);
+
+const shouldTrackTopicClick = (componentName, experimentName) =>
+  TOPIC_COMPONENT_NAMES.includes(componentName) &&
   OJ_OPTIMIZELY_EXPERIMENTS.includes(experimentName);
 
 const useClickTrackerHandler = (eventTrackingData = {}) => {
@@ -54,6 +66,8 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
     experimentVariant,
     groupTracker,
     itemTracker,
+    isSignedIn,
+    hashedId,
   } = extractATITrackingProps({ eventTrackingData, eventType: CLICK_EVENT });
 
   const { trackingIsEnabled } = useTrackingToggle(componentName);
@@ -87,31 +101,41 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
           service,
           statsDestination,
         ].every(Boolean);
+
         if (shouldSendEvent) {
           event.stopPropagation();
           event.preventDefault();
 
-          if (
-            optimizely &&
-            experimentVariant &&
-            experimentVariant !== 'off' &&
-            sendOptimizelyEvents
-          ) {
+          if (optimizely && experimentVariant && sendOptimizelyEvents) {
             const overrideAttributes = optimizely?.user.attributes;
 
-            optimizely.track(
-              `${componentName}-clicks`,
-              optimizely.user.id,
-              overrideAttributes,
-            );
-
-            // send the extra optimizely event for the total oj clicks metric
-            if (shouldTrackOjClick(componentName, experimentName)) {
+            if (experimentVariant !== 'off') {
               optimizely.track(
-                OJ_OPTIMIZELY_CLICK_EVENT,
+                `${componentName}-clicks`,
                 optimizely.user.id,
                 overrideAttributes,
               );
+            }
+
+            // send the extra optimizely event for the total oj clicks metric
+            if (shouldTrackOjClick(componentName, experimentName)) {
+              OJ_OPTIMIZELY_CLICK_EVENTS.forEach(eventName => {
+                optimizely.track(
+                  eventName,
+                  optimizely.user.id,
+                  overrideAttributes,
+                );
+              });
+            }
+
+            if (shouldTrackTopicClick(componentName, experimentName)) {
+              TOPIC_OPTIMIZELY_CLICK_EVENTS.forEach(eventName => {
+                optimizely.track(
+                  eventName,
+                  optimizely.user.id,
+                  overrideAttributes,
+                );
+              });
             }
           }
 
@@ -132,6 +156,8 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
               detailedPlacement,
               ...(groupTracker && { groupTracker }),
               ...(itemTracker && { itemTracker }),
+              isSignedIn,
+              hashedId,
               ...(experimentVariant &&
                 experimentVariant !== 'off' && {
                   experimentName,
@@ -171,6 +197,8 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
       itemTracker,
       experimentName,
       preventNavigation,
+      isSignedIn,
+      hashedId,
     ],
   );
 };
