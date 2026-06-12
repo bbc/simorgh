@@ -16,7 +16,6 @@ import { CurationGridProps } from '../types';
 import { Summary } from '../../../models/types/curationData';
 import { RequestContext } from '../../../contexts/RequestContext';
 import LiveLabel from '../../LiveLabel';
-import getInSituPlaybackEligibility from './getInSituPlaybackEligibility';
 
 const getStyles = (promoCount: number, i: number, mq: Theme['mq']) => {
   return css({
@@ -46,9 +45,9 @@ const HiearchicalGrid = ({
   const videoTranslation = path(['media', 'video'], translations);
   const photoGalleryTranslation = path(['media', 'photogallery'], translations);
   const durationTranslation = path(['media', 'duration'], translations);
-  const promoItems = summaries?.slice(0, 12) ?? [];
-
   if (!summaries || summaries.length < 3) return null;
+
+  const promoItems = summaries.slice(0, 12);
 
   const buildPromoEventTrackingData = (promo: Summary, i: number) => {
     const itemTracker = {
@@ -95,16 +94,8 @@ const HiearchicalGrid = ({
           const clickTrackerHandler = getClickTrackerHandler(
             promoEventTrackingData,
           );
-          const inSituPlaybackEligibility = getInSituPlaybackEligibility({
-            promo,
-            promoIndex: i,
-            mediaBlocks: promo.inSituMedia,
-          });
-          const eligibleInSituMediaBlocks =
-            !isAmp && inSituPlaybackEligibility.isEligible
-              ? inSituPlaybackEligibility.mediaBlocks
-              : null;
-          const inSituMediaBlocks = eligibleInSituMediaBlocks;
+          const inSituMediaBlocks =
+            !isAmp && promo.inSituMedia?.length ? promo.inSituMedia : null;
           const linkCss = inSituMediaBlocks ? styles.headlineLink : undefined;
           const promoText = (
             <>
@@ -181,7 +172,7 @@ const HiearchicalGrid = ({
               ]}
             >
               {inSituMediaBlocks ? (
-                <div css={styles.inSituPromo}>
+                <div>
                   <div css={styles.inSituMedia}>
                     <MediaLoader
                       blocks={inSituMediaBlocks}

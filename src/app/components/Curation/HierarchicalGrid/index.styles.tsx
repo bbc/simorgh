@@ -33,10 +33,6 @@ const styles = {
         },
       },
     }),
-  inSituPromo: () =>
-    css({
-      position: 'relative',
-    }),
   inSituMedia: ({ spacings }: Theme) =>
     css({
       marginBottom: `${spacings.FULL}rem`,

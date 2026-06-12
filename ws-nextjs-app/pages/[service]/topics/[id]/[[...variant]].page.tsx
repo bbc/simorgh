@@ -10,7 +10,6 @@ import deriveVariant from '#utilities/deriveVariant';
 import isTest from '#app/lib/utilities/isTest';
 import handleError from '#app/routes/utils/handleError';
 import getPageData from '../../../../utilities/pageRequests/getPageData';
-import enrichCurationsWithInSituPlayback from '../../../../utilities/enrichCurationsWithInSituPlayback';
 
 const TopicPage = dynamic(() => import('#app/pages/TopicPage/TopicPage'));
 
@@ -90,13 +89,6 @@ export const getServerSideProps = async (
     pageType: TOPIC_PAGE,
   });
 
-  const curations = await enrichCurationsWithInSituPlayback({
-    curations: data.pageData.curations ?? null,
-    service,
-    variant,
-    rendererEnv,
-  });
-
   return {
     props: {
       error: data?.error || null,
@@ -104,7 +96,6 @@ export const getServerSideProps = async (
       page: page || null,
       pageData: {
         ...data.pageData,
-        curations,
         metadata: {
           ...data.pageData.metadata,
           type: TOPIC_PAGE,
