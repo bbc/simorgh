@@ -69,7 +69,7 @@
     "@emotion/react": "11.14.0",
     "@emotion/server": "11.11.0",
     "@emotion/styled": "11.14.1",
-    "@optimizely/optimizely-sdk": "5.4.1",
+    "@optimizely/optimizely-sdk": "6.4.0",
     "@optimizely/react-sdk": "3.3.1",
     "@tanstack/query-async-storage-persister": "5.99.2",
     "@tanstack/react-query": "5.100.10",

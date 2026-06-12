@@ -4653,7 +4653,36 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@optimizely/optimizely-sdk@npm:5.4.1, @optimizely/optimizely-sdk@npm:^5.4.1":
+"@optimizely/optimizely-sdk@npm:6.4.0":
+  version: 6.4.0
+  resolution: "@optimizely/optimizely-sdk@npm:6.4.0"
+  dependencies:
+    decompress-response: "npm:^7.0.0"
+    json-schema: "npm:^0.4.0"
+    murmurhash: "npm:^2.0.1"
+    uuid: "npm:^10.0.0"
+  peerDependencies:
+    "@react-native-async-storage/async-storage": ">=1.0.0 <3.0.0"
+    "@react-native-community/netinfo": ">=5.0.0 <12.0.0"
+    fast-text-encoding: ^1.0.6
+    react-native-get-random-values: ^1.11.0
+    ua-parser-js: ^1.0.38
+  peerDependenciesMeta:
+    "@react-native-async-storage/async-storage":
+      optional: true
+    "@react-native-community/netinfo":
+      optional: true
+    fast-text-encoding:
+      optional: true
+    react-native-get-random-values:
+      optional: true
+    ua-parser-js:
+      optional: true
+  checksum: 10/be64098a87483b943be3e815740b9c54ab52819eacba77a1fbf2dff60baec011c1ce45e8e166cf237ea6a0cdf2f45db4d23e6a0b8e884633e256c75a1172d133
+  languageName: node
+  linkType: hard
+
+"@optimizely/optimizely-sdk@npm:^5.4.1":
   version: 5.4.1
   resolution: "@optimizely/optimizely-sdk@npm:5.4.1"
   dependencies:
@@ -9079,6 +9108,15 @@ __metadata:
   dependencies:
     mimic-response: "npm:^2.0.0"
   checksum: 10/4e783ca4dfe9417354d61349750fe05236f565a4415a6ca20983a311be2371debaedd9104c0b0e7b36e5f167aeaae04f84f1a0b3f8be4162f1d7d15598b8fdba
+  languageName: node
+  linkType: hard
+
+"decompress-response@npm:^7.0.0":
+  version: 7.0.0
+  resolution: "decompress-response@npm:7.0.0"
+  dependencies:
+    mimic-response: "npm:^3.1.0"
+  checksum: 10/dfd216a4b24c6a9840e19986e8a9ca62e0b6ae35458e4135fdb84f2ba531a03ddc6ccfdc72782a361583c7d12a59787503381bd8372bf83f849eafadbaa8629c
   languageName: node
   linkType: hard
 
@@ -13654,6 +13692,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"mimic-response@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "mimic-response@npm:3.1.0"
+  checksum: 10/7e719047612411fe071332a7498cf0448bbe43c485c0d780046c76633a771b223ff49bd00267be122cedebb897037fdb527df72335d0d0f74724604ca70b37ad
+  languageName: node
+  linkType: hard
+
 "min-indent@npm:^1.0.0, min-indent@npm:^1.0.1":
   version: 1.0.1
   resolution: "min-indent@npm:1.0.1"
@@ -16315,7 +16360,7 @@ __metadata:
     "@happy-dom/jest-environment": "npm:20.9.0"
     "@jest/environment": "npm:30.2.0"
     "@jest/globals": "npm:30.2.0"
-    "@optimizely/optimizely-sdk": "npm:5.4.1"
+    "@optimizely/optimizely-sdk": "npm:6.4.0"
     "@optimizely/react-sdk": "npm:3.3.1"
     "@storybook/addon-a11y": "npm:10.4.1"
     "@storybook/addon-docs": "npm:10.4.1"
@@ -17980,6 +18025,15 @@ __metadata:
   bin:
     uuid: dist-node/bin/uuid
   checksum: 10/da190a58eb699dfde38013c9ae8e2469eb62cc6c0774bb7d58b818a4fd1f0b269f11465d5153f88cfcf21e8b8187f35e016b2b033a53a6e06a22103ccce7a5fe
+  languageName: node
+  linkType: hard
+
+"uuid@npm:^10.0.0":
+  version: 10.0.0
+  resolution: "uuid@npm:10.0.0"
+  bin:
+    uuid: dist/bin/uuid
+  checksum: 10/35aa60614811a201ff90f8ca5e9ecb7076a75c3821e17f0f5ff72d44e36c2d35fcbc2ceee9c4ac7317f4cc41895da30e74f3885e30313bee48fda6338f250538
   languageName: node
   linkType: hard
 
