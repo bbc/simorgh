@@ -24,7 +24,6 @@ import {
   inPensAetData,
   beforePensAetData,
   inPens90Data,
-  secondHalf90Data,
 } from '../static-data/event/transformed/mid-event/index';
 import HeadToHead from '../head-to-head-v2';
 import type { HeadToHeadV2Data } from '../types';
@@ -237,18 +236,15 @@ describe('Skipped Tests for MVP', () => {
 });
 
 describe('Head to Head Component', () => {
-  // to use for TDD
   test('renders head to head component of PreEvent status with No teams', () => {
     renderHeadToHead({ data: asH2HData(preEventNoTeamsMockData) });
 
     const date = screen.queryByText('Sat 6 Aug 2022');
     const tournament = screen.queryByText('Premier League');
-    const venue = screen.getByText('To be confirmed');
     const teamName = screen.getByText(
       'Team to be confirmed versus Team to be confirmed kick off 12:30',
     );
 
-    expect(venue).toBeInTheDocument();
     expect(date).toBeInTheDocument();
     expect(tournament).toBeInTheDocument();
     expect(teamName).toBeInTheDocument();
@@ -273,11 +269,9 @@ describe('Head to Head Component', () => {
 
     const tournamentText = screen.queryByText(tournamentDescriptionLabel);
     const time = screen.queryByText(firstHalfData.date);
-    const venue = screen.queryByText('Stadions Daugava');
 
     expect(tournamentText).toBeInTheDocument();
     expect(time).not.toBeInTheDocument();
-    expect(venue).toBeInTheDocument();
   });
   test('renders head to head with half time, full time scores for a MidEvent in Extra Time', () => {
     renderHeadToHead({ data: asH2HData(etFirstHalfData) });

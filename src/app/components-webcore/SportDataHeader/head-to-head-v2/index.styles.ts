@@ -49,16 +49,13 @@ export default {
         fontFeatureSettings: "'ss01' off",
         color: palette.LUNAR_LIGHT,
         padding: isConciseView ? `${spacings.FULL}rem` : 0,
-        paddingBlockStart: `${spacings.TRIPLE}rem`,
         ...(!isConciseView && { paddingBottom: `${spacings.TRIPLE}rem` }),
-        // to check if needed - edited with removal PR and then again with https://github.com/bbc/simorgh/pull/14091
-        // [mq.GROUP_2_MAX_WIDTH]: {
-        //   paddingTop: isConciseView ? `${spacings.FULL}rem` : 0,
-        //   ...(!isConciseView && {
-        //     paddingBottom: `${spacings.FULL}rem`,
-        //     paddingTop: `${spacings.TRIPLE}rem`,
-        //   }),
-        // },
+        [mq.GROUP_2_MAX_WIDTH]: {
+          paddingTop: isConciseView ? `${spacings.FULL}rem` : 0,
+          ...(!isConciseView && {
+            paddingBottom: `${spacings.FULL}rem`,
+          }),
+        },
       }),
 
   // ==================== Action Grid ====================

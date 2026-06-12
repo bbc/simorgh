@@ -2,40 +2,18 @@ import { isLiveStatus } from '../helpers/event-status-groups';
 import styles from '../index.styles';
 import type { EventStatusType } from '../types';
 
-const formatTournamentDescriptionLabel = (
-  tournamentDescriptionLabel: string,
-) => {
-  const tournamentGroupsArray = tournamentDescriptionLabel.split(' - ');
-
-  return tournamentGroupsArray.map((element, i) => {
-    if (tournamentGroupsArray.length === i + 1) {
-      return (
-        // eslint-disable-next-line react/no-array-index-key
-        <div css={styles.competitionFormatter} key={`tournament_part_${i}`}>
-          {element}
-        </div>
-      );
-    }
-    return (
-      // eslint-disable-next-line react/no-array-index-key
-      <div css={styles.competitionFormatter} key={`tournament_part_${i}`}>
-        {element} -{' '}
-      </div>
-    );
-  });
-};
-
 interface HeadToHeadHeaderProps {
   date: string;
   tournament?: string;
-  tournamentDescriptionLabel: string;
+  stage?: string;
   status: EventStatusType;
   period?: string;
 }
 
 const HeadToHeadHeader = ({
   date,
-  tournamentDescriptionLabel,
+  tournament,
+  stage,
   status,
 }: HeadToHeadHeaderProps) => (
   <div css={styles.headerWrapper(isLiveStatus(status))}>
@@ -50,7 +28,8 @@ const HeadToHeadHeader = ({
       </div>
     )}
     <div css={styles.tournamentHeader}>
-      {formatTournamentDescriptionLabel(tournamentDescriptionLabel)}
+      {tournament && <div css={styles.competitionFormatter}>{tournament}</div>}
+      {stage && <div css={styles.competitionFormatter}> - {stage}</div>}
     </div>
   </div>
 );

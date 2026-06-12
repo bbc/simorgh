@@ -203,6 +203,11 @@ export type HeadToHeadV2Data = {
   multiLeg?: {
     leg: number;
   };
+  stage: {
+    id: string;
+    name: string;
+    urn?: string;
+  };
 };
 
 export type Alignment = 'home' | 'away';
