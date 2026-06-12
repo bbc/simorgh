@@ -49,8 +49,8 @@ export const HeadToHeadV2 = ({
             <HeadToHeadHeader
               date={translatedSportData.date}
               status={translatedSportData.status}
-              tournament={translatedSportData.tournament.name}
-              stage={translatedSportData.stage.name}
+              tournament={translatedSportData.tournament?.name}
+              stage={translatedSportData.stage?.name}
             />
           )}
           <HeadToHeadBanner
