@@ -48,22 +48,26 @@ export const getLocalisedDate = (
   const useJalaliCalendar = service && JALALI_SERVICES.includes(service);
   const locale = (service && LOCALE_MAP[service]) ?? undefined;
 
-  return ukDateTime.withTimeZone(Temporal.Now.timeZoneId()).toLocaleString(locale, {
-    calendar: useJalaliCalendar ? 'persian' : undefined,
-    weekday: 'short',
-    day: '2-digit',
-    month: 'short',
-    year: 'numeric',
-  });
+  return ukDateTime
+    .withTimeZone(Temporal.Now.timeZoneId())
+    .toLocaleString(locale, {
+      calendar: useJalaliCalendar ? 'persian' : undefined,
+      weekday: 'short',
+      day: '2-digit',
+      month: 'short',
+      year: 'numeric',
+    });
 };
 
 export const getLocalisedTime = (inputDate: string, inputTime: string) => {
   const ukDateTime = createUKDateTime(inputDate, inputTime);
 
-  return ukDateTime.withTimeZone(Temporal.Now.timeZoneId()).toLocaleString(undefined, {
-    hour: '2-digit',
-    minute: '2-digit',
-    hour12: false,
-    numberingSystem: 'latn',
-  });
+  return ukDateTime
+    .withTimeZone(Temporal.Now.timeZoneId())
+    .toLocaleString(undefined, {
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: false,
+      numberingSystem: 'latn',
+    });
 };

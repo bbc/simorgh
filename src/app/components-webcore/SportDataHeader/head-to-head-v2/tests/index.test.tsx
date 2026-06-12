@@ -36,7 +36,7 @@ jest.mock('#app/hooks/useSportDataPolling', () => ({
 }));
 
 jest.mock('../helpers/localise-datetime', () => ({
-  getLocalisedDate: jest.fn((date) => date),
+  getLocalisedDate: jest.fn(date => date),
   getLocalisedTime: jest.fn((date, time) => time),
 }));
 
