@@ -19,7 +19,6 @@ import {
 } from './storybook/helpers/base-component';
 
 import venuesData from './static-data/premier-league-venues.json';
-import { HeadToHeadV2Data } from './types';
 
 const { venues } = venuesData;
 
