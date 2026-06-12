@@ -367,10 +367,10 @@ export const service: DefaultServiceConfig = {
           uzbekistan: 'Uzbekistan',
         },
         tournaments: {
-          fifaWorldCup: 'Igikombe c\'isi ca FIFA',
+          fifaWorldCup: "Igikombe c'isi ca FIFA",
         },
         stages: {
-          groupStage: 'Urwego rw\'amatsinda',
+          groupStage: "Urwego rw'amatsinda",
         },
       },
     },
