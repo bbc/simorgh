@@ -175,7 +175,7 @@ const HiearchicalGrid = ({
                   </Promo.Timestamp>
                 ) : null}
                 {relatedTopic && (
-                  <Promo.A href={relatedTopic.link.url}>
+                  <Promo.A href={relatedTopic.link.url} css={styles.relatedTopicLink}>
                     {relatedTopic.title}
                   </Promo.A>
                 )}

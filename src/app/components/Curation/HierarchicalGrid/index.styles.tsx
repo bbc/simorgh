@@ -83,6 +83,18 @@ const styles = {
       marginInlineStart: `-${spacings.HALF}rem`,
       verticalAlign: 'text-top',
     }),
+
+  relatedTopicLink: ({ palette, fontSizes, spacings }: Theme) =>
+    css({
+      ...fontSizes.longPrimer,
+      color: palette.GREY_10,
+      display: 'block',
+      marginTop: `${spacings.HALF}rem`,
+      textDecoration: 'none',
+      '&:hover, &:focus': {
+        textDecoration: 'underline',
+      },
+    }),
 };
 
 const DesktopBigPromo = css({
