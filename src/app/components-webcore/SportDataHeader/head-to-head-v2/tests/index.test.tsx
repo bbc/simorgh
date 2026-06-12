@@ -237,6 +237,48 @@ describe('Skipped Tests for MVP', () => {
 });
 
 describe('Head to Head Component', () => {
+  // to use for TDD
+  test('renders head to head component of PreEvent status with No teams', () => {
+    renderHeadToHead({ data: asH2HData(preEventNoTeamsMockData) });
+
+    const date = screen.queryByText('Sat 6 Aug 2022');
+    const tournament = screen.queryByText('Premier League');
+    const venue = screen.getByText('To be confirmed');
+    const teamName = screen.getByText(
+      'Team to be confirmed versus Team to be confirmed kick off 12:30',
+    );
+
+    expect(venue).toBeInTheDocument();
+    expect(date).toBeInTheDocument();
+    expect(tournament).toBeInTheDocument();
+    expect(teamName).toBeInTheDocument();
+  });
+
+  test('renders head to head component of PreEvent status', () => {
+    renderHeadToHead({ data: asH2HData(preEventMockData) });
+
+    const date = screen.queryByText('Sat 6 Aug 2022');
+    const tournamentLabel = screen.queryByText('Premier League');
+
+    expect(date).toBeInTheDocument();
+    expect(tournamentLabel).toBeInTheDocument();
+  });
+
+  test('renders the head to head of MidEvent status', () => {
+    const tournamentDescriptionLabel = 'UEFA Europa Conference League';
+
+    renderHeadToHead({
+      data: asH2HData({ ...firstHalfData, tournamentDescriptionLabel }),
+    });
+
+    const tournamentText = screen.queryByText(tournamentDescriptionLabel);
+    const time = screen.queryByText(firstHalfData.date);
+    const venue = screen.queryByText('Stadions Daugava');
+
+    expect(tournamentText).toBeInTheDocument();
+    expect(time).not.toBeInTheDocument();
+    expect(venue).toBeInTheDocument();
+  });
   test('renders head to head with half time, full time scores for a MidEvent in Extra Time', () => {
     renderHeadToHead({ data: asH2HData(etFirstHalfData) });
 
