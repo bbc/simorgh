@@ -1,7 +1,5 @@
 import { Global } from '@emotion/react';
 import { useEffect, useMemo, use } from 'react';
-import ThemeProvider from '#app/components/ThemeProvider';
-import { AccountContext } from '#app/contexts/AccountContext';
 import { Close } from '#app/components/icons';
 import useTrappedFocus from '#app/hooks/useTrappedFocus';
 import { ServiceContext } from '#app/contexts/ServiceContext';
@@ -15,17 +13,13 @@ type AccountSignInModalProps = {
   registerUrl: string | undefined;
 };
 
-const AccountSignInModal = ({
-  onClose,
-  signInUrl,
-  registerUrl,
-}: AccountSignInModalProps) => {
+const AccountSignInModal = ({ onClose }: AccountSignInModalProps) => {
   const { containerRef, firstElementRef } = useTrappedFocus<
     HTMLDivElement,
     HTMLButtonElement
   >();
 
-  const { translations, service } = use(ServiceContext);
+  const { translations } = use(ServiceContext);
   const closeLabel = translations.accountPromoBanner?.closeLabel ?? 'Close';
   const titleLabel = translations.accountPromoBanner?.title ?? 'Sign in to BBC';
 
@@ -55,23 +49,6 @@ const AccountSignInModal = ({
     };
   }, [onClose]);
 
-  const accountContextValue = useMemo(
-    () => ({
-      isSignedIn: false,
-      isIdctaAvailable: true,
-      isRefreshAvailable: false,
-      signInUrl,
-      registerUrl,
-      isPersonalizationAvailable: false,
-      isPersonalizationEnabled: false,
-      signOutUrl: undefined,
-      settingsUrl: undefined,
-      forYouUrl: undefined,
-      hashedUserId: undefined,
-    }),
-    [signInUrl, registerUrl],
-  );
-
   return (
     <>
       <Global styles={{ body: { overflow: 'hidden' } }} />
@@ -93,11 +70,7 @@ const AccountSignInModal = ({
           >
             <Close />
           </button>
-          <ThemeProvider service={service}>
-            <AccountContext.Provider value={accountContextValue}>
-              <SignInPromotionalBanner />
-            </AccountContext.Provider>
-          </ThemeProvider>
+          <SignInPromotionalBanner />
         </div>
       </div>
     </>

@@ -31,21 +31,18 @@ const useTrappedFocus = <
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key !== 'Tab') return;
 
-      try {
-        const firstFocusable = getFirstFocusable();
-        const lastFocusable = getLastFocusable();
+      const firstFocusable = getFirstFocusable();
+      const lastFocusable = getLastFocusable();
 
-        if (event.shiftKey) {
-          if (document.activeElement === firstFocusable) {
-            event.preventDefault();
-            lastFocusable?.focus();
-          }
-        } else if (document.activeElement === lastFocusable) {
+      if (event.shiftKey) {
+        if (document.activeElement === firstFocusable) {
           event.preventDefault();
-          firstFocusable?.focus();
+          lastFocusable?.focus();
         }
-        // eslint-disable-next-line no-empty
-      } catch {}
+      } else if (document.activeElement === lastFocusable) {
+        event.preventDefault();
+        firstFocusable?.focus();
+      }
     };
 
     document.addEventListener('keydown', handleKeyDown);
