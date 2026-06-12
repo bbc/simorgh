@@ -739,4 +739,93 @@ describe('TranslateSportData', () => {
       expect(result.groupedActions).toStrictEqual(expectedGroupActions);
     });
   });
+  describe('Tournament and Stage Name', () => {
+    const dataWithTournamentAndStageNames = {
+      ...fixtureDataDefault,
+      tournament: {
+        id: '70excpe1synn9kadnbppahdn7',
+        name: 'FIFA World Cup',
+        disambiguatedName: 'FIFA World Cup',
+        urn: 'urn:bbc:sportsdata:football:tournament:world-cup',
+        thingsGuid: 'de6a07ff-47ff-4551-9b71-7494a71aceac',
+      },
+      stage: {
+        id: '87i5eesbymvgzmz5d0y4a855g',
+        name: 'Group Stage',
+        urn: '',
+      },
+    } as unknown as HeadToHeadV2Data;
+    it('should add translation for tournament Name', () => {
+      const result = translateSportData(
+        dataWithTournamentAndStageNames,
+        afriqueServiceConfig.default.translations,
+        'afrique',
+      );
+      expect(result.tournament).toStrictEqual({
+        id: '70excpe1synn9kadnbppahdn7',
+        name: 'Coupe du Monde de la FIFA',
+        disambiguatedName: 'FIFA World Cup',
+        urn: 'urn:bbc:sportsdata:football:tournament:world-cup',
+        thingsGuid: 'de6a07ff-47ff-4551-9b71-7494a71aceac',
+      });
+    });
+
+    it('should add translation for stage Name', () => {
+      const result = translateSportData(
+        dataWithTournamentAndStageNames,
+        afriqueServiceConfig.default.translations,
+        'afrique',
+      );
+
+      expect(result.stage).toStrictEqual({
+        id: '87i5eesbymvgzmz5d0y4a855g',
+        name: 'Phase de poules',
+        urn: '',
+      });
+    });
+
+    it('should return provided tournament and stage name if translation is missing', () => {
+      const result = translateSportData(
+        dataWithTournamentAndStageNames,
+        translationsWithMissingTranslations,
+        'afrique',
+      );
+
+      expect(result.tournament).toStrictEqual({
+        id: '70excpe1synn9kadnbppahdn7',
+        name: 'FIFA World Cup',
+        disambiguatedName: 'FIFA World Cup',
+        urn: 'urn:bbc:sportsdata:football:tournament:world-cup',
+        thingsGuid: 'de6a07ff-47ff-4551-9b71-7494a71aceac',
+      });
+
+      expect(result.stage).toStrictEqual({
+        id: '87i5eesbymvgzmz5d0y4a855g',
+        name: 'Group Stage',
+        urn: '',
+      });
+    });
+
+    it('should return the tournament and stage name unchanged when lookup is not found', () => {
+      const result = translateSportData(
+        fixtureDataDefault,
+        afriqueServiceConfig.default.translations,
+        'afrique',
+      );
+
+      expect(result.tournament).toStrictEqual({
+        disambiguatedName: 'UEFA Europa League',
+        id: '4c1nfi2j1m731hcay25fcgndq',
+        name: 'UEFA Europa League',
+        thingsGuid: '2afbdda7-71d4-544d-bcc6-d9ff50314b2a',
+        urn: 'urn:bbc:sportsdata:football:tournament:europa-league',
+      });
+
+      expect(result.stage).toStrictEqual({
+        id: '7wxuj38kqm8bz3cmi15vu4w7o',
+        name: 'Quarter-finals',
+        urn: '',
+      });
+    });
+  });
 });

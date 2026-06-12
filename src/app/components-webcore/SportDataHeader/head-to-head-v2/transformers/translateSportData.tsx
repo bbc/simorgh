@@ -147,10 +147,20 @@ const translateSportData = (
     return data;
   }
 
-  const { worldCupTeamNames, assists, penalties } = sportTranslations;
+  const { worldCupTeamNames, assists, penalties, tournaments, stages } =
+    sportTranslations;
+
   const groupedActionsLookup: Record<string, string | undefined> = {
     Assists: assists,
     Penalties: penalties,
+  };
+
+  const tournamentLookup: Record<string, string | undefined> = {
+    'FIFA World Cup': tournaments?.fifaWorldCup,
+  };
+
+  const stageLookup: Record<string, string | undefined> = {
+    'Group Stage': stages?.groupStage,
   };
 
   return {
@@ -175,6 +185,14 @@ const translateSportData = (
         shouldTranslateMinutes,
       ),
     }),
+    tournament: {
+      ...data.tournament,
+      name: tournamentLookup[data.tournament.name] || data.tournament.name,
+    },
+    stage: {
+      ...data.stage,
+      name: stageLookup[data.stage.name] || data.stage.name,
+    },
     ...(data.groupedActions && {
       groupedActions: data.groupedActions.map(group => {
         const translatedGroupName =
