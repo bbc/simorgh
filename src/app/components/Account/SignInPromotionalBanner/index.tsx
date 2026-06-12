@@ -22,7 +22,7 @@ const SignInPromotionalBanner = () => {
       closeLabel={closeLabel}
       buttonSeparatorText={buttonSeparatorText}
       topImage={<div css={styles.signInImage} aria-hidden="true" />}
-      styleOverrides={styles.overrides}
+      variant="signIn"
       isDismissible={false}
     >
       <AccountActionButtons

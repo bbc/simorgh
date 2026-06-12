@@ -21,11 +21,13 @@ const PromotionalBanner = ({
   id = 'promotional-banner',
   children,
   topImage,
-  styleOverrides,
+  variant,
 }: PromotionalBannerProps) => {
+  const variantOverrides = variant ? styles.variantStyles[variant] : undefined;
+
   return (
     <aside
-      css={[styles.banner, styleOverrides?.banner]}
+      css={[styles.banner, variantOverrides?.banner]}
       role="complementary"
       aria-labelledby={id}
     >
@@ -33,18 +35,18 @@ const PromotionalBanner = ({
         {bannerLabel}
       </VisuallyHiddenText>
       <div css={styles.innerContainer}>
-        <div css={[styles.content, styleOverrides?.content]}>
+        <div css={[styles.content, variantOverrides?.content]}>
           {topImage}
-          <div css={[styles.textContainer, styleOverrides?.textContainer]}>
+          <div css={[styles.textContainer, variantOverrides?.textContainer]}>
             <Heading
               level={2}
-              css={[styles.title, styleOverrides?.title]}
+              css={[styles.title, variantOverrides?.title]}
               size="paragon"
             >
               {title}
             </Heading>
             <Paragraph
-              css={[styles.description, styleOverrides?.description]}
+              css={[styles.description, variantOverrides?.description]}
               size="longPrimer"
             >
               {description}
@@ -52,7 +54,7 @@ const PromotionalBanner = ({
           </div>
 
           <div
-            css={[styles.actionsContainer, styleOverrides?.actionsContainer]}
+            css={[styles.actionsContainer, variantOverrides?.actionsContainer]}
           >
             {children ?? (
               <>
@@ -102,7 +104,7 @@ const PromotionalBanner = ({
           <Text
             as="button"
             type="button"
-            css={[styles.closeButton, styleOverrides?.closeButton]}
+            css={[styles.closeButton, variantOverrides?.closeButton]}
             onClick={onClose}
           >
             <VisuallyHiddenText>{closeLabel}</VisuallyHiddenText>

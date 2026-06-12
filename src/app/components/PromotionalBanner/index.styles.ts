@@ -1,5 +1,23 @@
 import pixelsToRem from '#app/utilities/pixelsToRem';
-import { css, Theme } from '@emotion/react';
+import { css, Interpolation, Theme } from '@emotion/react';
+import {
+  GROUP_A_MAX_WIDTH,
+  GROUP_B_ONLY,
+} from '#app/components/ThemeProvider/fontMediaQueries';
+import {
+  GROUP_3_ONLY,
+  GROUP_4_MIN_WIDTH,
+} from '#app/components/ThemeProvider/mediaQueries';
+
+type VariantSlots = Partial<{
+  banner: Interpolation<Theme>;
+  content: Interpolation<Theme>;
+  textContainer: Interpolation<Theme>;
+  title: Interpolation<Theme>;
+  description: Interpolation<Theme>;
+  actionsContainer: Interpolation<Theme>;
+  closeButton: Interpolation<Theme>;
+}>;
 
 const styles = {
   banner: ({ palette }: Theme) =>
@@ -161,4 +179,88 @@ const styles = {
     }),
 };
 
-export default styles;
+const variantStyles: Record<'signIn', VariantSlots> = {
+  signIn: {
+    banner: css({
+      background: 'transparent',
+    }),
+
+    content: ({ spacings }: Theme) =>
+      css({
+        alignItems: 'center',
+        textAlign: 'center',
+        paddingInlineStart: '1rem',
+        paddingInlineEnd: '1rem',
+        paddingBottom: `${pixelsToRem(20)}rem`,
+        [GROUP_A_MAX_WIDTH]: {
+          paddingInlineStart: `${spacings.FULL}rem`,
+          paddingInlineEnd: `${spacings.FULL}rem`,
+        },
+        [GROUP_3_ONLY]: {
+          paddingInlineStart: `${pixelsToRem(56)}rem`,
+          paddingInlineEnd: `${pixelsToRem(56)}rem`,
+          paddingBottom: `${pixelsToRem(24)}rem`,
+        },
+        [GROUP_4_MIN_WIDTH]: {
+          display: 'grid',
+          gridTemplateColumns: '1fr 1fr',
+          alignItems: 'start',
+          textAlign: 'start',
+          paddingTop: `${pixelsToRem(44)}rem`,
+          paddingInlineStart: `${pixelsToRem(48)}rem`,
+          paddingInlineEnd: `${pixelsToRem(48)}rem`,
+          paddingBottom: 0,
+        },
+      }),
+
+    textContainer: css({
+      width: '100%',
+      [GROUP_4_MIN_WIDTH]: {
+        gridColumn: 1,
+        gridRow: 1,
+        width: '100%',
+      },
+    }),
+
+    title: ({ fontSizes }: Theme) =>
+      css({
+        [GROUP_A_MAX_WIDTH]: {
+          marginTop: `${pixelsToRem(16)}rem`,
+          paddingTop: `${pixelsToRem(20)}rem`,
+          ...fontSizes.trafalgar,
+        },
+        [GROUP_B_ONLY]: {
+          marginTop: 0,
+          paddingTop: 0,
+        },
+        [GROUP_4_MIN_WIDTH]: {
+          marginTop: `${pixelsToRem(90)}rem`,
+          paddingTop: 0,
+        },
+      }),
+
+    description: ({ fontSizes }: Theme) =>
+      css({
+        paddingTop: `${pixelsToRem(16)}rem`,
+        marginTop: 0,
+        [GROUP_A_MAX_WIDTH]: {
+          ...fontSizes.longPrimer,
+          paddingTop: `${pixelsToRem(6)}rem`,
+        },
+      }),
+
+    actionsContainer: css({
+      marginTop: `${pixelsToRem(32)}rem`,
+      [GROUP_A_MAX_WIDTH]: {
+        marginTop: `${pixelsToRem(20)}rem`,
+      },
+      [GROUP_4_MIN_WIDTH]: {
+        gridRow: '2 / 4',
+        width: '100%',
+        paddingBottom: 0,
+      },
+    }),
+  },
+};
+
+export default { ...styles, variantStyles };

@@ -1,5 +1,5 @@
 import { Global } from '@emotion/react';
-import { useEffect, useMemo, use } from 'react';
+import { useEffect, use } from 'react';
 import { Close } from '#app/components/icons';
 import useTrappedFocus from '#app/hooks/useTrappedFocus';
 import { ServiceContext } from '#app/contexts/ServiceContext';
