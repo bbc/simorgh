@@ -3,6 +3,14 @@ import { useEffect, useRef } from 'react';
 const FOCUSABLE_SELECTOR =
   'button:not([disabled]), a[href], [tabindex]:not([tabindex="-1"])';
 
+/**
+ * Traps keyboard focus within a container element, cycling between the first
+ * and last focusable elements on Tab/Shift+Tab. Focus is returned to the
+ * previously focused element when the component unmounts.
+ *
+ * Returns three refs: `containerRef` (the focus boundary), `firstElementRef`,
+ * and `lastElementRef` (optional overrides for the first/last focusable elements).
+ */
 const useTrappedFocus = <
   C extends HTMLElement = HTMLElement,
   F extends HTMLElement = HTMLElement,
