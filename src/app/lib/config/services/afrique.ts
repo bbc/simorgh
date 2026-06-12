@@ -375,7 +375,7 @@ export const service: DefaultServiceConfig = {
           uzbekistan: 'Ouzbékistan',
         },
         tournaments: {
-          fifaWorldCup: 'Coupe du Monde de la FIFA', // temp
+          fifaWorldCup: 'Coupe du Monde FIFA',
         },
         stages: {
           groupStage: 'Phase de poules',

@@ -763,7 +763,7 @@ describe('TranslateSportData', () => {
       );
       expect(result.tournament).toStrictEqual({
         id: '70excpe1synn9kadnbppahdn7',
-        name: 'Coupe du Monde de la FIFA',
+        name: 'Coupe du Monde FIFA',
         disambiguatedName: 'FIFA World Cup',
         urn: 'urn:bbc:sportsdata:football:tournament:world-cup',
         thingsGuid: 'de6a07ff-47ff-4551-9b71-7494a71aceac',
