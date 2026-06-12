@@ -1,16 +1,10 @@
 import {
-  ATIProps,
   ReverbPageVars,
   ReverbUserVars,
+  ReverbBeaconConfig,
 } from '#app/components/ATIAnalytics/types';
-import buildReverbParams from '#app/components/ATIAnalytics/params';
 
-type SetBBCPageParams = {
-  atiData: ATIProps;
-  requestContext: Parameters<typeof buildReverbParams>[0]['requestContext'];
-  serviceContext: Parameters<typeof buildReverbParams>[0]['serviceContext'];
-  accountContext: Parameters<typeof buildReverbParams>[0]['accountContext'];
-};
+type BBCPageParams = ReverbBeaconConfig['params'];
 
 const setReverbPageValues = async ({
   pageVars,
@@ -19,13 +13,6 @@ const setReverbPageValues = async ({
   pageVars: ReverbPageVars;
   userVars: ReverbUserVars;
 }) => {
-  console.log('&&&&&&&&&&&&&&&&&&&&&');
-  console.log('I GET HERE');
-  console.log('+++++++++++++++++++++');
-  console.log('pageVars - ', pageVars);
-  console.log('userVars - ', userVars);
-  console.log('&&&&&&&&&&&&&&&&&&&&&');
-
   window.bbcpage = {};
 
   window.bbcpage = Object.assign(window.bbcpage, {
@@ -72,25 +59,6 @@ const setReverbPageValues = async ({
   };
 };
 
-export default ({
-  atiData = {},
-  requestContext,
-  serviceContext,
-  accountContext,
-}: SetBBCPageParams) => {
-  const { isSignedIn, hashedUserId: hashedId } = accountContext;
-
-  const reverbParams = buildReverbParams({
-    requestContext,
-    serviceContext,
-    atiData,
-    isSignedIn,
-    hashedId,
-  });
-
-  const {
-    params: { page, user },
-  } = reverbParams;
-
+export default ({ page, user }: BBCPageParams) => {
   setReverbPageValues({ pageVars: page, userVars: user });
 };

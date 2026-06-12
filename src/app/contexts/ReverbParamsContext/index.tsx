@@ -5,16 +5,17 @@ import {
   useEffect,
   useMemo,
 } from 'react';
-
 import { RequestContext } from '#app/contexts/RequestContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { AccountContext } from '#app/contexts/AccountContext';
-import { ATIData } from '#app/components/ATIAnalytics/types';
+import buildReverbParams from '#app/components/ATIAnalytics/params';
+import {
+  ATIData,
+  ReverbBeaconConfig,
+} from '#app/components/ATIAnalytics/types';
 import setBBCPage from '#app/lib/analyticsUtils/setBBCPage';
 
-type ReverbParamsContextProps = {
-  atiData?: ATIData;
-};
+type ReverbParamsContextProps = ReverbBeaconConfig;
 
 export const ReverbParamsContext = createContext<ReverbParamsContextProps>(
   {} as ReverbParamsContextProps,
@@ -26,22 +27,29 @@ type ReverbParamsProviderProps = {
 
 export const ReverbParamsContextProvider = ({
   children,
-  atiData,
+  atiData = {},
 }: PropsWithChildren<ReverbParamsProviderProps>) => {
   const requestContext = use(RequestContext);
   const serviceContext = use(ServiceContext);
-  const accountContext = use(AccountContext);
+  const { isSignedIn, hashedUserId: hashedId } = use(AccountContext);
+
+  const reverbParams = buildReverbParams({
+    requestContext,
+    serviceContext,
+    atiData,
+    isSignedIn,
+    hashedId,
+  });
+
+  const {
+    params: { page, user },
+  } = reverbParams;
 
   useEffect(() => {
-    setBBCPage({ atiData, requestContext, serviceContext, accountContext });
-  }, [accountContext, atiData, requestContext, serviceContext]);
+    setBBCPage({ page, user });
+  }, [page, user]);
 
-  const value = useMemo(
-    () => ({
-      atiData,
-    }),
-    [atiData],
-  );
+  const value = useMemo(() => reverbParams, [reverbParams]);
 
   return (
     <ReverbParamsContext.Provider value={value}>
