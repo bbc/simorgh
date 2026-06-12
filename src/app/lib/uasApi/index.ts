@@ -2,6 +2,9 @@ import isLive from '#app/lib/utilities/isLive';
 import getAuthHeaders from './getAuthHeaders';
 import type { ActivityType } from './uasUtility';
 import { refreshTokensIfExpired } from './tokenRefresh/tokenManager';
+import UasError from './errors';
+
+export { default as UasError } from './errors';
 
 export type UasMethod = 'POST' | 'DELETE' | 'GET';
 
@@ -100,7 +103,7 @@ const uasApiRequest = async (
   });
 
   if (!response.ok) {
-    throw new Error(`UAS request failed with status ${response.status}`);
+    throw new UasError(response.status);
   }
 
   return response;
