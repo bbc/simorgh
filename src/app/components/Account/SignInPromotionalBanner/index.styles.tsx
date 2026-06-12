@@ -30,18 +30,15 @@ const overrides: PromotionalBannerStyleOverrides = {
       paddingInlineStart: '1rem',
       paddingInlineEnd: '1rem',
       paddingBottom: `${pixelsToRem(20)}rem`,
-      // 0px - 319px
       [GROUP_A_MAX_WIDTH]: {
         paddingInlineStart: `${spacings.FULL}rem`,
         paddingInlineEnd: `${spacings.FULL}rem`,
       },
-      // 600px - 1007px
       [GROUP_3_ONLY]: {
         paddingInlineStart: `${pixelsToRem(56)}rem`,
         paddingInlineEnd: `${pixelsToRem(56)}rem`,
         paddingBottom: `${pixelsToRem(24)}rem`,
       },
-      // 1008px and above
       [GROUP_4_MIN_WIDTH]: {
         display: 'grid',
         gridTemplateColumns: '1fr 1fr',
@@ -56,7 +53,6 @@ const overrides: PromotionalBannerStyleOverrides = {
 
   textContainer: css({
     width: '100%',
-    // 1008px and above
     [GROUP_4_MIN_WIDTH]: {
       gridColumn: 1,
       gridRow: 1,
@@ -66,18 +62,15 @@ const overrides: PromotionalBannerStyleOverrides = {
 
   title: ({ fontSizes }: Theme) =>
     css({
-      // 0px - 319px
       [GROUP_A_MAX_WIDTH]: {
         marginTop: `${pixelsToRem(16)}rem`,
         paddingTop: `${pixelsToRem(20)}rem`,
         ...fontSizes.trafalgar,
       },
-      // 320px - 599px
       [GROUP_B_ONLY]: {
         marginTop: 0,
         paddingTop: 0,
       },
-      // 1008px and above
       [GROUP_4_MIN_WIDTH]: {
         marginTop: `${pixelsToRem(90)}rem`,
         paddingTop: 0,
@@ -88,7 +81,6 @@ const overrides: PromotionalBannerStyleOverrides = {
     css({
       paddingTop: `${pixelsToRem(16)}rem`,
       marginTop: 0,
-      // 0px - 319px
       [GROUP_A_MAX_WIDTH]: {
         ...fontSizes.longPrimer,
         paddingTop: `${pixelsToRem(6)}rem`,
@@ -97,11 +89,9 @@ const overrides: PromotionalBannerStyleOverrides = {
 
   actionsContainer: css({
     marginTop: `${pixelsToRem(32)}rem`,
-    // 0px - 319px
     [GROUP_A_MAX_WIDTH]: {
       marginTop: `${pixelsToRem(20)}rem`,
     },
-    // 1008px and above
     [GROUP_4_MIN_WIDTH]: {
       gridRow: '2 / 4',
       width: '100%',
@@ -112,7 +102,6 @@ const overrides: PromotionalBannerStyleOverrides = {
 
 const signInImage = css({
   display: 'none',
-  // 320px and above
   [GROUP_B_MIN_WIDTH]: {
     display: 'block',
     width: '100%',
@@ -120,21 +109,18 @@ const signInImage = css({
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
   },
-  // 320px - 599px
   [GROUP_B_ONLY]: {
     marginBottom: `${pixelsToRem(20)}rem`,
     marginTop: `${pixelsToRem(16)}rem`,
     aspectRatio: '256 / 242',
     backgroundImage: `url(${imagesPath}/news_mobile_image.webp)`,
   },
-  // 600px - 1007px
   [GROUP_3_ONLY]: {
     marginBottom: `${pixelsToRem(24)}rem`,
     marginTop: `${pixelsToRem(16)}rem`,
     aspectRatio: '395 / 328',
     backgroundImage: `url(${imagesPath}/news_tablet_image.webp)`,
   },
-  // 1008px and above
   [GROUP_4_MIN_WIDTH]: {
     gridColumn: 2,
     gridRow: '1 / span 2',

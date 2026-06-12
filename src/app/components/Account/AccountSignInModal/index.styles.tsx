@@ -33,15 +33,12 @@ export default {
       display: 'flex',
       flexDirection: 'column',
       background: `linear-gradient(to bottom left, ${palette.POSTBOX} 0%, ${palette.BLACK} 50%, ${palette.POSTBOX} 100%)`,
-      // 0px - 319px
       [GROUP_A_MAX_WIDTH]: {
         width: `${pixelsToRem(222)}rem`,
       },
-      // 600px - 1007px
       [GROUP_3_ONLY]: {
         width: `${pixelsToRem(510)}rem`,
       },
-      // 1008px and above
       [GROUP_4_MIN_WIDTH]: {
         width: `${pixelsToRem(792)}rem`,
         minHeight: `${pixelsToRem(488)}rem`,
