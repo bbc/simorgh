@@ -81,8 +81,6 @@ const OnDemandAudioPage = ({
     link =>
       link.linkType === 'download' && link.linkUrl?.startsWith('https://'),
   );
-  const contentUrl = downloadLink ? downloadLink.linkUrl : undefined;
-
   const audioEntities = !mediaIsAvailable
     ? []
     : [
