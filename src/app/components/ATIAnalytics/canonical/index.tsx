@@ -2,7 +2,7 @@ import { useEffect, useState, use } from 'react';
 import { RequestContext } from '#app/contexts/RequestContext';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import { Helmet } from 'react-helmet';
-import addSendStaticBeaconToWindowScript from '#app/lib/analyticsUtils/staticATITracking/sendStaticBeacon/addSendStaticBeaconToWindowScript';
+import { addSendStaticBeaconToWindow } from '#app/lib/analyticsUtils/staticATITracking/sendStaticBeacon';
 import sendPageViewBeaconLite from '#app/lib/analyticsUtils/staticATITracking/processClientDeviceAndSendStaticBeacon';
 import sendBeacon from '#app/lib/analyticsUtils/sendBeacon';
 import addInlineScript, {
@@ -59,7 +59,10 @@ const CanonicalATIAnalytics = ({ reverbParams }: ATIAnalyticsProps) => {
 
   return (
     <>
-      {addScript({ script: addSendStaticBeaconToWindowScript(), nonce })}
+      {addScript({
+        script: addSendStaticBeaconToWindow,
+        nonce,
+      })}
       {isLite &&
         addScript({
           script: sendPageViewBeaconLite,
@@ -68,7 +71,8 @@ const CanonicalATIAnalytics = ({ reverbParams }: ATIAnalyticsProps) => {
         })}
       {!isLite &&
         addScript({
-          script: sendPageViewBeaconOperaMini(operaMiniPageViewReverbURL),
+          script: sendPageViewBeaconOperaMini,
+          parameters: [operaMiniPageViewReverbURL],
           nonce,
         })}
       {renderNoScriptTrackingPixel({ reverbParams })}
