@@ -15,7 +15,7 @@ const MyNewsPageContent = dynamic(() => import('./MyNewsPageContent'), {
   loading: () => <MyNewsPageLoading />,
 });
 
-const MyNewsPage = ({ pageData, page }: MyNewsPageProps) => {
+const MyNewsPage = ({ page }: MyNewsPageProps) => {
   const { isPersonalizationAvailable, isPersonalizationEnabled } =
     use(AccountContext);
   const { lang, translations } = use(ServiceContext);
