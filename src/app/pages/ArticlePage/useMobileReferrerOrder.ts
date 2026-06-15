@@ -8,6 +8,19 @@ import {
   ReferrerType,
 } from './mobileReferrerComponentOrder';
 
+const getDebugReferrer = (): ReferrerType | null => {
+  const params = new URLSearchParams(window.location.search);
+  const debugParam = params.get('debugReferrer');
+  if (
+    debugParam === 'direct'
+    || debugParam === 'search'
+    || debugParam === 'social'
+  ) {
+    return debugParam;
+  }
+  return null;
+};
+
 const useMobileReferrerOrder = (): OJComponentKey[] | null => {
   const [order, setOrder] = useState<OJComponentKey[] | null>(null);
 
@@ -17,7 +30,8 @@ const useMobileReferrerOrder = (): OJComponentKey[] | null => {
     const mediaQuery = window.matchMedia(
       `(max-width: ${GROUP_3_MAX_WIDTH_BP}rem)`,
     );
-    const referrer = (getReferrer() ?? 'direct') as ReferrerType;
+    const debugReferrer = getDebugReferrer();
+    const referrer = (debugReferrer ?? getReferrer() ?? 'direct') as ReferrerType;
     const mobileOrder =
       MOBILE_COMPONENT_ORDER[referrer] ?? MOBILE_COMPONENT_ORDER.direct;
 
