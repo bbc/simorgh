@@ -4,7 +4,7 @@ import {
   act,
 } from '#app/components/react-testing-library-with-providers';
 import * as isOperaProxy from '#app/lib/utilities/isOperaProxy';
-import addSendStaticBeaconToWindowScript from '#app/lib/analyticsUtils/staticATITracking/sendStaticBeacon/addSendStaticBeaconToWindowScript';
+import { addSendStaticBeaconToWindow } from '#app/lib/analyticsUtils/staticATITracking/sendStaticBeacon';
 import processClientDeviceAndSendStaticBeacon from '#app/lib/analyticsUtils/staticATITracking/processClientDeviceAndSendStaticBeacon';
 import * as beacon from '../../../lib/analyticsUtils/sendBeacon';
 import CanonicalATIAnalytics from '.';
@@ -79,7 +79,7 @@ describe('Canonical ATI Analytics', () => {
     const helmet = Helmet.peek();
 
     expect(helmet.scriptTags[0].innerHTML).toEqual(
-      addSendStaticBeaconToWindowScript(),
+      `(${addSendStaticBeaconToWindow.toString()})()`,
     );
   });
 

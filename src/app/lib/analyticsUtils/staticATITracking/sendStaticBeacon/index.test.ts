@@ -1,3 +1,4 @@
+/* eslint-disable no-eval */
 import sendStaticBeacon, { addSendStaticBeaconToWindow } from '.';
 
 let XMLHttpRequestSpy: jest.SpyInstance<XMLHttpRequest | undefined, []>;
@@ -30,7 +31,7 @@ describe('sendStaticBeacon', () => {
       () => XMLHttpRequestMock as XMLHttpRequest,
     );
 
-    sendStaticBeacon('https://foobar.com');
+    eval(String(sendStaticBeacon('https://foobar.com')));
 
     expect(XMLHttpRequestMock.open).toHaveBeenCalledWith(
       'GET',
