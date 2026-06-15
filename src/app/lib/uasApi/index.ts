@@ -27,6 +27,9 @@ interface UasRequestOptions {
   isRefreshAvailable: boolean;
 }
 
+// This timeout is client-side only — user-initiated, no upstream deadline — so a longer value is appropriate.
+const UAS_CLIENT_TIMEOUT_MS = 10_000;
+
 const getUasHost = () =>
   isLive() ? 'activity.api.bbc.com' : 'activity.test.api.bbc.com';
 
@@ -98,8 +101,7 @@ const uasApiRequest = async (
     headers,
     credentials: 'include',
     body: method === 'POST' ? JSON.stringify(body) : undefined,
-    // Allow callers to abort the request
-    ...(signal ? { signal } : {}),
+    signal: signal ?? AbortSignal.timeout(UAS_CLIENT_TIMEOUT_MS),
   });
 
   if (!response.ok) {
