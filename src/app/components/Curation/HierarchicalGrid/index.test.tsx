@@ -191,4 +191,22 @@ describe('Hierarchical Grid Curation', () => {
     );
     expect(container.queryByText('13 noviembre 2022')).not.toBeInTheDocument();
   });
+
+  it('should render related topic link when relatedTopic exists on a Promo', () => {
+    const container = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={fixture}
+        eventTrackingData={minimalEventTrackingData}
+      />,
+      {
+        service: 'pidgin',
+      },
+    );
+    expect(container.getByText('Nigeria')).toBeInTheDocument();
+    expect(container.getByText('Nigeria').closest('a')).toHaveAttribute(
+      'href',
+      'https://www.bbc.com/pidgin/topics/c2dwqd1zr92t',
+    );
+  });
 });
