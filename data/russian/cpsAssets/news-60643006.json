@@ -726,11 +726,6 @@
             }
           ],
           "type": "list"
-        },
-        {
-          "text": "Загрузите наше приложение:",
-          "markupType": "plain_text",
-          "type": "paragraph"
         }
       ]
     },

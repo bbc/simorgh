@@ -4,9 +4,7 @@ import { render, screen } from '../react-testing-library-with-providers';
 import DisclaimerComponent from '.';
 
 const DISCLAIMER_FIXTURE = {
-  para1: 'Приложение Русской службы BBC News доступно для ',
-  para3: ' и ',
-  para5: '. Вы можете также подписаться на наш канал в ',
+  para1: 'Подпишитесь на наш канал ',
   para6: {
     text: 'Telegram',
     url: 'https://t.me/bbcrussian',
@@ -44,11 +42,7 @@ describe('Disclaimer Component', () => {
   });
   it('should render disclaimer text correctly', () => {
     const { getByText } = renderComponent();
-    expect(
-      getByText(
-        'Приложение Русской службы BBC News доступно для и . Вы можете также подписаться на наш канал в .',
-      ),
-    ).toBeInTheDocument();
+    expect(getByText(/Подпишитесь на наш канал/)).toBeInTheDocument();
     expect(getByText('Telegram')).toBeInTheDocument();
   });
   it('should render links correctly', () => {
