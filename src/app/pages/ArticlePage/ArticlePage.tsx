@@ -662,7 +662,10 @@ const ArticlePage = ({
       </div>
 
       {mobileOJOrder && (
-        <div css={styles.mobileOJContainer}>
+        <div
+          css={styles.mobileOJContainer}
+          style={{ display: mobileOJOrder ? 'block' : 'none' }}
+        >
           {mobileOJOrder.map(key => (
             <Fragment key={key}>{mobileOJComponents[key]}</Fragment>
           ))}
