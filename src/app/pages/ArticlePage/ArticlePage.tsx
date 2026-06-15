@@ -1,4 +1,4 @@
-import { use, useState } from 'react';
+import { Fragment, ReactNode, use, useState } from 'react';
 import { useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import useOptimizelyVariation, {
@@ -82,7 +82,11 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import RelatedContentSection from '../../components/RelatedContentSection';
 import TopicDiscovery from '../../components/TopicDiscovery';
 import Disclaimer from '../../components/Disclaimer';
+import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
 import SecondaryColumn from './SecondaryColumn';
+import TopStoriesSection from './PagePromoSections/TopStoriesSection';
+import useMobileReferrerOrder from './useMobileReferrerOrder';
+import { OJComponentKey } from './mobileReferrerComponentOrder';
 import styles from './ArticlePage.styles';
 import { ComponentToRenderProps, TimeStampProps } from './types';
 import ArticleHeadline from './ArticleHeadline';
@@ -447,6 +451,90 @@ const ArticlePage = ({
   const shouldRenderPWAPromotionalBanner =
     !isTopBarOJsEnabled || !pageData?.secondaryColumn?.topStories?.length;
 
+  const mobileOJOrder = useMobileReferrerOrder();
+
+  const topStoriesContent = pageData?.secondaryColumn?.topStories;
+  const featuresContent = pageData?.secondaryColumn?.features;
+
+  const topicDiscoverySlot = showTopicDiscovery ? (
+    <TopicDiscovery
+      css={[
+        ...(showContinueReadingButton
+          ? [!showAllContent && styles.hideTopicDiscovery]
+          : []),
+      ]}
+      topics={topics}
+      experimentProps={topicDiscoveryExperimentProps || undefined}
+    />
+  ) : showRelatedTopicsComponent ? (
+    <RelatedTopics
+      css={[
+        styles.relatedTopics,
+        ...(showContinueReadingButton
+          ? [!showAllContent && styles.hideRelatedTopics]
+          : []),
+      ]}
+      topics={topics}
+      mobileDivider={false}
+      experimentProps={topicDiscoveryExperimentProps || undefined}
+    />
+  ) : null;
+
+  const mobileOJComponents: Record<OJComponentKey, ReactNode> = {
+    mostRead:
+      !isApp && !isPGL ? (
+        <MostRead
+          css={styles.mostReadSection}
+          data={mostReadInitialData}
+          columnLayout="twoColumn"
+          size="default"
+          headingBackgroundColour={GREY_2}
+          mobileDivider={showRelatedTopicsComponent}
+          experimentProps={topicDiscoveryExperimentProps || undefined}
+        />
+      ) : null,
+    topicDiscovery: topicDiscoverySlot,
+    relatedContent: (
+      <RelatedContentSection
+        content={blocks}
+        experimentProps={topicDiscoveryExperimentProps || undefined}
+      />
+    ),
+    pvCarousel: showPortraitVideoCarousel ? (
+      <PortraitVideoCarousel
+        {...portraitVideoCarouselProps}
+        css={styles.portraitVideoCarousel}
+      />
+    ) : null,
+    topStories:
+      !isApp && !isPGL && topStoriesContent ? (
+        <div
+          css={styles.topStoriesSection}
+          data-testid="top-stories"
+          data-experiment-position="secondaryColumn"
+        >
+          <TopStoriesSection
+            content={topStoriesContent}
+            experimentProps={topicDiscoveryExperimentProps || undefined}
+          />
+        </div>
+      ) : null,
+    featuredArticles:
+      !isApp && !isPGL && featuresContent ? (
+        <div css={styles.featuresSection} data-testid="features">
+          <FeaturesAnalysis
+            content={featuresContent}
+            parentColumns={{}}
+            sectionLabelBackground={GREY_2}
+            experimentProps={topicDiscoveryExperimentProps || undefined}
+          />
+        </div>
+      ) : null,
+    locationBasedOJ: showCountryCuration ? (
+      <LocationBasedTopicOJ pageData={pageData} />
+    ) : null,
+  };
+
   return (
     <div css={styles.pageWrapper}>
       {/* EXPERIMENT: PWA Promotional Banner */}
@@ -506,7 +594,7 @@ const ArticlePage = ({
           </main>
           <OptimizelyPageMetrics trackPageView trackPageDepth trackVisit />
           {/* EXPERIMENT: Topic Discovery */}
-          {showTopicDiscovery && (
+          {!mobileOJOrder && showTopicDiscovery && (
             <TopicDiscovery
               css={[
                 ...(showContinueReadingButton
@@ -517,7 +605,7 @@ const ArticlePage = ({
               experimentProps={topicDiscoveryExperimentProps || undefined}
             />
           )}
-          {showRelatedTopicsComponent && (
+          {!mobileOJOrder && showRelatedTopicsComponent && (
             <RelatedTopics
               css={[
                 styles.relatedTopics,
@@ -530,17 +618,21 @@ const ArticlePage = ({
               experimentProps={topicDiscoveryExperimentProps || undefined}
             />
           )}
-          {showPortraitVideoCarousel && (
+          {!mobileOJOrder && showPortraitVideoCarousel && (
             <PortraitVideoCarousel
               {...portraitVideoCarouselProps}
               css={styles.portraitVideoCarousel}
             />
           )}
-          {showCountryCuration && <LocationBasedTopicOJ pageData={pageData} />}
-          <RelatedContentSection
-            content={blocks}
-            experimentProps={topicDiscoveryExperimentProps || undefined}
-          />
+          {!mobileOJOrder && showCountryCuration && (
+            <LocationBasedTopicOJ pageData={pageData} />
+          )}
+          {!mobileOJOrder && (
+            <RelatedContentSection
+              content={blocks}
+              experimentProps={topicDiscoveryExperimentProps || undefined}
+            />
+          )}
           {showMediaCuration && (
             <div css={styles.mediaCurationRow}>
               <div data-testid="media-curation">
@@ -561,7 +653,7 @@ const ArticlePage = ({
           )}
         </div>
 
-        {!isApp && !isPGL && (
+        {!isApp && !isPGL && !mobileOJOrder && (
           <SecondaryColumn
             pageData={pageData}
             experimentProps={topicDiscoveryExperimentProps || undefined}
@@ -569,7 +661,15 @@ const ArticlePage = ({
         )}
       </div>
 
-      {!isApp && !isPGL && (
+      {mobileOJOrder && (
+        <div css={styles.mobileOJContainer}>
+          {mobileOJOrder.map(key => (
+            <Fragment key={key}>{mobileOJComponents[key]}</Fragment>
+          ))}
+        </div>
+      )}
+
+      {!isApp && !isPGL && !mobileOJOrder && (
         <MostRead
           css={styles.mostReadSection}
           data={mostReadInitialData}

@@ -215,4 +215,10 @@ export default {
         padding: 0,
       },
     }),
+  mobileOJContainer: ({ mq }: Theme) =>
+    css({
+      [mq.GROUP_4_MIN_WIDTH]: {
+        display: 'none',
+      },
+    }),
 };
