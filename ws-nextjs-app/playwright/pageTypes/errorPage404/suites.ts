@@ -1,4 +1,4 @@
-export type AppEnv = 'local' | 'test' | 'live';
+import type { AppEnv } from '../../utilities/env';
 
 export type ErrorPageTestSuite = {
   path: string;
