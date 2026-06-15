@@ -4,7 +4,7 @@ import {
   OptimizelyProvider,
   setLogger,
 } from '@optimizely/react-sdk';
-import { NOTIFICATION_TYPES, ListenerPayload } from '@optimizely/optimizely-sdk';
+import { enums, ListenerPayload } from '@optimizely/optimizely-sdk';
 import Cookie from 'js-cookie';
 import isLive from '#lib/utilities/isLive';
 import onClient from '#lib/utilities/onClient';
@@ -37,7 +37,7 @@ const optimizely = createInstance({
 });
 
 optimizely?.notificationCenter?.addNotificationListener(
-  NOTIFICATION_TYPES.DECISION,
+  enums.NOTIFICATION_TYPES.DECISION,
   (
     notification: ListenerPayload & {
       decisionInfo?: {
