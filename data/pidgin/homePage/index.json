@@ -19,7 +19,9 @@
             "description": "Tipo Live Page TEST about Photography description",
             "imageAlt": "Alternative description",
             "id": "cp4vqze8qznxt"
+            
           },
+
           {
             "type": "article",
             "isLive": false,
@@ -89,7 +91,16 @@
             "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/9205/live/97f85a20-edd4-11ef-a319-fb4e7360c4ec.jpg.webp",
             "description": "One representative of di family, Prof. C. C. Clark announce di death of di former Federal Commissioner for Information and South-South leader on Tuesday, 18 February.",
             "imageAlt": "Edwin Clark for one interview wit BBC Pidgin for 2021",
-            "id": "cvg533vvrxwo"
+            "id": "cvg533vvrxwo",
+            "relatedTopic": {
+              "title": "Military",
+              "link": {
+                "url": "https://www.bbc.com/pidgin/topics/c7zp5zkqj30t",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/pidgin/topics/c7zp5zkqj30t"
+              }
+            }
           },
           {
             "type": "article",
@@ -101,7 +112,16 @@
             "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/1644/live/96cd2060-edaf-11ef-8667-6717837b54d7.jpg.webp",
             "description": "Witnesses speak about di moment di plane wey dem bin dey fly in overturn for Toronto.",
             "imageAlt": "Emergency responder stand next to di aircraft for di runway afta e crash for Toronto Pearson International Airport",
-            "id": "ce3n337yqv5o"
+            "id": "ce3n337yqv5o",
+            "relatedTopic": {
+              "title": "World",
+              "link": {
+                "url": "https://www.bbc.com/pidgin/topics/c0823e52dd0t",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/pidgin/topics/c0823e52dd0t"
+              }
+            }
           },
           {
             "type": "article",
@@ -113,7 +133,16 @@
             "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/2a73/live/bad2cc30-ed23-11ef-b057-d7115843701e.png.webp",
             "description": "About  201 Nigerians currently dey detained for US immigration centres, and about 85 of dem don dey cleared for deportation according to Nigeria Minister of State for Foreign Affairs Bianca Odumegwu Ojukwu, ",
             "imageAlt": "File picture of immigrants standing on a queue ",
-            "id": "ce858gepkdno"
+            "id": "ce858gepkdno",
+            "relatedTopic": {
+              "title": "Nigeria",
+              "link": {
+                "url": "https://www.bbc.com/pidgin/topics/c2dwqd1zr92t",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/pidgin/topics/c2dwqd1zr92t"
+              }
+            }
           },
           {
             "type": "article",
@@ -125,7 +154,16 @@
             "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/7112/live/630a1530-ed4b-11ef-a319-fb4e7360c4ec.png.webp",
             "description": "Osun state Govnor Ademola Adeleke accuse a former govnor of di state Gboyega Oyetola say e dey plan to cause kasala for di state on Monday.",
             "imageAlt": "Ademola Adeleke, Gboyega Oyetola and Davido",
-            "id": "cn4m4lnv37zo"
+            "id": "cn4m4lnv37zo",
+            "relatedTopic": {
+              "title": "Entertainment",
+              "link": {
+                "url": "https://www.bbc.com/pidgin/topics/cqywjyzk2vyt",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/pidgin/topics/cqywjyzk2vyt"
+              }
+            }
           },
           {
             "type": "article",
@@ -137,7 +175,16 @@
             "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/a35c/live/767a4940-ed10-11ef-a319-fb4e7360c4ec.jpg.webp",
             "description": "French President Emmanuel Macron dey host European leaders for Paris for urgent talks on Ukraine future.",
             "imageAlt": "Macron and Zelensky",
-            "id": "ce8584245jeo"
+            "id": "ce8584245jeo",
+            "relatedTopic": {
+              "title": "World",
+              "link": {
+                "url": "https://www.bbc.com/pidgin/topics/c0823e52dd0t",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/pidgin/topics/c0823e52dd0t"
+              }
+            }
           },
           {
             "type": "article",
@@ -149,7 +196,16 @@
             "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/0b22/live/28479280-ed3a-11ef-bd1b-d536627785f2.png.webp",
             "description": "Video online show as Lagos state assembly, speaker Mojisola Meranda enta into the building wit some security officials wey dey protect di building ",
             "imageAlt": "Mojisola Meranda Mudashiru Obasa",
-            "id": "cj919ye7929o"
+            "id": "cj919ye7929o",
+            "relatedTopic": {
+              "title": "Nigeria",
+              "link": {
+                "url": "https://www.bbc.com/pidgin/topics/c2dwqd1zr92t",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/pidgin/topics/c2dwqd1zr92t"
+              }
+            }
           },
           {
             "type": "article",
@@ -161,7 +217,16 @@
             "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/51b8/live/fd584210-ec60-11ef-91f9-bd1471acd4eb.jpg.webp",
             "description": "Im establish The Inner Circle, one organisation wey dey provide support and safe space for gay Muslims, bifor im establish di inclusive Masjidul Ghurbaah mosque.",
             "imageAlt": "A close-up of Imam Muhsin Hendricks wearing a white shirt and a green scarf draped over one shoulder. The shot was taken in 2016.",
-            "id": "cg5yr5z54nlo"
+            "id": "cg5yr5z54nlo",
+            "relatedTopic": {
+              "title": "Africa",
+              "link": {
+                "url": "https://www.bbc.com/pidgin/topics/c404v061z85t",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/pidgin/topics/c404v061z85t"
+              }
+            }
           },
           {
             "type": "article",
@@ -173,7 +238,16 @@
             "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/4e44/live/6fff9710-eb7f-11ef-a319-fb4e7360c4ec.jpg.webp",
             "description": "Gambaryan bin spend months for Nigeria detention facility sake of alleged money laundering.",
             "imageAlt": "Gambaryan and Idris",
-            "id": "cjde7xxyky2o"
+            "id": "cjde7xxyky2o",
+            "relatedTopic": {
+              "title": "Business",
+              "link": {
+                "url": "https://www.bbc.com/pidgin/topics/cz74k7x19y6t",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/pidgin/topics/cz74k7x19y6t"
+              }
+            }
           }
         ],
         "activePage": 1,
