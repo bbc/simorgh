@@ -5648,27 +5648,6 @@
                           "position": [42, 2, 1]
                         },
                         {
-                          "id": "88666c37",
-                          "type": "urlLink",
-                          "model": {
-                            "text": "क्लिक",
-                            "blocks": [
-                              {
-                                "id": "6d6498ea",
-                                "type": "fragment",
-                                "model": {
-                                  "text": "क्लिक",
-                                  "attributes": ["bold"]
-                                },
-                                "position": [42, 2, 2, 1]
-                              }
-                            ],
-                            "locator": "https://play.google.com/store/apps/details?id=uk.co.bbc.hindi&pli=1",
-                            "isExternal": true
-                          },
-                          "position": [42, 2, 2]
-                        },
-                        {
                           "id": "d89a4fdd",
                           "type": "fragment",
                           "model": {
