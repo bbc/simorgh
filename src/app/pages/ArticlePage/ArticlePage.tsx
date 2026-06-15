@@ -60,6 +60,7 @@ import ContinueReadingButton, {
 } from '#app/components/ContinueReadingButton';
 import SaveArticleButton from '#app/components/SaveArticleButton';
 import isLive from '#lib/utilities/isLive';
+import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -82,7 +83,6 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import RelatedContentSection from '../../components/RelatedContentSection';
 import TopicDiscovery from '../../components/TopicDiscovery';
 import Disclaimer from '../../components/Disclaimer';
-import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
 import SecondaryColumn from './SecondaryColumn';
 import TopStoriesSection from './PagePromoSections/TopStoriesSection';
 import useMobileReferrerOrder from './useMobileReferrerOrder';
@@ -456,29 +456,39 @@ const ArticlePage = ({
   const topStoriesContent = pageData?.secondaryColumn?.topStories;
   const featuresContent = pageData?.secondaryColumn?.features;
 
-  const topicDiscoverySlot = showTopicDiscovery ? (
-    <TopicDiscovery
-      css={[
-        ...(showContinueReadingButton
-          ? [!showAllContent && styles.hideTopicDiscovery]
-          : []),
-      ]}
-      topics={topics}
-      experimentProps={topicDiscoveryExperimentProps || undefined}
-    />
-  ) : showRelatedTopicsComponent ? (
-    <RelatedTopics
-      css={[
-        styles.relatedTopics,
-        ...(showContinueReadingButton
-          ? [!showAllContent && styles.hideRelatedTopics]
-          : []),
-      ]}
-      topics={topics}
-      mobileDivider={false}
-      experimentProps={topicDiscoveryExperimentProps || undefined}
-    />
-  ) : null;
+  const getTopicDiscoverySlot = () => {
+    if (showTopicDiscovery) {
+      return (
+        <TopicDiscovery
+          css={[
+            ...(showContinueReadingButton
+              ? [!showAllContent && styles.hideTopicDiscovery]
+              : []),
+          ]}
+          topics={topics}
+          experimentProps={topicDiscoveryExperimentProps || undefined}
+        />
+      );
+    }
+    if (showRelatedTopicsComponent) {
+      return (
+        <RelatedTopics
+          css={[
+            styles.relatedTopics,
+            ...(showContinueReadingButton
+              ? [!showAllContent && styles.hideRelatedTopics]
+              : []),
+          ]}
+          topics={topics}
+          mobileDivider={false}
+          experimentProps={topicDiscoveryExperimentProps || undefined}
+        />
+      );
+    }
+    return null;
+  };
+
+  const topicDiscoverySlot = getTopicDiscoverySlot();
 
   const mobileOJComponents: Record<OJComponentKey, ReactNode> = {
     mostRead:
