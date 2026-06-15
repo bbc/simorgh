@@ -1,12 +1,18 @@
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 
-export default (atiPageViewUrlString: string) => {
-  if (isOperaProxy() && !Boolean((window as any).hasOperaMiniScriptRan)) {
-    (window as any).hasOperaMiniScriptRan = true;
+type OperaMiniWindow = Window & {
+  hasOperaMiniScriptRan?: boolean;
+};
 
-    const atiPageViewUrl =
-      atiPageViewUrlString +
-      (document.referrer ? '&ref=' + document.referrer : '');
+export default (atiPageViewUrlString: string) => {
+  const operaMiniWindow = window as OperaMiniWindow;
+
+  if (isOperaProxy() && !operaMiniWindow.hasOperaMiniScriptRan) {
+    operaMiniWindow.hasOperaMiniScriptRan = true;
+
+    const atiPageViewUrl = `${atiPageViewUrlString}${
+      document.referrer ? `&ref=${document.referrer}` : ''
+    }`;
 
     window.sendStaticBeacon(atiPageViewUrl);
   }
