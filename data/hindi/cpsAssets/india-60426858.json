@@ -677,6 +677,11 @@
         "positionHint": "full-width",
         "originCode": "cpsprodpb",
         "type": "image"
+      },
+      {
+        "text": "<bold>आप हमें </bold><link><caption>फ़ेसबुक</caption><altText>फ़ेसबुक</altText><url href=\"https://www.facebook.com/bbchindi\" platform=\"highweb\"/><url href=\"https://www.facebook.com/bbchindi\" platform=\"enhancedmobile\"/></link><bold>, </bold><link><caption>ट्विटर</caption><altText>ट्विटर</altText><url href=\"https://twitter.com/BBCHindi\" platform=\"highweb\"/><url href=\"https://twitter.com/BBCHindi\" platform=\"enhancedmobile\"/></link><bold>, </bold><link><caption>इंस्टाग्राम</caption><url href=\"https://www.instagram.com/bbchindi/\" platform=\"highweb\"/><url href=\"https://www.instagram.com/bbchindi/\" platform=\"enhancedmobile\"/></link><bold> और </bold><link><caption>यूट्यूब</caption><url href=\"https://www.youtube.com/bbchindi/\" platform=\"highweb\"/><url href=\"https://www.youtube.com/bbchindi/\" platform=\"enhancedmobile\"/></link><bold> पर फ़ॉलो भी कर सकते हैं.)</bold>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
       }
     ]
   },
