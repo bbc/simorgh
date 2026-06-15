@@ -21,14 +21,21 @@ const useMobileReferrerOrder = (): OJComponentKey[] | null => {
     const mobileOrder =
       MOBILE_COMPONENT_ORDER[referrer] ?? MOBILE_COMPONENT_ORDER.direct;
 
-    const updateOrder = () => {
-      setOrder(mediaQuery.matches ? mobileOrder : null);
+    const updateOrder = (matches: boolean) => {
+      setOrder(matches ? mobileOrder : null);
     };
 
-    updateOrder();
-    mediaQuery.addEventListener('change', updateOrder);
+    // Initial check
+    updateOrder(mediaQuery.matches);
 
-    return () => mediaQuery.removeEventListener('change', updateOrder);
+    // Listen for changes and use the event's matches value
+    const handleChange = (event: MediaQueryListEvent) => {
+      updateOrder(event.matches);
+    };
+
+    mediaQuery.addEventListener('change', handleChange);
+
+    return () => mediaQuery.removeEventListener('change', handleChange);
   }, []);
 
   return order;
