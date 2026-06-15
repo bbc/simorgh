@@ -94,6 +94,21 @@ const HiearchicalGrid = ({
             promoEventTrackingData,
           );
 
+          const relatedTopicEventTrackingData = {
+            ...promoEventTrackingData,
+            itemTracker: {
+              ...promoEventTrackingData.itemTracker,
+              type: 'hierarchical-curation-grid-topic',
+              text: relatedTopic?.title,
+            },
+          };
+
+          const relatedTopicClickTrackerHandler = getClickTrackerHandler(
+            relatedTopicEventTrackingData,
+          );
+
+          console.log(summaries);
+
           return (
             <li
               key={promo.id}
@@ -175,6 +190,7 @@ const HiearchicalGrid = ({
                       <Promo.A
                         href={relatedTopic.link.url}
                         css={styles.relatedTopicLink}
+                        {...relatedTopicClickTrackerHandler}
                       >
                         {relatedTopic.title}
                       </Promo.A>
