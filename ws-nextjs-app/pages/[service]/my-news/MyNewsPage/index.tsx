@@ -30,7 +30,7 @@ const MyNewsPage = ({ pageData, page }: MyNewsPageProps) => {
         openGraphType="website"
         hasAmpPage={false}
       />
-      <ATIAnalytics atiData={pageData?.metadata?.atiAnalytics} />
+      <ATIAnalytics />
       <div css={styles.inner}>
         {isPersonalizationEnabled ? (
           <MyNewsPageContent page={page} />
