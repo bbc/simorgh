@@ -61,7 +61,6 @@ export type ComponentProps = {
     promoImage: LivePromoImage | null;
     startDateTime?: string;
     endDateTime?: string;
-    metadata: { atiAnalytics: ATIData };
     mediaCollections: MediaCollection[] | null;
     portraitVideoItems?: PortraitVideoItems | null;
     sportDataEventContent?: {
@@ -101,7 +100,6 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
     isLive,
     summaryPoints: { content: keyPoints },
     liveTextStream,
-    metadata: { atiAnalytics = undefined } = {},
     headerImage,
     promoImage,
     mediaCollections,
@@ -182,7 +180,7 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
 
   return (
     <>
-      <ATIAnalytics atiData={atiAnalytics} />
+      <ATIAnalytics />
       <ChartbeatAnalytics title={metaTitle ?? pageTitle} />
       <MetadataContainer
         title={metaTitle}
