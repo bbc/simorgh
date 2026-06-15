@@ -28,7 +28,7 @@ interface UasRequestOptions {
 }
 
 // This timeout is client-side only — user-initiated, no upstream deadline — so a longer value is appropriate.
-const UAS_CLIENT_TIMEOUT_MS = 10_000;
+export const UAS_CLIENT_TIMEOUT_MS = 10000;
 
 const getUasHost = () =>
   isLive() ? 'activity.api.bbc.com' : 'activity.test.api.bbc.com';
