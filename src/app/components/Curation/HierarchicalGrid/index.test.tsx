@@ -1,8 +1,9 @@
-import { render } from '../../react-testing-library-with-providers';
+import { fireEvent, render } from '../../react-testing-library-with-providers';
 import { pidginPromos as fixture } from './fixtures';
 import mediaFixture from './mediaFixtures';
 import liveFixtures from './liveFixtures';
 import HierarchicalGrid from '.';
+import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 
 const minimalEventTrackingData = { componentName: 'test-component' };
 
@@ -208,5 +209,47 @@ describe('Hierarchical Grid Curation', () => {
       'href',
       'https://www.bbc.com/pidgin/topics/c2dwqd1zr92t',
     );
+  });
+
+  it('should handle a click event when related topic link is clicked', () => {
+    const onClickSpy = jest.fn();
+    const clickTrackerSpy = jest
+      .spyOn(clickTracking, 'default')
+      .mockImplementation(() => ({ onClick: onClickSpy }));
+
+    const { getByText } = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={fixture}
+        eventTrackingData={minimalEventTrackingData}
+      />,
+      {
+        service: 'pidgin',
+      },
+    );
+
+    expect(clickTrackerSpy).toHaveBeenCalledWith(
+      expect.objectContaining({
+        componentName: 'test-component',
+        itemTracker: expect.objectContaining({
+          type: 'hierarchical-curation-grid-topic',
+          text: 'Nigeria',
+        }),
+      }),
+    );
+
+    const topicLink = getByText('Nigeria').closest('a');
+
+    expect(topicLink).toBeInTheDocument();
+
+    if (!topicLink) {
+      throw new Error('Topic link not found');
+    }
+
+    fireEvent.click(topicLink);
+
+    expect(onClickSpy).toHaveBeenCalled();
+
+    clickTrackerSpy.mockRestore();
   });
 });
