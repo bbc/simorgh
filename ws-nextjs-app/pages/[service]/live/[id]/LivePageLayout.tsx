@@ -112,11 +112,8 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
   const { currentStreamData, hasPendingUpdate, applyPendingUpdate } =
     useLivePagePolling(pageData, livePagePollingEnabled && isLive);
 
-  const {
-    sportDataEvent: sportData,
-    live: isSportDataLive = false,
-    title: sportDataTitle,
-  } = sportDataEventContent || {};
+  const { sportDataEvent: sportData, live: isSportDataLive = false } =
+    sportDataEventContent || {};
   const showSportData = !!sportData && Boolean(sportHeaderEnabled);
 
   const {
@@ -217,7 +214,7 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
       <main>
         <Header
           showLiveLabel={showSportData ? isSportDataLive : isLive}
-          title={showSportData && !!sportDataTitle ? sportDataTitle : title}
+          title={title}
           description={description}
           imageUrl={imageUrl}
           imageUrlTemplate={imageUrlTemplate}
