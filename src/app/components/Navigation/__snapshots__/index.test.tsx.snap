@@ -352,6 +352,7 @@ exports[`Navigation should correctly render amp navigation 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-21 {
@@ -1302,6 +1303,7 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-27 {
@@ -2103,6 +2105,7 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-23 {
@@ -2911,6 +2914,7 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-21 {
@@ -3847,6 +3851,7 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-25 {
@@ -4634,6 +4639,7 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-23 {

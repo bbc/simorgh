@@ -283,6 +283,18 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'ናይ መወዳእታ',
       sport: {
         matchSummary: 'ሓፈሻዊ ጸብጻብ ግጥሚ',
+        assists: 'ኣሊዓሊያ',
+        penalties: 'ፔናልቲ',
+        ht: 'መጨረሻ ናይ መጀመርታ ክፋል',
+        ft: 'መወዳእታ ጨዋታ',
+        et: 'ተወሳኺ ጊዜ',
+        afterExtraTime: 'ድሕሪ ተወሳኺ ጊዜ',
+        penaltyAbbreviation: 'ፔን',
+        ownGoal: 'ናይ ባዕልኻ ጎል',
+        winOnPenalties: {
+          prefix: 'ብፔናልቲ',
+          suffix: 'ይድልይ',
+        },
         worldCupTeamNames: {
           algeria: 'ኣልጀርያ',
           argentina: 'ኣርጀንቲና',

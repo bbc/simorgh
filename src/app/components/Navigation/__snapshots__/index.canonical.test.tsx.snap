@@ -290,6 +290,7 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-14 {

@@ -306,6 +306,18 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'Terbaru',
       sport: {
         matchSummary: 'Ringkasan Pertandingan',
+        assists: 'Assist',
+        penalties: 'Penalti',
+        ht: 'Babak pertama selesai',
+        ft: 'Pertandingan selesai',
+        et: 'Perpanjangan waktu',
+        afterExtraTime: 'Setelah perpanjangan waktu',
+        penaltyAbbreviation: 'PEN',
+        ownGoal: 'gol bunuh diri',
+        winOnPenalties: {
+          prefix: 'menang adu penalti',
+          suffix: '',
+        },
         worldCupTeamNames: {
           algeria: 'Aljazair',
           argentina: 'Argentina',
