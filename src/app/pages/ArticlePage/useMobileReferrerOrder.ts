@@ -12,9 +12,9 @@ const getDebugReferrer = (): ReferrerType | null => {
   const params = new URLSearchParams(window.location.search);
   const debugParam = params.get('debugReferrer');
   if (
-    debugParam === 'direct'
-    || debugParam === 'search'
-    || debugParam === 'social'
+    debugParam === 'direct' ||
+    debugParam === 'search' ||
+    debugParam === 'social'
   ) {
     return debugParam;
   }
@@ -31,7 +31,9 @@ const useMobileReferrerOrder = (): OJComponentKey[] | null => {
       `(max-width: ${GROUP_3_MAX_WIDTH_BP}rem)`,
     );
     const debugReferrer = getDebugReferrer();
-    const referrer = (debugReferrer ?? getReferrer() ?? 'direct') as ReferrerType;
+    const referrer = (debugReferrer ??
+      getReferrer() ??
+      'direct') as ReferrerType;
     const mobileOrder =
       MOBILE_COMPONENT_ORDER[referrer] ?? MOBILE_COMPONENT_ORDER.direct;
 

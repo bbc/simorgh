@@ -1,7 +1,7 @@
 import { renderHook, waitFor, act } from '@testing-library/react';
-import useMobileReferrerOrder from './useMobileReferrerOrder';
 import { getReferrer } from '#app/legacy/containers/PageHandlers/withOptimizelyProvider/userAttributes';
 import onClient from '#app/lib/utilities/onClient';
+import useMobileReferrerOrder from './useMobileReferrerOrder';
 
 jest.mock(
   '#app/legacy/containers/PageHandlers/withOptimizelyProvider/userAttributes',
