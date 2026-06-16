@@ -10,6 +10,7 @@ import {
   appEnvFromProcess,
   baseURL,
   shouldRunForEnv,
+  type AppEnv,
 } from '../../utilities/env';
 import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
 
@@ -46,7 +47,7 @@ const getContentIdFromWindow = (page: Page) =>
         ?.contentId,
   );
 
-const expectedUrnByEnv: Record<string, string> = {
+const expectedUrnByEnv: Record<AppEnv, string> = {
   local: 'urn:bbc:tipo:topic:c6jdzrejj3p3t',
   test: 'urn:bbc:tipo:topic:c6jdzrejj3p3t',
   live: 'urn:bbc:tipo:topic:c1le13lzd2qt',
