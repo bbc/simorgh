@@ -110,7 +110,7 @@ describe('refreshTokensIfExpired', () => {
       mockCookieGet.mockReturnValue(validToken);
 
       await refreshTokensIfExpired(false);
-      await refreshTokensIfExpired(false);
+      await refreshTokensIfExpired(undefined as unknown as boolean);
 
       expect(mockRefreshTokens).not.toHaveBeenCalled();
     });
