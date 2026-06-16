@@ -1,4 +1,10 @@
-import { test, expect, type APIRequestContext, type Page } from '@playwright/test';
+/* eslint-disable no-underscore-dangle */
+import {
+  test,
+  expect,
+  type APIRequestContext,
+  type Page,
+} from '@playwright/test';
 import { liveTvPageSuites } from './suites';
 import {
   appEnvFromProcess,
