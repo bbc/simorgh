@@ -14,7 +14,7 @@ const LiveTvLayout = dynamic(() => import('./LiveTvPageLayout'));
 
 const logger = nodeLogger(__filename);
 
-const slugAllowList = ['live', 'live.app', 'live.lite'];
+const suffixAllowList = ['live', 'live.app', 'live.lite'];
 
 export const getServerSideProps = async (
   context: GetServerSidePropsContext,
@@ -28,9 +28,9 @@ export const getServerSideProps = async (
     variant: variantFromUrl,
   } = context.query as PageDataParams;
 
-  const lastSlug = resolvedUrl.split('?')?.[0].split('/').slice(-1)?.[0];
+  const suffix = resolvedUrl.split('?')?.[0].split('/').slice(-1)?.[0];
 
-  if (!slugAllowList.includes(lastSlug)) {
+  if (!suffixAllowList.includes(suffix)) {
     routingInfoLogger(ROUTING_INFORMATION, {
       url: resolvedUrl,
       status: NOT_FOUND,
