@@ -6,6 +6,7 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import { MetadataTaggings } from '#app/models/types/metadata';
 import { TopicMessageBannerConfig } from '#app/models/types/serviceConfig';
 import MessageBanner from '#app/components/MessageBanner';
+import styles from './index.styles';
 
 type Props = {
   aboutTags: Tag[];
@@ -54,13 +55,18 @@ export default function TopicMessageBanner({ aboutTags, taggings }: Props) {
   const { bannerDefinition } = matchResult;
 
   return (
-    <MessageBanner
-      id="topic-message-banner"
-      heading={bannerDefinition.heading}
-      description={bannerDefinition.description}
-      link={bannerDefinition.linkHref}
-      linkText={bannerDefinition.linkText}
-      image={bannerDefinition.image}
-    />
+    <div
+      data-testid="topic-message-banner"
+      css={styles.topicMessageBannerWrapper}
+    >
+      <MessageBanner
+        id="topic-message-banner"
+        heading={bannerDefinition.heading}
+        description={bannerDefinition.description}
+        link={bannerDefinition.linkHref}
+        linkText={bannerDefinition.linkText}
+        image={bannerDefinition.image}
+      />
+    </div>
   );
 }
