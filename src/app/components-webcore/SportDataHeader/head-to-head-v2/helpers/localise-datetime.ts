@@ -6,7 +6,7 @@ const JALALI_SERVICES: Services[] = ['persian', 'pashto'];
 
 const LOCALE_MAP: Partial<Record<Services, string>> = {
   persian: 'fa-IR',
-  pashto: 'ps-AF',
+  // pashto: 'ps-AF' - Removed temporarily as this is not supported by Temporal and the sports header (for football) won't be shown in Pashto. To be looked at again if/when the sports header is shown in Pashto.
 };
 
 const MONTHS = [

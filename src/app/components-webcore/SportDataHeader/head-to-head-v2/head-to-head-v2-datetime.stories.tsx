@@ -90,7 +90,7 @@ export default {
 2. Go to Settings → Sensors → Location (Chrome) or similar
 3. Change timezone and observe how date/time updates
 
-**Jalali Calendar:** Persian and Pashto services use the Jalali (Persian) calendar instead of Gregorian.`,
+**Jalali Calendar:** Persian service uses the Jalali (Persian) calendar instead of Gregorian.`,
       },
     },
   },
@@ -115,20 +115,6 @@ PersianServiceJalaliCalendar.parameters = {
     description: {
       story:
         'Demonstrates the Jalali (Persian) calendar formatting when using the Persian service. The date will be displayed in the Jalali calendar format with Persian numerals (e.g., ۱۴۰۵ instead of 2026).',
-    },
-  },
-};
-
-export const PashtoServiceJalaliCalendar = () => (
-  <ServiceContextProvider service="pashto">
-    <Component initialSportData={baseData} />
-  </ServiceContextProvider>
-);
-PashtoServiceJalaliCalendar.parameters = {
-  docs: {
-    description: {
-      story:
-        'Demonstrates the Jalali calendar formatting when using the Pashto service. The date will be displayed in the Jalali calendar format.',
     },
   },
 };
