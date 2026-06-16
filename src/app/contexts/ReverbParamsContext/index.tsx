@@ -16,6 +16,7 @@ import {
 } from '#app/components/ATIAnalytics/types';
 import setBBCPage from '#app/lib/analyticsUtils/setBBCPage';
 import getEnrichedATIData from './getEnrichedATIData';
+import { PageTypes } from '#app/models/types/global';
 
 type ReverbParamsContextProps = ReverbBeaconConfig;
 
@@ -25,6 +26,10 @@ export const ReverbParamsContext = createContext<ReverbParamsContextProps>(
 
 type ReverbParamsProviderProps = {
   atiData?: ATIData;
+  pageMetadata?: {
+    type: PageTypes;
+    atiAnalytics?: ATIData;
+  };
 };
 
 const ReverbParamsContextProviderComponent = ({
