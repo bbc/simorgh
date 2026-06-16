@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 import styles from '../index.styles';
-import getLocalisedTime from '../helpers/localise-time';
+import { getLocalisedTime } from '../helpers/localise-datetime';
 
 interface TimeData {
   displayTimeUK: string;
