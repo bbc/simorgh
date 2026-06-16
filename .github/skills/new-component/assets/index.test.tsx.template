@@ -1,0 +1,18 @@
+import __COMPONENT_NAME__ from '.';
+import { render, screen } from '../react-testing-library-with-providers';
+
+describe('__COMPONENT_NAME__', () => {
+  it('should render its children', () => {
+    render(<__COMPONENT_NAME__>Hello World!</__COMPONENT_NAME__>);
+
+    expect(screen.getByText('Hello World!')).toBeInTheDocument();
+  });
+
+  it('should render correctly for an RTL service (arabic)', () => {
+    render(<__COMPONENT_NAME__>Hello World!</__COMPONENT_NAME__>, {
+      service: 'arabic',
+    });
+
+    expect(screen.getByText('Hello World!')).toBeInTheDocument();
+  });
+});

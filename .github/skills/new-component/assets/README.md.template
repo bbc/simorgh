@@ -1,0 +1,16 @@
+## Description
+
+The `__COMPONENT_NAME__` component is used to ... (describe purpose, including any service-specific behaviour).
+
+## Props
+
+| Name       | type      | Description                              |
+| ---------- | --------- | ---------------------------------------- |
+| children   | ReactNode | Content rendered inside the component.   |
+| className? | string    | Optional class name forwarded to the root element. |
+
+## How to use
+
+```tsx
+<__COMPONENT_NAME__>Some content</__COMPONENT_NAME__>
+```

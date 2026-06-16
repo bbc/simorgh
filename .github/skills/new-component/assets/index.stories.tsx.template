@@ -1,0 +1,25 @@
+import __COMPONENT_NAME__ from '.';
+import readme from './README.md';
+import { StoryProps } from '../../models/types/storybook';
+
+interface Props extends StoryProps {
+  text: string;
+}
+
+const __COMPONENT_NAME__Story = ({ text }: Props) => (
+  <__COMPONENT_NAME__>{text}</__COMPONENT_NAME__>
+);
+
+export default {
+  title: 'Components/__COMPONENT_NAME__',
+  Component: __COMPONENT_NAME__Story,
+  parameters: {
+    chromatic: { disable: true },
+    docs: { readme },
+  },
+  args: {
+    text: 'Example __COMPONENT_NAME__ content',
+  },
+};
+
+export const Example = __COMPONENT_NAME__Story;
