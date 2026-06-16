@@ -348,6 +348,12 @@ export const service: DefaultServiceConfig = {
           usa: 'अमेेरिका (यूएसए)',
           uzbekistan: 'उज्बेकिस्तान',
         },
+        tournaments: {
+          fifaWorldCup: 'फिफा विश्वकप २०२६',
+        },
+        stages: {
+          groupStage: 'समूह चरण',
+        },
       },
     },
     mostRead: {

@@ -49,13 +49,11 @@ export default {
         fontFeatureSettings: "'ss01' off",
         color: palette.LUNAR_LIGHT,
         padding: isConciseView ? `${spacings.FULL}rem` : 0,
-        paddingBlockStart: `${spacings.TRIPLE}rem`,
         ...(!isConciseView && { paddingBottom: `${spacings.TRIPLE}rem` }),
         [mq.GROUP_2_MAX_WIDTH]: {
           paddingTop: isConciseView ? `${spacings.FULL}rem` : 0,
           ...(!isConciseView && {
             paddingBottom: `${spacings.FULL}rem`,
-            paddingTop: `${spacings.TRIPLE}rem`,
           }),
         },
       }),
@@ -266,6 +264,72 @@ export default {
 
   matchProgressContainer: css({
     gridArea: 'progress',
+  }),
+
+  // ==================== Head-to-Head Header ====================
+  headerWrapper: (isLive: boolean) =>
+    css({
+      display: 'flex',
+      justifyContent: 'center',
+      flexDirection: 'column',
+      fontSize: `${pixelsToRem(14)}rem`,
+      lineHeight: 1.2857142857142858,
+      paddingBlockEnd: `${pixelsToRem(16)}rem`,
+      paddingBlockStart: isLive ? 0 : `${pixelsToRem(16)}rem`,
+      [`@media (min-width: ${pixelsToRem(600)}rem)`]: {
+        flexDirection: 'row',
+        fontSize: '1rem',
+        lineHeight: 1.375,
+        paddingBlockStart: isLive
+          ? `${pixelsToRem(8)}rem`
+          : `${pixelsToRem(24)}rem`,
+      },
+    }),
+
+  dateWrapper: css({
+    display: 'flex',
+    justifyContent: 'flex-end',
+    flexDirection: 'column',
+    [`@media (min-width: ${pixelsToRem(600)}rem)`]: {
+      flexDirection: 'row',
+    },
+  }),
+
+  dateHeader: css({
+    display: 'flex',
+    justifyContent: 'center',
+    paddingBlockEnd: `${pixelsToRem(4)}rem`,
+    [`@media (min-width: ${pixelsToRem(600)}rem)`]: {
+      paddingBlockEnd: 0,
+    },
+  }),
+
+  interpunct: css({
+    color: '#a8a8a8',
+    display: 'none',
+    [`@media (min-width: ${pixelsToRem(600)}rem)`]: {
+      display: 'inline',
+      paddingInline: `${pixelsToRem(8)}rem`,
+    },
+  }),
+
+  tournamentHeader: css({
+    display: 'flex',
+    justifyContent: 'center',
+    flexWrap: 'wrap',
+  }),
+
+  date: css({
+    color: '#a8a8a8',
+    flexShrink: 0,
+  }),
+
+  competitionFormatter: css({
+    whiteSpace: 'pre',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    padding: 0,
+    flexShrink: 1,
   }),
 
   // ==================== Key Events ====================

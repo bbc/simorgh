@@ -267,6 +267,8 @@ export interface Translations {
       suffix?: string;
     };
     worldCupTeamNames?: Record<string, string>;
+    tournaments?: Record<string, string>;
+    stages?: Record<string, string>;
   };
 }
 
