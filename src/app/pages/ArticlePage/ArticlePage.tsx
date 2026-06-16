@@ -217,7 +217,7 @@ const ArticlePage = ({
     articleAuthor,
     isTrustProjectParticipant,
     showRelatedTopics,
-    brandName,
+    // brandName,
     translations,
   } = use(ServiceContext);
 
@@ -254,14 +254,14 @@ const ArticlePage = ({
     topicDiscoveryExperimentName,
     topicDiscoveryVariant,
   );
-  const isTopicDiscoveryVariant =
-    topicDiscoveryVariant && topicDiscoveryVariant !== 'off';
+  // const isTopicDiscoveryVariant =
+  //   topicDiscoveryVariant && topicDiscoveryVariant !== 'off';
 
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
 
   const {
-    metadata: { atiAnalytics },
+    // metadata: { atiAnalytics },
     mostRead: mostReadInitialData,
   } = pageData;
 
@@ -307,21 +307,21 @@ const ArticlePage = ({
   const formats = pageData?.metadata?.passport?.predicates?.formats ?? [];
 
   const isPGL = pageData?.metadata?.type === PHOTO_GALLERY_PAGE;
-  const isSTY = pageData?.metadata?.type === STORY_PAGE;
-  const isCPS = isPGL || isSTY;
+  // const isSTY = pageData?.metadata?.type === STORY_PAGE;
+  // const isCPS = isPGL || isSTY;
   const isTC2Asset = pageData?.metadata?.analyticsLabels?.contentId
     ?.split(':')
     ?.includes('topcat');
 
-  const atiData = {
-    ...atiAnalytics,
-    ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
-    ...(isTopicDiscoveryVariant &&
-      topicDiscoveryExperimentProps && {
-        experimentName: topicDiscoveryExperimentProps.experimentName,
-        experimentVariant: topicDiscoveryExperimentProps.experimentVariant,
-      }),
-  };
+  // const atiData = {
+  //   ...atiAnalytics,
+  //   ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
+  //   ...(isTopicDiscoveryVariant &&
+  //     topicDiscoveryExperimentProps && {
+  //       experimentName: topicDiscoveryExperimentProps.experimentName,
+  //       experimentVariant: topicDiscoveryExperimentProps.experimentVariant,
+  //     }),
+  // };
 
   const showPortraitVideoCarousel = Boolean(
     pageData?.portraitVideoItems?.portraitVideo?.blocks?.length &&
@@ -451,7 +451,7 @@ const ArticlePage = ({
     <div css={styles.pageWrapper}>
       {/* EXPERIMENT: PWA Promotional Banner */}
       {shouldRenderPWAPromotionalBanner && <PWAPromotionalBanner />}
-      <ATIAnalytics atiData={atiData} />
+      <ATIAnalytics />
       <ChartbeatAnalytics
         sectionName={pageData?.relatedContent?.section?.name}
         title={headline}
