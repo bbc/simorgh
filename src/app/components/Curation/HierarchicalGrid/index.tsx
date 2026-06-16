@@ -107,8 +107,6 @@ const HiearchicalGrid = ({
             relatedTopicEventTrackingData,
           );
 
-          console.log(summaries);
-
           return (
             <li
               key={promo.id}

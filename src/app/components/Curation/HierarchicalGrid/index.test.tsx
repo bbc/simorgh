@@ -1,9 +1,9 @@
+import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import { fireEvent, render } from '../../react-testing-library-with-providers';
 import { pidginPromos as fixture } from './fixtures';
 import mediaFixture from './mediaFixtures';
 import liveFixtures from './liveFixtures';
 import HierarchicalGrid from '.';
-import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 
 const minimalEventTrackingData = { componentName: 'test-component' };
 
