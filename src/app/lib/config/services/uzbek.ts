@@ -349,6 +349,12 @@ const defaultCyrillicConfig = {
         usa: 'АҚШ',
         uzbekistan: 'Ўзбекистон',
       },
+      tournaments: {
+        fifaWorldCup: 'Жаҳон чемпионати',
+      },
+      stages: {
+        groupStage: 'Гуруҳ босқичи',
+      },
     },
     topStoriesTitle: 'Бош мақола',
     featuresAnalysisTitle: 'Муҳаррир танлови',
@@ -739,6 +745,12 @@ export const service: UzbekConfig = {
           uruguay: 'Urugvay',
           usa: 'AQSH',
           uzbekistan: 'Oʻzbekiston',
+        },
+        tournaments: {
+          fifaWorldCup: 'FIFA World Cup',
+        },
+        stages: {
+          groupStage: 'Guruh bosqichi',
         },
       },
       topStoriesTitle: 'Bosh maqola',
