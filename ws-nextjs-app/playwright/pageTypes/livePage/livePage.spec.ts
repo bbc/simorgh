@@ -40,7 +40,7 @@ test.describe('livePage', () => {
       test.describe(`Tests for ${suiteName} livePage`, () => {
         test('should return a 200 status code', async ({ request }) => {
           test.skip(
-            !shouldRunForEnv(testSuite.runforEnv),
+            !shouldRunForEnv(testSuite.runForEnv),
             `Skipped for APP_ENV=${appEnvFromProcess}`,
           );
 
@@ -50,7 +50,7 @@ test.describe('livePage', () => {
         test.describe(`${suiteName} Live Page Tests`, () => {
           test('should render a key points summary', async ({ page }) => {
             test.skip(
-              !shouldRunForEnv(testSuite.runforEnv),
+              !shouldRunForEnv(testSuite.runForEnv),
               `Skipped for APP_ENV=${appEnvFromProcess}`,
             );
 
@@ -63,7 +63,7 @@ test.describe('livePage', () => {
 
           test('should serve webp images from ichef', async ({ page }) => {
             test.skip(
-              !shouldRunForEnv(testSuite.runforEnv),
+              !shouldRunForEnv(testSuite.runForEnv),
               `Skipped for APP_ENV=${appEnvFromProcess}`,
             );
 
@@ -89,7 +89,7 @@ test.describe('livePage', () => {
 
           test('should render a media player', async ({ page }) => {
             test.skip(
-              !shouldRunForEnv(testSuite.runforEnv),
+              !shouldRunForEnv(testSuite.runForEnv),
               `Skipped for APP_ENV=${appEnvFromProcess}`,
             );
             test.skip(
@@ -115,7 +115,7 @@ test.describe('livePage', () => {
 
           test('should render a visible caption', async ({ page }) => {
             test.skip(
-              !shouldRunForEnv(testSuite.runforEnv),
+              !shouldRunForEnv(testSuite.runForEnv),
               `Skipped for APP_ENV=${appEnvFromProcess}`,
             );
             test.skip(
@@ -136,7 +136,7 @@ test.describe('livePage', () => {
             page,
           }) => {
             test.skip(
-              !shouldRunForEnv(testSuite.runforEnv),
+              !shouldRunForEnv(testSuite.runForEnv),
               `Skipped for APP_ENV=${appEnvFromProcess}`,
             );
             test.skip(
@@ -193,7 +193,7 @@ test.describe('livePage ATI Analytics', () => {
 
         test('should send a page view event', async ({ page }) => {
           test.skip(
-            !shouldRunForEnv(testSuite.runforEnv),
+            !shouldRunForEnv(testSuite.runForEnv),
             `Skipped for APP_ENV=${appEnvFromProcess}`,
           );
 
@@ -204,7 +204,7 @@ test.describe('livePage ATI Analytics', () => {
           page,
         }) => {
           test.skip(
-            !shouldRunForEnv(testSuite.runforEnv),
+            !shouldRunForEnv(testSuite.runForEnv),
             `Skipped for APP_ENV=${appEnvFromProcess}`,
           );
 
@@ -215,7 +215,7 @@ test.describe('livePage ATI Analytics', () => {
           page,
         }) => {
           test.skip(
-            !shouldRunForEnv(testSuite.runforEnv),
+            !shouldRunForEnv(testSuite.runForEnv),
             `Skipped for APP_ENV=${appEnvFromProcess}`,
           );
 
@@ -226,7 +226,7 @@ test.describe('livePage ATI Analytics', () => {
           page,
         }) => {
           test.skip(
-            !shouldRunForEnv(testSuite.runforEnv),
+            !shouldRunForEnv(testSuite.runForEnv),
             `Skipped for APP_ENV=${appEnvFromProcess}`,
           );
 
@@ -237,7 +237,7 @@ test.describe('livePage ATI Analytics', () => {
           page,
         }) => {
           test.skip(
-            !shouldRunForEnv(testSuite.runforEnv),
+            !shouldRunForEnv(testSuite.runForEnv),
             `Skipped for APP_ENV=${appEnvFromProcess}`,
           );
 

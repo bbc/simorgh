@@ -4,14 +4,14 @@ export type LiveTvPageTestSuite = {
   path: string;
   service: string;
   variant?: string;
-  runforEnv: AppEnv[];
+  runForEnv: AppEnv[];
 };
 
 const canonicalTestSuites: LiveTvPageTestSuite[] = [
   {
     path: '/dari/watch/bbc_afghan_tv/live',
     service: 'dari',
-    runforEnv: ['local', 'test'],
+    runForEnv: ['local', 'test'],
   },
 ];
 

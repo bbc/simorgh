@@ -43,7 +43,7 @@ test.describe('liveTvPage', () => {
       test.describe(`Tests for ${suiteName} liveTvPage`, () => {
         test('should return a 200 status code', async ({ request }) => {
           test.skip(
-            !shouldRunForEnv(testSuite.runforEnv),
+            !shouldRunForEnv(testSuite.runForEnv),
             `Skipped for APP_ENV=${appEnvFromProcess}`,
           );
 
@@ -54,7 +54,7 @@ test.describe('liveTvPage', () => {
           page,
         }) => {
           test.skip(
-            !shouldRunForEnv(testSuite.runforEnv),
+            !shouldRunForEnv(testSuite.runForEnv),
             `Skipped for APP_ENV=${appEnvFromProcess}`,
           );
 
