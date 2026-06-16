@@ -820,7 +820,7 @@ describe('Live Page', () => {
       });
 
       const visuallyHiddenTitle = screen.getByText(
-        'Villa gain upper hand with gritty Europa League win at Bologna',
+        'Israeli tanks shell Jabalia camp as heavy fighting continues in north Gaza', // mock data, in production this would be a sport title
       );
       expect(visuallyHiddenTitle).toBeInTheDocument();
       expect(visuallyHiddenTitle).toHaveStyle(

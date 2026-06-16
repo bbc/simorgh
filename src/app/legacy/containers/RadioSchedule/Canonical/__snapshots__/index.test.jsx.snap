@@ -564,6 +564,7 @@ exports[`RadioSchedule With initial data renders correctly for a service 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-40 {

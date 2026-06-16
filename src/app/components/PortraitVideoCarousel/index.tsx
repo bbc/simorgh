@@ -4,11 +4,9 @@ import { RequestContext } from '#app/contexts/RequestContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
-import useOptimizelyVariation, {
-  ExperimentType,
-} from '#app/hooks/useOptimizelyVariation';
 import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import SkipLinkWrapper from '#components/SkipLinkWrapper';
 import styles from './index.styles';
 import PortraitVideoModal from '../PortraitVideoModal';
 import { BumpLoader } from '../MediaLoader';
@@ -43,17 +41,17 @@ const PortraitVideoCarousel = ({
   );
 
   const { isLite, isAmp, nonce } = use(RequestContext);
-  const { translations } = use(ServiceContext);
+  const { translations, recommendations } = use(ServiceContext);
+
+  const { skipLink: skipLinkTranslations } = recommendations || {};
+  const {
+    text: skipLinkText = 'Skip %title% and continue reading',
+    endTextVisuallyHidden = 'End of %title%',
+  } = skipLinkTranslations || {};
+
+  const fallbackTitle = translations?.media?.video || 'Video';
 
   const isHydrated = useHydrationDetection();
-
-  // EXPERIMENT: Homepage Portrait Video 2
-  const playDurationExperimentName = 'newswb_ws_homepage_portrait_video';
-  const playDurationVariation =
-    useOptimizelyVariation({
-      experimentName: playDurationExperimentName,
-      experimentType: ExperimentType.CLIENT_SIDE,
-    }) ?? undefined;
 
   const eventTrackingDataExtended = {
     ...eventTrackingData,
@@ -61,11 +59,6 @@ const PortraitVideoCarousel = ({
       ...eventTrackingData?.groupTracker,
       itemCount: blocks.length,
     },
-    ...(playDurationVariation && {
-      sendOptimizelyEvents: true,
-      experimentName: playDurationExperimentName,
-      experimentVariation: playDurationVariation,
-    }),
   };
 
   const viewTracker = useViewTracker(eventTrackingDataExtended);
@@ -97,62 +90,68 @@ const PortraitVideoCarousel = ({
         className={className}
         {...viewTracker}
       >
-        {link && title ? (
-          <Subheading link={link} {...subheadingClickTracker}>
-            {title}
-          </Subheading>
-        ) : (
-          title && (
-            <Heading
-              level={2}
-              size="doublePica"
-              fontVariant="sansBold"
-              css={styles.heading}
-            >
+        <SkipLinkWrapper
+          endTextId="end-of-portrait-video-carousel"
+          text={skipLinkText}
+          endTextVisuallyHidden={endTextVisuallyHidden}
+          terms={{ '%title%': title || fallbackTitle }}
+        >
+          {link && title ? (
+            <Subheading link={link} {...subheadingClickTracker}>
               {title}
-            </Heading>
-          )
-        )}
-        <noscript>
-          <PortraitVideoNoJs />
-        </noscript>
-        <div css={styles.carouselContainer}>
-          <PortraitCarouselNavigation
-            scrollPaneRef={scrollRef}
-            backgroundColor={backgroundColor}
-          />
-          <ul
-            ref={scrollRef}
-            css={styles.carousel}
-            data-testid="pv-carousel"
-            tabIndex={-1}
-            role="list"
-          >
-            {blocks.map((block, index) => (
-              <PortraitVideoPromo
-                key={block?.model?.video?.id}
-                block={block}
-                onClick={() => handlePromoClick(index)}
-                blockPosition={index}
-                eventTrackingData={eventTrackingDataExtended}
-                playDurationVariation={playDurationVariation}
-                isHydrated={isHydrated}
-              />
-            ))}
-          </ul>
-        </div>
-        {isModalOpen &&
-          selectedVideoIndex !== null &&
-          createPortal(
-            <PortraitVideoModal
-              blocks={blocks}
-              selectedVideoIndex={selectedVideoIndex}
-              onClose={handleCloseModal}
-              nonce={nonce}
-              eventTrackingData={eventTrackingDataExtended}
-            />,
-            document.body,
+            </Subheading>
+          ) : (
+            title && (
+              <Heading
+                level={2}
+                size="doublePica"
+                fontVariant="sansBold"
+                css={styles.heading}
+              >
+                {title}
+              </Heading>
+            )
           )}
+          <noscript>
+            <PortraitVideoNoJs />
+          </noscript>
+          <div css={styles.carouselContainer}>
+            <PortraitCarouselNavigation
+              scrollPaneRef={scrollRef}
+              backgroundColor={backgroundColor}
+            />
+            <ul
+              ref={scrollRef}
+              css={styles.carousel}
+              data-testid="pv-carousel"
+              tabIndex={-1}
+              role="list"
+            >
+              {blocks.map((block, index) => (
+                <PortraitVideoPromo
+                  key={block?.model?.video?.id}
+                  block={block}
+                  onClick={() => handlePromoClick(index)}
+                  blockPosition={index}
+                  eventTrackingData={eventTrackingDataExtended}
+                  isHydrated={isHydrated}
+                />
+              ))}
+            </ul>
+          </div>
+          {isModalOpen &&
+            selectedVideoIndex !== null &&
+            createPortal(
+              <PortraitVideoModal
+                blocks={blocks}
+                selectedVideoIndex={selectedVideoIndex}
+                onClose={handleCloseModal}
+                nonce={nonce}
+                eventTrackingData={eventTrackingDataExtended}
+              />,
+              document.body,
+            )}
+        </SkipLinkWrapper>
       </section>
     </>
   );

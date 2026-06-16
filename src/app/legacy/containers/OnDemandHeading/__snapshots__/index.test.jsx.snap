@@ -58,6 +58,7 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly - dark mode 
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-5 {
@@ -208,6 +209,7 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-5 {
