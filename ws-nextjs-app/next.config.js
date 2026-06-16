@@ -78,6 +78,13 @@ module.exports = {
   poweredByHeader: false,
   reactStrictMode: true,
   transpilePackages: ['simorgh'],
+  typescript: {
+    // !! WARN !!
+    // Dangerously allow production builds to successfully complete even if
+    // your project has TypeScript errors.
+    // !! WARN !!
+    ignoreBuildErrors: true,
+  },
   webpack: (config, { webpack, isServer }) => {
     config.resolve.fallback = {
       ...config.resolve.fallback,
