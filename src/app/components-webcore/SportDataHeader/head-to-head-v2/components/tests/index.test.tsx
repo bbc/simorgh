@@ -119,7 +119,7 @@ describe('Sports Data Header Components', () => {
         const visuallyHiddenSummary = container.querySelector(
           'span[class*="visuallyHiddenText"]',
         );
-        expect(renderedActionTime).toHaveTextContent("65' ر.ت.");
+        expect(renderedActionTime).toHaveTextContent("65' ر . ج");
         expect(visuallyHiddenSummary).toHaveTextContent('Penalty 65 minutes');
       });
 
