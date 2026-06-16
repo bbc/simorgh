@@ -378,6 +378,12 @@ export const service: DefaultServiceConfig = {
           usa: 'အမေရိကန်',
           uzbekistan: 'ဥဇဘက်ကစ္စတန်',
         },
+        tournaments: {
+          fifaWorldCup: 'ဖီဖာ ၂၀၂၆ ကမ္ဘာ့ဖလား',
+        },
+        stages: {
+          groupStage: 'အုပ်စုအဆင့်',
+        },
       },
     },
     mostRead: {

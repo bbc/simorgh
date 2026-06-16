@@ -365,6 +365,12 @@ export const service: DefaultServiceConfig = {
           usa: 'USA',
           uzbekistan: 'Uzbekistaan',
         },
+        tournaments: {
+          fifaWorldCup: 'Waancaa Addunyaa FIFA',
+        },
+        stages: {
+          groupStage: 'Waltajjii Garee',
+        },
       },
     },
     mostRead: {
