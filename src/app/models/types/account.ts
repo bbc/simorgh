@@ -7,6 +7,9 @@ export type IdctaConfig = {
     refresh?: FlagpoleStatus;
   };
   unavailable_url: string;
+  responsive_web?: {
+    settings_url: string;
+  };
   signin_url: string;
   register_url: string;
   settings_url: string;

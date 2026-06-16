@@ -57,7 +57,7 @@ export default async function getIdctaConfig(
     unavailable_url: config.unavailable_url,
     signin_url: config.signin_url,
     register_url: config.register_url,
-    settings_url: config.settings_url,
+    settings_url: config.responsive_web?.settings_url || config.settings_url,
     signout_url: config.signout_url,
     foryou_url: config.foryou_url,
     identity: { idSignedInCookieName: config.identity.idSignedInCookieName },
