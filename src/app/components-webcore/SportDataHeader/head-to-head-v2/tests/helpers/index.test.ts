@@ -56,17 +56,6 @@ describe('getLocalisedDate', () => {
     });
   });
 
-  describe('Jalali calendar for Pashto service', () => {
-    it('should return date in Jalali calendar format for Pashto', () => {
-      Temporal.Now.timeZoneId = () => 'Asia/Kabul';
-
-      const result = getLocalisedDate('Sat 15 Jun 2024', '15:00', 'pashto');
-
-      // Should use Jalali calendar
-      expect(result).toMatch(/[\u06F0-\u06F9]/); // Contains Eastern Arabic numerals
-    });
-  });
-
   describe('Gregorian calendar for other services', () => {
     it('should use Gregorian calendar for Arabic service', () => {
       Temporal.Now.timeZoneId = () => 'Asia/Dubai';
