@@ -72,7 +72,7 @@ const CanonicalATIAnalytics = ({ reverbParams }: ATIAnalyticsProps) => {
       {!isLite &&
         addScript({
           script: sendPageViewBeaconOperaMini,
-          parameters: [operaMiniPageViewReverbURL],
+          parameters: [operaMiniPageViewReverbURL, isOperaProxy],
           nonce,
         })}
       {renderNoScriptTrackingPixel({ reverbParams })}
