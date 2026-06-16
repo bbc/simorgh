@@ -30,6 +30,7 @@ const CurationPromo = ({
   isLive,
   eventTrackingData,
   isPortraitImage,
+  relatedTopic,
 }: Summary) => {
   const { isAmp, isLite, pageType } = use(RequestContext);
   const { translations } = use(ServiceContext);
@@ -94,9 +95,14 @@ const CurationPromo = ({
         )}
       </Promo.Heading>
       {!isLive ? (
-        <Promo.Timestamp className="promo-timestamp">
-          {lastPublished}
-        </Promo.Timestamp>
+        <div>
+          {relatedTopic && (
+            <Promo.A href={relatedTopic.link.url}>{relatedTopic.title}</Promo.A>
+          )}
+          <Promo.Timestamp className="promo-timestamp">
+            {lastPublished}
+          </Promo.Timestamp>
+        </div>
       ) : null}
     </Promo>
   );
