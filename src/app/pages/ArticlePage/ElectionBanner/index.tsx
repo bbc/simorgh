@@ -49,10 +49,11 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
     electionThingIds.includes(thingId),
   );
 
-  const showBanner =
-    !isEditoriallySensitive && validAboutTag && electionBannerEnabled;
+  const showBanner = !isEditoriallySensitive && electionBannerEnabled;
 
   if (!showBanner) return null;
+
+  if (!validAboutTag) return null;
 
   const {
     SIMORGH_APP_ENV,

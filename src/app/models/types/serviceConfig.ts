@@ -111,16 +111,28 @@ export type ServiceConfig = {
   };
   googleSiteVerification?: string;
   promotionalBanner?: PromotionalBannerConfig;
-  electionBanner?: {
-    heights?: {
-      desktop: number;
-      tablet: number;
-      mobile: number;
-    };
-    electionThingIds: string[];
-    iframeSrc: string;
-    iframeDevSrc: string;
+  electionBanner?: ElectionBannerConfig;
+  topicMessageBanners?: TopicMessageBannerConfig[];
+};
+
+export type ElectionBannerConfig = {
+  heights?: {
+    desktop: number;
+    tablet: number;
+    mobile: number;
   };
+  electionThingIds: string[];
+  iframeSrc: string;
+  iframeDevSrc: string;
+};
+
+export type TopicMessageBannerConfig = {
+  thingIds: string[];
+  linkHref: string;
+  heading: string;
+  linkText: string;
+  description?: string;
+  image?: string;
 };
 
 export type PodcastPromo = {
