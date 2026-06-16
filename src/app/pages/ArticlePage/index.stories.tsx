@@ -178,6 +178,10 @@ export const Burmese = () => (
   <ComponentWithServiceContext data={articleDataBurmese} service="burmese" />
 );
 
+Burmese.globals = {
+  service: { service: 'burmese', variant: 'default' },
+};
+
 export const ArticlePageWithRelatedContent = (
   _: StoryArgs,
   { service }: StoryProps,
@@ -206,6 +210,10 @@ export const ArticlePageWithPodcastPromo = () => (
   />
 );
 
+ArticlePageWithPodcastPromo.globals = {
+  service: { service: 'russian', variant: 'default' },
+};
+
 export const ArticlePageWithTopStoriesPidgin = () => (
   <ComponentWithContext
     data={articleDataWithPodcastPromo}
@@ -213,6 +221,10 @@ export const ArticlePageWithTopStoriesPidgin = () => (
     podcastEnabled
   />
 );
+
+ArticlePageWithTopStoriesPidgin.globals = {
+  service: { service: 'pidgin', variant: 'default' },
+};
 
 export const ArticlePageWithMostReadMundo = () => (
   <ComponentWithContext
@@ -222,6 +234,10 @@ export const ArticlePageWithMostReadMundo = () => (
   />
 );
 
+ArticlePageWithMostReadMundo.globals = {
+  service: { service: 'mundo', variant: 'default' },
+};
+
 export const ArticlePageWithPodcastPromoRightToLeft = () => (
   <ComponentWithContext
     data={articleDataWithPodcastPromo}
@@ -229,6 +245,10 @@ export const ArticlePageWithPodcastPromoRightToLeft = () => (
     podcastEnabled
   />
 );
+
+ArticlePageWithPodcastPromoRightToLeft.globals = {
+  service: { service: 'arabic', variant: 'default' },
+};
 
 export const ArticlePageWithPodcastNews = () => (
   <ComponentWithServiceContext
@@ -242,12 +262,20 @@ export const ArticlePageWithPortraitVideo = () => (
   <ComponentWithContext data={articleDataWithPortraitVideo} service="mundo" />
 );
 
+ArticlePageWithPortraitVideo.globals = {
+  service: { service: 'mundo', variant: 'default' },
+};
+
 export const ArticlePageWithPortraitVideoRightToLeft = () => (
   <ComponentWithContext
     data={articleDataWithPortraitVideoRTL}
     service="persian"
   />
 );
+
+ArticlePageWithPortraitVideoRightToLeft.globals = {
+  service: { service: 'persian', variant: 'default' },
+};
 
 export const ArticlePageWithElectionBanner = {
   render: () => (
@@ -292,6 +320,9 @@ export const ArticlePageWithTopicDiscovery = {
       showTopicDiscoveryComponent
     />
   ),
+  globals: {
+    service: { service: 'portuguese', variant: 'default' },
+  },
 };
 
 export const TestArticlePageWithLiteSiteLink = {
@@ -303,6 +334,9 @@ export const TestArticlePageWithLiteSiteLink = {
     />
   ),
   tags: ['!dev'],
+  globals: {
+    service: { service: 'gahuza', variant: 'default' },
+  },
 };
 
 export const TestArticlePageWithLiteSiteLinkRTL = {
@@ -314,6 +348,9 @@ export const TestArticlePageWithLiteSiteLinkRTL = {
     />
   ),
   tags: ['!dev'],
+  globals: {
+    service: { service: 'arabic', variant: 'default' },
+  },
 };
 
 export const TestArticlePageWithVideoCuration = {
@@ -323,4 +360,7 @@ export const TestArticlePageWithVideoCuration = {
       service="pidgin"
     />
   ),
+  globals: {
+    service: { service: 'pidgin', variant: 'default' },
+  },
 };

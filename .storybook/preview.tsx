@@ -213,7 +213,9 @@ const preview: Preview = {
       );
     },
     (Story, context) => (
-      <ToggleContextProvider toggles={context.globals.toggles || {}}>
+      <ToggleContextProvider
+        toggles={context.globals.toggles || {}}
+      >
         <ServiceContextProvider
           service={context.globals.service.service}
           variant={context.globals.service.variant}
