@@ -1,4 +1,4 @@
-import React, { useState, use } from 'react';
+import React, { useState, use, useEffect, useRef } from 'react';
 import Navigation from '#psammead/psammead-navigation/src';
 import { ScrollableNavigation } from '#psammead/psammead-navigation/src/ScrollableNavigation';
 import {
@@ -37,11 +37,55 @@ const CanonicalNavigationContainer: React.FC<
   const { enabled: topBarOJsEnabled } = useToggle('topBarOJs');
   const [isOpen, setIsOpen] = useState(false);
 
+  const dropDownNavRef = useRef<HTMLDivElement>(null);
+  const bottomScrollableNavRef = useRef<HTMLDivElement>(null);
+
   useMediaQuery(`(max-width: ${GROUP_2_MAX_WIDTH_BP}rem)`, event => {
     if (!event.matches) {
       setIsOpen(false);
     }
   });
+
+  useEffect(() => {
+    const handleOnBlur = (event: Event) => {
+      const currentTarget = event.currentTarget as HTMLElement | null;
+      if (!currentTarget) return;
+
+      const allFocusableItems = Array.from(
+        document.querySelectorAll('a[href], button:not([disabled])'),
+      );
+      const lastDropdownIndex = allFocusableItems.indexOf(currentTarget);
+      const itemsAfterDropdown = allFocusableItems.slice(lastDropdownIndex + 1);
+      const nextPageItem = itemsAfterDropdown.find(
+        item =>
+          !dropDownNavRef.current?.contains(item) &&
+          !bottomScrollableNavRef.current?.contains(item),
+      );
+
+      if (!nextPageItem) return;
+      event.preventDefault();
+      setIsOpen(false);
+      (nextPageItem as HTMLElement).focus();
+    };
+
+    const dropDownNav = dropDownNavRef.current;
+    const dropdownItems = dropDownNav?.querySelectorAll(
+      'a[href], button:not([disabled])',
+    );
+    const lastDropdownItem = dropdownItems
+      ? dropdownItems[dropdownItems.length - 1]
+      : null;
+
+    if (lastDropdownItem) {
+      lastDropdownItem.addEventListener('blur', handleOnBlur);
+    }
+
+    return () => {
+      if (lastDropdownItem) {
+        lastDropdownItem.removeEventListener('blur', handleOnBlur);
+      }
+    };
+  }, []);
 
   return (
     <Navigation dir={dir} isOpen={isOpen}>
@@ -65,11 +109,13 @@ const CanonicalNavigationContainer: React.FC<
               />
             )}
           </div>
-          <CanonicalDropdown isOpen={isOpen} css={styles.dropdown}>
-            {dropdownListItems}
-          </CanonicalDropdown>
+          <div role="presentation" ref={dropDownNavRef}>
+            <CanonicalDropdown isOpen={isOpen} css={styles.dropdown}>
+              {dropdownListItems}
+            </CanonicalDropdown>
+          </div>
         </div>
-        <div css={styles.lowerNavWrapper}>
+        <div css={styles.lowerNavWrapper} ref={bottomScrollableNavRef}>
           <ScrollableNavigation
             dir={dir}
             css={styles.bottomRowItems}

@@ -1,0 +1,38 @@
+@use '@scss/themeTokens' as theme;
+
+.promoContainer {
+  padding: 0 #{theme.$spacings-double} #{theme.$spacings-triple};
+  margin: 0;
+  display: flex;
+  overflow-x: auto;
+  width: 100%;
+
+  @media (min-width: #{theme.$mediaQueries-group-4-min-width-bp}) {
+    margin: 0 -#{theme.$spacings-double};
+  }
+}
+
+.labelComponent {
+  @include theme.fontSizes-gel-font-size(brevier);
+  @include theme.fontVariants-gel-font-variant('sans-regular');
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: #{theme.$spacings-quadruple};
+  color: theme.$palette-shadow;
+  padding: 0 #{theme.$spacings-double};
+
+  @media #{theme.$mediaQueries-forced-colours} {
+    border: solid #{theme.pixelsToRem-px-to-rem(3)} transparent;
+    border-bottom: transparent;
+  }
+
+  @media (min-width: #{theme.$mediaQueries-group-4-min-width-bp}) {
+    padding: 0;
+  }
+
+  // Dark UI override
+  :global([data-is-dark-ui='true']) & {
+    color: theme.$palette-grey-2;
+  }
+}

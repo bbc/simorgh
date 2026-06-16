@@ -10,14 +10,22 @@ import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
 import LinkedData from '#app/components/LinkedData';
 import { LiveTVPageProps } from './types';
 import styles from './styles';
+import 'temporal-polyfill/global';
 
-const renderCuration = ({ curation }: { curation: CurationType }) => {
+const renderCuration = ({
+  curation,
+  curationLength,
+}: {
+  curation: CurationType;
+  curationLength: number;
+}) => {
   const {
     summaries,
     curationId,
     title: curationTitle,
     link,
     position,
+    associatedContent: { uri } = {},
     ...curationProps
   } = curation;
   return (
@@ -26,7 +34,8 @@ const renderCuration = ({ curation }: { curation: CurationType }) => {
         summaries={summaries || []}
         title={curationTitle}
         position={position}
-        link={link}
+        link={link || uri}
+        curationLength={curationLength}
         renderVisuallyHiddenH2Title={position === 0}
         curationId={curationId}
         {...curationProps}
@@ -56,6 +65,9 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
   const filteredCurations = curations?.filter(
     curation => curation !== mediaCollectionCuration,
   );
+
+  const totalCurationLength =
+    (mediaCollectionCuration ? 1 : 0) + (filteredCurations?.length || 0);
 
   return (
     <div css={styles.pageWrapper}>
@@ -92,11 +104,19 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
             </Text>
             {mediaCollectionCuration && (
               <div role="presentation" css={styles.playerMargins}>
-                {renderCuration({ curation: mediaCollectionCuration })}
+                {renderCuration({
+                  curation: mediaCollectionCuration,
+                  curationLength: totalCurationLength,
+                })}
               </div>
             )}
             <div css={styles.curationStyles} className="curations">
-              {filteredCurations.map(curation => renderCuration({ curation }))}
+              {filteredCurations?.map(curation =>
+                renderCuration({
+                  curation,
+                  curationLength: totalCurationLength,
+                }),
+              )}
             </div>
           </div>
         </div>

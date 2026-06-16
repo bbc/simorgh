@@ -23,7 +23,9 @@ export type MediaPlayerEvents =
   | 'pluginLoaded'
   | 'fullscreenExit'
   | 'statsNavigation'
-  | 'pause';
+  | 'pause'
+  | 'enterFakeFullscreen'
+  | 'exitFakeFullscreen';
 
 export type EventMapping = Partial<
   Record<MediaPlayerEvents, (_e: SMPEvent) => void>
@@ -121,6 +123,7 @@ export type ConfigBuilderProps = {
   embedUrl?: string;
   embedded?: boolean;
   lang: string;
+  defaultImage: string;
 };
 
 export type Orientations = 'landscape' | 'portrait';
@@ -378,4 +381,5 @@ export type BuildConfigProps = {
   adsEnabled?: boolean;
   showAdsBasedOnLocation?: boolean;
   embedded?: boolean;
+  defaultImage: string;
 };

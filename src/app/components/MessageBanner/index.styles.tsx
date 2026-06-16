@@ -78,6 +78,10 @@ const styles = {
         paddingInlineStart: '0.5rem',
       },
     }),
+  callToActionLinkText: ({ palette }: Theme) =>
+    css({
+      color: palette.BLACK,
+    }),
   flex: ({ mq }: Theme) =>
     css({
       display: 'flex',

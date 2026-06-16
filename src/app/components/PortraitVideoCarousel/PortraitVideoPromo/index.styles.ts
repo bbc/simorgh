@@ -14,7 +14,6 @@ const styles = {
   container: ({ mq, spacings, gridWidths }: Theme) =>
     css({
       all: 'unset',
-      scrollSnapAlign: 'start',
       textDecoration: 'none',
       display: 'block',
       position: 'relative',
@@ -110,13 +109,6 @@ const styles = {
       fill: 'currentcolor',
       width: `${pixelsToRem(12)}rem`,
       height: `${pixelsToRem(12)}rem`,
-    }),
-  // EXPERIMENT: Portrait Video Homepage Play Duration Sizing
-  playIconLarge: () =>
-    css({
-      fill: 'currentcolor',
-      width: `${pixelsToRem(15)}rem`,
-      height: `${pixelsToRem(15)}rem`,
     }),
   duration: ({ palette, spacings }: Theme) =>
     css({

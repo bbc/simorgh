@@ -59,9 +59,6 @@ export default {
   preroll: {
     enabled: true,
   },
-  podcastEpisodeLinkedData: {
-    enabled: true,
-  },
   podcastPromo: {
     enabled: true,
   },
@@ -80,11 +77,21 @@ export default {
   scriptLink: {
     enabled: true,
   },
+  sportDataPolling: {
+    enabled: true,
+  },
+  showSportDataHeader: {
+    enabled: true,
+  },
   topBarOJs: {
     enabled: true,
   },
   variantCookie: {
     enabled: true,
+  },
+  uasPersonalization: {
+    enabled: true,
+    value: 'hindi',
   },
   webVitalsMonitoring: {
     enabled: true,

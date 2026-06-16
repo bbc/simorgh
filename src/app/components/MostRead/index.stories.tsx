@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import Url from 'url-parse';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import metadata from './metadata.json';
@@ -24,11 +23,9 @@ const Component = ({
   useEffect(() => {
     const loadPageData = async () => {
       const response = await fetch(
-        new Url(
-          `data/${service}/mostRead/${
-            variant === 'default' ? 'index' : variant
-          }.json`,
-        ).toString(),
+        `data/${service}/mostRead/${
+          variant === 'default' ? 'index' : variant
+        }.json`,
       );
 
       const { data } = await response.json();

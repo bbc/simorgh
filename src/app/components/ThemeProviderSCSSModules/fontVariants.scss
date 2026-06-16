@@ -30,9 +30,9 @@
 }
 
 @mixin get-serif-regular {
-  font-family: var(--serif-medium-font-family, var(--sans-regular-font-family));
-  font-style: var(--serif-medium-font-style, var(--sans-regular-font-style));
-  font-weight: var(--serif-medium-font-weight, var(--sans-regular-font-weight));
+  font-family: var(--serif-regular-font-family, var(--serif-medium-font-family, var(--sans-regular-font-family)));
+  font-style: var(--serif-regular-font-style, var(--serif-medium-font-style, var(--sans-regular-font-style)));
+  font-weight: var(--serif-regular-font-weight, var(--serif-medium-font-weight, var(--sans-regular-font-weight)));
 }
 
 @mixin get-serif-medium {

@@ -63,6 +63,10 @@ export default {
     css({
       paddingBottom: `${spacings.TRIPLE}rem`,
 
+      [mq.GROUP_3_ONLY]: {
+        paddingBottom: `${spacings.FULL}rem`,
+      },
+
       // Hide content after Continue Reading button
       '[id="continue-reading-button"] ~ *': {
         display: 'none',
@@ -86,6 +90,14 @@ export default {
       },
     }),
   hideRelatedTopics: ({ mq }: Theme) =>
+    css({
+      display: 'none',
+
+      [mq.GROUP_4_MIN_WIDTH]: {
+        display: 'block',
+      },
+    }),
+  hideTopicDiscovery: ({ mq }: Theme) =>
     css({
       display: 'none',
 
@@ -122,17 +134,17 @@ export default {
         paddingBottom: `${spacings.QUADRUPLE}rem`,
       },
     }),
-  adaptiveMediaCurationRow: ({ spacings, mq }: Theme) =>
+  mediaCurationRow: ({ spacings, mq }: Theme) =>
     css({
       gridColumn: '1 / span 12',
-      margin: `0 ${spacings.FULL}rem ${spacings.TRIPLE}rem`,
+      margin: `${spacings.TRIPLE}rem ${spacings.FULL}rem ${spacings.TRIPLE}rem`,
 
       [mq.GROUP_2_MIN_WIDTH]: {
-        margin: `0 ${spacings.DOUBLE}rem ${spacings.TRIPLE}rem`,
+        margin: `${spacings.TRIPLE}rem ${spacings.DOUBLE}rem ${spacings.TRIPLE}rem`,
       },
 
       [mq.GROUP_4_MIN_WIDTH]: {
-        margin: `0 0 ${spacings.TRIPLE}rem`,
+        margin: `${spacings.TRIPLE}rem 0 ${spacings.TRIPLE}rem`,
       },
     }),
   featuresSection: ({ spacings, mq }: Theme) =>
@@ -189,6 +201,7 @@ export default {
     css({
       padding: `0 ${pixelsToRem(8)}rem`,
       marginBottom: `${spacings.DOUBLE}rem`,
+      marginTop: `${spacings.DOUBLE}rem`,
       [mq.GROUP_1_MIN_WIDTH]: {
         marginBottom: `${spacings.TRIPLE}rem`,
       },

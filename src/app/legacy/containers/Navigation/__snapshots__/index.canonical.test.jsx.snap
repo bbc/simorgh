@@ -110,6 +110,7 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 @media (max-width: 37.4375rem) {

@@ -9,9 +9,9 @@ import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import MetadataContainer from '../../components/Metadata';
 import LinkedData from '../../components/LinkedData';
-import { LiveRadioPageData } from './types';
+import { LiveRadioPageProps } from './types';
 
-const LiveRadioPage = ({ pageData }: { pageData: LiveRadioPageData }) => {
+const LiveRadioPage = ({ pageData }: { pageData: LiveRadioPageProps }) => {
   const {
     language,
     name,

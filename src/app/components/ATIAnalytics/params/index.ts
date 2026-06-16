@@ -5,6 +5,17 @@ export default ({
   requestContext,
   serviceContext,
   atiData,
-}: ReverbDetailsProviders) => {
-  return buildPageReverbParams({ atiData, requestContext, serviceContext });
+  isSignedIn,
+  hashedId,
+}: ReverbDetailsProviders & {
+  isSignedIn?: boolean;
+  hashedId?: string | null;
+}) => {
+  return buildPageReverbParams({
+    atiData,
+    requestContext,
+    serviceContext,
+    isSignedIn,
+    hashedId,
+  });
 };

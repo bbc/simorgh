@@ -1,5 +1,6 @@
 import getToggleDefinitions from '#app/lib/utilities/getToggleDefinition';
 import isLocal from '#app/lib/utilities/isLocal';
+import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
 import fetchIdctaConfig from '../fetchIdctaConfig';
 import getIdctaConfig from '.';
 
@@ -19,13 +20,6 @@ describe('getIdctaConfig', () => {
     },
   };
   const mockService = 'mundo';
-  const mockIdctaConfig = {
-    idctaBaseUrl: 'https://idcta.test.api.bbc.com/idcta',
-    signInUrl: '/signin',
-    registerUrl: '/register',
-    'id-availability': 'GREEN',
-    initialIsSignedIn: false,
-  };
 
   beforeEach(() => {
     jest.clearAllMocks();
@@ -51,7 +45,7 @@ describe('getIdctaConfig', () => {
 
     const result = await getIdctaConfig(mockToggles, mockService);
 
-    expect(result).toEqual(mockIdctaConfig);
+    expect(result).toEqual(expect.objectContaining(mockIdctaConfig));
     expect(mockFetchIdctaConfig).toHaveBeenCalled();
   });
 
@@ -64,7 +58,7 @@ describe('getIdctaConfig', () => {
 
     const result = await getIdctaConfig(mockToggles, 'hindi');
 
-    expect(result).toEqual(mockIdctaConfig);
+    expect(result).toEqual(expect.objectContaining(mockIdctaConfig));
     expect(mockFetchIdctaConfig).toHaveBeenCalled();
   });
 
@@ -88,7 +82,7 @@ describe('getIdctaConfig', () => {
 
     const result = await getIdctaConfig(mockToggles, mockService);
 
-    expect(result).toEqual(mockIdctaConfig);
+    expect(result).toEqual(expect.objectContaining(mockIdctaConfig));
   });
 
   it('should return null when config is missing id-availability field', async () => {
@@ -101,5 +95,80 @@ describe('getIdctaConfig', () => {
     const result = await getIdctaConfig(mockToggles, mockService);
 
     expect(result).toBeNull();
+  });
+
+  it('should set initialIsSignedIn to true when x-id-oidc-signedin header is "1"', async () => {
+    mockFetchIdctaConfig.mockResolvedValue(mockIdctaConfig);
+
+    const result = await getIdctaConfig(mockToggles, mockService, {
+      'x-id-oidc-signedin': '1',
+    });
+
+    expect(result?.initialIsSignedIn).toBe(true);
+  });
+
+  it('should set initialIsSignedIn to false when x-id-oidc-signedin header is "0"', async () => {
+    mockFetchIdctaConfig.mockResolvedValue(mockIdctaConfig);
+
+    const result = await getIdctaConfig(mockToggles, mockService, {
+      'x-id-oidc-signedin': '0',
+    });
+
+    expect(result?.initialIsSignedIn).toBe(false);
+  });
+
+  it('should set initialIsSignedIn to false when x-id-oidc-signedin header is absent', async () => {
+    mockFetchIdctaConfig.mockResolvedValue(mockIdctaConfig);
+
+    const result = await getIdctaConfig(mockToggles, mockService, {});
+
+    expect(result?.initialIsSignedIn).toBe(false);
+  });
+
+  it('should strip extra fields not required by AccountContext', async () => {
+    mockFetchIdctaConfig.mockResolvedValue({
+      ...mockIdctaConfig,
+      accessTokenUrl: 'https://bbc.com/access_token',
+      announce_url: 'https://bbc.com/announce',
+      randomData: 'should be stripped',
+    });
+
+    const result = await getIdctaConfig(mockToggles, mockService);
+
+    expect(result).not.toHaveProperty('accessTokenUrl');
+    expect(result).not.toHaveProperty('announce_url');
+    expect(result).not.toHaveProperty('randomData');
+  });
+
+  it('should set initialIsSignedIn to false when x-id-oidc-signedin header has an invalid value', async () => {
+    mockFetchIdctaConfig.mockResolvedValue(mockIdctaConfig);
+
+    const result = await getIdctaConfig(mockToggles, mockService, {
+      'x-id-oidc-signedin': 'invalid',
+    });
+
+    expect(result?.initialIsSignedIn).toBe(false);
+  });
+
+  it('should include availability.refresh when present in config', async () => {
+    mockFetchIdctaConfig.mockResolvedValue({
+      ...mockIdctaConfig,
+      availability: { refresh: 'GREEN' },
+    });
+
+    const result = await getIdctaConfig(mockToggles, mockService);
+
+    expect(result?.availability).toEqual({ refresh: 'GREEN' });
+  });
+
+  it('should set availability to undefined when availability is not present in config', async () => {
+    mockFetchIdctaConfig.mockResolvedValue({
+      ...mockIdctaConfig,
+      availability: undefined,
+    });
+
+    const result = await getIdctaConfig(mockToggles, mockService);
+
+    expect(result?.availability).toBeUndefined();
   });
 });

@@ -1,9 +1,7 @@
 import { forwardRef } from 'react';
 import styled from '@emotion/styled';
 import {
-  GEL_GROUP_0_SCREEN_WIDTH_MAX,
   GEL_GROUP_1_SCREEN_WIDTH_MIN,
-  GEL_GROUP_1_SCREEN_WIDTH_MAX,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
@@ -18,8 +16,7 @@ const SVG_WRAPPER_MAX_WIDTH_ABOVE_1280PX = '63rem';
 const SIZE_OF_BRAND_LINK_WITH_VARIANT_BELOW_239PX = '2.625rem';
 
 const SvgWrapper = styled.div`
-  min-height: inherit;
-  height: 100%;
+  flex: 1;
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -27,13 +24,7 @@ const SvgWrapper = styled.div`
   flex-wrap: wrap;
   max-width: ${SVG_WRAPPER_MAX_WIDTH_ABOVE_1280PX};
   margin: 0 auto;
-
-  @media (max-width: ${({ isLongBrand }) =>
-      isLongBrand
-        ? GEL_GROUP_1_SCREEN_WIDTH_MAX
-        : GEL_GROUP_0_SCREEN_WIDTH_MAX}) {
-    display: block;
-  }
+  column-gap: ${GEL_SPACING_HLF};
 `;
 
 const Banner = styled.div`
@@ -41,19 +32,24 @@ const Banner = styled.div`
   min-height: ${44 / 16}rem;
   width: 100%;
   padding: 0 ${GEL_SPACING};
+  display: flex;
+  align-items: stretch;
 
   @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
-    min-height: ${60 / 16}rem;
+    min-height: ${props =>
+      props.isLanguagesPage ? `${44 / 16}rem` : `${60 / 16}rem`};
     padding: 0 ${GEL_SPACING};
   }
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    min-height: ${60 / 16}rem;
+    min-height: ${props =>
+      props.isLanguagesPage ? `${44 / 16}rem` : `${60 / 16}rem`};
     padding: 0 ${GEL_SPACING_DBL};
   }
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    min-height: ${64 / 16}rem;
+    min-height: ${props =>
+      props.isLanguagesPage ? `${44 / 16}rem` : `${64 / 16}rem`};
   }
 `;
 
@@ -89,13 +85,15 @@ const BrandSvg = styled.svg`
   color: ${props => props.theme.palette.BRAND_LOGO};
   fill: currentColor;
   height: ${20 / 16}rem;
+  max-width: 100%;
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     height: ${24 / 16}rem;
   }
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    height: ${30 / 16}rem;
+    height: ${props =>
+      props.isLanguagesPage ? `${24 / 16}rem` : `${30 / 16}rem`};
   }
 
   @media screen and (-ms-high-contrast: active), print {
@@ -126,7 +124,7 @@ const StyledBrand = ({
   product,
   serviceLocalisedName = null,
   svg,
-  isLongBrand,
+  isLanguagesPage = false,
 }) => {
   return svg ? (
     <>
@@ -142,7 +140,7 @@ const StyledBrand = ({
         focusable="false"
         aria-hidden="true"
         height="32"
-        isLongBrand={isLongBrand}
+        isLanguagesPage={isLanguagesPage && linkId !== 'footer'}
       >
         {svg.group}
       </BrandSvg>
@@ -162,21 +160,27 @@ const Brand = forwardRef((props, ref) => {
     minWidth,
     url = null,
     scriptLink = null,
-    isLongBrand = false,
     skipLink = null,
     linkId = null,
     children,
+    serviceLocalisedName,
+    isLanguagesPage,
     ...rest
   } = props;
 
   return (
-    <Banner svgHeight={svgHeight} scriptLink={scriptLink} {...rest}>
-      <SvgWrapper ref={ref} isLongBrand={isLongBrand}>
+    <Banner
+      svgHeight={svgHeight}
+      scriptLink={scriptLink}
+      isLanguagesPage={isLanguagesPage && linkId !== 'footer'}
+      {...rest}
+    >
+      <SvgWrapper ref={ref} className="brand-svg-wrapper">
         {url ? (
           <StyledLink
             href={url}
             id={linkId}
-            className="focusIndicatorRemove"
+            className="brand-link focusIndicatorRemove"
             // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
             aria-labelledby={`BrandLink-${linkId}`}
             scriptLink={scriptLink}
@@ -188,7 +192,7 @@ const Brand = forwardRef((props, ref) => {
         )}
         {skipLink}
         {children}
-        {scriptLink && <div>{scriptLink}</div>}
+        {scriptLink && <div className="script-link-wrapper">{scriptLink}</div>}
       </SvgWrapper>
     </Banner>
   );

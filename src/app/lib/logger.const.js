@@ -16,6 +16,7 @@ const logCodes = {
   DATA_RESPONSE_FROM_CACHE: 'data_response_from_cache',
   BFF_FETCH_ERROR: 'bff_fetch_error',
   IDCTA_FETCH_ERROR: 'idcta_fetch_error',
+  UAS_API_ERROR: 'uas_api_error',
 
   // Files
   LOCAL_SENDFILE_ERROR: 'local_sendfile_error',
@@ -89,6 +90,10 @@ const logCodes = {
 
   // ThemeProvider error
   THEME_PROVIDER_ERROR: 'theme_provider_error',
+
+  // Build manifest errors
+  BUILD_MANIFEST_CSS_READ_ERROR: 'build_manifest_css_read_error',
+  DYNAMIC_IMPORT_CSS_READ_ERROR: 'dynamic_import_css_read_error',
 };
 
 module.exports = logCodes;

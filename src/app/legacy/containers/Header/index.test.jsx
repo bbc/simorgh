@@ -30,11 +30,6 @@ const defaultToggleState = {
   },
 };
 
-jest.mock('react-router-dom', () => ({
-  ...jest.requireActual('react-router-dom'),
-  useRouteMatch: () => ({ path: '/news', params: {} }),
-}));
-
 const HeaderContainerWithContext = ({ renderOptions }) =>
   render(<HeaderContainer />, {
     toggles: defaultToggleState,
@@ -155,6 +150,30 @@ describe(`Header`, () => {
       });
 
       expect(container.querySelectorAll(scriptLinkSelector).length).toBe(0);
+    });
+
+    it('should render script link for ukchina article pages', () => {
+      const { container } = HeaderContainerWithContext({
+        renderOptions: {
+          pageType: ARTICLE_PAGE,
+          service: 'ukchina',
+          variant: 'trad',
+        },
+      });
+
+      expect(container.querySelectorAll(scriptLinkSelector).length).toBe(1);
+    });
+
+    it('should render script link for ukchina home pages', () => {
+      const { container } = HeaderContainerWithContext({
+        renderOptions: {
+          pageType: HOME_PAGE,
+          service: 'ukchina',
+          variant: 'trad',
+        },
+      });
+
+      expect(container.querySelectorAll(scriptLinkSelector).length).toBe(1);
     });
 
     describe('when service is uzbek', () => {
@@ -299,6 +318,31 @@ describe(`Header`, () => {
 
       expect(container).not.toContainElement(privacyBanner);
       expect(container).not.toContainElement(cookieBanner);
+    });
+  });
+
+  describe('WSLanguagesHeader', () => {
+    it('should render the logo banner on the WS Languages Homepage', async () => {
+      HeaderContainerWithContext({
+        renderOptions: {
+          pageType: HOME_PAGE,
+          service: 'ws',
+          pathname: '/ws/languages',
+        },
+      });
+      expect(await screen.findByTestId('logo-banner')).toBeInTheDocument();
+    });
+
+    it('should not render the logo banner for ws service on a non-languages page', () => {
+      HeaderContainerWithContext({
+        renderOptions: {
+          pageType: HOME_PAGE,
+          service: 'ws',
+          pathname: '/ws',
+        },
+      });
+
+      expect(screen.queryByTestId('logo-banner')).toBeNull();
     });
   });
 });
