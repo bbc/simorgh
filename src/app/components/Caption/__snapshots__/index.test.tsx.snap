@@ -64,6 +64,7 @@ exports[`Captions should render caption text with example Farsi offscreen text 1
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 <div>
@@ -152,6 +153,7 @@ exports[`Captions should render caption text with example News offscreen text 1`
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 <div>
@@ -240,6 +242,7 @@ exports[`Captions should render caption with multiple paragraphs 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 <div>
@@ -338,6 +341,7 @@ exports[`Captions should render correctly with inline block 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-2 {

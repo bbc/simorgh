@@ -77,10 +77,10 @@ export default {
     enabled: true,
   },
   sportDataPolling: {
-    enabled: true,
+    enabled: false,
   },
   showSportDataHeader: {
-    enabled: true,
+    enabled: false,
   },
   topBarOJs: {
     enabled: true,

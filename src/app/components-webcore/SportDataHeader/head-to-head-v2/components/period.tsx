@@ -1,3 +1,5 @@
+import { use } from 'react';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import { getFallbackFootballPeriodLabel } from '../helpers/event-summary';
 import styles from '../index.styles';
 import type { EventStatusType, RunningScores } from '../types';
@@ -5,6 +7,7 @@ import type { EventStatusType, RunningScores } from '../types';
 interface PeriodLabels {
   value: string;
   accessible: string;
+  translation?: string;
 }
 
 interface PeriodProps {
@@ -20,15 +23,20 @@ const Period = ({
   homeRunningScores,
   awayRunningScores,
 }: PeriodProps) => {
-  const period = getFallbackFootballPeriodLabel(
+  const { translations } = use(ServiceContext);
+
+  const period = getFallbackFootballPeriodLabel({
     labels,
     status,
     homeRunningScores,
     awayRunningScores,
-  );
+    translations: translations?.sport,
+  });
+
+  const periodValue = period?.translation || period?.value;
   return (
     <div css={styles.period} aria-hidden="true">
-      <div>{period.value}</div>
+      <div>{periodValue}</div>
     </div>
   );
 };

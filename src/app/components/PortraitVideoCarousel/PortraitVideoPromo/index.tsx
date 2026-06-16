@@ -25,8 +25,6 @@ type PortraitVideoPromoProps = {
   eventTrackingData: EventTrackingData;
   isHydrated?: boolean;
   blockPosition?: number;
-  // EXPERIMENT: Portrait Video Homepage Play Duration Sizing
-  playDurationVariation?: string;
   onClick?: () => void;
 };
 
@@ -35,8 +33,6 @@ export default ({
   blockPosition = 0,
   eventTrackingData,
   onClick,
-  // EXPERIMENT: Portrait Video Homepage Play Duration Sizing
-  playDurationVariation,
   isHydrated,
 }: PortraitVideoPromoProps) => {
   const { mq } = useTheme();
@@ -47,8 +43,6 @@ export default ({
   } = use(ServiceContext);
 
   const { images, video } = block.model;
-  // EXPERIMENT: Portrait Video Homepage Play Duration Sizing
-  const isLargeVariation = playDurationVariation === 'large';
 
   const imageUrl = images?.[0]?.source ?? defaultImage;
   const imageUrlTemplate = images?.[0]?.urlTemplate;
@@ -102,12 +96,6 @@ export default ({
 
   const eventTrackingDataExtended = {
     ...eventTrackingData,
-    // EXPERIMENT: Portrait Video Homepage Play Duration Sizing
-    ...(playDurationVariation && {
-      sendOptimizelyEvents: true,
-      experimentName: 'newswb_ws_play_and_duration_size_increase_2',
-      experimentVariant: playDurationVariation,
-    }),
     viewThreshold: 1,
     itemTracker: {
       type: 'portrait-video-promo',
@@ -151,18 +139,9 @@ export default ({
           <div css={styles.textWrapper}>
             {mediaISO8601Duration && (
               <div css={styles.durationContainer} aria-hidden="true">
-                <Play
-                  css={
-                    // EXPERIMENT: Portrait Video Homepage Play Duration Sizing
-                    isLargeVariation ? styles.playIconLarge : styles.playIcon
-                  }
-                />
+                <Play css={styles.playIcon} />
                 <time dateTime={mediaISO8601Duration}>
-                  <Text
-                    // EXPERIMENT: Portrait Video Homepage Play Duration Sizing
-                    size={isLargeVariation ? 'pica' : 'brevier'}
-                    css={styles.duration}
-                  >
+                  <Text size="brevier" css={styles.duration}>
                     {durationString}
                   </Text>
                 </time>

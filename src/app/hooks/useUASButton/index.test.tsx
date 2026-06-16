@@ -8,9 +8,11 @@ import uasApiRequest from '#app/lib/uasApi';
 import uasKeys from '#app/lib/uasApi/queryKeys';
 import { AccountContext } from '#app/contexts/AccountContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import useUASMetadataSync from '#app/hooks/useUASMetadataSync/index';
 import useUASButton, { UASAction, UseUASButtonProps } from './index';
 
 jest.mock('#app/hooks/useUASFetchSaveStatus');
+jest.mock('#app/hooks/useUASMetadataSync');
 jest.mock('#app/lib/uasApi');
 jest.mock('react', () => ({
   ...jest.requireActual('react'),
@@ -59,14 +61,20 @@ jest.mock('@tanstack/react-query', () => {
 
 const mockUseUASFetchSaveStatus = useUASFetchSaveStatus as jest.Mock;
 const mockUasApiRequest = uasApiRequest as jest.Mock;
+const mockUseUASMetadataSync = useUASMetadataSync as jest.Mock;
 
 describe('useUASButton', () => {
   const defaultProps = {
     articleId: '123',
-    articleTitle: 'Test Article',
     articlePageData: {
+      promo: {
+        headlines: { seoHeadline: 'Test Article' },
+        images: { defaultPromoImage: { blocks: [] } },
+      },
       metadata: { locators: { canonicalUrl: 'https://bbc.com/article' } },
-    },
+      content: { model: { blocks: [] } },
+      mostRead: { summary: [] },
+    } as unknown as UseUASButtonProps['articlePageData'],
   } as UseUASButtonProps;
 
   beforeEach(() => {
@@ -77,10 +85,12 @@ describe('useUASButton', () => {
       isLoading: false,
       isUpdating: false,
       error: null,
+      savedMetadata: undefined,
     });
 
     (use as jest.Mock).mockImplementation(context => {
-      if (context === AccountContext) return { hashedUserId: 'user-123' };
+      if (context === AccountContext)
+        return { hashedUserId: 'user-123', isRefreshAvailable: true };
       if (context === ServiceContext) return { service: 'hindi' };
       return {};
     });
@@ -112,6 +122,7 @@ describe('useUASButton', () => {
             action: 'favourited',
             resourceType: 'article',
           }),
+          isRefreshAvailable: true,
         }),
       );
     });
@@ -125,7 +136,9 @@ describe('useUASButton', () => {
 
       expect(mockSetQueryData).toHaveBeenCalledWith(
         uasKeys.favouriteStatus('user-123', '123'),
-        true,
+        expect.objectContaining({
+          isSaved: true,
+        }),
       );
     });
 
@@ -138,6 +151,7 @@ describe('useUASButton', () => {
 
       expect(mockUasApiRequest).toHaveBeenCalledWith('DELETE', 'favourites', {
         globalId: 'urn:bbc:world-service-news:article:123',
+        isRefreshAvailable: true,
       });
     });
 
@@ -150,7 +164,9 @@ describe('useUASButton', () => {
 
       expect(mockSetQueryData).toHaveBeenCalledWith(
         uasKeys.favouriteStatus('user-123', '123'),
-        false,
+        expect.objectContaining({
+          isSaved: false,
+        }),
       );
     });
 
@@ -180,6 +196,35 @@ describe('useUASButton', () => {
       expect(mockInvalidateQueries).toHaveBeenCalledWith({
         queryKey: uasKeys.favouritesList('user-123'),
       });
+    });
+  });
+
+  describe('useUASMetadataSync integration', () => {
+    it('calls useUASMetadataSync with correct parameters when article is saved with metadata', () => {
+      const mockMetadata = {
+        title: 'Saved Article',
+        promoImage: 'https://ichef.bbc.co.uk/saved.jpg',
+      };
+
+      mockUseUASFetchSaveStatus.mockReturnValue({
+        isSaved: true,
+        isLoading: false,
+        error: null,
+        savedMetadata: mockMetadata,
+      });
+
+      renderHook(() => useUASButton(defaultProps));
+
+      expect(mockUseUASMetadataSync).toHaveBeenCalledWith(
+        expect.objectContaining({
+          articlePageData: defaultProps.articlePageData,
+          articleId: '123',
+          service: 'hindi',
+          isSaved: true,
+          savedArticleMetadata: mockMetadata,
+          onMetadataOutOfDate: expect.any(Function),
+        }),
+      );
     });
   });
 });

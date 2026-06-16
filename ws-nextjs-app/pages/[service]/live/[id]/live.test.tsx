@@ -711,14 +711,11 @@ describe('Live Page', () => {
       expect(screen.queryByTestId('live-label')).not.toBeInTheDocument();
     });
 
-    it('should fallback to page isLive value when isSportDataLive is nullish', async () => {
+    it('should fallback to page isLive value when sportDataEventContent is nullish', async () => {
       const pageDataWithSportData = {
         ...mockPageData,
         isLive: true,
-        sportDataEventContent: {
-          ...sportDataFixture.data.sportDataEventContent,
-          live: undefined,
-        },
+        sportDataEventContent: null,
       } as unknown as ComponentProps['pageData'];
       mockPollingUpdate(pageDataWithSportData);
 
@@ -727,6 +724,28 @@ describe('Live Page', () => {
       });
 
       expect(screen.getByTestId('live-label')).toBeInTheDocument();
+    });
+
+    it('should fallback to page isLive value when sportHeaderEnabled toggle is disabled', async () => {
+      const pageDataWithSportData = {
+        ...mockPageData,
+        isLive: true,
+        sportDataEventContent: {
+          ...sportDataFixture.data.sportDataEventContent,
+          live: false,
+        },
+      } as unknown as ComponentProps['pageData'];
+      mockPollingUpdate(pageDataWithSportData);
+
+      (useToggle as jest.Mock).mockReturnValue({ enabled: false });
+
+      await act(async () => {
+        render(<Live pageData={pageDataWithSportData} />);
+      });
+
+      expect(screen.getByTestId('live-label')).toBeInTheDocument();
+
+      (useToggle as jest.Mock).mockReturnValue({ enabled: true });
     });
 
     it('should render HeadToHeadV2 when sportDataEventContent is present and not in live env', async () => {
@@ -801,7 +820,7 @@ describe('Live Page', () => {
       });
 
       const visuallyHiddenTitle = screen.getByText(
-        'Villa gain upper hand with gritty Europa League win at Bologna',
+        'Israeli tanks shell Jabalia camp as heavy fighting continues in north Gaza', // mock data, in production this would be a sport title
       );
       expect(visuallyHiddenTitle).toBeInTheDocument();
       expect(visuallyHiddenTitle).toHaveStyle(

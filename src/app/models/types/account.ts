@@ -3,6 +3,9 @@ type FlagpoleStatus = 'GREEN' | 'RED';
 
 export type IdctaConfig = {
   'id-availability': FlagpoleStatus;
+  availability?: {
+    refresh?: FlagpoleStatus;
+  };
   unavailable_url: string;
   signin_url: string;
   register_url: string;
@@ -17,6 +20,7 @@ export type IdctaConfig = {
 
 export type AccountContextProps = {
   isIdctaAvailable: boolean;
+  isRefreshAvailable: boolean;
   isSignedIn: boolean;
   signInUrl?: string;
   registerUrl?: string;

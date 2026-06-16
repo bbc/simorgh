@@ -42,17 +42,19 @@ export default {
       }),
   container:
     ({ isConciseView }: { isConciseView?: boolean }) =>
-    ({ mq, palette }: Theme) =>
+    ({ mq, palette, spacings }: Theme) =>
       css({
         fontFamily: 'ReithSans, Helvetica, Arial, freesans, sans-serif',
         fontWeight: 400,
         fontFeatureSettings: "'ss01' off",
         color: palette.LUNAR_LIGHT,
-        padding: isConciseView ? '8px' : '0',
-        ...(!isConciseView && { paddingBottom: `${pixelsToRem(24)}rem` }),
+        padding: isConciseView ? `${spacings.FULL}rem` : 0,
+        ...(!isConciseView && { paddingBottom: `${spacings.TRIPLE}rem` }),
         [mq.GROUP_2_MAX_WIDTH]: {
-          paddingTop: isConciseView ? '8px' : '0',
-          ...(!isConciseView && { paddingBottom: `${pixelsToRem(8)}rem` }),
+          paddingTop: isConciseView ? `${spacings.FULL}rem` : 0,
+          ...(!isConciseView && {
+            paddingBottom: `${spacings.FULL}rem`,
+          }),
         },
       }),
 
@@ -154,58 +156,6 @@ export default {
       lineHeight: 1.08,
       paddingInline: `${pixelsToRem(32)}rem`,
     },
-  }),
-
-  // ==================== Footer ====================
-  footer: css({
-    fontSize: `${pixelsToRem(14)}rem`,
-    lineHeight: 1.2857142857142858,
-    paddingBlockEnd: `${pixelsToRem(16)}rem`,
-    textAlign: 'center',
-    [`@media (min-width: ${pixelsToRem(600)}rem)`]: {
-      fontSize: '1rem',
-      lineHeight: 1.375,
-      paddingBlockEnd: `${pixelsToRem(8)}rem`,
-    },
-  }),
-
-  footerTextWrapper: css({
-    display: 'inline-block',
-    fontSize: `${pixelsToRem(13)}rem`,
-    '&:not(:first-child)': {
-      marginInlineStart: `${pixelsToRem(8)}rem`,
-    },
-  }),
-
-  venue: css({
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center',
-    paddingBlockEnd: `${pixelsToRem(4)}rem`,
-  }),
-
-  attendanceValue: css({
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center',
-    flexWrap: 'wrap',
-  }),
-
-  venueLabel: css({
-    color: '#a8a8a8',
-    paddingInlineEnd: `${pixelsToRem(4)}rem`,
-  }),
-
-  attendanceLabel: css({
-    color: '#a8a8a8',
-    paddingInlineEnd: `${pixelsToRem(4)}rem`,
-  }),
-
-  horizontalRule: css({
-    width: `${pixelsToRem(12)}rem`,
-    border: 'none',
-    borderBlockStart: `${pixelsToRem(1)}rem solid #FFD230`,
-    paddingBlockEnd: `${pixelsToRem(4)}rem`,
   }),
 
   // ==================== Grouped Events ====================

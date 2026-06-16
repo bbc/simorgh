@@ -32,11 +32,12 @@ export type Action = {
   timeLabel: {
     value: string;
     accessible: string;
+    translated?: string;
   };
 };
 
 export type PlayerActions = {
-  playerId: string;
+  playerId?: string;
   playerName: string;
   actionType: string;
   actions: Action[];
@@ -87,10 +88,9 @@ export type Team = {
    */
   shortName: string;
   /**
-   * The urn for the team. This is used to lookup the team badge.
-   * If no urn is provided or a badge does not exist, a placeholder badge is used.
+   * The urn for the team. This is used for creating test-ids.
    */
-  urn?: string;
+  urn: string;
   /**
    * The fulltime and halftime running scores for the team.
    */
@@ -113,6 +113,10 @@ export type Team = {
    * Actions are not rendered in concise view.
    */
   actions?: PlayerActions[];
+  /**
+   * Either a badge or flag iChef image URL, or a badge placeholder image URL passed down from the BFF.
+   */
+  imageSrc: string | null;
 };
 
 export type HeadToHeadV2Data = {
@@ -147,7 +151,7 @@ export type HeadToHeadV2Data = {
   /**
    * The current period of the event e.g FT, HT.
    */
-  periodLabel?: { value: string; accessible: string };
+  periodLabel?: { value: string; translation?: string; accessible: string };
   /**
    * Period string.
    */
@@ -199,9 +203,12 @@ export type HeadToHeadV2Data = {
   multiLeg?: {
     leg: number;
   };
+  stage?: {
+    id: string;
+    name: string;
+    urn?: string;
+  };
 };
-
-export type BadgePlaceholderFallbackType = 'badge' | 'flag';
 
 export type Alignment = 'home' | 'away';
 
@@ -218,11 +225,6 @@ export interface HeadToHeadV2Props {
    * This ensures that the badges/teams line up horizontally the whole way down the stack.
    */
   maximumContainerScoreDigits?: number;
-  /**
-   * Optional setting for the sport badge's placeholder fallback type.
-   * @default 'badge'
-   */
-  teamBadgePlaceholderFallbackType?: BadgePlaceholderFallbackType;
 }
 
 export declare const HeadToHeadV2: (props: HeadToHeadV2Props) => JSX.Element;

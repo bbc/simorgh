@@ -1,0 +1,61 @@
+import { Article } from '#app/models/types/optimo';
+import CurationGrid from '#app/components/Curation/CurationGrid';
+import Subheading from '#app/components/Curation/Subhead';
+import { EventTrackingData } from '#app/lib/analyticsUtils/types';
+import useViewTracker from '#app/hooks/useViewTracker';
+import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import styles from '#app/components/RelatedContentSection/index.styles';
+
+const LocationBasedTopicOJ = ({ pageData }: { pageData: Article }) => {
+  const countryCuration = pageData?.countryCuration;
+
+  const { title, summaries = [], link, topicId } = countryCuration || {};
+
+  const eventTrackingData: EventTrackingData = {
+    componentName: 'location-based-topic-oj',
+    sendOptimizelyEvents: true,
+    groupTracker: {
+      name: title,
+      type: 'location-based-topic-oj',
+      ...(link && { link }),
+      ...(topicId && { resourceId: topicId }),
+      ...(summaries?.length > 0 && { itemCount: summaries.length }),
+    },
+  };
+
+  const viewTracker = useViewTracker(eventTrackingData);
+  const subheadingClickTracker = useClickTrackerHandler(eventTrackingData);
+
+  if (!countryCuration?.summaries?.length) {
+    return null;
+  }
+
+  const sectionHeadingId = 'location-based-topic-oj';
+
+  return (
+    <section
+      data-testid={sectionHeadingId}
+      {...(title && { 'aria-labelledby': sectionHeadingId })}
+      role="region"
+      {...viewTracker}
+      css={styles.relatedContentSection}
+    >
+      {title && (
+        <Subheading
+          id={sectionHeadingId}
+          link={link}
+          {...subheadingClickTracker}
+        >
+          {title}
+        </Subheading>
+      )}
+      <CurationGrid
+        summaries={summaries}
+        headingLevel={3}
+        eventTrackingData={eventTrackingData}
+      />
+    </section>
+  );
+};
+
+export default LocationBasedTopicOJ;

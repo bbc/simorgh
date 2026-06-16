@@ -9,7 +9,6 @@ export { default as Card } from './card';
 export { default as Centre, shouldShowScores } from './centre';
 export { default as ConditionalOnwardJourneyLink } from './conditional-onward-journey-link';
 export { default as FixtureTime } from './fixture-time';
-export { default as Footer } from './footer';
 export { default as GroupedEvents } from './grouped-events';
 export { HeadToHeadBanner } from './head-to-head-banner';
 export { default as HeadToHeadHeader } from './head-to-head-header';

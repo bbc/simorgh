@@ -24,7 +24,6 @@ import {
   inPensAetData,
   beforePensAetData,
   inPens90Data,
-  secondHalf90Data,
 } from '../static-data/event/transformed/mid-event/index';
 import HeadToHead from '../head-to-head-v2';
 import type { HeadToHeadV2Data } from '../types';
@@ -242,12 +241,10 @@ describe('Head to Head Component', () => {
 
     const date = screen.queryByText('Sat 6 Aug 2022');
     const tournament = screen.queryByText('Premier League');
-    const venue = screen.getByText('To be confirmed');
     const teamName = screen.getByText(
       'Team to be confirmed versus Team to be confirmed kick off 12:30',
     );
 
-    expect(venue).toBeInTheDocument();
     expect(date).toBeInTheDocument();
     expect(tournament).toBeInTheDocument();
     expect(teamName).toBeInTheDocument();
@@ -272,13 +269,10 @@ describe('Head to Head Component', () => {
 
     const tournamentText = screen.queryByText(tournamentDescriptionLabel);
     const time = screen.queryByText(firstHalfData.date);
-    const venue = screen.queryByText('Stadions Daugava');
 
     expect(tournamentText).toBeInTheDocument();
     expect(time).not.toBeInTheDocument();
-    expect(venue).toBeInTheDocument();
   });
-
   test('renders head to head with half time, full time scores for a MidEvent in Extra Time', () => {
     renderHeadToHead({ data: asH2HData(etFirstHalfData) });
 
@@ -822,53 +816,4 @@ describe('Head to Head Component', () => {
       expect(screen.queryByTestId('penalties-text')).not.toBeInTheDocument();
     },
   );
-
-  test('renders the value of Attendance', () => {
-    renderHeadToHead({
-      data: asH2HData({ ...secondHalf90Data, attendance: { value: 73456 } }),
-    });
-
-    expect(screen.queryByText('73,456')).toBeInTheDocument();
-  });
-
-  test('renders the value of AttendanceInfo in the venue', () => {
-    renderHeadToHead({
-      data: asH2HData({
-        ...secondHalf90Data,
-        attendance: { additionalInfo: 'Limited Audience' },
-      }),
-    });
-
-    expect(
-      screen.queryByText('Stadions Daugava (Limited Audience)'),
-    ).toBeInTheDocument();
-  });
-
-  test('renders the value of Attendance and Attendance Info', () => {
-    renderHeadToHead({
-      data: asH2HData({
-        ...secondHalf90Data,
-        attendance: { value: 73456, additionalInfo: 'Limited Audience' },
-      }),
-    });
-
-    expect(screen.queryByText('73,456')).toBeInTheDocument();
-    expect(
-      screen.queryByText('Stadions Daugava (Limited Audience)'),
-    ).toBeInTheDocument();
-  });
-
-  test('does not render the value of Attendance and Attendance Info when they are not present in the data', () => {
-    renderHeadToHead({
-      data: asH2HData({ ...secondHalf90Data, attendance: {} }),
-    });
-
-    expect(screen.queryByText('73,456')).not.toBeInTheDocument();
-    expect(screen.queryByText('Stadions Daugava')).toBeInTheDocument();
-  });
-
-  // Not MVP - Rugby fixture data required
-  // test('renders head to head with a goal summary', () => {
-  // ...existing code...
-  // });
 });
