@@ -346,6 +346,12 @@ export const service: DefaultServiceConfig = {
           usa: 'ABD',
           uzbekistan: 'Özbekistan',
         },
+        tournaments: {
+          fifaWorldCup: 'FIFA Dünya Kupası',
+        },
+        stages: {
+          groupStage: 'Grup Aşaması',
+        },
       },
     },
     mostRead: {
