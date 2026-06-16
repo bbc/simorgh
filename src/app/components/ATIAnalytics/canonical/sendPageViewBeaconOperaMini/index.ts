@@ -1,13 +1,14 @@
-import isOperaProxy from '#app/lib/utilities/isOperaProxy';
-
 type OperaMiniWindow = Window & {
   hasOperaMiniScriptRan?: boolean;
 };
 
-export default (atiPageViewUrlString: string) => {
+export default (
+  atiPageViewUrlString: string,
+  isOperaProxyFn: () => boolean,
+) => {
   const operaMiniWindow = window as OperaMiniWindow;
 
-  if (isOperaProxy() && !operaMiniWindow.hasOperaMiniScriptRan) {
+  if (isOperaProxyFn() && !operaMiniWindow.hasOperaMiniScriptRan) {
     operaMiniWindow.hasOperaMiniScriptRan = true;
 
     const atiPageViewUrl = `${atiPageViewUrlString}${
