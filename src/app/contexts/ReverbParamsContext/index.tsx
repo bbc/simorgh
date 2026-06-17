@@ -49,11 +49,6 @@ const ReverbParamsContextProviderComponent = ({
   const serviceContext = use(ServiceContext);
   const { isSignedIn, hashedUserId: hashedId } = use(AccountContext);
 
-  // const enrichedAtiData = getEnrichedArticleATIData({
-  //   pageMetadata: metadata,
-  //   serviceContext,
-  // });
-
   const enrichedAtiData = getEnrichedATIData({
     pageMetadata: metadata,
     serviceContext,
