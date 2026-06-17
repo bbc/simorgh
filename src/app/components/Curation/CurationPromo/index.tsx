@@ -95,11 +95,11 @@ const CurationPromo = ({
         )}
       </Promo.Heading>
       {!isLive ? (
-        <div>
+        <div css={styles.metadataAndTopicData}>
           {relatedTopic && (
-            <Promo.A href={relatedTopic.link.url} css={styles.relatedTopicLink}>
+            <a href={relatedTopic.link.url} css={styles.relatedTopicLink}>
               {relatedTopic.title}
-            </Promo.A>
+            </a>
           )}
           <Promo.Timestamp className="promo-timestamp">
             {lastPublished}

@@ -21,18 +21,40 @@ export default {
     css({
       position: 'relative',
     }),
-  relatedTopicLink: ({ fontSizes, fontVariants, palette, spacings }: Theme) =>
+  metadataAndTopicData: ({ palette, fontSizes }: Theme) =>
     css({
       ...fontSizes.longPrimer,
+      color: palette.GREY_10,
+      display: 'flex',
+      alignItems: 'center',
+      flexWrap: 'wrap',
+      gap: 0,
+
+      '.promo-timestamp': {
+        display: 'inline-flex',
+        alignItems: 'center',
+      },
+    }),
+  relatedTopicLink: ({ fontSizes, fontVariants, palette, spacings }: Theme) =>
+    css({
+      ...fontSizes.brevier,
       ...fontVariants.sansRegular,
       color: palette.GREY_10,
       display: 'inline-flex',
       alignItems: 'center',
       marginTop: 0,
       textDecoration: 'none',
-      paddingBottom: `${spacings.FULL}rem`,
+      zIndex: 1,
       '&:hover, &:focus': {
         textDecoration: 'underline',
+      },
+      '&::after': {
+        content: '""',
+        width: '2px',
+        height: '2px',
+        borderRadius: '50%',
+        backgroundColor: palette.GREY_10,
+        marginInline: `${spacings.HALF}rem`,
       },
     }),
 };
