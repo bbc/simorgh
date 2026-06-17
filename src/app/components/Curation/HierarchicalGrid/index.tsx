@@ -183,15 +183,18 @@ const HiearchicalGrid = ({
                   {promo.description}
                 </Promo.Body>
                 {!isLive ? (
-                  <div css={styles.metadataAndTopicData}>
+                  <div
+                    css={styles.metadataAndTopicData}
+                    className={relatedTopic ? 'hasRelatedTopic' : undefined}
+                  >
                     {relatedTopic && (
-                      <Promo.A
+                      <a
                         href={relatedTopic.link.url}
                         css={styles.relatedTopicLink}
                         {...relatedTopicClickTrackerHandler}
                       >
                         {relatedTopic.title}
-                      </Promo.A>
+                      </a>
                     )}
                     <Promo.Timestamp className="promo-timestamp">
                       {promo.lastPublished}

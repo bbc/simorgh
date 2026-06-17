@@ -88,6 +88,8 @@ const styles = {
     css({
       ...fontSizes.longPrimer,
       color: palette.GREY_10,
+      position: 'relative',
+      zIndex: 1,
       display: 'flex',
       alignItems: 'center',
       flexWrap: 'wrap',
@@ -97,7 +99,9 @@ const styles = {
         marginTop: 0,
         display: 'inline-flex',
         alignItems: 'center',
+      },
 
+      '&.hasRelatedTopic .promo-timestamp': {
         '&::before': {
           content: '""',
           width: '2px',
