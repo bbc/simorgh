@@ -27,7 +27,6 @@ interface UasRequestOptions {
   isRefreshAvailable: boolean;
 }
 
-// This timeout is client-side only — user-initiated, no upstream deadline — so a longer value is appropriate.
 export const UAS_CLIENT_TIMEOUT_MS = 10000;
 
 const getUasHost = () =>
