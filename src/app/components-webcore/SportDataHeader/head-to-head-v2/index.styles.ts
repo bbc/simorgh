@@ -34,31 +34,31 @@ export default {
   // ==================== Main Wrapper (Theme-based) ====================
   wrapper:
     ({ isConciseView }: { isConciseView?: boolean }) =>
-      ({ palette, mq }: Theme) =>
-        css({
-          background: isConciseView ? palette.GREY_15 : palette.GREY_16,
-          borderLeft: `medium none ${palette.LIVE_CORE}`,
-          [mq.FORCED_COLOURS]: {
-            borderBottom: `solid ${pixelsToRem(1)}rem transparent`,
-          },
-        }),
+    ({ palette, mq }: Theme) =>
+      css({
+        background: isConciseView ? palette.GREY_15 : palette.GREY_16,
+        borderLeft: `medium none ${palette.LIVE_CORE}`,
+        [mq.FORCED_COLOURS]: {
+          borderBottom: `solid ${pixelsToRem(1)}rem transparent`,
+        },
+      }),
   container:
     ({ isConciseView }: { isConciseView?: boolean }) =>
-      ({ mq, palette, spacings }: Theme) =>
-        css({
-          fontFamily: 'ReithSans, Helvetica, Arial, freesans, sans-serif',
-          fontWeight: 400,
-          fontFeatureSettings: "'ss01' off",
-          color: palette.LUNAR_LIGHT,
-          padding: isConciseView ? `${spacings.FULL}rem` : 0,
-          ...(!isConciseView && { paddingBottom: `${spacings.TRIPLE}rem` }),
-          [mq.GROUP_2_MAX_WIDTH]: {
-            paddingTop: isConciseView ? `${spacings.FULL}rem` : 0,
-            ...(!isConciseView && {
-              paddingBottom: `${spacings.FULL}rem`,
-            }),
-          },
-        }),
+    ({ mq, palette, spacings }: Theme) =>
+      css({
+        fontFamily: 'ReithSans, Helvetica, Arial, freesans, sans-serif',
+        fontWeight: 400,
+        fontFeatureSettings: "'ss01' off",
+        color: palette.LUNAR_LIGHT,
+        padding: isConciseView ? `${spacings.FULL}rem` : 0,
+        ...(!isConciseView && { paddingBottom: `${spacings.TRIPLE}rem` }),
+        [mq.GROUP_2_MAX_WIDTH]: {
+          paddingTop: isConciseView ? `${spacings.FULL}rem` : 0,
+          ...(!isConciseView && {
+            paddingBottom: `${spacings.FULL}rem`,
+          }),
+        },
+      }),
 
   // ==================== Action Grid ====================
   actionGrid: css({
@@ -225,14 +225,14 @@ export default {
         'progress          progress          progress'`,
       ...(!isConciseView &&
         !shouldHideBadges && {
-        [`@media (max-width: calc(${pixelsToRem(600)}rem - ${pixelsToRem(1)}rem))`]:
-        {
-          gridTemplateColumns: '1fr auto auto 1fr',
-          gridTemplateAreas: `
+          [`@media (max-width: calc(${pixelsToRem(600)}rem - ${pixelsToRem(1)}rem))`]:
+            {
+              gridTemplateColumns: '1fr auto auto 1fr',
+              gridTemplateAreas: `
               'home_team         scores            scores            away_team'
               'home_team         progress          progress          away_team'`,
-        },
-      }),
+            },
+        }),
     }),
 
   teamHome: css({
@@ -545,24 +545,24 @@ export default {
         textAlign: 'end',
         ...(!isConciseView &&
           !shouldHideBadges && {
-          [`@media (max-width: calc(${pixelsToRem(600)}rem - ${pixelsToRem(1)}rem))`]:
-          {
-            justifyContent: 'flex-end',
-            flexDirection: 'column-reverse',
-            textAlign: 'center',
-          },
-        }),
+            [`@media (max-width: calc(${pixelsToRem(600)}rem - ${pixelsToRem(1)}rem))`]:
+              {
+                justifyContent: 'flex-end',
+                flexDirection: 'column-reverse',
+                textAlign: 'center',
+              },
+          }),
       }),
       ...(alignment === 'away' && {
         justifyContent: 'flex-start',
         textAlign: 'start',
         ...(!isConciseView &&
           !shouldHideBadges && {
-          [`@media (max-width: calc(${pixelsToRem(600)}rem - ${pixelsToRem(1)}rem))`]:
-          {
-            textAlign: 'center',
-          },
-        }),
+            [`@media (max-width: calc(${pixelsToRem(600)}rem - ${pixelsToRem(1)}rem))`]:
+              {
+                textAlign: 'center',
+              },
+          }),
       }),
     }),
 

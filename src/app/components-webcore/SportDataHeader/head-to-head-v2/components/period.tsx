@@ -36,7 +36,10 @@ const Period = ({
 
   const periodValue = period?.translation || period?.value;
   return (
-    <div css={styles.period({ isLive: isLiveStatus(status) })} aria-hidden="true">
+    <div
+      css={styles.period({ isLive: isLiveStatus(status) })}
+      aria-hidden="true"
+    >
       <div>{periodValue}</div>
     </div>
   );
