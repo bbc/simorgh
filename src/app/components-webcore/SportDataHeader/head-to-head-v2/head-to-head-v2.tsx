@@ -48,9 +48,11 @@ export const HeadToHeadV2 = ({
           {!isConciseView && (
             <HeadToHeadHeader
               date={translatedSportData.date}
+              time={translatedSportData.time}
               status={translatedSportData.status}
               tournament={translatedSportData.tournament?.name}
               stage={translatedSportData.stage?.name}
+              service={service}
             />
           )}
           <HeadToHeadBanner

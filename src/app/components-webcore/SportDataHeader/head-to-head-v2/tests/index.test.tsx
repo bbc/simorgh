@@ -35,6 +35,11 @@ jest.mock('#app/hooks/useSportDataPolling', () => ({
   })),
 }));
 
+jest.mock('../helpers/localise-datetime', () => ({
+  getLocalisedDate: jest.fn(date => date),
+  getLocalisedTime: jest.fn((date, time) => time),
+}));
+
 interface RenderOptions {
   data: HeadToHeadV2Data;
   isConciseView?: boolean;
