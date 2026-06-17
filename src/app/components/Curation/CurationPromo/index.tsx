@@ -11,9 +11,7 @@ import { MY_NEWS_PAGE } from '#app/routes/utils/pageTypes';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '../../../contexts/RequestContext';
-
 import LiveLabel from '../../LiveLabel';
-
 import styles from './index.styles';
 
 const CurationPromo = ({
@@ -57,6 +55,19 @@ const CurationPromo = ({
 
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
 
+  const relatedTopicEventTrackingData = {
+    ...eventTrackingData,
+    itemTracker: {
+      ...eventTrackingData?.itemTracker,
+      type: 'simple-curation-grid-related-topic',
+      text: relatedTopic?.title,
+    },
+  };
+
+  const relatedTopicClickTrackerHandler = useClickTrackerHandler(
+    relatedTopicEventTrackingData,
+  );
+
   return (
     <Promo css={styles.promo} className="">
       {(imageUrl || shouldShowFallbackPlaceholder) && (
@@ -97,7 +108,11 @@ const CurationPromo = ({
       {!isLive ? (
         <div css={styles.metadataAndTopicData}>
           {relatedTopic && (
-            <a href={relatedTopic.link.url} css={styles.relatedTopicLink}>
+            <a
+              href={relatedTopic.link.url}
+              css={styles.relatedTopicLink}
+              {...relatedTopicClickTrackerHandler}
+            >
               {relatedTopic.title}
             </a>
           )}
