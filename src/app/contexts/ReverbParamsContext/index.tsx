@@ -14,9 +14,11 @@ import {
   ATIData,
   ReverbBeaconConfig,
 } from '#app/components/ATIAnalytics/types';
-import setBBCPage from '#app/lib/analyticsUtils/setBBCPage';
-import getEnrichedATIData from './getEnrichedATIData';
+import { ARTICLE_PAGE, MOST_READ_PAGE } from '#app/routes/utils/pageTypes';
 import { PageTypes } from '#app/models/types/global';
+import setBBCPage from '#app/lib/analyticsUtils/setBBCPage';
+import getEnrichedArticleATIData from './getEnrichedArticleATIData';
+import getEnrichedMostReadATIData from './getEnrichedMostReadATIData';
 
 type ReverbParamsContextProps = ReverbBeaconConfig;
 
@@ -25,27 +27,37 @@ export const ReverbParamsContext = createContext<ReverbParamsContextProps>(
 );
 
 type ReverbParamsProviderProps = {
-  atiData?: ATIData;
-  pageMetadata?: {
+  metadata?: {
     type: PageTypes;
     atiAnalytics?: ATIData;
   };
 };
 
+const getEnrichedATIData = ({ pageMetadata, serviceContext, pageType }) =>
+  ({
+    [ARTICLE_PAGE]: getEnrichedArticleATIData,
+    [MOST_READ_PAGE]: getEnrichedMostReadATIData,
+  })[pageType]({ pageMetadata, serviceContext }) ||
+  pageMetadata?.atiAnalytics ||
+  {};
+
 const ReverbParamsContextProviderComponent = ({
   children,
-  atiData = {},
-  pageMetadata,
+  metadata,
 }: PropsWithChildren<ReverbParamsProviderProps>) => {
   const requestContext = use(RequestContext);
   const serviceContext = use(ServiceContext);
   const { isSignedIn, hashedUserId: hashedId } = use(AccountContext);
 
+  // const enrichedAtiData = getEnrichedArticleATIData({
+  //   pageMetadata: metadata,
+  //   serviceContext,
+  // });
+
   const enrichedAtiData = getEnrichedATIData({
-    atiData,
-    pageMetadata,
-    requestContext,
+    pageMetadata: metadata,
     serviceContext,
+    pageType: requestContext?.pageType,
   });
 
   const reverbParams = buildReverbParams({

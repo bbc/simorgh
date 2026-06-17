@@ -194,10 +194,7 @@ export default class CustomApp extends App<Props> {
             isUK={isUK ?? false}
           >
             <AccountProvider initialConfig={idctaConfig}>
-              <ReverbParamsContextProvider
-                atiData={atiAnalytics}
-                pageMetadata={pageData?.metadata}
-              >
+              <ReverbParamsContextProvider metadata={pageData?.metadata}>
                 <EventTrackingContextProvider atiData={atiAnalytics}>
                   {isAvEmbeds ? (
                     <ThemeProvider service={service} variant={variant}>
