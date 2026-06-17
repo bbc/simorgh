@@ -213,9 +213,7 @@ const preview: Preview = {
       );
     },
     (Story, context) => (
-      <ToggleContextProvider
-        toggles={context.globals.toggles || {}}
-      >
+      <ToggleContextProvider toggles={context.globals.toggles || {}}>
         <ServiceContextProvider
           service={context.globals.service.service}
           variant={context.globals.service.variant}
@@ -234,17 +232,17 @@ const preview: Preview = {
               <AccountProvider initialConfig={context.globals.idctaConfig}>
                 <UserContextProvider>
                   <ThemeProviderSCSSModules
-                  service={context.globals.service.service}
-                  variant={context.globals.service.variant}
-                >
-                  <ThemeProvider
+                    service={context.globals.service.service}
+                    variant={context.globals.service.variant}
+                  >
+                    <ThemeProvider
                       service={context.globals.service.service}
                       variant={context.globals.service.variant}
                     >
                       <Story />
                     </ThemeProvider>
                   </ThemeProviderSCSSModules>
-              </UserContextProvider>
+                </UserContextProvider>
               </AccountProvider>
             </EventTrackingContextProvider>
           </RequestContextProvider>
