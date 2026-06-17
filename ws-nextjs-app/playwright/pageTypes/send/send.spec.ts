@@ -1,29 +1,11 @@
-import {
-  test,
-  expect,
-  type APIRequestContext,
-  type Page,
-} from '@playwright/test';
+import { test, expect, type Page } from '@playwright/test';
 import { sendPageSuites } from './suites';
 import {
   appEnvFromProcess,
   baseURL,
   shouldRunForEnv,
 } from '../../utilities/env';
-
-const assert200HtmlResponse = async ({
-  request,
-  path,
-}: {
-  request: APIRequestContext;
-  path: string;
-}) => {
-  const response = await request.get(`${baseURL}${path}`);
-  const contentType = response.headers()['content-type'] || '';
-
-  expect(response.status()).toBe(200);
-  expect(contentType).toContain('text/html');
-};
+import assert200HtmlResponse from '../../utilities/response';
 
 const assertWebpImages = async (page: Page) => {
   const ichefImages = page.locator('img[src*="ichef."]');
@@ -71,7 +53,11 @@ test.describe('sendPage', () => {
             `Skipped for APP_ENV=${appEnvFromProcess}`,
           );
 
-          await assert200HtmlResponse({ request, path: testSuite.path });
+          await assert200HtmlResponse({
+            request,
+            path: testSuite.path,
+            baseURL,
+          });
         });
 
         test('should serve webp images from ichef', async ({ page }) => {

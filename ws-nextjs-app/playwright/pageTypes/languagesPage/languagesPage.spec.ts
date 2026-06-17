@@ -1,10 +1,5 @@
 /* eslint-disable no-underscore-dangle */
-import {
-  test,
-  expect,
-  type APIRequestContext,
-  type Page,
-} from '@playwright/test';
+import { test, expect, type Page } from '@playwright/test';
 import { languagesPageSuites } from './suites';
 import {
   appEnvFromProcess,
@@ -13,20 +8,7 @@ import {
   type AppEnv,
 } from '../../utilities/env';
 import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
-
-const assert200HtmlResponse = async ({
-  request,
-  path,
-}: {
-  request: APIRequestContext;
-  path: string;
-}) => {
-  const response = await request.get(`${baseURL}${path}`);
-  const contentType = response.headers()['content-type'] || '';
-
-  expect(response.status()).toBe(200);
-  expect(contentType).toContain('text/html');
-};
+import assert200HtmlResponse from '../../utilities/response';
 
 const getContentIdFromWindow = (page: Page) =>
   page.evaluate(
@@ -65,7 +47,11 @@ test.describe('languagesPage', () => {
             `Skipped for APP_ENV=${appEnvFromProcess}`,
           );
 
-          await assert200HtmlResponse({ request, path: testSuite.path });
+          await assert200HtmlResponse({
+            request,
+            path: testSuite.path,
+            baseURL,
+          });
         });
 
         test('should render the Languages Page with fixture content', async ({
