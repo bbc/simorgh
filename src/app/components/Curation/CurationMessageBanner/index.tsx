@@ -1,6 +1,17 @@
 import Heading from '#app/components/Heading';
 import MessageBanner from '#app/components/MessageBanner';
+import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import styles from './index.styles';
+
+type Props = {
+  id: string;
+  heading: string;
+  description?: string;
+  link: string;
+  linkText: string;
+  image?: string;
+  eventTrackingData?: EventTrackingData;
+};
 
 const CurationMessageBanner = ({
   heading,
@@ -10,7 +21,7 @@ const CurationMessageBanner = ({
   image,
   id,
   eventTrackingData,
-}) => {
+}: Props) => {
   return (
     <section
       css={styles.container}

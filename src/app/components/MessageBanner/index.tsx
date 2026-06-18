@@ -12,7 +12,7 @@ interface MessageBannerProps {
   linkText: string;
   image?: string;
   eventTrackingData?: EventTrackingData;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 const MessageBanner = ({
   description,

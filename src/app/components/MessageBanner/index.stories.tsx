@@ -10,7 +10,6 @@ interface Props extends StoryProps {
 const Component = (_: StoryArgs, { text = '', longText = '' }: Props) => {
   return (
     <MessageBanner
-      heading={text}
       description={longText}
       link="https://www.bbc.co.uk/ws/languages"
       linkText={text}
