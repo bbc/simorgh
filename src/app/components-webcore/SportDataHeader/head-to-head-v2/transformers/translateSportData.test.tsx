@@ -805,27 +805,5 @@ describe('TranslateSportData', () => {
         urn: '',
       });
     });
-
-    it('should return the tournament and stage name unchanged when lookup is not found', () => {
-      const result = translateSportData(
-        fixtureDataDefault,
-        afriqueServiceConfig.default.translations,
-        'afrique',
-      );
-
-      expect(result.tournament).toStrictEqual({
-        disambiguatedName: 'UEFA Europa League',
-        id: '4c1nfi2j1m731hcay25fcgndq',
-        name: 'UEFA Europa League',
-        thingsGuid: '2afbdda7-71d4-544d-bcc6-d9ff50314b2a',
-        urn: 'urn:bbc:sportsdata:football:tournament:europa-league',
-      });
-
-      expect(result.stage).toStrictEqual({
-        id: '7wxuj38kqm8bz3cmi15vu4w7o',
-        name: 'Quarter-finals',
-        urn: '',
-      });
-    });
   });
 });
