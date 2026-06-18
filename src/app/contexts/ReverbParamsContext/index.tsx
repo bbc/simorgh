@@ -38,14 +38,17 @@ type ReverbParamsProviderProps = {
   };
 };
 
-const getEnrichedATIData = ({ pageMetadata, serviceContext, pageType }) =>
-  ({
+const getEnrichedATIData = ({ pageMetadata, serviceContext, pageType }) => {
+  const pageTypeHandler = {
     [ARTICLE_PAGE]: getEnrichedArticleATIData,
     [MOST_READ_PAGE]: getEnrichedMostReadATIData,
     [MEDIA_ARTICLE_PAGE]: getEnrichedMediaArticleATIData,
-  })[pageType]({ pageMetadata, serviceContext }) ||
-  pageMetadata?.atiAnalytics ||
-  {};
+  }[pageType];
+
+  return pageTypeHandler
+    ? pageTypeHandler({ pageMetadata, serviceContext })
+    : pageMetadata?.atiAnalytics || {};
+};
 
 const ReverbParamsContextProviderComponent = ({
   children,
