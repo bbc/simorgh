@@ -29,11 +29,6 @@ export default {
       alignItems: 'center',
       flexWrap: 'wrap',
       gap: 0,
-
-      '.promo-timestamp': {
-        display: 'inline-flex',
-        alignItems: 'center',
-      },
     }),
   relatedTopicLink: ({ fontSizes, fontVariants, palette, spacings }: Theme) =>
     css({
