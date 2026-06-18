@@ -18,6 +18,8 @@ jest.mock('./themes/loadableConfig', () => {
     default: {
       // Non-variant service — next/dynamic returns a React.forwardRef object
       arabic: createMockTheme('arabic-theme'),
+      // ServicesWithVariants service whose primary variant is 'default'
+      ukrainian: createMockTheme('ukrainian-theme'),
       // Variant service — stored as a plain object map
       serbian: {
         cyr: createMockTheme('serbian-cyr-theme'),
@@ -40,8 +42,10 @@ describe('ThemeProviderSCSSModules', () => {
     });
 
     it('renders children when variant is "default"', () => {
+      // Ukrainian is a ServicesWithVariants service whose primary variant is 'default'.
+      // This was flagged in PR review as a potential issue — the component should still render.
       render(
-        <ThemeProvider service="arabic" variant="default">
+        <ThemeProvider service="ukrainian" variant="default">
           <p>child content</p>
         </ThemeProvider>,
       );
