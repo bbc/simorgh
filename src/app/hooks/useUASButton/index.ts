@@ -53,18 +53,10 @@ const useUASButton = ({
         });
       }
       const globalId = buildGlobalId(articleId);
-      const response = await uasApiRequest(
-        'DELETE',
-        FAVOURITES_CONFIG.activityType,
-        {
-          globalId,
-          isRefreshAvailable,
-        },
-      );
-      if (!response.ok) {
-        throw new Error(`Failed to remove article: ${response.status}`);
-      }
-
+      await uasApiRequest('DELETE', FAVOURITES_CONFIG.activityType, {
+        globalId,
+        isRefreshAvailable,
+      });
       return undefined;
     },
     onSuccess: (metadata, action) => {
