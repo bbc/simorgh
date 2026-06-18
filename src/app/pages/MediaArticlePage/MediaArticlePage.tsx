@@ -143,12 +143,8 @@ const getTimestampComponent =
 const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
   const { pageType } = use(RequestContext);
 
-  const {
-    articleAuthor,
-    isTrustProjectParticipant,
-    showRelatedTopics,
-    brandName,
-  } = use(ServiceContext);
+  const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
+    use(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
 
   const headline = getHeadline(pageData) ?? '';
