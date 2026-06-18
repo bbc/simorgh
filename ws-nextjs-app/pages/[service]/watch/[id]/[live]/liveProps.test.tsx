@@ -46,16 +46,42 @@ describe('liveTvRoute getServerSideProps', () => {
     });
   });
 
-  it('returns expected props on valid extensions ', async () => {
-    const resolvedUrl = `/hindi/watch/bbc_hindi_tv/live`;
+  it.each(['live', 'live.app', 'live/cyr', 'live/cyr.app'])(
+    'returns expected props on valid extensions - %s',
+    async extension => {
+      const resolvedUrl = `/hindi/watch/bbc_hindi_tv/${extension}`;
+
+      const result = await getServerSideProps({
+        ...mockGetServerSidePropsContext,
+        resolvedUrl,
+      });
+
+      expect(result.props.status).toEqual(200);
+      expect(result.props.pageType).toEqual('liveTV');
+    },
+  );
+
+  it.each([
+    'live123.app123',
+    'live.app123',
+    'live123.app',
+    'live/cyr123',
+    'live123/cyr.app123',
+  ])('returns error props if the extension is %s', async extension => {
+    const resolvedUrl = `/hindi/watch/bbc_hindi_tv/${extension}`;
 
     const result = await getServerSideProps({
       ...mockGetServerSidePropsContext,
       resolvedUrl,
     });
 
-    expect(result.props.status).toEqual(200);
-    expect(result.props.pageType).toEqual('liveTV');
+    expect(result).toEqual({
+      props: expect.objectContaining({
+        status: 404,
+        pageType: 'liveTV',
+        pathname: resolvedUrl,
+      }),
+    });
   });
 
   it('returns error props if data fetch returns 500', async () => {
