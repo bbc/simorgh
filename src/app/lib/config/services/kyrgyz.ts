@@ -361,6 +361,12 @@ export const service: DefaultServiceConfig = {
           usa: 'АКШ',
           uzbekistan: 'Өзбекстан',
         },
+        tournaments: {
+          fifaWorldCup: 'Футбол боюнча дүйнө чемпионаты',
+        },
+        stages: {
+          groupStage: 'Тайпалык беттештер',
+        },
       },
     },
     mostRead: {

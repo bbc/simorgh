@@ -385,6 +385,12 @@ export const service: DefaultServiceConfig = {
           usa: 'Egyesült Államok',
           uzbekistan: 'Üzbegisztán',
         },
+        tournaments: {
+          fifaWorldCup: 'FIFA labdarúgó-világbajnokság',
+        },
+        stages: {
+          groupStage: 'Csoportkör',
+        },
       },
     },
     mostRead: {
