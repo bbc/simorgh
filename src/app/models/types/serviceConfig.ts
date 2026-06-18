@@ -111,19 +111,17 @@ export type ServiceConfig = {
   };
   googleSiteVerification?: string;
   promotionalBanner?: PromotionalBannerConfig;
-  electionBanner?: ElectionBannerConfig;
-  articleMessageBanners?: ArticleMessageBannerConfig[];
-};
-
-export type ElectionBannerConfig = {
-  heights?: {
-    desktop: number;
-    tablet: number;
-    mobile: number;
+  electionBanner?: {
+    heights?: {
+      desktop: number;
+      tablet: number;
+      mobile: number;
+    };
+    electionThingIds: string[];
+    iframeSrc: string;
+    iframeDevSrc: string;
   };
-  electionThingIds: string[];
-  iframeSrc: string;
-  iframeDevSrc: string;
+  articleMessageBanners?: ArticleMessageBannerConfig[];
 };
 
 export type ArticleMessageBannerConfig = {
