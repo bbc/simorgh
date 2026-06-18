@@ -1,8 +1,10 @@
 import { css, Theme } from '@emotion/react';
 import pixelsToRem from '#app/utilities/pixelsToRem';
-import { ElectionBannerConfig } from '#app/models/types/serviceConfig';
+import { ServiceConfig } from '#app/models/types/serviceConfig';
 
-type Heights = NonNullable<ElectionBannerConfig['heights']>;
+type Heights = NonNullable<
+  NonNullable<ServiceConfig['electionBanner']>['heights']
+>;
 
 export default {
   electionBannerWrapper: ({ spacings }: Theme) =>
