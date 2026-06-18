@@ -112,7 +112,7 @@ export type ServiceConfig = {
   googleSiteVerification?: string;
   promotionalBanner?: PromotionalBannerConfig;
   electionBanner?: ElectionBannerConfig;
-  topicMessageBanners?: TopicMessageBannerConfig[];
+  articleMessageBanners?: ArticleMessageBannerConfig[];
 };
 
 export type ElectionBannerConfig = {
@@ -126,7 +126,7 @@ export type ElectionBannerConfig = {
   iframeDevSrc: string;
 };
 
-export type TopicMessageBannerConfig = {
+export type ArticleMessageBannerConfig = {
   thingIds: string[];
   linkHref: string;
   heading: string;

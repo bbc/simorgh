@@ -4,8 +4,9 @@ import useToggle from '#app/hooks/useToggle';
 import { Tag } from '#app/components/Metadata/types';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { MetadataTaggings } from '#app/models/types/metadata';
-import { TopicMessageBannerConfig } from '#app/models/types/serviceConfig';
+import { ArticleMessageBannerConfig } from '#app/models/types/serviceConfig';
 import MessageBanner from '#app/components/MessageBanner';
+import Text from '#app/components/Text';
 import styles from './index.styles';
 
 type Props = {
@@ -21,19 +22,19 @@ type ToggleType = {
 const SENSITIVE_ARTICLE_ID = 'f2b5dd0e-dda0-454c-893d-792d46ff48c3';
 
 type MatchingBanner = {
-  bannerDefinition: TopicMessageBannerConfig;
+  bannerDefinition: ArticleMessageBannerConfig;
 };
 
-export default function TopicMessageBanner({ aboutTags, taggings }: Props) {
-  const { topicMessageBanners } = use(ServiceContext);
+const ArticleMessageBanner = ({ aboutTags, taggings }: Props) => {
+  const { articleMessageBanners } = use(ServiceContext);
   const { isLite } = use(RequestContext);
   const { enabled: electionBannerEnabled }: ToggleType =
     useToggle('electionBanner');
 
-  if (isLite || !topicMessageBanners?.length) return null;
+  if (isLite || !articleMessageBanners?.length) return null;
 
-  const matchResult = topicMessageBanners
-    .map((bannerDefinition: TopicMessageBannerConfig | undefined) => {
+  const matchResult = articleMessageBanners
+    .map((bannerDefinition: ArticleMessageBannerConfig | undefined) => {
       if (!bannerDefinition) return null;
 
       const hasMatchingTag = aboutTags?.some(({ thingId }) =>
@@ -56,17 +57,26 @@ export default function TopicMessageBanner({ aboutTags, taggings }: Props) {
 
   return (
     <div
-      data-testid="topic-message-banner"
-      css={styles.topicMessageBannerWrapper}
+      data-testid="article-message-banner"
+      css={styles.articleMessageBannerWrapper}
     >
       <MessageBanner
-        id="topic-message-banner"
-        heading={bannerDefinition.heading}
         description={bannerDefinition.description}
         link={bannerDefinition.linkHref}
         linkText={bannerDefinition.linkText}
         image={bannerDefinition.image}
-      />
+      >
+        <Text
+          as="strong"
+          size="paragon"
+          fontVariant="sansBold"
+          css={styles.mainText}
+        >
+          {bannerDefinition.heading}
+        </Text>
+      </MessageBanner>
     </div>
   );
-}
+};
+
+export default ArticleMessageBanner;
