@@ -49,7 +49,8 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
     electionThingIds.includes(thingId),
   );
 
-  const showBanner = !isEditoriallySensitive && electionBannerEnabled;
+  const showBanner =
+    !isEditoriallySensitive && validAboutTag && electionBannerEnabled;
 
   if (!showBanner) return null;
 
