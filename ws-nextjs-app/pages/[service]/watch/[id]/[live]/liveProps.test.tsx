@@ -46,40 +46,17 @@ describe('liveTvRoute getServerSideProps', () => {
     });
   });
 
-  it.each(['live', 'live.app', 'live.lite'])(
-    'returns expected props on valid extensions - %s',
-    async extension => {
-      const resolvedUrl = `/hindi/watch/bbc_hindi_tv/${extension}`;
+  it('returns expected props on valid extensions ', async () => {
+    const resolvedUrl = `/hindi/watch/bbc_hindi_tv/live`;
 
-      const result = await getServerSideProps({
-        ...mockGetServerSidePropsContext,
-        resolvedUrl,
-      });
+    const result = await getServerSideProps({
+      ...mockGetServerSidePropsContext,
+      resolvedUrl,
+    });
 
-      expect(result.props.status).toEqual(200);
-      expect(result.props.pageType).toEqual('liveTV');
-    },
-  );
-
-  it.each(['live123.app123', 'live.app123', 'live123.app'])(
-    'returns error props if the extension is %s',
-    async extension => {
-      const resolvedUrl = `/hindi/watch/bbc_hindi_tv/${extension}`;
-
-      const result = await getServerSideProps({
-        ...mockGetServerSidePropsContext,
-        resolvedUrl,
-      });
-
-      expect(result).toEqual({
-        props: expect.objectContaining({
-          status: 404,
-          pageType: 'liveTV',
-          pathname: resolvedUrl,
-        }),
-      });
-    },
-  );
+    expect(result.props.status).toEqual(200);
+    expect(result.props.pageType).toEqual('liveTV');
+  });
 
   it('returns error props if data fetch returns 500', async () => {
     jest.spyOn(getPageDataModule, 'default').mockResolvedValue({

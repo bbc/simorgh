@@ -7,14 +7,12 @@ import PageDataParams from '#app/models/types/pageDataParams';
 import { PageTypes } from '#app/models/types/global';
 import getPageData from '#utilities/pageRequests/getPageData';
 import logResponseTime from '#utilities/logResponseTime';
-import { NOT_FOUND, OK } from '#app/lib/statusCodes.const';
+import { OK } from '#app/lib/statusCodes.const';
 import { ROUTING_INFORMATION } from '#app/lib/logger.const';
 
 const LiveTvLayout = dynamic(() => import('./LiveTvPageLayout'));
 
 const logger = nodeLogger(__filename);
-
-const suffixAllowList = ['live', 'live.app', 'live.lite'];
 
 export const getServerSideProps = async (
   context: GetServerSidePropsContext,
@@ -27,29 +25,6 @@ export const getServerSideProps = async (
     renderer_env: rendererEnv,
     variant: variantFromUrl,
   } = context.query as PageDataParams;
-
-  const suffix = resolvedUrl.split('?')?.[0].split('/').slice(-1)?.[0];
-
-  if (!suffixAllowList.includes(suffix)) {
-    routingInfoLogger(ROUTING_INFORMATION, {
-      url: resolvedUrl,
-      status: NOT_FOUND,
-      pageType: LIVE_TV_PAGE,
-    });
-
-    context.res.statusCode = NOT_FOUND;
-
-    return {
-      props: {
-        service,
-        status: NOT_FOUND,
-        timeOnServer: Date.now(),
-        variant: variantFromUrl || null,
-        pageType: LIVE_TV_PAGE,
-        pathname: resolvedUrl,
-      },
-    };
-  }
 
   context.res.setHeader(
     'Cache-Control',
