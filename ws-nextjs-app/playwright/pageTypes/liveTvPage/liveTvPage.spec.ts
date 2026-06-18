@@ -1,24 +1,12 @@
-import { test, expect, type APIRequestContext, type Page } from '@playwright/test';
+/* eslint-disable no-underscore-dangle */
+import { test, expect, type Page } from '@playwright/test';
 import { liveTvPageSuites } from './suites';
 import {
   appEnvFromProcess,
   baseURL,
   shouldRunForEnv,
 } from '../../utilities/env';
-
-const assert200HtmlResponse = async ({
-  request,
-  path,
-}: {
-  request: APIRequestContext;
-  path: string;
-}) => {
-  const response = await request.get(`${baseURL}${path}`);
-  const contentType = response.headers()['content-type'] || '';
-
-  expect(response.status()).toBe(200);
-  expect(contentType).toContain('text/html');
-};
+import assert200HtmlResponse from '../../utilities/response';
 
 const getPageTitleFromWindow = (page: Page) =>
   page.evaluate(
@@ -47,7 +35,11 @@ test.describe('liveTvPage', () => {
             `Skipped for APP_ENV=${appEnvFromProcess}`,
           );
 
-          await assert200HtmlResponse({ request, path: testSuite.path });
+          await assert200HtmlResponse({
+            request,
+            path: testSuite.path,
+            baseURL,
+          });
         });
 
         test('should render the Live TV Page with the correct h1', async ({
