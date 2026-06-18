@@ -254,16 +254,11 @@ const ArticlePage = ({
     topicDiscoveryExperimentName,
     topicDiscoveryVariant,
   );
-  // const isTopicDiscoveryVariant =
-  //   topicDiscoveryVariant && topicDiscoveryVariant !== 'off';
 
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
 
-  const {
-    // metadata: { atiAnalytics },
-    mostRead: mostReadInitialData,
-  } = pageData;
+  const { mostRead: mostReadInitialData } = pageData;
 
   const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
   const { enabled: articlePortraitVideoEnabled } = useToggle(
@@ -307,21 +302,9 @@ const ArticlePage = ({
   const formats = pageData?.metadata?.passport?.predicates?.formats ?? [];
 
   const isPGL = pageData?.metadata?.type === PHOTO_GALLERY_PAGE;
-  // const isSTY = pageData?.metadata?.type === STORY_PAGE;
-  // const isCPS = isPGL || isSTY;
   const isTC2Asset = pageData?.metadata?.analyticsLabels?.contentId
     ?.split(':')
     ?.includes('topcat');
-
-  // const atiData = {
-  //   ...atiAnalytics,
-  //   ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
-  //   ...(isTopicDiscoveryVariant &&
-  //     topicDiscoveryExperimentProps && {
-  //       experimentName: topicDiscoveryExperimentProps.experimentName,
-  //       experimentVariant: topicDiscoveryExperimentProps.experimentVariant,
-  //     }),
-  // };
 
   const showPortraitVideoCarousel = Boolean(
     pageData?.portraitVideoItems?.portraitVideo?.blocks?.length &&
