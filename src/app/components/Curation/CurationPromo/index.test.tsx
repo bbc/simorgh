@@ -1,7 +1,8 @@
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
+import * as clickTracking from '#app/hooks/useClickTrackerHandler';
+import userEvent from '@testing-library/user-event';
 import { render, screen } from '../../react-testing-library-with-providers';
-
 import CurationPromo from '.';
 
 jest.mock('../../ThemeProvider');
@@ -197,6 +198,32 @@ describe('Curation Promo', () => {
       expect(
         screen.queryByRole('link', { name: 'South Africa' }),
       ).not.toBeInTheDocument();
+    });
+
+    it('should handle a click event when a related topic link is clicked', async () => {
+      const onClickSpy = jest.fn();
+      const clickTrackerSpy = jest
+        .spyOn(clickTracking, 'default')
+        .mockImplementation(() => ({ onClick: onClickSpy }));
+
+      render(<Fixture relatedTopic={relatedTopic} />);
+
+      expect(clickTrackerSpy).toHaveBeenCalledWith(
+        expect.objectContaining({
+          itemTracker: expect.objectContaining({
+            type: 'simple-curation-grid-related-topic',
+            text: 'South Africa',
+          }),
+        }),
+      );
+
+      const relatedTopicLink = screen.getByRole('link', {
+        name: 'South Africa',
+      });
+
+      await userEvent.click(relatedTopicLink);
+
+      expect(onClickSpy).toHaveBeenCalled();
     });
   });
 });
