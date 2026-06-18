@@ -375,7 +375,8 @@ export const service: DefaultServiceConfig = {
           quarterFinals: 'අර්ධ-අවසන් පූර්ව වටය',
           semiFinals: 'අවසන් පූර්ව වටය',
           final: 'අවසන් වටය',
-          thirdPlaceFinal: 'තෙවන ස්ථානය',},
+          thirdPlaceFinal: 'තෙවන ස්ථානය',
+        },
       },
     },
     mostRead: {

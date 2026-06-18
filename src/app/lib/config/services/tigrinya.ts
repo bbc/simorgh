@@ -355,7 +355,8 @@ export const service: DefaultServiceConfig = {
           quarterFinals: 'ርብዒ ፍጻም',
           semiFinals: 'ፍርቂ ፍጻመ',
           final: 'ፍጻመ',
-          thirdPlaceFinal: 'ንሳልሳይ ደረጃ',},
+          thirdPlaceFinal: 'ንሳልሳይ ደረጃ',
+        },
       },
     },
     mostRead: {

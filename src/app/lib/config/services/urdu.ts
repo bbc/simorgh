@@ -446,7 +446,8 @@ export const service: DefaultServiceConfig = {
           quarterFinals: 'کوارٹر فائنلز',
           semiFinals: 'سیمی فائنلز',
           final: 'فائنل',
-          thirdPlaceFinal: 'تیسری پوزیشن کا میچ',},
+          thirdPlaceFinal: 'تیسری پوزیشن کا میچ',
+        },
       },
     },
     mostRead: {

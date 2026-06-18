@@ -452,7 +452,8 @@ export const service: DefaultServiceConfig = {
           quarterFinals: 'காலிறுதி',
           semiFinals: 'அரையிறுதி',
           final: 'இறுதிப் போட்டி',
-          thirdPlaceFinal: 'மூன்றாம் இடம்',},
+          thirdPlaceFinal: 'மூன்றாம் இடம்',
+        },
       },
     },
     mostRead: {

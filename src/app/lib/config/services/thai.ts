@@ -336,7 +336,8 @@ export const service: DefaultServiceConfig = {
           quarterFinals: 'รอบ 8 ทีมสุดท้าย',
           semiFinals: 'รอบรองชนะเลิศ',
           final: 'รอบชิงชนะเลิศ',
-          thirdPlaceFinal: 'รอบชิงที่สาม',},
+          thirdPlaceFinal: 'รอบชิงที่สาม',
+        },
       },
     },
     mostRead: {

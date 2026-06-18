@@ -345,7 +345,8 @@ export const service: DefaultServiceConfig = {
           quarterFinals: 'TỨ KẾT',
           semiFinals: 'BÁN KẾT',
           final: 'CHUNG KẾT',
-          thirdPlaceFinal: 'TRANH HẠNG BA',},
+          thirdPlaceFinal: 'TRANH HẠNG BA',
+        },
       },
     },
     mostRead: {

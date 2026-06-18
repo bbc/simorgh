@@ -371,13 +371,14 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: "Urwego rw'amatsinda",
-        
+
           last32: 'Igice ca 16 gishira ica nyuma',
           last16: 'Igice ca 8 gishira ica nyuma',
           quarterFinals: 'Igice ca kane gishira ica nyuma',
           semiFinals: 'Igice ca kabiri gishira ica nyuma',
           final: 'Urukino rwa nyuma',
-          thirdPlaceFinal: 'Ikibanza ca gatatu',},
+          thirdPlaceFinal: 'Ikibanza ca gatatu',
+        },
       },
     },
     mostRead: {

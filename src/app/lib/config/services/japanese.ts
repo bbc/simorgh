@@ -333,7 +333,8 @@ export const service: DefaultServiceConfig = {
           quarterFinals: '準々決勝',
           semiFinals: '準決勝',
           final: '決勝',
-          thirdPlaceFinal: '3位決定',},
+          thirdPlaceFinal: '3位決定',
+        },
       },
     },
     mostRead: {

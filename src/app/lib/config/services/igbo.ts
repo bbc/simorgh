@@ -370,7 +370,8 @@ export const service: DefaultServiceConfig = {
           quarterFinals: 'Agba anọ nke ikpeazụ',
           semiFinals: 'Agba abụọ nke ikpeazụ',
           final: 'Agba ikpeazụ',
-          thirdPlaceFinal: 'Ndị nke atọ',},
+          thirdPlaceFinal: 'Ndị nke atọ',
+        },
       },
     },
     mostRead: {

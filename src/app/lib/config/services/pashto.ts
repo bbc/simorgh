@@ -370,7 +370,8 @@ export const service: DefaultServiceConfig = {
           quarterFinals: 'منځلوبې',
           semiFinals: 'نیمه پایلوبې',
           final: 'پایلوبه',
-          thirdPlaceFinal: 'درېیم ځای',},
+          thirdPlaceFinal: 'درېیم ځای',
+        },
       },
     },
     mostRead: {

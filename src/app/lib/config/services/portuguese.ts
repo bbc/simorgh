@@ -450,7 +450,8 @@ export const service: DefaultServiceConfig = {
           quarterFinals: 'Quartas de final',
           semiFinals: 'Semifinais',
           final: 'Final',
-          thirdPlaceFinal: 'Disputa pelo terceiro lugar',},
+          thirdPlaceFinal: 'Disputa pelo terceiro lugar',
+        },
       },
     },
     promotionalBanner: {

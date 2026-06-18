@@ -388,7 +388,8 @@ export const service: DefaultServiceConfig = {
           quarterFinals: 'Robo -Fainali',
           semiFinals: 'Nusu-Fainali',
           final: 'Fainali',
-          thirdPlaceFinal: 'Mshidi wa tatu',},
+          thirdPlaceFinal: 'Mshidi wa tatu',
+        },
       },
     },
     mostRead: {

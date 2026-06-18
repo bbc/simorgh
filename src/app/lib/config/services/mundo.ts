@@ -471,7 +471,8 @@ export const service: DefaultServiceConfig = {
           quarterFinals: 'Cuartos de final',
           semiFinals: 'Semifinales',
           final: 'Final',
-          thirdPlaceFinal: 'Tercer puesto',},
+          thirdPlaceFinal: 'Tercer puesto',
+        },
       },
     },
     mostRead: {

@@ -435,7 +435,8 @@ export const service: DefaultServiceConfig = {
           quarterFinals: 'یک چهارم نهایی',
           semiFinals: 'نیمه نهایی',
           final: 'نهایی',
-          thirdPlaceFinal: 'مقام سوم',},
+          thirdPlaceFinal: 'مقام سوم',
+        },
       },
     },
     mostRead: {

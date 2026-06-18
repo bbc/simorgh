@@ -358,7 +358,8 @@ export const service: DefaultServiceConfig = {
           quarterFinals: 'क्वार्टर-फाइनल',
           semiFinals: 'सेमिफाइनल',
           final: 'फाइनल',
-          thirdPlaceFinal: 'तेस्रो स्थान',},
+          thirdPlaceFinal: 'तेस्रो स्थान',
+        },
       },
     },
     mostRead: {

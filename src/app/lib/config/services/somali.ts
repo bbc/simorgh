@@ -374,7 +374,8 @@ export const service: DefaultServiceConfig = {
           quarterFinals: 'Rubac dhammaadka',
           semiFinals: 'Nus Dhamaadka',
           final: 'Kama dambeysta',
-          thirdPlaceFinal: 'Kaalinta 3-aad',},
+          thirdPlaceFinal: 'Kaalinta 3-aad',
+        },
       },
     },
     mostRead: {

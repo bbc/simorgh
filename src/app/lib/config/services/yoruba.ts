@@ -350,7 +350,8 @@ export const service: DefaultServiceConfig = {
           quarterFinals: 'Ìpele tó kángun sí èyí tó kángun sí àṣekágbá',
           semiFinals: 'Ìpele tó kángun sí àṣekágbá',
           final: 'Àṣekágbá',
-          thirdPlaceFinal: 'Ipò kẹta',},
+          thirdPlaceFinal: 'Ipò kẹta',
+        },
       },
     },
     mostRead: {

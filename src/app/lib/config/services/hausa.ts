@@ -459,7 +459,8 @@ export const service: DefaultServiceConfig = {
           quarterFinals: 'Zagayen kwata-fainal',
           semiFinals: 'Zagayen kusa da karshe',
           final: 'Wasan ƙarshe',
-          thirdPlaceFinal: 'Karawar neman na uku',},
+          thirdPlaceFinal: 'Karawar neman na uku',
+        },
       },
     },
     mostRead: {

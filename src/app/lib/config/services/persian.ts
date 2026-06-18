@@ -465,7 +465,8 @@ export const service: DefaultServiceConfig = {
           quarterFinals: 'یک چهارم نهایی',
           semiFinals: 'نیمه نهایی',
           final: 'فینال',
-          thirdPlaceFinal: 'دیدار رده بندی',},
+          thirdPlaceFinal: 'دیدار رده بندی',
+        },
       },
     },
     mostRead: {

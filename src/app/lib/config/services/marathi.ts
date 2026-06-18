@@ -371,7 +371,8 @@ export const service: DefaultServiceConfig = {
           quarterFinals: 'उपांत्यपूर्व फेरी',
           semiFinals: 'उपांंत्य फेरी',
           final: 'अंतिम सामना',
-          thirdPlaceFinal: 'तिसऱ्या स्थानाकरिता सामना',},
+          thirdPlaceFinal: 'तिसऱ्या स्थानाकरिता सामना',
+        },
       },
     },
     mostRead: {

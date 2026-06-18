@@ -356,7 +356,8 @@ export const service: DefaultServiceConfig = {
           quarterFinals: 'Çeyrek Final',
           semiFinals: 'Yarı Final',
           final: 'Final',
-          thirdPlaceFinal: 'Üçüncülük Maçı',},
+          thirdPlaceFinal: 'Üçüncülük Maçı',
+        },
       },
     },
     mostRead: {

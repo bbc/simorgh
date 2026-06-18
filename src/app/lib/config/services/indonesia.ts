@@ -378,7 +378,8 @@ export const service: DefaultServiceConfig = {
           quarterFinals: 'Perempat final',
           semiFinals: 'Semifinal',
           final: 'Final',
-          thirdPlaceFinal: 'Peringkat tiga',},
+          thirdPlaceFinal: 'Peringkat tiga',
+        },
       },
     },
     mostRead: {

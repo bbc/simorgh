@@ -345,7 +345,8 @@ export const service: DefaultServiceConfig = {
           quarterFinals: '8강',
           semiFinals: '4강',
           final: '결승전',
-          thirdPlaceFinal: '3-4위전',},
+          thirdPlaceFinal: '3-4위전',
+        },
       },
     },
     mostRead: {

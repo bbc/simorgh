@@ -371,7 +371,8 @@ export const service: DefaultServiceConfig = {
           quarterFinals: 'Чейрек финал',
           semiFinals: 'Жарым финал',
           final: 'Финал',
-          thirdPlaceFinal: 'Үчүнчү орун',},
+          thirdPlaceFinal: 'Үчүнчү орун',
+        },
       },
     },
     mostRead: {
