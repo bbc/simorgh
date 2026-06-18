@@ -19,7 +19,7 @@ import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import SocialEmbedContainer from '#containers/SocialEmbed';
 import MediaLoader from '#app/components/MediaLoader';
 import { MediaBlock } from '#app/components/MediaLoader/types';
-import { PHOTO_GALLERY_PAGE } from '#app/routes/utils/pageTypes'; // STORY_PAGE
+import { PHOTO_GALLERY_PAGE } from '#app/routes/utils/pageTypes';
 import PortraitVideoCarousel from '#app/components/PortraitVideoCarousel';
 import {
   getArticleId,
@@ -217,7 +217,6 @@ const ArticlePage = ({
     articleAuthor,
     isTrustProjectParticipant,
     showRelatedTopics,
-    // brandName,
     translations,
   } = use(ServiceContext);
 
