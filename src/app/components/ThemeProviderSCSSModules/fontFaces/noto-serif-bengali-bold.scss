@@ -9,5 +9,5 @@
   url('#{fontUrls.$font-base-url}/fonts/NotoSerifBengali/v1.00/bold.woff') format('woff'),
   url('#{fontUrls.$font-base-url}/fonts/NotoSerifBengali/v1.00/normal.eot') format('eot'),
   url('#{fontUrls.$font-base-url}/fonts/NotoSerifBengali/v1.00/bold.ttf') format('ttf');
-  font-display: swap;
+  font-display: optional;
 }
