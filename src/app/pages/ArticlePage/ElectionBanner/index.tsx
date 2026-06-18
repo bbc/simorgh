@@ -53,8 +53,6 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
 
   if (!showBanner) return null;
 
-  if (!validAboutTag) return null;
-
   const {
     SIMORGH_APP_ENV,
     SIMORGH_INCLUDES_BASE_URL,
