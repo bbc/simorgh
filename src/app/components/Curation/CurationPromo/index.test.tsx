@@ -17,6 +17,10 @@ interface FixtureProps {
   eventTrackingData?: EventTrackingData;
   imageUrl?: string;
   imageAlt?: string;
+  relatedTopic?: {
+    title: string;
+    link: { url: string };
+  };
 }
 
 const Fixture = ({
@@ -30,6 +34,7 @@ const Fixture = ({
   eventTrackingData,
   imageUrl = 'https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/17CDB/production/_123699479_indigena.jpg',
   imageAlt = 'Campesino indígena peruano.',
+  relatedTopic,
 }: FixtureProps) => (
   <CurationPromo
     lazy={lazy}
@@ -46,6 +51,7 @@ const Fixture = ({
     position={position}
     id={resourceId}
     eventTrackingData={eventTrackingData}
+    relatedTopic={relatedTopic}
   />
 );
 
@@ -164,6 +170,33 @@ describe('Curation Promo', () => {
       expect(
         screen.getByAltText('Campesino indígena peruano.'),
       ).toBeInTheDocument();
+    });
+  });
+
+  describe('Related Topic', () => {
+    const relatedTopic = {
+      title: 'South Africa',
+      link: { url: 'https://www.bbc.com/pidgin/topics/cwr9jrd4wnnt' },
+    };
+    it('should render a related topic link when relatedTopic is provided', () => {
+      render(<Fixture relatedTopic={relatedTopic} />);
+
+      const relatedTopicLink = screen.getByRole('link', {
+        name: 'South Africa',
+      });
+      expect(relatedTopicLink).toBeInTheDocument();
+      expect(relatedTopicLink).toHaveAttribute(
+        'href',
+        'https://www.bbc.com/pidgin/topics/cwr9jrd4wnnt',
+      );
+    });
+
+    it('should not render a related topic link when relatedTopic is not provided', () => {
+      render(<Fixture />);
+
+      expect(
+        screen.queryByRole('link', { name: 'South Africa' }),
+      ).not.toBeInTheDocument();
     });
   });
 });
