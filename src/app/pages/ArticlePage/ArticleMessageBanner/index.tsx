@@ -1,5 +1,4 @@
 import { use } from 'react';
-import { RequestContext } from '#app/contexts/RequestContext';
 import useToggle from '#app/hooks/useToggle';
 import { Tag } from '#app/components/Metadata/types';
 import { ServiceContext } from '#app/contexts/ServiceContext';
