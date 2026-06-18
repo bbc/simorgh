@@ -368,12 +368,12 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'ગ્રૂપ સ્ટેજ',
-        
           last16: 'રાઉન્ડ ઑફ 16',
           quarterFinals: 'ક્વાર્ટર-ફાઇનલ',
           semiFinals: 'સેમિ-ફાઇનલ',
           final: 'ફાઇનલ',
-          thirdPlaceFinal: 'ત્રીજું સ્થાન',},
+          thirdPlaceFinal: 'ત્રીજું સ્થાન',
+        },
       },
     },
     mostRead: {

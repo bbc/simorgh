@@ -351,12 +351,12 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'గ్రూప్ స్టేజ్',
-        
           last16: 'రౌండ్ 16',
           quarterFinals: 'క్వార్టర్ ఫైనల్స్',
           semiFinals: 'సెమీ ఫైనల్స్',
           final: 'ఫైనల్',
-          thirdPlaceFinal: 'థర్డ్ ప్లేస్',},
+          thirdPlaceFinal: 'థర్డ్ ప్లేస్',
+        },
       },
     },
     mostRead: {
