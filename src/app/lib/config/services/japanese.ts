@@ -328,7 +328,6 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'グループステージ',
-        
           last32: 'ベスト32',
           last16: 'ベスト16',
           quarterFinals: '準々決勝',

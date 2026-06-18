@@ -353,7 +353,6 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'समूह चरण',
-        
           last32: 'राउन्ड अफ ३२',
           last16: 'राउन्ड अफ १६',
           quarterFinals: 'क्वार्टर-फाइनल',

@@ -454,7 +454,6 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'Matakin rukuni',
-        
           last32: 'Zagayen ƙasashe 32',
           last16: 'Zagaye na biyu',
           quarterFinals: 'Zagayen kwata-fainal',

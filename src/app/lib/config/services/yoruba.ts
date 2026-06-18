@@ -345,7 +345,6 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'Ìpele pipin si ìsọ̀rí',
-        
           last32: 'Ìpele méjìlélọ́gbọ̀n',
           last16: 'Ìpele mẹ́rìdínlógún',
           quarterFinals: 'Ìpele tó kángun sí èyí tó kángun sí àṣekágbá',

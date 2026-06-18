@@ -416,7 +416,6 @@ export const service: ZhongwenConfig = {
         },
         stages: {
           groupStage: '小组赛',
-        
           last32: '32强淘汰赛',
           last16: '16强淘汰赛',
           quarterFinals: '四分之一决赛',
@@ -788,7 +787,6 @@ export const service: ZhongwenConfig = {
         },
         stages: {
           groupStage: '小組賽',
-        
           last32: '32強淘汰賽',
           last16: '16強淘汰賽',
           quarterFinals: '半準決賽',

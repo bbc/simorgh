@@ -354,7 +354,6 @@ const defaultCyrillicConfig = {
       },
       stages: {
         groupStage: 'Гуруҳ босқичи',
-      
         last32: '1/16 финал',
         last16: '1/8 финал',
         quarterFinals: 'Чорак финал',

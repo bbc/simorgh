@@ -366,7 +366,6 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'साखळी फेरी',
-        
           last32: 'राऊंड ऑफ 32',
           last16: 'राऊंड ऑफ 16',
           quarterFinals: 'उपांत्यपूर्व फेरी',

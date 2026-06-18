@@ -343,7 +343,6 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'ਗਰੁੱਪ ਮੁਕਾਬਲੇ',
-        
           last32: 'ਰਾਉਂਡ 32',
           last16: 'ਰਾਉਂਡ 16',
           quarterFinals: 'ਕੁਆਟਰ ਫਾਈਨਲ',

@@ -476,7 +476,6 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'ग्रुप स्टेज',
-        
           last32: 'राउंड ऑफ़ 32',
           last16: 'राउंड ऑफ़ 16',
           quarterFinals: 'क्वार्टर फ़ाइनल्स',

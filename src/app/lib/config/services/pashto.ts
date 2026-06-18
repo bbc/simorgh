@@ -365,7 +365,6 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'ګروپي پړاو',
-        
           last32: 'د ۳۲ لوبډلو پړاو',
           last16: 'د ۱۶ لوبډلو پړاو',
           quarterFinals: 'منځلوبې',

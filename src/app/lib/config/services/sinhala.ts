@@ -370,7 +370,6 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'කණ්ඩායම් අදියර',
-        
           last32: '32 දෙනාගේ වටය',
           last16: '16 දෙනාගේ වටය',
           quarterFinals: 'අර්ධ-අවසන් පූර්ව වටය',

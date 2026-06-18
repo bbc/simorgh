@@ -460,7 +460,6 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'مرحله گروهی',
-        
           last32: 'یک شانزدهم نهایی',
           last16: 'یک هشتم نهایی',
           quarterFinals: 'یک چهارم نهایی',

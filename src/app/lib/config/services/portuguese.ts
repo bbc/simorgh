@@ -445,7 +445,6 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'Fase de Grupos',
-        
           last32: 'Primeira fase do mata-mata',
           last16: 'Oitavas de final',
           quarterFinals: 'Quartas de final',
