@@ -8,6 +8,8 @@ import {
 import { LoadableTheme } from '../../models/types/theming';
 import themes from './themes/loadableConfig';
 
+// next/dynamic returns a React.forwardRef object ({ $$typeof, render }) rather than a plain function.
+// Checking for 'render' distinguishes a single loadable theme from a variant map e.g. { cyr: ..., lat: ... }.
 const isLoadableTheme = (theme: unknown): theme is LoadableTheme =>
   theme !== null && typeof theme === 'object' && 'render' in theme;
 
