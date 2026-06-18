@@ -31,7 +31,7 @@ const ArticleMessageBanner = ({ aboutTags, taggings }: Props) => {
 
   if (!articleMessageBanners?.length) return null;
 
-  const matchResult = articleMessageBanners
+  const matchingBanner = articleMessageBanners
     .map((bannerDefinition: ArticleMessageBannerConfig | undefined) => {
       if (!bannerDefinition) return null;
 
@@ -41,9 +41,11 @@ const ArticleMessageBanner = ({ aboutTags, taggings }: Props) => {
 
       return hasMatchingTag ? { bannerDefinition } : null;
     })
-    .find((candidate): candidate is MatchingBanner => Boolean(candidate));
+    .find((bannerOrNull): bannerOrNull is MatchingBanner =>
+      Boolean(bannerOrNull),
+    );
 
-  if (!matchResult) return null;
+  if (!matchingBanner) return null;
 
   const isEditoriallySensitive = taggings?.some(({ value }) =>
     value.includes(SENSITIVE_ARTICLE_ID),
@@ -51,7 +53,7 @@ const ArticleMessageBanner = ({ aboutTags, taggings }: Props) => {
 
   if (isEditoriallySensitive || !electionBannerEnabled) return null;
 
-  const { bannerDefinition } = matchResult;
+  const { bannerDefinition } = matchingBanner;
 
   return (
     <div
