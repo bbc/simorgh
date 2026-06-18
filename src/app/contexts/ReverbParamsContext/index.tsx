@@ -14,11 +14,16 @@ import {
   ATIData,
   ReverbBeaconConfig,
 } from '#app/components/ATIAnalytics/types';
-import { ARTICLE_PAGE, MOST_READ_PAGE } from '#app/routes/utils/pageTypes';
+import {
+  ARTICLE_PAGE,
+  MEDIA_ARTICLE_PAGE,
+  MOST_READ_PAGE,
+} from '#app/routes/utils/pageTypes';
 import { PageTypes } from '#app/models/types/global';
 import setBBCPage from '#app/lib/analyticsUtils/setBBCPage';
 import getEnrichedArticleATIData from './getEnrichedArticleATIData';
 import getEnrichedMostReadATIData from './getEnrichedMostReadATIData';
+import getEnrichedMediaArticleATIData from './getEnrichedMediaArticleATIData';
 
 type ReverbParamsContextProps = ReverbBeaconConfig;
 
@@ -37,6 +42,7 @@ const getEnrichedATIData = ({ pageMetadata, serviceContext, pageType }) =>
   ({
     [ARTICLE_PAGE]: getEnrichedArticleATIData,
     [MOST_READ_PAGE]: getEnrichedMostReadATIData,
+    [MEDIA_ARTICLE_PAGE]: getEnrichedMediaArticleATIData,
   })[pageType]({ pageMetadata, serviceContext }) ||
   pageMetadata?.atiAnalytics ||
   {};
