@@ -422,6 +422,12 @@ export const service: SerbianConfig = {
           usa: 'SAD',
           uzbekistan: 'Uzbekistan',
         },
+        tournaments: {
+          fifaWorldCup: 'Svetsko fudbalsko prvenstvo',
+        },
+        stages: {
+          groupStage: 'Grupna faza',
+        },
       },
       topStoriesTitle: 'Najvažnije',
       featuresAnalysisTitle: 'Reportaže',
@@ -882,6 +888,12 @@ export const service: SerbianConfig = {
           uruguay: 'Уругвај',
           usa: 'САД',
           uzbekistan: 'Узбекистан',
+        },
+        tournaments: {
+          fifaWorldCup: 'Светско првенство у фудбалу',
+        },
+        stages: {
+          groupStage: 'Групна фаза',
         },
       },
       topStoriesTitle: 'Најважније',

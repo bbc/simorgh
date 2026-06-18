@@ -180,6 +180,12 @@ export const service: DefaultServiceConfig = {
           usa: 'США',
           uzbekistan: 'Узбекистан',
         },
+        tournaments: {
+          fifaWorldCup: 'ЧМ по футболу',
+        },
+        stages: {
+          groupStage: 'Групповой этап',
+        },
       },
     },
     lang: `ru`,

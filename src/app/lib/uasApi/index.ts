@@ -2,6 +2,9 @@ import isLive from '#app/lib/utilities/isLive';
 import getAuthHeaders from './getAuthHeaders';
 import type { ActivityType } from './uasUtility';
 import { refreshTokensIfExpired } from './tokenRefresh/tokenManager';
+import UasError from './errors';
+
+export { default as UasError } from './errors';
 
 export type UasMethod = 'POST' | 'DELETE' | 'GET';
 
@@ -23,6 +26,8 @@ interface UasRequestOptions {
   queryParams?: Record<string, string | number>;
   isRefreshAvailable: boolean;
 }
+
+export const UAS_CLIENT_TIMEOUT_MS = 10000;
 
 const getUasHost = () =>
   isLive() ? 'activity.api.bbc.com' : 'activity.test.api.bbc.com';
@@ -95,12 +100,11 @@ const uasApiRequest = async (
     headers,
     credentials: 'include',
     body: method === 'POST' ? JSON.stringify(body) : undefined,
-    // Allow callers to abort the request
-    ...(signal ? { signal } : {}),
+    signal: signal ?? AbortSignal.timeout(UAS_CLIENT_TIMEOUT_MS),
   });
 
   if (!response.ok) {
-    throw new Error(`UAS request failed with status ${response.status}`);
+    throw new UasError(response.status);
   }
 
   return response;
