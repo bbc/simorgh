@@ -16,7 +16,7 @@ const reporter: ReporterDescription[] = process.env.CI
   ? [
       ['list'],
       ['html', { open: 'never' }],
-      ['junit', { outputFile: 'playwright/results/nextjs-playwright.xml' }],
+      ['junit', { outputFile: 'test-results/nextjs-playwright.xml' }],
     ]
   : [['list']];
 
