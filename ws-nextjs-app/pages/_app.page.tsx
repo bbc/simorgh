@@ -203,9 +203,9 @@ export default class CustomApp extends App<Props> {
                   <QueryProvider>
                     <UserContextProvider>
                       <ThemeProviderSCSSModules
-                      service={service}
-                      variant={variant}
-                    >
+                        service={service}
+                        variant={variant}
+                      >
                         <ThemeProvider service={service} variant={variant}>
                           <PageWrapper
                             navItems={navItems}
