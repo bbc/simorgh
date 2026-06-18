@@ -340,7 +340,13 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: '조별 리그',
-        },
+        
+          last32: '32강',
+          last16: '16강',
+          quarterFinals: '8강',
+          semiFinals: '4강',
+          final: '결승전',
+          thirdPlaceFinal: '3-4위전',},
       },
     },
     mostRead: {

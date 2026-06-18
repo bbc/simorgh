@@ -357,7 +357,13 @@ const baseServiceConfig = {
       },
       stages: {
         groupStage: 'Груповий етап',
-      },
+      
+        last32: '1/16 фіналу',
+        last16: '1/8 фіналу',
+        quarterFinals: 'Чвертьфінал',
+        semiFinals: 'Півфінал',
+        final: 'Фінал',
+        thirdPlaceFinal: 'За третє місце',},
     },
     ...secondaryColumnTranslations,
   },
@@ -499,7 +505,13 @@ export const service: UkrainianConfig = {
         },
         stages: {
           groupStage: 'Групповой этап',
-        },
+        
+          last32: '1/16 фіналу',
+          last16: '1/8 фіналу',
+          quarterFinals: 'Чвертьфінал',
+          semiFinals: 'Півфінал',
+          final: 'Фінал',
+          thirdPlaceFinal: 'За третє місце',},
       },
     },
     datetimeLocale: 'ru',

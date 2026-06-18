@@ -383,6 +383,12 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'အုပ်စုအဆင့်',
+          last32: '၃၂ သင်း အဆင့်',
+          last16: '၁၆ သင်းအဆင့်',
+          quarterFinals: 'ကွာတားဖိုင်နယ်',
+          semiFinals: 'ဆီမီးဖိုင်နယ်',
+          final: 'ဗိုလ်လုပွဲ',
+          thirdPlaceFinal: 'တတိယနေရာ',
         },
       },
     },

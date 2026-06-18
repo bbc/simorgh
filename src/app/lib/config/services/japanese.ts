@@ -328,7 +328,13 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'グループステージ',
-        },
+        
+          last32: 'ベスト32',
+          last16: 'ベスト16',
+          quarterFinals: '準々決勝',
+          semiFinals: '準決勝',
+          final: '決勝',
+          thirdPlaceFinal: '3位決定',},
       },
     },
     mostRead: {

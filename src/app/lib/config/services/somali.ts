@@ -369,7 +369,13 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'Heerka kooxaha isku guruubka ah',
-        },
+        
+          last32: 'Wareegga 32ka kooxood',
+          last16: 'Wareegga 16-ka koox',
+          quarterFinals: 'Rubac dhammaadka',
+          semiFinals: 'Nus Dhamaadka',
+          final: 'Kama dambeysta',
+          thirdPlaceFinal: 'Kaalinta 3-aad',},
       },
     },
     mostRead: {

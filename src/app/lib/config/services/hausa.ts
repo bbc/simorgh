@@ -454,7 +454,13 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'Matakin rukuni',
-        },
+        
+          last32: 'Zagayen ƙasashe 32',
+          last16: 'Zagaye na biyu',
+          quarterFinals: 'Zagayen kwata-fainal',
+          semiFinals: 'Zagayen kusa da karshe',
+          final: 'Wasan ƙarshe',
+          thirdPlaceFinal: 'Karawar neman na uku',},
       },
     },
     mostRead: {

@@ -366,7 +366,13 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'Тайпалык беттештер',
-        },
+        
+          last32: '1/16 финал',
+          last16: '1/8 финал',
+          quarterFinals: 'Чейрек финал',
+          semiFinals: 'Жарым финал',
+          final: 'Финал',
+          thirdPlaceFinal: 'Үчүнчү орун',},
       },
     },
     mostRead: {

@@ -447,7 +447,13 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'குரூப் சுற்று',
-        },
+        
+          last32: 'ரவுண்ட ஆஃப் 32',
+          last16: 'காலிறுதிக்கு முந்தைய சுற்று',
+          quarterFinals: 'காலிறுதி',
+          semiFinals: 'அரையிறுதி',
+          final: 'இறுதிப் போட்டி',
+          thirdPlaceFinal: 'மூன்றாம் இடம்',},
       },
     },
     mostRead: {

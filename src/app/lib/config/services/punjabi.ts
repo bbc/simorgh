@@ -343,7 +343,13 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'ਗਰੁੱਪ ਮੁਕਾਬਲੇ',
-        },
+        
+          last32: 'ਰਾਉਂਡ 32',
+          last16: 'ਰਾਉਂਡ 16',
+          quarterFinals: 'ਕੁਆਟਰ ਫਾਈਨਲ',
+          semiFinals: 'ਸੈਮੀ ਫਾਈਨਲ',
+          final: 'ਫਾਈਨਲ',
+          thirdPlaceFinal: 'ਤੀਜਾ ਸਥਾਨ',},
       },
     },
     mostRead: {

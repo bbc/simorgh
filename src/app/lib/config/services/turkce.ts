@@ -351,7 +351,13 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'Grup Aşaması',
-        },
+        
+          last32: 'Son 32 turu',
+          last16: 'Son 16 turu',
+          quarterFinals: 'Çeyrek Final',
+          semiFinals: 'Yarı Final',
+          final: 'Final',
+          thirdPlaceFinal: 'Üçüncülük Maçı',},
       },
     },
     mostRead: {

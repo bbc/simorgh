@@ -427,7 +427,13 @@ export const service: SerbianConfig = {
         },
         stages: {
           groupStage: 'Grupna faza',
-        },
+        
+          last32: 'Šesnaestina finala',
+          last16: 'Osmina finala',
+          quarterFinals: 'Četvrtfinale',
+          semiFinals: 'Polufinale',
+          final: 'Finale',
+          thirdPlaceFinal: 'Utakmica za treće mesto',},
       },
       topStoriesTitle: 'Najvažnije',
       featuresAnalysisTitle: 'Reportaže',
