@@ -27,11 +27,10 @@ type MatchingBanner = {
 
 const ArticleMessageBanner = ({ aboutTags, taggings }: Props) => {
   const { articleMessageBanners } = use(ServiceContext);
-  const { isLite } = use(RequestContext);
   const { enabled: electionBannerEnabled }: ToggleType =
     useToggle('electionBanner');
 
-  if (isLite || !articleMessageBanners?.length) return null;
+  if (!articleMessageBanners?.length) return null;
 
   const matchResult = articleMessageBanners
     .map((bannerDefinition: ArticleMessageBannerConfig | undefined) => {

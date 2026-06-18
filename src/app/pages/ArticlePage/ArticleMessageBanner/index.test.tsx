@@ -92,22 +92,6 @@ describe('ArticleMessageBanner', () => {
     ).not.toBeInTheDocument();
   });
 
-  it('does not render in lite mode', () => {
-    const { queryByTestId } = render(
-      <ArticleMessageBanner
-        aboutTags={brazilElectionAboutTags}
-        taggings={mockTaggings}
-      />,
-      {
-        isLite: true,
-        toggles: { electionBanner: { enabled: true } },
-        service: 'portuguese',
-      },
-    );
-
-    expect(queryByTestId('article-message-banner')).not.toBeInTheDocument();
-  });
-
   it('does not render when sensitivity tagging exists', () => {
     const { queryByTestId } = render(
       <ArticleMessageBanner
