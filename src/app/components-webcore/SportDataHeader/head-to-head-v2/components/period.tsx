@@ -1,5 +1,6 @@
 import { use } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import { isLiveStatus } from '../helpers/event-status-groups';
 import { getFallbackFootballPeriodLabel } from '../helpers/event-summary';
 import styles from '../index.styles';
 import type { EventStatusType, RunningScores } from '../types';
@@ -35,7 +36,10 @@ const Period = ({
 
   const periodValue = period?.translation || period?.value;
   return (
-    <div css={styles.period} aria-hidden="true">
+    <div
+      css={styles.period({ isLive: isLiveStatus(status) })}
+      aria-hidden="true"
+    >
       <div>{periodValue}</div>
     </div>
   );

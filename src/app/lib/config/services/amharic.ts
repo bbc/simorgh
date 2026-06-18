@@ -415,6 +415,12 @@ export const service: DefaultServiceConfig = {
           usa: 'ዩኤስ አሜሪካ',
           uzbekistan: 'ኡዝቤክስታን',
         },
+        tournaments: {
+          fifaWorldCup: 'የፊፋ ዓለም ዋንጫ',
+        },
+        stages: {
+          groupStage: 'የምድብ ጨዋታ',
+        },
       },
     },
     mostRead: {

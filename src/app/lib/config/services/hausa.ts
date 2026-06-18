@@ -449,6 +449,12 @@ export const service: DefaultServiceConfig = {
           usa: 'Amurka',
           uzbekistan: 'Uzbekistan',
         },
+        tournaments: {
+          fifaWorldCup: 'Gasar Kofin Duniya',
+        },
+        stages: {
+          groupStage: 'Matakin rukuni',
+        },
       },
     },
     mostRead: {

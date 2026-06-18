@@ -462,6 +462,12 @@ export const service: DefaultServiceConfig = {
           usa: 'Estados Unidos',
           uzbekistan: 'Uzbequistão',
         },
+        tournaments: {
+          fifaWorldCup: 'Copa do Mundo da FIFA',
+        },
+        stages: {
+          groupStage: 'Fase de Grupos',
+        },
       },
     },
     promotionalBanner: {
