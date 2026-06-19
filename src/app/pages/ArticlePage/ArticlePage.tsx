@@ -1,9 +1,6 @@
 import { use, useState } from 'react';
 import { useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
-import useOptimizelyVariation, {
-  ExperimentType,
-} from '#app/hooks/useOptimizelyVariation';
 import { singleTextBlock } from '#app/models/blocks';
 import { BylineLinkedData } from '#app/components/LinkedData/types';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
@@ -79,6 +76,7 @@ import {
   getAuthorTwitterHandle,
 } from '../../components/Byline/utilities';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import { ReverbParamsContext } from '../../contexts/ReverbParamsContext';
 import RelatedContentSection from '../../components/RelatedContentSection';
 import TopicDiscovery from '../../components/TopicDiscovery';
 import Disclaimer from '../../components/Disclaimer';
@@ -91,7 +89,6 @@ import {
   isPortraitVideoUnderHeadline,
 } from '../../components/MediaLoader/utils/isPortraitVideo';
 import LocationBasedTopicOJ from '../../components/LocationBasedTopicOJ';
-import { ReverbParamsContext } from '#app/contexts/ReverbParamsContext';
 
 const getImageComponent =
   (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (
@@ -213,10 +210,12 @@ const ArticlePage = ({
 }) => {
   const [showAllContent, setShowAllContent] = useState(false);
   const { isApp, isAmp, isLite, pageType } = use(RequestContext);
-  // const { experimentProps: topicDiscoveryExperimentProps } =
-  //   use(ReverbParamsContext);
-  // const { experimentVariant: topicDiscoveryVariant } =
-  //   topicDiscoveryExperimentProps ?? {};
+
+  // EXPERIMENT: Topic Discovery
+  const { experimentProps: topicDiscoveryExperimentProps } =
+    use(ReverbParamsContext);
+  const { experimentVariant: topicDiscoveryVariant } =
+    topicDiscoveryExperimentProps ?? {};
 
   const {
     articleAuthor,
@@ -234,30 +233,6 @@ const ArticlePage = ({
   const {
     palette: { GREY_2 },
   } = useTheme();
-
-  // EXPERIMENT: Topic Discovery
-  const topicDiscoveryExperimentName = 'newswb_ws_topic_discovery_module';
-  const topicDiscoveryVariant = useOptimizelyVariation({
-    experimentName: topicDiscoveryExperimentName,
-    experimentType: ExperimentType.CLIENT_SIDE,
-  });
-
-  const getActiveExperimentProps = (
-    experimentName: string,
-    experimentVariant: string | null,
-  ): ComponentExperimentProps | null =>
-    experimentVariant
-      ? {
-          sendOptimizelyEvents: true,
-          experimentName,
-          experimentVariant,
-        }
-      : null;
-
-  const topicDiscoveryExperimentProps = getActiveExperimentProps(
-    topicDiscoveryExperimentName,
-    topicDiscoveryVariant,
-  );
 
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
