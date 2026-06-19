@@ -16400,7 +16400,7 @@ __metadata:
     timemachine: "npm:0.3.2"
     ts-jest: "npm:29.4.9"
     typescript: "npm:5.9.3"
-    undici: "npm:8.3.0"
+    undici: "npm:8.5.0"
     uuid: "npm:13.0.1"
     webpack: "npm:5.106.2"
     winston: "patch:winston@3.8.2#./patches/winston-file-descriptor.patch"
@@ -17751,10 +17751,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici@npm:8.3.0":
-  version: 8.3.0
-  resolution: "undici@npm:8.3.0"
-  checksum: 10/812a8643c2506bcfa7d9d163864965e95fd1b7e5803431ad072321a6f80511d6fd800913eb4846ca3f19102287342f31f9fad142f40c89d897d6ecb81d61843c
+"undici@npm:8.5.0":
+  version: 8.5.0
+  resolution: "undici@npm:8.5.0"
+  checksum: 10/e95913777afd47d76babfe62547bb4e9a94b93f44b50c84b4e0b6fa41c00364e31ff4f433a955b1592c3162f43e8757e2e0feae6eea195187730594523393568
   languageName: node
   linkType: hard
 
