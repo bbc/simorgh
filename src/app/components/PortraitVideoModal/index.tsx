@@ -18,6 +18,8 @@ import styles from './index.styles';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import { DownArrowIcon, UpArrowIcon } from '../icons';
 
+// media loader already gives smp/echo the generic av stats config
+// carousel playback needs its own event so the metric keeps curation and modal context
 // groups the custom playback summary separately from modal view and navigation events
 const PLAYBACK_SUMMARY_COMPONENT_NAME = 'portrait-video-playback';
 const PLAYBACK_SUMMARY_EVENT_GROUPING_NAME = 'portrait-video-playback';
