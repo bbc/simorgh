@@ -91,6 +91,7 @@ import {
   isPortraitVideoUnderHeadline,
 } from '../../components/MediaLoader/utils/isPortraitVideo';
 import LocationBasedTopicOJ from '../../components/LocationBasedTopicOJ';
+import { ReverbParamsContext } from '#app/contexts/ReverbParamsContext';
 
 const getImageComponent =
   (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (
@@ -212,6 +213,10 @@ const ArticlePage = ({
 }) => {
   const [showAllContent, setShowAllContent] = useState(false);
   const { isApp, isAmp, isLite, pageType } = use(RequestContext);
+  // const { experimentProps: topicDiscoveryExperimentProps } =
+  //   use(ReverbParamsContext);
+  // const { experimentVariant: topicDiscoveryVariant } =
+  //   topicDiscoveryExperimentProps ?? {};
 
   const {
     articleAuthor,

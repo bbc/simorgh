@@ -19,13 +19,16 @@ import {
   MEDIA_ARTICLE_PAGE,
   MOST_READ_PAGE,
 } from '#app/routes/utils/pageTypes';
-import { PageTypes } from '#app/models/types/global';
+import { ComponentExperimentProps, PageTypes } from '#app/models/types/global';
 import setBBCPage from '#app/lib/analyticsUtils/setBBCPage';
 import getEnrichedArticleATIData from './getEnrichedArticleATIData';
 import getEnrichedMostReadATIData from './getEnrichedMostReadATIData';
 import getEnrichedMediaArticleATIData from './getEnrichedMediaArticleATIData';
 
-type ReverbParamsContextProps = ReverbBeaconConfig;
+type ReverbParamsContextProps = {
+  reverbParams: ReverbBeaconConfig;
+  experimentProps?: ComponentExperimentProps;
+};
 
 export const ReverbParamsContext = createContext<ReverbParamsContextProps>(
   {} as ReverbParamsContextProps,
@@ -80,7 +83,15 @@ const ReverbParamsContextProviderComponent = ({
     setBBCPage({ page, user });
   }, [page, user]);
 
-  const value = useMemo(() => reverbParams, [reverbParams]);
+  const value = useMemo(
+    () => ({
+      reverbParams,
+      ...(enrichedAtiData?.experimentProps && {
+        experimentProps: enrichedAtiData.experimentProps,
+      }),
+    }),
+    [reverbParams, enrichedAtiData?.experimentProps],
+  );
 
   return (
     <ReverbParamsContext.Provider value={value}>

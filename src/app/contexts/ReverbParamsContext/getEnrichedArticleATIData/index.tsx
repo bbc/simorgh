@@ -48,6 +48,7 @@ export default ({ pageMetadata, serviceContext }) => {
         experimentName: topicDiscoveryExperimentProps.experimentName,
         experimentVariant: topicDiscoveryExperimentProps.experimentVariant,
       }),
+    experimentProps: topicDiscoveryExperimentProps,
   };
 
   return enrichedData;

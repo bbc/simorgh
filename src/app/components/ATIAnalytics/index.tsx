@@ -9,7 +9,7 @@ const ATIAnalytics = () => {
   const requestContext = use(RequestContext);
   const { isAmp } = requestContext;
 
-  const reverbParams = use(ReverbParamsContext);
+  const { reverbParams } = use(ReverbParamsContext);
 
   return isAmp ? (
     <>
