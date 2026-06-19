@@ -106,11 +106,15 @@ const CurationPromo = ({
         )}
       </Promo.Heading>
       {!isLive ? (
-        <div css={styles.metadataAndTopicData}>
+        <div
+          css={styles.metadataAndTopicData}
+          className="metadata-and-topic-data"
+        >
           {relatedTopic && (
             <a
-              href={relatedTopic.link.url}
+              href={relatedTopic?.link?.url}
               css={styles.relatedTopicLink}
+              className="related-topic-link"
               {...relatedTopicClickTrackerHandler}
             >
               {relatedTopic.title}
