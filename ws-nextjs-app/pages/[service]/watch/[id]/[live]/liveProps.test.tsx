@@ -33,6 +33,9 @@ describe('liveTvRoute getServerSideProps', () => {
     } as unknown as GetServerSidePropsContext['res'],
     resolvedUrl: '/hindi/watch/bbc_hindi_tv/live',
     query: { service: 'hindi' },
+    params: {
+      live: 'live',
+    },
   } satisfies GetServerSidePropsContext;
 
   beforeEach(() => {
@@ -46,13 +49,27 @@ describe('liveTvRoute getServerSideProps', () => {
     });
   });
 
-  it.each(['live', 'live.app', 'live/cyr', 'live/cyr.app'])(
-    'returns expected props on valid extensions - %s',
-    async extension => {
-      const resolvedUrl = `/hindi/watch/bbc_hindi_tv/${extension}`;
+  it.each([
+    {
+      live: 'live',
+    },
+    {
+      live: 'live.app',
+    },
+    {
+      live: 'live',
+      variant: ['cyr'],
+    },
+    { live: 'live', variant: ['cyr.app'] },
+  ])(
+    'returns expected props on valid extensions - $live $variant',
+    async params => {
+      const { live } = params;
+      const resolvedUrl = `/:service/watch/:id/${live}`;
 
       const result = await getServerSideProps({
         ...mockGetServerSidePropsContext,
+        params,
         resolvedUrl,
       });
 
@@ -62,27 +79,40 @@ describe('liveTvRoute getServerSideProps', () => {
   );
 
   it.each([
-    'live123.app123',
-    'live.app123',
-    'live123.app',
-    'live/cyr123',
-    'live123/cyr.app123',
-  ])('returns error props if the extension is %s', async extension => {
-    const resolvedUrl = `/hindi/watch/bbc_hindi_tv/${extension}`;
+    {
+      live: 'live123.app123',
+    },
+    {
+      live: 'live.app123',
+    },
+    {
+      live: 'live123.app',
+    },
+    {
+      live: 'live',
+      variant: ['cyr123'],
+    },
+  ])(
+    'returns error props for bad extensions - $live $variant ',
+    async params => {
+      const { live } = params;
+      const resolvedUrl = `/:service/watch/:id/${live}`;
 
-    const result = await getServerSideProps({
-      ...mockGetServerSidePropsContext,
-      resolvedUrl,
-    });
+      const result = await getServerSideProps({
+        ...mockGetServerSidePropsContext,
+        params,
+        resolvedUrl,
+      });
 
-    expect(result).toEqual({
-      props: expect.objectContaining({
-        status: 404,
-        pageType: 'liveTV',
-        pathname: resolvedUrl,
-      }),
-    });
-  });
+      expect(result).toEqual({
+        props: expect.objectContaining({
+          status: 404,
+          pageType: 'liveTV',
+          pathname: resolvedUrl,
+        }),
+      });
+    },
+  );
 
   it('returns error props if data fetch returns 500', async () => {
     jest.spyOn(getPageDataModule, 'default').mockResolvedValue({

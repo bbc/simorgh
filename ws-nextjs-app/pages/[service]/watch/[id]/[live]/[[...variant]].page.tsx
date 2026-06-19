@@ -15,25 +15,29 @@ const LiveTvLayout = dynamic(() => import('./LiveTvPageLayout'));
 
 const logger = nodeLogger(__filename);
 
-const isValidRoute = (resolvedUrl: string) => {
+type SlugTypes = { live: string; variant?: string[] };
+const isValidRoute = (slugs: SlugTypes) => {
+  if (!slugs) {
+    return false;
+  }
+
+  const { live, variant } = slugs;
   const suffixAllowList = ['live', 'live.app'];
   const variantSuffixAllowList = variants.flatMap(variant => [
     `${variant}`,
     `${variant}.app`,
   ]);
 
-  const slugsReversed = resolvedUrl.split('?')?.[0].split('/').reverse();
-  const lastSlug = slugsReversed[0];
-  const penultimateSlug = slugsReversed[1];
-
-  // Check for standard routes
-  if (suffixAllowList.includes(lastSlug)) {
-    return true;
-  }
-
   // Check for variant routes
-  if (penultimateSlug === 'live' && variantSuffixAllowList.includes(lastSlug)) {
-    return true;
+  if (variant) {
+    if (live === 'live' && variantSuffixAllowList.includes(variant[0])) {
+      return true;
+    }
+  } else {
+    // Check for standard routes
+    if (suffixAllowList.includes(live)) {
+      return true;
+    }
   }
 
   return false;
@@ -43,7 +47,7 @@ export const getServerSideProps = async (
   context: GetServerSidePropsContext,
 ) => {
   let routingInfoLogger = logger.debug;
-  const { resolvedUrl } = context;
+  const { resolvedUrl, params } = context;
   const {
     id,
     service,
@@ -51,7 +55,7 @@ export const getServerSideProps = async (
     variant: variantFromUrl,
   } = context.query as PageDataParams;
 
-  if (!isValidRoute(resolvedUrl)) {
+  if (!isValidRoute(params as SlugTypes)) {
     routingInfoLogger(ROUTING_INFORMATION, {
       url: resolvedUrl,
       status: NOT_FOUND,
