@@ -118,17 +118,16 @@ export const buildReverbEventModel = ({
   isSignedIn = false,
   hashedId = null,
 }: ATIEventTrackingProps): ReverbBeaconConfig => {
-  // these optional fields are emitted by the portrait video skip-rate spike
   const {
     type: itemType,
     text,
     position,
     duration,
+    watchedDuration,
     totalDuration,
     completionRate,
     skipRate,
-    navigationMethod,
-    sessionExitReason,
+    playbackTrigger,
     versionId,
     label,
     mediaType,
@@ -169,14 +168,12 @@ export const buildReverbEventModel = ({
         ...(text && { text }),
         ...(position && { position }),
         ...(duration && { duration }),
-        // these are mapped to snake_case so the payload matches existing reverb conventions
+        // snake_case keeps the custom playback fields aligned with existing reverb labels
+        ...(watchedDuration && { watched_duration: watchedDuration }),
         ...(totalDuration && { total_duration: totalDuration }),
         ...(completionRate != null && { completion_rate: completionRate }),
         ...(skipRate != null && { skip_rate: skipRate }),
-        ...(navigationMethod && { navigation_method: navigationMethod }),
-        ...(sessionExitReason && {
-          session_exit_reason: sessionExitReason,
-        }),
+        ...(playbackTrigger && { playback_trigger: playbackTrigger }),
         ...(versionId && { version_id: versionId }),
         ...(mediaType && { media_type: mediaType }),
         ...(label && { label }),

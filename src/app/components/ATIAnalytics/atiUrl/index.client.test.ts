@@ -258,18 +258,17 @@ describe('atiUrl', () => {
         });
       });
 
-      it('should include skip-rate fields when provided on itemTracker', () => {
+      it('should include portrait video playback fields when provided on itemTracker', () => {
         const componentSpecificTrack = buildReverbEventModel({
           ...input,
           itemTracker: {
             type: 'portrait-video',
             text: 'Example title',
-            duration: 9000,
+            watchedDuration: 9000,
             totalDuration: 12000,
             completionRate: 0.75,
             skipRate: 0.25,
-            navigationMethod: 'swipe',
-            sessionExitReason: 'navigation',
+            playbackTrigger: 'navigation',
             versionId: 'p1234567',
             resourceId: 'urn:bbc:pips:pid:p1234567',
           },
@@ -277,16 +276,15 @@ describe('atiUrl', () => {
 
         expect(componentSpecificTrack.eventDetails.item).toEqual({
           attribution: 'advertiserID',
-          duration: 9000,
-          session_exit_reason: 'navigation',
           link: 'http://localhost',
           name: 'top-stories',
-          navigation_method: 'swipe',
+          playback_trigger: 'navigation',
           resource_id: 'urn:bbc:pips:pid:p1234567',
           skip_rate: 0.25,
           text: 'Example title',
           total_duration: 12000,
           type: 'portrait-video',
+          watched_duration: 9000,
           completion_rate: 0.75,
           version_id: 'p1234567',
         });
