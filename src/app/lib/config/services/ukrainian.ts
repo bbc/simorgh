@@ -290,6 +290,18 @@ const baseServiceConfig = {
     relatedTopics: 'Також на цю тему',
     sport: {
       matchSummary: 'Огляд матчу',
+      assists: 'Асисти',
+      penalties: 'Пенальті',
+      ht: 'Кінець першого тайму',
+      ft: 'Кінець матчу',
+      et: 'Додатковий час',
+      afterExtraTime: 'Після додаткового часу',
+      penaltyAbbreviation: 'пен',
+      ownGoal: 'автогол',
+      winOnPenalties: {
+        prefix: 'виграє',
+        suffix: 'по пенальті',
+      },
       worldCupTeamNames: {
         algeria: 'Алжир',
         argentina: 'Аргентина',
@@ -339,6 +351,12 @@ const baseServiceConfig = {
         uruguay: 'Уругвай',
         usa: 'США',
         uzbekistan: 'Узбекистан',
+      },
+      tournaments: {
+        fifaWorldCup: 'Чемпіонат світу з футболу',
+      },
+      stages: {
+        groupStage: 'Груповий етап',
       },
     },
     ...secondaryColumnTranslations,
@@ -475,6 +493,12 @@ export const service: UkrainianConfig = {
           uruguay: 'Уругвай',
           usa: 'США',
           uzbekistan: 'Узбекистан',
+        },
+        tournaments: {
+          fifaWorldCup: 'ЧМ по футболу',
+        },
+        stages: {
+          groupStage: 'Групповой этап',
         },
       },
     },

@@ -282,6 +282,20 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'Seçtiklerimiz',
       sport: {
         matchSummary: 'Maç Özeti',
+        assists: 'Asistler',
+        penalties: 'Penaltılar',
+        ht: 'İlk yarı sonu',
+        ft: 'Maç sonu',
+        et: 'Uzatma',
+        afterExtraTime: 'Uzatmalardan sonra',
+        penaltyAbbreviation: 'pen',
+        ownGoal: 'kendi kalesine gol',
+        venue: 'Stadyum',
+        attendance: 'Seyirci sayısı',
+        winOnPenalties: {
+          prefix: 'penaltılarla',
+          suffix: 'kazanır',
+        },
         worldCupTeamNames: {
           algeria: 'Cezayir',
           argentina: 'Arjantin',
@@ -331,6 +345,12 @@ export const service: DefaultServiceConfig = {
           uruguay: 'Uruguay',
           usa: 'ABD',
           uzbekistan: 'Özbekistan',
+        },
+        tournaments: {
+          fifaWorldCup: 'FIFA Dünya Kupası',
+        },
+        stages: {
+          groupStage: 'Grup Aşaması',
         },
       },
     },

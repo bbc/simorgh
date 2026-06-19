@@ -273,6 +273,18 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: '최신 뉴스',
       sport: {
         matchSummary: '경기 요약',
+        assists: '도움',
+        penalties: '승부차기',
+        ht: '전반 종료',
+        ft: '경기 종료',
+        et: '연장전',
+        afterExtraTime: '연장전 후',
+        penaltyAbbreviation: 'PK',
+        ownGoal: '자책골',
+        winOnPenalties: {
+          prefix: '이 승부차기에서',
+          suffix: '로 승리',
+        },
         worldCupTeamNames: {
           algeria: '알제리',
           argentina: '아르헨티나',
@@ -322,6 +334,12 @@ export const service: DefaultServiceConfig = {
           uruguay: '우루과이',
           usa: '미국',
           uzbekistan: '우즈베키스탄',
+        },
+        tournaments: {
+          fifaWorldCup: 'FIFA 월드컵',
+        },
+        stages: {
+          groupStage: '조별 리그',
         },
       },
     },

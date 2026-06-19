@@ -273,6 +273,18 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'Mới nhất',
       sport: {
         matchSummary: 'Tóm tắt trận đấu',
+        assists: 'Kiến tạo',
+        penalties: 'Luân lưu',
+        ht: 'Kết thúc hiệp một',
+        ft: 'Kết thúc trận đấu',
+        et: 'Hiệp phụ',
+        afterExtraTime: 'Sau hiệp phụ',
+        penaltyAbbreviation: 'pen',
+        ownGoal: 'bàn phản lưới nhà',
+        winOnPenalties: {
+          prefix: 'thắng',
+          suffix: 'trên chấm luân lưu',
+        },
         worldCupTeamNames: {
           algeria: 'Algeria',
           argentina: 'Argentina',
@@ -322,6 +334,12 @@ export const service: DefaultServiceConfig = {
           uruguay: 'Uruguay',
           usa: 'Hoa Kỳ',
           uzbekistan: 'Uzbekistan',
+        },
+        tournaments: {
+          fifaWorldCup: 'FIFA World Cup',
+        },
+        stages: {
+          groupStage: 'Vòng bảng',
         },
       },
     },

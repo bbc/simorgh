@@ -363,6 +363,18 @@ export const service: DefaultServiceConfig = {
       },
       sport: {
         matchSummary: 'خلاصه مسابقه',
+        assists: 'پاس گل',
+        penalties: 'پنالتی',
+        ht: 'پایان نیمه اول',
+        ft: 'پایان بازی',
+        et: 'وقت اضافی',
+        afterExtraTime: 'پس از وقت اضافی',
+        penaltyAbbreviation: 'پن',
+        ownGoal: 'گول به دروازه خودی',
+        winOnPenalties: {
+          prefix: 'با پنالتی',
+          suffix: 'پیروز می‌شود',
+        },
         worldCupTeamNames: {
           algeria: 'الجزایر',
           argentina: 'ارجنتاین',
@@ -412,6 +424,12 @@ export const service: DefaultServiceConfig = {
           uruguay: 'یوروگوای',
           usa: 'ایالات متحده',
           uzbekistan: 'ازبکستان',
+        },
+        tournaments: {
+          fifaWorldCup: 'جام جهانی ۲۰۲۶',
+        },
+        stages: {
+          groupStage: 'مرحله گروهی',
         },
       },
     },

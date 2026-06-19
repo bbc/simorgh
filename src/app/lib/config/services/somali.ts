@@ -302,6 +302,18 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'Arrimhii u danbeeyey',
       sport: {
         matchSummary: 'Soo koobidda ciyaarta',
+        assists: 'Caawin',
+        penalties: 'Rigoore',
+        ht: 'Qaybta hore dhammaatay',
+        ft: 'Ciyaarta dhammaatay',
+        et: 'Waqti dheeri',
+        afterExtraTime: 'Ka dib waqtiga dheeraadka',
+        penaltyAbbreviation: 'PEN',
+        ownGoal: 'gool iskiis',
+        winOnPenalties: {
+          prefix: 'ku badisay rigoore',
+          suffix: '',
+        },
         worldCupTeamNames: {
           algeria: 'Algeriya',
           argentina: 'Argentina',
@@ -351,6 +363,12 @@ export const service: DefaultServiceConfig = {
           uruguay: 'Uruguay',
           usa: 'Mareykanka',
           uzbekistan: 'Uzbekistan',
+        },
+        tournaments: {
+          fifaWorldCup: 'Koobka Adduunka ee FIFA',
+        },
+        stages: {
+          groupStage: 'Heerka kooxaha isku guruubka ah',
         },
       },
     },
