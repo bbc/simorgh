@@ -28,15 +28,10 @@ const upsertArticleData = async ({
   // POST can do both create and update operations in UAS,
   // so we can use the same endpoint for both saving a new article and updating an existing one.
   // UAS will determine whether to create a new entry or update the existing one based on the unique resourceId provided in the payload.
-  const response = await uasApiRequest('POST', FAVOURITES_CONFIG.activityType, {
+  await uasApiRequest('POST', FAVOURITES_CONFIG.activityType, {
     body,
     isRefreshAvailable,
   });
-
-  // Only return metadata if POST was successful
-  if (!response.ok) {
-    throw new Error(`Failed to save article metadata: ${response.status}`);
-  }
 
   return buildCurrentMetadata(articlePageData, { articleId, service });
 };

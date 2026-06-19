@@ -378,6 +378,12 @@ export const service: DefaultServiceConfig = {
           usa: 'Marekani',
           uzbekistan: 'Uzbekistan',
         },
+        tournaments: {
+          fifaWorldCup: 'Kombe la Dunia la Fifa',
+        },
+        stages: {
+          groupStage: 'Hatua ya Makundi',
+        },
       },
     },
     mostRead: {

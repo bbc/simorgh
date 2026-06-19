@@ -340,6 +340,12 @@ export const service: DefaultServiceConfig = {
           usa: 'Orilẹede Amẹrika',
           uzbekistan: 'Orilẹede Uzbekistan',
         },
+        tournaments: {
+          fifaWorldCup: 'Ìdíjé Ife Agbaye Ọdun',
+        },
+        stages: {
+          groupStage: 'Ìpele pipin si ìsọ̀rí',
+        },
       },
     },
     mostRead: {
