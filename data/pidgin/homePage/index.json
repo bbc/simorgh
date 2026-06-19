@@ -2,9 +2,9 @@
   "data": {
     "title": "Domot - BBC News Pidgin",
     "description": "We dey give una latest tori on top politics, environment, business, sports, entertainment, health, fashion and all di oda things wey dey happen for West and Central Africa come add di rest of di world join. For better informate plus explanation of all di ogbonge tori wey pipo never hear about for inside West and Central Africa, BBC Pidgin dey serve am with video, audio, maps and oda graphics join.",
-  "pageType": "home",
-  "seoTitle": "Domot - BBC News Pidgin",
-  "seoDescription": "We dey give una latest tori on top politics, environment, business, sports, entertainment, health, fashion and all di oda things wey dey happen for West and Central Africa come add di rest of di world join. For better informate plus explanation of all di ogbonge tori wey pipo never hear about for inside West and Central Africa, BBC Pidgin dey serve am with video, audio, maps and oda graphics join.",
+    "pageType": "home",
+    "seoTitle": "Domot - BBC News Pidgin",
+    "seoDescription": "We dey give una latest tori on top politics, environment, business, sports, entertainment, health, fashion and all di oda things wey dey happen for West and Central Africa come add di rest of di world join. For better informate plus explanation of all di ogbonge tori wey pipo never hear about for inside West and Central Africa, BBC Pidgin dey serve am with video, audio, maps and oda graphics join.",
     "curations": [
       {
         "summaries": [
@@ -210,7 +210,16 @@
             "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/37e1/test/80c445c0-5431-11ec-b75b-9f9fe566903d.jpg.webp",
             "description": "maybe it makes a difference to have pidgin stuff in here",
             "imageAlt": "Image to ignore",
-            "id": "crrrkxz2k0ko"
+            "id": "crrrkxz2k0ko",
+            "relatedTopic": {
+              "title": "Test relatedTopic",
+              "link": {
+                "url": "https://www.bbc.com/pidgin/topics/c2dwqd1zr92t",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/pidgin/topics/c2dwqd1zr92t"
+              }
+            }
           },
           {
             "type": "article",
@@ -221,7 +230,16 @@
             "link": "https://www.bbc.com/pidgin/articles/cwl08rd38l6o",
             "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/2d93/test/494cb5d0-dee2-11e9-b23c-f1ac9644bb55.jpg.webp",
             "imageAlt": "Map of France showing Paris and Cognac",
-            "id": "cwl08rd38l6o"
+            "id": "cwl08rd38l6o",
+            "relatedTopic": {
+              "title": "Test relatedTopic",
+              "link": {
+                "url": "https://www.bbc.com/pidgin/topics/c2dwqd1zr92t",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/pidgin/topics/c2dwqd1zr92t"
+              }
+            }
           }
         ],
         "activePage": 1,
@@ -479,7 +497,16 @@
             "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/37e1/test/80c445c0-5431-11ec-b75b-9f9fe566903d.jpg.webp",
             "description": "maybe it makes a difference to have pidgin stuff in here",
             "imageAlt": "Image to ignore",
-            "id": "crrrkxrefero"
+            "id": "crrrkxrefero",
+            "relatedTopic": {
+              "title": "Test relatedTopic",
+              "link": {
+                "url": "https://www.bbc.com/pidgin/topics/c2dwqd1zr92t",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/pidgin/topics/c2dwqd1zr92t"
+              }
+            }
           },
           {
             "type": "article",
@@ -490,7 +517,16 @@
             "link": "https://www.bbc.com/pidgin/articles/cwl08rd38l6o",
             "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/2d93/test/494cb5d0-dee2-11e9-b23c-f1ac9644bb55.jpg.webp",
             "imageAlt": "Map of France showing Paris and Cognac",
-            "id": "cwl0erfl6o"
+            "id": "cwl0erfl6o",
+            "relatedTopic": {
+              "title": "Test relatedTopic",
+              "link": {
+                "url": "https://www.bbc.com/pidgin/topics/c2dwqd1zr92t",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/pidgin/topics/c2dwqd1zr92t"
+              }
+            }
           },
           {
             "type": "article",
@@ -501,7 +537,16 @@
             "link": "https://www.bbc.com/pidgin/articles/cwl08rd38l6o",
             "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/2d93/test/494cb5d0-dee2-11e9-b23c-f1ac9644bb55.jpg.webp",
             "imageAlt": "Map of France showing Paris and Cognac",
-            "id": "cwwewef38l6o"
+            "id": "cwwewef38l6o",
+            "relatedTopic": {
+              "title": "Test relatedTopic",
+              "link": {
+                "url": "https://www.bbc.com/pidgin/topics/c2dwqd1zr92t",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/pidgin/topics/c2dwqd1zr92t"
+              }
+            }
           }
         ],
         "activePage": 1,
