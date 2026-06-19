@@ -20,6 +20,4 @@ export interface PromotionalBannerProps extends PromotionalBannerConfig {
   onSecondaryClick?: (event?: React.MouseEvent) => void;
   onClose?: (event?: React.MouseEvent) => void;
   children?: React.ReactNode;
-  topImage?: React.ReactNode;
-  variant?: 'signIn';
 }

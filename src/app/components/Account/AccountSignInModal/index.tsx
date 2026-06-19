@@ -3,9 +3,11 @@ import { useEffect, use } from 'react';
 import { Close } from '#app/components/icons';
 import useTrappedFocus from '#app/hooks/useTrappedFocus';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import SignInPromotionalBanner from '../SignInPromotionalBanner';
+import Heading from '#app/components/Heading';
+import Paragraph from '#app/components/Paragraph';
+import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
+import AccountActionButtons from '#app/components/Account/AccountActionButtons';
 import styles from './index.styles';
-import { DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS } from '../AccountPromotionalBanner/utilities';
 
 type AccountSignInModalProps = {
   onClose: () => void;
@@ -14,26 +16,19 @@ type AccountSignInModalProps = {
 };
 
 const AccountSignInModal = ({ onClose }: AccountSignInModalProps) => {
-  const { containerRef, firstElementRef } = useTrappedFocus<
+  const { containerRef, firstElementRef, lastElementRef } = useTrappedFocus<
     HTMLDivElement,
+    HTMLAnchorElement,
     HTMLButtonElement
   >();
 
   const { translations } = use(ServiceContext);
-  const closeLabel = translations.accountPromoBanner?.closeLabel ?? 'Close';
-  const titleLabel = translations.accountPromoBanner?.title ?? 'Sign in to BBC';
-
-  useEffect(() => {
-    document
-      .querySelector('html')
-      ?.classList.add(DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS);
-
-    return () => {
-      document
-        .querySelector('html')
-        ?.classList.remove(DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS);
-    };
-  }, []);
+  const {
+    closeLabel = 'Close',
+    title = '',
+    description = '',
+  } = translations.accountPromoBanner ?? {};
+  const titleLabel = title || 'Sign in to BBC';
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -51,7 +46,7 @@ const AccountSignInModal = ({ onClose }: AccountSignInModalProps) => {
 
   return (
     <>
-      <Global styles={{ body: { overflow: 'hidden' } }} />
+      <Global styles={styles.bodyOverflowHidden} />
       <div
         role="dialog"
         aria-modal="true"
@@ -61,8 +56,37 @@ const AccountSignInModal = ({ onClose }: AccountSignInModalProps) => {
       >
         <div aria-hidden="true" onClick={onClose} css={styles.backdrop} />
         <div ref={containerRef} css={styles.modalContent}>
+          <aside
+            css={styles.banner}
+            role="complementary"
+            aria-labelledby="sign-in-promotional-banner"
+          >
+            <VisuallyHiddenText as="strong" id="sign-in-promotional-banner">
+              {title}
+            </VisuallyHiddenText>
+            <div css={styles.innerContainer}>
+              <div css={styles.content}>
+                <div aria-hidden="true" css={styles.image} />
+                <div css={styles.textContainer}>
+                  <Heading level={2} size="trafalgar" css={styles.title}>
+                    {title}
+                  </Heading>
+                  <Paragraph size="bodyCopy" css={styles.description}>
+                    {description}
+                  </Paragraph>
+                </div>
+                <div css={styles.actionsContainer}>
+                  <AccountActionButtons
+                    signInRef={firstElementRef}
+                    signInComponentName="account-sign-in-modal-sign-in"
+                    registerComponentName="account-sign-in-modal-register"
+                  />
+                </div>
+              </div>
+            </div>
+          </aside>
           <button
-            ref={firstElementRef}
+            ref={lastElementRef}
             type="button"
             onClick={onClose}
             css={styles.closeButton}
@@ -70,7 +94,6 @@ const AccountSignInModal = ({ onClose }: AccountSignInModalProps) => {
           >
             <Close />
           </button>
-          <SignInPromotionalBanner />
         </div>
       </div>
     </>

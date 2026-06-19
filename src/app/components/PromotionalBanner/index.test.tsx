@@ -41,24 +41,6 @@ describe('PromotionalBanner', () => {
     expect(screen.getByText('Not now')).toBeInTheDocument();
   });
 
-  it('renders top content above the title when provided', () => {
-    render(
-      <PromotionalBanner
-        {...defaultProps}
-        topImage={<div data-testid="top-image">Banner image</div>}
-      />,
-    );
-
-    const topImage = screen.getByTestId('top-image');
-    const title = screen.getByText('Install our app');
-
-    expect(topImage).toBeInTheDocument();
-    expect(topImage.compareDocumentPosition(title)).toBe(
-      Node.DOCUMENT_POSITION_FOLLOWING,
-    );
-    expect(topImage.parentElement?.firstChild).toBe(topImage);
-  });
-
   it('calls the primary button click handler when short text is present', () => {
     render(<PromotionalBanner {...defaultProps} />);
     fireEvent.click(screen.getByText('Install'));

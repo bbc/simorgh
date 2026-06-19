@@ -20,42 +20,24 @@ const PromotionalBanner = ({
   closeLabel,
   id = 'promotional-banner',
   children,
-  topImage,
-  variant,
 }: PromotionalBannerProps) => {
-  const variantOverrides = variant ? styles.variantStyles[variant] : undefined;
-
   return (
-    <aside
-      css={[styles.banner, variantOverrides?.banner]}
-      role="complementary"
-      aria-labelledby={id}
-    >
+    <aside css={styles.banner} role="complementary" aria-labelledby={id}>
       <VisuallyHiddenText as="strong" id={id}>
         {bannerLabel}
       </VisuallyHiddenText>
       <div css={styles.innerContainer}>
-        <div css={[styles.content, variantOverrides?.content]}>
-          {topImage}
-          <div css={[styles.textContainer, variantOverrides?.textContainer]}>
-            <Heading
-              level={2}
-              css={[styles.title, variantOverrides?.title]}
-              size="paragon"
-            >
+        <div css={styles.content}>
+          <div css={styles.textContainer}>
+            <Heading level={2} css={styles.title} size="paragon">
               {title}
             </Heading>
-            <Paragraph
-              css={[styles.description, variantOverrides?.description]}
-              size="longPrimer"
-            >
+            <Paragraph css={styles.description} size="longPrimer">
               {description}
             </Paragraph>
           </div>
 
-          <div
-            css={[styles.actionsContainer, variantOverrides?.actionsContainer]}
-          >
+          <div css={styles.actionsContainer}>
             {children ?? (
               <>
                 {primaryButton && (
@@ -104,7 +86,7 @@ const PromotionalBanner = ({
           <Text
             as="button"
             type="button"
-            css={[styles.closeButton, variantOverrides?.closeButton]}
+            css={styles.closeButton}
             onClick={onClose}
           >
             <VisuallyHiddenText>{closeLabel}</VisuallyHiddenText>

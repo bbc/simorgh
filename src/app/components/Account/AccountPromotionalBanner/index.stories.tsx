@@ -34,15 +34,24 @@ SignedIn.globals = {
 };
 
 export const SignedOutModal = () => {
-  const [isOpen, setIsOpen] = useState(true);
-
-  if (!isOpen) return null;
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <AccountSignInModal
-      onClose={() => setIsOpen(false)}
-      signInUrl="https://example.com/signin"
-      registerUrl="https://example.com/register"
-    />
+    <>
+      <button
+        type="button"
+        css={{ padding: '0.5rem' }}
+        onClick={() => setIsOpen(true)}
+      >
+        Open Sign In Modal
+      </button>
+      {isOpen && (
+        <AccountSignInModal
+          onClose={() => setIsOpen(false)}
+          signInUrl="https://example.com/signin"
+          registerUrl="https://example.com/register"
+        />
+      )}
+    </>
   );
 };
