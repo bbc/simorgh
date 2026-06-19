@@ -1,10 +1,37 @@
 import { render } from '../../react-testing-library-with-providers';
+import useClickTrackerHandler from '../../../hooks/useClickTrackerHandler';
+import MediaLoader from '../../MediaLoader';
+import { aresMediaBlocks } from '../../MediaLoader/fixture';
 import { pidginPromos as fixture } from './fixtures';
 import mediaFixture from './mediaFixtures';
 import liveFixtures from './liveFixtures';
 import HierarchicalGrid from '.';
 
+jest.mock('../../../hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  default: jest.fn(() => ({ onClick: jest.fn() })),
+}));
+
+jest.mock('../../MediaLoader', () => ({
+  __esModule: true,
+  default: jest.fn(() => <div data-testid="in-situ-media-loader" />),
+}));
+
 const minimalEventTrackingData = { componentName: 'test-component' };
+
+const getSummariesWithInSituMedia = () => {
+  const [audioPromo, articlePromo, recentlyPublishedPromo, videoPromo] =
+    mediaFixture;
+  const inSituPromo = {
+    ...videoPromo,
+    inSituMedia: aresMediaBlocks,
+  };
+
+  return {
+    inSituPromo,
+    summaries: [inSituPromo, audioPromo, articlePromo, recentlyPublishedPromo],
+  };
+};
 
 describe('Hierarchical Grid Curation', () => {
   const headingLevel = 2;
@@ -15,6 +42,10 @@ describe('Hierarchical Grid Curation', () => {
 
   afterAll(() => {
     jest.useRealTimers();
+  });
+
+  beforeEach(() => {
+    jest.clearAllMocks();
   });
 
   it('renders twelve promos when twelve items are provided', async () => {
@@ -190,5 +221,79 @@ describe('Hierarchical Grid Curation', () => {
       },
     );
     expect(container.queryByText('13 noviembre 2022')).not.toBeInTheDocument();
+  });
+
+  it('renders in-situ media for a promo with inSituMedia', () => {
+    const { inSituPromo, summaries } = getSummariesWithInSituMedia();
+
+    const { container } = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={summaries}
+        eventTrackingData={minimalEventTrackingData}
+      />,
+    );
+
+    const firstPromo = container.querySelector('li');
+
+    expect(firstPromo).toContainElement(
+      container.querySelector('[data-testid="in-situ-media-loader"]'),
+    );
+    expect(firstPromo?.querySelector('.promo-image')).not.toBeInTheDocument();
+    expect(MediaLoader).toHaveBeenCalledWith(
+      expect.objectContaining({
+        blocks: aresMediaBlocks,
+        showMetadata: false,
+        uniqueId: `in-situ-${inSituPromo.id}`,
+      }),
+      undefined,
+    );
+  });
+
+  it('tracks the MAP article headline link when in-situ media is rendered', () => {
+    const { inSituPromo, summaries } = getSummariesWithInSituMedia();
+
+    render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={summaries}
+        eventTrackingData={minimalEventTrackingData}
+      />,
+    );
+
+    expect(useClickTrackerHandler).toHaveBeenCalledWith(
+      expect.objectContaining({
+        componentName: 'test-component',
+        itemTracker: expect.objectContaining({
+          type: 'hierarchical-curation-grid-promo',
+          text: inSituPromo.title,
+          position: 1,
+          resourceId: inSituPromo.id,
+          mediaType: 'video',
+          duration: 223000,
+        }),
+      }),
+    );
+  });
+
+  it('falls back to the normal promo image on AMP', () => {
+    const { summaries } = getSummariesWithInSituMedia();
+
+    const { container } = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={summaries}
+        eventTrackingData={minimalEventTrackingData}
+      />,
+      { isAmp: true },
+    );
+
+    const firstPromo = container.querySelector('li');
+
+    expect(firstPromo?.querySelector('.promo-image')).toBeInTheDocument();
+    expect(
+      container.querySelector('[data-testid="in-situ-media-loader"]'),
+    ).not.toBeInTheDocument();
+    expect(MediaLoader).not.toHaveBeenCalled();
   });
 });
