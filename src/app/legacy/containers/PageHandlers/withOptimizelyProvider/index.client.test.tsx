@@ -306,4 +306,98 @@ describe('withOptimizelyProvider HOC', () => {
       ).toBe('night');
     });
   });
+
+  describe('page view tracking', () => {
+    const mockTrack = jest.fn();
+    let capturedDecisionListener: ((payload: object) => void) | undefined;
+
+    beforeEach(() => {
+      capturedDecisionListener = undefined;
+      mockTrack.mockReset();
+
+      // The notification listener is registered at module initialisation time (top-level code
+      // in index.tsx), so the standard top-level import would have already run before any mocks
+      // are in place. To test the listener we need to:
+      //   1. jest.resetModules() — clear the module registry so the next require is a fresh load
+      //   2. jest.doMock(...)    — queue controlled mocks, including the addNotificationListener
+      //                           spy that captures the callback into capturedDecisionListener
+      //   3. require('./index') — trigger a fresh module load against those mocks, causing the
+      //                           listener registration to run synchronously
+      // Each test can then call capturedDecisionListener directly to exercise the listener logic.
+      jest.resetModules();
+
+      jest.doMock('@optimizely/react-sdk', () => ({
+        createInstance: jest.fn(() => ({
+          notificationCenter: {
+            addNotificationListener: jest.fn((_, cb) => {
+              capturedDecisionListener = cb;
+            }),
+          },
+          track: mockTrack,
+        })),
+        OptimizelyProvider: jest.fn(),
+        setLogger: jest.fn(),
+        enums: {
+          NOTIFICATION_TYPES: { DECISION: 'DECISION' },
+        },
+      }));
+      jest.doMock('./isCypress', () => jest.fn().mockReturnValue(false));
+      jest.doMock('#app/lib/optimizelyDecisionStore', () => ({
+        notifyDecision: jest.fn(),
+      }));
+      // eslint-disable-next-line global-require
+      require('./index');
+    });
+
+    afterEach(() => {
+      jest.resetModules();
+    });
+
+    it('should call optimizely.track with page-views when decisionEventDispatched is true and the flag is active', () => {
+      capturedDecisionListener?.({
+        decisionInfo: {
+          flagKey: 'test_flag',
+          variationKey: 'on',
+          decisionEventDispatched: true,
+        },
+      });
+
+      expect(mockTrack).toHaveBeenCalledWith('page-views');
+    });
+
+    it('should not call optimizely.track when decisionEventDispatched is false', () => {
+      capturedDecisionListener?.({
+        decisionInfo: {
+          flagKey: 'test_flag',
+          variationKey: 'on',
+          decisionEventDispatched: false,
+        },
+      });
+
+      expect(mockTrack).not.toHaveBeenCalled();
+    });
+
+    it('should not call optimizely.track when variationKey is off', () => {
+      capturedDecisionListener?.({
+        decisionInfo: {
+          flagKey: 'test_flag',
+          variationKey: 'off',
+          decisionEventDispatched: true,
+        },
+      });
+
+      expect(mockTrack).not.toHaveBeenCalled();
+    });
+
+    it('should not call optimizely.track when flagKey is missing', () => {
+      capturedDecisionListener?.({
+        decisionInfo: {
+          variationKey: 'on',
+          decisionEventDispatched: true,
+        },
+      });
+
+      expect(mockTrack).not.toHaveBeenCalled();
+    });
+  });
 });

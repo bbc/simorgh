@@ -1,7 +1,6 @@
 import { useState, useContext, useEffect } from 'react';
 import { OptimizelyContext } from '@optimizely/react-sdk';
 
-const PAGE_VIEW_EVENT_NAME = 'page-views';
 const VISIT_EVENT_NAME = 'visit';
 
 const VISIT_STORAGE_KEY = 'last_visit_ts';
@@ -103,7 +102,6 @@ const PageViewTracking = ({ trackVisit = false }: Props) => {
         // this keeps the page view inside the visit denominator window in optimizely
         optimizely.track(VISIT_EVENT_NAME);
       }
-      optimizely.track(PAGE_VIEW_EVENT_NAME);
       setPageViewSent(true);
     });
   }, [pageViewSent, optimizely, trackVisit]);

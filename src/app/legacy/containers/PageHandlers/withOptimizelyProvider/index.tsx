@@ -16,6 +16,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import isCypress from './isCypress';
 import { getClientTimeOfDay, getReferrer, isMobile } from './userAttributes';
 
+const PAGE_VIEW_EVENT_NAME = 'page-views';
 const isInCypress = isCypress();
 const isStoryBook = process.env.STORYBOOK;
 const disableOptimizely = isStoryBook || isInCypress;
@@ -43,16 +44,21 @@ optimizely?.notificationCenter?.addNotificationListener(
       decisionInfo?: {
         flagKey?: string;
         variationKey?: string;
+        decisionEventDispatched?: boolean;
       };
     },
   ) => {
     const flagKey = notification.decisionInfo?.flagKey;
     const variationKey = notification.decisionInfo?.variationKey;
 
-    if (
-      flagKey &&
-      (variationKey !== 'off' || flagKey === 'newswb_ws_topic_discovery_module')
-    ) {
+    if (flagKey && variationKey !== 'off') {
+      const decisionEventDispatched =
+        notification.decisionInfo?.decisionEventDispatched;
+
+      if (decisionEventDispatched) {
+        optimizely.track(PAGE_VIEW_EVENT_NAME);
+      }
+
       notifyDecision(flagKey);
     }
   },

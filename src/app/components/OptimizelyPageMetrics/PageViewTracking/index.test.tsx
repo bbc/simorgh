@@ -56,7 +56,7 @@ describe('Optimizely Page View tracking', () => {
     Date.now = originalDateNow;
   });
 
-  it('should call Optimizely track function for Article Page on page render', async () => {
+  it('should call onReady but not track any events when visit tracking is disabled', async () => {
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news">
         <PageViewTracking />
@@ -64,13 +64,13 @@ describe('Optimizely Page View tracking', () => {
     );
 
     await waitFor(() => {
-      expect(optimizely.track).toHaveBeenCalledTimes(1);
-      expect(optimizely.track).toHaveBeenCalledWith('page-views');
+      expect(optimizely.onReady).toHaveBeenCalledTimes(1);
+      expect(optimizely.track).not.toHaveBeenCalled();
     });
   });
 
-  // when visit tracking is enabled, visit should be sent before page view
-  it('should track visit before page view when visit tracking is enabled', async () => {
+  // when visit tracking is enabled and it is a new visit, only the visit event is tracked
+  it('should track visit event when visit tracking is enabled and it is a new visit', async () => {
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news">
         <PageViewTracking trackVisit />
@@ -78,9 +78,8 @@ describe('Optimizely Page View tracking', () => {
     );
 
     await waitFor(() => {
-      expect(optimizely.track).toHaveBeenCalledTimes(2);
-      expect(optimizely.track.mock.calls[0][0]).toBe('visit');
-      expect(optimizely.track.mock.calls[1][0]).toBe('page-views');
+      expect(optimizely.track).toHaveBeenCalledTimes(1);
+      expect(optimizely.track).toHaveBeenCalledWith('visit');
       expect(localStorage.getItem('last_visit_ts')).toBe('1000000');
     });
   });
@@ -98,9 +97,7 @@ describe('Optimizely Page View tracking', () => {
     );
 
     await waitFor(() => {
-      expect(optimizely.track).toHaveBeenCalledTimes(1);
-      expect(optimizely.track).toHaveBeenCalledWith('page-views');
-      expect(optimizely.track).not.toHaveBeenCalledWith('visit');
+      expect(optimizely.track).not.toHaveBeenCalled();
       expect(localStorage.getItem('last_visit_ts')).toBe('1000000');
     });
   });
