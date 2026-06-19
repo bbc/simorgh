@@ -5,14 +5,7 @@ import Image from '#psammead/psammead-image/src';
 import notes from '../README.md';
 import Bulletin from '.';
 
-const BulletinComponent = ({
-  script,
-  service,
-  mediaType,
-  hasImage,
-  dir,
-  text,
-}) => {
+const BulletinComponent = ({ mediaType, hasImage, dir, text }) => {
   const ctaLink = 'https://bbc.co.uk';
 
   const isLive = boolean('Live', false);
@@ -40,8 +33,6 @@ const BulletinComponent = ({
 
   return (
     <Bulletin
-      script={script}
-      service={service}
       dir={dir}
       image={hasImage && image}
       mediaType={mediaType}
@@ -61,10 +52,8 @@ storiesOf('Components/Bulletin', module)
   .addDecorator(withServicesKnob())
   .add(
     'Tv Bulletin',
-    ({ text: textSnipet, script, service, dir }) => (
+    ({ text: textSnipet, dir }) => (
       <BulletinComponent
-        script={script}
-        service={service}
         dir={dir}
         mediaType="video"
         hasImage
@@ -75,13 +64,11 @@ storiesOf('Components/Bulletin', module)
   )
   .add(
     'Radio Bulletin',
-    ({ text: textSnipet, script, service, dir }) => {
+    ({ text: textSnipet, dir }) => {
       const hasImage = boolean('With Image', true);
 
       return (
         <BulletinComponent
-          script={script}
-          service={service}
           dir={dir}
           mediaType="audio"
           hasImage={hasImage}

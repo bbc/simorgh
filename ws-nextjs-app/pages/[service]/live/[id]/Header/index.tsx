@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { use, useState } from 'react';
 import Heading from '#app/components/Heading';
 import Text from '#app/components/Text';
 import LiveHeaderMedia from '#app/components/LiveHeaderMedia';
 import { MediaCollection } from '#app/components/MediaLoader/types';
-
+import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import MaskedImage from '#app/components/MaskedImage';
 import LiveLabelHeader from './LiveLabelHeader';
 import styles from './styles';
@@ -16,6 +17,7 @@ const Header = ({
   imageUrlTemplate,
   imageWidth,
   mediaCollections,
+  showSportData,
 }: {
   showLiveLabel: boolean;
   title: string;
@@ -24,10 +26,14 @@ const Header = ({
   imageUrlTemplate?: string;
   imageWidth?: number;
   mediaCollections?: MediaCollection[] | null;
+  showSportData?: boolean;
 }) => {
   const [isMediaOpen, setLiveMediaOpen] = useState(false);
   const isHeaderImage = !!imageUrl && !!imageUrlTemplate && !!imageWidth;
   const isWithImageLayout = isHeaderImage || !!mediaCollections;
+  const {
+    translations: { sport: { matchSummary = 'Match Summary' } = {} },
+  } = use(ServiceContext);
 
   const watchVideoClickHandler = () => {
     setLiveMediaOpen(!isMediaOpen);
@@ -41,8 +47,41 @@ const Header = ({
     </span>
   );
 
+  if (showSportData) {
+    return (
+      <div css={styles.headerContainer}>
+        <div css={styles.backgroundContainer}>
+          <div
+            css={[styles.backgroundColor, styles.backgroundColorSportData]}
+          />
+        </div>
+        <div css={styles.contentContainer}>
+          <Heading
+            size="trafalgar"
+            level={1}
+            id="content"
+            tabIndex={-1}
+            css={styles.heading}
+          >
+            {showLiveLabel ? (
+              <LiveLabelHeader
+                isHeaderImage={isWithImageLayout}
+                showSportData={showSportData}
+              >
+                <VisuallyHiddenText>{title}</VisuallyHiddenText>
+              </LiveLabelHeader>
+            ) : (
+              <VisuallyHiddenText>{title}</VisuallyHiddenText>
+            )}
+          </Heading>
+          <VisuallyHiddenText as="h2">{matchSummary}</VisuallyHiddenText>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div css={styles.headerContainer}>
+    <div css={[styles.headerContainer, styles.headerContainerForcedColours]}>
       <div css={styles.backgroundContainer}>
         <div css={styles.backgroundColor} />
       </div>
@@ -72,7 +111,10 @@ const Header = ({
             css={styles.heading}
           >
             {showLiveLabel ? (
-              <LiveLabelHeader isHeaderImage={isWithImageLayout}>
+              <LiveLabelHeader
+                isHeaderImage={isWithImageLayout}
+                showSportData={false}
+              >
                 {Title}
               </LiveLabelHeader>
             ) : (

@@ -8,21 +8,22 @@ import * as clickTracking from '#hooks/useClickTrackerHandler';
 
 import { render } from '../../../components/react-testing-library-with-providers';
 import { service as russianServiceConfig } from '../../../lib/config/services/russian';
+import { service as burmeseServiceConfig } from '../../../lib/config/services/burmese';
+import { service as amharicServiceConfig } from '../../../lib/config/services/amharic';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { InlinePodcastPromo, SecondaryColumnPodcastPromo } from '.';
 
 const PromoWithContext = ({
   inline = false,
   serviceConfigTransformer = identity,
+  config = russianServiceConfig,
 }) => (
   <ToggleContextProvider
     toggles={{
       eventTracking: { enabled: true },
     }}
   >
-    <ServiceContext.Provider
-      value={serviceConfigTransformer(russianServiceConfig.default)}
-    >
+    <ServiceContext.Provider value={serviceConfigTransformer(config.default)}>
       {inline ? <InlinePodcastPromo /> : <SecondaryColumnPodcastPromo />}
     </ServiceContext.Provider>
   </ToggleContextProvider>
@@ -37,13 +38,57 @@ const {
 } = russianServiceConfig.default.podcastPromo;
 
 describe('Inline', () => {
-  it('Should render correctly', () => {
+  it('Should render a promo for podcasts correctly', () => {
+    const { container } = render(
+      <PromoWithContext inline config={burmeseServiceConfig} />,
+      {
+        service: 'burmese',
+      },
+    );
+    expect(container).toMatchSnapshot();
+  });
+
+  it('Should render a promo for whatsapp correctly', () => {
     const { container } = render(<PromoWithContext inline />, {
       service: 'russian',
     });
     expect(container).toMatchSnapshot();
   });
 
+  it('Should render a promo for youtube correctly', () => {
+    const { container } = render(
+      <PromoWithContext inline config={amharicServiceConfig} />,
+      {
+        service: 'amharic',
+      },
+    );
+    expect(container).toMatchSnapshot();
+  });
+  it('Should render a generic promo for other socials correctly', () => {
+    const genericPromoConfig = {
+      ...amharicServiceConfig,
+      default: {
+        ...amharicServiceConfig.default,
+        podcastPromo: {
+          ...amharicServiceConfig.default.podcastPromo,
+          image: {
+            ...amharicServiceConfig.default.podcastPromo.image,
+          },
+          linkLabel: {
+            ...amharicServiceConfig.default.podcastPromo.linkLabel,
+            href: 'other-social-url',
+          },
+        },
+      },
+    };
+    const { container } = render(
+      <PromoWithContext inline config={genericPromoConfig} />,
+      {
+        service: 'amharic',
+      },
+    );
+    expect(container).toMatchSnapshot();
+  });
   it('should show when all props are available', () => {
     const { getByText, getByRole } = render(<PromoWithContext inline />, {
       service: 'russian',

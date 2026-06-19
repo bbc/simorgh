@@ -1,6 +1,5 @@
 import { render } from '../../../../components/react-testing-library-with-providers';
 import relatedItems from './relatedItems';
-import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import IndexAlsosContainer from '.';
 
 describe('Index Alsos', () => {
@@ -27,11 +26,7 @@ describe('Index Alsos', () => {
     describe('It links to a CPS asset', () => {
       it('should render a regular headline', () => {
         const { container } = render(
-          <IndexAlsosContainer
-            alsoItems={relatedItems}
-            script={latin}
-            service="news"
-          />,
+          <IndexAlsosContainer alsoItems={relatedItems} />,
         );
 
         const firstListItem = container.querySelector('li');
@@ -42,11 +37,7 @@ describe('Index Alsos', () => {
 
       it('should render an overtyped headline', () => {
         const { container } = render(
-          <IndexAlsosContainer
-            alsoItems={relatedItems}
-            script={latin}
-            service="news"
-          />,
+          <IndexAlsosContainer alsoItems={relatedItems} />,
         );
 
         const secondListItem = container.querySelectorAll('li')[1];
@@ -57,11 +48,7 @@ describe('Index Alsos', () => {
 
       it('should render a CPS url', () => {
         const { container } = render(
-          <IndexAlsosContainer
-            alsoItems={relatedItems}
-            script={latin}
-            service="news"
-          />,
+          <IndexAlsosContainer alsoItems={relatedItems} />,
         );
 
         const firstListItem = container.querySelector('li');
@@ -73,11 +60,7 @@ describe('Index Alsos', () => {
     describe('It links to a url', () => {
       it('should render a promo headline', () => {
         const { container } = render(
-          <IndexAlsosContainer
-            alsoItems={relatedItems}
-            script={latin}
-            service="news"
-          />,
+          <IndexAlsosContainer alsoItems={relatedItems} />,
         );
 
         const thirdListItem = container.querySelectorAll('li')[2];
@@ -88,11 +71,7 @@ describe('Index Alsos', () => {
 
       it('should render a promo hyperlink', () => {
         const { container } = render(
-          <IndexAlsosContainer
-            alsoItems={relatedItems}
-            script={latin}
-            service="news"
-          />,
+          <IndexAlsosContainer alsoItems={relatedItems} />,
         );
 
         const thirdListItem = container.querySelectorAll('li')[2];

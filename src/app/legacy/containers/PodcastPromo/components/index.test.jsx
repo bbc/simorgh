@@ -1,15 +1,11 @@
 import { render } from '../../../../components/react-testing-library-with-providers';
-import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 
 import PodcastPromo from '.';
 
 const assertTypeOfElement = (Component, type) => {
-  const { container } = render(
-    <Component script={latin} service="russian">
-      Content
-    </Component>,
-    { service: 'russian' },
-  );
+  const { container } = render(<Component>Content</Component>, {
+    service: 'russian',
+  });
 
   expect(container.querySelector(type)).toBeInTheDocument();
   expect(container.querySelector(type).textContent).toBe('Content');
@@ -20,9 +16,7 @@ describe('Podcast Promo', () => {
     assertTypeOfElement(PodcastPromo.Title, 'h2');
     it('should match snapshot', () => {
       const { container } = render(
-        <PodcastPromo.Title script={latin} service="russian" dir="ltr">
-          Content
-        </PodcastPromo.Title>,
+        <PodcastPromo.Title dir="ltr">Content</PodcastPromo.Title>,
         { service: 'russian' },
       );
       expect(container).toMatchSnapshot();
@@ -55,9 +49,7 @@ describe('Podcast Promo', () => {
     assertTypeOfElement(PodcastPromo.Card.Title, 'h3');
     it('should match snapshot', () => {
       const { container } = render(
-        <PodcastPromo.Card.Title script={latin} service="russian">
-          Content
-        </PodcastPromo.Card.Title>,
+        <PodcastPromo.Card.Title>Content</PodcastPromo.Card.Title>,
         { service: 'russian' },
       );
       expect(container).toMatchSnapshot();
@@ -68,9 +60,7 @@ describe('Podcast Promo', () => {
     assertTypeOfElement(PodcastPromo.Card.Description, 'p');
     it('should match snapshot', () => {
       const { container } = render(
-        <PodcastPromo.Card.Description script={latin} service="russian">
-          Content
-        </PodcastPromo.Card.Description>,
+        <PodcastPromo.Card.Description>Content</PodcastPromo.Card.Description>,
         { service: 'russian' },
       );
       expect(container).toMatchSnapshot();
@@ -107,11 +97,7 @@ describe('Podcast Promo', () => {
     assertTypeOfElement(PodcastPromo.Card.EpisodesText, 'p');
     it('should match snapshot', () => {
       const { container } = render(
-        <PodcastPromo.Card.EpisodesText
-          script={latin}
-          service="russian"
-          dir="ltr"
-        >
+        <PodcastPromo.Card.EpisodesText dir="ltr">
           Episodes
         </PodcastPromo.Card.EpisodesText>,
         { service: 'russian' },

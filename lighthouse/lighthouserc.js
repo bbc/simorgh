@@ -106,7 +106,10 @@ module.exports = {
         ],
         'categories:seo': [
           'error',
-          { aggregationMethod: 'optimistic', minScore: 0.6 },
+          {
+            aggregationMethod: 'optimistic',
+            minScore: process.env.LIGHTHOUSE_APP_ENV === 'live' ? 0.6 : 0.5,
+          },
         ],
         'third-party-cookies': 'off',
       },

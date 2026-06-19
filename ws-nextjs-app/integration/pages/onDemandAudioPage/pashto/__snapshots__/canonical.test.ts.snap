@@ -235,7 +235,7 @@ exports[`Canonical On Demand Audio Page SEO Lang attribute 1`] = `"ps"`;
 
 exports[`Canonical On Demand Audio Page SEO Linked data should match text 1`] = `
 {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "WebPage",
@@ -275,7 +275,7 @@ exports[`Canonical On Demand Audio Page SEO Linked data should match text 1`] = 
       "duration": "PT29M30S",
       "name": "ماښامنۍ خپرونه",
       "thumbnailUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p0k5sc1d.png",
-      "uploadDate": "2024-11-24T00:00:00.000Z",
+      "uploadDate": "2024-11-24T15:30:00.000Z",
     },
   ],
 }

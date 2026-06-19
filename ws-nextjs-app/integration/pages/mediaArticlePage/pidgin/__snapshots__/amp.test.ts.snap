@@ -292,7 +292,7 @@ exports[`AMP Media Article Page SEO Lang attribute 1`] = `"pcm"`;
 
 exports[`AMP Media Article Page SEO Linked data should match text 1`] = `
 {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "NewsArticle",

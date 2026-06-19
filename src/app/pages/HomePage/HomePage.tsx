@@ -1,6 +1,7 @@
 import { Fragment, use } from 'react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import PWAPromotionalBanner from '#app/components/PWAPromotionalBanner';
+import AccountPromotionalBanner from '#app/components/Account/AccountPromotionalBanner';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import {
   Curation,
@@ -63,6 +64,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
     <>
       {/* EXPERIMENT: PWA Promotional Banner */}
       <PWAPromotionalBanner />
+      <AccountPromotionalBanner />
       <ChartbeatAnalytics title={title} />
       <MetadataContainer
         title={metadataTitle}
@@ -98,6 +100,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                   link,
                   position,
                   visualStyle,
+                  associatedContent: { uri } = {},
                   ...curationProps
                 }: Curation,
                 index: number,
@@ -120,7 +123,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       title={curationTitle}
                       topStoriesTitle={topStoriesTitle}
                       position={position}
-                      link={link}
+                      link={link || uri}
                       curationLength={curations?.length}
                       nthCurationByStyleAndProminence={
                         nthCurationByStyleAndProminence

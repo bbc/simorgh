@@ -79,8 +79,17 @@ exports[`Toggles Config when application environment is live should contain corr
   "scriptLink": {
     "enabled": true,
   },
+  "showSportDataHeader": {
+    "enabled": false,
+  },
+  "sportDataPolling": {
+    "enabled": false,
+  },
   "topBarOJs": {
     "enabled": true,
+  },
+  "uasPersonalization": {
+    "enabled": false,
   },
   "variantCookie": {
     "enabled": true,
@@ -171,8 +180,18 @@ exports[`Toggles Config when application environment is local should contain cor
   "scriptLink": {
     "enabled": true,
   },
+  "showSportDataHeader": {
+    "enabled": true,
+  },
+  "sportDataPolling": {
+    "enabled": true,
+  },
   "topBarOJs": {
     "enabled": true,
+  },
+  "uasPersonalization": {
+    "enabled": true,
+    "value": "hindi",
   },
   "variantCookie": {
     "enabled": true,
@@ -262,8 +281,17 @@ exports[`Toggles Config when application environment is test should contain corr
   "scriptLink": {
     "enabled": true,
   },
+  "showSportDataHeader": {
+    "enabled": false,
+  },
+  "sportDataPolling": {
+    "enabled": false,
+  },
   "topBarOJs": {
     "enabled": true,
+  },
+  "uasPersonalization": {
+    "enabled": false,
   },
   "variantCookie": {
     "enabled": true,

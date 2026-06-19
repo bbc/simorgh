@@ -253,7 +253,7 @@ exports[`AMP Story Page SEO Lang attribute 1`] = `"ha"`;
 
 exports[`AMP Story Page SEO Linked data should match text 1`] = `
 {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "NewsArticle",

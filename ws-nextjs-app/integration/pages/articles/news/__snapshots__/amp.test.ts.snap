@@ -223,7 +223,7 @@ exports[`AMP Articles SEO Lang attribute 1`] = `"en-gb"`;
 
 exports[`AMP Articles SEO Linked data should match text 1`] = `
 {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "NewsArticle",
@@ -335,5 +335,19 @@ exports[`AMP Articles Timestamp should match text and date 1`] = `
 {
   "date": "2019-05-28",
   "text": "28 May 2019",
+}
+`;
+
+exports[`AMP Articles Topic Tags should match text and href 1`] = `
+{
+  "href": "https://www.bbc.co.uk/news/topics/cmg0810x955t",
+  "text": "Hackney",
+}
+`;
+
+exports[`AMP Articles Topic Tags should match text and href 2`] = `
+{
+  "href": "https://www.bbc.co.uk/news/topics/cy489180198t",
+  "text": "Windsor",
 }
 `;

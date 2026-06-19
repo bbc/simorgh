@@ -10,7 +10,7 @@ import {
   ServiceContext,
   ServiceContextProvider,
 } from '#app/contexts/ServiceContext';
-import services from '#src/server/utilities/serviceConfigs';
+import services from '#utilities/serviceConfigs';
 import PromoTimestamp from '#components/Promo/timestamp';
 import ArticleTimestamp from '#containers/ArticleTimestamp';
 import MostReadTimestamp from '#src/app/components/MostRead/Canonical/LastUpdated';
@@ -232,8 +232,6 @@ timeFunctions.push(
         <WithService service={service} variant={variant}>
           <MostReadTimestamp
             prefix={articleTimestampPrefix}
-            script={script}
-            service={service}
             timestamp={new Date(fixedTimestamp)}
             locale={locale}
             timezone={timezone}

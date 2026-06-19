@@ -3,7 +3,7 @@ import { Theme } from '@emotion/react';
 import MediaLoader from '#app/components/MediaLoader';
 import { MediaBlock } from '#app/components/MediaLoader/types';
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
-import { Tag } from '#app/components/LinkedData/types';
+import { BylineLinkedData, Tag } from '#app/components/LinkedData/types';
 import {
   Article,
   OptimoBylineBlock,
@@ -56,6 +56,7 @@ import {
 } from '../../components/Byline/utilities';
 
 import { ServiceContext } from '../../contexts/ServiceContext';
+import { RequestContext } from '../../contexts/RequestContext';
 import RelatedContentSection from '../../components/RelatedContentSection';
 
 import SecondaryColumn from './SecondaryColumn';
@@ -140,6 +141,8 @@ const getTimestampComponent =
     showTimestamp ? <Timestamp {...props} popOut={false} /> : null;
 
 const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
+  const { pageType } = use(RequestContext);
+
   const {
     articleAuthor,
     isTrustProjectParticipant,
@@ -162,7 +165,10 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const bylineContribBlocks = bylineBlock?.model?.blocks || [];
 
-  const bylineLinkedData = bylineExtractor(bylineContribBlocks);
+  const bylineLinkedData = bylineExtractor({
+    blocks: bylineContribBlocks,
+    pageType,
+  }) as BylineLinkedData[];
 
   const hasByline = bylineLinkedData.length > 0;
 

@@ -39,7 +39,10 @@ export default () => {
   const swSrc = `${getEnvConfig().SIMORGH_BASE_URL}/${service}${swPath}`;
   const isPWA = useIsPWA();
 
-  useServiceWorkerRegistration(service);
+  useServiceWorkerRegistration({
+    service,
+    swPath,
+  });
   // Send PWA status to service worker
   useSendPWAStatus(isPWA);
 

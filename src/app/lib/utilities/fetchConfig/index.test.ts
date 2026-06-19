@@ -5,7 +5,7 @@ const mockAgent = {
   connect: { cert: 'cert', ca: 'ca', key: 'key' },
 } as unknown as Agent;
 
-jest.mock('#src/server/utilities/getAgent', () => ({
+jest.mock('#utilities/getAgent', () => ({
   __esModule: true,
   default: async () => mockAgent,
 }));
@@ -188,7 +188,7 @@ describe('fetchConfig', () => {
     });
 
     it.each(SERVICES_WITH_NEW_NAV)(
-      'should set the useNewNav param for %s on Local/Test',
+      'should set the useNewNav param for %s service',
       async service => {
         global.fetch = jest.fn().mockResolvedValue({
           ok: true,
@@ -208,30 +208,7 @@ describe('fetchConfig', () => {
       },
     );
 
-    it.each(SERVICES_WITH_NEW_NAV)(
-      'should not set the useNewNav param for %s on Live',
-      async service => {
-        process.env.SIMORGH_APP_ENV = 'live';
-
-        global.fetch = jest.fn().mockResolvedValue({
-          ok: true,
-          json: async () => mockNavResponse,
-        });
-
-        const { default: fetchConfig } = await import('.');
-
-        await fetchConfig({
-          service,
-          pagePath: `/${service}`,
-          configType: 'navigation',
-        });
-
-        const fetchUrl = (global.fetch as jest.Mock).mock.calls[0][0];
-        expect(fetchUrl).not.toContain('useNewNav=true');
-      },
-    );
-
-    it('should not set the useNewNav param for non-Arabic/Tamil services', async () => {
+    it('should set both variant and useNewNav params for a dual-script service', async () => {
       global.fetch = jest.fn().mockResolvedValue({
         ok: true,
         json: async () => mockNavResponse,
@@ -240,13 +217,15 @@ describe('fetchConfig', () => {
       const { default: fetchConfig } = await import('.');
 
       await fetchConfig({
-        service: 'indonesia',
-        pagePath: '/indonesia',
+        service: 'serbian',
+        variant: 'cyr',
+        pagePath: '/serbian',
         configType: 'navigation',
       });
 
       const fetchUrl = (global.fetch as jest.Mock).mock.calls[0][0];
-      expect(fetchUrl).not.toContain('useNewNav=true');
+      expect(fetchUrl).toContain('variant=cyr');
+      expect(fetchUrl).toContain('useNewNav=true');
     });
   });
 });

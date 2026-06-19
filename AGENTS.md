@@ -33,3 +33,4 @@ A core part of what makes Simorgh unique is that each service (e.g. `arabic`, `m
  
 ## PR instructions
 - Always add "[copilot]" to the end of any commit messages when you use GitHub Copilot to generate code.
+- Ensure AGENTS.md is kept up to date when codebase changes require it.

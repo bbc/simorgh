@@ -31,7 +31,7 @@ declare global {
         }
       | object;
     bbcuser: {
-      getHashedId: () => null;
+      getHashedId: () => Promise<string | null>;
       isSignedIn: () => Promise<boolean>;
     };
     __reverb: {
@@ -43,9 +43,7 @@ declare global {
     ) => void;
     embeddedMedia: {
       api: {
-        players: () => {
-          bbcMediaPlayer0: Player;
-        };
+        players: () => Record<string, Player>;
       };
     };
     mediaPlayers: Record<string, Player>;

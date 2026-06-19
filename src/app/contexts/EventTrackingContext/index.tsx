@@ -1,5 +1,6 @@
 import { createContext, PropsWithChildren, use, useMemo } from 'react';
 
+import { AccountContext } from '#contexts/AccountContext';
 import { RequestContext } from '../RequestContext';
 import useToggle from '../../hooks/useToggle';
 import {
@@ -23,6 +24,7 @@ import {
   AUDIO_PAGE,
   OFFLINE_PAGE,
   LIVE_TV_PAGE,
+  MY_NEWS_PAGE,
 } from '../../routes/utils/pageTypes';
 import { PageTypes } from '../../models/types/global';
 import { EventTrackingContextProps } from '../../models/types/eventTracking';
@@ -57,6 +59,7 @@ const getCampaignID = (pageType: CampaignPageTypes) => {
     [AUDIO_PAGE]: 'player-episode',
     [TV_PAGE]: 'player-episode',
     [LIVE_TV_PAGE]: 'live-tv',
+    [MY_NEWS_PAGE]: 'my-news',
   }[pageType];
 
   if (!campaignID) {
@@ -85,6 +88,7 @@ export const EventTrackingContextProvider = ({
   const serviceContext = use(ServiceContext);
   const { atiAnalyticsProducerId, atiAnalyticsProducerName } = serviceContext;
 
+  const { isSignedIn, hashedUserId } = use(AccountContext);
   const { enabled: eventTrackingIsEnabled } = useToggle('eventTracking');
 
   const trackingProps = useMemo(() => {
@@ -99,6 +103,8 @@ export const EventTrackingContextProvider = ({
         producerId: atiAnalyticsProducerId,
         producerName: atiAnalyticsProducerName,
         statsDestination,
+        isSignedIn,
+        hashedId: hashedUserId || null,
       };
     }
     return null;
@@ -110,6 +116,8 @@ export const EventTrackingContextProvider = ({
     pageType,
     platform,
     statsDestination,
+    isSignedIn,
+    hashedUserId,
   ]);
 
   if (!eventTrackingIsEnabled || !atiData) {
@@ -120,9 +128,16 @@ export const EventTrackingContextProvider = ({
     );
   }
 
-  const hasRequiredProps = Object.values(
-    trackingProps as EventTrackingContextProps,
-  ).every(Boolean);
+  const hasRequiredProps =
+    trackingProps &&
+    [
+      trackingProps.campaignID,
+      trackingProps.pageIdentifier,
+      trackingProps.platform,
+      trackingProps.producerId,
+      trackingProps.producerName,
+      trackingProps.statsDestination,
+    ].every(Boolean);
 
   return (
     <EventTrackingContext.Provider

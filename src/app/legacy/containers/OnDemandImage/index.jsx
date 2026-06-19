@@ -32,8 +32,14 @@ const getSrcSet = ({ imageUrl, sizes }) =>
 const smallImageSize = 128;
 const mediumImageSize = 256;
 const largeImageSize = 480;
+const xlImageSize = 1200;
 
-const OnDemandImage = ({ imageUrl, alt: altFromProps, className = '' }) => {
+const OnDemandImage = ({
+  imageUrl,
+  alt: altFromProps,
+  className = '',
+  isPodcastEpisodePage = false,
+}) => {
   const { defaultImageAltText, dir } = use(ServiceContext);
   const { isLite } = use(RequestContext);
 
@@ -44,7 +50,12 @@ const OnDemandImage = ({ imageUrl, alt: altFromProps, className = '' }) => {
   const src = getSrc({ imageUrl, size: mediumImageSize });
   const srcset = getSrcSet({
     imageUrl,
-    sizes: [smallImageSize, mediumImageSize, largeImageSize],
+    sizes: [
+      smallImageSize,
+      mediumImageSize,
+      largeImageSize,
+      ...(isPodcastEpisodePage ? [xlImageSize] : []),
+    ],
   });
   const sizes = '(min-width: 1008px) 228px, 30vw';
 

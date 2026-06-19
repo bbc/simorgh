@@ -1,4 +1,4 @@
-import { use } from 'react';
+import { use, useState } from 'react';
 import path from 'ramda/src/path';
 import is from 'ramda/src/is';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
@@ -15,7 +15,9 @@ import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
 import MetadataContainer from '#app/components/Metadata';
 import LinkedData from '#app/components/LinkedData';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import { RequestContext } from '#app/contexts/RequestContext';
 import { ContentType } from '#app/components/ChartbeatAnalytics/types';
+import ContinueReadingButton from '#app/components/ContinueReadingButton';
 import styles from './index.styles';
 import { OnDemandAudioProps } from './types';
 
@@ -51,19 +53,110 @@ const OnDemandAudioPage = ({
   const pageType = path(['metadata', 'type'], pageData);
 
   const { serviceName } = use(ServiceContext);
+  const { isLite, pathname, canonicalNonUkLink } = use(RequestContext);
+
+  const isPodcastEpisodePage =
+    /\/podcasts\/(?!programmes\/)[^/]+\/[^/]+(?:\.lite)?$/.test(pathname);
+
+  const shouldEmitPodcastEpisodeSchema = isPodcast && isPodcastEpisodePage;
+
+  const episodeCanonicalUrl = canonicalNonUkLink;
+  const seriesCanonicalUrl = episodeCanonicalUrl.replace(
+    /\/([^/]+)(?:\.lite)?$/,
+    '',
+  );
+
+  const seriesId = `${seriesCanonicalUrl}#series`;
+  const episodeId = `${episodeCanonicalUrl}#episode`;
+  const audioId = `${episodeCanonicalUrl}#audio`;
+
+  const versions = pageData.mediaBlocks?.[0]?.model?.versions ?? [];
+  const availableFrom = versions[0]?.availableFrom;
+
+  const uploadDate = availableFrom
+    ? new Date(availableFrom).toISOString()
+    : new Date(releaseDateTimeStamp).toISOString();
+
+  const downloadLink = externalLinks?.find(
+    link =>
+      link.linkType === 'download' && link.linkUrl?.startsWith('https://'),
+  );
+  const audioEntities = !mediaIsAvailable
+    ? []
+    : [
+        {
+          '@type': 'AudioObject',
+          name: promoBrandTitle,
+          description: summary,
+          thumbnailUrl: thumbnailImageUrl,
+          duration: durationISO8601,
+          uploadDate,
+        },
+      ];
+
+  const podcastEntities =
+    shouldEmitPodcastEpisodeSchema && mediaIsAvailable
+      ? [
+          {
+            '@type': 'PodcastSeries',
+            '@id': seriesId,
+            name: brandTitle,
+          },
+          {
+            '@type': 'PodcastEpisode',
+            '@id': episodeId,
+            name: episodeTitle || brandTitle,
+            description: summary,
+            datePublished: new Date(releaseDateTimeStamp).toISOString(),
+            partOfSeries: { '@id': seriesId },
+            associatedMedia: {
+              '@type': 'AudioObject',
+              '@id': audioId,
+              name: episodeTitle || promoBrandTitle,
+              description: summary,
+              ...(downloadLink?.linkUrl && {
+                contentUrl: downloadLink.linkUrl,
+                encodingFormat: 'audio/mpeg',
+              }),
+              duration: durationISO8601,
+              thumbnailUrl: thumbnailImageUrl,
+              uploadDate,
+            },
+          },
+        ]
+      : null;
+
+  const linkedDataEntities = podcastEntities ?? audioEntities;
 
   const hasRecentEpisodes = recentEpisodes && Boolean(recentEpisodes.length);
   const metadataTitle = episodeTitle
     ? `${episodeTitle} - ${brandTitle} - ${serviceName}`
     : headline;
 
+  const shouldSetMainEntity = Boolean(podcastEntities);
+
+  const imageHeight = isPodcastEpisodePage ? 675 : 400;
+  const imageWidth = isPodcastEpisodePage ? 1200 : 400;
+  const image = `https://${imageUrl?.replace('$recipe', `${imageWidth}x${imageHeight}`)}`;
   const metadataImageProps = is(String, imageUrl)
     ? {
-        image: `https://${imageUrl.replace('$recipe', `400x400`)}`,
-        imageWidth: 400,
-        imageHeight: 400,
+        image,
+        imageWidth,
+        imageHeight,
       }
     : {};
+
+  const [showAllContent, setShowAllContent] = useState(false);
+
+  const summaryIsShort = Boolean(summary === shortSynopsis);
+
+  const shouldShowContinueReadingButton =
+    isPodcast && !isLite && !summaryIsShort;
+
+  const summaryStyles =
+    shouldShowContinueReadingButton && !showAllContent
+      ? styles.collapsedSummary
+      : styles.expandedSummary;
 
   return (
     <>
@@ -80,7 +173,7 @@ const OnDemandAudioPage = ({
         openGraphType="website"
         lang={language}
         title={metadataTitle}
-        description={shortSynopsis}
+        description={summary}
         {...metadataImageProps}
         hasAmpPage={false}
       />
@@ -95,11 +188,18 @@ const OnDemandAudioPage = ({
                   episodeTitle={episodeTitle}
                   releaseDateTimeStamp={releaseDateTimeStamp}
                 />
-                <OnDemandParagraphContainer testid="summary" text={summary} />
                 {episodeTitle && (
-                  <FooterTimestamp
-                    releaseDateTimeStamp={releaseDateTimeStamp}
-                  />
+                  <div css={styles.footerTimeStampWrapper}>
+                    <FooterTimestamp
+                      releaseDateTimeStamp={releaseDateTimeStamp}
+                    />
+                  </div>
+                )}
+                {mediaIsAvailable ? (
+                  <MediaLoader blocks={pageData?.mediaBlocks} />
+                ) : (
+                  //  @ts-expect-error allow rendering of MediaError component when media is not available
+                  <MediaError skin="audio" />
                 )}
               </div>
               <EpisodeImage
@@ -107,36 +207,29 @@ const OnDemandAudioPage = ({
                 alt={imageAltText}
                 css={styles.image}
                 className="imageStyles"
+                isPodcastEpisodePage
               />
             </div>
-            {mediaIsAvailable ? (
-              <MediaLoader blocks={pageData?.mediaBlocks} />
-            ) : (
-              //  @ts-expect-error allow rendering of MediaError component when media is not available
-              <MediaError skin="audio" />
+            <div css={summaryStyles}>
+              <OnDemandParagraphContainer testid="summary" text={summary} />
+            </div>
+            {shouldShowContinueReadingButton && (
+              <ContinueReadingButton
+                css={styles.continueReadingButton}
+                showAllContent={showAllContent}
+                setShowAllContent={setShowAllContent}
+              />
             )}
 
             <LinkedData
               type="WebPage"
               seoTitle={metadataTitle}
-              entities={
-                mediaIsAvailable
-                  ? [
-                      {
-                        '@type': 'AudioObject',
-                        name: promoBrandTitle,
-                        description: shortSynopsis,
-                        thumbnailUrl: thumbnailImageUrl,
-                        duration: durationISO8601,
-                        ...(releaseDateTimeStamp && {
-                          uploadDate: new Date(
-                            releaseDateTimeStamp,
-                          ).toISOString(),
-                        }),
-                      },
-                    ]
-                  : []
-              }
+              entities={linkedDataEntities}
+              mainEntityId={shouldSetMainEntity ? episodeId : undefined}
+              {...(isPodcastEpisodePage &&
+                metadataImageProps && {
+                  metadataImageProps,
+                })}
             />
           </main>
 

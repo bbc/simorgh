@@ -103,6 +103,55 @@ describe('LinkedData', () => {
     ],
   };
 
+  const podcastEpisodePathname = '/gahuza/podcasts/p07yh8hb/p0k1qjp9';
+
+  const seriesId = `https://www.test.bbc.com${podcastEpisodePathname}#series`;
+  const episodeId = `https://www.test.bbc.com${podcastEpisodePathname}#episode`;
+  const audioId = `https://www.test.bbc.com${podcastEpisodePathname}#audio`;
+
+  const propsForPodcastEpisode = {
+    type: 'WebPage',
+    seoTitle: 'Episode Title - Brand - Gahuza',
+    entities: [
+      {
+        '@type': 'PodcastSeries',
+        '@id': seriesId,
+        name: "Imvo n'imvano",
+      },
+      {
+        '@type': 'PodcastEpisode',
+        '@id': episodeId,
+        name: 'Episode Title',
+        description: 'Episode synopsis',
+        datePublished: '2024-11-02T12:00:00.000Z',
+        partOfSeries: { '@id': seriesId },
+        associatedMedia: {
+          '@type': 'AudioObject',
+          '@id': audioId,
+          name: 'Episode Title',
+          description: 'Episode synopsis',
+          duration: 'PT29M30S',
+          thumbnailUrl: 'https://ichef.bbci.co.uk/...',
+          uploadDate: '2024-11-02T12:00:00.000Z',
+        },
+      },
+    ],
+    mainEntityId: episodeId,
+  };
+
+  it('should correctly render linked data for podcast episode pages with PodcastEpisode schema', () => {
+    render(
+      <Context>
+        <LinkedData {...propsForPodcastEpisode} />
+      </Context>,
+      {
+        pathname: podcastEpisodePathname,
+      },
+    );
+
+    expect(getLinkedDataOutput()).toMatchSnapshot();
+  });
+
   describe('SpeakableSpecification schema', () => {
     const baseProps = {
       type: 'WebPage',

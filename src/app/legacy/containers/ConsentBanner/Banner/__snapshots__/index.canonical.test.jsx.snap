@@ -287,6 +287,7 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
 <div>
   <div
     class="emotion-0 emotion-1"
+    id="consent-banner"
   >
     <div
       class="emotion-2 emotion-3"
@@ -639,6 +640,7 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
 <div>
   <div
     class="emotion-0 emotion-1"
+    id="consent-banner"
   >
     <div
       class="emotion-2 emotion-3"
@@ -991,6 +993,7 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
 <div>
   <div
     class="emotion-0 emotion-1"
+    id="consent-banner"
   >
     <div
       class="emotion-2 emotion-3"
@@ -1336,6 +1339,7 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
 <div>
   <div
     class="emotion-0 emotion-1"
+    id="consent-banner"
   >
     <div
       class="emotion-2 emotion-3"

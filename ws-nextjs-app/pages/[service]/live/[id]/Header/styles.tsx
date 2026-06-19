@@ -2,11 +2,14 @@ import { css, Theme } from '@emotion/react';
 import pixelsToRem from '../../../../../../src/app/utilities/pixelsToRem';
 
 export default {
-  headerContainer: ({ mq }: Theme) =>
+  headerContainer: () =>
     css({
       display: 'flex',
       flexDirection: 'column',
       position: 'relative',
+    }),
+  headerContainerForcedColours: ({ mq }: Theme) =>
+    css({
       [mq.FORCED_COLOURS]: {
         borderBottom: `solid ${pixelsToRem(1)}rem transparent`,
       },
@@ -38,6 +41,10 @@ export default {
       top: 0,
       bottom: 0,
       position: 'absolute',
+    }),
+  backgroundColorSportData: ({ palette }: Theme) =>
+    css({
+      backgroundColor: palette.GREY_16, // non-concise view background colour - MVP
     }),
   contentContainer: ({ mq, gridWidths }: Theme) =>
     css({

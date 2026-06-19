@@ -24,7 +24,6 @@ import loggerNode from '#lib/logger.node';
 import { MEDIA_MISSING } from '#lib/logger.const';
 import { MEDIA_ASSET_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
 import PromoTimestamp from '#components/Promo/timestamp';
-import { ServiceContext } from '../../../contexts/ServiceContext';
 import LinkContents from './LinkContents';
 import MediaIndicatorContainer from './MediaIndicator';
 import IndexAlsosContainer from './IndexAlsos';
@@ -148,7 +147,6 @@ const StoryPromoContainer = ({
   labelId = '',
   sectionType = '',
 }) => {
-  const { script, service } = use(ServiceContext);
   const { isAmp, isLite, pageType, variant } = use(RequestContext);
   const handleClickTracking = useCombinedClickTrackerHandler(eventTrackingData);
 
@@ -230,8 +228,6 @@ const StoryPromoContainer = ({
   const Info = (
     <>
       <Headline
-        script={script}
-        service={service}
         promoType={promoType}
         promoHasImage={displayImage}
         as={headingTagOverride}
@@ -258,12 +254,7 @@ const StoryPromoContainer = ({
         </StyledLink>
       </Headline>
       {promoSummary && displaySummary && (
-        <Summary
-          script={script}
-          service={service}
-          promoType={promoType}
-          promoHasImage={displayImage}
-        >
+        <Summary promoType={promoType} promoHasImage={displayImage}>
           {promoSummary}
         </Summary>
       )}
@@ -273,12 +264,7 @@ const StoryPromoContainer = ({
         </PromoTimestamp>
       )}
       {promoType === 'top' && relatedItems && (
-        <IndexAlsosContainer
-          alsoItems={relatedItems}
-          script={script}
-          service={service}
-          dir={dir}
-        />
+        <IndexAlsosContainer alsoItems={relatedItems} dir={dir} />
       )}
     </>
   );
@@ -286,13 +272,7 @@ const StoryPromoContainer = ({
     pathOr(null, ['indexImage'], item) || pathOr(null, ['images'], item);
 
   const MediaIndicator = (
-    <MediaIndicatorContainer
-      item={item}
-      script={script}
-      service={service}
-      dir={dir}
-      isInline={!displayImage}
-    />
+    <MediaIndicatorContainer item={item} dir={dir} isInline={!displayImage} />
   );
 
   const StoryPromoComponent = isSingleColumnLayout

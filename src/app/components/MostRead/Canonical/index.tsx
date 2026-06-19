@@ -9,7 +9,6 @@ import MostReadRank from './Rank';
 import LastUpdated from './LastUpdated';
 import { ColumnLayout, MostReadData, Size } from '../types';
 import { Direction } from '../../../models/types/global';
-import { TypographyScript } from '../../../models/types/theming';
 
 interface MostReadProps {
   columnLayout?: ColumnLayout;
@@ -26,7 +25,6 @@ const MostRead = ({
 }: MostReadProps) => {
   const {
     service,
-    script,
     dir,
     datetimeLocale,
     serviceDatetimeLocale,
@@ -55,7 +53,6 @@ const MostRead = ({
   const locale = serviceDatetimeLocale || datetimeLocale;
 
   const direction = dir as Direction;
-  const fontScript = script as TypographyScript;
 
   return (
     <MostReadList
@@ -64,7 +61,7 @@ const MostRead = ({
       columnLayout={columnLayout}
     >
       {items.map(
-        ({ id, timestamp, title, href }, i) =>
+        ({ id, timestamp, title, href, isLive }, i) =>
           title &&
           href && (
             <MostReadItemWrapper
@@ -89,13 +86,12 @@ const MostRead = ({
                 size={size}
                 id={id}
                 position={i + 1}
+                isLive={isLive}
                 eventTrackingData={eventTrackingDataExtended}
               >
                 {shouldRenderLastUpdated(timestamp) && timestamp && (
                   <LastUpdated
                     prefix={lastUpdated}
-                    script={fontScript}
-                    service={service}
                     timestamp={timestamp}
                     locale={locale}
                     timezone={timezone}

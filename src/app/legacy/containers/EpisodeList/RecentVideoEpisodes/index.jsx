@@ -50,7 +50,7 @@ const getAmpImageComponent =
   );
 
 const RecentVideoEpisodes = ({ masterBrand, episodes }) => {
-  const { script, service, dir, timezone, datetimeLocale, translations } =
+  const { service, dir, timezone, datetimeLocale, translations } =
     use(ServiceContext);
   const { isAmp, variant } = use(RequestContext);
 
@@ -88,21 +88,13 @@ const RecentVideoEpisodes = ({ masterBrand, episodes }) => {
   return (
     <aside role="complementary" aria-labelledby="recent-episodes">
       <StyledSectionLabel
-        script={script}
-        service={service}
         dir={dir}
         backgroundColor={MIDNIGHT_BLACK}
         labelId="recent-episodes"
       >
         {recentEpisodesTranslation}
       </StyledSectionLabel>
-      <EpisodeList
-        script={script}
-        service={service}
-        dir={dir}
-        ulProps={ulProps}
-        liProps={liProps}
-      >
+      <EpisodeList dir={dir} ulProps={ulProps} liProps={liProps}>
         {episodes.map((episode, index) => (
           <EpisodeList.Episode key={episode.id} dir={dir}>
             <EpisodeList.Image
@@ -143,9 +135,7 @@ const RecentVideoEpisodes = ({ masterBrand, episodes }) => {
                   format="D MMMM YYYY"
                   dateTimeFormat="YYYY-MM-DD"
                   padding={false}
-                  script={script}
                   locale={datetimeLocale}
-                  service={service}
                   timezone={timezone}
                 />
               </InlineDiv>

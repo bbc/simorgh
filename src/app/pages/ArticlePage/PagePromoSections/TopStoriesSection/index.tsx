@@ -18,7 +18,7 @@ const TopStoriesSection = ({
   content: TopStoryItem[];
   experimentProps?: ComponentExperimentProps;
 }) => {
-  const { translations, script, service } = use(ServiceContext);
+  const { translations } = use(ServiceContext);
 
   const eventTrackingData = {
     block: {
@@ -61,8 +61,6 @@ const TopStoriesSection = ({
         labelId={LABEL_ID}
         columnType="secondary"
         backgroundColor={GREY_2}
-        script={script}
-        service={service}
       >
         {title}
       </SectionLabel>

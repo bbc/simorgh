@@ -16,6 +16,7 @@ const logCodes = {
   DATA_RESPONSE_FROM_CACHE: 'data_response_from_cache',
   BFF_FETCH_ERROR: 'bff_fetch_error',
   IDCTA_FETCH_ERROR: 'idcta_fetch_error',
+  UAS_API_ERROR: 'uas_api_error',
 
   // Files
   LOCAL_SENDFILE_ERROR: 'local_sendfile_error',

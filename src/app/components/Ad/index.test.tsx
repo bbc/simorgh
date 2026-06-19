@@ -1,10 +1,8 @@
-import { BrowserRouter } from 'react-router-dom';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import { Helmet } from 'react-helmet';
 import { render } from '../react-testing-library-with-providers';
-import latinDiacritics from '../ThemeProvider/fontScripts/latinWithDiacritics';
 import {
   ServiceContext,
   ServiceContextProvider,
@@ -13,7 +11,6 @@ import AdContainer from './index';
 
 const context = {
   service: 'mundo',
-  script: latinDiacritics,
   dir: 'ltr',
   translations: {
     ads: {
@@ -181,9 +178,7 @@ describe('Ad Container', () => {
               showAdsBasedOnLocation
             >
               <ToggleContext.Provider value={toggleContextMock}>
-                <BrowserRouter>
-                  <AdContainer slotType="leaderboard" />
-                </BrowserRouter>
+                <AdContainer slotType="leaderboard" />
               </ToggleContext.Provider>
             </RequestContextProvider>
           </ServiceContextProvider>,
@@ -206,9 +201,7 @@ describe('Ad Container', () => {
               showAdsBasedOnLocation
             >
               <ToggleContext.Provider value={toggleContextMock}>
-                <BrowserRouter>
-                  <AdContainer slotType="mpu" />
-                </BrowserRouter>
+                <AdContainer slotType="mpu" />
               </ToggleContext.Provider>
             </RequestContextProvider>
           </ServiceContextProvider>,
@@ -407,9 +400,7 @@ describe('Ad Container', () => {
             showAdsBasedOnLocation
           >
             <ToggleContext.Provider value={toggleContextMock}>
-              <BrowserRouter>
-                <AdContainer slotType="leaderboard" />
-              </BrowserRouter>
+              <AdContainer slotType="leaderboard" />
             </ToggleContext.Provider>
           </RequestContextProvider>
         </ServiceContext.Provider>,
@@ -455,9 +446,7 @@ describe('Ad Container', () => {
             nonce={nonce}
           >
             <ToggleContext.Provider value={toggleContextMock}>
-              <BrowserRouter>
-                <AdContainer slotType="leaderboard" />
-              </BrowserRouter>
+              <AdContainer slotType="leaderboard" />
             </ToggleContext.Provider>
           </RequestContextProvider>
         </ServiceContext.Provider>,

@@ -47,7 +47,6 @@ describe('CanonicalSocialEmbed', () => {
           warningText:
             'Warning: BBC is not responsible for third party content',
         }}
-        service="news"
       />
     );
     it('should render Facebook for Optimo article pages', async () => {
@@ -127,7 +126,6 @@ describe('CanonicalSocialEmbed', () => {
           warningText:
             'Warning: BBC is not responsible for third party content',
         }}
-        service="news"
         onRender={mockOnRender}
       />
     );
@@ -212,7 +210,6 @@ describe('CanonicalSocialEmbed', () => {
           warningText:
             'Warning: BBC is not responsible for third party content',
         }}
-        service="news"
         onRender={mockOnRender}
       />
     );
@@ -291,7 +288,6 @@ describe('CanonicalSocialEmbed', () => {
           warningText:
             'Warning: BBC is not responsible for third party content',
         }}
-        service="news"
         caption={{
           textPrefixVisuallyHidden: 'Video caption, ',
           text: 'Warning: Third party content may contain adverts',
@@ -345,7 +341,6 @@ describe('CanonicalSocialEmbed', () => {
           warningText:
             'Warning: BBC is not responsible for third party content',
         }}
-        service="news"
       />,
     );
     expect(container).toMatchSnapshot();
@@ -368,7 +363,6 @@ describe('CanonicalSocialEmbed', () => {
           warningText:
             'Warning: BBC is not responsible for third party content',
         }}
-        service="news"
       />,
     );
     expect(container).toMatchSnapshot();
@@ -406,7 +400,6 @@ describe('AmpSocialEmbed', () => {
             warningText:
               'Warning: BBC is not responsible for third party content',
           }}
-          service="news"
           caption={caption}
         />,
       );
@@ -442,7 +435,6 @@ describe('AmpSocialEmbed', () => {
           warningText:
             'Warning: BBC is not responsible for third party content',
         }}
-        service="news"
       />,
     );
     expect(container).toMatchSnapshot();
@@ -465,7 +457,6 @@ describe('AmpSocialEmbed', () => {
           warningText:
             'Warning: BBC is not responsible for third party content',
         }}
-        service="news"
       />,
     );
     expect(container.firstChild).toBeNull();

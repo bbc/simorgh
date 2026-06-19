@@ -22,16 +22,11 @@ const StyledParagraph = styled(Paragraph)`
 `;
 
 const ParagraphContainer = ({ blocks, className }) => {
-  const { script, service, dir } = use(ServiceContext);
+  const { dir } = use(ServiceContext);
 
   return (
     <GridItemMedium>
-      <StyledParagraph
-        script={script}
-        service={service}
-        dir={dir}
-        className={className}
-      >
+      <StyledParagraph dir={dir} className={className}>
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
       </StyledParagraph>
     </GridItemMedium>

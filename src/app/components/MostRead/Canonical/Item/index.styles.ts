@@ -26,6 +26,9 @@ const styles = {
         whiteSpace: 'nowrap',
         zIndex: 1,
       },
+      '&:visited': {
+        color: palette.METAL,
+      },
     }),
 
   defaultLink: ({ mq, fontSizes }: Theme) =>

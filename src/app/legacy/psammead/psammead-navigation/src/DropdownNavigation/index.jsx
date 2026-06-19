@@ -111,7 +111,6 @@ export const DropdownLi = ({
   clickTracker = null,
   currentPageText = null,
   active = false,
-  service,
   url,
   dir = 'ltr',
   viewTracker = null,
@@ -122,12 +121,7 @@ export const DropdownLi = ({
   return (
     // aria-labelledby is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
     <StyledDropdownLi role="listitem" {...viewTracker}>
-      <StyledDropdownLink
-        service={service}
-        href={url}
-        aria-labelledby={ariaId}
-        {...clickTracker}
-      >
+      <StyledDropdownLink href={url} aria-labelledby={ariaId} {...clickTracker}>
         {active && currentPageText ? (
           // ID is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
           // eslint-disable-next-line jsx-a11y/aria-role
@@ -210,6 +204,7 @@ export const CanonicalMenuButton = ({
   <MenuButton
     onClick={onClick}
     aria-expanded={isOpen ? 'true' : 'false'}
+    aria-label={announcedText}
     dir={dir}
     className={`${className} focusIndicatorRemove`}
   >
@@ -233,7 +228,12 @@ const expandedHandler =
 
 const initialState = { expanded: false };
 
-export const AmpMenuButton = ({ announcedText, onToggle, dir = 'ltr' }) => (
+export const AmpMenuButton = ({
+  announcedText,
+  onToggle,
+  dir = 'ltr',
+  className = '',
+}) => (
   <>
     <AmpHead />
     <amp-state id="menuState">
@@ -245,10 +245,11 @@ export const AmpMenuButton = ({ announcedText, onToggle, dir = 'ltr' }) => (
     </amp-state>
     <MenuButton
       aria-expanded="false"
+      aria-label={announcedText}
       data-amp-bind-aria-expanded='menuState.expanded ? "true" : "false"'
       on={`tap:${expandedHandler},${onToggle}`}
       dir={dir}
-      className="focusIndicatorRemove"
+      className={`${className} focusIndicatorRemove`}
     >
       {cloneElement(navigationIcons.hamburger, {
         'data-amp-bind-hidden': 'menuState.expanded',

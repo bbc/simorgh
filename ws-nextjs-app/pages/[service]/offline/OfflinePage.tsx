@@ -5,7 +5,7 @@ import ErrorMain from '#app/legacy/components/ErrorMain';
 import { useOfflinePageFlag } from '#app/hooks/useOfflinePageFlag';
 
 const OfflinePage = () => {
-  const { service, dir, script } = use(ServiceContext);
+  const { service, dir } = use(ServiceContext);
 
   // Track offline page visit (sets flag in localStorage, PWA only)
   useOfflinePageFlag();
@@ -31,8 +31,6 @@ const OfflinePage = () => {
         solutions={solutions}
         callToActionLinkText=""
         callToActionLinkUrl=""
-        script={script}
-        service={service}
       />
     </>
   );

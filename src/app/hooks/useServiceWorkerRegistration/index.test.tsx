@@ -32,8 +32,26 @@ describe('useServiceWorkerRegistration', () => {
     jest.restoreAllMocks();
   });
 
+  it('should not register service worker when swPath is undefined', () => {
+    renderHook(() =>
+      useServiceWorkerRegistration({ service: 'news', swPath: undefined }),
+    );
+    expect(mockRegister).not.toHaveBeenCalled();
+  });
+
+  it('should not register service worker when swPath is empty string', () => {
+    renderHook(() =>
+      useServiceWorkerRegistration({ service: 'news', swPath: '' }),
+    );
+    expect(mockRegister).not.toHaveBeenCalled();
+  });
   it('should register service worker with correct path when service is provided', async () => {
-    renderHook(() => useServiceWorkerRegistration('mundo'));
+    renderHook(() =>
+      useServiceWorkerRegistration({
+        service: 'mundo',
+        swPath: '/mundo/sw.js',
+      }),
+    );
 
     await waitFor(() => {
       expect(mockRegister).toHaveBeenCalledWith('/mundo/sw.js', {
@@ -44,9 +62,10 @@ describe('useServiceWorkerRegistration', () => {
 
   it('should register service worker for different services', async () => {
     const { rerender } = renderHook(
-      ({ service }) => useServiceWorkerRegistration(service),
+      ({ service, swPath }) =>
+        useServiceWorkerRegistration({ service, swPath }),
       {
-        initialProps: { service: 'news' },
+        initialProps: { service: 'news', swPath: '/news/sw.js' },
       },
     );
 
@@ -57,7 +76,7 @@ describe('useServiceWorkerRegistration', () => {
     });
 
     mockRegister.mockClear();
-    rerender({ service: 'sport' });
+    rerender({ service: 'sport', swPath: '/sport/sw.js' });
 
     await waitFor(() => {
       expect(mockRegister).toHaveBeenCalledWith('/sport/sw.js', {
@@ -67,13 +86,17 @@ describe('useServiceWorkerRegistration', () => {
   });
 
   it('should not register service worker when service is undefined', () => {
-    renderHook(() => useServiceWorkerRegistration(undefined));
+    renderHook(() =>
+      useServiceWorkerRegistration({ service: undefined, swPath: '/sw.js' }),
+    );
 
     expect(mockRegister).not.toHaveBeenCalled();
   });
 
   it('should not register service worker when service is empty string', () => {
-    renderHook(() => useServiceWorkerRegistration(''));
+    renderHook(() =>
+      useServiceWorkerRegistration({ service: '', swPath: '/sw.js' }),
+    );
 
     expect(mockRegister).not.toHaveBeenCalled();
   });
@@ -85,7 +108,12 @@ describe('useServiceWorkerRegistration', () => {
       configurable: true,
     });
 
-    renderHook(() => useServiceWorkerRegistration('mundo'));
+    renderHook(() =>
+      useServiceWorkerRegistration({
+        service: 'mundo',
+        swPath: '/mundo/sw.js',
+      }),
+    );
 
     expect(mockRegister).not.toHaveBeenCalled();
   });
@@ -101,7 +129,12 @@ describe('useServiceWorkerRegistration', () => {
       configurable: true,
     });
 
-    renderHook(() => useServiceWorkerRegistration('mundo'));
+    renderHook(() =>
+      useServiceWorkerRegistration({
+        service: 'mundo',
+        swPath: '/mundo/sw.js',
+      }),
+    );
 
     expect(consoleWarnSpy).toHaveBeenCalledWith(
       'ServiceWorker API exists but register() is not available.',
@@ -113,7 +146,12 @@ describe('useServiceWorkerRegistration', () => {
     const error = new Error('Registration failed');
     mockRegister.mockRejectedValue(error);
 
-    renderHook(() => useServiceWorkerRegistration('mundo'));
+    renderHook(() =>
+      useServiceWorkerRegistration({
+        service: 'mundo',
+        swPath: '/mundo/sw.js',
+      }),
+    );
 
     await waitFor(() => {
       expect(consoleErrorSpy).toHaveBeenCalledWith(
@@ -124,16 +162,22 @@ describe('useServiceWorkerRegistration', () => {
   });
 
   it('should handle server-side rendering gracefully', () => {
-    renderSSRHook(() => useServiceWorkerRegistration('mundo'));
+    renderSSRHook(() =>
+      useServiceWorkerRegistration({
+        service: 'mundo',
+        swPath: '/mundo/sw.js',
+      }),
+    );
 
     expect(mockRegister).not.toHaveBeenCalled();
   });
 
   it('should register for new service when service prop changes', async () => {
     const { rerender } = renderHook(
-      ({ service }) => useServiceWorkerRegistration(service),
+      ({ service, swPath }) =>
+        useServiceWorkerRegistration({ service, swPath }),
       {
-        initialProps: { service: 'mundo' },
+        initialProps: { service: 'mundo', swPath: '/mundo/sw.js' },
       },
     );
 
@@ -145,7 +189,7 @@ describe('useServiceWorkerRegistration', () => {
     });
 
     mockRegister.mockClear();
-    rerender({ service: 'news' });
+    rerender({ service: 'news', swPath: '/news/sw.js' });
 
     await waitFor(() => {
       expect(mockRegister).toHaveBeenCalledTimes(1);
@@ -157,9 +201,10 @@ describe('useServiceWorkerRegistration', () => {
 
   it('should not register again when service prop stays the same', async () => {
     const { rerender } = renderHook(
-      ({ service }) => useServiceWorkerRegistration(service),
+      ({ service, swPath }) =>
+        useServiceWorkerRegistration({ service, swPath }),
       {
-        initialProps: { service: 'mundo' },
+        initialProps: { service: 'mundo', swPath: '/mundo/sw.js' },
       },
     );
 
@@ -168,7 +213,7 @@ describe('useServiceWorkerRegistration', () => {
     });
 
     mockRegister.mockClear();
-    rerender({ service: 'mundo' });
+    rerender({ service: 'mundo', swPath: '/mundo/sw.js' });
 
     // No waitFor needed for negative assertion
     expect(mockRegister).not.toHaveBeenCalled();
@@ -182,7 +227,12 @@ describe('useServiceWorkerRegistration', () => {
     };
     mockRegister.mockResolvedValue(mockRegistration);
 
-    renderHook(() => useServiceWorkerRegistration('mundo'));
+    renderHook(() =>
+      useServiceWorkerRegistration({
+        service: 'mundo',
+        swPath: '/mundo/sw.js',
+      }),
+    );
 
     await waitFor(() => {
       expect(mockRegister).toHaveBeenCalledWith('/mundo/sw.js', {
@@ -202,7 +252,12 @@ describe('useServiceWorkerRegistration', () => {
       return rejection;
     });
 
-    renderHook(() => useServiceWorkerRegistration('mundo'));
+    renderHook(() =>
+      useServiceWorkerRegistration({
+        service: 'mundo',
+        swPath: '/mundo/sw.js',
+      }),
+    );
 
     await waitFor(() => {
       expect(consoleErrorSpy).toHaveBeenCalledWith(
@@ -221,7 +276,12 @@ describe('useServiceWorkerRegistration', () => {
 
     mockGetRegistrations.mockResolvedValue([legacyRegistration]);
 
-    renderHook(() => useServiceWorkerRegistration('mundo'));
+    renderHook(() =>
+      useServiceWorkerRegistration({
+        service: 'mundo',
+        swPath: '/mundo/sw.js',
+      }),
+    );
 
     await waitFor(() => {
       expect(mockGetRegistrations).toHaveBeenCalled();
@@ -238,7 +298,12 @@ describe('useServiceWorkerRegistration', () => {
 
     mockGetRegistrations.mockResolvedValue([currentRegistration]);
 
-    renderHook(() => useServiceWorkerRegistration('mundo'));
+    renderHook(() =>
+      useServiceWorkerRegistration({
+        service: 'mundo',
+        swPath: '/mundo/sw.js',
+      }),
+    );
 
     await waitFor(() => {
       expect(mockGetRegistrations).toHaveBeenCalled();

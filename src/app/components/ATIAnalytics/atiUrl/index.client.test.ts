@@ -85,7 +85,7 @@ describe('atiUrl', () => {
             x18: 'isLocServeCookieSet',
           },
         };
-        const userParams = { isSignedIn: false };
+        const userParams = { isSignedIn: false, hashedId: null };
 
         expect(reverbAnalyticsModel.params.page).toEqual(pageParams);
         expect(reverbAnalyticsModel.params.user).toEqual(userParams);
@@ -126,7 +126,7 @@ describe('atiUrl', () => {
             x18: 'isLocServeCookieSet',
           },
         };
-        const userParams = { isSignedIn: false };
+        const userParams = { isSignedIn: false, hashedId: null };
 
         expect(reverbAnalyticsModel.params.page).toEqual(pageParams);
         expect(reverbAnalyticsModel.params.user).toEqual(userParams);
@@ -230,6 +230,7 @@ describe('atiUrl', () => {
 
         expect(reverbPageSectionViewEventModel.params.user).toEqual({
           isSignedIn: false,
+          hashedId: null,
         });
       });
 

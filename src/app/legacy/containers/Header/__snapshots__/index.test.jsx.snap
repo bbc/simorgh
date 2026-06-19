@@ -286,30 +286,38 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
 
 .emotion-17 {
   background-color: #B80000;
-  height: 2.75rem;
+  min-height: 2.75rem;
   width: 100%;
   padding: 0 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   position: relative;
   z-index: 1;
 }
 
 @media (min-width: 15rem) {
   .emotion-17 {
-    height: 3.75rem;
+    min-height: 3.75rem;
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width: 25rem) {
   .emotion-17 {
-    height: 3.75rem;
+    min-height: 3.75rem;
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-17 {
-    height: 4rem;
+    min-height: 4rem;
   }
 }
 
@@ -324,7 +332,9 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
 }
 
 .emotion-19 {
-  height: 100%;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -343,16 +353,14 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
   flex-wrap: wrap;
   max-width: 63rem;
   margin: 0 auto;
-}
-
-@media (max-width: 14.9375rem) {
-  .emotion-19 {
-    display: block;
-  }
+  -webkit-column-gap: 0.25rem;
+  column-gap: 0.25rem;
 }
 
 .emotion-21 {
-  height: 100%;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -362,27 +370,23 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
   -ms-flex-align: center;
   align-items: center;
   position: relative;
-  bottom: 0.125rem;
-  padding-top: 0.125rem;
+  min-height: 2.625rem;
 }
 
-.emotion-21:hover,
-.emotion-21:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-21:hover::before,
+.emotion-21:focus::before {
+  content: '';
+  position: absolute;
+  inset: 0;
   border-bottom: 0.25rem solid #FFFFFF;
-  margin-bottom: -0.25rem;
 }
 
 .emotion-21:focus-visible::after {
   content: '';
   position: absolute;
-  top: 0;
-  left: -0.1875rem;
-  bottom: 0;
-  right: -0.1875rem;
-  border-top: 0.25rem solid #FFFFFF;
+  inset: 0px -0.5rem;
   outline: 0.25rem solid #FFFFFF;
+  outline-offset: -0.25rem;
 }
 
 .emotion-23 {
@@ -390,6 +394,7 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
   color: #FFFFFF;
   fill: currentColor;
   height: 1.25rem;
+  max-width: 100%;
 }
 
 @media (min-width: 25rem) {
@@ -419,6 +424,7 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-26 {
@@ -501,7 +507,7 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
 .emotion-30 {
   position: relative;
   max-width: 63.4rem;
-  margin: 0;
+  margin: 0 auto;
   background-color: #FFFFFF;
 }
 
@@ -842,6 +848,7 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
   <div>
     <div
       class="emotion-0 emotion-1"
+      id="consent-banner"
     >
       <div
         class="emotion-2 emotion-3"
@@ -908,11 +915,11 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
       class="emotion-16 emotion-17 emotion-18"
     >
       <div
-        class="emotion-19 emotion-20"
+        class="brand-svg-wrapper emotion-19 emotion-20"
       >
         <a
           aria-labelledby="BrandLink-topPage"
-          class="focusIndicatorRemove emotion-21 emotion-22"
+          class="brand-link focusIndicatorRemove emotion-21 emotion-22"
           href="/news"
           id="topPage"
         >
@@ -968,6 +975,7 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
       >
         <button
           aria-expanded="false"
+          aria-label="Sections"
           class="focusIndicatorRemove emotion-34 emotion-35"
           dir="ltr"
           type="button"
@@ -1615,30 +1623,38 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
 
 .emotion-17 {
   background-color: #B80000;
-  height: 2.75rem;
+  min-height: 2.75rem;
   width: 100%;
   padding: 0 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   position: relative;
   z-index: 1;
 }
 
 @media (min-width: 15rem) {
   .emotion-17 {
-    height: 3.75rem;
+    min-height: 3.75rem;
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width: 25rem) {
   .emotion-17 {
-    height: 3.75rem;
+    min-height: 3.75rem;
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-17 {
-    height: 4rem;
+    min-height: 4rem;
   }
 }
 
@@ -1653,7 +1669,9 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
 }
 
 .emotion-19 {
-  height: 100%;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1672,16 +1690,14 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
   flex-wrap: wrap;
   max-width: 63rem;
   margin: 0 auto;
-}
-
-@media (max-width: 14.9375rem) {
-  .emotion-19 {
-    display: block;
-  }
+  -webkit-column-gap: 0.25rem;
+  column-gap: 0.25rem;
 }
 
 .emotion-21 {
-  height: 100%;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1691,27 +1707,23 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
   -ms-flex-align: center;
   align-items: center;
   position: relative;
-  bottom: 0.125rem;
-  padding-top: 0.125rem;
+  min-height: 2.625rem;
 }
 
-.emotion-21:hover,
-.emotion-21:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-21:hover::before,
+.emotion-21:focus::before {
+  content: '';
+  position: absolute;
+  inset: 0;
   border-bottom: 0.25rem solid #FFFFFF;
-  margin-bottom: -0.25rem;
 }
 
 .emotion-21:focus-visible::after {
   content: '';
   position: absolute;
-  top: 0;
-  left: -0.1875rem;
-  bottom: 0;
-  right: -0.1875rem;
-  border-top: 0.25rem solid #FFFFFF;
+  inset: 0px -0.5rem;
   outline: 0.25rem solid #FFFFFF;
+  outline-offset: -0.25rem;
 }
 
 .emotion-23 {
@@ -1719,6 +1731,7 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
   color: #FFFFFF;
   fill: currentColor;
   height: 1.25rem;
+  max-width: 100%;
 }
 
 @media (min-width: 25rem) {
@@ -1748,6 +1761,7 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-26 {
@@ -1830,7 +1844,7 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
 .emotion-30 {
   position: relative;
   max-width: 63.4rem;
-  margin: 0;
+  margin: 0 auto;
   background-color: #FFFFFF;
 }
 
@@ -2171,6 +2185,7 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
   <div>
     <div
       class="emotion-0 emotion-1"
+      id="consent-banner"
     >
       <div
         class="emotion-2 emotion-3"
@@ -2237,11 +2252,11 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
       class="emotion-16 emotion-17 emotion-18"
     >
       <div
-        class="emotion-19 emotion-20"
+        class="brand-svg-wrapper emotion-19 emotion-20"
       >
         <a
           aria-labelledby="BrandLink-topPage"
-          class="focusIndicatorRemove emotion-21 emotion-22"
+          class="brand-link focusIndicatorRemove emotion-21 emotion-22"
           href="/news"
           id="topPage"
         >
@@ -2297,6 +2312,7 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
       >
         <button
           aria-expanded="false"
+          aria-label="Sections"
           class="focusIndicatorRemove emotion-34 emotion-35"
           dir="ltr"
           type="button"
@@ -2944,30 +2960,38 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 
 .emotion-17 {
   background-color: #B80000;
-  height: 2.75rem;
+  min-height: 2.75rem;
   width: 100%;
   padding: 0 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   position: relative;
   z-index: 1;
 }
 
 @media (min-width: 15rem) {
   .emotion-17 {
-    height: 3.75rem;
+    min-height: 3.75rem;
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width: 25rem) {
   .emotion-17 {
-    height: 3.75rem;
+    min-height: 3.75rem;
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-17 {
-    height: 4rem;
+    min-height: 4rem;
   }
 }
 
@@ -2982,7 +3006,9 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 }
 
 .emotion-19 {
-  height: 100%;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3001,16 +3027,14 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   flex-wrap: wrap;
   max-width: 63rem;
   margin: 0 auto;
-}
-
-@media (max-width: 14.9375rem) {
-  .emotion-19 {
-    display: block;
-  }
+  -webkit-column-gap: 0.25rem;
+  column-gap: 0.25rem;
 }
 
 .emotion-21 {
-  height: 100%;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3020,27 +3044,23 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   -ms-flex-align: center;
   align-items: center;
   position: relative;
-  bottom: 0.125rem;
-  padding-top: 0.125rem;
+  min-height: 2.625rem;
 }
 
-.emotion-21:hover,
-.emotion-21:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-21:hover::before,
+.emotion-21:focus::before {
+  content: '';
+  position: absolute;
+  inset: 0;
   border-bottom: 0.25rem solid #FFFFFF;
-  margin-bottom: -0.25rem;
 }
 
 .emotion-21:focus-visible::after {
   content: '';
   position: absolute;
-  top: 0;
-  left: -0.1875rem;
-  bottom: 0;
-  right: -0.1875rem;
-  border-top: 0.25rem solid #FFFFFF;
+  inset: 0px -0.5rem;
   outline: 0.25rem solid #FFFFFF;
+  outline-offset: -0.25rem;
 }
 
 .emotion-23 {
@@ -3048,6 +3068,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   color: #FFFFFF;
   fill: currentColor;
   height: 1.25rem;
+  max-width: 100%;
 }
 
 @media (min-width: 25rem) {
@@ -3077,6 +3098,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-26 {
@@ -3159,7 +3181,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 .emotion-30 {
   position: relative;
   max-width: 63.4rem;
-  margin: 0;
+  margin: 0 auto;
   background-color: #FFFFFF;
 }
 
@@ -3500,6 +3522,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   <div>
     <div
       class="emotion-0 emotion-1"
+      id="consent-banner"
     >
       <div
         class="emotion-2 emotion-3"
@@ -3566,11 +3589,11 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
       class="emotion-16 emotion-17 emotion-18"
     >
       <div
-        class="emotion-19 emotion-20"
+        class="brand-svg-wrapper emotion-19 emotion-20"
       >
         <a
           aria-labelledby="BrandLink-topPage"
-          class="focusIndicatorRemove emotion-21 emotion-22"
+          class="brand-link focusIndicatorRemove emotion-21 emotion-22"
           href="/news"
           id="topPage"
         >
@@ -3626,6 +3649,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
       >
         <button
           aria-expanded="false"
+          aria-label="Sections"
           class="focusIndicatorRemove emotion-34 emotion-35"
           dir="ltr"
           type="button"
@@ -4273,30 +4297,38 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 
 .emotion-17 {
   background-color: #B80000;
-  height: 2.75rem;
+  min-height: 2.75rem;
   width: 100%;
   padding: 0 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   position: relative;
   z-index: 1;
 }
 
 @media (min-width: 15rem) {
   .emotion-17 {
-    height: 3.75rem;
+    min-height: 3.75rem;
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width: 25rem) {
   .emotion-17 {
-    height: 3.75rem;
+    min-height: 3.75rem;
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-17 {
-    height: 4rem;
+    min-height: 4rem;
   }
 }
 
@@ -4311,7 +4343,9 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 }
 
 .emotion-19 {
-  height: 100%;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4330,16 +4364,14 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   flex-wrap: wrap;
   max-width: 63rem;
   margin: 0 auto;
-}
-
-@media (max-width: 14.9375rem) {
-  .emotion-19 {
-    display: block;
-  }
+  -webkit-column-gap: 0.25rem;
+  column-gap: 0.25rem;
 }
 
 .emotion-21 {
-  height: 100%;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4349,27 +4381,23 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   -ms-flex-align: center;
   align-items: center;
   position: relative;
-  bottom: 0.125rem;
-  padding-top: 0.125rem;
+  min-height: 2.625rem;
 }
 
-.emotion-21:hover,
-.emotion-21:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-21:hover::before,
+.emotion-21:focus::before {
+  content: '';
+  position: absolute;
+  inset: 0;
   border-bottom: 0.25rem solid #FFFFFF;
-  margin-bottom: -0.25rem;
 }
 
 .emotion-21:focus-visible::after {
   content: '';
   position: absolute;
-  top: 0;
-  left: -0.1875rem;
-  bottom: 0;
-  right: -0.1875rem;
-  border-top: 0.25rem solid #FFFFFF;
+  inset: 0px -0.5rem;
   outline: 0.25rem solid #FFFFFF;
+  outline-offset: -0.25rem;
 }
 
 .emotion-23 {
@@ -4377,6 +4405,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   color: #FFFFFF;
   fill: currentColor;
   height: 1.25rem;
+  max-width: 100%;
 }
 
 @media (min-width: 25rem) {
@@ -4406,6 +4435,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-26 {
@@ -4488,7 +4518,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 .emotion-30 {
   position: relative;
   max-width: 63.4rem;
-  margin: 0;
+  margin: 0 auto;
   background-color: #FFFFFF;
 }
 
@@ -4829,6 +4859,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   <div>
     <div
       class="emotion-0 emotion-1"
+      id="consent-banner"
     >
       <div
         class="emotion-2 emotion-3"
@@ -4895,11 +4926,11 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
       class="emotion-16 emotion-17 emotion-18"
     >
       <div
-        class="emotion-19 emotion-20"
+        class="brand-svg-wrapper emotion-19 emotion-20"
       >
         <a
           aria-labelledby="BrandLink-topPage"
-          class="focusIndicatorRemove emotion-21 emotion-22"
+          class="brand-link focusIndicatorRemove emotion-21 emotion-22"
           href="/news"
           id="topPage"
         >
@@ -4955,6 +4986,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
       >
         <button
           aria-expanded="false"
+          aria-label="Sections"
           class="focusIndicatorRemove emotion-34 emotion-35"
           dir="ltr"
           type="button"

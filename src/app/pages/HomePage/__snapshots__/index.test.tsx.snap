@@ -2,7 +2,7 @@
 
 exports[`Home Page should correctly render linked data for home pages 1`] = `
 {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "CollectionPage",

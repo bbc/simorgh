@@ -1,4 +1,3 @@
-import { BrowserRouter } from 'react-router-dom';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { LIVE_RADIO_PAGE } from '#app/routes/utils/pageTypes';
@@ -9,30 +8,28 @@ import { data as kyrgyzPageData } from '#data/kyrgyz/bbc_kyrgyz_radio/liveradio.
 import { render } from '../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import LiveRadioPage from './LiveRadioPage';
-import { LiveRadioPageData } from './types';
+import { LiveRadioPageProps } from './types';
 
 type Props = {
-  pageData: LiveRadioPageData;
+  pageData: LiveRadioPageProps;
   service: Services;
   lang: string;
 };
 
 const Page = ({ pageData, service, lang }: Props) => (
-  <BrowserRouter>
-    <ToggleContextProvider toggles={{ liveRadioSchedule: { enabled: true } }}>
-      <ServiceContextProvider service={service} pageLang={lang}>
-        <RequestContextProvider
-          bbcOrigin="https://www.test.bbc.com"
-          pageType={LIVE_RADIO_PAGE}
-          pathname="/pathname"
-          service={service}
-          statusCode={200}
-        >
-          <LiveRadioPage pageData={pageData} />
-        </RequestContextProvider>
-      </ServiceContextProvider>
-    </ToggleContextProvider>
-  </BrowserRouter>
+  <ToggleContextProvider toggles={{ liveRadioSchedule: { enabled: true } }}>
+    <ServiceContextProvider service={service} pageLang={lang}>
+      <RequestContextProvider
+        bbcOrigin="https://www.test.bbc.com"
+        pageType={LIVE_RADIO_PAGE}
+        pathname="/pathname"
+        service={service}
+        statusCode={200}
+      >
+        <LiveRadioPage pageData={pageData} />
+      </RequestContextProvider>
+    </ServiceContextProvider>
+  </ToggleContextProvider>
 );
 
 jest.mock('../../components/ChartbeatAnalytics', () => {
@@ -44,7 +41,7 @@ describe('Radio Page Main', () => {
   it('should match snapshot for Canonical', () => {
     const { container } = render(
       <Page
-        pageData={afriquePageData.data as unknown as LiveRadioPageData}
+        pageData={afriquePageData.data as unknown as LiveRadioPageProps}
         service="afrique"
         lang="fr"
       />,
@@ -57,7 +54,7 @@ describe('Radio Page Main', () => {
   it('should show the title for the Live Radio page', () => {
     const { getByText } = render(
       <Page
-        pageData={afriquePageData.data as unknown as LiveRadioPageData}
+        pageData={afriquePageData.data as unknown as LiveRadioPageProps}
         service="afrique"
         lang="fr"
       />,
@@ -70,7 +67,7 @@ describe('Radio Page Main', () => {
   it('should show the summary for the Live Radio page', () => {
     const { getByText } = render(
       <Page
-        pageData={afriquePageData.data as unknown as LiveRadioPageData}
+        pageData={afriquePageData.data as unknown as LiveRadioPageProps}
         service="afrique"
         lang="fr"
       />,
@@ -115,7 +112,7 @@ describe('Radio Page Main', () => {
           {
             ...afriquePageData.data,
             mediaBlock: mockMediaBlock,
-          } as unknown as LiveRadioPageData
+          } as unknown as LiveRadioPageProps
         }
         service="afrique"
         lang="fr"
@@ -132,7 +129,7 @@ describe('Radio Page Main', () => {
   it('should show the radio schedule for the Live Radio page on canonical', () => {
     const { getByText } = render(
       <Page
-        pageData={afriquePageData.data as unknown as LiveRadioPageData}
+        pageData={afriquePageData.data as unknown as LiveRadioPageProps}
         service="afrique"
         lang="fr"
       />,
@@ -150,7 +147,7 @@ describe('Radio Page Main', () => {
   it('should not show the radio schedule for services without a schedule', async () => {
     const { container } = render(
       <Page
-        pageData={kyrgyzPageData as unknown as LiveRadioPageData}
+        pageData={kyrgyzPageData as unknown as LiveRadioPageProps}
         service="kyrgyz"
         lang="ky"
       />,

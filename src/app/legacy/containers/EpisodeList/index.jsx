@@ -33,16 +33,11 @@ const StyledEpisodeListItem = styled.li`
 
 const EpisodeList = ({
   children = [],
-  script,
-  service,
   dir = 'ltr',
   ulProps = {},
   liProps = {},
 }) => {
-  const episodeListContextValue = useMemo(
-    () => ({ script, service, dir }),
-    [script, service, dir],
-  );
+  const episodeListContextValue = useMemo(() => ({ dir }), [dir]);
   if (!children.length) return null;
 
   const hasMultipleChildren = children.length > 1;

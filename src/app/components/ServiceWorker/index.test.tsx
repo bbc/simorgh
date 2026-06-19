@@ -12,7 +12,7 @@ jest.mock('#app/hooks/useIsPWA', () => jest.fn());
 jest.mock('#app/lib/utilities/isLocal', () => jest.fn());
 
 const contextStub = {
-  swPath: '/news/sw.js',
+  swPath: '/sw.js',
   service: 'news',
 };
 
@@ -24,7 +24,7 @@ describe('ServiceWorkerContainer', () => {
   });
 
   describe('Canonical', () => {
-    it('calls service worker registration hook with service', () => {
+    it('calls service worker registration hook with service and swPath', () => {
       render(
         // @ts-expect-error only require a subset of properties on service context for testing purposes
         <ServiceContext.Provider value={contextStub}>
@@ -32,8 +32,31 @@ describe('ServiceWorkerContainer', () => {
         </ServiceContext.Provider>,
       );
 
-      expect(useServiceWorkerRegistration).toHaveBeenCalledWith('news');
+      expect(useServiceWorkerRegistration).toHaveBeenCalledWith({
+        service: 'news',
+        swPath: '/sw.js',
+      });
     });
+
+    it.each`
+      swPath       | service      | expected
+      ${undefined} | ${'news'}    | ${{ service: 'news', swPath: undefined }}
+      ${null}      | ${'news'}    | ${{ service: 'news', swPath: null }}
+      ${''}        | ${'news'}    | ${{ service: 'news', swPath: '' }}
+      ${'/sw.js'}  | ${undefined} | ${{ service: undefined, swPath: '/sw.js' }}
+      ${undefined} | ${undefined} | ${{ service: undefined, swPath: undefined }}
+    `(
+      'calls service worker registration hook with undefined values when swPath or service is missing (swPath: $swPath, service: $service)',
+      ({ swPath, service, expected }) => {
+        render(
+          // @ts-expect-error only require a subset of properties on service context for testing purposes
+          <ServiceContext.Provider value={{ swPath, service }}>
+            <ServiceWorkerContainer />
+          </ServiceContext.Provider>,
+        );
+        expect(useServiceWorkerRegistration).toHaveBeenCalledWith(expected);
+      },
+    );
   });
 
   describe('Amp', () => {

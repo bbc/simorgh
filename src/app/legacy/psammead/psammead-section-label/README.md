@@ -26,8 +26,6 @@ The only provided child should be the title for the section, provided as a _stri
 | id | string | no | N/A | `top-stories-id` |
 | labelId | string | no | N/A | `top-stories-label` |
 | linkText | string | no | `null` | `'See More'` |
-| script | object | yes | N/A | { canon: { groupA: { fontSize: '28', lineHeight: '32',}, groupB: { fontSize: '32', lineHeight: '36' }, groupD: { fontSize: '44', lineHeight: '48' } }, trafalgar: { groupA: { fontSize: '20', lineHeight: '24' }, groupB: { fontSize: '24', lineHeight: '28' }, groupD: { fontSize: '32', lineHeight: '36' } } } |
-| service | string | yes | N/A | `'news'` |
 | backgroundColor | string | no | `GHOST` | `LUNAR` |
 | overrideHeadingAs | string | no | `null` | `strong` |
 
@@ -35,16 +33,10 @@ The only provided child should be the title for the section, provided as a _stri
 
 ```jsx
 import SectionLabel from '#psammead/psammead-section-label/src';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
 
 const WrappingComponent = () => (
   <div aria-labelledby="example-section-label">
-    <SectionLabel
-      script={latin}
-      dir="ltr"
-      labelId="example-section-label"
-      service="news"
-    >
+    <SectionLabel dir="ltr" labelId="example-section-label">
       Example section
     </SectionLabel>
   </div>
@@ -55,17 +47,10 @@ Or, without a horizontal bar:
 
 ```jsx
 import SectionLabel from '#psammead/psammead-section-label/src';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
 
 const WrappingComponent = () => (
   <div aria-labelledby="example-section-label">
-    <SectionLabel
-      script={latin}
-      dir="ltr"
-      bar={false}
-      labelId="example-section-label"
-      service="news"
-    >
+    <SectionLabel dir="ltr" bar={false} labelId="example-section-label">
       Example section
     </SectionLabel>
   </div>
@@ -76,16 +61,13 @@ On mobile, this component places a dividing line above the title. This can be di
 
 ```jsx
 import SectionLabel from '#psammead/psammead-section-label/src';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
 
 const WrappingComponent = () => (
   <div aria-labelledby="example-section-label">
     <SectionLabel
-      script={latin}
       dir="ltr"
       mobileDivider={false}
       labelId="example-section-label"
-      service="news"
     >
       Example section
     </SectionLabel>
@@ -97,16 +79,13 @@ You can also visually hide the SectionLabel for all breakpoints by adding the `v
 
 ```jsx
 import SectionLabel from '#psammead/psammead-section-label/src';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
 
 const WrappingComponent = () => (
   <div aria-labelledby="example-section-label">
     <SectionLabel
-      script={latin}
       dir="ltr"
       visuallyHidden={true}
       labelId="example-section-label"
-      service="news"
     >
       Example section
     </SectionLabel>
@@ -119,17 +98,14 @@ NB. when doing this **both** the `href` **and** the `linkText` must be supplied.
 
 ```jsx
 import SectionLabel from '#psammead/psammead-section-label/src';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
 
 const WrappingComponent = () => (
   <div aria-labelledby="example-section-label">
     <SectionLabel
-      script={latin}
       dir="ltr"
       href="https://www.bbc.com/news/index"
       id="example-section-label"
       linkText="See More"
-      service="news"
     >
       Example section
     </SectionLabel>
@@ -141,15 +117,12 @@ You can override the header(`h2`) to any custom HTML element that fits your acce
 
 ```jsx
 import SectionLabel from '#psammead/psammead-section-label/src';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
 
 const WrappingComponent = () => (
   <div aria-labelledby="example-section-label">
     <SectionLabel
-      script={latin}
       dir="ltr"
       labelId="example-section-label"
-      service="news"
       overrideHeadingAs="strong"
     >
       Example section

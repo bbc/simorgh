@@ -34,6 +34,8 @@ export default ({
     producerId,
     statsDestination,
     producerName,
+    isSignedIn,
+    hashedId,
   } = eventTrackingContext;
 
   const campaignID =
@@ -61,5 +63,7 @@ export default ({
     groupTracker,
     viewThreshold,
     alwaysInView,
+    isSignedIn,
+    hashedId,
   };
 };

@@ -36,8 +36,6 @@ const Divider = styled.div`
   }
 `;
 const CanonicalNavigationContainer = ({
-  script,
-  service,
   dir,
   menuAnnouncedText,
   scrollableListItems,
@@ -55,7 +53,7 @@ const CanonicalNavigationContainer = ({
   });
   return (
     <>
-      <Navigation script={script} service={service} dir={dir} isOpen={isOpen}>
+      <Navigation dir={dir} isOpen={isOpen}>
         <ScrollableWrapper>
           {!isLite && (
             <CanonicalMenuButton
@@ -63,7 +61,6 @@ const CanonicalNavigationContainer = ({
               isOpen={isOpen}
               onClick={() => setIsOpen(!isOpen)}
               dir={dir}
-              script={script}
             />
           )}
           {!isOpen && (

@@ -61,7 +61,7 @@ const CanonicalConsentBannerContainer = ({
   }, []);
 
   return (
-    <ConsentBannerWrapper>
+    <ConsentBannerWrapper id="consent-banner">
       <ConsentBanner
         dir={dir}
         title={consentBannerConfig.title}

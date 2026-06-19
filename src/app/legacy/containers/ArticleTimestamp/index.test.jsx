@@ -354,9 +354,7 @@ describe('ArticleTimestamp', () => {
     };
 
     it('should show the correct local date', () => {
-      const { getByText } = render(
-        <WrappedArticleTimestamp {...props} service="news" />,
-      );
+      const { getByText } = render(<WrappedArticleTimestamp {...props} />);
       const timeEl = getByText(/9 August 2019/);
       const time = timeEl.getAttribute('datetime');
 

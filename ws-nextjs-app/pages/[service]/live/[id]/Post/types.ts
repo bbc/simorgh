@@ -1,4 +1,8 @@
-import { OptimoBlock } from '#models/types/optimo';
+import {
+  OptimoBlock,
+  OptimoRawImageBlock,
+  OptimoAltTextBlock,
+} from '#models/types/optimo';
 
 interface Link {
   url: string;
@@ -23,6 +27,53 @@ interface Images {
   altText: string | null;
   copyright: string | null;
   urlTemplate: string | null;
+}
+
+type ContributorRawImageBlock = Omit<
+  OptimoRawImageBlock['model'],
+  'suitableForSyndication'
+>;
+
+export interface PostContributorImage {
+  type: 'image';
+  model: {
+    blocks: (
+      | (Omit<OptimoRawImageBlock, 'model'> & {
+          model: ContributorRawImageBlock;
+        })
+      | OptimoAltTextBlock
+    )[];
+  };
+}
+
+export interface PostContributor {
+  id: string;
+  type: 'contributor';
+  model: {
+    name: string;
+    link?: string;
+    subtitle?: string;
+    external: boolean;
+    blocks: PostContributorImage[] | [];
+  };
+}
+
+export interface PostHeadline {
+  id: string;
+  type: 'headline' | 'subheadline';
+  model: {
+    blocks: [
+      {
+        model: {
+          blocks: [
+            {
+              model: { text: string; blocks: OptimoBlock[] };
+            },
+          ];
+        };
+      },
+    ];
+  };
 }
 
 export interface Page {
@@ -57,23 +108,8 @@ export interface StreamResponse {
     page?: Page | null;
   };
 }
-export interface PostHeadingBlock {
-  id: string;
-  type: 'headline' | 'subheadline';
-  model: {
-    blocks: [
-      {
-        model: {
-          blocks: [
-            {
-              model: { text: string; blocks: OptimoBlock[] };
-            },
-          ];
-        };
-      },
-    ];
-  };
-}
+
+export type PostHeadingBlock = PostHeadline | PostContributor;
 
 export type ComponentToRenderProps = {
   blocks: OptimoBlock[];

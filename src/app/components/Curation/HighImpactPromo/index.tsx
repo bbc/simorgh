@@ -7,12 +7,19 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import { getBrandPath } from '#app/legacy/containers/Brand';
 import styles from './index.styles';
 
-type Attribution = {
-  link: string;
-  text: string;
+type RelatedTopicLink = {
+  url: string;
+  scheme?: string;
+  host?: string;
+  path?: string;
+};
+
+type RelatedTopic = {
+  link: RelatedTopicLink;
+  title: string;
 };
 export interface HighImpactPromoProps extends Summary {
-  attribution?: Attribution;
+  relatedTopic?: RelatedTopic | null;
 }
 
 const HighImpactPromo = ({
@@ -23,15 +30,15 @@ const HighImpactPromo = ({
   link,
   headingLevel = 3,
   eventTrackingData,
-  attribution,
+  relatedTopic,
 }: HighImpactPromoProps) => {
   const { isAmp } = use(RequestContext);
   const { dir, service, brandName } = use(ServiceContext) || {};
 
-  const attributionLink =
-    attribution?.link || (service ? getBrandPath(service) : null);
-  const attributionText = attribution?.text || brandName;
-  const hasAttribution = attributionLink && attributionText;
+  const subjectLink =
+    relatedTopic?.link?.url || (service ? getBrandPath(service) : undefined);
+  const subjectText = relatedTopic?.title || brandName;
+  const hasSubject = Boolean(subjectLink && subjectText);
 
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
 
@@ -57,14 +64,14 @@ const HighImpactPromo = ({
             {title}
           </Promo.A>
         </Promo.Heading>
-        {hasAttribution && <div css={styles.divider} />}
-        {hasAttribution && (
+        {hasSubject && <div css={styles.divider} />}
+        {hasSubject && (
           <Promo.A
-            href={attributionLink}
+            href={subjectLink}
             css={styles.subject}
             {...clickTrackerHandler}
           >
-            {attributionText}
+            {subjectText}
           </Promo.A>
         )}
       </div>

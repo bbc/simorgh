@@ -1,14 +1,31 @@
+import pathOr from 'ramda/src/pathOr';
 import {
   OptimoBylineContributorBlock,
   OptimoBylineContributorMetadataBlock,
 } from '#app/models/types/optimo';
-import pathOr from 'ramda/src/pathOr';
+import { PageTypes } from '#app/models/types/global';
+import {
+  ARTICLE_PAGE,
+  LIVE_PAGE,
+  MEDIA_ARTICLE_PAGE,
+  MEDIA_ASSET_PAGE,
+  PHOTO_GALLERY_PAGE,
+  STORY_PAGE,
+} from '#app/routes/utils/pageTypes';
+import {
+  PostContributor,
+  PostContributorImage,
+  // eslint-disable-next-line import/no-relative-packages
+} from '../../../../../../ws-nextjs-app/pages/[service]/live/[id]/Post/types';
 import buildIChefURL from '../../../../lib/utilities/ichefURL';
 
 const pathOrZeroIndexModelBlocks = (
   noModelBlocks: number,
   endModelType: string,
-  block: OptimoBylineContributorMetadataBlock | undefined,
+  block:
+    | OptimoBylineContributorMetadataBlock
+    | PostContributorImage
+    | undefined,
 ) => {
   if (!block) return '';
 
@@ -25,7 +42,50 @@ const pathOrZeroIndexModelBlocks = (
   return pathOr('', givenPath, block);
 };
 
-const bylineExtractor = (blocks: OptimoBylineContributorBlock[]) => {
+const livePageBylineExtractor = (blocks: PostContributor['model'][]) => {
+  return blocks
+    .map(contribBlock => {
+      const {
+        blocks: imagesBlock,
+        name: authorName,
+        subtitle: jobRole,
+      } = contribBlock;
+
+      if (!authorName) {
+        return null;
+      }
+
+      const locator = pathOrZeroIndexModelBlocks(
+        1,
+        'locator',
+        imagesBlock[0],
+      ).replace(/^\/+/g, '');
+      const originCode = pathOrZeroIndexModelBlocks(
+        1,
+        'originCode',
+        imagesBlock[0],
+      );
+      let authorImage =
+        locator && originCode
+          ? buildIChefURL({
+              originCode,
+              locator,
+              resolution: 160,
+            })
+          : '';
+
+      if (!authorImage.endsWith('.webp')) authorImage = '';
+
+      return {
+        authorName,
+        jobRole,
+        authorImage,
+      };
+    })
+    .filter(Boolean);
+};
+
+const articlePageBylineExtractor = (blocks: OptimoBylineContributorBlock[]) => {
   return blocks
     .map(contribBlock => {
       const bylineBlocks = contribBlock?.model?.blocks || [];
@@ -79,6 +139,31 @@ const bylineExtractor = (blocks: OptimoBylineContributorBlock[]) => {
       };
     })
     .filter(Boolean);
+};
+
+const bylineExtractor = ({
+  blocks,
+  pageType,
+}: {
+  blocks: OptimoBylineContributorBlock[] | PostContributor['model'][];
+  pageType: PageTypes;
+}) => {
+  if (!blocks || !pageType) return [];
+
+  switch (pageType) {
+    case ARTICLE_PAGE:
+    case MEDIA_ARTICLE_PAGE:
+    case MEDIA_ASSET_PAGE:
+    case PHOTO_GALLERY_PAGE:
+    case STORY_PAGE:
+      return articlePageBylineExtractor(
+        blocks as OptimoBylineContributorBlock[],
+      );
+    case LIVE_PAGE:
+      return livePageBylineExtractor(blocks as PostContributor['model'][]);
+    default:
+      return [];
+  }
 };
 
 export default bylineExtractor;

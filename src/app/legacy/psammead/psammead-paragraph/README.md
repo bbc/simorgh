@@ -12,23 +12,12 @@ It uses `#legacy/psammead-styles/src` for colours and font family and `#legacy/g
 
 ## Props
 
-<!-- prettier-ignore -->
-| Argument  | Type | Required | Default | Example |
-| --------- | ---- | -------- | ------- | ------- |
-| Script    | object | yes | latin | { canon: { groupA: { fontSize: '28', lineHeight: '32',}, groupB: { fontSize: '32', lineHeight: '36', }, groupD: { fontSize: '44', lineHeight: '48', }, }, trafalgar: { groupA: { fontSize: '20', lineHeight: '24', }, groupB: { fontSize: '24', lineHeight: '28', }, groupD: { fontSize: '32', lineHeight: '36', }, }, }|
-| service | string | yes | N/A | `'news'` |
-
 ## Usage
 
 ```jsx
 import Paragraph from '#psammead/psammead-paragraph/src';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
 
-const WrappingComponent = () => (
-  <Paragraph script={latin} service="news">
-    Text here
-  </Paragraph>
-);
+const WrappingComponent = () => <Paragraph>Text here</Paragraph>;
 ```
 
 ### When to use this component

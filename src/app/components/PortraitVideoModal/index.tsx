@@ -151,6 +151,25 @@ const calculateSkipRateMetrics = ({
 
 const getPlayerInstance = () =>
   window?.embeddedMedia?.api?.players()?.bbcMediaPlayer0;
+const findPlayerKey = (): string => {
+  const playerInstances = window?.embeddedMedia?.api?.players();
+  const keys = playerInstances ? Object.keys(playerInstances) : [];
+  // Return the last player key if multiple instances are found, else return a fallback
+  return keys[keys.length - 1] || 'bbcMediaPlayer0';
+};
+
+export const getPlayerInstance = () => {
+  const playerKey = findPlayerKey();
+
+  return window?.embeddedMedia?.api?.players()?.[playerKey] as Player;
+};
+
+const getAllPlayerInstances = () => {
+  const playerInstances = window?.embeddedMedia?.api?.players();
+  if (!playerInstances) return [];
+
+  return Object.values(playerInstances);
+};
 
 const getCurrentIndex = ({
   e,
@@ -181,6 +200,15 @@ export const playlistLoadedCallback = (
   const player = getPlayerInstance();
 
   if (!player) return;
+
+  const allPlayerInstances = getAllPlayerInstances();
+
+  // Pause embedded players when PV Carousel is loaded
+  if (allPlayerInstances) {
+    allPlayerInstances.forEach(playerInstance => {
+      playerInstance.pause();
+    });
+  }
 
   const currentIndex = getCurrentIndex({ e, blocks });
 
@@ -698,6 +726,12 @@ const PortraitVideoModal = ({
       const player = getPlayerInstance();
       // pause any player if the modal is closed instantly
       if (player) player.pause();
+      const allPlayerInstances = getAllPlayerInstances();
+
+      // Pause any player if the modal is closed instantly
+      allPlayerInstances.forEach(player => {
+        player.pause();
+      });
     };
   }, [clearPendingVideoTransitionTracking, handleModalClose]);
 

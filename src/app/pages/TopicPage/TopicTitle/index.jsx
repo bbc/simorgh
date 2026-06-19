@@ -1,7 +1,5 @@
-import { use } from 'react';
 import styled from '@emotion/styled';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
-import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const H1 = styled.h1`
   ${({ theme: { fontVariants } }) => fontVariants.sansBold};
@@ -14,9 +12,8 @@ const H1 = styled.h1`
 `;
 
 const TopicTitle = ({ children }) => {
-  const { script, service } = use(ServiceContext);
   return (
-    <H1 service={service} script={script} id="content" tabIndex="-1">
+    <H1 id="content" tabIndex="-1">
       {children}
     </H1>
   );

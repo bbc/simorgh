@@ -76,11 +76,20 @@ export default {
   scriptLink: {
     enabled: true,
   },
+  sportDataPolling: {
+    enabled: false,
+  },
+  showSportDataHeader: {
+    enabled: false,
+  },
   topBarOJs: {
     enabled: true,
   },
   variantCookie: {
     enabled: true,
+  },
+  uasPersonalization: {
+    enabled: false,
   },
   webVitalsMonitoring: {
     enabled: true,

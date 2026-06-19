@@ -1,3 +1,5 @@
+import { MAX_NAV_ITEM_HEIGHT } from '#app/components/Navigation/index.styles';
+import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
 
 const SVG_WRAPPER_MAX_WIDTH_ABOVE_1280PX = '63rem';
@@ -9,7 +11,7 @@ export default {
     css({
       background: palette.WHITE,
       width: '100%',
-      maxWidth: SVG_WRAPPER_MAX_WIDTH_ABOVE_1280PX,
+      maxWidth: `calc(${SVG_WRAPPER_MAX_WIDTH_ABOVE_1280PX} + ${spacings.QUADRUPLE}rem)`,
       margin: '0 auto',
       padding: `0 ${spacings.DOUBLE}rem`,
       display: 'flex',
@@ -21,8 +23,59 @@ export default {
         justifyContent: 'flex-start',
       },
 
-      [mq.GROUP_4_MIN_WIDTH]: {
-        padding: 0,
+      a: {
+        marginTop: `${pixelsToRem(5)}rem`,
+      },
+    }),
+  headerBrand: ({ mq, spacings }: Theme) =>
+    css({
+      minHeight: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
+
+      [mq.GROUP_1_MIN_WIDTH]: {
+        minHeight: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
+      },
+
+      [mq.GROUP_2_MIN_WIDTH]: {
+        padding: `0 ${spacings.FULL}rem`,
+        minHeight: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
+      },
+      [mq.GROUP_3_MIN_WIDTH]: {
+        padding: `0 ${spacings.DOUBLE}rem`,
+        minHeight: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
+      },
+
+      '.brand-link': {
+        paddingTop: `${pixelsToRem(2)}rem`,
+
+        svg: {
+          height: '1.5rem',
+
+          [mq.GROUP_3_MIN_WIDTH]: {
+            height: '1.875rem',
+          },
+        },
+        [mq.GROUP_1_MIN_WIDTH]: {
+          flex: '0 1 auto',
+          minWidth: 0,
+        },
+      },
+      '.brand-svg-wrapper': {
+        [mq.GROUP_1_MIN_WIDTH]: {
+          flexWrap: 'nowrap',
+        },
+      },
+      '.script-link-wrapper': {
+        [mq.GROUP_0_MAX_WIDTH]: {
+          flexBasis: '100%',
+          margin: `0 0 ${spacings.FULL}rem 0`,
+        },
+        [mq.GROUP_1_MIN_WIDTH]: {
+          display: 'flex',
+          alignItems: 'center',
+          flex: '0 0 auto',
+          marginInlineStart: 'auto',
+          marginInlineEnd: `${pixelsToRem(-4)}rem`,
+        },
       },
     }),
   logoSvg: ({ palette }: Theme) =>

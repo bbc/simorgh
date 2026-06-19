@@ -256,7 +256,7 @@ exports[`Canonical Home Page SEO Lang attribute 1`] = `"sr-cyrl"`;
 
 exports[`Canonical Home Page SEO Linked data should match text 1`] = `
 {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "CollectionPage",

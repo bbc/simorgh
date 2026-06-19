@@ -7,9 +7,55 @@ import {
 } from '#app/components/react-testing-library-with-providers';
 import liveFixture from '#data/pidgin/live/c7p765ynk9qt.json';
 import postFixture from '#data/pidgin/posts/postFixture.json';
+import sportDataFixture from '#data/afrique/live/c7gk1vjglxn1t.json';
 import { GetServerSidePropsContext } from 'next';
-import Live from './LivePageLayout';
+import MockIntersectionObserver from '#app/components/intersection-observer-testing-library';
+import * as useLivePagePolling from '#app/hooks/useLivePagePolling';
+import useToggle from '#app/hooks/useToggle';
+import Live, { ComponentProps } from './LivePageLayout';
 import { getServerSideProps } from './[[...variant]].page';
+import { StreamResponse } from './Post/types';
+
+jest.mock('#app/hooks/useLivePagePolling', () => ({
+  __esModule: true,
+  default: jest.fn(),
+}));
+
+jest.mock('#app/lib/utilities/isLive', () => ({
+  __esModule: true,
+  default: jest.fn(() => false),
+}));
+
+jest.mock('#app/components-webcore/SportDataHeader/head-to-head-v2', () => ({
+  __esModule: true,
+  default: jest.fn(
+    ({
+      initialSportData,
+      isConciseView,
+      shouldHideBadges,
+      shouldShowActions,
+    }) => (
+      <div
+        data-testid="head-to-head-v2"
+        data-concise={String(isConciseView)}
+        data-hide-badges={String(shouldHideBadges)}
+        data-show-actions={String(shouldShowActions)}
+      >
+        {initialSportData?.home?.fullName} vs {initialSportData?.away?.fullName}
+      </div>
+    ),
+  ),
+}));
+
+jest.mock('#app/components/PortraitVideoCarousel', () => ({
+  __esModule: true,
+  default: jest.fn(() => <div data-testid="portrait-video-carousel" />),
+}));
+
+jest.mock('#app/hooks/useToggle', () => ({
+  __esModule: true,
+  default: jest.fn(() => ({ enabled: true })),
+}));
 
 type HelmetMetaTag = {
   property?: string;
@@ -23,6 +69,7 @@ const mockPageData = {
     block: 'Its a block',
   },
   liveTextStream: {
+    id: 'mock-stream-id',
     content: {
       data: {
         results: [],
@@ -44,7 +91,7 @@ const mockPageData = {
     copyright: 'BBC',
   },
   metadata: { atiAnalytics: {} },
-};
+} as unknown as ComponentProps['pageData'];
 
 const mockPageDataWithPosts = {
   ...liveFixture.data,
@@ -52,11 +99,12 @@ const mockPageDataWithPosts = {
     block: 'Its a block',
   },
   liveTextStream: {
+    id: 'mock-stream-id',
     content: postFixture,
     contributors: 'Not a random dude',
   },
   metadata: { atiAnalytics: {} },
-};
+} as unknown as ComponentProps['pageData'];
 
 const mockPageDataWithoutKeyPoints = {
   ...liveFixture.data,
@@ -68,10 +116,61 @@ const mockPageDataWithoutKeyPoints = {
     content: null,
   },
   liveTextStream: {
+    id: 'mock-stream-id',
     content: postFixture,
     contributors: 'Not a random dude',
   },
   metadata: { atiAnalytics: {} },
+} as unknown as ComponentProps['pageData'];
+
+const mockPageDataWithPortraitVideoItems = {
+  ...mockPageData,
+  portraitVideoItems: {
+    portraitVideo: {
+      blocks: [
+        {
+          type: 'portraitClipMedia' as const,
+          model: {
+            type: 'video' as const,
+            images: [
+              {
+                source:
+                  'https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8s.jpg.webp',
+                urlTemplate:
+                  'https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8s.jpg.webp',
+                altText:
+                  'Pelo menos 53 presos escaparam da prisao de Katacane, na Indonesia',
+              },
+            ],
+            video: {
+              id: 'urn:bbc:optimo:asset:cdrqd0m5nlmo',
+              title: 'Optimo article with portrait video embed (1)',
+              holdingImageURL:
+                'https://ichef.bbci.co.uk/ace/standard/512/cpsdevpb/42c1/test/7900c530-0e0e-11f0-a9e9-f552fbd9336f.jpg',
+              version: {
+                id: 'p01wjx6g',
+                duration: 'PT13S',
+                kind: 'programme',
+                guidance: null,
+                territories: ['uk', 'nonuk'],
+              },
+              isEmbeddingAllowed: false,
+              shareUrl: '/portuguese/articles/cdrqd0m5nlmo',
+            },
+          },
+        },
+      ],
+    },
+  },
+} as unknown as ComponentProps['pageData'];
+
+const mockPageDataWithEmptyPortraitVideoItems = {
+  ...mockPageData,
+  portraitVideoItems: {
+    portraitVideo: {
+      blocks: [],
+    },
+  },
 };
 
 const mockPageDataWithMetadata = ({
@@ -105,10 +204,36 @@ const mockPageDataWithMetadata = ({
       datePublished,
       dateModified,
     },
-  };
+  } as unknown as ComponentProps['pageData'];
 };
 
+const mockPollingUpdate = (pageData: ComponentProps['pageData']) => {
+  const streamData = pageData.liveTextStream.content
+    ?.data as StreamResponse['data'];
+
+  jest.spyOn(useLivePagePolling, 'default').mockReturnValue({
+    currentStreamData: streamData,
+    hasPendingUpdate: false,
+    applyPendingUpdate: () => {
+      return null;
+    },
+  });
+};
+
+const mockIntersectionObserver = new MockIntersectionObserver();
+
 describe('Live Page', () => {
+  beforeEach(() => {
+    // @ts-expect-error mocking required for tests
+    global.IntersectionObserver = jest.fn(
+      mockIntersectionObserver.getMockIntersectionObserver(),
+    );
+  });
+
+  afterEach(() => {
+    mockIntersectionObserver.clearObservers();
+  });
+
   it('Should set Cache-Control header to correct values', async () => {
     const context = {
       query: {
@@ -136,11 +261,10 @@ describe('Live Page', () => {
   `(
     'should use $info as the meta title',
     async ({ title, seoTitle, expected }) => {
+      const samplePageData = mockPageDataWithMetadata({ title, seoTitle });
+      mockPollingUpdate(samplePageData);
       await act(async () => {
-        render(
-          <Live pageData={mockPageDataWithMetadata({ title, seoTitle })} />,
-          { service: 'pidgin' },
-        );
+        render(<Live pageData={samplePageData} />, { service: 'pidgin' });
       });
 
       const { title: helmetTitle } = Helmet.peek();
@@ -156,16 +280,15 @@ describe('Live Page', () => {
   `(
     'should use $info as the meta description',
     async ({ description, seoDescription, expected }) => {
+      const samplePageData = mockPageDataWithMetadata({
+        title: 'title',
+        description,
+        seoDescription,
+      });
+      mockPollingUpdate(samplePageData);
+
       await act(async () => {
-        render(
-          <Live
-            pageData={mockPageDataWithMetadata({
-              title: 'title',
-              description,
-              seoDescription,
-            })}
-          />,
-        );
+        render(<Live pageData={samplePageData} />);
       });
 
       const helmetContent = Helmet.peek();
@@ -183,10 +306,11 @@ describe('Live Page', () => {
   `(
     'should use $info as the schema headline',
     async ({ title, seoTitle, expected }) => {
+      const samplePageData = mockPageDataWithMetadata({ title, seoTitle });
+      mockPollingUpdate(samplePageData);
+
       await act(async () => {
-        render(
-          <Live pageData={mockPageDataWithMetadata({ title, seoTitle })} />,
-        );
+        render(<Live pageData={samplePageData} />);
       });
 
       const schemaHeadline = Helmet.peek().scriptTags.find(({ innerHTML }) =>
@@ -201,16 +325,15 @@ describe('Live Page', () => {
     const datePublished = '2018-09-28T22:59:02.448804522Z';
     const dateModified = '2020-09-28T22:59:02.448804522Z';
 
+    const samplePageData = mockPageDataWithMetadata({
+      title: 'Title',
+      datePublished,
+      dateModified,
+    });
+    mockPollingUpdate(samplePageData);
+
     await act(async () => {
-      render(
-        <Live
-          pageData={mockPageDataWithMetadata({
-            title: 'Title',
-            datePublished,
-            dateModified,
-          })}
-        />,
-      );
+      render(<Live pageData={samplePageData} />);
     });
 
     const SEODatePublished = Helmet.peek().scriptTags.find(({ innerHTML }) =>
@@ -252,16 +375,15 @@ describe('Live Page', () => {
     const startDateTime = '2023-04-05T10:22:00.000Z';
     const endDateTime = '2024-04-05T10:21:00.000Z';
 
+    const samplePageData = mockPageDataWithMetadata({
+      title: 'Title',
+      startDateTime,
+      endDateTime,
+    });
+    mockPollingUpdate(samplePageData);
+
     await act(async () => {
-      render(
-        <Live
-          pageData={mockPageDataWithMetadata({
-            title: 'Title',
-            startDateTime,
-            endDateTime,
-          })}
-        />,
-      );
+      render(<Live pageData={samplePageData} />);
     });
 
     const CoverageStartTime = Helmet.peek().scriptTags.find(({ innerHTML }) =>
@@ -277,14 +399,13 @@ describe('Live Page', () => {
   });
 
   it('SEO should NOT contain coverageStartTime and coverageEndTime when absent', async () => {
+    const samplePageData = mockPageDataWithMetadata({
+      title: 'Title',
+    });
+    mockPollingUpdate(samplePageData);
+
     await act(async () => {
-      render(
-        <Live
-          pageData={mockPageDataWithMetadata({
-            title: 'Title',
-          })}
-        />,
-      );
+      render(<Live pageData={samplePageData} />);
     });
 
     const CoverageStartTime = Helmet.peek().scriptTags.find(({ innerHTML }) =>
@@ -303,6 +424,7 @@ describe('Live Page', () => {
     const paginatedData = {
       ...mockPageData,
       liveTextStream: {
+        id: 'mock-stream-id',
         content: {
           data: {
             results: [],
@@ -314,7 +436,9 @@ describe('Live Page', () => {
         },
         contributors: 'Not a random dude',
       },
-    };
+    } as unknown as ComponentProps['pageData'];
+
+    mockPollingUpdate(paginatedData);
 
     await act(async () => {
       render(<Live pageData={paginatedData} />, { service: 'pidgin' });
@@ -336,6 +460,7 @@ describe('Live Page', () => {
         dateModified: '2024-03-12T11:00:52+00:00',
       },
       liveTextStream: {
+        id: 'mock-stream-id',
         content: {
           data: {
             results: [],
@@ -347,8 +472,8 @@ describe('Live Page', () => {
         },
         contributors: 'Not a random dude',
       },
-    };
-
+    } as unknown as ComponentProps['pageData'];
+    mockPollingUpdate(paginatedData);
     await act(async () => {
       render(<Live pageData={paginatedData} />, { service: 'pidgin' });
     });
@@ -361,6 +486,7 @@ describe('Live Page', () => {
   });
 
   it('should render the live page title', async () => {
+    mockPollingUpdate(mockPageData);
     await act(async () => {
       render(<Live pageData={mockPageData} />);
     });
@@ -373,6 +499,7 @@ describe('Live Page', () => {
   });
 
   it('should render the live page description', async () => {
+    mockPollingUpdate(mockPageData);
     await act(async () => {
       render(<Live pageData={mockPageData} />);
     });
@@ -385,6 +512,7 @@ describe('Live Page', () => {
   });
 
   it('should render the live page header image if provided', async () => {
+    mockPollingUpdate(mockPageData);
     await act(async () => {
       render(<Live pageData={mockPageData} />);
     });
@@ -397,6 +525,7 @@ describe('Live Page', () => {
   });
 
   it('should render the key points section', async () => {
+    mockPollingUpdate(mockPageData);
     const { container } = await act(async () => {
       return render(<Live pageData={mockPageData} />);
     });
@@ -405,6 +534,7 @@ describe('Live Page', () => {
   });
 
   it('should not render the key points section when no content is provided', async () => {
+    mockPollingUpdate(mockPageDataWithoutKeyPoints);
     const { container } = await act(async () => {
       return render(<Live pageData={mockPageDataWithoutKeyPoints} />);
     });
@@ -413,6 +543,7 @@ describe('Live Page', () => {
   });
 
   it('should render a live page with posts', async () => {
+    mockPollingUpdate(mockPageDataWithPosts);
     await act(async () => {
       render(<Live pageData={mockPageDataWithPosts} />);
     });
@@ -425,24 +556,32 @@ describe('Live Page', () => {
     expect(screen.getByTestId('breaking-news-label')).toBeInTheDocument();
   });
 
-  it('creates snapshot of the live page', async () => {
-    let container;
+  it('should render portrait video carousel when portraitVideoItems are provided', async () => {
+    mockPollingUpdate(mockPageDataWithPortraitVideoItems);
 
-    await act(
-      // eslint-disable-next-line no-return-assign
-      async () =>
-        ({ container } = render(<Live pageData={mockPageDataWithPosts} />, {
-          service: 'pidgin',
-        })),
-    );
+    await act(async () => {
+      render(<Live pageData={mockPageDataWithPortraitVideoItems} />);
+    });
 
-    expect(container).toMatchSnapshot();
+    expect(screen.getByTestId('portrait-video-carousel')).toBeInTheDocument();
+  });
+
+  it('should not render portrait video carousel when portraitVideoItems blocks are empty', async () => {
+    mockPollingUpdate(mockPageDataWithEmptyPortraitVideoItems);
+
+    await act(async () => {
+      render(<Live pageData={mockPageDataWithEmptyPortraitVideoItems} />);
+    });
+
+    expect(
+      screen.queryByTestId('portrait-video-carousel'),
+    ).not.toBeInTheDocument();
   });
 
   it('sets the correct og:image meta tag from the post with assetId', () => {
     const assetId = 'asset:18d24593-b615-4c84-867c-ac1fdec87136';
     const pageData = liveFixture.data;
-
+    mockPollingUpdate(pageData);
     render(<Live pageData={pageData} assetId={assetId} />);
 
     const expectedImageUrl =
@@ -457,7 +596,7 @@ describe('Live Page', () => {
   it('sets the correct og:title meta tag from the post with assetId', () => {
     const assetId = 'asset:18d24593-b615-4c84-867c-ac1fdec87136';
     const pageData = liveFixture.data;
-
+    mockPollingUpdate(pageData);
     render(<Live pageData={pageData} assetId={assetId} />);
     // - BBC News gets appended to the end of the title for og:title
     const expectedOgTitle =
@@ -473,7 +612,7 @@ describe('Live Page', () => {
   it('sets og:image meta tag to the page promoImage when assetId matches a post without an image, and still uses the posts title', () => {
     const assetId = 'asset:ec227190-49f3-43eb-b373-e52b6e1ba035';
     const pageData = liveFixture.data;
-
+    mockPollingUpdate(pageData);
     render(<Live pageData={pageData} assetId={assetId} />);
 
     const expectedImageUrl = pageData.promoImage.url;
@@ -493,7 +632,7 @@ describe('Live Page', () => {
   it('sets og:title and og:image meta tags to pageTitle and promoImage when assetId does not match any post', () => {
     const assetId = 'asset:non-existent-id';
     const pageData = liveFixture.data;
-
+    mockPollingUpdate(pageData);
     render(<Live pageData={pageData} assetId={assetId} />);
     // when we are using a title for the page and not a post, seoTitle is used as priority
     // and page title is a back up if seoTitle is not available.
@@ -516,7 +655,7 @@ describe('Live Page', () => {
 
   it('sets og:title and og:image meta tags to pageTitle and promoImage when assetId is not provided', () => {
     const pageData = liveFixture.data;
-
+    mockPollingUpdate(pageData);
     render(<Live pageData={pageData} />);
 
     const expectedOgTitle = `${pageData.seo.seoTitle} - BBC News`;
@@ -532,5 +671,203 @@ describe('Live Page', () => {
 
     expect((ogTitleMeta as HelmetMetaTag)?.content).toEqual(expectedOgTitle);
     expect((ogImageMeta as HelmetMetaTag)?.content).toEqual(expectedOgImage);
+  });
+
+  describe('SportData handling', () => {
+    it('should render live label when sport data is shown and isSportDataLive is true', async () => {
+      const pageDataWithSportData = {
+        ...mockPageData,
+        isLive: false,
+        sportDataEventContent: {
+          ...sportDataFixture.data.sportDataEventContent,
+          live: true,
+        },
+      } as unknown as ComponentProps['pageData'];
+
+      mockPollingUpdate(pageDataWithSportData);
+
+      await act(async () => {
+        render(<Live pageData={pageDataWithSportData} />);
+      });
+
+      expect(screen.getByTestId('live-label')).toBeInTheDocument();
+    });
+
+    it('should not render live label when sport data is shown and isSportDataLive is false', async () => {
+      const pageDataWithSportData = {
+        ...mockPageData,
+        isLive: true,
+        sportDataEventContent: {
+          ...sportDataFixture.data.sportDataEventContent,
+          live: false,
+        },
+      } as unknown as ComponentProps['pageData'];
+      mockPollingUpdate(pageDataWithSportData);
+
+      await act(async () => {
+        render(<Live pageData={pageDataWithSportData} />);
+      });
+
+      expect(screen.queryByTestId('live-label')).not.toBeInTheDocument();
+    });
+
+    it('should fallback to page isLive value when sportDataEventContent is nullish', async () => {
+      const pageDataWithSportData = {
+        ...mockPageData,
+        isLive: true,
+        sportDataEventContent: null,
+      } as unknown as ComponentProps['pageData'];
+      mockPollingUpdate(pageDataWithSportData);
+
+      await act(async () => {
+        render(<Live pageData={pageDataWithSportData} />);
+      });
+
+      expect(screen.getByTestId('live-label')).toBeInTheDocument();
+    });
+
+    it('should fallback to page isLive value when sportHeaderEnabled toggle is disabled', async () => {
+      const pageDataWithSportData = {
+        ...mockPageData,
+        isLive: true,
+        sportDataEventContent: {
+          ...sportDataFixture.data.sportDataEventContent,
+          live: false,
+        },
+      } as unknown as ComponentProps['pageData'];
+      mockPollingUpdate(pageDataWithSportData);
+
+      (useToggle as jest.Mock).mockReturnValue({ enabled: false });
+
+      await act(async () => {
+        render(<Live pageData={pageDataWithSportData} />);
+      });
+
+      expect(screen.getByTestId('live-label')).toBeInTheDocument();
+
+      (useToggle as jest.Mock).mockReturnValue({ enabled: true });
+    });
+
+    it('should render HeadToHeadV2 when sportDataEventContent is present and not in live env', async () => {
+      const pageDataWithSportData = {
+        ...mockPageData,
+        sportDataEventContent: sportDataFixture.data.sportDataEventContent,
+      } as unknown as ComponentProps['pageData'];
+      mockPollingUpdate(pageDataWithSportData);
+
+      await act(async () => {
+        render(<Live pageData={pageDataWithSportData} />);
+      });
+
+      expect(screen.getByTestId('head-to-head-v2')).toBeInTheDocument();
+    });
+
+    it('should pass correct data to HeadToHeadV2 component', async () => {
+      const pageDataWithSportData = {
+        ...mockPageData,
+        sportDataEventContent: sportDataFixture.data.sportDataEventContent,
+      } as unknown as ComponentProps['pageData'];
+      mockPollingUpdate(pageDataWithSportData);
+
+      await act(async () => {
+        render(<Live pageData={pageDataWithSportData} />);
+      });
+
+      const headToHeadElement = screen.getByTestId('head-to-head-v2');
+      expect(headToHeadElement).toHaveTextContent('Bologna vs Aston Villa');
+    });
+
+    it('should pass correct props to HeadToHeadV2 component', async () => {
+      const pageDataWithSportData = {
+        ...mockPageData,
+        sportDataEventContent: sportDataFixture.data.sportDataEventContent,
+      } as unknown as ComponentProps['pageData'];
+      mockPollingUpdate(pageDataWithSportData);
+
+      await act(async () => {
+        render(<Live pageData={pageDataWithSportData} />);
+      });
+
+      const headToHeadElement = screen.getByTestId('head-to-head-v2');
+      expect(headToHeadElement).toHaveAttribute('data-concise', 'false');
+      expect(headToHeadElement).toHaveAttribute('data-show-actions', 'false');
+    });
+
+    it('should render a h1 when displaying sportData', async () => {
+      const pageDataWithSportData = {
+        ...mockPageData,
+        sportDataEventContent: sportDataFixture.data.sportDataEventContent,
+      } as unknown as ComponentProps['pageData'];
+      mockPollingUpdate(pageDataWithSportData);
+
+      const { container } = await act(async () => {
+        return render(<Live pageData={pageDataWithSportData} />);
+      });
+
+      const title = container.querySelector('h1');
+      expect(title).toBeInTheDocument();
+    });
+
+    it('should render a visually hidden h1 when displaying sportData', async () => {
+      const pageDataWithSportData = {
+        ...mockPageData,
+        sportDataEventContent: sportDataFixture.data.sportDataEventContent,
+      } as unknown as ComponentProps['pageData'];
+      mockPollingUpdate(pageDataWithSportData);
+
+      await act(async () => {
+        render(<Live pageData={pageDataWithSportData} />);
+      });
+
+      const visuallyHiddenTitle = screen.getByText(
+        'Israeli tanks shell Jabalia camp as heavy fighting continues in north Gaza', // mock data, in production this would be a sport title
+      );
+      expect(visuallyHiddenTitle).toBeInTheDocument();
+      expect(visuallyHiddenTitle).toHaveStyle(
+        'overflow: hidden; position: absolute; width: 1px;',
+      );
+    });
+
+    it('should not render HeadToHeadV2 when sportDataEventContent is not present', async () => {
+      mockPollingUpdate(mockPageData);
+
+      await act(async () => {
+        render(<Live pageData={mockPageData} />);
+      });
+
+      expect(screen.queryByTestId('head-to-head-v2')).not.toBeInTheDocument();
+    });
+
+    it('should not render HeadToHeadV2 when sportHeaderEnabled toggle is disabled', async () => {
+      const pageDataWithSportData = {
+        ...mockPageData,
+        sportDataEventContent: sportDataFixture.data.sportDataEventContent,
+      } as unknown as ComponentProps['pageData'];
+      mockPollingUpdate(pageDataWithSportData);
+
+      (useToggle as jest.Mock).mockReturnValue({ enabled: false });
+
+      await act(async () => {
+        render(<Live pageData={pageDataWithSportData} />);
+      });
+
+      expect(screen.queryByTestId('head-to-head-v2')).not.toBeInTheDocument();
+
+      (useToggle as jest.Mock).mockReturnValue({ enabled: true });
+    });
+
+    it('should render Header when sportDataEventContent is not present', async () => {
+      mockPollingUpdate(mockPageData);
+
+      await act(async () => {
+        render(<Live pageData={mockPageData} />);
+      });
+
+      expect(
+        screen.getByText(
+          'Israeli tanks shell Jabalia camp as heavy fighting continues in north Gaza',
+        ),
+      ).toBeInTheDocument();
+    });
   });
 });

@@ -3,18 +3,19 @@ import pixelsToRem from '#app/utilities/pixelsToRem';
 import { calculateVariedNavContainerWidths } from '../utils/styleUtils';
 
 const defaultBackgroundColor = 'rgba(255, 255, 255, 0.75)';
+const darkUiBackgroundColor = 'rgba(20, 20, 20, 0.75)';
 
 const styles = {
   buttonGroupOverlay:
     (backgroundColor = defaultBackgroundColor) =>
-    ({ mq, gridWidths }: Theme) =>
+    ({ mq, gridWidths, isDarkUi }: Theme) =>
       css({
         display: 'none',
         position: 'absolute',
         top: 0,
         insetInlineEnd: 0,
         height: '100%',
-        backgroundColor,
+        backgroundColor: isDarkUi ? darkUiBackgroundColor : backgroundColor,
         zIndex: 1,
         ...calculateVariedNavContainerWidths({
           mq,
@@ -32,9 +33,9 @@ const styles = {
       gap: `${spacings.HALF}rem`,
       padding: `0 ${spacings.FULL}rem`,
     }),
-  navButton: ({ palette, spacings }: Theme) =>
+  navButton: ({ palette, spacings, isDarkUi }: Theme) =>
     css({
-      backgroundColor: palette.BLACK,
+      backgroundColor: isDarkUi ? palette.GREY_2 : palette.BLACK,
       border: 'none',
       width: '100%',
       maxWidth: `${pixelsToRem(44)}rem`,
@@ -43,7 +44,7 @@ const styles = {
       alignItems: 'center',
       justifyContent: 'center',
       cursor: 'pointer',
-      color: palette.GREY_2,
+      color: isDarkUi ? palette.BLACK : palette.GREY_2,
       '&:disabled': {
         opacity: 0.2,
         cursor: 'not-allowed',
