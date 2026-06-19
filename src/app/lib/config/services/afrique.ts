@@ -310,6 +310,20 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'Le choix de la rédaction',
       sport: {
         matchSummary: 'Résumé du match',
+        assists: 'Passes décisives',
+        penalties: 'Tirs au but',
+        ht: 'Mi-temps',
+        ft: 'Fin du match',
+        et: 'Prolongation',
+        afterExtraTime: 'Après prolongation',
+        penaltyAbbreviation: 'PEN',
+        ownGoal: 'but contre son camp',
+        venue: 'Stade',
+        attendance: 'Affluence',
+        winOnPenalties: {
+          prefix: 'gagne',
+          suffix: 'aux tirs au but',
+        },
         worldCupTeamNames: {
           algeria: 'Algérie',
           argentina: 'Argentine',
@@ -359,6 +373,12 @@ export const service: DefaultServiceConfig = {
           uruguay: 'Uruguay',
           usa: 'États-Unis',
           uzbekistan: 'Ouzbékistan',
+        },
+        tournaments: {
+          fifaWorldCup: 'Coupe du Monde FIFA',
+        },
+        stages: {
+          groupStage: 'Phase de poules',
         },
       },
     },

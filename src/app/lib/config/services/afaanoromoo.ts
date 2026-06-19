@@ -303,6 +303,18 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'Haaraa',
       sport: {
         matchSummary: 'Cuunfaa Taphaa',
+        assists: 'Gargaarsota',
+        penalties: 'Penaaltii',
+        ht: 'Walakkaa taphichaa',
+        ft: 'Dhuma taphichaa',
+        et: 'Yeroo dabalaa',
+        afterExtraTime: 'Erga yeroo dabalataa booda',
+        penaltyAbbreviation: 'PEN',
+        ownGoal: 'goolii ofii',
+        winOnPenalties: {
+          prefix: '',
+          suffix: 'penaalii irratti injifata',
+        },
         worldCupTeamNames: {
           algeria: 'Aljeeriyaa',
           argentina: 'Arjeentinaa',
@@ -352,6 +364,12 @@ export const service: DefaultServiceConfig = {
           uruguay: 'Yuraagaayi',
           usa: 'USA',
           uzbekistan: 'Uzbekistaan',
+        },
+        tournaments: {
+          fifaWorldCup: 'Waancaa Addunyaa FIFA',
+        },
+        stages: {
+          groupStage: 'Waltajjii Garee',
         },
       },
     },

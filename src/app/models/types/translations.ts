@@ -62,6 +62,15 @@ export interface Translations {
     remove: string;
     removing: string;
   };
+  myNews?: {
+    title: string;
+    guestTitle: string;
+    description: string;
+    guestDescription: string;
+    noArticles: string;
+    errorText: string;
+    loading: string;
+  };
   error: {
     home?: string;
     currentPage?: string;
@@ -242,8 +251,24 @@ export interface Translations {
     next?: string;
   };
   sport?: {
+    assists?: string;
+    penalties?: string;
+    ht?: string;
+    ft?: string;
+    et?: string;
+    afterExtraTime?: string;
+    penaltyAbbreviation?: string;
+    ownGoal?: string;
+    venue?: string;
+    attendance?: string;
     matchSummary?: string;
+    winOnPenalties?: {
+      prefix?: string;
+      suffix?: string;
+    };
     worldCupTeamNames?: Record<string, string>;
+    tournaments?: Record<string, string>;
+    stages?: Record<string, string>;
   };
 }
 

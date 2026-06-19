@@ -15,6 +15,8 @@ interface FixtureProps {
   position?: number;
   resourceId?: string;
   eventTrackingData?: EventTrackingData;
+  imageUrl?: string;
+  imageAlt?: string;
 }
 
 const Fixture = ({
@@ -26,15 +28,17 @@ const Fixture = ({
   position = 1,
   resourceId = 'e2263a1c-8d5a-4a73-a00c-881acfa34381',
   eventTrackingData,
+  imageUrl = 'https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/17CDB/production/_123699479_indigena.jpg',
+  imageAlt = 'Campesino indígena peruano.',
 }: FixtureProps) => (
   <CurationPromo
     lazy={lazy}
     title="Promo title"
     description="This is a description"
     firstPublished="2022-03-30T07:37:18.253Z"
-    imageUrl="https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/17CDB/production/_123699479_indigena.jpg"
+    imageUrl={imageUrl}
     lastPublished="2023-04-17T07:37:18.253Z"
-    imageAlt="Campesino indígena peruano."
+    imageAlt={imageAlt}
     link={link}
     type={type}
     duration={duration}
@@ -136,6 +140,30 @@ describe('Curation Promo', () => {
         { service: 'mundo' },
       );
       expect(container.queryByText('17 abril 2023')).not.toBeInTheDocument();
+    });
+  });
+
+  describe('Fallback placeholder image', () => {
+    it('should render a placeholder when imageUrl is missing on My News page', () => {
+      const { container } = render(<Fixture imageUrl="" imageAlt="" />, {
+        pageType: 'myNews',
+      });
+      expect(container.querySelector('.promo-image')).not.toBeEmptyDOMElement();
+      expect(screen.queryByRole('img')).not.toBeInTheDocument();
+    });
+
+    it('should not render a placeholder when imageUrl is missing on non-My News page', () => {
+      const { container } = render(<Fixture imageUrl="" imageAlt="" />, {
+        pageType: 'article',
+      });
+      expect(container.querySelector('.promo-image')).toBeEmptyDOMElement();
+    });
+
+    it('should render the real image when imageUrl is provided on My News page', () => {
+      render(<Fixture />, { pageType: 'myNews' });
+      expect(
+        screen.getByAltText('Campesino indígena peruano.'),
+      ).toBeInTheDocument();
     });
   });
 });

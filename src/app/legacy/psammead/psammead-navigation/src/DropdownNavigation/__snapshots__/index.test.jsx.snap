@@ -67,6 +67,7 @@ exports[`Canonical Closed menu button should render correctly 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 <div>
@@ -165,6 +166,7 @@ exports[`Canonical Closed menu button should render rtl correctly 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 <div>
@@ -263,6 +265,7 @@ exports[`Canonical Open menu button should render correctly 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 <div>
@@ -362,6 +365,7 @@ exports[`Canonical Open menu button should render rtl correctly 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 <div>
@@ -461,6 +465,7 @@ exports[`Dropdown navigation AMP Menu Button should render correctly 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 <div>
@@ -586,6 +591,7 @@ exports[`Dropdown navigation AMP Menu Button should render rtl correctly 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 <div>
@@ -735,6 +741,7 @@ exports[`Dropdown navigation should render correctly when closer 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 <div>
@@ -996,6 +1003,7 @@ exports[`Dropdown navigation should render correctly when open 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 <div>

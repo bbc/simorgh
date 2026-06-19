@@ -301,6 +301,18 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'લેટેસ્ટ',
       sport: {
         matchSummary: 'મેચનો સારાંશ',
+        assists: 'આસિસ્ટ',
+        penalties: 'પેનલ્ટી',
+        ht: 'પ્રથમ અર્ધનો અંત',
+        ft: 'રમત પૂર્ણ',
+        et: 'વધારાનો સમય',
+        afterExtraTime: 'વધારાના સમય પછી',
+        penaltyAbbreviation: 'પેન',
+        ownGoal: 'પોતાનો ગોલ',
+        winOnPenalties: {
+          prefix: 'પેનલ્ટીમાં',
+          suffix: 'જીતે છે',
+        },
         worldCupTeamNames: {
           algeria: 'અલ્જીરિયા',
           argentina: 'આર્જેન્ટિના',
@@ -350,6 +362,12 @@ export const service: DefaultServiceConfig = {
           uruguay: 'ઉરુગ્વે',
           usa: 'અમેરિકા',
           uzbekistan: 'ઉઝબેકિસ્તાન',
+        },
+        tournaments: {
+          fifaWorldCup: 'ફિફા વર્લ્ડ કપ',
+        },
+        stages: {
+          groupStage: 'ગ્રૂપ સ્ટેજ',
         },
       },
     },

@@ -287,6 +287,18 @@ const defaultCyrillicConfig = {
     },
     sport: {
       matchSummary: 'Ўйин хулосаси',
+      assists: 'Ассистлар',
+      penalties: 'Пенальти',
+      ht: 'Биринчи тайм якунланди',
+      ft: 'Ўйин тугади',
+      et: 'Қўшимча вақт',
+      afterExtraTime: 'Қўшимча вақтдан кейин',
+      penaltyAbbreviation: 'пен',
+      ownGoal: 'ўз дарвозасига гол',
+      winOnPenalties: {
+        prefix: 'пенальтида',
+        suffix: 'билан ғалаба қозонади',
+      },
       worldCupTeamNames: {
         algeria: 'Жазоир',
         argentina: 'Аргентина',
@@ -336,6 +348,12 @@ const defaultCyrillicConfig = {
         uruguay: 'Уругвай',
         usa: 'АҚШ',
         uzbekistan: 'Ўзбекистон',
+      },
+      tournaments: {
+        fifaWorldCup: 'Жаҳон чемпионати',
+      },
+      stages: {
+        groupStage: 'Гуруҳ босқичи',
       },
     },
     topStoriesTitle: 'Бош мақола',
@@ -666,6 +684,18 @@ export const service: UzbekConfig = {
       },
       sport: {
         matchSummary: 'O‘yin xulosasi',
+        assists: 'Assistlar',
+        penalties: 'Penaltilar',
+        ht: 'Birinchi taym tugadi',
+        ft: 'O‘yin tugadi',
+        et: 'Qo‘shimcha vaqt',
+        afterExtraTime: 'Qo‘shimcha vaqtdan keyin',
+        penaltyAbbreviation: 'pen',
+        ownGoal: 'o‘z darvozasiga gol',
+        winOnPenalties: {
+          prefix: 'penaltilarda',
+          suffix: 'bilan g‘alaba qozonadi',
+        },
         worldCupTeamNames: {
           algeria: 'Jazoir',
           argentina: 'Argentina',
@@ -715,6 +745,12 @@ export const service: UzbekConfig = {
           uruguay: 'Urugvay',
           usa: 'AQSH',
           uzbekistan: 'Oʻzbekiston',
+        },
+        tournaments: {
+          fifaWorldCup: 'FIFA World Cup',
+        },
+        stages: {
+          groupStage: 'Guruh bosqichi',
         },
       },
       topStoriesTitle: 'Bosh maqola',

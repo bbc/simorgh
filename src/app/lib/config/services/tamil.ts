@@ -380,6 +380,18 @@ export const service: DefaultServiceConfig = {
       },
       sport: {
         matchSummary: 'போட்டி சுருக்கம்',
+        assists: 'உதவிகள்',
+        penalties: 'பெனால்டி',
+        ht: 'முதல் பாதி முடிவு',
+        ft: 'போட்டி முடிவு',
+        et: 'கூடுதல் நேரம்',
+        afterExtraTime: 'கூடுதல் நேரத்திற்குப் பிறகு',
+        penaltyAbbreviation: 'பென்',
+        ownGoal: 'சுய கோல்',
+        winOnPenalties: {
+          prefix: 'பெனால்டியில்',
+          suffix: 'வெற்றி பெறுகிறது',
+        },
         worldCupTeamNames: {
           algeria: 'அல்ஜீரியா',
           argentina: 'அர்ஜெண்டினா',
@@ -429,6 +441,12 @@ export const service: DefaultServiceConfig = {
           uruguay: 'உருகுவே',
           usa: 'அமெரிக்கா',
           uzbekistan: 'உஸ்பெகிஸ்தான்',
+        },
+        tournaments: {
+          fifaWorldCup: 'ஃபிஃபா உலகக் கோப்பை',
+        },
+        stages: {
+          groupStage: 'குரூப் சுற்று',
         },
       },
     },

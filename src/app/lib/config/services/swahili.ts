@@ -314,6 +314,20 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'Gumzo mitandaoni',
       sport: {
         matchSummary: 'Muhtasari wa mechi',
+        assists: 'Pasi za mabao',
+        penalties: 'Penalti',
+        ht: 'Mwisho wa kipindi cha kwanza',
+        ft: 'Mwisho wa mechi',
+        et: 'Muda wa mapumziko',
+        afterExtraTime: 'Baada ya muda wa nyongeza',
+        penaltyAbbreviation: 'PEN',
+        ownGoal: 'bao la kujifunga',
+        venue: 'Uwanja',
+        attendance: 'Idadi ya watazamaji',
+        winOnPenalties: {
+          prefix: 'inashinda kwa penalti',
+          suffix: '',
+        },
         worldCupTeamNames: {
           algeria: 'Algeria',
           argentina: 'Argentina',
@@ -363,6 +377,12 @@ export const service: DefaultServiceConfig = {
           uruguay: 'Uruguay',
           usa: 'Marekani',
           uzbekistan: 'Uzbekistan',
+        },
+        tournaments: {
+          fifaWorldCup: 'Kombe la Dunia la Fifa',
+        },
+        stages: {
+          groupStage: 'Hatua ya Makundi',
         },
       },
     },

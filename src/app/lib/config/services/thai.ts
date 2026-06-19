@@ -264,6 +264,18 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'เรื่องน่าสนใจ',
       sport: {
         matchSummary: 'สรุปการแข่งขัน',
+        assists: 'แอสซิสต์',
+        penalties: 'จุดโทษ',
+        ht: 'จบครึ่งแรก',
+        ft: 'จบการแข่งขัน',
+        et: 'ต่อเวลาพิเศษ',
+        afterExtraTime: 'หลังต่อเวลาพิเศษ',
+        penaltyAbbreviation: 'จุดโทษ',
+        ownGoal: 'ทำเข้าประตูตัวเอง',
+        winOnPenalties: {
+          prefix: 'ชนะจุดโทษ',
+          suffix: '',
+        },
         worldCupTeamNames: {
           algeria: 'แอลจีเรีย',
           argentina: 'อาร์เจนตินา',
@@ -313,6 +325,12 @@ export const service: DefaultServiceConfig = {
           uruguay: 'อุรุกวัย',
           usa: 'สหรัฐอเมริกา',
           uzbekistan: 'อุซเบกิสถาน',
+        },
+        tournaments: {
+          fifaWorldCup: 'ฟุตบอลโลก',
+        },
+        stages: {
+          groupStage: 'รอบแบ่งกลุ่ม',
         },
       },
     },
