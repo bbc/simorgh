@@ -5,17 +5,16 @@ import {
   fireEvent,
 } from '#app/components/react-testing-library-with-providers';
 import { RefObject } from 'react';
-import * as useCustomEventTrackerModule from '#app/hooks/useCustomEventTracker';
+import useCustomEventTracker from '#app/hooks/useCustomEventTracker';
 import LastestPostButton from '.';
 
-jest.useFakeTimers();
-
 const mockTrackEvent = jest.fn();
-const mockUseCustomEventTracker = jest.spyOn(
-  useCustomEventTrackerModule,
-  'default',
-);
-mockUseCustomEventTracker.mockReturnValue(mockTrackEvent);
+jest.mock('#app/hooks/useCustomEventTracker', () => ({
+  __esModule: true,
+  default: jest.fn(() => mockTrackEvent),
+}));
+
+jest.useFakeTimers();
 
 const defaultProps = {
   pendingUpdateTime: Date.now(),
@@ -35,7 +34,6 @@ describe('LatestPostButton', () => {
 
   beforeEach(() => {
     jest.clearAllMocks();
-    mockUseCustomEventTracker.mockReturnValue(mockTrackEvent);
   });
 
   it.each([
@@ -153,10 +151,10 @@ describe('LatestPostButton', () => {
       );
     });
 
-    expect(mockUseCustomEventTracker).toHaveBeenCalledWith({
+    expect(useCustomEventTracker).toHaveBeenCalledWith({
       eventName: 'live_refresh_button_shown',
     });
-    expect(mockUseCustomEventTracker).toHaveBeenCalledWith({
+    expect(useCustomEventTracker).toHaveBeenCalledWith({
       eventName: 'live_refresh_button_clicked',
     });
   });
