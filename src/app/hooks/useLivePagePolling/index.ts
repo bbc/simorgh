@@ -3,8 +3,7 @@ import { ComponentProps } from '#nextjs/pages/[service]/live/[id]/LivePageLayout
 import useCustomEventTracker from '../useCustomEventTracker';
 import makeRequest from './makeRequest/makeRequest';
 
-// TODO: change back to 15000, temp for code reviews
-export const POLLING_INTERVAL = 5000;
+export const POLLING_INTERVAL = 15000;
 const TRACKING_SAMPLE_RATE = 0.2;
 
 const shouldSample = () => Math.random() < TRACKING_SAMPLE_RATE;
@@ -31,9 +30,8 @@ const useLivePagePolling = (
 
   useEffect(() => {
     const timerId = setInterval(async () => {
-      // TODO: Uncomment, temp for code reviews
-      // if (enableFeature === false) return;
-      // if (currentStreamData?.page?.index !== 1) return;
+      if (enableFeature === false) return;
+      if (currentStreamData?.page?.index !== 1) return;
 
       const timeSinceLastPoll = Date.now() - lastPollTime.current;
       lastPollTime.current = Date.now();
@@ -71,8 +69,6 @@ const useLivePagePolling = (
           setFirstPostUrn(polledStreamFirstPostUrn);
         }
       }
-      // TODO: Remove, temp for code reviews
-      setHasPendingUpdate(true);
       pendingUpdateTime.current = Date.now();
     }, POLLING_INTERVAL);
 
