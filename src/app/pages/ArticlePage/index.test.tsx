@@ -47,17 +47,27 @@ import {
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ArticlePage from './ArticlePage';
 import ThemeProvider from '../../components/ThemeProvider';
-import * as ATIAnalytics from '../../components/ATIAnalytics';
+import * as ReverbParamsContext from '../../contexts/ReverbParamsContext';
+import * as buildReverbParams from '../../components/ATIAnalytics/params';
 
 jest.mock('../../components/ThemeProvider');
 
 jest.mock('../../components/ChartbeatAnalytics', () => {
-  const ChartbeatAnalytics = () => <div>chartbeat</div>;
+  const ChartbeatAnalytics = () => <div>Chartbeat</div>;
   return ChartbeatAnalytics;
 });
 
-const atiAnalyticsSpy = jest.spyOn(ATIAnalytics, 'default');
-atiAnalyticsSpy.mockImplementation(() => <div>ATI Analytics</div>);
+jest.mock('../../components/ATIAnalytics', () => {
+  const ATIAnalytics = () => <div>ATI Analytics</div>;
+  return ATIAnalytics;
+});
+
+const reverbParamsContextProviderSpy = jest.spyOn(
+  ReverbParamsContext,
+  'ReverbParamsContextProvider',
+);
+
+const buildReverbParamsSpy = jest.spyOn(buildReverbParams, 'default');
 
 jest.mock('#app/components/OptimizelyPageMetrics');
 jest.mock('#app/hooks/useOptimizelyVariation', () => ({
@@ -879,29 +889,56 @@ describe('Article Page', () => {
     });
 
     it('should add brandname to page title in atiAnalytics', async () => {
+      const {
+        metadata: { atiAnalytics, type },
+      } = articlePglDataPidgin;
+
       render(
         <Context service="pidgin">
           <ArticlePage pageData={articlePglDataPidgin} />
         </Context>,
+        {
+          service: 'pidgin',
+          pageMetadata: { atiAnalytics, type },
+        },
       );
 
-      expect(atiAnalyticsSpy).toHaveBeenLastCalledWith(
-        {
-          atiData: {
-            categoryName: null,
+      const { metadata } = reverbParamsContextProviderSpy.mock.calls[0][0];
+
+      expect(metadata).toEqual({ atiAnalytics, type });
+
+      expect(buildReverbParamsSpy).toHaveReturnedWith({
+        eventDetails: { eventName: 'pageView' },
+        params: {
+          env: undefined,
+          page: {
+            additionalProperties: {
+              app_name: 'news-pidgin',
+              app_type: 'responsive',
+              content_language: 'pcm',
+              product_platform: null,
+              referrer_url: null,
+              x10: null,
+              x11: '2018-01-01T12:01:00.000Z',
+              x12: '2018-01-01T14:00:00.000Z',
+              x13: null,
+              x14: null,
+              x16: '',
+              x17: null,
+              x18: null,
+              x5: null,
+              x8: 'simorgh',
+              x9: 'Article%20Headline%20for%20SEO%20in%20Pidgin%20-%20BBC%20News%20Pidgin',
+            },
             contentId: 'urn:bbc:optimo:c0000000001o',
-            language: 'pcm',
-            ldpThingIds: null,
-            ldpThingLabels: null,
-            nationsProducer: null,
-            pageIdentifier: null,
-            pageTitle: 'Article Headline for SEO in Pidgin - BBC News Pidgin',
-            timePublished: '2018-01-01T12:01:00.000Z',
-            timeUpdated: '2018-01-01T14:00:00.000Z',
+            contentType: undefined,
+            destination: 'WS_NEWS_LANGUAGES_TEST',
+            name: null,
+            producer: 'PIDGIN',
           },
+          user: { hashedId: null, isSignedIn: false },
         },
-        undefined,
-      );
+      });
     });
 
     it('should have schema metadata @type as Article', async () => {
@@ -922,31 +959,59 @@ describe('Article Page', () => {
       expect(schemaType).toEqual('Article');
     });
   });
+
   describe('when rendering an STY page', () => {
     it('should add brandname to page title in atiAnalytics', async () => {
+      const {
+        metadata: { atiAnalytics, type },
+      } = articleStyDataPidgin;
+
       render(
         <Context service="pidgin">
           <ArticlePage pageData={articleStyDataPidgin} />
         </Context>,
+        {
+          service: 'pidgin',
+          pageMetadata: { atiAnalytics, type },
+        },
       );
 
-      expect(atiAnalyticsSpy).toHaveBeenLastCalledWith(
-        {
-          atiData: {
-            categoryName: null,
+      const { metadata } = reverbParamsContextProviderSpy.mock.calls[0][0];
+
+      expect(metadata).toEqual({ atiAnalytics, type });
+
+      expect(buildReverbParamsSpy).toHaveReturnedWith({
+        eventDetails: { eventName: 'pageView' },
+        params: {
+          env: undefined,
+          page: {
+            additionalProperties: {
+              app_name: 'news-pidgin',
+              app_type: 'responsive',
+              content_language: 'pcm',
+              product_platform: null,
+              referrer_url: null,
+              x10: null,
+              x11: '2018-01-01T12:01:00.000Z',
+              x12: '2018-01-01T14:00:00.000Z',
+              x13: null,
+              x14: null,
+              x16: '',
+              x17: null,
+              x18: null,
+              x5: null,
+              x8: 'simorgh',
+              x9: 'Article%20Headline%20for%20SEO%20in%20Pidgin%20-%20BBC%20News%20Pidgin',
+            },
             contentId: 'urn:bbc:optimo:c0000000001o',
-            language: 'pcm',
-            ldpThingIds: null,
-            ldpThingLabels: null,
-            nationsProducer: null,
-            pageIdentifier: null,
-            pageTitle: 'Article Headline for SEO in Pidgin - BBC News Pidgin',
-            timePublished: '2018-01-01T12:01:00.000Z',
-            timeUpdated: '2018-01-01T14:00:00.000Z',
+            contentType: undefined,
+            destination: 'WS_NEWS_LANGUAGES_TEST',
+            name: null,
+            producer: 'PIDGIN',
           },
+          user: { hashedId: null, isSignedIn: false },
         },
-        undefined,
-      );
+      });
     });
   });
 

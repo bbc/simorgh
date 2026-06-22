@@ -2,8 +2,6 @@
 import { articleDataNews } from '#pages/ArticlePage/fixtureData';
 import styUkrainianAssetData from '#data/ukrainian/cpsAssets/news-53561143.json';
 import styUkrainianInRussianAssetData from '#data/ukrainian/cpsAssets/features-russian-53477115.json';
-import { ServiceContext } from '#contexts/ServiceContext';
-import { ServiceConfig } from '#models/types/serviceConfig';
 import styAssetData from './fixtures/storyPage.json';
 import pglAssetData from './fixtures/photoGalleryPage.json';
 import mapAssetData from './fixtures/mediaAssetPage.json';
@@ -659,7 +657,6 @@ describe('ATI Analytics Container', () => {
       const {
         metadata: { atiAnalytics, type },
       } = styUkrainianAssetData;
-
 
       render(<ATIAnalytics />, {
         ...defaultRenderProps,
