@@ -15,7 +15,6 @@ This component is service-aware: the set of banners that can appear, and the tag
 
 The banner is **not** rendered when any of the following are true:
 
-- The page is in **lite mode** (`isLite` from `RequestContext`)
 - No `articleMessageBanners` are configured for the service
 - None of the article's `aboutTags` match a configured banner's `thingIds`
 - The article has an **editorial sensitivity** tagging matching `SENSITIVE_ARTICLE_ID`
@@ -23,8 +22,8 @@ The banner is **not** rendered when any of the following are true:
 
 ## A11y notes
 
-- The banner uses the `MessageBanner` compound component which provides a named region landmark.
-- The heading is rendered as `<strong>` styled to look like a paragon heading rather than an `<h2>`, as `ArticleMessageBanner` sits within the article body where heading hierarchy is managed by the surrounding page.
+ - Unlike `CurationMessageBanner`, `ArticleMessageBanner` does not wrap `MessageBanner` in a `role="region"` landmark.
+ - The heading is rendered as `<strong>` styled to look like a paragon heading rather than an `<h2>`, as `ArticleMessageBanner` sits above the article `<h1>` and heading hierarchy is managed by the surrounding page.
 - The banner image is decorative (`alt=""`).
 
 ## Usage
