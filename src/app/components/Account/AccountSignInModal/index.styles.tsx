@@ -33,101 +33,48 @@ export default {
     zIndex: 0,
   }),
 
-  modalContent: ({ palette, mq }: Theme) =>
-    css({
-      position: 'relative',
-      zIndex: 1,
-      width: 'auto',
-      overflow: 'hidden',
-      display: 'flex',
-      flexDirection: 'column',
-      background: `linear-gradient(to bottom left, ${palette.POSTBOX} 0%, ${palette.BLACK} 50%, ${palette.POSTBOX} 100%)`,
-      [mq.GROUP_1_MIN_WIDTH]: {
-        width: `${pixelsToRem(288)}rem`,
-      },
-      [mq.GROUP_3_MIN_WIDTH]: {
-        width: `${pixelsToRem(510)}rem`,
-      },
-      [mq.GROUP_4_MIN_WIDTH]: {
-        width: `${pixelsToRem(792)}rem`,
-        minHeight: `${pixelsToRem(488)}rem`,
-      },
-    }),
-
-  closeButton: ({ palette }: Theme) =>
-    css({
-      position: 'absolute',
-      top: `${pixelsToRem(6)}rem`,
-      insetInlineEnd: `${pixelsToRem(6)}rem`,
-      background: 'none',
-      border: 'none',
-      color: palette.WHITE,
-      fill: palette.WHITE,
-      cursor: 'pointer',
-      zIndex: 2,
-      width: `${pixelsToRem(44)}rem`,
-      height: `${pixelsToRem(44)}rem`,
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      // TBC
-      '&:hover, &:focus': {
-        backgroundColor: palette.POSTBOX,
-      },
-    }),
-
-  banner: css({
-    margin: '0 auto',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    background: 'transparent',
-    width: '100%',
-  }),
-
-  innerContainer: css({
-    width: '100%',
-    position: 'relative',
-    maxWidth: `${pixelsToRem(1008)}rem`,
-  }),
-
-  content: ({ spacings, mq }: Theme) =>
+  modalContainer: ({ palette, mq, spacings }: Theme) =>
     css({
       display: 'flex',
       flexDirection: 'column',
       position: 'relative',
-      width: '100%',
       alignItems: 'center',
       textAlign: 'center',
+      width: '100%',
+      zIndex: 1,
+      overflow: 'hidden',
+      background: `linear-gradient(to bottom left, ${palette.POSTBOX} 0%, ${palette.BLACK} 50%, ${palette.POSTBOX} 100%)`,
       paddingTop: `${spacings.DOUBLE}rem`,
       paddingBottom: `${pixelsToRem(20)}rem`,
       paddingInline: `${spacings.DOUBLE}rem`,
       [mq.GROUP_1_MIN_WIDTH]: {
+        width: `${pixelsToRem(288)}rem`,
         paddingTop: `${spacings.QUADRUPLE}rem`,
       },
       [mq.GROUP_3_MIN_WIDTH]: {
+        width: `${pixelsToRem(510)}rem`,
         paddingTop: `${pixelsToRem(46)}rem`,
-        paddingInline: `${spacings.SEXTUPLE}rem`,
+        paddingInline: `${pixelsToRem(56)}rem`,
         paddingBottom: `${spacings.TRIPLE}rem`,
       },
       [mq.GROUP_4_MIN_WIDTH]: {
-        display: 'grid',
-        gridTemplateColumns: '1fr 1fr',
-        alignItems: 'start',
+        width: `${pixelsToRem(792)}rem`,
+        minHeight: `${pixelsToRem(488)}rem`,
+        flexDirection: 'row',
+        alignItems: 'stretch',
         textAlign: 'start',
         paddingTop: `${pixelsToRem(44)}rem`,
-        paddingBottom: `${spacings.QUADRUPLE}rem`,
+        paddingBottom: 0,
       },
     }),
 
-  textContainer: ({ mq }: Theme) =>
+  textSection: ({ spacings, mq }: Theme) =>
     css({
       display: 'flex',
       flexDirection: 'column',
       width: '100%',
       [mq.GROUP_4_MIN_WIDTH]: {
-        gridColumn: 1,
-        gridRow: 1,
+        paddingBottom: `${spacings.TRIPLE}rem`,
       },
     }),
 
@@ -143,7 +90,7 @@ export default {
         marginTop: `${spacings.TRIPLE}rem`,
       },
       [mq.GROUP_4_MIN_WIDTH]: {
-        marginTop: `${pixelsToRem(90)}rem`,
+        marginTop: `${pixelsToRem(80)}rem`,
       },
     }),
 
@@ -163,17 +110,53 @@ export default {
       flexWrap: 'wrap',
       gap: `${spacings.FULL}rem`,
       marginTop: `${pixelsToRem(20)}rem`,
+      justifyContent: 'center',
       [mq.GROUP_1_MIN_WIDTH]: {
         marginTop: `${spacings.QUADRUPLE}rem`,
       },
       [mq.GROUP_4_MIN_WIDTH]: {
-        gridColumn: 1,
-        gridRow: '2 / 4',
-        width: '100%',
+        justifyContent: 'flex-start',
       },
     }),
 
-  image: ({ mq }: Theme) =>
+  closeButton: ({ palette }: Theme) =>
+    css({
+      position: 'absolute',
+      top: `${pixelsToRem(6)}rem`,
+      insetInlineEnd: `${pixelsToRem(6)}rem`,
+      border: 'none',
+      background: 'transparent',
+      padding: 0,
+      cursor: 'pointer',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      width: `${pixelsToRem(44)}rem`,
+      height: `${pixelsToRem(44)}rem`,
+      color: palette.WHITE,
+      '&:hover, &:focus': {
+        outlineOffset: `${pixelsToRem(2)}rem`,
+        backgroundColor: palette.POSTBOX,
+        fill: palette.WHITE,
+        color: palette.WHITE,
+      },
+    }),
+
+  closeButtonIcon: ({ mq, palette }: Theme) =>
+    css({
+      position: 'absolute',
+      color: palette.WHITE,
+      fill: 'currentColor',
+      width: `${pixelsToRem(14)}rem`,
+      height: `${pixelsToRem(14)}rem`,
+      [mq.FORCED_COLOURS]: {
+        forcedColorAdjust: 'none',
+        color: 'ButtonText',
+        fill: 'ButtonText',
+      },
+    }),
+
+  imageSection: ({ mq }: Theme) =>
     css({
       display: 'none',
       [mq.GROUP_1_MIN_WIDTH]: {
@@ -190,10 +173,9 @@ export default {
         backgroundImage: `url(${imagesPath}/news_tablet_image.webp)`,
       },
       [mq.GROUP_4_MIN_WIDTH]: {
-        gridColumn: 2,
-        gridRow: '1 / span 2',
-        aspectRatio: '274 / 400',
-        // TODO: Fix so that the image is at the bottom
+        order: 1,
+        alignSelf: 'flex-end',
+        aspectRatio: '680 / 802',
         backgroundImage: `url(${imagesPath}/news_desktop_image.webp)`,
       },
     }),
