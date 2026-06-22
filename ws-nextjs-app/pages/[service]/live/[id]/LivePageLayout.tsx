@@ -109,8 +109,13 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
     sportDataEventContent,
   } = pageData;
 
-  const { currentStreamData, hasPendingUpdate, applyPendingUpdate } =
-    useLivePagePolling(pageData, livePagePollingEnabled && isLive);
+  const {
+    currentStreamData,
+    hasPendingUpdate,
+    applyPendingUpdate,
+    pendingUpdateTime,
+    newPostCount,
+  } = useLivePagePolling(pageData, livePagePollingEnabled && isLive);
 
   const { sportDataEvent: sportData, live: isSportDataLive = false } =
     sportDataEventContent || {};
@@ -257,6 +262,9 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
               isFirstPostVisible={isFirstPostVisible}
               hasPendingUpdate={hasPendingUpdate}
               streamRef={streamRef as RefObject<HTMLDivElement>}
+              pendingUpdateTime={pendingUpdateTime}
+              pageId={liveTextStream.id}
+              newPostCount={newPostCount}
             />
           </div>
         </div>
