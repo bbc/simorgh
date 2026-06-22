@@ -122,9 +122,10 @@ describe('useLivePagePolling', () => {
     const initialPageData =
       fixtureLivePageData as unknown as ComponentProps['pageData'];
 
-    jest
-      .spyOn(makeRequest, 'default')
-      .mockResolvedValue({ data: fixtureLivePageData.liveTextStream.content.data, statusCode: 200 });
+    jest.spyOn(makeRequest, 'default').mockResolvedValue({
+      data: fixtureLivePageData.liveTextStream.content.data,
+      statusCode: 200,
+    });
 
     const { result } = renderHook(() =>
       useLivePagePolling(initialPageData, true),
