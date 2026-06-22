@@ -40,7 +40,7 @@ const HiearchicalGrid = ({
   eventTrackingData,
 }: CurationGridProps) => {
   const { isAmp } = use(RequestContext);
-  const { translations, service } = use(ServiceContext);
+  const { translations } = use(ServiceContext);
   const audioTranslation = path(['media', 'audio'], translations);
   const videoTranslation = path(['media', 'video'], translations);
   const photoGalleryTranslation = path(['media', 'photogallery'], translations);
