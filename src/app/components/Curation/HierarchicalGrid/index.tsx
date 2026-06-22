@@ -193,16 +193,13 @@ const HiearchicalGrid = ({
                     }
                   >
                     {relatedTopic && !isLiveEnvironment() && (
-                      <>
-                        <a
-                          href={relatedTopic.link.url}
-                          css={styles.relatedTopicLink}
-                          {...relatedTopicClickTrackerHandler}
-                        >
-                          {relatedTopic.title}
-                        </a>
-                        <span>·</span>
-                      </>
+                      <a
+                        href={relatedTopic.link.url}
+                        css={styles.relatedTopicLink}
+                        {...relatedTopicClickTrackerHandler}
+                      >
+                        {relatedTopic.title}
+                      </a>
                     )}
                     <Promo.Timestamp className="promo-timestamp">
                       {promo.lastPublished}
