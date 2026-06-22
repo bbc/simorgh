@@ -84,10 +84,8 @@ const styles = {
       verticalAlign: 'text-top',
     }),
 
-  metadataAndTopicData: ({ spacings, palette, fontSizes }: Theme) =>
+  metadataAndTopicData: ({ spacings, palette, isDarkUi }: Theme) =>
     css({
-      ...fontSizes.longPrimer,
-      color: palette.GREY_10,
       position: 'relative',
       zIndex: 1,
       display: 'flex',
@@ -107,16 +105,17 @@ const styles = {
           width: '2px',
           height: '2px',
           borderRadius: '50%',
-          backgroundColor: palette.GREY_10,
+          backgroundColor: isDarkUi ? palette.GREY_3 : palette.GREY_6,
           marginInline: `${spacings.HALF}rem`,
         },
       },
     }),
 
-  relatedTopicLink: ({ palette, fontSizes }: Theme) =>
+  relatedTopicLink: ({ palette, fontSizes, fontVariants, isDarkUi }: Theme) =>
     css({
-      ...fontSizes.longPrimer,
-      color: palette.GREY_10,
+      ...fontSizes.brevier,
+      ...fontVariants.sansRegular,
+      color: isDarkUi ? palette.GREY_3 : palette.GREY_6,
       display: 'inline-flex',
       alignItems: 'center',
       marginTop: 0,
