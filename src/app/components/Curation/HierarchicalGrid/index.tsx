@@ -15,8 +15,9 @@ import { CurationGridProps } from '../types';
 import { Summary } from '../../../models/types/curationData';
 import { RequestContext } from '../../../contexts/RequestContext';
 import LiveLabel from '../../LiveLabel';
+import { Services } from '../../../models/types/global';
 
-const RELATED_TOPIC_ALLOWED_SERVICES = [];
+const RELATED_TOPIC_ALLOWED_SERVICES: Services[] = [];
 
 const getStyles = (promoCount: number, i: number, mq: Theme['mq']) => {
   return css({
