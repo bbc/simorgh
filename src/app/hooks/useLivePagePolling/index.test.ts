@@ -9,6 +9,11 @@ jest.useFakeTimers();
 
 jest.mock('uuid', () => ({ v4: () => '00000000-0000-0000-0000-000000000000' }));
 
+jest.mock('../useCustomEventTracker', () => ({
+  __esModule: true,
+  default: () => jest.fn(),
+}));
+
 describe('useLivePagePolling', () => {
   beforeEach(() => {
     jest.clearAllMocks();
@@ -20,7 +25,7 @@ describe('useLivePagePolling', () => {
 
     jest
       .spyOn(makeRequest, 'default')
-      .mockResolvedValue(fixtureLivePageDataUpdate);
+      .mockResolvedValue({ data: fixtureLivePageDataUpdate, statusCode: 200 });
 
     const { result } = renderHook(() =>
       useLivePagePolling(initialPageData, true),
@@ -39,7 +44,7 @@ describe('useLivePagePolling', () => {
 
     jest
       .spyOn(makeRequest, 'default')
-      .mockResolvedValue(fixtureLivePageDataUpdate);
+      .mockResolvedValue({ data: fixtureLivePageDataUpdate, statusCode: 200 });
 
     const { result } = renderHook(() =>
       useLivePagePolling(initialPageData, true),
@@ -60,7 +65,7 @@ describe('useLivePagePolling', () => {
 
     jest
       .spyOn(makeRequest, 'default')
-      .mockResolvedValue(fixtureLivePageDataUpdate);
+      .mockResolvedValue({ data: fixtureLivePageDataUpdate, statusCode: 200 });
 
     const { result } = renderHook(() =>
       useLivePagePolling(initialPageData, true),
@@ -97,7 +102,7 @@ describe('useLivePagePolling', () => {
 
     const requestSpy = jest
       .spyOn(makeRequest, 'default')
-      .mockResolvedValue(fixtureLivePageDataUpdate);
+      .mockResolvedValue({ data: fixtureLivePageDataUpdate, statusCode: 200 });
 
     renderHook(() =>
       useLivePagePolling(
@@ -119,7 +124,7 @@ describe('useLivePagePolling', () => {
 
     jest
       .spyOn(makeRequest, 'default')
-      .mockResolvedValue(fixtureLivePageData.liveTextStream.content.data);
+      .mockResolvedValue({ data: fixtureLivePageData.liveTextStream.content.data, statusCode: 200 });
 
     const { result } = renderHook(() =>
       useLivePagePolling(initialPageData, true),
