@@ -1442,7 +1442,7 @@ describe('Article Page', () => {
 
   describe('LocationBasedTopicOJ', () => {
     afterEach(() => {
-      jest.resetAllMocks();
+      jest.clearAllMocks();
     });
 
     const mockCountryCuration = {
@@ -1472,6 +1472,7 @@ describe('Article Page', () => {
         },
       ],
     };
+
     it('renders nothing if countryCuration is undefined', () => {
       const pageData = {
         ...articleDataNews,
@@ -1489,18 +1490,11 @@ describe('Article Page', () => {
         countryCuration: mockCountryCuration,
       };
 
-      const {
-        metadata: { atiAnalytics, type },
-      } = pageData;
-
       render(
         <LocationBasedTopicOJ
           // @ts-expect-error: Test fixture data does not need to match Article type exactly
           pageData={pageData}
         />,
-        {
-          pageMetadata: { atiAnalytics, type },
-        },
       );
       expect(screen.getByRole('region')).toBeInTheDocument();
       expect(screen.getByText('Najeriya')).toBeInTheDocument();
@@ -1516,16 +1510,12 @@ describe('Article Page', () => {
         countryCuration: mockCountryCuration,
       };
 
-      const {
-        metadata: { atiAnalytics, type },
-      } = pageData;
-
       const { queryByTestId } = render(
         <ArticlePage
           // @ts-expect-error: Test fixture data does not need to match Article type exactly
           pageData={pageData}
         />,
-        { service: 'hausa', pageMetadata: { atiAnalytics, type } },
+        { service: 'hausa' },
       );
 
       expect(queryByTestId('location-based-topic-oj')).toBeInTheDocument();
