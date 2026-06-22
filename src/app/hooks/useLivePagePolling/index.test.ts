@@ -4,15 +4,18 @@ import useLivePagePolling, { POLLING_INTERVAL } from '.';
 import fixtureLivePageData from './fixture/fixtureLivePageData';
 import fixtureLivePageDataUpdate from './fixture/fixtureStreamDataUpdate';
 import * as makeRequest from './makeRequest/makeRequest';
+import * as useCustomEventTrackerModule from '../useCustomEventTracker';
 
 jest.useFakeTimers();
 
 jest.mock('uuid', () => ({ v4: () => '00000000-0000-0000-0000-000000000000' }));
 
-jest.mock('../useCustomEventTracker', () => ({
-  __esModule: true,
-  default: () => jest.fn(),
-}));
+const mockTrackEvent = jest.fn();
+const mockUseCustomEventTracker = jest.spyOn(
+  useCustomEventTrackerModule,
+  'default',
+);
+mockUseCustomEventTracker.mockReturnValue(mockTrackEvent);
 
 describe('useLivePagePolling', () => {
   beforeEach(() => {
@@ -138,5 +141,115 @@ describe('useLivePagePolling', () => {
     const { hasPendingUpdate } = result.current;
 
     expect(hasPendingUpdate).toBe(false);
+  });
+
+  it('should initialize useCustomEventTracker with the correct event name', () => {
+    const initialPageData =
+      fixtureLivePageData as unknown as ComponentProps['pageData'];
+
+    jest
+      .spyOn(makeRequest, 'default')
+      .mockResolvedValue({ data: fixtureLivePageDataUpdate, statusCode: 200 });
+
+    renderHook(() => useLivePagePolling(initialPageData, true));
+
+    expect(mockUseCustomEventTracker).toHaveBeenCalledWith({
+      eventName: 'live_refresh_poll_response',
+    });
+  });
+
+  it('should send a tracking event with status_code, has_new_content, page_id and time_since_last_poll', async () => {
+    const initialPageData =
+      fixtureLivePageData as unknown as ComponentProps['pageData'];
+
+    jest
+      .spyOn(makeRequest, 'default')
+      .mockResolvedValue({ data: fixtureLivePageDataUpdate, statusCode: 200 });
+
+    jest.spyOn(Math, 'random').mockReturnValue(0.1);
+
+    renderHook(() => useLivePagePolling(initialPageData, true));
+
+    await act(async () => {
+      jest.advanceTimersByTime(POLLING_INTERVAL);
+    });
+
+    expect(mockTrackEvent).toHaveBeenCalledWith(
+      expect.stringContaining('"status_code":200'),
+    );
+    expect(mockTrackEvent).toHaveBeenCalledWith(
+      expect.stringContaining('"has_new_content":true'),
+    );
+    expect(mockTrackEvent).toHaveBeenCalledWith(
+      expect.stringContaining('"page_id":"8E1A80B519D1451FBF5DF6AB029B8B1C"'),
+    );
+    expect(mockTrackEvent).toHaveBeenCalledWith(
+      expect.stringContaining('"time_since_last_poll"'),
+    );
+
+    jest.spyOn(Math, 'random').mockRestore();
+  });
+
+  it('should not send a tracking event when outside the sample rate', async () => {
+    const initialPageData =
+      fixtureLivePageData as unknown as ComponentProps['pageData'];
+
+    jest
+      .spyOn(makeRequest, 'default')
+      .mockResolvedValue({ data: fixtureLivePageDataUpdate, statusCode: 200 });
+
+    jest.spyOn(Math, 'random').mockReturnValue(0.9);
+
+    renderHook(() => useLivePagePolling(initialPageData, true));
+
+    await act(async () => {
+      jest.advanceTimersByTime(POLLING_INTERVAL);
+    });
+
+    expect(mockTrackEvent).not.toHaveBeenCalled();
+
+    jest.spyOn(Math, 'random').mockRestore();
+  });
+
+  it('should return newPostCount when new content is detected', async () => {
+    const initialPageData =
+      fixtureLivePageData as unknown as ComponentProps['pageData'];
+
+    jest
+      .spyOn(makeRequest, 'default')
+      .mockResolvedValue({ data: fixtureLivePageDataUpdate, statusCode: 200 });
+
+    const { result } = renderHook(() =>
+      useLivePagePolling(initialPageData, true),
+    );
+
+    await act(async () => {
+      jest.advanceTimersByTime(POLLING_INTERVAL);
+    });
+
+    expect(result.current.newPostCount).toBeGreaterThanOrEqual(1);
+  });
+
+  it('should reset newPostCount to null after applyPendingUpdate is called', async () => {
+    const initialPageData =
+      fixtureLivePageData as unknown as ComponentProps['pageData'];
+
+    jest
+      .spyOn(makeRequest, 'default')
+      .mockResolvedValue({ data: fixtureLivePageDataUpdate, statusCode: 200 });
+
+    const { result } = renderHook(() =>
+      useLivePagePolling(initialPageData, true),
+    );
+
+    await act(async () => {
+      jest.advanceTimersByTime(POLLING_INTERVAL);
+    });
+
+    act(() => {
+      result.current.applyPendingUpdate();
+    });
+
+    expect(result.current.newPostCount).toBeNull();
   });
 });
