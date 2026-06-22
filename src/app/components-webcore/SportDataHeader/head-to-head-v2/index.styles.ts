@@ -1,4 +1,8 @@
 import { css, Theme } from '@emotion/react';
+import {
+  LIVE_LIGHT,
+  SPORT_YELLOW,
+} from '#app/components/ThemeProvider/palette';
 import pixelsToRem from '../../../utilities/pixelsToRem';
 
 // Constants for grid areas
@@ -12,6 +16,8 @@ const HOME_SCORE = 'home_score';
 const VERTICAL_LINE = 'vertical_line';
 const AWAY_SCORE = 'away_score';
 
+const LIVE_ACCENT_COLOUR = LIVE_LIGHT;
+const SCORE_ACCENT_COLOUR = SPORT_YELLOW;
 // Helper for centre min-width calculation
 const getCentreMinWidthPx = (maxScoreLength?: number) =>
   maxScoreLength && maxScoreLength > 1
@@ -49,13 +55,11 @@ export default {
         fontFeatureSettings: "'ss01' off",
         color: palette.LUNAR_LIGHT,
         padding: isConciseView ? `${spacings.FULL}rem` : 0,
-        paddingBlockStart: `${spacings.TRIPLE}rem`,
         ...(!isConciseView && { paddingBottom: `${spacings.TRIPLE}rem` }),
         [mq.GROUP_2_MAX_WIDTH]: {
           paddingTop: isConciseView ? `${spacings.FULL}rem` : 0,
           ...(!isConciseView && {
             paddingBottom: `${spacings.FULL}rem`,
-            paddingTop: `${spacings.TRIPLE}rem`,
           }),
         },
       }),
@@ -268,6 +272,72 @@ export default {
     gridArea: 'progress',
   }),
 
+  // ==================== Head-to-Head Header ====================
+  headerWrapper: (isLive: boolean) =>
+    css({
+      display: 'flex',
+      justifyContent: 'center',
+      flexDirection: 'column',
+      fontSize: `${pixelsToRem(14)}rem`,
+      lineHeight: 1.2857142857142858,
+      paddingBlockEnd: `${pixelsToRem(16)}rem`,
+      paddingBlockStart: isLive ? 0 : `${pixelsToRem(16)}rem`,
+      [`@media (min-width: ${pixelsToRem(600)}rem)`]: {
+        flexDirection: 'row',
+        fontSize: '1rem',
+        lineHeight: 1.375,
+        paddingBlockStart: isLive
+          ? `${pixelsToRem(8)}rem`
+          : `${pixelsToRem(24)}rem`,
+      },
+    }),
+
+  dateWrapper: css({
+    display: 'flex',
+    justifyContent: 'flex-end',
+    flexDirection: 'column',
+    [`@media (min-width: ${pixelsToRem(600)}rem)`]: {
+      flexDirection: 'row',
+    },
+  }),
+
+  dateHeader: css({
+    display: 'flex',
+    justifyContent: 'center',
+    paddingBlockEnd: `${pixelsToRem(4)}rem`,
+    [`@media (min-width: ${pixelsToRem(600)}rem)`]: {
+      paddingBlockEnd: 0,
+    },
+  }),
+
+  interpunct: css({
+    color: '#a8a8a8',
+    display: 'none',
+    [`@media (min-width: ${pixelsToRem(600)}rem)`]: {
+      display: 'inline',
+      paddingInline: `${pixelsToRem(8)}rem`,
+    },
+  }),
+
+  tournamentHeader: css({
+    display: 'flex',
+    justifyContent: 'center',
+    flexWrap: 'wrap',
+  }),
+
+  date: css({
+    color: '#a8a8a8',
+    flexShrink: 0,
+  }),
+
+  competitionFormatter: css({
+    whiteSpace: 'pre',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    padding: 0,
+    flexShrink: 1,
+  }),
+
   // ==================== Key Events ====================
   keyEventsHome: [
     keyEventsBase,
@@ -330,13 +400,14 @@ export default {
   }),
 
   // ==================== Period ====================
-  period: css({
-    display: 'flex',
-    justifyContent: 'center',
-    color: '#FFD230',
-    fontSize: '1rem',
-    lineHeight: 1.375,
-  }),
+  period: ({ isLive }: { isLive: boolean }) =>
+    css({
+      display: 'flex',
+      justifyContent: 'center',
+      color: isLive ? LIVE_ACCENT_COLOUR : SCORE_ACCENT_COLOUR,
+      fontSize: '1rem',
+      lineHeight: 1.375,
+    }),
 
   // ==================== Score ====================
   score: css({
@@ -366,16 +437,17 @@ export default {
     textAlign: 'start',
   }),
 
-  verticalLine: css({
-    borderInlineStart: `${pixelsToRem(2)}rem solid #FFD230`,
-    display: 'inline-block',
-    marginInline: `${pixelsToRem(16)}rem`,
-    gridArea: VERTICAL_LINE,
-    height: `${pixelsToRem(38)}rem`,
-    [`@media (min-width: ${pixelsToRem(600)}rem)`]: {
-      height: `${pixelsToRem(44)}rem`,
-    },
-  }),
+  verticalLine: ({ isLive }: { isLive: boolean }) =>
+    css({
+      borderInlineStart: `${pixelsToRem(2)}rem solid ${isLive ? LIVE_ACCENT_COLOUR : SCORE_ACCENT_COLOUR}`,
+      display: 'inline-block',
+      marginInline: `${pixelsToRem(16)}rem`,
+      gridArea: VERTICAL_LINE,
+      height: `${pixelsToRem(38)}rem`,
+      [`@media (min-width: ${pixelsToRem(600)}rem)`]: {
+        height: `${pixelsToRem(44)}rem`,
+      },
+    }),
 
   // ==================== Score Details ====================
   scoreDetailsWrapper: css({

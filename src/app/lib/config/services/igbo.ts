@@ -360,6 +360,12 @@ export const service: DefaultServiceConfig = {
           usa: 'USA',
           uzbekistan: 'Uzbekistan',
         },
+        tournaments: {
+          fifaWorldCup: 'Asọmpi Iko mba ụwa',
+        },
+        stages: {
+          groupStage: 'Agba nke Mbụ',
+        },
       },
     },
     mostRead: {

@@ -83,6 +83,47 @@ const styles = {
       marginInlineStart: `-${spacings.HALF}rem`,
       verticalAlign: 'text-top',
     }),
+
+  metadataAndTopicData: ({ spacings, palette, isDarkUi }: Theme) =>
+    css({
+      position: 'relative',
+      zIndex: 1,
+      display: 'flex',
+      alignItems: 'center',
+      flexWrap: 'wrap',
+      gap: 0,
+
+      '.promo-timestamp': {
+        marginTop: 0,
+        display: 'inline-flex',
+        alignItems: 'center',
+      },
+
+      '&.hasRelatedTopic .promo-timestamp': {
+        '&::before': {
+          content: '""',
+          width: '2px',
+          height: '2px',
+          borderRadius: '50%',
+          backgroundColor: isDarkUi ? palette.GREY_3 : palette.GREY_6,
+          marginInline: `${spacings.HALF}rem`,
+        },
+      },
+    }),
+
+  relatedTopicLink: ({ palette, fontSizes, fontVariants, isDarkUi }: Theme) =>
+    css({
+      ...fontSizes.brevier,
+      ...fontVariants.sansRegular,
+      color: isDarkUi ? palette.GREY_3 : palette.GREY_6,
+      display: 'inline-flex',
+      alignItems: 'center',
+      marginTop: 0,
+      textDecoration: 'none',
+      '&:hover, &:focus': {
+        textDecoration: 'underline',
+      },
+    }),
 };
 
 const DesktopBigPromo = css({
