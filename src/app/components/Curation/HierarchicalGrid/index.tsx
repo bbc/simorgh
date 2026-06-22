@@ -16,6 +16,8 @@ import { Summary } from '../../../models/types/curationData';
 import { RequestContext } from '../../../contexts/RequestContext';
 import LiveLabel from '../../LiveLabel';
 
+const RELATED_TOPIC_ALLOWED_SERVICES = [];
+
 const getStyles = (promoCount: number, i: number, mq: Theme['mq']) => {
   return css({
     [mq.GROUP_1_MAX_WIDTH]: {
@@ -39,7 +41,7 @@ const HiearchicalGrid = ({
   eventTrackingData,
 }: CurationGridProps) => {
   const { isAmp } = use(RequestContext);
-  const { translations } = use(ServiceContext);
+  const { translations, service } = use(ServiceContext);
   const audioTranslation = path(['media', 'audio'], translations);
   const videoTranslation = path(['media', 'video'], translations);
   const photoGalleryTranslation = path(['media', 'photogallery'], translations);
@@ -185,17 +187,26 @@ const HiearchicalGrid = ({
                 {!isLive ? (
                   <div
                     css={styles.metadataAndTopicData}
-                    className={relatedTopic ? 'hasRelatedTopic' : undefined}
+                    className={
+                      relatedTopic &&
+                      RELATED_TOPIC_ALLOWED_SERVICES.includes(service)
+                        ? 'hasRelatedTopic'
+                        : undefined
+                    }
                   >
-                    {relatedTopic && (
-                      <a
-                        href={relatedTopic.link.url}
-                        css={styles.relatedTopicLink}
-                        {...relatedTopicClickTrackerHandler}
-                      >
-                        {relatedTopic.title}
-                      </a>
-                    )}
+                    {relatedTopic &&
+                      RELATED_TOPIC_ALLOWED_SERVICES.includes(service) && (
+                        <>
+                          <a
+                            href={relatedTopic.link.url}
+                            css={styles.relatedTopicLink}
+                            {...relatedTopicClickTrackerHandler}
+                          >
+                            {relatedTopic.title}
+                          </a>
+                          <span>·</span>
+                        </>
+                      )}
                     <Promo.Timestamp className="promo-timestamp">
                       {promo.lastPublished}
                     </Promo.Timestamp>
