@@ -5,7 +5,7 @@ import {
   act,
 } from '#app/components/react-testing-library-with-providers';
 import liveTvFixture from '#data/dari/watch/bbc_afghan_tv/live.json';
-import LiveTv from './live/LiveTvPageLayout';
+import LiveTv from './LiveTvPageLayout';
 
 const mockPageData = {
   ...liveTvFixture.data,
