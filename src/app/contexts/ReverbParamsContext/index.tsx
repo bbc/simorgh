@@ -16,6 +16,7 @@ import {
 } from '#app/components/ATIAnalytics/types';
 import {
   ARTICLE_PAGE,
+  CORRESPONDENT_STORY_PAGE,
   MEDIA_ARTICLE_PAGE,
   MEDIA_ASSET_PAGE,
   MOST_READ_PAGE,
@@ -47,6 +48,7 @@ type ReverbParamsProviderProps = {
 const getPageTypeHandler = pageType => {
   switch (pageType) {
     case ARTICLE_PAGE:
+    case CORRESPONDENT_STORY_PAGE:
     case PHOTO_GALLERY_PAGE:
     case STORY_PAGE:
       return getEnrichedArticleATIData;
