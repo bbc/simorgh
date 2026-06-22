@@ -69,7 +69,6 @@ const useLivePagePolling = (
           setFirstPostUrn(polledStreamFirstPostUrn);
         }
       }
-      pendingUpdateTime.current = Date.now();
     }, POLLING_INTERVAL);
 
     return () => clearInterval(timerId);

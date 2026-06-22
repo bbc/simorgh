@@ -54,9 +54,10 @@ const LatestPostButton = ({
       '(prefers-reduced-motion: reduce)',
     ).matches;
 
-    const timeSinceButtonShown = buttonShownTime.current
-      ? Date.now() - buttonShownTime.current
-      : null;
+    const timeSinceButtonShown =
+      buttonShownTime.current != null
+        ? Date.now() - buttonShownTime.current
+        : null;
 
     if (streamRef) {
       const streamContainer = streamRef.current;
@@ -80,9 +81,8 @@ const LatestPostButton = ({
     if (shouldShowButton) {
       setShowButton(shouldShowButton);
       buttonShownTime.current = Date.now();
-      const timeSinceLastUpdate = pendingUpdateTime
-        ? Date.now() - pendingUpdateTime
-        : null;
+      const timeSinceLastUpdate =
+        pendingUpdateTime != null ? Date.now() - pendingUpdateTime : null;
 
       trackButtonShown(
         JSON.stringify({
