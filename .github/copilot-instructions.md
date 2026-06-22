@@ -55,3 +55,8 @@ description: "General guide for Simorgh"
 
 ## Instruction Updates
 - Automatically update any instructions and READMEs when you notice any relevant changes.
+
+## When to reference instruction files. 
+- `./.github/instructions/component-standards.instructions.md` - Component related queries, including styling and unit tests.
+- `./.github/instructions/styling-standards.instructions.md` - Styling related queries.
+- `./.github/instructions/translations-and-service-data.instructions.md` - Translation related queries.

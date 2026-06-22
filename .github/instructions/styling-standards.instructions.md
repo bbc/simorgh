@@ -5,39 +5,22 @@ applyTo: "src/app/components/**"
 # Styling Standards
 
 ## Rules
-- We use Emotion for styling.
-- We use object style syntax.
+- Use object style syntax.
 - Do not use curried functions like this: 
 ```
-  // index.styles.tsx
   checkedSlider:
     (isChecked: boolean) =>
     ({ palette }: Theme) =>
-      css({
-        backgroundColor: isChecked ? palette.GREY_6 : palette.POSTBOX,
-        '&::before': {
-          transform: 'translateX(20px)',
-        },
-      }),
+      css({}),
 ```
 
 - Use standard functions and move any conditional checks to the parent React component where the style is used:
 ```
-// index.styles.tsx
   slider: () =>
-    css({
-      '&::before': {
-        transform: 'translateX(20px)',
-      },
-    }),
   selectedSlider: ({ palette }: Theme) =>
-    css({
-      backgroundColor: palette.GREY_6,
-    }),
+    css({}),
   unSelectedSlider: ({ palette }: Theme) =>
-    css({
-      backgroundColor: palette.POSTBOX,
-    }),
+    css({}),
 ```
 
 ```
@@ -46,7 +29,6 @@ const Switch = ({ isChecked }: SwitchProps) => {
   return (
     <div
       css={[
-        styles.slider,
         isChecked ? styles.selectedSlider : styles.unSelectedSlider,
       ]}
     />
