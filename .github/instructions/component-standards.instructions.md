@@ -4,12 +4,6 @@ applyTo: "src/app/components/**"
 ---
 # Component Standards
 
-## General Principles
-- Write immutable, self-documenting code.
-- Follow the KISS principle.
-- Reuse existing components and patterns.
-- Prefer composition over duplication.
-
 ## Technology Stack
 - React
 - TypeScript
@@ -52,11 +46,3 @@ Import from:
 ```tsx
 src/app/components/react-testing-library-with-providers
 ```
-
-- Use `it.each()` for repetitive cases.
-
-## Storybook
-- Use `args` and `argTypes` when helpful.
-
-## Accessibility
-- Follow existing accessibility standards and patterns.

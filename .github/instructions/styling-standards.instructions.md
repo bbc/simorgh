@@ -6,33 +6,8 @@ applyTo: "src/app/components/**"
 
 ## Rules
 - Use object style syntax.
-- Do not use curried functions like this: 
-```
-  checkedSlider:
-    (isChecked: boolean) =>
-    ({ palette }: Theme) =>
-      css({}),
-```
+- Do not use curried style functions.
+- Keep conditional logic in the React component, not the style definition.
 
-- Use standard functions and move any conditional checks to the parent React component where the style is used:
-```
-  slider: () =>
-  selectedSlider: ({ palette }: Theme) =>
-    css({}),
-  unSelectedSlider: ({ palette }: Theme) =>
-    css({}),
-```
-
-```
-// index.tsx
-const Switch = ({ isChecked }: SwitchProps) => {
-  return (
-    <div
-      css={[
-        isChecked ? styles.selectedSlider : styles.unSelectedSlider,
-      ]}
-    />
-  );
-};
-```
-
+## Reference Implementations
+Use `src/app/components/Example` as the canonical styling reference.
