@@ -5,6 +5,7 @@ import moment from 'moment';
 import path from 'ramda/src/path';
 import isMediaType from '#app/lib/utilities/isMedia';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import isLiveEnvironment from '#lib/utilities/isLive';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import formatDuration from '../../../lib/utilities/formatDuration';
 import Promo from '../../../legacy/components/Promo';
@@ -15,9 +16,6 @@ import { CurationGridProps } from '../types';
 import { Summary } from '../../../models/types/curationData';
 import { RequestContext } from '../../../contexts/RequestContext';
 import LiveLabel from '../../LiveLabel';
-import { Services } from '../../../models/types/global';
-
-const RELATED_TOPIC_ALLOWED_SERVICES: Services[] = [];
 
 const getStyles = (promoCount: number, i: number, mq: Theme['mq']) => {
   return css({
@@ -189,25 +187,23 @@ const HiearchicalGrid = ({
                   <div
                     css={styles.metadataAndTopicData}
                     className={
-                      relatedTopic &&
-                      RELATED_TOPIC_ALLOWED_SERVICES.includes(service)
+                      relatedTopic && !isLiveEnvironment()
                         ? 'hasRelatedTopic'
                         : undefined
                     }
                   >
-                    {relatedTopic &&
-                      RELATED_TOPIC_ALLOWED_SERVICES.includes(service) && (
-                        <>
-                          <a
-                            href={relatedTopic.link.url}
-                            css={styles.relatedTopicLink}
-                            {...relatedTopicClickTrackerHandler}
-                          >
-                            {relatedTopic.title}
-                          </a>
-                          <span>·</span>
-                        </>
-                      )}
+                    {relatedTopic && !isLiveEnvironment() && (
+                      <>
+                        <a
+                          href={relatedTopic.link.url}
+                          css={styles.relatedTopicLink}
+                          {...relatedTopicClickTrackerHandler}
+                        >
+                          {relatedTopic.title}
+                        </a>
+                        <span>·</span>
+                      </>
+                    )}
                     <Promo.Timestamp className="promo-timestamp">
                       {promo.lastPublished}
                     </Promo.Timestamp>
