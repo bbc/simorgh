@@ -1,7 +1,7 @@
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
 
-export default {
+const styles = {
   banner: ({ palette }: Theme) =>
     css({
       margin: '0 auto',
@@ -19,7 +19,7 @@ export default {
       maxWidth: `${pixelsToRem(1008)}rem`,
     }),
 
-  content: ({ spacings, mq }: Theme) =>
+  content: ({ spacings, mq }) =>
     css({
       display: 'flex',
       flexDirection: 'column',
@@ -45,7 +45,6 @@ export default {
       display: 'flex',
       flexDirection: 'column',
     }),
-
   title: ({ palette }: Theme) =>
     css({
       color: palette.WHITE,
@@ -61,7 +60,7 @@ export default {
       },
     }),
 
-  actionsContainer: ({ spacings, mq }: Theme) =>
+  actionsContainer: ({ mq, spacings }: Theme) =>
     css({
       display: 'flex',
       alignItems: 'center',
@@ -161,3 +160,5 @@ export default {
       },
     }),
 };
+
+export default styles;
