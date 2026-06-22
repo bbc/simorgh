@@ -50,13 +50,13 @@ describe('CurationMessageBanner', () => {
 
   it('renders an image when image prop is provided', () => {
     render(<CurationMessageBanner {...defaultProps} />);
-    expect(screen.getByRole('img')).toBeInTheDocument();
+    expect(screen.getByAltText('')).toBeInTheDocument();
   });
 
   it('does not render an image when image prop is omitted', () => {
     const { image: _, ...propsWithoutImage } = defaultProps;
     render(<CurationMessageBanner {...propsWithoutImage} />);
-    expect(screen.queryByRole('img')).not.toBeInTheDocument();
+    expect(screen.queryByAltText('')).not.toBeInTheDocument();
   });
 
   it('applies the id as data-testid on the section', () => {

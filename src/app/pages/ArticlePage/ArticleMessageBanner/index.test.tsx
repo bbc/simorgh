@@ -104,6 +104,6 @@ describe('ArticleMessageBanner', () => {
       },
     );
 
-    expect(queryByTestId('topic-message-banner')).not.toBeInTheDocument();
+    expect(queryByTestId('article-message-banner')).not.toBeInTheDocument();
   });
 });
