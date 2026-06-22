@@ -87,11 +87,24 @@ const HiearchicalGrid = ({
             (promo.type === 'audio' && `${audioTranslation}, `) ||
             (promo.type === 'video' && `${videoTranslation}, `) ||
             (promo.type === 'photogallery' && `${photoGalleryTranslation}, `);
-          const { isLive } = promo;
+          const { isLive, relatedTopic } = promo;
 
           const promoEventTrackingData = buildPromoEventTrackingData(promo, i);
           const clickTrackerHandler = getClickTrackerHandler(
             promoEventTrackingData,
+          );
+
+          const relatedTopicEventTrackingData = {
+            ...promoEventTrackingData,
+            itemTracker: {
+              ...promoEventTrackingData.itemTracker,
+              type: 'hierarchical-curation-grid-topic',
+              text: relatedTopic?.title,
+            },
+          };
+
+          const relatedTopicClickTrackerHandler = getClickTrackerHandler(
+            relatedTopicEventTrackingData,
           );
 
           return (
@@ -170,9 +183,23 @@ const HiearchicalGrid = ({
                   {promo.description}
                 </Promo.Body>
                 {!isLive ? (
-                  <Promo.Timestamp className="promo-timestamp">
-                    {promo.lastPublished}
-                  </Promo.Timestamp>
+                  <div
+                    css={styles.metadataAndTopicData}
+                    className={relatedTopic ? 'hasRelatedTopic' : undefined}
+                  >
+                    {relatedTopic && (
+                      <a
+                        href={relatedTopic.link.url}
+                        css={styles.relatedTopicLink}
+                        {...relatedTopicClickTrackerHandler}
+                      >
+                        {relatedTopic.title}
+                      </a>
+                    )}
+                    <Promo.Timestamp className="promo-timestamp">
+                      {promo.lastPublished}
+                    </Promo.Timestamp>
+                  </div>
                 ) : null}
               </Promo>
             </li>

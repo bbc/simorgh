@@ -352,6 +352,12 @@ const baseServiceConfig = {
         usa: 'США',
         uzbekistan: 'Узбекистан',
       },
+      tournaments: {
+        fifaWorldCup: 'Чемпіонат світу з футболу',
+      },
+      stages: {
+        groupStage: 'Груповий етап',
+      },
     },
     ...secondaryColumnTranslations,
   },
@@ -487,6 +493,12 @@ export const service: UkrainianConfig = {
           uruguay: 'Уругвай',
           usa: 'США',
           uzbekistan: 'Узбекистан',
+        },
+        tournaments: {
+          fifaWorldCup: 'ЧМ по футболу',
+        },
+        stages: {
+          groupStage: 'Групповой этап',
         },
       },
     },

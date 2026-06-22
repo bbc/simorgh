@@ -411,6 +411,12 @@ export const service: ZhongwenConfig = {
           usa: '美国',
           uzbekistan: '乌兹别克斯坦',
         },
+        tournaments: {
+          fifaWorldCup: 'FIFA 世界杯',
+        },
+        stages: {
+          groupStage: '小组赛',
+        },
       },
     },
   },
@@ -770,6 +776,12 @@ export const service: ZhongwenConfig = {
           uruguay: '烏拉圭',
           usa: '美國',
           uzbekistan: '烏茲別克斯坦',
+        },
+        tournaments: {
+          fifaWorldCup: 'FIFA 世界盃',
+        },
+        stages: {
+          groupStage: '小組賽',
         },
       },
     },

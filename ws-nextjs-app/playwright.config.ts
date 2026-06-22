@@ -13,7 +13,11 @@ const baseURL =
   process.env.PLAYWRIGHT_BASE_URL || baseUrlByEnv[appEnv] || baseUrlByEnv.local;
 
 const reporter: ReporterDescription[] = process.env.CI
-  ? [['list'], ['html', { open: 'never' }]]
+  ? [
+      ['list'],
+      ['html', { open: 'never' }],
+      ['junit', { outputFile: 'test-results/nextjs-playwright.xml' }],
+    ]
   : [['list']];
 
 export default defineConfig({

@@ -333,6 +333,12 @@ export const service: DefaultServiceConfig = {
           usa: 'United States of America',
           uzbekistan: 'Uzbekistan',
         },
+        tournaments: {
+          fifaWorldCup: 'FIFA World Cup',
+        },
+        stages: {
+          groupStage: 'Group Stage',
+        },
       },
     },
     mostRead: {

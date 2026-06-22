@@ -53,13 +53,6 @@
     }
   ],
   "splash_pages": null,
-  "prefer_related_applications": true,
-  "related_applications": [
-    {
-      "platform": "play",
-      "id": "uk.co.bbc.arabic"
-    }
-  ],
   "start_url": "/arabic?at_medium=PWA&at_campaign=PWA",
   "shortcuts": [
     {
