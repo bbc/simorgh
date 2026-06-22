@@ -83,6 +83,48 @@ const styles = {
       marginInlineStart: `-${spacings.HALF}rem`,
       verticalAlign: 'text-top',
     }),
+
+  metadataAndTopicData: ({ spacings, palette, fontSizes }: Theme) =>
+    css({
+      ...fontSizes.longPrimer,
+      color: palette.GREY_10,
+      position: 'relative',
+      zIndex: 1,
+      display: 'flex',
+      alignItems: 'center',
+      flexWrap: 'wrap',
+      gap: 0,
+
+      '.promo-timestamp': {
+        marginTop: 0,
+        display: 'inline-flex',
+        alignItems: 'center',
+      },
+
+      '&.hasRelatedTopic .promo-timestamp': {
+        '&::before': {
+          content: '""',
+          width: '2px',
+          height: '2px',
+          borderRadius: '50%',
+          backgroundColor: palette.GREY_10,
+          marginInline: `${spacings.HALF}rem`,
+        },
+      },
+    }),
+
+  relatedTopicLink: ({ palette, fontSizes }: Theme) =>
+    css({
+      ...fontSizes.longPrimer,
+      color: palette.GREY_10,
+      display: 'inline-flex',
+      alignItems: 'center',
+      marginTop: 0,
+      textDecoration: 'none',
+      '&:hover, &:focus': {
+        textDecoration: 'underline',
+      },
+    }),
 };
 
 const DesktopBigPromo = css({
