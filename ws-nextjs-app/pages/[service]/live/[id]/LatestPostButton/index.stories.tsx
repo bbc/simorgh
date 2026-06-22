@@ -4,7 +4,13 @@ import metadata from './metadata.json';
 
 const Component = () => {
   return (
-    <LivePostButton isFirstPostVisible={false} hasPendingUpdate={true} streamRef={null}      
+    <LivePostButton
+      isFirstPostVisible={false}
+      hasPendingUpdate={true}
+      streamRef={null}
+      pendingUpdateTime={Date.now()}
+      pageId="test-page-id"
+      newPostCount={3}
     />
   );
 };
