@@ -16,13 +16,18 @@ const SaveArticleButton = (props: SaveArticleButtonProps) => {
   if (!isPersonalizationAvailable) return null;
 
   return (
-    <div css={styles.buttonWrapper}>
-      {isPersonalizationEnabled ? (
-        <SaveArticleButtonAuthenticated {...props} />
-      ) : (
-        <SaveArticleButtonGuest />
-      )}
-    </div>
+    <>
+      <noscript>
+        <style>{`#save-article-button { display: none; }`}</style>
+      </noscript>
+      <div css={styles.buttonWrapper} id="save-article-button">
+        {isPersonalizationEnabled ? (
+          <SaveArticleButtonAuthenticated {...props} />
+        ) : (
+          <SaveArticleButtonGuest />
+        )}
+      </div>
+    </>
   );
 };
 

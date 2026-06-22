@@ -24,6 +24,7 @@ const SaveArticleButtonGuest = () => {
       buttonText={getButtonText()}
       testId="save-article-btn-guest"
       isLoading={!isHydrated}
+      data-nojs-hide
     />
   );
 };
