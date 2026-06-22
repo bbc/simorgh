@@ -104,6 +104,9 @@ const styles = {
       '&.hasRelatedTopic .promo-timestamp': {
         '&::before': {
           content: '""',
+          display: 'block',
+          flexShrink: 0,
+          alignSelf: 'center',
           width: '2px',
           height: '2px',
           borderRadius: '50%',
@@ -113,9 +116,10 @@ const styles = {
       },
     }),
 
-  relatedTopicLink: ({ palette, fontSizes }: Theme) =>
+  relatedTopicLink: ({ palette, fontSizes, fontVariants }: Theme) =>
     css({
       ...fontSizes.longPrimer,
+      ...fontVariants.sansRegular,
       color: palette.GREY_10,
       display: 'inline-flex',
       alignItems: 'center',
