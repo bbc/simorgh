@@ -1488,11 +1488,19 @@ describe('Article Page', () => {
         ...articleDataNews,
         countryCuration: mockCountryCuration,
       };
+
+      const {
+        metadata: { atiAnalytics, type },
+      } = pageData;
+
       render(
         <LocationBasedTopicOJ
           // @ts-expect-error: Test fixture data does not need to match Article type exactly
           pageData={pageData}
         />,
+        {
+          pageMetadata: { atiAnalytics, type },
+        },
       );
       expect(screen.getByRole('region')).toBeInTheDocument();
       expect(screen.getByText('Najeriya')).toBeInTheDocument();
@@ -1508,12 +1516,16 @@ describe('Article Page', () => {
         countryCuration: mockCountryCuration,
       };
 
+      const {
+        metadata: { atiAnalytics, type },
+      } = pageData;
+
       const { queryByTestId } = render(
         <ArticlePage
           // @ts-expect-error: Test fixture data does not need to match Article type exactly
           pageData={pageData}
         />,
-        { service: 'hausa' },
+        { service: 'hausa', pageMetadata: { atiAnalytics, type } },
       );
 
       expect(queryByTestId('location-based-topic-oj')).toBeInTheDocument();
