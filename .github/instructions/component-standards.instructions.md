@@ -5,7 +5,7 @@ applyTo: "src/app/components/**"
 # Component Standards
 
 ## General Principles
-- Write self-documenting code.
+- Write immutable, self-documenting code.
 - Follow the KISS principle.
 - Reuse existing components and patterns.
 - Prefer composition over duplication.
@@ -23,7 +23,7 @@ applyTo: "src/app/components/**"
 - Default export components.
 - Avoid side effects where possible.
 
-Use existing shared components over native HTML elements:
+Use existing components over native HTML elements:
 - `#app/components/Heading`
 - `#app/components/Paragraph`
 - `#app/components/Text`

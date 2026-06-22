@@ -6,11 +6,9 @@ description: "General guide for Simorgh"
 ## Personality and Response Tone
 - Be very concise.
 - You are a pair programming assistant for engineers.
-- Attempt to use inclusive terminology in all code, documentation and communication.
 
 ## Big picture architecture
 - Simorgh serves BBC World Service pages using two React runtimes in one repo: legacy/custom Express + Next.js Pages Router (`ws-nextjs-app`).
-- The Next.js app reuses shared app code from `src/app` rather than duplicating component logic.
 - Treat each `service` (for example `arabic`, `mundo`, `portuguese`) as a first-class boundary: routes, variants, toggles, analytics, and rendering behavior are often service-specific.
 - Key service/toggle config lives in `src/app/lib/config/services`, `src/app/lib/config/toggles`, and `data/`.
 
@@ -20,10 +18,10 @@ description: "General guide for Simorgh"
 - Page handlers set status and headers on `context.res`; preserve this behavior because downstream infrastructure relies on response metadata.
 
 ## Local developer workflows
-- If not already done so, make sure BFF_PATH="https://fabl.api.bbci.co.uk/module/simorgh-bff" is set as an environment variable using `export BFF_PATH="https://fabl.api.bbci.co.uk/module/simorgh-bff"`, otherwise use `BFF_PATH="http://localhost:3210/module/simorgh-bff"` if the user would like this app to connect to fabl running locally.
+- Make sure BFF_PATH="https://fabl.api.bbci.co.uk/module/simorgh-bff" is set as an environment variable using `export BFF_PATH="https://fabl.api.bbci.co.uk/module/simorgh-bff"`. Use `BFF_PATH="http://localhost:3210/module/simorgh-bff"` if the user would like this app to connect to a fabl instance running locally.
 - Use Node from `.nvmrc` (`v22.18.0`), then install deps with `yarn` at repo root.
 - Main local run path: `cd ws-nextjs-app && yarn dev` (runs on `http://localhost:7081`).
-- Useful routes: `/pidgin`, `/news/articles/c6v11qzyv8po`, `/pidgin/live/c7p765ynk9qt`. Add `?renderer_env=live` or `?renderer_env=test` to request live and test assets respectively. 
+- Useful routes: `/pidgin`, `/pidgin/live/c7p765ynk9qt`. Add `?renderer_env=live` or `?renderer_env=test` to request live and test assets respectively. 
 - Lint/unit from root: `yarn test:lint`, `yarn test:unit`, `yarn test`.
 - Next.js integration tests from root: `yarn test:integration --nextJS`.
 - E2E from root: `yarn test:e2e` (or `yarn test:e2e:interactive`).
@@ -31,18 +29,8 @@ description: "General guide for Simorgh"
 
 ## Project-specific coding conventions
 - Follow eslint + prettier config in `.eslintrc.js`; use repo aliases from `dirAlias.js` (`#app`, `#lib`, `#nextjs`, etc.).
-- Prefer immutable, self-documenting code: `const` by default, descriptive names, minimal parameter lists.
-- Styling uses Emotion object syntax; keep styles and component patterns consistent with existing files.
-- Keep code and content inclusive; avoid non-inclusive terminology.
 - Avoid new dependencies unless clearly necessary.
-- Don't use any external dependencies that you don't need.
 - Always use const where possible.
-- Prefer clean immutable code, avoid reassignment of variables. Prefer a functional approach overall.
-- Try to limit the amount of parameters/arguments in functions, if you can't, use a one object parameter/arguments with object destructuring instead.
-
-## Testing conventions that differ from defaults
-- For React component tests, import from `src/app/components/react-testing-library-with-providers.tsx` (not raw `@testing-library/react`) so required contexts are present.
-- Keep tests output-focused; avoid heavy implementation-coupled assertions.
 
 ## Integration points and external dependencies
 - BFF contracts for page data are aligned with `fabl-modules` (see page README references such as `ws-nextjs-app/pages/[service]/articles/README.md` and `ws-nextjs-app/pages/[service]/live/[id]/README.md`).
@@ -54,9 +42,8 @@ description: "General guide for Simorgh"
 - If committing with Copilot-authored changes, append `[copilot]` to commit messages.
 
 ## Instruction Updates
-- Automatically update any instructions and READMEs when you notice any relevant changes.
+- Automatically update any instructions and READ_MEs when you notice any relevant changes.
 
 ## When to reference instruction files. 
 - `./.github/instructions/component-standards.instructions.md` - Component related queries, including styling and unit tests.
 - `./.github/instructions/styling-standards.instructions.md` - Styling related queries.
-- `./.github/instructions/translations-and-service-data.instructions.md` - Translation related queries.
