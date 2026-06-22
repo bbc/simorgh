@@ -17,7 +17,10 @@ import {
 import {
   ARTICLE_PAGE,
   MEDIA_ARTICLE_PAGE,
+  MEDIA_ASSET_PAGE,
   MOST_READ_PAGE,
+  PHOTO_GALLERY_PAGE,
+  STORY_PAGE,
 } from '#app/routes/utils/pageTypes';
 import { ComponentExperimentProps, PageTypes } from '#app/models/types/global';
 import setBBCPage from '#app/lib/analyticsUtils/setBBCPage';
@@ -41,12 +44,24 @@ type ReverbParamsProviderProps = {
   };
 };
 
+const getPageTypeHandler = pageType => {
+  switch (pageType) {
+    case ARTICLE_PAGE:
+    case PHOTO_GALLERY_PAGE:
+    case STORY_PAGE:
+      return getEnrichedArticleATIData;
+    case MEDIA_ARTICLE_PAGE:
+    case MEDIA_ASSET_PAGE:
+      return getEnrichedMediaArticleATIData;
+    case MOST_READ_PAGE:
+      return getEnrichedMostReadATIData;
+    default:
+      return null;
+  }
+};
+
 const getEnrichedATIData = ({ pageMetadata, serviceContext, pageType }) => {
-  const pageTypeHandler = {
-    [ARTICLE_PAGE]: getEnrichedArticleATIData,
-    [MOST_READ_PAGE]: getEnrichedMostReadATIData,
-    [MEDIA_ARTICLE_PAGE]: getEnrichedMediaArticleATIData,
-  }[pageType];
+  const pageTypeHandler = getPageTypeHandler(pageType);
 
   return pageTypeHandler
     ? pageTypeHandler({ pageMetadata, serviceContext })

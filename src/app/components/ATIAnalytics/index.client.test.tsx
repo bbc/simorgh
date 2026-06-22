@@ -50,12 +50,12 @@ describe('ATI Analytics Container', () => {
       canonical.default = mockCanonical;
 
       const {
-        metadata: { atiAnalytics },
+        metadata: { atiAnalytics, type },
       } = articleDataNews;
 
-      render(<ATIAnalytics atiData={atiAnalytics} />, {
+      render(<ATIAnalytics />, {
         ...defaultRenderProps,
-        atiData: atiAnalytics,
+        pageMetadata: { atiAnalytics, type },
         isAmp: false,
         pageData: articleDataNews,
         pageType: ARTICLE_PAGE,
@@ -111,12 +111,12 @@ describe('ATI Analytics Container', () => {
       amp.default = mockAmp;
 
       const {
-        metadata: { atiAnalytics },
+        metadata: { atiAnalytics, type },
       } = articleDataNews;
 
-      render(<ATIAnalytics atiData={atiAnalytics} />, {
+      render(<ATIAnalytics />, {
         ...defaultRenderProps,
-        atiData: atiAnalytics,
+        pageMetadata: { atiAnalytics, type },
         isAmp: true,
         pageData: articleDataNews,
         pageType: ARTICLE_PAGE,
@@ -171,17 +171,18 @@ describe('ATI Analytics Container', () => {
         },
       };
 
-      render(
-        <ATIAnalytics atiData={mediaArticleDataNews.metadata.atiAnalytics} />,
-        {
-          ...defaultRenderProps,
-          isAmp: false,
-          pageData: mediaArticleDataNews,
-          pageType: MEDIA_ARTICLE_PAGE,
-          service: 'news',
-          isUK: true,
+      render(<ATIAnalytics />, {
+        ...defaultRenderProps,
+        pageMetadata: {
+          atiAnalytics: mediaArticleDataNews.metadata.atiAnalytics,
+          type: mediaArticleDataNews.metadata.type,
         },
-      );
+        isAmp: false,
+        pageData: mediaArticleDataNews,
+        pageType: MEDIA_ARTICLE_PAGE,
+        service: 'news',
+        isUK: true,
+      });
 
       const { reverbParams } = mockCanonical.mock.calls[0][0];
 
@@ -237,16 +238,17 @@ describe('ATI Analytics Container', () => {
         },
       };
 
-      render(
-        <ATIAnalytics atiData={mediaArticleDataNews.metadata.atiAnalytics} />,
-        {
-          ...defaultRenderProps,
-          isAmp: true,
-          pageData: mediaArticleDataNews,
-          pageType: MEDIA_ARTICLE_PAGE,
-          service: 'news',
+      render(<ATIAnalytics />, {
+        ...defaultRenderProps,
+        pageMetadata: {
+          atiAnalytics: mediaArticleDataNews.metadata.atiAnalytics,
+          type: mediaArticleDataNews.metadata.type,
         },
-      );
+        isAmp: true,
+        pageData: mediaArticleDataNews,
+        pageType: MEDIA_ARTICLE_PAGE,
+        service: 'news',
+      });
 
       const { reverbParams } = mockAmp.mock.calls[0][0];
 
@@ -287,17 +289,12 @@ describe('ATI Analytics Container', () => {
       amp.default = mockAmp;
 
       const {
-        metadata: { atiAnalytics },
+        metadata: { atiAnalytics, type },
       } = mapAssetData;
 
-      const atiData = {
-        ...atiAnalytics,
-        pageTitle: `${atiAnalytics.pageTitle} - BBC News Pidgin`,
-      };
-
-      render(<ATIAnalytics atiData={atiData} />, {
+      render(<ATIAnalytics />, {
         ...defaultRenderProps,
-        atiData: atiAnalytics,
+        pageMetadata: { atiAnalytics, type },
         isAmp: true,
         pageData: mapAssetData,
         pageType: MEDIA_ASSET_PAGE,
@@ -341,17 +338,12 @@ describe('ATI Analytics Container', () => {
       canonical.default = mockCanonical;
 
       const {
-        metadata: { atiAnalytics },
+        metadata: { atiAnalytics, type },
       } = pglAssetData;
 
-      const atiData = {
-        ...atiAnalytics,
-        pageTitle: `${atiAnalytics.pageTitle} - BBC News Azərbaycanca`,
-      };
-
-      render(<ATIAnalytics atiData={atiData} />, {
+      render(<ATIAnalytics />, {
         ...defaultRenderProps,
-        atiData: atiAnalytics,
+        pageMetadata: { atiAnalytics, type },
         isAmp: false,
         pageData: pglAssetData,
         pageType: PHOTO_GALLERY_PAGE,
@@ -401,17 +393,12 @@ describe('ATI Analytics Container', () => {
       amp.default = mockAmp;
 
       const {
-        metadata: { atiAnalytics },
+        metadata: { atiAnalytics, type },
       } = pglAssetData;
 
-      const atiData = {
-        ...atiAnalytics,
-        pageTitle: `${atiAnalytics.pageTitle} - BBC News Azərbaycanca`,
-      };
-
-      render(<ATIAnalytics atiData={atiData} />, {
+      render(<ATIAnalytics />, {
         ...defaultRenderProps,
-        atiData: atiAnalytics,
+        pageMetadata: { atiAnalytics, type },
         isAmp: true,
         pageData: pglAssetData,
         pageType: PHOTO_GALLERY_PAGE,
@@ -455,17 +442,12 @@ describe('ATI Analytics Container', () => {
       canonical.default = mockCanonical;
 
       const {
-        metadata: { atiAnalytics },
+        metadata: { atiAnalytics, type },
       } = styAssetData;
 
-      const atiData = {
-        ...atiAnalytics,
-        pageTitle: `${atiAnalytics.pageTitle} - BBC News Mundo`,
-      };
-
-      render(<ATIAnalytics atiData={atiData} />, {
+      render(<ATIAnalytics />, {
         ...defaultRenderProps,
-        atiData: atiAnalytics,
+        pageMetadata: { atiAnalytics, type },
         isAmp: false,
         pageData: styAssetData,
         pageType: STORY_PAGE,
@@ -514,17 +496,12 @@ describe('ATI Analytics Container', () => {
       amp.default = mockAmp;
 
       const {
-        metadata: { atiAnalytics },
+        metadata: { atiAnalytics, type },
       } = styAssetData;
 
-      const atiData = {
-        ...atiAnalytics,
-        pageTitle: `${atiAnalytics.pageTitle} - BBC News Mundo`,
-      };
-
-      render(<ATIAnalytics atiData={atiData} />, {
+      render(<ATIAnalytics />, {
         ...defaultRenderProps,
-        atiData: atiAnalytics,
+        pageMetadata: { atiAnalytics, type },
         isAmp: true,
         pageData: styAssetData,
         pageType: STORY_PAGE,
@@ -566,18 +543,20 @@ describe('ATI Analytics Container', () => {
       amp.default = mockAmp;
 
       const {
-        metadata: { atiAnalytics },
+        metadata: { atiAnalytics, type },
       } = styAssetData;
 
-      const atiData = {
-        ...atiAnalytics,
-        contentType: 'article-correspondent',
-        pageTitle: `${atiAnalytics.pageTitle} - BBC News Mundo`,
+      const pageMetadata = {
+        atiAnalytics: {
+          ...atiAnalytics,
+          contentType: 'article-correspondent',
+        },
+        type,
       };
 
-      render(<ATIAnalytics atiData={atiData} />, {
+      render(<ATIAnalytics />, {
         ...defaultRenderProps,
-        atiData: atiAnalytics,
+        pageMetadata,
         isAmp: true,
         pageData: styAssetData,
         pageType: CORRESPONDENT_STORY_PAGE,
