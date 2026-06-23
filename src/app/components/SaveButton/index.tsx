@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useState, useId } from 'react';
 import { BookmarkIcon, FilledBookmarkIcon, Close } from '#app/components/icons';
 import Spinner from '#app/components/Spinner';
 import styles from './index.styles';
+import VisuallyHiddenText from '../VisuallyHiddenText';
 
 export interface SaveButtonProps {
   onClick: () => void;
@@ -25,11 +26,16 @@ const SaveButton = ({
   testId,
 }: SaveButtonProps) => {
   const [isHovered, setIsHovered] = useState(false);
+  const labelId = useId();
+
+  const buttonLabel =
+    isHovered && isSaved && !isUpdating ? removeText : buttonText;
 
   return (
     <button
       css={[styles.buttonWrapper, isUpdating && styles.updatingState]}
       type="button"
+      aria-labelledby={labelId}
       onClick={onClick}
       disabled={disabled || isLoading || isUpdating}
       onMouseEnter={() => setIsHovered(true)}
@@ -38,13 +44,23 @@ const SaveButton = ({
       onBlur={() => setIsHovered(false)}
       {...(testId && { 'data-testid': testId })}
     >
-      {(isLoading || isUpdating) && <Spinner />}
-      {!isLoading && !isUpdating && !isSaved && <BookmarkIcon />}
-      {!isLoading &&
-        !isUpdating &&
-        isSaved &&
-        (isHovered ? <Close width="20" height="20" /> : <FilledBookmarkIcon />)}
-      {isHovered && isSaved ? removeText : buttonText}
+      <span aria-hidden="true" css={styles.iconText}>
+        {(isLoading || isUpdating) && <Spinner />}
+        {!isLoading && !isUpdating && !isSaved && <BookmarkIcon />}
+        {!isLoading &&
+          !isUpdating &&
+          isSaved &&
+          (isHovered ? (
+            <Close width="20" height="20" />
+          ) : (
+            <FilledBookmarkIcon />
+          ))}
+        {buttonLabel}
+      </span>
+
+      <VisuallyHiddenText id={labelId} aria-live="polite">
+        {buttonLabel}
+      </VisuallyHiddenText>
     </button>
   );
 };
