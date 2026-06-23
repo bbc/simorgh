@@ -48,6 +48,28 @@ export const service: DefaultServiceConfig = {
     passportHomes: ['brasil'],
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    articleMessageBanners: [
+      {
+        thingIds: ['b91eaef4-fdf2-47a6-b3ec-05b5a55a4843'],
+        linkHref: 'https://www.bbc.com/portuguese/articles/czd2prld130o',
+        heading: 'Quem está à frente nas pesquisas para presidente?',
+        description:
+          'Veja as estimativas de intenção de voto no Agregador de Pesquisas da BBC News Brasil',
+        linkText: 'Clique aqui',
+        image:
+          'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/caa9/live/a04f7e60-4a1c-11f1-b55d-0f258dce1735.png.webp',
+      },
+      {
+        thingIds: ['f30c1edd-b1de-449c-a57e-1003edc03174'],
+        linkHref: 'https://www.bbc.com/portuguese/articles/c20yjrpxr35o',
+        heading: 'Copa do Mundo 2026 – tabela completa',
+        description:
+          'Confira aqui o calendário de jogos do torneio, com resultados e classificação',
+        linkText: 'Clique aqui para ver a tabela',
+        image:
+          'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/02bc/live/37515e30-6775-11f1-8e1d-bbbb1017d210.png.webp',
+      },
+    ],
     podcastPromo: {
       title: 'Promoção Agregador de pesquisas',
       brandTitle: 'Veja Agregador de Pesquisas da BBC News Brasil',
