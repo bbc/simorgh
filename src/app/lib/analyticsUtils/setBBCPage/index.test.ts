@@ -1,4 +1,4 @@
-import setBBCPage, { BBCPage, BBCUser } from '.';
+import setBbcPage, { BBCPage, BBCUser } from '.';
 
 const reverbParams = {
   page: {
@@ -31,7 +31,7 @@ const reverbParams = {
   },
 };
 
-setBBCPage(reverbParams);
+setBbcPage(reverbParams);
 
 const {
   getName,
@@ -49,7 +49,7 @@ const {
 
 const { getHashedId, isSignedIn } = window.bbcuser as BBCUser;
 
-describe('setBBCPage', () => {
+describe('setBbcPage', () => {
   it.each`
     bbcPageAttribute           | expectedResult
     ${getName}                 | ${reverbParams.page.name}

@@ -24,7 +24,7 @@ import {
   STORY_PAGE,
 } from '#app/routes/utils/pageTypes';
 import { ComponentExperimentProps, PageTypes } from '#app/models/types/global';
-import setBBCPage from '#app/lib/analyticsUtils/setBBCPage';
+import setBbcPage from '#app/lib/analyticsUtils/setBbcPage';
 import getEnrichedArticleATIData from './getEnrichedArticleATIData';
 import getEnrichedMostReadATIData from './getEnrichedMostReadATIData';
 import getEnrichedMediaArticleATIData from './getEnrichedMediaArticleATIData';
@@ -99,7 +99,7 @@ const ReverbParamsContextProviderComponent = ({
   } = reverbParams;
 
   useEffect(() => {
-    setBBCPage({ page, user });
+    setBbcPage({ page, user });
   }, [page, user]);
 
   const value = useMemo(
