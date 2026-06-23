@@ -14,12 +14,12 @@ const styles = {
       backgroundColor: palette.WHITE,
       color: palette.GREY_8,
       border: `${pixelsToRem(1)}rem solid ${palette.GREY_8}`,
+      '& svg': {
+        fill: 'currentColor',
+      },
       ':hover, :focus-visible': {
         backgroundColor: palette.GREY_8,
         color: palette.WHITE,
-        '& svg': {
-          fill: palette.WHITE,
-        },
       },
       ':focus-visible': {
         outline: `${pixelsToRem(3)}rem solid ${palette.GREY_8}`,
