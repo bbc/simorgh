@@ -365,6 +365,12 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'Agba nke Mbụ',
+          last32: 'Agba nke 32',
+          last16: 'Agba mgbapụ',
+          quarterFinals: 'Agba anọ nke ikpeazụ',
+          semiFinals: 'Agba abụọ nke ikpeazụ',
+          final: 'Agba ikpeazụ',
+          thirdPlaceFinal: 'Ndị nke atọ',
         },
       },
     },

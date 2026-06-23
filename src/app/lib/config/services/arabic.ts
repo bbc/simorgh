@@ -430,6 +430,12 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'مرحلة المجموعات',
+          last32: 'دور الـ 32',
+          last16: 'دور الـ 16',
+          quarterFinals: 'ربع النهائي',
+          semiFinals: 'نصف النهائي',
+          final: 'النهائي',
+          thirdPlaceFinal: 'المركز الثالث',
         },
       },
     },
