@@ -1,0 +1,87 @@
+{
+  "data": {
+    "generated": "2026-06-18T13:59:54.391Z",
+    "lastRecordTimeStamp": "2026-06-18T13:58:00Z",
+    "firstRecordTimeStamp": "2026-06-18T12:28:00Z",
+    "items": [
+      {
+        "id": "urn:bbc:optimo:asset:c4gz9w8g74po",
+        "rank": 1,
+        "title": "A hőség és az agy – a klímaváltozás neurológiai következményei",
+        "href": "/magyarul/articles/c4gz9w8g74po",
+        "timestamp": 1781588273940
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cm20ylg31jjo",
+        "rank": 2,
+        "title": "Milyen kisebbségi jogi változásokat vállalt Ukrajna az EU\u2011csatlakozásért?",
+        "href": "/magyarul/articles/cm20ylg31jjo",
+        "timestamp": 1781763875095
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c4gymr3rm23o",
+        "rank": 3,
+        "title": "BBC-nyomozás: OnlyFans „ügynökök\" zsákmányolják ki a modelleket, akiket sokszor meg is fenyegetnek",
+        "href": "/magyarul/articles/c4gymr3rm23o",
+        "timestamp": 1781777648286
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cwy04ln10zdo",
+        "rank": 4,
+        "title": "BBC News Magyarul: visszatér a BBC magyar nyelvű szolgáltatása",
+        "href": "/magyarul/articles/cwy04ln10zdo",
+        "timestamp": 1781521766400
+      },
+      {
+        "id": "urn:bbc:optimo:asset:crrpy847e94o",
+        "rank": 5,
+        "title": "A BBC tudósítójának kalandjai Magyarországon",
+        "href": "/magyarul/articles/crrpy847e94o",
+        "timestamp": 1781522274427
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c621xnln608o",
+        "rank": 6,
+        "title": "Trump kedvét keresik a G7 résztvevői a nemzetközi sajtó szerint",
+        "href": "/magyarul/articles/c621xnln608o",
+        "timestamp": 1781780391717
+      },
+      {
+        "id": "urn:bbc:optimo:asset:czxg67e3xn1o",
+        "rank": 7,
+        "title": "Nanotechnológia: Hogyan változtathatja meg az orvostudományt a hajléktalanságból kitörő világhírű professzor?",
+        "href": "/magyarul/articles/czxg67e3xn1o",
+        "timestamp": 1781523365793
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cwywderkzy2o",
+        "rank": 8,
+        "title": "A BBC World Service elindítja magyar nyelvű weboldalát",
+        "href": "/magyarul/articles/cwywderkzy2o",
+        "timestamp": 1780315505031
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cvgmdg5p5deo",
+        "rank": 9,
+        "title": "Félrevezetett afrikai nők egy orosz dróngyárban - avagy a megtévesztés ára",
+        "href": "/magyarul/articles/cvgmdg5p5deo",
+        "timestamp": 1781605166702
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c709wepqg21o",
+        "rank": 10,
+        "title": "Vannak olyanok, akik eleve rosszak matekból?",
+        "href": "/magyarul/articles/c709wepqg21o",
+        "timestamp": 1781538510735
+      }
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentType": "list-datadriven",
+        "pageIdentifier": "magyarul.popular.read.page",
+        "timePublished": "2026-06-18T12:28:00Z",
+        "timeUpdated": "2026-06-18T13:58:00Z"
+      }
+    }
+  }
+}
