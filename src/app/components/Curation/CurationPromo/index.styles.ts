@@ -31,11 +31,17 @@ export default {
       flexWrap: 'wrap',
       gap: 0,
     }),
-  relatedTopicLink: ({ fontSizes, fontVariants, palette, spacings }: Theme) =>
+  relatedTopicLink: ({
+    fontSizes,
+    fontVariants,
+    isDarkUi,
+    palette,
+    spacings,
+  }: Theme) =>
     css({
       ...fontSizes.brevier,
       ...fontVariants.sansRegular,
-      color: palette.GREY_10,
+      color: isDarkUi ? palette.GREY_3 : palette.GREY_6,
       display: 'inline-flex',
       alignItems: 'center',
       marginTop: 0,
@@ -49,7 +55,7 @@ export default {
         width: '2px',
         height: '2px',
         borderRadius: '50%',
-        backgroundColor: palette.GREY_10,
+        backgroundColor: isDarkUi ? palette.GREY_3 : palette.GREY_6,
         marginInline: `${spacings.HALF}rem`,
         border: `${pixelsToRem(1)}rem solid transparent`,
       },
