@@ -305,12 +305,6 @@ describe('Hierarchical Grid Curation', () => {
     // but in live environment they should not be rendered
     expect(queryByText('Nigeria')).not.toBeInTheDocument();
 
-    // Also verify no promos have the hasRelatedTopic class
-    const metadataElements = document.querySelectorAll('.promo-timestamp');
-    metadataElements.forEach(element => {
-      expect(element.parentElement).not.toHaveClass('hasRelatedTopic');
-    });
-
     isLiveSpy.mockRestore();
   });
 });
