@@ -1,6 +1,7 @@
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
+import * as isLiveEnv from '#lib/utilities/isLive';
 import userEvent from '@testing-library/user-event';
 import { render, screen } from '../../react-testing-library-with-providers';
 import CurationPromo from '.';
@@ -224,6 +225,20 @@ describe('Curation Promo', () => {
       await userEvent.click(relatedTopicLink);
 
       expect(onClickSpy).toHaveBeenCalled();
+    });
+
+    it('should not render related topic links when environment is live', () => {
+      const isLiveSpy = jest.spyOn(isLiveEnv, 'default').mockReturnValue(true);
+
+      const { queryByText } = render(<Fixture relatedTopic={relatedTopic} />, {
+        service: 'pidgin',
+      });
+
+      // The fixture contains promos with related topics (e.g. 'Nigeria')
+      // but in live environment they should not be rendered
+      expect(queryByText('South Africa')).not.toBeInTheDocument();
+
+      isLiveSpy.mockRestore();
     });
   });
 });
