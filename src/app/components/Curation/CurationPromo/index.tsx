@@ -8,6 +8,7 @@ import { Summary } from '#app/models/types/curationData';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import isMediaType from '#app/lib/utilities/isMedia';
 import { MY_NEWS_PAGE } from '#app/routes/utils/pageTypes';
+import isLiveEnvironment from '#app/lib/utilities/isLive';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '../../../contexts/RequestContext';
@@ -110,7 +111,7 @@ const CurationPromo = ({
           css={styles.metadataAndTopicData}
           className="metadata-and-topic-data"
         >
-          {relatedTopic && (
+          {relatedTopic && !isLiveEnvironment() && (
             <a
               href={relatedTopic?.link?.url}
               css={styles.relatedTopicLink}
