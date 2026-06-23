@@ -36,8 +36,6 @@ import { Curation } from '#app/models/types/curationData';
 import { Article, OptimoBlock } from '#app/models/types/optimo';
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import * as viewTracking from '#app/hooks/useViewTracker';
-import isLive from '#lib/utilities/isLive';
-import LocationBasedTopicOJ from '#app/components/LocationBasedTopicOJ';
 import {
   render,
   screen,
@@ -81,7 +79,7 @@ jest.mock('#app/lib/utilities/onClient', () => ({
   default: jest.fn(),
   onClient: jest.fn(() => true),
 }));
-jest.mock('#lib/utilities/isLive', () => jest.fn());
+// jest.mock('#lib/utilities/isLive', () => jest.fn());
 
 const input = {
   bbcOrigin: 'https://www.test.bbc.co.uk',
@@ -1401,8 +1399,8 @@ describe('Article Page', () => {
     });
   });
   describe('TopicDiscovery visibility on test only', () => {
-    afterEach(() => {
-      jest.resetAllMocks();
+    beforeEach(() => {
+      delete process.env.SIMORGH_APP_ENV;
     });
 
     const data = {
@@ -1423,7 +1421,8 @@ describe('Article Page', () => {
     } as Article;
 
     it('should render TopicDiscovery when isLive is false (test env)', () => {
-      jest.mocked(isLive).mockImplementationOnce(() => false);
+      process.env.SIMORGH_APP_ENV = 'test';
+
       const { queryByTestId } = render(
         <ArticlePage pageData={data} showTopicDiscoveryComponent />,
         { service: 'portuguese' },
@@ -1432,7 +1431,8 @@ describe('Article Page', () => {
     });
 
     it('should NOT render TopicDiscovery when isLive is true (live env)', () => {
-      jest.mocked(isLive).mockImplementationOnce(() => true);
+      process.env.SIMORGH_APP_ENV = 'live';
+
       const { queryByTestId } = render(<ArticlePage pageData={data} />, {
         service: 'portuguese',
       });
@@ -1441,8 +1441,8 @@ describe('Article Page', () => {
   });
 
   describe('LocationBasedTopicOJ', () => {
-    afterEach(() => {
-      jest.clearAllMocks();
+    beforeEach(() => {
+      delete process.env.SIMORGH_APP_ENV;
     });
 
     const mockCountryCuration = {
@@ -1473,25 +1473,33 @@ describe('Article Page', () => {
       ],
     };
 
+    const pageData = {
+      ...articleDataNews,
+      countryCuration: mockCountryCuration,
+    };
+
     it('renders nothing if countryCuration is undefined', () => {
-      const pageData = {
-        ...articleDataNews,
-        countryCuration: undefined,
-      };
-      const { container } = render(
-        <LocationBasedTopicOJ pageData={pageData} />,
+      process.env.SIMORGH_APP_ENV = 'local';
+
+      render(
+        <ArticlePage
+          pageData={{
+            ...articleDataNews,
+            countryCuration: undefined,
+          }}
+        />,
       );
-      expect(container).toBeEmptyDOMElement();
+
+      expect(
+        screen.queryByTestId('location-based-topic-oj'),
+      ).not.toBeInTheDocument();
     });
 
     it('renders section and subheading when countryCuration is present', () => {
-      const pageData = {
-        ...articleDataNews,
-        countryCuration: mockCountryCuration,
-      };
+      process.env.SIMORGH_APP_ENV = 'local';
 
       render(
-        <LocationBasedTopicOJ
+        <ArticlePage
           // @ts-expect-error: Test fixture data does not need to match Article type exactly
           pageData={pageData}
         />,
@@ -1503,12 +1511,7 @@ describe('Article Page', () => {
     });
 
     it('should render LocationBasedTopicOJ when isLive is false (test env)', () => {
-      jest.mocked(isLive).mockImplementationOnce(() => false);
-
-      const pageData = {
-        ...articleDataNews,
-        countryCuration: mockCountryCuration,
-      };
+      process.env.SIMORGH_APP_ENV = 'test';
 
       const { queryByTestId } = render(
         <ArticlePage
@@ -1522,12 +1525,7 @@ describe('Article Page', () => {
     });
 
     it('should NOT render LocationBasedTopicOj when isLive is true (live env)', () => {
-      jest.mocked(isLive).mockImplementationOnce(() => true);
-
-      const pageData = {
-        ...articleDataNews,
-        countryCuration: mockCountryCuration,
-      };
+      process.env.SIMORGH_APP_ENV = 'live';
 
       const { queryByTestId } = render(
         <ArticlePage
