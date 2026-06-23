@@ -85,35 +85,22 @@ const styles = {
       verticalAlign: 'text-top',
     }),
 
-  metadataAndTopicData: ({ spacings, palette, isDarkUi }: Theme) =>
+  metadataAndTopicData: ({ fontSizes }: Theme) =>
     css({
-      position: 'relative',
-      zIndex: 1,
+      ...fontSizes.longPrimer,
       display: 'flex',
       alignItems: 'center',
       flexWrap: 'wrap',
       gap: 0,
-
-      '.promo-timestamp': {
-        marginTop: 0,
-        display: 'inline-flex',
-        alignItems: 'center',
-      },
-
-      '&.hasRelatedTopic .promo-timestamp': {
-        '&::before': {
-          content: '""',
-          width: '2px',
-          height: '2px',
-          borderRadius: '50%',
-          backgroundColor: isDarkUi ? palette.GREY_3 : palette.GREY_6,
-          marginInline: `${spacings.HALF}rem`,
-          border: `${pixelsToRem(1)}rem solid transparent`,
-        },
-      },
     }),
 
-  relatedTopicLink: ({ palette, fontSizes, fontVariants, isDarkUi }: Theme) =>
+  relatedTopicLink: ({
+    fontSizes,
+    fontVariants,
+    isDarkUi,
+    palette,
+    spacings,
+  }: Theme) =>
     css({
       ...fontSizes.brevier,
       ...fontVariants.sansRegular,
@@ -122,8 +109,18 @@ const styles = {
       alignItems: 'center',
       marginTop: 0,
       textDecoration: 'none',
+      zIndex: 1,
       '&:hover, &:focus': {
         textDecoration: 'underline',
+      },
+      '&::after': {
+        content: '""',
+        width: '2px',
+        height: '2px',
+        borderRadius: '50%',
+        backgroundColor: isDarkUi ? palette.GREY_3 : palette.GREY_6,
+        marginInline: `${spacings.HALF}rem`,
+        border: `${pixelsToRem(1)}rem solid transparent`,
       },
     }),
 };

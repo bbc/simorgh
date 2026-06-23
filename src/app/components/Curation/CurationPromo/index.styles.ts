@@ -22,10 +22,9 @@ export default {
     css({
       position: 'relative',
     }),
-  metadataAndTopicData: ({ palette, fontSizes }: Theme) =>
+  metadataAndTopicData: ({ fontSizes }: Theme) =>
     css({
       ...fontSizes.longPrimer,
-      color: palette.GREY_10,
       display: 'flex',
       alignItems: 'center',
       flexWrap: 'wrap',
