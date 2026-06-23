@@ -7,6 +7,12 @@ import MockIntersectionObserver from '#app/components/intersection-observer-test
 import postsFixture from '#data/pidgin/posts/postFixture.json';
 import Stream from './index';
 
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  default: jest.fn(),
+}));
+
 const postFixture = postsFixture.data.results[0];
 
 const mockStreamContentEmpty = {

@@ -15,6 +15,12 @@ import {
   bylineSamplePost,
 } from './fixture';
 
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  default: jest.fn(),
+}));
+
 const singlePostWithTitle = postFixture.data.results[0];
 
 const singlePostWithTitleAndSubtitle = postFixture.data.results[2];

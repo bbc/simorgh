@@ -87,12 +87,19 @@ const renderPage = async ({
   return result;
 };
 
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  default: jest.fn(),
+}));
+
 jest.mock('#app/components/ChartbeatAnalytics', () => {
-  const ChartbeatAnalytics = () => <div>chartbeat</div>;
+  const ChartbeatAnalytics = () => <div>Chartbeat</div>;
   return ChartbeatAnalytics;
 });
 
 jest.mock('#app/components/ATIAnalytics', () => () => <div>ATI Analytics</div>);
+
 jest.mock('#nextjs/pages/[service]/onDemandAudio/podcastExternalLinks', () => ({
   __esModule: true,
   default: jest.fn().mockResolvedValue([

@@ -16,6 +16,12 @@ import Live, { ComponentProps } from './LivePageLayout';
 import { getServerSideProps } from './[[...variant]].page';
 import { StreamResponse } from './Post/types';
 
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  default: jest.fn(),
+}));
+
 jest.mock('#app/hooks/useLivePagePolling', () => ({
   __esModule: true,
   default: jest.fn(),

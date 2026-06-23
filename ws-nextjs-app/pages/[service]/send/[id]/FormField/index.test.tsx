@@ -11,6 +11,12 @@ jest.mock('next/router', () => ({
   useRouter: () => ({ query: { id: 'u1234' } }),
 }));
 
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  default: jest.fn(),
+}));
+
 jest.mock('../FormContext', () => {
   const originalModule = jest.requireActual('../FormContext');
   return {

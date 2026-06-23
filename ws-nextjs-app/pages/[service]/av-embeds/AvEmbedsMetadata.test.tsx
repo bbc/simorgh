@@ -7,6 +7,12 @@ import { AV_EMBEDS } from '#app/routes/utils/pageTypes';
 import { MediaBlock } from '#app/components/MediaLoader/types';
 import AvEmbedsMetadata from './AvEmbedsMetadata';
 
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  default: jest.fn(),
+}));
+
 const avEmbedsMetadataProps = {
   pageData: {
     mediaBlock: serbianCyrCps.data.avEmbed.content.model

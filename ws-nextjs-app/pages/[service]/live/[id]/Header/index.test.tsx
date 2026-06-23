@@ -6,6 +6,12 @@ import {
 } from '#app/components/react-testing-library-with-providers';
 import Header from './index';
 
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  default: jest.fn(),
+}));
+
 describe('Live Page Header', () => {
   describe('title and description', () => {
     it('should render a title and description when provided', async () => {

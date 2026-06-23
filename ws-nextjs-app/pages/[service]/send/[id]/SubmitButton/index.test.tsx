@@ -5,6 +5,12 @@ import {
 
 import SubmitButton from '.';
 
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  default: jest.fn(),
+}));
+
 describe('SubmitButton', () => {
   it('should render a submit button with correct type', async () => {
     const { container } = await act(() => {

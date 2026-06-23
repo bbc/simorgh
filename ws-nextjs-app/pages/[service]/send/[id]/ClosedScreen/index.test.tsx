@@ -4,6 +4,12 @@ import {
 } from '#app/components/react-testing-library-with-providers';
 import ClosedScreen from '.';
 
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  default: jest.fn(),
+}));
+
 const MOCK_TITLE = 'Your Suggestions';
 const MOCK_CLOSINGTIME = '2023-08-20T22:59:00.000Z';
 

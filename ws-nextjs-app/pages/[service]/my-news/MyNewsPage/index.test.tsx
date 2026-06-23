@@ -8,6 +8,12 @@ import useUASRecentActivity from '#app/hooks/useUASRecentActivity';
 import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
 import MyNewsPage from '.';
 
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  default: jest.fn(),
+}));
+
 jest.mock('#app/hooks/useUASRecentActivity');
 
 const mockUseRecentActivity = useUASRecentActivity as jest.MockedFunction<

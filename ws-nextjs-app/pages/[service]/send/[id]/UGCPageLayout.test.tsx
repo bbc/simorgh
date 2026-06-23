@@ -12,6 +12,12 @@ jest.mock('next/router', () => ({
   }),
 }));
 
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  default: jest.fn(),
+}));
+
 describe('UGC Page Layout', () => {
   let container: HTMLElement;
 

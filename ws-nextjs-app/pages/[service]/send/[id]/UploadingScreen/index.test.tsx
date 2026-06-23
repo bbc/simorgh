@@ -4,6 +4,12 @@ import {
 } from '#app/components/react-testing-library-with-providers';
 import UploadingScreen from '.';
 
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  default: jest.fn(),
+}));
+
 const MOCK_TITLE = 'Uploading';
 
 describe('ErrorScreen', () => {

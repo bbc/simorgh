@@ -6,6 +6,12 @@ import {
 import userEvent from '@testing-library/user-event';
 import ShareButton from '.';
 
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  default: jest.fn(),
+}));
+
 const share = jest.fn().mockImplementation(() => Promise.resolve());
 Object.assign(navigator, {
   share,

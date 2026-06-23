@@ -6,6 +6,12 @@ import {
 import { Helmet } from 'react-helmet';
 import OfflinePage from './OfflinePage';
 
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  default: jest.fn(),
+}));
+
 describe('OfflinePage', () => {
   it('should render the offline page title', async () => {
     await act(async () => {

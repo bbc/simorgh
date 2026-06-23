@@ -10,6 +10,12 @@ import AvEmbedsPage from './AvEmbedsPageLayout';
 // @ts-expect-error Mocking require to prevent race condition.
 window.require = jest.fn();
 
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  default: jest.fn(),
+}));
+
 describe('AV Embeds Page', () => {
   it('should render the AV Embeds page', async () => {
     const { getByTestId } = await act(async () => {

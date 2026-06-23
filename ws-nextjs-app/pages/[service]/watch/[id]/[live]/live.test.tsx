@@ -7,6 +7,12 @@ import {
 import liveTvFixture from '#data/dari/watch/bbc_afghan_tv/live.json';
 import LiveTv from './LiveTvPageLayout';
 
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  default: jest.fn(),
+}));
+
 const mockPageData = {
   ...liveTvFixture.data,
   metadata: { atiAnalytics: {} },

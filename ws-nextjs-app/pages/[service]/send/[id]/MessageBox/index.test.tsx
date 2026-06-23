@@ -18,6 +18,12 @@ jest.mock('#hooks/useAdroidDetection', () => {
   };
 });
 
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  default: jest.fn(),
+}));
+
 jest.mock('../FormContext', () => {
   const originalModule = jest.requireActual('../FormContext');
   return {
