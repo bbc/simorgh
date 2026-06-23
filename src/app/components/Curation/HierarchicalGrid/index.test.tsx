@@ -1,4 +1,5 @@
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
+import * as isLiveEnv from '#lib/utilities/isLive';
 import { fireEvent, render } from '../../react-testing-library-with-providers';
 import { pidginPromos as fixture } from './fixtures';
 import mediaFixture from './mediaFixtures';
@@ -284,5 +285,32 @@ describe('Hierarchical Grid Curation', () => {
     expect(onClickSpy).toHaveBeenCalled();
 
     clickTrackerSpy.mockRestore();
+  });
+
+  it('should not render related topic links when environment is live', () => {
+    const isLiveSpy = jest.spyOn(isLiveEnv, 'default').mockReturnValue(true);
+
+    const { queryByText } = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={fixture}
+        eventTrackingData={minimalEventTrackingData}
+      />,
+      {
+        service: 'pidgin',
+      },
+    );
+
+    // The fixture contains promos with related topics (e.g. 'Nigeria')
+    // but in live environment they should not be rendered
+    expect(queryByText('Nigeria')).not.toBeInTheDocument();
+
+    // Also verify no promos have the hasRelatedTopic class
+    const metadataElements = document.querySelectorAll('.promo-timestamp');
+    metadataElements.forEach(element => {
+      expect(element.parentElement).not.toHaveClass('hasRelatedTopic');
+    });
+
+    isLiveSpy.mockRestore();
   });
 });
