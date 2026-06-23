@@ -3,6 +3,7 @@ import {
   screen,
   act,
 } from '#app/components/react-testing-library-with-providers';
+import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import { Helmet } from 'react-helmet';
 import OfflinePage from './OfflinePage';
 
@@ -13,6 +14,10 @@ jest.mock('#app/hooks/useOptimizelyVariation', () => ({
 }));
 
 describe('OfflinePage', () => {
+  beforeEach(() => {
+    mockMatchMedia();
+  });
+
   it('should render the offline page title', async () => {
     await act(async () => {
       render(<OfflinePage />);

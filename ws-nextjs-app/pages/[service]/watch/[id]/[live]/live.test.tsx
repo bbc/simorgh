@@ -4,6 +4,7 @@ import {
   screen,
   act,
 } from '#app/components/react-testing-library-with-providers';
+import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import liveTvFixture from '#data/dari/watch/bbc_afghan_tv/live.json';
 import LiveTv from './LiveTvPageLayout';
 
@@ -42,6 +43,8 @@ describe('Live TV Page', () => {
   beforeEach(() => {
     // @ts-expect-error Mocking require to avoid ReferenceError in tests
     window.require = jest.fn();
+
+    mockMatchMedia();
   });
   it.each`
     title             | seoTitle             | info                      | expected

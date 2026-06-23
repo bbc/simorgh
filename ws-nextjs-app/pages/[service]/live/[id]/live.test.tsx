@@ -5,6 +5,7 @@ import {
   screen,
   act,
 } from '#app/components/react-testing-library-with-providers';
+import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import liveFixture from '#data/pidgin/live/c7p765ynk9qt.json';
 import postFixture from '#data/pidgin/posts/postFixture.json';
 import sportDataFixture from '#data/afrique/live/c7gk1vjglxn1t.json';
@@ -234,6 +235,8 @@ describe('Live Page', () => {
     global.IntersectionObserver = jest.fn(
       mockIntersectionObserver.getMockIntersectionObserver(),
     );
+
+    mockMatchMedia();
   });
 
   afterEach(() => {

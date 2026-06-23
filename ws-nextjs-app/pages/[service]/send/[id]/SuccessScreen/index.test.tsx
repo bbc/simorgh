@@ -2,6 +2,7 @@ import {
   act,
   render,
 } from '#app/components/react-testing-library-with-providers';
+import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import SuccessScreen from '.';
 import * as FormContext from '../FormContext';
 import { ContextProps } from '../FormContext';
@@ -31,6 +32,8 @@ const MOCK_RETENTION_PERIOD = '270';
 describe('SuccessScreen', () => {
   beforeEach(() => {
     jest.restoreAllMocks();
+
+    mockMatchMedia();
   });
 
   it('Should have a h1', async () => {

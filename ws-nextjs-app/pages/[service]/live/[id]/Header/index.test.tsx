@@ -4,6 +4,7 @@ import {
   act,
   waitFor,
 } from '#app/components/react-testing-library-with-providers';
+import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import Header from './index';
 
 jest.mock('#app/hooks/useOptimizelyVariation', () => ({
@@ -13,6 +14,10 @@ jest.mock('#app/hooks/useOptimizelyVariation', () => ({
 }));
 
 describe('Live Page Header', () => {
+  beforeEach(() => {
+    mockMatchMedia();
+  });
+
   describe('title and description', () => {
     it('should render a title and description when provided', async () => {
       await act(async () => {

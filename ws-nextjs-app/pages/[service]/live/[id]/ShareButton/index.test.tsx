@@ -3,6 +3,7 @@ import {
   screen,
   act,
 } from '#app/components/react-testing-library-with-providers';
+import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import userEvent from '@testing-library/user-event';
 import ShareButton from '.';
 
@@ -18,6 +19,10 @@ Object.assign(navigator, {
 });
 
 describe('ShareButton', () => {
+  beforeEach(() => {
+    mockMatchMedia();
+  });
+
   afterEach(() => {
     jest.clearAllMocks();
   });

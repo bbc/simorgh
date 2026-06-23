@@ -14,6 +14,7 @@ import {
   act,
   waitFor,
 } from '#app/components/react-testing-library-with-providers';
+import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import { GetServerSidePropsContext } from 'next';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 import _OnDemandAudioPage from './OnDemandAudioLayout';
@@ -137,6 +138,7 @@ describe('OnDemand Radio Page ', () => {
       },
     });
     jest.spyOn(Date, 'now').mockImplementation(() => 1234567890000);
+    mockMatchMedia();
     process.env = { ...env };
   });
 

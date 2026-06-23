@@ -2,6 +2,7 @@ import {
   act,
   render,
 } from '#app/components/react-testing-library-with-providers';
+import mockMatchMedia from '#testHelpers/mockMatchMedia';
 
 import SubmitButton from '.';
 
@@ -12,6 +13,10 @@ jest.mock('#app/hooks/useOptimizelyVariation', () => ({
 }));
 
 describe('SubmitButton', () => {
+  beforeEach(() => {
+    mockMatchMedia();
+  });
+
   it('should render a submit button with correct type', async () => {
     const { container } = await act(() => {
       return render(<SubmitButton />, { service: 'news' });

@@ -4,6 +4,7 @@ import {
   act,
   waitFor,
 } from '#app/components/react-testing-library-with-providers';
+import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import useUASRecentActivity from '#app/hooks/useUASRecentActivity';
 import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
 import MyNewsPage from '.';
@@ -56,6 +57,7 @@ describe('MyNewsPage', () => {
       isLoading: false,
       error: null,
     });
+    mockMatchMedia();
   });
 
   it('should render loading state initially', async () => {

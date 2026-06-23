@@ -2,6 +2,7 @@ import {
   act,
   render,
 } from '#app/components/react-testing-library-with-providers';
+import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import ErrorScreen from '.';
 
 jest.mock('#app/hooks/useOptimizelyVariation', () => ({
@@ -15,6 +16,8 @@ const MOCK_TITLE = 'Submit your suggestions';
 describe('ErrorScreen', () => {
   beforeEach(() => {
     jest.restoreAllMocks();
+
+    mockMatchMedia();
   });
 
   it('Should have an H1 tag', async () => {

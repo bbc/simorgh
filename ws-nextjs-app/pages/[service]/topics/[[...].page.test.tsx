@@ -3,6 +3,7 @@ import {
   screen,
   act,
 } from '#app/components/react-testing-library-with-providers';
+import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import { Summary } from '#app/models/types/curationData';
 import { Services } from '#app/models/types/global';
 import TopicsIndexPage from './TopicsIndexPage';
@@ -40,6 +41,10 @@ const validTopicsData = {
 };
 
 describe('TopicsIndexPage', () => {
+  beforeEach(() => {
+    mockMatchMedia();
+  });
+
   it('renders topics page for valid service and matches snapshot', async () => {
     await act(async () => {
       render(<TopicsIndexPage {...validTopicsData} />);

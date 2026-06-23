@@ -2,6 +2,7 @@ import {
   act,
   render,
 } from '#app/components/react-testing-library-with-providers';
+import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import mundoFixture from '#data/mundo/send/test2qq3x8vt.json';
 import UGCPageLayout from './UGCPageLayout';
 import { PageProps } from './types';
@@ -23,6 +24,8 @@ describe('UGC Page Layout', () => {
 
   beforeEach(async () => {
     jest.restoreAllMocks();
+
+    mockMatchMedia();
 
     ({ container } = await act(() => {
       const pageData = mundoFixture.data as PageProps['pageData'];

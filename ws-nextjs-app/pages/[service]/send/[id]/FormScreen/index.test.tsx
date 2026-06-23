@@ -3,6 +3,7 @@ import {
   render,
   fireEvent,
 } from '#app/components/react-testing-library-with-providers';
+import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import {
   title,
   description,
@@ -49,6 +50,10 @@ const mockContextValue = {
 };
 
 describe('Form', () => {
+  beforeEach(() => {
+    mockMatchMedia();
+  });
+
   it('should render a form with title and fields', async () => {
     jest
       .spyOn(FormContextModule, 'useFormContext')

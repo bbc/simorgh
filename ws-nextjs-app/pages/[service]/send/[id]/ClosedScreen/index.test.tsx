@@ -2,6 +2,7 @@ import {
   act,
   render,
 } from '#app/components/react-testing-library-with-providers';
+import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import ClosedScreen from '.';
 
 jest.mock('#app/hooks/useOptimizelyVariation', () => ({
@@ -16,6 +17,8 @@ const MOCK_CLOSINGTIME = '2023-08-20T22:59:00.000Z';
 describe('ClosedScreen', () => {
   beforeEach(() => {
     jest.restoreAllMocks();
+
+    mockMatchMedia();
   });
 
   it('Should have an H1 tag', async () => {

@@ -4,6 +4,7 @@ import {
   act,
   within,
 } from '#app/components/react-testing-library-with-providers';
+import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import postFixture from '#data/pidgin/posts/postFixtureCleaned.json';
 import { LIVE_PAGE } from '#src/app/routes/utils/pageTypes';
 import Post from '.';
@@ -29,6 +30,8 @@ describe('Post', () => {
   beforeEach(() => {
     // @ts-expect-error Mocking require to prevent race condition.
     window.require = jest.fn();
+
+    mockMatchMedia();
   });
 
   afterEach(() => {
