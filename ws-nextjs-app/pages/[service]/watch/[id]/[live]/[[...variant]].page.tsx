@@ -1,20 +1,81 @@
 import deriveVariant from '#utilities/deriveVariant';
 import dynamic from 'next/dynamic';
-import { GetServerSideProps } from 'next';
+import { GetServerSidePropsContext } from 'next';
 import { LIVE_TV_PAGE } from '#app/routes/utils/pageTypes';
 import nodeLogger from '#lib/logger.node';
 import PageDataParams from '#app/models/types/pageDataParams';
 import { PageTypes } from '#app/models/types/global';
 import getPageData from '#utilities/pageRequests/getPageData';
 import logResponseTime from '#utilities/logResponseTime';
-import { OK } from '#app/lib/statusCodes.const';
+import { NOT_FOUND, OK } from '#app/lib/statusCodes.const';
 import { ROUTING_INFORMATION } from '#app/lib/logger.const';
+import { variants } from '#app/lib/utilities/variantHandler';
 
 const LiveTvLayout = dynamic(() => import('./LiveTvPageLayout'));
 
 const logger = nodeLogger(__filename);
 
-export const getServerSideProps: GetServerSideProps = async context => {
+type SlugTypes = { live: string; variant?: string[] };
+const isValidRoute = (slugs: SlugTypes) => {
+  if (!slugs) {
+    return false;
+  }
+
+  const { live, variant } = slugs;
+  const suffixAllowList = ['live', 'live.app'];
+  const variantSuffixAllowList = variants.flatMap(variant => [
+    `${variant}`,
+    `${variant}.app`,
+  ]);
+
+  // Check for variant routes
+  if (variant) {
+    if (live === 'live' && variantSuffixAllowList.includes(variant[0])) {
+      return true;
+    }
+  } else {
+    // Check for standard routes
+    if (suffixAllowList.includes(live)) {
+      return true;
+    }
+  }
+
+  return false;
+};
+
+export const getServerSideProps = async (
+  context: GetServerSidePropsContext,
+) => {
+  let routingInfoLogger = logger.debug;
+  const { resolvedUrl, params } = context;
+  const {
+    id,
+    service,
+    renderer_env: rendererEnv,
+    variant: variantFromUrl,
+  } = context.query as PageDataParams;
+
+  if (!isValidRoute(params as SlugTypes)) {
+    routingInfoLogger(ROUTING_INFORMATION, {
+      url: resolvedUrl,
+      status: NOT_FOUND,
+      pageType: LIVE_TV_PAGE,
+    });
+
+    context.res.statusCode = NOT_FOUND;
+
+    return {
+      props: {
+        service,
+        status: NOT_FOUND,
+        timeOnServer: Date.now(),
+        variant: variantFromUrl || null,
+        pageType: LIVE_TV_PAGE,
+        pathname: resolvedUrl,
+      },
+    };
+  }
+
   context.res.setHeader(
     'Cache-Control',
     'public, stale-if-error=300, stale-while-revalidate=120, max-age=30',
@@ -22,18 +83,11 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   logResponseTime(
     {
-      path: context.resolvedUrl,
+      path: resolvedUrl,
     },
     context.res,
     () => null,
   );
-
-  const {
-    id,
-    service,
-    renderer_env: rendererEnv,
-    variant: variantFromUrl,
-  } = context.query as PageDataParams;
 
   const variant = deriveVariant(variantFromUrl);
 
@@ -42,17 +96,16 @@ export const getServerSideProps: GetServerSideProps = async context => {
     service,
     rendererEnv,
     variant,
-    resolvedUrl: context.resolvedUrl,
+    resolvedUrl,
     pageType: LIVE_TV_PAGE,
   });
 
-  let routingInfoLogger = logger.debug;
   if (data.status !== OK) {
     routingInfoLogger = logger.error;
   }
 
   routingInfoLogger(ROUTING_INFORMATION, {
-    url: context.resolvedUrl,
+    url: resolvedUrl,
     status: data.status,
     pageType: LIVE_TV_PAGE,
   });
@@ -71,14 +124,14 @@ export const getServerSideProps: GetServerSideProps = async context => {
             ...data.pageData.metadata,
             type: LIVE_TV_PAGE,
             atiAnalytics: {
-              ...data.pageData.metadata.atiAnalytics,
+              ...data.pageData.metadata?.atiAnalytics,
               contentType: 'player-live',
               pageIdentifier: `${service}.${id}.livetv.page`,
             },
           },
         }
       : null,
-    pathname: context?.resolvedUrl,
+    pathname: resolvedUrl,
   };
   return {
     props: {
