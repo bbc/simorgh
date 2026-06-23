@@ -1,5 +1,6 @@
 import { css, Theme } from '@emotion/react';
 import { GROUP_1_MAX_WIDTH } from '#app/components/ThemeProvider/mediaQueries';
+import pixelsToRem from '#app/utilities/pixelsToRem';
 
 const styles = {
   body: ({ spacings, palette, fontSizes }: Theme) =>
@@ -107,6 +108,7 @@ const styles = {
           borderRadius: '50%',
           backgroundColor: isDarkUi ? palette.GREY_3 : palette.GREY_6,
           marginInline: `${spacings.HALF}rem`,
+          border: `${pixelsToRem(1)}rem solid transparent`,
         },
       },
     }),
