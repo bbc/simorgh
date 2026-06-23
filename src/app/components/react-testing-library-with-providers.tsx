@@ -8,10 +8,12 @@ import { RequestContextProvider } from '../contexts/RequestContext';
 import { ToggleContextProvider } from '../contexts/ToggleContext';
 import { UserContextProvider } from '../contexts/UserContext';
 import { EventTrackingContextProvider } from '../contexts/EventTrackingContext';
-import { ReverbParamsContextProvider } from '../contexts/ReverbParamsContext';
+import {
+  ReverbParamsContextProvider,
+  PageMetadata,
+} from '../contexts/ReverbParamsContext';
 import ThemeProvider from './ThemeProvider';
 import { PageTypes, Services, Toggles, Variants } from '../models/types/global';
-import { ATIData } from './ATIAnalytics/types';
 
 jest.mock('./ThemeProvider');
 
@@ -26,10 +28,7 @@ interface Props extends PropsWithChildren {
   isApp?: boolean;
   isLite?: boolean;
   pageData?: object;
-  pageMetadata?: {
-    type: PageTypes;
-    atiAnalytics?: ATIData;
-  };
+  pageMetadata?: PageMetadata;
   bbcOrigin?: string | null;
   pageType?: PageTypes;
   derivedPageType?: string | null;

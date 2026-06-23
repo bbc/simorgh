@@ -38,11 +38,13 @@ export const ReverbParamsContext = createContext<ReverbParamsContextProps>(
   {} as ReverbParamsContextProps,
 );
 
+export type PageMetadata = {
+  type: PageTypes;
+  atiAnalytics?: ATIData;
+};
+
 type ReverbParamsProviderProps = {
-  metadata?: {
-    type: PageTypes;
-    atiAnalytics?: ATIData;
-  };
+  metadata?: PageMetadata;
 };
 
 const getPageTypeHandler = pageType => {

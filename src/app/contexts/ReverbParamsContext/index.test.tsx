@@ -9,7 +9,7 @@ import {
   MEDIA_ASSET_PAGE,
   MOST_READ_PAGE,
 } from '../../routes/utils/pageTypes';
-import { ReverbParamsContext } from '.';
+import { ReverbParamsContext, PageMetadata } from '.';
 import * as useOptimizelyVariation from '../../hooks/useOptimizelyVariation';
 
 const pageMetadata = {
@@ -39,7 +39,7 @@ const pageMetadata = {
     producerName: 'PIDGIN',
   },
   type: 'article',
-};
+} as PageMetadata;
 
 beforeEach(() => {
   jest.clearAllMocks();
