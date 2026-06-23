@@ -441,6 +441,12 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'گروپ مرحلہ',
+          last32: 'راؤنڈ آف 32',
+          last16: 'راؤنڈ آف 16',
+          quarterFinals: 'کوارٹر فائنلز',
+          semiFinals: 'سیمی فائنلز',
+          final: 'فائنل',
+          thirdPlaceFinal: 'تیسری پوزیشن کا میچ',
         },
       },
     },
