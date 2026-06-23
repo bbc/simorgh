@@ -1,3 +1,4 @@
+import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
 
 export default {
@@ -50,6 +51,7 @@ export default {
         borderRadius: '50%',
         backgroundColor: palette.GREY_10,
         marginInline: `${spacings.HALF}rem`,
+        border: `${pixelsToRem(1)}rem solid transparent`,
       },
     }),
 };
