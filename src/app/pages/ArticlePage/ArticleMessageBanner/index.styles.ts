@@ -1,17 +1,18 @@
 import { css, Theme } from '@emotion/react';
 
 export default {
-  articleMessageBannerWrapper: css({
-    maxWidth: `63rem`,
-    margin: `0 auto`,
-    paddingTop: '2rem',
-    paddingBottom: '2rem',
-  }),
-  mainText: ({ palette }: Theme) =>
+  articleMessageBannerWrapper: ({ spacings }: Theme) =>
+    css({
+      maxWidth: `63rem`,
+      margin: `0 auto`,
+      paddingTop: `${spacings.TRIPLE}rem`,
+      paddingBottom: `${spacings.TRIPLE}rem`,
+    }),
+  mainText: ({ palette, spacings }: Theme) =>
     css({
       display: 'block',
-      paddingTop: '1.5rem',
-      paddingBottom: '0.5rem',
+      paddingTop: `${spacings.TRIPLE}rem`,
+      paddingBottom: `${spacings.FULL}rem`,
       color: palette.WHITE,
     }),
 };
