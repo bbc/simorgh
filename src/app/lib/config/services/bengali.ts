@@ -370,6 +370,12 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'গ্রুপ পর্ব',
+          last32: 'রাউন্ড অব ৩২',
+          last16: 'রাউন্ড অব ১৬',
+          quarterFinals: 'কোয়ার্টার ফাইনাল',
+          semiFinals: 'সেমি ফাইনাল',
+          final: 'ফাইনাল',
+          thirdPlaceFinal: 'তৃতীয় স্থান',
         },
       },
     },
