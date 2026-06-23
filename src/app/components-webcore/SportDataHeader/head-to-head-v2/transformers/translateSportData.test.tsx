@@ -805,10 +805,16 @@ describe('TranslateSportData', () => {
         urn: '',
       });
     });
-
     it('should return the tournament and stage name unchanged when lookup is not found', () => {
+      const dataWithUnknownStageName = {
+        ...fixtureDataDefault,
+        stage: {
+          ...fixtureDataDefault.stage,
+          name: 'Unknown Stage Name',
+        },
+      } as unknown as HeadToHeadV2Data;
       const result = translateSportData(
-        fixtureDataDefault,
+        dataWithUnknownStageName,
         afriqueServiceConfig.default.translations,
         'afrique',
       );
@@ -823,7 +829,7 @@ describe('TranslateSportData', () => {
 
       expect(result.stage).toStrictEqual({
         id: '7wxuj38kqm8bz3cmi15vu4w7o',
-        name: 'Quarter-finals',
+        name: 'Unknown Stage Name',
         urn: '',
       });
     });
