@@ -8,8 +8,9 @@ const noop = () => undefined;
 describe('SaveButton', () => {
   it('renders the button with correct text', () => {
     render(<SaveButton onClick={noop} buttonText="Save for later" />);
-    expect(screen.getByRole('button')).toBeInTheDocument();
-    expect(screen.getByText('Save for later')).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: 'Save for later' }),
+    ).toBeInTheDocument();
   });
 
   it('is disabled when isLoading is true', () => {
@@ -31,29 +32,35 @@ describe('SaveButton', () => {
 
   it('shows buttonText when not saved and not loading', () => {
     render(<SaveButton onClick={noop} buttonText="Save for later" />);
-    expect(screen.getByText('Save for later')).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: 'Save for later' }),
+    ).toBeInTheDocument();
   });
 
   it('shows saving text when isLoading is true', () => {
     render(<SaveButton onClick={noop} buttonText="Saving" isLoading />);
-    expect(screen.getByText('Saving')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Saving' })).toBeInTheDocument();
   });
 
   it('shows saved text when isSaved is true', () => {
     render(<SaveButton onClick={noop} buttonText="Saved to My News" isSaved />);
-    expect(screen.getByText('Saved to My News')).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: 'Saved to My News' }),
+    ).toBeInTheDocument();
   });
 
   it('is disabled and shows Saving text when isUpdating is true', () => {
     render(<SaveButton onClick={noop} buttonText="Saving" isUpdating />);
     expect(screen.getByRole('button')).toBeDisabled();
-    expect(screen.getByText('Saving')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Saving' })).toBeInTheDocument();
   });
 
   it('is disabled and shows Removing text when isUpdating is true', () => {
     render(<SaveButton onClick={noop} buttonText="Removing" isUpdating />);
     expect(screen.getByRole('button')).toBeDisabled();
-    expect(screen.getByText('Removing')).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: 'Removing' }),
+    ).toBeInTheDocument();
   });
 
   it('shows removeText when hovered and saved', async () => {
@@ -66,6 +73,6 @@ describe('SaveButton', () => {
       />,
     );
     await userEvent.hover(screen.getByRole('button'));
-    expect(screen.getByText('Remove')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Remove' })).toBeInTheDocument();
   });
 });
