@@ -79,7 +79,6 @@ jest.mock('#app/lib/utilities/onClient', () => ({
   default: jest.fn(),
   onClient: jest.fn(() => true),
 }));
-// jest.mock('#lib/utilities/isLive', () => jest.fn());
 
 const input = {
   bbcOrigin: 'https://www.test.bbc.co.uk',
