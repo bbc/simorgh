@@ -16,5 +16,5 @@ export const appEnvFromProcess: AppEnv = isAppEnv(process.env.APP_ENV)
 export const baseURL =
   process.env.PLAYWRIGHT_BASE_URL || baseUrlByEnv[appEnvFromProcess];
 
-export const shouldRunForEnv = (runforEnv: AppEnv[]) =>
-  runforEnv.includes(appEnvFromProcess);
+export const shouldRunForEnv = (runForEnv: AppEnv[]) =>
+  runForEnv.includes(appEnvFromProcess);
