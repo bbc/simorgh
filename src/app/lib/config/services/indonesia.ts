@@ -373,6 +373,12 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'Babak Grup',
+          last32: 'Babak 32 Besar',
+          last16: 'Babak 16 Besar',
+          quarterFinals: 'Perempat final',
+          semiFinals: 'Semifinal',
+          final: 'Final',
+          thirdPlaceFinal: 'Peringkat tiga',
         },
       },
     },
