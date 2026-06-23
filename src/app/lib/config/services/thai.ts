@@ -331,6 +331,12 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'รอบแบ่งกลุ่ม',
+          last32: 'รอบ 32 ทีมสุดท้าย',
+          last16: 'รอบ 16 ทีมสุดท้าย',
+          quarterFinals: 'รอบ 8 ทีมสุดท้าย',
+          semiFinals: 'รอบรองชนะเลิศ',
+          final: 'รอบชิงชนะเลิศ',
+          thirdPlaceFinal: 'รอบชิงที่สาม',
         },
       },
     },
