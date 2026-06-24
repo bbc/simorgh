@@ -1,3 +1,8 @@
+---
+name: convert-theme-to-scss-modules
+description: Migrates a World Service language service's Emotion CSS-in-JS theme to the SCSS modules theming system. Use this when asked to migrate a service theme to SCSS modules.
+---
+
 # Skill: Convert Service Theme to SCSS Modules
 
 ## Purpose
