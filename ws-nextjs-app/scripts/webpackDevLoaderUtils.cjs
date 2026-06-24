@@ -13,6 +13,7 @@ const isCssLoader = loaderEntry => {
 
 const injectExtractLoader = (rules, loaderPath) => {
   rules.forEach(rule => {
+    if (!rule || typeof rule !== 'object') return;
     if (rule.oneOf) injectExtractLoader(rule.oneOf, loaderPath);
     if (!Array.isArray(rule.use)) return;
     const cssLoaderIndex = rule.use.findIndex(isCssLoader);
@@ -44,6 +45,7 @@ const isIgnoreLoader = use => {
  */
 const replaceIgnoreLoaderForScss = (rules, replacementUse) => {
   rules.forEach(rule => {
+    if (!rule || typeof rule !== 'object') return;
     // Next.js wraps CSS rules in a oneOf container (no `use` of its own):
     //   { oneOf: [{ test: [/\.css$/, /\.scss$/], use: 'ignore-loader' }, ...] }
     // Recurse so we reach the actual ignore-loader rule inside.
