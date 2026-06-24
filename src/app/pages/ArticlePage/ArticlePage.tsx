@@ -58,6 +58,7 @@ import ContinueReadingButton, {
 import SaveArticleButton from '#app/components/SaveArticleButton';
 import isLive from '#lib/utilities/isLive';
 import ElectionBanner from './ElectionBanner';
+import ArticleMessageBanner from './ArticleMessageBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
 import EmbedImages from '../../components/Embeds/EmbedImages';
@@ -457,6 +458,7 @@ const ArticlePage = ({
         <AdContainer slotType="leaderboard" adcampaign={adcampaign} />
       )}
       <ElectionBanner aboutTags={aboutTags} taggings={taggings} />
+      <ArticleMessageBanner aboutTags={aboutTags} taggings={taggings} />
       <div css={styles.grid}>
         <div css={!isPGL ? styles.primaryColumn : styles.pglColumn}>
           <main css={styles.mainContent} role="main">
