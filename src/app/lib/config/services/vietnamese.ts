@@ -340,6 +340,12 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'Vòng bảng',
+          last32: 'Vòng 32 đội',
+          last16: 'Vòng 1/8',
+          quarterFinals: 'TỨ KẾT',
+          semiFinals: 'BÁN KẾT',
+          final: 'CHUNG KẾT',
+          thirdPlaceFinal: 'TRANH HẠNG BA',
         },
       },
     },
