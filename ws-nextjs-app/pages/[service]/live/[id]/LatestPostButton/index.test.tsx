@@ -17,9 +17,7 @@ jest.mock('#app/hooks/useCustomEventTracker', () => ({
 jest.useFakeTimers();
 
 const defaultProps = {
-  pendingUpdateTime: Date.now(),
   pageId: 'test-page-id',
-  newPostCount: 3,
 };
 
 describe('LatestPostButton', () => {
@@ -159,7 +157,7 @@ describe('LatestPostButton', () => {
     });
   });
 
-  it('should send a button shown tracking event with page_id, time_since_last_update and post_count_since_last_view', async () => {
+  it('should send a button shown tracking event with page_id', async () => {
     await act(async () => {
       return render(
         <LastestPostButton
@@ -174,15 +172,9 @@ describe('LatestPostButton', () => {
     expect(mockTrackEvent).toHaveBeenCalledWith(
       expect.stringContaining('"page_id":"test-page-id"'),
     );
-    expect(mockTrackEvent).toHaveBeenCalledWith(
-      expect.stringContaining('"time_since_last_update"'),
-    );
-    expect(mockTrackEvent).toHaveBeenCalledWith(
-      expect.stringContaining('"post_count_since_last_view":3'),
-    );
   });
 
-  it('should send a button clicked tracking event with page_id, time_since_button_shown and post_count_loaded', async () => {
+  it('should send a button clicked tracking event with page_id', async () => {
     await act(async () => {
       return render(
         <LastestPostButton
@@ -201,12 +193,6 @@ describe('LatestPostButton', () => {
 
     expect(mockTrackEvent).toHaveBeenCalledWith(
       expect.stringContaining('"page_id":"test-page-id"'),
-    );
-    expect(mockTrackEvent).toHaveBeenCalledWith(
-      expect.stringContaining('"time_since_button_shown"'),
-    );
-    expect(mockTrackEvent).toHaveBeenCalledWith(
-      expect.stringContaining('"post_count_loaded":3'),
     );
   });
 });

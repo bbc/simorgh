@@ -1,4 +1,4 @@
-import { RefObject, use, useRef, useEffect, useState } from 'react';
+import { RefObject, use, useEffect, useState } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import useCustomEventTracker from '#app/hooks/useCustomEventTracker';
@@ -16,18 +16,14 @@ interface LatestPostButtonProps {
   isFirstPostVisible: boolean;
   hasPendingUpdate: boolean;
   streamRef: RefObject<HTMLDivElement> | null;
-  pendingUpdateTime: number | null;
   pageId: string;
-  newPostCount: number | null;
 }
 
 const LatestPostButton = ({
   isFirstPostVisible,
   hasPendingUpdate,
   streamRef,
-  pendingUpdateTime,
   pageId,
-  newPostCount,
 }: LatestPostButtonProps) => {
   const {
     translations: {
@@ -39,7 +35,6 @@ const LatestPostButton = ({
   } = use(ServiceContext);
 
   const [showButton, setShowButton] = useState(false);
-  const buttonShownTime = useRef<number | null>(null);
 
   const trackButtonShown = useCustomEventTracker({
     eventName: 'live_refresh_button_shown',
@@ -54,11 +49,6 @@ const LatestPostButton = ({
       '(prefers-reduced-motion: reduce)',
     ).matches;
 
-    const timeSinceButtonShown =
-      buttonShownTime.current != null
-        ? Date.now() - buttonShownTime.current
-        : null;
-
     if (streamRef) {
       const streamContainer = streamRef.current;
       streamContainer.scrollIntoView({
@@ -69,8 +59,6 @@ const LatestPostButton = ({
     trackButtonClicked(
       JSON.stringify({
         page_id: pageId,
-        time_since_button_shown: timeSinceButtonShown,
-        post_count_loaded: newPostCount,
       }),
     );
   };
@@ -80,15 +68,10 @@ const LatestPostButton = ({
     const shouldShowButton = !isFirstPostVisible && hasPendingUpdate;
     if (shouldShowButton) {
       setShowButton(shouldShowButton);
-      buttonShownTime.current = Date.now();
-      const timeSinceLastUpdate =
-        pendingUpdateTime != null ? Date.now() - pendingUpdateTime : null;
 
       trackButtonShown(
         JSON.stringify({
           page_id: pageId,
-          time_since_last_update: timeSinceLastUpdate,
-          post_count_since_last_view: newPostCount,
         }),
       );
 
@@ -102,14 +85,7 @@ const LatestPostButton = ({
     return () => {
       clearTimeout(timeoutId);
     };
-  }, [
-    isFirstPostVisible,
-    hasPendingUpdate,
-    trackButtonShown,
-    pendingUpdateTime,
-    pageId,
-    newPostCount,
-  ]);
+  }, [isFirstPostVisible, hasPendingUpdate, trackButtonShown, pageId]);
 
   return (
     <div css={styles.container}>
