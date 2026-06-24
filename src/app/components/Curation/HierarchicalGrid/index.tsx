@@ -184,14 +184,7 @@ const HiearchicalGrid = ({
                   {promo.description}
                 </Promo.Body>
                 {!isLive ? (
-                  <div
-                    css={styles.metadataAndTopicData}
-                    className={
-                      relatedTopic && !isLiveEnvironment()
-                        ? 'hasRelatedTopic'
-                        : undefined
-                    }
-                  >
+                  <div css={styles.metadataAndTopicData}>
                     {relatedTopic && !isLiveEnvironment() && (
                       <a
                         href={relatedTopic.link.url}
