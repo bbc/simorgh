@@ -379,6 +379,12 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'Phase de poules',
+          last32: '16èmes de finale',
+          last16: '8èmes de finale',
+          quarterFinals: 'Quarts de finale',
+          semiFinals: 'Demi-finales',
+          thirdPlaceFinal: 'Troisième place',
+          final: 'Finale',
         },
       },
     },

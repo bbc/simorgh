@@ -41,7 +41,7 @@ test.describe('errorPage404', () => {
       test.describe(`Tests for ${suiteName} errorPage404`, () => {
         test('should return a 404 error code', async ({ request }) => {
           test.skip(
-            !shouldRunForEnv(testSuite.runforEnv),
+            !shouldRunForEnv(testSuite.runForEnv),
             `Skipped for APP_ENV=${appEnvFromProcess}`,
           );
 
@@ -53,7 +53,7 @@ test.describe('errorPage404', () => {
             page,
           }) => {
             test.skip(
-              !shouldRunForEnv(testSuite.runforEnv),
+              !shouldRunForEnv(testSuite.runForEnv),
               `Skipped for APP_ENV=${appEnvFromProcess}`,
             );
 
@@ -74,7 +74,7 @@ test.describe('errorPage404', () => {
             page,
           }) => {
             test.skip(
-              !shouldRunForEnv(testSuite.runforEnv),
+              !shouldRunForEnv(testSuite.runForEnv),
               `Skipped for APP_ENV=${appEnvFromProcess}`,
             );
 
@@ -96,7 +96,7 @@ test.describe('errorPage404', () => {
             page,
           }) => {
             test.skip(
-              !shouldRunForEnv(testSuite.runforEnv),
+              !shouldRunForEnv(testSuite.runForEnv),
               `Skipped for APP_ENV=${appEnvFromProcess}`,
             );
 
@@ -129,7 +129,7 @@ test.describe('errorPage404', () => {
 
           test('should have lang attribute', async ({ page }) => {
             test.skip(
-              !shouldRunForEnv(testSuite.runforEnv),
+              !shouldRunForEnv(testSuite.runForEnv),
               `Skipped for APP_ENV=${appEnvFromProcess}`,
             );
 

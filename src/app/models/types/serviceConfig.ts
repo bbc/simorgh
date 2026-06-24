@@ -127,6 +127,16 @@ export type ServiceConfig = {
     iframeSrc: string;
     iframeDevSrc: string;
   };
+  articleMessageBanners?: ArticleMessageBannerConfig[];
+};
+
+export type ArticleMessageBannerConfig = {
+  thingIds: string[];
+  linkHref: string;
+  heading: string;
+  linkText: string;
+  description?: string;
+  image?: string;
 };
 
 export type PodcastPromo = {

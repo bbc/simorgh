@@ -383,6 +383,12 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'Hatua ya Makundi',
+          last32: 'Makundi 32',
+          last16: 'Makundi 16',
+          quarterFinals: 'Robo -Fainali',
+          semiFinals: 'Nusu-Fainali',
+          final: 'Fainali',
+          thirdPlaceFinal: 'Mshidi wa tatu',
         },
       },
     },

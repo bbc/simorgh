@@ -350,6 +350,12 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'ናይ ምድብ ጸወታ',
+          last32: 'ዙር 32',
+          last16: 'ዙር 16',
+          quarterFinals: 'ርብዒ ፍጻም',
+          semiFinals: 'ፍርቂ ፍጻመ',
+          final: 'ፍጻመ',
+          thirdPlaceFinal: 'ንሳልሳይ ደረጃ',
         },
       },
     },

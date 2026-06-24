@@ -29,6 +29,7 @@
     "cypress:page-types": "cypress run --browser chrome --spec ./cypress/e2e/pageTypes",
     "cypress:special-features": "cypress run --browser chrome --spec ./cypress/e2e/specialFeatures",
     "playwright:e2e": "APP_ENV=local playwright test",
+    "playwright:install": "playwright install --with-deps chromium",
     "playwright:e2e:chrome": "APP_ENV=local PLAYWRIGHT_CHANNEL=chrome playwright test --headed",
     "playwright:e2e:test": "APP_ENV=test playwright test",
     "playwright:e2e:live": "APP_ENV=live playwright test",
