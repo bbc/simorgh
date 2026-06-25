@@ -103,7 +103,7 @@ export default ({ service, pageType, variant = 'default', path }) => {
             cy.get('a')
               .should('have.attr', 'href')
               .then($href => {
-                cy.get('a').click();
+                cy.get('h2 a').click();
                 cy.url().should('eq', $href);
               });
           });

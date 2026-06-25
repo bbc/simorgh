@@ -370,6 +370,12 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'Waltajjii Garee',
+          last32: 'Marsaa 32n',
+          last16: 'Marsaa 16n',
+          quarterFinals: 'Nuusa Xumuraa',
+          semiFinals: 'Walakkaa Xumuraa',
+          final: 'Xumura',
+          thirdPlaceFinal: 'Sadarkaa sadaffaa',
         },
       },
     },
