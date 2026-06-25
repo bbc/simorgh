@@ -15,7 +15,6 @@ const options = {
     '@emotion/cache',
     '@emotion/server',
     'aws-embedded-metrics',
-    'ThemeProviderSCSSModules', // internal SCSS module path resolved via webpack/next.js sassOptions.loadPaths
     '@scss', // webpack alias for src/app/components, resolved via resolve.alias in webpack/next.js
   ],
 };
