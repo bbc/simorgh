@@ -1,11 +1,13 @@
 import { Global } from '@emotion/react';
-import { useEffect, use } from 'react';
+import { useEffect, use, useCallback } from 'react';
 import { Close } from '#app/components/icons';
 import useTrappedFocus from '#app/hooks/useTrappedFocus';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import Heading from '#app/components/Heading';
 import Paragraph from '#app/components/Paragraph';
 import AccountActionButtons from '#app/components/Account/AccountActionButtons';
+import useViewTracker from '#app/hooks/useViewTracker';
+import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import styles from './index.styles';
 
 type AccountSignInModalProps = {
@@ -28,10 +30,26 @@ const AccountSignInModal = ({ onClose }: AccountSignInModalProps) => {
     description = '',
   } = translations.accountPromoBanner ?? {};
 
+  const viewTracker = useViewTracker({
+    componentName: 'account-sign-in-modal',
+  });
+
+  const { onClick: onCloseClickTrack } = useClickTrackerHandler({
+    componentName: 'account-sign-in-modal-close',
+  });
+
+  const handleClose = useCallback(
+    (event?: React.MouseEvent) => {
+      onCloseClickTrack?.(event);
+      onClose();
+    },
+    [onCloseClickTrack, onClose],
+  );
+
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
-        onClose();
+        handleClose();
       }
     };
 
@@ -40,7 +58,7 @@ const AccountSignInModal = ({ onClose }: AccountSignInModalProps) => {
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
     };
-  }, [onClose]);
+  }, [handleClose]);
 
   return (
     <>
@@ -50,8 +68,9 @@ const AccountSignInModal = ({ onClose }: AccountSignInModalProps) => {
         aria-modal="true"
         aria-labelledby="account-sign-in-modal-title"
         css={styles.modal}
+        {...viewTracker}
       >
-        <div aria-hidden="true" onClick={onClose} css={styles.backdrop} />
+        <div aria-hidden="true" onClick={handleClose} css={styles.backdrop} />
         <div ref={containerRef} css={styles.modalContainer}>
           <div aria-hidden="true" css={styles.imageSection} />
           <div css={styles.textSection}>
@@ -77,7 +96,7 @@ const AccountSignInModal = ({ onClose }: AccountSignInModalProps) => {
           <button
             ref={lastElementRef}
             type="button"
-            onClick={onClose}
+            onClick={handleClose}
             css={styles.closeButton}
             aria-label={closeLabel}
           >
