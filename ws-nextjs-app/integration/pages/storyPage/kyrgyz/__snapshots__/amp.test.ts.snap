@@ -298,7 +298,7 @@ exports[`AMP Story Page SEO Linked data should match text 1`] = `
 
 exports[`AMP Story Page SEO OG description 1`] = `"A test STY for social embeds"`;
 
-exports[`AMP Story Page SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_kyrgyz/CF33/test/_63734035_socialmedia.jpg"`;
+exports[`AMP Story Page SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1200/branded_kyrgyz/CF33/test/_63734035_socialmedia.jpg"`;
 
 exports[`AMP Story Page SEO OG image alt 1`] = `"social media"`;
 
@@ -324,7 +324,7 @@ exports[`AMP Story Page SEO Twitter description 1`] = `"A test STY for social em
 
 exports[`AMP Story Page SEO Twitter image alt 1`] = `"social media"`;
 
-exports[`AMP Story Page SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_kyrgyz/CF33/test/_63734035_socialmedia.jpg"`;
+exports[`AMP Story Page SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1200/branded_kyrgyz/CF33/test/_63734035_socialmedia.jpg"`;
 
 exports[`AMP Story Page SEO Twitter site 1`] = `"@bbckyrgyz"`;
 
