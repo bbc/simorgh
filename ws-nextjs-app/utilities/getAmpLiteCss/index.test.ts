@@ -15,15 +15,15 @@ const existsSyncMock = existsSync as jest.Mock;
 const readFileSyncMock = readFileSync as jest.Mock;
 
 describe('getAmpLiteCss utilities', () => {
-  const originalCwd = process.cwd;
+  let cwdSpy: jest.SpyInstance<string, []>;
   const originalNodeEnv = process.env.NODE_ENV;
 
   beforeAll(() => {
-    jest.spyOn(process, 'cwd').mockReturnValue('/app');
+    cwdSpy = jest.spyOn(process, 'cwd').mockReturnValue('/app');
   });
 
   afterAll(() => {
-    process.cwd = originalCwd;
+    cwdSpy.mockRestore();
     process.env.NODE_ENV = originalNodeEnv;
   });
 
