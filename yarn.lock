@@ -13777,18 +13777,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mini-css-extract-plugin@npm:2.10.2":
-  version: 2.10.2
-  resolution: "mini-css-extract-plugin@npm:2.10.2"
-  dependencies:
-    schema-utils: "npm:^4.0.0"
-    tapable: "npm:^2.2.1"
-  peerDependencies:
-    webpack: ^5.0.0
-  checksum: 10/d2b01f25e229d04263274fceccfcb3ec0937a448859e4cb65e32652e26dde46ae6ecf7d15a52a4bb700bea6e47675db88691d3abc418901ec8542e1cfdc62b85
-  languageName: node
-  linkType: hard
-
 "minimatch@npm:^10.2.2":
   version: 10.2.5
   resolution: "minimatch@npm:10.2.5"
@@ -16668,7 +16656,6 @@ __metadata:
     jsdom: "npm:27.0.0"
     lighthouse: "npm:13.0.1"
     lru-cache: "npm:11.2.7"
-    mini-css-extract-plugin: "npm:2.10.2"
     minimist: "npm:1.2.8"
     mkdirp: "npm:3.0.1"
     mocha-junit-reporter: "npm:2.2.1"
