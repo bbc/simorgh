@@ -49,6 +49,8 @@ optimizely?.notificationCenter?.addNotificationListener(
       };
     },
   ) => {
+    if (!onClient()) return;
+
     const flagKey = notification.decisionInfo?.flagKey;
     const variationKey = notification.decisionInfo?.variationKey;
 
@@ -56,7 +58,7 @@ optimizely?.notificationCenter?.addNotificationListener(
       const decisionEventDispatched =
         notification.decisionInfo?.decisionEventDispatched;
 
-      if (decisionEventDispatched && onClient()) {
+      if (decisionEventDispatched) {
         const currentUrl = window.location.pathname;
         if (!trackedPageViewUrls.has(currentUrl)) {
           trackedPageViewUrls.add(currentUrl);

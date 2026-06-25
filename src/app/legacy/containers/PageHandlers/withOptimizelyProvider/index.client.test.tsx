@@ -455,5 +455,47 @@ describe('withOptimizelyProvider HOC', () => {
 
       expect(mockTrack).toHaveBeenCalledTimes(2);
     });
+
+    it('should not track or notify decisions when not on client', () => {
+      jest.resetModules();
+
+      let serverCapturedListener: ((payload: object) => void) | undefined;
+      const serverMockTrack = jest.fn();
+      const serverMockNotifyDecision = jest.fn();
+
+      jest.doMock('#lib/utilities/onClient', () =>
+        jest.fn().mockReturnValue(false),
+      );
+      jest.doMock('@optimizely/react-sdk', () => ({
+        createInstance: jest.fn(() => ({
+          notificationCenter: {
+            addNotificationListener: jest.fn((_, cb) => {
+              serverCapturedListener = cb;
+            }),
+          },
+          track: serverMockTrack,
+        })),
+        OptimizelyProvider: jest.fn(),
+        setLogger: jest.fn(),
+        enums: { NOTIFICATION_TYPES: { DECISION: 'DECISION' } },
+      }));
+      jest.doMock('./isCypress', () => jest.fn().mockReturnValue(false));
+      jest.doMock('#app/lib/optimizelyDecisionStore', () => ({
+        notifyDecision: serverMockNotifyDecision,
+      }));
+      // eslint-disable-next-line global-require
+      require('./index');
+
+      serverCapturedListener?.({
+        decisionInfo: {
+          flagKey: 'test_flag',
+          variationKey: 'on',
+          decisionEventDispatched: true,
+        },
+      });
+
+      expect(serverMockTrack).not.toHaveBeenCalled();
+      expect(serverMockNotifyDecision).not.toHaveBeenCalled();
+    });
   });
 });
