@@ -8,7 +8,7 @@ const isCssLoader = loaderEntry => {
   const name =
     typeof loaderEntry === 'string' ? loaderEntry : loaderEntry?.loader;
   if (!name) return false;
-  return name === 'css-loader' || /[/]css-loader[/]/.test(name);
+  return name === 'css-loader' || /[/\\]css-loader[/\\]/.test(name);
 };
 
 const injectExtractLoader = (rules, loaderPath) => {

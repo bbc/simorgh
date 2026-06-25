@@ -169,6 +169,34 @@ describe('injectExtractLoader', () => {
 
     expect(rule.use).not.toContain(EXTRACT_LOADER);
   });
+
+  it('identifies css-loader expressed as a Windows path (backslash separators)', () => {
+    const windowsCssLoader = 'C:\\node_modules\\css-loader\\dist\\index.js';
+    const rule = {
+      test: /\.module\.scss$/,
+      use: [
+        { loader: 'style-loader' },
+        { loader: windowsCssLoader },
+        { loader: SASS_LOADER },
+      ],
+    };
+    injectExtractLoader([rule], EXTRACT_LOADER);
+
+    const cssIdx = rule.use.findIndex(l => l.loader === windowsCssLoader);
+    expect(rule.use[cssIdx - 1]).toBe(EXTRACT_LOADER);
+  });
+
+  it('identifies css-loader expressed as a Windows path string in the use array', () => {
+    const windowsCssLoader = 'C:\\node_modules\\css-loader\\dist\\index.js';
+    const rule = {
+      test: /\.css$/,
+      use: ['style-loader', windowsCssLoader, SASS_LOADER],
+    };
+    injectExtractLoader([rule], EXTRACT_LOADER);
+
+    const cssIdx = rule.use.indexOf(windowsCssLoader);
+    expect(rule.use[cssIdx - 1]).toBe(EXTRACT_LOADER);
+  });
 });
 
 // ---------------------------------------------------------------------------
