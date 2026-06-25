@@ -399,5 +399,50 @@ describe('withOptimizelyProvider HOC', () => {
 
       expect(mockTrack).not.toHaveBeenCalled();
     });
+
+    it('should call optimizely.track only once when multiple experiments fire decisions for the same URL', () => {
+      capturedDecisionListener?.({
+        decisionInfo: {
+          flagKey: 'experiment_1',
+          variationKey: 'on',
+          decisionEventDispatched: true,
+        },
+      });
+      capturedDecisionListener?.({
+        decisionInfo: {
+          flagKey: 'experiment_2',
+          variationKey: 'on',
+          decisionEventDispatched: true,
+        },
+      });
+
+      expect(mockTrack).toHaveBeenCalledTimes(1);
+      expect(mockTrack).toHaveBeenCalledWith('page-views');
+    });
+
+    it('should call optimizely.track again when navigating to a new URL', () => {
+      capturedDecisionListener?.({
+        decisionInfo: {
+          flagKey: 'experiment_1',
+          variationKey: 'on',
+          decisionEventDispatched: true,
+        },
+      });
+
+      Object.defineProperty(window, 'location', {
+        value: { pathname: '/new-page' },
+        writable: true,
+      });
+
+      capturedDecisionListener?.({
+        decisionInfo: {
+          flagKey: 'experiment_1',
+          variationKey: 'on',
+          decisionEventDispatched: true,
+        },
+      });
+
+      expect(mockTrack).toHaveBeenCalledTimes(2);
+    });
   });
 });

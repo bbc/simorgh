@@ -17,6 +17,7 @@ import isCypress from './isCypress';
 import { getClientTimeOfDay, getReferrer, isMobile } from './userAttributes';
 
 const PAGE_VIEW_EVENT_NAME = 'page-views';
+const trackedPageViewUrls = new Set<string>();
 const isInCypress = isCypress();
 const isStoryBook = process.env.STORYBOOK;
 const disableOptimizely = isStoryBook || isInCypress;
@@ -55,8 +56,12 @@ optimizely?.notificationCenter?.addNotificationListener(
       const decisionEventDispatched =
         notification.decisionInfo?.decisionEventDispatched;
 
-      if (decisionEventDispatched) {
-        optimizely.track(PAGE_VIEW_EVENT_NAME);
+      if (decisionEventDispatched && onClient()) {
+        const currentUrl = window.location.pathname;
+        if (!trackedPageViewUrls.has(currentUrl)) {
+          trackedPageViewUrls.add(currentUrl);
+          optimizely.track(PAGE_VIEW_EVENT_NAME);
+        }
       }
 
       notifyDecision(flagKey);
