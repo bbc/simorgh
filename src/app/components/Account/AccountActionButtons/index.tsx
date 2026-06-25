@@ -1,4 +1,4 @@
-import { use } from 'react';
+import React, { use } from 'react';
 import Paragraph from '#app/components/Paragraph';
 import CallToActionLink from '#app/components/CallToActionLink';
 import { AccountIcon } from '#app/components/icons';
@@ -10,12 +10,14 @@ interface AccountActionButtonsProps {
   signInComponentName: string;
   registerComponentName: string;
   onLightBackground?: boolean;
+  signInRef?: React.Ref<HTMLAnchorElement>;
 }
 
 const AccountActionButtons = ({
   signInComponentName,
   registerComponentName,
   onLightBackground = false,
+  signInRef,
 }: AccountActionButtonsProps) => {
   const { signInUrl, registerUrl } = use(AccountContext);
   const { translations } = use(ServiceContext);
@@ -33,6 +35,7 @@ const AccountActionButtons = ({
   return (
     <>
       <CallToActionLink
+        ref={signInRef}
         url={signInUrl}
         className={focusIndicatorClassName}
         css={[styles.callToActionLink, styles.signInLink]}
