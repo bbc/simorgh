@@ -52,7 +52,7 @@ optimizely?.notificationCenter?.addNotificationListener(
     const flagKey = notification.decisionInfo?.flagKey;
     const variationKey = notification.decisionInfo?.variationKey;
 
-    if (flagKey && variationKey !== 'off') {
+    if (flagKey && variationKey && variationKey !== 'off') {
       const decisionEventDispatched =
         notification.decisionInfo?.decisionEventDispatched;
 

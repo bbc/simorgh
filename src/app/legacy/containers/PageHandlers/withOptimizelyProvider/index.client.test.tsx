@@ -389,6 +389,17 @@ describe('withOptimizelyProvider HOC', () => {
       expect(mockTrack).not.toHaveBeenCalled();
     });
 
+    it('should not call optimizely.track when variationKey is undefined', () => {
+      capturedDecisionListener?.({
+        decisionInfo: {
+          flagKey: 'test_flag',
+          decisionEventDispatched: true,
+        },
+      });
+
+      expect(mockTrack).not.toHaveBeenCalled();
+    });
+
     it('should not call optimizely.track when flagKey is missing', () => {
       capturedDecisionListener?.({
         decisionInfo: {
