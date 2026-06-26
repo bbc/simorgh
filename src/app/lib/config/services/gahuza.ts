@@ -303,6 +303,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'Ivyo BBC Gahuza ibahitiramwo',
       latestMediaTitle: 'Ibiheruka',
       sport: {
+        keyEventsTitle: "Ibyabaye by'ingenzi",
         matchSummary: 'Incamake y’umukino',
         assists: 'Imipira yatanze ibitego',
         penalties: 'Penaliti',
