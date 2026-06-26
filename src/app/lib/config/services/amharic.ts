@@ -420,6 +420,12 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'የምድብ ጨዋታ',
+          last32: 'የ32ቱ ዙር',
+          last16: 'የምድብ አላፊዎች',
+          quarterFinals: 'ሩብ ፍፃሜ',
+          semiFinals: 'ግማሽ ፍፃሜ',
+          final: 'ፍፃሜ',
+          thirdPlaceFinal: 'ሦስተኛ ደረጃ',
         },
       },
     },
