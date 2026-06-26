@@ -322,6 +322,7 @@ export const service: DefaultServiceConfig = {
         privacyPolicyLinkText: 'Məxfilik siyasətimizi',
       },
       sport: {
+        keyEventsTitle: 'Əsas hadisələr',
         matchSummary: 'Matçın xülasəsi',
         assists: 'Asistlər',
         penalties: 'Penaltilər',
