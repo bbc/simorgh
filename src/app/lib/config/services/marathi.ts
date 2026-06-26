@@ -298,6 +298,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'बीबीसी मराठी स्पेशल',
       latestMediaTitle: 'नवीनतम',
       sport: {
+        keyEventsTitle: 'प्रमुख घटना',
         matchSummary: 'सामन्याचा सारांश',
         assists: 'असिस्ट',
         penalties: 'पेनल्टी',
