@@ -297,6 +297,7 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'مهم خبرونه',
       featuresAnalysisTitle: 'ځانګړي مطالب',
       sport: {
+        keyEventsTitle: 'مهمے پېړې',
         matchSummary: 'د لوبې لنډیز',
         assists: 'اسسټ',
         penalties: 'پنالټي',
