@@ -84,8 +84,8 @@ export const service: DefaultServiceConfig = {
       seeAll: 'সবগুলো খবর দেখুন',
       home: 'মূলপাতা',
       topicDiscovery: {
-        heading: 'আরো আবিষ্কার করুন',
-        moreFromTopic: '{topic} থেকে আরো',
+        heading: 'আরও আবিষ্কার করুন',
+        moreFromTopic: '{topic} থেকে আরও',
         fetchErrorMessage: 'লোড হতে ব্যর্থ। অনুগ্রহ করে আবার চেষ্টা করুন',
       },
       currentPage: 'বর্তমান পেজ',
