@@ -79,7 +79,7 @@ describe('Canonical ATI Analytics', () => {
     const helmet = Helmet.peek();
 
     expect(helmet.scriptTags[0].innerHTML).toEqual(
-      addSendStaticBeaconToWindow(),
+      `(${addSendStaticBeaconToWindow.toString()})()`,
     );
   });
 
