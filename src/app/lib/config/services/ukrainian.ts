@@ -450,6 +450,7 @@ export const service: UkrainianConfig = {
       ...secondaryColumnTranslations,
       relatedTopics: 'Темы',
       sport: {
+        keyEventsTitle: 'Ключові події',
         worldCupTeamNames: {
           algeria: 'Алжир',
           argentina: 'Аргентина',
