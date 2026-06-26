@@ -60,6 +60,7 @@ export interface Translations {
     saving: string;
     saved: string;
     remove: string;
+    removeAccessible: string;
     removing: string;
   };
   myNews?: {

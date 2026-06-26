@@ -5,61 +5,72 @@ import styles from './index.styles';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 
 export interface SaveButtonProps {
-  onClick: () => void;
+  visualLabel: string;
+  hoverVisualLabel?: string;
+  accessibleLabel: string;
   isLoading?: boolean;
   isUpdating?: boolean;
   isSaved?: boolean;
   disabled?: boolean;
-  buttonText?: string;
-  removeText?: string;
+  onClick: (event?: React.MouseEvent<HTMLButtonElement>) => void;
   testId?: string;
 }
 
 const SaveButton = ({
-  onClick,
+  visualLabel,
+  hoverVisualLabel,
+  accessibleLabel,
   isLoading = false,
   isUpdating = false,
   isSaved = false,
   disabled = false,
-  buttonText,
-  removeText = '',
+  onClick,
   testId,
 }: SaveButtonProps) => {
-  const [isHovered, setIsHovered] = useState(false);
+  const [isFocusedOrHovered, setIsFocusedOrHovered] = useState(false);
   const labelId = useId();
 
-  const buttonLabel =
-    isHovered && isSaved && !isUpdating ? removeText : buttonText;
+  const isBusy = isLoading || isUpdating;
+
+  // Hover/focus only changes the visual affordance, never the accessible name.
+  const showRemoveAffordance = isSaved && !isUpdating && isFocusedOrHovered;
+  const displayedVisualLabel =
+    showRemoveAffordance && hoverVisualLabel ? hoverVisualLabel : visualLabel;
+
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    if (isBusy) return;
+    onClick(event);
+  };
 
   return (
     <button
       css={[styles.buttonWrapper, isUpdating && styles.updatingState]}
       type="button"
       aria-labelledby={labelId}
-      onClick={onClick}
-      disabled={disabled || isLoading || isUpdating}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      onFocus={() => setIsHovered(true)}
-      onBlur={() => setIsHovered(false)}
+      aria-busy={isBusy}
+      onClick={handleClick}
+      disabled={disabled || isBusy}
+      onMouseEnter={() => setIsFocusedOrHovered(true)}
+      onMouseLeave={() => setIsFocusedOrHovered(false)}
+      onFocus={() => setIsFocusedOrHovered(true)}
+      onBlur={() => setIsFocusedOrHovered(false)}
       {...(testId && { 'data-testid': testId })}
     >
       <span aria-hidden="true" css={styles.iconText}>
-        {(isLoading || isUpdating) && <Spinner />}
-        {!isLoading && !isUpdating && !isSaved && <BookmarkIcon />}
-        {!isLoading &&
-          !isUpdating &&
+        {isBusy && <Spinner />}
+        {!isBusy && !isSaved && <BookmarkIcon />}
+        {!isBusy &&
           isSaved &&
-          (isHovered ? (
+          (showRemoveAffordance ? (
             <Close width="20" height="20" />
           ) : (
             <FilledBookmarkIcon />
           ))}
-        {buttonLabel}
+        {displayedVisualLabel}
       </span>
 
       <VisuallyHiddenText id={labelId} aria-live="polite">
-        {buttonLabel}
+        {accessibleLabel}
       </VisuallyHiddenText>
     </button>
   );
