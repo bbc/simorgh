@@ -301,6 +301,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'Xul',
       latestMediaTitle: 'Arrimhii u danbeeyey',
       sport: {
+        keyEventsTitle: 'Dhacdooyinka muhiimka ah',
         matchSummary: 'Soo koobidda ciyaarta',
         assists: 'Caawin',
         penalties: 'Rigoore',
