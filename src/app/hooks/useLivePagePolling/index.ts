@@ -22,7 +22,6 @@ const useLivePagePolling = (
       if (enableFeature === false) return;
       if (currentStreamData?.page?.index !== 1) return;
 
-
       const polledStream = await makeRequest(streamId);
 
       if (polledStream != null) {
