@@ -390,6 +390,12 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'Qrup mərhələsi',
+          last32: '1/16 mərhələ',
+          last16: '1/8 final',
+          quarterFinals: 'Dörddə bir final',
+          semiFinals: 'Yarımfinal',
+          final: 'Final',
+          thirdPlaceFinal: 'Üçüncü yer',
         },
       },
     },

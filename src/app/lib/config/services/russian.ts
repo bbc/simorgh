@@ -185,6 +185,12 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'Групповой этап',
+          last32: '1/16 финала',
+          last16: '1/8 финала',
+          quarterFinals: 'Четвертьфинал',
+          semiFinals: 'Полуфинал',
+          final: 'Финал',
+          thirdPlaceFinal: 'За третье место',
         },
       },
     },

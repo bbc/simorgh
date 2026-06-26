@@ -161,6 +161,12 @@ const translateSportData = (
 
   const stageLookup: Record<string, string | undefined> = {
     'Group Stage': stages?.groupStage,
+    'Last 32': stages?.last32,
+    'Last 16': stages?.last16,
+    'Quarter-finals': stages?.quarterFinals,
+    'Semi-finals': stages?.semiFinals,
+    Final: stages?.final,
+    '3rd Place Final': stages?.thirdPlaceFinal,
   };
 
   return {
