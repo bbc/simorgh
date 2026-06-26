@@ -498,6 +498,49 @@ describe('withOptimizelyProvider HOC', () => {
       ]);
     });
 
+    it('should send page-views again when navigating back to a previously visited URL', () => {
+      capturedDecisionListener?.({
+        decisionInfo: {
+          flagKey: 'experiment_1',
+          variationKey: 'on',
+          decisionEventDispatched: true,
+        },
+      });
+
+      Object.defineProperty(window, 'location', {
+        value: { pathname: '/new-page' },
+        writable: true,
+      });
+
+      capturedDecisionListener?.({
+        decisionInfo: {
+          flagKey: 'experiment_1',
+          variationKey: 'on',
+          decisionEventDispatched: true,
+        },
+      });
+
+      Object.defineProperty(window, 'location', {
+        value: { pathname: '/pathname' },
+        writable: true,
+      });
+
+      capturedDecisionListener?.({
+        decisionInfo: {
+          flagKey: 'experiment_1',
+          variationKey: 'on',
+          decisionEventDispatched: true,
+        },
+      });
+
+      expect(mockTrack.mock.calls.map(call => call[0])).toEqual([
+        'visit',
+        'page-views',
+        'page-views',
+        'page-views',
+      ]);
+    });
+
     it('should not track or notify decisions when not on client', () => {
       jest.resetModules();
 
