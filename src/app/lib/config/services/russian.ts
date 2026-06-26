@@ -117,6 +117,7 @@ export const service: DefaultServiceConfig = {
       ...russianUkrainianSharedTranslations,
       ...headerFooterTranslations,
       sport: {
+        keyEventsTitle: 'Ключевые события',
         matchSummary: 'Обзор матча',
         assists: 'Голевые передачи',
         penalties: 'Пенальти',
