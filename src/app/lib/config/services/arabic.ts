@@ -360,6 +360,7 @@ export const service: DefaultServiceConfig = {
         closedDescription: 'أغلق باب المشاركة يوم {{date}}.',
       },
       sport: {
+        keyEventsTitle: 'الأحداث الرئيسية',
         matchSummary: 'ملخص المباراة',
         assists: 'تمريرات حاسمة',
         penalties: 'العقوبات',
