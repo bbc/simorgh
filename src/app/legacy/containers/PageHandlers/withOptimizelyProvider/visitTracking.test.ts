@@ -7,11 +7,6 @@ describe('registerVisitActivity', () => {
 
   beforeEach(() => {
     localStorage.clear();
-    jest.spyOn(Date, 'now').mockReturnValue(now);
-  });
-
-  afterEach(() => {
-    jest.restoreAllMocks();
   });
 
   it('should report a new visit and record activity when no previous visit exists', () => {
