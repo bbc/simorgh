@@ -302,6 +302,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'নির্বাচিত খবর',
       latestMediaTitle: 'সর্বশেষ',
       sport: {
+        keyEventsTitle: 'গুরুত্বপূর্ণ ঘটনা',
         matchSummary: 'ম্যাচের সারসংক্ষেপ',
         assists: 'অ্যাসিস্ট',
         penalties: 'পেনাল্টি',
