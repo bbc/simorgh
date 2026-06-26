@@ -277,6 +277,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'Ìwádìí kíkún lóríi kókó ìròyìn ',
       latestMediaTitle: 'Èyí tí ó ṣẹ̀ṣẹ̀dé',
       sport: {
+        keyEventsTitle: 'Àwọn ìṣẹ̀lẹ̀ pàtàkì',
         matchSummary: 'Akopọ Ere',
         assists: 'Iranlọwọ',
         penalties: 'Penariti',
