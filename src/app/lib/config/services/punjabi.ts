@@ -275,6 +275,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'ਦ੍ਰਿਸ਼ਟੀਕੋਣ',
       latestMediaTitle: 'ਬਿਲਕੁਲ ਨਵਾਂ',
       sport: {
+        keyEventsTitle: 'ਮੁੱਖ ਘਟਨਾਵਾਂ',
         matchSummary: 'ਮੈਚ ਦਾ ਸਾਰ',
         assists: 'ਅਸਿਸਟ',
         penalties: 'ਪੈਨਲਟੀ',
