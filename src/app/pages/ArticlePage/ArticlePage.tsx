@@ -444,6 +444,9 @@ const ArticlePage = ({
     pageData?.countryCuration?.summaries?.length,
   );
 
+  const useCollapsedArticleSpacing =
+    showContinueReadingButton && !showAllContent;
+
   // EXPERIMENT: PWA Promotional Banner
   const shouldRenderPWAPromotionalBanner =
     !isTopBarOJsEnabled || !pageData?.secondaryColumn?.topStories?.length;
@@ -498,8 +501,19 @@ const ArticlePage = ({
       <ElectionBanner aboutTags={aboutTags} taggings={taggings} />
       <ArticleMessageBanner aboutTags={aboutTags} taggings={taggings} />
       <div css={styles.grid}>
-        <div css={!isPGL ? styles.primaryColumn : styles.pglColumn}>
-          <main css={styles.mainContent} role="main">
+        <div
+          css={[
+            !isPGL ? styles.primaryColumn : styles.pglColumn,
+            useCollapsedArticleSpacing && styles.collapsedArticleColumn,
+          ]}
+        >
+          <main
+            css={[
+              styles.mainContent,
+              useCollapsedArticleSpacing && styles.collapsedMainContent,
+            ]}
+            role="main"
+          >
             <Blocks
               blocks={articleBlocks}
               componentsToRender={componentsToRender}
