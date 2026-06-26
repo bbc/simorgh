@@ -348,6 +348,7 @@ export const service: ZhongwenConfig = {
       featuresAnalysisTitle: '特别推荐',
       latestMediaTitle: '最新',
       sport: {
+        keyEventsTitle: '关键事件',
         matchSummary: '比赛总结',
         assists: '助攻',
         penalties: '点球',
@@ -720,6 +721,7 @@ export const service: ZhongwenConfig = {
       featuresAnalysisTitle: '特別推薦',
       latestMediaTitle: '最新',
       sport: {
+        keyEventsTitle: '關鍵事件',
         matchSummary: '比賽總結',
         assists: '助攻',
         penalties: '點球',
