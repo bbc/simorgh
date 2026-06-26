@@ -157,7 +157,7 @@ describe('LatestPostButton', () => {
     });
   });
 
-  it('should send a button shown tracking event with page_id', async () => {
+  it('should send a button shown tracking event with page_id when the button times out', async () => {
     await act(async () => {
       return render(
         <LastestPostButton
@@ -169,8 +169,40 @@ describe('LatestPostButton', () => {
       );
     });
 
+    expect(mockTrackEvent).not.toHaveBeenCalled();
+
+    act(() => {
+      jest.runAllTimers();
+    });
+
     expect(mockTrackEvent).toHaveBeenCalledWith(
       expect.stringContaining('"page_id":"test-page-id"'),
+    );
+    expect(mockTrackEvent).not.toHaveBeenCalledWith(
+      expect.stringContaining('"time_shown"'),
+    );
+  });
+
+  it('should send a button shown tracking event with page_id and time_shown when clicked', async () => {
+    await act(async () => {
+      return render(
+        <LastestPostButton
+          isFirstPostVisible={false}
+          hasPendingUpdate
+          streamRef={null}
+          {...defaultProps}
+        />,
+      );
+    });
+
+    const button = screen.getByTestId('latest-post-button');
+    fireEvent.click(button);
+
+    expect(mockTrackEvent).toHaveBeenCalledWith(
+      expect.stringContaining('"page_id":"test-page-id"'),
+    );
+    expect(mockTrackEvent).toHaveBeenCalledWith(
+      expect.stringContaining('"time_shown"'),
     );
   });
 

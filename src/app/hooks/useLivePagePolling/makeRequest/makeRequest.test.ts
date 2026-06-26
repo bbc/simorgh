@@ -17,7 +17,7 @@ describe('makeRequest', () => {
     );
 
     const result = await makeRequest('someID');
-    const content = result.data.results[0].content.model.blocks[1].model;
+    const content = result.results[0].content.model.blocks[1].model;
     expect(content).toStrictEqual({
       oembed: {
         height: 575,
@@ -56,6 +56,6 @@ describe('makeRequest', () => {
     );
 
     const result = await makeRequest('someID');
-    expect(result).toStrictEqual({ data: null, statusCode: 404 });
+    expect(result).toStrictEqual(null);
   });
 });

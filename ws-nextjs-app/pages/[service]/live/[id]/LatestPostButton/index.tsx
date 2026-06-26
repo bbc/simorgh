@@ -1,4 +1,4 @@
-import { RefObject, use, useEffect, useState } from 'react';
+import { RefObject, use, useRef, useEffect, useState } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import useCustomEventTracker from '#app/hooks/useCustomEventTracker';
@@ -35,6 +35,7 @@ const LatestPostButton = ({
   } = use(ServiceContext);
 
   const [showButton, setShowButton] = useState(false);
+  const buttonShownTime = useRef<number | null>(null);
 
   const trackButtonShown = useCustomEventTracker({
     eventName: 'live_refresh_button_shown',
@@ -48,6 +49,17 @@ const LatestPostButton = ({
     const hasReducedMotion = window.matchMedia(
       '(prefers-reduced-motion: reduce)',
     ).matches;
+
+    if (buttonShownTime.current != null) {
+      const timeShown = Date.now() - buttonShownTime.current;
+      trackButtonShown(
+        JSON.stringify({
+          page_id: pageId,
+          time_shown: timeShown,
+        }),
+      );
+      buttonShownTime.current = null;
+    }
 
     if (streamRef) {
       const streamContainer = streamRef.current;
@@ -68,15 +80,18 @@ const LatestPostButton = ({
     const shouldShowButton = !isFirstPostVisible && hasPendingUpdate;
     if (shouldShowButton) {
       setShowButton(shouldShowButton);
-
-      trackButtonShown(
-        JSON.stringify({
-          page_id: pageId,
-        }),
-      );
+      buttonShownTime.current = Date.now();
 
       timeoutId = setTimeout(() => {
         setShowButton(false);
+        if (buttonShownTime.current != null) {
+          trackButtonShown(
+            JSON.stringify({
+              page_id: pageId,
+            }),
+          );
+          buttonShownTime.current = null;
+        }
       }, TEN_SECONDS);
     } else {
       setShowButton(shouldShowButton);

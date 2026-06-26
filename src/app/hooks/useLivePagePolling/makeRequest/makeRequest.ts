@@ -15,11 +15,11 @@ export default async (liveTextStreamId: string) => {
 
     if (status === 200 && data.results.length > 0) {
       data.results = data.results.map(transformPost);
-      return { data, statusCode: status };
+      return data;
     }
 
-    return { data: null, statusCode: status };
+    return null;
   } catch (_err) {
-    return { data: null, statusCode: null };
+    return null;
   }
 };

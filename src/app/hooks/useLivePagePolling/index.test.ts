@@ -4,18 +4,10 @@ import useLivePagePolling, { POLLING_INTERVAL } from '.';
 import fixtureLivePageData from './fixture/fixtureLivePageData';
 import fixtureLivePageDataUpdate from './fixture/fixtureStreamDataUpdate';
 import * as makeRequest from './makeRequest/makeRequest';
-import * as useCustomEventTrackerModule from '../useCustomEventTracker';
 
 jest.useFakeTimers();
 
 jest.mock('uuid', () => ({ v4: () => '00000000-0000-0000-0000-000000000000' }));
-
-const mockTrackEvent = jest.fn();
-const mockUseCustomEventTracker = jest.spyOn(
-  useCustomEventTrackerModule,
-  'default',
-);
-mockUseCustomEventTracker.mockReturnValue(mockTrackEvent);
 
 describe('useLivePagePolling', () => {
   beforeEach(() => {
@@ -28,7 +20,7 @@ describe('useLivePagePolling', () => {
 
     jest
       .spyOn(makeRequest, 'default')
-      .mockResolvedValue({ data: fixtureLivePageDataUpdate, statusCode: 200 });
+      .mockResolvedValue(fixtureLivePageDataUpdate);
 
     const { result } = renderHook(() =>
       useLivePagePolling(initialPageData, true),
@@ -47,7 +39,7 @@ describe('useLivePagePolling', () => {
 
     jest
       .spyOn(makeRequest, 'default')
-      .mockResolvedValue({ data: fixtureLivePageDataUpdate, statusCode: 200 });
+      .mockResolvedValue(fixtureLivePageDataUpdate);
 
     const { result } = renderHook(() =>
       useLivePagePolling(initialPageData, true),
@@ -68,7 +60,7 @@ describe('useLivePagePolling', () => {
 
     jest
       .spyOn(makeRequest, 'default')
-      .mockResolvedValue({ data: fixtureLivePageDataUpdate, statusCode: 200 });
+      .mockResolvedValue(fixtureLivePageDataUpdate);
 
     const { result } = renderHook(() =>
       useLivePagePolling(initialPageData, true),
@@ -105,7 +97,7 @@ describe('useLivePagePolling', () => {
 
     const requestSpy = jest
       .spyOn(makeRequest, 'default')
-      .mockResolvedValue({ data: fixtureLivePageDataUpdate, statusCode: 200 });
+      .mockResolvedValue(fixtureLivePageDataUpdate);
 
     renderHook(() =>
       useLivePagePolling(
@@ -125,10 +117,9 @@ describe('useLivePagePolling', () => {
     const initialPageData =
       fixtureLivePageData as unknown as ComponentProps['pageData'];
 
-    jest.spyOn(makeRequest, 'default').mockResolvedValue({
-      data: fixtureLivePageData.liveTextStream.content.data,
-      statusCode: 200,
-    });
+    jest
+      .spyOn(makeRequest, 'default')
+      .mockResolvedValue(fixtureLivePageData.liveTextStream.content.data);
 
     const { result } = renderHook(() =>
       useLivePagePolling(initialPageData, true),
@@ -141,42 +132,5 @@ describe('useLivePagePolling', () => {
     const { hasPendingUpdate } = result.current;
 
     expect(hasPendingUpdate).toBe(false);
-  });
-
-  it('should initialize useCustomEventTracker with the correct event name', () => {
-    const initialPageData =
-      fixtureLivePageData as unknown as ComponentProps['pageData'];
-
-    jest
-      .spyOn(makeRequest, 'default')
-      .mockResolvedValue({ data: fixtureLivePageDataUpdate, statusCode: 200 });
-
-    renderHook(() => useLivePagePolling(initialPageData, true));
-
-    expect(mockUseCustomEventTracker).toHaveBeenCalledWith({
-      eventName: 'live_refresh_poll_response',
-    });
-  });
-
-  it('should send a tracking event with status_code and page_id', async () => {
-    const initialPageData =
-      fixtureLivePageData as unknown as ComponentProps['pageData'];
-
-    jest
-      .spyOn(makeRequest, 'default')
-      .mockResolvedValue({ data: fixtureLivePageDataUpdate, statusCode: 200 });
-
-    renderHook(() => useLivePagePolling(initialPageData, true));
-
-    await act(async () => {
-      jest.advanceTimersByTime(POLLING_INTERVAL);
-    });
-
-    expect(mockTrackEvent).toHaveBeenCalledWith(
-      expect.stringContaining('"status_code":200'),
-    );
-    expect(mockTrackEvent).toHaveBeenCalledWith(
-      expect.stringContaining('"page_id":"8E1A80B519D1451FBF5DF6AB029B8B1C"'),
-    );
   });
 });
