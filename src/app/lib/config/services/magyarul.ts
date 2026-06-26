@@ -322,6 +322,7 @@ export const service: DefaultServiceConfig = {
         closedDescription: 'Bezárt {{date}}.',
       },
       sport: {
+        keyEventsTitle: 'Fő események',
         matchSummary: 'Mérkőzés összefoglaló',
         assists: 'Gólpasszok',
         penalties: 'Büntetők',
