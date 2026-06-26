@@ -282,6 +282,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'ኣዘራረብቲ ዛዕባታት',
       latestMediaTitle: 'ናይ መወዳእታ',
       sport: {
+        keyEventsTitle: 'ኣገዳሲ ፍጻመታት',
         matchSummary: 'ሓፈሻዊ ጸብጻብ ግጥሚ',
         assists: 'ኣሊዓሊያ',
         penalties: 'ፔናልቲ',
