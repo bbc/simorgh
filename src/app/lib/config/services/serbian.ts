@@ -359,6 +359,7 @@ export const service: SerbianConfig = {
           'Pogledajte punu verziju stranice da biste videli čitav sadržaj.',
       },
       sport: {
+        keyEventsTitle: 'Ključni događaji',
         matchSummary: 'Rezime utakmice',
         assists: 'Asistencije',
         penalties: 'Penali',
@@ -832,6 +833,7 @@ export const service: SerbianConfig = {
           'Погледајте пуну верзију странице да бисте видели читав садржај.',
       },
       sport: {
+        keyEventsTitle: 'Кољни događaji',
         matchSummary: 'Резиме утакмице',
         assists: 'Асистенције',
         penalties: 'Пенали',
