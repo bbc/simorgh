@@ -283,6 +283,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'ఫీచర్లు',
       latestMediaTitle: 'తాజా వార్తలు',
       sport: {
+        keyEventsTitle: 'కీలక సంఘటనలు',
         matchSummary: 'మ్యాచ్ సారాంశం',
         assists: 'అసిస్టులు',
         penalties: 'పెనాల్టీలు',
