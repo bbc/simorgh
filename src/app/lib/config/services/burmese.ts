@@ -315,6 +315,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'ဆောင်းပါး',
       latestMediaTitle: 'နောက်ဆုံးရ',
       sport: {
+        keyEventsTitle: 'အဓိကဖြစ်ရပ်များ',
         matchSummary: 'ပွဲအကျဉ်းချုပ်',
         assists: 'ဂိုးဖန်တီးမှုများ',
         penalties: 'ပင်နယ်တီး',
