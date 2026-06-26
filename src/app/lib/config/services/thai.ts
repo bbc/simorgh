@@ -62,6 +62,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'ดูทั้งหมด',
       home: 'หน้าแรก',
+      topicDiscovery: {
+        heading: 'ค้นพบเพิ่มเติม',
+        moreFromTopic: 'เพิ่มเติมจาก {topic}',
+        fetchErrorMessage: 'โหลดไม่สำเร็จ กรุณาลองอีกครั้ง',
+      },
       currentPage: 'หน้าปัจจุบัน',
       skipLinkText: 'ข้ามไปยังเนื้อหา',
       relatedContent: 'อ่านเรื่องที่เกี่ยวข้อง',

@@ -80,6 +80,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'વધુ વાંચો',
       home: 'સમાચાર',
+      topicDiscovery: {
+        heading: 'વધુ શોધો',
+        moreFromTopic: '{topic}માંથી વધુ',
+        fetchErrorMessage: 'લોડ કરવામાં નિષ્ફળ. કૃપા કરીને ફરી પ્રયાસ કરો',
+      },
       continueReading: 'આગળ વાંચો',
       currentPage: 'વર્તમાન પેજ',
       skipLinkText: 'કન્ટેન્ટ પર જાવ',

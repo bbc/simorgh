@@ -68,6 +68,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Vezi integral',
       home: 'Știri',
+      topicDiscovery: {
+        heading: 'Descoperă mai mult',
+        moreFromTopic: 'Mai mult de la {topic}',
+        fetchErrorMessage: 'Încărcarea a eșuat. Vă rugăm să încercați din nou',
+      },
       currentPage: 'Pagina curentă',
       skipLinkText: 'Acces direct la conținut',
       relatedContent: 'Articole similare',

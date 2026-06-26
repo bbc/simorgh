@@ -82,6 +82,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'सब देखें',
       home: 'होम पेज',
+      topicDiscovery: {
+        heading: 'और जानें',
+        moreFromTopic: '{topic} से अधिक',
+        fetchErrorMessage: 'लोड नहीं हो पाया। कृपया पुनः प्रयास करें',
+      },
       continueReading: 'पढ़ना जारी रखें',
       currentPage: 'मौजूदा पन्ना',
       skipLinkText: 'सामग्री को स्किप करें',

@@ -81,6 +81,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Arag dhammaan',
       home: 'War',
+      topicDiscovery: {
+        heading: 'Baro wax badan',
+        moreFromTopic: 'Wax dheeraad ah oo ka socda {topic}',
+        fetchErrorMessage: 'Ku shubiddu waa fashilantay. Fadlan isku day mar kale',
+      },
       continueReading: 'Sii Akhri',
       currentPage: 'Bogga hadda',
       skipLinkText: 'U gudub qaybta macluumaadka',

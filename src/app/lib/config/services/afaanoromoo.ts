@@ -77,6 +77,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Hunda ilaali',
       home: 'Oduu',
+      topicDiscovery: {
+        heading: 'Dabalata argadhu',
+        moreFromTopic: '{topic} irraa dabalata',
+        fetchErrorMessage: "Wal bira hin geenye. Mee irra deebi'ii yaali",
+      },
       currentPage: 'Fuula kan ammaa',
       skipLinkText: 'Qabiyyeetti darbi',
       relatedContent: 'Odeessa kana irratti dabalata',

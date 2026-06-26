@@ -63,6 +63,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: '全ての記事を見る',
       home: 'ホーム',
+      topicDiscovery: {
+        heading: 'もっと見る',
+        moreFromTopic: '{topic} のその他',
+        fetchErrorMessage: '読み込みに失敗しました。もう一度お試しください',
+      },
       currentPage: '現在のページ',
       skipLinkText: 'コンテンツへ移動',
       relatedContent: '関連コンテンツ',

@@ -75,6 +75,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Raba vyose',
       home: `Urupapuro rw'itangiriro`,
+      topicDiscovery: {
+        heading: 'Menya byinshi',
+        moreFromTopic: 'Ibindi biturutse kuri {topic}',
+        fetchErrorMessage: 'Ntibyashoboye gufunguka. Ongera ugerageze',
+      },
       continueReading: 'Komeza usome',
       currentPage: 'Uru rupapuro',
       skipLinkText: 'Simbira ku birimwo',

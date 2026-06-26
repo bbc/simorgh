@@ -81,6 +81,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Баарын көрүү',
       home: 'Башталгыч бет',
+      topicDiscovery: {
+        heading: 'Көбүрөөк табуу',
+        moreFromTopic: '{topic} боюнча көбүрөөк',
+        fetchErrorMessage: 'Жүктөө ишке ашкан жок. Кайра аракет кылыңыз',
+      },
       currentPage: 'Ачылып турган баракча',
       skipLinkText: 'Сайтка өтүү',
       relatedContent: 'Тема боюнча башка макалалар',

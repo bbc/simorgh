@@ -65,6 +65,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'ټول وګورئ',
       home: 'کور پاڼه',
+      topicDiscovery: {
+        heading: 'نور وپلټئ',
+        moreFromTopic: '{topic} ځخه نور',
+        fetchErrorMessage: 'پورته کول ناکام شول. مهرباني وکړئ بیا هڅه وکړئ',
+      },
       currentPage: 'اوسنۍ پاڼه',
       skipLinkText: 'مطلب ته ورشئ',
       relatedContent: 'ورته مطالب',

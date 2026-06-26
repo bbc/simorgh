@@ -65,6 +65,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Összes megtekintése',
       home: 'Főoldal',
+      topicDiscovery: {
+        heading: 'Továbbiak felfedezése',
+        moreFromTopic: 'Továbbiak innen: {topic}',
+        fetchErrorMessage: 'Nem sikerült betölteni. Kérjük, próbálja újra',
+      },
       currentPage: 'Jelenlegi oldal',
       skipLinkText: 'Ugrás a tartalomra',
       relatedContent: 'Kapcsolódó tartalom',

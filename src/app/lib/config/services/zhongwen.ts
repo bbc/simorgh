@@ -149,6 +149,11 @@ export const service: ZhongwenConfig = {
       },
       seeAll: '浏览全部',
       home: '主页',
+      topicDiscovery: {
+        heading: '发现更多',
+        moreFromTopic: '更多来自{topic}',
+        fetchErrorMessage: '加载失败。请重试',
+      },
       currentPage: '目前页面',
       skipLinkText: '跳过此内容',
       relatedContent: '更多相关内容',
@@ -522,6 +527,11 @@ export const service: ZhongwenConfig = {
       },
       seeAll: '瀏覽全部',
       home: '主頁',
+      topicDiscovery: {
+        heading: '探索更多',
+        moreFromTopic: '更多來自{topic}',
+        fetchErrorMessage: '載入失敗。請再試一次',
+      },
       currentPage: '目前頁面',
       skipLinkText: '跳過此內容',
       relatedContent: '更多相關內容',

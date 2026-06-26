@@ -82,6 +82,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Tazama zote',
       home: 'Habari',
+      topicDiscovery: {
+        heading: 'Gundua zaidi',
+        moreFromTopic: 'Zaidi kutoka {topic}',
+        fetchErrorMessage: 'Imeshindwa kupakia. Tafadhali jaribu tena',
+      },
       continueReading: 'Soma zaidi',
       currentPage: 'Ukurasa uliopo ',
       skipLinkText: 'Ruka hadi maelezo',

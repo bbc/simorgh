@@ -76,6 +76,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'ሁሉንም ይመልከቱ',
       home: 'ዜና',
+      topicDiscovery: {
+        heading: 'ተጨማሪ ያግኙ',
+        moreFromTopic: 'ከ {topic} ተጨማሪ',
+        fetchErrorMessage: 'መጫን አልተሳካም። እባክዎ እንደገና ይሞክሩ',
+      },
       currentPage: 'መነሻ ገፅ',
       skipLinkText: 'ወደ ዋናው ይዘት ይለፉ',
       relatedContent: 'በዚህ ዘገባ ላይ ተጨማሪ መረጃ',

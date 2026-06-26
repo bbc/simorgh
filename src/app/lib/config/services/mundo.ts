@@ -106,6 +106,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Ver todo',
       home: 'Página de inicio',
+      topicDiscovery: {
+        heading: 'Descubre más',
+        moreFromTopic: 'Más de {topic}',
+        fetchErrorMessage: 'Error al cargar. Inténtalo de nuevo',
+      },
       continueReading: 'Continuar leyendo',
       currentPage: 'Página actual',
       skipLinkText: 'Ir al contenido',

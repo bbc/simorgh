@@ -83,10 +83,9 @@ export const service: DefaultServiceConfig = {
       home: 'Labaran Duniya',
       continueReading: 'Ci gaba da karantawa',
       topicDiscovery: {
-        heading: 'Gano ƙarin abubuwa',
-        moreFromTopic: 'Ƙarin labarai daga {topic}',
-        fetchErrorMessage:
-          'An kasa lodawa. Da fatan za a sake gwadawa daga baya.',
+        heading: 'Gano ƙari',
+        moreFromTopic: 'Ƙari daga {topic}',
+        fetchErrorMessage: 'An kasa lodawa. Da fatan a sake gwadawa',
       },
       currentPage: 'Shafin da ake ciki',
       skipLinkText: 'Tsallaka zuwa abubuwan da ke ciki',

@@ -63,6 +63,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'सबै हेर्नुहोस्',
       home: 'होमपेज',
+      topicDiscovery: {
+        heading: 'थप पत्ता लगाउनुहोस्',
+        moreFromTopic: '{topic} बाट थप',
+        fetchErrorMessage: 'लोड गर्न असफल भयो। कृपया फेरि प्रयास गर्नुहोस्',
+      },
       currentPage: 'अहिलेको पृष्ठ',
       skipLinkText: 'सामग्रीमा जानुहोस्',
       relatedContent: 'सम्बन्धित सामग्री',
