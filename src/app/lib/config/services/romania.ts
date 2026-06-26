@@ -341,6 +341,7 @@ export const service: DefaultServiceConfig = {
         closedDescription: 'Campania s-a încheiat la data {{date}}.',
       },
       sport: {
+        keyEventsTitle: 'Evenimente cheie',
         matchSummary: 'Rezumatul meciului',
         worldCupTeamNames: {
           algeria: 'Algeria',
