@@ -14,9 +14,11 @@ import { notifyDecision } from '#app/lib/optimizelyDecisionStore';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import isCypress from './isCypress';
+import registerVisitActivity from './visitTracking';
 import { getClientTimeOfDay, getReferrer, isMobile } from './userAttributes';
 
 const PAGE_VIEW_EVENT_NAME = 'page-views';
+const VISIT_EVENT_NAME = 'visit';
 const trackedPageViewUrls = new Set<string>();
 const isInCypress = isCypress();
 const isStoryBook = process.env.STORYBOOK;
@@ -62,6 +64,13 @@ optimizely?.notificationCenter?.addNotificationListener(
         const currentUrl = window.location.pathname;
         if (!trackedPageViewUrls.has(currentUrl)) {
           trackedPageViewUrls.add(currentUrl);
+
+          // the visit (denominator) must be sent before the page view (numerator)
+          // so the page view falls inside Optimizely's ratio metric attribution window
+          if (registerVisitActivity(Date.now())) {
+            optimizely.track(VISIT_EVENT_NAME);
+          }
+
           optimizely.track(PAGE_VIEW_EVENT_NAME);
         }
       }

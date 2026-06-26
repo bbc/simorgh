@@ -506,7 +506,7 @@ const ArticlePage = ({
             />
             <OptimizelyPageMetrics trackPageComplete />
           </main>
-          <OptimizelyPageMetrics trackPageView trackPageDepth trackVisit />
+          <OptimizelyPageMetrics trackPageDepth />
           {/* EXPERIMENT: Topic Discovery */}
           {showTopicDiscovery && (
             <TopicDiscovery

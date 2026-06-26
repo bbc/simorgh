@@ -314,6 +314,11 @@ describe('withOptimizelyProvider HOC', () => {
     beforeEach(() => {
       capturedDecisionListener = undefined;
       mockTrack.mockReset();
+      localStorage.clear();
+      Object.defineProperty(window, 'location', {
+        value: { pathname: '/pathname' },
+        writable: true,
+      });
 
       // The notification listener is registered at module initialisation time (top-level code
       // in index.tsx), so the standard top-level import would have already run before any mocks
@@ -411,7 +416,38 @@ describe('withOptimizelyProvider HOC', () => {
       expect(mockTrack).not.toHaveBeenCalled();
     });
 
-    it('should call optimizely.track only once when multiple experiments fire decisions for the same URL', () => {
+    it('should send the visit event before the page-views event on a new visit', () => {
+      capturedDecisionListener?.({
+        decisionInfo: {
+          flagKey: 'test_flag',
+          variationKey: 'on',
+          decisionEventDispatched: true,
+        },
+      });
+
+      expect(mockTrack.mock.calls.map(call => call[0])).toEqual([
+        'visit',
+        'page-views',
+      ]);
+    });
+
+    it('should not send a visit event within the visit timeout window', () => {
+      const tenMinutesAgo = Date.now() - 10 * 60 * 1000;
+      localStorage.setItem('last_visit_ts', String(tenMinutesAgo));
+
+      capturedDecisionListener?.({
+        decisionInfo: {
+          flagKey: 'test_flag',
+          variationKey: 'on',
+          decisionEventDispatched: true,
+        },
+      });
+
+      expect(mockTrack).toHaveBeenCalledTimes(1);
+      expect(mockTrack).toHaveBeenCalledWith('page-views');
+    });
+
+    it('should send visit then page-views exactly once when multiple experiments fire decisions for the same URL', () => {
       capturedDecisionListener?.({
         decisionInfo: {
           flagKey: 'experiment_1',
@@ -427,11 +463,13 @@ describe('withOptimizelyProvider HOC', () => {
         },
       });
 
-      expect(mockTrack).toHaveBeenCalledTimes(1);
-      expect(mockTrack).toHaveBeenCalledWith('page-views');
+      expect(mockTrack.mock.calls.map(call => call[0])).toEqual([
+        'visit',
+        'page-views',
+      ]);
     });
 
-    it('should call optimizely.track again when navigating to a new URL', () => {
+    it('should send page-views again on a new URL without re-sending visit within the same session', () => {
       capturedDecisionListener?.({
         decisionInfo: {
           flagKey: 'experiment_1',
@@ -453,7 +491,11 @@ describe('withOptimizelyProvider HOC', () => {
         },
       });
 
-      expect(mockTrack).toHaveBeenCalledTimes(2);
+      expect(mockTrack.mock.calls.map(call => call[0])).toEqual([
+        'visit',
+        'page-views',
+        'page-views',
+      ]);
     });
 
     it('should not track or notify decisions when not on client', () => {

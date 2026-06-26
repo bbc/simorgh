@@ -290,7 +290,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
           <main css={styles.mainContent} role="main">
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </main>
-          <OptimizelyPageMetrics trackPageView trackPageDepth trackVisit />
+          <OptimizelyPageMetrics trackPageDepth />
           {showTopics && (
             <RelatedTopics css={styles.relatedTopics} topics={topics} />
           )}

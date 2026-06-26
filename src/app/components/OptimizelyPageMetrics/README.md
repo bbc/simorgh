@@ -19,10 +19,10 @@ The `OptimizelyPageMetric` component:
 
 | Name              | type    | default | Description                         |
 | ----------------- | ------- | ------- | ----------------------------------- |
-| trackPageView     | boolean | false   | Enables tracking of page views.     |
 | trackPageDepth    | boolean | false   | Enables tracking of scroll depth.   |
 | trackPageComplete | boolean | false   | Enables tracking of page completes. |
-| trackVisit        | boolean | false   | Enables tracking of visits.         |
+
+> Page view (`page-views`) and visit (`visit`) events are not controlled by this component. They are tracked from the Optimizely `DECISION` notification listener in [`withOptimizelyProvider`](../../legacy/containers/PageHandlers/withOptimizelyProvider/index.tsx). See [Page views per visit ratio metric](#page-views-per-visit-ratio-metric) below.
 
 ## experimentsForPageMetrics Array
 
@@ -61,7 +61,7 @@ You can use once on a page
 
 ```tsx
 {
-  <OptimizelyPageMetrics trackPageComplete trackPageView trackPageDepth />;
+  <OptimizelyPageMetrics trackPageComplete trackPageDepth />;
 }
 ```
 
@@ -74,9 +74,9 @@ Or multiple times to invoke different page metrics in different sections of the 
     <OptimizelyPageMetrics trackPageComplete />
   </main>;
   {
-    /* Track page views & scroll depth outside the main section of the page */
+    /* Track scroll depth outside the main section of the page */
   }
-  <OptimizelyPageMetrics trackPageView trackPageDepth />;
+  <OptimizelyPageMetrics trackPageDepth />;
 }
 ```
 
@@ -87,10 +87,8 @@ The page views per visit ratio metric is built from two Optimizely events:
 - numerator: `page-views`
 - denominator: `visit`
 
-Visit counting is session based. A new visit is counted when there has been at least 30 minutes of inactivity since the last tracked page view. Each tracked page view updates the last activity timestamp so that continued browsing keeps the same visit.
+Both events are tracked from the `DECISION` notification listener in [`withOptimizelyProvider`](../../legacy/containers/PageHandlers/withOptimizelyProvider/index.tsx), not from this component. Tracking them from the listener ensures the visit (denominator) is always sent before the page view (numerator) on the same page load, so the page view falls inside Optimizely's 48 hour attribution window for the denominator. Tracking from the listener also guarantees the events fire for every activated experiment, independent of this component's render lifecycle.
 
-When `trackPageView` and `trackVisit` are both enabled, the visit event is sent before the page view event on the same page load. This ensures the ratio metric counts the page view within Optimizely's 48 hour attribution window for the denominator.
-
-For page views per visit, enable both `trackPageView` and `trackVisit`. Visit events are emitted from the page view tracker to preserve ordering and avoid duplicate visits.
+Both events are sent at most once per URL. Visit counting is session based: a new visit is counted when there has been at least 30 minutes of inactivity since the last tracked page view, and each tracked page view rolls the activity window forward so that continued browsing keeps the same visit.
 
 For interpretation, add the numerator and denominator events as separate metrics alongside the ratio metric in Optimizely.
