@@ -12,7 +12,9 @@ interface ActionsProps {
 }
 
 export const Actions = ({ data }: ActionsProps) => {
-  const { translations } = use(ServiceContext);
+  const {
+    translations: { sport },
+  } = use(ServiceContext);
 
   const homeKeyEvents = data.home?.actions || [];
   const awayKeyEvents = data.away?.actions || [];
@@ -29,7 +31,7 @@ export const Actions = ({ data }: ActionsProps) => {
           awayName={data.away.fullName}
           homeRunningScores={data.home.runningScores}
           awayRunningScores={data.away.runningScores}
-          translations={translations?.sport}
+          translations={sport}
         />
         {hasKeyEvents && (
           <KeyEvents
@@ -37,6 +39,7 @@ export const Actions = ({ data }: ActionsProps) => {
             awayKeyEvents={awayKeyEvents}
             homeName={data.home.fullName}
             awayName={data.away.fullName}
+            keyEventsTitle={sport?.keyEventsTitle}
           />
         )}
       </ActionGrid>

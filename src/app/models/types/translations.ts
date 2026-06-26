@@ -262,6 +262,7 @@ export interface Translations {
     venue?: string;
     attendance?: string;
     matchSummary?: string;
+    keyEventsTitle?: string;
     winOnPenalties?: {
       prefix?: string;
       suffix?: string;
