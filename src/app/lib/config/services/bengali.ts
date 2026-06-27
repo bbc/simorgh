@@ -85,7 +85,7 @@ export const service: DefaultServiceConfig = {
       home: 'মূলপাতা',
       topicDiscovery: {
         heading: 'আরও আবিষ্কার করুন',
-        moreFromTopic: '{topic} থেকে আরও',
+        moreAboutTopic: '{topic} সম্পর্কে আরও',
         fetchErrorMessage: 'লোড হতে ব্যর্থ। অনুগ্রহ করে আবার চেষ্টা করুন',
       },
       currentPage: 'বর্তমান পেজ',

@@ -85,7 +85,7 @@ export const service: DefaultServiceConfig = {
       home: 'Berita',
       topicDiscovery: {
         heading: 'Temukan lebih banyak',
-        moreFromTopic: 'Lebih banyak dari {topic}',
+        moreAboutTopic: 'Lebih banyak tentang {topic}',
         fetchErrorMessage: 'Gagal memuat. Silakan coba lagi',
       },
       currentPage: 'Halaman saat ini',

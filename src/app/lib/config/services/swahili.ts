@@ -84,7 +84,7 @@ export const service: DefaultServiceConfig = {
       home: 'Habari',
       topicDiscovery: {
         heading: 'Gundua zaidi',
-        moreFromTopic: 'Zaidi kutoka {topic}',
+        moreAboutTopic: 'Zaidi kuhusu {topic}',
         fetchErrorMessage: 'Imeshindwa kupakia. Tafadhali jaribu tena',
       },
       continueReading: 'Soma zaidi',

@@ -108,7 +108,7 @@ export const service: DefaultServiceConfig = {
       home: 'Página de inicio',
       topicDiscovery: {
         heading: 'Descubre más',
-        moreFromTopic: 'Más de {topic}',
+        moreAboutTopic: 'Más sobre {topic}',
         fetchErrorMessage: 'Error al cargar. Inténtalo de nuevo',
       },
       continueReading: 'Continuar leyendo',

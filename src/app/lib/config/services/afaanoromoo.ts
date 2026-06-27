@@ -79,7 +79,7 @@ export const service: DefaultServiceConfig = {
       home: 'Oduu',
       topicDiscovery: {
         heading: 'Dabalata argadhu',
-        moreFromTopic: '{topic} irraa dabalata',
+        moreAboutTopic: '{topic} irratti dabalata',
         fetchErrorMessage: "Wal bira hin geenye. Mee irra deebi'ii yaali",
       },
       currentPage: 'Fuula kan ammaa',

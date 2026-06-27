@@ -65,7 +65,7 @@ export const service: DefaultServiceConfig = {
       home: 'ホーム',
       topicDiscovery: {
         heading: 'もっと見る',
-        moreFromTopic: '{topic} のその他',
+        moreAboutTopic: '{topic} についてもっと',
         fetchErrorMessage: '読み込みに失敗しました。もう一度お試しください',
       },
       currentPage: '現在のページ',

@@ -83,7 +83,7 @@ export const service: DefaultServiceConfig = {
       home: 'Башталгыч бет',
       topicDiscovery: {
         heading: 'Көбүрөөк табуу',
-        moreFromTopic: '{topic} боюнча көбүрөөк',
+        moreAboutTopic: '{topic} жөнүндө көбүрөөк',
         fetchErrorMessage: 'Жүктөө ишке ашкан жок. Кайра аракет кылыңыз',
       },
       currentPage: 'Ачылып турган баракча',

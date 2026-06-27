@@ -84,7 +84,7 @@ export const service: DefaultServiceConfig = {
       continueReading: 'Ci gaba da karantawa',
       topicDiscovery: {
         heading: 'Gano ƙari',
-        moreFromTopic: 'Ƙari daga {topic}',
+        moreAboutTopic: 'Ƙari game da {topic}',
         fetchErrorMessage: 'An kasa lodawa. Da fatan a sake gwadawa',
       },
       currentPage: 'Shafin da ake ciki',

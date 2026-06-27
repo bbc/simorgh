@@ -79,7 +79,7 @@ export const service: DefaultServiceConfig = {
       home: 'ප්‍රධාන පුවත්',
       topicDiscovery: {
         heading: 'තවත් සොයා බලන්න',
-        moreFromTopic: '{topic} තවත්',
+        moreAboutTopic: '{topic} ගැන තවත්',
         fetchErrorMessage: 'පූරණය අසාර්ථකයි. කරුණාකර නැවත උත්සාහ කරන්න',
       },
       currentPage: 'දැන් සිටින පිටුව',

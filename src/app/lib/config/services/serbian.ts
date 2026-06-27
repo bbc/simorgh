@@ -145,7 +145,7 @@ export const service: SerbianConfig = {
       home: 'Glavna stranica',
       topicDiscovery: {
         heading: 'Otkrijte više',
-        moreFromTopic: 'Više iz {topic}',
+        moreAboutTopic: 'Više o {topic}',
         fetchErrorMessage: 'Učitavanje nije uspelo. Pokušajte ponovo',
       },
       currentPage: 'Otvorena stranica',
@@ -618,7 +618,7 @@ export const service: SerbianConfig = {
       home: 'Главна страница',
       topicDiscovery: {
         heading: 'Откријте више',
-        moreFromTopic: 'Више из {topic}',
+        moreAboutTopic: 'Више о {topic}',
         fetchErrorMessage: 'Учитавање није успело. Покушајте поново',
       },
       currentPage: 'Отворена страница',

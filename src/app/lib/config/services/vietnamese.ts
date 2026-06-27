@@ -66,7 +66,7 @@ export const service: DefaultServiceConfig = {
       home: 'Tin chính',
       topicDiscovery: {
         heading: 'Khám phá thêm',
-        moreFromTopic: 'Thêm từ {topic}',
+        moreAboutTopic: 'Thêm về {topic}',
         fetchErrorMessage: 'Tải không thành công. Vui lòng thử lại',
       },
       currentPage: 'Trang hiện nay',

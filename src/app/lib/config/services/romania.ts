@@ -70,7 +70,7 @@ export const service: DefaultServiceConfig = {
       home: 'Știri',
       topicDiscovery: {
         heading: 'Descoperă mai mult',
-        moreFromTopic: 'Mai mult de la {topic}',
+        moreAboutTopic: 'Mai mult despre {topic}',
         fetchErrorMessage: 'Încărcarea a eșuat. Vă rugăm să încercați din nou',
       },
       currentPage: 'Pagina curentă',

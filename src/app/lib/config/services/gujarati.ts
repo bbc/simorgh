@@ -82,7 +82,7 @@ export const service: DefaultServiceConfig = {
       home: 'સમાચાર',
       topicDiscovery: {
         heading: 'વધુ શોધો',
-        moreFromTopic: '{topic}માંથી વધુ',
+        moreAboutTopic: '{topic} વિશે વધુ',
         fetchErrorMessage: 'લોડ કરવામાં નિષ્ફળ. કૃપા કરીને ફરી પ્રયાસ કરો',
       },
       continueReading: 'આગળ વાંચો',

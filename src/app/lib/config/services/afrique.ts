@@ -83,7 +83,7 @@ export const service: DefaultServiceConfig = {
       home: 'Accueil',
       topicDiscovery: {
         heading: 'Découvrir davantage',
-        moreFromTopic: 'Plus de {topic}',
+        moreAboutTopic: 'Plus sur {topic}',
         fetchErrorMessage: 'Échec du chargement. Veuillez réessayer',
       },
       continueReading: 'Continuer la lecture',

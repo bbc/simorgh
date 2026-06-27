@@ -83,7 +83,7 @@ export const service: DefaultServiceConfig = {
       home: 'War',
       topicDiscovery: {
         heading: 'Baro wax badan',
-        moreFromTopic: 'Wax dheeraad ah oo ka socda {topic}',
+        moreAboutTopic: 'Wax dheeraad ah oo ku saabsan {topic}',
         fetchErrorMessage:
           'Ku shubiddu waa fashilantay. Fadlan isku day mar kale',
       },

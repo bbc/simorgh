@@ -84,7 +84,7 @@ export const service: DefaultServiceConfig = {
       home: 'الرئيسية',
       topicDiscovery: {
         heading: 'اكتشف المزيد',
-        moreFromTopic: 'المزيد من {topic}',
+        moreAboutTopic: 'المزيد عن {topic}',
         fetchErrorMessage: 'فشل في التحميل. يرجى المحاولة مرة أخرى',
       },
       continueReading: 'واصل القراءة',

@@ -118,7 +118,7 @@ export const service: DefaultServiceConfig = {
       ...headerFooterTranslations,
       topicDiscovery: {
         heading: 'Узнать больше',
-        moreFromTopic: 'Больше по теме {topic}',
+        moreAboutTopic: 'Больше о {topic}',
         fetchErrorMessage: 'Не удалось загрузить. Пожалуйста, попробуйте снова',
       },
       sport: {

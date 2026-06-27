@@ -82,7 +82,7 @@ export const service: DefaultServiceConfig = {
       home: 'Akụkọ',
       topicDiscovery: {
         heading: 'Chọpụta karịa',
-        moreFromTopic: 'Ndị ọzọ si {topic}',
+        moreAboutTopic: 'Ihe ndị ọzọzọ banyere {topic}',
         fetchErrorMessage: 'Ọ dara ịgbakwunye. Biko nwalee ọzọ',
       },
       continueReading: "Gaa n'ihu gụọ",

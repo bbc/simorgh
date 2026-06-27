@@ -64,7 +64,7 @@ export const service: DefaultServiceConfig = {
       home: 'หน้าแรก',
       topicDiscovery: {
         heading: 'ค้นพบเพิ่มเติม',
-        moreFromTopic: 'เพิ่มเติมจาก {topic}',
+        moreAboutTopic: 'เพิ่มเติมเกี่ยวกับ {topic}',
         fetchErrorMessage: 'โหลดไม่สำเร็จ กรุณาลองอีกครั้ง',
       },
       currentPage: 'หน้าปัจจุบัน',

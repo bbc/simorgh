@@ -65,7 +65,7 @@ export const service: DefaultServiceConfig = {
       home: 'Home',
       topicDiscovery: {
         heading: 'Discover more',
-        moreFromTopic: 'More from {topic}',
+        moreAboutTopic: 'More about {topic}',
         fetchErrorMessage: 'E no load. Abeg try again',
       },
       continueReading: 'Kontinu to dey read',

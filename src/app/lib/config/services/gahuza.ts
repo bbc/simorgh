@@ -77,7 +77,7 @@ export const service: DefaultServiceConfig = {
       home: `Urupapuro rw'itangiriro`,
       topicDiscovery: {
         heading: 'Menya byinshi',
-        moreFromTopic: 'Ibindi biturutse kuri {topic}',
+        moreAboutTopic: 'Ibindi bijyanye na {topic}',
         fetchErrorMessage: 'Ntibyashoboye gufunguka. Ongera ugerageze',
       },
       continueReading: 'Komeza usome',

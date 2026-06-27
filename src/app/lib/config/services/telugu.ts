@@ -64,7 +64,7 @@ export const service: DefaultServiceConfig = {
       home: 'హోమ్',
       topicDiscovery: {
         heading: 'ఇంకా తెలుసుకోండి',
-        moreFromTopic: '{topic} నుండి మరింత',
+        moreAboutTopic: '{topic} గురించి మరింత',
         fetchErrorMessage: 'లోడ్ విఫలమైంది. దయచేసి మళ్ళీ ప్రయత్నించండి',
       },
       continueReading: 'ఇంకా చదవండి',

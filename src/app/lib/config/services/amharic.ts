@@ -78,7 +78,7 @@ export const service: DefaultServiceConfig = {
       home: 'ዜና',
       topicDiscovery: {
         heading: 'ተጨማሪ ያግኙ',
-        moreFromTopic: 'ከ {topic} ተጨማሪ',
+        moreAboutTopic: 'ስለ {topic} ተጨማሪ',
         fetchErrorMessage: 'መጫን አልተሳካም። እባክዎ እንደገና ይሞክሩ',
       },
       currentPage: 'መነሻ ገፅ',

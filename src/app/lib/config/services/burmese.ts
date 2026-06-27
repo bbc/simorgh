@@ -79,7 +79,7 @@ export const service: DefaultServiceConfig = {
       home: 'ပင်မစာမျက်နှာ',
       topicDiscovery: {
         heading: 'ပိုမိုရှာဖွေပါ',
-        moreFromTopic: '{topic} မှ ပိုမို',
+        moreAboutTopic: '{topic} အကြောင်း ပိုမို',
         fetchErrorMessage: 'ဖွင့်ရန် မအောင်မြင်ပါ။ ထပ်ကြိုးစားပါ',
       },
       currentPage: 'လက်ရှိကြည့်နေသော စာမျက်နှာ',

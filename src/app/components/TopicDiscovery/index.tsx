@@ -27,7 +27,7 @@ const TopicDiscovery = ({
   const { translations } = use(ServiceContext);
   const {
     heading = 'Discover more',
-    moreFromTopic = 'More from {topic}',
+    moreAboutTopic = 'More about {topic}',
     fetchErrorMessage = 'Failed to load. Please try again later.',
   } = translations.topicDiscovery || {};
 
@@ -67,7 +67,7 @@ const TopicDiscovery = ({
     itemTracker: {
       type: 'topic-discovery-more-from-link',
       text: currentTopic
-        ? moreFromTopic.replace('{topic}', currentTopic.topicName)
+        ? moreAboutTopic.replace('{topic}', currentTopic.topicName)
         : undefined,
       resourceId: currentTopic?.topicId,
     },
@@ -160,7 +160,7 @@ const TopicDiscovery = ({
                     data-testid="topic-discovery-more-from"
                     {...moreFromLinkClickTracker}
                   >
-                    {moreFromTopic.replace('{topic}', selectedTopic.topicName)}
+                    {moreAboutTopic.replace('{topic}', selectedTopic.topicName)}
                   </a>
                 </>
               );

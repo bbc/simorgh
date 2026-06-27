@@ -64,7 +64,7 @@ export const service: DefaultServiceConfig = {
       home: 'صفحه اول',
       topicDiscovery: {
         heading: 'بیشتر کشف کنید',
-        moreFromTopic: 'بیشتر از {topic}',
+        moreAboutTopic: 'بیشتر درباره {topic}',
         fetchErrorMessage: 'بارگیری ناموفق بود. لطفاً دوباره تلاش کنید',
       },
       currentPage: 'صفحه فعلی',

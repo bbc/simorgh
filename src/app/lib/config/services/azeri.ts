@@ -83,7 +83,7 @@ export const service: DefaultServiceConfig = {
       home: 'Xəbərlər',
       topicDiscovery: {
         heading: 'Daha çox kəşf et',
-        moreFromTopic: '{topic} üzrə daha çox',
+        moreAboutTopic: '{topic} haqqında daha çox',
         fetchErrorMessage:
           'Yükləmə uğursuz oldu. Zəhmət olmasa yenidən yoxlayın',
       },

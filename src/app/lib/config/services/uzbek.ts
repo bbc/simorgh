@@ -77,7 +77,7 @@ const defaultCyrillicConfig = {
     home: 'Бош саҳифа',
     topicDiscovery: {
       heading: 'Кўпроқ кашф қилинг',
-      moreFromTopic: '{topic}дан кўпроқ',
+      moreAboutTopic: '{topic} ҳақида кӯпроқ',
       fetchErrorMessage: 'Юклаб бўлмади. Илтимос, яна уриниб кўринг',
     },
     currentPage: 'Жорий саҳифа',
@@ -488,7 +488,7 @@ export const service: UzbekConfig = {
       home: 'Bosh sahifa',
       topicDiscovery: {
         heading: "Ko'proq kashf qiling",
-        moreFromTopic: "{topic}dan ko'proq",
+        moreAboutTopic: "{topic} haqida ko'proq",
         fetchErrorMessage: "Yuklab bo'lmadi. Iltimos, yana urinib ko'ring",
       },
       currentPage: 'Joriy sahifa',

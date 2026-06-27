@@ -78,7 +78,7 @@ export const service: DefaultServiceConfig = {
       home: 'Ìròyìn',
       topicDiscovery: {
         heading: 'Ṣawari síi',
-        moreFromTopic: 'Díẹ̀ síi láti {topic}',
+        moreAboutTopic: 'Díẹ̀ síì nípa {topic}',
         fetchErrorMessage: 'Ó kuna láti ṣàkójọpọ̀. Jọ̀wọ́ gbìyànjú lẹ́ẹ̀kan síi',
       },
       currentPage: 'Ojú ewé to wà yìí',

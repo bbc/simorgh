@@ -83,7 +83,7 @@ export const service: DefaultServiceConfig = {
       home: 'முகப்பு',
       topicDiscovery: {
         heading: 'மேலும் அறிக',
-        moreFromTopic: '{topic} இருந்து மேலும்',
+        moreAboutTopic: '{topic} பற்றி மேலும்',
         fetchErrorMessage: 'ஏற்ற முடியவில்லை. மீண்டும் முயற்சிக்கவும்',
       },
       continueReading: 'தொடர்ந்து படியுங்கள்',

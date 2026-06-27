@@ -81,7 +81,7 @@ export const service: DefaultServiceConfig = {
       home: 'መእተዊ ገጽ',
       topicDiscovery: {
         heading: 'ተወሳኺ መርምር',
-        moreFromTopic: 'ተወሳኺ ካብ {topic}',
+        moreAboutTopic: 'ተወሳኩ ብዛዕባ {topic}',
         fetchErrorMessage: 'ምጫን ኣይከኣለን። እባክካ ዳግም ፈትን',
       },
       continueReading: 'ምንባብ ቀጽል',

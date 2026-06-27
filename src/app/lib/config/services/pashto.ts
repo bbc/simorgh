@@ -67,7 +67,7 @@ export const service: DefaultServiceConfig = {
       home: 'کور پاڼه',
       topicDiscovery: {
         heading: 'نور وپلټئ',
-        moreFromTopic: '{topic} څخه نور',
+        moreAboutTopic: 'د {topic} په اړه نور',
         fetchErrorMessage: 'پورته کول ناکام شول. مهرباني وکړئ بیا هڅه وکړئ',
       },
       currentPage: 'اوسنۍ پاڼه',

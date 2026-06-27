@@ -84,7 +84,7 @@ export const service: DefaultServiceConfig = {
       home: 'होम पेज',
       topicDiscovery: {
         heading: 'और जानें',
-        moreFromTopic: '{topic} से अधिक',
+        moreAboutTopic: '{topic} के बारे में अधिक',
         fetchErrorMessage: 'लोड नहीं हो पाया। कृपया पुनः प्रयास करें',
       },
       continueReading: 'पढ़ना जारी रखें',

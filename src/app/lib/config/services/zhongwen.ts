@@ -151,7 +151,7 @@ export const service: ZhongwenConfig = {
       home: '主页',
       topicDiscovery: {
         heading: '发现更多',
-        moreFromTopic: '更多来自{topic}',
+        moreAboutTopic: '更多关于{topic}',
         fetchErrorMessage: '加载失败。请重试',
       },
       currentPage: '目前页面',
@@ -529,7 +529,7 @@ export const service: ZhongwenConfig = {
       home: '主頁',
       topicDiscovery: {
         heading: '探索更多',
-        moreFromTopic: '更多來自{topic}',
+        moreAboutTopic: '更多關於{topic}',
         fetchErrorMessage: '載入失敗。請再試一次',
       },
       currentPage: '目前頁面',
