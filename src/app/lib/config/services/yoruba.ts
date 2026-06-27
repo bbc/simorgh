@@ -81,7 +81,7 @@ export const service: DefaultServiceConfig = {
         moreFromTopic: 'Díẹ̀ síi láti {topic}',
         fetchErrorMessage: 'Ó kuna láti ṣàkójọpọ̀. Jọ̀wọ́ gbìyànjú lẹ́ẹ̀kan síi',
       },
-      currentPage: 'Ojú ewé to wà yìi',
+      currentPage: 'Ojú ewé to wà yìí',
       skipLinkText: 'Fò kọjá sí nnkan tí ó wà nínú rẹ̀',
       relatedContent: 'Àwọn afíkun lórí ìròyìn yìí',
       relatedTopics: 'Àwọn Àkórí Tójọra',
