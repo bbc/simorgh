@@ -71,7 +71,7 @@ export const service: DefaultServiceConfig = {
       home: 'Strona główna',
       topicDiscovery: {
         heading: 'Odkryj więcej',
-        moreFromTopic: 'Więcej od {topic}',
+        moreFromTopic: 'Więcej z {topic}',
         fetchErrorMessage: 'Nie udało się załadować. Spróbuj ponownie',
       },
       currentPage: 'Strona bieżąca',
