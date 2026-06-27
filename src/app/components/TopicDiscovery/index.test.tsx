@@ -114,7 +114,7 @@ describe('TopicDiscovery', () => {
     expect(screen.getByText(secondTopicTitle)).toBeInTheDocument();
   });
 
-  it('renders the "more from" section with topic title last if {topic} is last in the config', async () => {
+  it('renders the "more about" section with topic title last if {topic} is last in the config', async () => {
     const config: ServiceConfig = { ...portugueseConfig.default };
     render(
       <ServiceContext.Provider value={config}>
@@ -122,9 +122,9 @@ describe('TopicDiscovery', () => {
       </ServiceContext.Provider>,
     );
     // Wait for loading to finish and the link to appear
-    const moreFrom = await screen.findByTestId('topic-discovery-more-from');
-    expect(moreFrom).toHaveTextContent(
-      `Mais de ${topicTagsFixture[0].topicName}`,
+    const moreAbout = await screen.findByTestId('topic-discovery-more-from');
+    expect(moreAbout).toHaveTextContent(
+      `Mais sobre ${topicTagsFixture[0].topicName}`,
     );
   });
 
@@ -142,7 +142,7 @@ describe('TopicDiscovery', () => {
     );
   });
 
-  it('renders the "more from" section with fallback if moreFrom is missing', async () => {
+  it('renders the "more about" section with fallback if moreAbout is missing', async () => {
     const portugueseTranslations = {
       ...portugueseConfig.default.translations,
       topicDiscovery: { heading: 'Discover more' },
@@ -156,7 +156,7 @@ describe('TopicDiscovery', () => {
         <TopicDiscovery topics={topicTagsFixture} />
       </ServiceContext.Provider>,
     );
-    await screen.findByText(`More from ${topicTagsFixture[0].topicName}`);
+    await screen.findByText(`More about ${topicTagsFixture[0].topicName}`);
   });
 
   it('should not render when there are no valid topics', () => {
@@ -179,7 +179,7 @@ describe('TopicDiscovery', () => {
     });
 
     expect(
-      await screen.findByText('Falha ao carregar. Tente novamente mais tarde.'),
+      await screen.findByText('Falha ao carregar. Tente novamente'),
     ).toBeInTheDocument();
 
     expect(
@@ -280,7 +280,7 @@ describe('TopicDiscovery', () => {
         groupTracker,
         itemTracker: {
           type: 'topic-discovery-more-from-link',
-          text: `Mais de ${topicTagsFixture[0].topicName}`,
+          text: `Mais sobre ${topicTagsFixture[0].topicName}`,
           resourceId: topicTagsFixture[0].topicId,
         },
       });
