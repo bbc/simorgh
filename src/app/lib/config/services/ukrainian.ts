@@ -80,7 +80,7 @@ const baseServiceConfig = {
     home: 'Головна',
     topicDiscovery: {
       heading: 'Дізнатися більше',
-      moreFromTopic: 'Більше від {topic}',
+      moreFromTopic: 'Більше з теми {topic}',
       fetchErrorMessage: 'Не вдалося завантажити. Спробуйте ще раз',
     },
     currentPage: 'Поточна сторінка',
