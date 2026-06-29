@@ -202,12 +202,7 @@ const getContinueReadingButton =
     />
   );
 
-const ArticlePage = ({
-  pageData,
-}: {
-  pageData: Article;
-  showTopicDiscoveryComponent?: boolean;
-}) => {
+const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const [showAllContent, setShowAllContent] = useState(false);
   const { isApp, isAmp, isLite, pageType } = use(RequestContext);
 
