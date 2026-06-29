@@ -12,10 +12,8 @@ interface ActionsProps {
 }
 
 export const Actions = ({ data }: ActionsProps) => {
-  const {
-    translations: { sport },
-  } = use(ServiceContext);
-
+  const { translations } = use(ServiceContext);
+  const sport = translations?.sport;
   const homeKeyEvents = data.home?.actions || [];
   const awayKeyEvents = data.away?.actions || [];
 
