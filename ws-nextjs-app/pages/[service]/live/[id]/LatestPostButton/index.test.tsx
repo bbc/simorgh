@@ -227,4 +227,28 @@ describe('LatestPostButton', () => {
       expect.stringContaining('"page_id":"test-page-id"'),
     );
   });
+
+  it('should send a time_shown value reflecting the delay before the button is clicked', async () => {
+    await act(async () => {
+      return render(
+        <LastestPostButton
+          isFirstPostVisible={false}
+          hasPendingUpdate
+          streamRef={null}
+          {...defaultProps}
+        />,
+      );
+    });
+
+    act(() => {
+      jest.advanceTimersByTime(3000);
+    });
+
+    const button = screen.getByTestId('latest-post-button');
+    fireEvent.click(button);
+
+    expect(mockTrackEvent).toHaveBeenCalledWith(
+      expect.stringContaining('"time_shown":3000'),
+    );
+  });
 });
