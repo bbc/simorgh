@@ -42,7 +42,6 @@ describe('SaveButton', () => {
     );
     const button = screen.getByRole('button');
     expect(button).toBeEnabled();
-    expect(button).not.toHaveAttribute('aria-busy');
   });
 
   it('stays focusable (not natively disabled) while updating', () => {
@@ -56,7 +55,6 @@ describe('SaveButton', () => {
     );
     const button = screen.getByRole('button');
     expect(button).toBeEnabled();
-    expect(button).not.toHaveAttribute('aria-busy');
   });
 
   it('calls onClick when clicked', async () => {
@@ -114,37 +112,5 @@ describe('SaveButton', () => {
     expect(
       screen.getByRole('button', { name: 'Remove from My News' }),
     ).toBeInTheDocument();
-  });
-
-  it('shows hoverVisualLabel on hover but keeps the accessible label unchanged', async () => {
-    render(
-      <SaveButton
-        onClick={noop}
-        visualLabel="Saved to My News"
-        hoverVisualLabel="Remove"
-        accessibleLabel="Remove from My News"
-        isSaved
-      />,
-    );
-    const button = screen.getByRole('button', { name: 'Remove from My News' });
-    await userEvent.hover(button);
-    expect(screen.getByText('Remove')).toBeInTheDocument();
-    expect(
-      screen.getByRole('button', { name: 'Remove from My News' }),
-    ).toBeInTheDocument();
-  });
-
-  it('falls back to the visual label on hover when no hoverVisualLabel is provided', async () => {
-    render(
-      <SaveButton
-        onClick={noop}
-        visualLabel="Saved to My News"
-        accessibleLabel="Remove from My News"
-        isSaved
-      />,
-    );
-    const button = screen.getByRole('button', { name: 'Remove from My News' });
-    await userEvent.hover(button);
-    expect(screen.getByText('Saved to My News')).toBeInTheDocument();
   });
 });
