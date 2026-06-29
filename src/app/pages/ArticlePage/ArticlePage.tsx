@@ -1,9 +1,7 @@
 import { use, useState } from 'react';
 import { useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
-import useOptimizelyVariation, {
-  ExperimentType,
-} from '#app/hooks/useOptimizelyVariation';
+
 import { singleTextBlock } from '#app/models/blocks';
 import { BylineLinkedData } from '#app/components/LinkedData/types';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
@@ -206,7 +204,6 @@ const getContinueReadingButton =
 
 const ArticlePage = ({
   pageData,
-  showTopicDiscoveryComponent = false,
 }: {
   pageData: Article;
   showTopicDiscoveryComponent?: boolean;
@@ -231,32 +228,6 @@ const ArticlePage = ({
   const {
     palette: { GREY_2 },
   } = useTheme();
-
-  // EXPERIMENT: Topic Discovery
-  const topicDiscoveryExperimentName = 'newswb_ws_topic_discovery_module';
-  const topicDiscoveryVariant = useOptimizelyVariation({
-    experimentName: topicDiscoveryExperimentName,
-    experimentType: ExperimentType.CLIENT_SIDE,
-  });
-
-  const getActiveExperimentProps = (
-    experimentName: string,
-    experimentVariant: string | null,
-  ): ComponentExperimentProps | null =>
-    experimentVariant
-      ? {
-          sendOptimizelyEvents: true,
-          experimentName,
-          experimentVariant,
-        }
-      : null;
-
-  const topicDiscoveryExperimentProps = getActiveExperimentProps(
-    topicDiscoveryExperimentName,
-    topicDiscoveryVariant,
-  );
-  const isTopicDiscoveryVariant =
-    topicDiscoveryVariant && topicDiscoveryVariant !== 'off';
 
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
@@ -317,11 +288,6 @@ const ArticlePage = ({
   const atiData = {
     ...atiAnalytics,
     ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
-    ...(isTopicDiscoveryVariant &&
-      topicDiscoveryExperimentProps && {
-        experimentName: topicDiscoveryExperimentProps.experimentName,
-        experimentVariant: topicDiscoveryExperimentProps.experimentVariant,
-      }),
   };
 
   const showPortraitVideoCarousel = Boolean(
@@ -393,7 +359,6 @@ const ArticlePage = ({
     wsoj: ({ data }: { data: Recommendation[] }) =>
       getWsojComponent({
         data,
-        experimentProps: topicDiscoveryExperimentProps,
       }),
     disclaimer: DisclaimerWithPaddingOverride,
     podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
@@ -417,11 +382,7 @@ const ArticlePage = ({
 
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
 
-  const showTopicDiscovery =
-    (showTopicDiscoveryComponent ||
-      topicDiscoveryVariant === 'topic_discovery') &&
-    !isAmp &&
-    !isLite;
+  const showTopicDiscovery = !isAmp && !isLite;
 
   const showRelatedTopicsComponent = Boolean(
     showRelatedTopics && topics.length > 0 && !showTopicDiscovery,
@@ -516,7 +477,6 @@ const ArticlePage = ({
                   : []),
               ]}
               topics={topics}
-              experimentProps={topicDiscoveryExperimentProps || undefined}
             />
           )}
           {showRelatedTopicsComponent && (
@@ -529,7 +489,6 @@ const ArticlePage = ({
               ]}
               topics={topics}
               mobileDivider={false}
-              experimentProps={topicDiscoveryExperimentProps || undefined}
             />
           )}
           {showPortraitVideoCarousel && (
@@ -539,10 +498,7 @@ const ArticlePage = ({
             />
           )}
           {showCountryCuration && <LocationBasedTopicOJ pageData={pageData} />}
-          <RelatedContentSection
-            content={blocks}
-            experimentProps={topicDiscoveryExperimentProps || undefined}
-          />
+          <RelatedContentSection content={blocks} />
           {showMediaCuration && (
             <div css={styles.mediaCurationRow}>
               <div data-testid="media-curation">
@@ -563,12 +519,7 @@ const ArticlePage = ({
           )}
         </div>
 
-        {!isApp && !isPGL && (
-          <SecondaryColumn
-            pageData={pageData}
-            experimentProps={topicDiscoveryExperimentProps || undefined}
-          />
-        )}
+        {!isApp && !isPGL && <SecondaryColumn pageData={pageData} />}
       </div>
 
       {!isApp && !isPGL && (
@@ -579,7 +530,6 @@ const ArticlePage = ({
           size="default"
           headingBackgroundColour={GREY_2}
           mobileDivider={showRelatedTopicsComponent}
-          experimentProps={topicDiscoveryExperimentProps || undefined}
         />
       )}
     </div>
