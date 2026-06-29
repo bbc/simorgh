@@ -16,8 +16,10 @@ jest.mock('#app/hooks/useCustomEventTracker', () => ({
 
 jest.useFakeTimers();
 
+const pageId = '3861CC0A9A7434981EEE3FCE9880391';
+
 const defaultProps = {
-  pageId: 'test-page-id',
+  pageId,
 };
 
 describe('LatestPostButton', () => {
@@ -176,7 +178,7 @@ describe('LatestPostButton', () => {
     });
 
     expect(mockTrackEvent).toHaveBeenCalledWith(
-      expect.stringContaining('"page_id":"test-page-id"'),
+      expect.stringContaining(`"page_id":"${pageId}"`),
     );
     expect(mockTrackEvent).not.toHaveBeenCalledWith(
       expect.stringContaining('"time_shown"'),
@@ -199,7 +201,7 @@ describe('LatestPostButton', () => {
     fireEvent.click(button);
 
     expect(mockTrackEvent).toHaveBeenCalledWith(
-      expect.stringContaining('"page_id":"test-page-id"'),
+      expect.stringContaining(`"page_id":"${pageId}"`),
     );
     expect(mockTrackEvent).toHaveBeenCalledWith(
       expect.stringContaining('"time_shown"'),
@@ -224,7 +226,7 @@ describe('LatestPostButton', () => {
     fireEvent.click(button);
 
     expect(mockTrackEvent).toHaveBeenCalledWith(
-      expect.stringContaining('"page_id":"test-page-id"'),
+      expect.stringContaining(`"page_id":"${pageId}"`),
     );
   });
 
