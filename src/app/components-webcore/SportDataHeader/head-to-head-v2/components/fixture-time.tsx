@@ -19,6 +19,7 @@ const Time = ({ date, time }: TimeProps) => {
   useEffect(() => {
     const clientTime = getLocalisedTime(date, time.displayTimeUK);
     setLocalisedTime(clientTime);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
