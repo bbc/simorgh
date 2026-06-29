@@ -18,7 +18,7 @@ type TopicDiscoveryProps = {
 const HEADING_ID = 'topic-discovery-heading';
 
 const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
-  const { translations } = use(ServiceContext);
+  const { translations, dir } = use(ServiceContext);
   const {
     heading = 'Discover more',
     moreAboutTopic = 'More about {topic}',
@@ -79,6 +79,7 @@ const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
       css={styles.section}
       className={className}
       data-testid="topic-discovery"
+      dir={dir}
       {...viewTracker}
     >
       <h2 id={HEADING_ID} css={styles.heading}>
