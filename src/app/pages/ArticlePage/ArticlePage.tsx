@@ -77,7 +77,6 @@ import {
   getAuthorTwitterHandle,
 } from '../../components/Byline/utilities';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import { ReverbParamsContext } from '../../contexts/ReverbParamsContext';
 import RelatedContentSection from '../../components/RelatedContentSection';
 import TopicDiscovery from '../../components/TopicDiscovery';
 import Disclaimer from '../../components/Disclaimer';
@@ -205,12 +204,6 @@ const getContinueReadingButton =
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const [showAllContent, setShowAllContent] = useState(false);
   const { isApp, isAmp, isLite, pageType } = use(RequestContext);
-
-  // EXPERIMENT: Topic Discovery
-  const { experimentProps: topicDiscoveryExperimentProps } =
-    use(ReverbParamsContext);
-  const { experimentVariant: topicDiscoveryVariant } =
-    topicDiscoveryExperimentProps ?? {};
 
   const {
     articleAuthor,
