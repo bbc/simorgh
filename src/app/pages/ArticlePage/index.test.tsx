@@ -1335,7 +1335,7 @@ describe('Article Page', () => {
       });
     });
   });
-  describe('TopicDiscovery visibility on test only', () => {
+  describe('TopicDiscovery', () => {
     afterEach(() => {
       jest.resetAllMocks();
     });
@@ -1357,19 +1357,18 @@ describe('Article Page', () => {
       },
     } as Article;
 
-    it('should render TopicDiscovery when isLive is false (test env)', () => {
-      jest.mocked(isLive).mockImplementationOnce(() => false);
-      const { queryByTestId } = render(
-        <ArticlePage pageData={data} showTopicDiscoveryComponent />,
-        { service: 'portuguese' },
-      );
+    it('should render TopicDiscovery when topicDiscovery toggle is enabled', () => {
+      const { queryByTestId } = render(<ArticlePage pageData={data} />, {
+        service: 'portuguese',
+        toggles: { topicDiscovery: { enabled: true } },
+      });
       expect(queryByTestId('topic-discovery')).toBeInTheDocument();
     });
 
-    it('should NOT render TopicDiscovery when isLive is true (live env)', () => {
-      jest.mocked(isLive).mockImplementationOnce(() => true);
+    it('should NOT render TopicDiscovery when topicDiscovery toggle is disabled', () => {
       const { queryByTestId } = render(<ArticlePage pageData={data} />, {
         service: 'portuguese',
+        toggles: { topicDiscovery: { enabled: false } },
       });
       expect(queryByTestId('topic-discovery')).not.toBeInTheDocument();
     });

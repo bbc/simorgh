@@ -219,6 +219,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     'continueReadingButton',
   );
   const { enabled: isTopBarOJsEnabled } = useToggle('topBarOJs');
+  const { enabled: topicDiscoveryEnabled } = useToggle('topicDiscovery');
 
   const {
     palette: { GREY_2 },
@@ -377,7 +378,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
 
-  const showTopicDiscovery = !isAmp && !isLite;
+  const showTopicDiscovery = topicDiscoveryEnabled && !isAmp && !isLite;
 
   const showRelatedTopicsComponent = Boolean(
     showRelatedTopics && topics.length > 0 && !showTopicDiscovery,
