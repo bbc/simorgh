@@ -6,9 +6,10 @@ import SaveArticleButtonGuest from './SaveArticleButtonGuest';
 import styles from './index.styles';
 
 export interface SaveArticleButtonProps {
-  articleTitle: string;
   articlePageData?: Article;
 }
+
+const SAVE_ARTICLE_BUTTON_ID = 'save-article-button';
 
 const SaveArticleButton = (props: SaveArticleButtonProps) => {
   const { isPersonalizationAvailable, isPersonalizationEnabled } =
@@ -17,13 +18,18 @@ const SaveArticleButton = (props: SaveArticleButtonProps) => {
   if (!isPersonalizationAvailable) return null;
 
   return (
-    <div css={styles.buttonWrapper}>
-      {isPersonalizationEnabled ? (
-        <SaveArticleButtonAuthenticated {...props} />
-      ) : (
-        <SaveArticleButtonGuest />
-      )}
-    </div>
+    <>
+      <noscript>
+        <style>{`#${SAVE_ARTICLE_BUTTON_ID} { display: none; }`}</style>
+      </noscript>
+      <div css={styles.buttonWrapper} id={SAVE_ARTICLE_BUTTON_ID}>
+        {isPersonalizationEnabled ? (
+          <SaveArticleButtonAuthenticated {...props} />
+        ) : (
+          <SaveArticleButtonGuest />
+        )}
+      </div>
+    </>
   );
 };
 

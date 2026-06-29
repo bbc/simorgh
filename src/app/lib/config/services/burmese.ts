@@ -316,6 +316,18 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'နောက်ဆုံးရ',
       sport: {
         matchSummary: 'ပွဲအကျဉ်းချုပ်',
+        assists: 'ဂိုးဖန်တီးမှုများ',
+        penalties: 'ပင်နယ်တီး',
+        ht: 'ပထမပိုင်းအဆုံး',
+        ft: 'ပွဲပြီးဆုံး',
+        et: 'အချိန်ပို',
+        afterExtraTime: 'အချိန်ပိုပြီးနောက်',
+        penaltyAbbreviation: 'ပင်',
+        ownGoal: 'ကိုယ့်ဂိုးကိုယ်ထည့်ခြင်း',
+        winOnPenalties: {
+          prefix: 'ပင်နယ်တီး',
+          suffix: 'ဖြင့် အနိုင်ရသည်',
+        },
         worldCupTeamNames: {
           algeria: 'အယ်ဂျီးရီးယား',
           argentina: 'အာဂျင်တီးနား',
@@ -365,6 +377,18 @@ export const service: DefaultServiceConfig = {
           uruguay: 'ဥရုဂွေး',
           usa: 'အမေရိကန်',
           uzbekistan: 'ဥဇဘက်ကစ္စတန်',
+        },
+        tournaments: {
+          fifaWorldCup: 'ဖီဖာ ၂၀၂၆ ကမ္ဘာ့ဖလား',
+        },
+        stages: {
+          groupStage: 'အုပ်စုအဆင့်',
+          last32: '၃၂ သင်း အဆင့်',
+          last16: '၁၆ သင်းအဆင့်',
+          quarterFinals: 'ကွာတားဖိုင်နယ်',
+          semiFinals: 'ဆီမီးဖိုင်နယ်',
+          final: 'ဗိုလ်လုပွဲ',
+          thirdPlaceFinal: 'တတိယနေရာ',
         },
       },
     },

@@ -276,6 +276,18 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'ਬਿਲਕੁਲ ਨਵਾਂ',
       sport: {
         matchSummary: 'ਮੈਚ ਦਾ ਸਾਰ',
+        assists: 'ਅਸਿਸਟ',
+        penalties: 'ਪੈਨਲਟੀ',
+        ht: 'ਪਹਿਲੇ ਹਾਫ ਦਾ ਅੰਤ',
+        ft: 'ਮੈਚ ਖਤਮ',
+        et: 'ਵਾਧੂ ਸਮਾਂ',
+        afterExtraTime: 'ਵਾਧੂ ਸਮੇਂ ਤੋਂ ਬਾਅਦ',
+        penaltyAbbreviation: 'ਪੈਨ',
+        ownGoal: 'ਆਪਣਾ ਹੀ ਗੋਲ',
+        winOnPenalties: {
+          prefix: 'ਪੈਨਲਟੀ ਵਿੱਚ',
+          suffix: 'ਨਾਲ ਜਿੱਤਦਾ ਹੈ',
+        },
         worldCupTeamNames: {
           algeria: 'ਅਲਜੀਰੀਆ',
           argentina: 'ਅਰਜਨਟੀਨਾ',
@@ -325,6 +337,18 @@ export const service: DefaultServiceConfig = {
           uruguay: 'ਉਰੂਗੇ',
           usa: 'ਸੰਯੁਕਤ ਰਾਜ ਅਮਰੀਕਾ',
           uzbekistan: 'ਉਜ਼ਬੇਕਿਸਤਾਨ',
+        },
+        tournaments: {
+          fifaWorldCup: 'ਫੀਫਾ ਵਿਸ਼ਵ ਕੱਪ',
+        },
+        stages: {
+          groupStage: 'ਗਰੁੱਪ ਮੁਕਾਬਲੇ',
+          last32: 'ਰਾਉਂਡ 32',
+          last16: 'ਰਾਉਂਡ 16',
+          quarterFinals: 'ਕੁਆਟਰ ਫਾਈਨਲ',
+          semiFinals: 'ਸੈਮੀ ਫਾਈਨਲ',
+          final: 'ਫਾਈਨਲ',
+          thirdPlaceFinal: 'ਤੀਜਾ ਸਥਾਨ',
         },
       },
     },

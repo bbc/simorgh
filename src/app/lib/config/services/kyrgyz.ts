@@ -299,6 +299,18 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'Соңку',
       sport: {
         matchSummary: 'Оюндун жыйынтыгы',
+        assists: 'Пас берүү',
+        penalties: 'Пенальти',
+        ht: 'Биринчи тайм аягы',
+        ft: 'Оюндун аягы',
+        et: 'Кошумча убакыт',
+        afterExtraTime: 'Кошумча убакыттан кийин',
+        penaltyAbbreviation: 'ПЕН',
+        ownGoal: 'өз дарбазасына гол',
+        winOnPenalties: {
+          prefix: 'пенальтиде',
+          suffix: 'менен жеңди',
+        },
         worldCupTeamNames: {
           algeria: 'Алжир',
           argentina: 'Аргентина',
@@ -348,6 +360,18 @@ export const service: DefaultServiceConfig = {
           uruguay: 'Уругвай',
           usa: 'АКШ',
           uzbekistan: 'Өзбекстан',
+        },
+        tournaments: {
+          fifaWorldCup: 'Футбол боюнча дүйнө чемпионаты',
+        },
+        stages: {
+          groupStage: 'Тайпалык беттештер',
+          last32: '1/16 финал',
+          last16: '1/8 финал',
+          quarterFinals: 'Чейрек финал',
+          semiFinals: 'Жарым финал',
+          final: 'Финал',
+          thirdPlaceFinal: 'Үчүнчү орун',
         },
       },
     },

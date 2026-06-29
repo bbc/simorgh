@@ -1,7 +1,7 @@
 import Cookie from 'js-cookie';
 import { getEnvConfig } from '../utilities/getEnvConfig';
 import { refreshTokensIfExpired } from './tokenRefresh/tokenManager';
-import uasApiRequest from './index';
+import uasApiRequest, { UasError } from './index';
 
 jest.mock('js-cookie');
 jest.mock('../utilities/getEnvConfig');
@@ -108,7 +108,7 @@ describe('uasApiRequest', () => {
     );
   });
 
-  it('should throw an error for failed requests', async () => {
+  it('should throw a UasError with the response status for failed requests', async () => {
     (global.fetch as jest.Mock).mockResolvedValue({
       ok: false,
       status: 500,
@@ -117,9 +117,13 @@ describe('uasApiRequest', () => {
 
     const activityType = 'favourites';
 
-    await expect(
-      uasApiRequest('GET', activityType, { isRefreshAvailable: true }),
-    ).rejects.toThrow('UAS request failed with status 500');
+    const error = await uasApiRequest('GET', activityType, {
+      isRefreshAvailable: true,
+    }).catch(e => e);
+
+    expect(error).toBeInstanceOf(UasError);
+    expect(error.status).toBe(500);
+    expect(error.message).toBe('UAS request failed with status 500');
   });
 
   it('should throw an error when API key is missing', async () => {

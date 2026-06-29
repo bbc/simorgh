@@ -360,6 +360,18 @@ export const service: SerbianConfig = {
       },
       sport: {
         matchSummary: 'Rezime utakmice',
+        assists: 'Asistencije',
+        penalties: 'Penali',
+        ht: 'Kraj prvog poluvremena',
+        ft: 'Kraj utakmice',
+        et: 'Produžetak',
+        afterExtraTime: 'Posle produžetaka',
+        penaltyAbbreviation: 'pen',
+        ownGoal: 'autogol',
+        winOnPenalties: {
+          prefix: 'pobeđuje',
+          suffix: 'na penale',
+        },
         worldCupTeamNames: {
           algeria: 'Alžir',
           argentina: 'Argentina',
@@ -409,6 +421,18 @@ export const service: SerbianConfig = {
           uruguay: 'Urugvaj',
           usa: 'SAD',
           uzbekistan: 'Uzbekistan',
+        },
+        tournaments: {
+          fifaWorldCup: 'Svetsko fudbalsko prvenstvo',
+        },
+        stages: {
+          groupStage: 'Grupna faza',
+          last32: 'Šesnaestina finala',
+          last16: 'Osmina finala',
+          quarterFinals: 'Četvrtfinale',
+          semiFinals: 'Polufinale',
+          final: 'Finale',
+          thirdPlaceFinal: 'Utakmica za treće mesto',
         },
       },
       topStoriesTitle: 'Najvažnije',
@@ -809,6 +833,18 @@ export const service: SerbianConfig = {
       },
       sport: {
         matchSummary: 'Резиме утакмице',
+        assists: 'Асистенције',
+        penalties: 'Пенали',
+        ht: 'Крај првог полувремена',
+        ft: 'Крај утакмице',
+        et: 'Продужетак',
+        afterExtraTime: 'После продужетака',
+        penaltyAbbreviation: 'пен',
+        ownGoal: 'аутогол',
+        winOnPenalties: {
+          prefix: 'побеђује',
+          suffix: 'на пенале',
+        },
         worldCupTeamNames: {
           algeria: 'Алжир',
           argentina: 'Аргентина',
@@ -858,6 +894,12 @@ export const service: SerbianConfig = {
           uruguay: 'Уругвај',
           usa: 'САД',
           uzbekistan: 'Узбекистан',
+        },
+        tournaments: {
+          fifaWorldCup: 'Светско првенство у фудбалу',
+        },
+        stages: {
+          groupStage: 'Групна фаза',
         },
       },
       topStoriesTitle: 'Најважније',

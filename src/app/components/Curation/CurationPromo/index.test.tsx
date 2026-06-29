@@ -1,7 +1,9 @@
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
+import * as clickTracking from '#app/hooks/useClickTrackerHandler';
+import * as isLiveEnv from '#lib/utilities/isLive';
+import userEvent from '@testing-library/user-event';
 import { render, screen } from '../../react-testing-library-with-providers';
-
 import CurationPromo from '.';
 
 jest.mock('../../ThemeProvider');
@@ -15,6 +17,12 @@ interface FixtureProps {
   position?: number;
   resourceId?: string;
   eventTrackingData?: EventTrackingData;
+  imageUrl?: string;
+  imageAlt?: string;
+  relatedTopic?: {
+    title: string;
+    link: { url: string };
+  };
 }
 
 const Fixture = ({
@@ -26,15 +34,18 @@ const Fixture = ({
   position = 1,
   resourceId = 'e2263a1c-8d5a-4a73-a00c-881acfa34381',
   eventTrackingData,
+  imageUrl = 'https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/17CDB/production/_123699479_indigena.jpg',
+  imageAlt = 'Campesino indígena peruano.',
+  relatedTopic,
 }: FixtureProps) => (
   <CurationPromo
     lazy={lazy}
     title="Promo title"
     description="This is a description"
     firstPublished="2022-03-30T07:37:18.253Z"
-    imageUrl="https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/17CDB/production/_123699479_indigena.jpg"
+    imageUrl={imageUrl}
     lastPublished="2023-04-17T07:37:18.253Z"
-    imageAlt="Campesino indígena peruano."
+    imageAlt={imageAlt}
     link={link}
     type={type}
     duration={duration}
@@ -42,6 +53,7 @@ const Fixture = ({
     position={position}
     id={resourceId}
     eventTrackingData={eventTrackingData}
+    relatedTopic={relatedTopic}
   />
 );
 
@@ -136,6 +148,97 @@ describe('Curation Promo', () => {
         { service: 'mundo' },
       );
       expect(container.queryByText('17 abril 2023')).not.toBeInTheDocument();
+    });
+  });
+
+  describe('Fallback placeholder image', () => {
+    it('should render a placeholder when imageUrl is missing on My News page', () => {
+      const { container } = render(<Fixture imageUrl="" imageAlt="" />, {
+        pageType: 'myNews',
+      });
+      expect(container.querySelector('.promo-image')).not.toBeEmptyDOMElement();
+      expect(screen.queryByRole('img')).not.toBeInTheDocument();
+    });
+
+    it('should not render a placeholder when imageUrl is missing on non-My News page', () => {
+      const { container } = render(<Fixture imageUrl="" imageAlt="" />, {
+        pageType: 'article',
+      });
+      expect(container.querySelector('.promo-image')).toBeEmptyDOMElement();
+    });
+
+    it('should render the real image when imageUrl is provided on My News page', () => {
+      render(<Fixture />, { pageType: 'myNews' });
+      expect(
+        screen.getByAltText('Campesino indígena peruano.'),
+      ).toBeInTheDocument();
+    });
+  });
+
+  describe('Related Topic', () => {
+    const relatedTopic = {
+      title: 'South Africa',
+      link: { url: 'https://www.bbc.com/pidgin/topics/cwr9jrd4wnnt' },
+    };
+    it('should render a related topic link when relatedTopic is provided', () => {
+      render(<Fixture relatedTopic={relatedTopic} />);
+
+      const relatedTopicLink = screen.getByRole('link', {
+        name: 'South Africa',
+      });
+      expect(relatedTopicLink).toBeInTheDocument();
+      expect(relatedTopicLink).toHaveAttribute(
+        'href',
+        'https://www.bbc.com/pidgin/topics/cwr9jrd4wnnt',
+      );
+    });
+
+    it('should not render a related topic link when relatedTopic is not provided', () => {
+      render(<Fixture />);
+
+      expect(
+        screen.queryByRole('link', { name: 'South Africa' }),
+      ).not.toBeInTheDocument();
+    });
+
+    it('should handle a click event when a related topic link is clicked', async () => {
+      const onClickSpy = jest.fn();
+      const clickTrackerSpy = jest
+        .spyOn(clickTracking, 'default')
+        .mockImplementation(() => ({ onClick: onClickSpy }));
+
+      render(<Fixture relatedTopic={relatedTopic} />);
+
+      expect(clickTrackerSpy).toHaveBeenCalledWith(
+        expect.objectContaining({
+          itemTracker: expect.objectContaining({
+            type: 'simple-curation-grid-related-topic',
+            text: 'South Africa',
+          }),
+        }),
+      );
+
+      const relatedTopicLink = screen.getByRole('link', {
+        name: 'South Africa',
+      });
+
+      await userEvent.click(relatedTopicLink);
+
+      expect(onClickSpy).toHaveBeenCalled();
+    });
+
+    it('should not render related topic links when environment is live', () => {
+      const isLiveSpy = jest.spyOn(isLiveEnv, 'default').mockReturnValue(true);
+
+      const { queryByText } = render(<Fixture relatedTopic={relatedTopic} />, {
+        service: 'pidgin',
+      });
+
+      // The fixture contains promos with related topics (e.g. 'Nigeria')
+      // but in live environment they should not be rendered
+      expect(queryByText('South Africa')).not.toBeInTheDocument();
+
+      isLiveSpy.mockRestore();
     });
   });
 });

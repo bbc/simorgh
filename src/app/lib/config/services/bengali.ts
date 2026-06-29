@@ -303,6 +303,18 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'সর্বশেষ',
       sport: {
         matchSummary: 'ম্যাচের সারসংক্ষেপ',
+        assists: 'অ্যাসিস্ট',
+        penalties: 'পেনাল্টি',
+        ht: 'প্রথমার্ধের শেষ',
+        ft: 'খেলার শেষ',
+        et: 'অতিরিক্ত সময়',
+        afterExtraTime: 'অতিরিক্ত সময়ের পর',
+        penaltyAbbreviation: 'পেন',
+        ownGoal: 'আত্মঘাতী গোল',
+        winOnPenalties: {
+          prefix: 'পেনাল্টিতে',
+          suffix: 'ব্যবধানে জয়ী',
+        },
         worldCupTeamNames: {
           algeria: 'আলজেরিয়া',
           argentina: 'আর্জেন্টিনা',
@@ -352,6 +364,18 @@ export const service: DefaultServiceConfig = {
           uruguay: 'উরুগুয়ে',
           usa: 'যুুক্তরাষ্ট্র',
           uzbekistan: '‌উজবেকিস্তান',
+        },
+        tournaments: {
+          fifaWorldCup: 'ফিফা বিশ্বকাপ ২০২৬',
+        },
+        stages: {
+          groupStage: 'গ্রুপ পর্ব',
+          last32: 'রাউন্ড অব ৩২',
+          last16: 'রাউন্ড অব ১৬',
+          quarterFinals: 'কোয়ার্টার ফাইনাল',
+          semiFinals: 'সেমি ফাইনাল',
+          final: 'ফাইনাল',
+          thirdPlaceFinal: 'তৃতীয় স্থান',
         },
       },
     },

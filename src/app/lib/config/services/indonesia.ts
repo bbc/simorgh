@@ -306,6 +306,18 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'Terbaru',
       sport: {
         matchSummary: 'Ringkasan Pertandingan',
+        assists: 'Assist',
+        penalties: 'Penalti',
+        ht: 'Babak pertama selesai',
+        ft: 'Pertandingan selesai',
+        et: 'Perpanjangan waktu',
+        afterExtraTime: 'Setelah perpanjangan waktu',
+        penaltyAbbreviation: 'PEN',
+        ownGoal: 'gol bunuh diri',
+        winOnPenalties: {
+          prefix: 'menang adu penalti',
+          suffix: '',
+        },
         worldCupTeamNames: {
           algeria: 'Aljazair',
           argentina: 'Argentina',
@@ -355,6 +367,18 @@ export const service: DefaultServiceConfig = {
           uruguay: 'Uruguai',
           usa: 'Amerika Serikat',
           uzbekistan: 'Uzbekistan',
+        },
+        tournaments: {
+          fifaWorldCup: 'Piala Dunia FIFA',
+        },
+        stages: {
+          groupStage: 'Babak Grup',
+          last32: 'Babak 32 Besar',
+          last16: 'Babak 16 Besar',
+          quarterFinals: 'Perempat final',
+          semiFinals: 'Semifinal',
+          final: 'Final',
+          thirdPlaceFinal: 'Peringkat tiga',
         },
       },
     },

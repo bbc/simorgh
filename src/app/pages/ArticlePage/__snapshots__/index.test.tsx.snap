@@ -842,7 +842,7 @@ exports[`Article Page should render a ltr article (pidgin) with most read correc
       ATI Analytics
     </div>
     <div>
-      chartbeat
+      Chartbeat
     </div>
     <div
       class="emotion-1"
@@ -2148,7 +2148,7 @@ exports[`Article Page should render a news article correctly 1`] = `
       ATI Analytics
     </div>
     <div>
-      chartbeat
+      Chartbeat
     </div>
     <div
       class="emotion-1"
@@ -2765,6 +2765,7 @@ exports[`Article Page should render a news article with headline in the middle c
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 @media (max-width: 14.9375rem) {
@@ -3043,7 +3044,7 @@ exports[`Article Page should render a news article with headline in the middle c
       ATI Analytics
     </div>
     <div>
-      chartbeat
+      Chartbeat
     </div>
     <div
       class="emotion-1"
@@ -3172,6 +3173,7 @@ exports[`Article Page should render a news article without headline correctly 1`
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 @media (max-width: 14.9375rem) {
@@ -3313,7 +3315,7 @@ exports[`Article Page should render a news article without headline correctly 1`
       ATI Analytics
     </div>
     <div>
-      chartbeat
+      Chartbeat
     </div>
     <div
       class="emotion-1"
@@ -4306,7 +4308,7 @@ exports[`Article Page should render a rtl article (persian) with most read corre
       ATI Analytics
     </div>
     <div>
-      chartbeat
+      Chartbeat
     </div>
     <div
       class="emotion-1"

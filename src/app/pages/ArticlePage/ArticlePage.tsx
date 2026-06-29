@@ -3,9 +3,6 @@ import { useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import useMediaQuery from '#hooks/useMediaQuery';
 import { GROUP_4_MIN_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
-import useOptimizelyVariation, {
-  ExperimentType,
-} from '#app/hooks/useOptimizelyVariation';
 import { singleTextBlock } from '#app/models/blocks';
 import { BylineLinkedData } from '#app/components/LinkedData/types';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
@@ -21,7 +18,7 @@ import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import SocialEmbedContainer from '#containers/SocialEmbed';
 import MediaLoader from '#app/components/MediaLoader';
 import { MediaBlock } from '#app/components/MediaLoader/types';
-import { PHOTO_GALLERY_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
+import { PHOTO_GALLERY_PAGE } from '#app/routes/utils/pageTypes';
 import PortraitVideoCarousel from '#app/components/PortraitVideoCarousel';
 import {
   getArticleId,
@@ -64,6 +61,7 @@ import SaveArticleButton from '#app/components/SaveArticleButton';
 import useScrollDepthTracker from '#app/hooks/useScrollDepthTracker';
 import isLive from '#lib/utilities/isLive';
 import ElectionBanner from './ElectionBanner';
+import ArticleMessageBanner from './ArticleMessageBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
 import EmbedImages from '../../components/Embeds/EmbedImages';
@@ -82,6 +80,7 @@ import {
   getAuthorTwitterHandle,
 } from '../../components/Byline/utilities';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import { ReverbParamsContext } from '../../contexts/ReverbParamsContext';
 import RelatedContentSection from '../../components/RelatedContentSection';
 import TopicDiscovery from '../../components/TopicDiscovery';
 import Disclaimer from '../../components/Disclaimer';
@@ -112,7 +111,6 @@ const getTimestampComponent =
     lastPublished: string,
     readTimeValue: number | undefined,
     readTimeTranslations: Translations['readTime'],
-    articleTitle: string,
     articlePageData?: Article,
   ) =>
   (props: ComponentToRenderProps & TimeStampProps) => {
@@ -144,10 +142,7 @@ const getTimestampComponent =
             )}
           </>
         )}
-        <SaveArticleButton
-          articleTitle={articleTitle}
-          articlePageData={articlePageData}
-        />
+        <SaveArticleButton articlePageData={articlePageData} />
       </>
     );
   };
@@ -231,11 +226,16 @@ const ArticlePage = ({
     handleDesktopMediaQueryChange,
   );
 
+  // EXPERIMENT: Topic Discovery
+  const { experimentProps: topicDiscoveryExperimentProps } =
+    use(ReverbParamsContext);
+  const { experimentVariant: topicDiscoveryVariant } =
+    topicDiscoveryExperimentProps ?? {};
+
   const {
     articleAuthor,
     isTrustProjectParticipant,
     showRelatedTopics,
-    brandName,
     translations,
   } = use(ServiceContext);
 
@@ -249,39 +249,10 @@ const ArticlePage = ({
     palette: { GREY_2 },
   } = useTheme();
 
-  // EXPERIMENT: Topic Discovery
-  const topicDiscoveryExperimentName = 'newswb_ws_topic_discovery_module';
-  const topicDiscoveryVariant = useOptimizelyVariation({
-    experimentName: topicDiscoveryExperimentName,
-    experimentType: ExperimentType.CLIENT_SIDE,
-  });
-
-  const getActiveExperimentProps = (
-    experimentName: string,
-    experimentVariant: string | null,
-  ): ComponentExperimentProps | null =>
-    experimentVariant
-      ? {
-          sendOptimizelyEvents: true,
-          experimentName,
-          experimentVariant,
-        }
-      : null;
-
-  const topicDiscoveryExperimentProps = getActiveExperimentProps(
-    topicDiscoveryExperimentName,
-    topicDiscoveryVariant,
-  );
-  const isTopicDiscoveryVariant =
-    topicDiscoveryVariant && topicDiscoveryVariant !== 'off';
-
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
 
-  const {
-    metadata: { atiAnalytics },
-    mostRead: mostReadInitialData,
-  } = pageData;
+  const { mostRead: mostReadInitialData } = pageData;
 
   const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
   const { enabled: articlePortraitVideoEnabled } = useToggle(
@@ -325,21 +296,9 @@ const ArticlePage = ({
   const formats = pageData?.metadata?.passport?.predicates?.formats ?? [];
 
   const isPGL = pageData?.metadata?.type === PHOTO_GALLERY_PAGE;
-  const isSTY = pageData?.metadata?.type === STORY_PAGE;
-  const isCPS = isPGL || isSTY;
   const isTC2Asset = pageData?.metadata?.analyticsLabels?.contentId
     ?.split(':')
     ?.includes('topcat');
-
-  const atiData = {
-    ...atiAnalytics,
-    ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
-    ...(isTopicDiscoveryVariant &&
-      topicDiscoveryExperimentProps && {
-        experimentName: topicDiscoveryExperimentProps.experimentName,
-        experimentVariant: topicDiscoveryExperimentProps.experimentVariant,
-      }),
-  };
 
   const showPortraitVideoCarousel = Boolean(
     pageData?.portraitVideoItems?.portraitVideo?.blocks?.length &&
@@ -405,7 +364,6 @@ const ArticlePage = ({
       lastPublished,
       readTimeValue,
       translations.readTime,
-      headline,
       pageData,
     ),
     social: SocialEmbedContainer,
@@ -481,7 +439,7 @@ const ArticlePage = ({
     <div css={styles.pageWrapper}>
       {/* EXPERIMENT: PWA Promotional Banner */}
       {shouldRenderPWAPromotionalBanner && <PWAPromotionalBanner />}
-      <ATIAnalytics atiData={atiData} />
+      <ATIAnalytics />
       <ChartbeatAnalytics
         sectionName={pageData?.relatedContent?.section?.name}
         title={headline}
@@ -525,6 +483,7 @@ const ArticlePage = ({
         <AdContainer slotType="leaderboard" adcampaign={adcampaign} />
       )}
       <ElectionBanner aboutTags={aboutTags} taggings={taggings} />
+      <ArticleMessageBanner aboutTags={aboutTags} taggings={taggings} />
       <div css={styles.grid}>
         <div css={!isPGL ? styles.primaryColumn : styles.pglColumn}>
           <main css={styles.mainContent} role="main" ref={scrollDepthRef}>

@@ -32,11 +32,12 @@ export type Action = {
   timeLabel: {
     value: string;
     accessible: string;
+    translated?: string;
   };
 };
 
 export type PlayerActions = {
-  playerId: string;
+  playerId?: string;
   playerName: string;
   actionType: string;
   actions: Action[];
@@ -150,7 +151,7 @@ export type HeadToHeadV2Data = {
   /**
    * The current period of the event e.g FT, HT.
    */
-  periodLabel?: { value: string; accessible: string };
+  periodLabel?: { value: string; translation?: string; accessible: string };
   /**
    * Period string.
    */
@@ -201,6 +202,11 @@ export type HeadToHeadV2Data = {
    */
   multiLeg?: {
     leg: number;
+  };
+  stage?: {
+    id: string;
+    name: string;
+    urn?: string;
   };
 };
 

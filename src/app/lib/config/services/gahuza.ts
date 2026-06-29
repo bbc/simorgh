@@ -304,6 +304,18 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'Ibiheruka',
       sport: {
         matchSummary: 'Incamake y’umukino',
+        assists: 'Imipira yatanze ibitego',
+        penalties: 'Penaliti',
+        ht: 'Igice cya mbere kirangiye',
+        ft: 'Umukino urangiye',
+        et: 'Igihe cy’inyongera',
+        afterExtraTime: 'Nyuma y’igihe cy’inyongera',
+        penaltyAbbreviation: 'PEN',
+        ownGoal: 'igitego cyitsinze',
+        winOnPenalties: {
+          prefix: 'itsinda ku penaliti',
+          suffix: '',
+        },
         worldCupTeamNames: {
           algeria: 'Algeriya',
           argentina: 'Argentina',
@@ -353,6 +365,19 @@ export const service: DefaultServiceConfig = {
           uruguay: 'Uruguay',
           usa: 'USA',
           uzbekistan: 'Uzbekistan',
+        },
+        tournaments: {
+          fifaWorldCup: "Igikombe c'isi ca FIFA",
+        },
+        stages: {
+          groupStage: "Urwego rw'amatsinda",
+
+          last32: 'Igice ca 16 gishira ica nyuma',
+          last16: 'Igice ca 8 gishira ica nyuma',
+          quarterFinals: 'Igice ca kane gishira ica nyuma',
+          semiFinals: 'Igice ca kabiri gishira ica nyuma',
+          final: 'Urukino rwa nyuma',
+          thirdPlaceFinal: 'Ikibanza ca gatatu',
         },
       },
     },

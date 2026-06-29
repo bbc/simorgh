@@ -303,6 +303,18 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'අලුත්ම',
       sport: {
         matchSummary: 'තරඟ සාරාංශය',
+        assists: 'ඇසිස්ට්',
+        penalties: 'පෙනල්ටි',
+        ht: 'පළමු අර්ධය අවසන්',
+        ft: 'තරඟය අවසන්',
+        et: 'අමතර කාලය',
+        afterExtraTime: 'අමතර කාලයෙන් පසු',
+        penaltyAbbreviation: 'පෙන්',
+        ownGoal: 'ස්වයං ගෝලය',
+        winOnPenalties: {
+          prefix: 'පෙනල්ටි',
+          suffix: 'න් ජය ලබයි',
+        },
         worldCupTeamNames: {
           algeria: 'ඇල්ජීරියා',
           argentina: 'ආජන්ටිනා',
@@ -352,6 +364,18 @@ export const service: DefaultServiceConfig = {
           uruguay: 'උරුගුවේ',
           usa: 'එක්සත් ජනපදය',
           uzbekistan: 'උස්බෙකිස්තානය',
+        },
+        tournaments: {
+          fifaWorldCup: 'FIFA World Cup',
+        },
+        stages: {
+          groupStage: 'කණ්ඩායම් අදියර',
+          last32: '32 දෙනාගේ වටය',
+          last16: '16 දෙනාගේ වටය',
+          quarterFinals: 'අර්ධ-අවසන් පූර්ව වටය',
+          semiFinals: 'අවසන් පූර්ව වටය',
+          final: 'අවසන් වටය',
+          thirdPlaceFinal: 'තෙවන ස්ථානය',
         },
       },
     },
