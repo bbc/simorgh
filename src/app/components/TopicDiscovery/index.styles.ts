@@ -126,13 +126,12 @@ const styles = {
       marginTop: `${spacings.DOUBLE}rem`,
       background: `linear-gradient(to right, ${palette.GREY_4} 0%, ${palette.GREY_3} 100%)`,
     }),
-  moreAboutLink: ({ palette, spacings, fontSizes, fontVariants }: Theme) =>
+  moreAboutLink: ({ palette, fontSizes, fontVariants }: Theme) =>
     css({
       ...fontVariants.sansBold,
       ...fontSizes.longPrimer,
       color: palette.GREY_10,
       display: 'inline-block',
-      paddingTop: `${spacings.DOUBLE}rem`,
       textDecoration: 'none',
 
       '&:hover': {
