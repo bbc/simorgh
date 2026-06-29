@@ -114,19 +114,19 @@ const styles = {
       height: `${pixelsToRem(12)}rem`,
       background: `linear-gradient(to right, ${palette.GREY_4} 0%, ${palette.GREY_3} 100%)`,
     }),
-  skeletonMoreFromLinkContainer: () =>
+  skeletonMoreAboutLinkContainer: () =>
     css({
       display: 'flex',
       alignItems: 'flex-start',
     }),
-  skeletonMoreFromLink: ({ palette, spacings }: Theme) =>
+  skeletonMoreAboutLink: ({ palette, spacings }: Theme) =>
     css({
       height: `${pixelsToRem(18)}rem`,
       width: '40%',
       marginTop: `${spacings.DOUBLE}rem`,
       background: `linear-gradient(to right, ${palette.GREY_4} 0%, ${palette.GREY_3} 100%)`,
     }),
-  moreFromLink: ({ palette, spacings, fontSizes, fontVariants }: Theme) =>
+  moreAboutLink: ({ palette, spacings, fontSizes, fontVariants }: Theme) =>
     css({
       ...fontVariants.sansBold,
       ...fontSizes.longPrimer,
