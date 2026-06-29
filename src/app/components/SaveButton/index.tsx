@@ -67,7 +67,7 @@ const SaveButton = ({
         {displayedVisualLabel}
       </span>
 
-      <VisuallyHiddenText id={labelId} aria-live="polite">
+      <VisuallyHiddenText id={labelId} aria-live="assertive">
         {accessibleLabel}
       </VisuallyHiddenText>
     </button>
