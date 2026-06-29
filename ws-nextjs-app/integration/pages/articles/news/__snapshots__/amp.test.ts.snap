@@ -299,7 +299,7 @@ exports[`AMP Articles SEO Linked data should match text 1`] = `
 
 exports[`AMP Articles SEO OG description 1`] = `"Royal wedding flowers given to Hackney hospice"`;
 
-exports[`AMP Articles SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_news/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg"`;
+exports[`AMP Articles SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1200/branded_news/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg"`;
 
 exports[`AMP Articles SEO OG image alt 1`] = `"Pauline Clayton"`;
 
@@ -325,7 +325,7 @@ exports[`AMP Articles SEO Twitter description 1`] = `"Royal wedding flowers give
 
 exports[`AMP Articles SEO Twitter image alt 1`] = `"Pauline Clayton"`;
 
-exports[`AMP Articles SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_news/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg"`;
+exports[`AMP Articles SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1200/branded_news/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg"`;
 
 exports[`AMP Articles SEO Twitter site 1`] = `"@BBCNews"`;
 

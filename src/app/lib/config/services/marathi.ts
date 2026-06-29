@@ -299,6 +299,18 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'नवीनतम',
       sport: {
         matchSummary: 'सामन्याचा सारांश',
+        assists: 'असिस्ट',
+        penalties: 'पेनल्टी',
+        ht: 'पहिला अर्धा संपला',
+        ft: 'सामना समाप्त',
+        et: 'अतिरिक्त वेळ',
+        afterExtraTime: 'अतिरिक्त वेळेनंतर',
+        penaltyAbbreviation: 'पेन',
+        ownGoal: 'आत्मघाती गोल',
+        winOnPenalties: {
+          prefix: 'पेनल्टीवर',
+          suffix: 'ने जिंकतो',
+        },
         worldCupTeamNames: {
           algeria: 'अल्जेरिया',
           argentina: 'अंर्जेंटिना',
@@ -348,6 +360,18 @@ export const service: DefaultServiceConfig = {
           uruguay: 'उरुग्वे',
           usa: 'अमेेरिका (USA)',
           uzbekistan: 'उझबेकिस्तान',
+        },
+        tournaments: {
+          fifaWorldCup: 'फिफा वर्ल्ड कप',
+        },
+        stages: {
+          groupStage: 'साखळी फेरी',
+          last32: 'राऊंड ऑफ 32',
+          last16: 'राऊंड ऑफ 16',
+          quarterFinals: 'उपांत्यपूर्व फेरी',
+          semiFinals: 'उपांंत्य फेरी',
+          final: 'अंतिम सामना',
+          thirdPlaceFinal: 'तिसऱ्या स्थानाकरिता सामना',
         },
       },
     },

@@ -323,6 +323,18 @@ export const service: DefaultServiceConfig = {
       },
       sport: {
         matchSummary: 'Mérkőzés összefoglaló',
+        assists: 'Gólpasszok',
+        penalties: 'Büntetők',
+        ht: 'Félidő vége',
+        ft: 'Mérkőzés vége',
+        et: 'Hosszabbítás',
+        afterExtraTime: 'Hosszabbítás után',
+        penaltyAbbreviation: '11m',
+        ownGoal: 'öngól',
+        winOnPenalties: {
+          prefix: '',
+          suffix: 're nyer büntetőkkel',
+        },
         worldCupTeamNames: {
           algeria: 'Algéria',
           argentina: 'Argentína',
@@ -372,6 +384,12 @@ export const service: DefaultServiceConfig = {
           uruguay: 'Uruguay',
           usa: 'Egyesült Államok',
           uzbekistan: 'Üzbegisztán',
+        },
+        tournaments: {
+          fifaWorldCup: 'FIFA labdarúgó-világbajnokság',
+        },
+        stages: {
+          groupStage: 'Csoportkör',
         },
       },
     },

@@ -261,6 +261,18 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: '読み物・解説',
       latestMediaTitle: '最新動画',
       sport: {
+        assists: 'アシスト',
+        penalties: 'PK',
+        ht: '前半終了',
+        ft: '試合終了',
+        et: '延長戦',
+        afterExtraTime: '延長戦後',
+        penaltyAbbreviation: 'PK',
+        ownGoal: 'オウンゴール',
+        winOnPenalties: {
+          prefix: 'はPK戦で',
+          suffix: 'で勝利',
+        },
         worldCupTeamNames: {
           algeria: 'アルジェリア',
           argentina: 'アルゼンチン',
@@ -310,6 +322,18 @@ export const service: DefaultServiceConfig = {
           uruguay: 'ウルグアイ',
           usa: 'アメリカ合衆国',
           uzbekistan: 'ウズベキスタン',
+        },
+        tournaments: {
+          fifaWorldCup: 'FIFAワールドカップ',
+        },
+        stages: {
+          groupStage: 'グループステージ',
+          last32: 'ベスト32',
+          last16: 'ベスト16',
+          quarterFinals: '準々決勝',
+          semiFinals: '準決勝',
+          final: '決勝',
+          thirdPlaceFinal: '3位決定',
         },
       },
     },

@@ -353,6 +353,18 @@ export const service: DefaultServiceConfig = {
       },
       sport: {
         matchSummary: 'የጨዋታ ማጠቃለያ',
+        assists: 'አስተላላፊ አግባብ',
+        penalties: 'ፔናልቲ',
+        ht: 'እረፍት (ከፍተኛ ጊዜ)',
+        ft: 'ጨዋታ መጨረሻ',
+        et: 'ተጨማሪ ጊዜ',
+        afterExtraTime: 'ከተጨማሪ ጊዜ በኋላ',
+        penaltyAbbreviation: 'ፔና',
+        ownGoal: 'ራስ ግብ',
+        winOnPenalties: {
+          prefix: '',
+          suffix: 'በፔናልቲ ያሸንፋል',
+        },
         worldCupTeamNames: {
           algeria: 'አልጄሪያ',
           argentina: 'አርጀንቲና',
@@ -402,6 +414,18 @@ export const service: DefaultServiceConfig = {
           uruguay: 'ኡራጓይ',
           usa: 'ዩኤስ አሜሪካ',
           uzbekistan: 'ኡዝቤክስታን',
+        },
+        tournaments: {
+          fifaWorldCup: 'የፊፋ ዓለም ዋንጫ',
+        },
+        stages: {
+          groupStage: 'የምድብ ጨዋታ',
+          last32: 'የ32ቱ ዙር',
+          last16: 'የምድብ አላፊዎች',
+          quarterFinals: 'ሩብ ፍፃሜ',
+          semiFinals: 'ግማሽ ፍፃሜ',
+          final: 'ፍፃሜ',
+          thirdPlaceFinal: 'ሦስተኛ ደረጃ',
         },
       },
     },

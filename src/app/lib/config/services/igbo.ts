@@ -298,6 +298,18 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'Kachasị ọhụrụ',
       sport: {
         matchSummary: 'Nchịkọta Asọmpi',
+        assists: 'Nye enyemaka',
+        penalties: 'Penariti',
+        ht: 'Ngwụcha ọkara mbụ',
+        ft: 'Ngwụcha egwuregwu',
+        et: 'Oge mgbakwunye',
+        afterExtraTime: 'Mgbe oge mgbakwunye gachara',
+        penaltyAbbreviation: 'PEN',
+        ownGoal: 'goolu megide onwe',
+        winOnPenalties: {
+          prefix: 'meriri penariti',
+          suffix: '',
+        },
         worldCupTeamNames: {
           algeria: 'Algeria',
           argentina: 'Agentina',
@@ -347,6 +359,18 @@ export const service: DefaultServiceConfig = {
           uruguay: 'Yuragwe',
           usa: 'USA',
           uzbekistan: 'Uzbekistan',
+        },
+        tournaments: {
+          fifaWorldCup: 'Asọmpi Iko mba ụwa',
+        },
+        stages: {
+          groupStage: 'Agba nke Mbụ',
+          last32: 'Agba nke 32',
+          last16: 'Agba mgbapụ',
+          quarterFinals: 'Agba anọ nke ikpeazụ',
+          semiFinals: 'Agba abụọ nke ikpeazụ',
+          final: 'Agba ikpeazụ',
+          thirdPlaceFinal: 'Ndị nke atọ',
         },
       },
     },

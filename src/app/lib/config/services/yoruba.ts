@@ -278,6 +278,18 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'Èyí tí ó ṣẹ̀ṣẹ̀dé',
       sport: {
         matchSummary: 'Akopọ Ere',
+        assists: 'Iranlọwọ',
+        penalties: 'Penariti',
+        ht: 'Ipari idaji akọkọ',
+        ft: 'Ipari ere',
+        et: 'Akoko afikun',
+        afterExtraTime: 'Lẹ́yìn àkókò àfikún',
+        penaltyAbbreviation: 'PEN',
+        ownGoal: 'góòlù ara ẹni',
+        winOnPenalties: {
+          prefix: 'ṣẹ́gun',
+          suffix: 'ní penariti',
+        },
         worldCupTeamNames: {
           algeria: 'Orilẹede Algeria',
           argentina: 'Orilẹede Argentina',
@@ -327,6 +339,18 @@ export const service: DefaultServiceConfig = {
           uruguay: 'Orilẹede Uruguay',
           usa: 'Orilẹede Amẹrika',
           uzbekistan: 'Orilẹede Uzbekistan',
+        },
+        tournaments: {
+          fifaWorldCup: 'Ìdíjé Ife Agbaye Ọdun',
+        },
+        stages: {
+          groupStage: 'Ìpele pipin si ìsọ̀rí',
+          last32: 'Ìpele méjìlélọ́gbọ̀n',
+          last16: 'Ìpele mẹ́rìdínlógún',
+          quarterFinals: 'Ìpele tó kángun sí èyí tó kángun sí àṣekágbá',
+          semiFinals: 'Ìpele tó kángun sí àṣekágbá',
+          final: 'Àṣekágbá',
+          thirdPlaceFinal: 'Ipò kẹta',
         },
       },
     },

@@ -118,6 +118,18 @@ export const service: DefaultServiceConfig = {
       ...headerFooterTranslations,
       sport: {
         matchSummary: 'Обзор матча',
+        assists: 'Голевые передачи',
+        penalties: 'Пенальти',
+        ht: 'Конец первого тайма',
+        ft: 'Конец матча',
+        et: 'Дополнительное время',
+        afterExtraTime: 'После дополнительного времени',
+        penaltyAbbreviation: 'пен',
+        ownGoal: 'автогол',
+        winOnPenalties: {
+          prefix: 'выигрывает',
+          suffix: 'по пенальти',
+        },
         worldCupTeamNames: {
           algeria: 'Алжир',
           argentina: 'Аргентина',
@@ -167,6 +179,18 @@ export const service: DefaultServiceConfig = {
           uruguay: 'Уругвай',
           usa: 'США',
           uzbekistan: 'Узбекистан',
+        },
+        tournaments: {
+          fifaWorldCup: 'ЧМ по футболу',
+        },
+        stages: {
+          groupStage: 'Групповой этап',
+          last32: '1/16 финала',
+          last16: '1/8 финала',
+          quarterFinals: 'Четвертьфинал',
+          semiFinals: 'Полуфинал',
+          final: 'Финал',
+          thirdPlaceFinal: 'За третье место',
         },
       },
     },

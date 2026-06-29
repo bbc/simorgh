@@ -16,7 +16,6 @@ const TopicsPage = ({
 }: TopicsPageProps) => {
   const { translations, lang } = useContext(ServiceContext);
   const { summaries, headline } = pageData || {};
-  const atiAnalytics = pageData?.metadata?.atiAnalytics;
   const {
     pageXOfY,
     previousPage,
@@ -39,7 +38,7 @@ const TopicsPage = ({
 
   return (
     <main css={styles.container}>
-      <ATIAnalytics atiData={atiAnalytics} />
+      <ATIAnalytics />
       <MetadataContainer
         title={metadataTitle}
         openGraphType="website"
