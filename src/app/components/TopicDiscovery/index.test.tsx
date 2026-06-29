@@ -122,13 +122,13 @@ describe('TopicDiscovery', () => {
       </ServiceContext.Provider>,
     );
     // Wait for loading to finish and the link to appear
-    const moreAbout = await screen.findByTestId('topic-discovery-more-from');
+    const moreAbout = await screen.findByTestId('topic-discovery-more-about');
     expect(moreAbout).toHaveTextContent(
       `Mais sobre ${topicTagsFixture[0].topicName}`,
     );
   });
 
-  it('renders the "more from" section with topic title first if {topic} is first in the config', async () => {
+  it('renders the "more about" section with topic title first if {topic} is first in the config', async () => {
     const config: ServiceConfig = { ...turkceConfig.default };
     render(
       <ServiceContext.Provider value={config}>
@@ -136,8 +136,8 @@ describe('TopicDiscovery', () => {
       </ServiceContext.Provider>,
     );
     // Wait for loading to finish and the link to appear
-    const moreFrom = await screen.findByTestId('topic-discovery-more-from');
-    expect(moreFrom).toHaveTextContent(
+    const moreAbout = await screen.findByTestId('topic-discovery-more-about');
+    expect(moreAbout).toHaveTextContent(
       `${topicTagsFixture[0].topicName} hakkında daha fazla`,
     );
   });
@@ -183,7 +183,7 @@ describe('TopicDiscovery', () => {
     ).toBeInTheDocument();
 
     expect(
-      screen.queryByTestId('topic-discovery-more-from'),
+      screen.queryByTestId('topic-discovery-more-about'),
     ).not.toBeInTheDocument();
   });
 
@@ -257,7 +257,7 @@ describe('TopicDiscovery', () => {
       clickTrackerSpy.mockRestore();
     });
 
-    it('should call useClickTrackerHandler when "more from" link is clicked', async () => {
+    it('should call useClickTrackerHandler when "more about" link is clicked', async () => {
       const mockClickHandler = jest.fn();
       jest
         .spyOn(clickTracking, 'default')
@@ -267,19 +267,19 @@ describe('TopicDiscovery', () => {
         service: 'portuguese',
       });
 
-      const moreFromLink = await screen.findByTestId(
-        'topic-discovery-more-from',
+      const moreAboutLink = await screen.findByTestId(
+        'topic-discovery-more-about',
       );
 
-      fireEvent.click(moreFromLink);
+      fireEvent.click(moreAboutLink);
 
       expect(mockClickHandler).toHaveBeenCalledTimes(1);
 
       expect(clickTracking.default).toHaveBeenCalledWith({
-        componentName: 'topic-discovery-more-from-link',
+        componentName: 'topic-discovery-more-about-link',
         groupTracker,
         itemTracker: {
-          type: 'topic-discovery-more-from-link',
+          type: 'topic-discovery-more-about-link',
           text: `Mais sobre ${topicTagsFixture[0].topicName}`,
           resourceId: topicTagsFixture[0].topicId,
         },

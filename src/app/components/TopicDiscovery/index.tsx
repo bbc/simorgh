@@ -54,11 +54,11 @@ const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
     componentName: 'topic-discovery-fetch-error-message',
   });
 
-  const moreFromLinkClickTracker = useClickTrackerHandler({
-    componentName: 'topic-discovery-more-from-link',
+  const moreAboutLinkClickTracker = useClickTrackerHandler({
+    componentName: 'topic-discovery-more-about-link',
     groupTracker,
     itemTracker: {
-      type: 'topic-discovery-more-from-link',
+      type: 'topic-discovery-more-about-link',
       text: currentTopic
         ? moreAboutTopic.replace('{topic}', currentTopic.topicName)
         : undefined,
@@ -115,8 +115,8 @@ const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
                       </div>
                     ))}
                   </div>
-                  <div css={styles.skeletonMoreFromLinkContainer}>
-                    <div css={styles.skeletonMoreFromLink} aria-hidden />
+                  <div css={styles.skeletonMoreAboutLinkContainer}>
+                    <div css={styles.skeletonMoreAboutLink} aria-hidden />
                   </div>
                 </>
               );
@@ -145,10 +145,10 @@ const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
                     }}
                   />
                   <a
-                    css={styles.moreFromLink}
+                    css={styles.moreAboutLink}
                     href={selectedTopic.topicUrl}
-                    data-testid="topic-discovery-more-from"
-                    {...moreFromLinkClickTracker}
+                    data-testid="topic-discovery-more-about"
+                    {...moreAboutLinkClickTracker}
                   >
                     {moreAboutTopic.replace('{topic}', selectedTopic.topicName)}
                   </a>
