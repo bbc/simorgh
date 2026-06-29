@@ -9,7 +9,13 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import { ServiceConfig } from '#app/models/types/serviceConfig';
 import { service as portugueseConfig } from '#app/lib/config/services/portuguese';
 import { service as turkceConfig } from '#app/lib/config/services/turkce';
-import { topicTagsFixture, multipleTopicsFixture } from './fixtures';
+import { service as arabicConfig } from '#app/lib/config/services/arabic';
+import {
+  topicTagsFixture,
+  multipleTopicsFixture,
+  arabicTopicTagsFixture,
+  arabicMultipleTopicsFixture,
+} from './fixtures';
 import useFetchTopicPromos from './useFetchTopicPromos';
 import TopicDiscovery from '.';
 
@@ -284,6 +290,63 @@ describe('TopicDiscovery', () => {
           resourceId: topicTagsFixture[0].topicId,
         },
       });
+    });
+  });
+
+  describe('RTL rendering for Arabic', () => {
+    beforeEach(() => {
+      mockUseFetchTopicPromos.mockReturnValue({
+        topicPromos:
+          arabicMultipleTopicsFixture[arabicTopicTagsFixture[0].topicId].data
+            .items,
+        isLoading: false,
+        isError: false,
+      });
+    });
+
+    it('should set dir attribute to rtl on section element when service is arabic', () => {
+      const config: ServiceConfig = { ...arabicConfig.default };
+      render(
+        <ServiceContext.Provider value={config}>
+          <TopicDiscovery topics={arabicTopicTagsFixture} />
+        </ServiceContext.Provider>,
+      );
+
+      const section = screen.getByTestId('topic-discovery');
+      expect(section).toHaveAttribute('dir', 'rtl');
+    });
+
+    it('should render arabic topics with correct text direction', () => {
+      const config: ServiceConfig = { ...arabicConfig.default };
+      render(
+        <ServiceContext.Provider value={config}>
+          <TopicDiscovery topics={arabicTopicTagsFixture} />
+        </ServiceContext.Provider>,
+      );
+
+      expect(
+        screen.getByRole('tab', { name: arabicTopicTagsFixture[0].topicName }),
+      ).toBeInTheDocument();
+      expect(
+        screen.getByRole('tab', { name: arabicTopicTagsFixture[1].topicName }),
+      ).toBeInTheDocument();
+    });
+
+    it('should switch active arabic topic when a different tab is clicked', () => {
+      const config: ServiceConfig = { ...arabicConfig.default };
+      render(
+        <ServiceContext.Provider value={config}>
+          <TopicDiscovery topics={arabicTopicTagsFixture} />
+        </ServiceContext.Provider>,
+      );
+
+      fireEvent.click(
+        screen.getByRole('tab', { name: arabicTopicTagsFixture[1].topicName }),
+      );
+
+      expect(
+        screen.getByRole('tab', { name: arabicTopicTagsFixture[1].topicName }),
+      ).toHaveAttribute('aria-selected', 'true');
     });
   });
 });
