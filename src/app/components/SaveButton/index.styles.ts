@@ -42,12 +42,9 @@ const styles = {
       backgroundColor: palette.GREY_8,
       color: palette.WHITE,
       border: `${pixelsToRem(1)}rem solid ${palette.GREY_8}`,
+      cursor: 'not-allowed',
       '& svg': {
         fill: palette.WHITE,
-      },
-      ':disabled': {
-        backgroundColor: palette.GREY_8,
-        cursor: 'not-allowed',
       },
     }),
 };

@@ -73,7 +73,6 @@ const SaveArticleButtonAuthenticated = ({
         isLoading={isLoading}
         isUpdating={isUpdating}
         isSaved={isSaved}
-        disabled={isLoading}
         visualLabel={getVisualLabel()}
         hoverVisualLabel={hoverVisualLabel}
         accessibleLabel={getAccessibleLabel()}

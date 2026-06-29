@@ -14,7 +14,6 @@ export default {
     isLoading: false,
     isUpdating: false,
     isSaved: false,
-    disabled: false,
   },
 };
 

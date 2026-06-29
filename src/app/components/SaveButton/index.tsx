@@ -11,7 +11,6 @@ export interface SaveButtonProps {
   isLoading?: boolean;
   isUpdating?: boolean;
   isSaved?: boolean;
-  disabled?: boolean;
   onClick: (event?: React.MouseEvent<HTMLButtonElement>) => void;
   testId?: string;
 }
@@ -23,7 +22,6 @@ const SaveButton = ({
   isLoading = false,
   isUpdating = false,
   isSaved = false,
-  disabled = false,
   onClick,
   testId,
 }: SaveButtonProps) => {
@@ -38,6 +36,8 @@ const SaveButton = ({
     showRemoveAffordance && hoverVisualLabel ? hoverVisualLabel : visualLabel;
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    // Guard activation in JS instead of using the disabled attribute, so the
+    // button keeps focus and is never announced by screen readers as "unavailable"
     if (isBusy) return;
     onClick(event);
   };
@@ -47,9 +47,7 @@ const SaveButton = ({
       css={[styles.buttonWrapper, isUpdating && styles.updatingState]}
       type="button"
       aria-labelledby={labelId}
-      aria-busy={isBusy}
       onClick={handleClick}
-      disabled={disabled || isBusy}
       onMouseEnter={() => setIsFocusedOrHovered(true)}
       onMouseLeave={() => setIsFocusedOrHovered(false)}
       onFocus={() => setIsFocusedOrHovered(true)}
