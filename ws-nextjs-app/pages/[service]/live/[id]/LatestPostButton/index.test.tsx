@@ -16,7 +16,7 @@ jest.mock('#app/hooks/useCustomEventTracker', () => ({
 
 jest.useFakeTimers();
 
-const pageId = '3861CC0A9A7434981EEE3FCE9880391';
+const pageId = '3861CC0A9EA7434981EEE3FCE9880391';
 
 const defaultProps = {
   pageId,
