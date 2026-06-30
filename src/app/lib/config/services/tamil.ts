@@ -81,6 +81,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'அனைத்தும் பார்க்க',
       home: 'முகப்பு',
+      topicDiscovery: {
+        heading: 'மேலும் அறிக',
+        moreAboutTopic: '{topic} பற்றி மேலும்',
+        fetchErrorMessage: 'ஏற்ற முடியவில்லை. மீண்டும் முயற்சிக்கவும்',
+      },
       continueReading: 'தொடர்ந்து படியுங்கள்',
       currentPage: 'தற்போதுள்ள பக்கம்',
       skipLinkText: 'உள்ளடக்கத்துக்குத் தாண்டிச் செல்க',
