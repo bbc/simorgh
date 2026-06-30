@@ -61,7 +61,7 @@ optimizely?.notificationCenter?.addNotificationListener(
         notification.decisionInfo?.decisionEventDispatched;
 
       if (decisionEventDispatched) {
-        const currentUrl = window.location.pathname;
+        const currentUrl = window.location.pathname + window.location.search;
         if (currentUrl !== lastTrackedUrl) {
           lastTrackedUrl = currentUrl;
 

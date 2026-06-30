@@ -89,6 +89,6 @@ The page views per visit ratio metric is built from two Optimizely events:
 
 Both events are tracked from the `DECISION` notification listener in [`withOptimizelyProvider`](../../legacy/containers/PageHandlers/withOptimizelyProvider/index.tsx), not from this component. Tracking them from the listener ensures the visit (denominator) is always sent before the page view (numerator) on the same page load, so the page view falls inside Optimizely's 48 hour attribution window for the denominator. Tracking from the listener also guarantees the events fire for every activated experiment, independent of this component's render lifecycle.
 
-Both events are sent at most once per URL. Visit counting is session based: a new visit is counted when there has been at least 30 minutes of inactivity since the last tracked page view, and each tracked page view rolls the activity window forward so that continued browsing keeps the same visit.
+Both events are sent at most once per URL (pathname + query string). Visit counting is session based: a new visit is counted when there has been at least 30 minutes of inactivity since the last tracked page view, and each tracked page view rolls the activity window forward so that continued browsing keeps the same visit.
 
 For interpretation, add the numerator and denominator events as separate metrics alongside the ratio metric in Optimizely.

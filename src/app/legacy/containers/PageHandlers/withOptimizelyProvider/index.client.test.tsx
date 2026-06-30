@@ -316,7 +316,7 @@ describe('withOptimizelyProvider HOC', () => {
       mockTrack.mockReset();
       localStorage.clear();
       Object.defineProperty(window, 'location', {
-        value: { pathname: '/pathname' },
+        value: { pathname: '/pathname', search: '' },
         writable: true,
       });
 
@@ -479,7 +479,7 @@ describe('withOptimizelyProvider HOC', () => {
       });
 
       Object.defineProperty(window, 'location', {
-        value: { pathname: '/new-page' },
+        value: { pathname: '/new-page', search: '' },
         writable: true,
       });
 
@@ -508,7 +508,7 @@ describe('withOptimizelyProvider HOC', () => {
       });
 
       Object.defineProperty(window, 'location', {
-        value: { pathname: '/new-page' },
+        value: { pathname: '/new-page', search: '' },
         writable: true,
       });
 
@@ -521,7 +521,7 @@ describe('withOptimizelyProvider HOC', () => {
       });
 
       Object.defineProperty(window, 'location', {
-        value: { pathname: '/pathname' },
+        value: { pathname: '/pathname', search: '' },
         writable: true,
       });
 
@@ -536,6 +536,35 @@ describe('withOptimizelyProvider HOC', () => {
       expect(mockTrack.mock.calls.map(call => call[0])).toEqual([
         'visit',
         'page-views',
+        'page-views',
+        'page-views',
+      ]);
+    });
+
+    it('should send page-views again when the same pathname is visited with different query parameters', () => {
+      capturedDecisionListener?.({
+        decisionInfo: {
+          flagKey: 'experiment_1',
+          variationKey: 'on',
+          decisionEventDispatched: true,
+        },
+      });
+
+      Object.defineProperty(window, 'location', {
+        value: { pathname: '/pathname', search: '?page=2' },
+        writable: true,
+      });
+
+      capturedDecisionListener?.({
+        decisionInfo: {
+          flagKey: 'experiment_1',
+          variationKey: 'on',
+          decisionEventDispatched: true,
+        },
+      });
+
+      expect(mockTrack.mock.calls.map(call => call[0])).toEqual([
+        'visit',
         'page-views',
         'page-views',
       ]);
