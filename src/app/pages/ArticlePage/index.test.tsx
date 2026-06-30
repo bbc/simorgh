@@ -20,6 +20,7 @@ import {
   articlePglDataPidgin,
   articleStyDataPidgin,
 } from '#pages/ArticlePage/fixtureData';
+import * as isLive from '#lib/utilities/isLive';
 import { data as newsMostReadData } from '#data/news/mostRead/index.json';
 import { data as persianMostReadData } from '#data/persian/mostRead/index.json';
 import { data as pidginMostReadData } from '#data/pidgin/mostRead/index.json';
@@ -1400,6 +1401,7 @@ describe('Article Page', () => {
   describe('TopicDiscovery', () => {
     afterEach(() => {
       jest.resetAllMocks();
+      delete process.env.SIMORGH_APP_ENV;
     });
 
     const data = {
@@ -1438,6 +1440,15 @@ describe('Article Page', () => {
 
   describe('LocationBasedTopicOJ', () => {
     beforeEach(() => {
+      delete process.env.SIMORGH_APP_ENV;
+      // Ensure isLive is evaluated fresh from process.env
+      jest.spyOn(isLive, 'default').mockImplementation(() => {
+        return process.env.SIMORGH_APP_ENV === 'live';
+      });
+    });
+
+    afterEach(() => {
+      jest.restoreAllMocks();
       delete process.env.SIMORGH_APP_ENV;
     });
 
@@ -1484,6 +1495,7 @@ describe('Article Page', () => {
             countryCuration: undefined,
           }}
         />,
+        { service: 'hausa' },
       );
 
       expect(
@@ -1499,6 +1511,7 @@ describe('Article Page', () => {
           // @ts-expect-error: Test fixture data does not need to match Article type exactly
           pageData={pageData}
         />,
+        { service: 'hausa' },
       );
       expect(screen.getByRole('region')).toBeInTheDocument();
       expect(screen.getByText('Najeriya')).toBeInTheDocument();
