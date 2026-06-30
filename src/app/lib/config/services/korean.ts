@@ -62,6 +62,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: '모든 기사 보기',
       home: '홈',
+      topicDiscovery: {
+        heading: '더 알아보기',
+        moreAboutTopic: '{topic}에 대해 더 보기',
+        fetchErrorMessage: '로드하지 못했습니다. 다시 시도해 주세요',
+      },
       currentPage: '현재 페이지',
       skipLinkText: '내용 보기',
       relatedContent: '관련 기사 더 보기',

@@ -81,6 +81,12 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Hamısına baxın',
       home: 'Xəbərlər',
+      topicDiscovery: {
+        heading: 'Daha çox kəşf et',
+        moreAboutTopic: '{topic} haqqında daha çox',
+        fetchErrorMessage:
+          'Yükləmə uğursuz oldu. Zəhmət olmasa yenidən yoxlayın',
+      },
       currentPage: 'Hazırda olduğunuz səhifə',
       skipLinkText: 'Mətnə keçid',
       relatedContent: 'Bu barədə daha geniş',
