@@ -143,12 +143,8 @@ const getTimestampComponent =
 const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
   const { pageType } = use(RequestContext);
 
-  const {
-    articleAuthor,
-    isTrustProjectParticipant,
-    showRelatedTopics,
-    brandName,
-  } = use(ServiceContext);
+  const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
+    use(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
 
   const headline = getHeadline(pageData) ?? '';
@@ -180,20 +176,14 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const formats = pageData?.metadata?.passport?.predicates?.formats ?? [];
 
-  // ATI
   const {
-    metadata: { atiAnalytics, type },
+    metadata: { type },
   } = pageData;
 
   const isCpsMap = type === MEDIA_ASSET_PAGE;
   const isTC2Asset = pageData?.metadata?.analyticsLabels?.contentId
     ?.split(':')
     ?.includes('topcat');
-
-  const atiData = {
-    ...atiAnalytics,
-    ...(isCpsMap && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
-  };
 
   const promoImageBlocks =
     pageData?.promo?.images?.defaultPromoImage?.blocks ?? [];
@@ -245,7 +235,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
   // flags mirror article page for page views per visit tracking
   return (
     <div css={styles.pageWrapper}>
-      <ATIAnalytics atiData={atiData} />
+      <ATIAnalytics />
       <ChartbeatAnalytics
         categoryName={pageData?.metadata?.passport?.category?.categoryName}
         title={headline}
