@@ -20,7 +20,7 @@ export default {
         outline: 'none',
       },
     }),
-  hideMaskedImage: ({ mq }: Theme) =>
+  hideImage: ({ mq }: Theme) =>
     css({
       [mq.GROUP_4_MIN_WIDTH]: {
         opacity: 0,
@@ -46,13 +46,25 @@ export default {
     css({
       backgroundColor: palette.GREY_16, // non-concise view background colour - MVP
     }),
-  contentContainer: ({ mq, gridWidths }: Theme) =>
+  contentContainer: ({ mq }: Theme) =>
     css({
       [mq.GROUP_4_MIN_WIDTH]: {
-        maxWidth: `${pixelsToRem(gridWidths[1280])}rem`,
-        margin: '0 auto',
-        position: 'relative',
-        width: '100%',
+        display: 'flex',
+        flexDirection: 'row-reverse',
+      },
+      [mq.GROUP_4_ONLY]: {
+        alignItems: 'center',
+      },
+    }),
+  headerImage: ({ mq, spacings }: Theme) =>
+    css({
+      aspectRatio: '16 / 9',
+      [mq.GROUP_4_MIN_WIDTH]: {
+        aspectRatio: 'auto',
+        display: 'flex',
+      },
+      [mq.GROUP_4_ONLY]: {
+        paddingRight: `${spacings.DOUBLE}rem`,
       },
     }),
   liveMedia: ({ mq, spacings }: Theme) =>
@@ -97,12 +109,8 @@ export default {
   textContainerWithImage: ({ mq, spacings }: Theme) =>
     css({
       position: 'relative',
-      padding: `${spacings.FULL}rem ${spacings.FULL}rem ${spacings.DOUBLE}rem`,
-      [mq.GROUP_2_MIN_WIDTH]: {
-        padding: `${spacings.FULL}rem ${spacings.DOUBLE}rem ${spacings.DOUBLE}rem`,
-      },
+      padding: `${spacings.DOUBLE}rem`,
       [mq.GROUP_4_MIN_WIDTH]: {
-        padding: `${spacings.DOUBLE}rem`,
         minHeight: `${pixelsToRem(440)}rem`, // calculation includes padding
         height: '100%',
         display: 'flex',

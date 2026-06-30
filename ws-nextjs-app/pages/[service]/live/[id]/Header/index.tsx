@@ -5,9 +5,13 @@ import LiveHeaderMedia from '#app/components/LiveHeaderMedia';
 import { MediaCollection } from '#app/components/MediaLoader/types';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import MaskedImage from '#app/components/MaskedImage';
-import LiveLabelHeader from './LiveLabelHeader';
+import Image from '#app/components/Image';
+import buildIChefURL from '#app/lib/utilities/ichefURL';
+import { createSrcsets } from '#app/lib/utilities/srcSet';
+import getOriginCode from '#app/lib/utilities/imageSrcHelpers/originCode';
+import getLocator from '#app/lib/utilities/imageSrcHelpers/locator';
 import styles from './styles';
+import LiveLabelHeader from './LiveLabelHeader';
 
 const Header = ({
   showLiveLabel,
@@ -38,6 +42,25 @@ const Header = ({
   const watchVideoClickHandler = () => {
     setLiveMediaOpen(!isMediaOpen);
   };
+
+  const url = imageUrlTemplate?.split('{width}')[1];
+
+  const originCode = getOriginCode(url);
+  const locator = getLocator(url);
+
+  const { primarySrcset, primaryMimeType, fallbackSrcset, fallbackMimeType } =
+    createSrcsets({
+      originCode,
+      locator,
+      originalImageWidth: imageWidth,
+    });
+
+  const DEFAULT_IMAGE_RES = 480;
+  const srcWebp = buildIChefURL({
+    originCode,
+    locator,
+    resolution: DEFAULT_IMAGE_RES,
+  });
 
   const Title = (
     <span
@@ -86,13 +109,20 @@ const Header = ({
         <div css={styles.backgroundColor} />
       </div>
       <div css={styles.contentContainer}>
-        <div css={[isMediaOpen && styles.hideMaskedImage]}>
+        <div css={[isMediaOpen && styles.hideImage, styles.headerImage]}>
           {isHeaderImage ? (
-            <MaskedImage
-              imageUrl={imageUrl}
-              imageUrlTemplate={imageUrlTemplate}
-              imageWidth={imageWidth}
-              isLivePageHeaderImage
+            <Image
+              alt=""
+              src={srcWebp}
+              srcSet={primarySrcset || undefined}
+              fallbackSrcSet={fallbackSrcset || undefined}
+              mediaType={primaryMimeType || undefined}
+              fallbackMediaType={fallbackMimeType || undefined}
+              sizes="(min-width: 1008px) 660px, 100vw"
+              fetchPriority="high"
+              preload
+              placeholder
+              style={{ display: 'block' }}
             />
           ) : null}
         </div>
