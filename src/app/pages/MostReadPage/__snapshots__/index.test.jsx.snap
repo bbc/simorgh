@@ -640,6 +640,12 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  .emotion-24 {
+    color: #E6E8EA;
+  }
+}
+
 <div>
   <noscript
     id="analytics-noscript"

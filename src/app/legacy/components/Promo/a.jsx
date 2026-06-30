@@ -25,6 +25,17 @@ const A = styled.a`
     right: 0;
     content: '';
   }
+
+  @media (prefers-color-scheme: dark) {
+    ${props =>
+      !props.theme.isDarkUi &&
+      `
+      color: ${props.theme.palette.GREY_2};
+      &:visited {
+        color: ${props.theme.palette.GREY_4};
+      }
+      `}
+  }
 `;
 
 // TODO: event tracking

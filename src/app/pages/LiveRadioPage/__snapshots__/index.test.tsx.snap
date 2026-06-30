@@ -751,6 +751,12 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  .emotion-42 {
+    color: #E6E8EA;
+  }
+}
+
 .emotion-44 {
   padding-top: 0.5rem;
   background-color: #FFFFFF;
