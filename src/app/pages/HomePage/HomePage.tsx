@@ -8,7 +8,6 @@ import {
   VisualProminence,
   VisualStyle,
 } from '../../models/types/curationData';
-import { ATIData } from '../../components/ATIAnalytics/types';
 import HomeCuration from '../../components/Curation';
 import Ad from '../../components/Ad';
 import MPU from '../../components/Ad/MPU';
@@ -30,7 +29,6 @@ export interface HomePageProps {
     seoTitle?: string;
     seoDescription?: string;
     metadata: {
-      atiAnalytics: ATIData;
       type: string;
     };
   };
@@ -46,13 +44,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
     brandName,
   } = use(ServiceContext);
   const { topStoriesTitle, home } = translations;
-  const {
-    title,
-    description,
-    seoTitle,
-    seoDescription,
-    metadata: { atiAnalytics },
-  } = pageData;
+  const { title, description, seoTitle, seoDescription } = pageData;
   const { curations } = pageData;
 
   const metadataTitle = seoTitle || homePageTitle;
@@ -81,7 +73,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
       />
       <Ad slotType="leaderboard" />
       <main role="main" css={styles.main}>
-        <ATIAnalytics atiData={atiAnalytics} />
+        <ATIAnalytics />
         <VisuallyHiddenText id="content" tabIndex={-1} as="h1">
           {/* eslint-disable-next-line jsx-a11y/aria-role */}
           <span role="text">

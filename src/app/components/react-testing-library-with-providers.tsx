@@ -8,9 +8,12 @@ import { RequestContextProvider } from '../contexts/RequestContext';
 import { ToggleContextProvider } from '../contexts/ToggleContext';
 import { UserContextProvider } from '../contexts/UserContext';
 import { EventTrackingContextProvider } from '../contexts/EventTrackingContext';
+import {
+  ReverbParamsContextProvider,
+  PageMetadata,
+} from '../contexts/ReverbParamsContext';
 import ThemeProvider from './ThemeProvider';
 import { PageTypes, Services, Toggles, Variants } from '../models/types/global';
-import { ATIData } from './ATIAnalytics/types';
 
 jest.mock('./ThemeProvider');
 
@@ -25,7 +28,7 @@ interface Props extends PropsWithChildren {
   isApp?: boolean;
   isLite?: boolean;
   pageData?: object;
-  atiData?: ATIData;
+  pageMetadata?: PageMetadata;
   bbcOrigin?: string | null;
   pageType?: PageTypes;
   derivedPageType?: string | null;
@@ -44,7 +47,7 @@ interface Props extends PropsWithChildren {
 
 const AllTheProviders: FC<Props> = ({
   children,
-  atiData,
+  pageMetadata,
   id = null,
   isAmp = false,
   isApp = false,
@@ -89,13 +92,17 @@ const AllTheProviders: FC<Props> = ({
           isUK={isUK}
         >
           <AccountProvider initialConfig={idctaConfig}>
-            <EventTrackingContextProvider atiData={atiData}>
-              <UserContextProvider>
-                <ThemeProvider service={service} variant={variant}>
-                  {children}
-                </ThemeProvider>
-              </UserContextProvider>
-            </EventTrackingContextProvider>
+            <ReverbParamsContextProvider metadata={pageMetadata}>
+              <EventTrackingContextProvider
+                atiData={pageMetadata?.atiAnalytics}
+              >
+                <UserContextProvider>
+                  <ThemeProvider service={service} variant={variant}>
+                    {children}
+                  </ThemeProvider>
+                </UserContextProvider>
+              </EventTrackingContextProvider>
+            </ReverbParamsContextProvider>
           </AccountProvider>
         </RequestContextProvider>
       </ServiceContextProvider>
@@ -115,7 +122,7 @@ const customRender = (
     bbcOrigin,
     pageData,
     pageType,
-    atiData,
+    pageMetadata,
     derivedPageType,
     pathname,
     service,
@@ -139,7 +146,7 @@ const customRender = (
         isLite={isLite}
         bbcOrigin={bbcOrigin}
         pageData={pageData}
-        atiData={atiData}
+        pageMetadata={pageMetadata}
         pageType={pageType}
         derivedPageType={derivedPageType}
         pathname={pathname}
