@@ -4,7 +4,6 @@ import Pagination from '#app/components/Pagination';
 import PortraitVideoCarousel from '#app/components/PortraitVideoCarousel';
 import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
 import ATIAnalytics from '#app/components/ATIAnalytics';
-import { ATIData } from '#app/components/ATIAnalytics/types';
 import { RequestContext } from '#app/contexts/RequestContext';
 import MetadataContainer from '#app/components/Metadata';
 import LinkedDataContainer from '#app/components/LinkedData';
@@ -61,7 +60,6 @@ export type ComponentProps = {
     promoImage: LivePromoImage | null;
     startDateTime?: string;
     endDateTime?: string;
-    metadata: { atiAnalytics: ATIData };
     mediaCollections: MediaCollection[] | null;
     portraitVideoItems?: PortraitVideoItems | null;
     sportDataEventContent?: {
@@ -101,7 +99,6 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
     isLive,
     summaryPoints: { content: keyPoints },
     liveTextStream,
-    metadata: { atiAnalytics = undefined } = {},
     headerImage,
     promoImage,
     mediaCollections,
@@ -179,7 +176,7 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
 
   return (
     <>
-      <ATIAnalytics atiData={atiAnalytics} />
+      <ATIAnalytics />
       <ChartbeatAnalytics title={metaTitle ?? pageTitle} />
       <MetadataContainer
         title={metaTitle}
