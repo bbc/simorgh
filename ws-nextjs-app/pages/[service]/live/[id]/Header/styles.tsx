@@ -55,7 +55,7 @@ export default {
         width: '100%',
       },
     }),
-  contentWithImageContainer: ({ mq, spacings }: Theme) =>
+  contentWithImageContainer: ({ gridWidths, mq, spacings }: Theme) =>
     css({
       [mq.GROUP_4_MIN_WIDTH]: {
         display: 'flex',
@@ -64,7 +64,7 @@ export default {
         padding: `0 ${spacings.DOUBLE}rem`,
         margin: '0 auto',
         gap: `${spacings.DOUBLE}rem`,
-        maxWidth: `${pixelsToRem(1280)}rem`,
+        maxWidth: `${pixelsToRem(gridWidths[1280])}rem`,
       },
       [mq.GROUP_4_ONLY]: {
         alignItems: 'center',
