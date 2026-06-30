@@ -20,6 +20,12 @@ jest.mock('react', () => ({
   useState: jest.fn(),
 }));
 
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  default: jest.fn(),
+}));
+
 jest.mock('#app/hooks/useLocation');
 
 describe('MediaLoader', () => {
@@ -258,11 +264,15 @@ describe('MediaLoader', () => {
           <MediaPlayer blocks={onDemandTvBlocks as MediaBlock[]} embedded />,
           {
             service: 'hindi',
-            atiData: {
-              language: 'hi',
-              pageTitle: 'दुनिया - BBC News हिंदी',
-              pageIdentifier: 'hindi.bbc_hindi_tv.tv_programmes.w13xttlw.page',
-              contentType: 'player-episode',
+            pageMetadata: {
+              atiAnalytics: {
+                language: 'hi',
+                pageTitle: 'दुनिया - BBC News हिंदी',
+                pageIdentifier:
+                  'hindi.bbc_hindi_tv.tv_programmes.w13xttlw.page',
+                contentType: 'player-episode',
+              },
+              type: TV_PAGE,
             },
             pageType: TV_PAGE,
             pathname: '/hindi/bbc_hindi_tv/tv_programmes/w13xttlw',
