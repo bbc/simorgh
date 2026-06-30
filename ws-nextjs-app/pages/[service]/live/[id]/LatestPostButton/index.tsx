@@ -1,6 +1,7 @@
-import { RefObject, use, useEffect, useState } from 'react';
+import { RefObject, use, useRef, useEffect, useState } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
+import useCustomEventTracker from '#app/hooks/useCustomEventTracker';
 import styles from './styles';
 
 const TEN_SECONDS = 10 * 1000;
@@ -15,12 +16,14 @@ interface LatestPostButtonProps {
   isFirstPostVisible: boolean;
   hasPendingUpdate: boolean;
   streamRef: RefObject<HTMLDivElement> | null;
+  pageId: string;
 }
 
 const LatestPostButton = ({
   isFirstPostVisible,
   hasPendingUpdate,
   streamRef,
+  pageId,
 }: LatestPostButtonProps) => {
   const {
     translations: {
@@ -32,11 +35,31 @@ const LatestPostButton = ({
   } = use(ServiceContext);
 
   const [showButton, setShowButton] = useState(false);
+  const buttonShownTime = useRef<number | null>(null);
+
+  const trackButtonShown = useCustomEventTracker({
+    eventName: 'live_refresh_button_shown',
+  });
+
+  const trackButtonClicked = useCustomEventTracker({
+    eventName: 'live_refresh_button_clicked',
+  });
 
   const handleClick = async () => {
     const hasReducedMotion = window.matchMedia(
       '(prefers-reduced-motion: reduce)',
     ).matches;
+
+    if (buttonShownTime.current != null) {
+      const timeShown = Date.now() - buttonShownTime.current;
+      trackButtonShown(
+        JSON.stringify({
+          page_id: pageId,
+          time_shown: timeShown,
+        }),
+      );
+      buttonShownTime.current = null;
+    }
 
     if (streamRef) {
       const streamContainer = streamRef.current;
@@ -44,6 +67,12 @@ const LatestPostButton = ({
         behavior: hasReducedMotion ? 'auto' : 'smooth',
       });
     }
+
+    trackButtonClicked(
+      JSON.stringify({
+        page_id: pageId,
+      }),
+    );
   };
 
   useEffect(() => {
@@ -51,9 +80,18 @@ const LatestPostButton = ({
     const shouldShowButton = !isFirstPostVisible && hasPendingUpdate;
     if (shouldShowButton) {
       setShowButton(shouldShowButton);
+      buttonShownTime.current = Date.now();
 
       timeoutId = setTimeout(() => {
         setShowButton(false);
+        if (buttonShownTime.current != null) {
+          trackButtonShown(
+            JSON.stringify({
+              page_id: pageId,
+            }),
+          );
+          buttonShownTime.current = null;
+        }
       }, TEN_SECONDS);
     } else {
       setShowButton(shouldShowButton);
@@ -62,7 +100,7 @@ const LatestPostButton = ({
     return () => {
       clearTimeout(timeoutId);
     };
-  }, [isFirstPostVisible, hasPendingUpdate]);
+  }, [isFirstPostVisible, hasPendingUpdate, trackButtonShown, pageId]);
 
   return (
     <div css={styles.container}>
