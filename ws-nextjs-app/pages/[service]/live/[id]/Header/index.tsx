@@ -108,7 +108,13 @@ const Header = ({
       <div css={styles.backgroundContainer}>
         <div css={styles.backgroundColor} />
       </div>
-      <div css={styles.contentContainer}>
+      <div
+        css={
+          isWithImageLayout
+            ? styles.contentWithImageContainer
+            : styles.contentContainer
+        }
+      >
         <div css={[isMediaOpen && styles.hideImage, styles.headerImage]}>
           {isHeaderImage ? (
             <Image

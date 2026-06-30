@@ -46,7 +46,16 @@ export default {
     css({
       backgroundColor: palette.GREY_16, // non-concise view background colour - MVP
     }),
-  contentContainer: ({ mq, spacings }: Theme) =>
+  contentContainer: ({ mq, gridWidths }: Theme) =>
+    css({
+      [mq.GROUP_4_MIN_WIDTH]: {
+        maxWidth: `${pixelsToRem(gridWidths[1280])}rem`,
+        margin: '0 auto',
+        position: 'relative',
+        width: '100%',
+      },
+    }),
+  contentWithImageContainer: ({ mq, spacings }: Theme) =>
     css({
       [mq.GROUP_4_MIN_WIDTH]: {
         display: 'flex',
