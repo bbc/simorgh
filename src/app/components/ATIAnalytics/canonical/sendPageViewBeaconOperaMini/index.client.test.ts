@@ -1,3 +1,4 @@
+/* eslint-disable no-eval */
 import { addSendStaticBeaconToWindow } from '#app/lib/analyticsUtils/staticATITracking/sendStaticBeacon';
 import sendPageViewBeaconOperaMini from '.';
 
@@ -18,10 +19,7 @@ describe('sendPageViewBeaconOperaMini', () => {
     send: jest.fn(),
   };
 
-  const isOperaProxyFn = () => true;
-  const isNotOperaProxyFn = () => false;
-
-  addSendStaticBeaconToWindow();
+  eval(addSendStaticBeaconToWindow());
 
   beforeEach(() => {
     documentReferrerSpy = jest.spyOn(document, 'referrer', 'get');
@@ -56,10 +54,7 @@ describe('sendPageViewBeaconOperaMini', () => {
     });
 
     it('should send beacon with XHR', () => {
-      sendPageViewBeaconOperaMini(
-        'https://ati-host.example.com',
-        isOperaProxyFn,
-      );
+      eval(sendPageViewBeaconOperaMini('https://ati-host.example.com'));
 
       expect(XMLHttpRequestMock.open).toHaveBeenCalledWith(
         'GET',
@@ -71,10 +66,7 @@ describe('sendPageViewBeaconOperaMini', () => {
     it('should send beacon including the referrer with XHR', () => {
       documentReferrerSpy.mockReturnValue('https://client.referrer.com');
 
-      sendPageViewBeaconOperaMini(
-        'https://ati-host.example.com',
-        isOperaProxyFn,
-      );
+      eval(sendPageViewBeaconOperaMini('https://ati-host.example.com'));
 
       expect(XMLHttpRequestMock.open).toHaveBeenCalledWith(
         'GET',
@@ -84,28 +76,19 @@ describe('sendPageViewBeaconOperaMini', () => {
     });
 
     it('should NOT send more than 1 beacon with XHR', () => {
-      sendPageViewBeaconOperaMini(
-        'https://ati-host.example.com',
-        isOperaProxyFn,
-      );
-      sendPageViewBeaconOperaMini(
-        'https://ati-host.example.com',
-        isOperaProxyFn,
-      );
-      sendPageViewBeaconOperaMini(
-        'https://ati-host.example.com',
-        isOperaProxyFn,
-      );
+      const multipleCalls =
+        sendPageViewBeaconOperaMini('https://ati-host.example.com') +
+        sendPageViewBeaconOperaMini('https://ati-host.example.com') +
+        sendPageViewBeaconOperaMini('https://ati-host.example.com');
+
+      eval(multipleCalls);
 
       expect(XMLHttpRequestMock.open).toHaveBeenCalledTimes(1);
     });
   });
 
   it('should not send beacon with XHR, when browser is not Opera Mini', () => {
-    sendPageViewBeaconOperaMini(
-      'https://ati-host.example.com',
-      isNotOperaProxyFn,
-    );
+    eval(sendPageViewBeaconOperaMini('https://ati-host.example.com'));
 
     expect(XMLHttpRequestMock.open).not.toHaveBeenCalled();
   });
