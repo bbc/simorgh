@@ -36,8 +36,8 @@ const styles = {
 
       [mq.FORCED_COLOURS]: {
         forcedColorAdjust: 'none',
-        color: 'ButtonText',
-        fill: 'ButtonText',
+        color: 'CanvasText',
+        fill: 'CanvasText',
       },
 
       '&:hover:not(:focus-visible)': {
