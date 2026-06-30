@@ -51,6 +51,9 @@ export default {
       [mq.GROUP_4_MIN_WIDTH]: {
         display: 'flex',
         flexDirection: 'row-reverse',
+        justifyContent: 'center',
+        padding: '0 16px',
+        margin: '0 auto',
       },
       [mq.GROUP_4_ONLY]: {
         alignItems: 'center',
@@ -113,6 +116,7 @@ export default {
       [mq.GROUP_4_MIN_WIDTH]: {
         minHeight: `${pixelsToRem(440)}rem`, // calculation includes padding
         height: '100%',
+        width: '50%',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
