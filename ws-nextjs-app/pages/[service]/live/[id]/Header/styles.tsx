@@ -55,6 +55,7 @@ export default {
         padding: `0 ${spacings.DOUBLE}rem`,
         margin: '0 auto',
         gap: `${spacings.DOUBLE}rem`,
+        maxWidth: `${pixelsToRem(1280)}rem`,
       },
       [mq.GROUP_4_ONLY]: {
         alignItems: 'center',
@@ -121,6 +122,7 @@ export default {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
+        padding: 0,
       },
     }),
   titleWithImage: ({ palette }: Theme) =>
