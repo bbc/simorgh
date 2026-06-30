@@ -46,14 +46,15 @@ export default {
     css({
       backgroundColor: palette.GREY_16, // non-concise view background colour - MVP
     }),
-  contentContainer: ({ mq }: Theme) =>
+  contentContainer: ({ mq, spacings }: Theme) =>
     css({
       [mq.GROUP_4_MIN_WIDTH]: {
         display: 'flex',
         flexDirection: 'row-reverse',
         justifyContent: 'center',
-        padding: '0 16px',
+        padding: `0 ${spacings.DOUBLE}rem`,
         margin: '0 auto',
+        gap: `${spacings.DOUBLE}rem`,
       },
       [mq.GROUP_4_ONLY]: {
         alignItems: 'center',
@@ -120,7 +121,6 @@ export default {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        maxWidth: '50%', // determines width of text overlay.
       },
     }),
   titleWithImage: ({ palette }: Theme) =>
