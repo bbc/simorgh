@@ -23,7 +23,7 @@ export default {
   hideImage: ({ mq }: Theme) =>
     css({
       [mq.GROUP_4_MIN_WIDTH]: {
-        opacity: 0,
+        display: 'none',
       },
     }),
   backgroundContainer: () =>
@@ -55,19 +55,29 @@ export default {
         width: '100%',
       },
     }),
-  contentWithImageContainer: ({ gridWidths, mq, spacings }: Theme) =>
+  contentWithImageContainer:
+    ({ isMediaOpen }: { isMediaOpen: boolean }) =>
+    ({ gridWidths, mq, spacings }: Theme) =>
+      css({
+        [mq.GROUP_4_MIN_WIDTH]: {
+          display: 'flex',
+          flexDirection: 'row-reverse',
+          justifyContent: 'center',
+          width: '100%',
+          boxSizing: 'border-box',
+          padding: `0 ${spacings.DOUBLE}rem`,
+          margin: '0 auto',
+          gap: isMediaOpen ? 0 : `${spacings.QUADRUPLE}rem`,
+          maxWidth: `${pixelsToRem(gridWidths[1280])}rem`,
+        },
+        [mq.GROUP_4_ONLY]: {
+          alignItems: 'center',
+        },
+      }),
+  textWrapper: ({ mq }: Theme) =>
     css({
       [mq.GROUP_4_MIN_WIDTH]: {
-        display: 'flex',
-        flexDirection: 'row-reverse',
-        justifyContent: 'center',
-        padding: `0 ${spacings.DOUBLE}rem`,
-        margin: '0 auto',
-        gap: `${spacings.DOUBLE}rem`,
-        maxWidth: `${pixelsToRem(gridWidths[1280])}rem`,
-      },
-      [mq.GROUP_4_ONLY]: {
-        alignItems: 'center',
+        width: '50%',
       },
     }),
   headerImage: ({ mq, spacings }: Theme) =>
@@ -78,7 +88,7 @@ export default {
         display: 'flex',
       },
       [mq.GROUP_4_ONLY]: {
-        paddingRight: `${spacings.DOUBLE}rem`,
+        paddingInlineEnd: `${spacings.DOUBLE}rem`,
       },
     }),
   liveMedia: ({ mq, spacings }: Theme) =>
@@ -95,7 +105,7 @@ export default {
   liveMediaOpen: ({ mq }: Theme) =>
     css({
       [mq.GROUP_4_MIN_WIDTH]: {
-        maxWidth: '100%',
+        maxWidth: '80rem',
       },
     }),
   fixedHeight: ({ mq, spacings }: Theme) =>
@@ -103,8 +113,13 @@ export default {
       [mq.GROUP_4_MIN_WIDTH]: {
         minHeight: '0',
         padding: `${pixelsToRem(40)}rem ${spacings.DOUBLE}rem 0`,
-        maxWidth: '50%', // determines width of text overlay.
       },
+    }),
+  liveMediaAndTextContainer: () =>
+    css({
+      display: 'flex',
+      flexDirection: 'column',
+      width: '100%',
     }),
   textContainerWithoutImage: ({ mq, gridWidths, spacings }: Theme) =>
     css({
@@ -127,7 +142,6 @@ export default {
       [mq.GROUP_4_MIN_WIDTH]: {
         minHeight: `${pixelsToRem(440)}rem`, // calculation includes padding
         height: '100%',
-        width: '50%',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',

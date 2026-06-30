@@ -38,11 +38,9 @@ const Header = ({
   const {
     translations: { sport: { matchSummary = 'Match Summary' } = {} },
   } = use(ServiceContext);
-
   const watchVideoClickHandler = () => {
     setLiveMediaOpen(!isMediaOpen);
   };
-
   const url = imageUrlTemplate?.split('{width}')[1];
 
   const originCode = getOriginCode(url);
@@ -111,12 +109,12 @@ const Header = ({
       <div
         css={
           isWithImageLayout
-            ? styles.contentWithImageContainer
+            ? styles.contentWithImageContainer({ isMediaOpen })
             : styles.contentContainer
         }
       >
-        <div css={[isMediaOpen && styles.hideImage, styles.headerImage]}>
-          {isHeaderImage ? (
+        {isHeaderImage ? (
+          <div css={[isMediaOpen ? styles.hideImage : styles.headerImage]}>
             <Image
               alt=""
               src={srcWebp}
@@ -130,55 +128,64 @@ const Header = ({
               placeholder
               style={{ display: 'block' }}
             />
-          ) : null}
-        </div>
+          </div>
+        ) : null}
+
         <div
           css={[
-            isWithImageLayout && styles.textContainerWithImage,
-            !isWithImageLayout && styles.textContainerWithoutImage,
-            mediaCollections && styles.fixedHeight,
+            mediaCollections && styles.liveMediaAndTextContainer,
+            isWithImageLayout && !isMediaOpen && styles.textWrapper,
           ]}
         >
-          <Heading
-            size="trafalgar"
-            level={1}
-            id="content"
-            tabIndex={-1}
-            css={styles.heading}
+          <div
+            css={[
+              isWithImageLayout
+                ? styles.textContainerWithImage
+                : styles.textContainerWithoutImage,
+              mediaCollections && [styles.fixedHeight, { width: '100%' }],
+            ]}
           >
-            {showLiveLabel ? (
-              <LiveLabelHeader
-                isHeaderImage={isWithImageLayout}
-                showSportData={false}
-              >
-                {Title}
-              </LiveLabelHeader>
-            ) : (
-              Title
-            )}
-          </Heading>
-          {description && (
-            <Text
-              as="p"
-              css={[
-                styles.description,
-                showLiveLabel &&
-                  !isWithImageLayout &&
-                  styles.layoutWithLiveLabelNoImage,
-              ]}
+            <Heading
+              size="trafalgar"
+              level={1}
+              id="content"
+              tabIndex={-1}
+              css={styles.heading}
             >
-              {description}
-            </Text>
+              {showLiveLabel ? (
+                <LiveLabelHeader
+                  isHeaderImage={isWithImageLayout}
+                  showSportData={false}
+                >
+                  {Title}
+                </LiveLabelHeader>
+              ) : (
+                Title
+              )}
+            </Heading>
+            {description && (
+              <Text
+                as="p"
+                css={[
+                  styles.description,
+                  showLiveLabel &&
+                    !isWithImageLayout &&
+                    styles.layoutWithLiveLabelNoImage,
+                ]}
+              >
+                {description}
+              </Text>
+            )}
+          </div>
+          {mediaCollections && (
+            <div css={[styles.liveMedia, isMediaOpen && styles.liveMediaOpen]}>
+              <LiveHeaderMedia
+                mediaCollection={mediaCollections}
+                clickCallback={watchVideoClickHandler}
+              />
+            </div>
           )}
         </div>
-        {mediaCollections && (
-          <div css={[styles.liveMedia, isMediaOpen && styles.liveMediaOpen]}>
-            <LiveHeaderMedia
-              mediaCollection={mediaCollections}
-              clickCallback={watchVideoClickHandler}
-            />
-          </div>
-        )}
       </div>
     </div>
   );
