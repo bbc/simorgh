@@ -4,6 +4,17 @@ import { Article } from '#app/models/types/optimo';
 import { render, screen, act } from '../react-testing-library-with-providers';
 import SaveArticleButton from '.';
 
+jest.mock('#app/components/Account/AccountSignInModal', () => ({
+  __esModule: true,
+  default: ({ onClose }: { onClose: () => void }) => (
+    <div role="dialog" aria-label="Sign in to BBC">
+      <button type="button" onClick={onClose} aria-label="Close">
+        Close
+      </button>
+    </div>
+  ),
+}));
+
 jest.mock('#app/hooks/useUASButton');
 
 const mockedUseUASButton = useUASButton as jest.Mock;
@@ -156,6 +167,29 @@ describe('SaveArticleButton', () => {
     it('renders guest save button', async () => {
       render(<SaveArticleButton {...defaultProps} />, signedOutRenderOptions);
       expect(screen.getByTestId('save-article-btn-guest')).toBeInTheDocument();
+    });
+
+    it('opens the sign-in modal when the save button is clicked', async () => {
+      await act(async () =>
+        render(<SaveArticleButton {...defaultProps} />, signedOutRenderOptions),
+      );
+      await act(async () => {
+        screen.getByTestId('save-article-btn-guest').click();
+      });
+      expect(screen.getByRole('dialog')).toBeInTheDocument();
+    });
+
+    it('closes the sign-in modal when the close button is clicked', async () => {
+      await act(async () =>
+        render(<SaveArticleButton {...defaultProps} />, signedOutRenderOptions),
+      );
+      await act(async () => {
+        screen.getByTestId('save-article-btn-guest').click();
+      });
+      await act(async () => {
+        screen.getByRole('button', { name: 'Close' }).click();
+      });
+      expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
     });
   });
 });
