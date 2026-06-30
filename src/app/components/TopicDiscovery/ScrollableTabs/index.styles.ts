@@ -40,7 +40,7 @@ const styles = {
         fill: 'ButtonText',
       },
 
-      '&:hover': {
+      '&:hover:not(:focus-visible)': {
         '&::after': {
           content: '""',
           position: 'absolute',
@@ -55,6 +55,9 @@ const styles = {
       '[type=button]&:focus-visible': {
         outlineOffset: `${pixelsToRem(-3)}rem`,
         boxShadow: 'none',
+        '&::after': {
+          display: 'none',
+        },
       },
     }),
 
