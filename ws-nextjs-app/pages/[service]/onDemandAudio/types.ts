@@ -36,7 +36,11 @@ export interface OnDemandAudioProps {
     recentEpisodes: [];
     brandId: string;
     episodeTitle: string;
-    externalLinks: string[];
+    externalLinks: Array<{
+      linkText: string;
+      linkUrl: string;
+      linkType: string;
+    }>;
     contentType: ContentType;
   };
   mediaIsAvailable?: boolean;

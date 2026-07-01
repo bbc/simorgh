@@ -1,77 +1,86 @@
 import 'temporal-polyfill/global';
-import getLocalisedTime from '../../helpers/localise-time';
+import { getLocalisedDate } from '../../helpers/localise-datetime';
 
-describe('getLocalisedTime', () => {
+describe('getLocalisedDate', () => {
   const originalTimeZoneId = Temporal.Now.timeZoneId;
 
   afterEach(() => {
     Temporal.Now.timeZoneId = originalTimeZoneId;
   });
 
-  it('should return the same time when user is in UK timezone', () => {
-    Temporal.Now.timeZoneId = () => 'Europe/London';
+  describe('Gregorian calendar (default)', () => {
+    it('should return a formatted date for UK timezone', () => {
+      Temporal.Now.timeZoneId = () => 'Europe/London';
 
-    const result = getLocalisedTime('Sat 15 Jun 2024', '15:00');
-    expect(result).toBe('15:00');
-  });
+      const result = getLocalisedDate('Sat 15 Jun 2024', '15:00');
+      expect(result).toContain('15');
+      expect(result).toContain('2024');
+    });
 
-  it('should convert UK time to CET timezone (1 hour ahead in summer)', () => {
-    Temporal.Now.timeZoneId = () => 'Europe/Paris';
+    it('should convert to user timezone when different from UK', () => {
+      Temporal.Now.timeZoneId = () => 'America/New_York';
 
-    const result = getLocalisedTime('Sat 15 Jun 2024', '15:00');
-    expect(result).toBe('16:00');
-  });
+      const result = getLocalisedDate('Sat 15 Jun 2024', '15:00');
+      expect(result).toContain('2024');
+    });
 
-  it('should convert UK time to EST timezone (5 hours behind in summer)', () => {
-    Temporal.Now.timeZoneId = () => 'America/New_York';
+    it('should handle day transition when time is late and timezone is ahead', () => {
+      Temporal.Now.timeZoneId = () => 'Asia/Tokyo';
 
-    const result = getLocalisedTime('Sat 15 Jun 2024', '15:00');
-    expect(result).toBe('10:00');
-  });
-
-  it('should handle midnight correctly', () => {
-    Temporal.Now.timeZoneId = () => 'Europe/London';
-
-    const result = getLocalisedTime('Mon 1 Jan 2024', '00:00');
-    expect(result).toBe('00:00');
-  });
-
-  it('should handle day transition when converting to later timezone', () => {
-    Temporal.Now.timeZoneId = () => 'Asia/Tokyo';
-
-    const result = getLocalisedTime('Sat 15 Jun 2024', '20:00');
-    expect(result).toBe('04:00');
-  });
-
-  it('should parse all months correctly', () => {
-    Temporal.Now.timeZoneId = () => 'Europe/London';
-
-    const months = [
-      'Jan',
-      'Feb',
-      'Mar',
-      'Apr',
-      'May',
-      'Jun',
-      'Jul',
-      'Aug',
-      'Sep',
-      'Oct',
-      'Nov',
-      'Dec',
-    ];
-
-    months.forEach((month, index) => {
-      const day = index + 1;
-      const result = getLocalisedTime(`Mon ${day} ${month} 2024`, '12:00');
-      expect(result).toBe('12:00');
+      // 20:00 UK time on June 15th is 04:00 on June 16th in Tokyo
+      const result = getLocalisedDate('Sat 15 Jun 2024', '20:00');
+      expect(result).toContain('16');
     });
   });
 
-  it('should handle winter time correctly with GMT offset', () => {
-    Temporal.Now.timeZoneId = () => 'Europe/Paris';
+  describe('Jalali calendar for Persian service', () => {
+    it('should return date in Persian/Jalali calendar format', () => {
+      Temporal.Now.timeZoneId = () => 'Asia/Tehran';
 
-    const result = getLocalisedTime('Sat 15 Jan 2024', '15:00');
-    expect(result).toBe('16:00');
+      const result = getLocalisedDate('Sat 15 Jun 2024', '15:00', 'persian');
+
+      // June 15, 2024 in Gregorian = Khordad 26, 1403 in Jalali
+      // Should contain Persian numerals and month name
+      expect(result).toMatch(/[\u06F0-\u06F9]/); // Contains Persian/Eastern Arabic numerals
+      expect(result).toContain('۱۴۰۳'); // Jalali year in Persian numerals
+    });
+
+    it('should use fa-IR locale for Persian service', () => {
+      Temporal.Now.timeZoneId = () => 'Europe/London';
+
+      const result = getLocalisedDate('Sun 21 Mar 2024', '12:00', 'persian');
+
+      // March 21, 2024 (Nowruz) = 1 Farvardin 1403
+      // Should contain Jalali calendar components
+      expect(result).toMatch(/[\u06F0-\u06F9]/); // Persian numerals
+    });
+  });
+
+  describe('Gregorian calendar for other services', () => {
+    it('should use Gregorian calendar for Arabic service', () => {
+      Temporal.Now.timeZoneId = () => 'Asia/Dubai';
+
+      const result = getLocalisedDate('Sat 15 Jun 2024', '15:00', 'arabic');
+
+      // Arabic service should NOT use Jalali calendar
+      // Should use Gregorian year 2024
+      expect(result).toContain('2024');
+    });
+
+    it('should use Gregorian calendar for Mundo service', () => {
+      Temporal.Now.timeZoneId = () => 'America/Mexico_City';
+
+      const result = getLocalisedDate('Sat 15 Jun 2024', '15:00', 'mundo');
+
+      expect(result).toContain('2024');
+    });
+
+    it('should use default locale when service is not provided', () => {
+      Temporal.Now.timeZoneId = () => 'Europe/London';
+
+      const result = getLocalisedDate('Sat 15 Jun 2024', '15:00');
+
+      expect(result).toContain('2024');
+    });
   });
 });

@@ -69,6 +69,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Zobacz wszystkie',
       home: 'Strona główna',
+      topicDiscovery: {
+        heading: 'Odkryj więcej',
+        moreAboutTopic: 'Więcej o {topic}',
+        fetchErrorMessage: 'Nie udało się załadować. Spróbuj ponownie',
+      },
       currentPage: 'Strona bieżąca',
       skipLinkText: 'Przejdź do treści',
       relatedContent: 'Powiązane treści',
@@ -394,6 +399,12 @@ export const service: DefaultServiceConfig = {
           uruguay: 'Urugwaj',
           usa: 'Stany Zjednoczone',
           uzbekistan: 'Uzbekistan',
+        },
+        tournaments: {
+          fifaWorldCup: 'Mistrzostwa świata w piłce nożnej',
+        },
+        stages: {
+          groupStage: 'Faza grupowa',
         },
       },
     },

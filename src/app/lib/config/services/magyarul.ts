@@ -65,6 +65,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Összes megtekintése',
       home: 'Főoldal',
+      topicDiscovery: {
+        heading: 'Továbbiak felfedezése',
+        moreAboutTopic: 'Több a {topic} témáról',
+        fetchErrorMessage: 'Nem sikerült betölteni. Kérjük, próbálja újra',
+      },
       currentPage: 'Jelenlegi oldal',
       skipLinkText: 'Ugrás a tartalomra',
       relatedContent: 'Kapcsolódó tartalom',
@@ -384,6 +389,12 @@ export const service: DefaultServiceConfig = {
           uruguay: 'Uruguay',
           usa: 'Egyesült Államok',
           uzbekistan: 'Üzbegisztán',
+        },
+        tournaments: {
+          fifaWorldCup: 'FIFA labdarúgó-világbajnokság',
+        },
+        stages: {
+          groupStage: 'Csoportkör',
         },
       },
     },

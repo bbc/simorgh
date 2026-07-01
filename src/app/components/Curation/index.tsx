@@ -13,7 +13,7 @@ import CurationGrid from './CurationGrid';
 import HierarchicalGrid from './HierarchicalGrid';
 import Subheading from './Subhead';
 import getComponentName, { COMPONENT_NAMES } from './getComponentName';
-import MessageBanner from '../MessageBanner';
+import CurationMessageBanner from './CurationMessageBanner';
 import MostRead from '../MostRead';
 import { GHOST } from '../ThemeProvider/palette';
 import Embed from '../Embeds/OEmbed';
@@ -164,7 +164,7 @@ export default ({
     case MESSAGE_BANNER:
       if (firstSummary) {
         return (
-          <MessageBanner
+          <CurationMessageBanner
             heading={title}
             description={description}
             link={summaryLink}

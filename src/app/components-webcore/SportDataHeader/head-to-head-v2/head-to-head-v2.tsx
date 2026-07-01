@@ -2,6 +2,7 @@ import { use } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import useSportDataPolling from '#app/hooks/useSportDataPolling';
 import useToggle from '#app/hooks/useToggle';
+import HeadToHeadHeader from './components/head-to-head-header';
 import { HeadToHeadBanner } from './components/head-to-head-banner';
 import ConditionalOnwardJourneyLink from './components/conditional-onward-journey-link';
 import { Actions } from './components/actions';
@@ -44,6 +45,16 @@ export const HeadToHeadV2 = ({
     <div css={styles.wrapper({ isConciseView })}>
       <ConditionalOnwardJourneyLink>
         <div css={styles.container({ isConciseView })}>
+          {!isConciseView && (
+            <HeadToHeadHeader
+              date={translatedSportData.date}
+              time={translatedSportData.time}
+              status={translatedSportData.status}
+              tournament={translatedSportData.tournament?.name}
+              stage={translatedSportData.stage?.name}
+              service={service}
+            />
+          )}
           <HeadToHeadBanner
             data={translatedSportData}
             isConciseView={isConciseView ?? false}
