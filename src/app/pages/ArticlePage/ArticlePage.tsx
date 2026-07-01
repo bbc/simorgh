@@ -56,6 +56,7 @@ import ContinueReadingButton, {
   ContinueReadingButtonProps,
 } from '#app/components/ContinueReadingButton';
 import SaveArticleButton from '#app/components/SaveArticleButton';
+import isLive from '#lib/utilities/isLive';
 import ElectionBanner from './ElectionBanner';
 import ArticleMessageBanner from './ArticleMessageBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
@@ -398,7 +399,11 @@ const ArticlePage = ({
   );
 
   const showCountryCuration = Boolean(
-    !isAmp && !isLite && !isApp && pageData?.countryCuration?.summaries?.length,
+    !isAmp &&
+    !isLite &&
+    !isApp &&
+    !isLive() &&
+    pageData?.countryCuration?.summaries?.length,
   );
 
   // EXPERIMENT: PWA Promotional Banner
