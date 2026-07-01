@@ -92,6 +92,9 @@ const extractHeadlineFromBlocks = (
  * @param service - BBC service name (e.g., 'arabic', 'portuguese')
  * @returns Object with tracked metadata fields
  */
+const sanitiseMetadataString = (value: string | undefined): string =>
+  value?.replace(/[\r\n]/g, '').trim() ?? '';
+
 const buildCurrentMetadata = (
   articlePageData: Article,
   { articleId, service }: { articleId: string; service: Services },
@@ -104,7 +107,7 @@ const buildCurrentMetadata = (
     service,
     title: headline,
     promoImage: buildPromoImageUrl(promoImage),
-    promoImageAltText: promoImage?.altText,
+    promoImageAltText: sanitiseMetadataString(promoImage?.altText),
     locatorUrl: articlePageData?.metadata?.locators?.canonicalUrl ?? '',
   };
 };
@@ -156,6 +159,7 @@ export {
   buildCurrentMetadata,
   compareMetadataWithSaved,
   extractHeadlineFromBlocks,
+  sanitiseMetadataString,
 };
 
 export type { MetadataComparisonResult };
