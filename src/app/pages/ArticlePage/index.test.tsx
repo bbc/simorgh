@@ -36,7 +36,6 @@ import { Curation } from '#app/models/types/curationData';
 import { Article, OptimoBlock } from '#app/models/types/optimo';
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import * as viewTracking from '#app/hooks/useViewTracker';
-
 import {
   render,
   screen,
