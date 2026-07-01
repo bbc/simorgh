@@ -82,6 +82,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'سب دیکھیں',
       home: 'صفحۂ اول',
+      topicDiscovery: {
+        heading: 'مزید دریافت کریں',
+        moreAboutTopic: '{topic} کے بارے میں مزید',
+        fetchErrorMessage: 'لوڈ نہیں ہو سکا۔ براہ کرم دوبارہ کوشش کریں',
+      },
       continueReading: 'پڑھتے رہیے',
       currentPage: 'موجودہ صفحہ',
       skipLinkText: 'مواد پر جائیں',

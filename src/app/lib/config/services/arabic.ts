@@ -82,6 +82,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'المزيد',
       home: 'الرئيسية',
+      topicDiscovery: {
+        heading: 'اكتشف المزيد',
+        moreAboutTopic: 'المزيد عن {topic}',
+        fetchErrorMessage: 'فشل في التحميل. يرجى المحاولة مرة أخرى',
+      },
       continueReading: 'واصل القراءة',
       currentPage: 'الصفحة الحالية',
       skipLinkText: 'إذهب الى المحتوى',
