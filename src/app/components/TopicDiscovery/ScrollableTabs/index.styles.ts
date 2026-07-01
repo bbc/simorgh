@@ -94,7 +94,12 @@ const styles = {
       },
       '&:disabled': {
         cursor: 'default',
-        color: isDarkUi ? palette.GREY_7 : palette.GREY_5,
+        color: isDarkUi ? palette.GREY_2 : palette.GREY_5,
+        ...(!isDarkUi && {
+          '@media (prefers-color-scheme: dark)': {
+            color: palette.GREY_2,
+          },
+        }),
       },
       '[type=button]&:focus-visible': {
         outlineOffset: `${pixelsToRem(-3)}rem`,
