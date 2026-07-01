@@ -130,6 +130,7 @@ export const service: DefaultServiceConfig = {
         saving: 'Saving',
         saved: 'Saved to My News',
         remove: 'Remove',
+        removeAccessible: 'Saved. Remove from My News',
         removing: 'Removing',
       },
       myNews: {

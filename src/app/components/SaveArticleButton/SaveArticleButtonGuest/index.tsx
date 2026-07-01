@@ -12,18 +12,18 @@ const SaveArticleButtonGuest = () => {
   const isHydrated = useHydrationDetection();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const getButtonText = () => {
-    if (!isHydrated) {
-      return translations.saveArticleButton?.loading;
-    }
-    return translations.saveArticleButton?.save;
-  };
+  const { saveArticleButton } = translations || {};
+
+  const label = isHydrated
+    ? saveArticleButton?.save
+    : saveArticleButton?.loading;
 
   return (
     <>
       <SaveButton
         onClick={() => setIsModalOpen(true)}
-        buttonText={getButtonText()}
+        visualLabel={label ?? ''}
+        accessibleLabel={label ?? ''}
         testId="save-article-btn-guest"
         isLoading={!isHydrated}
       />
