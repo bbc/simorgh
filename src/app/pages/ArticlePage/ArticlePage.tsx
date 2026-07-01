@@ -372,7 +372,8 @@ const ArticlePage = ({
 
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
 
-  const showTopicDiscovery = showTopicDiscoveryComponent && !isAmp && !isLite;
+  const showTopicDiscovery =
+    showTopicDiscoveryComponent && !isAmp && !isLite && !isLive();
 
   const showRelatedTopicsComponent = Boolean(
     showRelatedTopics && topics.length > 0 && !showTopicDiscovery,
