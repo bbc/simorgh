@@ -212,12 +212,6 @@ const ArticlePage = ({
   const [showAllContent, setShowAllContent] = useState(false);
   const { isApp, isAmp, isLite, pageType } = use(RequestContext);
 
-  // EXPERIMENT: Topic Discovery
-  const { experimentProps: topicDiscoveryExperimentProps } =
-    use(ReverbParamsContext);
-  const { experimentVariant: topicDiscoveryVariant } =
-    topicDiscoveryExperimentProps ?? {};
-
   const {
     articleAuthor,
     isTrustProjectParticipant,
@@ -355,7 +349,6 @@ const ArticlePage = ({
     wsoj: ({ data }: { data: Recommendation[] }) =>
       getWsojComponent({
         data,
-        experimentProps: topicDiscoveryExperimentProps,
       }),
     disclaimer: DisclaimerWithPaddingOverride,
     podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
@@ -379,11 +372,7 @@ const ArticlePage = ({
 
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
 
-  const showTopicDiscovery =
-    (showTopicDiscoveryComponent ||
-      topicDiscoveryVariant === 'topic_discovery') &&
-    !isAmp &&
-    !isLite;
+  const showTopicDiscovery = showTopicDiscoveryComponent && !isAmp && !isLite;
 
   const showRelatedTopicsComponent = Boolean(
     showRelatedTopics && topics.length > 0 && !showTopicDiscovery,
@@ -478,7 +467,6 @@ const ArticlePage = ({
                   : []),
               ]}
               topics={topics}
-              experimentProps={topicDiscoveryExperimentProps || undefined}
             />
           )}
           {showRelatedTopicsComponent && (
@@ -491,7 +479,6 @@ const ArticlePage = ({
               ]}
               topics={topics}
               mobileDivider={false}
-              experimentProps={topicDiscoveryExperimentProps || undefined}
             />
           )}
           {showPortraitVideoCarousel && (
@@ -501,10 +488,7 @@ const ArticlePage = ({
             />
           )}
           {showCountryCuration && <LocationBasedTopicOJ pageData={pageData} />}
-          <RelatedContentSection
-            content={blocks}
-            experimentProps={topicDiscoveryExperimentProps || undefined}
-          />
+          <RelatedContentSection content={blocks} />
           {showMediaCuration && (
             <div css={styles.mediaCurationRow}>
               <div data-testid="media-curation">
@@ -525,12 +509,7 @@ const ArticlePage = ({
           )}
         </div>
 
-        {!isApp && !isPGL && (
-          <SecondaryColumn
-            pageData={pageData}
-            experimentProps={topicDiscoveryExperimentProps || undefined}
-          />
-        )}
+        {!isApp && !isPGL && <SecondaryColumn pageData={pageData} />}
       </div>
 
       {!isApp && !isPGL && (
@@ -541,7 +520,6 @@ const ArticlePage = ({
           size="default"
           headingBackgroundColour={GREY_2}
           mobileDivider={showRelatedTopicsComponent}
-          experimentProps={topicDiscoveryExperimentProps || undefined}
         />
       )}
     </div>
