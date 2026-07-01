@@ -80,9 +80,8 @@ export const service: DefaultServiceConfig = {
       continueReading: 'पुढे वाचा',
       topicDiscovery: {
         heading: 'अधिक शोधा',
-        moreFromTopic: '{topic} मधील अधिक',
-        fetchErrorMessage:
-          'लोड करण्यात अयशस्वी. कृपया नंतर पुन्हा प्रयत्न करा.',
+        moreAboutTopic: '{topic} बद्दल अधिक',
+        fetchErrorMessage: 'लोड करण्यात अयशस्वी. कृपया पुन्हा प्रयत्न करा',
       },
       currentPage: 'सध्याचे पान',
       skipLinkText: 'थेट मजकुरावर जा',
