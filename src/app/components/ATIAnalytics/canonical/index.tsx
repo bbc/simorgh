@@ -39,6 +39,8 @@ const addScript = ({ script, parameters, nonce }: InlineScriptProps) => {
 };
 
 const CanonicalATIAnalytics = ({ reverbParams }: ATIAnalyticsProps) => {
+  // add resonanceParams to props if needed, e.g.
+  // const CanonicalATIAnalytics = ({ reverbParams, resonanceParams }: ATIAnalyticsProps) => {
   const { isLite, nonce } = use(RequestContext);
 
   usePWAInstallTracker();
@@ -49,9 +51,17 @@ const CanonicalATIAnalytics = ({ reverbParams }: ATIAnalyticsProps) => {
 
   const [reverbBeaconConfig] = useState(reverbParams);
 
+  // add resonanceBeaconConfig to state? copilot says
+  // It is likely there to freeze the initial analytics payload so the page-view beacon is sent once per mount, not again on re-renders.
+  // so likely yes, e.g.
+  //  const [resonanceBeaconConfig] = useState(resonanceParams);
+
   useEffect(() => {
     if (!isOperaProxy()) sendBeacon(reverbBeaconConfig);
   }, [reverbBeaconConfig]);
+  // add resonance to above, e.g.
+  //   if (!isOperaProxy()) sendBeacon(reverbBeaconConfig, resonanceBeaconConfig);
+  // }, [reverbBeaconConfig, resonanceBeaconConfig]);
 
   const liteSiteReverbURL = reverbUrlHelper.getLitePageViewUrl(reverbParams);
   const operaMiniPageViewReverbURL =

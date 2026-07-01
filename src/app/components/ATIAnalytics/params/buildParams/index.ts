@@ -1,5 +1,6 @@
 import { LIBRARY_VERSION } from '../../../../lib/analyticsUtils';
 import { buildReverbAnalyticsModel } from '../../atiUrl';
+// import e.g. import { buildResonanceAnalyticsModel } from '../../atiUrl';
 import { ATIDataWithContexts } from '../../types';
 
 export const buildPageATIParams = ({
@@ -87,3 +88,13 @@ export const buildPageReverbParams = ({
       hashedId,
     }),
   );
+
+// add exported function that builds resonance params calling buildPageATIParams above, e.g.
+//   export const buildPageResonanceParams = ({
+//   atiData,
+//   requestContext,
+//   serviceContext,
+// }: ATIDataWithContexts) =>
+//   buildResonanceAnalyticsModel(
+//     buildPageATIParams({ atiData, requestContext, serviceContext }),
+//   );

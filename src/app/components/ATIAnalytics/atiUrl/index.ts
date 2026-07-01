@@ -189,3 +189,7 @@ export const buildReverbEventModel = ({
     },
   };
 };
+
+// add function to build resonance analytics model, e.g.
+// export const buildResonanceAnalyticsModel = ({...})
+// we can do more in the spike here to compare values

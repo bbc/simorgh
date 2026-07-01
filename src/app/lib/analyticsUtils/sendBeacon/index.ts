@@ -6,6 +6,8 @@ import {
 import onClient from '../../utilities/onClient';
 import nodeLogger from '../../logger.node';
 import { ATI_LOGGING_ERROR } from '../../logger.const';
+// here or somewhere else we will need to import resonance - we can follow the pattern of the reverbURLHelper, e,g.
+// import { resonance ... } from '@bbc/resonance...';
 
 const logger = nodeLogger(__filename);
 
@@ -62,7 +64,7 @@ const callReverb = async (eventDetails: ReverbEventDetails) => {
   // eslint-disable-next-line no-underscore-dangle
   return window.__reverb.__reverbLoadedPromise.then(
     async reverb => {
-      if (!reverb.isReady()) await reverb.initialise();
+      if (!reverb.isReady()) await reverb.initialise(); // here we initialise reverb
 
       await reverbHandlers[eventName]({
         reverbInstance: reverb,
@@ -77,10 +79,30 @@ const callReverb = async (eventDetails: ReverbEventDetails) => {
   );
 };
 
+// add setResonancePageValues function here
+
+// add callResonance function here - might need to take a different form since we initialise once?
+
 const sendBeacon = async (reverbBeaconConfig: ReverbBeaconConfig) => {
+  // add resonanceBeaconConfig param to function if needed, e.g.
+  // sendBeacon = async (reverbBeaconConfig: ReverbBeaconConfig, resonanceBeaconConfig?: ResonanceBeaconConfig) => {
   if (onClient()) {
     try {
       const { eventDetails } = reverbBeaconConfig;
+      // add if else statement here to run resonance analytics if resonanceBeaconConfig is passed in
+      // IF we are not wanting to send both reverb and resonance page view info
+      // otherwise take a different approach
+      // e.g.
+      // if (resonanceBeaconConfig) {
+      //   const {
+      //     params: { page, user },
+      //     eventDetails,
+      //   } = resonanceBeaconConfig;
+
+      //   await setResonancePageValues({ pageVars: page, userVars: user });
+
+      //   await callResonance(eventDetails);
+      // } else {
 
       await callReverb(eventDetails);
     } catch (error) {
