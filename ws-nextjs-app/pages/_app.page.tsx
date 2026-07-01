@@ -164,8 +164,7 @@ export default class CustomApp extends App<Props> {
       status === 200 ? (
         <Component {...pageProps} />
       ) : (
-        // TODO **: Update props wherever ErrorPage is used to ensure pageType is passed in
-        <ErrorPage errorCode={status || 500} pageType={pageType} />
+        <ErrorPage errorCode={status || 500} />
       );
 
     return (
