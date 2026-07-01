@@ -55,25 +55,22 @@ export default {
         width: '100%',
       },
     }),
-  contentWithImageContainer:
-    ({ isMediaOpen }: { isMediaOpen: boolean }) =>
-    ({ gridWidths, mq, spacings }: Theme) =>
-      css({
-        [mq.GROUP_4_MIN_WIDTH]: {
-          display: 'flex',
-          flexDirection: 'row-reverse',
-          justifyContent: 'center',
-          width: '100%',
-          boxSizing: 'border-box',
-          padding: `0 ${spacings.DOUBLE}rem`,
-          margin: '0 auto',
-          gap: isMediaOpen ? 0 : `${spacings.QUADRUPLE}rem`,
-          maxWidth: `${pixelsToRem(gridWidths[1280])}rem`,
-        },
-        [mq.GROUP_4_ONLY]: {
-          alignItems: 'center',
-        },
-      }),
+  contentWithImageContainer: ({ gridWidths, mq, spacings }: Theme) =>
+    css({
+      [mq.GROUP_4_MIN_WIDTH]: {
+        display: 'flex',
+        flexDirection: 'row-reverse',
+        justifyContent: 'center',
+        width: '100%',
+        boxSizing: 'border-box',
+        padding: `0 ${spacings.DOUBLE}rem`,
+        margin: '0 auto',
+        maxWidth: `${pixelsToRem(gridWidths[1280])}rem`,
+      },
+      [mq.GROUP_4_ONLY]: {
+        alignItems: 'center',
+      },
+    }),
   textWrapper: ({ mq }: Theme) =>
     css({
       [mq.GROUP_4_MIN_WIDTH]: {

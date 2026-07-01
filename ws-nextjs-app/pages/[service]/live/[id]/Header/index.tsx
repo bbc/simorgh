@@ -107,11 +107,12 @@ const Header = ({
         <div css={styles.backgroundColor} />
       </div>
       <div
-        css={
+        css={[
           isWithImageLayout
-            ? styles.contentWithImageContainer({ isMediaOpen })
-            : styles.contentContainer
-        }
+            ? styles.contentWithImageContainer
+            : styles.contentContainer,
+          !isMediaOpen && isWithImageLayout && { gap: '2rem' },
+        ]}
       >
         {isHeaderImage ? (
           <div css={[isMediaOpen ? styles.hideImage : styles.headerImage]}>
