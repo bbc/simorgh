@@ -82,7 +82,7 @@ export interface Translations {
   continueReading?: string;
   topicDiscovery?: {
     heading: string;
-    moreFromTopic: string;
+    moreAboutTopic: string;
     fetchErrorMessage?: string;
   };
   readTime?: Partial<{
