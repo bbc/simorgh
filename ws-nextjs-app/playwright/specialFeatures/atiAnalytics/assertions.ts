@@ -1,9 +1,8 @@
-import { expect, type Page } from '@playwright/test';
+import { expect, type Page, type Request } from '@playwright/test';
 import {
   getATIParamsFromURL,
   getATIUrls,
   getAppName,
-  isPageViewRequest,
   isViewabilityViewRequest,
   isViewabilityClickRequest,
   COMPONENTS,
@@ -154,6 +153,48 @@ const assertViewabilityEventParams = (
   expect(parseInt(eventContext[0].data.site.level2_id, 10)).toBe(siteId);
 };
 
+const usesReverbViewabilityModel = (applicationType: string): boolean =>
+  !['lite', 'amp'].includes(applicationType);
+
+const buildPageViewRequestMatcher = ({
+  applicationType,
+  atiUrl,
+  reverbAtiUrl,
+}: {
+  applicationType: string;
+  atiUrl: string;
+  reverbAtiUrl: string;
+}) => {
+  const shouldUseReverb = usesReverbViewabilityModel(applicationType);
+  const expectedHost = new URL(shouldUseReverb ? reverbAtiUrl : atiUrl)
+    .hostname;
+  const expectedX8 = shouldUseReverb ? 'simorgh' : '[simorgh]';
+
+  return (request: Request): boolean => {
+    if (!request.url().includes(expectedHost)) return false;
+    const params = new URLSearchParams(new URL(request.url()).search);
+    return params.get('x8') === expectedX8;
+  };
+};
+
+const getScrollableNavClickTarget = async (page: Page) => {
+  const navLinks = page.locator('[data-e2e="scrollable-nav"]').locator('a');
+  const currentPath = new URL(page.url()).pathname;
+
+  const navHrefs = await navLinks.evaluateAll(links =>
+    links.map(link => link.getAttribute('href')),
+  );
+
+  const targetIndex = navHrefs.findIndex(href => {
+    if (!href) return false;
+
+    const targetPath = new URL(href, page.url()).pathname;
+    return targetPath !== currentPath;
+  });
+
+  return targetIndex >= 0 ? navLinks.nth(targetIndex) : navLinks.last();
+};
+
 export const assertPageView = async ({
   page,
   path,
@@ -165,8 +206,14 @@ export const assertPageView = async ({
   service,
   appEnv,
 }: AtiAssertionFnProps) => {
-  const { reverbAtiUrl } = getATIUrls(appEnv);
-  const pageViewPromise = page.waitForRequest(isPageViewRequest(reverbAtiUrl));
+  const { atiUrl, reverbAtiUrl } = getATIUrls(appEnv);
+  const pageViewPromise = page.waitForRequest(
+    buildPageViewRequestMatcher({
+      applicationType,
+      atiUrl,
+      reverbAtiUrl,
+    }),
+  );
 
   await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
 
@@ -230,6 +277,9 @@ export const assertScrollableNavigationComponentClick = async ({
 
   await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
   await page.locator('[data-e2e="scrollable-nav"]').scrollIntoViewIfNeeded();
+  await page.waitForTimeout(300);
+
+  const navLinkToClick = await getScrollableNavClickTarget(page);
 
   const [request] = await Promise.all([
     page.waitForRequest(
@@ -238,7 +288,7 @@ export const assertScrollableNavigationComponentClick = async ({
         COMPONENTS.SCROLLABLE_NAVIGATION,
       ),
     ),
-    page.locator('[data-e2e="scrollable-nav"]').locator('a').last().click(),
+    navLinkToClick.click(),
   ]);
 
   const params = getATIParamsFromURL(request.url());
@@ -308,6 +358,108 @@ export const assertDropdownNavigationComponentClick = async ({
       ),
     ),
     page.locator('[data-e2e="dropdown-nav"]').locator('a').first().click(),
+  ]);
+
+  const params = getATIParamsFromURL(request.url());
+
+  assertViewabilityEventParams(
+    params,
+    pageIdentifier,
+    siteId,
+    applicationType,
+    'select',
+  );
+};
+
+export const assertMostReadComponentView = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  siteId,
+  applicationType,
+  appEnv,
+}: AtiAssertionFnProps) => {
+  const { atiUrl, reverbAtiUrl } = getATIUrls(appEnv);
+  const viewPromise = page.waitForRequest(
+    isViewabilityViewRequest([reverbAtiUrl, atiUrl], COMPONENTS.MOST_READ),
+  );
+
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+
+  // Double scroll intentional to reliably trigger viewability
+  await page.locator('[data-e2e="most-read"]').scrollIntoViewIfNeeded();
+  await page.locator('[data-e2e="most-read"]').scrollIntoViewIfNeeded();
+
+  const request = await viewPromise;
+  const params = getATIParamsFromURL(request.url());
+
+  assertViewabilityEventParams(
+    params,
+    pageIdentifier,
+    siteId,
+    applicationType,
+    'view',
+  );
+};
+
+export const assertMostReadComponentClick = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  siteId,
+  applicationType,
+  appEnv,
+}: AtiAssertionFnProps) => {
+  const { atiUrl, reverbAtiUrl } = getATIUrls(appEnv);
+
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+  await page.locator('[data-e2e="most-read"]').scrollIntoViewIfNeeded();
+  await page.locator('[data-e2e="most-read"]').scrollIntoViewIfNeeded();
+  await page.waitForTimeout(300);
+
+  const [request] = await Promise.all([
+    page.waitForRequest(
+      isViewabilityClickRequest([reverbAtiUrl, atiUrl], COMPONENTS.MOST_READ),
+    ),
+    page.locator('[data-e2e="most-read"]').locator('a').first().click(),
+  ]);
+
+  const params = getATIParamsFromURL(request.url());
+
+  assertViewabilityEventParams(
+    params,
+    pageIdentifier,
+    siteId,
+    applicationType,
+    'select',
+  );
+};
+
+export const assertLiteSiteSummaryComponentToMainSiteClick = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  siteId,
+  applicationType,
+  appEnv,
+}: AtiAssertionFnProps) => {
+  const { atiUrl, reverbAtiUrl } = getATIUrls(appEnv);
+
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+  await page.locator('[data-e2e="to-main-site"]').scrollIntoViewIfNeeded();
+  await page.waitForTimeout(300);
+
+  const [request] = await Promise.all([
+    page.waitForRequest(
+      isViewabilityClickRequest(
+        [reverbAtiUrl, atiUrl],
+        COMPONENTS.LITE_SITE_SUMMARY,
+      ),
+    ),
+    page.locator('[data-e2e="to-main-site"]').locator('a').first().click(),
   ]);
 
   const params = getATIParamsFromURL(request.url());
