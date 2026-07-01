@@ -1,8 +1,6 @@
-import { use, useState, useCallback } from 'react';
+import { use, useState } from 'react';
 import { useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
-import useMediaQuery from '#hooks/useMediaQuery';
-import { GROUP_4_MIN_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
 import { singleTextBlock } from '#app/models/blocks';
 import { BylineLinkedData } from '#app/components/LinkedData/types';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
@@ -58,8 +56,6 @@ import ContinueReadingButton, {
   ContinueReadingButtonProps,
 } from '#app/components/ContinueReadingButton';
 import SaveArticleButton from '#app/components/SaveArticleButton';
-import useScrollDepthTracker from '#app/hooks/useScrollDepthTracker';
-import isLive from '#lib/utilities/isLive';
 import ElectionBanner from './ElectionBanner';
 import ArticleMessageBanner from './ArticleMessageBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
@@ -213,18 +209,7 @@ const ArticlePage = ({
   showTopicDiscoveryComponent?: boolean;
 }) => {
   const [showAllContent, setShowAllContent] = useState(false);
-  const [isDesktopViewport, setIsDesktopViewport] = useState(false);
   const { isApp, isAmp, isLite, pageType } = use(RequestContext);
-
-  // Track when viewport enters GROUP_4_MIN_WIDTH (1008px+) where button is hidden
-  const handleDesktopMediaQueryChange = useCallback(mediaQueryList => {
-    setIsDesktopViewport(mediaQueryList.matches);
-  }, []);
-
-  useMediaQuery(
-    `(min-width: ${GROUP_4_MIN_WIDTH_BP}rem)`,
-    handleDesktopMediaQueryChange,
-  );
 
   // EXPERIMENT: Topic Discovery
   const { experimentProps: topicDiscoveryExperimentProps } =
@@ -330,15 +315,6 @@ const ArticlePage = ({
     continueReadingButtonToggle,
   );
 
-  // On desktop (GROUP_4+), all content is visible, so enable scroll tracking immediately
-  // On mobile/tablet, only enable tracking when button is clicked and content is expanded
-  const scrollDepthEnabled =
-    isDesktopViewport || !showContinueReadingButton || showAllContent;
-  const scrollDepthRef = useScrollDepthTracker(
-    'article-scroll-depth',
-    scrollDepthEnabled,
-  );
-
   const promoImageBlocks =
     pageData?.promo?.images?.defaultPromoImage?.blocks ?? [];
 
@@ -402,8 +378,6 @@ const ArticlePage = ({
 
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
 
-  const isLivePage = isLive();
-
   const showTopicDiscovery =
     (showTopicDiscoveryComponent ||
       topicDiscoveryVariant === 'topic_discovery') &&
@@ -424,11 +398,7 @@ const ArticlePage = ({
   );
 
   const showCountryCuration = Boolean(
-    !isAmp &&
-    !isLite &&
-    !isApp &&
-    !isLivePage &&
-    pageData?.countryCuration?.summaries?.length,
+    !isAmp && !isLite && !isApp && pageData?.countryCuration?.summaries?.length,
   );
 
   // EXPERIMENT: PWA Promotional Banner
@@ -486,7 +456,7 @@ const ArticlePage = ({
       <ArticleMessageBanner aboutTags={aboutTags} taggings={taggings} />
       <div css={styles.grid}>
         <div css={!isPGL ? styles.primaryColumn : styles.pglColumn}>
-          <main css={styles.mainContent} role="main" ref={scrollDepthRef}>
+          <main css={styles.mainContent} role="main">
             <Blocks
               blocks={articleBlocks}
               componentsToRender={componentsToRender}
