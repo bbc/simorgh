@@ -65,7 +65,7 @@ describe('SaveArticleButton', () => {
       expect(screen.getByRole('button')).toHaveTextContent('Saved to My News');
     });
 
-    it('renders loading state and disables button', async () => {
+    it('renders loading state and keeps the button focusable', async () => {
       mockedUseUASButton.mockReturnValue({
         isLoading: true,
         isUpdating: false,
@@ -77,10 +77,10 @@ describe('SaveArticleButton', () => {
       const button = screen.getByRole('button');
 
       expect(button).toHaveTextContent('Loading');
-      expect(button).toBeDisabled();
+      expect(button).toBeEnabled();
     });
 
-    it('renders saving state and disables button', async () => {
+    it('renders saving state and keeps the button focusable', async () => {
       mockedUseUASButton.mockReturnValue({
         isSaved: false,
         isLoading: false,
@@ -95,10 +95,10 @@ describe('SaveArticleButton', () => {
       const button = screen.getByRole('button');
 
       expect(button).toHaveTextContent('Saving');
-      expect(button).toBeDisabled();
+      expect(button).toBeEnabled();
     });
 
-    it('renders removing state and disables button', async () => {
+    it('renders removing state and keeps the button focusable', async () => {
       mockedUseUASButton.mockReturnValue({
         isSaved: true,
         isLoading: false,
@@ -113,7 +113,7 @@ describe('SaveArticleButton', () => {
       const button = screen.getByRole('button');
 
       expect(button).toHaveTextContent('Removing');
-      expect(button).toBeDisabled();
+      expect(button).toBeEnabled();
     });
 
     it('calls handleSaveAction with save when button is clicked and not already saved', async () => {

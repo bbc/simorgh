@@ -834,6 +834,12 @@ exports[`Article Page should render a ltr article (pidgin) with most read correc
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  .emotion-33 {
+    color: #E6E8EA;
+  }
+}
+
 <div>
   <div
     class="emotion-0"
@@ -2023,6 +2029,12 @@ exports[`Article Page should render a news article correctly 1`] = `
   .emotion-37 {
     font-size: 0.8125rem;
     line-height: 1rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .emotion-37 {
+    color: #E6E8EA;
   }
 }
 
@@ -4183,6 +4195,12 @@ exports[`Article Page should render a rtl article (persian) with most read corre
   .emotion-33 {
     font-size: 0.8125rem;
     line-height: 1.25rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .emotion-33 {
+    color: #E6E8EA;
   }
 }
 
