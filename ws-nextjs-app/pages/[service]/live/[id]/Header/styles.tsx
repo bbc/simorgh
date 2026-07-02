@@ -20,10 +20,10 @@ export default {
         outline: 'none',
       },
     }),
-  hideMaskedImage: ({ mq }: Theme) =>
+  hideImage: ({ mq }: Theme) =>
     css({
       [mq.GROUP_4_MIN_WIDTH]: {
-        opacity: 0,
+        display: 'none',
       },
     }),
   backgroundContainer: () =>
@@ -55,6 +55,39 @@ export default {
         width: '100%',
       },
     }),
+  contentWithImageContainer: ({ gridWidths, mq, spacings }: Theme) =>
+    css({
+      [mq.GROUP_4_MIN_WIDTH]: {
+        display: 'flex',
+        flexDirection: 'row-reverse',
+        justifyContent: 'center',
+        width: '100%',
+        boxSizing: 'border-box',
+        padding: `0 ${spacings.DOUBLE}rem`,
+        margin: '0 auto',
+        maxWidth: `${pixelsToRem(gridWidths[1280])}rem`,
+      },
+      [mq.GROUP_4_ONLY]: {
+        alignItems: 'center',
+      },
+    }),
+  textWrapper: ({ mq }: Theme) =>
+    css({
+      [mq.GROUP_4_MIN_WIDTH]: {
+        width: '50%',
+      },
+    }),
+  headerImage: ({ mq, spacings }: Theme) =>
+    css({
+      aspectRatio: '16 / 9',
+      [mq.GROUP_4_MIN_WIDTH]: {
+        aspectRatio: 'auto',
+        display: 'flex',
+      },
+      [mq.GROUP_4_ONLY]: {
+        paddingInlineEnd: `${spacings.DOUBLE}rem`,
+      },
+    }),
   liveMedia: ({ mq, spacings }: Theme) =>
     css({
       padding: `0rem ${spacings.FULL}rem ${spacings.DOUBLE}rem`,
@@ -69,7 +102,7 @@ export default {
   liveMediaOpen: ({ mq }: Theme) =>
     css({
       [mq.GROUP_4_MIN_WIDTH]: {
-        maxWidth: '100%',
+        maxWidth: '80rem',
       },
     }),
   fixedHeight: ({ mq, spacings }: Theme) =>
@@ -77,8 +110,13 @@ export default {
       [mq.GROUP_4_MIN_WIDTH]: {
         minHeight: '0',
         padding: `${pixelsToRem(40)}rem ${spacings.DOUBLE}rem 0`,
-        maxWidth: '50%', // determines width of text overlay.
       },
+    }),
+  liveMediaAndTextContainer: () =>
+    css({
+      display: 'flex',
+      flexDirection: 'column',
+      width: '100%',
     }),
   textContainerWithoutImage: ({ mq, gridWidths, spacings }: Theme) =>
     css({
@@ -97,18 +135,14 @@ export default {
   textContainerWithImage: ({ mq, spacings }: Theme) =>
     css({
       position: 'relative',
-      padding: `${spacings.FULL}rem ${spacings.FULL}rem ${spacings.DOUBLE}rem`,
-      [mq.GROUP_2_MIN_WIDTH]: {
-        padding: `${spacings.FULL}rem ${spacings.DOUBLE}rem ${spacings.DOUBLE}rem`,
-      },
+      padding: `${spacings.DOUBLE}rem`,
       [mq.GROUP_4_MIN_WIDTH]: {
-        padding: `${spacings.DOUBLE}rem`,
         minHeight: `${pixelsToRem(440)}rem`, // calculation includes padding
         height: '100%',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        maxWidth: '50%', // determines width of text overlay.
+        padding: 0,
       },
     }),
   titleWithImage: ({ palette }: Theme) =>
