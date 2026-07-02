@@ -65,7 +65,7 @@
       background-color: theme.$palette-grey-3;
     }
 
-    @media (min-width: #{theme.$mediaQueries-group-2-min-width-bp}) {
+    @media #{theme.$mediaQueries-group-2-min-width} {
       width: calc(50% - #{theme.$spacings-double});
     }
   }
