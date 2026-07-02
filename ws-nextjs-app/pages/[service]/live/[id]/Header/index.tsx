@@ -5,9 +5,13 @@ import LiveHeaderMedia from '#app/components/LiveHeaderMedia';
 import { MediaCollection } from '#app/components/MediaLoader/types';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import MaskedImage from '#app/components/MaskedImage';
-import LiveLabelHeader from './LiveLabelHeader';
+import Image from '#app/components/Image';
+import buildIChefURL from '#app/lib/utilities/ichefURL';
+import { createSrcsets } from '#app/lib/utilities/srcSet';
+import getOriginCode from '#app/lib/utilities/imageSrcHelpers/originCode';
+import getLocator from '#app/lib/utilities/imageSrcHelpers/locator';
 import styles from './styles';
+import LiveLabelHeader from './LiveLabelHeader';
 
 const Header = ({
   showLiveLabel,
@@ -34,10 +38,27 @@ const Header = ({
   const {
     translations: { sport: { matchSummary = 'Match Summary' } = {} },
   } = use(ServiceContext);
-
   const watchVideoClickHandler = () => {
     setLiveMediaOpen(!isMediaOpen);
   };
+  const url = imageUrlTemplate?.split('{width}')[1];
+
+  const originCode = getOriginCode(url);
+  const locator = getLocator(url);
+
+  const { primarySrcset, primaryMimeType, fallbackSrcset, fallbackMimeType } =
+    createSrcsets({
+      originCode,
+      locator,
+      originalImageWidth: imageWidth,
+    });
+
+  const DEFAULT_IMAGE_RES = 480;
+  const srcWebp = buildIChefURL({
+    originCode,
+    locator,
+    resolution: DEFAULT_IMAGE_RES,
+  });
 
   const Title = (
     <span
@@ -85,64 +106,87 @@ const Header = ({
       <div css={styles.backgroundContainer}>
         <div css={styles.backgroundColor} />
       </div>
-      <div css={styles.contentContainer}>
-        <div css={[isMediaOpen && styles.hideMaskedImage]}>
-          {isHeaderImage ? (
-            <MaskedImage
-              imageUrl={imageUrl}
-              imageUrlTemplate={imageUrlTemplate}
-              imageWidth={imageWidth}
-              isLivePageHeaderImage
-            />
-          ) : null}
-        </div>
-        <div
-          css={[
-            isWithImageLayout && styles.textContainerWithImage,
-            !isWithImageLayout && styles.textContainerWithoutImage,
-            mediaCollections && styles.fixedHeight,
-          ]}
-        >
-          <Heading
-            size="trafalgar"
-            level={1}
-            id="content"
-            tabIndex={-1}
-            css={styles.heading}
-          >
-            {showLiveLabel ? (
-              <LiveLabelHeader
-                isHeaderImage={isWithImageLayout}
-                showSportData={false}
-              >
-                {Title}
-              </LiveLabelHeader>
-            ) : (
-              Title
-            )}
-          </Heading>
-          {description && (
-            <Text
-              as="p"
-              css={[
-                styles.description,
-                showLiveLabel &&
-                  !isWithImageLayout &&
-                  styles.layoutWithLiveLabelNoImage,
-              ]}
-            >
-              {description}
-            </Text>
-          )}
-        </div>
-        {mediaCollections && (
-          <div css={[styles.liveMedia, isMediaOpen && styles.liveMediaOpen]}>
-            <LiveHeaderMedia
-              mediaCollection={mediaCollections}
-              clickCallback={watchVideoClickHandler}
+      <div
+        css={[
+          isWithImageLayout
+            ? styles.contentWithImageContainer
+            : styles.contentContainer,
+          !isMediaOpen && isWithImageLayout && { gap: '2rem' },
+        ]}
+      >
+        {isHeaderImage ? (
+          <div css={[isMediaOpen ? styles.hideImage : styles.headerImage]}>
+            <Image
+              alt=""
+              src={srcWebp}
+              srcSet={primarySrcset || undefined}
+              fallbackSrcSet={fallbackSrcset || undefined}
+              mediaType={primaryMimeType || undefined}
+              fallbackMediaType={fallbackMimeType || undefined}
+              sizes="(min-width: 1008px) 660px, 100vw"
+              fetchPriority="high"
+              preload
+              placeholder
+              style={{ display: 'block' }}
             />
           </div>
-        )}
+        ) : null}
+
+        <div
+          css={[
+            mediaCollections && styles.liveMediaAndTextContainer,
+            isWithImageLayout && !isMediaOpen && styles.textWrapper,
+          ]}
+        >
+          <div
+            css={[
+              isWithImageLayout
+                ? styles.textContainerWithImage
+                : styles.textContainerWithoutImage,
+              mediaCollections && [styles.fixedHeight, { width: '100%' }],
+            ]}
+          >
+            <Heading
+              size="trafalgar"
+              level={1}
+              id="content"
+              tabIndex={-1}
+              css={styles.heading}
+            >
+              {showLiveLabel ? (
+                <LiveLabelHeader
+                  isHeaderImage={isWithImageLayout}
+                  showSportData={false}
+                >
+                  {Title}
+                </LiveLabelHeader>
+              ) : (
+                Title
+              )}
+            </Heading>
+            {description && (
+              <Text
+                as="p"
+                css={[
+                  styles.description,
+                  showLiveLabel &&
+                    !isWithImageLayout &&
+                    styles.layoutWithLiveLabelNoImage,
+                ]}
+              >
+                {description}
+              </Text>
+            )}
+          </div>
+          {mediaCollections && (
+            <div css={[styles.liveMedia, isMediaOpen && styles.liveMediaOpen]}>
+              <LiveHeaderMedia
+                mediaCollection={mediaCollections}
+                clickCallback={watchVideoClickHandler}
+              />
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
