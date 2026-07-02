@@ -80,9 +80,8 @@ export const service: DefaultServiceConfig = {
       continueReading: 'पुढे वाचा',
       topicDiscovery: {
         heading: 'अधिक शोधा',
-        moreFromTopic: '{topic} मधील अधिक',
-        fetchErrorMessage:
-          'लोड करण्यात अयशस्वी. कृपया नंतर पुन्हा प्रयत्न करा.',
+        moreAboutTopic: '{topic} बद्दल अधिक',
+        fetchErrorMessage: 'लोड करण्यात अयशस्वी. कृपया पुन्हा प्रयत्न करा',
       },
       currentPage: 'सध्याचे पान',
       skipLinkText: 'थेट मजकुरावर जा',
@@ -360,6 +359,18 @@ export const service: DefaultServiceConfig = {
           uruguay: 'उरुग्वे',
           usa: 'अमेेरिका (USA)',
           uzbekistan: 'उझबेकिस्तान',
+        },
+        tournaments: {
+          fifaWorldCup: 'फिफा वर्ल्ड कप',
+        },
+        stages: {
+          groupStage: 'साखळी फेरी',
+          last32: 'राऊंड ऑफ 32',
+          last16: 'राऊंड ऑफ 16',
+          quarterFinals: 'उपांत्यपूर्व फेरी',
+          semiFinals: 'उपांंत्य फेरी',
+          final: 'अंतिम सामना',
+          thirdPlaceFinal: 'तिसऱ्या स्थानाकरिता सामना',
         },
       },
     },

@@ -81,6 +81,12 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Arag dhammaan',
       home: 'War',
+      topicDiscovery: {
+        heading: 'Baro wax badan',
+        moreAboutTopic: 'Wax dheeraad ah oo ku saabsan {topic}',
+        fetchErrorMessage:
+          'Ku shubiddu waa fashilantay. Fadlan isku day mar kale',
+      },
       continueReading: 'Sii Akhri',
       currentPage: 'Bogga hadda',
       skipLinkText: 'U gudub qaybta macluumaadka',
@@ -363,6 +369,18 @@ export const service: DefaultServiceConfig = {
           uruguay: 'Uruguay',
           usa: 'Mareykanka',
           uzbekistan: 'Uzbekistan',
+        },
+        tournaments: {
+          fifaWorldCup: 'Koobka Adduunka ee FIFA',
+        },
+        stages: {
+          groupStage: 'Heerka kooxaha isku guruubka ah',
+          last32: 'Wareegga 32ka kooxood',
+          last16: 'Wareegga 16-ka koox',
+          quarterFinals: 'Rubac dhammaadka',
+          semiFinals: 'Nus Dhamaadka',
+          final: 'Kama dambeysta',
+          thirdPlaceFinal: 'Kaalinta 3-aad',
         },
       },
     },

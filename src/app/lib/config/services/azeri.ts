@@ -81,6 +81,12 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Hamısına baxın',
       home: 'Xəbərlər',
+      topicDiscovery: {
+        heading: 'Daha çox kəşf et',
+        moreAboutTopic: '{topic} haqqında daha çox',
+        fetchErrorMessage:
+          'Yükləmə uğursuz oldu. Zəhmət olmasa yenidən yoxlayın',
+      },
       currentPage: 'Hazırda olduğunuz səhifə',
       skipLinkText: 'Mətnə keçid',
       relatedContent: 'Bu barədə daha geniş',
@@ -384,6 +390,18 @@ export const service: DefaultServiceConfig = {
           uruguay: 'Uruqvay',
           usa: 'ABŞ',
           uzbekistan: 'Özbəkistan',
+        },
+        tournaments: {
+          fifaWorldCup: 'FİFA Dünya Kuboku',
+        },
+        stages: {
+          groupStage: 'Qrup mərhələsi',
+          last32: '1/16 mərhələ',
+          last16: '1/8 final',
+          quarterFinals: 'Dörddə bir final',
+          semiFinals: 'Yarımfinal',
+          final: 'Final',
+          thirdPlaceFinal: 'Üçüncü yer',
         },
       },
     },

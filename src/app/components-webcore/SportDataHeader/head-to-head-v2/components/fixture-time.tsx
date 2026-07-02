@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 import styles from '../index.styles';
-import getLocalisedTime from '../helpers/localise-time';
+import { getLocalisedTime } from '../helpers/localise-datetime';
 
 interface TimeData {
   displayTimeUK: string;
@@ -19,6 +19,7 @@ const Time = ({ date, time }: TimeProps) => {
   useEffect(() => {
     const clientTime = getLocalisedTime(date, time.displayTimeUK);
     setLocalisedTime(clientTime);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

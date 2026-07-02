@@ -116,6 +116,11 @@ export const service: DefaultServiceConfig = {
       },
       ...russianUkrainianSharedTranslations,
       ...headerFooterTranslations,
+      topicDiscovery: {
+        heading: 'Узнать больше',
+        moreAboutTopic: 'Больше о {topic}',
+        fetchErrorMessage: 'Не удалось загрузить. Пожалуйста, попробуйте снова',
+      },
       sport: {
         matchSummary: 'Обзор матча',
         assists: 'Голевые передачи',
@@ -179,6 +184,18 @@ export const service: DefaultServiceConfig = {
           uruguay: 'Уругвай',
           usa: 'США',
           uzbekistan: 'Узбекистан',
+        },
+        tournaments: {
+          fifaWorldCup: 'ЧМ по футболу',
+        },
+        stages: {
+          groupStage: 'Групповой этап',
+          last32: '1/16 финала',
+          last16: '1/8 финала',
+          quarterFinals: 'Четвертьфинал',
+          semiFinals: 'Полуфинал',
+          final: 'Финал',
+          thirdPlaceFinal: 'За третье место',
         },
       },
     },
