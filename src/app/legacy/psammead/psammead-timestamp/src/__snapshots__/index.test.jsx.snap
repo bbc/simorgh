@@ -30,12 +30,6 @@ exports[`Timestamp should render Timestamp correctly 1`] = `
   padding-bottom: 1rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  .emotion-0 {
-    color: #E6E8EA;
-  }
-}
-
 <div>
   <time
     class="emotion-0 emotion-1"
@@ -76,12 +70,6 @@ exports[`Timestamp should render Timestamp with a prefix 1`] = `
   padding-bottom: 1rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  .emotion-0 {
-    color: #E6E8EA;
-  }
-}
-
 <div>
   <time
     class="emotion-0 emotion-1"
@@ -114,12 +102,6 @@ exports[`Timestamp should render Timestamp without padding 1`] = `
   .emotion-0 {
     font-size: 0.8125rem;
     line-height: 1rem;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .emotion-0 {
-    color: #E6E8EA;
   }
 }
 

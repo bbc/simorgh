@@ -152,12 +152,6 @@ exports[`ArticleTimestamp should render a 'created' Timestamp correctly 1`] = `
   padding-bottom: 1rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  .emotion-4 {
-    color: #E6E8EA;
-  }
-}
-
 <div>
   <div
     class="emotion-0 emotion-1 emotion-2"
@@ -328,12 +322,6 @@ exports[`ArticleTimestamp should render both a 'created' and an 'updated' Timest
 
 .emotion-4:last-child {
   padding-bottom: 1rem;
-}
-
-@media (prefers-color-scheme: dark) {
-  .emotion-4 {
-    color: #E6E8EA;
-  }
 }
 
 <div>
@@ -516,12 +504,6 @@ exports[`ArticleTimestamp should render with a prefix 1`] = `
   padding-bottom: 1rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  .emotion-4 {
-    color: #E6E8EA;
-  }
-}
-
 <div>
   <div
     class="emotion-0 emotion-1 emotion-2"
@@ -702,12 +684,6 @@ exports[`ArticleTimestamp should render with a suffix 1`] = `
   padding-bottom: 1rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  .emotion-4 {
-    color: #E6E8EA;
-  }
-}
-
 <div>
   <div
     class="emotion-0 emotion-1 emotion-2"
@@ -886,12 +862,6 @@ exports[`ArticleTimestamp should render with no suffix or prefix 1`] = `
 
 .emotion-4:last-child {
   padding-bottom: 1rem;
-}
-
-@media (prefers-color-scheme: dark) {
-  .emotion-4 {
-    color: #E6E8EA;
-  }
 }
 
 <div>
