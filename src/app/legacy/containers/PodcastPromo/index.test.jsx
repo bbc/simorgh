@@ -38,6 +38,8 @@ const {
 } = russianServiceConfig.default.podcastPromo;
 
 describe('Inline', () => {
+  const electionsIconPathSnippet = 'M18.1,7.2v2.6h8.7';
+
   it('Should render a promo for podcasts correctly', () => {
     const { container } = render(
       <PromoWithContext inline config={burmeseServiceConfig} />,
@@ -89,6 +91,32 @@ describe('Inline', () => {
     );
     expect(container).toMatchSnapshot();
   });
+
+  it('should render the elections icon when the promo URL matches the elections article', () => {
+    const electionsPromoConfig = {
+      ...russianServiceConfig,
+      default: {
+        ...russianServiceConfig.default,
+        podcastPromo: {
+          ...russianServiceConfig.default.podcastPromo,
+          linkLabel: {
+            ...russianServiceConfig.default.podcastPromo.linkLabel,
+            href: 'https://www.bbc.com/portuguese/articles/czd2prld130o',
+          },
+        },
+      },
+    };
+
+    const { container } = render(
+      <PromoWithContext inline config={electionsPromoConfig} />,
+      {
+        service: 'russian',
+      },
+    );
+
+    expect(container.innerHTML).toContain(electionsIconPathSnippet);
+  });
+
   it('should show when all props are available', () => {
     const { getByText, getByRole } = render(<PromoWithContext inline />, {
       service: 'russian',
