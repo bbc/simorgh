@@ -32,29 +32,29 @@
     border: solid #{theme.pixelsToRem-px-to-rem(3)} transparent;
   }
 
-  @media (min-width: #{theme.$mediaQueries-group-2-min-width-bp}) {
+  @media #{theme.$mediaQueries-group-2-min-width} {
     margin-inline: #{theme.$spacings-double};
   }
 
-  @media (min-width: #{theme.$mediaQueries-group-3-min-width-bp}) {
+  @media #{theme.$mediaQueries-group-3-min-width} {
     margin-inline: #{theme.$spacings-double};
   }
 
-  @media (min-width: #{theme.$mediaQueries-group-4-min-width-bp}) {
+  @media #{theme.$mediaQueries-group-4-min-width} {
     margin-inline: 0;
   }
 
   // Opera Mini overrides
   :global(.is-opera-mini) & {
-    @media (max-width: #{theme.$mediaQueries-group-0-max-width-bp}) {
+    @media #{theme.$mediaQueries-group-0-max-width} {
       margin-inline: #{theme.$spacings-full};
     }
 
-    @media (min-width: #{theme.$mediaQueries-group-2-min-width-bp}) {
+    @media #{theme.$mediaQueries-group-2-min-width} {
       margin-inline: #{theme.$spacings-double};
     }
 
-    @media (min-width: #{theme.$mediaQueries-group-4-min-width-bp}) {
+    @media #{theme.$mediaQueries-group-4-min-width} {
       margin-inline: 0;
     }
   }

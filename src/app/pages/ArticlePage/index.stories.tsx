@@ -66,7 +66,6 @@ type Props = {
   podcastEnabled?: boolean;
   electionBanner?: boolean;
   articleLiteSiteLinkEnabled?: boolean;
-  showTopicDiscoveryComponent?: boolean;
 };
 
 const ComponentWithContext = ({
@@ -75,7 +74,6 @@ const ComponentWithContext = ({
   podcastEnabled = false,
   electionBanner = false,
   articleLiteSiteLinkEnabled = false,
-  showTopicDiscoveryComponent = false,
 }: Props) => {
   return (
     <ToggleContextProvider
@@ -108,7 +106,6 @@ const ComponentWithContext = ({
                   secondaryColumn: data.secondaryData,
                   mostRead: data.secondaryData.mostRead,
                 }}
-                showTopicDiscoveryComponent={showTopicDiscoveryComponent}
               />
             </PageLayoutWrapper>
           </ThemeProvider>
@@ -317,7 +314,6 @@ export const ArticlePageWithTopicDiscovery = {
     <ComponentWithContext
       data={articleWithTopicDiscovery}
       service="portuguese"
-      showTopicDiscoveryComponent
     />
   ),
   globals: {

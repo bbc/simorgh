@@ -4,7 +4,6 @@ import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { TopicTag } from '#app/models/types/metadata';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import { ComponentExperimentProps } from '#app/models/types/global';
 import ScrollableTabs from './ScrollableTabs';
 import styles from './index.styles';
 import useFetchTopicPromos from './useFetchTopicPromos';
@@ -14,20 +13,15 @@ type ExtractedTopic = Pick<TopicTag, 'topicId' | 'topicName' | 'topicUrl'>;
 type TopicDiscoveryProps = {
   topics: ExtractedTopic[];
   className?: string;
-  experimentProps?: ComponentExperimentProps;
 };
 
 const HEADING_ID = 'topic-discovery-heading';
 
-const TopicDiscovery = ({
-  topics,
-  className,
-  experimentProps,
-}: TopicDiscoveryProps) => {
-  const { translations } = use(ServiceContext);
+const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
+  const { translations, dir } = use(ServiceContext);
   const {
     heading = 'Discover more',
-    moreFromTopic = 'More from {topic}',
+    moreAboutTopic = 'More about {topic}',
     fetchErrorMessage = 'Failed to load. Please try again later.',
   } = translations.topicDiscovery || {};
 
@@ -48,7 +42,6 @@ const TopicDiscovery = ({
   const eventTrackingData = {
     componentName: 'topic-discovery',
     groupTracker,
-    ...(experimentProps && experimentProps),
   };
 
   const { topicPromos, isLoading, isError } = useFetchTopicPromos({
@@ -61,17 +54,16 @@ const TopicDiscovery = ({
     componentName: 'topic-discovery-fetch-error-message',
   });
 
-  const moreFromLinkClickTracker = useClickTrackerHandler({
-    componentName: 'topic-discovery-more-from-link',
+  const moreAboutLinkClickTracker = useClickTrackerHandler({
+    componentName: 'topic-discovery-more-about-link',
     groupTracker,
     itemTracker: {
-      type: 'topic-discovery-more-from-link',
+      type: 'topic-discovery-more-about-link',
       text: currentTopic
-        ? moreFromTopic.replace('{topic}', currentTopic.topicName)
+        ? moreAboutTopic.replace('{topic}', currentTopic.topicName)
         : undefined,
       resourceId: currentTopic?.topicId,
     },
-    ...(experimentProps && experimentProps),
   });
 
   if (!topics || topics.length === 0) return null;
@@ -87,6 +79,7 @@ const TopicDiscovery = ({
       css={styles.section}
       className={className}
       data-testid="topic-discovery"
+      dir={dir}
       {...viewTracker}
     >
       <h2 id={HEADING_ID} css={styles.heading}>
@@ -98,7 +91,6 @@ const TopicDiscovery = ({
         onTabChange={setActiveTabId}
         labelledBy={HEADING_ID}
         groupTracker={groupTracker}
-        experimentProps={experimentProps}
       />
       <div
         role="tabpanel"
@@ -124,8 +116,8 @@ const TopicDiscovery = ({
                       </div>
                     ))}
                   </div>
-                  <div css={styles.skeletonMoreFromLinkContainer}>
-                    <div css={styles.skeletonMoreFromLink} aria-hidden />
+                  <div css={styles.skeletonMoreAboutLinkContainer}>
+                    <div css={styles.skeletonMoreAboutLink} aria-hidden />
                   </div>
                 </>
               );
@@ -151,16 +143,15 @@ const TopicDiscovery = ({
                           itemCount: topicPromos.length,
                         }),
                       },
-                      ...(experimentProps && experimentProps),
                     }}
                   />
                   <a
-                    css={styles.moreFromLink}
+                    css={styles.moreAboutLink}
                     href={selectedTopic.topicUrl}
-                    data-testid="topic-discovery-more-from"
-                    {...moreFromLinkClickTracker}
+                    data-testid="topic-discovery-more-about"
+                    {...moreAboutLinkClickTracker}
                   >
-                    {moreFromTopic.replace('{topic}', selectedTopic.topicName)}
+                    {moreAboutTopic.replace('{topic}', selectedTopic.topicName)}
                   </a>
                 </>
               );

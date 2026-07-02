@@ -82,6 +82,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'सब देखें',
       home: 'होम पेज',
+      topicDiscovery: {
+        heading: 'और जानें',
+        moreAboutTopic: '{topic} के बारे में अधिक',
+        fetchErrorMessage: 'लोड नहीं हो पाया। कृपया पुनः प्रयास करें',
+      },
       continueReading: 'पढ़ना जारी रखें',
       currentPage: 'मौजूदा पन्ना',
       skipLinkText: 'सामग्री को स्किप करें',
@@ -125,6 +130,7 @@ export const service: DefaultServiceConfig = {
         saving: 'Saving',
         saved: 'Saved to My News',
         remove: 'Remove',
+        removeAccessible: 'Saved. Remove from My News',
         removing: 'Removing',
       },
       myNews: {

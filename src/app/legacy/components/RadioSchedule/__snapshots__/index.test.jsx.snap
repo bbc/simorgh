@@ -342,6 +342,12 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  .emotion-16 {
+    color: #E6E8EA;
+  }
+}
+
 .emotion-18 {
   padding-top: 0.5rem;
   background-color: #FFFFFF;
@@ -1644,6 +1650,12 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
   .emotion-16 {
     font-size: 0.8125rem;
     line-height: 1.25rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .emotion-16 {
+    color: #E6E8EA;
   }
 }
 

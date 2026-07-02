@@ -509,6 +509,12 @@ exports[`RadioSchedule With initial data renders correctly for a service 1`] = `
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  .emotion-31 {
+    color: #E6E8EA;
+  }
+}
+
 .emotion-33 {
   padding-top: 0.5rem;
   background-color: #FFFFFF;

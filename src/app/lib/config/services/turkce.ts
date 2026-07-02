@@ -68,8 +68,8 @@ export const service: DefaultServiceConfig = {
       continueReading: 'Okumaya devam edin',
       topicDiscovery: {
         heading: 'Daha fazlasını keşfet',
-        moreFromTopic: '{topic} hakkında daha fazla',
-        fetchErrorMessage: 'Yüklenemedi. Lütfen daha sonra tekrar deneyin.',
+        moreAboutTopic: '{topic} hakkında daha fazla',
+        fetchErrorMessage: 'Yüklenemedi. Lütfen daha sonra tekrar deneyin',
       },
       currentPage: 'Bulunduğunuz sayfa',
       skipLinkText: 'İçeriğe götür',
