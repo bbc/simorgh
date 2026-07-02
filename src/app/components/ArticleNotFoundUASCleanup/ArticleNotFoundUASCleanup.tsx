@@ -4,7 +4,11 @@ import { AccountContext } from '#app/contexts/AccountContext';
 import { RequestContext } from '#app/contexts/RequestContext';
 import parseRoute from '#app/routes/utils/parseRoute';
 import uasApiRequest from '#app/lib/uasApi';
-import { buildGlobalId, FAVOURITES_CONFIG } from '#app/lib/uasApi/uasUtility';
+import {
+  buildGlobalId,
+  FAVOURITES_CONFIG,
+  SavedArticle,
+} from '#app/lib/uasApi/uasUtility';
 import uasKeys from '#app/lib/uasApi/queryKeys';
 /**
  * Client-side only component that removes a 404'd article from UAS favourites.
@@ -27,7 +31,7 @@ const ArticleNotFoundUASCleanup = () => {
         hasAttemptedDeletion.current = true;
 
         const cachedPages = queryClient.getQueriesData<{
-          savedArticles: { id: string }[];
+          savedArticles: SavedArticle[];
         }>({ queryKey: uasKeys.favouritesList(hashedUserId) });
 
         const isInFavouritesList = cachedPages.some(([, data]) =>
