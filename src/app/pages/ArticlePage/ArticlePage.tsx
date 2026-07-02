@@ -77,7 +77,6 @@ import {
   getAuthorTwitterHandle,
 } from '../../components/Byline/utilities';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import { ReverbParamsContext } from '../../contexts/ReverbParamsContext';
 import RelatedContentSection from '../../components/RelatedContentSection';
 import TopicDiscovery from '../../components/TopicDiscovery';
 import Disclaimer from '../../components/Disclaimer';
@@ -202,21 +201,9 @@ const getContinueReadingButton =
     />
   );
 
-const ArticlePage = ({
-  pageData,
-  showTopicDiscoveryComponent = false,
-}: {
-  pageData: Article;
-  showTopicDiscoveryComponent?: boolean;
-}) => {
+const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const [showAllContent, setShowAllContent] = useState(false);
   const { isApp, isAmp, isLite, pageType } = use(RequestContext);
-
-  // EXPERIMENT: Topic Discovery
-  const { experimentProps: topicDiscoveryExperimentProps } =
-    use(ReverbParamsContext);
-  const { experimentVariant: topicDiscoveryVariant } =
-    topicDiscoveryExperimentProps ?? {};
 
   const {
     articleAuthor,
@@ -230,6 +217,7 @@ const ArticlePage = ({
     'continueReadingButton',
   );
   const { enabled: isTopBarOJsEnabled } = useToggle('topBarOJs');
+  const { enabled: topicDiscoveryEnabled } = useToggle('topicDiscovery');
 
   const {
     palette: { GREY_2 },
@@ -355,7 +343,6 @@ const ArticlePage = ({
     wsoj: ({ data }: { data: Recommendation[] }) =>
       getWsojComponent({
         data,
-        experimentProps: topicDiscoveryExperimentProps,
       }),
     disclaimer: DisclaimerWithPaddingOverride,
     podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
@@ -379,11 +366,7 @@ const ArticlePage = ({
 
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
 
-  const showTopicDiscovery =
-    (showTopicDiscoveryComponent ||
-      topicDiscoveryVariant === 'topic_discovery') &&
-    !isAmp &&
-    !isLite;
+  const showTopicDiscovery = topicDiscoveryEnabled && !isAmp && !isLite;
 
   const showRelatedTopicsComponent = Boolean(
     showRelatedTopics && topics.length > 0 && !showTopicDiscovery,
@@ -469,7 +452,6 @@ const ArticlePage = ({
             <OptimizelyPageMetrics trackPageComplete />
           </main>
           <OptimizelyPageMetrics trackPageView trackPageDepth trackVisit />
-          {/* EXPERIMENT: Topic Discovery */}
           {showTopicDiscovery && (
             <TopicDiscovery
               css={[
@@ -478,7 +460,6 @@ const ArticlePage = ({
                   : []),
               ]}
               topics={topics}
-              experimentProps={topicDiscoveryExperimentProps || undefined}
             />
           )}
           {showRelatedTopicsComponent && (
@@ -491,7 +472,6 @@ const ArticlePage = ({
               ]}
               topics={topics}
               mobileDivider={false}
-              experimentProps={topicDiscoveryExperimentProps || undefined}
             />
           )}
           {showPortraitVideoCarousel && (
@@ -501,10 +481,7 @@ const ArticlePage = ({
             />
           )}
           {showCountryCuration && <LocationBasedTopicOJ pageData={pageData} />}
-          <RelatedContentSection
-            content={blocks}
-            experimentProps={topicDiscoveryExperimentProps || undefined}
-          />
+          <RelatedContentSection content={blocks} />
           {showMediaCuration && (
             <div css={styles.mediaCurationRow}>
               <div data-testid="media-curation">
@@ -525,12 +502,7 @@ const ArticlePage = ({
           )}
         </div>
 
-        {!isApp && !isPGL && (
-          <SecondaryColumn
-            pageData={pageData}
-            experimentProps={topicDiscoveryExperimentProps || undefined}
-          />
-        )}
+        {!isApp && !isPGL && <SecondaryColumn pageData={pageData} />}
       </div>
 
       {!isApp && !isPGL && (
@@ -541,7 +513,6 @@ const ArticlePage = ({
           size="default"
           headingBackgroundColour={GREY_2}
           mobileDivider={showRelatedTopicsComponent}
-          experimentProps={topicDiscoveryExperimentProps || undefined}
         />
       )}
     </div>

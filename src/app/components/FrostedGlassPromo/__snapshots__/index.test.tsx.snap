@@ -298,6 +298,12 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  .emotion-8 {
+    color: #E6E8EA;
+  }
+}
+
 @media (min-width: 25rem) {
   .emotion-8 {
     font-size: 0.875rem;
@@ -498,6 +504,12 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
   .emotion-8 {
     font-size: 0.8125rem;
     line-height: 1rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .emotion-8 {
+    color: #E6E8EA;
   }
 }
 
@@ -704,6 +716,12 @@ exports[`Frosted Glass Promo when given props for a Optimo promo 1`] = `
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  .emotion-8 {
+    color: #E6E8EA;
+  }
+}
+
 @media (min-width: 25rem) {
   .emotion-8 {
     font-size: 0.875rem;
@@ -904,6 +922,12 @@ exports[`Frosted Glass Promo when given props for an a Optimo promo with no imag
   .emotion-8 {
     font-size: 0.8125rem;
     line-height: 1rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .emotion-8 {
+    color: #E6E8EA;
   }
 }
 

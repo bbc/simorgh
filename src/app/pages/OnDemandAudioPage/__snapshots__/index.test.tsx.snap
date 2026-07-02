@@ -873,6 +873,12 @@ exports[`OnDemand Radio Page  should match snapshot 1`] = `
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  .emotion-56 {
+    color: #E6E8EA;
+  }
+}
+
 .emotion-58 {
   padding-top: 0.5rem;
   background-color: #FFFFFF;
@@ -2868,6 +2874,12 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  .emotion-58 {
+    color: #E6E8EA;
+  }
+}
+
 .emotion-60 {
   padding-top: 0.5rem;
   background-color: #FFFFFF;
@@ -4765,6 +4777,12 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
   .emotion-58 {
     font-size: 0.8125rem;
     line-height: 1rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .emotion-58 {
+    color: #E6E8EA;
   }
 }
 
