@@ -235,11 +235,6 @@ describe('MediaArticlePage', () => {
   });
 
   describe('TopicDiscovery', () => {
-    afterEach(() => {
-      jest.resetAllMocks();
-      delete process.env.SIMORGH_APP_ENV;
-    });
-
     const data = {
       ...pidginPageData,
       metadata: {
