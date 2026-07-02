@@ -344,6 +344,12 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  .emotion-39 {
+    color: #E6E8EA;
+  }
+}
+
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-39 {
     font-size: 0.875rem;

@@ -30,6 +30,12 @@ exports[`Timestamp should add prefix and suffix 1`] = `
   padding-bottom: 1rem;
 }
 
+@media (prefers-color-scheme: dark) {
+  .emotion-0 {
+    color: #E6E8EA;
+  }
+}
+
 <div>
   <time
     class="emotion-0 emotion-1"
@@ -70,6 +76,12 @@ exports[`Timestamp should render correctly 1`] = `
   padding-bottom: 1rem;
 }
 
+@media (prefers-color-scheme: dark) {
+  .emotion-0 {
+    color: #E6E8EA;
+  }
+}
+
 <div>
   <time
     class="emotion-0 emotion-1"
@@ -108,6 +120,12 @@ exports[`Timestamp should render without a leading zero on the day 1`] = `
 
 .emotion-0:last-child {
   padding-bottom: 1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .emotion-0 {
+    color: #E6E8EA;
+  }
 }
 
 <div>

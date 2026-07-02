@@ -4,7 +4,6 @@ import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { TopicTag } from '#app/models/types/metadata';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import { ComponentExperimentProps } from '#app/models/types/global';
 import ScrollableTabs from './ScrollableTabs';
 import styles from './index.styles';
 import useFetchTopicPromos from './useFetchTopicPromos';
@@ -14,17 +13,12 @@ type ExtractedTopic = Pick<TopicTag, 'topicId' | 'topicName' | 'topicUrl'>;
 type TopicDiscoveryProps = {
   topics: ExtractedTopic[];
   className?: string;
-  experimentProps?: ComponentExperimentProps;
 };
 
 const HEADING_ID = 'topic-discovery-heading';
 
-const TopicDiscovery = ({
-  topics,
-  className,
-  experimentProps,
-}: TopicDiscoveryProps) => {
-  const { translations } = use(ServiceContext);
+const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
+  const { translations, dir } = use(ServiceContext);
   const {
     heading = 'Discover more',
     moreAboutTopic = 'More about {topic}',
@@ -48,7 +42,6 @@ const TopicDiscovery = ({
   const eventTrackingData = {
     componentName: 'topic-discovery',
     groupTracker,
-    ...(experimentProps && experimentProps),
   };
 
   const { topicPromos, isLoading, isError } = useFetchTopicPromos({
@@ -71,7 +64,6 @@ const TopicDiscovery = ({
         : undefined,
       resourceId: currentTopic?.topicId,
     },
-    ...(experimentProps && experimentProps),
   });
 
   if (!topics || topics.length === 0) return null;
@@ -87,6 +79,7 @@ const TopicDiscovery = ({
       css={styles.section}
       className={className}
       data-testid="topic-discovery"
+      dir={dir}
       {...viewTracker}
     >
       <h2 id={HEADING_ID} css={styles.heading}>
@@ -98,7 +91,6 @@ const TopicDiscovery = ({
         onTabChange={setActiveTabId}
         labelledBy={HEADING_ID}
         groupTracker={groupTracker}
-        experimentProps={experimentProps}
       />
       <div
         role="tabpanel"
@@ -151,7 +143,6 @@ const TopicDiscovery = ({
                           itemCount: topicPromos.length,
                         }),
                       },
-                      ...(experimentProps && experimentProps),
                     }}
                   />
                   <a

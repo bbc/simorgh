@@ -25,6 +25,12 @@ exports[`MostReadCanonical - LastUpdated should render LastUpdated correctly 1`]
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  .emotion-0 {
+    color: #E6E8EA;
+  }
+}
+
 <div>
   <time
     class="emotion-0 emotion-1"

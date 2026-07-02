@@ -26,25 +26,14 @@ const OJ_COMPONENT_NAMES = [
   'topics',
 ];
 
-const TOPIC_COMPONENT_NAMES = [
-  'topic-discovery-curation-grid-promo',
-  'topic-discovery-more-from-link',
-  'topics',
-];
-
 // handle the total oj clicks event to specific onward journey experiments
 const OJ_OPTIMIZELY_EXPERIMENTS = ['test_page_views_aa_3'];
 
 const OJ_OPTIMIZELY_CLICK_EVENTS = ['oj_clicks'];
-const TOPIC_OPTIMIZELY_CLICK_EVENTS = ['topic_clicks'];
 
 // only fire the total oj clicks event when the component and experiment are in scope
 const shouldTrackOjClick = (componentName, experimentName) =>
   OJ_COMPONENT_NAMES.includes(componentName) &&
-  OJ_OPTIMIZELY_EXPERIMENTS.includes(experimentName);
-
-const shouldTrackTopicClick = (componentName, experimentName) =>
-  TOPIC_COMPONENT_NAMES.includes(componentName) &&
   OJ_OPTIMIZELY_EXPERIMENTS.includes(experimentName);
 
 const useClickTrackerHandler = (eventTrackingData = {}) => {
@@ -120,16 +109,6 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
             // send the extra optimizely event for the total oj clicks metric
             if (shouldTrackOjClick(componentName, experimentName)) {
               OJ_OPTIMIZELY_CLICK_EVENTS.forEach(eventName => {
-                optimizely.track(
-                  eventName,
-                  optimizely.user.id,
-                  overrideAttributes,
-                );
-              });
-            }
-
-            if (shouldTrackTopicClick(componentName, experimentName)) {
-              TOPIC_OPTIMIZELY_CLICK_EVENTS.forEach(eventName => {
                 optimizely.track(
                   eventName,
                   optimizely.user.id,
