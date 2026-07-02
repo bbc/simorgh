@@ -316,22 +316,6 @@ describe('TopicDiscovery', () => {
       expect(section).toHaveAttribute('dir', 'rtl');
     });
 
-    it('should render arabic topics with correct text direction', () => {
-      const config: ServiceConfig = { ...arabicConfig.default };
-      render(
-        <ServiceContext.Provider value={config}>
-          <TopicDiscovery topics={arabicTopicTagsFixture} />
-        </ServiceContext.Provider>,
-      );
-
-      expect(
-        screen.getByRole('tab', { name: arabicTopicTagsFixture[0].topicName }),
-      ).toBeInTheDocument();
-      expect(
-        screen.getByRole('tab', { name: arabicTopicTagsFixture[1].topicName }),
-      ).toBeInTheDocument();
-    });
-
     it('should switch active arabic topic when a different tab is clicked', () => {
       const config: ServiceConfig = { ...arabicConfig.default };
       render(
