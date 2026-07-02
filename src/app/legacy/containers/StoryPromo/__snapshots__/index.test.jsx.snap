@@ -313,6 +313,12 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  .emotion-27 {
+    color: #E6E8EA;
+  }
+}
+
 <div>
   <div
     class="emotion-0 emotion-1"
@@ -747,6 +753,12 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  .emotion-28 {
+    color: #E6E8EA;
+  }
+}
+
 <div>
   <div
     class="emotion-0 emotion-1"
@@ -1060,6 +1072,12 @@ exports[`StoryPromo Container should render audio promoType leading on amp 1`] =
   .emotion-12 {
     font-size: 0.8125rem;
     line-height: 1rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .emotion-12 {
+    color: #E6E8EA;
   }
 }
 
@@ -1624,6 +1642,12 @@ exports[`StoryPromo Container should render audio promoType top on amp 1`] = `
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  .emotion-27 {
+    color: #E6E8EA;
+  }
+}
+
 <div>
   <div
     class="emotion-0 emotion-1"
@@ -2048,6 +2072,12 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  .emotion-24 {
+    color: #E6E8EA;
+  }
+}
+
 <div>
   <div
     class="emotion-0 emotion-1"
@@ -2467,6 +2497,12 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  .emotion-25 {
+    color: #E6E8EA;
+  }
+}
+
 <div>
   <div
     class="emotion-0 emotion-1"
@@ -2769,6 +2805,12 @@ exports[`StoryPromo Container should render audio with no duration promoType lea
   .emotion-11 {
     font-size: 0.8125rem;
     line-height: 1rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .emotion-11 {
+    color: #E6E8EA;
   }
 }
 
@@ -3314,6 +3356,12 @@ exports[`StoryPromo Container should render audio with no duration promoType top
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  .emotion-24 {
+    color: #E6E8EA;
+  }
+}
+
 <div>
   <div
     class="emotion-0 emotion-1"
@@ -3669,6 +3717,12 @@ exports[`StoryPromo Container should render featureLink correctly for amp 1`] = 
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  .emotion-17 {
+    color: #E6E8EA;
+  }
+}
+
 <div>
   <div
     class="emotion-0 emotion-1"
@@ -3995,6 +4049,12 @@ exports[`StoryPromo Container should render featureLink correctly for canonical 
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  .emotion-18 {
+    color: #E6E8EA;
+  }
+}
+
 <div>
   <div
     class="emotion-0 emotion-1"
@@ -4250,6 +4310,12 @@ exports[`StoryPromo Container should render featureLink promoType leading on amp
   .emotion-10 {
     font-size: 0.8125rem;
     line-height: 1rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .emotion-10 {
+    color: #E6E8EA;
   }
 }
 
@@ -4656,6 +4722,12 @@ exports[`StoryPromo Container should render featureLink promoType top on amp 1`]
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  .emotion-17 {
+    color: #E6E8EA;
+  }
+}
+
 <div>
   <div
     class="emotion-0 emotion-1"
@@ -4979,6 +5051,12 @@ exports[`StoryPromo Container should render full width promos correctly for amp 
   .emotion-18 {
     font-size: 0.8125rem;
     line-height: 1rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .emotion-18 {
+    color: #E6E8EA;
   }
 }
 
@@ -5314,6 +5392,12 @@ exports[`StoryPromo Container should render full width promos correctly for cano
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  .emotion-19 {
+    color: #E6E8EA;
+  }
+}
+
 <div>
   <div
     class="emotion-0 emotion-1 emotion-2"
@@ -5635,6 +5719,12 @@ exports[`StoryPromo Container should render item without an image correctly for 
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  .emotion-18 {
+    color: #E6E8EA;
+  }
+}
+
 <div>
   <div
     class="emotion-0 emotion-1"
@@ -5945,6 +6035,12 @@ exports[`StoryPromo Container should render item without an image correctly for 
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  .emotion-18 {
+    color: #E6E8EA;
+  }
+}
+
 <div>
   <div
     class="emotion-0 emotion-1"
@@ -6189,6 +6285,12 @@ exports[`StoryPromo Container should render item without an image promoType lead
   .emotion-10 {
     font-size: 0.8125rem;
     line-height: 1rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .emotion-10 {
+    color: #E6E8EA;
   }
 }
 
@@ -6584,6 +6686,12 @@ exports[`StoryPromo Container should render item without an image promoType top 
   .emotion-18 {
     font-size: 0.8125rem;
     line-height: 1rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .emotion-18 {
+    color: #E6E8EA;
   }
 }
 
@@ -8500,6 +8608,12 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  .emotion-18 {
+    color: #E6E8EA;
+  }
+}
+
 .emotion-20 {
   position: relative;
   z-index: 2;
@@ -10176,6 +10290,12 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  .emotion-17 {
+    color: #E6E8EA;
+  }
+}
+
 <div>
   <div
     class="emotion-0 emotion-1"
@@ -10502,6 +10622,12 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  .emotion-18 {
+    color: #E6E8EA;
+  }
+}
+
 <div>
   <div
     class="emotion-0 emotion-1"
@@ -10757,6 +10883,12 @@ exports[`StoryPromo Container should render standard promoType leading on amp 1`
   .emotion-10 {
     font-size: 0.8125rem;
     line-height: 1rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .emotion-10 {
+    color: #E6E8EA;
   }
 }
 
@@ -11163,6 +11295,12 @@ exports[`StoryPromo Container should render standard promoType top on amp 1`] = 
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  .emotion-17 {
+    color: #E6E8EA;
+  }
+}
+
 <div>
   <div
     class="emotion-0 emotion-1"
@@ -11480,6 +11618,12 @@ exports[`StoryPromo Container should render standardLink correctly for amp 1`] =
   .emotion-17 {
     font-size: 0.8125rem;
     line-height: 1rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .emotion-17 {
+    color: #E6E8EA;
   }
 }
 
@@ -11809,6 +11953,12 @@ exports[`StoryPromo Container should render standardLink correctly for canonical
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  .emotion-18 {
+    color: #E6E8EA;
+  }
+}
+
 <div>
   <div
     class="emotion-0 emotion-1"
@@ -12064,6 +12214,12 @@ exports[`StoryPromo Container should render standardLink promoType leading on am
   .emotion-10 {
     font-size: 0.8125rem;
     line-height: 1rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .emotion-10 {
+    color: #E6E8EA;
   }
 }
 
@@ -12470,6 +12626,12 @@ exports[`StoryPromo Container should render standardLink promoType top on amp 1`
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  .emotion-17 {
+    color: #E6E8EA;
+  }
+}
+
 <div>
   <div
     class="emotion-0 emotion-1"
@@ -12787,6 +12949,12 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
   .emotion-17 {
     font-size: 0.8125rem;
     line-height: 1rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .emotion-17 {
+    color: #E6E8EA;
   }
 }
 
@@ -13116,6 +13284,12 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  .emotion-18 {
+    color: #E6E8EA;
+  }
+}
+
 <div>
   <div
     class="emotion-0 emotion-1"
@@ -13371,6 +13545,12 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType l
   .emotion-10 {
     font-size: 0.8125rem;
     line-height: 1rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .emotion-10 {
+    color: #E6E8EA;
   }
 }
 
@@ -13777,6 +13957,12 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType t
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  .emotion-17 {
+    color: #E6E8EA;
+  }
+}
+
 <div>
   <div
     class="emotion-0 emotion-1"
@@ -14156,6 +14342,12 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
   .emotion-27 {
     font-size: 0.8125rem;
     line-height: 1rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .emotion-27 {
+    color: #E6E8EA;
   }
 }
 
@@ -14600,6 +14792,12 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  .emotion-28 {
+    color: #E6E8EA;
+  }
+}
+
 <div>
   <div
     class="emotion-0 emotion-1"
@@ -14920,6 +15118,12 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
   .emotion-12 {
     font-size: 0.8125rem;
     line-height: 1rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .emotion-12 {
+    color: #E6E8EA;
   }
 }
 
@@ -15488,6 +15692,12 @@ exports[`StoryPromo Container should render video promoType top on amp 1`] = `
   .emotion-27 {
     font-size: 0.8125rem;
     line-height: 1rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .emotion-27 {
+    color: #E6E8EA;
   }
 }
 

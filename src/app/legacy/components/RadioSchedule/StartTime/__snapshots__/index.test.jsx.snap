@@ -114,6 +114,12 @@ exports[`StartTime should render LTR correctly 1`] = `
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  .emotion-8 {
+    color: #E6E8EA;
+  }
+}
+
 <div>
   <div
     class="emotion-0 emotion-1"
@@ -265,6 +271,12 @@ exports[`StartTime should render RTL correctly 1`] = `
   .emotion-8 {
     font-size: 0.8125rem;
     line-height: 1.25rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .emotion-8 {
+    color: #E6E8EA;
   }
 }
 

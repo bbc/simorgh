@@ -78,6 +78,11 @@ const baseServiceConfig = {
     },
     seeAll: 'Подивитись все',
     home: 'Головна',
+    topicDiscovery: {
+      heading: 'Дізнатися більше',
+      moreAboutTopic: 'Більше про {topic}',
+      fetchErrorMessage: 'Не вдалося завантажити. Спробуйте ще раз',
+    },
     currentPage: 'Поточна сторінка',
     skipLinkText: 'Перейти до змісту',
     moreOnThis: '',

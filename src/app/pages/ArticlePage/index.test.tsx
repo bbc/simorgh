@@ -20,6 +20,7 @@ import {
   articlePglDataPidgin,
   articleStyDataPidgin,
 } from '#pages/ArticlePage/fixtureData';
+import * as isLive from '#lib/utilities/isLive';
 import { data as newsMostReadData } from '#data/news/mostRead/index.json';
 import { data as persianMostReadData } from '#data/persian/mostRead/index.json';
 import { data as pidginMostReadData } from '#data/pidgin/mostRead/index.json';
@@ -36,8 +37,6 @@ import { Curation } from '#app/models/types/curationData';
 import { Article, OptimoBlock } from '#app/models/types/optimo';
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import * as viewTracking from '#app/hooks/useViewTracker';
-import isLive from '#lib/utilities/isLive';
-import LocationBasedTopicOJ from '#app/components/LocationBasedTopicOJ';
 import {
   render,
   screen,
@@ -47,17 +46,27 @@ import {
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ArticlePage from './ArticlePage';
 import ThemeProvider from '../../components/ThemeProvider';
-import * as ATIAnalytics from '../../components/ATIAnalytics';
+import * as ReverbParamsContext from '../../contexts/ReverbParamsContext';
+import * as buildReverbParams from '../../components/ATIAnalytics/params';
 
 jest.mock('../../components/ThemeProvider');
 
 jest.mock('../../components/ChartbeatAnalytics', () => {
-  const ChartbeatAnalytics = () => <div>chartbeat</div>;
+  const ChartbeatAnalytics = () => <div>Chartbeat</div>;
   return ChartbeatAnalytics;
 });
 
-const atiAnalyticsSpy = jest.spyOn(ATIAnalytics, 'default');
-atiAnalyticsSpy.mockImplementation(() => <div>ATI Analytics</div>);
+jest.mock('../../components/ATIAnalytics', () => {
+  const ATIAnalytics = () => <div>ATI Analytics</div>;
+  return ATIAnalytics;
+});
+
+const reverbParamsContextProviderSpy = jest.spyOn(
+  ReverbParamsContext,
+  'ReverbParamsContextProvider',
+);
+
+const buildReverbParamsSpy = jest.spyOn(buildReverbParams, 'default');
 
 jest.mock('#app/components/OptimizelyPageMetrics');
 jest.mock('#app/hooks/useOptimizelyVariation', () => ({
@@ -71,7 +80,6 @@ jest.mock('#app/lib/utilities/onClient', () => ({
   default: jest.fn(),
   onClient: jest.fn(() => true),
 }));
-jest.mock('#lib/utilities/isLive', () => jest.fn());
 
 const input = {
   bbcOrigin: 'https://www.test.bbc.co.uk',
@@ -879,29 +887,56 @@ describe('Article Page', () => {
     });
 
     it('should add brandname to page title in atiAnalytics', async () => {
+      const {
+        metadata: { atiAnalytics, type },
+      } = articlePglDataPidgin;
+
       render(
         <Context service="pidgin">
           <ArticlePage pageData={articlePglDataPidgin} />
         </Context>,
+        {
+          service: 'pidgin',
+          pageMetadata: { atiAnalytics, type },
+        },
       );
 
-      expect(atiAnalyticsSpy).toHaveBeenLastCalledWith(
-        {
-          atiData: {
-            categoryName: null,
+      const { metadata } = reverbParamsContextProviderSpy.mock.calls[0][0];
+
+      expect(metadata).toEqual({ atiAnalytics, type });
+
+      expect(buildReverbParamsSpy).toHaveReturnedWith({
+        eventDetails: { eventName: 'pageView' },
+        params: {
+          env: undefined,
+          page: {
+            additionalProperties: {
+              app_name: 'news-pidgin',
+              app_type: 'responsive',
+              content_language: 'pcm',
+              product_platform: null,
+              referrer_url: null,
+              x10: null,
+              x11: '2018-01-01T12:01:00.000Z',
+              x12: '2018-01-01T14:00:00.000Z',
+              x13: null,
+              x14: null,
+              x16: '',
+              x17: null,
+              x18: null,
+              x5: null,
+              x8: 'simorgh',
+              x9: 'Article%20Headline%20for%20SEO%20in%20Pidgin%20-%20BBC%20News%20Pidgin',
+            },
             contentId: 'urn:bbc:optimo:c0000000001o',
-            language: 'pcm',
-            ldpThingIds: null,
-            ldpThingLabels: null,
-            nationsProducer: null,
-            pageIdentifier: null,
-            pageTitle: 'Article Headline for SEO in Pidgin - BBC News Pidgin',
-            timePublished: '2018-01-01T12:01:00.000Z',
-            timeUpdated: '2018-01-01T14:00:00.000Z',
+            contentType: undefined,
+            destination: 'WS_NEWS_LANGUAGES_TEST',
+            name: null,
+            producer: 'PIDGIN',
           },
+          user: { hashedId: null, isSignedIn: false },
         },
-        undefined,
-      );
+      });
     });
 
     it('should have schema metadata @type as Article', async () => {
@@ -922,31 +957,59 @@ describe('Article Page', () => {
       expect(schemaType).toEqual('Article');
     });
   });
+
   describe('when rendering an STY page', () => {
     it('should add brandname to page title in atiAnalytics', async () => {
+      const {
+        metadata: { atiAnalytics, type },
+      } = articleStyDataPidgin;
+
       render(
         <Context service="pidgin">
           <ArticlePage pageData={articleStyDataPidgin} />
         </Context>,
+        {
+          service: 'pidgin',
+          pageMetadata: { atiAnalytics, type },
+        },
       );
 
-      expect(atiAnalyticsSpy).toHaveBeenLastCalledWith(
-        {
-          atiData: {
-            categoryName: null,
+      const { metadata } = reverbParamsContextProviderSpy.mock.calls[0][0];
+
+      expect(metadata).toEqual({ atiAnalytics, type });
+
+      expect(buildReverbParamsSpy).toHaveReturnedWith({
+        eventDetails: { eventName: 'pageView' },
+        params: {
+          env: undefined,
+          page: {
+            additionalProperties: {
+              app_name: 'news-pidgin',
+              app_type: 'responsive',
+              content_language: 'pcm',
+              product_platform: null,
+              referrer_url: null,
+              x10: null,
+              x11: '2018-01-01T12:01:00.000Z',
+              x12: '2018-01-01T14:00:00.000Z',
+              x13: null,
+              x14: null,
+              x16: '',
+              x17: null,
+              x18: null,
+              x5: null,
+              x8: 'simorgh',
+              x9: 'Article%20Headline%20for%20SEO%20in%20Pidgin%20-%20BBC%20News%20Pidgin',
+            },
             contentId: 'urn:bbc:optimo:c0000000001o',
-            language: 'pcm',
-            ldpThingIds: null,
-            ldpThingLabels: null,
-            nationsProducer: null,
-            pageIdentifier: null,
-            pageTitle: 'Article Headline for SEO in Pidgin - BBC News Pidgin',
-            timePublished: '2018-01-01T12:01:00.000Z',
-            timeUpdated: '2018-01-01T14:00:00.000Z',
+            contentType: undefined,
+            destination: 'WS_NEWS_LANGUAGES_TEST',
+            name: null,
+            producer: 'PIDGIN',
           },
+          user: { hashedId: null, isSignedIn: false },
         },
-        undefined,
-      );
+      });
     });
   });
 
@@ -1335,9 +1398,10 @@ describe('Article Page', () => {
       });
     });
   });
-  describe('TopicDiscovery visibility on test only', () => {
+  describe('TopicDiscovery', () => {
     afterEach(() => {
       jest.resetAllMocks();
+      delete process.env.SIMORGH_APP_ENV;
     });
 
     const data = {
@@ -1357,27 +1421,35 @@ describe('Article Page', () => {
       },
     } as Article;
 
-    it('should render TopicDiscovery when isLive is false (test env)', () => {
-      jest.mocked(isLive).mockImplementationOnce(() => false);
-      const { queryByTestId } = render(
-        <ArticlePage pageData={data} showTopicDiscoveryComponent />,
-        { service: 'portuguese' },
-      );
+    it('should render TopicDiscovery when topicDiscovery toggle is enabled', () => {
+      const { queryByTestId } = render(<ArticlePage pageData={data} />, {
+        service: 'portuguese',
+        toggles: { topicDiscovery: { enabled: true } },
+      });
       expect(queryByTestId('topic-discovery')).toBeInTheDocument();
     });
 
-    it('should NOT render TopicDiscovery when isLive is true (live env)', () => {
-      jest.mocked(isLive).mockImplementationOnce(() => true);
+    it('should NOT render TopicDiscovery when topicDiscovery toggle is disabled', () => {
       const { queryByTestId } = render(<ArticlePage pageData={data} />, {
         service: 'portuguese',
+        toggles: { topicDiscovery: { enabled: false } },
       });
       expect(queryByTestId('topic-discovery')).not.toBeInTheDocument();
     });
   });
 
   describe('LocationBasedTopicOJ', () => {
+    beforeEach(() => {
+      delete process.env.SIMORGH_APP_ENV;
+      // Ensure isLive is evaluated fresh from process.env
+      jest.spyOn(isLive, 'default').mockImplementation(() => {
+        return process.env.SIMORGH_APP_ENV === 'live';
+      });
+    });
+
     afterEach(() => {
-      jest.resetAllMocks();
+      jest.restoreAllMocks();
+      delete process.env.SIMORGH_APP_ENV;
     });
 
     const mockCountryCuration = {
@@ -1407,27 +1479,39 @@ describe('Article Page', () => {
         },
       ],
     };
+
+    const pageData = {
+      ...articleDataNews,
+      countryCuration: mockCountryCuration,
+    };
+
     it('renders nothing if countryCuration is undefined', () => {
-      const pageData = {
-        ...articleDataNews,
-        countryCuration: undefined,
-      };
-      const { container } = render(
-        <LocationBasedTopicOJ pageData={pageData} />,
+      process.env.SIMORGH_APP_ENV = 'local';
+
+      render(
+        <ArticlePage
+          pageData={{
+            ...articleDataNews,
+            countryCuration: undefined,
+          }}
+        />,
+        { service: 'hausa' },
       );
-      expect(container).toBeEmptyDOMElement();
+
+      expect(
+        screen.queryByTestId('location-based-topic-oj'),
+      ).not.toBeInTheDocument();
     });
 
     it('renders section and subheading when countryCuration is present', () => {
-      const pageData = {
-        ...articleDataNews,
-        countryCuration: mockCountryCuration,
-      };
+      process.env.SIMORGH_APP_ENV = 'local';
+
       render(
-        <LocationBasedTopicOJ
+        <ArticlePage
           // @ts-expect-error: Test fixture data does not need to match Article type exactly
           pageData={pageData}
         />,
+        { service: 'hausa' },
       );
       expect(screen.getByRole('region')).toBeInTheDocument();
       expect(screen.getByText('Najeriya')).toBeInTheDocument();
@@ -1436,12 +1520,7 @@ describe('Article Page', () => {
     });
 
     it('should render LocationBasedTopicOJ when isLive is false (test env)', () => {
-      jest.mocked(isLive).mockImplementationOnce(() => false);
-
-      const pageData = {
-        ...articleDataNews,
-        countryCuration: mockCountryCuration,
-      };
+      process.env.SIMORGH_APP_ENV = 'test';
 
       const { queryByTestId } = render(
         <ArticlePage
@@ -1455,12 +1534,7 @@ describe('Article Page', () => {
     });
 
     it('should NOT render LocationBasedTopicOj when isLive is true (live env)', () => {
-      jest.mocked(isLive).mockImplementationOnce(() => true);
-
-      const pageData = {
-        ...articleDataNews,
-        countryCuration: mockCountryCuration,
-      };
+      process.env.SIMORGH_APP_ENV = 'live';
 
       const { queryByTestId } = render(
         <ArticlePage
