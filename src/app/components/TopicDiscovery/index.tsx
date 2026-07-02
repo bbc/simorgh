@@ -27,7 +27,7 @@ const TopicDiscovery = ({
   const { translations } = use(ServiceContext);
   const {
     heading = 'Discover more',
-    moreFromTopic = 'More from {topic}',
+    moreAboutTopic = 'More about {topic}',
     fetchErrorMessage = 'Failed to load. Please try again later.',
   } = translations.topicDiscovery || {};
 
@@ -61,13 +61,13 @@ const TopicDiscovery = ({
     componentName: 'topic-discovery-fetch-error-message',
   });
 
-  const moreFromLinkClickTracker = useClickTrackerHandler({
-    componentName: 'topic-discovery-more-from-link',
+  const moreAboutLinkClickTracker = useClickTrackerHandler({
+    componentName: 'topic-discovery-more-about-link',
     groupTracker,
     itemTracker: {
-      type: 'topic-discovery-more-from-link',
+      type: 'topic-discovery-more-about-link',
       text: currentTopic
-        ? moreFromTopic.replace('{topic}', currentTopic.topicName)
+        ? moreAboutTopic.replace('{topic}', currentTopic.topicName)
         : undefined,
       resourceId: currentTopic?.topicId,
     },
@@ -124,8 +124,8 @@ const TopicDiscovery = ({
                       </div>
                     ))}
                   </div>
-                  <div css={styles.skeletonMoreFromLinkContainer}>
-                    <div css={styles.skeletonMoreFromLink} aria-hidden />
+                  <div css={styles.skeletonMoreAboutLinkContainer}>
+                    <div css={styles.skeletonMoreAboutLink} aria-hidden />
                   </div>
                 </>
               );
@@ -155,12 +155,12 @@ const TopicDiscovery = ({
                     }}
                   />
                   <a
-                    css={styles.moreFromLink}
+                    css={styles.moreAboutLink}
                     href={selectedTopic.topicUrl}
-                    data-testid="topic-discovery-more-from"
-                    {...moreFromLinkClickTracker}
+                    data-testid="topic-discovery-more-about"
+                    {...moreAboutLinkClickTracker}
                   >
-                    {moreFromTopic.replace('{topic}', selectedTopic.topicName)}
+                    {moreAboutTopic.replace('{topic}', selectedTopic.topicName)}
                   </a>
                 </>
               );

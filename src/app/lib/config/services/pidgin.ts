@@ -63,6 +63,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'See everitin',
       home: 'Home',
+      topicDiscovery: {
+        heading: 'Discover more',
+        moreAboutTopic: 'More about {topic}',
+        fetchErrorMessage: 'E no load. Abeg try again',
+      },
       continueReading: 'Kontinu to dey read',
       currentPage: 'Page where you dey',
       skipLinkText: 'Waka go wetin de inside',

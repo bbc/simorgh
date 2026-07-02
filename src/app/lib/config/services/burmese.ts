@@ -77,6 +77,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'အားလုံးကြည့်ရန်',
       home: 'ပင်မစာမျက်နှာ',
+      topicDiscovery: {
+        heading: 'ပိုမိုရှာဖွေပါ',
+        moreAboutTopic: '{topic} အကြောင်း ပိုမို',
+        fetchErrorMessage: 'ဖွင့်ရန် မအောင်မြင်ပါ။ ထပ်ကြိုးစားပါ',
+      },
       currentPage: 'လက်ရှိကြည့်နေသော စာမျက်နှာ',
       skipLinkText: 'အကြောင်းအရာများဆီ ကျော်သွားရန်',
       relatedContent: 'ဒီသတင်းနဲ့ ပတ်သက်သမျှ',

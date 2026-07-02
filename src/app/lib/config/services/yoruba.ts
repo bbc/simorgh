@@ -76,6 +76,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Wo gbogbo ẹ̀',
       home: 'Ìròyìn',
+      topicDiscovery: {
+        heading: 'Ṣawari síi',
+        moreAboutTopic: 'Díẹ̀ síì nípa {topic}',
+        fetchErrorMessage: 'Ó kuna láti ṣàkójọpọ̀. Jọ̀wọ́ gbìyànjú lẹ́ẹ̀kan síi',
+      },
       currentPage: 'Ojú ewé to wà yìí',
       skipLinkText: 'Fò kọjá sí nnkan tí ó wà nínú rẹ̀',
       relatedContent: 'Àwọn afíkun lórí ìròyìn yìí',

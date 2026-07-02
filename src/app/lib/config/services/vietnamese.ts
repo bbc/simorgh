@@ -64,6 +64,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Xem tất cả',
       home: 'Tin chính',
+      topicDiscovery: {
+        heading: 'Khám phá thêm',
+        moreAboutTopic: 'Thêm về {topic}',
+        fetchErrorMessage: 'Tải không thành công. Vui lòng thử lại',
+      },
       currentPage: 'Trang hiện nay',
       skipLinkText: 'Bỏ qua để xem nội dung',
       relatedContent: 'Tin liên quan',

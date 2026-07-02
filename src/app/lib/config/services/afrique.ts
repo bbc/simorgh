@@ -81,6 +81,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Tout voir',
       home: 'Accueil',
+      topicDiscovery: {
+        heading: 'Découvrir davantage',
+        moreAboutTopic: 'Plus sur {topic}',
+        fetchErrorMessage: 'Échec du chargement. Veuillez réessayer',
+      },
       continueReading: 'Continuer la lecture',
       currentPage: 'Page en cours',
       skipLinkText: 'Aller au contenu',

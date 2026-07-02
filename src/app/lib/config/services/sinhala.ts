@@ -77,6 +77,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'සියල්ල දැකගන්න',
       home: 'ප්‍රධාන පුවත්',
+      topicDiscovery: {
+        heading: 'තවත් සොයා බලන්න',
+        moreAboutTopic: '{topic} ගැන තවත්',
+        fetchErrorMessage: 'පූරණය අසාර්ථකයි. කරුණාකර නැවත උත්සාහ කරන්න',
+      },
       currentPage: 'දැන් සිටින පිටුව',
       skipLinkText: 'අන්තර්ගතයට පිවිසෙන්න',
       relatedContent: 'මේ පුවතට සම්බන්ධ තවත් විස්තර',

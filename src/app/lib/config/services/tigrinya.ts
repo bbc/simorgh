@@ -79,6 +79,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'ንኹሉ ርኣዩ',
       home: 'መእተዊ ገጽ',
+      topicDiscovery: {
+        heading: 'ተወሳኺ መርምር',
+        moreAboutTopic: 'ተወሳኩ ብዛዕባ {topic}',
+        fetchErrorMessage: 'ምጫን ኣይከኣለን። እባክካ ዳግም ፈትን',
+      },
       continueReading: 'ምንባብ ቀጽል',
       currentPage: 'ዘለኹሞ ገጽ',
       skipLinkText: 'ናብቲ ትሕዝቶ ቀጽሉ',

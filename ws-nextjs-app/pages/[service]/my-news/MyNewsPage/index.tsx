@@ -15,7 +15,7 @@ const MyNewsPageContent = dynamic(() => import('./MyNewsPageContent'), {
   loading: () => <MyNewsPageLoading />,
 });
 
-const MyNewsPage = ({ pageData, page }: MyNewsPageProps) => {
+const MyNewsPage = ({ page }: MyNewsPageProps) => {
   const { isPersonalizationAvailable, isPersonalizationEnabled } =
     use(AccountContext);
   const { lang, translations } = use(ServiceContext);
@@ -30,7 +30,7 @@ const MyNewsPage = ({ pageData, page }: MyNewsPageProps) => {
         openGraphType="website"
         hasAmpPage={false}
       />
-      <ATIAnalytics atiData={pageData?.metadata?.atiAnalytics} />
+      <ATIAnalytics />
       <div css={styles.inner}>
         {isPersonalizationEnabled ? (
           <MyNewsPageContent page={page} />

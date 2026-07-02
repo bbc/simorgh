@@ -60,6 +60,7 @@ export interface Translations {
     saving: string;
     saved: string;
     remove: string;
+    removeAccessible: string;
     removing: string;
   };
   myNews?: {
@@ -81,7 +82,7 @@ export interface Translations {
   continueReading?: string;
   topicDiscovery?: {
     heading: string;
-    moreFromTopic: string;
+    moreAboutTopic: string;
     fetchErrorMessage?: string;
   };
   readTime?: Partial<{

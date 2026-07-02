@@ -116,6 +116,11 @@ export const service: DefaultServiceConfig = {
       },
       ...russianUkrainianSharedTranslations,
       ...headerFooterTranslations,
+      topicDiscovery: {
+        heading: 'Узнать больше',
+        moreAboutTopic: 'Больше о {topic}',
+        fetchErrorMessage: 'Не удалось загрузить. Пожалуйста, попробуйте снова',
+      },
       sport: {
         keyEventsTitle: 'Ключевые события',
         matchSummary: 'Обзор матча',

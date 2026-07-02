@@ -62,6 +62,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'ਸਭ ਦੋਖੇ',
       home: 'ਹੋਮ ਪੇਜ',
+      topicDiscovery: {
+        heading: 'ਹੋਰ ਖੋਜੋ',
+        moreAboutTopic: '{topic} ਬਾਰੇ ਹੋਰ',
+        fetchErrorMessage: 'ਲੋਡ ਨਹੀਂ ਹੋਇਆ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ',
+      },
       continueReading: 'ਅੱਗੇ ਪੜ੍ਹੋ',
       currentPage: 'ਮੌਜੂਦਾ ਪੇਜ',
       skipLinkText: `ਸਮੱਗਰੀ 'ਤੇ ਜਾਓ`,

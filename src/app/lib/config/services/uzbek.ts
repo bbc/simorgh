@@ -75,6 +75,11 @@ const defaultCyrillicConfig = {
     },
     seeAll: 'Ҳаммасини кўринг',
     home: 'Бош саҳифа',
+    topicDiscovery: {
+      heading: 'Кўпроқ кашф қилинг',
+      moreAboutTopic: '{topic} ҳақида кӯпроқ',
+      fetchErrorMessage: 'Юклаб бўлмади. Илтимос, яна уриниб кўринг',
+    },
     currentPage: 'Жорий саҳифа',
     skipLinkText: 'Саҳифага ўтиш',
     relatedContent: 'Мавзуга алоқадор',
@@ -482,6 +487,11 @@ export const service: UzbekConfig = {
       },
       seeAll: 'Hammasini ko‘ring',
       home: 'Bosh sahifa',
+      topicDiscovery: {
+        heading: "Ko'proq kashf qiling",
+        moreAboutTopic: "{topic} haqida ko'proq",
+        fetchErrorMessage: "Yuklab bo'lmadi. Iltimos, yana urinib ko'ring",
+      },
       currentPage: 'Joriy sahifa',
       skipLinkText: 'Sahifaga o‘tish',
       relatedContent: 'Mavzuga aloqador',
