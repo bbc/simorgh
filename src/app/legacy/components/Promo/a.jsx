@@ -1,8 +1,7 @@
 import styled from '@emotion/styled';
 
 const A = styled.a`
-  color: ${({ theme }) =>
-    theme.isDarkUi ? theme.palette.GREY_2 : theme.palette.GREY_10};
+  color: ${props => props.theme.palette.GREY_10};
   text-decoration: none;
   display: block;
   &:hover,
@@ -10,9 +9,7 @@ const A = styled.a`
     text-decoration: underline;
   }
   &:visited {
-    color: ${({ theme }) =>
-      theme.isDarkUi ? theme.palette.GREY_4 : theme.palette.GREY_6};
-  }
+    color: ${props => props.theme.palette.GREY_6};
   &:before {
     position: absolute;
     bottom: 0;
