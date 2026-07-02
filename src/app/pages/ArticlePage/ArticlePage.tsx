@@ -288,7 +288,7 @@ const ArticlePage = ({
 
   const showPortraitVideoCarousel = Boolean(
     pageData?.portraitVideoItems?.portraitVideo?.blocks?.length &&
-    articlePortraitVideoEnabled,
+      articlePortraitVideoEnabled,
   );
 
   const portraitVideoCarouselTitle =
@@ -310,10 +310,10 @@ const ArticlePage = ({
 
   const showContinueReadingButton = Boolean(
     !isAmp &&
-    !isLite &&
-    !isApp &&
-    hasContinueReadingBlock &&
-    continueReadingButtonToggle,
+      !isLite &&
+      !isApp &&
+      hasContinueReadingBlock &&
+      continueReadingButtonToggle,
   );
 
   const promoImageBlocks =
@@ -379,11 +379,13 @@ const ArticlePage = ({
 
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
 
-  const showTopicDiscovery =
-    (showTopicDiscoveryComponent ||
-      topicDiscoveryVariant === 'topic_discovery') &&
-    !isAmp &&
-    !isLite;
+  // const showTopicDiscovery =
+  //   (showTopicDiscoveryComponent ||
+  //     topicDiscoveryVariant === 'topic_discovery') &&
+  //   !isAmp &&
+  //   !isLite;
+
+  const showTopicDiscovery = true;
 
   const showRelatedTopicsComponent = Boolean(
     showRelatedTopics && topics.length > 0 && !showTopicDiscovery,
@@ -391,19 +393,19 @@ const ArticlePage = ({
 
   const showMediaCuration = Boolean(
     !isAmp &&
-    !isLite &&
-    !isApp &&
-    !isPGL &&
-    mediaCurationContent?.summaries?.length &&
-    articleVideoCurationEnabled,
+      !isLite &&
+      !isApp &&
+      !isPGL &&
+      mediaCurationContent?.summaries?.length &&
+      articleVideoCurationEnabled,
   );
 
   const showCountryCuration = Boolean(
     !isAmp &&
-    !isLite &&
-    !isApp &&
-    !isLive() &&
-    pageData?.countryCuration?.summaries?.length,
+      !isLite &&
+      !isApp &&
+      !isLive() &&
+      pageData?.countryCuration?.summaries?.length,
   );
 
   // EXPERIMENT: PWA Promotional Banner

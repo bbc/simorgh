@@ -135,6 +135,13 @@ const ScrollableTabs = ({
               aria-selected={isActive}
               aria-controls={`tabpanel-${tab.id}`}
               css={[styles.tab, isActive && styles.tabActive]}
+              onFocus={event => {
+                event.currentTarget.scrollIntoView({
+                  block: 'nearest',
+                  inline: 'nearest',
+                  behavior: 'smooth',
+                });
+              }}
               onClick={event => {
                 onTabChange(tab.id);
                 clickTrackerHandler?.onClick?.(event);
