@@ -629,6 +629,12 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   padding-bottom: 1rem;
 }
 
+@media (prefers-color-scheme: dark) {
+  .emotion-28 {
+    color: #E6E8EA;
+  }
+}
+
 .emotion-32 {
   font-size: 1.25rem;
   line-height: 1.5rem;

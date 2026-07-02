@@ -110,15 +110,9 @@ const MostReadPage = ({ pageData }) => {
     mostRead: { header },
   } = use(ServiceContext);
 
-  const {
-    metadata: { atiAnalytics },
-  } = pageData;
-
-  const atiData = { ...atiAnalytics, pageTitle: `${header} - ${brandName}` };
-
   return (
     <>
-      <ATIAnalytics atiData={atiData} />
+      <ATIAnalytics />
       <ChartbeatAnalytics title={header} />
       <ComscoreAnalytics />
       <MetadataContainer
