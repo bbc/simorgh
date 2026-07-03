@@ -108,7 +108,7 @@ const getTimestampComponent =
     lastPublished: string,
     readTimeValue: number | undefined,
     readTimeTranslations: Translations['readTime'],
-    articlePageData: Article,
+    saveArticlePageData: Article,
   ) =>
   (props: ComponentToRenderProps & TimeStampProps) => {
     const shouldDisplayReadTime = !!(readTimeTranslations && readTimeValue);
@@ -140,7 +140,7 @@ const getTimestampComponent =
           </>
         )}
         <SaveArticleButton
-          articlePageData={extractSaveArticleProps(articlePageData)}
+          articlePageData={extractSaveArticleProps(saveArticlePageData)}
         />
       </>
     );

@@ -1,10 +1,6 @@
 import { whereEq } from 'ramda';
 import type { Services } from '#app/models/types/global';
-import type { OptimoRawImageBlock } from '#app/models/types/optimo';
 import type { ArticlePageData } from '#app/lib/utilities/extractSaveArticleProps';
-import buildIChefURL from '#app/lib/utilities/ichefURL';
-import extractPromoImage from '#app/lib/utilities/extractPromoImage';
-import filterForBlockType from '#app/lib/utilities/blockHandlers';
 import type { UasApiRequestBody } from './index';
 
 export interface SavedArticle {
@@ -35,55 +31,9 @@ const buildGlobalId = (
   resourceType = FAVOURITES_CONFIG.resourceType,
 ): string => `urn:bbc:${resourceDomain}:${resourceType}:${resourceId}`;
 
-const extractPromoImageFromArticleData = (articlePageData: ArticlePageData) => {
-  const promoImageBlocks = filterForBlockType(
-    articlePageData.contentBlocks,
-    'image',
-  );
-  const { altText, rawBlock } = extractPromoImage(
-    promoImageBlocks?.model?.blocks,
-  );
-
-  return {
-    altText,
-    promoImageRawBlock: rawBlock,
-  };
-};
-
-const buildPromoImageUrl = (promoImageObj?: {
-  altText: string;
-  promoImageRawBlock?: OptimoRawImageBlock;
-}): string => {
-  if (
-    !promoImageObj?.promoImageRawBlock?.model?.locator ||
-    !promoImageObj?.promoImageRawBlock?.model?.originCode
-  ) {
-    return '';
-  }
-
-  return buildIChefURL({
-    originCode: promoImageObj.promoImageRawBlock.model.originCode,
-    locator: promoImageObj.promoImageRawBlock.model.locator,
-    resolution: 320,
-  });
-};
-
 interface MetadataComparisonResult {
   hasChanges: boolean;
 }
-
-/**
- * Extracts headline text from article content blocks.
- */
-const extractHeadlineFromBlocks = (
-  blocks?: Array<Record<string, unknown>>,
-): string | null => {
-  const headlineBlock = filterForBlockType(blocks, 'headline');
-  const headlineText =
-    headlineBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
-
-  return headlineText ?? null;
-};
 
 /**
  * Extracts current live metadata from article page data.
@@ -91,7 +41,7 @@ const extractHeadlineFromBlocks = (
  * To add a new field: add it to the returned object below.
  * The compareMetadataWithSaved function will automatically include it.
  *
- * @param articlePageData - Current article being viewed
+ * @param articlePageData - Current article metadata props
  * @param articleId - Article's unique identifier
  * @param service - BBC service name (e.g., 'arabic', 'portuguese')
  * @returns Object with tracked metadata fields
@@ -100,16 +50,15 @@ const buildCurrentMetadata = (
   articlePageData: ArticlePageData,
   { articleId, service }: { articleId: string; service: Services },
 ): Record<string, unknown> => {
-  const promoImage = extractPromoImageFromArticleData(articlePageData);
-  const { contentBlocks } = articlePageData;
-  const headline = extractHeadlineFromBlocks(contentBlocks);
+  const { headline, promoImage, promoImageAltText, canonicalUrl } =
+    articlePageData;
   return {
     articleId,
     service,
     title: headline,
-    promoImage: buildPromoImageUrl(promoImage),
-    promoImageAltText: promoImage?.altText,
-    locatorUrl: articlePageData.canonicalUrl,
+    promoImage,
+    promoImageAltText,
+    locatorUrl: canonicalUrl,
   };
 };
 
@@ -155,11 +104,8 @@ export {
   FAVOURITES_CONFIG,
   buildGlobalId,
   createFavouritesPayload,
-  extractPromoImageFromArticleData,
-  buildPromoImageUrl,
   buildCurrentMetadata,
   compareMetadataWithSaved,
-  extractHeadlineFromBlocks,
 };
 
 export type { MetadataComparisonResult };

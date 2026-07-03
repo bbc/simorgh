@@ -28,7 +28,75 @@ describe('SaveArticleButton', () => {
   const articlePageData = {
     content: {
       model: {
-        blocks: [],
+        blocks: [
+          {
+            id: '597a9704',
+            type: 'image',
+            model: {
+              blocks: [
+                {
+                  id: 'd57733c1',
+                  type: 'caption',
+                  model: {
+                    blocks: [],
+                  },
+                },
+                {
+                  id: '8ffd8707',
+                  type: 'altText',
+                  model: {
+                    blocks: [
+                      {
+                        id: '7eab27b4',
+                        type: 'text',
+                        model: {
+                          blocks: [
+                            {
+                              id: '1739f732',
+                              type: 'paragraph',
+                              model: {
+                                text: 'भारतीय पीएम नरेंद्र मोदी और नेपाल के पीएम बालेन शाह',
+                                blocks: [
+                                  {
+                                    id: '7c37f3cd',
+                                    type: 'fragment',
+                                    model: {
+                                      text: 'भारतीय पीएम नरेंद्र मोदी और नेपाल के पीएम बालेन शाह',
+                                      attributes: [],
+                                    },
+                                    position: [2, 2, 1, 1, 1],
+                                  },
+                                ],
+                              },
+                              position: [2, 2, 1, 1],
+                            },
+                          ],
+                        },
+                        position: [2, 2, 1],
+                      },
+                    ],
+                  },
+                  position: [2, 2],
+                },
+                {
+                  id: 'ef95269f',
+                  type: 'rawImage',
+                  model: {
+                    width: 780,
+                    height: 439,
+                    locator:
+                      '688a/live/f8441af0-5e7a-11f1-ab70-cdbb605c4a31.jpg',
+                    originCode: 'cpsprodpb',
+                    copyrightHolder: 'Getty Images',
+                    suitableForSyndication: true,
+                  },
+                  position: [2, 3],
+                },
+              ],
+            },
+            position: [2],
+          },
+        ],
       },
     },
     metadata: {

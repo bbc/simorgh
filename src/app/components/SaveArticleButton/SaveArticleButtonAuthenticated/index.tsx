@@ -17,10 +17,6 @@ const SaveArticleButtonAuthenticated = ({
   const { saveArticleButton } = translations || {};
   const { assetId: articleId } = parseRoute(pathname);
 
-  if (!articlePageData) {
-    throw new Error('Article data is required to save');
-  }
-
   const { isSaved, isLoading, isUpdating, handleSaveAction } = useUASButton({
     articleId,
     articlePageData,
