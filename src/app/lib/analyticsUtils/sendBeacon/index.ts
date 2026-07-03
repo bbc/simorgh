@@ -2,67 +2,12 @@ import { ReverbClient } from '#app/models/types/eventTracking';
 import {
   ReverbBeaconConfig,
   ReverbEventDetails,
-  ReverbPageVars,
-  ReverbUserVars,
 } from '#app/components/ATIAnalytics/types';
 import onClient from '../../utilities/onClient';
 import nodeLogger from '../../logger.node';
 import { ATI_LOGGING_ERROR } from '../../logger.const';
 
 const logger = nodeLogger(__filename);
-
-const setReverbPageValues = async ({
-  pageVars,
-  userVars,
-}: {
-  pageVars: ReverbPageVars;
-  userVars: ReverbUserVars;
-}) => {
-  window.bbcpage = {};
-
-  window.bbcpage = Object.assign(window.bbcpage, {
-    getName() {
-      return Promise.resolve(pageVars.name);
-    },
-    getLanguage() {
-      return Promise.resolve(pageVars?.additionalProperties?.content_language);
-    },
-    getDestination() {
-      return Promise.resolve(pageVars.destination);
-    },
-    getProducer() {
-      return Promise.resolve(pageVars.producer);
-    },
-    getSection() {
-      return Promise.resolve('');
-    },
-    getContentId() {
-      return Promise.resolve(pageVars.contentId);
-    },
-    getContentType() {
-      return Promise.resolve(pageVars.contentType);
-    },
-    getEdition() {
-      return Promise.resolve('');
-    },
-    getReferrer() {
-      return Promise.resolve('');
-    },
-    getAdditionalProperties() {
-      return Promise.resolve(pageVars.additionalProperties);
-    },
-    additionalProperties: {
-      testDomain: 'local.ati-host.net',
-      trace: '',
-      customVars: '',
-    },
-  });
-
-  window.bbcuser = {
-    getHashedId: () => Promise.resolve(userVars.hashedId ?? null),
-    isSignedIn: () => Promise.resolve(userVars.isSignedIn),
-  };
-};
 
 const reverbPageViews = async ({
   reverbInstance,
@@ -135,12 +80,7 @@ const callReverb = async (eventDetails: ReverbEventDetails) => {
 const sendBeacon = async (reverbBeaconConfig: ReverbBeaconConfig) => {
   if (onClient()) {
     try {
-      const {
-        params: { page, user },
-        eventDetails,
-      } = reverbBeaconConfig;
-
-      await setReverbPageValues({ pageVars: page, userVars: user });
+      const { eventDetails } = reverbBeaconConfig;
 
       await callReverb(eventDetails);
     } catch (error) {

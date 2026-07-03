@@ -1,18 +1,14 @@
 import { use } from 'react';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import useUASFetchSaveStatus from '#app/hooks/useUASFetchSaveStatus';
+import useUASMetadataSync from '#app/hooks/useUASMetadataSync';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import uasApiRequest from '#app/lib/uasApi';
-import {
-  buildGlobalId,
-  FAVOURITES_CONFIG,
-  createFavouritesPayload,
-  extractPromoImageFromArticleData,
-  buildPromoImageUrl,
-} from '#app/lib/uasApi/uasUtility';
+import { buildGlobalId, FAVOURITES_CONFIG } from '#app/lib/uasApi/uasUtility';
 import { Article } from '#app/models/types/optimo';
 import uasKeys from '#app/lib/uasApi/queryKeys';
 import { AccountContext } from '#app/contexts/AccountContext';
+import upsertArticleData from '#app/lib/uasApi/upsertArticleData';
 
 enum UASAction {
   SAVE = 'save',
@@ -28,7 +24,6 @@ interface UseUASButtonReturn {
 }
 export interface UseUASButtonProps {
   articleId: string;
-  articleTitle: string;
   articlePageData?: Article;
 }
 
@@ -36,43 +31,42 @@ export interface UseUASButtonProps {
 // All TanStack-related code must live exclusively inside the lazy boundary.
 const useUASButton = ({
   articleId,
-  articleTitle,
   articlePageData,
 }: UseUASButtonProps): UseUASButtonReturn => {
   const { service } = use(ServiceContext);
   const { hashedUserId = '', isRefreshAvailable } = use(AccountContext);
   const queryClient = useQueryClient();
-  const { isSaved, isLoading, error } = useUASFetchSaveStatus(articleId);
+  const { isSaved, isLoading, error, savedMetadata } =
+    useUASFetchSaveStatus(articleId);
 
   const mutation = useMutation({
     mutationFn: async (action: UASAction) => {
       if (action === UASAction.SAVE) {
-        const promoImageObj = extractPromoImageFromArticleData(articlePageData);
-        const promoImageBuild = buildPromoImageUrl(promoImageObj);
-        const body = createFavouritesPayload({
+        if (!articlePageData) {
+          throw new Error('Article data is required to save');
+        }
+        return upsertArticleData({
+          articlePageData,
           articleId,
           service,
-          articleTitle,
-          promoImage: promoImageBuild,
-          promoImageAltText: promoImageObj?.altText || '',
-          locatorUrl: articlePageData?.metadata?.locators?.canonicalUrl || '',
-        });
-        await uasApiRequest('POST', FAVOURITES_CONFIG.activityType, {
-          body,
-          isRefreshAvailable,
-        });
-      } else {
-        const globalId = buildGlobalId(articleId);
-        await uasApiRequest('DELETE', FAVOURITES_CONFIG.activityType, {
-          globalId,
           isRefreshAvailable,
         });
       }
+      const globalId = buildGlobalId(articleId);
+      await uasApiRequest('DELETE', FAVOURITES_CONFIG.activityType, {
+        globalId,
+        isRefreshAvailable,
+      });
+      return undefined;
     },
-    onSuccess: (_, action) => {
+    onSuccess: (metadata, action) => {
+      const isSavedAction = action === UASAction.SAVE;
       queryClient.setQueryData(
         uasKeys.favouriteStatus(hashedUserId, articleId),
-        action === UASAction.SAVE,
+        {
+          isSaved: isSavedAction,
+          metadata: isSavedAction ? metadata : undefined,
+        },
       );
       queryClient.invalidateQueries({
         queryKey: uasKeys.favouritesList(hashedUserId),
@@ -80,6 +74,20 @@ const useUASButton = ({
     },
   });
 
+  const handleMetadataOutOfDate = () => {
+    if (articlePageData) {
+      mutation.mutate(UASAction.SAVE);
+    }
+  };
+
+  useUASMetadataSync({
+    articlePageData,
+    articleId,
+    service,
+    isSaved,
+    savedArticleMetadata: savedMetadata,
+    onMetadataOutOfDate: handleMetadataOutOfDate,
+  });
   return {
     isSaved,
     isLoading,

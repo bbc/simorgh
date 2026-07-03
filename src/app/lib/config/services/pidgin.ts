@@ -63,6 +63,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'See everitin',
       home: 'Home',
+      topicDiscovery: {
+        heading: 'Discover more',
+        moreAboutTopic: 'More about {topic}',
+        fetchErrorMessage: 'E no load. Abeg try again',
+      },
       continueReading: 'Kontinu to dey read',
       currentPage: 'Page where you dey',
       skipLinkText: 'Waka go wetin de inside',
@@ -271,6 +276,18 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'New things',
       sport: {
         matchSummary: 'Match Summary',
+        assists: 'Assist',
+        penalties: 'Penalty',
+        ht: 'First half don end',
+        ft: 'Match don end',
+        et: 'Extra time',
+        afterExtraTime: 'After extra time',
+        penaltyAbbreviation: 'PEN',
+        ownGoal: 'own goal',
+        winOnPenalties: {
+          prefix: 'win',
+          suffix: 'for penalty',
+        },
         worldCupTeamNames: {
           algeria: 'Algeria',
           argentina: 'Argentina',
@@ -320,6 +337,12 @@ export const service: DefaultServiceConfig = {
           uruguay: 'Uruguay',
           usa: 'United States of America',
           uzbekistan: 'Uzbekistan',
+        },
+        tournaments: {
+          fifaWorldCup: 'FIFA World Cup',
+        },
+        stages: {
+          groupStage: 'Group Stage',
         },
       },
     },

@@ -65,6 +65,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Összes megtekintése',
       home: 'Főoldal',
+      topicDiscovery: {
+        heading: 'Továbbiak felfedezése',
+        moreAboutTopic: 'Több a {topic} témáról',
+        fetchErrorMessage: 'Nem sikerült betölteni. Kérjük, próbálja újra',
+      },
       currentPage: 'Jelenlegi oldal',
       skipLinkText: 'Ugrás a tartalomra',
       relatedContent: 'Kapcsolódó tartalom',
@@ -323,6 +328,18 @@ export const service: DefaultServiceConfig = {
       },
       sport: {
         matchSummary: 'Mérkőzés összefoglaló',
+        assists: 'Gólpasszok',
+        penalties: 'Büntetők',
+        ht: 'Félidő vége',
+        ft: 'Mérkőzés vége',
+        et: 'Hosszabbítás',
+        afterExtraTime: 'Hosszabbítás után',
+        penaltyAbbreviation: '11m',
+        ownGoal: 'öngól',
+        winOnPenalties: {
+          prefix: '',
+          suffix: 're nyer büntetőkkel',
+        },
         worldCupTeamNames: {
           algeria: 'Algéria',
           argentina: 'Argentína',
@@ -372,6 +389,12 @@ export const service: DefaultServiceConfig = {
           uruguay: 'Uruguay',
           usa: 'Egyesült Államok',
           uzbekistan: 'Üzbegisztán',
+        },
+        tournaments: {
+          fifaWorldCup: 'FIFA labdarúgó-világbajnokság',
+        },
+        stages: {
+          groupStage: 'Csoportkör',
         },
       },
     },

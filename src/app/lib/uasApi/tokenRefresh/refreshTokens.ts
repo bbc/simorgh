@@ -1,4 +1,6 @@
 import isLive from '#app/lib/utilities/isLive';
+import { UAS_CLIENT_TIMEOUT_MS } from '..';
+import UasError from '../errors';
 
 const getSessionUrl = (): string => {
   return isLive()
@@ -14,10 +16,11 @@ const refreshTokens = async (): Promise<Response> => {
     headers: {
       'Content-Type': 'application/json',
     },
+    signal: AbortSignal.timeout(UAS_CLIENT_TIMEOUT_MS),
   });
 
   if (!response.ok) {
-    throw new Error(`Token refresh failed with status code ${response.status}`);
+    throw new UasError(response.status);
   }
 
   return response;

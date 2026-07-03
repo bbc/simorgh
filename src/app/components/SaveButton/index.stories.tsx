@@ -14,35 +14,38 @@ export default {
     isLoading: false,
     isUpdating: false,
     isSaved: false,
-    disabled: false,
   },
 };
 
 export const Unsaved = {
   args: {
-    buttonText: 'Save for later',
+    visualLabel: 'Save for later',
+    accessibleLabel: 'Save for later',
   },
 };
 
 export const Loading = {
   args: {
     isLoading: true,
-    buttonText: 'Loading',
+    visualLabel: 'Loading',
+    accessibleLabel: 'Loading',
   },
 };
 
 export const Saved = {
   args: {
     isSaved: true,
-    buttonText: 'Saved to My News',
-    removeText: 'Remove',
+    visualLabel: 'Saved to My News',
+    hoverVisualLabel: 'Remove',
+    accessibleLabel: 'Remove from My News',
   },
 };
 
 export const Saving = {
   args: {
     isUpdating: true,
-    buttonText: 'Saving',
+    visualLabel: 'Saving',
+    accessibleLabel: 'Saving',
   },
 };
 
@@ -50,6 +53,7 @@ export const Removing = {
   args: {
     isUpdating: true,
     isSaved: true,
-    buttonText: 'Removing',
+    visualLabel: 'Removing',
+    accessibleLabel: 'Removing',
   },
 };

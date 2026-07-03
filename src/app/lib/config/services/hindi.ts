@@ -82,6 +82,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'सब देखें',
       home: 'होम पेज',
+      topicDiscovery: {
+        heading: 'और जानें',
+        moreAboutTopic: '{topic} के बारे में अधिक',
+        fetchErrorMessage: 'लोड नहीं हो पाया। कृपया पुनः प्रयास करें',
+      },
       continueReading: 'पढ़ना जारी रखें',
       currentPage: 'मौजूदा पन्ना',
       skipLinkText: 'सामग्री को स्किप करें',
@@ -125,7 +130,19 @@ export const service: DefaultServiceConfig = {
         saving: 'Saving',
         saved: 'Saved to My News',
         remove: 'Remove',
+        removeAccessible: 'Saved. Remove from My News',
         removing: 'Removing',
+      },
+      myNews: {
+        title: 'My News',
+        guestTitle: 'Welcome to My News',
+        description: 'My saved articles',
+        guestDescription:
+          'Sign in to save stories in My News, and read them when it suits you.',
+        noArticles: "You haven't saved any articles yet",
+        errorText:
+          'This content does not seem to be working. Please try again later.',
+        loading: 'Loading',
       },
       gist: 'सारांश',
       error: {
@@ -398,6 +415,18 @@ export const service: DefaultServiceConfig = {
       },
       sport: {
         matchSummary: 'मैच का सारांश',
+        assists: 'असिस्ट',
+        penalties: 'पेनल्टी',
+        ht: 'हाफ टाइम (पहला हाफ समाप्त)',
+        ft: 'मैच समाप्त',
+        et: 'अतिरिक्त समय',
+        afterExtraTime: 'अतिरिक्त समय के बाद',
+        penaltyAbbreviation: 'पेन',
+        ownGoal: 'आत्मघाती गोल',
+        winOnPenalties: {
+          prefix: 'पेनल्टी में',
+          suffix: 'से जीतती है',
+        },
         worldCupTeamNames: {
           algeria: 'अल्जीरिया',
           argentina: 'अर्जेंटीना',
@@ -447,6 +476,18 @@ export const service: DefaultServiceConfig = {
           uruguay: 'उरुग्वे',
           usa: 'अमरीका',
           uzbekistan: 'उजबेकिस्तान',
+        },
+        tournaments: {
+          fifaWorldCup: 'फीफा वर्ल्ड कप',
+        },
+        stages: {
+          groupStage: 'ग्रुप स्टेज',
+          last32: 'राउंड ऑफ़ 32',
+          last16: 'राउंड ऑफ़ 16',
+          quarterFinals: 'क्वार्टर फ़ाइनल्स',
+          semiFinals: 'सेमी फ़ाइनल्स',
+          final: 'फ़ाइनल',
+          thirdPlaceFinal: 'तीसरा स्थान',
         },
       },
     },

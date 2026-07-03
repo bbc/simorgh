@@ -6,7 +6,10 @@
   "urn": "urn:bbc:sportsdata:football:event:78bis3qan491aqnwxn71ix6o3",
   "sport": "football",
   "status": "Postponed",
-  "periodLabel": { "value": "Match Postponed", "accessible": "Match Postponed" },
+  "periodLabel": {
+    "value": "Match Postponed",
+    "accessible": "Match Postponed"
+  },
   "participants": [
     {
       "id": "hzqh7z0mdl3v7gwete66syxp",

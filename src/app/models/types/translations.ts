@@ -60,7 +60,17 @@ export interface Translations {
     saving: string;
     saved: string;
     remove: string;
+    removeAccessible: string;
     removing: string;
+  };
+  myNews?: {
+    title: string;
+    guestTitle: string;
+    description: string;
+    guestDescription: string;
+    noArticles: string;
+    errorText: string;
+    loading: string;
   };
   error: {
     home?: string;
@@ -72,7 +82,7 @@ export interface Translations {
   continueReading?: string;
   topicDiscovery?: {
     heading: string;
-    moreFromTopic: string;
+    moreAboutTopic: string;
     fetchErrorMessage?: string;
   };
   readTime?: Partial<{
@@ -242,8 +252,34 @@ export interface Translations {
     next?: string;
   };
   sport?: {
+    assists?: string;
+    penalties?: string;
+    ht?: string;
+    ft?: string;
+    et?: string;
+    afterExtraTime?: string;
+    penaltyAbbreviation?: string;
+    ownGoal?: string;
+    venue?: string;
+    attendance?: string;
     matchSummary?: string;
-    worldCupTeamNames?: Record<string, string>;
+    winOnPenalties?: {
+      prefix?: string;
+      suffix?: string;
+    };
+    worldCupTeamNames?: WorldCupTeamNameTranslations;
+    tournaments?: {
+      fifaWorldCup?: string;
+    };
+    stages?: {
+      groupStage?: string;
+      last32?: string;
+      last16?: string;
+      quarterFinals?: string;
+      semiFinals?: string;
+      final?: string;
+      thirdPlaceFinal?: string;
+    };
   };
 }
 
@@ -336,3 +372,54 @@ export interface LiteSiteTranslations {
   dataSaving: string;
   articleDataSavingLinkText?: string;
 }
+
+export type WorldCupTeamNameTranslations = {
+  algeria?: string;
+  argentina?: string;
+  australia?: string;
+  austria?: string;
+  belgium?: string;
+  'bosnia-herzegovina'?: string;
+  brazil?: string;
+  canada?: string;
+  'cape-verde'?: string;
+  colombia?: string;
+  croatia?: string;
+  curacao?: string;
+  'czech-republic'?: string;
+  'dr-congo'?: string;
+  ecuador?: string;
+  egypt?: string;
+  england?: string;
+  france?: string;
+  germany?: string;
+  ghana?: string;
+  haiti?: string;
+  iran?: string;
+  iraq?: string;
+  'ivory-coast'?: string;
+  japan?: string;
+  jordan?: string;
+  mexico?: string;
+  morocco?: string;
+  netherlands?: string;
+  'new-zealand'?: string;
+  norway?: string;
+  panama?: string;
+  paraguay?: string;
+  portugal?: string;
+  qatar?: string;
+  'saudi-arabia'?: string;
+  scotland?: string;
+  senegal?: string;
+  'south-africa'?: string;
+  'south-korea'?: string;
+  spain?: string;
+  sweden?: string;
+  switzerland?: string;
+  tunisia?: string;
+  turkey?: string;
+  uruguay?: string;
+  usa?: string;
+  uzbekistan?: string;
+};

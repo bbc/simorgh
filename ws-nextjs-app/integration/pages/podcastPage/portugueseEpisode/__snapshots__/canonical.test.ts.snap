@@ -276,8 +276,10 @@ exports[`Canonical Podcast Page SEO Linked data should match text 1`] = `
       "associatedMedia": {
         "@id": "http://localhost:7081/portuguese/podcasts/p07r3r3t/p083x9gr#audio",
         "@type": "AudioObject",
+        "contentUrl": "https://open.live.bbc.co.uk/mediaselector/6/redir/version/2.0/mediaset/audio-nondrm-download-low/proto/https/vpid/p083x8gs.mp3",
         "description": "Pais de Mats Steen achavam que filho teve vida solitária; mas quando anunciaram sua morte, não tinham ideia da comoção que isso causaria.",
         "duration": "PT16M22S",
+        "encodingFormat": "audio/mpeg",
         "name": "'A vida secreta de meu filho que só conheci quando ele morreu'",
         "thumbnailUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p0k13ck5.png",
         "uploadDate": "2020-03-13T09:00:00.000Z",
