@@ -18,10 +18,6 @@ const StyledTimestamp = styled.time`
   display: block;
   ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
   ${props => props.padding && PADDING}
-
-  @media (prefers-color-scheme: dark) {
-    ${({ theme }) => !theme.isDarkUi && `color: ${theme.palette.GREY_3};`}
-  }
 `;
 
 const Timestamp = ({ children, datetime, padding = true, className = '' }) => (
