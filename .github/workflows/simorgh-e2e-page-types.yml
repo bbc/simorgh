@@ -66,7 +66,9 @@ jobs:
             .map(({ specs, index }) => ({
               'node-version': nodeVersion,
               'shard-name': `shard-${index + 1}`,
-              specs: specs.join(','),
+              'page-types': specs
+                .map(specPath => specPath.split('/').slice(-2, -1)[0])
+                .join(','),
             }));
 
           process.stdout.write(JSON.stringify({ include }));
@@ -113,6 +115,28 @@ jobs:
         working-directory: ws-nextjs-app
         run: yarn cypress:install
 
+      - name: Build shard spec list (${{ matrix['shard-name'] }})
+        id: build-specs
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          page_types="${{ matrix['page-types'] }}"
+          IFS=',' read -r -a type_array <<< "$page_types"
+
+          specs=''
+          for page_type in "${type_array[@]}"; do
+            spec="./cypress/e2e/pageTypes/${page_type}/index.cy.ts"
+            if [ -z "$specs" ]; then
+              specs="$spec"
+            else
+              specs="$specs,$spec"
+            fi
+          done
+
+          echo "Page types under test: $page_types"
+          echo "specs=$specs" >> "$GITHUB_OUTPUT"
+
       - name: Run Simorgh NextJS E2Es (${{ matrix['shard-name'] }})
         uses: cypress-io/github-action@v6
         with:
@@ -120,7 +144,7 @@ jobs:
           working-directory: ws-nextjs-app
           build: yarn build
           start: yarn start
-          command: yarn exec cypress run --browser chrome --spec "${{ matrix.specs }}"
+          command: yarn exec cypress run --browser chrome --spec "${{ steps.build-specs.outputs.specs }}"
 
       - name: Upload Cypress reports (${{ matrix['shard-name'] }})
         if: always()
