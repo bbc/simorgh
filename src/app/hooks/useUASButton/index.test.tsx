@@ -135,7 +135,6 @@ describe('useUASButton', () => {
           position: [2],
         },
       ],
-      promoImageBlocks: [],
       canonicalUrl: 'https://bbc.com/article',
     } as unknown as UseUASButtonProps['articlePageData'],
   } as UseUASButtonProps;

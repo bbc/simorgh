@@ -14,7 +14,6 @@ import { OptimoBlock } from '#app/models/types/optimo';
 
 export interface ArticlePageData {
   contentBlocks?: OptimoBlock[];
-  promoImageBlocks?: OptimoBlock[];
   canonicalUrl?: string;
 }
 
@@ -22,8 +21,6 @@ const extractSaveArticleProps = (
   articlePageData: Article,
 ): ArticlePageData => ({
   contentBlocks: articlePageData?.content?.model?.blocks,
-  promoImageBlocks:
-    articlePageData?.promo?.images?.defaultPromoImage?.blocks ?? [],
   canonicalUrl: articlePageData?.metadata?.locators?.canonicalUrl,
 });
 

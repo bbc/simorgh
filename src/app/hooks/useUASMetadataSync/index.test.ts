@@ -12,7 +12,6 @@ const mockCompareMetadataWithSaved =
 describe('useUASMetadataSync', () => {
   const mockArticlePageData: ArticlePageData = {
     contentBlocks: [{ type: 'text', model: { blocks: [{ text: 'Content' }] } }],
-    promoImageBlocks: [],
     canonicalUrl: 'https://bbc.com/article',
   };
 

@@ -98,7 +98,6 @@ describe('upsertArticleData', () => {
         position: [2],
       },
     ],
-    promoImageBlocks: [],
     canonicalUrl: 'https://bbc.com/article',
   } as unknown as ArticlePageData;
 
