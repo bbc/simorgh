@@ -4,6 +4,17 @@ import { Article } from '#app/models/types/optimo';
 import { render, screen, act } from '../react-testing-library-with-providers';
 import SaveArticleButton from '.';
 
+jest.mock('#app/components/Account/AccountSignInModal', () => ({
+  __esModule: true,
+  default: ({ onClose }: { onClose: () => void }) => (
+    <div role="dialog" aria-label="Sign in to BBC">
+      <button type="button" onClick={onClose} aria-label="Close">
+        Close
+      </button>
+    </div>
+  ),
+}));
+
 jest.mock('#app/hooks/useUASButton');
 
 const mockedUseUASButton = useUASButton as jest.Mock;
@@ -13,9 +24,7 @@ const personalizationToggle = {
 };
 
 describe('SaveArticleButton', () => {
-  const defaultProps = {
-    articleTitle: 'Test Article Title',
-  };
+  const defaultProps = {};
 
   const mockHandleSaveAction = jest.fn();
 
@@ -44,7 +53,9 @@ describe('SaveArticleButton', () => {
       await act(async () =>
         render(<SaveArticleButton {...defaultProps} />, signedInRenderOptions),
       );
-      expect(screen.getByRole('button')).toHaveTextContent('Save for later');
+      expect(screen.getByRole('button')).toHaveTextContent(
+        'बाद में पढ़ने के लिए सहेजें',
+      );
     });
 
     it('renders Saved to My News when saved', async () => {
@@ -53,10 +64,12 @@ describe('SaveArticleButton', () => {
       await act(async () =>
         render(<SaveArticleButton {...defaultProps} />, signedInRenderOptions),
       );
-      expect(screen.getByRole('button')).toHaveTextContent('Saved to My News');
+      expect(screen.getByRole('button')).toHaveTextContent(
+        'मेरी ख़बरों में सहेजा गया',
+      );
     });
 
-    it('renders loading state and disables button', async () => {
+    it('renders loading state and keeps the button focusable', async () => {
       mockedUseUASButton.mockReturnValue({
         isLoading: true,
         isUpdating: false,
@@ -67,11 +80,11 @@ describe('SaveArticleButton', () => {
       );
       const button = screen.getByRole('button');
 
-      expect(button).toHaveTextContent('Loading');
-      expect(button).toBeDisabled();
+      expect(button).toHaveTextContent('लोड हो रहा है');
+      expect(button).toBeEnabled();
     });
 
-    it('renders saving state and disables button', async () => {
+    it('renders saving state and keeps the button focusable', async () => {
       mockedUseUASButton.mockReturnValue({
         isSaved: false,
         isLoading: false,
@@ -85,11 +98,11 @@ describe('SaveArticleButton', () => {
       );
       const button = screen.getByRole('button');
 
-      expect(button).toHaveTextContent('Saving');
-      expect(button).toBeDisabled();
+      expect(button).toHaveTextContent('सहेजा जा रहा है');
+      expect(button).toBeEnabled();
     });
 
-    it('renders removing state and disables button', async () => {
+    it('renders removing state and keeps the button focusable', async () => {
       mockedUseUASButton.mockReturnValue({
         isSaved: true,
         isLoading: false,
@@ -103,8 +116,8 @@ describe('SaveArticleButton', () => {
       );
       const button = screen.getByRole('button');
 
-      expect(button).toHaveTextContent('Removing');
-      expect(button).toBeDisabled();
+      expect(button).toHaveTextContent('हटाया जा रहा है');
+      expect(button).toBeEnabled();
     });
 
     it('calls handleSaveAction with save when button is clicked and not already saved', async () => {
@@ -117,7 +130,7 @@ describe('SaveArticleButton', () => {
       expect(mockHandleSaveAction).toHaveBeenCalledTimes(1);
     });
 
-    it('passes articleId and title to useUASButton hook', async () => {
+    it('passes articleId to useUASButton hook', async () => {
       const articlePageData = {
         metadata: {
           locators: {
@@ -141,7 +154,6 @@ describe('SaveArticleButton', () => {
 
       expect(mockedUseUASButton).toHaveBeenCalledWith(
         expect.objectContaining({
-          articleTitle: 'Test Article Title',
           articlePageData,
           articleId: 'c1l97706v5mo',
         }),
@@ -159,6 +171,29 @@ describe('SaveArticleButton', () => {
     it('renders guest save button', async () => {
       render(<SaveArticleButton {...defaultProps} />, signedOutRenderOptions);
       expect(screen.getByTestId('save-article-btn-guest')).toBeInTheDocument();
+    });
+
+    it('opens the sign-in modal when the save button is clicked', async () => {
+      await act(async () =>
+        render(<SaveArticleButton {...defaultProps} />, signedOutRenderOptions),
+      );
+      await act(async () => {
+        screen.getByTestId('save-article-btn-guest').click();
+      });
+      expect(screen.getByRole('dialog')).toBeInTheDocument();
+    });
+
+    it('closes the sign-in modal when the close button is clicked', async () => {
+      await act(async () =>
+        render(<SaveArticleButton {...defaultProps} />, signedOutRenderOptions),
+      );
+      await act(async () => {
+        screen.getByTestId('save-article-btn-guest').click();
+      });
+      await act(async () => {
+        screen.getByRole('button', { name: 'Close' }).click();
+      });
+      expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
     });
   });
 });

@@ -68,13 +68,6 @@
     }
   ],
   "splash_pages": null,
-  "prefer_related_applications": true,
-  "related_applications": [
-    {
-      "platform": "play",
-      "id": "uk.co.bbc.mundo"
-    }
-  ],
   "start_url": "/mundo?at_medium=PWA&at_campaign=PWA",
   "shortcuts": [
     {

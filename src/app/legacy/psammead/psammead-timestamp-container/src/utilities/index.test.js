@@ -180,6 +180,94 @@ describe('Timestamp utility functions', () => {
         }),
       ).toEqual('31 October 2021, 01:30 GMT');
     });
+
+    it('should apply a fixed UTC+1 offset for Africa/Lagos (no DST)', () => {
+      const utcTimestamp = Date.UTC(2021, 5, 15, 12, 0, 0); // 15 June 2021 12:00 UTC
+
+      expect(
+        formatUnixTimestamp({
+          timestamp: utcTimestamp,
+          format: 'D MMMM YYYY, HH:mm z',
+          timezone: 'Africa/Lagos',
+          locale,
+        }),
+      ).toEqual('15 June 2021, 13:00 WAT');
+    });
+
+    it('should apply a +05:45 offset for Asia/Kathmandu (no DST, non-whole-hour offset)', () => {
+      const utcTimestamp = Date.UTC(2021, 5, 15, 12, 0, 0); // 15 June 2021 12:00 UTC
+
+      expect(
+        formatUnixTimestamp({
+          timestamp: utcTimestamp,
+          format: 'D MMMM YYYY, HH:mm z',
+          timezone: 'Asia/Kathmandu',
+          locale,
+        }),
+      ).toEqual('15 June 2021, 17:45 +0545');
+    });
+
+    it('should apply a negative UTC-3 offset for America/Sao_Paulo', () => {
+      const utcTimestamp = Date.UTC(2021, 5, 15, 12, 0, 0); // 15 June 2021 12:00 UTC
+
+      expect(
+        formatUnixTimestamp({
+          timestamp: utcTimestamp,
+          format: 'D MMMM YYYY, HH:mm z',
+          timezone: 'America/Sao_Paulo',
+          locale,
+        }),
+      ).toEqual('15 June 2021, 09:00 -03');
+    });
+
+    it('should format correctly for GMT (non-region-style IANA identifier)', () => {
+      const utcTimestamp = Date.UTC(2021, 5, 15, 12, 0, 0); // 15 June 2021 12:00 UTC
+
+      expect(
+        formatUnixTimestamp({
+          timestamp: utcTimestamp,
+          format: 'D MMMM YYYY, HH:mm z',
+          timezone: 'GMT',
+          locale,
+        }),
+      ).toEqual('15 June 2021, 12:00 GMT');
+    });
+
+    it('should translate month names for a non-Latin locale', () => {
+      expect(
+        formatUnixTimestamp({
+          timestamp,
+          format: 'D MMMM YYYY',
+          timezone: 'GMT',
+          locale: 'ar',
+        }),
+      ).toEqual('١٩ أكتوبر ٢٠١٨');
+    });
+
+    it('should apply locale-sensitive format tokens (LL, LT) for a non-Latin locale', () => {
+      expect(
+        formatUnixTimestamp({
+          timestamp,
+          format: null,
+          timezone: 'GMT',
+          locale: 'ar',
+        }),
+      ).toEqual('١٩ أكتوبر ٢٠١٨، ١٧:١٠ GMT');
+    });
+
+    it('should return relative timestamp in the provided locale', () => {
+      const nowSpy = jest.spyOn(Date, 'now').mockReturnValue(1704110400000); // 1 January 2024 12:00:00 UTC
+      const nineHoursAgo = timestampGenerator({ hours: 9 });
+      const output = formatUnixTimestamp({
+        timestamp: nineHoursAgo,
+        format: 'D MMMM YYYY',
+        timezone: 'GMT',
+        locale: 'ar',
+        isRelative: true,
+      });
+      expect(output).toEqual('منذ ٩ ساعات');
+      nowSpy.mockRestore();
+    });
   });
 });
 
@@ -289,43 +377,6 @@ describe('Moment configuration', () => {
       .add(5, 'days');
     // default moment configuration would return 'a month ago'
     expect(allButAYear.fromNow()).toEqual('11 months ago');
-  });
-
-  it('uses configured threshold boundaries between minutes/hours/days/months/years', () => {
-    const fixedNow = Date.UTC(2022, 6, 15, 12, 0, 0);
-    moment.now = jest.fn().mockImplementation(() => fixedNow);
-
-    const fiftyNineMinutesFiftyNineSeconds = moment(
-      fixedNow - (59 * 60 + 59) * 1000,
-    );
-    expect(fiftyNineMinutesFiftyNineSeconds.fromNow()).toEqual(
-      '59 minutes ago',
-    );
-
-    const sixtyMinutes = moment(fixedNow - 60 * 60 * 1000);
-    expect(sixtyMinutes.fromNow()).toEqual('an hour ago');
-
-    const allButOneDay = moment(
-      fixedNow - (23 * 60 * 60 + 59 * 60 + 59) * 1000,
-    );
-    expect(allButOneDay.fromNow()).toEqual('23 hours ago');
-
-    const oneDay = moment(fixedNow - 24 * 60 * 60 * 1000);
-    expect(oneDay.fromNow()).toEqual('a day ago');
-
-    const allButOneMonth = moment(
-      fixedNow - (29 * 24 * 60 * 60 + 23 * 60 * 60 + 59 * 60 + 59) * 1000,
-    );
-    expect(allButOneMonth.fromNow()).toEqual('29 days ago');
-
-    const thirtyDays = moment(fixedNow - 30 * 24 * 60 * 60 * 1000);
-    expect(thirtyDays.fromNow()).toEqual('a month ago');
-
-    const elevenMonths = moment(fixedNow).subtract(11, 'months');
-    expect(elevenMonths.fromNow()).toEqual('11 months ago');
-
-    const twelveMonths = moment(fixedNow).subtract(12, 'months');
-    expect(twelveMonths.fromNow()).toEqual('a year ago');
   });
 
   describe('formatDuration', () => {

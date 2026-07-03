@@ -565,6 +565,12 @@ export const service: DefaultServiceConfig = {
             lang: 'cy',
           },
           {
+            id: 'magyarul',
+            href: 'https://www.bbc.com/magyarul',
+            label: 'BBC News Magyarul',
+            lang: 'hu',
+          },
+          {
             id: 'kyrgyz',
             href: 'https://www.bbc.com/kyrgyz',
             label: 'BBC News Кыргыз Кызматы',
@@ -581,6 +587,12 @@ export const service: DefaultServiceConfig = {
             id: 'polska',
             href: 'https://www.bbc.com/polska',
             label: 'BBC News Polska',
+          },
+          {
+            id: 'romania',
+            href: 'https://www.bbc.com/romania',
+            label: 'BBC News România',
+            lang: 'ro',
           },
           {
             id: 'russian',

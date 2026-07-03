@@ -81,6 +81,12 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Hamısına baxın',
       home: 'Xəbərlər',
+      topicDiscovery: {
+        heading: 'Daha çox kəşf et',
+        moreAboutTopic: '{topic} haqqında daha çox',
+        fetchErrorMessage:
+          'Yükləmə uğursuz oldu. Zəhmət olmasa yenidən yoxlayın',
+      },
       currentPage: 'Hazırda olduğunuz səhifə',
       skipLinkText: 'Mətnə keçid',
       relatedContent: 'Bu barədə daha geniş',
@@ -323,6 +329,18 @@ export const service: DefaultServiceConfig = {
       },
       sport: {
         matchSummary: 'Matçın xülasəsi',
+        assists: 'Asistlər',
+        penalties: 'Penaltilər',
+        ht: 'Birinci hissənin sonu',
+        ft: 'Oyunun sonu',
+        et: 'Əlavə vaxt',
+        afterExtraTime: 'Əlavə vaxtdan sonra',
+        penaltyAbbreviation: 'PEN',
+        ownGoal: 'öz qapısına qol',
+        winOnPenalties: {
+          prefix: 'penaltilərlə',
+          suffix: 'qalib gəlir',
+        },
         worldCupTeamNames: {
           algeria: 'Əlcəzair',
           argentina: 'Argentina',
@@ -372,6 +390,18 @@ export const service: DefaultServiceConfig = {
           uruguay: 'Uruqvay',
           usa: 'ABŞ',
           uzbekistan: 'Özbəkistan',
+        },
+        tournaments: {
+          fifaWorldCup: 'FİFA Dünya Kuboku',
+        },
+        stages: {
+          groupStage: 'Qrup mərhələsi',
+          last32: '1/16 mərhələ',
+          last16: '1/8 final',
+          quarterFinals: 'Dörddə bir final',
+          semiFinals: 'Yarımfinal',
+          final: 'Final',
+          thirdPlaceFinal: 'Üçüncü yer',
         },
       },
     },
@@ -434,7 +464,7 @@ export const service: DefaultServiceConfig = {
       ],
       copyrightText: 'BBC. BBC kənar saytların məzmununa məsul deyil.',
     },
-    timezone: 'Asia/baku',
+    timezone: 'Asia/Baku',
     navigation: [
       {
         title: 'Xəbərlər',

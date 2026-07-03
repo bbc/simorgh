@@ -1,30 +1,42 @@
 import { ServiceContext } from '#contexts/ServiceContext';
 import SaveButton from '#app/components/SaveButton';
-import { use } from 'react';
+import { use, useState } from 'react';
 import useHydrationDetection from '#app/hooks/useHydrationDetection';
+import { AccountContext } from '#app/contexts/AccountContext';
+import AccountSignInModal from '#app/components/Account/AccountSignInModal';
+import { createPortal } from 'react-dom';
 
-// TODO: This will contain the guest user experience for the SaveArticleButton,
-// which will likely involve prompting the user to sign in or create an account to save articles.
 const SaveArticleButtonGuest = () => {
   const { translations } = use(ServiceContext);
+  const { signInUrl, registerUrl } = use(AccountContext);
   const isHydrated = useHydrationDetection();
-  const getButtonText = () => {
-    if (!isHydrated) {
-      return translations.saveArticleButton?.loading;
-    }
-    return translations.saveArticleButton?.save;
-  };
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const { saveArticleButton } = translations || {};
+
+  const label = isHydrated
+    ? saveArticleButton?.save
+    : saveArticleButton?.loading;
 
   return (
-    <SaveButton
-      onClick={() => {
-        // eslint-disable-next-line no-alert
-        alert('Please sign in to save articles.');
-      }}
-      buttonText={getButtonText()}
-      testId="save-article-btn-guest"
-      isLoading={!isHydrated}
-    />
+    <>
+      <SaveButton
+        onClick={() => setIsModalOpen(true)}
+        visualLabel={label ?? ''}
+        accessibleLabel={label ?? ''}
+        testId="save-article-btn-guest"
+        isLoading={!isHydrated}
+      />
+      {isModalOpen &&
+        createPortal(
+          <AccountSignInModal
+            onClose={() => setIsModalOpen(false)}
+            signInUrl={signInUrl}
+            registerUrl={registerUrl}
+          />,
+          document.body,
+        )}
+    </>
   );
 };
 

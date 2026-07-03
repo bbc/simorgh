@@ -10,7 +10,6 @@ import SaveButton from '#app/components/SaveButton';
 import type { SaveArticleButtonProps } from '../index';
 
 const SaveArticleButtonAuthenticated = ({
-  articleTitle,
   articlePageData,
 }: SaveArticleButtonProps) => {
   const { pathname } = use(RequestContext);
@@ -18,12 +17,10 @@ const SaveArticleButtonAuthenticated = ({
   const { saveArticleButton } = translations || {};
   const { assetId: articleId } = parseRoute(pathname);
 
-  const { isSaved, isLoading, isUpdating, error, handleSaveAction } =
-    useUASButton({
-      articleId,
-      articleTitle,
-      articlePageData,
-    });
+  const { isSaved, isLoading, isUpdating, handleSaveAction } = useUASButton({
+    articleId,
+    articlePageData,
+  });
 
   const clickComponentName = `save-article-button-click-${
     isSaved ? UASAction.REMOVE : UASAction.SAVE
@@ -42,24 +39,27 @@ const SaveArticleButtonAuthenticated = ({
 
   if (!saveArticleButton) return null;
 
-  if (error) {
-    // eslint-disable-next-line no-console
-    console.log('Error fetching saved status for article:', {
-      articleId,
-      error,
-    });
-  }
-
-  const buttonLabel = isSaved
-    ? saveArticleButton.saved
-    : saveArticleButton.save;
-
-  const getButtonText = () => {
+  const getVisualLabel = () => {
     if (isLoading) return saveArticleButton.loading;
-    if (isUpdating && isSaved) return saveArticleButton.removing;
-    if (isUpdating) return saveArticleButton.saving;
-    return buttonLabel;
+    if (isUpdating) {
+      return isSaved ? saveArticleButton.removing : saveArticleButton.saving;
+    }
+    if (isSaved) return saveArticleButton.saved;
+    return saveArticleButton.save;
   };
+
+  const getAccessibleLabel = () => {
+    if (isLoading) return saveArticleButton.loading;
+    if (isUpdating) {
+      return isSaved ? saveArticleButton.removing : saveArticleButton.saving;
+    }
+    // When saved, screen readers should hear the action the button performs next.
+    if (isSaved) return saveArticleButton.removeAccessible;
+    return saveArticleButton.save;
+  };
+
+  const hoverVisualLabel =
+    isSaved && !isUpdating ? saveArticleButton.remove : undefined;
 
   const handleClick = (event?: React.MouseEvent) => {
     onClickTrack?.(event);
@@ -73,9 +73,9 @@ const SaveArticleButtonAuthenticated = ({
         isLoading={isLoading}
         isUpdating={isUpdating}
         isSaved={isSaved}
-        disabled={isLoading}
-        buttonText={getButtonText()}
-        removeText={saveArticleButton.remove}
+        visualLabel={getVisualLabel()}
+        hoverVisualLabel={hoverVisualLabel}
+        accessibleLabel={getAccessibleLabel()}
         testId="save-article-btn-authorized"
       />
     </div>

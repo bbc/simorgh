@@ -24,7 +24,7 @@ exports[`Canonical Av-embeds Media Loader renders a figure caption 1`] = `
     type="button"
   >
     <span
-      class="css-2ozlq5"
+      class="css-5ku87v"
     >
       Play video, ""Здесь же кругом люди": жизнь в 100 метрах от взлетной полосы", Продолжительность 2,53
     </span>
@@ -34,7 +34,7 @@ exports[`Canonical Av-embeds Media Loader renders a figure caption 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="css-vja2s5 e1xc513p1"
+        class="css-vja2s5 ew59ay91"
         focusable="false"
         height="12"
         viewBox="0 0 12 12"
@@ -101,7 +101,7 @@ exports[`Canonical Av-embeds Media Loader renders a placeholder 1`] = `
     type="button"
   >
     <span
-      class="css-2ozlq5"
+      class="css-5ku87v"
     >
       Play video, ""Здесь же кругом люди": жизнь в 100 метрах от взлетной полосы", Продолжительность 2,53
     </span>
@@ -111,7 +111,7 @@ exports[`Canonical Av-embeds Media Loader renders a placeholder 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="css-vja2s5 e1xc513p1"
+        class="css-vja2s5 ew59ay91"
         focusable="false"
         height="12"
         viewBox="0 0 12 12"
@@ -182,7 +182,7 @@ exports[`Canonical Av-embeds Media Loader renders a valid container 1`] = `
       type="button"
     >
       <span
-        class="css-2ozlq5"
+        class="css-5ku87v"
       >
         Play video, ""Здесь же кругом люди": жизнь в 100 метрах от взлетной полосы", Продолжительность 2,53
       </span>
@@ -192,7 +192,7 @@ exports[`Canonical Av-embeds Media Loader renders a valid container 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="css-vja2s5 e1xc513p1"
+          class="css-vja2s5 ew59ay91"
           focusable="false"
           height="12"
           viewBox="0 0 12 12"
