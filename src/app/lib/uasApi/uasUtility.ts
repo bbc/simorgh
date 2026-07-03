@@ -36,9 +36,13 @@ const buildGlobalId = (
 ): string => `urn:bbc:${resourceDomain}:${resourceType}:${resourceId}`;
 
 const extractPromoImageFromArticleData = (articlePageData: ArticlePageData) => {
-  const promoImageBlocks = articlePageData.promoImageBlocks ?? [];
-
-  const { altText, rawBlock } = extractPromoImage(promoImageBlocks);
+  const promoImageBlocks = filterForBlockType(
+    articlePageData.contentBlocks,
+    'image',
+  );
+  const { altText, rawBlock } = extractPromoImage(
+    promoImageBlocks?.model?.blocks,
+  );
 
   return {
     altText,
