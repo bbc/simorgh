@@ -99,7 +99,7 @@ H.storyName =
 const timezoneLocaleServices = [
   { service: 'news', label: 'English (Europe/London)' },
   { service: 'azeri', label: 'Azeri (Asia/Baku)' },
-  { service: 'arabic', label: 'Arabic (GMT)' },
+  { service: 'arabic', label: 'Arabic (GMT, RTL)' },
   { service: 'portuguese', label: 'Portuguese (America/Sao_Paulo)' },
   { service: 'nepali', label: 'Nepali (Asia/Kathmandu)' },
 ];
@@ -107,7 +107,7 @@ const timezoneLocaleServices = [
 const dstBoundaryTimestamp = Date.UTC(2021, 2, 28, 1, 0, 0); // 28 March 2021 01:00 UTC (DST boundary)
 const fixedOlderTimestamp = Date.UTC(2021, 2, 27, 12, 0, 0); // 27 March 2021 12:00 UTC
 
-export const TimezoneAndLocaleMigrationChecks = () => (
+export const TimezoneAndLocaleChecks = () => (
   <div>
     {timezoneLocaleServices.map(({ service, label }) => (
       <ServiceContextProvider key={service} service={service}>
@@ -130,10 +130,9 @@ export const TimezoneAndLocaleMigrationChecks = () => (
     ))}
   </div>
 );
-TimezoneAndLocaleMigrationChecks.storyName =
-  'Timezone and Locale Migration Checks (Pre-Temporal)';
-TimezoneAndLocaleMigrationChecks.parameters = {
+TimezoneAndLocaleChecks.parameters = {
   chromatic: {
     disable: false,
   },
 };
+TimezoneAndLocaleChecks.tags = ['!dev'];
