@@ -54,6 +54,11 @@ export interface Translations {
     closeLabel: string;
     buttonSeparatorText: string;
   };
+  accountSignInModal?: {
+    title: string;
+    description: string;
+    closeLabel: string;
+  };
   saveArticleButton?: {
     loading: string;
     save: string;

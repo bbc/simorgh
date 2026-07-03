@@ -389,3 +389,161 @@ export const topicDiscoveryFixture: TopicDiscoveryData = {
     ],
   },
 };
+
+export const arabicTopicTagsFixture = [
+  {
+    topicId: 'c1d8ye54xxlt',
+    topicName: 'ثقافة وفنون',
+    topicUrl: '/arabic/topics/c1d8ye54xxlt',
+  },
+  {
+    topicId: 'clmj3d7282gt',
+    topicName: 'صحة وعلوم',
+    topicUrl: '/arabic/topics/clmj3d7282gt',
+  },
+];
+
+export const arabicMultipleTopicsFixture = {
+  c1d8ye54xxlt: {
+    data: {
+      items: [
+        {
+          type: 'video',
+          duration: 'PT4M1S',
+          isLive: false,
+          title: 'كيف يغيّر الذكاء الاصطناعي مستقبل الموسيقى في سوريا؟',
+          firstPublished: '2026-06-29T12:35:03.932Z',
+          lastPublished: '2026-06-29T12:35:03.932Z',
+          link: 'https://www.bbc.com/arabic/articles/c621nnj1d77o',
+          imageUrl:
+            'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/3d53/live/e48ec540-73b6-11f1-8e1d-bbbb1017d210.jpg.webp',
+          description: 'صورة من تقرير لبي بي سي إكسترا',
+          imageAlt: 'صورة من تقرير لبي بي سي إكسترا',
+          isPortraitImage: false,
+          id: 'c621nnj1d77o',
+        },
+        {
+          type: 'article',
+          isLive: false,
+          title:
+            'ما الذي يكشفه أرشيف الأخبار عن أعظم أباطرة الهند المغولية وأكثرهم إثارة للجدل؟',
+          firstPublished: '2026-06-29T09:16:20.660Z',
+          lastPublished: '2026-06-29T09:16:20.660Z',
+          link: 'https://www.bbc.com/arabic/articles/cr47dy1pw1yo',
+          imageUrl:
+            'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/d02f/live/e1ce28b0-63de-11f1-b1db-af71d47507d6.jpg.webp',
+          description:
+            'تعيد آلاف التقارير الإخبارية المنسية تشكيل فهم فترة حكم الإمبراطور المغولي أورنغزيب والعالم المغولي',
+          imageAlt:
+            'الإمبراطور أورنغزيب محمولاً على محفة في هذه اللوحة التي تعود إلى عام 1775',
+          isPortraitImage: false,
+          id: 'cr47dy1pw1yo',
+        },
+        {
+          type: 'article',
+          isLive: false,
+          title: 'رتّب حياتك: أربعة أخطاء شائعة تزيد الفوضى في منزلك',
+          firstPublished: '2026-06-29T04:07:37.780Z',
+          lastPublished: '2026-06-29T04:07:37.780Z',
+          link: 'https://www.bbc.com/arabic/articles/cly7w2x5x9vo',
+          imageUrl:
+            'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/fa95/live/b05cdf20-7143-11f1-8546-8f19e4fe30f4.jpg.webp',
+          description:
+            'تشارك خبيرة الترتيب ديلي كارتر أفضل نصائحها حول تنظيم مطبخك وغرفة جلوسك وملابسك',
+          imageAlt:
+            'ديلي ترتدي قميصاً وردياً منقوشاً بأكمام طويلة، وتستند على كومة من الصناديق البيج',
+          isPortraitImage: false,
+          id: 'cly7w2x5x9vo',
+        },
+        {
+          type: 'article',
+          isLive: false,
+          title: 'لماذا يثير فيلم "الأوديسة" كل هذا الجدل؟',
+          firstPublished: '2026-06-28T08:23:30.597Z',
+          lastPublished: '2026-06-28T08:23:30.597Z',
+          link: 'https://www.bbc.com/arabic/articles/cdej630r0ldo',
+          imageUrl:
+            'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/9605/live/2aef48f0-7224-11f1-a69f-29c4f147006f.jpg.webp',
+          description:
+            'يشارك في بطولة الفيلم كوكبة من النجوم بينهم مات ديمون وزندايا وتوم هولند',
+          imageAlt: 'مات ديمون يلعب دور أوديسيوس بطل ملحمة الأوديسة',
+          isPortraitImage: false,
+          id: 'cdej630r0ldo',
+        },
+      ],
+    },
+    contentType: 'application/json; charset=utf-8',
+  },
+  clmj3d7282gt: {
+    data: {
+      items: [
+        {
+          type: 'article',
+          isLive: false,
+          title:
+            'حفرية منسية تكشف أول عظمة ديناصور عُثر عليها في القطب الجنوبي',
+          firstPublished: '2026-06-29T07:13:05.117Z',
+          lastPublished: '2026-06-29T07:13:05.117Z',
+          link: 'https://www.bbc.com/arabic/articles/c4gyl34kyl7o',
+          imageUrl:
+            'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/6b48/live/fd8a1f50-70c2-11f1-b607-85b4e4066ca8.jpg.webp',
+          description:
+            'تبيّن أن حفرية ظلت منسيةً داخل أحد الأدراج لمدة 40 عاماً هي أقدم اكتشاف لديناصور في القارة القطبية الجنوبية',
+          imageAlt:
+            'تستقر عظمة متحجرة ذات لون بني داكن على خريطة للقارة القطبية الجنوبية',
+          isPortraitImage: false,
+          id: 'c4gyl34kyl7o',
+        },
+        {
+          type: 'article',
+          isLive: false,
+          title: 'كم ينبغي أن ندفع مقابل طعامنا؟',
+          firstPublished: '2026-06-29T04:55:19.617Z',
+          lastPublished: '2026-06-29T04:55:19.617Z',
+          link: 'https://www.bbc.com/arabic/articles/ckg0lrwwne0o',
+          imageUrl:
+            'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/b517/live/d67acd70-6a31-11f1-9b8b-e9d622652531.jpg.webp',
+          description:
+            'هناك أصوات عديدة ترى أنه بدلاً من وضع سقف لأسعار الأطعمة التي تحتوي على قيمة غذائية',
+          imageAlt:
+            'تُظهر هذه الصورة أيدي ثلاثة أشخاص وهم يلفّون قطعاً أسطوانية من الزبدة',
+          isPortraitImage: false,
+          id: 'ckg0lrwwne0o',
+        },
+        {
+          type: 'article',
+          isLive: false,
+          title: 'هل تعلم أن لمشاهدة غروب الشمس فوائد صحية؟',
+          firstPublished: '2026-06-28T14:26:13.985Z',
+          lastPublished: '2026-06-28T14:26:13.985Z',
+          link: 'https://www.bbc.com/arabic/articles/cwy0wy27nrro',
+          imageUrl:
+            'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/dfc0/live/971fad80-72ec-11f1-a52b-4f9c73b26afb.jpg.webp',
+          description:
+            'إضافة إلى جعلنا نشعر بتحسن، قد يعزز غروب الشمس الآسر القدرات الذهنية',
+          imageAlt:
+            'لون غروب الشمس البرتقالي معكوس على سطح بحيرة أسترالية وفي وسط البحيرة ثلاث بجعات',
+          isPortraitImage: false,
+          id: 'cwy0wy27nrro',
+        },
+        {
+          type: 'video',
+          duration: 'PT6M23S',
+          isLive: false,
+          title: 'نادي تشيلسي يوظف التقنيات الرقمية لتعزيز تفاعل المشجعين',
+          firstPublished: '2026-06-28T13:32:59.240Z',
+          lastPublished: '2026-06-28T13:32:59.240Z',
+          link: 'https://www.bbc.com/arabic/articles/c9q2pgr0lglo',
+          imageUrl:
+            'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/dee6/live/a1bbf600-72f5-11f1-b1db-af71d47507d6.jpg.webp',
+          description:
+            'نادي تشيلسي يوظف التقنيات الرقمية لتعزيز تفاعل المشجعين',
+          imageAlt: 'نادي تشيلسي يوظف التقنيات الرقمية لتعزيز تفاعل المشجعين',
+          isPortraitImage: false,
+          id: 'c9q2pgr0lglo',
+        },
+      ],
+    },
+    contentType: 'application/json; charset=utf-8',
+  },
+};
