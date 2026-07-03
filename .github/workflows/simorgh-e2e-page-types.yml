@@ -10,8 +10,22 @@ jobs:
   cypress-run:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         node-version: [22.x]
+        shard:
+          - name: shard-1
+            specs: articlePage,storyPage
+          - name: shard-2
+            specs: topicPage,livePage
+          - name: shard-3
+            specs: homePage,mediaAssetPage,mostReadPage
+          - name: shard-4
+            specs: errorPage404,liveRadioPage,onDemandAudio
+          - name: shard-5
+            specs: liveTvPage,onDemandTV,languagesPage
+          - name: shard-6
+            specs: photoGalleryPage,send,avEmbed
     env:
       CI: true
       LOG_LEVEL: 'error'
@@ -40,11 +54,19 @@ jobs:
         working-directory: ws-nextjs-app
         run: yarn cypress:install
 
-      - name: Run Simorgh NextJS E2Es
+      - name: Run Simorgh NextJS E2Es (${{ matrix.shard.name }})
         uses: cypress-io/github-action@v6
         with:
           install: false
           working-directory: ws-nextjs-app
           build: yarn build
           start: yarn start
-          command: yarn cypress:page-types
+          command: cypress run --browser chrome --spec "./cypress/e2e/pageTypes/{${{ matrix.shard.specs }}}/index.cy.ts"
+
+      - name: Upload Cypress reports (${{ matrix.shard.name }})
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-page-types-reports-${{ matrix.shard.name }}
+          path: ws-nextjs-app/cypress/results/*.xml
+          if-no-files-found: ignore
