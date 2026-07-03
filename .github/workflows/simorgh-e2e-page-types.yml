@@ -15,7 +15,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Generate dynamic page-types shard matrix
+      - name: Generate dynamic page-types group matrix
         id: generate-matrix
         shell: bash
         run: |
@@ -25,7 +25,7 @@ jobs:
           const { readFileSync, readdirSync, statSync } = require('fs');
           const { join } = require('path');
 
-          const SHARD_COUNT = 6;
+          const GROUP_COUNT = 6;
           const root = 'ws-nextjs-app/cypress/e2e/pageTypes';
 
           const nodeVersion = readFileSync('.nvmrc', 'utf8').trim();
@@ -53,19 +53,19 @@ jobs:
             throw new Error('No page-types index.cy.ts files found.');
           }
 
-          const shards = Array.from({ length: SHARD_COUNT }, () => []);
+          const groups = Array.from({ length: GROUP_COUNT }, () => []);
 
           specFiles.forEach((file, index) => {
-            const shardIndex = index % SHARD_COUNT;
-            shards[shardIndex].push(`./${file.replace('ws-nextjs-app/', '')}`);
+            const groupIndex = index % GROUP_COUNT;
+            groups[groupIndex].push(`./${file.replace('ws-nextjs-app/', '')}`);
           });
 
-          const include = shards
+          const include = groups
             .map((specs, index) => ({ specs, index }))
             .filter(({ specs }) => specs.length > 0)
             .map(({ specs, index }) => ({
               'node-version': nodeVersion,
-              'shard-name': `shard-${index + 1}`,
+              'group-name': `group-${index + 1}`,
               'page-types': specs
                 .map(specPath => specPath.split('/').slice(-2, -1)[0])
                 .join(','),
@@ -115,7 +115,7 @@ jobs:
         working-directory: ws-nextjs-app
         run: yarn cypress:install
 
-      - name: Build shard spec list (${{ matrix['shard-name'] }})
+      - name: Build group spec list (${{ matrix['group-name'] }})
         id: build-specs
         shell: bash
         run: |
@@ -137,7 +137,7 @@ jobs:
           echo "Page types under test: $page_types"
           echo "specs=$specs" >> "$GITHUB_OUTPUT"
 
-      - name: Run Simorgh NextJS E2Es (${{ matrix['shard-name'] }})
+      - name: Run Simorgh NextJS E2Es (${{ matrix['group-name'] }})
         uses: cypress-io/github-action@v6
         with:
           install: false
@@ -146,10 +146,10 @@ jobs:
           start: yarn start
           command: yarn exec cypress run --browser chrome --spec ${{ steps.build-specs.outputs.specs }}
 
-      - name: Upload Cypress reports (${{ matrix['shard-name'] }})
+      - name: Upload Cypress reports (${{ matrix['group-name'] }})
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: cypress-page-types-reports-${{ matrix['shard-name'] }}
+          name: cypress-page-types-reports-${{ matrix['group-name'] }}
           path: ws-nextjs-app/cypress/results/*.xml
           if-no-files-found: ignore
