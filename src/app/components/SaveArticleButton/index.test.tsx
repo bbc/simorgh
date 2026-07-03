@@ -53,7 +53,9 @@ describe('SaveArticleButton', () => {
       await act(async () =>
         render(<SaveArticleButton {...defaultProps} />, signedInRenderOptions),
       );
-      expect(screen.getByRole('button')).toHaveTextContent('Save for later');
+      expect(screen.getByRole('button')).toHaveTextContent(
+        'बाद में पढ़ने के लिए सहेजें',
+      );
     });
 
     it('renders Saved to My News when saved', async () => {
@@ -62,7 +64,9 @@ describe('SaveArticleButton', () => {
       await act(async () =>
         render(<SaveArticleButton {...defaultProps} />, signedInRenderOptions),
       );
-      expect(screen.getByRole('button')).toHaveTextContent('Saved to My News');
+      expect(screen.getByRole('button')).toHaveTextContent(
+        'मेरी ख़बरों में सहेजा गया',
+      );
     });
 
     it('renders loading state and keeps the button focusable', async () => {
@@ -76,7 +80,7 @@ describe('SaveArticleButton', () => {
       );
       const button = screen.getByRole('button');
 
-      expect(button).toHaveTextContent('Loading');
+      expect(button).toHaveTextContent('लोड हो रहा है');
       expect(button).toBeEnabled();
     });
 
@@ -94,7 +98,7 @@ describe('SaveArticleButton', () => {
       );
       const button = screen.getByRole('button');
 
-      expect(button).toHaveTextContent('Saving');
+      expect(button).toHaveTextContent('सहेजा जा रहा है');
       expect(button).toBeEnabled();
     });
 
@@ -112,7 +116,7 @@ describe('SaveArticleButton', () => {
       );
       const button = screen.getByRole('button');
 
-      expect(button).toHaveTextContent('Removing');
+      expect(button).toHaveTextContent('हटाया जा रहा है');
       expect(button).toBeEnabled();
     });
 
