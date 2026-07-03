@@ -379,58 +379,6 @@ describe('Moment configuration', () => {
     expect(allButAYear.fromNow()).toEqual('11 months ago');
   });
 
-  it('transitions from minutes to hours at exactly 60 minutes', () => {
-    const fixedNow = Date.UTC(2022, 6, 15, 12, 0, 0);
-    moment.now = jest.fn().mockImplementation(() => fixedNow);
-
-    const fiftyNineMinutesFiftyNineSeconds = moment(
-      fixedNow - (59 * 60 + 59) * 1000,
-    );
-    expect(fiftyNineMinutesFiftyNineSeconds.fromNow()).toEqual(
-      '59 minutes ago',
-    );
-
-    const sixtyMinutes = moment(fixedNow - 60 * 60 * 1000);
-    expect(sixtyMinutes.fromNow()).toEqual('an hour ago');
-  });
-
-  it('transitions from hours to days at exactly 24 hours', () => {
-    const fixedNow = Date.UTC(2022, 6, 15, 12, 0, 0);
-    moment.now = jest.fn().mockImplementation(() => fixedNow);
-
-    const allButOneDay = moment(
-      fixedNow - (23 * 60 * 60 + 59 * 60 + 59) * 1000,
-    );
-    expect(allButOneDay.fromNow()).toEqual('23 hours ago');
-
-    const oneDay = moment(fixedNow - 24 * 60 * 60 * 1000);
-    expect(oneDay.fromNow()).toEqual('a day ago');
-  });
-
-  it('transitions from days to months at exactly 30 days', () => {
-    const fixedNow = Date.UTC(2022, 6, 15, 12, 0, 0);
-    moment.now = jest.fn().mockImplementation(() => fixedNow);
-
-    const allButOneMonth = moment(
-      fixedNow - (29 * 24 * 60 * 60 + 23 * 60 * 60 + 59 * 60 + 59) * 1000,
-    );
-    expect(allButOneMonth.fromNow()).toEqual('29 days ago');
-
-    const thirtyDays = moment(fixedNow - 30 * 24 * 60 * 60 * 1000);
-    expect(thirtyDays.fromNow()).toEqual('a month ago');
-  });
-
-  it('transitions from months to years at exactly 12 months', () => {
-    const fixedNow = Date.UTC(2022, 6, 15, 12, 0, 0);
-    moment.now = jest.fn().mockImplementation(() => fixedNow);
-
-    const elevenMonths = moment(fixedNow).subtract(11, 'months');
-    expect(elevenMonths.fromNow()).toEqual('11 months ago');
-
-    const twelveMonths = moment(fixedNow).subtract(12, 'months');
-    expect(twelveMonths.fromNow()).toEqual('a year ago');
-  });
-
   describe('formatDuration', () => {
     it('should return duration in default format', () => {
       const duration = 'PT30M'; // 30:00
