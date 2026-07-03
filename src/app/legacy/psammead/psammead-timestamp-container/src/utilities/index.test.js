@@ -245,6 +245,42 @@ describe('Timestamp utility functions', () => {
         }),
       ).toEqual('15 June 2021, 16:00 +04');
     });
+
+    it('should translate month names for a non-Latin locale', () => {
+      expect(
+        formatUnixTimestamp({
+          timestamp,
+          format: 'D MMMM YYYY',
+          timezone: 'GMT',
+          locale: 'ar',
+        }),
+      ).toEqual('١٩ أكتوبر ٢٠١٨');
+    });
+
+    it('should apply locale-sensitive format tokens (LL, LT) for a non-Latin locale', () => {
+      expect(
+        formatUnixTimestamp({
+          timestamp,
+          format: null,
+          timezone: 'GMT',
+          locale: 'ar',
+        }),
+      ).toEqual('١٩ أكتوبر ٢٠١٨، ١٧:١٠ GMT');
+    });
+
+    it('should return relative timestamp in the provided locale', () => {
+      const nowSpy = jest.spyOn(Date, 'now').mockReturnValue(1704110400000); // 1 January 2024 12:00:00 UTC
+      const nineHoursAgo = timestampGenerator({ hours: 9 });
+      const output = formatUnixTimestamp({
+        timestamp: nineHoursAgo,
+        format: 'D MMMM YYYY',
+        timezone: 'GMT',
+        locale: 'ar',
+        isRelative: true,
+      });
+      expect(output).toEqual('منذ ٩ ساعات');
+      nowSpy.mockRestore();
+    });
   });
 });
 
