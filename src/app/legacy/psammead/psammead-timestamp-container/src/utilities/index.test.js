@@ -291,7 +291,7 @@ describe('Moment configuration', () => {
     expect(allButAYear.fromNow()).toEqual('11 months ago');
   });
 
-  it('uses configured threshold boundaries between minutes/hours/days/months/years', () => {
+  it('transitions from minutes to hours at exactly 60 minutes', () => {
     const fixedNow = Date.UTC(2022, 6, 15, 12, 0, 0);
     moment.now = jest.fn().mockImplementation(() => fixedNow);
 
@@ -304,6 +304,11 @@ describe('Moment configuration', () => {
 
     const sixtyMinutes = moment(fixedNow - 60 * 60 * 1000);
     expect(sixtyMinutes.fromNow()).toEqual('an hour ago');
+  });
+
+  it('transitions from hours to days at exactly 24 hours', () => {
+    const fixedNow = Date.UTC(2022, 6, 15, 12, 0, 0);
+    moment.now = jest.fn().mockImplementation(() => fixedNow);
 
     const allButOneDay = moment(
       fixedNow - (23 * 60 * 60 + 59 * 60 + 59) * 1000,
@@ -312,6 +317,11 @@ describe('Moment configuration', () => {
 
     const oneDay = moment(fixedNow - 24 * 60 * 60 * 1000);
     expect(oneDay.fromNow()).toEqual('a day ago');
+  });
+
+  it('transitions from days to months at exactly 30 days', () => {
+    const fixedNow = Date.UTC(2022, 6, 15, 12, 0, 0);
+    moment.now = jest.fn().mockImplementation(() => fixedNow);
 
     const allButOneMonth = moment(
       fixedNow - (29 * 24 * 60 * 60 + 23 * 60 * 60 + 59 * 60 + 59) * 1000,
@@ -320,6 +330,11 @@ describe('Moment configuration', () => {
 
     const thirtyDays = moment(fixedNow - 30 * 24 * 60 * 60 * 1000);
     expect(thirtyDays.fromNow()).toEqual('a month ago');
+  });
+
+  it('transitions from months to years at exactly 12 months', () => {
+    const fixedNow = Date.UTC(2022, 6, 15, 12, 0, 0);
+    moment.now = jest.fn().mockImplementation(() => fixedNow);
 
     const elevenMonths = moment(fixedNow).subtract(11, 'months');
     expect(elevenMonths.fromNow()).toEqual('11 months ago');
