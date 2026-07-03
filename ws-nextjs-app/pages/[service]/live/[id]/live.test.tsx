@@ -5,6 +5,7 @@ import {
   screen,
   act,
 } from '#app/components/react-testing-library-with-providers';
+import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import liveFixture from '#data/pidgin/live/c7p765ynk9qt.json';
 import postFixture from '#data/pidgin/posts/postFixture.json';
 import sportDataFixture from '#data/afrique/live/c7gk1vjglxn1t.json';
@@ -15,6 +16,12 @@ import useToggle from '#app/hooks/useToggle';
 import Live, { ComponentProps } from './LivePageLayout';
 import { getServerSideProps } from './[[...variant]].page';
 import { StreamResponse } from './Post/types';
+
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  default: jest.fn(),
+}));
 
 jest.mock('#app/hooks/useLivePagePolling', () => ({
   __esModule: true,
@@ -228,6 +235,8 @@ describe('Live Page', () => {
     global.IntersectionObserver = jest.fn(
       mockIntersectionObserver.getMockIntersectionObserver(),
     );
+
+    mockMatchMedia();
   });
 
   afterEach(() => {
@@ -820,7 +829,7 @@ describe('Live Page', () => {
       });
 
       const visuallyHiddenTitle = screen.getByText(
-        'Villa gain upper hand with gritty Europa League win at Bologna',
+        'Israeli tanks shell Jabalia camp as heavy fighting continues in north Gaza', // mock data, in production this would be a sport title
       );
       expect(visuallyHiddenTitle).toBeInTheDocument();
       expect(visuallyHiddenTitle).toHaveStyle(

@@ -18,7 +18,7 @@ import SERVICES_WITH_NEW_NAV from '#app/components/Navigation/config';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import ConsentBanner from '../ConsentBanner';
 import BrandContainer from '../Brand';
-import NewLogoBanner from './NewLogoBanner';
+import NewLogoBanner, { isGlobalLanguageHomepage } from './NewLogoBanner';
 import styles from './index.styles';
 
 const Header = ({
@@ -88,6 +88,12 @@ const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
 
   const shouldUseNewNav = SERVICES_WITH_NEW_NAV.includes(service);
 
+  const { pathname } = use(RequestContext);
+
+  const isLanguagesPage = isGlobalLanguageHomepage(pathname);
+
+  const shouldShowNewLogoBanner = shouldUseNewNav || isLanguagesPage;
+
   let shouldRenderScriptSwitch = false;
 
   if (scriptLink) {
@@ -112,7 +118,7 @@ const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
 
   return (
     <header role="banner" lang={serviceLang}>
-      {shouldUseNewNav && <NewLogoBanner />}
+      {shouldShowNewLogoBanner && <NewLogoBanner />}
       {isAmp ? (
         <Header
           linkId="brandLink"

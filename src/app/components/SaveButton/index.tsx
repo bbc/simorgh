@@ -1,54 +1,75 @@
-import { useState } from 'react';
-import {
-  Spinner,
-  BookmarkIcon,
-  FilledBookmarkIcon,
-  Close,
-} from '#app/components/icons';
+import { useState, useId } from 'react';
+import { BookmarkIcon, FilledBookmarkIcon, Close } from '#app/components/icons';
+import Spinner from '#app/components/Spinner';
 import styles from './index.styles';
+import VisuallyHiddenText from '../VisuallyHiddenText';
 
 export interface SaveButtonProps {
-  onClick: () => void;
+  visualLabel: string;
+  hoverVisualLabel?: string;
+  accessibleLabel: string;
   isLoading?: boolean;
   isUpdating?: boolean;
   isSaved?: boolean;
-  disabled?: boolean;
-  buttonText?: string;
-  removeText?: string;
+  onClick: (event?: React.MouseEvent<HTMLButtonElement>) => void;
   testId?: string;
 }
 
 const SaveButton = ({
-  onClick,
+  visualLabel,
+  hoverVisualLabel,
+  accessibleLabel,
   isLoading = false,
   isUpdating = false,
   isSaved = false,
-  disabled = false,
-  buttonText,
-  removeText = '',
+  onClick,
   testId,
 }: SaveButtonProps) => {
-  const [isHovered, setIsHovered] = useState(false);
+  const [isFocusedOrHovered, setIsFocusedOrHovered] = useState(false);
+  const labelId = useId();
+
+  const isBusy = isLoading || isUpdating;
+
+  // Hover/focus only changes the visual affordance, never the accessible name.
+  const showRemoveAffordance = isSaved && !isUpdating && isFocusedOrHovered;
+  const displayedVisualLabel =
+    showRemoveAffordance && hoverVisualLabel ? hoverVisualLabel : visualLabel;
+
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    // Guard activation in JS instead of using the disabled attribute, so the
+    // button keeps focus and is never announced by screen readers as "unavailable"
+    if (isBusy) return;
+    onClick(event);
+  };
 
   return (
     <button
       css={[styles.buttonWrapper, isUpdating && styles.updatingState]}
       type="button"
-      onClick={onClick}
-      disabled={disabled || isLoading || isUpdating}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      onFocus={() => setIsHovered(true)}
-      onBlur={() => setIsHovered(false)}
+      aria-labelledby={labelId}
+      onClick={handleClick}
+      onMouseEnter={() => setIsFocusedOrHovered(true)}
+      onMouseLeave={() => setIsFocusedOrHovered(false)}
+      onFocus={() => setIsFocusedOrHovered(true)}
+      onBlur={() => setIsFocusedOrHovered(false)}
       {...(testId && { 'data-testid': testId })}
     >
-      {(isLoading || isUpdating) && <Spinner css={styles.buttonAnimation} />}
-      {!isLoading && !isUpdating && !isSaved && <BookmarkIcon />}
-      {!isLoading &&
-        !isUpdating &&
-        isSaved &&
-        (isHovered ? <Close width="20" height="20" /> : <FilledBookmarkIcon />)}
-      {isHovered && isSaved ? removeText : buttonText}
+      <span aria-hidden="true" css={styles.iconText}>
+        {isBusy && <Spinner />}
+        {!isBusy && !isSaved && <BookmarkIcon />}
+        {!isBusy &&
+          isSaved &&
+          (showRemoveAffordance ? (
+            <Close width="20" height="20" />
+          ) : (
+            <FilledBookmarkIcon />
+          ))}
+        {displayedVisualLabel}
+      </span>
+
+      <VisuallyHiddenText id={labelId} aria-live="assertive">
+        {accessibleLabel}
+      </VisuallyHiddenText>
     </button>
   );
 };

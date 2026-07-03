@@ -177,6 +177,7 @@ exports[`OnDemand Radio Page  should match snapshot 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-10 {
@@ -2119,6 +2120,7 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-10 {
@@ -4018,6 +4020,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-10 {

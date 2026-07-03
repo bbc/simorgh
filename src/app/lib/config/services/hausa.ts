@@ -83,10 +83,9 @@ export const service: DefaultServiceConfig = {
       home: 'Labaran Duniya',
       continueReading: 'Ci gaba da karantawa',
       topicDiscovery: {
-        heading: 'Gano ƙarin abubuwa',
-        moreFromTopic: 'Ƙarin labarai daga {topic}',
-        fetchErrorMessage:
-          'An kasa lodawa. Da fatan za a sake gwadawa daga baya.',
+        heading: 'Gano ƙari',
+        moreAboutTopic: 'Ƙari game da {topic}',
+        fetchErrorMessage: 'An kasa lodawa. Da fatan a sake gwadawa',
       },
       currentPage: 'Shafin da ake ciki',
       skipLinkText: 'Tsallaka zuwa abubuwan da ke ciki',
@@ -385,6 +384,20 @@ export const service: DefaultServiceConfig = {
       },
       sport: {
         matchSummary: 'Takaitaccen Bayanin Wasa',
+        assists: 'Ba da ƙwallo a ci',
+        penalties: 'Fenariti',
+        ht: 'Hutun rabin lokaci',
+        ft: 'Gama Wasa',
+        et: 'Karin lokaci',
+        afterExtraTime: 'Bayan karin lokaci',
+        penaltyAbbreviation: 'FEN',
+        ownGoal: 'kwallo a ragar kai',
+        venue: 'Filin wasa',
+        attendance: 'Yawan ƴan kallo',
+        winOnPenalties: {
+          prefix: 'ta yi nasara',
+          suffix: 'a fenariti',
+        },
         worldCupTeamNames: {
           algeria: 'Algeriya',
           argentina: 'Argentina',
@@ -434,6 +447,18 @@ export const service: DefaultServiceConfig = {
           uruguay: 'Uruguay',
           usa: 'Amurka',
           uzbekistan: 'Uzbekistan',
+        },
+        tournaments: {
+          fifaWorldCup: 'Gasar Kofin Duniya',
+        },
+        stages: {
+          groupStage: 'Matakin rukuni',
+          last32: 'Zagayen ƙasashe 32',
+          last16: 'Zagaye na biyu',
+          quarterFinals: 'Zagayen kwata-fainal',
+          semiFinals: 'Zagayen kusa da karshe',
+          final: 'Wasan ƙarshe',
+          thirdPlaceFinal: 'Karawar neman na uku',
         },
       },
     },

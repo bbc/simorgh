@@ -80,6 +80,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'વધુ વાંચો',
       home: 'સમાચાર',
+      topicDiscovery: {
+        heading: 'વધુ શોધો',
+        moreAboutTopic: '{topic} વિશે વધુ',
+        fetchErrorMessage: 'લોડ કરવામાં નિષ્ફળ. કૃપા કરીને ફરી પ્રયાસ કરો',
+      },
       continueReading: 'આગળ વાંચો',
       currentPage: 'વર્તમાન પેજ',
       skipLinkText: 'કન્ટેન્ટ પર જાવ',
@@ -301,6 +306,18 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'લેટેસ્ટ',
       sport: {
         matchSummary: 'મેચનો સારાંશ',
+        assists: 'આસિસ્ટ',
+        penalties: 'પેનલ્ટી',
+        ht: 'પ્રથમ અર્ધનો અંત',
+        ft: 'રમત પૂર્ણ',
+        et: 'વધારાનો સમય',
+        afterExtraTime: 'વધારાના સમય પછી',
+        penaltyAbbreviation: 'પેન',
+        ownGoal: 'પોતાનો ગોલ',
+        winOnPenalties: {
+          prefix: 'પેનલ્ટીમાં',
+          suffix: 'જીતે છે',
+        },
         worldCupTeamNames: {
           algeria: 'અલ્જીરિયા',
           argentina: 'આર્જેન્ટિના',
@@ -350,6 +367,17 @@ export const service: DefaultServiceConfig = {
           uruguay: 'ઉરુગ્વે',
           usa: 'અમેરિકા',
           uzbekistan: 'ઉઝબેકિસ્તાન',
+        },
+        tournaments: {
+          fifaWorldCup: 'ફિફા વર્લ્ડ કપ',
+        },
+        stages: {
+          groupStage: 'ગ્રૂપ સ્ટેજ',
+          last16: 'રાઉન્ડ ઑફ 16',
+          quarterFinals: 'ક્વાર્ટર-ફાઇનલ',
+          semiFinals: 'સેમિ-ફાઇનલ',
+          final: 'ફાઇનલ',
+          thirdPlaceFinal: 'ત્રીજું સ્થાન',
         },
       },
     },

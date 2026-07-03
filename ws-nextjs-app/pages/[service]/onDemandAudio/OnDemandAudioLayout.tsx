@@ -77,6 +77,10 @@ const OnDemandAudioPage = ({
     ? new Date(availableFrom).toISOString()
     : new Date(releaseDateTimeStamp).toISOString();
 
+  const downloadLink = externalLinks?.find(
+    link =>
+      link.linkType === 'download' && link.linkUrl?.startsWith('https://'),
+  );
   const audioEntities = !mediaIsAvailable
     ? []
     : [
@@ -110,6 +114,10 @@ const OnDemandAudioPage = ({
               '@id': audioId,
               name: episodeTitle || promoBrandTitle,
               description: summary,
+              ...(downloadLink?.linkUrl && {
+                contentUrl: downloadLink.linkUrl,
+                encodingFormat: 'audio/mpeg',
+              }),
               duration: durationISO8601,
               thumbnailUrl: thumbnailImageUrl,
               uploadDate,
@@ -152,7 +160,7 @@ const OnDemandAudioPage = ({
 
   return (
     <>
-      <ATIAnalytics atiData={pageData?.metadata?.atiAnalytics ?? undefined} />
+      <ATIAnalytics />
       <ChartbeatAnalytics
         mediaPageType={isPodcast ? 'Podcasts' : 'Radio'}
         title={headline}

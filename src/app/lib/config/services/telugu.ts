@@ -62,6 +62,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'అన్నీ చూడండి',
       home: 'హోమ్',
+      topicDiscovery: {
+        heading: 'ఇంకా తెలుసుకోండి',
+        moreAboutTopic: '{topic} గురించి మరింత',
+        fetchErrorMessage: 'లోడ్ విఫలమైంది. దయచేసి మళ్ళీ ప్రయత్నించండి',
+      },
       continueReading: 'ఇంకా చదవండి',
       currentPage: 'ప్రస్తుత పేజీ',
       skipLinkText: 'కంటెంట్‌కు వెళ్లండి',
@@ -284,6 +289,18 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'తాజా వార్తలు',
       sport: {
         matchSummary: 'మ్యాచ్ సారాంశం',
+        assists: 'అసిస్టులు',
+        penalties: 'పెనాల్టీలు',
+        ht: 'మొదటి అర్ధం ముగింపు',
+        ft: 'మ్యాచ్ ముగింపు',
+        et: 'అదనపు సమయం',
+        afterExtraTime: 'అదనపు సమయం తరువాత',
+        penaltyAbbreviation: 'పెన్',
+        ownGoal: 'స్వయంగా గోల్',
+        winOnPenalties: {
+          prefix: 'పెనాల్టీలలో',
+          suffix: 'తో గెలుస్తుంది',
+        },
         worldCupTeamNames: {
           algeria: 'అల్జీరియా',
           argentina: 'అర్జెంటీనా',
@@ -333,6 +350,17 @@ export const service: DefaultServiceConfig = {
           uruguay: 'ఉరుగ్వే',
           usa: 'అమెరికా సంయుక్త రాష్ట్రాలు',
           uzbekistan: 'ఉజ్బెకిస్తాన్',
+        },
+        tournaments: {
+          fifaWorldCup: 'FIFA World Cup',
+        },
+        stages: {
+          groupStage: 'గ్రూప్ స్టేజ్',
+          last16: 'రౌండ్ 16',
+          quarterFinals: 'క్వార్టర్ ఫైనల్స్',
+          semiFinals: 'సెమీ ఫైనల్స్',
+          final: 'ఫైనల్',
+          thirdPlaceFinal: 'థర్డ్ ప్లేస్',
         },
       },
     },

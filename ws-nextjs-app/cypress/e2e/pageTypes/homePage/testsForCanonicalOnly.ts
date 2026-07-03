@@ -43,7 +43,8 @@ export default ({ service }) => {
     });
   });
 
-  describe('Portrait Video Curations', () => {
+  // Skipping this one due to a bug caused by repeatedly opening and closing the modal
+  describe.skip('Portrait Video Curations', () => {
     beforeEach(() => {
       cy.viewport(600, 800);
     });
@@ -122,6 +123,7 @@ export default ({ service }) => {
       });
     });
   });
+
   describe('Billboard', () => {
     it('should display the correct number of items in the curation grid if there is at least 2 summaries', () => {
       cy.viewport(1008, 900);

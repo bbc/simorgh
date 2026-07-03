@@ -69,6 +69,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Zobacz wszystkie',
       home: 'Strona główna',
+      topicDiscovery: {
+        heading: 'Odkryj więcej',
+        moreAboutTopic: 'Więcej o {topic}',
+        fetchErrorMessage: 'Nie udało się załadować. Spróbuj ponownie',
+      },
       currentPage: 'Strona bieżąca',
       skipLinkText: 'Przejdź do treści',
       relatedContent: 'Powiązane treści',
@@ -333,6 +338,18 @@ export const service: DefaultServiceConfig = {
       },
       sport: {
         matchSummary: 'Podsumowanie meczu',
+        assists: 'Asysty',
+        penalties: 'Rzuty karne',
+        ht: 'Koniec pierwszej połowy',
+        ft: 'Koniec meczu',
+        et: 'Dogrywka',
+        afterExtraTime: 'Po dogrywce',
+        penaltyAbbreviation: 'k.',
+        ownGoal: 'gol samobójczy',
+        winOnPenalties: {
+          prefix: 'wygrywa',
+          suffix: 'w rzutach karnych',
+        },
         worldCupTeamNames: {
           algeria: 'Algieria',
           argentina: 'Argentyna',
@@ -382,6 +399,12 @@ export const service: DefaultServiceConfig = {
           uruguay: 'Urugwaj',
           usa: 'Stany Zjednoczone',
           uzbekistan: 'Uzbekistan',
+        },
+        tournaments: {
+          fifaWorldCup: 'Mistrzostwa świata w piłce nożnej',
+        },
+        stages: {
+          groupStage: 'Faza grupowa',
         },
       },
     },

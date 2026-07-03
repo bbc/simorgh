@@ -6,10 +6,10 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import { use } from 'react';
 import useUASRecentActivity from '#app/hooks/useUASRecentActivity';
 import Text from '#app/components/Text';
-import styles from '../styles';
+import styles from './styles';
 import MyNewsPageLoading from './MyNewsPageLoading';
 
-const ITEMS_PER_PAGE = 10;
+const ITEMS_PER_PAGE = 24;
 
 interface MyNewsPageContentProps {
   page?: string;
@@ -41,13 +41,14 @@ const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
     ...translations?.pagination,
   };
 
+  if (!translations?.myNews) return null;
+  const { title, errorText, noArticles, description } = translations.myNews;
+
   const translatedPage = pageXOfY
     .replace('{x}', String(activePage))
     .replace('{y}', String(pageCount));
 
-  // TODO: To be updated with translations
-  const metadataTitle =
-    activePage >= 2 ? `My News, ${translatedPage}` : 'My News';
+  const metadataTitle = activePage >= 2 ? `${title}, ${translatedPage}` : title;
 
   if (isLoading) {
     return <MyNewsPageLoading />;
@@ -57,7 +58,7 @@ const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
     if (error) {
       return (
         <Text size="doublePica" fontVariant="sansBold">
-          This content does not seem to be working. Please try again later.
+          {errorText}
         </Text>
       );
     }
@@ -65,13 +66,16 @@ const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
     if (!savedArticles.length) {
       return (
         <Text size="doublePica" fontVariant="sansBold">
-          You haven&apos;t saved any articles yet
+          {noArticles}
         </Text>
       );
     }
 
     return (
       <>
+        <Heading level={2} css={styles.subheading} size="doublePica">
+          {description}
+        </Heading>
         <CurationGrid
           summaries={savedArticles}
           headingLevel={2}
@@ -103,7 +107,7 @@ const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
         lang={lang}
       />
       <Heading level={1} css={styles.heading}>
-        My News
+        {title}
       </Heading>
       {renderContent()}
     </>

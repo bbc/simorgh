@@ -69,6 +69,7 @@ exports[`PlayButton should render audio correctly without duration details 1`] =
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-2>svg {
@@ -196,6 +197,7 @@ exports[`PlayButton should render audio indicator correctly 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-2 {
@@ -346,6 +348,7 @@ exports[`PlayButton should render video by default 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-2>svg {
@@ -480,6 +483,7 @@ exports[`PlayButton should render video correctly with duration and guidance mes
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-2 {
@@ -637,6 +641,7 @@ exports[`PlayButton should render video correctly without duration details 1`] =
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-2>svg {
@@ -771,6 +776,7 @@ exports[`PlayButton should render video indicator correctly 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-2 {

@@ -47,6 +47,7 @@ exports[`should render Copyright with news service context 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 <div>
@@ -111,6 +112,7 @@ exports[`should render Copyright with persian service context 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 <div>
