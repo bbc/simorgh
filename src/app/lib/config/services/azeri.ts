@@ -464,7 +464,7 @@ export const service: DefaultServiceConfig = {
       ],
       copyrightText: 'BBC. BBC kənar saytların məzmununa məsul deyil.',
     },
-    timezone: 'Asia/baku',
+    timezone: 'Asia/Baku',
     navigation: [
       {
         title: 'Xəbərlər',
