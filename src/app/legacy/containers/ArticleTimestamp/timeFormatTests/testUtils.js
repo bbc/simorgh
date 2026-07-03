@@ -52,6 +52,7 @@ export const format = ({ datetimeLocale, timezone, fixture, altCalendar }) => {
   return formatted;
 };
 
+// allows precise checks for edge cases without fixture data
 export const formatTimestamp = ({
   datetimeLocale,
   timezone,

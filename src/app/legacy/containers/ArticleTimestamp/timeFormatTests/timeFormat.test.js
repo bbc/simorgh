@@ -23,23 +23,23 @@ describe('Timestamp Formats', () => {
     });
   });
 
-  describe('characterization edge cases', () => {
+  describe('Timestamp Edge Cases', () => {
     it('should preserve timezone output around DST start for Europe/London', () => {
       const beforeDSTStart = Date.UTC(2021, 2, 28, 0, 30, 0); // 00:30 GMT
       const afterDSTStart = Date.UTC(2021, 2, 28, 1, 30, 0); // 02:30 BST
 
       expect(
         formatTimestamp({
-          datetimeLocale: 'en-gb',
-          timezone: 'Europe/London',
+          datetimeLocale: services.news.default.datetimeLocale,
+          timezone: services.news.default.timezone,
           time: beforeDSTStart,
         }),
       ).toEqual('28 March 2021, 00:30 GMT');
 
       expect(
         formatTimestamp({
-          datetimeLocale: 'en-gb',
-          timezone: 'Europe/London',
+          datetimeLocale: services.news.default.datetimeLocale,
+          timezone: services.news.default.timezone,
           time: afterDSTStart,
         }),
       ).toEqual('28 March 2021, 02:30 BST');
@@ -51,19 +51,52 @@ describe('Timestamp Formats', () => {
 
       expect(
         formatTimestamp({
-          datetimeLocale: 'en-gb',
-          timezone: 'Europe/London',
+          datetimeLocale: services.news.default.datetimeLocale,
+          timezone: services.news.default.timezone,
           time: beforeDSTEnd,
         }),
       ).toEqual('31 October 2021, 01:30 BST');
 
       expect(
         formatTimestamp({
-          datetimeLocale: 'en-gb',
-          timezone: 'Europe/London',
+          datetimeLocale: services.news.default.datetimeLocale,
+          timezone: services.news.default.timezone,
           time: afterDSTEnd,
         }),
       ).toEqual('31 October 2021, 01:30 GMT');
+    });
+
+    it('should preserve half-hour offset output for Asia/Kabul', () => {
+      const utcTimestamp = Date.UTC(2021, 5, 15, 12, 0, 0); // 15 June 2021 12:00 UTC
+
+      expect(
+        formatTimestamp({
+          datetimeLocale: services.dari.default.datetimeLocale,
+          timezone: services.dari.default.timezone,
+          time: utcTimestamp,
+        }),
+      ).toEqual('۱۵ جون ۲۰۲۱ ۱۶:۳۰');
+    });
+
+    it('should preserve timezone output around DST start for Europe/Bucharest', () => {
+      const beforeDSTStart = Date.UTC(2021, 2, 28, 0, 30, 0); // 02:30 EET
+      const afterDSTStart = Date.UTC(2021, 2, 28, 1, 30, 0); // 04:30 EEST
+
+      expect(
+        formatTimestamp({
+          datetimeLocale: services.romania.default.datetimeLocale,
+          timezone: services.romania.default.timezone,
+          time: beforeDSTStart,
+        }),
+      ).toEqual('28 martie 2021, 02:30 EET');
+
+      expect(
+        formatTimestamp({
+          datetimeLocale: services.romania.default.datetimeLocale,
+          timezone: services.romania.default.timezone,
+          time: afterDSTStart,
+        }),
+      ).toEqual('28 martie 2021, 04:30 EEST');
     });
   });
 });
