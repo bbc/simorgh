@@ -27,7 +27,7 @@ const extractSaveArticleProps = (
   const contentBlocks = saveArticlePageData?.content?.model?.blocks;
   const promoImageBlocks = filterForBlockType(contentBlocks, 'image');
   const { altText, rawBlock } = extractPromoImage(
-    promoImageBlocks?.model?.blocks,
+    promoImageBlocks?.model?.blocks ?? [],
   );
   const promoImageUrl =
     rawBlock?.model?.locator && rawBlock?.model?.originCode
