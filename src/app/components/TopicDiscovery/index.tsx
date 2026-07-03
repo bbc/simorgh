@@ -32,6 +32,7 @@ const TopicDiscovery = ({
   } = translations.topicDiscovery || {};
 
   const [activeTabId, setActiveTabId] = useState(topics?.[0]?.topicId || '');
+  const [shouldFocusPromos, setShouldFocusPromos] = useState(false);
   const activeTopic = topics?.find(topic => topic.topicId === activeTabId);
   const currentTopic = activeTopic || topics?.[0];
   const tabs = topics
@@ -40,6 +41,11 @@ const TopicDiscovery = ({
         label: topic.topicName,
       }))
     : [];
+
+  const handleTabChange = (tabId: string) => {
+    setActiveTabId(tabId);
+    setShouldFocusPromos(true);
+  };
   const groupTracker = {
     name: heading,
     type: 'topic-discovery',
@@ -74,6 +80,58 @@ const TopicDiscovery = ({
     ...(experimentProps && experimentProps),
   });
 
+  const focusNextTab = () => {
+    const currentIndex = tabs.findIndex(tab => tab.id === activeTabId);
+    const nextTab = tabs[currentIndex + 1];
+
+    if (!nextTab) return;
+
+    setActiveTabId(nextTab.id);
+    setShouldFocusPromos(false);
+
+    requestAnimationFrame(() => {
+      document.getElementById(`tab-${nextTab.id}`)?.focus();
+    });
+  };
+
+  const handleMoreLinkKeyDown = (
+    event: React.KeyboardEvent<HTMLAnchorElement>,
+  ) => {
+    if (event.key !== 'Tab' || event.shiftKey) {
+      return;
+    }
+
+    event.preventDefault();
+    focusNextTab();
+  };
+
+  const handleTabKeyDown = (
+    event: React.KeyboardEvent<HTMLButtonElement>,
+    tabId: string,
+    isActive: boolean,
+  ) => {
+    if (
+      event.key !== 'Tab' ||
+      event.shiftKey ||
+      !isActive ||
+      !shouldFocusPromos
+    ) {
+      return;
+    }
+
+    const firstPromoLink = document.querySelector(
+      `#tabpanel-${tabId} a, #tabpanel-${tabId} button`,
+    ) as HTMLElement | null;
+
+    if (!firstPromoLink) {
+      return;
+    }
+
+    event.preventDefault();
+    firstPromoLink.focus();
+    setShouldFocusPromos(false);
+  };
+
   if (!topics || topics.length === 0) return null;
   const selectedTopic = currentTopic as ExtractedTopic;
 
@@ -95,10 +153,12 @@ const TopicDiscovery = ({
       <ScrollableTabs
         tabs={tabs}
         activeTabId={activeTabId}
-        onTabChange={setActiveTabId}
+        onTabChange={handleTabChange}
         labelledBy={HEADING_ID}
         groupTracker={groupTracker}
         experimentProps={experimentProps}
+        setShouldFocusPromos={setShouldFocusPromos}
+        onTabKeyDown={handleTabKeyDown}
       />
       <div
         role="tabpanel"
@@ -158,6 +218,7 @@ const TopicDiscovery = ({
                     css={styles.moreFromLink}
                     href={selectedTopic.topicUrl}
                     data-testid="topic-discovery-more-from"
+                    onKeyDown={handleMoreLinkKeyDown}
                     {...moreFromLinkClickTracker}
                   >
                     {moreFromTopic.replace('{topic}', selectedTopic.topicName)}
