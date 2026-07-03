@@ -25,8 +25,27 @@ jobs:
           const { readFileSync, readdirSync, statSync } = require('fs');
           const { join } = require('path');
 
-          const GROUP_COUNT = 6;
+          const GROUP_COUNT = 3;
           const root = 'ws-nextjs-app/cypress/e2e/pageTypes';
+          const preferredGroups = [
+            ['articlePage'],
+            ['homePage', 'onDemandAudio'],
+            [
+              'topicPage',
+              'mostReadPage',
+              'livePage',
+              'storyPage',
+              'liveRadioPage',
+              'onDemandTV',
+              'errorPage404',
+              'photoGalleryPage',
+              'mediaAssetPage',
+              'send',
+              'languagesPage',
+              'liveTvPage',
+              'avEmbed',
+            ],
+          ];
 
           const nodeVersion = readFileSync('.nvmrc', 'utf8').trim();
 
@@ -53,11 +72,32 @@ jobs:
             throw new Error('No page-types index.cy.ts files found.');
           }
 
-          const groups = Array.from({ length: GROUP_COUNT }, () => []);
+          const specByPageType = new Map(
+            specFiles.map(file => {
+              const pageType = file.split('/').slice(-2, -1)[0];
+              return [pageType, `./${file.replace('ws-nextjs-app/', '')}`];
+            }),
+          );
 
-          specFiles.forEach((file, index) => {
-            const groupIndex = index % GROUP_COUNT;
-            groups[groupIndex].push(`./${file.replace('ws-nextjs-app/', '')}`);
+          const groups = preferredGroups.map(pageTypes =>
+            pageTypes.filter(pageType => specByPageType.has(pageType)),
+          );
+
+          const assignedPageTypes = new Set(groups.flat());
+          const unassignedPageTypes = [...specByPageType.keys()]
+            .filter(pageType => !assignedPageTypes.has(pageType))
+            .sort();
+
+          unassignedPageTypes.forEach(pageType => {
+            const targetGroupIndex = groups.reduce(
+              (smallestIndex, currentGroup, currentIndex, allGroups) =>
+                currentGroup.length < allGroups[smallestIndex].length
+                  ? currentIndex
+                  : smallestIndex,
+              0,
+            );
+
+            groups[targetGroupIndex].push(pageType);
           });
 
           const include = groups
@@ -66,9 +106,7 @@ jobs:
             .map(({ specs, index }) => ({
               'node-version': nodeVersion,
               'group-name': `group-${index + 1}`,
-              'page-types': specs
-                .map(specPath => specPath.split('/').slice(-2, -1)[0])
-                .join(','),
+              'page-types': specs.join(','),
             }));
 
           process.stdout.write(JSON.stringify({ include }));
