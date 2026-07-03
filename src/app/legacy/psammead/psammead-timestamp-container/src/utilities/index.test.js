@@ -180,6 +180,71 @@ describe('Timestamp utility functions', () => {
         }),
       ).toEqual('31 October 2021, 01:30 GMT');
     });
+
+    it('should apply a fixed UTC+1 offset for Africa/Lagos (no DST)', () => {
+      const utcTimestamp = Date.UTC(2021, 5, 15, 12, 0, 0); // 15 June 2021 12:00 UTC
+
+      expect(
+        formatUnixTimestamp({
+          timestamp: utcTimestamp,
+          format: 'D MMMM YYYY, HH:mm z',
+          timezone: 'Africa/Lagos',
+          locale,
+        }),
+      ).toEqual('15 June 2021, 13:00 WAT');
+    });
+
+    it('should apply a +05:45 offset for Asia/Kathmandu (no DST, non-whole-hour offset)', () => {
+      const utcTimestamp = Date.UTC(2021, 5, 15, 12, 0, 0); // 15 June 2021 12:00 UTC
+
+      expect(
+        formatUnixTimestamp({
+          timestamp: utcTimestamp,
+          format: 'D MMMM YYYY, HH:mm z',
+          timezone: 'Asia/Kathmandu',
+          locale,
+        }),
+      ).toEqual('15 June 2021, 17:45 +0545');
+    });
+
+    it('should apply a negative UTC-3 offset for America/Sao_Paulo', () => {
+      const utcTimestamp = Date.UTC(2021, 5, 15, 12, 0, 0); // 15 June 2021 12:00 UTC
+
+      expect(
+        formatUnixTimestamp({
+          timestamp: utcTimestamp,
+          format: 'D MMMM YYYY, HH:mm z',
+          timezone: 'America/Sao_Paulo',
+          locale,
+        }),
+      ).toEqual('15 June 2021, 09:00 -03');
+    });
+
+    it('should format correctly for GMT (non-region-style IANA identifier)', () => {
+      const utcTimestamp = Date.UTC(2021, 5, 15, 12, 0, 0); // 15 June 2021 12:00 UTC
+
+      expect(
+        formatUnixTimestamp({
+          timestamp: utcTimestamp,
+          format: 'D MMMM YYYY, HH:mm z',
+          timezone: 'GMT',
+          locale,
+        }),
+      ).toEqual('15 June 2021, 12:00 GMT');
+    });
+
+    it('should format correctly for Asia/baku (non-canonical casing accepted by moment, will need handling in Temporal)', () => {
+      const utcTimestamp = Date.UTC(2021, 5, 15, 12, 0, 0); // 15 June 2021 12:00 UTC
+
+      expect(
+        formatUnixTimestamp({
+          timestamp: utcTimestamp,
+          format: 'D MMMM YYYY, HH:mm z',
+          timezone: 'Asia/baku',
+          locale,
+        }),
+      ).toEqual('15 June 2021, 16:00 +04');
+    });
   });
 });
 
