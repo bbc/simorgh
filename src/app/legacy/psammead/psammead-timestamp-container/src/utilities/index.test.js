@@ -88,7 +88,6 @@ describe('Timestamp utility functions', () => {
       expect(result).toEqual('1 January 2017');
     });
     it('should return relative timestamp if isRelative is true', () => {
-      const nowSpy = jest.spyOn(Date, 'now').mockReturnValue(1704110400000); // 1 January 2024 12:00:00 UTC
       const nineHoursAgo = timestampGenerator({ hours: 9 });
       const output = formatUnixTimestamp({
         timestamp: nineHoursAgo,
@@ -99,7 +98,6 @@ describe('Timestamp utility functions', () => {
       });
       const expectedOutput = '9 hours ago';
       expect(output).toEqual(expectedOutput);
-      nowSpy.mockRestore();
     });
 
     it('should return timestamp with format if format is provided', () => {
@@ -257,25 +255,24 @@ describe('Timestamp utility functions', () => {
 
     it('should return relative timestamp in the provided locale', () => {
       const nowSpy = jest.spyOn(Date, 'now').mockReturnValue(1704110400000); // 1 January 2024 12:00:00 UTC
-      const nineHoursAgo = timestampGenerator({ hours: 9 });
-      const output = formatUnixTimestamp({
-        timestamp: nineHoursAgo,
-        format: 'D MMMM YYYY',
-        timezone: 'GMT',
-        locale: 'ar',
-        isRelative: true,
-      });
-      expect(output).toEqual('منذ ٩ ساعات');
-      nowSpy.mockRestore();
+      try {
+        const nineHoursAgo = timestampGenerator({ hours: 9 });
+        const output = formatUnixTimestamp({
+          timestamp: nineHoursAgo,
+          format: 'D MMMM YYYY',
+          timezone: 'GMT',
+          locale: 'ar',
+          isRelative: true,
+        });
+        expect(output).toEqual('منذ ٩ ساعات');
+      } finally {
+        nowSpy.mockRestore();
+      }
     });
   });
 });
 
 describe('Moment configuration', () => {
-  afterEach(() => {
-    moment.now = () => Date.now();
-  });
-
   it('rounds down', () => {
     const wouldOtherwiseRoundUp = moment()
       .subtract(59, 'minutes')
