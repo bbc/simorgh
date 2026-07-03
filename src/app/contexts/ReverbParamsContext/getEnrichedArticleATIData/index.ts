@@ -31,28 +31,28 @@ export default ({ pageMetadata, serviceContext }) => {
   const isCPS = isPGL || isSTY || isCSP;
 
   // EXPERIMENT: Topic Discovery
-  const topicDiscoveryExperimentName = 'newswb_ws_topic_discovery_module';
-  const topicDiscoveryVariant = useOptimizelyVariation({
-    experimentName: topicDiscoveryExperimentName,
+  const testPageViewsExperimentName = 'test_page_views_aa_3';
+  const testPageViewsVariant = useOptimizelyVariation({
+    experimentName: testPageViewsExperimentName,
     experimentType: ExperimentType.CLIENT_SIDE,
   });
 
-  const isTopicDiscoveryVariant =
-    topicDiscoveryVariant && topicDiscoveryVariant !== 'off';
+  const isTestPageViewsVariant =
+    testPageViewsVariant && testPageViewsVariant !== 'off';
 
-  const topicDiscoveryExperimentProps = getActiveExperimentProps(
-    topicDiscoveryExperimentName,
-    topicDiscoveryVariant,
+  const testPageViewsExperimentProps = getActiveExperimentProps(
+    testPageViewsExperimentName,
+    testPageViewsVariant,
   );
 
   const enrichedData = {
     ...atiData,
     ...(isCPS && { pageTitle: `${atiData.pageTitle} - ${brandName}` }),
-    ...(isTopicDiscoveryVariant &&
-      topicDiscoveryExperimentProps && {
-        experimentName: topicDiscoveryExperimentProps.experimentName,
-        experimentVariant: topicDiscoveryExperimentProps.experimentVariant,
-        experimentProps: topicDiscoveryExperimentProps,
+    ...(isTestPageViewsVariant &&
+      testPageViewsExperimentProps && {
+        experimentName: testPageViewsExperimentProps.experimentName,
+        experimentVariant: testPageViewsExperimentProps.experimentVariant,
+        experimentProps: testPageViewsExperimentProps,
       }),
   };
 
