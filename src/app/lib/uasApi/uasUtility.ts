@@ -1,6 +1,7 @@
 import { whereEq } from 'ramda';
 import type { Services } from '#app/models/types/global';
-import type { OptimoRawImageBlock, Article } from '#app/models/types/optimo';
+import type { OptimoRawImageBlock } from '#app/models/types/optimo';
+import type { ArticlePageData } from '#app/lib/utilities/extractSaveArticleProps';
 import buildIChefURL from '#app/lib/utilities/ichefURL';
 import extractPromoImage from '#app/lib/utilities/extractPromoImage';
 import filterForBlockType from '#app/lib/utilities/blockHandlers';
@@ -34,9 +35,8 @@ const buildGlobalId = (
   resourceType = FAVOURITES_CONFIG.resourceType,
 ): string => `urn:bbc:${resourceDomain}:${resourceType}:${resourceId}`;
 
-const extractPromoImageFromArticleData = (articlePageData?: Article) => {
-  const promoImageBlocks =
-    articlePageData?.promo?.images?.defaultPromoImage?.blocks ?? [];
+const extractPromoImageFromArticleData = (articlePageData: ArticlePageData) => {
+  const promoImageBlocks = articlePageData.promoImageBlocks ?? [];
 
   const { altText, rawBlock } = extractPromoImage(promoImageBlocks);
 
@@ -93,11 +93,11 @@ const extractHeadlineFromBlocks = (
  * @returns Object with tracked metadata fields
  */
 const buildCurrentMetadata = (
-  articlePageData: Article,
+  articlePageData: ArticlePageData,
   { articleId, service }: { articleId: string; service: Services },
 ): Record<string, unknown> => {
   const promoImage = extractPromoImageFromArticleData(articlePageData);
-  const contentBlocks = articlePageData?.content?.model?.blocks;
+  const { contentBlocks } = articlePageData;
   const headline = extractHeadlineFromBlocks(contentBlocks);
   return {
     articleId,
@@ -105,7 +105,7 @@ const buildCurrentMetadata = (
     title: headline,
     promoImage: buildPromoImageUrl(promoImage),
     promoImageAltText: promoImage?.altText,
-    locatorUrl: articlePageData?.metadata?.locators?.canonicalUrl ?? '',
+    locatorUrl: articlePageData.canonicalUrl,
   };
 };
 
@@ -133,7 +133,7 @@ const createFavouritesPayload = ({
 }: {
   articleId: string;
   service: Services;
-  articlePageData: Article;
+  articlePageData: ArticlePageData;
 }): UasApiRequestBody => ({
   activityType: FAVOURITES_CONFIG.activityType,
   resourceDomain: FAVOURITES_CONFIG.resourceDomain,

@@ -1,6 +1,6 @@
 import { renderHook } from '#app/components/react-testing-library-with-providers';
 import * as uasUtility from '#app/lib/uasApi/uasUtility';
-import { Article } from '#app/models/types/optimo';
+import { ArticlePageData } from '#app/lib/utilities/extractSaveArticleProps';
 import useUASMetadataSync from './index';
 
 jest.mock('#app/lib/uasApi/uasUtility');
@@ -10,21 +10,11 @@ const mockCompareMetadataWithSaved =
   uasUtility.compareMetadataWithSaved as jest.Mock;
 
 describe('useUASMetadataSync', () => {
-  const mockArticlePageData = {
-    id: 'c123456789o',
-    metadata: {
-      canonicalUrl: 'https://bbc.com/article',
-    },
-    promo: {
-      images: {
-        defaultPromoImage: {
-          path: '/image.jpg',
-        },
-      },
-    },
-    content: [{ type: 'text', model: { blocks: [{ text: 'Content' }] } }],
-    mostRead: [],
-  } as unknown as Article;
+  const mockArticlePageData: ArticlePageData = {
+    contentBlocks: [{ type: 'text', model: { blocks: [{ text: 'Content' }] } }],
+    promoImageBlocks: [],
+    canonicalUrl: 'https://bbc.com/article',
+  };
 
   const mockSavedMetadata = {
     title: 'Old Title',
@@ -134,21 +124,6 @@ describe('useUASMetadataSync', () => {
         articleId: 'c123456789o',
         service: 'hindi',
         isSaved: false,
-        savedArticleMetadata: mockSavedMetadata,
-        onMetadataOutOfDate: mockOnMetadataOutOfDate,
-      }),
-    );
-
-    expect(mockOnMetadataOutOfDate).not.toHaveBeenCalled();
-  });
-
-  it('does not call onMetadataOutOfDate when articlePageData is missing', () => {
-    renderHook(() =>
-      useUASMetadataSync({
-        articlePageData: undefined,
-        articleId: 'c123456789o',
-        service: 'hindi',
-        isSaved: true,
         savedArticleMetadata: mockSavedMetadata,
         onMetadataOutOfDate: mockOnMetadataOutOfDate,
       }),

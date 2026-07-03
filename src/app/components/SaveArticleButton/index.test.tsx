@@ -1,5 +1,6 @@
 import useUASButton from '#app/hooks/useUASButton';
 import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
+import extractArticleMetadata from '#app/lib/utilities/extractSaveArticleProps';
 import { Article } from '#app/models/types/optimo';
 import { render, screen, act } from '../react-testing-library-with-providers';
 import SaveArticleButton from '.';
@@ -24,7 +25,28 @@ const personalizationToggle = {
 };
 
 describe('SaveArticleButton', () => {
-  const defaultProps = {};
+  const articlePageData = {
+    content: {
+      model: {
+        blocks: [],
+      },
+    },
+    metadata: {
+      locators: {
+        canonicalUrl: 'https://www.bbc.com/hindi/articles/c1l97706v5mo',
+      },
+    },
+    promo: {
+      images: {
+        defaultPromoImage: {
+          blocks: [],
+        },
+      },
+    },
+  } as unknown as Article;
+  const articleExtractPageData = extractArticleMetadata(articlePageData);
+
+  const defaultProps = { articlePageData: articleExtractPageData };
 
   const mockHandleSaveAction = jest.fn();
 
@@ -131,30 +153,16 @@ describe('SaveArticleButton', () => {
     });
 
     it('passes articleId to useUASButton hook', async () => {
-      const articlePageData = {
-        metadata: {
-          locators: {
-            canonicalUrl: 'https://www.bbc.com/hindi/articles/c1l97706v5mo',
-          },
-        },
-      } as Article;
-
       await act(async () =>
-        render(
-          <SaveArticleButton
-            {...defaultProps}
-            articlePageData={articlePageData}
-          />,
-          {
-            ...signedInRenderOptions,
-            pathname: '/hindi/articles/c1l97706v5mo',
-          },
-        ),
+        render(<SaveArticleButton {...defaultProps} />, {
+          ...signedInRenderOptions,
+          pathname: '/hindi/articles/c1l97706v5mo',
+        }),
       );
 
       expect(mockedUseUASButton).toHaveBeenCalledWith(
         expect.objectContaining({
-          articlePageData,
+          articlePageData: articleExtractPageData,
           articleId: 'c1l97706v5mo',
         }),
       );

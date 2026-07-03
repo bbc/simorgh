@@ -4,11 +4,11 @@ import {
   createFavouritesPayload,
   buildCurrentMetadata,
 } from '#app/lib/uasApi/uasUtility';
-import type { Article } from '#app/models/types/optimo';
+import type { ArticlePageData } from '#app/lib/utilities/extractSaveArticleProps';
 import type { Services } from '#app/models/types/global';
 
 interface SaveOrUpdateArticleMetadataParams {
-  articlePageData: Article;
+  articlePageData: ArticlePageData;
   articleId: string;
   service: Services;
   isRefreshAvailable: boolean;

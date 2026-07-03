@@ -1,12 +1,12 @@
 import { use } from 'react';
 import { AccountContext } from '#contexts/AccountContext';
-import { Article } from '#app/models/types/optimo';
+import type { ArticlePageData } from '#app/lib/utilities/extractSaveArticleProps';
 import SaveArticleButtonAuthenticated from './SaveArticleButtonAuthenticated/lazy';
 import SaveArticleButtonGuest from './SaveArticleButtonGuest';
 import styles from './index.styles';
 
 export interface SaveArticleButtonProps {
-  articlePageData?: Article;
+  articlePageData: ArticlePageData;
 }
 
 const SAVE_ARTICLE_BUTTON_ID = 'save-article-button';

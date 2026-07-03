@@ -30,6 +30,7 @@ import {
   getLang,
 } from '#lib/utilities/parseAssetData';
 import extractPromoImage from '#lib/utilities/extractPromoImage';
+import extractSaveArticleProps from '#app/lib/utilities/extractSaveArticleProps';
 import RelatedTopics from '#app/components/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import InlinePodcastPromo from '#containers/PodcastPromo/Inline';
@@ -107,7 +108,7 @@ const getTimestampComponent =
     lastPublished: string,
     readTimeValue: number | undefined,
     readTimeTranslations: Translations['readTime'],
-    articlePageData?: Article,
+    articlePageData: Article,
   ) =>
   (props: ComponentToRenderProps & TimeStampProps) => {
     const shouldDisplayReadTime = !!(readTimeTranslations && readTimeValue);
@@ -138,7 +139,9 @@ const getTimestampComponent =
             )}
           </>
         )}
-        <SaveArticleButton articlePageData={articlePageData} />
+        <SaveArticleButton
+          articlePageData={extractSaveArticleProps(articlePageData)}
+        />
       </>
     );
   };

@@ -5,7 +5,7 @@ import useUASMetadataSync from '#app/hooks/useUASMetadataSync';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import uasApiRequest from '#app/lib/uasApi';
 import { buildGlobalId, FAVOURITES_CONFIG } from '#app/lib/uasApi/uasUtility';
-import { Article } from '#app/models/types/optimo';
+import type { ArticlePageData } from '#app/lib/utilities/extractSaveArticleProps';
 import uasKeys from '#app/lib/uasApi/queryKeys';
 import { AccountContext } from '#app/contexts/AccountContext';
 import upsertArticleData from '#app/lib/uasApi/upsertArticleData';
@@ -24,7 +24,7 @@ interface UseUASButtonReturn {
 }
 export interface UseUASButtonProps {
   articleId: string;
-  articlePageData?: Article;
+  articlePageData: ArticlePageData;
 }
 
 // NOTE: Using this hook anywhere in the app will eagerly pull TanStack Query into the bundle.
@@ -42,9 +42,6 @@ const useUASButton = ({
   const mutation = useMutation({
     mutationFn: async (action: UASAction) => {
       if (action === UASAction.SAVE) {
-        if (!articlePageData) {
-          throw new Error('Article data is required to save');
-        }
         return upsertArticleData({
           articlePageData,
           articleId,
@@ -75,9 +72,7 @@ const useUASButton = ({
   });
 
   const handleMetadataOutOfDate = () => {
-    if (articlePageData) {
-      mutation.mutate(UASAction.SAVE);
-    }
+    mutation.mutate(UASAction.SAVE);
   };
 
   useUASMetadataSync({

@@ -3,11 +3,11 @@ import {
   buildCurrentMetadata,
   compareMetadataWithSaved,
 } from '#app/lib/uasApi/uasUtility';
-import type { Article } from '#app/models/types/optimo';
+import type { ArticlePageData } from '#app/lib/utilities/extractSaveArticleProps';
 import type { Services } from '#app/models/types/global';
 
 interface UseUASMetadataSyncParams {
-  articlePageData?: Article;
+  articlePageData: ArticlePageData;
   articleId: string;
   service: Services;
   isSaved: boolean;
@@ -41,7 +41,7 @@ const useUASMetadataSync = ({
   const hasSyncedRef = useRef(false);
 
   useEffect(() => {
-    if (!isSaved || !articlePageData || !savedArticleMetadata) {
+    if (!isSaved || !savedArticleMetadata) {
       hasSyncedRef.current = false;
       return;
     }
