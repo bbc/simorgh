@@ -104,7 +104,7 @@ describe('MyNewsPage', () => {
 
     await waitFor(() => {
       expect(
-        screen.getByText("You haven't saved any articles yet"),
+        screen.getByText('आपने अभी तक कोई लेख सहेजा नहीं है'),
       ).toBeInTheDocument();
     });
   });
@@ -124,7 +124,7 @@ describe('MyNewsPage', () => {
     await waitFor(() => {
       expect(
         screen.getByText(
-          'This content does not seem to be working. Please try again later.',
+          'लगता है यह कंटेंट लोड नहीं हो रहा है. कृपया बाद में पुनः प्रयास करें.',
         ),
       ).toBeInTheDocument();
     });
