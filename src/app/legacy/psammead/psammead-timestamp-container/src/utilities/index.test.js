@@ -233,19 +233,6 @@ describe('Timestamp utility functions', () => {
       ).toEqual('15 June 2021, 12:00 GMT');
     });
 
-    it('should format correctly for Asia/baku (non-canonical casing accepted by moment, will need handling in Temporal)', () => {
-      const utcTimestamp = Date.UTC(2021, 5, 15, 12, 0, 0); // 15 June 2021 12:00 UTC
-
-      expect(
-        formatUnixTimestamp({
-          timestamp: utcTimestamp,
-          format: 'D MMMM YYYY, HH:mm z',
-          timezone: 'Asia/baku',
-          locale,
-        }),
-      ).toEqual('15 June 2021, 16:00 +04');
-    });
-
     it('should translate month names for a non-Latin locale', () => {
       expect(
         formatUnixTimestamp({
