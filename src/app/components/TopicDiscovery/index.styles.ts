@@ -102,6 +102,7 @@ const styles = {
       width: '100%',
       aspectRatio: '16 / 9',
       background: `linear-gradient(to right, ${palette.GREY_4} 0%, ${palette.GREY_3} 100%)`,
+      border: `${pixelsToRem(2)}rem solid transparent`,
     }),
   skeletonTextLines: ({ spacings }: Theme) =>
     css({
