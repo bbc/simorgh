@@ -279,7 +279,7 @@ describe('ReverbParamsContext', () => {
               app_type: 'responsive',
               content_language: 'pcm',
               mv_creation: 'experimentVariant',
-              mv_test: 'newswb_ws_topic_discovery_module',
+              mv_test: 'test_page_views_aa_3',
               product_platform: null,
               referrer_url: null,
               x11: '2020-03-04T18:58:43.000Z',
@@ -307,7 +307,7 @@ describe('ReverbParamsContext', () => {
         },
       },
       experimentProps: {
-        experimentName: 'newswb_ws_topic_discovery_module',
+        experimentName: 'test_page_views_aa_3',
         experimentVariant: 'experimentVariant',
         sendOptimizelyEvents: true,
       },

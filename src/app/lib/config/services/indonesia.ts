@@ -85,8 +85,8 @@ export const service: DefaultServiceConfig = {
       home: 'Berita',
       topicDiscovery: {
         heading: 'Temukan lebih banyak',
-        moreFromTopic: 'Selengkapnya dari {topic}',
-        fetchErrorMessage: 'Gagal memuat. Silakan coba lagi nanti.',
+        moreAboutTopic: 'Lebih banyak tentang {topic}',
+        fetchErrorMessage: 'Gagal memuat. Silakan coba lagi',
       },
       currentPage: 'Halaman saat ini',
       skipLinkText: 'Langsung ke konten',
@@ -305,6 +305,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'Majalah',
       latestMediaTitle: 'Terbaru',
       sport: {
+        keyEventsTitle: 'Peristiwa penting',
         matchSummary: 'Ringkasan Pertandingan',
         assists: 'Assist',
         penalties: 'Penalti',

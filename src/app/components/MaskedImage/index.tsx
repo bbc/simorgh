@@ -1,7 +1,6 @@
 import { use } from 'react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Image from '#app/components/Image';
-import buildIChefURL from '#app/lib/utilities/ichefURL';
 import { createSrcsets } from '#app/lib/utilities/srcSet';
 import getOriginCode from '#app/lib/utilities/imageSrcHelpers/originCode';
 import getLocator from '#app/lib/utilities/imageSrcHelpers/locator';
@@ -14,7 +13,6 @@ type Props = {
   altText?: string;
   showPlaceholder?: boolean;
   showVignette?: boolean;
-  isLivePageHeaderImage?: boolean;
   singleImageLayout?: boolean;
 };
 
@@ -47,7 +45,6 @@ const MaskedImage = ({
   altText = '',
   showPlaceholder = true,
   showVignette = false,
-  isLivePageHeaderImage = false,
   singleImageLayout = false,
 }: Props) => {
   const { dir } = use(ServiceContext);
@@ -64,13 +61,6 @@ const MaskedImage = ({
       locator,
       originalImageWidth: imageWidth,
     });
-
-  const DEFAULT_IMAGE_RES = 480;
-  const srcWebp = buildIChefURL({
-    originCode,
-    locator,
-    resolution: DEFAULT_IMAGE_RES,
-  });
 
   const shouldFillHeight = singleImageLayout;
   const shouldDisableExtraWideMask = singleImageLayout;
@@ -91,7 +81,7 @@ const MaskedImage = ({
     >
       <Image
         alt={altText}
-        src={isLivePageHeaderImage ? srcWebp : imageUrl}
+        src={imageUrl}
         srcSet={primarySrcset || undefined}
         fallbackSrcSet={fallbackSrcset || undefined}
         mediaType={primaryMimeType || undefined}

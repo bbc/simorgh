@@ -63,6 +63,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: '全ての記事を見る',
       home: 'ホーム',
+      topicDiscovery: {
+        heading: 'もっと見る',
+        moreAboutTopic: '{topic} についてもっと',
+        fetchErrorMessage: '読み込みに失敗しました。もう一度お試しください',
+      },
       currentPage: '現在のページ',
       skipLinkText: 'コンテンツへ移動',
       relatedContent: '関連コンテンツ',
@@ -261,6 +266,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: '読み物・解説',
       latestMediaTitle: '最新動画',
       sport: {
+        keyEventsTitle: '主な出来事',
         assists: 'アシスト',
         penalties: 'PK',
         ht: '前半終了',

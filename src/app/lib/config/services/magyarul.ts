@@ -65,6 +65,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Összes megtekintése',
       home: 'Főoldal',
+      topicDiscovery: {
+        heading: 'Továbbiak felfedezése',
+        moreAboutTopic: 'Több a {topic} témáról',
+        fetchErrorMessage: 'Nem sikerült betölteni. Kérjük, próbálja újra',
+      },
       currentPage: 'Jelenlegi oldal',
       skipLinkText: 'Ugrás a tartalomra',
       relatedContent: 'Kapcsolódó tartalom',
@@ -322,6 +327,7 @@ export const service: DefaultServiceConfig = {
         closedDescription: 'Bezárt {{date}}.',
       },
       sport: {
+        keyEventsTitle: 'Fő események',
         matchSummary: 'Mérkőzés összefoglaló',
         assists: 'Gólpasszok',
         penalties: 'Büntetők',

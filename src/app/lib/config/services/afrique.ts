@@ -81,6 +81,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Tout voir',
       home: 'Accueil',
+      topicDiscovery: {
+        heading: 'Découvrir davantage',
+        moreAboutTopic: 'Plus sur {topic}',
+        fetchErrorMessage: 'Échec du chargement. Veuillez réessayer',
+      },
       continueReading: 'Continuer la lecture',
       currentPage: 'Page en cours',
       skipLinkText: 'Aller au contenu',
@@ -309,6 +314,7 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'À la une',
       featuresAnalysisTitle: 'Le choix de la rédaction',
       sport: {
+        keyEventsTitle: 'Faits marquants',
         matchSummary: 'Résumé du match',
         assists: 'Passes décisives',
         penalties: 'Tirs au but',

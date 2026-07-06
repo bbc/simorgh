@@ -145,9 +145,8 @@ export const service: SerbianConfig = {
       home: 'Glavna stranica',
       topicDiscovery: {
         heading: 'Otkrijte više',
-        moreFromTopic: 'Više iz {topic}',
-        fetchErrorMessage:
-          'Učitavanje nije uspelo. Molimo pokušajte ponovo kasnije.',
+        moreAboutTopic: 'Više o {topic}',
+        fetchErrorMessage: 'Učitavanje nije uspelo. Pokušajte ponovo',
       },
       currentPage: 'Otvorena stranica',
       skipLinkText: 'Pređite na sadržaj',
@@ -619,9 +618,8 @@ export const service: SerbianConfig = {
       home: 'Главна страница',
       topicDiscovery: {
         heading: 'Откријте више',
-        moreFromTopic: 'Више из {topic}',
-        fetchErrorMessage:
-          'Учитавање није успело. Молимо покушајте поново касније.',
+        moreAboutTopic: 'Више о {topic}',
+        fetchErrorMessage: 'Учитавање није успело. Покушајте поново',
       },
       currentPage: 'Отворена страница',
       skipLinkText: 'Пређите на садржај',

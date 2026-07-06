@@ -65,6 +65,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'ټول وګورئ',
       home: 'کور پاڼه',
+      topicDiscovery: {
+        heading: 'نور وپلټئ',
+        moreAboutTopic: 'د {topic} په اړه نور',
+        fetchErrorMessage: 'پورته کول ناکام شول. مهرباني وکړئ بیا هڅه وکړئ',
+      },
       currentPage: 'اوسنۍ پاڼه',
       skipLinkText: 'مطلب ته ورشئ',
       relatedContent: 'ورته مطالب',
@@ -297,6 +302,7 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'مهم خبرونه',
       featuresAnalysisTitle: 'ځانګړي مطالب',
       sport: {
+        keyEventsTitle: 'مهمے پېړې',
         matchSummary: 'د لوبې لنډیز',
         assists: 'اسسټ',
         penalties: 'پنالټي',
