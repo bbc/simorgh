@@ -307,6 +307,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'විශේෂාංග',
       latestMediaTitle: 'අලුත්ම',
       sport: {
+        keyEventsTitle: 'ප්‍රධාන සිදුවීම්',
         matchSummary: 'තරඟ සාරාංශය',
         assists: 'ඇසිස්ට්',
         penalties: 'පෙනල්ටි',

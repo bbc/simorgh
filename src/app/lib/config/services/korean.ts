@@ -277,6 +277,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: '이 시간 이슈',
       latestMediaTitle: '최신 뉴스',
       sport: {
+        keyEventsTitle: '주요 이벤트',
         matchSummary: '경기 요약',
         assists: '도움',
         penalties: '승부차기',
