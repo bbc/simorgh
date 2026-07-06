@@ -75,6 +75,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Raba vyose',
       home: `Urupapuro rw'itangiriro`,
+      topicDiscovery: {
+        heading: 'Menya byinshi',
+        moreAboutTopic: 'Ibindi bijyanye na {topic}',
+        fetchErrorMessage: 'Ntibyashoboye gufunguka. Ongera ugerageze',
+      },
       continueReading: 'Komeza usome',
       currentPage: 'Uru rupapuro',
       skipLinkText: 'Simbira ku birimwo',
@@ -303,6 +308,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'Ivyo BBC Gahuza ibahitiramwo',
       latestMediaTitle: 'Ibiheruka',
       sport: {
+        keyEventsTitle: "Ibyabaye by'ingenzi",
         matchSummary: 'Incamake y’umukino',
         assists: 'Imipira yatanze ibitego',
         penalties: 'Penaliti',

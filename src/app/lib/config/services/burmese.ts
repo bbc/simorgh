@@ -77,6 +77,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'အားလုံးကြည့်ရန်',
       home: 'ပင်မစာမျက်နှာ',
+      topicDiscovery: {
+        heading: 'ပိုမိုရှာဖွေပါ',
+        moreAboutTopic: '{topic} အကြောင်း ပိုမို',
+        fetchErrorMessage: 'ဖွင့်ရန် မအောင်မြင်ပါ။ ထပ်ကြိုးစားပါ',
+      },
       currentPage: 'လက်ရှိကြည့်နေသော စာမျက်နှာ',
       skipLinkText: 'အကြောင်းအရာများဆီ ကျော်သွားရန်',
       relatedContent: 'ဒီသတင်းနဲ့ ပတ်သက်သမျှ',
@@ -315,6 +320,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'ဆောင်းပါး',
       latestMediaTitle: 'နောက်ဆုံးရ',
       sport: {
+        keyEventsTitle: 'အဓိကဖြစ်ရပ်များ',
         matchSummary: 'ပွဲအကျဉ်းချုပ်',
         assists: 'ဂိုးဖန်တီးမှုများ',
         penalties: 'ပင်နယ်တီး',

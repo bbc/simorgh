@@ -62,6 +62,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'అన్నీ చూడండి',
       home: 'హోమ్',
+      topicDiscovery: {
+        heading: 'ఇంకా తెలుసుకోండి',
+        moreAboutTopic: '{topic} గురించి మరింత',
+        fetchErrorMessage: 'లోడ్ విఫలమైంది. దయచేసి మళ్ళీ ప్రయత్నించండి',
+      },
       continueReading: 'ఇంకా చదవండి',
       currentPage: 'ప్రస్తుత పేజీ',
       skipLinkText: 'కంటెంట్‌కు వెళ్లండి',
@@ -283,6 +288,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'ఫీచర్లు',
       latestMediaTitle: 'తాజా వార్తలు',
       sport: {
+        keyEventsTitle: 'కీలక సంఘటనలు',
         matchSummary: 'మ్యాచ్ సారాంశం',
         assists: 'అసిస్టులు',
         penalties: 'పెనాల్టీలు',
