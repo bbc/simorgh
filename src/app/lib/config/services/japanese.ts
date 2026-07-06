@@ -266,6 +266,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: '読み物・解説',
       latestMediaTitle: '最新動画',
       sport: {
+        keyEventsTitle: '主な出来事',
         assists: 'アシスト',
         penalties: 'PK',
         ht: '前半終了',
