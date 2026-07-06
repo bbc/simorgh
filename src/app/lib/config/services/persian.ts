@@ -83,6 +83,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'بیشتر',
       home: 'صفحه اول',
+      topicDiscovery: {
+        heading: 'بیشتر کشف کنید',
+        moreAboutTopic: 'بیشتر درباره {topic}',
+        fetchErrorMessage: 'بارگذاری ناموفق بود. لطفاً دوباره تلاش کنید',
+      },
       continueReading: 'ادامه مطلب را بخوانید',
       currentPage: 'صفحه فعلی',
       skipLinkText: 'مشاهده محتوا',
@@ -390,6 +395,7 @@ export const service: DefaultServiceConfig = {
         closedDescription: 'امکان ارسال در {{date}} تمام شد.',
       },
       sport: {
+        keyEventsTitle: 'رویدادهای کلیدی',
         matchSummary: 'خلاصه مسابقه',
         assists: 'پاس گل',
         penalties: 'پنالتی',

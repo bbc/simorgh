@@ -80,7 +80,12 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Lee ha niile',
       home: 'Akụkọ',
-      continueReading: 'Gaa n’ihu gụọ',
+      topicDiscovery: {
+        heading: 'Chọpụta karịa',
+        moreAboutTopic: 'Ihe ndị ọzọzọ banyere {topic}',
+        fetchErrorMessage: 'Ọ dara ịgbakwunye. Biko nwalee ọzọ',
+      },
+      continueReading: "Gaa n'ihu gụọ",
       currentPage: 'Peegi ị nọ ugbua',
       skipLinkText: 'Wụga n’ọdịnaya',
       relatedContent: "Ihe ndị ọzọ n'akụkọ a",
@@ -297,6 +302,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'Kọwaara m isi akụkọ',
       latestMediaTitle: 'Kachasị ọhụrụ',
       sport: {
+        keyEventsTitle: 'Ihe omume dị mkpa',
         matchSummary: 'Nchịkọta Asọmpi',
         assists: 'Nye enyemaka',
         penalties: 'Penariti',

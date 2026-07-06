@@ -81,6 +81,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Баарын көрүү',
       home: 'Башталгыч бет',
+      topicDiscovery: {
+        heading: 'Көбүрөөк табуу',
+        moreAboutTopic: '{topic} жөнүндө көбүрөөк',
+        fetchErrorMessage: 'Жүктөө ишке ашкан жок. Кайра аракет кылыңыз',
+      },
       currentPage: 'Ачылып турган баракча',
       skipLinkText: 'Сайтка өтүү',
       relatedContent: 'Тема боюнча башка макалалар',
@@ -298,6 +303,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'Редактордун тандоосу',
       latestMediaTitle: 'Соңку',
       sport: {
+        keyEventsTitle: 'Негизги окуялар',
         matchSummary: 'Оюндун жыйынтыгы',
         assists: 'Пас берүү',
         penalties: 'Пенальти',

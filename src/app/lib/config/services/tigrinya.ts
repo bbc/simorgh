@@ -79,6 +79,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'ንኹሉ ርኣዩ',
       home: 'መእተዊ ገጽ',
+      topicDiscovery: {
+        heading: 'ተወሳኺ መርምር',
+        moreAboutTopic: 'ተወሳኩ ብዛዕባ {topic}',
+        fetchErrorMessage: 'ምጫን ኣይከኣለን። እባክካ ዳግም ፈትን',
+      },
       continueReading: 'ምንባብ ቀጽል',
       currentPage: 'ዘለኹሞ ገጽ',
       skipLinkText: 'ናብቲ ትሕዝቶ ቀጽሉ',
@@ -282,6 +287,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'ኣዘራረብቲ ዛዕባታት',
       latestMediaTitle: 'ናይ መወዳእታ',
       sport: {
+        keyEventsTitle: 'ኣገዳሲ ፍጻመታት',
         matchSummary: 'ሓፈሻዊ ጸብጻብ ግጥሚ',
         assists: 'ኣሊዓሊያ',
         penalties: 'ፔናልቲ',

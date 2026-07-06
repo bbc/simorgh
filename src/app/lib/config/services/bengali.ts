@@ -83,6 +83,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'সবগুলো খবর দেখুন',
       home: 'মূলপাতা',
+      topicDiscovery: {
+        heading: 'আরও আবিষ্কার করুন',
+        moreAboutTopic: '{topic} সম্পর্কে আরও',
+        fetchErrorMessage: 'লোড হতে ব্যর্থ। অনুগ্রহ করে আবার চেষ্টা করুন',
+      },
       currentPage: 'বর্তমান পেজ',
       skipLinkText: 'সরাসরি কনটেন্টে যান',
       relatedContent: 'এই খবর নিয়ে আরো তথ্য',
@@ -302,6 +307,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'নির্বাচিত খবর',
       latestMediaTitle: 'সর্বশেষ',
       sport: {
+        keyEventsTitle: 'গুরুত্বপূর্ণ ঘটনা',
         matchSummary: 'ম্যাচের সারসংক্ষেপ',
         assists: 'অ্যাসিস্ট',
         penalties: 'পেনাল্টি',
