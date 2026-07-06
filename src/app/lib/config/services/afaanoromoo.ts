@@ -307,6 +307,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: `Maaltu haasa'ama?`,
       latestMediaTitle: 'Haaraa',
       sport: {
+        keyEventsTitle: 'Taateewwan Ijoo',
         matchSummary: 'Cuunfaa Taphaa',
         assists: 'Gargaarsota',
         penalties: 'Penaaltii',

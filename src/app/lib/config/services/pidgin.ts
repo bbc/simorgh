@@ -275,6 +275,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'Informate me',
       latestMediaTitle: 'New things',
       sport: {
+        keyEventsTitle: 'Key events',
         matchSummary: 'Match Summary',
         assists: 'Assist',
         penalties: 'Penalty',

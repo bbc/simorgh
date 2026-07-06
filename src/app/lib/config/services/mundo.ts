@@ -401,6 +401,7 @@ export const service: DefaultServiceConfig = {
         closedDescription: 'Esto cierra el {{date}}.',
       },
       sport: {
+        keyEventsTitle: 'Eventos clave',
         matchSummary: 'Resumen del partido',
         assists: 'Asistencias',
         penalties: 'Penales',
