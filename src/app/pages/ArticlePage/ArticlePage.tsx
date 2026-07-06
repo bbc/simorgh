@@ -320,12 +320,19 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   // Extract block types
   // Check if block types include embeds
-  // const hasEmbeds =
+  const articleEmbedTypes = ['embedHtml', 'oEmbed'];
+
+  const hasEmbeds = blocks.some(block =>
+    articleEmbedTypes.includes(block.type),
+  );
 
   // On desktop (GROUP_4+), all content is visible, so enable scroll tracking immediately
   // On mobile/tablet, only enable tracking when button is clicked and content is expanded
   const scrollDepthEnabled =
-    isDesktopViewport || !showContinueReadingButton || showAllContent;
+    isDesktopViewport ||
+    !showContinueReadingButton ||
+    showAllContent ||
+    !hasEmbeds;
   const scrollDepthRef = useScrollDepthTracker(
     'article-scroll-depth',
     scrollDepthEnabled,
