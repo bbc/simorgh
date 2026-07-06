@@ -16,7 +16,7 @@ import LegacyNavigationContainer from '#src/app/legacy/containers/Navigation';
 import AccountHeader from '#app/components/Account/AccountHeader';
 import SERVICES_WITH_NEW_NAV from '#app/components/Navigation/config';
 import LiteModeButton from '#app/components/LiteModeButton/version 2';
-import LiteModeBanner from '#app/components/LiteModeButton/version 3';
+import LiteModeBanner from '#app/components/LiteModeButton/version 4';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import ConsentBanner from '../ConsentBanner';
 import BrandContainer from '../Brand';
