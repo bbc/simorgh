@@ -101,7 +101,6 @@ const styles = {
     css({
       width: '100%',
       aspectRatio: '16 / 9',
-      background: `linear-gradient(to right, ${palette.GREY_4} 0%, ${palette.GREY_3} 100%)`,
       border: `${pixelsToRem(2)}rem solid transparent`,
       background: isDarkUi
         ? `linear-gradient(to right, ${palette.GREY_7} 0%, ${palette.GREY_8} 100%)`

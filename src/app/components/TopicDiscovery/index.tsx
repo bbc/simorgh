@@ -149,7 +149,6 @@ const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
         onTabChange={handleTabChange}
         labelledBy={HEADING_ID}
         groupTracker={groupTracker}
-        experimentProps={experimentProps}
         setShouldFocusPromos={setShouldFocusPromos}
         onTabKeyDown={handleTabKeyDown}
       />
@@ -209,10 +208,8 @@ const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
                   <a
                     css={styles.moreAboutLink}
                     href={selectedTopic.topicUrl}
-                    data-testid="topic-discovery-more-from"
-                    onKeyDown={handleMoreLinkKeyDown}
-                    {...moreFromLinkClickTracker}
                     data-testid="topic-discovery-more-about"
+                    onKeyDown={handleMoreLinkKeyDown}
                     {...moreAboutLinkClickTracker}
                   >
                     {moreAboutTopic.replace('{topic}', selectedTopic.topicName)}
