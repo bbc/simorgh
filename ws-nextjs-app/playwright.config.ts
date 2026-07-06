@@ -22,6 +22,7 @@ const reporter: ReporterDescription[] = process.env.CI
 
 export default defineConfig({
   testDir: './playwright',
+  tsconfig: '../tsconfig.json',
   timeout: 15_000,
   retries: appEnv === 'live' ? 2 : 1,
   use: {
