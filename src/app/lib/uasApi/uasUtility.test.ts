@@ -5,7 +5,10 @@ jest.mock('#app/lib/utilities/ichefURL', () =>
   jest.fn(() => 'https://ichef.test.bbci.co.uk/ace/ws/320/image.jpg'),
 );
 
-const buildMockArticleWithAltText = (altText: string): Article =>
+const buildMockArticleWithAltText = (
+  altText: string,
+  headline = 'Test headline',
+): Article =>
   ({
     metadata: {
       locators: {
@@ -21,7 +24,7 @@ const buildMockArticleWithAltText = (altText: string): Article =>
               blocks: [
                 {
                   model: {
-                    blocks: [{ model: { text: 'Test headline' } }],
+                    blocks: [{ model: { text: headline } }],
                   },
                 },
               ],
@@ -131,6 +134,20 @@ describe('buildCurrentMetadata', () => {
     });
 
     expect(metadata.promoImageAltText).toBe('Clean alt text');
+  });
+
+  it('collapses whitespace in the title before sending to UAS', () => {
+    const article = buildMockArticleWithAltText(
+      'Image description',
+      'Hindi\nArticle',
+    );
+
+    const metadata = buildCurrentMetadata(article, {
+      articleId: 'cwy0pz7qydzo',
+      service: 'hindi',
+    });
+
+    expect(metadata.title).toBe('Hindi Article');
   });
 
   it('includes all expected metadata fields', () => {
