@@ -451,7 +451,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             />
             <OptimizelyPageMetrics trackPageComplete />
           </main>
-          <OptimizelyPageMetrics trackPageView trackPageDepth trackVisit />
+          <OptimizelyPageMetrics trackPageDepth />
           {showTopicDiscovery && (
             <TopicDiscovery
               css={[
