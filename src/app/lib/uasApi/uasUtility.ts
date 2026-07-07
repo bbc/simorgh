@@ -1,6 +1,6 @@
 import { whereEq } from 'ramda';
 import type { Services } from '#app/models/types/global';
-import type { ArticlePageData } from '#app/lib/utilities/extractSaveArticleProps';
+import type { SaveArticlePageData } from '#app/lib/utilities/extractSaveArticleProps';
 import type { UasApiRequestBody } from './index';
 
 export interface SavedArticle {
@@ -41,17 +41,17 @@ interface MetadataComparisonResult {
  * To add a new field: add it to the returned object below.
  * The compareMetadataWithSaved function will automatically include it.
  *
- * @param articlePageData - Current article metadata props
+ * @param saveArticlePageData - Current article metadata props
  * @param articleId - Article's unique identifier
  * @param service - BBC service name (e.g., 'arabic', 'portuguese')
  * @returns Object with tracked metadata fields
  */
 const buildCurrentMetadata = (
-  articlePageData: ArticlePageData,
+  saveArticlePageData: SaveArticlePageData,
   { articleId, service }: { articleId: string; service: Services },
 ): Record<string, unknown> => {
   const { headline, promoImage, promoImageAltText, canonicalUrl } =
-    articlePageData;
+    saveArticlePageData;
   return {
     articleId,
     service,
@@ -82,18 +82,18 @@ const compareMetadataWithSaved = (
 const createFavouritesPayload = ({
   articleId,
   service,
-  articlePageData,
+  saveArticlePageData,
 }: {
   articleId: string;
   service: Services;
-  articlePageData: ArticlePageData;
+  saveArticlePageData: SaveArticlePageData;
 }): UasApiRequestBody => ({
   activityType: FAVOURITES_CONFIG.activityType,
   resourceDomain: FAVOURITES_CONFIG.resourceDomain,
   resourceType: FAVOURITES_CONFIG.resourceType,
   resourceId: articleId,
   action: FAVOURITES_CONFIG.action,
-  metaData: buildCurrentMetadata(articlePageData, {
+  metaData: buildCurrentMetadata(saveArticlePageData, {
     articleId,
     service,
   }),

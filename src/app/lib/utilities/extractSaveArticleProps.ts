@@ -10,11 +10,11 @@ import filterForBlockType from '#app/lib/utilities/blockHandlers';
  * the SaveArticleButton component requires. When expanding SaveArticleButton's
  * metadata needs, only this function needs to be updated.
  *
- * @param saveArticlePageData - Full article page data
- * @returns Minimal ArticlePageData object containing only required fields
+ * @param articlePageData - Full article page data
+ * @returns Minimal SaveArticlePageData object containing only required fields
  */
 
-export interface ArticlePageData {
+export interface SaveArticlePageData {
   canonicalUrl?: string;
   promoImage?: string;
   promoImageAltText?: string;
@@ -22,9 +22,9 @@ export interface ArticlePageData {
 }
 
 const extractSaveArticleProps = (
-  saveArticlePageData: Article,
-): ArticlePageData => {
-  const contentBlocks = saveArticlePageData?.content?.model?.blocks;
+  articlePageData: Article,
+): SaveArticlePageData => {
+  const contentBlocks = articlePageData?.content?.model?.blocks;
   const promoImageBlocks = filterForBlockType(contentBlocks, 'image');
   const { altText, rawBlock } = extractPromoImage(
     promoImageBlocks?.model?.blocks ?? [],
@@ -43,7 +43,7 @@ const extractSaveArticleProps = (
     headlineBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text || '';
 
   return {
-    canonicalUrl: saveArticlePageData?.metadata?.locators?.canonicalUrl || '',
+    canonicalUrl: articlePageData?.metadata?.locators?.canonicalUrl || '',
     promoImage: promoImageUrl,
     promoImageAltText: altText,
     headline,

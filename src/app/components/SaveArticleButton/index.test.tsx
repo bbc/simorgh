@@ -25,7 +25,7 @@ const personalizationToggle = {
 };
 
 describe('SaveArticleButton', () => {
-  const articlePageData = {
+  const saveArticlePageData = {
     content: {
       model: {
         blocks: [
@@ -112,9 +112,9 @@ describe('SaveArticleButton', () => {
       },
     },
   } as unknown as Article;
-  const articleExtractPageData = extractArticleMetadata(articlePageData);
+  const articleExtractPageData = extractArticleMetadata(saveArticlePageData);
 
-  const defaultProps = { articlePageData: articleExtractPageData };
+  const defaultProps = { saveArticlePageData: articleExtractPageData };
 
   const mockHandleSaveAction = jest.fn();
 
@@ -230,7 +230,7 @@ describe('SaveArticleButton', () => {
 
       expect(mockedUseUASButton).toHaveBeenCalledWith(
         expect.objectContaining({
-          articlePageData: articleExtractPageData,
+          saveArticlePageData: articleExtractPageData,
           articleId: 'c1l97706v5mo',
         }),
       );

@@ -10,7 +10,7 @@ import SaveButton from '#app/components/SaveButton';
 import type { SaveArticleButtonProps } from '../index';
 
 const SaveArticleButtonAuthenticated = ({
-  articlePageData,
+  saveArticlePageData,
 }: SaveArticleButtonProps) => {
   const { pathname } = use(RequestContext);
   const { translations } = use(ServiceContext);
@@ -19,7 +19,7 @@ const SaveArticleButtonAuthenticated = ({
 
   const { isSaved, isLoading, isUpdating, handleSaveAction } = useUASButton({
     articleId,
-    articlePageData,
+    saveArticlePageData,
   });
 
   const clickComponentName = `save-article-button-click-${

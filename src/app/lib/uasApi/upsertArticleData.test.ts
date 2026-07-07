@@ -3,7 +3,7 @@ import {
   FAVOURITES_CONFIG,
   createFavouritesPayload,
 } from '#app/lib/uasApi/uasUtility';
-import { ArticlePageData } from '../utilities/extractSaveArticleProps';
+import { SaveArticlePageData } from '../utilities/extractSaveArticleProps';
 import upsertArticleData from './upsertArticleData';
 
 jest.mock('#app/lib/uasApi');
@@ -24,7 +24,7 @@ describe('upsertArticleData', () => {
 
   const mockArticlePageData = {
     canonicalUrl: 'https://bbc.com/article',
-  } as unknown as ArticlePageData;
+  } as unknown as SaveArticlePageData;
 
   const mockPayload = {
     data: {
@@ -42,14 +42,14 @@ describe('upsertArticleData', () => {
 
   it('creates payload with correct parameters', async () => {
     await upsertArticleData({
-      articlePageData: mockArticlePageData,
+      saveArticlePageData: mockArticlePageData,
       articleId: mockArticleId,
       service: 'portuguese',
       isRefreshAvailable: true,
     });
 
     expect(mockCreateFavouritesPayload).toHaveBeenCalledWith({
-      articlePageData: mockArticlePageData,
+      saveArticlePageData: mockArticlePageData,
       articleId: mockArticleId,
       service: 'portuguese',
     });
@@ -57,7 +57,7 @@ describe('upsertArticleData', () => {
 
   it('calls uasApiRequest with POST method and FAVOURITES_CONFIG', async () => {
     await upsertArticleData({
-      articlePageData: mockArticlePageData,
+      saveArticlePageData: mockArticlePageData,
       articleId: mockArticleId,
       service: 'hindi',
       isRefreshAvailable: true,
@@ -76,7 +76,7 @@ describe('upsertArticleData', () => {
 
     await expect(
       upsertArticleData({
-        articlePageData: mockArticlePageData,
+        saveArticlePageData: mockArticlePageData,
         articleId: mockArticleId,
         service: 'hindi',
         isRefreshAvailable: true,
@@ -91,7 +91,7 @@ describe('upsertArticleData', () => {
     });
 
     await upsertArticleData({
-      articlePageData: mockArticlePageData,
+      saveArticlePageData: mockArticlePageData,
       articleId: mockArticleId,
       service: 'hindi',
       isRefreshAvailable: true,
@@ -111,7 +111,7 @@ describe('upsertArticleData', () => {
     });
 
     await upsertArticleData({
-      articlePageData: mockArticlePageData,
+      saveArticlePageData: mockArticlePageData,
       articleId: mockArticleId,
       service: 'hindi',
       isRefreshAvailable: true,

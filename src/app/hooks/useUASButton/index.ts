@@ -5,7 +5,7 @@ import useUASMetadataSync from '#app/hooks/useUASMetadataSync';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import uasApiRequest from '#app/lib/uasApi';
 import { buildGlobalId, FAVOURITES_CONFIG } from '#app/lib/uasApi/uasUtility';
-import type { ArticlePageData } from '#app/lib/utilities/extractSaveArticleProps';
+import type { SaveArticlePageData } from '#app/lib/utilities/extractSaveArticleProps';
 import uasKeys from '#app/lib/uasApi/queryKeys';
 import { AccountContext } from '#app/contexts/AccountContext';
 import upsertArticleData from '#app/lib/uasApi/upsertArticleData';
@@ -24,14 +24,14 @@ interface UseUASButtonReturn {
 }
 export interface UseUASButtonProps {
   articleId: string;
-  articlePageData: ArticlePageData;
+  saveArticlePageData: SaveArticlePageData;
 }
 
 // NOTE: Using this hook anywhere in the app will eagerly pull TanStack Query into the bundle.
 // All TanStack-related code must live exclusively inside the lazy boundary.
 const useUASButton = ({
   articleId,
-  articlePageData,
+  saveArticlePageData,
 }: UseUASButtonProps): UseUASButtonReturn => {
   const { service } = use(ServiceContext);
   const { hashedUserId = '', isRefreshAvailable } = use(AccountContext);
@@ -43,7 +43,7 @@ const useUASButton = ({
     mutationFn: async (action: UASAction) => {
       if (action === UASAction.SAVE) {
         return upsertArticleData({
-          articlePageData,
+          saveArticlePageData,
           articleId,
           service,
           isRefreshAvailable,
@@ -76,7 +76,7 @@ const useUASButton = ({
   };
 
   useUASMetadataSync({
-    articlePageData,
+    saveArticlePageData,
     articleId,
     service,
     isSaved,

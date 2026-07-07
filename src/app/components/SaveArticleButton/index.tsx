@@ -1,12 +1,12 @@
 import { use } from 'react';
 import { AccountContext } from '#contexts/AccountContext';
-import type { ArticlePageData } from '#app/lib/utilities/extractSaveArticleProps';
+import type { SaveArticlePageData } from '#app/lib/utilities/extractSaveArticleProps';
 import SaveArticleButtonAuthenticated from './SaveArticleButtonAuthenticated/lazy';
 import SaveArticleButtonGuest from './SaveArticleButtonGuest';
 import styles from './index.styles';
 
 export interface SaveArticleButtonProps {
-  articlePageData: ArticlePageData;
+  saveArticlePageData: SaveArticlePageData;
 }
 
 const SAVE_ARTICLE_BUTTON_ID = 'save-article-button';
