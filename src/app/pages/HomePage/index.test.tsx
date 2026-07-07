@@ -179,8 +179,353 @@ describe('Home Page', () => {
     const getLinkedDataOutput = () => {
       return JSON.parse(Helmet.peek().scriptTags[0].innerHTML);
     };
-
-    expect(getLinkedDataOutput()).toMatchSnapshot();
+    expect(getLinkedDataOutput()).toEqual({
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+          '@type': 'CollectionPage',
+          url: 'https://www.test.bbc.com/news/articles/c0g992jmmkko',
+          publisher: {
+            '@type': 'NewsMediaOrganization',
+            name: 'BBC News Pidgin',
+            publishingPrinciples:
+              'https://www.bbc.com/pidgin/institutional-48528766',
+            logo: {
+              '@type': 'ImageObject',
+              width: 1024,
+              height: 576,
+              url: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/metadata/poster-1024x576.png',
+            },
+          },
+          thumbnailUrl:
+            'https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/metadata/poster-1024x576.png',
+          image: {
+            '@type': 'ImageObject',
+            width: 1024,
+            height: 576,
+            url: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/metadata/poster-1024x576.png',
+          },
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://www.test.bbc.com/news/articles/c0g992jmmkko',
+            name: 'Domot - BBC News Pidgin',
+          },
+          headline: 'Domot - BBC News Pidgin',
+          inLanguage: {
+            '@type': 'Language',
+            name: 'Nigerian Pidgin',
+            alternateName: 'pcm',
+          },
+        },
+        {
+          itemListElement: [
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://www.bbc.com/news/live/cp4vqze8qznxt',
+              position: 1,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://www.bbc.com/pidgin/live/cemy52djeq5t',
+              position: 2,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://www.bbc.com/mundo/articles/c0ny73k281vo',
+              position: 3,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://www.bbc.com/pidgin/articles/cvl1jnp2nrqo',
+              position: 4,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://www.bbc.com/pidgin/articles/cem8zq07ddxo',
+              position: 5,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://www.bbc.com/pidgin/articles/cvg533vvrxwo',
+              position: 6,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://www.bbc.com/pidgin/articles/ce3n337yqv5o',
+              position: 7,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://www.bbc.com/pidgin/articles/ce858gepkdno',
+              position: 8,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://www.bbc.com/pidgin/articles/cn4m4lnv37zo',
+              position: 9,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://www.bbc.com/pidgin/articles/ce8584245jeo',
+              position: 10,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://www.bbc.com/pidgin/articles/cj919ye7929o',
+              position: 11,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://www.bbc.com/pidgin/articles/cg5yr5z54nlo',
+              position: 12,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://www.bbc.com/pidgin/articles/cjde7xxyky2o',
+              position: 13,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://www.bbc.com/mundo/noticias-internacional-23201396',
+              position: 14,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://www.bbc.com/pidgin/articles/crrrkxz2k0ko',
+              position: 15,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://www.bbc.com/pidgin/articles/cwl08rd38l6o',
+              position: 16,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://www.bbc.com/pidgin/articles/cwy1yeywpy8o',
+              position: 17,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://www.bbc.com/pidgin/articles/c360685jjl5o',
+              position: 18,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://www.bbc.com/pidgin/articles/cp8q8zmnj3eo',
+              position: 19,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://www.bbc.com/pidgin/articles/c78x2gz003xo',
+              position: 20,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://www.bbc.com/pidgin/articles/cdd91220g0jo',
+              position: 21,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://www.bbc.com/pidgin/articles/c5ydnwv0ne7o',
+              position: 22,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://www.bbc.com/pidgin/articles/cly40elexj7o',
+              position: 23,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://www.bbc.com/pidgin/articles/c1lv39v3ezeo',
+              position: 24,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://www.bbc.com/pidgin/articles/cem8zq07ddxo',
+              position: 25,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://whatsapp.com/channel/0029VawW7AjFy726zWLIFq2j',
+              position: 26,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://www.bbc.com/pidgin/articles/cn8y837v15lo',
+              position: 27,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://www.bbc.com/pidgin/articles/cn7gnkvpz5go',
+              position: 28,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://www.bbc.com/pidgin/articles/cgq03pw2d5do',
+              position: 29,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://www.bbc.com/pidgin/articles/cz9eyn9z35ko',
+              position: 30,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://www.bbc.com/mundo/noticias-internacional-23201396',
+              position: 31,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://www.bbc.com/pidgin/articles/crrrkxz2k0ko',
+              position: 32,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://www.bbc.com/pidgin/articles/cwl08rd38l6o',
+              position: 33,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://www.bbc.com/pidgin/articles/cwl08rd38l6o',
+              position: 34,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://www.bbc.com/pidgin/articles/c2d368wlylwo',
+              position: 35,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://www.bbc.com/pidgin/articles/cn0yjk705xlo',
+              position: 36,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://www.bbc.com/pidgin/articles/c5yvld4zpe7o',
+              position: 37,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://www.bbc.com/pidgin/articles/cgj2qv16l24o',
+              position: 38,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://www.bbc.com/pidgin/articles/c8j8jpvey0ko',
+              position: 39,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://www.bbc.com/pidgin/articles/c805z588440o',
+              position: 40,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://www.bbc.com/pidgin/articles/cwypz825437o',
+              position: 41,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://www.bbc.com/pidgin/articles/cy8pz16l100o',
+              position: 42,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://www.bbc.com/pidgin/articles/cq8k9lqxyd8o',
+              position: 43,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://www.bbc.com/pidgin/articles/cew5rdyv8xno',
+              position: 44,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://www.bbc.com/pidgin/articles/cpwxe9qq1geo',
+              position: 45,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://www.bbc.com/pidgin/articles/c2d31n7ek7ko',
+              position: 46,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://bit.ly/3VN51yR',
+              position: 47,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://www.instagram.com/bbcnewspidgin/',
+              position: 48,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://www.facebook.com/bbcnewspidgin',
+              position: 49,
+            },
+            {
+              '@context': 'http://schema.org',
+              '@type': 'ListItem',
+              url: 'https://x.com/bbcnewspidgin',
+              position: 50,
+            },
+          ],
+          '@type': 'ItemList',
+          name: 'BBC News Pidgin',
+          numberOfItems: 50,
+        },
+      ],
+    });
   });
 
   it('should render images with the .webp image extension', () => {
