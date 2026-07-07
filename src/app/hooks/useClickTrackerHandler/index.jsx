@@ -27,7 +27,7 @@ const OJ_COMPONENT_NAMES = [
 ];
 
 // handle the total oj clicks event to specific onward journey experiments
-const OJ_OPTIMIZELY_EXPERIMENTS = [];
+const OJ_OPTIMIZELY_EXPERIMENTS = ['test_page_views_aa_3'];
 
 const OJ_OPTIMIZELY_CLICK_EVENTS = ['oj_clicks'];
 

@@ -303,6 +303,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'Редактордун тандоосу',
       latestMediaTitle: 'Соңку',
       sport: {
+        keyEventsTitle: 'Негизги окуялар',
         matchSummary: 'Оюндун жыйынтыгы',
         assists: 'Пас берүү',
         penalties: 'Пенальти',

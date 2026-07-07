@@ -206,9 +206,9 @@ describe('getEnrichedArticleATIData', () => {
       categoryName: 'News',
       contentId: 'urn:bbc:cps:curie:asset:53870d86-88c5-6f4d-a260-f97c68606458',
       contentType: 'article',
-      experimentName: 'newswb_ws_topic_discovery_module',
+      experimentName: 'test_page_views_aa_3',
       experimentProps: {
-        experimentName: 'newswb_ws_topic_discovery_module',
+        experimentName: 'test_page_views_aa_3',
         experimentVariant: 'experimentVariant',
         sendOptimizelyEvents: true,
       },

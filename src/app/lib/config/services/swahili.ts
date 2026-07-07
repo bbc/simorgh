@@ -318,6 +318,7 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'Habari kuu',
       featuresAnalysisTitle: 'Gumzo mitandaoni',
       sport: {
+        keyEventsTitle: 'Matukio muhimu',
         matchSummary: 'Muhtasari wa mechi',
         assists: 'Pasi za mabao',
         penalties: 'Penalti',
