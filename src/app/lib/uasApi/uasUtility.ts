@@ -92,7 +92,7 @@ const extractHeadlineFromBlocks = (
  * @param service - BBC service name (e.g., 'arabic', 'portuguese')
  * @returns Object with tracked metadata fields
  */
-const sanitiseMetadataString = (value: string | undefined): string =>
+const sanitiseMetadataString = (value: string | null | undefined): string =>
   value?.replace(/\s+/g, ' ').trim() ?? '';
 
 const buildCurrentMetadata = (
@@ -105,7 +105,7 @@ const buildCurrentMetadata = (
   return {
     articleId,
     service,
-    title: headline,
+    title: sanitiseMetadataString(headline),
     promoImage: buildPromoImageUrl(promoImage),
     promoImageAltText: sanitiseMetadataString(promoImage?.altText),
     locatorUrl: articlePageData?.metadata?.locators?.canonicalUrl ?? '',
