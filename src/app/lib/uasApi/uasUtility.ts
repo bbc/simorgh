@@ -93,7 +93,7 @@ const extractHeadlineFromBlocks = (
  * @returns Object with tracked metadata fields
  */
 const sanitiseMetadataString = (value: string | undefined): string =>
-  value?.replace(/[\r\n]/g, '').trim() ?? '';
+  value?.replace(/\s+/g, ' ').trim() ?? '';
 
 const buildCurrentMetadata = (
   articlePageData: Article,

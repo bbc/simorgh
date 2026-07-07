@@ -76,9 +76,9 @@ describe('sanitiseMetadataString', () => {
     expect(sanitiseMetadataString('Some text\r\n')).toBe('Some text');
   });
 
-  it('removes embedded newlines', () => {
+  it('collapses embedded newlines into a single space', () => {
     expect(sanitiseMetadataString('Line one\nLine two')).toBe(
-      'Line oneLine two',
+      'Line one Line two',
     );
   });
 
@@ -111,7 +111,7 @@ describe('buildCurrentMetadata', () => {
     expect(metadata.promoImageAltText).toBe('शाहरुख़ ख़ान');
   });
 
-  it('strips embedded newlines from promoImageAltText', () => {
+  it('collapses embedded newlines in promoImageAltText into a single space', () => {
     const article = buildMockArticleWithAltText('Line one\nLine two\n');
 
     const metadata = buildCurrentMetadata(article, {
@@ -119,7 +119,7 @@ describe('buildCurrentMetadata', () => {
       service: 'hindi',
     });
 
-    expect(metadata.promoImageAltText).toBe('Line oneLine two');
+    expect(metadata.promoImageAltText).toBe('Line one Line two');
   });
 
   it('handles clean alt text without modification', () => {
