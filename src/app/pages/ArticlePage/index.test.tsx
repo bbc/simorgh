@@ -1751,6 +1751,27 @@ describe('Article Page', () => {
       });
     });
 
+    it('should disable scroll tracking when the article contains an embed', () => {
+      const mockUseScrollDepthTracker: jest.Mock = jest.mocked(
+        useScrollDepthTracker,
+      );
+      mockUseScrollDepthTracker.mockReturnValue(null);
+
+      const pageDataWithRiddle: Article = {
+        ...articleDataNewsWithEmbeds,
+      };
+
+      render(<ArticlePage pageData={pageDataWithRiddle} />, {
+        service: 'persian',
+        toggles: { continueReadingButton: { enabled: false } },
+      });
+
+      expect(mockUseScrollDepthTracker).toHaveBeenCalledWith(
+        'article-scroll-depth',
+        false,
+      );
+    });
+
     it('should listen to the correct media query breakpoint', () => {
       const pageData = articleDataPersianWithFourParagraphs;
       const mockUseMediaQuery = jest.mocked(useMediaQuery);
