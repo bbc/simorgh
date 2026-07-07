@@ -85,7 +85,7 @@ test.describe('languagesPage', () => {
           const expectedUrn = expectedUrnByEnv[appEnvFromProcess];
 
           expect(contentId, `expected contentId to be ${expectedUrn}`).toBe(
-            'urn:force-fail',
+            expectedUrn,
           );
         });
       });
