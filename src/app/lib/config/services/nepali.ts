@@ -290,6 +290,7 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'मुख्य समाचार',
       featuresAnalysisTitle: 'अन‌ि यो पनि',
       sport: {
+        keyEventsTitle: 'प्रमुख घंटनाहरू',
         matchSummary: 'खेलको सारांश',
         assists: 'असिस्ट',
         penalties: 'पेनाल्टी',

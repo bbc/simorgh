@@ -28,7 +28,7 @@ const AccountSignInModal = ({ onClose }: AccountSignInModalProps) => {
     closeLabel = 'Close',
     title = '',
     description = '',
-  } = translations.accountPromoBanner ?? {};
+  } = translations.accountSignInModal ?? {};
 
   const viewTracker = useViewTracker({
     componentName: 'account-sign-in-modal',
