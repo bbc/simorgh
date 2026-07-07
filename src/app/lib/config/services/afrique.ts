@@ -314,6 +314,7 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'À la une',
       featuresAnalysisTitle: 'Le choix de la rédaction',
       sport: {
+        keyEventsTitle: 'Faits marquants',
         matchSummary: 'Résumé du match',
         assists: 'Passes décisives',
         penalties: 'Tirs au but',
