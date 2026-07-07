@@ -268,6 +268,7 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'ข่าวเด่น',
       featuresAnalysisTitle: 'เรื่องน่าสนใจ',
       sport: {
+        keyEventsTitle: 'เหตุการณ์สำคัญ',
         matchSummary: 'สรุปการแข่งขัน',
         assists: 'แอสซิสต์',
         penalties: 'จุดโทษ',

@@ -122,6 +122,7 @@ export const service: DefaultServiceConfig = {
         fetchErrorMessage: 'Не удалось загрузить. Пожалуйста, попробуйте снова',
       },
       sport: {
+        keyEventsTitle: 'Ключевые события',
         matchSummary: 'Обзор матча',
         assists: 'Голевые передачи',
         penalties: 'Пенальти',
