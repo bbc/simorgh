@@ -76,25 +76,27 @@ const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
     const currentIndex = tabs.findIndex(tab => tab.id === activeTabId);
     const nextTab = tabs[currentIndex + 1];
 
-    if (!nextTab) return;
+    if (!nextTab) return false;
 
     setActiveTabId(nextTab.id);
     setShouldFocusPromos(false);
-
     requestAnimationFrame(() => {
       document.getElementById(`tab-${nextTab.id}`)?.focus();
     });
-  };
 
+    return true;
+  };
   const handleMoreLinkKeyDown = (
     event: React.KeyboardEvent<HTMLAnchorElement>,
   ) => {
     if (event.key !== 'Tab' || event.shiftKey) {
       return;
     }
+    const movedToNextTab = focusNextTab();
 
-    event.preventDefault();
-    focusNextTab();
+    if (movedToNextTab) {
+      event.preventDefault();
+    }
   };
 
   const handleTabKeyDown = (
