@@ -435,8 +435,77 @@ describe('Topic Page', () => {
           ).innerHTML,
         );
       };
-
-      expect(getLinkedDataOutput()).toMatchSnapshot();
+      expect(getLinkedDataOutput()).toEqual({
+        '@context': 'https://schema.org',
+        '@graph': [
+          {
+            '@type': 'CollectionPage',
+            url: 'https://www.test.bbc.com/news/articles/c0g992jmmkko',
+            publisher: {
+              '@type': 'NewsMediaOrganization',
+              name: 'BBC News Pidgin',
+              publishingPrinciples:
+                'https://www.bbc.com/pidgin/institutional-48528766',
+              logo: {
+                '@type': 'ImageObject',
+                width: 1024,
+                height: 576,
+                url: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/metadata/poster-1024x576.png',
+              },
+            },
+            thumbnailUrl:
+              'https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/metadata/poster-1024x576.png',
+            image: {
+              '@type': 'ImageObject',
+              width: 1024,
+              height: 576,
+              url: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/metadata/poster-1024x576.png',
+            },
+            mainEntityOfPage: {
+              '@type': 'WebPage',
+              '@id': 'https://www.test.bbc.com/news/articles/c0g992jmmkko',
+              name: 'Donald Trump',
+            },
+            headline: 'Donald Trump',
+            inLanguage: {
+              '@type': 'Language',
+              name: 'Nigerian Pidgin',
+              alternateName: 'pcm',
+            },
+          },
+          {
+            itemListElement: [
+              {
+                '@context': 'http://schema.org',
+                '@type': 'ListItem',
+                url: 'https://www.bbc.com/pidgin/world-60465144',
+                position: 1,
+              },
+              {
+                '@context': 'http://schema.org',
+                '@type': 'ListItem',
+                url: 'https://www.bbc.com/pidgin/tori-59901959',
+                position: 2,
+              },
+              {
+                '@context': 'http://schema.org',
+                '@type': 'ListItem',
+                url: 'https://www.bbc.com/pidgin/tori-57396574',
+                position: 3,
+              },
+              {
+                '@context': 'http://schema.org',
+                '@type': 'ListItem',
+                url: 'https://www.bbc.com/pidgin/tori-56991816',
+                position: 4,
+              },
+            ],
+            '@type': 'ItemList',
+            name: 'BBC News Pidgin',
+            numberOfItems: 4,
+          },
+        ],
+      });
     });
   });
 });
