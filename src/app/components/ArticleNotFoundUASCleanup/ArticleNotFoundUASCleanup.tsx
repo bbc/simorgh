@@ -10,7 +10,11 @@ import {
   SavedArticle,
 } from '#app/lib/uasApi/uasUtility';
 import uasKeys from '#app/lib/uasApi/queryKeys';
-import useCustomEventTracker from '#app/hooks/useCustomEventTracker';
+import { UAS_API_ERROR } from '#app/lib/logger.const';
+import nodeLogger from '#lib/logger.node';
+
+const logger = nodeLogger(__filename);
+
 /**
  * Client-side only component that removes a 404'd article from UAS favourites.
  * Rendered only after hydration (ssr: false in index.tsx) to avoid SSR errors
@@ -23,14 +27,6 @@ const ArticleNotFoundUASCleanup = () => {
   const queryClient = useQueryClient();
   const { assetId: articleId } = parseRoute(pathname);
   const hasAttemptedDeletion = useRef(false);
-
-  const trackDeletionSuccess = useCustomEventTracker({
-    eventName: 'saved-article-not-found-deletion-success',
-  });
-
-  const trackDeletionFailed = useCustomEventTracker({
-    eventName: 'saved-article-not-found-deletion-failed',
-  });
 
   useEffect(() => {
     if (!hashedUserId || !articleId || hasAttemptedDeletion.current) return;
@@ -58,22 +54,15 @@ const ArticleNotFoundUASCleanup = () => {
         queryClient.removeQueries({
           queryKey: uasKeys.favouritesList(hashedUserId),
         });
-
-        trackDeletionSuccess();
       } catch {
-        trackDeletionFailed();
+        logger.error(UAS_API_ERROR, {
+          error: 'Failed to remove deleted article from UAS favourites',
+        });
       }
     };
 
     removeDeletedArticleFromUAS();
-  }, [
-    queryClient,
-    hashedUserId,
-    articleId,
-    isRefreshAvailable,
-    trackDeletionSuccess,
-    trackDeletionFailed,
-  ]);
+  }, [queryClient, hashedUserId, articleId, isRefreshAvailable]);
   return null;
 };
 
