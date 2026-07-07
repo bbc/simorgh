@@ -305,6 +305,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'બીબીસી વિશેષ',
       latestMediaTitle: 'લેટેસ્ટ',
       sport: {
+        keyEventsTitle: 'મુખ્ય ઘટનાઓ',
         matchSummary: 'મેચનો સારાંશ',
         assists: 'આસિસ્ટ',
         penalties: 'પેનલ્ટી',

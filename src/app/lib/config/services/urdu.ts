@@ -378,6 +378,7 @@ export const service: DefaultServiceConfig = {
         closedDescription: 'یہ {{date}}  کو بند ہوا',
       },
       sport: {
+        keyEventsTitle: 'اہم واقعات',
         matchSummary: 'میچ کا خلاصہ',
         assists: 'اسسٹ',
         penalties: 'پنالٹی',
