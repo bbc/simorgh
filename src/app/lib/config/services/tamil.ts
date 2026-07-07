@@ -384,6 +384,7 @@ export const service: DefaultServiceConfig = {
         closedDescription: 'அன்று இது நிறைவடையும் {{date}}.',
       },
       sport: {
+        keyEventsTitle: 'முக்கிய நிகழ்வுகள்',
         matchSummary: 'போட்டி சுருக்கம்',
         assists: 'உதவிகள்',
         penalties: 'பெனால்டி',

@@ -20,6 +20,7 @@ import {
   articlePglDataPidgin,
   articleStyDataPidgin,
 } from '#pages/ArticlePage/fixtureData';
+import * as isLive from '#lib/utilities/isLive';
 import { data as newsMostReadData } from '#data/news/mostRead/index.json';
 import { portraitVideoFixture } from '#app/components/PortraitVideoCarousel/fixture';
 import { textBlock, singleTextBlock } from '#models/blocks/index';
@@ -1311,8 +1312,9 @@ describe('Article Page', () => {
       });
     });
   });
-  describe('TopicDiscovery visibility on test only', () => {
-    beforeEach(() => {
+  describe('TopicDiscovery', () => {
+    afterEach(() => {
+      jest.resetAllMocks();
       delete process.env.SIMORGH_APP_ENV;
     });
 
@@ -1333,21 +1335,18 @@ describe('Article Page', () => {
       },
     } as Article;
 
-    it('should render TopicDiscovery when isLive is false (test env)', () => {
-      process.env.SIMORGH_APP_ENV = 'test';
-
-      const { queryByTestId } = render(
-        <ArticlePage pageData={data} showTopicDiscoveryComponent />,
-        { service: 'portuguese' },
-      );
+    it('should render TopicDiscovery when topicDiscovery toggle is enabled', () => {
+      const { queryByTestId } = render(<ArticlePage pageData={data} />, {
+        service: 'portuguese',
+        toggles: { topicDiscovery: { enabled: true } },
+      });
       expect(queryByTestId('topic-discovery')).toBeInTheDocument();
     });
 
-    it('should NOT render TopicDiscovery when isLive is true (live env)', () => {
-      process.env.SIMORGH_APP_ENV = 'live';
-
+    it('should NOT render TopicDiscovery when topicDiscovery toggle is disabled', () => {
       const { queryByTestId } = render(<ArticlePage pageData={data} />, {
         service: 'portuguese',
+        toggles: { topicDiscovery: { enabled: false } },
       });
       expect(queryByTestId('topic-discovery')).not.toBeInTheDocument();
     });
@@ -1355,6 +1354,15 @@ describe('Article Page', () => {
 
   describe('LocationBasedTopicOJ', () => {
     beforeEach(() => {
+      delete process.env.SIMORGH_APP_ENV;
+      // Ensure isLive is evaluated fresh from process.env
+      jest.spyOn(isLive, 'default').mockImplementation(() => {
+        return process.env.SIMORGH_APP_ENV === 'live';
+      });
+    });
+
+    afterEach(() => {
+      jest.restoreAllMocks();
       delete process.env.SIMORGH_APP_ENV;
     });
 
@@ -1401,6 +1409,7 @@ describe('Article Page', () => {
             countryCuration: undefined,
           }}
         />,
+        { service: 'hausa' },
       );
 
       expect(
@@ -1416,6 +1425,7 @@ describe('Article Page', () => {
           // @ts-expect-error: Test fixture data does not need to match Article type exactly
           pageData={pageData}
         />,
+        { service: 'hausa' },
       );
       expect(screen.getByRole('region')).toBeInTheDocument();
       expect(screen.getByText('Najeriya')).toBeInTheDocument();

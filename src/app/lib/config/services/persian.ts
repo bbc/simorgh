@@ -395,6 +395,7 @@ export const service: DefaultServiceConfig = {
         closedDescription: 'امکان ارسال در {{date}} تمام شد.',
       },
       sport: {
+        keyEventsTitle: 'رویدادهای کلیدی',
         matchSummary: 'خلاصه مسابقه',
         assists: 'پاس گل',
         penalties: 'پنالتی',
