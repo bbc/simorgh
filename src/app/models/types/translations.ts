@@ -54,6 +54,11 @@ export interface Translations {
     closeLabel: string;
     buttonSeparatorText: string;
   };
+  accountSignInModal?: {
+    title: string;
+    description: string;
+    closeLabel: string;
+  };
   saveArticleButton?: {
     loading: string;
     save: string;
@@ -263,6 +268,7 @@ export interface Translations {
     venue?: string;
     attendance?: string;
     matchSummary?: string;
+    keyEventsTitle?: string;
     winOnPenalties?: {
       prefix?: string;
       suffix?: string;

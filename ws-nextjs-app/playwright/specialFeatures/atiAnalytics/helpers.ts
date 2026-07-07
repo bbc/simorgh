@@ -42,6 +42,8 @@ export const getAppName = (service: string): string => {
 export const COMPONENTS = {
   SCROLLABLE_NAVIGATION: 'scrollable-navigation',
   DROPDOWN_NAVIGATION: 'dropdown-navigation',
+  MOST_READ: 'most-read',
+  LITE_SITE_SUMMARY: 'lite-site-summary',
 };
 
 export const isPageViewRequest =

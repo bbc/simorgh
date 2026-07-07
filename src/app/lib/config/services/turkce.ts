@@ -281,6 +281,7 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'Manşet haber',
       featuresAnalysisTitle: 'Seçtiklerimiz',
       sport: {
+        keyEventsTitle: 'Önemli anlar',
         matchSummary: 'Maç Özeti',
         assists: 'Asistler',
         penalties: 'Penaltılar',
