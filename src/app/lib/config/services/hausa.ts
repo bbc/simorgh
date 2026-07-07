@@ -383,6 +383,7 @@ export const service: DefaultServiceConfig = {
         closedDescription: 'This closed on {{date}}.',
       },
       sport: {
+        keyEventsTitle: 'Muhimman abubuwa',
         matchSummary: 'Takaitaccen Bayanin Wasa',
         assists: 'Ba da ƙwallo a ci',
         penalties: 'Fenariti',
