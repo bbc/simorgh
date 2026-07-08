@@ -263,6 +263,14 @@ export interface Translations {
     ft?: string;
     et?: string;
     afterExtraTime?: string;
+    versus?: string;
+    kickOff?: string;
+    teamToBeConfirmed?: string;
+    afterFullTime?: string;
+    atFullTime?: string;
+    onPenalties?: string;
+    onAggregate?: string;
+    win?: string;
     penaltyAbbreviation?: string;
     ownGoal?: string;
     venue?: string;
