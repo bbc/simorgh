@@ -1,74 +1,15 @@
-import type { Article } from '#app/models/types/optimo';
+import type { SaveArticlePageData } from '#app/lib/utilities/extractSaveArticleProps';
 import { sanitiseMetadataString, buildCurrentMetadata } from './uasUtility';
 
-jest.mock('#app/lib/utilities/ichefURL', () =>
-  jest.fn(() => 'https://ichef.test.bbci.co.uk/ace/ws/320/image.jpg'),
-);
-
-const buildMockArticleWithAltText = (
-  altText: string,
+const buildMockSaveArticlePageData = (
+  promoImageAltText: string,
   headline = 'Test headline',
-): Article =>
-  ({
-    metadata: {
-      locators: {
-        canonicalUrl: 'https://www.bbc.com/hindi/articles/cwy0pz7qydzo',
-      },
-    },
-    content: {
-      model: {
-        blocks: [
-          {
-            type: 'headline',
-            model: {
-              blocks: [
-                {
-                  model: {
-                    blocks: [{ model: { text: headline } }],
-                  },
-                },
-              ],
-            },
-          },
-        ],
-      },
-    },
-    promo: {
-      images: {
-        defaultPromoImage: {
-          blocks: [
-            {
-              type: 'altText',
-              model: {
-                blocks: [
-                  {
-                    type: 'text',
-                    model: {
-                      blocks: [
-                        {
-                          type: 'paragraph',
-                          model: { text: altText },
-                        },
-                      ],
-                    },
-                  },
-                ],
-              },
-            },
-            {
-              type: 'rawImage',
-              model: {
-                locator: '5bde/live/e4af80b0-6f4c-11f0-8dbd-f3d32ebd3327.jpg',
-                originCode: 'cpsprodpb',
-                width: 1024,
-                height: 576,
-              },
-            },
-          ],
-        },
-      },
-    },
-  }) as unknown as Article;
+): SaveArticlePageData => ({
+  canonicalUrl: 'https://www.bbc.com/hindi/articles/cwy0pz7qydzo',
+  promoImage: 'https://ichef.test.bbci.co.uk/ace/ws/320/image.jpg',
+  promoImageAltText,
+  headline,
+});
 
 describe('sanitiseMetadataString', () => {
   it('removes a trailing newline', () => {
@@ -104,9 +45,9 @@ describe('sanitiseMetadataString', () => {
 
 describe('buildCurrentMetadata', () => {
   it('strips trailing newline from promoImageAltText before sending to UAS', () => {
-    const article = buildMockArticleWithAltText('शाहरुख़ ख़ान\n');
+    const saveArticlePageData = buildMockSaveArticlePageData('शाहरुख़ ख़ान\n');
 
-    const metadata = buildCurrentMetadata(article, {
+    const metadata = buildCurrentMetadata(saveArticlePageData, {
       articleId: 'cwy0pz7qydzo',
       service: 'hindi',
     });
@@ -115,9 +56,11 @@ describe('buildCurrentMetadata', () => {
   });
 
   it('collapses embedded newlines in promoImageAltText into a single space', () => {
-    const article = buildMockArticleWithAltText('Line one\nLine two\n');
+    const saveArticlePageData = buildMockSaveArticlePageData(
+      'Line one\nLine two\n',
+    );
 
-    const metadata = buildCurrentMetadata(article, {
+    const metadata = buildCurrentMetadata(saveArticlePageData, {
       articleId: 'cwy0pz7qydzo',
       service: 'hindi',
     });
@@ -126,9 +69,9 @@ describe('buildCurrentMetadata', () => {
   });
 
   it('handles clean alt text without modification', () => {
-    const article = buildMockArticleWithAltText('Clean alt text');
+    const saveArticlePageData = buildMockSaveArticlePageData('Clean alt text');
 
-    const metadata = buildCurrentMetadata(article, {
+    const metadata = buildCurrentMetadata(saveArticlePageData, {
       articleId: 'cwy0pz7qydzo',
       service: 'hindi',
     });
@@ -137,12 +80,12 @@ describe('buildCurrentMetadata', () => {
   });
 
   it('collapses whitespace in the title before sending to UAS', () => {
-    const article = buildMockArticleWithAltText(
+    const saveArticlePageData = buildMockSaveArticlePageData(
       'Image description',
       'Hindi\nArticle',
     );
 
-    const metadata = buildCurrentMetadata(article, {
+    const metadata = buildCurrentMetadata(saveArticlePageData, {
       articleId: 'cwy0pz7qydzo',
       service: 'hindi',
     });
@@ -151,9 +94,10 @@ describe('buildCurrentMetadata', () => {
   });
 
   it('includes all expected metadata fields', () => {
-    const article = buildMockArticleWithAltText('Image description');
+    const saveArticlePageData =
+      buildMockSaveArticlePageData('Image description');
 
-    const metadata = buildCurrentMetadata(article, {
+    const metadata = buildCurrentMetadata(saveArticlePageData, {
       articleId: 'cwy0pz7qydzo',
       service: 'hindi',
     });
