@@ -30,6 +30,7 @@ import {
   getLang,
 } from '#lib/utilities/parseAssetData';
 import extractPromoImage from '#lib/utilities/extractPromoImage';
+import extractSaveArticleProps from '#app/lib/utilities/extractSaveArticleProps';
 import RelatedTopics from '#app/components/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import InlinePodcastPromo from '#containers/PodcastPromo/Inline';
@@ -107,7 +108,7 @@ const getTimestampComponent =
     lastPublished: string,
     readTimeValue: number | undefined,
     readTimeTranslations: Translations['readTime'],
-    articlePageData?: Article,
+    articlePageData: Article,
   ) =>
   (props: ComponentToRenderProps & TimeStampProps) => {
     const shouldDisplayReadTime = !!(readTimeTranslations && readTimeValue);
@@ -138,7 +139,9 @@ const getTimestampComponent =
             )}
           </>
         )}
-        <SaveArticleButton articlePageData={articlePageData} />
+        <SaveArticleButton
+          saveArticlePageData={extractSaveArticleProps(articlePageData)}
+        />
       </>
     );
   };
@@ -389,6 +392,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     pageData?.countryCuration?.summaries?.length,
   );
 
+  const shouldApplyCollapsedArticleSpacing =
+    showContinueReadingButton && !showAllContent;
+
   // EXPERIMENT: PWA Promotional Banner
   const shouldRenderPWAPromotionalBanner =
     !isTopBarOJsEnabled || !pageData?.secondaryColumn?.topStories?.length;
@@ -443,8 +449,19 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       <ElectionBanner aboutTags={aboutTags} taggings={taggings} />
       <ArticleMessageBanner aboutTags={aboutTags} taggings={taggings} />
       <div css={styles.grid}>
-        <div css={!isPGL ? styles.primaryColumn : styles.pglColumn}>
-          <main css={styles.mainContent} role="main">
+        <div
+          css={[
+            !isPGL ? styles.primaryColumn : styles.pglColumn,
+            shouldApplyCollapsedArticleSpacing && styles.collapsedArticleColumn,
+          ]}
+        >
+          <main
+            css={[
+              styles.mainContent,
+              shouldApplyCollapsedArticleSpacing && styles.collapsedMainContent,
+            ]}
+            role="main"
+          >
             <Blocks
               blocks={articleBlocks}
               componentsToRender={componentsToRender}
