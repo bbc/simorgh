@@ -389,7 +389,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     pageData?.countryCuration?.summaries?.length,
   );
 
-  const useCollapsedArticleSpacing =
+  const shouldApplyCollapsedArticleSpacing =
     showContinueReadingButton && !showAllContent;
 
   // EXPERIMENT: PWA Promotional Banner
@@ -449,13 +449,13 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         <div
           css={[
             !isPGL ? styles.primaryColumn : styles.pglColumn,
-            useCollapsedArticleSpacing && styles.collapsedArticleColumn,
+            shouldApplyCollapsedArticleSpacing && styles.collapsedArticleColumn,
           ]}
         >
           <main
             css={[
               styles.mainContent,
-              useCollapsedArticleSpacing && styles.collapsedMainContent,
+              shouldApplyCollapsedArticleSpacing && styles.collapsedMainContent,
             ]}
             role="main"
           >
