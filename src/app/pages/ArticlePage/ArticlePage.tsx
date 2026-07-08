@@ -493,13 +493,13 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               mobileDivider={false}
             />
           )}
+          {showCountryCuration && <LocationBasedTopicOJ pageData={pageData} />}
           {showPortraitVideoCarousel && (
             <PortraitVideoCarousel
               {...portraitVideoCarouselProps}
               css={styles.portraitVideoCarousel}
             />
           )}
-          {showCountryCuration && <LocationBasedTopicOJ pageData={pageData} />}
           <RelatedContentSection content={blocks} />
           {showMediaCuration && (
             <div css={styles.mediaCurationRow}>
