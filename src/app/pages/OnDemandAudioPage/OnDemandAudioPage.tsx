@@ -49,7 +49,8 @@ export interface OnDemandAudioProps {
     releaseDateTimeStamp: number;
     imageUrl: string;
     imageAltText: string;
-    promoBrandTitle: string;
+    promoBrandTitle?: string;
+    promoSeriesTitle?: string;
     durationISO8601: string;
     thumbnailImageUrl: string;
     radioScheduleData?: RadioScheduleData[];
@@ -81,6 +82,7 @@ const OnDemandAudioPage = ({
     imageUrl,
     imageAltText,
     promoBrandTitle,
+    promoSeriesTitle,
     durationISO8601,
     thumbnailImageUrl,
     radioScheduleData,
@@ -165,7 +167,7 @@ const OnDemandAudioPage = ({
                   ? [
                       {
                         '@type': 'AudioObject',
-                        name: promoBrandTitle,
+                        name: promoBrandTitle || promoSeriesTitle,
                         description: shortSynopsis,
                         thumbnailUrl: thumbnailImageUrl,
                         duration: durationISO8601,
