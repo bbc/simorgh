@@ -21,40 +21,80 @@ const personalizedRenderOptions = {
   idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: true },
 };
 
+const renderErrorPage = ({ errorCode, service = 'news' }) => {
+  const renderResult = render(<ErrorPage errorCode={errorCode} />, {
+    service,
+  });
+
+  return {
+    ...renderResult,
+    statusCode: renderResult.container.querySelector(
+      '[data-e2e="status-code"]',
+    ),
+  };
+};
+
+const expectErrorPageToRender = ({
+  errorCode,
+  expectedStatusCode,
+  service = 'news',
+  title,
+}) => {
+  const { statusCode } = renderErrorPage({ errorCode, service });
+
+  expect(statusCode).toBeInTheDocument();
+  expect(statusCode).toHaveTextContent(String(expectedStatusCode));
+
+  expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(title);
+
+  expect(screen.getByRole('list')).toBeInTheDocument();
+  expect(screen.getAllByRole('listitem')).not.toHaveLength(0);
+
+  expect(screen.getByRole('link')).toBeInTheDocument();
+  expect(screen.getByRole('link')).toHaveAttribute('href');
+};
+
 describe('ErrorPage', () => {
   it('should correctly render for 404', () => {
-    const { container } = render(<ErrorPage errorCode={404} />, {
-      service: 'news',
+    expectErrorPageToRender({
+      errorCode: 404,
+      expectedStatusCode: 404,
+      title: 'Page cannot be found',
     });
-    expect(container).toMatchSnapshot();
   });
 
   it('should correctly render for 500', () => {
-    const { container } = render(<ErrorPage errorCode={500} />, {
-      service: 'news',
+    expectErrorPageToRender({
+      errorCode: 500,
+      expectedStatusCode: 500,
+      title: 'Internal server error',
     });
-    expect(container).toMatchSnapshot();
   });
 
   it('should correctly render for other status code', () => {
-    const { container } = render(<ErrorPage errorCode={123} />, {
-      service: 'news',
+    expectErrorPageToRender({
+      errorCode: 123,
+      expectedStatusCode: 500,
+      title: 'Internal server error',
     });
-    expect(container).toMatchSnapshot();
   });
 
   it('should correctly render for 404 for persian', () => {
-    const { container } = render(<ErrorPage errorCode={404} />, {
+    expectErrorPageToRender({
+      errorCode: 404,
+      expectedStatusCode: '۴۰۴',
       service: 'persian',
+      title: 'صفحه پیدا نشد',
     });
-    expect(container).toMatchSnapshot();
   });
 
-  it('should correctly render for 500 for persian', async () => {
-    const { container } = render(<ErrorPage errorCode={500} />, {
+  it('should correctly render for 500 for persian', () => {
+    expectErrorPageToRender({
+      errorCode: 500,
+      expectedStatusCode: '۵۰۰',
       service: 'persian',
+      title: 'خطا در سرور داخلی',
     });
-    expect(container).toMatchSnapshot();
   });
 
   it('renders ArticleNotFoundUASCleanup when personalization is enabled, errorCode is 404 and pageType is an article page', () => {
