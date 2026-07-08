@@ -1313,11 +1313,6 @@ describe('Article Page', () => {
     });
   });
   describe('TopicDiscovery', () => {
-    afterEach(() => {
-      jest.resetAllMocks();
-      delete process.env.SIMORGH_APP_ENV;
-    });
-
     const data = {
       ...articleDataPidgin,
       metadata: {
