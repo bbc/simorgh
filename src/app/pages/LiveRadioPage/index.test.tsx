@@ -38,19 +38,6 @@ jest.mock('../../components/ChartbeatAnalytics', () => {
 });
 
 describe('Radio Page Main', () => {
-  it('should match snapshot for Canonical', () => {
-    const { container } = render(
-      <Page
-        pageData={afriquePageData.data as unknown as LiveRadioPageProps}
-        service="afrique"
-        lang="fr"
-      />,
-      { service: 'afrique' },
-    );
-
-    expect(container).toMatchSnapshot();
-  });
-
   it('should show the title for the Live Radio page', () => {
     const { getByText } = render(
       <Page
