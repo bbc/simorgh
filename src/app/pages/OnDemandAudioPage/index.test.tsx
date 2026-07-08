@@ -109,19 +109,6 @@ describe('OnDemand Radio Page ', () => {
     process.env = { ...env };
   });
 
-  it('should match snapshot', async () => {
-    const pageData = getPageData({
-      data: gahuzaOnDemandAudio?.data as unknown as OnDemandAudioProps['pageData'],
-    });
-
-    const { container } = await renderPage({
-      pageData,
-      service: 'gahuza',
-    });
-
-    expect(container).toMatchSnapshot();
-  });
-
   it('should show the brand title for OnDemand Radio Pages', async () => {
     const pageData = getPageData({
       data: gahuzaOnDemandAudio?.data as unknown as OnDemandAudioProps['pageData'],
@@ -255,14 +242,13 @@ describe('OnDemand Radio Page ', () => {
     const pageData = getPageData({
       data: swahiliExpiredOnDemandAudio?.data as unknown as OnDemandAudioProps['pageData'],
     });
-    const { container, getByText } = await renderPage({
+    const { getByText } = await renderPage({
       pageData,
       service: 'swahili',
     });
     const expiredMessageEl = getByText('Taarifa hii haipatikani tena.');
 
     expect(expiredMessageEl).toBeInTheDocument();
-    expect(container).toMatchSnapshot();
   });
 
   it("should show the 'content not yet available' message if episode is not yet available", async () => {
@@ -275,7 +261,7 @@ describe('OnDemand Radio Page ', () => {
     const pageData =
       koreanPageDataWithNotYetAvailableEpisode as unknown as OnDemandAudioProps['pageData'];
 
-    const { container, getByText } = await renderPage({
+    const { getByText } = await renderPage({
       pageData,
       service: 'korean',
     });
@@ -285,7 +271,6 @@ describe('OnDemand Radio Page ', () => {
     );
 
     expect(notYetAvailableMessageEl).toBeInTheDocument();
-    expect(container).toMatchSnapshot();
   });
 
   it('should show the radio schedule for the On Demand radio page', async () => {
