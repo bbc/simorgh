@@ -93,9 +93,24 @@ describe('MediaArticlePage', () => {
       </Context>,
     );
 
-    await waitFor(() => {
-      expect(container).toMatchSnapshot();
-    });
+    const headline = container.querySelector('h1');
+    expect(headline).toBeInTheDocument();
+    expect(headline).toHaveTextContent('WS Media (1) -Media above title');
+
+    const mediaPLayer = container.querySelector(
+      '[data-e2e="media-loader__container"]',
+    );
+
+    expect(mediaPLayer).toBeInTheDocument();
+
+    const caption = container.querySelector(
+      '[data-testid="caption-paragraph"]',
+    );
+    expect(caption).toBeInTheDocument();
+
+    const subheadline = container.querySelector('h2');
+    expect(subheadline).toBeInTheDocument();
+    expect(subheadline).toHaveTextContent('Headline');
   });
 
   it('should set "amphtml" link tag for asset', async () => {

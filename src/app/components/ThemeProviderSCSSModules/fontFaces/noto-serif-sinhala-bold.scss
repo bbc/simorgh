@@ -5,9 +5,9 @@
   font-weight: 700;
   font-style: normal;
   src:
-  url('#{fontUrls.$font-base-url}/fonts/NotoSerifSinhala/v1.00/bold.woff2') format('woff2'),
-  url('#{fontUrls.$font-base-url}/fonts/NotoSerifSinhala/v1.00/bold.woff') format('woff'),
-  url('#{fontUrls.$font-base-url}/fonts/NotoSerifSinhala/v1.00/bold.eot') format('eot'),
-  url('#{fontUrls.$font-base-url}/fonts/NotoSerifSinhala/v1.00/bold.ttf') format('ttf');
+  url('#{fontUrls.$font-base-url}/NotoSerifSinhala/v1.00/bold.woff2') format('woff2'),
+  url('#{fontUrls.$font-base-url}/NotoSerifSinhala/v1.00/bold.woff') format('woff'),
+  url('#{fontUrls.$font-base-url}/NotoSerifSinhala/v1.00/bold.eot') format('eot'),
+  url('#{fontUrls.$font-base-url}/NotoSerifSinhala/v1.00/bold.ttf') format('ttf');
   font-display: swap;
 }
