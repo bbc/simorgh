@@ -3,6 +3,7 @@ import {
   screen,
   fireEvent,
 } from '#app/components/react-testing-library-with-providers';
+import { matchers } from '@emotion/jest';
 import * as viewTracking from '#app/hooks/useViewTracker';
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import { ServiceContext } from '#app/contexts/ServiceContext';
@@ -10,6 +11,7 @@ import { ServiceConfig } from '#app/models/types/serviceConfig';
 import { service as portugueseConfig } from '#app/lib/config/services/portuguese';
 import { service as turkceConfig } from '#app/lib/config/services/turkce';
 import { service as arabicConfig } from '#app/lib/config/services/arabic';
+import { MEDIA_ARTICLE_PAGE } from '../../routes/utils/pageTypes';
 import {
   topicTagsFixture,
   multipleTopicsFixture,
@@ -20,6 +22,8 @@ import useFetchTopicPromos from './useFetchTopicPromos';
 import TopicDiscovery from '.';
 
 jest.mock('./useFetchTopicPromos');
+
+expect.extend(matchers);
 
 describe('TopicDiscovery', () => {
   const mockUseFetchTopicPromos = useFetchTopicPromos as jest.MockedFunction<
@@ -191,6 +195,23 @@ describe('TopicDiscovery', () => {
     expect(
       screen.queryByTestId('topic-discovery-more-about'),
     ).not.toBeInTheDocument();
+  });
+
+  it('should render promo links in dark ui colours', () => {
+    render(<TopicDiscovery topics={topicTagsFixture} />, {
+      pageType: MEDIA_ARTICLE_PAGE,
+      service: 'portuguese',
+    });
+
+    const promoLink = screen.getByRole('link', {
+      name: /Derrota em dose dupla/,
+    });
+
+    expect(window.getComputedStyle(promoLink).color).toBe('rgb(246, 246, 246)');
+
+    expect(screen.getByRole('tabpanel')).toHaveStyleRule('color', '#B0B2B4', {
+      target: 'li .promo-text a:visited',
+    });
   });
 
   describe('analytics', () => {
