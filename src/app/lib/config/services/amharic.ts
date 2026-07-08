@@ -357,6 +357,7 @@ export const service: DefaultServiceConfig = {
         closedDescription: 'ይህ የተዘጋው {{date}} ነው።',
       },
       sport: {
+        keyEventsTitle: 'አስፈላጊ ክስተቶች',
         matchSummary: 'የጨዋታ ማጠቃለያ',
         assists: 'አስተላላፊ አግባብ',
         penalties: 'ፔናልቲ',

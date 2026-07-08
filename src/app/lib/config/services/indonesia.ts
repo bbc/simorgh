@@ -305,6 +305,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'Majalah',
       latestMediaTitle: 'Terbaru',
       sport: {
+        keyEventsTitle: 'Peristiwa penting',
         matchSummary: 'Ringkasan Pertandingan',
         assists: 'Assist',
         penalties: 'Penalti',
