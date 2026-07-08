@@ -109,7 +109,6 @@ export {
   createFavouritesPayload,
   buildCurrentMetadata,
   compareMetadataWithSaved,
-  extractHeadlineFromBlocks,
   sanitiseMetadataString,
 };
 
