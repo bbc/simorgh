@@ -59,9 +59,9 @@ const buildCurrentMetadata = (
     articleId,
     service,
     title: sanitiseMetadataString(headline),
-    promoImage: buildPromoImageUrl(promoImage),
-    promoImageAltText: sanitiseMetadataString(promoImage?.altText),
-    locatorUrl: articlePageData?.metadata?.locators?.canonicalUrl ?? '',
+    promoImage,
+    promoImageAltText: sanitiseMetadataString(promoImageAltText),
+    locatorUrl: canonicalUrl,
   };
 };
 
@@ -110,7 +110,7 @@ export {
   buildCurrentMetadata,
   compareMetadataWithSaved,
   extractHeadlineFromBlocks,
-  sanitiseMetadataString
+  sanitiseMetadataString,
 };
 
 export type { MetadataComparisonResult };
