@@ -25,7 +25,7 @@ const personalizationToggle = {
 };
 
 describe('SaveArticleButton', () => {
-  const saveArticlePageData = {
+  const articlePageData = {
     content: {
       model: {
         blocks: [
@@ -112,7 +112,7 @@ describe('SaveArticleButton', () => {
       },
     },
   } as unknown as Article;
-  const articleExtractPageData = extractArticleMetadata(saveArticlePageData);
+  const articleExtractPageData = extractArticleMetadata(articlePageData);
 
   const defaultProps = { saveArticlePageData: articleExtractPageData };
 
