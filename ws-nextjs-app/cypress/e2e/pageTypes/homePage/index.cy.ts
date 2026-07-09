@@ -56,7 +56,7 @@ const testSuites = [
   },
   {
     path: '/magyarul',
-    runforEnv: ['local', 'test'],
+    runforEnv: ['local', 'test', 'live'],
     service: 'magyarul',
     tests,
   },
@@ -74,7 +74,7 @@ const testSuites = [
   },
   {
     path: '/romania',
-    runforEnv: ['local', 'test'],
+    runforEnv: ['local', 'test', 'live'],
     service: 'romania',
     tests,
   },
@@ -165,7 +165,7 @@ const atiAnalyticsTestSuites = [
   },
   {
     path: '/magyarul',
-    runforEnv: ['local', 'test'],
+    runforEnv: ['local', 'test', 'live'],
     service: 'magyarul',
     pageIdentifier: 'magyarul.page',
     siteId: 134,
@@ -203,7 +203,7 @@ const atiAnalyticsTestSuites = [
   },
   {
     path: '/romania',
-    runforEnv: ['local', 'test'],
+    runforEnv: ['local', 'test', 'live'],
     service: 'romania',
     pageIdentifier: 'romania.page',
     siteId: 136,
