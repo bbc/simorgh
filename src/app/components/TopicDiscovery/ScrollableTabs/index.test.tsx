@@ -3,8 +3,13 @@ import {
   screen,
   fireEvent,
 } from '#app/components/react-testing-library-with-providers';
+import { matchers } from '@emotion/jest';
 import * as clickTrackerHook from '#app/hooks/useClickTrackerHandler';
+import { GREY_2 } from '#app/components/ThemeProvider/palette';
+import { MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import ScrollableTabs from '.';
+
+expect.extend(matchers);
 
 const mockTabs = [
   { id: 'tab-1', label: 'Comportamento' },
@@ -119,5 +124,29 @@ describe('ScrollableTabs', () => {
 
     expect(screen.getByTestId('scroll-start')).toBeInTheDocument();
     expect(screen.getByTestId('scroll-end')).toBeInTheDocument();
+  });
+
+  it('should render scroll buttons in dark ui colours', () => {
+    render(
+      <ScrollableTabs
+        tabs={mockTabs}
+        activeTabId="tab-1"
+        onTabChange={jest.fn()}
+        labelledBy="heading-id"
+      />,
+      { pageType: MEDIA_ARTICLE_PAGE, service: 'portuguese' },
+    );
+
+    const scrollStartButton = screen.getByTestId('scroll-start');
+    const scrollEndButton = screen.getByTestId('scroll-end');
+
+    expect(scrollStartButton).toHaveStyle({ color: GREY_2 });
+    expect(scrollEndButton).toHaveStyle({ color: GREY_2 });
+    expect(scrollStartButton).toHaveStyleRule('fill', 'currentcolor', {
+      target: 'svg',
+    });
+    expect(scrollEndButton).toHaveStyleRule('fill', 'currentcolor', {
+      target: 'svg',
+    });
   });
 });
