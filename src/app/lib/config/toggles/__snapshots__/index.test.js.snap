@@ -144,6 +144,9 @@ exports[`Toggles Config when application environment is local should contain cor
   "liveRadioSchedule": {
     "enabled": true,
   },
+  "locationTopicCuration": {
+    "enabled": true,
+  },
   "midArticleOnwardJourney": {
     "enabled": true,
   },
