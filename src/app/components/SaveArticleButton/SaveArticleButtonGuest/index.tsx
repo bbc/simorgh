@@ -7,9 +7,13 @@ import AccountSignInModal from '#app/components/Account/AccountSignInModal';
 import { createPortal } from 'react-dom';
 import useClickTracker from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
+import { RequestContext } from '#app/contexts/RequestContext';
+import parseRoute from '#app/routes/utils/parseRoute';
 
 const SaveArticleButtonGuest = () => {
   const { translations } = use(ServiceContext);
+  const { pathname } = use(RequestContext);
+  const { assetId: articleId } = parseRoute(pathname);
   const { signInUrl, registerUrl } = use(AccountContext);
   const isHydrated = useHydrationDetection();
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -26,6 +30,9 @@ const SaveArticleButtonGuest = () => {
 
   const { onClick: onClickTrack } = useClickTracker({
     componentName: 'save-article-button-guest-click-save',
+    itemTracker: {
+      resourceId: articleId,
+    },
   });
 
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
