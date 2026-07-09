@@ -17,6 +17,9 @@ import { ATIAnalyticsProps } from '../types';
 import getNoScriptTrackingPixelUrl from './getNoScriptTrackingPixelUrl';
 import sendPageViewBeaconOperaMini from './sendPageViewBeaconOperaMini';
 
+const addCustomX3 = url =>
+  url.replace(/x3=\[(.*)\]&x4/, 'x3=[$1-inline-js]&x4');
+
 const renderNoScriptTrackingPixel = ({ reverbParams }: ATIAnalyticsProps) => {
   return (
     <noscript id="analytics-noscript">
@@ -53,9 +56,20 @@ const CanonicalATIAnalytics = ({ reverbParams }: ATIAnalyticsProps) => {
     if (!isOperaProxy()) sendBeacon(reverbBeaconConfig);
   }, [reverbBeaconConfig]);
 
-  const liteSiteReverbURL = reverbUrlHelper.getLitePageViewUrl(reverbParams);
-  const operaMiniPageViewReverbURL =
-    reverbUrlHelper.getOperaMiniPageViewUrl(reverbParams);
+  const liteSiteReverbURL = addCustomX3(
+    reverbUrlHelper.getLitePageViewUrl(reverbParams),
+  );
+  const operaMiniPageViewReverbURL = addCustomX3(
+    reverbUrlHelper.getOperaMiniPageViewUrl(reverbParams),
+  );
+
+  console.log('&&&&&&&&&&&&&&&&&&&&&');
+  console.log('I GET HERE');
+  console.log('+++++++++++++++++++++');
+  console.log('liteSiteReverbURL - ', liteSiteReverbURL);
+  console.log('+++++++++++++++++++++');
+  console.log('operaMiniPageViewReverbURL - ', operaMiniPageViewReverbURL);
+  console.log('&&&&&&&&&&&&&&&&&&&&&');
 
   return (
     <>

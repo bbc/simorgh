@@ -67,8 +67,7 @@ export const buildReverbAnalyticsModel = ({
         name: pageIdentifier,
         producer: producerName,
         additionalProperties: {
-          app_name:
-            platform === 'app' ? `${appName}-app` : `${appName}-inline-js`,
+          app_name: platform === 'app' ? `${appName}-app` : appName,
           app_type: getAppType(platform),
           content_language: language,
           product_platform: onOnionTld() ? 'tor-bbc' : null,
