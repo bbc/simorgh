@@ -57,7 +57,6 @@ import ContinueReadingButton, {
   ContinueReadingButtonProps,
 } from '#app/components/ContinueReadingButton';
 import SaveArticleButton from '#app/components/SaveArticleButton';
-import isLive from '#lib/utilities/isLive';
 import ElectionBanner from './ElectionBanner';
 import ArticleMessageBanner from './ArticleMessageBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
@@ -238,6 +237,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const { enabled: articleVideoCurationEnabled } = useToggle(
     'articleVideoCuration',
   );
+  const { enabled: countryCurationEnabled } = useToggle(
+    'locationTopicCuration',
+  );
 
   const headline = getHeadline(pageData) ?? '';
   const description = getSummary(pageData) || getHeadline(pageData);
@@ -388,7 +390,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     !isAmp &&
     !isLite &&
     !isApp &&
-    !isLive() &&
+    countryCurationEnabled &&
     pageData?.countryCuration?.summaries?.length,
   );
 
@@ -491,13 +493,13 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               mobileDivider={false}
             />
           )}
+          {showCountryCuration && <LocationBasedTopicOJ pageData={pageData} />}
           {showPortraitVideoCarousel && (
             <PortraitVideoCarousel
               {...portraitVideoCarouselProps}
               css={styles.portraitVideoCarousel}
             />
           )}
-          {showCountryCuration && <LocationBasedTopicOJ pageData={pageData} />}
           <RelatedContentSection content={blocks} />
           {showMediaCuration && (
             <div css={styles.mediaCurationRow}>
