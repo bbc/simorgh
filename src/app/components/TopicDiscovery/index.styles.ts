@@ -46,6 +46,17 @@ const styles = {
           width: '100%',
           display: 'block',
 
+          ...(isDarkUi && {
+            '[data-e2e="media-icon"]': {
+              backgroundColor: palette.BLACK,
+              color: palette.WHITE,
+
+              svg: {
+                color: palette.WHITE,
+              },
+            },
+          }),
+
           'div div:last-child': {
             div: {
               padding: `${spacings.FULL}rem`,
