@@ -33,6 +33,7 @@ import {
   getLang,
 } from '#lib/utilities/parseAssetData';
 import extractPromoImage from '#lib/utilities/extractPromoImage';
+import extractSaveArticleProps from '#app/lib/utilities/extractSaveArticleProps';
 import RelatedTopics from '#app/components/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import InlinePodcastPromo from '#containers/PodcastPromo/Inline';
@@ -59,7 +60,6 @@ import ContinueReadingButton, {
   ContinueReadingButtonProps,
 } from '#app/components/ContinueReadingButton';
 import SaveArticleButton from '#app/components/SaveArticleButton';
-import isLive from '#lib/utilities/isLive';
 import ElectionBanner from './ElectionBanner';
 import ArticleMessageBanner from './ArticleMessageBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
@@ -110,7 +110,7 @@ const getTimestampComponent =
     lastPublished: string,
     readTimeValue: number | undefined,
     readTimeTranslations: Translations['readTime'],
-    articlePageData?: Article,
+    articlePageData: Article,
   ) =>
   (props: ComponentToRenderProps & TimeStampProps) => {
     const shouldDisplayReadTime = !!(readTimeTranslations && readTimeValue);
@@ -141,7 +141,9 @@ const getTimestampComponent =
             )}
           </>
         )}
-        <SaveArticleButton articlePageData={articlePageData} />
+        <SaveArticleButton
+          saveArticlePageData={extractSaveArticleProps(articlePageData)}
+        />
       </>
     );
   };
@@ -248,6 +250,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   );
   const { enabled: articleVideoCurationEnabled } = useToggle(
     'articleVideoCuration',
+  );
+  const { enabled: countryCurationEnabled } = useToggle(
+    'locationTopicCuration',
   );
 
   const headline = getHeadline(pageData) ?? '';
@@ -417,9 +422,12 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     !isAmp &&
     !isLite &&
     !isApp &&
-    !isLive() &&
+    countryCurationEnabled &&
     pageData?.countryCuration?.summaries?.length,
   );
+
+  const shouldApplyCollapsedArticleSpacing =
+    showContinueReadingButton && !showAllContent;
 
   // EXPERIMENT: PWA Promotional Banner
   const shouldRenderPWAPromotionalBanner =
@@ -475,8 +483,20 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       <ElectionBanner aboutTags={aboutTags} taggings={taggings} />
       <ArticleMessageBanner aboutTags={aboutTags} taggings={taggings} />
       <div css={styles.grid}>
-        <div css={!isPGL ? styles.primaryColumn : styles.pglColumn}>
-          <main css={styles.mainContent} role="main" ref={scrollDepthRef}>
+        <div
+          css={[
+            !isPGL ? styles.primaryColumn : styles.pglColumn,
+            shouldApplyCollapsedArticleSpacing && styles.collapsedArticleColumn,
+          ]}
+        >
+          <main
+            css={[
+              styles.mainContent,
+              shouldApplyCollapsedArticleSpacing && styles.collapsedMainContent,
+            ]}
+            role="main"
+            ref={scrollDepthRef}
+          >
             <Blocks
               blocks={articleBlocks}
               componentsToRender={componentsToRender}
@@ -506,13 +526,13 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               mobileDivider={false}
             />
           )}
+          {showCountryCuration && <LocationBasedTopicOJ pageData={pageData} />}
           {showPortraitVideoCarousel && (
             <PortraitVideoCarousel
               {...portraitVideoCarouselProps}
               css={styles.portraitVideoCarousel}
             />
           )}
-          {showCountryCuration && <LocationBasedTopicOJ pageData={pageData} />}
           <RelatedContentSection content={blocks} />
           {showMediaCuration && (
             <div css={styles.mediaCurationRow}>
