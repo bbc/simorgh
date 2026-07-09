@@ -280,6 +280,7 @@ export const service: DefaultServiceConfig = {
         ownGoal: 'ทำเข้าประตูตัวเอง',
         versus: 'พบกับ',
         kickOff: 'เริ่มการแข่งขัน',
+        timeToBeConfirmed: 'เวลารอยืนยัน',
         teamToBeConfirmed: 'รอการยืนยันทีม',
         afterFullTime: 'หลังจบเวลาปกติ',
         atFullTime: 'เมื่อจบเวลาปกติ',

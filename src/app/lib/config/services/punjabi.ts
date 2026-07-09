@@ -292,6 +292,7 @@ export const service: DefaultServiceConfig = {
         ownGoal: 'ਆਪਣਾ ਹੀ ਗੋਲ',
         versus: 'ਵਿਰੁੱਧ',
         kickOff: 'ਸ਼ੁਰੂਆਤ',
+        timeToBeConfirmed: 'ਸਮੇਂ ਦੀ ਪੁਸ਼ਟੀ ਹੋਣੀ ਬਾਕੀ',
         teamToBeConfirmed: 'ਟੀਮ ਦੀ ਪੁਸ਼ਟੀ ਹੋਣੀ ਬਾਕੀ',
         afterFullTime: 'ਪੂਰੇ ਸਮੇਂ ਤੋਂ ਬਾਅਦ',
         atFullTime: 'ਪੂਰੇ ਸਮੇਂ \'ਤੇ',

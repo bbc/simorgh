@@ -332,6 +332,7 @@ export const service: DefaultServiceConfig = {
         ownGoal: 'ကိုယ့်ဂိုးကိုယ်ထည့်ခြင်း',
         versus: 'နှိုင်းယှဉ်',
         kickOff: 'စတင်ချိန်',
+        timeToBeConfirmed: 'အချိန် အတည်ပြုရန်',
         teamToBeConfirmed: 'အဖွဲ့ အတည်ပြုရန်',
         afterFullTime: 'ပွဲပြီးနောက်',
         atFullTime: 'ပွဲပြီးချိန်တွင်',

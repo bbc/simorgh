@@ -294,6 +294,7 @@ export const service: DefaultServiceConfig = {
         ownGoal: 'góòlù ara ẹni',
         versus: 'sí',
         kickOff: 'ibẹrẹ',
+        timeToBeConfirmed: 'Àkókò láti jẹrisi',
         teamToBeConfirmed: 'Ẹgbẹ lati jẹrisi',
         afterFullTime: 'lẹ́yìn àkókò pipe',
         atFullTime: 'ní àkókò pipe',

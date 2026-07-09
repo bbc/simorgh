@@ -379,6 +379,7 @@ export const service: DefaultServiceConfig = {
         attendance: 'الجمهور',
         versus: 'ضد',
         kickOff: 'انطلاق',
+        timeToBeConfirmed: 'سيتم تأكيد الوقت',
         teamToBeConfirmed: 'سيتم تأكيد الفريق',
         afterFullTime: 'بعد الوقت الكامل',
         atFullTime: 'عند نهاية الوقت الكامل',

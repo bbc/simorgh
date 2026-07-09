@@ -339,6 +339,7 @@ export const service: DefaultServiceConfig = {
         ownGoal: 'öngól',
         versus: 'ellen',
         kickOff: 'kezdőrúgás',
+        timeToBeConfirmed: 'Időpont megerősítésre vár',
         teamToBeConfirmed: 'Csapat megerősítésre vár',
         afterFullTime: 'teljes idő után',
         atFullTime: 'teljes időben',

@@ -300,6 +300,7 @@ export const service: DefaultServiceConfig = {
         ownGoal: 'స్వయంగా గోల్',
         versus: 'వర్సెస్',
         kickOff: 'ప్రారంభం',
+        timeToBeConfirmed: 'సమయం నిర్ధారణలో ఉంది',
         teamToBeConfirmed: 'జట్టు నిర్ధారణలో ఉంది',
         afterFullTime: 'పూర్తి సమయం తర్వాత',
         atFullTime: 'పూర్తి సమయంలో',

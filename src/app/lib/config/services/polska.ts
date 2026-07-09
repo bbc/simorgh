@@ -349,6 +349,7 @@ export const service: DefaultServiceConfig = {
         ownGoal: 'gol samobójczy',
         versus: 'kontra',
         kickOff: 'rozpoczęcie',
+        timeToBeConfirmed: 'Godzina do potwierdzenia',
         teamToBeConfirmed: 'Drużyna do potwierdzenia',
         afterFullTime: 'po pełnym czasie',
         atFullTime: 'w pełnym czasie',

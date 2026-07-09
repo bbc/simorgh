@@ -431,6 +431,7 @@ export const service: DefaultServiceConfig = {
         ownGoal: 'आत्मघाती गोल',
         versus: 'बनाम',
         kickOff: 'किक-ऑफ',
+        timeToBeConfirmed: 'समय की पुष्टि होनी बाकी',
         teamToBeConfirmed: 'टीम की पुष्टि होनी बाकी',
         afterFullTime: 'पूर्ण समय के बाद',
         atFullTime: 'पूर्ण समय पर',

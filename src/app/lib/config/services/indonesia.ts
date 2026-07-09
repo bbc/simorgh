@@ -317,6 +317,7 @@ export const service: DefaultServiceConfig = {
         ownGoal: 'gol bunuh diri',
         versus: 'vs',
         kickOff: 'kick-off',
+        timeToBeConfirmed: 'Waktu akan dikonfirmasi',
         teamToBeConfirmed: 'Tim akan dikonfirmasi',
         afterFullTime: 'setelah waktu penuh',
         atFullTime: 'pada waktu penuh',

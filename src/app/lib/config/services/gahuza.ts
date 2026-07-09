@@ -320,6 +320,7 @@ export const service: DefaultServiceConfig = {
         ownGoal: 'igitego cyitsinze',
         versus: 'vs',
         kickOff: 'gutangira',
+        timeToBeConfirmed: 'Igihe kizemezwa',
         teamToBeConfirmed: 'Ikipe izemezwa',
         afterFullTime: 'nyuma y’igihe cyuzuye',
         atFullTime: 'igihe cyuzuye',

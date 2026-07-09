@@ -340,6 +340,7 @@ export const service: DefaultServiceConfig = {
         ownGoal: 'öz qapısına qol',
         versus: 'qarşı',
         kickOff: 'başlanğıc',
+        timeToBeConfirmed: 'Vaxt təsdiqlənəcək',
         teamToBeConfirmed: 'Komanda təsdiqlənəcək',
         afterFullTime: 'tam vaxtdan sonra',
         atFullTime: 'tam vaxtda',

@@ -350,6 +350,7 @@ export const service: DefaultServiceConfig = {
         matchSummary: 'Rezumatul meciului',
         versus: 'contra',
         kickOff: 'start',
+        timeToBeConfirmed: 'Ora urmează să fie confirmată',
         teamToBeConfirmed: 'Echipa urmează să fie confirmată',
         afterFullTime: 'după timpul regulamentar',
         atFullTime: 'la finalul timpului regulamentar',

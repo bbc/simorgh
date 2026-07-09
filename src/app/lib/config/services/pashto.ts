@@ -314,6 +314,7 @@ export const service: DefaultServiceConfig = {
         ownGoal: 'خپل ګول',
         versus: 'پر وړاندې',
         kickOff: 'پیل',
+        timeToBeConfirmed: 'وخت به تایید شي',
         teamToBeConfirmed: 'لوبډله باید تایید شي',
         afterFullTime: 'د بشپړ وخت وروسته',
         atFullTime: 'د بشپړ وخت کې',

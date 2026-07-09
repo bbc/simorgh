@@ -390,6 +390,7 @@ export const service: DefaultServiceConfig = {
         ownGoal: 'خود کا گول',
         versus: 'بمقابلہ',
         kickOff: 'آغاز',
+        timeToBeConfirmed: 'وقت کی تصدیق ہونا باقی',
         teamToBeConfirmed: 'ٹیم کی تصدیق ہونا باقی',
         afterFullTime: 'مکمل وقت کے بعد',
         atFullTime: 'مکمل وقت پر',

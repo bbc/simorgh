@@ -305,6 +305,7 @@ const baseServiceConfig = {
       ownGoal: 'автогол',
       versus: 'проти',
       kickOff: 'початок',
+      timeToBeConfirmed: 'Час уточнюється',
       teamToBeConfirmed: 'Команда уточнюється',
       afterFullTime: 'після основного часу',
       atFullTime: 'в основний час',

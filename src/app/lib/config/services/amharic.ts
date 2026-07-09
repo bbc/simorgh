@@ -369,6 +369,7 @@ export const service: DefaultServiceConfig = {
         ownGoal: 'ራስ ግብ',
         versus: 'ከ',
         kickOff: 'መጀመሪያ',
+        timeToBeConfirmed: 'ሰዓት ይረጋገጣል',
         teamToBeConfirmed: 'ቡድን ይረጋገጣል',
         afterFullTime: 'ከሙሉ ጊዜ በኋላ',
         atFullTime: 'በሙሉ ጊዜ',

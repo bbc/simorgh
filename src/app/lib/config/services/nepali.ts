@@ -302,6 +302,7 @@ export const service: DefaultServiceConfig = {
         ownGoal: 'आत्मघाती गोल',
         versus: 'विरुद्ध',
         kickOff: 'किक-अफ',
+        timeToBeConfirmed: 'समय पुष्टि हुन बाँकी',
         teamToBeConfirmed: 'टोली पुष्टि हुन बाँकी',
         afterFullTime: 'पूरा समयपछि',
         atFullTime: 'पूरा समयमा',

@@ -295,6 +295,7 @@ export const service: DefaultServiceConfig = {
         attendance: 'Seyirci sayısı',
         versus: 'karşı',
         kickOff: 'başlama',
+        timeToBeConfirmed: 'Saat belirlenecek',
         teamToBeConfirmed: 'Takım belirlenecek',
         afterFullTime: 'tam zaman sonrası',
         atFullTime: 'tam zamanda',

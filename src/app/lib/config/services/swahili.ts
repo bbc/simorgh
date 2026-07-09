@@ -332,6 +332,7 @@ export const service: DefaultServiceConfig = {
         attendance: 'Idadi ya watazamaji',
         versus: 'dhidi ya',
         kickOff: 'kuanza',
+        timeToBeConfirmed: 'Muda utathibitishwa',
         teamToBeConfirmed: 'Timu itathibitishwa',
         afterFullTime: 'baada ya muda kamili',
         atFullTime: 'muda kamili',

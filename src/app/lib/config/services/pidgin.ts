@@ -287,6 +287,7 @@ export const service: DefaultServiceConfig = {
         ownGoal: 'own goal',
         versus: 'vs',
         kickOff: 'kick off',
+        timeToBeConfirmed: 'Time wey dem never confirm',
         teamToBeConfirmed: 'Team wey dem never confirm',
         afterFullTime: 'after full time',
         atFullTime: 'for full time',

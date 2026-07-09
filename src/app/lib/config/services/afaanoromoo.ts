@@ -319,6 +319,7 @@ export const service: DefaultServiceConfig = {
         ownGoal: 'goolii ofii',
         versus: 'vs',
         kickOff: 'jalqaba',
+        timeToBeConfirmed: 'Yeroon ni mirkanaa’a',
         teamToBeConfirmed: 'Timiin ni mirkanaa’uu qaba',
         afterFullTime: 'booda yeroo guutuu',
         atFullTime: 'yeroo guutuutti',

@@ -319,6 +319,7 @@ export const service: DefaultServiceConfig = {
         ownGoal: 'ස්වයං ගෝලය',
         versus: 'مقابل',
         kickOff: 'ආරම්භය',
+        timeToBeConfirmed: 'වේලාව තහවුරු කිරීමට ඇත',
         teamToBeConfirmed: 'කණ්ඩායම තහවුරු කිරීමට ඇත',
         afterFullTime: 'පූර්ණ කාලයෙන් පසු',
         atFullTime: 'පූර්ණ කාලයේදී',

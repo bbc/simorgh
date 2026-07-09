@@ -397,6 +397,7 @@ export const service: DefaultServiceConfig = {
         attendance: 'Yawan ƴan kallo',
         versus: 'da',
         kickOff: 'fara wasa',
+        timeToBeConfirmed: 'Za a tabbatar da lokaci',
         teamToBeConfirmed: 'Za a tabbatar da ƙungiya',
         afterFullTime: 'bayan cikakken lokaci',
         atFullTime: 'a cikakken lokaci',

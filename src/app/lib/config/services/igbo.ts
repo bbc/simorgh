@@ -314,6 +314,7 @@ export const service: DefaultServiceConfig = {
         ownGoal: 'goolu megide onwe',
         versus: 'megide',
         kickOff: 'mmalite',
+        timeToBeConfirmed: 'A ga-ekwenye oge',
         teamToBeConfirmed: 'A ga-ekwenye otu',
         afterFullTime: 'mgbe oge zuru ezu gachara',
         atFullTime: 'na njedebe oge zuru ezu',

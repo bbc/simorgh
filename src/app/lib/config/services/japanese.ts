@@ -277,6 +277,7 @@ export const service: DefaultServiceConfig = {
         ownGoal: 'オウンゴール',
         versus: '対',
         kickOff: 'キックオフ',
+        timeToBeConfirmed: '時間未定',
         teamToBeConfirmed: 'チーム未定',
         afterFullTime: '試合終了後',
         atFullTime: '試合終了時',

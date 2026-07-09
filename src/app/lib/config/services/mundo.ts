@@ -415,6 +415,7 @@ export const service: DefaultServiceConfig = {
         attendance: 'Asistencia',
         versus: 'contra',
         kickOff: 'inicio',
+        timeToBeConfirmed: 'Hora por confirmar',
         teamToBeConfirmed: 'Equipo por confirmar',
         afterFullTime: 'después del tiempo reglamentario',
         atFullTime: 'al final del tiempo reglamentario',

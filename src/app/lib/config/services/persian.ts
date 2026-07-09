@@ -407,6 +407,7 @@ export const service: DefaultServiceConfig = {
         ownGoal: 'گل به خودی',
         versus: 'مقابل',
         kickOff: 'شروع',
+        timeToBeConfirmed: 'زمان باید تأیید شود',
         teamToBeConfirmed: 'تیم باید تأیید شود',
         afterFullTime: 'پس از وقت کامل',
         atFullTime: 'در وقت کامل',

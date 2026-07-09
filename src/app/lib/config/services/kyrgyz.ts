@@ -315,6 +315,7 @@ export const service: DefaultServiceConfig = {
         ownGoal: 'өз дарбазасына гол',
         versus: 'каршы',
         kickOff: 'башталышы',
+        timeToBeConfirmed: 'Убакыт такталат',
         teamToBeConfirmed: 'Команда такталат',
         afterFullTime: 'толук убакыттан кийин',
         atFullTime: 'толук убакытта',

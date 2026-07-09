@@ -289,6 +289,7 @@ export const service: DefaultServiceConfig = {
         ownGoal: '자책골',
         versus: '대',
         kickOff: '킥오프',
+        timeToBeConfirmed: '시간 미정',
         teamToBeConfirmed: '팀 미정',
         afterFullTime: '경기 종료 후',
         atFullTime: '경기 종료 시',

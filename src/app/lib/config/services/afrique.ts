@@ -328,6 +328,7 @@ export const service: DefaultServiceConfig = {
         attendance: 'Affluence',
         versus: 'contre',
         kickOff: 'coup d’envoi',
+        timeToBeConfirmed: 'Heure à confirmer',
         teamToBeConfirmed: 'Équipe à confirmer',
         afterFullTime: 'après le temps réglementaire',
         atFullTime: 'à la fin du temps réglementaire',

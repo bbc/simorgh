@@ -289,6 +289,7 @@ export const service: DefaultServiceConfig = {
         ownGoal: 'bàn phản lưới nhà',
         versus: 'đối đầu',
         kickOff: 'khai cuộc',
+        timeToBeConfirmed: 'Thời gian sẽ được xác nhận',
         teamToBeConfirmed: 'Đội sẽ được xác nhận',
         afterFullTime: 'sau khi hết giờ',
         atFullTime: 'khi hết giờ',

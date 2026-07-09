@@ -134,6 +134,7 @@ export const service: DefaultServiceConfig = {
         ownGoal: 'автогол',
         versus: 'против',
         kickOff: 'начало',
+        timeToBeConfirmed: 'Время уточняется',
         teamToBeConfirmed: 'Команда уточняется',
         afterFullTime: 'после основного времени',
         atFullTime: 'в основное время',

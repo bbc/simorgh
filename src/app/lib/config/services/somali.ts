@@ -319,6 +319,7 @@ export const service: DefaultServiceConfig = {
         ownGoal: 'gool iskiis',
         versus: 'vs',
         kickOff: 'bilow',
+        timeToBeConfirmed: 'Waqtiga waa la xaqiijinayaa',
         teamToBeConfirmed: 'Kooxda waa la xaqiijinayaa',
         afterFullTime: 'kadib waqtiga buuxa',
         atFullTime: 'waqtiga buuxa',

@@ -299,6 +299,7 @@ export const service: DefaultServiceConfig = {
         ownGoal: 'ናይ ባዕልኻ ጎል',
         versus: 'ንስኻ',
         kickOff: 'መጀመርታ',
+        timeToBeConfirmed: 'ሰዓት ክረጋገጽ እዩ',
         teamToBeConfirmed: 'ጋንታ ትርጋገጽ',
         afterFullTime: 'ድሕሪ ሙሉእ ጊዜ',
         atFullTime: 'ኣብ ሙሉእ ጊዜ',

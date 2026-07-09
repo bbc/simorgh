@@ -266,6 +266,7 @@ export interface Translations {
     versus?: string;
     kickOff?: string;
     teamToBeConfirmed?: string;
+    timeToBeConfirmed?: string;
     afterFullTime?: string;
     atFullTime?: string;
     onPenalties?: string;
