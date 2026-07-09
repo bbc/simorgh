@@ -301,6 +301,7 @@ const defaultCyrillicConfig = {
       linkText: 'View the full version of the page to see all the content.',
     },
     sport: {
+      keyEventsTitle: 'Асосий воқеалар',
       matchSummary: 'Ўйин хулосаси',
       assists: 'Ассистлар',
       penalties: 'Пенальти',
@@ -720,6 +721,7 @@ export const service: UzbekConfig = {
         linkText: 'View the full version of the page to see all the content.',
       },
       sport: {
+        keyEventsTitle: 'Asosiy voqealar',
         matchSummary: 'O‘yin xulosasi',
         assists: 'Assistlar',
         penalties: 'Penaltilar',

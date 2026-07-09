@@ -277,6 +277,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'BBC giới thiệu',
       latestMediaTitle: 'Mới nhất',
       sport: {
+        keyEventsTitle: 'Sự kiện chính',
         matchSummary: 'Tóm tắt trận đấu',
         assists: 'Kiến tạo',
         penalties: 'Luân lưu',
