@@ -41,6 +41,9 @@ export default {
   liveRadioSchedule: {
     enabled: true,
   },
+  locationTopicCuration: {
+    enabled: true,
+  },
   midArticleOnwardJourney: {
     enabled: true,
   },

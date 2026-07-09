@@ -261,6 +261,24 @@ const nonSmokeCanonicalTestSuites = [
     tests: [...canonicalTests],
   },
   {
+    path: '/magyarul/articles/cwy04ln10zdo',
+    runforEnv: ['live'],
+    service: 'magyarul',
+    tests: [...canonicalTests],
+  },
+  {
+    path: '/romania/articles/c2x404ljvkro',
+    runforEnv: ['local', 'test'],
+    service: 'romania',
+    tests: [...canonicalTests],
+  },
+  {
+    path: '/romania/articles/c3rynpp24dwo',
+    runforEnv: ['live'],
+    service: 'romania',
+    tests: [...canonicalTests],
+  },
+  {
     path: '/mundo/articles/ce7p1pw7165o',
     runforEnv: ['live'],
     service: 'mundo',
@@ -424,6 +442,26 @@ const atiAnalyticsTestSuites = [
       assertTopBarOJComponentClick,
       assertTopBarOJComponentView,
     ],
+  },
+  {
+    path: '/magyarul/articles/cwy04ln10zdo',
+    runforEnv: ['live'],
+    service: 'magyarul',
+    pageIdentifier: 'magyarul.articles.cwy04ln10zdo.page',
+    siteId: 134,
+    applicationType: 'responsive',
+    contentType: 'article',
+    tests: [assertPageView],
+  },
+  {
+    path: '/romania/articles/c3rynpp24dwo',
+    runforEnv: ['live'],
+    service: 'romania',
+    pageIdentifier: 'romania.articles.c3rynpp24dwo.page',
+    siteId: 136,
+    applicationType: 'responsive',
+    contentType: 'article',
+    tests: [assertPageView],
   },
 ] as unknown as TestDataType[];
 
