@@ -30,6 +30,7 @@ import {
   getLang,
 } from '#lib/utilities/parseAssetData';
 import extractPromoImage from '#lib/utilities/extractPromoImage';
+import extractSaveArticleProps from '#app/lib/utilities/extractSaveArticleProps';
 import RelatedTopics from '#app/components/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import InlinePodcastPromo from '#containers/PodcastPromo/Inline';
@@ -77,7 +78,6 @@ import {
   getAuthorTwitterHandle,
 } from '../../components/Byline/utilities';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import { ReverbParamsContext } from '../../contexts/ReverbParamsContext';
 import RelatedContentSection from '../../components/RelatedContentSection';
 import TopicDiscovery from '../../components/TopicDiscovery';
 import Disclaimer from '../../components/Disclaimer';
@@ -108,7 +108,7 @@ const getTimestampComponent =
     lastPublished: string,
     readTimeValue: number | undefined,
     readTimeTranslations: Translations['readTime'],
-    articlePageData?: Article,
+    articlePageData: Article,
   ) =>
   (props: ComponentToRenderProps & TimeStampProps) => {
     const shouldDisplayReadTime = !!(readTimeTranslations && readTimeValue);
@@ -139,7 +139,9 @@ const getTimestampComponent =
             )}
           </>
         )}
-        <SaveArticleButton articlePageData={articlePageData} />
+        <SaveArticleButton
+          saveArticlePageData={extractSaveArticleProps(articlePageData)}
+        />
       </>
     );
   };
@@ -202,21 +204,9 @@ const getContinueReadingButton =
     />
   );
 
-const ArticlePage = ({
-  pageData,
-  showTopicDiscoveryComponent = false,
-}: {
-  pageData: Article;
-  showTopicDiscoveryComponent?: boolean;
-}) => {
+const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const [showAllContent, setShowAllContent] = useState(false);
   const { isApp, isAmp, isLite, pageType } = use(RequestContext);
-
-  // EXPERIMENT: Topic Discovery
-  const { experimentProps: topicDiscoveryExperimentProps } =
-    use(ReverbParamsContext);
-  const { experimentVariant: topicDiscoveryVariant } =
-    topicDiscoveryExperimentProps ?? {};
 
   const {
     articleAuthor,
@@ -230,6 +220,7 @@ const ArticlePage = ({
     'continueReadingButton',
   );
   const { enabled: isTopBarOJsEnabled } = useToggle('topBarOJs');
+  const { enabled: topicDiscoveryEnabled } = useToggle('topicDiscovery');
 
   const {
     palette: { GREY_2 },
@@ -355,7 +346,6 @@ const ArticlePage = ({
     wsoj: ({ data }: { data: Recommendation[] }) =>
       getWsojComponent({
         data,
-        experimentProps: topicDiscoveryExperimentProps,
       }),
     disclaimer: DisclaimerWithPaddingOverride,
     podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
@@ -379,11 +369,7 @@ const ArticlePage = ({
 
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
 
-  const showTopicDiscovery =
-    (showTopicDiscoveryComponent ||
-      topicDiscoveryVariant === 'topic_discovery') &&
-    !isAmp &&
-    !isLite;
+  const showTopicDiscovery = topicDiscoveryEnabled && !isAmp && !isLite;
 
   const showRelatedTopicsComponent = Boolean(
     showRelatedTopics && topics.length > 0 && !showTopicDiscovery,
@@ -405,6 +391,9 @@ const ArticlePage = ({
     !isLive() &&
     pageData?.countryCuration?.summaries?.length,
   );
+
+  const shouldApplyCollapsedArticleSpacing =
+    showContinueReadingButton && !showAllContent;
 
   // EXPERIMENT: PWA Promotional Banner
   const shouldRenderPWAPromotionalBanner =
@@ -460,16 +449,26 @@ const ArticlePage = ({
       <ElectionBanner aboutTags={aboutTags} taggings={taggings} />
       <ArticleMessageBanner aboutTags={aboutTags} taggings={taggings} />
       <div css={styles.grid}>
-        <div css={!isPGL ? styles.primaryColumn : styles.pglColumn}>
-          <main css={styles.mainContent} role="main">
+        <div
+          css={[
+            !isPGL ? styles.primaryColumn : styles.pglColumn,
+            shouldApplyCollapsedArticleSpacing && styles.collapsedArticleColumn,
+          ]}
+        >
+          <main
+            css={[
+              styles.mainContent,
+              shouldApplyCollapsedArticleSpacing && styles.collapsedMainContent,
+            ]}
+            role="main"
+          >
             <Blocks
               blocks={articleBlocks}
               componentsToRender={componentsToRender}
             />
             <OptimizelyPageMetrics trackPageComplete />
           </main>
-          <OptimizelyPageMetrics trackPageView trackPageDepth trackVisit />
-          {/* EXPERIMENT: Topic Discovery */}
+          <OptimizelyPageMetrics trackPageDepth />
           {showTopicDiscovery && (
             <TopicDiscovery
               css={[
@@ -478,7 +477,6 @@ const ArticlePage = ({
                   : []),
               ]}
               topics={topics}
-              experimentProps={topicDiscoveryExperimentProps || undefined}
             />
           )}
           {showRelatedTopicsComponent && (
@@ -491,7 +489,6 @@ const ArticlePage = ({
               ]}
               topics={topics}
               mobileDivider={false}
-              experimentProps={topicDiscoveryExperimentProps || undefined}
             />
           )}
           {showPortraitVideoCarousel && (
@@ -501,10 +498,7 @@ const ArticlePage = ({
             />
           )}
           {showCountryCuration && <LocationBasedTopicOJ pageData={pageData} />}
-          <RelatedContentSection
-            content={blocks}
-            experimentProps={topicDiscoveryExperimentProps || undefined}
-          />
+          <RelatedContentSection content={blocks} />
           {showMediaCuration && (
             <div css={styles.mediaCurationRow}>
               <div data-testid="media-curation">
@@ -525,12 +519,7 @@ const ArticlePage = ({
           )}
         </div>
 
-        {!isApp && !isPGL && (
-          <SecondaryColumn
-            pageData={pageData}
-            experimentProps={topicDiscoveryExperimentProps || undefined}
-          />
-        )}
+        {!isApp && !isPGL && <SecondaryColumn pageData={pageData} />}
       </div>
 
       {!isApp && !isPGL && (
@@ -541,7 +530,6 @@ const ArticlePage = ({
           size="default"
           headingBackgroundColour={GREY_2}
           mobileDivider={showRelatedTopicsComponent}
-          experimentProps={topicDiscoveryExperimentProps || undefined}
         />
       )}
     </div>

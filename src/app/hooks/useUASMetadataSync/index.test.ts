@@ -1,6 +1,6 @@
 import { renderHook } from '#app/components/react-testing-library-with-providers';
 import * as uasUtility from '#app/lib/uasApi/uasUtility';
-import { Article } from '#app/models/types/optimo';
+import { SaveArticlePageData } from '#app/lib/utilities/extractSaveArticleProps';
 import useUASMetadataSync from './index';
 
 jest.mock('#app/lib/uasApi/uasUtility');
@@ -10,21 +10,9 @@ const mockCompareMetadataWithSaved =
   uasUtility.compareMetadataWithSaved as jest.Mock;
 
 describe('useUASMetadataSync', () => {
-  const mockArticlePageData = {
-    id: 'c123456789o',
-    metadata: {
-      canonicalUrl: 'https://bbc.com/article',
-    },
-    promo: {
-      images: {
-        defaultPromoImage: {
-          path: '/image.jpg',
-        },
-      },
-    },
-    content: [{ type: 'text', model: { blocks: [{ text: 'Content' }] } }],
-    mostRead: [],
-  } as unknown as Article;
+  const mockArticlePageData: SaveArticlePageData = {
+    canonicalUrl: 'https://bbc.com/article',
+  };
 
   const mockSavedMetadata = {
     title: 'Old Title',
@@ -48,7 +36,7 @@ describe('useUASMetadataSync', () => {
   it('calls buildCurrentMetadata with correct arguments', () => {
     renderHook(() =>
       useUASMetadataSync({
-        articlePageData: mockArticlePageData,
+        saveArticlePageData: mockArticlePageData,
         articleId: 'c123456789o',
         service: 'hindi',
         isSaved: true,
@@ -72,7 +60,7 @@ describe('useUASMetadataSync', () => {
 
     renderHook(() =>
       useUASMetadataSync({
-        articlePageData: mockArticlePageData,
+        saveArticlePageData: mockArticlePageData,
         articleId: 'c123456789o',
         service: 'hindi',
         isSaved: true,
@@ -96,7 +84,7 @@ describe('useUASMetadataSync', () => {
 
     renderHook(() =>
       useUASMetadataSync({
-        articlePageData: mockArticlePageData,
+        saveArticlePageData: mockArticlePageData,
         articleId: 'c123456789o',
         service: 'hindi',
         isSaved: true,
@@ -115,7 +103,7 @@ describe('useUASMetadataSync', () => {
 
     renderHook(() =>
       useUASMetadataSync({
-        articlePageData: mockArticlePageData,
+        saveArticlePageData: mockArticlePageData,
         articleId: 'c123456789o',
         service: 'hindi',
         isSaved: true,
@@ -130,7 +118,7 @@ describe('useUASMetadataSync', () => {
   it('does not call onMetadataOutOfDate when article is not saved', () => {
     renderHook(() =>
       useUASMetadataSync({
-        articlePageData: mockArticlePageData,
+        saveArticlePageData: mockArticlePageData,
         articleId: 'c123456789o',
         service: 'hindi',
         isSaved: false,
@@ -142,25 +130,10 @@ describe('useUASMetadataSync', () => {
     expect(mockOnMetadataOutOfDate).not.toHaveBeenCalled();
   });
 
-  it('does not call onMetadataOutOfDate when articlePageData is missing', () => {
-    renderHook(() =>
-      useUASMetadataSync({
-        articlePageData: undefined,
-        articleId: 'c123456789o',
-        service: 'hindi',
-        isSaved: true,
-        savedArticleMetadata: mockSavedMetadata,
-        onMetadataOutOfDate: mockOnMetadataOutOfDate,
-      }),
-    );
-
-    expect(mockOnMetadataOutOfDate).not.toHaveBeenCalled();
-  });
-
   it('does not call onMetadataOutOfDate when savedArticleMetadata is missing', () => {
     renderHook(() =>
       useUASMetadataSync({
-        articlePageData: mockArticlePageData,
+        saveArticlePageData: mockArticlePageData,
         articleId: 'c123456789o',
         service: 'hindi',
         isSaved: true,
@@ -181,7 +154,7 @@ describe('useUASMetadataSync', () => {
 
     const { rerender } = renderHook(() =>
       useUASMetadataSync({
-        articlePageData: mockArticlePageData,
+        saveArticlePageData: mockArticlePageData,
         articleId: 'c123456789o',
         service: 'hindi',
         isSaved: true,
@@ -210,7 +183,7 @@ describe('useUASMetadataSync', () => {
     const { rerender } = renderHook(
       ({ articleId }: { articleId: string }) =>
         useUASMetadataSync({
-          articlePageData: mockArticlePageData,
+          saveArticlePageData: mockArticlePageData,
           articleId,
           service: 'hindi',
           isSaved: true,
@@ -238,7 +211,7 @@ describe('useUASMetadataSync', () => {
     const { rerender } = renderHook(
       ({ isSaved }: { isSaved: boolean }) =>
         useUASMetadataSync({
-          articlePageData: mockArticlePageData,
+          saveArticlePageData: mockArticlePageData,
           articleId: 'c123456789o',
           service: 'hindi',
           isSaved,
@@ -269,7 +242,7 @@ describe('useUASMetadataSync', () => {
     expect(() => {
       renderHook(() =>
         useUASMetadataSync({
-          articlePageData: mockArticlePageData,
+          saveArticlePageData: mockArticlePageData,
           articleId: 'c123456789o',
           service: 'hindi',
           isSaved: true,

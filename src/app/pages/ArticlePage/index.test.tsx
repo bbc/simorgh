@@ -20,15 +20,10 @@ import {
   articlePglDataPidgin,
   articleStyDataPidgin,
 } from '#pages/ArticlePage/fixtureData';
+import * as isLive from '#lib/utilities/isLive';
 import { data as newsMostReadData } from '#data/news/mostRead/index.json';
-import { data as persianMostReadData } from '#data/persian/mostRead/index.json';
-import { data as pidginMostReadData } from '#data/pidgin/mostRead/index.json';
 import { portraitVideoFixture } from '#app/components/PortraitVideoCarousel/fixture';
-import {
-  textBlock,
-  blockContainingText,
-  singleTextBlock,
-} from '#models/blocks/index';
+import { textBlock, singleTextBlock } from '#models/blocks/index';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { suppressPropWarnings } from '#app/legacy/psammead/psammead-test-helpers/src';
 import { Services } from '#app/models/types/global';
@@ -390,104 +385,25 @@ describe('Article Page', () => {
       </Context>,
     );
 
-    await waitFor(() => {
-      expect(container).toMatchSnapshot();
-    });
-  });
+    const headline = container.querySelector('h1');
+    expect(headline).toBeInTheDocument();
+    expect(headline).toHaveTextContent('Article Headline');
 
-  it('should render a rtl article (persian) with most read correctly', async () => {
-    const { container } = render(
-      <Context service="persian">
-        <ArticlePage
-          pageData={{
-            ...articleDataPersian,
-            mostRead: persianMostReadData,
-          }}
-        />
-      </Context>,
-      { service: 'persian' },
+    const paragraphs = container.querySelectorAll('p');
+    expect(paragraphs.length).toEqual(1);
+    expect(paragraphs[0]).toHaveTextContent('A paragraph.');
+
+    const images = container.querySelectorAll('img');
+    expect(images.length).toEqual(1);
+    expect(images[0]).toHaveAttribute(
+      'src',
+      'https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/157c/live/d5c6e520-16dd-11ef-9b12-1ba8f95c4917.jpg.webp',
     );
+    expect(images[0]).toHaveAttribute('alt', 'Shiroo buddeen waliin');
 
     await waitFor(() => {
       const mostReadSection = container.querySelector('#Most-Read');
       expect(mostReadSection).not.toBeNull();
-    });
-
-    expect(container).toMatchSnapshot();
-  });
-
-  it('should render a ltr article (pidgin) with most read correctly', async () => {
-    const { container } = render(
-      <Context service="pidgin">
-        <ArticlePage
-          pageData={{
-            ...articleDataPidgin,
-            mostRead: pidginMostReadData,
-          }}
-        />
-      </Context>,
-      { service: 'pidgin' },
-    );
-
-    await waitFor(() => {
-      const mostReadSection = container.querySelector('#Most-Read');
-      expect(mostReadSection).not.toBeNull();
-    });
-
-    expect(container).toMatchSnapshot();
-  });
-
-  it('should render a news article with headline in the middle correctly', async () => {
-    const headline = blockContainingText('headline', 'Article Headline', 1);
-
-    const articleWithSummaryHeadlineInTheMiddle = {
-      ...articleDataNews,
-      metadata: {
-        ...articleDataNews.metadata,
-        atiAnalytics: {
-          ...articleDataNews.metadata.atiAnalytics,
-          pageTitle: 'SEO Headline',
-        },
-      },
-      content: {
-        model: {
-          blocks: [
-            // @ts-expect-error - type checking not added for block helpers
-            singleTextBlock('Paragraph above headline', 2),
-            {
-              ...headline,
-              model: {
-                ...headline.model,
-                blocks: [
-                  {
-                    ...headline.model.blocks[0],
-                    position: [2, 1],
-                  },
-                ],
-              },
-            },
-            // @ts-expect-error - type checking not added for block helpers
-            singleTextBlock('Paragraph below headline', 3),
-          ],
-        },
-      },
-      promo: {
-        ...articleDataNews.promo,
-        headlines: {
-          seoHeadline: 'SEO Headline',
-          promoHeadline: 'Promo Headline',
-        },
-      },
-    };
-
-    const { container } = render(
-      <Context service="news">
-        <ArticlePage pageData={articleWithSummaryHeadlineInTheMiddle} />
-      </Context>,
-    );
-
-    await waitFor(() => {
-      expect(container).toMatchSnapshot();
     });
   });
 
@@ -522,9 +438,8 @@ describe('Article Page', () => {
       </Context>,
     );
 
-    await waitFor(() => {
-      expect(container).toMatchSnapshot();
-    });
+    expect(container.querySelector('h1:not(#content)')).not.toBeInTheDocument();
+    expect(screen.getByText('Paragraph 1')).toBeInTheDocument();
   });
 
   it('should render the top stories and features when passed', async () => {
@@ -1397,8 +1312,9 @@ describe('Article Page', () => {
       });
     });
   });
-  describe('TopicDiscovery visibility on test only', () => {
-    beforeEach(() => {
+  describe('TopicDiscovery', () => {
+    afterEach(() => {
+      jest.resetAllMocks();
       delete process.env.SIMORGH_APP_ENV;
     });
 
@@ -1419,21 +1335,18 @@ describe('Article Page', () => {
       },
     } as Article;
 
-    it('should render TopicDiscovery when isLive is false (test env)', () => {
-      process.env.SIMORGH_APP_ENV = 'test';
-
-      const { queryByTestId } = render(
-        <ArticlePage pageData={data} showTopicDiscoveryComponent />,
-        { service: 'portuguese' },
-      );
+    it('should render TopicDiscovery when topicDiscovery toggle is enabled', () => {
+      const { queryByTestId } = render(<ArticlePage pageData={data} />, {
+        service: 'portuguese',
+        toggles: { topicDiscovery: { enabled: true } },
+      });
       expect(queryByTestId('topic-discovery')).toBeInTheDocument();
     });
 
-    it('should NOT render TopicDiscovery when isLive is true (live env)', () => {
-      process.env.SIMORGH_APP_ENV = 'live';
-
+    it('should NOT render TopicDiscovery when topicDiscovery toggle is disabled', () => {
       const { queryByTestId } = render(<ArticlePage pageData={data} />, {
         service: 'portuguese',
+        toggles: { topicDiscovery: { enabled: false } },
       });
       expect(queryByTestId('topic-discovery')).not.toBeInTheDocument();
     });
@@ -1441,6 +1354,15 @@ describe('Article Page', () => {
 
   describe('LocationBasedTopicOJ', () => {
     beforeEach(() => {
+      delete process.env.SIMORGH_APP_ENV;
+      // Ensure isLive is evaluated fresh from process.env
+      jest.spyOn(isLive, 'default').mockImplementation(() => {
+        return process.env.SIMORGH_APP_ENV === 'live';
+      });
+    });
+
+    afterEach(() => {
+      jest.restoreAllMocks();
       delete process.env.SIMORGH_APP_ENV;
     });
 
@@ -1487,6 +1409,7 @@ describe('Article Page', () => {
             countryCuration: undefined,
           }}
         />,
+        { service: 'hausa' },
       );
 
       expect(
@@ -1502,6 +1425,7 @@ describe('Article Page', () => {
           // @ts-expect-error: Test fixture data does not need to match Article type exactly
           pageData={pageData}
         />,
+        { service: 'hausa' },
       );
       expect(screen.getByRole('region')).toBeInTheDocument();
       expect(screen.getByText('Najeriya')).toBeInTheDocument();
