@@ -63,14 +63,6 @@ const CanonicalATIAnalytics = ({ reverbParams }: ATIAnalyticsProps) => {
     reverbUrlHelper.getOperaMiniPageViewUrl(reverbParams),
   );
 
-  console.log('&&&&&&&&&&&&&&&&&&&&&');
-  console.log('I GET HERE');
-  console.log('+++++++++++++++++++++');
-  console.log('liteSiteReverbURL - ', liteSiteReverbURL);
-  console.log('+++++++++++++++++++++');
-  console.log('operaMiniPageViewReverbURL - ', operaMiniPageViewReverbURL);
-  console.log('&&&&&&&&&&&&&&&&&&&&&');
-
   return (
     <>
       {addScript({ script: addSendStaticBeaconToWindow(), nonce })}
