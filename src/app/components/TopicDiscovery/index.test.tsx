@@ -12,6 +12,12 @@ import { service as portugueseConfig } from '#app/lib/config/services/portuguese
 import { service as turkceConfig } from '#app/lib/config/services/turkce';
 import { service as arabicConfig } from '#app/lib/config/services/arabic';
 import {
+  GREY_2,
+  GREY_4,
+  GREY_6,
+  GREY_10,
+} from '#app/components/ThemeProvider/palette';
+import {
   ARTICLE_PAGE,
   LIVE_TV_PAGE,
   MEDIA_ARTICLE_PAGE,
@@ -214,11 +220,11 @@ describe('TopicDiscovery', () => {
         name: /Derrota em dose dupla/,
       });
 
-      expect(window.getComputedStyle(promoLink).color).toBe(
-        'rgb(246, 246, 246)',
-      );
+      const tabPanel = screen.getByRole('tabpanel');
 
-      expect(screen.getByRole('tabpanel')).toHaveStyleRule('color', '#B0B2B4', {
+      expect(promoLink).toHaveStyle({ color: GREY_2 });
+
+      expect(tabPanel).toHaveStyleRule('color', GREY_4, {
         target: 'li .promo-text a:visited',
       });
     },
@@ -234,9 +240,11 @@ describe('TopicDiscovery', () => {
       name: /Derrota em dose dupla/,
     });
 
-    expect(window.getComputedStyle(promoLink).color).toBe('rgb(20, 20, 20)');
+    const tabPanel = screen.getByRole('tabpanel');
 
-    expect(screen.getByRole('tabpanel')).toHaveStyleRule('color', '#545658', {
+    expect(promoLink).toHaveStyle({ color: GREY_10 });
+
+    expect(tabPanel).toHaveStyleRule('color', GREY_6, {
       target: 'li .promo-text a:visited',
     });
   });
