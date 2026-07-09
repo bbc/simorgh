@@ -12,10 +12,12 @@ import { service as portugueseConfig } from '#app/lib/config/services/portuguese
 import { service as turkceConfig } from '#app/lib/config/services/turkce';
 import { service as arabicConfig } from '#app/lib/config/services/arabic';
 import {
+  BLACK,
   GREY_2,
   GREY_4,
   GREY_6,
   GREY_10,
+  WHITE,
 } from '#app/components/ThemeProvider/palette';
 import {
   ARTICLE_PAGE,
@@ -229,6 +231,29 @@ describe('TopicDiscovery', () => {
       });
     },
   );
+
+  it('should render media icons in dark ui colours', () => {
+    const { container } = render(<TopicDiscovery topics={topicTagsFixture} />, {
+      pageType: MEDIA_ARTICLE_PAGE,
+      service: 'portuguese',
+    });
+
+    expect(
+      container.querySelector('[data-e2e="media-icon"]'),
+    ).toBeInTheDocument();
+
+    const tabPanel = screen.getByRole('tabpanel');
+
+    expect(tabPanel).toHaveStyleRule('background-color', BLACK, {
+      target: 'li .promo-image [data-e2e="media-icon"]',
+    });
+    expect(tabPanel).toHaveStyleRule('color', WHITE, {
+      target: 'li .promo-image [data-e2e="media-icon"]',
+    });
+    expect(tabPanel).toHaveStyleRule('color', WHITE, {
+      target: 'li .promo-image [data-e2e="media-icon"] svg',
+    });
+  });
 
   it('should render promo links in light ui colours for article pages', () => {
     render(<TopicDiscovery topics={topicTagsFixture} />, {
