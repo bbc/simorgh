@@ -5,6 +5,8 @@ import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import { AccountContext } from '#app/contexts/AccountContext';
 import AccountSignInModal from '#app/components/Account/AccountSignInModal';
 import { createPortal } from 'react-dom';
+import useClickTracker from '#app/hooks/useClickTrackerHandler';
+import useViewTracker from '#app/hooks/useViewTracker';
 
 const SaveArticleButtonGuest = () => {
   const { translations } = use(ServiceContext);
@@ -18,14 +20,28 @@ const SaveArticleButtonGuest = () => {
     ? saveArticleButton?.save
     : saveArticleButton?.loading;
 
+  const viewTracker = useViewTracker({
+    componentName: 'save-article-button-guest-view',
+  });
+
+  const { onClick: onClickTrack } = useClickTracker({
+    componentName: 'save-article-button-guest-click-save',
+  });
+
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    onClickTrack?.(e);
+    setIsModalOpen(true);
+  };
+
   return (
     <>
       <SaveButton
-        onClick={() => setIsModalOpen(true)}
+        onClick={handleClick}
         visualLabel={label ?? ''}
         accessibleLabel={label ?? ''}
         testId="save-article-btn-guest"
         isLoading={!isHydrated}
+        {...viewTracker}
       />
       {isModalOpen &&
         createPortal(
