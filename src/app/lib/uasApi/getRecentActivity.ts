@@ -13,7 +13,7 @@ export interface UasActivityItem {
   resourceDomain: string;
   created: string;
   action: string;
-  metaData: {
+  metaData?: {
     service?: string;
     articleId?: string;
     title?: string;
@@ -89,7 +89,9 @@ const getRecentActivity = async ({
 
     const { items: allItems } = data;
 
-    const savedArticles = allItems.map(transformActivityToSavedArticle);
+    const savedArticles = allItems
+      .filter(item => item.metaData != null)
+      .map(transformActivityToSavedArticle);
 
     return {
       savedArticles,

@@ -46,6 +46,9 @@ interface MetadataComparisonResult {
  * @param service - BBC service name (e.g., 'arabic', 'portuguese')
  * @returns Object with tracked metadata fields
  */
+const sanitiseMetadataString = (value: string | null | undefined): string =>
+  value?.replace(/\s+/g, ' ').trim() ?? '';
+
 const buildCurrentMetadata = (
   saveArticlePageData: SaveArticlePageData,
   { articleId, service }: { articleId: string; service: Services },
@@ -55,9 +58,9 @@ const buildCurrentMetadata = (
   return {
     articleId,
     service,
-    title: headline,
+    title: sanitiseMetadataString(headline),
     promoImage,
-    promoImageAltText,
+    promoImageAltText: sanitiseMetadataString(promoImageAltText),
     locatorUrl: canonicalUrl,
   };
 };
@@ -106,6 +109,7 @@ export {
   createFavouritesPayload,
   buildCurrentMetadata,
   compareMetadataWithSaved,
+  sanitiseMetadataString,
 };
 
 export type { MetadataComparisonResult };
