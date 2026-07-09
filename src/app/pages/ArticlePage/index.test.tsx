@@ -1313,11 +1313,6 @@ describe('Article Page', () => {
     });
   });
   describe('TopicDiscovery', () => {
-    afterEach(() => {
-      jest.resetAllMocks();
-      delete process.env.SIMORGH_APP_ENV;
-    });
-
     const data = {
       ...articleDataPidgin,
       metadata: {
@@ -1353,19 +1348,6 @@ describe('Article Page', () => {
   });
 
   describe('LocationBasedTopicOJ', () => {
-    beforeEach(() => {
-      delete process.env.SIMORGH_APP_ENV;
-      // Ensure isLive is evaluated fresh from process.env
-      jest.spyOn(isLive, 'default').mockImplementation(() => {
-        return process.env.SIMORGH_APP_ENV === 'live';
-      });
-    });
-
-    afterEach(() => {
-      jest.restoreAllMocks();
-      delete process.env.SIMORGH_APP_ENV;
-    });
-
     const mockCountryCuration = {
       title: 'Najeriya',
       topicId: 'topic-1',
@@ -1400,8 +1382,6 @@ describe('Article Page', () => {
     };
 
     it('renders nothing if countryCuration is undefined', () => {
-      process.env.SIMORGH_APP_ENV = 'local';
-
       render(
         <ArticlePage
           pageData={{
@@ -1409,7 +1389,10 @@ describe('Article Page', () => {
             countryCuration: undefined,
           }}
         />,
-        { service: 'hausa' },
+        {
+          service: 'hausa',
+          toggles: { locationTopicCuration: { enabled: true } },
+        },
       );
 
       expect(
@@ -1418,14 +1401,15 @@ describe('Article Page', () => {
     });
 
     it('renders section and subheading when countryCuration is present', () => {
-      process.env.SIMORGH_APP_ENV = 'local';
-
       render(
         <ArticlePage
           // @ts-expect-error: Test fixture data does not need to match Article type exactly
           pageData={pageData}
         />,
-        { service: 'hausa' },
+        {
+          service: 'hausa',
+          toggles: { locationTopicCuration: { enabled: true } },
+        },
       );
       expect(screen.getByRole('region')).toBeInTheDocument();
       expect(screen.getByText('Najeriya')).toBeInTheDocument();
@@ -1433,29 +1417,99 @@ describe('Article Page', () => {
       expect(screen.getByText('Promo Title 2')).toBeInTheDocument();
     });
 
-    it('should render LocationBasedTopicOJ when isLive is false (test env)', () => {
-      process.env.SIMORGH_APP_ENV = 'test';
-
+    it('should render LocationBasedTopicOJ when countryCuration toggle is enabled', () => {
       const { queryByTestId } = render(
         <ArticlePage
           // @ts-expect-error: Test fixture data does not need to match Article type exactly
           pageData={pageData}
         />,
-        { service: 'hausa' },
+        {
+          service: 'hausa',
+          toggles: { locationTopicCuration: { enabled: true } },
+        },
       );
 
       expect(queryByTestId('location-based-topic-oj')).toBeInTheDocument();
     });
 
-    it('should NOT render LocationBasedTopicOj when isLive is true (live env)', () => {
-      process.env.SIMORGH_APP_ENV = 'live';
-
+    it('should NOT render LocationBasedTopicOJ when countryCuration toggle is disabled', () => {
       const { queryByTestId } = render(
         <ArticlePage
           // @ts-expect-error: Test fixture data does not need to match Article type exactly
           pageData={pageData}
         />,
-        { service: 'hausa' },
+        {
+          service: 'hausa',
+          toggles: { locationTopicCuration: { enabled: false } },
+        },
+      );
+
+      expect(queryByTestId('location-based-topic-oj')).not.toBeInTheDocument();
+    });
+
+    it('should NOT render LocationBasedTopicOJ when isAmp is true', () => {
+      const { queryByTestId } = render(
+        <ArticlePage
+          // @ts-expect-error: Test fixture data does not need to match Article type exactly
+          pageData={pageData}
+        />,
+        {
+          service: 'hausa',
+          isAmp: true,
+          toggles: { locationTopicCuration: { enabled: true } },
+        },
+      );
+
+      expect(queryByTestId('location-based-topic-oj')).not.toBeInTheDocument();
+    });
+
+    it('should NOT render LocationBasedTopicOJ when isLite is true', () => {
+      const { queryByTestId } = render(
+        <ArticlePage
+          // @ts-expect-error: Test fixture data does not need to match Article type exactly
+          pageData={pageData}
+        />,
+        {
+          service: 'hausa',
+          isLite: true,
+          toggles: { locationTopicCuration: { enabled: true } },
+        },
+      );
+
+      expect(queryByTestId('location-based-topic-oj')).not.toBeInTheDocument();
+    });
+
+    it('should NOT render LocationBasedTopicOJ when isApp is true', () => {
+      const { queryByTestId } = render(
+        <ArticlePage
+          // @ts-expect-error: Test fixture data does not need to match Article type exactly
+          pageData={pageData}
+        />,
+        {
+          service: 'hausa',
+          isApp: true,
+          toggles: { locationTopicCuration: { enabled: true } },
+        },
+      );
+
+      expect(queryByTestId('location-based-topic-oj')).not.toBeInTheDocument();
+    });
+
+    it('should NOT render LocationBasedTopicOJ when summaries array is empty', () => {
+      const pageDataWithEmptySummaries = {
+        ...articleDataNews,
+        countryCuration: {
+          ...mockCountryCuration,
+          summaries: [],
+        },
+      };
+
+      const { queryByTestId } = render(
+        <ArticlePage pageData={pageDataWithEmptySummaries} />,
+        {
+          service: 'hausa',
+          toggles: { locationTopicCuration: { enabled: true } },
+        },
       );
 
       expect(queryByTestId('location-based-topic-oj')).not.toBeInTheDocument();
