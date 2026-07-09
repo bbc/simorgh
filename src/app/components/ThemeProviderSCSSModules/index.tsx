@@ -1,29 +1,37 @@
 import type { PropsWithChildren } from 'react';
 import defaultServiceVariants from '../../lib/config/services/defaultServiceVariants';
-import { Variants } from '../../models/types/global';
+import {
+  ServicesVariantsProps,
+  ServicesWithVariants,
+  Variants,
+} from '../../models/types/global';
+import { LoadableTheme } from '../../models/types/theming';
 import themes from './themes/loadableConfig';
 
-interface Props {
-  service: 'mundo';
+// next/dynamic returns a React.forwardRef object ({ $$typeof, render }) rather than a plain function.
+// Checking for 'render' distinguishes a single loadable theme from a variant map e.g. { cyr: ..., lat: ... }.
+const isLoadableTheme = (theme: unknown): theme is LoadableTheme =>
+  theme !== null && typeof theme === 'object' && 'render' in theme;
+
+type Props = Omit<ServicesVariantsProps, 'variant'> & {
   variant?: Variants | null;
-}
+};
 
 export const ThemeProvider = ({
   children,
   service,
   variant,
 }: PropsWithChildren<Props>) => {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  let LoadableContextProvider;
+  let LoadableContextProvider: LoadableTheme | undefined;
 
   const serviceVariant: Variants = variant || defaultServiceVariants[service];
+  const serviceTheme = themes[service];
 
-  if (serviceVariant === 'default' || !serviceVariant) {
-    LoadableContextProvider = themes[service];
-  } else {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore - TODO: come back to this
-    LoadableContextProvider = themes[service][serviceVariant];
+  if (isLoadableTheme(serviceTheme)) {
+    LoadableContextProvider = serviceTheme;
+  } else if (serviceVariant !== 'default') {
+    LoadableContextProvider =
+      serviceTheme[serviceVariant as ServicesWithVariants['variant']];
   }
 
   if (!LoadableContextProvider) {
