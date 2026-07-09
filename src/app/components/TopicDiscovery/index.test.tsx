@@ -11,7 +11,12 @@ import { ServiceConfig } from '#app/models/types/serviceConfig';
 import { service as portugueseConfig } from '#app/lib/config/services/portuguese';
 import { service as turkceConfig } from '#app/lib/config/services/turkce';
 import { service as arabicConfig } from '#app/lib/config/services/arabic';
-import { MEDIA_ARTICLE_PAGE } from '../../routes/utils/pageTypes';
+import {
+  ARTICLE_PAGE,
+  LIVE_TV_PAGE,
+  MEDIA_ARTICLE_PAGE,
+  TV_PAGE,
+} from '../../routes/utils/pageTypes';
 import {
   topicTagsFixture,
   multipleTopicsFixture,
@@ -197,9 +202,31 @@ describe('TopicDiscovery', () => {
     ).not.toBeInTheDocument();
   });
 
-  it('should render promo links in dark ui colours', () => {
+  it.each([MEDIA_ARTICLE_PAGE, TV_PAGE, LIVE_TV_PAGE])(
+    'should render promo links in dark ui colours for %s pages',
+    pageType => {
+      render(<TopicDiscovery topics={topicTagsFixture} />, {
+        pageType,
+        service: 'portuguese',
+      });
+
+      const promoLink = screen.getByRole('link', {
+        name: /Derrota em dose dupla/,
+      });
+
+      expect(window.getComputedStyle(promoLink).color).toBe(
+        'rgb(246, 246, 246)',
+      );
+
+      expect(screen.getByRole('tabpanel')).toHaveStyleRule('color', '#B0B2B4', {
+        target: 'li .promo-text a:visited',
+      });
+    },
+  );
+
+  it('should render promo links in light ui colours for article pages', () => {
     render(<TopicDiscovery topics={topicTagsFixture} />, {
-      pageType: MEDIA_ARTICLE_PAGE,
+      pageType: ARTICLE_PAGE,
       service: 'portuguese',
     });
 
@@ -207,9 +234,9 @@ describe('TopicDiscovery', () => {
       name: /Derrota em dose dupla/,
     });
 
-    expect(window.getComputedStyle(promoLink).color).toBe('rgb(246, 246, 246)');
+    expect(window.getComputedStyle(promoLink).color).toBe('rgb(20, 20, 20)');
 
-    expect(screen.getByRole('tabpanel')).toHaveStyleRule('color', '#B0B2B4', {
+    expect(screen.getByRole('tabpanel')).toHaveStyleRule('color', '#545658', {
       target: 'li .promo-text a:visited',
     });
   });
