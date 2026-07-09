@@ -22,6 +22,18 @@ export default {
     css({
       position: 'relative',
     }),
+  liveLabel: ({ isDarkUi, palette }: Theme) => {
+    const liveColour = isDarkUi ? palette.LIVE_LIGHT : palette.LIVE_DARK;
+
+    return css({
+      svg: {
+        color: liveColour,
+      },
+      'span[role="text"] > span:first-of-type': {
+        color: liveColour,
+      },
+    });
+  },
   metadataAndTopicData: ({ fontSizes }: Theme) =>
     css({
       ...fontSizes.longPrimer,
