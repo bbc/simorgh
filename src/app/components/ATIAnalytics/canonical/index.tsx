@@ -17,8 +17,11 @@ import { ATIAnalyticsProps } from '../types';
 import getNoScriptTrackingPixelUrl from './getNoScriptTrackingPixelUrl';
 import sendPageViewBeaconOperaMini from './sendPageViewBeaconOperaMini';
 
-const addCustomX3 = url =>
-  url.replace(/x3=\[(.*)\]&x4/, 'x3=[$1-inline-js]&x4');
+const addCustomX3Lite = url =>
+  url.replace(/x3=\[(.*)\]&x4/, 'x3=[$1-inline-js-lite]&x4');
+
+const addCustomX3OperaMini = url =>
+  url.replace(/x3=\[(.*)\]&x4/, 'x3=[$1-inline-js-opera-mini]&x4');
 
 const renderNoScriptTrackingPixel = ({ reverbParams }: ATIAnalyticsProps) => {
   return (
@@ -56,10 +59,10 @@ const CanonicalATIAnalytics = ({ reverbParams }: ATIAnalyticsProps) => {
     if (!isOperaProxy()) sendBeacon(reverbBeaconConfig);
   }, [reverbBeaconConfig]);
 
-  const liteSiteReverbURL = addCustomX3(
+  const liteSiteReverbURL = addCustomX3Lite(
     reverbUrlHelper.getLitePageViewUrl(reverbParams),
   );
-  const operaMiniPageViewReverbURL = addCustomX3(
+  const operaMiniPageViewReverbURL = addCustomX3OperaMini(
     reverbUrlHelper.getOperaMiniPageViewUrl(reverbParams),
   );
 
