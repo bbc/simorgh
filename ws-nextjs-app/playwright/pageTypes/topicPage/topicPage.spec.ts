@@ -55,6 +55,15 @@ type TopicPageState = {
   messageBanner?: TopicCuration;
 };
 
+type SkipOptions = {
+  requireUrlValidation?: boolean;
+  requireTopicTests?: boolean;
+  requireCanonicalSharedTests?: boolean;
+  requireSmoke?: boolean;
+  requireTwoTierNav?: boolean;
+  skipLocalEnv?: boolean;
+};
+
 type TopicPageWindow = Window & {
   __NEXT_DATA__?: {
     props?: {
@@ -187,7 +196,7 @@ const assertHtmlResponse = async ({
 
 const shouldTestTwoTierNav = (suite: TopicPageTestSuite) => {
   const serviceName =
-    getServiceConfig(suite.service, suite.variant)?.name || suite.service;
+    getServiceConfig(suite.service, suite.variant)?.service ?? suite.service;
   return twoTierNavServices[appEnvFromProcess]?.includes(serviceName) ?? false;
 };
 
@@ -198,11 +207,78 @@ test.describe('topicPage', () => {
 
     test.describe(testLabel, () => {
       test.describe(`Tests for ${suiteName} topicPage`, () => {
+        const shouldSkip = ({
+          requireUrlValidation = false,
+          requireTopicTests = false,
+          requireCanonicalSharedTests = false,
+          requireSmoke = false,
+          requireTwoTierNav = false,
+          skipLocalEnv = false,
+        }: SkipOptions = {}) => {
+          if (!shouldRunForEnv(testSuite.runForEnv)) {
+            return true;
+          }
+
+          if (requireUrlValidation && !testSuite.includeUrlValidation) {
+            return true;
+          }
+
+          if (requireTopicTests && !testSuite.includeTopicTests) {
+            return true;
+          }
+
+          if (
+            requireCanonicalSharedTests &&
+            !testSuite.includeCanonicalSharedTests
+          ) {
+            return true;
+          }
+
+          if (requireSmoke && !process.env.SMOKE) {
+            return true;
+          }
+
+          if (requireTwoTierNav && !shouldTestTwoTierNav(testSuite)) {
+            return true;
+          }
+
+          if (skipLocalEnv && appEnvFromProcess === 'local') {
+            return true;
+          }
+
+          return false;
+        };
+
+        const openTopicPage = async ({
+          page,
+          viewport,
+        }: {
+          page: Page;
+          viewport?: { width: number; height: number };
+        }) =>
+          gotoTopicPage({
+            page,
+            path: testSuite.path,
+            viewport,
+          });
+
+        const openTopicPageAndGetState = async ({
+          page,
+          viewport,
+        }: {
+          page: Page;
+          viewport?: { width: number; height: number };
+        }) => {
+          await openTopicPage({ page, viewport });
+
+          return getTopicPageState({
+            page,
+            path: testSuite.path,
+          });
+        };
+
         test('should return a 200 status code', async ({ request }) => {
-          test.skip(
-            !shouldRunForEnv(testSuite.runForEnv),
-            `Skipped for APP_ENV=${appEnvFromProcess}`,
-          );
+          test.skip(shouldSkip(), `Skipped for APP_ENV=${appEnvFromProcess}`);
 
           await assert200HtmlResponse({
             request,
@@ -215,12 +291,11 @@ test.describe('topicPage', () => {
           page,
         }) => {
           test.skip(
-            !shouldRunForEnv(testSuite.runForEnv) ||
-              !testSuite.includeUrlValidation,
+            shouldSkip({ requireUrlValidation: true }),
             `Skipped for APP_ENV=${appEnvFromProcess}`,
           );
 
-          await gotoTopicPage({ page, path: testSuite.path });
+          await openTopicPage({ page });
           await assertUrlValidation(page);
         });
 
@@ -229,15 +304,12 @@ test.describe('topicPage', () => {
             page,
           }) => {
             test.skip(
-              !shouldRunForEnv(testSuite.runForEnv) ||
-                !testSuite.includeTopicTests,
+              shouldSkip({ requireTopicTests: true }),
               `Skipped for APP_ENV=${appEnvFromProcess}`,
             );
 
-            await gotoTopicPage({ page, path: testSuite.path });
-            const topicPageState = await getTopicPageState({
+            const topicPageState = await openTopicPageAndGetState({
               page,
-              path: testSuite.path,
             });
 
             await expect(page.locator('h1')).toContainText(
@@ -249,15 +321,12 @@ test.describe('topicPage', () => {
             page,
           }) => {
             test.skip(
-              !shouldRunForEnv(testSuite.runForEnv) ||
-                !testSuite.includeTopicTests,
+              shouldSkip({ requireTopicTests: true }),
               `Skipped for APP_ENV=${appEnvFromProcess}`,
             );
 
-            await gotoTopicPage({ page, path: testSuite.path });
-            const topicPageState = await getTopicPageState({
+            const topicPageState = await openTopicPageAndGetState({
               page,
-              path: testSuite.path,
             });
 
             await expect(
@@ -270,15 +339,12 @@ test.describe('topicPage', () => {
 
           test('First item has correct headline', async ({ page }) => {
             test.skip(
-              !shouldRunForEnv(testSuite.runForEnv) ||
-                !testSuite.includeTopicTests,
+              shouldSkip({ requireTopicTests: true }),
               `Skipped for APP_ENV=${appEnvFromProcess}`,
             );
 
-            await gotoTopicPage({ page, path: testSuite.path });
-            const topicPageState = await getTopicPageState({
+            const topicPageState = await openTopicPageAndGetState({
               page,
-              path: testSuite.path,
             });
 
             if (!topicPageState.firstItemHeadline) {
@@ -299,12 +365,11 @@ test.describe('topicPage', () => {
             page,
           }) => {
             test.skip(
-              !shouldRunForEnv(testSuite.runForEnv) ||
-                !testSuite.includeTopicTests,
+              shouldSkip({ requireTopicTests: true }),
               `Skipped for APP_ENV=${appEnvFromProcess}`,
             );
 
-            await gotoTopicPage({ page, path: testSuite.path });
+            await openTopicPage({ page });
             const firstItemLink = await page
               .locator('[data-testid="topic-promos"]')
               .first()
@@ -332,15 +397,12 @@ test.describe('topicPage', () => {
             page,
           }) => {
             test.skip(
-              !shouldRunForEnv(testSuite.runForEnv) ||
-                !testSuite.includeTopicTests,
+              shouldSkip({ requireTopicTests: true }),
               `Skipped for APP_ENV=${appEnvFromProcess}`,
             );
 
-            await gotoTopicPage({ page, path: testSuite.path });
-            const topicPageState = await getTopicPageState({
+            const topicPageState = await openTopicPageAndGetState({
               page,
-              path: testSuite.path,
             });
 
             const messageBannerLink =
@@ -351,20 +413,15 @@ test.describe('topicPage', () => {
             }
 
             const expectedUrl = resolvePageUrl(messageBannerLink);
-            const messageBannerTitle = topicPageState.messageBanner?.title;
-            const messageBannerTestId = messageBannerTitle
-              ? `message-banner-${idSanitiser(messageBannerTitle)}`
-              : undefined;
-            const messageBannerLinkLocator = messageBannerTestId
-              ? page
-                  .locator(`[data-testid="${messageBannerTestId}"]`)
-                  .locator('a')
-                  .first()
-              : page
-                  .locator('[data-testid^="message-banner-"]')
-                  .first()
-                  .locator('a')
-                  .first();
+            const messageBannerTitle =
+              topicPageState.messageBanner?.title ?? '';
+            const messageBannerLinkLocator = page
+              .locator(
+                `[data-testid="message-banner-1"], [data-testid="message-banner-${idSanitiser(messageBannerTitle)}"], [data-testid^="message-banner-"]`,
+              )
+              .first()
+              .locator('a')
+              .first();
 
             await Promise.all([
               page.waitForURL(expectedUrl),
@@ -378,15 +435,12 @@ test.describe('topicPage', () => {
             page,
           }) => {
             test.skip(
-              !shouldRunForEnv(testSuite.runForEnv) ||
-                !testSuite.includeTopicTests,
+              shouldSkip({ requireTopicTests: true }),
               `Skipped for APP_ENV=${appEnvFromProcess}`,
             );
 
-            await gotoTopicPage({ page, path: testSuite.path });
-            const topicPageState = await getTopicPageState({
+            const topicPageState = await openTopicPageAndGetState({
               page,
-              path: testSuite.path,
             });
 
             if (topicPageState.pageCount > 1) {
@@ -404,15 +458,12 @@ test.describe('topicPage', () => {
             page,
           }) => {
             test.skip(
-              !shouldRunForEnv(testSuite.runForEnv) ||
-                !testSuite.includeTopicTests,
+              shouldSkip({ requireTopicTests: true }),
               `Skipped for APP_ENV=${appEnvFromProcess}`,
             );
 
-            await gotoTopicPage({ page, path: testSuite.path });
-            const topicPageState = await getTopicPageState({
+            const topicPageState = await openTopicPageAndGetState({
               page,
-              path: testSuite.path,
             });
 
             if (topicPageState.pageCount <= 1) {
@@ -426,16 +477,12 @@ test.describe('topicPage', () => {
 
           test('Page 2 button navigates to 2nd page', async ({ page }) => {
             test.skip(
-              !shouldRunForEnv(testSuite.runForEnv) ||
-                !testSuite.includeTopicTests ||
-                appEnvFromProcess === 'local',
+              shouldSkip({ requireTopicTests: true, skipLocalEnv: true }),
               `Skipped for APP_ENV=${appEnvFromProcess}`,
             );
 
-            await gotoTopicPage({ page, path: testSuite.path });
-            const topicPageState = await getTopicPageState({
+            const topicPageState = await openTopicPageAndGetState({
               page,
-              path: testSuite.path,
             });
 
             if (topicPageState.pageCount <= 1) {
@@ -457,16 +504,12 @@ test.describe('topicPage', () => {
             request,
           }) => {
             test.skip(
-              !shouldRunForEnv(testSuite.runForEnv) ||
-                !testSuite.includeTopicTests ||
-                appEnvFromProcess === 'local',
+              shouldSkip({ requireTopicTests: true, skipLocalEnv: true }),
               `Skipped for APP_ENV=${appEnvFromProcess}`,
             );
 
-            await gotoTopicPage({ page, path: testSuite.path });
-            const topicPageState = await getTopicPageState({
+            const topicPageState = await openTopicPageAndGetState({
               page,
-              path: testSuite.path,
             });
 
             if (topicPageState.pageCount <= 1) {
@@ -487,16 +530,12 @@ test.describe('topicPage', () => {
 
           test('Next button navigates to next page (3)', async ({ page }) => {
             test.skip(
-              !shouldRunForEnv(testSuite.runForEnv) ||
-                !testSuite.includeTopicTests ||
-                appEnvFromProcess === 'local',
+              shouldSkip({ requireTopicTests: true, skipLocalEnv: true }),
               `Skipped for APP_ENV=${appEnvFromProcess}`,
             );
 
-            await gotoTopicPage({ page, path: testSuite.path });
-            const topicPageState = await getTopicPageState({
+            const topicPageState = await openTopicPageAndGetState({
               page,
-              path: testSuite.path,
             });
 
             if (topicPageState.pageCount <= 2) {
@@ -518,16 +557,12 @@ test.describe('topicPage', () => {
             page,
           }) => {
             test.skip(
-              !shouldRunForEnv(testSuite.runForEnv) ||
-                !testSuite.includeTopicTests ||
-                appEnvFromProcess === 'local',
+              shouldSkip({ requireTopicTests: true, skipLocalEnv: true }),
               `Skipped for APP_ENV=${appEnvFromProcess}`,
             );
 
-            await gotoTopicPage({ page, path: testSuite.path });
-            const topicPageState = await getTopicPageState({
+            const topicPageState = await openTopicPageAndGetState({
               page,
-              path: testSuite.path,
             });
 
             if (topicPageState.pageCount <= 1) {
@@ -550,16 +585,12 @@ test.describe('topicPage', () => {
             page,
           }) => {
             test.skip(
-              !shouldRunForEnv(testSuite.runForEnv) ||
-                !testSuite.includeTopicTests ||
-                appEnvFromProcess === 'local',
+              shouldSkip({ requireTopicTests: true, skipLocalEnv: true }),
               `Skipped for APP_ENV=${appEnvFromProcess}`,
             );
 
-            await gotoTopicPage({ page, path: testSuite.path });
-            const topicPageState = await getTopicPageState({
+            const topicPageState = await openTopicPageAndGetState({
               page,
-              path: testSuite.path,
             });
 
             if (topicPageState.pageCount <= 1) {
@@ -588,15 +619,12 @@ test.describe('topicPage', () => {
 
           test('Page 1 button navigates to page 1', async ({ page }) => {
             test.skip(
-              !shouldRunForEnv(testSuite.runForEnv) ||
-                !testSuite.includeTopicTests,
+              shouldSkip({ requireTopicTests: true }),
               `Skipped for APP_ENV=${appEnvFromProcess}`,
             );
 
-            await gotoTopicPage({ page, path: testSuite.path });
-            const topicPageState = await getTopicPageState({
+            const topicPageState = await openTopicPageAndGetState({
               page,
-              path: testSuite.path,
             });
 
             if (topicPageState.pageCount <= 1) {
@@ -619,19 +647,13 @@ test.describe('topicPage', () => {
 
           test('Above 400px does not show Page x of y', async ({ page }) => {
             test.skip(
-              !shouldRunForEnv(testSuite.runForEnv) ||
-                !testSuite.includeTopicTests,
+              shouldSkip({ requireTopicTests: true }),
               `Skipped for APP_ENV=${appEnvFromProcess}`,
             );
 
-            await gotoTopicPage({
+            const topicPageState = await openTopicPageAndGetState({
               page,
-              path: testSuite.path,
               viewport: { width: 1008, height: 900 },
-            });
-            const topicPageState = await getTopicPageState({
-              page,
-              path: testSuite.path,
             });
 
             if (topicPageState.pageCount <= 1) {
@@ -645,19 +667,13 @@ test.describe('topicPage', () => {
 
           test('Below 400px shows Page x of y', async ({ page }) => {
             test.skip(
-              !shouldRunForEnv(testSuite.runForEnv) ||
-                !testSuite.includeTopicTests,
+              shouldSkip({ requireTopicTests: true }),
               `Skipped for APP_ENV=${appEnvFromProcess}`,
             );
 
-            await gotoTopicPage({
+            const topicPageState = await openTopicPageAndGetState({
               page,
-              path: testSuite.path,
               viewport: { width: 320, height: 480 },
-            });
-            const topicPageState = await getTopicPageState({
-              page,
-              path: testSuite.path,
             });
 
             if (topicPageState.pageCount <= 1) {
@@ -680,9 +696,7 @@ test.describe('topicPage', () => {
             )?.scriptLink?.variant;
 
             test.skip(
-              !shouldRunForEnv(testSuite.runForEnv) ||
-                !testSuite.includeTopicTests ||
-                !otherVariant,
+              shouldSkip({ requireTopicTests: true }) || !otherVariant,
               `Skipped for APP_ENV=${appEnvFromProcess}`,
             );
 
@@ -690,7 +704,7 @@ test.describe('topicPage', () => {
               return;
             }
 
-            await gotoTopicPage({ page, path: testSuite.path });
+            await openTopicPage({ page });
             await expect(
               page.locator(`[data-variant="${otherVariant}"]`),
             ).toBeVisible();
@@ -704,8 +718,7 @@ test.describe('topicPage', () => {
             const topicId = testSuite.path.match(/(c[a-zA-Z0-9]{10,}t)/)?.[1];
 
             test.skip(
-              !shouldRunForEnv(testSuite.runForEnv) ||
-                !testSuite.includeTopicTests ||
+              shouldSkip({ requireTopicTests: true }) ||
                 !otherVariant ||
                 !testSuite.variant ||
                 !topicId,
@@ -716,7 +729,7 @@ test.describe('topicPage', () => {
               return;
             }
 
-            await gotoTopicPage({ page, path: testSuite.path });
+            await openTopicPage({ page });
             await page.locator(`[data-variant="${otherVariant}"]`).click();
             await expect(page).toHaveURL(new RegExp(otherVariant));
             await expect(page).toHaveURL(new RegExp(topicId));
@@ -727,17 +740,50 @@ test.describe('topicPage', () => {
         });
 
         test.describe('Shared canonical coverage', () => {
+          const assertTwoTierNavigationLinks = async ({
+            page,
+            viewport,
+          }: {
+            page: Page;
+            viewport: { width: number; height: number };
+          }) => {
+            await openTopicPage({ page, viewport });
+
+            await expect(
+              page.locator('[data-e2e="scrollable-nav"]'),
+            ).toBeVisible();
+            await expect(
+              page.locator('[data-e2e="scrollable-nav-secondary"] ul'),
+            ).toBeVisible();
+
+            const primaryHrefs = await page
+              .locator('[data-e2e="scrollable-nav"] a')
+              .evaluateAll(links =>
+                links.map(link => link.getAttribute('href')),
+              );
+            const secondaryHrefs = await page
+              .locator('[data-e2e="scrollable-nav-secondary"] ul a')
+              .evaluateAll(links =>
+                links.map(link => link.getAttribute('href')),
+              );
+
+            [...primaryHrefs, ...secondaryHrefs].forEach(href => {
+              expect(href).toBeTruthy();
+              expect(href).not.toBe('');
+            });
+          };
+
           test('should have a noscript img tag with the ati url', async ({
             page,
           }) => {
             test.skip(
-              !shouldRunForEnv(testSuite.runForEnv) || !process.env.SMOKE,
+              shouldSkip({ requireSmoke: true }),
               `Skipped for APP_ENV=${appEnvFromProcess}`,
             );
 
             const { atiUrl } = getATIUrls(appEnvFromProcess);
 
-            await gotoTopicPage({ page, path: testSuite.path });
+            await openTopicPage({ page });
             const noScriptText = await page
               .locator('noscript[id="analytics-noscript"]')
               .textContent();
@@ -753,39 +799,16 @@ test.describe('topicPage', () => {
             page,
           }) => {
             test.skip(
-              !shouldRunForEnv(testSuite.runForEnv) ||
-                !testSuite.includeCanonicalSharedTests ||
-                !shouldTestTwoTierNav(testSuite),
+              shouldSkip({
+                requireCanonicalSharedTests: true,
+                requireTwoTierNav: true,
+              }),
               `Skipped for APP_ENV=${appEnvFromProcess}`,
             );
 
-            await gotoTopicPage({
+            await assertTwoTierNavigationLinks({
               page,
-              path: testSuite.path,
               viewport: { width: 1008, height: 900 },
-            });
-
-            await expect(
-              page.locator('[data-e2e="scrollable-nav"]'),
-            ).toBeVisible();
-            await expect(
-              page.locator('[data-e2e="scrollable-nav-secondary"] ul'),
-            ).toBeVisible();
-
-            const primaryHrefs = await page
-              .locator('[data-e2e="scrollable-nav"] a')
-              .evaluateAll(links =>
-                links.map(link => link.getAttribute('href')),
-              );
-            const secondaryHrefs = await page
-              .locator('[data-e2e="scrollable-nav-secondary"] ul a')
-              .evaluateAll(links =>
-                links.map(link => link.getAttribute('href')),
-              );
-
-            [...primaryHrefs, ...secondaryHrefs].forEach(href => {
-              expect(href).toBeTruthy();
-              expect(href).not.toBe('');
             });
           });
 
@@ -793,39 +816,16 @@ test.describe('topicPage', () => {
             page,
           }) => {
             test.skip(
-              !shouldRunForEnv(testSuite.runForEnv) ||
-                !testSuite.includeCanonicalSharedTests ||
-                !shouldTestTwoTierNav(testSuite),
+              shouldSkip({
+                requireCanonicalSharedTests: true,
+                requireTwoTierNav: true,
+              }),
               `Skipped for APP_ENV=${appEnvFromProcess}`,
             );
 
-            await gotoTopicPage({
+            await assertTwoTierNavigationLinks({
               page,
-              path: testSuite.path,
               viewport: { width: 320, height: 480 },
-            });
-
-            await expect(
-              page.locator('[data-e2e="scrollable-nav"]'),
-            ).toBeVisible();
-            await expect(
-              page.locator('[data-e2e="scrollable-nav-secondary"] ul'),
-            ).toBeVisible();
-
-            const primaryHrefs = await page
-              .locator('[data-e2e="scrollable-nav"] a')
-              .evaluateAll(links =>
-                links.map(link => link.getAttribute('href')),
-              );
-            const secondaryHrefs = await page
-              .locator('[data-e2e="scrollable-nav-secondary"] ul a')
-              .evaluateAll(links =>
-                links.map(link => link.getAttribute('href')),
-              );
-
-            [...primaryHrefs, ...secondaryHrefs].forEach(href => {
-              expect(href).toBeTruthy();
-              expect(href).not.toBe('');
             });
           });
 
@@ -833,15 +833,15 @@ test.describe('topicPage', () => {
             page,
           }) => {
             test.skip(
-              !shouldRunForEnv(testSuite.runForEnv) ||
-                !testSuite.includeCanonicalSharedTests ||
-                !shouldTestTwoTierNav(testSuite),
+              shouldSkip({
+                requireCanonicalSharedTests: true,
+                requireTwoTierNav: true,
+              }),
               `Skipped for APP_ENV=${appEnvFromProcess}`,
             );
 
-            await gotoTopicPage({
+            await openTopicPage({
               page,
-              path: testSuite.path,
               viewport: { width: 320, height: 480 },
             });
 
