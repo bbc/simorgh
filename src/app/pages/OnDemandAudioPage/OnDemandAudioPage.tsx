@@ -25,6 +25,7 @@ import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import MetadataContainer from '../../components/Metadata';
 import LinkedData from '../../components/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import { RequestContext } from '../../contexts/RequestContext';
 
 const SKIP_LINK_ANCHOR_ID = 'content';
 
@@ -44,6 +45,9 @@ export interface OnDemandAudioProps {
     shortSynopsis: string;
     mediumSynopsis?: string;
     longSynopsis?: string;
+    brandShortSynopsis?: string;
+    brandMediumSynopsis?: string;
+    brandLongSynopsis?: string;
     masterBrand: string;
     episodeId: string;
     releaseDateTimeStamp: number;
@@ -83,6 +87,9 @@ const OnDemandAudioPage = ({
     imageAltText,
     promoBrandTitle,
     promoSeriesTitle,
+    brandShortSynopsis,
+    brandMediumSynopsis,
+    brandLongSynopsis,
     durationISO8601,
     thumbnailImageUrl,
     radioScheduleData,
@@ -95,11 +102,66 @@ const OnDemandAudioPage = ({
   const pageType = path(['metadata', 'type'], pageData);
 
   const { serviceName } = use(ServiceContext);
+  const { pathname, canonicalNonUkLink } = use(RequestContext);
+
+  const isPodcastEpisodePage =
+    /\/podcasts\/(?!programmes\/)[^/]+\/[^/]+(?:\.lite)?$/.test(pathname);
+  const isPodcastBrandPage = isPodcast && !isPodcastEpisodePage;
+
+  const brandCanonicalUrl = isPodcastBrandPage
+    ? canonicalNonUkLink
+    : canonicalNonUkLink.replace(/\/([^/]+)(?:\.lite)?$/, '');
+
+  const brandEntityId = `${brandCanonicalUrl}#series`;
+  const podcastBrandName = promoBrandTitle || promoSeriesTitle;
+
+  const brandDescription =
+    brandLongSynopsis || brandMediumSynopsis || brandShortSynopsis;
+
+  const podcastBrandEntities = isPodcastBrandPage
+    ? [
+        {
+          '@type': 'PodcastSeries',
+          '@id': brandEntityId,
+          name: podcastBrandName,
+          description: brandDescription,
+          url: brandCanonicalUrl,
+          image: {
+            '@type': 'ImageObject',
+            url: thumbnailImageUrl,
+          },
+        },
+      ]
+    : null;
+
+  const audioEntities = mediaIsAvailable
+    ? [
+        {
+          '@type': 'AudioObject',
+          name: promoBrandTitle || promoSeriesTitle,
+          description: shortSynopsis,
+          thumbnailUrl: thumbnailImageUrl,
+          duration: durationISO8601,
+          uploadDate: new Date(releaseDateTimeStamp).toISOString(),
+        },
+      ]
+    : [];
+
+  const linkedDataEntities = podcastBrandEntities ?? audioEntities;
+
+  const mainEntityId = isPodcastBrandPage ? brandEntityId : undefined;
 
   const hasRecentEpisodes = recentEpisodes && Boolean(recentEpisodes.length);
-  const metadataTitle = episodeTitle
-    ? `${episodeTitle} - ${brandTitle} - ${serviceName}`
-    : headline;
+
+  const getMetadataTitle = () => {
+    if (isPodcastBrandPage) return `${brandTitle} - ${serviceName}`;
+    if (episodeTitle) return `${episodeTitle} - ${brandTitle} - ${serviceName}`;
+    return headline;
+  };
+
+  const metadataTitle = getMetadataTitle();
+
+  const metadataDescription = isPodcastBrandPage ? brandDescription : summary;
 
   const metadataImageProps = is(String, imageUrl)
     ? {
@@ -123,7 +185,7 @@ const OnDemandAudioPage = ({
         openGraphType="website"
         lang={language}
         title={metadataTitle}
-        description={summary}
+        description={metadataDescription}
         {...metadataImageProps}
         hasAmpPage={false}
       />
@@ -162,22 +224,9 @@ const OnDemandAudioPage = ({
             <LinkedData
               type="WebPage"
               seoTitle={metadataTitle}
-              entities={
-                mediaIsAvailable
-                  ? [
-                      {
-                        '@type': 'AudioObject',
-                        name: promoBrandTitle || promoSeriesTitle,
-                        description: shortSynopsis,
-                        thumbnailUrl: thumbnailImageUrl,
-                        duration: durationISO8601,
-                        uploadDate: new Date(
-                          releaseDateTimeStamp,
-                        ).toISOString(),
-                      },
-                    ]
-                  : []
-              }
+              description={isPodcastBrandPage ? brandDescription : summary}
+              entities={linkedDataEntities}
+              mainEntityId={mainEntityId}
             />
           </main>
 

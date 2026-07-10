@@ -42,6 +42,9 @@ const OnDemandAudioPage = ({
     imageAltText,
     promoBrandTitle,
     promoSeriesTitle,
+    brandShortSynopsis,
+    brandMediumSynopsis,
+    brandLongSynopsis,
     durationISO8601,
     thumbnailImageUrl,
     radioScheduleData,
@@ -60,14 +63,14 @@ const OnDemandAudioPage = ({
     /\/podcasts\/(?!programmes\/)[^/]+\/[^/]+(?:\.lite)?$/.test(pathname);
 
   const shouldEmitPodcastEpisodeSchema = isPodcast && isPodcastEpisodePage;
+  const isPodcastBrandPage = isPodcast && !isPodcastEpisodePage;
 
   const episodeCanonicalUrl = canonicalNonUkLink;
-  const seriesCanonicalUrl = episodeCanonicalUrl.replace(
-    /\/([^/]+)(?:\.lite)?$/,
-    '',
-  );
+  const brandCanonicalUrl = isPodcastBrandPage
+    ? canonicalNonUkLink
+    : episodeCanonicalUrl.replace(/\/([^/]+)(?:\.lite)?$/, '');
 
-  const seriesId = `${seriesCanonicalUrl}#series`;
+  const brandEntityId = `${brandCanonicalUrl}#series`;
   const episodeId = `${episodeCanonicalUrl}#episode`;
   const audioId = `${episodeCanonicalUrl}#audio`;
 
@@ -82,6 +85,18 @@ const OnDemandAudioPage = ({
     link =>
       link.linkType === 'download' && link.linkUrl?.startsWith('https://'),
   );
+  const rssLink = externalLinks?.find(link => link.linkType === 'rss');
+  const podcastSeriesName = promoBrandTitle || promoSeriesTitle || brandTitle;
+
+  const sameAs =
+    externalLinks
+      ?.filter(
+        link =>
+          Boolean(link.linkUrl) &&
+          !['rss', 'download', 'form'].includes(link.linkType),
+      )
+      .map(link => link.linkUrl) ?? [];
+
   const audioEntities = !mediaIsAvailable
     ? []
     : [
@@ -95,25 +110,25 @@ const OnDemandAudioPage = ({
         },
       ];
 
-  const podcastEntities =
+  const podcastEpisodeEntities =
     shouldEmitPodcastEpisodeSchema && mediaIsAvailable
       ? [
           {
             '@type': 'PodcastSeries',
-            '@id': seriesId,
-            name: brandTitle,
+            '@id': brandEntityId,
+            name: podcastSeriesName,
           },
           {
             '@type': 'PodcastEpisode',
             '@id': episodeId,
-            name: episodeTitle || brandTitle,
+            name: episodeTitle,
             description: summary,
             datePublished: new Date(releaseDateTimeStamp).toISOString(),
-            partOfSeries: { '@id': seriesId },
+            partOfSeries: { '@id': brandEntityId },
             associatedMedia: {
               '@type': 'AudioObject',
               '@id': audioId,
-              name: episodeTitle || promoBrandTitle,
+              name: episodeTitle,
               description: summary,
               ...(downloadLink?.linkUrl && {
                 contentUrl: downloadLink.linkUrl,
@@ -127,14 +142,64 @@ const OnDemandAudioPage = ({
         ]
       : null;
 
-  const linkedDataEntities = podcastEntities ?? audioEntities;
+  const podcastBrandHasPart = recentEpisodes?.map(
+    (episode: {
+      id: string;
+      episodeTitle?: string;
+      brandTitle?: string;
+      timestamp: number;
+      duration: string;
+    }) => ({
+      '@type': 'PodcastEpisode',
+      '@id': `${brandCanonicalUrl}/${episode.id}#episode`,
+      url: `${brandCanonicalUrl}/${episode.id}`,
+      name: episode.episodeTitle || episode.brandTitle || brandTitle,
+      datePublished: new Date(episode.timestamp).toISOString(),
+      duration: episode.duration,
+    }),
+  );
+
+  const brandDescription =
+    brandLongSynopsis || brandMediumSynopsis || brandShortSynopsis || summary;
+
+  const podcastBrandEntities = isPodcastBrandPage
+    ? [
+        {
+          '@type': 'PodcastSeries',
+          '@id': brandEntityId,
+          name: podcastSeriesName,
+          description: brandDescription,
+          url: brandCanonicalUrl,
+          image: {
+            '@type': 'ImageObject',
+            url: thumbnailImageUrl,
+          },
+          ...(rssLink?.linkUrl && { webFeed: rssLink.linkUrl }),
+          ...(sameAs.length > 0 && { sameAs }),
+          ...(podcastBrandHasPart &&
+            podcastBrandHasPart.length > 0 && {
+              hasPart: podcastBrandHasPart,
+            }),
+        },
+      ]
+    : null;
+
+  const linkedDataEntities =
+    podcastBrandEntities ?? podcastEpisodeEntities ?? audioEntities;
 
   const hasRecentEpisodes = recentEpisodes && Boolean(recentEpisodes.length);
-  const metadataTitle = episodeTitle
-    ? `${episodeTitle} - ${brandTitle} - ${serviceName}`
-    : headline;
 
-  const shouldSetMainEntity = Boolean(podcastEntities);
+  const getMetadataTitle = () => {
+    if (isPodcastBrandPage) return `${brandTitle} - ${serviceName}`;
+    if (episodeTitle) return `${episodeTitle} - ${brandTitle} - ${serviceName}`;
+    return headline;
+  };
+
+  const metadataTitle = getMetadataTitle();
+
+  const metadataDescription = isPodcastBrandPage ? brandDescription : summary;
+
+  const mainEntityId = isPodcastBrandPage ? brandEntityId : episodeId;
 
   const imageHeight = isPodcastEpisodePage ? 675 : 400;
   const imageWidth = isPodcastEpisodePage ? 1200 : 400;
@@ -174,7 +239,7 @@ const OnDemandAudioPage = ({
         openGraphType="website"
         lang={language}
         title={metadataTitle}
-        description={summary}
+        description={metadataDescription}
         {...metadataImageProps}
         hasAmpPage={false}
       />
@@ -225,9 +290,11 @@ const OnDemandAudioPage = ({
             <LinkedData
               type="WebPage"
               seoTitle={metadataTitle}
+              description={isPodcastBrandPage ? brandDescription : undefined}
               entities={linkedDataEntities}
-              mainEntityId={shouldSetMainEntity ? episodeId : undefined}
-              {...(isPodcastEpisodePage &&
+              mainEntityId={mainEntityId}
+              {...(!isPodcastBrandPage &&
+                isPodcastEpisodePage &&
                 metadataImageProps && {
                   metadataImageProps,
                 })}
