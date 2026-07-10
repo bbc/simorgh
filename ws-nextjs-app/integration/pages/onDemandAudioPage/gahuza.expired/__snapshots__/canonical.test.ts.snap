@@ -136,6 +136,20 @@ exports[`Canonical On Demand Audio Page Header Navigation link should match text
 }
 `;
 
+exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 2`] = `
+{
+  "text": "Raba",
+  "url": "/gahuza/topics/cpqx1yvd5ydt",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 3`] = `
+{
+  "text": "Umviriza",
+  "url": "/gahuza/bbc_gahuza_radio/liveradio",
+}
+`;
+
 exports[`Canonical On Demand Audio Page I can see the brand title 1`] = `"Amakuru ya Gahuzamiryango"`;
 
 exports[`Canonical On Demand Audio Page I can see the episode summary 1`] = `"Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu."`;
@@ -235,6 +249,9 @@ exports[`Canonical On Demand Audio Page SEO Linked data should match text 1`] = 
         "@type": "Language",
         "alternateName": "rw",
         "name": "Kinyarwanda",
+      },
+      "mainEntity": {
+        "@id": "http://localhost:7081/gahuza/bbc_gahuza_radio/w172x7rkcj6v0vz#episode",
       },
       "mainEntityOfPage": {
         "@id": "http://localhost:7081/gahuza/bbc_gahuza_radio/w172x7rkcj6v0vz",

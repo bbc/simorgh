@@ -136,6 +136,13 @@ exports[`Canonical On Demand Audio Page Header Navigation link should match text
 }
 `;
 
+exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 2`] = `
+{
+  "text": "Tonton",
+  "url": "/indonesia/topics/c5xr94j7n3xt",
+}
+`;
+
 exports[`Canonical On Demand Audio Page I can see the brand title 1`] = `"Dunia Pagi Ini"`;
 
 exports[`Canonical On Demand Audio Page I can see the episode summary 1`] = `"Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."`;
@@ -235,6 +242,9 @@ exports[`Canonical On Demand Audio Page SEO Linked data should match text 1`] = 
         "@type": "Language",
         "alternateName": "id",
         "name": "Indonesian",
+      },
+      "mainEntity": {
+        "@id": "http://localhost:7081/indonesia/bbc_indonesian_radio/w172x6r5000f38s#episode",
       },
       "mainEntityOfPage": {
         "@id": "http://localhost:7081/indonesia/bbc_indonesian_radio/w172x6r5000f38s",
