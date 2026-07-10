@@ -54,12 +54,18 @@ export interface Translations {
     closeLabel: string;
     buttonSeparatorText: string;
   };
+  accountSignInModal?: {
+    title: string;
+    description: string;
+    closeLabel: string;
+  };
   saveArticleButton?: {
     loading: string;
     save: string;
     saving: string;
     saved: string;
     remove: string;
+    removeAccessible: string;
     removing: string;
   };
   myNews?: {
@@ -81,7 +87,7 @@ export interface Translations {
   continueReading?: string;
   topicDiscovery?: {
     heading: string;
-    moreFromTopic: string;
+    moreAboutTopic: string;
     fetchErrorMessage?: string;
   };
   readTime?: Partial<{
@@ -262,6 +268,7 @@ export interface Translations {
     venue?: string;
     attendance?: string;
     matchSummary?: string;
+    keyEventsTitle?: string;
     winOnPenalties?: {
       prefix?: string;
       suffix?: string;

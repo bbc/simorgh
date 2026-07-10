@@ -82,6 +82,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Tazama zote',
       home: 'Habari',
+      topicDiscovery: {
+        heading: 'Gundua zaidi',
+        moreAboutTopic: 'Zaidi kuhusu {topic}',
+        fetchErrorMessage: 'Imeshindwa kupakia. Tafadhali jaribu tena',
+      },
       continueReading: 'Soma zaidi',
       currentPage: 'Ukurasa uliopo ',
       skipLinkText: 'Ruka hadi maelezo',
@@ -313,6 +318,7 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'Habari kuu',
       featuresAnalysisTitle: 'Gumzo mitandaoni',
       sport: {
+        keyEventsTitle: 'Matukio muhimu',
         matchSummary: 'Muhtasari wa mechi',
         assists: 'Pasi za mabao',
         penalties: 'Penalti',

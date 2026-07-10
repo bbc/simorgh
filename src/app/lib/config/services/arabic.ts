@@ -82,6 +82,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'المزيد',
       home: 'الرئيسية',
+      topicDiscovery: {
+        heading: 'اكتشف المزيد',
+        moreAboutTopic: 'المزيد عن {topic}',
+        fetchErrorMessage: 'فشل في التحميل. يرجى المحاولة مرة أخرى',
+      },
       continueReading: 'واصل القراءة',
       currentPage: 'الصفحة الحالية',
       skipLinkText: 'إذهب الى المحتوى',
@@ -360,6 +365,7 @@ export const service: DefaultServiceConfig = {
         closedDescription: 'أغلق باب المشاركة يوم {{date}}.',
       },
       sport: {
+        keyEventsTitle: 'الأحداث الرئيسية',
         matchSummary: 'ملخص المباراة',
         assists: 'تمريرات حاسمة',
         penalties: 'العقوبات',

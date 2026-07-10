@@ -77,6 +77,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Hunda ilaali',
       home: 'Oduu',
+      topicDiscovery: {
+        heading: 'Dabalata argadhu',
+        moreAboutTopic: '{topic} irratti dabalata',
+        fetchErrorMessage: "Wal bira hin geenye. Mee irra deebi'ii yaali",
+      },
       currentPage: 'Fuula kan ammaa',
       skipLinkText: 'Qabiyyeetti darbi',
       relatedContent: 'Odeessa kana irratti dabalata',
@@ -302,6 +307,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: `Maaltu haasa'ama?`,
       latestMediaTitle: 'Haaraa',
       sport: {
+        keyEventsTitle: 'Taateewwan Ijoo',
         matchSummary: 'Cuunfaa Taphaa',
         assists: 'Gargaarsota',
         penalties: 'Penaaltii',

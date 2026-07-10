@@ -62,6 +62,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: '모든 기사 보기',
       home: '홈',
+      topicDiscovery: {
+        heading: '더 알아보기',
+        moreAboutTopic: '{topic}에 대해 더 보기',
+        fetchErrorMessage: '로드하지 못했습니다. 다시 시도해 주세요',
+      },
       currentPage: '현재 페이지',
       skipLinkText: '내용 보기',
       relatedContent: '관련 기사 더 보기',
@@ -272,6 +277,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: '이 시간 이슈',
       latestMediaTitle: '최신 뉴스',
       sport: {
+        keyEventsTitle: '주요 이벤트',
         matchSummary: '경기 요약',
         assists: '도움',
         penalties: '승부차기',

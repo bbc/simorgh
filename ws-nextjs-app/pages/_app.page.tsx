@@ -1,6 +1,7 @@
 import App, { AppContext } from 'next/app';
 import { ATIData } from '#app/components/ATIAnalytics/types';
 import ThemeProvider from '#app/components/ThemeProvider';
+import ThemeProviderSCSSModules from '#app/components/ThemeProviderSCSSModules';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 import {
   PageTypes,
@@ -28,6 +29,7 @@ import addOnionLocationHeader from '#utilities/addOnionLocationHeader';
 import addVaryHeader from '#utilities/addVaryHeader';
 import addLinkHeader from '#utilities/addLinkHeader';
 import { AccountProvider } from '#app/contexts/AccountContext';
+import { ReverbParamsContextProvider } from '#app/contexts/ReverbParamsContext';
 import QueryProvider from '#app/contexts/QueryContext';
 import getIdctaConfig from '#app/lib/idcta/getIdctaConfig';
 import { IdctaConfig } from '#app/models/types/account';
@@ -193,27 +195,34 @@ export default class CustomApp extends App<Props> {
             isUK={isUK ?? false}
           >
             <AccountProvider initialConfig={idctaConfig}>
-              <EventTrackingContextProvider atiData={atiAnalytics}>
-                {isAvEmbeds ? (
-                  <ThemeProvider service={service} variant={variant}>
-                    {RenderChildrenOrError}
-                  </ThemeProvider>
-                ) : (
-                  <QueryProvider>
-                    <UserContextProvider>
-                      <ThemeProvider service={service} variant={variant}>
-                        <PageWrapper
-                          navItems={navItems}
-                          pageData={pageData}
-                          status={status}
-                        >
-                          {RenderChildrenOrError}
-                        </PageWrapper>
-                      </ThemeProvider>
-                    </UserContextProvider>
-                  </QueryProvider>
-                )}
-              </EventTrackingContextProvider>
+              <ReverbParamsContextProvider metadata={pageData?.metadata}>
+                <EventTrackingContextProvider atiData={atiAnalytics}>
+                  {isAvEmbeds ? (
+                    <ThemeProvider service={service} variant={variant}>
+                      {RenderChildrenOrError}
+                    </ThemeProvider>
+                  ) : (
+                    <QueryProvider>
+                      <UserContextProvider>
+                      <ThemeProviderSCSSModules
+                        service={service}
+                        variant={variant}
+                      >
+                          <ThemeProvider service={service} variant={variant}>
+                            <PageWrapper
+                              navItems={navItems}
+                              pageData={pageData}
+                              status={status}
+                            >
+                              {RenderChildrenOrError}
+                            </PageWrapper>
+                          </ThemeProvider>
+                      </ThemeProviderSCSSModules>
+                      </UserContextProvider>
+                    </QueryProvider>
+                  )}
+                </EventTrackingContextProvider>
+              </ReverbParamsContextProvider>
             </AccountProvider>
           </RequestContextProvider>
         </ServiceContextProvider>

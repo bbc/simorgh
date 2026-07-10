@@ -106,6 +106,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Ver todo',
       home: 'Página de inicio',
+      topicDiscovery: {
+        heading: 'Descubre más',
+        moreAboutTopic: 'Más sobre {topic}',
+        fetchErrorMessage: 'Error al cargar. Inténtalo de nuevo',
+      },
       continueReading: 'Continuar leyendo',
       currentPage: 'Página actual',
       skipLinkText: 'Ir al contenido',
@@ -396,6 +401,7 @@ export const service: DefaultServiceConfig = {
         closedDescription: 'Esto cierra el {{date}}.',
       },
       sport: {
+        keyEventsTitle: 'Eventos clave',
         matchSummary: 'Resumen del partido',
         assists: 'Asistencias',
         penalties: 'Penales',

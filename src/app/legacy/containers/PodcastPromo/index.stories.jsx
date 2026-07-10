@@ -59,6 +59,17 @@ const serviceContextMockWhatsapp = {
   },
 };
 
+const serviceContextMockElections = {
+  ...serviceContextMock,
+  podcastPromo: {
+    ...serviceContextMock.podcastPromo,
+    linkLabel: {
+      ...serviceContextMock.podcastPromo.linkLabel,
+      href: 'https://www.bbc.com/portuguese/articles/czd2prld130o',
+    },
+  },
+};
+
 
 
 const Component = ({ inline = false,  value = serviceContextMock }) => (
@@ -83,5 +94,8 @@ export const InlinePromoGeneric = () => <Component inline />;
 export const InlinePromoWhatsapp = () => <Component inline value={serviceContextMockWhatsapp}/>;
 export const InlinePromoYoutube = () => <Component inline value={serviceContextMockYoutube} />;
 export const InlinePromoPodcast = () => <Component inline value={serviceContextMockPodcast} />;
+export const InlinePromoElections = () => (
+  <Component inline value={serviceContextMockElections} />
+);
 
 

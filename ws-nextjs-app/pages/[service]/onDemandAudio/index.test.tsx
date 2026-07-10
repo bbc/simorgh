@@ -14,6 +14,7 @@ import {
   act,
   waitFor,
 } from '#app/components/react-testing-library-with-providers';
+import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import { GetServerSidePropsContext } from 'next';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 import _OnDemandAudioPage from './OnDemandAudioLayout';
@@ -87,12 +88,19 @@ const renderPage = async ({
   return result;
 };
 
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  default: jest.fn(),
+}));
+
 jest.mock('#app/components/ChartbeatAnalytics', () => {
-  const ChartbeatAnalytics = () => <div>chartbeat</div>;
+  const ChartbeatAnalytics = () => <div>Chartbeat</div>;
   return ChartbeatAnalytics;
 });
 
 jest.mock('#app/components/ATIAnalytics', () => () => <div>ATI Analytics</div>);
+
 jest.mock('#nextjs/pages/[service]/onDemandAudio/podcastExternalLinks', () => ({
   __esModule: true,
   default: jest.fn().mockResolvedValue([
@@ -130,6 +138,7 @@ describe('OnDemand Radio Page ', () => {
       },
     });
     jest.spyOn(Date, 'now').mockImplementation(() => 1234567890000);
+    mockMatchMedia();
     process.env = { ...env };
   });
 

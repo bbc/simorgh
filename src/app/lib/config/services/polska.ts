@@ -69,6 +69,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Zobacz wszystkie',
       home: 'Strona główna',
+      topicDiscovery: {
+        heading: 'Odkryj więcej',
+        moreAboutTopic: 'Więcej o {topic}',
+        fetchErrorMessage: 'Nie udało się załadować. Spróbuj ponownie',
+      },
       currentPage: 'Strona bieżąca',
       skipLinkText: 'Przejdź do treści',
       relatedContent: 'Powiązane treści',
@@ -332,6 +337,7 @@ export const service: DefaultServiceConfig = {
         closedDescription: 'Zamknięto dnia {{date}}.',
       },
       sport: {
+        keyEventsTitle: 'Kluczowe wydarzenia',
         matchSummary: 'Podsumowanie meczu',
         assists: 'Asysty',
         penalties: 'Rzuty karne',
