@@ -1,0 +1,52 @@
+@use '@scss/themeTokens' as theme;
+
+.h2 {
+  @include theme.fontVariants-gel-font-variant('sans-bold');
+  @include theme.fontSizes-gel-font-size(doublePica);
+  color: theme.$palette-grey-10;
+
+  :global([data-is-dark-ui='true']) & {
+    color: theme.$palette-ghost;
+  }
+
+  a {
+    display: inline-block;
+    color: theme.$palette-grey-10;
+    text-decoration: none;
+
+    :global([data-is-dark-ui='true']) & {
+      color: theme.$palette-ghost;
+    }
+  }
+
+  span {
+    display: inline-block;
+    position: relative;
+  }
+
+  a:visited {
+    color: theme.$palette-grey-10;
+
+    :global([data-is-dark-ui='true']) & {
+      color: theme.$palette-ghost;
+    }
+  }
+
+  a:hover, a:focus {
+    color: theme.$palette-postbox;
+
+    span {
+      text-decoration: underline;
+    }
+  }
+
+  svg {
+    margin-inline-start: 0.5rem;
+    fill: currentColor;
+    width: #{theme.pixelsToRem-px-to-rem(14)};
+    height: #{theme.pixelsToRem-px-to-rem(14)};
+    position: relative;
+  }
+}
+
+
