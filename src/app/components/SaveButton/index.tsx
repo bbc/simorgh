@@ -11,7 +11,7 @@ export interface SaveButtonProps {
   isLoading?: boolean;
   isUpdating?: boolean;
   isSaved?: boolean;
-  onClick: (event?: React.MouseEvent<HTMLButtonElement>) => void;
+  onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
   testId?: string;
 }
 
@@ -24,6 +24,7 @@ const SaveButton = ({
   isSaved = false,
   onClick,
   testId,
+  ...rest
 }: SaveButtonProps) => {
   const [isFocusedOrHovered, setIsFocusedOrHovered] = useState(false);
   const labelId = useId();
@@ -53,6 +54,7 @@ const SaveButton = ({
       onFocus={() => setIsFocusedOrHovered(true)}
       onBlur={() => setIsFocusedOrHovered(false)}
       {...(testId && { 'data-testid': testId })}
+      {...rest}
     >
       <span aria-hidden="true" css={styles.iconText}>
         {isBusy && <Spinner />}
