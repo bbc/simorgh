@@ -1,0 +1,15 @@
+
+@use './px-to-rem' as *;
+// SCSS variables for spacing, matching spacings.ts
+$full: px-to-rem(8); // 8px
+$half: px-to-rem(4); // 4px
+$double: px-to-rem(16); // 16px
+$triple: px-to-rem(24); // 24px
+$quadruple: px-to-rem(32); // 32px
+$quintuple: px-to-rem(40); // 40px
+$sextuple: px-to-rem(48); // 48px
+
+$margin-below-400px: $full;
+$gutter-below-600px: $full;
+$margin-above-400px: $double;
+$gutter-above-600px: $double;
