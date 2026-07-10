@@ -93,6 +93,7 @@ const styles = {
       [mq.GROUP_3_MIN_WIDTH]: {
         li: {
           width: `calc(25% - 0.75rem)`,
+          marginBottom: `${spacings.DOUBLE}rem`,
 
           '&:nth-of-type(2n):not(:last-of-type)': {
             marginInlineEnd: `${spacings.DOUBLE}rem`,
