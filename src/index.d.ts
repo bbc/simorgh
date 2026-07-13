@@ -1,5 +1,10 @@
 declare module '*.md';
 
+declare module '*.module.scss' {
+  const styles: { [className: string]: string };
+  export default styles;
+}
+
 declare namespace React.JSX {
   interface DivProps extends React.HTMLAttributes<HTMLDivElement> {
     ref?: Ref<HTMLDivElement> | null;
