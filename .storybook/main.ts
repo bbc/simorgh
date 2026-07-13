@@ -61,6 +61,34 @@ const storybookConfig: StorybookConfig = {
         transcludeMarkdown: true,
       },
     },
+    {
+      name: '@storybook/addon-styling-webpack',
+      options: {
+        rules: [
+          {
+            test: /\.module\.scss$/,
+            use: [
+              'style-loader',
+              {
+                loader: 'css-loader',
+                options: {
+                  modules: true,
+                  importLoaders: 1,
+                  esModule: false,
+                },
+              },
+              {
+                loader: 'sass-loader',
+              },
+            ],
+          },
+          {
+            test: /(?<!\.module)\.scss$/,
+            use: ['style-loader', 'css-loader', 'sass-loader'],
+          },
+        ],
+      },
+    },
   ],
   env: config => ({
     ...config,

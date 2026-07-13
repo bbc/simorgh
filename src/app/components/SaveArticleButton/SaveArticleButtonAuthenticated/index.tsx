@@ -67,18 +67,17 @@ const SaveArticleButtonAuthenticated = ({
   };
 
   return (
-    <div {...viewTracker}>
-      <SaveButton
-        onClick={handleClick}
-        isLoading={isLoading}
-        isUpdating={isUpdating}
-        isSaved={isSaved}
-        visualLabel={getVisualLabel()}
-        hoverVisualLabel={hoverVisualLabel}
-        accessibleLabel={getAccessibleLabel()}
-        testId="save-article-btn-authorized"
-      />
-    </div>
+    <SaveButton
+      onClick={handleClick}
+      isLoading={isLoading}
+      isUpdating={isUpdating}
+      isSaved={isSaved}
+      visualLabel={getVisualLabel()}
+      hoverVisualLabel={hoverVisualLabel}
+      accessibleLabel={getAccessibleLabel()}
+      testId="save-article-btn-authorized"
+      {...viewTracker}
+    />
   );
 };
 
