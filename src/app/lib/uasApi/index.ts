@@ -15,6 +15,7 @@ export interface UasApiRequestBody {
   resourceId?: string;
   action?: string;
   actionContext?: string;
+  resourceTitle?: string;
   metaData?: Record<string, unknown>;
   activityTime?: string;
 }
