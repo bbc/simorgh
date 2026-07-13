@@ -54,15 +54,26 @@ describe('useTrappedFocus', () => {
     expect(screen.getByTestId('first-btn')).toHaveFocus();
   });
 
-  it('does not redirect focus when Tab is pressed on a non-boundary element', () => {
+  it('moves focus to the next element when Tab is pressed on a middle element', () => {
     render(<TestComponent />);
     act(() => {
-      screen.getByTestId('middle-btn').focus();
+      screen.getByTestId('first-btn').focus();
     });
     act(() => {
       fireEvent.keyDown(document, { key: 'Tab' });
     });
     expect(screen.getByTestId('middle-btn')).toHaveFocus();
+  });
+
+  it('moves focus to the previous element when Shift+Tab is pressed on a middle element', () => {
+    render(<TestComponent />);
+    act(() => {
+      screen.getByTestId('middle-btn').focus();
+    });
+    act(() => {
+      fireEvent.keyDown(document, { key: 'Tab', shiftKey: true });
+    });
+    expect(screen.getByTestId('first-btn')).toHaveFocus();
   });
 
   it('restores focus to the previously focused element on unmount', () => {
