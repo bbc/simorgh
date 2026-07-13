@@ -5,7 +5,9 @@
   "sideEffects": [
     "./src/app/legacy/psammead/moment-timezone-include/**/*.*",
     "./src/app/legacy/psammead/psammead-locales/**/*.*",
-    "./cypress/**/*.*"
+    "./cypress/**/*.*",
+    "**/*.scss",
+    "**/*.css"
   ],
   "workspaces": {
     "packages": [
@@ -57,7 +59,7 @@
   "homepage": "https://github.com/bbc/simorgh#readme",
   "resolutions": {
     "glob": "10.5.0",
-    "@types/react": "19.2.15",
+    "@types/react": "19.2.17",
     "js-yaml": "3.14.2",
     "on-headers": "1.1.0",
     "react-is": "19"
@@ -82,8 +84,8 @@
     "moment": "2.30.1",
     "moment-timezone": "0.6.0",
     "ramda": "0.32.0",
-    "react": "19.2.6",
-    "react-dom": "19.2.6",
+    "react": "19.2.7",
+    "react-dom": "19.2.7",
     "react-helmet": "6.1.0",
     "react-lazyload": "3.2.1",
     "temporal-polyfill": "0.3.0",
@@ -104,6 +106,7 @@
     "@jest/globals": "30.2.0",
     "@storybook/addon-a11y": "10.4.1",
     "@storybook/addon-docs": "10.4.1",
+    "@storybook/addon-styling-webpack": "3.0.2",
     "@storybook/builder-webpack5": "10.4.1",
     "@storybook/cli": "10.4.1",
     "@storybook/react-webpack5": "10.4.1",
@@ -112,11 +115,12 @@
     "@testing-library/react": "16.3.1",
     "@testing-library/react-hooks": "8.0.1",
     "@testing-library/user-event": "14.6.1",
+    "@types/identity-obj-proxy": "3.0.2",
     "@types/jest": "30.0.0",
     "@types/js-cookie": "^3.0.3",
     "@types/jsdom": "27.0.0",
     "@types/ramda": "0.31.1",
-    "@types/react": "19.2.15",
+    "@types/react": "19.2.17",
     "@types/react-dom": "19.2.3",
     "@types/react-helmet": "6.1.11",
     "@types/react-lazyload": "^3.2.0",
@@ -132,6 +136,7 @@
     "cli-table": "0.3.11",
     "colors": "^1.4.0",
     "crypto": "1.0.1",
+    "css-loader": "7.1.4",
     "cypress": "15.11.0",
     "cypress-axe": "1.7.0",
     "cypress-multi-reporters": "2.0.5",
@@ -151,6 +156,7 @@
     "eslint-plugin-react-hooks": "5.2.0",
     "happy-dom": "20.9.0",
     "husky": "9.1.7",
+    "identity-obj-proxy": "3.0.0",
     "jest": "30.3.0",
     "jest-environment-jsdom": "30.2.0",
     "jest-expect-message": "1.1.3",
@@ -164,11 +170,15 @@
     "prettier": "3.8.1",
     "puppeteer": "24.22.3",
     "retry": "0.13.1",
+    "sass": "1.101.0",
+    "sass-loader": "17.0.0",
     "storybook": "10.4.1",
+    "style-loader": "4.0.0",
     "supertest": "7.2.2",
     "timemachine": "0.3.2",
     "ts-jest": "29.4.9",
     "typescript": "5.9.3",
+    "typescript-plugin-css-modules": "5.2.0",
     "webpack": "5.106.2"
   },
   "spec": {
