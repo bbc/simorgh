@@ -86,6 +86,16 @@ const defaultCyrillicConfig = {
     relatedTopics: 'Алоқадор мавзулар',
     moreOnThis: '',
     navMenuText: 'Бўлимлар',
+    liteSite: {
+      onboardingMessage:
+        'Сиз ушбу сайтнинг камроқ интернет сарфлайдиган, фақат матндан иборат версиясини кўрмоқдасиз. Барча суратлар ва видеоларни ўз ичига олган сайтнинг асосий версиясини кўринг.',
+      toMainSite: 'Мени сайтнинг асосий версиясига олиб боринг',
+      informationPage: 'Интернет тежамкор ушбу версия ҳақида батафсил маълумот',
+      informationPageLink:
+        'https://www.bbc.com/uzbek/articles/crel1q4jrz9o/cyr',
+      dataSaving: 'Фақат матнли версия',
+      articleDataSavingLinkText: 'Фақат матнли версия',
+    },
     mediaAssetPage: {
       mediaPlayer: 'Медиа плейер',
       audioPlayer: 'Аудио плейер',
@@ -506,6 +516,17 @@ export const service: UzbekConfig = {
       relatedContent: 'Mavzuga aloqador',
       relatedTopics: 'Aloqador mavzular',
       navMenuText: 'Bo‘limlar',
+      liteSite: {
+        onboardingMessage:
+          'Bu saytning kamroq internet sarflaydigan, faqat matndan iborat versiyasini ko‘rmoqdasiz. Barcha suratlar va videolarni o‘z ichiga olgan saytning asosiy versiyasini ko‘ring.',
+        toMainSite: 'Meni saytning asosiy versiyasiga olib boring',
+        informationPage:
+          'Internet tejamkor ushbu versiya haqida batafsil ma’lumot',
+        informationPageLink:
+          'https://www.bbc.com/uzbek/articles/crel1q4jrz9o/lat',
+        dataSaving: 'Faqat matnli versiya',
+        articleDataSavingLinkText: 'Faqat matnli versiya',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Media pleyer',
         audioPlayer: 'Audio pleyer',
