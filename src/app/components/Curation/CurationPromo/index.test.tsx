@@ -3,6 +3,8 @@ import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import * as isLiveEnv from '#lib/utilities/isLive';
 import userEvent from '@testing-library/user-event';
+import { LIVE_DARK, LIVE_LIGHT } from '#app/components/ThemeProvider/palette';
+import { ARTICLE_PAGE, MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { render, screen } from '../../react-testing-library-with-providers';
 import CurationPromo from '.';
 
@@ -149,6 +151,27 @@ describe('Curation Promo', () => {
       );
       expect(container.queryByText('17 abril 2023')).not.toBeInTheDocument();
     });
+
+    it.each`
+      pageType              | expectedColour
+      ${ARTICLE_PAGE}       | ${LIVE_DARK}
+      ${MEDIA_ARTICLE_PAGE} | ${LIVE_LIGHT}
+    `(
+      'should render the LiveLabel in the expected colour for $pageType pages',
+      ({ pageType, expectedColour }) => {
+        render(
+          <Fixture
+            link="https://www.bbc.com/mundo/live/noticias-america-latina-60742314"
+            isLive
+          />,
+          { pageType, service: 'mundo' },
+        );
+
+        expect(screen.getByText('EN VIVO')).toHaveStyle({
+          color: expectedColour,
+        });
+      },
+    );
   });
 
   describe('Fallback placeholder image', () => {
