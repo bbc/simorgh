@@ -4,6 +4,19 @@ import getServiceNumerals from '#app/components/MostRead/utilities/getServiceNum
 import { WesternArabic } from '#app/legacy/psammead/psammead-locales/src/numerals';
 import { HeadToHeadV2Data, Team } from '../types';
 
+const DEFAULT_TRANSLATIONS_MAP = {
+  VERSUS: 'versus',
+  KICK_OFF: 'kick off',
+  ET: 'Extra time',
+  AFTER_ET: 'After extra time',
+  AFTER_FT: 'After full time',
+  AT_FT: 'at Full time',
+  TBC: 'Team to be confirmed',
+  WIN: 'win',
+  ON_PENALTIES: 'on penalties',
+  ON_AGGREGATE: 'on aggregate',
+};
+
 const runningScoreFields = new Set([
   'halftime',
   'fulltime',
@@ -134,6 +147,25 @@ const transformTeam = (
   };
 };
 
+const addA11YTranslations = (
+  template: string,
+  translations?: Record<string, string>,
+) => {
+  const placeholderRegex = /\{([^}]+)\}/g;
+  const placeholders = [...template.matchAll(placeholderRegex)];
+
+  return placeholders.reduce((accumulator, currentPlaceholder) => {
+    const [placeholder, placeholderId] = currentPlaceholder;
+    const translatedWord = translations?.[placeholderId];
+
+    if (translatedWord) {
+      return accumulator.replaceAll(placeholder, translatedWord);
+    }
+
+    return accumulator;
+  }, template);
+};
+
 const translateSportData = (
   data: HeadToHeadV2Data,
   translations: Translations,
@@ -168,6 +200,39 @@ const translateSportData = (
     Final: stages?.final,
     '3rd Place Final': stages?.thirdPlaceFinal,
   };
+
+  const homeId = data.home.urn?.split(':').pop();
+  const awayId = data.away.urn?.split(':').pop();
+  const DEFAULT_COUNTRY_TRANSLATIONS = {
+    ...(homeId && { [homeId]: data.home.fullName }),
+    ...(awayId && { [awayId]: data.away.fullName }),
+  };
+
+  const eventSummary = data.accessibleEventSummary;
+
+  // Add terms translations
+  let accessibleEventSummary = addA11YTranslations(
+    eventSummary,
+    translations.sport as Record<string, string>,
+  );
+
+  // Add country translations
+  accessibleEventSummary = addA11YTranslations(
+    accessibleEventSummary,
+    translations.sport?.worldCupTeamNames,
+  );
+
+  // Add default English translations
+  accessibleEventSummary = addA11YTranslations(
+    accessibleEventSummary,
+    DEFAULT_TRANSLATIONS_MAP,
+  );
+
+  // Add default country translations
+  accessibleEventSummary = addA11YTranslations(
+    accessibleEventSummary,
+    DEFAULT_COUNTRY_TRANSLATIONS,
+  );
 
   return {
     ...data,
@@ -228,6 +293,7 @@ const translateSportData = (
         };
       }),
     }),
+    accessibleEventSummary,
   };
 };
 

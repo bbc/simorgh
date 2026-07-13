@@ -834,4 +834,21 @@ describe('TranslateSportData', () => {
       });
     });
   });
+
+  describe('Accessible Event Summary', () => {
+    const dataWithTournamentAndStageNames = {
+      ...fixtureDataDefault,
+      accessibleEventSummary: '{bologna} 2 , {aston-villa} 0 {atFullTime}',
+    } as unknown as HeadToHeadV2Data;
+    it('should add translation for accessibleEventSummary', () => {
+      const result = translateSportData(
+        dataWithTournamentAndStageNames,
+        afriqueServiceConfig.default.translations,
+        'afrique',
+      );
+      expect(result.accessibleEventSummary).toStrictEqual(
+        'Bologna 2 , Aston Villa 0 à la fin du temps réglementaire',
+      );
+    });
+  });
 });
