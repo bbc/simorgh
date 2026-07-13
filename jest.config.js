@@ -7,7 +7,10 @@ const unitTests = {
     './src/testHelpers/setupTests.js',
     'jest-expect-message',
   ],
-  moduleNameMapper: jestDirAlias,
+  moduleNameMapper: {
+    ...jestDirAlias,
+    '\\.module\\.(css|scss)$': 'identity-obj-proxy',
+  },
   testEnvironment: 'jsdom',
   snapshotSerializers: ['@emotion/jest/serializer'],
   transform: {
@@ -37,7 +40,10 @@ const clientUnitTests = {
     './src/testHelpers/setupTests.js',
     'jest-expect-message',
   ],
-  moduleNameMapper: jestDirAlias,
+  moduleNameMapper: {
+    ...jestDirAlias,
+    '\\.module\\.(css|scss)$': 'identity-obj-proxy',
+  },
   testEnvironment: '@happy-dom/jest-environment',
   snapshotSerializers: ['@emotion/jest/serializer'],
   transform: {
