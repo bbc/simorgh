@@ -48,7 +48,8 @@ const baseServiceConfig = {
   podcastPromo: {
     title: 'Подкаст',
     brandTitle: 'Я тебе врятую',
-    brandDescription: 'Подкаст BBC News Україна про роботу й людські долі медиків під час війни.',
+    brandDescription:
+      'Подкаст BBC News Україна про роботу й людські долі медиків під час війни.',
     image: {
       src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0nxht82.jpg',
       alt: 'Подкаст: Я тебе врятую',
