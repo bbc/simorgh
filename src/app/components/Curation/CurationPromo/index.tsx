@@ -102,7 +102,13 @@ const CurationPromo = ({
           </Promo.A>
         ) : (
           <Promo.A href={link} {...clickTrackerHandler}>
-            {isLive ? <LiveLabel>{title}</LiveLabel> : title}
+            {isLive ? (
+              <span css={styles.liveLabel}>
+                <LiveLabel>{title}</LiveLabel>
+              </span>
+            ) : (
+              title
+            )}
           </Promo.A>
         )}
       </Promo.Heading>
