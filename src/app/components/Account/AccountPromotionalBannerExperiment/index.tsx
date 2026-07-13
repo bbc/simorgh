@@ -37,7 +37,12 @@ const AccountPromotionalBannerExperiment = () => {
   }
 
   if (experimentVariant === 'on') {
-    return <AccountPromotionalBanner />;
+    return (
+      <AccountPromotionalBanner
+        experimentName={ACCOUNT_PROMO_BANNER_EXPERIMENT_NAME}
+        experimentVariant={experimentVariant}
+      />
+    );
   }
 
   return null;

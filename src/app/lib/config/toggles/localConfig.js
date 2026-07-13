@@ -87,7 +87,7 @@ export default {
     enabled: true,
   },
   topBarOJs: {
-    enabled: true,
+    enabled: false,
   },
   variantCookie: {
     enabled: true,
