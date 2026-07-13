@@ -155,6 +155,7 @@ const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
         onTabKeyDown={handleTabKeyDown}
       />
       <div
+        key={activeTabId}
         role="tabpanel"
         id={`tabpanel-${activeTabId}`}
         aria-labelledby={`tab-${activeTabId}`}
@@ -185,9 +186,13 @@ const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
               );
             case showErrorMessage:
               return (
-                <p css={styles.errorMessage} {...errorMessageViewTracker}>
+                <div
+                  role="alert"
+                  css={styles.errorMessage}
+                  {...errorMessageViewTracker}
+                >
                   {fetchErrorMessage}
-                </p>
+                </div>
               );
             default:
               return (
