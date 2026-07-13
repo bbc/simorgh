@@ -232,7 +232,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const { enabled: continueReadingButtonToggle } = useToggle(
     'continueReadingButton',
   );
-  const { enabled: isTopBarOJsEnabled } = useToggle('topBarOJs');
   const { enabled: topicDiscoveryEnabled } = useToggle('topicDiscovery');
 
   const {
