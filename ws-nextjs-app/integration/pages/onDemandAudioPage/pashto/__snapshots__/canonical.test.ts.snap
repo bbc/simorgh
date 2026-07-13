@@ -124,20 +124,6 @@ exports[`Canonical On Demand Audio Page Header Navigation link should match text
 }
 `;
 
-exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 2`] = `
-{
-  "text": "وګورئ",
-  "url": "/pashto/watch/bbc_afghan_tv/live",
-}
-`;
-
-exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 3`] = `
-{
-  "text": "واورئ",
-  "url": "/pashto/topics/c9xz1ekw79nt",
-}
-`;
-
 exports[`Canonical On Demand Audio Page I can see the brand title 1`] = `"ماښامنۍ خپرونه"`;
 
 exports[`Canonical On Demand Audio Page I can see the episode summary 1`] = `"ماښامنۍ خبري راډيويي خپرونه"`;
@@ -150,20 +136,20 @@ exports[`Canonical On Demand Audio Page Main heading should match text 1`] = `"�
 
 exports[`Canonical On Demand Audio Page Media Loader renders a valid container 1`] = `
 <figure
-  class="media-container css-1h3uo5r"
+  class="media-container css-ucozvf"
   data-e2e="media-loader__container"
 >
   <div
-    class="media-player css-169uiqx"
+    class="media-player css-1kf4wj3"
     data-e2e="media-player"
   >
     <noscript>
       <div>
         <div
-          class="css-93dm6k"
+          class="css-q0ilh"
         >
           <strong
-            class="css-1kbuwoi"
+            class="css-pow7hy"
           >
             په دې وسیله کې د غږ اوريدل او ویډیو لیدنه شونې نه ده.
           </strong>
