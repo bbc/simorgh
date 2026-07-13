@@ -15,6 +15,7 @@ const options = {
     '@emotion/cache',
     '@emotion/server',
     'aws-embedded-metrics',
+    '@scss', // webpack alias for src/app/components, resolved via resolve.alias in webpack/next.js
   ],
 };
 
@@ -27,7 +28,7 @@ depcheck(
 
     // Filter out dependencies prefixed with "#".
     const missingFiltered = Object.keys(missing).reduce((obj, key) => {
-      if (key.startsWith('#')) {
+      if (key.startsWith('#') || key.startsWith('@scss/')) {
         return obj;
       }
 
