@@ -89,7 +89,10 @@ export default defineConfig({
           },
           plugins: [
             // @ts-expect-error - TODO: fix types
-            new MomentTimezoneInclude({ startYear: 2010, endYear: 2025 }),
+            new MomentTimezoneInclude({
+              startYear: 2010,
+              endYear: new Date().getFullYear() + 1,
+            }),
             new DefinePlugin({
               process: {
                 env: envVars,

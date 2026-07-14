@@ -100,7 +100,10 @@ module.exports = {
     };
 
     config.plugins.push(
-      new MomentTimezoneInclude({ startYear: 2010, endYear: 2026 }),
+      new MomentTimezoneInclude({
+        startYear: 2010,
+        endYear: new Date().getFullYear() + 1,
+      }),
     );
 
     if (dev) {
