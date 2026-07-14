@@ -58,6 +58,7 @@ const styles = {
       },
       '[type=button]&:focus-visible': {
         outlineOffset: `${pixelsToRem(-3)}rem`,
+        outlineColor: isDarkUi ? palette.WHITE : palette.BLACK,
         boxShadow: 'none',
       },
     }),
