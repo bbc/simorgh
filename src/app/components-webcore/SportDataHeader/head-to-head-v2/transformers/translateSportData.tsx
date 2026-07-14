@@ -151,6 +151,7 @@ const addA11YTranslations = (
   template: string,
   translations?: Record<string, string>,
 ) => {
+  // Regex looks for params like this: {placeholderId}
   const placeholderRegex = /\{([^}]+)\}/g;
   const placeholders = [...template.matchAll(placeholderRegex)];
 
