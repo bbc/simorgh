@@ -3,6 +3,7 @@ import {
   screen,
   fireEvent,
 } from '#app/components/react-testing-library-with-providers';
+import { matchers } from '@emotion/jest';
 import * as viewTracking from '#app/hooks/useViewTracker';
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import { ServiceContext } from '#app/contexts/ServiceContext';
@@ -10,6 +11,20 @@ import { ServiceConfig } from '#app/models/types/serviceConfig';
 import { service as portugueseConfig } from '#app/lib/config/services/portuguese';
 import { service as turkceConfig } from '#app/lib/config/services/turkce';
 import { service as arabicConfig } from '#app/lib/config/services/arabic';
+import {
+  BLACK,
+  GREY_2,
+  GREY_4,
+  GREY_6,
+  GREY_10,
+  WHITE,
+} from '#app/components/ThemeProvider/palette';
+import {
+  ARTICLE_PAGE,
+  LIVE_TV_PAGE,
+  MEDIA_ARTICLE_PAGE,
+  TV_PAGE,
+} from '../../routes/utils/pageTypes';
 import {
   topicTagsFixture,
   multipleTopicsFixture,
@@ -20,6 +35,8 @@ import useFetchTopicPromos from './useFetchTopicPromos';
 import TopicDiscovery from '.';
 
 jest.mock('./useFetchTopicPromos');
+
+expect.extend(matchers);
 
 describe('TopicDiscovery', () => {
   const mockUseFetchTopicPromos = useFetchTopicPromos as jest.MockedFunction<
@@ -191,6 +208,70 @@ describe('TopicDiscovery', () => {
     expect(
       screen.queryByTestId('topic-discovery-more-about'),
     ).not.toBeInTheDocument();
+  });
+
+  it.each([MEDIA_ARTICLE_PAGE, TV_PAGE, LIVE_TV_PAGE])(
+    'should render promo links in dark ui colours for %s pages',
+    pageType => {
+      render(<TopicDiscovery topics={topicTagsFixture} />, {
+        pageType,
+        service: 'portuguese',
+      });
+
+      const promoLink = screen.getByRole('link', {
+        name: /Derrota em dose dupla/,
+      });
+
+      const tabPanel = screen.getByRole('tabpanel');
+
+      expect(promoLink).toHaveStyle({ color: GREY_2 });
+
+      expect(tabPanel).toHaveStyleRule('color', GREY_4, {
+        target: 'li .promo-text a:visited',
+      });
+    },
+  );
+
+  it('should render media icons in dark ui colours', () => {
+    const { container } = render(<TopicDiscovery topics={topicTagsFixture} />, {
+      pageType: MEDIA_ARTICLE_PAGE,
+      service: 'portuguese',
+    });
+
+    expect(
+      container.querySelector('[data-e2e="media-icon"]'),
+    ).toBeInTheDocument();
+
+    const tabPanel = screen.getByRole('tabpanel');
+
+    expect(tabPanel).toHaveStyleRule('background-color', BLACK, {
+      target: 'li .promo-image [data-e2e="media-icon"]',
+    });
+    expect(tabPanel).toHaveStyleRule('color', WHITE, {
+      target: 'li .promo-image [data-e2e="media-icon"]',
+    });
+    expect(tabPanel).toHaveStyleRule('color', WHITE, {
+      target: 'li .promo-image [data-e2e="media-icon"] svg',
+    });
+  });
+
+  it('should render promo links in light ui colours for article pages', () => {
+    render(<TopicDiscovery topics={topicTagsFixture} />, {
+      pageType: ARTICLE_PAGE,
+      service: 'portuguese',
+    });
+
+    const promoLink = screen.getByRole('link', {
+      name: /Derrota em dose dupla/,
+    });
+
+    const tabPanel = screen.getByRole('tabpanel');
+
+    expect(promoLink).toHaveStyle({ color: GREY_10 });
+
+    expect(tabPanel).toHaveStyleRule('color', GREY_6, {
+      target: 'li .promo-text a:visited',
+    });
   });
 
   describe('analytics', () => {
