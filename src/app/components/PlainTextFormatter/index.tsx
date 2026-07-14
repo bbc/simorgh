@@ -4,6 +4,11 @@ import styles from './index.module.scss';
 // Matches timecodes like 00:00, 1:23, 01:23:45 at the start of a line
 const TIMECODE_PATTERN = /^\d{1,2}:\d{2}(:\d{2})?/;
 
+// Splits a string at whitespace that is immediately followed by a timecode —
+// used to detect and extract timecodes embedded inline within a paragraph.
+// The lookahead ensures the captured token itself starts the next chunk.
+const INLINE_TIMECODE_SPLIT = /\s(?=\d{1,2}:\d{2}(?::\d{2})?\s)/;
+
 // Used as a capturing group in split() so URLs are preserved in the resulting array
 const URL_SPLIT_PATTERN = /(https?:\/\/[^\s<>"{}|\\^[\]`]+)/g;
 const URL_TEST_PATTERN = /^https?:\/\//;
@@ -14,6 +19,19 @@ const isChapterBlock = (lines: string[]) => {
     nonEmptyLines.length > 0 &&
     nonEmptyLines.every(line => TIMECODE_PATTERN.test(line.trim()))
   );
+};
+
+// Handles synopses where timecodes are embedded inline in a paragraph rather
+// than on separate lines, e.g. "Intro text. 00:00 Chapter 00:34 Next chapter".
+// Requires at least 2 timecode entries to avoid false-positives on standalone
+// time references like "the 1:30 interview".
+const parseInlineTimecodes = (
+  block: string,
+): { intro: string; chapterLines: string[] } | null => {
+  const parts = block.split(INLINE_TIMECODE_SPLIT);
+  if (parts.length < 3) return null;
+  if (!TIMECODE_PATTERN.test(parts[1].trim())) return null;
+  return { intro: parts[0].trim(), chapterLines: parts.slice(1) };
 };
 
 const timecodeToSeconds = (timecode: string): number => {
@@ -119,6 +137,21 @@ const PlainTextFormatter = ({
             // eslint-disable-next-line react/no-array-index-key
             <div key={i} className={styles.chapterBlock}>
               <ChapterList lines={lines} playerId={playerId} />
+            </div>
+          );
+        }
+        const inlineTimecodes = parseInlineTimecodes(block);
+        if (inlineTimecodes) {
+          const { intro, chapterLines } = inlineTimecodes;
+          return (
+            // eslint-disable-next-line react/no-array-index-key
+            <div key={i}>
+              {intro && (
+                <p className={styles.paragraph}>{renderWithLinks(intro)}</p>
+              )}
+              <div className={styles.chapterBlock}>
+                <ChapterList lines={chapterLines} playerId={playerId} />
+              </div>
             </div>
           );
         }
