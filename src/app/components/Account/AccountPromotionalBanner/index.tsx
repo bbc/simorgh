@@ -38,12 +38,14 @@ const AccountPromotionalBanner = ({
     componentName: 'account-promotional-banner',
     ...(experimentName && { experimentName }),
     ...(experimentVariant && { experimentVariant }),
+    ...(experimentVariant && { sendOptimizelyEvents: true }),
   });
 
   const { onClick: onCloseClickTrack } = useClickTrackerHandler({
     componentName: 'account-promotional-banner-close',
     ...(experimentName && { experimentName }),
     ...(experimentVariant && { experimentVariant }),
+    ...(experimentVariant && { sendOptimizelyEvents: true }),
   });
 
   const handleCloseClick = useCallback(

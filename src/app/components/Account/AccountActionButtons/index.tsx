@@ -47,6 +47,7 @@ const AccountActionButtons = ({
           componentName: signInComponentName,
           ...(experimentName && { experimentName }),
           ...(experimentVariant && { experimentVariant }),
+          ...(experimentVariant && { sendOptimizelyEvents: true }),
         }}
         data-testid={signInComponentName}
       >
@@ -82,6 +83,7 @@ const AccountActionButtons = ({
           componentName: registerComponentName,
           ...(experimentName && { experimentName }),
           ...(experimentVariant && { experimentVariant }),
+          ...(experimentVariant && { sendOptimizelyEvents: true }),
         }}
         data-testid={registerComponentName}
       >

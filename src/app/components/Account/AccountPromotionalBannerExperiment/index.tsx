@@ -18,6 +18,7 @@ const AccountPromotionalBannerControl = ({
     componentName: 'account-promotional-banner',
     experimentName: ACCOUNT_PROMO_BANNER_EXPERIMENT_NAME,
     experimentVariant,
+    sendOptimizelyEvents: true,
     alwaysInView: true,
   });
 
