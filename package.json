@@ -41,6 +41,7 @@
     "test:integration:updatesnapshots": "NODE_OPTIONS=\"--experimental-vm-modules\" node ws-nextjs-app/integration/utils/runTests.ts  --updateSnapshot",
     "test:linkey": "node scripts/linkeySetup.js && jest src/app/lib/config/services/*.test.js --verbose true; yarn test:linkey:cleanup",
     "test:linkey:cleanup": "find src/app/lib/config/services -type f -name '*.test.js' -delete",
+    "update-moment-timezone-year": "node ./scripts/updateMomentTimezoneYear.js",
     "updateMinorPatch": "rm -rf node_modules/ && yarn install && npm update && yarn install"
   },
   "repository": {
