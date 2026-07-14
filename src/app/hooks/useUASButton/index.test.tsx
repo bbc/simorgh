@@ -66,15 +66,9 @@ const mockUseUASMetadataSync = useUASMetadataSync as jest.Mock;
 describe('useUASButton', () => {
   const defaultProps = {
     articleId: '123',
-    articlePageData: {
-      promo: {
-        headlines: { seoHeadline: 'Test Article' },
-        images: { defaultPromoImage: { blocks: [] } },
-      },
-      metadata: { locators: { canonicalUrl: 'https://bbc.com/article' } },
-      content: { model: { blocks: [] } },
-      mostRead: { summary: [] },
-    } as unknown as UseUASButtonProps['articlePageData'],
+    saveArticlePageData: {
+      canonicalUrl: 'https://bbc.com/article',
+    } as unknown as UseUASButtonProps['saveArticlePageData'],
   } as UseUASButtonProps;
 
   beforeEach(() => {
@@ -121,6 +115,7 @@ describe('useUASButton', () => {
             activityType: 'favourites',
             action: 'favourited',
             resourceType: 'article',
+            resourceTitle: 'hindi',
           }),
           isRefreshAvailable: true,
         }),
@@ -217,7 +212,7 @@ describe('useUASButton', () => {
 
       expect(mockUseUASMetadataSync).toHaveBeenCalledWith(
         expect.objectContaining({
-          articlePageData: defaultProps.articlePageData,
+          saveArticlePageData: defaultProps.saveArticlePageData,
           articleId: '123',
           service: 'hindi',
           isSaved: true,

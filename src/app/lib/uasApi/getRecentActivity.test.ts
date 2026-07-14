@@ -139,7 +139,7 @@ describe('getRecentActivity', () => {
     expect(result.total).toBe(0);
   });
 
-  it('should handle missing metaData gracefully', async () => {
+  it('should exclude items with no metaData field', async () => {
     const responseWithMissingMetaData = {
       total: 1,
       pagination: { startIndex: 0, itemsPerPage: 10 },
@@ -149,9 +149,8 @@ describe('getRecentActivity', () => {
           resourceId: 'article1',
           resourceType: 'article',
           resourceDomain: 'world-service-news',
-          created: '2026-02-15T18:30:05Z',
+          created: '2026-07-01T11:43:21Z',
           action: 'favourited',
-          metaData: {},
           '@id': 'urn:bbc:world-service-news:article:article1',
         } as UasActivityItem,
       ],
@@ -163,8 +162,49 @@ describe('getRecentActivity', () => {
 
     const result = await getRecentActivity({});
 
-    expect(result.savedArticles[0].title).toBe('Untitled');
-    expect(result.savedArticles[0].description).toBe('BBC');
+    expect(result.savedArticles).toHaveLength(0);
+  });
+
+  it('should exclude items with null metaData and keep items with valid metaData', async () => {
+    const mixedResponse = {
+      total: 2,
+      pagination: { startIndex: 0, itemsPerPage: 10 },
+      items: [
+        {
+          activityType: 'favourites',
+          resourceId: 'article-no-metadata',
+          resourceType: 'article',
+          resourceDomain: 'world-service-news',
+          created: '2026-07-01T11:43:21Z',
+          action: 'favourited',
+          '@id': 'urn:bbc:world-service-news:article:article-no-metadata',
+        } as UasActivityItem,
+        {
+          activityType: 'favourites',
+          resourceId: 'article-with-metadata',
+          resourceType: 'article',
+          resourceDomain: 'world-service-news',
+          created: '2026-06-30T12:18:08Z',
+          action: 'favourited',
+          metaData: {
+            service: 'hindi',
+            articleId: 'article-with-metadata',
+            title: 'Valid Article',
+            locatorUrl: '/hindi/articles/article-with-metadata',
+          },
+          '@id': 'urn:bbc:world-service-news:article:article-with-metadata',
+        } as UasActivityItem,
+      ],
+    };
+
+    mockUasApiRequest.mockResolvedValueOnce({
+      json: jest.fn().mockResolvedValueOnce(mixedResponse),
+    } as unknown as Response);
+
+    const result = await getRecentActivity({});
+
+    expect(result.savedArticles).toHaveLength(1);
+    expect(result.savedArticles[0].id).toBe('article-with-metadata');
   });
 
   it('should pass signal for abort control', async () => {

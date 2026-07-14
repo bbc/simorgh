@@ -85,7 +85,6 @@ export const service: DefaultServiceConfig = {
         toMainSite: 'Înapoi la site-ul principal',
         informationPage:
           'Află mai multe despre această versiune care economisește date',
-        informationPageLink: '#',
         dataSaving: 'Versiune site cu minim trafic de date',
         articleDataSavingLinkText: 'Versiune site cu minim trafic de date',
       },

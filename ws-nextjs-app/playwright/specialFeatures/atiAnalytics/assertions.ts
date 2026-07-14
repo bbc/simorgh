@@ -569,6 +569,52 @@ export const assertRadioScheduleComponentView = async ({
   );
 };
 
+export const assertMessageBannerComponentClick = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  siteId,
+  applicationType,
+  appEnv,
+}: AtiAssertionFnProps) => {
+  const pageViewPromise = waitForPageViewRequest({
+    page,
+    appEnv,
+    applicationType,
+  });
+
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+  await pageViewPromise;
+  await page
+    .locator('[data-testid="message-banner-1"]')
+    .scrollIntoViewIfNeeded();
+  await page.locator('[data-testid="message-banner-1"] a').first().waitFor();
+
+  const [request] = await Promise.all([
+    waitForComponentClickRequest({
+      page,
+      appEnv,
+      component: COMPONENTS.MESSAGE_BANNER,
+    }),
+    page
+      .locator('[data-testid="message-banner-1"]')
+      .locator('a')
+      .first()
+      .click(),
+  ]);
+
+  const params = getATIParamsFromURL(request.url());
+
+  assertViewabilityEventParams(
+    params,
+    pageIdentifier,
+    siteId,
+    applicationType,
+    'select',
+  );
+};
+
 export const assertRadioScheduleComponentClick = async ({
   page,
   path,

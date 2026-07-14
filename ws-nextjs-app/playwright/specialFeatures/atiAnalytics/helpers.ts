@@ -45,6 +45,7 @@ export const COMPONENTS = {
   MOST_READ: 'most-read',
   RADIO_SCHEDULE: 'radio-schedule',
   LITE_SITE_SUMMARY: 'lite-site-summary',
+  MESSAGE_BANNER: 'message-banner',
 };
 
 export const isPageViewRequest =
