@@ -1,7 +1,6 @@
-/* eslint-disable no-underscore-dangle */
-import { readFile } from 'node:fs/promises';
-import path from 'node:path';
+/* eslint-disable no-underscore-dangle, camelcase */
 import SERVICES_WITH_NEW_NAV from '#app/components/Navigation/config';
+import defaultToggles from '#app/lib/config/toggles';
 import { test, expect, type Page } from '@playwright/test';
 import appConfig from '../../../utilities/serviceConfigs';
 import { liveRadioPageSuites } from './suites';
@@ -39,6 +38,12 @@ type ServiceToggleConfig = {
   };
 };
 
+const togglesUrlByEnv: Record<'local' | 'test' | 'live', string> = {
+  local: 'https://config.api.bbci.co.uk/',
+  test: 'https://config.test.api.bbci.co.uk/',
+  live: 'https://config.test.api.bbci.co.uk/',
+};
+
 const twoTierNavServices: Record<string, string[] | null> = {
   local: null,
   test: ['arabic', 'tamil'],
@@ -61,21 +66,30 @@ const getLiveRadioPageData = async (page: Page) =>
 
 const getLiveRadioServiceToggles = async (
   service: string,
-): Promise<ServiceToggleConfig | null> => {
-  const togglesPath = path.join(
-    process.cwd(),
-    'cypress',
-    'fixtures',
-    'toggles',
-    `${service}.json`,
+): Promise<ServiceToggleConfig> => {
+  if (appEnvFromProcess === 'local') {
+    return defaultToggles.local as ServiceToggleConfig;
+  }
+
+  const togglesUrl = togglesUrlByEnv[appEnvFromProcess];
+  const response = await fetch(
+    `${togglesUrl}?application=simorgh&service=${service}&__amp_source_origin=${baseURL}`,
+    {
+      headers: {
+        Origin: 'https://www.bbc.com',
+      },
+    },
   );
 
-  try {
-    const toggles = await readFile(togglesPath, 'utf-8');
-    return JSON.parse(toggles) as ServiceToggleConfig;
-  } catch {
-    return null;
+  if (!response.ok) {
+    throw new Error(
+      `Failed to fetch toggles for ${service}: ${response.status}`,
+    );
   }
+
+  const data = (await response.json()) as { toggles?: ServiceToggleConfig };
+
+  return data.toggles ?? {};
 };
 
 const assertTopicTags = async (page: Page) => {
@@ -197,11 +211,6 @@ test.describe('liveRadioPage', () => {
           );
 
           const toggles = await getLiveRadioServiceToggles(testSuite.service);
-
-          test.skip(
-            !toggles,
-            `Skipped: missing Cypress toggle fixture for ${testSuite.service}`,
-          );
 
           await page.goto(`${baseURL}${testSuite.path}`, {
             waitUntil: 'domcontentloaded',
