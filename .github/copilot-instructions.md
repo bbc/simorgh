@@ -8,7 +8,6 @@ A core part of what makes Simorgh unique is that each service (e.g. `arabic`, `m
 
 ## Dev environment tips
 
-* Use `nvm use` to get the correct version of node, and then run `yarn` to install packages. Then `yarn dev` will serve your code locally.
 * Our directory aliases can be found in dirAlias.js.
 
 When working with this repo, follow these instructions:
@@ -31,8 +30,6 @@ When working with this repo, follow these instructions:
 
 ## Testing instructions
 
-* You can run our entire suite of unit and integration tests by running `yarn test`.
-* Once code is submitted for a PR it will also pass through `yarn test:e2e` on GitHub Actions which runs our cypress e2e tests, so it's useful to run that command once everything else is passing.
 * React tests should use the @testing-library/react framework. We have enhanced this library slightly in this file src/app/components/react-testing-library-with-providers.tsx, to handle context providers, so use that as an import instead of @testing-library/react directly.
 
 ## SCSS Modules migration context
