@@ -1,4 +1,5 @@
 import isLive from '#app/lib/utilities/isLive';
+import type { Services } from '#app/models/types/global';
 import getAuthHeaders from './getAuthHeaders';
 import type { ActivityType } from './uasUtility';
 import { refreshTokensIfExpired } from './tokenRefresh/tokenManager';
@@ -15,7 +16,7 @@ export interface UasApiRequestBody {
   resourceId?: string;
   action?: string;
   actionContext?: string;
-  resourceTitle?: string;
+  resourceTitle?: Services;
   metaData?: Record<string, unknown>;
   activityTime?: string;
 }
