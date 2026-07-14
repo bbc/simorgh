@@ -408,7 +408,7 @@ export const service: DefaultServiceConfig = {
     mostRead: {
       header: 'Cele mai populare',
       lastUpdated: 'Ultima actualizare:',
-      numberOfItems: 10,
+      numberOfItems: 5,
       hasMostRead: true,
     },
     radioSchedule: {
