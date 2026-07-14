@@ -69,7 +69,7 @@ const ChapterList = ({ lines, playerId }: ChapterListProps) => {
     if (!playerId) return;
     const player = window.mediaPlayers?.[playerId];
     if (!player) return;
-    player.currentTime = timecodeToSeconds(timecode);
+    player.currentTime(timecodeToSeconds(timecode));
     player.play();
   };
 

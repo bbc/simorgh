@@ -23,7 +23,6 @@ describe('PlainTextFormatter', () => {
 
   it('renders multiple paragraphs for blank-line-separated text', () => {
     const text = 'First paragraph.\n\nSecond paragraph.';
-    // p elements don't have an implicit role; check by tag name
     const { container } = render(<PlainTextFormatter text={text} />);
     const ps = container.querySelectorAll('p');
     expect(ps).toHaveLength(2);
@@ -33,10 +32,8 @@ describe('PlainTextFormatter', () => {
 
   it('renders a chapter list when all lines start with timecodes', () => {
     const { container } = render(<PlainTextFormatter text={CHAPTER_TEXT} />);
-    const list = container.querySelector('ol');
-    expect(list).toBeInTheDocument();
-    const items = container.querySelectorAll('li');
-    expect(items).toHaveLength(3);
+    expect(container.querySelector('ol')).toBeInTheDocument();
+    expect(container.querySelectorAll('li')).toHaveLength(3);
   });
 
   it('renders timestamps inside <time> elements in a chapter list', () => {
@@ -61,9 +58,9 @@ describe('PlainTextFormatter', () => {
     expect(container.querySelectorAll('button')).toHaveLength(3);
   });
 
-  it('seeks the player and calls play() when a timestamp button is clicked', () => {
-    const mockPlay = jest.fn();
-    const mockPlayer = { currentTime: 0, play: mockPlay };
+  it('seeks the player by calling currentTime() as a function when a timestamp button is clicked', () => {
+    const mockCurrentTime = jest.fn();
+    const mockPlayer = { currentTime: mockCurrentTime, play: jest.fn() };
     window.mediaPlayers = { 'test-player': mockPlayer as never };
 
     render(<PlainTextFormatter text={CHAPTER_TEXT} playerId="test-player" />);
@@ -71,15 +68,15 @@ describe('PlainTextFormatter', () => {
     const buttons = screen.getAllByRole('button');
     fireEvent.click(buttons[1]); // "00:43 Chapter one" → 43 seconds
 
-    expect(mockPlayer.currentTime).toBe(43);
-    expect(mockPlay).toHaveBeenCalledTimes(1);
+    expect(mockCurrentTime).toHaveBeenCalledWith(43);
+    expect(mockPlayer.play).toHaveBeenCalledTimes(1);
 
     delete window.mediaPlayers;
   });
 
   it('converts H:MM:SS timecodes correctly when seeking', () => {
-    const mockPlay = jest.fn();
-    const mockPlayer = { currentTime: 0, play: mockPlay };
+    const mockCurrentTime = jest.fn();
+    const mockPlayer = { currentTime: mockCurrentTime, play: jest.fn() };
     window.mediaPlayers = { 'test-player': mockPlayer as never };
 
     const { container } = render(
@@ -91,7 +88,8 @@ describe('PlainTextFormatter', () => {
 
     // 1:23:45 → 1*3600 + 23*60 + 45 = 5025s
     fireEvent.click(container.querySelector('button')!);
-    expect(mockPlayer.currentTime).toBe(5025);
+    expect(mockCurrentTime).toHaveBeenCalledWith(5025);
+    expect(mockPlayer.play).toHaveBeenCalledTimes(1);
 
     delete window.mediaPlayers;
   });
@@ -118,6 +116,60 @@ describe('PlainTextFormatter', () => {
     const text = '1:00:00 First hour\n1:23:45 Later';
     const { container } = render(<PlainTextFormatter text={text} />);
     expect(container.querySelector('ol')).toBeInTheDocument();
+  });
+
+  describe('inline timecodes (timecodes embedded within a paragraph)', () => {
+    const INLINE_TEXT =
+      'Intro description text. 00:00 Chapter one 00:34 Chapter two 06:03 Chapter three';
+
+    it('renders a chapter list when timecodes are embedded inline', () => {
+      const { container } = render(<PlainTextFormatter text={INLINE_TEXT} />);
+      expect(container.querySelector('ol')).toBeInTheDocument();
+      expect(container.querySelectorAll('li')).toHaveLength(3);
+    });
+
+    it('renders the intro text as a paragraph before the chapter list', () => {
+      const { container } = render(<PlainTextFormatter text={INLINE_TEXT} />);
+      const p = container.querySelector('p');
+      expect(p).toHaveTextContent('Intro description text.');
+    });
+
+    it('renders inline chapter timestamps in <time> elements', () => {
+      const { container } = render(<PlainTextFormatter text={INLINE_TEXT} />);
+      const times = container.querySelectorAll('time');
+      expect(times[0]).toHaveTextContent('00:00');
+      expect(times[1]).toHaveTextContent('00:34');
+      expect(times[2]).toHaveTextContent('06:03');
+    });
+
+    it('renders inline timestamps as buttons when playerId is provided', () => {
+      const { container } = render(
+        <PlainTextFormatter text={INLINE_TEXT} playerId="test-player" />,
+      );
+      expect(container.querySelectorAll('button')).toHaveLength(3);
+    });
+
+    it('seeks the player on inline timestamp button click', () => {
+      const mockCurrentTime = jest.fn();
+      const mockPlayer = { currentTime: mockCurrentTime, play: jest.fn() };
+      window.mediaPlayers = { 'test-player': mockPlayer as never };
+
+      const { container } = render(
+        <PlainTextFormatter text={INLINE_TEXT} playerId="test-player" />,
+      );
+
+      fireEvent.click(container.querySelectorAll('button')[1]); // 00:34 → 34s
+      expect(mockCurrentTime).toHaveBeenCalledWith(34);
+
+      delete window.mediaPlayers;
+    });
+
+    it('does not parse as inline timecodes when there is only one timecode', () => {
+      const text = 'This took 1:30 to complete.';
+      const { container } = render(<PlainTextFormatter text={text} />);
+      expect(container.querySelector('ol')).toBeNull();
+      expect(container.querySelector('p')).toBeInTheDocument();
+    });
   });
 
   it('auto-links raw URLs in paragraph text', () => {
