@@ -295,8 +295,8 @@ export const service: DefaultServiceConfig = {
         timeToBeConfirmed: 'ਸਮੇਂ ਦੀ ਪੁਸ਼ਟੀ ਹੋਣੀ ਬਾਕੀ',
         teamToBeConfirmed: 'ਟੀਮ ਦੀ ਪੁਸ਼ਟੀ ਹੋਣੀ ਬਾਕੀ',
         afterFullTime: 'ਪੂਰੇ ਸਮੇਂ ਤੋਂ ਬਾਅਦ',
-        atFullTime: 'ਪੂਰੇ ਸਮੇਂ \'ਤੇ',
-        onPenalties: 'ਪੈਨਲਟੀ \'ਤੇ',
+        atFullTime: "ਪੂਰੇ ਸਮੇਂ 'ਤੇ",
+        onPenalties: "ਪੈਨਲਟੀ 'ਤੇ",
         onAggregate: 'ਕੁੱਲ ਵਿੱਚ',
         win: 'ਜਿੱਤਦਾ ਹੈ',
         winOnPenalties: {
