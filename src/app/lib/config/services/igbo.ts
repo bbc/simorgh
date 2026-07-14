@@ -88,6 +88,10 @@ export const service: DefaultServiceConfig = {
       continueReading: "Gaa n'ihu gụọ",
       currentPage: 'Peegi ị nọ ugbua',
       skipLinkText: 'Wụga n’ọdịnaya',
+      skipContent: {
+        text: 'Gafee %title% ma gaa n’ihu',
+        endTextVisuallyHidden: 'Njebe %title%',
+      },
       relatedContent: "Ihe ndị ọzọ n'akụkọ a",
       relatedTopics: 'Isiokwu ndị emetụtara',
       moreOnThis: '',

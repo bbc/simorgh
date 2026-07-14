@@ -89,6 +89,10 @@ export const service: DefaultServiceConfig = {
       },
       currentPage: 'Shafin da ake ciki',
       skipLinkText: 'Tsallaka zuwa abubuwan da ke ciki',
+      skipContent: {
+        text: 'Tsallake %title% ka ci gaba',
+        endTextVisuallyHidden: 'Karshen %title%',
+      },
       relatedContent: 'Karin bayani',
       relatedTopics: 'Labarai masu alaka',
       moreOnThis: '',

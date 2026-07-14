@@ -90,6 +90,10 @@ export const service: DefaultServiceConfig = {
       },
       currentPage: 'Halaman saat ini',
       skipLinkText: 'Langsung ke konten',
+      skipContent: {
+        text: 'Lewati %title% dan lanjutkan',
+        endTextVisuallyHidden: 'Akhir %title%',
+      },
       relatedContent: 'Berita terkait',
       relatedTopics: 'Topik terkait',
       moreOnThis: '',

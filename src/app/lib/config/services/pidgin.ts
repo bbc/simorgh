@@ -71,6 +71,10 @@ export const service: DefaultServiceConfig = {
       continueReading: 'Kontinu to dey read',
       currentPage: 'Page where you dey',
       skipLinkText: 'Waka go wetin de inside',
+      skipContent: {
+        text: 'Skip %title% and continue',
+        endTextVisuallyHidden: 'End of %title%',
+      },
       relatedContent: 'Another thing we de for inside dis tori',
       relatedTopics: 'Topics Wey Dem Resemble',
       moreOnThis: '',

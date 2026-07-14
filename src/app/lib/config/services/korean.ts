@@ -69,6 +69,10 @@ export const service: DefaultServiceConfig = {
       },
       currentPage: '현재 페이지',
       skipLinkText: '내용 보기',
+      skipContent: {
+        text: '%title% 건너뛰고 계속하기',
+        endTextVisuallyHidden: '%title% 끝',
+      },
       relatedContent: '관련 기사 더 보기',
       relatedTopics: '관련 토픽',
       moreOnThis: '',

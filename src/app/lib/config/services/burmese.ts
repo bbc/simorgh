@@ -84,6 +84,10 @@ export const service: DefaultServiceConfig = {
       },
       currentPage: 'လက်ရှိကြည့်နေသော စာမျက်နှာ',
       skipLinkText: 'အကြောင်းအရာများဆီ ကျော်သွားရန်',
+      skipContent: {
+        text: '%title% ကို ကျော်ပြီး ဆက်လုပ်ပါ',
+        endTextVisuallyHidden: '%title% အဆုံး',
+      },
       relatedContent: 'ဒီသတင်းနဲ့ ပတ်သက်သမျှ',
       relatedTopics: 'ဆက်စပ်အကြောင်းအရာများ',
       moreOnThis: '',

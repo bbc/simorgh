@@ -89,6 +89,10 @@ export const service: DefaultServiceConfig = {
       continueReading: 'தொடர்ந்து படியுங்கள்',
       currentPage: 'தற்போதுள்ள பக்கம்',
       skipLinkText: 'உள்ளடக்கத்துக்குத் தாண்டிச் செல்க',
+      skipContent: {
+        text: '%title% தவிர்த்து தொடரவும்',
+        endTextVisuallyHidden: '%title% முடிவு',
+      },
       relatedContent: 'தொடர்புடைய உள்ளடக்கம்',
       relatedTopics: 'தொடர்புடைய தலைப்புகள்',
       moreOnThis: '',

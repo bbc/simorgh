@@ -114,6 +114,10 @@ export const service: DefaultServiceConfig = {
       continueReading: 'Continuar leyendo',
       currentPage: 'Página actual',
       skipLinkText: 'Ir al contenido',
+      skipContent: {
+        text: 'Omitir %title% y continuar',
+        endTextVisuallyHidden: 'Fin de %title%',
+      },
       relatedContent: 'Contenido relacionado',
       relatedTopics: 'Temas relacionados',
       moreOnThis: '',

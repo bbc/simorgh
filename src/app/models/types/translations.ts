@@ -14,6 +14,10 @@ export interface Translations {
   home: string;
   currentPage: string;
   skipLinkText: string;
+  skipContent?: {
+    text: string;
+    endTextVisuallyHidden: string;
+  };
   relatedContent: string;
   topicsPath?: string;
   relatedTopics?: string;

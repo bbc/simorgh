@@ -47,6 +47,10 @@ export const service: DefaultServiceConfig = {
       home: 'Home',
       currentPage: 'Current page',
       skipLinkText: 'Skip to content',
+      skipContent: {
+        text: 'Skip %title% and continue',
+        endTextVisuallyHidden: 'End of %title%',
+      },
       relatedContent: 'Related content',
       moreOnThis: '',
       navMenuText: 'Sections',

@@ -82,6 +82,10 @@ const defaultCyrillicConfig = {
     },
     currentPage: 'Жорий саҳифа',
     skipLinkText: 'Саҳифага ўтиш',
+    skipContent: {
+      text: '%title% ни ўтказиб, давом этинг',
+      endTextVisuallyHidden: '%title% охири',
+    },
     relatedContent: 'Мавзуга алоқадор',
     relatedTopics: 'Алоқадор мавзулар',
     moreOnThis: '',
@@ -504,6 +508,10 @@ export const service: UzbekConfig = {
       },
       currentPage: 'Joriy sahifa',
       skipLinkText: 'Sahifaga o‘tish',
+      skipContent: {
+        text: '%title% ni o‘tkazib, davom eting',
+        endTextVisuallyHidden: '%title% oxiri',
+      },
       relatedContent: 'Mavzuga aloqador',
       relatedTopics: 'Aloqador mavzular',
       navMenuText: 'Bo‘limlar',

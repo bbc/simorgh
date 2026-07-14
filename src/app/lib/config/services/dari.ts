@@ -69,6 +69,10 @@ export const service: DefaultServiceConfig = {
       },
       currentPage: 'صفحه فعلی',
       skipLinkText: 'مشاهده محتوا',
+      skipContent: {
+        text: 'از %title% بگذر و ادامه بده',
+        endTextVisuallyHidden: 'پایان %title%',
+      },
       relatedContent: 'مطالب مرتبط',
       relatedTopics: 'موضوعات مرتبط',
       moreOnThis: '',
