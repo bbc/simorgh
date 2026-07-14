@@ -43,6 +43,7 @@ export const COMPONENTS = {
   SCROLLABLE_NAVIGATION: 'scrollable-navigation',
   DROPDOWN_NAVIGATION: 'dropdown-navigation',
   MOST_READ: 'most-read',
+  RADIO_SCHEDULE: 'radio-schedule',
   LITE_SITE_SUMMARY: 'lite-site-summary',
 };
 

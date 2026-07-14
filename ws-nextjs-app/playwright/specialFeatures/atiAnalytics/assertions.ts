@@ -535,3 +535,68 @@ export const assertLiteSiteSummaryComponentToMainSiteClick = async ({
     'select',
   );
 };
+
+export const assertRadioScheduleComponentView = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  siteId,
+  applicationType,
+  appEnv,
+}: AtiAssertionFnProps) => {
+  const viewPromise = waitForComponentViewRequest({
+    page,
+    appEnv,
+    component: COMPONENTS.RADIO_SCHEDULE,
+  });
+
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+
+  // Double scroll intentional to reliably trigger viewability
+  await page.locator('[data-testid="radio-schedule"]').scrollIntoViewIfNeeded();
+  await page.locator('[data-testid="radio-schedule"]').scrollIntoViewIfNeeded();
+
+  const request = await viewPromise;
+  const params = getATIParamsFromURL(request.url());
+
+  assertViewabilityEventParams(
+    params,
+    pageIdentifier,
+    siteId,
+    applicationType,
+    'view',
+  );
+};
+
+export const assertRadioScheduleComponentClick = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  siteId,
+  applicationType,
+  appEnv,
+}: AtiAssertionFnProps) => {
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+  await page.locator('[data-testid="radio-schedule"]').scrollIntoViewIfNeeded();
+
+  const [request] = await Promise.all([
+    waitForComponentClickRequest({
+      page,
+      appEnv,
+      component: COMPONENTS.RADIO_SCHEDULE,
+    }),
+    page.locator('[data-e2e="onDemand"]').locator('a').first().click(),
+  ]);
+
+  const params = getATIParamsFromURL(request.url());
+
+  assertViewabilityEventParams(
+    params,
+    pageIdentifier,
+    siteId,
+    applicationType,
+    'select',
+  );
+};
