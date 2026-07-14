@@ -15,7 +15,7 @@ import readme from './README.md';
 const BackGround = styled.div`
   width: 100%;
   height: 100%;
-  background-color: #f6f6f6;
+  background-color: #f8f8f8;
   padding: 2rem;
 `;
 
