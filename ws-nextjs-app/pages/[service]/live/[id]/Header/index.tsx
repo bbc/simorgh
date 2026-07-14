@@ -5,6 +5,7 @@ import LiveHeaderMedia from '#app/components/LiveHeaderMedia';
 import { MediaCollection } from '#app/components/MediaLoader/types';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import { RequestContext } from '#app/contexts/RequestContext';
 import Image from '#app/components/Image';
 import buildIChefURL from '#app/lib/utilities/ichefURL';
 import { createSrcsets } from '#app/lib/utilities/srcSet';
@@ -33,8 +34,10 @@ const Header = ({
   showSportData?: boolean;
 }) => {
   const [isMediaOpen, setLiveMediaOpen] = useState(false);
-  const isHeaderImage = !!imageUrl && !!imageUrlTemplate && !!imageWidth;
-  const isWithImageLayout = isHeaderImage || !!mediaCollections;
+  const { isLite } = use(RequestContext);
+  const hasHeaderImage = !!imageUrl && !!imageUrlTemplate && !!imageWidth;
+  const shouldRenderHeaderImage = hasHeaderImage && !isLite;
+  const isWithImageLayout = shouldRenderHeaderImage || !!mediaCollections;
   const {
     translations: { sport: { matchSummary = 'Match Summary' } = {} },
   } = use(ServiceContext);
@@ -87,6 +90,7 @@ const Header = ({
             {showLiveLabel ? (
               <LiveLabelHeader
                 isHeaderImage={isWithImageLayout}
+                isLite={isLite}
                 showSportData={showSportData}
               >
                 <VisuallyHiddenText>{title}</VisuallyHiddenText>
@@ -114,7 +118,7 @@ const Header = ({
           !isMediaOpen && isWithImageLayout && { gap: '2rem' },
         ]}
       >
-        {isHeaderImage ? (
+        {shouldRenderHeaderImage ? (
           <div css={[isMediaOpen ? styles.hideImage : styles.headerImage]}>
             <Image
               alt=""
@@ -156,6 +160,7 @@ const Header = ({
               {showLiveLabel ? (
                 <LiveLabelHeader
                   isHeaderImage={isWithImageLayout}
+                  isLite={isLite}
                   showSportData={false}
                 >
                   {Title}
