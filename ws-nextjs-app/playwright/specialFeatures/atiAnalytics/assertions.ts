@@ -569,6 +569,43 @@ export const assertRadioScheduleComponentView = async ({
   );
 };
 
+export const assertMessageBannerComponentView = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  siteId,
+  applicationType,
+  appEnv,
+}: AtiAssertionFnProps) => {
+  const viewPromise = waitForComponentViewRequest({
+    page,
+    appEnv,
+    component: COMPONENTS.MESSAGE_BANNER,
+  });
+
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+
+  // Double scroll intentional to reliably trigger viewability
+  await page
+    .locator('[data-testid="message-banner-1"]')
+    .scrollIntoViewIfNeeded();
+  await page
+    .locator('[data-testid="message-banner-1"]')
+    .scrollIntoViewIfNeeded();
+
+  const request = await viewPromise;
+  const params = getATIParamsFromURL(request.url());
+
+  assertViewabilityEventParams(
+    params,
+    pageIdentifier,
+    siteId,
+    applicationType,
+    'view',
+  );
+};
+
 export const assertMessageBannerComponentClick = async ({
   page,
   path,
