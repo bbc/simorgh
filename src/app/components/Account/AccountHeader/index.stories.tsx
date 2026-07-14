@@ -26,3 +26,10 @@ export const SignedIn = () => <Container />;
 SignedIn.globals = {
   idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: true },
 };
+
+export const SignedOutNewNav = () => <AccountHeader variant="default" />;
+export const SignedInNewNav = () => <AccountHeader variant="default" />;
+
+SignedInNewNav.globals = {
+  idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: true },
+};

@@ -1,6 +1,8 @@
 import { Theme } from '@emotion/react';
 import pixelsToRem from '#app/utilities/pixelsToRem';
 
+const NARROW_HIDE_LABEL_MAX_WIDTH = 240;
+
 const styles = {
   wrapper: {
     paddingBlock: '0.5rem',
@@ -27,6 +29,48 @@ const styles = {
     fill: 'currentColor',
     flexShrink: 0,
   },
+
+  wrapperDefault: {
+    display: 'flex',
+    alignItems: 'center',
+    marginInlineStart: 'auto',
+  },
+  linkDefault: ({ palette }: Theme) => ({
+    display: 'flex',
+    alignItems: 'center',
+    gap: `${pixelsToRem(8)}rem`,
+    minHeight: `${pixelsToRem(44)}rem`,
+    paddingInline: `${pixelsToRem(8)}rem`,
+    color: palette.BLACK,
+    fontSize: `${pixelsToRem(16)}rem`,
+    textDecoration: 'none',
+    border: `${pixelsToRem(2)}rem solid transparent`,
+
+    '&:hover': {
+      boxShadow: 'none',
+      textDecoration: 'none',
+      borderBottomColor: palette.SERVICE_NEUTRAL_CORE,
+    },
+
+    '&:focus, &:focus-visible': {
+      outline: 'none',
+      boxShadow: 'none',
+      borderColor: palette.BLACK,
+    },
+
+    [`@media (max-width: ${pixelsToRem(NARROW_HIDE_LABEL_MAX_WIDTH)}rem)`]: {
+      span: {
+        display: 'none',
+      },
+    },
+  }),
+
+  iconDefault: ({ palette }: Theme) => ({
+    fill: palette.SERVICE_NEUTRAL_CORE,
+    flexShrink: 0,
+    width: `${pixelsToRem(32)}rem`,
+    height: `${pixelsToRem(32)}rem`,
+  }),
 };
 
 export default styles;

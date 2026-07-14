@@ -27,6 +27,44 @@ export default {
         marginTop: `${pixelsToRem(5)}rem`,
       },
     }),
+  bannerAccount: ({ palette }: Theme) =>
+    css({
+      marginInlineStart: 'auto',
+      display: 'flex',
+      alignItems: 'center',
+
+      a: {
+        marginTop: 0,
+        color: palette.BLACK,
+        fontSize: `${pixelsToRem(16)}rem`,
+        border: `${pixelsToRem(2)}rem solid transparent`,
+        textDecoration: 'none',
+
+        svg: {
+          fill: palette.SERVICE_NEUTRAL_CORE,
+          width: `${pixelsToRem(32)}rem`,
+          height: `${pixelsToRem(32)}rem`,
+        },
+
+        '&:hover': {
+          boxShadow: 'none',
+          textDecoration: 'none',
+          borderBottomColor: palette.SERVICE_NEUTRAL_CORE,
+        },
+
+        '&:focus, &:focus-visible': {
+          outline: 'none',
+          boxShadow: 'none',
+          borderColor: palette.BLACK,
+        },
+
+        [`@media (max-width: ${pixelsToRem(240)}rem)`]: {
+          span: {
+            display: 'none',
+          },
+        },
+      },
+    }),
   headerBrand: ({ mq, spacings }: Theme) =>
     css({
       minHeight: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
@@ -50,9 +88,9 @@ export default {
         svg: {
           height: '1.5rem',
 
-          [mq.GROUP_3_MIN_WIDTH]: {
-            height: '1.875rem',
-          },
+          // [mq.GROUP_3_MIN_WIDTH]: {
+          //   height: '1.875rem',
+          // },
         },
         [mq.GROUP_1_MIN_WIDTH]: {
           flex: '0 1 auto',

@@ -3,6 +3,8 @@ import {
   screen,
 } from '../../../components/react-testing-library-with-providers';
 import { suppressPropWarnings } from '../../psammead/psammead-test-helpers/src';
+import hindiLogo from '../../../components/ThemeProvider/chameleonLogos/hindi';
+import hindiNewNavLogo from '../../../components/ThemeProvider/chameleonLogos/hindiNewNav';
 import BrandContainer, { getBrandPath } from '.';
 
 const BrandContainerWithContext = (props = {}) => {
@@ -136,5 +138,23 @@ describe(`BrandContainer`, () => {
         expect(brandLink.getAttribute('href')).toEqual(expectedHref);
       },
     );
+  });
+
+  describe('new navigation logo', () => {
+    const renderLogoGroup = group => {
+      const { container } = render(<svg>{group}</svg>);
+      return container.querySelector('svg').innerHTML;
+    };
+
+    it('renders the new-nav chameleon logo for a new-nav service (hindi)', () => {
+      const { container } = render(BrandContainerWithContext(), {
+        service: 'hindi',
+      });
+
+      const renderedLogo = container.querySelector('svg')?.innerHTML;
+
+      expect(renderedLogo).toEqual(renderLogoGroup(hindiNewNavLogo.group));
+      expect(renderedLogo).not.toEqual(renderLogoGroup(hindiLogo.group));
+    });
   });
 });
