@@ -76,6 +76,10 @@ export const service: DefaultServiceConfig = {
       },
       currentPage: 'Strona bieżąca',
       skipLinkText: 'Przejdź do treści',
+      skipContent: {
+        text: 'Pomiń %title% i kontynuuj',
+        endTextVisuallyHidden: 'Koniec %title%',
+      },
       relatedContent: 'Powiązane treści',
       relatedTopics: 'Powiązane tematy',
       moreOnThis: '',

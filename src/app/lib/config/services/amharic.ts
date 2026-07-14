@@ -83,6 +83,10 @@ export const service: DefaultServiceConfig = {
       },
       currentPage: 'መነሻ ገፅ',
       skipLinkText: 'ወደ ዋናው ይዘት ይለፉ',
+      skipContent: {
+        text: '%title% ይዝለሉ ቀጥሉ',
+        endTextVisuallyHidden: '%title% መጨረሻ',
+      },
       relatedContent: 'በዚህ ዘገባ ላይ ተጨማሪ መረጃ',
       relatedTopics: 'ተያያዥ ርዕሶች',
       moreOnThis: '',

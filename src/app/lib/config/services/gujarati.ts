@@ -88,6 +88,10 @@ export const service: DefaultServiceConfig = {
       continueReading: 'આગળ વાંચો',
       currentPage: 'વર્તમાન પેજ',
       skipLinkText: 'કન્ટેન્ટ પર જાવ',
+      skipContent: {
+        text: '%title% છોડો અને આગળ વધો',
+        endTextVisuallyHidden: '%title%નો અંત',
+      },
       relatedContent: 'સંબંધિત સમાચાર',
       relatedTopics: 'સંબંધિત મુદ્દા',
       moreOnThis: '',

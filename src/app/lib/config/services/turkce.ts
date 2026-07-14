@@ -73,6 +73,10 @@ export const service: DefaultServiceConfig = {
       },
       currentPage: 'Bulunduğunuz sayfa',
       skipLinkText: 'İçeriğe götür',
+      skipContent: {
+        text: '%title% atla ve devam et',
+        endTextVisuallyHidden: '%title% sonu',
+      },
       relatedContent: 'İlgili haberler',
       relatedTopics: 'İlgili Konular',
       moreOnThis: '',

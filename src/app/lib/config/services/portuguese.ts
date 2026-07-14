@@ -113,6 +113,10 @@ export const service: DefaultServiceConfig = {
       },
       currentPage: 'Página atual',
       skipLinkText: 'Vá para o conteúdo',
+      skipContent: {
+        text: 'Pular %title% e continuar',
+        endTextVisuallyHidden: 'Fim de %title%',
+      },
       relatedContent: 'Histórias relacionadas',
       relatedTopics: 'Tópicos relacionados',
       moreOnThis: '',

@@ -150,6 +150,10 @@ export const service: SerbianConfig = {
       },
       currentPage: 'Otvorena stranica',
       skipLinkText: 'Pređite na sadržaj',
+      skipContent: {
+        text: 'Preskoči %title% i nastavi',
+        endTextVisuallyHidden: 'Kraj %title%',
+      },
       relatedContent: 'Povezano',
       relatedTopics: 'Povezane teme',
       moreOnThis: '',
@@ -623,6 +627,10 @@ export const service: SerbianConfig = {
       },
       currentPage: 'Отворена страница',
       skipLinkText: 'Пређите на садржај',
+      skipContent: {
+        text: 'Прескочи %title% и настави',
+        endTextVisuallyHidden: 'Крај %title%',
+      },
       relatedContent: 'Повезано',
       relatedTopics: 'Повезане теме',
       navMenuText: 'Одељци',

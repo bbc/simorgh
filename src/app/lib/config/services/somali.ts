@@ -90,6 +90,10 @@ export const service: DefaultServiceConfig = {
       continueReading: 'Sii Akhri',
       currentPage: 'Bogga hadda',
       skipLinkText: 'U gudub qaybta macluumaadka',
+      skipContent: {
+        text: 'Ka bood %title% oo sii wad',
+        endTextVisuallyHidden: 'Dhammaadka %title%',
+      },
       relatedContent: 'Warar kale oo dheeraad ah oo la xiriira qodobkan',
       relatedTopics: 'Mowduucyada la xiriira',
       moreOnThis: '',

@@ -84,6 +84,10 @@ export const service: DefaultServiceConfig = {
       },
       currentPage: 'දැන් සිටින පිටුව',
       skipLinkText: 'අන්තර්ගතයට පිවිසෙන්න',
+      skipContent: {
+        text: '%title% මඟහරින්න සහ ادامه කරන්න',
+        endTextVisuallyHidden: '%title% අවසානය',
+      },
       relatedContent: 'මේ පුවතට සම්බන්ධ තවත් විස්තර',
       relatedTopics: 'සබැඳි විෂයයන්',
       moreOnThis: '',

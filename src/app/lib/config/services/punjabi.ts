@@ -70,6 +70,10 @@ export const service: DefaultServiceConfig = {
       continueReading: 'ਅੱਗੇ ਪੜ੍ਹੋ',
       currentPage: 'ਮੌਜੂਦਾ ਪੇਜ',
       skipLinkText: `ਸਮੱਗਰੀ 'ਤੇ ਜਾਓ`,
+      skipContent: {
+        text: '%title% ਛੱਡੋ ਅਤੇ ਜਾਰੀ ਰੱਖੋ',
+        endTextVisuallyHidden: '%title% ਦਾ ਅੰਤ',
+      },
       relatedContent: 'ਇਸ ਖ਼ਬਰ ਬਾਰੇ ਹੋਰ',
       relatedTopics: 'ਸਬੰਧਿਤ ਵਿਸ਼ੇ',
       moreOnThis: '',
