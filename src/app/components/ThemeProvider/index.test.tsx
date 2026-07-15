@@ -10,6 +10,10 @@ import ThemeProvider from '.';
 
 const originalSimorghAppEnv = process.env.SIMORGH_APP_ENV;
 
+const newNavBrandLogos: Partial<Record<string, string>> = {
+  hindi: 'hindiNewNav',
+};
+
 describe('ThemeProvider', () => {
   it('should provide the palette', async () => {
     await act(async () => {
@@ -251,7 +255,10 @@ describe('ThemeProvider', () => {
 
       const themeBrandSVG = document.body.querySelector('svg')?.innerHTML;
 
-      const { default: svg } = await import(`./chameleonLogos/${service}`);
+      const brandLogoModule = newNavBrandLogos[service] || service;
+      const { default: svg } = await import(
+        `./chameleonLogos/${brandLogoModule}`
+      );
 
       const { getByTestId } = render(
         <svg data-testid={service}>{svg.group}</svg>,
