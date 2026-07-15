@@ -5,16 +5,16 @@ import { WesternArabic } from '#app/legacy/psammead/psammead-locales/src/numeral
 import { HeadToHeadV2Data, Team } from '../types';
 
 const DEFAULT_TRANSLATIONS_MAP = {
-  VERSUS: 'versus',
-  KICK_OFF: 'kick off',
-  ET: 'Extra time',
-  AFTER_ET: 'After extra time',
-  AFTER_FT: 'After full time',
-  AT_FT: 'at Full time',
-  TBC: 'Team to be confirmed',
-  WIN: 'win',
-  ON_PENALTIES: 'on penalties',
-  ON_AGGREGATE: 'on aggregate',
+  versus: 'versus',
+  kickOff: 'kick off',
+  et: 'Extra time',
+  afterExtraTime: 'After extra time',
+  afterFullTime: 'After full time',
+  atFullTime: 'at Full time',
+  teamToBeConfirmed: 'Team to be confirmed',
+  win: 'win',
+  onPenalties: 'on penalties',
+  onAggregate: 'on aggregate',
 };
 
 const runningScoreFields = new Set([

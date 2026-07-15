@@ -850,5 +850,20 @@ describe('TranslateSportData', () => {
         'Bologna 2 , Aston Villa 0 à la fin du temps réglementaire',
       );
     });
+
+    it('should fall back to DEFAULT_TRANSLATIONS_MAP when a sport translation key is absent', () => {
+      const dataWithSummary = {
+        ...fixtureDataDefault,
+        accessibleEventSummary: 'result {atFullTime}',
+      } as unknown as HeadToHeadV2Data;
+      const result = translateSportData(
+        dataWithSummary,
+        translationsWithMissingTranslations,
+        'afrique',
+      );
+      expect(result.accessibleEventSummary).toStrictEqual(
+        'result at Full time',
+      );
+    });
   });
 });
