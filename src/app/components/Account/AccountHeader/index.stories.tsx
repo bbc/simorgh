@@ -1,5 +1,6 @@
 import AccountHeader from '.';
 import BrandContainer from '#app/legacy/containers/Brand';
+import NewLogoBanner from '#app/legacy/containers/Header/NewLogoBanner';
 import metadata from './metadata.json';
 import readme from './README.md';
 import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
@@ -27,8 +28,8 @@ SignedIn.globals = {
   idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: true },
 };
 
-export const SignedOutNewNav = () => <AccountHeader variant="default" />;
-export const SignedInNewNav = () => <AccountHeader variant="default" />;
+export const SignedOutNewNav = () => <NewLogoBanner />;
+export const SignedInNewNav = () => <NewLogoBanner />;
 
 SignedInNewNav.globals = {
   idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: true },

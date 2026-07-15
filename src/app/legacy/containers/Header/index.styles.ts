@@ -27,7 +27,7 @@ export default {
         marginTop: `${pixelsToRem(5)}rem`,
       },
     }),
-  bannerAccount: ({ palette }: Theme) =>
+  bannerAccount: ({ palette, mq }: Theme) =>
     css({
       marginInlineStart: 'auto',
       display: 'flex',
@@ -58,7 +58,7 @@ export default {
           borderColor: palette.BLACK,
         },
 
-        [`@media (max-width: ${pixelsToRem(240)}rem)`]: {
+        [mq.GROUP_0_MAX_WIDTH]: {
           span: {
             display: 'none',
           },
@@ -88,9 +88,9 @@ export default {
         svg: {
           height: '1.5rem',
 
-          // [mq.GROUP_3_MIN_WIDTH]: {
-          //   height: '1.875rem',
-          // },
+          [mq.GROUP_3_MIN_WIDTH]: {
+            height: '1.875rem',
+          },
         },
         [mq.GROUP_1_MIN_WIDTH]: {
           flex: '0 1 auto',

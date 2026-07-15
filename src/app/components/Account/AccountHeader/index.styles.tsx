@@ -1,8 +1,6 @@
 import { Theme } from '@emotion/react';
 import pixelsToRem from '#app/utilities/pixelsToRem';
 
-const NARROW_HIDE_LABEL_MAX_WIDTH = 240;
-
 const styles = {
   wrapper: {
     paddingBlock: '0.5rem',
@@ -35,7 +33,7 @@ const styles = {
     alignItems: 'center',
     marginInlineStart: 'auto',
   },
-  linkDefault: ({ palette }: Theme) => ({
+  linkDefault: ({ palette, mq }: Theme) => ({
     display: 'flex',
     alignItems: 'center',
     gap: `${pixelsToRem(8)}rem`,
@@ -58,7 +56,7 @@ const styles = {
       borderColor: palette.BLACK,
     },
 
-    [`@media (max-width: ${pixelsToRem(NARROW_HIDE_LABEL_MAX_WIDTH)}rem)`]: {
+    [mq.GROUP_0_MAX_WIDTH]: {
       span: {
         display: 'none',
       },
