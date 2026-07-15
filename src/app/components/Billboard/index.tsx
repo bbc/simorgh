@@ -3,6 +3,11 @@ import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { Summary } from '#app/models/types/curationData';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
+import Image from '#app/components/Image';
+import buildIChefURL from '#app/lib/utilities/ichefURL';
+import { createSrcsets } from '#app/lib/utilities/srcSet';
+import getOriginCode from '#app/lib/utilities/imageSrcHelpers/originCode';
+import getLocator from '#app/lib/utilities/imageSrcHelpers/locator';
 import Heading from '../Heading';
 import MaskedImage from '../MaskedImage';
 import styles from './index.styles';
@@ -12,6 +17,8 @@ import LiveText from '../LiveText';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import BillboardCurationGrid from './BillboardCurationGrid';
 
+type BillboardVariant = 'maximum' | 'high';
+
 interface BillboardProps {
   heading: string;
   description: string;
@@ -19,11 +26,16 @@ interface BillboardProps {
   image: string;
   altText: string;
   id?: string;
+  variant?: BillboardVariant;
   eventTrackingData?: EventTrackingData;
   showLiveLabel?: boolean;
   summaries?: Summary[];
 }
 
+const IMAGE_WIDTH = 660;
+const DEFAULT_IMAGE_RES = 480;
+
+// this is the component - it is very similar
 export default ({
   heading,
   description,
@@ -31,6 +43,7 @@ export default ({
   image,
   altText,
   id = 'billboard',
+  variant = 'maximum',
   showLiveLabel,
   eventTrackingData = { componentName: 'billboard' },
   summaries = [],
@@ -39,6 +52,7 @@ export default ({
   const showMoreOnThisTitle = translations.moreOnThis;
   const hasPromoItems = summaries.length > 1;
   const isSingleImageLayout = !hasPromoItems;
+  const isHighVariant = variant === 'high';
 
   const eventTrackingDataWithOptimizelyEvents = {
     ...eventTrackingData,
@@ -49,25 +63,77 @@ export default ({
     eventTrackingDataWithOptimizelyEvents,
   );
 
+  const renderImage = () => {
+    if (!isHighVariant) {
+      return (
+        <MaskedImage
+          imageUrl={image.replace('{width}', '240')}
+          imageUrlTemplate={image}
+          altText={altText}
+          imageWidth={IMAGE_WIDTH}
+          showPlaceholder={false}
+          showVignette={hasPromoItems}
+          singleImageLayout={isSingleImageLayout}
+        />
+      );
+    }
+
+    const url = image.split('{width}')[1];
+    const originCode = getOriginCode(url);
+    const locator = getLocator(url);
+    const { primarySrcset, primaryMimeType, fallbackSrcset, fallbackMimeType } =
+      createSrcsets({
+        originCode,
+        locator,
+        originalImageWidth: IMAGE_WIDTH,
+      });
+    const srcWebp = buildIChefURL({
+      originCode,
+      locator,
+      resolution: DEFAULT_IMAGE_RES,
+    });
+
+    return (
+      <div
+        css={[
+          styles.plainImage,
+          isSingleImageLayout && styles.plainImageSingle,
+        ]}
+      >
+        <Image
+          alt={altText}
+          src={srcWebp}
+          srcSet={primarySrcset || undefined}
+          fallbackSrcSet={fallbackSrcset || undefined}
+          mediaType={primaryMimeType || undefined}
+          fallbackMediaType={fallbackMimeType || undefined}
+          sizes="(min-width: 1008px) 660px, 100vw"
+          fetchPriority="high"
+          preload
+          placeholder={false}
+        />
+      </div>
+    );
+  };
+
   return (
     <section role="region" aria-labelledby={id} data-testid={id}>
       <div css={styles.headerContainer} {...viewTracker}>
-        <div css={[styles.backgroundContainer, styles.backgroundRedGradient]} />
+        <div
+          css={[
+            styles.backgroundContainer,
+            isHighVariant
+              ? styles.backgroundBlackTreatment
+              : styles.backgroundRedGradient,
+          ]}
+        />
         <div
           css={[
             styles.contentContainer,
             !hasPromoItems && styles.contentContainerNoPromos,
           ]}
         >
-          <MaskedImage
-            imageUrl={image.replace('{width}', '240')}
-            imageUrlTemplate={image}
-            altText={altText}
-            imageWidth={660}
-            showPlaceholder={false}
-            showVignette={hasPromoItems}
-            singleImageLayout={isSingleImageLayout}
-          />
+          {renderImage()}
           <div css={styles.textContainer}>
             <Heading level={2} size="paragon" css={styles.heading} id={id}>
               <a href={link} css={styles.link} {...clickTrackerHandler}>

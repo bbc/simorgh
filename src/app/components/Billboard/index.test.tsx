@@ -271,6 +271,49 @@ describe('Billboard', () => {
     ).not.toBeInTheDocument();
   });
 
+  describe('high variant', () => {
+    it('renders a plain image without the masked image treatment', () => {
+      const maskedImageSpy = jest.spyOn(MaskedImage, 'default');
+
+      render(
+        <Billboard
+          heading={title}
+          description={description}
+          link={link}
+          image={imageUrl}
+          altText={imageAlt}
+          variant="high"
+        />,
+      );
+
+      expect(maskedImageSpy).not.toHaveBeenCalled();
+      expect(screen.getByAltText(imageAlt)).toBeInTheDocument();
+
+      maskedImageSpy.mockRestore();
+    });
+
+    it('renders the curation grid when promo items are present', () => {
+      const maskedImageSpy = jest.spyOn(MaskedImage, 'default');
+
+      render(
+        <Billboard
+          heading={title}
+          description={description ?? ''}
+          link={link}
+          image={imageUrl}
+          altText={imageAlt}
+          variant="high"
+          summaries={pidginLiveBillboard.summaries}
+        />,
+      );
+
+      expect(maskedImageSpy).not.toHaveBeenCalled();
+      expect(screen.getByTestId('billboard-curation-grid')).toBeInTheDocument();
+
+      maskedImageSpy.mockRestore();
+    });
+  });
+
   describe('Event Tracking', () => {
     const eventTrackingData = { componentName: 'billboard' };
 

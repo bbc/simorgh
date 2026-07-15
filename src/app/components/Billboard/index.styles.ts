@@ -53,6 +53,31 @@ export default {
           'linear-gradient(to bottom, rgba(130, 0, 0, 1) 10%, rgba(40, 0, 0, 1) 70%)',
       },
     }),
+  backgroundBlackTreatment: () =>
+    css({
+      background: '#000000',
+    }),
+  plainImage: ({ mq }: Theme) =>
+    css({
+      aspectRatio: '16 / 9',
+      overflow: 'hidden',
+      [mq.GROUP_4_MIN_WIDTH]: {
+        aspectRatio: 'auto',
+        height: '100%',
+        maxWidth: '60%',
+        position: 'absolute',
+        insetInlineEnd: 0,
+        '& img': {
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+        },
+      },
+    }),
+  plainImageSingle: () =>
+    css({
+      aspectRatio: 'auto',
+    }),
   contentContainer: ({ mq, gridWidths, spacings }: Theme) =>
     css({
       zIndex: 3,
