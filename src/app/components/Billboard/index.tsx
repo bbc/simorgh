@@ -96,8 +96,8 @@ export default ({
     return (
       <div
         css={[
-          styles.plainImage,
-          isSingleImageLayout && styles.plainImageSingle,
+          styles.imageContainer,
+          !isSingleImageLayout && styles.imageWithPromoItems,
         ]}
       >
         <Image
@@ -108,9 +108,8 @@ export default ({
           mediaType={primaryMimeType || undefined}
           fallbackMediaType={fallbackMimeType || undefined}
           sizes="(min-width: 1008px) 660px, 100vw"
-          fetchPriority="high"
-          preload
           placeholder={false}
+          css={[styles.plainImage]}
         />
       </div>
     );

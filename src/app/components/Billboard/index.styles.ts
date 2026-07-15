@@ -59,29 +59,43 @@ export default {
     }),
   plainImage: ({ mq }: Theme) =>
     css({
-      aspectRatio: '16 / 9',
-      overflow: 'hidden',
+      height: 'auto',
+      // aspectRatio: '16 / 9',
+      // overflow: 'hidden',
+      // border: `solid ${pixelsToRem(10)}rem green`,
       [mq.GROUP_4_MIN_WIDTH]: {
-        aspectRatio: 'auto',
-        height: '100%',
-        maxWidth: '60%',
-        position: 'absolute',
-        insetInlineEnd: 0,
-        '& img': {
-          width: '100%',
-          height: '100%',
-          objectFit: 'cover',
-        },
+        // aspectRatio: 'auto',
+        // height: '100%',
+        // maxWidth: '60%',
+        // position: 'absolute',
+        // insetInlineEnd: 0,
+        // '& img': {
+        //   width: '100%',
+        //   height: '100%',
+        //   objectFit: 'cover',
+        // },
       },
     }),
-  plainImageSingle: () =>
+  imageContainer: ({ mq, spacings }: Theme) =>
     css({
-      aspectRatio: 'auto',
+      [mq.GROUP_4_MIN_WIDTH]: {
+        maxWidth: '50%',
+        position: 'absolute',
+        insetInlineEnd: 0,
+        padding: `${spacings.DOUBLE}rem`,
+        height: '100%',
+      },
+    }),
+  imageWithPromoItems: ({ mq }: Theme) =>
+    css({
+      [mq.GROUP_4_MIN_WIDTH]: {
+        height: '50%',
+      },
     }),
   contentContainer: ({ mq, gridWidths, spacings }: Theme) =>
     css({
       zIndex: 3,
-      paddingBottom: `${spacings.QUADRUPLE}`,
+      paddingBottom: `${spacings.QUADRUPLE}`, // typo - this needs to have REM
       overflow: 'hidden',
 
       [mq.GROUP_4_MIN_WIDTH]: {
@@ -154,6 +168,7 @@ export default {
       },
       [mq.GROUP_4_MIN_WIDTH]: {
         padding: `${spacings.DOUBLE}rem`,
+        // TO edit?
         minHeight: `${pixelsToRem(440)}rem`, // calculation includes padding
         height: '100%',
         display: 'flex',
