@@ -57,42 +57,27 @@ export default {
     css({
       background: '#000000',
     }),
-  plainImage: ({ mq }: Theme) =>
+  imageWithPromoItems: ({ mq, spacings }: Theme) =>
     css({
-      height: 'auto', // check
-      // aspectRatio: '16 / 9',
-      // overflow: 'hidden',
-      // border: `solid ${pixelsToRem(10)}rem green`,
       [mq.GROUP_4_MIN_WIDTH]: {
-        // aspectRatio: 'auto',
-        // height: '100%',
-        // maxWidth: '60%',
-        // position: 'absolute',
-        // insetInlineEnd: 0,
-        // '& img': {
-        //   width: '100%',
-        //   height: '100%',
-        //   objectFit: 'cover',
-        // },
+        width: '50%',
+        position: 'absolute',
+        insetInlineEnd: 0,
+        padding: `${spacings.DOUBLE}rem`,
+        display: 'flex',
+        alignItems: 'center',
+        height: '50%',
       },
     }),
   imageContainer: ({ mq, spacings }: Theme) =>
     css({
       [mq.GROUP_4_MIN_WIDTH]: {
-        maxWidth: '50%',
-        position: 'absolute',
-        insetInlineEnd: 0,
-        padding: `${spacings.DOUBLE}rem`,
-        //  paddingInlineEnd: `${spacings.DOUBLE}rem`,
-        height: '100%',
+        padding: `${spacings.QUADRUPLE}rem 0`,
+        paddingInlineEnd: `${spacings.DOUBLE}rem`,
+        width: '50%',
         display: 'flex',
         alignItems: 'center',
-      },
-    }),
-  imageWithPromoItems: ({ mq }: Theme) =>
-    css({
-      [mq.GROUP_4_MIN_WIDTH]: {
-        height: '50%',
+        boxSizing: 'border-box',
       },
     }),
   contentContainer: ({ mq, gridWidths, spacings }: Theme) =>
@@ -112,6 +97,18 @@ export default {
     css({
       [mq.GROUP_4_MIN_WIDTH]: {
         paddingBottom: 0,
+      },
+    }),
+  contentContainerHighProminence: ({ mq, spacings }: Theme) =>
+    css({
+      [mq.GROUP_4_MIN_WIDTH]: {
+        display: 'flex',
+        flexDirection: 'row-reverse',
+        alignItems: 'center',
+      },
+      // tidy - maybe this style shouldn't be here
+      [mq.GROUP_5_MIN_WIDTH]: {
+        padding: `0 ${spacings.QUINTUPLE}rem`,
       },
     }),
   heading: ({ mq, palette, spacings }: Theme) =>
@@ -171,7 +168,6 @@ export default {
       },
       [mq.GROUP_4_MIN_WIDTH]: {
         padding: `${spacings.DOUBLE}rem`,
-        // TO edit?
         minHeight: `${pixelsToRem(440)}rem`, // calculation includes padding
         height: '100%',
         display: 'flex',
@@ -184,6 +180,7 @@ export default {
     css({
       [mq.GROUP_4_MIN_WIDTH]: {
         minHeight: 0,
+        width: '50%',
       },
     }),
   description: ({ palette }: Theme) =>

@@ -35,7 +35,6 @@ interface BillboardProps {
 const IMAGE_WIDTH = 660;
 const DEFAULT_IMAGE_RES = 480;
 
-// this is the component - it is very similar
 export default ({
   heading,
   description,
@@ -96,8 +95,7 @@ export default ({
     return (
       <div
         css={[
-          styles.imageContainer,
-          hasPromoItems && styles.imageWithPromoItems,
+          hasPromoItems ? styles.imageWithPromoItems : styles.imageContainer,
         ]}
       >
         <Image
@@ -109,8 +107,8 @@ export default ({
           fallbackMediaType={fallbackMimeType || undefined}
           sizes="(min-width: 1008px) 660px, 100vw"
           placeholder={false}
-          // css={[styles.plainImage]}
-          // style={{ display: 'block' }}
+          fetchPriority="high"
+          preload
         />
       </div>
     );
@@ -131,6 +129,9 @@ export default ({
           css={[
             styles.contentContainer,
             !hasPromoItems && styles.contentContainerNoPromos,
+            isHighProminence &&
+              isSingleImageLayout &&
+              styles.contentContainerHighProminence,
           ]}
         >
           {renderImage()}
