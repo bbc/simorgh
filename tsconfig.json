@@ -44,4 +44,8 @@
   },
   "include": ["src/**/*", "src/app/legacy/**/*.ts*"],
   "exclude": ["node_modules", "build"]
+  ,
+  "plugins": [
+    { "name": "typescript-plugin-css-modules" }
+  ]
 }

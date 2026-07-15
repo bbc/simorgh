@@ -31,6 +31,8 @@ import { Curation } from '#app/models/types/curationData';
 import { Article, OptimoBlock } from '#app/models/types/optimo';
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import * as viewTracking from '#app/hooks/useViewTracker';
+import useScrollDepthTracker from '#app/hooks/useScrollDepthTracker';
+import useMediaQuery from '#hooks/useMediaQuery';
 import {
   render,
   screen,
@@ -74,6 +76,9 @@ jest.mock('#app/lib/utilities/onClient', () => ({
   default: jest.fn(),
   onClient: jest.fn(() => true),
 }));
+
+jest.mock('#app/hooks/useScrollDepthTracker', () => jest.fn(() => null));
+jest.mock('#hooks/useMediaQuery', () => jest.fn());
 
 const input = {
   bbcOrigin: 'https://www.test.bbc.co.uk',
@@ -1313,11 +1318,6 @@ describe('Article Page', () => {
     });
   });
   describe('TopicDiscovery', () => {
-    afterEach(() => {
-      jest.resetAllMocks();
-      delete process.env.SIMORGH_APP_ENV;
-    });
-
     const data = {
       ...articleDataPidgin,
       metadata: {
@@ -1353,19 +1353,6 @@ describe('Article Page', () => {
   });
 
   describe('LocationBasedTopicOJ', () => {
-    beforeEach(() => {
-      delete process.env.SIMORGH_APP_ENV;
-      // Ensure isLive is evaluated fresh from process.env
-      jest.spyOn(isLive, 'default').mockImplementation(() => {
-        return process.env.SIMORGH_APP_ENV === 'live';
-      });
-    });
-
-    afterEach(() => {
-      jest.restoreAllMocks();
-      delete process.env.SIMORGH_APP_ENV;
-    });
-
     const mockCountryCuration = {
       title: 'Najeriya',
       topicId: 'topic-1',
@@ -1400,8 +1387,6 @@ describe('Article Page', () => {
     };
 
     it('renders nothing if countryCuration is undefined', () => {
-      process.env.SIMORGH_APP_ENV = 'local';
-
       render(
         <ArticlePage
           pageData={{
@@ -1409,7 +1394,10 @@ describe('Article Page', () => {
             countryCuration: undefined,
           }}
         />,
-        { service: 'hausa' },
+        {
+          service: 'hausa',
+          toggles: { locationTopicCuration: { enabled: true } },
+        },
       );
 
       expect(
@@ -1418,14 +1406,15 @@ describe('Article Page', () => {
     });
 
     it('renders section and subheading when countryCuration is present', () => {
-      process.env.SIMORGH_APP_ENV = 'local';
-
       render(
         <ArticlePage
           // @ts-expect-error: Test fixture data does not need to match Article type exactly
           pageData={pageData}
         />,
-        { service: 'hausa' },
+        {
+          service: 'hausa',
+          toggles: { locationTopicCuration: { enabled: true } },
+        },
       );
       expect(screen.getByRole('region')).toBeInTheDocument();
       expect(screen.getByText('Najeriya')).toBeInTheDocument();
@@ -1433,32 +1422,337 @@ describe('Article Page', () => {
       expect(screen.getByText('Promo Title 2')).toBeInTheDocument();
     });
 
-    it('should render LocationBasedTopicOJ when isLive is false (test env)', () => {
-      process.env.SIMORGH_APP_ENV = 'test';
-
+    it('should render LocationBasedTopicOJ when countryCuration toggle is enabled', () => {
       const { queryByTestId } = render(
         <ArticlePage
           // @ts-expect-error: Test fixture data does not need to match Article type exactly
           pageData={pageData}
         />,
-        { service: 'hausa' },
+        {
+          service: 'hausa',
+          toggles: { locationTopicCuration: { enabled: true } },
+        },
       );
 
       expect(queryByTestId('location-based-topic-oj')).toBeInTheDocument();
     });
 
-    it('should NOT render LocationBasedTopicOj when isLive is true (live env)', () => {
-      process.env.SIMORGH_APP_ENV = 'live';
-
+    it('should NOT render LocationBasedTopicOJ when countryCuration toggle is disabled', () => {
       const { queryByTestId } = render(
         <ArticlePage
           // @ts-expect-error: Test fixture data does not need to match Article type exactly
           pageData={pageData}
         />,
-        { service: 'hausa' },
+        {
+          service: 'hausa',
+          toggles: { locationTopicCuration: { enabled: false } },
+        },
       );
 
       expect(queryByTestId('location-based-topic-oj')).not.toBeInTheDocument();
+    });
+
+    it('should NOT render LocationBasedTopicOJ when isAmp is true', () => {
+      const { queryByTestId } = render(
+        <ArticlePage
+          // @ts-expect-error: Test fixture data does not need to match Article type exactly
+          pageData={pageData}
+        />,
+        {
+          service: 'hausa',
+          isAmp: true,
+          toggles: { locationTopicCuration: { enabled: true } },
+        },
+      );
+
+      expect(queryByTestId('location-based-topic-oj')).not.toBeInTheDocument();
+    });
+
+    it('should NOT render LocationBasedTopicOJ when isLite is true', () => {
+      const { queryByTestId } = render(
+        <ArticlePage
+          // @ts-expect-error: Test fixture data does not need to match Article type exactly
+          pageData={pageData}
+        />,
+        {
+          service: 'hausa',
+          isLite: true,
+          toggles: { locationTopicCuration: { enabled: true } },
+        },
+      );
+
+      expect(queryByTestId('location-based-topic-oj')).not.toBeInTheDocument();
+    });
+
+    it('should NOT render LocationBasedTopicOJ when isApp is true', () => {
+      const { queryByTestId } = render(
+        <ArticlePage
+          // @ts-expect-error: Test fixture data does not need to match Article type exactly
+          pageData={pageData}
+        />,
+        {
+          service: 'hausa',
+          isApp: true,
+          toggles: { locationTopicCuration: { enabled: true } },
+        },
+      );
+
+      expect(queryByTestId('location-based-topic-oj')).not.toBeInTheDocument();
+    });
+
+    it('should NOT render LocationBasedTopicOJ when summaries array is empty', () => {
+      const pageDataWithEmptySummaries = {
+        ...articleDataNews,
+        countryCuration: {
+          ...mockCountryCuration,
+          summaries: [],
+        },
+      };
+
+      const { queryByTestId } = render(
+        <ArticlePage pageData={pageDataWithEmptySummaries} />,
+        {
+          service: 'hausa',
+          toggles: { locationTopicCuration: { enabled: true } },
+        },
+      );
+
+      expect(queryByTestId('location-based-topic-oj')).not.toBeInTheDocument();
+    });
+  });
+
+  describe('Scroll Depth Tracking', () => {
+    const continueReadingBlock = {
+      id: 'continue-reading-block',
+      type: 'continueReading',
+      model: {},
+    };
+
+    const baseBlocks =
+      articleDataPersianWithFourParagraphs.content.model.blocks;
+
+    describe('with Continue Reading Button', () => {
+      let mockUseMediaQuery: jest.Mock;
+      let mockUseScrollDepthTracker: jest.Mock;
+      let mediaQueryCallback: ((mediaQueryList: MediaQueryList) => void) | null;
+
+      beforeEach(() => {
+        mockUseMediaQuery = jest.mocked(useMediaQuery);
+        mockUseScrollDepthTracker = jest.mocked(useScrollDepthTracker);
+        mediaQueryCallback = null;
+
+        jest
+          .spyOn(clickTracking, 'default')
+          .mockReturnValue({ onClick: jest.fn() });
+
+        // Capture the callback passed to useMediaQuery
+        mockUseMediaQuery.mockImplementation((query, callback) => {
+          mediaQueryCallback = callback;
+        });
+
+        mockUseScrollDepthTracker.mockReturnValue(null);
+      });
+
+      it('should enable scroll tracking immediately on desktop viewport (GROUP_4_MIN_WIDTH+)', async () => {
+        const pageData: Article = {
+          ...articleDataPersianWithFourParagraphs,
+          content: {
+            ...articleDataPersianWithFourParagraphs.content,
+            model: {
+              ...articleDataPersianWithFourParagraphs.content.model,
+              blocks: [...baseBlocks, continueReadingBlock],
+            },
+          },
+        };
+
+        render(<ArticlePage pageData={pageData} />, {
+          service: 'persian',
+          toggles: { continueReadingButton: { enabled: true } },
+        });
+
+        if (mediaQueryCallback) {
+          act(() => {
+            // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+            mediaQueryCallback!({ matches: true } as MediaQueryList);
+          });
+        }
+
+        await waitFor(() => {
+          expect(mockUseScrollDepthTracker).toHaveBeenCalledWith(
+            'article-scroll-depth',
+            true,
+          );
+        });
+      });
+
+      it('should disable scroll tracking when button is collapsed on mobile viewport', async () => {
+        const pageData: Article = {
+          ...articleDataPersianWithFourParagraphs,
+          content: {
+            ...articleDataPersianWithFourParagraphs.content,
+            model: {
+              ...articleDataPersianWithFourParagraphs.content.model,
+              blocks: [...baseBlocks, continueReadingBlock],
+            },
+          },
+        };
+
+        render(<ArticlePage pageData={pageData} />, {
+          service: 'persian',
+          toggles: { continueReadingButton: { enabled: true } },
+        });
+
+        if (mediaQueryCallback) {
+          act(() => {
+            // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+            mediaQueryCallback!({ matches: false } as MediaQueryList);
+          });
+        }
+
+        await waitFor(() => {
+          expect(mockUseScrollDepthTracker).toHaveBeenCalledWith(
+            'article-scroll-depth',
+            false,
+          );
+        });
+      });
+
+      it('should enable scroll tracking when Continue Reading button is clicked on mobile', async () => {
+        const pageData: Article = {
+          ...articleDataPersianWithFourParagraphs,
+          content: {
+            ...articleDataPersianWithFourParagraphs.content,
+            model: {
+              ...articleDataPersianWithFourParagraphs.content.model,
+              blocks: [...baseBlocks, continueReadingBlock],
+            },
+          },
+        };
+
+        render(<ArticlePage pageData={pageData} />, {
+          service: 'persian',
+          toggles: { continueReadingButton: { enabled: true } },
+        });
+
+        if (mediaQueryCallback) {
+          act(() => {
+            // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+            mediaQueryCallback!({ matches: false } as MediaQueryList);
+          });
+        }
+
+        const continueReadingButton = screen.getByTestId(
+          'continue-reading-button',
+        );
+
+        expect(continueReadingButton).toBeInTheDocument();
+
+        // Click the button to expand content
+        act(() => {
+          continueReadingButton.click();
+        });
+
+        // After button click with showAllContent = true, scroll tracking should be enabled
+        await waitFor(() => {
+          expect(mockUseScrollDepthTracker).toHaveBeenCalledWith(
+            'article-scroll-depth',
+            true,
+          );
+        });
+      });
+    });
+
+    describe('without Continue Reading Button', () => {
+      let mockUseScrollDepthTracker: jest.Mock;
+
+      beforeEach(() => {
+        mockUseScrollDepthTracker = jest.mocked(useScrollDepthTracker);
+        mockUseScrollDepthTracker.mockReturnValue(null);
+      });
+
+      it('should enable scroll tracking immediately when no Continue Reading block is present', () => {
+        const pageData: Article = {
+          ...articleDataPersianWithFourParagraphs,
+          content: {
+            ...articleDataPersianWithFourParagraphs.content,
+            model: {
+              ...articleDataPersianWithFourParagraphs.content.model,
+              blocks: baseBlocks, // No continue reading block
+            },
+          },
+        };
+
+        render(<ArticlePage pageData={pageData} />, {
+          service: 'persian',
+          toggles: { continueReadingButton: { enabled: true } },
+        });
+
+        // Scroll tracking should be enabled from the start
+        expect(mockUseScrollDepthTracker).toHaveBeenCalledWith(
+          'article-scroll-depth',
+          true,
+        );
+      });
+
+      it('should enable scroll tracking immediately when toggle is disabled', () => {
+        const pageData: Article = {
+          ...articleDataPersianWithFourParagraphs,
+          content: {
+            ...articleDataPersianWithFourParagraphs.content,
+            model: {
+              ...articleDataPersianWithFourParagraphs.content.model,
+              blocks: [...baseBlocks, continueReadingBlock],
+            },
+          },
+        };
+
+        render(<ArticlePage pageData={pageData} />, {
+          service: 'persian',
+          toggles: { continueReadingButton: { enabled: false } },
+        });
+
+        // Scroll tracking should be enabled because button toggle is off
+        expect(mockUseScrollDepthTracker).toHaveBeenCalledWith(
+          'article-scroll-depth',
+          true,
+        );
+      });
+    });
+
+    it('should disable scroll tracking when the article contains an embed', () => {
+      const mockUseScrollDepthTracker: jest.Mock = jest.mocked(
+        useScrollDepthTracker,
+      );
+      mockUseScrollDepthTracker.mockReturnValue(null);
+
+      const pageDataWithRiddle: Article = {
+        ...articleDataNewsWithEmbeds,
+      };
+
+      render(<ArticlePage pageData={pageDataWithRiddle} />, {
+        service: 'persian',
+        toggles: { continueReadingButton: { enabled: false } },
+      });
+
+      expect(mockUseScrollDepthTracker).toHaveBeenCalledWith(
+        'article-scroll-depth',
+        false,
+      );
+    });
+
+    it('should listen to the correct media query breakpoint', () => {
+      const pageData = articleDataPersianWithFourParagraphs;
+      const mockUseMediaQuery = jest.mocked(useMediaQuery);
+
+      render(<ArticlePage pageData={pageData} />, {
+        service: 'persian',
+      });
+
+      // Should listen to GROUP_4_MIN_WIDTH breakpoint (1008px+)
+      expect(mockUseMediaQuery).toHaveBeenCalledWith(
+        '(min-width: 63rem)',
+        expect.any(Function),
+      );
     });
   });
 });

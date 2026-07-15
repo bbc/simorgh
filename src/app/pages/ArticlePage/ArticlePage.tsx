@@ -1,6 +1,9 @@
-import { use, useState } from 'react';
+import { use, useState, useCallback } from 'react';
 import { useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
+import useMediaQuery from '#hooks/useMediaQuery';
+import useScrollDepthTracker from '#hooks/useScrollDepthTracker';
+import { GROUP_4_MIN_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
 import { singleTextBlock } from '#app/models/blocks';
 import { BylineLinkedData } from '#app/components/LinkedData/types';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
@@ -52,12 +55,11 @@ import ArticleLinksBlock from '#app/components/ArticleLinksBlock';
 import Curation from '#app/components/Curation';
 import Recommendations from '#app/components/Recommendations';
 import ReadTimeArticle from '#app/components/ReadTime';
-import PWAPromotionalBanner from '#app/components/PWAPromotionalBanner';
 import ContinueReadingButton, {
   ContinueReadingButtonProps,
 } from '#app/components/ContinueReadingButton';
 import SaveArticleButton from '#app/components/SaveArticleButton';
-import isLive from '#lib/utilities/isLive';
+import AccountPromotionalBannerExperiment from '#app/components/Account/AccountPromotionalBannerExperiment';
 import ElectionBanner from './ElectionBanner';
 import ArticleMessageBanner from './ArticleMessageBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
@@ -206,6 +208,7 @@ const getContinueReadingButton =
 
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const [showAllContent, setShowAllContent] = useState(false);
+  const [isDesktopViewport, setIsDesktopViewport] = useState(false);
   const { isApp, isAmp, isLite, pageType } = use(RequestContext);
 
   const {
@@ -215,11 +218,20 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     translations,
   } = use(ServiceContext);
 
+  // Track when viewport enters GROUP_4_MIN_WIDTH (1008px+) where button is hidden
+  const handleDesktopMediaQueryChange = useCallback(mediaQueryList => {
+    setIsDesktopViewport(mediaQueryList.matches);
+  }, []);
+
+  useMediaQuery(
+    `(min-width: ${GROUP_4_MIN_WIDTH_BP}rem)`,
+    handleDesktopMediaQueryChange,
+  );
+
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
   const { enabled: continueReadingButtonToggle } = useToggle(
     'continueReadingButton',
   );
-  const { enabled: isTopBarOJsEnabled } = useToggle('topBarOJs');
   const { enabled: topicDiscoveryEnabled } = useToggle('topicDiscovery');
 
   const {
@@ -237,6 +249,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   );
   const { enabled: articleVideoCurationEnabled } = useToggle(
     'articleVideoCuration',
+  );
+  const { enabled: countryCurationEnabled } = useToggle(
+    'locationTopicCuration',
   );
 
   const headline = getHeadline(pageData) ?? '';
@@ -305,6 +320,24 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     !isApp &&
     hasContinueReadingBlock &&
     continueReadingButtonToggle,
+  );
+
+  // Extract block types
+  // Check if block types include embeds
+  const articleEmbedTypes = ['embedHtml', 'oEmbed'];
+
+  const hasEmbeds = blocks.some(block =>
+    articleEmbedTypes.includes(block.type),
+  );
+
+  // On desktop (GROUP_4+), all content is visible, so enable scroll tracking immediately
+  // On mobile/tablet, only enable tracking when button is clicked and content is expanded
+  const scrollDepthEnabled =
+    !hasEmbeds &&
+    (isDesktopViewport || !showContinueReadingButton || showAllContent);
+  const scrollDepthRef = useScrollDepthTracker(
+    'article-scroll-depth',
+    scrollDepthEnabled,
   );
 
   const promoImageBlocks =
@@ -388,21 +421,18 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     !isAmp &&
     !isLite &&
     !isApp &&
-    !isLive() &&
+    countryCurationEnabled &&
     pageData?.countryCuration?.summaries?.length,
   );
 
   const shouldApplyCollapsedArticleSpacing =
     showContinueReadingButton && !showAllContent;
 
-  // EXPERIMENT: PWA Promotional Banner
-  const shouldRenderPWAPromotionalBanner =
-    !isTopBarOJsEnabled || !pageData?.secondaryColumn?.topStories?.length;
-
   return (
     <div css={styles.pageWrapper}>
-      {/* EXPERIMENT: PWA Promotional Banner */}
-      {shouldRenderPWAPromotionalBanner && <PWAPromotionalBanner />}
+      {/* EXPERIMENT: newswb_ws_article_account_promo_banner */}
+      <AccountPromotionalBannerExperiment />
+
       <ATIAnalytics />
       <ChartbeatAnalytics
         sectionName={pageData?.relatedContent?.section?.name}
@@ -461,6 +491,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               shouldApplyCollapsedArticleSpacing && styles.collapsedMainContent,
             ]}
             role="main"
+            ref={scrollDepthRef}
           >
             <Blocks
               blocks={articleBlocks}
@@ -491,13 +522,13 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               mobileDivider={false}
             />
           )}
+          {showCountryCuration && <LocationBasedTopicOJ pageData={pageData} />}
           {showPortraitVideoCarousel && (
             <PortraitVideoCarousel
               {...portraitVideoCarouselProps}
               css={styles.portraitVideoCarousel}
             />
           )}
-          {showCountryCuration && <LocationBasedTopicOJ pageData={pageData} />}
           <RelatedContentSection content={blocks} />
           {showMediaCuration && (
             <div css={styles.mediaCurationRow}>

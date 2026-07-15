@@ -7,6 +7,7 @@ const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
 
 module.exports = {
   webpackDirAlias: {
+    '@scss': resolvePath('src/app/components/ThemeProviderSCSSModules'),
     '#app': resolvePath('src/app'),
     '#src': resolvePath('src'),
     '#nextjs': resolvePath('ws-nextjs-app/'),

@@ -4,9 +4,11 @@ const FOCUSABLE_SELECTOR =
   'button:not([disabled]), a[href], [tabindex]:not([tabindex="-1"])';
 
 /**
- * Traps keyboard focus within a container element, cycling between the first
- * and last focusable elements on Tab/Shift+Tab. Focus is returned to the
- * previously focused element when the component unmounts.
+ * Traps keyboard focus within a container, cycling through all focusable
+ * elements on Tab/Shift+Tab and restoring focus on unmount.
+ *
+ * Tab is handled programmatically so links stay reachable in Safari, which
+ * otherwise skips them.
  *
  * Returns three refs: `containerRef` (the focus boundary), `firstElementRef`,
  * and `lastElementRef` (optional overrides for the first/last focusable elements).
@@ -30,31 +32,30 @@ const useTrappedFocus = <
       );
     };
 
-    const getFirstFocusable = (): HTMLElement | null =>
-      firstElementRef.current ?? getFocusableElements()[0] ?? null;
-
-    const getLastFocusable = (): HTMLElement | null =>
-      lastElementRef.current ?? getFocusableElements().pop() ?? null;
+    const focusVisibly = (element: HTMLElement | null | undefined) =>
+      element?.focus({ focusVisible: true } as FocusOptions);
 
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key !== 'Tab') return;
 
-      const firstFocusable = getFirstFocusable();
-      const lastFocusable = getLastFocusable();
+      const focusableElements = getFocusableElements();
+      if (focusableElements.length === 0) return;
 
-      if (event.shiftKey) {
-        if (document.activeElement === firstFocusable) {
-          event.preventDefault();
-          lastFocusable?.focus();
-        }
-      } else if (document.activeElement === lastFocusable) {
-        event.preventDefault();
-        firstFocusable?.focus();
-      }
+      event.preventDefault();
+
+      const currentIndex = focusableElements.indexOf(
+        document.activeElement as HTMLElement,
+      );
+      const step = event.shiftKey ? -1 : 1;
+      const { length } = focusableElements;
+      const nextIndex =
+        currentIndex === -1 ? 0 : (currentIndex + step + length) % length;
+
+      focusVisibly(focusableElements[nextIndex]);
     };
 
     document.addEventListener('keydown', handleKeyDown);
-    firstElementRef.current?.focus();
+    focusVisibly(firstElementRef.current ?? getFocusableElements()[0]);
 
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
