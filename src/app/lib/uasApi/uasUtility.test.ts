@@ -1,5 +1,9 @@
 import type { SaveArticlePageData } from '#app/lib/utilities/extractSaveArticleProps';
-import { sanitiseMetadataString, buildCurrentMetadata } from './uasUtility';
+import {
+  sanitiseMetadataString,
+  buildCurrentMetadata,
+  createFavouritesPayload,
+} from './uasUtility';
 
 const buildMockSaveArticlePageData = (
   promoImageAltText: string,
@@ -109,5 +113,32 @@ describe('buildCurrentMetadata', () => {
       locatorUrl: 'https://www.bbc.com/hindi/articles/cwy0pz7qydzo',
       promoImageAltText: 'Image description',
     });
+  });
+});
+
+describe('createFavouritesPayload', () => {
+  it('includes all required fields in the payload', () => {
+    const saveArticlePageData = buildMockSaveArticlePageData(
+      'Alt text for image',
+      'Article Headline',
+    );
+
+    const payload = createFavouritesPayload({
+      saveArticlePageData,
+      articleId: 'c987654321o',
+      service: 'hindi',
+    });
+    const expectedMetadata = buildCurrentMetadata(saveArticlePageData, {
+      articleId: 'c987654321o',
+      service: 'hindi',
+    });
+
+    expect(payload.activityType).toBe('favourites');
+    expect(payload.resourceDomain).toBe('world-service-news');
+    expect(payload.resourceType).toBe('article');
+    expect(payload.resourceId).toBe('c987654321o');
+    expect(payload.action).toBe('favourited');
+    expect(payload.resourceTitle).toBe('hindi');
+    expect(payload.metaData).toStrictEqual(expectedMetadata);
   });
 });
