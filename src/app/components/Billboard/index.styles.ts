@@ -59,7 +59,7 @@ export default {
     }),
   plainImage: ({ mq }: Theme) =>
     css({
-      height: 'auto',
+      height: 'auto', // check
       // aspectRatio: '16 / 9',
       // overflow: 'hidden',
       // border: `solid ${pixelsToRem(10)}rem green`,
@@ -83,7 +83,10 @@ export default {
         position: 'absolute',
         insetInlineEnd: 0,
         padding: `${spacings.DOUBLE}rem`,
+        //  paddingInlineEnd: `${spacings.DOUBLE}rem`,
         height: '100%',
+        display: 'flex',
+        alignItems: 'center',
       },
     }),
   imageWithPromoItems: ({ mq }: Theme) =>

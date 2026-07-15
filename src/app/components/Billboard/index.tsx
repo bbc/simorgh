@@ -109,7 +109,8 @@ export default ({
           fallbackMediaType={fallbackMimeType || undefined}
           sizes="(min-width: 1008px) 660px, 100vw"
           placeholder={false}
-          css={[styles.plainImage]}
+          // css={[styles.plainImage]}
+          // style={{ display: 'block' }}
         />
       </div>
     );
