@@ -271,7 +271,7 @@ describe('Billboard', () => {
     ).not.toBeInTheDocument();
   });
 
-  describe('high variant', () => {
+  describe('high prominence', () => {
     it('renders a plain image without the masked image treatment', () => {
       const maskedImageSpy = jest.spyOn(MaskedImage, 'default');
 
@@ -282,7 +282,7 @@ describe('Billboard', () => {
           link={link}
           image={imageUrl}
           altText={imageAlt}
-          variant="high"
+          prominence="high"
         />,
       );
 
@@ -302,7 +302,7 @@ describe('Billboard', () => {
           link={link}
           image={imageUrl}
           altText={imageAlt}
-          variant="high"
+          prominence="high"
           summaries={pidginLiveBillboard.summaries}
         />,
       );

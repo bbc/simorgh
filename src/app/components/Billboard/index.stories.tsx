@@ -26,13 +26,13 @@ const Component = ({
   image = 'https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/1d5b/test/5f969ec0-c4d8-11ed-8319-9b394d8ed0dd.jpg',
   altText = 'alt text',
   summaries = [],
-  variant = 'maximum',
+  prominence = 'maximum',
 }: Props & {
   link?: string;
   image?: string;
   altText?: string;
   summaries?: Summary[];
-  variant?: 'maximum' | 'high';
+  prominence?: 'maximum' | 'high';
 }) => {
   return (
     <Billboard
@@ -43,7 +43,7 @@ const Component = ({
       showLiveLabel={showLiveLabel}
       altText={altText}
       summaries={summaries}
-      variant={variant}
+      prominence={prominence}
     />
   );
 };
@@ -179,13 +179,13 @@ export const PersianBillboardWithPVPromos = () => {
   );
 };
 
-export const HighVariant = (_: StoryArgs, globalArgs: Props) => {
+export const HighProminence = (_: StoryArgs, globalArgs: Props) => {
   const { text, longText } = globalArgs;
 
-  return <Component text={text} longText={longText} variant="high" />;
+  return <Component text={text} longText={longText} prominence="high" />;
 };
 
-export const HighVariantWithSummaries = () => {
+export const HighProminenceWithSummaries = () => {
   const summary = pidginLiveBillboard.summaries[0];
   return (
     <ThemeProvider service={service} variant={variant}>
@@ -197,7 +197,7 @@ export const HighVariantWithSummaries = () => {
           image={summary.imageUrl}
           altText={summary.imageAlt}
           summaries={pidginLiveBillboard.summaries.slice(0, 3)}
-          variant="high"
+          prominence="high"
         />
       </ServiceContextProvider>
     </ThemeProvider>

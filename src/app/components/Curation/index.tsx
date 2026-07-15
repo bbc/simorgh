@@ -142,7 +142,8 @@ export default ({
       return null;
     case BILLBOARD: {
       const billboardId = `billboard-${nthCurationByStyleAndProminence}`;
-      const billboardVariant = visualProminence === HIGH ? 'high' : 'maximum';
+      const billboardProminence =
+        visualProminence === HIGH ? 'high' : 'maximum';
       if (firstSummary) {
         return (
           <div css={styles.billboardContainer}>
@@ -152,7 +153,7 @@ export default ({
               link={summaryLink}
               image={imageUrl}
               id={billboardId}
-              variant={billboardVariant}
+              prominence={billboardProminence}
               eventTrackingData={eventTrackingData}
               showLiveLabel={summaryIsLive}
               altText={imageAlt}

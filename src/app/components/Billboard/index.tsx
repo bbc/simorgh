@@ -17,7 +17,7 @@ import LiveText from '../LiveText';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import BillboardCurationGrid from './BillboardCurationGrid';
 
-type BillboardVariant = 'maximum' | 'high';
+type BillboardProminence = 'maximum' | 'high';
 
 interface BillboardProps {
   heading: string;
@@ -26,7 +26,7 @@ interface BillboardProps {
   image: string;
   altText: string;
   id?: string;
-  variant?: BillboardVariant;
+  prominence?: BillboardProminence;
   eventTrackingData?: EventTrackingData;
   showLiveLabel?: boolean;
   summaries?: Summary[];
@@ -43,7 +43,7 @@ export default ({
   image,
   altText,
   id = 'billboard',
-  variant = 'maximum',
+  prominence = 'maximum',
   showLiveLabel,
   eventTrackingData = { componentName: 'billboard' },
   summaries = [],
@@ -52,7 +52,7 @@ export default ({
   const showMoreOnThisTitle = translations.moreOnThis;
   const hasPromoItems = summaries.length > 1;
   const isSingleImageLayout = !hasPromoItems;
-  const isHighVariant = variant === 'high';
+  const isHighProminence = prominence === 'high';
 
   const eventTrackingDataWithOptimizelyEvents = {
     ...eventTrackingData,
@@ -64,7 +64,7 @@ export default ({
   );
 
   const renderImage = () => {
-    if (!isHighVariant) {
+    if (!isHighProminence) {
       return (
         <MaskedImage
           imageUrl={image.replace('{width}', '240')}
@@ -122,7 +122,7 @@ export default ({
         <div
           css={[
             styles.backgroundContainer,
-            isHighVariant
+            isHighProminence
               ? styles.backgroundBlackTreatment
               : styles.backgroundRedGradient,
           ]}
