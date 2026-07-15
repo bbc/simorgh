@@ -96,6 +96,7 @@ const createFavouritesPayload = ({
   resourceType: FAVOURITES_CONFIG.resourceType,
   resourceId: articleId,
   action: FAVOURITES_CONFIG.action,
+  resourceTitle: service,
   metaData: buildCurrentMetadata(saveArticlePageData, {
     articleId,
     service,

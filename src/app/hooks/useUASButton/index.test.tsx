@@ -115,6 +115,7 @@ describe('useUASButton', () => {
             activityType: 'favourites',
             action: 'favourited',
             resourceType: 'article',
+            resourceTitle: 'hindi',
           }),
           isRefreshAvailable: true,
         }),
