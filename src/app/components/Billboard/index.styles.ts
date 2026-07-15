@@ -180,6 +180,12 @@ export default {
         maxWidth: '50%', // determines width of text overlay.
       },
     }),
+  textContainerHighProminence: ({ mq }: Theme) =>
+    css({
+      [mq.GROUP_4_MIN_WIDTH]: {
+        minHeight: 0,
+      },
+    }),
   description: ({ palette }: Theme) =>
     css({
       color: palette.GREY_2,

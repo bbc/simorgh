@@ -97,7 +97,7 @@ export default ({
       <div
         css={[
           styles.imageContainer,
-          !isSingleImageLayout && styles.imageWithPromoItems,
+          hasPromoItems && styles.imageWithPromoItems,
         ]}
       >
         <Image
@@ -134,7 +134,14 @@ export default ({
           ]}
         >
           {renderImage()}
-          <div css={styles.textContainer}>
+          <div
+            css={[
+              styles.textContainer,
+              isHighProminence &&
+                isSingleImageLayout &&
+                styles.textContainerHighProminence,
+            ]}
+          >
             <Heading level={2} size="paragon" css={styles.heading} id={id}>
               <a href={link} css={styles.link} {...clickTrackerHandler}>
                 {showLiveLabel ? (
