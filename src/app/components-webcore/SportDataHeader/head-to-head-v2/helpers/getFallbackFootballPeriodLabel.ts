@@ -1,5 +1,5 @@
 import { Translations } from '#app/models/types/translations';
-import { EventStatus, HeadToHeadV2Data } from '../types';
+import { EventStatus } from '../types';
 
 const ftFallback = { value: 'FT', accessible: 'Full time' };
 const aetFallback = { value: 'AET', accessible: 'After extra time' };
@@ -12,23 +12,6 @@ type RunningScores = {
   extratime?: string;
   penaltyShootout?: string;
   aggregate?: string;
-};
-
-type TeamSummary = {
-  fullName: string;
-  score?: string;
-  runningScores?: RunningScores;
-};
-
-type EventSummaryParams = {
-  time: HeadToHeadV2Data['time'];
-  status: string;
-  periodLabel?: PeriodLabel & { labelType?: string };
-  winner?: string;
-  seriesWinner?: string;
-  home: TeamSummary;
-  away: TeamSummary;
-  period?: string;
 };
 
 type FallbackPeriodLabelParams = {
