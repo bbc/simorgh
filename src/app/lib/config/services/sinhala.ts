@@ -317,7 +317,7 @@ export const service: DefaultServiceConfig = {
         afterExtraTime: 'අමතර කාලයෙන් පසු',
         penaltyAbbreviation: 'පෙන්',
         ownGoal: 'ස්වයං ගෝලය',
-        versus: 'مقابل',
+        versus: 'එදිරිව',
         kickOff: 'ආරම්භය',
         timeToBeConfirmed: 'වේලාව තහවුරු කිරීමට ඇත',
         teamToBeConfirmed: 'කණ්ඩායම තහවුරු කිරීමට ඇත',
