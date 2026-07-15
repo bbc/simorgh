@@ -493,6 +493,20 @@ export const service: UzbekConfig = {
     videoCaptionOffscreenText: 'Video tagso‘zi, ',
     imageCaptionOffscreenText: 'Surat tagso‘zi, ',
     imageCopyrightOffscreenText: 'Surat manbasi, ',
+    podcastPromo: {
+        title: 'WhatsApp kanali reklamasi',
+        brandTitle: 'Bizni WhatsApp da ham kuzating',
+        brandDescription:
+          `BBC News O‘zbek kontenti endi Sizning WhatsApp da`,
+        image: {
+          src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0nytqnd.png',
+          alt: `BBC News O'zbek Obuna bo'ling!`,
+      },
+      linkLabel: {
+        text: 'A’zo bo‘lish uchun bu erga bosing',
+        href: 'https://www.whatsapp.com/channel/0029Vb6cFgKHAdNMsH1hKy2H',
+      },
+    },
     translations: {
       and: 'va',
       readTime: {
@@ -520,20 +534,6 @@ export const service: UzbekConfig = {
       skipLinkText: 'Sahifaga o‘tish',
       relatedContent: 'Mavzuga aloqador',
       relatedTopics: 'Aloqador mavzular',
-      podcastPromo: {
-        title: 'WhatsApp kanali reklamasi',
-        brandTitle: 'Bizni WhatsApp da ham kuzating',
-        brandDescription:
-          `BBC News O‘zbek kontenti endi Sizning WhatsApp da`,
-        image: {
-          src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0nytqnd.png',
-          alt: `BBC News O'zbek Obuna bo'ling!`,
-      },
-      linkLabel: {
-        text: 'A’zo bo‘lish uchun bu erga bosing',
-        href: 'https://www.whatsapp.com/channel/0029Vb6cFgKHAdNMsH1hKy2H',
-      },
-    },
       navMenuText: 'Bo‘limlar',
       liteSite: {
         onboardingMessage:
