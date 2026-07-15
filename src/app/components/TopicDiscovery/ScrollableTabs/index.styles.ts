@@ -40,11 +40,11 @@ const styles = {
 
       [mq.FORCED_COLOURS]: {
         forcedColorAdjust: 'none',
-        color: 'ButtonText',
-        fill: 'ButtonText',
+        color: 'CanvasText',
+        fill: 'CanvasText',
       },
 
-      '&:hover': {
+      '&:hover:not(:focus-visible)': {
         '&::after': {
           content: '""',
           position: 'absolute',
@@ -60,6 +60,9 @@ const styles = {
         outlineOffset: `${pixelsToRem(-3)}rem`,
         outlineColor: isDarkUi ? palette.WHITE : palette.BLACK,
         boxShadow: 'none',
+        '&::after': {
+          display: 'none',
+        },
       },
     }),
 
