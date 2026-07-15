@@ -28,7 +28,7 @@ const styles = {
       padding: `${spacings.DOUBLE}rem 0`,
     }),
 
-  tabPanel: ({ spacings, mq }: Theme) =>
+  tabPanel: ({ spacings, mq, palette, isDarkUi }: Theme) =>
     css({
       paddingTop: `${spacings.DOUBLE}rem`,
 
@@ -45,6 +45,17 @@ const styles = {
         '.promo-image': {
           width: '100%',
           display: 'block',
+
+          ...(isDarkUi && {
+            '[data-e2e="media-icon"]': {
+              backgroundColor: palette.BLACK,
+              color: palette.WHITE,
+
+              svg: {
+                color: palette.WHITE,
+              },
+            },
+          }),
 
           'div div:last-child': {
             div: {
@@ -68,6 +79,14 @@ const styles = {
           width: '100%',
           display: 'block',
           paddingInlineStart: 0,
+
+          a: {
+            color: isDarkUi ? palette.GREY_2 : palette.GREY_10,
+
+            '&:visited': {
+              color: isDarkUi ? palette.GREY_4 : palette.GREY_6,
+            },
+          },
         },
       },
 
@@ -102,6 +121,7 @@ const styles = {
     css({
       width: '100%',
       aspectRatio: '16 / 9',
+      border: `${pixelsToRem(2)}rem solid transparent`,
       background: isDarkUi
         ? `linear-gradient(to right, ${palette.GREY_7} 0%, ${palette.GREY_8} 100%)`
         : `linear-gradient(to right, ${palette.GREY_4} 0%, ${palette.GREY_3} 100%)`,

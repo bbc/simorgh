@@ -44,6 +44,7 @@ export const COMPONENTS = {
   DROPDOWN_NAVIGATION: 'dropdown-navigation',
   MOST_READ: 'most-read',
   LITE_SITE_SUMMARY: 'lite-site-summary',
+  MESSAGE_BANNER: 'message-banner',
 };
 
 export const isPageViewRequest =
