@@ -271,7 +271,7 @@ describe('Billboard', () => {
     ).not.toBeInTheDocument();
   });
 
-  describe('high prominence', () => {
+  describe('High Prominence', () => {
     it('renders a plain image without the masked image treatment', () => {
       const maskedImageSpy = jest.spyOn(MaskedImage, 'default');
 

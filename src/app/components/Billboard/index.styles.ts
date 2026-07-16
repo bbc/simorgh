@@ -53,9 +53,9 @@ export default {
           'linear-gradient(to bottom, rgba(130, 0, 0, 1) 10%, rgba(40, 0, 0, 1) 70%)',
       },
     }),
-  backgroundBlackTreatment: () =>
+  backgroundBlackTreatment: ({ palette }: Theme) =>
     css({
-      background: '#000000',
+      background: palette.BLACK,
     }),
   imageContainer: ({ mq, spacings }: Theme) =>
     css({
