@@ -68,7 +68,7 @@ const CanonicalATIAnalytics = ({ reverbParams }: ATIAnalyticsProps) => {
 
   return (
     <>
-      {addScript({ script: addSendStaticBeaconToWindow(), nonce })}
+      {addScript({ script: addSendStaticBeaconToWindow, nonce })}
       {isLite &&
         addScript({
           script: sendPageViewBeaconLite,
