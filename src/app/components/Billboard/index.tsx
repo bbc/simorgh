@@ -101,7 +101,9 @@ export default ({
           fallbackSrcSet={fallbackSrcset || undefined}
           mediaType={primaryMimeType || undefined}
           fallbackMediaType={fallbackMimeType || undefined}
-          sizes="(min-width: 1008px) 660px, 100vw"
+          sizes="(min-width: 1280px) 660px, (min-width: 1008px) 50vw, 100vw"
+          width={800}
+          height={533}
           placeholder={false}
           fetchPriority="high"
           preload
