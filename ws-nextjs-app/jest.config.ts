@@ -6,7 +6,7 @@ import type { Config } from 'jest';
 import nextJest from 'next/jest.js';
 
 const { compilerOptions } = JSON.parse(
-  readFileSync(new URL('../tsconfig.json', import.meta.url), 'utf8'),
+  readFileSync(new URL('./tsconfig.json', import.meta.url), 'utf8'),
 );
 
 const { ...compilerOptionsPaths } = compilerOptions.paths;
@@ -24,9 +24,7 @@ const buildConfig = async (config: Config): Promise<Config> => {
   })();
 };
 
-const moduleNameMapper = pathsToModuleNameMapper(compilerOptionsPaths, {
-  prefix: '<rootDir>/',
-});
+const moduleNameMapper = pathsToModuleNameMapper(compilerOptionsPaths);
 
 export default async (): Promise<Config> => {
   const canonicalIntegrationTests = await buildConfig({
