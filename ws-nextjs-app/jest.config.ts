@@ -1,14 +1,18 @@
 /* eslint-disable import/extensions */
 /* eslint-disable import/no-relative-packages */
-import { readFileSync } from 'fs';
+// import { readFileSync } from 'fs';
 import { pathsToModuleNameMapper } from 'ts-jest';
 import type { Config } from 'jest';
 import nextJest from 'next/jest.js';
+import ts from 'typescript';
 
-const { compilerOptions } = JSON.parse(
-  readFileSync(new URL('./tsconfig.json', import.meta.url), 'utf8'),
-);
+// const { compilerOptions } = JSON.parse(
+//   readFileSync(new URL('./tsconfig.json', import.meta.url), 'utf8'),
+// );
 
+const configFile = ts.readConfigFile('./tsconfig.json', ts.sys.readFile);
+
+const { compilerOptions } = configFile.config;
 const { ...compilerOptionsPaths } = compilerOptions.paths;
 
 const createJestConfig = nextJest({ dir: './' });
