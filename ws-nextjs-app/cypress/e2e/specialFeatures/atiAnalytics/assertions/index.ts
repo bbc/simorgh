@@ -331,6 +331,35 @@ const assertItemAndGroupTaxonomy = ({
   }
 };
 
+const findMatchingEventDataFromInterceptions = ({
+  interceptions,
+  component,
+  expectedItemText,
+}) => {
+  let matched;
+
+  interceptions.forEach(interception => {
+    if (matched) return;
+
+    const params = getATIParamsFromURL(interception.request.url);
+
+    if (!params.events) return;
+
+    const eventData = getMatchingViewabilityEventData({
+      payload: params.events,
+      actionType: VIEW_EVENT,
+      component,
+      expectedItemText,
+    });
+
+    if (eventData) {
+      matched = { eventData, params };
+    }
+  });
+
+  return matched;
+};
+
 export const assertATIComponentViewEvent = ({
   component,
   pageIdentifier,
@@ -342,31 +371,11 @@ export const assertATIComponentViewEvent = ({
 }) => {
   const requestAlias = `@${component}-viewability-view`;
 
-  // When expectedItemText is set, multiple components may share the same
-  // componentName (e.g. several stream-embedded videos). Scrolling to the
-  // target video can bring other videos into the viewport first, so their
-  // beacons arrive and consume the alias before the target fires. We keep
-  // consuming aliased requests until we find one whose payload matches the
-  // expected item text, or we exhaust the retry budget.
-  const waitForMatchingRequest = (remainingAttempts = 10) => {
+  if (!expectedItemText) {
     cy.wait(requestAlias)
       .its('request.url')
       .then(url => {
         const params = getATIParamsFromURL(url);
-
-        if (expectedItemText) {
-          const eventData = getMatchingViewabilityEventData({
-            payload: params.events,
-            actionType: VIEW_EVENT,
-            component,
-            expectedItemText,
-          });
-
-          if (!eventData && remainingAttempts > 0) {
-            waitForMatchingRequest(remainingAttempts - 1);
-            return;
-          }
-        }
 
         assertViewabilityModelViewEvent({
           pageIdentifier,
@@ -381,12 +390,67 @@ export const assertATIComponentViewEvent = ({
           component,
           expectedItemType,
           expectedGroupType,
-          expectedItemText,
+          expectedItemText: undefined,
         });
       });
-  };
+    return;
+  }
 
-  waitForMatchingRequest();
+  // Multiple items can share the same componentName (e.g. several
+  // stream-embedded videos), and their view events may arrive across
+  // several separate beacon requests as different videos become visible
+  // at different times. Poll the full set of requests intercepted so far
+  // under this alias until one of them contains an event matching the
+  // expected item text, rather than assuming the first (or Nth) request
+  // to arrive is the one we scrolled to.
+  cy.get(`${requestAlias}.all`, { timeout: 15000 }).should(interceptions => {
+    const matched = findMatchingEventDataFromInterceptions({
+      interceptions,
+      component,
+      expectedItemText,
+    });
+
+    const errorMessage = `a "${component}" viewability event with item.text "${expectedItemText}"`;
+
+    // eslint-disable-next-line no-unused-expressions
+    expect(matched, errorMessage).to.exist;
+  });
+
+  cy.get(`${requestAlias}.all`).then(interceptions => {
+    const matched = findMatchingEventDataFromInterceptions({
+      interceptions,
+      component,
+      expectedItemText,
+    });
+
+    const { eventData, params } = matched;
+
+    assertViewabilityModelViewEvent({
+      pageIdentifier,
+      params,
+      applicationType,
+      siteId,
+    });
+
+    if (expectedItemType) {
+      expect(eventData?.item?.type).to.equal(
+        expectedItemType,
+        'eventDetails.item.type',
+      );
+    }
+
+    expect(eventData?.item?.text).to.equal(
+      expectedItemText,
+      'eventDetails.item.text',
+    );
+
+    if (expectedGroupType) {
+      expect(eventData?.group?.type).to.equal(
+        expectedGroupType,
+        'eventDetails.group.type',
+      );
+    }
+  });
 };
 
 const assertViewabilityModelClickEvent = ({
