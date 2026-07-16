@@ -2,7 +2,8 @@ import {
   render,
   act,
 } from '#app/components/react-testing-library-with-providers';
-import * as useViewTrackerModule from '#app/hooks/useViewTracker';
+import mockMatchMedia from '#testHelpers/mockMatchMedia';
+import useViewTracker from '#app/hooks/useViewTracker';
 import { MediaBlock } from '#app/components/MediaLoader/types';
 import StreamVideoPost from './StreamVideoPost';
 
@@ -10,6 +11,13 @@ jest.mock('#app/components/MediaLoader', () => {
   const MockMediaLoader = () => <div data-testid="mock-media-loader" />;
   return MockMediaLoader;
 });
+
+jest.mock('#app/hooks/useViewTracker', () => ({
+  __esModule: true,
+  default: jest.fn(() => ({})),
+}));
+
+const mockedUseViewTracker = useViewTracker as jest.Mock;
 
 const landscapeClipMediaBlocks: MediaBlock[] = [
   {
@@ -95,18 +103,19 @@ describe('StreamVideoPost', () => {
   beforeEach(() => {
     // @ts-expect-error Mocking require to prevent race condition.
     window.require = jest.fn();
+
+    mockMatchMedia();
+    mockedUseViewTracker.mockClear();
   });
 
   it('should track a landscape video with item_type landscape-video and group_type stream', async () => {
-    const viewTrackerSpy = jest.spyOn(useViewTrackerModule, 'default');
-
     await act(async () => {
       render(<StreamVideoPost blocks={landscapeClipMediaBlocks} />, {
         pageType: 'live',
       });
     });
 
-    expect(viewTrackerSpy).toHaveBeenCalledWith(
+    expect(mockedUseViewTracker).toHaveBeenCalledWith(
       expect.objectContaining({
         componentName: 'stream',
         itemTracker: expect.objectContaining({
@@ -118,15 +127,13 @@ describe('StreamVideoPost', () => {
   });
 
   it('should track a portrait video with item_type portrait-video and group_type stream', async () => {
-    const viewTrackerSpy = jest.spyOn(useViewTrackerModule, 'default');
-
     await act(async () => {
       render(<StreamVideoPost blocks={portraitClipMediaBlocks} />, {
         pageType: 'live',
       });
     });
 
-    expect(viewTrackerSpy).toHaveBeenCalledWith(
+    expect(mockedUseViewTracker).toHaveBeenCalledWith(
       expect.objectContaining({
         componentName: 'stream',
         itemTracker: expect.objectContaining({
@@ -138,15 +145,13 @@ describe('StreamVideoPost', () => {
   });
 
   it('should default to landscape-video when orientation is not specified', async () => {
-    const viewTrackerSpy = jest.spyOn(useViewTrackerModule, 'default');
-
     await act(async () => {
       render(<StreamVideoPost blocks={noOrientationClipMediaBlocks} />, {
         pageType: 'live',
       });
     });
 
-    expect(viewTrackerSpy).toHaveBeenCalledWith(
+    expect(mockedUseViewTracker).toHaveBeenCalledWith(
       expect.objectContaining({
         componentName: 'stream',
         itemTracker: expect.objectContaining({
