@@ -132,9 +132,10 @@ const matchesUrl = ({
  * - Else use page-type attribution:
  *   - Video page (tv, liveTV), video mediaArticle, or article with video primaryMediaType -> index 1 (Watch)
  *   - Audio page (audio, liveRadio), audio mediaArticle, or article with audio primaryMediaType -> index 2 (Listen)
- *   - Any other type (article, topic, home, etc.) -> index 0 (Home)
+ *   - Any other type (article, topic, home, etc.) -> nothing highlighted (-1)
  * Nav items are hopefully always ordered: 0=Home, 1=Watch, 2=Listen, otherwise it won't be possible to know which one to highlight when we aren't matching on url
  * primaryMediaType must be explicitly 'video' or 'audio' to trigger Watch/Listen attribution.
+ * Home is only ever highlighted via a direct URL match (top-level or subItem), never as a fallback.
  */
 const getActiveTopIndex = ({
   topItems,
@@ -180,7 +181,7 @@ const getActiveTopIndex = ({
     (pageType === MEDIA_ARTICLE_PAGE && primaryMediaType === 'video') ||
     (pageType === ARTICLE_PAGE && primaryMediaType === 'video')
   ) {
-    return topItems.length > 1 ? 1 : 0;
+    return topItems.length > 1 ? 1 : -1;
   }
 
   // Audio pages, audio mediaArticles, and article pages with an audio primaryMediaType -> Listen (index 2).
@@ -190,11 +191,12 @@ const getActiveTopIndex = ({
     (pageType === MEDIA_ARTICLE_PAGE && primaryMediaType === 'audio') ||
     (pageType === ARTICLE_PAGE && primaryMediaType === 'audio')
   ) {
-    return topItems.length > 2 ? 2 : 0;
+    return topItems.length > 2 ? 2 : -1;
   }
 
-  // All other page types (article, topic, home, live, etc.) default to Home (index 0).
-  return 0;
+  // All other page types (article, topic, home, live, etc.) have no page-type
+  // attribution; leave nothing highlighted unless a URL match was found above.
+  return -1;
 };
 
 type NavigationContainerProps = {
