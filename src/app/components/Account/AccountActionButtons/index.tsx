@@ -39,23 +39,20 @@ const AccountActionButtons = ({
     ? undefined
     : 'focusIndicatorInvert';
 
-  const signInButtonContent = signInAccessibleLabel ? (
-    <CallToActionLink.ButtonLikeWrapper>
-      <span aria-hidden="true">
+  const signInButtonContent = (
+    <>
+      <CallToActionLink.ButtonLikeWrapper
+        aria-hidden={signInAccessibleLabel ? true : undefined}
+      >
         <AccountIcon css={styles.accountIcon} />
         <CallToActionLink.Text shouldUnderlineOnHoverFocus>
           {signInText}
         </CallToActionLink.Text>
-      </span>
-      <VisuallyHiddenText>{signInAccessibleLabel}</VisuallyHiddenText>
-    </CallToActionLink.ButtonLikeWrapper>
-  ) : (
-    <CallToActionLink.ButtonLikeWrapper>
-      <AccountIcon css={styles.accountIcon} />
-      <CallToActionLink.Text shouldUnderlineOnHoverFocus>
-        {signInText}
-      </CallToActionLink.Text>
-    </CallToActionLink.ButtonLikeWrapper>
+      </CallToActionLink.ButtonLikeWrapper>
+      {signInAccessibleLabel && (
+        <VisuallyHiddenText>{signInAccessibleLabel}</VisuallyHiddenText>
+      )}
+    </>
   );
 
   return (
