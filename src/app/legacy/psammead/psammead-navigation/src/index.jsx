@@ -147,6 +147,17 @@ export const NavigationUl = ({ children, ...props }) => (
   </StyledUnorderedList>
 );
 
+// Scrolls the focused nav link into view within its scrollable container.
+// Uses 'auto' rather than 'smooth' behaviour, in line with the ScrollableNavigation
+// component's decision to avoid smooth scrolling for accessibility reasons.
+const scrollLinkIntoView = event => {
+  event.currentTarget.scrollIntoView({
+    behavior: 'auto',
+    block: 'nearest',
+    inline: 'nearest',
+  });
+};
+
 export const NavigationLi = ({
   children: link,
   url,
@@ -168,6 +179,7 @@ export const NavigationLi = ({
           aria-current="page"
           className="focusIndicatorRemove"
           data-active="true"
+          onFocus={scrollLinkIntoView}
           {...clickTracker}
           {...props}
         >
@@ -180,6 +192,7 @@ export const NavigationLi = ({
           href={url}
           className="focusIndicatorRemove"
           aria-current={active ? 'page' : undefined}
+          onFocus={scrollLinkIntoView}
           {...clickTracker}
           {...props}
         >
