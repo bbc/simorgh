@@ -99,16 +99,12 @@ export default {
         paddingBottom: 0,
       },
     }),
-  contentContainerHighProminence: ({ mq, spacings }: Theme) =>
+  contentContainerHighProminence: ({ mq }: Theme) =>
     css({
       [mq.GROUP_4_MIN_WIDTH]: {
         display: 'flex',
         flexDirection: 'row-reverse',
         alignItems: 'center',
-      },
-      // tidy - maybe this style shouldn't be here
-      [mq.GROUP_5_MIN_WIDTH]: {
-        padding: `0 ${spacings.QUINTUPLE}rem`,
       },
     }),
   heading: ({ mq, palette, spacings }: Theme) =>
