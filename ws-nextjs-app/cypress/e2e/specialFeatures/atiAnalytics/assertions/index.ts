@@ -264,11 +264,68 @@ const assertViewabilityModelViewEvent = ({
   expect(parseInt(eventContext[0].data.site.level2_id, 10)).to.equal(siteId);
 };
 
+const getMatchingViewabilityEventData = ({
+  payload,
+  actionType,
+  component,
+}) => {
+  const arr = JSON.parse(payload);
+
+  const matchingEvent = arr.find(
+    event =>
+      event.name === `viewability.${actionType}` &&
+      event.data?.item?.name === component,
+  );
+
+  return matchingEvent?.data;
+};
+
+const assertItemAndGroupTaxonomy = ({
+  payload,
+  actionType,
+  component,
+  expectedItemType,
+  expectedGroupType,
+  expectedItemText,
+}) => {
+  if (!expectedItemType && !expectedGroupType && !expectedItemText) return;
+
+  const eventData = getMatchingViewabilityEventData({
+    payload,
+    actionType,
+    component,
+  });
+
+  if (expectedItemType) {
+    expect(eventData?.item?.type).to.equal(
+      expectedItemType,
+      'eventDetails.item.type',
+    );
+  }
+
+  if (expectedItemText) {
+    expect(eventData?.item?.text).to.equal(
+      expectedItemText,
+      'eventDetails.item.text',
+    );
+  }
+
+  if (expectedGroupType) {
+    expect(eventData?.group?.type).to.equal(
+      expectedGroupType,
+      'eventDetails.group.type',
+    );
+  }
+};
+
 export const assertATIComponentViewEvent = ({
   component,
   pageIdentifier,
   applicationType,
   siteId,
+  expectedItemType,
+  expectedGroupType,
+  expectedItemText,
 }) => {
   const requestAlias = `@${component}-viewability-view`;
 
@@ -282,6 +339,15 @@ export const assertATIComponentViewEvent = ({
         params,
         applicationType,
         siteId,
+      });
+
+      assertItemAndGroupTaxonomy({
+        payload: params.events,
+        actionType: VIEW_EVENT,
+        component,
+        expectedItemType,
+        expectedGroupType,
+        expectedItemText,
       });
     });
 };

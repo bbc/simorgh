@@ -1,42 +1,38 @@
 import { interceptATIAnalyticsBeacons, COMPONENTS } from '../helpers';
 import { assertATIComponentViewEvent } from '.';
 
-const { PORTRAIT_VIDEO_MODAL } = COMPONENTS;
+const { STREAM } = COMPONENTS;
 
-export const assertPortraitVideoModalComponentView = ({
+export const assertStreamEmbeddedVideoComponentView = ({
   pageIdentifier,
   path,
   applicationType,
   siteId,
+  scrollAnchorText,
   expectedItemType,
-  expectedGroupType,
   expectedItemText,
 }) => {
   const itOrSkip = applicationType === 'lite' ? it.skip : it;
 
   itOrSkip(
-    'should send a view event for the Portrait Video Modal component',
+    `should send a view event for a ${expectedItemType} embedded in the Live page stream ("${expectedItemText}")`,
     () => {
       interceptATIAnalyticsBeacons();
       cy.visit(path);
 
-      cy.get('[data-testid="portrait-video-carousel"]').scrollIntoView({
-        duration: 1000,
-      });
-
-      cy.get('[data-testid="promo-button"]').eq(0).click();
+      cy.contains(scrollAnchorText).scrollIntoView({ duration: 1000 });
 
       assertATIComponentViewEvent({
-        component: PORTRAIT_VIDEO_MODAL,
+        component: STREAM,
         pageIdentifier,
         applicationType,
         siteId,
         expectedItemType,
-        expectedGroupType,
+        expectedGroupType: STREAM,
         expectedItemText,
       });
     },
   );
 };
 
-export default assertPortraitVideoModalComponentView;
+export default assertStreamEmbeddedVideoComponentView;
