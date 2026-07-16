@@ -76,10 +76,9 @@ export default {
         alignItems: 'center',
       },
     }),
-  contentContainer: ({ mq, gridWidths, spacings }: Theme) =>
+  contentContainer: ({ mq, gridWidths }: Theme) =>
     css({
       zIndex: 3,
-      paddingBottom: `${spacings.QUADRUPLE}`, // typo - this needs to have REM
       overflow: 'hidden',
 
       [mq.GROUP_4_MIN_WIDTH]: {
@@ -89,9 +88,10 @@ export default {
         width: '100%',
       },
     }),
-  contentContainerNoPromos: ({ mq }: Theme) =>
+  contentContainerWithPromos: ({ mq, spacings }: Theme) =>
     css({
-      [mq.GROUP_4_MIN_WIDTH]: {
+      paddingBottom: `${spacings.DOUBLE}rem`,
+      [mq.GROUP_3_MIN_WIDTH]: {
         paddingBottom: 0,
       },
     }),

@@ -124,7 +124,7 @@ export default ({
         <div
           css={[
             styles.contentContainer,
-            !hasPromoItems && styles.contentContainerNoPromos,
+            hasPromoItems && styles.contentContainerWithPromos,
           ]}
         >
           <div css={[isHighProminence && styles.highProminenceRow]}>
