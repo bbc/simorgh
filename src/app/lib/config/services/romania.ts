@@ -347,6 +347,15 @@ export const service: DefaultServiceConfig = {
       sport: {
         keyEventsTitle: 'Evenimente cheie',
         matchSummary: 'Rezumatul meciului',
+        versus: 'contra',
+        kickOff: 'start',
+        timeToBeConfirmed: 'Ora urmează să fie confirmată',
+        teamToBeConfirmed: 'Echipa urmează să fie confirmată',
+        afterFullTime: 'după timpul regulamentar',
+        atFullTime: 'la finalul timpului regulamentar',
+        onPenalties: 'la penalty-uri',
+        onAggregate: 'la general',
+        win: 'câștigă',
         worldCupTeamNames: {
           algeria: 'Algeria',
           argentina: 'Argentina',
