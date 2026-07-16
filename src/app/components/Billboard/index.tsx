@@ -127,7 +127,7 @@ export default ({
             !hasPromoItems && styles.contentContainerNoPromos,
           ]}
         >
-          <div css={isHighProminence ? styles.highProminenceRow : undefined}>
+          <div css={[isHighProminence && styles.highProminenceRow]}>
             {renderImage()}
             <div
               css={[
