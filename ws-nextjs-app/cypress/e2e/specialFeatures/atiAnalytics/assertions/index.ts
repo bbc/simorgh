@@ -268,16 +268,28 @@ const getMatchingViewabilityEventData = ({
   payload,
   actionType,
   component,
+  expectedItemText,
 }) => {
   const arr = JSON.parse(payload);
 
-  const matchingEvent = arr.find(
+  const matchingEvents = arr.filter(
     event =>
       event.name === `viewability.${actionType}` &&
       event.data?.item?.name === component,
   );
 
-  return matchingEvent?.data;
+  // Multiple items (e.g. several stream-embedded videos) can share the same
+  // componentName and land in the same beacon batch, so disambiguate using
+  // the known item text when available rather than taking the first match.
+  if (expectedItemText) {
+    const exactMatch = matchingEvents.find(
+      event => event.data?.item?.text === expectedItemText,
+    );
+
+    if (exactMatch) return exactMatch.data;
+  }
+
+  return matchingEvents[0]?.data;
 };
 
 const assertItemAndGroupTaxonomy = ({
@@ -294,6 +306,7 @@ const assertItemAndGroupTaxonomy = ({
     payload,
     actionType,
     component,
+    expectedItemText,
   });
 
   if (expectedItemType) {
