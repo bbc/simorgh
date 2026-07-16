@@ -34,7 +34,7 @@ const logResponseTime = async (url, origin, service, timeout) => {
   return response;
 };
 
-const getToggles = async (service, cache) => {
+const getToggles = async ({ service, cache, isAmp = false }) => {
   const envConfig = getEnvConfig();
   const environment = envConfig.SIMORGH_APP_ENV || 'local';
   const timeout = parseInt(envConfig.SIMORGH_CONFIG_TIMEOUT_SECONDS, 10) * 1000;
@@ -44,7 +44,7 @@ const getToggles = async (service, cache) => {
   }
 
   const { origin } = getOriginContext();
-  const url = constructTogglesEndpoint(service, origin);
+  const url = constructTogglesEndpoint(service, isAmp);
 
   const cachedResponse = cache && cache.get(url);
 

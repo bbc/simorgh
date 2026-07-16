@@ -82,7 +82,7 @@ export default class CustomApp extends App<Props> {
     };
 
     const [togglesResult, navResult] = await Promise.allSettled([
-      getToggles(service),
+      getToggles({ service, isAmp }),
       fetchConfig<{ data: { items: Navigation[] } }>({
         service,
         pagePath: asPath,
@@ -204,10 +204,10 @@ export default class CustomApp extends App<Props> {
                   ) : (
                     <QueryProvider>
                       <UserContextProvider>
-                      <ThemeProviderSCSSModules
-                        service={service}
-                        variant={variant}
-                      >
+                        <ThemeProviderSCSSModules
+                          service={service}
+                          variant={variant}
+                        >
                           <ThemeProvider service={service} variant={variant}>
                             <PageWrapper
                               navItems={navItems}
@@ -217,7 +217,7 @@ export default class CustomApp extends App<Props> {
                               {RenderChildrenOrError}
                             </PageWrapper>
                           </ThemeProvider>
-                      </ThemeProviderSCSSModules>
+                        </ThemeProviderSCSSModules>
                       </UserContextProvider>
                     </QueryProvider>
                   )}

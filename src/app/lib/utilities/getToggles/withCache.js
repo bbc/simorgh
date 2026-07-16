@@ -12,6 +12,19 @@ const cacheTTL = parseInt(
 );
 const cache = new LRUCache({ max: cacheMaxItems, ttl: cacheTTL * 1000 });
 
-const withCache = async service => getToggles(service, cache);
+/**
+ * @param {{ service: string, isAmp?: boolean }} params
+ */
+const withCache = async ({ service, isAmp = false }) => {
+  const simorghToggles = await getToggles({ service, cache });
+
+  if (!isAmp) {
+    return simorghToggles;
+  }
+
+  const ampToggles = await getToggles({ service, cache, isAmp: true });
+
+  return { ...simorghToggles, ...ampToggles };
+};
 
 export default withCache;

@@ -1,5 +1,5 @@
 const mockUrl =
-  'https://mock-config-endpoint?application=simorgh&service=mundo&__amp_source_origin=http://localhost';
+  'https://mock-toggles-endpoint?service=mundo&application=simorgh';
 const mockResponse = {
   toggles: {
     testToggle: { enabled: true },
@@ -7,7 +7,7 @@ const mockResponse = {
 };
 
 describe('getToggles', () => {
-  const originalConfigURL = process.env.SIMORGH_CONFIG_URL;
+  const originalTogglesBffPath = process.env.TOGGLES_TEST_BFF_PATH;
 
   const mockSuccessfulFetchResponse = {
     ok: true,
@@ -16,14 +16,14 @@ describe('getToggles', () => {
   };
 
   beforeEach(() => {
-    process.env.SIMORGH_CONFIG_URL = 'https://mock-config-endpoint';
+    process.env.TOGGLES_TEST_BFF_PATH = 'https://mock-toggles-endpoint';
     jest.spyOn(global, 'fetch').mockResolvedValue(mockSuccessfulFetchResponse);
   });
 
   afterEach(() => {
     jest.resetModules();
     jest.restoreAllMocks();
-    process.env.SIMORGH_CONFIG_URL = originalConfigURL;
+    process.env.TOGGLES_TEST_BFF_PATH = originalTogglesBffPath;
   });
 
   it('should return defaultToggles if enableFetchingToggles is not enabled', async () => {
@@ -37,7 +37,7 @@ describe('getToggles', () => {
 
     // Dynamic import is used in these tests so the toggles file values can be changed
     const getToggles = await import('.');
-    const toggles = await getToggles.default('mundo');
+    const toggles = await getToggles.default({ service: 'mundo' });
 
     expect(toggles).toEqual(mockDefaultToggles.local);
   });
@@ -57,7 +57,7 @@ describe('getToggles', () => {
     it('should return the merged local and remote toggles', async () => {
       const { default: getToggles } = await import('.');
 
-      const toggles = await getToggles('mundo');
+      const toggles = await getToggles({ service: 'mundo' });
 
       expect(toggles).toEqual({
         ...mockDefaultToggles.local,
@@ -71,7 +71,7 @@ describe('getToggles', () => {
       };
 
       const { default: getToggles } = await import('.');
-      const toggles = await getToggles('mundo', mockCache);
+      const toggles = await getToggles({ service: 'mundo', cache: mockCache });
 
       expect(toggles).toEqual({
         ...mockDefaultToggles.local,
@@ -79,7 +79,7 @@ describe('getToggles', () => {
       });
       expect(mockCache.get).toHaveBeenCalledTimes(1);
       expect(mockCache.get).toHaveBeenCalledWith(
-        'https://mock-config-endpoint?application=simorgh&service=mundo&__amp_source_origin=http://localhost',
+        'https://mock-toggles-endpoint?service=mundo&application=simorgh',
       );
     });
 
@@ -90,7 +90,7 @@ describe('getToggles', () => {
       };
 
       const { default: getToggles } = await import('.');
-      const toggles = await getToggles('mundo', mockCache);
+      const toggles = await getToggles({ service: 'mundo', cache: mockCache });
 
       expect(toggles).toEqual({
         ...mockDefaultToggles.local,
@@ -122,7 +122,7 @@ describe('getToggles', () => {
       });
 
       const { default: getToggles } = await import('.');
-      const toggles = await getToggles('hausa');
+      const toggles = await getToggles({ service: 'hausa' });
       expect(toggles).toEqual(mockDefaultToggles.local);
     });
 
@@ -139,7 +139,7 @@ describe('getToggles', () => {
             .spyOn(process, 'hrtime')
             .mockReturnValue([10, 1000]);
 
-          await getToggles('mundo');
+          await getToggles({ service: 'mundo' });
 
           expect(hrtTimeSpy).toHaveBeenCalledTimes(2);
         });
@@ -155,7 +155,7 @@ describe('getToggles', () => {
           const { default: getToggles } = await import('.');
           const hrtTimeSpy = jest.spyOn(process, 'hrtime');
 
-          await getToggles('mundo');
+          await getToggles({ service: 'mundo' });
 
           expect(hrtTimeSpy).toHaveBeenCalledTimes(0);
         });

@@ -42,7 +42,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
   const variant = deriveVariant(variantFromUrl);
 
   const downloadData = await dataFetch(service);
-  const toggles = await getToggles(service);
+  const toggles = await getToggles({ service });
 
   return {
     props: {

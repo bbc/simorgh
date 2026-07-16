@@ -17,7 +17,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
   } = context.query as PageDataParams;
   const variant = deriveVariant(variantFromUrl);
 
-  const toggles = await getToggles(service);
+  const toggles = await getToggles({ service });
   const isUasPersonalizationEnabled = toggles?.uasPersonalization?.enabled;
 
   if (!isUasPersonalizationEnabled) {

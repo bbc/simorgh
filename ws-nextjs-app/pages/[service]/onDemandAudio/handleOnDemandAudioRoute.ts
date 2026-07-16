@@ -90,7 +90,7 @@ export default async (context: GetServerSidePropsContext) => {
     throw handleError('AudioPage data is malformed', 500);
   }
 
-  const toggles = await getToggles(service);
+  const toggles = await getToggles({ service });
 
   const { externalLinkVersionId, brandId, recentEpisodes } = pageData;
   const { enabled: scheduleIsEnabled } = toggles.onDemandRadioSchedule;
@@ -100,11 +100,11 @@ export default async (context: GetServerSidePropsContext) => {
 
   const externalLinks = isPodcast
     ? await getPodcastExternalLinks({
-        service,
-        variant: variant || undefined,
-        brandId,
-        versionId: externalLinkVersionId,
-      })
+      service,
+      variant: variant || undefined,
+      brandId,
+      versionId: externalLinkVersionId,
+    })
     : [];
 
   context.res.setHeader(
