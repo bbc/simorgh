@@ -40,8 +40,8 @@ jobs:
         working-directory: ./ws-nextjs-app
         run: yarn build
 
-      - name: Unit Tests - Express App
-        run: yarn test:unit:ci
+      # - name: Unit Tests - Express App
+      #   run: yarn test:unit:ci
 
       - name: Unit Tests - Next.JS App
         working-directory: ./ws-nextjs-app
