@@ -342,27 +342,51 @@ export const assertATIComponentViewEvent = ({
 }) => {
   const requestAlias = `@${component}-viewability-view`;
 
-  cy.wait(requestAlias)
-    .its('request.url')
-    .then(url => {
-      const params = getATIParamsFromURL(url);
+  // When expectedItemText is set, multiple components may share the same
+  // componentName (e.g. several stream-embedded videos). Scrolling to the
+  // target video can bring other videos into the viewport first, so their
+  // beacons arrive and consume the alias before the target fires. We keep
+  // consuming aliased requests until we find one whose payload matches the
+  // expected item text, or we exhaust the retry budget.
+  const waitForMatchingRequest = (remainingAttempts = 10) => {
+    cy.wait(requestAlias)
+      .its('request.url')
+      .then(url => {
+        const params = getATIParamsFromURL(url);
 
-      assertViewabilityModelViewEvent({
-        pageIdentifier,
-        params,
-        applicationType,
-        siteId,
-      });
+        if (expectedItemText) {
+          const eventData = getMatchingViewabilityEventData({
+            payload: params.events,
+            actionType: VIEW_EVENT,
+            component,
+            expectedItemText,
+          });
 
-      assertItemAndGroupTaxonomy({
-        payload: params.events,
-        actionType: VIEW_EVENT,
-        component,
-        expectedItemType,
-        expectedGroupType,
-        expectedItemText,
+          if (!eventData && remainingAttempts > 0) {
+            waitForMatchingRequest(remainingAttempts - 1);
+            return;
+          }
+        }
+
+        assertViewabilityModelViewEvent({
+          pageIdentifier,
+          params,
+          applicationType,
+          siteId,
+        });
+
+        assertItemAndGroupTaxonomy({
+          payload: params.events,
+          actionType: VIEW_EVENT,
+          component,
+          expectedItemType,
+          expectedGroupType,
+          expectedItemText,
+        });
       });
-    });
+  };
+
+  waitForMatchingRequest();
 };
 
 const assertViewabilityModelClickEvent = ({
