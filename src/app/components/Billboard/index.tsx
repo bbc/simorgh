@@ -110,47 +110,6 @@ export default ({
     );
   };
 
-  const textBlock = (
-    <div
-      css={[
-        styles.textContainer,
-        isHighProminence && styles.textContainerHighProminence,
-      ]}
-    >
-      <Heading level={2} size="paragon" css={styles.heading} id={id}>
-        <a href={link} css={styles.link} {...clickTrackerHandler}>
-          {showLiveLabel ? (
-            <div data-testid="billboard-live-label">
-              <LivePulse width="24" height="24" css={styles.liveLabelPulse} />
-              <LiveText css={styles.liveLabelText}>
-                <div>{heading}</div>
-              </LiveText>
-            </div>
-          ) : (
-            <div>{heading}</div>
-          )}
-        </a>
-      </Heading>
-      {description && (
-        <Text as="p" css={styles.description}>
-          {description}
-        </Text>
-      )}
-    </div>
-  );
-
-  const imageAndText = isHighProminence ? (
-    <div css={styles.highProminenceRow}>
-      {renderImage()}
-      {textBlock}
-    </div>
-  ) : (
-    <>
-      {renderImage()}
-      {textBlock}
-    </>
-  );
-
   return (
     <section role="region" aria-labelledby={id} data-testid={id}>
       <div css={styles.headerContainer} {...viewTracker}>
@@ -168,7 +127,39 @@ export default ({
             !hasPromoItems && styles.contentContainerNoPromos,
           ]}
         >
-          {imageAndText}
+          <div css={isHighProminence ? styles.highProminenceRow : undefined}>
+            {renderImage()}
+            <div
+              css={[
+                styles.textContainer,
+                isHighProminence && styles.textContainerHighProminence,
+              ]}
+            >
+              <Heading level={2} size="paragon" css={styles.heading} id={id}>
+                <a href={link} css={styles.link} {...clickTrackerHandler}>
+                  {showLiveLabel ? (
+                    <div data-testid="billboard-live-label">
+                      <LivePulse
+                        width="24"
+                        height="24"
+                        css={styles.liveLabelPulse}
+                      />
+                      <LiveText css={styles.liveLabelText}>
+                        <div>{heading}</div>
+                      </LiveText>
+                    </div>
+                  ) : (
+                    <div>{heading}</div>
+                  )}
+                </a>
+              </Heading>
+              {description && (
+                <Text as="p" css={styles.description}>
+                  {description}
+                </Text>
+              )}
+            </div>
+          </div>
           {hasPromoItems && (
             <div css={styles.curationGridSection}>
               {showMoreOnThisTitle && (
