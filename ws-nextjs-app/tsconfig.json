@@ -10,7 +10,25 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "paths": {
+      "#app/*": ["../src/app/*"],
+      "#src/*": ["../src/*"],
+      "#nextjs/*": ["../ws-nextjs-app/*"],
+      "#utilities/*": ["../ws-nextjs-app/utilities/*"],
+      "#contexts/*": ["../src/app/contexts/*"],
+      "#components/*": ["../src/app/legacy/components/*"],
+      "#containers/*": ["../src/app/legacy/containers/*"],
+      "#cypress/*": ["../cypress/*"],
+      "#data/*": ["../data/*"],
+      "#hooks/*": ["../src/app/hooks/*"],
+      "#lib/*": ["../src/app/lib/*"],
+      "#psammead/*": ["../src/app/legacy/psammead/*"],
+      "#models/*": ["../src/app/models/*"],
+      "#testHelpers/*": ["../src/testHelpers/*"],
+      "#pages/*": ["../src/app/pages/*"],
+      "#storybook/*": ["../.storybook/*"]
+    }
   },
   "include": [
     "next-env.d.ts",
