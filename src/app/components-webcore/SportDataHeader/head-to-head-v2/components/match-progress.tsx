@@ -1,4 +1,4 @@
-import { getFallbackFootballPeriodLabel } from '../helpers/event-summary';
+import getFallbackFootballPeriodLabel from '../helpers/getFallbackFootballPeriodLabel';
 import { isInProgressStatus } from '../helpers/event-status-groups';
 import { shouldShowScores } from './centre';
 import Period from './period';
