@@ -88,6 +88,9 @@ const AccountSignInModal = ({ onClose }: AccountSignInModalProps) => {
             <div css={styles.actionsContainer}>
               <AccountActionButtons
                 signInRef={firstElementRef}
+                signInAccessibleLabel={
+                  translations?.account?.signInAccessibleLabel
+                }
                 signInComponentName="account-sign-in-modal-sign-in"
                 registerComponentName="account-sign-in-modal-register"
               />

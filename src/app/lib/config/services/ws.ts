@@ -72,6 +72,7 @@ export const service: DefaultServiceConfig = {
       gist: 'At a glance',
       account: {
         signIn: 'Sign In',
+        signInAccessibleLabel: 'Sign in to My News',
         forYou: 'Your Account',
         register: 'Register',
         settings: 'Settings',
