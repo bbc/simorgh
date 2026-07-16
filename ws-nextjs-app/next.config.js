@@ -1,6 +1,7 @@
 /* eslint-disable no-param-reassign */
 const path = require('path');
 const MomentTimezoneInclude = require('../src/app/legacy/psammead/moment-timezone-include/src');
+
 const DevCssExtractLoader =
   require.resolve('./scripts/DevCssExtractLoader.cjs');
 const {
@@ -97,8 +98,23 @@ module.exports = {
         __dirname,
         '../src/app/components/ThemeProviderSCSSModules',
       ),
+      '#app': path.join(__dirname, '../src/app'),
+      '#src': path.join(__dirname, '../src'),
+      '#nextjs': __dirname,
+      '#utilities': path.join(__dirname, 'utilities'),
+      '#contexts': path.join(__dirname, '../src/app/contexts'),
+      '#components': path.join(__dirname, '../src/app/legacy/components'),
+      '#containers': path.join(__dirname, '../src/app/legacy/containers'),
+      '#cypress': path.join(__dirname, '../cypress'),
+      '#data': path.join(__dirname, '../data'),
+      '#hooks': path.join(__dirname, '../src/app/hooks'),
+      '#lib': path.join(__dirname, '../src/app/lib'),
+      '#psammead': path.join(__dirname, '../src/app/legacy/psammead'),
+      '#models': path.join(__dirname, '../src/app/models'),
+      '#testHelpers': path.join(__dirname, '../src/testHelpers'),
+      '#pages': path.join(__dirname, '../src/app/pages'),
+      '#storybook': path.join(__dirname, '../.storybook'),
     };
-
     config.plugins.push(
       new MomentTimezoneInclude({ startYear: 2010, endYear: 2026 }),
     );
