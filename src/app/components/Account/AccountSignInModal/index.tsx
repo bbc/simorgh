@@ -12,8 +12,8 @@ import styles from './index.styles';
 
 type AccountSignInModalProps = {
   onClose: () => void;
-  signInUrl: string | undefined;
-  registerUrl: string | undefined;
+  signInUrl?: string | undefined;
+  registerUrl?: string | undefined;
 };
 
 const AccountSignInModal = ({ onClose }: AccountSignInModalProps) => {

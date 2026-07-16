@@ -1,28 +1,14 @@
 import { screen } from '@testing-library/react';
 import { render } from '#app/components/react-testing-library-with-providers';
-import { IdctaConfig } from '#app/models/types/account';
+import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
 import AccountSignInModal from '.';
-
-const idctaConfig: IdctaConfig = {
-  'id-availability': 'GREEN',
-  unavailable_url: 'https://example.com/unavailable',
-  signin_url: 'https://example.com/signin',
-  register_url: 'https://example.com/register',
-  settings_url: 'https://example.com/settings',
-  signout_url: 'https://example.com/signout',
-  foryou_url: 'https://example.com/foryou',
-  initialIsSignedIn: false,
-  identity: {
-    idSignedInCookieName: 'ckns_id',
-  },
-};
 
 const onClose = jest.fn();
 
 const renderComponent = (service: 'ws' | 'hindi' = 'ws') =>
   render(<AccountSignInModal onClose={onClose} />, {
     service,
-    idctaConfig,
+    idctaConfig: mockIdctaConfig,
   });
 
 describe('AccountSignInModal', () => {
