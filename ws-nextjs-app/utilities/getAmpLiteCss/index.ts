@@ -42,6 +42,12 @@ const manifestCache = new Map<string, BuildManifest | LoadableManifest>();
 // disk reads for the same chunk on every AMP/Lite request.
 const cssFileCache = new Map<string, string>();
 
+const stripVendorPrefixedDeclarations = (css: string): string =>
+  css.replace(
+    /(^|[;{\s])-(webkit|moz|ms|o)-[\w-]+\s*:\s*[^;}{]+;?/gm,
+    '$1',
+  );
+
 const safeReadFile = (filePath: string, logCode: string): string | null => {
   try {
     return readFileSync(filePath, 'utf-8');
@@ -212,14 +218,15 @@ const getAmpLiteCss = ({
       });
       return '';
     }
-    return (
-      safeReadFile(devCssPath, logCodes.BUILD_MANIFEST_CSS_READ_ERROR) ?? ''
+    return stripVendorPrefixedDeclarations(
+      safeReadFile(devCssPath, logCodes.BUILD_MANIFEST_CSS_READ_ERROR) ?? '',
     );
   }
 
-  return getBuildManifestCss(page) + getDynamicImportCss(dynamicIds);
+  return stripVendorPrefixedDeclarations(
+    getBuildManifestCss(page) + getDynamicImportCss(dynamicIds),
+  );
 };
-
 export default getAmpLiteCss;
 
 // Internal helpers exported only for testing purposes.
