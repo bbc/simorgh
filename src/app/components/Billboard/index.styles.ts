@@ -57,18 +57,6 @@ export default {
     css({
       background: '#000000',
     }),
-  imageWithPromoItems: ({ mq, spacings }: Theme) =>
-    css({
-      [mq.GROUP_4_MIN_WIDTH]: {
-        width: '50%',
-        position: 'absolute',
-        insetInlineEnd: 0,
-        padding: `${spacings.DOUBLE}rem`,
-        display: 'flex',
-        alignItems: 'center',
-        height: '50%',
-      },
-    }),
   imageContainer: ({ mq, spacings }: Theme) =>
     css({
       [mq.GROUP_4_MIN_WIDTH]: {
@@ -78,6 +66,14 @@ export default {
         display: 'flex',
         alignItems: 'center',
         boxSizing: 'border-box',
+      },
+    }),
+  highProminenceRow: ({ mq }: Theme) =>
+    css({
+      [mq.GROUP_4_MIN_WIDTH]: {
+        display: 'flex',
+        flexDirection: 'row-reverse',
+        alignItems: 'center',
       },
     }),
   contentContainer: ({ mq, gridWidths, spacings }: Theme) =>
@@ -97,14 +93,6 @@ export default {
     css({
       [mq.GROUP_4_MIN_WIDTH]: {
         paddingBottom: 0,
-      },
-    }),
-  contentContainerHighProminence: ({ mq }: Theme) =>
-    css({
-      [mq.GROUP_4_MIN_WIDTH]: {
-        display: 'flex',
-        flexDirection: 'row-reverse',
-        alignItems: 'center',
       },
     }),
   heading: ({ mq, palette, spacings }: Theme) =>
