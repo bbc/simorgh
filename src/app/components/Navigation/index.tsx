@@ -9,6 +9,14 @@ import useViewTracker from '#app/hooks/useViewTracker';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { Direction, Navigation, PageTypes } from '#app/models/types/global';
+import {
+  TV_PAGE,
+  LIVE_TV_PAGE,
+  AUDIO_PAGE,
+  LIVE_RADIO_PAGE,
+  MEDIA_ARTICLE_PAGE,
+  ARTICLE_PAGE,
+} from '#app/routes/utils/pageTypes';
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import Canonical from './index.canonical';
 import Amp from './index.amp';
@@ -119,21 +127,27 @@ const matchesUrl = ({
 
 /**
  * Find which top item should be active:
- * - If current page matches a top item url -> that index is active
+ * - If current page URL matches a top item url -> that index is active
  * - Else if it matches any subItem url -> parent index is active
- * - Else if pageType === 'home' -> 0
- * - Else -> -1 (no active)
+ * - Else use page-type attribution:
+ *   - Video page (tv, liveTV), video mediaArticle, or article with video primaryMediaType -> index 1 (Watch)
+ *   - Audio page (audio, liveRadio), audio mediaArticle, or article with audio primaryMediaType -> index 2 (Listen)
+ *   - Any other type (article, topic, home, etc.) -> index 0 (Home)
+ * Nav items are hopefully always ordered: 0=Home, 1=Watch, 2=Listen, otherwise it won't be possible to know which one to highlight when we aren't matching on url
+ * primaryMediaType must be explicitly 'video' or 'audio' to trigger Watch/Listen attribution.
  */
 const getActiveTopIndex = ({
   topItems,
   canonicalLink,
   origin,
   pageType,
+  primaryMediaType,
 }: {
   topItems: Navigation[];
   origin: string;
   canonicalLink?: string;
   pageType?: PageTypes;
+  primaryMediaType?: 'audio' | 'video';
 }) => {
   if (!topItems?.length) return -1;
 
@@ -158,18 +172,37 @@ const getActiveTopIndex = ({
   );
   if (parentIndexByChild > -1) return parentIndexByChild;
 
-  // We always want the first top level nav item to be active on the home page,
-  // and the first nav item should always be 'Home'
-  if (pageType === 'home') return 0;
+  // Page-type attribution: nav items are ordered Home (0), Watch (1), Listen (2).
+  // Video pages, video mediaArticles, and article pages with a video primaryMediaType -> Watch (index 1).
+  if (
+    pageType === TV_PAGE ||
+    pageType === LIVE_TV_PAGE ||
+    (pageType === MEDIA_ARTICLE_PAGE && primaryMediaType === 'video') ||
+    (pageType === ARTICLE_PAGE && primaryMediaType === 'video')
+  ) {
+    return topItems.length > 1 ? 1 : 0;
+  }
 
-  return -1;
-};
+  // Audio pages, audio mediaArticles, and article pages with an audio primaryMediaType -> Listen (index 2).
+  if (
+    pageType === AUDIO_PAGE ||
+    pageType === LIVE_RADIO_PAGE ||
+    (pageType === MEDIA_ARTICLE_PAGE && primaryMediaType === 'audio') ||
+    (pageType === ARTICLE_PAGE && primaryMediaType === 'audio')
+  ) {
+    return topItems.length > 2 ? 2 : 0;
+  }
+
+  // All other page types (article, topic, home, live, etc.) default to Home (index 0).
+  return 0;
+};;
 
 type NavigationContainerProps = {
   navItems?: Navigation[];
   propsForTopBarOJComponent?: {
     blocks?: TopStoryItem[];
   };
+  primaryMediaType?: 'audio' | 'video';
 };
 
 const navEventTrackingMetadata = { componentName: 'scrollable-navigation' };
@@ -178,6 +211,7 @@ const dropdownNavEventTrackingData = { componentName: 'dropdown-navigation' };
 const NavigationContainer: React.FC<NavigationContainerProps> = ({
   navItems,
   propsForTopBarOJComponent,
+  primaryMediaType,
 }) => {
   const { isAmp, isLite, pageType, canonicalLink, origin } =
     use(RequestContext);
@@ -228,6 +262,7 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
     canonicalLink,
     origin,
     pageType,
+    primaryMediaType,
   });
 
   const topScrollableListItems = (
