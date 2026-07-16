@@ -7,7 +7,6 @@ import {
   AresMediaMetadataBlock,
   ClipMediaBlock,
   MediaBlock,
-  Orientations,
 } from '#app/components/MediaLoader/types';
 import styles from './styles';
 
@@ -36,20 +35,15 @@ const getMediaTitle = (blocks: MediaBlock[]): string | undefined => {
   return undefined;
 };
 
-const getOrientation = (blocks: MediaBlock[]): Orientations =>
-  isPortraitVideo(blocks) ? 'portrait' : 'landscape';
-
 type StreamVideoPostProps = {
   blocks: MediaBlock[];
 };
 
 const StreamVideoPost = ({ blocks }: StreamVideoPostProps) => {
   const isPortrait = isPortraitVideo(blocks);
-  const orientation = getOrientation(blocks);
   const title = getMediaTitle(blocks);
 
-  const itemType =
-    orientation === 'portrait' ? 'portrait-video' : 'landscape-video';
+  const itemType = isPortrait ? 'portrait-video' : 'landscape-video';
 
   const viewTracker = useViewTracker({
     componentName: 'stream',
