@@ -8,7 +8,7 @@ const createDateAdapter = () => ({
   createMomentInTimezone: ({ locale, timestamp, timezone }) =>
     moment(timestamp).locale(locale).tz(timezone),
   formatDuration: ({ duration, format, locale }) => {
-    const bcp47Locale = locale?.replace(/_/g, '-');
+    const bcp47Locale = locale?.replace(/_/g, '-') || undefined;
     const safeDuration = (() => {
       try {
         return globalThis.Temporal.Duration.from(duration);
@@ -29,17 +29,20 @@ const createDateAdapter = () => ({
         useGrouping: false,
       }).format(n);
 
-    const withArabicComma = str =>
-      new Intl.Locale(bcp47Locale).maximize().script === 'Arab'
+    const withArabicComma = str => {
+      if (!bcp47Locale) return str;
+      return new Intl.Locale(bcp47Locale).maximize().script === 'Arab'
         ? str.replace(/,/g, '\u060C')
         : str;
+    };
 
     if (format) {
       return withArabicComma(
         format
           .replace('h', localeDigits(hours, 1))
           .replace('mm', localeDigits(minutes, 2))
-          .replace('ss', localeDigits(seconds, 2)),
+          .replace('ss', localeDigits(seconds, 2))
+          .replace('m', localeDigits(minutes, 1)),
       );
     }
 
