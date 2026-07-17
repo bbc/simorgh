@@ -1420,7 +1420,7 @@ describe('buildSettings', () => {
           plugins: {
             toLoad: [
               {
-                html: 'https://static.files.bbci.co.uk/dazzler-edge-plugin/v1_0_1/DazzlerEdgePlugin.min.js',
+                html: 'https://static.files.bbci.co.uk/dazzler-edge-plugin/v1_0_2/DazzlerEdgePlugin.min.js',
                 playerOnly: true,
                 data: {
                   env: 'test',
@@ -1536,7 +1536,7 @@ describe('buildSettings', () => {
           plugins: {
             toLoad: [
               {
-                html: 'https://static.files.bbci.co.uk/dazzler-edge-plugin/v1_0_1/DazzlerEdgePlugin.min.js',
+                html: 'https://static.files.bbci.co.uk/dazzler-edge-plugin/v1_0_2/DazzlerEdgePlugin.min.js',
                 playerOnly: true,
                 data: {
                   env: 'test',

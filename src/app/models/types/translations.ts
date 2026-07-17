@@ -14,6 +14,10 @@ export interface Translations {
   home: string;
   currentPage: string;
   skipLinkText: string;
+  skipContent?: {
+    text: string;
+    endTextVisuallyHidden: string;
+  };
   relatedContent: string;
   topicsPath?: string;
   relatedTopics?: string;
@@ -263,11 +267,21 @@ export interface Translations {
     ft?: string;
     et?: string;
     afterExtraTime?: string;
+    versus?: string;
+    kickOff?: string;
+    teamToBeConfirmed?: string;
+    timeToBeConfirmed?: string;
+    afterFullTime?: string;
+    atFullTime?: string;
+    onPenalties?: string;
+    onAggregate?: string;
+    win?: string;
     penaltyAbbreviation?: string;
     ownGoal?: string;
     venue?: string;
     attendance?: string;
     matchSummary?: string;
+    keyEventsTitle?: string;
     winOnPenalties?: {
       prefix?: string;
       suffix?: string;
