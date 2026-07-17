@@ -66,29 +66,16 @@ const CanonicalATIAnalytics = ({ reverbParams }: ATIAnalyticsProps) => {
     reverbUrlHelper.getOperaMiniPageViewUrl(reverbParams),
   );
 
-  // return (
-  //   <>
-  //     {addScript({ script: addSendStaticBeaconToWindow, nonce })}
-  //     {isLite &&
-  //       addScript({
-  //         script: sendPageViewBeaconLite,
-  //         parameters: [liteSiteReverbURL],
-  //         nonce,
-  //       })}
-  //     {!isLite &&
-  //       addScript({
-  //         script: sendPageViewBeaconOperaMini,
-  //         parameters: [operaMiniPageViewReverbURL, isOperaProxy],
-  //         nonce,
-  //       })}
-  //     {renderNoScriptTrackingPixel({ reverbParams })}
-  //   </>
-  // );
-
   return (
     <>
       {addScript({ script: addSendStaticBeaconToWindow, nonce })}
       {isLite &&
+        addScript({
+          script: sendPageViewBeaconLite,
+          parameters: [liteSiteReverbURL],
+          nonce,
+        })}
+      {!isLite &&
         addScript({
           script: sendPageViewBeaconOperaMini,
           parameters: [operaMiniPageViewReverbURL, isOperaProxy],

@@ -1,6 +1,6 @@
 export type InlineScriptProps = {
   script: string | { toString: () => string };
-  parameters?: string | string[];
+  parameters?: string | string[] | (string | { toString: () => string })[];
   nonce?: string | null;
 };
 
