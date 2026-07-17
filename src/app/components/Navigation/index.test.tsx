@@ -343,7 +343,7 @@ describe('Navigation', () => {
 
     const navItemsWithoutWatchOrListen = [{ title: 'Home', url: '/news' }];
 
-    it('highlights nothing for an article page with no URL match', () => {
+    it('highlights Home for an article page with no URL match', () => {
       const { container } = render(
         <Navigation navItems={navItemsWithoutWatchOrListen} />,
         {
@@ -353,10 +353,10 @@ describe('Navigation', () => {
         },
       );
       const activeLink = container.querySelector('[data-active="true"]');
-      expect(activeLink).toBeNull();
+      expect(activeLink).toHaveAttribute('href', '/news');
     });
 
-    it('highlights nothing for an article page with no primaryMediaType, even with Watch/Listen nav items', () => {
+    it('highlights Home for an article page with no primaryMediaType, even with Watch/Listen nav items', () => {
       const { container } = render(
         <Navigation navItems={navItemsWithWatch} />,
         {
@@ -366,7 +366,7 @@ describe('Navigation', () => {
         },
       );
       const activeLink = container.querySelector('[data-active="true"]');
-      expect(activeLink).toBeNull();
+      expect(activeLink).toHaveAttribute('href', '/hausa');
     });
 
     it('highlights Listen nav item for an article page with audio primaryMediaType', () => {
@@ -398,7 +398,7 @@ describe('Navigation', () => {
       expect(activeLink).toHaveAttribute('href', '/hausa/bbc_hausa_tv');
     });
 
-    it('highlights nothing for an article page with audio primaryMediaType when no Listen nav item exists', () => {
+    it('falls back to Home for an article page with audio primaryMediaType when no Listen nav item exists', () => {
       const { container } = render(
         <Navigation
           navItems={navItemsWithoutWatchOrListen}
@@ -411,10 +411,10 @@ describe('Navigation', () => {
         },
       );
       const activeLink = container.querySelector('[data-active="true"]');
-      expect(activeLink).toBeNull();
+      expect(activeLink).toHaveAttribute('href', '/news');
     });
 
-    it('highlights nothing for a topic page with no URL match', () => {
+    it('highlights Home for a topic page with no URL match', () => {
       const { container } = render(
         <Navigation navItems={navItemsWithoutWatchOrListen} />,
         {
@@ -424,7 +424,7 @@ describe('Navigation', () => {
         },
       );
       const activeLink = container.querySelector('[data-active="true"]');
-      expect(activeLink).toBeNull();
+      expect(activeLink).toHaveAttribute('href', '/news');
     });
 
     it('highlights Watch nav item for a tv page type', () => {
@@ -466,7 +466,7 @@ describe('Navigation', () => {
       expect(activeLink).toHaveAttribute('href', '/hausa/bbc_hausa_tv');
     });
 
-    it('highlights nothing for a video mediaArticle page type when no Watch nav item exists', () => {
+    it('falls back to Home for a video mediaArticle page type when no Watch nav item exists', () => {
       const { container } = render(
         <Navigation
           navItems={navItemsWithoutWatchOrListen}
@@ -479,7 +479,7 @@ describe('Navigation', () => {
         },
       );
       const activeLink = container.querySelector('[data-active="true"]');
-      expect(activeLink).toBeNull();
+      expect(activeLink).toHaveAttribute('href', '/news');
     });
 
     it('highlights Listen nav item for an audio mediaArticle page type', () => {
@@ -498,7 +498,7 @@ describe('Navigation', () => {
       );
     });
 
-    it('highlights nothing for an audio mediaArticle page type when no Listen nav item exists', () => {
+    it('falls back to Home for an audio mediaArticle page type when no Listen nav item exists', () => {
       const { container } = render(
         <Navigation
           navItems={navItemsWithoutWatchOrListen}
@@ -511,7 +511,7 @@ describe('Navigation', () => {
         },
       );
       const activeLink = container.querySelector('[data-active="true"]');
-      expect(activeLink).toBeNull();
+      expect(activeLink).toHaveAttribute('href', '/news');
     });
 
     it('highlights Listen nav item for an audio page type', () => {
@@ -546,7 +546,7 @@ describe('Navigation', () => {
       );
     });
 
-    it('highlights nothing when on a tv page but no Watch nav item exists', () => {
+    it('falls back to Home when on a tv page but no Watch nav item exists', () => {
       const { container } = render(
         <Navigation navItems={navItemsWithoutWatchOrListen} />,
         {
@@ -556,10 +556,10 @@ describe('Navigation', () => {
         },
       );
       const activeLink = container.querySelector('[data-active="true"]');
-      expect(activeLink).toBeNull();
+      expect(activeLink).toHaveAttribute('href', '/news');
     });
 
-    it('highlights nothing when on an audio page but no Listen nav item exists', () => {
+    it('falls back to Home when on an audio page but no Listen nav item exists', () => {
       const { container } = render(
         <Navigation navItems={navItemsWithoutWatchOrListen} />,
         {
@@ -569,7 +569,7 @@ describe('Navigation', () => {
         },
       );
       const activeLink = container.querySelector('[data-active="true"]');
-      expect(activeLink).toBeNull();
+      expect(activeLink).toHaveAttribute('href', '/news');
     });
   });
 
