@@ -90,6 +90,10 @@ export const service: DefaultServiceConfig = {
       continueReading: 'पढ़ना जारी रखें',
       currentPage: 'मौजूदा पन्ना',
       skipLinkText: 'सामग्री को स्किप करें',
+      skipContent: {
+        text: '%title% छोड़ें और जारी रखें',
+        endTextVisuallyHidden: '%title% का अंत',
+      },
       relatedContent: 'संबंधित समाचार',
       relatedTopics: 'मिलते-जुलते मुद्दे',
       moreOnThis: '',

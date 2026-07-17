@@ -90,6 +90,10 @@ export const service: DefaultServiceConfig = {
       continueReading: 'واصل القراءة',
       currentPage: 'الصفحة الحالية',
       skipLinkText: 'إذهب الى المحتوى',
+      skipContent: {
+        text: 'تخطَّ %title% وتابع',
+        endTextVisuallyHidden: 'نهاية %title%',
+      },
       relatedContent: 'المزيد حول هذه القصة',
       relatedTopics: 'كلمات مفتاحية',
       moreOnThis: '',
