@@ -28,19 +28,24 @@ const styles = {
     flexShrink: 0,
   },
 
-  wrapperDefault: {
+  wrapperDefault: ({ mq }: Theme) => ({
     display: 'flex',
     alignItems: 'center',
     marginInlineStart: 'auto',
-  },
-  linkDefault: ({ palette, mq }: Theme) => ({
+
+    [mq.GROUP_4_MIN_WIDTH]: {
+      marginInlineStart: 0,
+    },
+  }),
+  linkDefault: ({ palette, mq, spacings, fontSizes }: Theme) => ({
     display: 'flex',
     alignItems: 'center',
-    gap: `${pixelsToRem(8)}rem`,
-    minHeight: `${pixelsToRem(44)}rem`,
-    paddingInline: `${pixelsToRem(8)}rem`,
+    gap: `${pixelsToRem(5)}rem`,
+    height: `${spacings.QUINTUPLE}rem`,
+    padding: `${spacings.HALF}rem 0`,
     color: palette.BLACK,
-    fontSize: `${pixelsToRem(16)}rem`,
+    marginLeft: `${pixelsToRem(22)}rem`,
+    ...fontSizes.pica,
     textDecoration: 'none',
     border: `${pixelsToRem(2)}rem solid transparent`,
 

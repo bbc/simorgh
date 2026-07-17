@@ -13,7 +13,7 @@ export default {
       width: '100%',
       maxWidth: `calc(${SVG_WRAPPER_MAX_WIDTH_ABOVE_1280PX} + ${spacings.QUADRUPLE}rem)`,
       margin: '0 auto',
-      padding: `0 ${spacings.DOUBLE}rem`,
+      padding: `${spacings.DOUBLE}rem ${spacings.FULL}rem`,
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
@@ -21,48 +21,7 @@ export default {
 
       [mq.GROUP_3_MIN_WIDTH]: {
         justifyContent: 'flex-start',
-      },
-
-      a: {
-        marginTop: `${pixelsToRem(5)}rem`,
-      },
-    }),
-  bannerAccount: ({ palette, mq }: Theme) =>
-    css({
-      marginInlineStart: 'auto',
-      display: 'flex',
-      alignItems: 'center',
-
-      a: {
-        marginTop: 0,
-        color: palette.BLACK,
-        fontSize: `${pixelsToRem(16)}rem`,
-        border: `${pixelsToRem(2)}rem solid transparent`,
-        textDecoration: 'none',
-
-        svg: {
-          fill: palette.SERVICE_NEUTRAL_CORE,
-          width: `${pixelsToRem(32)}rem`,
-          height: `${pixelsToRem(32)}rem`,
-        },
-
-        '&:hover': {
-          boxShadow: 'none',
-          textDecoration: 'none',
-          borderBottomColor: palette.SERVICE_NEUTRAL_CORE,
-        },
-
-        '&:focus, &:focus-visible': {
-          outline: 'none',
-          boxShadow: 'none',
-          borderColor: palette.BLACK,
-        },
-
-        [mq.GROUP_0_MAX_WIDTH]: {
-          span: {
-            display: 'none',
-          },
-        },
+        paddingInline: `${spacings.DOUBLE}rem`,
       },
     }),
   headerBrand: ({ mq, spacings }: Theme) =>
