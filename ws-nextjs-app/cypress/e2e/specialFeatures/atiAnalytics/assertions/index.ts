@@ -399,10 +399,16 @@ export const assertATIComponentViewEvent = ({
   // Multiple items can share the same componentName (e.g. several
   // stream-embedded videos), and their view events may arrive across
   // several separate beacon requests as different videos become visible
-  // at different times. Poll the full set of requests intercepted so far
+  // at different times. cy.wait() is used first to guarantee the alias
+  // actually exists in Cypress's registry (it's created dynamically inside
+  // the intercept handler, so cy.get('@alias.all') throws immediately
+  // rather than retrying if no matching request has occurred yet). Once at
+  // least one match exists, poll the full accumulated set of requests
   // under this alias until one of them contains an event matching the
   // expected item text, rather than assuming the first (or Nth) request
   // to arrive is the one we scrolled to.
+  cy.wait(requestAlias, { timeout: 15000 });
+
   cy.get(`${requestAlias}.all`, { timeout: 15000 }).should(interceptions => {
     const matched = findMatchingEventDataFromInterceptions({
       interceptions,
