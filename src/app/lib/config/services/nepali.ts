@@ -70,6 +70,10 @@ export const service: DefaultServiceConfig = {
       },
       currentPage: 'अहिलेको पृष्ठ',
       skipLinkText: 'सामग्रीमा जानुहोस्',
+      skipContent: {
+        text: '%title% छोड्नुहोस् र जारी राख्नुहोस्',
+        endTextVisuallyHidden: '%title% को अन्त्य',
+      },
       relatedContent: 'सम्बन्धित सामग्री',
       relatedTopics: 'सम्बन्धित सामग्री',
       moreOnThis: '',

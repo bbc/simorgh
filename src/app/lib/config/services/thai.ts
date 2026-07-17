@@ -69,6 +69,10 @@ export const service: DefaultServiceConfig = {
       },
       currentPage: 'หน้าปัจจุบัน',
       skipLinkText: 'ข้ามไปยังเนื้อหา',
+      skipContent: {
+        text: 'ข้าม%title%และดำเนินการต่อ',
+        endTextVisuallyHidden: 'สิ้นสุด %title%',
+      },
       relatedContent: 'อ่านเรื่องที่เกี่ยวข้อง',
       relatedTopics: 'ข่าวที่เกี่ยวข้อง',
       moreOnThis: '',
