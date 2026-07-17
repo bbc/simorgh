@@ -8,13 +8,29 @@ const createDateAdapter = () => ({
   createMomentInTimezone: ({ locale, timestamp, timezone }) =>
     moment(timestamp).locale(locale).tz(timezone),
   formatDuration: ({ duration, format, locale }) => {
-    const defaultDurationFormat = duration?.includes('H') ? 'h:mm:ss' : 'mm:ss';
-    const durationInMilliseconds = moment.duration(duration).asMilliseconds();
+    const totalSeconds = globalThis.Temporal.Duration.from(duration).total({
+      unit: 'seconds',
+    });
+    const hours = Math.floor(totalSeconds / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = Math.floor(totalSeconds % 60);
 
-    return moment
-      .utc(durationInMilliseconds)
-      .locale(locale)
-      .format(format || defaultDurationFormat);
+    const localeDigits = (n, minDigits) =>
+      new Intl.NumberFormat(locale, {
+        minimumIntegerDigits: minDigits,
+        useGrouping: false,
+      }).format(n);
+
+    if (format) {
+      return format
+        .replace('h', localeDigits(hours, 1))
+        .replace('mm', localeDigits(minutes, 2))
+        .replace('ss', localeDigits(seconds, 2));
+    }
+
+    return hours > 0
+      ? `${localeDigits(hours, 1)}:${localeDigits(minutes, 2)}:${localeDigits(seconds, 2)}`
+      : `${localeDigits(minutes, 2)}:${localeDigits(seconds, 2)}`;
   },
   // Exposed to make Temporal available at runtime without changing behavior yet.
   toTemporalInstant: timestamp =>
