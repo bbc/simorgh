@@ -72,6 +72,10 @@ export const service: DefaultServiceConfig = {
       },
       currentPage: 'اوسنۍ پاڼه',
       skipLinkText: 'مطلب ته ورشئ',
+      skipContent: {
+        text: '%title% پریږدئ او دوام ورکړئ',
+        endTextVisuallyHidden: 'د %title% پای',
+      },
       relatedContent: 'ورته مطالب',
       relatedTopics: 'اړونده مطالب',
       moreOnThis: '',

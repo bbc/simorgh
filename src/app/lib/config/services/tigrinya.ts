@@ -87,6 +87,10 @@ export const service: DefaultServiceConfig = {
       continueReading: 'ምንባብ ቀጽል',
       currentPage: 'ዘለኹሞ ገጽ',
       skipLinkText: 'ናብቲ ትሕዝቶ ቀጽሉ',
+      skipContent: {
+        text: '%title% ዝለል እና ቀጽል',
+        endTextVisuallyHidden: 'መወዳእታ %title%',
+      },
       relatedContent: 'ተዛማዲ ትሕዝቶ',
       relatedTopics: 'ተዛማዲ ዛዕባታት',
       moreOnThis: '',
