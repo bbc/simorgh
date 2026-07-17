@@ -1,8 +1,8 @@
 import Scene3D from './scene3D';
-import styles from './index.styles';
+import styles from './index.module.scss';
 
 const Globe = () => (
-  <div css={styles.GlobeScene}>
+  <div className={styles.globeScene}>
     <Scene3D />
   </div>
 );
