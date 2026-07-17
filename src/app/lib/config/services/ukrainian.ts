@@ -86,6 +86,10 @@ const baseServiceConfig = {
     },
     currentPage: 'Поточна сторінка',
     skipLinkText: 'Перейти до змісту',
+    skipContent: {
+      text: 'Пропустити %title% і продовжити',
+      endTextVisuallyHidden: 'Кінець %title%',
+    },
     moreOnThis: '',
     navMenuText: 'Розділи',
     mediaAssetPage: {
@@ -304,6 +308,15 @@ const baseServiceConfig = {
       afterExtraTime: 'Після додаткового часу',
       penaltyAbbreviation: 'пен',
       ownGoal: 'автогол',
+      versus: 'проти',
+      kickOff: 'початок',
+      timeToBeConfirmed: 'Час уточнюється',
+      teamToBeConfirmed: 'Команда уточнюється',
+      afterFullTime: 'після основного часу',
+      atFullTime: 'в основний час',
+      onPenalties: 'по пенальті',
+      onAggregate: 'за сумою',
+      win: 'перемагає',
       winOnPenalties: {
         prefix: 'виграє',
         suffix: 'по пенальті',
