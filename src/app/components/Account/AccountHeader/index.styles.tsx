@@ -44,7 +44,6 @@ const styles = {
     height: `${spacings.QUINTUPLE}rem`,
     padding: `${spacings.HALF}rem 0`,
     color: palette.BLACK,
-    marginLeft: `${pixelsToRem(22)}rem`,
     ...fontSizes.pica,
     textDecoration: 'none',
     border: `${pixelsToRem(2)}rem solid transparent`,
@@ -62,6 +61,7 @@ const styles = {
     },
 
     [mq.GROUP_0_MAX_WIDTH]: {
+      marginLeft: `${pixelsToRem(22)}rem`,
       span: {
         display: 'none',
       },
