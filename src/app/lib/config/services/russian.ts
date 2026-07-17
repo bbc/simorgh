@@ -116,6 +116,10 @@ export const service: DefaultServiceConfig = {
       },
       ...russianUkrainianSharedTranslations,
       ...headerFooterTranslations,
+      skipContent: {
+        text: 'Пропустить %title% и продолжить',
+        endTextVisuallyHidden: 'Конец %title%',
+      },
       topicDiscovery: {
         heading: 'Узнать больше',
         moreAboutTopic: 'Больше о {topic}',
