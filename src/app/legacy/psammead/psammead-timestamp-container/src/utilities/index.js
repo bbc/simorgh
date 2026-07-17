@@ -8,7 +8,15 @@ const createDateAdapter = () => ({
   createMomentInTimezone: ({ locale, timestamp, timezone }) =>
     moment(timestamp).locale(locale).tz(timezone),
   formatDuration: ({ duration, format, locale }) => {
-    const totalSeconds = globalThis.Temporal.Duration.from(duration).total({
+    const bcp47Locale = locale?.replace(/_/g, '-');
+    const safeDuration = (() => {
+      try {
+        return globalThis.Temporal.Duration.from(duration);
+      } catch {
+        return globalThis.Temporal.Duration.from('PT0S');
+      }
+    })();
+    const totalSeconds = safeDuration.total({
       unit: 'seconds',
     });
     const hours = Math.floor(totalSeconds / 3600);
@@ -16,21 +24,30 @@ const createDateAdapter = () => ({
     const seconds = Math.floor(totalSeconds % 60);
 
     const localeDigits = (n, minDigits) =>
-      new Intl.NumberFormat(locale, {
+      new Intl.NumberFormat(bcp47Locale, {
         minimumIntegerDigits: minDigits,
         useGrouping: false,
       }).format(n);
 
+    const withArabicComma = str =>
+      new Intl.Locale(bcp47Locale).maximize().script === 'Arab'
+        ? str.replace(/,/g, '\u060C')
+        : str;
+
     if (format) {
-      return format
-        .replace('h', localeDigits(hours, 1))
-        .replace('mm', localeDigits(minutes, 2))
-        .replace('ss', localeDigits(seconds, 2));
+      return withArabicComma(
+        format
+          .replace('h', localeDigits(hours, 1))
+          .replace('mm', localeDigits(minutes, 2))
+          .replace('ss', localeDigits(seconds, 2)),
+      );
     }
 
-    return hours > 0
-      ? `${localeDigits(hours, 1)}:${localeDigits(minutes, 2)}:${localeDigits(seconds, 2)}`
-      : `${localeDigits(minutes, 2)}:${localeDigits(seconds, 2)}`;
+    return withArabicComma(
+      hours > 0
+        ? `${localeDigits(hours, 1)}:${localeDigits(minutes, 2)}:${localeDigits(seconds, 2)}`
+        : `${localeDigits(minutes, 2)}:${localeDigits(seconds, 2)}`,
+    );
   },
   // Exposed to make Temporal available at runtime without changing behavior yet.
   toTemporalInstant: timestamp =>
