@@ -41,6 +41,7 @@ const OnDemandAudioPage = ({
     imageUrl,
     imageAltText,
     promoBrandTitle,
+    promoSeriesTitle,
     durationISO8601,
     thumbnailImageUrl,
     radioScheduleData,
@@ -86,7 +87,7 @@ const OnDemandAudioPage = ({
     : [
         {
           '@type': 'AudioObject',
-          name: promoBrandTitle,
+          name: promoBrandTitle || promoSeriesTitle,
           description: summary,
           thumbnailUrl: thumbnailImageUrl,
           duration: durationISO8601,

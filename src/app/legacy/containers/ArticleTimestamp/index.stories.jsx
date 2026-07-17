@@ -99,6 +99,7 @@ H.storyName =
 const timezoneLocaleServices = [
   { service: 'news', label: 'English (Europe/London)' },
   { service: 'azeri', label: 'Azeri (Asia/Baku)' },
+  { service: 'persian', label: 'Persian (GMT, Jalali calendar)' },
   { service: 'arabic', label: 'Arabic (GMT, RTL)' },
   { service: 'portuguese', label: 'Portuguese (America/Sao_Paulo)' },
   { service: 'nepali', label: 'Nepali (Asia/Kathmandu)' },
