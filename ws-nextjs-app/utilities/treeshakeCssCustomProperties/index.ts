@@ -52,7 +52,7 @@ const collectUsedProperties = (css: string): Set<string> => {
 const treeshakeCssCustomProperties = (css: string): string => {
   const usedProperties = collectUsedProperties(css);
 
-  return css.replace(ROOT_BLOCK, (block, body) => {
+  return css.replace(ROOT_BLOCK, body => {
     const remainingBody = body.replace(
       CUSTOM_PROPERTY_DECLARATION,
       (declaration: string, name: string) =>
