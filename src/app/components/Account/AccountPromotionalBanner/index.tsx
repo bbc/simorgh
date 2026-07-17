@@ -17,7 +17,15 @@ import {
 } from './utilities';
 import styles from './index.styles';
 
-const AccountPromotionalBanner = () => {
+type AccountPromotionalBannerProps = {
+  experimentName?: string;
+  experimentVariant?: string;
+};
+
+const AccountPromotionalBanner = ({
+  experimentName,
+  experimentVariant,
+}: AccountPromotionalBannerProps = {}) => {
   const { enabled: accountEnabled } = useToggle('account');
   const { isSignedIn, isIdctaAvailable, signInUrl, registerUrl } =
     use(AccountContext);
@@ -28,10 +36,16 @@ const AccountPromotionalBanner = () => {
 
   const viewTracker = useViewTracker({
     componentName: 'account-promotional-banner',
+    ...(experimentName && { experimentName }),
+    ...(experimentVariant && { experimentVariant }),
+    ...(experimentVariant && { sendOptimizelyEvents: true }),
   });
 
   const { onClick: onCloseClickTrack } = useClickTrackerHandler({
     componentName: 'account-promotional-banner-close',
+    ...(experimentName && { experimentName }),
+    ...(experimentVariant && { experimentVariant }),
+    ...(experimentVariant && { sendOptimizelyEvents: true }),
   });
 
   const handleCloseClick = useCallback(
@@ -87,6 +101,8 @@ const AccountPromotionalBanner = () => {
           <AccountActionButtons
             signInComponentName="account-promotional-banner-sign-in"
             registerComponentName="account-promotional-banner-register"
+            experimentName={experimentName}
+            experimentVariant={experimentVariant}
           />
         </PromotionalBanner>
       </div>

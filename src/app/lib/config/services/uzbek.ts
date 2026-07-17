@@ -57,6 +57,19 @@ const defaultCyrillicConfig = {
   videoCaptionOffscreenText: 'Видео тагсўзи, ',
   imageCaptionOffscreenText: 'Сурат тагсўзи, ',
   imageCopyrightOffscreenText: 'Сурат манбаси, ',
+  podcastPromo: {
+    title: 'WhatsApp канали рекламаси',
+    brandTitle: 'Бизни WhatsApp да ҳам кузатинг',
+    brandDescription: `BBC News O‘zbek контенти энди Сизнинг WhatsApp да`,
+    image: {
+      src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0nytqnd.png',
+      alt: `BBC News O'zbek Obuna bo'ling!`,
+    },
+    linkLabel: {
+      text: 'Аъзо бўлиш учун бу ерга босинг',
+      href: 'https://www.whatsapp.com/channel/0029Vb6cFgKHAdNMsH1hKy2H',
+    },
+  },
   translations: {
     and: 'ва',
     readTime: {
@@ -82,10 +95,24 @@ const defaultCyrillicConfig = {
     },
     currentPage: 'Жорий саҳифа',
     skipLinkText: 'Саҳифага ўтиш',
+    skipContent: {
+      text: '%title% ни ўтказиб, давом этинг',
+      endTextVisuallyHidden: '%title% охири',
+    },
     relatedContent: 'Мавзуга алоқадор',
     relatedTopics: 'Алоқадор мавзулар',
     moreOnThis: '',
     navMenuText: 'Бўлимлар',
+    liteSite: {
+      onboardingMessage:
+        'Сиз ушбу сайтнинг камроқ интернет сарфлайдиган, фақат матндан иборат версиясини кўрмоқдасиз. Барча суратлар ва видеоларни ўз ичига олган сайтнинг асосий версиясини кўринг.',
+      toMainSite: 'Мени сайтнинг асосий версиясига олиб боринг',
+      informationPage: 'Интернет тежамкор ушбу версия ҳақида батафсил маълумот',
+      informationPageLink:
+        'https://www.bbc.com/uzbek/articles/crel1q4jrz9o/cyr',
+      dataSaving: 'Фақат матнли версия',
+      articleDataSavingLinkText: 'Фақат матнли версия',
+    },
     mediaAssetPage: {
       mediaPlayer: 'Медиа плейер',
       audioPlayer: 'Аудио плейер',
@@ -301,6 +328,15 @@ const defaultCyrillicConfig = {
       afterExtraTime: 'Қўшимча вақтдан кейин',
       penaltyAbbreviation: 'пен',
       ownGoal: 'ўз дарвозасига гол',
+      versus: 'қарши',
+      kickOff: 'бошланиш',
+      timeToBeConfirmed: 'Вақт тасдиқланади',
+      teamToBeConfirmed: 'Жамоа тасдиқланади',
+      afterFullTime: 'тўлиқ вақтдан кейин',
+      atFullTime: 'тўлиқ вақтда',
+      onPenalties: 'пенальтида',
+      onAggregate: 'умумий ҳисобда',
+      win: 'ютади',
       winOnPenalties: {
         prefix: 'пенальтида',
         suffix: 'билан ғалаба қозонади',
@@ -469,6 +505,19 @@ export const service: UzbekConfig = {
     videoCaptionOffscreenText: 'Video tagso‘zi, ',
     imageCaptionOffscreenText: 'Surat tagso‘zi, ',
     imageCopyrightOffscreenText: 'Surat manbasi, ',
+    podcastPromo: {
+      title: 'WhatsApp kanali reklamasi',
+      brandTitle: 'Bizni WhatsApp da ham kuzating',
+      brandDescription: `BBC News O‘zbek kontenti endi Sizning WhatsApp da`,
+      image: {
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0nytqnd.png',
+        alt: `BBC News O'zbek Obuna bo'ling!`,
+      },
+      linkLabel: {
+        text: 'A’zo bo‘lish uchun bu erga bosing',
+        href: 'https://www.whatsapp.com/channel/0029Vb6cFgKHAdNMsH1hKy2H',
+      },
+    },
     translations: {
       and: 'va',
       readTime: {
@@ -494,9 +543,24 @@ export const service: UzbekConfig = {
       },
       currentPage: 'Joriy sahifa',
       skipLinkText: 'Sahifaga o‘tish',
+      skipContent: {
+        text: '%title% ni o‘tkazib, davom eting',
+        endTextVisuallyHidden: '%title% oxiri',
+      },
       relatedContent: 'Mavzuga aloqador',
       relatedTopics: 'Aloqador mavzular',
       navMenuText: 'Bo‘limlar',
+      liteSite: {
+        onboardingMessage:
+          'Bu saytning kamroq internet sarflaydigan, faqat matndan iborat versiyasini ko‘rmoqdasiz. Barcha suratlar va videolarni o‘z ichiga olgan saytning asosiy versiyasini ko‘ring.',
+        toMainSite: 'Meni saytning asosiy versiyasiga olib boring',
+        informationPage:
+          'Internet tejamkor ushbu versiya haqida batafsil ma’lumot',
+        informationPageLink:
+          'https://www.bbc.com/uzbek/articles/crel1q4jrz9o/lat',
+        dataSaving: 'Faqat matnli versiya',
+        articleDataSavingLinkText: 'Faqat matnli versiya',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Media pleyer',
         audioPlayer: 'Audio pleyer',
@@ -710,6 +774,15 @@ export const service: UzbekConfig = {
         afterExtraTime: 'Qo‘shimcha vaqtdan keyin',
         penaltyAbbreviation: 'pen',
         ownGoal: 'o‘z darvozasiga gol',
+        versus: 'qarshi',
+        kickOff: 'boshlanish',
+        timeToBeConfirmed: 'Vaqt tasdiqlanadi',
+        teamToBeConfirmed: 'Jamoa tasdiqlanadi',
+        afterFullTime: 'to‘liq vaqtdan keyin',
+        atFullTime: 'to‘liq vaqtda',
+        onPenalties: 'penaltilarda',
+        onAggregate: 'umumiy hisobda',
+        win: 'yutadi',
         winOnPenalties: {
           prefix: 'penaltilarda',
           suffix: 'bilan g‘alaba qozonadi',

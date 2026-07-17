@@ -116,6 +116,10 @@ export const service: DefaultServiceConfig = {
       },
       ...russianUkrainianSharedTranslations,
       ...headerFooterTranslations,
+      skipContent: {
+        text: 'Пропустить %title% и продолжить',
+        endTextVisuallyHidden: 'Конец %title%',
+      },
       topicDiscovery: {
         heading: 'Узнать больше',
         moreAboutTopic: 'Больше о {topic}',
@@ -132,6 +136,15 @@ export const service: DefaultServiceConfig = {
         afterExtraTime: 'После дополнительного времени',
         penaltyAbbreviation: 'пен',
         ownGoal: 'автогол',
+        versus: 'против',
+        kickOff: 'начало',
+        timeToBeConfirmed: 'Время уточняется',
+        teamToBeConfirmed: 'Команда уточняется',
+        afterFullTime: 'после основного времени',
+        atFullTime: 'в основное время',
+        onPenalties: 'по пенальти',
+        onAggregate: 'по сумме',
+        win: 'выигрывает',
         winOnPenalties: {
           prefix: 'выигрывает',
           suffix: 'по пенальти',
