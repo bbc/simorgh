@@ -12,7 +12,6 @@ const SERVICES_WITH_NEW_NAV: Services[] = [
   'gahuza',
   'gujarati',
   'hausa',
-  'hindi',
   'igbo',
   'indonesia',
   'japanese',
