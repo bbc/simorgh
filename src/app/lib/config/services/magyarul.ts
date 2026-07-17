@@ -72,6 +72,10 @@ export const service: DefaultServiceConfig = {
       },
       currentPage: 'Jelenlegi oldal',
       skipLinkText: 'Ugrás a tartalomra',
+      skipContent: {
+        text: '%title% kihagyása és folytatás',
+        endTextVisuallyHidden: 'A(z) %title% vége',
+      },
       relatedContent: 'Kapcsolódó tartalom',
       relatedTopics: 'Kapcsolódó téma',
       navMenuText: 'Menü',
