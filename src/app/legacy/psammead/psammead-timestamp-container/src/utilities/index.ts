@@ -6,11 +6,31 @@ type ISODuration = string;
 
 const createDateAdapter = () => ({
   // Temporary seam for gradual Temporal adoption in follow-up PRs.
-  createLocalisedMoment: ({ locale, timestamp }) =>
-    moment(timestamp).locale(locale),
-  createMomentInTimezone: ({ locale, timestamp, timezone }) =>
-    moment(timestamp).locale(locale).tz(timezone),
-  formatDuration: ({ duration, format, locale }) => {
+  createLocalisedMoment: ({
+    locale,
+    timestamp,
+  }: {
+    locale: Locale;
+    timestamp: number;
+  }): moment.Moment => moment(timestamp).locale(locale),
+  createMomentInTimezone: ({
+    locale,
+    timestamp,
+    timezone,
+  }: {
+    locale: Locale;
+    timestamp: number;
+    timezone: string;
+  }): moment.Moment => moment(timestamp).locale(locale).tz(timezone),
+  formatDuration: ({
+    duration,
+    format,
+    locale,
+  }: {
+    duration: ISODuration;
+    format?: string;
+    locale?: Locale;
+  }): string => {
     const bcp47Locale = locale?.replace(/_/g, '-') || undefined;
     const safeDuration = (() => {
       try {
