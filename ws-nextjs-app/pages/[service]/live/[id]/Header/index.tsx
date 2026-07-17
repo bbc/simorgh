@@ -90,7 +90,6 @@ const Header = ({
             {showLiveLabel ? (
               <LiveLabelHeader
                 isHeaderImage={isWithImageLayout}
-                isLite={isLite}
                 showSportData={showSportData}
               >
                 <VisuallyHiddenText>{title}</VisuallyHiddenText>
@@ -160,7 +159,6 @@ const Header = ({
               {showLiveLabel ? (
                 <LiveLabelHeader
                   isHeaderImage={isWithImageLayout}
-                  isLite={isLite}
                   showSportData={false}
                 >
                   {Title}

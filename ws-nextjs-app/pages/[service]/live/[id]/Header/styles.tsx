@@ -1,6 +1,8 @@
 import { css, Theme } from '@emotion/react';
 import pixelsToRem from '../../../../../../src/app/utilities/pixelsToRem';
 
+const BANNER_MAX_WIDTH_ABOVE_1280PX = '63rem';
+
 export default {
   headerContainer: () =>
     css({
@@ -46,16 +48,16 @@ export default {
     css({
       backgroundColor: palette.GREY_16, // non-concise view background colour - MVP
     }),
-  contentContainer: ({ mq, gridWidths }: Theme) =>
+  contentContainer: ({ mq, spacings }: Theme) =>
     css({
       [mq.GROUP_4_MIN_WIDTH]: {
-        maxWidth: `${pixelsToRem(gridWidths[1280])}rem`,
+        maxWidth: `calc(${BANNER_MAX_WIDTH_ABOVE_1280PX} + ${spacings.QUADRUPLE}rem)`,
         margin: '0 auto',
         position: 'relative',
         width: '100%',
       },
     }),
-  contentWithImageContainer: ({ gridWidths, mq, spacings }: Theme) =>
+  contentWithImageContainer: ({ mq, spacings }: Theme) =>
     css({
       [mq.GROUP_4_MIN_WIDTH]: {
         display: 'flex',
@@ -65,7 +67,7 @@ export default {
         boxSizing: 'border-box',
         padding: `0 ${spacings.DOUBLE}rem`,
         margin: '0 auto',
-        maxWidth: `${pixelsToRem(gridWidths[1280])}rem`,
+        maxWidth: `calc(${BANNER_MAX_WIDTH_ABOVE_1280PX} + ${spacings.QUADRUPLE}rem)`,
       },
       [mq.GROUP_4_ONLY]: {
         alignItems: 'center',
@@ -118,11 +120,11 @@ export default {
       flexDirection: 'column',
       width: '100%',
     }),
-  textContainerWithoutImage: ({ mq, gridWidths, spacings }: Theme) =>
+  textContainerWithoutImage: ({ mq, spacings }: Theme) =>
     css({
       position: 'relative',
       padding: `${spacings.DOUBLE}rem ${spacings.FULL}rem`,
-      maxWidth: `${pixelsToRem(gridWidths[1280])}rem`,
+      maxWidth: `calc(${BANNER_MAX_WIDTH_ABOVE_1280PX} + ${spacings.QUADRUPLE}rem)`,
       margin: '0 auto',
       [mq.GROUP_2_MIN_WIDTH]: {
         padding: `${spacings.DOUBLE}rem`,
@@ -142,7 +144,7 @@ export default {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        padding: 0,
+        padding: `0 ${spacings.DOUBLE}rem`,
       },
     }),
   titleWithImage: ({ palette }: Theme) =>
@@ -178,10 +180,10 @@ export default {
   layoutWithLiveLabelNoImage: ({ mq }: Theme) =>
     css({
       [mq.GROUP_4_MIN_WIDTH]: {
-        marginInlineStart: 'calc(100% / 3)',
+        marginInlineStart: 0,
       },
       [mq.GROUP_5_MIN_WIDTH]: {
-        marginInlineStart: 'calc(100% / 4)',
+        marginInlineStart: 0,
       },
     }),
 };
