@@ -196,7 +196,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a figure caption 1`] 
     </time>
   </button>
   <div
-    class="css-10dp2sw"
+    class="css-1r0nk5z"
     style="padding-bottom:0;overflow:hidden"
   >
     <img
@@ -273,7 +273,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
     </time>
   </button>
   <div
-    class="css-10dp2sw"
+    class="css-1r0nk5z"
     style="padding-bottom:0;overflow:hidden"
   >
     <img
@@ -354,7 +354,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a valid container 1`]
       </time>
     </button>
     <div
-      class="css-10dp2sw"
+      class="css-1r0nk5z"
       style="padding-bottom:0;overflow:hidden"
     >
       <img
