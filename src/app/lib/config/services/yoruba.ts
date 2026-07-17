@@ -83,6 +83,10 @@ export const service: DefaultServiceConfig = {
       },
       currentPage: 'Ojú ewé to wà yìí',
       skipLinkText: 'Fò kọjá sí nnkan tí ó wà nínú rẹ̀',
+      skipContent: {
+        text: 'Fo %title% kọjá kí o tẹ̀síwájú',
+        endTextVisuallyHidden: 'Ìparí %title%',
+      },
       relatedContent: 'Àwọn afíkun lórí ìròyìn yìí',
       relatedTopics: 'Àwọn Àkórí Tójọra',
       moreOnThis: '',

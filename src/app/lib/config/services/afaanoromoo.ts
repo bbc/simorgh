@@ -84,6 +84,10 @@ export const service: DefaultServiceConfig = {
       },
       currentPage: 'Fuula kan ammaa',
       skipLinkText: 'Qabiyyeetti darbi',
+      skipContent: {
+        text: '%title% darbi itti fufi',
+        endTextVisuallyHidden: 'Dhuma %title%',
+      },
       relatedContent: 'Odeessa kana irratti dabalata',
       relatedTopics: 'Mata dureewwan walitti dhiyaatan',
       moreOnThis: '',
