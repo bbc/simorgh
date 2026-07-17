@@ -34,7 +34,13 @@ export type UkrainianConfig = {
   [_key in UkrainianService['variant']]: ServiceConfig;
 };
 
+// Uzbek originally only supported Cyrillic script, so its config had a single 'default' entry.
+// When Latin transliteration was introduced, 'cyr' and 'lat' variants were added and 'default'
+// was kept as a legacy alias for the Cyrillic config. It is not a routable URL variant —
+// UzbekService['variant'] covers only the two routable variants: 'cyr' and 'lat'.
 export type UzbekConfig = {
+  default: ServiceConfig;
+} & {
   [_key in UzbekService['variant']]: ServiceConfig;
 };
 
@@ -121,6 +127,16 @@ export type ServiceConfig = {
     iframeSrc: string;
     iframeDevSrc: string;
   };
+  articleMessageBanners?: ArticleMessageBannerConfig[];
+};
+
+export type ArticleMessageBannerConfig = {
+  thingIds: string[];
+  linkHref: string;
+  heading: string;
+  linkText: string;
+  description?: string;
+  image?: string;
 };
 
 export type PodcastPromo = {

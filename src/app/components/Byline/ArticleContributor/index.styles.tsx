@@ -19,7 +19,16 @@ export default {
     css({ color: isDarkUi ? palette.GREY_2 : palette.GREY_6 }),
 
   comma: ({ palette, isDarkUi }: Theme) =>
-    css({ color: isDarkUi ? palette.GREY_2 : palette.GREY_6 }),
+    css({
+      color: isDarkUi ? palette.GREY_2 : palette.GREY_6,
+      '&::after': {
+        content: '", "',
+      },
+
+      '[dir="rtl"] &::after': {
+        content: '"، "',
+      },
+    }),
 
   and: ({ palette, isDarkUi }: Theme) =>
     css({ color: isDarkUi ? palette.GREY_2 : palette.GREY_6 }),

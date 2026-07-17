@@ -171,7 +171,7 @@ exports[`Canonical Articles Media Loader renders a figure caption 1`] = `
     type="button"
   >
     <span
-      class="css-2ozlq5"
+      class="css-5ku87v"
     >
       Play video, "Â«Ù‚Ø´Ø²Ù‡Ø° Ø´Ø³Ø³Ø«Ù Ù‡Ø± ÙØ«Ø³Ù", مدت 0,16
     </span>
@@ -181,7 +181,7 @@ exports[`Canonical Articles Media Loader renders a figure caption 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="css-vja2s5 e1xc513p1"
+        class="css-vja2s5 ew59ay91"
         focusable="false"
         height="12"
         viewBox="0 0 12 12"
@@ -211,7 +211,7 @@ exports[`Canonical Articles Media Loader renders a figure caption 1`] = `
     </time>
   </button>
   <div
-    class="css-10dp2sw"
+    class="css-e398u2"
     style="padding-bottom:0;overflow:hidden"
   >
     <img
@@ -248,7 +248,7 @@ exports[`Canonical Articles Media Loader renders a placeholder 1`] = `
     type="button"
   >
     <span
-      class="css-2ozlq5"
+      class="css-5ku87v"
     >
       Play video, "Â«Ù‚Ø´Ø²Ù‡Ø° Ø´Ø³Ø³Ø«Ù Ù‡Ø± ÙØ«Ø³Ù", مدت 0,16
     </span>
@@ -258,7 +258,7 @@ exports[`Canonical Articles Media Loader renders a placeholder 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="css-vja2s5 e1xc513p1"
+        class="css-vja2s5 ew59ay91"
         focusable="false"
         height="12"
         viewBox="0 0 12 12"
@@ -288,7 +288,7 @@ exports[`Canonical Articles Media Loader renders a placeholder 1`] = `
     </time>
   </button>
   <div
-    class="css-10dp2sw"
+    class="css-e398u2"
     style="padding-bottom:0;overflow:hidden"
   >
     <img
@@ -329,7 +329,7 @@ exports[`Canonical Articles Media Loader renders a valid container 1`] = `
       type="button"
     >
       <span
-        class="css-2ozlq5"
+        class="css-5ku87v"
       >
         Play video, "Â«Ù‚Ø´Ø²Ù‡Ø° Ø´Ø³Ø³Ø«Ù Ù‡Ø± ÙØ«Ø³Ù", مدت 0,16
       </span>
@@ -339,7 +339,7 @@ exports[`Canonical Articles Media Loader renders a valid container 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="css-vja2s5 e1xc513p1"
+          class="css-vja2s5 ew59ay91"
           focusable="false"
           height="12"
           viewBox="0 0 12 12"
@@ -369,7 +369,7 @@ exports[`Canonical Articles Media Loader renders a valid container 1`] = `
       </time>
     </button>
     <div
-      class="css-10dp2sw"
+      class="css-e398u2"
       style="padding-bottom:0;overflow:hidden"
     >
       <img
@@ -390,7 +390,7 @@ exports[`Canonical Articles Media Loader renders a valid container 1`] = `
       role="text"
     >
       <span
-        class="css-2ozlq5"
+        class="css-5ku87v"
       >
         توضیح ویدئو، 
       </span>
@@ -589,7 +589,7 @@ exports[`Canonical Articles SEO Linked data should match text 2`] = `
 
 exports[`Canonical Articles SEO OG description 1`] = `"این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد."`;
 
-exports[`Canonical Articles SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_persian/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg"`;
+exports[`Canonical Articles SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1200/branded_persian/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg"`;
 
 exports[`Canonical Articles SEO OG image alt 1`] = `
 "این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد.
@@ -621,7 +621,7 @@ exports[`Canonical Articles SEO Twitter image alt 1`] = `
 "
 `;
 
-exports[`Canonical Articles SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_persian/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg"`;
+exports[`Canonical Articles SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1200/branded_persian/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg"`;
 
 exports[`Canonical Articles SEO Twitter site 1`] = `"@bbcpersian"`;
 

@@ -1,16 +1,22 @@
 import isLive from '#app/lib/utilities/isLive';
-import getAuthHeaders from './getAuthHeader';
-import { activityTypes } from './uasUtility';
+import type { Services } from '#app/models/types/global';
+import getAuthHeaders from './getAuthHeaders';
+import type { ActivityType } from './uasUtility';
+import { refreshTokensIfExpired } from './tokenRefresh/tokenManager';
+import UasError from './errors';
+
+export { default as UasError } from './errors';
 
 export type UasMethod = 'POST' | 'DELETE' | 'GET';
 
 export interface UasApiRequestBody {
-  activityType: string;
+  activityType: ActivityType;
   resourceDomain?: string;
   resourceType?: string;
   resourceId?: string;
   action?: string;
   actionContext?: string;
+  resourceTitle?: Services;
   metaData?: Record<string, unknown>;
   activityTime?: string;
 }
@@ -19,21 +25,36 @@ interface UasRequestOptions {
   body?: UasApiRequestBody;
   globalId?: string;
   signal?: AbortSignal;
+  queryParams?: Record<string, string | number>;
+  isRefreshAvailable: boolean;
 }
 
-const getUasHost = () =>
-  isLive() ? 'activity.api.bbc.co.uk' : 'activity.test.api.bbc.co.uk';
+export const UAS_CLIENT_TIMEOUT_MS = 10000;
 
-const buildUrl = (activityType: string, globalId?: string) => {
+const getUasHost = () =>
+  isLive() ? 'activity.api.bbc.com' : 'activity.test.api.bbc.com';
+
+const buildUrl = (
+  activityType: string,
+  globalId?: string,
+  queryParams?: Record<string, string | number>,
+) => {
   const base = `https://${getUasHost()}/my/${activityType}`;
-  return globalId ? `${base}/${encodeURIComponent(globalId)}` : base;
+  const urlPath = globalId ? `${base}/${encodeURIComponent(globalId)}` : base;
+
+  if (!queryParams || Object.keys(queryParams).length === 0) {
+    return urlPath;
+  }
+
+  const url = new URL(urlPath);
+  Object.entries(queryParams).forEach(([key, value]) => {
+    url.searchParams.append(key, String(value));
+  });
+
+  return url.toString();
 };
 
-const validateRequest = (
-  method: UasMethod,
-  options: UasRequestOptions,
-  activityType: string,
-) => {
+const validateRequest = (method: UasMethod, options: UasRequestOptions) => {
   const { body, globalId } = options;
 
   if (method === 'DELETE' && !globalId) {
@@ -43,21 +64,30 @@ const validateRequest = (
   if (method === 'POST' && !body) {
     throw new Error('POST requests require a body');
   }
-
-  if (!activityType || !activityTypes.includes(activityType)) {
-    throw new Error('Invalid activity type');
-  }
   // TODO : Add more validation , if needed
 };
 
 const uasApiRequest = async (
   method: UasMethod,
-  activityType: string,
-  { body, globalId, signal }: UasRequestOptions = {},
+  activityType: ActivityType,
+  {
+    body,
+    globalId,
+    signal,
+    queryParams,
+    isRefreshAvailable,
+  }: UasRequestOptions,
 ): Promise<Response> => {
-  validateRequest(method, { body, globalId }, activityType);
+  // Basic validation to ensure required parameters are present based on method
+  validateRequest(method, { body, globalId, isRefreshAvailable });
 
-  const url = buildUrl(activityType, method !== 'POST' ? globalId : undefined);
+  const url = buildUrl(
+    activityType,
+    method !== 'POST' ? globalId : undefined,
+    queryParams,
+  );
+
+  await refreshTokensIfExpired(isRefreshAvailable);
 
   const headers: HeadersInit = {
     ...getAuthHeaders(),
@@ -72,12 +102,11 @@ const uasApiRequest = async (
     headers,
     credentials: 'include',
     body: method === 'POST' ? JSON.stringify(body) : undefined,
-    // Allow callers to abort the request
-    ...(signal ? { signal } : {}),
+    signal: signal ?? AbortSignal.timeout(UAS_CLIENT_TIMEOUT_MS),
   });
 
   if (!response.ok) {
-    throw new Error(`UAS request failed with status ${response.status}`);
+    throw new UasError(response.status);
   }
 
   return response;

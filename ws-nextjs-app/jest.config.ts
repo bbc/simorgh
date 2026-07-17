@@ -1,8 +1,13 @@
+/* eslint-disable import/extensions */
 /* eslint-disable import/no-relative-packages */
+import { readFileSync } from 'fs';
 import { pathsToModuleNameMapper } from 'ts-jest';
 import type { Config } from 'jest';
-import nextJest from 'next/jest';
-import { compilerOptions } from '../tsconfig.json';
+import nextJest from 'next/jest.js';
+
+const { compilerOptions } = JSON.parse(
+  readFileSync(new URL('../tsconfig.json', import.meta.url), 'utf8'),
+);
 
 const { ...compilerOptionsPaths } = compilerOptions.paths;
 
@@ -64,6 +69,7 @@ export default async (): Promise<Config> => {
       '**/__tests__/**/*.{js,jsx,ts,tsx}',
       '**/?(*.)+(spec|test).{js,jsx,ts,tsx}',
       '!**/integration/!(utils)/**/*',
+      '!**/playwright/**/*',
     ],
   });
 

@@ -1,0 +1,122 @@
+{
+  "id": "3n1x4716kyvjqbh4hdw42atjg",
+  "eventGroupingLabel": "Europe - UEFA Europa Conference League - 1st Qualifying Round",
+  "startDateTime": "2022-07-14T14:00:00Z",
+  "tournamentId": "c7b8o53flg36wbuevfzy3lb10",
+  "status": "MidEvent",
+  "period": "pens",
+  "periodLabel": {
+    "value": "PENS",
+    "accessible": "Match going to Penalties"
+  },
+  "venue": {
+    "name": "Stadions Daugava",
+    "shortName": "Stadions Daugava"
+  },
+  "tournament": {
+    "id": "c7b8o53flg36wbuevfzy3lb10",
+    "name": "UEFA Europa Conference League",
+    "urn": "urn:bbc:sportsdata:football:tournament:c7b8o53flg36wbuevfzy3lb10"
+  },
+  "tournamentDescriptionLabel": "UEFA Europa Conference League - 1st Qualifying Round",
+  "home": {
+    "fullName": "Liepāja",
+    "shortName": "Liepāja",
+    "urn": "urn:bbc:sportsdata:football:team:liepja",
+    "score": "3",
+    "runningScores": {
+      "halftime": "2",
+      "fulltime": "2",
+      "extratime": "3"
+    },
+    "actions": [
+      {
+        "actionType": "Goal",
+        "participantId": "3rutx3wc2j6q3qq8uqdn8pdja",
+        "playerId": "7uufcg0dvus42emi9yev9i9cl",
+        "playerName": "N. Belaković",
+        "actions": [
+          {
+            "type": "Goal",
+            "typeLabel": {
+              "value": "Goal",
+              "accessible": "Goal"
+            },
+            "timeLabel": {
+              "value": "9'",
+              "accessible": "9 minutes"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "away": {
+    "fullName": "Gjilani",
+    "shortName": "Gjilani",
+    "urn": "urn:bbc:sportsdata:football:team:gjilani",
+    "score": "3",
+    "runningScores": {
+      "halftime": "1",
+      "fulltime": "1",
+      "extratime": "3"
+    },
+    "actions": [
+      {
+        "playerId": "csvqjyuk06gzvjm408513nydx",
+        "playerName": "T. Minamino",
+        "actionType": "Goal",
+        "actions": [
+          {
+            "type": "Goal",
+            "typeLabel": {
+              "value": "Goal",
+              "accessible": "Goal"
+            },
+            "timeLabel": {
+              "value": "7'",
+              "accessible": "7 minutes"
+            }
+          }
+        ]
+      },
+      {
+        "playerId": "kvchpptoxgvcyiv358w9gtzp",
+        "playerName": "J. Matip",
+        "actionType": "Goal",
+        "actions": [
+          {
+            "type": "Goal",
+            "typeLabel": {
+              "value": "Goal",
+              "accessible": "Goal"
+            },
+            "timeLabel": {
+              "value": "16'",
+              "accessible": "16 minutes"
+            }
+          },
+          {
+            "type": "Goal",
+            "typeLabel": {
+              "value": "Goal",
+              "accessible": "Goal"
+            },
+            "timeLabel": {
+              "value": "28'",
+              "accessible": "28 minutes"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "currentLeader": "away",
+  "time": {
+    "accessibleTime": "15:00",
+    "displayTimeUK": "15:00",
+    "timeCertainty": true
+  },
+  "date": "Thu 14 Jul 2022",
+  "accessibleEventSummary": "Liepāja 3 , Gjilani 3 after full time penalties in progress"
+}

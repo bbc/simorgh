@@ -11,7 +11,11 @@ const options = {
     'jest-environment-jsdom',
     '@testing-library/dom',
     '@storybook/addon-knobs',
-    'next', // next/dynamic is referenced in some shared components with Express and Next.js, but is swapped out by Babel at build time in the Express app, so depcheck thinks it's missing
+    'next',
+    '@emotion/cache',
+    '@emotion/server',
+    'aws-embedded-metrics',
+    '@scss', // webpack alias for src/app/components, resolved via resolve.alias in webpack/next.js
   ],
 };
 
@@ -24,7 +28,7 @@ depcheck(
 
     // Filter out dependencies prefixed with "#".
     const missingFiltered = Object.keys(missing).reduce((obj, key) => {
-      if (key.startsWith('#')) {
+      if (key.startsWith('#') || key.startsWith('@scss/')) {
         return obj;
       }
 

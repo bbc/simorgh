@@ -1,9 +1,11 @@
 import Cookie from 'js-cookie';
 import { getEnvConfig } from '../utilities/getEnvConfig';
-import uasApiRequest from './index';
+import { refreshTokensIfExpired } from './tokenRefresh/tokenManager';
+import uasApiRequest, { UasError } from './index';
 
 jest.mock('js-cookie');
 jest.mock('../utilities/getEnvConfig');
+jest.mock('./tokenRefresh/tokenManager');
 
 global.fetch = jest.fn();
 
@@ -20,6 +22,8 @@ describe('uasApiRequest', () => {
     mockGetEnvConfig.mockReturnValue({
       SIMORGH_UAS_PUBLIC_API_KEY: 'mocked-api-key',
     } as ReturnType<typeof getEnvConfig>);
+    // Mock refreshTokensIfExpired to resolve successfully by default
+    (refreshTokensIfExpired as jest.Mock).mockResolvedValue(undefined);
   });
 
   it('should make a GET request with correct headers and URL', async () => {
@@ -29,15 +33,15 @@ describe('uasApiRequest', () => {
     });
 
     const activityType = 'favourites';
-    const response = await uasApiRequest('GET', activityType);
+    const response = await uasApiRequest('GET', activityType, {
+      isRefreshAvailable: true,
+    });
 
     expect(global.fetch).toHaveBeenCalledWith(
-      `https://activity.test.api.bbc.co.uk/my/${activityType}`,
+      `https://activity.test.api.bbc.com/my/${activityType}`,
       expect.objectContaining({
         method: 'GET',
         headers: expect.objectContaining({
-          Authorization: 'Bearer mocked-token',
-          'X-Authentication-Provider': 'idv5',
           'X-API-Key': 'mocked-api-key',
         }),
       }),
@@ -54,17 +58,21 @@ describe('uasApiRequest', () => {
     });
 
     const activityType = 'favourites';
-    const body = { activityType: 'test', metaData: { key: 'value' } };
+    const body = {
+      activityType: 'favourites' as const,
+      metaData: { key: 'value' },
+    };
 
-    const response = await uasApiRequest('POST', activityType, { body });
+    const response = await uasApiRequest('POST', activityType, {
+      body,
+      isRefreshAvailable: true,
+    });
 
     expect(global.fetch).toHaveBeenCalledWith(
-      `https://activity.test.api.bbc.co.uk/my/${activityType}`,
+      `https://activity.test.api.bbc.com/my/${activityType}`,
       expect.objectContaining({
         method: 'POST',
         headers: expect.objectContaining({
-          Authorization: 'Bearer mocked-token',
-          'X-Authentication-Provider': 'idv5',
           'X-API-Key': 'mocked-api-key',
           'Content-Type': 'application/json',
         }),
@@ -84,30 +92,23 @@ describe('uasApiRequest', () => {
     const activityType = 'favourites';
     const globalId = '12345';
 
-    await uasApiRequest('DELETE', activityType, { globalId });
+    await uasApiRequest('DELETE', activityType, {
+      globalId,
+      isRefreshAvailable: true,
+    });
 
     expect(global.fetch).toHaveBeenCalledWith(
-      `https://activity.test.api.bbc.co.uk/my/${activityType}/${encodeURIComponent(globalId)}`,
+      `https://activity.test.api.bbc.com/my/${activityType}/${encodeURIComponent(globalId)}`,
       expect.objectContaining({
         method: 'DELETE',
         headers: expect.objectContaining({
-          Authorization: 'Bearer mocked-token',
-          'X-Authentication-Provider': 'idv5',
           'X-API-Key': 'mocked-api-key',
         }),
       }),
     );
   });
 
-  it('should throw an error for invalid activity type', async () => {
-    const invalidActivityType = 'invalidType';
-
-    await expect(uasApiRequest('GET', invalidActivityType)).rejects.toThrow(
-      'Invalid activity type',
-    );
-  });
-
-  it('should throw an error for failed requests', async () => {
+  it('should throw a UasError with the response status for failed requests', async () => {
     (global.fetch as jest.Mock).mockResolvedValue({
       ok: false,
       status: 500,
@@ -116,26 +117,13 @@ describe('uasApiRequest', () => {
 
     const activityType = 'favourites';
 
-    await expect(uasApiRequest('GET', activityType)).rejects.toThrow(
-      'UAS request failed with status 500',
-    );
-  });
+    const error = await uasApiRequest('GET', activityType, {
+      isRefreshAvailable: true,
+    }).catch(e => e);
 
-  it('should throw an error when ckns_atkn cookie is missing', async () => {
-    // Mock the scenario where the ckns_atkn cookie is not in storage
-    (mockCookie.get as jest.Mock).mockReturnValue(undefined);
-    mockGetEnvConfig.mockReturnValue({
-      SIMORGH_UAS_PUBLIC_API_KEY: 'mocked-api-key',
-    } as ReturnType<typeof getEnvConfig>);
-
-    const activityType = 'favourites';
-
-    await expect(uasApiRequest('GET', activityType)).rejects.toThrow(
-      'Missing authentication for UAS request',
-    );
-
-    // Verify that fetch was never called since authentication failed
-    expect(global.fetch).not.toHaveBeenCalled();
+    expect(error).toBeInstanceOf(UasError);
+    expect(error.status).toBe(500);
+    expect(error.message).toBe('UAS request failed with status 500');
   });
 
   it('should throw an error when API key is missing', async () => {
@@ -147,11 +135,41 @@ describe('uasApiRequest', () => {
 
     const activityType = 'favourites';
 
-    await expect(uasApiRequest('GET', activityType)).rejects.toThrow(
-      'Missing authentication for UAS request',
-    );
+    await expect(
+      uasApiRequest('GET', activityType, { isRefreshAvailable: true }),
+    ).rejects.toThrow('Missing UAS public API key');
 
     // Verify that fetch was never called since authentication failed
     expect(global.fetch).not.toHaveBeenCalled();
+  });
+
+  it('should throw an error when refreshTokensIfExpired fails', async () => {
+    (refreshTokensIfExpired as jest.Mock).mockRejectedValue(
+      new Error('Token refresh failed'),
+    );
+
+    const activityType = 'favourites';
+
+    await expect(
+      uasApiRequest('GET', activityType, { isRefreshAvailable: true }),
+    ).rejects.toThrow('Token refresh failed');
+
+    // Verify that fetch was never called since token validation failed
+    expect(global.fetch).not.toHaveBeenCalled();
+  });
+
+  it('should always call refreshTokensIfExpired, passing isRefreshAvailable', async () => {
+    (global.fetch as jest.Mock).mockResolvedValue({
+      ok: true,
+      json: () => Promise.resolve({ success: true }),
+    });
+
+    await uasApiRequest('GET', 'favourites', { isRefreshAvailable: false });
+    expect(refreshTokensIfExpired).toHaveBeenCalledWith(false);
+
+    (refreshTokensIfExpired as jest.Mock).mockClear();
+
+    await uasApiRequest('GET', 'favourites', { isRefreshAvailable: true });
+    expect(refreshTokensIfExpired).toHaveBeenCalledWith(true);
   });
 });

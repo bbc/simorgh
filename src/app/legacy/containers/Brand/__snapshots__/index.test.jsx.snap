@@ -141,17 +141,18 @@ exports[`BrandContainer should render correctly 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 <div
   class="emotion-0 emotion-1 emotion-2"
 >
   <div
-    class="emotion-3 emotion-4"
+    class="brand-svg-wrapper emotion-3 emotion-4"
   >
     <a
       aria-labelledby="BrandLink-null"
-      class="focusIndicatorRemove emotion-5 emotion-6"
+      class="brand-link focusIndicatorRemove emotion-5 emotion-6"
       href="/news"
     >
       <svg

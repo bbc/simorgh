@@ -73,6 +73,7 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
   justify-content: space-between;
   position: relative;
   z-index: 0;
+  background-color: #B80000;
 }
 
 .emotion-6::before {
@@ -97,8 +98,15 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
     overflow-x: scroll;
     scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
+    scroll-padding-inline-end: 3rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-7 {
+      scroll-padding-inline-end: 6rem;
+    }
   }
 
   .emotion-7::-webkit-scrollbar {
@@ -289,6 +297,7 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-14 {
@@ -379,8 +388,15 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
     overflow-x: scroll;
     scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
+    scroll-padding-inline-end: 3rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-17 {
+      scroll-padding-inline-end: 6rem;
+    }
   }
 
   .emotion-17::-webkit-scrollbar {
@@ -542,17 +558,32 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
             </button>
           </div>
           <div
-            class="emotion-14 emotion-15"
-            data-e2e="dropdown-nav"
-            height="0"
+            role="presentation"
           >
-            <ul
-              data-testid="dropdown"
+            <div
+              class="emotion-14 emotion-15"
+              data-e2e="dropdown-nav"
+              height="0"
             >
-              <li>
-                Dropdown Items
-              </li>
-            </ul>
+              <ul
+                data-testid="dropdown"
+              >
+                <li>
+                  <a
+                    href="/item1"
+                  >
+                    Item 1
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/item2"
+                  >
+                    Item 2
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <div

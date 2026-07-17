@@ -1,4 +1,3 @@
-import { BrowserRouter } from 'react-router-dom';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import { data as mundoBannerVariations } from '#data/mundo/topics/cw90edn9kw4t.json';
 import {
@@ -210,9 +209,7 @@ describe('Topic Page', () => {
       [false, false],
     ].forEach(([adsToggledOn, showAdsBasedOnLocation]) => {
       const { container } = render(
-        <BrowserRouter>
-          <TopicPage pageData={pidginMultipleItems} />
-        </BrowserRouter>,
+        <TopicPage pageData={pidginMultipleItems} />,
         getOptionParams({ adsToggledOn, showAdsBasedOnLocation }),
       );
 
@@ -438,8 +435,77 @@ describe('Topic Page', () => {
           ).innerHTML,
         );
       };
-
-      expect(getLinkedDataOutput()).toMatchSnapshot();
+      expect(getLinkedDataOutput()).toMatchInlineSnapshot(`
+       {
+         "@context": "https://schema.org",
+         "@graph": [
+           {
+             "@type": "CollectionPage",
+             "headline": "Donald Trump",
+             "image": {
+               "@type": "ImageObject",
+               "height": 576,
+               "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/metadata/poster-1024x576.png",
+               "width": 1024,
+             },
+             "inLanguage": {
+               "@type": "Language",
+               "alternateName": "pcm",
+               "name": "Nigerian Pidgin",
+             },
+             "mainEntityOfPage": {
+               "@id": "https://www.test.bbc.com/news/articles/c0g992jmmkko",
+               "@type": "WebPage",
+               "name": "Donald Trump",
+             },
+             "publisher": {
+               "@type": "NewsMediaOrganization",
+               "logo": {
+                 "@type": "ImageObject",
+                 "height": 576,
+                 "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/metadata/poster-1024x576.png",
+                 "width": 1024,
+               },
+               "name": "BBC News Pidgin",
+               "publishingPrinciples": "https://www.bbc.com/pidgin/institutional-48528766",
+             },
+             "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/metadata/poster-1024x576.png",
+             "url": "https://www.test.bbc.com/news/articles/c0g992jmmkko",
+           },
+           {
+             "@type": "ItemList",
+             "itemListElement": [
+               {
+                 "@context": "http://schema.org",
+                 "@type": "ListItem",
+                 "position": 1,
+                 "url": "https://www.bbc.com/pidgin/world-60465144",
+               },
+               {
+                 "@context": "http://schema.org",
+                 "@type": "ListItem",
+                 "position": 2,
+                 "url": "https://www.bbc.com/pidgin/tori-59901959",
+               },
+               {
+                 "@context": "http://schema.org",
+                 "@type": "ListItem",
+                 "position": 3,
+                 "url": "https://www.bbc.com/pidgin/tori-57396574",
+               },
+               {
+                 "@context": "http://schema.org",
+                 "@type": "ListItem",
+                 "position": 4,
+                 "url": "https://www.bbc.com/pidgin/tori-56991816",
+               },
+             ],
+             "name": "BBC News Pidgin",
+             "numberOfItems": 4,
+           },
+         ],
+       }
+      `);
     });
   });
 });

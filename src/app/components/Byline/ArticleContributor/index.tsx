@@ -8,11 +8,7 @@ import VisuallyHiddenText from '../../VisuallyHiddenText';
 import { RightChevron, LeftChevron } from '../../icons';
 
 const Comma = () => {
-  return (
-    <span aria-hidden="true" css={BylineCss.comma}>
-      ,{' '}
-    </span>
-  );
+  return <span aria-hidden="true" css={BylineCss.comma} />;
 };
 
 const And = ({ andTranslation }) => {

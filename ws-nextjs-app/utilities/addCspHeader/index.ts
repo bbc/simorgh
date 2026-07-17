@@ -1,5 +1,5 @@
 import { NextPageContext } from 'next/types';
-import { cspDirectives } from '#server/utilities/cspHeader/directives';
+import { cspDirectives } from '#utilities/cspHeader/directives';
 import getPathExtension from '#app/utilities/getPathExtension';
 import isLiveEnv from '#lib/utilities/isLive';
 import { Services, Toggles } from '#app/models/types/global';
@@ -70,8 +70,11 @@ const addCspHeader = ({ ctx, service, toggles }: AddCspHeaderProps) => {
 
   const countryHeader =
     ctx?.req?.headers?.['x-country'] ||
-    ctx?.req?.headers?.['x-bbc-edge-country'] || '';
-  const country = Array.isArray(countryHeader) ? countryHeader[0] : countryHeader;
+    ctx?.req?.headers?.['x-bbc-edge-country'] ||
+    '';
+  const country = Array.isArray(countryHeader)
+    ? countryHeader[0]
+    : countryHeader;
 
   const shouldServeRelaxedCsp =
     hasAdsScripts &&

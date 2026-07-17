@@ -48,6 +48,10 @@ export const service: DefaultServiceConfig = {
       home: 'Home',
       currentPage: 'Current page',
       skipLinkText: 'Skip to content',
+      skipContent: {
+        text: 'Skip %title% and continue',
+        endTextVisuallyHidden: 'End of %title%',
+      },
       relatedContent: 'Related content',
       relatedTopics: 'Related topics',
       moreOnThis: '',
@@ -74,11 +78,11 @@ export const service: DefaultServiceConfig = {
         signIn: 'Sign In',
         forYou: 'Your Account',
         register: 'Register',
+        settings: 'Settings',
       },
       accountPromoBanner: {
-        title: 'Discover your BBC',
-        description:
-          'Sign in or create an account to watch, listen and join in',
+        title: 'Your very own BBC',
+        description: 'Sign In or create an account for free',
         closeLabel: 'Close',
         buttonSeparatorText: 'or',
       },
@@ -565,6 +569,12 @@ export const service: DefaultServiceConfig = {
             lang: 'cy',
           },
           {
+            id: 'magyarul',
+            href: 'https://www.bbc.com/magyarul',
+            label: 'BBC News Magyarul',
+            lang: 'hu',
+          },
+          {
             id: 'kyrgyz',
             href: 'https://www.bbc.com/kyrgyz',
             label: 'BBC News Кыргыз Кызматы',
@@ -581,6 +591,12 @@ export const service: DefaultServiceConfig = {
             id: 'polska',
             href: 'https://www.bbc.com/polska',
             label: 'BBC News Polska',
+          },
+          {
+            id: 'romania',
+            href: 'https://www.bbc.com/romania',
+            label: 'BBC News România',
+            lang: 'ro',
           },
           {
             id: 'russian',

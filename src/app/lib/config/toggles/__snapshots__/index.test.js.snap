@@ -55,9 +55,6 @@ exports[`Toggles Config when application environment is live should contain corr
   "onDemandRadioSchedule": {
     "enabled": false,
   },
-  "podcastEpisodeLinkedData": {
-    "enabled": false,
-  },
   "podcastPromo": {
     "enabled": false,
   },
@@ -81,6 +78,12 @@ exports[`Toggles Config when application environment is live should contain corr
   },
   "scriptLink": {
     "enabled": true,
+  },
+  "showSportDataHeader": {
+    "enabled": false,
+  },
+  "sportDataPolling": {
+    "enabled": false,
   },
   "topBarOJs": {
     "enabled": true,
@@ -141,6 +144,9 @@ exports[`Toggles Config when application environment is local should contain cor
   "liveRadioSchedule": {
     "enabled": true,
   },
+  "locationTopicCuration": {
+    "enabled": true,
+  },
   "midArticleOnwardJourney": {
     "enabled": true,
   },
@@ -151,9 +157,6 @@ exports[`Toggles Config when application environment is local should contain cor
     "enabled": true,
   },
   "onDemandRadioSchedule": {
-    "enabled": true,
-  },
-  "podcastEpisodeLinkedData": {
     "enabled": true,
   },
   "podcastPromo": {
@@ -178,6 +181,12 @@ exports[`Toggles Config when application environment is local should contain cor
     "value": 4,
   },
   "scriptLink": {
+    "enabled": true,
+  },
+  "showSportDataHeader": {
+    "enabled": true,
+  },
+  "sportDataPolling": {
     "enabled": true,
   },
   "topBarOJs": {
@@ -251,9 +260,6 @@ exports[`Toggles Config when application environment is test should contain corr
   "onDemandRadioSchedule": {
     "enabled": true,
   },
-  "podcastEpisodeLinkedData": {
-    "enabled": true,
-  },
   "podcastPromo": {
     "enabled": true,
   },
@@ -277,6 +283,12 @@ exports[`Toggles Config when application environment is test should contain corr
   },
   "scriptLink": {
     "enabled": true,
+  },
+  "showSportDataHeader": {
+    "enabled": false,
+  },
+  "sportDataPolling": {
+    "enabled": false,
   },
   "topBarOJs": {
     "enabled": true,

@@ -1,54 +1,35 @@
-import useUASButton from '#app/hooks/useUASButton';
+import { use } from 'react';
+import { AccountContext } from '#contexts/AccountContext';
+import type { SaveArticlePageData } from '#app/lib/utilities/extractSaveArticleProps';
+import SaveArticleButtonAuthenticated from './SaveArticleButtonAuthenticated/lazy';
+import SaveArticleButtonGuest from './SaveArticleButtonGuest';
 import styles from './index.styles';
 
-interface SaveArticleButtonProps {
-  articleId: string;
-  service: string;
+export interface SaveArticleButtonProps {
+  saveArticlePageData: SaveArticlePageData;
 }
-/** A button component that allows users to save an article for later reading,
- * showing the button based on user sign in status and feature toggles,
- * and displaying the saved status, loading state, and handling errors from the UAS API.
- * FUTURE TODO : Implement button click handler to toggle saved state */
 
-const SaveArticleButton = ({ articleId, service }: SaveArticleButtonProps) => {
-  const { showButton, isSaved, isLoading, error } = useUASButton({
-    articleId,
-    service,
-  });
+const SAVE_ARTICLE_BUTTON_ID = 'save-article-button';
 
-  if (!showButton) {
-    return null;
-  }
-  // TODO : Labels and text will be updated in a future PR to support translations and figma designs
-  const buttonLabel = isSaved ? 'Remove from saved' : 'Save for later';
+const SaveArticleButton = (props: SaveArticleButtonProps) => {
+  const { isPersonalizationAvailable, isPersonalizationEnabled } =
+    use(AccountContext);
 
-  const getButtonText = () => {
-    if (isLoading) return 'Loading...';
-    return isSaved ? 'Remove from saved' : 'Save for later';
-  };
-
-  // TODO : Will modify based on future error handling implementation,
-  //  currently just hides the button if there is an error fetching save status
-  if (error) {
-    // Logging until we have proper error handling in place
-    // eslint-disable-next-line no-console
-    console.log('Error fetching saved status for article:', {
-      articleId,
-      error,
-    });
-    return null;
-  }
+  if (!isPersonalizationAvailable) return null;
 
   return (
-    <button
-      css={styles.buttonWrapper}
-      type="button"
-      disabled={isLoading}
-      aria-label={buttonLabel}
-      title={buttonLabel}
-    >
-      {getButtonText()}
-    </button>
+    <>
+      <noscript>
+        <style>{`#${SAVE_ARTICLE_BUTTON_ID} { display: none; }`}</style>
+      </noscript>
+      <div css={styles.buttonWrapper} id={SAVE_ARTICLE_BUTTON_ID}>
+        {isPersonalizationEnabled ? (
+          <SaveArticleButtonAuthenticated {...props} />
+        ) : (
+          <SaveArticleButtonGuest />
+        )}
+      </div>
+    </>
   );
 };
 

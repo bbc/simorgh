@@ -19,16 +19,17 @@ import articleNewsWithPodcastPromo from '#data/news/articles/crkxdvxzwxk2.json';
 import articleDataWithElectionTag from '#data/mundo/articles/c206j730722o.json';
 import articleDataWithPortraitVideo from '#data/mundo/articles/c1xv2q1gewvo.json';
 import articleDataWithPortraitVideoRTL from '#data/persian/articles/c149pnldynxo.json';
-import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
+import articleDataPidginWithMediaCuration from '#data/pidgin/articles/cnd6yxmxvp2o.json';
+import articleWithTopicDiscovery from '#data/portuguese/articles/cgmpgpllnp7o.json';
 import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
 import { service as newsConfig } from '#app/lib/config/services/news';
 import { Services } from '#app/models/types/global';
 import { StoryArgs, StoryProps } from '#app/models/types/storybook';
 import articleDataMultipleContributors from '#data/news/articles/cgrj2g29kzxo.json';
 import ArticlePageComponent from './ArticlePage';
+import PageLayoutWrapper from '#app/components/PageLayoutWrapper';
 
-const PageWithOptimizely = withOptimizelyProvider(ArticlePageComponent);
-const Page = withPageWrapper(PageWithOptimizely);
+const Page = withOptimizelyProvider(ArticlePageComponent);
 
 const serviceContextMock = {
   ...newsConfig.default,
@@ -83,6 +84,7 @@ const ComponentWithContext = ({
         podcastPromo: { enabled: podcastEnabled },
         electionBanner: { enabled: electionBanner },
         articleLiteSiteLink: { enabled: articleLiteSiteLinkEnabled },
+        articleVideoCuration: { enabled: true },
       }}
     >
       {/* Service set to news to enable most read. Article data is in english */}
@@ -97,13 +99,15 @@ const ComponentWithContext = ({
           isUK
         >
           <ThemeProvider service={service}>
-            <Page
-              pageData={{
-                ...data.article,
-                secondaryColumn: data.secondaryData,
-                mostRead: data.secondaryData.mostRead,
-              }}
-            />
+            <PageLayoutWrapper pageData={data.article} status={200}>
+              <Page
+                pageData={{
+                  ...data.article,
+                  secondaryColumn: data.secondaryData,
+                  mostRead: data.secondaryData.mostRead,
+                }}
+              />
+            </PageLayoutWrapper>
           </ThemeProvider>
         </RequestContextProvider>
       </ServiceContextProvider>
@@ -142,13 +146,15 @@ const ComponentWithServiceContext = ({
         value={memoisedServiceContext}
       >
         <ThemeProvider service={service}>
-          <Page
-            pageData={{
-              ...data.article,
-              secondaryColumn: data.secondaryData,
-              mostRead: data.secondaryData.mostRead,
-            }}
-          />
+          <PageLayoutWrapper pageData={data.article} status={200}>
+            <Page
+              pageData={{
+                ...data.article,
+                secondaryColumn: data.secondaryData,
+                mostRead: data.secondaryData.mostRead,
+              }}
+            />
+          </PageLayoutWrapper>
         </ThemeProvider>
       </ServiceContext.Provider>
     </ToggleContextProvider>
@@ -168,6 +174,10 @@ export const ArticlePage = (_: StoryArgs, { service }: StoryProps) => (
 export const Burmese = () => (
   <ComponentWithServiceContext data={articleDataBurmese} service="burmese" />
 );
+
+Burmese.globals = {
+  service: { service: 'burmese', variant: 'default' },
+};
 
 export const ArticlePageWithRelatedContent = (
   _: StoryArgs,
@@ -197,6 +207,10 @@ export const ArticlePageWithPodcastPromo = () => (
   />
 );
 
+ArticlePageWithPodcastPromo.globals = {
+  service: { service: 'russian', variant: 'default' },
+};
+
 export const ArticlePageWithTopStoriesPidgin = () => (
   <ComponentWithContext
     data={articleDataWithPodcastPromo}
@@ -204,6 +218,10 @@ export const ArticlePageWithTopStoriesPidgin = () => (
     podcastEnabled
   />
 );
+
+ArticlePageWithTopStoriesPidgin.globals = {
+  service: { service: 'pidgin', variant: 'default' },
+};
 
 export const ArticlePageWithMostReadMundo = () => (
   <ComponentWithContext
@@ -213,6 +231,10 @@ export const ArticlePageWithMostReadMundo = () => (
   />
 );
 
+ArticlePageWithMostReadMundo.globals = {
+  service: { service: 'mundo', variant: 'default' },
+};
+
 export const ArticlePageWithPodcastPromoRightToLeft = () => (
   <ComponentWithContext
     data={articleDataWithPodcastPromo}
@@ -220,6 +242,10 @@ export const ArticlePageWithPodcastPromoRightToLeft = () => (
     podcastEnabled
   />
 );
+
+ArticlePageWithPodcastPromoRightToLeft.globals = {
+  service: { service: 'arabic', variant: 'default' },
+};
 
 export const ArticlePageWithPodcastNews = () => (
   <ComponentWithServiceContext
@@ -233,12 +259,20 @@ export const ArticlePageWithPortraitVideo = () => (
   <ComponentWithContext data={articleDataWithPortraitVideo} service="mundo" />
 );
 
+ArticlePageWithPortraitVideo.globals = {
+  service: { service: 'mundo', variant: 'default' },
+};
+
 export const ArticlePageWithPortraitVideoRightToLeft = () => (
   <ComponentWithContext
     data={articleDataWithPortraitVideoRTL}
     service="persian"
   />
 );
+
+ArticlePageWithPortraitVideoRightToLeft.globals = {
+  service: { service: 'persian', variant: 'default' },
+};
 
 export const ArticlePageWithElectionBanner = {
   render: () => (
@@ -275,6 +309,18 @@ export const ArticlePageWithMultipleContributors = {
   ),
 };
 
+export const ArticlePageWithTopicDiscovery = {
+  render: () => (
+    <ComponentWithContext
+      data={articleWithTopicDiscovery}
+      service="portuguese"
+    />
+  ),
+  globals: {
+    service: { service: 'portuguese', variant: 'default' },
+  },
+};
+
 export const TestArticlePageWithLiteSiteLink = {
   render: () => (
     <ComponentWithContext
@@ -284,6 +330,9 @@ export const TestArticlePageWithLiteSiteLink = {
     />
   ),
   tags: ['!dev'],
+  globals: {
+    service: { service: 'gahuza', variant: 'default' },
+  },
 };
 
 export const TestArticlePageWithLiteSiteLinkRTL = {
@@ -295,4 +344,19 @@ export const TestArticlePageWithLiteSiteLinkRTL = {
     />
   ),
   tags: ['!dev'],
+  globals: {
+    service: { service: 'arabic', variant: 'default' },
+  },
+};
+
+export const TestArticlePageWithVideoCuration = {
+  render: () => (
+    <ComponentWithContext
+      data={articleDataPidginWithMediaCuration}
+      service="pidgin"
+    />
+  ),
+  globals: {
+    service: { service: 'pidgin', variant: 'default' },
+  },
 };

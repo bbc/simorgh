@@ -41,6 +41,9 @@ export default {
   liveRadioSchedule: {
     enabled: true,
   },
+  locationTopicCuration: {
+    enabled: true,
+  },
   midArticleOnwardJourney: {
     enabled: true,
   },
@@ -59,9 +62,6 @@ export default {
   preroll: {
     enabled: true,
   },
-  podcastEpisodeLinkedData: {
-    enabled: true,
-  },
   podcastPromo: {
     enabled: true,
   },
@@ -78,6 +78,12 @@ export default {
     value: 4,
   },
   scriptLink: {
+    enabled: true,
+  },
+  sportDataPolling: {
+    enabled: true,
+  },
+  showSportDataHeader: {
     enabled: true,
   },
   topBarOJs: {

@@ -163,6 +163,7 @@ exports[`Navigation should render correctly 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-15 {
@@ -485,6 +486,7 @@ exports[`Navigation should render correctly when ampOpenClass prop is provided 1
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-15 {
@@ -801,6 +803,7 @@ exports[`Navigation should render correctly when isOpen is true 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-15 {
@@ -961,8 +964,15 @@ exports[`Scrollable Navigation should render correctly 1`] = `
     overflow-x: scroll;
     scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
+    scroll-padding-inline-end: 3rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-0 {
+      scroll-padding-inline-end: 6rem;
+    }
   }
 
   .emotion-0::-webkit-scrollbar {
@@ -1167,6 +1177,7 @@ exports[`Scrollable Navigation should render correctly 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-17 {

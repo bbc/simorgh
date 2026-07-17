@@ -27,6 +27,7 @@
       "#app/*": ["src/app/*"],
       "#src/*": ["src/*"],
       "#nextjs/*": ["ws-nextjs-app/*"],
+      "#utilities/*": ["ws-nextjs-app/utilities/*"],
       "#contexts/*": ["src/app/contexts/*"],
       "#components/*": ["src/app/legacy/components/*"],
       "#containers/*": ["src/app/legacy/containers/*"],
@@ -38,10 +39,13 @@
       "#models/*": ["src/app/models/*"],
       "#testHelpers/*": ["src/testHelpers/*"],
       "#pages/*": ["src/app/pages/*"],
-      "#server/*": ["src/server/*"],
       "#storybook/*": [".storybook/*"]
     }
   },
   "include": ["src/**/*", "src/app/legacy/**/*.ts*"],
   "exclude": ["node_modules", "build"]
+  ,
+  "plugins": [
+    { "name": "typescript-plugin-css-modules" }
+  ]
 }

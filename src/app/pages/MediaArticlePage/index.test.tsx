@@ -1,9 +1,8 @@
 import { PropsWithChildren } from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import { render, waitFor, screen } from '@testing-library/react';
-import { FetchMock } from 'jest-fetch-mock';
+import { waitFor, screen } from '@testing-library/react';
 import { Article } from '#app/models/types/optimo';
 import { Helmet } from 'react-helmet';
+import { render } from '../../components/react-testing-library-with-providers';
 import { ARTICLE_PAGE } from '../../routes/utils/pageTypes';
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
@@ -39,54 +38,54 @@ const Context = ({
   mostReadToggledOn = true,
   showAdsBasedOnLocation = false,
 }: PropsWithChildren<ContextProps>) => (
-  <BrowserRouter>
-    <ThemeProvider service={service} variant="default">
-      <ToggleContextProvider
-        toggles={{
-          mostRead: {
-            enabled: mostReadToggledOn,
-          },
-          ads: {
-            enabled: adsToggledOn,
-          },
-        }}
+  <ThemeProvider service={service} variant="default">
+    <ToggleContextProvider
+      toggles={{
+        mostRead: {
+          enabled: mostReadToggledOn,
+        },
+        ads: {
+          enabled: adsToggledOn,
+        },
+      }}
+    >
+      <RequestContextProvider
+        bbcOrigin="https://www.test.bbc.co.uk"
+        id="c0000000000o"
+        isAmp={false}
+        isApp={false}
+        pageType={ARTICLE_PAGE}
+        pathname="/pathname"
+        service={service}
+        statusCode={200}
+        showAdsBasedOnLocation={showAdsBasedOnLocation}
+        isUK
       >
-        <RequestContextProvider
-          bbcOrigin="https://www.test.bbc.co.uk"
-          id="c0000000000o"
-          isAmp={false}
-          isApp={false}
-          pageType={ARTICLE_PAGE}
-          pathname="/pathname"
-          service={service}
-          statusCode={200}
-          showAdsBasedOnLocation={showAdsBasedOnLocation}
-          isUK
-        >
-          <ServiceContextProvider service={service}>
-            {children}
-          </ServiceContextProvider>
-        </RequestContextProvider>
-      </ToggleContextProvider>
-    </ThemeProvider>
-  </BrowserRouter>
+        <ServiceContextProvider service={service}>
+          {children}
+        </ServiceContextProvider>
+      </RequestContextProvider>
+    </ToggleContextProvider>
+  </ThemeProvider>
 );
 
-const fetchMock = fetch as FetchMock;
-
 describe('MediaArticlePage', () => {
+  const mockMostReadResponse = () =>
+    jest.spyOn(global, 'fetch').mockResolvedValue({
+      json: async () => newsMostReadData,
+    } as Response);
+
   beforeEach(() => {
     process.env.SIMORGH_ICHEF_BASE_URL = 'https://ichef.test.bbci.co.uk';
-
-    fetchMock.resetMocks();
   });
 
   afterEach(() => {
     delete process.env.SIMORGH_ICHEF_BASE_URL;
+    jest.restoreAllMocks();
   });
 
   it('should render a news article correctly', async () => {
-    fetchMock.mockResponse(JSON.stringify(newsMostReadData));
+    mockMostReadResponse();
 
     const { container } = render(
       <Context service="news">
@@ -94,9 +93,24 @@ describe('MediaArticlePage', () => {
       </Context>,
     );
 
-    await waitFor(() => {
-      expect(container).toMatchSnapshot();
-    });
+    const headline = container.querySelector('h1');
+    expect(headline).toBeInTheDocument();
+    expect(headline).toHaveTextContent('WS Media (1) -Media above title');
+
+    const mediaPLayer = container.querySelector(
+      '[data-e2e="media-loader__container"]',
+    );
+
+    expect(mediaPLayer).toBeInTheDocument();
+
+    const caption = container.querySelector(
+      '[data-testid="caption-paragraph"]',
+    );
+    expect(caption).toBeInTheDocument();
+
+    const subheadline = container.querySelector('h2');
+    expect(subheadline).toBeInTheDocument();
+    expect(subheadline).toHaveTextContent('Headline');
   });
 
   it('should set "amphtml" link tag for asset', async () => {
@@ -141,7 +155,7 @@ describe('MediaArticlePage', () => {
   });
 
   it('should NOT render mpu or advert leaderboard', async () => {
-    fetchMock.mockResponse(JSON.stringify(newsMostReadData));
+    mockMostReadResponse();
 
     const { container } = render(
       <Context service="news" adsToggledOn showAdsBasedOnLocation>
@@ -233,5 +247,40 @@ describe('MediaArticlePage', () => {
 
     expect(modifiedTime).toBeUndefined();
     expect(publishedTime).toBeUndefined();
+  });
+
+  describe('TopicDiscovery', () => {
+    const data = {
+      ...pidginPageData,
+      metadata: {
+        ...pidginPageData.metadata,
+        topics: [
+          {
+            topicId: '1',
+            topicName: 'Topic 1',
+          },
+          {
+            topicId: '2',
+            topicName: 'Topic 2',
+          },
+        ],
+      },
+    } as unknown as Article;
+
+    it('should render TopicDiscovery when topicDiscovery toggle is enabled', () => {
+      const { queryByTestId } = render(<MediaArticlePage pageData={data} />, {
+        service: 'pidgin',
+        toggles: { topicDiscovery: { enabled: true } },
+      });
+      expect(queryByTestId('topic-discovery')).toBeInTheDocument();
+    });
+
+    it('should NOT render TopicDiscovery when topicDiscovery toggle is disabled', () => {
+      const { queryByTestId } = render(<MediaArticlePage pageData={data} />, {
+        service: 'pidgin',
+        toggles: { topicDiscovery: { enabled: false } },
+      });
+      expect(queryByTestId('topic-discovery')).not.toBeInTheDocument();
+    });
   });
 });

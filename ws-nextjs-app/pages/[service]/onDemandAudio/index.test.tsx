@@ -14,6 +14,7 @@ import {
   act,
   waitFor,
 } from '#app/components/react-testing-library-with-providers';
+import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import { GetServerSidePropsContext } from 'next';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 import _OnDemandAudioPage from './OnDemandAudioLayout';
@@ -33,9 +34,6 @@ const mockToggles = {
     value: 8,
   },
   onDemandRadioSchedule: {
-    enabled: true,
-  },
-  podcastEpisodeLinkedData: {
     enabled: true,
   },
 };
@@ -90,13 +88,20 @@ const renderPage = async ({
   return result;
 };
 
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  default: jest.fn(),
+}));
+
 jest.mock('#app/components/ChartbeatAnalytics', () => {
-  const ChartbeatAnalytics = () => <div>chartbeat</div>;
+  const ChartbeatAnalytics = () => <div>Chartbeat</div>;
   return ChartbeatAnalytics;
 });
 
 jest.mock('#app/components/ATIAnalytics', () => () => <div>ATI Analytics</div>);
-jest.mock('#app/routes/onDemandAudio/podcastExternalLinks', () => ({
+
+jest.mock('#nextjs/pages/[service]/onDemandAudio/podcastExternalLinks', () => ({
   __esModule: true,
   default: jest.fn().mockResolvedValue([
     {
@@ -133,22 +138,64 @@ describe('OnDemand Radio Page ', () => {
       },
     });
     jest.spyOn(Date, 'now').mockImplementation(() => 1234567890000);
+    mockMatchMedia();
     process.env = { ...env };
   });
 
-  it('should match snapshot', async () => {
-    const result = await handleOnDemandAudioRoute(
-      mockGetServerSidePropsContext,
+  it('should display podcast episode page with PodcastEpisode schema', async () => {
+    const mockCtx = {
+      ...mockGetServerSidePropsContext,
+      resolvedUrl: '/gahuza/bbc_gahuza_radio/podcasts/p07yh8hb/p0k4x0jm',
+    } satisfies GetServerSidePropsContext;
+    jest.spyOn(getPageDataModule, 'default').mockResolvedValue({
+      data: {
+        pageData: gahuzaPodcastPage.data,
+        status: 200,
+      },
+    });
+
+    const result = await handleOnDemandAudioRoute(mockCtx);
+
+    const { container } = await renderPage({
+      pageData: result.props.pageData,
+      service: 'gahuza',
+      pathname: '/gahuza/bbc_gahuza_radio/podcasts/p07yh8hb/p0k4x0jm',
+    });
+
+    const linkedDataScript = container.querySelector(
+      'script[type="application/ld+json"]',
     );
-    const { container } = await renderPage({
-      pageData: result.props.pageData,
-      service: 'gahuza',
-    });
 
-    expect(container).toMatchSnapshot();
+    expect(linkedDataScript).toBeInTheDocument();
+
+    const linkedData = JSON.parse(linkedDataScript?.textContent ?? '{}') as {
+      '@graph'?: Array<Record<string, unknown>>;
+    };
+    const graph = linkedData['@graph'] ?? [];
+
+    const podcastEpisode = graph.find(
+      graphEntry => graphEntry['@type'] === 'PodcastEpisode',
+    );
+    const podcastSeries = graph.find(
+      graphEntry => graphEntry['@type'] === 'PodcastSeries',
+    );
+    const webPageSchema = graph.find(
+      graphEntry => graphEntry['@type'] === 'WebPage',
+    );
+
+    expect(podcastEpisode).toBeDefined();
+    expect(podcastSeries).toBeDefined();
+    expect(webPageSchema).toBeDefined();
+
+    const podcastEpisodeId = podcastEpisode?.['@id'];
+
+    expect(podcastEpisodeId).toEqual(expect.any(String));
+    expect(webPageSchema?.mainEntity).toEqual({
+      '@id': podcastEpisodeId,
+    });
   });
 
-  it('should match snapshot for podcast episode page with PodcastEpisode schema', async () => {
+  it('should include contentUrl and encodingFormat in associatedMedia when download link is present', async () => {
     const mockCtx = {
       ...mockGetServerSidePropsContext,
       resolvedUrl: '/gahuza/bbc_gahuza_radio/podcasts/p07yh8hb/p0k4x0jm',
@@ -162,20 +209,45 @@ describe('OnDemand Radio Page ', () => {
 
     const result = await handleOnDemandAudioRoute(mockCtx);
 
+    const downloadUrl =
+      'https://open.live.bbc.co.uk/mediaselector/6/redir/version/2.0/mediaset/audio-nondrm-download-low/proto/https/vpid/p0k4x06p.mp3';
+    const pageDataWithDownloadLink = {
+      ...result.props.pageData,
+      externalLinks: [
+        ...result.props.pageData.externalLinks,
+        { linkText: 'Download', linkUrl: downloadUrl, linkType: 'download' },
+      ],
+    };
+
     const { container } = await renderPage({
-      pageData: result.props.pageData,
+      pageData: pageDataWithDownloadLink,
       service: 'gahuza',
       pathname: '/gahuza/bbc_gahuza_radio/podcasts/p07yh8hb/p0k4x0jm',
-      toggles: {
-        ...mockToggles,
-        podcastEpisodeLinkedData: { enabled: true },
-      },
     });
 
-    expect(container).toMatchSnapshot();
+    const linkedDataScript = container.querySelector(
+      'script[type="application/ld+json"]',
+    );
+    const linkedData = JSON.parse(linkedDataScript?.textContent ?? '{}') as {
+      '@graph'?: Array<Record<string, unknown>>;
+    };
+    const graph = linkedData['@graph'] ?? [];
+
+    const podcastEpisode = graph.find(
+      graphEntry => graphEntry['@type'] === 'PodcastEpisode',
+    ) as Record<string, unknown> | undefined;
+
+    const associatedMedia = podcastEpisode?.associatedMedia as
+      | Record<string, unknown>
+      | undefined;
+
+    expect(associatedMedia?.contentUrl).toMatch(
+      /^https:\/\/open\.live\.bbc\.co\.uk\/mediaselector\//,
+    );
+    expect(associatedMedia?.encodingFormat).toBe('audio/mpeg');
   });
 
-  it('should match snapshot for when podcastEpisodeLinkedData toggle is off', async () => {
+  it('should not include contentUrl in associatedMedia when no download link is present', async () => {
     const mockCtx = {
       ...mockGetServerSidePropsContext,
       resolvedUrl: '/gahuza/bbc_gahuza_radio/podcasts/p07yh8hb/p0k4x0jm',
@@ -189,17 +261,37 @@ describe('OnDemand Radio Page ', () => {
 
     const result = await handleOnDemandAudioRoute(mockCtx);
 
+    const pageDataWithNoDownloadLink = {
+      ...result.props.pageData,
+      externalLinks: result.props.pageData.externalLinks.filter(
+        (link: { linkType: string }) => link.linkType !== 'download',
+      ),
+    };
+
     const { container } = await renderPage({
-      pageData: result.props.pageData,
+      pageData: pageDataWithNoDownloadLink,
       service: 'gahuza',
       pathname: '/gahuza/bbc_gahuza_radio/podcasts/p07yh8hb/p0k4x0jm',
-      toggles: {
-        ...mockToggles,
-        podcastEpisodeLinkedData: { enabled: false },
-      },
     });
 
-    expect(container).toMatchSnapshot();
+    const linkedDataScript = container.querySelector(
+      'script[type="application/ld+json"]',
+    );
+    const linkedData = JSON.parse(linkedDataScript?.textContent ?? '{}') as {
+      '@graph'?: Array<Record<string, unknown>>;
+    };
+    const graph = linkedData['@graph'] ?? [];
+
+    const podcastEpisode = graph.find(
+      graphEntry => graphEntry['@type'] === 'PodcastEpisode',
+    ) as Record<string, unknown> | undefined;
+
+    const associatedMedia = podcastEpisode?.associatedMedia as
+      | Record<string, unknown>
+      | undefined;
+
+    expect(associatedMedia?.contentUrl).toBeUndefined();
+    expect(associatedMedia?.encodingFormat).toBeUndefined();
   });
 
   it('should show the brand title for OnDemand Radio Pages', async () => {
@@ -407,14 +499,13 @@ describe('OnDemand Radio Page ', () => {
 
     const result = await handleOnDemandAudioRoute(mockCtx);
 
-    const { container, getByText } = await renderPage({
+    const { getByText } = await renderPage({
       pageData: result.props.pageData,
       service: 'swahili',
     });
     const expiredMessageEl = getByText('Taarifa hii haipatikani tena.');
 
     expect(expiredMessageEl).toBeInTheDocument();
-    expect(container).toMatchSnapshot();
   });
 
   it("should show the 'content not yet available' message if episode is not yet available", async () => {
@@ -438,7 +529,7 @@ describe('OnDemand Radio Page ', () => {
 
     const result = await handleOnDemandAudioRoute(mockCtx);
 
-    const { container, getByText } = await renderPage({
+    const { getByText } = await renderPage({
       pageData: result.props.pageData,
       service: 'korean',
     });
@@ -448,7 +539,6 @@ describe('OnDemand Radio Page ', () => {
     );
 
     expect(notYetAvailableMessageEl).toBeInTheDocument();
-    expect(container).toMatchSnapshot();
   });
 
   it('should show the radio schedule for the On Demand radio page', async () => {

@@ -10,10 +10,9 @@ import type { StorybookConfig } from '@storybook/react-webpack5';
 
 import alias from '../dirAlias';
 
-import { getClientEnvVars } from '../src/clientEnvVars';
 import { fontInfo } from '../src/app/components/ThemeProvider/fontFaces';
-
 const require = createRequire(import.meta.url);
+const MomentTimezoneInclude = require('../src/app/legacy/psammead/moment-timezone-include/src');
 const DOT_ENV_CONFIG = dotenv.config({ quiet: true });
 
 const storybookConfig: StorybookConfig = {
@@ -43,6 +42,7 @@ const storybookConfig: StorybookConfig = {
     '../src/app/legacy/psammead/psammead-locales/**/*.stories.@(t|j)sx',
     '../src/app/legacy/psammead/index.stories.tsx',
     '../src/app/components/**/*.stories.@(t|j)sx',
+    '../src/app/components-webcore/**/*.stories.@(t|j)sx',
     '../src/app/pages/**/*.stories.@(t|j)sx',
     './DocsDecorator/**/*.stories.@(t|j)sx',
     './StorybookComponents/**/*.stories.@(t|j)sx',
@@ -61,10 +61,38 @@ const storybookConfig: StorybookConfig = {
         transcludeMarkdown: true,
       },
     },
+    {
+      name: '@storybook/addon-styling-webpack',
+      options: {
+        rules: [
+          {
+            test: /\.module\.scss$/,
+            use: [
+              'style-loader',
+              {
+                loader: 'css-loader',
+                options: {
+                  modules: true,
+                  importLoaders: 1,
+                  esModule: false,
+                },
+              },
+              {
+                loader: 'sass-loader',
+              },
+            ],
+          },
+          {
+            test: /(?<!\.module)\.scss$/,
+            use: ['style-loader', 'css-loader', 'sass-loader'],
+          },
+        ],
+      },
+    },
   ],
   env: config => ({
     ...config,
-    ...getClientEnvVars(DOT_ENV_CONFIG, { stringify: false }),
+    ...DOT_ENV_CONFIG.parsed,
   }),
   webpackFinal: async (config, options) => {
     const babelOptions = await options.presets.apply('babel', {}, options);
@@ -115,6 +143,10 @@ const storybookConfig: StorybookConfig = {
       ),
       new webpack.ProvidePlugin({
         process: 'process/browser',
+      }),
+      new MomentTimezoneInclude({
+        startYear: 2010,
+        endYear: new Date().getFullYear() + 1,
       }),
     );
 

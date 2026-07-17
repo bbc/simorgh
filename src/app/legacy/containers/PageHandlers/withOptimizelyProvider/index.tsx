@@ -4,16 +4,22 @@ import {
   OptimizelyProvider,
   setLogger,
 } from '@optimizely/react-sdk';
+import { enums, ListenerPayload } from '@optimizely/optimizely-sdk';
 import Cookie from 'js-cookie';
 import isLive from '#lib/utilities/isLive';
 import onClient from '#lib/utilities/onClient';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
+import { notifyDecision } from '#app/lib/optimizelyDecisionStore';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import isCypress from './isCypress';
+import registerVisitActivity from './visitTracking';
 import { getClientTimeOfDay, getReferrer, isMobile } from './userAttributes';
 
+const PAGE_VIEW_EVENT_NAME = 'page-views';
+const VISIT_EVENT_NAME = 'visit';
+let lastTrackedUrl: string | null = null;
 const isInCypress = isCypress();
 const isStoryBook = process.env.STORYBOOK;
 const disableOptimizely = isStoryBook || isInCypress;
@@ -31,8 +37,48 @@ const getUserId = () => {
 const optimizely = createInstance({
   sdkKey: getEnvConfig().SIMORGH_OPTIMIZELY_SDK_KEY,
   eventBatchSize: 10,
-  eventFlushInterval: 1000,
+  eventFlushInterval: 100,
 });
+
+optimizely?.notificationCenter?.addNotificationListener(
+  enums.NOTIFICATION_TYPES.DECISION,
+  (
+    notification: ListenerPayload & {
+      decisionInfo?: {
+        flagKey?: string;
+        variationKey?: string;
+        decisionEventDispatched?: boolean;
+      };
+    },
+  ) => {
+    if (!onClient()) return;
+
+    const flagKey = notification.decisionInfo?.flagKey;
+    const variationKey = notification.decisionInfo?.variationKey;
+
+    if (flagKey && variationKey && variationKey !== 'off') {
+      const decisionEventDispatched =
+        notification.decisionInfo?.decisionEventDispatched;
+
+      if (decisionEventDispatched) {
+        const currentUrl = window.location.pathname + window.location.search;
+        if (currentUrl !== lastTrackedUrl) {
+          lastTrackedUrl = currentUrl;
+
+          // the visit (denominator) must be sent before the page view (numerator)
+          // so the page view falls inside Optimizely's ratio metric attribution window
+          if (registerVisitActivity(Date.now())) {
+            optimizely.track(VISIT_EVENT_NAME);
+          }
+
+          optimizely.track(PAGE_VIEW_EVENT_NAME);
+        }
+      }
+
+      notifyDecision(flagKey);
+    }
+  },
+);
 
 const withOptimizelyProvider = <T,>(Component: ComponentType<T>) => {
   return props => {

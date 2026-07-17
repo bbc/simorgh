@@ -87,6 +87,7 @@ exports[`Navigation should correctly render amp navigation 1`] = `
   justify-content: space-between;
   position: relative;
   z-index: 0;
+  background-color: #B80000;
 }
 
 .emotion-7::before {
@@ -111,8 +112,15 @@ exports[`Navigation should correctly render amp navigation 1`] = `
     overflow-x: scroll;
     scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
+    scroll-padding-inline-end: 3rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-8 {
+      scroll-padding-inline-end: 6rem;
+    }
   }
 
   .emotion-8::-webkit-scrollbar {
@@ -351,6 +359,7 @@ exports[`Navigation should correctly render amp navigation 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-21 {
@@ -618,8 +627,15 @@ exports[`Navigation should correctly render amp navigation 1`] = `
     overflow-x: scroll;
     scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
+    scroll-padding-inline-end: 3rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-39 {
+      scroll-padding-inline-end: 6rem;
+    }
   }
 
   .emotion-39::-webkit-scrollbar {
@@ -973,6 +989,7 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
   justify-content: space-between;
   position: relative;
   z-index: 0;
+  background-color: #B80000;
 }
 
 .emotion-7::before {
@@ -997,8 +1014,15 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
     overflow-x: scroll;
     scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
+    scroll-padding-inline-end: 3rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-8 {
+      scroll-padding-inline-end: 6rem;
+    }
   }
 
   .emotion-8::-webkit-scrollbar {
@@ -1300,6 +1324,7 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-27 {
@@ -1428,8 +1453,15 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
     overflow-x: scroll;
     scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
+    scroll-padding-inline-end: 3rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-36 {
+      scroll-padding-inline-end: 6rem;
+    }
   }
 
   .emotion-36::-webkit-scrollbar {
@@ -1770,6 +1802,7 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
   justify-content: space-between;
   position: relative;
   z-index: 0;
+  background-color: #B80000;
 }
 
 .emotion-7::before {
@@ -1794,8 +1827,15 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
     overflow-x: scroll;
     scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
+    scroll-padding-inline-end: 3rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-8 {
+      scroll-padding-inline-end: 6rem;
+    }
   }
 
   .emotion-8::-webkit-scrollbar {
@@ -2100,6 +2140,7 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-23 {
@@ -2301,8 +2342,15 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
     overflow-x: scroll;
     scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
+    scroll-padding-inline-end: 3rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-39 {
+      scroll-padding-inline-end: 6rem;
+    }
   }
 
   .emotion-39::-webkit-scrollbar {
@@ -2650,6 +2698,7 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
   justify-content: space-between;
   position: relative;
   z-index: 0;
+  background-color: #B80000;
 }
 
 .emotion-7::before {
@@ -2674,8 +2723,15 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
     overflow-x: scroll;
     scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
+    scroll-padding-inline-end: 3rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-8 {
+      scroll-padding-inline-end: 6rem;
+    }
   }
 
   .emotion-8::-webkit-scrollbar {
@@ -2907,6 +2963,7 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-21 {
@@ -3187,8 +3244,15 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
     overflow-x: scroll;
     scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
+    scroll-padding-inline-end: 3rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-37 {
+      scroll-padding-inline-end: 6rem;
+    }
   }
 
   .emotion-37::-webkit-scrollbar {
@@ -3388,30 +3452,34 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
             </button>
           </div>
           <div
-            class="emotion-28 emotion-29"
-            data-e2e="dropdown-nav"
-            height="0"
+            role="presentation"
           >
-            <ul
-              class="emotion-30 emotion-31"
+            <div
+              class="emotion-28 emotion-29"
+              data-e2e="dropdown-nav"
+              height="0"
             >
-              <li
-                class="emotion-32 emotion-33"
-                role="listitem"
+              <ul
+                class="emotion-30 emotion-31"
               >
-                <a
-                  aria-labelledby="dropdownNavigation-home"
-                  class="emotion-34 emotion-35"
-                  href="/news"
+                <li
+                  class="emotion-32 emotion-33"
+                  role="listitem"
                 >
-                  <span
-                    id="dropdownNavigation-home"
+                  <a
+                    aria-labelledby="dropdownNavigation-home"
+                    class="emotion-34 emotion-35"
+                    href="/news"
                   >
-                    Home
-                  </span>
-                </a>
-              </li>
-            </ul>
+                    <span
+                      id="dropdownNavigation-home"
+                    >
+                      Home
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <div
@@ -3518,6 +3586,7 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
   justify-content: space-between;
   position: relative;
   z-index: 0;
+  background-color: #B80000;
 }
 
 .emotion-7::before {
@@ -3542,8 +3611,15 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
     overflow-x: scroll;
     scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
+    scroll-padding-inline-end: 3rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-8 {
+      scroll-padding-inline-end: 6rem;
+    }
   }
 
   .emotion-8::-webkit-scrollbar {
@@ -3838,6 +3914,7 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-25 {
@@ -3979,8 +4056,15 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
     overflow-x: scroll;
     scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
+    scroll-padding-inline-end: 3rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-34 {
+      scroll-padding-inline-end: 6rem;
+    }
   }
 
   .emotion-34::-webkit-scrollbar {
@@ -4167,30 +4251,34 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
             </button>
           </div>
           <div
-            class="emotion-25 emotion-26"
-            data-e2e="dropdown-nav"
-            height="0"
+            role="presentation"
           >
-            <ul
-              class="emotion-27 emotion-28"
+            <div
+              class="emotion-25 emotion-26"
+              data-e2e="dropdown-nav"
+              height="0"
             >
-              <li
-                class="emotion-29 emotion-30"
-                role="listitem"
+              <ul
+                class="emotion-27 emotion-28"
               >
-                <a
-                  aria-labelledby="dropdownNavigation-home"
-                  class="emotion-31 emotion-32"
-                  href="/news"
+                <li
+                  class="emotion-29 emotion-30"
+                  role="listitem"
                 >
-                  <span
-                    id="dropdownNavigation-home"
+                  <a
+                    aria-labelledby="dropdownNavigation-home"
+                    class="emotion-31 emotion-32"
+                    href="/news"
                   >
-                    Home
-                  </span>
-                </a>
-              </li>
-            </ul>
+                    <span
+                      id="dropdownNavigation-home"
+                    >
+                      Home
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <div
@@ -4297,6 +4385,7 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
   justify-content: space-between;
   position: relative;
   z-index: 0;
+  background-color: #B80000;
 }
 
 .emotion-7::before {
@@ -4321,8 +4410,15 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
     overflow-x: scroll;
     scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
+    scroll-padding-inline-end: 3rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-8 {
+      scroll-padding-inline-end: 6rem;
+    }
   }
 
   .emotion-8::-webkit-scrollbar {
@@ -4620,6 +4716,7 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-23 {
@@ -4834,8 +4931,15 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
     overflow-x: scroll;
     scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
+    scroll-padding-inline-end: 3rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-37 {
+      scroll-padding-inline-end: 6rem;
+    }
   }
 
   .emotion-37::-webkit-scrollbar {
@@ -5035,30 +5139,34 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
             </button>
           </div>
           <div
-            class="emotion-28 emotion-29"
-            data-e2e="dropdown-nav"
-            height="0"
+            role="presentation"
           >
-            <ul
-              class="emotion-30 emotion-31"
+            <div
+              class="emotion-28 emotion-29"
+              data-e2e="dropdown-nav"
+              height="0"
             >
-              <li
-                class="emotion-32 emotion-33"
-                role="listitem"
+              <ul
+                class="emotion-30 emotion-31"
               >
-                <a
-                  aria-labelledby="dropdownNavigation-home"
-                  class="emotion-34 emotion-35"
-                  href="/news"
+                <li
+                  class="emotion-32 emotion-33"
+                  role="listitem"
                 >
-                  <span
-                    id="dropdownNavigation-home"
+                  <a
+                    aria-labelledby="dropdownNavigation-home"
+                    class="emotion-34 emotion-35"
+                    href="/news"
                   >
-                    Home
-                  </span>
-                </a>
-              </li>
-            </ul>
+                    <span
+                      id="dropdownNavigation-home"
+                    >
+                      Home
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <div

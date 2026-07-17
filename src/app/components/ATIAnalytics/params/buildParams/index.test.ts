@@ -42,6 +42,8 @@ describe('implementation of buildPageATIParams', () => {
       categoryName: undefined,
       contentId: 'urn:bbc:tipo:topic:cm7682qz7v1t',
       contentType: 'index-home',
+      hashedId: null,
+      isSignedIn: false,
       isUk: undefined,
       language: 'pcm',
       ldpThingIds: undefined,
@@ -100,9 +102,12 @@ describe('implementation of buildPageATIParams', () => {
 
     const validPageURLParams = {
       appName: 'atiAnalyticsAppName',
+      campaigns: undefined,
       categoryName: 'Refugees%20and%20asylum%20seekers~Myanmar~Military',
       contentId: 'urn:bbc:optimo:asset:c9wxnzvwp3mo',
       contentType: 'article',
+      hashedId: null,
+      isSignedIn: false,
       isUK: false,
       language: 'my',
       ldpThingIds:
@@ -190,6 +195,8 @@ describe('implementation of buildPageATIParams', () => {
       categoryName: 'Environment~Narendra+Modi~Nature~India~Severe+weather',
       contentId: 'urn:bbc:optimo:asset:c4nrpd0d4nro',
       contentType: 'article-sfv',
+      hashedId: null,
+      isSignedIn: false,
       isUK: false,
       language: 'ha',
       ldpThingIds:
@@ -233,10 +240,13 @@ describe('implementation of buildPageATIParams', () => {
     // timePublished and timeUpdated are not returned via BFF implementation so set to undefined in test
     const validPageURLParams = {
       appName: 'atiAnalyticsAppName',
+      campaigns: undefined,
       categoryName: undefined,
       contentId: 'urn:bbc:tipo:topic:c95y35941vrt',
       contentType: 'index-category',
-      isUk: undefined,
+      hashedId: null,
+      isSignedIn: false,
+      isUK: undefined,
       language: 'pcm',
       ldpThingIds: undefined,
       ldpThingLabels: undefined,
@@ -286,10 +296,13 @@ describe('implementation of buildPageATIParams', () => {
 
     const validPageURLParams = {
       appName: 'atiAnalyticsAppName',
+      campaigns: undefined,
       categoryName: undefined,
       contentId: undefined,
       contentType: 'list-datadriven',
-      isUk: undefined,
+      hashedId: null,
+      isSignedIn: false,
+      isUK: undefined,
       language: 'pcm',
       ldpThingIds: undefined,
       ldpThingLabels: undefined,
@@ -367,6 +380,8 @@ describe('implementation of buildPageATIParams', () => {
         contentId:
           'urn:bbc:cps:curie:asset:3137d6de-62c2-4637-a002-29d2ab075990',
         contentType: 'article',
+        hashedId: null,
+        isSignedIn: false,
         isUK: undefined,
         language: 'es',
         ldpThingIds:
@@ -443,6 +458,8 @@ describe('implementation of buildPageATIParams', () => {
         contentId:
           'urn:bbc:cps:curie:asset:6d745333-c79d-e245-a5b2-f4acb7de35e1',
         contentType: 'article-media-asset',
+        hashedId: null,
+        isSignedIn: false,
         isUK: undefined,
         language: 'es',
         ldpThingIds:
@@ -517,6 +534,8 @@ describe('implementation of buildPageATIParams', () => {
         contentId:
           'urn:bbc:cps:curie:asset:08e22e90-7361-cd47-b586-7cb53fc5a012',
         contentType: 'article-photo-gallery',
+        hashedId: null,
+        isSignedIn: false,
         isUK: undefined,
         language: 'es',
         ldpThingIds: '25844b6e-80b0-4de9-8ea0-7a35e7d4086f',
@@ -583,6 +602,8 @@ describe('implementation of buildPageATIParams', () => {
         contentId:
           'urn:bbc:cps:curie:asset:c1c8b1bf-4c9c-44e8-be0d-c81a2aa59e46',
         contentType: 'article-correspondent',
+        hashedId: null,
+        isSignedIn: false,
         isUK: undefined,
         language: 'en-gb',
         ldpThingIds:

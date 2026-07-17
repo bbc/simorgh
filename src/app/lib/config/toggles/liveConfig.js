@@ -58,9 +58,6 @@ export default {
   preroll: {
     enabled: true,
   },
-  podcastEpisodeLinkedData: {
-    enabled: false,
-  },
   podcastPromo: {
     enabled: false,
   },
@@ -78,6 +75,12 @@ export default {
   },
   scriptLink: {
     enabled: true,
+  },
+  sportDataPolling: {
+    enabled: false,
+  },
+  showSportDataHeader: {
+    enabled: false,
   },
   topBarOJs: {
     enabled: true,

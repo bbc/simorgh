@@ -4,9 +4,20 @@ import {
   act,
   waitFor,
 } from '#app/components/react-testing-library-with-providers';
+import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import Header from './index';
 
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  default: jest.fn(),
+}));
+
 describe('Live Page Header', () => {
+  beforeEach(() => {
+    mockMatchMedia();
+  });
+
   describe('title and description', () => {
     it('should render a title and description when provided', async () => {
       await act(async () => {
@@ -108,6 +119,20 @@ describe('Live Page Header', () => {
       const tabIndex = header?.getAttribute('tabIndex');
 
       expect(tabIndex).toEqual('-1');
+    });
+    it('should render a translated match summary H2 for sport data headers', async () => {
+      await act(async () => {
+        render(<Header title="I am a title" showLiveLabel showSportData />, {
+          service: 'afaanoromoo',
+        });
+      });
+
+      expect(
+        screen.getByRole('heading', {
+          level: 2,
+          name: 'Cuunfaa Taphaa',
+        }),
+      ).toBeInTheDocument();
     });
   });
 });
