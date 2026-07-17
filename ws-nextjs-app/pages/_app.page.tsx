@@ -1,6 +1,7 @@
 import App, { AppContext } from 'next/app';
 import { ATIData } from '#app/components/ATIAnalytics/types';
 import ThemeProvider from '#app/components/ThemeProvider';
+import ThemeProviderSCSSModules from '#app/components/ThemeProviderSCSSModules';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 import {
   PageTypes,
@@ -203,15 +204,20 @@ export default class CustomApp extends App<Props> {
                   ) : (
                     <QueryProvider>
                       <UserContextProvider>
-                        <ThemeProvider service={service} variant={variant}>
-                          <PageWrapper
-                            navItems={navItems}
-                            pageData={pageData}
-                            status={status}
-                          >
-                            {RenderChildrenOrError}
-                          </PageWrapper>
-                        </ThemeProvider>
+                      <ThemeProviderSCSSModules
+                        service={service}
+                        variant={variant}
+                      >
+                          <ThemeProvider service={service} variant={variant}>
+                            <PageWrapper
+                              navItems={navItems}
+                              pageData={pageData}
+                              status={status}
+                            >
+                              {RenderChildrenOrError}
+                            </PageWrapper>
+                          </ThemeProvider>
+                      </ThemeProviderSCSSModules>
                       </UserContextProvider>
                     </QueryProvider>
                   )}

@@ -2,14 +2,16 @@ import { css, Theme } from '@emotion/react';
 import pixelsToRem from '#app/utilities/pixelsToRem';
 
 const styles = {
-  wrapper: ({ palette, spacings, isDarkUi }: Theme) =>
+  wrapper: ({ palette, spacings, isDarkUi, mq }: Theme) =>
     css({
       display: 'flex',
       alignItems: 'center',
       gap: `${spacings.HALF}rem`,
-      borderBottom: `${pixelsToRem(1)}rem solid ${
-        isDarkUi ? palette.GREY_6 : palette.GREY_5
-      }`,
+      [mq.GROUP_3_MIN_WIDTH]: {
+        borderBottom: `${pixelsToRem(1)}rem solid ${
+          isDarkUi ? palette.GREY_6 : palette.GREY_5
+        }`,
+      },
     }),
 
   tabList: () =>
@@ -38,11 +40,11 @@ const styles = {
 
       [mq.FORCED_COLOURS]: {
         forcedColorAdjust: 'none',
-        color: 'ButtonText',
-        fill: 'ButtonText',
+        color: 'CanvasText',
+        fill: 'CanvasText',
       },
 
-      '&:hover': {
+      '&:hover:not(:focus-visible)': {
         '&::after': {
           content: '""',
           position: 'absolute',
@@ -56,7 +58,11 @@ const styles = {
       },
       '[type=button]&:focus-visible': {
         outlineOffset: `${pixelsToRem(-3)}rem`,
+        outlineColor: isDarkUi ? palette.WHITE : palette.BLACK,
         boxShadow: 'none',
+        '&::after': {
+          display: 'none',
+        },
       },
     }),
 

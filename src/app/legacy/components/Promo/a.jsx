@@ -10,6 +10,7 @@ const A = styled.a`
   }
   &:visited {
     color: ${props => props.theme.palette.GREY_6};
+  }
   &:before {
     position: absolute;
     bottom: 0;

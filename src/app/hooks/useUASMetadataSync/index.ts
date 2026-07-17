@@ -3,11 +3,11 @@ import {
   buildCurrentMetadata,
   compareMetadataWithSaved,
 } from '#app/lib/uasApi/uasUtility';
-import type { Article } from '#app/models/types/optimo';
+import type { SaveArticlePageData } from '#app/lib/utilities/extractSaveArticleProps';
 import type { Services } from '#app/models/types/global';
 
 interface UseUASMetadataSyncParams {
-  articlePageData?: Article;
+  saveArticlePageData: SaveArticlePageData;
   articleId: string;
   service: Services;
   isSaved: boolean;
@@ -22,7 +22,7 @@ interface UseUASMetadataSyncParams {
  * Uses hasSyncedRef to prevent duplicate sync calls on the same article load,
  * ensuring the comparison only happens once when conditions are met.
  *
- * @param articlePageData - Current article data from the page
+ * @param saveArticlePageData - Current article data from the page
  * @param articleId - Unique identifier for the article
  * @param service - BBC service name
  * @param isSaved - Whether the article is currently saved to UAS
@@ -31,7 +31,7 @@ interface UseUASMetadataSyncParams {
  */
 
 const useUASMetadataSync = ({
-  articlePageData,
+  saveArticlePageData,
   articleId,
   service,
   isSaved,
@@ -41,7 +41,7 @@ const useUASMetadataSync = ({
   const hasSyncedRef = useRef(false);
 
   useEffect(() => {
-    if (!isSaved || !articlePageData || !savedArticleMetadata) {
+    if (!isSaved || !savedArticleMetadata) {
       hasSyncedRef.current = false;
       return;
     }
@@ -51,7 +51,7 @@ const useUASMetadataSync = ({
       return;
     }
 
-    const currentMetadata = buildCurrentMetadata(articlePageData, {
+    const currentMetadata = buildCurrentMetadata(saveArticlePageData, {
       articleId,
       service,
     });
@@ -66,7 +66,7 @@ const useUASMetadataSync = ({
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [
-    articlePageData,
+    saveArticlePageData,
     articleId,
     service,
     isSaved,

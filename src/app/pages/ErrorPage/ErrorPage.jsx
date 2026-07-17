@@ -2,8 +2,12 @@ import { use } from 'react';
 import { Helmet } from 'react-helmet';
 import ErrorMain from '#components/ErrorMain';
 import { useTheme } from '@emotion/react';
-import { ServiceContext } from '../../contexts/ServiceContext';
-
+import { ARTICLE_PAGE, MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import ArticleNotFoundUASCleanup from '#app/components/ArticleNotFoundUASCleanup';
+import { NOT_FOUND } from '#lib/statusCodes.const';
+import { RequestContext } from '#app/contexts/RequestContext';
+import { ServiceContext } from '#app/contexts/ServiceContext';
+import { AccountContext } from '#app/contexts/AccountContext';
 /*
  * MVP Metadata for the error
  * This will be refactored out in https://github.com/bbc/simorgh/issues/1350
@@ -34,14 +38,22 @@ const ErrorMetadata = ({ dir, lang, messaging, brandName, themeColor }) => {
 
 const ErrorPage = ({ errorCode }) => {
   const { brandName, dir, lang, translations } = use(ServiceContext);
+  const { pageType } = use(RequestContext);
+  const { isPersonalizationEnabled } = use(AccountContext);
   const messaging = translations.error[errorCode] || translations.error[500];
 
   const {
     palette: { BRAND_BACKGROUND },
   } = useTheme();
 
+  const shouldRenderArticleCleanup =
+    isPersonalizationEnabled &&
+    errorCode === NOT_FOUND &&
+    (pageType === ARTICLE_PAGE || pageType === MEDIA_ARTICLE_PAGE);
+
   return (
     <>
+      {shouldRenderArticleCleanup && <ArticleNotFoundUASCleanup />}
       <ErrorMetadata
         brandName={brandName}
         dir={dir}
