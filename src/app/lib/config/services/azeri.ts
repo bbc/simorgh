@@ -89,6 +89,10 @@ export const service: DefaultServiceConfig = {
       },
       currentPage: 'Hazırda olduğunuz səhifə',
       skipLinkText: 'Mətnə keçid',
+      skipContent: {
+        text: '%title% keç və davam et',
+        endTextVisuallyHidden: '%title% sonu',
+      },
       relatedContent: 'Bu barədə daha geniş',
       relatedTopics: 'Əlaqəli mövzular',
       moreOnThis: '',

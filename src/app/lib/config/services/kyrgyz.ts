@@ -88,6 +88,10 @@ export const service: DefaultServiceConfig = {
       },
       currentPage: 'Ачылып турган баракча',
       skipLinkText: 'Сайтка өтүү',
+      skipContent: {
+        text: '%title% өткөрүп, улантуу',
+        endTextVisuallyHidden: '%title% аягы',
+      },
       relatedContent: 'Тема боюнча башка макалалар',
       relatedTopics: 'Тектеш темалар',
       moreOnThis: '',

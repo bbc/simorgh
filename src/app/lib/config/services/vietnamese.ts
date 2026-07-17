@@ -71,6 +71,10 @@ export const service: DefaultServiceConfig = {
       },
       currentPage: 'Trang hiện nay',
       skipLinkText: 'Bỏ qua để xem nội dung',
+      skipContent: {
+        text: 'Bỏ qua %title% và tiếp tục',
+        endTextVisuallyHidden: 'Kết thúc %title%',
+      },
       relatedContent: 'Tin liên quan',
       relatedTopics: 'Chủ đề liên quan',
       moreOnThis: '',
