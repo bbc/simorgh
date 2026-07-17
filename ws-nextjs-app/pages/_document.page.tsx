@@ -46,6 +46,47 @@ type DocProps = {
   title: ReactElement;
 };
 
+const stripVendorPrefixes = (css: string): string => {
+  let output = css;
+  let previous = '';
+
+  while (output !== previous) {
+    previous = output;
+
+    output = output
+      // Remove vendor-prefixed property declarations
+      .replace(
+        /(^|[;{])\s*-(webkit|moz|ms|o)-[\w-]+\s*:\s*[^;{}]+;?/gm,
+        '$1',
+      )
+      // Remove declarations with vendor-prefixed values
+      .replace(
+        /(^|[;{])\s*[\w-]+\s*:\s*-(webkit|moz|ms|o)-[^;{}]+;?/gm,
+        '$1',
+      )
+      // Remove vendor-prefixed pseudo-element/class rules only when simple
+      .replace(
+        /(^|})\s*[^{}]*::?-(webkit|moz|ms|o)-[\w-]+[^{}]*\{[^{}]*\}/gm,
+        '$1',
+      )
+      // Remove empty rules
+      .replace(/[^{}]+\{\s*\}/g, '')
+      // Cleanup
+      .replace(/;{2,}/g, ';')
+      .replace(/\{\s*;/g, '{')
+      .replace(/;\s*\}/g, '}');
+  }
+
+  return output.trim();
+};
+
+const optimiseAmpCss = (css: string): string =>
+  stripVendorPrefixes(css)
+    .replace(/;\}/g, '}')
+    .replace(/\s{2,}/g, ' ')
+    .trim();
+
+
 export default class AppDocument extends Document<DocProps> {
   static async getInitialProps(ctx: DocumentContext) {
     const url = ctx.asPath || '';
@@ -128,7 +169,7 @@ export default class AppDocument extends Document<DocProps> {
 
     switch (true) {
       case isAmp && pageType === 'article': {
-        const ampCss = css + getAmpLiteCss(getNextData());
+        const ampCss = optimiseAmpCss(css + getAmpLiteCss(getNextData()));
         return (
           <AmpRenderer
             bodyContent={<Main />}
