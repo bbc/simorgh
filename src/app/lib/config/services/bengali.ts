@@ -90,6 +90,10 @@ export const service: DefaultServiceConfig = {
       },
       currentPage: 'বর্তমান পেজ',
       skipLinkText: 'সরাসরি কনটেন্টে যান',
+      skipContent: {
+        text: '%title% এড়িয়ে যান এবং চালিয়ে যান',
+        endTextVisuallyHidden: '%title% সমাপ্তি',
+      },
       relatedContent: 'এই খবর নিয়ে আরো তথ্য',
       relatedTopics: 'সম্পর্কিত বিষয়',
       moreOnThis: '',
