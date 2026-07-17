@@ -26,6 +26,8 @@ import CanonicalToLiteRedirect from '#utilities/CanonicalToLiteRedirect';
 import addOperaMiniClassScript from '#app/lib/utilities/addOperaMiniClassScript';
 import handleServerLogging from '#utilities/handleServerLogging';
 import getAmpLiteCss from '#utilities/getAmpLiteCss';
+import treeshakeCssCustomProperties from '#utilities/treeshakeCssCustomProperties';
+import trimFontFaceSourcesToWoff2 from '#utilities/trimFontFaceSourcesToWoff2';
 import ComponentTracking from '../renderers/ComponentTracking';
 import ReverbTemplate from '../renderers/ReverbTemplate';
 import litePageTransforms from '../renderers/litePageTransforms';
@@ -81,11 +83,12 @@ const stripVendorPrefixes = (css: string): string => {
 };
 
 const optimiseAmpCss = (css: string): string =>
-  stripVendorPrefixes(css)
+  stripVendorPrefixes(
+    trimFontFaceSourcesToWoff2(treeshakeCssCustomProperties(css)),
+  )
     .replace(/;\}/g, '}')
     .replace(/\s{2,}/g, ' ')
     .trim();
-
 
 export default class AppDocument extends Document<DocProps> {
   static async getInitialProps(ctx: DocumentContext) {
