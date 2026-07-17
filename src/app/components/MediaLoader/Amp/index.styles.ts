@@ -1,4 +1,4 @@
-import BASE64_PLACEHOLDER_IMAGE from '#app/components/Image/base64Placeholder';
+import { URL_ENCODED_PLACEHOLDER_IMAGE } from '#app/components/Image/svgPlaceholder';
 import { css, Theme } from '@emotion/react';
 
 export default {
@@ -11,7 +11,7 @@ export default {
     }),
   ampIframePlaceholder: ({ mq }: Theme) =>
     css({
-      backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
+      backgroundImage: `url(${URL_ENCODED_PLACEHOLDER_IMAGE})`,
       backgroundPosition: 'center center',
       backgroundRepeat: ' no-repeat',
       backgroundSize: '60px 17px',

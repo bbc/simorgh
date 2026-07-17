@@ -6,7 +6,7 @@ import {
   waitFor,
 } from '../react-testing-library-with-providers';
 import Image from '.';
-import BASE64_PLACEHOLDER_IMAGE from './base64Placeholder';
+import { URL_ENCODED_PLACEHOLDER_IMAGE } from './svgPlaceholder';
 
 import { SHADOW } from '../ThemeProvider/palette';
 
@@ -124,7 +124,7 @@ describe('Image - Canonical', () => {
     render(<Fixture />);
     const imageEl = screen.getByAltText('Test image alt text');
     expect(imageEl.parentNode).toHaveStyle({
-      backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
+      backgroundImage: `url(${URL_ENCODED_PLACEHOLDER_IMAGE})`,
     });
   });
 
@@ -132,7 +132,7 @@ describe('Image - Canonical', () => {
     render(<Fixture />);
     const imageEl = screen.getByAltText('Test image alt text');
     expect(imageEl.parentNode).toHaveStyle({
-      backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
+      backgroundImage: `url(${URL_ENCODED_PLACEHOLDER_IMAGE})`,
     });
   });
 
@@ -140,7 +140,7 @@ describe('Image - Canonical', () => {
     render(<Fixture darkPlaceholder />);
     const imageEl = screen.getByAltText('Test image alt text');
     expect(imageEl.parentNode).toHaveStyle({
-      backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
+      backgroundImage: `url(${URL_ENCODED_PLACEHOLDER_IMAGE})`,
       backgroundColor: SHADOW,
     });
   });
@@ -149,7 +149,7 @@ describe('Image - Canonical', () => {
     render(<Fixture placeholder={false} />);
     const imageEl = screen.getByAltText('Test image alt text');
     expect(imageEl.parentNode).not.toHaveStyle({
-      backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
+      backgroundImage: `url(${URL_ENCODED_PLACEHOLDER_IMAGE})`,
     });
   });
 
@@ -315,7 +315,7 @@ describe('Image - AMP pages', () => {
     const imageEl = screen.getAllByAltText('Test image alt text')[0];
 
     expect(imageEl.parentNode).toHaveStyle({
-      backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
+      backgroundImage: `url(${URL_ENCODED_PLACEHOLDER_IMAGE})`,
     });
   });
 
@@ -323,7 +323,7 @@ describe('Image - AMP pages', () => {
     render(<Fixture />, { isAmp: true });
     const imageEl = screen.getAllByAltText('Test image alt text')[0];
     expect(imageEl.parentNode).toHaveStyle({
-      backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
+      backgroundImage: `url(${URL_ENCODED_PLACEHOLDER_IMAGE})`,
     });
   });
 
@@ -331,7 +331,7 @@ describe('Image - AMP pages', () => {
     render(<Fixture darkPlaceholder />, { isAmp: true });
     const imageEl = screen.getAllByAltText('Test image alt text')[0];
     expect(imageEl.parentNode).toHaveStyle({
-      backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
+      backgroundImage: `url(${URL_ENCODED_PLACEHOLDER_IMAGE})`,
       backgroundColor: SHADOW,
     });
   });
@@ -340,7 +340,7 @@ describe('Image - AMP pages', () => {
     render(<Fixture placeholder={false} />, { isAmp: true });
     const imageEl = screen.getAllByAltText('Test image alt text')[0];
     expect(imageEl.parentNode).not.toHaveStyle({
-      backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
+      backgroundImage: `url(${URL_ENCODED_PLACEHOLDER_IMAGE})`,
     });
   });
 

@@ -1,6 +1,6 @@
 import { css, Theme } from '@emotion/react';
 
-import BASE64_PLACEHOLDER_IMAGE from './base64Placeholder';
+import { URL_ENCODED_PLACEHOLDER_IMAGE } from './svgPlaceholder';
 
 const styles = {
   wrapper: css({
@@ -14,7 +14,7 @@ const styles = {
   }),
   placeholder: (theme: Theme) =>
     css({
-      backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
+      backgroundImage: `url(${URL_ENCODED_PLACEHOLDER_IMAGE})`,
       backgroundPosition: 'center center',
       backgroundRepeat: 'no-repeat',
       backgroundSize: '60px 17px',

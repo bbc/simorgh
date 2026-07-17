@@ -1,6 +1,6 @@
 import { css, Theme } from '@emotion/react';
 import pixelsToRem from '#app/utilities/pixelsToRem';
-import BASE64_PLACEHOLDER_IMAGE from '#app/components/Image/base64Placeholder';
+import { URL_ENCODED_PLACEHOLDER_IMAGE } from '#app/components/Image/svgPlaceholder';
 
 const IMAGE_SIZE_GROUP_1 = 80;
 const IMAGE_SIZE_GROUP_2 = 55;
@@ -72,7 +72,7 @@ const styles = {
     }),
   placeholder: ({ palette }: Theme) =>
     css({
-      backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
+      backgroundImage: `url(${URL_ENCODED_PLACEHOLDER_IMAGE})`,
       backgroundPosition: 'center center',
       backgroundRepeat: 'no-repeat',
       backgroundSize: '75%',

@@ -1,7 +1,7 @@
 import {
-  BBC_BLOCKS,
-  BBC_BLOCKS_DARK_MODE,
-} from '#psammead/psammead-assets/src/svgs';
+  URL_ENCODED_PLACEHOLDER_IMAGE,
+  URL_ENCODED_PLACEHOLDER_IMAGE_DARK,
+} from '#app/components/Image/svgPlaceholder';
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
@@ -9,8 +9,8 @@ import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
 
-const bgImageDark = `data:image/svg+xml;base64,${BBC_BLOCKS_DARK_MODE}`;
-const bgImageRegular = `data:image/svg+xml;base64,${BBC_BLOCKS}`;
+const bgImageDark = URL_ENCODED_PLACEHOLDER_IMAGE_DARK;
+const bgImageRegular = URL_ENCODED_PLACEHOLDER_IMAGE;
 
 const AmpImgPlaceholderContainer = ({
   darkPlaceholder,
