@@ -211,7 +211,7 @@ exports[`Canonical Articles Media Loader renders a figure caption 1`] = `
     </time>
   </button>
   <div
-    class="css-jxb7sz"
+    class="css-e398u2"
     style="padding-bottom:0;overflow:hidden"
   >
     <img
@@ -288,7 +288,7 @@ exports[`Canonical Articles Media Loader renders a placeholder 1`] = `
     </time>
   </button>
   <div
-    class="css-jxb7sz"
+    class="css-e398u2"
     style="padding-bottom:0;overflow:hidden"
   >
     <img
@@ -369,7 +369,7 @@ exports[`Canonical Articles Media Loader renders a valid container 1`] = `
       </time>
     </button>
     <div
-      class="css-jxb7sz"
+      class="css-e398u2"
       style="padding-bottom:0;overflow:hidden"
     >
       <img
