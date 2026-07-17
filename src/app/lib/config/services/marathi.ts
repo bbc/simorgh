@@ -85,6 +85,10 @@ export const service: DefaultServiceConfig = {
       },
       currentPage: 'सध्याचे पान',
       skipLinkText: 'थेट मजकुरावर जा',
+      skipContent: {
+        text: '%title% वगळा आणि पुढे सुरू ठेवा',
+        endTextVisuallyHidden: '%title%चा शेवट',
+      },
       relatedContent: 'संबंधित मजकूर',
       relatedTopics: 'संबंधित विषय',
       moreOnThis: '',

@@ -70,6 +70,10 @@ export const service: DefaultServiceConfig = {
       continueReading: 'ఇంకా చదవండి',
       currentPage: 'ప్రస్తుత పేజీ',
       skipLinkText: 'కంటెంట్‌కు వెళ్లండి',
+      skipContent: {
+        text: '%title% ని దాటవేసి కొనసాగండి',
+        endTextVisuallyHidden: '%title% ముగింపు',
+      },
       relatedContent: 'సంబంధిత కథనాలు',
       relatedTopics: 'సంబంధిత అంశాలు',
       moreOnThis: '',
