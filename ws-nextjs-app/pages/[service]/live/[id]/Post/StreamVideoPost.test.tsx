@@ -1,7 +1,4 @@
-import {
-  render,
-  act,
-} from '#app/components/react-testing-library-with-providers';
+import { render } from '#app/components/react-testing-library-with-providers';
 import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { MediaBlock } from '#app/components/MediaLoader/types';
@@ -108,11 +105,9 @@ describe('StreamVideoPost', () => {
     mockedUseViewTracker.mockClear();
   });
 
-  it('should track a landscape video with item_type landscape-video and group_type stream', async () => {
-    await act(async () => {
-      render(<StreamVideoPost blocks={landscapeClipMediaBlocks} />, {
-        pageType: 'live',
-      });
+  it('should track a landscape video with item_type landscape-video and group_type stream', () => {
+    render(<StreamVideoPost blocks={landscapeClipMediaBlocks} />, {
+      pageType: 'live',
     });
 
     expect(mockedUseViewTracker).toHaveBeenCalledWith(
@@ -126,11 +121,9 @@ describe('StreamVideoPost', () => {
     );
   });
 
-  it('should track a portrait video with item_type portrait-video and group_type stream', async () => {
-    await act(async () => {
-      render(<StreamVideoPost blocks={portraitClipMediaBlocks} />, {
-        pageType: 'live',
-      });
+  it('should track a portrait video with item_type portrait-video and group_type stream', () => {
+    render(<StreamVideoPost blocks={portraitClipMediaBlocks} />, {
+      pageType: 'live',
     });
 
     expect(mockedUseViewTracker).toHaveBeenCalledWith(
@@ -144,11 +137,9 @@ describe('StreamVideoPost', () => {
     );
   });
 
-  it('should default to landscape-video when orientation is not specified', async () => {
-    await act(async () => {
-      render(<StreamVideoPost blocks={noOrientationClipMediaBlocks} />, {
-        pageType: 'live',
-      });
+  it('should default to landscape-video when orientation is not specified', () => {
+    render(<StreamVideoPost blocks={noOrientationClipMediaBlocks} />, {
+      pageType: 'live',
     });
 
     expect(mockedUseViewTracker).toHaveBeenCalledWith(
@@ -162,11 +153,10 @@ describe('StreamVideoPost', () => {
     );
   });
 
-  it('should render MediaLoader', async () => {
-    const { getByTestId } = await act(async () =>
-      render(<StreamVideoPost blocks={landscapeClipMediaBlocks} />, {
-        pageType: 'live',
-      }),
+  it('should render MediaLoader', () => {
+    const { getByTestId } = render(
+      <StreamVideoPost blocks={landscapeClipMediaBlocks} />,
+      { pageType: 'live' },
     );
 
     expect(getByTestId('mock-media-loader')).toBeInTheDocument();
