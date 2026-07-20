@@ -15,6 +15,8 @@ import NewNavigationContainer from '#src/app/components/Navigation';
 import LegacyNavigationContainer from '#src/app/legacy/containers/Navigation';
 import AccountHeader from '#app/components/Account/AccountHeader';
 import SERVICES_WITH_NEW_NAV from '#app/components/Navigation/config';
+import LiteModeButton from '#app/components/LiteModeButton/version 2';
+import LiteModeBanner from '#app/components/LiteModeButton/version 4';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import ConsentBanner from '../ConsentBanner';
 import BrandContainer from '../Brand';
@@ -135,14 +137,22 @@ const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
           scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
           css={headerBrandCss}
         >
-          <AccountHeader />
+          <div css={styles.toggleContainer}>
+            <AccountHeader />
+            <LiteModeButton />
+          </div>
         </Header>
       )}
-      {isLite && <LiteSiteSummary />}
+      {isLite && (
+        <div css={styles.removeLiteSiteOnboarding}>
+          <LiteSiteSummary />
+        </div>
+      )}
       <NavigationComponent
         navItems={navItems}
         propsForTopBarOJComponent={propsForTopBarOJComponent}
       />
+      <LiteModeBanner />
     </header>
   );
 };

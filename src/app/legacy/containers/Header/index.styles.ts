@@ -30,7 +30,7 @@ export default {
   headerBrand: ({ mq, spacings }: Theme) =>
     css({
       minHeight: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
-
+      zIndex: 999,
       [mq.GROUP_1_MIN_WIDTH]: {
         minHeight: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
       },
@@ -55,7 +55,7 @@ export default {
           },
         },
         [mq.GROUP_1_MIN_WIDTH]: {
-          flex: '0 1 auto',
+          // flex: '0 1 auto',
           minWidth: 0,
         },
       },
@@ -66,15 +66,11 @@ export default {
       },
       '.script-link-wrapper': {
         [mq.GROUP_0_MAX_WIDTH]: {
-          flexBasis: '100%',
+          // flexBasis: '100%',
           margin: `0 0 ${spacings.FULL}rem 0`,
         },
         [mq.GROUP_1_MIN_WIDTH]: {
-          display: 'flex',
           alignItems: 'center',
-          flex: '0 0 auto',
-          marginInlineStart: 'auto',
-          marginInlineEnd: `${pixelsToRem(-4)}rem`,
         },
       },
     }),
@@ -85,5 +81,18 @@ export default {
       fill: 'currentColor',
       height: `${SVG_HEIGHT}px`,
       maxWidth: `${LOGO_ASPECT_RATIO * SVG_HEIGHT}px`,
+    }),
+  toggleContainer: () =>
+    css({
+      position: 'relative',
+      display: 'flex',
+      flexDirection: 'row-reverse',
+    }),
+  removeLiteSiteOnboarding: ({ mq }: Theme) =>
+    css({
+      [mq.GROUP_3_MIN_WIDTH]: {
+        display: 'block',
+      },
+      display: 'none',
     }),
 };
