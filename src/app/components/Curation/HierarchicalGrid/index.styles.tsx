@@ -115,15 +115,6 @@ const styles = {
       '&:hover, &:focus': {
         textDecoration: 'underline',
       },
-      '&::after': {
-        content: '""',
-        width: `${pixelsToRem(2)}rem`,
-        height: `${pixelsToRem(2)}rem`,
-        borderRadius: '50%',
-        backgroundColor: isDarkUi ? palette.GREY_3 : palette.GREY_6,
-        marginInline: `${spacings.HALF}rem`,
-        border: `${pixelsToRem(1)}rem solid transparent`,
-      },
     }),
 };
 
