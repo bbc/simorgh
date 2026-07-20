@@ -10,9 +10,7 @@ import ThemeProvider from '.';
 
 const originalSimorghAppEnv = process.env.SIMORGH_APP_ENV;
 
-const newNavBrandLogos: Partial<Record<string, string>> = {
-  hindi: 'hindiNewNav',
-};
+const newNavBrandLogos: Partial<Record<string, string>> = {};
 
 describe('ThemeProvider', () => {
   it('should provide the palette', async () => {
