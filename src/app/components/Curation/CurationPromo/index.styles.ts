@@ -34,18 +34,13 @@ export default {
       },
     });
   },
-  metadataAndTopicData: ({ fontSizes, mq }: Theme) =>
+  metadataAndTopicData: ({ fontSizes }: Theme) =>
     css({
       ...fontSizes.longPrimer,
       display: 'flex',
-      flexDirection: 'column-reverse',
-      alignItems: 'flex-start',
+      alignItems: 'center',
       flexWrap: 'wrap',
       gap: 0,
-      [mq.GROUP_3_MIN_WIDTH]: {
-        flexDirection: 'row',
-        alignItems: 'center',
-      },
     }),
   relatedTopicLink: ({
     fontSizes,
@@ -53,7 +48,6 @@ export default {
     isDarkUi,
     palette,
     spacings,
-    mq,
   }: Theme) =>
     css({
       ...fontSizes.brevier,
@@ -75,10 +69,6 @@ export default {
         backgroundColor: isDarkUi ? palette.GREY_3 : palette.GREY_6,
         marginInline: `${spacings.HALF}rem`,
         border: `${pixelsToRem(1)}rem solid transparent`,
-        display: 'none',
-        [mq.GROUP_3_MIN_WIDTH]: {
-          display: 'inline-block',
-        },
       },
     }),
 };
