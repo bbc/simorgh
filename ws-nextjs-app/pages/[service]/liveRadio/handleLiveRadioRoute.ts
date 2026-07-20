@@ -19,10 +19,6 @@ export default async (context: GetServerSidePropsContext) => {
 
   const { service, variant } = parseRoute(resolvedUrl);
 
-  const toggles = await getToggles({ service });
-  const { enabled: scheduleIsEnabled } = toggles.liveRadioSchedule;
-  const disableRadioSchedule = !scheduleIsEnabled;
-
   if (!service) {
     context.res.statusCode = NOT_FOUND;
 
@@ -37,6 +33,10 @@ export default async (context: GetServerSidePropsContext) => {
       },
     };
   }
+
+  const toggles = await getToggles({ service });
+  const { enabled: scheduleIsEnabled } = toggles.liveRadioSchedule;
+  const disableRadioSchedule = !scheduleIsEnabled;
 
   const { data } = await getPageData({
     id: resolvedUrlWithoutQuery,
