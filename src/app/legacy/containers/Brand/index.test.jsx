@@ -146,15 +146,15 @@ describe(`BrandContainer`, () => {
       return container.querySelector('svg').innerHTML;
     };
 
-    it('renders the new-nav chameleon logo for a new-nav service (hindi)', () => {
+    it('renders the standard chameleon logo for hindi while it is excluded from new navigation', () => {
       const { container } = render(BrandContainerWithContext(), {
         service: 'hindi',
       });
 
       const renderedLogo = container.querySelector('svg')?.innerHTML;
 
-      expect(renderedLogo).toEqual(renderLogoGroup(hindiNewNavLogo.group));
-      expect(renderedLogo).not.toEqual(renderLogoGroup(hindiLogo.group));
+      expect(renderedLogo).toEqual(renderLogoGroup(hindiLogo.group));
+      expect(renderedLogo).not.toEqual(renderLogoGroup(hindiNewNavLogo.group));
     });
   });
 });
