@@ -75,6 +75,10 @@ export const service: DefaultServiceConfig = {
       },
       currentPage: 'Pagina curentă',
       skipLinkText: 'Acces direct la conținut',
+      skipContent: {
+        text: 'Sari peste %title% și continuă',
+        endTextVisuallyHidden: 'Sfârșitul %title%',
+      },
       relatedContent: 'Articole similare',
       relatedTopics: 'Subiecte similare',
       moreOnThis: '',
