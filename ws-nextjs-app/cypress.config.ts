@@ -64,7 +64,10 @@ export default defineConfig({
             ],
           },
           plugins: [
-            MomentTimezoneInclude({ startYear: 2010, endYear: 2025 }),
+            MomentTimezoneInclude({
+              startYear: 2010,
+              endYear: new Date().getFullYear() + 1,
+            }),
             new DefinePlugin({
               process: { env: envVars },
             }),
