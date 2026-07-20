@@ -42,14 +42,22 @@ export default {
       flexWrap: 'wrap',
       gap: 0,
     }),
-  relatedTopicLink: ({ fontSizes, fontVariants, isDarkUi, palette }: Theme) =>
+  relatedTopicLink: ({
+    fontSizes,
+    fontVariants,
+    isDarkUi,
+    palette,
+    spacings,
+  }: Theme) =>
     css({
       ...fontSizes.brevier,
       ...fontVariants.sansRegular,
       color: isDarkUi ? palette.GREY_3 : palette.GREY_6,
       display: 'inline-flex',
-      alignItems: 'center',
+      flexDirection: 'column',
+      alignItems: 'flex-start',
       marginTop: 0,
+      marginBottom: `${spacings.FULL}rem`,
       textDecoration: 'none',
       zIndex: 1,
       '&:hover, &:focus': {
