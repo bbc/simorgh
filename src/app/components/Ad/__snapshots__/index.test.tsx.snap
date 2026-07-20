@@ -627,6 +627,10 @@ exports[`Ad Container Snapshots Canonical should correctly render an mpu ad 1`] 
   margin-bottom: 1.5rem;
 }
 
+.emotion-0 #dotcom-mpu {
+  margin-inline: auto!important;
+}
+
 @media (min-width: 18.75rem) {
   .emotion-0 {
     min-height: 5.1875rem;
