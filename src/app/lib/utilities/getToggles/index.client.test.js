@@ -7,7 +7,7 @@ const mockResponse = {
 };
 
 describe('getToggles', () => {
-  const originalTogglesBffPath = process.env.TOGGLES_TEST_BFF_PATH;
+  const originalTogglesBffPath = process.env.TOGGLES_BFF_PATH;
 
   const mockSuccessfulFetchResponse = {
     ok: true,
@@ -16,14 +16,14 @@ describe('getToggles', () => {
   };
 
   beforeEach(() => {
-    process.env.TOGGLES_TEST_BFF_PATH = 'https://mock-toggles-endpoint';
+    process.env.TOGGLES_BFF_PATH = 'https://mock-toggles-endpoint';
     jest.spyOn(global, 'fetch').mockResolvedValue(mockSuccessfulFetchResponse);
   });
 
   afterEach(() => {
     jest.resetModules();
     jest.restoreAllMocks();
-    process.env.TOGGLES_TEST_BFF_PATH = originalTogglesBffPath;
+    process.env.TOGGLES_BFF_PATH = originalTogglesBffPath;
   });
 
   it('should return defaultToggles if enableFetchingToggles is not enabled', async () => {
