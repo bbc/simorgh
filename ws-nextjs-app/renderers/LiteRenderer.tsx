@@ -3,6 +3,7 @@ import { ReactElement, PropsWithChildren } from 'react';
 import { OptOutOfLiteRedirect } from '#utilities/CanonicalToLiteRedirect';
 import { BaseRendererProps } from './types';
 import ComponentTracking from './ComponentTracking';
+import PageViewStaticTracking from './PageViewStaticTracking';
 
 interface Props extends BaseRendererProps {
   bodyContent: ReactElement;
@@ -26,6 +27,7 @@ export default function LitePageRenderer({
         {helmetLinkTags}
         <style dangerouslySetInnerHTML={{ __html: styles }} />
         <OptOutOfLiteRedirect />
+        <PageViewStaticTracking />
         {/* IMPORTANT: ComponentTracking MUST come before helmetScriptTags due to synchronous calls from helmetScriptTags to functions within ComponentTracking */}
         <ComponentTracking
           enableStaticClickTrackingOnOperaMiniOnly={false}
