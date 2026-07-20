@@ -42,13 +42,7 @@ export default {
       flexWrap: 'wrap',
       gap: 0,
     }),
-  relatedTopicLink: ({
-    fontSizes,
-    fontVariants,
-    isDarkUi,
-    palette,
-    spacings,
-  }: Theme) =>
+  relatedTopicLink: ({ fontSizes, fontVariants, isDarkUi, palette }: Theme) =>
     css({
       ...fontSizes.brevier,
       ...fontVariants.sansRegular,
@@ -60,15 +54,6 @@ export default {
       zIndex: 1,
       '&:hover, &:focus': {
         textDecoration: 'underline',
-      },
-      '&::after': {
-        content: '""',
-        width: `${pixelsToRem(2)}rem`,
-        height: `${pixelsToRem(2)}rem`,
-        borderRadius: '50%',
-        backgroundColor: isDarkUi ? palette.GREY_3 : palette.GREY_6,
-        marginInline: `${spacings.HALF}rem`,
-        border: `${pixelsToRem(1)}rem solid transparent`,
       },
     }),
 };
