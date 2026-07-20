@@ -254,6 +254,7 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
               isFirstPostVisible={isFirstPostVisible}
               hasPendingUpdate={hasPendingUpdate}
               streamRef={streamRef as RefObject<HTMLDivElement>}
+              pageId={liveTextStream.id}
             />
           </div>
         </div>

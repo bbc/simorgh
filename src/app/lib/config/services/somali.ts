@@ -81,9 +81,19 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Arag dhammaan',
       home: 'War',
+      topicDiscovery: {
+        heading: 'Baro wax badan',
+        moreAboutTopic: 'Wax dheeraad ah oo ku saabsan {topic}',
+        fetchErrorMessage:
+          'Ku shubiddu waa fashilantay. Fadlan isku day mar kale',
+      },
       continueReading: 'Sii Akhri',
       currentPage: 'Bogga hadda',
       skipLinkText: 'U gudub qaybta macluumaadka',
+      skipContent: {
+        text: 'Ka bood %title% oo sii wad',
+        endTextVisuallyHidden: 'Dhammaadka %title%',
+      },
       relatedContent: 'Warar kale oo dheeraad ah oo la xiriira qodobkan',
       relatedTopics: 'Mowduucyada la xiriira',
       moreOnThis: '',
@@ -301,6 +311,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'Xul',
       latestMediaTitle: 'Arrimhii u danbeeyey',
       sport: {
+        keyEventsTitle: 'Dhacdooyinka muhiimka ah',
         matchSummary: 'Soo koobidda ciyaarta',
         assists: 'Caawin',
         penalties: 'Rigoore',
@@ -310,6 +321,15 @@ export const service: DefaultServiceConfig = {
         afterExtraTime: 'Ka dib waqtiga dheeraadka',
         penaltyAbbreviation: 'PEN',
         ownGoal: 'gool iskiis',
+        versus: 'vs',
+        kickOff: 'bilow',
+        timeToBeConfirmed: 'Waqtiga waa la xaqiijinayaa',
+        teamToBeConfirmed: 'Kooxda waa la xaqiijinayaa',
+        afterFullTime: 'kadib waqtiga buuxa',
+        atFullTime: 'waqtiga buuxa',
+        onPenalties: 'rigoore',
+        onAggregate: 'wadarta',
+        win: 'guuleysta',
         winOnPenalties: {
           prefix: 'ku badisay rigoore',
           suffix: '',

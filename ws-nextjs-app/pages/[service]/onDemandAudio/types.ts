@@ -29,7 +29,8 @@ export interface OnDemandAudioProps {
     releaseDateTimeStamp: number;
     imageUrl: string;
     imageAltText: string;
-    promoBrandTitle: string;
+    promoBrandTitle?: string | null;
+    promoSeriesTitle?: string | null;
     durationISO8601: string;
     thumbnailImageUrl: string;
     radioScheduleData?: RadioScheduleData[];

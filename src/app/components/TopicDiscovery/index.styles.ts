@@ -19,16 +19,16 @@ const styles = {
       },
     }),
 
-  heading: ({ palette, spacings, fontSizes, fontVariants }: Theme) =>
+  heading: ({ palette, spacings, fontSizes, fontVariants, isDarkUi }: Theme) =>
     css({
       ...fontVariants.sansBold,
       ...fontSizes.doublePica,
-      color: palette.GREY_10,
+      color: isDarkUi ? palette.GREY_2 : palette.GREY_10,
       margin: 0,
       padding: `${spacings.DOUBLE}rem 0`,
     }),
 
-  tabPanel: ({ spacings, mq }: Theme) =>
+  tabPanel: ({ spacings, mq, palette, isDarkUi }: Theme) =>
     css({
       paddingTop: `${spacings.DOUBLE}rem`,
 
@@ -45,6 +45,17 @@ const styles = {
         '.promo-image': {
           width: '100%',
           display: 'block',
+
+          ...(isDarkUi && {
+            '[data-e2e="media-icon"]': {
+              backgroundColor: palette.BLACK,
+              color: palette.WHITE,
+
+              svg: {
+                color: palette.WHITE,
+              },
+            },
+          }),
 
           'div div:last-child': {
             div: {
@@ -68,12 +79,21 @@ const styles = {
           width: '100%',
           display: 'block',
           paddingInlineStart: 0,
+
+          a: {
+            color: isDarkUi ? palette.GREY_2 : palette.GREY_10,
+
+            '&:visited': {
+              color: isDarkUi ? palette.GREY_4 : palette.GREY_6,
+            },
+          },
         },
       },
 
       [mq.GROUP_3_MIN_WIDTH]: {
         li: {
           width: `calc(25% - 0.75rem)`,
+          marginBottom: `${spacings.DOUBLE}rem`,
 
           '&:nth-of-type(2n):not(:last-of-type)': {
             marginInlineEnd: `${spacings.DOUBLE}rem`,
@@ -97,11 +117,14 @@ const styles = {
       flexDirection: 'column',
       gap: `${spacings.FULL}rem`,
     }),
-  skeletonImage: ({ palette }: Theme) =>
+  skeletonImage: ({ palette, isDarkUi }: Theme) =>
     css({
       width: '100%',
       aspectRatio: '16 / 9',
-      background: `linear-gradient(to right, ${palette.GREY_4} 0%, ${palette.GREY_3} 100%)`,
+      border: `${pixelsToRem(2)}rem solid transparent`,
+      background: isDarkUi
+        ? `linear-gradient(to right, ${palette.GREY_7} 0%, ${palette.GREY_8} 100%)`
+        : `linear-gradient(to right, ${palette.GREY_4} 0%, ${palette.GREY_3} 100%)`,
     }),
   skeletonTextLines: ({ spacings }: Theme) =>
     css({
@@ -109,41 +132,44 @@ const styles = {
       flexDirection: 'column',
       gap: `${spacings.HALF}rem`,
     }),
-  skeletonLine: ({ palette }: Theme) =>
+  skeletonLine: ({ palette, isDarkUi }: Theme) =>
     css({
       height: `${pixelsToRem(12)}rem`,
-      background: `linear-gradient(to right, ${palette.GREY_4} 0%, ${palette.GREY_3} 100%)`,
+      background: isDarkUi
+        ? `linear-gradient(to right, ${palette.GREY_7} 0%, ${palette.GREY_8} 100%)`
+        : `linear-gradient(to right, ${palette.GREY_4} 0%, ${palette.GREY_3} 100%)`,
     }),
-  skeletonMoreFromLinkContainer: () =>
+  skeletonMoreAboutLinkContainer: () =>
     css({
       display: 'flex',
       alignItems: 'flex-start',
     }),
-  skeletonMoreFromLink: ({ palette, spacings }: Theme) =>
+  skeletonMoreAboutLink: ({ palette, spacings, isDarkUi }: Theme) =>
     css({
       height: `${pixelsToRem(18)}rem`,
       width: '40%',
       marginTop: `${spacings.DOUBLE}rem`,
-      background: `linear-gradient(to right, ${palette.GREY_4} 0%, ${palette.GREY_3} 100%)`,
+      background: isDarkUi
+        ? `linear-gradient(to right, ${palette.GREY_7} 0%, ${palette.GREY_8} 100%)`
+        : `linear-gradient(to right, ${palette.GREY_4} 0%, ${palette.GREY_3} 100%)`,
     }),
-  moreFromLink: ({ palette, spacings, fontSizes, fontVariants }: Theme) =>
+  moreAboutLink: ({ palette, fontSizes, fontVariants, isDarkUi }: Theme) =>
     css({
       ...fontVariants.sansBold,
       ...fontSizes.longPrimer,
-      color: palette.GREY_10,
+      color: isDarkUi ? palette.GREY_2 : palette.GREY_10,
       display: 'inline-block',
-      paddingTop: `${spacings.DOUBLE}rem`,
       textDecoration: 'none',
 
       '&:hover': {
         textDecoration: 'underline',
       },
     }),
-  errorMessage: ({ palette, fontSizes, fontVariants }: Theme) =>
+  errorMessage: ({ palette, fontSizes, fontVariants, isDarkUi }: Theme) =>
     css({
       ...fontVariants.sansRegular,
       ...fontSizes.pica,
-      color: palette.GREY_10,
+      color: isDarkUi ? palette.GREY_2 : palette.GREY_10,
       margin: 0,
     }),
 };

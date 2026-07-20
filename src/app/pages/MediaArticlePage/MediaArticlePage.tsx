@@ -40,6 +40,7 @@ import ComscoreAnalytics from '../../legacy/containers/ComscoreAnalytics';
 import SocialEmbedContainer from '../../legacy/containers/SocialEmbed';
 import fauxHeadline from '../../legacy/containers/FauxHeadline';
 import RelatedTopics from '../../components/RelatedTopics';
+import TopicDiscovery from '../../components/TopicDiscovery';
 import NielsenAnalytics from '../../legacy/containers/NielsenAnalytics';
 import ArticleMetadata from '../../legacy/containers/ArticleMetadata';
 import EmbedImages from '../../components/Embeds/EmbedImages';
@@ -141,11 +142,12 @@ const getTimestampComponent =
     showTimestamp ? <Timestamp {...props} popOut={false} /> : null;
 
 const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
-  const { pageType } = use(RequestContext);
+  const { pageType, isAmp, isLite } = use(RequestContext);
 
   const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
     use(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
+  const { enabled: topicDiscoveryEnabled } = useToggle('topicDiscovery');
 
   const headline = getHeadline(pageData) ?? '';
   const description = getSummary(pageData) || getHeadline(pageData);
@@ -200,7 +202,10 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const promoImage = promoImageRawBlock?.model?.locator;
 
-  const showTopics = Boolean(showRelatedTopics && topics.length > 0);
+  const showTopicDiscovery = topicDiscoveryEnabled && !isAmp && !isLite;
+  const showTopics = Boolean(
+    showRelatedTopics && topics.length > 0 && !showTopicDiscovery,
+  );
 
   const isLiveMedia = checkIsLiveMedia(blocks);
 
@@ -280,7 +285,8 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
           <main css={styles.mainContent} role="main">
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </main>
-          <OptimizelyPageMetrics trackPageView trackPageDepth trackVisit />
+          <OptimizelyPageMetrics trackPageDepth />
+          {showTopicDiscovery && <TopicDiscovery topics={topics} />}
           {showTopics && (
             <RelatedTopics css={styles.relatedTopics} topics={topics} />
           )}

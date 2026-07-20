@@ -81,8 +81,18 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Hamısına baxın',
       home: 'Xəbərlər',
+      topicDiscovery: {
+        heading: 'Daha çox kəşf et',
+        moreAboutTopic: '{topic} haqqında daha çox',
+        fetchErrorMessage:
+          'Yükləmə uğursuz oldu. Zəhmət olmasa yenidən yoxlayın',
+      },
       currentPage: 'Hazırda olduğunuz səhifə',
       skipLinkText: 'Mətnə keçid',
+      skipContent: {
+        text: '%title% keç və davam et',
+        endTextVisuallyHidden: '%title% sonu',
+      },
       relatedContent: 'Bu barədə daha geniş',
       relatedTopics: 'Əlaqəli mövzular',
       moreOnThis: '',
@@ -322,6 +332,7 @@ export const service: DefaultServiceConfig = {
         privacyPolicyLinkText: 'Məxfilik siyasətimizi',
       },
       sport: {
+        keyEventsTitle: 'Əsas hadisələr',
         matchSummary: 'Matçın xülasəsi',
         assists: 'Asistlər',
         penalties: 'Penaltilər',
@@ -331,6 +342,15 @@ export const service: DefaultServiceConfig = {
         afterExtraTime: 'Əlavə vaxtdan sonra',
         penaltyAbbreviation: 'PEN',
         ownGoal: 'öz qapısına qol',
+        versus: 'qarşı',
+        kickOff: 'başlanğıc',
+        timeToBeConfirmed: 'Vaxt təsdiqlənəcək',
+        teamToBeConfirmed: 'Komanda təsdiqlənəcək',
+        afterFullTime: 'tam vaxtdan sonra',
+        atFullTime: 'tam vaxtda',
+        onPenalties: 'penaltilərlə',
+        onAggregate: 'ümumi hesabla',
+        win: 'qalib gəlir',
         winOnPenalties: {
           prefix: 'penaltilərlə',
           suffix: 'qalib gəlir',

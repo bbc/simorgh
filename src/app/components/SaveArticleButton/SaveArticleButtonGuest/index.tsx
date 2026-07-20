@@ -5,27 +5,50 @@ import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import { AccountContext } from '#app/contexts/AccountContext';
 import AccountSignInModal from '#app/components/Account/AccountSignInModal';
 import { createPortal } from 'react-dom';
+import useClickTracker from '#app/hooks/useClickTrackerHandler';
+import useViewTracker from '#app/hooks/useViewTracker';
+import { RequestContext } from '#app/contexts/RequestContext';
+import parseRoute from '#app/routes/utils/parseRoute';
 
 const SaveArticleButtonGuest = () => {
   const { translations } = use(ServiceContext);
+  const { pathname } = use(RequestContext);
+  const { assetId: articleId } = parseRoute(pathname);
   const { signInUrl, registerUrl } = use(AccountContext);
   const isHydrated = useHydrationDetection();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const getButtonText = () => {
-    if (!isHydrated) {
-      return translations.saveArticleButton?.loading;
-    }
-    return translations.saveArticleButton?.save;
+  const { saveArticleButton } = translations || {};
+
+  const label = isHydrated
+    ? saveArticleButton?.save
+    : saveArticleButton?.loading;
+
+  const viewTracker = useViewTracker({
+    componentName: 'save-article-button-guest-view',
+  });
+
+  const { onClick: onClickTrack } = useClickTracker({
+    componentName: 'save-article-button-guest-click-save',
+    itemTracker: {
+      resourceId: articleId,
+    },
+  });
+
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    onClickTrack?.(e);
+    setIsModalOpen(true);
   };
 
   return (
     <>
       <SaveButton
-        onClick={() => setIsModalOpen(true)}
-        buttonText={getButtonText()}
+        onClick={handleClick}
+        visualLabel={label ?? ''}
+        accessibleLabel={label ?? ''}
         testId="save-article-btn-guest"
         isLoading={!isHydrated}
+        {...viewTracker}
       />
       {isModalOpen &&
         createPortal(

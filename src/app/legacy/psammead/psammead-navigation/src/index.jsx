@@ -147,6 +147,52 @@ export const NavigationUl = ({ children, ...props }) => (
   </StyledUnorderedList>
 );
 
+const getScrollableNavAncestor = element =>
+  element.closest('[data-e2e^="scrollable-nav"]');
+
+// Scrolls the focused nav link fully into view within its scrollable container.
+// The container reserves space (scroll-padding-inline-end, see ScrollableNavigation)
+// at the trailing edge to account for the fade-out gradient overlay, so a focused
+// item is never left partially hidden behind it.
+//
+// We calculate the scroll adjustment manually, rather than relying on
+// scrollIntoView's 'nearest' behaviour, since browsers don't always scroll a
+// partially visible element fully into view (e.g. tabbing backwards to an item
+// left partially obscured at the leading edge from a previous scroll).
+const scrollLinkIntoView = event => {
+  const link = event.currentTarget;
+  const scrollContainer = getScrollableNavAncestor(link);
+
+  if (!scrollContainer) return;
+
+  const containerRect = scrollContainer.getBoundingClientRect();
+  const linkRect = link.getBoundingClientRect();
+  const { direction, scrollPaddingInlineEnd } =
+    window.getComputedStyle(scrollContainer);
+  const reservedEdgeWidth = parseFloat(scrollPaddingInlineEnd) || 0;
+
+  // The gradient overlay sits on the trailing edge: right in ltr, left in rtl.
+  const isRtl = direction === 'rtl';
+  const visibleStart = isRtl
+    ? containerRect.left + reservedEdgeWidth
+    : containerRect.left;
+  const visibleEnd = isRtl
+    ? containerRect.right
+    : containerRect.right - reservedEdgeWidth;
+
+  const scrollAdjustment =
+    // eslint-disable-next-line no-nested-ternary
+    linkRect.left < visibleStart
+      ? linkRect.left - visibleStart
+      : linkRect.right > visibleEnd
+        ? linkRect.right - visibleEnd
+        : 0;
+
+  if (scrollAdjustment !== 0) {
+    scrollContainer.scrollBy({ left: scrollAdjustment, behavior: 'auto' });
+  }
+};
+
 export const NavigationLi = ({
   children: link,
   url,
@@ -168,6 +214,7 @@ export const NavigationLi = ({
           aria-current="page"
           className="focusIndicatorRemove"
           data-active="true"
+          onFocus={scrollLinkIntoView}
           {...clickTracker}
           {...props}
         >
@@ -180,6 +227,7 @@ export const NavigationLi = ({
           href={url}
           className="focusIndicatorRemove"
           aria-current={active ? 'page' : undefined}
+          onFocus={scrollLinkIntoView}
           {...clickTracker}
           {...props}
         >

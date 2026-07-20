@@ -23,10 +23,12 @@ export default {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    overflowY: 'auto',
+    overflowX: 'hidden',
   }),
 
   backdrop: css({
-    position: 'absolute',
+    position: 'fixed',
     inset: 0,
     backgroundColor: 'rgba(20, 20, 20, 0.9)',
     backdropFilter: 'blur(0.2rem)',
@@ -41,8 +43,8 @@ export default {
       alignItems: 'center',
       textAlign: 'center',
       width: '100%',
+      margin: 'auto',
       zIndex: 1,
-      overflow: 'hidden',
       background: `linear-gradient(to bottom left, ${palette.POSTBOX} 0%, ${palette.BLACK} 50%, ${palette.POSTBOX} 100%)`,
       paddingTop: `${spacings.DOUBLE}rem`,
       paddingBottom: `${pixelsToRem(20)}rem`,
