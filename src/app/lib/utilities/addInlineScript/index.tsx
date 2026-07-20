@@ -23,11 +23,6 @@ export default ({ script, parameters, nonce }: InlineScriptProps) => {
 
   if (typeof script === 'function') {
     inlineScript = `(${script.toString()})(${paramLiteral})`;
-    console.log('&&&&&&&&&&&&&&&&&&&&&');
-    console.log('I GET HERE');
-    console.log('+++++++++++++++++++++');
-    console.log('inlineScript - ', inlineScript);
-    console.log('&&&&&&&&&&&&&&&&&&&&&');
   }
 
   return (
