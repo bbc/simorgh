@@ -152,6 +152,8 @@ export const service: DefaultServiceConfig = {
         errorText:
           'लगता है यह कंटेंट लोड नहीं हो रहा है. कृपया बाद में पुनः प्रयास करें.',
         loading: 'लोड हो रहा है',
+        noJsMessage:
+          'This content will not work in your browser. Please enable Javascript or a different browser.',
       },
       gist: 'सारांश',
       error: {

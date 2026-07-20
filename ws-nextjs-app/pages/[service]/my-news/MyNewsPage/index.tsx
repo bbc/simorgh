@@ -5,6 +5,7 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 
 import ATIAnalytics from '#app/components/ATIAnalytics';
 import MetadataContainer from '#app/components/Metadata';
+import Message from '#app/components/MediaLoader/Message';
 import styles from './styles';
 import { MyNewsPageProps } from '../types';
 import MyNewsPageGuest from './MyNewsPageGuest';
@@ -31,6 +32,9 @@ const MyNewsPage = ({ page }: MyNewsPageProps) => {
         hasAmpPage={false}
       />
       <ATIAnalytics />
+      <noscript>
+        <Message message={translations?.myNews?.noJsMessage} />
+      </noscript>
       <div css={styles.inner}>
         {isPersonalizationEnabled ? (
           <MyNewsPageContent page={page} />
