@@ -6,7 +6,9 @@ export default (
   atiPageViewUrlString: string,
   isOperaProxyFn: () => boolean,
 ) => {
-  if (isOperaProxyFn() && !(window as OperaMiniWindow).hasOperaMiniScriptRan) {
+  const operaMiniWindow = window as OperaMiniWindow;
+  // eslint-disable-next-line no-extra-boolean-cast
+  if (isOperaProxyFn() && !Boolean(operaMiniWindow.hasOperaMiniScriptRan)) {
     (window as OperaMiniWindow).hasOperaMiniScriptRan = true;
 
     const atiPageViewUrl = `${atiPageViewUrlString}${
