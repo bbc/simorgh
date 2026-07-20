@@ -18,6 +18,7 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { ContentType } from '#app/components/ChartbeatAnalytics/types';
 import ContinueReadingButton from '#app/components/ContinueReadingButton';
+import getOnDemandAudioLinkedData from './getOnDemandAudioLinkedData';
 import styles from './index.styles';
 import { OnDemandAudioProps } from './types';
 
@@ -59,147 +60,38 @@ const OnDemandAudioPage = ({
   const { serviceName } = use(ServiceContext);
   const { isLite, pathname, canonicalNonUkLink } = use(RequestContext);
 
-  const isPodcastEpisodePage =
-    /\/podcasts\/(?!programmes\/)[^/]+\/[^/]+(?:\.lite)?$/.test(pathname);
-
-  const shouldEmitPodcastEpisodeSchema = isPodcast && isPodcastEpisodePage;
-  const isPodcastBrandPage = isPodcast && !isPodcastEpisodePage;
-
-  const episodeCanonicalUrl = canonicalNonUkLink;
-  const brandCanonicalUrl = isPodcastBrandPage
-    ? canonicalNonUkLink
-    : episodeCanonicalUrl.replace(/\/([^/]+)(?:\.lite)?$/, '');
-
-  const brandEntityId = `${brandCanonicalUrl}#series`;
-  const episodeId = `${episodeCanonicalUrl}#episode`;
-  const audioId = `${episodeCanonicalUrl}#audio`;
-
-  const versions = pageData.mediaBlocks?.[0]?.model?.versions ?? [];
-  const availableFrom = versions[0]?.availableFrom;
-
-  const uploadDate = availableFrom
-    ? new Date(availableFrom).toISOString()
-    : new Date(releaseDateTimeStamp).toISOString();
-
-  const downloadLink = externalLinks?.find(
-    link =>
-      link.linkType === 'download' && link.linkUrl?.startsWith('https://'),
-  );
-  const rssLink = externalLinks?.find(link => link.linkType === 'rss');
-  const podcastSeriesName = promoBrandTitle || promoSeriesTitle || brandTitle;
-
-  const sameAs =
-    externalLinks
-      ?.filter(
-        link =>
-          Boolean(link.linkUrl) &&
-          !['rss', 'download', 'form'].includes(link.linkType),
-      )
-      .map(link => link.linkUrl) ?? [];
-
-  const audioEntities = !mediaIsAvailable
-    ? []
-    : [
-        {
-          '@type': 'AudioObject',
-          name: promoBrandTitle || promoSeriesTitle,
-          description: summary,
-          thumbnailUrl: thumbnailImageUrl,
-          duration: durationISO8601,
-          uploadDate,
-        },
-      ];
-
-  const podcastEpisodeEntities =
-    shouldEmitPodcastEpisodeSchema && mediaIsAvailable
-      ? [
-          {
-            '@type': 'PodcastSeries',
-            '@id': brandEntityId,
-            name: podcastSeriesName,
-          },
-          {
-            '@type': 'PodcastEpisode',
-            '@id': episodeId,
-            name: episodeTitle,
-            description: summary,
-            datePublished: new Date(releaseDateTimeStamp).toISOString(),
-            partOfSeries: { '@id': brandEntityId },
-            associatedMedia: {
-              '@type': 'AudioObject',
-              '@id': audioId,
-              name: episodeTitle,
-              description: summary,
-              ...(downloadLink?.linkUrl && {
-                contentUrl: downloadLink.linkUrl,
-                encodingFormat: 'audio/mpeg',
-              }),
-              duration: durationISO8601,
-              thumbnailUrl: thumbnailImageUrl,
-              uploadDate,
-            },
-          },
-        ]
-      : null;
-
-  const podcastBrandHasPart = recentEpisodes?.map(
-    (episode: {
-      id: string;
-      episodeTitle?: string;
-      brandTitle?: string;
-      timestamp: number;
-      duration: string;
-    }) => ({
-      '@type': 'PodcastEpisode',
-      '@id': `${brandCanonicalUrl}/${episode.id}#episode`,
-      url: `${brandCanonicalUrl}/${episode.id}`,
-      name: episode.episodeTitle || episode.brandTitle || brandTitle,
-      datePublished: new Date(episode.timestamp).toISOString(),
-      duration: episode.duration,
-    }),
-  );
-
-  const brandDescription =
-    brandLongSynopsis || brandMediumSynopsis || brandShortSynopsis || summary;
-
-  const podcastBrandEntities = isPodcastBrandPage
-    ? [
-        {
-          '@type': 'PodcastSeries',
-          '@id': brandEntityId,
-          name: podcastSeriesName,
-          description: brandDescription,
-          url: brandCanonicalUrl,
-          image: {
-            '@type': 'ImageObject',
-            url: thumbnailImageUrl,
-          },
-          ...(rssLink?.linkUrl && { webFeed: rssLink.linkUrl }),
-          ...(sameAs.length > 0 && { sameAs }),
-          ...(podcastBrandHasPart &&
-            podcastBrandHasPart.length > 0 && {
-              hasPart: podcastBrandHasPart,
-            }),
-        },
-      ]
-    : null;
-
-  const linkedDataEntities =
-    podcastBrandEntities ?? podcastEpisodeEntities ?? audioEntities;
+  const {
+    isPodcastEpisodePage,
+    isPodcastBrandPage,
+    linkedDataEntities,
+    mainEntityId,
+    metadataTitle,
+    metadataDescription,
+    brandDescription,
+  } = getOnDemandAudioLinkedData({
+    pathname,
+    canonicalNonUkLink,
+    serviceName,
+    isPodcast,
+    mediaIsAvailable,
+    mediaBlocks: pageData.mediaBlocks,
+    brandTitle,
+    headline,
+    episodeTitle,
+    summary,
+    promoBrandTitle,
+    promoSeriesTitle,
+    brandShortSynopsis,
+    brandMediumSynopsis,
+    brandLongSynopsis,
+    thumbnailImageUrl,
+    durationISO8601,
+    releaseDateTimeStamp,
+    externalLinks,
+    recentEpisodes,
+  });
 
   const hasRecentEpisodes = recentEpisodes && Boolean(recentEpisodes.length);
-
-  const getMetadataTitle = () => {
-    if (isPodcastBrandPage) return `${brandTitle} - ${serviceName}`;
-    if (episodeTitle) return `${episodeTitle} - ${brandTitle} - ${serviceName}`;
-    return headline;
-  };
-
-  const metadataTitle = getMetadataTitle();
-
-  const metadataDescription = isPodcastBrandPage ? brandDescription : summary;
-
-  const mainEntityId = isPodcastBrandPage ? brandEntityId : episodeId;
 
   const imageHeight = isPodcastEpisodePage ? 675 : 400;
   const imageWidth = isPodcastEpisodePage ? 1200 : 400;

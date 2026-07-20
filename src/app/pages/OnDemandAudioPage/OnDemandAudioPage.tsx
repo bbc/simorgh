@@ -19,6 +19,9 @@ import {
   OnDemandAudioBlock,
 } from '#app/models/types/media';
 import { ATIData } from '#app/components/ATIAnalytics/types';
+import getOnDemandAudioLinkedData, {
+  OnDemandAudioExternalLink,
+} from '#nextjs/pages/[service]/onDemandAudio/getOnDemandAudioLinkedData';
 import styles from './index.styles';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
@@ -61,7 +64,7 @@ export interface OnDemandAudioProps {
     recentEpisodes: [];
     brandId: string;
     episodeTitle: string;
-    externalLinks: string[];
+    externalLinks: OnDemandAudioExternalLink[];
     contentType: ContentType;
   };
   mediaIsAvailable?: boolean;
@@ -79,7 +82,6 @@ const OnDemandAudioPage = ({
     language,
     brandTitle,
     headline,
-    shortSynopsis,
     summary,
     masterBrand,
     releaseDateTimeStamp,
@@ -104,64 +106,37 @@ const OnDemandAudioPage = ({
   const { serviceName } = use(ServiceContext);
   const { pathname, canonicalNonUkLink } = use(RequestContext);
 
-  const isPodcastEpisodePage =
-    /\/podcasts\/(?!programmes\/)[^/]+\/[^/]+(?:\.lite)?$/.test(pathname);
-  const isPodcastBrandPage = isPodcast && !isPodcastEpisodePage;
-
-  const brandCanonicalUrl = isPodcastBrandPage
-    ? canonicalNonUkLink
-    : canonicalNonUkLink.replace(/\/([^/]+)(?:\.lite)?$/, '');
-
-  const brandEntityId = `${brandCanonicalUrl}#series`;
-  const podcastBrandName = promoBrandTitle || promoSeriesTitle;
-
-  const brandDescription =
-    brandLongSynopsis || brandMediumSynopsis || brandShortSynopsis;
-
-  const podcastBrandEntities = isPodcastBrandPage
-    ? [
-        {
-          '@type': 'PodcastSeries',
-          '@id': brandEntityId,
-          name: podcastBrandName,
-          description: brandDescription,
-          url: brandCanonicalUrl,
-          image: {
-            '@type': 'ImageObject',
-            url: thumbnailImageUrl,
-          },
-        },
-      ]
-    : null;
-
-  const audioEntities = mediaIsAvailable
-    ? [
-        {
-          '@type': 'AudioObject',
-          name: promoBrandTitle || promoSeriesTitle,
-          description: shortSynopsis,
-          thumbnailUrl: thumbnailImageUrl,
-          duration: durationISO8601,
-          uploadDate: new Date(releaseDateTimeStamp).toISOString(),
-        },
-      ]
-    : [];
-
-  const linkedDataEntities = podcastBrandEntities ?? audioEntities;
-
-  const mainEntityId = isPodcastBrandPage ? brandEntityId : undefined;
+  const {
+    isPodcastBrandPage,
+    linkedDataEntities,
+    mainEntityId,
+    metadataTitle,
+    metadataDescription,
+    brandDescription,
+  } = getOnDemandAudioLinkedData({
+    pathname,
+    canonicalNonUkLink,
+    serviceName,
+    isPodcast,
+    mediaIsAvailable,
+    mediaBlocks: pageData.mediaBlocks,
+    brandTitle,
+    headline,
+    episodeTitle,
+    summary,
+    promoBrandTitle,
+    promoSeriesTitle,
+    brandShortSynopsis,
+    brandMediumSynopsis,
+    brandLongSynopsis,
+    thumbnailImageUrl,
+    durationISO8601,
+    releaseDateTimeStamp,
+    externalLinks,
+    recentEpisodes,
+  });
 
   const hasRecentEpisodes = recentEpisodes && Boolean(recentEpisodes.length);
-
-  const getMetadataTitle = () => {
-    if (isPodcastBrandPage) return `${brandTitle} - ${serviceName}`;
-    if (episodeTitle) return `${episodeTitle} - ${brandTitle} - ${serviceName}`;
-    return headline;
-  };
-
-  const metadataTitle = getMetadataTitle();
-
-  const metadataDescription = isPodcastBrandPage ? brandDescription : summary;
 
   const metadataImageProps = is(String, imageUrl)
     ? {

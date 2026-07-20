@@ -236,9 +236,6 @@ exports[`Canonical On Demand Audio Page SEO Linked data should match text 1`] = 
         "alternateName": "rw",
         "name": "Kinyarwanda",
       },
-      "mainEntity": {
-        "@id": "http://localhost:7081/gahuza/bbc_gahuza_radio/w172x7rkcj6v0vz#episode",
-      },
       "mainEntityOfPage": {
         "@id": "http://localhost:7081/gahuza/bbc_gahuza_radio/w172x7rkcj6v0vz",
         "@type": "WebPage",

@@ -236,9 +236,6 @@ exports[`Canonical On Demand Audio Page SEO Linked data should match text 1`] = 
         "alternateName": "id",
         "name": "Indonesian",
       },
-      "mainEntity": {
-        "@id": "http://localhost:7081/indonesia/bbc_indonesian_radio/w172x6r5000f38s#episode",
-      },
       "mainEntityOfPage": {
         "@id": "http://localhost:7081/indonesia/bbc_indonesian_radio/w172x6r5000f38s",
         "@type": "WebPage",

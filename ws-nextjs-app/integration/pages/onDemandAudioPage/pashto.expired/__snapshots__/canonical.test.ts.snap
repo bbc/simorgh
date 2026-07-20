@@ -236,9 +236,6 @@ exports[`Canonical On Demand Audio Page SEO Linked data should match text 1`] = 
         "alternateName": "ps",
         "name": "Pashto",
       },
-      "mainEntity": {
-        "@id": "http://localhost:7081/pashto/bbc_pashto_radio/w172x8nvf4bchz5#episode",
-      },
       "mainEntityOfPage": {
         "@id": "http://localhost:7081/pashto/bbc_pashto_radio/w172x8nvf4bchz5",
         "@type": "WebPage",
