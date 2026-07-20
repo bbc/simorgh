@@ -2,10 +2,10 @@ type OperaMiniWindow = Window & {
   hasOperaMiniScriptRan?: boolean;
 };
 
-export default (
+function sendPageViewBeaconOperaMini(
   atiPageViewUrlString: string,
   isOperaProxyFn: () => boolean,
-) => {
+) {
   const operaMiniWindow = window as OperaMiniWindow;
   // eslint-disable-next-line no-extra-boolean-cast
   if (isOperaProxyFn() && !Boolean(operaMiniWindow.hasOperaMiniScriptRan)) {
@@ -17,4 +17,6 @@ export default (
 
     window.sendStaticBeacon(atiPageViewUrl);
   }
-};
+}
+
+export default sendPageViewBeaconOperaMini;
