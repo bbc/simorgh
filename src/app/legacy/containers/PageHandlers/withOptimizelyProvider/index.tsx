@@ -46,6 +46,7 @@ optimizely?.notificationCenter?.addNotificationListener(
     notification: ListenerPayload & {
       decisionInfo?: {
         flagKey?: string;
+        experimentKey?: string;
         variationKey?: string;
         decisionEventDispatched?: boolean;
       };
@@ -53,30 +54,37 @@ optimizely?.notificationCenter?.addNotificationListener(
   ) => {
     if (!onClient()) return;
 
-    const flagKey = notification.decisionInfo?.flagKey;
-    const variationKey = notification.decisionInfo?.variationKey;
+    const { decisionInfo } = notification;
+    const variationKey = decisionInfo?.variationKey;
 
-    if (flagKey && variationKey && variationKey !== 'off') {
-      const decisionEventDispatched =
-        notification.decisionInfo?.decisionEventDispatched;
+    // Flag decisions (decide API) expose flagKey; legacy experiment decisions
+    // (activate API, used by server-side experiments) expose experimentKey.
+    const experimentKey = decisionInfo?.flagKey ?? decisionInfo?.experimentKey;
 
-      if (decisionEventDispatched) {
-        const currentUrl = window.location.pathname + window.location.search;
-        if (currentUrl !== lastTrackedUrl) {
-          lastTrackedUrl = currentUrl;
+    if (!experimentKey || !variationKey || variationKey === 'off') return;
 
-          // the visit (denominator) must be sent before the page view (numerator)
-          // so the page view falls inside Optimizely's ratio metric attribution window
-          if (registerVisitActivity(Date.now())) {
-            optimizely.track(VISIT_EVENT_NAME);
-          }
+    // Flag decisions only send an impression when decisionEventDispatched is true.
+    // Legacy activate() always sends an impression, so no such flag is provided.
+    const impressionDispatched = decisionInfo?.flagKey
+      ? Boolean(decisionInfo?.decisionEventDispatched)
+      : true;
 
-          optimizely.track(PAGE_VIEW_EVENT_NAME);
+    if (impressionDispatched) {
+      const currentUrl = window.location.pathname + window.location.search;
+      if (currentUrl !== lastTrackedUrl) {
+        lastTrackedUrl = currentUrl;
+
+        // the visit (denominator) must be sent before the page view (numerator)
+        // so the page view falls inside Optimizely's ratio metric attribution window
+        if (registerVisitActivity(Date.now())) {
+          optimizely.track(VISIT_EVENT_NAME);
         }
-      }
 
-      notifyDecision(flagKey);
+        optimizely.track(PAGE_VIEW_EVENT_NAME);
+      }
     }
+
+    notifyDecision(experimentKey);
   },
 );
 
