@@ -122,7 +122,7 @@ export default ({
           css={[
             styles.backgroundContainer,
             isHighProminence
-              ? styles.backgroundBlackTreatment
+              ? styles.backgroundPlainBlack
               : styles.backgroundRedGradient,
           ]}
         />

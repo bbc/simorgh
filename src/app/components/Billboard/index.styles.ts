@@ -53,7 +53,7 @@ export default {
           'linear-gradient(to bottom, rgba(130, 0, 0, 1) 10%, rgba(40, 0, 0, 1) 70%)',
       },
     }),
-  backgroundBlackTreatment: ({ palette }: Theme) =>
+  backgroundPlainBlack: ({ palette }: Theme) =>
     css({
       background: palette.BLACK,
     }),
