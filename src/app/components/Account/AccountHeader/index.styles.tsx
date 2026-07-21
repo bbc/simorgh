@@ -34,7 +34,7 @@ const styles = {
     marginInlineStart: 'auto',
 
     [mq.GROUP_4_MIN_WIDTH]: {
-      marginInlineStart: 0,
+      marginInlineStart: `${pixelsToRem(23)}rem`,
     },
   }),
   linkDefault: ({ palette, mq, spacings, fontSizes }: Theme) => ({

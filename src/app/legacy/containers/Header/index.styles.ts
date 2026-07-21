@@ -23,6 +23,12 @@ export default {
         justifyContent: 'flex-start',
         paddingInline: `${spacings.DOUBLE}rem`,
       },
+
+      '& > a': {
+        display: 'flex',
+        alignItems: 'center',
+        height: `${pixelsToRem(132)}rem`,
+      },
     }),
   headerBrand: ({ mq, spacings }: Theme) =>
     css({
