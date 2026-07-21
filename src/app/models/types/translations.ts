@@ -81,7 +81,7 @@ export interface Translations {
     noArticles: string;
     errorText: string;
     loading: string;
-    noJsMessage: string;
+    noJsDescription: string;
   };
   error: {
     home?: string;

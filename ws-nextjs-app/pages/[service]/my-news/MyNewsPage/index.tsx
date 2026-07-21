@@ -5,11 +5,12 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 
 import ATIAnalytics from '#app/components/ATIAnalytics';
 import MetadataContainer from '#app/components/Metadata';
-import Message from '#app/components/MediaLoader/Message';
 import styles from './styles';
 import { MyNewsPageProps } from '../types';
 import MyNewsPageGuest from './MyNewsPageGuest';
 import MyNewsPageLoading from './MyNewsPageLoading';
+import GenericMessage from '../../send/[id]/GenericMessage';
+import fallbackTranslations from '../../send/[id]/fallbackTranslations';
 
 const MyNewsPageContent = dynamic(() => import('./MyNewsPageContent'), {
   ssr: false,
@@ -20,6 +21,11 @@ const MyNewsPage = ({ page }: MyNewsPageProps) => {
   const { isPersonalizationAvailable, isPersonalizationEnabled } =
     use(AccountContext);
   const { lang, translations } = use(ServiceContext);
+  const noJsHeading =
+    translations?.myNews?.title || fallbackTranslations.noJsHeading;
+  const noJsDescription =
+    translations?.myNews?.noJsDescription ||
+    fallbackTranslations.noJsDescription;
 
   if (!isPersonalizationAvailable || !translations?.myNews) return null;
 
@@ -32,15 +38,21 @@ const MyNewsPage = ({ page }: MyNewsPageProps) => {
         hasAmpPage={false}
       />
       <ATIAnalytics />
-      <noscript>
-        <Message message={translations?.myNews?.noJsMessage} />
-      </noscript>
       <div css={styles.inner}>
-        {isPersonalizationEnabled ? (
-          <MyNewsPageContent page={page} />
-        ) : (
-          <MyNewsPageGuest />
-        )}
+        <noscript>
+          <div css={styles.heading}>
+            <GenericMessage heading={noJsHeading}>
+              {noJsDescription}
+            </GenericMessage>
+          </div>
+        </noscript>
+        <div css={styles.innerContent}>
+          {isPersonalizationEnabled ? (
+            <MyNewsPageContent page={page} />
+          ) : (
+            <MyNewsPageGuest />
+          )}
+        </div>
       </div>
     </main>
   );
