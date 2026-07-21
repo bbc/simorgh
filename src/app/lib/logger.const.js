@@ -94,6 +94,9 @@ const logCodes = {
   // Build manifest errors
   BUILD_MANIFEST_CSS_READ_ERROR: 'build_manifest_css_read_error',
   DYNAMIC_IMPORT_CSS_READ_ERROR: 'dynamic_import_css_read_error',
+
+  // AMP/Lite CSS size diagnostics
+  AMP_LITE_CSS_SIZE_METRIC: 'amp_lite_css_size_metric',
 };
 
 module.exports = logCodes;
