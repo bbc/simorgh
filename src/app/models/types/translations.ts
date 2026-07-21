@@ -48,6 +48,7 @@ export interface Translations {
   gist?: string;
   account?: {
     signIn?: string;
+    signInAccessibleLabel?: string;
     forYou?: string;
     register?: string;
     settings?: string;

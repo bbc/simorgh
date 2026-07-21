@@ -119,6 +119,7 @@ export const service: DefaultServiceConfig = {
       },
       account: {
         signIn: 'साइन इन',
+        signInAccessibleLabel: 'माय न्यूज़ में साइन इन करें',
         forYou: 'आपका एकाउंट',
         register: 'रजिस्टर',
       },
