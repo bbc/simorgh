@@ -13,6 +13,7 @@ const styles = {
     css({
       position: 'relative',
       display: 'inline',
+      minWidth: 0,
       '.promo-image': {
         'div div:nth-child(2) div': {
           padding: `${spacings.FULL}rem`,
@@ -89,9 +90,10 @@ const styles = {
       ...fontSizes.longPrimer,
       display: 'flex',
       flexDirection: 'column',
-      alignItems: 'flex-start',
+      alignItems: 'stretch',
       flexWrap: 'wrap',
       gap: 0,
+      minWidth: 0,
     }),
 
   relatedTopicLink: ({
