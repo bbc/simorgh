@@ -40,7 +40,7 @@ const {
 } = COMPONENT_NAMES;
 
 const { NONE } = VISUAL_STYLE;
-const { NORMAL, HIGH } = VISUAL_PROMINENCE;
+const { NORMAL } = VISUAL_PROMINENCE;
 
 const getGridComponent = (componentName: string | null) => {
   switch (componentName) {
@@ -142,8 +142,6 @@ export default ({
       return null;
     case BILLBOARD: {
       const billboardId = `billboard-${nthCurationByStyleAndProminence}`;
-      const billboardProminence =
-        visualProminence === HIGH ? 'high' : 'maximum';
       if (firstSummary) {
         return (
           <div css={styles.billboardContainer}>
@@ -153,7 +151,7 @@ export default ({
               link={summaryLink}
               image={imageUrl}
               id={billboardId}
-              prominence={billboardProminence}
+              prominence={visualProminence}
               eventTrackingData={eventTrackingData}
               showLiveLabel={summaryIsLive}
               altText={imageAlt}

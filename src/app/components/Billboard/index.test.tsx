@@ -4,6 +4,7 @@ import {
   screen,
 } from '../react-testing-library-with-providers';
 import Billboard from '.';
+import { VISUAL_PROMINENCE } from '../../models/types/curationData';
 import { kyrgyzBillboard, pidginLiveBillboard } from './fixtures';
 import * as MaskedImage from '../MaskedImage';
 import * as viewTracking from '../../hooks/useViewTracker';
@@ -282,7 +283,7 @@ describe('Billboard', () => {
           link={link}
           image={imageUrl}
           altText={imageAlt}
-          prominence="high"
+          prominence={VISUAL_PROMINENCE.HIGH}
         />,
       );
 
@@ -302,7 +303,7 @@ describe('Billboard', () => {
           link={link}
           image={imageUrl}
           altText={imageAlt}
-          prominence="high"
+          prominence={VISUAL_PROMINENCE.HIGH}
           summaries={pidginLiveBillboard.summaries}
         />,
       );

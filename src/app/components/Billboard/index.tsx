@@ -1,7 +1,11 @@
 import { use } from 'react';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
-import { Summary } from '#app/models/types/curationData';
+import {
+  Summary,
+  VISUAL_PROMINENCE,
+  VisualProminence,
+} from '#app/models/types/curationData';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import Image from '#app/components/Image';
 import buildIChefURL from '#app/lib/utilities/ichefURL';
@@ -17,7 +21,7 @@ import LiveText from '../LiveText';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import BillboardCurationGrid from './BillboardCurationGrid';
 
-type BillboardProminence = 'maximum' | 'high';
+type BillboardProminence = VisualProminence | string;
 
 interface BillboardProps {
   heading: string;
@@ -42,7 +46,7 @@ export default ({
   image,
   altText,
   id = 'billboard',
-  prominence = 'maximum',
+  prominence = VISUAL_PROMINENCE.MAXIMUM,
   showLiveLabel,
   eventTrackingData = { componentName: 'billboard' },
   summaries = [],
@@ -51,7 +55,7 @@ export default ({
   const showMoreOnThisTitle = translations.moreOnThis;
   const hasPromoItems = summaries.length > 1;
   const isSingleImageLayout = !hasPromoItems;
-  const isHighProminence = prominence === 'high';
+  const isHighProminence = prominence === VISUAL_PROMINENCE.HIGH;
 
   const eventTrackingDataWithOptimizelyEvents = {
     ...eventTrackingData,
