@@ -26,6 +26,10 @@ import CanonicalToLiteRedirect from '#utilities/CanonicalToLiteRedirect';
 import addOperaMiniClassScript from '#app/lib/utilities/addOperaMiniClassScript';
 import handleServerLogging from '#utilities/handleServerLogging';
 import getAmpLiteCss from '#utilities/getAmpLiteCss';
+import pruneUnusedCssCustomProperties from '#utilities/getAmpLiteCss/pruneUnusedCssCustomProperties';
+import nodeLogger from '#lib/logger.node';
+import logCodes from '#app/lib/logger.const';
+import { writeFileSync } from 'fs';
 import ComponentTracking from '../renderers/ComponentTracking';
 import ReverbTemplate from '../renderers/ReverbTemplate';
 import litePageTransforms from '../renderers/litePageTransforms';
@@ -85,6 +89,50 @@ const optimiseAmpCss = (css: string): string =>
     .replace(/;\}/g, '}')
     .replace(/\s{2,}/g, ' ')
     .trim();
+
+const logger = nodeLogger(__filename);
+
+const toKb = (value: string): number =>
+  Math.round((Buffer.byteLength(value, 'utf8') / 1024) * 100) / 100;
+
+// Temporary diagnostic: logs the byte size (KB) of each CSS source at the point
+// they are combined, so we can assess how much the Emotion critical CSS vs the
+// CSS Modules AMP/Lite output each contribute to the total inlined payload.
+const logCssSizeMetric = ({
+  variant,
+  emotionCss,
+  ampLiteCss,
+  combinedCss,
+  optimisedCss,
+}: {
+  variant: 'amp' | 'lite';
+  emotionCss: string;
+  ampLiteCss: string;
+  combinedCss: string;
+  optimisedCss?: string;
+}): void => {
+  logger.info(logCodes.AMP_LITE_CSS_SIZE_METRIC, {
+    variant,
+    emotionCssKb: toKb(emotionCss),
+    ampLiteCssKb: toKb(ampLiteCss),
+    combinedCssKb: toKb(combinedCss),
+    ...(optimisedCss !== undefined && {
+      optimisedCssKb: toKb(optimisedCss),
+    }),
+  });
+
+  // Temporary diagnostic dump: writes the raw CSS sources to disk so they can be
+  // inspected directly for minification and duplication. Never runs unless
+  // DEBUG_DUMP_AMP_CSS=1 is explicitly set, so this has no effect in normal use.
+  if (process.env.DEBUG_DUMP_AMP_CSS === '1') {
+    writeFileSync(`/tmp/${variant}-emotion-css.css`, emotionCss);
+    writeFileSync(`/tmp/${variant}-amp-lite-css.css`, ampLiteCss);
+    writeFileSync(`/tmp/${variant}-combined-css.css`, combinedCss);
+    if (optimisedCss !== undefined) {
+      writeFileSync(`/tmp/${variant}-optimised-css.css`, optimisedCss);
+    }
+  }
+};
 
 
 export default class AppDocument extends Document<DocProps> {
@@ -169,7 +217,16 @@ export default class AppDocument extends Document<DocProps> {
 
     switch (true) {
       case isAmp && pageType === 'article': {
-        const ampCss = optimiseAmpCss(css + getAmpLiteCss(getNextData()));
+        const ampLiteCss = getAmpLiteCss(getNextData());
+        const combinedCss = pruneUnusedCssCustomProperties(css + ampLiteCss);
+        const ampCss = optimiseAmpCss(combinedCss);
+        logCssSizeMetric({
+          variant: 'amp',
+          emotionCss: css,
+          ampLiteCss,
+          combinedCss,
+          optimisedCss: ampCss,
+        });
         return (
           <AmpRenderer
             bodyContent={<Main />}
@@ -184,7 +241,14 @@ export default class AppDocument extends Document<DocProps> {
         );
       }
       case isLite: {
-        const liteCss = css + getAmpLiteCss(getNextData());
+        const ampLiteCss = getAmpLiteCss(getNextData());
+        const liteCss = pruneUnusedCssCustomProperties(css + ampLiteCss);
+        logCssSizeMetric({
+          variant: 'lite',
+          emotionCss: css,
+          ampLiteCss,
+          combinedCss: liteCss,
+        });
         return (
           <LiteRenderer
             bodyContent={<Main />}
