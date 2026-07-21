@@ -10,7 +10,13 @@ const MyNewsPageGuest = () => {
 
   return (
     <>
-      <Heading level={1} css={styles.heading} size="paragon">
+      <Heading
+        id="content"
+        tabIndex={-1}
+        level={1}
+        css={styles.heading}
+        size="paragon"
+      >
         {translations?.myNews?.guestTitle}
       </Heading>
       <Text size="longPrimer">{translations?.myNews?.guestDescription}</Text>
