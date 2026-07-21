@@ -125,7 +125,7 @@ exports[`Canonical Photo Gallery Page Header I can see the branding 1`] = `
 
 exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 1`] = `
 {
-  "text": "Noticias",
+  "text": "Página actual, Noticias",
   "url": "/mundo",
 }
 `;

@@ -182,7 +182,7 @@ exports[`AMP Media Article Page Header I can see the branding 1`] = `
 
 exports[`AMP Media Article Page Header Navigation link should match text and url 1`] = `
 {
-  "text": "Home",
+  "text": "Page where you dey, Home",
   "url": "/pidgin",
 }
 `;

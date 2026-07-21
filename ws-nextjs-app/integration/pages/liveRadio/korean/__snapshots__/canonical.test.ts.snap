@@ -119,7 +119,7 @@ exports[`Canonical Korean Live Radio Page Header I can see the branding 1`] = `
 
 exports[`Canonical Korean Live Radio Page Header Navigation link should match text and url 1`] = `
 {
-  "text": "뉴스",
+  "text": "현재 페이지, 뉴스",
   "url": "/korean",
 }
 `;

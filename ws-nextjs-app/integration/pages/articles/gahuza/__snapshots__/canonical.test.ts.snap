@@ -134,7 +134,7 @@ exports[`Canonical Articles Header I can see the branding 1`] = `
 
 exports[`Canonical Articles Header Navigation link should match text and url 1`] = `
 {
-  "text": "Urupapuro rw'itangiriro",
+  "text": "Uru rupapuro, Urupapuro rw'itangiriro",
   "url": "/gahuza",
 }
 `;

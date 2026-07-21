@@ -119,7 +119,7 @@ exports[`Canonical On Demand Audio Page Header I can see the branding 1`] = `
 
 exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 1`] = `
 {
-  "text": "کور پاڼه",
+  "text": "اوسنۍ پاڼه, کور پاڼه",
   "url": "/pashto",
 }
 `;

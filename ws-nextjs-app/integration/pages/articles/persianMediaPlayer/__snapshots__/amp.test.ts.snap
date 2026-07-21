@@ -82,7 +82,7 @@ exports[`AMP Articles Header I can see the branding 1`] = `
 
 exports[`AMP Articles Header Navigation link should match text and url 1`] = `
 {
-  "text": "صفحه اول",
+  "text": "صفحه فعلی, صفحه اول",
   "url": "/persian",
 }
 `;

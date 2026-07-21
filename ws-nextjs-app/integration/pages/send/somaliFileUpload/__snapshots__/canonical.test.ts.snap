@@ -80,7 +80,7 @@ exports[`Canonical Send Header I can see the branding 1`] = `
 
 exports[`Canonical Send Header Navigation link should match text and url 1`] = `
 {
-  "text": "War",
+  "text": "Bogga hadda, War",
   "url": "/somali",
 }
 `;

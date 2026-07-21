@@ -125,7 +125,7 @@ exports[`Canonical Media Asset Page Header I can see the branding 1`] = `
 
 exports[`Canonical Media Asset Page Header Navigation link should match text and url 1`] = `
 {
-  "text": "صفحه اول",
+  "text": "صفحه فعلی, صفحه اول",
   "url": "/persian",
 }
 `;

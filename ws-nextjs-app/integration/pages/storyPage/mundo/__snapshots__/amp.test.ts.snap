@@ -180,7 +180,7 @@ exports[`AMP Story Page Header I can see the branding 1`] = `
 
 exports[`AMP Story Page Header Navigation link should match text and url 1`] = `
 {
-  "text": "Noticias",
+  "text": "Página actual, Noticias",
   "url": "/mundo",
 }
 `;

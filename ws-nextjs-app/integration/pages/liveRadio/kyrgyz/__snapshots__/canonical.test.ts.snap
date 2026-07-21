@@ -119,7 +119,7 @@ exports[`Canonical Kyrgyz Live Radio Page Header I can see the branding 1`] = `
 
 exports[`Canonical Kyrgyz Live Radio Page Header Navigation link should match text and url 1`] = `
 {
-  "text": "Башкы бет",
+  "text": "Ачылып турган баракча, Башкы бет",
   "url": "/kyrgyz",
 }
 `;

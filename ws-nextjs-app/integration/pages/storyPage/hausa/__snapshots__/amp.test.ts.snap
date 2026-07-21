@@ -174,7 +174,7 @@ exports[`AMP Story Page Header I can see the branding 1`] = `
 
 exports[`AMP Story Page Header Navigation link should match text and url 1`] = `
 {
-  "text": "Labaran Duniya",
+  "text": "Shafin da ake ciki, Labaran Duniya",
   "url": "/hausa",
 }
 `;

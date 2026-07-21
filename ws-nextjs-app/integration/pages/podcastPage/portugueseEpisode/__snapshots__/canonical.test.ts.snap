@@ -119,7 +119,7 @@ exports[`Canonical Podcast Page Header I can see the branding 1`] = `
 
 exports[`Canonical Podcast Page Header Navigation link should match text and url 1`] = `
 {
-  "text": "Notícias",
+  "text": "Página atual, Notícias",
   "url": "/portuguese",
 }
 `;
