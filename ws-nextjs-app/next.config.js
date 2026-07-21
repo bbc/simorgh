@@ -1,6 +1,7 @@
 /* eslint-disable no-param-reassign */
 const path = require('path');
 const MomentTimezoneInclude = require('../src/app/legacy/psammead/moment-timezone-include/src');
+
 const DevCssExtractLoader =
   require.resolve('./scripts/DevCssExtractLoader.cjs');
 const {
@@ -98,7 +99,6 @@ module.exports = {
         '../src/app/components/ThemeProviderSCSSModules',
       ),
     };
-
     config.plugins.push(
       new MomentTimezoneInclude({
         startYear: 2010,

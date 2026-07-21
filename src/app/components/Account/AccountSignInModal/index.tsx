@@ -12,8 +12,8 @@ import styles from './index.styles';
 
 type AccountSignInModalProps = {
   onClose: () => void;
-  signInUrl: string | undefined;
-  registerUrl: string | undefined;
+  signInUrl?: string | undefined;
+  registerUrl?: string | undefined;
 };
 
 const AccountSignInModal = ({ onClose }: AccountSignInModalProps) => {
@@ -88,6 +88,9 @@ const AccountSignInModal = ({ onClose }: AccountSignInModalProps) => {
             <div css={styles.actionsContainer}>
               <AccountActionButtons
                 signInRef={firstElementRef}
+                signInAccessibleLabel={
+                  translations?.account?.signInAccessibleLabel
+                }
                 signInComponentName="account-sign-in-modal-sign-in"
                 registerComponentName="account-sign-in-modal-register"
               />
