@@ -47,13 +47,13 @@ type DecisionInfo = {
   decisionEventDispatched?: boolean;
 };
 
-// Downstream (decision store + page metrics) every experiment is keyed by a
-// single identifier. Optimizely's DECISION notification exposes that identifier
-// differently depending on the experiment type:
-// - Client-side experiments use the Flags (decide) API, identified by a flag key,
-//   and only count an impression when `decisionEventDispatched` is true.
-// - Server-side experiments use the legacy activate API, identified by a rule key
-//   (exposed by the SDK as `experimentKey`), and always dispatch an impression.
+// Optimizely reports a decision in one of two shapes depending on the experiment type.
+// We normalise both into a single `decisionKey` + `impressionDispatched` so the rest
+// of the app doesn't need to know which type it was:
+// - Client-side (Flags/decide API): uses `flagKey`; an impression is only counted
+//   when `decisionEventDispatched` is true.
+// - Server-side (legacy activate API): uses `experimentKey` (the rule key) and
+//   always counts an impression.
 const resolveDecision = (decisionInfo?: DecisionInfo) => {
   const clientSideFlagKey = decisionInfo?.flagKey;
   const serverSideRuleKey = decisionInfo?.experimentKey;
