@@ -53,7 +53,7 @@ export default {
       ...fontSizes.brevier,
       ...fontVariants.sansRegular,
       color: isDarkUi ? palette.GREY_3 : palette.GREY_6,
-      display: 'block',
+      display: 'inline-block',
       maxWidth: '100%',
       marginTop: 0,
       marginBottom: `${spacings.FULL}rem`,
