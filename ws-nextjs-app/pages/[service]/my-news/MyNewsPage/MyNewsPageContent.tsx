@@ -106,7 +106,7 @@ const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
         hasAmpPage={false}
         lang={lang}
       />
-      <Heading level={1} css={styles.heading}>
+      <Heading level={1} id="content" tabIndex={-1} css={styles.heading}>
         {title}
       </Heading>
       {renderContent()}
