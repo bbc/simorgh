@@ -83,6 +83,10 @@ export const service: DefaultServiceConfig = {
       continueReading: 'Komeza usome',
       currentPage: 'Uru rupapuro',
       skipLinkText: 'Simbira ku birimwo',
+      skipContent: {
+        text: 'Simbuka %title% ukomeze',
+        endTextVisuallyHidden: 'Iherezo rya %title%',
+      },
       relatedContent: 'Ibindi bisa n’ibi',
       relatedTopics: 'Ibindi bisa n’ibi',
       moreOnThis: '',

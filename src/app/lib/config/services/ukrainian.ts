@@ -86,6 +86,10 @@ const baseServiceConfig = {
     },
     currentPage: 'Поточна сторінка',
     skipLinkText: 'Перейти до змісту',
+    skipContent: {
+      text: 'Пропустити %title% і продовжити',
+      endTextVisuallyHidden: 'Кінець %title%',
+    },
     moreOnThis: '',
     navMenuText: 'Розділи',
     mediaAssetPage: {

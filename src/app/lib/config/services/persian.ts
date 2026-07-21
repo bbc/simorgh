@@ -91,6 +91,10 @@ export const service: DefaultServiceConfig = {
       continueReading: 'ادامه مطلب را بخوانید',
       currentPage: 'صفحه فعلی',
       skipLinkText: 'مشاهده محتوا',
+      skipContent: {
+        text: 'رد کردن %title% و ادامه',
+        endTextVisuallyHidden: 'پایان %title%',
+      },
       relatedContent: 'مطالب مرتبط',
       relatedTopics: 'موضوعات مرتبط',
       moreOnThis: '',

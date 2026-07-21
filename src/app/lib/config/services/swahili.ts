@@ -90,6 +90,10 @@ export const service: DefaultServiceConfig = {
       continueReading: 'Soma zaidi',
       currentPage: 'Ukurasa uliopo ',
       skipLinkText: 'Ruka hadi maelezo',
+      skipContent: {
+        text: 'Ruka %title% uendelee',
+        endTextVisuallyHidden: 'Mwisho wa %title%',
+      },
       relatedContent: 'Maelezo zaidi kuhusu taarifa hii',
       relatedTopics: 'Mada zinazohusiana',
       moreOnThis: '',
