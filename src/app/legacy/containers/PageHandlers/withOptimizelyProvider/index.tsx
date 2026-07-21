@@ -40,33 +40,47 @@ const optimizely = createInstance({
   eventFlushInterval: 100,
 });
 
+type DecisionInfo = {
+  flagKey?: string;
+  experimentKey?: string;
+  variationKey?: string;
+  decisionEventDispatched?: boolean;
+};
+
+// Downstream (decision store + page metrics) every experiment is keyed by a
+// single identifier. Optimizely's DECISION notification exposes that identifier
+// differently depending on the experiment type:
+// - Client-side experiments use the Flags (decide) API, identified by a flag key,
+//   and only count an impression when `decisionEventDispatched` is true.
+// - Server-side experiments use the legacy activate API, identified by a rule key
+//   (exposed by the SDK as `experimentKey`), and always dispatch an impression.
+const resolveDecision = (decisionInfo?: DecisionInfo) => {
+  const clientSideFlagKey = decisionInfo?.flagKey;
+  const serverSideRuleKey = decisionInfo?.experimentKey;
+  const isClientSideDecision = Boolean(clientSideFlagKey);
+
+  return isClientSideDecision
+    ? {
+        decisionKey: clientSideFlagKey,
+        impressionDispatched: Boolean(decisionInfo?.decisionEventDispatched),
+      }
+    : {
+        decisionKey: serverSideRuleKey,
+        impressionDispatched: Boolean(serverSideRuleKey),
+      };
+};
+
 optimizely?.notificationCenter?.addNotificationListener(
   enums.NOTIFICATION_TYPES.DECISION,
-  (
-    notification: ListenerPayload & {
-      decisionInfo?: {
-        flagKey?: string;
-        experimentKey?: string;
-        variationKey?: string;
-        decisionEventDispatched?: boolean;
-      };
-    },
-  ) => {
+  (notification: ListenerPayload & { decisionInfo?: DecisionInfo }) => {
     if (!onClient()) return;
 
-    const flagKey = notification.decisionInfo?.flagKey;
-    const experimentKey = flagKey ?? notification.decisionInfo?.experimentKey;
-    const variationKey = notification.decisionInfo?.variationKey;
+    const { decisionInfo } = notification;
+    const variationKey = decisionInfo?.variationKey;
+    const { decisionKey, impressionDispatched } = resolveDecision(decisionInfo);
 
-    if (experimentKey && variationKey && variationKey !== 'off') {
-      // Flag decisions (decide API) only send an impression when
-      // decisionEventDispatched is true; legacy activate() decisions
-      // (server-side experiments) always send one.
-      const decisionEventDispatched = flagKey
-        ? notification.decisionInfo?.decisionEventDispatched
-        : true;
-
-      if (decisionEventDispatched) {
+    if (decisionKey && variationKey && variationKey !== 'off') {
+      if (impressionDispatched) {
         const currentUrl = window.location.pathname + window.location.search;
         if (currentUrl !== lastTrackedUrl) {
           lastTrackedUrl = currentUrl;
@@ -81,7 +95,7 @@ optimizely?.notificationCenter?.addNotificationListener(
         }
       }
 
-      notifyDecision(experimentKey);
+      notifyDecision(decisionKey);
     }
   },
 );
