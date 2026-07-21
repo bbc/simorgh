@@ -177,7 +177,7 @@
     "supertest": "7.2.2",
     "timemachine": "0.3.2",
     "ts-jest": "29.4.9",
-    "typescript": "5.9.3",
+    "typescript": "6.0.3",
     "typescript-plugin-css-modules": "5.2.0",
     "webpack": "5.106.2"
   },

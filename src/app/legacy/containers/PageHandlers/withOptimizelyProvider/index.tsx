@@ -40,27 +40,47 @@ const optimizely = createInstance({
   eventFlushInterval: 100,
 });
 
+type DecisionInfo = {
+  flagKey?: string;
+  experimentKey?: string;
+  variationKey?: string;
+  decisionEventDispatched?: boolean;
+};
+
+// Optimizely reports a decision in one of two shapes depending on the experiment type.
+// We normalise both into a single `decisionKey` + `impressionDispatched` so the rest
+// of the app doesn't need to know which type it was:
+// - Client-side (Flags/decide API): uses `flagKey`; an impression is only counted
+//   when `decisionEventDispatched` is true.
+// - Server-side (legacy activate API): uses `experimentKey` (the rule key) and
+//   always counts an impression.
+const resolveDecision = (decisionInfo?: DecisionInfo) => {
+  const clientSideFlagKey = decisionInfo?.flagKey;
+  const serverSideRuleKey = decisionInfo?.experimentKey;
+  const isClientSideDecision = Boolean(clientSideFlagKey);
+
+  return isClientSideDecision
+    ? {
+        decisionKey: clientSideFlagKey,
+        impressionDispatched: Boolean(decisionInfo?.decisionEventDispatched),
+      }
+    : {
+        decisionKey: serverSideRuleKey,
+        impressionDispatched: Boolean(serverSideRuleKey),
+      };
+};
+
 optimizely?.notificationCenter?.addNotificationListener(
   enums.NOTIFICATION_TYPES.DECISION,
-  (
-    notification: ListenerPayload & {
-      decisionInfo?: {
-        flagKey?: string;
-        variationKey?: string;
-        decisionEventDispatched?: boolean;
-      };
-    },
-  ) => {
+  (notification: ListenerPayload & { decisionInfo?: DecisionInfo }) => {
     if (!onClient()) return;
 
-    const flagKey = notification.decisionInfo?.flagKey;
-    const variationKey = notification.decisionInfo?.variationKey;
+    const { decisionInfo } = notification;
+    const variationKey = decisionInfo?.variationKey;
+    const { decisionKey, impressionDispatched } = resolveDecision(decisionInfo);
 
-    if (flagKey && variationKey && variationKey !== 'off') {
-      const decisionEventDispatched =
-        notification.decisionInfo?.decisionEventDispatched;
-
-      if (decisionEventDispatched) {
+    if (decisionKey && variationKey && variationKey !== 'off') {
+      if (impressionDispatched) {
         const currentUrl = window.location.pathname + window.location.search;
         if (currentUrl !== lastTrackedUrl) {
           lastTrackedUrl = currentUrl;
@@ -75,7 +95,7 @@ optimizely?.notificationCenter?.addNotificationListener(
         }
       }
 
-      notifyDecision(flagKey);
+      notifyDecision(decisionKey);
     }
   },
 );
