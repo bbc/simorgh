@@ -1,11 +1,7 @@
 import { use } from 'react';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
-import {
-  Summary,
-  VISUAL_PROMINENCE,
-  VisualProminence,
-} from '#app/models/types/curationData';
+import { Summary, VISUAL_PROMINENCE } from '#app/models/types/curationData';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import Image from '#app/components/Image';
 import buildIChefURL from '#app/lib/utilities/ichefURL';
@@ -21,7 +17,10 @@ import LiveText from '../LiveText';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import BillboardCurationGrid from './BillboardCurationGrid';
 
-type BillboardProminence = VisualProminence | string;
+type BillboardProminence =
+  | typeof VISUAL_PROMINENCE.HIGH
+  | typeof VISUAL_PROMINENCE.MAXIMUM
+  | string;
 
 interface BillboardProps {
   heading: string;
