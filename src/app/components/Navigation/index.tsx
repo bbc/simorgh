@@ -196,7 +196,7 @@ const getActiveTopIndex = ({
 
   // All other page types (article, topic, home, live, etc.) default to Home (index 0).
   return 0;
-};;
+};
 
 type NavigationContainerProps = {
   navItems?: Navigation[];
