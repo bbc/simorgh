@@ -3,6 +3,8 @@ import styled from '@emotion/styled';
 import Brand from '#psammead/psammead-brand/src';
 import { useTheme } from '@emotion/react';
 import { servicesWithVariants } from '#lib/utilities/variantHandler';
+import SERVICES_WITH_NEW_NAV from '#app/components/Navigation/config';
+import hindiNewNavBrandSVG from '#app/components/ThemeProvider/chameleonLogos/hindiNewNav';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '../../../contexts/RequestContext';
 import { isGlobalLanguageHomepage } from '../Header/NewLogoBanner';
@@ -17,6 +19,9 @@ const StyledBrand = styled(Brand)`
     }
   }
 `;
+const newNavBrandSVGs = {
+  hindi: hindiNewNavBrandSVG,
+};
 
 export const getBrandPath = (service, variant) => {
   if (service === 'ws') return '/news';
@@ -37,9 +42,14 @@ const BrandContainer = ({
   const { variant } = use(RequestContext);
 
   const { brandSVG } = useTheme();
+
+  const shouldUseNewNav = SERVICES_WITH_NEW_NAV.includes(service);
+  const activeBrandSVG =
+    (shouldUseNewNav && newNavBrandSVGs[service]) || brandSVG;
+
   const svgMaxHeight = 24;
   const svgMinHeight = 16;
-  const svgRatio = brandSVG && brandSVG.ratio;
+  const svgRatio = activeBrandSVG && activeBrandSVG.ratio;
   const minWidth = svgRatio * svgMinHeight;
   const maxWidth = svgRatio * svgMaxHeight;
 
@@ -54,7 +64,7 @@ const BrandContainer = ({
       svgHeight={svgMaxHeight}
       minWidth={minWidth}
       maxWidth={maxWidth}
-      svg={brandSVG}
+      svg={activeBrandSVG}
       url={brandPath}
       skipLink={skipLink}
       scriptLink={scriptLink}
