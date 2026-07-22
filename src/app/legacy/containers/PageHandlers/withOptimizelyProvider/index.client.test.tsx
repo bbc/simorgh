@@ -405,11 +405,36 @@ describe('withOptimizelyProvider HOC', () => {
       expect(mockTrack).not.toHaveBeenCalled();
     });
 
-    it('should not call optimizely.track when flagKey is missing', () => {
+    it('should not call optimizely.track when both flagKey and experimentKey are missing', () => {
       capturedDecisionListener?.({
         decisionInfo: {
           variationKey: 'on',
           decisionEventDispatched: true,
+        },
+      });
+
+      expect(mockTrack).not.toHaveBeenCalled();
+    });
+
+    it('should call optimizely.track with page-views for a legacy activate() decision (experimentKey without decisionEventDispatched)', () => {
+      capturedDecisionListener?.({
+        decisionInfo: {
+          experimentKey: 'newswb_ws_article_account_promo_banner',
+          variationKey: 'on',
+        },
+      });
+
+      expect(mockTrack.mock.calls.map(call => call[0])).toEqual([
+        'visit',
+        'page-views',
+      ]);
+    });
+
+    it('should not call optimizely.track for a legacy activate() decision when variationKey is off', () => {
+      capturedDecisionListener?.({
+        decisionInfo: {
+          experimentKey: 'newswb_ws_article_account_promo_banner',
+          variationKey: 'off',
         },
       });
 
