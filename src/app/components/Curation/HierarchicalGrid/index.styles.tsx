@@ -1,5 +1,6 @@
 import { css, Theme } from '@emotion/react';
 import { GROUP_1_MAX_WIDTH } from '#app/components/ThemeProvider/mediaQueries';
+import pixelsToRem from '#app/utilities/pixelsToRem';
 
 const styles = {
   body: ({ spacings, palette, fontSizes }: Theme) =>
@@ -85,15 +86,20 @@ const styles = {
       verticalAlign: 'text-top',
     }),
 
-  metadataAndTopicData: ({ fontSizes }: Theme) =>
+  metadataAndTopicData: ({ fontSizes, spacings }: Theme) =>
     css({
       ...fontSizes.longPrimer,
+
       display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'stretch',
+      flexDirection: 'row',
       flexWrap: 'wrap',
-      gap: 0,
+      alignItems: 'baseline',
+      rowGap: `${spacings.HALF}rem`,
+      marginBottom: `${spacings.FULL}rem`,
       minWidth: 0,
+      '.promo-timestamp': {
+        flexShrink: 0,
+      },
     }),
 
   relatedTopicLink: ({
@@ -108,9 +114,10 @@ const styles = {
       ...fontVariants.sansRegular,
       color: isDarkUi ? palette.GREY_3 : palette.GREY_6,
       display: 'block',
+      flexShrink: 1,
+      minWidth: 0,
       maxWidth: '100%',
-      marginTop: 0,
-      marginBottom: `${spacings.FULL}rem`,
+      margin: 0,
       textDecoration: 'none',
       overflow: 'hidden',
       textOverflow: 'ellipsis',
@@ -118,6 +125,17 @@ const styles = {
       zIndex: 1,
       '&:hover, &:focus': {
         textDecoration: 'underline',
+      },
+      '&::after': {
+        content: '""',
+        display: 'inline-block',
+        verticalAlign: 'middle',
+        width: `${pixelsToRem(2)}rem`,
+        height: `${pixelsToRem(2)}rem`,
+        borderRadius: '50%',
+        backgroundColor: isDarkUi ? palette.GREY_3 : palette.GREY_6,
+        marginInline: `${spacings.HALF}rem`,
+        border: `${pixelsToRem(1)}rem solid transparent`,
       },
     }),
 };
