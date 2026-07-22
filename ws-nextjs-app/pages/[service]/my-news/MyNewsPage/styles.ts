@@ -42,10 +42,14 @@ const styles = {
     justifyContent: 'center',
   }),
 
-  spinner: css({
-    height: `${pixelsToRem(32)}rem`,
-    width: `${pixelsToRem(32)}rem`,
-  }),
+  spinner: ({ mq }) =>
+    css({
+      height: `${pixelsToRem(32)}rem`,
+      width: `${pixelsToRem(32)}rem`,
+      [mq.FORCED_COLOURS]: {
+        fill: 'canvasText',
+      },
+    }),
 };
 
 export default styles;
