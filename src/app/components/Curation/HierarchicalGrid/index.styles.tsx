@@ -1,6 +1,5 @@
 import { css, Theme } from '@emotion/react';
 import { GROUP_1_MAX_WIDTH } from '#app/components/ThemeProvider/mediaQueries';
-import pixelsToRem from '#app/utilities/pixelsToRem';
 
 const styles = {
   body: ({ spacings, palette, fontSizes }: Theme) =>
@@ -89,7 +88,8 @@ const styles = {
     css({
       ...fontSizes.longPrimer,
       display: 'flex',
-      alignItems: 'center',
+      flexDirection: 'column',
+      alignItems: 'flex-start',
       flexWrap: 'wrap',
       gap: 0,
     }),
@@ -108,19 +108,11 @@ const styles = {
       display: 'inline-flex',
       alignItems: 'center',
       marginTop: 0,
+      marginBottom: `${spacings.FULL}rem`,
       textDecoration: 'none',
       zIndex: 1,
       '&:hover, &:focus': {
         textDecoration: 'underline',
-      },
-      '&::after': {
-        content: '""',
-        width: `${pixelsToRem(2)}rem`,
-        height: `${pixelsToRem(2)}rem`,
-        borderRadius: '50%',
-        backgroundColor: isDarkUi ? palette.GREY_3 : palette.GREY_6,
-        marginInline: `${spacings.HALF}rem`,
-        border: `${pixelsToRem(1)}rem solid transparent`,
       },
     }),
 };
