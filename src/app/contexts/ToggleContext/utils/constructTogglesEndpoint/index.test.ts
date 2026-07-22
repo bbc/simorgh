@@ -1,17 +1,14 @@
 import getTogglesEndpoint from './index';
 
-const originalEnv = process.env;
+const originalTogglesBffPath = process.env.TOGGLES_BFF_PATH;
 
 beforeEach(() => {
-  process.env = {
-    ...originalEnv,
-    TOGGLES_BFF_PATH: 'https://some-url.co.uk/toggles',
-  };
+  process.env.TOGGLES_BFF_PATH = 'https://some-url.co.uk/toggles';
 });
 
 afterEach(() => {
   jest.resetAllMocks();
-  process.env = originalEnv;
+  process.env.TOGGLES_BFF_PATH = originalTogglesBffPath;
 });
 
 describe('Toggles endpoint constructor', () => {

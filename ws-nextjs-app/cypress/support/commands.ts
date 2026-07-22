@@ -50,10 +50,7 @@ const getToggles = memoizeWith(keyGenFn, service => {
     cy.writeFile(togglesFixture, defaultToggles.local);
   } else {
     cy.request({
-      url: `${environmentConfig.togglesUrl}?application=simorgh&service=${service}&__amp_source_origin=${environmentConfig.baseUrl}`,
-      headers: {
-        Origin: 'https://www.bbc.com',
-      },
+      url: `${environmentConfig.togglesUrl}?service=${service}&application=simorgh`,
     }).then(response => {
       cy.writeFile(togglesFixture, response.body.toggles);
     });

@@ -109,7 +109,7 @@ describe('getToggles', () => {
       });
 
       const { default: getToggles } = await import('.');
-      const toggles = await getToggles('mundo');
+      const toggles = await getToggles({ service: 'mundo' });
 
       expect(toggles).toEqual(mockDefaultToggles.local);
     });
