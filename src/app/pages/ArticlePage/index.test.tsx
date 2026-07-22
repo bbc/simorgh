@@ -20,7 +20,6 @@ import {
   articlePglDataPidgin,
   articleStyDataPidgin,
 } from '#pages/ArticlePage/fixtureData';
-import * as isLive from '#lib/utilities/isLive';
 import { data as newsMostReadData } from '#data/news/mostRead/index.json';
 import { portraitVideoFixture } from '#app/components/PortraitVideoCarousel/fixture';
 import { textBlock, singleTextBlock } from '#models/blocks/index';
