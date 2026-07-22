@@ -48,6 +48,10 @@ export const service: DefaultServiceConfig = {
       home: 'Home',
       currentPage: 'Current page',
       skipLinkText: 'Skip to content',
+      skipContent: {
+        text: 'Skip %title% and continue',
+        endTextVisuallyHidden: 'End of %title%',
+      },
       relatedContent: 'Related content',
       relatedTopics: 'Related topics',
       moreOnThis: '',
@@ -72,6 +76,7 @@ export const service: DefaultServiceConfig = {
       gist: 'At a glance',
       account: {
         signIn: 'Sign In',
+        signInAccessibleLabel: 'Sign in to My News',
         forYou: 'Your Account',
         register: 'Register',
         settings: 'Settings',

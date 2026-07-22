@@ -590,8 +590,15 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
     overflow-x: scroll;
     scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
+    scroll-padding-inline-end: 3rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-39 {
+      scroll-padding-inline-end: 6rem;
+    }
   }
 
   .emotion-39::-webkit-scrollbar {
@@ -1927,8 +1934,15 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
     overflow-x: scroll;
     scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
+    scroll-padding-inline-end: 3rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-39 {
+      scroll-padding-inline-end: 6rem;
+    }
   }
 
   .emotion-39::-webkit-scrollbar {
@@ -3264,8 +3278,15 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
     overflow-x: scroll;
     scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
+    scroll-padding-inline-end: 3rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-39 {
+      scroll-padding-inline-end: 6rem;
+    }
   }
 
   .emotion-39::-webkit-scrollbar {
@@ -4601,8 +4622,15 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
     overflow-x: scroll;
     scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
+    scroll-padding-inline-end: 3rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-39 {
+      scroll-padding-inline-end: 6rem;
+    }
   }
 
   .emotion-39::-webkit-scrollbar {

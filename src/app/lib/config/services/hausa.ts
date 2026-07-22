@@ -83,12 +83,16 @@ export const service: DefaultServiceConfig = {
       home: 'Labaran Duniya',
       continueReading: 'Ci gaba da karantawa',
       topicDiscovery: {
-        heading: 'Gano ƙari',
+        heading: 'Karanta karin labarai',
         moreAboutTopic: 'Ƙari game da {topic}',
         fetchErrorMessage: 'An kasa lodawa. Da fatan a sake gwadawa',
       },
       currentPage: 'Shafin da ake ciki',
       skipLinkText: 'Tsallaka zuwa abubuwan da ke ciki',
+      skipContent: {
+        text: 'Tsallake %title% ka ci gaba',
+        endTextVisuallyHidden: 'Karshen %title%',
+      },
       relatedContent: 'Karin bayani',
       relatedTopics: 'Labarai masu alaka',
       moreOnThis: '',
