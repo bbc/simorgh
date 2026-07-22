@@ -1,12 +1,33 @@
-import isOperaProxy from '#app/lib/utilities/isOperaProxy';
+// import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 
-export default (atiPageViewUrlString: string) => `
-    if (${isOperaProxy.toString()}() && !Boolean(window.hasOperaMiniScriptRan)) {
-      window.hasOperaMiniScriptRan = true;
+// export default (atiPageViewUrlString: string) => `
+//     if (${isOperaProxy.toString()}() && !Boolean(window.hasOperaMiniScriptRan)) {
+//       window.hasOperaMiniScriptRan = true;
 
-      var atiPageViewUrl = "${atiPageViewUrlString}";
-      atiPageViewUrl += document.referrer ? "&ref=" + document.referrer : '';
+//       var atiPageViewUrl = "${atiPageViewUrlString}";
+//       atiPageViewUrl += document.referrer ? "&ref=" + document.referrer : '';
 
-      window.sendStaticBeacon(atiPageViewUrl);
-    }
-`;
+//       window.sendStaticBeacon(atiPageViewUrl);
+//     }
+// `;
+
+type OperaMiniWindow = Window & {
+  hasOperaMiniScriptRan?: boolean;
+};
+
+export default function sendPageViewBeaconOperaMini(
+  atiPageViewUrlString: string,
+  isOperaProxyFn: () => boolean,
+) {
+  const operaMiniWindow = window as OperaMiniWindow;
+
+  if (isOperaProxyFn() && !operaMiniWindow.hasOperaMiniScriptRan) {
+    operaMiniWindow.hasOperaMiniScriptRan = true;
+
+    const atiPageViewUrl = `${atiPageViewUrlString}${
+      document.referrer ? `&ref=${document.referrer}` : ''
+    }`;
+
+    window.sendStaticBeacon(atiPageViewUrl);
+  }
+}
