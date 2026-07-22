@@ -26,7 +26,6 @@ import CanonicalToLiteRedirect from '#utilities/CanonicalToLiteRedirect';
 import addOperaMiniClassScript from '#app/lib/utilities/addOperaMiniClassScript';
 import handleServerLogging from '#utilities/handleServerLogging';
 import getAmpLiteCss from '#utilities/getAmpLiteCss';
-import pruneUnusedCssCustomProperties from '#utilities/getAmpLiteCss/pruneUnusedCssCustomProperties';
 import nodeLogger from '#lib/logger.node';
 import logCodes from '#app/lib/logger.const';
 import { writeFileSync } from 'fs';
@@ -218,7 +217,7 @@ export default class AppDocument extends Document<DocProps> {
     switch (true) {
       case isAmp && pageType === 'article': {
         const ampLiteCss = getAmpLiteCss(getNextData());
-        const combinedCss = pruneUnusedCssCustomProperties(css + ampLiteCss);
+        const combinedCss = css + ampLiteCss;
         const ampCss = optimiseAmpCss(combinedCss);
         logCssSizeMetric({
           variant: 'amp',
@@ -242,7 +241,7 @@ export default class AppDocument extends Document<DocProps> {
       }
       case isLite: {
         const ampLiteCss = getAmpLiteCss(getNextData());
-        const liteCss = pruneUnusedCssCustomProperties(css + ampLiteCss);
+        const liteCss = css + ampLiteCss;
         logCssSizeMetric({
           variant: 'lite',
           emotionCss: css,
