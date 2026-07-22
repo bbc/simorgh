@@ -100,11 +100,11 @@ export default async (context: GetServerSidePropsContext) => {
 
   const externalLinks = isPodcast
     ? await getPodcastExternalLinks({
-      service,
-      variant: variant || undefined,
-      brandId,
-      versionId: externalLinkVersionId,
-    })
+        service,
+        variant: variant || undefined,
+        brandId,
+        versionId: externalLinkVersionId,
+      })
     : [];
 
   context.res.setHeader(
