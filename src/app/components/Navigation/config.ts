@@ -10,6 +10,7 @@ const SERVICES_WITH_NEW_NAV: Services[] = [
   'burmese',
   'dari',
   'gahuza',
+  'hindi',
   'gujarati',
   'hausa',
   'igbo',
