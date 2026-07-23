@@ -9,8 +9,8 @@ import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 
 const addCustomAppNameForLiteAndOperaMini = url =>
   url.replace(
-    /app_name=\[(.*)\]&language/,
-    'app_name=[$1-inline-js-test]&language',
+    /app_name=(.*)&language/,
+    'app_name=[$1-inline-js-test-events]&language',
   );
 
 export default ({
@@ -34,13 +34,18 @@ export default ({
   };
   const env = getEnvConfig().SIMORGH_APP_ENV;
 
-  const staticATITrackingURL = addCustomAppNameForLiteAndOperaMini(
+  const staticATITrackingURL =
     reverbUrlHelper.getLiteComponentViewClickTrackingUrl({
       ...reverbParams,
       additionalParams,
       env,
-    }),
-  );
+    });
 
-  return staticATITrackingURL;
+  console.log('&&&&&&&&&&&&&&&&&&&&&');
+  console.log('I GET HERE');
+  console.log('+++++++++++++++++++++');
+  console.log('staticATITrackingURL - ', staticATITrackingURL);
+  console.log('&&&&&&&&&&&&&&&&&&&&&');
+
+  return addCustomAppNameForLiteAndOperaMini(staticATITrackingURL);
 };
