@@ -41,11 +41,5 @@ export default ({
       env,
     });
 
-  console.log('&&&&&&&&&&&&&&&&&&&&&');
-  console.log('I GET HERE');
-  console.log('+++++++++++++++++++++');
-  console.log('staticATITrackingURL - ', staticATITrackingURL);
-  console.log('&&&&&&&&&&&&&&&&&&&&&');
-
   return addCustomAppNameForLiteAndOperaMini(staticATITrackingURL);
 };
