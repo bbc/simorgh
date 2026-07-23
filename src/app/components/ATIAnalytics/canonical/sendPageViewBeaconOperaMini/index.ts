@@ -21,19 +21,17 @@ const sendPageViewBeaconOperaMini = function (
   isOperaProxyFn: () => boolean,
 ) {
   // eslint-disable-next-line func-names
-  window.addEventListener('load', function () {
-    const operaMiniWindow = window as OperaMiniWindow;
+  const operaMiniWindow = window as OperaMiniWindow;
 
-    if (isOperaProxyFn() && !operaMiniWindow.hasOperaMiniScriptRan) {
-      operaMiniWindow.hasOperaMiniScriptRan = true;
+  if (isOperaProxyFn() && !operaMiniWindow.hasOperaMiniScriptRan) {
+    operaMiniWindow.hasOperaMiniScriptRan = true;
 
-      const atiPageViewUrl = `${atiPageViewUrlString}${
-        document.referrer ? `&ref=${document.referrer}` : ''
-      }`;
+    const atiPageViewUrl = `${atiPageViewUrlString}${
+      document.referrer ? `&ref=${document.referrer}` : ''
+    }`;
 
-      window.sendStaticBeacon(atiPageViewUrl);
-    }
-  });
+    window.sendStaticBeacon(atiPageViewUrl);
+  }
 };
 
 export default sendPageViewBeaconOperaMini;
