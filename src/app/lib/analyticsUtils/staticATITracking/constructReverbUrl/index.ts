@@ -7,6 +7,12 @@ import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingP
 import { EventTrackingProps } from '#app/lib/analyticsUtils/types';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 
+const addCustomAppNameForLiteAndOperaMini = url =>
+  url.replace(
+    /app_name=\[(.*)\]&language/,
+    'app_name=[$1-inline-js-test]&language',
+  );
+
 export default ({
   eventTrackingData,
   eventType,
@@ -28,12 +34,13 @@ export default ({
   };
   const env = getEnvConfig().SIMORGH_APP_ENV;
 
-  const staticATITrackingURL =
+  const staticATITrackingURL = addCustomAppNameForLiteAndOperaMini(
     reverbUrlHelper.getLiteComponentViewClickTrackingUrl({
       ...reverbParams,
       additionalParams,
       env,
-    });
+    }),
+  );
 
   return staticATITrackingURL;
 };
