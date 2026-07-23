@@ -38,6 +38,12 @@ interface BillboardProps {
 const IMAGE_WIDTH = 660;
 const DEFAULT_IMAGE_RES = 480;
 
+// 2x retina ceiling for the fixed 660px desktop display slot, with extra rungs
+// between 800 and the retina ceiling to avoid large overshoot/waste for
+// devices that don't need the full retina resolution.
+const IMAGE_WIDTH_RETINA = IMAGE_WIDTH * 2;
+const IMAGE_RESOLUTIONS = [240, 320, 480, 624, 800, 1000, IMAGE_WIDTH_RETINA];
+
 export default ({
   heading,
   description,
@@ -83,28 +89,58 @@ export default ({
     const url = image.split('{width}')[1];
     const originCode = getOriginCode(url);
     const locator = getLocator(url);
-    const { primarySrcset, primaryMimeType, fallbackSrcset, fallbackMimeType } =
-      createSrcsets({
-        originCode,
-        locator,
-        originalImageWidth: IMAGE_WIDTH,
-      });
+    const desktopSrcsets = createSrcsets({
+      originCode,
+      locator,
+      originalImageWidth: IMAGE_WIDTH_RETINA,
+      imageResolutions: IMAGE_RESOLUTIONS,
+    });
+    const compactSrcsets = createSrcsets({
+      originCode,
+      locator,
+      originalImageWidth: 800,
+    });
     const srcWebp = buildIChefURL({
       originCode,
       locator,
       resolution: DEFAULT_IMAGE_RES,
     });
 
+    // Breakpoint-scoped art direction: each <source>'s `media` condition is
+    // evaluated by the browser before it considers device pixel ratio, so a
+    // mobile/tablet viewport can never reach the desktop-only retina (1320w)
+    // candidate, regardless of its DPR.
+    const breakpointSources = [
+      {
+        media: '(min-width: 1280px)',
+        srcSet: desktopSrcsets.primarySrcset || '',
+        fallbackSrcSet: desktopSrcsets.fallbackSrcset || '',
+        sizes: '660px',
+      },
+      {
+        media: '(min-width: 1008px)',
+        srcSet: compactSrcsets.primarySrcset || '',
+        fallbackSrcSet: compactSrcsets.fallbackSrcset || '',
+        sizes: '50vw',
+      },
+      {
+        srcSet: compactSrcsets.primarySrcset || '',
+        fallbackSrcSet: compactSrcsets.fallbackSrcset || '',
+        sizes: '100vw',
+      },
+    ];
+
     return (
       <div css={styles.imageContainer}>
         <Image
           alt={altText}
           src={srcWebp}
-          srcSet={primarySrcset || undefined}
-          fallbackSrcSet={fallbackSrcset || undefined}
-          mediaType={primaryMimeType || undefined}
-          fallbackMediaType={fallbackMimeType || undefined}
+          srcSet={compactSrcsets.primarySrcset || undefined}
+          fallbackSrcSet={compactSrcsets.fallbackSrcset || undefined}
+          mediaType={compactSrcsets.primaryMimeType || undefined}
+          fallbackMediaType={compactSrcsets.fallbackMimeType || undefined}
           sizes="(min-width: 1280px) 660px, (min-width: 1008px) 50vw, 100vw"
+          breakpointSources={breakpointSources}
           width={800}
           height={533}
           placeholder={false}

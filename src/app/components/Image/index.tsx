@@ -5,10 +5,20 @@ import styles from './index.styles';
 import { RequestContext } from '../../contexts/RequestContext';
 import { HOME_PAGE } from '../../routes/utils/pageTypes';
 
+export type BreakpointSource = {
+  // CSS media condition gating this source, e.g. '(min-width: 1280px)'.
+  // Omit only for the final, catch-all entry (must be listed last).
+  media?: string;
+  srcSet: string;
+  fallbackSrcSet: string;
+  sizes: string;
+};
+
 export type ImageProps = {
   alt: string;
   aspectRatio?: [x: number, y: number];
   attribution?: string;
+  breakpointSources?: BreakpointSource[];
   className?: string;
   fallbackMediaType?: string;
   fallbackSrcSet?: string;
@@ -38,6 +48,7 @@ const Image = ({
   alt,
   aspectRatio,
   attribution,
+  breakpointSources,
   className,
   fallbackMediaType,
   fallbackSrcSet,
@@ -71,8 +82,15 @@ const Image = ({
     aspectRatioY as number,
   );
 
-  const hasFallback = srcSet && fallbackSrcSet && pageType === HOME_PAGE;
-  const ImageWrapper = hasFallback ? 'picture' : Fragment;
+  const hasBreakpointSources =
+    Boolean(breakpointSources?.length) && pageType === HOME_PAGE;
+  const hasFallback =
+    !hasBreakpointSources &&
+    !!srcSet &&
+    !!fallbackSrcSet &&
+    pageType === HOME_PAGE;
+  const ImageWrapper =
+    hasBreakpointSources || hasFallback ? 'picture' : Fragment;
   const ampImgLayout = hasDimensions ? 'responsive' : 'fill';
   const getImgSrcSet = () => {
     if (!hasFallback) return srcSet;
@@ -93,14 +111,31 @@ const Image = ({
     <>
       {preload && (
         <Helmet>
-          <link
-            rel="preload"
-            as="image"
-            href={src}
-            imageSrcSet={srcSet}
-            imageSizes={sizes}
-            {...(fetchPriority && { fetchPriority })}
-          />
+          {hasBreakpointSources ? (
+            breakpointSources!.map(
+              ({ media, srcSet: breakpointSrcSet, sizes: breakpointSizes }) => (
+                <link
+                  key={media ?? 'default'}
+                  rel="preload"
+                  as="image"
+                  href={src}
+                  media={media}
+                  imageSrcSet={breakpointSrcSet}
+                  imageSizes={breakpointSizes}
+                  {...(fetchPriority && { fetchPriority })}
+                />
+              ),
+            )
+          ) : (
+            <link
+              rel="preload"
+              as="image"
+              href={src}
+              imageSrcSet={srcSet}
+              imageSizes={sizes}
+              {...(fetchPriority && { fetchPriority })}
+            />
+          )}
         </Helmet>
       )}
       <div
@@ -155,7 +190,31 @@ const Image = ({
             </>
           ) : (
             <ImageWrapper>
-              {hasFallback && pageType === HOME_PAGE && (
+              {hasBreakpointSources &&
+                breakpointSources!.map(
+                  ({
+                    media,
+                    srcSet: breakpointSrcSet,
+                    fallbackSrcSet: breakpointFallbackSrcSet,
+                    sizes: breakpointSizes,
+                  }) => (
+                    <Fragment key={media ?? 'default'}>
+                      <source
+                        media={media}
+                        srcSet={breakpointSrcSet}
+                        type={mediaType}
+                        sizes={breakpointSizes}
+                      />
+                      <source
+                        media={media}
+                        srcSet={breakpointFallbackSrcSet}
+                        type={fallbackMediaType}
+                        sizes={breakpointSizes}
+                      />
+                    </Fragment>
+                  ),
+                )}
+              {hasFallback && (
                 <>
                   <source srcSet={srcSet} type={mediaType} sizes={sizes} />
                   <source

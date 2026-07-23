@@ -293,6 +293,49 @@ describe('Billboard', () => {
       maskedImageSpy.mockRestore();
     });
 
+    it('caps the srcset at 800w on non-home page types (safe default fallback)', () => {
+      render(
+        <Billboard
+          heading={title}
+          description={description}
+          link={link}
+          image={imageUrl}
+          altText={imageAlt}
+          prominence={VISUAL_PROMINENCE.HIGH}
+        />,
+      );
+
+      const srcset = screen.getByAltText(imageAlt).getAttribute('srcset');
+      expect(srcset).toContain('800w');
+      expect(srcset).not.toContain('1320w');
+    });
+
+    it('only exposes the 1320w retina resolution behind a desktop-width media condition', () => {
+      const { container } = render(
+        <Billboard
+          heading={title}
+          description={description}
+          link={link}
+          image={imageUrl}
+          altText={imageAlt}
+          prominence={VISUAL_PROMINENCE.HIGH}
+        />,
+        { pageType: 'home' },
+      );
+
+      const sources = Array.from(container.querySelectorAll('source'));
+      const desktopSource = sources.find(source =>
+        source.getAttribute('media')?.includes('1280px'),
+      );
+      const mobileSource = sources.find(
+        source => !source.getAttribute('media'),
+      );
+
+      expect(desktopSource?.getAttribute('srcset')).toContain('1320w');
+      expect(mobileSource?.getAttribute('srcset')).not.toContain('1320w');
+      expect(mobileSource?.getAttribute('srcset')).toContain('800w');
+    });
+
     it('renders the curation grid when promo items are present', () => {
       const maskedImageSpy = jest.spyOn(MaskedImage, 'default');
 
