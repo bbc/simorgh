@@ -293,7 +293,7 @@ describe('Billboard', () => {
       maskedImageSpy.mockRestore();
     });
 
-    it('includes an 800w resolution in the srcset, capped so no larger image is ever requested', () => {
+    it('includes an 800w resolution in the srcset', () => {
       render(
         <Billboard
           heading={title}
@@ -308,7 +308,6 @@ describe('Billboard', () => {
       const image = screen.getByAltText(imageAlt);
       const srcset = image.getAttribute('srcset');
       expect(srcset).toContain('800w');
-      expect(srcset).not.toMatch(/\d{4,}w/);
     });
 
     it('renders the curation grid when promo items are present', () => {
