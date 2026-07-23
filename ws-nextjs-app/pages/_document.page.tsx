@@ -28,7 +28,6 @@ import handleServerLogging from '#utilities/handleServerLogging';
 import getAmpLiteCss from '#utilities/getAmpLiteCss';
 import nodeLogger from '#lib/logger.node';
 import logCodes from '#app/lib/logger.const';
-import { writeFileSync } from 'fs';
 import postcss from 'postcss';
 import autoprefixer from 'autoprefixer';
 import { browserslist as targetBrowsers } from '../package.json';
@@ -76,49 +75,6 @@ const optimiseCssPrefixes = (css: string): string => {
     return css;
   }
 };
-
-const toKb = (value: string): number =>
-  Math.round((Buffer.byteLength(value, 'utf8') / 1024) * 100) / 100;
-
-// Temporary diagnostic: logs the byte size (KB) of each CSS source at the point
-// they are combined, so we can assess how much the Emotion critical CSS vs the
-// CSS Modules AMP/Lite output each contribute to the total inlined payload.
-const logCssSizeMetric = ({
-  variant,
-  emotionCss,
-  ampLiteCss,
-  combinedCss,
-  optimisedCss,
-}: {
-  variant: 'amp' | 'lite';
-  emotionCss: string;
-  ampLiteCss: string;
-  combinedCss: string;
-  optimisedCss?: string;
-}): void => {
-  logger.info(logCodes.AMP_LITE_CSS_SIZE_METRIC, {
-    variant,
-    emotionCssKb: toKb(emotionCss),
-    ampLiteCssKb: toKb(ampLiteCss),
-    combinedCssKb: toKb(combinedCss),
-    ...(optimisedCss !== undefined && {
-      optimisedCssKb: toKb(optimisedCss),
-    }),
-  });
-
-  // Temporary diagnostic dump: writes the raw CSS sources to disk so they can be
-  // inspected directly for minification and duplication. Never runs unless
-  // DEBUG_DUMP_AMP_CSS=1 is explicitly set, so this has no effect in normal use.
-  if (process.env.DEBUG_DUMP_AMP_CSS === '1') {
-    writeFileSync(`/tmp/${variant}-emotion-css.css`, emotionCss);
-    writeFileSync(`/tmp/${variant}-amp-lite-css.css`, ampLiteCss);
-    writeFileSync(`/tmp/${variant}-combined-css.css`, combinedCss);
-    if (optimisedCss !== undefined) {
-      writeFileSync(`/tmp/${variant}-optimised-css.css`, optimisedCss);
-    }
-  }
-};
-
 
 export default class AppDocument extends Document<DocProps> {
   static async getInitialProps(ctx: DocumentContext) {
@@ -204,12 +160,6 @@ export default class AppDocument extends Document<DocProps> {
       case isAmp && pageType === 'article': {
         const ampLiteCss = getAmpLiteCss(getNextData());
         const combinedCss = optimiseCssPrefixes(css + ampLiteCss);
-        logCssSizeMetric({
-          variant: 'amp',
-          emotionCss: css,
-          ampLiteCss,
-          combinedCss,
-        });
         return (
           <AmpRenderer
             bodyContent={<Main />}
@@ -226,12 +176,6 @@ export default class AppDocument extends Document<DocProps> {
       case isLite: {
         const ampLiteCss = getAmpLiteCss(getNextData());
         const liteCss = optimiseCssPrefixes(css + ampLiteCss);
-        logCssSizeMetric({
-          variant: 'lite',
-          emotionCss: css,
-          ampLiteCss,
-          combinedCss: liteCss,
-        });
         return (
           <LiteRenderer
             bodyContent={<Main />}
