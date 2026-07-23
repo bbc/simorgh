@@ -94,21 +94,37 @@ const styles = {
       flexDirection: 'row',
       flexWrap: 'wrap',
       alignItems: 'baseline',
-      rowGap: `${spacings.HALF}rem`,
+      columnGap: `${spacings.FULL + spacings.HALF}rem`,
+      rowGap: `${spacings.FULL}rem`,
+      overflow: 'hidden',
       marginBottom: `${spacings.FULL}rem`,
       minWidth: 0,
+      '&:focus-within': {
+        overflow: 'visible',
+        '.promo-timestamp::before': {
+          display: 'none',
+        },
+      },
       '.promo-timestamp': {
+        position: 'relative',
         flexShrink: 0,
+        whiteSpace: 'nowrap',
+        '&::before': {
+          content: '""',
+          position: 'absolute',
+          insetInlineStart: `-${spacings.FULL}rem`,
+          top: '50%',
+          transform: 'translateY(-50%)',
+          width: `${pixelsToRem(2)}rem`,
+          height: `${pixelsToRem(2)}rem`,
+          borderRadius: '50%',
+          backgroundColor: 'currentColor',
+          border: `${pixelsToRem(1)}rem solid transparent`,
+        },
       },
     }),
 
-  relatedTopicLink: ({
-    fontSizes,
-    fontVariants,
-    isDarkUi,
-    palette,
-    spacings,
-  }: Theme) =>
+  relatedTopicLink: ({ fontSizes, fontVariants, isDarkUi, palette }: Theme) =>
     css({
       ...fontSizes.brevier,
       ...fontVariants.sansRegular,
@@ -125,17 +141,6 @@ const styles = {
       zIndex: 1,
       '&:hover, &:focus': {
         textDecoration: 'underline',
-      },
-      '&::after': {
-        content: '""',
-        display: 'inline-block',
-        verticalAlign: 'middle',
-        width: `${pixelsToRem(2)}rem`,
-        height: `${pixelsToRem(2)}rem`,
-        borderRadius: '50%',
-        backgroundColor: isDarkUi ? palette.GREY_3 : palette.GREY_6,
-        marginInline: `${spacings.HALF}rem`,
-        border: `${pixelsToRem(1)}rem solid transparent`,
       },
     }),
 };
