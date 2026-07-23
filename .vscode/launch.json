@@ -11,12 +11,6 @@
       "command": "cd ws-nextjs-app && nvm use && yarn dev"
     },
     {
-      "name": "Profile Next.js: production standalone",
-      "type": "node-terminal",
-      "request": "launch",
-      "command": "cd ws-nextjs-app && nvm use && PROFILE_SERVER=1 yarn build && NODE_ENV=production HOSTNAME=127.0.0.1 PORT=7081 node build/standalone/ws-nextjs-app/server.js"
-    },
-    {
       "name": "Storybook debug",
       "type": "node-terminal",
       "request": "launch",

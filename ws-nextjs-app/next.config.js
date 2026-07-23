@@ -151,17 +151,6 @@ module.exports = {
       );
     }
 
-    // Opt-in only: disable server bundle minification and emit source maps so
-    // CPU profiles taken against a production build (e.g. via VS Code's
-    // "Take Performance Profile" or `node --cpu-prof`) show real function names
-    // and file locations instead of minified single-letter identifiers.
-    // Never enabled unless PROFILE_SERVER=1 is explicitly set, so normal
-    // production builds are completely unaffected.
-    if (isServer && !dev && process.env.PROFILE_SERVER === '1') {
-      config.optimization.minimize = false;
-      config.devtool = 'source-map';
-    }
-
     return config;
   },
 };
