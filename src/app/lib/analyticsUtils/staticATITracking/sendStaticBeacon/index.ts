@@ -10,6 +10,6 @@ export const addSendStaticBeaconToWindow = function () {
   };
 };
 
-export default (atiUrlString: string) => `
-    window.sendStaticBeacon("${atiUrlString}");
-`;
+export default (atiUrlString: string) => {
+  window.sendStaticBeacon(atiUrlString);
+};
