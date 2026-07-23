@@ -44,16 +44,16 @@
   },
   "browserslist": [
     "chrome >= 53",
-    "firefox >= 45.0",
+    "firefox >= 52",
     "edge >= 100",
-    "safari >= 10",
+    "safari >= 12.1",
     "opera >= 40",
     "op_mob >= 80",
     "op_mini all",
     "Android >= 7",
     "and_chr >= 53",
-    "and_ff >= 49",
-    "ios_saf >= 10"
+    "and_ff >= 52",
+    "ios_saf >= 12.2"
   ],
   "browserslist": [
     "chrome >= 53",
