@@ -8,7 +8,13 @@ import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import styles from './index.styles';
 
-const AccountHeader = () => {
+export type AccountHeaderVariant = 'legacy' | 'default';
+
+type AccountHeaderProps = {
+  variant?: AccountHeaderVariant;
+};
+
+const AccountHeader = ({ variant = 'legacy' }: AccountHeaderProps) => {
   const isHydrated = useHydrationDetection();
   const { isSignedIn, signInUrl, settingsUrl, isIdctaAvailable } =
     use(AccountContext);
@@ -35,17 +41,25 @@ const AccountHeader = () => {
 
   if (!href || !label) return null;
 
+  const isDefaultVariant = variant === 'default';
+
   return (
-    <div css={styles.wrapper} {...viewTracker}>
+    <div
+      css={isDefaultVariant ? styles.wrapperDefault : styles.wrapper}
+      {...viewTracker}
+    >
       <Text
         as="a"
-        css={styles.link}
+        css={isDefaultVariant ? styles.linkDefault : styles.link}
         href={href}
         fontVariant="sansBold"
         onClick={onClickTrack}
+        {...(isDefaultVariant && { 'aria-label': label })}
       >
-        <AccountIconRounded css={styles.icon} />
-        {label}
+        <AccountIconRounded
+          css={isDefaultVariant ? styles.iconDefault : styles.icon}
+        />
+        <span>{label}</span>
       </Text>
     </div>
   );
