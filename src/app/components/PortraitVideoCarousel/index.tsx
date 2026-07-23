@@ -41,13 +41,13 @@ const PortraitVideoCarousel = ({
   );
 
   const { isLite, isAmp, nonce } = use(RequestContext);
-  const { translations, recommendations } = use(ServiceContext);
+  const { translations } = use(ServiceContext);
 
-  const { skipLink: skipLinkTranslations } = recommendations || {};
+  const { skipContent } = translations || {};
   const {
-    text: skipLinkText = 'Skip %title% and continue reading',
+    text: skipLinkText = 'Skip %title% and continue',
     endTextVisuallyHidden = 'End of %title%',
-  } = skipLinkTranslations || {};
+  } = skipContent || {};
 
   const fallbackTitle = translations?.media?.video || 'Video';
 

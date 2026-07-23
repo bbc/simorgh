@@ -5,6 +5,7 @@ import moment from 'moment';
 import path from 'ramda/src/path';
 import isMediaType from '#app/lib/utilities/isMedia';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import isLiveEnvironment from '#lib/utilities/isLive';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import formatDuration from '../../../lib/utilities/formatDuration';
 import Promo from '../../../legacy/components/Promo';
@@ -39,7 +40,7 @@ const HiearchicalGrid = ({
   isFirstCuration,
   eventTrackingData,
 }: CurationGridProps) => {
-  const { isAmp } = use(RequestContext);
+  const { isAmp, isLite } = use(RequestContext);
   const { translations } = use(ServiceContext);
   const audioTranslation = path(['media', 'audio'], translations);
   const videoTranslation = path(['media', 'video'], translations);
@@ -88,14 +89,30 @@ const HiearchicalGrid = ({
             (promo.type === 'audio' && `${audioTranslation}, `) ||
             (promo.type === 'video' && `${videoTranslation}, `) ||
             (promo.type === 'photogallery' && `${photoGalleryTranslation}, `);
-          const { isLive } = promo;
+          const { isLive, relatedTopic } = promo;
 
           const promoEventTrackingData = buildPromoEventTrackingData(promo, i);
           const clickTrackerHandler = getClickTrackerHandler(
             promoEventTrackingData,
           );
+
+          const relatedTopicEventTrackingData = {
+            ...promoEventTrackingData,
+            itemTracker: {
+              ...promoEventTrackingData.itemTracker,
+              type: 'hierarchical-curation-grid-topic',
+              text: relatedTopic?.title,
+            },
+          };
+
+          const relatedTopicClickTrackerHandler = getClickTrackerHandler(
+            relatedTopicEventTrackingData,
+          );
+
           const inSituMediaBlocks =
-            !isAmp && promo.inSituMedia?.length ? promo.inSituMedia : null;
+            !isAmp && !isLite && promo.inSituMedia?.length
+              ? promo.inSituMedia
+              : null;
           const linkCss = inSituMediaBlocks ? styles.headlineLink : undefined;
           const promoText = (
             <>
@@ -156,9 +173,20 @@ const HiearchicalGrid = ({
                 {promo.description}
               </Promo.Body>
               {!isLive ? (
-                <Promo.Timestamp className="promo-timestamp">
-                  {promo.lastPublished}
-                </Promo.Timestamp>
+                <div css={styles.metadataAndTopicData}>
+                  {relatedTopic && !isLiveEnvironment() && (
+                    <a
+                      href={relatedTopic.link.url}
+                      css={styles.relatedTopicLink}
+                      {...relatedTopicClickTrackerHandler}
+                    >
+                      {relatedTopic.title}
+                    </a>
+                  )}
+                  <Promo.Timestamp className="promo-timestamp">
+                    {promo.lastPublished}
+                  </Promo.Timestamp>
+                </div>
               ) : null}
             </>
           );

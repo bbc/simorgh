@@ -1,7 +1,8 @@
-import { render } from '../../react-testing-library-with-providers';
-import useClickTrackerHandler from '../../../hooks/useClickTrackerHandler';
+import * as clickTracking from '#app/hooks/useClickTrackerHandler';
+import * as isLiveEnv from '#lib/utilities/isLive';
 import MediaLoader from '../../MediaLoader';
 import { aresMediaBlocks } from '../../MediaLoader/fixture';
+import { fireEvent, render } from '../../react-testing-library-with-providers';
 import { pidginPromos as fixture } from './fixtures';
 import mediaFixture from './mediaFixtures';
 import liveFixtures from './liveFixtures';
@@ -261,7 +262,7 @@ describe('Hierarchical Grid Curation', () => {
       />,
     );
 
-    expect(useClickTrackerHandler).toHaveBeenCalledWith(
+    expect(clickTracking.default).toHaveBeenCalledWith(
       expect.objectContaining({
         componentName: 'test-component',
         itemTracker: expect.objectContaining({
@@ -295,5 +296,188 @@ describe('Hierarchical Grid Curation', () => {
       container.querySelector('[data-testid="in-situ-media-loader"]'),
     ).not.toBeInTheDocument();
     expect(MediaLoader).not.toHaveBeenCalled();
+  });
+
+  it('falls back to the normal promo on Lite', () => {
+    const { summaries } = getSummariesWithInSituMedia();
+
+    const { container } = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={summaries}
+        eventTrackingData={minimalEventTrackingData}
+      />,
+      { isLite: true },
+    );
+
+    const firstPromo = container.querySelector('li');
+
+    expect(firstPromo?.querySelector('.promo-image')).toBeInTheDocument();
+    expect(MediaLoader).not.toHaveBeenCalled();
+  });
+
+  it('falls back to the normal promo image when inSituMedia is empty', () => {
+    const { summaries } = getSummariesWithInSituMedia();
+    const summariesWithoutMediaBlocks = [
+      { ...summaries[0], inSituMedia: [] },
+      ...summaries.slice(1),
+    ];
+
+    const { container } = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={summariesWithoutMediaBlocks}
+        eventTrackingData={minimalEventTrackingData}
+      />,
+    );
+
+    const firstPromo = container.querySelector('li');
+
+    expect(firstPromo?.querySelector('.promo-image')).toBeInTheDocument();
+    expect(MediaLoader).not.toHaveBeenCalled();
+  });
+
+  it('preserves a related topic when in-situ media is rendered', () => {
+    const { summaries } = getSummariesWithInSituMedia();
+    const relatedTopic = {
+      link: {
+        url: 'https://www.bbc.com/pidgin/topics/c2dwqd1zr92t',
+      },
+      title: 'Nigeria',
+    };
+    const summariesWithRelatedTopic = [
+      { ...summaries[0], relatedTopic },
+      ...summaries.slice(1),
+    ];
+
+    const { getByText } = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={summariesWithRelatedTopic}
+        eventTrackingData={minimalEventTrackingData}
+      />,
+      {
+        service: 'pidgin',
+      },
+    );
+
+    expect(getByText('Nigeria').closest('a')).toHaveAttribute(
+      'href',
+      relatedTopic.link.url,
+    );
+  });
+
+  it('should render related topic link when relatedTopic exists on a Promo', () => {
+    const container = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={fixture}
+        eventTrackingData={minimalEventTrackingData}
+      />,
+      {
+        service: 'pidgin',
+      },
+    );
+    expect(container.getByText('Nigeria')).toBeInTheDocument();
+    expect(container.getByText('Nigeria').closest('a')).toHaveAttribute(
+      'href',
+      'https://www.bbc.com/pidgin/topics/c2dwqd1zr92t',
+    );
+  });
+
+  it('when there is no related topic, it should not apply the hasRelatedTopic class', () => {
+    const { getByText } = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={fixture}
+        eventTrackingData={minimalEventTrackingData}
+      />,
+      {
+        service: 'pidgin',
+      },
+    );
+    const promoWithoutRelatedTopicSummary = fixture.find(
+      summary => !summary.relatedTopic,
+    );
+
+    if (!promoWithoutRelatedTopicSummary) {
+      return;
+    }
+
+    const promoWithoutRelatedTopic = getByText(
+      promoWithoutRelatedTopicSummary.title,
+    ).closest('li');
+
+    if (!promoWithoutRelatedTopic) {
+      return;
+    }
+
+    const metadataWithoutRelatedTopic =
+      promoWithoutRelatedTopic.querySelector('.promo-timestamp')?.parentElement;
+
+    expect(metadataWithoutRelatedTopic).not.toHaveClass('hasRelatedTopic');
+  });
+
+  it('should handle a click event when related topic link is clicked', () => {
+    const onClickSpy = jest.fn();
+    const clickTrackerSpy = jest
+      .spyOn(clickTracking, 'default')
+      .mockImplementation(() => ({ onClick: onClickSpy }));
+
+    const { getByText } = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={fixture}
+        eventTrackingData={minimalEventTrackingData}
+      />,
+      {
+        service: 'pidgin',
+      },
+    );
+
+    expect(clickTrackerSpy).toHaveBeenCalledWith(
+      expect.objectContaining({
+        componentName: 'test-component',
+        itemTracker: expect.objectContaining({
+          type: 'hierarchical-curation-grid-topic',
+          text: 'Nigeria',
+        }),
+      }),
+    );
+
+    const topicLink = getByText('Nigeria').closest('a');
+
+    expect(topicLink).toBeInTheDocument();
+
+    if (!topicLink) {
+      return;
+    }
+
+    fireEvent.click(topicLink);
+
+    expect(onClickSpy).toHaveBeenCalled();
+
+    clickTrackerSpy.mockRestore();
+  });
+
+  it('should not render related topic links when environment is live', () => {
+    const isLiveSpy = jest.spyOn(isLiveEnv, 'default').mockReturnValue(true);
+
+    const { queryByText } = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={fixture}
+        eventTrackingData={minimalEventTrackingData}
+      />,
+      {
+        service: 'pidgin',
+      },
+    );
+
+    // The fixture contains promos with related topics (e.g. 'Nigeria')
+    // but in live environment they should not be rendered
+    expect(queryByText('Nigeria')).not.toBeInTheDocument();
+
+    isLiveSpy.mockRestore();
   });
 });

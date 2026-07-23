@@ -5,7 +5,7 @@ import {
 } from '#app/components/react-testing-library-with-providers';
 import { Helmet } from 'react-helmet';
 import useLocation from '#app/hooks/useLocation';
-import { TV_PAGE } from '#app/routes/utils/pageTypes';
+import { TOPIC_PAGE, TV_PAGE } from '#app/routes/utils/pageTypes';
 import MediaPlayer from '.';
 import {
   aresMediaBlocks,
@@ -18,6 +18,12 @@ import * as buildConfig from './utils/buildSettings';
 jest.mock('react', () => ({
   ...jest.requireActual('react'),
   useState: jest.fn(),
+}));
+
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  default: jest.fn(),
 }));
 
 jest.mock('#app/hooks/useLocation');
@@ -216,6 +222,24 @@ describe('MediaLoader', () => {
 
       expect(helmetMetaTags).toEqual([]);
     });
+
+    it('should not render metadata tags when showMetadata is false', async () => {
+      await act(async () => {
+        render(
+          <MediaPlayer
+            blocks={aresMediaBlocks as MediaBlock[]}
+            showMetadata={false}
+          />,
+          {
+            id: 'cn8jgj8rjppo',
+          },
+        );
+      });
+
+      const helmetMetaTags = Helmet.peek().metaTags;
+
+      expect(helmetMetaTags).toEqual([]);
+    });
   });
 
   describe('Config', () => {
@@ -258,11 +282,15 @@ describe('MediaLoader', () => {
           <MediaPlayer blocks={onDemandTvBlocks as MediaBlock[]} embedded />,
           {
             service: 'hindi',
-            atiData: {
-              language: 'hi',
-              pageTitle: 'दुनिया - BBC News हिंदी',
-              pageIdentifier: 'hindi.bbc_hindi_tv.tv_programmes.w13xttlw.page',
-              contentType: 'player-episode',
+            pageMetadata: {
+              atiAnalytics: {
+                language: 'hi',
+                pageTitle: 'दुनिया - BBC News हिंदी',
+                pageIdentifier:
+                  'hindi.bbc_hindi_tv.tv_programmes.w13xttlw.page',
+                contentType: 'player-episode',
+              },
+              type: TV_PAGE,
             },
             pageType: TV_PAGE,
             pathname: '/hindi/bbc_hindi_tv/tv_programmes/w13xttlw',
@@ -274,6 +302,33 @@ describe('MediaLoader', () => {
       expect(buildConfigSpy).toHaveBeenCalledWith(
         expect.objectContaining({
           counterName: 'hindi.bbc_hindi_tv.tv_programmes.w13xttlw.page',
+        }),
+      );
+    });
+
+    it('should use the containing topic page identifier for in-situ media blocks', async () => {
+      const buildConfigSpy = jest.spyOn(buildConfig, 'default');
+
+      await act(async () => {
+        render(<MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} />, {
+          service: 'arabic',
+          pageMetadata: {
+            atiAnalytics: {
+              language: 'ar',
+              pageTitle: 'موضوع - BBC News عربي',
+              pageIdentifier: 'arabic.topics.cz9mm6r1q5et.page',
+              contentType: 'list-datadriven',
+            },
+            type: TOPIC_PAGE,
+          },
+          pageType: TOPIC_PAGE,
+          toggles: { eventTracking: { enabled: true } },
+        });
+      });
+
+      expect(buildConfigSpy).toHaveBeenCalledWith(
+        expect.objectContaining({
+          counterName: 'arabic.topics.cz9mm6r1q5et.page',
         }),
       );
     });

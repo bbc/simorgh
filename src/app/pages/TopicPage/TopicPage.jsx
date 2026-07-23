@@ -26,7 +26,6 @@ const TopicPage = ({ pageData }) => {
     curations,
     pageCount,
     activePage,
-    metadata: { atiAnalytics } = {},
   } = pageData;
 
   const topStoriesTitle = path(['topStoriesTitle'], translations);
@@ -55,7 +54,7 @@ const TopicPage = ({ pageData }) => {
       <AdContainer slotType="leaderboard" />
       <main css={styles.main} role="main">
         <div css={styles.inner}>
-          <ATIAnalytics atiData={atiAnalytics} />
+          <ATIAnalytics />
           <ChartbeatAnalytics title={title} />
           <MetadataContainer
             title={metadataTitle}

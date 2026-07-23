@@ -96,6 +96,38 @@ const styles = {
       marginInlineStart: `-${spacings.HALF}rem`,
       verticalAlign: 'text-top',
     }),
+
+  metadataAndTopicData: ({ fontSizes }: Theme) =>
+    css({
+      ...fontSizes.longPrimer,
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'flex-start',
+      flexWrap: 'wrap',
+      gap: 0,
+    }),
+
+  relatedTopicLink: ({
+    fontSizes,
+    fontVariants,
+    isDarkUi,
+    palette,
+    spacings,
+  }: Theme) =>
+    css({
+      ...fontSizes.brevier,
+      ...fontVariants.sansRegular,
+      color: isDarkUi ? palette.GREY_3 : palette.GREY_6,
+      display: 'inline-flex',
+      alignItems: 'center',
+      marginTop: 0,
+      marginBottom: `${spacings.FULL}rem`,
+      textDecoration: 'none',
+      zIndex: 1,
+      '&:hover, &:focus': {
+        textDecoration: 'underline',
+      },
+    }),
 };
 
 const DesktopBigPromo = css({

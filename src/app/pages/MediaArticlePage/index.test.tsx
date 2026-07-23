@@ -1,7 +1,8 @@
 import { PropsWithChildren } from 'react';
-import { render, waitFor, screen } from '@testing-library/react';
+import { waitFor, screen } from '@testing-library/react';
 import { Article } from '#app/models/types/optimo';
 import { Helmet } from 'react-helmet';
+import { render } from '../../components/react-testing-library-with-providers';
 import { ARTICLE_PAGE } from '../../routes/utils/pageTypes';
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
@@ -92,9 +93,24 @@ describe('MediaArticlePage', () => {
       </Context>,
     );
 
-    await waitFor(() => {
-      expect(container).toMatchSnapshot();
-    });
+    const headline = container.querySelector('h1');
+    expect(headline).toBeInTheDocument();
+    expect(headline).toHaveTextContent('WS Media (1) -Media above title');
+
+    const mediaPLayer = container.querySelector(
+      '[data-e2e="media-loader__container"]',
+    );
+
+    expect(mediaPLayer).toBeInTheDocument();
+
+    const caption = container.querySelector(
+      '[data-testid="caption-paragraph"]',
+    );
+    expect(caption).toBeInTheDocument();
+
+    const subheadline = container.querySelector('h2');
+    expect(subheadline).toBeInTheDocument();
+    expect(subheadline).toHaveTextContent('Headline');
   });
 
   it('should set "amphtml" link tag for asset', async () => {
@@ -231,5 +247,40 @@ describe('MediaArticlePage', () => {
 
     expect(modifiedTime).toBeUndefined();
     expect(publishedTime).toBeUndefined();
+  });
+
+  describe('TopicDiscovery', () => {
+    const data = {
+      ...pidginPageData,
+      metadata: {
+        ...pidginPageData.metadata,
+        topics: [
+          {
+            topicId: '1',
+            topicName: 'Topic 1',
+          },
+          {
+            topicId: '2',
+            topicName: 'Topic 2',
+          },
+        ],
+      },
+    } as unknown as Article;
+
+    it('should render TopicDiscovery when topicDiscovery toggle is enabled', () => {
+      const { queryByTestId } = render(<MediaArticlePage pageData={data} />, {
+        service: 'pidgin',
+        toggles: { topicDiscovery: { enabled: true } },
+      });
+      expect(queryByTestId('topic-discovery')).toBeInTheDocument();
+    });
+
+    it('should NOT render TopicDiscovery when topicDiscovery toggle is disabled', () => {
+      const { queryByTestId } = render(<MediaArticlePage pageData={data} />, {
+        service: 'pidgin',
+        toggles: { topicDiscovery: { enabled: false } },
+      });
+      expect(queryByTestId('topic-discovery')).not.toBeInTheDocument();
+    });
   });
 });

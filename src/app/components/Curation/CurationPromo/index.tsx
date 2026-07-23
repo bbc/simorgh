@@ -8,12 +8,11 @@ import { Summary } from '#app/models/types/curationData';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import isMediaType from '#app/lib/utilities/isMedia';
 import { MY_NEWS_PAGE } from '#app/routes/utils/pageTypes';
+import isLiveEnvironment from '#app/lib/utilities/isLive';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '../../../contexts/RequestContext';
-
 import LiveLabel from '../../LiveLabel';
-
 import styles from './index.styles';
 
 const CurationPromo = ({
@@ -30,6 +29,7 @@ const CurationPromo = ({
   isLive,
   eventTrackingData,
   isPortraitImage,
+  relatedTopic,
 }: Summary) => {
   const { isAmp, isLite, pageType } = use(RequestContext);
   const { translations } = use(ServiceContext);
@@ -55,6 +55,19 @@ const CurationPromo = ({
     (type === 'photogallery' && `${photoGalleryTranslation}, `);
 
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
+
+  const relatedTopicEventTrackingData = {
+    ...eventTrackingData,
+    itemTracker: {
+      ...eventTrackingData?.itemTracker,
+      type: 'simple-curation-grid-related-topic',
+      text: relatedTopic?.title,
+    },
+  };
+
+  const relatedTopicClickTrackerHandler = useClickTrackerHandler(
+    relatedTopicEventTrackingData,
+  );
 
   return (
     <Promo css={styles.promo} className="">
@@ -89,14 +102,35 @@ const CurationPromo = ({
           </Promo.A>
         ) : (
           <Promo.A href={link} {...clickTrackerHandler}>
-            {isLive ? <LiveLabel>{title}</LiveLabel> : title}
+            {isLive ? (
+              <span css={styles.liveLabel}>
+                <LiveLabel>{title}</LiveLabel>
+              </span>
+            ) : (
+              title
+            )}
           </Promo.A>
         )}
       </Promo.Heading>
       {!isLive ? (
-        <Promo.Timestamp className="promo-timestamp">
-          {lastPublished}
-        </Promo.Timestamp>
+        <div
+          css={styles.metadataAndTopicData}
+          className="metadata-and-topic-data"
+        >
+          {relatedTopic && !isLiveEnvironment() && (
+            <a
+              href={relatedTopic?.link?.url}
+              css={styles.relatedTopicLink}
+              className="related-topic-link"
+              {...relatedTopicClickTrackerHandler}
+            >
+              {relatedTopic.title}
+            </a>
+          )}
+          <Promo.Timestamp className="promo-timestamp">
+            {lastPublished}
+          </Promo.Timestamp>
+        </div>
       ) : null}
     </Promo>
   );

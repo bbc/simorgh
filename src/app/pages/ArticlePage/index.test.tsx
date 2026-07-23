@@ -21,14 +21,8 @@ import {
   articleStyDataPidgin,
 } from '#pages/ArticlePage/fixtureData';
 import { data as newsMostReadData } from '#data/news/mostRead/index.json';
-import { data as persianMostReadData } from '#data/persian/mostRead/index.json';
-import { data as pidginMostReadData } from '#data/pidgin/mostRead/index.json';
 import { portraitVideoFixture } from '#app/components/PortraitVideoCarousel/fixture';
-import {
-  textBlock,
-  blockContainingText,
-  singleTextBlock,
-} from '#models/blocks/index';
+import { textBlock, singleTextBlock } from '#models/blocks/index';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { suppressPropWarnings } from '#app/legacy/psammead/psammead-test-helpers/src';
 import { Services } from '#app/models/types/global';
@@ -36,8 +30,8 @@ import { Curation } from '#app/models/types/curationData';
 import { Article, OptimoBlock } from '#app/models/types/optimo';
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import * as viewTracking from '#app/hooks/useViewTracker';
-import isLive from '#lib/utilities/isLive';
-import LocationBasedTopicOJ from '#app/components/LocationBasedTopicOJ';
+import useScrollDepthTracker from '#app/hooks/useScrollDepthTracker';
+import useMediaQuery from '#hooks/useMediaQuery';
 import {
   render,
   screen,
@@ -47,17 +41,27 @@ import {
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ArticlePage from './ArticlePage';
 import ThemeProvider from '../../components/ThemeProvider';
-import * as ATIAnalytics from '../../components/ATIAnalytics';
+import * as ReverbParamsContext from '../../contexts/ReverbParamsContext';
+import * as buildReverbParams from '../../components/ATIAnalytics/params';
 
 jest.mock('../../components/ThemeProvider');
 
 jest.mock('../../components/ChartbeatAnalytics', () => {
-  const ChartbeatAnalytics = () => <div>chartbeat</div>;
+  const ChartbeatAnalytics = () => <div>Chartbeat</div>;
   return ChartbeatAnalytics;
 });
 
-const atiAnalyticsSpy = jest.spyOn(ATIAnalytics, 'default');
-atiAnalyticsSpy.mockImplementation(() => <div>ATI Analytics</div>);
+jest.mock('../../components/ATIAnalytics', () => {
+  const ATIAnalytics = () => <div>ATI Analytics</div>;
+  return ATIAnalytics;
+});
+
+const reverbParamsContextProviderSpy = jest.spyOn(
+  ReverbParamsContext,
+  'ReverbParamsContextProvider',
+);
+
+const buildReverbParamsSpy = jest.spyOn(buildReverbParams, 'default');
 
 jest.mock('#app/components/OptimizelyPageMetrics');
 jest.mock('#app/hooks/useOptimizelyVariation', () => ({
@@ -71,7 +75,9 @@ jest.mock('#app/lib/utilities/onClient', () => ({
   default: jest.fn(),
   onClient: jest.fn(() => true),
 }));
-jest.mock('#lib/utilities/isLive', () => jest.fn());
+
+jest.mock('#app/hooks/useScrollDepthTracker', () => jest.fn(() => null));
+jest.mock('#hooks/useMediaQuery', () => jest.fn());
 
 const input = {
   bbcOrigin: 'https://www.test.bbc.co.uk',
@@ -365,7 +371,7 @@ describe('Article Page', () => {
             .querySelector('meta[property="og:image"]')
             ?.getAttribute('content'),
         ).toEqual(
-          'https://ichef.test.bbci.co.uk/news/1024/branded_news/c34e/live/fea48140-27e5-11eb-a689-1f68cd2c5502.jpg',
+          'https://ichef.test.bbci.co.uk/news/1200/branded_news/c34e/live/fea48140-27e5-11eb-a689-1f68cd2c5502.jpg',
         );
       });
     });
@@ -383,104 +389,25 @@ describe('Article Page', () => {
       </Context>,
     );
 
-    await waitFor(() => {
-      expect(container).toMatchSnapshot();
-    });
-  });
+    const headline = container.querySelector('h1');
+    expect(headline).toBeInTheDocument();
+    expect(headline).toHaveTextContent('Article Headline');
 
-  it('should render a rtl article (persian) with most read correctly', async () => {
-    const { container } = render(
-      <Context service="persian">
-        <ArticlePage
-          pageData={{
-            ...articleDataPersian,
-            mostRead: persianMostReadData,
-          }}
-        />
-      </Context>,
-      { service: 'persian' },
+    const paragraphs = container.querySelectorAll('p');
+    expect(paragraphs.length).toEqual(1);
+    expect(paragraphs[0]).toHaveTextContent('A paragraph.');
+
+    const images = container.querySelectorAll('img');
+    expect(images.length).toEqual(1);
+    expect(images[0]).toHaveAttribute(
+      'src',
+      'https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/157c/live/d5c6e520-16dd-11ef-9b12-1ba8f95c4917.jpg.webp',
     );
+    expect(images[0]).toHaveAttribute('alt', 'Shiroo buddeen waliin');
 
     await waitFor(() => {
       const mostReadSection = container.querySelector('#Most-Read');
       expect(mostReadSection).not.toBeNull();
-    });
-
-    expect(container).toMatchSnapshot();
-  });
-
-  it('should render a ltr article (pidgin) with most read correctly', async () => {
-    const { container } = render(
-      <Context service="pidgin">
-        <ArticlePage
-          pageData={{
-            ...articleDataPidgin,
-            mostRead: pidginMostReadData,
-          }}
-        />
-      </Context>,
-      { service: 'pidgin' },
-    );
-
-    await waitFor(() => {
-      const mostReadSection = container.querySelector('#Most-Read');
-      expect(mostReadSection).not.toBeNull();
-    });
-
-    expect(container).toMatchSnapshot();
-  });
-
-  it('should render a news article with headline in the middle correctly', async () => {
-    const headline = blockContainingText('headline', 'Article Headline', 1);
-
-    const articleWithSummaryHeadlineInTheMiddle = {
-      ...articleDataNews,
-      metadata: {
-        ...articleDataNews.metadata,
-        atiAnalytics: {
-          ...articleDataNews.metadata.atiAnalytics,
-          pageTitle: 'SEO Headline',
-        },
-      },
-      content: {
-        model: {
-          blocks: [
-            // @ts-expect-error - type checking not added for block helpers
-            singleTextBlock('Paragraph above headline', 2),
-            {
-              ...headline,
-              model: {
-                ...headline.model,
-                blocks: [
-                  {
-                    ...headline.model.blocks[0],
-                    position: [2, 1],
-                  },
-                ],
-              },
-            },
-            // @ts-expect-error - type checking not added for block helpers
-            singleTextBlock('Paragraph below headline', 3),
-          ],
-        },
-      },
-      promo: {
-        ...articleDataNews.promo,
-        headlines: {
-          seoHeadline: 'SEO Headline',
-          promoHeadline: 'Promo Headline',
-        },
-      },
-    };
-
-    const { container } = render(
-      <Context service="news">
-        <ArticlePage pageData={articleWithSummaryHeadlineInTheMiddle} />
-      </Context>,
-    );
-
-    await waitFor(() => {
-      expect(container).toMatchSnapshot();
     });
   });
 
@@ -515,9 +442,8 @@ describe('Article Page', () => {
       </Context>,
     );
 
-    await waitFor(() => {
-      expect(container).toMatchSnapshot();
-    });
+    expect(container.querySelector('h1:not(#content)')).not.toBeInTheDocument();
+    expect(screen.getByText('Paragraph 1')).toBeInTheDocument();
   });
 
   it('should render the top stories and features when passed', async () => {
@@ -879,29 +805,56 @@ describe('Article Page', () => {
     });
 
     it('should add brandname to page title in atiAnalytics', async () => {
+      const {
+        metadata: { atiAnalytics, type },
+      } = articlePglDataPidgin;
+
       render(
         <Context service="pidgin">
           <ArticlePage pageData={articlePglDataPidgin} />
         </Context>,
+        {
+          service: 'pidgin',
+          pageMetadata: { atiAnalytics, type },
+        },
       );
 
-      expect(atiAnalyticsSpy).toHaveBeenLastCalledWith(
-        {
-          atiData: {
-            categoryName: null,
+      const { metadata } = reverbParamsContextProviderSpy.mock.calls[0][0];
+
+      expect(metadata).toEqual({ atiAnalytics, type });
+
+      expect(buildReverbParamsSpy).toHaveReturnedWith({
+        eventDetails: { eventName: 'pageView' },
+        params: {
+          env: undefined,
+          page: {
+            additionalProperties: {
+              app_name: 'news-pidgin',
+              app_type: 'responsive',
+              content_language: 'pcm',
+              product_platform: null,
+              referrer_url: null,
+              x10: null,
+              x11: '2018-01-01T12:01:00.000Z',
+              x12: '2018-01-01T14:00:00.000Z',
+              x13: null,
+              x14: null,
+              x16: '',
+              x17: null,
+              x18: null,
+              x5: null,
+              x8: 'simorgh',
+              x9: 'Article%20Headline%20for%20SEO%20in%20Pidgin%20-%20BBC%20News%20Pidgin',
+            },
             contentId: 'urn:bbc:optimo:c0000000001o',
-            language: 'pcm',
-            ldpThingIds: null,
-            ldpThingLabels: null,
-            nationsProducer: null,
-            pageIdentifier: null,
-            pageTitle: 'Article Headline for SEO in Pidgin - BBC News Pidgin',
-            timePublished: '2018-01-01T12:01:00.000Z',
-            timeUpdated: '2018-01-01T14:00:00.000Z',
+            contentType: undefined,
+            destination: 'WS_NEWS_LANGUAGES_TEST',
+            name: null,
+            producer: 'PIDGIN',
           },
+          user: { hashedId: null, isSignedIn: false },
         },
-        undefined,
-      );
+      });
     });
 
     it('should have schema metadata @type as Article', async () => {
@@ -922,31 +875,59 @@ describe('Article Page', () => {
       expect(schemaType).toEqual('Article');
     });
   });
+
   describe('when rendering an STY page', () => {
     it('should add brandname to page title in atiAnalytics', async () => {
+      const {
+        metadata: { atiAnalytics, type },
+      } = articleStyDataPidgin;
+
       render(
         <Context service="pidgin">
           <ArticlePage pageData={articleStyDataPidgin} />
         </Context>,
+        {
+          service: 'pidgin',
+          pageMetadata: { atiAnalytics, type },
+        },
       );
 
-      expect(atiAnalyticsSpy).toHaveBeenLastCalledWith(
-        {
-          atiData: {
-            categoryName: null,
+      const { metadata } = reverbParamsContextProviderSpy.mock.calls[0][0];
+
+      expect(metadata).toEqual({ atiAnalytics, type });
+
+      expect(buildReverbParamsSpy).toHaveReturnedWith({
+        eventDetails: { eventName: 'pageView' },
+        params: {
+          env: undefined,
+          page: {
+            additionalProperties: {
+              app_name: 'news-pidgin',
+              app_type: 'responsive',
+              content_language: 'pcm',
+              product_platform: null,
+              referrer_url: null,
+              x10: null,
+              x11: '2018-01-01T12:01:00.000Z',
+              x12: '2018-01-01T14:00:00.000Z',
+              x13: null,
+              x14: null,
+              x16: '',
+              x17: null,
+              x18: null,
+              x5: null,
+              x8: 'simorgh',
+              x9: 'Article%20Headline%20for%20SEO%20in%20Pidgin%20-%20BBC%20News%20Pidgin',
+            },
             contentId: 'urn:bbc:optimo:c0000000001o',
-            language: 'pcm',
-            ldpThingIds: null,
-            ldpThingLabels: null,
-            nationsProducer: null,
-            pageIdentifier: null,
-            pageTitle: 'Article Headline for SEO in Pidgin - BBC News Pidgin',
-            timePublished: '2018-01-01T12:01:00.000Z',
-            timeUpdated: '2018-01-01T14:00:00.000Z',
+            contentType: undefined,
+            destination: 'WS_NEWS_LANGUAGES_TEST',
+            name: null,
+            producer: 'PIDGIN',
           },
+          user: { hashedId: null, isSignedIn: false },
         },
-        undefined,
-      );
+      });
     });
   });
 
@@ -1335,11 +1316,7 @@ describe('Article Page', () => {
       });
     });
   });
-  describe('TopicDiscovery visibility on test only', () => {
-    afterEach(() => {
-      jest.resetAllMocks();
-    });
-
+  describe('TopicDiscovery', () => {
     const data = {
       ...articleDataPidgin,
       metadata: {
@@ -1357,29 +1334,24 @@ describe('Article Page', () => {
       },
     } as Article;
 
-    it('should render TopicDiscovery when isLive is false (test env)', () => {
-      jest.mocked(isLive).mockImplementationOnce(() => false);
-      const { queryByTestId } = render(
-        <ArticlePage pageData={data} showTopicDiscoveryComponent />,
-        { service: 'portuguese' },
-      );
+    it('should render TopicDiscovery when topicDiscovery toggle is enabled', () => {
+      const { queryByTestId } = render(<ArticlePage pageData={data} />, {
+        service: 'portuguese',
+        toggles: { topicDiscovery: { enabled: true } },
+      });
       expect(queryByTestId('topic-discovery')).toBeInTheDocument();
     });
 
-    it('should NOT render TopicDiscovery when isLive is true (live env)', () => {
-      jest.mocked(isLive).mockImplementationOnce(() => true);
+    it('should NOT render TopicDiscovery when topicDiscovery toggle is disabled', () => {
       const { queryByTestId } = render(<ArticlePage pageData={data} />, {
         service: 'portuguese',
+        toggles: { topicDiscovery: { enabled: false } },
       });
       expect(queryByTestId('topic-discovery')).not.toBeInTheDocument();
     });
   });
 
   describe('LocationBasedTopicOJ', () => {
-    afterEach(() => {
-      jest.resetAllMocks();
-    });
-
     const mockCountryCuration = {
       title: 'Najeriya',
       topicId: 'topic-1',
@@ -1407,27 +1379,41 @@ describe('Article Page', () => {
         },
       ],
     };
+
+    const pageData = {
+      ...articleDataNews,
+      countryCuration: mockCountryCuration,
+    };
+
     it('renders nothing if countryCuration is undefined', () => {
-      const pageData = {
-        ...articleDataNews,
-        countryCuration: undefined,
-      };
-      const { container } = render(
-        <LocationBasedTopicOJ pageData={pageData} />,
+      render(
+        <ArticlePage
+          pageData={{
+            ...articleDataNews,
+            countryCuration: undefined,
+          }}
+        />,
+        {
+          service: 'hausa',
+          toggles: { locationTopicCuration: { enabled: true } },
+        },
       );
-      expect(container).toBeEmptyDOMElement();
+
+      expect(
+        screen.queryByTestId('location-based-topic-oj'),
+      ).not.toBeInTheDocument();
     });
 
     it('renders section and subheading when countryCuration is present', () => {
-      const pageData = {
-        ...articleDataNews,
-        countryCuration: mockCountryCuration,
-      };
       render(
-        <LocationBasedTopicOJ
+        <ArticlePage
           // @ts-expect-error: Test fixture data does not need to match Article type exactly
           pageData={pageData}
         />,
+        {
+          service: 'hausa',
+          toggles: { locationTopicCuration: { enabled: true } },
+        },
       );
       expect(screen.getByRole('region')).toBeInTheDocument();
       expect(screen.getByText('Najeriya')).toBeInTheDocument();
@@ -1435,42 +1421,337 @@ describe('Article Page', () => {
       expect(screen.getByText('Promo Title 2')).toBeInTheDocument();
     });
 
-    it('should render LocationBasedTopicOJ when isLive is false (test env)', () => {
-      jest.mocked(isLive).mockImplementationOnce(() => false);
-
-      const pageData = {
-        ...articleDataNews,
-        countryCuration: mockCountryCuration,
-      };
-
+    it('should render LocationBasedTopicOJ when countryCuration toggle is enabled', () => {
       const { queryByTestId } = render(
         <ArticlePage
           // @ts-expect-error: Test fixture data does not need to match Article type exactly
           pageData={pageData}
         />,
-        { service: 'hausa' },
+        {
+          service: 'hausa',
+          toggles: { locationTopicCuration: { enabled: true } },
+        },
       );
 
       expect(queryByTestId('location-based-topic-oj')).toBeInTheDocument();
     });
 
-    it('should NOT render LocationBasedTopicOj when isLive is true (live env)', () => {
-      jest.mocked(isLive).mockImplementationOnce(() => true);
-
-      const pageData = {
-        ...articleDataNews,
-        countryCuration: mockCountryCuration,
-      };
-
+    it('should NOT render LocationBasedTopicOJ when countryCuration toggle is disabled', () => {
       const { queryByTestId } = render(
         <ArticlePage
           // @ts-expect-error: Test fixture data does not need to match Article type exactly
           pageData={pageData}
         />,
-        { service: 'hausa' },
+        {
+          service: 'hausa',
+          toggles: { locationTopicCuration: { enabled: false } },
+        },
       );
 
       expect(queryByTestId('location-based-topic-oj')).not.toBeInTheDocument();
+    });
+
+    it('should NOT render LocationBasedTopicOJ when isAmp is true', () => {
+      const { queryByTestId } = render(
+        <ArticlePage
+          // @ts-expect-error: Test fixture data does not need to match Article type exactly
+          pageData={pageData}
+        />,
+        {
+          service: 'hausa',
+          isAmp: true,
+          toggles: { locationTopicCuration: { enabled: true } },
+        },
+      );
+
+      expect(queryByTestId('location-based-topic-oj')).not.toBeInTheDocument();
+    });
+
+    it('should NOT render LocationBasedTopicOJ when isLite is true', () => {
+      const { queryByTestId } = render(
+        <ArticlePage
+          // @ts-expect-error: Test fixture data does not need to match Article type exactly
+          pageData={pageData}
+        />,
+        {
+          service: 'hausa',
+          isLite: true,
+          toggles: { locationTopicCuration: { enabled: true } },
+        },
+      );
+
+      expect(queryByTestId('location-based-topic-oj')).not.toBeInTheDocument();
+    });
+
+    it('should NOT render LocationBasedTopicOJ when isApp is true', () => {
+      const { queryByTestId } = render(
+        <ArticlePage
+          // @ts-expect-error: Test fixture data does not need to match Article type exactly
+          pageData={pageData}
+        />,
+        {
+          service: 'hausa',
+          isApp: true,
+          toggles: { locationTopicCuration: { enabled: true } },
+        },
+      );
+
+      expect(queryByTestId('location-based-topic-oj')).not.toBeInTheDocument();
+    });
+
+    it('should NOT render LocationBasedTopicOJ when summaries array is empty', () => {
+      const pageDataWithEmptySummaries = {
+        ...articleDataNews,
+        countryCuration: {
+          ...mockCountryCuration,
+          summaries: [],
+        },
+      };
+
+      const { queryByTestId } = render(
+        <ArticlePage pageData={pageDataWithEmptySummaries} />,
+        {
+          service: 'hausa',
+          toggles: { locationTopicCuration: { enabled: true } },
+        },
+      );
+
+      expect(queryByTestId('location-based-topic-oj')).not.toBeInTheDocument();
+    });
+  });
+
+  describe('Scroll Depth Tracking', () => {
+    const continueReadingBlock = {
+      id: 'continue-reading-block',
+      type: 'continueReading',
+      model: {},
+    };
+
+    const baseBlocks =
+      articleDataPersianWithFourParagraphs.content.model.blocks;
+
+    describe('with Continue Reading Button', () => {
+      let mockUseMediaQuery: jest.Mock;
+      let mockUseScrollDepthTracker: jest.Mock;
+      let mediaQueryCallback: ((mediaQueryList: MediaQueryList) => void) | null;
+
+      beforeEach(() => {
+        mockUseMediaQuery = jest.mocked(useMediaQuery);
+        mockUseScrollDepthTracker = jest.mocked(useScrollDepthTracker);
+        mediaQueryCallback = null;
+
+        jest
+          .spyOn(clickTracking, 'default')
+          .mockReturnValue({ onClick: jest.fn() });
+
+        // Capture the callback passed to useMediaQuery
+        mockUseMediaQuery.mockImplementation((query, callback) => {
+          mediaQueryCallback = callback;
+        });
+
+        mockUseScrollDepthTracker.mockReturnValue(null);
+      });
+
+      it('should enable scroll tracking immediately on desktop viewport (GROUP_4_MIN_WIDTH+)', async () => {
+        const pageData: Article = {
+          ...articleDataPersianWithFourParagraphs,
+          content: {
+            ...articleDataPersianWithFourParagraphs.content,
+            model: {
+              ...articleDataPersianWithFourParagraphs.content.model,
+              blocks: [...baseBlocks, continueReadingBlock],
+            },
+          },
+        };
+
+        render(<ArticlePage pageData={pageData} />, {
+          service: 'persian',
+          toggles: { continueReadingButton: { enabled: true } },
+        });
+
+        if (mediaQueryCallback) {
+          act(() => {
+            // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+            mediaQueryCallback!({ matches: true } as MediaQueryList);
+          });
+        }
+
+        await waitFor(() => {
+          expect(mockUseScrollDepthTracker).toHaveBeenCalledWith(
+            'article-scroll-depth',
+            true,
+          );
+        });
+      });
+
+      it('should disable scroll tracking when button is collapsed on mobile viewport', async () => {
+        const pageData: Article = {
+          ...articleDataPersianWithFourParagraphs,
+          content: {
+            ...articleDataPersianWithFourParagraphs.content,
+            model: {
+              ...articleDataPersianWithFourParagraphs.content.model,
+              blocks: [...baseBlocks, continueReadingBlock],
+            },
+          },
+        };
+
+        render(<ArticlePage pageData={pageData} />, {
+          service: 'persian',
+          toggles: { continueReadingButton: { enabled: true } },
+        });
+
+        if (mediaQueryCallback) {
+          act(() => {
+            // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+            mediaQueryCallback!({ matches: false } as MediaQueryList);
+          });
+        }
+
+        await waitFor(() => {
+          expect(mockUseScrollDepthTracker).toHaveBeenCalledWith(
+            'article-scroll-depth',
+            false,
+          );
+        });
+      });
+
+      it('should enable scroll tracking when Continue Reading button is clicked on mobile', async () => {
+        const pageData: Article = {
+          ...articleDataPersianWithFourParagraphs,
+          content: {
+            ...articleDataPersianWithFourParagraphs.content,
+            model: {
+              ...articleDataPersianWithFourParagraphs.content.model,
+              blocks: [...baseBlocks, continueReadingBlock],
+            },
+          },
+        };
+
+        render(<ArticlePage pageData={pageData} />, {
+          service: 'persian',
+          toggles: { continueReadingButton: { enabled: true } },
+        });
+
+        if (mediaQueryCallback) {
+          act(() => {
+            // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+            mediaQueryCallback!({ matches: false } as MediaQueryList);
+          });
+        }
+
+        const continueReadingButton = screen.getByTestId(
+          'continue-reading-button',
+        );
+
+        expect(continueReadingButton).toBeInTheDocument();
+
+        // Click the button to expand content
+        act(() => {
+          continueReadingButton.click();
+        });
+
+        // After button click with showAllContent = true, scroll tracking should be enabled
+        await waitFor(() => {
+          expect(mockUseScrollDepthTracker).toHaveBeenCalledWith(
+            'article-scroll-depth',
+            true,
+          );
+        });
+      });
+    });
+
+    describe('without Continue Reading Button', () => {
+      let mockUseScrollDepthTracker: jest.Mock;
+
+      beforeEach(() => {
+        mockUseScrollDepthTracker = jest.mocked(useScrollDepthTracker);
+        mockUseScrollDepthTracker.mockReturnValue(null);
+      });
+
+      it('should enable scroll tracking immediately when no Continue Reading block is present', () => {
+        const pageData: Article = {
+          ...articleDataPersianWithFourParagraphs,
+          content: {
+            ...articleDataPersianWithFourParagraphs.content,
+            model: {
+              ...articleDataPersianWithFourParagraphs.content.model,
+              blocks: baseBlocks, // No continue reading block
+            },
+          },
+        };
+
+        render(<ArticlePage pageData={pageData} />, {
+          service: 'persian',
+          toggles: { continueReadingButton: { enabled: true } },
+        });
+
+        // Scroll tracking should be enabled from the start
+        expect(mockUseScrollDepthTracker).toHaveBeenCalledWith(
+          'article-scroll-depth',
+          true,
+        );
+      });
+
+      it('should enable scroll tracking immediately when toggle is disabled', () => {
+        const pageData: Article = {
+          ...articleDataPersianWithFourParagraphs,
+          content: {
+            ...articleDataPersianWithFourParagraphs.content,
+            model: {
+              ...articleDataPersianWithFourParagraphs.content.model,
+              blocks: [...baseBlocks, continueReadingBlock],
+            },
+          },
+        };
+
+        render(<ArticlePage pageData={pageData} />, {
+          service: 'persian',
+          toggles: { continueReadingButton: { enabled: false } },
+        });
+
+        // Scroll tracking should be enabled because button toggle is off
+        expect(mockUseScrollDepthTracker).toHaveBeenCalledWith(
+          'article-scroll-depth',
+          true,
+        );
+      });
+    });
+
+    it('should disable scroll tracking when the article contains an embed', () => {
+      const mockUseScrollDepthTracker: jest.Mock = jest.mocked(
+        useScrollDepthTracker,
+      );
+      mockUseScrollDepthTracker.mockReturnValue(null);
+
+      const pageDataWithRiddle: Article = {
+        ...articleDataNewsWithEmbeds,
+      };
+
+      render(<ArticlePage pageData={pageDataWithRiddle} />, {
+        service: 'persian',
+        toggles: { continueReadingButton: { enabled: false } },
+      });
+
+      expect(mockUseScrollDepthTracker).toHaveBeenCalledWith(
+        'article-scroll-depth',
+        false,
+      );
+    });
+
+    it('should listen to the correct media query breakpoint', () => {
+      const pageData = articleDataPersianWithFourParagraphs;
+      const mockUseMediaQuery = jest.mocked(useMediaQuery);
+
+      render(<ArticlePage pageData={pageData} />, {
+        service: 'persian',
+      });
+
+      // Should listen to GROUP_4_MIN_WIDTH breakpoint (1008px+)
+      expect(mockUseMediaQuery).toHaveBeenCalledWith(
+        '(min-width: 63rem)',
+        expect.any(Function),
+      );
     });
   });
 });

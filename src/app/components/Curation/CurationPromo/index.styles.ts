@@ -21,4 +21,48 @@ export default {
     css({
       position: 'relative',
     }),
+  liveLabel: ({ isDarkUi, palette }: Theme) => {
+    const liveColour = isDarkUi ? palette.LIVE_LIGHT : palette.LIVE_DARK;
+
+    return css({
+      svg: {
+        color: liveColour,
+      },
+      'span[role="text"] > span:first-of-type': {
+        color: liveColour,
+      },
+    });
+  },
+  metadataAndTopicData: ({ fontSizes }: Theme) =>
+    css({
+      ...fontSizes.longPrimer,
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'flex-start',
+      flexWrap: 'wrap',
+      gap: 0,
+    }),
+  relatedTopicLink: ({
+    fontSizes,
+    fontVariants,
+    isDarkUi,
+    palette,
+    spacings,
+  }: Theme) =>
+    css({
+      ...fontSizes.brevier,
+      ...fontVariants.sansRegular,
+      color: isDarkUi ? palette.GREY_3 : palette.GREY_6,
+      display: 'flex',
+      flexDirection: 'column',
+      flexWrap: 'wrap',
+      alignItems: 'flex-start',
+      marginTop: 0,
+      marginBottom: `${spacings.FULL}rem`,
+      textDecoration: 'none',
+      zIndex: 1,
+      '&:hover, &:focus': {
+        textDecoration: 'underline',
+      },
+    }),
 };

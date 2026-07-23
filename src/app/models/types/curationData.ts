@@ -24,6 +24,18 @@ interface BaseSummary {
   position?: number;
 }
 
+export type RelatedTopicLink = {
+  url: string;
+  scheme?: string;
+  host?: string;
+  path?: string;
+};
+
+export type RelatedTopic = {
+  link: RelatedTopicLink;
+  title: string;
+};
+
 export interface Summary extends BaseSummary {
   mediaType?: 'audio' | 'video' | 'photogallery';
   lazy?: boolean;
@@ -33,6 +45,7 @@ export interface Summary extends BaseSummary {
   visualProminence?: VisualProminence | string;
   isPortraitImage?: boolean;
   inSituMedia?: MediaBlock[];
+  relatedTopic?: RelatedTopic | null;
 }
 
 export const VISUAL_STYLE = {

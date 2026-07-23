@@ -168,10 +168,18 @@ const icons = {
   whatsapp: mediaIcons.whatsapp,
 };
 
+const iconOverridesByUrl = {
+  '/portuguese/articles/czd2prld130o': mediaIcons.elections,
+};
+
 const getIconFromUrl = url => {
-  const match = Object.keys(icons).find(key =>
-    url?.toLowerCase().includes(key),
-  );
+  const lowerCaseUrl = url?.toLowerCase();
+
+  if (lowerCaseUrl && iconOverridesByUrl[lowerCaseUrl]) {
+    return iconOverridesByUrl[lowerCaseUrl];
+  }
+
+  const match = Object.keys(icons).find(key => lowerCaseUrl?.includes(key));
 
   return icons[match] || mediaIcons.communication;
 };

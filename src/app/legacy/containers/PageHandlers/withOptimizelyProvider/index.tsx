@@ -14,8 +14,12 @@ import { notifyDecision } from '#app/lib/optimizelyDecisionStore';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import isCypress from './isCypress';
+import registerVisitActivity from './visitTracking';
 import { getClientTimeOfDay, getReferrer, isMobile } from './userAttributes';
 
+const PAGE_VIEW_EVENT_NAME = 'page-views';
+const VISIT_EVENT_NAME = 'visit';
+let lastTrackedUrl: string | null = null;
 const isInCypress = isCypress();
 const isStoryBook = process.env.STORYBOOK;
 const disableOptimizely = isStoryBook || isInCypress;
@@ -36,28 +40,62 @@ const optimizely = createInstance({
   eventFlushInterval: 100,
 });
 
+type DecisionInfo = {
+  flagKey?: string;
+  experimentKey?: string;
+  variationKey?: string;
+  decisionEventDispatched?: boolean;
+};
+
+// Optimizely reports a decision in one of two shapes depending on the experiment type.
+// We normalise both into a single `decisionKey` + `impressionDispatched` so the rest
+// of the app doesn't need to know which type it was:
+// - Client-side (Flags/decide API): uses `flagKey`; an impression is only counted
+//   when `decisionEventDispatched` is true.
+// - Server-side (legacy activate API): uses `experimentKey` (the rule key) and
+//   always counts an impression.
+const resolveDecision = (decisionInfo?: DecisionInfo) => {
+  const clientSideFlagKey = decisionInfo?.flagKey;
+  const serverSideRuleKey = decisionInfo?.experimentKey;
+  const isClientSideDecision = Boolean(clientSideFlagKey);
+
+  return isClientSideDecision
+    ? {
+        decisionKey: clientSideFlagKey,
+        impressionDispatched: Boolean(decisionInfo?.decisionEventDispatched),
+      }
+    : {
+        decisionKey: serverSideRuleKey,
+        impressionDispatched: Boolean(serverSideRuleKey),
+      };
+};
+
 optimizely?.notificationCenter?.addNotificationListener(
   enums.NOTIFICATION_TYPES.DECISION,
-  (
-    notification: ListenerPayload & {
-      decisionInfo?: {
-        flagKey?: string;
-        variationKey?: string;
-        decisionEventDispatched?: boolean;
-      };
-    },
-  ) => {
-    const flagKey = notification.decisionInfo?.flagKey;
-    const variationKey = notification.decisionInfo?.variationKey;
-    const decisionEventDispatched =
-      notification.decisionInfo?.decisionEventDispatched;
+  (notification: ListenerPayload & { decisionInfo?: DecisionInfo }) => {
+    if (!onClient()) return;
 
-    if (
-      decisionEventDispatched &&
-      flagKey &&
-      (variationKey !== 'off' || flagKey === 'newswb_ws_topic_discovery_module')
-    ) {
-      notifyDecision(flagKey);
+    const { decisionInfo } = notification;
+    const variationKey = decisionInfo?.variationKey;
+    const { decisionKey, impressionDispatched } = resolveDecision(decisionInfo);
+
+    if (decisionKey && variationKey && variationKey !== 'off') {
+      if (impressionDispatched) {
+        const currentUrl = window.location.pathname + window.location.search;
+        if (currentUrl !== lastTrackedUrl) {
+          lastTrackedUrl = currentUrl;
+
+          // the visit (denominator) must be sent before the page view (numerator)
+          // so the page view falls inside Optimizely's ratio metric attribution window
+          if (registerVisitActivity(Date.now())) {
+            optimizely.track(VISIT_EVENT_NAME);
+          }
+
+          optimizely.track(PAGE_VIEW_EVENT_NAME);
+        }
+      }
+
+      notifyDecision(decisionKey);
     }
   },
 );

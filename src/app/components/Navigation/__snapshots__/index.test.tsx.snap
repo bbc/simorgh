@@ -112,8 +112,15 @@ exports[`Navigation should correctly render amp navigation 1`] = `
     overflow-x: scroll;
     scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
+    scroll-padding-inline-end: 3rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-8 {
+      scroll-padding-inline-end: 6rem;
+    }
   }
 
   .emotion-8::-webkit-scrollbar {
@@ -620,8 +627,15 @@ exports[`Navigation should correctly render amp navigation 1`] = `
     overflow-x: scroll;
     scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
+    scroll-padding-inline-end: 3rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-39 {
+      scroll-padding-inline-end: 6rem;
+    }
   }
 
   .emotion-39::-webkit-scrollbar {
@@ -1000,8 +1014,15 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
     overflow-x: scroll;
     scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
+    scroll-padding-inline-end: 3rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-8 {
+      scroll-padding-inline-end: 6rem;
+    }
   }
 
   .emotion-8::-webkit-scrollbar {
@@ -1432,8 +1453,15 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
     overflow-x: scroll;
     scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
+    scroll-padding-inline-end: 3rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-36 {
+      scroll-padding-inline-end: 6rem;
+    }
   }
 
   .emotion-36::-webkit-scrollbar {
@@ -1799,8 +1827,15 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
     overflow-x: scroll;
     scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
+    scroll-padding-inline-end: 3rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-8 {
+      scroll-padding-inline-end: 6rem;
+    }
   }
 
   .emotion-8::-webkit-scrollbar {
@@ -2307,8 +2342,15 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
     overflow-x: scroll;
     scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
+    scroll-padding-inline-end: 3rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-39 {
+      scroll-padding-inline-end: 6rem;
+    }
   }
 
   .emotion-39::-webkit-scrollbar {
@@ -2681,8 +2723,15 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
     overflow-x: scroll;
     scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
+    scroll-padding-inline-end: 3rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-8 {
+      scroll-padding-inline-end: 6rem;
+    }
   }
 
   .emotion-8::-webkit-scrollbar {
@@ -3195,8 +3244,15 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
     overflow-x: scroll;
     scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
+    scroll-padding-inline-end: 3rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-37 {
+      scroll-padding-inline-end: 6rem;
+    }
   }
 
   .emotion-37::-webkit-scrollbar {
@@ -3555,8 +3611,15 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
     overflow-x: scroll;
     scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
+    scroll-padding-inline-end: 3rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-8 {
+      scroll-padding-inline-end: 6rem;
+    }
   }
 
   .emotion-8::-webkit-scrollbar {
@@ -3993,8 +4056,15 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
     overflow-x: scroll;
     scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
+    scroll-padding-inline-end: 3rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-34 {
+      scroll-padding-inline-end: 6rem;
+    }
   }
 
   .emotion-34::-webkit-scrollbar {
@@ -4340,8 +4410,15 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
     overflow-x: scroll;
     scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
+    scroll-padding-inline-end: 3rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-8 {
+      scroll-padding-inline-end: 6rem;
+    }
   }
 
   .emotion-8::-webkit-scrollbar {
@@ -4854,8 +4931,15 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
     overflow-x: scroll;
     scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
+    scroll-padding-inline-end: 3rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-37 {
+      scroll-padding-inline-end: 6rem;
+    }
   }
 
   .emotion-37::-webkit-scrollbar {
