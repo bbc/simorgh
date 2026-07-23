@@ -216,6 +216,23 @@ describe('Curation Promo', () => {
       );
     });
 
+    it('should truncate a related topic link with an ellipsis when it cannot fit on one line', () => {
+      const longRelatedTopic = {
+        ...relatedTopic,
+        title: 'A related topic title that is too long to fit on one line',
+      };
+
+      render(<Fixture relatedTopic={longRelatedTopic} />);
+
+      expect(
+        screen.getByRole('link', { name: longRelatedTopic.title }),
+      ).toHaveStyle({
+        overflow: 'hidden',
+        textOverflow: 'ellipsis',
+        whiteSpace: 'nowrap',
+      });
+    });
+
     it('should not render a related topic link when relatedTopic is not provided', () => {
       render(<Fixture />);
 
