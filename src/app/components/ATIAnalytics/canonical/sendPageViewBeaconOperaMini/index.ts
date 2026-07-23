@@ -20,10 +20,7 @@ const sendPageViewBeaconOperaMini = function (
   atiPageViewUrlString: string,
   isOperaProxyFn: () => boolean,
 ) {
-  // eslint-disable-next-line func-names, no-var
-  var operaMiniWindow = window as OperaMiniWindow;
-
-  if (isOperaProxyFn() && !operaMiniWindow.hasOperaMiniScriptRan) {
+  if (isOperaProxyFn() && !(window as OperaMiniWindow).hasOperaMiniScriptRan) {
     (window as OperaMiniWindow).hasOperaMiniScriptRan = true;
 
     // eslint-disable-next-line vars-on-top, no-var
