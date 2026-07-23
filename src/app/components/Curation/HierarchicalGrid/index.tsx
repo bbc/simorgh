@@ -40,7 +40,7 @@ const HiearchicalGrid = ({
   isFirstCuration,
   eventTrackingData,
 }: CurationGridProps) => {
-  const { isAmp, isLite } = use(RequestContext);
+  const { isAmp } = use(RequestContext);
   const { translations } = use(ServiceContext);
   const audioTranslation = path(['media', 'audio'], translations);
   const videoTranslation = path(['media', 'video'], translations);
@@ -110,9 +110,7 @@ const HiearchicalGrid = ({
           );
 
           const inSituMediaBlocks =
-            !isAmp && !isLite && promo.inSituMedia?.length
-              ? promo.inSituMedia
-              : null;
+            !isAmp && promo.inSituMedia?.length ? promo.inSituMedia : null;
           const linkCss = inSituMediaBlocks ? styles.headlineLink : undefined;
           const promoText = (
             <>
@@ -204,7 +202,6 @@ const HiearchicalGrid = ({
                   <div css={styles.inSituMedia}>
                     <MediaLoader
                       blocks={inSituMediaBlocks}
-                      showMetadata={false}
                       uniqueId={`in-situ-${promo.id || i}`}
                     />
                   </div>

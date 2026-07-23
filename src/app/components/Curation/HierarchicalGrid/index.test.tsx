@@ -244,7 +244,6 @@ describe('Hierarchical Grid Curation', () => {
     expect(MediaLoader).toHaveBeenCalledWith(
       expect.objectContaining({
         blocks: aresMediaBlocks,
-        showMetadata: false,
         uniqueId: `in-situ-${inSituPromo.id}`,
       }),
       undefined,
@@ -295,24 +294,6 @@ describe('Hierarchical Grid Curation', () => {
     expect(
       container.querySelector('[data-testid="in-situ-media-loader"]'),
     ).not.toBeInTheDocument();
-    expect(MediaLoader).not.toHaveBeenCalled();
-  });
-
-  it('falls back to the normal promo on Lite', () => {
-    const { summaries } = getSummariesWithInSituMedia();
-
-    const { container } = render(
-      <HierarchicalGrid
-        headingLevel={headingLevel}
-        summaries={summaries}
-        eventTrackingData={minimalEventTrackingData}
-      />,
-      { isLite: true },
-    );
-
-    const firstPromo = container.querySelector('li');
-
-    expect(firstPromo?.querySelector('.promo-image')).toBeInTheDocument();
     expect(MediaLoader).not.toHaveBeenCalled();
   });
 

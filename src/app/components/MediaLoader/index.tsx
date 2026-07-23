@@ -215,7 +215,6 @@ type Props = {
   blocks: MediaBlock[];
   className?: string;
   embedded?: boolean;
-  showMetadata?: boolean;
   uniqueId?: string;
   eventMapping?: EventMapping;
 };
@@ -224,7 +223,6 @@ const MediaLoader = ({
   blocks,
   className,
   embedded,
-  showMetadata = true,
   uniqueId,
   eventMapping,
 }: Props) => {
@@ -299,8 +297,8 @@ const MediaLoader = ({
   return (
     <>
       {
-        // Prevents embedded and in-page promo players rendering page-level media metadata
-        showMetadata && !embedded && (
+        // Prevents the av-embeds route itself rendering the Metadata component
+        !embedded && (
           <Metadata blocks={blocks} embedURL={playerConfig?.externalEmbedUrl} />
         )
       }

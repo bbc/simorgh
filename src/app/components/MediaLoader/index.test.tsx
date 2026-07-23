@@ -222,24 +222,6 @@ describe('MediaLoader', () => {
 
       expect(helmetMetaTags).toEqual([]);
     });
-
-    it('should not render metadata tags when showMetadata is false', async () => {
-      await act(async () => {
-        render(
-          <MediaPlayer
-            blocks={aresMediaBlocks as MediaBlock[]}
-            showMetadata={false}
-          />,
-          {
-            id: 'cn8jgj8rjppo',
-          },
-        );
-      });
-
-      const helmetMetaTags = Helmet.peek().metaTags;
-
-      expect(helmetMetaTags).toEqual([]);
-    });
   });
 
   describe('Config', () => {
