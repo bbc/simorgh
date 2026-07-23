@@ -27,7 +27,7 @@ const sendPageViewBeaconOperaMini = function (
     (window as OperaMiniWindow).hasOperaMiniScriptRan = true;
 
     // eslint-disable-next-line vars-on-top, no-var
-    var atiPageViewUrl = `${atiPageViewUrlString}`;
+    var atiPageViewUrl = atiPageViewUrlString;
     // eslint-disable-next-line prefer-template
     atiPageViewUrl += document.referrer ? '&ref=' + document.referrer : '';
 
