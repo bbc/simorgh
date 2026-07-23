@@ -20,15 +20,16 @@ const sendPageViewBeaconOperaMini = function (
   atiPageViewUrlString: string,
   isOperaProxyFn: () => boolean,
 ) {
-  // eslint-disable-next-line func-names
-  const operaMiniWindow = window as OperaMiniWindow;
+  // eslint-disable-next-line func-names, no-var
+  var operaMiniWindow = window as OperaMiniWindow;
 
   if (isOperaProxyFn() && !operaMiniWindow.hasOperaMiniScriptRan) {
-    operaMiniWindow.hasOperaMiniScriptRan = true;
+    (window as OperaMiniWindow).hasOperaMiniScriptRan = true;
 
-    const atiPageViewUrl = `${atiPageViewUrlString}${
-      document.referrer ? `&ref=${document.referrer}` : ''
-    }`;
+    // eslint-disable-next-line vars-on-top, no-var
+    var atiPageViewUrl = `${atiPageViewUrlString}`;
+    // eslint-disable-next-line prefer-template
+    atiPageViewUrl += document.referrer ? '&ref=' + document.referrer : '';
 
     window.sendStaticBeacon(atiPageViewUrl);
   }
