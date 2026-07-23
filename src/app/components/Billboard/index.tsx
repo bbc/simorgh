@@ -35,8 +35,8 @@ interface BillboardProps {
   summaries?: Summary[];
 }
 
-const IMAGE_WIDTH = 660;
-const DEFAULT_IMAGE_RES = 480;
+const IMAGE_WIDTH = 800; // affects both masked and unmasked images. The masked image will be cropped to 240px width, but the original image is still 800px wide
+const DEFAULT_IMAGE_RES = 480; // safety fallback
 
 export default ({
   heading,

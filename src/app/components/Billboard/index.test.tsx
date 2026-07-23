@@ -293,6 +293,24 @@ describe('Billboard', () => {
       maskedImageSpy.mockRestore();
     });
 
+    it('includes an 800w resolution in the srcset, capped so no larger image is ever requested', () => {
+      render(
+        <Billboard
+          heading={title}
+          description={description}
+          link={link}
+          image={imageUrl}
+          altText={imageAlt}
+          prominence={VISUAL_PROMINENCE.HIGH}
+        />,
+      );
+
+      const image = screen.getByAltText(imageAlt);
+      const srcset = image.getAttribute('srcset');
+      expect(srcset).toContain('800w');
+      expect(srcset).not.toMatch(/\d{4,}w/);
+    });
+
     it('renders the curation grid when promo items are present', () => {
       const maskedImageSpy = jest.spyOn(MaskedImage, 'default');
 
