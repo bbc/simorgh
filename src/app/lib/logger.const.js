@@ -97,6 +97,9 @@ const logCodes = {
 
   // AMP/Lite CSS size diagnostics
   AMP_LITE_CSS_SIZE_METRIC: 'amp_lite_css_size_metric',
+
+  // AMP/Lite CSS vendor-prefix optimisation
+  AMP_LITE_CSS_AUTOPREFIXER_ERROR: 'amp_lite_css_autoprefixer_error',
 };
 
 module.exports = logCodes;
