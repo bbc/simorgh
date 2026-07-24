@@ -52,6 +52,13 @@ export default {
       !isEmbedded && commonMarginSpacing,
     ],
 
+  mediaPlayerWrapper: () =>
+    css({
+      flex: 1,
+      minHeight: 0,
+      height: '100%',
+    }),
+
   audioMediaContainer: () =>
     css({
       height: '165px',

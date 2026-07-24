@@ -426,6 +426,7 @@ const MediaLoader = ({
           // page content during fake fullscreen, so the Caption below (page
           // furniture) is never pulled into the fullscreen layer with it.
           <div
+            css={styles.mediaPlayerWrapper}
             data-simorgh-media-loader={
               isFakeFullscreenActive
                 ? ACTIVE_FULLSCREEN_LOADER_STATE
