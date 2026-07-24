@@ -1,7 +1,8 @@
 import { Fragment, use } from 'react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import PWAPromotionalBanner from '#app/components/PWAPromotionalBanner';
-import AccountPromotionalBanner from '#app/components/Account/AccountPromotionalBanner';
+import AccountPromotionalBannerHomePageExperiment from '#app/components/Account/AccountPromotionalBannerHomePageExperiment';
+import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import useScrollDepthTracker, {
   getHomePageBounds,
 } from '#app/hooks/useScrollDepthTracker';
@@ -65,7 +66,8 @@ const HomePage = ({ pageData }: HomePageProps) => {
     <>
       {/* EXPERIMENT: PWA Promotional Banner */}
       <PWAPromotionalBanner />
-      <AccountPromotionalBanner />
+      {/* EXPERIMENT: newswb_ws_homepage_account_promo_banner_copy */}
+      <AccountPromotionalBannerHomePageExperiment />
       <ChartbeatAnalytics title={title} />
       <MetadataContainer
         title={metadataTitle}
@@ -139,7 +141,9 @@ const HomePage = ({ pageData }: HomePageProps) => {
             )}
           </div>
         </div>
+        <OptimizelyPageMetrics trackPageComplete />
       </main>
+      <OptimizelyPageMetrics trackPageDepth />
     </>
   );
 };

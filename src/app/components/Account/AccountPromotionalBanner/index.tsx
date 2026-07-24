@@ -20,11 +20,15 @@ import styles from './index.styles';
 type AccountPromotionalBannerProps = {
   experimentName?: string;
   experimentVariant?: string;
+  title?: string;
+  description?: string;
 };
 
 const AccountPromotionalBanner = ({
   experimentName,
   experimentVariant,
+  title: titleOverride,
+  description: descriptionOverride,
 }: AccountPromotionalBannerProps = {}) => {
   const { enabled: accountEnabled } = useToggle('account');
   const { isSignedIn, isIdctaAvailable, signInUrl, registerUrl } =
@@ -74,8 +78,15 @@ const AccountPromotionalBanner = ({
     return null;
   }
 
-  const { title, description, closeLabel, buttonSeparatorText } =
-    accountPromoBannerTranslations;
+  const {
+    title: defaultTitle,
+    description: defaultDescription,
+    closeLabel,
+    buttonSeparatorText,
+  } = accountPromoBannerTranslations;
+
+  const title = titleOverride ?? defaultTitle;
+  const description = descriptionOverride ?? defaultDescription;
 
   return (
     <>
