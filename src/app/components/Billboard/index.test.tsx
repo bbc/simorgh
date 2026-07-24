@@ -4,6 +4,7 @@ import {
   screen,
 } from '../react-testing-library-with-providers';
 import Billboard from '.';
+import { VISUAL_PROMINENCE } from '../../models/types/curationData';
 import { kyrgyzBillboard, pidginLiveBillboard } from './fixtures';
 import * as MaskedImage from '../MaskedImage';
 import * as viewTracking from '../../hooks/useViewTracker';
@@ -269,6 +270,49 @@ describe('Billboard', () => {
     expect(
       screen.queryByTestId('billboard-curation-grid'),
     ).not.toBeInTheDocument();
+  });
+
+  describe('High Prominence', () => {
+    it('renders a plain image without the masked image treatment', () => {
+      const maskedImageSpy = jest.spyOn(MaskedImage, 'default');
+
+      render(
+        <Billboard
+          heading={title}
+          description={description}
+          link={link}
+          image={imageUrl}
+          altText={imageAlt}
+          prominence={VISUAL_PROMINENCE.HIGH}
+        />,
+      );
+
+      expect(maskedImageSpy).not.toHaveBeenCalled();
+      expect(screen.getByAltText(imageAlt)).toBeInTheDocument();
+
+      maskedImageSpy.mockRestore();
+    });
+
+    it('renders the curation grid when promo items are present', () => {
+      const maskedImageSpy = jest.spyOn(MaskedImage, 'default');
+
+      render(
+        <Billboard
+          heading={title}
+          description={description ?? ''}
+          link={link}
+          image={imageUrl}
+          altText={imageAlt}
+          prominence={VISUAL_PROMINENCE.HIGH}
+          summaries={pidginLiveBillboard.summaries}
+        />,
+      );
+
+      expect(maskedImageSpy).not.toHaveBeenCalled();
+      expect(screen.getByTestId('billboard-curation-grid')).toBeInTheDocument();
+
+      maskedImageSpy.mockRestore();
+    });
   });
 
   describe('Event Tracking', () => {

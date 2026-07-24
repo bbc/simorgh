@@ -84,7 +84,7 @@ export const service: DefaultServiceConfig = {
       seeAll: 'بیشتر',
       home: 'صفحه اول',
       topicDiscovery: {
-        heading: 'بیشتر کشف کنید',
+        heading: 'بیشتر بخوانید',
         moreAboutTopic: 'بیشتر درباره {topic}',
         fetchErrorMessage: 'بارگذاری ناموفق بود. لطفاً دوباره تلاش کنید',
       },

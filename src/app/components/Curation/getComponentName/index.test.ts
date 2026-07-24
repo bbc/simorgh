@@ -30,7 +30,7 @@ describe('getComponentName', () => {
     ${BANNER}       | ${MINIMUM}           | ${NOT_SUPPORTED}
     ${BANNER}       | ${LOW}               | ${NOT_SUPPORTED}
     ${BANNER}       | ${NORMAL}            | ${MESSAGE_BANNER}
-    ${BANNER}       | ${HIGH}              | ${NOT_SUPPORTED}
+    ${BANNER}       | ${HIGH}              | ${BILLBOARD}
     ${BANNER}       | ${MAXIMUM}           | ${BILLBOARD}
     ${NONE}         | ${NORMAL}            | ${SIMPLE_CURATION_GRID}
     ${NONE}         | ${HIGH}              | ${HIERARCHICAL_CURATION_GRID}
