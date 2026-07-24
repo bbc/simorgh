@@ -79,7 +79,7 @@
     "autoprefixer": "10.5.4",
     "next": "16.2.6",
     "postcss": "8.5.22",
-    "sharp": "0.34.5",
+    "sharp": "0.35.3",
     "temporal-polyfill": "0.3.0"
   }
 }
