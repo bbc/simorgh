@@ -108,50 +108,92 @@ exports[`Canonical Articles Header Navigation link should match text and url 4`]
 
 exports[`Canonical Articles Header Navigation link should match text and url 5`] = `
 {
-  "text": "Politics",
-  "url": "/news/politics",
+  "text": "Culture",
+  "url": "/news/entertainment_and_arts",
 }
 `;
 
 exports[`Canonical Articles Header Navigation link should match text and url 6`] = `
 {
-  "text": "Tech",
-  "url": "/news/technology",
+  "text": "Politics",
+  "url": "/news/politics",
 }
 `;
 
 exports[`Canonical Articles Header Navigation link should match text and url 7`] = `
-{
-  "text": "Science",
-  "url": "/news/science_and_environment",
-}
-`;
-
-exports[`Canonical Articles Header Navigation link should match text and url 8`] = `
 {
   "text": "Health",
   "url": "/news/health",
 }
 `;
 
+exports[`Canonical Articles Header Navigation link should match text and url 8`] = `
+{
+  "text": "Tech",
+  "url": "/news/technology",
+}
+`;
+
 exports[`Canonical Articles Header Navigation link should match text and url 9`] = `
+{
+  "text": "InDepth",
+  "url": "/news/bbcindepth",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 10`] = `
+{
+  "text": "BBC Verify",
+  "url": "/news/bbcverify",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 11`] = `
+{
+  "text": "Climate",
+  "url": "/news/topics/cmj34zmwm1zt",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 12`] = `
+{
+  "text": "Science",
+  "url": "/news/science_and_environment",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 13`] = `
+{
+  "text": "US Elections",
+  "url": "/uselections",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 14`] = `
 {
   "text": "Family & Education",
   "url": "/news/education",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 10`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 15`] = `
 {
-  "text": "Entertainment & Arts",
-  "url": "/news/entertainment_and_arts",
+  "text": "In Pictures",
+  "url": "/news/in_pictures",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 11`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 16`] = `
 {
-  "text": "Stories",
-  "url": "/news/stories",
+  "text": "Disability",
+  "url": "/news/disability",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 17`] = `
+{
+  "text": "Newsbeat",
+  "url": "/news/newsbeat",
 }
 `;
 
@@ -160,7 +202,7 @@ exports[`Canonical Articles Image Caption should match text 1`] = `"Image captio
 exports[`Canonical Articles Image should match snapshot 1`] = `
 <img
   alt="Pauline Clayton"
-  class="css-1seqhu9"
+  class="css-zfe4bz"
   fetchpriority="high"
   height="360"
   loading="eager"

@@ -119,7 +119,7 @@ exports[`Canonical On Demand Audio Page Header I can see the branding 1`] = `
 
 exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 1`] = `
 {
-  "text": "اوسنۍ پاڼه, کور پاڼه",
+  "text": "کور پاڼه",
   "url": "/pashto",
 }
 `;
@@ -136,20 +136,20 @@ exports[`Canonical On Demand Audio Page Main heading should match text 1`] = `"�
 
 exports[`Canonical On Demand Audio Page Media Loader renders a valid container 1`] = `
 <figure
-  class="media-container css-ucozvf"
+  class="media-container css-1hkd42l"
   data-e2e="media-loader__container"
 >
   <div
-    class="media-player css-1kf4wj3"
+    class="media-player css-1j6l6ew"
     data-e2e="media-player"
   >
     <noscript>
       <div>
         <div
-          class="css-q0ilh"
+          class="css-t7b63p"
         >
           <strong
-            class="css-pow7hy"
+            class="css-1n1zjvh"
           >
             په دې وسیله کې د غږ اوريدل او ویډیو لیدنه شونې نه ده.
           </strong>

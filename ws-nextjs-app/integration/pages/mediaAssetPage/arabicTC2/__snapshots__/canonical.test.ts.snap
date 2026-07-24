@@ -122,8 +122,22 @@ exports[`Canonical Media Asset Page Header I can see the branding 1`] = `
 
 exports[`Canonical Media Asset Page Header Navigation link should match text and url 1`] = `
 {
-  "text": "الصفحة الحالية, رئيسية",
+  "text": "رئيسية",
   "url": "/arabic",
+}
+`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 2`] = `
+{
+  "text": "شاهد",
+  "url": "/arabic/watch/bbc_arabic_tv/live",
+}
+`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 3`] = `
+{
+  "text": "استمع",
+  "url": "/arabic/topics/cljddp5lw0dt",
 }
 `;
 

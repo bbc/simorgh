@@ -134,8 +134,22 @@ exports[`Canonical Articles Header I can see the branding 1`] = `
 
 exports[`Canonical Articles Header Navigation link should match text and url 1`] = `
 {
-  "text": "Uru rupapuro, Urupapuro rw'itangiriro",
+  "text": "Urupapuro rw'itangiriro",
   "url": "/gahuza",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 2`] = `
+{
+  "text": "Raba",
+  "url": "/gahuza/topics/cpqx1yvd5ydt",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 3`] = `
+{
+  "text": "Umviriza",
+  "url": "/gahuza/bbc_gahuza_radio/liveradio",
 }
 `;
 
@@ -144,7 +158,7 @@ exports[`Canonical Articles Image Caption should match text 1`] = `"Insiguro y'i
 exports[`Canonical Articles Image should match snapshot 1`] = `
 <img
   alt="Alexei Navalny na Yulia Navalnaya bari i Moscow mu 2013 muri metingi yo kwiyamamaza kw'abakuru b'imijyi"
-  class="css-1seqhu9"
+  class="css-zfe4bz"
   fetchpriority="high"
   height="864"
   loading="eager"

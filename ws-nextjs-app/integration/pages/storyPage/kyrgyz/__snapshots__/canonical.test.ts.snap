@@ -125,8 +125,15 @@ exports[`Canonical Story Page Header I can see the branding 1`] = `
 
 exports[`Canonical Story Page Header Navigation link should match text and url 1`] = `
 {
-  "text": "Ачылып турган баракча, Башкы бет",
+  "text": "Башкы бет",
   "url": "/kyrgyz",
+}
+`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 2`] = `
+{
+  "text": "Биздин видеолор",
+  "url": "/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=4t",
 }
 `;
 
@@ -135,7 +142,7 @@ exports[`Canonical Story Page Image Caption should match text 1`] = `"Сүрөт
 exports[`Canonical Story Page Image should match snapshot 1`] = `
 <img
   alt="social media"
-  class="css-1seqhu9"
+  class="css-zfe4bz"
   fetchpriority="high"
   height="351"
   loading="eager"

@@ -119,8 +119,29 @@ exports[`Canonical Korean Live Radio Page Header I can see the branding 1`] = `
 
 exports[`Canonical Korean Live Radio Page Header Navigation link should match text and url 1`] = `
 {
-  "text": "현재 페이지, 뉴스",
+  "text": "뉴스",
   "url": "/korean",
+}
+`;
+
+exports[`Canonical Korean Live Radio Page Header Navigation link should match text and url 2`] = `
+{
+  "text": "비디오",
+  "url": "/korean/topics/cnwng7v0e54t",
+}
+`;
+
+exports[`Canonical Korean Live Radio Page Header Navigation link should match text and url 3`] = `
+{
+  "text": "현재 페이지, 라디오",
+  "url": "/korean/bbc_korean_radio/programmes/w13xttll",
+}
+`;
+
+exports[`Canonical Korean Live Radio Page Header Navigation link should match text and url 4`] = `
+{
+  "text": "다운로드",
+  "url": "/korean/downloads",
 }
 `;
 
@@ -128,20 +149,20 @@ exports[`Canonical Korean Live Radio Page Main heading should match text 1`] = `
 
 exports[`Canonical Korean Live Radio Page Media Loader renders a valid container 1`] = `
 <figure
-  class="media-container css-ucozvf"
+  class="media-container css-1hkd42l"
   data-e2e="media-loader__container"
 >
   <div
-    class="media-player css-1kf4wj3"
+    class="media-player css-1j6l6ew"
     data-e2e="media-player"
   >
     <noscript>
       <div>
         <div
-          class="css-i4t8f7"
+          class="css-1o9ew6l"
         >
           <strong
-            class="css-pow7hy"
+            class="css-1n1zjvh"
           >
             사용 기기에서 미디어 재생이 지원되지 않습니다
           </strong>

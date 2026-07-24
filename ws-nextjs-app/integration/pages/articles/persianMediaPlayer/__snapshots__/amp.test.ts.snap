@@ -82,8 +82,15 @@ exports[`AMP Articles Header I can see the branding 1`] = `
 
 exports[`AMP Articles Header Navigation link should match text and url 1`] = `
 {
-  "text": "صفحه فعلی, صفحه اول",
+  "text": "صفحه اول",
   "url": "/persian",
+}
+`;
+
+exports[`AMP Articles Header Navigation link should match text and url 2`] = `
+{
+  "text": "صفحه فعلی, ببینید",
+  "url": "/persian/watch/bbc_persian_tv/live",
 }
 `;
 

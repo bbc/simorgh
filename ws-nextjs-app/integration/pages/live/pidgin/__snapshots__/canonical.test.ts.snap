@@ -11,27 +11,34 @@ exports[`Canonical Live Header I can see the branding 1`] = `
 
 exports[`Canonical Live Header Navigation link should match text and url 1`] = `
 {
-  "text": "Page where you dey, Home",
+  "text": "Home",
   "url": "/pidgin",
+}
+`;
+
+exports[`Canonical Live Header Navigation link should match text and url 2`] = `
+{
+  "text": "Watch",
+  "url": "/pidgin/topics/c3l19z3k1ert",
 }
 `;
 
 exports[`Canonical Live Media Loader renders a valid container 1`] = `
 <figure
-  class="media-container css-hnd6ee"
+  class="media-container css-2xy69p"
   data-e2e="media-loader__container"
 >
   <div
-    class="media-player css-9p9hvp"
+    class="media-player css-fckwhl"
     data-e2e="media-player"
   >
     <noscript>
       <div>
         <div
-          class="css-1mgo2mg"
+          class="css-jzmq6g"
         >
           <strong
-            class="css-pow7hy"
+            class="css-1n1zjvh"
           >
             Dem no support media player for your device
           </strong>
@@ -40,14 +47,14 @@ exports[`Canonical Live Media Loader renders a valid container 1`] = `
     </noscript>
   </div>
   <figcaption
-    class="css-88md10"
+    class="css-11wfxvj"
     dir="ltr"
   >
     <span
       role="text"
     >
       <span
-        class="css-5ku87v"
+        class="css-1mz60kl"
       >
         Wetin we call dis Video, 
       </span>

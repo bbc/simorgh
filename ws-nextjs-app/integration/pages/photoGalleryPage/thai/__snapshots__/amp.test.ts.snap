@@ -179,8 +179,15 @@ exports[`AMP Photo Gallery Page Header I can see the branding 1`] = `
 
 exports[`AMP Photo Gallery Page Header Navigation link should match text and url 1`] = `
 {
-  "text": "หน้าปัจจุบัน, หน้าแรก",
+  "text": "หน้าแรก",
   "url": "/thai",
+}
+`;
+
+exports[`AMP Photo Gallery Page Header Navigation link should match text and url 2`] = `
+{
+  "text": "รับชมวิดีโอ",
+  "url": "/thai/topics/c5ljd3jng4nt",
 }
 `;
 

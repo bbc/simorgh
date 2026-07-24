@@ -132,8 +132,22 @@ exports[`Canonical Story Page Header I can see the branding 1`] = `
 
 exports[`Canonical Story Page Header Navigation link should match text and url 1`] = `
 {
-  "text": "Shafin da ake ciki, Labaran Duniya",
+  "text": "Labaran Duniya",
   "url": "/hausa",
+}
+`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 2`] = `
+{
+  "text": "Kallo",
+  "url": "/hausa/topics/cn09qmz4jryt",
+}
+`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 3`] = `
+{
+  "text": "Sauraro",
+  "url": "/hausa/bbc_hausa_radio/liveradio",
 }
 `;
 
@@ -141,7 +155,7 @@ exports[`Canonical Story Page Image Caption should match text 1`] = `"Bayanan sa
 
 exports[`Canonical Story Page Image should match snapshot 1`] = `
 <noscript
-  class="css-n2zqlz"
+  class="css-k240ny"
 >
   <strong>
     Na'urarku na da matsalar sauraren sauti

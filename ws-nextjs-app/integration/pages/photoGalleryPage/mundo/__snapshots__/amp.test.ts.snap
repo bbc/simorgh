@@ -173,8 +173,15 @@ exports[`AMP Photo Gallery Page Header I can see the branding 1`] = `
 
 exports[`AMP Photo Gallery Page Header Navigation link should match text and url 1`] = `
 {
-  "text": "Página actual, Noticias",
+  "text": "Noticias",
   "url": "/mundo",
+}
+`;
+
+exports[`AMP Photo Gallery Page Header Navigation link should match text and url 2`] = `
+{
+  "text": "Video",
+  "url": "/mundo/topics/ck0dg7pe1kgt",
 }
 `;
 

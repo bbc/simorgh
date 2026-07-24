@@ -107,8 +107,22 @@ exports[`Canonical Articles Header I can see the branding 1`] = `
 
 exports[`Canonical Articles Header Navigation link should match text and url 1`] = `
 {
-  "text": "Shafin da ake ciki, Labaran Duniya",
+  "text": "Labaran Duniya",
   "url": "/hausa",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 2`] = `
+{
+  "text": "Shafin da ake ciki, Kallo",
+  "url": "/hausa/topics/cn09qmz4jryt",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 3`] = `
+{
+  "text": "Sauraro",
+  "url": "/hausa/bbc_hausa_radio/liveradio",
 }
 `;
 
@@ -117,7 +131,7 @@ exports[`Canonical Articles Image Caption should match text 1`] = `"Bayanan hoto
 exports[`Canonical Articles Image should match snapshot 1`] = `
 <img
   alt="Taswirar Faransa wanda ke nuna Paris da Cognac"
-  class="css-1seqhu9"
+  class="css-zfe4bz"
   fetchpriority="high"
   height="351"
   loading="eager"

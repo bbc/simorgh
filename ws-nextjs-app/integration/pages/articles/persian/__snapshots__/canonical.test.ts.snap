@@ -125,8 +125,15 @@ exports[`Canonical Articles Header I can see the branding 1`] = `
 
 exports[`Canonical Articles Header Navigation link should match text and url 1`] = `
 {
-  "text": "صفحه فعلی, صفحه اول",
+  "text": "صفحه اول",
   "url": "/persian",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 2`] = `
+{
+  "text": "ببینید",
+  "url": "/persian/watch/bbc_persian_tv/live",
 }
 `;
 
@@ -143,7 +150,7 @@ exports[`Canonical Articles Image Copyright Non BBC should match snapshot 1`] = 
 exports[`Canonical Articles Image should match snapshot 1`] = `
 <img
   alt="قهوه"
-  class="css-1seqhu9"
+  class="css-zfe4bz"
   fetchpriority="high"
   height="360"
   loading="eager"

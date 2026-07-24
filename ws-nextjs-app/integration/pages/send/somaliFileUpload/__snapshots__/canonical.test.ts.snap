@@ -80,8 +80,22 @@ exports[`Canonical Send Header I can see the branding 1`] = `
 
 exports[`Canonical Send Header Navigation link should match text and url 1`] = `
 {
-  "text": "Bogga hadda, War",
+  "text": "War",
   "url": "/somali",
+}
+`;
+
+exports[`Canonical Send Header Navigation link should match text and url 2`] = `
+{
+  "text": "Daawo",
+  "url": "/somali/topics/c7pl4k5r9xxt",
+}
+`;
+
+exports[`Canonical Send Header Navigation link should match text and url 3`] = `
+{
+  "text": "Dhageyso",
+  "url": "/somali/topics/cn6rqlrkm0pt",
 }
 `;
 

@@ -131,8 +131,15 @@ exports[`Canonical Photo Gallery Page Header I can see the branding 1`] = `
 
 exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 1`] = `
 {
-  "text": "หน้าปัจจุบัน, หน้าแรก",
+  "text": "หน้าแรก",
   "url": "/thai",
+}
+`;
+
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 2`] = `
+{
+  "text": "รับชมวิดีโอ",
+  "url": "/thai/topics/c5ljd3jng4nt",
 }
 `;
 
@@ -141,7 +148,7 @@ exports[`Canonical Photo Gallery Page Image Caption should match text 1`] = `"�
 exports[`Canonical Photo Gallery Page Image should match snapshot 1`] = `
 <img
   alt="ดอกไม้ถูกนำมาวางไว้ที่ประติมานุสรณ์"
-  class="css-1seqhu9"
+  class="css-zfe4bz"
   fetchpriority="high"
   height="549"
   loading="eager"

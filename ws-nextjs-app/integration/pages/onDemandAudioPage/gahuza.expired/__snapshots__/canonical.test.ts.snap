@@ -131,8 +131,22 @@ exports[`Canonical On Demand Audio Page Header I can see the branding 1`] = `
 
 exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 1`] = `
 {
-  "text": "Uru rupapuro, Urupapuro rw'itangiriro",
+  "text": "Urupapuro rw'itangiriro",
   "url": "/gahuza",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 2`] = `
+{
+  "text": "Raba",
+  "url": "/gahuza/topics/cpqx1yvd5ydt",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 3`] = `
+{
+  "text": "Uru rupapuro, Umviriza",
+  "url": "/gahuza/bbc_gahuza_radio/liveradio",
 }
 `;
 
