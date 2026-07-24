@@ -13,6 +13,11 @@ const styles = {
     maxWidth: '63rem',
     margin: '0 auto',
   }),
+  innerContent: css({
+    '.no-js &': {
+      display: 'none',
+    },
+  }),
 
   heading: ({ spacings, mq }: Theme) =>
     css({
