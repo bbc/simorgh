@@ -120,6 +120,10 @@ const HeaderContainer = ({
     ? NewNavigationContainer
     : LegacyNavigationContainer;
 
+  const brandBarAccountHeader = shouldShowNewLogoBanner ? null : (
+    <AccountHeader />
+  );
+
   return (
     <header role="banner" lang={serviceLang}>
       {shouldShowNewLogoBanner && <NewLogoBanner />}
@@ -130,7 +134,7 @@ const HeaderContainer = ({
           scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
           css={headerBrandCss}
         >
-          <AccountHeader />
+          {brandBarAccountHeader}
         </Header>
       ) : (
         <Header
@@ -139,7 +143,7 @@ const HeaderContainer = ({
           scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
           css={headerBrandCss}
         >
-          <AccountHeader />
+          {brandBarAccountHeader}
         </Header>
       )}
       {isLite && <LiteSiteSummary />}
