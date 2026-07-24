@@ -46,6 +46,7 @@ const fetchConfig = async <T>({
   }
 
   const bffReqPath = fetchUrl.toString();
+  console.log('[fetchConfig] endpoint:', bffReqPath);
 
   const cachedResponse = cache.get(bffReqPath);
 
@@ -55,7 +56,10 @@ const fetchConfig = async <T>({
     cached: !!cachedResponse,
   });
 
-  if (cachedResponse) return cachedResponse as T;
+  if (cachedResponse) {
+    console.log('[fetchConfig] cache hit, returning cached response');
+    return cachedResponse as T;
+  }
 
   const environment = getEnvironment(pagePath);
   const isLocal = !environment || environment === 'local';
@@ -73,6 +77,7 @@ const fetchConfig = async <T>({
 
     if (response.ok) {
       const res = await response.json();
+      console.log('[fetchConfig] response body:', res);
       cache.set(bffReqPath, res);
       return res as T;
     }
