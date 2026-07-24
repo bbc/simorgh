@@ -341,6 +341,16 @@ describe('Navigation', () => {
       { title: 'Listen', url: '/hausa/bbc_hausa_radio/liveradio' },
     ];
 
+    const navItemsWithSubItemsOnHome = [
+      {
+        title: 'Home',
+        url: '/hausa',
+        subItems: [{ title: 'Health', url: '/hausa/topics/c0000000000t' }],
+      },
+      { title: 'Watch', url: '/hausa/bbc_hausa_tv' },
+      { title: 'Listen', url: '/hausa/bbc_hausa_radio/liveradio' },
+    ];
+
     const navItemsWithoutWatchOrListen = [{ title: 'Home', url: '/news' }];
 
     it('highlights Home for an article page with no URL match', () => {
@@ -354,6 +364,8 @@ describe('Navigation', () => {
       );
       const activeLink = container.querySelector('[data-active="true"]');
       expect(activeLink).toHaveAttribute('href', '/news');
+      expect(activeLink).not.toHaveAttribute('aria-labelledby');
+      expect(activeLink).not.toHaveAttribute('aria-current');
     });
 
     it('highlights Home for an article page with no primaryMediaType, even with Watch/Listen nav items', () => {
@@ -367,6 +379,8 @@ describe('Navigation', () => {
       );
       const activeLink = container.querySelector('[data-active="true"]');
       expect(activeLink).toHaveAttribute('href', '/hausa');
+      expect(activeLink).not.toHaveAttribute('aria-labelledby');
+      expect(activeLink).not.toHaveAttribute('aria-current');
     });
 
     it('highlights Listen nav item for an article page with audio primaryMediaType', () => {
@@ -383,6 +397,8 @@ describe('Navigation', () => {
         'href',
         '/hausa/bbc_hausa_radio/liveradio',
       );
+      expect(activeLink).toHaveAttribute('aria-labelledby');
+      expect(activeLink).toHaveAttribute('aria-current', 'page');
     });
 
     it('highlights Watch nav item for an article page with video primaryMediaType', () => {
@@ -396,6 +412,8 @@ describe('Navigation', () => {
       );
       const activeLink = container.querySelector('[data-active="true"]');
       expect(activeLink).toHaveAttribute('href', '/hausa/bbc_hausa_tv');
+      expect(activeLink).toHaveAttribute('aria-labelledby');
+      expect(activeLink).toHaveAttribute('aria-current', 'page');
     });
 
     it('falls back to Home for an article page with audio primaryMediaType when no Listen nav item exists', () => {
@@ -412,6 +430,8 @@ describe('Navigation', () => {
       );
       const activeLink = container.querySelector('[data-active="true"]');
       expect(activeLink).toHaveAttribute('href', '/news');
+      expect(activeLink).not.toHaveAttribute('aria-labelledby');
+      expect(activeLink).not.toHaveAttribute('aria-current');
     });
 
     it('highlights Home for a topic page with no URL match', () => {
@@ -425,6 +445,23 @@ describe('Navigation', () => {
       );
       const activeLink = container.querySelector('[data-active="true"]');
       expect(activeLink).toHaveAttribute('href', '/news');
+      expect(activeLink).not.toHaveAttribute('aria-labelledby');
+      expect(activeLink).not.toHaveAttribute('aria-current');
+    });
+
+    it('highlights Home for a topic page nested under Home as a subItem, without announcing current page', () => {
+      const { container } = render(
+        <Navigation navItems={navItemsWithSubItemsOnHome} />,
+        {
+          ...commonProps,
+          pageType: TOPIC_PAGE,
+          pathname: '/hausa/topics/c0000000000t',
+        },
+      );
+      const activeLink = container.querySelector('[data-active="true"]');
+      expect(activeLink).toHaveAttribute('href', '/hausa');
+      expect(activeLink).not.toHaveAttribute('aria-labelledby');
+      expect(activeLink).not.toHaveAttribute('aria-current');
     });
 
     it('highlights Watch nav item for a tv page type', () => {
@@ -438,9 +475,11 @@ describe('Navigation', () => {
       );
       const activeLink = container.querySelector('[data-active="true"]');
       expect(activeLink).toHaveAttribute('href', '/hausa/bbc_hausa_tv');
+      expect(activeLink).toHaveAttribute('aria-labelledby');
+      expect(activeLink).toHaveAttribute('aria-current', 'page');
     });
 
-    it('highlights Watch nav item for a liveTV page type', () => {
+    it('highlights Watch nav item for a liveTV page type via a matching subItem URL', () => {
       const { container } = render(
         <Navigation navItems={navItemsWithSubItemWatch} />,
         {
@@ -451,6 +490,38 @@ describe('Navigation', () => {
       );
       const activeLink = container.querySelector('[data-active="true"]');
       expect(activeLink).toHaveAttribute('href', '/hausa/watch');
+      expect(activeLink).toHaveAttribute('aria-labelledby');
+      expect(activeLink).toHaveAttribute('aria-current', 'page');
+    });
+
+    it('highlights Watch nav item for a liveTV page type with no URL match', () => {
+      const { container } = render(
+        <Navigation navItems={navItemsWithWatch} />,
+        {
+          ...commonProps,
+          pageType: LIVE_TV_PAGE,
+          pathname: '/hausa/live-tv-page-not-in-nav',
+        },
+      );
+      const activeLink = container.querySelector('[data-active="true"]');
+      expect(activeLink).toHaveAttribute('href', '/hausa/bbc_hausa_tv');
+      expect(activeLink).toHaveAttribute('aria-labelledby');
+      expect(activeLink).toHaveAttribute('aria-current', 'page');
+    });
+
+    it('falls back to Home for a liveTV page type when no Watch nav item exists', () => {
+      const { container } = render(
+        <Navigation navItems={navItemsWithoutWatchOrListen} />,
+        {
+          ...commonProps,
+          pageType: LIVE_TV_PAGE,
+          pathname: '/news/bbc_news_tv/tv/live',
+        },
+      );
+      const activeLink = container.querySelector('[data-active="true"]');
+      expect(activeLink).toHaveAttribute('href', '/news');
+      expect(activeLink).not.toHaveAttribute('aria-labelledby');
+      expect(activeLink).not.toHaveAttribute('aria-current');
     });
 
     it('highlights Watch nav item for a mediaArticle page type', () => {
@@ -464,6 +535,8 @@ describe('Navigation', () => {
       );
       const activeLink = container.querySelector('[data-active="true"]');
       expect(activeLink).toHaveAttribute('href', '/hausa/bbc_hausa_tv');
+      expect(activeLink).toHaveAttribute('aria-labelledby');
+      expect(activeLink).toHaveAttribute('aria-current', 'page');
     });
 
     it('falls back to Home for a video mediaArticle page type when no Watch nav item exists', () => {
@@ -480,6 +553,8 @@ describe('Navigation', () => {
       );
       const activeLink = container.querySelector('[data-active="true"]');
       expect(activeLink).toHaveAttribute('href', '/news');
+      expect(activeLink).not.toHaveAttribute('aria-labelledby');
+      expect(activeLink).not.toHaveAttribute('aria-current');
     });
 
     it('highlights Listen nav item for an audio mediaArticle page type', () => {
@@ -496,6 +571,8 @@ describe('Navigation', () => {
         'href',
         '/hausa/bbc_hausa_radio/liveradio',
       );
+      expect(activeLink).toHaveAttribute('aria-labelledby');
+      expect(activeLink).toHaveAttribute('aria-current', 'page');
     });
 
     it('falls back to Home for an audio mediaArticle page type when no Listen nav item exists', () => {
@@ -512,6 +589,8 @@ describe('Navigation', () => {
       );
       const activeLink = container.querySelector('[data-active="true"]');
       expect(activeLink).toHaveAttribute('href', '/news');
+      expect(activeLink).not.toHaveAttribute('aria-labelledby');
+      expect(activeLink).not.toHaveAttribute('aria-current');
     });
 
     it('highlights Listen nav item for an audio page type', () => {
@@ -528,9 +607,11 @@ describe('Navigation', () => {
         'href',
         '/hausa/bbc_hausa_radio/liveradio',
       );
+      expect(activeLink).toHaveAttribute('aria-labelledby');
+      expect(activeLink).toHaveAttribute('aria-current', 'page');
     });
 
-    it('highlights Listen nav item for a liveRadio page type', () => {
+    it('highlights Listen nav item for a liveRadio page type via a matching URL', () => {
       const { container } = render(
         <Navigation navItems={navItemsWithWatch} />,
         {
@@ -544,6 +625,26 @@ describe('Navigation', () => {
         'href',
         '/hausa/bbc_hausa_radio/liveradio',
       );
+      expect(activeLink).toHaveAttribute('aria-labelledby');
+      expect(activeLink).toHaveAttribute('aria-current', 'page');
+    });
+
+    it('highlights Listen nav item for a liveRadio page type with no URL match', () => {
+      const { container } = render(
+        <Navigation navItems={navItemsWithWatch} />,
+        {
+          ...commonProps,
+          pageType: LIVE_RADIO_PAGE,
+          pathname: '/hausa/live-radio-page-not-in-nav',
+        },
+      );
+      const activeLink = container.querySelector('[data-active="true"]');
+      expect(activeLink).toHaveAttribute(
+        'href',
+        '/hausa/bbc_hausa_radio/liveradio',
+      );
+      expect(activeLink).toHaveAttribute('aria-labelledby');
+      expect(activeLink).toHaveAttribute('aria-current', 'page');
     });
 
     it('falls back to Home when on a tv page but no Watch nav item exists', () => {
@@ -557,6 +658,8 @@ describe('Navigation', () => {
       );
       const activeLink = container.querySelector('[data-active="true"]');
       expect(activeLink).toHaveAttribute('href', '/news');
+      expect(activeLink).not.toHaveAttribute('aria-labelledby');
+      expect(activeLink).not.toHaveAttribute('aria-current');
     });
 
     it('falls back to Home when on an audio page but no Listen nav item exists', () => {
@@ -570,6 +673,93 @@ describe('Navigation', () => {
       );
       const activeLink = container.querySelector('[data-active="true"]');
       expect(activeLink).toHaveAttribute('href', '/news');
+      expect(activeLink).not.toHaveAttribute('aria-labelledby');
+      expect(activeLink).not.toHaveAttribute('aria-current');
+    });
+
+    it('announces Home when on a HOME_PAGE type at the home URL', () => {
+      const { container } = render(
+        <Navigation navItems={navItemsWithWatch} />,
+        {
+          ...commonProps,
+          pageType: HOME_PAGE,
+          pathname: '/hausa',
+        },
+      );
+      const activeLink = container.querySelector('[data-active="true"]');
+      expect(activeLink).toHaveAttribute('href', '/hausa');
+      expect(activeLink).toHaveAttribute('aria-labelledby');
+      expect(activeLink).toHaveAttribute('aria-current', 'page');
+      expect(container).toMatchSnapshot();
+    });
+
+    it('announces Home when URL directly matches Home nav item (direct match takes precedence)', () => {
+      const { container } = render(
+        <Navigation navItems={navItemsWithWatch} />,
+        {
+          ...commonProps,
+          pageType: ARTICLE_PAGE,
+          pathname: '/hausa',
+        },
+      );
+      const activeLink = container.querySelector('[data-active="true"]');
+      expect(activeLink).toHaveAttribute('href', '/hausa');
+      expect(activeLink).toHaveAttribute('aria-labelledby');
+      expect(activeLink).toHaveAttribute('aria-current', 'page');
+    });
+
+    it('announces Watch when URL directly matches Watch nav item (non-TV page type)', () => {
+      const { container } = render(
+        <Navigation navItems={navItemsWithWatch} />,
+        {
+          ...commonProps,
+          pageType: ARTICLE_PAGE,
+          pathname: '/hausa/bbc_hausa_tv',
+        },
+      );
+      const activeLink = container.querySelector('[data-active="true"]');
+      expect(activeLink).toHaveAttribute('href', '/hausa/bbc_hausa_tv');
+      expect(activeLink).toHaveAttribute('aria-labelledby');
+      expect(activeLink).toHaveAttribute('aria-current', 'page');
+    });
+
+    it('announces Listen when URL directly matches Listen nav item (non-audio page type)', () => {
+      const { container } = render(
+        <Navigation navItems={navItemsWithWatch} />,
+        {
+          ...commonProps,
+          pageType: ARTICLE_PAGE,
+          pathname: '/hausa/bbc_hausa_radio/liveradio',
+        },
+      );
+      const activeLink = container.querySelector('[data-active="true"]');
+      expect(activeLink).toHaveAttribute(
+        'href',
+        '/hausa/bbc_hausa_radio/liveradio',
+      );
+      expect(activeLink).toHaveAttribute('aria-labelledby');
+      expect(activeLink).toHaveAttribute('aria-current', 'page');
+    });
+
+    it('highlights dropdown item when URL matches a nested topic subItem on Home', () => {
+      const { container } = render(
+        <Navigation navItems={navItemsWithSubItemsOnHome} />,
+        {
+          ...commonProps,
+          pageType: TOPIC_PAGE,
+          pathname: '/hausa/topics/c0000000000t',
+        },
+      );
+      // Check that the top-level Home is active in scrollable nav
+      const activeLink = container.querySelector('[data-active="true"]');
+      expect(activeLink).toHaveAttribute('href', '/hausa');
+
+      // Verify the active state has no announcement for Home with subItem match
+      expect(activeLink).not.toHaveAttribute('aria-labelledby');
+      expect(activeLink).not.toHaveAttribute('aria-current');
+
+      // Check snapshot to verify dropdown nav structure shows the matching subItem
+      expect(container).toMatchSnapshot();
     });
   });
 
