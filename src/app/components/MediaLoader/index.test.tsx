@@ -5,7 +5,7 @@ import {
 } from '#app/components/react-testing-library-with-providers';
 import { Helmet } from 'react-helmet';
 import useLocation from '#app/hooks/useLocation';
-import { TOPIC_PAGE, TV_PAGE } from '#app/routes/utils/pageTypes';
+import { HOME_PAGE, TOPIC_PAGE, TV_PAGE } from '#app/routes/utils/pageTypes';
 import MediaPlayer from '.';
 import {
   aresMediaBlocks,
@@ -288,32 +288,50 @@ describe('MediaLoader', () => {
       );
     });
 
-    it('should use the containing topic page identifier for in-situ media blocks', async () => {
-      const buildConfigSpy = jest.spyOn(buildConfig, 'default');
+    it.each([
+      {
+        pageName: 'Home',
+        pageType: HOME_PAGE,
+        pageTitle: 'BBC News عربي',
+        pageIdentifier: 'arabic.page',
+        contentType: 'index-home',
+      },
+      {
+        pageName: 'Topic',
+        pageType: TOPIC_PAGE,
+        pageTitle: 'موضوع - BBC News عربي',
+        pageIdentifier: 'arabic.topics.cz9mm6r1q5et.page',
+        contentType: 'index-category',
+      },
+    ])(
+      'should use the containing $pageName page identifier for in-situ media blocks',
+      async ({ pageType, pageTitle, pageIdentifier, contentType }) => {
+        const buildConfigSpy = jest.spyOn(buildConfig, 'default');
 
-      await act(async () => {
-        render(<MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} />, {
-          service: 'arabic',
-          pageMetadata: {
-            atiAnalytics: {
-              language: 'ar',
-              pageTitle: 'موضوع - BBC News عربي',
-              pageIdentifier: 'arabic.topics.cz9mm6r1q5et.page',
-              contentType: 'list-datadriven',
+        await act(async () => {
+          render(<MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} />, {
+            service: 'arabic',
+            pageMetadata: {
+              atiAnalytics: {
+                language: 'ar',
+                pageTitle,
+                pageIdentifier,
+                contentType,
+              },
+              type: pageType,
             },
-            type: TOPIC_PAGE,
-          },
-          pageType: TOPIC_PAGE,
-          toggles: { eventTracking: { enabled: true } },
+            pageType,
+            toggles: { eventTracking: { enabled: true } },
+          });
         });
-      });
 
-      expect(buildConfigSpy).toHaveBeenCalledWith(
-        expect.objectContaining({
-          counterName: 'arabic.topics.cz9mm6r1q5et.page',
-        }),
-      );
-    });
+        expect(buildConfigSpy).toHaveBeenCalledWith(
+          expect.objectContaining({
+            counterName: pageIdentifier,
+          }),
+        );
+      },
+    );
   });
 
   describe('AMP', () => {
