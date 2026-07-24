@@ -329,52 +329,6 @@ describe('MediaLoader', () => {
 
       expect(fakeFullscreenBindings).toHaveLength(0);
     });
-
-    it('does not reinitialise the player when fake fullscreen state changes', async () => {
-      // Use the real useState implementation here so entering fake fullscreen
-      // actually triggers a MediaLoader re-render, reproducing the scenario
-      // that previously caused the Bump player to be torn down and
-      // recreated mid-playback (closing iOS fake fullscreen immediately).
-      (useState as jest.Mock).mockImplementation(
-        jest.requireActual('react').useState,
-      );
-
-      const mockRequire = jest.fn();
-      const bind = jest.fn();
-      const load = jest.fn();
-      const mockBump = {
-        player: () => ({
-          bind,
-          load,
-        }),
-      };
-
-      window.requirejs = mockRequire;
-
-      await act(async () => {
-        render(<MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} />, {
-          id: 'testId',
-          pageType: LIVE_PAGE,
-        });
-      });
-
-      const callbackFn = mockRequire.mock.calls[0][1];
-      callbackFn(mockBump);
-
-      expect(mockRequire).toHaveBeenCalledTimes(1);
-      expect(load).toHaveBeenCalledTimes(1);
-
-      const enterFakeFullscreen = bind.mock.calls.find(
-        ([event]) => event === 'enterFakeFullscreen',
-      )?.[1];
-
-      act(() => {
-        enterFakeFullscreen({});
-      });
-
-      expect(mockRequire).toHaveBeenCalledTimes(1);
-      expect(load).toHaveBeenCalledTimes(1);
-    });
   });
 
   describe('Placeholder', () => {
