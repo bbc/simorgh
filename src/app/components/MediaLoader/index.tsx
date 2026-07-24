@@ -13,6 +13,7 @@ import {
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import { PageTypes } from '#app/models/types/global';
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
+import onClient from '#app/lib/utilities/onClient';
 import {
   BumpType,
   EventMapping,
@@ -39,6 +40,52 @@ const PAGETYPES_IGNORE_PLACEHOLDER: PageTypes[] = [
 ];
 
 const logger = nodeLogger(__filename);
+const PLAYER_FULLSCREEN_CLASS = 'simorgh-player-fullscreen';
+const FAKE_FULLSCREEN_LAYER_CLASS = 'simorgh-fake-fullscreen-layer';
+const FAKE_FULLSCREEN_ACTIVE_CLASS = 'simorgh-player-fullscreen-active';
+const ACTIVE_FULLSCREEN_LOADER_STATE = 'active-fake-fullscreen';
+
+const fakeFullscreenStyles = `
+  html.${PLAYER_FULLSCREEN_CLASS} {
+    overflow: hidden;
+  }
+
+  body.${PLAYER_FULLSCREEN_CLASS} {
+    overflow: auto;
+  }
+
+  .${FAKE_FULLSCREEN_LAYER_CLASS} {
+    display: none;
+    background: #000;
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    height: 100lvh;
+    width: 100vw;
+    outline: 1000px solid #000;
+    z-index: 2147483646;
+  }
+
+  .${FAKE_FULLSCREEN_LAYER_CLASS}.${FAKE_FULLSCREEN_ACTIVE_CLASS} {
+    display: block;
+  }
+
+  [data-simorgh-media-loader="${ACTIVE_FULLSCREEN_LOADER_STATE}"] {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    max-width: none !important;
+    height: 100lvh !important;
+    margin: 0 !important;
+    aspect-ratio: auto !important;
+    background: #000 !important;
+    z-index: 2147483647 !important;
+  }
+
+  [data-simorgh-media-loader="${ACTIVE_FULLSCREEN_LOADER_STATE}"] .media-player {
+    height: 100% !important;
+  }
+`;
 
 type BumpLoaderProps = {
   nonce?: string | null;
@@ -109,6 +156,8 @@ type MediaContainerProps = {
   uniqueId?: string;
   noJsMessage?: string;
   eventMapping?: EventMapping;
+  shouldHandleFakeFullscreen?: boolean;
+  onFakeFullscreenChange?: (isActive: boolean) => void;
 };
 
 const isAudioPlayer = (playerConfig: PlayerConfig) =>
@@ -120,9 +169,14 @@ const MediaContainer = ({
   uniqueId,
   noJsMessage,
   eventMapping,
+  shouldHandleFakeFullscreen = false,
+  onFakeFullscreenChange,
 }: MediaContainerProps) => {
   const playerElementRef = useRef<HTMLDivElement>(null);
+  const onFakeFullscreenChangeRef = useRef(onFakeFullscreenChange);
   const isAudio = isAudioPlayer(playerConfig);
+
+  onFakeFullscreenChangeRef.current = onFakeFullscreenChange;
 
   useEffect(() => {
     try {
@@ -130,9 +184,13 @@ const MediaContainer = ({
         if (playerElementRef?.current && playerConfig) {
           // The requirejs callback cannot be async, so we wrap async logic in an inner function and invoke it immediately.
           const initPlayer = async () => {
+            const effectiveConfig = shouldHandleFakeFullscreen
+              ? { ...playerConfig, supportFakeFullscreen: true }
+              : playerConfig;
+
             const mediaPlayer = Bump.player(
               playerElementRef.current,
-              playerConfig,
+              effectiveConfig,
             );
 
             if (uniqueId != null) {
@@ -151,6 +209,15 @@ const MediaContainer = ({
                 const handler = eventMapping[key];
 
                 if (handler) mediaPlayer.bind(key, handler);
+              });
+            }
+
+            if (shouldHandleFakeFullscreen) {
+              mediaPlayer.bind('enterFakeFullscreen', () => {
+                onFakeFullscreenChangeRef.current?.(true);
+              });
+              mediaPlayer.bind('exitFakeFullscreen', () => {
+                onFakeFullscreenChangeRef.current?.(false);
               });
             }
 
@@ -195,7 +262,13 @@ const MediaContainer = ({
     } catch (error) {
       logger.error(MEDIA_PLAYER_STATUS, error);
     }
-  }, [playerConfig, showAds, uniqueId, eventMapping]);
+  }, [
+    playerConfig,
+    showAds,
+    uniqueId,
+    eventMapping,
+    shouldHandleFakeFullscreen,
+  ]);
 
   return (
     <div
@@ -243,6 +316,20 @@ const MediaLoader = ({
   const [showPlaceholder, setShowPlaceholder] = useState(
     !PAGETYPES_IGNORE_PLACEHOLDER.includes(pageType),
   );
+  const [isFakeFullscreenActive, setIsFakeFullscreenActive] = useState(false);
+  // Tracks whether *this* instance is the one that set the global fullscreen
+  // classes, so its cleanup does not clobber another player's active fullscreen state.
+  const hasActivatedFakeFullscreenRef = useRef(false);
+
+  useEffect(() => {
+    return () => {
+      if (!onClient()) return;
+      if (!hasActivatedFakeFullscreenRef.current) return;
+
+      document.documentElement.classList.remove(PLAYER_FULLSCREEN_CLASS);
+      document.body.classList.remove(PLAYER_FULLSCREEN_CLASS);
+    };
+  }, []);
 
   if (isLite) return null;
 
@@ -293,6 +380,19 @@ const MediaLoader = ({
   const noJsMessage = translatedNoJSMessage || translations?.media?.noJs;
 
   const hasPlaceholder = Boolean(showPlaceholder && placeholderSrc);
+  const shouldHandleFakeFullscreen = !isAmp && !embedded && !isAudio;
+
+  const setFakeFullscreenPageState = (isActive: boolean) => {
+    if (!onClient()) return;
+
+    document.documentElement.classList.toggle(
+      PLAYER_FULLSCREEN_CLASS,
+      isActive,
+    );
+    document.body.classList.toggle(PLAYER_FULLSCREEN_CLASS, isActive);
+    hasActivatedFakeFullscreenRef.current = isActive;
+    setIsFakeFullscreenActive(isActive);
+  };
 
   return (
     <>
@@ -322,9 +422,33 @@ const MediaLoader = ({
             noJsMessage={noJsMessage}
           />
         ) : (
-          <>
+          // This wrapper - rather than the figure - is what gets forced above
+          // page content during fake fullscreen, so the Caption below (page
+          // furniture) is never pulled into the fullscreen layer with it.
+          <div
+            data-simorgh-media-loader={
+              isFakeFullscreenActive
+                ? ACTIVE_FULLSCREEN_LOADER_STATE
+                : 'inactive'
+            }
+          >
             {showAds && <AdvertTagLoader />}
             <BumpLoader nonce={nonce} />
+            {shouldHandleFakeFullscreen && (
+              <Helmet>
+                <style type="text/css">{fakeFullscreenStyles}</style>
+              </Helmet>
+            )}
+            {shouldHandleFakeFullscreen && (
+              <div
+                aria-hidden="true"
+                className={`${FAKE_FULLSCREEN_LAYER_CLASS}${
+                  isFakeFullscreenActive
+                    ? ` ${FAKE_FULLSCREEN_ACTIVE_CLASS}`
+                    : ''
+                }`}
+              />
+            )}
             {hasPlaceholder ? (
               <Placeholder
                 src={placeholderSrc}
@@ -341,9 +465,11 @@ const MediaLoader = ({
                 uniqueId={uniqueId}
                 noJsMessage={noJsMessage}
                 eventMapping={eventMapping}
+                shouldHandleFakeFullscreen={shouldHandleFakeFullscreen}
+                onFakeFullscreenChange={setFakeFullscreenPageState}
               />
             )}
-          </>
+          </div>
         )}
         {captionBlock && (
           <Caption
