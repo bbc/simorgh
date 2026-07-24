@@ -7,6 +7,7 @@ export type OJComponentKey =
   | 'featuredArticles'
   | 'locationBasedOJ';
 
+// temp variant names for now - these will change based on optimizely set-up
 export type SearchVariant =
   | 'variant1related'
   | 'variant2recommended'
@@ -15,6 +16,7 @@ export type SearchVariant =
   | 'variant5recommendedAndMid'
   | 'variant6hybridAndMid';
 
+// temp variant names for now - these will change based on optimizely set-up
 export const SEARCH_COMPONENT_ORDER: Record<SearchVariant, OJComponentKey[]> = {
   variant1related: [
     'topicDiscovery',
