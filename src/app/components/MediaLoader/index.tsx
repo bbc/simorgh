@@ -1,4 +1,4 @@
-import { use, useEffect, useRef, useState } from 'react';
+import { use, useEffect, useMemo, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
 import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
@@ -331,28 +331,53 @@ const MediaLoader = ({
     };
   }, []);
 
-  if (isLite) return null;
-
   const { model: mediaOverrides } =
     filterForBlockType(blocks, 'mediaOverrides') || {};
 
   const producer = getProducerFromServiceName(service);
-  const config = buildConfig({
-    id: id || '',
-    blocks,
-    counterName: mediaOverrides?.pageIdentifierOverride || pageIdentifier,
-    statsDestination,
-    producer,
-    isAmp,
-    lang,
-    pageType,
-    service,
-    translations,
-    adsEnabled,
-    showAdsBasedOnLocation,
-    embedded,
-    defaultImage,
-  });
+  const counterName = mediaOverrides?.pageIdentifierOverride || pageIdentifier;
+
+  // Memoised so playerConfig keeps a stable identity across re-renders that
+  // aren't caused by a real input change (e.g. the fake fullscreen state
+  // toggling), otherwise MediaContainer treats it as a new config and
+  // tears down/recreates the Bump player mid-playback.
+  const config = useMemo(
+    () =>
+      buildConfig({
+        id: id || '',
+        blocks,
+        counterName,
+        statsDestination,
+        producer,
+        isAmp,
+        lang,
+        pageType,
+        service,
+        translations,
+        adsEnabled,
+        showAdsBasedOnLocation,
+        embedded,
+        defaultImage,
+      }),
+    [
+      id,
+      blocks,
+      counterName,
+      statsDestination,
+      producer,
+      isAmp,
+      lang,
+      pageType,
+      service,
+      translations,
+      adsEnabled,
+      showAdsBasedOnLocation,
+      embedded,
+      defaultImage,
+    ],
+  );
+
+  if (isLite) return null;
 
   if (!config) return null;
 
