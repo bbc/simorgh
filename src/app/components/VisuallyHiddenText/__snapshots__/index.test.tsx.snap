@@ -8,6 +8,8 @@ exports[`VisuallyHiddenText should render off screen text for screen readers 1`]
   height: 1px;
   overflow: hidden;
   position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   width: 1px;
   margin: 0;
   white-space: nowrap;
@@ -28,6 +30,8 @@ exports[`VisuallyHiddenText should render off screen text for screen readers as 
   height: 1px;
   overflow: hidden;
   position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   width: 1px;
   margin: 0;
   white-space: nowrap;
@@ -48,6 +52,8 @@ exports[`VisuallyHiddenText should render off screen text for screen readers as 
   height: 1px;
   overflow: hidden;
   position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   width: 1px;
   margin: 0;
   white-space: nowrap;

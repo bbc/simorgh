@@ -67,6 +67,8 @@ exports[`PlayButton should render audio correctly without duration details 1`] =
   height: 1px;
   overflow: hidden;
   position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   width: 1px;
   margin: 0;
   white-space: nowrap;
@@ -195,6 +197,8 @@ exports[`PlayButton should render audio indicator correctly 1`] = `
   height: 1px;
   overflow: hidden;
   position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   width: 1px;
   margin: 0;
   white-space: nowrap;
@@ -346,6 +350,8 @@ exports[`PlayButton should render video by default 1`] = `
   height: 1px;
   overflow: hidden;
   position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   width: 1px;
   margin: 0;
   white-space: nowrap;
@@ -481,6 +487,8 @@ exports[`PlayButton should render video correctly with duration and guidance mes
   height: 1px;
   overflow: hidden;
   position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   width: 1px;
   margin: 0;
   white-space: nowrap;
@@ -639,6 +647,8 @@ exports[`PlayButton should render video correctly without duration details 1`] =
   height: 1px;
   overflow: hidden;
   position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   width: 1px;
   margin: 0;
   white-space: nowrap;
@@ -774,6 +784,8 @@ exports[`PlayButton should render video indicator correctly 1`] = `
   height: 1px;
   overflow: hidden;
   position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   width: 1px;
   margin: 0;
   white-space: nowrap;

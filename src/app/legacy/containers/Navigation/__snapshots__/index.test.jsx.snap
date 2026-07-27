@@ -110,6 +110,8 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   height: 1px;
   overflow: hidden;
   position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   width: 1px;
   margin: 0;
   white-space: nowrap;
@@ -962,6 +964,8 @@ exports[`Navigation Container should correctly render amp navigation on non-home
   height: 1px;
   overflow: hidden;
   position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   width: 1px;
   margin: 0;
   white-space: nowrap;
@@ -1711,6 +1715,8 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
   height: 1px;
   overflow: hidden;
   position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   width: 1px;
   margin: 0;
   white-space: nowrap;
@@ -2458,6 +2464,8 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   height: 1px;
   overflow: hidden;
   position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   width: 1px;
   margin: 0;
   white-space: nowrap;
@@ -3315,6 +3323,8 @@ exports[`Navigation Container should correctly render canonical navigation on no
   height: 1px;
   overflow: hidden;
   position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   width: 1px;
   margin: 0;
   white-space: nowrap;
@@ -4069,6 +4079,8 @@ exports[`Navigation Container should correctly render canonical navigation on no
   height: 1px;
   overflow: hidden;
   position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   width: 1px;
   margin: 0;
   white-space: nowrap;

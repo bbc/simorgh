@@ -295,6 +295,8 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
   height: 1px;
   overflow: hidden;
   position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   width: 1px;
   margin: 0;
   white-space: nowrap;

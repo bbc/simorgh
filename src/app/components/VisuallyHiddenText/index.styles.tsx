@@ -8,6 +8,8 @@ const styles = {
       height: '1px',
       overflow: 'hidden',
       position: 'absolute',
+      insetBlockStart: 0,
+      insetInlineStart: 0,
       width: '1px',
       margin: '0',
       whiteSpace: 'nowrap',

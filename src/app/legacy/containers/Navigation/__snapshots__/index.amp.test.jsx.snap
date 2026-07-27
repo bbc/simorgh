@@ -110,6 +110,8 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
   height: 1px;
   overflow: hidden;
   position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   width: 1px;
   margin: 0;
   white-space: nowrap;

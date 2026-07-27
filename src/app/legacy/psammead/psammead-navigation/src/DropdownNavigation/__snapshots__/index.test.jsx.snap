@@ -65,6 +65,8 @@ exports[`Canonical Closed menu button should render correctly 1`] = `
   height: 1px;
   overflow: hidden;
   position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   width: 1px;
   margin: 0;
   white-space: nowrap;
@@ -164,6 +166,8 @@ exports[`Canonical Closed menu button should render rtl correctly 1`] = `
   height: 1px;
   overflow: hidden;
   position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   width: 1px;
   margin: 0;
   white-space: nowrap;
@@ -263,6 +267,8 @@ exports[`Canonical Open menu button should render correctly 1`] = `
   height: 1px;
   overflow: hidden;
   position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   width: 1px;
   margin: 0;
   white-space: nowrap;
@@ -363,6 +369,8 @@ exports[`Canonical Open menu button should render rtl correctly 1`] = `
   height: 1px;
   overflow: hidden;
   position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   width: 1px;
   margin: 0;
   white-space: nowrap;
@@ -463,6 +471,8 @@ exports[`Dropdown navigation AMP Menu Button should render correctly 1`] = `
   height: 1px;
   overflow: hidden;
   position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   width: 1px;
   margin: 0;
   white-space: nowrap;
@@ -589,6 +599,8 @@ exports[`Dropdown navigation AMP Menu Button should render rtl correctly 1`] = `
   height: 1px;
   overflow: hidden;
   position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   width: 1px;
   margin: 0;
   white-space: nowrap;
@@ -739,6 +751,8 @@ exports[`Dropdown navigation should render correctly when closer 1`] = `
   height: 1px;
   overflow: hidden;
   position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   width: 1px;
   margin: 0;
   white-space: nowrap;
@@ -1001,6 +1015,8 @@ exports[`Dropdown navigation should render correctly when open 1`] = `
   height: 1px;
   overflow: hidden;
   position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   width: 1px;
   margin: 0;
   white-space: nowrap;
