@@ -82,7 +82,7 @@ export interface Translations {
     errorText: string;
     loading: string;
   };
-  saveForLaterTooltip: {
+  saveForLaterTooltip?: {
     success: {
       titleBefore: string;
     };
