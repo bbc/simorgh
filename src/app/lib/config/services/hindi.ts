@@ -119,6 +119,7 @@ export const service: DefaultServiceConfig = {
       },
       account: {
         signIn: 'साइन इन',
+        signInAccessibleLabel: 'माय न्यूज़ में साइन इन करें',
         forYou: 'आपका एकाउंट',
         register: 'रजिस्टर',
       },
@@ -152,6 +153,8 @@ export const service: DefaultServiceConfig = {
         errorText:
           'लगता है यह कंटेंट लोड नहीं हो रहा है. कृपया बाद में पुनः प्रयास करें.',
         loading: 'लोड हो रहा है',
+        noJsDescription:
+          'कृपया जावास्क्रिप्ट चालू करें या इस सामग्री को देखने के लिए किसी दूसरे ब्राउज़र का इस्तेमाल करें।',
       },
       gist: 'सारांश',
       error: {

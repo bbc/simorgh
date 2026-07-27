@@ -8,6 +8,9 @@ export const assertPortraitVideoModalComponentView = ({
   path,
   applicationType,
   siteId,
+  expectedItemType,
+  expectedGroupType,
+  expectedItemText,
 }) => {
   const itOrSkip = applicationType === 'lite' ? it.skip : it;
 
@@ -28,6 +31,9 @@ export const assertPortraitVideoModalComponentView = ({
         pageIdentifier,
         applicationType,
         siteId,
+        expectedItemType,
+        expectedGroupType,
+        expectedItemText,
       });
     },
   );

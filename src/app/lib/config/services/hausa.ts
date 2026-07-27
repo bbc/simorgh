@@ -83,7 +83,7 @@ export const service: DefaultServiceConfig = {
       home: 'Labaran Duniya',
       continueReading: 'Ci gaba da karantawa',
       topicDiscovery: {
-        heading: 'Gano ƙari',
+        heading: 'Karanta karin labarai',
         moreAboutTopic: 'Ƙari game da {topic}',
         fetchErrorMessage: 'An kasa lodawa. Da fatan a sake gwadawa',
       },
