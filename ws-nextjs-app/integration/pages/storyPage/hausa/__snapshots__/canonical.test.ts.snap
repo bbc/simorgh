@@ -140,7 +140,7 @@ exports[`Canonical Story Page Header Navigation link should match text and url 1
 exports[`Canonical Story Page Header Navigation link should match text and url 2`] = `
 {
   "text": "Kallo",
-  "url": "/hausa/topics/cn09qmz4jryt",
+  "url": "/hausa/topics/cn09qmz4jryt?renderer_env=live",
 }
 `;
 
