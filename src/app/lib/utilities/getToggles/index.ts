@@ -93,18 +93,11 @@ const getMergedToggles = async ({
     }
 
     const responseBody = await response.json();
-    const remoteToggles = responseBody?.toggles ?? responseBody?.data?.toggles;
+    const fetchedToggles = responseBody?.data?.toggles;
 
-    if (!remoteToggles) {
-      const error = new Error() as FetchError;
-      error.status = response.status;
-      error.message = `Invalid toggles response for service: ${service}`;
-      throw error;
-    }
+    cache.set(cacheKey, fetchedToggles);
 
-    cache.set(cacheKey, remoteToggles);
-
-    return { ...localToggles, ...remoteToggles };
+    return { ...localToggles, ...fetchedToggles };
   } catch (error) {
     const { message } = error as FetchError;
 
@@ -121,6 +114,7 @@ const fetchToggles = async (
   params: TogglesParams,
 ): Promise<Record<string, ToggleDefinition>> => {
   const { _environment, ...toggleDefinitions } = await getMergedToggles(params);
+
   return toggleDefinitions;
 };
 
