@@ -85,13 +85,6 @@ exports[`Canonical Send Header Navigation link should match text and url 1`] = `
 }
 `;
 
-exports[`Canonical Send Header Navigation link should match text and url 2`] = `
-{
-  "text": "Video",
-  "url": "/mundo/topics/ck0dg7pe1kgt",
-}
-`;
-
 exports[`Canonical Send UGC form should render a heading 1`] = `"Disculpa, página no encontrada"`;
 
 exports[`Canonical Send UGC form should render a submit button 1`] = `"Enviar"`;
