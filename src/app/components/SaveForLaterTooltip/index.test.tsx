@@ -8,7 +8,9 @@ describe('SaveForLaterTooltip', () => {
   beforeEach(() => jest.clearAllMocks());
 
   it('renders the success title with a My News link', () => {
-    render(<SaveForLaterTooltip status="success" onClose={onClose} />);
+    render(<SaveForLaterTooltip status="success" onClose={onClose} />, {
+      service: 'hindi',
+    });
 
     expect(
       screen.getByText(/This article is now saved to/i),
