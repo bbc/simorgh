@@ -82,6 +82,21 @@ export interface Translations {
     errorText: string;
     loading: string;
   };
+  saveForLaterTooltip: {
+    success: {
+      titleBefore: string;
+    };
+    error: {
+      title: string;
+      body: string;
+    };
+    removed: {
+      titleBefore: string;
+    };
+    myNewsLinkText: string;
+    myNewsUrl: string;
+    closeLabel: string;
+  };
   error: {
     home?: string;
     currentPage?: string;
