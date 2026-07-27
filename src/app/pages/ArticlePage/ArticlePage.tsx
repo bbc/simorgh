@@ -60,6 +60,7 @@ import ContinueReadingButton, {
 } from '#app/components/ContinueReadingButton';
 import SaveArticleButton from '#app/components/SaveArticleButton';
 import AccountPromotionalBannerExperiment from '#app/components/Account/AccountPromotionalBannerExperiment';
+import useNearViewport from '#app/hooks/useNearViewport';
 import ElectionBanner from './ElectionBanner';
 import ArticleMessageBanner from './ArticleMessageBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
@@ -92,6 +93,11 @@ import {
   isPortraitVideoUnderHeadline,
 } from '../../components/MediaLoader/utils/isPortraitVideo';
 import LocationBasedTopicOJ from '../../components/LocationBasedTopicOJ';
+import SearchOjExperiment, {
+  getSearchOjExperimentProps,
+  SearchOjVariant,
+} from './SearchOjExperiment';
+import { MID_ARTICLE_OJ_EXPERIMENT_TRIGGER_ID } from './SearchOjExperiment/config';
 
 const getImageComponent =
   (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (
@@ -152,15 +158,50 @@ const getMpuComponent =
   (allowAdvertising: boolean) => (props: ComponentToRenderProps) =>
     allowAdvertising ? <AdContainer {...props} slotType="mpu" /> : null;
 
-const getWsojComponent = ({
+type SearchOjWsojProps = {
+  data: Recommendation[];
+  experimentProps?: ComponentExperimentProps;
+  onVariantResolved: (variant: SearchOjVariant | null) => void;
+};
+
+const SearchOjWsoj = ({
   data,
   experimentProps,
-}: {
-  data: Recommendation[];
-  experimentProps?: ComponentExperimentProps | null;
-}) => (
-  <Recommendations data={data} {...(experimentProps && { experimentProps })} />
-);
+  onVariantResolved,
+}: SearchOjWsojProps) => {
+  const hasReachedMidArticleOj = useNearViewport({
+    elementId: MID_ARTICLE_OJ_EXPERIMENT_TRIGGER_ID,
+  });
+
+  return (
+    <div id={MID_ARTICLE_OJ_EXPERIMENT_TRIGGER_ID}>
+      <Recommendations
+        data={data}
+        {...(experimentProps && { experimentProps })}
+      />
+      {hasReachedMidArticleOj && (
+        <SearchOjExperiment onVariantResolved={onVariantResolved} />
+      )}
+    </div>
+  );
+};
+
+const getSearchOjWsojComponent =
+  ({
+    experimentProps,
+    onVariantResolved,
+  }: {
+    experimentProps?: ComponentExperimentProps;
+    onVariantResolved: (variant: SearchOjVariant | null) => void;
+  }) =>
+  ({ data }: { data: Recommendation[] }) => (
+    <SearchOjWsoj
+      data={data}
+      experimentProps={experimentProps}
+      onVariantResolved={onVariantResolved}
+    />
+  );
+
 const DisclaimerWithPaddingOverride = (props: ComponentToRenderProps) => (
   <Disclaimer {...props} increasePaddingOnDesktop={false} />
 );
@@ -207,6 +248,13 @@ const getContinueReadingButton =
   );
 
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
+  const [searchOjVariant, setSearchOjVariant] =
+    useState<SearchOjVariant | null>(null);
+
+  const searchOjExperimentProps = searchOjVariant
+    ? getSearchOjExperimentProps(searchOjVariant)
+    : undefined;
+
   const [showAllContent, setShowAllContent] = useState(false);
   const [isDesktopViewport, setIsDesktopViewport] = useState(false);
   const { isApp, isAmp, isLite, pageType } = use(RequestContext);
@@ -376,10 +424,10 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     group: gist,
     links: ArticleLinksBlock,
     mpu: getMpuComponent(allowAdvertising),
-    wsoj: ({ data }: { data: Recommendation[] }) =>
-      getWsojComponent({
-        data,
-      }),
+    wsoj: getSearchOjWsojComponent({
+      experimentProps: searchOjExperimentProps,
+      onVariantResolved: setSearchOjVariant,
+    }),
     disclaimer: DisclaimerWithPaddingOverride,
     podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
     ...(showContinueReadingButton && {
