@@ -42,15 +42,11 @@ export default {
       flexDirection: 'row',
       flexWrap: 'wrap',
       alignItems: 'baseline',
+      columnGap: `${spacings.FULL + spacings.HALF}rem`,
+      rowGap: `${spacings.FULL}rem`,
       overflow: 'hidden',
       marginBottom: `${spacings.FULL}rem`,
       minWidth: 0,
-      marginTop: `-${spacings.FULL}rem`,
-      marginLeft: `-${spacings.FULL + spacings.HALF}rem`,
-      '& > *': {
-        marginTop: `${spacings.FULL}rem`,
-        marginLeft: `${spacings.FULL + spacings.HALF}rem`,
-      },
       '&:focus-within': {
         overflow: 'visible',
         '.promo-timestamp::before': {
