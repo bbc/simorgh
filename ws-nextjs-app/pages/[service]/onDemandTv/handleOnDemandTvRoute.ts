@@ -74,7 +74,10 @@ export default async (context: GetServerSidePropsContext) => {
     throw handleError('On Demand TV data is malformed', 500);
   }
 
-  const toggles = await getToggles({ service });
+  const toggles = await getToggles({
+    service,
+    pagePath: resolvedUrlWithoutQuery,
+  });
 
   // this keeps the recent episodes toggle matching the express route
   const showRecentEpisodes = toggles?.recentVideoEpisodes?.enabled;

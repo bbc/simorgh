@@ -90,7 +90,10 @@ export default async (context: GetServerSidePropsContext) => {
     throw handleError('AudioPage data is malformed', 500);
   }
 
-  const toggles = await getToggles({ service });
+  const toggles = await getToggles({
+    service,
+    pagePath: resolvedUrlWithoutQuery,
+  });
 
   const { externalLinkVersionId, brandId, recentEpisodes } = pageData;
   const { enabled: scheduleIsEnabled } = toggles.onDemandRadioSchedule;

@@ -1,28 +1,31 @@
-import { LRUCache } from 'lru-cache';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import getToggles from '.';
-import { getEnvConfig } from '../getEnvConfig';
 
-const cacheMaxItems = parseInt(
-  getEnvConfig().SIMORGH_CONFIG_CACHE_ITEMS ?? 400,
-  10,
-);
-const cacheTTL = parseInt(
-  getEnvConfig().SIMORGH_CONFIG_CACHE_MAX_AGE_SECONDS ?? 300,
-  10,
-);
-const cache = new LRUCache({ max: cacheMaxItems, ttl: cacheTTL * 1000 });
+const { WEB_CDN_URL } = getEnvConfig();
+const AMP_TOGGLES_ENDPOINT = `${WEB_CDN_URL}/fd/ws-toggles`;
 
 /**
- * @param {{ service: string, isAmp?: boolean }} params
+ * @param {{ service: string, pagePath: string, isAmp?: boolean }} params
  */
-const withCache = async ({ service, isAmp = false }) => {
-  const simorghToggles = await getToggles({ service, cache });
-
+const withCache = async ({ service, pagePath, isAmp = false }) => {
   if (!isAmp) {
-    return simorghToggles;
+    return getToggles({ service, pagePath });
   }
 
-  const ampToggles = await getToggles({ service, cache, isAmp: true });
+  const [simorghToggles, ampToggles] = await Promise.all([
+    getToggles({
+      service,
+      pagePath,
+      isAmp,
+      overrideEndpoint: AMP_TOGGLES_ENDPOINT,
+    }),
+    getToggles({
+      service,
+      pagePath,
+      isAmp,
+      overrideEndpoint: AMP_TOGGLES_ENDPOINT,
+    }),
+  ]);
 
   return { ...simorghToggles, ...ampToggles };
 };

@@ -82,7 +82,7 @@ export default class CustomApp extends App<Props> {
     };
 
     const [togglesResult, navResult] = await Promise.allSettled([
-      getToggles({ service, isAmp }),
+      getToggles({ service, pagePath: asPath, isAmp }),
       fetchConfig<{ data: { items: Navigation[] } }>({
         service,
         pagePath: asPath,

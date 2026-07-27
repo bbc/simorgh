@@ -34,7 +34,10 @@ export default async (context: GetServerSidePropsContext) => {
     };
   }
 
-  const toggles = await getToggles({ service });
+  const toggles = await getToggles({
+    service,
+    pagePath: resolvedUrlWithoutQuery,
+  });
   const { enabled: scheduleIsEnabled } = toggles.liveRadioSchedule;
   const disableRadioSchedule = !scheduleIsEnabled;
 
