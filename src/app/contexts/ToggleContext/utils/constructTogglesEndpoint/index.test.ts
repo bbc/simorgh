@@ -24,7 +24,7 @@ describe('Toggles endpoint constructor', () => {
 
   it('uses the web-cdn amp endpoint when isAmp is true', () => {
     expect(constructTogglesEndpoint({ service: 'mundo', isAmp: true })).toEqual(
-      `https://web-cdn.test/fd/ws-toggles?service=mundo&application=amp`,
+      `https://web-cdn.test/fd/ws-toggles?service=mundo&application=simorgh`,
     );
   });
 
