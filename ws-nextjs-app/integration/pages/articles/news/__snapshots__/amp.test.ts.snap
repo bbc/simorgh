@@ -110,50 +110,50 @@ exports[`AMP Articles Header Navigation link should match text and url 4`] = `
 
 exports[`AMP Articles Header Navigation link should match text and url 5`] = `
 {
-  "text": "Culture",
-  "url": "/news/entertainment_and_arts",
-}
-`;
-
-exports[`AMP Articles Header Navigation link should match text and url 6`] = `
-{
   "text": "Politics",
   "url": "/news/politics",
 }
 `;
 
-exports[`AMP Articles Header Navigation link should match text and url 7`] = `
-{
-  "text": "Health",
-  "url": "/news/health",
-}
-`;
-
-exports[`AMP Articles Header Navigation link should match text and url 8`] = `
+exports[`AMP Articles Header Navigation link should match text and url 6`] = `
 {
   "text": "Tech",
   "url": "/news/technology",
 }
 `;
 
+exports[`AMP Articles Header Navigation link should match text and url 7`] = `
+{
+  "text": "Science",
+  "url": "/news/science_and_environment",
+}
+`;
+
+exports[`AMP Articles Header Navigation link should match text and url 8`] = `
+{
+  "text": "Health",
+  "url": "/news/health",
+}
+`;
+
 exports[`AMP Articles Header Navigation link should match text and url 9`] = `
 {
-  "text": "InDepth",
-  "url": "/news/bbcindepth",
+  "text": "Family & Education",
+  "url": "/news/education",
 }
 `;
 
 exports[`AMP Articles Header Navigation link should match text and url 10`] = `
 {
-  "text": "BBC Verify",
-  "url": "/news/bbcverify",
+  "text": "Entertainment & Arts",
+  "url": "/news/entertainment_and_arts",
 }
 `;
 
 exports[`AMP Articles Header Navigation link should match text and url 11`] = `
 {
-  "text": "Climate",
-  "url": "/news/topics/cmj34zmwm1zt",
+  "text": "Stories",
+  "url": "/news/stories",
 }
 `;
 
