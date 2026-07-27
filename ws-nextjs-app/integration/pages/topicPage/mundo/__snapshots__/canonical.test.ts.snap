@@ -5,7 +5,7 @@ exports[`Topic page with badge image, description and multiple curations with h2
 exports[`Topic page with badge image, description and multiple curations with h2 headings Page content First item in the first curation is the correct image 1`] = `
 <img
   alt="ExxonMobil Chairman and CEO Rex Tillerson speaks during the IHS CERAWeek 2015 energy conference in Houston, Texas April 21, 2015"
-  class="css-zfe4bz"
+  class="css-1seqhu9"
   fetchpriority="high"
   loading="eager"
   sizes="(min-width: 63rem) 800px, (min-width: 37.5rem) 66vw, 100vw"
@@ -18,7 +18,7 @@ exports[`Topic page with badge image, description and multiple curations with h2
 exports[`Topic page with badge image, description and multiple curations with h2 headings should display the topic badge image 1`] = `
 <img
   alt=""
-  class="css-15rkpge-Image e1vorejc0"
+  class="css-u2xnxo e1vorejc0"
   data-testid="topic-badge"
   src="https://ichef.bbci.co.uk/ace/standard/128/cpsdevpb/f407/test/75380e10-4f96-11ed-9488-854f10e82c4c.jpg"
 />

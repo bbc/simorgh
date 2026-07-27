@@ -135,20 +135,20 @@ exports[`Canonical Kyrgyz Live Radio Page Main heading should match text 1`] = `
 
 exports[`Canonical Kyrgyz Live Radio Page Media Loader renders a valid container 1`] = `
 <figure
-  class="media-container css-1hkd42l"
+  class="media-container css-ucozvf"
   data-e2e="media-loader__container"
 >
   <div
-    class="media-player css-1j6l6ew"
+    class="media-player css-1kf4wj3"
     data-e2e="media-player"
   >
     <noscript>
       <div>
         <div
-          class="css-jzmq6g"
+          class="css-1mgo2mg"
         >
           <strong
-            class="css-1n1zjvh"
+            class="css-pow7hy"
           >
             Жабдыгыңыз медианын бул түрүн ойнотууга ылайыктуу эмес.
           </strong>

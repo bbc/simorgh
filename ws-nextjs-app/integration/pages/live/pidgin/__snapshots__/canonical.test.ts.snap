@@ -25,20 +25,20 @@ exports[`Canonical Live Header Navigation link should match text and url 2`] = `
 
 exports[`Canonical Live Media Loader renders a valid container 1`] = `
 <figure
-  class="media-container css-2xy69p"
+  class="media-container css-hnd6ee"
   data-e2e="media-loader__container"
 >
   <div
-    class="media-player css-fckwhl"
+    class="media-player css-9p9hvp"
     data-e2e="media-player"
   >
     <noscript>
       <div>
         <div
-          class="css-jzmq6g"
+          class="css-1mgo2mg"
         >
           <strong
-            class="css-1n1zjvh"
+            class="css-pow7hy"
           >
             Dem no support media player for your device
           </strong>
@@ -47,14 +47,14 @@ exports[`Canonical Live Media Loader renders a valid container 1`] = `
     </noscript>
   </div>
   <figcaption
-    class="css-11wfxvj"
+    class="css-88md10"
     dir="ltr"
   >
     <span
       role="text"
     >
       <span
-        class="css-1mz60kl"
+        class="css-5ku87v"
       >
         Wetin we call dis Video, 
       </span>
