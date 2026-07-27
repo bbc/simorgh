@@ -1,4 +1,5 @@
 import { Services } from '#app/models/types/global';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 
 type Application =
   | 'simorgh'
@@ -10,23 +11,17 @@ type Application =
 type ConstructTogglesEndpointParams = {
   service: Services;
   isAmp?: boolean;
-  overrideEndpoint?: string;
 };
 
-export default ({
-  service,
-  isAmp = false,
-  overrideEndpoint,
-}: ConstructTogglesEndpointParams) => {
+export default ({ service, isAmp = false }: ConstructTogglesEndpointParams) => {
   const application: Application = isAmp ? 'amp' : 'simorgh';
-  const togglesUrl =
-    overrideEndpoint || (process.env.TOGGLES_BFF_PATH as string);
+  const togglesUrl = isAmp
+    ? `${getEnvConfig().WEB_CDN_URL}/fd/ws-toggles`
+    : (process.env.TOGGLES_BFF_PATH as string);
 
   const togglesEndpoint = new URL(togglesUrl);
   togglesEndpoint.searchParams.set('service', service);
   togglesEndpoint.searchParams.set('application', application);
 
-  const endpoint = togglesEndpoint.toString();
-
-  return endpoint;
+  return togglesEndpoint.toString();
 };

@@ -31,25 +31,34 @@ describe('getToggles', () => {
   it('should return defaultToggles if enableFetchingToggles is not enabled', async () => {
     const mockDefaultToggles = {
       local: {
+        _environment: 'local',
         enableFetchingToggles: { enabled: false },
         defaultToggle: { enabled: false },
       },
     };
     jest.mock('#lib/config/toggles', () => mockDefaultToggles);
 
-    const { default: getToggles } = await import('./index.ts');
-    const toggles = await getToggles({ service: 'mundo', pagePath: '/mundo' });
+    const { default: getToggles } = await import('./index');
+    const toggles = await getToggles({ service: 'mundo' });
 
-    expect(toggles).toEqual(mockDefaultToggles.local);
+    expect(toggles).toEqual({
+      enableFetchingToggles: { enabled: false },
+      defaultToggle: { enabled: false },
+    });
     expect(global.fetch).not.toHaveBeenCalled();
   });
 
   describe('with enableFetchingToggles enabled', () => {
     const mockDefaultToggles = {
       local: {
+        _environment: 'local',
         enableFetchingToggles: { enabled: true },
         defaultToggle: { enabled: false },
       },
+    };
+    const mockDefaultToggleDefinitions = {
+      enableFetchingToggles: { enabled: true },
+      defaultToggle: { enabled: false },
     };
 
     beforeEach(() => {
@@ -57,15 +66,14 @@ describe('getToggles', () => {
     });
 
     it('should return the merged local and remote toggles', async () => {
-      const { default: getToggles } = await import('./index.ts');
+      const { default: getToggles } = await import('./index');
 
       const toggles = await getToggles({
         service: 'mundo',
-        pagePath: '/mundo',
       });
 
       expect(toggles).toEqual({
-        ...mockDefaultToggles.local,
+        ...mockDefaultToggleDefinitions,
         ...remoteToggles,
       });
     });
@@ -77,31 +85,29 @@ describe('getToggles', () => {
         json: jest.fn(async () => ({ data: { toggles: remoteToggles } })),
       } as unknown as Response);
 
-      const { default: getToggles } = await import('./index.ts');
+      const { default: getToggles } = await import('./index');
       const toggles = await getToggles({
         service: 'mundo',
-        pagePath: '/mundo',
       });
 
       expect(toggles).toEqual({
-        ...mockDefaultToggles.local,
+        ...mockDefaultToggleDefinitions,
         ...remoteToggles,
       });
     });
 
     it('should only fetch once for repeated calls with the same endpoint and environment', async () => {
-      const { default: getToggles } = await import('./index.ts');
+      const { default: getToggles } = await import('./index');
       (global.fetch as jest.Mock).mockClear();
 
-      await getToggles({ service: 'mundo', pagePath: '/mundo' });
+      await getToggles({ service: 'mundo' });
       const cachedToggles = await getToggles({
         service: 'mundo',
-        pagePath: '/mundo',
       });
 
       expect(global.fetch).toHaveBeenCalledTimes(1);
       expect(cachedToggles).toEqual({
-        ...mockDefaultToggles.local,
+        ...mockDefaultToggleDefinitions,
         ...remoteToggles,
       });
     });
@@ -113,13 +119,12 @@ describe('getToggles', () => {
         json: jest.fn(async () => ({ toggles: remoteToggles })),
       } as unknown as Response);
 
-      const { default: getToggles } = await import('./index.ts');
+      const { default: getToggles } = await import('./index');
       const toggles = await getToggles({
         service: 'mundo',
-        pagePath: '/mundo',
       });
 
-      expect(toggles).toEqual(mockDefaultToggles.local);
+      expect(toggles).toEqual(mockDefaultToggleDefinitions);
     });
 
     it('should return default toggles when the response body has no toggles', async () => {
@@ -129,13 +134,12 @@ describe('getToggles', () => {
         json: jest.fn(async () => ({})),
       } as unknown as Response);
 
-      const { default: getToggles } = await import('./index.ts');
+      const { default: getToggles } = await import('./index');
       const toggles = await getToggles({
         service: 'mundo',
-        pagePath: '/mundo',
       });
 
-      expect(toggles).toEqual(mockDefaultToggles.local);
+      expect(toggles).toEqual(mockDefaultToggleDefinitions);
     });
 
     it('should catch fetch errors, log them and return default toggles', async () => {
@@ -143,13 +147,12 @@ describe('getToggles', () => {
         new Error('network error'),
       );
 
-      const { default: getToggles } = await import('./index.ts');
+      const { default: getToggles } = await import('./index');
       const toggles: Toggles = await getToggles({
         service: 'mundo',
-        pagePath: '/mundo',
       });
 
-      expect(toggles).toEqual(mockDefaultToggles.local);
+      expect(toggles).toEqual(mockDefaultToggleDefinitions);
     });
   });
 });

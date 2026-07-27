@@ -1,31 +1,37 @@
-import getTogglesEndpoint from './index';
+import constructTogglesEndpoint from './index';
 
-const originalTogglesBffPath = process.env.TOGGLES_BFF_PATH;
+const originalEnv = process.env;
 
 beforeEach(() => {
-  process.env.TOGGLES_BFF_PATH = 'https://some-url.co.uk/toggles';
+  process.env = {
+    ...originalEnv,
+    TOGGLES_BFF_PATH: 'https://some-url.co.uk/toggles',
+    WEB_CDN_URL: 'https://web-cdn.test',
+  };
 });
 
 afterEach(() => {
   jest.resetAllMocks();
-  process.env.TOGGLES_BFF_PATH = originalTogglesBffPath;
+  process.env = originalEnv;
 });
 
 describe('Toggles endpoint constructor', () => {
-  it('returns the endpoint with the simorgh application by default', () => {
-    expect(getTogglesEndpoint('mundo')).toEqual(
+  it('returns the simorgh BFF endpoint by default', () => {
+    expect(constructTogglesEndpoint({ service: 'mundo' })).toEqual(
       `https://some-url.co.uk/toggles?service=mundo&application=simorgh`,
     );
   });
 
-  it('uses the amp application when isAmp is true', () => {
-    expect(getTogglesEndpoint('mundo', true)).toEqual(
-      `https://some-url.co.uk/toggles?service=mundo&application=amp`,
+  it('uses the web-cdn amp endpoint when isAmp is true', () => {
+    expect(constructTogglesEndpoint({ service: 'mundo', isAmp: true })).toEqual(
+      `https://web-cdn.test/fd/ws-toggles?service=mundo&application=amp`,
     );
   });
 
-  it('defaults to the simorgh application when isAmp is false', () => {
-    expect(getTogglesEndpoint('mundo', false)).toEqual(
+  it('defaults to the simorgh BFF endpoint when isAmp is false', () => {
+    expect(
+      constructTogglesEndpoint({ service: 'mundo', isAmp: false }),
+    ).toEqual(
       `https://some-url.co.uk/toggles?service=mundo&application=simorgh`,
     );
   });

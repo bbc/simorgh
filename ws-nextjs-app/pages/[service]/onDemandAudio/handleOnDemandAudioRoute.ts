@@ -7,7 +7,7 @@ import getPageData from '#utilities/pageRequests/getPageData';
 import nodeLogger from '#lib/logger.node';
 import { ROUTING_INFORMATION } from '#app/lib/logger.const';
 import handleError from '#app/routes/utils/handleError';
-import getToggles from '#app/lib/utilities/getToggles/withCache';
+import fetchToggles from '#app/lib/utilities/getToggles';
 import isTest from '#app/lib/utilities/isTest';
 import getPodcastExternalLinks from './podcastExternalLinks';
 
@@ -90,10 +90,7 @@ export default async (context: GetServerSidePropsContext) => {
     throw handleError('AudioPage data is malformed', 500);
   }
 
-  const toggles = await getToggles({
-    service,
-    pagePath: resolvedUrlWithoutQuery,
-  });
+  const toggles = await fetchToggles({ service });
 
   const { externalLinkVersionId, brandId, recentEpisodes } = pageData;
   const { enabled: scheduleIsEnabled } = toggles.onDemandRadioSchedule;
@@ -103,11 +100,11 @@ export default async (context: GetServerSidePropsContext) => {
 
   const externalLinks = isPodcast
     ? await getPodcastExternalLinks({
-        service,
-        variant: variant || undefined,
-        brandId,
-        versionId: externalLinkVersionId,
-      })
+      service,
+      variant: variant || undefined,
+      brandId,
+      versionId: externalLinkVersionId,
+    })
     : [];
 
   context.res.setHeader(

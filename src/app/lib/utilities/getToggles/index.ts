@@ -6,11 +6,9 @@ import {
   TOGGLE_API_FETCH_ERROR,
   TOGGLE_API_RESPONSE_TIME,
 } from '#lib/logger.const';
-import { Services, Toggles } from '#app/models/types/global';
+import { Services, ToggleDefinition, Toggles } from '#app/models/types/global';
 import { FetchError } from '#app/models/types/fetch';
 import getAgent from '#utilities/getAgent';
-import getEnvironment from '#app/routes/utils/getEnvironment';
-import getOriginContext from '#contexts/RequestContext/getOriginContext';
 import constructTogglesEndpoint from '#contexts/ToggleContext/utils/constructTogglesEndpoint';
 import { getEnvConfig } from '../getEnvConfig';
 import { PRIMARY_DATA_TIMEOUT } from '../getFetchTimeouts';
@@ -18,17 +16,14 @@ import { PRIMARY_DATA_TIMEOUT } from '../getFetchTimeouts';
 const logger = nodeLogger(__filename);
 
 const NS_PER_SEC = 1e9;
-
 const cacheMaxItems = parseInt(
   String(getEnvConfig().SIMORGH_CONFIG_CACHE_ITEMS ?? 400),
   10,
 );
-
 const cacheTtlSeconds = parseInt(
   String(getEnvConfig().SIMORGH_CONFIG_CACHE_MAX_AGE_SECONDS ?? 300),
   10,
 );
-
 const cache = new LRUCache<string, Toggles>({
   max: cacheMaxItems,
   ttl: cacheTtlSeconds * 1000,
@@ -36,27 +31,25 @@ const cache = new LRUCache<string, Toggles>({
 
 type TogglesParams = {
   service: Services;
-  pagePath: string;
   isAmp?: boolean;
-  overrideEndpoint?: string;
 };
 
-const fetchToggles = async ({
+const getMergedToggles = async ({
   service,
-  pagePath,
   isAmp,
-  overrideEndpoint,
 }: TogglesParams): Promise<Toggles> => {
-  const togglesEndpoint = constructTogglesEndpoint({
-    service,
-    overrideEndpoint,
-    isAmp,
-  });
+  const appEnvironment = getEnvConfig().SIMORGH_APP_ENV || 'local';
+  const localToggles = defaultToggles[appEnvironment];
 
-  const detectedEnvironment = getEnvironment(pagePath);
-  const isLocal = !detectedEnvironment || detectedEnvironment === 'local';
-  const environment = isLocal ? 'test' : detectedEnvironment;
-  const cacheKey = `${togglesEndpoint}:${environment}`;
+  if (!localToggles.enableFetchingToggles.enabled) {
+    return localToggles;
+  }
+
+  const togglesEndpoint = constructTogglesEndpoint({ service, isAmp });
+
+  const isLocal = appEnvironment === 'local';
+  const serviceEnv = isLocal ? 'test' : appEnvironment;
+  const cacheKey = `${togglesEndpoint}:${serviceEnv}`;
 
   const cachedResponse = cache.get(cacheKey);
 
@@ -67,91 +60,51 @@ const fetchToggles = async ({
   });
 
   if (cachedResponse) {
-    return cachedResponse;
-  }
-
-  let agent: Awaited<ReturnType<typeof getAgent>> | null = null;
-  try {
-    agent = await getAgent();
-  } catch (agentError) {
-    logger.debug(TOGGLE_API_REQUEST_RECEIVED, {
-      service,
-      message: (agentError as Error).message,
-    });
-  }
-
-  const { origin } = getOriginContext(null);
-
-  const fetchOptions = {
-    ...(agent && { agent }),
-    headers: {
-      origin,
-      'ctx-service-env': environment,
-    },
-    signal: AbortSignal.timeout(PRIMARY_DATA_TIMEOUT),
-  };
-
-  const canDetermineFetchTime = typeof process?.hrtime === 'function';
-  const startHrTime = canDetermineFetchTime ? process.hrtime() : [0, 0];
-
-  const response = await fetch(togglesEndpoint, fetchOptions);
-
-  if (canDetermineFetchTime) {
-    const elapsedHrTime = process.hrtime(startHrTime as [number, number]);
-    logger.debug(TOGGLE_API_RESPONSE_TIME, {
-      service,
-      togglesEndpoint,
-      status: response.status,
-      nanoseconds: elapsedHrTime[0] * NS_PER_SEC + elapsedHrTime[1],
-    });
-  }
-
-  if (!response.ok) {
-    const error = new Error() as FetchError;
-    error.status = response.status;
-    error.message = `Failed to fetch toggles for service: ${service}`;
-    throw error;
-  }
-
-  const responseBody = await response.json();
-  const toggles = responseBody?.toggles ?? responseBody?.data?.toggles;
-
-  if (!toggles) {
-    const error = new Error() as FetchError;
-    error.status = response.status;
-    error.message = `Invalid toggles response for service: ${service}`;
-    throw error;
-  }
-
-  cache.set(cacheKey, toggles);
-  return toggles;
-};
-
-const getToggles = async ({
-  service,
-  pagePath,
-  isAmp,
-  overrideEndpoint,
-}: TogglesParams): Promise<Toggles> => {
-  const environment = getEnvConfig().SIMORGH_APP_ENV || 'local';
-  const localToggles = defaultToggles[environment];
-
-  if (!localToggles.enableFetchingToggles.enabled) {
-    return localToggles;
+    return { ...localToggles, ...cachedResponse };
   }
 
   try {
-    const remoteToggles = await fetchToggles({
-      service,
-      pagePath,
-      overrideEndpoint,
-      isAmp,
-    });
+    const agent = isLocal ? null : await getAgent();
 
-    return {
-      ...localToggles,
-      ...remoteToggles,
+    const fetchOptions = {
+      ...(agent && { agent }),
+      headers: {
+        'ctx-service-env': serviceEnv,
+      },
+      signal: AbortSignal.timeout(PRIMARY_DATA_TIMEOUT),
     };
+
+    const startHrTime = process.hrtime();
+
+    const response = await fetch(togglesEndpoint, fetchOptions);
+
+    const elapsedHrTime = process.hrtime(startHrTime);
+    logger.info(TOGGLE_API_RESPONSE_TIME, {
+      nanoseconds: elapsedHrTime[0] * NS_PER_SEC + elapsedHrTime[1],
+      togglesEndpoint,
+      service,
+    });
+
+    if (!response.ok) {
+      const error = new Error() as FetchError;
+      error.status = response.status;
+      error.message = `Failed to fetch toggles for service: ${service}`;
+      throw error;
+    }
+
+    const responseBody = await response.json();
+    const remoteToggles = responseBody?.toggles ?? responseBody?.data?.toggles;
+
+    if (!remoteToggles) {
+      const error = new Error() as FetchError;
+      error.status = response.status;
+      error.message = `Invalid toggles response for service: ${service}`;
+      throw error;
+    }
+
+    cache.set(cacheKey, remoteToggles);
+
+    return { ...localToggles, ...remoteToggles };
   } catch (error) {
     const { message } = error as FetchError;
 
@@ -164,4 +117,11 @@ const getToggles = async ({
   }
 };
 
-export default getToggles;
+const fetchToggles = async (
+  params: TogglesParams,
+): Promise<Record<string, ToggleDefinition>> => {
+  const { _environment, ...toggleDefinitions } = await getMergedToggles(params);
+  return toggleDefinitions;
+};
+
+export default fetchToggles;

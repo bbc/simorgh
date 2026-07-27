@@ -7,7 +7,7 @@ import parseRoute from '#app/routes/utils/parseRoute';
 import { NOT_FOUND, OK } from '#app/lib/statusCodes.const';
 import getPageData from '#utilities/pageRequests/getPageData';
 import handleError from '#app/routes/utils/handleError';
-import getToggles from '#app/lib/utilities/getToggles/withCache';
+import fetchToggles from '#app/lib/utilities/getToggles';
 
 const logger = nodeLogger(__filename);
 
@@ -34,10 +34,7 @@ export default async (context: GetServerSidePropsContext) => {
     };
   }
 
-  const toggles = await getToggles({
-    service,
-    pagePath: resolvedUrlWithoutQuery,
-  });
+  const toggles = await fetchToggles({ service });
   const { enabled: scheduleIsEnabled } = toggles.liveRadioSchedule;
   const disableRadioSchedule = !scheduleIsEnabled;
 
