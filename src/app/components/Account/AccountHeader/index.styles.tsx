@@ -37,7 +37,7 @@ const styles = {
       marginInlineStart: `${pixelsToRem(23)}rem`,
     },
   }),
-  linkDefault: ({ palette, mq, spacings, fontSizes }: Theme) => ({
+  linkDefault: ({ palette, mq, fontMq, spacings, fontSizes }: Theme) => ({
     display: 'flex',
     alignItems: 'center',
     gap: `${pixelsToRem(5)}rem`,
@@ -62,6 +62,9 @@ const styles = {
 
     [mq.GROUP_0_MAX_WIDTH]: {
       marginLeft: `${pixelsToRem(22)}rem`,
+    },
+
+    [fontMq.GROUP_A_MAX_WIDTH]: {
       span: {
         display: 'none',
       },
