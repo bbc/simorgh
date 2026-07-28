@@ -2275,6 +2275,7 @@ exports[`Navigation should correctly render amp navigation 1`] = `
   width: 2.75rem;
   background-color: #B80000;
   color: #FFFFFF;
+  overflow: hidden;
   width: 2.75rem;
   height: 2.75rem;
 }
@@ -3166,6 +3167,7 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
   width: 2.75rem;
   background-color: #B80000;
   color: #FFFFFF;
+  overflow: hidden;
   width: 2.75rem;
   height: 2.75rem;
 }
@@ -4072,6 +4074,7 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
   width: 2.75rem;
   background-color: #B80000;
   color: #FFFFFF;
+  overflow: hidden;
   width: 2.75rem;
   height: 2.75rem;
 }
@@ -4962,6 +4965,7 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
   width: 2.75rem;
   background-color: #B80000;
   color: #FFFFFF;
+  overflow: hidden;
   width: 2.75rem;
   height: 2.75rem;
 }
@@ -5839,6 +5843,7 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
   width: 2.75rem;
   background-color: #B80000;
   color: #FFFFFF;
+  overflow: hidden;
   width: 2.75rem;
   height: 2.75rem;
 }
@@ -6731,6 +6736,7 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
   width: 2.75rem;
   background-color: #B80000;
   color: #FFFFFF;
+  overflow: hidden;
   width: 2.75rem;
   height: 2.75rem;
 }
