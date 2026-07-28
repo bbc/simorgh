@@ -24,6 +24,11 @@ const OJ_COMPONENT_NAMES = [
   'topic-discovery-curation-grid-promo',
   'topic-discovery-more-from-link',
   'topics',
+  // these are included for now so possible search oj clicks are not missed
+  // remove any that are outside the final experiment brief
+  'topic-discovery-more-about-link',
+  'location-based-topic-oj',
+  'portrait-video-carousel-article',
 ];
 
 // handle the total oj clicks event to specific onward journey experiments

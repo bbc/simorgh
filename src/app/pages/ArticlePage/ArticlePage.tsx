@@ -43,24 +43,20 @@ import {
   OptimoBylineBlock,
   OptimoBylineContributorBlock,
 } from '#app/models/types/optimo';
-import { ComponentExperimentProps } from '#app/models/types/global';
 import {
   VISUAL_PROMINENCE,
   VISUAL_STYLE,
 } from '#app/models/types/curationData';
 import { Translations } from '#app/models/types/translations';
-import { Recommendation } from '#app/models/types/onwardJourney';
 
 import ArticleLinksBlock from '#app/components/ArticleLinksBlock';
 import Curation from '#app/components/Curation';
-import Recommendations from '#app/components/Recommendations';
 import ReadTimeArticle from '#app/components/ReadTime';
 import ContinueReadingButton, {
   ContinueReadingButtonProps,
 } from '#app/components/ContinueReadingButton';
 import SaveArticleButton from '#app/components/SaveArticleButton';
 import AccountPromotionalBannerExperiment from '#app/components/Account/AccountPromotionalBannerExperiment';
-import useNearViewport from '#app/hooks/useNearViewport';
 import ElectionBanner from './ElectionBanner';
 import ArticleMessageBanner from './ArticleMessageBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
@@ -93,11 +89,7 @@ import {
   isPortraitVideoUnderHeadline,
 } from '../../components/MediaLoader/utils/isPortraitVideo';
 import LocationBasedTopicOJ from '../../components/LocationBasedTopicOJ';
-import SearchOjExperiment, {
-  getSearchOjExperimentProps,
-  SearchOjVariant,
-} from './SearchOjExperiment';
-import { MID_ARTICLE_OJ_EXPERIMENT_TRIGGER_ID } from './SearchOjExperiment/config';
+import SearchOjExperiment from './SearchOjExperiment';
 
 const getImageComponent =
   (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (
@@ -158,50 +150,6 @@ const getMpuComponent =
   (allowAdvertising: boolean) => (props: ComponentToRenderProps) =>
     allowAdvertising ? <AdContainer {...props} slotType="mpu" /> : null;
 
-type SearchOjWsojProps = {
-  data: Recommendation[];
-  experimentProps?: ComponentExperimentProps;
-  onVariantResolved: (variant: SearchOjVariant | null) => void;
-};
-
-const SearchOjWsoj = ({
-  data,
-  experimentProps,
-  onVariantResolved,
-}: SearchOjWsojProps) => {
-  const hasReachedMidArticleOj = useNearViewport({
-    elementId: MID_ARTICLE_OJ_EXPERIMENT_TRIGGER_ID,
-  });
-
-  return (
-    <div id={MID_ARTICLE_OJ_EXPERIMENT_TRIGGER_ID}>
-      <Recommendations
-        data={data}
-        {...(experimentProps && { experimentProps })}
-      />
-      {hasReachedMidArticleOj && (
-        <SearchOjExperiment onVariantResolved={onVariantResolved} />
-      )}
-    </div>
-  );
-};
-
-const getSearchOjWsojComponent =
-  ({
-    experimentProps,
-    onVariantResolved,
-  }: {
-    experimentProps?: ComponentExperimentProps;
-    onVariantResolved: (variant: SearchOjVariant | null) => void;
-  }) =>
-  ({ data }: { data: Recommendation[] }) => (
-    <SearchOjWsoj
-      data={data}
-      experimentProps={experimentProps}
-      onVariantResolved={onVariantResolved}
-    />
-  );
-
 const DisclaimerWithPaddingOverride = (props: ComponentToRenderProps) => (
   <Disclaimer {...props} increasePaddingOnDesktop={false} />
 );
@@ -248,13 +196,6 @@ const getContinueReadingButton =
   );
 
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
-  const [searchOjVariant, setSearchOjVariant] =
-    useState<SearchOjVariant | null>(null);
-
-  const searchOjExperimentProps = searchOjVariant
-    ? getSearchOjExperimentProps(searchOjVariant)
-    : undefined;
-
   const [showAllContent, setShowAllContent] = useState(false);
   const [isDesktopViewport, setIsDesktopViewport] = useState(false);
   const { isApp, isAmp, isLite, pageType } = use(RequestContext);
@@ -424,10 +365,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     group: gist,
     links: ArticleLinksBlock,
     mpu: getMpuComponent(allowAdvertising),
-    wsoj: getSearchOjWsojComponent({
-      experimentProps: searchOjExperimentProps,
-      onVariantResolved: setSearchOjVariant,
-    }),
+    // keep delayed search oj bucketing inside the oj component
+    wsoj: SearchOjExperiment,
     disclaimer: DisclaimerWithPaddingOverride,
     podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
     ...(showContinueReadingButton && {
