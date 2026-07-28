@@ -42,6 +42,5 @@ export interface MetadataProps {
   imageWidth?: number;
   imageHeight?: number;
   children?: string[];
-  hasAppleItunesAppBanner?: boolean;
   hasAmpPage?: boolean;
 }
