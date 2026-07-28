@@ -30,7 +30,7 @@ const useMobileOJComponentOrder = (): OJComponentKey[] | null => {
     if (!onClient()) return undefined;
 
     const mediaQuery = window.matchMedia(
-      `max-width: ${GROUP_3_MAX_WIDTH_BP}rem`,
+      `(max-width: ${GROUP_3_MAX_WIDTH_BP}rem)`,
     );
     const debugVariant = getDebugVariant();
     const mobileOrder = debugVariant
