@@ -85,6 +85,7 @@ export interface Translations {
   saveForLaterTooltip?: {
     success: {
       titleBefore: string;
+      titleAfter: string;
     };
     error: {
       title: string;
@@ -92,6 +93,7 @@ export interface Translations {
     };
     removed: {
       titleBefore: string;
+      titleAfter: string;
     };
     myNewsLinkText: string;
     myNewsUrl: string;

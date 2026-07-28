@@ -20,12 +20,18 @@ export interface SaveForLaterTooltipProps {
 }
 
 const FALLBACK_TRANSLATIONS = {
-  success: { titleBefore: 'This article is now saved to' },
+  success: {
+    titleBefore: 'This article is now saved to',
+    titleAfter: '',
+  },
   error: {
     title: 'Sorry, something went wrong',
     body: 'Check your connection, refresh the page and try again',
   },
-  removed: { titleBefore: 'This article has now been removed from' },
+  removed: {
+    titleBefore: 'This article has now been removed from',
+    titleAfter: '',
+  },
   myNewsLinkText: 'My News',
   myNewsUrl: 'https://www.bbc.com/hindi/my-news',
   closeLabel: 'Close',

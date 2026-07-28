@@ -157,6 +157,7 @@ export const service: DefaultServiceConfig = {
       saveForLaterTooltip: {
         success: {
           titleBefore: 'This article is now saved to',
+          titleAfter: '',
         },
         error: {
           title: 'Sorry, something went wrong',
@@ -164,6 +165,7 @@ export const service: DefaultServiceConfig = {
         },
         removed: {
           titleBefore: 'This article has now been removed from',
+          titleAfter: '',
         },
         myNewsLinkText: 'My News',
         myNewsUrl: 'https://www.bbc.com/hindi/my-news',
