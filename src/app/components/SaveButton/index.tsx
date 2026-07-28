@@ -24,6 +24,8 @@ const SaveButton = ({
   isSaved = false,
   onClick,
   testId,
+  // TODO :Ticket needed
+  //  Add a buttonType prop (e.g. follow, favourites) to determine which icon to display.
   ...rest
 }: SaveButtonProps) => {
   const [isFocusedOrHovered, setIsFocusedOrHovered] = useState(false);

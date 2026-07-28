@@ -143,6 +143,17 @@ export const service: DefaultServiceConfig = {
         removeAccessible: 'सहेजा गया. मेरी ख़बरों से हटाएं',
         removing: 'हटाया जा रहा है',
       },
+      // TBC : TODO: Ticket needed
+      followTopicButton: {
+        loading: 'लोड हो रहा है',
+        follow: 'फ़ॉलो करें',
+        following: 'फ़ॉलो किया जा रहा है',
+        followingAction: 'फ़ॉलो किया जा रहा है',
+        followed: 'फ़ॉलो किया गया',
+        unfollow: 'अनफ़ॉलो करें',
+        unfollowAccessible: 'फ़ॉलो किया गया. अनफ़ॉलो करें',
+        unfollowing: 'अनफ़ॉलो किया जा रहा है',
+      },
       myNews: {
         title: 'मेरी ख़बरें',
         guestTitle: 'मेरी ख़बरों में आपका स्वागत है',
