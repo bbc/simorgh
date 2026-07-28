@@ -62,7 +62,7 @@ const styles = {
 
     [mq.GROUP_0_MAX_WIDTH]: {
       marginInlineStart: `${pixelsToRem(22)}rem`,
-    }
+    },
 
     [fontMq.GROUP_A_MAX_WIDTH]: {
       span: {
