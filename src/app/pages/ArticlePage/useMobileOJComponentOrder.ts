@@ -23,7 +23,21 @@ const getDebugVariant = (): SearchVariant | null => {
   return null;
 };
 
-const useMobileOJComponentOrder = (): OJComponentKey[] | null => {
+export const useDebugVariant = (): SearchVariant | null => {
+  const [debugVariant, setDebugVariant] = useState<SearchVariant | null>(null);
+
+  useEffect(() => {
+    if (!onClient()) return;
+
+    setDebugVariant(getDebugVariant());
+  }, []);
+
+  return debugVariant;
+};
+
+const useMobileOJComponentOrder = (
+  searchVariant: SearchVariant | null,
+): OJComponentKey[] | null => {
   const [order, setOrder] = useState<OJComponentKey[] | null>(null);
 
   useEffect(() => {
@@ -32,9 +46,9 @@ const useMobileOJComponentOrder = (): OJComponentKey[] | null => {
     const mediaQuery = window.matchMedia(
       `(max-width: ${GROUP_3_MAX_WIDTH_BP}rem)`,
     );
-    const debugVariant = getDebugVariant();
-    const mobileOrder = debugVariant
-      ? SEARCH_COMPONENT_ORDER[debugVariant]
+
+    const mobileOrder = searchVariant
+      ? SEARCH_COMPONENT_ORDER[searchVariant]
       : null;
 
     const updateOrder = (matches: boolean) => {
@@ -52,7 +66,7 @@ const useMobileOJComponentOrder = (): OJComponentKey[] | null => {
     mediaQuery.addEventListener('change', handleChange);
 
     return () => mediaQuery.removeEventListener('change', handleChange);
-  }, []);
+  }, [searchVariant]);
 
   return order;
 };
