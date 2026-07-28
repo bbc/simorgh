@@ -5,9 +5,6 @@ const styles = {
   wrapper: {
     paddingBlock: '0.5rem',
   },
-  hidden: {
-    visibility: 'hidden',
-  },
   link: ({ palette }: Theme) => ({
     display: 'flex',
     alignItems: 'center',

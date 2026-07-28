@@ -1,15 +1,7 @@
 import { screen } from '@testing-library/react';
 import { render } from '#app/components/react-testing-library-with-providers';
 import { IdctaConfig } from '#app/models/types/account';
-import useHydrationDetection from '#hooks/useHydrationDetection';
 import AccountHeader from '.';
-
-jest.mock('#hooks/useHydrationDetection', () => ({
-  __esModule: true,
-  default: jest.fn(() => true),
-}));
-
-const mockUseHydrationDetection = jest.mocked(useHydrationDetection);
 
 const idctaConfig: IdctaConfig = {
   'id-availability': 'GREEN',
@@ -79,17 +71,9 @@ describe('AccountHeader', () => {
     );
   });
 
-  it('reserves its layout space before hydration to avoid a layout shift, without exposing the link to users or assistive tech', () => {
-    mockUseHydrationDetection.mockReturnValue(false);
+  it('renders synchronously on first render, without waiting for hydration', () => {
+    renderWithProviders();
 
-    const { container } = renderWithProviders();
-
-    expect(screen.queryByRole('link')).toBeNull();
-
-    const link = container.querySelector('a');
-    expect(link).toBeInTheDocument();
-    expect(link).not.toBeVisible();
-
-    mockUseHydrationDetection.mockReturnValue(true);
+    expect(screen.getByRole('link', { name: 'साइन इन' })).toBeVisible();
   });
 });
