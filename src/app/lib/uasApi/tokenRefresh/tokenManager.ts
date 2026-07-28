@@ -45,6 +45,9 @@ export const isTokenValidFor = (durationMs: number, token: string): boolean => {
 
 const hasValidTokens = (): boolean => {
   const idToken = Cookie.get(TOKEN_COOKIE_NAME);
+
+  console.log('idToken:', idToken); // Log the value of idToken for debugging
+
   if (!idToken) return false;
   return isTokenValidFor(TOKEN_EXPIRY_BUFFER_MS, idToken);
 };
@@ -56,6 +59,7 @@ const hasValidTokens = (): boolean => {
 export const refreshTokensIfExpired = async (
   isRefreshAvailable: boolean,
 ): Promise<void> => {
+  console.log('isRefreshAvailable:', isRefreshAvailable); // Log the value of isRefreshAvailable for debugging
   if (!onClient() || hasValidTokens()) return;
 
   if (!isRefreshAvailable) {

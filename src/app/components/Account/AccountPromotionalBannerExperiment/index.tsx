@@ -13,9 +13,7 @@ const ACCOUNT_PROMO_BANNER_EXPERIMENT_NAME =
 
 // The view tracker uses alwaysInView, whose timer starts on mount regardless of
 // the rendered element. Gating the control's view event on banner visibility
-// therefore requires conditionally mounting this component (a hook cannot be
-// called conditionally), so that it only fires for users who would actually be
-// shown the banner (not dismissed / frequency-capped), mirroring the "on" arm.
+// therefore requires conditionally mounting this component
 const AccountPromotionalBannerControlTracker = ({
   experimentVariant,
 }: {
@@ -32,17 +30,18 @@ const AccountPromotionalBannerControlTracker = ({
   return <VisuallyHiddenText {...viewTracker} />;
 };
 
-const AccountPromotionalBannerExperiment = () => {
-  const isEligible = useAccountPromoBannerEligibility();
+// Activates the server-side experiment (via useOptimizelyVariation) and renders
+// the resulting arm. Mounted only when the user is eligible, so ineligible users
+// are never bucketed into the experiment.
+const EligibleAccountPromotionalBannerExperiment = () => {
+  // Gate the view event on banner visibility so both arms behave under the same
+  // circumstances: control fires only when the banner would show, mirroring the
+  // "on" arm's own dismissal / frequency-cap suppression.
   const isBannerVisible = useIsAccountPromoBannerVisible();
   const experimentVariant = useOptimizelyVariation({
     experimentName: ACCOUNT_PROMO_BANNER_EXPERIMENT_NAME,
     experimentType: ExperimentType.SERVER_SIDE,
   });
-
-  if (!isEligible) {
-    return null;
-  }
 
   if (experimentVariant === 'control') {
     return isBannerVisible ? (
@@ -62,6 +61,18 @@ const AccountPromotionalBannerExperiment = () => {
   }
 
   return null;
+};
+
+const AccountPromotionalBannerExperiment = () => {
+  const isEligible = useAccountPromoBannerEligibility();
+
+  // Gate activation on eligibility. useOptimizelyVariation activates the
+  // experiment as a side effect, so it must not run for ineligible users.
+  if (!isEligible) {
+    return null;
+  }
+
+  return <EligibleAccountPromotionalBannerExperiment />;
 };
 
 export default AccountPromotionalBannerExperiment;
