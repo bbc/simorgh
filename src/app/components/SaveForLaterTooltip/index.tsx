@@ -58,7 +58,7 @@ const SaveForLaterTooltip = ({ status, onClose }: SaveForLaterTooltipProps) => {
     success: {
       title: (
         <>
-          {success.titleBefore} {myNewsLink}
+          {success.titleBefore} {myNewsLink} {success.titleAfter}
         </>
       ),
     },
@@ -69,7 +69,7 @@ const SaveForLaterTooltip = ({ status, onClose }: SaveForLaterTooltipProps) => {
     removed: {
       title: (
         <>
-          {removed.titleBefore} {myNewsLink}
+          {removed.titleBefore} {myNewsLink} {success.titleAfter}
         </>
       ),
     },
