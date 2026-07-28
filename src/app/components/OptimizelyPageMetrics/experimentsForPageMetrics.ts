@@ -14,6 +14,7 @@ const experimentsForPageMetrics: ExperimentsForPageTypeMetrics = [
     activeExperiments: [
       'test_page_views_aa_3',
       'newswb_ws_article_account_promo_banner',
+      'newswb_ws_oj_order_referrer_search',
     ],
   },
   {
