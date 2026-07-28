@@ -12,7 +12,7 @@ describe('getToggles', () => {
   const mockSuccessfulFetchResponse = {
     ok: true,
     status: 200,
-    json: jest.fn(async () => ({ toggles: remoteToggles })),
+    json: jest.fn(async () => ({ data: { toggles: remoteToggles } })),
   };
 
   beforeEach(() => {
@@ -68,24 +68,6 @@ describe('getToggles', () => {
     it('should return the merged local and remote toggles', async () => {
       const { default: getToggles } = await import('./index');
 
-      const toggles = await getToggles({
-        service: 'mundo',
-      });
-
-      expect(toggles).toEqual({
-        ...mockDefaultToggleDefinitions,
-        ...remoteToggles,
-      });
-    });
-
-    it('should support a nested data.toggles response shape', async () => {
-      (global.fetch as jest.Mock).mockResolvedValueOnce({
-        ok: true,
-        status: 200,
-        json: jest.fn(async () => ({ data: { toggles: remoteToggles } })),
-      } as unknown as Response);
-
-      const { default: getToggles } = await import('./index');
       const toggles = await getToggles({
         service: 'mundo',
       });

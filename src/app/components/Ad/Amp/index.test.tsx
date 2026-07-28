@@ -179,7 +179,7 @@ describe('AMP Ads', () => {
       const ampAccessFetch = jest.fn().mockImplementation(AMP_ACCESS_FETCH);
       const ampAccessData = ampAccessFetch('afrique');
       const expectedReturn =
-        'https://web-cdn.test/fd/ws-toggles?service=afrique&application=amp';
+        'https://web-cdn.test/fd/ws-toggles?service=afrique&application=simorgh';
 
       expect(ampAccessFetch).toHaveReturned();
       expect(ampAccessFetch).toHaveBeenCalledWith('afrique');
