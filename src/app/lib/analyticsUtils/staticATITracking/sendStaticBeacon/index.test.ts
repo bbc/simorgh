@@ -12,7 +12,7 @@ describe('sendStaticBeacon', () => {
 
   beforeEach(() => {
     XMLHttpRequestSpy = jest.spyOn(window, 'XMLHttpRequest');
-    eval(addSendStaticBeaconToWindow());
+    addSendStaticBeaconToWindow();
   });
 
   afterEach(() => {
@@ -31,7 +31,7 @@ describe('sendStaticBeacon', () => {
       () => XMLHttpRequestMock as XMLHttpRequest,
     );
 
-    eval(sendStaticBeacon('https://foobar.com'));
+    sendStaticBeacon('https://foobar.com');
 
     expect(XMLHttpRequestMock.open).toHaveBeenCalledWith(
       'GET',
