@@ -306,8 +306,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     experimentProps?: ComponentExperimentProps | null;
     searchVariant: SearchVariant | null;
   }) => {
-    // eslint-disable-next-line no-console
-    console.log('mid-article searchVariant:', searchVariant);
     switch (searchVariant) {
       case 'variant1related':
       case 'variant2recommended':
@@ -441,7 +439,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
 
-  const showTopicDiscovery = true;
+  const showTopicDiscovery = topicDiscoveryEnabled && !isAmp && !isLite;
 
   const showRelatedTopicsComponent = Boolean(
     showRelatedTopics && topics.length > 0 && !showTopicDiscovery,
