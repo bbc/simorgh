@@ -216,7 +216,7 @@ describe('Curation Promo', () => {
       );
     });
 
-    it('should truncate a related topic link with an ellipsis when it cannot fit on one line', () => {
+    it('should allow a related topic link to wrap when it cannot fit on one line', () => {
       const longRelatedTopic = {
         ...relatedTopic,
         title: 'A related topic title that is too long to fit on one line',
@@ -227,9 +227,8 @@ describe('Curation Promo', () => {
       expect(
         screen.getByRole('link', { name: longRelatedTopic.title }),
       ).toHaveStyle({
-        overflow: 'hidden',
-        textOverflow: 'ellipsis',
-        whiteSpace: 'nowrap',
+        flexShrink: 0,
+        whiteSpace: 'normal',
       });
     });
 
