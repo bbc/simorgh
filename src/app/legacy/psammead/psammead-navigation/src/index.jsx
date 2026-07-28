@@ -221,7 +221,7 @@ export const NavigationLi = ({
   ...props
 }) => {
   const shouldAnnounceCurrentPage =
-    active && announceCurrentPage && currentPageText;
+    Boolean(active && announceCurrentPage && currentPageText);
 
   return (
     <StyledListItem dir={dir} role="listitem" {...viewTracker}>
