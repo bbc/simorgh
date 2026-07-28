@@ -30,9 +30,6 @@ const AccountPromotionalBannerControlTracker = ({
   return <VisuallyHiddenText {...viewTracker} />;
 };
 
-// Activates the server-side experiment (via useOptimizelyVariation) and renders
-// the resulting arm. Mounted only when the user is eligible, so ineligible users
-// are never bucketed into the experiment.
 const EligibleAccountPromotionalBannerExperiment = () => {
   // Gate the view event on banner visibility so both arms behave under the same
   // circumstances: control fires only when the banner would show, mirroring the
