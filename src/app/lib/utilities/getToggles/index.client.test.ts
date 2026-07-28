@@ -8,11 +8,13 @@ const remoteToggles = {
 
 describe('getToggles', () => {
   const originalTogglesBffPath = process.env.TOGGLES_BFF_PATH;
+  const originalAppEnv = process.env.SIMORGH_APP_ENV;
+  const originalServiceEnv = process.env.TOGGLES_SERVICE_ENV;
 
   const mockSuccessfulFetchResponse = {
     ok: true,
     status: 200,
-    json: jest.fn(async () => ({ toggles: remoteToggles })),
+    json: jest.fn(async () => ({ data: { toggles: remoteToggles } })),
   };
 
   beforeEach(() => {
@@ -26,6 +28,18 @@ describe('getToggles', () => {
     jest.resetModules();
     jest.restoreAllMocks();
     process.env.TOGGLES_BFF_PATH = originalTogglesBffPath;
+
+    if (originalAppEnv === undefined) {
+      delete process.env.SIMORGH_APP_ENV;
+    } else {
+      process.env.SIMORGH_APP_ENV = originalAppEnv;
+    }
+
+    if (originalServiceEnv === undefined) {
+      delete process.env.TOGGLES_SERVICE_ENV;
+    } else {
+      process.env.TOGGLES_SERVICE_ENV = originalServiceEnv;
+    }
   });
 
   it('should return defaultToggles if enableFetchingToggles is not enabled', async () => {
@@ -96,7 +110,13 @@ describe('getToggles', () => {
       });
     });
 
-    it('should only fetch once for repeated calls with the same endpoint and environment', async () => {
+    it('should only fetch once for repeated calls with the same endpoint and environment when not local', async () => {
+      process.env.SIMORGH_APP_ENV = 'live';
+      jest.mock('#lib/config/toggles', () => ({
+        ...mockDefaultToggles,
+        live: mockDefaultToggles.local,
+      }));
+
       const { default: getToggles } = await import('./index');
       (global.fetch as jest.Mock).mockClear();
 
@@ -110,6 +130,32 @@ describe('getToggles', () => {
         ...mockDefaultToggleDefinitions,
         ...remoteToggles,
       });
+    });
+
+    it('should bypass the cache and fetch on every call when running locally', async () => {
+      const { default: getToggles } = await import('./index');
+      (global.fetch as jest.Mock).mockClear();
+
+      await getToggles({ service: 'mundo' });
+      await getToggles({ service: 'mundo' });
+
+      expect(global.fetch).toHaveBeenCalledTimes(2);
+    });
+
+    it('should send the ctx-service-env header from TOGGLES_SERVICE_ENV when running locally', async () => {
+      process.env.TOGGLES_SERVICE_ENV = 'live';
+
+      const { default: getToggles } = await import('./index');
+      (global.fetch as jest.Mock).mockClear();
+
+      await getToggles({ service: 'mundo' });
+
+      expect(global.fetch).toHaveBeenCalledWith(
+        expect.any(String),
+        expect.objectContaining({
+          headers: { 'ctx-service-env': 'live' },
+        }),
+      );
     });
 
     it('should return default toggles when the response is not ok', async () => {
