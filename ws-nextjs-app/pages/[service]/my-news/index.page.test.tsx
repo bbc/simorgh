@@ -1,10 +1,10 @@
 import { GetServerSidePropsContext } from 'next';
-import * as getTogglesModule from '#app/lib/utilities/getToggles';
+import * as getTogglesModule from '#app/lib/utilities/fetchToggles';
 import { MY_NEWS_PAGE } from '#app/routes/utils/pageTypes';
 import { Toggles } from '#app/models/types/global';
 import { getServerSideProps } from './index.page';
 
-jest.mock('#app/lib/utilities/getToggles');
+jest.mock('#app/lib/utilities/fetchToggles');
 jest.mock('#utilities/logResponseTime', () => jest.fn());
 
 const mockGetToggles = getTogglesModule.default as jest.MockedFunction<

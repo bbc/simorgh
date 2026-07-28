@@ -7,7 +7,7 @@ import parseRoute from '#app/routes/utils/parseRoute';
 import { NOT_FOUND, OK } from '#app/lib/statusCodes.const';
 import getPageData from '#utilities/pageRequests/getPageData';
 import handleError from '#app/routes/utils/handleError';
-import fetchToggles from '#app/lib/utilities/getToggles';
+import fetchToggles from '#app/lib/utilities/fetchToggles';
 
 const logger = nodeLogger(__filename);
 
