@@ -94,7 +94,7 @@ import {
   isPortraitVideoUnderHeadline,
 } from '../../components/MediaLoader/utils/isPortraitVideo';
 import LocationBasedTopicOJ from '../../components/LocationBasedTopicOJ';
-import { OJComponentKey } from './searchReferrerComponentOrder';
+import { OJComponentKey, SearchVariant } from './searchReferrerComponentOrder';
 import TopStoriesSection from './PagePromoSections/TopStoriesSection';
 
 const getImageComponent =
@@ -165,6 +165,7 @@ const getWsojComponent = ({
 }) => (
   <Recommendations data={data} {...(experimentProps && { experimentProps })} />
 );
+
 const DisclaimerWithPaddingOverride = (props: ComponentToRenderProps) => (
   <Disclaimer {...props} increasePaddingOnDesktop={false} />
 );
@@ -296,6 +297,39 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     ?.split(':')
     ?.includes('topcat');
 
+  const getSearchMidArticleOJ = ({
+    data,
+    experimentProps,
+    searchVariant,
+  }: {
+    data: Recommendation[];
+    experimentProps?: ComponentExperimentProps | null;
+    searchVariant: SearchVariant | null;
+  }) => {
+    switch (searchVariant) {
+      case 'variant1related':
+        return <Recommendations data={data} />;
+
+      case 'variant2recommended':
+        return <Recommendations data={data} />;
+
+      case 'variant3hybrid':
+        return <Recommendations data={data} />;
+
+      case 'variant4relatedAndMid':
+        return <RelatedContentSection content={blocks} />;
+
+      case 'variant5recommendedAndMid':
+        return <TopicDiscovery topics={topics} />;
+
+      case 'variant6hybridAndMid':
+        return <LocationBasedTopicOJ pageData={pageData} />;
+
+      default:
+        return getWsojComponent({ data, experimentProps });
+    }
+  };
+
   const showPortraitVideoCarousel = Boolean(
     pageData?.portraitVideoItems?.portraitVideo?.blocks?.length &&
     articlePortraitVideoEnabled,
@@ -380,10 +414,13 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     group: gist,
     links: ArticleLinksBlock,
     mpu: getMpuComponent(allowAdvertising),
-    wsoj: ({ data }: { data: Recommendation[] }) =>
-      getWsojComponent({
-        data,
-      }),
+    wsoj: ({
+      data,
+      searchVariant,
+    }: {
+      data: Recommendation[];
+      searchVariant: SearchVariant | null;
+    }) => getSearchMidArticleOJ({ data, searchVariant }),
     disclaimer: DisclaimerWithPaddingOverride,
     podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
     ...(showContinueReadingButton && {
