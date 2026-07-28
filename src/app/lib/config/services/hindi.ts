@@ -145,14 +145,14 @@ export const service: DefaultServiceConfig = {
       },
       // TBC : TODO: Ticket needed
       followTopicButton: {
-        loading: 'लोड हो रहा है',
-        follow: 'फ़ॉलो करें',
-        following: 'फ़ॉलो किया जा रहा है',
-        followingAction: 'फ़ॉलो किया जा रहा है',
-        followed: 'फ़ॉलो किया गया',
-        unfollow: 'अनफ़ॉलो करें',
-        unfollowAccessible: 'फ़ॉलो किया गया. अनफ़ॉलो करें',
-        unfollowing: 'अनफ़ॉलो किया जा रहा है',
+        loading: 'Loading...',
+        follow: 'Follow',
+        following: 'Following...',
+        followingAction: 'Following...',
+        followed: 'Followed',
+        unfollow: 'Unfollow',
+        unfollowAccessible: 'Followed. Unfollow',
+        unfollowing: 'Unfollowing...',
       },
       myNews: {
         title: 'मेरी ख़बरें',
