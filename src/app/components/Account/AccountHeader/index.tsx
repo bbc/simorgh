@@ -32,7 +32,7 @@ const AccountHeader = ({ variant = 'legacy' }: AccountHeaderProps) => {
     componentName: clickComponentName,
   });
 
-  if (!isHydrated || !isIdctaAvailable) return null;
+  if (!isIdctaAvailable) return null;
 
   const href = isSignedIn ? settingsUrl : signInUrl;
   const label = isSignedIn
@@ -45,7 +45,10 @@ const AccountHeader = ({ variant = 'legacy' }: AccountHeaderProps) => {
 
   return (
     <div
-      css={isDefaultVariant ? styles.wrapperDefault : styles.wrapper}
+      css={[
+        isDefaultVariant ? styles.wrapperDefault : styles.wrapper,
+        !isHydrated && styles.hidden,
+      ]}
       {...viewTracker}
     >
       <Text
