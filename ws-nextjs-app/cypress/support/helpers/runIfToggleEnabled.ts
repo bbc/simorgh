@@ -13,9 +13,6 @@ export default ({
 }) => {
   if (service === 'scotland') return;
 
-  cy.log(`DEBUG cy.fetchToggles: type = ${typeof cy.fetchToggles}`);
-  cy.log(`DEBUG cy.fetchToggles: ${cy.fetchToggles}`);
-
   if (typeof cy.fetchToggles === 'function') {
     cy.fetchToggles(service);
 
