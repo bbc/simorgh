@@ -25,7 +25,9 @@ describe('SaveForLaterTooltip', () => {
   });
 
   it('renders the error title and body without a link', () => {
-    render(<SaveForLaterTooltip status="error" onClose={onClose} />);
+    render(<SaveForLaterTooltip status="error" onClose={onClose} />, {
+      service: 'hindi',
+    });
 
     expect(screen.getByText('Sorry, something went wrong')).toBeInTheDocument();
     expect(
@@ -35,7 +37,9 @@ describe('SaveForLaterTooltip', () => {
   });
 
   it('renders the removed title with a My News link', () => {
-    render(<SaveForLaterTooltip status="removed" onClose={onClose} />);
+    render(<SaveForLaterTooltip status="removed" onClose={onClose} />, {
+      service: 'hindi',
+    });
 
     expect(
       screen.getByText(/This article has now been removed from/i),
@@ -47,7 +51,9 @@ describe('SaveForLaterTooltip', () => {
   });
 
   it('calls onClose when the close button is clicked', async () => {
-    render(<SaveForLaterTooltip status="success" onClose={onClose} />);
+    render(<SaveForLaterTooltip status="success" onClose={onClose} />, {
+      service: 'hindi',
+    });
 
     await userEvent.click(screen.getByRole('button', { name: 'Close' }));
 
@@ -55,7 +61,9 @@ describe('SaveForLaterTooltip', () => {
   });
 
   it('exposes the tooltip as a polite live region for assistive technology', () => {
-    render(<SaveForLaterTooltip status="success" onClose={onClose} />);
+    render(<SaveForLaterTooltip status="success" onClose={onClose} />, {
+      service: 'hindi',
+    });
 
     const tooltip = screen.getByTestId('save-for-later-tooltip');
 
