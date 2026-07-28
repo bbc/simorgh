@@ -23,7 +23,7 @@ const useIsAccountPromoBannerVisible = (): boolean => {
       lastDismissed = window.localStorage.getItem(
         ACCOUNT_BANNER_LAST_DISMISS_KEY,
       );
-    } catch (error) {
+    } catch {
       // localStorage unavailable (e.g. privacy mode); treat as no prior dismissals
     }
 
