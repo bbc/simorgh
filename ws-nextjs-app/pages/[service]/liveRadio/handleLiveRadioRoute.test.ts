@@ -2,12 +2,12 @@ import { GetServerSidePropsContext } from 'next';
 import liveRadioJson from '#data/korean/bbc_korean_radio/liveradio.json';
 import { LIVE_RADIO_PAGE } from '#app/routes/utils/pageTypes';
 import { Toggles } from '#app/models/types/global';
-import * as getTogglesModule from '#app/lib/utilities/getToggles';
+import * as getTogglesModule from '#app/lib/utilities/fetchToggles';
 import * as getPageDataModule from '../../../utilities/pageRequests/getPageData';
 import handleLiveRadioRoute from './handleLiveRadioRoute';
 
 jest.mock('../../../utilities/pageRequests/getPageData');
-jest.mock('#app/lib/utilities/getToggles');
+jest.mock('#app/lib/utilities/fetchToggles');
 
 describe('handleLiveRadioRoute', () => {
   const mockSetHeader = jest.fn();

@@ -4,7 +4,7 @@ import { MY_NEWS_PAGE } from '#app/routes/utils/pageTypes';
 import PageDataParams from '#app/models/types/pageDataParams';
 import deriveVariant from '#utilities/deriveVariant';
 import logResponseTime from '#utilities/logResponseTime';
-import fetchToggles from '#app/lib/utilities/getToggles';
+import fetchToggles from '#app/lib/utilities/fetchToggles';
 import { NOT_FOUND, OK } from '#app/lib/statusCodes.const';
 
 const MyNewsPage = dynamic(() => import('./MyNewsPage'));

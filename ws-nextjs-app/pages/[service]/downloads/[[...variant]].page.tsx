@@ -5,7 +5,7 @@ import logResponseTime from '#utilities/logResponseTime';
 
 import deriveVariant from '#utilities/deriveVariant';
 import PageDataParams from '#app/models/types/pageDataParams';
-import fetchToggles from '#app/lib/utilities/getToggles';
+import fetchToggles from '#app/lib/utilities/fetchToggles';
 import dataFetch from './dataFetch';
 
 const downloadsPageLayout = dynamic(() => import('./downloadsPageLayout'));

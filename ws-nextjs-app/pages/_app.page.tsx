@@ -19,7 +19,7 @@ import { EventTrackingContextProvider } from '#app/contexts/EventTrackingContext
 import { UserContextProvider } from '#app/contexts/UserContext';
 import extractHeaders from '#utilities/extractHeaders';
 import { getServerExperiments } from '#utilities/experimentHeader';
-import fetchToggles from '#app/lib/utilities/getToggles';
+import fetchToggles from '#app/lib/utilities/fetchToggles';
 import getPathExtension from '#app/utilities/getPathExtension';
 import parseRoute from '#app/routes/utils/parseRoute';
 import addCspHeader from '#utilities/addCspHeader';
