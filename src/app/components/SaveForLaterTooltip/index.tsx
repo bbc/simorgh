@@ -11,6 +11,7 @@ import {
   bodyStyles,
   closeButtonStyles,
 } from './index.styles';
+import Text from '../Text';
 
 export type SaveForLaterTooltipStatus = 'success' | 'error' | 'removed';
 
@@ -88,8 +89,8 @@ const SaveForLaterTooltip = ({ status, onClose }: SaveForLaterTooltipProps) => {
       >
         <StatusIcon status={status} />
         <div css={contentStyles}>
-          <p css={titleStyles}>{title}</p>
-          {body && <p css={bodyStyles}>{body}</p>}
+          <Text css={titleStyles}>{title}</Text>
+          {body && <Text css={bodyStyles}>{body}</Text>}
         </div>
         <button
           type="button"
