@@ -16,6 +16,12 @@ const TooltipDemo = ({ status }: { status: SaveForLaterTooltipStatus }) => {
 export default {
   title: 'Components/SaveForLaterTooltip',
   component: SaveForLaterTooltip,
+  globals: {
+    service: {
+      service: 'ws',
+      variant: 'default',
+    },
+  },
 };
 
 export const Success = () => <TooltipDemo status="success" />;
