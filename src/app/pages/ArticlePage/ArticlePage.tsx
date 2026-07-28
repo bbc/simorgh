@@ -85,7 +85,9 @@ import RelatedContentSection from '../../components/RelatedContentSection';
 import TopicDiscovery from '../../components/TopicDiscovery';
 import Disclaimer from '../../components/Disclaimer';
 import SecondaryColumn from './SecondaryColumn';
-import useMobileOJComponentOrder from './useMobileOJComponentOrder';
+import useMobileOJComponentOrder, {
+  useDebugVariant,
+} from './useMobileOJComponentOrder';
 import styles from './ArticlePage.styles';
 import { ComponentToRenderProps, TimeStampProps } from './types';
 import ArticleHeadline from './ArticleHeadline';
@@ -384,6 +386,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     promoImageRawBlock?.model as { locator?: string } | undefined
   )?.locator;
 
+  const searchVariant = useDebugVariant();
+  const mobileOJOrder = useMobileOJComponentOrder(searchVariant);
+
   const componentsToRender = {
     visuallyHiddenHeadline,
     headline: getHeadlineComponent,
@@ -410,13 +415,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     group: gist,
     links: ArticleLinksBlock,
     mpu: getMpuComponent(allowAdvertising),
-    wsoj: ({
-      data,
-      searchVariant,
-    }: {
-      data: Recommendation[];
-      searchVariant: SearchVariant | null;
-    }) => getSearchMidArticleOJ({ data, searchVariant }),
+    wsoj: ({ data }: { data: Recommendation[] }) =>
+      getSearchMidArticleOJ({ data, searchVariant }),
     disclaimer: DisclaimerWithPaddingOverride,
     podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
     ...(showContinueReadingButton && {
@@ -439,7 +439,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
 
-  const showTopicDiscovery = topicDiscoveryEnabled && !isAmp && !isLite;
+  const showTopicDiscovery = true;
 
   const showRelatedTopicsComponent = Boolean(
     showRelatedTopics && topics.length > 0 && !showTopicDiscovery,
@@ -461,8 +461,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     countryCurationEnabled &&
     pageData?.countryCuration?.summaries?.length,
   );
-
-  const mobileOJOrder = useMobileOJComponentOrder();
 
   const topStoriesContent = pageData?.secondaryColumn?.topStories;
   const featuresContent = pageData?.secondaryColumn?.features;
