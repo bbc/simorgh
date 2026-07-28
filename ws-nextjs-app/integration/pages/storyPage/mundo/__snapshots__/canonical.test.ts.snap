@@ -9,7 +9,7 @@ exports[`Canonical Story Page Analytics ATI tracking pixel hostname 1`] = `"http
 exports[`Canonical Story Page Analytics ATI tracking pixel search params 1`] = `
 [
   {
-    "s": "598343",
+    "s": "598342",
   },
   {
     "s2": "62",
@@ -237,7 +237,7 @@ exports[`Canonical Story Page Most Read has item with rank 10`] = `
 exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
-  "url": "http://localhost:7081/mundo/images/icons/icon-192x192.png",
+  "url": "http://192.168.1.106:7081/mundo/images/icons/icon-192x192.png",
 }
 `;
 
@@ -269,7 +269,7 @@ exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 5`] =
 }
 `;
 
-exports[`Canonical Story Page SEO Canonical link 1`] = `"http://localhost:7081/mundo/noticias-internacional-51266689"`;
+exports[`Canonical Story Page SEO Canonical link 1`] = `"http://192.168.1.106:7081/mundo/noticias-internacional-51266689"`;
 
 exports[`Canonical Story Page SEO Dir attribute 1`] = `"ltr"`;
 
@@ -305,7 +305,7 @@ exports[`Canonical Story Page SEO Linked data should match text 1`] = `
         "name": "Spanish",
       },
       "mainEntityOfPage": {
-        "@id": "http://localhost:7081/mundo/noticias-internacional-51266689",
+        "@id": "http://192.168.1.106:7081/mundo/noticias-internacional-51266689",
         "@type": "WebPage",
         "name": "Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea",
       },
@@ -321,7 +321,7 @@ exports[`Canonical Story Page SEO Linked data should match text 1`] = `
         "publishingPrinciples": "https://www.bbc.com/mundo/institucional-51359666",
       },
       "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_mundo/17D42/production/_110620679_gettyimages-542984918.jpg",
-      "url": "http://localhost:7081/mundo/noticias-internacional-51266689",
+      "url": "http://192.168.1.106:7081/mundo/noticias-internacional-51266689",
     },
   ],
 }
@@ -341,7 +341,7 @@ exports[`Canonical Story Page SEO OG title 1`] = `"Brexit: qué cambiará para v
 
 exports[`Canonical Story Page SEO OG type 1`] = `"article"`;
 
-exports[`Canonical Story Page SEO OG url 1`] = `"http://localhost:7081/mundo/noticias-internacional-51266689"`;
+exports[`Canonical Story Page SEO OG url 1`] = `"http://192.168.1.106:7081/mundo/noticias-internacional-51266689"`;
 
 exports[`Canonical Story Page SEO Page title 1`] = `"Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea - BBC News Mundo"`;
 

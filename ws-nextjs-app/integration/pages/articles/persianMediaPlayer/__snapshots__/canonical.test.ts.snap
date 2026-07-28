@@ -9,7 +9,7 @@ exports[`Canonical Articles Analytics ATI tracking pixel hostname 1`] = `"https:
 exports[`Canonical Articles Analytics ATI tracking pixel search params 1`] = `
 [
   {
-    "s": "598343",
+    "s": "598342",
   },
   {
     "s2": "69",
@@ -309,77 +309,86 @@ exports[`Canonical Articles Media Loader renders a valid container 1`] = `
   data-e2e="media-loader__container"
 >
   <div
-    class="css-145siv3"
-    data-e2e="media-loader__placeholder"
+    class="css-rfn4r6"
+    data-simorgh-media-loader="inactive"
   >
     <div
-      class="css-1gynr2b"
-      data-e2e="media-player__guidance"
-    >
-      <noscript
-        class="css-n2zqlz"
-      >
-        <strong>
-          برای پخش این فایل لطفا جاوا اسکریپت را فعال یا از یک مرورگر دیگر استفاده کنید.
-        </strong>
-      </noscript>
-    </div>
-    <button
-      class="focusIndicatorRemove css-1s7djye"
-      type="button"
-    >
-      <span
-        class="css-5ku87v"
-      >
-        Play video, "Â«Ù‚Ø´Ø²Ù‡Ø° Ø´Ø³Ø³Ø«Ù Ù‡Ø± ÙØ«Ø³Ù", مدت 0,16
-      </span>
-      <div
-        aria-hidden="true"
-        class="css-7qcky8"
-      >
-        <svg
-          aria-hidden="true"
-          class="css-vja2s5 ew59ay91"
-          focusable="false"
-          height="12"
-          viewBox="0 0 12 12"
-          width="12"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="none"
-            fill-rule="evenodd"
-          >
-            <path
-              d="M.5.6h12v12H.5z"
-            />
-            <path
-              d="M2.144.96v11.28l8.712-5.64z"
-              fill="currentColor"
-            />
-          </g>
-        </svg>
-      </div>
-      <time
-        aria-hidden="true"
-        class="css-digyti"
-        datetime="PT16S"
-      >
-        00:16
-      </time>
-    </button>
+      aria-hidden="true"
+      class="simorgh-fake-fullscreen-layer"
+    />
     <div
-      class="css-e398u2"
-      style="padding-bottom:0;overflow:hidden"
+      class="css-145siv3"
+      data-e2e="media-loader__placeholder"
     >
-      <img
-        alt=""
-        class="css-ey0vwc"
-        loading="eager"
-        src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01kf9s0.jpg.webp"
-        srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01kf9s0.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01kf9s0.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01kf9s0.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01kf9s0.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01kf9s0.jpg.webp 800w"
-        style="aspect-ratio:auto"
-      />
+      <div
+        class="css-1gynr2b"
+        data-e2e="media-player__guidance"
+      >
+        <noscript
+          class="css-n2zqlz"
+        >
+          <strong>
+            برای پخش این فایل لطفا جاوا اسکریپت را فعال یا از یک مرورگر دیگر استفاده کنید.
+          </strong>
+        </noscript>
+      </div>
+      <button
+        class="focusIndicatorRemove css-1s7djye"
+        type="button"
+      >
+        <span
+          class="css-5ku87v"
+        >
+          Play video, "Â«Ù‚Ø´Ø²Ù‡Ø° Ø´Ø³Ø³Ø«Ù Ù‡Ø± ÙØ«Ø³Ù", مدت 0,16
+        </span>
+        <div
+          aria-hidden="true"
+          class="css-7qcky8"
+        >
+          <svg
+            aria-hidden="true"
+            class="css-vja2s5 ew59ay91"
+            focusable="false"
+            height="12"
+            viewBox="0 0 12 12"
+            width="12"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              fill="none"
+              fill-rule="evenodd"
+            >
+              <path
+                d="M.5.6h12v12H.5z"
+              />
+              <path
+                d="M2.144.96v11.28l8.712-5.64z"
+                fill="currentColor"
+              />
+            </g>
+          </svg>
+        </div>
+        <time
+          aria-hidden="true"
+          class="css-digyti"
+          datetime="PT16S"
+        >
+          00:16
+        </time>
+      </button>
+      <div
+        class="css-e398u2"
+        style="padding-bottom:0;overflow:hidden"
+      >
+        <img
+          alt=""
+          class="css-ey0vwc"
+          loading="eager"
+          src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01kf9s0.jpg.webp"
+          srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01kf9s0.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01kf9s0.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01kf9s0.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01kf9s0.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01kf9s0.jpg.webp 800w"
+          style="aspect-ratio:auto"
+        />
+      </div>
     </div>
   </div>
   <figcaption
@@ -477,7 +486,7 @@ exports[`Canonical Articles Most Read has item with rank 10`] = `
 exports[`Canonical Articles SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
-  "url": "http://localhost:7081/persian/images/icons/icon-192x192.png",
+  "url": "http://192.168.1.106:7081/persian/images/icons/icon-192x192.png",
 }
 `;
 
@@ -509,7 +518,7 @@ exports[`Canonical Articles SEO Apple Touch Icon should match attributes 5`] = `
 }
 `;
 
-exports[`Canonical Articles SEO Canonical link 1`] = `"http://localhost:7081/persian/articles/cej3lzd5e0go"`;
+exports[`Canonical Articles SEO Canonical link 1`] = `"http://192.168.1.106:7081/persian/articles/cej3lzd5e0go"`;
 
 exports[`Canonical Articles SEO Dir attribute 1`] = `"rtl"`;
 
@@ -552,7 +561,7 @@ exports[`Canonical Articles SEO Linked data should match text 1`] = `
         "name": "Persian",
       },
       "mainEntityOfPage": {
-        "@id": "http://localhost:7081/persian/articles/cej3lzd5e0go",
+        "@id": "http://192.168.1.106:7081/persian/articles/cej3lzd5e0go",
         "@type": "WebPage",
         "name": "این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد.",
       },
@@ -568,7 +577,7 @@ exports[`Canonical Articles SEO Linked data should match text 1`] = `
         "publishingPrinciples": "https://www.bbc.com/persian/institutional-49283091",
       },
       "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_persian/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg",
-      "url": "http://localhost:7081/persian/articles/cej3lzd5e0go",
+      "url": "http://192.168.1.106:7081/persian/articles/cej3lzd5e0go",
     },
   ],
 }
@@ -604,7 +613,7 @@ exports[`Canonical Articles SEO OG title 1`] = `"این تصویر آزمایش�
 
 exports[`Canonical Articles SEO OG type 1`] = `"article"`;
 
-exports[`Canonical Articles SEO OG url 1`] = `"http://localhost:7081/persian/articles/cej3lzd5e0go"`;
+exports[`Canonical Articles SEO OG url 1`] = `"http://192.168.1.106:7081/persian/articles/cej3lzd5e0go"`;
 
 exports[`Canonical Articles SEO Page title 1`] = `"این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد. - BBC News فارسی"`;
 

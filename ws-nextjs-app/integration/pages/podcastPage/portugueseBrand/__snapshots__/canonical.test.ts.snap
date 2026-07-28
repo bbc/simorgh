@@ -9,7 +9,7 @@ exports[`Canonical Podcast Page Analytics ATI tracking pixel hostname 1`] = `"ht
 exports[`Canonical Podcast Page Analytics ATI tracking pixel search params 1`] = `
 [
   {
-    "s": "598343",
+    "s": "598342",
   },
   {
     "s2": "33",
@@ -140,22 +140,27 @@ exports[`Canonical Podcast Page Media Loader renders a valid container 1`] = `
   data-e2e="media-loader__container"
 >
   <div
-    class="media-player css-1kf4wj3"
-    data-e2e="media-player"
+    class="css-rfn4r6"
+    data-simorgh-media-loader="inactive"
   >
-    <noscript>
-      <div>
-        <div
-          class="css-1ezssgh"
-        >
-          <strong
-            class="css-pow7hy"
+    <div
+      class="media-player css-1kf4wj3"
+      data-e2e="media-player"
+    >
+      <noscript>
+        <div>
+          <div
+            class="css-1ezssgh"
           >
-            A reprodução deste formato de vídeo não é compatível com seu dispositivo
-          </strong>
+            <strong
+              class="css-pow7hy"
+            >
+              A reprodução deste formato de vídeo não é compatível com seu dispositivo
+            </strong>
+          </div>
         </div>
-      </div>
-    </noscript>
+      </noscript>
+    </div>
   </div>
 </figure>
 `;
@@ -219,7 +224,7 @@ exports[`Canonical Podcast Page Recent Episodes List items should match text and
 exports[`Canonical Podcast Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
-  "url": "http://localhost:7081/portuguese/images/icons/icon-192x192.png",
+  "url": "http://192.168.1.106:7081/portuguese/images/icons/icon-192x192.png",
 }
 `;
 
@@ -251,7 +256,7 @@ exports[`Canonical Podcast Page SEO Apple Touch Icon should match attributes 5`]
 }
 `;
 
-exports[`Canonical Podcast Page SEO Canonical link 1`] = `"http://localhost:7081/portuguese/podcasts/p07r3r3t"`;
+exports[`Canonical Podcast Page SEO Canonical link 1`] = `"http://192.168.1.106:7081/portuguese/podcasts/p07r3r3t"`;
 
 exports[`Canonical Podcast Page SEO Dir attribute 1`] = `"ltr"`;
 
@@ -280,10 +285,10 @@ exports[`Canonical Podcast Page SEO Linked data should match text 1`] = `
         "name": "Portuguese",
       },
       "mainEntity": {
-        "@id": "http://localhost:7081/portuguese/podcasts/p07r3r3t#series",
+        "@id": "http://192.168.1.106:7081/portuguese/podcasts/p07r3r3t#series",
       },
       "mainEntityOfPage": {
-        "@id": "http://localhost:7081/portuguese/podcasts/p07r3r3t",
+        "@id": "http://192.168.1.106:7081/portuguese/podcasts/p07r3r3t",
         "@type": "WebPage",
         "name": "Que História! - News Brasil",
       },
@@ -299,76 +304,76 @@ exports[`Canonical Podcast Page SEO Linked data should match text 1`] = `
         "publishingPrinciples": "https://www.bbc.com/portuguese/institutional-50054434",
       },
       "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/portuguese/images/metadata/poster-1024x576.png",
-      "url": "http://localhost:7081/portuguese/podcasts/p07r3r3t",
+      "url": "http://192.168.1.106:7081/portuguese/podcasts/p07r3r3t",
     },
     {
-      "@id": "http://localhost:7081/portuguese/podcasts/p07r3r3t#series",
+      "@id": "http://192.168.1.106:7081/portuguese/podcasts/p07r3r3t#series",
       "@type": "PodcastSeries",
       "description": "Aos 16 anos, Eve Wiley descobriu que fora concebida com sêmen de doador anônimo. Mas anos depois, após doença de seu filho, fez descoberta chocante sobre sua identidade genética.",
       "hasPart": [
         {
-          "@id": "http://localhost:7081/portuguese/podcasts/p07r3r3t/p0jdspsp#episode",
+          "@id": "http://192.168.1.106:7081/portuguese/podcasts/p07r3r3t/p0jdspsp#episode",
           "@type": "PodcastEpisode",
           "datePublished": "2024-09-18T00:00:00.000Z",
           "duration": "PT21M30S",
           "name": "'Como encontrei tesouro enterrado na 2ª Guerra com mapa desenhado a mão por meu pai'",
-          "url": "http://localhost:7081/portuguese/podcasts/p07r3r3t/p0jdspsp",
+          "url": "http://192.168.1.106:7081/portuguese/podcasts/p07r3r3t/p0jdspsp",
         },
         {
-          "@id": "http://localhost:7081/portuguese/podcasts/p07r3r3t/p0jdsnk1#episode",
+          "@id": "http://192.168.1.106:7081/portuguese/podcasts/p07r3r3t/p0jdsnk1#episode",
           "@type": "PodcastEpisode",
           "datePublished": "2024-09-11T00:00:00.000Z",
           "duration": "PT22M10S",
           "name": "A família que passou 38 dias perdida no Pacífico",
-          "url": "http://localhost:7081/portuguese/podcasts/p07r3r3t/p0jdsnk1",
+          "url": "http://192.168.1.106:7081/portuguese/podcasts/p07r3r3t/p0jdsnk1",
         },
         {
-          "@id": "http://localhost:7081/portuguese/podcasts/p07r3r3t/p0jdsmk2#episode",
+          "@id": "http://192.168.1.106:7081/portuguese/podcasts/p07r3r3t/p0jdsmk2#episode",
           "@type": "PodcastEpisode",
           "datePublished": "2024-09-04T00:00:00.000Z",
           "duration": "PT23M54S",
           "name": "'Aos 11 anos convenci a polícia de que meu pai era o assassino de minha mãe'",
-          "url": "http://localhost:7081/portuguese/podcasts/p07r3r3t/p0jdsmk2",
+          "url": "http://192.168.1.106:7081/portuguese/podcasts/p07r3r3t/p0jdsmk2",
         },
         {
-          "@id": "http://localhost:7081/portuguese/podcasts/p07r3r3t/p0jdsk9x#episode",
+          "@id": "http://192.168.1.106:7081/portuguese/podcasts/p07r3r3t/p0jdsk9x#episode",
           "@type": "PodcastEpisode",
           "datePublished": "2024-08-28T00:00:00.000Z",
           "duration": "PT22M54S",
           "name": "'Como descobri a chocante identidade secreta do meu noivo'",
-          "url": "http://localhost:7081/portuguese/podcasts/p07r3r3t/p0jdsk9x",
+          "url": "http://192.168.1.106:7081/portuguese/podcasts/p07r3r3t/p0jdsk9x",
         },
         {
-          "@id": "http://localhost:7081/portuguese/podcasts/p07r3r3t/p0jdsd64#episode",
+          "@id": "http://192.168.1.106:7081/portuguese/podcasts/p07r3r3t/p0jdsd64#episode",
           "@type": "PodcastEpisode",
           "datePublished": "2024-08-14T00:00:00.000Z",
           "duration": "PT17M54S",
           "name": "A mulher que caiu de avião destruído por raio a 3 km de altura",
-          "url": "http://localhost:7081/portuguese/podcasts/p07r3r3t/p0jdsd64",
+          "url": "http://192.168.1.106:7081/portuguese/podcasts/p07r3r3t/p0jdsd64",
         },
         {
-          "@id": "http://localhost:7081/portuguese/podcasts/p07r3r3t/p0jdschj#episode",
+          "@id": "http://192.168.1.106:7081/portuguese/podcasts/p07r3r3t/p0jdschj#episode",
           "@type": "PodcastEpisode",
           "datePublished": "2024-08-07T00:00:00.000Z",
           "duration": "PT24M6S",
           "name": "O 'roubo do século' desvendado graças a reclamação sobre lixo jogado em terreno",
-          "url": "http://localhost:7081/portuguese/podcasts/p07r3r3t/p0jdschj",
+          "url": "http://192.168.1.106:7081/portuguese/podcasts/p07r3r3t/p0jdschj",
         },
         {
-          "@id": "http://localhost:7081/portuguese/podcasts/p07r3r3t/p0jdsg17#episode",
+          "@id": "http://192.168.1.106:7081/portuguese/podcasts/p07r3r3t/p0jdsg17#episode",
           "@type": "PodcastEpisode",
           "datePublished": "2024-07-26T00:00:00.000Z",
           "duration": "PT20M44S",
           "name": "O homem encontrado vivo em navio afundado",
-          "url": "http://localhost:7081/portuguese/podcasts/p07r3r3t/p0jdsg17",
+          "url": "http://192.168.1.106:7081/portuguese/podcasts/p07r3r3t/p0jdsg17",
         },
         {
-          "@id": "http://localhost:7081/portuguese/podcasts/p07r3r3t/p0jd7041#episode",
+          "@id": "http://192.168.1.106:7081/portuguese/podcasts/p07r3r3t/p0jd7041#episode",
           "@type": "PodcastEpisode",
           "datePublished": "2024-07-24T00:00:00.000Z",
           "duration": "PT43S",
           "name": "Vem aí a 3ª temporada do 'Que História!': ouça o trailer",
-          "url": "http://localhost:7081/portuguese/podcasts/p07r3r3t/p0jd7041",
+          "url": "http://192.168.1.106:7081/portuguese/podcasts/p07r3r3t/p0jd7041",
         },
       ],
       "image": {
@@ -382,7 +387,7 @@ exports[`Canonical Podcast Page SEO Linked data should match text 1`] = `
         "https://www.youtube.com/playlist?list=PLCX5XjxKTpTmh19ipbvr6OACmBWczOLJO",
         "https://music.amazon.co.uk/podcasts/51c33ac0-d208-4026-bc4d-396205703a8f/que-hist%C3%B3ria",
       ],
-      "url": "http://localhost:7081/portuguese/podcasts/p07r3r3t",
+      "url": "http://192.168.1.106:7081/portuguese/podcasts/p07r3r3t",
       "webFeed": "https://podcasts.files.bbci.co.uk/p07r3r3t.rss",
     },
   ],
@@ -403,7 +408,7 @@ exports[`Canonical Podcast Page SEO OG title 1`] = `"Que História! - News Brasi
 
 exports[`Canonical Podcast Page SEO OG type 1`] = `"website"`;
 
-exports[`Canonical Podcast Page SEO OG url 1`] = `"http://localhost:7081/portuguese/podcasts/p07r3r3t"`;
+exports[`Canonical Podcast Page SEO OG url 1`] = `"http://192.168.1.106:7081/portuguese/podcasts/p07r3r3t"`;
 
 exports[`Canonical Podcast Page SEO Page title 1`] = `"Que História! - News Brasil - BBC News Brasil"`;
 

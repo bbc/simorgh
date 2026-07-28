@@ -9,7 +9,7 @@ exports[`Canonical Articles Analytics ATI tracking pixel hostname 1`] = `"https:
 exports[`Canonical Articles Analytics ATI tracking pixel search params 1`] = `
 [
   {
-    "s": "598274",
+    "s": "598273",
   },
   {
     "s2": "79",
@@ -138,7 +138,7 @@ exports[`Canonical Articles Main heading should match text 1`] = `"This is the h
 exports[`Canonical Articles SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
-  "url": "http://localhost:7081/scotland/images/icons/icon-192x192.png",
+  "url": "http://192.168.1.106:7081/scotland/images/icons/icon-192x192.png",
 }
 `;
 
@@ -170,7 +170,7 @@ exports[`Canonical Articles SEO Apple Touch Icon should match attributes 5`] = `
 }
 `;
 
-exports[`Canonical Articles SEO Canonical link 1`] = `"http://localhost:7081/scotland/articles/czwj5l0n210o"`;
+exports[`Canonical Articles SEO Canonical link 1`] = `"http://192.168.1.106:7081/scotland/articles/czwj5l0n210o"`;
 
 exports[`Canonical Articles SEO Dir attribute 1`] = `"ltr"`;
 
@@ -212,7 +212,7 @@ exports[`Canonical Articles SEO Linked data should match text 1`] = `
         "name": "English",
       },
       "mainEntityOfPage": {
-        "@id": "http://localhost:7081/scotland/articles/czwj5l0n210o",
+        "@id": "http://192.168.1.106:7081/scotland/articles/czwj5l0n210o",
         "@type": "WebPage",
         "name": "This is the SEO headline of this test article",
       },
@@ -227,7 +227,7 @@ exports[`Canonical Articles SEO Linked data should match text 1`] = `
         "name": "BBC",
       },
       "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/scotland/images/metadata/poster-1024x576.png",
-      "url": "http://localhost:7081/scotland/articles/czwj5l0n210o",
+      "url": "http://192.168.1.106:7081/scotland/articles/czwj5l0n210o",
     },
   ],
 }
@@ -260,7 +260,7 @@ exports[`Canonical Articles SEO OG title 1`] = `"This is the SEO headline of thi
 
 exports[`Canonical Articles SEO OG type 1`] = `"article"`;
 
-exports[`Canonical Articles SEO OG url 1`] = `"http://localhost:7081/scotland/articles/czwj5l0n210o"`;
+exports[`Canonical Articles SEO OG url 1`] = `"http://192.168.1.106:7081/scotland/articles/czwj5l0n210o"`;
 
 exports[`Canonical Articles SEO Page title 1`] = `"This is the SEO headline of this test article - BBC Scotland"`;
 

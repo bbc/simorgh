@@ -9,7 +9,7 @@ exports[`Canonical Korean Live Radio Page Analytics ATI tracking pixel hostname 
 exports[`Canonical Korean Live Radio Page Analytics ATI tracking pixel search params 1`] = `
 [
   {
-    "s": "598343",
+    "s": "598342",
   },
   {
     "s2": "57",
@@ -132,22 +132,27 @@ exports[`Canonical Korean Live Radio Page Media Loader renders a valid container
   data-e2e="media-loader__container"
 >
   <div
-    class="media-player css-1kf4wj3"
-    data-e2e="media-player"
+    class="css-rfn4r6"
+    data-simorgh-media-loader="inactive"
   >
-    <noscript>
-      <div>
-        <div
-          class="css-i4t8f7"
-        >
-          <strong
-            class="css-pow7hy"
+    <div
+      class="media-player css-1kf4wj3"
+      data-e2e="media-player"
+    >
+      <noscript>
+        <div>
+          <div
+            class="css-i4t8f7"
           >
-            사용 기기에서 미디어 재생이 지원되지 않습니다
-          </strong>
+            <strong
+              class="css-pow7hy"
+            >
+              사용 기기에서 미디어 재생이 지원되지 않습니다
+            </strong>
+          </div>
         </div>
-      </div>
-    </noscript>
+      </noscript>
+    </div>
   </div>
 </figure>
 `;
@@ -155,7 +160,7 @@ exports[`Canonical Korean Live Radio Page Media Loader renders a valid container
 exports[`Canonical Korean Live Radio Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
-  "url": "http://localhost:7081/korean/images/icons/icon-192x192.png",
+  "url": "http://192.168.1.106:7081/korean/images/icons/icon-192x192.png",
 }
 `;
 
@@ -187,7 +192,7 @@ exports[`Canonical Korean Live Radio Page SEO Apple Touch Icon should match attr
 }
 `;
 
-exports[`Canonical Korean Live Radio Page SEO Canonical link 1`] = `"http://localhost:7081/korean/bbc_korean_radio/liveradio"`;
+exports[`Canonical Korean Live Radio Page SEO Canonical link 1`] = `"http://192.168.1.106:7081/korean/bbc_korean_radio/liveradio"`;
 
 exports[`Canonical Korean Live Radio Page SEO Dir attribute 1`] = `"ltr"`;
 
@@ -215,11 +220,11 @@ exports[`Canonical Korean Live Radio Page SEO Linked data should match text 1`] 
         "name": "Korean",
       },
       "mainEntityOfPage": {
-        "@id": "http://localhost:7081/korean/bbc_korean_radio/liveradio",
+        "@id": "http://192.168.1.106:7081/korean/bbc_korean_radio/liveradio",
         "@type": "WebPage",
         "name": "BBC 코리아 라디오",
       },
-      "url": "http://localhost:7081/korean/bbc_korean_radio/liveradio",
+      "url": "http://192.168.1.106:7081/korean/bbc_korean_radio/liveradio",
     },
   ],
 }
@@ -239,7 +244,7 @@ exports[`Canonical Korean Live Radio Page SEO OG title 1`] = `"BBC 코리아 라
 
 exports[`Canonical Korean Live Radio Page SEO OG type 1`] = `"website"`;
 
-exports[`Canonical Korean Live Radio Page SEO OG url 1`] = `"http://localhost:7081/korean/bbc_korean_radio/liveradio"`;
+exports[`Canonical Korean Live Radio Page SEO OG url 1`] = `"http://192.168.1.106:7081/korean/bbc_korean_radio/liveradio"`;
 
 exports[`Canonical Korean Live Radio Page SEO Page title 1`] = `"BBC 코리아 라디오 - BBC News 코리아"`;
 

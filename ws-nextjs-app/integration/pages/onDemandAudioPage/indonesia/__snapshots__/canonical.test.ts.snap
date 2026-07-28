@@ -9,7 +9,7 @@ exports[`Canonical On Demand Audio Page Analytics ATI tracking pixel hostname 1`
 exports[`Canonical On Demand Audio Page Analytics ATI tracking pixel search params 1`] = `
 [
   {
-    "s": "598343",
+    "s": "598342",
   },
   {
     "s2": "54",
@@ -140,22 +140,27 @@ exports[`Canonical On Demand Audio Page Media Loader renders a valid container 1
   data-e2e="media-loader__container"
 >
   <div
-    class="media-player css-1kf4wj3"
-    data-e2e="media-player"
+    class="css-rfn4r6"
+    data-simorgh-media-loader="inactive"
   >
-    <noscript>
-      <div>
-        <div
-          class="css-1mgo2mg"
-        >
-          <strong
-            class="css-pow7hy"
+    <div
+      class="media-player css-1kf4wj3"
+      data-e2e="media-player"
+    >
+      <noscript>
+        <div>
+          <div
+            class="css-1mgo2mg"
           >
-            Untuk memutar video ini, aktifkan JavaScript atau coba di mesin pencari lain
-          </strong>
+            <strong
+              class="css-pow7hy"
+            >
+              Untuk memutar video ini, aktifkan JavaScript atau coba di mesin pencari lain
+            </strong>
+          </div>
         </div>
-      </div>
-    </noscript>
+      </noscript>
+    </div>
   </div>
 </figure>
 `;
@@ -191,7 +196,7 @@ exports[`Canonical On Demand Audio Page Recent Episodes List items should match 
 exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
-  "url": "http://localhost:7081/indonesia/images/icons/icon-192x192.png",
+  "url": "http://192.168.1.106:7081/indonesia/images/icons/icon-192x192.png",
 }
 `;
 
@@ -223,7 +228,7 @@ exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attrib
 }
 `;
 
-exports[`Canonical On Demand Audio Page SEO Canonical link 1`] = `"http://localhost:7081/indonesia/bbc_indonesian_radio/w172ywztppc5xsy"`;
+exports[`Canonical On Demand Audio Page SEO Canonical link 1`] = `"http://192.168.1.106:7081/indonesia/bbc_indonesian_radio/w172ywztppc5xsy"`;
 
 exports[`Canonical On Demand Audio Page SEO Dir attribute 1`] = `"ltr"`;
 
@@ -251,7 +256,7 @@ exports[`Canonical On Demand Audio Page SEO Linked data should match text 1`] = 
         "name": "Indonesian",
       },
       "mainEntityOfPage": {
-        "@id": "http://localhost:7081/indonesia/bbc_indonesian_radio/w172ywztppc5xsy",
+        "@id": "http://192.168.1.106:7081/indonesia/bbc_indonesian_radio/w172ywztppc5xsy",
         "@type": "WebPage",
         "name": "Dunia Pagi Ini - Dunia Pagi Ini - Indonesia",
       },
@@ -267,7 +272,7 @@ exports[`Canonical On Demand Audio Page SEO Linked data should match text 1`] = 
         "publishingPrinciples": "https://www.bbc.com/indonesia/institutional-49283175",
       },
       "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/indonesia/images/metadata/poster-1024x576.png",
-      "url": "http://localhost:7081/indonesia/bbc_indonesian_radio/w172ywztppc5xsy",
+      "url": "http://192.168.1.106:7081/indonesia/bbc_indonesian_radio/w172ywztppc5xsy",
     },
     {
       "@type": "AudioObject",
@@ -295,7 +300,7 @@ exports[`Canonical On Demand Audio Page SEO OG title 1`] = `"Dunia Pagi Ini - Du
 
 exports[`Canonical On Demand Audio Page SEO OG type 1`] = `"website"`;
 
-exports[`Canonical On Demand Audio Page SEO OG url 1`] = `"http://localhost:7081/indonesia/bbc_indonesian_radio/w172ywztppc5xsy"`;
+exports[`Canonical On Demand Audio Page SEO OG url 1`] = `"http://192.168.1.106:7081/indonesia/bbc_indonesian_radio/w172ywztppc5xsy"`;
 
 exports[`Canonical On Demand Audio Page SEO Page title 1`] = `"Dunia Pagi Ini - Dunia Pagi Ini - Indonesia - BBC News Indonesia"`;
 

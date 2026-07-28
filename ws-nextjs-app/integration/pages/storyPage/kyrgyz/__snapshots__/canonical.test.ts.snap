@@ -9,7 +9,7 @@ exports[`Canonical Story Page Analytics ATI tracking pixel hostname 1`] = `"http
 exports[`Canonical Story Page Analytics ATI tracking pixel search params 1`] = `
 [
   {
-    "s": "598343",
+    "s": "598342",
   },
   {
     "s2": "58",
@@ -189,7 +189,7 @@ exports[`Canonical Story Page Most Read has item with rank 5`] = `
 exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
-  "url": "http://localhost:7081/kyrgyz/images/icons/icon-192x192.png",
+  "url": "http://192.168.1.106:7081/kyrgyz/images/icons/icon-192x192.png",
 }
 `;
 
@@ -221,7 +221,7 @@ exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 5`] =
 }
 `;
 
-exports[`Canonical Story Page SEO Canonical link 1`] = `"http://localhost:7081/kyrgyz/23292889"`;
+exports[`Canonical Story Page SEO Canonical link 1`] = `"http://192.168.1.106:7081/kyrgyz/23292889"`;
 
 exports[`Canonical Story Page SEO Dir attribute 1`] = `"ltr"`;
 
@@ -264,7 +264,7 @@ exports[`Canonical Story Page SEO Linked data should match text 1`] = `
         "name": "Kyrgyz",
       },
       "mainEntityOfPage": {
-        "@id": "http://localhost:7081/kyrgyz/23292889",
+        "@id": "http://192.168.1.106:7081/kyrgyz/23292889",
         "@type": "WebPage",
         "name": "Test STY for social embeds",
       },
@@ -280,7 +280,7 @@ exports[`Canonical Story Page SEO Linked data should match text 1`] = `
         "publishingPrinciples": "https://www.bbc.com/kyrgyz/institutional-49677275",
       },
       "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_kyrgyz/CF33/test/_63734035_socialmedia.jpg",
-      "url": "http://localhost:7081/kyrgyz/23292889",
+      "url": "http://192.168.1.106:7081/kyrgyz/23292889",
     },
   ],
 }
@@ -300,7 +300,7 @@ exports[`Canonical Story Page SEO OG title 1`] = `"Test STY for social embeds - 
 
 exports[`Canonical Story Page SEO OG type 1`] = `"article"`;
 
-exports[`Canonical Story Page SEO OG url 1`] = `"http://localhost:7081/kyrgyz/23292889"`;
+exports[`Canonical Story Page SEO OG url 1`] = `"http://192.168.1.106:7081/kyrgyz/23292889"`;
 
 exports[`Canonical Story Page SEO Page title 1`] = `"Test STY for social embeds - BBC News Кыргыз Кызматы"`;
 

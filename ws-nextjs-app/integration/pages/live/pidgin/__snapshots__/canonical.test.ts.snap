@@ -22,22 +22,31 @@ exports[`Canonical Live Media Loader renders a valid container 1`] = `
   data-e2e="media-loader__container"
 >
   <div
-    class="media-player css-9p9hvp"
-    data-e2e="media-player"
+    class="css-rfn4r6"
+    data-simorgh-media-loader="inactive"
   >
-    <noscript>
-      <div>
-        <div
-          class="css-1mgo2mg"
-        >
-          <strong
-            class="css-pow7hy"
+    <div
+      aria-hidden="true"
+      class="simorgh-fake-fullscreen-layer"
+    />
+    <div
+      class="media-player css-9p9hvp"
+      data-e2e="media-player"
+    >
+      <noscript>
+        <div>
+          <div
+            class="css-1mgo2mg"
           >
-            Dem no support media player for your device
-          </strong>
+            <strong
+              class="css-pow7hy"
+            >
+              Dem no support media player for your device
+            </strong>
+          </div>
         </div>
-      </div>
-    </noscript>
+      </noscript>
+    </div>
   </div>
   <figcaption
     class="css-88md10"

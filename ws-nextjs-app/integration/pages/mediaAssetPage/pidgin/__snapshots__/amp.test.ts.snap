@@ -10,7 +10,7 @@ exports[`AMP Media Asset Page Analytics ATI 1`] = `
     "base": "https://logws1363.ati-host.net/hit.xiti?",
     "pageview": [
       {
-        "s": "598343",
+        "s": "598342",
       },
       {
         "s2": "70",
@@ -92,7 +92,7 @@ exports[`AMP Media Asset Page Analytics chartbeat 1`] = `
 {
   "vars": {
     "contentType": "article-media-asset",
-    "domain": "test.bbc.co.uk",
+    "domain": "pidgin.bbc.co.uk",
     "sections": "Pidgin, Pidgin - MAP, Pidgin - Opinion-category",
     "title": "DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sit<em>amet</em>, consectetur",
     "uid": 50924,
@@ -193,7 +193,7 @@ exports[`AMP Media Asset Page Main heading should match text 1`] = `"DO NOT EDIT
 exports[`AMP Media Asset Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
-  "url": "http://localhost:7081/pidgin/images/icons/icon-192x192.png",
+  "url": "http://192.168.1.106:7081/pidgin/images/icons/icon-192x192.png",
 }
 `;
 
@@ -225,7 +225,7 @@ exports[`AMP Media Asset Page SEO Apple Touch Icon should match attributes 5`] =
 }
 `;
 
-exports[`AMP Media Asset Page SEO Canonical link 1`] = `"http://localhost:7081/pidgin/23248703"`;
+exports[`AMP Media Asset Page SEO Canonical link 1`] = `"http://192.168.1.106:7081/pidgin/23248703"`;
 
 exports[`AMP Media Asset Page SEO Dir attribute 1`] = `"ltr"`;
 
@@ -267,7 +267,7 @@ exports[`AMP Media Asset Page SEO Linked data should match text 1`] = `
         "name": "Nigerian Pidgin",
       },
       "mainEntityOfPage": {
-        "@id": "http://localhost:7081/pidgin/23248703",
+        "@id": "http://192.168.1.106:7081/pidgin/23248703",
         "@type": "WebPage",
         "name": "DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sit<em>amet</em>, consectetur",
       },
@@ -283,7 +283,7 @@ exports[`AMP Media Asset Page SEO Linked data should match text 1`] = `
         "publishingPrinciples": "https://www.bbc.com/pidgin/institutional-48528766",
       },
       "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg",
-      "url": "http://localhost:7081/pidgin/23248703",
+      "url": "http://192.168.1.106:7081/pidgin/23248703",
     },
   ],
 }
@@ -316,7 +316,7 @@ exports[`AMP Media Asset Page SEO OG title 1`] = `"DO NOT EDIT THIS IS AN AUTOMA
 
 exports[`AMP Media Asset Page SEO OG type 1`] = `"article"`;
 
-exports[`AMP Media Asset Page SEO OG url 1`] = `"http://localhost:7081/pidgin/23248703"`;
+exports[`AMP Media Asset Page SEO OG url 1`] = `"http://192.168.1.106:7081/pidgin/23248703"`;
 
 exports[`AMP Media Asset Page SEO Page title 1`] = `"DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sitamet, consectetur - BBC News Pidgin"`;
 

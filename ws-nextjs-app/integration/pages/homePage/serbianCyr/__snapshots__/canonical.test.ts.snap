@@ -9,7 +9,7 @@ exports[`Canonical Home Page Analytics ATI tracking pixel hostname 1`] = `"https
 exports[`Canonical Home Page Analytics ATI tracking pixel search params 1`] = `
 [
   {
-    "s": "598343",
+    "s": "598342",
   },
   {
     "s2": "81",
@@ -212,7 +212,7 @@ exports[`Canonical Home Page Page content First item in the first curation is th
 exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
-  "url": "http://localhost:7081/serbian/images/icons/icon-192x192.png",
+  "url": "http://192.168.1.106:7081/serbian/images/icons/icon-192x192.png",
 }
 `;
 
@@ -244,7 +244,7 @@ exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 5`] = 
 }
 `;
 
-exports[`Canonical Home Page SEO Canonical link 1`] = `"http://localhost:7081/serbian/cyr"`;
+exports[`Canonical Home Page SEO Canonical link 1`] = `"http://192.168.1.106:7081/serbian/cyr"`;
 
 exports[`Canonical Home Page SEO Dir attribute 1`] = `"ltr"`;
 
@@ -273,7 +273,7 @@ exports[`Canonical Home Page SEO Linked data should match text 1`] = `
         "name": "Serbian",
       },
       "mainEntityOfPage": {
-        "@id": "http://localhost:7081/serbian/cyr",
+        "@id": "http://192.168.1.106:7081/serbian/cyr",
         "@type": "WebPage",
         "name": "Главна страница",
       },
@@ -289,7 +289,7 @@ exports[`Canonical Home Page SEO Linked data should match text 1`] = `
         "publishingPrinciples": "https://www.bbc.com/serbian/cyr/institutional-50173730",
       },
       "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png",
-      "url": "http://localhost:7081/serbian/cyr",
+      "url": "http://192.168.1.106:7081/serbian/cyr",
     },
     {
       "@type": "ItemList",
@@ -418,7 +418,7 @@ exports[`Canonical Home Page SEO OG title 1`] = `"Главна страница 
 
 exports[`Canonical Home Page SEO OG type 1`] = `"website"`;
 
-exports[`Canonical Home Page SEO OG url 1`] = `"http://localhost:7081/serbian/cyr"`;
+exports[`Canonical Home Page SEO OG url 1`] = `"http://192.168.1.106:7081/serbian/cyr"`;
 
 exports[`Canonical Home Page SEO Page title 1`] = `"Главна страница - BBC News на српском"`;
 

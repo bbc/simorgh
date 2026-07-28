@@ -247,7 +247,7 @@ exports[`Canonical Articles Most Read has item with rank 10`] = `
 exports[`Canonical Articles SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
-  "url": "http://localhost:7081/news/images/icons/icon-192x192.png",
+  "url": "http://192.168.1.106:7081/news/images/icons/icon-192x192.png",
 }
 `;
 
@@ -279,7 +279,7 @@ exports[`Canonical Articles SEO Apple Touch Icon should match attributes 5`] = `
 }
 `;
 
-exports[`Canonical Articles SEO Canonical link 1`] = `"http://localhost:7081/news/articles/c0g992jmmkko"`;
+exports[`Canonical Articles SEO Canonical link 1`] = `"http://192.168.1.106:7081/news/articles/c0g992jmmkko"`;
 
 exports[`Canonical Articles SEO Dir attribute 1`] = `"ltr"`;
 
@@ -343,7 +343,7 @@ exports[`Canonical Articles SEO Linked data should match text 1`] = `
         "name": "English",
       },
       "mainEntityOfPage": {
-        "@id": "http://localhost:7081/news/articles/c0g992jmmkko",
+        "@id": "http://192.168.1.106:7081/news/articles/c0g992jmmkko",
         "@type": "WebPage",
         "name": "Royal wedding flowers given to Hackney hospice",
       },
@@ -359,7 +359,7 @@ exports[`Canonical Articles SEO Linked data should match text 1`] = `
         "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
       },
       "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_news/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg",
-      "url": "http://localhost:7081/news/articles/c0g992jmmkko",
+      "url": "http://192.168.1.106:7081/news/articles/c0g992jmmkko",
     },
   ],
 }
@@ -379,7 +379,7 @@ exports[`Canonical Articles SEO OG title 1`] = `"Royal wedding flowers given to 
 
 exports[`Canonical Articles SEO OG type 1`] = `"article"`;
 
-exports[`Canonical Articles SEO OG url 1`] = `"http://localhost:7081/news/articles/c0g992jmmkko"`;
+exports[`Canonical Articles SEO OG url 1`] = `"http://192.168.1.106:7081/news/articles/c0g992jmmkko"`;
 
 exports[`Canonical Articles SEO Page title 1`] = `"Royal wedding flowers given to Hackney hospice - BBC News"`;
 
