@@ -107,8 +107,11 @@ const styles = {
       },
       '.promo-timestamp': {
         position: 'relative',
-        flexShrink: 0,
-        whiteSpace: 'nowrap',
+        flexShrink: 1,
+        minWidth: 0,
+        maxWidth: '100%',
+        whiteSpace: 'normal',
+        overflowWrap: 'anywhere',
         '&::before': {
           content: '""',
           position: 'absolute',
