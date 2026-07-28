@@ -1,87 +1,90 @@
 import { css, Theme } from '@emotion/react';
+import pixelsToRem from '#app/utilities/pixelsToRem';
 
 export const wrapperStyles = css`
   position: relative;
 `;
 
-export const containerStyles = css`
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  max-width: 21rem;
-  width: 100%;
-  display: flex;
-  gap: 0.5rem;
-  padding: 0.75rem;
-  border: 1px solid;
-  margin: 0 0.5rem;
+export const containerStyles = ({ spacings }: Theme) =>
+  css({
+    position: 'absolute',
+    top: '100%',
+    left: 0,
+    right: 0,
+    maxWidth: pixelsToRem(336),
+    width: '100%',
+    display: 'flex',
+    gap: `${spacings.HALF}rem`,
+    padding: `${spacings.FULL}rem`,
+    border: '1px solid',
+    margin: `0 ${spacings.HALF}rem`,
+    '&::before': {
+      content: '""',
+      position: 'absolute',
+      top: `-${pixelsToRem(9)}`,
+      left: `${spacings.FULL}rem`,
+      width: 0,
+      height: 0,
+      borderLeft: `${pixelsToRem(8)} solid transparent`,
+      borderRight: `${pixelsToRem(8)} solid transparent`,
+      borderBottom: `${pixelsToRem(9)} solid`,
+    },
+    '&::after': {
+      content: '""',
+      position: 'absolute',
+      top: `-${pixelsToRem(7)}`,
+      left: `${spacings.FULL}rem`,
+      width: 0,
+      height: 0,
+      borderLeft: `${pixelsToRem(8)} solid transparent`,
+      borderRight: `${pixelsToRem(8)} solid transparent`,
+      borderBottom: `${spacings.HALF}rem solid white`,
+    },
+  });
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: -0.5625rem;
-    left: 1rem;
-    width: 0;
-    height: 0;
-    border-left: 0.5rem solid transparent;
-    border-right: 0.5rem solid transparent;
-    border-bottom: 0.5625rem solid;
-  }
+export const iconStyles = css({
+  flexShrink: 0,
+  width: pixelsToRem(22),
+  height: pixelsToRem(22),
+});
 
-  &::after {
-    content: '';
-    position: absolute;
-    top: -0.4375rem;
-    left: 1rem;
-    width: 0;
-    height: 0;
-    border-left: 0.5rem solid transparent;
-    border-right: 0.5rem solid transparent;
-    border-bottom: 0.5rem solid white;
-  }
-`;
+export const contentStyles = ({ spacings }: Theme) =>
+  css({
+    flex: 1,
+    display: 'flex',
+    flexDirection: 'column',
+    gap: `${spacings.DOUBLE}rem`,
+    a: {
+      color: 'inherit',
+    },
+  });
 
-export const iconStyles = css`
-  flex-shrink: 0;
-  width: 1.375rem;
-  height: 1.375rem;
-`;
-
-export const contentStyles = css`
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-
-  a {
-    color: inherit;
-  }
-`;
-
-export const titleStyles = css`
-  margin: 0;
-  font-weight: 700;
-`;
-
-export const bodyStyles = ({ mq }: Theme) =>
+export const titleStyles = ({ fontSizes }: Theme) =>
   css({
     margin: 0,
+    fontWeight: 700,
+    ...fontSizes.brevier,
+  });
+
+export const bodyStyles = ({ fontSizes, mq }: Theme) =>
+  css({
+    margin: 0,
+    ...fontSizes.brevier,
     [mq.GROUP_0_MAX_WIDTH]: {
       display: 'none',
     },
   });
 
-export const closeButtonStyles = ({ palette }: Theme) =>
+export const closeButtonStyles = ({ palette, spacings }: Theme) =>
   css({
     flexShrink: 0,
     alignSelf: 'flex-start',
-    marginInlineStart: '1.5rem',
-    marginBlockStart: '-0.75rem',
-    marginInlineEnd: '-0.75rem',
+    marginInlineStart: `${spacings.TRIPLE}rem`,
+    marginBlockStart: `-${spacings.FULL}rem`,
+    marginInlineEnd: `-${spacings.FULL}rem`,
     padding: 0,
-    width: '2.75rem',
-    height: '2.75rem',
+    width: `${spacings.QUADRUPLE}rem`,
+    height: `${spacings.QUADRUPLE}rem`,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -99,7 +102,7 @@ export const closeButtonStyles = ({ palette }: Theme) =>
     '&:focus-visible': {
       background: palette.POSTBOX,
       outline: `2px solid ${palette.WHITE}`,
-      boxShadow: `0 0 0 4px ${palette.GREY_10}`,
+      boxShadow: `0 0 0 ${pixelsToRem(4)} ${palette.GREY_10}`,
       svg: { fill: palette.WHITE },
     },
   });
