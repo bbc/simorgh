@@ -1,4 +1,3 @@
-/* eslint-disable no-eval */
 import sendStaticBeacon, { addSendStaticBeaconToWindow } from '.';
 
 let XMLHttpRequestSpy: jest.SpyInstance<XMLHttpRequest | undefined, []>;

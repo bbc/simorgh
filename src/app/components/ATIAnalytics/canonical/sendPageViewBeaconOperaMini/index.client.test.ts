@@ -1,4 +1,3 @@
-/* eslint-disable no-eval */
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import { addSendStaticBeaconToWindow } from '#app/lib/analyticsUtils/staticATITracking/sendStaticBeacon';
 import sendPageViewBeaconOperaMini from '.';
