@@ -426,6 +426,7 @@ exports[`Navigation Page-type navigation attribution announces Home when on a HO
   width: 2.75rem;
   background-color: #B80000;
   color: #FFFFFF;
+  overflow: hidden;
   width: 2.75rem;
   height: 2.75rem;
 }
@@ -1315,6 +1316,7 @@ exports[`Navigation Page-type navigation attribution highlights dropdown item wh
   width: 2.75rem;
   background-color: #B80000;
   color: #FFFFFF;
+  overflow: hidden;
   width: 2.75rem;
   height: 2.75rem;
 }
