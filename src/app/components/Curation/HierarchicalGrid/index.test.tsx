@@ -8,11 +8,6 @@ import mediaFixture from './mediaFixtures';
 import liveFixtures from './liveFixtures';
 import HierarchicalGrid from '.';
 
-jest.mock('../../../hooks/useClickTrackerHandler', () => ({
-  __esModule: true,
-  default: jest.fn(() => ({ onClick: jest.fn() })),
-}));
-
 jest.mock('../../MediaLoader', () => ({
   __esModule: true,
   default: jest.fn(() => <div data-testid="in-situ-media-loader" />),
@@ -252,6 +247,9 @@ describe('Hierarchical Grid Curation', () => {
 
   it('tracks the MAP article headline link when in-situ media is rendered', () => {
     const { inSituPromo, summaries } = getSummariesWithInSituMedia();
+    const clickTrackerSpy = jest
+      .spyOn(clickTracking, 'default')
+      .mockImplementation(() => ({ onClick: jest.fn() }));
 
     render(
       <HierarchicalGrid
@@ -261,7 +259,7 @@ describe('Hierarchical Grid Curation', () => {
       />,
     );
 
-    expect(clickTracking.default).toHaveBeenCalledWith(
+    expect(clickTrackerSpy).toHaveBeenCalledWith(
       expect.objectContaining({
         componentName: 'test-component',
         itemTracker: expect.objectContaining({
