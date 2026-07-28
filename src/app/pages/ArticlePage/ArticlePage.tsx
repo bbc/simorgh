@@ -1,4 +1,4 @@
-import { use, useState, useCallback } from 'react';
+import { Fragment, ReactNode, useState, useCallback, use } from 'react';
 import { useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import useMediaQuery from '#hooks/useMediaQuery';
@@ -59,6 +59,7 @@ import ContinueReadingButton, {
   ContinueReadingButtonProps,
 } from '#app/components/ContinueReadingButton';
 import SaveArticleButton from '#app/components/SaveArticleButton';
+import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
 import AccountPromotionalBannerExperiment from '#app/components/Account/AccountPromotionalBannerExperiment';
 import ElectionBanner from './ElectionBanner';
 import ArticleMessageBanner from './ArticleMessageBanner';
@@ -84,6 +85,7 @@ import RelatedContentSection from '../../components/RelatedContentSection';
 import TopicDiscovery from '../../components/TopicDiscovery';
 import Disclaimer from '../../components/Disclaimer';
 import SecondaryColumn from './SecondaryColumn';
+import useMobileOJComponentOrder from './useMobileOJComponentOrder';
 import styles from './ArticlePage.styles';
 import { ComponentToRenderProps, TimeStampProps } from './types';
 import ArticleHeadline from './ArticleHeadline';
@@ -92,6 +94,8 @@ import {
   isPortraitVideoUnderHeadline,
 } from '../../components/MediaLoader/utils/isPortraitVideo';
 import LocationBasedTopicOJ from '../../components/LocationBasedTopicOJ';
+import { OJComponentKey } from './searchReferrerComponentOrder';
+import TopStoriesSection from './PagePromoSections/TopStoriesSection';
 
 const getImageComponent =
   (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (
@@ -425,6 +429,88 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     pageData?.countryCuration?.summaries?.length,
   );
 
+  const mobileOJOrder = useMobileOJComponentOrder();
+
+  const topStoriesContent = pageData?.secondaryColumn?.topStories;
+  const featuresContent = pageData?.secondaryColumn?.features;
+
+  const getTopicDiscoverySlot = () => {
+    if (showTopicDiscovery) {
+      return (
+        <TopicDiscovery
+          css={[
+            ...(showContinueReadingButton
+              ? [!showAllContent && styles.hideTopicDiscovery]
+              : []),
+          ]}
+          topics={topics}
+        />
+      );
+    }
+    if (showRelatedTopicsComponent) {
+      return (
+        <RelatedTopics
+          css={[
+            styles.relatedTopics,
+            ...(showContinueReadingButton
+              ? [!showAllContent && styles.hideRelatedTopics]
+              : []),
+          ]}
+          topics={topics}
+          mobileDivider={false}
+        />
+      );
+    }
+    return null;
+  };
+
+  const topicDiscoverySlot = getTopicDiscoverySlot();
+
+  const mobileOJComponents: Record<OJComponentKey, ReactNode> = {
+    mostRead:
+      !isApp && !isPGL ? (
+        <MostRead
+          css={styles.mostReadSection}
+          data={mostReadInitialData}
+          columnLayout="twoColumn"
+          size="default"
+          headingBackgroundColour={GREY_2}
+          mobileDivider={showRelatedTopicsComponent}
+        />
+      ) : null,
+    topicDiscovery: topicDiscoverySlot,
+    relatedContent: <RelatedContentSection content={blocks} />,
+    pvCarousel: showPortraitVideoCarousel ? (
+      <PortraitVideoCarousel
+        {...portraitVideoCarouselProps}
+        css={styles.portraitVideoCarousel}
+      />
+    ) : null,
+    topStories:
+      !isApp && !isPGL && topStoriesContent ? (
+        <div
+          css={styles.topStoriesSection}
+          data-testid="top-stories"
+          data-experiment-position="secondaryColumn"
+        >
+          <TopStoriesSection content={topStoriesContent} />
+        </div>
+      ) : null,
+    featuredArticles:
+      !isApp && !isPGL && featuresContent ? (
+        <div css={styles.featuresSection} data-testid="features">
+          <FeaturesAnalysis
+            content={featuresContent}
+            parentColumns={{}}
+            sectionLabelBackground={GREY_2}
+          />
+        </div>
+      ) : null,
+    locationBasedOJ: showCountryCuration ? (
+      <LocationBasedTopicOJ pageData={pageData} />
+    ) : null,
+  };
+
   const shouldApplyCollapsedArticleSpacing =
     showContinueReadingButton && !showAllContent;
 
@@ -500,7 +586,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             <OptimizelyPageMetrics trackPageComplete />
           </main>
           <OptimizelyPageMetrics trackPageDepth />
-          {showTopicDiscovery && (
+          {!mobileOJOrder && showTopicDiscovery && (
             <TopicDiscovery
               css={[
                 ...(showContinueReadingButton
@@ -510,7 +596,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               topics={topics}
             />
           )}
-          {showRelatedTopicsComponent && (
+          {!mobileOJOrder && showRelatedTopicsComponent && (
             <RelatedTopics
               css={[
                 styles.relatedTopics,
@@ -522,14 +608,16 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               mobileDivider={false}
             />
           )}
-          {showCountryCuration && <LocationBasedTopicOJ pageData={pageData} />}
-          {showPortraitVideoCarousel && (
+          {!mobileOJOrder && showCountryCuration && (
+            <LocationBasedTopicOJ pageData={pageData} />
+          )}
+          {!mobileOJOrder && showPortraitVideoCarousel && (
             <PortraitVideoCarousel
               {...portraitVideoCarouselProps}
               css={styles.portraitVideoCarousel}
             />
           )}
-          <RelatedContentSection content={blocks} />
+          {!mobileOJOrder && <RelatedContentSection content={blocks} />}
           {showMediaCuration && (
             <div css={styles.mediaCurationRow}>
               <div data-testid="media-curation">
@@ -550,10 +638,23 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           )}
         </div>
 
-        {!isApp && !isPGL && <SecondaryColumn pageData={pageData} />}
+        {!isApp && !isPGL && !mobileOJOrder && (
+          <SecondaryColumn pageData={pageData} />
+        )}
       </div>
 
-      {!isApp && !isPGL && (
+      {mobileOJOrder && (
+        <div
+          css={styles.mobileOJContainer}
+          style={{ display: mobileOJOrder ? 'block' : 'none' }}
+        >
+          {mobileOJOrder.map(key => (
+            <Fragment key={key}>{mobileOJComponents[key]}</Fragment>
+          ))}
+        </div>
+      )}
+
+      {!isApp && !isPGL && !mobileOJOrder && (
         <MostRead
           css={styles.mostReadSection}
           data={mostReadInitialData}
