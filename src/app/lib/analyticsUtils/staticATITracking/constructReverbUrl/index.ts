@@ -7,12 +7,6 @@ import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingP
 import { EventTrackingProps } from '#app/lib/analyticsUtils/types';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 
-const addCustomAppNameForLiteAndOperaMini = url =>
-  url.replace(
-    /app_name=(.*)&language/,
-    'app_name=[$1-inline-js-test-events]&language',
-  );
-
 export default ({
   eventTrackingData,
   eventType,
@@ -41,5 +35,5 @@ export default ({
       env,
     });
 
-  return addCustomAppNameForLiteAndOperaMini(staticATITrackingURL);
+  return staticATITrackingURL;
 };
