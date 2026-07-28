@@ -2,12 +2,12 @@ export const SEARCH_OJ_EXPERIMENT_NAME = 'newswb_ws_oj_order_referrer_search';
 
 export const SEARCH_OJ_VARIANTS = [
   'control',
-  'variant_1',
-  'variant_2',
-  'variant_3',
-  'variant_4',
-  'variant_5',
-  'variant_6',
+  'variant_1_related',
+  'variant_2_recommended',
+  'variant_3_hybrid',
+  'variant_4_related_mid',
+  'variant_5_recommended_mid',
+  'variant_6_hybrid_mid',
 ] as const;
 
 export type SearchOjVariant = (typeof SEARCH_OJ_VARIANTS)[number];
@@ -59,7 +59,7 @@ export const SEARCH_OJ_LAYOUTS: Record<SearchOjVariant, SearchOjLayout> = {
       'mostRead',
     ],
   },
-  variant_1: {
+  variant_1_related: {
     midArticle: 'mostRead',
     footer: [
       'topicDiscovery',
@@ -71,7 +71,7 @@ export const SEARCH_OJ_LAYOUTS: Record<SearchOjVariant, SearchOjLayout> = {
       'portraitVideo',
     ],
   },
-  variant_2: {
+  variant_2_recommended: {
     midArticle: 'mostRead',
     footer: [
       'topicDiscovery',
@@ -83,7 +83,7 @@ export const SEARCH_OJ_LAYOUTS: Record<SearchOjVariant, SearchOjLayout> = {
       'portraitVideo',
     ],
   },
-  variant_3: {
+  variant_3_hybrid: {
     midArticle: 'mostRead',
     footer: [
       'topicDiscovery',
@@ -95,7 +95,7 @@ export const SEARCH_OJ_LAYOUTS: Record<SearchOjVariant, SearchOjLayout> = {
       'locationBasedOj',
     ],
   },
-  variant_4: {
+  variant_4_related_mid: {
     midArticle: 'relatedContent',
     footer: [
       'topicDiscovery',
@@ -107,7 +107,7 @@ export const SEARCH_OJ_LAYOUTS: Record<SearchOjVariant, SearchOjLayout> = {
       'topStories',
     ],
   },
-  variant_5: {
+  variant_5_recommended_mid: {
     midArticle: 'topicDiscovery',
     footer: [
       'topicDiscovery',
@@ -119,7 +119,7 @@ export const SEARCH_OJ_LAYOUTS: Record<SearchOjVariant, SearchOjLayout> = {
       'locationBasedOj',
     ],
   },
-  variant_6: {
+  variant_6_hybrid_mid: {
     midArticle: 'locationBasedOj',
     footer: [
       'topicDiscovery',
