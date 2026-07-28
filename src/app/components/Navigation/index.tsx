@@ -162,7 +162,7 @@ const getActiveTopIndex = ({
     ),
   );
   if (parentIndexByChild > -1) {
-    // Home's subItems are just dropdown categorisation (e.g. topic links), not
+    // Home's subItems are just categorisation (e.g. topic links), not
     // pages that represent "being on the home page" itself, so a subItem
     // match on Home shouldn't announce "current page" - only a direct match
     // on Home's own URL should. Watch/Listen subItem matches (e.g. a video
