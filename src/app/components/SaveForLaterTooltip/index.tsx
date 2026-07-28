@@ -20,6 +20,24 @@ export interface SaveForLaterTooltipProps {
   onClose: () => void;
 }
 
+const FALLBACK_TRANSLATIONS = {
+  success: {
+    titleBefore: 'This article is now saved to',
+    titleAfter: '',
+  },
+  error: {
+    title: 'Sorry, something went wrong',
+    body: 'Check your connection, refresh the page and try again',
+  },
+  removed: {
+    titleBefore: 'This article has now been removed from',
+    titleAfter: '',
+  },
+  myNewsLinkText: 'My News',
+  myNewsUrl: 'https://www.bbc.com/hindi/my-news',
+  closeLabel: 'Close',
+};
+
 const StatusIcon = ({ status }: { status: SaveForLaterTooltipStatus }) =>
   status === 'error' ? (
     <InfoTriangle css={iconStyles} />
@@ -29,12 +47,8 @@ const StatusIcon = ({ status }: { status: SaveForLaterTooltipStatus }) =>
 
 const SaveForLaterTooltip = ({ status, onClose }: SaveForLaterTooltipProps) => {
   const { translations } = useContext(ServiceContext);
-  const { saveForLaterTooltip } = translations;
-
-  if (!saveForLaterTooltip) return null;
-
   const { success, error, removed, myNewsUrl, myNewsLinkText, closeLabel } =
-    saveForLaterTooltip;
+    translations?.saveForLaterTooltip ?? FALLBACK_TRANSLATIONS;
 
   const myNewsLink = <a href={myNewsUrl}>{myNewsLinkText}</a>;
 

@@ -5,47 +5,49 @@ export const wrapperStyles = css`
   position: relative;
 `;
 
-export const containerStyles = ({ spacings }: Theme) =>
+export const containerStyles = ({ spacings, palette }: Theme) =>
   css({
     position: 'absolute',
     top: '100%',
     left: 0,
     right: 0,
-    maxWidth: pixelsToRem(336),
+    maxWidth: `${pixelsToRem(336)}rem`,
     width: '100%',
     display: 'flex',
-    gap: `${spacings.HALF}rem`,
-    padding: `${spacings.FULL}rem`,
+    gap: '0.5rem',
+    padding: '0.75rem',
     border: '1px solid',
     margin: `0 ${spacings.HALF}rem`,
+    background: palette.WHITE,
+
     '&::before': {
       content: '""',
       position: 'absolute',
-      top: `-${pixelsToRem(9)}`,
-      left: `${spacings.FULL}rem`,
+      top: '-0.5625rem',
+      left: `1rem`,
       width: 0,
       height: 0,
-      borderLeft: `${pixelsToRem(8)} solid transparent`,
-      borderRight: `${pixelsToRem(8)} solid transparent`,
-      borderBottom: `${pixelsToRem(9)} solid`,
+      borderLeft: '0.5rem solid transparent',
+      borderRight: '0.5rem solid transparent',
+      borderBottom: '0.5625rem solid',
     },
     '&::after': {
       content: '""',
       position: 'absolute',
-      top: `-${pixelsToRem(7)}`,
-      left: `${spacings.FULL}rem`,
+      top: '-0.4375rem',
+      left: '1rem',
       width: 0,
       height: 0,
-      borderLeft: `${pixelsToRem(8)} solid transparent`,
-      borderRight: `${pixelsToRem(8)} solid transparent`,
-      borderBottom: `${spacings.HALF}rem solid white`,
+      borderLeft: '0.5rem solid transparent',
+      borderRight: '0.5rem solid transparent',
+      borderBottom: `0.5rem solid ${palette.WHITE}`,
     },
   });
 
 export const iconStyles = css({
   flexShrink: 0,
-  width: pixelsToRem(22),
-  height: pixelsToRem(22),
+  width: `${pixelsToRem(22)}rem`,
+  height: `${pixelsToRem(22)}rem`,
 });
 
 export const contentStyles = ({ spacings }: Theme) =>
@@ -59,12 +61,11 @@ export const contentStyles = ({ spacings }: Theme) =>
     },
   });
 
-export const titleStyles = ({ fontSizes }: Theme) =>
-  css({
-    margin: 0,
-    fontWeight: 700,
-    ...fontSizes.brevier,
-  });
+export const titleStyles = css`
+  margin: 0;
+  font-weight: 700;
+  ...fontSizes.brevier,
+`;
 
 export const bodyStyles = ({ fontSizes, mq }: Theme) =>
   css({
@@ -74,14 +75,13 @@ export const bodyStyles = ({ fontSizes, mq }: Theme) =>
       display: 'none',
     },
   });
-
 export const closeButtonStyles = ({ palette, spacings }: Theme) =>
   css({
     flexShrink: 0,
     alignSelf: 'flex-start',
-    marginInlineStart: `${spacings.TRIPLE}rem`,
-    marginBlockStart: `-${spacings.FULL}rem`,
-    marginInlineEnd: `-${spacings.FULL}rem`,
+    marginInlineStart: '1.5rem',
+    marginBlockStart: '-0.75rem',
+    marginInlineEnd: '-0.75rem',
     padding: 0,
     width: `${spacings.QUADRUPLE}rem`,
     height: `${spacings.QUADRUPLE}rem`,
