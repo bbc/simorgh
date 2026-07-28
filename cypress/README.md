@@ -47,7 +47,7 @@ We also have [a very limited Puppeteer test suite](https://github.com/bbc/simorg
 
 ## Toggles
 
-If you need the values of feature toggles from the toggles service to determine if you should test for e.g. a component showing/not showing on a page then you can make use of the `cy.fetchToggles` custom Cypress command found in [cypress/support/commands/toggles.js](https://github.com/bbc/simorgh/blob/latest/cypress/support/commands/toggles.js)
+If you need the values of feature toggles from the toggles service to determine if you should test for e.g. a component showing/not showing on a page then you can make use of the `cy.fetchToggles` custom Cypress command found in [ws-nextjs-app/cypress/support/commands.ts](../ws-nextjs-app/cypress/support/commands.ts)
 
 The `cy.fetchToggles` command has a required `service` argument.
 
