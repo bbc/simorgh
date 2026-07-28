@@ -22,7 +22,7 @@ declare global {
       testResponseCodeAndRetry: (
         props: TestResponseCodeAndRetry,
       ) => Chainable<Record<string, unknown>>;
-      getToggles(serviceID: string): Chainable;
+      fetchToggles(serviceID: string): Chainable;
       hasNoscriptImgAtiUrl(atiUrl: string): Chainable;
       testResponseCodeAndType(
         props: TestResponseAndTypeFunctionProps,
@@ -41,7 +41,7 @@ const getPageDataFromWindow = () => {
 };
 
 const keyGenFn = identity as (...v: unknown[]) => string;
-const getToggles = memoizeWith(keyGenFn, service => {
+const fetchToggles = memoizeWith(keyGenFn, service => {
   const togglesFixture = `cypress/fixtures/toggles/${service}.json`;
 
   if (getAppEnv() === 'local') {
@@ -124,7 +124,7 @@ const testResponseCodeAndType = ({
 
 Cypress.Commands.add('getPageDataFromWindow', getPageDataFromWindow);
 Cypress.Commands.add('testResponseCodeAndRetry', testResponseCodeAndRetry);
-Cypress.Commands.add('getToggles', getToggles);
+Cypress.Commands.add('fetchToggles', fetchToggles);
 Cypress.Commands.add('hasNoscriptImgAtiUrl', hasNoscriptImgAtiUrl);
 Cypress.Commands.add('testResponseCodeAndType', testResponseCodeAndType);
 

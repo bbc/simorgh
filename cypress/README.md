@@ -47,9 +47,9 @@ We also have [a very limited Puppeteer test suite](https://github.com/bbc/simorg
 
 ## Toggles
 
-If you need the values of feature toggles from the toggles service to determine if you should test for e.g. a component showing/not showing on a page then you can make use of the `cy.getToggles` custom Cypress command found in [cypress/support/commands/toggles.js](https://github.com/bbc/simorgh/blob/latest/cypress/support/commands/toggles.js)
+If you need the values of feature toggles from the toggles service to determine if you should test for e.g. a component showing/not showing on a page then you can make use of the `cy.fetchToggles` custom Cypress command found in [cypress/support/commands/toggles.js](https://github.com/bbc/simorgh/blob/latest/cypress/support/commands/toggles.js)
 
-The `cy.getToggles` command has a required `service` argument.
+The `cy.fetchToggles` command has a required `service` argument.
 
 The command fetches toggles for the passed in `service` and creates a fixture by writing the `response.body.toggles` json to a file in `cypress/fixtures/toggles/` and then creates an alias from the fixture called `@toggles` that you can use in tests to get the toggles values.
 
@@ -57,15 +57,15 @@ You can use `cy.get('@toggles')` or access the alias using `this` in the `it` ca
 
 Everything in `cypress/fixtures/toggles/` is in `.gitignore` so it isn't added to source control.
 
-The `cy.getToggles` is memoized meaning it won't fetch from the toggles service multiple times for the same service - it will fetch only once per service per test run to limit calls made to the toggles service.
+The `cy.fetchToggles` is memoized meaning it won't fetch from the toggles service multiple times for the same service - it will fetch only once per service per test run to limit calls made to the toggles service.
 
-This is an example of how to use `cy.getToggles` in tests.
+This is an example of how to use `cy.fetchToggles` in tests.
 
 ```js
 export default ({ service }) => {
   describe('A super cool feature', () => {
     beforeEach(() => {
-      cy.getToggles(service);
+      cy.fetchToggles(service);
     });
 
     it('should show/not show the super cool feature depending if the toggle is enabled for the service and the value is "some-cool-value"', function test() {
