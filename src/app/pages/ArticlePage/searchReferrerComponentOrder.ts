@@ -54,7 +54,6 @@ export const SEARCH_COMPONENT_ORDER: Record<SearchVariant, OJComponentKey[]> = {
     'mostRead',
   ],
   variant_5_recommended_mid: [
-    'topicDiscovery',
     'mostRead',
     'relatedContent',
     'featuredArticles',
