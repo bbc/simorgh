@@ -318,7 +318,12 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         return <RelatedContentSection content={blocks} />;
 
       case 'variant_5_recommended_mid':
-        return <TopicDiscovery topics={topics} />;
+        return (
+          <TopicDiscovery
+            topics={topics}
+            css={styles.midArticleTopicDiscovery}
+          />
+        );
 
       case 'variant_6_hybrid_mid':
         return <LocationBasedTopicOJ pageData={pageData} />;

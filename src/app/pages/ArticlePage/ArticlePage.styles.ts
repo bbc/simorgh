@@ -249,4 +249,8 @@ export default {
         display: 'none',
       },
     }),
+  midArticleTopicDiscovery: () =>
+    css({
+      marginBottom: `${pixelsToRem(40)}rem`,
+    }),
 };
