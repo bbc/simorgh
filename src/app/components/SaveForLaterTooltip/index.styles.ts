@@ -52,7 +52,7 @@ const styles = {
     height: `${pixelsToRem(22)}rem`,
   }),
 
-  content: ({ spacings }: Theme) =>
+  content: ({ spacings, palette }: Theme) =>
     css({
       flex: 1,
       display: 'flex',
@@ -61,6 +61,16 @@ const styles = {
 
       a: {
         color: 'inherit',
+        textDecoration: 'underline',
+
+        '&:hover, &:active': {
+          color: palette.POSTBOX,
+        },
+        '&:focus-visible': {
+          color: palette.POSTBOX,
+          outline: '1px solid black',
+          outlineOffset: '2px',
+        },
       },
     }),
 
