@@ -7,6 +7,8 @@ import moment from 'moment';
 import formatDuration from '#app/lib/utilities/formatDuration';
 import { use, FocusEvent } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import { RequestContext } from '#app/contexts/RequestContext';
+import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
 import getSrcSets from '#app/utilities/getSrcSets';
@@ -41,6 +43,7 @@ export default ({
     defaultImageAltText,
     translations: { media = DEFAULT_TRANSLATION },
   } = use(ServiceContext);
+  const { pageType } = use(RequestContext);
 
   const { images, video } = block.model;
 
@@ -98,7 +101,7 @@ export default ({
     ...eventTrackingData,
     viewThreshold: 1,
     itemTracker: {
-      type: 'portrait-video-promo',
+      type: pageType === LIVE_PAGE ? 'portrait-video' : 'portrait-video-promo',
       text: headline,
       position: blockPosition + 1,
       resourceId: video?.id,

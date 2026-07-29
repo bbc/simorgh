@@ -50,11 +50,11 @@ export const service: DefaultServiceConfig = {
     googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     podcastPromo: {
       title: 'पॉडकास्ट',
-      brandTitle: 'दिनभर: पूरा दिन,पूरी ख़बर (Dinbhar)',
+      brandTitle: 'Dinbhar: आवाज़ वही, अंदाज़ नया',
       brandDescription:
-        'वो राष्ट्रीय और अंतरराष्ट्रीय ख़बरें जो दिनभर सुर्खियां बनीं.',
+        'देश - दुनिया की बड़ी ख़बरें  जिन्होंने बटोरी सुर्खियां.',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p09ds7cb.jpg',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0nq9t7p.jpg',
         alt: 'दिनभर',
       },
       linkLabel: {
@@ -90,6 +90,10 @@ export const service: DefaultServiceConfig = {
       continueReading: 'पढ़ना जारी रखें',
       currentPage: 'मौजूदा पन्ना',
       skipLinkText: 'सामग्री को स्किप करें',
+      skipContent: {
+        text: '%title% छोड़ें और जारी रखें',
+        endTextVisuallyHidden: '%title% का अंत',
+      },
       relatedContent: 'संबंधित समाचार',
       relatedTopics: 'मिलते-जुलते मुद्दे',
       moreOnThis: '',
@@ -115,6 +119,7 @@ export const service: DefaultServiceConfig = {
       },
       account: {
         signIn: 'साइन इन',
+        signInAccessibleLabel: 'माय न्यूज़ में साइन इन करें',
         forYou: 'आपका एकाउंट',
         register: 'रजिस्टर',
       },
@@ -148,6 +153,8 @@ export const service: DefaultServiceConfig = {
         errorText:
           'लगता है यह कंटेंट लोड नहीं हो रहा है. कृपया बाद में पुनः प्रयास करें.',
         loading: 'लोड हो रहा है',
+        noJsDescription:
+          'कृपया जावास्क्रिप्ट चालू करें या इस सामग्री को देखने के लिए किसी दूसरे ब्राउज़र का इस्तेमाल करें।',
       },
       gist: 'सारांश',
       error: {
@@ -419,6 +426,7 @@ export const service: DefaultServiceConfig = {
         closedDescription: 'ये इस तारीख़ को बंद हो चुका है {{date}}.',
       },
       sport: {
+        keyEventsTitle: 'प्रमुख घटनाएँ',
         matchSummary: 'मैच का सारांश',
         assists: 'असिस्ट',
         penalties: 'पेनल्टी',
@@ -428,6 +436,15 @@ export const service: DefaultServiceConfig = {
         afterExtraTime: 'अतिरिक्त समय के बाद',
         penaltyAbbreviation: 'पेन',
         ownGoal: 'आत्मघाती गोल',
+        versus: 'बनाम',
+        kickOff: 'किक-ऑफ',
+        timeToBeConfirmed: 'समय की पुष्टि होनी बाकी',
+        teamToBeConfirmed: 'टीम की पुष्टि होनी बाकी',
+        afterFullTime: 'पूर्ण समय के बाद',
+        atFullTime: 'पूर्ण समय पर',
+        onPenalties: 'पेनाल्टी पर',
+        onAggregate: 'कुल योग पर',
+        win: 'जीतता है',
         winOnPenalties: {
           prefix: 'पेनल्टी में',
           suffix: 'से जीतती है',

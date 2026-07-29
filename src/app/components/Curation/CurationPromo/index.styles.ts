@@ -1,4 +1,3 @@
-import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
 
 export default {
@@ -22,11 +21,24 @@ export default {
     css({
       position: 'relative',
     }),
+  liveLabel: ({ isDarkUi, palette }: Theme) => {
+    const liveColour = isDarkUi ? palette.LIVE_LIGHT : palette.LIVE_DARK;
+
+    return css({
+      svg: {
+        color: liveColour,
+      },
+      'span[role="text"] > span:first-of-type': {
+        color: liveColour,
+      },
+    });
+  },
   metadataAndTopicData: ({ fontSizes }: Theme) =>
     css({
       ...fontSizes.longPrimer,
       display: 'flex',
-      alignItems: 'center',
+      flexDirection: 'column',
+      alignItems: 'flex-start',
       flexWrap: 'wrap',
       gap: 0,
     }),
@@ -41,22 +53,16 @@ export default {
       ...fontSizes.brevier,
       ...fontVariants.sansRegular,
       color: isDarkUi ? palette.GREY_3 : palette.GREY_6,
-      display: 'inline-flex',
-      alignItems: 'center',
+      display: 'flex',
+      flexDirection: 'column',
+      flexWrap: 'wrap',
+      alignItems: 'flex-start',
       marginTop: 0,
+      marginBottom: `${spacings.FULL}rem`,
       textDecoration: 'none',
       zIndex: 1,
       '&:hover, &:focus': {
         textDecoration: 'underline',
-      },
-      '&::after': {
-        content: '""',
-        width: `${pixelsToRem(2)}rem`,
-        height: `${pixelsToRem(2)}rem`,
-        borderRadius: '50%',
-        backgroundColor: isDarkUi ? palette.GREY_3 : palette.GREY_6,
-        marginInline: `${spacings.HALF}rem`,
-        border: `${pixelsToRem(1)}rem solid transparent`,
       },
     }),
 };

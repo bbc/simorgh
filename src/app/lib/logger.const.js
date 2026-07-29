@@ -90,6 +90,13 @@ const logCodes = {
 
   // ThemeProvider error
   THEME_PROVIDER_ERROR: 'theme_provider_error',
+
+  // Build manifest errors
+  BUILD_MANIFEST_CSS_READ_ERROR: 'build_manifest_css_read_error',
+  DYNAMIC_IMPORT_CSS_READ_ERROR: 'dynamic_import_css_read_error',
+
+  // AMP/Lite CSS vendor-prefix optimisation
+  AMP_LITE_CSS_AUTOPREFIXER_ERROR: 'amp_lite_css_autoprefixer_error',
 };
 
 module.exports = logCodes;

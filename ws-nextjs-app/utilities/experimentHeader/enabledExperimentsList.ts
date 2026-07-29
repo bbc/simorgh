@@ -18,9 +18,9 @@ type ServerSideExperimentConfig = {
 
 const enabledExperimentList: ServerSideExperimentConfig[] = [
   {
-    name: 'newswb_ws_pwa_promo_prompt',
-    services: ['portuguese'],
-    pageTypes: ['home', 'article'],
+    name: 'newswb_ws_article_account_promo_banner',
+    services: ['hindi'],
+    pageTypes: ['article'],
   },
 ];
 

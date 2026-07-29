@@ -61,4 +61,18 @@ describe('AccountHeader', () => {
     const icon = link.querySelector('svg');
     expect(icon).toBeInTheDocument();
   });
+
+  it('keeps an accessible name in the default variant when the label is visually hidden', async () => {
+    render(<AccountHeader variant="default" />, {
+      service: 'hindi',
+      idctaConfig,
+    });
+
+    const link = await screen.findByRole('link', { name: 'साइन इन' });
+    expect(link).toHaveAttribute('aria-label', 'साइन इन');
+    expect(link).toHaveAttribute(
+      'href',
+      expect.stringContaining('https://example.com/signin'),
+    );
+  });
 });
