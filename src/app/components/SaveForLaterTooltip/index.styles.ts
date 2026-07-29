@@ -81,7 +81,7 @@ const styles = {
       },
     }),
 
-  closeButton: ({ palette, spacings }: Theme) =>
+  closeButton: ({ palette }: Theme) =>
     css({
       flexShrink: 0,
       alignSelf: 'flex-start',
@@ -89,8 +89,8 @@ const styles = {
       marginBlockStart: '-0.75rem',
       marginInlineEnd: '-0.75rem',
       padding: 0,
-      width: `${spacings.QUADRUPLE}rem`,
-      height: `${spacings.QUADRUPLE}rem`,
+      width: '2.75rem',
+      height: '2.75rem',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
