@@ -448,7 +448,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
 
-  const showTopicDiscovery = true;
+  const showTopicDiscovery = topicDiscoveryEnabled && !isAmp && !isLite;
 
   // Topic Discovery shows in the midarticle position for one variant
   // We want to hide RelatedTopics when this happens
