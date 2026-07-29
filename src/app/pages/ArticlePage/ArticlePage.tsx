@@ -448,7 +448,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
 
-  const showTopicDiscovery = topicDiscoveryEnabled && !isAmp && !isLite;
+  const showTopicDiscovery = true;
 
   // Topic Discovery shows in the midarticle position for one variant
   // We want to hide RelatedTopics when this happens
@@ -692,10 +692,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       </div>
 
       {mobileOJOrder && (
-        <div
-          css={styles.mobileOJContainer}
-          style={{ display: mobileOJOrder ? 'block' : 'none' }}
-        >
+        <div css={styles.mobileOJContainer}>
           {mobileOJOrder.map(key => (
             <Fragment key={key}>{mobileOJComponents[key]}</Fragment>
           ))}
