@@ -11,14 +11,10 @@ const getDebugVariant = (): SearchVariant | null => {
   const params = new URLSearchParams(window.location.search);
   const debugParam = params.get('debugVariant');
   if (
-    debugParam === 'variant_1_related' ||
-    debugParam === 'variant_2_recommended' ||
-    debugParam === 'variant_3_hybrid' ||
-    debugParam === 'variant_4_related_mid' ||
-    debugParam === 'variant_5_recommended_mid' ||
-    debugParam === 'variant_6_hybrid_mid'
+    debugParam &&
+    Object.prototype.hasOwnProperty.call(SEARCH_COMPONENT_ORDER, debugParam)
   ) {
-    return debugParam;
+    return debugParam as SearchVariant;
   }
   return null;
 };
