@@ -11,12 +11,12 @@ const getDebugVariant = (): SearchVariant | null => {
   const params = new URLSearchParams(window.location.search);
   const debugParam = params.get('debugVariant');
   if (
-    debugParam === 'variant1related' ||
-    debugParam === 'variant2recommended' ||
-    debugParam === 'variant3hybrid' ||
-    debugParam === 'variant4relatedAndMid' ||
-    debugParam === 'variant5recommendedAndMid' ||
-    debugParam === 'variant6hybridAndMid'
+    debugParam === 'variant_1_related' ||
+    debugParam === 'variant_2_recommended' ||
+    debugParam === 'variant_3_hybrid' ||
+    debugParam === 'variant_4_related_mid' ||
+    debugParam === 'variant_5_recommended_mid' ||
+    debugParam === 'variant_6_hybrid_mid'
   ) {
     return debugParam;
   }
