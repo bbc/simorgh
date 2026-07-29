@@ -36,5 +36,12 @@ export default () => {
       // This confirms CSS module extraction is working, not just global SCSS
       expect(css).toMatch(/\.[A-Za-z]+_[a-zA-Z]+__[A-Za-z0-9]+/);
     });
+
+    it('should strip unnecessary vendor prefixes left in by Emotion', () => {
+      const css = getInlinedCss();
+
+      expect(css).not.toMatch(/-webkit-box-(align|pack)\s*:/);
+      expect(css).not.toMatch(/-ms-flex-(align|pack|direction|wrap)\s*:/);
+    });
   });
 };
