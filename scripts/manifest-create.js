@@ -51,6 +51,9 @@ const IMAGE_VERSION = '1';
 const COPY_IMAGES_ACROSS = false;
 const NEW_IMAGES_FOLDER_LOCATION = '/absolute/path/to/your/new/images';
 
+const ANDROID_APP_PROMO_SERVICES = ['mundo', 'hindi', 'russian', 'arabic'];
+const ANDROID_PLAY_STORE_ID = 'uk.co.bbc.wsuniversal';
+
 services.forEach(service => {
   const manifestPath = `../public/${service}/manifest.json`;
   const currentManifest = JSON.parse(fs.readFileSync(manifestPath, 'utf-8'));
@@ -81,6 +84,18 @@ services.forEach(service => {
       fs.renameSync(newIconsPathStem + imagename, iconsPathStem + imagename);
     });
   }
+  
+  if (ANDROID_APP_PROMO_SERVICES.includes(service)) {
+    currentManifest.prefer_related_applications = true;
+    currentManifest.related_applications = [
+      {
+        platform: 'play',
+        id: ANDROID_PLAY_STORE_ID,
+        url: `https://play.google.com/store/apps/details?id=${ANDROID_PLAY_STORE_ID}`,
+      },
+    ];
+  }
+  
   newManifest = JSON.stringify(currentManifest, null, 2);
   fs.writeFileSync(manifestPath, newManifest);
 });
