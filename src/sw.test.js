@@ -362,6 +362,66 @@ describe('Service Worker', () => {
         expect.any(Response),
       );
     });
+
+    it('caches the variant offline page when the URL includes a variant', async () => {
+      global.fetch.mockResolvedValueOnce(
+        new Response('<html></html>', { status: 200 }),
+      );
+
+      const event = {
+        data: { type: 'PWA_STATUS', isPWA: true },
+        source: {
+          id: 'client-1',
+          url: 'https://bbc.com/zhongwen/trad',
+        },
+      };
+
+      await messageHandler(event);
+
+      expect(global.fetch).toHaveBeenCalledWith(
+        'https://bbc.com/zhongwen/trad/offline',
+      );
+    });
+
+    it('caches the default variant offline page when the URL has no variant for a variant service', async () => {
+      global.fetch.mockResolvedValueOnce(
+        new Response('<html></html>', { status: 200 }),
+      );
+
+      const event = {
+        data: { type: 'PWA_STATUS', isPWA: true },
+        source: {
+          id: 'client-1',
+          url: 'https://bbc.com/zhongwen',
+        },
+      };
+
+      await messageHandler(event);
+
+      expect(global.fetch).toHaveBeenCalledWith(
+        'https://bbc.com/zhongwen/trad/offline',
+      );
+    });
+
+    it('caches the plain offline page for a non-variant service, unaffected', async () => {
+      global.fetch.mockResolvedValueOnce(
+        new Response('<html></html>', { status: 200 }),
+      );
+
+      const event = {
+        data: { type: 'PWA_STATUS', isPWA: true },
+        source: {
+          id: 'client-1',
+          url: 'https://bbc.com/mundo',
+        },
+      };
+
+      await messageHandler(event);
+
+      expect(global.fetch).toHaveBeenCalledWith(
+        'https://bbc.com/mundo/offline',
+      );
+    });
   });
 
   describe('Offline navigation handling in PWA mode', () => {
@@ -540,8 +600,8 @@ describe('Service Worker', () => {
 
   describe('version', () => {
     const CURRENT_VERSION = {
-      number: 'v0.3.5',
-      fileContentHash: '0532bfcfb518677f9db098599a23f418',
+      number: 'v0.3.6',
+      fileContentHash: '8ee32a7800fd23294d4e93c6b27d1b1b',
     };
 
     it(`version number should be ${CURRENT_VERSION.number}`, async () => {

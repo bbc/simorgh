@@ -4,7 +4,7 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-restricted-globals */
 
-const version = 'v0.3.5';
+const version = 'v0.3.6';
 // Update cache name when changing caching logic / changes in offlinepage.tsx
 const cacheName = 'simorghCache_v4';
 const pwaClients = new Map();
@@ -14,8 +14,28 @@ let isPWADeviceOffline = false;
 // Helper Functions
 // --------------------
 
+// Services with language script/orthography variants, and each service's default
+// variant - mirrors src/app/lib/config/services/defaultServiceVariants.ts.
+// Kept self-contained here as this file cannot import app code.
+const defaultServiceVariants = {
+  serbian: 'lat',
+  ukchina: 'simp',
+  uzbek: 'cyr',
+  zhongwen: 'trad',
+};
+const VARIANTS = ['lat', 'cyr', 'trad', 'simp'];
+
 const getServiceFromUrl = url => new URL(url).pathname.split('/')[1];
-const getOfflinePageUrl = service => `/${service}/offline`;
+const getVariantFromUrl = url => {
+  const variantSegment = new URL(url).pathname.split('/')[2];
+  return VARIANTS.includes(variantSegment) ? variantSegment : null;
+};
+const getOfflinePageUrl = (service, variant) => {
+  const resolvedVariant = variant || defaultServiceVariants[service];
+  return resolvedVariant
+    ? `/${service}/${resolvedVariant}/offline`
+    : `/${service}/offline`;
+};
 
 const cacheResource = async (cache, url) => {
   try {
@@ -27,10 +47,10 @@ const cacheResource = async (cache, url) => {
   }
 };
 
-const cacheOfflinePageAndResources = async service => {
+const cacheOfflinePageAndResources = async (service, variant) => {
   const cache = await caches.open(cacheName);
   const offlinePageUrl = new URL(
-    getOfflinePageUrl(service),
+    getOfflinePageUrl(service, variant),
     self.location.origin,
   ).href;
 
@@ -94,7 +114,8 @@ self.addEventListener('message', async event => {
     if (isPWA) {
       pwaClients.set(clientId, true);
       const service = getServiceFromUrl(event.source.url);
-      await cacheOfflinePageAndResources(service);
+      const variant = getVariantFromUrl(event.source.url);
+      await cacheOfflinePageAndResources(service, variant);
     }
   }
 });
@@ -152,8 +173,9 @@ const fetchEventHandler = async event => {
         const getOfflineFallback = async () => {
           if (isPWA) {
             const service = getServiceFromUrl(url);
+            const variant = getVariantFromUrl(url);
             const offlineUrl = new URL(
-              getOfflinePageUrl(service),
+              getOfflinePageUrl(service, variant),
               self.location.origin,
             ).href;
 
