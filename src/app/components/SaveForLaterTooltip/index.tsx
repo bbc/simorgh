@@ -2,15 +2,7 @@ import React, { useContext } from 'react';
 import { Close, InfoCircle, InfoTriangle } from '#app/components/icons';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import {
-  wrapperStyles,
-  containerStyles,
-  iconStyles,
-  contentStyles,
-  titleStyles,
-  bodyStyles,
-  closeButtonStyles,
-} from './index.styles';
+import styles from './index.styles';
 import Text from '../Text';
 
 export type SaveForLaterTooltipStatus = 'success' | 'error' | 'removed';
@@ -22,9 +14,9 @@ export interface SaveForLaterTooltipProps {
 
 const StatusIcon = ({ status }: { status: SaveForLaterTooltipStatus }) =>
   status === 'error' ? (
-    <InfoTriangle css={iconStyles} />
+    <InfoTriangle css={styles.icon} />
   ) : (
-    <InfoCircle css={iconStyles} />
+    <InfoCircle css={styles.icon} />
   );
 
 const SaveForLaterTooltip = ({ status, onClose }: SaveForLaterTooltipProps) => {
@@ -65,22 +57,25 @@ const SaveForLaterTooltip = ({ status, onClose }: SaveForLaterTooltipProps) => {
   const { title, body } = content[status];
 
   return (
-    <div css={wrapperStyles}>
+    <div css={styles.wrapper}>
       <div
         role="status"
         aria-live="polite"
         aria-atomic="true"
-        css={containerStyles}
+        css={styles.container}
         data-testid="save-for-later-tooltip"
       >
         <StatusIcon status={status} />
-        <div css={contentStyles}>
-          <Text css={titleStyles}>{title}</Text>
-          {body && <Text css={bodyStyles}>{body}</Text>}
+
+        <div css={styles.content}>
+          <Text css={styles.title}>{title}</Text>
+
+          {body && <Text css={styles.body}>{body}</Text>}
         </div>
+
         <button
           type="button"
-          css={closeButtonStyles}
+          css={styles.closeButton}
           onClick={onClose}
           data-testid="save-for-later-tooltip-close"
         >
