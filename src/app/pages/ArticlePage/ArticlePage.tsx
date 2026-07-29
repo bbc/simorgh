@@ -446,8 +446,16 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const showTopicDiscovery = topicDiscoveryEnabled && !isAmp && !isLite;
 
+  // Topic Discovery shows in the midarticle position for one variant
+  // We want to hide RelatedTopics when this happens
+  const topicDiscoveryInMidArticlePosition =
+    !isDesktopViewport && searchVariant === 'variant5recommendedAndMid';
+
   const showRelatedTopicsComponent = Boolean(
-    showRelatedTopics && topics.length > 0 && !showTopicDiscovery,
+    showRelatedTopics &&
+    topics.length > 0 &&
+    !showTopicDiscovery &&
+    !topicDiscoveryInMidArticlePosition,
   );
 
   const showMediaCuration = Boolean(
