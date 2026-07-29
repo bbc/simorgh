@@ -97,7 +97,6 @@ const styles = {
       columnGap: `${spacings.FULL + spacings.HALF}rem`,
       rowGap: `${spacings.FULL}rem`,
       overflow: 'hidden',
-      marginBottom: `${spacings.FULL}rem`,
       minWidth: 0,
       '&:focus-within': {
         overflow: 'visible',
