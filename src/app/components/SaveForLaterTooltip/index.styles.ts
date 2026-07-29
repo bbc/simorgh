@@ -15,7 +15,7 @@ const styles = {
       maxWidth: '21rem',
       width: '100%',
       padding: '0.75rem',
-      border: '1px solid #C8C8C8',
+      border: `1px solid ${palette.GREY_4}`,
       margin: `0 ${spacings.HALF}rem`,
       background: palette.WHITE,
 
@@ -28,7 +28,7 @@ const styles = {
         height: 0,
         borderLeft: '0.5rem solid transparent',
         borderRight: '0.5rem solid transparent',
-        borderBottom: `${pixelsToRem(13)}rem solid #C8C8C8`,
+        borderBottom: `${pixelsToRem(13)}rem solid ${palette.GREY_4}`,
       },
 
       '&::after': {
