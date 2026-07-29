@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import SaveForLaterTooltip, { SaveForLaterTooltipStatus } from '.';
+import ActionTooltip, { ActionTooltipStatus } from '.';
 
-const TooltipDemo = ({ status }: { status: SaveForLaterTooltipStatus }) => {
+const TooltipDemo = ({ status }: { status: ActionTooltipStatus }) => {
   const [isVisible, setIsVisible] = useState(true);
 
   if (!isVisible) {
@@ -9,13 +9,13 @@ const TooltipDemo = ({ status }: { status: SaveForLaterTooltipStatus }) => {
   }
 
   return (
-    <SaveForLaterTooltip status={status} onClose={() => setIsVisible(false)} />
+    <ActionTooltip status={status} onClose={() => setIsVisible(false)} />
   );
 };
 
 export default {
-  title: 'Components/SaveForLaterTooltip',
-  component: SaveForLaterTooltip,
+  title: 'Components/ActionTooltip',
+  component: ActionTooltip,
   globals: {
     service: {
       service: 'ws',

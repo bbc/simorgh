@@ -154,7 +154,7 @@ export const service: DefaultServiceConfig = {
           'लगता है यह कंटेंट लोड नहीं हो रहा है. कृपया बाद में पुनः प्रयास करें.',
         loading: 'लोड हो रहा है',
       },
-      saveForLaterTooltip: {
+      actionTooltip: {
         success: {
           titleBefore: 'This article is now saved to',
           titleAfter: '',

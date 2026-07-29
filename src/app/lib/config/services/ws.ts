@@ -87,7 +87,7 @@ export const service: DefaultServiceConfig = {
         closeLabel: 'Close',
         buttonSeparatorText: 'or',
       },
-      saveForLaterTooltip: {
+      actionTooltip: {
         success: {
           titleBefore: 'This article is now saved to',
           titleAfter: '',

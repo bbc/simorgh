@@ -1,14 +1,14 @@
 import userEvent from '@testing-library/user-event';
 import { render, screen } from '../react-testing-library-with-providers';
-import SaveForLaterTooltip from '.';
+import ActionTooltip from '.';
 
 const onClose = jest.fn();
 
-describe('SaveForLaterTooltip', () => {
+describe('ActionTooltip', () => {
   beforeEach(() => jest.clearAllMocks());
 
   it('renders the success title with a My News link', () => {
-    render(<SaveForLaterTooltip status="success" onClose={onClose} />, {
+    render(<ActionTooltip status="success" onClose={onClose} />, {
       service: 'hindi',
     });
 
@@ -25,7 +25,7 @@ describe('SaveForLaterTooltip', () => {
   });
 
   it('renders the error title and body without a link', () => {
-    render(<SaveForLaterTooltip status="error" onClose={onClose} />, {
+    render(<ActionTooltip status="error" onClose={onClose} />, {
       service: 'hindi',
     });
 
@@ -37,7 +37,7 @@ describe('SaveForLaterTooltip', () => {
   });
 
   it('renders the removed title with a My News link', () => {
-    render(<SaveForLaterTooltip status="removed" onClose={onClose} />, {
+    render(<ActionTooltip status="removed" onClose={onClose} />, {
       service: 'hindi',
     });
 
@@ -51,7 +51,7 @@ describe('SaveForLaterTooltip', () => {
   });
 
   it('calls onClose when the close button is clicked', async () => {
-    render(<SaveForLaterTooltip status="success" onClose={onClose} />, {
+    render(<ActionTooltip status="success" onClose={onClose} />, {
       service: 'hindi',
     });
 
@@ -61,11 +61,11 @@ describe('SaveForLaterTooltip', () => {
   });
 
   it('exposes the tooltip as a polite live region for assistive technology', () => {
-    render(<SaveForLaterTooltip status="success" onClose={onClose} />, {
+    render(<ActionTooltip status="success" onClose={onClose} />, {
       service: 'hindi',
     });
 
-    const tooltip = screen.getByTestId('save-for-later-tooltip');
+    const tooltip = screen.getByTestId('action-tooltip');
 
     expect(tooltip).toHaveAttribute('role', 'status');
     expect(tooltip).toHaveAttribute('aria-live', 'polite');

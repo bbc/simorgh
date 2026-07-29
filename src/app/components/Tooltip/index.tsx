@@ -6,32 +6,32 @@ import styles from './index.styles';
 import Text from '../Text';
 import Link from '../Footer/Link';
 
-export type SaveForLaterTooltipStatus = 'success' | 'error' | 'removed';
+export type ActionTooltipStatus = 'success' | 'error' | 'removed';
 
-export interface SaveForLaterTooltipProps {
-  status: SaveForLaterTooltipStatus;
+export interface ActionTooltipProps {
+  status: ActionTooltipStatus;
   onClose: () => void;
 }
 
-const StatusIcon = ({ status }: { status: SaveForLaterTooltipStatus }) =>
+const StatusIcon = ({ status }: { status: ActionTooltipStatus }) =>
   status === 'error' ? (
     <InfoTriangle css={styles.icon} />
   ) : (
     <InfoCircle css={styles.icon} />
   );
 
-const SaveForLaterTooltip = ({ status, onClose }: SaveForLaterTooltipProps) => {
+const ActionTooltip = ({ status, onClose }: ActionTooltipProps) => {
   const { translations } = useContext(ServiceContext);
-  const { saveForLaterTooltip } = translations;
+  const { actionTooltip } = translations;
 
-  if (!saveForLaterTooltip) return null;
+  if (!actionTooltip) return null;
 
   const { success, error, removed, myNewsUrl, myNewsLinkText, closeLabel } =
-    saveForLaterTooltip;
+    actionTooltip;
 
   const myNewsLink = <Link href={myNewsUrl} text={myNewsLinkText} inline />;
   const content: Record<
-    SaveForLaterTooltipStatus,
+    ActionTooltipStatus,
     { title: React.ReactNode; body?: string }
   > = {
     success: {
@@ -63,7 +63,7 @@ const SaveForLaterTooltip = ({ status, onClose }: SaveForLaterTooltipProps) => {
         aria-live="polite"
         aria-atomic="true"
         css={styles.container}
-        data-testid="save-for-later-tooltip"
+        data-testid="action-tooltip"
       >
         <div css={styles.content}>
           <div css={styles.header}>
@@ -77,7 +77,7 @@ const SaveForLaterTooltip = ({ status, onClose }: SaveForLaterTooltipProps) => {
               type="button"
               css={styles.closeButton}
               onClick={onClose}
-              data-testid="save-for-later-tooltip-close"
+              data-testid="action-tooltip-close"
             >
               <VisuallyHiddenText>{closeLabel}</VisuallyHiddenText>
               <Close width="20" height="20" />
@@ -95,4 +95,4 @@ const SaveForLaterTooltip = ({ status, onClose }: SaveForLaterTooltipProps) => {
   );
 };
 
-export default SaveForLaterTooltip;
+export default ActionTooltip;
