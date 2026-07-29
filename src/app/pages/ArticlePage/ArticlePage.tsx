@@ -318,15 +318,14 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         return <RelatedContentSection content={blocks} />;
 
       case 'variant_5_recommended_mid':
-        return (
-          <TopicDiscovery
-            topics={topics}
-            css={styles.midArticleTopicDiscovery}
-          />
-        );
+        return <TopicDiscovery topics={topics} css={styles.midArticleOJ} />;
 
       case 'variant_6_hybrid_mid':
-        return <LocationBasedTopicOJ pageData={pageData} />;
+        return (
+          <div css={styles.midArticleOJ}>
+            <LocationBasedTopicOJ pageData={pageData} />
+          </div>
+        );
 
       default:
         return getWsojComponent({ data, experimentProps });

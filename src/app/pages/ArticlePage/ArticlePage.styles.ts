@@ -249,7 +249,7 @@ export default {
         display: 'none',
       },
     }),
-  midArticleTopicDiscovery: () =>
+  midArticleOJ: () =>
     css({
       marginBottom: `${pixelsToRem(40)}rem`,
     }),
