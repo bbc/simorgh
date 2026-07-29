@@ -415,8 +415,13 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     group: gist,
     links: ArticleLinksBlock,
     mpu: getMpuComponent(allowAdvertising),
-    wsoj: ({ data }: { data: Recommendation[] }) =>
-      getSearchMidArticleOJ({ data, searchVariant }),
+    // renders wsoj if user is on desktop, otherwise renders a chosen OJ based on search referrer experiment on mobile
+    wsoj: ({ data }: { data: Recommendation[] }) => {
+      if (!isDesktopViewport) {
+        return getSearchMidArticleOJ({ data, searchVariant });
+      }
+      return getWsojComponent({ data });
+    },
     disclaimer: DisclaimerWithPaddingOverride,
     podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
     ...(showContinueReadingButton && {
@@ -439,7 +444,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
 
-  const showTopicDiscovery = true;
+  const showTopicDiscovery = topicDiscoveryEnabled && !isAmp && !isLite;
 
   const showRelatedTopicsComponent = Boolean(
     showRelatedTopics && topics.length > 0 && !showTopicDiscovery,
