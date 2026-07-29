@@ -309,18 +309,18 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     searchVariant: SearchVariant | null;
   }) => {
     switch (searchVariant) {
-      case 'variant1related':
-      case 'variant2recommended':
-      case 'variant3hybrid':
+      case 'variant_1_related':
+      case 'variant_2_recommended':
+      case 'variant_3_hybrid':
         return <Recommendations data={data} />;
 
-      case 'variant4relatedAndMid':
+      case 'variant_4_related_mid':
         return <RelatedContentSection content={blocks} />;
 
-      case 'variant5recommendedAndMid':
+      case 'variant_5_recommended_mid':
         return <TopicDiscovery topics={topics} />;
 
-      case 'variant6hybridAndMid':
+      case 'variant_6_hybrid_mid':
         return <LocationBasedTopicOJ pageData={pageData} />;
 
       default:
@@ -449,7 +449,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   // Topic Discovery shows in the midarticle position for one variant
   // We want to hide RelatedTopics when this happens
   const topicDiscoveryInMidArticlePosition =
-    !isDesktopViewport && searchVariant === 'variant5recommendedAndMid';
+    !isDesktopViewport && searchVariant === 'variant_5_recommended_mid';
 
   const showRelatedTopicsComponent = Boolean(
     showRelatedTopics &&
