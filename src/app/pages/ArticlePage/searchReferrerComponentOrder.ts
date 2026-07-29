@@ -7,7 +7,6 @@ export type OJComponentKey =
   | 'featuredArticles'
   | 'locationBasedOJ';
 
-// temp variant names for now - these will change based on optimizely set-up
 export type SearchVariant =
   | 'variant_1_related'
   | 'variant_2_recommended'
