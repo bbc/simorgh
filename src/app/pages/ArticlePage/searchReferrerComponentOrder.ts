@@ -9,16 +9,16 @@ export type OJComponentKey =
 
 // temp variant names for now - these will change based on optimizely set-up
 export type SearchVariant =
-  | 'variant1related'
-  | 'variant2recommended'
-  | 'variant3hybrid'
-  | 'variant4relatedAndMid'
-  | 'variant5recommendedAndMid'
-  | 'variant6hybridAndMid';
+  | 'variant_1_related'
+  | 'variant_2_recommended'
+  | 'variant_3_hybrid'
+  | 'variant_4_related_mid'
+  | 'variant_5_recommended_mid'
+  | 'variant_6_hybrid_mid';
 
 // temp variant names for now - these will change based on optimizely set-up
 export const SEARCH_COMPONENT_ORDER: Record<SearchVariant, OJComponentKey[]> = {
-  variant1related: [
+  variant_1_related: [
     'topicDiscovery',
     'relatedContent',
     'locationBasedOJ',
@@ -27,7 +27,7 @@ export const SEARCH_COMPONENT_ORDER: Record<SearchVariant, OJComponentKey[]> = {
     'pvCarousel',
     'mostRead',
   ],
-  variant2recommended: [
+  variant_2_recommended: [
     'topicDiscovery',
     'mostRead',
     'relatedContent',
@@ -36,7 +36,7 @@ export const SEARCH_COMPONENT_ORDER: Record<SearchVariant, OJComponentKey[]> = {
     'topStories',
     'locationBasedOJ',
   ],
-  variant3hybrid: [
+  variant_3_hybrid: [
     'topicDiscovery',
     'locationBasedOJ',
     'relatedContent',
@@ -45,7 +45,7 @@ export const SEARCH_COMPONENT_ORDER: Record<SearchVariant, OJComponentKey[]> = {
     'topStories',
     'featuredArticles',
   ],
-  variant4relatedAndMid: [
+  variant_4_related_mid: [
     'topicDiscovery',
     'locationBasedOJ',
     'topStories',
@@ -53,7 +53,7 @@ export const SEARCH_COMPONENT_ORDER: Record<SearchVariant, OJComponentKey[]> = {
     'pvCarousel',
     'mostRead',
   ],
-  variant5recommendedAndMid: [
+  variant_5_recommended_mid: [
     'topicDiscovery',
     'mostRead',
     'relatedContent',
@@ -62,7 +62,7 @@ export const SEARCH_COMPONENT_ORDER: Record<SearchVariant, OJComponentKey[]> = {
     'topStories',
     'locationBasedOJ',
   ],
-  variant6hybridAndMid: [
+  variant_6_hybrid_mid: [
     'topicDiscovery',
     'relatedContent',
     'mostRead',
