@@ -12,7 +12,7 @@ const styles = {
       top: '100%',
       left: 0,
       right: 0,
-      maxWidth: `${pixelsToRem(336)}rem`,
+      maxWidth: '21rem',
       width: '100%',
       padding: '0.75rem',
       border: '1px solid #C8C8C8',
@@ -40,7 +40,7 @@ const styles = {
         height: 0,
         borderLeft: `${pixelsToRem(7)}rem solid transparent`,
         borderRight: `${pixelsToRem(7)}rem solid transparent`,
-        borderBottom: `${pixelsToRem(12)}rem solid ${palette.WHITE}`,
+        borderBottom: `0.75rem solid ${palette.WHITE}`,
       },
     }),
 
@@ -72,9 +72,9 @@ const styles = {
 
   icon: css({
     flexShrink: 0,
-    width: `${pixelsToRem(22)}rem`,
-    height: `${pixelsToRem(22)}rem`,
-    marginInlineEnd: `${pixelsToRem(8)}rem`,
+    width: '1.375rem',
+    height: '1.375rem',
+    marginInlineEnd: '0.5rem',
   }),
 
   title: css({
@@ -97,8 +97,8 @@ const styles = {
       marginInlineStart: '1.5rem',
       marginBlockStart: '-0.75rem',
       marginInlineEnd: '-0.75rem',
-      width: `${pixelsToRem(44)}rem`,
-      height: `${pixelsToRem(44)}rem`,
+      width: '2.75rem',
+      height: '2.75rem',
       padding: 0,
       display: 'flex',
       alignItems: 'center',
@@ -123,7 +123,7 @@ const styles = {
       '&:focus-visible': {
         background: palette.POSTBOX,
         outline: `2px solid ${palette.WHITE}`,
-        boxShadow: `0 0 0 ${pixelsToRem(4)}rem ${palette.GREY_10}`,
+        boxShadow: `0 0 0 0.25rem ${palette.GREY_10}`,
 
         svg: {
           fill: palette.WHITE,

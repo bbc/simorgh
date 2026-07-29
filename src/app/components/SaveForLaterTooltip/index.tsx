@@ -85,7 +85,7 @@ const SaveForLaterTooltip = ({ status, onClose }: SaveForLaterTooltipProps) => {
           </div>
 
           {body && (
-            <Text size="doublePica" css={styles.body}>
+            <Text size="greatPrimer" css={styles.body}>
               {body}
             </Text>
           )}
