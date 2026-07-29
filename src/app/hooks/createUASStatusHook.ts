@@ -5,18 +5,6 @@ import { buildGlobalId, type ActivityType } from '#app/lib/uasApi/uasUtility';
 import { HTTP_NO_CONTENT } from '#app/lib/statusCodes.const';
 import { AccountContext } from '#app/contexts/AccountContext';
 
-/**
- * Generic factory for creating UAS "status" fetch hooks (e.g., isSaved, isFollowed).
- * Handles all boilerplate: GET request, response parsing, query setup, error handling.
- *
- * Usage:
- * const useMyStatus = useUASStatusHook({
- *   config: MY_CONFIG,
- *   queryKeyFn: (userId, id) => uasKeys.myStatus(userId, id),
- *   statusField: 'isSaved',
- * });
- */
-
 interface UseUASStatusHookConfig {
   activityType: ActivityType;
   resourceDomain: string;
@@ -43,19 +31,27 @@ enum UASStatusField {
   SAVED = 'isSaved',
   FOLLOWED = 'isFollowed',
 }
+
 /**
  * Factory function that creates a UAS status fetch hook.
- * Returns a hook function that accepts a resourceId parameter.
+ * Internal implementation - consumers should use the exported hooks (useUASFetchSaveStatus, useTopicFollowStatus).
  *
- * Example usage:
- * const useMyStatus = useUASStatusHook(params);
- * const status = useMyStatus(id);
+ * Returns a hook function that accepts a resourceId parameter and fetches its status.
+ * Handles: GET request, response parsing, query setup, error handling, caching.
+ *
+ * Example:
+ * const useArticleStatus = createUASStatusHook({
+ *   config: FAVOURITES_CONFIG,
+ *   queryKeyFn: (userId, id) => uasKeys.saveStatus(userId, id),
+ *   statusField: UASStatusField.SAVED,
+ * });
  */
-const useUASStatusHook = <StatusField extends string>(
+const createUASStatusHook = <StatusField extends string>(
   params: UseUASStatusHookParams<StatusField>,
 ): ((resourceId: string) => UseUASStatusHookReturn<StatusField>) => {
   const { config, queryKeyFn, statusField, enabledFn } = params;
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   return (resourceId: string): UseUASStatusHookReturn<StatusField> => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const { hashedUserId = '', isRefreshAvailable } = use(AccountContext);
@@ -64,6 +60,7 @@ const useUASStatusHook = <StatusField extends string>(
       ? enabledFn(resourceId, hashedUserId)
       : !!resourceId && !!hashedUserId;
 
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const {
       data = {
         [statusField]: false,
@@ -71,7 +68,6 @@ const useUASStatusHook = <StatusField extends string>(
       },
       isLoading,
       error,
-      // eslint-disable-next-line react-hooks/rules-of-hooks
     } = useQuery({
       queryKey: queryKeyFn(hashedUserId, resourceId),
       queryFn: async () => {
@@ -117,5 +113,6 @@ const useUASStatusHook = <StatusField extends string>(
     } as UseUASStatusHookReturn<StatusField>;
   };
 };
+
 export { UASStatusField };
-export default useUASStatusHook;
+export default createUASStatusHook;

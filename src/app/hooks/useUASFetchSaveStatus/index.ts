@@ -1,10 +1,12 @@
 import { FAVOURITES_CONFIG } from '#app/lib/uasApi/uasUtility';
 import uasKeys from '#app/lib/uasApi/queryKeys';
-import useUASStatusHook, { UASStatusField } from '#app/hooks/useUASStatusHook';
+import createUASStatusHook, {
+  UASStatusField,
+} from '#app/hooks/createUASStatusHook';
 
 /**
  * Fetches an article's saved status from UAS.
- * Wraps the generic useUASStatusHook factory with article-specific config.
+ * Wraps the generic createUASStatusHook factory with article-specific config.
  */
 
 interface UseUASFetchSaveStatusReturn {
@@ -14,8 +16,7 @@ interface UseUASFetchSaveStatusReturn {
   savedMetadata?: Record<string, unknown>;
 }
 
-// eslint-disable-next-line react-hooks/rules-of-hooks
-const statusHook = useUASStatusHook({
+const useStatusHook = createUASStatusHook({
   config: FAVOURITES_CONFIG,
   queryKeyFn: (hashedUserId, articleId) =>
     uasKeys.favouriteStatus(hashedUserId, articleId) as unknown as unknown[],
@@ -26,7 +27,7 @@ const statusHook = useUASStatusHook({
 const useUASFetchSaveStatus = (
   articleId: string,
 ): UseUASFetchSaveStatusReturn => {
-  const { isSaved, isLoading, error, metadata } = statusHook(articleId);
+  const { isSaved, isLoading, error, metadata } = useStatusHook(articleId);
   return {
     isSaved,
     isLoading,
