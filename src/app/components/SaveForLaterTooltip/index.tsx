@@ -4,6 +4,7 @@ import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './index.styles';
 import Text from '../Text';
+import Link from '../Footer/Link';
 
 export type SaveForLaterTooltipStatus = 'success' | 'error' | 'removed';
 
@@ -28,8 +29,7 @@ const SaveForLaterTooltip = ({ status, onClose }: SaveForLaterTooltipProps) => {
   const { success, error, removed, myNewsUrl, myNewsLinkText, closeLabel } =
     saveForLaterTooltip;
 
-  const myNewsLink = <a href={myNewsUrl}>{myNewsLinkText}</a>;
-
+  const myNewsLink = <Link href={myNewsUrl} text={myNewsLinkText} inline />;
   const content: Record<
     SaveForLaterTooltipStatus,
     { title: React.ReactNode; body?: string }
