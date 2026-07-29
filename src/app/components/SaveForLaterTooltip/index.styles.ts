@@ -1,9 +1,9 @@
 import { css, Theme } from '@emotion/react';
 import pixelsToRem from '#app/utilities/pixelsToRem';
 
-export const wrapperStyles = css`
-  position: relative;
-`;
+export const wrapperStyles = css({
+  position: 'relative',
+});
 
 export const containerStyles = ({ spacings, palette }: Theme) =>
   css({
@@ -61,11 +61,12 @@ export const contentStyles = ({ spacings }: Theme) =>
     },
   });
 
-export const titleStyles = css`
-  margin: 0;
-  font-weight: 700;
-  ...fontSizes.brevier,
-`;
+export const titleStyles = ({ fontSizes }: Theme) =>
+  css({
+    margin: 0,
+    fontWeight: 700,
+    ...fontSizes.brevier,
+  });
 
 export const bodyStyles = ({ fontSizes, mq }: Theme) =>
   css({
