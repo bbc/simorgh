@@ -14,8 +14,6 @@ const styles = {
       right: 0,
       maxWidth: `${pixelsToRem(336)}rem`,
       width: '100%',
-      display: 'flex',
-      gap: '0.5rem',
       padding: '0.75rem',
       border: '1px solid #C8C8C8',
       margin: `0 ${spacings.HALF}rem`,
@@ -46,18 +44,10 @@ const styles = {
       },
     }),
 
-  icon: css({
-    flexShrink: 0,
-    width: `${pixelsToRem(22)}rem`,
-    height: `${pixelsToRem(22)}rem`,
-  }),
-
-  content: ({ spacings, palette }: Theme) =>
+  content: ({ palette }: Theme) =>
     css({
-      flex: 1,
       display: 'flex',
       flexDirection: 'column',
-      gap: `${spacings.DOUBLE}rem`,
 
       a: {
         color: 'inherit',
@@ -66,6 +56,7 @@ const styles = {
         '&:hover, &:active': {
           color: palette.POSTBOX,
         },
+
         '&:focus-visible': {
           color: palette.POSTBOX,
           outline: '1px solid black',
@@ -74,17 +65,26 @@ const styles = {
       },
     }),
 
-  title: ({ fontSizes }: Theme) =>
-    css({
-      margin: 0,
-      fontWeight: 700,
-      ...fontSizes.brevier,
-    }),
+  header: css({
+    display: 'flex',
+    alignItems: 'flex-start',
+  }),
 
-  body: ({ fontSizes, mq }: Theme) =>
+  icon: css({
+    flexShrink: 0,
+    width: `${pixelsToRem(22)}rem`,
+    height: `${pixelsToRem(22)}rem`,
+    marginInlineEnd: `${pixelsToRem(8)}rem`,
+  }),
+
+  title: css({
+    flex: 1,
+    margin: 0,
+  }),
+
+  body: ({ mq }: Theme) =>
     css({
-      margin: 0,
-      ...fontSizes.brevier,
+      margin: '1rem 0 0',
 
       [mq.GROUP_0_MAX_WIDTH]: {
         display: 'none',
@@ -94,13 +94,12 @@ const styles = {
   closeButton: ({ palette }: Theme) =>
     css({
       flexShrink: 0,
-      alignSelf: 'flex-start',
       marginInlineStart: '1.5rem',
       marginBlockStart: '-0.75rem',
       marginInlineEnd: '-0.75rem',
+      width: `${pixelsToRem(44)}rem`,
+      height: `${pixelsToRem(44)}rem`,
       padding: 0,
-      width: '2.75rem',
-      height: '2.75rem',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',

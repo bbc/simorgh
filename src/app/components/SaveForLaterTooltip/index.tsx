@@ -48,7 +48,7 @@ const SaveForLaterTooltip = ({ status, onClose }: SaveForLaterTooltipProps) => {
     removed: {
       title: (
         <>
-          {removed.titleBefore} {myNewsLink} {success.titleAfter}
+          {removed.titleBefore} {myNewsLink} {removed.titleAfter}
         </>
       ),
     },
@@ -65,23 +65,31 @@ const SaveForLaterTooltip = ({ status, onClose }: SaveForLaterTooltipProps) => {
         css={styles.container}
         data-testid="save-for-later-tooltip"
       >
-        <StatusIcon status={status} />
-
         <div css={styles.content}>
-          <Text css={styles.title}>{title}</Text>
+          <div css={styles.header}>
+            <StatusIcon status={status} />
 
-          {body && <Text css={styles.body}>{body}</Text>}
+            <Text size="bodyCopy" fontVariant="sansBold" css={styles.title}>
+              {title}
+            </Text>
+
+            <button
+              type="button"
+              css={styles.closeButton}
+              onClick={onClose}
+              data-testid="save-for-later-tooltip-close"
+            >
+              <VisuallyHiddenText>{closeLabel}</VisuallyHiddenText>
+              <Close width="20" height="20" />
+            </button>
+          </div>
+
+          {body && (
+            <Text size="doublePica" css={styles.body}>
+              {body}
+            </Text>
+          )}
         </div>
-
-        <button
-          type="button"
-          css={styles.closeButton}
-          onClick={onClose}
-          data-testid="save-for-later-tooltip-close"
-        >
-          <VisuallyHiddenText>{closeLabel}</VisuallyHiddenText>
-          <Close width="20" height="20" />
-        </button>
       </div>
     </div>
   );
