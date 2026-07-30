@@ -4,7 +4,7 @@ import { MY_NEWS_PAGE } from '#app/routes/utils/pageTypes';
 import PageDataParams from '#app/models/types/pageDataParams';
 import deriveVariant from '#utilities/deriveVariant';
 import logResponseTime from '#utilities/logResponseTime';
-import fetchToggles from '#app/lib/utilities/fetchToggles';
+import getToggles from '#app/lib/utilities/getToggles/withCache';
 import { NOT_FOUND, OK } from '#app/lib/statusCodes.const';
 
 const MyNewsPage = dynamic(() => import('./MyNewsPage'));
@@ -17,7 +17,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
   } = context.query as PageDataParams;
   const variant = deriveVariant(variantFromUrl);
 
-  const toggles = await fetchToggles({ service });
+  const toggles = await getToggles(service);
   const isUasPersonalizationEnabled = toggles?.uasPersonalization?.enabled;
 
   if (!isUasPersonalizationEnabled) {

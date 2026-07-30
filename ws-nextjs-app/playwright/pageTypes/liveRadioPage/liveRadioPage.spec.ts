@@ -38,6 +38,12 @@ type ServiceToggleConfig = {
   };
 };
 
+const togglesUrlByEnv: Record<'local' | 'test' | 'live', string> = {
+  local: 'https://config.api.bbci.co.uk/',
+  test: 'https://config.test.api.bbci.co.uk/',
+  live: 'https://config.test.api.bbci.co.uk/',
+};
+
 const twoTierNavServices: Record<string, string[] | null> = {
   local: null,
   test: ['arabic', 'tamil'],
@@ -65,8 +71,14 @@ const getLiveRadioServiceToggles = async (
     return defaultToggles.local as ServiceToggleConfig;
   }
 
+  const togglesUrl = togglesUrlByEnv[appEnvFromProcess];
   const response = await fetch(
-    `${process.env.TOGGLES_BFF_PATH}?application=simorgh&service=${service}`,
+    `${togglesUrl}?application=simorgh&service=${service}&__amp_source_origin=${baseURL}`,
+    {
+      headers: {
+        Origin: 'https://www.bbc.com',
+      },
+    },
   );
 
   if (!response.ok) {
@@ -218,7 +230,7 @@ test.describe('liveRadioPage', () => {
         test('should show two tier navigation on desktop', async ({ page }) => {
           test.skip(
             !shouldRunForEnv(testSuite.runForEnv) ||
-            !shouldTestTwoTierNav(testSuite.service),
+              !shouldTestTwoTierNav(testSuite.service),
             `Skipped for APP_ENV=${appEnvFromProcess}`,
           );
 
@@ -250,7 +262,7 @@ test.describe('liveRadioPage', () => {
         test('should show two tier navigation on mobile', async ({ page }) => {
           test.skip(
             !shouldRunForEnv(testSuite.runForEnv) ||
-            !shouldTestTwoTierNav(testSuite.service),
+              !shouldTestTwoTierNav(testSuite.service),
             `Skipped for APP_ENV=${appEnvFromProcess}`,
           );
 
@@ -284,7 +296,7 @@ test.describe('liveRadioPage', () => {
         }) => {
           test.skip(
             !shouldRunForEnv(testSuite.runForEnv) ||
-            !shouldTestTwoTierNav(testSuite.service),
+              !shouldTestTwoTierNav(testSuite.service),
             `Skipped for APP_ENV=${appEnvFromProcess}`,
           );
 
