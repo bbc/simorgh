@@ -1,10 +1,10 @@
-import { Toggles, ToggleDefinition } from '#app/models/types/global';
+import { ToggleDefinition, Toggles } from '#app/models/types/global';
 
-export default function getToggleDefinition(
-  toggles: Toggles,
-  name: string,
-): ToggleDefinition {
-  const toggle = (toggles as Record<string, ToggleDefinition>)[name];
+const getToggleDefinitions = (
+  toggles: Toggles = {},
+): Record<string, ToggleDefinition> => {
+  const { _environment, ...toggleDefinitions } = toggles;
+  return toggleDefinitions;
+};
 
-  return toggle ?? { enabled: false };
-}
+export default getToggleDefinitions;
