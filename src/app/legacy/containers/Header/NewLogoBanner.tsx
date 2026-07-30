@@ -1,5 +1,6 @@
 import { use } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
+import AccountHeader from '#app/components/Account/AccountHeader';
 import styles from './index.styles';
 
 export const GLOBAL_LANGUAGES_PATH = '/ws/languages';
@@ -44,6 +45,7 @@ const NewLogoBanner = () => {
           />
         </svg>
       </a>
+      <AccountHeader variant="default" />
     </div>
   );
 };
