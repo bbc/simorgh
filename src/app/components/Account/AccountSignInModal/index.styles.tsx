@@ -20,7 +20,7 @@ export default {
   modal: css({
     position: 'fixed',
     inset: 0,
-    zIndex: 2147483647,
+    zIndex: 2147,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
