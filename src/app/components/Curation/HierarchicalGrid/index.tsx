@@ -200,9 +200,11 @@ const HiearchicalGrid = ({
               {inSituMediaBlocks ? (
                 <div>
                   <div css={styles.inSituMedia}>
+                    {/* use the same one-tap player setup as a media article without its high preload */}
                     <MediaLoader
                       blocks={inSituMediaBlocks}
                       uniqueId={`in-situ-${promo.id || i}`}
+                      loadPlayerOnInitialRender
                     />
                   </div>
                   <div className="promo-text">{promoText}</div>

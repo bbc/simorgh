@@ -117,6 +117,59 @@ describe('MediaLoader', () => {
       expect(mockRequire.mock.calls[0][0]).toStrictEqual(['bump-4']);
     });
 
+    it('Loads the player immediately with autoplay disabled when requested', async () => {
+      const mockRequire = jest.fn();
+      const mockPlayer = {
+        load: jest.fn(),
+      };
+      const mockBump = {
+        player: jest.fn(() => mockPlayer),
+      };
+
+      window.requirejs = mockRequire;
+      (useState as jest.Mock).mockImplementation(initialValue => [
+        initialValue,
+        jest.fn(),
+      ]);
+
+      let container;
+
+      await act(async () => {
+        ({ container } = render(
+          <MediaPlayer
+            blocks={aresMediaBlocks as MediaBlock[]}
+            loadPlayerOnInitialRender
+          />,
+          {
+            id: 'testId',
+            pageType: TOPIC_PAGE,
+          },
+        ));
+      });
+
+      expect(
+        (container as unknown as HTMLElement).querySelector(
+          '[data-e2e="media-loader__placeholder"]',
+        ),
+      ).not.toBeInTheDocument();
+      expect(
+        (container as unknown as HTMLElement).querySelector(
+          '[data-e2e="media-player"]',
+        ),
+      ).toBeInTheDocument();
+
+      const callbackFn = mockRequire.mock.calls[0][1];
+      await act(async () => callbackFn(mockBump));
+
+      expect(mockBump.player).toHaveBeenCalledWith(
+        expect.any(HTMLElement),
+        expect.objectContaining({ autoplay: false }),
+      );
+      const inSituPlayerConfig = mockBump.player.mock.calls[0][1];
+      expect(inSituPlayerConfig).not.toHaveProperty('preload');
+      expect(mockPlayer.load).toHaveBeenCalledTimes(1);
+    });
+
     it('Adds a media player object to the window with a specified uniqueId', async () => {
       const mockRequire = jest.fn();
       const mockBump = {

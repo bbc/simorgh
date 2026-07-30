@@ -240,6 +240,7 @@ describe('Hierarchical Grid Curation', () => {
       expect.objectContaining({
         blocks: aresMediaBlocks,
         uniqueId: `in-situ-${inSituPromo.id}`,
+        loadPlayerOnInitialRender: true,
       }),
       undefined,
     );
