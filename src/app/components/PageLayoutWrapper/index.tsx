@@ -219,7 +219,14 @@ const PageLayoutWrapper = ({
                             return null;
                         }
                         var atuseridCookie = getCookie('atuserid');
-                        var atuseridCookieValue = atuseridCookie ? JSON.parse(decodeURIComponent(atuseridCookie.value)).val : null;
+                        var atuseridCookieValue = null;
+                         if (atuseridCookie) {
+                             try {
+                                 atuseridCookieValue = JSON.parse(decodeURIComponent(atuseridCookie)).val;
+                             } catch (e) {
+                                 atuseridCookieValue = null;
+                             }
+                         }
                         if (!atuseridCookieValue) {
                             if (window.crypto){
                                 atuseridCookieValue = crypto.randomUUID();
