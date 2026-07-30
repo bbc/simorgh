@@ -365,6 +365,7 @@ const PortraitVideoModal = ({
         <MediaLoader
           css={styles.mediaWrapper}
           blocks={[blocks?.[selectedVideoIndex]]}
+          disableFakeFullscreen
           eventMapping={{
             playlistLoaded: e => playlistLoadedCallback(e, blocks),
             pluginLoaded: pluginLoadedCallback,
