@@ -728,7 +728,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       </div>
 
       {mobileOJOrder && (
-        <div css={styles.mobileOJContainer}>
+        <div css={styles.mobileOJContainer} data-testid="mobile-oj-container">
           {mobileOJOrder.map(key => (
             <Fragment key={key}>{mobileOJComponents[key]}</Fragment>
           ))}
