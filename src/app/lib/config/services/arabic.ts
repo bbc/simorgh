@@ -44,6 +44,7 @@ export const service: DefaultServiceConfig = {
     manifestPath: '/arabic/manifest.json',
     swPath: '/sw.js',
     homePageTitle: 'الرئيسية',
+    iTunesAppId: 6761256736,
     showAdPlaceholder: true,
     showRelatedTopics: true,
     googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',

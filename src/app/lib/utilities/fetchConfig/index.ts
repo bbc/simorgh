@@ -55,9 +55,7 @@ const fetchConfig = async <T>({
     cached: !!cachedResponse,
   });
 
-  if (cachedResponse) {
-    return cachedResponse as T;
-  }
+  if (cachedResponse) return cachedResponse as T;
 
   const environment = getEnvironment(pagePath);
   const isLocal = !environment || environment === 'local';

@@ -44,6 +44,7 @@ export const service: DefaultServiceConfig = {
     manifestPath: '/mundo/manifest.json',
     swPath: '/sw.js',
     homePageTitle: 'Noticias',
+    iTunesAppId: 6761256736,
     showAdPlaceholder: true,
     showRelatedTopics: true,
     electionBanner: {

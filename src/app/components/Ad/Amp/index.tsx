@@ -6,7 +6,7 @@ import {
   AMP_ACCESS_JS,
   AMP_ADS_JS,
 } from '#psammead/psammead-assets/src/amp-boilerplate';
-import constructTogglesEndpoint from '#contexts/ToggleContext/utils/constructTogglesEndpoint';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
 import AdSlot from './AdSlot';
@@ -26,7 +26,9 @@ const AMP_ACCESS_DATA = (endpoint: string) => ({
 const LABEL_LINK = 'https://www.bbc.com/usingthebbc/cookies/';
 
 export const AMP_ACCESS_FETCH = (service: Services) => {
-  const togglesEndpoint = constructTogglesEndpoint({ service, isAmp: true });
+  const togglesEndpoint = `${
+    getEnvConfig().SIMORGH_CONFIG_URL
+  }?application=simorgh&service=${service}`;
 
   return (
     <script id="amp-access" type="application/json">
@@ -77,7 +79,7 @@ const AdWithoutPlaceholder = ({
   return (
     <div
       css={styles.display}
-      amp-access="data.toggles.ads.enabled"
+      amp-access="toggles.ads.enabled"
       amp-access-hide="true"
     >
       <section
@@ -135,7 +137,7 @@ const AdWithPlaceholder = ({
         <div css={styles.wrapper}>
           <div
             css={styles.display}
-            amp-access="data.toggles.ads.enabled"
+            amp-access="toggles.ads.enabled"
             amp-access-hide="true"
           >
             <AdContent
