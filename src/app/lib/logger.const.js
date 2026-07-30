@@ -84,8 +84,6 @@ const logCodes = {
 
   // Toggle API
   TOGGLE_API_RESPONSE_TIME: 'toggle_api_response_time',
-  TOGGLE_API_REQUEST_RECEIVED: 'toggle_api_request_received',
-  TOGGLE_API_FETCH_ERROR: 'toggle_api_fetch_error',
 
   // Logging
   ATI_LOGGING_ERROR: 'ati_logging_error',
