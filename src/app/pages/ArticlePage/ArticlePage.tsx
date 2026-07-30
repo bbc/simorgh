@@ -322,7 +322,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       case 'relatedContent':
         return (
           <div css={styles.midArticleOJ}>
-            <RelatedContentSection content={blocks} />{' '}
+            <RelatedContentSection content={blocks} />
           </div>
         );
 
@@ -429,12 +429,10 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     links: ArticleLinksBlock,
     mpu: getMpuComponent(allowAdvertising),
     // renders wsoj if user is on desktop, otherwise renders a chosen OJ based on search referrer experiment on mobile
-    wsoj: ({ data }: { data: Recommendation[] }) => {
-      if (!isDesktopViewport) {
-        return getSearchMidArticleOJ({ data, searchVariant });
-      }
-      return getWsojComponent({ data });
-    },
+    wsoj: ({ data }: { data: Recommendation[] }) =>
+      !isDesktopViewport
+        ? getSearchMidArticleOJ({ data, searchVariant })
+        : getWsojComponent({ data }),
     disclaimer: DisclaimerWithPaddingOverride,
     podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
     ...(showContinueReadingButton && {
