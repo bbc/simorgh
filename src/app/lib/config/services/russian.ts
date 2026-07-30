@@ -251,6 +251,7 @@ export const service: DefaultServiceConfig = {
     manifestPath: '/russian/manifest.json',
     swPath: '/sw.js',
     homePageTitle: 'Главная',
+    iTunesAppId: 6761256736,
     showAdPlaceholder: true,
     showRelatedTopics: true,
     googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
