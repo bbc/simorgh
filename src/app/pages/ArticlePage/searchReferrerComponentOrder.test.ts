@@ -4,6 +4,7 @@ import { GROUP_3_MAX_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries
 import useMobileOJComponentOrder from './useMobileOJComponentOrder';
 import {
   SEARCH_COMPONENT_ORDER,
+  SEARCH_MID_ARTICLE_COMPONENT,
   SearchVariant,
 } from './searchReferrerComponentOrder';
 
@@ -83,6 +84,21 @@ describe('useMobileOJComponentOrder', () => {
     it('returns null when no variant is provided', () => {
       const { result } = renderHook(() => useMobileOJComponentOrder(null));
       expect(result.current).toBeNull();
+    });
+  });
+
+  describe('Mid-article component ordering', () => {
+    it.each([
+      ['variant_1_related', 'mostRead'],
+      ['variant_2_recommended', 'mostRead'],
+      ['variant_3_hybrid', 'mostRead'],
+      ['variant_4_related_mid', 'relatedContent'],
+      ['variant_5_recommended_mid', 'topicDiscovery'],
+      ['variant_6_hybrid_mid', 'locationBasedOJ'],
+    ] as const)('%o returns %o', (searchVariant, expectedComponent) => {
+      expect(SEARCH_MID_ARTICLE_COMPONENT[searchVariant]).toBe(
+        expectedComponent,
+      );
     });
   });
 
