@@ -311,6 +311,10 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     pageData?.countryCuration?.summaries?.length,
   );
 
+  const hasRelatedContent = blocks.some(
+    block => block.type === 'relatedContent',
+  );
+
   const getSearchMidArticleOJ = ({
     data,
     experimentProps,
@@ -328,10 +332,12 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         return <Recommendations data={data} />;
 
       case 'relatedContent':
-        return (
+        return hasRelatedContent ? (
           <div css={styles.midArticleOJ}>
             <RelatedContentSection content={blocks} />
           </div>
+        ) : (
+          <Recommendations data={data} />
         );
 
       case 'topicDiscovery':
