@@ -1,5 +1,6 @@
 import { renderHook, waitFor, act } from '@testing-library/react';
 import onClient from '#app/lib/utilities/onClient';
+import { GROUP_3_MAX_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
 import useMobileOJComponentOrder from './useMobileOJComponentOrder';
 import { SEARCH_COMPONENT_ORDER } from './searchReferrerComponentOrder';
 
@@ -189,8 +190,8 @@ describe('useMobileOJComponentOrder', () => {
       renderHook(() => useMobileOJComponentOrder(null));
 
       const callArgs = matchMediaMock.mock.calls[0][0];
-      // GROUP_3_MAX_WIDTH_BP = pixelsToRem(1007) = 62.9375rem
-      expect(callArgs).toContain('62.9375rem');
+
+      expect(callArgs).toContain(`${GROUP_3_MAX_WIDTH_BP}rem`);
       expect(callArgs).toContain('max-width');
     });
   });
