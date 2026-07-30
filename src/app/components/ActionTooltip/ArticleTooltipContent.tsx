@@ -1,7 +1,7 @@
 import Link from '#app/components/Footer/Link';
 import { TooltipContent } from '#app/components/ActionTooltip';
 
-interface SaveArticleTooltipTranslations {
+interface ArticleTooltipTranslations {
   success: {
     titleBefore: string;
     titleAfter: string;
@@ -18,8 +18,8 @@ interface SaveArticleTooltipTranslations {
   myNewsUrl: string;
 }
 
-const getSaveArticleTooltipContent = (
-  actionTooltip: SaveArticleTooltipTranslations,
+const getArticleTooltipContent = (
+  actionTooltip: ArticleTooltipTranslations,
 ): TooltipContent => {
   const myNewsLink = (
     <Link
@@ -53,4 +53,4 @@ const getSaveArticleTooltipContent = (
   };
 };
 
-export default getSaveArticleTooltipContent;
+export default getArticleTooltipContent;

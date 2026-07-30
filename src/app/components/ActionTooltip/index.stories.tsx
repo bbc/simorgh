@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import ActionTooltip, { ActionTooltipStatus } from '.';
-import getSaveArticleTooltipContent from '../SaveArticleButton/SaveArticleTooltipContent';
+import getArticleTooltipContent from './ArticleTooltipContent';
 
 const TooltipDemo = ({ status }: { status: ActionTooltipStatus }) => {
   const [isVisible, setIsVisible] = useState(true);
@@ -23,7 +23,7 @@ const TooltipDemo = ({ status }: { status: ActionTooltipStatus }) => {
     closeLabel: 'Close',
   };
 
-  const content = getSaveArticleTooltipContent(actionTooltip);
+  const content = getArticleTooltipContent(actionTooltip);
 
   if (!isVisible) {
     return null;
