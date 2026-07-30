@@ -96,7 +96,11 @@ import {
   isPortraitVideoUnderHeadline,
 } from '../../components/MediaLoader/utils/isPortraitVideo';
 import LocationBasedTopicOJ from '../../components/LocationBasedTopicOJ';
-import { OJComponentKey, SearchVariant } from './searchReferrerComponentOrder';
+import {
+  OJComponentKey,
+  SEARCH_MID_ARTICLE_COMPONENT,
+  SearchVariant,
+} from './searchReferrerComponentOrder';
 import TopStoriesSection from './PagePromoSections/TopStoriesSection';
 
 const getImageComponent =
@@ -308,19 +312,24 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     experimentProps?: ComponentExperimentProps | null;
     searchVariant: SearchVariant | null;
   }) => {
-    switch (searchVariant) {
-      case 'variant_1_related':
-      case 'variant_2_recommended':
-      case 'variant_3_hybrid':
+    const midarticleOJ = searchVariant
+      ? SEARCH_MID_ARTICLE_COMPONENT[searchVariant]
+      : null;
+    switch (midarticleOJ) {
+      case 'mostRead':
         return <Recommendations data={data} />;
 
-      case 'variant_4_related_mid':
-        return <RelatedContentSection content={blocks} />;
+      case 'relatedContent':
+        return (
+          <div css={styles.midArticleOJ}>
+            <RelatedContentSection content={blocks} />{' '}
+          </div>
+        );
 
-      case 'variant_5_recommended_mid':
+      case 'topicDiscovery':
         return <TopicDiscovery topics={topics} css={styles.midArticleOJ} />;
 
-      case 'variant_6_hybrid_mid':
+      case 'locationBasedOJ':
         return (
           <div css={styles.midArticleOJ}>
             <LocationBasedTopicOJ pageData={pageData} />

@@ -15,7 +15,6 @@ export type SearchVariant =
   | 'variant_5_recommended_mid'
   | 'variant_6_hybrid_mid';
 
-// temp variant names for now - these will change based on optimizely set-up
 export const SEARCH_COMPONENT_ORDER: Record<SearchVariant, OJComponentKey[]> = {
   variant_1_related: [
     'topicDiscovery',
@@ -69,3 +68,19 @@ export const SEARCH_COMPONENT_ORDER: Record<SearchVariant, OJComponentKey[]> = {
     'featuredArticles',
   ],
 };
+
+export type MidArticleOJ =
+  | 'mostRead'
+  | 'topicDiscovery'
+  | 'relatedContent'
+  | 'locationBasedOJ';
+
+export const SEARCH_MID_ARTICLE_COMPONENT: Record<SearchVariant, MidArticleOJ> =
+  {
+    variant_1_related: 'mostRead',
+    variant_2_recommended: 'mostRead',
+    variant_3_hybrid: 'mostRead',
+    variant_4_related_mid: 'relatedContent',
+    variant_5_recommended_mid: 'topicDiscovery',
+    variant_6_hybrid_mid: 'locationBasedOJ',
+  };
