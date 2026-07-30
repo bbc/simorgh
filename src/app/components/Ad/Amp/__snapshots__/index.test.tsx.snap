@@ -83,7 +83,7 @@ exports[`AMP Ads Snapshots should correctly render an AMP leaderboard ad 1`] = `
 
 <div>
   <div
-    amp-access="data.toggles.ads.enabled"
+    amp-access="toggles.ads.enabled"
     amp-access-hide="true"
     class="emotion-0"
   >
@@ -220,7 +220,7 @@ exports[`AMP Ads Snapshots should correctly render an AMP mpu ad 1`] = `
 
 <div>
   <div
-    amp-access="data.toggles.ads.enabled"
+    amp-access="toggles.ads.enabled"
     amp-access-hide="true"
     class="emotion-0"
   >

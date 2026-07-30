@@ -9,6 +9,7 @@ export type EnvironmentConfigType = {
   avEmbedBaseUrlAmp: string;
   standaloneErrorPages: boolean;
   alwaysCheckForFallback: boolean;
+  togglesUrl: string;
 };
 
 export type Environment = 'live' | 'test' | 'local';
@@ -29,6 +30,7 @@ const config = {
     avEmbedBaseUrlAmp: 'https://web-cdn.api.bbci.co.uk',
     standaloneErrorPages: false,
     alwaysCheckForFallback: true,
+    togglesUrl: 'https://config.api.bbci.co.uk/',
   },
   test: {
     baseUrl: 'https://www.test.bbc.com',
@@ -41,6 +43,7 @@ const config = {
     avEmbedBaseUrlAmp: 'https://web-cdn.test.api.bbci.co.uk',
     standaloneErrorPages: false,
     alwaysCheckForFallback: true,
+    togglesUrl: 'https://config.test.api.bbci.co.uk/',
   },
   local: {
     baseUrl: 'http://localhost.bbc.com:7080',
@@ -53,6 +56,7 @@ const config = {
     avEmbedBaseUrlAmp: 'https://web-cdn.test.api.bbci.co.uk',
     standaloneErrorPages: true,
     alwaysCheckForFallback: false,
+    togglesUrl: 'https://config.test.api.bbci.co.uk/',
   },
 };
 
