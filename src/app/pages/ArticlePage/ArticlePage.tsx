@@ -523,6 +523,38 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const topicDiscoverySlot = getTopicDiscoverySlot();
 
+  const getVideoOJComponent = (): ReactNode => {
+    if (showPortraitVideoCarousel) {
+      return (
+        <PortraitVideoCarousel
+          {...portraitVideoCarouselProps}
+          css={styles.portraitVideoCarousel}
+        />
+      );
+    }
+    if (showMediaCuration) {
+      return (
+        <div css={styles.mediaCurationRow}>
+          <div data-testid="media-curation">
+            <Curation
+              visualStyle={VISUAL_STYLE.FEED}
+              visualProminence={VISUAL_PROMINENCE.NORMAL}
+              summaries={mediaCurationContent?.summaries}
+              title={mediaCurationContent?.title}
+              position={mediaCurationContent?.position || 0}
+              curationId={mediaCurationContent?.curationId}
+              curationLength={1}
+              link={mediaCurationContent?.link}
+              curationContentType="video"
+              pageType={pageType}
+            />
+          </div>
+        </div>
+      );
+    }
+    return null;
+  };
+
   const mobileOJComponents: Record<OJComponentKey, ReactNode> = {
     mostRead:
       !isApp && !isPGL ? (
@@ -537,12 +569,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       ) : null,
     topicDiscovery: topicDiscoverySlot,
     relatedContent: <RelatedContentSection content={blocks} />,
-    pvCarousel: showPortraitVideoCarousel ? (
-      <PortraitVideoCarousel
-        {...portraitVideoCarouselProps}
-        css={styles.portraitVideoCarousel}
-      />
-    ) : null,
+    videoOJ: getVideoOJComponent(),
     topStories:
       !isApp && !isPGL && topStoriesContent ? (
         <div
@@ -675,7 +702,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             />
           )}
           {!mobileOJOrder && <RelatedContentSection content={blocks} />}
-          {showMediaCuration && (
+          {!mobileOJOrder && showMediaCuration && (
             <div css={styles.mediaCurationRow}>
               <div data-testid="media-curation">
                 <Curation
