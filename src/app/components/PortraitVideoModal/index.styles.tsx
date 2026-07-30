@@ -26,7 +26,7 @@ const styles = {
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'center',
-      zIndex: 2147483647,
+      zIndex: 2147,
 
       '&::after': {
         content: '""',

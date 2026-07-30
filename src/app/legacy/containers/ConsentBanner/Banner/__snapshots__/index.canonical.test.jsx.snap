@@ -9,6 +9,10 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
   z-index: 2147483647;
 }
 
+body.simorgh-player-fullscreen .emotion-0 {
+  z-index: -1;
+}
+
 .emotion-2 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
@@ -360,6 +364,10 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
   left: 0;
   width: 100%;
   z-index: 2147483647;
+}
+
+body.simorgh-player-fullscreen .emotion-0 {
+  z-index: -1;
 }
 
 .emotion-2 {
@@ -715,6 +723,10 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
   z-index: 2147483647;
 }
 
+body.simorgh-player-fullscreen .emotion-0 {
+  z-index: -1;
+}
+
 .emotion-2 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
@@ -1059,6 +1071,10 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
   left: 0;
   width: 100%;
   z-index: 2147483647;
+}
+
+body.simorgh-player-fullscreen .emotion-0 {
+  z-index: -1;
 }
 
 .emotion-2 {

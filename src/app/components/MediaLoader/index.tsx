@@ -27,7 +27,13 @@ import buildConfig from './utils/buildSettings';
 import Placeholder from './Placeholder';
 import getProducerFromServiceName from './utils/getProducerFromServiceName';
 import getCaptionBlock from './utils/getCaptionBlock';
-import styles from './index.styles';
+import styles, {
+  PLAYER_FULLSCREEN_CLASS,
+  FAKE_FULLSCREEN_LAYER_CLASS,
+  FAKE_FULLSCREEN_ACTIVE_CLASS,
+  ACTIVE_FULLSCREEN_LOADER_STATE,
+  fakeFullscreenStyles,
+} from './index.styles';
 import { getBootstrapSrc } from '../Ad/Canonical';
 import Metadata from './Metadata';
 import AmpMediaLoader from './Amp';
@@ -40,52 +46,6 @@ const PAGETYPES_IGNORE_PLACEHOLDER: PageTypes[] = [
 ];
 
 const logger = nodeLogger(__filename);
-const PLAYER_FULLSCREEN_CLASS = 'simorgh-player-fullscreen';
-const FAKE_FULLSCREEN_LAYER_CLASS = 'simorgh-fake-fullscreen-layer';
-const FAKE_FULLSCREEN_ACTIVE_CLASS = 'simorgh-player-fullscreen-active';
-const ACTIVE_FULLSCREEN_LOADER_STATE = 'active-fake-fullscreen';
-
-const fakeFullscreenStyles = `
-  html.${PLAYER_FULLSCREEN_CLASS} {
-    overflow: hidden;
-  }
-
-  body.${PLAYER_FULLSCREEN_CLASS} {
-    overflow: auto;
-  }
-
-  .${FAKE_FULLSCREEN_LAYER_CLASS} {
-    display: none;
-    background: #000;
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    height: 100lvh;
-    width: 100vw;
-    outline: 1000px solid #000;
-    z-index: 2147483646;
-  }
-
-  .${FAKE_FULLSCREEN_LAYER_CLASS}.${FAKE_FULLSCREEN_ACTIVE_CLASS} {
-    display: block;
-  }
-
-  [data-simorgh-media-loader="${ACTIVE_FULLSCREEN_LOADER_STATE}"] {
-    position: fixed !important;
-    inset: 0 !important;
-    width: 100vw !important;
-    max-width: none !important;
-    height: 100lvh !important;
-    margin: 0 !important;
-    aspect-ratio: auto !important;
-    background: #000 !important;
-    z-index: 2147483647 !important;
-  }
-
-  [data-simorgh-media-loader="${ACTIVE_FULLSCREEN_LOADER_STATE}"] .media-player {
-    height: 100% !important;
-  }
-`;
 
 type BumpLoaderProps = {
   nonce?: string | null;
@@ -450,21 +410,14 @@ const MediaLoader = ({
           // This wrapper - rather than the figure - is what gets forced above
           // page content during fake fullscreen, so the Caption below (page
           // furniture) is never pulled into the fullscreen layer with it.
-          <div
-            css={styles.mediaPlayerWrapper}
-            data-simorgh-media-loader={
-              isFakeFullscreenActive
-                ? ACTIVE_FULLSCREEN_LOADER_STATE
-                : 'inactive'
-            }
-          >
-            {showAds && <AdvertTagLoader />}
-            <BumpLoader nonce={nonce} />
-            {shouldHandleFakeFullscreen && (
-              <Helmet>
-                <style type="text/css">{fakeFullscreenStyles}</style>
-              </Helmet>
-            )}
+          // The fake fullscreen layer is a sibling (not a child) of this
+          // wrapper so that both sit in the same page-level stacking context.
+          // Inside the wrapper they would compete: the layer at z-index
+          // 2147483646 would sit above the SMP player at z-index 999 within
+          // the wrapper's stacking context, hiding the video on iOS Safari
+          // where GPU compositing does not bypass CSS stacking as it does on
+          // desktop browsers.
+          <>
             {shouldHandleFakeFullscreen && (
               <div
                 aria-hidden="true"
@@ -475,27 +428,43 @@ const MediaLoader = ({
                 }`}
               />
             )}
-            {hasPlaceholder ? (
-              <Placeholder
-                src={placeholderSrc}
-                srcSet={placeholderSrcset}
-                noJsMessage={noJsMessage}
-                mediaInfo={mediaInfo}
-                onClick={() => setShowPlaceholder(false)}
-                isPortraitOrientation={!!isPortrait}
-              />
-            ) : (
-              <MediaContainer
-                playerConfig={playerConfig}
-                showAds={showAds}
-                uniqueId={uniqueId}
-                noJsMessage={noJsMessage}
-                eventMapping={eventMapping}
-                shouldHandleFakeFullscreen={shouldHandleFakeFullscreen}
-                onFakeFullscreenChange={setFakeFullscreenPageState}
-              />
-            )}
-          </div>
+            <div
+              css={styles.mediaPlayerWrapper}
+              data-simorgh-media-loader={
+                isFakeFullscreenActive
+                  ? ACTIVE_FULLSCREEN_LOADER_STATE
+                  : 'inactive'
+              }
+            >
+              {showAds && <AdvertTagLoader />}
+              <BumpLoader nonce={nonce} />
+              {shouldHandleFakeFullscreen && (
+                <Helmet>
+                  <style type="text/css">{fakeFullscreenStyles}</style>
+                </Helmet>
+              )}
+              {hasPlaceholder ? (
+                <Placeholder
+                  src={placeholderSrc}
+                  srcSet={placeholderSrcset}
+                  noJsMessage={noJsMessage}
+                  mediaInfo={mediaInfo}
+                  onClick={() => setShowPlaceholder(false)}
+                  isPortraitOrientation={!!isPortrait}
+                />
+              ) : (
+                <MediaContainer
+                  playerConfig={playerConfig}
+                  showAds={showAds}
+                  uniqueId={uniqueId}
+                  noJsMessage={noJsMessage}
+                  eventMapping={eventMapping}
+                  shouldHandleFakeFullscreen={shouldHandleFakeFullscreen}
+                  onFakeFullscreenChange={setFakeFullscreenPageState}
+                />
+              )}
+            </div>
+          </>
         )}
         {captionBlock && (
           <Caption
