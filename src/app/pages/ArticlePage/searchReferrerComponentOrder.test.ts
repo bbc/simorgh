@@ -2,7 +2,10 @@ import { renderHook, waitFor, act } from '@testing-library/react';
 import onClient from '#app/lib/utilities/onClient';
 import { GROUP_3_MAX_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
 import useMobileOJComponentOrder from './useMobileOJComponentOrder';
-import { SEARCH_COMPONENT_ORDER } from './searchReferrerComponentOrder';
+import {
+  SEARCH_COMPONENT_ORDER,
+  SearchVariant,
+} from './searchReferrerComponentOrder';
 
 jest.mock(
   '#app/legacy/containers/PageHandlers/withOptimizelyProvider/userAttributes',
@@ -70,7 +73,7 @@ describe('useMobileOJComponentOrder', () => {
       'variant_4_related_mid',
       'variant_5_recommended_mid',
       'variant_6_hybrid_mid',
-    ] as const)('returns the correct order for %s', searchVariant => {
+    ] as SearchVariant[])('returns the correct order for %s', searchVariant => {
       const { result } = renderHook(() =>
         useMobileOJComponentOrder(searchVariant),
       );
