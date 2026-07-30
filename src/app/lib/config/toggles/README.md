@@ -8,12 +8,12 @@ Local toggle configs are global and configured for the application environment, 
 
 Simorgh has 3 toggle config files for `test`, `local` and `live` environments. Remote toggles on iSite also take precendence over local toggles when the toggle response is fetched:
 
-https://github.com/bbc/simorgh/blob/9fecaba6ef30b3fff627ef9a75f0286d63f0a343/src/app/lib/utilities/fetchToggles/index.ts#L48-L54
+https://github.com/bbc/simorgh/blob/9fecaba6ef30b3fff627ef9a75f0286d63f0a343/src/app/lib/utilities/getToggles/index.js#L48-L54
 
 If a toggle is not configured in iSite or in the local toggle configs deployed with Simorgh, then the toggle value will default to false.
 
 > [!WARNING]  
-> There are some cases where a toggle **is** configured in iSite (an entry is present in iSite) but may not have values configured. The fetched response overwrites the local config file via destructuring (see [`fetchToggles()`](https://github.com/bbc/simorgh/blob/latest/src/app/lib/utilities/fetchToggles/index.ts#L83-L85) ). However if no value is configured, the local config file values will be used.
+> There are some cases where a toggle **is** configured in iSite (an entry is present in iSite) but may not have values configured. The fetched response overwrites the local config file via destructuring (see [`getToggles()`](https://github.com/bbc/simorgh/blob/latest/src/app/lib/utilities/getToggles/index.js#L83-L85) ). However if no value is configured, the local config file values will be used.
 > E.g. The `adsNonce` toggle is a valid toggle on iSite with valid entries as of 28/11/2025. This toggle affects services listed as entries on iSite, but for services **not** present as entries there, the local config files will be used. This caused issues before as all config files set this value as `true`. See https://github.com/bbc/simorgh/pull/13338 for more details.
 
 Feature toggles can be found in `src/app/lib/config/toggles`

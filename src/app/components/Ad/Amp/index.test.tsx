@@ -44,16 +44,13 @@ const adWithContext = (slotType: SlotType, showAdPlaceholder = false) => (
 
 describe('AMP Ads', () => {
   const originalConfigUrl = process.env.SIMORGH_CONFIG_URL;
-  const originalWebCdnUrl = process.env.WEB_CDN_URL;
 
   beforeAll(() => {
     process.env.SIMORGH_CONFIG_URL = 'https://mock-toggles-endpoint.bbc.co.uk';
-    process.env.WEB_CDN_URL = 'https://web-cdn.test';
   });
 
   afterAll(() => {
     process.env.SIMORGH_CONFIG_URL = originalConfigUrl;
-    process.env.WEB_CDN_URL = originalWebCdnUrl;
   });
 
   describe('Snapshots', () => {
@@ -179,7 +176,7 @@ describe('AMP Ads', () => {
       const ampAccessFetch = jest.fn().mockImplementation(AMP_ACCESS_FETCH);
       const ampAccessData = ampAccessFetch('afrique');
       const expectedReturn =
-        'https://web-cdn.test/fd/ws-toggles?service=afrique&application=simorgh';
+        'https://mock-toggles-endpoint.bbc.co.uk?application=simorgh&service=afrique';
 
       expect(ampAccessFetch).toHaveReturned();
       expect(ampAccessFetch).toHaveBeenCalledWith('afrique');
