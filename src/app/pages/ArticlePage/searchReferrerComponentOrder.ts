@@ -1,7 +1,7 @@
 export type OJComponentKey =
   | 'mostRead'
   | 'topicDiscovery'
-  | 'pvCarousel'
+  | 'videoOJ'
   | 'relatedContent'
   | 'topStories'
   | 'featuredArticles'
@@ -22,7 +22,7 @@ export const SEARCH_COMPONENT_ORDER: Record<SearchVariant, OJComponentKey[]> = {
     'locationBasedOJ',
     'topStories',
     'featuredArticles',
-    'pvCarousel',
+    'videoOJ',
     'mostRead',
   ],
   variant_2_recommended: [
@@ -30,7 +30,7 @@ export const SEARCH_COMPONENT_ORDER: Record<SearchVariant, OJComponentKey[]> = {
     'mostRead',
     'relatedContent',
     'featuredArticles',
-    'pvCarousel',
+    'videoOJ',
     'topStories',
     'locationBasedOJ',
   ],
@@ -39,7 +39,7 @@ export const SEARCH_COMPONENT_ORDER: Record<SearchVariant, OJComponentKey[]> = {
     'locationBasedOJ',
     'relatedContent',
     'mostRead',
-    'pvCarousel',
+    'videoOJ',
     'topStories',
     'featuredArticles',
   ],
@@ -48,14 +48,14 @@ export const SEARCH_COMPONENT_ORDER: Record<SearchVariant, OJComponentKey[]> = {
     'locationBasedOJ',
     'topStories',
     'featuredArticles',
-    'pvCarousel',
+    'videoOJ',
     'mostRead',
   ],
   variant_5_recommended_mid: [
     'mostRead',
     'relatedContent',
     'featuredArticles',
-    'pvCarousel',
+    'videoOJ',
     'topStories',
     'locationBasedOJ',
   ],
@@ -63,7 +63,7 @@ export const SEARCH_COMPONENT_ORDER: Record<SearchVariant, OJComponentKey[]> = {
     'topicDiscovery',
     'relatedContent',
     'mostRead',
-    'pvCarousel',
+    'videoOJ',
     'topStories',
     'featuredArticles',
   ],
