@@ -7,7 +7,7 @@ import parseRoute from '#app/routes/utils/parseRoute';
 import { NOT_FOUND, OK } from '#app/lib/statusCodes.const';
 import getPageData from '#utilities/pageRequests/getPageData';
 import handleError from '#app/routes/utils/handleError';
-import fetchToggles from '#app/lib/utilities/fetchToggles';
+import getToggles from '#app/lib/utilities/getToggles/withCache';
 
 const logger = nodeLogger(__filename);
 
@@ -18,6 +18,10 @@ export default async (context: GetServerSidePropsContext) => {
   const resolvedUrlWithoutQuery = resolvedUrl.split('?')?.[0];
 
   const { service, variant } = parseRoute(resolvedUrl);
+
+  const toggles = await getToggles(service);
+  const { enabled: scheduleIsEnabled } = toggles.liveRadioSchedule;
+  const disableRadioSchedule = !scheduleIsEnabled;
 
   if (!service) {
     context.res.statusCode = NOT_FOUND;
@@ -33,10 +37,6 @@ export default async (context: GetServerSidePropsContext) => {
       },
     };
   }
-
-  const toggles = await fetchToggles({ service });
-  const { enabled: scheduleIsEnabled } = toggles.liveRadioSchedule;
-  const disableRadioSchedule = !scheduleIsEnabled;
 
   const { data } = await getPageData({
     id: resolvedUrlWithoutQuery,

@@ -1,10 +1,9 @@
 import { GetServerSidePropsContext } from 'next';
-import * as getTogglesModule from '#app/lib/utilities/fetchToggles';
+import * as getTogglesModule from '#app/lib/utilities/getToggles/withCache';
 import { MY_NEWS_PAGE } from '#app/routes/utils/pageTypes';
-import { Toggles } from '#app/models/types/global';
 import { getServerSideProps } from './index.page';
 
-jest.mock('#app/lib/utilities/fetchToggles');
+jest.mock('#app/lib/utilities/getToggles/withCache');
 jest.mock('#utilities/logResponseTime', () => jest.fn());
 
 const mockGetToggles = getTogglesModule.default as jest.MockedFunction<
@@ -31,7 +30,7 @@ describe('My News - getServerSideProps', () => {
     const context = createMockContext();
     mockGetToggles.mockResolvedValueOnce({
       uasPersonalization: { enabled: false },
-    } as unknown as Toggles);
+    } as unknown as Record<string, unknown>);
 
     const result = await getServerSideProps(context);
 
@@ -47,7 +46,7 @@ describe('My News - getServerSideProps', () => {
     const context = createMockContext();
     mockGetToggles.mockResolvedValueOnce({
       uasPersonalization: { enabled: true },
-    } as unknown as Toggles);
+    } as unknown as Record<string, unknown>);
 
     const result = await getServerSideProps(context);
     const props = (result as Record<string, unknown>).props as Record<
