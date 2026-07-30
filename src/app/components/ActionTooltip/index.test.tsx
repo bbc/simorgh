@@ -20,10 +20,11 @@ const mockTranslations = {
   },
   myNewsLinkText: 'My News',
   myNewsUrl: 'https://www.bbc.com/hindi/my-news',
+  closeLabel: 'Close',
 };
 
 const content = getArticleTooltipContent(mockTranslations);
-const closeLabel = 'Close';
+const { closeLabel } = mockTranslations;
 
 describe('ActionTooltip', () => {
   beforeEach(() => jest.clearAllMocks());

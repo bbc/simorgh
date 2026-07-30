@@ -1,52 +1,34 @@
 import Link from '#app/components/Footer/Link';
 import { TooltipContent } from '#app/components/ActionTooltip';
+import { Translations } from '#app/models/types/translations';
 
-interface ArticleTooltipTranslations {
-  success: {
-    titleBefore: string;
-    titleAfter: string;
-  };
-  error: {
-    title: string;
-    body: string;
-  };
-  removed: {
-    titleBefore: string;
-    titleAfter: string;
-  };
-  myNewsLinkText: string;
-  myNewsUrl: string;
-}
+type ArticleTooltipTranslations = NonNullable<Translations['actionTooltip']>;
 
-const getArticleTooltipContent = (
-  actionTooltip: ArticleTooltipTranslations,
-): TooltipContent => {
-  const myNewsLink = (
-    <Link
-      href={actionTooltip.myNewsUrl}
-      text={actionTooltip.myNewsLinkText}
-      inline
-    />
-  );
+const getArticleTooltipContent = ({
+  success,
+  error,
+  removed,
+  myNewsLinkText,
+  myNewsUrl,
+}: ArticleTooltipTranslations): TooltipContent => {
+  const myNewsLink = <Link href={myNewsUrl} text={myNewsLinkText} inline />;
 
   return {
     success: {
       title: (
         <>
-          {actionTooltip.success.titleBefore} {myNewsLink}{' '}
-          {actionTooltip.success.titleAfter}
+          {success.titleBefore} {myNewsLink} {success.titleAfter}
         </>
       ),
     },
     error: {
-      title: actionTooltip.error.title,
-      body: actionTooltip.error.body,
+      title: error.title,
+      body: error.body,
     },
     removed: {
       title: (
         <>
-          {actionTooltip.removed.titleBefore} {myNewsLink}{' '}
-          {actionTooltip.removed.titleAfter}
+          {removed.titleBefore} {myNewsLink} {removed.titleAfter}
         </>
       ),
     },
