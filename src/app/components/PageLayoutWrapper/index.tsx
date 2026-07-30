@@ -244,11 +244,14 @@ const PageLayoutWrapper = ({
                         payload.push(deliveryPoint + encodeURIComponent(JSON.stringify([{"name":"viewability.view","data":{"group":{"name":"topics-viewed","type":""},"event":{"category":"viewability","action":"view","grouping":"topics-viewed"},"user":{"id":"' + atuseridCookieValue + '"},"app":{"type":"responsive","name":"news-${service}"},"item":{"name":"topics-viewed", "position": topcats.length }}}])));
                         payload.push(deliveryPoint + encodeURIComponent(JSON.stringify([{"name":"viewability.view","data":{"group":{"name":"topics-viewed","type":""},"event":{"category":"viewability","action":"view","grouping":"topics-viewed"},"user":{"id":"' + atuseridCookieValue + '"},"app":{"type":"responsive","name":"news-${service}"},"item":{"name":"top-topic-id", "position": topCatRatio, "text": topicsContents.${service}[topcats[0]].id }}}])));
                         var trackingDivContainer = document.createElement('DIV');
-                        payload.forEach(key => {
-                            var trackingImage = new Image(1,1);
+                        for (var i = 0; i < payload.length; i++) {
+                            var key = payload[i];
+                            var trackingImage = document.createElement('img');
+                            trackingImage.width = 1;
+                            trackingImage.height = 1;
                             trackingImage.src = key;
                             trackingDivContainer.appendChild(trackingImage);
-                        });
+                        }
                         document.addEventListener("DOMContentLoaded", function(arg) {
                             document.body.appendChild(trackingDivContainer);
                         });
