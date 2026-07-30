@@ -1,8 +1,7 @@
-import React from 'react';
 import userEvent from '@testing-library/user-event';
 import { render, screen } from '../react-testing-library-with-providers';
 import ActionTooltip from '.';
-import getSaveArticleTooltipContent from '../SaveArticleButton/SaveArticleTooltipContent';
+import getArticleTooltipContent from './ArticleTooltipContent';
 
 const onClose = jest.fn();
 
@@ -23,7 +22,7 @@ const mockTranslations = {
   myNewsUrl: 'https://www.bbc.com/hindi/my-news',
 };
 
-const content = getSaveArticleTooltipContent(mockTranslations);
+const content = getArticleTooltipContent(mockTranslations);
 const closeLabel = 'Close';
 
 describe('ActionTooltip', () => {
