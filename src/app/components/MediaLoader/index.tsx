@@ -498,42 +498,30 @@ const MediaLoader = ({
                 }`}
               />
             )}
-            <div
-              css={styles.mediaPlayerWrapper}
-              data-simorgh-media-loader={
-                isFakeFullscreenActive
-                  ? ACTIVE_FULLSCREEN_LOADER_STATE
-                  : 'inactive'
-              }
-            >
-              {showAds && <AdvertTagLoader />}
-              <BumpLoader nonce={nonce} />
-              {shouldHandleFakeFullscreen && (
-                <Helmet>
-                  <style type="text/css">{fakeFullscreenStyles}</style>
-                </Helmet>
-              )}
-              {hasPlaceholder ? (
-                <Placeholder
-                  src={placeholderSrc}
-                  srcSet={placeholderSrcset}
-                  noJsMessage={noJsMessage}
-                  mediaInfo={mediaInfo}
-                  onClick={() => setShowPlaceholder(false)}
-                  isPortraitOrientation={!!isPortrait}
-                />
-              ) : (
-                <MediaContainer
-                  playerConfig={playerConfig}
-                  showAds={showAds}
-                  uniqueId={uniqueId}
-                  noJsMessage={noJsMessage}
-                  eventMapping={eventMapping}
-                  shouldHandleFakeFullscreen={shouldHandleFakeFullscreen}
-                  onFakeFullscreenChange={setFakeFullscreenPageState}
-                />
-              )}
-            </div>
+            {hasPlaceholder ? (
+              <Placeholder
+                src={placeholderSrc}
+                srcSet={placeholderSrcset}
+                noJsMessage={noJsMessage}
+                mediaInfo={mediaInfo}
+                onClick={() => setShowPlaceholder(false)}
+                isPortraitOrientation={!!isPortrait}
+              />
+            ) : (
+              <MediaContainer
+                playerConfig={
+                  loadPlayerOnInitialRender
+                    ? { ...playerConfig, autoplay: false }
+                    : playerConfig
+                }
+                showAds={showAds}
+                uniqueId={uniqueId}
+                noJsMessage={noJsMessage}
+                eventMapping={eventMapping}
+                shouldHandleFakeFullscreen={shouldHandleFakeFullscreen}
+                onFakeFullscreenChange={setFakeFullscreenPageState}
+              />
+            )}
           </>
         )}
         {captionBlock && (
