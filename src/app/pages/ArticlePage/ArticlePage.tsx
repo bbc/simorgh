@@ -303,6 +303,14 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     ?.split(':')
     ?.includes('topcat');
 
+  const showCountryCuration = Boolean(
+    !isAmp &&
+    !isLite &&
+    !isApp &&
+    countryCurationEnabled &&
+    pageData?.countryCuration?.summaries?.length,
+  );
+
   const getSearchMidArticleOJ = ({
     data,
     experimentProps,
@@ -330,10 +338,12 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         return <TopicDiscovery topics={topics} css={styles.midArticleOJ} />;
 
       case 'locationBasedOJ':
-        return (
+        return showCountryCuration ? (
           <div css={styles.midArticleOJ}>
             <LocationBasedTopicOJ pageData={pageData} />
           </div>
+        ) : (
+          <Recommendations data={data} />
         );
 
       default:
@@ -476,14 +486,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     !isPGL &&
     mediaCurationContent?.summaries?.length &&
     articleVideoCurationEnabled,
-  );
-
-  const showCountryCuration = Boolean(
-    !isAmp &&
-    !isLite &&
-    !isApp &&
-    countryCurationEnabled &&
-    pageData?.countryCuration?.summaries?.length,
   );
 
   const topStoriesContent = pageData?.secondaryColumn?.topStories;
