@@ -94,8 +94,11 @@ services.forEach(service => {
         url: `https://play.google.com/store/apps/details?id=${ANDROID_PLAY_STORE_ID}`,
       },
     ];
+  } else {
+    delete currentManifest.prefer_related_applications;
+    delete currentManifest.related_applications;
   }
   
-  newManifest = JSON.stringify(currentManifest, null, 2);
+  const newManifest = JSON.stringify(currentManifest, null, 2);
   fs.writeFileSync(manifestPath, newManifest);
 });
