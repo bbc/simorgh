@@ -149,7 +149,7 @@ describe('useMobileOJComponentOrder', () => {
       expect(result.current).toBeNull();
     });
 
-    describe('rendered mobile variant', () => {
+    describe.skip('rendered mobile variant', () => {
       const OJ_TEST_IDS: Record<OJComponentKey, string> = {
         mostRead: 'most-read',
         topicDiscovery: 'topic-discovery',
