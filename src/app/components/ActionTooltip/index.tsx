@@ -1,15 +1,23 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Close, InfoCircle, InfoTriangle } from '#app/components/icons';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
-import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './index.styles';
 import Text from '../Text';
-import Link from '../Footer/Link';
 
 export type ActionTooltipStatus = 'success' | 'error' | 'removed';
 
+export type TooltipContent = Record<
+  ActionTooltipStatus,
+  {
+    title: React.ReactNode;
+    body?: string;
+  }
+>;
+
 export interface ActionTooltipProps {
   status: ActionTooltipStatus;
+  content: TooltipContent;
+  closeLabel: string;
   onClose: () => void;
 }
 
@@ -20,40 +28,12 @@ const StatusIcon = ({ status }: { status: ActionTooltipStatus }) =>
     <InfoCircle css={styles.icon} />
   );
 
-const ActionTooltip = ({ status, onClose }: ActionTooltipProps) => {
-  const { translations } = useContext(ServiceContext);
-  const { actionTooltip } = translations;
-
-  if (!actionTooltip) return null;
-
-  const { success, error, removed, myNewsUrl, myNewsLinkText, closeLabel } =
-    actionTooltip;
-
-  const myNewsLink = <Link href={myNewsUrl} text={myNewsLinkText} inline />;
-  const content: Record<
-    ActionTooltipStatus,
-    { title: React.ReactNode; body?: string }
-  > = {
-    success: {
-      title: (
-        <>
-          {success.titleBefore} {myNewsLink} {success.titleAfter}
-        </>
-      ),
-    },
-    error: {
-      title: error.title,
-      body: error.body,
-    },
-    removed: {
-      title: (
-        <>
-          {removed.titleBefore} {myNewsLink} {removed.titleAfter}
-        </>
-      ),
-    },
-  };
-
+const ActionTooltip = ({
+  status,
+  content,
+  closeLabel,
+  onClose,
+}: ActionTooltipProps) => {
   const { title, body } = content[status];
 
   return (

@@ -1,15 +1,41 @@
 import { useState } from 'react';
 import ActionTooltip, { ActionTooltipStatus } from '.';
+import getSaveArticleTooltipContent from '../SaveArticleButton/SaveArticleTooltipContent';
 
 const TooltipDemo = ({ status }: { status: ActionTooltipStatus }) => {
   const [isVisible, setIsVisible] = useState(true);
+
+  const actionTooltip = {
+    success: {
+      titleBefore: 'Saved to',
+      titleAfter: 'successfully',
+    },
+    error: {
+      title: 'Unable to save article',
+      body: 'Please try again later',
+    },
+    removed: {
+      titleBefore: 'Removed from',
+      titleAfter: '',
+    },
+    myNewsLinkText: 'My News',
+    myNewsUrl: '/my-news',
+    closeLabel: 'Close',
+  };
+
+  const content = getSaveArticleTooltipContent(actionTooltip);
 
   if (!isVisible) {
     return null;
   }
 
   return (
-    <ActionTooltip status={status} onClose={() => setIsVisible(false)} />
+    <ActionTooltip
+      status={status}
+      content={content}
+      closeLabel={actionTooltip.closeLabel}
+      onClose={() => setIsVisible(false)}
+    />
   );
 };
 

@@ -1,16 +1,44 @@
+import React from 'react';
 import userEvent from '@testing-library/user-event';
 import { render, screen } from '../react-testing-library-with-providers';
 import ActionTooltip from '.';
+import getSaveArticleTooltipContent from '../SaveArticleButton/SaveArticleTooltipContent';
 
 const onClose = jest.fn();
+
+const mockTranslations = {
+  success: {
+    titleBefore: 'This article is now saved to',
+    titleAfter: '',
+  },
+  error: {
+    title: 'Sorry, something went wrong',
+    body: 'Check your connection, refresh the page and try again',
+  },
+  removed: {
+    titleBefore: 'This article has now been removed from',
+    titleAfter: '',
+  },
+  myNewsLinkText: 'My News',
+  myNewsUrl: 'https://www.bbc.com/hindi/my-news',
+};
+
+const content = getSaveArticleTooltipContent(mockTranslations);
+const closeLabel = 'Close';
 
 describe('ActionTooltip', () => {
   beforeEach(() => jest.clearAllMocks());
 
   it('renders the success title with a My News link', () => {
-    render(<ActionTooltip status="success" onClose={onClose} />, {
-      service: 'hindi',
-    });
+    render(
+      <ActionTooltip
+        status="success"
+        content={content}
+        closeLabel={closeLabel}
+        onClose={onClose}
+      />,
+      { service: 'hindi' },
+    );
 
     expect(
       screen.getByText(/This article is now saved to/i),
@@ -25,9 +53,15 @@ describe('ActionTooltip', () => {
   });
 
   it('renders the error title and body without a link', () => {
-    render(<ActionTooltip status="error" onClose={onClose} />, {
-      service: 'hindi',
-    });
+    render(
+      <ActionTooltip
+        status="error"
+        content={content}
+        closeLabel={closeLabel}
+        onClose={onClose}
+      />,
+      { service: 'hindi' },
+    );
 
     expect(screen.getByText('Sorry, something went wrong')).toBeInTheDocument();
     expect(
@@ -37,9 +71,15 @@ describe('ActionTooltip', () => {
   });
 
   it('renders the removed title with a My News link', () => {
-    render(<ActionTooltip status="removed" onClose={onClose} />, {
-      service: 'hindi',
-    });
+    render(
+      <ActionTooltip
+        status="removed"
+        content={content}
+        closeLabel={closeLabel}
+        onClose={onClose}
+      />,
+      { service: 'hindi' },
+    );
 
     expect(
       screen.getByText(/This article has now been removed from/i),
@@ -51,9 +91,15 @@ describe('ActionTooltip', () => {
   });
 
   it('calls onClose when the close button is clicked', async () => {
-    render(<ActionTooltip status="success" onClose={onClose} />, {
-      service: 'hindi',
-    });
+    render(
+      <ActionTooltip
+        status="success"
+        content={content}
+        closeLabel={closeLabel}
+        onClose={onClose}
+      />,
+      { service: 'hindi' },
+    );
 
     await userEvent.click(screen.getByRole('button', { name: 'Close' }));
 
@@ -61,9 +107,15 @@ describe('ActionTooltip', () => {
   });
 
   it('exposes the tooltip as a polite live region for assistive technology', () => {
-    render(<ActionTooltip status="success" onClose={onClose} />, {
-      service: 'hindi',
-    });
+    render(
+      <ActionTooltip
+        status="success"
+        content={content}
+        closeLabel={closeLabel}
+        onClose={onClose}
+      />,
+      { service: 'hindi' },
+    );
 
     const tooltip = screen.getByTestId('action-tooltip');
 
