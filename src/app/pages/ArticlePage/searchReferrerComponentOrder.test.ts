@@ -1,17 +1,80 @@
+import { createElement } from 'react';
 import { renderHook, waitFor, act } from '@testing-library/react';
 import onClient from '#app/lib/utilities/onClient';
 import { GROUP_3_MAX_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
+import { articleDataNews } from '#pages/ArticlePage/fixtureData';
+import { Article } from '#app/models/types/optimo';
+import {
+  render,
+  screen,
+} from '#app/components/react-testing-library-with-providers';
+import ArticlePage from './ArticlePage';
 import useMobileOJComponentOrder from './useMobileOJComponentOrder';
 import {
+  OJComponentKey,
   SEARCH_COMPONENT_ORDER,
   SEARCH_MID_ARTICLE_COMPONENT,
   SearchVariant,
 } from './searchReferrerComponentOrder';
 
+jest.mock('#app/components/ThemeProvider');
+jest.mock('#app/components/ChartbeatAnalytics', () => {
+  const ChartbeatAnalytics = () => null;
+  return ChartbeatAnalytics;
+});
+jest.mock('#app/components/ATIAnalytics', () => {
+  const ATIAnalytics = () => null;
+  return ATIAnalytics;
+});
+
+/* eslint-disable global-require, @typescript-eslint/no-var-requires */
+jest.mock(
+  '#app/components/MostRead',
+  () => () =>
+    require('react').createElement('div', { 'data-testid': 'most-read' }),
+);
+jest.mock(
+  '#app/components/TopicDiscovery',
+  () => () =>
+    require('react').createElement('div', { 'data-testid': 'topic-discovery' }),
+);
+jest.mock(
+  '#app/components/RelatedContentSection',
+  () => () =>
+    require('react').createElement('div', { 'data-testid': 'related-content' }),
+);
+jest.mock(
+  '#app/components/PortraitVideoCarousel',
+  () => () =>
+    require('react').createElement('div', {
+      'data-testid': 'portrait-video-carousel',
+    }),
+);
+jest.mock(
+  '#app/components/LocationBasedTopicOJ',
+  () => () =>
+    require('react').createElement('div', {
+      'data-testid': 'location-based-topic-oj',
+    }),
+);
+/* eslint-enable global-require, @typescript-eslint/no-var-requires */
+
+jest.mock('#app/components/OptimizelyPageMetrics');
+jest.mock('#app/hooks/useScrollDepthTracker', () => jest.fn(() => null));
+jest.mock('#hooks/useMediaQuery', () => jest.fn());
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  default: jest.fn(),
+}));
 jest.mock(
   '#app/legacy/containers/PageHandlers/withOptimizelyProvider/userAttributes',
 );
-jest.mock('#app/lib/utilities/onClient');
+jest.mock('#app/lib/utilities/onClient', () => ({
+  __esModule: true,
+  default: jest.fn(),
+  onClient: jest.fn(() => true),
+}));
 
 const mockOnClient = onClient as jest.MockedFunction<typeof onClient>;
 
@@ -84,6 +147,73 @@ describe('useMobileOJComponentOrder', () => {
     it('returns null when no variant is provided', () => {
       const { result } = renderHook(() => useMobileOJComponentOrder(null));
       expect(result.current).toBeNull();
+    });
+
+    describe('rendered mobile variant', () => {
+      const OJ_TEST_IDS: Record<OJComponentKey, string> = {
+        mostRead: 'most-read',
+        topicDiscovery: 'topic-discovery',
+        pvCarousel: 'portrait-video-carousel',
+        relatedContent: 'related-content',
+        topStories: 'top-stories',
+        featuredArticles: 'features',
+        locationBasedOJ: 'location-based-topic-oj',
+      };
+
+      const renderVariant = (variant: SearchVariant) => {
+        window.history.replaceState(null, '', `?debugVariant=${variant}`);
+
+        const pageData = {
+          ...articleDataNews,
+          countryCuration: { summaries: [{ title: 'Country' }] },
+          portraitVideoItems: { portraitVideo: { blocks: [{}] } },
+          secondaryColumn: { topStories: [], features: [] },
+        } as unknown as Article;
+
+        return render(createElement(ArticlePage, { pageData }), {
+          service: 'news',
+          toggles: {
+            topicDiscovery: { enabled: true },
+            articlePortraitVideo: { enabled: true },
+            locationTopicCuration: { enabled: true },
+          },
+        });
+      };
+
+      afterEach(() => {
+        window.history.replaceState(null, '', '/');
+      });
+
+      it.each([
+        'variant_1_related',
+        'variant_2_recommended',
+        'variant_3_hybrid',
+        'variant_4_related_mid',
+        'variant_5_recommended_mid',
+        'variant_6_hybrid_mid',
+      ] as SearchVariant[])(
+        'renders the OJ components in the configured order for %s',
+        async searchVariant => {
+          renderVariant(searchVariant);
+
+          const orderedContainer = await screen.findByTestId(
+            'mobile-oj-container',
+          );
+
+          const ojTestIds = Object.values(OJ_TEST_IDS);
+          const renderedOrder = Array.from(
+            orderedContainer.querySelectorAll('[data-testid]'),
+          )
+            .map(element => element.getAttribute('data-testid'))
+            .filter(testId => ojTestIds.includes(testId as string));
+
+          const expectedOrder = SEARCH_COMPONENT_ORDER[searchVariant].map(
+            key => OJ_TEST_IDS[key],
+          );
+
+          expect(renderedOrder).toEqual(expectedOrder);
+        },
+      );
     });
   });
 
