@@ -1,7 +1,7 @@
 import React from 'react';
 import { Close, InfoCircle, InfoTriangle } from '#app/components/icons';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
-import styles from './index.styles';
+import styles from './index.module.scss';
 import Text from '../Text';
 
 export type ActionTooltipStatus = 'success' | 'error' | 'removed';
@@ -23,9 +23,9 @@ export interface ActionTooltipProps {
 
 const StatusIcon = ({ status }: { status: ActionTooltipStatus }) =>
   status === 'error' ? (
-    <InfoTriangle css={styles.icon} />
+    <InfoTriangle className={styles.icon} />
   ) : (
-    <InfoCircle css={styles.icon} />
+    <InfoCircle className={styles.icon} />
   );
 
 const ActionTooltip = ({
@@ -37,25 +37,29 @@ const ActionTooltip = ({
   const { title, body } = content[status];
 
   return (
-    <div css={styles.wrapper}>
+    <div className={styles.wrapper}>
       <div
         role="status"
         aria-live="polite"
         aria-atomic="true"
-        css={styles.container}
+        className={styles.container}
         data-testid="action-tooltip"
       >
-        <div css={styles.content}>
-          <div css={styles.header}>
+        <div className={styles.content}>
+          <div className={styles.header}>
             <StatusIcon status={status} />
 
-            <Text size="bodyCopy" fontVariant="sansBold" css={styles.title}>
+            <Text
+              size="bodyCopy"
+              fontVariant="sansBold"
+              className={styles.title}
+            >
               {title}
             </Text>
 
             <button
               type="button"
-              css={styles.closeButton}
+              className={styles.closeButton}
               onClick={onClose}
               data-testid="action-tooltip-close"
             >
@@ -65,7 +69,7 @@ const ActionTooltip = ({
           </div>
 
           {body && (
-            <Text size="greatPrimer" css={styles.body}>
+            <Text size="greatPrimer" className={styles.body}>
               {body}
             </Text>
           )}
