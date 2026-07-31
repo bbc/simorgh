@@ -45,6 +45,7 @@ export const service: DefaultServiceConfig = {
     swPath: '/sw.js',
     homePageTitle:
       'ब्रेकिंग न्यूज़ समाचार, ताजा खबर | News, latest news, breaking news',
+    iTunesAppId: 6761256736,
     showAdPlaceholder: true,
     showRelatedTopics: true,
     googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
