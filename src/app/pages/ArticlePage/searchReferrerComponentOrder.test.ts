@@ -149,11 +149,11 @@ describe('useMobileOJComponentOrder', () => {
       expect(result.current).toBeNull();
     });
 
-    describe.skip('rendered mobile variant', () => {
+    describe('rendered mobile variant', () => {
       const OJ_TEST_IDS: Record<OJComponentKey, string> = {
         mostRead: 'most-read',
         topicDiscovery: 'topic-discovery',
-        pvCarousel: 'portrait-video-carousel',
+        videoOJ: 'portrait-video-carousel',
         relatedContent: 'related-content',
         topStories: 'top-stories',
         featuredArticles: 'features',
