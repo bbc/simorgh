@@ -1,6 +1,6 @@
 import { Toggles, ToggleDefinition } from '#app/models/types/global';
 
-export default function getToggleDefinition(
+export default function getToggle(
   toggles: Toggles,
   name: string,
 ): ToggleDefinition {
