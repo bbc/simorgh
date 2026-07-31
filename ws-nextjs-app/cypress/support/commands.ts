@@ -58,7 +58,7 @@ const getToggles = memoizeWith(keyGenFn, service => {
     cy.request({
       url: togglesEndpoint.toString(),
       ...(appEnv !== 'live' && {
-        headers: { 'ctx-service-env': appEnv },
+        headers: { 'ctx-service-env': 'test' },
       }),
     }).then(response => {
       cy.writeFile(togglesFixture, response.body.data.toggles);
