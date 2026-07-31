@@ -5,7 +5,7 @@ import defaultToggles from '#app/lib/config/toggles';
 import testResponseCodeAndRetry from './helpers/testResponseCodeAndRetry';
 import getAppEnv from './helpers/getAppEnv';
 import handleContinueReadingButton from './helpers/handleContinueReadingButton';
-import envConfig from './config/envs';
+import envConfig, { EnvironmentConfigType } from './config/envs';
 
 interface TestResponseCodeAndRetry {
   url: string;
@@ -44,17 +44,24 @@ const getPageDataFromWindow = () => {
 const keyGenFn = identity as (...v: unknown[]) => string;
 const getToggles = memoizeWith(keyGenFn, service => {
   const togglesFixture = `cypress/fixtures/toggles/${service}.json`;
-  const togglesEndpoint = new URL(`${envConfig.togglesUrl}/fd/ws-toggles`);
+  const togglesEndpoint = new URL(
+    `${(envConfig as EnvironmentConfigType).togglesUrl}/fd/ws-toggles`,
+  );
   togglesEndpoint.searchParams.set('service', service);
   togglesEndpoint.searchParams.set('application', 'simorgh');
 
-  if (getAppEnv() === 'local') {
+  const appEnv = getAppEnv();
+
+  if (appEnv === 'local') {
     cy.writeFile(togglesFixture, defaultToggles.local);
   } else {
     cy.request({
       url: togglesEndpoint.toString(),
+      ...(appEnv !== 'live' && {
+        headers: { 'ctx-service-env': 'test' },
+      }),
     }).then(response => {
-      cy.writeFile(togglesFixture, response.body.toggles);
+      cy.writeFile(togglesFixture, response.body.data.toggles);
     });
   }
 });
