@@ -150,6 +150,14 @@ describe('useMobileOJComponentOrder', () => {
     });
 
     describe('rendered mobile variant', () => {
+      beforeEach(() => {
+        matchMediaMock.mockReturnValue({
+          matches: true,
+          addEventListener: jest.fn(),
+          removeEventListener: jest.fn(),
+        });
+      });
+
       const OJ_TEST_IDS: Record<OJComponentKey, string> = {
         mostRead: 'most-read',
         topicDiscovery: 'topic-discovery',
@@ -184,6 +192,13 @@ describe('useMobileOJComponentOrder', () => {
         window.history.replaceState(null, '', '/');
       });
 
+      const getRenderedOJOrder = (container: HTMLElement) => {
+        const ojTestIds = Object.values(OJ_TEST_IDS);
+        return Array.from(container.querySelectorAll('[data-testid]'))
+          .map(element => element.getAttribute('data-testid'))
+          .filter(testId => ojTestIds.includes(testId as string));
+      };
+
       it.each([
         'variant_1_related',
         'variant_2_recommended',
@@ -196,22 +211,13 @@ describe('useMobileOJComponentOrder', () => {
         async searchVariant => {
           renderVariant(searchVariant);
 
-          const orderedContainer = await screen.findByTestId(
-            'mobile-oj-container',
-          );
-
-          const ojTestIds = Object.values(OJ_TEST_IDS);
-          const renderedOrder = Array.from(
-            orderedContainer.querySelectorAll('[data-testid]'),
-          )
-            .map(element => element.getAttribute('data-testid'))
-            .filter(testId => ojTestIds.includes(testId as string));
+          const container = await screen.findByTestId('mobile-oj-container');
 
           const expectedOrder = SEARCH_COMPONENT_ORDER[searchVariant].map(
             key => OJ_TEST_IDS[key],
           );
 
-          expect(renderedOrder).toEqual(expectedOrder);
+          expect(getRenderedOJOrder(container)).toEqual(expectedOrder);
         },
       );
     });
