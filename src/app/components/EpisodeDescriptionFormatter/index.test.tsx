@@ -202,7 +202,54 @@ describe('EpisodeDescriptionFormatter', () => {
     });
   });
 
-  describe('ATI click tracking on timestamp buttons', () => {
+  it('auto-links raw URLs in paragraph text', () => {
+    const text = 'Find us here https://www.bbc.co.uk/russian';
+    render(<EpisodeDescriptionFormatter text={text} />);
+    const link = screen.getByRole('link', {
+      name: 'https://www.bbc.co.uk/russian',
+    });
+    expect(link).toHaveAttribute('href', 'https://www.bbc.co.uk/russian');
+  });
+
+  it('adds rel="noopener noreferrer" and target="_blank" to auto-linked URLs', () => {
+    const text = 'Watch on YouTube https://bit.ly/abc123';
+    render(<EpisodeDescriptionFormatter text={text} />);
+    const link = screen.getByRole('link');
+    expect(link).toHaveAttribute('rel', 'noopener noreferrer');
+    expect(link).toHaveAttribute('target', '_blank');
+  });
+
+  it('auto-links URLs in chapter label text', () => {
+    const text = '00:00 Visit https://www.bbc.co.uk';
+    render(<EpisodeDescriptionFormatter text={text} />);
+    const link = screen.getByRole('link');
+    expect(link).toHaveAttribute('href', 'https://www.bbc.co.uk');
+    expect(link).toHaveAttribute('rel', 'noopener noreferrer');
+  });
+
+  it('renders correctly with no timecodes at all (fallback to paragraphs)', () => {
+    const text = 'A programme description.\n\nPodcast team: producer, editor.';
+    const { container } = render(<EpisodeDescriptionFormatter text={text} />);
+    const ps = container.querySelectorAll('p');
+    expect(ps).toHaveLength(2);
+    expect(container.querySelector('ol')).toBeNull();
+  });
+
+  it('does not use dangerouslySetInnerHTML', () => {
+    const text = '<script>alert("xss")</script>';
+    render(<EpisodeDescriptionFormatter text={text} />);
+    expect(
+      screen.getByText('<script>alert("xss")</script>'),
+    ).toBeInTheDocument();
+    expect(document.querySelector('script[src]')).toBeNull();
+  });
+
+  it('applies the data-testid attribute', () => {
+    render(<EpisodeDescriptionFormatter text="Hello" data-testid="synopsis" />);
+    expect(screen.getByTestId('synopsis')).toBeInTheDocument();
+  });
+
+    describe('ATI click tracking on timestamp buttons', () => {
     afterEach(() => {
       jest.restoreAllMocks();
     });
@@ -277,52 +324,5 @@ describe('EpisodeDescriptionFormatter', () => {
 
       delete (window as any).mediaPlayers;
     });
-  });
-
-  it('auto-links raw URLs in paragraph text', () => {
-    const text = 'Find us here https://www.bbc.co.uk/russian';
-    render(<EpisodeDescriptionFormatter text={text} />);
-    const link = screen.getByRole('link', {
-      name: 'https://www.bbc.co.uk/russian',
-    });
-    expect(link).toHaveAttribute('href', 'https://www.bbc.co.uk/russian');
-  });
-
-  it('adds rel="noopener noreferrer" and target="_blank" to auto-linked URLs', () => {
-    const text = 'Watch on YouTube https://bit.ly/abc123';
-    render(<EpisodeDescriptionFormatter text={text} />);
-    const link = screen.getByRole('link');
-    expect(link).toHaveAttribute('rel', 'noopener noreferrer');
-    expect(link).toHaveAttribute('target', '_blank');
-  });
-
-  it('auto-links URLs in chapter label text', () => {
-    const text = '00:00 Visit https://www.bbc.co.uk';
-    render(<EpisodeDescriptionFormatter text={text} />);
-    const link = screen.getByRole('link');
-    expect(link).toHaveAttribute('href', 'https://www.bbc.co.uk');
-    expect(link).toHaveAttribute('rel', 'noopener noreferrer');
-  });
-
-  it('renders correctly with no timecodes at all (fallback to paragraphs)', () => {
-    const text = 'A programme description.\n\nPodcast team: producer, editor.';
-    const { container } = render(<EpisodeDescriptionFormatter text={text} />);
-    const ps = container.querySelectorAll('p');
-    expect(ps).toHaveLength(2);
-    expect(container.querySelector('ol')).toBeNull();
-  });
-
-  it('does not use dangerouslySetInnerHTML', () => {
-    const text = '<script>alert("xss")</script>';
-    render(<EpisodeDescriptionFormatter text={text} />);
-    expect(
-      screen.getByText('<script>alert("xss")</script>'),
-    ).toBeInTheDocument();
-    expect(document.querySelector('script[src]')).toBeNull();
-  });
-
-  it('applies the data-testid attribute', () => {
-    render(<EpisodeDescriptionFormatter text="Hello" data-testid="synopsis" />);
-    expect(screen.getByTestId('synopsis')).toBeInTheDocument();
   });
 });
