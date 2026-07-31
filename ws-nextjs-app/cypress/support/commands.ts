@@ -4,7 +4,6 @@ import identity from 'ramda/src/identity';
 import defaultToggles from '#app/lib/config/toggles';
 import testResponseCodeAndRetry from './helpers/testResponseCodeAndRetry';
 import getAppEnv from './helpers/getAppEnv';
-import envConfig, { EnvironmentConfigType } from './config/envs';
 import handleContinueReadingButton from './helpers/handleContinueReadingButton';
 
 interface TestResponseCodeAndRetry {
@@ -42,7 +41,6 @@ const getPageDataFromWindow = () => {
 };
 
 const keyGenFn = identity as (...v: unknown[]) => string;
-const environmentConfig = envConfig as EnvironmentConfigType;
 const getToggles = memoizeWith(keyGenFn, service => {
   const togglesFixture = `cypress/fixtures/toggles/${service}.json`;
 
@@ -50,10 +48,7 @@ const getToggles = memoizeWith(keyGenFn, service => {
     cy.writeFile(togglesFixture, defaultToggles.local);
   } else {
     cy.request({
-      url: `${environmentConfig.togglesUrl}?application=simorgh&service=${service}&__amp_source_origin=${environmentConfig.baseUrl}`,
-      headers: {
-        Origin: 'https://www.bbc.com',
-      },
+      url: `${process.env.TOGGLES_BFF_PATH}?service=${service}&application=simorgh`,
     }).then(response => {
       cy.writeFile(togglesFixture, response.body.toggles);
     });
