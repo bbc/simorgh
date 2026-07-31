@@ -16,6 +16,8 @@ import {
 
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 
+import type { Region } from '../3dComponents/Globe/regions';
+
 const {
   SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
   SIMORGH_PUBLIC_STATIC_ASSETS_PATH,
@@ -42,9 +44,10 @@ type Vector3 = [number, number, number];
 
 type GlobeProps = {
   position?: Vector3;
+  regions: Region[];
 };
 
-export function Globe({ position }: GlobeProps) {
+export function Globe({ position, regions }: GlobeProps) {
   const { nodes: subMesh } = useGLTF(MODEL_PATH);
   const subMeshKeys = Object.keys(subMesh).filter(
     key => 'geometry' in subMesh[key],
@@ -54,21 +57,26 @@ export function Globe({ position }: GlobeProps) {
 
   const handleClick = (index: number) => () => {
     setSelectedSubMesh(index);
+    console.log('your region is', regions[index].name);
   };
 
   return (
     <group position={position}>
-      {subMeshKeys.map((key, i) => (
-        <mesh
-          key={key}
-          geometry={(subMesh[key] as Mesh).geometry}
-          onClick={handleClick(i)}
-        >
-          <meshBasicMaterial
-            color={selectedSubMesh === i ? SELECTED_COLOR : MESH_COLORS[i]}
-          />
-        </mesh>
-      ))}
+      {subMeshKeys.map((key, i) => {
+        const region = regions[i];
+        return (
+          <mesh
+            key={key}
+            name={region?.id}
+            geometry={(subMesh[key] as Mesh).geometry}
+            onClick={handleClick(i)}
+          >
+            <meshBasicMaterial
+              color={selectedSubMesh === i ? SELECTED_COLOR : MESH_COLORS[i]}
+            />
+          </mesh>
+        );
+      })}
     </group>
   );
 }

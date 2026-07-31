@@ -1,9 +1,17 @@
+@use '@scss/themeTokens' as theme;
+
 .globeScene {
-  width: 500px;
-  height: 500px;
+  width: 100%;
+  aspect-ratio: 1;
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    width: 500px;
+    height: 500px;
+  }
 }
 
 .canvasContainer {
   width: 100%;
   height: 100%;
+  outline: 1px solid theme.$palette-grey-3;
 }
