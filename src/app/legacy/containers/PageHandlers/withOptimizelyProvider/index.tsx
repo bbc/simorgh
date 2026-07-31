@@ -36,7 +36,10 @@ const getUserId = () => {
   return Cookie.get('ckns_mvt') ?? null;
 };
 
-const isSignedIn = () => Boolean(Cookie.get(TOKEN_COOKIE_NAME));
+const isSignedIn = () => {
+  if (disableOptimizely || !onClient() || isOperaProxy()) return false;
+  return Boolean(Cookie.get(TOKEN_COOKIE_NAME));
+};
 
 const optimizely = createInstance({
   sdkKey: getEnvConfig().SIMORGH_OPTIMIZELY_SDK_KEY,
