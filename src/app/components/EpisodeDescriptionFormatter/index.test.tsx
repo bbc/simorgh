@@ -227,6 +227,27 @@ describe('EpisodeDescriptionFormatter', () => {
     expect(link).toHaveAttribute('rel', 'noopener noreferrer');
   });
 
+  it('auto-links bare domain URLs without protocol', () => {
+    const text = 'Visit us at example.com for more';
+    render(<EpisodeDescriptionFormatter text={text} />);
+    const link = screen.getByRole('link', { name: 'example.com' });
+    expect(link).toHaveAttribute('href', 'https://example.com');
+  });
+
+  it('auto-links bare domains with www prefix', () => {
+    const text = 'Go to www.bbc.com now';
+    render(<EpisodeDescriptionFormatter text={text} />);
+    const link = screen.getByRole('link', { name: 'www.bbc.com' });
+    expect(link).toHaveAttribute('href', 'https://www.bbc.com');
+  });
+
+  it('auto-links bare domains with paths', () => {
+    const text = 'Check out youtube.com/watch?v=abc123';
+    render(<EpisodeDescriptionFormatter text={text} />);
+    const link = screen.getByRole('link', { name: 'youtube.com/watch?v=abc123' });
+    expect(link).toHaveAttribute('href', 'https://youtube.com/watch?v=abc123');
+  });
+
   it('renders correctly with no timecodes at all (fallback to paragraphs)', () => {
     const text = 'A programme description.\n\nPodcast team: producer, editor.';
     const { container } = render(<EpisodeDescriptionFormatter text={text} />);

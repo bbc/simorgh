@@ -15,8 +15,9 @@ const TIMECODE_PATTERN = /^\d{1,2}:\d{2}(:\d{2})?/;
 const INLINE_TIMECODE_SPLIT = /\s(?=\d{1,2}:\d{2}(?::\d{2})?\s)/;
 
 // Used as a capturing group in split() so URLs are preserved in the resulting array
-const URL_SPLIT_PATTERN = /(https?:\/\/[^\s<>"{}|\\^[\]`]+)/g;
-const URL_TEST_PATTERN = /^https?:\/\//;
+// Matches both full URLs (https?://) and bare domains (example.com, www.example.com, youtube.com)
+const URL_SPLIT_PATTERN = /(https?:\/\/[^\s<>"{}|\\^[\]`]+|(?:www\.)?[a-z0-9][-a-z0-9]*(?:\.[a-z0-9][-a-z0-9]*)+(?:[/?#][^\s<>"{}|\\^[\]`]*)?)/gi;
+const URL_TEST_PATTERN = /^https?:\/\//i;
 
 const isChapterBlock = (lines: string[]) => {
   const nonEmptyLines = lines.filter(line => line.trim() !== '');
@@ -87,31 +88,35 @@ const renderWithLinks = (
   eventTrackingData?: EventTrackingData,
 ): ReactNode[] =>
   text.split(URL_SPLIT_PATTERN).map((part, i) => {
-    if (URL_TEST_PATTERN.test(part)) {
-      if (eventTrackingData) {
-        return (
-          <TrackedLink
-            key={i}
-            href={part}
-            text={part}
-            eventTrackingData={eventTrackingData}
-          />
-        );
-      }
+    // split() with capturing group: odd indices are matched URLs, even are text
+    const isUrl = i % 2 === 1;
+    if (!isUrl || !part) return part || null;
+
+    // Prepend https:// to bare domains that don't have a protocol
+    const href = URL_TEST_PATTERN.test(part) ? part : `https://${part}`;
+
+    if (eventTrackingData) {
       return (
-        <a
-          // eslint-disable-next-line react/no-array-index-key
+        <TrackedLink
           key={i}
-          href={part}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.link}
-        >
-          {part}
-        </a>
+          href={href}
+          text={part}
+          eventTrackingData={eventTrackingData}
+        />
       );
     }
-    return part || null;
+    return (
+      <a
+        // eslint-disable-next-line react/no-array-index-key
+        key={i}
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={styles.link}
+      >
+        {part}
+      </a>
+    );
   });
 
 type ChapterListProps = {
