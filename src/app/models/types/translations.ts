@@ -14,6 +14,10 @@ export interface Translations {
   home: string;
   currentPage: string;
   skipLinkText: string;
+  skipContent?: {
+    text: string;
+    endTextVisuallyHidden: string;
+  };
   relatedContent: string;
   topicsPath?: string;
   relatedTopics?: string;
@@ -44,6 +48,7 @@ export interface Translations {
   gist?: string;
   account?: {
     signIn?: string;
+    signInAccessibleLabel?: string;
     forYou?: string;
     register?: string;
     settings?: string;
@@ -76,6 +81,7 @@ export interface Translations {
     noArticles: string;
     errorText: string;
     loading: string;
+    noJsDescription: string;
   };
   error: {
     home?: string;

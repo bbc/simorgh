@@ -63,12 +63,16 @@ export const service: DefaultServiceConfig = {
       seeAll: 'بیشتر',
       home: 'صفحه اول',
       topicDiscovery: {
-        heading: 'بیشتر کشف کنید',
+        heading: 'بیشتر بخوانید',
         moreAboutTopic: 'بیشتر درباره {topic}',
         fetchErrorMessage: 'بارگیری ناموفق بود. لطفاً دوباره تلاش کنید',
       },
       currentPage: 'صفحه فعلی',
       skipLinkText: 'مشاهده محتوا',
+      skipContent: {
+        text: 'از %title% بگذر و ادامه بده',
+        endTextVisuallyHidden: 'پایان %title%',
+      },
       relatedContent: 'مطالب مرتبط',
       relatedTopics: 'موضوعات مرتبط',
       moreOnThis: '',

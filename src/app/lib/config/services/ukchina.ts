@@ -126,6 +126,10 @@ export const service: ChineseConfig = {
       home: '主页',
       currentPage: '目前页面',
       skipLinkText: '跳过此内容',
+      skipContent: {
+        text: '跳过%title%并继续',
+        endTextVisuallyHidden: '%title%结束',
+      },
       relatedContent: '更多相关内容',
       relatedTopics: '相关主题内容',
       moreOnThis: '',
@@ -397,6 +401,10 @@ export const service: ChineseConfig = {
       home: '主頁',
       currentPage: '目前頁面',
       skipLinkText: '跳過此內容',
+      skipContent: {
+        text: '跳過%title%並繼續',
+        endTextVisuallyHidden: '%title%結束',
+      },
       relatedContent: '更多相關內容',
       relatedTopics: '相關主題內容',
       navMenuText: '分類',
