@@ -103,6 +103,10 @@ const styles = {
       padding: 0,
       marginBottom: `${spacings.TRIPLE}rem`,
 
+      '#dotcom-mpu': {
+        marginInline: 'auto !important',
+      },
+
       [`@media (min-width: ${MPU_WIDTH_MIN})`]: {
         minHeight: MPU_HEIGHTS.GROUP_1,
         display: 'flex',

@@ -226,6 +226,7 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
   width: 2.75rem;
   background-color: #B80000;
   color: #FFFFFF;
+  overflow: hidden;
   width: 2.75rem;
   height: 2.75rem;
 }
