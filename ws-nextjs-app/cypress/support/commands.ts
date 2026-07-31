@@ -44,12 +44,15 @@ const getPageDataFromWindow = () => {
 const keyGenFn = identity as (...v: unknown[]) => string;
 const getToggles = memoizeWith(keyGenFn, service => {
   const togglesFixture = `cypress/fixtures/toggles/${service}.json`;
+  const togglesEndpoint = new URL(`${envConfig.togglesUrl}/fd/ws-toggles`);
+  togglesEndpoint.searchParams.set('service', service);
+  togglesEndpoint.searchParams.set('application', 'simorgh');
 
   if (getAppEnv() === 'local') {
     cy.writeFile(togglesFixture, defaultToggles.local);
   } else {
     cy.request({
-      url: `${envConfig.togglesUrl}?service=${service}&application=simorgh`,
+      url: togglesEndpoint.toString(),
     }).then(response => {
       cy.writeFile(togglesFixture, response.body.toggles);
     });
