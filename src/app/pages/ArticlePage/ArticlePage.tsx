@@ -238,9 +238,20 @@ const getContinueReadingButton =
     />
   );
 
+const getSearchOjExperiment =
+  (hasExpandedContinueReading: boolean) =>
+  ({ data }: { data: Recommendation[] }) => (
+    <SearchOjExperiment
+      data={data}
+      hasExpandedContinueReading={hasExpandedContinueReading}
+    />
+  );
+
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const [showAllContent, setShowAllContent] = useState(false);
   const [isDesktopViewport, setIsDesktopViewport] = useState(false);
+  const [hasExpandedContinueReading, setHasExpandedContinueReading] =
+    useState(false);
   const { isApp, isAmp, isLite, pageType } = use(RequestContext);
 
   const {
@@ -473,13 +484,14 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           renderSearchMidArticleOj: getSearchMidArticleOJ,
           searchVariant,
         })
-      : SearchOjExperiment,
+      : getSearchOjExperiment(hasExpandedContinueReading),
     disclaimer: DisclaimerWithPaddingOverride,
     podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
     ...(showContinueReadingButton && {
       continueReading: getContinueReadingButton({
         showAllContent,
         setShowAllContent,
+        onExpand: () => setHasExpandedContinueReading(true),
       }),
     }),
   };

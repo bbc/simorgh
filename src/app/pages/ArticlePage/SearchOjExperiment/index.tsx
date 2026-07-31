@@ -17,6 +17,11 @@ type ActivateSearchOjExperimentProps = {
   onDecision: (variation: SearchOjVariant | null) => void;
 };
 
+type SearchOjExperimentProps = {
+  data: Recommendation[];
+  hasExpandedContinueReading?: boolean;
+};
+
 const ActivateSearchOjExperiment = ({
   onDecision,
 }: ActivateSearchOjExperimentProps) => {
@@ -34,13 +39,17 @@ const ActivateSearchOjExperiment = ({
   return null;
 };
 
-const SearchOjExperiment = ({ data }: { data: Recommendation[] }) => {
+const SearchOjExperiment = ({
+  data,
+  hasExpandedContinueReading = false,
+}: SearchOjExperimentProps) => {
   // keep the variation here so the whole article does not rerender
   const [experimentVariant, setExperimentVariant] =
     useState<SearchOjVariant | null>(null);
 
   const hasReachedMidArticleOj = useNearViewport({
     elementId: MID_ARTICLE_OJ_EXPERIMENT_TRIGGER_ID,
+    bottomViewportMargin: 1,
   });
 
   // only valid optimizely variations are added to tracking
@@ -62,7 +71,7 @@ const SearchOjExperiment = ({ data }: { data: Recommendation[] }) => {
         id={MID_ARTICLE_OJ_EXPERIMENT_TRIGGER_ID}
       />
       {/* the activation component is mounted only after the reader reaches the oj */}
-      {hasReachedMidArticleOj && (
+      {(hasReachedMidArticleOj || hasExpandedContinueReading) && (
         <ActivateSearchOjExperiment onDecision={setExperimentVariant} />
       )}
     </>
