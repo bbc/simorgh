@@ -4,7 +4,7 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-restricted-globals */
 
-const version = 'v0.3.6';
+const version = 'v0.3.7';
 // Update cache name when changing caching logic / changes in offlinepage.tsx
 const cacheName = 'simorghCache_v4';
 const pwaClients = new Map();
@@ -27,8 +27,8 @@ const VARIANTS = ['lat', 'cyr', 'trad', 'simp'];
 
 const getServiceFromUrl = url => new URL(url).pathname.split('/')[1];
 const getVariantFromUrl = url => {
-  const variantSegment = new URL(url).pathname.split('/')[2];
-  return VARIANTS.includes(variantSegment) ? variantSegment : null;
+  const pathSegments = new URL(url).pathname.split('/');
+  return pathSegments.find(segment => VARIANTS.includes(segment)) || null;
 };
 const getOfflinePageUrl = (service, variant) => {
   const resolvedVariant = variant || defaultServiceVariants[service];
