@@ -45,12 +45,22 @@ const getMergedToggles = async ({
     return localToggles;
   }
 
-  const togglesEndpoint = constructTogglesEndpoint({ service, isAmp });
+  let togglesEndpoint: string;
+
+  try {
+    togglesEndpoint = constructTogglesEndpoint({ service, isAmp });
+  } catch (error) {
+    logger.error(TOGGLE_API_FETCH_ERROR, {
+      error: (error as Error).message,
+      service,
+    });
+
+    return localToggles;
+  }
 
   const isLocal = appEnvironment === 'local';
   const serviceEnv = isLocal ? 'test' : appEnvironment;
   const cacheKey = `${togglesEndpoint}:${serviceEnv}`;
-
   const cachedResponse = cache.get(cacheKey);
 
   logger.info(TOGGLE_API_REQUEST_RECEIVED, {
