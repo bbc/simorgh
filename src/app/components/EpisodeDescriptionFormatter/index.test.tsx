@@ -14,7 +14,9 @@ describe('EpisodeDescriptionFormatter', () => {
   });
 
   it('renders a single paragraph for plain text without blank lines', () => {
-    render(<EpisodeDescriptionFormatter text="This is a simple description." />);
+    render(
+      <EpisodeDescriptionFormatter text="This is a simple description." />,
+    );
     expect(
       screen.getByText('This is a simple description.'),
     ).toBeInTheDocument();
@@ -31,7 +33,9 @@ describe('EpisodeDescriptionFormatter', () => {
   });
 
   it('renders a chapter list when all lines start with timecodes', () => {
-    const { container } = render(<EpisodeDescriptionFormatter text={CHAPTER_TEXT} />);
+    const { container } = render(
+      <EpisodeDescriptionFormatter text={CHAPTER_TEXT} />,
+    );
     expect(container.querySelector('ol')).toBeInTheDocument();
     expect(container.querySelectorAll('li')).toHaveLength(3);
   });
@@ -46,14 +50,19 @@ describe('EpisodeDescriptionFormatter', () => {
   });
 
   it('renders timestamps as plain <time> elements when no playerId is provided', () => {
-    const { container } = render(<EpisodeDescriptionFormatter text={CHAPTER_TEXT} />);
+    const { container } = render(
+      <EpisodeDescriptionFormatter text={CHAPTER_TEXT} />,
+    );
     expect(container.querySelector('button')).toBeNull();
     expect(container.querySelectorAll('time')).toHaveLength(3);
   });
 
   it('renders timestamps as buttons when a playerId is provided', () => {
     const { container } = render(
-      <EpisodeDescriptionFormatter text={CHAPTER_TEXT} playerId="test-player" />,
+      <EpisodeDescriptionFormatter
+        text={CHAPTER_TEXT}
+        playerId="test-player"
+      />,
     );
     expect(container.querySelectorAll('button')).toHaveLength(3);
   });
@@ -63,7 +72,12 @@ describe('EpisodeDescriptionFormatter', () => {
     const mockPlayer = { currentTime: mockCurrentTime, play: jest.fn() };
     window.mediaPlayers = { 'test-player': mockPlayer as never };
 
-    render(<EpisodeDescriptionFormatter text={CHAPTER_TEXT} playerId="test-player" />) ;
+    render(
+      <EpisodeDescriptionFormatter
+        text={CHAPTER_TEXT}
+        playerId="test-player"
+      />,
+    );
 
     const buttons = screen.getAllByRole('button');
     fireEvent.click(buttons[1]); // "00:43 Chapter one" → 43 seconds
@@ -97,7 +111,10 @@ describe('EpisodeDescriptionFormatter', () => {
   it('does not throw when player is not yet ready on timestamp click', () => {
     window.mediaPlayers = {};
     render(
-      <EpisodeDescriptionFormatter text={CHAPTER_TEXT} playerId="missing-player" />,
+      <EpisodeDescriptionFormatter
+        text={CHAPTER_TEXT}
+        playerId="missing-player"
+      />,
     );
     expect(() =>
       fireEvent.click(screen.getAllByRole('button')[0]),
@@ -123,19 +140,25 @@ describe('EpisodeDescriptionFormatter', () => {
       'Intro description text. 00:00 Chapter one 00:34 Chapter two 06:03 Chapter three';
 
     it('renders a chapter list when timecodes are embedded inline', () => {
-      const { container } = render(<EpisodeDescriptionFormatter text={INLINE_TEXT} />);
+      const { container } = render(
+        <EpisodeDescriptionFormatter text={INLINE_TEXT} />,
+      );
       expect(container.querySelector('ol')).toBeInTheDocument();
       expect(container.querySelectorAll('li')).toHaveLength(3);
     });
 
     it('renders the intro text as a paragraph before the chapter list', () => {
-      const { container } = render(<EpisodeDescriptionFormatter text={INLINE_TEXT} />);
+      const { container } = render(
+        <EpisodeDescriptionFormatter text={INLINE_TEXT} />,
+      );
       const p = container.querySelector('p');
       expect(p).toHaveTextContent('Intro description text.');
     });
 
     it('renders inline chapter timestamps in <time> elements', () => {
-      const { container } = render(<EpisodeDescriptionFormatter text={INLINE_TEXT} />);
+      const { container } = render(
+        <EpisodeDescriptionFormatter text={INLINE_TEXT} />,
+      );
       const times = container.querySelectorAll('time');
       expect(times[0]).toHaveTextContent('00:00');
       expect(times[1]).toHaveTextContent('00:34');
@@ -144,7 +167,10 @@ describe('EpisodeDescriptionFormatter', () => {
 
     it('renders inline timestamps as buttons when playerId is provided', () => {
       const { container } = render(
-        <EpisodeDescriptionFormatter text={INLINE_TEXT} playerId="test-player" />,
+        <EpisodeDescriptionFormatter
+          text={INLINE_TEXT}
+          playerId="test-player"
+        />,
       );
       expect(container.querySelectorAll('button')).toHaveLength(3);
     });
@@ -155,7 +181,10 @@ describe('EpisodeDescriptionFormatter', () => {
       window.mediaPlayers = { 'test-player': mockPlayer as never };
 
       const { container } = render(
-        <EpisodeDescriptionFormatter text={INLINE_TEXT} playerId="test-player" />,
+        <EpisodeDescriptionFormatter
+          text={INLINE_TEXT}
+          playerId="test-player"
+        />,
       );
 
       fireEvent.click(container.querySelectorAll('button')[1]); // 00:34 → 34s
@@ -215,7 +244,7 @@ describe('EpisodeDescriptionFormatter', () => {
   });
 
   it('applies the data-testid attribute', () => {
-    render(<EpisodeDescriptionFormatter text="Hello" data-testid="synopsis" />) ;
+    render(<EpisodeDescriptionFormatter text="Hello" data-testid="synopsis" />);
     expect(screen.getByTestId('synopsis')).toBeInTheDocument();
   });
 });
