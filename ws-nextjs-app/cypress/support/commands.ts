@@ -4,8 +4,8 @@ import identity from 'ramda/src/identity';
 import defaultToggles from '#app/lib/config/toggles';
 import testResponseCodeAndRetry from './helpers/testResponseCodeAndRetry';
 import getAppEnv from './helpers/getAppEnv';
-import envConfig, { EnvironmentConfigType } from './config/envs';
 import handleContinueReadingButton from './helpers/handleContinueReadingButton';
+import envConfig from './config/envs';
 
 interface TestResponseCodeAndRetry {
   url: string;
@@ -42,18 +42,17 @@ const getPageDataFromWindow = () => {
 };
 
 const keyGenFn = identity as (...v: unknown[]) => string;
-const environmentConfig = envConfig as EnvironmentConfigType;
 const getToggles = memoizeWith(keyGenFn, service => {
   const togglesFixture = `cypress/fixtures/toggles/${service}.json`;
+  const togglesEndpoint = new URL(`${envConfig.togglesUrl}/fd/ws-toggles`);
+  togglesEndpoint.searchParams.set('service', service);
+  togglesEndpoint.searchParams.set('application', 'simorgh');
 
   if (getAppEnv() === 'local') {
     cy.writeFile(togglesFixture, defaultToggles.local);
   } else {
     cy.request({
-      url: `${environmentConfig.togglesUrl}?application=simorgh&service=${service}&__amp_source_origin=${environmentConfig.baseUrl}`,
-      headers: {
-        Origin: 'https://www.bbc.com',
-      },
+      url: togglesEndpoint.toString(),
     }).then(response => {
       cy.writeFile(togglesFixture, response.body.toggles);
     });
