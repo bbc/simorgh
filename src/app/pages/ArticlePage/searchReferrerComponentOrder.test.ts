@@ -149,7 +149,7 @@ describe('useMobileOJComponentOrder', () => {
       expect(result.current).toBeNull();
     });
 
-    describe('rendered mobile variant', () => {
+    describe('Renderered mobile OJ components', () => {
       beforeEach(() => {
         matchMediaMock.mockReturnValue({
           matches: true,
