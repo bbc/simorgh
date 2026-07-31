@@ -96,9 +96,14 @@ const components = {
     visualProminence: NORMAL,
     radioSchedule: afriqueHomePage.data.curations[4].radioSchedule,
   },
-  'billboard-1': {
+  'billboard-maximum-1': {
     visualStyle: BANNER,
     visualProminence: MAXIMUM,
+    summaries: billboardCuration?.summaries,
+  },
+  'billboard-high-1': {
+    visualStyle: BANNER,
+    visualProminence: HIGH,
     summaries: billboardCuration?.summaries,
   },
   'useful-links-1': {
@@ -249,7 +254,7 @@ describe('Curation', () => {
       );
 
       expect(
-        document.querySelector('[data-testid="billboard-"]'),
+        document.querySelector('[data-testid="billboard-maximum-1"]'),
       ).not.toBeInTheDocument();
     });
   });
