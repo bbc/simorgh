@@ -99,6 +99,7 @@ const renderWithLinks = (
     if (eventTrackingData) {
       return (
         <TrackedLink
+          // eslint-disable-next-line react/no-array-index-key
           key={i}
           href={href}
           text={part}

@@ -86,6 +86,7 @@ describe('EpisodeDescriptionFormatter', () => {
     expect(mockCurrentTime).toHaveBeenCalledWith(43);
     expect(mockPlayer.play).toHaveBeenCalledTimes(1);
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     delete (window as any).mediaPlayers;
   });
 
@@ -102,10 +103,13 @@ describe('EpisodeDescriptionFormatter', () => {
     );
 
     // 1:23:45 → 1*3600 + 23*60 + 45 = 5025s
-    fireEvent.click(container.querySelector('button')!);
+    const button = container.querySelector('button');
+    if (!button) throw new Error('Button not found');
+    fireEvent.click(button);
     expect(mockCurrentTime).toHaveBeenCalledWith(5025);
     expect(mockPlayer.play).toHaveBeenCalledTimes(1);
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     delete (window as any).mediaPlayers;
   });
 
@@ -120,6 +124,7 @@ describe('EpisodeDescriptionFormatter', () => {
     expect(() =>
       fireEvent.click(screen.getAllByRole('button')[0]),
     ).not.toThrow();
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     delete (window as any).mediaPlayers;
   });
 
@@ -191,6 +196,7 @@ describe('EpisodeDescriptionFormatter', () => {
       fireEvent.click(container.querySelectorAll('button')[1]); // 00:34 → 34s
       expect(mockCurrentTime).toHaveBeenCalledWith(34);
 
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       delete (window as any).mediaPlayers;
     });
 
@@ -345,6 +351,7 @@ describe('EpisodeDescriptionFormatter', () => {
       expect(() => fireEvent.click(buttons[1])).not.toThrow();
       expect(mockCurrentTime).toHaveBeenCalledWith(43);
 
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       delete (window as any).mediaPlayers;
     });
   });
