@@ -403,6 +403,26 @@ describe('Service Worker', () => {
       );
     });
 
+    it('caches the default variant offline page when the URL is an article page with no variant', async () => {
+      global.fetch.mockResolvedValueOnce(
+        new Response('<html></html>', { status: 200 }),
+      );
+
+      const event = {
+        data: { type: 'PWA_STATUS', isPWA: true },
+        source: {
+          id: 'client-1',
+          url: 'https://bbc.com/zhongwen/article/cxxxxxxxxxxxo',
+        },
+      };
+
+      await messageHandler(event);
+
+      expect(global.fetch).toHaveBeenCalledWith(
+        'https://bbc.com/zhongwen/trad/offline',
+      );
+    });
+
     it('caches the plain offline page for a non-variant service, unaffected', async () => {
       global.fetch.mockResolvedValueOnce(
         new Response('<html></html>', { status: 200 }),
