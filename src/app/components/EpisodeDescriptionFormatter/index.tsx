@@ -4,6 +4,7 @@ import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import styles from './index.module.scss';
 
 const CHAPTER_TIMESTAMP_TRACKER_TYPE = 'podcast-chapter-timestamp';
+const LINK_TRACKER_TYPE = 'podcast-description-link';
 
 // Matches timecodes like 00:00, 1:23, 01:23:45 at the start of a line
 const TIMECODE_PATTERN = /^\d{1,2}:\d{2}(:\d{2})?/;
@@ -44,9 +45,59 @@ const timecodeToSeconds = (timecode: string): number => {
   return parts[0] * 60 + parts[1];
 };
 
-const renderWithLinks = (text: string): ReactNode[] =>
+type TrackedLinkProps = {
+  href: string;
+  text: string;
+  eventTrackingData?: EventTrackingData;
+};
+
+const TrackedLink = ({ href, text, eventTrackingData }: TrackedLinkProps) => {
+  const itemEventTrackingData = {
+    ...eventTrackingData,
+    itemTracker: {
+      ...eventTrackingData?.itemTracker,
+      type: LINK_TRACKER_TYPE,
+      text: href,
+    },
+  };
+
+  const { onClick: clickTrackerHandler } = useClickTrackerHandler(
+    itemEventTrackingData,
+  );
+
+  const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    clickTrackerHandler?.(event);
+  };
+
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={styles.link}
+      onClick={handleClick}
+    >
+      {text}
+    </a>
+  );
+};
+
+const renderWithLinks = (
+  text: string,
+  eventTrackingData?: EventTrackingData,
+): ReactNode[] =>
   text.split(URL_SPLIT_PATTERN).map((part, i) => {
     if (URL_TEST_PATTERN.test(part)) {
+      if (eventTrackingData) {
+        return (
+          <TrackedLink
+            key={i}
+            href={part}
+            text={part}
+            eventTrackingData={eventTrackingData}
+          />
+        );
+      }
       return (
         <a
           // eslint-disable-next-line react/no-array-index-key
@@ -147,7 +198,7 @@ const ChapterList = ({
               )}
               {label && (
                 <span className={styles.chapterLabel}>
-                  {renderWithLinks(label)}
+                  {renderWithLinks(label, eventTrackingData)}
                 </span>
               )}
             </li>
@@ -200,7 +251,7 @@ const EpisodeDescriptionFormatter = ({
             // eslint-disable-next-line react/no-array-index-key
             <div key={i}>
               {intro && (
-                <p className={styles.paragraph}>{renderWithLinks(intro)}</p>
+                <p className={styles.paragraph}>{renderWithLinks(intro, eventTrackingData)}</p>
               )}
               <div className={styles.chapterBlock}>
                 <ChapterList
@@ -215,7 +266,7 @@ const EpisodeDescriptionFormatter = ({
         return (
           // eslint-disable-next-line react/no-array-index-key
           <p key={i} className={styles.paragraph}>
-            {renderWithLinks(block.replace(/\n/g, ' '))}
+            {renderWithLinks(block.replace(/\n/g, ' '), eventTrackingData)}
           </p>
         );
       })}

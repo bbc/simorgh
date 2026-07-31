@@ -227,7 +227,7 @@ describe('EpisodeDescriptionFormatter', () => {
           itemTracker: expect.objectContaining({
             type: 'podcast-chapter-timestamp',
             text: '00:43',
-            position: 1,
+            position: 2,
           }),
         }),
       );
@@ -254,7 +254,7 @@ describe('EpisodeDescriptionFormatter', () => {
         ([eventTrackingData]) => eventTrackingData?.itemTracker.position,
       );
 
-      expect(positions).toEqual([0, 1, 2]);
+      expect(positions).toEqual([1, 2, 3]);
     });
 
     it('still seeks the player when the click tracker beacon has no onClick handler', () => {
