@@ -29,6 +29,7 @@ const OJ_COMPONENT_NAMES = [
   'topic-discovery-more-about-link',
   'location-based-topic-oj',
   'portrait-video-carousel-article',
+  'video-curation-grid',
 ];
 
 // handle the total oj clicks event to specific onward journey experiments
