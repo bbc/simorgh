@@ -116,7 +116,7 @@ interface Props {
   playerId?: string;
 }
 
-const PlainTextFormatter = ({
+const EpisodeDescriptionFormatter = ({
   text,
   'data-testid': testId,
   playerId,
@@ -166,4 +166,4 @@ const PlainTextFormatter = ({
   );
 };
 
-export default PlainTextFormatter;
+export default EpisodeDescriptionFormatter;

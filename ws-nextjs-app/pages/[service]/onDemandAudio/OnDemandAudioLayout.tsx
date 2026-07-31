@@ -14,7 +14,7 @@ import ATIAnalytics from '#app/components/ATIAnalytics';
 import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
 import MetadataContainer from '#app/components/Metadata';
 import LinkedData from '#app/components/LinkedData';
-import PlainTextFormatter from '#app/components/PlainTextFormatter';
+import EpisodeDescriptionFormatter from '#app/components/PlainTextFormatter';
 import getOnDemandAudioLinkedData from '#nextjs/pages/[service]/onDemandAudio/getOnDemandAudioLinkedData';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
@@ -180,7 +180,7 @@ const OnDemandAudioPage = ({
             </div>
             <div css={summaryStyles}>
               {isPodcastEpisodePage ? (
-                <PlainTextFormatter
+                <EpisodeDescriptionFormatter
                   text={displayText}
                   data-testid="synopsis"
                   playerId={PLAYER_ID}
