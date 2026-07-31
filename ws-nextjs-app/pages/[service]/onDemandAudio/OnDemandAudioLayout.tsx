@@ -184,6 +184,9 @@ const OnDemandAudioPage = ({
                   text={displayText}
                   data-testid="synopsis"
                   playerId={PLAYER_ID}
+                  eventTrackingData={{
+                    componentName: 'podcast-chapter-timestamp',
+                  }}
                 />
               ) : (
                 <OnDemandParagraphContainer testid="summary" text={summary} />

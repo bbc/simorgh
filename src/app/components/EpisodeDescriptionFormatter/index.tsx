@@ -1,5 +1,9 @@
-import type { ReactNode } from 'react';
+import type { MouseEvent, ReactNode } from 'react';
+import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import styles from './index.module.scss';
+
+const CHAPTER_TIMESTAMP_TRACKER_TYPE = 'podcast-chapter-timestamp';
 
 // Matches timecodes like 00:00, 1:23, 01:23:45 at the start of a line
 const TIMECODE_PATTERN = /^\d{1,2}:\d{2}(:\d{2})?/;
@@ -62,17 +66,61 @@ const renderWithLinks = (text: string): ReactNode[] =>
 type ChapterListProps = {
   lines: string[];
   playerId?: string;
+  eventTrackingData?: EventTrackingData;
 };
 
-const ChapterList = ({ lines, playerId }: ChapterListProps) => {
-  const handleSeek = (timecode: string) => {
-    if (!playerId) return;
+type ChapterTimestampButtonProps = {
+  timecode: string;
+  playerId: string;
+  position: number;
+  eventTrackingData?: EventTrackingData;
+};
+
+const ChapterTimestampButton = ({
+  timecode,
+  playerId,
+  position,
+  eventTrackingData,
+}: ChapterTimestampButtonProps) => {
+  const itemEventTrackingData = {
+    ...eventTrackingData,
+    itemTracker: {
+      ...eventTrackingData?.itemTracker,
+      type: CHAPTER_TIMESTAMP_TRACKER_TYPE,
+      text: timecode,
+      position: position + 1,
+    },
+  };
+
+  const { onClick: clickTrackerHandler } = useClickTrackerHandler(
+    itemEventTrackingData,
+  );
+
+  const handleSeek = (event: MouseEvent<HTMLButtonElement>) => {
+    clickTrackerHandler?.(event);
+
     const player = window.mediaPlayers?.[playerId];
     if (!player) return;
     player.currentTime(timecodeToSeconds(timecode));
     player.play();
   };
 
+  return (
+    <button
+      type="button"
+      className={`${styles.timestamp} ${styles.timestampButton}`}
+      onClick={handleSeek}
+    >
+      <time>{timecode}</time>
+    </button>
+  );
+};
+
+const ChapterList = ({
+  lines,
+  playerId,
+  eventTrackingData,
+}: ChapterListProps) => {
   return (
     <ol className={styles.chapterList}>
       {lines
@@ -88,13 +136,12 @@ const ChapterList = ({ lines, playerId }: ChapterListProps) => {
             // eslint-disable-next-line react/no-array-index-key
             <li key={i} className={styles.chapterItem}>
               {isInteractive ? (
-                <button
-                  type="button"
-                  className={`${styles.timestamp} ${styles.timestampButton}`}
-                  onClick={() => handleSeek(timestamp)}
-                >
-                  <time>{timestamp}</time>
-                </button>
+                <ChapterTimestampButton
+                  timecode={timestamp}
+                  playerId={playerId as string}
+                  position={i}
+                  eventTrackingData={eventTrackingData}
+                />
               ) : (
                 <time className={styles.timestamp}>{timestamp}</time>
               )}
@@ -114,12 +161,14 @@ interface Props {
   text: string;
   'data-testid'?: string;
   playerId?: string;
+  eventTrackingData?: EventTrackingData;
 }
 
 const EpisodeDescriptionFormatter = ({
   text,
   'data-testid': testId,
   playerId,
+  eventTrackingData,
 }: Props) => {
   if (!text) return null;
 
@@ -136,7 +185,11 @@ const EpisodeDescriptionFormatter = ({
           return (
             // eslint-disable-next-line react/no-array-index-key
             <div key={i} className={styles.chapterBlock}>
-              <ChapterList lines={lines} playerId={playerId} />
+              <ChapterList
+                lines={lines}
+                playerId={playerId}
+                eventTrackingData={eventTrackingData}
+              />
             </div>
           );
         }
@@ -150,7 +203,11 @@ const EpisodeDescriptionFormatter = ({
                 <p className={styles.paragraph}>{renderWithLinks(intro)}</p>
               )}
               <div className={styles.chapterBlock}>
-                <ChapterList lines={chapterLines} playerId={playerId} />
+                <ChapterList
+                  lines={chapterLines}
+                  playerId={playerId}
+                  eventTrackingData={eventTrackingData}
+                />
               </div>
             </div>
           );

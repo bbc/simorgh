@@ -3,6 +3,7 @@ import {
   screen,
   fireEvent,
 } from '#app/components/react-testing-library-with-providers';
+import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import EpisodeDescriptionFormatter from '.';
 
 const CHAPTER_TEXT = '00:00 Introduction\n00:43 Chapter one\n06:25 Chapter two';
@@ -85,7 +86,7 @@ describe('EpisodeDescriptionFormatter', () => {
     expect(mockCurrentTime).toHaveBeenCalledWith(43);
     expect(mockPlayer.play).toHaveBeenCalledTimes(1);
 
-    delete window.mediaPlayers;
+    delete (window as any).mediaPlayers;
   });
 
   it('converts H:MM:SS timecodes correctly when seeking', () => {
@@ -105,7 +106,7 @@ describe('EpisodeDescriptionFormatter', () => {
     expect(mockCurrentTime).toHaveBeenCalledWith(5025);
     expect(mockPlayer.play).toHaveBeenCalledTimes(1);
 
-    delete window.mediaPlayers;
+    delete (window as any).mediaPlayers;
   });
 
   it('does not throw when player is not yet ready on timestamp click', () => {
@@ -119,7 +120,7 @@ describe('EpisodeDescriptionFormatter', () => {
     expect(() =>
       fireEvent.click(screen.getAllByRole('button')[0]),
     ).not.toThrow();
-    delete window.mediaPlayers;
+    delete (window as any).mediaPlayers;
   });
 
   it('renders a paragraph (not chapter list) when not all lines have timecodes', () => {
@@ -190,7 +191,7 @@ describe('EpisodeDescriptionFormatter', () => {
       fireEvent.click(container.querySelectorAll('button')[1]); // 00:34 → 34s
       expect(mockCurrentTime).toHaveBeenCalledWith(34);
 
-      delete window.mediaPlayers;
+      delete (window as any).mediaPlayers;
     });
 
     it('does not parse as inline timecodes when there is only one timecode', () => {
@@ -198,6 +199,83 @@ describe('EpisodeDescriptionFormatter', () => {
       const { container } = render(<EpisodeDescriptionFormatter text={text} />);
       expect(container.querySelector('ol')).toBeNull();
       expect(container.querySelector('p')).toBeInTheDocument();
+    });
+  });
+
+  describe('ATI click tracking on timestamp buttons', () => {
+    afterEach(() => {
+      jest.restoreAllMocks();
+    });
+
+    it('sends a click tracking beacon with itemTracker details when a timestamp button is clicked', () => {
+      const onClickSpy = jest.fn();
+      const clickTrackerSpy = jest
+        .spyOn(clickTracking, 'default')
+        .mockImplementation(() => ({ onClick: onClickSpy }));
+
+      render(
+        <EpisodeDescriptionFormatter
+          text={CHAPTER_TEXT}
+          playerId="test-player"
+          eventTrackingData={{ componentName: 'podcast-chapter-timestamps' }}
+        />,
+      );
+
+      expect(clickTrackerSpy).toHaveBeenCalledWith(
+        expect.objectContaining({
+          componentName: 'podcast-chapter-timestamps',
+          itemTracker: expect.objectContaining({
+            type: 'podcast-chapter-timestamp',
+            text: '00:43',
+            position: 1,
+          }),
+        }),
+      );
+
+      const buttons = screen.getAllByRole('button');
+      fireEvent.click(buttons[1]);
+
+      expect(onClickSpy).toHaveBeenCalledTimes(1);
+    });
+
+    it('tracks each chapter timestamp with its own position', () => {
+      const clickTrackerSpy = jest
+        .spyOn(clickTracking, 'default')
+        .mockImplementation(() => ({ onClick: jest.fn() }));
+
+      render(
+        <EpisodeDescriptionFormatter
+          text={CHAPTER_TEXT}
+          playerId="test-player"
+        />,
+      );
+
+      const positions = clickTrackerSpy.mock.calls.map(
+        ([eventTrackingData]) => eventTrackingData?.itemTracker.position,
+      );
+
+      expect(positions).toEqual([0, 1, 2]);
+    });
+
+    it('still seeks the player when the click tracker beacon has no onClick handler', () => {
+      jest.spyOn(clickTracking, 'default').mockImplementation(() => ({}));
+
+      const mockCurrentTime = jest.fn();
+      const mockPlayer = { currentTime: mockCurrentTime, play: jest.fn() };
+      window.mediaPlayers = { 'test-player': mockPlayer as never };
+
+      render(
+        <EpisodeDescriptionFormatter
+          text={CHAPTER_TEXT}
+          playerId="test-player"
+        />,
+      );
+
+      const buttons = screen.getAllByRole('button');
+      expect(() => fireEvent.click(buttons[1])).not.toThrow();
+      expect(mockCurrentTime).toHaveBeenCalledWith(43);
+
+      delete (window as any).mediaPlayers;
     });
   });
 
