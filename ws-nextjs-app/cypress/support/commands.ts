@@ -5,6 +5,7 @@ import defaultToggles from '#app/lib/config/toggles';
 import testResponseCodeAndRetry from './helpers/testResponseCodeAndRetry';
 import getAppEnv from './helpers/getAppEnv';
 import handleContinueReadingButton from './helpers/handleContinueReadingButton';
+import envConfig from './config/envs';
 
 interface TestResponseCodeAndRetry {
   url: string;
@@ -48,7 +49,7 @@ const getToggles = memoizeWith(keyGenFn, service => {
     cy.writeFile(togglesFixture, defaultToggles.local);
   } else {
     cy.request({
-      url: `${process.env.TOGGLES_BFF_PATH}?service=${service}&application=simorgh`,
+      url: `${envConfig.togglesUrl}?service=${service}&application=simorgh`,
     }).then(response => {
       cy.writeFile(togglesFixture, response.body.toggles);
     });
