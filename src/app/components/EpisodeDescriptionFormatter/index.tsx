@@ -16,7 +16,8 @@ const INLINE_TIMECODE_SPLIT = /\s(?=\d{1,2}:\d{2}(?::\d{2})?\s)/;
 
 // Used as a capturing group in split() so URLs are preserved in the resulting array
 // Matches both full URLs (https?://) and bare domains (example.com, www.example.com, youtube.com)
-const URL_SPLIT_PATTERN = /(https?:\/\/[^\s<>"{}|\\^[\]`]+|(?:www\.)?[a-z0-9][-a-z0-9]*(?:\.[a-z0-9][-a-z0-9]*)+(?:[/?#][^\s<>"{}|\\^[\]`]*)?)/gi;
+const URL_SPLIT_PATTERN =
+  /(https?:\/\/[^\s<>"{}|\\^[\]`]+|(?:www\.)?[a-z0-9][-a-z0-9]*(?:\.[a-z0-9][-a-z0-9]*)+(?:[/?#][^\s<>"{}|\\^[\]`]*)?)/gi;
 const URL_TEST_PATTERN = /^https?:\/\//i;
 
 const isChapterBlock = (lines: string[]) => {
@@ -256,7 +257,9 @@ const EpisodeDescriptionFormatter = ({
             // eslint-disable-next-line react/no-array-index-key
             <div key={i}>
               {intro && (
-                <p className={styles.paragraph}>{renderWithLinks(intro, eventTrackingData)}</p>
+                <p className={styles.paragraph}>
+                  {renderWithLinks(intro, eventTrackingData)}
+                </p>
               )}
               <div className={styles.chapterBlock}>
                 <ChapterList

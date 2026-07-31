@@ -244,7 +244,9 @@ describe('EpisodeDescriptionFormatter', () => {
   it('auto-links bare domains with paths', () => {
     const text = 'Check out youtube.com/watch?v=abc123';
     render(<EpisodeDescriptionFormatter text={text} />);
-    const link = screen.getByRole('link', { name: 'youtube.com/watch?v=abc123' });
+    const link = screen.getByRole('link', {
+      name: 'youtube.com/watch?v=abc123',
+    });
     expect(link).toHaveAttribute('href', 'https://youtube.com/watch?v=abc123');
   });
 
@@ -270,7 +272,7 @@ describe('EpisodeDescriptionFormatter', () => {
     expect(screen.getByTestId('synopsis')).toBeInTheDocument();
   });
 
-    describe('ATI click tracking on timestamp buttons', () => {
+  describe('ATI click tracking on timestamp buttons', () => {
     afterEach(() => {
       jest.restoreAllMocks();
     });
