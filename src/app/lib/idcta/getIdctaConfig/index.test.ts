@@ -1,14 +1,11 @@
-import getToggleDefinitions from '#app/lib/utilities/getToggleDefinition';
 import isLocal from '#app/lib/utilities/isLocal';
 import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
 import fetchIdctaConfig from '../fetchIdctaConfig';
 import getIdctaConfig from '.';
 
-jest.mock('#app/lib/utilities/getToggleDefinition');
 jest.mock('#app/lib/utilities/isLocal');
 jest.mock('../fetchIdctaConfig');
 
-const mockGetToggleDefinitions = getToggleDefinitions as jest.Mock;
 const mockIsLocal = isLocal as jest.Mock;
 const mockFetchIdctaConfig = fetchIdctaConfig as jest.Mock;
 
@@ -23,18 +20,15 @@ describe('getIdctaConfig', () => {
 
   beforeEach(() => {
     jest.clearAllMocks();
-    mockGetToggleDefinitions.mockReturnValue({
-      account: { enabled: true, value: 'mundo' },
-    });
     mockIsLocal.mockReturnValue(false);
   });
 
   it('should return null when account toggle is disabled', async () => {
-    mockGetToggleDefinitions.mockReturnValue({
+    const toggles = {
       account: { enabled: false },
-    });
+    };
 
-    const result = await getIdctaConfig(mockToggles, mockService);
+    const result = await getIdctaConfig(toggles, mockService);
 
     expect(result).toBeNull();
     expect(mockFetchIdctaConfig).not.toHaveBeenCalled();
@@ -50,13 +44,13 @@ describe('getIdctaConfig', () => {
   });
 
   it('should fetch config when service matches in local environment', async () => {
-    mockGetToggleDefinitions.mockReturnValue({
+    const toggles = {
       account: { enabled: true, value: 'hindi|mundo' },
-    });
+    };
     mockIsLocal.mockReturnValue(true);
     mockFetchIdctaConfig.mockResolvedValue(mockIdctaConfig);
 
-    const result = await getIdctaConfig(mockToggles, 'hindi');
+    const result = await getIdctaConfig(toggles, 'hindi');
 
     expect(result).toEqual(expect.objectContaining(mockIdctaConfig));
     expect(mockFetchIdctaConfig).toHaveBeenCalled();
