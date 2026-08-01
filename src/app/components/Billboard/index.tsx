@@ -36,6 +36,10 @@ interface BillboardProps {
 }
 
 const IMAGE_WIDTH = 660;
+// 2x the fixed 660px display width (desktop ≥1280px), so high-DPI/retina
+// screens get a sharp source instead of upscaling the 660w image.
+const IMAGE_WIDTH_RETINA = IMAGE_WIDTH * 2;
+const IMAGE_RESOLUTIONS = [240, 320, 480, 624, 800, IMAGE_WIDTH_RETINA];
 const DEFAULT_IMAGE_RES = 480;
 
 export default ({
@@ -87,7 +91,8 @@ export default ({
       createSrcsets({
         originCode,
         locator,
-        originalImageWidth: IMAGE_WIDTH,
+        imageResolutions: IMAGE_RESOLUTIONS,
+        originalImageWidth: IMAGE_WIDTH_RETINA,
       });
     const srcWebp = buildIChefURL({
       originCode,

@@ -293,6 +293,22 @@ describe('Billboard', () => {
       maskedImageSpy.mockRestore();
     });
 
+    it('includes a retina (2x) resolution in the srcset so high-DPI screens are not upscaled', () => {
+      render(
+        <Billboard
+          heading={title}
+          description={description}
+          link={link}
+          image={imageUrl}
+          altText={imageAlt}
+          prominence={VISUAL_PROMINENCE.HIGH}
+        />,
+      );
+
+      const image = screen.getByAltText(imageAlt);
+      expect(image.getAttribute('srcset')).toContain('1320w');
+    });
+
     it('renders the curation grid when promo items are present', () => {
       const maskedImageSpy = jest.spyOn(MaskedImage, 'default');
 
