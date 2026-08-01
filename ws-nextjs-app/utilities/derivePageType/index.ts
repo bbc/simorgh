@@ -12,6 +12,7 @@ import {
   TV_PAGE,
   MOST_READ_PAGE,
   LIVE_RADIO_PAGE,
+  LIVE_TV_PAGE,
 } from '#app/routes/utils/pageTypes';
 import {
   isOptimoIdCheck,
@@ -51,6 +52,9 @@ const isOnDemandTvPath = (pathname: string) =>
 const isLiveRadioPath = (pathname: string) =>
   /\/bbc_[a-z]+_radio\/liveradio/.test(pathname);
 
+const isLiveTvPath = (path: string) =>
+  /\/([a-zA-Z]+)\/watch\/([^/]+)\/live/.test(path);
+
 export default function derivePageType(pathname: string): PageTypes {
   const sanitisedPathname = new URL(
     removeRendererExtension(pathname),
@@ -75,6 +79,7 @@ export default function derivePageType(pathname: string): PageTypes {
   if (isOnDemandTvPath(sanitisedPathname)) return TV_PAGE;
   if (isOptimoIdCheck(sanitisedPathname)) return ARTICLE_PAGE;
   if (isCpsIdCheck(sanitisedPathname)) return ARTICLE_PAGE;
+  if (isLiveTvPath(sanitisedPathname)) return LIVE_TV_PAGE;
 
   return UNKNOWN_PAGE;
 }
