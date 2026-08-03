@@ -1,4 +1,4 @@
-import { use, useState, useCallback } from 'react';
+import { Fragment, ReactNode, useState, useCallback, use } from 'react';
 import { useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import useMediaQuery from '#hooks/useMediaQuery';
@@ -59,6 +59,7 @@ import ContinueReadingButton, {
   ContinueReadingButtonProps,
 } from '#app/components/ContinueReadingButton';
 import SaveArticleButton from '#app/components/SaveArticleButton';
+import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
 import AccountPromotionalBannerExperiment from '#app/components/Account/AccountPromotionalBannerExperiment';
 import ElectionBanner from './ElectionBanner';
 import ArticleMessageBanner from './ArticleMessageBanner';
@@ -84,6 +85,9 @@ import RelatedContentSection from '../../components/RelatedContentSection';
 import TopicDiscovery from '../../components/TopicDiscovery';
 import Disclaimer from '../../components/Disclaimer';
 import SecondaryColumn from './SecondaryColumn';
+import useMobileOJComponentOrder, {
+  useDebugVariant,
+} from './useMobileOJComponentOrder';
 import styles from './ArticlePage.styles';
 import { ComponentToRenderProps, TimeStampProps } from './types';
 import ArticleHeadline from './ArticleHeadline';
@@ -92,6 +96,12 @@ import {
   isPortraitVideoUnderHeadline,
 } from '../../components/MediaLoader/utils/isPortraitVideo';
 import LocationBasedTopicOJ from '../../components/LocationBasedTopicOJ';
+import {
+  OJComponentKey,
+  SEARCH_MID_ARTICLE_COMPONENT,
+  SearchVariant,
+} from './searchReferrerComponentOrder';
+import TopStoriesSection from './PagePromoSections/TopStoriesSection';
 
 const getImageComponent =
   (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (
@@ -161,6 +171,7 @@ const getWsojComponent = ({
 }) => (
   <Recommendations data={data} {...(experimentProps && { experimentProps })} />
 );
+
 const DisclaimerWithPaddingOverride = (props: ComponentToRenderProps) => (
   <Disclaimer {...props} increasePaddingOnDesktop={false} />
 );
@@ -292,6 +303,60 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     ?.split(':')
     ?.includes('topcat');
 
+  const showCountryCuration = Boolean(
+    !isAmp &&
+    !isLite &&
+    !isApp &&
+    countryCurationEnabled &&
+    pageData?.countryCuration?.summaries?.length,
+  );
+
+  const hasRelatedContent = blocks.some(
+    block => block.type === 'relatedContent',
+  );
+
+  const getSearchMidArticleOJ = ({
+    data,
+    experimentProps,
+    searchVariant,
+  }: {
+    data: Recommendation[];
+    experimentProps?: ComponentExperimentProps | null;
+    searchVariant: SearchVariant | null;
+  }) => {
+    const midarticleOJ = searchVariant
+      ? SEARCH_MID_ARTICLE_COMPONENT[searchVariant]
+      : null;
+    switch (midarticleOJ) {
+      case 'mostRead':
+        return <Recommendations data={data} />;
+
+      case 'relatedContent':
+        return hasRelatedContent ? (
+          <div css={styles.midArticleOJ}>
+            <RelatedContentSection content={blocks} />
+          </div>
+        ) : (
+          <Recommendations data={data} />
+        );
+
+      case 'topicDiscovery':
+        return <TopicDiscovery topics={topics} css={styles.midArticleOJ} />;
+
+      case 'locationBasedOJ':
+        return showCountryCuration ? (
+          <div css={styles.midArticleOJ}>
+            <LocationBasedTopicOJ pageData={pageData} />
+          </div>
+        ) : (
+          <Recommendations data={data} />
+        );
+
+      default:
+        return getWsojComponent({ data, experimentProps });
+    }
+  };
+
   const showPortraitVideoCarousel = Boolean(
     pageData?.portraitVideoItems?.portraitVideo?.blocks?.length &&
     articlePortraitVideoEnabled,
@@ -350,6 +415,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     promoImageRawBlock?.model as { locator?: string } | undefined
   )?.locator;
 
+  const searchVariant = useDebugVariant();
+  const mobileOJOrder = useMobileOJComponentOrder(searchVariant);
+
   const componentsToRender = {
     visuallyHiddenHeadline,
     headline: getHeadlineComponent,
@@ -376,10 +444,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     group: gist,
     links: ArticleLinksBlock,
     mpu: getMpuComponent(allowAdvertising),
+    // renders wsoj if user is on desktop, otherwise renders a chosen OJ based on search referrer experiment on mobile
     wsoj: ({ data }: { data: Recommendation[] }) =>
-      getWsojComponent({
-        data,
-      }),
+      !isDesktopViewport
+        ? getSearchMidArticleOJ({ data, searchVariant })
+        : getWsojComponent({ data }),
     disclaimer: DisclaimerWithPaddingOverride,
     podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
     ...(showContinueReadingButton && {
@@ -404,8 +473,16 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const showTopicDiscovery = topicDiscoveryEnabled && !isAmp && !isLite;
 
+  // Topic Discovery shows in the midarticle position for one variant
+  // We want to hide RelatedTopics when this happens
+  const topicDiscoveryInMidArticlePosition =
+    !isDesktopViewport && searchVariant === 'variant_5_recommended_mid';
+
   const showRelatedTopicsComponent = Boolean(
-    showRelatedTopics && topics.length > 0 && !showTopicDiscovery,
+    showRelatedTopics &&
+    topics.length > 0 &&
+    !showTopicDiscovery &&
+    !topicDiscoveryInMidArticlePosition,
   );
 
   const showMediaCuration = Boolean(
@@ -417,13 +494,112 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     articleVideoCurationEnabled,
   );
 
-  const showCountryCuration = Boolean(
-    !isAmp &&
-    !isLite &&
-    !isApp &&
-    countryCurationEnabled &&
-    pageData?.countryCuration?.summaries?.length,
-  );
+  const topStoriesContent = pageData?.secondaryColumn?.topStories;
+  const featuresContent = pageData?.secondaryColumn?.features;
+
+  const getTopicDiscoverySlot = () => {
+    if (showTopicDiscovery) {
+      return (
+        <TopicDiscovery
+          css={[
+            ...(showContinueReadingButton
+              ? [!showAllContent && styles.hideTopicDiscovery]
+              : []),
+          ]}
+          topics={topics}
+        />
+      );
+    }
+    if (showRelatedTopicsComponent) {
+      return (
+        <RelatedTopics
+          css={[
+            styles.relatedTopics,
+            ...(showContinueReadingButton
+              ? [!showAllContent && styles.hideRelatedTopics]
+              : []),
+          ]}
+          topics={topics}
+          mobileDivider={false}
+        />
+      );
+    }
+    return null;
+  };
+
+  const topicDiscoverySlot = getTopicDiscoverySlot();
+
+  const getVideoOJComponent = (): ReactNode => {
+    if (showPortraitVideoCarousel) {
+      return (
+        <PortraitVideoCarousel
+          {...portraitVideoCarouselProps}
+          css={styles.portraitVideoCarousel}
+        />
+      );
+    }
+    if (showMediaCuration) {
+      return (
+        <div css={styles.mediaCurationRow}>
+          <div data-testid="media-curation">
+            <Curation
+              visualStyle={VISUAL_STYLE.FEED}
+              visualProminence={VISUAL_PROMINENCE.NORMAL}
+              summaries={mediaCurationContent?.summaries}
+              title={mediaCurationContent?.title}
+              position={mediaCurationContent?.position || 0}
+              curationId={mediaCurationContent?.curationId}
+              curationLength={1}
+              link={mediaCurationContent?.link}
+              curationContentType="video"
+              pageType={pageType}
+            />
+          </div>
+        </div>
+      );
+    }
+    return null;
+  };
+
+  const mobileOJComponents: Record<OJComponentKey, ReactNode> = {
+    mostRead:
+      !isApp && !isPGL ? (
+        <MostRead
+          css={styles.mostReadSection}
+          data={mostReadInitialData}
+          columnLayout="twoColumn"
+          size="default"
+          headingBackgroundColour={GREY_2}
+          mobileDivider={showRelatedTopicsComponent}
+        />
+      ) : null,
+    topicDiscovery: topicDiscoverySlot,
+    relatedContent: <RelatedContentSection content={blocks} />,
+    videoOJ: getVideoOJComponent(),
+    topStories:
+      !isApp && !isPGL && topStoriesContent ? (
+        <div
+          css={styles.topStoriesSection}
+          data-testid="top-stories"
+          data-experiment-position="secondaryColumn"
+        >
+          <TopStoriesSection content={topStoriesContent} />
+        </div>
+      ) : null,
+    featuredArticles:
+      !isApp && !isPGL && featuresContent ? (
+        <div css={styles.featuresSection} data-testid="features">
+          <FeaturesAnalysis
+            content={featuresContent}
+            parentColumns={{}}
+            sectionLabelBackground={GREY_2}
+          />
+        </div>
+      ) : null,
+    locationBasedOJ: showCountryCuration ? (
+      <LocationBasedTopicOJ pageData={pageData} />
+    ) : null,
+  };
 
   const shouldApplyCollapsedArticleSpacing =
     showContinueReadingButton && !showAllContent;
@@ -500,7 +676,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             <OptimizelyPageMetrics trackPageComplete />
           </main>
           <OptimizelyPageMetrics trackPageDepth />
-          {showTopicDiscovery && (
+          {!mobileOJOrder && showTopicDiscovery && (
             <TopicDiscovery
               css={[
                 ...(showContinueReadingButton
@@ -510,7 +686,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               topics={topics}
             />
           )}
-          {showRelatedTopicsComponent && (
+          {!mobileOJOrder && showRelatedTopicsComponent && (
             <RelatedTopics
               css={[
                 styles.relatedTopics,
@@ -522,15 +698,17 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               mobileDivider={false}
             />
           )}
-          {showCountryCuration && <LocationBasedTopicOJ pageData={pageData} />}
-          {showPortraitVideoCarousel && (
+          {!mobileOJOrder && showCountryCuration && (
+            <LocationBasedTopicOJ pageData={pageData} />
+          )}
+          {!mobileOJOrder && showPortraitVideoCarousel && (
             <PortraitVideoCarousel
               {...portraitVideoCarouselProps}
               css={styles.portraitVideoCarousel}
             />
           )}
-          <RelatedContentSection content={blocks} />
-          {showMediaCuration && (
+          {!mobileOJOrder && <RelatedContentSection content={blocks} />}
+          {!mobileOJOrder && showMediaCuration && (
             <div css={styles.mediaCurationRow}>
               <div data-testid="media-curation">
                 <Curation
@@ -550,10 +728,20 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           )}
         </div>
 
-        {!isApp && !isPGL && <SecondaryColumn pageData={pageData} />}
+        {!isApp && !isPGL && !mobileOJOrder && (
+          <SecondaryColumn pageData={pageData} />
+        )}
       </div>
 
-      {!isApp && !isPGL && (
+      {mobileOJOrder && (
+        <div css={styles.mobileOJContainer} data-testid="mobile-oj-container">
+          {mobileOJOrder.map(key => (
+            <Fragment key={key}>{mobileOJComponents[key]}</Fragment>
+          ))}
+        </div>
+      )}
+
+      {!isApp && !isPGL && !mobileOJOrder && (
         <MostRead
           css={styles.mostReadSection}
           data={mostReadInitialData}
