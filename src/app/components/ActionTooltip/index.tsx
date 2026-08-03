@@ -69,7 +69,7 @@ const ActionTooltip = ({
           </div>
 
           {body && (
-            <Text size="greatPrimer" className={styles.body}>
+            <Text size="bodyCopy" className={styles.body}>
               {body}
             </Text>
           )}
