@@ -1,4 +1,4 @@
-import { ExtractedTopic } from '..';
+import type { ExtractedTopic } from '..';
 
 const COUNTRY_TOPIC_TARGET_INDEX = 2;
 

@@ -1,5 +1,5 @@
 import repositionCountryTopic from '.';
-import { ExtractedTopic } from '..';
+import type { ExtractedTopic } from '..';
 
 describe('repositionCountryTopic', () => {
   const COUNTRY_TOPIC_ID = 'c6vzy3wd189t';
