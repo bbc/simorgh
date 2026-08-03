@@ -8,7 +8,7 @@ Local toggle configs are global and configured for the application environment, 
 
 Simorgh has 3 toggle config files for `test`, `local` and `live` environments. Remote toggles on iSite also take precendence over local toggles when the toggle response is fetched:
 
-https://github.com/bbc/simorgh/blob/9fecaba6ef30b3fff627ef9a75f0286d63f0a343/src/app/lib/utilities/fetchToggles/index.ts#L48-L54
+https://github.com/bbc/simorgh/blob/latest/src/app/lib/utilities/fetchToggles/index.ts#L48-L54
 
 If a toggle is not configured in iSite or in the local toggle configs deployed with Simorgh, then the toggle value will default to false.
 

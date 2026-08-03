@@ -1,4 +1,5 @@
 import getUUID from '#app/lib/utilities/getUUID';
+import getToggle from '#app/lib/utilities/getToggle';
 import { Toggles } from '#app/models/types/global';
 
 interface InjectNonceHeader {
@@ -34,9 +35,8 @@ export default ({
   isAmp,
 }: InjectNonceHeader) => {
   const { enabled: isNonceToggleEnabled, value: nonceCountries = '' } =
-    ('adsNonce' in toggles ? toggles.adsNonce : undefined) || {};
-  const { enabled: isAdsToggleEnabled } =
-    ('ads' in toggles ? toggles.ads : undefined) || {};
+    getToggle(toggles, 'adsNonce');
+  const { enabled: isAdsToggleEnabled } = getToggle(toggles, 'ads');
 
   if (
     isLite ||
