@@ -1,7 +1,18 @@
-import { Fragment, ReactNode, useState, useCallback, use } from 'react';
+import {
+  Fragment,
+  ReactNode,
+  useState,
+  useCallback,
+  use,
+  useEffect,
+} from 'react';
 import { useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import useMediaQuery from '#hooks/useMediaQuery';
+import useNearViewport from '#hooks/useNearViewport';
+import useOptimizelyVariation, {
+  ExperimentType,
+} from '#hooks/useOptimizelyVariation';
 import useScrollDepthTracker from '#hooks/useScrollDepthTracker';
 import { GROUP_4_MIN_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
 import { singleTextBlock } from '#app/models/blocks';
@@ -103,6 +114,33 @@ import {
 } from './searchReferrerComponentOrder';
 import TopStoriesSection from './PagePromoSections/TopStoriesSection';
 import SearchOjExperiment from './SearchOjExperiment';
+import {
+  isSearchOjVariant,
+  MID_ARTICLE_OJ_EXPERIMENT_TRIGGER_ID,
+  SEARCH_OJ_EXPERIMENT_NAME,
+  SearchOjVariant,
+} from './SearchOjExperiment/config';
+
+type ActivateSearchOjExperimentProps = {
+  onDecision: (variation: SearchOjVariant | null) => void;
+};
+
+const ActivateSearchOjExperiment = ({
+  onDecision,
+}: ActivateSearchOjExperimentProps) => {
+  const variation = useOptimizelyVariation({
+    experimentName: SEARCH_OJ_EXPERIMENT_NAME,
+    experimentType: ExperimentType.CLIENT_SIDE,
+  });
+
+  useEffect(() => {
+    if (variation !== null) {
+      onDecision(isSearchOjVariant(variation) ? variation : null);
+    }
+  }, [onDecision, variation]);
+
+  return null;
+};
 
 const getImageComponent =
   (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (
@@ -229,22 +267,21 @@ const getContinueReadingButton =
     showAllContent,
     setShowAllContent,
     experimentProps,
+    onExpand,
   }: ContinueReadingButtonProps) =>
   () => (
     <ContinueReadingButton
       showAllContent={showAllContent}
       setShowAllContent={setShowAllContent}
       experimentProps={experimentProps}
+      onExpand={onExpand}
     />
   );
 
 const getSearchOjExperiment =
-  (hasExpandedContinueReading: boolean) =>
+  (experimentProps?: ComponentExperimentProps) =>
   ({ data }: { data: Recommendation[] }) => (
-    <SearchOjExperiment
-      data={data}
-      hasExpandedContinueReading={hasExpandedContinueReading}
-    />
+    <SearchOjExperiment data={data} experimentProps={experimentProps} />
   );
 
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
@@ -252,7 +289,14 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const [isDesktopViewport, setIsDesktopViewport] = useState(false);
   const [hasExpandedContinueReading, setHasExpandedContinueReading] =
     useState(false);
+  const [experimentVariant, setExperimentVariant] =
+    useState<SearchOjVariant | null>(null);
   const { isApp, isAmp, isLite, pageType } = use(RequestContext);
+
+  const isNearMidArticleOj = useNearViewport({
+    elementId: MID_ARTICLE_OJ_EXPERIMENT_TRIGGER_ID,
+    bottomViewportMargin: 1,
+  });
 
   const {
     articleAuthor,
@@ -447,8 +491,20 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     promoImageRawBlock?.model as { locator?: string } | undefined
   )?.locator;
 
-  const searchVariant = useDebugVariant();
+  const debugVariant = useDebugVariant();
+  const searchVariant: SearchVariant | null =
+    debugVariant ??
+    (experimentVariant === 'control' ? null : experimentVariant);
   const mobileOJOrder = useMobileOJComponentOrder(searchVariant);
+
+  const searchOjExperimentProps: ComponentExperimentProps | undefined =
+    experimentVariant
+      ? {
+          experimentName: SEARCH_OJ_EXPERIMENT_NAME,
+          experimentVariant,
+          sendOptimizelyEvents: true,
+        }
+      : undefined;
 
   const componentsToRender = {
     visuallyHiddenHeadline,
@@ -484,7 +540,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           renderSearchMidArticleOj: getSearchMidArticleOJ,
           searchVariant,
         })
-      : getSearchOjExperiment(hasExpandedContinueReading),
+      : getSearchOjExperiment(searchOjExperimentProps),
     disclaimer: DisclaimerWithPaddingOverride,
     podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
     ...(showContinueReadingButton && {
@@ -645,6 +701,10 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     <div css={styles.pageWrapper}>
       {/* EXPERIMENT: newswb_ws_article_account_promo_banner */}
       <AccountPromotionalBannerExperiment />
+
+      {(isNearMidArticleOj || hasExpandedContinueReading) && (
+        <ActivateSearchOjExperiment onDecision={setExperimentVariant} />
+      )}
 
       <ATIAnalytics />
       <ChartbeatAnalytics
