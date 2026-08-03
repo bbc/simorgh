@@ -306,6 +306,12 @@ type Props = {
   // with the caller's own fullscreen layout.
   withinFullscreenContainer?: boolean;
   loadPlayerOnInitialRender?: boolean;
+  // Set by callers that render the player inside their own fullscreen
+  // presentation (e.g. PortraitVideoModal, which is a full-viewport modal on
+  // mobile portrait). Prevents MediaLoader forcing SMP fake fullscreen and
+  // applying the global fullscreen page state, which would otherwise conflict
+  // with the caller's own fullscreen layout.
+  withinFullscreenContainer?: boolean;
 };
 
 const MediaLoader = ({
@@ -316,6 +322,7 @@ const MediaLoader = ({
   eventMapping,
   withinFullscreenContainer = false,
   loadPlayerOnInitialRender = false,
+  withinFullscreenContainer = false,
 }: Props) => {
   const { lang, service, translations, defaultImage } = use(ServiceContext);
   const { pageIdentifier } = use(EventTrackingContext);
