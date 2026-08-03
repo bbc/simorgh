@@ -96,9 +96,7 @@ import RelatedContentSection from '../../components/RelatedContentSection';
 import TopicDiscovery from '../../components/TopicDiscovery';
 import Disclaimer from '../../components/Disclaimer';
 import SecondaryColumn from './SecondaryColumn';
-import useMobileOJComponentOrder, {
-  useDebugVariant,
-} from './useMobileOJComponentOrder';
+import useMobileOJComponentOrder from './useMobileOJComponentOrder';
 import styles from './ArticlePage.styles';
 import { ComponentToRenderProps, TimeStampProps } from './types';
 import ArticleHeadline from './ArticleHeadline';
@@ -491,10 +489,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     promoImageRawBlock?.model as { locator?: string } | undefined
   )?.locator;
 
-  const debugVariant = useDebugVariant();
   const searchVariant: SearchVariant | null =
-    debugVariant ??
-    (experimentVariant === 'control' ? null : experimentVariant);
+    experimentVariant === 'control' ? null : experimentVariant;
   const mobileOJOrder = useMobileOJComponentOrder(searchVariant);
 
   const searchOjExperimentProps: ComponentExperimentProps | undefined =
