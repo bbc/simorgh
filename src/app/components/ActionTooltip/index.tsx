@@ -49,7 +49,7 @@ const ActionTooltip = ({
           <div className={styles.header}>
             <StatusIcon status={status} />
 
-            <Text size="pica" fontVariant="picaBold" className={styles.title}>
+            <Text size="pica" fontVariant="sansBold" className={styles.title}>
               {title}
             </Text>
 

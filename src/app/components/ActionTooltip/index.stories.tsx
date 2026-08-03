@@ -11,7 +11,7 @@ const TooltipDemo = ({ status }: { status: ActionTooltipStatus }) => {
       titleAfter: 'successfully',
     },
     error: {
-      title: 'Sorry something went wrong  ',
+      title: 'Sorry something went wrong ',
       body: 'Check your connection, refresh the page and try again',
     },
     removed: {
