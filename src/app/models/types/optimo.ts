@@ -180,5 +180,5 @@ export type Article = {
   relatedContent?: RelatedContent;
   portraitVideoItems?: PortraitVideoItems;
   countryCuration?: CountryCuration;
-  countryTopicIdToReorder?: string;
+  countryTopicIdToReorder?: string | null;
 };
