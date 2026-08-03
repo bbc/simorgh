@@ -61,6 +61,7 @@ import ContinueReadingButton, {
 import SaveArticleButton from '#app/components/SaveArticleButton';
 import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
 import AccountPromotionalBannerExperiment from '#app/components/Account/AccountPromotionalBannerExperiment';
+import repositionCountryTopic from '#app/components/TopicDiscovery/RepositionCountryTopic';
 import ElectionBanner from './ElectionBanner';
 import ArticleMessageBanner from './ArticleMessageBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
@@ -274,6 +275,13 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const blocks = pageData?.content?.model?.blocks ?? [];
   const mediaCurationContent = pageData?.secondaryColumn?.mediaCuration;
   const startsWithHeading = blocks?.[0]?.type === 'headline' || false;
+
+  const countryTopicToReorder = pageData?.countryTopicIdToReorder ?? null;
+
+  const topicDiscoveryTopics = repositionCountryTopic(
+    topics,
+    countryTopicToReorder,
+  );
 
   const bylineBlock = blocks.find(
     (block): block is OptimoBylineBlock =>
@@ -506,7 +514,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               ? [!showAllContent && styles.hideTopicDiscovery]
               : []),
           ]}
-          topics={topics}
+          topics={topicDiscoveryTopics}
         />
       );
     }
@@ -683,7 +691,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
                   ? [!showAllContent && styles.hideTopicDiscovery]
                   : []),
               ]}
-              topics={topics}
+              topics={topicDiscoveryTopics}
             />
           )}
           {!mobileOJOrder && showRelatedTopicsComponent && (
