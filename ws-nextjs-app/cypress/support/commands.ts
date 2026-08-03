@@ -50,11 +50,16 @@ const getToggles = memoizeWith(keyGenFn, service => {
   togglesEndpoint.searchParams.set('service', service);
   togglesEndpoint.searchParams.set('application', 'simorgh');
 
-  if (getAppEnv() === 'local') {
+  const appEnv = getAppEnv();
+
+  if (appEnv === 'local') {
     cy.writeFile(togglesFixture, defaultToggles.local);
   } else {
     cy.request({
       url: togglesEndpoint.toString(),
+      ...(appEnv !== 'live' && {
+        headers: { 'ctx-service-env': 'test' },
+      }),
     }).then(response => {
       cy.writeFile(togglesFixture, response.body.data.toggles);
     });
