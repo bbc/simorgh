@@ -13,6 +13,7 @@ const repositionCountryTopic = (
   const reorderedTopics = [...topics];
   const [countryTopic] = reorderedTopics.splice(0, 1);
 
+  // If there are fewer than three topics, insert at the end
   const insertAt = Math.min(COUNTRY_TOPIC_TARGET_INDEX, reorderedTopics.length);
   reorderedTopics.splice(insertAt, 0, countryTopic);
 
