@@ -250,11 +250,12 @@ type Props = {
   embedded?: boolean;
   uniqueId?: string;
   eventMapping?: EventMapping;
-  // Opt-out for callers that provide their own fullscreen presentation (e.g.
-  // PortraitVideoModal). Prevents MediaLoader forcing SMP fake fullscreen and
+  // Set by callers that render the player inside their own fullscreen
+  // presentation (e.g. PortraitVideoModal, which is a full-viewport modal on
+  // mobile portrait). Prevents MediaLoader forcing SMP fake fullscreen and
   // applying the global fullscreen page state, which would otherwise conflict
   // with the caller's own fullscreen layout.
-  disableFakeFullscreen?: boolean;
+  withinFullscreenContainer?: boolean;
 };
 
 const MediaLoader = ({
@@ -263,7 +264,7 @@ const MediaLoader = ({
   embedded,
   uniqueId,
   eventMapping,
-  disableFakeFullscreen = false,
+  withinFullscreenContainer = false,
 }: Props) => {
   const { lang, service, translations, defaultImage } = use(ServiceContext);
   const { pageIdentifier } = use(EventTrackingContext);
@@ -372,7 +373,7 @@ const MediaLoader = ({
 
   const hasPlaceholder = Boolean(showPlaceholder && placeholderSrc);
   const shouldHandleFakeFullscreen =
-    !isAmp && !embedded && !isAudio && !disableFakeFullscreen;
+    !isAmp && !embedded && !isAudio && !withinFullscreenContainer;
 
   const setFakeFullscreenPageState = (isActive: boolean) => {
     if (!onClient()) return;
