@@ -42,6 +42,22 @@ describe('repositionCountryTopic', () => {
     expect(result).toEqual(topicsWithCountryInSecondPosition);
   });
 
+  it('should move the country topic to the end when there are fewer than three topics', () => {
+    const topicsWithTwoItems: ExtractedTopic[] = [
+      {
+        topicId: COUNTRY_TOPIC_ID,
+        topicName: 'Country Topic',
+        topicUrl: '/country-topic',
+      },
+      { topicId: 'topic-2', topicName: 'Topic 2', topicUrl: '/topic-2' },
+    ];
+    const result = repositionCountryTopic(topicsWithTwoItems, COUNTRY_TOPIC_ID);
+    expect(result.map(topic => topic.topicId)).toEqual([
+      'topic-2',
+      COUNTRY_TOPIC_ID,
+    ]);
+  });
+
   it('should return the topics unchanged when there is no country topic id', () => {
     const result = repositionCountryTopic(topics, null);
     expect(result).toEqual(topics);
