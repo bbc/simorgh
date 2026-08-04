@@ -11,6 +11,7 @@ import {
   TV_PAGE,
   MOST_READ_PAGE,
   LIVE_RADIO_PAGE,
+  OFFLINE_PAGE,
 } from '#app/routes/utils/pageTypes';
 import derivePageType from '.';
 
@@ -127,5 +128,17 @@ describe('derivePageType', () => {
     const pathname = '/pidgin/xxxxxxxxx';
     const result = derivePageType(pathname);
     expect(result).toEqual(UNKNOWN_PAGE);
+  });
+
+  it("should return OFFLINE_PAGE if pathname ends with 'offline'", () => {
+    const pathname = '/mundo/offline';
+    const result = derivePageType(pathname);
+    expect(result).toEqual(OFFLINE_PAGE);
+  });
+
+  it('should return OFFLINE_PAGE for a service variant offline page', () => {
+    const pathname = '/zhongwen/trad/offline';
+    const result = derivePageType(pathname);
+    expect(result).toEqual(OFFLINE_PAGE);
   });
 });
