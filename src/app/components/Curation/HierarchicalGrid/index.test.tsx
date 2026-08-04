@@ -365,6 +365,39 @@ describe('Hierarchical Grid Curation', () => {
     );
   });
 
+  it('should truncate a related topic link with an ellipsis when it cannot fit on one line', () => {
+    const longRelatedTopicTitle =
+      'A related topic title that is too long to fit on one line';
+    const summariesWithLongRelatedTopic = fixture.map((summary, index) =>
+      index === 0
+        ? {
+            ...summary,
+            relatedTopic: {
+              title: longRelatedTopicTitle,
+              link: { url: 'https://www.bbc.com/pidgin/topics/long-topic' },
+            },
+          }
+        : summary,
+    );
+
+    const { getByRole } = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={summariesWithLongRelatedTopic}
+        eventTrackingData={minimalEventTrackingData}
+      />,
+      {
+        service: 'pidgin',
+      },
+    );
+
+    expect(getByRole('link', { name: longRelatedTopicTitle })).toHaveStyle({
+      overflow: 'hidden',
+      textOverflow: 'ellipsis',
+      whiteSpace: 'nowrap',
+    });
+  });
+
   it('when there is no related topic, it should not apply the hasRelatedTopic class', () => {
     const { getByText } = render(
       <HierarchicalGrid
