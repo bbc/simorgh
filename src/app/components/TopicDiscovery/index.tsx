@@ -8,7 +8,10 @@ import ScrollableTabs from './ScrollableTabs';
 import styles from './index.styles';
 import useFetchTopicPromos from './useFetchTopicPromos';
 
-type ExtractedTopic = Pick<TopicTag, 'topicId' | 'topicName' | 'topicUrl'>;
+export type ExtractedTopic = Pick<
+  TopicTag,
+  'topicId' | 'topicName' | 'topicUrl'
+>;
 
 type TopicDiscoveryProps = {
   topics: ExtractedTopic[];
