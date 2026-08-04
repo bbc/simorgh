@@ -1,6 +1,8 @@
 import { createElement } from 'react';
 import { renderHook, waitFor, act } from '@testing-library/react';
 import onClient from '#app/lib/utilities/onClient';
+import useNearViewport from '#app/hooks/useNearViewport';
+import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
 import { GROUP_3_MAX_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
 import { articleDataNews } from '#pages/ArticlePage/fixtureData';
 import { Article } from '#app/models/types/optimo';
@@ -61,6 +63,7 @@ jest.mock(
 
 jest.mock('#app/components/OptimizelyPageMetrics');
 jest.mock('#app/hooks/useScrollDepthTracker', () => jest.fn(() => null));
+jest.mock('#app/hooks/useNearViewport', () => jest.fn());
 jest.mock('#hooks/useMediaQuery', () => jest.fn());
 jest.mock('#app/hooks/useOptimizelyVariation', () => ({
   __esModule: true,
@@ -77,6 +80,11 @@ jest.mock('#app/lib/utilities/onClient', () => ({
 }));
 
 const mockOnClient = onClient as jest.MockedFunction<typeof onClient>;
+const mockUseNearViewport = useNearViewport as jest.MockedFunction<
+  typeof useNearViewport
+>;
+const mockUseOptimizelyVariation =
+  useOptimizelyVariation as jest.MockedFunction<typeof useOptimizelyVariation>;
 
 describe('useMobileOJComponentOrder', () => {
   let matchMediaMock: jest.Mock;
@@ -169,7 +177,8 @@ describe('useMobileOJComponentOrder', () => {
       };
 
       const renderVariant = (variant: SearchVariant) => {
-        window.history.replaceState(null, '', `?debugVariant=${variant}`);
+        mockUseNearViewport.mockReturnValue(true);
+        mockUseOptimizelyVariation.mockReturnValue(variant);
 
         const pageData = {
           ...articleDataNews,
@@ -187,10 +196,6 @@ describe('useMobileOJComponentOrder', () => {
           },
         });
       };
-
-      afterEach(() => {
-        window.history.replaceState(null, '', '/');
-      });
 
       const getRenderedOJOrder = (container: HTMLElement) => {
         const ojTestIds = Object.values(OJ_TEST_IDS);

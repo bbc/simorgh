@@ -205,7 +205,7 @@ const getWsojComponent = ({
   experimentProps,
 }: {
   data: Recommendation[];
-  experimentProps?: ComponentExperimentProps | null;
+  experimentProps?: ComponentExperimentProps;
 }) => (
   <Recommendations data={data} {...(experimentProps && { experimentProps })} />
 );
@@ -214,8 +214,10 @@ type SearchWsojComponentProps = {
   isDesktopViewport: boolean;
   renderSearchMidArticleOj: (props: {
     data: Recommendation[];
+    experimentProps?: ComponentExperimentProps;
     searchVariant: SearchVariant | null;
   }) => ReactNode;
+  experimentProps?: ComponentExperimentProps;
   searchVariant: SearchVariant | null;
 };
 
@@ -223,12 +225,13 @@ const getSearchWsojComponent =
   ({
     isDesktopViewport,
     renderSearchMidArticleOj,
+    experimentProps,
     searchVariant,
   }: SearchWsojComponentProps) =>
   ({ data }: { data: Recommendation[] }) =>
     !isDesktopViewport
-      ? renderSearchMidArticleOj({ data, searchVariant })
-      : getWsojComponent({ data });
+      ? renderSearchMidArticleOj({ data, experimentProps, searchVariant })
+      : getWsojComponent({ data, experimentProps });
 
 const DisclaimerWithPaddingOverride = (props: ComponentToRenderProps) => (
   <Disclaimer {...props} increasePaddingOnDesktop={false} />
@@ -290,6 +293,14 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     useState(false);
   const [experimentVariant, setExperimentVariant] =
     useState<SearchOjVariant | null>(null);
+  const searchOjExperimentProps: ComponentExperimentProps | undefined =
+    experimentVariant
+      ? {
+          experimentName: SEARCH_OJ_EXPERIMENT_NAME,
+          experimentVariant,
+          sendOptimizelyEvents: true,
+        }
+      : undefined;
   const { isApp, isAmp, isLite, pageType } = use(RequestContext);
 
   const isNearMidArticleOj = useNearViewport({
@@ -403,7 +414,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     searchVariant,
   }: {
     data: Recommendation[];
-    experimentProps?: ComponentExperimentProps | null;
+    experimentProps?: ComponentExperimentProps;
     searchVariant: SearchVariant | null;
   }) => {
     const midarticleOJ = searchVariant
@@ -411,15 +422,20 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       : null;
     switch (midarticleOJ) {
       case 'mostRead':
-        return <Recommendations data={data} />;
+        return (
+          <Recommendations data={data} experimentProps={experimentProps} />
+        );
 
       case 'relatedContent':
         return hasRelatedContent ? (
           <div css={styles.midArticleOJ}>
-            <RelatedContentSection content={blocks} />
+            <RelatedContentSection
+              content={blocks}
+              experimentProps={experimentProps}
+            />
           </div>
         ) : (
-          <Recommendations data={data} />
+          <Recommendations data={data} experimentProps={experimentProps} />
         );
 
       case 'topicDiscovery':
@@ -427,16 +443,20 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           <TopicDiscovery
             topics={topicDiscoveryTopics}
             css={styles.midArticleOJ}
+            experimentProps={experimentProps}
           />
         );
 
       case 'locationBasedOJ':
         return showCountryCuration ? (
           <div css={styles.midArticleOJ}>
-            <LocationBasedTopicOJ pageData={pageData} />
+            <LocationBasedTopicOJ
+              pageData={pageData}
+              experimentProps={experimentProps}
+            />
           </div>
         ) : (
-          <Recommendations data={data} />
+          <Recommendations data={data} experimentProps={experimentProps} />
         );
 
       default:
@@ -458,6 +478,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     eventTrackingData: {
       componentName: 'portrait-video-carousel-article',
       groupTracker: { name: portraitVideoCarouselTitle },
+      ...(searchOjExperimentProps && searchOjExperimentProps),
     },
     backgroundColor: 'rgba(246, 246, 246, 0.75)',
   };
@@ -506,15 +527,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     experimentVariant === 'control' ? null : experimentVariant;
   const mobileOJOrder = useMobileOJComponentOrder(searchVariant);
 
-  const searchOjExperimentProps: ComponentExperimentProps | undefined =
-    experimentVariant
-      ? {
-          experimentName: SEARCH_OJ_EXPERIMENT_NAME,
-          experimentVariant,
-          sendOptimizelyEvents: true,
-        }
-      : undefined;
-
   const componentsToRender = {
     visuallyHiddenHeadline,
     headline: getHeadlineComponent,
@@ -547,6 +559,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       ? getSearchWsojComponent({
           isDesktopViewport,
           renderSearchMidArticleOj: getSearchMidArticleOJ,
+          experimentProps: searchOjExperimentProps,
           searchVariant,
         })
       : getSearchOjExperiment(searchOjExperimentProps),
@@ -609,6 +622,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               : []),
           ]}
           topics={topicDiscoveryTopics}
+          experimentProps={searchOjExperimentProps}
         />
       );
     }
@@ -623,6 +637,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           ]}
           topics={topics}
           mobileDivider={false}
+          experimentProps={searchOjExperimentProps}
         />
       );
     }
@@ -655,6 +670,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               link={mediaCurationContent?.link}
               curationContentType="video"
               pageType={pageType}
+              experimentProps={searchOjExperimentProps}
             />
           </div>
         </div>
@@ -673,10 +689,16 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           size="default"
           headingBackgroundColour={GREY_2}
           mobileDivider={showRelatedTopicsComponent}
+          experimentProps={searchOjExperimentProps}
         />
       ) : null,
     topicDiscovery: topicDiscoverySlot,
-    relatedContent: <RelatedContentSection content={blocks} />,
+    relatedContent: (
+      <RelatedContentSection
+        content={blocks}
+        experimentProps={searchOjExperimentProps}
+      />
+    ),
     videoOJ: getVideoOJComponent(),
     topStories:
       !isApp && !isPGL && topStoriesContent ? (
@@ -685,7 +707,10 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           data-testid="top-stories"
           data-experiment-position="secondaryColumn"
         >
-          <TopStoriesSection content={topStoriesContent} />
+          <TopStoriesSection
+            content={topStoriesContent}
+            experimentProps={searchOjExperimentProps}
+          />
         </div>
       ) : null,
     featuredArticles:
@@ -695,11 +720,15 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             content={featuresContent}
             parentColumns={{}}
             sectionLabelBackground={GREY_2}
+            experimentProps={searchOjExperimentProps}
           />
         </div>
       ) : null,
     locationBasedOJ: showCountryCuration ? (
-      <LocationBasedTopicOJ pageData={pageData} />
+      <LocationBasedTopicOJ
+        pageData={pageData}
+        experimentProps={searchOjExperimentProps}
+      />
     ) : null,
   };
 
@@ -790,6 +819,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
                   : []),
               ]}
               topics={topicDiscoveryTopics}
+              experimentProps={searchOjExperimentProps}
             />
           )}
           {!mobileOJOrder && showRelatedTopicsComponent && (
@@ -802,10 +832,14 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               ]}
               topics={topics}
               mobileDivider={false}
+              experimentProps={searchOjExperimentProps}
             />
           )}
           {!mobileOJOrder && showCountryCuration && (
-            <LocationBasedTopicOJ pageData={pageData} />
+            <LocationBasedTopicOJ
+              pageData={pageData}
+              experimentProps={searchOjExperimentProps}
+            />
           )}
           {!mobileOJOrder && showPortraitVideoCarousel && (
             <PortraitVideoCarousel
@@ -813,7 +847,12 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               css={styles.portraitVideoCarousel}
             />
           )}
-          {!mobileOJOrder && <RelatedContentSection content={blocks} />}
+          {!mobileOJOrder && (
+            <RelatedContentSection
+              content={blocks}
+              experimentProps={searchOjExperimentProps}
+            />
+          )}
           {!mobileOJOrder && showMediaCuration && (
             <div css={styles.mediaCurationRow}>
               <div data-testid="media-curation">
@@ -828,6 +867,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
                   link={mediaCurationContent?.link}
                   curationContentType="video"
                   pageType={pageType}
+                  experimentProps={searchOjExperimentProps}
                 />
               </div>
             </div>
@@ -835,7 +875,10 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         </div>
 
         {!isApp && !isPGL && !mobileOJOrder && (
-          <SecondaryColumn pageData={pageData} />
+          <SecondaryColumn
+            pageData={pageData}
+            experimentProps={searchOjExperimentProps}
+          />
         )}
       </div>
 
@@ -855,6 +898,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           size="default"
           headingBackgroundColour={GREY_2}
           mobileDivider={showRelatedTopicsComponent}
+          experimentProps={searchOjExperimentProps}
         />
       )}
     </div>
