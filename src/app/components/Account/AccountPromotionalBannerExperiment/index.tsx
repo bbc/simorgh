@@ -2,7 +2,6 @@ import useOptimizelyVariation, {
   ExperimentType,
 } from '#app/hooks/useOptimizelyVariation';
 import useViewTracker from '#app/hooks/useViewTracker';
-import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import AccountPromotionalBanner from '#app/components/Account/AccountPromotionalBanner';
 import useAccountPromoBannerEligibility from '#app/components/Account/AccountPromotionalBanner/useAccountPromoBannerEligibility';
 import useIsAccountPromoBannerVisible from '#app/components/Account/AccountPromotionalBanner/useIsAccountPromoBannerVisible';
@@ -11,47 +10,51 @@ import useIsAccountPromoBannerVisible from '#app/components/Account/AccountPromo
 const ACCOUNT_PROMO_BANNER_EXPERIMENT_NAME =
   'newswb_ws_article_account_promo_banner';
 
-// The view tracker uses alwaysInView, whose timer starts on mount regardless of
-// the rendered element. Gating the control's view event on banner visibility
-// therefore requires conditionally mounting this component
+// Only fires a control view once the client-side check confirms the banner would
+// actually be shown, mirroring the "on" arm's dismissal / frequency-cap
+// suppression so both arms are counted under the same conditions.
 const AccountPromotionalBannerControlTracker = ({
   experimentVariant,
 }: {
   experimentVariant: string;
 }) => {
+  const isBannerVisible = useIsAccountPromoBannerVisible();
   const viewTracker = useViewTracker({
     componentName: 'account-promotional-banner',
     experimentName: ACCOUNT_PROMO_BANNER_EXPERIMENT_NAME,
     experimentVariant,
     sendOptimizelyEvents: true,
-    alwaysInView: true,
   });
 
-  return <VisuallyHiddenText {...viewTracker} />;
+  if (!isBannerVisible) return null;
+
+  // Tracked element for the control view: useViewTracker's IntersectionObserver
+  // needs a block element with a non-zero box
+  return <div {...viewTracker} aria-hidden="true" style={{ height: '1px' }} />;
 };
 
 const EligibleAccountPromotionalBannerExperiment = () => {
-  // Gate the view event on banner visibility so both arms behave under the same
-  // circumstances: control fires only when the banner would show, mirroring the
-  // "on" arm's own dismissal / frequency-cap suppression.
-  const isBannerVisible = useIsAccountPromoBannerVisible();
+  // useOptimizelyVariation both resolves the variation and activates the
+  // experiment. Activation therefore happens regardless of whether the banner is
+  // dismissed, but view events are still suppressed for dismissed banners by the
+  // shared inline-script + CSS visibility gate.
   const experimentVariant = useOptimizelyVariation({
     experimentName: ACCOUNT_PROMO_BANNER_EXPERIMENT_NAME,
     experimentType: ExperimentType.SERVER_SIDE,
   });
 
-  if (experimentVariant === 'control') {
-    return isBannerVisible ? (
-      <AccountPromotionalBannerControlTracker
-        experimentVariant={experimentVariant}
-      />
-    ) : null;
-  }
-
   if (experimentVariant === 'on') {
     return (
       <AccountPromotionalBanner
         experimentName={ACCOUNT_PROMO_BANNER_EXPERIMENT_NAME}
+        experimentVariant={experimentVariant}
+      />
+    );
+  }
+
+  if (experimentVariant === 'control') {
+    return (
+      <AccountPromotionalBannerControlTracker
         experimentVariant={experimentVariant}
       />
     );
@@ -63,8 +66,9 @@ const EligibleAccountPromotionalBannerExperiment = () => {
 const AccountPromotionalBannerExperiment = () => {
   const isEligible = useAccountPromoBannerEligibility();
 
-  // Gate activation on eligibility. useOptimizelyVariation activates the
-  // experiment as a side effect, so it must not run for ineligible users.
+  // Server-knowable eligibility gate: ineligible users render nothing and are
+  // never activated. Client-side visibility (dismissal / frequency cap) is handled
+  // per arm below.
   if (!isEligible) {
     return null;
   }
