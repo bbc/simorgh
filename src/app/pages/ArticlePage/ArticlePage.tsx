@@ -349,7 +349,12 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         );
 
       case 'topicDiscovery':
-        return <TopicDiscovery topics={topics} css={styles.midArticleOJ} />;
+        return (
+          <TopicDiscovery
+            topics={topicDiscoveryTopics}
+            css={styles.midArticleOJ}
+          />
+        );
 
       case 'locationBasedOJ':
         return showCountryCuration ? (
