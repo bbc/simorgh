@@ -486,7 +486,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const showTopicDiscovery = topicDiscoveryEnabled && !isAmp && !isLite;
 
-  // Topic Discovery shows in the midarticle position for one variant
+  // Topic Discovery shows in the mid-article position for one variant
   // We want to hide RelatedTopics when this happens
   const topicDiscoveryInMidArticlePosition =
     !isDesktopViewport && searchVariant === 'variant_5_recommended_mid';
