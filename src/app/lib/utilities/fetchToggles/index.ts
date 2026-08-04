@@ -152,7 +152,9 @@ const getMergedToggles = async ({
     if (isLocal) {
       // eslint-disable-next-line no-console
       console.warn(
-        `[dev:toggles] Failed to fetch remote toggles for "${service}" from ${serviceEnv} iSite, falling back to local toggles:`,
+        '[dev:toggles] Failed to fetch remote toggles for "%s" from %s iSite, falling back to local toggles:',
+        service,
+        serviceEnv,
         message,
       );
     }
