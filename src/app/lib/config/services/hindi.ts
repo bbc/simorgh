@@ -148,7 +148,6 @@ export const service: DefaultServiceConfig = {
         loading: 'Loading...',
         follow: 'Follow',
         following: 'Following...',
-        followingAction: 'Following...',
         followed: 'Followed',
         unfollow: 'Unfollow',
         unfollowAccessible: 'Followed. Unfollow',

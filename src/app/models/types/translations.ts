@@ -77,7 +77,6 @@ export interface Translations {
     loading: string;
     follow: string;
     following: string;
-    followingAction: string;
     followed: string;
     unfollow: string;
     unfollowAccessible: string;

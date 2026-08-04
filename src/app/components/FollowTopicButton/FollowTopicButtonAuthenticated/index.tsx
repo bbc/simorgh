@@ -41,9 +41,9 @@ const FollowTopicButtonAuthenticated = ({
     if (isUpdating) {
       return isFollowed
         ? followTopicButton.unfollowing
-        : followTopicButton.followingAction;
+        : followTopicButton.following;
     }
-    if (isFollowed) return followTopicButton.following;
+    if (isFollowed) return followTopicButton.followed;
     return followTopicButton.follow;
   };
 
@@ -52,7 +52,7 @@ const FollowTopicButtonAuthenticated = ({
     if (isUpdating) {
       return isFollowed
         ? followTopicButton.unfollowing
-        : followTopicButton.followingAction;
+        : followTopicButton.following;
     }
     // When following, screen readers should hear the action the button performs next.
     if (isFollowed) return followTopicButton.unfollowAccessible;
