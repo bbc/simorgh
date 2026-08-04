@@ -72,6 +72,7 @@ import ContinueReadingButton, {
 import SaveArticleButton from '#app/components/SaveArticleButton';
 import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
 import AccountPromotionalBannerExperiment from '#app/components/Account/AccountPromotionalBannerExperiment';
+import repositionCountryTopic from '#app/components/TopicDiscovery/RepositionCountryTopic';
 import ElectionBanner from './ElectionBanner';
 import ArticleMessageBanner from './ArticleMessageBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
@@ -349,6 +350,13 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const mediaCurationContent = pageData?.secondaryColumn?.mediaCuration;
   const startsWithHeading = blocks?.[0]?.type === 'headline' || false;
 
+  const countryTopicToReorder = pageData?.countryTopicIdToReorder ?? null;
+
+  const topicDiscoveryTopics = repositionCountryTopic(
+    topics,
+    countryTopicToReorder,
+  );
+
   const bylineBlock = blocks.find(
     (block): block is OptimoBylineBlock =>
       block.type === 'byline' || block.type === 'subByline',
@@ -415,7 +423,12 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         );
 
       case 'topicDiscovery':
-        return <TopicDiscovery topics={topics} css={styles.midArticleOJ} />;
+        return (
+          <TopicDiscovery
+            topics={topicDiscoveryTopics}
+            css={styles.midArticleOJ}
+          />
+        );
 
       case 'locationBasedOJ':
         return showCountryCuration ? (
@@ -562,7 +575,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const showTopicDiscovery = topicDiscoveryEnabled && !isAmp && !isLite;
 
-  // Topic Discovery shows in the midarticle position for one variant
+  // Topic Discovery shows in the mid-article position for one variant
   // We want to hide RelatedTopics when this happens
   const topicDiscoveryInMidArticlePosition =
     !isDesktopViewport && searchVariant === 'variant_5_recommended_mid';
@@ -595,7 +608,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               ? [!showAllContent && styles.hideTopicDiscovery]
               : []),
           ]}
-          topics={topics}
+          topics={topicDiscoveryTopics}
         />
       );
     }
@@ -776,7 +789,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
                   ? [!showAllContent && styles.hideTopicDiscovery]
                   : []),
               ]}
-              topics={topics}
+              topics={topicDiscoveryTopics}
             />
           )}
           {!mobileOJOrder && showRelatedTopicsComponent && (
