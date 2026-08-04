@@ -64,6 +64,13 @@ const getMergedToggles = async ({
     : appEnvironment;
   const cacheKey = `${togglesEndpoint}:${serviceEnv}`;
 
+  if (isLocal) {
+    // eslint-disable-next-line no-console
+    console.info(
+      `[dev:toggles] Fetching remote toggles for "${service}" from ${serviceEnv} iSite (${togglesEndpoint})`,
+    );
+  }
+
   const cachedResponse = isLocal ? undefined : cache.get(cacheKey);
 
   logger.info(TOGGLE_API_REQUEST_RECEIVED, {
@@ -84,7 +91,7 @@ const getMergedToggles = async ({
       headers: {
         'ctx-service-env': serviceEnv,
       },
-      signal: AbortSignal.timeout(PRIMARY_DATA_TIMEOUT),
+      ...(!isLocal && { signal: AbortSignal.timeout(PRIMARY_DATA_TIMEOUT) }),
     };
 
     const startHrTime = process.hrtime();
@@ -108,11 +115,32 @@ const getMergedToggles = async ({
     const responseBody = await response.json();
     const fetchedToggles = responseBody?.data?.toggles;
 
+    if (!fetchedToggles) {
+      return localToggles;
+    }
+
     if (!isLocal) {
       cache.set(cacheKey, fetchedToggles);
     }
 
-    return { ...localToggles, ...fetchedToggles };
+    const mergedToggles = { ...localToggles, ...fetchedToggles };
+
+    if (isLocal) {
+      const overriddenToggles = Object.keys(fetchedToggles).filter(
+        toggleName => toggleName in localToggles,
+      );
+      const { _environment, ...finalToggles } = mergedToggles;
+
+      // eslint-disable-next-line no-console
+      console.info('[dev:toggles] Final toggles:', finalToggles);
+      // eslint-disable-next-line no-console
+      console.info(
+        `[dev:toggles] Local toggles overridden by ${serviceEnv} iSite:`,
+        overriddenToggles.length ? overriddenToggles.join(', ') : 'none',
+      );
+    }
+
+    return mergedToggles;
   } catch (error) {
     const { message } = error as FetchError;
 
@@ -120,6 +148,14 @@ const getMergedToggles = async ({
       error: message,
       service,
     });
+
+    if (isLocal) {
+      // eslint-disable-next-line no-console
+      console.warn(
+        `[dev:toggles] Failed to fetch remote toggles for "${service}" from ${serviceEnv} iSite, falling back to local toggles:`,
+        message,
+      );
+    }
 
     return localToggles;
   }
