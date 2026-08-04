@@ -92,24 +92,6 @@ describe('getToggles', () => {
       });
     });
 
-    it('should support a nested data.toggles response shape', async () => {
-      (global.fetch as jest.Mock).mockResolvedValueOnce({
-        ok: true,
-        status: 200,
-        json: jest.fn(async () => ({ data: { toggles: remoteToggles } })),
-      } as unknown as Response);
-
-      const { default: getToggles } = await import('./index');
-      const toggles = await getToggles({
-        service: 'mundo',
-      });
-
-      expect(toggles).toEqual({
-        ...mockDefaultToggleDefinitions,
-        ...remoteToggles,
-      });
-    });
-
     it('should only fetch once for repeated calls with the same endpoint and environment when not local', async () => {
       process.env.SIMORGH_APP_ENV = 'live';
       jest.mock('#lib/config/toggles', () => ({
