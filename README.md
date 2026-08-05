@@ -69,7 +69,7 @@ Once the application is running, you can visit a valid route, e.g. http://localh
 
 ### Secret Environment Variables
 
-Some environment variables are not publicly exposed but are required for specific commands in local development. For BBC staff, please visit this [guide](https://github.com/bbc/simorgh-infrastructure/tree/latest/scripts/addShellProfileEnvVariables) and follow the steps to ensure these are set correctly for your local machine.
+Some local-development commands used by BBC staff require additional environment variables that are not stored in this repository. BBC staff can follow this [guide](https://github.com/bbc/simorgh-infrastructure/tree/latest/scripts/addShellProfileEnvVariables) (requires access) to set them on your machine.
 
 ### Feature toggles
 
@@ -118,7 +118,7 @@ Topic pages use internal BBC APIs that are not publicly accessible. This can cau
 No BFF_PATH set as environment variable, you will not have access to topics
 ```
 
-Internal developers who need to work on topic pages locally should contact the team for access. Please also visit [this guide](https://github.com/bbc/simorgh-infrastructure/tree/latest/scripts/addShellProfileEnvVariables) to ensure secret environment variables have been set correctly.
+Internal developers who need to work on topic pages locally should contact the team for access. See [Secret Environment Variables](#secret-environment-variables) for how to set the required environment variables.
 
 ### Other page types
 
