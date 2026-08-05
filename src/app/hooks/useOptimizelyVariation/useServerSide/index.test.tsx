@@ -46,7 +46,7 @@ describe('useOptimizelyVariation - useServerSide', () => {
     );
     return renderHook(() => useServerSide(experimentName), {
       wrapper,
-    }).result.current;
+    });
   };
 
   it('should return null if optimizely is not defined', () => {
@@ -55,19 +55,19 @@ describe('useOptimizelyVariation - useServerSide', () => {
   });
 
   it('should return null if mvtExperiments is falsy', () => {
-    const result = renderUseServerSide({
+    const { result } = renderUseServerSide({
       serverSideExperiments: undefined,
       experimentName: 'foo',
     });
-    expect(result).toEqual(null);
+    expect(result.current).toEqual(null);
   });
 
   it('should return null if mvtExperiments is an empty array', () => {
-    const result = renderUseServerSide({
+    const { result } = renderUseServerSide({
       serverSideExperiments: [],
       experimentName: 'foo',
     });
-    expect(result).toEqual(null);
+    expect(result.current).toEqual(null);
   });
 
   it('should return null if given experiment is not in array', () => {
@@ -78,12 +78,12 @@ describe('useOptimizelyVariation - useServerSide', () => {
         enabled: true,
       },
     ];
-    const result = renderUseServerSide({
+    const { result } = renderUseServerSide({
       serverSideExperiments:
         mockServerSideExperiments as ServerSideExperiment[],
       experimentName: 'bar',
     });
-    expect(result).toEqual(null);
+    expect(result.current).toEqual(null);
   });
 
   it('should return a variation when the experiment is enabled', () => {
@@ -95,12 +95,12 @@ describe('useOptimizelyVariation - useServerSide', () => {
       },
     ];
 
-    const result = renderUseServerSide({
+    const { result } = renderUseServerSide({
       serverSideExperiments:
         mockServerSideExperiments as ServerSideExperiment[],
       experimentName: 'foo',
     });
-    expect(result).toEqual('control');
+    expect(result.current).toEqual('control');
   });
 
   it('should return null when the experiment is not enabled', () => {
@@ -112,12 +112,12 @@ describe('useOptimizelyVariation - useServerSide', () => {
       },
     ];
 
-    const result = renderUseServerSide({
+    const { result } = renderUseServerSide({
       serverSideExperiments:
         mockServerSideExperiments as ServerSideExperiment[],
       experimentName: 'foo',
     });
-    expect(result).toBeFalsy();
+    expect(result.current).toBeFalsy();
   });
 
   it('should return null when the experiment variation is string "false"', () => {
@@ -129,12 +129,12 @@ describe('useOptimizelyVariation - useServerSide', () => {
       },
     ];
 
-    const result = renderUseServerSide({
+    const { result } = renderUseServerSide({
       serverSideExperiments:
         mockServerSideExperiments as ServerSideExperiment[],
       experimentName: 'foo',
     });
-    expect(result).toBeNull();
+    expect(result.current).toBeNull();
   });
 
   it('should return null when the experiment variation is boolean "false"', () => {
@@ -146,12 +146,12 @@ describe('useOptimizelyVariation - useServerSide', () => {
       },
     ];
 
-    const result = renderUseServerSide({
+    const { result } = renderUseServerSide({
       serverSideExperiments:
         mockServerSideExperiments as unknown as ServerSideExperiment[],
       experimentName: 'foo',
     });
-    expect(result).toBeNull();
+    expect(result.current).toBeNull();
   });
 
   it('should call activate experiment if experiment is enabled', () => {
@@ -186,5 +186,21 @@ describe('useOptimizelyVariation - useServerSide', () => {
       experimentName: 'foo',
     });
     expect(spyActivateExperiment).not.toHaveBeenCalled();
+  });
+
+  it('should not re-activate the experiment on rerender', () => {
+    const { rerender } = renderUseServerSide({
+      serverSideExperiments: [
+        { experimentName: 'foo', variation: 'control', enabled: true },
+      ] as ServerSideExperiment[],
+      experimentName: 'foo',
+    });
+
+    expect(spyActivateExperiment).toHaveBeenCalledTimes(1);
+
+    rerender();
+    rerender();
+
+    expect(spyActivateExperiment).toHaveBeenCalledTimes(1);
   });
 });
