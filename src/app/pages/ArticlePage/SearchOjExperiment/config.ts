@@ -2,7 +2,7 @@
 export const SEARCH_OJ_EXPERIMENT_NAME = 'newswb_ws_oj_order_referrer_search';
 
 export const SEARCH_OJ_ACTIVATION_EVENT_NAME =
-  'search-oj-experiment-activation';
+  'newswb_ws_oj_order_referrer_search';
 
 // these values must match the variation keys in optimizely
 export const SEARCH_OJ_VARIANTS = [
