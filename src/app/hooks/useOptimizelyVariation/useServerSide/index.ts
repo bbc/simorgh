@@ -12,7 +12,7 @@ export default (experimentName: string) => {
       serverSideExperiment === experimentName,
   );
 
-  const { enabled, variation } = experiment ?? {};
+  const { enabled, variation = null } = experiment ?? {};
 
   const isActiveVariant = Boolean(
     enabled && variation && variation !== 'false',
