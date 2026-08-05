@@ -126,8 +126,8 @@ const getMergedToggles = async ({
     const mergedToggles = { ...localToggles, ...fetchedToggles };
 
     if (isLocal) {
-      const overriddenToggles = Object.keys(fetchedToggles).filter(
-        toggleName => toggleName in localToggles,
+      const notOverriddenToggles = Object.keys(localToggles).filter(
+        toggleName => !(toggleName in fetchedToggles),
       );
       const { _environment, ...finalToggles } = mergedToggles;
 
@@ -135,8 +135,9 @@ const getMergedToggles = async ({
       console.info('[dev:toggles] Final toggles:', finalToggles);
       // eslint-disable-next-line no-console
       console.info(
-        `[dev:toggles] Local toggles overridden by ${serviceEnv} iSite:`,
-        overriddenToggles.length ? overriddenToggles.join(', ') : 'none',
+        `[dev:toggles] Local toggles NOT overridden by ${serviceEnv} iSite:\n${
+          notOverriddenToggles.length ? notOverriddenToggles.join('\n') : 'none'
+        }`,
       );
     }
 
