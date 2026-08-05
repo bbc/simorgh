@@ -26,8 +26,6 @@ import CanonicalToLiteRedirect from '#utilities/CanonicalToLiteRedirect';
 import addOperaMiniClassScript from '#app/lib/utilities/addOperaMiniClassScript';
 import handleServerLogging from '#utilities/handleServerLogging';
 import getAmpLiteCss from '#utilities/getAmpLiteCss';
-import treeshakeCssCustomProperties from '#utilities/treeshakeCssCustomProperties';
-import trimFontFaceSourcesToWoff2 from '#utilities/trimFontFaceSourcesToWoff2';
 import ComponentTracking from '../renderers/ComponentTracking';
 import ReverbTemplate from '../renderers/ReverbTemplate';
 import litePageTransforms from '../renderers/litePageTransforms';
@@ -48,7 +46,7 @@ type DocProps = {
   title: ReactElement;
 };
 
-const stripVendorPrefixes = (css: string): string => {
+const optimiseCssPrefixes = (css: string): string => {
   let output = css;
   let previous = '';
 
