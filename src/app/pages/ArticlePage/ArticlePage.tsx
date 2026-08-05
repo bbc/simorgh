@@ -134,11 +134,13 @@ const ActivateSearchOjExperiment = ({
     experimentName: SEARCH_OJ_EXPERIMENT_NAME,
     experimentType: ExperimentType.CLIENT_SIDE,
   });
+  // this sends piano the same experiment and variation chosen by optimizely
   const trackActivation = useCustomEventTracker({
     eventName: SEARCH_OJ_ACTIVATION_EVENT_NAME,
     experimentName: SEARCH_OJ_EXPERIMENT_NAME,
     experimentVariant: variation ?? undefined,
   });
+  // this makes sure rerenders do not send the activation event again
   const hasTrackedActivation = useRef(false);
 
   useEffect(() => {
