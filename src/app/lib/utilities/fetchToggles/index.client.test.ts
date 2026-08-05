@@ -6,16 +6,40 @@ const remoteToggles = {
   testToggle: { enabled: true },
 };
 
-describe('getToggles', () => {
-  const originalTogglesBffPath = process.env.TOGGLES_BFF_PATH;
-  const originalAppEnv = process.env.SIMORGH_APP_ENV;
-  const originalServiceEnv = process.env.TOGGLES_SERVICE_ENV;
+const mockSuccessfulFetchResponse = {
+  ok: true,
+  status: 200,
+  json: jest.fn(async () => ({ data: { toggles: remoteToggles } })),
+};
 
-  const mockSuccessfulFetchResponse = {
-    ok: true,
-    status: 200,
-    json: jest.fn(async () => ({ data: { toggles: remoteToggles } })),
-  };
+const trackedEnvVars = [
+  'TOGGLES_BFF_PATH',
+  'SIMORGH_APP_ENV',
+  'TOGGLES_SERVICE_ENV',
+  'WEB_CDN_URL',
+] as const;
+
+type EnvSnapshot = Record<(typeof trackedEnvVars)[number], string | undefined>;
+
+const snapshotEnv = (): EnvSnapshot =>
+  Object.fromEntries(
+    trackedEnvVars.map(key => [key, process.env[key]]),
+  ) as EnvSnapshot;
+
+const restoreEnv = (snapshot: EnvSnapshot) => {
+  trackedEnvVars.forEach(key => {
+    const value = snapshot[key];
+
+    if (value === undefined) {
+      delete process.env[key];
+    } else {
+      process.env[key] = value;
+    }
+  });
+};
+
+describe('fetchToggles', () => {
+  const envSnapshot = snapshotEnv();
 
   beforeEach(() => {
     process.env.TOGGLES_BFF_PATH = 'https://mock-toggles-endpoint';
@@ -27,19 +51,7 @@ describe('getToggles', () => {
   afterEach(() => {
     jest.resetModules();
     jest.restoreAllMocks();
-    process.env.TOGGLES_BFF_PATH = originalTogglesBffPath;
-
-    if (originalAppEnv === undefined) {
-      delete process.env.SIMORGH_APP_ENV;
-    } else {
-      process.env.SIMORGH_APP_ENV = originalAppEnv;
-    }
-
-    if (originalServiceEnv === undefined) {
-      delete process.env.TOGGLES_SERVICE_ENV;
-    } else {
-      process.env.TOGGLES_SERVICE_ENV = originalServiceEnv;
-    }
+    restoreEnv(envSnapshot);
   });
 
   it('should return defaultToggles if enableFetchingToggles is not enabled', async () => {
@@ -52,8 +64,8 @@ describe('getToggles', () => {
     };
     jest.mock('#lib/config/toggles', () => mockDefaultToggles);
 
-    const { default: getToggles } = await import('./index');
-    const toggles = await getToggles({ service: 'mundo' });
+    const { default: fetchToggles } = await import('./index');
+    const toggles = await fetchToggles({ service: 'mundo' });
 
     expect(toggles).toEqual({
       enableFetchingToggles: { enabled: false },
@@ -80,9 +92,9 @@ describe('getToggles', () => {
     });
 
     it('should return the merged local and remote toggles', async () => {
-      const { default: getToggles } = await import('./index');
+      const { default: fetchToggles } = await import('./index');
 
-      const toggles = await getToggles({
+      const toggles = await fetchToggles({
         service: 'mundo',
       });
 
@@ -92,6 +104,48 @@ describe('getToggles', () => {
       });
     });
 
+    it('should let remote toggles override local toggles of the same name', async () => {
+      (global.fetch as jest.Mock).mockResolvedValueOnce({
+        ok: true,
+        status: 200,
+        json: jest.fn(async () => ({
+          data: { toggles: { defaultToggle: { enabled: true } } },
+        })),
+      } as unknown as Response);
+
+      const { default: fetchToggles } = await import('./index');
+
+      const toggles = await fetchToggles({ service: 'mundo' });
+
+      expect(toggles.defaultToggle).toEqual({ enabled: true });
+    });
+
+    it('should fetch the AMP toggles endpoint when isAmp is true', async () => {
+      process.env.WEB_CDN_URL = 'https://mock-cdn';
+
+      const { default: fetchToggles } = await import('./index');
+      (global.fetch as jest.Mock).mockClear();
+
+      await fetchToggles({ service: 'mundo', isAmp: true });
+
+      const [calledUrl] = (global.fetch as jest.Mock).mock.calls[0];
+
+      expect(calledUrl).toContain('https://mock-cdn/fd/ws-toggles');
+      expect(calledUrl).toContain('service=mundo');
+    });
+
+    it('should return default toggles when the toggles endpoint cannot be constructed', async () => {
+      delete process.env.TOGGLES_BFF_PATH;
+
+      const { default: fetchToggles } = await import('./index');
+      (global.fetch as jest.Mock).mockClear();
+
+      const toggles = await fetchToggles({ service: 'mundo' });
+
+      expect(toggles).toEqual(mockDefaultToggleDefinitions);
+      expect(global.fetch).not.toHaveBeenCalled();
+    });
+
     it('should only fetch once for repeated calls with the same endpoint and environment when not local', async () => {
       process.env.SIMORGH_APP_ENV = 'live';
       jest.mock('#lib/config/toggles', () => ({
@@ -99,11 +153,11 @@ describe('getToggles', () => {
         live: mockDefaultToggles.local,
       }));
 
-      const { default: getToggles } = await import('./index');
+      const { default: fetchToggles } = await import('./index');
       (global.fetch as jest.Mock).mockClear();
 
-      await getToggles({ service: 'mundo' });
-      const cachedToggles = await getToggles({
+      await fetchToggles({ service: 'mundo' });
+      const cachedToggles = await fetchToggles({
         service: 'mundo',
       });
 
@@ -115,11 +169,11 @@ describe('getToggles', () => {
     });
 
     it('should bypass the cache and fetch on every call when running locally', async () => {
-      const { default: getToggles } = await import('./index');
+      const { default: fetchToggles } = await import('./index');
       (global.fetch as jest.Mock).mockClear();
 
-      await getToggles({ service: 'mundo' });
-      await getToggles({ service: 'mundo' });
+      await fetchToggles({ service: 'mundo' });
+      await fetchToggles({ service: 'mundo' });
 
       expect(global.fetch).toHaveBeenCalledTimes(2);
     });
@@ -127,15 +181,39 @@ describe('getToggles', () => {
     it('should send the ctx-service-env header from TOGGLES_SERVICE_ENV when running locally', async () => {
       process.env.TOGGLES_SERVICE_ENV = 'live';
 
-      const { default: getToggles } = await import('./index');
+      const { default: fetchToggles } = await import('./index');
       (global.fetch as jest.Mock).mockClear();
 
-      await getToggles({ service: 'mundo' });
+      await fetchToggles({ service: 'mundo' });
 
       expect(global.fetch).toHaveBeenCalledWith(
         expect.any(String),
         expect.objectContaining({
           headers: { 'ctx-service-env': 'live' },
+        }),
+      );
+    });
+
+    it('should send the ctx-service-env header with environment when running in test', async () => {
+      process.env.SIMORGH_APP_ENV = 'test';
+      jest.mock('#lib/config/toggles', () => ({
+        local: mockDefaultToggleDefinitions,
+        test: {
+          _environment: 'test',
+          enableFetchingToggles: { enabled: true },
+          defaultToggle: { enabled: false },
+        },
+      }));
+
+      const { default: fetchToggles } = await import('./index');
+      (global.fetch as jest.Mock).mockClear();
+
+      await fetchToggles({ service: 'mundo' });
+
+      expect(global.fetch).toHaveBeenCalledWith(
+        expect.any(String),
+        expect.objectContaining({
+          headers: { 'ctx-service-env': 'test' },
         }),
       );
     });
@@ -147,8 +225,8 @@ describe('getToggles', () => {
         json: jest.fn(async () => ({ toggles: remoteToggles })),
       } as unknown as Response);
 
-      const { default: getToggles } = await import('./index');
-      const toggles = await getToggles({
+      const { default: fetchToggles } = await import('./index');
+      const toggles = await fetchToggles({
         service: 'mundo',
       });
 
@@ -162,8 +240,8 @@ describe('getToggles', () => {
         json: jest.fn(async () => ({})),
       } as unknown as Response);
 
-      const { default: getToggles } = await import('./index');
-      const toggles = await getToggles({
+      const { default: fetchToggles } = await import('./index');
+      const toggles = await fetchToggles({
         service: 'mundo',
       });
 
@@ -175,12 +253,137 @@ describe('getToggles', () => {
         new Error('network error'),
       );
 
-      const { default: getToggles } = await import('./index');
-      const toggles: Toggles = await getToggles({
+      const { default: fetchToggles } = await import('./index');
+      const toggles: Toggles = await fetchToggles({
         service: 'mundo',
       });
 
       expect(toggles).toEqual(mockDefaultToggleDefinitions);
     });
+  });
+});
+
+describe('fetchToggles - Console logging behavior', () => {
+  const mockDefaultToggles = {
+    local: {
+      _environment: 'local',
+      enableFetchingToggles: { enabled: true },
+      defaultToggle: { enabled: false },
+    },
+    test: {
+      _environment: 'test',
+      enableFetchingToggles: { enabled: true },
+      defaultToggle: { enabled: false },
+    },
+    live: {
+      _environment: 'live',
+      enableFetchingToggles: { enabled: true },
+      defaultToggle: { enabled: false },
+    },
+  };
+
+  const envSnapshot = snapshotEnv();
+
+  let consoleInfoSpy: jest.SpyInstance | undefined;
+  let consoleWarnSpy: jest.SpyInstance | undefined;
+
+  beforeEach(() => {
+    process.env.TOGGLES_BFF_PATH = 'https://mock-toggles-endpoint';
+    jest
+      .spyOn(global, 'fetch')
+      .mockResolvedValue(mockSuccessfulFetchResponse as unknown as Response);
+
+    consoleInfoSpy = jest.spyOn(console, 'info').mockImplementation();
+    consoleWarnSpy = jest.spyOn(console, 'warn').mockImplementation();
+
+    jest.mock('#lib/config/toggles', () => mockDefaultToggles);
+  });
+
+  afterEach(() => {
+    jest.resetModules();
+    jest.restoreAllMocks();
+    consoleInfoSpy?.mockRestore();
+    consoleWarnSpy?.mockRestore();
+    restoreEnv(envSnapshot);
+  });
+
+  describe('Console output in non-local environments', () => {
+    it('should have no [dev:toggles] console output in test environment', async () => {
+      process.env.SIMORGH_APP_ENV = 'test';
+      jest.mock('#lib/config/toggles', () => ({
+        ...mockDefaultToggles,
+        test: mockDefaultToggles.test,
+      }));
+
+      const { default: fetchToggles } = await import('./index');
+      consoleInfoSpy?.mockClear();
+      consoleWarnSpy?.mockClear();
+
+      await fetchToggles({ service: 'mundo' });
+
+      const consoleInfoCalls = consoleInfoSpy?.mock.calls || [];
+      const consoleWarnCalls = consoleWarnSpy?.mock.calls || [];
+
+      const hasDevTogglesInfo = consoleInfoCalls.some(call =>
+        call.some(
+          arg => typeof arg === 'string' && arg.includes('[dev:toggles]'),
+        ),
+      );
+      const hasDevTogglesWarn = consoleWarnCalls.some(call =>
+        call.some(
+          arg => typeof arg === 'string' && arg.includes('[dev:toggles]'),
+        ),
+      );
+
+      expect(hasDevTogglesInfo).toBe(false);
+      expect(hasDevTogglesWarn).toBe(false);
+    });
+
+    it('should have no [dev:toggles] console output in production', async () => {
+      process.env.SIMORGH_APP_ENV = 'live';
+      jest.mock('#lib/config/toggles', () => ({
+        ...mockDefaultToggles,
+        live: mockDefaultToggles.live,
+      }));
+
+      const { default: fetchToggles } = await import('./index');
+      consoleInfoSpy?.mockClear();
+      consoleWarnSpy?.mockClear();
+
+      await fetchToggles({ service: 'mundo' });
+
+      const consoleInfoCalls = consoleInfoSpy?.mock.calls || [];
+      const consoleWarnCalls = consoleWarnSpy?.mock.calls || [];
+
+      const hasDevTogglesInfo = consoleInfoCalls.some(call =>
+        call.some(
+          arg => typeof arg === 'string' && arg.includes('[dev:toggles]'),
+        ),
+      );
+      const hasDevTogglesWarn = consoleWarnCalls.some(call =>
+        call.some(
+          arg => typeof arg === 'string' && arg.includes('[dev:toggles]'),
+        ),
+      );
+
+      expect(hasDevTogglesInfo).toBe(false);
+      expect(hasDevTogglesWarn).toBe(false);
+    });
+  });
+
+  it('should log [dev:toggles] console output when running locally', async () => {
+    const { default: fetchToggles } = await import('./index');
+    consoleInfoSpy?.mockClear();
+
+    await fetchToggles({ service: 'mundo' });
+
+    const consoleInfoCalls = consoleInfoSpy?.mock.calls || [];
+    const hasDevTogglesInfo = consoleInfoCalls.some(call =>
+      call.some(
+        arg => typeof arg === 'string' && arg.includes('[dev:toggles]'),
+      ),
+    );
+
+    expect(hasDevTogglesInfo).toBe(true);
   });
 });
