@@ -57,15 +57,9 @@ const stripVendorPrefixes = (css: string): string => {
 
     output = output
       // Remove vendor-prefixed property declarations
-      .replace(
-        /(^|[;{])\s*-(webkit|moz|ms|o)-[\w-]+\s*:\s*[^;{}]+;?/gm,
-        '$1',
-      )
+      .replace(/(^|[;{])\s*-(webkit|moz|ms|o)-[\w-]+\s*:\s*[^;{}]+;?/gm, '$1')
       // Remove declarations with vendor-prefixed values
-      .replace(
-        /(^|[;{])\s*[\w-]+\s*:\s*-(webkit|moz|ms|o)-[^;{}]+;?/gm,
-        '$1',
-      )
+      .replace(/(^|[;{])\s*[\w-]+\s*:\s*-(webkit|moz|ms|o)-[^;{}]+;?/gm, '$1')
       // Remove vendor-prefixed pseudo-element/class rules only when simple
       .replace(
         /(^|})\s*[^{}]*::?-(webkit|moz|ms|o)-[\w-]+[^{}]*\{[^{}]*\}/gm,
@@ -81,14 +75,6 @@ const stripVendorPrefixes = (css: string): string => {
 
   return output.trim();
 };
-
-const optimiseAmpCss = (css: string): string =>
-  stripVendorPrefixes(
-    trimFontFaceSourcesToWoff2(treeshakeCssCustomProperties(css)),
-  )
-    .replace(/;\}/g, '}')
-    .replace(/\s{2,}/g, ' ')
-    .trim();
 
 export default class AppDocument extends Document<DocProps> {
   static async getInitialProps(ctx: DocumentContext) {
