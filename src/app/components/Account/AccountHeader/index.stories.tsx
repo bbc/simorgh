@@ -31,6 +31,9 @@ SignedIn.globals = {
 export const SignedOutNewNav = () => <NewLogoBanner />;
 export const SignedInNewNav = () => <NewLogoBanner />;
 
+SignedOutNewNav.parameters = { layout: 'fullscreen' };
+SignedInNewNav.parameters = { layout: 'fullscreen' };
+
 SignedInNewNav.globals = {
   idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: true },
 };

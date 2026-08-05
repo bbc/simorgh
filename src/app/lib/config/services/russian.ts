@@ -122,7 +122,7 @@ export const service: DefaultServiceConfig = {
       },
       topicDiscovery: {
         heading: 'Узнать больше',
-        moreAboutTopic: 'Больше о {topic}',
+        moreAboutTopic: 'Больше по теме: {topic}',
         fetchErrorMessage: 'Не удалось загрузить. Пожалуйста, попробуйте снова',
       },
       sport: {
@@ -251,6 +251,7 @@ export const service: DefaultServiceConfig = {
     manifestPath: '/russian/manifest.json',
     swPath: '/sw.js',
     homePageTitle: 'Главная',
+    iTunesAppId: 6761256736,
     showAdPlaceholder: true,
     showRelatedTopics: true,
     googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',

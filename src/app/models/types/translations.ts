@@ -81,6 +81,7 @@ export interface Translations {
     noArticles: string;
     errorText: string;
     loading: string;
+    noJsDescription: string;
   };
   actionTooltip?: {
     success: {

@@ -45,6 +45,7 @@ export const service: DefaultServiceConfig = {
     swPath: '/sw.js',
     homePageTitle:
       'ब्रेकिंग न्यूज़ समाचार, ताजा खबर | News, latest news, breaking news',
+    iTunesAppId: 6761256736,
     showAdPlaceholder: true,
     showRelatedTopics: true,
     googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
@@ -153,6 +154,8 @@ export const service: DefaultServiceConfig = {
         errorText:
           'लगता है यह कंटेंट लोड नहीं हो रहा है. कृपया बाद में पुनः प्रयास करें.',
         loading: 'लोड हो रहा है',
+        noJsDescription:
+          'कृपया जावास्क्रिप्ट चालू करें या इस सामग्री को देखने के लिए किसी दूसरे ब्राउज़र का इस्तेमाल करें।',
       },
       actionTooltip: {
         success: {
