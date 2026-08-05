@@ -167,4 +167,3 @@ describe('useOptimizelyVariation - useClientSide', () => {
     expect(sendOptimizelyActivationEvent).toHaveBeenCalledTimes(1);
   });
 });
-

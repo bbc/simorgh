@@ -27,18 +27,33 @@ const reverbComponentTracking = async ({
   eventDetails,
 }: ReverbComponentTrackingProps) => {
   const {
+    actionName = '',
+    actionType,
     anchorElement,
+    background,
+    container,
     experience,
     event,
     eventPublisher,
+    experimentName,
+    experimentVariant,
     group,
     isClick,
     item,
     originalEvent,
   } = eventDetails;
 
-  const actionName = '';
-  const actionAdditionalLabels = { event, group, item, experience };
+  const actionAdditionalLabels = {
+    event,
+    group,
+    item,
+    experience,
+    ...(actionType && { actionType }),
+    ...(background !== undefined && { background }),
+    ...(container && { container }),
+    ...(experimentName && { experimentName }),
+    ...(experimentVariant && { experimentVariant }),
+  };
 
   return reverbInstance.userActionEvent(
     eventPublisher,
@@ -54,6 +69,7 @@ const reverbHandlers = {
   pageView: reverbPageViews,
   sectionView: reverbComponentTracking,
   sectionClick: reverbComponentTracking,
+  activation: reverbComponentTracking,
 };
 
 const callReverb = async (eventDetails: ReverbEventDetails) => {

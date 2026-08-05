@@ -1,6 +1,12 @@
 import { PropsWithChildren } from 'react';
-import { renderHook } from '@testing-library/react-hooks/server';
+import {
+  renderHook,
+  act,
+} from '#app/components/react-testing-library-with-providers';
 import { RequestContextProvider } from '#contexts/RequestContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
+import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
 import { OptimizelyProvider, ReactSDKClient } from '@optimizely/react-sdk';
 import {
   PageTypes,
@@ -26,8 +32,13 @@ describe('useOptimizelyVariation - useServerSide', () => {
   const renderUseServerSide = (params: {
     experimentName: string;
     serverSideExperiments?: ServerSideExperiment[];
+    withOptimizely?: boolean;
   }) => {
-    const { experimentName, serverSideExperiments } = params;
+    const {
+      experimentName,
+      serverSideExperiments,
+      withOptimizely = true,
+    } = params;
 
     const props = {
       serverSideExperiments,
@@ -36,38 +47,57 @@ describe('useOptimizelyVariation - useServerSide', () => {
       service: 'news' as Services,
       pathname: 'bar',
     };
-    const wrapper = ({ children }: PropsWithChildren) => (
-      <OptimizelyProvider
-        optimizely={optimizely as unknown as ReactSDKClient}
-        isServerSide
-      >
-        <RequestContextProvider {...props}>{children}</RequestContextProvider>
-      </OptimizelyProvider>
-    );
+    const wrapper = ({ children }: PropsWithChildren) => {
+      const providers = (
+        <ToggleContextProvider toggles={{ eventTracking: { enabled: true } }}>
+          <ServiceContextProvider service="news">
+            <RequestContextProvider {...props}>
+              <EventTrackingContextProvider>
+                {children}
+              </EventTrackingContextProvider>
+            </RequestContextProvider>
+          </ServiceContextProvider>
+        </ToggleContextProvider>
+      );
+
+      return withOptimizely ? (
+        <OptimizelyProvider
+          optimizely={optimizely as unknown as ReactSDKClient}
+          isServerSide
+        >
+          {providers}
+        </OptimizelyProvider>
+      ) : (
+        providers
+      );
+    };
     return renderHook(() => useServerSide(experimentName), {
       wrapper,
-    }).result.current;
+    });
   };
 
   it('should return null if optimizely is not defined', () => {
-    const { result } = renderHook(() => useServerSide('foo'));
+    const { result } = renderUseServerSide({
+      experimentName: 'foo',
+      withOptimizely: false,
+    });
     expect(result.current).toEqual(null);
   });
 
   it('should return null if mvtExperiments is falsy', () => {
-    const result = renderUseServerSide({
+    const { result } = renderUseServerSide({
       serverSideExperiments: undefined,
       experimentName: 'foo',
     });
-    expect(result).toEqual(null);
+    expect(result.current).toEqual(null);
   });
 
   it('should return null if mvtExperiments is an empty array', () => {
-    const result = renderUseServerSide({
+    const { result } = renderUseServerSide({
       serverSideExperiments: [],
       experimentName: 'foo',
     });
-    expect(result).toEqual(null);
+    expect(result.current).toEqual(null);
   });
 
   it('should return null if given experiment is not in array', () => {
@@ -78,12 +108,12 @@ describe('useOptimizelyVariation - useServerSide', () => {
         enabled: true,
       },
     ];
-    const result = renderUseServerSide({
+    const { result } = renderUseServerSide({
       serverSideExperiments:
         mockServerSideExperiments as ServerSideExperiment[],
       experimentName: 'bar',
     });
-    expect(result).toEqual(null);
+    expect(result.current).toEqual(null);
   });
 
   it('should return a variation when the experiment is enabled', () => {
@@ -95,12 +125,12 @@ describe('useOptimizelyVariation - useServerSide', () => {
       },
     ];
 
-    const result = renderUseServerSide({
+    const { result } = renderUseServerSide({
       serverSideExperiments:
         mockServerSideExperiments as ServerSideExperiment[],
       experimentName: 'foo',
     });
-    expect(result).toEqual('control');
+    expect(result.current).toEqual('control');
   });
 
   it('should return null when the experiment is not enabled', () => {
@@ -112,12 +142,12 @@ describe('useOptimizelyVariation - useServerSide', () => {
       },
     ];
 
-    const result = renderUseServerSide({
+    const { result } = renderUseServerSide({
       serverSideExperiments:
         mockServerSideExperiments as ServerSideExperiment[],
       experimentName: 'foo',
     });
-    expect(result).toBeFalsy();
+    expect(result.current).toBeFalsy();
   });
 
   it('should return null when the experiment variation is string "false"', () => {
@@ -129,12 +159,12 @@ describe('useOptimizelyVariation - useServerSide', () => {
       },
     ];
 
-    const result = renderUseServerSide({
+    const { result } = renderUseServerSide({
       serverSideExperiments:
         mockServerSideExperiments as ServerSideExperiment[],
       experimentName: 'foo',
     });
-    expect(result).toBeNull();
+    expect(result.current).toBeNull();
   });
 
   it('should return null when the experiment variation is boolean "false"', () => {
@@ -146,15 +176,15 @@ describe('useOptimizelyVariation - useServerSide', () => {
       },
     ];
 
-    const result = renderUseServerSide({
+    const { result } = renderUseServerSide({
       serverSideExperiments:
         mockServerSideExperiments as unknown as ServerSideExperiment[],
       experimentName: 'foo',
     });
-    expect(result).toBeNull();
+    expect(result.current).toBeNull();
   });
 
-  it('should call activate experiment if experiment is enabled', () => {
+  it('should call activate experiment (via useEffect) if experiment is enabled', async () => {
     const mockServerSideExperiments = [
       {
         experimentName: 'foo',
@@ -163,15 +193,18 @@ describe('useOptimizelyVariation - useServerSide', () => {
       },
     ];
 
-    renderUseServerSide({
-      serverSideExperiments:
-        mockServerSideExperiments as ServerSideExperiment[],
-      experimentName: 'foo',
+    await act(async () => {
+      renderUseServerSide({
+        serverSideExperiments:
+          mockServerSideExperiments as ServerSideExperiment[],
+        experimentName: 'foo',
+      });
     });
-    expect(spyActivateExperiment).toHaveBeenCalled();
+
+    expect(spyActivateExperiment).toHaveBeenCalledTimes(1);
   });
 
-  it('should not call activate experiment if experiment is disabled', () => {
+  it('should not call activate experiment if experiment is disabled', async () => {
     const mockServerSideExperiments = [
       {
         experimentName: 'foo',
@@ -180,11 +213,39 @@ describe('useOptimizelyVariation - useServerSide', () => {
       },
     ];
 
-    renderUseServerSide({
-      serverSideExperiments:
-        mockServerSideExperiments as ServerSideExperiment[],
-      experimentName: 'foo',
+    await act(async () => {
+      renderUseServerSide({
+        serverSideExperiments:
+          mockServerSideExperiments as ServerSideExperiment[],
+        experimentName: 'foo',
+      });
     });
+
     expect(spyActivateExperiment).not.toHaveBeenCalled();
+  });
+
+  it('should not call activate experiment again after a re-render', async () => {
+    const mockServerSideExperiments = [
+      {
+        experimentName: 'foo',
+        variation: 'control',
+        enabled: true,
+      },
+    ];
+
+    let rerender: (() => void) | undefined;
+    await act(async () => {
+      ({ rerender } = renderUseServerSide({
+        serverSideExperiments:
+          mockServerSideExperiments as ServerSideExperiment[],
+        experimentName: 'foo',
+      }));
+    });
+
+    await act(async () => {
+      rerender?.();
+    });
+
+    expect(spyActivateExperiment).toHaveBeenCalledTimes(1);
   });
 });

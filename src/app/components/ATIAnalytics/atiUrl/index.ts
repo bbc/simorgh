@@ -1,4 +1,5 @@
 import {
+  ACTIVATION_EVENT,
   CLICK_EVENT,
   VIEW_EVENT,
   VIEWABILITY_CLICK_EVENT,
@@ -189,3 +190,56 @@ export const buildReverbEventModel = ({
     },
   };
 };
+
+type ActivationEventProps = {
+  pageIdentifier?: string;
+  producerName?: string;
+  statsDestination?: string;
+  experimentName: string;
+  experimentVariant: string;
+  isSignedIn?: boolean;
+  hashedId?: string | null;
+};
+
+/**
+ * Builds the standalone Piano/Reverb "activation" beacon fired when a user is
+ * activated into an Optimizely experiment, decoupled from any view/click event.
+ */
+export const buildActivationEventModel = ({
+  pageIdentifier,
+  producerName,
+  statsDestination,
+  experimentName,
+  experimentVariant,
+  isSignedIn = false,
+  hashedId = null,
+}: ActivationEventProps): ReverbBeaconConfig => ({
+  params: {
+    page: {
+      destination: statsDestination,
+      name: pageIdentifier,
+      producer: producerName,
+      additionalProperties: {
+        type: 'AT',
+      },
+    },
+    user: {
+      isSignedIn,
+      hashedId,
+    },
+  },
+  eventDetails: {
+    eventName: ACTIVATION_EVENT,
+    eventPublisher: 'optimizely',
+    actionName: 'optimizely',
+    actionType: 'experiment',
+    background: true,
+    container: 'unspecified',
+    experimentName,
+    experimentVariant,
+    experience: {
+      engine_type: ['experimentation'],
+      engine_id: [`optimizely.${experimentName}.${experimentVariant}`],
+    },
+  },
+});

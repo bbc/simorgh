@@ -153,6 +153,51 @@ describe('sendBeacon', () => {
       );
     });
 
+    it('should call Reverb userActionEvent with activation fields for an activation event', async () => {
+      const reverbActivationConfig = {
+        params: {
+          page: 'page',
+          user: '1234-5678',
+        },
+        eventDetails: {
+          eventName: 'activation',
+          eventPublisher: 'optimizely',
+          actionName: 'optimizely',
+          actionType: 'experiment',
+          background: true,
+          container: 'unspecified',
+          experimentName: 'foo',
+          experimentVariant: 'bar',
+          experience: {
+            engine_type: ['experimentation'],
+            engine_id: ['optimizely.foo.bar'],
+          },
+        },
+      } as unknown as ReverbBeaconConfig;
+
+      await sendBeacon(reverbActivationConfig);
+
+      expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
+      expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
+        'optimizely',
+        'optimizely',
+        {
+          actionType: 'experiment',
+          background: true,
+          container: 'unspecified',
+          experimentName: 'foo',
+          experimentVariant: 'bar',
+          experience: {
+            engine_type: ['experimentation'],
+            engine_id: ['optimizely.foo.bar'],
+          },
+        },
+        undefined,
+        undefined,
+        undefined,
+      );
+    });
+
     it(`should not call Reverb when not on client`, async () => {
       isOnClient = false;
 

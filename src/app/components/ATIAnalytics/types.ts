@@ -119,7 +119,11 @@ export type ReverbUserVars = {
 };
 
 export type ReverbEventDetails = {
+  actionName?: string;
+  actionType?: string;
   anchorElement?: HTMLElement;
+  background?: boolean;
+  container?: string;
   experience?: {
     engine_type: Array<string>;
     engine_id: Array<string>;
@@ -129,8 +133,10 @@ export type ReverbEventDetails = {
     action: 'select' | 'view';
     grouping?: string;
   };
-  eventName: 'pageView' | 'sectionView' | 'sectionClick';
+  eventName: 'pageView' | 'sectionView' | 'sectionClick' | 'activation';
   eventPublisher?: string;
+  experimentName?: string;
+  experimentVariant?: string;
   group?: string | object;
   isClick?: boolean;
   item?: string | object;
