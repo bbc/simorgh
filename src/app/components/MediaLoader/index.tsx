@@ -1,4 +1,5 @@
 import { use, useEffect, useMemo, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
 import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
@@ -46,6 +47,54 @@ const PAGETYPES_IGNORE_PLACEHOLDER: PageTypes[] = [
 ];
 
 const logger = nodeLogger(__filename);
+
+const FAKE_FULLSCREEN_STYLE_ID = 'simorgh-fake-fullscreen-styles';
+
+// The fake fullscreen CSS is static and shared by every player, so it is
+// injected once per page (guarded by its element id) rather than once per
+// MediaLoader instance. Injected client-side only, since fake fullscreen is a
+// client interaction; the nonce keeps it within the page's style CSP.
+const FakeFullscreenStyles = ({ nonce }: { nonce?: string | null }) => {
+  useEffect(() => {
+    if (document.getElementById(FAKE_FULLSCREEN_STYLE_ID)) return;
+
+    const styleElement = document.createElement('style');
+    styleElement.id = FAKE_FULLSCREEN_STYLE_ID;
+    if (nonce) styleElement.setAttribute('nonce', nonce);
+    styleElement.textContent = fakeFullscreenStyles;
+    document.head.appendChild(styleElement);
+  }, [nonce]);
+
+  return null;
+};
+
+// The backdrop is portalled to <body> so it escapes this component's (and any
+// ancestor modal's) stacking context and sits at the document root, alongside
+// the fixed, elevated player wrapper. Their z-indexes are then directly
+// comparable (backdrop < player), which is required on iOS Safari where GPU
+// compositing does not bypass CSS stacking as it does on desktop.
+const FakeFullscreenLayer = ({ isActive }: { isActive: boolean }) => {
+  // Defer the portal until after mount so the hydration render matches the
+  // server (both render nothing). Portalling during hydration would insert the
+  // backdrop into <body> before hydration completes, causing a mismatch.
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) return null;
+
+  return createPortal(
+    <div
+      aria-hidden="true"
+      className={`${FAKE_FULLSCREEN_LAYER_CLASS}${
+        isActive ? ` ${FAKE_FULLSCREEN_ACTIVE_CLASS}` : ''
+      }`}
+    />,
+    document.body,
+  );
+};
 
 type BumpLoaderProps = {
   nonce?: string | null;
@@ -415,26 +464,15 @@ const MediaLoader = ({
             noJsMessage={noJsMessage}
           />
         ) : (
-          // This wrapper - rather than the figure - is what gets forced above
-          // page content during fake fullscreen, so the Caption below (page
-          // furniture) is never pulled into the fullscreen layer with it.
-          // The fake fullscreen layer is a sibling (not a child) of this
-          // wrapper so that both sit in the same page-level stacking context.
-          // Inside the wrapper they would compete: the layer at z-index
-          // 2147483646 would sit above the SMP player at z-index 999 within
-          // the wrapper's stacking context, hiding the video on iOS Safari
-          // where GPU compositing does not bypass CSS stacking as it does on
-          // desktop browsers.
+          // During fake fullscreen the active player wrapper (below) is fixed
+          // and elevated above all page content, while the black backdrop
+          // layer is portalled to <body>. The Caption below stays in the page
+          // flow (page furniture is never pulled into the fullscreen layer),
+          // and portalling the backdrop keeps it at the document root so its
+          // z-index is directly comparable with the fixed player wrapper.
           <>
             {shouldHandleFakeFullscreen && (
-              <div
-                aria-hidden="true"
-                className={`${FAKE_FULLSCREEN_LAYER_CLASS}${
-                  isFakeFullscreenActive
-                    ? ` ${FAKE_FULLSCREEN_ACTIVE_CLASS}`
-                    : ''
-                }`}
-              />
+              <FakeFullscreenLayer isActive={isFakeFullscreenActive} />
             )}
             <div
               css={styles.mediaPlayerWrapper}
@@ -447,9 +485,7 @@ const MediaLoader = ({
               {showAds && <AdvertTagLoader />}
               <BumpLoader nonce={nonce} />
               {shouldHandleFakeFullscreen && (
-                <Helmet>
-                  <style type="text/css">{fakeFullscreenStyles}</style>
-                </Helmet>
+                <FakeFullscreenStyles nonce={nonce} />
               )}
               {hasPlaceholder ? (
                 <Placeholder
