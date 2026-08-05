@@ -98,8 +98,15 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
     overflow-x: scroll;
     scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
+    scroll-padding-inline-end: 3rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-7 {
+      scroll-padding-inline-end: 6rem;
+    }
   }
 
   .emotion-7::-webkit-scrollbar {
@@ -219,6 +226,7 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
   width: 2.75rem;
   background-color: #B80000;
   color: #FFFFFF;
+  overflow: hidden;
   width: 2.75rem;
   height: 2.75rem;
 }
@@ -381,8 +389,15 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
     overflow-x: scroll;
     scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
+    scroll-padding-inline-end: 3rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-17 {
+      scroll-padding-inline-end: 6rem;
+    }
   }
 
   .emotion-17::-webkit-scrollbar {

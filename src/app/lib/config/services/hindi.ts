@@ -45,16 +45,17 @@ export const service: DefaultServiceConfig = {
     swPath: '/sw.js',
     homePageTitle:
       'ब्रेकिंग न्यूज़ समाचार, ताजा खबर | News, latest news, breaking news',
+    iTunesAppId: 6761256736,
     showAdPlaceholder: true,
     showRelatedTopics: true,
     googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     podcastPromo: {
       title: 'पॉडकास्ट',
-      brandTitle: 'दिनभर: पूरा दिन,पूरी ख़बर (Dinbhar)',
+      brandTitle: 'Dinbhar: आवाज़ वही, अंदाज़ नया',
       brandDescription:
-        'वो राष्ट्रीय और अंतरराष्ट्रीय ख़बरें जो दिनभर सुर्खियां बनीं.',
+        'देश - दुनिया की बड़ी ख़बरें  जिन्होंने बटोरी सुर्खियां.',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p09ds7cb.jpg',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0nq9t7p.jpg',
         alt: 'दिनभर',
       },
       linkLabel: {
@@ -119,6 +120,7 @@ export const service: DefaultServiceConfig = {
       },
       account: {
         signIn: 'साइन इन',
+        signInAccessibleLabel: 'माय न्यूज़ में साइन इन करें',
         forYou: 'आपका एकाउंट',
         register: 'रजिस्टर',
       },
@@ -152,6 +154,8 @@ export const service: DefaultServiceConfig = {
         errorText:
           'लगता है यह कंटेंट लोड नहीं हो रहा है. कृपया बाद में पुनः प्रयास करें.',
         loading: 'लोड हो रहा है',
+        noJsDescription:
+          'कृपया जावास्क्रिप्ट चालू करें या इस सामग्री को देखने के लिए किसी दूसरे ब्राउज़र का इस्तेमाल करें।',
       },
       gist: 'सारांश',
       error: {

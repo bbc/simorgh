@@ -172,7 +172,8 @@ export default class AppDocument extends Document<DocProps> {
 
     switch (true) {
       case isAmp && pageType === 'article': {
-        const ampCss = optimiseAmpCss(css + getAmpLiteCss(getNextData()));
+        const ampLiteCss = getAmpLiteCss(getNextData());
+        const combinedCss = optimiseCssPrefixes(css + ampLiteCss);
         return (
           <AmpRenderer
             bodyContent={<Main />}
@@ -181,13 +182,14 @@ export default class AppDocument extends Document<DocProps> {
             helmetScriptTags={helmetScriptTags}
             htmlAttrs={htmlAttrs}
             ids={ids}
-            styles={ampCss}
+            styles={combinedCss}
             title={title}
           />
         );
       }
       case isLite: {
-        const liteCss = css + getAmpLiteCss(getNextData());
+        const ampLiteCss = getAmpLiteCss(getNextData());
+        const liteCss = optimiseCssPrefixes(css + ampLiteCss);
         return (
           <LiteRenderer
             bodyContent={<Main />}
