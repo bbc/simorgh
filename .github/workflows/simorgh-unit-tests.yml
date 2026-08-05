@@ -3,6 +3,9 @@ on:
   pull_request:
     branches:
       - '**'
+    paths-ignore:
+      - '**/*.md'
+      - '**/*.mdx'
 permissions:
   contents: read
 

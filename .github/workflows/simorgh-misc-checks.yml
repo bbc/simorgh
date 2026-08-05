@@ -3,9 +3,15 @@ on:
   pull_request:
     branches:
       - '**'
+    paths-ignore:
+      - '**/*.md'
+      - '**/*.mdx'
   push:
     branches:
       - 'latest'
+    paths-ignore:
+      - '**/*.md'
+      - '**/*.mdx'
 
 permissions:
   statuses: write

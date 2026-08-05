@@ -13,6 +13,8 @@ on:
     branches: [latest]
     paths-ignore:
       - '**/*.test.*'
+      - '**/*.md'
+      - '**/*.mdx'
   schedule:
     - cron: '0 8 * * 6'
 
