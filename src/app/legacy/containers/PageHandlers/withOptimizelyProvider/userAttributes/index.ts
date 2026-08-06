@@ -1,4 +1,5 @@
 import { GROUP_3_MAX_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
+import isLive from '#app/lib/utilities/isLive';
 import onClient from '#app/lib/utilities/onClient';
 
 export const isMobile = () => {
@@ -23,6 +24,9 @@ export const REFERRER_CATEGORIES = {
 const DEBUG_REFERRER_VALUES = ['search', 'social', 'direct'];
 
 const getDebugReferrer = () => {
+  // debug query parameters must not change audience targeting on live pages
+  if (isLive()) return null;
+
   const debugReferrer = new URLSearchParams(window.location.search)
     .get('debugReferrer')
     ?.toLowerCase();
