@@ -1,5 +1,5 @@
 import { PropsWithChildren } from 'react';
-import { renderHook } from '@testing-library/react';
+import { renderHook, act } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
@@ -221,18 +221,26 @@ describe('useOptimizelyVariation - useServerSide', () => {
     expect(spyActivateExperiment).not.toHaveBeenCalled();
   });
 
-  it('should not re-activate the experiment on rerender', () => {
-    const { rerender } = renderUseServerSide({
-      serverSideExperiments: [
-        { experimentName: 'foo', variation: 'control', enabled: true },
-      ] as ServerSideExperiment[],
-      experimentName: 'foo',
+  it('should not re-activate the experiment on rerender', async () => {
+    let rerender: (() => void) | undefined;
+
+    await act(async () => {
+      ({ rerender } = renderUseServerSide({
+        serverSideExperiments: [
+          { experimentName: 'foo', variation: 'control', enabled: true },
+        ] as ServerSideExperiment[],
+        experimentName: 'foo',
+      }));
     });
 
     expect(spyActivateExperiment).toHaveBeenCalledTimes(1);
 
-    rerender();
-    rerender();
+    await act(async () => {
+      rerender?.();
+    });
+    await act(async () => {
+      rerender?.();
+    });
 
     expect(spyActivateExperiment).toHaveBeenCalledTimes(1);
   });

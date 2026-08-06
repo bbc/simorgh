@@ -1,5 +1,5 @@
 import { OptimizelyContext } from '@optimizely/react-sdk';
-import { useContext, useEffect } from 'react';
+import { useContext, useEffect, useRef } from 'react';
 import { RequestContext } from '#app/contexts/RequestContext';
 import useOptimizelyActivationEvent from '#hooks/useOptimizelyActivationEvent';
 import activateExperiment from '../activateExperiment';
@@ -14,24 +14,21 @@ export default (experimentName: string) => {
     ({ experimentName: serverSideExperiment }) =>
       serverSideExperiment === experimentName,
   );
-
-  const { enabled, variation = null } = experiment ?? {};
-
-  const isActiveVariant = Boolean(
-    enabled && variation && variation !== 'false',
-  );
+  const { enabled, variation } = experiment || {};
+  const activeVariation =
+    enabled && variation && variation !== 'false' ? variation : null;
 
   useEffect(() => {
-    if (optimizely && isActiveVariant && variation) {
+    if (optimizely && activeVariation) {
       activateExperiment({
         optimizely,
         experimentName,
-        experimentVariation: variation,
+        experimentVariation: activeVariation,
+        activatedExperiments,
+        onExperimentActivated: sendActivationEvent,
       });
     }
-  }, [optimizely, isActiveVariant, variation, experimentName]);
+  }, [optimizely, experimentName, activeVariation, sendActivationEvent]);
 
-  if (!optimizely || !isActiveVariant) return null;
-
-  return variation;
+  return optimizely ? activeVariation : null;
 };
