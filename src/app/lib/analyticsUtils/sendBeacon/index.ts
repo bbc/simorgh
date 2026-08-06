@@ -1,10 +1,15 @@
 // import resonance - we can follow the pattern of the reverbURLHelper, e,g.
-// import { Resonance, ... } from '@bbc/resonance';
+import { Resonance, ResonanceMode } from '@bbc/resonance';
 import { ReverbClient } from '#app/models/types/eventTracking';
 import {
   ReverbBeaconConfig,
   ReverbEventDetails,
 } from '#app/components/ATIAnalytics/types';
+import type {
+  ResonanceProperties,
+  PageviewProperties,
+  BaseProperties,
+} from '@bbc/resonance';
 import onClient from '../../utilities/onClient';
 import nodeLogger from '../../logger.node';
 import { ATI_LOGGING_ERROR } from '../../logger.const';
@@ -66,6 +71,8 @@ const callReverb = async (eventDetails: ReverbEventDetails) => {
     async reverb => {
       if (!reverb.isReady()) await reverb.initialise(); // here we initialise reverb
 
+      console.log('Reverb initialised with params:', eventDetails);
+
       await reverbHandlers[eventName]({
         reverbInstance: reverb,
         eventDetails,
@@ -75,8 +82,24 @@ const callReverb = async (eventDetails: ReverbEventDetails) => {
       logger.error(ATI_LOGGING_ERROR, {
         error: 'Failed to load reverb. No event sent',
       });
+      console.log('Reverb errored with params:', eventDetails);
     },
   );
+};
+
+const callResonance = (resonanceParams: ResonanceParams) => {
+  try {
+    // add checks in here so this only runs when resonanceParams is not undefined.
+    console.log('Resonance initialised with params:', resonanceParams);
+    Resonance.initialise(
+      resonanceParams.resonanceProperties,
+      resonanceParams.baseProperties,
+      resonanceParams.pageviewProperties,
+    );
+  } catch (error) {
+    console.log('throwing error with param:', resonanceParams);
+    throw new Error(`Error initialising Resonance: ${error}`);
+  }
 };
 
 // add setResonancePageValues function here
@@ -84,7 +107,16 @@ const callReverb = async (eventDetails: ReverbEventDetails) => {
 // add initialise Resonance function here inside callResonance function
 // option to use resonanceProperties.suppressInitialPageview at initialisation.
 
-const sendBeacon = async (reverbBeaconConfig: ReverbBeaconConfig) => {
+type ResonanceParams = {
+  resonanceProperties: ResonanceProperties;
+  pageviewProperties: PageviewProperties;
+  baseProperties: BaseProperties;
+};
+
+const sendBeacon = async (
+  reverbBeaconConfig: ReverbBeaconConfig,
+  resonanceParams: ResonanceParams,
+) => {
   // add resonanceBeaconConfig param to function if needed, e.g.
   // sendBeacon = async (reverbBeaconConfig: ReverbBeaconConfig, resonanceBeaconConfig?: ResonanceBeaconConfig) => {
   if (onClient()) {
@@ -104,6 +136,8 @@ const sendBeacon = async (reverbBeaconConfig: ReverbBeaconConfig) => {
 
       //   await callResonance(eventDetails);
       // } else {
+
+      callResonance(resonanceParams);
 
       await callReverb(eventDetails);
     } catch (error) {
