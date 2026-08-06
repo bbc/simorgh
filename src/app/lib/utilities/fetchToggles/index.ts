@@ -59,9 +59,19 @@ const getMergedToggles = async ({
   }
 
   const isLocal = appEnvironment === 'local';
-  const serviceEnv = isLocal ? 'test' : appEnvironment;
+  const serviceEnv = isLocal
+    ? process.env.TOGGLES_SERVICE_ENV || 'test'
+    : appEnvironment;
   const cacheKey = `${togglesEndpoint}:${serviceEnv}`;
-  const cachedResponse = cache.get(cacheKey);
+
+  if (isLocal) {
+    // eslint-disable-next-line no-console
+    console.info(
+      `[dev:toggles] Fetching remote toggles for "${service}" from ${serviceEnv} iSite (${togglesEndpoint})`,
+    );
+  }
+
+  const cachedResponse = isLocal ? undefined : cache.get(cacheKey);
 
   logger.info(TOGGLE_API_REQUEST_RECEIVED, {
     service,
@@ -81,7 +91,7 @@ const getMergedToggles = async ({
       headers: {
         'ctx-service-env': serviceEnv,
       },
-      signal: AbortSignal.timeout(PRIMARY_DATA_TIMEOUT),
+      ...(!isLocal && { signal: AbortSignal.timeout(PRIMARY_DATA_TIMEOUT) }),
     };
 
     const startHrTime = process.hrtime();
@@ -105,9 +115,33 @@ const getMergedToggles = async ({
     const responseBody = await response.json();
     const fetchedToggles = responseBody?.data?.toggles;
 
-    cache.set(cacheKey, fetchedToggles);
+    if (!fetchedToggles) {
+      return localToggles;
+    }
 
-    return { ...localToggles, ...fetchedToggles };
+    if (!isLocal) {
+      cache.set(cacheKey, fetchedToggles);
+    }
+
+    const mergedToggles = { ...localToggles, ...fetchedToggles };
+
+    if (isLocal) {
+      const notOverriddenToggles = Object.keys(localToggles).filter(
+        toggleName => !(toggleName in fetchedToggles),
+      );
+      const { _environment, ...finalToggles } = mergedToggles;
+
+      // eslint-disable-next-line no-console
+      console.info('[dev:toggles] Final toggles:', finalToggles);
+      // eslint-disable-next-line no-console
+      console.info(
+        `[dev:toggles] Local toggles NOT overridden by ${serviceEnv} iSite:\n${
+          notOverriddenToggles.length ? notOverriddenToggles.join('\n') : 'none'
+        }`,
+      );
+    }
+
+    return mergedToggles;
   } catch (error) {
     const { message } = error as FetchError;
 
@@ -115,6 +149,16 @@ const getMergedToggles = async ({
       error: message,
       service,
     });
+
+    if (isLocal) {
+      // eslint-disable-next-line no-console
+      console.warn(
+        '[dev:toggles] Failed to fetch remote toggles for "%s" from %s iSite, falling back to local toggles:',
+        service,
+        serviceEnv,
+        message,
+      );
+    }
 
     return localToggles;
   }
