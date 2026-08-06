@@ -38,8 +38,6 @@ export const assertFeaturesAnalysisComponentClick = ({
     interceptATIAnalyticsBeacons();
     cy.visit(path);
 
-    // This duplicate line of code has been added intentionally to get cypress to scroll to the bottom.
-    cy.get('[data-testid="features"]').scrollIntoView({ duration: 1000 });
     cy.get('[data-testid="features"]').scrollIntoView({ duration: 1000 });
 
     // Click on first item
