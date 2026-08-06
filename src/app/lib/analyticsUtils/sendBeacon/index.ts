@@ -81,7 +81,8 @@ const callReverb = async (eventDetails: ReverbEventDetails) => {
 
 // add setResonancePageValues function here
 
-// add callResonance function here - might need to take a different form since we initialise once?
+// add initialise Resonance function here inside callResonance function
+// option to use resonanceProperties.suppressInitialPageview at initialisation.
 
 const sendBeacon = async (reverbBeaconConfig: ReverbBeaconConfig) => {
   // add resonanceBeaconConfig param to function if needed, e.g.

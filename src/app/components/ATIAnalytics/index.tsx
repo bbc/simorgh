@@ -16,6 +16,9 @@ const ATIAnalytics = () => {
 
   const { reverbParams } = use(ReverbParamsContext);
 
+  // EITHER build resonance params here like we did for Reverb before these changes https://github.com/bbc/simorgh/pull/14120
+  // Or build ResonanceParamsContext (not described in depth in this POC due to implementation change occuring after POC was created)
+
   // build resonance params if useResonance is true, e.g.
   //  const resonanceParams = useResonance
   //   ? buildResonanceParams({
