@@ -1,3 +1,5 @@
+// import resonance - we can follow the pattern of the reverbURLHelper, e,g.
+// import { Resonance, ... } from '@bbc/resonance';
 import { ReverbClient } from '#app/models/types/eventTracking';
 import {
   ReverbBeaconConfig,
@@ -6,8 +8,6 @@ import {
 import onClient from '../../utilities/onClient';
 import nodeLogger from '../../logger.node';
 import { ATI_LOGGING_ERROR } from '../../logger.const';
-// here or somewhere else we will need to import resonance - we can follow the pattern of the reverbURLHelper, e,g.
-// import { resonance ... } from '@bbc/resonance...';
 
 const logger = nodeLogger(__filename);
 

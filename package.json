@@ -65,6 +65,7 @@
     "react-is": "19"
   },
   "dependencies": {
+    "@bbc/resonance": "https://mybbc-analytics.files.bbci.co.uk/resonance/resonance-2.7.2.tgz",
     "@bbc/reverb-url-helper": "https://mybbc-analytics.files.bbci.co.uk/reverb-url-helper/bbc-reverb-url-helper-2.5.0.tgz",
     "@bbc/web-vitals": "2.6.0",
     "@emotion/cache": "11.14.0",
