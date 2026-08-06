@@ -80,7 +80,7 @@
   "dependencies": {
     "autoprefixer": "10.5.4",
     "next": "16.2.11",
-    "postcss": "8.5.23",
+    "postcss": "8.5.24",
     "sharp": "0.35.3",
     "temporal-polyfill": "0.3.0"
   }
