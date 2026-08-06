@@ -55,17 +55,17 @@ export const service: DefaultServiceConfig = {
         'include/vjafwest/1365-2024-us-presidential-election-banner/develop/mundo/app',
     },
     podcastPromo: {
-      title: 'Podcast',
-      brandTitle: 'Improbable',
+      title: 'Anuncio app',
+      brandTitle: 'Tenemos una nueva app',
       brandDescription:
-        'El nuevo podcast de BBC Mundo sobre un amor que triunfó contra todo pronóstico',
+        'Todas las noticias que necesitas están en BBC World Service',
       image: {
-        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0mkt8rx.jpg',
-        alt: 'Logo del podcast Improbable sobre una foto de boda de una pareja',
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0p2sp62.jpg',
+        alt: 'Imagen de un teléfono celular con la nueva app de BBC Mundo',
       },
       linkLabel: {
-        text: 'Episodios',
-        href: 'https://www.bbc.com/mundo/podcasts/p0mhhr0q/p0mk4fhg',
+        text: 'Descárgala aquí',
+        href: 'https://bbcwsuniversal.onelink.me/s6ot/8sfpme8y',
       },
       skipLink: {
         text: 'Saltar %title% y continuar leyendo',
