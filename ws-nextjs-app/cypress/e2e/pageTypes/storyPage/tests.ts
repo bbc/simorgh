@@ -21,7 +21,7 @@ export default ({ service, pageType, isAmp }: ServiceParametersType) => {
       it('Recommendations have images', () => {
         isArticleLessThanTwoYearsOld().then(runRecommendationTests => {
           if (runRecommendationTests) {
-            cy.getToggles(service);
+            cy.fetchToggles(service);
             cy.fixture(`toggles/${service}.json`).then(toggles => {
               const mostReadEnabled = path(['mostRead', 'enabled'], toggles);
 
@@ -58,7 +58,7 @@ export default ({ service, pageType, isAmp }: ServiceParametersType) => {
       it('Recommendations have titles', () => {
         isArticleLessThanTwoYearsOld().then(runRecommendationTests => {
           if (runRecommendationTests) {
-            cy.getToggles(service);
+            cy.fetchToggles(service);
             cy.fixture(`toggles/${service}.json`).then(toggles => {
               const mostReadEnabled = path(['mostRead', 'enabled'], toggles);
 
