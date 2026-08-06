@@ -1,8 +1,5 @@
 import { PropsWithChildren } from 'react';
-import {
-  renderHook,
-  act,
-} from '#app/components/react-testing-library-with-providers';
+import { renderHook } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
@@ -224,27 +221,18 @@ describe('useOptimizelyVariation - useServerSide', () => {
     expect(spyActivateExperiment).not.toHaveBeenCalled();
   });
 
-  it('should not call activate experiment again after a re-render', async () => {
-    const mockServerSideExperiments = [
-      {
-        experimentName: 'foo',
-        variation: 'control',
-        enabled: true,
-      },
-    ];
-
-    let rerender: (() => void) | undefined;
-    await act(async () => {
-      ({ rerender } = renderUseServerSide({
-        serverSideExperiments:
-          mockServerSideExperiments as ServerSideExperiment[],
-        experimentName: 'foo',
-      }));
+  it('should not re-activate the experiment on rerender', () => {
+    const { rerender } = renderUseServerSide({
+      serverSideExperiments: [
+        { experimentName: 'foo', variation: 'control', enabled: true },
+      ] as ServerSideExperiment[],
+      experimentName: 'foo',
     });
 
-    await act(async () => {
-      rerender?.();
-    });
+    expect(spyActivateExperiment).toHaveBeenCalledTimes(1);
+
+    rerender();
+    rerender();
 
     expect(spyActivateExperiment).toHaveBeenCalledTimes(1);
   });

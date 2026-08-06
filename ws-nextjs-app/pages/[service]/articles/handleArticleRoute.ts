@@ -122,6 +122,7 @@ export default async (context: GetServerSidePropsContext) => {
     videoCuration: mediaCuration = null,
     portraitVideoItems = null,
     countryCuration = null,
+    countryTopicIdToReorder = null,
   } = secondaryData || {};
 
   const transformedArticleData = transformPageData()(article);
@@ -150,6 +151,7 @@ export default async (context: GetServerSidePropsContext) => {
         mostRead,
         portraitVideoItems,
         countryCuration,
+        countryTopicIdToReorder,
       },
       pageType: derivedPageType,
       pathname: resolvedUrlWithoutQuery,
