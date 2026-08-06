@@ -59,6 +59,18 @@ export default {
       gridColumn: '1 / span 12',
       paddingBottom: '2rem',
     }),
+  collapsedArticleColumn: ({ mq }: Theme) =>
+    css({
+      paddingBottom: 0,
+
+      [`.${NO_JS_CLASSNAME} &, .${OPERA_MINI_CLASSNAME} &`]: {
+        paddingBottom: '2rem',
+      },
+
+      [mq.GROUP_4_MIN_WIDTH]: {
+        paddingBottom: '2rem',
+      },
+    }),
   mainContent: ({ palette, spacings, mq }: Theme) =>
     css({
       paddingBottom: `${spacings.TRIPLE}rem`,
@@ -87,6 +99,22 @@ export default {
           boxShadow: `0 0 0 ${pixelsToRem(3)}rem ${palette.WHITE}`,
           outlineOffset: `${pixelsToRem(3)}rem`,
         },
+      },
+    }),
+  collapsedMainContent: ({ spacings, mq }: Theme) =>
+    css({
+      paddingBottom: 0,
+
+      [`.${NO_JS_CLASSNAME} &, .${OPERA_MINI_CLASSNAME} &`]: {
+        paddingBottom: `${spacings.TRIPLE}rem`,
+
+        [mq.GROUP_3_ONLY]: {
+          paddingBottom: `${spacings.FULL}rem`,
+        },
+      },
+
+      [mq.GROUP_4_MIN_WIDTH]: {
+        paddingBottom: `${spacings.TRIPLE}rem`,
       },
     }),
   hideRelatedTopics: ({ mq }: Theme) =>
@@ -214,5 +242,15 @@ export default {
       [mq.GROUP_4_MIN_WIDTH]: {
         padding: 0,
       },
+    }),
+  mobileOJContainer: ({ mq }: Theme) =>
+    css({
+      [mq.GROUP_4_MIN_WIDTH]: {
+        display: 'none',
+      },
+    }),
+  midArticleOJ: () =>
+    css({
+      marginBottom: `${pixelsToRem(40)}rem`,
     }),
 };

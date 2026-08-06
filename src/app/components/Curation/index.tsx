@@ -141,7 +141,8 @@ export default ({
     case NOT_SUPPORTED:
       return null;
     case BILLBOARD: {
-      const billboardId = `billboard-${nthCurationByStyleAndProminence}`;
+      const billboardId =
+        `billboard-${visualProminence}-${nthCurationByStyleAndProminence}`.toLowerCase();
       if (firstSummary) {
         return (
           <div css={styles.billboardContainer}>
@@ -151,6 +152,7 @@ export default ({
               link={summaryLink}
               image={imageUrl}
               id={billboardId}
+              prominence={visualProminence}
               eventTrackingData={eventTrackingData}
               showLiveLabel={summaryIsLive}
               altText={imageAlt}

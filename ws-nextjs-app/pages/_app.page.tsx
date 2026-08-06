@@ -1,6 +1,7 @@
 import App, { AppContext } from 'next/app';
 import { ATIData } from '#app/components/ATIAnalytics/types';
 import ThemeProvider from '#app/components/ThemeProvider';
+import ThemeProviderSCSSModules from '#app/components/ThemeProviderSCSSModules';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 import {
   PageTypes,
@@ -18,7 +19,7 @@ import { EventTrackingContextProvider } from '#app/contexts/EventTrackingContext
 import { UserContextProvider } from '#app/contexts/UserContext';
 import extractHeaders from '#utilities/extractHeaders';
 import { getServerExperiments } from '#utilities/experimentHeader';
-import getToggles from '#app/lib/utilities/getToggles/withCache';
+import fetchToggles from '#app/lib/utilities/fetchToggles';
 import getPathExtension from '#app/utilities/getPathExtension';
 import parseRoute from '#app/routes/utils/parseRoute';
 import addCspHeader from '#utilities/addCspHeader';
@@ -81,7 +82,7 @@ export default class CustomApp extends App<Props> {
     };
 
     const [togglesResult, navResult] = await Promise.allSettled([
-      getToggles(service),
+      fetchToggles({ service, isAmp }),
       fetchConfig<{ data: { items: Navigation[] } }>({
         service,
         pagePath: asPath,
@@ -203,15 +204,20 @@ export default class CustomApp extends App<Props> {
                   ) : (
                     <QueryProvider>
                       <UserContextProvider>
-                        <ThemeProvider service={service} variant={variant}>
-                          <PageWrapper
-                            navItems={navItems}
-                            pageData={pageData}
-                            status={status}
-                          >
-                            {RenderChildrenOrError}
-                          </PageWrapper>
-                        </ThemeProvider>
+                        <ThemeProviderSCSSModules
+                          service={service}
+                          variant={variant}
+                        >
+                          <ThemeProvider service={service} variant={variant}>
+                            <PageWrapper
+                              navItems={navItems}
+                              pageData={pageData}
+                              status={status}
+                            >
+                              {RenderChildrenOrError}
+                            </PageWrapper>
+                          </ThemeProvider>
+                        </ThemeProviderSCSSModules>
                       </UserContextProvider>
                     </QueryProvider>
                   )}

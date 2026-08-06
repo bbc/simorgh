@@ -129,9 +129,7 @@ describe('PortraitVideoCarousel', () => {
       render(<Component {...fixture} eventTrackingData={eventTrackingData} />);
     });
 
-    const skipLink = screen.getByText(
-      `Skip ${fixture.title} and continue reading`,
-    );
+    const skipLink = screen.getByText(`Skip ${fixture.title} and continue`);
     expect(skipLink).toBeInTheDocument();
     expect(skipLink).toHaveAttribute('href', '#end-of-portrait-video-carousel');
   });
@@ -162,7 +160,7 @@ describe('PortraitVideoCarousel', () => {
       );
     });
 
-    const skipLink = screen.getByText('Skip Video and continue reading');
+    const skipLink = screen.getByText('Skip Video and continue');
     expect(skipLink).toBeInTheDocument();
   });
 });

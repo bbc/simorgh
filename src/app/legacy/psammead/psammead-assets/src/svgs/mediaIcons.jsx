@@ -125,6 +125,16 @@ const mediaIcons = {
       />
     </InArticlePromoIcon>
   ),
+  elections: (
+    <InArticlePromoIcon
+      viewBox="0 0 32 32"
+      width="32"
+      height="32"
+      {...defaultAttrs}
+    >
+      <path d="M18.1,7.2v2.6h8.7l-.3-.7-9.1,9.1h1.3l-5.8-5.9L1.8,23.3l2.1,1.9,9.8-9.7h-1.4l5.8,5.8,10.3-10.3-.7-.3v8.7h2.6V7.2h-12.2Z" />
+    </InArticlePromoIcon>
+  ),
   youtube: (
     <InArticlePromoIcon
       viewBox="0 0 16 16"

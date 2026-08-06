@@ -44,6 +44,7 @@ export const service: DefaultServiceConfig = {
     manifestPath: '/mundo/manifest.json',
     swPath: '/sw.js',
     homePageTitle: 'Noticias',
+    iTunesAppId: 6761256736,
     showAdPlaceholder: true,
     showRelatedTopics: true,
     electionBanner: {
@@ -114,6 +115,10 @@ export const service: DefaultServiceConfig = {
       continueReading: 'Continuar leyendo',
       currentPage: 'Página actual',
       skipLinkText: 'Ir al contenido',
+      skipContent: {
+        text: 'Omitir %title% y continuar',
+        endTextVisuallyHidden: 'Fin de %title%',
+      },
       relatedContent: 'Contenido relacionado',
       relatedTopics: 'Temas relacionados',
       moreOnThis: '',
@@ -401,6 +406,7 @@ export const service: DefaultServiceConfig = {
         closedDescription: 'Esto cierra el {{date}}.',
       },
       sport: {
+        keyEventsTitle: 'Eventos clave',
         matchSummary: 'Resumen del partido',
         assists: 'Asistencias',
         penalties: 'Penales',
@@ -412,6 +418,15 @@ export const service: DefaultServiceConfig = {
         ownGoal: 'gol en contra',
         venue: 'Estadio',
         attendance: 'Asistencia',
+        versus: 'contra',
+        kickOff: 'inicio',
+        timeToBeConfirmed: 'Hora por confirmar',
+        teamToBeConfirmed: 'Equipo por confirmar',
+        afterFullTime: 'después del tiempo reglamentario',
+        atFullTime: 'al final del tiempo reglamentario',
+        onPenalties: 'en penales',
+        onAggregate: 'en el global',
+        win: 'gana',
         winOnPenalties: {
           prefix: 'gana',
           suffix: 'por penales',

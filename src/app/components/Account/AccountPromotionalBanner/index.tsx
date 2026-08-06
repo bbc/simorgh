@@ -2,14 +2,13 @@ import { use, useState, useCallback } from 'react';
 import { Helmet } from 'react-helmet';
 import PromotionalBanner from '#app/components/PromotionalBanner';
 import AccountActionButtons from '#app/components/Account/AccountActionButtons';
-import { AccountContext } from '#contexts/AccountContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
-import useToggle from '#app/hooks/useToggle';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import addInlineScript from '#app/lib/utilities/addInlineScript';
 import onClient from '#app/lib/utilities/onClient';
+import useAccountPromoBannerEligibility from './useAccountPromoBannerEligibility';
 import {
   setAccountPromoBannerDismissed,
   buildAccountBannerClientScript,
@@ -17,10 +16,16 @@ import {
 } from './utilities';
 import styles from './index.styles';
 
-const AccountPromotionalBanner = () => {
-  const { enabled: accountEnabled } = useToggle('account');
-  const { isSignedIn, isIdctaAvailable, signInUrl, registerUrl } =
-    use(AccountContext);
+type AccountPromotionalBannerProps = {
+  experimentName?: string;
+  experimentVariant?: string;
+};
+
+const AccountPromotionalBanner = ({
+  experimentName,
+  experimentVariant,
+}: AccountPromotionalBannerProps = {}) => {
+  const isEligible = useAccountPromoBannerEligibility();
   const { translations } = use(ServiceContext);
   const { nonce } = use(RequestContext);
   const accountPromoBannerTranslations = translations?.accountPromoBanner;
@@ -28,10 +33,16 @@ const AccountPromotionalBanner = () => {
 
   const viewTracker = useViewTracker({
     componentName: 'account-promotional-banner',
+    ...(experimentName && { experimentName }),
+    ...(experimentVariant && { experimentVariant }),
+    ...(experimentVariant && { sendOptimizelyEvents: true }),
   });
 
   const { onClick: onCloseClickTrack } = useClickTrackerHandler({
     componentName: 'account-promotional-banner-close',
+    ...(experimentName && { experimentName }),
+    ...(experimentVariant && { experimentVariant }),
+    ...(experimentVariant && { sendOptimizelyEvents: true }),
   });
 
   const handleCloseClick = useCallback(
@@ -48,15 +59,7 @@ const AccountPromotionalBanner = () => {
     [onCloseClickTrack],
   );
 
-  if (
-    isDismissed ||
-    isSignedIn ||
-    !accountEnabled ||
-    !isIdctaAvailable ||
-    !signInUrl ||
-    !registerUrl ||
-    !accountPromoBannerTranslations
-  ) {
+  if (isDismissed || !isEligible || !accountPromoBannerTranslations) {
     return null;
   }
 
@@ -87,6 +90,8 @@ const AccountPromotionalBanner = () => {
           <AccountActionButtons
             signInComponentName="account-promotional-banner-sign-in"
             registerComponentName="account-promotional-banner-register"
+            experimentName={experimentName}
+            experimentVariant={experimentVariant}
           />
         </PromotionalBanner>
       </div>

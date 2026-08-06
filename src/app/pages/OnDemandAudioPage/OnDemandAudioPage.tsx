@@ -19,12 +19,16 @@ import {
   OnDemandAudioBlock,
 } from '#app/models/types/media';
 import { ATIData } from '#app/components/ATIAnalytics/types';
+import getOnDemandAudioLinkedData, {
+  OnDemandAudioExternalLink,
+} from '#nextjs/pages/[service]/onDemandAudio/getOnDemandAudioLinkedData';
 import styles from './index.styles';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import MetadataContainer from '../../components/Metadata';
 import LinkedData from '../../components/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import { RequestContext } from '../../contexts/RequestContext';
 
 const SKIP_LINK_ANCHOR_ID = 'content';
 
@@ -44,19 +48,23 @@ export interface OnDemandAudioProps {
     shortSynopsis: string;
     mediumSynopsis?: string;
     longSynopsis?: string;
+    brandShortSynopsis?: string;
+    brandMediumSynopsis?: string;
+    brandLongSynopsis?: string;
     masterBrand: string;
     episodeId: string;
     releaseDateTimeStamp: number;
     imageUrl: string;
     imageAltText: string;
-    promoBrandTitle: string;
+    promoBrandTitle?: string;
+    promoSeriesTitle?: string;
     durationISO8601: string;
     thumbnailImageUrl: string;
     radioScheduleData?: RadioScheduleData[];
     recentEpisodes: [];
     brandId: string;
     episodeTitle: string;
-    externalLinks: string[];
+    externalLinks: OnDemandAudioExternalLink[];
     contentType: ContentType;
   };
   mediaIsAvailable?: boolean;
@@ -74,13 +82,16 @@ const OnDemandAudioPage = ({
     language,
     brandTitle,
     headline,
-    shortSynopsis,
     summary,
     masterBrand,
     releaseDateTimeStamp,
     imageUrl,
     imageAltText,
     promoBrandTitle,
+    promoSeriesTitle,
+    brandShortSynopsis,
+    brandMediumSynopsis,
+    brandLongSynopsis,
     durationISO8601,
     thumbnailImageUrl,
     radioScheduleData,
@@ -93,11 +104,39 @@ const OnDemandAudioPage = ({
   const pageType = path(['metadata', 'type'], pageData);
 
   const { serviceName } = use(ServiceContext);
+  const { pathname, canonicalNonUkLink } = use(RequestContext);
+
+  const {
+    isPodcastBrandPage,
+    linkedDataEntities,
+    mainEntityId,
+    metadataTitle,
+    metadataDescription,
+    brandDescription,
+  } = getOnDemandAudioLinkedData({
+    pathname,
+    canonicalNonUkLink,
+    serviceName,
+    isPodcast,
+    mediaIsAvailable,
+    mediaBlocks: pageData.mediaBlocks,
+    brandTitle,
+    headline,
+    episodeTitle,
+    summary,
+    promoBrandTitle,
+    promoSeriesTitle,
+    brandShortSynopsis,
+    brandMediumSynopsis,
+    brandLongSynopsis,
+    thumbnailImageUrl,
+    durationISO8601,
+    releaseDateTimeStamp,
+    externalLinks,
+    recentEpisodes,
+  });
 
   const hasRecentEpisodes = recentEpisodes && Boolean(recentEpisodes.length);
-  const metadataTitle = episodeTitle
-    ? `${episodeTitle} - ${brandTitle} - ${serviceName}`
-    : headline;
 
   const metadataImageProps = is(String, imageUrl)
     ? {
@@ -121,7 +160,7 @@ const OnDemandAudioPage = ({
         openGraphType="website"
         lang={language}
         title={metadataTitle}
-        description={summary}
+        description={metadataDescription}
         {...metadataImageProps}
         hasAmpPage={false}
       />
@@ -160,22 +199,9 @@ const OnDemandAudioPage = ({
             <LinkedData
               type="WebPage"
               seoTitle={metadataTitle}
-              entities={
-                mediaIsAvailable
-                  ? [
-                      {
-                        '@type': 'AudioObject',
-                        name: promoBrandTitle,
-                        description: shortSynopsis,
-                        thumbnailUrl: thumbnailImageUrl,
-                        duration: durationISO8601,
-                        uploadDate: new Date(
-                          releaseDateTimeStamp,
-                        ).toISOString(),
-                      },
-                    ]
-                  : []
-              }
+              description={isPodcastBrandPage ? brandDescription : summary}
+              entities={linkedDataEntities}
+              mainEntityId={mainEntityId}
             />
           </main>
 
