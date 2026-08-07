@@ -54,6 +54,8 @@ export const assertMostReadComponentClick = ({
     interceptATIAnalyticsBeacons();
     cy.visit(path);
 
+    // This duplicate line of code has been added intentionally to get cypress to scroll to the bottom.
+    cy.get('[data-e2e="most-read"]').scrollIntoView({ duration: 1000 });
     cy.get('[data-e2e="most-read"]').scrollIntoView({ duration: 1000 });
 
     // Click on first item
