@@ -3,13 +3,14 @@ import { Resonance, ResonanceMode } from '@bbc/resonance';
 import { ReverbClient } from '#app/models/types/eventTracking';
 import {
   ReverbBeaconConfig,
+  ResonanceBeaconConfig,
   ReverbEventDetails,
 } from '#app/components/ATIAnalytics/types';
-import type {
-  ResonanceProperties,
-  PageviewProperties,
-  BaseProperties,
-} from '@bbc/resonance';
+// import type {
+//   ResonanceProperties,
+//   PageviewProperties,
+//   BaseProperties,
+// } from '@bbc/resonance';
 import onClient from '../../utilities/onClient';
 import nodeLogger from '../../logger.node';
 import { ATI_LOGGING_ERROR } from '../../logger.const';
@@ -87,7 +88,7 @@ const callReverb = async (eventDetails: ReverbEventDetails) => {
   );
 };
 
-const callResonance = (resonanceParams: ResonanceParams) => {
+const callResonance = (resonanceParams: ResonanceBeaconConfig) => {
   try {
     // add checks in here so this only runs when resonanceParams is not undefined.
     console.log('Resonance initialised with params:', resonanceParams);
@@ -107,15 +108,9 @@ const callResonance = (resonanceParams: ResonanceParams) => {
 // add initialise Resonance function here inside callResonance function
 // option to use resonanceProperties.suppressInitialPageview at initialisation.
 
-type ResonanceParams = {
-  resonanceProperties: ResonanceProperties;
-  pageviewProperties: PageviewProperties;
-  baseProperties: BaseProperties;
-};
-
 const sendBeacon = async (
   reverbBeaconConfig: ReverbBeaconConfig,
-  resonanceParams: ResonanceParams,
+  resonanceParams: ResonanceBeaconConfig,
 ) => {
   // add resonanceBeaconConfig param to function if needed, e.g.
   // sendBeacon = async (reverbBeaconConfig: ReverbBeaconConfig, resonanceBeaconConfig?: ResonanceBeaconConfig) => {

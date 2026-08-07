@@ -44,39 +44,40 @@ const addScript = ({ script, parameters, nonce }: InlineScriptProps) => {
   return <Helmet>{addInlineScript({ script, parameters, nonce })}</Helmet>;
 };
 
-const CanonicalATIAnalytics = ({ reverbParams }: ATIAnalyticsProps) => {
+const CanonicalATIAnalytics = ({
+  reverbParams,
+  resonanceParams,
+}: ATIAnalyticsProps) => {
   // add resonanceParams to props if needed, e.g.
   // const CanonicalATIAnalytics = ({ reverbParams, resonanceParams }: ATIAnalyticsProps) => {
   const { isLite, nonce } = use(RequestContext);
 
-  const resonanceParams = {
-    resonanceProperties: {
-      mode: ResonanceMode.TEST,
-    },
-    baseProperties: {
-      app: {
-        name: 'news-mundo',
-        version: '0.1',
-      },
-      destination: 'WS_NEWS_LANGUAGES_TEST',
-      hashedUserId: 'veV9rmzQJt0SgWWjYnZTltTO1hXIIpyZVbz0WV-7HAs',
-      pageName: 'pagename.page',
-      section: 'test-section::test-subsection::test-subsubsection',
-      producer: 'BBC_WORLD_NEWS',
-      siteId: 12345,
-    },
-    pageviewProperties: {
-      contentId: 'urn:bbc:tipo:topic:c93v2kkze2rt',
-      contentType: 'index-home',
-      language: 'es',
-      destination: 'WS_NEWS_LANGUAGES_TEST',
-      producer: 'BBC_WORLD_NEWS',
-    },
-  } as {
-    resonanceProperties: ResonanceProperties;
-    pageviewProperties: PageviewProperties;
-    baseProperties: BaseProperties;
-  };
+  // const resonanceParams = {
+  //   resonanceProperties: {
+  //     mode: ResonanceMode.TEST,
+  //   },
+  //   baseProperties: {
+  //     app: {
+  //       name: 'news-mundo',
+  //     },
+  //     destination: 'WS_NEWS_LANGUAGES_TEST',
+  //     hashedUserId: 'veV9rmzQJt0SgWWjYnZTltTO1hXIIpyZVbz0WV-7HAs',
+  //     pageName: 'pagename.page',
+  //     producer: 'BBC_WORLD_NEWS',
+  //     siteId: 12345, // WS_NEWS_LANGUAGES_TEST: '598343',
+  //   },
+  //   pageviewProperties: {
+  //     contentId: 'urn:bbc:tipo:topic:c93v2kkze2rt',
+  //     contentType: 'index-home',
+  //     language: 'es',
+  //     destination: 'WS_NEWS_LANGUAGES_TEST',
+  //     producer: 'BBC_WORLD_NEWS',
+  //   },
+  // } as {
+  //   resonanceProperties: ResonanceProperties;
+  //   pageviewProperties: PageviewProperties;
+  //   baseProperties: BaseProperties;
+  // };
 
   usePWAInstallTracker();
 

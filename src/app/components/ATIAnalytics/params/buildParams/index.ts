@@ -90,11 +90,21 @@ export const buildPageReverbParams = ({
   );
 
 // add exported function that builds resonance params calling buildPageATIParams above, e.g.
-//   export const buildPageResonanceParams = ({
-//   atiData,
-//   requestContext,
-//   serviceContext,
-// }: ATIDataWithContexts) =>
-//   buildResonanceAnalyticsModel(
-//     buildPageATIParams({ atiData, requestContext, serviceContext }),
-//   );
+export const buildPageResonanceParams = ({
+  requestContext,
+  serviceContext,
+  isSignedIn,
+  hashedId,
+}: ATIDataWithContexts & {
+  isSignedIn?: boolean;
+  hashedId?: string | null;
+}) =>
+  // need to pass in ATIData - we can get this via the context provider
+  buildResonanceAnalyticsModel(
+    buildPageATIParams({
+      requestContext,
+      serviceContext,
+      isSignedIn,
+      hashedId,
+    }),
+  );

@@ -1,4 +1,9 @@
 /* eslint-disable camelcase */
+import type {
+  ResonanceProperties,
+  PageviewProperties,
+  BaseProperties,
+} from '@bbc/resonance';
 import { PageTypes, Platforms, Services } from '../../models/types/global';
 import { RequestContextProps } from '../../contexts/RequestContext';
 import { ServiceConfig } from '../../models/types/serviceConfig';
@@ -137,6 +142,12 @@ export type ReverbEventDetails = {
   originalEvent?: Event;
 };
 
+export type ResonanceBeaconConfig = {
+  resonanceProperties: ResonanceProperties;
+  pageviewProperties: PageviewProperties;
+  baseProperties: BaseProperties;
+};
+
 export type ReverbBeaconConfig = {
   params: { page: ReverbPageVars; user: ReverbUserVars };
   eventDetails: ReverbEventDetails;
@@ -144,6 +155,7 @@ export type ReverbBeaconConfig = {
 
 export interface ATIAnalyticsProps {
   reverbParams: ReverbBeaconConfig;
+  resonanceParams?: ResonanceBeaconConfig;
 }
 
 export interface ATIEventTrackingProps {
