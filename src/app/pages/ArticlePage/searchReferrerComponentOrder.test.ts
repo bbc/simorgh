@@ -1,6 +1,9 @@
 import { createElement } from 'react';
 import { renderHook, waitFor, act } from '@testing-library/react';
 import onClient from '#app/lib/utilities/onClient';
+import useNearViewport from '#app/hooks/useNearViewport';
+import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
+import useCustomEventTracker from '#app/hooks/useCustomEventTracker';
 import { GROUP_3_MAX_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
 import { articleDataNews } from '#pages/ArticlePage/fixtureData';
 import { Article } from '#app/models/types/optimo';
@@ -16,6 +19,10 @@ import {
   SEARCH_MID_ARTICLE_COMPONENT,
   SearchVariant,
 } from './searchReferrerComponentOrder';
+import {
+  SEARCH_OJ_ACTIVATION_EVENT_NAME,
+  SEARCH_OJ_EXPERIMENT_NAME,
+} from './SearchOjExperiment/config';
 
 jest.mock('#app/components/ThemeProvider');
 jest.mock('#app/components/ChartbeatAnalytics', () => {
@@ -61,6 +68,8 @@ jest.mock(
 
 jest.mock('#app/components/OptimizelyPageMetrics');
 jest.mock('#app/hooks/useScrollDepthTracker', () => jest.fn(() => null));
+jest.mock('#app/hooks/useNearViewport', () => jest.fn());
+jest.mock('#app/hooks/useCustomEventTracker', () => jest.fn());
 jest.mock('#hooks/useMediaQuery', () => jest.fn());
 jest.mock('#app/hooks/useOptimizelyVariation', () => ({
   __esModule: true,
@@ -77,6 +86,15 @@ jest.mock('#app/lib/utilities/onClient', () => ({
 }));
 
 const mockOnClient = onClient as jest.MockedFunction<typeof onClient>;
+const mockUseNearViewport = useNearViewport as jest.MockedFunction<
+  typeof useNearViewport
+>;
+const mockUseOptimizelyVariation =
+  useOptimizelyVariation as jest.MockedFunction<typeof useOptimizelyVariation>;
+const mockUseCustomEventTracker = useCustomEventTracker as jest.MockedFunction<
+  typeof useCustomEventTracker
+>;
+const mockTrackActivation = jest.fn();
 
 describe('useMobileOJComponentOrder', () => {
   let matchMediaMock: jest.Mock;
@@ -84,6 +102,7 @@ describe('useMobileOJComponentOrder', () => {
   beforeEach(() => {
     jest.clearAllMocks();
     mockOnClient.mockReturnValue(true);
+    mockUseCustomEventTracker.mockReturnValue(mockTrackActivation);
 
     // Mock window.matchMedia
     matchMediaMock = jest.fn().mockReturnValue({
@@ -100,6 +119,49 @@ describe('useMobileOJComponentOrder', () => {
 
   afterEach(() => {
     jest.restoreAllMocks();
+  });
+
+  const renderArticlePageWithDecision = (variation: string | null) => {
+    mockUseNearViewport.mockReturnValue(true);
+    mockUseOptimizelyVariation.mockReturnValue(variation);
+
+    const pageData = {
+      ...articleDataNews,
+      countryCuration: { summaries: [{ title: 'Country' }] },
+      portraitVideoItems: { portraitVideo: { blocks: [{}] } },
+      secondaryColumn: { topStories: [], features: [] },
+    } as unknown as Article;
+
+    return render(createElement(ArticlePage, { pageData }), {
+      service: 'news',
+      toggles: {
+        topicDiscovery: { enabled: true },
+        articlePortraitVideo: { enabled: true },
+        locationTopicCuration: { enabled: true },
+      },
+    });
+  };
+
+  describe('Search OJ activation tracking', () => {
+    it('sends one activation event for a valid variation', async () => {
+      renderArticlePageWithDecision('control');
+
+      await waitFor(() => expect(mockTrackActivation).toHaveBeenCalledTimes(1));
+
+      expect(mockUseCustomEventTracker).toHaveBeenCalledWith({
+        eventName: SEARCH_OJ_ACTIVATION_EVENT_NAME,
+        experimentName: SEARCH_OJ_EXPERIMENT_NAME,
+        experimentVariant: 'control',
+      });
+    });
+
+    it('does not send an activation event for an invalid variation', async () => {
+      renderArticlePageWithDecision('invalid_variation');
+
+      await waitFor(() => expect(mockUseCustomEventTracker).toHaveBeenCalled());
+
+      expect(mockTrackActivation).not.toHaveBeenCalled();
+    });
   });
 
   describe('Desktop behavior', () => {
@@ -169,28 +231,8 @@ describe('useMobileOJComponentOrder', () => {
       };
 
       const renderVariant = (variant: SearchVariant) => {
-        window.history.replaceState(null, '', `?debugVariant=${variant}`);
-
-        const pageData = {
-          ...articleDataNews,
-          countryCuration: { summaries: [{ title: 'Country' }] },
-          portraitVideoItems: { portraitVideo: { blocks: [{}] } },
-          secondaryColumn: { topStories: [], features: [] },
-        } as unknown as Article;
-
-        return render(createElement(ArticlePage, { pageData }), {
-          service: 'news',
-          toggles: {
-            topicDiscovery: { enabled: true },
-            articlePortraitVideo: { enabled: true },
-            locationTopicCuration: { enabled: true },
-          },
-        });
+        return renderArticlePageWithDecision(variant);
       };
-
-      afterEach(() => {
-        window.history.replaceState(null, '', '/');
-      });
 
       const getRenderedOJOrder = (container: HTMLElement) => {
         const ojTestIds = Object.values(OJ_TEST_IDS);
