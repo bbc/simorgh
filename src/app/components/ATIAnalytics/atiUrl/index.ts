@@ -23,6 +23,33 @@ import {
  * https://github.com/ampproject/amphtml/blob/master/spec/amp-var-substitutions.md#device-and-browser
  */
 
+// to do - build this so it takes props and spits out the right data
+export const buildResonanceAnalyticsModel = () => {
+  const resonanceParams = {
+    resonanceProperties: {
+      mode: 'test',
+    },
+    baseProperties: {
+      app: {
+        name: 'news-mundo',
+      },
+      destination: 'WS_NEWS_LANGUAGES_TEST',
+      hashedUserId: 'veV9rmzQJt0SgWWjYnZTltTO1hXIIpyZVbz0WV-7HAs',
+      pageName: 'pagename.page',
+      producer: 'BBC_WORLD_NEWS',
+      siteId: 598343, // WS_NEWS_LANGUAGES_TEST: '598343',
+    },
+    pageviewProperties: {
+      contentId: 'urn:bbc:tipo:topic:c93v2kkze2rt',
+      contentType: 'index-home',
+      language: 'es',
+      destination: 'WS_NEWS_LANGUAGES_TEST',
+      producer: 'BBC_WORLD_NEWS',
+    },
+  };
+  return resonanceParams; // populate with non hardcoded values
+};
+
 export const buildReverbAnalyticsModel = ({
   appName,
   campaigns,

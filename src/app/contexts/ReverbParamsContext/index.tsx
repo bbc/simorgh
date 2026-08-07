@@ -9,7 +9,7 @@ import { RequestContext } from '#app/contexts/RequestContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { AccountContext } from '#app/contexts/AccountContext';
 import withOptimizelyProvider from '#app/legacy/containers/PageHandlers/withOptimizelyProvider';
-import buildReverbParams from '#app/components/ATIAnalytics/params';
+import buildAnalyticsParams from '#app/components/ATIAnalytics/params';
 import {
   ATIData,
   ReverbBeaconConfig,
@@ -86,7 +86,7 @@ const ReverbParamsContextProviderComponent = ({
     pageType: requestContext?.pageType,
   });
 
-  const reverbParams = buildReverbParams({
+  const { reverbParams, resonanceParams } = buildAnalyticsParams({
     requestContext,
     serviceContext,
     atiData: enrichedAtiData,
@@ -105,12 +105,15 @@ const ReverbParamsContextProviderComponent = ({
   const value = useMemo(
     () => ({
       reverbParams,
+      resonanceParams,
       ...(enrichedAtiData?.experimentProps && {
         experimentProps: enrichedAtiData.experimentProps,
       }),
     }),
-    [reverbParams, enrichedAtiData?.experimentProps],
+    [reverbParams, enrichedAtiData?.experimentProps, resonanceParams],
   );
+
+  console.log('ReverbParamsContextProviderComponent value:', value); // Debugging log
 
   return (
     <ReverbParamsContext.Provider value={value}>

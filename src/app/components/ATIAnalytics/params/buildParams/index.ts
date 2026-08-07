@@ -1,5 +1,8 @@
 import { LIBRARY_VERSION } from '../../../../lib/analyticsUtils';
-import { buildReverbAnalyticsModel } from '../../atiUrl';
+import {
+  buildReverbAnalyticsModel,
+  buildResonanceAnalyticsModel,
+} from '../../atiUrl';
 import { ATIDataWithContexts } from '../../types';
 
 export const buildPageATIParams = ({
@@ -68,17 +71,32 @@ export const buildPageATIParams = ({
   };
 };
 
-export const buildPageReverbParams = ({
+const buildPageParams = ({
   atiData,
   requestContext,
   serviceContext,
   isSignedIn,
   hashedId,
+  libraryName,
 }: ATIDataWithContexts & {
   isSignedIn?: boolean;
   hashedId?: string | null;
-}) =>
-  buildReverbAnalyticsModel(
+  libraryName: 'reverb' | 'resonance';
+}) => {
+  if (libraryName === 'resonance') {
+    return buildResonanceAnalyticsModel(
+      // @ts-expect-error - testing
+      buildPageATIParams({
+        atiData,
+        requestContext,
+        serviceContext,
+        isSignedIn,
+        hashedId,
+      }),
+    );
+  }
+
+  return buildReverbAnalyticsModel(
     buildPageATIParams({
       atiData,
       requestContext,
@@ -87,3 +105,58 @@ export const buildPageReverbParams = ({
       hashedId,
     }),
   );
+};
+
+// const buildPageResonanceParams = ({
+//   atiData,
+//   requestContext,
+//   serviceContext,
+//   isSignedIn,
+//   hashedId,
+// }: ATIDataWithContexts & {
+//   isSignedIn?: boolean;
+//   hashedId?: string | null;
+// }) =>
+//   buildResonanceAnalyticsModel(
+//     buildPageATIParams({
+//       atiData,
+//       requestContext,
+//       serviceContext,
+//       isSignedIn,
+//       hashedId,
+//     }),
+//   );
+
+export const buildAnalyticsParams = ({
+  atiData,
+  requestContext,
+  serviceContext,
+  isSignedIn,
+  hashedId,
+}: ATIDataWithContexts & {
+  isSignedIn?: boolean;
+  hashedId?: string | null;
+}) => {
+  const reverbParams = buildPageParams({
+    atiData,
+    requestContext,
+    serviceContext,
+    isSignedIn,
+    hashedId,
+    libraryName: 'reverb',
+  });
+
+  const resonanceParams = buildPageParams({
+    atiData,
+    requestContext,
+    serviceContext,
+    isSignedIn,
+    hashedId,
+    libraryName: 'resonance',
+  });
+
+  return {
+    reverbParams,
+    resonanceParams,
+  };
+};

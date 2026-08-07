@@ -9,7 +9,10 @@ const ATIAnalytics = () => {
   const requestContext = use(RequestContext);
   const { isAmp } = requestContext;
 
-  const { reverbParams } = use(ReverbParamsContext);
+  // @ts-expect-error - testing
+  const { reverbParams, resonanceParams } = use(ReverbParamsContext);
+
+  console.log('resonanceParams', resonanceParams);
 
   return isAmp ? (
     <>
