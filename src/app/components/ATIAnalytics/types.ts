@@ -142,6 +142,7 @@ export type ReverbEventDetails = {
   originalEvent?: Event;
 };
 
+// possible task - type this ourselves and not rely on imported types
 export type ResonanceBeaconConfig = {
   resonanceProperties: ResonanceProperties;
   pageviewProperties: PageviewProperties;

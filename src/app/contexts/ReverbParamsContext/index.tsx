@@ -94,6 +94,14 @@ const ReverbParamsContextProviderComponent = ({
     hashedId,
   });
 
+  //   const resonanceParams = buildResonanceParams({
+  //   requestContext,
+  //   serviceContext,
+  //   atiData: enrichedAtiData,
+  //   isSignedIn,
+  //   hashedId,
+  // });
+
   const {
     params: { page, user },
   } = reverbParams;
@@ -102,6 +110,7 @@ const ReverbParamsContextProviderComponent = ({
     setBbcPage({ page, user });
   }, [page, user]);
 
+  // somehow add resonanceParams in here.
   const value = useMemo(
     () => ({
       reverbParams,
