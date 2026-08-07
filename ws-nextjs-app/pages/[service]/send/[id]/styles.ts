@@ -1,9 +1,26 @@
 import { Theme, css } from '@emotion/react';
 import pixelsToRem from '../../../../../src/app/utilities/pixelsToRem';
 
+const IMAGE_RECIPE = '1280xn';
+const BACKGROUND_POSITION = 'center top / cover no-repeat';
+
+export const fallbackBackground =
+  'linear-gradient(200deg, #A20219 0%, #180109 54%, #180109 90%)';
+
+export const buildImageBackground = (pageBackgroundTemplateUrl: string) => {
+  const baseUrl = pageBackgroundTemplateUrl.replace('$recipe', IMAGE_RECIPE);
+  const imageSet = `url(${baseUrl}.webp) type('image/webp'), url(${baseUrl}) type('image/png')`;
+
+  return [
+    `url(${baseUrl}) ${BACKGROUND_POSITION}`,
+    `-webkit-image-set(${imageSet}) ${BACKGROUND_POSITION}`,
+    `image-set(${imageSet}) ${BACKGROUND_POSITION}`,
+  ];
+};
+
 export default {
   background:
-    (background: string) =>
+    (background: string | string[]) =>
     ({ mq }: Theme) =>
       css({
         display: 'none',

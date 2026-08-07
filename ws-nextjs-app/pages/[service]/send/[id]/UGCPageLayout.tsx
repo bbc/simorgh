@@ -1,7 +1,7 @@
 import { use } from 'react';
 import Metadata from '#app/components/Metadata';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import styles from './styles';
+import styles, { buildImageBackground, fallbackBackground } from './styles';
 import { PageProps } from './types';
 import { FormContext, FormContextProvider } from './FormContext';
 import FormScreen from './FormScreen';
@@ -36,16 +36,10 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
 
   const { pageBackgroundTemplateUrl } = settings;
 
-  const fallbackBackground =
-    'linear-gradient(200deg, #A20219 0%, #180109 54%, #180109 90%)';
-
   const hasBackgroundImage = Boolean(pageBackgroundTemplateUrl);
 
   const background = pageBackgroundTemplateUrl
-    ? (() => {
-        const baseUrl = pageBackgroundTemplateUrl.replace('$recipe', '1280xn');
-        return `image-set(url(${baseUrl}.webp) type('image/webp'), url(${baseUrl}) type('image/png')) center top / cover no-repeat`;
-      })()
+    ? buildImageBackground(pageBackgroundTemplateUrl)
     : fallbackBackground;
 
   const { fields } = sections?.[0] ?? {};
