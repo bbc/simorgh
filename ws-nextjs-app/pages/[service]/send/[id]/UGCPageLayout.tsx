@@ -34,6 +34,20 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
     settings,
   } = pageData;
 
+  const { pageBackgroundTemplateUrl } = settings;
+
+  const fallbackBackground =
+    'linear-gradient(200deg, #A20219 0%, #180109 54%, #180109 90%)';
+
+  const hasBackgroundImage = Boolean(pageBackgroundTemplateUrl);
+
+  const background = pageBackgroundTemplateUrl
+    ? (() => {
+        const baseUrl = pageBackgroundTemplateUrl.replace('$recipe', '1280xn');
+        return `image-set(url(${baseUrl}.webp) type('image/webp'), url(${baseUrl}) type('image/png')) center top / cover no-repeat`;
+      })()
+    : fallbackBackground;
+
   const { fields } = sections?.[0] ?? {};
   const sectionTitle = sections?.[0].sectionText?.title ?? '';
 
@@ -49,7 +63,13 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
         openGraphType="website"
         hasAmpPage={false}
       />
-      <div css={styles.background} />
+      <div
+        data-testid="ugc-page-background"
+        css={[
+          styles.background(background),
+          hasBackgroundImage && styles.backgroundFixed,
+        ]}
+      />
       <div css={styles.grid}>
         <div css={styles.primaryColumn}>
           <main role="main" css={styles.mainContent}>

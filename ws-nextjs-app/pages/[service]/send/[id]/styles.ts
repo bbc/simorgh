@@ -2,16 +2,23 @@ import { Theme, css } from '@emotion/react';
 import pixelsToRem from '../../../../../src/app/utilities/pixelsToRem';
 
 export default {
-  background: ({ mq }: Theme) =>
-    css({
-      display: 'none',
+  background:
+    (background: string) =>
+    ({ mq }: Theme) =>
+      css({
+        display: 'none',
 
+        [mq.GROUP_3_MIN_WIDTH]: {
+          display: 'block',
+          position: 'absolute',
+          inset: 0,
+          background,
+        },
+      }),
+  backgroundFixed: ({ mq }: Theme) =>
+    css({
       [mq.GROUP_3_MIN_WIDTH]: {
-        display: 'block',
-        position: 'absolute',
-        inset: 0,
-        background:
-          'linear-gradient(200deg, #A20219 0%, #180109 54%, #180109 90%)',
+        backgroundAttachment: 'fixed',
       },
     }),
   grid: ({ mq, gridWidths, spacings }: Theme) =>
