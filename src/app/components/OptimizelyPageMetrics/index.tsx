@@ -17,6 +17,8 @@ const OptimizelyPageMetrics = ({
   const { isAmp, pageType } = useContext(RequestContext);
   const activatedExperiments = useActivatedExperiments();
 
+  console.log({ activatedExperiments });
+
   const experimentsForPageType = experimentsForPageMetrics.find(
     entry => entry.pageType === pageType,
   )?.activeExperiments;

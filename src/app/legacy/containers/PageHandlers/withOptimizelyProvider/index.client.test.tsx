@@ -600,7 +600,7 @@ describe('withOptimizelyProvider HOC', () => {
         Cookie.remove('ckns_id');
       });
 
-      it('should send the signed-in-page-views event alongside page-views when the user is signed in', () => {
+      it('should not send the signed-in-page-views event from the DECISION listener, even when the user is signed in', () => {
         Cookie.set('ckns_id', 'signed-in-token');
 
         capturedDecisionListener?.({
@@ -611,52 +611,7 @@ describe('withOptimizelyProvider HOC', () => {
           },
         });
 
-        expect(mockTrack.mock.calls.map(call => call[0])).toEqual([
-          'visit',
-          'page-views',
-          'signed-in-page-views',
-        ]);
-      });
-
-      it('should not send the signed-in-page-views event when the user is signed out', () => {
-        capturedDecisionListener?.({
-          decisionInfo: {
-            flagKey: 'test_flag',
-            variationKey: 'on',
-            decisionEventDispatched: true,
-          },
-        });
-
-        expect(mockTrack.mock.calls.map(call => call[0])).toEqual([
-          'visit',
-          'page-views',
-        ]);
         expect(mockTrack).not.toHaveBeenCalledWith('signed-in-page-views');
-      });
-
-      it('should send the signed-in-page-views event only once per page view for the same URL', () => {
-        Cookie.set('ckns_id', 'signed-in-token');
-
-        capturedDecisionListener?.({
-          decisionInfo: {
-            flagKey: 'experiment_1',
-            variationKey: 'on',
-            decisionEventDispatched: true,
-          },
-        });
-        capturedDecisionListener?.({
-          decisionInfo: {
-            flagKey: 'experiment_2',
-            variationKey: 'on',
-            decisionEventDispatched: true,
-          },
-        });
-
-        expect(
-          mockTrack.mock.calls.filter(
-            call => call[0] === 'signed-in-page-views',
-          ),
-        ).toHaveLength(1);
       });
     });
 

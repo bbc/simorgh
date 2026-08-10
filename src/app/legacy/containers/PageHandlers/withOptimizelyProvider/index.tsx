@@ -11,15 +11,14 @@ import onClient from '#lib/utilities/onClient';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import { notifyDecision } from '#app/lib/optimizelyDecisionStore';
-import { TOKEN_COOKIE_NAME } from '#app/lib/uasApi/tokenRefresh/tokenManager';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import isCypress from './isCypress';
 import registerVisitActivity from './visitTracking';
 import { getClientTimeOfDay, getReferrer, isMobile } from './userAttributes';
+import SignedInPageViewTracking from './SignedInPageViewTracking';
 
 const PAGE_VIEW_EVENT_NAME = 'page-views';
-const SIGNED_IN_PAGE_VIEW_EVENT_NAME = 'signed-in-page-views';
 const VISIT_EVENT_NAME = 'visit';
 let lastTrackedUrl: string | null = null;
 const isInCypress = isCypress();
@@ -34,11 +33,6 @@ const getUserId = () => {
   if (disableOptimizely || !onClient() || isOperaProxy()) return null;
 
   return Cookie.get('ckns_mvt') ?? null;
-};
-
-const isSignedIn = () => {
-  if (disableOptimizely || !onClient() || isOperaProxy()) return false;
-  return Boolean(Cookie.get(TOKEN_COOKIE_NAME));
 };
 
 const optimizely = createInstance({
@@ -99,12 +93,6 @@ optimizely?.notificationCenter?.addNotificationListener(
           }
 
           optimizely.track(PAGE_VIEW_EVENT_NAME);
-
-          // proxy metric for sign-in experiments: additional to page-views,
-          // fired only when the user is in a signed-in state
-          if (isSignedIn()) {
-            optimizely.track(SIGNED_IN_PAGE_VIEW_EVENT_NAME);
-          }
         }
       }
 
@@ -136,6 +124,7 @@ const withOptimizelyProvider = <T,>(Component: ComponentType<T>) => {
           },
         }}
       >
+        <SignedInPageViewTracking />
         <Component {...props} />
       </OptimizelyProvider>
     );
