@@ -3,6 +3,8 @@ import { OptimizelyProvider, ReactSDKClient } from '@optimizely/react-sdk';
 import Cookie from 'js-cookie';
 import SignedInPageViewTracking from '.';
 
+jest.mock('../isCypress', () => jest.fn().mockReturnValue(false));
+
 const mockOptimizely = {
   onReady: jest.fn(() => Promise.resolve()),
   track: jest.fn(),
