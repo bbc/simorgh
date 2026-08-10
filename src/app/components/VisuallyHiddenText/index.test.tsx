@@ -12,7 +12,9 @@ describe('VisuallyHiddenText', () => {
   });
 
   it('should render off screen text for screen readers as an h1', () => {
-    render(<VisuallyHiddenText as="h1">Some offscreen text</VisuallyHiddenText>);
+    render(
+      <VisuallyHiddenText as="h1">Some offscreen text</VisuallyHiddenText>,
+    );
 
     const heading = screen.getByRole('heading', {
       level: 1,
