@@ -17,6 +17,9 @@ jest.mock('./PageCompleteTracking', () => () => (
 jest.mock('./ScrollDepthTracking', () => () => (
   <div data-testid="scroll-depth-tracking" />
 ));
+jest.mock('./SignedInPageViewTracking', () => () => (
+  <div data-testid="signed-in-page-view-tracking" />
+));
 
 jest.mock('./experimentsForPageMetrics', () => ({
   __esModule: true,
@@ -140,6 +143,31 @@ describe('OptimizelyPageMetrics', () => {
     );
     expect(
       screen.queryByTestId('page-complete-tracking'),
+    ).not.toBeInTheDocument();
+  });
+
+  it('should render SignedInPageViewTracking when trackSignedInViews is true, regardless of experiment activation', () => {
+    render(
+      <ContextWrap pageType={ARTICLE_PAGE} service="news">
+        <OptimizelyPageMetrics trackSignedInViews />
+      </ContextWrap>,
+    );
+    expect(
+      screen.getByTestId('signed-in-page-view-tracking'),
+    ).toBeInTheDocument();
+    expect(
+      screen.queryByTestId('page-complete-tracking'),
+    ).not.toBeInTheDocument();
+  });
+
+  it('should not render SignedInPageViewTracking when trackSignedInViews is false', () => {
+    render(
+      <ContextWrap pageType={ARTICLE_PAGE} service="news">
+        <OptimizelyPageMetrics />
+      </ContextWrap>,
+    );
+    expect(
+      screen.queryByTestId('signed-in-page-view-tracking'),
     ).not.toBeInTheDocument();
   });
 

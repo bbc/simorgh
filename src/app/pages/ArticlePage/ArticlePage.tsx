@@ -879,7 +879,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               blocks={articleBlocks}
               componentsToRender={componentsToRender}
             />
-            <OptimizelyPageMetrics trackPageComplete />
+            <OptimizelyPageMetrics trackPageComplete trackSignedInViews />
           </main>
           <OptimizelyPageMetrics trackPageDepth />
           {!mobileOJOrder && showTopicDiscovery && (

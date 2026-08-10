@@ -2,6 +2,7 @@ import { Fragment, use } from 'react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import PWAPromotionalBanner from '#app/components/PWAPromotionalBanner';
 import AccountPromotionalBanner from '#app/components/Account/AccountPromotionalBanner';
+import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import useScrollDepthTracker, {
   getHomePageBounds,
 } from '#app/hooks/useScrollDepthTracker';
@@ -66,6 +67,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
       {/* EXPERIMENT: PWA Promotional Banner */}
       <PWAPromotionalBanner />
       <AccountPromotionalBanner />
+      <OptimizelyPageMetrics trackSignedInViews />
       <ChartbeatAnalytics title={title} />
       <MetadataContainer
         title={metadataTitle}

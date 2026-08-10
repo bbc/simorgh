@@ -3,16 +3,19 @@ import { RequestContext } from '#contexts/RequestContext';
 import { useActivatedExperiments } from '#app/lib/optimizelyDecisionStore';
 import PageCompleteTracking from './PageCompleteTracking';
 import ScrollDepthTracking from './ScrollDepthTracking';
+import SignedInPageViewTracking from './SignedInPageViewTracking';
 import experimentsForPageMetrics from './experimentsForPageMetrics';
 
 type Props = {
   trackPageDepth?: boolean;
   trackPageComplete?: boolean;
+  trackSignedInViews?: boolean;
 };
 
 const OptimizelyPageMetrics = ({
   trackPageDepth = false,
   trackPageComplete = false,
+  trackSignedInViews = false,
 }: Props) => {
   const { isAmp, pageType } = useContext(RequestContext);
   const activatedExperiments = useActivatedExperiments();
@@ -31,14 +34,15 @@ const OptimizelyPageMetrics = ({
       experimentsForPageType?.some(name => activatedExperiments.has(name)),
     );
 
-  if (!isInExperiment) {
-    return null;
-  }
-
   return (
     <>
-      {trackPageComplete && <PageCompleteTracking />}
-      {trackPageDepth && <ScrollDepthTracking />}
+      {trackSignedInViews && <SignedInPageViewTracking />}
+      {isInExperiment && (
+        <>
+          {trackPageComplete && <PageCompleteTracking />}
+          {trackPageDepth && <ScrollDepthTracking />}
+        </>
+      )}
     </>
   );
 };

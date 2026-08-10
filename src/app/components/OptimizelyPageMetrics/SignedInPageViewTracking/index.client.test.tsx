@@ -5,7 +5,10 @@ import { RequestContext, RequestContextProps } from '#contexts/RequestContext';
 import { ServerSideExperiment } from '#app/models/types/global';
 import SignedInPageViewTracking from '.';
 
-jest.mock('../isCypress', () => jest.fn().mockReturnValue(false));
+jest.mock(
+  '#app/legacy/containers/PageHandlers/withOptimizelyProvider/isCypress',
+  () => jest.fn().mockReturnValue(false),
+);
 
 const mockOptimizely = {
   onReady: jest.fn(() => Promise.resolve()),

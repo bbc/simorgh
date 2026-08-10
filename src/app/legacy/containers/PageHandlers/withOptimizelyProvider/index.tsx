@@ -16,7 +16,6 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import isCypress from './isCypress';
 import registerVisitActivity from './visitTracking';
 import { getClientTimeOfDay, getReferrer, isMobile } from './userAttributes';
-import SignedInPageViewTracking from './SignedInPageViewTracking';
 
 const PAGE_VIEW_EVENT_NAME = 'page-views';
 const VISIT_EVENT_NAME = 'visit';
@@ -124,7 +123,6 @@ const withOptimizelyProvider = <T,>(Component: ComponentType<T>) => {
           },
         }}
       >
-        <SignedInPageViewTracking />
         <Component {...props} />
       </OptimizelyProvider>
     );
