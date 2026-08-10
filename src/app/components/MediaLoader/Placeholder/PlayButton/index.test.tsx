@@ -1,5 +1,8 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
-import { render } from '#app/components/react-testing-library-with-providers';
+import {
+  render,
+  screen,
+} from '#app/components/react-testing-library-with-providers';
 import PlayButton from './index';
 
 describe('PlayButton', () => {
@@ -7,7 +10,11 @@ describe('PlayButton', () => {
     const { container } = render(
       <PlayButton title="Dog chases cat." onClick={() => {}} />,
     );
-    expect(container).toMatchSnapshot();
+
+    expect(
+      screen.getByRole('button', { name: 'Play video, "Dog chases cat."' }),
+    ).toBeInTheDocument();
+    expect(container.querySelector('time')).not.toBeInTheDocument();
   });
 
   it('should render video indicator correctly', () => {
@@ -21,14 +28,26 @@ describe('PlayButton', () => {
         className="foo"
       />,
     );
-    expect(container).toMatchSnapshot();
+
+    const button = screen.getByRole('button', {
+      name: 'Play video, "Dog chases cat.", 2 minutes 30 seconds',
+    });
+    const time = container.querySelector('time');
+
+    expect(button).toHaveClass('foo');
+    expect(time).toHaveAttribute('datetime', 'PT2M30S');
+    expect(time).toHaveTextContent('2:30');
   });
 
   it('should render video correctly without duration details', () => {
     const { container } = render(
       <PlayButton title="Dog chases cat." onClick={() => {}} />,
     );
-    expect(container).toMatchSnapshot();
+
+    expect(
+      screen.getByRole('button', { name: 'Play video, "Dog chases cat."' }),
+    ).toBeInTheDocument();
+    expect(container.querySelector('time')).not.toBeInTheDocument();
   });
 
   it('should render audio indicator correctly', () => {
@@ -43,14 +62,26 @@ describe('PlayButton', () => {
         className="foo"
       />,
     );
-    expect(container).toMatchSnapshot();
+
+    const button = screen.getByRole('button', {
+      name: 'Play audio, "Dog barks at cat.", 2 minutes 30 seconds',
+    });
+    const time = container.querySelector('time');
+
+    expect(button).toHaveClass('foo');
+    expect(time).toHaveAttribute('datetime', 'PT2M30S');
+    expect(time).toHaveTextContent('2:30');
   });
 
   it('should render audio correctly without duration details', () => {
     const { container } = render(
       <PlayButton title="Dog barks at cat." onClick={() => {}} type="audio" />,
     );
-    expect(container).toMatchSnapshot();
+
+    expect(
+      screen.getByRole('button', { name: 'Play audio, "Dog barks at cat."' }),
+    ).toBeInTheDocument();
+    expect(container.querySelector('time')).not.toBeInTheDocument();
   });
 
   it('should render video correctly with duration and guidance message', () => {
@@ -64,6 +95,14 @@ describe('PlayButton', () => {
         guidanceMessage="Guidance: May contain strong language that may offend."
       />,
     );
-    expect(container).toMatchSnapshot();
+
+    const button = screen.getByRole('button', {
+      name: 'Guidance: May contain strong language that may offend. Play video, "Dog chases cat.", 2 minutes 30 seconds',
+    });
+    const time = container.querySelector('time');
+
+    expect(button).toBeInTheDocument();
+    expect(time).toHaveAttribute('datetime', 'PT2M30S');
+    expect(time).toHaveTextContent('2:30');
   });
 });

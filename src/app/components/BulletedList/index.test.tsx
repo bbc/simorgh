@@ -49,29 +49,41 @@ describe('BulletedList', () => {
   });
 
   it('should render correctly with custom bulletPointShape and bulletPointColour', () => {
-    const { container } = render(
+    render(
       <BulletedList bulletPointShape="square" bulletPointColour="#f00">
         <BulletedListItem>First item on the list</BulletedListItem>
         <BulletedListItem>Second item on the list</BulletedListItem>
         <BulletedListItem>Final list item</BulletedListItem>
       </BulletedList>,
     );
-    expect(container).toMatchSnapshot();
+
+    const items = screen.getAllByRole('listitem');
+
+    expect(items).toHaveLength(3);
+    expect(items[0]).toHaveTextContent('First item on the list');
+    expect(items[1]).toHaveTextContent('Second item on the list');
+    expect(items[2]).toHaveTextContent('Final list item');
   });
 
   it('should render correctly from ltr', () => {
-    const { container } = render(
+    render(
       <BulletedList>
         <BulletedListItem>First item on the list</BulletedListItem>
         <BulletedListItem>Second item on the list</BulletedListItem>
         <BulletedListItem>Final list item</BulletedListItem>
       </BulletedList>,
     );
-    expect(container).toMatchSnapshot();
+
+    const items = screen.getAllByRole('listitem');
+
+    expect(items).toHaveLength(3);
+    expect(items[0]).toHaveTextContent('First item on the list');
+    expect(items[1]).toHaveTextContent('Second item on the list');
+    expect(items[2]).toHaveTextContent('Final list item');
   });
 
   it('should render correctly from rtl', () => {
-    const { container } = render(
+    render(
       <BulletedList>
         <BulletedListItem>العنصر الأول في القائمة</BulletedListItem>
         <BulletedListItem>البند الثاني في القائمة</BulletedListItem>
@@ -79,6 +91,12 @@ describe('BulletedList', () => {
       </BulletedList>,
       { service: 'arabic' },
     );
-    expect(container).toMatchSnapshot();
+
+    const items = screen.getAllByRole('listitem');
+
+    expect(items).toHaveLength(3);
+    expect(items[0]).toHaveTextContent('العنصر الأول في القائمة');
+    expect(items[1]).toHaveTextContent('البند الثاني في القائمة');
+    expect(items[2]).toHaveTextContent('عنصر القائمة النهائية');
   });
 });
