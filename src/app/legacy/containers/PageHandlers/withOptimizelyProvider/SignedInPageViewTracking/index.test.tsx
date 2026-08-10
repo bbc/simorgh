@@ -13,7 +13,7 @@ const mockOptimizely = {
 const renderWithProvider = () =>
   render(
     <OptimizelyProvider
-      optimizely={mockOptimizely as ReactSDKClient}
+      optimizely={mockOptimizely as unknown as ReactSDKClient}
       isServerSide
     >
       <SignedInPageViewTracking />
@@ -50,7 +50,7 @@ describe('SignedInPageViewTracking', () => {
     await mockOptimizely.onReady();
     rerender(
       <OptimizelyProvider
-        optimizely={mockOptimizely as ReactSDKClient}
+        optimizely={mockOptimizely as unknown as ReactSDKClient}
         isServerSide
       >
         <SignedInPageViewTracking />

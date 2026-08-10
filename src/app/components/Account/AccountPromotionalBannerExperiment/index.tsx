@@ -64,11 +64,11 @@ const EligibleAccountPromotionalBannerExperiment = () => {
 };
 
 const AccountPromotionalBannerExperiment = () => {
+  const isEligible = useAccountPromoBannerEligibility();
+
   // Server-knowable eligibility gate: ineligible users render nothing and are
   // never activated. Client-side visibility (dismissal / frequency cap) is handled
   // per arm below.
-  const isEligible = useAccountPromoBannerEligibility();
-
   if (!isEligible) {
     return null;
   }

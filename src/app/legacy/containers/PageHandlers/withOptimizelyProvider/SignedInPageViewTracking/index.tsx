@@ -4,10 +4,8 @@ import isSignedIn from '../isSignedIn';
 
 const SIGNED_IN_PAGE_VIEW_EVENT_NAME = 'signed-in-page-views';
 
-// Tracked directly against the Optimizely client rather than from the DECISION
-// listener, so it still fires for signed-in users on page views where no
-// experiment happens to activate (e.g. after they've signed in and no longer
-// qualify for the experiments that would otherwise expose them).
+// Tracks a signed-in page view once per mount, waiting for the Optimizely
+// client to be ready before sending the event.
 const SignedInPageViewTracking = () => {
   const { optimizely } = use(OptimizelyContext);
   const hasTrackedRef = useRef(false);
