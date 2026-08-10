@@ -1,6 +1,8 @@
-import { render } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
 import { OptimizelyProvider, ReactSDKClient } from '@optimizely/react-sdk';
 import Cookie from 'js-cookie';
+import { RequestContext, RequestContextProps } from '#contexts/RequestContext';
+import { ServerSideExperiment } from '#app/models/types/global';
 import SignedInPageViewTracking from '.';
 
 jest.mock('../isCypress', () => jest.fn().mockReturnValue(false));
@@ -10,14 +12,26 @@ const mockOptimizely = {
   track: jest.fn(),
 } satisfies Partial<ReactSDKClient>;
 
-const renderWithProvider = () =>
+const activeExperiment: ServerSideExperiment = {
+  experimentName: 'newswb_ws_article_account_promo_banner',
+  variation: 'on',
+  enabled: true,
+};
+
+const renderWithProvider = (
+  serverSideExperiments: ServerSideExperiment[] | null = [activeExperiment],
+) =>
   render(
-    <OptimizelyProvider
-      optimizely={mockOptimizely as unknown as ReactSDKClient}
-      isServerSide
+    <RequestContext.Provider
+      value={{ serverSideExperiments } as RequestContextProps}
     >
-      <SignedInPageViewTracking />
-    </OptimizelyProvider>,
+      <OptimizelyProvider
+        optimizely={mockOptimizely as unknown as ReactSDKClient}
+        isServerSide
+      >
+        <SignedInPageViewTracking />
+      </OptimizelyProvider>
+    </RequestContext.Provider>,
   );
 
 describe('SignedInPageViewTracking', () => {
@@ -26,19 +40,47 @@ describe('SignedInPageViewTracking', () => {
     Cookie.remove('ckns_id');
   });
 
-  it('tracks signed-in-page-views once the client is ready when the user is signed in', async () => {
+  it('tracks signed-in-page-views once the client is ready when the user is signed in and part of an experiment', async () => {
     Cookie.set('ckns_id', 'signed-in-token');
 
     renderWithProvider();
-    await mockOptimizely.onReady();
 
-    expect(mockOptimizely.track).toHaveBeenCalledWith('signed-in-page-views');
+    await waitFor(() => {
+      expect(mockOptimizely.track).toHaveBeenCalledWith('signed-in-page-views');
+    });
   });
 
   it('does not track signed-in-page-views when the user is signed out', async () => {
     renderWithProvider();
-    await mockOptimizely.onReady();
 
+    // flush microtasks so a regression that kicks off an async chain would have run by now
+    await Promise.resolve();
+
+    expect(mockOptimizely.onReady).not.toHaveBeenCalled();
+    expect(mockOptimizely.track).not.toHaveBeenCalled();
+  });
+
+  it('does not track signed-in-page-views when no experiment applies to this page', async () => {
+    Cookie.set('ckns_id', 'signed-in-token');
+
+    renderWithProvider([]);
+
+    await Promise.resolve();
+
+    expect(mockOptimizely.onReady).not.toHaveBeenCalled();
+    expect(mockOptimizely.track).not.toHaveBeenCalled();
+  });
+
+  it('does not track signed-in-page-views when the visitor was excluded from the experiment', async () => {
+    Cookie.set('ckns_id', 'signed-in-token');
+
+    renderWithProvider([
+      { ...activeExperiment, enabled: true, variation: 'false' },
+    ]);
+
+    await Promise.resolve();
+
+    expect(mockOptimizely.onReady).not.toHaveBeenCalled();
     expect(mockOptimizely.track).not.toHaveBeenCalled();
   });
 
@@ -46,17 +88,29 @@ describe('SignedInPageViewTracking', () => {
     Cookie.set('ckns_id', 'signed-in-token');
 
     const { rerender } = renderWithProvider();
-    await mockOptimizely.onReady();
-    rerender(
-      <OptimizelyProvider
-        optimizely={mockOptimizely as unknown as ReactSDKClient}
-        isServerSide
-      >
-        <SignedInPageViewTracking />
-      </OptimizelyProvider>,
-    );
-    await mockOptimizely.onReady();
 
+    await waitFor(() => {
+      expect(mockOptimizely.track).toHaveBeenCalledTimes(1);
+    });
+
+    rerender(
+      <RequestContext.Provider
+        value={
+          { serverSideExperiments: [activeExperiment] } as RequestContextProps
+        }
+      >
+        <OptimizelyProvider
+          optimizely={mockOptimizely as unknown as ReactSDKClient}
+          isServerSide
+        >
+          <SignedInPageViewTracking />
+        </OptimizelyProvider>
+      </RequestContext.Provider>,
+    );
+
+    await waitFor(() => {
+      expect(mockOptimizely.onReady).toHaveBeenCalledTimes(1);
+    });
     expect(mockOptimizely.track).toHaveBeenCalledTimes(1);
   });
 });
