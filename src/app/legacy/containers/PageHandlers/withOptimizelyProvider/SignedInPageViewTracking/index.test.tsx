@@ -1,9 +1,7 @@
 import { render } from '@testing-library/react';
 import { OptimizelyProvider, ReactSDKClient } from '@optimizely/react-sdk';
-import isSignedIn from '../isSignedIn';
+import Cookie from 'js-cookie';
 import SignedInPageViewTracking from '.';
-
-jest.mock('../isSignedIn');
 
 const mockOptimizely = {
   onReady: jest.fn(() => Promise.resolve()),
@@ -23,10 +21,11 @@ const renderWithProvider = () =>
 describe('SignedInPageViewTracking', () => {
   beforeEach(() => {
     jest.clearAllMocks();
+    Cookie.remove('ckns_id');
   });
 
   it('tracks signed-in-page-views once the client is ready when the user is signed in', async () => {
-    (isSignedIn as jest.Mock).mockReturnValue(true);
+    Cookie.set('ckns_id', 'signed-in-token');
 
     renderWithProvider();
     await mockOptimizely.onReady();
@@ -35,8 +34,6 @@ describe('SignedInPageViewTracking', () => {
   });
 
   it('does not track signed-in-page-views when the user is signed out', async () => {
-    (isSignedIn as jest.Mock).mockReturnValue(false);
-
     renderWithProvider();
     await mockOptimizely.onReady();
 
@@ -44,7 +41,7 @@ describe('SignedInPageViewTracking', () => {
   });
 
   it('tracks signed-in-page-views only once, even if re-rendered', async () => {
-    (isSignedIn as jest.Mock).mockReturnValue(true);
+    Cookie.set('ckns_id', 'signed-in-token');
 
     const { rerender } = renderWithProvider();
     await mockOptimizely.onReady();
