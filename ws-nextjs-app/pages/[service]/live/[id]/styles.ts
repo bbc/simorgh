@@ -8,7 +8,7 @@ export default {
       maxWidth: `${pixelsToRem(1008)}rem`,
       margin: `${pixelsToRem(20)}rem auto`,
     }),
-  heading: ({ mq }: Theme) =>
+  heading: () =>
     css({
       gridColumn: '1 / 13',
       textAlign: 'start',
@@ -16,11 +16,6 @@ export default {
         outline: 'none',
       },
       marginBottom: '1rem',
-
-      [mq.GROUP_2_MAX_WIDTH]: {
-        fontSize: '2rem',
-        lineHeight: '2.625rem',
-      },
     }),
   outerGrid: ({ mq, gridWidths, spacings }: Theme) =>
     css({

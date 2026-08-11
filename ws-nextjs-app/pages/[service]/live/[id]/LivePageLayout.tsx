@@ -233,18 +233,15 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
         )}
         <div css={styles.outerGrid}>
           {showSportData && (
-            <>
-              <Heading
-                level={1}
-                size="trafalgar"
-                id="content"
-                tabIndex={-1}
-                css={styles.heading}
-              >
-                {title}
-              </Heading>
-              <VisuallyHiddenText as="h2">{matchSummary}</VisuallyHiddenText>
-            </>
+            <Heading
+              level={2}
+              size="trafalgar"
+              id="content"
+              tabIndex={-1}
+              css={styles.heading}
+            >
+              {title}
+            </Heading>
           )}
           <div css={styles.firstSection}>
             {keyPoints && (
