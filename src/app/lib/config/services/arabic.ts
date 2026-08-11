@@ -530,6 +530,7 @@ export const service: DefaultServiceConfig = {
         url: '/arabic',
       },
     ],
+    useResonance: true,
   },
 };
 

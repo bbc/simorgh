@@ -452,6 +452,7 @@ export const service: DefaultServiceConfig = {
         url: '/marathi',
       },
     ],
+    useResonance: true,
   },
 };
 
