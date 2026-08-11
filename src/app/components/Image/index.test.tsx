@@ -1,5 +1,3 @@
-import { JSDOM } from 'jsdom';
-
 import {
   render,
   screen,
@@ -9,12 +7,6 @@ import Image from '.';
 import BASE64_PLACEHOLDER_IMAGE from './base64Placeholder';
 
 import { SHADOW } from '../ThemeProvider/palette';
-
-const removeStyles = (el: HTMLElement) => {
-  const dom = new JSDOM(el.innerHTML.replace(/class=".+?"/gm, ''));
-
-  return dom.window.document.body.firstChild;
-};
 
 const Fixture = ({ ...props }) => (
   <Image
@@ -195,7 +187,7 @@ describe('Image - Canonical', () => {
   });
 
   it('should match markup for basic image', () => {
-    const { container } = render(
+    render(
       <Image
         alt="Test image alt text"
         src="/test-image-500.jpg"
@@ -203,22 +195,20 @@ describe('Image - Canonical', () => {
       />,
     );
 
-    expect(removeStyles(container)).toMatchInlineSnapshot(`
-     <div
-       style="padding-bottom: 56.25%; overflow: hidden;"
-     >
-       <img
-         alt="Test image alt text"
-         loading="eager"
-         src="/test-image-500.jpg"
-         style="aspect-ratio: 16 / 9;"
-       />
-     </div>
-    `);
+    const imageEl = screen.getByAltText('Test image alt text');
+
+    expect(imageEl.nodeName).toBe('IMG');
+    expect(imageEl).toHaveAttribute('src', '/test-image-500.jpg');
+    expect(imageEl).toHaveAttribute('loading', 'eager');
+    expect(imageEl).toHaveStyle({ aspectRatio: '16 / 9' });
+    expect(imageEl.parentNode).toHaveStyle({
+      paddingBottom: '56.25%',
+      overflow: 'hidden',
+    });
   });
 
   it('should match markup for a responsive image', () => {
-    const { container } = render(
+    render(
       <Image
         alt="Test image alt text"
         src="/test-image-500.jpg.webp"
@@ -227,19 +217,16 @@ describe('Image - Canonical', () => {
       />,
     );
 
-    expect(removeStyles(container)).toMatchInlineSnapshot(`
-     <div
-       style="padding-bottom: 56.25%; overflow: hidden;"
-     >
-       <img
-         alt="Test image alt text"
-         loading="eager"
-         src="/test-image-500.jpg.webp"
-         srcset="/test-image-200.jpg.webp 200w, /test-image-500.jpg.webp 500w"
-         style="aspect-ratio: 16 / 9;"
-       />
-     </div>
-    `);
+    const imageEl = screen.getByAltText('Test image alt text');
+
+    expect(imageEl).toHaveAttribute('src', '/test-image-500.jpg.webp');
+    expect(imageEl).toHaveAttribute(
+      'srcset',
+      '/test-image-200.jpg.webp 200w, /test-image-500.jpg.webp 500w',
+    );
+    expect(imageEl).toHaveAttribute('loading', 'eager');
+    expect(imageEl).toHaveStyle({ aspectRatio: '16 / 9' });
+    expect(imageEl.parentNode).toHaveStyle({ paddingBottom: '56.25%' });
   });
 });
 
@@ -388,7 +375,7 @@ describe('Image - AMP pages', () => {
   });
 
   it('should match markup for basic image', () => {
-    const { container } = render(
+    render(
       <Image
         alt="Test image alt text"
         src="/test-image-500.jpg"
@@ -397,22 +384,20 @@ describe('Image - AMP pages', () => {
       { isAmp: true },
     );
 
-    expect(removeStyles(container)).toMatchInlineSnapshot(`
-     <div
-       style="padding-bottom: 56.25%; overflow: hidden;"
-     >
-       <amp-img
-         alt="Test image alt text"
-         fallback=""
-         layout="fill"
-         src="/test-image-500.jpg"
-       />
-     </div>
-    `);
+    const imageEl = screen.getAllByAltText('Test image alt text')[0];
+
+    expect(imageEl.nodeName).toBe('AMP-IMG');
+    expect(imageEl).toHaveAttribute('src', '/test-image-500.jpg');
+    expect(imageEl).toHaveAttribute('layout', 'fill');
+    expect(imageEl).toHaveAttribute('fallback', '');
+    expect(imageEl.parentNode).toHaveStyle({
+      paddingBottom: '56.25%',
+      overflow: 'hidden',
+    });
   });
 
   it('should match markup for a responsive image', () => {
-    const { container } = render(
+    render(
       <Image
         alt="Test image alt text"
         src="/test-image-500.jpg"
@@ -422,23 +407,20 @@ describe('Image - AMP pages', () => {
       { isAmp: true },
     );
 
-    expect(removeStyles(container)).toMatchInlineSnapshot(`
-     <div
-       style="padding-bottom: 56.25%; overflow: hidden;"
-     >
-       <amp-img
-         alt="Test image alt text"
-         fallback=""
-         layout="fill"
-         src="/test-image-500.jpg"
-         srcset="/test-image-200.jpg 200w, /test-image-500.jpg 500w"
-       />
-     </div>
-    `);
+    const imageEl = screen.getAllByAltText('Test image alt text')[0];
+
+    expect(imageEl.nodeName).toBe('AMP-IMG');
+    expect(imageEl).toHaveAttribute('src', '/test-image-500.jpg');
+    expect(imageEl).toHaveAttribute(
+      'srcset',
+      '/test-image-200.jpg 200w, /test-image-500.jpg 500w',
+    );
+    expect(imageEl).toHaveAttribute('layout', 'fill');
+    expect(imageEl.parentNode).toHaveStyle({ paddingBottom: '56.25%' });
   });
 
   it('should match markup for a responsive jpg image', () => {
-    const { container } = render(
+    render(
       <Image
         alt="Test image alt text"
         src="/test-image-500.webp"
@@ -452,19 +434,15 @@ describe('Image - AMP pages', () => {
       { isAmp: true },
     );
 
-    expect(removeStyles(container)).toMatchInlineSnapshot(`
-     <div
-       style="padding-bottom: 56.25%; overflow: hidden;"
-     >
-       <amp-img
-         alt="Test image alt text"
-         fallback=""
-         layout="fill"
-         sizes="(max-width: 600px) 480px, 800px"
-         src="/test-image-500.webp"
-         srcset="/test-image-200.webp 200w, /test-image-500.webp 500w"
-       />
-     </div>
-    `);
+    const imageEl = screen.getAllByAltText('Test image alt text')[0];
+
+    expect(imageEl.nodeName).toBe('AMP-IMG');
+    expect(imageEl).toHaveAttribute('src', '/test-image-500.webp');
+    expect(imageEl).toHaveAttribute(
+      'srcset',
+      '/test-image-200.webp 200w, /test-image-500.webp 500w',
+    );
+    expect(imageEl).toHaveAttribute('sizes', '(max-width: 600px) 480px, 800px');
+    expect(imageEl).toHaveAttribute('layout', 'fill');
   });
 });
