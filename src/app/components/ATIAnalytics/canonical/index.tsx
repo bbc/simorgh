@@ -52,36 +52,7 @@ const CanonicalATIAnalytics = ({
   reverbParams,
   resonanceParams,
 }: ATIAnalyticsProps) => {
-  // add resonanceParams to props if needed, e.g.
-  // const CanonicalATIAnalytics = ({ reverbParams, resonanceParams }: ATIAnalyticsProps) => {
   const { isLite, nonce } = use(RequestContext);
-
-  // const resonanceParams = {
-  //   resonanceProperties: {
-  //     mode: ResonanceMode.TEST,
-  //   },
-  //   baseProperties: {
-  //     app: {
-  //       name: 'news-mundo',
-  //     },
-  //     destination: 'WS_NEWS_LANGUAGES_TEST',
-  //     hashedUserId: 'veV9rmzQJt0SgWWjYnZTltTO1hXIIpyZVbz0WV-7HAs',
-  //     pageName: 'pagename.page',
-  //     producer: 'BBC_WORLD_NEWS',
-  //     siteId: 12345, // WS_NEWS_LANGUAGES_TEST: '598343',
-  //   },
-  //   pageviewProperties: {
-  //     contentId: 'urn:bbc:tipo:topic:c93v2kkze2rt',
-  //     contentType: 'index-home',
-  //     language: 'es',
-  //     destination: 'WS_NEWS_LANGUAGES_TEST',
-  //     producer: 'BBC_WORLD_NEWS',
-  //   },
-  // } as {
-  //   resonanceProperties: ResonanceProperties;
-  //   pageviewProperties: PageviewProperties;
-  //   baseProperties: BaseProperties;
-  // };
 
   usePWAInstallTracker();
 
@@ -90,20 +61,11 @@ const CanonicalATIAnalytics = ({
   usePWAOfflineTracking();
 
   const [reverbBeaconConfig] = useState(reverbParams);
-
   const [resonanceBeaconConfig] = useState(resonanceParams);
-
-  // add resonanceBeaconConfig to state? copilot says
-  // It is likely there to freeze the initial analytics payload so the page-view beacon is sent once per mount, not again on re-renders.
-  // so likely yes, e.g.
-  //  const [resonanceBeaconConfig] = useState(resonanceParams);
 
   useEffect(() => {
     if (!isOperaProxy()) sendBeacon(reverbBeaconConfig, resonanceBeaconConfig);
   }, [reverbBeaconConfig, resonanceBeaconConfig]);
-  // add resonance to above, e.g.
-  //   if (!isOperaProxy()) sendBeacon(reverbBeaconConfig, resonanceBeaconConfig);
-  // }, [reverbBeaconConfig, resonanceBeaconConfig]);
 
   const liteSiteReverbURL = reverbUrlHelper.getLitePageViewUrl(reverbParams);
   const operaMiniPageViewReverbURL =

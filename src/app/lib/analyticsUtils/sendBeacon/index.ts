@@ -90,7 +90,6 @@ const callReverb = async (eventDetails: ReverbEventDetails) => {
 
 const callResonance = (resonanceParams: ResonanceBeaconConfig) => {
   try {
-    // add checks in here so this only runs when resonanceParams is not undefined.
     console.log('Resonance initialised with params:', resonanceParams);
     Resonance.initialise(
       resonanceParams.resonanceProperties,
@@ -103,37 +102,16 @@ const callResonance = (resonanceParams: ResonanceBeaconConfig) => {
   }
 };
 
-// add setResonancePageValues function here
-
-// add initialise Resonance function here inside callResonance function
-// option to use resonanceProperties.suppressInitialPageview at initialisation.
-
 const sendBeacon = async (
   reverbBeaconConfig: ReverbBeaconConfig,
-  resonanceParams?: ResonanceBeaconConfig | null,
+  resonanceBeaconConfig?: ResonanceBeaconConfig | null,
 ) => {
-  // add resonanceBeaconConfig param to function if needed, e.g.
-  // sendBeacon = async (reverbBeaconConfig: ReverbBeaconConfig, resonanceBeaconConfig?: ResonanceBeaconConfig) => {
   if (onClient()) {
     try {
       const { eventDetails } = reverbBeaconConfig;
-      // add if else statement here to run resonance analytics if resonanceBeaconConfig is passed in
-      // IF we are not wanting to send both reverb and resonance page view info
-      // otherwise take a different approach
-      // e.g.
-      // if (resonanceBeaconConfig) {
-      //   const {
-      //     params: { page, user },
-      //     eventDetails,
-      //   } = resonanceBeaconConfig;
 
-      //   await setResonancePageValues({ pageVars: page, userVars: user });
-
-      //   await callResonance(eventDetails);
-      // } else {
-
-      if (resonanceParams) {
-        callResonance(resonanceParams);
+      if (resonanceBeaconConfig) {
+        callResonance(resonanceBeaconConfig);
       }
 
       await callReverb(eventDetails);
