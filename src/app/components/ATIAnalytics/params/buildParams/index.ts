@@ -1,6 +1,8 @@
 import { LIBRARY_VERSION } from '../../../../lib/analyticsUtils';
-import { buildReverbAnalyticsModel } from '../../atiUrl';
-// import e.g. import { buildResonanceAnalyticsModel } from '../../atiUrl';
+import {
+  buildReverbAnalyticsModel,
+  buildResonanceAnalyticsModel,
+} from '../../atiUrl';
 import { ATIDataWithContexts } from '../../types';
 
 export const buildPageATIParams = ({
@@ -69,42 +71,40 @@ export const buildPageATIParams = ({
   };
 };
 
-export const buildPageReverbParams = ({
+type BuildPageParamsArgs = ATIDataWithContexts & {
+  isSignedIn?: boolean;
+  hashedId?: string | null;
+};
+
+const buildPageReverbParams = ({
   atiData,
   requestContext,
   serviceContext,
   isSignedIn,
   hashedId,
-}: ATIDataWithContexts & {
-  isSignedIn?: boolean;
-  hashedId?: string | null;
-}) =>
+}: BuildPageParamsArgs) =>
   buildReverbAnalyticsModel(
-    buildPageATIParams({
-      atiData,
-      requestContext,
-      serviceContext,
-      isSignedIn,
-      hashedId,
-    }),
+    buildPageATIParams({ atiData, requestContext, serviceContext, isSignedIn, hashedId }),
   );
 
-// add exported function that builds resonance params calling buildPageATIParams above, e.g.
-export const buildPageResonanceParams = ({
+const buildPageResonanceParams = ({
+  atiData,
   requestContext,
   serviceContext,
   isSignedIn,
   hashedId,
-}: ATIDataWithContexts & {
-  isSignedIn?: boolean;
-  hashedId?: string | null;
-}) =>
-  // need to pass in ATIData - we can get this via the context provider
+}: BuildPageParamsArgs) =>
   buildResonanceAnalyticsModel(
-    buildPageATIParams({
-      requestContext,
-      serviceContext,
-      isSignedIn,
-      hashedId,
-    }),
+    buildPageATIParams({ atiData, requestContext, serviceContext, isSignedIn, hashedId }),
   );
+
+export const buildAnalyticsParams = ({
+  atiData,
+  requestContext,
+  serviceContext,
+  isSignedIn,
+  hashedId,
+}: BuildPageParamsArgs) => ({
+  reverbParams: buildPageReverbParams({ atiData, requestContext, serviceContext, isSignedIn, hashedId }),
+  resonanceParams: buildPageResonanceParams({ atiData, requestContext, serviceContext, isSignedIn, hashedId }),
+});

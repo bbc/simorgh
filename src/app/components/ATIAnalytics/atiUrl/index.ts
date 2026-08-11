@@ -12,16 +12,56 @@ import {
   onOnionTld,
   sanitise,
 } from '../../../lib/analyticsUtils';
+import { ResonanceMode } from '@bbc/resonance';
 import {
   ATIEventTrackingProps,
   ATIPageTrackingProps,
   ReverbBeaconConfig,
+  ResonanceBeaconConfig,
 } from '../types';
 
 /*
  * For AMP pages, certain browser and device values are determined
  * https://github.com/ampproject/amphtml/blob/master/spec/amp-var-substitutions.md#device-and-browser
  */
+
+export const buildResonanceAnalyticsModel = ({
+  appName,
+  contentId,
+  contentType,
+  language,
+  statsDestination,
+  hashedId,
+  pageIdentifier,
+  producerName,
+  platform,
+}: ATIPageTrackingProps): ResonanceBeaconConfig => {
+  const env = getEnvConfig().SIMORGH_APP_ENV;
+
+  return {
+    resonanceProperties: {
+      // TODO: map to ResonanceMode.LIVE once environment-aware logic is confirmed
+      mode: env === 'live' ? ResonanceMode.LIVE : ResonanceMode.TEST,
+    },
+    baseProperties: {
+      app: {
+        name: platform === 'app' ? `${appName}-app` : appName,
+      },
+      destination: statsDestination,
+      hashedUserId: hashedId ?? undefined,
+      pageName: pageIdentifier,
+      producer: producerName,
+      // TODO: siteId — not yet in ServiceConfig, needs adding per service
+    },
+    pageviewProperties: {
+      contentId,
+      contentType,
+      language,
+      destination: statsDestination,
+      producer: producerName,
+    },
+  } as ResonanceBeaconConfig;
+};
 
 export const buildReverbAnalyticsModel = ({
   appName,
