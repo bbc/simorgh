@@ -8,14 +8,30 @@ export default {
       maxWidth: `${pixelsToRem(1008)}rem`,
       margin: `${pixelsToRem(20)}rem auto`,
     }),
-  heading: () =>
+  headingDesktop: ({ mq }) =>
     css({
-      gridColumn: '1 / 13',
       textAlign: 'start',
+      paddingTop: '1rem',
       '&:focus': {
         outline: 'none',
       },
       marginBottom: '1rem',
+      [mq.GROUP_3_MAX_WIDTH]: {
+        display: 'none',
+      },
+    }),
+  headingMobile: ({ mq }) =>
+    css({
+      gridColumn: '1 / 13',
+      textAlign: 'start',
+      paddingTop: '1rem',
+      '&:focus': {
+        outline: 'none',
+      },
+      marginBottom: '1rem',
+      [mq.GROUP_4_MIN_WIDTH]: {
+        display: 'none',
+      },
     }),
   outerGrid: ({ mq, gridWidths, spacings }: Theme) =>
     css({

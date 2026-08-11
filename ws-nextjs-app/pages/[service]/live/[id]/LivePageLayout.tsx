@@ -238,7 +238,7 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
               size="trafalgar"
               id="content"
               tabIndex={-1}
-              css={styles.heading}
+              css={styles.headingMobile}
             >
               {title}
             </Heading>
@@ -249,6 +249,17 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
             )}
           </div>
           <div css={styles.secondSection}>
+            {showSportData && (
+              <Heading
+                level={2}
+                size="trafalgar"
+                id="content"
+                tabIndex={-1}
+                css={styles.headingDesktop}
+              >
+                {title}
+              </Heading>
+            )}
             {showPortraitVideoCarousel && (
               <PortraitVideoCarousel
                 blocks={portraitVideoItems.portraitVideo.blocks}
