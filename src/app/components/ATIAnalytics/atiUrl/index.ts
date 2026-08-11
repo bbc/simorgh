@@ -1,3 +1,4 @@
+import { ResonanceMode } from '@bbc/resonance';
 import {
   CLICK_EVENT,
   VIEW_EVENT,
@@ -12,7 +13,6 @@ import {
   onOnionTld,
   sanitise,
 } from '../../../lib/analyticsUtils';
-import { ResonanceMode } from '@bbc/resonance';
 import {
   ATIEventTrackingProps,
   ATIPageTrackingProps,

@@ -84,7 +84,13 @@ const buildPageReverbParams = ({
   hashedId,
 }: BuildPageParamsArgs) =>
   buildReverbAnalyticsModel(
-    buildPageATIParams({ atiData, requestContext, serviceContext, isSignedIn, hashedId }),
+    buildPageATIParams({
+      atiData,
+      requestContext,
+      serviceContext,
+      isSignedIn,
+      hashedId,
+    }),
   );
 
 const buildPageResonanceParams = ({
@@ -94,8 +100,15 @@ const buildPageResonanceParams = ({
   isSignedIn,
   hashedId,
 }: BuildPageParamsArgs) =>
+  // add service context check in here?
   buildResonanceAnalyticsModel(
-    buildPageATIParams({ atiData, requestContext, serviceContext, isSignedIn, hashedId }),
+    buildPageATIParams({
+      atiData,
+      requestContext,
+      serviceContext,
+      isSignedIn,
+      hashedId,
+    }),
   );
 
 export const buildAnalyticsParams = ({
@@ -105,6 +118,18 @@ export const buildAnalyticsParams = ({
   isSignedIn,
   hashedId,
 }: BuildPageParamsArgs) => ({
-  reverbParams: buildPageReverbParams({ atiData, requestContext, serviceContext, isSignedIn, hashedId }),
-  resonanceParams: buildPageResonanceParams({ atiData, requestContext, serviceContext, isSignedIn, hashedId }),
+  reverbParams: buildPageReverbParams({
+    atiData,
+    requestContext,
+    serviceContext,
+    isSignedIn,
+    hashedId,
+  }),
+  resonanceParams: buildPageResonanceParams({
+    atiData,
+    requestContext,
+    serviceContext,
+    isSignedIn,
+    hashedId,
+  }),
 });
