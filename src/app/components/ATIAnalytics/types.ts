@@ -156,7 +156,7 @@ export type ReverbBeaconConfig = {
 
 export interface ATIAnalyticsProps {
   reverbParams: ReverbBeaconConfig;
-  resonanceParams?: ResonanceBeaconConfig;
+  resonanceParams?: ResonanceBeaconConfig | null;
 }
 
 export interface ATIEventTrackingProps {

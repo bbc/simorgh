@@ -110,7 +110,7 @@ const callResonance = (resonanceParams: ResonanceBeaconConfig) => {
 
 const sendBeacon = async (
   reverbBeaconConfig: ReverbBeaconConfig,
-  resonanceParams: ResonanceBeaconConfig,
+  resonanceParams?: ResonanceBeaconConfig | null,
 ) => {
   // add resonanceBeaconConfig param to function if needed, e.g.
   // sendBeacon = async (reverbBeaconConfig: ReverbBeaconConfig, resonanceBeaconConfig?: ResonanceBeaconConfig) => {
@@ -132,7 +132,9 @@ const sendBeacon = async (
       //   await callResonance(eventDetails);
       // } else {
 
-      callResonance(resonanceParams);
+      if (resonanceParams) {
+        callResonance(resonanceParams);
+      }
 
       await callReverb(eventDetails);
     } catch (error) {

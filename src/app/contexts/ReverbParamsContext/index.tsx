@@ -32,7 +32,7 @@ import getEnrichedMediaArticleATIData from './getEnrichedMediaArticleATIData';
 
 type ReverbParamsContextProps = {
   reverbParams: ReverbBeaconConfig;
-  resonanceParams: ResonanceBeaconConfig;
+  resonanceParams: ResonanceBeaconConfig | null;
   experimentProps?: ComponentExperimentProps;
 };
 

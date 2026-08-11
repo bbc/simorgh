@@ -118,19 +118,24 @@ export const buildAnalyticsParams = ({
   serviceContext,
   isSignedIn,
   hashedId,
-}: BuildPageParamsArgs) => ({
-  reverbParams: buildPageReverbParams({
-    atiData,
-    requestContext,
-    serviceContext,
-    isSignedIn,
-    hashedId,
-  }),
-  resonanceParams: buildPageResonanceParams({
-    atiData,
-    requestContext,
-    serviceContext,
-    isSignedIn,
-    hashedId,
-  }),
-});
+}: BuildPageParamsArgs) => {
+  const { useResonance } = serviceContext;
+  return {
+    reverbParams: buildPageReverbParams({
+      atiData,
+      requestContext,
+      serviceContext,
+      isSignedIn,
+      hashedId,
+    }),
+    resonanceParams: useResonance
+      ? buildPageResonanceParams({
+          atiData,
+          requestContext,
+          serviceContext,
+          isSignedIn,
+          hashedId,
+        })
+      : null,
+  };
+};

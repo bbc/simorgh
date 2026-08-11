@@ -19,11 +19,15 @@ import type {
 import useConnectionBackOnlineTracker from '#app/hooks/useConnectionBackOnlineTracker';
 import useConnectionTypeTracker from '#app/hooks/useConnectionTypeTracker';
 import usePWAOfflineTracking from '#app/hooks/usePWAOfflineTracking';
-import { ATIAnalyticsProps } from '../types';
+import { ATIAnalyticsProps, ReverbBeaconConfig } from '../types';
 import getNoScriptTrackingPixelUrl from './getNoScriptTrackingPixelUrl';
 import sendPageViewBeaconOperaMini from './sendPageViewBeaconOperaMini';
 
-const renderNoScriptTrackingPixel = ({ reverbParams }: ATIAnalyticsProps) => {
+const renderNoScriptTrackingPixel = ({
+  reverbParams,
+}: {
+  reverbParams: ReverbBeaconConfig;
+}) => {
   return (
     <noscript id="analytics-noscript">
       <img
