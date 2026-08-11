@@ -15,7 +15,7 @@ export const buildPageATIParams = ({
   isSignedIn?: boolean;
   hashedId?: string | null;
 }) => {
-  const { isUK, platform, statsDestination } = requestContext;
+  const { isUK, platform, statsDestination, siteId } = requestContext;
   const {
     atiAnalyticsAppName,
     atiAnalyticsProducerId,
@@ -61,6 +61,7 @@ export const buildPageATIParams = ({
     producerName: atiAnalyticsProducerName,
     service,
     statsDestination,
+    siteId,
     timePublished,
     timeUpdated,
     isSignedIn,

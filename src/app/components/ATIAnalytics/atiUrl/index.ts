@@ -31,6 +31,7 @@ export const buildResonanceAnalyticsModel = ({
   contentType,
   language,
   statsDestination,
+  siteId,
   hashedId,
   pageIdentifier,
   producerName,
@@ -40,7 +41,6 @@ export const buildResonanceAnalyticsModel = ({
 
   return {
     resonanceProperties: {
-      // TODO: map to ResonanceMode.LIVE once environment-aware logic is confirmed
       mode: env === 'live' ? ResonanceMode.LIVE : ResonanceMode.TEST,
     },
     baseProperties: {
@@ -51,7 +51,7 @@ export const buildResonanceAnalyticsModel = ({
       hashedUserId: hashedId ?? undefined,
       pageName: pageIdentifier,
       producer: producerName,
-      // TODO: siteId — not yet in ServiceConfig, needs adding per service
+      siteId,
     },
     pageviewProperties: {
       contentId,
