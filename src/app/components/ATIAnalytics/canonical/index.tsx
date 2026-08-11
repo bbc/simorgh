@@ -10,12 +10,6 @@ import addInlineScript, {
 } from '#app/lib/utilities/addInlineScript';
 import usePWAInstallTracker from '#app/hooks/usePWAInstallTracker';
 import { reverbUrlHelper } from '@bbc/reverb-url-helper';
-import { Resonance, ResonanceMode } from '@bbc/resonance';
-import type {
-  ResonanceProperties,
-  PageviewProperties,
-  BaseProperties,
-} from '@bbc/resonance';
 import useConnectionBackOnlineTracker from '#app/hooks/useConnectionBackOnlineTracker';
 import useConnectionTypeTracker from '#app/hooks/useConnectionTypeTracker';
 import usePWAOfflineTracking from '#app/hooks/usePWAOfflineTracking';

@@ -1,16 +1,11 @@
 // import resonance - we can follow the pattern of the reverbURLHelper, e,g.
-import { Resonance, ResonanceMode } from '@bbc/resonance';
+import { Resonance } from '@bbc/resonance';
 import { ReverbClient } from '#app/models/types/eventTracking';
 import {
   ReverbBeaconConfig,
   ResonanceBeaconConfig,
   ReverbEventDetails,
 } from '#app/components/ATIAnalytics/types';
-// import type {
-//   ResonanceProperties,
-//   PageviewProperties,
-//   BaseProperties,
-// } from '@bbc/resonance';
 import onClient from '../../utilities/onClient';
 import nodeLogger from '../../logger.node';
 import { ATI_LOGGING_ERROR } from '../../logger.const';
@@ -70,9 +65,7 @@ const callReverb = async (eventDetails: ReverbEventDetails) => {
   // eslint-disable-next-line no-underscore-dangle
   return window.__reverb.__reverbLoadedPromise.then(
     async reverb => {
-      if (!reverb.isReady()) await reverb.initialise(); // here we initialise reverb
-
-      console.log('Reverb initialised with params:', eventDetails);
+      if (!reverb.isReady()) await reverb.initialise();
 
       await reverbHandlers[eventName]({
         reverbInstance: reverb,
@@ -83,21 +76,18 @@ const callReverb = async (eventDetails: ReverbEventDetails) => {
       logger.error(ATI_LOGGING_ERROR, {
         error: 'Failed to load reverb. No event sent',
       });
-      console.log('Reverb errored with params:', eventDetails);
     },
   );
 };
 
 const callResonance = (resonanceParams: ResonanceBeaconConfig) => {
   try {
-    console.log('Resonance initialised with params:', resonanceParams);
     Resonance.initialise(
       resonanceParams.resonanceProperties,
       resonanceParams.baseProperties,
       resonanceParams.pageviewProperties,
     );
   } catch (error) {
-    console.log('throwing error with param:', resonanceParams);
     throw new Error(`Error initialising Resonance: ${error}`);
   }
 };

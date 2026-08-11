@@ -101,7 +101,6 @@ const buildPageResonanceParams = ({
   isSignedIn,
   hashedId,
 }: BuildPageParamsArgs) =>
-  // add service context check in here?
   buildResonanceAnalyticsModel(
     buildPageATIParams({
       atiData,
