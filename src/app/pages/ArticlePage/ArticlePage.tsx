@@ -263,6 +263,7 @@ const getTimestampComponent =
         )}
         <SaveArticleButton
           saveArticlePageData={extractSaveArticleProps(articlePageData)}
+          enableGuestPreview
         />
       </>
     );
