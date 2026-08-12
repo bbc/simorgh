@@ -2997,18 +2997,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@happy-dom/jest-environment@npm:20.10.5":
-  version: 20.10.5
-  resolution: "@happy-dom/jest-environment@npm:20.10.5"
+"@happy-dom/jest-environment@npm:20.11.1":
+  version: 20.11.1
+  resolution: "@happy-dom/jest-environment@npm:20.11.1"
   dependencies:
-    happy-dom: "npm:^20.10.5"
+    happy-dom: "npm:^20.11.1"
   peerDependencies:
     "@jest/environment": ">=25.0.0"
     "@jest/fake-timers": ">=25.0.0"
     "@jest/types": ">=25.0.0"
     jest-mock: ">=25.0.0"
     jest-util: ">=25.0.0"
-  checksum: 10/cb854dd84b4215e443f395918c0befa002665cd0012357d00eb089d25f27b878109bedae24a57d263aac3d005a9f79ba60e479c11a8f0057b8c52e6cf23146f1
+  checksum: 10/41e6ee7372aa95e015cc781c303f8e5fae7ffce95c49abe1e006fd0cd02fd03a0fc65f8f152fe8a2cd1e264061d16a6354c1e16e6f7a900827cf879de78c5a9c
   languageName: node
   linkType: hard
 
@@ -11474,9 +11474,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"happy-dom@npm:20.10.5":
-  version: 20.10.5
-  resolution: "happy-dom@npm:20.10.5"
+"happy-dom@npm:20.11.1":
+  version: 20.11.1
+  resolution: "happy-dom@npm:20.11.1"
   dependencies:
     "@types/node": "npm:>=20.0.0"
     "@types/whatwg-mimetype": "npm:^3.0.2"
@@ -11485,13 +11485,13 @@ __metadata:
     entities: "npm:^7.0.1"
     whatwg-mimetype: "npm:^3.0.0"
     ws: "npm:^8.21.0"
-  checksum: 10/2eff3dde2be9624148a955bfd55f9b24b4749d35742d4ca503808af01b81827a0fd69466715871d29400ccf46f59ea764cfd918896de9eb837151b9383439e1b
+  checksum: 10/a07d892f1fefe843cf3fcb0ed4ecb782fd1014c1ac27048f27f874f5d6b91ec0c25a777532145d0c041f524fd851d8ce5bf9779fc6f1ba0fed8b67d7ab96095f
   languageName: node
   linkType: hard
 
-"happy-dom@npm:^20.10.5":
-  version: 20.10.6
-  resolution: "happy-dom@npm:20.10.6"
+"happy-dom@npm:^20.11.1":
+  version: 20.11.2
+  resolution: "happy-dom@npm:20.11.2"
   dependencies:
     "@types/node": "npm:>=20.0.0"
     "@types/whatwg-mimetype": "npm:^3.0.2"
@@ -11500,7 +11500,7 @@ __metadata:
     entities: "npm:^7.0.1"
     whatwg-mimetype: "npm:^3.0.0"
     ws: "npm:^8.21.0"
-  checksum: 10/255aef5cd4f9b425dacc9e8c29b13e0366b6cf014fbcd838bed887999b2c67bf854c31311fbfa28adca163ef9056377465a3673c0054737243e556d98467d5ef
+  checksum: 10/f482ff0d6848556a9700c171263c5cb8fead9ab14580e322c28ad0b8284b0e7bb5d3cde4493e6d87b1e6c859073bbb23f97678a51ee986333b4949b4dcae3292
   languageName: node
   linkType: hard
 
@@ -17028,7 +17028,7 @@ __metadata:
     "@emotion/react": "npm:11.14.0"
     "@emotion/server": "npm:11.11.0"
     "@emotion/styled": "npm:11.14.1"
-    "@happy-dom/jest-environment": "npm:20.10.5"
+    "@happy-dom/jest-environment": "npm:20.11.1"
     "@jest/environment": "npm:30.2.0"
     "@jest/globals": "npm:30.2.0"
     "@optimizely/optimizely-sdk": "npm:5.4.1"
@@ -17088,7 +17088,7 @@ __metadata:
     eslint-plugin-prettier: "npm:5.5.4"
     eslint-plugin-react: "npm:7.37.5"
     eslint-plugin-react-hooks: "npm:5.2.0"
-    happy-dom: "npm:20.10.5"
+    happy-dom: "npm:20.11.1"
     husky: "npm:9.1.7"
     identity-obj-proxy: "npm:3.0.0"
     jalaali-js: "npm:1.2.8"
