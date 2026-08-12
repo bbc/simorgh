@@ -17,10 +17,11 @@ describe('Media Message', () => {
   });
 
   it('should display the media message without a placeholder image', () => {
-    const { getByText } = render(
+    const { container, getByText } = render(
       <Message message="Контент більше не доступний" />,
     );
 
     expect(getByText('Контент більше не доступний')).toBeInTheDocument();
+    expect(container.querySelector('img')).not.toBeInTheDocument();
   });
 });
