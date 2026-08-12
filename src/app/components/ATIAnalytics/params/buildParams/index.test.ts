@@ -1,7 +1,7 @@
 import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
 import { RequestContextProps } from '../../../../contexts/RequestContext';
 import { ServiceConfig } from '../../../../models/types/serviceConfig';
-import { buildPageATIParams } from '.';
+import { buildPageATIParams, buildAnalyticsParams } from '.';
 
 jest
   .spyOn(document, 'referrer', 'get')
@@ -685,5 +685,64 @@ describe('implementation of buildPageATIParams', () => {
         expect(result).toEqual(expectedParamsWithOverride);
       });
     });
+  });
+});
+
+describe('buildAnalyticsParams', () => {
+  const atiData = {
+    contentId: 'urn:bbc:tipo:topic:c95y35941vrt',
+    contentType: 'index-category',
+    pageIdentifier: 'pidgin.topics.c95y35941vrt.page',
+    pageTitle: 'Donald Trump',
+  };
+
+  it('should return null for resonanceParams when useResonance is not set', () => {
+    const { resonanceParams } = buildAnalyticsParams({
+      atiData,
+      requestContext,
+      // @ts-expect-error - invalid type required for testing purposes
+      serviceContext: { ...serviceContext, useResonance: null },
+    });
+
+    expect(resonanceParams).toBeNull();
+  });
+
+  it('should return null for resonanceParams when useResonance is false', () => {
+    const { resonanceParams } = buildAnalyticsParams({
+      atiData,
+      requestContext,
+      serviceContext: { ...serviceContext, useResonance: false },
+    });
+
+    expect(resonanceParams).toBeNull();
+  });
+
+  it('should return resonanceParams when useResonance is true', () => {
+    const { resonanceParams } = buildAnalyticsParams({
+      atiData,
+      requestContext,
+      serviceContext: { ...serviceContext, useResonance: true },
+    });
+
+    expect(resonanceParams).not.toBeNull();
+    expect(resonanceParams).toHaveProperty('resonanceProperties');
+    expect(resonanceParams).toHaveProperty('baseProperties');
+    expect(resonanceParams).toHaveProperty('pageviewProperties');
+  });
+
+  it('should always return reverbParams regardless of useResonance', () => {
+    const withResonance = buildAnalyticsParams({
+      atiData,
+      requestContext,
+      serviceContext: { ...serviceContext, useResonance: true },
+    });
+    const withoutResonance = buildAnalyticsParams({
+      atiData,
+      requestContext,
+      serviceContext: { ...serviceContext, useResonance: false },
+    });
+
+    expect(withResonance.reverbParams).toBeDefined();
+    expect(withoutResonance.reverbParams).toBeDefined();
   });
 });

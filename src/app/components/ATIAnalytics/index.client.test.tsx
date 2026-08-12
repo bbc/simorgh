@@ -1,4 +1,5 @@
 /* eslint-disable no-template-curly-in-string */
+import { PageTypes } from '#app/models/types/global';
 import { articleDataNews } from '#pages/ArticlePage/fixtureData';
 import styUkrainianAssetData from '#data/ukrainian/cpsAssets/news-53561143.json';
 import styUkrainianInRussianAssetData from '#data/ukrainian/cpsAssets/features-russian-53477115.json';
@@ -292,7 +293,7 @@ describe('ATI Analytics Container', () => {
 
       render(<ATIAnalytics />, {
         ...defaultRenderProps,
-        pageMetadata: { atiAnalytics, type },
+        pageMetadata: { atiAnalytics, type: type as PageTypes },
         isAmp: true,
         pageData: mapAssetData,
         pageType: MEDIA_ASSET_PAGE,
@@ -341,7 +342,7 @@ describe('ATI Analytics Container', () => {
 
       render(<ATIAnalytics />, {
         ...defaultRenderProps,
-        pageMetadata: { atiAnalytics, type },
+        pageMetadata: { atiAnalytics, type: type as PageTypes },
         isAmp: false,
         pageData: pglAssetData,
         pageType: PHOTO_GALLERY_PAGE,
@@ -396,7 +397,7 @@ describe('ATI Analytics Container', () => {
 
       render(<ATIAnalytics />, {
         ...defaultRenderProps,
-        pageMetadata: { atiAnalytics, type },
+        pageMetadata: { atiAnalytics, type: type as PageTypes },
         isAmp: true,
         pageData: pglAssetData,
         pageType: PHOTO_GALLERY_PAGE,
@@ -445,7 +446,7 @@ describe('ATI Analytics Container', () => {
 
       render(<ATIAnalytics />, {
         ...defaultRenderProps,
-        pageMetadata: { atiAnalytics, type },
+        pageMetadata: { atiAnalytics, type: type as PageTypes },
         isAmp: false,
         pageData: styAssetData,
         pageType: STORY_PAGE,
@@ -499,7 +500,7 @@ describe('ATI Analytics Container', () => {
 
       render(<ATIAnalytics />, {
         ...defaultRenderProps,
-        pageMetadata: { atiAnalytics, type },
+        pageMetadata: { atiAnalytics, type: type as PageTypes },
         isAmp: true,
         pageData: styAssetData,
         pageType: STORY_PAGE,
@@ -554,7 +555,7 @@ describe('ATI Analytics Container', () => {
 
       render(<ATIAnalytics />, {
         ...defaultRenderProps,
-        pageMetadata,
+        pageMetadata: { ...pageMetadata, type: pageMetadata.type as PageTypes },
         isAmp: true,
         pageData: styAssetData,
         pageType: CORRESPONDENT_STORY_PAGE,
@@ -601,7 +602,7 @@ describe('ATI Analytics Container', () => {
 
       render(<ATIAnalytics />, {
         ...defaultRenderProps,
-        pageMetadata: { atiAnalytics, type },
+        pageMetadata: { atiAnalytics, type: type as PageTypes },
         isAmp: false,
         pageData: styUkrainianAssetData,
         pageType: STORY_PAGE,
@@ -660,7 +661,7 @@ describe('ATI Analytics Container', () => {
 
       render(<ATIAnalytics />, {
         ...defaultRenderProps,
-        pageMetadata: { atiAnalytics, type },
+        pageMetadata: { atiAnalytics, type: type as PageTypes },
         isAmp: true,
         pageData: styUkrainianAssetData,
         pageType: STORY_PAGE,
@@ -707,7 +708,7 @@ describe('ATI Analytics Container', () => {
 
       render(<ATIAnalytics />, {
         ...defaultRenderProps,
-        pageMetadata: { atiAnalytics, type },
+        pageMetadata: { atiAnalytics, type: type as PageTypes },
         isAmp: false,
         pageData: styUkrainianInRussianAssetData,
         pageType: STORY_PAGE,
@@ -766,7 +767,7 @@ describe('ATI Analytics Container', () => {
 
       render(<ATIAnalytics />, {
         ...defaultRenderProps,
-        pageMetadata: { atiAnalytics, type },
+        pageMetadata: { atiAnalytics, type: type as PageTypes },
         isAmp: true,
         pageData: styUkrainianInRussianAssetData,
         pageType: STORY_PAGE,
@@ -920,6 +921,96 @@ describe('ATI Analytics Container', () => {
       expect(
         ampGeo?.querySelectorAll('script[type="application/json"]').length,
       ).toEqual(1);
+    });
+  });
+
+  describe('Resonance', () => {
+    it('should pass resonanceParams to CanonicalATIAnalytics for services with useResonance', () => {
+      const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
+      // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
+      canonical.default = mockCanonical;
+
+      const {
+        metadata: { atiAnalytics, type },
+      } = articleDataNews;
+
+      render(<ATIAnalytics />, {
+        ...defaultRenderProps,
+        pageMetadata: { atiAnalytics, type },
+        isAmp: false,
+        pageData: articleDataNews,
+        pageType: ARTICLE_PAGE,
+        service: 'arabic',
+      });
+
+      const { resonanceParams } = mockCanonical.mock.calls[0][0];
+
+      expect(resonanceParams).toEqual({
+        baseProperties: {
+          app: { name: 'news-arabic' },
+          destination: 'WS_NEWS_LANGUAGES_TEST',
+          hashedUserId: undefined,
+          pageName: 'news.articles.c0000000001o.page',
+          producer: 'ARABIC',
+          siteId: 598343,
+        },
+        pageviewProperties: {
+          contentId: 'urn:bbc:optimo:c0000000001o',
+          contentType: 'article',
+          destination: 'WS_NEWS_LANGUAGES_TEST',
+          language: 'en-gb',
+          producer: 'ARABIC',
+        },
+        resonanceProperties: {
+          mode: 'test',
+        },
+      });
+    });
+
+    it('should pass null resonanceParams to CanonicalATIAnalytics for services without useResonance', () => {
+      const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
+      // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
+      canonical.default = mockCanonical;
+
+      const {
+        metadata: { atiAnalytics, type },
+      } = articleDataNews;
+
+      render(<ATIAnalytics />, {
+        ...defaultRenderProps,
+        pageMetadata: { atiAnalytics, type },
+        isAmp: false,
+        pageData: articleDataNews,
+        pageType: ARTICLE_PAGE,
+        service: 'news',
+      });
+
+      const { resonanceParams } = mockCanonical.mock.calls[0][0];
+
+      expect(resonanceParams).toBeNull();
+    });
+
+    it('should not pass resonanceParams to AmpATIAnalytics', () => {
+      const mockAmp = jest.fn().mockReturnValue('amp-return-value');
+      // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
+      amp.default = mockAmp;
+
+      const {
+        metadata: { atiAnalytics, type },
+      } = articleDataNews;
+
+      render(<ATIAnalytics />, {
+        ...defaultRenderProps,
+        pageMetadata: { atiAnalytics, type },
+        isAmp: true,
+        pageData: articleDataNews,
+        pageType: ARTICLE_PAGE,
+        service: 'arabic',
+      });
+
+      const ampProps = mockAmp.mock.calls[0][0];
+
+      expect(ampProps).not.toHaveProperty('resonanceParams');
     });
   });
 });
