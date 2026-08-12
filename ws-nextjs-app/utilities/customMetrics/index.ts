@@ -25,6 +25,11 @@ const sendMetric = metricScope(
         StatusCode: statusCode.toString(),
       });
 
+      // Sets a dimension for status code only to simplify infrastructure code
+      metrics.putDimensions({
+        StatusCode: statusCode.toString(),
+      });
+
       // Specifies the metric name and the value to increment it by e.g. Non_200_Response +1
       metrics.putMetric(metricName, 1, Unit.Count);
 
