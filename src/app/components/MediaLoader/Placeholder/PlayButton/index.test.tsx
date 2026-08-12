@@ -39,13 +39,19 @@ describe('PlayButton', () => {
     expect(time).toHaveTextContent('2:30');
   });
 
-  it('should render video correctly without duration details', () => {
+  it('should render video correctly with a guidance message but no duration details', () => {
     const { container } = render(
-      <PlayButton title="Dog chases cat." onClick={() => {}} />,
+      <PlayButton
+        title="Dog chases cat."
+        onClick={() => {}}
+        guidanceMessage="Guidance: May contain strong language that may offend."
+      />,
     );
 
     expect(
-      screen.getByRole('button', { name: 'Play video, "Dog chases cat."' }),
+      screen.getByRole('button', {
+        name: 'Guidance: May contain strong language that may offend. Play video, "Dog chases cat."',
+      }),
     ).toBeInTheDocument();
     expect(container.querySelector('time')).not.toBeInTheDocument();
   });

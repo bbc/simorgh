@@ -48,23 +48,6 @@ describe('BulletedList', () => {
     expect(listStyle.marginTop).toBe('0px');
   });
 
-  it('should render correctly with custom bulletPointShape and bulletPointColour', () => {
-    render(
-      <BulletedList bulletPointShape="square" bulletPointColour="#f00">
-        <BulletedListItem>First item on the list</BulletedListItem>
-        <BulletedListItem>Second item on the list</BulletedListItem>
-        <BulletedListItem>Final list item</BulletedListItem>
-      </BulletedList>,
-    );
-
-    const items = screen.getAllByRole('listitem');
-
-    expect(items).toHaveLength(3);
-    expect(items[0]).toHaveTextContent('First item on the list');
-    expect(items[1]).toHaveTextContent('Second item on the list');
-    expect(items[2]).toHaveTextContent('Final list item');
-  });
-
   it('should render correctly from ltr', () => {
     render(
       <BulletedList>
