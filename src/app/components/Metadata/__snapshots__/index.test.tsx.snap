@@ -2508,6 +2508,10 @@ exports[`Metadata Snapshot should match for WS TV 1`] = `
       "name": "viewport",
     },
     {
+      "content": "app-id=6761256736, app-argument=https://www.bbc.com/hindi/bbc_hindi_tv/tv_programmes/w13xttlw?utm_medium=banner&utm_content=apple-itunes-app",
+      "name": "apple-itunes-app",
+    },
+    {
       "content": "BBC News हिंदी",
       "name": "apple-mobile-web-app-title",
     },

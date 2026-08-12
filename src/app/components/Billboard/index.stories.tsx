@@ -1,4 +1,4 @@
-import { Summary } from '#app/models/types/curationData';
+import { Summary, VISUAL_PROMINENCE } from '#app/models/types/curationData';
 import Billboard from '.';
 import { StoryArgs } from '../../models/types/storybook';
 import metadata from './metadata.json';
@@ -26,11 +26,16 @@ const Component = ({
   image = 'https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/1d5b/test/5f969ec0-c4d8-11ed-8319-9b394d8ed0dd.jpg',
   altText = 'alt text',
   summaries = [],
+  prominence = VISUAL_PROMINENCE.MAXIMUM,
 }: Props & {
   link?: string;
   image?: string;
   altText?: string;
   summaries?: Summary[];
+  prominence?:
+    | typeof VISUAL_PROMINENCE.MAXIMUM
+    | typeof VISUAL_PROMINENCE.HIGH
+    | string;
 }) => {
   return (
     <Billboard
@@ -41,6 +46,7 @@ const Component = ({
       showLiveLabel={showLiveLabel}
       altText={altText}
       summaries={summaries}
+      prominence={prominence}
     />
   );
 };
@@ -176,3 +182,33 @@ export const PersianBillboardWithPVPromos = () => {
   );
 };
 
+export const HighProminence = (_: StoryArgs, globalArgs: Props) => {
+  const { text, longText } = globalArgs;
+
+  return (
+    <Component
+      text={text}
+      longText={longText}
+      prominence={VISUAL_PROMINENCE.HIGH}
+    />
+  );
+};
+
+export const HighProminenceWithSummaries = () => {
+  const summary = pidginLiveBillboard.summaries[0];
+  return (
+    <ThemeProvider service={service} variant={variant}>
+      <ServiceContextProvider service={service} variant={variant}>
+        <Component
+          text={summary.title}
+          longText={summary.description || ''}
+          link={summary.link}
+          image={summary.imageUrl}
+          altText={summary.imageAlt}
+          summaries={pidginLiveBillboard.summaries.slice(0, 3)}
+          prominence={VISUAL_PROMINENCE.HIGH}
+        />
+      </ServiceContextProvider>
+    </ThemeProvider>
+  );
+};

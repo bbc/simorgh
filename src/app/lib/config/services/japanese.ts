@@ -70,6 +70,10 @@ export const service: DefaultServiceConfig = {
       },
       currentPage: '現在のページ',
       skipLinkText: 'コンテンツへ移動',
+      skipContent: {
+        text: '%title%をスキップして続行',
+        endTextVisuallyHidden: '%title%の終了',
+      },
       relatedContent: '関連コンテンツ',
       relatedTopics: '関連トピックス',
       moreOnThis: '',

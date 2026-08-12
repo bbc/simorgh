@@ -44,6 +44,7 @@ export const service: DefaultServiceConfig = {
     manifestPath: '/arabic/manifest.json',
     swPath: '/sw.js',
     homePageTitle: 'الرئيسية',
+    iTunesAppId: 6761256736,
     showAdPlaceholder: true,
     showRelatedTopics: true,
     googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
@@ -90,6 +91,10 @@ export const service: DefaultServiceConfig = {
       continueReading: 'واصل القراءة',
       currentPage: 'الصفحة الحالية',
       skipLinkText: 'إذهب الى المحتوى',
+      skipContent: {
+        text: 'تخطَّ %title% وتابع',
+        endTextVisuallyHidden: 'نهاية %title%',
+      },
       relatedContent: 'المزيد حول هذه القصة',
       relatedTopics: 'كلمات مفتاحية',
       moreOnThis: '',

@@ -48,6 +48,10 @@ export const service: DefaultServiceConfig = {
       home: 'Home',
       currentPage: 'Current page',
       skipLinkText: 'Skip to content',
+      skipContent: {
+        text: 'Skip %title% and continue',
+        endTextVisuallyHidden: 'End of %title%',
+      },
       relatedContent: 'Related content',
       relatedTopics: 'Related topics',
       moreOnThis: '',
@@ -72,6 +76,7 @@ export const service: DefaultServiceConfig = {
       gist: 'At a glance',
       account: {
         signIn: 'Sign In',
+        signInAccessibleLabel: 'Sign in to My News',
         forYou: 'Your Account',
         register: 'Register',
         settings: 'Settings',
@@ -81,6 +86,23 @@ export const service: DefaultServiceConfig = {
         description: 'Sign In or create an account for free',
         closeLabel: 'Close',
         buttonSeparatorText: 'or',
+      },
+      actionTooltip: {
+        success: {
+          titleBefore: 'This article is now saved to',
+          titleAfter: '',
+        },
+        error: {
+          title: 'Sorry, something went wrong',
+          body: 'Check your connection, refresh the page and try again',
+        },
+        removed: {
+          titleBefore: 'This article has now been removed from',
+          titleAfter: '',
+        },
+        myNewsLinkText: 'My News',
+        myNewsUrl: 'https://www.bbc.com/hindi/my-news',
+        closeLabel: 'Close',
       },
       error: {
         404: {
