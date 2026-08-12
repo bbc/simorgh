@@ -1,6 +1,11 @@
+import { ResonanceMode } from '@bbc/resonance';
 import { Platforms } from '#app/models/types/global';
 import * as genericLabelHelpers from '../../../lib/analyticsUtils';
-import { buildReverbAnalyticsModel, buildReverbEventModel } from '.';
+import {
+  buildResonanceAnalyticsModel,
+  buildReverbAnalyticsModel,
+  buildReverbEventModel,
+} from '.';
 
 const mockAndSet = ({ name, source }, response) => {
   source[name] = jest.fn(); // eslint-disable-line no-param-reassign
@@ -18,6 +23,55 @@ const analyticsUtilFunctions = [
 describe('atiUrl', () => {
   afterEach(() => {
     jest.clearAllMocks();
+  });
+
+  describe('Resonance', () => {
+    describe('buildResonanceAnalyticsModel', () => {
+      const input = {
+        appName: 'news-pidgin',
+        contentId: 'urn:bbc:optimo:asset:c0000000001o',
+        contentType: 'article',
+        language: 'pcm',
+        statsDestination: 'statsDestination',
+        siteId: 12345,
+        hashedId: null,
+        pageIdentifier: 'pidgin.articles.c0000000001o.page',
+        producerName: 'PIDGIN',
+        platform: 'canonical' as Platforms,
+      };
+
+      it('should return the correct Resonance analytics model', () => {
+        const result = buildResonanceAnalyticsModel(input);
+
+        expect(result.resonanceProperties).toEqual({
+          mode: ResonanceMode.TEST,
+        });
+        expect(result.baseProperties).toEqual({
+          app: { name: 'news-pidgin' },
+          destination: 'statsDestination',
+          hashedUserId: undefined,
+          pageName: 'pidgin.articles.c0000000001o.page',
+          producer: 'PIDGIN',
+          siteId: 12345,
+        });
+        expect(result.pageviewProperties).toEqual({
+          contentId: 'urn:bbc:optimo:asset:c0000000001o',
+          contentType: 'article',
+          language: 'pcm',
+          destination: 'statsDestination',
+          producer: 'PIDGIN',
+        });
+      });
+
+      it('should suffix app name with "-app" when platform is app', () => {
+        const result = buildResonanceAnalyticsModel({
+          ...input,
+          platform: 'app' as Platforms,
+        });
+
+        expect(result.baseProperties.app).toEqual({ name: 'news-pidgin-app' });
+      });
+    });
   });
 
   describe('Reverb', () => {
