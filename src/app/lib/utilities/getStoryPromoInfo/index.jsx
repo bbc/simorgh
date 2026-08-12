@@ -33,7 +33,11 @@ export const getUrl = (item, variant = null) => {
   const canonicalUrl = pathOr(null, ['locators', 'canonicalUrl'], item);
   let uri = pathOr(null, ['uri'], item);
   if (uri && variant) {
-    if (uri.indexOf('/articles/') !== -1 && uri.indexOf(`/${variant}`) === -1) {
+    const hasVariantPath =
+      uri.indexOf('/articles/') !== -1 ||
+      uri.indexOf('/watch/') !== -1 ||
+      uri.indexOf('/listen/') !== -1;
+    if (hasVariantPath && uri.indexOf(`/${variant}`) === -1) {
       uri = uri.substr(0, uri.length - variant.length) + variant;
     }
   }
