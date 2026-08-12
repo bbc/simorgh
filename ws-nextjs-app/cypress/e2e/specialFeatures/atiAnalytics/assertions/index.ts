@@ -133,7 +133,20 @@ const assertReverbViewabilityComponentEventParamsExist = ({
 const fieldIsValidString = field =>
   typeof field === 'string' && field.trim().length > 0;
 
+// Temporary debug - identify if long localised item text is producing invalid JSON.
+const assertEventsPayloadNotTruncated = (payload: string) => {
+  const trimmedPayload = payload.trim();
+  const lastChar = trimmedPayload[trimmedPayload.length - 1];
+
+  if (lastChar !== ']' && lastChar !== '}') {
+    throw new Error(
+      `ATI events payload appears truncated (length=${payload.length})`,
+    );
+  }
+};
+
 const validateViewabilityEventDetails = ({ payload, actionType }) => {
+  assertEventsPayloadNotTruncated(payload);
   const arr = JSON.parse(payload);
 
   return arr.some(event => {
@@ -285,6 +298,7 @@ const getMatchingViewabilityEventData = ({
   component,
   expectedItemText,
 }) => {
+  assertEventsPayloadNotTruncated(payload);
   const arr = JSON.parse(payload);
 
   const matchingEvents = arr.filter(
