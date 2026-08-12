@@ -146,6 +146,32 @@ describe('getStoryPromoInfo', () => {
       );
     });
 
+    it('should return the correct url for a watch variant optimoPromoItem', () => {
+      const watchItem = {
+        ...optimoPromoItem,
+        uri: 'https://www.bbc.com/zhongwen/watch/cl01rmr1d8po/trad',
+      };
+      expect(getUrl(watchItem, 'trad')).toEqual(
+        '/zhongwen/watch/cl01rmr1d8po/trad',
+      );
+      expect(getUrl(watchItem, 'simp')).toEqual(
+        '/zhongwen/watch/cl01rmr1d8po/simp',
+      );
+    });
+
+    it('should return the correct url for a listen variant optimoPromoItem', () => {
+      const listenItem = {
+        ...optimoPromoItem,
+        uri: 'https://www.bbc.com/zhongwen/listen/cl01rmr1d8po/trad',
+      };
+      expect(getUrl(listenItem, 'trad')).toEqual(
+        '/zhongwen/listen/cl01rmr1d8po/trad',
+      );
+      expect(getUrl(listenItem, 'simp')).toEqual(
+        '/zhongwen/listen/cl01rmr1d8po/simp',
+      );
+    });
+
     it('should return the correct url for live asset', () => {
       const liveAsset = { ...noAssetTypeCode, cpsType: 'LIV' };
       expect(getUrl(liveAsset)).toEqual('/turkce/haberler-dunya-48735662');
