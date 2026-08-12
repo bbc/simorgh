@@ -81,6 +81,7 @@ const expectedOutput = {
   ampNonUkLink: 'ampNonUkLink',
   showAdsBasedOnLocation: input.showAdsBasedOnLocation,
   showCookieBannerBasedOnCountry: true,
+  siteId: 598343,
   service: 'service',
   pathname: '/current-path',
   serverSideExperiments: input.serverSideExperiments,

@@ -98,6 +98,7 @@ describe('ReverbParamsContext', () => {
           },
         },
       },
+      resonanceParams: null,
     });
   });
 
@@ -149,6 +150,7 @@ describe('ReverbParamsContext', () => {
           },
         },
       },
+      resonanceParams: null,
     });
   });
 
@@ -200,6 +202,7 @@ describe('ReverbParamsContext', () => {
           },
         },
       },
+      resonanceParams: null,
     });
   });
 
@@ -251,6 +254,7 @@ describe('ReverbParamsContext', () => {
           },
         },
       },
+      resonanceParams: null,
     });
   });
 
@@ -306,6 +310,7 @@ describe('ReverbParamsContext', () => {
           },
         },
       },
+      resonanceParams: null,
       experimentProps: {
         experimentName: 'test_page_views_aa_3',
         experimentVariant: 'experimentVariant',
