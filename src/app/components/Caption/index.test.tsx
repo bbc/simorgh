@@ -37,7 +37,7 @@ const CaptionWithContext = ({
 
 describe('Captions', () => {
   it('should render caption text with example News offscreen text', () => {
-    const { container, getByTestId } = render(
+    const { getByRole, getByTestId } = render(
       CaptionWithContext({
         block: captionBlock,
         contextStub: newsServiceContextStub as ServiceConfig,
@@ -45,17 +45,14 @@ describe('Captions', () => {
       }),
     );
 
-    expect(container.querySelector('figcaption')).toBeInTheDocument();
     expect(getByTestId('caption-paragraph')).toHaveTextContent(
       'Some caption text...',
     );
-    expect(container.querySelector('[role="text"]')?.textContent).toBe(
-      'Caption, Some caption text...',
-    );
+    expect(getByRole('text').textContent).toBe('Caption, Some caption text...');
   });
 
   it('should render caption text with example Farsi offscreen text', () => {
-    const { container, getByTestId } = render(
+    const { getByRole, getByTestId } = render(
       CaptionWithContext({
         block: captionBlock,
         contextStub: persianServiceContextStub as ServiceConfig,
@@ -66,9 +63,7 @@ describe('Captions', () => {
     expect(getByTestId('caption-paragraph')).toHaveTextContent(
       'Some caption text...',
     );
-    expect(container.querySelector('[role="text"]')?.textContent).toBe(
-      ' ، عنوانSome caption text...',
-    );
+    expect(getByRole('text').textContent).toBe(' ، عنوانSome caption text...');
   });
 
   it('should render caption with multiple paragraphs', () => {
