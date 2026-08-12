@@ -30,6 +30,21 @@ const getAppName = service => {
     : `[news-${service}]`;
 };
 
+const getATIParamsFromInterception = request => {
+  const queryParams = request?.query as Record<string, string | string[]>;
+
+  if (!queryParams || typeof queryParams !== 'object') {
+    return getATIParamsFromURL(request?.url || '');
+  }
+
+  return Object.fromEntries(
+    Object.entries(queryParams).map(([key, value]) => [
+      key,
+      Array.isArray(value) ? value[0] : value,
+    ]),
+  );
+};
+
 const assertATIPageViewEventParamsExist = ({
   params,
   contentType,
@@ -341,7 +356,7 @@ const findMatchingEventDataFromInterceptions = ({
   interceptions.forEach(interception => {
     if (matched) return;
 
-    const params = getATIParamsFromURL(interception.request.url);
+    const params = getATIParamsFromInterception(interception.request);
 
     if (!params.events) return;
 
@@ -372,27 +387,25 @@ export const assertATIComponentViewEvent = ({
   const requestAlias = `@${component}-viewability-view`;
 
   if (!expectedItemText) {
-    cy.wait(requestAlias)
-      .its('request.url')
-      .then(url => {
-        const params = getATIParamsFromURL(url);
+    cy.wait(requestAlias).then(({ request }) => {
+      const params = getATIParamsFromInterception(request);
 
-        assertViewabilityModelViewEvent({
-          pageIdentifier,
-          params,
-          applicationType,
-          siteId,
-        });
-
-        assertItemAndGroupTaxonomy({
-          payload: params.events,
-          actionType: VIEW_EVENT,
-          component,
-          expectedItemType,
-          expectedGroupType,
-          expectedItemText: undefined,
-        });
+      assertViewabilityModelViewEvent({
+        pageIdentifier,
+        params,
+        applicationType,
+        siteId,
       });
+
+      assertItemAndGroupTaxonomy({
+        payload: params.events,
+        actionType: VIEW_EVENT,
+        component,
+        expectedItemType,
+        expectedGroupType,
+        expectedItemText: undefined,
+      });
+    });
     return;
   }
 
@@ -493,15 +506,14 @@ export const assertATIComponentClickEvent = ({
 }) => {
   const requestAlias = `@${component}-viewability-click`;
 
-  cy.wait(requestAlias)
-    .its('request.url')
-    .then(url => {
-      const params = getATIParamsFromURL(url);
-      assertViewabilityModelClickEvent({
-        pageIdentifier,
-        params,
-        applicationType,
-        siteId,
-      });
+  cy.wait(requestAlias).then(({ request }) => {
+    const params = getATIParamsFromInterception(request);
+
+    assertViewabilityModelClickEvent({
+      pageIdentifier,
+      params,
+      applicationType,
+      siteId,
     });
+  });
 };
