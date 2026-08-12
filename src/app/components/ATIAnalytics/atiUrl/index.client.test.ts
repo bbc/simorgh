@@ -1,5 +1,6 @@
 import { ResonanceMode } from '@bbc/resonance';
 import { Platforms } from '#app/models/types/global';
+import * as getEnvConfigModule from '#app/lib/utilities/getEnvConfig';
 import * as genericLabelHelpers from '../../../lib/analyticsUtils';
 import {
   buildResonanceAnalyticsModel,
@@ -70,6 +71,27 @@ describe('atiUrl', () => {
         });
 
         expect(result.baseProperties.app).toEqual({ name: 'news-pidgin-app' });
+      });
+
+      it('should pass hashedId through as hashedUserId when provided', () => {
+        const result = buildResonanceAnalyticsModel({
+          ...input,
+          hashedId: 'abc123hasheduser',
+        });
+
+        expect(result.baseProperties.hashedUserId).toBe('abc123hasheduser');
+      });
+
+      it('should use LIVE mode when SIMORGH_APP_ENV is live', () => {
+        jest
+          .spyOn(getEnvConfigModule, 'getEnvConfig')
+          .mockReturnValue({ SIMORGH_APP_ENV: 'live' } as ReturnType<
+            typeof getEnvConfigModule.getEnvConfig
+          >);
+
+        const result = buildResonanceAnalyticsModel(input);
+
+        expect(result.resonanceProperties.mode).toBe(ResonanceMode.LIVE);
       });
     });
   });
