@@ -7,30 +7,6 @@ import {
   SearchVariant,
 } from './searchReferrerComponentOrder';
 
-const getDebugVariant = (): SearchVariant | null => {
-  const params = new URLSearchParams(window.location.search);
-  const debugParam = params.get('debugVariant');
-  if (
-    debugParam &&
-    Object.prototype.hasOwnProperty.call(SEARCH_COMPONENT_ORDER, debugParam)
-  ) {
-    return debugParam as SearchVariant;
-  }
-  return null;
-};
-
-export const useDebugVariant = (): SearchVariant | null => {
-  const [debugVariant, setDebugVariant] = useState<SearchVariant | null>(null);
-
-  useEffect(() => {
-    if (!onClient()) return;
-
-    setDebugVariant(getDebugVariant());
-  }, []);
-
-  return debugVariant;
-};
-
 const useMobileOJComponentOrder = (
   searchVariant: SearchVariant | null,
 ): OJComponentKey[] | null => {
