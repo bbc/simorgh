@@ -58,12 +58,12 @@ module.exports = {
   async rewrites() {
     return [
       {
-        source: '/:service/sw.js',
-        destination: '/sw.js',
+        source: '/:service/watch/:id',
+        destination: '/:service/articles/:id',
       },
       {
-        source: '/:service/og/:id',
-        destination: '/api/:service/og/:id',
+        source: '/:service/listen/:id',
+        destination: '/:service/articles/:id',
       },
     ];
   },
