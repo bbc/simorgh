@@ -115,16 +115,61 @@ The POC is enabled by default on article pages. The `SaveArticleButton` componen
 
 ## Future Enhancements
 
-1. **Migration on Sign-in**: Transfer temporary saves to permanent UAS storage when user creates account
+1. **Migration on Sign-in**: - Automatic transfer of temporary saves to permanent UAS storage
 2. **Analytics**: Track conversion rates from temporary saves to registrations
 3. **Recommendations**: Show personalized recommendations based on temporary saves
 4. **Persistence Warning**: Show warning before expiry (e.g., "1 hour left")
 5. **Cross-device**: Sync temporary saves using anonymous token
 6. **Topic/Place Following**: Extend to topics and places, not just articles
 
+## ✨ Automatic Migration to Permanent Storage
+
+### Overview
+When a guest user with temporary saved articles signs in or registers, their articles are **automatically migrated** to permanent UAS storage with zero user action required!
+
+### New Components for Migration
+
+**Migration Hook** (`useTemporarySavesMigration`):
+- `src/app/hooks/useTemporarySavesMigration/index.ts`
+- Automatically triggers on sign-in
+- Migrates all temporary articles to UAS
+- Clears localStorage after success
+
+**Success Banner** (`MigrationSuccessBanner`):
+- `ws-nextjs-app/pages/[service]/my-news/MyNewsPage/MigrationSuccessBanner/index.tsx`
+- Green success banner
+- Auto-hides after 10 seconds
+
+### Migration Flow
+
+```
+1. Guest saves articles → localStorage
+2. Signs in/registers → Account created
+3. Returns to My News → Migration triggers automatically
+4. Loading state (1-2 seconds) → Migrating articles to UAS
+5. Success banner appears → "Your articles have been saved!"
+6. Permanent My News → All articles now in UAS
+```
+
+### What Gets Migrated
+
+- Article ID, title, and link
+- Promo image and alt text
+- Service context
+- All metadata needed for display
+
+### Error Handling
+
+- Individual failures don't stop migration
+- Successful articles still saved
+- Errors logged to console
+- User sees successfully migrated content
+
+[copilot]
+
 ## Testing
 
-This POC does not include test suites as requested. For manual testing:
+This POC does not include test suites . For manual testing:
 
 1. Open any article page as a guest user
 2. Hover over the save button to see tooltip

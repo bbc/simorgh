@@ -3,13 +3,15 @@ import Heading from '#app/components/Heading';
 import Pagination from '#app/components/Pagination';
 import MetadataContainer from '#app/components/Metadata';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import { use } from 'react';
+import { use, useEffect, useState } from 'react';
 import useUASRecentActivity from '#app/hooks/useUASRecentActivity';
 import Text from '#app/components/Text';
 import styles from './styles';
 import MyNewsPageLoading from './MyNewsPageLoading';
+import MigrationSuccessBanner from './MigrationSuccessBanner';
 
 const ITEMS_PER_PAGE = 24;
+const MIGRATION_BANNER_KEY = 'bbc_show_migration_banner';
 
 interface MyNewsPageContentProps {
   page?: string;
@@ -17,6 +19,7 @@ interface MyNewsPageContentProps {
 
 const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
   const { translations, lang } = use(ServiceContext);
+  const [showMigrationBanner, setShowMigrationBanner] = useState(false);
 
   const activePage = Math.max(1, Number(page) || 1);
   const startIndex = (activePage - 1) * ITEMS_PER_PAGE;
@@ -25,6 +28,25 @@ const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
     itemsPerPage: ITEMS_PER_PAGE,
     startIndex,
   });
+
+  // Check if we should show the migration success banner
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const showBanner = sessionStorage.getItem(MIGRATION_BANNER_KEY);
+    if (showBanner === 'true') {
+      setShowMigrationBanner(true);
+      // Clear the flag after showing
+      sessionStorage.removeItem(MIGRATION_BANNER_KEY);
+
+      // Auto-hide banner after 10 seconds
+      const timer = setTimeout(() => {
+        setShowMigrationBanner(false);
+      }, 30000);
+
+      return () => clearTimeout(timer);
+    }
+  }, []);
 
   const pageCount = Math.max(1, Math.ceil(total / ITEMS_PER_PAGE));
 
@@ -109,6 +131,9 @@ const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
       <Heading level={1} id="content" tabIndex={-1} css={styles.heading}>
         {title}
       </Heading>
+
+      {showMigrationBanner && <MigrationSuccessBanner />}
+
       {renderContent()}
     </>
   );

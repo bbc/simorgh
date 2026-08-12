@@ -3,6 +3,7 @@ import { use } from 'react';
 import { AccountContext } from '#app/contexts/AccountContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import useTemporarySavedArticles from '#app/hooks/useTemporarySavedArticles';
+import useTemporarySavesMigration from '#app/hooks/useTemporarySavesMigration';
 
 import ATIAnalytics from '#app/components/ATIAnalytics';
 import MetadataContainer from '#app/components/Metadata';
@@ -26,6 +27,9 @@ const MyNewsPage = ({ page }: MyNewsPageProps) => {
   const { savedArticles: tempSavedArticles } = useTemporarySavedArticles();
   const hasTemporarySavedArticles = tempSavedArticles.length > 0;
 
+  // Automatically migrate temporary saves when user signs in
+  const { isMigrating } = useTemporarySavesMigration();
+
   const noJsHeading =
     translations?.myNews?.title || fallbackTranslations.noJsHeading;
   const noJsDescription =
@@ -39,6 +43,26 @@ const MyNewsPage = ({ page }: MyNewsPageProps) => {
     !isPersonalizationEnabled && hasTemporarySavedArticles;
   const shouldShowGuest =
     !isPersonalizationEnabled && !hasTemporarySavedArticles;
+
+  // Show loading state during migration
+  if (isMigrating) {
+    return (
+      <main css={styles.main}>
+        <MetadataContainer
+          title={translations?.myNews?.title}
+          lang={lang}
+          openGraphType="website"
+          hasAmpPage={false}
+        />
+        <ATIAnalytics />
+        <div css={styles.inner}>
+          <div css={styles.innerContent}>
+            <MyNewsPageLoading />
+          </div>
+        </div>
+      </main>
+    );
+  }
 
   return (
     <main css={styles.main}>

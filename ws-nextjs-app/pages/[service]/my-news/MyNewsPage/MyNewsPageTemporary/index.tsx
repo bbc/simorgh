@@ -55,6 +55,10 @@ const MyNewsPageTemporary = () => {
     return `${hours} hour${hours > 1 ? 's' : ''}`;
   };
 
+  const articlesCount = savedArticles.length;
+  const articlesText =
+    articlesCount === 1 ? 'article' : `${articlesCount} articles`;
+
   return (
     <div css={styles.container}>
       <Heading
@@ -72,9 +76,9 @@ const MyNewsPageTemporary = () => {
           Temporary My News
         </Heading>
         <Text size="longPrimer">
-          This is a temporary page available for 2 days. If you want to keep
-          your saved articles, please register or sign in to create a permanent
-          account.
+          {articlesCount > 0
+            ? `You have ${articlesText} saved temporarily. This page is available for 2 days. Sign in or register to keep your saved articles permanently.`
+            : 'This is a temporary page available for 2 days. If you want to keep your saved articles, please register or sign in to create a permanent account.'}
         </Text>
         {expiryDate && (
           <Text size="brevier" css={styles.expiryText}>
