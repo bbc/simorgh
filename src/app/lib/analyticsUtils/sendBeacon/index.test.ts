@@ -1,7 +1,11 @@
 /* eslint-disable global-require */
+import { Resonance } from '@bbc/resonance';
 import loggerMock from '#testHelpers/loggerMock';
 import { ATI_LOGGING_ERROR } from '#app/lib/logger.const';
-import { ReverbBeaconConfig } from '#app/components/ATIAnalytics/types';
+import {
+  ReverbBeaconConfig,
+  ResonanceBeaconConfig,
+} from '#app/components/ATIAnalytics/types';
 import { waitFor } from '#app/components/react-testing-library-with-providers';
 import sendBeacon from './index';
 import * as onClient from '../../utilities/onClient';
@@ -203,6 +207,61 @@ describe('sendBeacon', () => {
 
       expect(loggerMock.error).toHaveBeenCalledWith(ATI_LOGGING_ERROR, {
         error,
+      });
+    });
+  });
+
+  describe('Resonance', () => {
+    const reverbConfig = {
+      params: { page: 'page', user: '1234-5678' },
+      eventDetails: { eventName: 'pageView' },
+    } as unknown as ReverbBeaconConfig;
+
+    const resonanceConfig = {
+      resonanceProperties: { mode: 'test' },
+      baseProperties: {
+        app: { name: 'news-pidgin' },
+        destination: 'statsDestination',
+        pageName: 'pidgin.page',
+        producer: 'PIDGIN',
+        siteId: 598343,
+      },
+      pageviewProperties: {
+        contentId: 'urn:bbc:optimo:asset:c0000000001o',
+        contentType: 'article',
+        language: 'pcm',
+        destination: 'statsDestination',
+        producer: 'PIDGIN',
+      },
+    } as unknown as ResonanceBeaconConfig;
+
+    it('should call Resonance.initialise with the correct params when resonanceBeaconConfig is provided', async () => {
+      await sendBeacon(reverbConfig, resonanceConfig);
+
+      expect(Resonance.initialise).toHaveBeenCalledTimes(1);
+      expect(Resonance.initialise).toHaveBeenCalledWith(
+        resonanceConfig.resonanceProperties,
+        resonanceConfig.baseProperties,
+        resonanceConfig.pageviewProperties,
+      );
+    });
+
+    it('should not call Resonance.initialise when resonanceBeaconConfig is null', async () => {
+      await sendBeacon(reverbConfig, null);
+
+      expect(Resonance.initialise).not.toHaveBeenCalled();
+    });
+
+    it('should send error to the logger when Resonance.initialise throws', async () => {
+      const error = new Error('Resonance failed');
+      (Resonance.initialise as jest.Mock).mockImplementationOnce(() => {
+        throw error;
+      });
+
+      await sendBeacon(reverbConfig, resonanceConfig);
+
+      expect(loggerMock.error).toHaveBeenCalledWith(ATI_LOGGING_ERROR, {
+        error: new Error(`Error initialising Resonance: ${error}`),
       });
     });
   });
