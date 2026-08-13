@@ -1,4 +1,4 @@
-import { render } from '../../react-testing-library-with-providers';
+import { render, screen } from '../../react-testing-library-with-providers';
 import ScriptLink from '.';
 
 const enabledToggleState = {
@@ -16,23 +16,33 @@ describe(`Script Link`, () => {
   });
 
   it('should render correctly', () => {
-    const { container } = render(<ScriptLink />, {
+    render(<ScriptLink />, {
       toggles: enabledToggleState,
       service: 'serbian',
       variant: 'lat',
       pathname: '/serbian/lat',
     });
-    expect(container).toMatchSnapshot();
+
+    const link = screen.getByRole('link');
+
+    expect(link).toHaveAttribute('href', '/serbian/cyr');
+    expect(link).toHaveAttribute('data-variant', 'cyr');
+    expect(link).toHaveTextContent('Ћир');
   });
 
   it('should render correctly for new navigation', () => {
-    const { container } = render(<ScriptLink />, {
+    render(<ScriptLink />, {
       toggles: enabledToggleState,
       service: 'ukchina',
       variant: 'trad',
       pathname: '/ukchina/trad/articles/c0e8weny66ko',
     });
-    expect(container).toMatchSnapshot();
+
+    const link = screen.getByRole('link');
+
+    expect(link).toHaveAttribute('href', '/ukchina/simp/articles/c0e8weny66ko');
+    expect(link).toHaveAttribute('data-variant', 'simp');
+    expect(link).toHaveTextContent('简');
   });
 
   describe('assertions', () => {
