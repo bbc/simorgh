@@ -1,3 +1,5 @@
+import { use } from 'react';
+import { AccountContext } from '#contexts/AccountContext';
 import useOptimizelyVariation, {
   ExperimentType,
 } from '#app/hooks/useOptimizelyVariation';
@@ -34,14 +36,18 @@ const AccountPromotionalBannerControlTracker = ({
 };
 
 const EligibleAccountPromotionalBannerExperiment = () => {
-  // useOptimizelyVariation both resolves the variation and activates the
-  // experiment. Activation therefore happens regardless of whether the banner is
-  // dismissed, but view events are still suppressed for dismissed banners by the
-  // shared inline-script + CSS visibility gate.
+  const { isSignedIn } = use(AccountContext);
+
+  // Activates regardless of sign-in status so signed-in page views are tracked;
+  // signed-in users are excluded below from the banner/view tracking.
   const experimentVariant = useOptimizelyVariation({
     experimentName: ACCOUNT_PROMO_BANNER_EXPERIMENT_NAME,
     experimentType: ExperimentType.SERVER_SIDE,
   });
+
+  if (isSignedIn) {
+    return null;
+  }
 
   if (experimentVariant === 'on') {
     return (
@@ -64,11 +70,10 @@ const EligibleAccountPromotionalBannerExperiment = () => {
 };
 
 const AccountPromotionalBannerExperiment = () => {
-  const isEligible = useAccountPromoBannerEligibility();
+  const isEligible = useAccountPromoBannerEligibility({
+    excludeSignedInUsers: false,
+  });
 
-  // Server-knowable eligibility gate: ineligible users render nothing and are
-  // never activated. Client-side visibility (dismissal / frequency cap) is handled
-  // per arm below.
   if (!isEligible) {
     return null;
   }
