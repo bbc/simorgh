@@ -730,6 +730,46 @@ describe('buildAnalyticsParams', () => {
     expect(resonanceParams).toHaveProperty('pageviewProperties');
   });
 
+  it('should return resonanceParams when useResonance is true and platform is app', () => {
+    const { resonanceParams } = buildAnalyticsParams({
+      atiData,
+      requestContext: { ...requestContext, platform: 'app' },
+      serviceContext: { ...serviceContext, useResonance: true },
+    });
+
+    expect(resonanceParams).not.toBeNull();
+  });
+
+  it('should return resonanceParams when useResonance is true and platform is canonical', () => {
+    const { resonanceParams } = buildAnalyticsParams({
+      atiData,
+      requestContext: { ...requestContext, platform: 'canonical' },
+      serviceContext: { ...serviceContext, useResonance: true },
+    });
+
+    expect(resonanceParams).not.toBeNull();
+  });
+
+  it('should return null for resonanceParams when useResonance is true but platform is amp', () => {
+    const { resonanceParams } = buildAnalyticsParams({
+      atiData,
+      requestContext: { ...requestContext, platform: 'amp' },
+      serviceContext: { ...serviceContext, useResonance: true },
+    });
+
+    expect(resonanceParams).toBeNull();
+  });
+
+  it('should return null for resonanceParams when useResonance is true but platform is lite', () => {
+    const { resonanceParams } = buildAnalyticsParams({
+      atiData,
+      requestContext: { ...requestContext, platform: 'lite' },
+      serviceContext: { ...serviceContext, useResonance: true },
+    });
+
+    expect(resonanceParams).toBeNull();
+  });
+
   it('should always return reverbParams regardless of useResonance', () => {
     const withResonance = buildAnalyticsParams({
       atiData,

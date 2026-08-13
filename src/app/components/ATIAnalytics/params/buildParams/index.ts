@@ -119,6 +119,11 @@ export const buildAnalyticsParams = ({
   hashedId,
 }: BuildPageParamsArgs) => {
   const { useResonance } = serviceContext;
+  const { platform } = requestContext;
+
+  const sendResonanceEvents =
+    useResonance && (platform === 'canonical' || platform === 'app');
+
   return {
     reverbParams: buildPageReverbParams({
       atiData,
@@ -127,7 +132,7 @@ export const buildAnalyticsParams = ({
       isSignedIn,
       hashedId,
     }),
-    resonanceParams: useResonance
+    resonanceParams: sendResonanceEvents
       ? buildPageResonanceParams({
           atiData,
           requestContext,
