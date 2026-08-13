@@ -62,7 +62,7 @@ const renderListItems = ({
   shouldAnnounce = true,
 }: RenderListItemsArgs) =>
   navigation.map((item, index) => {
-    const { title, url } = item;
+    const { title, url, type } = item;
     const active = index === activeIndex;
     // Only announce "current page" to screen readers when the highlight
     // genuinely reflects the user's location, not when Home is highlighted
@@ -174,8 +174,10 @@ const getActiveTopIndex = ({
     };
   }
 
-  // Page-type attribution: nav items are ordered Home (0), Watch (1), Listen (2).
-  // Video pages, video mediaArticles, and article pages with a video primaryMediaType -> Watch (index 1).
+  const watchIndex = topItems.findIndex(item => item.type === 'watch');
+  const listenIndex = topItems.findIndex(item => item.type === 'listen');
+
+  // Video pages, video mediaArticles, and article pages with a video primaryMediaType.
   // If there's no Watch item to attribute to, this falls back to highlighting
   // Home as a default categorisation only, so it shouldn't be announced.
   if (
@@ -184,12 +186,12 @@ const getActiveTopIndex = ({
     (pageType === MEDIA_ARTICLE_PAGE && primaryMediaType === 'video') ||
     (pageType === ARTICLE_PAGE && primaryMediaType === 'video')
   ) {
-    return topItems.length > 1
-      ? { index: 1, shouldAnnounce: true }
+    return watchIndex > 1
+      ? { index: watchIndex, shouldAnnounce: true }
       : { index: 0, shouldAnnounce: false };
   }
 
-  // Audio pages, audio mediaArticles, and article pages with an audio primaryMediaType -> Listen (index 2).
+  // Audio pages, audio mediaArticles, and article pages with an audio primaryMediaType
   // If there's no Listen item to attribute to, this falls back to highlighting
   // Home as a default categorisation only, so it shouldn't be announced.
   if (
@@ -198,8 +200,8 @@ const getActiveTopIndex = ({
     (pageType === MEDIA_ARTICLE_PAGE && primaryMediaType === 'audio') ||
     (pageType === ARTICLE_PAGE && primaryMediaType === 'audio')
   ) {
-    return topItems.length > 2
-      ? { index: 2, shouldAnnounce: true }
+    return listenIndex > 2
+      ? { index: listenIndex, shouldAnnounce: true }
       : { index: 0, shouldAnnounce: false };
   }
 
