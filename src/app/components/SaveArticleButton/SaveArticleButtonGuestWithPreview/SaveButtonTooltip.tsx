@@ -1,5 +1,8 @@
 import { css } from '@emotion/react';
+import { use } from 'react';
 import Text from '#app/components/Text';
+import CallToActionLink from '#app/components/CallToActionLink';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 
 interface SaveButtonTooltipProps {
   isSaved?: boolean;
@@ -46,19 +49,38 @@ const styles = {
       zIndex: -1,
     },
   }),
+  link: css({
+    display: 'inline',
+  }),
 };
 
 const SaveButtonTooltip = ({ isSaved = false }: SaveButtonTooltipProps) => {
-  const unsavedText =
-    'Save this article for later. It will appear in your My News page.';
-  const savedText = 'This article is saved temporarily in your My News page.';
+  const { service } = use(ServiceContext);
+  const myNewsPath = `/${service}/my-news`;
 
-  const tooltipText = isSaved ? savedText : unsavedText;
+  const unsavedText =
+    'Want to read this later? Save this article and find it in your temporary My News page.';
+  
+  const savedTextBefore = 'This article is saved temporarily in your';
+  const savedTextLink = 'My News page';
+  const savedTextAfter = '.';
 
   return (
     <div css={styles.tooltip} role="tooltip">
       <Text size="brevier" fontVariant="sansRegular" css={{ color: '#222' }}>
-        {tooltipText}
+        {isSaved ? (
+          <>
+            {savedTextBefore}{' '}
+            <CallToActionLink url={myNewsPath} css={styles.link}>
+              <CallToActionLink.Text shouldUnderlineOnHoverFocus>
+                {savedTextLink}
+              </CallToActionLink.Text>
+            </CallToActionLink>
+            {savedTextAfter}
+          </>
+        ) : (
+          unsavedText
+        )}
       </Text>
     </div>
   );

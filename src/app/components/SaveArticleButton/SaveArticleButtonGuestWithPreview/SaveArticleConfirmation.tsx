@@ -52,8 +52,7 @@ const styles = {
     marginTop: '0.5rem',
   }),
   link: css({
-    marginTop: '0.75rem',
-    display: 'inline-block',
+    display: 'inline',
   }),
 };
 
@@ -64,15 +63,18 @@ interface SaveArticleConfirmationProps {
 const SaveArticleConfirmation = ({ onClose }: SaveArticleConfirmationProps) => {
   const { service } = use(ServiceContext);
 
-  const confirmationText = 'Article saved to My News';
-  const linkText = 'View My News';
+  const confirmationText = 'Saved to your temporary personal page';
+  const linkTextBefore = 'Find it in';
+  const linkTextMyNews = 'My News';
+  const linkTextAfter =
+    'during this temporary preview. Sign in to keep it for future visits';
 
   const myNewsPath = `/${service}/my-news`;
 
   useEffect(() => {
     const timer = setTimeout(() => {
       onClose();
-    }, 5000);
+    }, 10000);
 
     return () => clearTimeout(timer);
   }, [onClose]);
@@ -93,17 +95,21 @@ const SaveArticleConfirmation = ({ onClose }: SaveArticleConfirmationProps) => {
         </button>
       </div>
       <div css={styles.content}>
-        <CallToActionLink
-          url={myNewsPath}
-          css={styles.link}
-          eventTrackingData={{
-            componentName: 'save-article-confirmation-link',
-          }}
-        >
-          <CallToActionLink.Text shouldUnderlineOnHoverFocus>
-            {linkText}
-          </CallToActionLink.Text>
-        </CallToActionLink>
+        <Text size="longPrimer">
+          {linkTextBefore}{' '}
+          <CallToActionLink
+            url={myNewsPath}
+            css={styles.link}
+            eventTrackingData={{
+              componentName: 'save-article-confirmation-link',
+            }}
+          >
+            <CallToActionLink.Text shouldUnderlineOnHoverFocus>
+              {linkTextMyNews}
+            </CallToActionLink.Text>
+          </CallToActionLink>{' '}
+          {linkTextAfter}
+        </Text>
       </div>
     </div>
   );

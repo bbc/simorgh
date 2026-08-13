@@ -47,12 +47,8 @@ const MyNewsPageTemporary = () => {
     const now = new Date();
     const diff = date.getTime() - now.getTime();
     const hours = Math.floor(diff / (1000 * 60 * 60));
-    const days = Math.floor(hours / 24);
 
-    if (days > 0) {
-      return `${days} day${days > 1 ? 's' : ''}`;
-    }
-    return `${hours} hour${hours > 1 ? 's' : ''}`;
+    return `${hours} hour${hours !== 1 ? 's' : ''}`;
   };
 
   const articlesCount = savedArticles.length;
@@ -73,13 +69,15 @@ const MyNewsPageTemporary = () => {
 
       <div css={styles.banner} role="alert">
         <Heading level={2} size="doublePica" css={styles.bannerHeading}>
-          Temporary My News
+          Your Temporary My News Page
         </Heading>
         <Text size="longPrimer">
           {articlesCount > 0
-            ? `You have ${articlesText} saved temporarily. This page is available for 2 days. Sign in or register to keep your saved articles permanently.`
-            : 'This is a temporary page available for 2 days. If you want to keep your saved articles, please register or sign in to create a permanent account.'}
+            ? `You have ${articlesText} saved temporarily. This page is available for 48 hours. Sign in or register to keep them for future visits.`
+            : 'This is a temporary page available for 48 hours. Please sign in or register to keep them for future visits.'}
         </Text>
+        <br />
+        <br />
         {expiryDate && (
           <Text size="brevier" css={styles.expiryText}>
             Expires in {formatExpiryDate(expiryDate)}
