@@ -1,0 +1,128 @@
+@use '@scss/themeTokens' as theme;
+
+.wrapper {
+  position: relative;
+}
+
+.container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-width: 21rem;
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid theme.$palette-grey-4;
+  margin: 0 #{theme.$spacings-half};
+  background: theme.$palette-white;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -0.8125rem; 
+    left: 1rem;
+    width: 0;
+    height: 0;
+    border-left: 0.5rem solid transparent;
+    border-right: 0.5rem solid transparent;
+    border-bottom: 0.8125rem solid theme.$palette-grey-4;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -0.75rem;
+    left: 1.0625rem;
+    width: 0;
+    height: 0;
+    border-left: 0.4375rem solid transparent;
+    border-right: 0.4375rem solid transparent;
+    border-bottom: 0.75rem solid theme.$palette-white;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+    padding-block: 0;
+
+    &:hover,
+    &:active {
+      color: theme.$palette-postbox;
+    }
+
+    &:focus-visible {
+      color: theme.$palette-postbox;
+      outline: 1px solid black;
+      outline-offset: 2px;
+    }
+  }
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+}
+
+.icon {
+  flex-shrink: 0;
+  width: 1.375rem;
+  height: 1.375rem;
+  margin-inline-end: 0.5rem;
+}
+
+.title {
+  flex: 1;
+  margin: 0;
+}
+
+.body {
+  margin: 1rem 0 0;
+
+  @media #{theme.$mediaQueries-group-0-max-width} {
+    display: none;
+  }
+}
+
+.closeButton {
+  flex-shrink: 0;
+  margin-inline-start: 1.5rem;
+  margin-block-start: -0.75rem;
+  margin-inline-end: -0.75rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: theme.$palette-white;
+  border: none;
+  cursor: pointer;
+
+  svg {
+    display: block;
+    fill: theme.$palette-grey-10;
+  }
+
+  &:hover {
+    background: theme.$palette-postbox;
+
+    svg {
+      fill: theme.$palette-white;
+    }
+  }
+
+  &:focus-visible {
+    background: theme.$palette-postbox;
+    outline: 2px solid theme.$palette-white;
+    box-shadow: 0 0 0 0.25rem theme.$palette-grey-10;
+
+    svg {
+      fill: theme.$palette-white;
+    }
+  }
+}

@@ -2,6 +2,7 @@ import React, { use } from 'react';
 import Paragraph from '#app/components/Paragraph';
 import CallToActionLink from '#app/components/CallToActionLink';
 import { AccountIcon } from '#app/components/icons';
+import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import { AccountContext } from '#contexts/AccountContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './index.styles';
@@ -13,6 +14,7 @@ interface AccountActionButtonsProps {
   signInRef?: React.Ref<HTMLAnchorElement>;
   experimentName?: string;
   experimentVariant?: string;
+  signInAccessibleLabel?: string;
 }
 
 const AccountActionButtons = ({
@@ -22,6 +24,7 @@ const AccountActionButtons = ({
   signInRef,
   experimentName,
   experimentVariant,
+  signInAccessibleLabel,
 }: AccountActionButtonsProps) => {
   const { signInUrl, registerUrl } = use(AccountContext);
   const { translations } = use(ServiceContext);
@@ -35,6 +38,22 @@ const AccountActionButtons = ({
   const focusIndicatorClassName = onLightBackground
     ? undefined
     : 'focusIndicatorInvert';
+
+  const signInButtonContent = (
+    <>
+      <CallToActionLink.ButtonLikeWrapper
+        aria-hidden={signInAccessibleLabel ? true : undefined}
+      >
+        <AccountIcon css={styles.accountIcon} />
+        <CallToActionLink.Text shouldUnderlineOnHoverFocus>
+          {signInText}
+        </CallToActionLink.Text>
+      </CallToActionLink.ButtonLikeWrapper>
+      {signInAccessibleLabel && (
+        <VisuallyHiddenText>{signInAccessibleLabel}</VisuallyHiddenText>
+      )}
+    </>
+  );
 
   return (
     <>
@@ -51,12 +70,7 @@ const AccountActionButtons = ({
         }}
         data-testid={signInComponentName}
       >
-        <CallToActionLink.ButtonLikeWrapper>
-          <AccountIcon css={styles.accountIcon} />
-          <CallToActionLink.Text shouldUnderlineOnHoverFocus>
-            {signInText}
-          </CallToActionLink.Text>
-        </CallToActionLink.ButtonLikeWrapper>
+        {signInButtonContent}
       </CallToActionLink>
 
       {separatorText && (
