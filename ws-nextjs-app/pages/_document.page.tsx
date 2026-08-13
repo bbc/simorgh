@@ -26,6 +26,7 @@ import CanonicalToLiteRedirect from '#utilities/CanonicalToLiteRedirect';
 import addOperaMiniClassScript from '#app/lib/utilities/addOperaMiniClassScript';
 import handleServerLogging from '#utilities/handleServerLogging';
 import getAmpLiteCss from '#utilities/getAmpLiteCss';
+import optimiseCssPrefixes from '#utilities/optimiseCssPrefixes';
 import ComponentTracking from '../renderers/ComponentTracking';
 import ReverbTemplate from '../renderers/ReverbTemplate';
 import litePageTransforms from '../renderers/litePageTransforms';
@@ -128,7 +129,8 @@ export default class AppDocument extends Document<DocProps> {
 
     switch (true) {
       case isAmp && pageType === 'article': {
-        const ampCss = css + getAmpLiteCss(getNextData());
+        const ampLiteCss = getAmpLiteCss(getNextData());
+        const combinedCss = optimiseCssPrefixes(css + ampLiteCss);
         return (
           <AmpRenderer
             bodyContent={<Main />}
@@ -137,13 +139,14 @@ export default class AppDocument extends Document<DocProps> {
             helmetScriptTags={helmetScriptTags}
             htmlAttrs={htmlAttrs}
             ids={ids}
-            styles={ampCss}
+            styles={combinedCss}
             title={title}
           />
         );
       }
       case isLite: {
-        const liteCss = css + getAmpLiteCss(getNextData());
+        const ampLiteCss = getAmpLiteCss(getNextData());
+        const liteCss = optimiseCssPrefixes(css + ampLiteCss);
         return (
           <LiteRenderer
             bodyContent={<Main />}
