@@ -327,8 +327,12 @@ describe('Navigation', () => {
 
     const navItemsWithWatch = [
       { title: 'Home', url: '/hausa' },
-      { title: 'Watch', url: '/hausa/bbc_hausa_tv' },
-      { title: 'Listen', url: '/hausa/bbc_hausa_radio/liveradio' },
+      { title: 'Watch', url: '/hausa/bbc_hausa_tv', type: 'watch' },
+      {
+        title: 'Listen',
+        url: '/hausa/bbc_hausa_radio/liveradio',
+        type: 'listen',
+      },
     ];
 
     const navItemsWithSubItemWatch = [
