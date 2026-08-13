@@ -62,7 +62,7 @@ const renderListItems = ({
   shouldAnnounce = true,
 }: RenderListItemsArgs) =>
   navigation.map((item, index) => {
-    const { title, url, type } = item;
+    const { title, url } = item;
     const active = index === activeIndex;
     // Only announce "current page" to screen readers when the highlight
     // genuinely reflects the user's location, not when Home is highlighted
