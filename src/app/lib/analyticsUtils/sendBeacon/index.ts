@@ -1,5 +1,3 @@
-// import resonance - we can follow the pattern of the reverbURLHelper, e,g.
-import { Resonance } from '@bbc/resonance';
 import { ReverbClient } from '#app/models/types/eventTracking';
 import {
   ReverbBeaconConfig,
@@ -80,7 +78,10 @@ const callReverb = async (eventDetails: ReverbEventDetails) => {
   );
 };
 
-const callResonance = (resonanceParams: ResonanceBeaconConfig) => {
+const callResonance = (
+  Resonance: typeof import('@bbc/resonance').Resonance,
+  resonanceParams: ResonanceBeaconConfig,
+) => {
   try {
     Resonance.initialise(
       resonanceParams.resonanceProperties,
@@ -101,7 +102,8 @@ const sendBeacon = async (
       const { eventDetails } = reverbBeaconConfig;
 
       if (resonanceBeaconConfig) {
-        callResonance(resonanceBeaconConfig);
+        const { Resonance } = await import('@bbc/resonance');
+        callResonance(Resonance, resonanceBeaconConfig);
       }
 
       await callReverb(eventDetails);

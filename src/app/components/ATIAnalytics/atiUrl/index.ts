@@ -1,4 +1,3 @@
-import { ResonanceMode } from '@bbc/resonance';
 import {
   CLICK_EVENT,
   VIEW_EVENT,
@@ -25,6 +24,8 @@ import {
  * https://github.com/ampproject/amphtml/blob/master/spec/amp-var-substitutions.md#device-and-browser
  */
 
+const RESONANCE_MODE = { LIVE: 'live', TEST: 'test' } as const;
+
 export const buildResonanceAnalyticsModel = ({
   appName,
   contentId,
@@ -41,7 +42,7 @@ export const buildResonanceAnalyticsModel = ({
 
   return {
     resonanceProperties: {
-      mode: env === 'live' ? ResonanceMode.LIVE : ResonanceMode.TEST,
+      mode: env === 'live' ? RESONANCE_MODE.LIVE : RESONANCE_MODE.TEST,
     },
     baseProperties: {
       app: {
