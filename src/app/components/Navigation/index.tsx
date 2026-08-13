@@ -186,7 +186,7 @@ const getActiveTopIndex = ({
     (pageType === MEDIA_ARTICLE_PAGE && primaryMediaType === 'video') ||
     (pageType === ARTICLE_PAGE && primaryMediaType === 'video')
   ) {
-    return watchIndex > 1
+    return watchIndex > -1
       ? { index: watchIndex, shouldAnnounce: true }
       : { index: 0, shouldAnnounce: false };
   }
@@ -200,7 +200,7 @@ const getActiveTopIndex = ({
     (pageType === MEDIA_ARTICLE_PAGE && primaryMediaType === 'audio') ||
     (pageType === ARTICLE_PAGE && primaryMediaType === 'audio')
   ) {
-    return listenIndex > 2
+    return listenIndex > -1
       ? { index: listenIndex, shouldAnnounce: true }
       : { index: 0, shouldAnnounce: false };
   }
