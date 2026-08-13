@@ -31,7 +31,7 @@ const sendIndividualMetric = metricScope(
     },
 );
 
-const sendMetrics = async ({
+const sendMetrics = ({
   metricName,
   statusCode = 'Unknown',
   pageType = 'Unknown',
