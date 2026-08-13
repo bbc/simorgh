@@ -37,22 +37,23 @@ const sendMetrics = async ({
   pageType = 'Unknown',
   requestUrl,
 }: Params) => {
-  sendIndividualMetric({
-    metricName,
-    dimension: {
-      PageType: pageType,
-      StatusCode: statusCode.toString(),
-    },
-    requestUrl,
-  });
-
-  sendIndividualMetric({
-    metricName,
-    dimension: {
-      StatusCode: statusCode.toString(),
-    },
-    requestUrl,
-  });
+  Promise.allSettled([
+    sendIndividualMetric({
+      metricName,
+      dimension: {
+        PageType: pageType,
+        StatusCode: statusCode.toString(),
+      },
+      requestUrl,
+    }),
+    sendIndividualMetric({
+      metricName,
+      dimension: {
+        StatusCode: statusCode.toString(),
+      },
+      requestUrl,
+    }),
+  ]);
 };
 
 const sendCustomMetric = (params: Params) =>
