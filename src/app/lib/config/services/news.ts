@@ -26,7 +26,7 @@ export const service: DefaultServiceConfig = {
     audioCaptionOffscreenText: 'Audio caption',
     defaultCaptionOffscreenText: 'Caption, ',
     imageCopyrightOffscreenText: 'Image source, ',
-    locale: 'en_GB',
+    locale: 'en-GB',
     datetimeLocale: 'en-gb',
     service: 'news',
     serviceName: 'News',

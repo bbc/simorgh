@@ -454,7 +454,7 @@ export const service: UkrainianConfig = {
   default: {
     ...baseServiceConfig,
     datetimeLocale: 'uk',
-    locale: 'uk_UA',
+    locale: 'uk-UA',
     languageName: 'Ukrainian',
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
     isoLang: 'uk',
