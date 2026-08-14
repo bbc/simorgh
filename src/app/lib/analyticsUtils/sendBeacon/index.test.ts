@@ -264,5 +264,17 @@ describe('sendBeacon', () => {
         error: new Error(`Error initialising Resonance: ${error}`),
       });
     });
+
+    it('should still call Reverb when Resonance.initialise throws', async () => {
+      // eslint-disable-next-line no-underscore-dangle
+      window.__reverb = { __reverbLoadedPromise: Promise.resolve(reverbMock) };
+      (Resonance.initialise as jest.Mock).mockImplementationOnce(() => {
+        throw new Error('Resonance failed');
+      });
+
+      await sendBeacon(reverbConfig, resonanceConfig);
+
+      expect(reverbMock.viewEvent).toHaveBeenCalledTimes(1);
+    });
   });
 });
