@@ -26,7 +26,7 @@ export const service: DefaultServiceConfig = {
     audioCaptionOffscreenText: 'Legendă audio',
     defaultCaptionOffscreenText: 'Legendă, ',
     imageCopyrightOffscreenText: 'Sursă imagine, ',
-    locale: 'ro-RO',
+    locale: 'ro_RO',
     datetimeLocale: 'ro',
     service: 'romania',
     serviceName: 'Romania',

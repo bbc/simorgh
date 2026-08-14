@@ -27,7 +27,7 @@ export const service: DefaultServiceConfig = {
     audioCaptionOffscreenText: 'Podpis nagrania',
     defaultCaptionOffscreenText: 'Podpis, ',
     imageCopyrightOffscreenText: 'Źródło zdjęcia, ',
-    locale: 'pl-PL',
+    locale: 'pl_PL',
     datetimeLocale: 'pl-pl',
     service: 'polska',
     serviceName: 'Polska',

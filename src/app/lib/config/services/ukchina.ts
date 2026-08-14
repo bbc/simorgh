@@ -40,7 +40,7 @@ export const service: ChineseConfig = {
     externalLinkText: ', 外部',
     homePageTitle: '主页',
     lang: `zh-hans`,
-    locale: `zh-Hans`,
+    locale: `zh-hans`,
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
     isoLang: 'zh-Hans',
     defaultCaptionOffscreenText: '说明文字, ',

@@ -58,7 +58,7 @@ export const service: ZhongwenConfig = {
     externalLinkText: ', 外部',
     homePageTitle: '主页',
     lang: `zh-hans`,
-    locale: `zh-Hans`,
+    locale: `zh-hans`,
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
     isoLang: 'zh-Hans',
     datetimeLocale: 'zh-cn',
@@ -448,7 +448,7 @@ export const service: ZhongwenConfig = {
   trad: {
     ...baseServiceConfig,
     lang: `zh-hant`,
-    locale: `zh-Hant`,
+    locale: `zh-hant`,
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
     isoLang: 'zh-Hant',
     datetimeLocale: 'zh-tw',

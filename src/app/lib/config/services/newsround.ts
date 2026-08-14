@@ -27,7 +27,7 @@ export const service: DefaultServiceConfig = {
     audioCaptionOffscreenText: 'Audio caption',
     defaultCaptionOffscreenText: 'Caption, ',
     imageCopyrightOffscreenText: 'Image source, ',
-    locale: 'en-GB',
+    locale: 'en_GB',
     datetimeLocale: 'en-gb',
     service: 'newsround' as Services,
     serviceName: 'Newsround',
