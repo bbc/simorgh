@@ -22,13 +22,27 @@ moment.relativeTimeThreshold('h', 24);
 moment.relativeTimeThreshold('d', 30);
 moment.relativeTimeThreshold('M', 12);
 
-const safeDuration = (duration: ISODuration) => {
+const sanitiseDuration = (duration: ISODuration) => {
   try {
     return globalThis.Temporal.Duration.from(duration);
   } catch {
     return globalThis.Temporal.Duration.from('PT0S'); // fallback to 0 seconds if the duration is invalid
   }
 };
+
+// Extra confirmation
+// const normaliseLocale = (locale?: string): string | undefined => {
+//   if (!locale) return undefined;
+//   const transformedLocaleToBCP47LangTag = locale.replace(/_/g, '-');
+//   try {
+//     return Intl.getCanonicalLocales(transformedLocaleToBCP47LangTag)[0];
+//   } catch {
+//     return undefined;
+//   }
+// };
+
+const transformLocaleToBCP47LangTag = (locale: Locale) =>
+  locale.replace(/_/g, '-');
 
 export const formatDuration = ({
   duration,
@@ -39,24 +53,26 @@ export const formatDuration = ({
   format?: string;
   locale?: Locale;
 }): string => {
-  const bcp47Locale = locale?.replace(/_/g, '-') || undefined;
+  const formattedLocale = transformLocaleToBCP47LangTag(locale) || undefined;
 
-  const totalSeconds = safeDuration(duration).total({
+  const totalSeconds = sanitiseDuration(duration).total({
     unit: 'seconds',
   });
   const hours = Math.floor(totalSeconds / 3600);
   const minutes = Math.floor((totalSeconds % 3600) / 60);
   const seconds = Math.floor(totalSeconds % 60);
 
-  const localeDigits = (n, minDigits) =>
-    new Intl.NumberFormat(bcp47Locale, {
+  // note, using Intl.NumberFormat and Intl.Locale does not take into account overrides in psammead-locales/moment
+  const translateDigits = (timeValueAsNumber: number, minDigits: number) =>
+    // Using this instead of src/app/legacy/psammead/psammead-locales/src/numerals/index.js since this is a safe usecase.
+    new Intl.NumberFormat(formattedLocale, {
       minimumIntegerDigits: minDigits,
       useGrouping: false,
-    }).format(n);
+    }).format(timeValueAsNumber);
 
-  const withArabicComma = str => {
-    if (!bcp47Locale) return str;
-    return new Intl.Locale(bcp47Locale).maximize().script === 'Arab'
+  const withArabicComma = (str: string) => {
+    if (!formattedLocale) return str;
+    return new Intl.Locale(formattedLocale).maximize().script === 'Arab'
       ? str.replace(/,/g, '\u060C')
       : str;
   };
@@ -64,17 +80,17 @@ export const formatDuration = ({
   if (format) {
     return withArabicComma(
       format
-        .replace('h', localeDigits(hours, 1))
-        .replace('mm', localeDigits(minutes, 2))
-        .replace('ss', localeDigits(seconds, 2))
-        .replace('m', localeDigits(minutes, 1)),
+        .replace('h', translateDigits(hours, 1))
+        .replace('mm', translateDigits(minutes, 2))
+        .replace('ss', translateDigits(seconds, 2))
+        .replace('m', translateDigits(minutes, 1)),
     );
   }
 
   return withArabicComma(
     hours > 0
-      ? `${localeDigits(hours, 1)}:${localeDigits(minutes, 2)}:${localeDigits(seconds, 2)}`
-      : `${localeDigits(minutes, 2)}:${localeDigits(seconds, 2)}`,
+      ? `${translateDigits(hours, 1)}:${translateDigits(minutes, 2)}:${translateDigits(seconds, 2)}`
+      : `${translateDigits(minutes, 2)}:${translateDigits(seconds, 2)}`,
   );
 };
 
