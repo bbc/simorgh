@@ -23,10 +23,16 @@ moment.relativeTimeThreshold('d', 30);
 moment.relativeTimeThreshold('M', 12);
 
 const sanitiseDuration = (duration: ISODuration) => {
+  const durationApi = globalThis.Temporal?.Duration;
+
+  if (!durationApi) {
+    return { total: () => 0 };
+  }
+
   try {
-    return globalThis.Temporal.Duration.from(duration);
+    return durationApi.from(duration);
   } catch {
-    return globalThis.Temporal.Duration.from('PT0S'); // fallback to 0 seconds if the duration is invalid
+    return durationApi.from('PT0S'); // fallback to 0 seconds if the duration is invalid
   }
 };
 
