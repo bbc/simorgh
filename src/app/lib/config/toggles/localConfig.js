@@ -4,7 +4,7 @@ export default {
   _environment: 'local',
   account: {
     enabled: true,
-    value: 'hindi',
+    value: 'hindi|mundo|portuguese',
   },
   ads: {
     enabled: true,
@@ -39,6 +39,9 @@ export default {
     enabled: true,
   },
   liveRadioSchedule: {
+    enabled: true,
+  },
+  locationTopicCuration: {
     enabled: true,
   },
   midArticleOnwardJourney: {
@@ -77,6 +80,12 @@ export default {
   scriptLink: {
     enabled: true,
   },
+  sportDataPolling: {
+    enabled: true,
+  },
+  showSportDataHeader: {
+    enabled: true,
+  },
   topBarOJs: {
     enabled: true,
   },
@@ -85,7 +94,7 @@ export default {
   },
   uasPersonalization: {
     enabled: true,
-    value: 'hindi',
+    value: 'hindi|mundo|portuguese',
   },
   webVitalsMonitoring: {
     enabled: true,

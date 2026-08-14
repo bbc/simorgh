@@ -11,6 +11,8 @@ import {
   AUDIO_PAGE,
   TV_PAGE,
   MOST_READ_PAGE,
+  LIVE_RADIO_PAGE,
+  OFFLINE_PAGE,
 } from '#app/routes/utils/pageTypes';
 import {
   isOptimoIdCheck,
@@ -47,6 +49,9 @@ const isOnDemandAudioPodcastPath = (pathname: string) =>
 const isOnDemandTvPath = (pathname: string) =>
   /\/bbc_[a-z]+_tv\/(?:tv|tv_programmes)\//.test(pathname);
 
+const isLiveRadioPath = (pathname: string) =>
+  /\/bbc_[a-z]+_radio\/liveradio/.test(pathname);
+
 export default function derivePageType(pathname: string): PageTypes {
   const sanitisedPathname = new URL(
     removeRendererExtension(pathname),
@@ -56,8 +61,10 @@ export default function derivePageType(pathname: string): PageTypes {
   if (sanitisedPathname.includes('av-embeds')) return AV_EMBEDS;
   if (sanitisedPathname.includes('downloads')) return DOWNLOADS_PAGE;
   if (sanitisedPathname.includes('popular/read')) return MOST_READ_PAGE;
+  if (sanitisedPathname.endsWith('/offline')) return OFFLINE_PAGE;
 
   if (isUgcIdCheck(sanitisedPathname)) return UGC_PAGE;
+  if (isLiveRadioPath(sanitisedPathname)) return LIVE_RADIO_PAGE;
   if (isTipoIdCheck(sanitisedPathname) && sanitisedPathname.includes('topics'))
     return TOPIC_PAGE;
   if (isTipoIdCheck(sanitisedPathname) && sanitisedPathname.includes('live'))

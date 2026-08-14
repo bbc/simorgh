@@ -10,6 +10,8 @@ import {
   AUDIO_PAGE,
   TV_PAGE,
   MOST_READ_PAGE,
+  LIVE_RADIO_PAGE,
+  OFFLINE_PAGE,
 } from '#app/routes/utils/pageTypes';
 import derivePageType from '.';
 
@@ -116,9 +118,27 @@ describe('derivePageType', () => {
     expect(result).toEqual(MOST_READ_PAGE);
   });
 
+  it('should return LIVE_RADIO_PAGE if pathname includes live-radio', () => {
+    const pathname = '/hausa/bbc_hausa_radio/liveradio';
+    const result = derivePageType(pathname);
+    expect(result).toEqual(LIVE_RADIO_PAGE);
+  });
+
   it('should return Unknown if pathname does not include live or send', () => {
     const pathname = '/pidgin/xxxxxxxxx';
     const result = derivePageType(pathname);
     expect(result).toEqual(UNKNOWN_PAGE);
+  });
+
+  it("should return OFFLINE_PAGE if pathname ends with 'offline'", () => {
+    const pathname = '/mundo/offline';
+    const result = derivePageType(pathname);
+    expect(result).toEqual(OFFLINE_PAGE);
+  });
+
+  it('should return OFFLINE_PAGE for a service variant offline page', () => {
+    const pathname = '/zhongwen/trad/offline';
+    const result = derivePageType(pathname);
+    expect(result).toEqual(OFFLINE_PAGE);
   });
 });

@@ -1,5 +1,5 @@
 import SERVICES_WITH_NEW_NAV from '#app/components/Navigation/config';
-import getAppEnv from '#cypress/support/helpers/getAppEnv';
+import getAppEnv from '../support/helpers/getAppEnv';
 import config from '../support/config/services';
 import { ServiceParametersType } from '../types';
 
@@ -8,42 +8,22 @@ export default ({ service, pageType }: ServiceParametersType) => {
   describe(`testsThatFollowSmokeTestConfigForAllAMPPages to run for ${service} ${pageType}`, () => {
     describe('Header Tests', () => {
       const serviceName = config[service]?.name || service;
-      // limit number to Zhongwen for navigation toggling
-      const testMobileNav = serviceName === 'zhongwen';
+
+      // As of 13/07/2026, Magyarul and Romania do not have enough content for the new nav to be rendered
+      const excludedNavServices = ['magyarul', 'romania'];
 
       const twoTierNavServices = {
         local: null, // Don't test two tier nav locally as the local environment can't fetch config
         test: ['arabic', 'tamil'], // Test env isn't guaranteed to have the new nav config, so only run tests for services we know have it
-        live: SERVICES_WITH_NEW_NAV,
+        live: SERVICES_WITH_NEW_NAV.filter(
+          s => !excludedNavServices.includes(s),
+        ),
       };
 
       const cypressAppEnv = getAppEnv();
 
       const testTwoTierNav =
         twoTierNavServices[cypressAppEnv]?.includes(serviceName) ?? false;
-
-      if (testMobileNav) {
-        it('should show dropdown menu and hide scrollable menu when menu button is clicked', () => {
-          cy.viewport(320, 480);
-          cy.get('nav')
-            .find('[data-e2e="scrollable-nav"]')
-            .should('be.visible');
-
-          cy.get('nav')
-            .find('[data-e2e="dropdown-nav"] ul')
-            .should('not.be.visible');
-
-          cy.get('nav button').click();
-
-          cy.get('nav')
-            .find('[data-e2e="scrollable-nav"]')
-            .should('not.be.visible');
-
-          cy.get('nav')
-            .find('[data-e2e="dropdown-nav"] ul')
-            .should('be.visible');
-        });
-      }
 
       if (testTwoTierNav) {
         it('should show two tier navigation on mobile', () => {

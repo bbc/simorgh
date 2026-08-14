@@ -19,18 +19,19 @@ import {
   getProcessEnvAppVariables,
 } from '#lib/utilities/getEnvConfig';
 
-import AmpRenderer from '#server/Document/Renderers/AmpRenderer';
-import LiteRenderer from '#server/Document/Renderers/LiteRenderer';
-import litePageTransforms from '#server/Document/Renderers/litePageTransforms';
-
 import NO_JS_CLASSNAME from '#app/lib/noJs.const';
 
 import getPathExtension from '#app/utilities/getPathExtension';
-import ReverbTemplate from '#src/server/Document/Renderers/ReverbTemplate';
-import ComponentTracking from '#src/server/Document/Renderers/ComponentTracking';
-import CanonicalToLiteRedirect from '#src/server/utilities/CanonicalToLiteRedirect';
+import CanonicalToLiteRedirect from '#utilities/CanonicalToLiteRedirect';
 import addOperaMiniClassScript from '#app/lib/utilities/addOperaMiniClassScript';
-import handleServerLogging from '#nextjs/utilities/handleServerLogging';
+import handleServerLogging from '#utilities/handleServerLogging';
+import getAmpLiteCss from '#utilities/getAmpLiteCss';
+import optimiseCssPrefixes from '#utilities/optimiseCssPrefixes';
+import ComponentTracking from '../renderers/ComponentTracking';
+import ReverbTemplate from '../renderers/ReverbTemplate';
+import litePageTransforms from '../renderers/litePageTransforms';
+import LiteRenderer from '../renderers/LiteRenderer';
+import AmpRenderer from '../renderers/AmpRenderer';
 import derivePageType from '../utilities/derivePageType';
 
 type DocProps = {
@@ -110,8 +111,26 @@ export default class AppDocument extends Document<DocProps> {
     const helmetLinkTags = helmet.link.toComponent();
     const helmetScriptTags = helmet.script.toComponent();
 
+    type NextDataProps = { page: string; dynamicIds?: Array<string | number> };
+    type PropsWithNextData = typeof this.props & {
+      // eslint-disable-next-line no-underscore-dangle
+      __NEXT_DATA__?: NextDataProps;
+    };
+
+    const getNextData = () => {
+      /* eslint-disable no-underscore-dangle */
+      const nextData = (this.props as PropsWithNextData).__NEXT_DATA__;
+      /* eslint-enable no-underscore-dangle */
+      return {
+        page: nextData?.page ?? '',
+        dynamicIds: nextData?.dynamicIds ?? [],
+      };
+    };
+
     switch (true) {
-      case isAmp && pageType === 'article':
+      case isAmp && pageType === 'article': {
+        const ampLiteCss = getAmpLiteCss(getNextData());
+        const combinedCss = optimiseCssPrefixes(css + ampLiteCss);
         return (
           <AmpRenderer
             bodyContent={<Main />}
@@ -120,11 +139,14 @@ export default class AppDocument extends Document<DocProps> {
             helmetScriptTags={helmetScriptTags}
             htmlAttrs={htmlAttrs}
             ids={ids}
-            styles={css}
+            styles={combinedCss}
             title={title}
           />
         );
-      case isLite:
+      }
+      case isLite: {
+        const ampLiteCss = getAmpLiteCss(getNextData());
+        const liteCss = optimiseCssPrefixes(css + ampLiteCss);
         return (
           <LiteRenderer
             bodyContent={<Main />}
@@ -132,10 +154,11 @@ export default class AppDocument extends Document<DocProps> {
             helmetMetaTags={helmetMetaTags}
             helmetScriptTags={helmetScriptTags}
             htmlAttrs={htmlAttrs}
-            styles={css}
+            styles={liteCss}
             title={title}
           />
         );
+      }
       default:
         return (
           <Html lang="en-GB" {...htmlAttrs} className={NO_JS_CLASSNAME}>

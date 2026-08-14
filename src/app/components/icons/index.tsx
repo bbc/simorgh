@@ -1,4 +1,5 @@
 import { Direction } from '#app/models/types/global';
+import pixelsToRem from '#app/utilities/pixelsToRem';
 
 export const Ellipsis = () => (
   <svg
@@ -177,12 +178,20 @@ export const Calculator = ({ className }: { className?: string }) => (
   </svg>
 );
 
-export const Close = ({ className }: { className?: string }) => (
+export const Close = ({
+  className,
+  width = '12',
+  height = '12',
+}: {
+  className?: string;
+  width?: string;
+  height?: string;
+}) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 32 32"
-    width="12"
-    height="12"
+    width={width}
+    height={height}
     className={className}
     focusable="false"
     aria-hidden="true"
@@ -243,6 +252,7 @@ export const UpArrowIcon = () => (
     <path d="M31.1 2.5H1v2.8h30.1zM14.3 13.3 31 29.5v-6.7L16 8.1.9 22.8v6.7l16.8-16.2z" />
   </svg>
 );
+
 export const DownArrowIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -253,6 +263,20 @@ export const DownArrowIcon = () => (
     focusable="false"
   >
     <path d="M.9 29.5H31v-2.8H.9zm16.8-10.8L1 2.5v6.7l15 14.7L31.1 9.2V2.5L14.3 18.7z" />
+  </svg>
+);
+
+export const AccountIconRounded = ({ className }: { className?: string }) => (
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+    focusable="false"
+    aria-hidden="true"
+  >
+    <path d="M12 17.2501C9.525 17.2501 7.65 15.3751 7.65 12.9001C7.65 10.4251 9.525 8.5501 12 8.5501C14.4 8.5501 16.35 10.4251 16.35 12.9001C16.35 15.3751 14.4 17.2501 12 17.2501ZM23.25 12.9751C23.25 6.6751 18.3 1.7251 12 1.7251C5.625 1.7251 0.75 6.6751 0.75 12.9751C0.75 16.8751 2.625 20.3251 5.55 22.2751C6.975 20.1751 9.3 18.8251 12 18.8251C14.7 18.8251 17.025 20.1751 18.45 22.2751C21.375 20.2501 23.25 16.8751 23.25 12.9751Z" />
   </svg>
 );
 
@@ -269,6 +293,135 @@ export const AccountIcon = ({ className }: { className?: string }) => (
     <path
       fillRule="evenodd"
       d="M16 17.5a7.88 7.88 0 0 1-8-7.75A7.88 7.88 0 0 1 16 2a7.88 7.88 0 0 1 8 7.75 7.88 7.88 0 0 1-8 7.75M2 30c0-5.883 7.519-10 14.014-10C22.48 20 30 24.12 30 29.994c0 .005-28 .007-28 .005"
+    />
+  </svg>
+);
+
+export const BookmarkIcon = ({ className }: { className?: string }) => (
+  <svg
+    width="20"
+    height="20"
+    viewBox="0 0 18 18"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+    aria-hidden="true"
+    focusable="false"
+  >
+    <path
+      d="M11.25 1.25V15.375L6.25 12.5625L1.25 15.375V1.25H11.25ZM12.5 0H0V17.5L6.25 14L12.5 17.5V0Z"
+      fillRule="evenodd"
+    />
+  </svg>
+);
+
+export const FilledBookmarkIcon = ({ className }: { className?: string }) => (
+  <svg
+    width="20"
+    height="20"
+    viewBox="0 0 18 18"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+    aria-hidden="true"
+    focusable="false"
+  >
+    <path
+      d="M3.75 1.25V18.75L9.625 15.4375L10 15.25L10.375 15.4375L16.25 18.75V1.25H3.75Z"
+      fillRule="evenodd"
+    />
+  </svg>
+);
+
+export const Spinner = ({ className }: { className?: string }) => (
+  <svg
+    viewBox="0 0 32 32"
+    width="20"
+    height="20"
+    className={className}
+    focusable="false"
+    aria-hidden="true"
+  >
+    <path d="m29 8.3-2.5 1.5c1.1 1.8 1.6 3.9 1.6 6.2 0 6.9-5.3 12.2-12.1 12.2-6.9 0-12.1-5.3-12.1-12.2S9.1 3.8 16 3.8V1C7.5 1 1 7.5 1 16s6.5 15 15 15 15-6.5 15-15c0-2.9-.7-5.5-2-7.7" />
+  </svg>
+);
+
+export const RedCardSVG = ({ className }: { className?: string }) => (
+  <svg
+    enableBackground="new 0 0 9.22 13.36"
+    viewBox="0 0 9.22 13.36"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+    width={`${pixelsToRem(11)}rem`}
+    height={`${pixelsToRem(16)}rem`}
+    focusable="false"
+    aria-hidden="true"
+  >
+    <path d="m-12.94 265.76h8.47v11.82h-8.47z" fill="#f51a5a" />
+    <path d="m-28.07 272.58h8.47v11.82h-8.47z" fill="#f51a5a" />
+    <path d="m-29.51 285.84v-9.72h-4.53v11.82h8.48v-2.1z" fill="#ffd230" />
+    <path d="m-163.79-38.47h8.47v11.82h-8.47z" fill="#f51a5a" />
+    <path d="m-102.17-22.48v-9.73h-4.52v11.82h8.47v-2.09z" fill="#ffd230" />
+    <g fill="#f51a5a">
+      <path d="m24 0h9.22v13.36h-9.22z" />
+      <path d="m0 0h9.22v13.36h-9.22z" />
+      <path d="m-28.42 0h9.22v13.36h-9.22z" />
+    </g>
+    <path d="m-29.5 14.44v-9.89h-4.54v13.36h9.23v-3.47z" fill="#ffd230" />
+  </svg>
+);
+
+export const SecondYellowCardSVG = ({ className }: { className?: string }) => (
+  <svg
+    enableBackground="new 0 0 14.84 17.91"
+    viewBox="0 0 14.84 17.91"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+    width={`${pixelsToRem(16)}rem`}
+    height={`${pixelsToRem(19)}rem`}
+    focusable="false"
+    aria-hidden="true"
+  >
+    <path d="m21.09 265.76h8.47v11.82h-8.47z" fill="#f51a5a" />
+    <path d="m5.97 272.58h8.47v11.82h-8.47z" fill="#f51a5a" />
+    <path d="m4.52 285.84v-9.72h-4.52v11.82h8.47v-2.1z" fill="#ffd230" />
+    <path d="m-129.76-38.47h8.47v11.82h-8.47z" fill="#f51a5a" />
+    <path d="m-68.14-22.48v-9.73h-4.52v11.82h8.47v-2.09z" fill="#ffd230" />
+    <path d="m5.61 0h9.22v13.36h-9.22z" fill="#f51a5a" />
+    <path d="m4.53 14.44v-9.89h-4.53v13.36h9.22v-3.47z" fill="#ffd230" />
+  </svg>
+);
+
+export const InfoTriangle = ({ className }: { className?: string }) => (
+  <svg
+    width="22"
+    height="22"
+    viewBox="0 0 22 22"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+    focusable="false"
+    aria-hidden="true"
+  >
+    <path
+      d="M2.13145 20.7625H19.8689C20.9689 20.7625 21.4502 20.2125 21.4502 19.4562C21.4502 18.9062 21.2439 18.4937 20.7627 17.4625L12.7877 2.61249C12.2377 1.58124 11.7564 1.23749 11.0002 1.23749C10.2439 1.23749 9.7627 1.58124 9.2127 2.61249L1.2377 17.4625C0.687695 18.4937 0.481445 18.9062 0.481445 19.4562C0.550195 20.2125 1.03145 20.7625 2.13145 20.7625ZM11.0002 18.4937C9.9002 18.4937 9.3502 17.8062 9.3502 17.05C9.3502 16.225 9.9002 15.6062 11.0002 15.6062C12.1002 15.6062 12.6502 16.2937 12.6502 17.05C12.6502 17.8062 12.1002 18.4937 11.0002 18.4937ZM9.83145 13.8875L9.28145 6.59999H12.7189L12.1689 13.8875H9.83145Z"
+      fill="#141414"
+    />
+  </svg>
+);
+
+export const InfoCircle = ({ className }: { className?: string }) => (
+  <svg
+    width="22"
+    height="22"
+    viewBox="0 0 22 22"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+    focusable="false"
+    aria-hidden="true"
+  >
+    <path
+      d="M11 21.3125C16.8438 21.3125 21.3125 16.8438 21.3125 11C21.3125 5.15625 16.8438 0.6875 11 0.6875C5.15625 0.6875 0.6875 5.15625 0.6875 11C0.6875 16.8438 5.15625 21.3125 11 21.3125ZM9.4875 17.5312V8.73125H12.5125V17.6H9.4875V17.5312ZM11 6.875C9.83125 6.875 9.14375 6.25625 9.14375 5.225C9.14375 4.19375 9.83125 3.575 11 3.575C12.1687 3.575 12.8563 4.19375 12.8563 5.225C12.8563 6.25625 12.1687 6.875 11 6.875Z"
+      fill="#141414"
     />
   </svg>
 );

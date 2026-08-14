@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
 
 import { GetServerSideProps } from 'next';
@@ -16,7 +17,7 @@ import {
   Words,
 } from '#app/components/icons';
 import nodeLogger from '#lib/logger.node';
-import logResponseTime from '#server/utilities/logResponseTime';
+import logResponseTime from '#utilities/logResponseTime';
 import isLocal from '#lib/utilities/isLocal';
 
 import {
@@ -24,7 +25,6 @@ import {
   SERVER_SIDE_RENDER_REQUEST_RECEIVED,
 } from '#app/lib/logger.const';
 import { Services, Variants } from '#models/types/global';
-import extractHeaders from '#server/utilities/extractHeaders';
 import styles from './wrappedStyles';
 
 interface PageDataParams extends ParsedUrlQuery {

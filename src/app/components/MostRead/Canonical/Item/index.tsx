@@ -48,6 +48,7 @@ export const MostReadLink = ({
   position,
   isLive,
   eventTrackingData,
+  isAmp = false,
 }: PropsWithChildren<MostReadLinkProps>) => {
   const positionIndex =
     typeof position === 'string' ? parseInt(position, 10) : position;
@@ -73,10 +74,19 @@ export const MostReadLink = ({
         href={href}
         {...clickTrackerHandler}
       >
-        {isLive && (
+        {isLive && !isAmp && (
           <span data-e2e="most-read-live-pulse">
             <LiveLabel />
           </span>
+        )}
+        {isAmp && (
+          <>
+            {'{{#isLive}}'}
+            <span data-e2e="most-read-live-pulse">
+              <LiveLabel />
+            </span>
+            {'{{/isLive}}'}
+          </>
         )}
         {title}
       </a>

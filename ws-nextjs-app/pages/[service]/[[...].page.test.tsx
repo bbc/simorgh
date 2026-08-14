@@ -6,8 +6,9 @@ import handleArticleRoute from './articles/handleArticleRoute';
 import handleHomepageRoute from './homepage/handleHomepageRoute';
 import handleOnDemandAudioRoute from './onDemandAudio/handleOnDemandAudioRoute';
 import handleOnDemandTvRoute from './onDemandTv/handleOnDemandTvRoute';
+import handleOfflineRoute from './offline/handleOfflineRoute';
 
-jest.mock('#server/utilities/logResponseTime', () => ({
+jest.mock('#utilities/logResponseTime', () => ({
   __esModule: true,
   default: jest.fn(),
 }));
@@ -33,6 +34,11 @@ jest.mock('./onDemandAudio/handleOnDemandAudioRoute', () => ({
 }));
 
 jest.mock('./onDemandTv/handleOnDemandTvRoute', () => ({
+  __esModule: true,
+  default: jest.fn().mockResolvedValue({}),
+}));
+
+jest.mock('./offline/handleOfflineRoute', () => ({
   __esModule: true,
   default: jest.fn().mockResolvedValue({}),
 }));
@@ -190,6 +196,32 @@ describe('catch-all route', () => {
       await getServerSideProps(context);
 
       expect(handleOnDemandTvRoute).toHaveBeenCalled();
+    });
+  });
+
+  describe('Offline page type', () => {
+    it('should call the Offline route handler if a variant offline page is requested using URL', async () => {
+      const context = {
+        ...commonContext,
+        resolvedUrl: '/zhongwen/trad/offline',
+      };
+
+      await getServerSideProps(context);
+
+      expect(handleOfflineRoute).toHaveBeenCalled();
+    });
+
+    it('should call the Offline route handler if offline is requested using page-type header', async () => {
+      const context = {
+        ...commonContext,
+        req: {
+          headers: { 'page-type': 'offline' },
+        } as unknown as GetServerSidePropsContext['req'],
+      };
+
+      await getServerSideProps(context);
+
+      expect(handleOfflineRoute).toHaveBeenCalled();
     });
   });
 

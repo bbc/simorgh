@@ -213,6 +213,10 @@ exports[`AmpMostRead should render as expected 1`] = `
   z-index: 1;
 }
 
+.emotion-7:visited {
+  color: #6E6E73;
+}
+
 @media (min-width: 25rem) {
   .emotion-7 {
     font-size: 1.125rem;
@@ -305,6 +309,7 @@ exports[`AmpMostRead should render as expected 1`] = `
             >
               <span
                 class="emotion-5"
+                data-e2e="most-read-rank"
               >
                 {{rankTranslation}}
               </span>
@@ -317,6 +322,7 @@ exports[`AmpMostRead should render as expected 1`] = `
                 class="emotion-7"
                 href="{{href}}"
               >
+                {{#isLive}}
                 <span
                   data-e2e="most-read-live-pulse"
                 >
@@ -350,6 +356,7 @@ exports[`AmpMostRead should render as expected 1`] = `
                     </span>
                   </span>
                 </span>
+                {{/isLive}}
                 {{title}}
               </a>
             </div>

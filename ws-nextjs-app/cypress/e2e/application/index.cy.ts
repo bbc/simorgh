@@ -1,5 +1,5 @@
 import SERVICES from '#app/lib/config/services';
-import appConfig from '#server/utilities/serviceConfigs';
+import appConfig from '#utilities/serviceConfigs';
 
 const PUBLIC_SERVICES = [
   'archive',
@@ -12,7 +12,7 @@ const PUBLIC_SERVICES = [
   'ws',
 ];
 
-const NOT_LIVE_SERVICES = ['magyarul', 'romania', 'dari'];
+const NOT_LIVE_SERVICES = ['dari'];
 
 const servicesToIgnore = [...PUBLIC_SERVICES, ...NOT_LIVE_SERVICES];
 

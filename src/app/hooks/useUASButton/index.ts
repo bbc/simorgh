@@ -1,24 +1,14 @@
-import { use, useCallback, useState } from 'react';
+import { use } from 'react';
+import { useMutation, useQueryClient } from '@tanstack/react-query';
 import useUASFetchSaveStatus from '#app/hooks/useUASFetchSaveStatus';
-import { AccountContext } from '#app/contexts/AccountContext';
+import useUASMetadataSync from '#app/hooks/useUASMetadataSync';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import isLocal from '#app/lib/utilities/isLocal';
 import uasApiRequest from '#app/lib/uasApi';
-import {
-  buildGlobalId,
-  FAVOURITES_CONFIG,
-  createFavouritesPayload,
-} from '#app/lib/uasApi/uasUtility';
-import useToggle from '../useToggle';
-
-/** A hook that fetches an article's saved status and controls showing the save UAS button
- * based on feature toggles and sign in status,
- * with room to later expand for toggling the save state based on user actions. */
-
-interface UseUASButtonProps {
-  articleId: string;
-  articleTitle: string;
-}
+import { buildGlobalId, FAVOURITES_CONFIG } from '#app/lib/uasApi/uasUtility';
+import type { SaveArticlePageData } from '#app/lib/utilities/extractSaveArticleProps';
+import uasKeys from '#app/lib/uasApi/queryKeys';
+import { AccountContext } from '#app/contexts/AccountContext';
+import upsertArticleData from '#app/lib/uasApi/upsertArticleData';
 
 enum UASAction {
   SAVE = 'save',
@@ -26,75 +16,79 @@ enum UASAction {
 }
 
 interface UseUASButtonReturn {
-  showButton: boolean;
   isSaved: boolean;
   isLoading: boolean;
+  isUpdating: boolean;
   error: Error | null;
-  handleSaveAction: (action: UASAction) => Promise<void>;
+  handleSaveAction: (action: UASAction) => void;
+}
+export interface UseUASButtonProps {
+  articleId: string;
+  saveArticlePageData: SaveArticlePageData;
 }
 
+// NOTE: Using this hook anywhere in the app will eagerly pull TanStack Query into the bundle.
+// All TanStack-related code must live exclusively inside the lazy boundary.
 const useUASButton = ({
   articleId,
-  articleTitle,
+  saveArticlePageData,
 }: UseUASButtonProps): UseUASButtonReturn => {
-  const { isSignedIn } = use(AccountContext);
   const { service } = use(ServiceContext);
-  const { enabled: featureToggleOn = false, value: accountService = '' } =
-    useToggle('uasPersonalization');
-  const [isSaving, setIsSaving] = useState(false);
-  const [saveError, setSaveError] = useState<Error | null>(null);
+  const { hashedUserId = '', isRefreshAvailable } = use(AccountContext);
+  const queryClient = useQueryClient();
+  const { isSaved, isLoading, error, savedMetadata } =
+    useUASFetchSaveStatus(articleId);
 
-  const isUASEnabled =
-    featureToggleOn &&
-    (isLocal()
-      ? accountService?.toString().split('|').includes(service)
-      : true);
-
-  const showButton = isUASEnabled && isSignedIn;
-
-  const { isSaved, isLoading, error, setIsSaved } = useUASFetchSaveStatus(
-    showButton ? articleId : '',
-  );
-
-  const handleSaveAction = useCallback(
-    async (action: UASAction) => {
-      if (isSaving) return;
-
-      setIsSaving(true);
-      try {
-        setSaveError(null);
-
-        if (action === UASAction.SAVE) {
-          const body = createFavouritesPayload({
-            articleId,
-            service,
-            articleTitle,
-          });
-          await uasApiRequest('POST', FAVOURITES_CONFIG.activityType, { body });
-          setIsSaved(true);
-        } else {
-          const globalId = buildGlobalId(articleId);
-          await uasApiRequest('DELETE', FAVOURITES_CONFIG.activityType, {
-            globalId,
-          });
-          setIsSaved(false);
-        }
-      } catch (err) {
-        const saveErr = err instanceof Error ? err : new Error(String(err));
-        setSaveError(saveErr);
-      } finally {
-        setIsSaving(false);
+  const mutation = useMutation({
+    mutationFn: async (action: UASAction) => {
+      if (action === UASAction.SAVE) {
+        return upsertArticleData({
+          saveArticlePageData,
+          articleId,
+          service,
+          isRefreshAvailable,
+        });
       }
+      const globalId = buildGlobalId(articleId);
+      await uasApiRequest('DELETE', FAVOURITES_CONFIG.activityType, {
+        globalId,
+        isRefreshAvailable,
+      });
+      return undefined;
     },
-    [articleId, service, articleTitle, isSaving, setIsSaved],
-  );
+    onSuccess: (metadata, action) => {
+      const isSavedAction = action === UASAction.SAVE;
+      queryClient.setQueryData(
+        uasKeys.favouriteStatus(hashedUserId, articleId),
+        {
+          isSaved: isSavedAction,
+          metadata: isSavedAction ? metadata : undefined,
+        },
+      );
+      queryClient.invalidateQueries({
+        queryKey: uasKeys.favouritesList(hashedUserId),
+      });
+    },
+  });
 
-  return {
-    showButton,
+  const handleMetadataOutOfDate = () => {
+    mutation.mutate(UASAction.SAVE);
+  };
+
+  useUASMetadataSync({
+    saveArticlePageData,
+    articleId,
+    service,
     isSaved,
-    isLoading: isLoading || isSaving,
-    error: saveError || error,
-    handleSaveAction,
+    savedArticleMetadata: savedMetadata,
+    onMetadataOutOfDate: handleMetadataOutOfDate,
+  });
+  return {
+    isSaved,
+    isLoading,
+    isUpdating: mutation.isPending,
+    error: mutation.error || error,
+    handleSaveAction: mutation.mutate,
   };
 };
 

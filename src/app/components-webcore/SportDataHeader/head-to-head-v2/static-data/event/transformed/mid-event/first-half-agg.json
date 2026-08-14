@@ -1,0 +1,51 @@
+{
+  "id": "3n1x4716kyvjqbh4hdw42atje",
+  "eventGroupingLabel": "Europe - UEFA Europa Conference League - 1st Qualifying Round",
+  "startDateTime": "2022-07-14T14:00:00Z",
+  "tournamentId": "c7b8o53flg36wbuevfzy3lb10",
+  "status": "MidEvent",
+  "period": "firsthalf",
+  "periodLabel": {
+    "value": "9'",
+    "accessible": "9 minutes"
+  },
+  "venue": {
+    "name": "Stadions Daugava",
+    "shortName": "Stadions Daugava"
+  },
+  "tournament": {
+    "id": "c7b8o53flg36wbuevfzy3lb10",
+    "name": "UEFA Europa Conference League",
+    "urn": "urn:bbc:sportsdata:football:tournament:c7b8o53flg36wbuevfzy3lb10"
+  },
+  "tournamentDescriptionLabel": "UEFA Europa Conference League - 1st Qualifying Round",
+  "home": {
+    "fullName": "Liepāja",
+    "shortName": "Liepāja",
+    "urn": "urn:bbc:sportsdata:football:team:liepja",
+    "score": "0",
+    "runningScores": {
+      "fulltime": "0",
+      "aggregate": "0"
+    },
+    "actions": []
+  },
+  "away": {
+    "fullName": "Gjilani",
+    "shortName": "Gjilani",
+    "urn": "urn:bbc:sportsdata:football:team:gjilani",
+    "score": "0",
+    "runningScores": {
+      "fulltime": "0",
+      "aggregate": "1"
+    },
+    "actions": []
+  },
+  "time": {
+    "accessibleTime": "15:00",
+    "displayTimeUK": "15:00",
+    "timeCertainty": true
+  },
+  "date": "Thu 14 Jul 2022",
+  "accessibleEventSummary": "Liepāja 0 , Gjilani 0"
+}

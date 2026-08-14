@@ -1,9 +1,12 @@
-/* eslint-disable import/no-relative-packages */
+/* eslint-disable import/extensions */
 import { pathsToModuleNameMapper } from 'ts-jest';
 import type { Config } from 'jest';
-import nextJest from 'next/jest';
-import { compilerOptions } from '../tsconfig.json';
+import nextJest from 'next/jest.js';
+import ts from 'typescript';
 
+const configFile = ts.readConfigFile('./tsconfig.json', ts.sys.readFile);
+
+const { compilerOptions } = configFile.config;
 const { ...compilerOptionsPaths } = compilerOptions.paths;
 
 const createJestConfig = nextJest({ dir: './' });
@@ -19,13 +22,17 @@ const buildConfig = async (config: Config): Promise<Config> => {
   })();
 };
 
+const moduleNameMapper = pathsToModuleNameMapper(compilerOptionsPaths, {
+  prefix: '<rootDir>/',
+});
+
 export default async (): Promise<Config> => {
   const canonicalIntegrationTests = await buildConfig({
     displayName: 'Integration Tests - Canonical',
     testEnvironment: './integration/IntegrationTestEnvironment.ts',
     testEnvironmentOptions: { platform: 'canonical' },
     modulePaths: ['../'],
-    moduleNameMapper: pathsToModuleNameMapper(compilerOptionsPaths),
+    moduleNameMapper,
     setupFilesAfterEnv: ['./setupTests.ts'],
     testMatch: ['**/integration/!(utils)/**/*.test.ts'],
     testPathIgnorePatterns: ['.*lite\\.test\\.ts$', '.*amp\\.test\\.ts$'],
@@ -36,7 +43,7 @@ export default async (): Promise<Config> => {
     testEnvironment: './integration/IntegrationTestEnvironment.ts',
     testEnvironmentOptions: { platform: 'amp' },
     modulePaths: ['../'],
-    moduleNameMapper: pathsToModuleNameMapper(compilerOptionsPaths),
+    moduleNameMapper,
     setupFilesAfterEnv: ['./setupTests.ts'],
     testMatch: ['**/integration/!(utils)/**/*.test.ts'],
     testPathIgnorePatterns: ['.*lite\\.test\\.ts$', '.*canonical\\.test\\.ts$'],
@@ -47,7 +54,7 @@ export default async (): Promise<Config> => {
     testEnvironment: './integration/IntegrationTestEnvironment.ts',
     testEnvironmentOptions: { platform: 'lite' },
     modulePaths: ['../'],
-    moduleNameMapper: pathsToModuleNameMapper(compilerOptionsPaths),
+    moduleNameMapper,
     setupFilesAfterEnv: ['./setupTests.ts'],
     testMatch: ['**/integration/!(utils)/**/*.test.ts'],
     testPathIgnorePatterns: ['.*canonical\\.test\\.ts$', '.*amp\\.test\\.ts$'],
@@ -56,7 +63,7 @@ export default async (): Promise<Config> => {
   const unitTests = await buildConfig({
     displayName: 'Unit Tests',
     modulePaths: ['../'],
-    moduleNameMapper: pathsToModuleNameMapper(compilerOptionsPaths),
+    moduleNameMapper,
     setupFilesAfterEnv: ['./setupTests.ts', 'jest-expect-message'],
     snapshotSerializers: ['@emotion/jest/serializer'],
     testEnvironment: 'jsdom',
@@ -64,6 +71,7 @@ export default async (): Promise<Config> => {
       '**/__tests__/**/*.{js,jsx,ts,tsx}',
       '**/?(*.)+(spec|test).{js,jsx,ts,tsx}',
       '!**/integration/!(utils)/**/*',
+      '!**/playwright/**/*',
     ],
   });
 

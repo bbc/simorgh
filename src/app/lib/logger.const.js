@@ -16,6 +16,7 @@ const logCodes = {
   DATA_RESPONSE_FROM_CACHE: 'data_response_from_cache',
   BFF_FETCH_ERROR: 'bff_fetch_error',
   IDCTA_FETCH_ERROR: 'idcta_fetch_error',
+  UAS_API_ERROR: 'uas_api_error',
 
   // Files
   LOCAL_SENDFILE_ERROR: 'local_sendfile_error',
@@ -83,12 +84,21 @@ const logCodes = {
 
   // Toggle API
   TOGGLE_API_RESPONSE_TIME: 'toggle_api_response_time',
+  TOGGLE_API_REQUEST_RECEIVED: 'toggle_api_request_received',
+  TOGGLE_API_FETCH_ERROR: 'toggle_api_fetch_error',
 
   // Logging
   ATI_LOGGING_ERROR: 'ati_logging_error',
 
   // ThemeProvider error
   THEME_PROVIDER_ERROR: 'theme_provider_error',
+
+  // Build manifest errors
+  BUILD_MANIFEST_CSS_READ_ERROR: 'build_manifest_css_read_error',
+  DYNAMIC_IMPORT_CSS_READ_ERROR: 'dynamic_import_css_read_error',
+
+  // AMP/Lite CSS vendor-prefix optimisation
+  AMP_LITE_CSS_AUTOPREFIXER_ERROR: 'amp_lite_css_autoprefixer_error',
 };
 
 module.exports = logCodes;

@@ -1,0 +1,198 @@
+name: Cypress E2E - Page Types
+on:
+  pull_request:
+    branches:
+      - '**'
+permissions:
+  contents: read
+
+jobs:
+  build-matrix:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.generate-matrix.outputs.matrix }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js (from .nvmrc)
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+
+      - name: Generate dynamic page-types group matrix
+        id: generate-matrix
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          matrix=$(node <<'NODE'
+          const { readFileSync, readdirSync, statSync } = require('fs');
+          const { join } = require('path');
+
+          const GROUP_COUNT = 3;
+          const root = 'ws-nextjs-app/cypress/e2e/pageTypes';
+          const preferredGroups = [
+            ['articlePage'],
+            ['homePage', 'onDemandAudio'],
+            [
+              'topicPage',
+              'mostReadPage',
+              'livePage',
+              'storyPage',
+              'liveRadioPage',
+              'onDemandTV',
+              'errorPage404',
+              'photoGalleryPage',
+              'mediaAssetPage',
+              'send',
+              'languagesPage',
+              'liveTvPage',
+              'avEmbed',
+            ],
+          ];
+
+          const nodeVersion = readFileSync('.nvmrc', 'utf8').trim();
+
+          if (!nodeVersion) {
+            throw new Error('Detected empty Node version in .nvmrc');
+          }
+
+          console.error(`Detected Node version from .nvmrc: ${nodeVersion}`);
+
+          const walk = dir =>
+            readdirSync(dir).flatMap(name => {
+              const fullPath = join(dir, name);
+              if (statSync(fullPath).isDirectory()) {
+                return walk(fullPath);
+              }
+              return fullPath;
+            });
+
+          const specFiles = walk(root)
+            .filter(file => file.endsWith('index.cy.ts'))
+            .sort();
+
+          if (!specFiles.length) {
+            throw new Error('No page-types index.cy.ts files found.');
+          }
+
+          const specByPageType = new Map(
+            specFiles.map(file => {
+              const pageType = file.split('/').slice(-2, -1)[0];
+              return [pageType, `./${file.replace('ws-nextjs-app/', '')}`];
+            }),
+          );
+
+          const groups = preferredGroups.map(pageTypes =>
+            pageTypes.filter(pageType => specByPageType.has(pageType)),
+          );
+
+          const assignedPageTypes = new Set(groups.flat());
+          const unassignedPageTypes = [...specByPageType.keys()]
+            .filter(pageType => !assignedPageTypes.has(pageType))
+            .sort();
+
+          unassignedPageTypes.forEach(pageType => {
+            const targetGroupIndex = groups.reduce(
+              (smallestIndex, currentGroup, currentIndex, allGroups) =>
+                currentGroup.length < allGroups[smallestIndex].length
+                  ? currentIndex
+                  : smallestIndex,
+              0,
+            );
+
+            groups[targetGroupIndex].push(pageType);
+          });
+
+          const include = groups
+            .map((specs, index) => ({ specs, index }))
+            .filter(({ specs }) => specs.length > 0)
+            .map(({ specs, index }) => ({
+              'node-version': nodeVersion,
+              'group-name': `group-${index + 1}`,
+              'page-types': specs.join(','),
+            }));
+
+          process.stdout.write(JSON.stringify({ include }));
+          NODE
+          )
+
+          {
+            echo 'matrix<<EOF'
+            echo "${matrix}"
+            echo 'EOF'
+          } >> "$GITHUB_OUTPUT"
+
+  cypress-run:
+    needs: build-matrix
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJSON(needs.build-matrix.outputs.matrix) }}
+    env:
+      CI: true
+      LOG_LEVEL: 'error'
+      CYPRESS_SKIP_EU: true
+      CYPRESS_SMOKE: true
+      CYPRESS_APP_ENV: 'local'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js ${{ matrix['node-version'] }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix['node-version'] }}
+
+      - name: Add bbc.com domain
+        run: sudo echo "127.0.0.1 localhost.bbc.com" | sudo tee -a /etc/hosts
+
+      - name: Install Cypress dependency (Next.js app)
+        run: |
+          chmod +x ./scripts/installCypress.sh
+          ./scripts/installCypress.sh ws-nextjs-app
+
+      - name: Install Cypress binary (Next.js app)
+        working-directory: ws-nextjs-app
+        run: yarn cypress:install
+
+      - name: Build group spec list (${{ matrix['group-name'] }})
+        id: build-specs
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          page_types="${{ matrix['page-types'] }}"
+          IFS=',' read -r -a type_array <<< "$page_types"
+
+          specs=''
+          for page_type in "${type_array[@]}"; do
+            spec="./cypress/e2e/pageTypes/${page_type}/index.cy.ts"
+            if [ -z "$specs" ]; then
+              specs="$spec"
+            else
+              specs="$specs,$spec"
+            fi
+          done
+
+          echo "Page types under test: $page_types"
+          echo "specs=$specs" >> "$GITHUB_OUTPUT"
+
+      - name: Run Simorgh NextJS E2Es (${{ matrix['group-name'] }})
+        uses: cypress-io/github-action@v6
+        with:
+          install: false
+          working-directory: ws-nextjs-app
+          build: yarn build
+          start: yarn start
+          command: yarn exec cypress run --browser chrome --spec ${{ steps.build-specs.outputs.specs }}
+
+      - name: Upload Cypress reports (${{ matrix['group-name'] }})
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-page-types-reports-${{ matrix['group-name'] }}
+          path: ws-nextjs-app/cypress/results/*.xml
+          if-no-files-found: ignore

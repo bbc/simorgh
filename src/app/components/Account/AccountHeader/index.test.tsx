@@ -3,11 +3,6 @@ import { render } from '#app/components/react-testing-library-with-providers';
 import { IdctaConfig } from '#app/models/types/account';
 import AccountHeader from '.';
 
-jest.mock('#hooks/useHydrationDetection', () => ({
-  __esModule: true,
-  default: () => true,
-}));
-
 const idctaConfig: IdctaConfig = {
   'id-availability': 'GREEN',
   unavailable_url: 'https://example.com/unavailable',
@@ -32,7 +27,7 @@ describe('AccountHeader', () => {
   it('shows Sign in when signed out and account toggle is enabled for service', async () => {
     renderWithProviders();
 
-    const link = await screen.findByRole('link', { name: 'लॉग‑इन' });
+    const link = await screen.findByRole('link', { name: 'साइन इन' });
     expect(link).toHaveAttribute(
       'href',
       expect.stringContaining('https://example.com/signin'),
@@ -50,15 +45,35 @@ describe('AccountHeader', () => {
     expect(screen.queryByRole('link')).toBeNull();
   });
 
-  it('shows Your Account when signed in', async () => {
+  it('shows Settings when signed in', async () => {
     renderWithProviders({ initialIsSignedIn: true });
 
-    const link = await screen.findByRole('link', { name: 'आपका अकाउंट' });
+    const link = await screen.findByRole('link', { name: 'आपका एकाउंट' });
     expect(link).toHaveAttribute(
       'href',
       expect.stringContaining('https://example.com/settings'),
     );
     const icon = link.querySelector('svg');
     expect(icon).toBeInTheDocument();
+  });
+
+  it('keeps an accessible name in the default variant when the label is visually hidden', async () => {
+    render(<AccountHeader variant="default" />, {
+      service: 'hindi',
+      idctaConfig,
+    });
+
+    const link = await screen.findByRole('link', { name: 'साइन इन' });
+    expect(link).toHaveAttribute('aria-label', 'साइन इन');
+    expect(link).toHaveAttribute(
+      'href',
+      expect.stringContaining('https://example.com/signin'),
+    );
+  });
+
+  it('renders synchronously on first render, without waiting for hydration', () => {
+    renderWithProviders();
+
+    expect(screen.getByRole('link', { name: 'साइन इन' })).toBeVisible();
   });
 });

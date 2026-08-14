@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
     "target": "es6",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -24,24 +23,28 @@
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": false,
     "paths": {
-      "#app/*": ["src/app/*"],
-      "#src/*": ["src/*"],
-      "#nextjs/*": ["ws-nextjs-app/*"],
-      "#contexts/*": ["src/app/contexts/*"],
-      "#components/*": ["src/app/legacy/components/*"],
-      "#containers/*": ["src/app/legacy/containers/*"],
-      "#cypress/*": ["cypress/*"],
-      "#data/*": ["data/*"],
-      "#hooks/*": ["src/app/hooks/*"],
-      "#lib/*": ["src/app/lib/*"],
-      "#psammead/*": ["src/app/legacy/psammead/*"],
-      "#models/*": ["src/app/models/*"],
-      "#testHelpers/*": ["src/testHelpers/*"],
-      "#pages/*": ["src/app/pages/*"],
-      "#server/*": ["src/server/*"],
-      "#storybook/*": [".storybook/*"]
+      "#app/*": ["./src/app/*"],
+      "#src/*": ["./src/*"],
+      "#nextjs/*": ["./ws-nextjs-app/*"],
+      "#utilities/*": ["./ws-nextjs-app/utilities/*"],
+      "#contexts/*": ["./src/app/contexts/*"],
+      "#components/*": ["./src/app/legacy/components/*"],
+      "#containers/*": ["./src/app/legacy/containers/*"],
+      "#cypress/*": ["./cypress/*"],
+      "#data/*": ["./data/*"],
+      "#hooks/*": ["./src/app/hooks/*"],
+      "#lib/*": ["./src/app/lib/*"],
+      "#psammead/*": ["./src/app/legacy/psammead/*"],
+      "#models/*": ["./src/app/models/*"],
+      "#testHelpers/*": ["./src/testHelpers/*"],
+      "#pages/*": ["./src/app/pages/*"],
+      "#storybook/*": ["./.storybook/*"]
     }
   },
   "include": ["src/**/*", "src/app/legacy/**/*.ts*"],
   "exclude": ["node_modules", "build"]
+  ,
+  "plugins": [
+    { "name": "typescript-plugin-css-modules" }
+  ]
 }

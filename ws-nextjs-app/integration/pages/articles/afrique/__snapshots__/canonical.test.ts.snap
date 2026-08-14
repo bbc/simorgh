@@ -28,7 +28,7 @@ exports[`Canonical Articles Media Loader renders a figure caption 1`] = `
     type="button"
   >
     <span
-      class="css-2ozlq5"
+      class="css-5ku87v"
     >
       Play video, ""มหาวิหารน้ำแข็ง" สถาปัตยกรรมงดงามที่ธรรมชาติรังสรรค์ในสวิตเซอร์แลนด์", Durée 0,30
     </span>
@@ -38,7 +38,7 @@ exports[`Canonical Articles Media Loader renders a figure caption 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="css-vja2s5 e1xc513p1"
+        class="css-vja2s5 ew59ay91"
         focusable="false"
         height="12"
         viewBox="0 0 12 12"
@@ -68,7 +68,7 @@ exports[`Canonical Articles Media Loader renders a figure caption 1`] = `
     </time>
   </button>
   <div
-    class="css-10dp2sw"
+    class="css-e398u2"
     style="padding-bottom:0;overflow:hidden"
   >
     <img
@@ -105,7 +105,7 @@ exports[`Canonical Articles Media Loader renders a placeholder 1`] = `
     type="button"
   >
     <span
-      class="css-2ozlq5"
+      class="css-5ku87v"
     >
       Play video, ""มหาวิหารน้ำแข็ง" สถาปัตยกรรมงดงามที่ธรรมชาติรังสรรค์ในสวิตเซอร์แลนด์", Durée 0,30
     </span>
@@ -115,7 +115,7 @@ exports[`Canonical Articles Media Loader renders a placeholder 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="css-vja2s5 e1xc513p1"
+        class="css-vja2s5 ew59ay91"
         focusable="false"
         height="12"
         viewBox="0 0 12 12"
@@ -145,7 +145,7 @@ exports[`Canonical Articles Media Loader renders a placeholder 1`] = `
     </time>
   </button>
   <div
-    class="css-10dp2sw"
+    class="css-e398u2"
     style="padding-bottom:0;overflow:hidden"
   >
     <img
@@ -186,7 +186,7 @@ exports[`Canonical Articles Media Loader renders a valid container 1`] = `
       type="button"
     >
       <span
-        class="css-2ozlq5"
+        class="css-5ku87v"
       >
         Play video, ""มหาวิหารน้ำแข็ง" สถาปัตยกรรมงดงามที่ธรรมชาติรังสรรค์ในสวิตเซอร์แลนด์", Durée 0,30
       </span>
@@ -196,7 +196,7 @@ exports[`Canonical Articles Media Loader renders a valid container 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="css-vja2s5 e1xc513p1"
+          class="css-vja2s5 ew59ay91"
           focusable="false"
           height="12"
           viewBox="0 0 12 12"
@@ -226,7 +226,7 @@ exports[`Canonical Articles Media Loader renders a valid container 1`] = `
       </time>
     </button>
     <div
-      class="css-10dp2sw"
+      class="css-e398u2"
       style="padding-bottom:0;overflow:hidden"
     >
       <img
@@ -247,7 +247,7 @@ exports[`Canonical Articles Media Loader renders a valid container 1`] = `
       role="text"
     >
       <span
-        class="css-2ozlq5"
+        class="css-5ku87v"
       >
         Légende vidéo, 
       </span>

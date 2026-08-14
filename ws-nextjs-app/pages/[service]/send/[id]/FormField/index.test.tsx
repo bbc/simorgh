@@ -2,6 +2,7 @@ import {
   act,
   render,
 } from '#app/components/react-testing-library-with-providers';
+import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import * as FormContext from '../FormContext';
 import FormField, { FormComponentProps } from '.';
 import { Field } from '../types';
@@ -9,6 +10,12 @@ import { ContextProps } from '../FormContext';
 
 jest.mock('next/router', () => ({
   useRouter: () => ({ query: { id: 'u1234' } }),
+}));
+
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  default: jest.fn(),
 }));
 
 jest.mock('../FormContext', () => {
@@ -34,6 +41,8 @@ const ComponentWithContext = ({
 describe('FormField', () => {
   beforeEach(() => {
     jest.restoreAllMocks();
+
+    mockMatchMedia();
   });
 
   it('should render a text input with an associated label', async () => {
@@ -60,7 +69,6 @@ describe('FormField', () => {
 
     expect(label).toBeInTheDocument();
     expect(text).toBeInTheDocument();
-    expect(container).toMatchSnapshot();
   });
 
   it('should render a textarea input with an associated label', async () => {
@@ -87,7 +95,6 @@ describe('FormField', () => {
 
     expect(label).toBeInTheDocument();
     expect(textArea).toBeInTheDocument();
-    expect(container).toMatchSnapshot();
   });
 
   it('should render a textarea with a maxiumum word limit if provided', async () => {
@@ -157,7 +164,6 @@ describe('FormField', () => {
 
     expect(label).toBeInTheDocument();
     expect(text).toBeInTheDocument();
-    expect(container).toMatchSnapshot();
   });
 
   it('should render a checkbox input with an associated label', async () => {
@@ -186,7 +192,6 @@ describe('FormField', () => {
 
     expect(label).toBeInTheDocument();
     expect(checkboxInput).toBeInTheDocument();
-    expect(container).toMatchSnapshot();
   });
 
   it('should render a tel input with an associated label', async () => {
@@ -215,7 +220,6 @@ describe('FormField', () => {
 
     expect(label).toBeInTheDocument();
     expect(telephoneInput).toBeInTheDocument();
-    expect(container).toMatchSnapshot();
   });
 
   it('should render a required input with an associated label', async () => {
@@ -252,7 +256,13 @@ describe('FormField', () => {
       );
     });
 
-    expect(container).toMatchSnapshot();
+    const label = container.querySelector('label[for=testAllyID]');
+    const input = container.querySelector('input[id=testAllyID][type=text]');
+
+    expect(label).toBeInTheDocument();
+    expect(input).toBeInTheDocument();
+    expect(label).toHaveTextContent('This is a required text field');
+    expect(label).not.toHaveTextContent(/\boptional\b/i);
   });
 
   it.each([

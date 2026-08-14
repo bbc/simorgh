@@ -1,10 +1,11 @@
 import { use } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
+import AccountHeader from '#app/components/Account/AccountHeader';
 import styles from './index.styles';
 
-const GLOBAL_LANGUAGES_PATH = '/ws/languages';
+export const GLOBAL_LANGUAGES_PATH = '/ws/languages';
 
-const isGlobalLanguageHomepage = (inputPathname?: string) => {
+export const isGlobalLanguageHomepage = (inputPathname?: string) => {
   if (!inputPathname) return false;
 
   const pathname = inputPathname?.split(/[?#]/)?.[0]?.replace(/\/$/, '');
@@ -44,6 +45,7 @@ const NewLogoBanner = () => {
           />
         </svg>
       </a>
+      <AccountHeader variant="default" />
     </div>
   );
 };

@@ -34,6 +34,7 @@ export interface MostReadLinkProps {
   position: number | string;
   isLive?: boolean | string;
   eventTrackingData?: EventTrackingData;
+  isAmp?: boolean;
 }
 
 type ArticleSource = 'cps' | 'optimo';

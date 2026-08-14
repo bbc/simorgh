@@ -1,8 +1,9 @@
 import Cookie from 'js-cookie';
 import onClient from '#app/lib/utilities/onClient';
 import refreshTokens from './refreshTokens';
+import UasError from '../errors';
 
-const TOKEN_COOKIE_NAME = 'ckns_id';
+export const TOKEN_COOKIE_NAME = 'ckns_id';
 const TOKEN_EXPIRY_BUFFER_MS = 5 * 60 * 1000; // 5 minutes before expiry
 const TOKEN_EXPIRY_TIMESTAMP = 'tkn-exp';
 
@@ -12,7 +13,7 @@ interface DecodedTokenPayload {
 }
 
 // Lock mechanism to prevent parallel token refreshes
-let tokenRefreshPromise: Promise<void> | null = null;
+let tokenRefreshPromise: Promise<Response> | null = null;
 
 const decodeBase64JsonString = (encodedString: string): unknown => {
   try {
@@ -44,15 +45,23 @@ export const isTokenValidFor = (durationMs: number, token: string): boolean => {
 
 const hasValidTokens = (): boolean => {
   const idToken = Cookie.get(TOKEN_COOKIE_NAME);
+
   if (!idToken) return false;
   return isTokenValidFor(TOKEN_EXPIRY_BUFFER_MS, idToken);
 };
 
 // Ensure tokens are valid before making the API request.
 // This will refresh tokens if they are expired or about to expire.
-export const refreshTokensIfExpired = async (): Promise<void> => {
-  if (!onClient()) return;
-  if (hasValidTokens()) return;
+// If isRefreshAvailable is false and tokens are already invalid, throws since
+// the request will fail without a valid token and refresh cannot be attempted.
+export const refreshTokensIfExpired = async (
+  isRefreshAvailable: boolean,
+): Promise<void> => {
+  if (!onClient() || hasValidTokens()) return;
+
+  if (!isRefreshAvailable) {
+    throw new UasError(401);
+  }
 
   // If refresh is already in progress, wait for it instead of starting a new one
   if (tokenRefreshPromise) {
@@ -60,20 +69,9 @@ export const refreshTokensIfExpired = async (): Promise<void> => {
     return;
   }
 
-  // Create a new refresh promise and store it
-  tokenRefreshPromise = (async () => {
-    try {
-      await refreshTokens();
-    } catch (error) {
-      throw new Error(
-        `Error while ensuring tokens: ${error instanceof Error ? error.message : String(error)}`,
-      );
-    } finally {
-      // Clear the promise after refresh completes (success or failure)
-      tokenRefreshPromise = null;
-    }
-  })();
+  tokenRefreshPromise = refreshTokens().finally(() => {
+    tokenRefreshPromise = null;
+  });
 
-  // Wait for the refresh to complete
   await tokenRefreshPromise;
 };

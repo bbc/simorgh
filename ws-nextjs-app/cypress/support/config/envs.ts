@@ -4,6 +4,7 @@ export type EnvironmentConfigType = {
   assetUrl: string;
   assetOrigin: string;
   atiUrl: string;
+  reverbAtiUrl: string;
   avEmbedBaseUrlCanonical: string;
   avEmbedBaseUrlAmp: string;
   standaloneErrorPages: boolean;
@@ -11,7 +12,11 @@ export type EnvironmentConfigType = {
   togglesUrl: string;
 };
 
-type Environment = 'live' | 'test' | 'local';
+export type Environment = 'live' | 'test' | 'local';
+
+type CypressEnvironmentReader = {
+  env: (name: string) => string | boolean | undefined;
+};
 
 const config = {
   live: {
@@ -20,11 +25,12 @@ const config = {
     assetUrl: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public',
     assetOrigin: 'https://news.files.bbci.co.uk',
     atiUrl: 'https://a1.api.bbc.co.uk/hit.xiti?',
+    reverbAtiUrl: 'https://a1.api.bbc.co.uk/hit.xiti?',
     avEmbedBaseUrlCanonical: '',
     avEmbedBaseUrlAmp: 'https://web-cdn.api.bbci.co.uk',
     standaloneErrorPages: false,
     alwaysCheckForFallback: true,
-    togglesUrl: 'https://config.api.bbci.co.uk/',
+    togglesUrl: 'https://web-cdn.api.bbci.co.uk',
   },
   test: {
     baseUrl: 'https://www.test.bbc.com',
@@ -32,11 +38,12 @@ const config = {
     assetUrl: 'https://static.test.files.bbci.co.uk/ws/simorgh-assets/public',
     assetOrigin: 'https://news.test.files.bbci.co.uk',
     atiUrl: 'https://logws1363.ati-host.net/hit.xiti?',
+    reverbAtiUrl: 'https://logw363.ati-host.net/hit.xiti?',
     avEmbedBaseUrlCanonical: '',
     avEmbedBaseUrlAmp: 'https://web-cdn.test.api.bbci.co.uk',
     standaloneErrorPages: false,
     alwaysCheckForFallback: true,
-    togglesUrl: 'https://config.test.api.bbci.co.uk/',
+    togglesUrl: 'https://web-cdn.test.api.bbci.co.uk',
   },
   local: {
     baseUrl: 'http://localhost.bbc.com:7080',
@@ -44,25 +51,60 @@ const config = {
     assetUrl: 'http://localhost:7080',
     assetOrigin: 'http://localhost:7080',
     atiUrl: 'https://logws1363.ati-host.net/hit.xiti?',
+    reverbAtiUrl: 'https://logw363.ati-host.net/hit.xiti?',
     avEmbedBaseUrlCanonical: 'https://www.test.bbc.com',
     avEmbedBaseUrlAmp: 'https://web-cdn.test.api.bbci.co.uk',
+    togglesUrl: 'https://web-cdn.test.api.bbci.co.uk',
     standaloneErrorPages: true,
     alwaysCheckForFallback: false,
-    togglesUrl: 'https://config.test.api.bbci.co.uk/',
   },
 };
 
 const geoLocate = (conf: EnvironmentConfigType, isUk = false) => {
   if (!isUk) return conf;
 
-  // eslint-disable-next-line no-param-reassign
-  conf.baseUrl = conf.baseUrl.replace('.com', '.co.uk');
-  // eslint-disable-next-line no-param-reassign
-  conf.dataUrl = conf.dataUrl.replace('.com', '.co.uk');
-
-  return conf;
+  return {
+    ...conf,
+    baseUrl: conf.baseUrl.replace('.com', '.co.uk'),
+    dataUrl: conf.dataUrl.replace('.com', '.co.uk'),
+  };
 };
 
-export default typeof Cypress !== 'undefined'
-  ? geoLocate(config[Cypress.env('APP_ENV') as Environment], Cypress.env('UK'))
-  : (env: Environment, uk: boolean) => geoLocate(config[env], uk);
+const environmentConfig = config satisfies Record<
+  Environment,
+  EnvironmentConfigType
+>;
+
+const isEnvironment = (
+  value: string | boolean | undefined,
+): value is Environment =>
+  value === 'live' || value === 'test' || value === 'local';
+
+const getCypressEnvironmentReader = () => {
+  const { Cypress } = globalThis as typeof globalThis & {
+    Cypress?: CypressEnvironmentReader;
+  };
+
+  return Cypress;
+};
+
+export const getEnvConfig = (env: Environment, uk = false) =>
+  geoLocate(environmentConfig[env], uk);
+
+const getCurrentEnvConfig = () => {
+  const cypressEnvironmentReader = getCypressEnvironmentReader();
+  const currentEnvironment = cypressEnvironmentReader?.env('APP_ENV');
+
+  if (!isEnvironment(currentEnvironment)) {
+    return getEnvConfig('local');
+  }
+
+  return getEnvConfig(
+    currentEnvironment,
+    Boolean(cypressEnvironmentReader?.env('UK')),
+  );
+};
+
+export default getCypressEnvironmentReader()
+  ? getCurrentEnvConfig()
+  : (env: Environment, uk = false) => getEnvConfig(env, uk);

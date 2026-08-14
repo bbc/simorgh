@@ -3,11 +3,11 @@ import { TV_PAGE } from '#app/routes/utils/pageTypes';
 import PageDataParams from '#app/models/types/pageDataParams';
 import parseRoute from '#app/routes/utils/parseRoute';
 import { NOT_FOUND, OK } from '#app/lib/statusCodes.const';
-import getPageData from '#nextjs/utilities/pageRequests/getPageData';
+import getPageData from '#utilities/pageRequests/getPageData';
 import nodeLogger from '#lib/logger.node';
 import { ROUTING_INFORMATION } from '#app/lib/logger.const';
 import handleError from '#app/routes/utils/handleError';
-import getToggles from '#app/lib/utilities/getToggles/withCache';
+import fetchToggles from '#app/lib/utilities/fetchToggles';
 import isTest from '#app/lib/utilities/isTest';
 
 const logger = nodeLogger(__filename);
@@ -74,7 +74,7 @@ export default async (context: GetServerSidePropsContext) => {
     throw handleError('On Demand TV data is malformed', 500);
   }
 
-  const toggles = await getToggles(service);
+  const toggles = await fetchToggles({ service });
 
   // this keeps the recent episodes toggle matching the express route
   const showRecentEpisodes = toggles?.recentVideoEpisodes?.enabled;

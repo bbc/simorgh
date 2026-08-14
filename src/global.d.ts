@@ -31,7 +31,7 @@ declare global {
         }
       | object;
     bbcuser: {
-      getHashedId: () => null;
+      getHashedId: () => Promise<string | null>;
       isSignedIn: () => Promise<boolean>;
     };
     __reverb: {
@@ -55,7 +55,7 @@ declare global {
       bootstrap: () => void;
       cmd: { push: () => void };
     };
-    sendStaticBeacon: (url: string, data?: BodyInit | null) => boolean;
+    sendStaticBeacon: (url: string, data?: BodyInit | null) => void;
     processClientDeviceAndSendStaticBeacon: (props: {
       atiUrl?: string;
       reverbUrl?: string;

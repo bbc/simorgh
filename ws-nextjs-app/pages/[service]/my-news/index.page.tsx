@@ -2,18 +2,22 @@ import dynamic from 'next/dynamic';
 import { GetServerSideProps } from 'next';
 import { MY_NEWS_PAGE } from '#app/routes/utils/pageTypes';
 import PageDataParams from '#app/models/types/pageDataParams';
-import deriveVariant from '#nextjs/utilities/deriveVariant';
-import logResponseTime from '#server/utilities/logResponseTime';
-import getToggles from '#app/lib/utilities/getToggles/withCache';
+import deriveVariant from '#utilities/deriveVariant';
+import logResponseTime from '#utilities/logResponseTime';
+import fetchToggles from '#app/lib/utilities/fetchToggles';
 import { NOT_FOUND, OK } from '#app/lib/statusCodes.const';
 
 const MyNewsPage = dynamic(() => import('./MyNewsPage'));
 
 export const getServerSideProps: GetServerSideProps = async context => {
-  const { service, variant: variantFromUrl } = context.query as PageDataParams;
+  const {
+    service,
+    variant: variantFromUrl,
+    page,
+  } = context.query as PageDataParams;
   const variant = deriveVariant(variantFromUrl);
 
-  const toggles = await getToggles(service);
+  const toggles = await fetchToggles({ service });
   const isUasPersonalizationEnabled = toggles?.uasPersonalization?.enabled;
 
   if (!isUasPersonalizationEnabled) {
@@ -44,9 +48,13 @@ export const getServerSideProps: GetServerSideProps = async context => {
       status: OK,
       timeOnServer: Date.now(),
       pathname: `/${service}/my-news`,
+      page: page || null,
       pageData: {
         metadata: {
           type: MY_NEWS_PAGE,
+          atiAnalytics: {
+            pageIdentifier: 'my-news.page',
+          },
         },
       },
     },

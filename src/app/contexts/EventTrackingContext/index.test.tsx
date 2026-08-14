@@ -39,11 +39,11 @@ const TestComponent = () => {
 describe('Expected use', () => {
   it('should provide tracking data to all child components', () => {
     const {
-      metadata: { atiAnalytics },
+      metadata: { atiAnalytics, type },
     } = fixtureData;
 
     render(<TestComponent />, {
-      atiData: atiAnalytics,
+      pageMetadata: { atiAnalytics, type },
       service: 'pidgin',
       toggles: defaultToggles,
       pageType: STORY_PAGE,
@@ -55,6 +55,8 @@ describe('Expected use', () => {
 
     expect(trackingData).toEqual({
       campaignID: 'article-sty',
+      hashedId: null,
+      isSignedIn: false,
       pageIdentifier: 'news::pidgin.news.story.51745682.page',
       platform: 'canonical',
       producerId: '70',
@@ -65,7 +67,7 @@ describe('Expected use', () => {
 
   it('should provide tracking data to all child components using the ATI metadata block', () => {
     render(<TestComponent />, {
-      atiData: defaultATIData,
+      pageMetadata: { atiAnalytics: defaultATIData, type: HOME_PAGE },
       pageType: HOME_PAGE,
       pathname: '/kyrgyz',
       service: 'kyrgyz',
@@ -77,6 +79,8 @@ describe('Expected use', () => {
 
     expect(trackingData).toEqual({
       campaignID: 'index-home',
+      hashedId: null,
+      isSignedIn: false,
       pageIdentifier: 'kyrgyz.page',
       platform: 'canonical',
       producerId: '58',
@@ -93,7 +97,7 @@ describe('Expected use', () => {
     };
 
     render(<TestComponent />, {
-      atiData: defaultATIData,
+      pageMetadata: { atiAnalytics: defaultATIData, type: STORY_PAGE },
       toggles: eventTrackingToggle,
     });
 
@@ -134,7 +138,7 @@ describe('Expected use', () => {
   it('should provide an empty object for NextJS pages if atiData is provided', () => {
     render(<TestComponent />, {
       isNextJs: true,
-      atiData: defaultATIData,
+      pageMetadata: { atiAnalytics: defaultATIData, type: LIVE_PAGE },
       pageType: LIVE_PAGE,
       pathname: '/kyrgyz/live/c000000000o',
       service: 'kyrgyz',
@@ -159,7 +163,7 @@ describe('Expected use', () => {
 
   it('should provide an empty object if atiData properties are undefined', () => {
     render(<TestComponent />, {
-      atiData: undefined,
+      pageMetadata: { atiAnalytics: undefined, type: LIVE_PAGE },
       toggles: defaultToggles,
     });
 
@@ -175,7 +179,7 @@ describe('Error handling', () => {
     let errorMessage;
     try {
       render(<TestComponent />, {
-        atiData: defaultATIData,
+        pageMetadata: { atiAnalytics: defaultATIData, type: HOME_PAGE },
         // @ts-expect-error - testing handling of a page type that doesn't exist
         pageType: 'funky-page-type',
         toggles: defaultToggles,

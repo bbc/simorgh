@@ -1,6 +1,7 @@
 import App, { AppContext } from 'next/app';
 import { ATIData } from '#app/components/ATIAnalytics/types';
 import ThemeProvider from '#app/components/ThemeProvider';
+import ThemeProviderSCSSModules from '#app/components/ThemeProviderSCSSModules';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 import {
   PageTypes,
@@ -16,18 +17,20 @@ import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import { RequestContextProvider } from '#app/contexts/RequestContext';
 import { EventTrackingContextProvider } from '#app/contexts/EventTrackingContext';
 import { UserContextProvider } from '#app/contexts/UserContext';
-import extractHeaders from '#src/server/utilities/extractHeaders';
-import { getServerExperiments } from '#src/server/utilities/experimentHeader';
-import getToggles from '#app/lib/utilities/getToggles/withCache';
+import extractHeaders from '#utilities/extractHeaders';
+import { getServerExperiments } from '#utilities/experimentHeader';
+import fetchToggles from '#app/lib/utilities/fetchToggles';
 import getPathExtension from '#app/utilities/getPathExtension';
 import parseRoute from '#app/routes/utils/parseRoute';
-import addCspHeader from '#nextjs/utilities/addCspHeader';
-import derivePageType from '#nextjs/utilities/derivePageType';
-import addServiceChainHeader from '#nextjs/utilities/addServiceChainHeader';
-import addOnionLocationHeader from '#nextjs/utilities/addOnionLocationHeader';
-import addVaryHeader from '#nextjs/utilities/addVaryHeader';
-import addLinkHeader from '#nextjs/utilities/addLinkHeader';
+import addCspHeader from '#utilities/addCspHeader';
+import derivePageType from '#utilities/derivePageType';
+import addServiceChainHeader from '#utilities/addServiceChainHeader';
+import addOnionLocationHeader from '#utilities/addOnionLocationHeader';
+import addVaryHeader from '#utilities/addVaryHeader';
+import addLinkHeader from '#utilities/addLinkHeader';
 import { AccountProvider } from '#app/contexts/AccountContext';
+import { ReverbParamsContextProvider } from '#app/contexts/ReverbParamsContext';
+import QueryProvider from '#app/contexts/QueryContext';
 import getIdctaConfig from '#app/lib/idcta/getIdctaConfig';
 import { IdctaConfig } from '#app/models/types/account';
 import fetchConfig from '#app/lib/utilities/fetchConfig';
@@ -79,7 +82,7 @@ export default class CustomApp extends App<Props> {
     };
 
     const [togglesResult, navResult] = await Promise.allSettled([
-      getToggles(service),
+      fetchToggles({ service, isAmp }),
       fetchConfig<{ data: { items: Navigation[] } }>({
         service,
         pagePath: asPath,
@@ -96,11 +99,10 @@ export default class CustomApp extends App<Props> {
         ? (navResult.value?.data?.items ?? null)
         : null;
 
-    const cookieHeader = ctx.req?.headers?.cookie;
-    const idctaResult = await getIdctaConfig(toggles, service, cookieHeader);
+    const requestHeaders = ctx.req?.headers;
+    const idctaResult = await getIdctaConfig(toggles, service, requestHeaders);
     const pageType =
       (ctx.req?.headers['page-type'] as PageTypes) || derivePageType(asPath);
-
     const serverSideExperiments = getServerExperiments({
       headers: ctx.req?.headers || {},
       service,
@@ -193,25 +195,34 @@ export default class CustomApp extends App<Props> {
             isUK={isUK ?? false}
           >
             <AccountProvider initialConfig={idctaConfig}>
-              <EventTrackingContextProvider atiData={atiAnalytics}>
-                {isAvEmbeds ? (
-                  <ThemeProvider service={service} variant={variant}>
-                    {RenderChildrenOrError}
-                  </ThemeProvider>
-                ) : (
-                  <UserContextProvider>
+              <ReverbParamsContextProvider metadata={pageData?.metadata}>
+                <EventTrackingContextProvider atiData={atiAnalytics}>
+                  {isAvEmbeds ? (
                     <ThemeProvider service={service} variant={variant}>
-                      <PageWrapper
-                        navItems={navItems}
-                        pageData={pageData}
-                        status={status}
-                      >
-                        {RenderChildrenOrError}
-                      </PageWrapper>
+                      {RenderChildrenOrError}
                     </ThemeProvider>
-                  </UserContextProvider>
-                )}
-              </EventTrackingContextProvider>
+                  ) : (
+                    <QueryProvider>
+                      <UserContextProvider>
+                        <ThemeProviderSCSSModules
+                          service={service}
+                          variant={variant}
+                        >
+                          <ThemeProvider service={service} variant={variant}>
+                            <PageWrapper
+                              navItems={navItems}
+                              pageData={pageData}
+                              status={status}
+                            >
+                              {RenderChildrenOrError}
+                            </PageWrapper>
+                          </ThemeProvider>
+                        </ThemeProviderSCSSModules>
+                      </UserContextProvider>
+                    </QueryProvider>
+                  )}
+                </EventTrackingContextProvider>
+              </ReverbParamsContextProvider>
             </AccountProvider>
           </RequestContextProvider>
         </ServiceContextProvider>

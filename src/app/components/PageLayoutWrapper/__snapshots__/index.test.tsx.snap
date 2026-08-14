@@ -439,6 +439,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .emotion-27 {
@@ -604,8 +605,15 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
     overflow-x: scroll;
     scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
+    scroll-padding-inline-end: 3rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-40 {
+      scroll-padding-inline-end: 6rem;
+    }
   }
 
   .emotion-40::-webkit-scrollbar {

@@ -4,11 +4,9 @@ import getPageData from './getPageData';
 
 const agent = { cert: 'cert', ca: 'ca', key: 'key' };
 
-jest.mock('#server/utilities/getAgent', () =>
-  jest.fn(() => Promise.resolve(agent)),
-);
+jest.mock('#utilities/getAgent', () => jest.fn(() => Promise.resolve(agent)));
 jest.mock('#app/routes/utils/fetchPageData');
-jest.mock('#app/lib/utilities/getToggles');
+jest.mock('#app/lib/utilities/fetchToggles');
 jest.mock('#app/routes/utils/fetchDataFromBFF', () => {
   const originalModule = jest.requireActual(
     '#app/routes/utils/fetchDataFromBFF',

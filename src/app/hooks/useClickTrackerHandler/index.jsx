@@ -21,14 +21,22 @@ const OJ_COMPONENT_NAMES = [
   'features',
   'related-content',
   'most-read',
-  // media curation renders as simple-curation-grid tracking events
-  'simple-curation-grid',
+  'topic-discovery-curation-grid-promo',
+  'topics',
+  'topic-discovery-more-about-link',
+  'location-based-topic-oj',
+  'portrait-video-carousel-article',
+  'video-curation-grid',
 ];
 
 // handle the total oj clicks event to specific onward journey experiments
-const OJ_OPTIMIZELY_EXPERIMENTS = ['newswb_ws_tod_article_2'];
+const OJ_OPTIMIZELY_EXPERIMENTS = [
+  'test_page_views_aa_3',
+  'newswb_ws_oj_order_referrer_search',
+  'newswb_ws_oj_order_referrer_search_aa_test',
+];
 
-const OJ_OPTIMIZELY_CLICK_EVENT = 'oj_clicks';
+const OJ_OPTIMIZELY_CLICK_EVENTS = ['oj_clicks'];
 
 // only fire the total oj clicks event when the component and experiment are in scope
 const shouldTrackOjClick = (componentName, experimentName) =>
@@ -54,6 +62,8 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
     experimentVariant,
     groupTracker,
     itemTracker,
+    isSignedIn,
+    hashedId,
   } = extractATITrackingProps({ eventTrackingData, eventType: CLICK_EVENT });
 
   const { trackingIsEnabled } = useTrackingToggle(componentName);
@@ -87,31 +97,31 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
           service,
           statsDestination,
         ].every(Boolean);
+
         if (shouldSendEvent) {
           event.stopPropagation();
           event.preventDefault();
 
-          if (
-            optimizely &&
-            experimentVariant &&
-            experimentVariant !== 'off' &&
-            sendOptimizelyEvents
-          ) {
+          if (optimizely && experimentVariant && sendOptimizelyEvents) {
             const overrideAttributes = optimizely?.user.attributes;
 
-            optimizely.track(
-              `${componentName}-clicks`,
-              optimizely.user.id,
-              overrideAttributes,
-            );
-
-            // send the extra optimizely event for the total oj clicks metric
-            if (shouldTrackOjClick(componentName, experimentName)) {
+            if (experimentVariant !== 'off') {
               optimizely.track(
-                OJ_OPTIMIZELY_CLICK_EVENT,
+                `${componentName}-clicks`,
                 optimizely.user.id,
                 overrideAttributes,
               );
+            }
+
+            // send the extra optimizely event for the total oj clicks metric
+            if (shouldTrackOjClick(componentName, experimentName)) {
+              OJ_OPTIMIZELY_CLICK_EVENTS.forEach(eventName => {
+                optimizely.track(
+                  eventName,
+                  optimizely.user.id,
+                  overrideAttributes,
+                );
+              });
             }
           }
 
@@ -132,6 +142,8 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
               detailedPlacement,
               ...(groupTracker && { groupTracker }),
               ...(itemTracker && { itemTracker }),
+              isSignedIn,
+              hashedId,
               ...(experimentVariant &&
                 experimentVariant !== 'off' && {
                   experimentName,
@@ -171,6 +183,8 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
       itemTracker,
       experimentName,
       preventNavigation,
+      isSignedIn,
+      hashedId,
     ],
   );
 };

@@ -49,7 +49,11 @@ const useLivePagePolling = (
     }
   };
 
-  return { currentStreamData, hasPendingUpdate, applyPendingUpdate };
+  return {
+    currentStreamData,
+    hasPendingUpdate,
+    applyPendingUpdate,
+  };
 };
 
 export default useLivePagePolling;

@@ -59,6 +59,18 @@ export default {
       gridColumn: '1 / span 12',
       paddingBottom: '2rem',
     }),
+  collapsedArticleColumn: ({ mq }: Theme) =>
+    css({
+      paddingBottom: 0,
+
+      [`.${NO_JS_CLASSNAME} &, .${OPERA_MINI_CLASSNAME} &`]: {
+        paddingBottom: '2rem',
+      },
+
+      [mq.GROUP_4_MIN_WIDTH]: {
+        paddingBottom: '2rem',
+      },
+    }),
   mainContent: ({ palette, spacings, mq }: Theme) =>
     css({
       paddingBottom: `${spacings.TRIPLE}rem`,
@@ -89,7 +101,31 @@ export default {
         },
       },
     }),
+  collapsedMainContent: ({ spacings, mq }: Theme) =>
+    css({
+      paddingBottom: 0,
+
+      [`.${NO_JS_CLASSNAME} &, .${OPERA_MINI_CLASSNAME} &`]: {
+        paddingBottom: `${spacings.TRIPLE}rem`,
+
+        [mq.GROUP_3_ONLY]: {
+          paddingBottom: `${spacings.FULL}rem`,
+        },
+      },
+
+      [mq.GROUP_4_MIN_WIDTH]: {
+        paddingBottom: `${spacings.TRIPLE}rem`,
+      },
+    }),
   hideRelatedTopics: ({ mq }: Theme) =>
+    css({
+      display: 'none',
+
+      [mq.GROUP_4_MIN_WIDTH]: {
+        display: 'block',
+      },
+    }),
+  hideTopicDiscovery: ({ mq }: Theme) =>
     css({
       display: 'none',
 
@@ -126,17 +162,17 @@ export default {
         paddingBottom: `${spacings.QUADRUPLE}rem`,
       },
     }),
-  adaptiveMediaCurationRow: ({ spacings, mq }: Theme) =>
+  mediaCurationRow: ({ spacings, mq }: Theme) =>
     css({
       gridColumn: '1 / span 12',
-      margin: `0 ${spacings.FULL}rem ${spacings.TRIPLE}rem`,
+      margin: `${spacings.TRIPLE}rem ${spacings.FULL}rem ${spacings.TRIPLE}rem`,
 
       [mq.GROUP_2_MIN_WIDTH]: {
-        margin: `0 ${spacings.DOUBLE}rem ${spacings.TRIPLE}rem`,
+        margin: `${spacings.TRIPLE}rem ${spacings.DOUBLE}rem ${spacings.TRIPLE}rem`,
       },
 
       [mq.GROUP_4_MIN_WIDTH]: {
-        margin: `0 0 ${spacings.TRIPLE}rem`,
+        margin: `${spacings.TRIPLE}rem 0 ${spacings.TRIPLE}rem`,
       },
     }),
   featuresSection: ({ spacings, mq }: Theme) =>
@@ -193,6 +229,7 @@ export default {
     css({
       padding: `0 ${pixelsToRem(8)}rem`,
       marginBottom: `${spacings.DOUBLE}rem`,
+      marginTop: `${spacings.DOUBLE}rem`,
       [mq.GROUP_1_MIN_WIDTH]: {
         marginBottom: `${spacings.TRIPLE}rem`,
       },
@@ -205,5 +242,15 @@ export default {
       [mq.GROUP_4_MIN_WIDTH]: {
         padding: 0,
       },
+    }),
+  mobileOJContainer: ({ mq }: Theme) =>
+    css({
+      [mq.GROUP_4_MIN_WIDTH]: {
+        display: 'none',
+      },
+    }),
+  midArticleOJ: () =>
+    css({
+      marginBottom: `${pixelsToRem(40)}rem`,
     }),
 };

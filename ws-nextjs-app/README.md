@@ -24,8 +24,8 @@ For more information on Next.js and how to use the framework, see the [Next.js d
 ## Running Integration tests
 
 - Navigate to the root of the project (up one level from here)
-- Run `yarn test:integration --nextJS` to run all integration tests for the Next.js app
-- Run `yarn test:integration --nextJS -u` to run all integration tests and update any snapshots for the Next.js app
+- Run `yarn test:integration` to run all integration tests for the app
+- Run `yarn test:integration -u` to run all integration tests and update any snapshots for the app
 
 ## Running Storybook
 
