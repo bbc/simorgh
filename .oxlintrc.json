@@ -1,0 +1,72 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["react", "typescript", "import", "jsx-a11y"],
+  "jsPlugins": [
+    "eslint-plugin-no-only-tests",
+    "eslint-plugin-cypress",
+    "eslint-plugin-json"
+  ],
+  "categories": {
+    "correctness": "off"
+  },
+  "env": {
+    "builtin": true
+  },
+  "ignorePatterns": [
+    "**/tz/**",
+    "index.stories.jsx",
+    "index.stories.tsx",
+    "index.amp.stories.jsx",
+    ".storybook/**/*"
+  ],
+  "rules": {
+    "react/no-unknown-property": [
+      "error",
+      {
+        "ignore": [
+          "amp-boilerplate",
+          "amp-custom",
+          "amp-access",
+          "amp-access-hide",
+          "amp-install-serviceworker",
+          "css",
+          "custom-element",
+          "custom-template",
+          "fallback"
+        ]
+      }
+    ],
+    "import/extensions": [
+      "warn",
+      {
+        "json": "ignorePackages"
+      }
+    ],
+    "no-only-tests/no-only-tests": "error",
+    "no-unsafe-optional-chaining": "error",
+    "cypress/no-assigning-return-values": "error",
+    "cypress/no-unnecessary-waiting": "error",
+    "cypress/no-async-tests": "error",
+    "cypress/unsafe-to-chain-command": "error",
+    "react/rules-of-hooks": "error",
+    "react/exhaustive-deps": "warn"
+  },
+  "overrides": [
+    {
+      "files": ["**/*.ts", "**/*.tsx"],
+      "rules": {
+        "typescript/no-use-before-define": "error",
+        "typescript/no-unused-vars": [
+          "warn",
+          {
+            "argsIgnorePattern": "^_",
+            "varsIgnorePattern": "^_",
+            "caughtErrorsIgnorePattern": "^_"
+          }
+        ],
+        "typescript/prefer-optional-chain": "error",
+        "import/prefer-default-export": "error"
+      }
+    }
+  ]
+}
