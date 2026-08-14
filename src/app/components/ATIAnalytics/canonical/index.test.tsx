@@ -69,6 +69,20 @@ describe('Canonical ATI Analytics', () => {
     expect(helmet.scriptTags).toHaveLength(2);
   });
 
+  it('should add scripts to helmet for Opera Mini', () => {
+    jest.spyOn(isOperaProxy, 'default').mockImplementation(() => true);
+
+    act(() => {
+      render(<CanonicalATIAnalytics reverbParams={mockReverbParams} />, {
+        isLite: false,
+      });
+    });
+
+    const helmet = Helmet.peek();
+
+    expect(helmet.scriptTags).toHaveLength(2);
+  });
+
   it('should render sendStaticBeacon Helmet script', () => {
     jest.spyOn(isOperaProxy, 'default').mockImplementation(() => false);
 
@@ -79,7 +93,7 @@ describe('Canonical ATI Analytics', () => {
     const helmet = Helmet.peek();
 
     expect(helmet.scriptTags[0].innerHTML).toEqual(
-      addSendStaticBeaconToWindow(),
+      `(${addSendStaticBeaconToWindow.toString()})()`,
     );
   });
 

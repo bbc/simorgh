@@ -11,7 +11,13 @@ type ExperimentsForPageTypeMetrics = {
 const experimentsForPageMetrics: ExperimentsForPageTypeMetrics = [
   {
     pageType: ARTICLE_PAGE,
-    activeExperiments: ['test_page_views_aa_3'],
+    activeExperiments: [
+      'test_page_views_aa_3',
+      'newswb_ws_article_account_promo_banner',
+      // enable page metrics after this experiment is activated
+      'newswb_ws_oj_order_referrer_search',
+      'newswb_ws_oj_order_referrer_search_aa_test',
+    ],
   },
   {
     pageType: MEDIA_ARTICLE_PAGE,
