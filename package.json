@@ -96,7 +96,7 @@
     "sharp": "0.35.3",
     "temporal-polyfill": "0.3.0",
     "three": "0.184.0",
-    "undici": "8.5.0",
+    "undici": "8.9.0",
     "url-parse": "1.5.10",
     "uuid": "13.0.1",
     "winston": "patch:winston@3.8.2#./patches/winston-file-descriptor.patch"

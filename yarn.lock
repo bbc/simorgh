@@ -13691,18 +13691,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nanoid@npm:^3.3.16, nanoid@npm:^3.3.6":
-  version: 3.3.16
-  resolution: "nanoid@npm:3.3.16"
+"nanoid@npm:^3.3.11, nanoid@npm:^3.3.12, nanoid@npm:^3.3.16, nanoid@npm:^3.3.6":
+  version: 3.3.18
+  resolution: "nanoid@npm:3.3.18"
   bin:
     nanoid: bin/nanoid.cjs
-  checksum: 10/8004af92b5541af1dbd23b69845b5026f777d5b7ef07163cea1837aae86e052ced8b383cecbf8a4f1b5e77ae207df96dc45e16b9e0fa3c4b761d085f1e42851b
+  checksum: 10/1b3b4fdac831b92b56d1dbe8b1e63a372432faf86ea383134e3b53141ef8108a60b7f84343b5cefecac9550bb74edf8164da93ea07d1c4f757039bc75d8a5d9e
   languageName: node
   linkType: hard
 
-"napi-postinstall@npm:^0.3.4":
-  version: 0.3.4
-  resolution: "napi-postinstall@npm:0.3.4"
+"napi-postinstall@npm:^0.3.0":
+  version: 0.3.0
+  resolution: "napi-postinstall@npm:0.3.0"
   bin:
     napi-postinstall: lib/cli.js
   checksum: 10/5541381508f9e1051ff3518701c7130ebac779abb3a1ffe9391fcc3cab4cc0569b0ba0952357db3f6b12909c3bb508359a7a60261ffd795feebbdab967175832
@@ -14761,14 +14761,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:8.5.22":
-  version: 8.5.22
-  resolution: "postcss@npm:8.5.22"
+"postcss@npm:8.5.24":
+  version: 8.5.24
+  resolution: "postcss@npm:8.5.24"
   dependencies:
     nanoid: "npm:^3.3.16"
     picocolors: "npm:^1.1.1"
     source-map-js: "npm:^1.2.1"
-  checksum: 10/7944444f267f2d94c7caeed66f3da56d5b947bd4a7e57a166a5161af25c6006dd73f40e2a1a6822f3d7fccc2fa005778c03058368eb7efca1b5038aec55abd14
+  checksum: 10/4e26169ed6fe8c2a32702d233b16368124d162a9399606381ed7a2f99ba6237360717aab339a0bd0f072280663413ff5115189b282085d1be74ffb2d25bdb562
   languageName: node
   linkType: hard
 
@@ -16330,7 +16330,7 @@ __metadata:
     next: "npm:16.2.11"
     next-test-api-route-handler: "npm:5.0.5"
     npm-run-all2: "npm:8.0.4"
-    postcss: "npm:8.5.22"
+    postcss: "npm:8.5.24"
     sharp: "npm:0.35.3"
     swc-loader: "npm:0.2.7"
     temporal-polyfill: "npm:0.3.0"
@@ -16458,8 +16458,7 @@ __metadata:
     ts-jest: "npm:29.4.9"
     typescript: "npm:6.0.3"
     typescript-plugin-css-modules: "npm:5.2.0"
-    undici: "npm:8.5.0"
-    url-parse: "npm:1.5.10"
+    undici: "npm:8.9.0"
     uuid: "npm:13.0.1"
     webpack: "npm:5.106.2"
     winston: "patch:winston@3.8.2#./patches/winston-file-descriptor.patch"
@@ -17149,7 +17148,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tar@npm:^7.5.4":
+"tar@npm:^7.4.3":
   version: 7.5.22
   resolution: "tar@npm:7.5.22"
   dependencies:
@@ -17159,15 +17158,6 @@ __metadata:
     minizlib: "npm:^3.1.0"
     yallist: "npm:^5.0.0"
   checksum: 10/129606384b3c895f422aaca48bf316357be6dc7aa35c1066c3f06c28acfff0be5b356e1b0a0be7c53a7a8945534ac06cec6d8e296d170d8a09c8bff67b29300e
-  languageName: node
-  linkType: hard
-
-"teex@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "teex@npm:1.0.1"
-  dependencies:
-    streamx: "npm:^2.12.5"
-  checksum: 10/36bf7ce8bb5eb428ad7b14b695ee7fb0a02f09c1a9d8181cc42531208543a920b299d711bf78dad4ff9bcf36ac437ae8e138053734746076e3e0e7d6d76eef64
   languageName: node
   linkType: hard
 
@@ -17928,10 +17918,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici@npm:8.5.0":
-  version: 8.5.0
-  resolution: "undici@npm:8.5.0"
-  checksum: 10/e95913777afd47d76babfe62547bb4e9a94b93f44b50c84b4e0b6fa41c00364e31ff4f433a955b1592c3162f43e8757e2e0feae6eea195187730594523393568
+"undici@npm:8.9.0":
+  version: 8.9.0
+  resolution: "undici@npm:8.9.0"
+  checksum: 10/dfad3e233087eafdf1d361acd17c4d45a9590d5db9400458f1c03f47d8f1ef68647e2109ebb982c862e50c227093abd2d5f44b154904fc0b3d22576b6e95cfe7
   languageName: node
   linkType: hard
 

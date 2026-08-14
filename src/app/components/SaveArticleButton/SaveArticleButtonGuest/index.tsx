@@ -35,6 +35,8 @@ const SaveArticleButtonGuest = () => {
     },
   });
 
+  if (!saveArticleButton) return null;
+
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     onClickTrack?.(e);
     setIsModalOpen(true);

@@ -1,8 +1,21 @@
-import { Fragment, ReactNode, useState, useCallback, use } from 'react';
+import {
+  Fragment,
+  ReactNode,
+  useState,
+  useCallback,
+  use,
+  useEffect,
+  useRef,
+} from 'react';
 import { useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import useMediaQuery from '#hooks/useMediaQuery';
+import useNearViewport from '#hooks/useNearViewport';
+import useOptimizelyVariation, {
+  ExperimentType,
+} from '#hooks/useOptimizelyVariation';
 import useScrollDepthTracker from '#hooks/useScrollDepthTracker';
+import useCustomEventTracker from '#hooks/useCustomEventTracker';
 import { GROUP_4_MIN_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
 import { singleTextBlock } from '#app/models/blocks';
 import { BylineLinkedData } from '#app/components/LinkedData/types';
@@ -61,6 +74,7 @@ import ContinueReadingButton, {
 import SaveArticleButton from '#app/components/SaveArticleButton';
 import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
 import AccountPromotionalBannerExperiment from '#app/components/Account/AccountPromotionalBannerExperiment';
+import repositionCountryTopic from '#app/components/TopicDiscovery/RepositionCountryTopic';
 import ElectionBanner from './ElectionBanner';
 import ArticleMessageBanner from './ArticleMessageBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
@@ -85,9 +99,7 @@ import RelatedContentSection from '../../components/RelatedContentSection';
 import TopicDiscovery from '../../components/TopicDiscovery';
 import Disclaimer from '../../components/Disclaimer';
 import SecondaryColumn from './SecondaryColumn';
-import useMobileOJComponentOrder, {
-  useDebugVariant,
-} from './useMobileOJComponentOrder';
+import useMobileOJComponentOrder from './useMobileOJComponentOrder';
 import styles from './ArticlePage.styles';
 import { ComponentToRenderProps, TimeStampProps } from './types';
 import ArticleHeadline from './ArticleHeadline';
@@ -102,6 +114,104 @@ import {
   SearchVariant,
 } from './searchReferrerComponentOrder';
 import TopStoriesSection from './PagePromoSections/TopStoriesSection';
+import SearchOjExperiment from './SearchOjExperiment';
+import {
+  isSearchOjAaVariant,
+  isSearchOjVariant,
+  MID_ARTICLE_OJ_EXPERIMENT_TRIGGER_ID,
+  SEARCH_OJ_AA_ACTIVATION_EVENT_NAME,
+  SEARCH_OJ_AA_EXPERIMENT_NAME,
+  SEARCH_OJ_ACTIVATION_EVENT_NAME,
+  SEARCH_OJ_EXPERIMENT_NAME,
+  SearchOjAaVariant,
+  SearchOjVariant,
+} from './SearchOjExperiment/config';
+
+// keep the flag name with the variation so tracking knows which experiment was chosen
+type SearchOjExperimentDecision = {
+  experimentName:
+    | typeof SEARCH_OJ_EXPERIMENT_NAME
+    | typeof SEARCH_OJ_AA_EXPERIMENT_NAME;
+  experimentVariant: SearchOjVariant | SearchOjAaVariant;
+  searchVariant: SearchVariant | null;
+};
+
+type ActivateSearchOjExperimentProps = {
+  onDecision: (decision: SearchOjExperimentDecision) => void;
+};
+
+const ActivateSearchOjAaExperiment = ({
+  onDecision,
+}: ActivateSearchOjExperimentProps) => {
+  const variation = useOptimizelyVariation({
+    experimentName: SEARCH_OJ_AA_EXPERIMENT_NAME,
+    experimentType: ExperimentType.CLIENT_SIDE,
+  });
+  const trackActivation = useCustomEventTracker({
+    eventName: SEARCH_OJ_AA_ACTIVATION_EVENT_NAME,
+    experimentName: SEARCH_OJ_AA_EXPERIMENT_NAME,
+    experimentVariant: variation ?? undefined,
+  });
+  const hasTrackedActivation = useRef(false);
+
+  useEffect(() => {
+    if (isSearchOjAaVariant(variation)) {
+      onDecision({
+        experimentName: SEARCH_OJ_AA_EXPERIMENT_NAME,
+        experimentVariant: variation,
+        // both aa groups keep the normal page layout
+        searchVariant: null,
+      });
+
+      if (!hasTrackedActivation.current) {
+        hasTrackedActivation.current = true;
+        trackActivation();
+      }
+    }
+  }, [onDecision, trackActivation, variation]);
+
+  return null;
+};
+
+const ActivateSearchOjExperiment = ({
+  onDecision,
+}: ActivateSearchOjExperimentProps) => {
+  const variation = useOptimizelyVariation({
+    experimentName: SEARCH_OJ_EXPERIMENT_NAME,
+    experimentType: ExperimentType.CLIENT_SIDE,
+  });
+  // this sends piano the same experiment and variation chosen by optimizely
+  const trackActivation = useCustomEventTracker({
+    eventName: SEARCH_OJ_ACTIVATION_EVENT_NAME,
+    experimentName: SEARCH_OJ_EXPERIMENT_NAME,
+    experimentVariant: variation ?? undefined,
+  });
+  // this makes sure rerenders do not send the activation event again
+  const hasTrackedActivation = useRef(false);
+
+  useEffect(() => {
+    if (isSearchOjVariant(variation)) {
+      onDecision({
+        experimentName: SEARCH_OJ_EXPERIMENT_NAME,
+        experimentVariant: variation,
+        searchVariant: variation === 'control' ? null : variation,
+      });
+
+      if (!hasTrackedActivation.current) {
+        hasTrackedActivation.current = true;
+        trackActivation();
+      }
+    }
+  }, [onDecision, trackActivation, variation]);
+
+  // only check the aa flag after optimizely says the real flag is off
+  // this lets the dashboard choose which experiment runs without another deployment
+  if (variation === 'off') {
+    return <ActivateSearchOjAaExperiment onDecision={onDecision} />;
+  }
+
+  return null;
+};
 
 const getImageComponent =
   (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (
@@ -167,10 +277,33 @@ const getWsojComponent = ({
   experimentProps,
 }: {
   data: Recommendation[];
-  experimentProps?: ComponentExperimentProps | null;
+  experimentProps?: ComponentExperimentProps;
 }) => (
   <Recommendations data={data} {...(experimentProps && { experimentProps })} />
 );
+
+type SearchWsojComponentProps = {
+  isDesktopViewport: boolean;
+  renderSearchMidArticleOj: (props: {
+    data: Recommendation[];
+    experimentProps?: ComponentExperimentProps;
+    searchVariant: SearchVariant | null;
+  }) => ReactNode;
+  experimentProps?: ComponentExperimentProps;
+  searchVariant: SearchVariant | null;
+};
+
+const getSearchWsojComponent =
+  ({
+    isDesktopViewport,
+    renderSearchMidArticleOj,
+    experimentProps,
+    searchVariant,
+  }: SearchWsojComponentProps) =>
+  ({ data }: { data: Recommendation[] }) =>
+    !isDesktopViewport
+      ? renderSearchMidArticleOj({ data, experimentProps, searchVariant })
+      : getWsojComponent({ data, experimentProps });
 
 const DisclaimerWithPaddingOverride = (props: ComponentToRenderProps) => (
   <Disclaimer {...props} increasePaddingOnDesktop={false} />
@@ -208,19 +341,44 @@ const getContinueReadingButton =
     showAllContent,
     setShowAllContent,
     experimentProps,
+    onExpand,
   }: ContinueReadingButtonProps) =>
   () => (
     <ContinueReadingButton
       showAllContent={showAllContent}
       setShowAllContent={setShowAllContent}
       experimentProps={experimentProps}
+      onExpand={onExpand}
     />
+  );
+
+const getSearchOjExperiment =
+  (experimentProps?: ComponentExperimentProps) =>
+  ({ data }: { data: Recommendation[] }) => (
+    <SearchOjExperiment data={data} experimentProps={experimentProps} />
   );
 
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const [showAllContent, setShowAllContent] = useState(false);
   const [isDesktopViewport, setIsDesktopViewport] = useState(false);
+  const [hasExpandedContinueReading, setHasExpandedContinueReading] =
+    useState(false);
+  const [experimentDecision, setExperimentDecision] =
+    useState<SearchOjExperimentDecision | null>(null);
+  const searchOjExperimentProps: ComponentExperimentProps | undefined =
+    experimentDecision
+      ? {
+          experimentName: experimentDecision.experimentName,
+          experimentVariant: experimentDecision.experimentVariant,
+          sendOptimizelyEvents: true,
+        }
+      : undefined;
   const { isApp, isAmp, isLite, pageType } = use(RequestContext);
+
+  const isNearMidArticleOj = useNearViewport({
+    elementId: MID_ARTICLE_OJ_EXPERIMENT_TRIGGER_ID,
+    bottomViewportMargin: 1,
+  });
 
   const {
     articleAuthor,
@@ -275,6 +433,13 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const mediaCurationContent = pageData?.secondaryColumn?.mediaCuration;
   const startsWithHeading = blocks?.[0]?.type === 'headline' || false;
 
+  const countryTopicToReorder = pageData?.countryTopicIdToReorder ?? null;
+
+  const topicDiscoveryTopics = repositionCountryTopic(
+    topics,
+    countryTopicToReorder,
+  );
+
   const bylineBlock = blocks.find(
     (block): block is OptimoBylineBlock =>
       block.type === 'byline' || block.type === 'subByline',
@@ -321,7 +486,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     searchVariant,
   }: {
     data: Recommendation[];
-    experimentProps?: ComponentExperimentProps | null;
+    experimentProps?: ComponentExperimentProps;
     searchVariant: SearchVariant | null;
   }) => {
     const midarticleOJ = searchVariant
@@ -329,27 +494,41 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       : null;
     switch (midarticleOJ) {
       case 'mostRead':
-        return <Recommendations data={data} />;
+        return (
+          <Recommendations data={data} experimentProps={experimentProps} />
+        );
 
       case 'relatedContent':
         return hasRelatedContent ? (
           <div css={styles.midArticleOJ}>
-            <RelatedContentSection content={blocks} />
+            <RelatedContentSection
+              content={blocks}
+              experimentProps={experimentProps}
+            />
           </div>
         ) : (
-          <Recommendations data={data} />
+          <Recommendations data={data} experimentProps={experimentProps} />
         );
 
       case 'topicDiscovery':
-        return <TopicDiscovery topics={topics} css={styles.midArticleOJ} />;
+        return (
+          <TopicDiscovery
+            topics={topicDiscoveryTopics}
+            css={styles.midArticleOJ}
+            experimentProps={experimentProps}
+          />
+        );
 
       case 'locationBasedOJ':
         return showCountryCuration ? (
           <div css={styles.midArticleOJ}>
-            <LocationBasedTopicOJ pageData={pageData} />
+            <LocationBasedTopicOJ
+              pageData={pageData}
+              experimentProps={experimentProps}
+            />
           </div>
         ) : (
-          <Recommendations data={data} />
+          <Recommendations data={data} experimentProps={experimentProps} />
         );
 
       default:
@@ -371,6 +550,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     eventTrackingData: {
       componentName: 'portrait-video-carousel-article',
       groupTracker: { name: portraitVideoCarouselTitle },
+      ...(searchOjExperimentProps && searchOjExperimentProps),
     },
     backgroundColor: 'rgba(246, 246, 246, 0.75)',
   };
@@ -415,7 +595,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     promoImageRawBlock?.model as { locator?: string } | undefined
   )?.locator;
 
-  const searchVariant = useDebugVariant();
+  const searchVariant = experimentDecision?.searchVariant ?? null;
   const mobileOJOrder = useMobileOJComponentOrder(searchVariant);
 
   const componentsToRender = {
@@ -444,17 +624,23 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     group: gist,
     links: ArticleLinksBlock,
     mpu: getMpuComponent(allowAdvertising),
+    // keep delayed search oj bucketing inside the oj component
     // renders wsoj if user is on desktop, otherwise renders a chosen OJ based on search referrer experiment on mobile
-    wsoj: ({ data }: { data: Recommendation[] }) =>
-      !isDesktopViewport
-        ? getSearchMidArticleOJ({ data, searchVariant })
-        : getWsojComponent({ data }),
+    wsoj: searchVariant
+      ? getSearchWsojComponent({
+          isDesktopViewport,
+          renderSearchMidArticleOj: getSearchMidArticleOJ,
+          experimentProps: searchOjExperimentProps,
+          searchVariant,
+        })
+      : getSearchOjExperiment(searchOjExperimentProps),
     disclaimer: DisclaimerWithPaddingOverride,
     podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
     ...(showContinueReadingButton && {
       continueReading: getContinueReadingButton({
         showAllContent,
         setShowAllContent,
+        onExpand: () => setHasExpandedContinueReading(true),
       }),
     }),
   };
@@ -473,7 +659,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const showTopicDiscovery = topicDiscoveryEnabled && !isAmp && !isLite;
 
-  // Topic Discovery shows in the midarticle position for one variant
+  // Topic Discovery shows in the mid-article position for one variant
   // We want to hide RelatedTopics when this happens
   const topicDiscoveryInMidArticlePosition =
     !isDesktopViewport && searchVariant === 'variant_5_recommended_mid';
@@ -506,7 +692,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               ? [!showAllContent && styles.hideTopicDiscovery]
               : []),
           ]}
-          topics={topics}
+          topics={topicDiscoveryTopics}
+          experimentProps={searchOjExperimentProps}
         />
       );
     }
@@ -521,6 +708,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           ]}
           topics={topics}
           mobileDivider={false}
+          experimentProps={searchOjExperimentProps}
         />
       );
     }
@@ -553,6 +741,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               link={mediaCurationContent?.link}
               curationContentType="video"
               pageType={pageType}
+              experimentProps={searchOjExperimentProps}
             />
           </div>
         </div>
@@ -571,10 +760,16 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           size="default"
           headingBackgroundColour={GREY_2}
           mobileDivider={showRelatedTopicsComponent}
+          experimentProps={searchOjExperimentProps}
         />
       ) : null,
     topicDiscovery: topicDiscoverySlot,
-    relatedContent: <RelatedContentSection content={blocks} />,
+    relatedContent: (
+      <RelatedContentSection
+        content={blocks}
+        experimentProps={searchOjExperimentProps}
+      />
+    ),
     videoOJ: getVideoOJComponent(),
     topStories:
       !isApp && !isPGL && topStoriesContent ? (
@@ -583,7 +778,10 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           data-testid="top-stories"
           data-experiment-position="secondaryColumn"
         >
-          <TopStoriesSection content={topStoriesContent} />
+          <TopStoriesSection
+            content={topStoriesContent}
+            experimentProps={searchOjExperimentProps}
+          />
         </div>
       ) : null,
     featuredArticles:
@@ -593,11 +791,15 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             content={featuresContent}
             parentColumns={{}}
             sectionLabelBackground={GREY_2}
+            experimentProps={searchOjExperimentProps}
           />
         </div>
       ) : null,
     locationBasedOJ: showCountryCuration ? (
-      <LocationBasedTopicOJ pageData={pageData} />
+      <LocationBasedTopicOJ
+        pageData={pageData}
+        experimentProps={searchOjExperimentProps}
+      />
     ) : null,
   };
 
@@ -608,6 +810,10 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     <div css={styles.pageWrapper}>
       {/* EXPERIMENT: newswb_ws_article_account_promo_banner */}
       <AccountPromotionalBannerExperiment />
+
+      {(isNearMidArticleOj || hasExpandedContinueReading) && (
+        <ActivateSearchOjExperiment onDecision={setExperimentDecision} />
+      )}
 
       <ATIAnalytics />
       <ChartbeatAnalytics
@@ -683,7 +889,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
                   ? [!showAllContent && styles.hideTopicDiscovery]
                   : []),
               ]}
-              topics={topics}
+              topics={topicDiscoveryTopics}
+              experimentProps={searchOjExperimentProps}
             />
           )}
           {!mobileOJOrder && showRelatedTopicsComponent && (
@@ -696,10 +903,14 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               ]}
               topics={topics}
               mobileDivider={false}
+              experimentProps={searchOjExperimentProps}
             />
           )}
           {!mobileOJOrder && showCountryCuration && (
-            <LocationBasedTopicOJ pageData={pageData} />
+            <LocationBasedTopicOJ
+              pageData={pageData}
+              experimentProps={searchOjExperimentProps}
+            />
           )}
           {!mobileOJOrder && showPortraitVideoCarousel && (
             <PortraitVideoCarousel
@@ -707,7 +918,12 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               css={styles.portraitVideoCarousel}
             />
           )}
-          {!mobileOJOrder && <RelatedContentSection content={blocks} />}
+          {!mobileOJOrder && (
+            <RelatedContentSection
+              content={blocks}
+              experimentProps={searchOjExperimentProps}
+            />
+          )}
           {!mobileOJOrder && showMediaCuration && (
             <div css={styles.mediaCurationRow}>
               <div data-testid="media-curation">
@@ -722,6 +938,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
                   link={mediaCurationContent?.link}
                   curationContentType="video"
                   pageType={pageType}
+                  experimentProps={searchOjExperimentProps}
                 />
               </div>
             </div>
@@ -729,7 +946,10 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         </div>
 
         {!isApp && !isPGL && !mobileOJOrder && (
-          <SecondaryColumn pageData={pageData} />
+          <SecondaryColumn
+            pageData={pageData}
+            experimentProps={searchOjExperimentProps}
+          />
         )}
       </div>
 
@@ -749,6 +969,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           size="default"
           headingBackgroundColour={GREY_2}
           mobileDivider={showRelatedTopicsComponent}
+          experimentProps={searchOjExperimentProps}
         />
       )}
     </div>
