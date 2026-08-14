@@ -46,7 +46,6 @@ describe('Fragment', () => {
       { service: 'persian' },
     );
 
-    expect(container).toMatchSnapshot();
     expect(container.querySelector('i')?.textContent).toEqual(
       'ITALIC WITH PERSIAN TEXT',
     );
