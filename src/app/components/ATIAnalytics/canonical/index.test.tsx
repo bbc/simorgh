@@ -165,7 +165,12 @@ describe('Canonical ATI Analytics', () => {
     jest.spyOn(isOperaProxy, 'default').mockImplementation(() => false);
 
     act(() => {
-      render(<CanonicalATIAnalytics reverbParams={mockReverbParams} />);
+      render(
+        <CanonicalATIAnalytics
+          reverbParams={mockReverbParams}
+          resonanceParams={undefined}
+        />,
+      );
     });
 
     expect(mockSendBeacon).toHaveBeenCalledWith(mockReverbParams, undefined);
