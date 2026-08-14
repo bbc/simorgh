@@ -37,6 +37,10 @@ export default defineConfig({
         return vars;
       }, {});
 
+      // TOGGLES_BFF_PATH is a secret provided via the shell env, not the envConfig .env file
+      // @ts-expect-error envVars is a list of keys
+      envVars.TOGGLES_BFF_PATH = JSON.stringify(process.env.TOGGLES_BFF_PATH);
+
       config.baseUrl = env.baseUrl;
 
       // Debugging console logs to see running config
@@ -89,7 +93,10 @@ export default defineConfig({
           },
           plugins: [
             // @ts-expect-error - TODO: fix types
-            new MomentTimezoneInclude({ startYear: 2010, endYear: 2025 }),
+            new MomentTimezoneInclude({
+              startYear: 2010,
+              endYear: new Date().getFullYear() + 1,
+            }),
             new DefinePlugin({
               process: {
                 env: envVars,
