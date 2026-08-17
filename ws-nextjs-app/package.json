@@ -16,6 +16,8 @@
     "build:live:debug": "rm -rf build && awk '{sub(/LOG_DIR=.+/,\"LOG_DIR='log'\")}1' ../envConfig/live.env > .env && next build --webpack && yarn copyCssFiles && yarn copyPublicFiles",
     "build": "yarn build:local",
     "dev": "yarn setupDevEnv && next dev -p 7081 --webpack",
+    "dev:toggles:test": "FETCH_TOGGLES=true TOGGLES_SERVICE_ENV=test yarn dev",
+    "dev:toggles:live": "FETCH_TOGGLES=true TOGGLES_SERVICE_ENV=live yarn dev",
     "dev-https": "yarn setupDevEnv && next dev -p 7081 --experimental-https --webpack",
     "start": "NODE_ENV=production HOSTNAME=127.0.0.1 PORT=7081 node build/standalone/ws-nextjs-app/server.js",
     "stop": "lsof -t -i:7081 | xargs kill",
@@ -42,6 +44,19 @@
     "test:e2e": "yarn stop && yarn build && run-p --race start cypress -- --e2e",
     "test:e2e:interactive": "yarn stop && yarn build && run-p --race start cypress:interactive -- --e2e"
   },
+  "browserslist": [
+    "chrome >= 53",
+    "firefox >= 52",
+    "edge >= 100",
+    "safari >= 12.1",
+    "opera >= 40",
+    "op_mob >= 80",
+    "op_mini all",
+    "Android >= 7",
+    "and_chr >= 53",
+    "and_ff >= 52",
+    "ios_saf >= 12.2"
+  ],
   "devDependencies": {
     "@cypress/webpack-preprocessor": "7.1.1",
     "@jest/environment": "30.2.0",
@@ -63,7 +78,9 @@
     "ts-node": "10.9.2"
   },
   "dependencies": {
+    "autoprefixer": "10.5.4",
     "next": "16.2.11",
+    "postcss": "8.5.24",
     "sharp": "0.35.3",
     "temporal-polyfill": "0.3.0"
   }

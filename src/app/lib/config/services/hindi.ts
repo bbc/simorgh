@@ -45,6 +45,7 @@ export const service: DefaultServiceConfig = {
     swPath: '/sw.js',
     homePageTitle:
       'ब्रेकिंग न्यूज़ समाचार, ताजा खबर | News, latest news, breaking news',
+    iTunesAppId: 6761256736,
     showAdPlaceholder: true,
     showRelatedTopics: true,
     googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
@@ -165,6 +166,23 @@ export const service: DefaultServiceConfig = {
         loading: 'लोड हो रहा है',
         noJsDescription:
           'कृपया जावास्क्रिप्ट चालू करें या इस सामग्री को देखने के लिए किसी दूसरे ब्राउज़र का इस्तेमाल करें।',
+      },
+      actionTooltip: {
+        success: {
+          titleBefore: 'This article is now saved to',
+          titleAfter: '',
+        },
+        error: {
+          title: 'Sorry, something went wrong',
+          body: 'Check your connection, refresh the page and try again',
+        },
+        removed: {
+          titleBefore: 'This article has now been removed from',
+          titleAfter: '',
+        },
+        myNewsLinkText: 'My News',
+        myNewsUrl: 'https://www.bbc.com/hindi/my-news',
+        closeLabel: 'Close',
       },
       gist: 'सारांश',
       error: {
