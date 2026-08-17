@@ -1,4 +1,4 @@
-import constructPageFetchUrl from '.';
+import constructPageFetchUrl, { isOptimoIdCheck } from '.';
 import {
   AV_EMBEDS,
   ARTICLE_PAGE,
@@ -97,6 +97,10 @@ describe('constructPageFetchUrl', () => {
     ${ARTICLE_PAGE}    | ${'hausa'}      | ${null}    | ${'test'}   | ${'/hausa/news/2010/10/101020_majalisa_shugabankasa'}          | ${'https://mock-bff-path/?id=hausa%2Fnews%2F2010%2F10%2F101020_majalisa_shugabankasa&service=hausa&pageType=article&serviceEnv=test'}
     ${ARTICLE_PAGE}    | ${'hausa'}      | ${null}    | ${'live'}   | ${'/hausa/news/2010/10/101020_majalisa_shugabankasa'}          | ${'https://mock-bff-path/?id=hausa%2Fnews%2F2010%2F10%2F101020_majalisa_shugabankasa&service=hausa&pageType=article&serviceEnv=live'}
     ${ARTICLE_PAGE}    | ${'cymrufyw'}   | ${null}    | ${'live'}   | ${'/cymrufyw/erthyglau/c0000000000o'}                          | ${'https://mock-bff-path/?id=c0000000000o&service=cymrufyw&pageType=article&serviceEnv=live'}
+    ${ARTICLE_PAGE}    | ${'gujarati'}   | ${null}    | ${'local'}  | ${'/gujarati/watch/c0000000000o'}                              | ${'http://localhost/api/local/gujarati/articles/c0000000000o'}
+    ${ARTICLE_PAGE}    | ${'gujarati'}   | ${null}    | ${'test'}   | ${'/gujarati/watch/c0000000000o'}                              | ${'https://mock-bff-path/?id=c0000000000o&service=gujarati&pageType=article&serviceEnv=test'}
+    ${ARTICLE_PAGE}    | ${'tamil'}      | ${null}    | ${'local'}  | ${'/tamil/listen/c0000000000o'}                                | ${'http://localhost/api/local/tamil/articles/c0000000000o'}
+    ${ARTICLE_PAGE}    | ${'tamil'}      | ${null}    | ${'test'}   | ${'/tamil/listen/c0000000000o'}                                | ${'https://mock-bff-path/?id=c0000000000o&service=tamil&pageType=article&serviceEnv=test'}
     ${CPS_ASSET}       | ${null}         | ${null}    | ${'local'}  | ${'/ukrainian/23263889'}                                       | ${'http://localhost/api/local/ukrainian/23263889'}
     ${CPS_ASSET}       | ${null}         | ${null}    | ${'test'}   | ${'/ukrainian/23263889'}                                       | ${'https://mock-bff-path/?id=ukrainian%2F23263889&service=ukrainian&pageType=cpsAsset&serviceEnv=test'}
     ${CPS_ASSET}       | ${null}         | ${null}    | ${'live'}   | ${'/ukrainian/23263889'}                                       | ${'https://mock-bff-path/?id=ukrainian%2F23263889&service=ukrainian&pageType=cpsAsset&serviceEnv=live'}
@@ -197,4 +201,20 @@ describe('constructPageFetchUrl', () => {
       }).toThrow(expected);
     },
   );
+
+  describe('isOptimoIdCheck', () => {
+    it.each`
+      pathname                             | expected
+      ${'/gujarati/articles/c0000000000o'} | ${true}
+      ${'/gujarati/watch/c0000000000o'}    | ${true}
+      ${'/tamil/listen/c0000000000o'}      | ${true}
+      ${'/dari/watch/bbc_afghan_tv/live'}  | ${false}
+      ${'/ukrainian/23263889'}             | ${false}
+    `(
+      'should return $expected for pathname $pathname',
+      ({ pathname, expected }) => {
+        expect(isOptimoIdCheck(pathname)).toBe(expected);
+      },
+    );
+  });
 });
