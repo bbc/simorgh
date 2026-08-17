@@ -123,4 +123,18 @@ describe('ActionTooltip', () => {
     expect(tooltip).toHaveAttribute('aria-live', 'polite');
     expect(tooltip).toHaveAttribute('aria-atomic', 'true');
   });
+
+  it('moves focus to the close button when the tooltip appears', () => {
+    render(
+      <ActionTooltip
+        status="success"
+        content={content}
+        closeLabel={closeLabel}
+        onClose={onClose}
+      />,
+      { service: 'hindi' },
+    );
+
+    expect(screen.getByTestId('action-tooltip-close')).toHaveFocus();
+  });
 });

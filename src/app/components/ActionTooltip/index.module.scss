@@ -1,7 +1,12 @@
 @use '@scss/themeTokens' as theme;
 
 .wrapper {
-  position: relative;
+  position: absolute;
+  top: calc(100% + #{theme.$spacings-triple});
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
 }
 
 .container {
@@ -15,6 +20,7 @@
   border: 1px solid theme.$palette-grey-4;
   margin: 0 #{theme.$spacings-half};
   background: theme.$palette-white;
+  pointer-events: auto;
 
   &::before {
     content: '';
@@ -49,6 +55,7 @@
     color: inherit;
     text-decoration: underline;
     padding-block: 0;
+    white-space: nowrap;
 
     &:hover,
     &:active {
@@ -66,6 +73,8 @@
 .header {
   display: flex;
   align-items: flex-start;
+  // Reserve space so the title doesn't run under the absolutely positioned close button.
+  padding-inline-end: 3rem;
 }
 
 .icon {
@@ -89,10 +98,9 @@
 }
 
 .closeButton {
-  flex-shrink: 0;
-  margin-inline-start: 1.5rem;
-  margin-block-start: -0.75rem;
-  margin-inline-end: -0.75rem;
+  position: absolute;
+  top: 0;
+  inset-inline-end: 0;
   width: 2.75rem;
   height: 2.75rem;
   padding: 0;

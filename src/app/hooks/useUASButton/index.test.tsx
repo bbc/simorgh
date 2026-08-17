@@ -28,6 +28,19 @@ jest.mock('@tanstack/react-query', () => {
     onSuccess?: (result: unknown, action: string) => void;
     onError?: (error: unknown) => void;
   };
+  let mutationState: {
+    isPending: boolean;
+    isSuccess: boolean;
+    isError: boolean;
+    error: Error | null;
+    variables?: string;
+  } = {
+    isPending: false,
+    isSuccess: false,
+    isError: false,
+    error: null,
+    variables: undefined,
+  };
 
   return {
     ...jest.requireActual('@tanstack/react-query'),
@@ -47,13 +60,39 @@ jest.mock('@tanstack/react-query', () => {
           try {
             const result = await capturedMutationConfig.mutationFn?.(action);
             capturedMutationConfig.onSuccess?.(result, action);
+            mutationState = {
+              isPending: false,
+              isSuccess: true,
+              isError: false,
+              error: null,
+              variables: action,
+            };
           } catch (err) {
             capturedMutationConfig.onError?.(err);
+            mutationState = {
+              isPending: false,
+              isSuccess: false,
+              isError: true,
+              error: err as Error,
+              variables: action,
+            };
             throw err;
           }
         },
-        isPending: false,
-        error: null,
+        isPending: mutationState.isPending,
+        isSuccess: mutationState.isSuccess,
+        isError: mutationState.isError,
+        error: mutationState.error,
+        variables: mutationState.variables,
+        reset: () => {
+          mutationState = {
+            isPending: false,
+            isSuccess: false,
+            isError: false,
+            error: null,
+            variables: undefined,
+          };
+        },
       };
     },
   };
@@ -220,6 +259,84 @@ describe('useUASButton', () => {
           onMetadataOutOfDate: expect.any(Function),
         }),
       );
+    });
+  });
+
+  describe('actionResult', () => {
+    it('is null before any action is taken', () => {
+      const { result } = renderHook(() => useUASButton(defaultProps));
+
+      expect(result.current.actionResult).toBeNull();
+    });
+
+    it('reflects a successful user-triggered save', async () => {
+      const { result, rerender } = renderHook(() => useUASButton(defaultProps));
+
+      await act(async () => {
+        await result.current.handleSaveAction(UASAction.SAVE);
+      });
+      rerender();
+
+      expect(result.current.actionResult).toEqual({
+        status: 'success',
+        action: UASAction.SAVE,
+      });
+    });
+
+    it('reflects a failed user-triggered remove', async () => {
+      mockUasApiRequest.mockRejectedValueOnce(new Error('UAS request failed'));
+      const { result, rerender } = renderHook(() => useUASButton(defaultProps));
+
+      await act(async () => {
+        await expect(
+          result.current.handleSaveAction(UASAction.REMOVE),
+        ).rejects.toThrow('UAS request failed');
+      });
+      rerender();
+
+      expect(result.current.actionResult).toEqual({
+        status: 'error',
+        action: UASAction.REMOVE,
+      });
+    });
+
+    it('does not populate when a save is triggered by the background metadata sync', async () => {
+      let onMetadataOutOfDate: (() => void) | undefined;
+      mockUseUASMetadataSync.mockImplementation(
+        ({ onMetadataOutOfDate: callback }) => {
+          onMetadataOutOfDate = callback;
+        },
+      );
+
+      const { result, rerender } = renderHook(() => useUASButton(defaultProps));
+
+      await act(async () => {
+        onMetadataOutOfDate?.();
+        // Flush the mutation's internal awaits before asserting.
+        await new Promise(resolve => {
+          setTimeout(resolve, 0);
+        });
+      });
+      rerender();
+
+      expect(result.current.actionResult).toBeNull();
+    });
+
+    it('clears the action result and resets the underlying mutation', async () => {
+      const { result, rerender } = renderHook(() => useUASButton(defaultProps));
+
+      await act(async () => {
+        await result.current.handleSaveAction(UASAction.SAVE);
+      });
+      rerender();
+      expect(result.current.actionResult).not.toBeNull();
+
+      act(() => {
+        result.current.resetActionResult();
+      });
+      rerender();
+
+      expect(result.current.actionResult).toBeNull();
     });
   });
 });

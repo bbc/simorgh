@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Close, InfoCircle, InfoTriangle } from '#app/components/icons';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import styles from './index.module.scss';
@@ -33,18 +33,38 @@ const ActionTooltip = ({
   content,
   closeLabel,
   onClose,
+  ...rest
 }: ActionTooltipProps) => {
   const { title, body } = content[status];
+  const containerRef = useRef<HTMLDivElement>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    closeButtonRef.current?.focus();
+    containerRef.current?.scrollIntoView?.({ block: 'nearest' });
+  }, [status]);
 
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} {...rest}>
       <div
+        ref={containerRef}
         role="status"
         aria-live="polite"
         aria-atomic="true"
         className={styles.container}
         data-testid="action-tooltip"
       >
+        <button
+          ref={closeButtonRef}
+          type="button"
+          className={styles.closeButton}
+          onClick={onClose}
+          data-testid="action-tooltip-close"
+        >
+          <VisuallyHiddenText>{closeLabel}</VisuallyHiddenText>
+          <Close width="20" height="20" />
+        </button>
+
         <div className={styles.content}>
           <div className={styles.header}>
             <StatusIcon status={status} />
@@ -52,16 +72,6 @@ const ActionTooltip = ({
             <Text size="pica" fontVariant="sansBold" className={styles.title}>
               {title}
             </Text>
-
-            <button
-              type="button"
-              className={styles.closeButton}
-              onClick={onClose}
-              data-testid="action-tooltip-close"
-            >
-              <VisuallyHiddenText>{closeLabel}</VisuallyHiddenText>
-              <Close width="20" height="20" />
-            </button>
           </div>
 
           {body && (
