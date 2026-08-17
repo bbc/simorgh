@@ -30,6 +30,21 @@ const getAppName = service => {
     : `[news-${service}]`;
 };
 
+const getATIParamsFromInterception = request => {
+  const queryParams = request?.query as Record<string, string | string[]>;
+
+  if (!queryParams || typeof queryParams !== 'object') {
+    return getATIParamsFromURL(request?.url || '');
+  }
+
+  return Object.fromEntries(
+    Object.entries(queryParams).map(([key, value]) => [
+      key,
+      Array.isArray(value) ? value[0] : value,
+    ]),
+  );
+};
+
 const assertATIPageViewEventParamsExist = ({
   params,
   contentType,
@@ -118,7 +133,20 @@ const assertReverbViewabilityComponentEventParamsExist = ({
 const fieldIsValidString = field =>
   typeof field === 'string' && field.trim().length > 0;
 
+// Temporary debug - identify if long localised item text is producing invalid JSON.
+const assertEventsPayloadNotTruncated = (payload: string) => {
+  const trimmedPayload = payload.trim();
+  const lastChar = trimmedPayload[trimmedPayload.length - 1];
+
+  if (lastChar !== ']' && lastChar !== '}') {
+    throw new Error(
+      `ATI events payload appears truncated (length=${payload.length})`,
+    );
+  }
+};
+
 const validateViewabilityEventDetails = ({ payload, actionType }) => {
+  assertEventsPayloadNotTruncated(payload);
   const arr = JSON.parse(payload);
 
   return arr.some(event => {
@@ -270,6 +298,7 @@ const getMatchingViewabilityEventData = ({
   component,
   expectedItemText,
 }) => {
+  assertEventsPayloadNotTruncated(payload);
   const arr = JSON.parse(payload);
 
   const matchingEvents = arr.filter(
@@ -341,7 +370,7 @@ const findMatchingEventDataFromInterceptions = ({
   interceptions.forEach(interception => {
     if (matched) return;
 
-    const params = getATIParamsFromURL(interception.request.url);
+    const params = getATIParamsFromInterception(interception.request);
 
     if (!params.events) return;
 
@@ -372,27 +401,25 @@ export const assertATIComponentViewEvent = ({
   const requestAlias = `@${component}-viewability-view`;
 
   if (!expectedItemText) {
-    cy.wait(requestAlias)
-      .its('request.url')
-      .then(url => {
-        const params = getATIParamsFromURL(url);
+    cy.wait(requestAlias).then(({ request }) => {
+      const params = getATIParamsFromInterception(request);
 
-        assertViewabilityModelViewEvent({
-          pageIdentifier,
-          params,
-          applicationType,
-          siteId,
-        });
-
-        assertItemAndGroupTaxonomy({
-          payload: params.events,
-          actionType: VIEW_EVENT,
-          component,
-          expectedItemType,
-          expectedGroupType,
-          expectedItemText: undefined,
-        });
+      assertViewabilityModelViewEvent({
+        pageIdentifier,
+        params,
+        applicationType,
+        siteId,
       });
+
+      assertItemAndGroupTaxonomy({
+        payload: params.events,
+        actionType: VIEW_EVENT,
+        component,
+        expectedItemType,
+        expectedGroupType,
+        expectedItemText: undefined,
+      });
+    });
     return;
   }
 
@@ -493,15 +520,14 @@ export const assertATIComponentClickEvent = ({
 }) => {
   const requestAlias = `@${component}-viewability-click`;
 
-  cy.wait(requestAlias)
-    .its('request.url')
-    .then(url => {
-      const params = getATIParamsFromURL(url);
-      assertViewabilityModelClickEvent({
-        pageIdentifier,
-        params,
-        applicationType,
-        siteId,
-      });
+  cy.wait(requestAlias).then(({ request }) => {
+    const params = getATIParamsFromInterception(request);
+
+    assertViewabilityModelClickEvent({
+      pageIdentifier,
+      params,
+      applicationType,
+      siteId,
     });
+  });
 };
