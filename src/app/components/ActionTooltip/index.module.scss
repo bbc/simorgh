@@ -124,7 +124,7 @@
     }
   }
 
-  &:focus-visible {
+  &:focus {
     background: theme.$palette-postbox;
     outline: 2px solid theme.$palette-white;
     box-shadow: 0 0 0 0.25rem theme.$palette-grey-10;
