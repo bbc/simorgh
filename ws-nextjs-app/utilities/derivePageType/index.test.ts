@@ -69,6 +69,18 @@ describe('derivePageType', () => {
     const result = derivePageType(pathname);
     expect(result).toEqual(ARTICLE_PAGE);
   });
+  // unsure if the page type for these tests should be ARTICLE_PAGE
+  it('should return ARTICLE_PAGE for an Optimo /watch/ pathname', () => {
+    const pathname = '/gujarati/watch/c0000000000o';
+    const result = derivePageType(pathname);
+    expect(result).toEqual(ARTICLE_PAGE);
+  });
+
+  it('should return ARTICLE_PAGE for an Optimo /listen/ pathname', () => {
+    const pathname = '/tamil/listen/c0000000000o';
+    const result = derivePageType(pathname);
+    expect(result).toEqual(ARTICLE_PAGE);
+  });
 
   it('should return ARTICLE_PAGE if pathname matches CPS ID pattern', () => {
     const pathname = '/pidgin/institutional-1234567';
