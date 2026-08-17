@@ -184,6 +184,18 @@ const smokeCanonicalTestSuites = [
     variant: 'trad',
     tests: [...canonicalTests],
   },
+  {
+    path: '/tamil/watch/c6gjm3gede9zo',
+    runforEnv: ['local', 'test'],
+    service: 'tamil',
+    tests: [...canonicalTests],
+  },
+  {
+    path: '/tamil/listen/cw3xlkprxv82o',
+    runforEnv: ['local', 'test'],
+    service: 'tamil',
+    tests: [...canonicalTests],
+  },
 ];
 
 const nonSmokeCanonicalTestSuites = [
