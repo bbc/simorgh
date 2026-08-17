@@ -12,13 +12,12 @@
 .container {
   position: absolute;
   top: 100%;
-  left: 0;
-  right: 0;
-  max-width: 21rem;
-  width: 100%;
+  inset-inline-start: 0;
+  width: max-content;
+  max-width: min(95vw, 21rem);
   padding: 0.75rem;
   border: 1px solid theme.$palette-grey-4;
-  margin: 0 #{theme.$spacings-half};
+  margin: 0;
   background: theme.$palette-white;
   pointer-events: auto;
 

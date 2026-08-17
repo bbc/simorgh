@@ -25,17 +25,21 @@ const TooltipDemo = ({ status }: { status: ActionTooltipStatus }) => {
 
   const content = getArticleTooltipContent(actionTooltip);
 
-  if (!isVisible) {
-    return null;
-  }
-
   return (
-    <ActionTooltip
-      status={status}
-      content={content}
-      closeLabel={actionTooltip.closeLabel}
-      onClose={() => setIsVisible(false)}
-    />
+    <div style={{ position: 'relative'}}>
+      <button type="button" onClick={() => setIsVisible(true)}>
+        Open tooltip
+      </button>
+
+      {isVisible && (
+        <ActionTooltip
+          status={status}
+          content={content}
+          closeLabel={actionTooltip.closeLabel}
+          onClose={() => setIsVisible(false)}
+        />
+      )}
+    </div>
   );
 };
 
