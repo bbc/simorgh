@@ -31,12 +31,8 @@ const buildPlaceholderSrc = (src, resolution) => {
   const urlParts = imageSrc.replace(/https?:\/\//g, '').split('/');
   const [domain, mediaType, imgService, ...remainingUrlParts] = urlParts;
   const remainingUrlPartsWithoutResolution = remainingUrlParts.slice(1);
-  let newResolution;
-  if (mediaType === 'ace') {
-    newResolution = `${resolution}`;
-  } else {
-    newResolution = `${resolution}xn`;
-  }
+  const newResolution =
+    mediaType === 'ace' ? `${resolution}` : `${resolution}xn`;
   const newUrl = [
     domain,
     mediaType,
@@ -53,6 +49,7 @@ const buildIChefURL = ({
   resolution,
   ichefSubdomain = 'ace/ws',
 }) => {
+  console.log('originCode', originCode);
   if (originCode === 'mpv' || originCode === 'pips') {
     return buildPlaceholderSrc(locator, resolution);
   }

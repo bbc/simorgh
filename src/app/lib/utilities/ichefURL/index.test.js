@@ -113,6 +113,19 @@ describe('getIchefURL', () => {
     );
   });
 
+  it('keeps the resolution without xn for ace placeholder urls', () => {
+    const locator =
+      'https://ichef.bbci.co.uk/ace/standard/{width}/galileo/p0p4qjjk.jpg';
+    const originCode = 'pips';
+    const resolution = '512';
+    const expectedOutput =
+      'https://ichef.bbci.co.uk/ace/standard/512/galileo/p0p4qjjk.jpg.webp';
+
+    expect(getIChefURL({ locator, originCode, resolution })).toEqual(
+      expectedOutput,
+    );
+  });
+
   it('return urn scheme unmodified', () => {
     const locator = 'urn:bbc:pips:pid:p054n8j6';
     const originCode = 'pips';
