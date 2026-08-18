@@ -128,7 +128,7 @@ export type ServiceConfig = {
     iframeDevSrc: string;
   };
   articleMessageBanners?: ArticleMessageBannerConfig[];
-  useResonance?: boolean;
+  resonanceEnabled?: boolean;
 };
 
 export type ArticleMessageBannerConfig = {

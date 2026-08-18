@@ -925,7 +925,7 @@ describe('ATI Analytics Container', () => {
   });
 
   describe('Resonance', () => {
-    it('should pass resonanceParams to CanonicalATIAnalytics for services with useResonance', () => {
+    it('should pass resonanceParams to CanonicalATIAnalytics for services with resonanceEnabled', () => {
       const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
       // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       canonical.default = mockCanonical;
@@ -967,7 +967,7 @@ describe('ATI Analytics Container', () => {
       });
     });
 
-    it('should pass null resonanceParams to CanonicalATIAnalytics for services without useResonance', () => {
+    it('should pass null resonanceParams to CanonicalATIAnalytics for services without resonanceEnabled', () => {
       const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
       // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       canonical.default = mockCanonical;

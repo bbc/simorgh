@@ -321,7 +321,7 @@ describe('ReverbParamsContext', () => {
     });
   });
 
-  it('should provide resonanceParams to child components when useResonance is enabled', () => {
+  it('should provide resonanceParams to child components when resonanceEnabled is enabled', () => {
     const mockResonanceParams = {
       resonanceProperties: { mode: 'test' },
       baseProperties: {

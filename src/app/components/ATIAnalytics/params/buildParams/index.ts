@@ -118,11 +118,11 @@ export const buildAnalyticsParams = ({
   isSignedIn,
   hashedId,
 }: BuildPageParamsArgs) => {
-  const { useResonance } = serviceContext;
+  const { resonanceEnabled } = serviceContext;
   const { platform } = requestContext;
 
   const sendResonanceEvents =
-    useResonance && (platform === 'canonical' || platform === 'app');
+    resonanceEnabled && (platform === 'canonical' || platform === 'app');
 
   return {
     reverbParams: buildPageReverbParams({

@@ -437,7 +437,7 @@ export const service: DefaultServiceConfig = {
       },
     ],
     timezone: 'Asia/Seoul',
-    useResonance: true,
+    resonanceEnabled: true,
   },
 };
 
