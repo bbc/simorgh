@@ -4,7 +4,6 @@ import { LIVE_RADIO_PAGE } from '#app/routes/utils/pageTypes';
 import { Services } from '#app/models/types/global';
 import { LiveRadioBlock } from '#app/models/types/media';
 import afriquePageData from '#data/afrique/bbc_afrique_radio/liveradio.json';
-import { data as kyrgyzPageData } from '#data/kyrgyz/bbc_kyrgyz_radio/liveradio.json';
 import { render } from '../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import LiveRadioPage from './LiveRadioPage';
@@ -134,7 +133,7 @@ describe('Radio Page Main', () => {
   it('should not show the radio schedule for services without a schedule', async () => {
     const { container } = render(
       <Page
-        pageData={kyrgyzPageData as unknown as LiveRadioPageProps}
+        pageData={afriquePageData.data as unknown as LiveRadioPageProps}
         service="kyrgyz"
         lang="ky"
       />,
