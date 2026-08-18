@@ -239,6 +239,7 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
   width: 2.75rem;
   background-color: #B80000;
   color: #FFFFFF;
+  overflow: hidden;
   width: 2.75rem;
   height: 2.75rem;
 }
