@@ -31,7 +31,12 @@ const buildPlaceholderSrc = (src, resolution) => {
   const urlParts = imageSrc.replace(/https?:\/\//g, '').split('/');
   const [domain, mediaType, imgService, ...remainingUrlParts] = urlParts;
   const remainingUrlPartsWithoutResolution = remainingUrlParts.slice(1);
-  const newResolution = `${resolution}xn`;
+  let newResolution;
+  if (mediaType === 'ace') {
+    newResolution = `${resolution}`;
+  } else {
+    newResolution = `${resolution}xn`;
+  }
   const newUrl = [
     domain,
     mediaType,
