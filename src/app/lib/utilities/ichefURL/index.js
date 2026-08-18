@@ -49,7 +49,6 @@ const buildIChefURL = ({
   resolution,
   ichefSubdomain = 'ace/ws',
 }) => {
-  console.log('originCode', originCode);
   if (originCode === 'mpv' || originCode === 'pips') {
     return buildPlaceholderSrc(locator, resolution);
   }
