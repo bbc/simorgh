@@ -27,11 +27,8 @@ const sendOptimizelyActivationEvent = async ({
   experimentVariant,
   trackingIsEnabled,
   pageIdentifier,
-  platform,
-  producerId,
   producerName,
   statsDestination,
-  service,
   isSignedIn,
   hashedId,
 }: Props) => {
@@ -42,10 +39,7 @@ const sendOptimizelyActivationEvent = async ({
   const shouldSendEvent = [
     experimentName,
     pageIdentifier,
-    platform,
-    producerId,
     producerName,
-    service,
     statsDestination,
   ].every(Boolean);
 

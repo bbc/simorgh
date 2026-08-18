@@ -21,7 +21,7 @@ const activateExperiment = async ({
   onExperimentActivated,
 }: Props) => {
   if (onClient() && optimizely) {
-    const success = await optimizely?.onReady();
+    const { success } = await optimizely.onReady();
     if (success && !activatedExperiments.current.includes(experimentName)) {
       activatedExperiments.current.push(experimentName);
       optimizely.setForcedVariation(experimentName, experimentVariation);
