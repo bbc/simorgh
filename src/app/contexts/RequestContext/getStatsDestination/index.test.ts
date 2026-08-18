@@ -572,7 +572,6 @@ describe('getStatsDestination', () => {
     },
   ];
 
-  // Only these two destinations have a registered ATI siteId; all others resolve to null
   const expectedSiteIdsByDestinationName: Partial<Record<string, number>> = {
     WS_NEWS_LANGUAGES: 598342,
     WS_NEWS_LANGUAGES_TEST: 598343,
@@ -589,7 +588,7 @@ describe('getStatsDestination', () => {
       });
       expect(statsDestination).toEqual({
         destinationName: expected,
-        siteId: expectedSiteIdsByDestinationName[expected] ?? null,
+        destinationSiteId: expectedSiteIdsByDestinationName[expected] ?? null,
       });
     });
   });

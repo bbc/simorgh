@@ -10,7 +10,6 @@ type Props = {
   service: Services;
 };
 
-// Only these two destinations have a registered ATI siteId; all others are untracked for this purpose
 const SITE_IDS_BY_DESTINATION: Partial<
   Record<string, Record<'live' | 'test', number>>
 > = {
@@ -50,10 +49,10 @@ const getStatsDestination = ({ isUK = true, env = 'test', service }: Props) => {
   }
   const isLive = env === 'live';
   const destinationName = isLive ? destination : `${destination}_TEST`;
-  const siteId =
+  const destinationSiteId =
     SITE_IDS_BY_DESTINATION[destination]?.[isLive ? 'live' : 'test'] ?? null;
 
-  return { destinationName, siteId };
+  return { destinationName, destinationSiteId };
 };
 
 export default getStatsDestination;

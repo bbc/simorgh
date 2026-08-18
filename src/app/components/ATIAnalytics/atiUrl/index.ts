@@ -32,7 +32,7 @@ export const buildResonanceAnalyticsModel = ({
   contentType,
   language,
   statsDestination,
-  siteId,
+  destinationSiteId,
   hashedId,
   pageIdentifier,
   producerName,
@@ -52,7 +52,7 @@ export const buildResonanceAnalyticsModel = ({
       hashedUserId: hashedId ?? undefined,
       pageName: pageIdentifier,
       producer: producerName,
-      siteId,
+      siteId: destinationSiteId,
     },
     pageviewProperties: {
       contentId,

@@ -218,7 +218,7 @@ export interface ATIPageTrackingProps {
   libraryVersion?: string;
   platform?: Platforms;
   statsDestination?: string;
-  siteId?: number | null;
+  destinationSiteId?: number | null;
   timePublished?: string | null;
   timeUpdated?: string | null;
   categoryName?: string | null;

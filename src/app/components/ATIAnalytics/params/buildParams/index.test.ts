@@ -13,7 +13,7 @@ jest.mock('#lib/utilities/onClient', () => jest.fn().mockReturnValue(true));
 const requestContext: RequestContextProps = {
   platform: 'canonical',
   statsDestination: 'statsDestination',
-  siteId: 598343,
+  destinationSiteId: 12345,
   id: 'validId',
 };
 
