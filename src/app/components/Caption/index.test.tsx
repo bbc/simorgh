@@ -37,47 +37,64 @@ const CaptionWithContext = ({
 
 describe('Captions', () => {
   it('should render caption text with example News offscreen text', () => {
-    const { container } = render(
+    const { getByRole, getByTestId } = render(
       CaptionWithContext({
         block: captionBlock,
         contextStub: newsServiceContextStub as ServiceConfig,
         type: 'caption',
       }),
     );
-    expect(container).toMatchSnapshot();
+
+    expect(getByTestId('caption-paragraph')).toHaveTextContent(
+      'Some caption text...',
+    );
+    expect(getByRole('text').textContent).toBe('Caption, Some caption text...');
   });
 
   it('should render caption text with example Farsi offscreen text', () => {
-    const { container } = render(
+    const { getByRole, getByTestId } = render(
       CaptionWithContext({
         block: captionBlock,
         contextStub: persianServiceContextStub as ServiceConfig,
         type: 'caption',
       }),
     );
-    expect(container).toMatchSnapshot();
+
+    expect(getByTestId('caption-paragraph')).toHaveTextContent(
+      'Some caption text...',
+    );
+    expect(getByRole('text').textContent).toBe(' ، عنوانSome caption text...');
   });
 
   it('should render caption with multiple paragraphs', () => {
-    const { container } = render(
+    const { getAllByTestId } = render(
       CaptionWithContext({
         block: captionBlock3Paragraphs,
         contextStub: newsServiceContextStub as ServiceConfig,
         type: 'caption',
       }),
     );
-    expect(container).toMatchSnapshot();
+
+    expect(getAllByTestId('caption-paragraph')).toHaveLength(3);
   });
 
   it('should render correctly with inline block', () => {
-    const { container } = render(
+    const { getByTestId, getByRole } = render(
       CaptionWithContext({
         block: blocksWithInline,
         contextStub: newsServiceContextStub as ServiceConfig,
         type: 'caption',
       }),
     );
-    expect(container).toMatchSnapshot();
+
+    expect(getByTestId('caption-paragraph')).toHaveTextContent(
+      'This is some text.',
+    );
+
+    const link = getByRole('link', { name: /چیسربرگر/ });
+
+    expect(link).toHaveAttribute('href', 'https://google.com');
+    expect(link).toHaveTextContent('چیسربرگر');
   });
 
   describe('with offscreen text', () => {
