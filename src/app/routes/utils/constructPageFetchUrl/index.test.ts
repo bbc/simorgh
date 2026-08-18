@@ -1,4 +1,4 @@
-import constructPageFetchUrl, { isOptimoIdCheck } from '.';
+import constructPageFetchUrl from '.';
 import {
   AV_EMBEDS,
   ARTICLE_PAGE,
