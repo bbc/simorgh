@@ -30,8 +30,10 @@ describe('sendOptimizelyActivationEvent', () => {
       expect.objectContaining({
         eventDetails: expect.objectContaining({
           eventName: 'activation',
-          experimentName: 'foo',
-          experimentVariant: 'control',
+          personalisation: {
+            experimentName: 'foo',
+            experimentVariant: 'control',
+          },
         }),
       }),
     );

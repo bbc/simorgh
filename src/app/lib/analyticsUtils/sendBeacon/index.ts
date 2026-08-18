@@ -28,19 +28,18 @@ const reverbComponentTracking = async ({
 }: ReverbComponentTrackingProps) => {
   const {
     actionName = '',
-    actionType,
     anchorElement,
     background,
     container,
     experience,
     event,
     eventPublisher,
-    experimentName,
-    experimentVariant,
     group,
     isClick,
     item,
     originalEvent,
+    personalisation,
+    type,
   } = eventDetails;
 
   const actionAdditionalLabels = {
@@ -48,11 +47,10 @@ const reverbComponentTracking = async ({
     group,
     item,
     experience,
-    ...(actionType && { actionType }),
+    ...(type && { type }),
     ...(background !== undefined && { background }),
     ...(container && { container }),
-    ...(experimentName && { experimentName }),
-    ...(experimentVariant && { experimentVariant }),
+    ...(personalisation && { personalisation }),
   };
 
   return reverbInstance.userActionEvent(

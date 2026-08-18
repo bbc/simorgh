@@ -232,14 +232,13 @@ export const buildActivationEventModel = ({
     eventName: ACTIVATION_EVENT,
     eventPublisher: 'optimizely',
     actionName: 'optimizely',
-    actionType: 'experiment',
+    type: 'experiment',
     background: true,
     container: 'unspecified',
-    experimentName,
-    experimentVariant,
-    experience: {
-      engine_type: ['experimentation'],
-      engine_id: [`optimizely.${experimentName}.${experimentVariant}`],
+    // Reverb only serialises 'personalisation' (not arbitrary custom keys) for this legacy CPV event shape
+    personalisation: {
+      experimentName,
+      experimentVariant,
     },
   },
 });

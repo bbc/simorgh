@@ -120,7 +120,6 @@ export type ReverbUserVars = {
 
 export type ReverbEventDetails = {
   actionName?: string;
-  actionType?: string;
   anchorElement?: HTMLElement;
   background?: boolean;
   container?: string;
@@ -135,12 +134,17 @@ export type ReverbEventDetails = {
   };
   eventName: 'pageView' | 'sectionView' | 'sectionClick' | 'activation';
   eventPublisher?: string;
-  experimentName?: string;
-  experimentVariant?: string;
   group?: string | object;
   isClick?: boolean;
   item?: string | object;
   originalEvent?: Event;
+  // Serialised by Reverb into the legacy CPV 'variant' slot, used for MVT/experimentation (see ATIAnalytics/README.md)
+  personalisation?: {
+    experimentName: string;
+    experimentVariant: string;
+  };
+  // Appended to 'actionName' by Reverb to form the 'creation' slot as 'actionName~type'
+  type?: string;
 };
 
 export type ReverbBeaconConfig = {

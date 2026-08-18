@@ -22,7 +22,7 @@ export default ({ experimentName, overrideAttributes = {} }: Props) => {
     if (isClientReady && !didTimeout) {
       setVariation(decision.variationKey);
     }
-  }, [isClientReady, decision.variationKey, didTimeout]);
+  }, [isClientReady, decision.variationKey, didTimeout, experimentName]);
 
   return variation;
 };

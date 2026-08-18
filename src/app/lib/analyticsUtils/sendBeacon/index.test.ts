@@ -163,14 +163,12 @@ describe('sendBeacon', () => {
           eventName: 'activation',
           eventPublisher: 'optimizely',
           actionName: 'optimizely',
-          actionType: 'experiment',
+          type: 'experiment',
           background: true,
           container: 'unspecified',
-          experimentName: 'foo',
-          experimentVariant: 'bar',
-          experience: {
-            engine_type: ['experimentation'],
-            engine_id: ['optimizely.foo.bar'],
+          personalisation: {
+            experimentName: 'foo',
+            experimentVariant: 'bar',
           },
         },
       } as unknown as ReverbBeaconConfig;
@@ -182,14 +180,12 @@ describe('sendBeacon', () => {
         'optimizely',
         'optimizely',
         {
-          actionType: 'experiment',
+          type: 'experiment',
           background: true,
           container: 'unspecified',
-          experimentName: 'foo',
-          experimentVariant: 'bar',
-          experience: {
-            engine_type: ['experimentation'],
-            engine_id: ['optimizely.foo.bar'],
+          personalisation: {
+            experimentName: 'foo',
+            experimentVariant: 'bar',
           },
         },
         undefined,
