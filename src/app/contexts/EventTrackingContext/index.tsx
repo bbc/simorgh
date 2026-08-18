@@ -1,6 +1,7 @@
 import { createContext, PropsWithChildren, use, useMemo } from 'react';
 
 import { AccountContext } from '#contexts/AccountContext';
+import { setActivationContext } from '#app/lib/analyticsUtils/activationContext';
 import { RequestContext } from '../RequestContext';
 import useToggle from '../../hooks/useToggle';
 import {
@@ -121,6 +122,8 @@ export const EventTrackingContextProvider = ({
   ]);
 
   if (!eventTrackingIsEnabled || !atiData) {
+    setActivationContext({ trackingIsEnabled: false });
+
     return (
       <EventTrackingContext.Provider value={NO_TRACKING_PROPS}>
         {children}
@@ -138,6 +141,17 @@ export const EventTrackingContextProvider = ({
       trackingProps.producerName,
       trackingProps.statsDestination,
     ].every(Boolean);
+
+  // Populated synchronously (not in an effect) so it's set before any descendant's
+  // effects run and potentially trigger an Optimizely decision on this same render pass.
+  setActivationContext({
+    trackingIsEnabled: Boolean(hasRequiredProps),
+    pageIdentifier: trackingProps?.pageIdentifier,
+    producerName: trackingProps?.producerName,
+    statsDestination: trackingProps?.statsDestination,
+    isSignedIn: trackingProps?.isSignedIn,
+    hashedId: trackingProps?.hashedId,
+  });
 
   return (
     <EventTrackingContext.Provider

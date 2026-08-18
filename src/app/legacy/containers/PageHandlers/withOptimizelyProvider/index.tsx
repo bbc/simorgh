@@ -11,6 +11,8 @@ import onClient from '#lib/utilities/onClient';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import { notifyDecision } from '#app/lib/optimizelyDecisionStore';
+import sendOptimizelyActivationEvent from '#app/lib/analyticsUtils/sendOptimizelyActivationEvent';
+import { getActivationContext } from '#app/lib/analyticsUtils/activationContext';
 import { TOKEN_COOKIE_NAME } from '#app/lib/uasApi/tokenRefresh/tokenManager';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -87,7 +89,17 @@ optimizely?.notificationCenter?.addNotificationListener(
     const { decisionKey, impressionDispatched } = resolveDecision(decisionInfo);
 
     if (decisionKey && variationKey && variationKey !== 'off') {
+      const isNewDecision = notifyDecision(decisionKey);
+
       if (impressionDispatched) {
+        if (isNewDecision) {
+          sendOptimizelyActivationEvent({
+            experimentName: decisionKey,
+            experimentVariant: variationKey,
+            ...getActivationContext(),
+          });
+        }
+
         const currentUrl = window.location.pathname + window.location.search;
         if (currentUrl !== lastTrackedUrl) {
           lastTrackedUrl = currentUrl;
@@ -107,8 +119,6 @@ optimizely?.notificationCenter?.addNotificationListener(
           }
         }
       }
-
-      notifyDecision(decisionKey);
     }
   },
 );

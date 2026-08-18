@@ -7,10 +7,6 @@ type Props = {
   experimentName: string;
   experimentVariation: string;
   activatedExperiments: RefObject<string[]>;
-  onExperimentActivated?: (
-    experimentName: string,
-    experimentVariation: string,
-  ) => void;
 };
 
 const activateExperiment = async ({
@@ -18,7 +14,6 @@ const activateExperiment = async ({
   experimentName,
   experimentVariation,
   activatedExperiments,
-  onExperimentActivated,
 }: Props) => {
   if (onClient() && optimizely) {
     const { success } = await optimizely.onReady();
@@ -26,7 +21,6 @@ const activateExperiment = async ({
       activatedExperiments.current.push(experimentName);
       optimizely.setForcedVariation(experimentName, experimentVariation);
       optimizely.activate(experimentName);
-      onExperimentActivated?.(experimentName, experimentVariation);
     }
   }
 };

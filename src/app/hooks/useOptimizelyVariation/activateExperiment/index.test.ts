@@ -60,27 +60,9 @@ describe('activateExperiment', () => {
     expect(mockOptimizely.activate).not.toHaveBeenCalled();
   });
 
-  it('should call onExperimentActivated once when activation succeeds', async () => {
-    (onClient as jest.Mock).mockReturnValueOnce(true);
-    mockOptimizely.onReady.mockResolvedValue({ success: true });
-    const onExperimentActivated = jest.fn();
-
-    await activateExperiment({
-      optimizely: mockOptimizely as unknown as ReactSDKClient,
-      experimentName: mockExperimentName,
-      experimentVariation: mockExperimentVariation,
-      activatedExperiments: getActivatedExperiments(),
-      onExperimentActivated,
-    });
-
-    expect(onExperimentActivated).toHaveBeenCalledTimes(1);
-    expect(onExperimentActivated).toHaveBeenCalledWith('foo', 'bar');
-  });
-
-  it('should not activate again or call onExperimentActivated if the experiment was already activated', async () => {
+  it('should not activate again if the experiment was already activated', async () => {
     (onClient as jest.Mock).mockReturnValue(true);
     mockOptimizely.onReady.mockResolvedValue({ success: true });
-    const onExperimentActivated = jest.fn();
     const activatedExperiments = getActivatedExperiments();
 
     await activateExperiment({
@@ -88,7 +70,6 @@ describe('activateExperiment', () => {
       experimentName: mockExperimentName,
       experimentVariation: mockExperimentVariation,
       activatedExperiments,
-      onExperimentActivated,
     });
 
     await activateExperiment({
@@ -96,11 +77,9 @@ describe('activateExperiment', () => {
       experimentName: mockExperimentName,
       experimentVariation: mockExperimentVariation,
       activatedExperiments,
-      onExperimentActivated,
     });
 
     expect(mockOptimizely.activate).toHaveBeenCalledTimes(1);
-    expect(onExperimentActivated).toHaveBeenCalledTimes(1);
   });
 
   it('should not set a forced variation or activate when onReady resolves with success: false', async () => {
