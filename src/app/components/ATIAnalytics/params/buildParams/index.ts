@@ -1,3 +1,4 @@
+import getSiteId from '#lib/analyticsUtils/getSiteId';
 import { LIBRARY_VERSION } from '../../../../lib/analyticsUtils';
 import {
   buildReverbAnalyticsModel,
@@ -15,7 +16,7 @@ export const buildPageATIParams = ({
   isSignedIn?: boolean;
   hashedId?: string | null;
 }) => {
-  const { isUK, platform, statsDestination, siteId } = requestContext;
+  const { isUK, platform, statsDestination, env } = requestContext;
   const {
     atiAnalyticsAppName,
     atiAnalyticsProducerId,
@@ -41,6 +42,8 @@ export const buildPageATIParams = ({
     experimentName,
     experimentVariant,
   } = atiData;
+
+  const siteId = getSiteId({ service, env });
 
   return {
     appName: atiAnalyticsAppName,

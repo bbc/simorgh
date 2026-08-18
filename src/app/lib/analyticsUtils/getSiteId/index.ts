@@ -1,11 +1,11 @@
 import { Environments, Services } from '#app/models/types/global';
 
 type Props = {
-  env?: Environments | null;
   service: Services;
+  env: Environments;
 };
 
-const getSiteId = ({ env = 'test', service }: Props) => {
+const getSiteId = ({ service, env = 'test' }: Props) => {
   let siteId: number;
   switch (service) {
     case 'japanese':

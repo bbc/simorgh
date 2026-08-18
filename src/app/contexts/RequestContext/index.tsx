@@ -11,7 +11,6 @@ import getStatsDestination from './getStatsDestination';
 import getOriginContext from './getOriginContext';
 import getEnv from './getEnv';
 import getMetaUrls from './getMetaUrls';
-import getSiteId from './getSiteId';
 
 export type RequestContextProps = {
   ampLink: string;
@@ -37,7 +36,6 @@ export type RequestContextProps = {
   showAdsBasedOnLocation: boolean;
   showCookieBannerBasedOnCountry: boolean;
   statsDestination: string;
-  siteId: number;
   statusCode: number | null;
   timeOnServer: number | null;
   variant: Variants | null;
@@ -122,8 +120,6 @@ export const RequestContextProvider = ({
     service,
   });
 
-  const siteId = getSiteId({ env, service });
-
   const value = useMemo(
     () => ({
       env,
@@ -138,7 +134,6 @@ export const RequestContextProvider = ({
       isNextJs,
       platform,
       statsDestination,
-      siteId,
       statusCode,
       variant,
       timeOnServer,
@@ -170,7 +165,6 @@ export const RequestContextProvider = ({
       showAdsBasedOnLocation,
       showCookieBannerBasedOnCountry,
       statsDestination,
-      siteId,
       statusCode,
       timeOnServer,
       variant,

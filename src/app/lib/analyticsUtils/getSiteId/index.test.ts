@@ -11,10 +11,12 @@ describe('getSiteId', () => {
     });
 
     it('should default to the test siteId when env is not provided', () => {
+      // @ts-expect-error - invalid params
       expect(getSiteId({ service: 'pidgin' })).toBe(598343);
     });
 
     it('should default to the test siteId when env is null', () => {
+      // @ts-expect-error - invalid params
       expect(getSiteId({ env: null, service: 'pidgin' })).toBe(598343);
     });
   });
