@@ -1,6 +1,7 @@
 import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
 import { RequestContextProps } from '../../../../contexts/RequestContext';
 import { ServiceConfig } from '../../../../models/types/serviceConfig';
+import { Platforms } from '../../../../models/types/global';
 import { buildPageATIParams, buildAnalyticsParams } from '.';
 
 jest
@@ -729,45 +730,27 @@ describe('buildAnalyticsParams', () => {
     expect(resonanceParams).toHaveProperty('pageviewProperties');
   });
 
-  it('should return resonanceParams when resonanceEnabled is true and platform is app', () => {
-    const { resonanceParams } = buildAnalyticsParams({
-      atiData,
-      requestContext: { ...requestContext, platform: 'app' },
-      serviceContext: { ...serviceContext, resonanceEnabled: true },
-    });
+  it.each([
+    { platform: 'app', shouldReturnResonanceParams: true },
+    { platform: 'canonical', shouldReturnResonanceParams: true },
+    { platform: 'amp', shouldReturnResonanceParams: false },
+    { platform: 'lite', shouldReturnResonanceParams: false },
+  ])(
+    'should return resonanceParams: $shouldReturnResonanceParams when resonanceEnabled is true and platform is $platform',
+    ({ platform, shouldReturnResonanceParams }) => {
+      const { resonanceParams } = buildAnalyticsParams({
+        atiData,
+        requestContext: { ...requestContext, platform: platform as Platforms },
+        serviceContext: { ...serviceContext, resonanceEnabled: true },
+      });
 
-    expect(resonanceParams).not.toBeNull();
-  });
-
-  it('should return resonanceParams when resonanceEnabled is true and platform is canonical', () => {
-    const { resonanceParams } = buildAnalyticsParams({
-      atiData,
-      requestContext: { ...requestContext, platform: 'canonical' },
-      serviceContext: { ...serviceContext, resonanceEnabled: true },
-    });
-
-    expect(resonanceParams).not.toBeNull();
-  });
-
-  it('should return null for resonanceParams when resonanceEnabled is true but platform is amp', () => {
-    const { resonanceParams } = buildAnalyticsParams({
-      atiData,
-      requestContext: { ...requestContext, platform: 'amp' },
-      serviceContext: { ...serviceContext, resonanceEnabled: true },
-    });
-
-    expect(resonanceParams).toBeNull();
-  });
-
-  it('should return null for resonanceParams when resonanceEnabled is true but platform is lite', () => {
-    const { resonanceParams } = buildAnalyticsParams({
-      atiData,
-      requestContext: { ...requestContext, platform: 'lite' },
-      serviceContext: { ...serviceContext, resonanceEnabled: true },
-    });
-
-    expect(resonanceParams).toBeNull();
-  });
+      if (shouldReturnResonanceParams) {
+        expect(resonanceParams).not.toBeNull();
+      } else {
+        expect(resonanceParams).toBeNull();
+      }
+    },
+  );
 
   it('should always return reverbParams regardless of resonanceEnabled', () => {
     const withResonance = buildAnalyticsParams({
