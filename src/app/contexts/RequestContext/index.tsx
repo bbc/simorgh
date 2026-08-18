@@ -36,6 +36,7 @@ export type RequestContextProps = {
   showAdsBasedOnLocation: boolean;
   showCookieBannerBasedOnCountry: boolean;
   statsDestination: string;
+  siteId: number | null;
   statusCode: number | null;
   timeOnServer: number | null;
   variant: Variants | null;
@@ -114,7 +115,7 @@ export const RequestContextProvider = ({
 
   const platform = getPlatform();
 
-  const statsDestination = getStatsDestination({
+  const { destinationName: statsDestination, siteId } = getStatsDestination({
     isUK: platform === 'amp' ? true : formattedIsUK, // getDestination requires that statsDestination is a PS variant on AMP
     env,
     service,
@@ -134,6 +135,7 @@ export const RequestContextProvider = ({
       isNextJs,
       platform,
       statsDestination,
+      siteId,
       statusCode,
       variant,
       timeOnServer,
@@ -165,6 +167,7 @@ export const RequestContextProvider = ({
       showAdsBasedOnLocation,
       showCookieBannerBasedOnCountry,
       statsDestination,
+      siteId,
       statusCode,
       timeOnServer,
       variant,

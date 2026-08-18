@@ -572,6 +572,14 @@ describe('getStatsDestination', () => {
     },
   ];
 
+  // Only these two destinations have a registered ATI siteId; all others resolve to null
+  const expectedSiteIdsByDestinationName: Partial<Record<string, number>> = {
+    WS_NEWS_LANGUAGES: 598342,
+    WS_NEWS_LANGUAGES_TEST: 598343,
+    NEWS_LANGUAGES_GNL: 646753,
+    NEWS_LANGUAGES_GNL_TEST: 598290,
+  };
+
   testScenarios.forEach(({ isUK, env, service, expected, summary }) => {
     it(summary, () => {
       const statsDestination = getStatsDestination({
@@ -579,7 +587,10 @@ describe('getStatsDestination', () => {
         env: env as Environments,
         service: service as Services,
       });
-      expect(statsDestination).toEqual(expected);
+      expect(statsDestination).toEqual({
+        destinationName: expected,
+        siteId: expectedSiteIdsByDestinationName[expected] ?? null,
+      });
     });
   });
 });
