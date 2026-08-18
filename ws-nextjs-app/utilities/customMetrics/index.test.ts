@@ -87,6 +87,10 @@ describe('Cloudwatch Custom Metrics', () => {
         PageType: 'article',
         StatusCode: '500',
       });
+
+      expect(metricsLogger.putDimensions).toHaveBeenCalledWith({
+        StatusCode: '500',
+      });
     });
 
     it('should set URL property', () => {
