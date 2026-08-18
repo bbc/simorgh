@@ -263,10 +263,14 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
     return null;
   }
 
-  // For Lite pages, filter out any items that should be hidden on the Lite site
-  const navigationItems = navItemsFromPropsOrServiceConfig.filter(
-    item => !(item.hideOnLiteSite && isLite),
-  );
+  // For Lite pages, filter out any items that should be hidden on the Lite site.
+  // Watch/Listen items must never appear on Lite
+  const navigationItems = navItemsFromPropsOrServiceConfig.filter(item => {
+    if (!isLite) return true;
+    if (item.hideOnLiteSite) return false;
+    if (item.type === 'watch' || item.type === 'listen') return false;
+    return true;
+  });
 
   // Compute which top item is active based on current URL
   const { index: topActiveIndex, shouldAnnounce: topShouldAnnounce } =

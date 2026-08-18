@@ -281,6 +281,75 @@ describe('Navigation', () => {
     expect(queryAllByText(mockNavigation[0].title)[0]).toBeVisible();
   });
 
+  it('should not render Watch/Listen items on the Lite site even when hideOnLiteSite is false', () => {
+    const { ...rest } = newsConfig.default;
+    const mockNavigation = [
+      { title: 'Home', url: '/home', hideOnLiteSite: false },
+      { title: 'Watch', url: '/watch', type: 'watch', hideOnLiteSite: false },
+      {
+        title: 'Listen',
+        url: '/listen',
+        type: 'listen',
+        hideOnLiteSite: false,
+      },
+    ];
+
+    const navigationComponent = (
+      <ServiceContext.Provider value={{ navigation: mockNavigation, ...rest }}>
+        <Navigation navItems={mockNavigation} />
+      </ServiceContext.Provider>
+    );
+
+    const { queryByText, queryAllByText } = render(navigationComponent, {
+      bbcOrigin: 'https://www.test.bbc.co.uk',
+      id: 'c0000000000o',
+      isAmp: false,
+      pageType: ARTICLE_PAGE,
+      service: 'news',
+      statusCode: 200,
+      pathname: '/news',
+      isLite: true,
+    });
+
+    expect(queryByText('Watch')).not.toBeInTheDocument();
+    expect(queryByText('Listen')).not.toBeInTheDocument();
+    expect(queryAllByText('Home').length).toBeGreaterThan(0);
+  });
+
+  it('should render Watch/Listen items on the non-Lite site', () => {
+    const { ...rest } = newsConfig.default;
+    const mockNavigation = [
+      { title: 'Home', url: '/home', hideOnLiteSite: false },
+      { title: 'Watch', url: '/watch', type: 'watch', hideOnLiteSite: false },
+      {
+        title: 'Listen',
+        url: '/listen',
+        type: 'listen',
+        hideOnLiteSite: false,
+      },
+    ];
+
+    const navigationComponent = (
+      <ServiceContext.Provider value={{ navigation: mockNavigation, ...rest }}>
+        <Navigation navItems={mockNavigation} />
+      </ServiceContext.Provider>
+    );
+
+    const { queryAllByText } = render(navigationComponent, {
+      bbcOrigin: 'https://www.test.bbc.co.uk',
+      id: 'c0000000000o',
+      isAmp: false,
+      pageType: ARTICLE_PAGE,
+      service: 'news',
+      statusCode: 200,
+      pathname: '/news',
+      isLite: false,
+    });
+
+    expect(queryAllByText('Watch')[0]).toBeVisible();
+    expect(queryAllByText('Listen')[0]).toBeVisible();
+  });
+
   describe('View and click tracking', () => {
     afterEach(() => {
       jest.clearAllMocks();
