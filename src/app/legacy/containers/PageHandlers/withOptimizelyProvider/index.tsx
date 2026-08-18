@@ -1,4 +1,4 @@
-import { ComponentType, use } from 'react';
+import { ComponentType, use, useRef } from 'react';
 import {
   createInstance,
   OptimizelyProvider,
@@ -10,10 +10,18 @@ import isLive from '#lib/utilities/isLive';
 import onClient from '#lib/utilities/onClient';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
-import { notifyDecision } from '#app/lib/optimizelyDecisionStore';
+import {
+  notifyDecision,
+  useActivatedExperiments,
+} from '#app/lib/optimizelyDecisionStore';
 import { TOKEN_COOKIE_NAME } from '#app/lib/uasApi/tokenRefresh/tokenManager';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
+import {
+  SEARCH_OJ_AA_ACTIVATION_EVENT_NAME,
+  SEARCH_OJ_AA_EXPERIMENT_NAME,
+} from '#app/pages/ArticlePage/SearchOjExperiment/config';
+import useCustomEventTracker from '#app/hooks/useCustomEventTracker';
 import isCypress from './isCypress';
 import registerVisitActivity from './visitTracking';
 import { getClientTimeOfDay, getReferrer, isMobile } from './userAttributes';
@@ -54,6 +62,33 @@ type DecisionInfo = {
   decisionEventDispatched?: boolean;
 };
 
+const dispatchExperimentActivationBeaconToPiano = ({
+  decisionKey,
+  variationKey,
+}) => {
+  const activatedExperiments = useActivatedExperiments();
+
+  if (activatedExperiments.has(decisionKey)) return;
+
+  const EXPERIMENT_EVENT_DETAILS = {
+    [SEARCH_OJ_AA_EXPERIMENT_NAME]: SEARCH_OJ_AA_ACTIVATION_EVENT_NAME,
+  };
+
+  const { eventName, hasTrackedActivation } =
+    EXPERIMENT_EVENT_DETAILS[decisionKey];
+
+  const trackActivation = useCustomEventTracker({
+    eventName,
+    experimentName: decisionKey,
+    experimentVariant: variationKey ?? undefined,
+  });
+
+  if (!hasTrackedActivation.current) {
+    hasTrackedActivation.current = true;
+    trackActivation();
+  }
+};
+
 // Optimizely reports a decision in one of two shapes depending on the experiment type.
 // We normalise both into a single `decisionKey` + `impressionDispatched` so the rest
 // of the app doesn't need to know which type it was:
@@ -80,6 +115,14 @@ const resolveDecision = (decisionInfo?: DecisionInfo) => {
 optimizely?.notificationCenter?.addNotificationListener(
   enums.NOTIFICATION_TYPES.DECISION,
   (notification: ListenerPayload & { decisionInfo?: DecisionInfo }) => {
+    console.log('&&&&&&&&&&&&&&&&&&&&&');
+    console.log(
+      'I GET HERE - optimizely.notificationCenter.addNotificationListener',
+    );
+    console.log('+++++++++++++++++++++');
+    console.log('notification - ', notification);
+    console.log('&&&&&&&&&&&&&&&&&&&&&');
+
     if (!onClient()) return;
 
     const { decisionInfo } = notification;
@@ -88,6 +131,11 @@ optimizely?.notificationCenter?.addNotificationListener(
 
     if (decisionKey && variationKey && variationKey !== 'off') {
       if (impressionDispatched) {
+        dispatchExperimentActivationBeaconToPiano({
+          decisionKey,
+          variationKey,
+        });
+
         const currentUrl = window.location.pathname + window.location.search;
         if (currentUrl !== lastTrackedUrl) {
           lastTrackedUrl = currentUrl;
