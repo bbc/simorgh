@@ -115,14 +115,6 @@ const resolveDecision = (decisionInfo?: DecisionInfo) => {
 optimizely?.notificationCenter?.addNotificationListener(
   enums.NOTIFICATION_TYPES.DECISION,
   (notification: ListenerPayload & { decisionInfo?: DecisionInfo }) => {
-    console.log('&&&&&&&&&&&&&&&&&&&&&');
-    console.log(
-      'I GET HERE - optimizely.notificationCenter.addNotificationListener',
-    );
-    console.log('+++++++++++++++++++++');
-    console.log('notification - ', notification);
-    console.log('&&&&&&&&&&&&&&&&&&&&&');
-
     if (!onClient()) return;
 
     const { decisionInfo } = notification;
