@@ -945,7 +945,7 @@ describe('LivePageLayout live text polling', () => {
 
     await advancePolling();
 
-    expect(fetchSpy).toHaveBeenCalledWith('live', {
+    expect(fetchSpy).toHaveBeenCalledWith('stream', {
       params: { liveTextStreamId: 'stream-id', type: 'curated' },
     });
   });
