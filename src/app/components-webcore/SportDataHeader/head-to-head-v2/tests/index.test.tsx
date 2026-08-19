@@ -28,11 +28,9 @@ import {
 import HeadToHead from '../head-to-head-v2';
 import type { HeadToHeadV2Data } from '../types';
 
-jest.mock('#app/hooks/useSportDataPolling', () => ({
+jest.mock('#app/hooks/usePolling', () => ({
   __esModule: true,
-  default: jest.fn(initialSportData => ({
-    currentSportData: initialSportData,
-  })),
+  default: jest.fn(({ initialData }) => initialData),
 }));
 
 jest.mock('../helpers/localise-datetime', () => ({

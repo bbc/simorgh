@@ -12,7 +12,7 @@ import { MediaCollection } from '#app/components/MediaLoader/types';
 import HeadToHeadV2 from '#app/components-webcore/SportDataHeader/head-to-head-v2';
 import { HeadToHeadV2Data } from '#app/components-webcore/SportDataHeader/head-to-head-v2/types';
 import { PortraitVideoItems } from '#app/models/types/optimo';
-import useLivePagePolling from '#app/hooks/useLivePagePolling';
+import usePolling from '#app/hooks/usePolling';
 import useToggle from '#app/hooks/useToggle';
 import {
   getImageFromPost,
@@ -106,14 +106,22 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
     sportDataEventContent,
   } = pageData;
 
-  const { polledStreamData } = useLivePagePolling(
-    pageData,
-    livePagePollingEnabled && isLive,
-  );
+  const initialStreamData = liveTextStream?.content?.data ?? null;
 
-  const [currentStreamData, setCurrentStreamData] = useState(
-    liveTextStream?.content?.data ?? null,
-  );
+  const polledStreamData = usePolling<
+    StreamResponse['data'],
+    StreamResponse['data'] | null
+  >({
+    initialData: initialStreamData,
+    enabled:
+      livePagePollingEnabled && isLive && initialStreamData?.page?.index === 1,
+    endpoint: 'live',
+    params: { liveTextStreamId: liveTextStream.id, type: 'curated' },
+    returnedData: response =>
+      response?.results && response.results.length > 0 ? response : null,
+  });
+
+  const [currentStreamData, setCurrentStreamData] = useState(initialStreamData);
 
   const polledFirstPostUrn = polledStreamData?.results?.[0]?.urn;
   const currentFirstPostUrn = currentStreamData?.results?.[0]?.urn;

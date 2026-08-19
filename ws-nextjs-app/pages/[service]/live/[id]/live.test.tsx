@@ -11,7 +11,7 @@ import postFixture from '#data/pidgin/posts/postFixture.json';
 import sportDataFixture from '#data/afrique/live/c7gk1vjglxn1t.json';
 import { GetServerSidePropsContext } from 'next';
 import MockIntersectionObserver from '#app/components/intersection-observer-testing-library';
-import * as useLivePagePolling from '#app/hooks/useLivePagePolling';
+import * as usePolling from '#app/hooks/usePolling';
 import useToggle from '#app/hooks/useToggle';
 import Live, { ComponentProps } from './LivePageLayout';
 import { getServerSideProps } from './[[...variant]].page';
@@ -23,7 +23,7 @@ jest.mock('#app/hooks/useOptimizelyVariation', () => ({
   default: jest.fn(),
 }));
 
-jest.mock('#app/hooks/useLivePagePolling', () => ({
+jest.mock('#app/hooks/usePolling', () => ({
   __esModule: true,
   default: jest.fn(),
 }));
@@ -218,9 +218,7 @@ const mockPollingUpdate = (pageData: ComponentProps['pageData']) => {
   const streamData = pageData.liveTextStream.content
     ?.data as StreamResponse['data'];
 
-  jest.spyOn(useLivePagePolling, 'default').mockReturnValue({
-    polledStreamData: streamData,
-  });
+  jest.spyOn(usePolling, 'default').mockReturnValue(streamData);
 };
 
 const mockIntersectionObserver = new MockIntersectionObserver();
