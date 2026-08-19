@@ -11,7 +11,7 @@ import onClient from '#lib/utilities/onClient';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import { notifyDecision } from '#app/lib/optimizelyDecisionStore';
-import sendOptimizelyActivationEvent from '#app/lib/analyticsUtils/sendOptimizelyActivationEvent';
+import sendExperimentActivationEvent from '#app/lib/analyticsUtils/sendExperimentActivationEvent';
 import { getActivationContext } from '#app/lib/analyticsUtils/activationContext';
 import { TOKEN_COOKIE_NAME } from '#app/lib/uasApi/tokenRefresh/tokenManager';
 import { RequestContext } from '#contexts/RequestContext';
@@ -93,7 +93,7 @@ optimizely?.notificationCenter?.addNotificationListener(
 
       if (impressionDispatched) {
         if (isNewDecision) {
-          sendOptimizelyActivationEvent({
+          sendExperimentActivationEvent({
             experimentName: decisionKey,
             experimentVariant: variationKey,
             ...getActivationContext(),

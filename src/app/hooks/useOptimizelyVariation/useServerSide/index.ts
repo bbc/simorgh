@@ -1,12 +1,11 @@
 import { OptimizelyContext } from '@optimizely/react-sdk';
-import { useContext, useEffect, useRef } from 'react';
+import { useContext, useEffect } from 'react';
 import { RequestContext } from '#app/contexts/RequestContext';
 import activateExperiment from '../activateExperiment';
 
 export default (experimentName: string) => {
   const { optimizely } = useContext(OptimizelyContext);
   const { serverSideExperiments } = useContext(RequestContext);
-  const activatedExperiments = useRef<string[]>([]);
 
   const experiment = serverSideExperiments?.find(
     ({ experimentName: serverSideExperiment }) =>
@@ -22,7 +21,6 @@ export default (experimentName: string) => {
         optimizely,
         experimentName,
         experimentVariation: activeVariation,
-        activatedExperiments,
       });
     }
   }, [optimizely, experimentName, activeVariation]);

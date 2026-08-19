@@ -1,9 +1,9 @@
 import sendBeacon from '../sendBeacon';
-import sendOptimizelyActivationEvent from '.';
+import sendExperimentActivationEvent from '.';
 
 jest.mock('../sendBeacon');
 
-describe('sendOptimizelyActivationEvent', () => {
+describe('sendExperimentActivationEvent', () => {
   const validProps = {
     experimentName: 'foo',
     experimentVariant: 'control',
@@ -23,7 +23,7 @@ describe('sendOptimizelyActivationEvent', () => {
   });
 
   it('builds and sends the activation beacon when all required props are present', async () => {
-    await sendOptimizelyActivationEvent(validProps);
+    await sendExperimentActivationEvent(validProps);
 
     expect(sendBeacon).toHaveBeenCalledTimes(1);
     expect(sendBeacon).toHaveBeenCalledWith(
@@ -40,7 +40,7 @@ describe('sendOptimizelyActivationEvent', () => {
   });
 
   it('does not send when tracking is disabled', async () => {
-    await sendOptimizelyActivationEvent({
+    await sendExperimentActivationEvent({
       ...validProps,
       trackingIsEnabled: false,
     });
@@ -49,7 +49,7 @@ describe('sendOptimizelyActivationEvent', () => {
   });
 
   it('does not send when experimentVariant is falsy', async () => {
-    await sendOptimizelyActivationEvent({
+    await sendExperimentActivationEvent({
       ...validProps,
       experimentVariant: null,
     });
@@ -58,7 +58,7 @@ describe('sendOptimizelyActivationEvent', () => {
   });
 
   it('does not send when experimentVariant is "off"', async () => {
-    await sendOptimizelyActivationEvent({
+    await sendExperimentActivationEvent({
       ...validProps,
       experimentVariant: 'off',
     });
@@ -67,7 +67,7 @@ describe('sendOptimizelyActivationEvent', () => {
   });
 
   it('does not send when a required ATI prop is missing', async () => {
-    await sendOptimizelyActivationEvent({
+    await sendExperimentActivationEvent({
       ...validProps,
       pageIdentifier: undefined,
     });

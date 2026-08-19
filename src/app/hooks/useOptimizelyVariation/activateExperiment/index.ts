@@ -1,24 +1,27 @@
 import onClient from '#lib/utilities/onClient';
 import { ReactSDKClient } from '@optimizely/react-sdk';
-import { RefObject } from 'react';
+
+// Module-level (not per hook-instance) so concurrent renders of the same
+// experiment can't each independently pass the guard and call activate().
+const activatedExperiments = new Set<string>();
+
+const resetActivatedExperiments = () => activatedExperiments.clear();
 
 type Props = {
   optimizely: ReactSDKClient;
   experimentName: string;
   experimentVariation: string;
-  activatedExperiments: RefObject<string[]>;
 };
 
 const activateExperiment = async ({
   optimizely,
   experimentName,
   experimentVariation,
-  activatedExperiments,
 }: Props) => {
   if (onClient() && optimizely) {
     const { success } = await optimizely.onReady();
-    if (success && !activatedExperiments.current.includes(experimentName)) {
-      activatedExperiments.current.push(experimentName);
+    if (success && !activatedExperiments.has(experimentName)) {
+      activatedExperiments.add(experimentName);
       optimizely.setForcedVariation(experimentName, experimentVariation);
       optimizely.activate(experimentName);
     }
@@ -26,3 +29,4 @@ const activateExperiment = async ({
 };
 
 export default activateExperiment;
+export { resetActivatedExperiments };
