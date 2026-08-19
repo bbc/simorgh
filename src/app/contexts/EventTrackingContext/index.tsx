@@ -1,6 +1,7 @@
 import { createContext, PropsWithChildren, use, useMemo } from 'react';
 
 import { AccountContext } from '#contexts/AccountContext';
+import { setActivationContext } from '#app/lib/activationContext';
 import { RequestContext } from '../RequestContext';
 import useToggle from '../../hooks/useToggle';
 import {
@@ -121,6 +122,8 @@ export const EventTrackingContextProvider = ({
   ]);
 
   if (!eventTrackingIsEnabled || !atiData) {
+    setActivationContext({ trackingIsEnabled: false });
+
     return (
       <EventTrackingContext.Provider value={NO_TRACKING_PROPS}>
         {children}
@@ -138,6 +141,18 @@ export const EventTrackingContextProvider = ({
       trackingProps.producerName,
       trackingProps.statsDestination,
     ].every(Boolean);
+
+  setActivationContext({
+    trackingIsEnabled: Boolean(hasRequiredProps),
+    pageIdentifier: trackingProps?.pageIdentifier,
+    producerId: trackingProps?.producerId,
+    platform: trackingProps?.platform,
+    statsDestination: trackingProps?.statsDestination,
+    campaignID: trackingProps?.campaignID,
+    producerName: trackingProps?.producerName,
+    isSignedIn: trackingProps?.isSignedIn,
+    hashedId: trackingProps?.hashedId,
+  });
 
   return (
     <EventTrackingContext.Provider

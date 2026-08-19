@@ -1,4 +1,4 @@
-import { ComponentType, use, useRef } from 'react';
+import { ComponentType, use } from 'react';
 import {
   createInstance,
   OptimizelyProvider,
@@ -10,18 +10,13 @@ import isLive from '#lib/utilities/isLive';
 import onClient from '#lib/utilities/onClient';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
-import {
-  notifyDecision,
-  useActivatedExperiments,
-} from '#app/lib/optimizelyDecisionStore';
+import { notifyDecision } from '#app/lib/optimizelyDecisionStore';
 import { TOKEN_COOKIE_NAME } from '#app/lib/uasApi/tokenRefresh/tokenManager';
+import { VIEW_EVENT } from '#app/lib/analyticsUtils/analytics.const';
+import sendEventBeacon from '#app/components/ATIAnalytics/beacon';
+import { getActivationContext } from '#app/lib/activationContext';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
-import {
-  SEARCH_OJ_AA_ACTIVATION_EVENT_NAME,
-  SEARCH_OJ_AA_EXPERIMENT_NAME,
-} from '#app/pages/ArticlePage/SearchOjExperiment/config';
-import useCustomEventTracker from '#app/hooks/useCustomEventTracker';
 import isCypress from './isCypress';
 import registerVisitActivity from './visitTracking';
 import { getClientTimeOfDay, getReferrer, isMobile } from './userAttributes';
@@ -62,31 +57,72 @@ type DecisionInfo = {
   decisionEventDispatched?: boolean;
 };
 
+const sendExperimentActivationBeaconToPiano = async ({
+  eventName,
+  experimentName,
+  experimentVariant,
+}: {
+  eventName: string;
+  experimentName: string;
+  experimentVariant?: string;
+}) => {
+  const {
+    trackingIsEnabled,
+    pageIdentifier,
+    producerId,
+    platform,
+    statsDestination,
+    campaignID,
+    producerName,
+    isSignedIn: userIsSignedIn,
+    hashedId,
+  } = getActivationContext();
+
+  if (!trackingIsEnabled || !eventName) return;
+
+  const shouldSendEvent = [
+    campaignID,
+    eventName,
+    pageIdentifier,
+    platform,
+    producerId,
+    producerName,
+    statsDestination,
+  ].every(Boolean);
+
+  if (shouldSendEvent) {
+    try {
+      await sendEventBeacon({
+        type: VIEW_EVENT,
+        eventGroupingName: eventName,
+        componentName: '',
+        campaignID,
+        pageIdentifier,
+        platform,
+        producerId,
+        producerName,
+        statsDestination,
+        experimentName,
+        experimentVariant,
+        isSignedIn: userIsSignedIn,
+        hashedId,
+      });
+    } catch (error) {
+      // eslint-disable-next-line no-console
+      console.warn('Custom event tracking failed:', error);
+    }
+  }
+};
+
 const dispatchExperimentActivationBeaconToPiano = ({
   decisionKey,
   variationKey,
 }) => {
-  const activatedExperiments = useActivatedExperiments();
-
-  if (activatedExperiments.has(decisionKey)) return;
-
-  const EXPERIMENT_EVENT_DETAILS = {
-    [SEARCH_OJ_AA_EXPERIMENT_NAME]: SEARCH_OJ_AA_ACTIVATION_EVENT_NAME,
-  };
-
-  const { eventName, hasTrackedActivation } =
-    EXPERIMENT_EVENT_DETAILS[decisionKey];
-
-  const trackActivation = useCustomEventTracker({
-    eventName,
+  sendExperimentActivationBeaconToPiano({
+    eventName: decisionKey,
     experimentName: decisionKey,
     experimentVariant: variationKey ?? undefined,
   });
-
-  if (!hasTrackedActivation.current) {
-    hasTrackedActivation.current = true;
-    trackActivation();
-  }
 };
 
 // Optimizely reports a decision in one of two shapes depending on the experiment type.
@@ -122,11 +158,15 @@ optimizely?.notificationCenter?.addNotificationListener(
     const { decisionKey, impressionDispatched } = resolveDecision(decisionInfo);
 
     if (decisionKey && variationKey && variationKey !== 'off') {
+      const isNewDecision = notifyDecision(decisionKey);
+
       if (impressionDispatched) {
-        dispatchExperimentActivationBeaconToPiano({
-          decisionKey,
-          variationKey,
-        });
+        if (isNewDecision) {
+          dispatchExperimentActivationBeaconToPiano({
+            decisionKey,
+            variationKey,
+          });
+        }
 
         const currentUrl = window.location.pathname + window.location.search;
         if (currentUrl !== lastTrackedUrl) {
@@ -147,8 +187,6 @@ optimizely?.notificationCenter?.addNotificationListener(
           }
         }
       }
-
-      notifyDecision(decisionKey);
     }
   },
 );
