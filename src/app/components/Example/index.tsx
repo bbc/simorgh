@@ -1,7 +1,7 @@
 import { use, useEffect, useState } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import Text from '#app/components/Text';
-import styles from './index.styles';
+import styles from './index.module.scss';
 import Heading from '../Heading';
 
 export type ExampleProps = {
@@ -26,7 +26,7 @@ export default ({ textToRender, renderAfter }: ExampleProps) => {
   return (
     <>
       <Heading level={2}>You are on {service}</Heading>
-      <Text css={styles.text} size="brevier">
+      <Text className={styles.text} size="brevier">
         {textToRender}
       </Text>
     </>

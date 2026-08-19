@@ -7,7 +7,7 @@ applyTo: "src/app/components/**"
 ## Technology Stack
 - React
 - TypeScript
-- Emotion
+- SCSS Modules (see styling-standards.instructions.md)
 - Jest
 - Storybook
 
@@ -30,7 +30,7 @@ Each component must contain:
 ```text
 <ComponentName>/
 ├── index.tsx
-├── index.styles.tsx
+├── index.module.scss
 ├── index.test.tsx
 ├── index.stories.tsx
 ├── metadata.json
