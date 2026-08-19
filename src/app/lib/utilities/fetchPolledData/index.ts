@@ -7,15 +7,15 @@ type FetchPolledDataParams = {
   params: Record<string, string | number | boolean>;
 };
 
-type FetchPolledDataResponse = {
-  data: unknown;
+type FetchPolledDataResponse<T> = {
+  data: T;
   status: number;
 } | null;
 
-export default async (
+export default async <T = unknown>(
   module: string,
   { params }: FetchPolledDataParams,
-): Promise<FetchPolledDataResponse> => {
+): Promise<FetchPolledDataResponse<T>> => {
   try {
     const webCdnHost = getEnvConfig().WEB_CDN_URL;
 

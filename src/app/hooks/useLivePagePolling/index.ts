@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { ComponentProps } from '#nextjs/pages/[service]/live/[id]/LivePageLayout';
-import makeRequest from './makeRequest/makeRequest';
+import { StreamResponse } from '#nextjs/pages/[service]/live/[id]/Post/types';
+import fetchPolledData from '#app/lib/utilities/fetchPolledData';
 
 export const POLLING_INTERVAL = 15000;
 
@@ -22,13 +23,13 @@ const useLivePagePolling = (
       if (enableFeature === false) return;
       if (currentStreamData?.page?.index !== 1) return;
 
-      const polledStream = await makeRequest(streamId);
+      const response = await fetchPolledData<StreamResponse['data']>('live', { params: { liveTextStreamId: streamId, type: 'curated' } });
 
-      if (polledStream != null) {
-        const polledStreamFirstPostUrn = polledStream.results?.[0]?.urn;
+      if (response?.data?.results && response.data.results.length > 0) {
+        const polledStreamFirstPostUrn = response.data.results[0]?.urn;
         if (polledStreamFirstPostUrn !== currentFirstPostUrn) {
           setHasPendingUpdate(true);
-          setNewData(polledStream);
+          setNewData(response.data);
           setFirstPostUrn(polledStreamFirstPostUrn);
         }
       }

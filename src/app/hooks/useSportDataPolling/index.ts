@@ -18,10 +18,10 @@ const useSportDataPolling = (
 
       // const polledSportData = await makeRequest(sportDataEventUrn);
       const encodedUrn = encodeURIComponent(sportDataEventUrn);
-      const polledSportData = await fetchPolledData('sport', { params: { sportDataEventUrn: encodedUrn } });
+      const response = await fetchPolledData<{ sportDataEvent: HeadToHeadV2Data }>('sport', { params: { sportDataEventUrn: encodedUrn } });
 
-      if (polledSportData?.data?.sportDataEvent) {
-        setCurrentData(polledSportData.data.sportDataEvent as HeadToHeadV2Data);
+      if (response?.data?.sportDataEvent) {
+        setCurrentData(response.data.sportDataEvent);
       }
     }, POLLING_INTERVAL);
 
