@@ -16,9 +16,9 @@ const useSportDataPolling = (
     const timerId = setInterval(async () => {
       if (enableFeature === false) return;
 
-      // const polledSportData = await makeRequest(sportDataEventUrn);
       const encodedUrn = encodeURIComponent(sportDataEventUrn);
-      const response = await fetchPolledData<{ sportDataEvent: HeadToHeadV2Data }>('sport', { params: { sportDataEventUrn: encodedUrn } });
+      const params = { sportDataEventUrn: encodedUrn };
+      const response = await fetchPolledData<{ sportDataEvent: HeadToHeadV2Data }>('sport', { params });
 
       if (response?.data?.sportDataEvent) {
         setCurrentData(response.data.sportDataEvent);

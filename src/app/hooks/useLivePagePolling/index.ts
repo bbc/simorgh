@@ -23,7 +23,8 @@ const useLivePagePolling = (
       if (enableFeature === false) return;
       if (currentStreamData?.page?.index !== 1) return;
 
-      const response = await fetchPolledData<StreamResponse['data']>('live', { params: { liveTextStreamId: streamId, type: 'curated' } });
+      const params = { liveTextStreamId: streamId, type: 'curated' };
+      const response = await fetchPolledData<StreamResponse['data']>('live', { params });
 
       if (response?.data?.results && response.data.results.length > 0) {
         const polledStreamFirstPostUrn = response.data.results[0]?.urn;
