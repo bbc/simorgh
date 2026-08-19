@@ -3,7 +3,7 @@ import ActionTooltip, { ActionTooltipStatus } from '.';
 import getArticleTooltipContent from './ArticleTooltipContent';
 
 const TooltipDemo = ({ status }: { status: ActionTooltipStatus }) => {
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
 
   const actionTooltip = {
     success: {
@@ -26,8 +26,13 @@ const TooltipDemo = ({ status }: { status: ActionTooltipStatus }) => {
   const content = getArticleTooltipContent(actionTooltip);
 
   return (
-    <div style={{ position: 'relative'}}>
-      <button type="button" onClick={() => setIsVisible(true)}>
+    <div style={{ position: 'relative' }}>
+      <button
+        type="button"
+        onClick={() => {
+          setIsVisible(true);
+        }}
+      >
         Open tooltip
       </button>
 

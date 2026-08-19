@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Close, InfoCircle, InfoTriangle } from '#app/components/icons';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
+import useDismissOnOutsideInteraction from '#app/hooks/useDismissOnOutsideInteraction';
 import styles from './index.module.scss';
 import Text from '../Text';
 
@@ -38,19 +39,34 @@ const ActionTooltip = ({
   const { title, body } = content[status];
   const containerRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const previouslyFocusedElementRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
-    closeButtonRef.current?.focus();
-    containerRef.current?.scrollIntoView?.({ block: 'nearest' });
+    // Store the previously focused element to restore focus when the tooltip is unmounted
+    previouslyFocusedElementRef.current =
+      document.activeElement as HTMLElement | null;
+
+    return () => {
+      previouslyFocusedElementRef.current?.focus();
+    };
+  }, []);
+
+  useEffect(() => {
+    closeButtonRef.current?.focus({ preventScroll: true });
+    containerRef.current?.scrollIntoView?.({
+      block: 'nearest',
+      behavior: 'smooth',
+    });
   }, [status]);
+
+  useDismissOnOutsideInteraction({ containerRef, onDismiss: onClose });
 
   return (
     <div className={styles.wrapper} {...rest}>
       <div
         ref={containerRef}
-        role="status"
-        aria-live="polite"
-        aria-atomic="true"
+        role="group"
+        aria-labelledby="action-tooltip-title"
         className={styles.container}
         data-testid="action-tooltip"
       >
@@ -69,7 +85,12 @@ const ActionTooltip = ({
           <div className={styles.header}>
             <StatusIcon status={status} />
 
-            <Text size="pica" fontVariant="sansBold" className={styles.title}>
+            <Text
+              id="action-tooltip-title"
+              size="pica"
+              fontVariant="sansBold"
+              className={styles.title}
+            >
               {title}
             </Text>
           </div>

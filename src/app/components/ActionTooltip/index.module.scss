@@ -72,7 +72,6 @@
 .header {
   display: flex;
   align-items: flex-start;
-  // Reserve space so the title doesn't run under the absolutely positioned close button.
   padding-inline-end: 3rem;
 }
 

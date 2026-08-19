@@ -77,6 +77,13 @@ const SaveArticleButtonAuthenticated = ({
     },
   });
 
+  const { onClick: onMyNewsLinkClickTrack } = useClickTracker({
+    componentName: 'save-article-tooltip-my-news-link',
+    itemTracker: {
+      resourceId: articleId,
+    },
+  });
+
   if (!saveArticleButton) return null;
 
   const getVisualLabel = () => {
@@ -128,7 +135,10 @@ const SaveArticleButtonAuthenticated = ({
       {isTooltipVisible && actionResult && actionTooltip && (
         <ActionTooltip
           status={getTooltipStatus(actionResult)}
-          content={getArticleTooltipContent(actionTooltip)}
+          content={getArticleTooltipContent(
+            actionTooltip,
+            onMyNewsLinkClickTrack,
+          )}
           closeLabel={actionTooltip.closeLabel}
           onClose={handleTooltipClose}
           {...tooltipViewTracker}

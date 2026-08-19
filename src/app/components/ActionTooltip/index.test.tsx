@@ -106,7 +106,7 @@ describe('ActionTooltip', () => {
     expect(onClose).toHaveBeenCalledTimes(1);
   });
 
-  it('exposes the tooltip as a polite live region for assistive technology', () => {
+  it('labels the tooltip group with its title for assistive technology', () => {
     render(
       <ActionTooltip
         status="success"
@@ -119,9 +119,10 @@ describe('ActionTooltip', () => {
 
     const tooltip = screen.getByTestId('action-tooltip');
 
-    expect(tooltip).toHaveAttribute('role', 'status');
-    expect(tooltip).toHaveAttribute('aria-live', 'polite');
-    expect(tooltip).toHaveAttribute('aria-atomic', 'true');
+    expect(tooltip).toHaveAttribute('role', 'group');
+    const titleId = tooltip.getAttribute('aria-labelledby');
+    expect(titleId).toBeTruthy();
+    expect(document.getElementById(titleId as string)).toBeInTheDocument();
   });
 
   it('moves focus to the close button when the tooltip appears', () => {
@@ -136,5 +137,29 @@ describe('ActionTooltip', () => {
     );
 
     expect(screen.getByTestId('action-tooltip-close')).toHaveFocus();
+  });
+
+  it('restores focus to the previously focused element when unmounted', () => {
+    const triggerButton = document.createElement('button');
+    document.body.appendChild(triggerButton);
+    triggerButton.focus();
+
+    const { unmount } = render(
+      <ActionTooltip
+        status="success"
+        content={content}
+        closeLabel={closeLabel}
+        onClose={onClose}
+      />,
+      { service: 'hindi' },
+    );
+
+    expect(screen.getByTestId('action-tooltip-close')).toHaveFocus();
+
+    unmount();
+
+    expect(triggerButton).toHaveFocus();
+
+    triggerButton.remove();
   });
 });
