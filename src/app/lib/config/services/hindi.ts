@@ -159,20 +159,20 @@ export const service: DefaultServiceConfig = {
       },
       actionTooltip: {
         success: {
-          titleBefore: 'This article is now saved to',
-          titleAfter: '',
+          titleBefore: 'यह लेख अब',
+          titleAfter: 'में सहेजा गया है',
         },
         error: {
-          title: 'Sorry, something went wrong',
-          body: 'Check your connection, refresh the page and try again',
+          title: 'क्षमा करें, कुछ गड़बड़ हो गई है',
+          body: 'अपना कनेक्शन जांचें, पेज को रीफ्रेश करें और फिर से कोशिश करें',
         },
         removed: {
-          titleBefore: 'This article has now been removed from',
-          titleAfter: '',
+          titleBefore: 'यह लेख अब',
+          titleAfter: 'से हटाया गया है',
         },
-        myNewsLinkText: 'My News',
+        myNewsLinkText: 'मेरी ख़बरों',
         myNewsUrl: 'https://www.bbc.com/hindi/my-news',
-        closeLabel: 'Close',
+        closeLabel: 'बंद करें',
       },
       gist: 'सारांश',
       error: {
