@@ -3,7 +3,7 @@ import { HeadToHeadV2Data } from '#app/components-webcore/SportDataHeader/head-t
 import useSportDataPolling, { POLLING_INTERVAL } from '.';
 import fixtureSportData from './fixture/fixtureSportData';
 import fixtureSportDataUpdate from './fixture/fixtureSportDataUpdate';
-import * as makeRequest from './makeRequest';
+import * as fetchPolledData from '#app/lib/utilities/fetchPolledData';
 
 jest.useFakeTimers();
 
@@ -24,7 +24,12 @@ describe('useSportDataPolling', () => {
     const updatedSportData =
       fixtureSportDataUpdate as unknown as HeadToHeadV2Data;
 
-    jest.spyOn(makeRequest, 'default').mockResolvedValue(updatedSportData);
+    jest
+      .spyOn(fetchPolledData, 'default')
+      .mockResolvedValue({
+        data: { sportDataEvent: updatedSportData },
+        status: 200,
+      });
 
     const { result } = renderHook(() =>
       useSportDataPolling(initialSportData, true),
@@ -37,29 +42,31 @@ describe('useSportDataPolling', () => {
 
   it('should call makeRequest with the sport data urn when polling is enabled', async () => {
     const initialSportData = fixtureSportData as unknown as HeadToHeadV2Data;
-    const makeRequestSpy = jest
-      .spyOn(makeRequest, 'default')
+    const fetchPolledDataSpy = jest
+      .spyOn(fetchPolledData, 'default')
       .mockResolvedValue(null);
 
     renderHook(() => useSportDataPolling(initialSportData, true));
 
     await runPollingInterval();
 
-    expect(makeRequestSpy).toHaveBeenCalledTimes(1);
-    expect(makeRequestSpy).toHaveBeenCalledWith(initialSportData.urn);
+    expect(fetchPolledDataSpy).toHaveBeenCalledTimes(1);
+    expect(fetchPolledDataSpy).toHaveBeenCalledWith('sport', {
+      params: { sportDataEventUrn: encodeURIComponent(initialSportData.urn) },
+    });
   });
 
   it('should not call makeRequest when polling is disabled', async () => {
     const initialSportData = fixtureSportData as unknown as HeadToHeadV2Data;
-    const makeRequestSpy = jest
-      .spyOn(makeRequest, 'default')
+    const fetchPolledDataSpy = jest
+      .spyOn(fetchPolledData, 'default')
       .mockResolvedValue(null);
 
     renderHook(() => useSportDataPolling(initialSportData, false));
 
     await runPollingInterval();
 
-    expect(makeRequestSpy).not.toHaveBeenCalled();
+    expect(fetchPolledDataSpy).not.toHaveBeenCalled();
   });
 
   it('should update current sport data when a poll returns new data', async () => {
@@ -67,7 +74,10 @@ describe('useSportDataPolling', () => {
     const updatedSportData =
       fixtureSportDataUpdate as unknown as HeadToHeadV2Data;
 
-    jest.spyOn(makeRequest, 'default').mockResolvedValue(updatedSportData);
+    jest.spyOn(fetchPolledData, 'default').mockResolvedValue({
+      data: { sportDataEvent: updatedSportData },
+      status: 200,
+    });
 
     const { result } = renderHook(() =>
       useSportDataPolling(initialSportData, true),
@@ -81,7 +91,9 @@ describe('useSportDataPolling', () => {
   it('should keep current sport data when poll returns null', async () => {
     const initialSportData = fixtureSportData as unknown as HeadToHeadV2Data;
 
-    jest.spyOn(makeRequest, 'default').mockResolvedValue(null);
+    jest
+      .spyOn(fetchPolledData, 'default')
+      .mockResolvedValue(null);
 
     const { result } = renderHook(() =>
       useSportDataPolling(initialSportData, true),
@@ -94,8 +106,8 @@ describe('useSportDataPolling', () => {
 
   it('should clear the polling interval when unmounted', async () => {
     const initialSportData = fixtureSportData as unknown as HeadToHeadV2Data;
-    const makeRequestSpy = jest
-      .spyOn(makeRequest, 'default')
+    const fetchPolledDataSpy = jest
+      .spyOn(fetchPolledData, 'default')
       .mockResolvedValue(null);
 
     const { unmount } = renderHook(() =>
@@ -106,6 +118,6 @@ describe('useSportDataPolling', () => {
 
     await runPollingInterval();
 
-    expect(makeRequestSpy).not.toHaveBeenCalled();
+    expect(fetchPolledDataSpy).not.toHaveBeenCalled();
   });
 });
