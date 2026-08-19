@@ -106,8 +106,26 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
     sportDataEventContent,
   } = pageData;
 
-  const { currentStreamData, hasPendingUpdate, applyPendingUpdate } =
-    useLivePagePolling(pageData, livePagePollingEnabled && isLive);
+  const { polledStreamData } = useLivePagePolling(
+    pageData,
+    livePagePollingEnabled && isLive,
+  );
+
+  const [currentStreamData, setCurrentStreamData] = useState(
+    liveTextStream?.content?.data ?? null,
+  );
+
+  const polledFirstPostUrn = polledStreamData?.results?.[0]?.urn;
+  const currentFirstPostUrn = currentStreamData?.results?.[0]?.urn;
+  const hasPendingUpdate = Boolean(
+    polledFirstPostUrn && polledFirstPostUrn !== currentFirstPostUrn,
+  );
+
+  const applyPendingUpdate = () => {
+    if (hasPendingUpdate) {
+      setCurrentStreamData(polledStreamData);
+    }
+  };
 
   const { sportDataEvent: sportData, live: isSportDataLive = false } =
     sportDataEventContent || {};

@@ -29,14 +29,14 @@ describe('useLivePagePolling', () => {
       useLivePagePolling(initialPageData, true),
     );
 
-    const { currentStreamData } = result.current;
+    const { polledStreamData } = result.current;
 
-    expect(currentStreamData).toStrictEqual(
+    expect(polledStreamData).toStrictEqual(
       initialPageData.liveTextStream.content?.data,
     );
   });
 
-  it('should set pending update to true when a change in urn for the first post is detected', async () => {
+  it('should update polledStreamData when new data is polled', async () => {
     const initialPageData =
       fixtureLivePageData as unknown as ComponentProps['pageData'];
 
@@ -55,37 +55,9 @@ describe('useLivePagePolling', () => {
       jest.advanceTimersByTime(POLLING_INTERVAL);
     });
 
-    const { hasPendingUpdate } = result.current;
+    const { polledStreamData } = result.current;
 
-    expect(hasPendingUpdate).toBe(true);
-  });
-
-  it('should update currentStreamData when applyPendingUpdate is called', async () => {
-    const initialPageData =
-      fixtureLivePageData as unknown as ComponentProps['pageData'];
-
-    jest
-      .spyOn(fetchPolledData, 'default')
-      .mockResolvedValue({
-        data: fixtureLivePageDataUpdate,
-        status: 200,
-      });
-
-    const { result } = renderHook(() =>
-      useLivePagePolling(initialPageData, true),
-    );
-
-    await act(async () => {
-      jest.advanceTimersByTime(POLLING_INTERVAL);
-    });
-    const { applyPendingUpdate } = result.current;
-
-    act(() => {
-      applyPendingUpdate();
-    });
-    const { currentStreamData } = result.current;
-
-    expect(currentStreamData).toStrictEqual(fixtureLivePageDataUpdate);
+    expect(polledStreamData).toStrictEqual(fixtureLivePageDataUpdate);
   });
 
   it('should not poll if the user is not on the first page', async () => {
@@ -125,27 +97,23 @@ describe('useLivePagePolling', () => {
     expect(requestSpy).not.toHaveBeenCalled();
   });
 
-  it('should set pending update to false when there is no change in urn for the first post', async () => {
+  it('should not poll when the feature is disabled', async () => {
     const initialPageData =
       fixtureLivePageData as unknown as ComponentProps['pageData'];
 
-    jest
+    const requestSpy = jest
       .spyOn(fetchPolledData, 'default')
       .mockResolvedValue({
-        data: fixtureLivePageData.liveTextStream.content.data,
+        data: fixtureLivePageDataUpdate,
         status: 200,
       });
 
-    const { result } = renderHook(() =>
-      useLivePagePolling(initialPageData, true),
-    );
+    renderHook(() => useLivePagePolling(initialPageData, false));
 
     await act(async () => {
       jest.advanceTimersByTime(POLLING_INTERVAL);
     });
 
-    const { hasPendingUpdate } = result.current;
-
-    expect(hasPendingUpdate).toBe(false);
+    expect(requestSpy).not.toHaveBeenCalled();
   });
 });

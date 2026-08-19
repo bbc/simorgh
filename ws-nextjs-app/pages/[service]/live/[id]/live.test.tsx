@@ -219,11 +219,7 @@ const mockPollingUpdate = (pageData: ComponentProps['pageData']) => {
     ?.data as StreamResponse['data'];
 
   jest.spyOn(useLivePagePolling, 'default').mockReturnValue({
-    currentStreamData: streamData,
-    hasPendingUpdate: false,
-    applyPendingUpdate: () => {
-      return null;
-    },
+    polledStreamData: streamData,
   });
 };
 

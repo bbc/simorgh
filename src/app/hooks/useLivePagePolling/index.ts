@@ -11,51 +11,27 @@ const useLivePagePolling = (
 ) => {
   const initialStreamData = pageData.liveTextStream.content?.data ?? null;
   const streamId = pageData.liveTextStream.id;
-  const firstPostUrn = initialStreamData?.results?.[0]?.urn;
+  const pageIndex = initialStreamData?.page?.index;
 
-  const [currentStreamData, setCurrentData] = useState(initialStreamData);
-  const [newData, setNewData] = useState(initialStreamData);
-  const [hasPendingUpdate, setHasPendingUpdate] = useState(false);
-  const [currentFirstPostUrn, setFirstPostUrn] = useState(firstPostUrn);
+  const [polledStreamData, setPolledStreamData] = useState(initialStreamData);
 
   useEffect(() => {
     const timerId = setInterval(async () => {
       if (enableFeature === false) return;
-      if (currentStreamData?.page?.index !== 1) return;
+      if (pageIndex !== 1) return;
 
       const params = { liveTextStreamId: streamId, type: 'curated' };
       const response = await fetchPolledData<StreamResponse['data']>('live', { params });
 
       if (response?.data?.results && response.data.results.length > 0) {
-        const polledStreamFirstPostUrn = response.data.results[0]?.urn;
-        if (polledStreamFirstPostUrn !== currentFirstPostUrn) {
-          setHasPendingUpdate(true);
-          setNewData(response.data);
-          setFirstPostUrn(polledStreamFirstPostUrn);
-        }
+        setPolledStreamData(response.data);
       }
     }, POLLING_INTERVAL);
 
     return () => clearInterval(timerId);
-  }, [
-    currentFirstPostUrn,
-    currentStreamData?.page?.index,
-    enableFeature,
-    streamId,
-  ]);
+  }, [enableFeature, pageIndex, streamId]);
 
-  const applyPendingUpdate = () => {
-    if (hasPendingUpdate) {
-      setHasPendingUpdate(false);
-      setCurrentData(newData);
-    }
-  };
-
-  return {
-    currentStreamData,
-    hasPendingUpdate,
-    applyPendingUpdate,
-  };
+  return { polledStreamData };
 };
 
 export default useLivePagePolling;
