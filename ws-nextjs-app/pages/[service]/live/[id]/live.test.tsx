@@ -37,6 +37,8 @@ jest.mock('#app/lib/utilities/isLive', () => ({
   default: jest.fn(() => false),
 }));
 
+jest.mock('#app/lib/utilities/fetchPolledData');
+
 jest.mock('#app/components-webcore/SportDataHeader/head-to-head-v2', () => ({
   __esModule: true,
   default: jest.fn(
@@ -927,7 +929,7 @@ describe('LivePageLayout live text polling', () => {
   });
 
   it('should return the initial stream data on initialisation', () => {
-    jest.spyOn(fetchPolledData, 'default').mockResolvedValue(null);
+    jest.mocked(fetchPolledData.default).mockResolvedValue(null);
 
     const { result } = renderLivePagePolling();
 
@@ -935,9 +937,7 @@ describe('LivePageLayout live text polling', () => {
   });
 
   it('should poll the live endpoint with the stream params when enabled', async () => {
-    const fetchSpy = jest
-      .spyOn(fetchPolledData, 'default')
-      .mockResolvedValue(null);
+    const fetchSpy = jest.mocked(fetchPolledData.default).mockResolvedValue(null);
 
     renderLivePagePolling();
 
@@ -949,7 +949,7 @@ describe('LivePageLayout live text polling', () => {
   });
 
   it('should update the stream data when new posts are in the returned data after polling', async () => {
-    jest.spyOn(fetchPolledData, 'default').mockResolvedValue({
+    jest.mocked(fetchPolledData.default).mockResolvedValue({
       data: streamDataUpdate,
       status: 200,
     });
@@ -962,9 +962,7 @@ describe('LivePageLayout live text polling', () => {
   });
 
   it('should not poll if the user is not on the first page', async () => {
-    const fetchSpy = jest
-      .spyOn(fetchPolledData, 'default')
-      .mockResolvedValue(null);
+    const fetchSpy = jest.mocked(fetchPolledData.default).mockResolvedValue(null);
 
     renderLivePagePolling({
       streamData: {
@@ -979,9 +977,7 @@ describe('LivePageLayout live text polling', () => {
   });
 
   it('should not poll when the live page polling feature is disabled', async () => {
-    const fetchSpy = jest
-      .spyOn(fetchPolledData, 'default')
-      .mockResolvedValue(null);
+    const fetchSpy = jest.mocked(fetchPolledData.default).mockResolvedValue(null);
 
     renderLivePagePolling({ enableFeature: false });
 
