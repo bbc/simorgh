@@ -19,7 +19,7 @@ const SaveArticleButton = (props: SaveArticleButtonProps) => {
   if (!isPersonalizationAvailable) return null;
 
   return (
-    <>
+    <ErrorBoundary componentName="SaveArticleButton">
       <noscript>
         <style>{`#${SAVE_ARTICLE_BUTTON_ID} { display: none; }`}</style>
       </noscript>
@@ -27,14 +27,12 @@ const SaveArticleButton = (props: SaveArticleButtonProps) => {
         {isPersonalizationEnabled ? (
           // Falls back to hiding the widget rather than SaveArticleButtonGuest,
           // since its sign-in prompt would be misleading for an already-authenticated user.
-          <ErrorBoundary componentName="SaveArticleButtonAuthenticated">
-            <SaveArticleButtonAuthenticated {...props} />
-          </ErrorBoundary>
+          <SaveArticleButtonAuthenticated {...props} />
         ) : (
           <SaveArticleButtonGuest />
         )}
       </div>
-    </>
+    </ErrorBoundary>
   );
 };
 
