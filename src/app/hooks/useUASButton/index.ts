@@ -46,8 +46,7 @@ const useUASButton = ({
   const { isSaved, isLoading, error, savedMetadata } =
     useUASFetchSaveStatus(articleId);
 
-  // Distinguishes a user-triggered save/remove from the background metadata
-  // resync below, so the tooltip only reacts to actions the user took.
+  // Distinguishes a user-triggered save/remove from the background metadata resync
   const isUserActionRef = useRef(false);
 
   const mutation = useMutation({
