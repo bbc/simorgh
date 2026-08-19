@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useId, useRef } from 'react';
 import { Close, InfoCircle, InfoTriangle } from '#app/components/icons';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import useDismissOnOutsideInteraction from '#app/hooks/useDismissOnOutsideInteraction';
@@ -40,6 +40,7 @@ const ActionTooltip = ({
   const containerRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const previouslyFocusedElementRef = useRef<HTMLElement | null>(null);
+  const tilteId = useId();
 
   useEffect(() => {
     // Store the previously focused element to restore focus when the tooltip is unmounted
@@ -66,7 +67,7 @@ const ActionTooltip = ({
       <div
         ref={containerRef}
         role="group"
-        aria-labelledby="action-tooltip-title"
+        aria-labelledby={tilteId}
         className={styles.container}
         data-testid="action-tooltip"
       >
@@ -86,7 +87,7 @@ const ActionTooltip = ({
             <StatusIcon status={status} />
 
             <Text
-              id="action-tooltip-title"
+              id={tilteId}
               size="pica"
               fontVariant="sansBold"
               className={styles.title}

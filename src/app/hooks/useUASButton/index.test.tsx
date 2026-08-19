@@ -56,10 +56,17 @@ jest.mock('@tanstack/react-query', () => {
       capturedMutationConfig = config;
 
       return {
-        mutate: async (action: string) => {
+        mutate: async (
+          action: string,
+          options?: {
+            onSuccess?: (result: unknown, mutationAction: string) => void;
+            onError?: (error: unknown, mutationAction: string) => void;
+          },
+        ) => {
           try {
             const result = await capturedMutationConfig.mutationFn?.(action);
             capturedMutationConfig.onSuccess?.(result, action);
+            options?.onSuccess?.(result, action);
             mutationState = {
               isPending: false,
               isSuccess: true,
@@ -69,6 +76,7 @@ jest.mock('@tanstack/react-query', () => {
             };
           } catch (err) {
             capturedMutationConfig.onError?.(err);
+            options?.onError?.(err, action);
             mutationState = {
               isPending: false,
               isSuccess: false,

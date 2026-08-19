@@ -1,4 +1,4 @@
-import { use, useRef } from 'react';
+import { use, useState } from 'react';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import useUASFetchSaveStatus from '#app/hooks/useUASFetchSaveStatus';
 import useUASMetadataSync from '#app/hooks/useUASMetadataSync';
@@ -46,8 +46,9 @@ const useUASButton = ({
   const { isSaved, isLoading, error, savedMetadata } =
     useUASFetchSaveStatus(articleId);
 
-  // Distinguishes a user-triggered save/remove from the background metadata resync
-  const isUserActionRef = useRef(false);
+  // Only ever set from handleSaveAction's own mutate callbacks, so the
+  // background metadata resync (which doesn't pass those callbacks) can never affect it.
+  const [actionResult, setActionResult] = useState<UASActionResult>(null);
 
   const mutation = useMutation({
     mutationFn: async (action: UASAction) => {
@@ -94,23 +95,16 @@ const useUASButton = ({
     onMetadataOutOfDate: handleMetadataOutOfDate,
   });
 
-  const handleSaveAction = (action: UASAction) => {
-    isUserActionRef.current = true;
-    return mutation.mutate(action);
-  };
+  const handleSaveAction = (action: UASAction) =>
+    mutation.mutate(action, {
+      onSuccess: () => setActionResult({ status: 'success', action }),
+      onError: () => setActionResult({ status: 'error', action }),
+    });
 
   const resetActionResult = () => {
-    isUserActionRef.current = false;
+    setActionResult(null);
     mutation.reset();
   };
-
-  const actionResult: UASActionResult =
-    isUserActionRef.current && (mutation.isSuccess || mutation.isError)
-      ? {
-          status: mutation.isError ? 'error' : 'success',
-          action: mutation.variables as UASAction,
-        }
-      : null;
 
   return {
     isSaved,

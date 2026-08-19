@@ -268,7 +268,7 @@ describe('SaveArticleButton', () => {
       );
 
       expect(
-        screen.getByText('Sorry, something went wrong'),
+        screen.getByText('क्षमा करें, कुछ गड़बड़ हो गई है'),
       ).toBeInTheDocument();
     });
 
