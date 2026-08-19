@@ -61,6 +61,7 @@ interface Props {
     timeOnServer?: number;
     toggles: Toggles;
     navItems: Navigation[] | null;
+    navItemsCached: boolean;
     variant?: Variants;
     isUK?: boolean;
     country?: string | null;
@@ -96,8 +97,11 @@ export default class CustomApp extends App<Props> {
 
     const navItems =
       navResult.status === 'fulfilled'
-        ? (navResult.value?.data?.items ?? null)
+        ? (navResult.value.result?.data?.items ?? null)
         : null;
+
+    const navItemsCached =
+      navResult.status === 'fulfilled' ? navResult.value.cached : false;
 
     const requestHeaders = ctx.req?.headers;
     const idctaResult = await getIdctaConfig(toggles, service, requestHeaders);
@@ -126,6 +130,7 @@ export default class CustomApp extends App<Props> {
         toggles,
         idctaConfig: idctaResult,
         navItems,
+        navItemsCached,
       },
     };
   }
@@ -157,9 +162,17 @@ export default class CustomApp extends App<Props> {
       country,
       idctaConfig = null,
       navItems,
+      navItemsCached,
     } = pageProps;
 
     const { metadata: { atiAnalytics = undefined } = {} } = pageData ?? {};
+
+    if (typeof window !== 'undefined') {
+      console.log(
+        `[CustomApp] navItems (${navItemsCached ? 'cached' : 'not cached'}):`,
+        navItems,
+      );
+    }
 
     const RenderChildrenOrError =
       status === 200 ? (

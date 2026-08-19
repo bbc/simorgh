@@ -47,7 +47,7 @@ describe('fetchConfig', () => {
       configType: 'navigation',
     });
 
-    expect(data).toEqual(mockNavResponse);
+    expect(data).toEqual({ result: mockNavResponse, cached: false });
     expect(global.fetch).toHaveBeenCalledTimes(1);
   });
 
@@ -67,7 +67,7 @@ describe('fetchConfig', () => {
       variant,
     });
 
-    expect(data).toEqual(mockNavResponse);
+    expect(data).toEqual({ result: mockNavResponse, cached: false });
     const fetchUrl = (global.fetch as jest.Mock).mock.calls[0][0];
     expect(fetchUrl).toContain(`variant=${variant}`);
   });
@@ -80,12 +80,12 @@ describe('fetchConfig', () => {
 
     const { default: fetchConfig } = await import('.');
 
-    await fetchConfig({
+    const firstResult = await fetchConfig({
       service: 'indonesia',
       pagePath: '/indonesia',
       configType: 'navigation',
     });
-    await fetchConfig({
+    const secondResult = await fetchConfig({
       service: 'indonesia',
       pagePath: '/indonesia',
       configType: 'navigation',
@@ -93,6 +93,8 @@ describe('fetchConfig', () => {
 
     // Should call fetch only once with subsequent responses from cache
     expect(global.fetch).toHaveBeenCalledTimes(1);
+    expect(firstResult.cached).toBe(false);
+    expect(secondResult.cached).toBe(true);
   });
 
   it.each(['test', 'live'])(

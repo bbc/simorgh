@@ -27,12 +27,17 @@ type FetchConfigParams = {
   variant?: Variants;
 };
 
+type FetchConfigResult<T> = {
+  result: T | null;
+  cached: boolean;
+};
+
 const fetchConfig = async <T>({
   service,
   pagePath,
   configType,
   variant,
-}: FetchConfigParams): Promise<T | null> => {
+}: FetchConfigParams): Promise<FetchConfigResult<T>> => {
   const fetchUrl = new URL(process.env.BFF_PATH as string);
   fetchUrl.searchParams.set('service', service);
   fetchUrl.searchParams.set('config', configType);
@@ -56,12 +61,7 @@ const fetchConfig = async <T>({
   });
 
   if (cachedResponse) {
-    console.log(
-      '[fetchConfig] navItems (cached - the response was already stored from a previous request within the 5-minute TTL and is returned without calling fetch() again.):',
-      (cachedResponse as { data?: { items?: unknown } })?.data?.items,
-    );
-
-    return cachedResponse as T;
+    return { result: cachedResponse as T, cached: true };
   }
 
   const environment = getEnvironment(pagePath);
@@ -82,9 +82,7 @@ const fetchConfig = async <T>({
       const res = await response.json();
       cache.set(bffReqPath, res);
 
-      console.log('[fetchConfig] navItems (not cached - this is a brand-new BFF response, which then gets stored via cache.set(bffReqPath, res) for subsequent requests to reuse.):', res?.data?.items);
-
-      return res as T;
+      return { result: res as T, cached: false };
     }
     const error = new Error() as FetchError;
 
