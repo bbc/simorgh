@@ -123,4 +123,68 @@ describe('usePolling', () => {
 
     expect(fetchSpy).not.toHaveBeenCalled();
   });
+
+  it('should use a custom interval when provided', async () => {
+    const customInterval = 5000;
+    const fetchSpy = jest
+      .spyOn(fetchPolledData, 'default')
+      .mockResolvedValue(null);
+
+    renderUsePolling({ interval: customInterval });
+
+    await act(async () => {
+      jest.advanceTimersByTime(customInterval);
+      await Promise.resolve();
+    });
+
+    expect(fetchSpy).toHaveBeenCalledTimes(1);
+  });
+
+  it('should use the default interval when not provided', async () => {
+    const fetchSpy = jest
+      .spyOn(fetchPolledData, 'default')
+      .mockResolvedValue(null);
+
+    renderUsePolling();
+
+    await advancePolling();
+
+    expect(fetchSpy).toHaveBeenCalledTimes(1);
+  });
+
+  it('should restart the interval when the interval prop changes', async () => {
+    const fetchSpy = jest
+      .spyOn(fetchPolledData, 'default')
+      .mockResolvedValue(null);
+
+    const { rerender } = renderHook(
+      ({ interval }: Partial<UsePollingProps<PollResponse, PollData>> = {}) =>
+        usePolling<PollResponse, PollData>({
+          initialData,
+          enabled: true,
+          endpoint: 'live',
+          params: { id: '123' },
+          returnedData: response => response.event ?? null,
+          interval,
+        }),
+    );
+
+    // Advance by half the default interval
+    await act(async () => {
+      jest.advanceTimersByTime(POLLING_INTERVAL / 2);
+    });
+
+    expect(fetchSpy).not.toHaveBeenCalled();
+
+    // Rerender with a shorter custom interval
+    rerender({ interval: 1000 });
+
+    // Advance by the custom interval
+    await act(async () => {
+      jest.advanceTimersByTime(1000);
+      await Promise.resolve();
+    });
+
+    expect(fetchSpy).toHaveBeenCalledTimes(1);
+  });
 });

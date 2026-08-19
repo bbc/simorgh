@@ -9,6 +9,7 @@ export type UsePollingProps<TResponse, TData> = {
   endpoint: string;
   params: Record<string, string | number | boolean>;
   returnedData: (response: TResponse) => TData | null | undefined;
+  interval?: number;
 };
 
 const usePolling = <TResponse, TData>({
@@ -17,6 +18,7 @@ const usePolling = <TResponse, TData>({
   endpoint,
   params,
   returnedData,
+  interval = POLLING_INTERVAL,
 }: UsePollingProps<TResponse, TData>) => {
   const [data, setData] = useState<TData>(initialData);
 
@@ -36,10 +38,10 @@ const usePolling = <TResponse, TData>({
       const nextData = response?.data && returnedDataRef.current(response.data);
 
       if (nextData != null) setData(nextData);
-    }, POLLING_INTERVAL);
+    }, interval);
 
     return () => clearInterval(timerId);
-  }, [enabled, endpoint]);
+  }, [enabled, endpoint, interval]);
 
   return data;
 };

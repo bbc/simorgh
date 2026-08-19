@@ -38,6 +38,7 @@ const currentSportData = usePolling<
 | `endpoint`     | `string`                                              | The poll-data module to request, passed to `fetchPolledData` (e.g. `'live'`, `'sport'`).                                                                                                                    |
 | `params`       | `Record<string, string \| number \| boolean>`         | Query params for the request. Read fresh on every tick, so it may change between renders without restarting the interval.                                                                                   |
 | `returnedData` | `(response: TResponse) => TData \| null \| undefined` | Selects the value to store from `response.data`. Return `null`/`undefined` to signal "nothing usable this tick" and keep the current data.                                                                  |
+| `interval`     | `number` (optional)                                   | Polling interval in milliseconds. Defaults to 15000 (15 seconds).                                                                                                                                           |
 
 ## Returns
 
@@ -49,17 +50,17 @@ something usable.
 1. `initialData` seeds internal state via `useState`; that state is what the hook
    returns.
 2. A single `setInterval` is created inside a `useEffect` keyed on
-   `[enabled, endpoint]`. When `enabled` is `false` the effect exits early, so no
+   `[enabled, endpoint, interval]`. When `enabled` is `false` the effect exits early, so no
    timer runs.
-3. Every `POLLING_INTERVAL` (currently set to 15s as there are no requirements for other/unique polling intervals as of 19/08/2026) the interval calls `fetchPolledData(endpoint,
+3. Every `interval` milliseconds (defaults to 15 seconds) the interval calls `fetchPolledData(endpoint,
 { params })`. If the response has data, `returnedData` extracts the next value;
    it is stored only when it is not `null`/`undefined`.
 4. `params` and `returnedData` are held in refs that are refreshed on every
    render. This lets the interval always read the newest values without listing
    them as effect dependencies — which would otherwise tear down and recreate the
    timer on every render and reset the countdown.
-5. The effect's cleanup clears the interval on unmount and whenever `enabled` or
-   `endpoint` changes.
+5. The effect's cleanup clears the interval on unmount and whenever `enabled`,
+   `endpoint`, or `interval` changes.
 
 ## Notes
 
