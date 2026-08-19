@@ -17,6 +17,7 @@ const logCodes = {
   BFF_FETCH_ERROR: 'bff_fetch_error',
   IDCTA_FETCH_ERROR: 'idcta_fetch_error',
   UAS_API_ERROR: 'uas_api_error',
+  CLIENT_COMPONENT_RENDER_ERROR: 'client_component_render_error',
 
   // Files
   LOCAL_SENDFILE_ERROR: 'local_sendfile_error',
