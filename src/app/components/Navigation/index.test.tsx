@@ -1019,9 +1019,7 @@ describe('Navigation', () => {
           title: 'Listen',
           url: '/news/listen',
           type: 'listen',
-          subItems: [
-            { title: 'Live Radio', url: '/news/listen/live' },
-          ],
+          subItems: [{ title: 'Live Radio', url: '/news/listen/live' }],
         },
       ];
 
