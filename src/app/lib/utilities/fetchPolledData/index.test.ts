@@ -23,7 +23,6 @@ describe('fetchPolledData', () => {
   const mockResponse = { data: mockData, status: 200 };
 
   beforeEach(() => {
-    jest.resetModules();
     jest.clearAllMocks();
     process.env = { ...originalEnv };
     mockLoggerModule.default.mockReturnValue(mockLoggerInstance);
