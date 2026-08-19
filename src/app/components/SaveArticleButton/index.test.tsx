@@ -286,9 +286,9 @@ describe('SaveArticleButton', () => {
         render(<SaveArticleButton {...defaultProps} />, signedInRenderOptions),
       );
 
-      expect(
-        screen.getByText(/This article has now been removed from/i),
-      ).toBeInTheDocument();
+      expect(screen.getByTestId('action-tooltip')).toHaveTextContent(
+        'यह लेख अब मेरी ख़बरों से हटाया गया है',
+      );
     });
 
     it('closes the tooltip and resets the action result when the close button is clicked', async () => {

@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import ActionTooltip, { ActionTooltipStatus } from '.';
 import getArticleTooltipContent from './ArticleTooltipContent';
+import metadata from './metadata.json';
+import readme from './README.md';
 
 const TooltipDemo = ({ status }: { status: ActionTooltipStatus }) => {
   const [isVisible, setIsVisible] = useState(true);
@@ -51,6 +53,10 @@ const TooltipDemo = ({ status }: { status: ActionTooltipStatus }) => {
 export default {
   title: 'Components/ActionTooltip',
   component: ActionTooltip,
+  parameters: {
+    metadata,
+    docs: { readme },
+  },
   globals: {
     service: {
       service: 'ws',

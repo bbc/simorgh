@@ -1,0 +1,29 @@
+{
+  "alpha": true,
+  "lastUpdated": {
+    "day": 19,
+    "month": "August",
+    "year": 2026
+  },
+  "uxAccessibilityDoc": {
+    "done": true,
+    "reference": {
+      "url": "https://www.figma.com/design/4ZndjhxbbmCB0St8vwuXjr/WS-Information-panel?node-id=104-10&p=f&t=R6M3cTu2tUntsdnN-0",
+      "label": "Screen Reader UX"
+    }
+  },
+  "acceptanceCriteria": {
+    "done": true,
+    "reference": {
+      "url": "#",
+      "label": "Accessibility Acceptance Criteria"
+    }
+  },
+  "swarm": {
+    "done": true,
+    "reference": {
+      "url": "#",
+      "label": "Accessibility Swarm Notes"
+    }
+  }
+}

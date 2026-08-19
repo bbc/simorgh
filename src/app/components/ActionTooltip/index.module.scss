@@ -11,7 +11,7 @@
 
 .container {
   position: absolute;
-  top: 100%;
+  top: 0;
   inset-inline-start: 0;
   width: max-content;
   max-width: min(95vw, 21rem);
@@ -21,28 +21,33 @@
   background: theme.$palette-white;
   pointer-events: auto;
 
-  &::before {
+  &::before,
+  &::after {
     content: '';
+    display: inline-block;
     position: absolute;
-    top: -0.8125rem; 
+    clip-path: polygon(0 100%, 50% 0, 100% 100%);
+    width: 1rem;
+    height: 0.8125rem;
     left: 1rem;
-    width: 0;
-    height: 0;
-    border-left: 0.5rem solid transparent;
-    border-right: 0.5rem solid transparent;
-    border-bottom: 0.8125rem solid theme.$palette-grey-4;
+  }
+
+  &::before {
+    top: -0.8125rem;
+    background-color: theme.$palette-grey-4;
+
+    @media (forced-colors: active) {
+      background-color: CanvasText;
+    }
   }
 
   &::after {
-    content: '';
-    position: absolute;
-    top: -0.75rem;
-    left: 1.0625rem;
-    width: 0;
-    height: 0;
-    border-left: 0.4375rem solid transparent;
-    border-right: 0.4375rem solid transparent;
-    border-bottom: 0.75rem solid theme.$palette-white;
+    top: -0.6875rem;
+    background-color: theme.$palette-white;
+
+    @media (forced-colors: active) {
+      background-color: Canvas;
+    }
   }
 }
 
@@ -80,6 +85,14 @@
   width: 1.375rem;
   height: 1.375rem;
   margin-inline-end: 0.5rem;
+
+  svg {
+    fill: currentColor;
+
+    @media #{theme.$mediaQueries-forced-colours} {
+      fill: ButtonText;
+    }
+  }
 }
 
 .title {
@@ -112,6 +125,10 @@
   svg {
     display: block;
     fill: theme.$palette-grey-10;
+
+    @media #{theme.$mediaQueries-forced-colours} {
+      fill: ButtonText;
+    }
   }
 
   &:hover {
@@ -119,6 +136,10 @@
 
     svg {
       fill: theme.$palette-white;
+
+      @media #{theme.$mediaQueries-forced-colours} {
+        fill: Highlight;
+      }
     }
   }
 
