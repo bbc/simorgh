@@ -4,6 +4,19 @@ import getServiceNumerals from '#app/components/MostRead/utilities/getServiceNum
 import { WesternArabic } from '#app/legacy/psammead/psammead-locales/src/numerals';
 import { HeadToHeadV2Data, Team } from '../types';
 
+const DEFAULT_TRANSLATIONS_MAP = {
+  versus: 'versus',
+  kickOff: 'kick off',
+  et: 'Extra time',
+  afterExtraTime: 'After extra time',
+  afterFullTime: 'After full time',
+  atFullTime: 'at Full time',
+  teamToBeConfirmed: 'Team to be confirmed',
+  win: 'win',
+  onPenalties: 'on penalties',
+  onAggregate: 'on aggregate',
+};
+
 const runningScoreFields = new Set([
   'halftime',
   'fulltime',
@@ -134,6 +147,26 @@ const transformTeam = (
   };
 };
 
+const addA11YTranslations = (
+  template: string,
+  translations?: Record<string, string>,
+) => {
+  // Regex looks for params like this: {placeholderId}
+  const placeholderRegex = /\{([^}]+)\}/g;
+  const placeholders = [...template.matchAll(placeholderRegex)];
+
+  return placeholders.reduce((accumulator, currentPlaceholder) => {
+    const [placeholder, placeholderId] = currentPlaceholder;
+    const translatedWord = translations?.[placeholderId];
+
+    if (translatedWord) {
+      return accumulator.replaceAll(placeholder, translatedWord);
+    }
+
+    return accumulator;
+  }, template);
+};
+
 const translateSportData = (
   data: HeadToHeadV2Data,
   translations: Translations,
@@ -161,7 +194,46 @@ const translateSportData = (
 
   const stageLookup: Record<string, string | undefined> = {
     'Group Stage': stages?.groupStage,
+    'Last 32': stages?.last32,
+    'Last 16': stages?.last16,
+    'Quarter-finals': stages?.quarterFinals,
+    'Semi-finals': stages?.semiFinals,
+    Final: stages?.final,
+    '3rd Place Final': stages?.thirdPlaceFinal,
   };
+
+  const homeId = data.home.urn?.split(':').pop();
+  const awayId = data.away.urn?.split(':').pop();
+  const DEFAULT_COUNTRY_TRANSLATIONS = {
+    ...(homeId && { [homeId]: data.home.fullName }),
+    ...(awayId && { [awayId]: data.away.fullName }),
+  };
+
+  const eventSummary = data.accessibleEventSummary;
+
+  // Add terms translations
+  let accessibleEventSummary = addA11YTranslations(
+    eventSummary,
+    translations.sport as Record<string, string>,
+  );
+
+  // Add country translations
+  accessibleEventSummary = addA11YTranslations(
+    accessibleEventSummary,
+    translations.sport?.worldCupTeamNames,
+  );
+
+  // Add default English translations
+  accessibleEventSummary = addA11YTranslations(
+    accessibleEventSummary,
+    DEFAULT_TRANSLATIONS_MAP,
+  );
+
+  // Add default country translations
+  accessibleEventSummary = addA11YTranslations(
+    accessibleEventSummary,
+    DEFAULT_COUNTRY_TRANSLATIONS,
+  );
 
   return {
     ...data,
@@ -222,6 +294,7 @@ const translateSportData = (
         };
       }),
     }),
+    accessibleEventSummary,
   };
 };
 

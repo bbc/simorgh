@@ -5,6 +5,7 @@ import moment from 'moment';
 import path from 'ramda/src/path';
 import isMediaType from '#app/lib/utilities/isMedia';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import isLiveEnvironment from '#lib/utilities/isLive';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import formatDuration from '../../../lib/utilities/formatDuration';
 import Promo from '../../../legacy/components/Promo';
@@ -183,11 +184,8 @@ const HiearchicalGrid = ({
                   {promo.description}
                 </Promo.Body>
                 {!isLive ? (
-                  <div
-                    css={styles.metadataAndTopicData}
-                    className={relatedTopic ? 'hasRelatedTopic' : undefined}
-                  >
-                    {relatedTopic && (
+                  <div css={styles.metadataAndTopicData}>
+                    {relatedTopic && !isLiveEnvironment() && (
                       <a
                         href={relatedTopic.link.url}
                         css={styles.relatedTopicLink}

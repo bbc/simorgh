@@ -2,13 +2,15 @@ import { Fragment, use } from 'react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import PWAPromotionalBanner from '#app/components/PWAPromotionalBanner';
 import AccountPromotionalBanner from '#app/components/Account/AccountPromotionalBanner';
+import useScrollDepthTracker, {
+  getHomePageBounds,
+} from '#app/hooks/useScrollDepthTracker';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import {
   Curation,
   VisualProminence,
   VisualStyle,
 } from '../../models/types/curationData';
-import { ATIData } from '../../components/ATIAnalytics/types';
 import HomeCuration from '../../components/Curation';
 import Ad from '../../components/Ad';
 import MPU from '../../components/Ad/MPU';
@@ -30,7 +32,6 @@ export interface HomePageProps {
     seoTitle?: string;
     seoDescription?: string;
     metadata: {
-      atiAnalytics: ATIData;
       type: string;
     };
   };
@@ -46,14 +47,14 @@ const HomePage = ({ pageData }: HomePageProps) => {
     brandName,
   } = use(ServiceContext);
   const { topStoriesTitle, home } = translations;
-  const {
-    title,
-    description,
-    seoTitle,
-    seoDescription,
-    metadata: { atiAnalytics },
-  } = pageData;
+  const { title, description, seoTitle, seoDescription } = pageData;
   const { curations } = pageData;
+
+  const scrollDepthRef = useScrollDepthTracker(
+    'homepage-scroll-depth',
+    true,
+    getHomePageBounds,
+  );
 
   const metadataTitle = seoTitle || homePageTitle;
   const metadataDescription = seoDescription || description;
@@ -80,8 +81,8 @@ const HomePage = ({ pageData }: HomePageProps) => {
         entities={[itemList]}
       />
       <Ad slotType="leaderboard" />
-      <main role="main" css={styles.main}>
-        <ATIAnalytics atiData={atiAnalytics} />
+      <main role="main" css={styles.main} ref={scrollDepthRef}>
+        <ATIAnalytics />
         <VisuallyHiddenText id="content" tabIndex={-1} as="h1">
           {/* eslint-disable-next-line jsx-a11y/aria-role */}
           <span role="text">
@@ -100,7 +101,6 @@ const HomePage = ({ pageData }: HomePageProps) => {
                   link,
                   position,
                   visualStyle,
-                  associatedContent: { uri } = {},
                   ...curationProps
                 }: Curation,
                 index: number,
@@ -123,7 +123,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       title={curationTitle}
                       topStoriesTitle={topStoriesTitle}
                       position={position}
-                      link={link || uri}
+                      link={link}
                       curationLength={curations?.length}
                       nthCurationByStyleAndProminence={
                         nthCurationByStyleAndProminence

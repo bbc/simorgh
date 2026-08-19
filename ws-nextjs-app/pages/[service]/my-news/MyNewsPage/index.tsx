@@ -9,16 +9,23 @@ import styles from './styles';
 import { MyNewsPageProps } from '../types';
 import MyNewsPageGuest from './MyNewsPageGuest';
 import MyNewsPageLoading from './MyNewsPageLoading';
+import GenericMessage from '../../send/[id]/GenericMessage';
+import fallbackTranslations from '../../send/[id]/fallbackTranslations';
 
 const MyNewsPageContent = dynamic(() => import('./MyNewsPageContent'), {
   ssr: false,
   loading: () => <MyNewsPageLoading />,
 });
 
-const MyNewsPage = ({ pageData, page }: MyNewsPageProps) => {
+const MyNewsPage = ({ page }: MyNewsPageProps) => {
   const { isPersonalizationAvailable, isPersonalizationEnabled } =
     use(AccountContext);
   const { lang, translations } = use(ServiceContext);
+  const noJsHeading =
+    translations?.myNews?.title || fallbackTranslations.noJsHeading;
+  const noJsDescription =
+    translations?.myNews?.noJsDescription ||
+    fallbackTranslations.noJsDescription;
 
   if (!isPersonalizationAvailable || !translations?.myNews) return null;
 
@@ -30,13 +37,22 @@ const MyNewsPage = ({ pageData, page }: MyNewsPageProps) => {
         openGraphType="website"
         hasAmpPage={false}
       />
-      <ATIAnalytics atiData={pageData?.metadata?.atiAnalytics} />
+      <ATIAnalytics />
       <div css={styles.inner}>
-        {isPersonalizationEnabled ? (
-          <MyNewsPageContent page={page} />
-        ) : (
-          <MyNewsPageGuest />
-        )}
+        <noscript>
+          <div css={styles.heading}>
+            <GenericMessage heading={noJsHeading}>
+              {noJsDescription}
+            </GenericMessage>
+          </div>
+        </noscript>
+        <div css={styles.innerContent}>
+          {isPersonalizationEnabled ? (
+            <MyNewsPageContent page={page} />
+          ) : (
+            <MyNewsPageGuest />
+          )}
+        </div>
       </div>
     </main>
   );

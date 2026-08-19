@@ -3,17 +3,40 @@ import {
   screen,
   fireEvent,
 } from '#app/components/react-testing-library-with-providers';
+import { matchers } from '@emotion/jest';
 import * as viewTracking from '#app/hooks/useViewTracker';
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { ServiceConfig } from '#app/models/types/serviceConfig';
 import { service as portugueseConfig } from '#app/lib/config/services/portuguese';
 import { service as turkceConfig } from '#app/lib/config/services/turkce';
-import { topicTagsFixture, multipleTopicsFixture } from './fixtures';
+import { service as arabicConfig } from '#app/lib/config/services/arabic';
+import {
+  BLACK,
+  GREY_2,
+  GREY_4,
+  GREY_6,
+  GREY_10,
+  WHITE,
+} from '#app/components/ThemeProvider/palette';
+import {
+  ARTICLE_PAGE,
+  LIVE_TV_PAGE,
+  MEDIA_ARTICLE_PAGE,
+  TV_PAGE,
+} from '../../routes/utils/pageTypes';
+import {
+  topicTagsFixture,
+  multipleTopicsFixture,
+  arabicTopicTagsFixture,
+  arabicMultipleTopicsFixture,
+} from './fixtures';
 import useFetchTopicPromos from './useFetchTopicPromos';
 import TopicDiscovery from '.';
 
 jest.mock('./useFetchTopicPromos');
+
+expect.extend(matchers);
 
 describe('TopicDiscovery', () => {
   const mockUseFetchTopicPromos = useFetchTopicPromos as jest.MockedFunction<
@@ -114,7 +137,7 @@ describe('TopicDiscovery', () => {
     expect(screen.getByText(secondTopicTitle)).toBeInTheDocument();
   });
 
-  it('renders the "more from" section with topic title last if {topic} is last in the config', async () => {
+  it('renders the "more about" section with topic title last if {topic} is last in the config', async () => {
     const config: ServiceConfig = { ...portugueseConfig.default };
     render(
       <ServiceContext.Provider value={config}>
@@ -122,13 +145,13 @@ describe('TopicDiscovery', () => {
       </ServiceContext.Provider>,
     );
     // Wait for loading to finish and the link to appear
-    const moreFrom = await screen.findByTestId('topic-discovery-more-from');
-    expect(moreFrom).toHaveTextContent(
-      `Mais de ${topicTagsFixture[0].topicName}`,
+    const moreAbout = await screen.findByTestId('topic-discovery-more-about');
+    expect(moreAbout).toHaveTextContent(
+      `Mais sobre ${topicTagsFixture[0].topicName}`,
     );
   });
 
-  it('renders the "more from" section with topic title first if {topic} is first in the config', async () => {
+  it('renders the "more about" section with topic title first if {topic} is first in the config', async () => {
     const config: ServiceConfig = { ...turkceConfig.default };
     render(
       <ServiceContext.Provider value={config}>
@@ -136,13 +159,13 @@ describe('TopicDiscovery', () => {
       </ServiceContext.Provider>,
     );
     // Wait for loading to finish and the link to appear
-    const moreFrom = await screen.findByTestId('topic-discovery-more-from');
-    expect(moreFrom).toHaveTextContent(
+    const moreAbout = await screen.findByTestId('topic-discovery-more-about');
+    expect(moreAbout).toHaveTextContent(
       `${topicTagsFixture[0].topicName} hakkında daha fazla`,
     );
   });
 
-  it('renders the "more from" section with fallback if moreFrom is missing', async () => {
+  it('renders the "more about" section with fallback if moreAbout is missing', async () => {
     const portugueseTranslations = {
       ...portugueseConfig.default.translations,
       topicDiscovery: { heading: 'Discover more' },
@@ -156,7 +179,7 @@ describe('TopicDiscovery', () => {
         <TopicDiscovery topics={topicTagsFixture} />
       </ServiceContext.Provider>,
     );
-    await screen.findByText(`More from ${topicTagsFixture[0].topicName}`);
+    await screen.findByText(`More about ${topicTagsFixture[0].topicName}`);
   });
 
   it('should not render when there are no valid topics', () => {
@@ -179,12 +202,76 @@ describe('TopicDiscovery', () => {
     });
 
     expect(
-      await screen.findByText('Falha ao carregar. Tente novamente mais tarde.'),
+      await screen.findByText('Falha ao carregar. Tente novamente'),
     ).toBeInTheDocument();
 
     expect(
-      screen.queryByTestId('topic-discovery-more-from'),
+      screen.queryByTestId('topic-discovery-more-about'),
     ).not.toBeInTheDocument();
+  });
+
+  it.each([MEDIA_ARTICLE_PAGE, TV_PAGE, LIVE_TV_PAGE])(
+    'should render promo links in dark ui colours for %s pages',
+    pageType => {
+      render(<TopicDiscovery topics={topicTagsFixture} />, {
+        pageType,
+        service: 'portuguese',
+      });
+
+      const promoLink = screen.getByRole('link', {
+        name: /Derrota em dose dupla/,
+      });
+
+      const tabPanel = screen.getByRole('tabpanel');
+
+      expect(promoLink).toHaveStyle({ color: GREY_2 });
+
+      expect(tabPanel).toHaveStyleRule('color', GREY_4, {
+        target: 'li .promo-text a:visited',
+      });
+    },
+  );
+
+  it('should render media icons in dark ui colours', () => {
+    const { container } = render(<TopicDiscovery topics={topicTagsFixture} />, {
+      pageType: MEDIA_ARTICLE_PAGE,
+      service: 'portuguese',
+    });
+
+    expect(
+      container.querySelector('[data-e2e="media-icon"]'),
+    ).toBeInTheDocument();
+
+    const tabPanel = screen.getByRole('tabpanel');
+
+    expect(tabPanel).toHaveStyleRule('background-color', BLACK, {
+      target: 'li .promo-image [data-e2e="media-icon"]',
+    });
+    expect(tabPanel).toHaveStyleRule('color', WHITE, {
+      target: 'li .promo-image [data-e2e="media-icon"]',
+    });
+    expect(tabPanel).toHaveStyleRule('color', WHITE, {
+      target: 'li .promo-image [data-e2e="media-icon"] svg',
+    });
+  });
+
+  it('should render promo links in light ui colours for article pages', () => {
+    render(<TopicDiscovery topics={topicTagsFixture} />, {
+      pageType: ARTICLE_PAGE,
+      service: 'portuguese',
+    });
+
+    const promoLink = screen.getByRole('link', {
+      name: /Derrota em dose dupla/,
+    });
+
+    const tabPanel = screen.getByRole('tabpanel');
+
+    expect(promoLink).toHaveStyle({ color: GREY_10 });
+
+    expect(tabPanel).toHaveStyleRule('color', GREY_6, {
+      target: 'li .promo-text a:visited',
+    });
   });
 
   describe('analytics', () => {
@@ -257,7 +344,7 @@ describe('TopicDiscovery', () => {
       clickTrackerSpy.mockRestore();
     });
 
-    it('should call useClickTrackerHandler when "more from" link is clicked', async () => {
+    it('should call useClickTrackerHandler when "more about" link is clicked', async () => {
       const mockClickHandler = jest.fn();
       jest
         .spyOn(clickTracking, 'default')
@@ -267,23 +354,64 @@ describe('TopicDiscovery', () => {
         service: 'portuguese',
       });
 
-      const moreFromLink = await screen.findByTestId(
-        'topic-discovery-more-from',
+      const moreAboutLink = await screen.findByTestId(
+        'topic-discovery-more-about',
       );
 
-      fireEvent.click(moreFromLink);
+      fireEvent.click(moreAboutLink);
 
       expect(mockClickHandler).toHaveBeenCalledTimes(1);
 
       expect(clickTracking.default).toHaveBeenCalledWith({
-        componentName: 'topic-discovery-more-from-link',
+        componentName: 'topic-discovery-more-about-link',
         groupTracker,
         itemTracker: {
-          type: 'topic-discovery-more-from-link',
-          text: `Mais de ${topicTagsFixture[0].topicName}`,
+          type: 'topic-discovery-more-about-link',
+          text: `Mais sobre ${topicTagsFixture[0].topicName}`,
           resourceId: topicTagsFixture[0].topicId,
         },
       });
+    });
+  });
+
+  describe('RTL rendering for Arabic', () => {
+    beforeEach(() => {
+      mockUseFetchTopicPromos.mockReturnValue({
+        topicPromos:
+          arabicMultipleTopicsFixture[arabicTopicTagsFixture[0].topicId].data
+            .items,
+        isLoading: false,
+        isError: false,
+      });
+    });
+
+    it('should set dir attribute to rtl on section element when service is arabic', () => {
+      const config: ServiceConfig = { ...arabicConfig.default };
+      render(
+        <ServiceContext.Provider value={config}>
+          <TopicDiscovery topics={arabicTopicTagsFixture} />
+        </ServiceContext.Provider>,
+      );
+
+      const section = screen.getByTestId('topic-discovery');
+      expect(section).toHaveAttribute('dir', 'rtl');
+    });
+
+    it('should switch active arabic topic when a different tab is clicked', () => {
+      const config: ServiceConfig = { ...arabicConfig.default };
+      render(
+        <ServiceContext.Provider value={config}>
+          <TopicDiscovery topics={arabicTopicTagsFixture} />
+        </ServiceContext.Provider>,
+      );
+
+      fireEvent.click(
+        screen.getByRole('tab', { name: arabicTopicTagsFixture[1].topicName }),
+      );
+
+      expect(
+        screen.getByRole('tab', { name: arabicTopicTagsFixture[1].topicName }),
+      ).toHaveAttribute('aria-selected', 'true');
     });
   });
 });

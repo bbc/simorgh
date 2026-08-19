@@ -48,6 +48,28 @@ export const service: DefaultServiceConfig = {
     passportHomes: ['brasil'],
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    articleMessageBanners: [
+      {
+        thingIds: ['b91eaef4-fdf2-47a6-b3ec-05b5a55a4843'],
+        linkHref: 'https://www.bbc.com/portuguese/articles/czd2prld130o',
+        heading: 'Quem está à frente nas pesquisas para presidente?',
+        description:
+          'Veja as estimativas de intenção de voto no Agregador de Pesquisas da BBC News Brasil',
+        linkText: 'Clique aqui',
+        image:
+          'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/caa9/live/a04f7e60-4a1c-11f1-b55d-0f258dce1735.png.webp',
+      },
+      {
+        thingIds: ['f30c1edd-b1de-449c-a57e-1003edc03174'],
+        linkHref: 'https://www.bbc.com/portuguese/articles/c20yjrpxr35o',
+        heading: 'Copa do Mundo 2026 – tabela completa',
+        description:
+          'Confira aqui o calendário de jogos do torneio, com resultados e classificação',
+        linkText: 'Clique aqui para ver a tabela',
+        image:
+          'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/02bc/live/37515e30-6775-11f1-8e1d-bbbb1017d210.png.webp',
+      },
+    ],
     podcastPromo: {
       title: 'Promoção Agregador de pesquisas',
       brandTitle: 'Veja Agregador de Pesquisas da BBC News Brasil',
@@ -86,11 +108,15 @@ export const service: DefaultServiceConfig = {
       continueReading: 'Continue lendo',
       topicDiscovery: {
         heading: 'Descubra mais',
-        moreFromTopic: 'Mais de {topic}',
-        fetchErrorMessage: 'Falha ao carregar. Tente novamente mais tarde.',
+        moreAboutTopic: 'Mais sobre {topic}',
+        fetchErrorMessage: 'Falha ao carregar. Tente novamente',
       },
       currentPage: 'Página atual',
       skipLinkText: 'Vá para o conteúdo',
+      skipContent: {
+        text: 'Pular %title% e continuar',
+        endTextVisuallyHidden: 'Fim de %title%',
+      },
       relatedContent: 'Histórias relacionadas',
       relatedTopics: 'Tópicos relacionados',
       moreOnThis: '',
@@ -115,6 +141,62 @@ export const service: DefaultServiceConfig = {
         title: 'File Download',
       },
       gist: 'Pontos-chave',
+      account: {
+        signIn: 'Sign In',
+        signInAccessibleLabel: 'Sign in to My News',
+        forYou: 'Your Account',
+        register: 'Register',
+      },
+      accountPromoBanner: {
+        title: 'Your very own BBC',
+        description: 'Sign In or create an account for free',
+        closeLabel: 'Close',
+        buttonSeparatorText: 'or',
+      },
+      accountSignInModal: {
+        title: 'Sign in to save to My News',
+        description: 'Save stories and read them at your convenience',
+        closeLabel: 'Close',
+      },
+      saveArticleButton: {
+        loading: 'Loading',
+        save: 'Save for later',
+        saving: 'Saving',
+        saved: 'Saved to My News',
+        remove: 'Remove',
+        removeAccessible: 'Saved. Remove from My News',
+        removing: 'Removing',
+      },
+      myNews: {
+        title: 'My News',
+        guestTitle: 'Welcome to My News',
+        description: 'My saved articles',
+        guestDescription:
+          'Sign in to save articles to My News, and read them at your convenience.',
+        noArticles: 'You haven’t saved any articles yet',
+        errorText:
+          'This content doesn’t seem to be loading. Please try again later.',
+        loading: 'Loading',
+        noJsDescription:
+          'Please enable JavaScript or use another browser to view this content.',
+      },
+      actionTooltip: {
+        success: {
+          titleBefore: 'This article is now saved to',
+          titleAfter: '',
+        },
+        error: {
+          title: 'Sorry, something went wrong',
+          body: 'Check your connection, refresh the page and try again',
+        },
+        removed: {
+          titleBefore: 'This article has now been removed from',
+          titleAfter: '',
+        },
+        myNewsLinkText: 'My News',
+        myNewsUrl: 'https://www.bbc.com/portuguese/my-news',
+        closeLabel: 'Close',
+      },
       error: {
         404: {
           statusCode: '404',
@@ -375,6 +457,7 @@ export const service: DefaultServiceConfig = {
         closedDescription: 'Foi encerrado em {{date}}.',
       },
       sport: {
+        keyEventsTitle: 'Principais eventos',
         matchSummary: 'Resumo da partida',
         assists: 'Assistências',
         penalties: 'Pênaltis',
@@ -386,6 +469,15 @@ export const service: DefaultServiceConfig = {
         ownGoal: 'Gol contra',
         venue: 'Local',
         attendance: 'Público',
+        versus: 'contra',
+        kickOff: 'início',
+        timeToBeConfirmed: 'Horário a confirmar',
+        teamToBeConfirmed: 'Equipe a ser confirmada',
+        afterFullTime: 'após o tempo regulamentar',
+        atFullTime: 'no fim do tempo regulamentar',
+        onPenalties: 'nos pênaltis',
+        onAggregate: 'no placar agregado',
+        win: 'vence',
         winOnPenalties: {
           prefix: 'vence por',
           suffix: 'nos pênaltis',
@@ -445,6 +537,12 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'Fase de Grupos',
+          last32: 'Primeira fase do mata-mata',
+          last16: 'Oitavas de final',
+          quarterFinals: 'Quartas de final',
+          semiFinals: 'Semifinais',
+          final: 'Final',
+          thirdPlaceFinal: 'Disputa pelo terceiro lugar',
         },
       },
     },

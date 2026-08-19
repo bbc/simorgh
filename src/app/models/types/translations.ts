@@ -14,6 +14,10 @@ export interface Translations {
   home: string;
   currentPage: string;
   skipLinkText: string;
+  skipContent?: {
+    text: string;
+    endTextVisuallyHidden: string;
+  };
   relatedContent: string;
   topicsPath?: string;
   relatedTopics?: string;
@@ -44,6 +48,7 @@ export interface Translations {
   gist?: string;
   account?: {
     signIn?: string;
+    signInAccessibleLabel?: string;
     forYou?: string;
     register?: string;
     settings?: string;
@@ -54,12 +59,18 @@ export interface Translations {
     closeLabel: string;
     buttonSeparatorText: string;
   };
+  accountSignInModal?: {
+    title: string;
+    description: string;
+    closeLabel: string;
+  };
   saveArticleButton?: {
     loading: string;
     save: string;
     saving: string;
     saved: string;
     remove: string;
+    removeAccessible: string;
     removing: string;
   };
   myNews?: {
@@ -70,6 +81,24 @@ export interface Translations {
     noArticles: string;
     errorText: string;
     loading: string;
+    noJsDescription: string;
+  };
+  actionTooltip?: {
+    success: {
+      titleBefore: string;
+      titleAfter: string;
+    };
+    error: {
+      title: string;
+      body: string;
+    };
+    removed: {
+      titleBefore: string;
+      titleAfter: string;
+    };
+    myNewsLinkText: string;
+    myNewsUrl: string;
+    closeLabel: string;
   };
   error: {
     home?: string;
@@ -81,7 +110,7 @@ export interface Translations {
   continueReading?: string;
   topicDiscovery?: {
     heading: string;
-    moreFromTopic: string;
+    moreAboutTopic: string;
     fetchErrorMessage?: string;
   };
   readTime?: Partial<{
@@ -257,18 +286,38 @@ export interface Translations {
     ft?: string;
     et?: string;
     afterExtraTime?: string;
+    versus?: string;
+    kickOff?: string;
+    teamToBeConfirmed?: string;
+    timeToBeConfirmed?: string;
+    afterFullTime?: string;
+    atFullTime?: string;
+    onPenalties?: string;
+    onAggregate?: string;
+    win?: string;
     penaltyAbbreviation?: string;
     ownGoal?: string;
     venue?: string;
     attendance?: string;
     matchSummary?: string;
+    keyEventsTitle?: string;
     winOnPenalties?: {
       prefix?: string;
       suffix?: string;
     };
-    worldCupTeamNames?: Record<string, string>;
-    tournaments?: Record<string, string>;
-    stages?: Record<string, string>;
+    worldCupTeamNames?: WorldCupTeamNameTranslations;
+    tournaments?: {
+      fifaWorldCup?: string;
+    };
+    stages?: {
+      groupStage?: string;
+      last32?: string;
+      last16?: string;
+      quarterFinals?: string;
+      semiFinals?: string;
+      final?: string;
+      thirdPlaceFinal?: string;
+    };
   };
 }
 
@@ -361,3 +410,54 @@ export interface LiteSiteTranslations {
   dataSaving: string;
   articleDataSavingLinkText?: string;
 }
+
+export type WorldCupTeamNameTranslations = {
+  algeria?: string;
+  argentina?: string;
+  australia?: string;
+  austria?: string;
+  belgium?: string;
+  'bosnia-herzegovina'?: string;
+  brazil?: string;
+  canada?: string;
+  'cape-verde'?: string;
+  colombia?: string;
+  croatia?: string;
+  curacao?: string;
+  'czech-republic'?: string;
+  'dr-congo'?: string;
+  ecuador?: string;
+  egypt?: string;
+  england?: string;
+  france?: string;
+  germany?: string;
+  ghana?: string;
+  haiti?: string;
+  iran?: string;
+  iraq?: string;
+  'ivory-coast'?: string;
+  japan?: string;
+  jordan?: string;
+  mexico?: string;
+  morocco?: string;
+  netherlands?: string;
+  'new-zealand'?: string;
+  norway?: string;
+  panama?: string;
+  paraguay?: string;
+  portugal?: string;
+  qatar?: string;
+  'saudi-arabia'?: string;
+  scotland?: string;
+  senegal?: string;
+  'south-africa'?: string;
+  'south-korea'?: string;
+  spain?: string;
+  sweden?: string;
+  switzerland?: string;
+  tunisia?: string;
+  turkey?: string;
+  uruguay?: string;
+  usa?: string;
+  uzbekistan?: string;
+};

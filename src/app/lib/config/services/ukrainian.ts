@@ -46,16 +46,17 @@ const baseServiceConfig = {
   showAdPlaceholder: true,
   showRelatedTopics: true,
   podcastPromo: {
-    title: 'Whatsapp',
-    brandTitle: 'BBC Україна тепер у WhatsApp!',
-    brandDescription: 'Як дізнатися головне про Україну та світ?',
+    title: 'Подкаст',
+    brandTitle: 'Я тебе врятую',
+    brandDescription:
+      'Подкаст BBC News Україна про роботу й людські долі медиків під час війни.',
     image: {
-      src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0kv11pb.png',
-      alt: 'BBC News Україна підписуйтеся на наш WhatsApp',
+      src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0nxht82.jpg',
+      alt: 'Подкаст: Я тебе врятую',
     },
     linkLabel: {
-      text: 'Підписуйтеся на наш канал тут.',
-      href: 'https://www.whatsapp.com/channel/0029Vau5deM0QeaqQRTPVs2e',
+      text: 'Усі епізоди',
+      href: 'https://www.bbc.com/ukrainian/podcasts/p0nxhsdm',
     },
     skipLink: {
       text: 'Пропустити %title% і продовжити',
@@ -78,8 +79,17 @@ const baseServiceConfig = {
     },
     seeAll: 'Подивитись все',
     home: 'Головна',
+    topicDiscovery: {
+      heading: 'Дізнатися більше',
+      moreAboutTopic: 'Більше про {topic}',
+      fetchErrorMessage: 'Не вдалося завантажити. Спробуйте ще раз',
+    },
     currentPage: 'Поточна сторінка',
     skipLinkText: 'Перейти до змісту',
+    skipContent: {
+      text: 'Пропустити %title% і продовжити',
+      endTextVisuallyHidden: 'Кінець %title%',
+    },
     moreOnThis: '',
     navMenuText: 'Розділи',
     mediaAssetPage: {
@@ -298,6 +308,15 @@ const baseServiceConfig = {
       afterExtraTime: 'Після додаткового часу',
       penaltyAbbreviation: 'пен',
       ownGoal: 'автогол',
+      versus: 'проти',
+      kickOff: 'початок',
+      timeToBeConfirmed: 'Час уточнюється',
+      teamToBeConfirmed: 'Команда уточнюється',
+      afterFullTime: 'після основного часу',
+      atFullTime: 'в основний час',
+      onPenalties: 'по пенальті',
+      onAggregate: 'за сумою',
+      win: 'перемагає',
       winOnPenalties: {
         prefix: 'виграє',
         suffix: 'по пенальті',
@@ -357,6 +376,12 @@ const baseServiceConfig = {
       },
       stages: {
         groupStage: 'Груповий етап',
+        last32: '1/16 фіналу',
+        last16: '1/8 фіналу',
+        quarterFinals: 'Чвертьфінал',
+        semiFinals: 'Півфінал',
+        final: 'Фінал',
+        thirdPlaceFinal: 'За третє місце',
       },
     },
     ...secondaryColumnTranslations,
@@ -444,6 +469,7 @@ export const service: UkrainianConfig = {
       ...secondaryColumnTranslations,
       relatedTopics: 'Темы',
       sport: {
+        keyEventsTitle: 'Ключові події',
         worldCupTeamNames: {
           algeria: 'Алжир',
           argentina: 'Аргентина',
@@ -499,6 +525,12 @@ export const service: UkrainianConfig = {
         },
         stages: {
           groupStage: 'Групповой этап',
+          last32: '1/16 фіналу',
+          last16: '1/8 фіналу',
+          quarterFinals: 'Чвертьфінал',
+          semiFinals: 'Півфінал',
+          final: 'Фінал',
+          thirdPlaceFinal: 'За третє місце',
         },
       },
     },

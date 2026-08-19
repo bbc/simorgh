@@ -6,6 +6,7 @@ import { Preview } from '@storybook/react-webpack5';
 import GlobalStyles from '../src/app/legacy/psammead/psammead-styles/src/global-styles';
 import DocsDecorator from './DocsDecorator';
 import ThemeProvider from '../src/app/components/ThemeProvider';
+import ThemeProviderSCSSModules from '#app/components/ThemeProviderSCSSModules';
 import { ServiceContextProvider } from '../src/app/contexts/ServiceContext';
 import { ToggleContextProvider } from '../src/app/contexts/ToggleContext';
 import { UserContextProvider } from '../src/app/contexts/UserContext';
@@ -230,13 +231,18 @@ const preview: Preview = {
             >
               <AccountProvider initialConfig={context.globals.idctaConfig}>
                 <UserContextProvider>
-                  <ThemeProvider
-                    service={context.globals.service.service}
-                    variant={context.globals.service.variant}
-                  >
-                    <Story />
-                  </ThemeProvider>
-                </UserContextProvider>
+                  <ThemeProviderSCSSModules
+                      service={context.globals.service.service}
+                      variant={context.globals.service.variant}
+                    >
+                      <ThemeProvider
+                      service={context.globals.service.service}
+                      variant={context.globals.service.variant}
+                    >
+                      <Story />
+                    </ThemeProvider>
+                  </ThemeProviderSCSSModules>
+                  </UserContextProvider>
               </AccountProvider>
             </EventTrackingContextProvider>
           </RequestContextProvider>

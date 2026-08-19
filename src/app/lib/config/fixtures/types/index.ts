@@ -24,10 +24,6 @@ export type PageData = {
   headline: string;
   summaries: Summary[];
   totalItems: number;
-  metadata: {
-    type: string;
-    atiAnalytics?: ATIData;
-  };
 };
 
 export type TopicsPageProps = {

@@ -1,4 +1,5 @@
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
+import * as isLiveEnv from '#lib/utilities/isLive';
 import { fireEvent, render } from '../../react-testing-library-with-providers';
 import { pidginPromos as fixture } from './fixtures';
 import mediaFixture from './mediaFixtures';
@@ -211,6 +212,39 @@ describe('Hierarchical Grid Curation', () => {
     );
   });
 
+  it('should truncate a related topic link with an ellipsis when it cannot fit on one line', () => {
+    const longRelatedTopicTitle =
+      'A related topic title that is too long to fit on one line';
+    const summariesWithLongRelatedTopic = fixture.map((summary, index) =>
+      index === 0
+        ? {
+            ...summary,
+            relatedTopic: {
+              title: longRelatedTopicTitle,
+              link: { url: 'https://www.bbc.com/pidgin/topics/long-topic' },
+            },
+          }
+        : summary,
+    );
+
+    const { getByRole } = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={summariesWithLongRelatedTopic}
+        eventTrackingData={minimalEventTrackingData}
+      />,
+      {
+        service: 'pidgin',
+      },
+    );
+
+    expect(getByRole('link', { name: longRelatedTopicTitle })).toHaveStyle({
+      overflow: 'hidden',
+      textOverflow: 'ellipsis',
+      whiteSpace: 'nowrap',
+    });
+  });
+
   it('when there is no related topic, it should not apply the hasRelatedTopic class', () => {
     const { getByText } = render(
       <HierarchicalGrid
@@ -284,5 +318,26 @@ describe('Hierarchical Grid Curation', () => {
     expect(onClickSpy).toHaveBeenCalled();
 
     clickTrackerSpy.mockRestore();
+  });
+
+  it('should not render related topic links when environment is live', () => {
+    const isLiveSpy = jest.spyOn(isLiveEnv, 'default').mockReturnValue(true);
+
+    const { queryByText } = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={fixture}
+        eventTrackingData={minimalEventTrackingData}
+      />,
+      {
+        service: 'pidgin',
+      },
+    );
+
+    // The fixture contains promos with related topics (e.g. 'Nigeria')
+    // but in live environment they should not be rendered
+    expect(queryByText('Nigeria')).not.toBeInTheDocument();
+
+    isLiveSpy.mockRestore();
   });
 });

@@ -105,7 +105,7 @@ exports[`Toggles Config when application environment is local should contain cor
   "_environment": "local",
   "account": {
     "enabled": true,
-    "value": "hindi",
+    "value": "hindi|mundo|portuguese",
   },
   "ads": {
     "enabled": true,
@@ -142,6 +142,9 @@ exports[`Toggles Config when application environment is local should contain cor
     "enabled": true,
   },
   "liveRadioSchedule": {
+    "enabled": true,
+  },
+  "locationTopicCuration": {
     "enabled": true,
   },
   "midArticleOnwardJourney": {
@@ -191,7 +194,7 @@ exports[`Toggles Config when application environment is local should contain cor
   },
   "uasPersonalization": {
     "enabled": true,
-    "value": "hindi",
+    "value": "hindi|mundo|portuguese",
   },
   "variantCookie": {
     "enabled": true,

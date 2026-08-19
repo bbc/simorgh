@@ -48,17 +48,21 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     podcastPromo: {
-      title: 'WhatsApp',
-      brandTitle: 'Chaanaalii WhatsApp BBC Afaan Oromoo',
+      title: 'Beeksisa Instagram',
+      brandTitle: 'Instagram BBC Afaan Oromoo',
       brandDescription:
-        'Oduufi xiinxala kallattiin bilbila keessan irratti argachuuf ammuma',
+        'Waan qe’eefi addunyaan itti jirtu suuraafi viidiyoo bareedaan argattu.',
       image: {
-        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0mnxg49.png',
-        alt: `Oduu ho'aaf WhatsApp BBC Afaan Oromoo hordofaa.`,
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0p40c8d.png',
+        alt: `Oduu agaa! BBC Afaan Oromo Instagram irratti hordofa.`,
       },
       linkLabel: {
-        text: 'Asiin seenaa',
-        href: 'https://www.whatsapp.com/channel/0029VawyHE6CBtx7GK5AV32J',
+        text: 'Asin nu faana bu’aa',
+        href: 'https://www.instagram.com/bbcnewsafaanoromoo',
+      },
+      skipLink: {
+        text: 'Beeksisa bira darbii dubbisi',
+        endTextVisuallyHidden: 'Xumura beeksisaa',
       },
     },
     translations: {
@@ -77,8 +81,17 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Hunda ilaali',
       home: 'Oduu',
+      topicDiscovery: {
+        heading: 'Dabalata argadhu',
+        moreAboutTopic: '{topic} irratti dabalata',
+        fetchErrorMessage: "Wal bira hin geenye. Mee irra deebi'ii yaali",
+      },
       currentPage: 'Fuula kan ammaa',
       skipLinkText: 'Qabiyyeetti darbi',
+      skipContent: {
+        text: '%title% darbi itti fufi',
+        endTextVisuallyHidden: 'Dhuma %title%',
+      },
       relatedContent: 'Odeessa kana irratti dabalata',
       relatedTopics: 'Mata dureewwan walitti dhiyaatan',
       moreOnThis: '',
@@ -302,6 +315,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: `Maaltu haasa'ama?`,
       latestMediaTitle: 'Haaraa',
       sport: {
+        keyEventsTitle: 'Taateewwan Ijoo',
         matchSummary: 'Cuunfaa Taphaa',
         assists: 'Gargaarsota',
         penalties: 'Penaaltii',
@@ -311,6 +325,15 @@ export const service: DefaultServiceConfig = {
         afterExtraTime: 'Erga yeroo dabalataa booda',
         penaltyAbbreviation: 'PEN',
         ownGoal: 'goolii ofii',
+        versus: 'vs',
+        kickOff: 'jalqaba',
+        timeToBeConfirmed: 'Yeroon ni mirkanaa’a',
+        teamToBeConfirmed: 'Timiin ni mirkanaa’uu qaba',
+        afterFullTime: 'booda yeroo guutuu',
+        atFullTime: 'yeroo guutuutti',
+        onPenalties: 'irratti penaltii',
+        onAggregate: 'walitti qabamee',
+        win: 'injifata',
         winOnPenalties: {
           prefix: '',
           suffix: 'penaalii irratti injifata',
@@ -370,6 +393,12 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'Waltajjii Garee',
+          last32: 'Marsaa 32n',
+          last16: 'Marsaa 16n',
+          quarterFinals: 'Nuusa Xumuraa',
+          semiFinals: 'Walakkaa Xumuraa',
+          final: 'Xumura',
+          thirdPlaceFinal: 'Sadarkaa sadaffaa',
         },
       },
     },

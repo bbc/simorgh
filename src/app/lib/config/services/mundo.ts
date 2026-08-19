@@ -44,6 +44,7 @@ export const service: DefaultServiceConfig = {
     manifestPath: '/mundo/manifest.json',
     swPath: '/sw.js',
     homePageTitle: 'Noticias',
+    iTunesAppId: 6761256736,
     showAdPlaceholder: true,
     showRelatedTopics: true,
     electionBanner: {
@@ -54,17 +55,17 @@ export const service: DefaultServiceConfig = {
         'include/vjafwest/1365-2024-us-presidential-election-banner/develop/mundo/app',
     },
     podcastPromo: {
-      title: 'Podcast',
-      brandTitle: 'Improbable',
+      title: 'Anuncio app',
+      brandTitle: 'Tenemos una nueva app',
       brandDescription:
-        'El nuevo podcast de BBC Mundo sobre un amor que triunfó contra todo pronóstico',
+        'Todas las noticias que necesitas están en BBC World Service',
       image: {
-        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0mkt8rx.jpg',
-        alt: 'Logo del podcast Improbable sobre una foto de boda de una pareja',
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0p2sp62.jpg',
+        alt: 'Imagen de un teléfono celular con la nueva app de BBC Mundo',
       },
       linkLabel: {
-        text: 'Episodios',
-        href: 'https://www.bbc.com/mundo/podcasts/p0mhhr0q/p0mk4fhg',
+        text: 'Descárgala aquí',
+        href: 'https://bbcwsuniversal.onelink.me/s6ot/8sfpme8y',
       },
       skipLink: {
         text: 'Saltar %title% y continuar leyendo',
@@ -106,9 +107,18 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Ver todo',
       home: 'Página de inicio',
+      topicDiscovery: {
+        heading: 'Descubre más',
+        moreAboutTopic: 'Más sobre {topic}',
+        fetchErrorMessage: 'Error al cargar. Inténtalo de nuevo',
+      },
       continueReading: 'Continuar leyendo',
       currentPage: 'Página actual',
       skipLinkText: 'Ir al contenido',
+      skipContent: {
+        text: 'Omitir %title% y continuar',
+        endTextVisuallyHidden: 'Fin de %title%',
+      },
       relatedContent: 'Contenido relacionado',
       relatedTopics: 'Temas relacionados',
       moreOnThis: '',
@@ -133,6 +143,62 @@ export const service: DefaultServiceConfig = {
         title: 'File Download',
       },
       gist: 'Sumario',
+      account: {
+        signIn: 'Sign In',
+        signInAccessibleLabel: 'Sign in to My News',
+        forYou: 'Your Account',
+        register: 'Register',
+      },
+      accountPromoBanner: {
+        title: 'Your very own BBC',
+        description: 'Sign In or create an account for free',
+        closeLabel: 'Close',
+        buttonSeparatorText: 'or',
+      },
+      accountSignInModal: {
+        title: 'Sign in to save to My News',
+        description: 'Save stories and read them at your convenience',
+        closeLabel: 'Close',
+      },
+      saveArticleButton: {
+        loading: 'Loading',
+        save: 'Save for later',
+        saving: 'Saving',
+        saved: 'Saved to My News',
+        remove: 'Remove',
+        removeAccessible: 'Saved. Remove from My News',
+        removing: 'Removing',
+      },
+      myNews: {
+        title: 'My News',
+        guestTitle: 'Welcome to My News',
+        description: 'My saved articles',
+        guestDescription:
+          'Sign in to save articles to My News, and read them at your convenience.',
+        noArticles: 'You haven’t saved any articles yet',
+        errorText:
+          'This content doesn’t seem to be loading. Please try again later.',
+        loading: 'Loading',
+        noJsDescription:
+          'Please enable JavaScript or use another browser to view this content.',
+      },
+      actionTooltip: {
+        success: {
+          titleBefore: 'This article is now saved to',
+          titleAfter: '',
+        },
+        error: {
+          title: 'Sorry, something went wrong',
+          body: 'Check your connection, refresh the page and try again',
+        },
+        removed: {
+          titleBefore: 'This article has now been removed from',
+          titleAfter: '',
+        },
+        myNewsLinkText: 'My News',
+        myNewsUrl: 'https://www.bbc.com/mundo/my-news',
+        closeLabel: 'Close',
+      },
       error: {
         404: {
           statusCode: '404',
@@ -396,6 +462,7 @@ export const service: DefaultServiceConfig = {
         closedDescription: 'Esto cierra el {{date}}.',
       },
       sport: {
+        keyEventsTitle: 'Eventos clave',
         matchSummary: 'Resumen del partido',
         assists: 'Asistencias',
         penalties: 'Penales',
@@ -407,6 +474,15 @@ export const service: DefaultServiceConfig = {
         ownGoal: 'gol en contra',
         venue: 'Estadio',
         attendance: 'Asistencia',
+        versus: 'contra',
+        kickOff: 'inicio',
+        timeToBeConfirmed: 'Hora por confirmar',
+        teamToBeConfirmed: 'Equipo por confirmar',
+        afterFullTime: 'después del tiempo reglamentario',
+        atFullTime: 'al final del tiempo reglamentario',
+        onPenalties: 'en penales',
+        onAggregate: 'en el global',
+        win: 'gana',
         winOnPenalties: {
           prefix: 'gana',
           suffix: 'por penales',
@@ -466,6 +542,12 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'Fase de grupos',
+          last32: 'Fase de 32',
+          last16: 'Octavos de final',
+          quarterFinals: 'Cuartos de final',
+          semiFinals: 'Semifinales',
+          final: 'Final',
+          thirdPlaceFinal: 'Tercer puesto',
         },
       },
     },
