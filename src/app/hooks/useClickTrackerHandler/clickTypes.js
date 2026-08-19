@@ -2,12 +2,12 @@ const isLeftClick = button => button === 0;
 const isMiddleClick = button => button === 1 || button === 4; // middle click for IE is 4
 
 const isClickWithShiftOnly = event =>
-  isLeftClick(event?.button) &&
+  isLeftClick(event.button) &&
   event.shiftKey &&
   !(event.metaKey || event.altKey || event.ctrlKey);
 
 const isCommonOpenClicked = event =>
-  isMiddleClick(event?.button) || isClickWithShiftOnly(event);
+  isMiddleClick(event.button) || isClickWithShiftOnly(event);
 
 const isSupportedClickModifier = (event, functionKey) =>
   (functionKey && !event.shiftKey && !event.altKey) || // functionKey
@@ -17,10 +17,10 @@ const isSupportedClickModifier = (event, functionKey) =>
   (event.altKey && functionKey && !event.shiftKey); // option/alt + functionKey
 
 const isMacOsOpenClicked = event =>
-  isLeftClick(event?.button) && isSupportedClickModifier(event, event.metaKey); // cmd
+  isLeftClick(event.button) && isSupportedClickModifier(event, event.metaKey); // cmd
 
 const isWindowsOpenClicked = event =>
-  isLeftClick(event?.button) && isSupportedClickModifier(event, event.ctrlKey); // ctrl
+  isLeftClick(event.button) && isSupportedClickModifier(event, event.ctrlKey); // ctrl
 
 const isMacOs = () => window?.navigator?.platform?.startsWith('Mac');
 
@@ -29,7 +29,7 @@ export const isOpenClicked = event =>
   isCommonOpenClicked(event);
 
 export const isNotModifiedLeftClick = event =>
-  isLeftClick(event?.button) &&
+  isLeftClick(event.button) &&
   !(event.metaKey || event.altKey || event.ctrlKey || event.shiftKey);
 
 const isEnterKey = key => key === 'Enter' || key === 'Return';
@@ -38,7 +38,7 @@ const isTouchEvent = event =>
   event.type === 'touchstart' || event.type === 'touchend';
 
 export const isValidClick = event =>
-  isMiddleClick(event?.button) ||
+  isMiddleClick(event.button) ||
   isNotModifiedLeftClick(event) ||
   isOpenClicked(event) ||
   isTouchEvent(event) ||

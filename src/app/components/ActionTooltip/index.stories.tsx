@@ -3,7 +3,7 @@ import ActionTooltip, { ActionTooltipStatus } from '.';
 import getArticleTooltipContent from './ArticleTooltipContent';
 
 const TooltipDemo = ({ status }: { status: ActionTooltipStatus }) => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
 
   const actionTooltip = {
     success: {
