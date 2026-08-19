@@ -948,7 +948,7 @@ describe('LivePageLayout live text polling', () => {
     });
   });
 
-  it('should update the stream data when a poll returns new posts', async () => {
+  it('should update the stream data when new posts are in the returned data after polling', async () => {
     jest.spyOn(fetchPolledData, 'default').mockResolvedValue({
       data: streamDataUpdate,
       status: 200,
