@@ -115,7 +115,7 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
     initialData: initialStreamData,
     enabled:
       livePagePollingEnabled && isLive && initialStreamData?.page?.index === 1,
-    endpoint: 'live',
+    endpoint: 'stream',
     params: { liveTextStreamId: liveTextStream.id, type: 'curated' },
     returnedData: response =>
       response?.results && response.results.length > 0 ? response : null,

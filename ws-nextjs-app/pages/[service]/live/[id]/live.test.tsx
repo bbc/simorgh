@@ -909,7 +909,7 @@ describe('LivePageLayout live text polling', () => {
       usePollingHook<StreamResponse['data'], StreamResponse['data'] | null>({
         initialData: streamData,
         enabled: enableFeature && isLive && streamData?.page?.index === 1,
-        endpoint: 'live',
+        endpoint: 'stream',
         params: { liveTextStreamId: 'stream-id', type: 'curated' },
         returnedData: response =>
           response?.results && response.results.length > 0 ? response : null,
@@ -937,7 +937,9 @@ describe('LivePageLayout live text polling', () => {
   });
 
   it('should poll the live endpoint with the stream params when enabled', async () => {
-    const fetchSpy = jest.mocked(fetchPolledData.default).mockResolvedValue(null);
+    const fetchSpy = jest
+      .mocked(fetchPolledData.default)
+      .mockResolvedValue(null);
 
     renderLivePagePolling();
 
@@ -962,7 +964,9 @@ describe('LivePageLayout live text polling', () => {
   });
 
   it('should not poll if the user is not on the first page', async () => {
-    const fetchSpy = jest.mocked(fetchPolledData.default).mockResolvedValue(null);
+    const fetchSpy = jest
+      .mocked(fetchPolledData.default)
+      .mockResolvedValue(null);
 
     renderLivePagePolling({
       streamData: {
@@ -977,7 +981,9 @@ describe('LivePageLayout live text polling', () => {
   });
 
   it('should not poll when the live page polling feature is disabled', async () => {
-    const fetchSpy = jest.mocked(fetchPolledData.default).mockResolvedValue(null);
+    const fetchSpy = jest
+      .mocked(fetchPolledData.default)
+      .mockResolvedValue(null);
 
     renderLivePagePolling({ enableFeature: false });
 

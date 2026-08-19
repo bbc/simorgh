@@ -24,7 +24,7 @@ const renderUsePolling = (
     usePolling<PollResponse, PollData>({
       initialData,
       enabled: true,
-      endpoint: 'live',
+      endpoint: 'stream',
       params: { id: '123' },
       returnedData: response => response.event ?? null,
       ...overrides,
@@ -162,7 +162,7 @@ describe('usePolling', () => {
         usePolling<PollResponse, PollData>({
           initialData,
           enabled: true,
-          endpoint: 'live',
+          endpoint: 'stream',
           params: { id: '123' },
           returnedData: response => response.event ?? null,
           interval,
