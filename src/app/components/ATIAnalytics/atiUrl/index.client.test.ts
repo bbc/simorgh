@@ -34,7 +34,7 @@ describe('atiUrl', () => {
         contentType: 'article',
         language: 'pcm',
         statsDestination: 'statsDestination',
-        siteId: 12345,
+        destinationSiteId: 12345,
         hashedId: null,
         pageIdentifier: 'pidgin.articles.c0000000001o.page',
         producerName: 'PIDGIN',
