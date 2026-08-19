@@ -56,6 +56,11 @@ const fetchConfig = async <T>({
   });
 
   if (cachedResponse) {
+    console.log(
+      '[fetchConfig] navItems (cached - the response was already stored from a previous request within the 5-minute TTL and is returned without calling fetch() again.):',
+      (cachedResponse as { data?: { items?: unknown } })?.data?.items,
+    );
+
     return cachedResponse as T;
   }
 
@@ -76,6 +81,9 @@ const fetchConfig = async <T>({
     if (response.ok) {
       const res = await response.json();
       cache.set(bffReqPath, res);
+
+      console.log('[fetchConfig] navItems (not cached - this is a brand-new BFF response, which then gets stored via cache.set(bffReqPath, res) for subsequent requests to reuse.):', res?.data?.items);
+
       return res as T;
     }
     const error = new Error() as FetchError;
