@@ -33,7 +33,7 @@ export const HeadToHeadV2 = ({
     initialData: initialSportData,
     enabled: Boolean(sportHeaderPollEnabled) && isSportDataLive,
     endpoint: 'sport',
-    params: { sportDataEventUrn: encodeURIComponent(initialSportData.urn) },
+    params: { sportDataEventUrn: initialSportData.urn },
     returnedData: response => response.sportDataEvent,
   });
 

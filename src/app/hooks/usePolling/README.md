@@ -5,7 +5,7 @@ the latest data. It owns the timer, fetch and state mechanics, while each caller
 supplies the endpoint-specific details (what to request and which part of the
 response to keep).
 
-This serves as a replacement for the previously individual polling hooks used in live pages (specfically [`useLivePagePolling`](https://github.com/bbc/simorgh/tree/05eb3ad92a10256426ef99a26554bd89aa7d36bc/src/app/hooks/useLivePagePolling) and [`useSportDataPolling`](https://github.com/bbc/simorgh/tree/05eb3ad92a10256426ef99a26554bd89aa7d36bc/src/app/hooks/useSportDataPolling)).
+This serves as a replacement for the previously individual polling hooks used in live pages (specifically [`useLivePagePolling`](https://github.com/bbc/simorgh/tree/05eb3ad92a10256426ef99a26554bd89aa7d36bc/src/app/hooks/useLivePagePolling) and [`useSportDataPolling`](https://github.com/bbc/simorgh/tree/05eb3ad92a10256426ef99a26554bd89aa7d36bc/src/app/hooks/useSportDataPolling)).
 
 ## Usage
 

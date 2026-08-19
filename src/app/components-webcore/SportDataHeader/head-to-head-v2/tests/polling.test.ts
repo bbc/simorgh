@@ -25,7 +25,7 @@ const renderSportDataPolling = (enabled = true) =>
       initialData: initialSportData,
       enabled,
       endpoint: 'sport',
-      params: { sportDataEventUrn: encodeURIComponent(initialSportData.urn) },
+      params: { sportDataEventUrn: initialSportData.urn },
       returnedData: response => response.sportDataEvent,
     }),
   );
@@ -54,11 +54,11 @@ describe('head-to-head-v2 sport data polling', () => {
 
     expect(fetchSpy).toHaveBeenCalledTimes(1);
     expect(fetchSpy).toHaveBeenCalledWith('sport', {
-      params: { sportDataEventUrn: encodeURIComponent(initialSportData.urn) },
+      params: { sportDataEventUrn: initialSportData.urn },
     });
   });
 
-  it('should not poll when polling is disabled', async () => {
+  it('should not fetch data when polling is disabled', async () => {
     const fetchSpy = jest
       .spyOn(fetchPolledData, 'default')
       .mockResolvedValue(null);
@@ -70,7 +70,7 @@ describe('head-to-head-v2 sport data polling', () => {
     expect(fetchSpy).not.toHaveBeenCalled();
   });
 
-  it('should update the sport data when a poll returns new data', async () => {
+  it('should update sport data when new data is returned after polling', async () => {
     jest.spyOn(fetchPolledData, 'default').mockResolvedValue({
       data: { sportDataEvent: updatedSportData },
       status: 200,
@@ -83,7 +83,7 @@ describe('head-to-head-v2 sport data polling', () => {
     expect(result.current).toStrictEqual(updatedSportData);
   });
 
-  it('should keep the current sport data when a poll returns null', async () => {
+  it('should keep the current sport data when no data is returned after polling', async () => {
     jest.spyOn(fetchPolledData, 'default').mockResolvedValue(null);
 
     const { result } = renderSportDataPolling();

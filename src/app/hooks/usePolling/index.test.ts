@@ -74,7 +74,7 @@ describe('usePolling', () => {
     expect(fetchSpy).not.toHaveBeenCalled();
   });
 
-  it('should update the data when a poll returns new data', async () => {
+  it('should update the data when new data is returned after polling', async () => {
     jest.spyOn(fetchPolledData, 'default').mockResolvedValue({
       data: { event: updatedData },
       status: 200,
@@ -87,7 +87,7 @@ describe('usePolling', () => {
     expect(result.current).toStrictEqual(updatedData);
   });
 
-  it('should keep the current data when a poll returns null', async () => {
+  it('should keep the current data when no response is returned after polling', async () => {
     jest.spyOn(fetchPolledData, 'default').mockResolvedValue(null);
 
     const { result } = renderUsePolling();
@@ -97,7 +97,7 @@ describe('usePolling', () => {
     expect(result.current).toStrictEqual(initialData);
   });
 
-  it('should keep the current data when returnedData returns nothing', async () => {
+  it('should keep the current data when payload data is empty', async () => {
     jest.spyOn(fetchPolledData, 'default').mockResolvedValue({
       data: { event: undefined },
       status: 200,
