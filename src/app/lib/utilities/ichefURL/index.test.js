@@ -113,7 +113,7 @@ describe('getIchefURL', () => {
     );
   });
 
-  it('keeps the resolution without xn for ace placeholder urls', () => {
+  it('keeps the resolution without xn for ace placeholder urls as width and height are not required for ace ichef', () => {
     const locator =
       'https://ichef.bbci.co.uk/ace/standard/{width}/galileo/p0p4qjjk.jpg';
     const originCode = 'pips';
