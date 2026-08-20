@@ -14,6 +14,14 @@ export default () => {
       expect(hasContent).toBe(true);
     });
 
+    it('should not rely on an external Next.js CSS stylesheet', () => {
+      const nextCssLinks = document.querySelectorAll(
+        'head > link[rel~="stylesheet"][href*="/_next/"]',
+      );
+
+      expect(nextCssLinks).toHaveLength(0);
+    });
+
     it('should inline CSS custom properties from the SCSS module palette (--brand-background)', () => {
       expect(getInlinedCss()).toContain('--brand-background');
     });
