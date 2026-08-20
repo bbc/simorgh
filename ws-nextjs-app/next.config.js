@@ -12,6 +12,7 @@ const {
 const assetPrefix =
   process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN +
   process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH;
+const optimoIdPattern = 'c[a-zA-Z0-9]{10,}o';
 
 /** @type {import('next').NextConfig} */
 module.exports = {
@@ -66,12 +67,20 @@ module.exports = {
         destination: '/sw.js',
       },
       {
-        source: '/:service/watch/:id',
+        source: `/:service/watch/:id(${optimoIdPattern})`,
         destination: '/:service/articles/:id',
       },
       {
-        source: '/:service/listen/:id',
+        source: `/:service/watch/:id(${optimoIdPattern})/:variant`,
+        destination: '/:service/articles/:id/:variant',
+      },
+      {
+        source: `/:service/listen/:id(${optimoIdPattern})`,
         destination: '/:service/articles/:id',
+      },
+      {
+        source: `/:service/listen/:id(${optimoIdPattern})/:variant`,
+        destination: '/:service/articles/:id/:variant',
       },
     ];
   },
