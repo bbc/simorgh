@@ -1,6 +1,4 @@
-import '../../fontVariants/thai.scss';
-import './palette.scss';
-import '../../fontScripts/thai.scss';
+import './thai.module.scss';
 import withThemeProvider from '#app/components/ThemeProviderSCSSModules/withThemeProvider';
 import brandSVG from '../../chameleonLogos/thai';
 

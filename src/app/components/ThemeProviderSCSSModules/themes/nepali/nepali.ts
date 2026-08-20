@@ -1,6 +1,4 @@
-import '../../fontVariants/nepali.scss';
-import './palette.scss';
-import '../../fontScripts/devanagari.scss';
+import './nepali.module.scss';
 import withThemeProvider from '#app/components/ThemeProviderSCSSModules/withThemeProvider';
 import brandSVG from '../../chameleonLogos/nepali';
 

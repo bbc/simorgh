@@ -1,6 +1,10 @@
 /* eslint-disable no-param-reassign */
-const path = require('path');
-const MomentTimezoneInclude = require('../src/app/legacy/psammead/moment-timezone-include/src');
+const writeNewTimezoneData = require('../src/app/legacy/psammead/moment-timezone-include/src/writeNewTimezoneData');
+const replaceOriginalTimezoneData = require('../src/app/legacy/psammead/moment-timezone-include/src/replaceOriginalTimezoneData');
+
+const currentYear = new Date().getFullYear();
+writeNewTimezoneData(2010, currentYear + 1);
+const emptyTimezoneDataPath = replaceOriginalTimezoneData();
 
 const DevCssExtractLoader =
   require.resolve('./scripts/DevCssExtractLoader.cjs');
@@ -85,25 +89,32 @@ module.exports = {
   pageExtensions: ['page.tsx', 'page.ts', 'api.tsx', 'api.ts'],
   poweredByHeader: false,
   reactStrictMode: true,
+  sassOptions: {
+    charset: false,
+    style: 'expanded',
+  },
   transpilePackages: ['simorgh'],
+  turbopack: {
+    resolveAlias: {
+      '#lib/logger.node': { browser: '#lib/logger.web' },
+      '#app/lib/logger.node': { browser: '#lib/logger.web' },
+      // Bypass Moment's packed-data entry; generated service zone imports add the required zones.
+      'moment-timezone': 'moment-timezone/moment-timezone',
+    },
+  },
   webpack: (config, { webpack, isServer, dev }) => {
     config.resolve.fallback = {
       ...config.resolve.fallback,
       fs: false,
     };
 
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      '@scss': path.join(
-        __dirname,
-        '../src/app/components/ThemeProviderSCSSModules',
-      ),
-    };
     config.plugins.push(
-      new MomentTimezoneInclude({
-        startYear: 2010,
-        endYear: new Date().getFullYear() + 1,
-      }),
+      new webpack.NormalModuleReplacementPlugin(
+        /data[\\/]packed[\\/]latest\.json$/,
+        resource => {
+          resource.request = emptyTimezoneDataPath;
+        },
+      ),
     );
 
     if (dev) {

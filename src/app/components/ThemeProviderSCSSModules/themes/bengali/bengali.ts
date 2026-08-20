@@ -1,8 +1,4 @@
-import '../../fontFaces/noto-serif-bengali-regular.scss';
-import '../../fontFaces/noto-serif-bengali-bold.scss';
-import '../../fontVariants/bengali.scss';
-import './palette.scss';
-import '../../fontScripts/bengali.scss';
+import './bengali.module.scss';
 import withThemeProvider from '#app/components/ThemeProviderSCSSModules/withThemeProvider';
 import brandSVG from '../../chameleonLogos/bengali';
 

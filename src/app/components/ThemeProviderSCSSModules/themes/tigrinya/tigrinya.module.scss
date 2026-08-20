@@ -1,0 +1,6 @@
+/* cssmodules-pure-no-check */
+@use '../../fontFaces/noto-sans-ethiopic-regular.scss' as *;
+@use '../../fontFaces/noto-sans-ethiopic-bold.scss' as *;
+@use '../../fontVariants/tigrinya.scss' as *;
+@use './palette.scss' as *;
+@use '../../fontScripts/noAscOrDesc.scss' as *;

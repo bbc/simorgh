@@ -3,8 +3,8 @@ import {
   ReverbBeaconConfig,
   ReverbEventDetails,
 } from '#app/components/ATIAnalytics/types';
+import nodeLogger from '#lib/logger.node';
 import onClient from '../../utilities/onClient';
-import nodeLogger from '../../logger.node';
 import { ATI_LOGGING_ERROR } from '../../logger.const';
 
 const logger = nodeLogger(__filename);

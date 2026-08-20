@@ -1,6 +1,4 @@
-import '../../fontVariants/marathi.scss';
-import './palette.scss';
-import '../../fontScripts/devanagari.scss';
+import './marathi.module.scss';
 import withThemeProvider from '#app/components/ThemeProviderSCSSModules/withThemeProvider';
 import brandSVG from '../../chameleonLogos/marathi';
 

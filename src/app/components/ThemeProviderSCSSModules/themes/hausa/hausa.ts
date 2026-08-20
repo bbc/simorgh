@@ -1,6 +1,4 @@
-import '../../fontVariants/helmet.scss';
-import './palette.scss';
-import '../../fontScripts/latin.scss';
+import './hausa.module.scss';
 import withThemeProvider from '#app/components/ThemeProviderSCSSModules/withThemeProvider';
 import brandSVG from '../../chameleonLogos/hausa';
 

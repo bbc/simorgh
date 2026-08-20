@@ -1,6 +1,4 @@
-import '../../fontVariants/hindi.scss';
-import './palette.scss';
-import '../../fontScripts/devanagari.scss';
+import './hindi.module.scss';
 import withThemeProvider from '#app/components/ThemeProviderSCSSModules/withThemeProvider';
 import brandSVG from '../../chameleonLogos/hindi';
 

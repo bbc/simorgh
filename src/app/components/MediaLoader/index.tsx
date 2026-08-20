@@ -10,6 +10,7 @@ import {
   MEDIA_ARTICLE_PAGE,
   MEDIA_ASSET_PAGE,
 } from '#app/routes/utils/pageTypes';
+import nodeLogger from '#lib/logger.node';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import { PageTypes } from '#app/models/types/global';
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
@@ -21,7 +22,6 @@ import {
   PlayerConfig,
 } from './types';
 import Caption from '../Caption';
-import nodeLogger from '../../lib/logger.node';
 import buildConfig from './utils/buildSettings';
 import Placeholder from './Placeholder';
 import getProducerFromServiceName from './utils/getProducerFromServiceName';
