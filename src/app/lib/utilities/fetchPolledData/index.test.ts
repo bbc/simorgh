@@ -1,4 +1,6 @@
+import nodeLogger from '#app/lib/logger.node';
 import * as getEnvConfigModule from '../getEnvConfig';
+import { EnvConfig } from '../getEnvConfig';
 
 jest.mock('#app/lib/logger.node', () => ({
   __esModule: true,
@@ -8,8 +10,6 @@ jest.mock('#app/lib/logger.node', () => ({
     debug: jest.fn(),
   })),
 }));
-
-const mockLoggerModule = require('#app/lib/logger.node');
 
 const mockLoggerInstance = {
   error: jest.fn(),
@@ -25,7 +25,7 @@ describe('fetchPolledData', () => {
   beforeEach(() => {
     jest.clearAllMocks();
     process.env = { ...originalEnv };
-    mockLoggerModule.default.mockReturnValue(mockLoggerInstance);
+    (nodeLogger as jest.Mock).mockReturnValue(mockLoggerInstance);
     global.fetch = jest.fn();
   });
 
@@ -37,7 +37,7 @@ describe('fetchPolledData', () => {
   it('should successfully fetch polled data with params', async () => {
     jest.spyOn(getEnvConfigModule, 'getEnvConfig').mockReturnValue({
       WEB_CDN_URL: 'https://mock-cdn.example.com',
-    } as any);
+    } as EnvConfig);
 
     (global.fetch as jest.Mock).mockResolvedValue({
       status: 200,
@@ -59,7 +59,7 @@ describe('fetchPolledData', () => {
   it('should successfully fetch polled data without optional params', async () => {
     jest.spyOn(getEnvConfigModule, 'getEnvConfig').mockReturnValue({
       WEB_CDN_URL: 'https://mock-cdn.example.com',
-    } as any);
+    } as EnvConfig);
 
     (global.fetch as jest.Mock).mockResolvedValue({
       status: 200,
@@ -77,7 +77,9 @@ describe('fetchPolledData', () => {
   });
 
   it('should return null and log error when WEB_CDN_URL is missing', async () => {
-    jest.spyOn(getEnvConfigModule, 'getEnvConfig').mockReturnValue({} as any);
+    jest
+      .spyOn(getEnvConfigModule, 'getEnvConfig')
+      .mockReturnValue({} as EnvConfig);
 
     const { default: fetchPolledData } = await import('.');
 
@@ -95,7 +97,7 @@ describe('fetchPolledData', () => {
   it('should return null and log error when status is not 200', async () => {
     jest.spyOn(getEnvConfigModule, 'getEnvConfig').mockReturnValue({
       WEB_CDN_URL: 'https://mock-cdn.example.com',
-    } as any);
+    } as EnvConfig);
 
     (global.fetch as jest.Mock).mockResolvedValue({
       status: 404,
@@ -121,7 +123,7 @@ describe('fetchPolledData', () => {
   it('should return null and log fetch error on network error', async () => {
     jest.spyOn(getEnvConfigModule, 'getEnvConfig').mockReturnValue({
       WEB_CDN_URL: 'https://mock-cdn.example.com',
-    } as any);
+    } as EnvConfig);
 
     const networkError = new TypeError('Failed to fetch');
     (global.fetch as jest.Mock).mockRejectedValue(networkError);
@@ -145,7 +147,7 @@ describe('fetchPolledData', () => {
   it('should return null and log parse error on invalid JSON', async () => {
     jest.spyOn(getEnvConfigModule, 'getEnvConfig').mockReturnValue({
       WEB_CDN_URL: 'https://mock-cdn.example.com',
-    } as any);
+    } as EnvConfig);
 
     (global.fetch as jest.Mock).mockResolvedValue({
       status: 200,
@@ -173,7 +175,7 @@ describe('fetchPolledData', () => {
   it('should handle numeric and boolean params correctly', async () => {
     jest.spyOn(getEnvConfigModule, 'getEnvConfig').mockReturnValue({
       WEB_CDN_URL: 'https://mock-cdn.example.com',
-    } as any);
+    } as EnvConfig);
 
     (global.fetch as jest.Mock).mockResolvedValue({
       status: 200,
@@ -194,7 +196,7 @@ describe('fetchPolledData', () => {
   it('should handle unknown error types', async () => {
     jest.spyOn(getEnvConfigModule, 'getEnvConfig').mockReturnValue({
       WEB_CDN_URL: 'https://mock-cdn.example.com',
-    } as any);
+    } as EnvConfig);
 
     (global.fetch as jest.Mock).mockRejectedValue('unknown error');
 
