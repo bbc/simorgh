@@ -69,7 +69,7 @@ const Component = () => <div className={styles.wrapper}>Content</div>;
 
 ### Styles Using Theme Values
 
-Colours, spacings, breakpoints and typography all come from `@scss/themeTokens`. Emotion's theme callback becomes a plain class.
+Import `@scss/themeTokens` and reference its values in your SCSS rules. It provides the colours, spacings, breakpoints and typography for the active service, so Emotion's theme callback is no longer needed.
 
 **Before:**
 ```typescript
@@ -95,7 +95,33 @@ container: ({ mq, palette }: Theme) =>
 
 ### Variant Styles
 
-A style that took a parameter becomes a **modifier class** applied alongside the base class.
+A style that took a parameter becomes a second class holding only the properties that differ, applied in addition to the base class.
+
+**Before:**
+```typescript
+link: (hasMargin?: boolean) =>
+  css({
+    color: palette.GREY_8,
+    ...(hasMargin && { marginInlineStart: '1rem' }),
+  }),
+```
+
+**After:**
+```scss
+.link {
+  color: theme.$palette-grey-8;
+}
+
+.linkWithMargin {
+  margin-inline-start: #{theme.$spacings-double};
+}
+```
+
+```tsx
+<a className={`${styles.link}${hasMargin ? ` ${styles.linkWithMargin}` : ''}`}>
+```
+
+If the variant **replaces** the same properties rather than adding new ones, don't apply both classes. Two classes setting identical properties makes the result depend on their order in the compiled CSS, and leaves the base declarations unused. Use one class or the other.
 
 **Before:**
 ```typescript
@@ -117,19 +143,35 @@ title: (isLarge?: boolean) =>
 ```
 
 ```tsx
-<h2 className={`${styles.title}${isLarge ? ` ${styles.titleLarge}` : ''}`}>{title}</h2>
+<h2 className={isLarge ? styles.titleLarge : styles.title}>{title}</h2>
 ```
 
-Compose with template literals. Do not add `clsx` or `classnames` — neither is a dependency of this repo.
+This is distinct from the anti-pattern in the styling standards. A **discrete variant prop** (a boolean or a small union) can legitimately select or add a class. What to avoid is deriving a class from a **continuous or computed value** (`height > 100 ? styles.tall : styles.short`) or from `dir` — use the custom property or logical-property approaches below instead.
 
-⚠️ Always use a ternary with an empty-string fallback. `&&` renders the literal string `false` into the class attribute:
+### Combining Class Names
+
+Emotion's `css` array silently ignores falsy entries. `className` is a plain string and does not, so translating the array directly introduces a bug.
+
+Note that the condition is a **prop**, not the style object — `styles.linkWithMargin` always exists and is always truthy. Most components name the two differently (`isActive && styles.tabActive`), but `CallToActionLink` uses `alignWithMargin && styles.alignWithMargin`, which is easy to misread as a single reference.
+
+**Before:**
+```tsx
+<a css={[styles.link, hasMargin && styles.linkWithMargin]}>
+```
+
+**After:**
+```tsx
+<a className={`${styles.link}${hasMargin ? ` ${styles.linkWithMargin}` : ''}`}>
+```
+
+❌ Carrying `&&` across renders the literal string `false` into the class attribute:
 
 ```tsx
-// ❌ class="title_x1 false" when isLarge is false
-<h2 className={`${styles.title} ${isLarge && styles.titleLarge}`}>
+// produces class="link_x1 false" when hasMargin is false
+<a className={`${styles.link} ${hasMargin && styles.linkWithMargin}`}>
 ```
 
-This is distinct from the anti-pattern in the styling standards. A **discrete variant prop** (a boolean or a small union) is legitimately a modifier class. What to avoid is deriving a class from a **continuous or computed value** (`height > 100 ? styles.tall : styles.short`) or from `dir` — use the custom property or logical-property approaches below instead.
+Always use a ternary with an empty-string fallback. Do not add `clsx` or `classnames` — neither is a dependency of this repo.
 
 ### Dynamic Styles
 
