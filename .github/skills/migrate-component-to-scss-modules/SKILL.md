@@ -138,6 +138,8 @@ Valid scales: `atlas`, `elephant`, `imperial`, `royal`, `foolscap`, `canon`, `tr
 
 The most common pattern in this codebase. Emotion's array syntax becomes composed class names.
 
+The condition is a **prop**, not the style object — `styles.alignWithMargin` always exists and is always truthy. Most components name the two differently (`isActive && styles.tabActive`); `CallToActionLink` is the exception and is easy to misread as a single reference.
+
 **Before:**
 ```tsx
 <a css={[styles.link, alignWithMargin && styles.alignWithMargin]}>
@@ -157,7 +159,13 @@ Emotion drops falsy entries from a `css` array automatically; `className` does n
 
 Compose with template literals. Do not add `clsx` or `classnames` — neither is a dependency of this repo. Keep both classes as separate rules in the SCSS file rather than merging them into one.
 
-A **discrete variant** (boolean or small union) is legitimately a modifier class. What the styling standards prohibit is deriving a class from a **continuous or computed value**, or from `dir` — use a CSS custom property or logical properties for those.
+This works when the second class adds **different** properties to the base. If the variant instead **replaces** the same properties (a different font size, say), apply one class or the other rather than both — two classes setting identical properties makes the result depend on their order in the compiled CSS:
+
+```tsx
+<h2 className={isLarge ? styles.titleLarge : styles.title}>
+```
+
+A **discrete variant** (boolean or small union) can legitimately select or add a class. What the styling standards prohibit is deriving a class from a **continuous or computed value**, or from `dir` — use a CSS custom property or logical properties for those.
 
 ## Step 4: Apply the change
 
