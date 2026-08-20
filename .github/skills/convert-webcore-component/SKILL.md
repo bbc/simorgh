@@ -1,11 +1,13 @@
 ---
 name: convert-webcore-component
-description: Converts webcore-style React components to Simorgh coding standards using Emotion's css prop pattern
+description: Converts webcore-style React components to Simorgh coding standards using SCSS Modules and TypeScript
 ---
 
 # Convert Webcore Component
 
-Converts webcore-style React components (using `@emotion/styled` or `styled-components`) into the Simorgh coding standard which uses Emotion's `css` prop pattern.
+Converts webcore-style React components (using `@emotion/styled` or `styled-components`) into the Simorgh coding standard, which uses **SCSS Modules** (`index.module.scss` + `className`) and TypeScript.
+
+Styling rules are defined in `.github/instructions/styling-standards.instructions.md` and auto-apply to `src/app/components/**`. This skill covers the conversion workflow only.
 
 ## Step 1: Pre-Conversion Checklist
 
@@ -16,14 +18,14 @@ Before converting, audit imports for missing dependencies. **If dependencies are
 - `Heading` - has equivalent at `src/app/components/Heading/`
 
 ### @bbc/web-gel-layouts imports
-- `Wrap` - replace with div + theme spacings
+- `Wrap` - replace with div + `theme.$spacings-*`
 - `Grid` - may need custom CSS Grid implementation
 
 ### @bbc/web-gel-foundations imports
-- `SPACING_*` → Use theme `spacings`
-- `GROUP_*` → Use theme `mq` media queries
-- `fontScale*`, `fontStandard` → Use theme typography
-- `createSize` → Use `pixelsToRem()`
+- `SPACING_*` → `theme.$spacings-*`
+- `GROUP_*` → `theme.$mediaQueries-group-*`
+- `fontScale*`, `fontStandard` → `theme.fontSizes-gel-font-size()` / `theme.fontVariants-gel-font-variant()`
+- `createSize` → `theme.pixelsToRem-px-to-rem()`
 
 ## Step 2: Convert Styles
 
@@ -45,46 +47,93 @@ const Component = () => <StyledWrapper>Content</StyledWrapper>;
 
 ### After (Simorgh style)
 
-```jsx
-import styles from './index.styles';
+```tsx
+import styles from './index.module.scss';
 
-const Component = () => <div css={styles.wrapper()}>Content</div>;
+const Component = () => <div className={styles.wrapper}>Content</div>;
 ```
 
-### Creating index.styles.ts Files
+```scss
+// index.module.scss
+@use '@scss/themeTokens' as theme;
 
+.wrapper {
+  display: flex;
+  padding: #{theme.$spacings-double};
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    padding: #{theme.$spacings-triple};
+  }
+}
+```
+
+### Styles Using Theme Values
+
+Colours, spacings, breakpoints and typography all come from `@scss/themeTokens`. Emotion's theme callback becomes a plain class.
+
+**Before:**
 ```typescript
-import { css } from '@emotion/react';
-import pixelsToRem from '../../utilities/pixelsToRem';
-
-export default {
-  wrapper: () =>
-    css({
-      display: 'flex',
-      padding: `${pixelsToRem(16)}rem`,
-      [`@media (min-width: ${pixelsToRem(600)}rem)`]: {
-        padding: `${pixelsToRem(24)}rem`,
-      },
-    }),
-  
-  // Style with parameters
-  title: (isLarge?: boolean) =>
-    css({
-      fontSize: isLarge ? '2rem' : '1rem',
-    }),
-    
-  // Style using theme
-  container: ({ mq, palette }: Theme) =>
-    css({
-      backgroundColor: palette.WHITE,
-      [mq.GROUP_3_MIN_WIDTH]: {
-        padding: '1rem',
-      },
-    }),
-};
+container: ({ mq, palette }: Theme) =>
+  css({
+    backgroundColor: palette.WHITE,
+    [mq.GROUP_3_MIN_WIDTH]: {
+      padding: '1rem',
+    },
+  }),
 ```
+
+**After:**
+```scss
+.container {
+  background-color: theme.$palette-white;
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    padding: #{theme.$spacings-double};
+  }
+}
+```
+
+### Variant Styles
+
+A style that took a parameter becomes a **modifier class** applied alongside the base class.
+
+**Before:**
+```typescript
+title: (isLarge?: boolean) =>
+  css({
+    fontSize: isLarge ? '2rem' : '1rem',
+  }),
+```
+
+**After:**
+```scss
+.title {
+  @include theme.fontSizes-gel-font-size(pica);
+}
+
+.titleLarge {
+  @include theme.fontSizes-gel-font-size(canon);
+}
+```
+
+```tsx
+<h2 className={`${styles.title}${isLarge ? ` ${styles.titleLarge}` : ''}`}>{title}</h2>
+```
+
+Compose with template literals. Do not add `clsx` or `classnames` — neither is a dependency of this repo.
+
+⚠️ Always use a ternary with an empty-string fallback. `&&` renders the literal string `false` into the class attribute:
+
+```tsx
+// ❌ class="title_x1 false" when isLarge is false
+<h2 className={`${styles.title} ${isLarge && styles.titleLarge}`}>
+```
+
+This is distinct from the anti-pattern in the styling standards. A **discrete variant prop** (a boolean or a small union) is legitimately a modifier class. What to avoid is deriving a class from a **continuous or computed value** (`height > 100 ? styles.tall : styles.short`) or from `dir` — use the custom property or logical-property approaches below instead.
 
 ### Dynamic Styles
+
+SCSS Module classes are static. Where a value genuinely varies per instance, set a single CSS custom property inline and consume it in SCSS.
 
 **Before:**
 ```jsx
@@ -93,57 +142,30 @@ const Button = styled.div`
 `;
 ```
 
-**After:**
-```typescript
-button: (alignment: 'left' | 'right') =>
-  css({
-    ...(alignment === 'left'
-      ? { paddingInlineEnd: `${pixelsToRem(12)}rem` }
-      : { paddingInlineStart: `${pixelsToRem(12)}rem` }),
-  }),
+**After** — prefer a logical property so no branching is needed at all:
+```scss
+.button {
+  padding-inline-end: #{theme.pixelsToRem-px-to-rem(12)};
+}
 ```
 
-### Styling Rules
-
-1. **Use logical CSS properties** for LTR/RTL support:
-   - `paddingInlineStart` instead of `padding-left`
-   - `marginBlockEnd` instead of `margin-bottom`
-   - `borderInlineStart` instead of `border-left`
-
-2. **Use mobile-first media queries** with `min-width`
-
-3. **Use `pixelsToRem` utility** for pixel-to-rem conversion
-
-4. **Group styles by component area** in the styles file
-
-5. **Export GRID_AREAS constants** from styles if used in multiple components:
-   ```typescript
-   export const GRID_AREAS = {
-     homeText: 'home_text',
-     awayText: 'away_text',
-   } as const;
-   ```
-
-6. **Style functions always return `css()` call**:
-   ```typescript
-   wrapper: () => css({ display: 'flex' }),
-   ```
-
-7. **Use arrays for composable styles**:
-   ```typescript
-   keyEventsHome: () => [
-     baseStyles,
-     css({ textAlign: 'end' }),
-   ],
-   ```
+Where a value is truly dynamic (a computed height, an image offset):
+```tsx
+<div className={styles.wrapper} style={{ '--promo-height': `${height}px` }} />
+```
+```scss
+.wrapper {
+  height: var(--promo-height);
+}
+```
 
 ### Styling Mistakes to Avoid
 
-- Don't mix styled components and css prop in the same file
+- Don't produce `index.styles.ts` files or use Emotion's `css` prop / `styled` API
 - Don't use physical CSS properties (`left`, `right`) for directional layouts
-- Don't hardcode pixel values - use `pixelsToRem()`
+- Don't hardcode pixel, colour or breakpoint values — use theme tokens
 - Don't use `max-width` media queries when `min-width` would work
-- Don't pass dynamic props to styled components
+- Don't switch between multiple class names based on a prop value
 
 ## Step 3: Convert to TypeScript
 
@@ -156,7 +178,7 @@ button: (alignment: 'left' | 'right') =>
 
 ```
 components/
-├── index.styles.ts      # Consolidated styles
+├── index.module.scss    # Co-located SCSS Module styles
 ├── types.ts             # Shared TypeScript types
 ├── ComponentA.tsx       # React component
 ├── ComponentB.tsx       # React component
@@ -271,9 +293,9 @@ yarn prettier --write "path/to/converted/files/**/*.{ts,tsx}"
 
 ## Reference Examples
 
-- [src/app/components/Billboard/index.styles.ts](../../../src/app/components/Billboard/index.styles.ts)
-- [src/app/components/MediaLoader/index.styles.ts](../../../src/app/components/MediaLoader/index.styles.ts)
-- [src/app/components/Pagination/index.styles.ts](../../../src/app/components/Pagination/index.styles.ts)
+- [src/app/components/ArticleLinksBlock/index.module.scss](../../../src/app/components/ArticleLinksBlock/index.module.scss)
+- [src/app/components/ActionTooltip/index.module.scss](../../../src/app/components/ActionTooltip/index.module.scss)
+- [src/app/components/Example/index.module.scss](../../../src/app/components/Example/index.module.scss)
 
 ## Step 5: Preserving Original Files (Optional)
 
@@ -362,17 +384,6 @@ const MATCH_STATUS_LETTERS: Record<string, string> = {
   Cancelled: 'C',
 };
 ```
-
-### `@jsxImportSource` Pragma NOT Needed in Simorgh
-
-Simorgh's `tsconfig.json` already has `"jsxImportSource": "@emotion/react"` configured globally, so you do **not** need to add the pragma comment to individual files:
-
-```tsx
-// NOT needed in Simorgh - already configured globally
-/** @jsxImportSource @emotion/react */
-```
-
-If you're working in a different project without global configuration, you would need the pragma.
 
 ### Type-Safe Event Status Handling
 
