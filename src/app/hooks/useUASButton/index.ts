@@ -46,8 +46,7 @@ const useUASButton = ({
   const { isSaved, isLoading, error, savedMetadata } =
     useUASFetchSaveStatus(articleId);
 
-  // Only ever set from handleSaveAction's own mutate callbacks, so the
-  // background metadata resync (which doesn't pass those callbacks) can never affect it.
+  // Only set by handleSaveAction, never by the background metadata resync.
   const [actionResult, setActionResult] = useState<UASActionResult>(null);
 
   const mutation = useMutation({
