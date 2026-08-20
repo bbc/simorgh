@@ -75,8 +75,20 @@ describe('derivePageType', () => {
     expect(result).toEqual(ARTICLE_PAGE);
   });
 
+  it('should return ARTICLE_PAGE for an Optimo /watch/ pathname with variant', () => {
+    const pathname = '/zhongwen/watch/c0000000000o/trad';
+    const result = derivePageType(pathname);
+    expect(result).toEqual(ARTICLE_PAGE);
+  });
+
   it('should return ARTICLE_PAGE for an Optimo /listen/ pathname', () => {
     const pathname = '/tamil/listen/c0000000000o';
+    const result = derivePageType(pathname);
+    expect(result).toEqual(ARTICLE_PAGE);
+  });
+
+  it('should return ARTICLE_PAGE for an Optimo /listen/ pathname with variant', () => {
+    const pathname = '/zhongwen/listen/c0000000000o/trad';
     const result = derivePageType(pathname);
     expect(result).toEqual(ARTICLE_PAGE);
   });
