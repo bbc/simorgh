@@ -1,5 +1,6 @@
 import pathOr from 'ramda/src/pathOr';
 import makeRelativeUrlPath from '../makeRelativeUrlPath';
+import { variants } from '../variantHandler';
 
 export const getAssetTypeCode = pathOr(null, ['assetTypeCode']);
 
@@ -38,7 +39,12 @@ export const getUrl = (item, variant = null) => {
       uri.indexOf('/watch/') !== -1 ||
       uri.indexOf('/listen/') !== -1;
     if (hasVariantPath && uri.indexOf(`/${variant}`) === -1) {
-      uri = uri.substr(0, uri.length - variant.length) + variant;
+      const hasKnownVariant = variants.some(knownVariant =>
+        uri.endsWith(`/${knownVariant}`),
+      );
+      uri = hasKnownVariant
+        ? uri.replace(/\/[^/]+$/, `/${variant}`)
+        : `${uri}/${variant}`;
     }
   }
 
