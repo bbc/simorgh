@@ -87,6 +87,7 @@ const ActionTooltip = ({
             <StatusIcon status={status} />
 
             <Text
+              as="h2"
               id={tilteId}
               size="pica"
               fontVariant="sansBold"
@@ -97,7 +98,7 @@ const ActionTooltip = ({
           </div>
 
           {body && (
-            <Text size="bodyCopy" className={styles.body}>
+            <Text as="p" size="bodyCopy" className={styles.body}>
               {body}
             </Text>
           )}
