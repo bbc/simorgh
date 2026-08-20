@@ -159,17 +159,34 @@ describe('getStoryPromoInfo', () => {
       );
     });
 
+    it('should return the correct url for a watch optimoPromoItem without a variant', () => {
+      const watchItem = {
+        ...optimoPromoItem,
+        uri: 'https://www.bbc.com/hausa/watch/cl01rmr1d8po',
+      };
+      expect(getUrl(watchItem)).toEqual('/hausa/watch/cl01rmr1d8po');
+    });
+
     it('should return the correct url for a listen variant optimoPromoItem', () => {
       const listenItem = {
         ...optimoPromoItem,
         uri: 'https://www.bbc.com/zhongwen/listen/cl01rmr1d8po/trad',
       };
+
       expect(getUrl(listenItem, 'trad')).toEqual(
         '/zhongwen/listen/cl01rmr1d8po/trad',
       );
       expect(getUrl(listenItem, 'simp')).toEqual(
         '/zhongwen/listen/cl01rmr1d8po/simp',
       );
+    });
+
+    it('should return the correct url for a listen optimoPromoItem without a variant', () => {
+      const listenItem = {
+        ...optimoPromoItem,
+        uri: 'https://www.bbc.com/hausa/listen/cl01rmr1d8po',
+      };
+      expect(getUrl(listenItem)).toEqual('/hausa/listen/cl01rmr1d8po');
     });
 
     it('should return the correct url for live asset', () => {
