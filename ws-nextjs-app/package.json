@@ -16,6 +16,7 @@
     "build:live:debug": "rm -rf build && awk '{sub(/LOG_DIR=.+/,\"LOG_DIR='log'\")}1' ../envConfig/live.env > .env && next build --webpack && yarn copyCssFiles && yarn copyPublicFiles",
     "build": "yarn build:local",
     "dev": "yarn setupDevEnv && next dev -p 7081 --webpack",
+    "dev:turbopack": "yarn setupDevEnv && next dev -p 7081 --turbopack",
     "dev:toggles:test": "FETCH_TOGGLES=true TOGGLES_SERVICE_ENV=test yarn dev",
     "dev:toggles:live": "FETCH_TOGGLES=true TOGGLES_SERVICE_ENV=live yarn dev",
     "dev-https": "yarn setupDevEnv && next dev -p 7081 --experimental-https --webpack",
