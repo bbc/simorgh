@@ -78,7 +78,7 @@ describe('ActionTooltip', () => {
         closeLabel={closeLabel}
         onClose={onClose}
       />,
-      { service: 'hindi' },
+      { service: 'ws' },
     );
 
     expect(
