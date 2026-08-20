@@ -85,14 +85,7 @@
   width: 1.375rem;
   height: 1.375rem;
   margin-inline-end: 0.5rem;
-
-  svg {
-    fill: currentColor;
-
-    @media #{theme.$mediaQueries-forced-colours} {
-      fill: ButtonText;
-    }
-  }
+  fill: currentColor;
 }
 
 .title {
@@ -125,7 +118,6 @@
   svg {
     display: block;
     fill: theme.$palette-grey-10;
-
     @media #{theme.$mediaQueries-forced-colours} {
       fill: ButtonText;
     }
@@ -136,7 +128,6 @@
 
     svg {
       fill: theme.$palette-white;
-
       @media #{theme.$mediaQueries-forced-colours} {
         fill: Highlight;
       }
