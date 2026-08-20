@@ -1,5 +1,6 @@
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import * as isLiveEnv from '#lib/utilities/isLive';
+import { matchers } from '@emotion/jest';
 import MediaLoader from '../../MediaLoader';
 import { aresMediaBlocks } from '../../MediaLoader/fixture';
 import { fireEvent, render } from '../../react-testing-library-with-providers';
@@ -8,9 +9,13 @@ import mediaFixture from './mediaFixtures';
 import liveFixtures from './liveFixtures';
 import HierarchicalGrid from '.';
 
+expect.extend(matchers);
+
 jest.mock('../../MediaLoader', () => ({
   __esModule: true,
-  default: jest.fn(() => <div data-testid="in-situ-media-loader" />),
+  default: jest.fn(() => (
+    <div className="media-player" data-testid="in-situ-media-loader" />
+  )),
 }));
 
 const minimalEventTrackingData = { componentName: 'test-component' };
@@ -272,6 +277,26 @@ describe('Hierarchical Grid Curation', () => {
           duration: 223000,
         }),
       }),
+    );
+  });
+
+  it('contains the in-situ player overflow on mobile rtl pages', () => {
+    const { summaries } = getSummariesWithInSituMedia();
+
+    const { getByTestId } = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={summaries}
+        eventTrackingData={minimalEventTrackingData}
+      />,
+    );
+
+    expect(getByTestId('in-situ-media-loader').parentElement).toHaveStyleRule(
+      'overflow',
+      'hidden',
+      {
+        target: '.media-player',
+      },
     );
   });
 

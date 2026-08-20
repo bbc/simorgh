@@ -41,6 +41,10 @@ const styles = {
       '.media-container': {
         margin: 0,
       },
+      // keep hidden player controls from widening rtl pages on mobile
+      '.media-player': {
+        overflow: 'hidden',
+      },
     }),
   headlineLink: () =>
     css({
