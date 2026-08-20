@@ -98,7 +98,7 @@ describe('PageLayoutWrapper', () => {
                 blocks: [
                   { type: 'paragraph' },
                   { type: 'audio' },
-                ],
+                ] as any,
               },
             },
           }}
@@ -120,7 +120,7 @@ describe('PageLayoutWrapper', () => {
                 blocks: [
                   { type: 'text' },
                   { type: 'video' },
-                ],
+                ] as any,
               },
             },
           }}
@@ -142,7 +142,7 @@ describe('PageLayoutWrapper', () => {
                 blocks: [
                   { type: 'paragraph' },
                   { type: 'text' },
-                ],
+                ] as any,
               },
             },
           }}
