@@ -13,7 +13,7 @@ const logger = nodeLogger(__filename);
 
 const CACHE_MAX_ITEMS = 500; // Avg 10 per service + buffer
 
-const CACHE_TTL_SECONDS = 900; // 5 minutes
+const CACHE_TTL_SECONDS = 300; // 5 minutes
 
 const cache = new LRUCache({
   max: CACHE_MAX_ITEMS,
@@ -27,17 +27,12 @@ type FetchConfigParams = {
   variant?: Variants;
 };
 
-type FetchConfigResult<T> = {
-  result: T | null;
-  cached: boolean;
-};
-
 const fetchConfig = async <T>({
   service,
   pagePath,
   configType,
   variant,
-}: FetchConfigParams): Promise<FetchConfigResult<T>> => {
+}: FetchConfigParams): Promise<T | null> => {
   const fetchUrl = new URL(process.env.BFF_PATH as string);
   fetchUrl.searchParams.set('service', service);
   fetchUrl.searchParams.set('config', configType);
@@ -61,7 +56,7 @@ const fetchConfig = async <T>({
   });
 
   if (cachedResponse) {
-    return { result: cachedResponse as T, cached: true };
+    return cachedResponse as T;
   }
 
   const environment = getEnvironment(pagePath);
@@ -81,8 +76,7 @@ const fetchConfig = async <T>({
     if (response.ok) {
       const res = await response.json();
       cache.set(bffReqPath, res);
-
-      return { result: res as T, cached: false };
+      return res as T;
     }
     const error = new Error() as FetchError;
 
