@@ -182,6 +182,56 @@ describe('TopicDiscovery', () => {
     await screen.findByText(`More about ${topicTagsFixture[0].topicName}`);
   });
 
+  it('renders the "more about" link href using topicUrl when present', async () => {
+    render(<TopicDiscovery topics={topicTagsFixture} />, {
+      service: 'portuguese',
+    });
+
+    const moreAbout = await screen.findByTestId('topic-discovery-more-about');
+    expect(moreAbout).toHaveAttribute('href', topicTagsFixture[0].topicUrl);
+  });
+
+  it('falls back to a constructed href when topicUrl is empty', async () => {
+    const topicsWithMissingUrl = [
+      { ...topicTagsFixture[0], topicUrl: '' },
+      ...topicTagsFixture.slice(1),
+    ];
+
+    render(<TopicDiscovery topics={topicsWithMissingUrl} />, {
+      service: 'portuguese',
+    });
+
+    const moreAbout = await screen.findByTestId('topic-discovery-more-about');
+    expect(moreAbout).toHaveAttribute(
+      'href',
+      `/portuguese/topics/${topicTagsFixture[0].topicId}`,
+    );
+  });
+
+  it('updates the "more about" href with a fallback when switching to a tab with a missing topicUrl', async () => {
+    const topicsWithMissingUrl = [
+      topicTagsFixture[0],
+      { ...topicTagsFixture[1], topicUrl: '' },
+      ...topicTagsFixture.slice(2),
+    ];
+
+    render(<TopicDiscovery topics={topicsWithMissingUrl} />, {
+      service: 'portuguese',
+    });
+
+    await screen.findByTestId('topic-discovery-more-about');
+
+    fireEvent.click(
+      screen.getByRole('tab', { name: topicTagsFixture[1].topicName }),
+    );
+
+    const moreAbout = await screen.findByTestId('topic-discovery-more-about');
+    expect(moreAbout).toHaveAttribute(
+      'href',
+      `/portuguese/topics/${topicTagsFixture[1].topicId}`,
+    );
+  });
+
   it('should not render when there are no valid topics', () => {
     const { container } = render(<TopicDiscovery topics={[]} />, {
       service: 'portuguese',
