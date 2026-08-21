@@ -1,4 +1,4 @@
-import constructPageFetchUrl from '.';
+import constructPageFetchUrl, { isOptimoIdCheck } from '.';
 import {
   AV_EMBEDS,
   ARTICLE_PAGE,
@@ -199,4 +199,20 @@ describe('constructPageFetchUrl', () => {
       }).toThrow(expected);
     },
   );
+
+  describe('isOptimoIdCheck', () => {
+    it.each`
+      pathname                             | expected
+      ${'/gujarati/articles/c0000000000o'} | ${true}
+      ${'/gujarati/watch/c0000000000o'}    | ${true}
+      ${'/tamil/listen/c0000000000o'}      | ${true}
+      ${'/dari/watch/bbc_afghan_tv/live'}  | ${false}
+      ${'/ukrainian/23263889'}             | ${false}
+    `(
+      'should return $expected for pathname $pathname',
+      ({ pathname, expected }) => {
+        expect(isOptimoIdCheck(pathname)).toBe(expected);
+      },
+    );
+  });
 });
