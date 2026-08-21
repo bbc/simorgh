@@ -2,9 +2,9 @@ import getTopicPageUrl from '.';
 
 describe('getTopicPageUrl', () => {
   it('builds a relative path by default', () => {
-    expect(
-      getTopicPageUrl({ service: 'pidgin', topicId: 'c123456789t' }),
-    ).toBe('/pidgin/topics/c123456789t');
+    expect(getTopicPageUrl({ service: 'pidgin', topicId: 'c123456789t' })).toBe(
+      '/pidgin/topics/c123456789t',
+    );
   });
 
   it('appends the variant when provided', () => {
