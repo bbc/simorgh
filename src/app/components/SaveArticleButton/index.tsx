@@ -25,8 +25,6 @@ const SaveArticleButton = (props: SaveArticleButtonProps) => {
       </noscript>
       <div css={styles.buttonWrapper} id={SAVE_ARTICLE_BUTTON_ID}>
         {isPersonalizationEnabled ? (
-          // Falls back to hiding the widget rather than SaveArticleButtonGuest,
-          // since its sign-in prompt would be misleading for an already-authenticated user.
           <SaveArticleButtonAuthenticated {...props} />
         ) : (
           <SaveArticleButtonGuest />
