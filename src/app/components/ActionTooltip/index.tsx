@@ -48,7 +48,7 @@ const ActionTooltip = ({
       document.activeElement as HTMLElement | null;
 
     return () => {
-      previouslyFocusedElementRef.current?.focus();
+      previouslyFocusedElementRef.current?.focus({ focusVisible: true });
     };
   }, []);
 

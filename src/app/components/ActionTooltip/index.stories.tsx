@@ -31,6 +31,7 @@ const TooltipDemo = ({ status }: { status: ActionTooltipStatus }) => {
     <div style={{ position: 'relative' }}>
       <button
         type="button"
+        style={{ outlineOffset: '2px' }}
         onClick={() => {
           setIsVisible(true);
         }}
