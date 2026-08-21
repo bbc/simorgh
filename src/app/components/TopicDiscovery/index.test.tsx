@@ -11,6 +11,7 @@ import { ServiceConfig } from '#app/models/types/serviceConfig';
 import { service as portugueseConfig } from '#app/lib/config/services/portuguese';
 import { service as turkceConfig } from '#app/lib/config/services/turkce';
 import { service as arabicConfig } from '#app/lib/config/services/arabic';
+import { service as cymrufywConfig } from '#app/lib/config/services/cymrufyw';
 import {
   BLACK,
   GREY_2,
@@ -229,6 +230,47 @@ describe('TopicDiscovery', () => {
     expect(moreAbout).toHaveAttribute(
       'href',
       `/portuguese/topics/${topicTagsFixture[1].topicId}`,
+    );
+  });
+
+  it('falls back to a constructed href with custom topicsPath when topicUrl is empty', async () => {
+    const cymrufywTopic = {
+      topicId: 'test-topic-id',
+      topicName: 'Test Pwnc',
+      topicUrl: '',
+    };
+
+    const config: ServiceConfig = { ...cymrufywConfig.default };
+    render(
+      <ServiceContext.Provider value={config}>
+        <TopicDiscovery topics={[cymrufywTopic]} />
+      </ServiceContext.Provider>,
+    );
+
+    const moreAbout = await screen.findByTestId('topic-discovery-more-about');
+    // cymrufyw uses 'pynciau' as topicsPath instead of 'topics'
+    expect(moreAbout).toHaveAttribute(
+      'href',
+      `/cymrufyw/pynciau/${cymrufywTopic.topicId}`,
+    );
+  });
+
+  it('falls back to a constructed href with variant when topicUrl is empty', async () => {
+    const uzbekTopicWithoutUrl = {
+      topicId: 'test-uzbek-id',
+      topicName: 'Test Uzbek',
+      topicUrl: '',
+    };
+
+    render(<TopicDiscovery topics={[uzbekTopicWithoutUrl]} />, {
+      service: 'uzbek',
+      variant: 'cyr',
+    });
+
+    const moreAbout = await screen.findByTestId('topic-discovery-more-about');
+    expect(moreAbout).toHaveAttribute(
+      'href',
+      `/uzbek/topics/${uzbekTopicWithoutUrl.topicId}/cyr`,
     );
   });
 
