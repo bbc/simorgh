@@ -129,14 +129,26 @@ const StyledSpan = styled.span`
   }
 `;
 
-const CurrentLink = ({ linkId, children: link, currentPageText = null }) => (
+// Always wraps the active link's text in StyledSpan so its visual "active"
+// underline (`a[data-active="true"] span::after`) renders whenever the item
+// is active, independent of whether the "current page" screen reader
+// announcement is made. The hidden announcement text, id and role are only
+// added when `announce` is true.
+const CurrentLink = ({
+  linkId,
+  children: link,
+  currentPageText = null,
+  announce = true,
+}) => (
   <StyledSpan
     // eslint-disable-next-line jsx-a11y/aria-role
-    role="text"
+    role={announce ? 'text' : undefined}
     // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
-    id={`NavigationLinks-${linkId}`}
+    id={announce ? `NavigationLinks-${linkId}` : undefined}
   >
-    <VisuallyHiddenText>{`${currentPageText}, `}</VisuallyHiddenText>
+    {announce && (
+      <VisuallyHiddenText>{`${currentPageText}, `}</VisuallyHiddenText>
+    )}
     {link}
   </StyledSpan>
 );
@@ -199,26 +211,41 @@ export const NavigationLi = ({
   clickTracker = null,
   currentPageText = null,
   active = false,
+  // Controls whether the "current page" screen reader announcement is added
+  // when this item is active. Callers should set this to false when an item
+  // is marked active for categorisation purposes only (e.g. a fallback
+  // highlight), rather than because the user is genuinely on that page.
+  announceCurrentPage = true,
   dir = 'ltr',
   viewTracker = null,
   ...props
 }) => {
+  const shouldAnnounceCurrentPage = Boolean(
+    active && announceCurrentPage && currentPageText,
+  );
+
   return (
     <StyledListItem dir={dir} role="listitem" {...viewTracker}>
-      {active && currentPageText ? (
+      {active ? (
         <StyledLink
           href={url}
           currentLink
           // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
-          aria-labelledby={`NavigationLinks-${link}`}
-          aria-current="page"
+          {...(shouldAnnounceCurrentPage && {
+            'aria-labelledby': `NavigationLinks-${link}`,
+          })}
+          aria-current={shouldAnnounceCurrentPage ? 'page' : undefined}
           className="focusIndicatorRemove"
           data-active="true"
           onFocus={scrollLinkIntoView}
           {...clickTracker}
           {...props}
         >
-          <CurrentLink linkId={link} currentPageText={currentPageText}>
+          <CurrentLink
+            linkId={link}
+            currentPageText={currentPageText}
+            announce={shouldAnnounceCurrentPage}
+          >
             {link}
           </CurrentLink>
         </StyledLink>
@@ -226,7 +253,7 @@ export const NavigationLi = ({
         <StyledLink
           href={url}
           className="focusIndicatorRemove"
-          aria-current={active ? 'page' : undefined}
+          aria-current={undefined}
           onFocus={scrollLinkIntoView}
           {...clickTracker}
           {...props}
