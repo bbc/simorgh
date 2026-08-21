@@ -87,7 +87,11 @@ export const EventTrackingContextProvider = ({
   const { pageType, platform, statsDestination } = requestContext;
 
   const serviceContext = use(ServiceContext);
-  const { atiAnalyticsProducerId, atiAnalyticsProducerName } = serviceContext;
+  const {
+    atiAnalyticsAppName,
+    atiAnalyticsProducerId,
+    atiAnalyticsProducerName,
+  } = serviceContext;
 
   const { isSignedIn, hashedUserId } = use(AccountContext);
   const { enabled: eventTrackingIsEnabled } = useToggle('eventTracking');
@@ -101,6 +105,7 @@ export const EventTrackingContextProvider = ({
         campaignID,
         pageIdentifier,
         platform,
+        appName: atiAnalyticsAppName,
         producerId: atiAnalyticsProducerId,
         producerName: atiAnalyticsProducerName,
         statsDestination,
@@ -110,6 +115,7 @@ export const EventTrackingContextProvider = ({
     }
     return null;
   }, [
+    atiAnalyticsAppName,
     atiAnalyticsProducerId,
     atiAnalyticsProducerName,
     atiData,
@@ -144,14 +150,17 @@ export const EventTrackingContextProvider = ({
 
   // Populated synchronously (not in an effect) so it's set before any descendant's
   // effects run and potentially trigger an Optimizely decision on this same render pass.
-  setActivationContext({
+  const activationContext = {
     trackingIsEnabled: Boolean(hasRequiredProps),
     pageIdentifier: trackingProps?.pageIdentifier,
+    platform: trackingProps?.platform,
+    appName: trackingProps?.appName,
     producerName: trackingProps?.producerName,
     statsDestination: trackingProps?.statsDestination,
     isSignedIn: trackingProps?.isSignedIn,
     hashedId: trackingProps?.hashedId,
-  });
+  };
+  setActivationContext(activationContext);
 
   return (
     <EventTrackingContext.Provider

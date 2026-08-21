@@ -104,6 +104,7 @@ export type ReverbPageVars = {
   name?: string | null;
   additionalProperties?: {
     app_name?: string | null;
+    app_type?: string | null;
     content_language?: string | null;
     type?: string | null;
   };
@@ -124,13 +125,16 @@ export type ReverbEventDetails = {
   background?: boolean;
   container?: string;
   experience?: {
-    engine_type: Array<string>;
+    engine_type?: Array<string>;
     engine_id: Array<string>;
   };
   event?: {
     category: string;
-    action: 'select' | 'view';
+    action: 'select' | 'view' | 'serve';
     grouping?: string;
+    interaction_type?: string;
+    spec_id?: string;
+    spec_version?: string;
   };
   eventName: 'pageView' | 'sectionView' | 'sectionClick' | 'activation';
   eventPublisher?: string;

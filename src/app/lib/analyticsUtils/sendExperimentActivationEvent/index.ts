@@ -8,6 +8,7 @@ type Props = {
   trackingIsEnabled: boolean;
   pageIdentifier?: string;
   platform?: Platforms;
+  appName?: string;
   producerId?: string;
   producerName?: string;
   statsDestination?: string;
@@ -27,6 +28,8 @@ const sendExperimentActivationEvent = async ({
   experimentVariant,
   trackingIsEnabled,
   pageIdentifier,
+  platform,
+  appName,
   producerName,
   statsDestination,
   isSignedIn,
@@ -49,6 +52,8 @@ const sendExperimentActivationEvent = async ({
 
   const reverbParams = buildActivationEventModel({
     pageIdentifier,
+    platform,
+    appName,
     producerName,
     statsDestination,
     experimentName,

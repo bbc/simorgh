@@ -1,6 +1,10 @@
+import { Platforms } from '#app/models/types/global';
+
 export type ActivationContext = {
   trackingIsEnabled: boolean;
   pageIdentifier?: string;
+  platform?: Platforms;
+  appName?: string;
   producerName?: string;
   statsDestination?: string;
   isSignedIn?: boolean;

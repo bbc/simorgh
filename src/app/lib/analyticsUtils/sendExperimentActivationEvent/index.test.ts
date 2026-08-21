@@ -30,9 +30,9 @@ describe('sendExperimentActivationEvent', () => {
       expect.objectContaining({
         eventDetails: expect.objectContaining({
           eventName: 'activation',
-          personalisation: {
-            experimentName: 'foo',
-            experimentVariant: 'control',
+          eventPublisher: 'viewability',
+          experience: {
+            engine_id: ['foo.control'],
           },
         }),
       }),

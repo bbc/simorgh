@@ -93,10 +93,11 @@ optimizely?.notificationCenter?.addNotificationListener(
 
       if (impressionDispatched) {
         if (isNewDecision) {
+          const activationContext = getActivationContext();
           sendExperimentActivationEvent({
             experimentName: decisionKey,
             experimentVariant: variationKey,
-            ...getActivationContext(),
+            ...activationContext,
           });
         }
 
