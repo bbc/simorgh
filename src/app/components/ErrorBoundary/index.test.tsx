@@ -10,8 +10,11 @@ const ThrowingComponent = () => {
 describe('ErrorBoundary', () => {
   beforeEach(() => {
     jest.clearAllMocks();
-    // Silence React's default console.error logging of the caught error.
     jest.spyOn(console, 'error').mockImplementation(() => undefined);
+  });
+
+  afterEach(() => {
+    jest.restoreAllMocks();
   });
 
   it('renders the children when there is no error', () => {
