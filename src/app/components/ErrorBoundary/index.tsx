@@ -6,23 +6,22 @@ const logger = nodeLogger(__filename);
 
 interface ErrorBoundaryProps {
   children: ReactNode;
-  fallback?: ReactNode;
+  fallback?: (error: Error) => ReactNode;
   componentName: string;
 }
 
 interface ErrorBoundaryState {
-  hasError: boolean;
+  error: Error | null;
 }
 
-// Class component required: React has no hook-based equivalent of getDerivedStateFromError/componentDidCatch.
 class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { error: null };
   }
 
-  static getDerivedStateFromError() {
-    return { hasError: true };
+  static getDerivedStateFromError(error: Error) {
+    return { error };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
@@ -35,10 +34,14 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   }
 
   render() {
-    const { hasError } = this.state;
-    const { children, fallback = null } = this.props;
+    const { error } = this.state;
+    const { children, fallback } = this.props;
 
-    return hasError ? fallback : children;
+    if (error) {
+      return fallback ? fallback(error) : null;
+    }
+
+    return children;
   }
 }
 

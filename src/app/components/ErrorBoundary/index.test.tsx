@@ -27,13 +27,13 @@ describe('ErrorBoundary', () => {
     render(
       <ErrorBoundary
         componentName="TestComponent"
-        fallback={<p>Fallback content</p>}
+        fallback={error => <p>Fallback content: {error.message}</p>}
       >
         <ThrowingComponent />
       </ErrorBoundary>,
     );
 
-    expect(screen.getByText('Fallback content')).toBeInTheDocument();
+    expect(screen.getByText('Fallback content: Boom')).toBeInTheDocument();
     expect(loggerMock.error).toHaveBeenCalledWith(
       CLIENT_COMPONENT_RENDER_ERROR,
       expect.objectContaining({
