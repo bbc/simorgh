@@ -167,6 +167,16 @@ describe('getStoryPromoInfo', () => {
       expect(getUrl(watchItem)).toEqual('/hausa/watch/cl01rmr1d8po');
     });
 
+    it('appends a variant when an Optimo URL has no existing variant', () => {
+      const watchItem = {
+        ...optimoPromoItem,
+        uri: 'https://www.bbc.com/zhongwen/watch/c3xd4x9prgyo',
+      };
+      expect(getUrl(watchItem, 'trad')).toEqual(
+        '/zhongwen/watch/c3xd4x9prgyo/trad',
+      );
+    });
+
     it('should return the correct url for a listen variant optimoPromoItem', () => {
       const listenItem = {
         ...optimoPromoItem,
