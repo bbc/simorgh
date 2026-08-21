@@ -38,7 +38,6 @@ const reverbComponentTracking = async ({
     isClick,
     item,
     originalEvent,
-    personalisation,
     type,
   } = eventDetails;
 
@@ -50,7 +49,6 @@ const reverbComponentTracking = async ({
     ...(type && { type }),
     ...(background !== undefined && { background }),
     ...(container && { container }),
-    ...(personalisation && { personalisation }),
   };
 
   return reverbInstance.userActionEvent(

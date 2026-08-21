@@ -142,11 +142,6 @@ export type ReverbEventDetails = {
   isClick?: boolean;
   item?: string | object;
   originalEvent?: Event;
-  // Serialised by Reverb into the legacy CPV 'variant' slot, used for MVT/experimentation (see ATIAnalytics/README.md)
-  personalisation?: {
-    experimentName: string;
-    experimentVariant: string;
-  };
   // Appended to 'actionName' by Reverb to form the 'creation' slot as 'actionName~type'
   type?: string;
 };

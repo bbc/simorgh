@@ -161,14 +161,20 @@ describe('sendBeacon', () => {
         },
         eventDetails: {
           eventName: 'activation',
-          eventPublisher: 'optimizely',
-          actionName: 'optimizely',
-          type: 'experiment',
-          background: true,
-          container: 'unspecified',
-          personalisation: {
-            experimentName: 'foo',
-            experimentVariant: 'bar',
+          eventPublisher: 'viewability',
+          event: {
+            category: 'viewability',
+            action: 'serve',
+            interaction_type: 'optimizely_activation',
+            spec_id: '829257ce-28c6-4bbd-8e87-bdacba05de82',
+            spec_version: '1.0.1',
+          },
+          group: {
+            type: 'experiment',
+            name: 'optimizely',
+          },
+          experience: {
+            engine_id: ['foo.bar'],
           },
         },
       } as unknown as ReverbBeaconConfig;
@@ -177,15 +183,22 @@ describe('sendBeacon', () => {
 
       expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
       expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
-        'optimizely',
-        'optimizely',
+        'viewability',
+        '',
         {
-          type: 'experiment',
-          background: true,
-          container: 'unspecified',
-          personalisation: {
-            experimentName: 'foo',
-            experimentVariant: 'bar',
+          event: {
+            category: 'viewability',
+            action: 'serve',
+            interaction_type: 'optimizely_activation',
+            spec_id: '829257ce-28c6-4bbd-8e87-bdacba05de82',
+            spec_version: '1.0.1',
+          },
+          group: {
+            type: 'experiment',
+            name: 'optimizely',
+          },
+          experience: {
+            engine_id: ['foo.bar'],
           },
         },
         undefined,
