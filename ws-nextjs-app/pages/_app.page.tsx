@@ -95,8 +95,8 @@ export default class CustomApp extends App<Props> {
       togglesResult.status === 'fulfilled' ? togglesResult.value : {};
 
     const navItems =
-      navResult.status === 'fulfilled'
-        ? (navResult.value.result?.data?.items ?? null)
+      navResult.status === 'fulfilled' && navResult.value
+        ? (navResult.value?.data?.items ?? null)
         : null;
 
     const requestHeaders = ctx.req?.headers;
