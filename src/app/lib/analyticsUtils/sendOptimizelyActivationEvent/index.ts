@@ -8,6 +8,7 @@ type Props = {
   trackingIsEnabled: boolean;
   pageIdentifier?: string;
   platform?: Platforms;
+  appName?: string;
   producerId?: string;
   producerName?: string;
   statsDestination?: string;
@@ -20,24 +21,21 @@ type Props = {
  * Sends a standalone Piano/Reverb "activation" beacon at the point a user is
  * activated into an Optimizely experiment, decoupled from any view/click event.
  * Callers are responsible for only invoking this once per activation (see the
- * ref-based dedupe in `useServerSide`/`useClientSide`).
+ * dedupe in `optimizelyDecisionStore`).
  */
-const sendExperimentActivationEvent = async ({
+const sendOptimizelyActivationEvent = async ({
   experimentName,
   experimentVariant,
   trackingIsEnabled,
   pageIdentifier,
+  platform,
+  appName,
   producerName,
   statsDestination,
   isSignedIn,
   hashedId,
 }: Props) => {
   if (!trackingIsEnabled || !experimentVariant || experimentVariant === 'off') {
-    // eslint-disable-next-line no-console
-    console.debug(
-      '[ActivationEvent] 6. sendExperimentActivationEvent: skipped, tracking disabled or no variant',
-      { trackingIsEnabled, experimentVariant },
-    );
     return;
   }
 
@@ -49,16 +47,13 @@ const sendExperimentActivationEvent = async ({
   ].every(Boolean);
 
   if (!shouldSendEvent) {
-    // eslint-disable-next-line no-console
-    console.debug(
-      '[ActivationEvent] 6. sendExperimentActivationEvent: skipped, missing required ATI fields',
-      { experimentName, pageIdentifier, producerName, statsDestination },
-    );
     return;
   }
 
   const reverbParams = buildActivationEventModel({
     pageIdentifier,
+    platform,
+    appName,
     producerName,
     statsDestination,
     experimentName,
@@ -67,13 +62,7 @@ const sendExperimentActivationEvent = async ({
     hashedId,
   });
 
-  // eslint-disable-next-line no-console
-  console.debug(
-    '[ActivationEvent] 7. sendExperimentActivationEvent: sending beacon',
-    reverbParams,
-  );
-
   await sendBeacon(reverbParams);
 };
 
-export default sendExperimentActivationEvent;
+export default sendOptimizelyActivationEvent;

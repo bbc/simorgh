@@ -704,7 +704,7 @@ describe('withOptimizelyProvider HOC', () => {
   });
 
   describe('activation event tracking', () => {
-    const mocksendExperimentActivationEvent = jest.fn();
+    const mocksendOptimizelyActivationEvent = jest.fn();
     const mockNotifyDecision = jest.fn();
     const mockActivationContext = {
       trackingIsEnabled: true,
@@ -718,7 +718,7 @@ describe('withOptimizelyProvider HOC', () => {
 
     beforeEach(() => {
       capturedDecisionListener = undefined;
-      mocksendExperimentActivationEvent.mockReset();
+      mocksendOptimizelyActivationEvent.mockReset();
       mockNotifyDecision.mockReset().mockReturnValue(true);
 
       jest.resetModules();
@@ -744,10 +744,10 @@ describe('withOptimizelyProvider HOC', () => {
         notifyDecision: mockNotifyDecision,
       }));
       jest.doMock(
-        '#app/lib/analyticsUtils/sendExperimentActivationEvent',
+        '#app/lib/analyticsUtils/sendOptimizelyActivationEvent',
         () => ({
           __esModule: true,
-          default: mocksendExperimentActivationEvent,
+          default: mocksendOptimizelyActivationEvent,
         }),
       );
       jest.doMock('#app/lib/analyticsUtils/activationContext', () => ({
@@ -770,8 +770,8 @@ describe('withOptimizelyProvider HOC', () => {
         },
       });
 
-      expect(mocksendExperimentActivationEvent).toHaveBeenCalledTimes(1);
-      expect(mocksendExperimentActivationEvent).toHaveBeenCalledWith({
+      expect(mocksendOptimizelyActivationEvent).toHaveBeenCalledTimes(1);
+      expect(mocksendOptimizelyActivationEvent).toHaveBeenCalledWith({
         experimentName: 'test_flag',
         experimentVariant: 'control',
         ...mockActivationContext,
@@ -787,7 +787,7 @@ describe('withOptimizelyProvider HOC', () => {
         },
       });
 
-      expect(mocksendExperimentActivationEvent).not.toHaveBeenCalled();
+      expect(mocksendOptimizelyActivationEvent).not.toHaveBeenCalled();
     });
 
     it('should not send the activation event when the variation is "off"', () => {
@@ -799,7 +799,7 @@ describe('withOptimizelyProvider HOC', () => {
         },
       });
 
-      expect(mocksendExperimentActivationEvent).not.toHaveBeenCalled();
+      expect(mocksendOptimizelyActivationEvent).not.toHaveBeenCalled();
     });
 
     it('should not send the activation event again for a decision already recorded this session', () => {
@@ -821,7 +821,7 @@ describe('withOptimizelyProvider HOC', () => {
         },
       });
 
-      expect(mocksendExperimentActivationEvent).toHaveBeenCalledTimes(1);
+      expect(mocksendOptimizelyActivationEvent).toHaveBeenCalledTimes(1);
     });
 
     it('should send the activation event for a legacy activate() decision (experimentKey without decisionEventDispatched)', () => {
@@ -832,8 +832,8 @@ describe('withOptimizelyProvider HOC', () => {
         },
       });
 
-      expect(mocksendExperimentActivationEvent).toHaveBeenCalledTimes(1);
-      expect(mocksendExperimentActivationEvent).toHaveBeenCalledWith(
+      expect(mocksendOptimizelyActivationEvent).toHaveBeenCalledTimes(1);
+      expect(mocksendOptimizelyActivationEvent).toHaveBeenCalledWith(
         expect.objectContaining({
           experimentName: 'newswb_ws_article_account_promo_banner',
           experimentVariant: 'control',

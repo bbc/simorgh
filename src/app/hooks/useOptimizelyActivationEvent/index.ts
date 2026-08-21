@@ -1,7 +1,7 @@
 import { use, useCallback } from 'react';
 import { VIEW_EVENT } from '#app/lib/analyticsUtils/analytics.const';
 import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
-import sendExperimentActivationEvent from '#app/lib/analyticsUtils/sendExperimentActivationEvent';
+import sendOptimizelyActivationEvent from '#app/lib/analyticsUtils/sendOptimizelyActivationEvent';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useTrackingToggle from '../useTrackingToggle';
 
@@ -26,7 +26,7 @@ const useOptimizelyActivationEvent = () => {
 
   return useCallback(
     (experimentName: string, experimentVariant: string) =>
-      sendExperimentActivationEvent({
+      sendOptimizelyActivationEvent({
         experimentName,
         experimentVariant,
         trackingIsEnabled,
