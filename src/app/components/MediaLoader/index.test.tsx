@@ -5,7 +5,7 @@ import {
 } from '#app/components/react-testing-library-with-providers';
 import { Helmet } from 'react-helmet';
 import useLocation from '#app/hooks/useLocation';
-import { TV_PAGE } from '#app/routes/utils/pageTypes';
+import { HOME_PAGE, TOPIC_PAGE, TV_PAGE } from '#app/routes/utils/pageTypes';
 import MediaPlayer from '.';
 import {
   aresMediaBlocks,
@@ -115,6 +115,59 @@ describe('MediaLoader', () => {
       });
 
       expect(mockRequire.mock.calls[0][0]).toStrictEqual(['bump-4']);
+    });
+
+    it('Loads the player immediately with autoplay disabled when requested', async () => {
+      const mockRequire = jest.fn();
+      const mockPlayer = {
+        load: jest.fn(),
+      };
+      const mockBump = {
+        player: jest.fn(() => mockPlayer),
+      };
+
+      window.requirejs = mockRequire;
+      (useState as jest.Mock).mockImplementation(initialValue => [
+        initialValue,
+        jest.fn(),
+      ]);
+
+      let container;
+
+      await act(async () => {
+        ({ container } = render(
+          <MediaPlayer
+            blocks={aresMediaBlocks as MediaBlock[]}
+            loadPlayerOnInitialRender
+          />,
+          {
+            id: 'testId',
+            pageType: TOPIC_PAGE,
+          },
+        ));
+      });
+
+      expect(
+        (container as unknown as HTMLElement).querySelector(
+          '[data-e2e="media-loader__placeholder"]',
+        ),
+      ).not.toBeInTheDocument();
+      expect(
+        (container as unknown as HTMLElement).querySelector(
+          '[data-e2e="media-player"]',
+        ),
+      ).toBeInTheDocument();
+
+      const callbackFn = mockRequire.mock.calls[0][1];
+      await act(async () => callbackFn(mockBump));
+
+      expect(mockBump.player).toHaveBeenCalledWith(
+        expect.any(HTMLElement),
+        expect.objectContaining({ autoplay: false }),
+      );
+      const inSituPlayerConfig = mockBump.player.mock.calls[0][1];
+      expect(inSituPlayerConfig).not.toHaveProperty('preload');
+      expect(mockPlayer.load).toHaveBeenCalledTimes(1);
     });
 
     it('Adds a media player object to the window with a specified uniqueId', async () => {
@@ -287,6 +340,51 @@ describe('MediaLoader', () => {
         }),
       );
     });
+
+    it.each([
+      {
+        pageName: 'Home',
+        pageType: HOME_PAGE,
+        pageTitle: 'BBC News عربي',
+        pageIdentifier: 'arabic.page',
+        contentType: 'index-home',
+      },
+      {
+        pageName: 'Topic',
+        pageType: TOPIC_PAGE,
+        pageTitle: 'موضوع - BBC News عربي',
+        pageIdentifier: 'arabic.topics.cz9mm6r1q5et.page',
+        contentType: 'index-category',
+      },
+    ])(
+      'should use the containing $pageName page identifier for in-situ media blocks',
+      async ({ pageType, pageTitle, pageIdentifier, contentType }) => {
+        const buildConfigSpy = jest.spyOn(buildConfig, 'default');
+
+        await act(async () => {
+          render(<MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} />, {
+            service: 'arabic',
+            pageMetadata: {
+              atiAnalytics: {
+                language: 'ar',
+                pageTitle,
+                pageIdentifier,
+                contentType,
+              },
+              type: pageType,
+            },
+            pageType,
+            toggles: { eventTracking: { enabled: true } },
+          });
+        });
+
+        expect(buildConfigSpy).toHaveBeenCalledWith(
+          expect.objectContaining({
+            counterName: pageIdentifier,
+          }),
+        );
+      },
+    );
   });
 
   describe('AMP', () => {
