@@ -37,6 +37,9 @@ export default {
   include: {
     enabled: true,
   },
+  listenLiveCta: {
+    enabled: false,
+  },
   liveRadioSchedule: {
     enabled: false,
   },
