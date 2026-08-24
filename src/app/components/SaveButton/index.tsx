@@ -68,6 +68,8 @@ const SaveButton = ({
     >
       <span aria-hidden="true" css={styles.iconText}>
         {getIcon()}
+        {/* Wrapper keeps the label in a stable element so browser translation
+            tools swapping text nodes don't crash React reconciliation. */}
         <span>{displayedVisualLabel}</span>
       </span>
 
