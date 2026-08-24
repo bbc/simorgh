@@ -19,7 +19,7 @@ import { EventTrackingContextProvider } from '#app/contexts/EventTrackingContext
 import { UserContextProvider } from '#app/contexts/UserContext';
 import extractHeaders from '#utilities/extractHeaders';
 import { getServerExperiments } from '#utilities/experimentHeader';
-import getToggles from '#app/lib/utilities/getToggles/withCache';
+import fetchToggles from '#app/lib/utilities/fetchToggles';
 import getPathExtension from '#app/utilities/getPathExtension';
 import parseRoute from '#app/routes/utils/parseRoute';
 import addCspHeader from '#utilities/addCspHeader';
@@ -82,7 +82,7 @@ export default class CustomApp extends App<Props> {
     };
 
     const [togglesResult, navResult] = await Promise.allSettled([
-      getToggles(service),
+      fetchToggles({ service, isAmp }),
       fetchConfig<{ data: { items: Navigation[] } }>({
         service,
         pagePath: asPath,
@@ -95,7 +95,7 @@ export default class CustomApp extends App<Props> {
       togglesResult.status === 'fulfilled' ? togglesResult.value : {};
 
     const navItems =
-      navResult.status === 'fulfilled'
+      navResult.status === 'fulfilled' && navResult.value
         ? (navResult.value?.data?.items ?? null)
         : null;
 
@@ -204,10 +204,10 @@ export default class CustomApp extends App<Props> {
                   ) : (
                     <QueryProvider>
                       <UserContextProvider>
-                      <ThemeProviderSCSSModules
-                        service={service}
-                        variant={variant}
-                      >
+                        <ThemeProviderSCSSModules
+                          service={service}
+                          variant={variant}
+                        >
                           <ThemeProvider service={service} variant={variant}>
                             <PageWrapper
                               navItems={navItems}
@@ -217,7 +217,7 @@ export default class CustomApp extends App<Props> {
                               {RenderChildrenOrError}
                             </PageWrapper>
                           </ThemeProvider>
-                      </ThemeProviderSCSSModules>
+                        </ThemeProviderSCSSModules>
                       </UserContextProvider>
                     </QueryProvider>
                   )}

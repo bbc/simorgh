@@ -35,7 +35,7 @@ interface BillboardProps {
   summaries?: Summary[];
 }
 
-const IMAGE_WIDTH = 660;
+const IMAGE_WIDTH = 800;
 const DEFAULT_IMAGE_RES = 480;
 
 export default ({
