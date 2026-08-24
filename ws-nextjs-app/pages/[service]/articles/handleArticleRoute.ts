@@ -102,6 +102,7 @@ export default async (context: GetServerSidePropsContext) => {
   if (!data?.pageData?.article) {
     throw handleError('Article data is malformed', 500);
   }
+  console.log('data?.pageData', data?.pageData);
 
   const { article, secondaryData } = data?.pageData || {};
   const isArticleOlderThanSixHours =
@@ -123,6 +124,7 @@ export default async (context: GetServerSidePropsContext) => {
     portraitVideoItems = null,
     countryCuration = null,
     countryTopicIdToReorder = null,
+    currentLiveProgramme = null,
   } = secondaryData || {};
 
   const transformedArticleData = transformPageData()(article);
@@ -147,6 +149,7 @@ export default async (context: GetServerSidePropsContext) => {
           latestMedia,
           mediaCuration,
           billboardCuration,
+          currentLiveProgramme,
         },
         mostRead,
         portraitVideoItems,
