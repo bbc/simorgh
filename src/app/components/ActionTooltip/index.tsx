@@ -40,7 +40,7 @@ const ActionTooltip = ({
   const containerRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const previouslyFocusedElementRef = useRef<HTMLElement | null>(null);
-  const tilteId = useId();
+  const titleId = useId();
 
   useEffect(() => {
     // Store the previously focused element to restore focus when the tooltip is unmounted
@@ -54,10 +54,7 @@ const ActionTooltip = ({
 
   useEffect(() => {
     closeButtonRef.current?.focus({ preventScroll: true });
-    containerRef.current?.scrollIntoView?.({
-      block: 'nearest',
-      behavior: 'smooth',
-    });
+    containerRef.current?.scrollIntoView?.({ block: 'nearest' });
   }, [status]);
 
   useDismissOnOutsideInteraction({ containerRef, onDismiss: onClose });
@@ -67,7 +64,7 @@ const ActionTooltip = ({
       <div
         ref={containerRef}
         role="group"
-        aria-labelledby={tilteId}
+        aria-labelledby={titleId}
         className={styles.container}
         data-testid="action-tooltip"
       >
@@ -88,7 +85,7 @@ const ActionTooltip = ({
 
             <Text
               as="h2"
-              id={tilteId}
+              id={titleId}
               size="pica"
               fontVariant="sansBold"
               className={styles.title}

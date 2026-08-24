@@ -49,7 +49,7 @@ const AccountSignInModal = ({ onClose }: AccountSignInModalProps) => {
 
   useDismissOnOutsideInteraction({
     onDismiss: handleClose,
-    enableOutsideClick: false,
+    containerRef,
   });
 
   return (
@@ -62,7 +62,7 @@ const AccountSignInModal = ({ onClose }: AccountSignInModalProps) => {
         css={styles.modal}
         {...viewTracker}
       >
-        <div aria-hidden="true" onClick={handleClose} css={styles.backdrop} />
+        <div aria-hidden="true" css={styles.backdrop} />
         <div ref={containerRef} css={styles.modalContainer}>
           <div aria-hidden="true" css={styles.imageSection} />
           <div css={styles.textSection}>
