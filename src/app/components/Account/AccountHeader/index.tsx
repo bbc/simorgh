@@ -1,7 +1,6 @@
 import { use } from 'react';
 import { AccountContext } from '#contexts/AccountContext';
 import { ServiceContext } from '#contexts/ServiceContext';
-import useHydrationDetection from '#hooks/useHydrationDetection';
 import Text from '#app/components/Text';
 import { AccountIconRounded } from '#app/components/icons';
 import useViewTracker from '#app/hooks/useViewTracker';
@@ -15,7 +14,6 @@ type AccountHeaderProps = {
 };
 
 const AccountHeader = ({ variant = 'legacy' }: AccountHeaderProps) => {
-  const isHydrated = useHydrationDetection();
   const { isSignedIn, signInUrl, settingsUrl, isIdctaAvailable } =
     use(AccountContext);
   const { translations } = use(ServiceContext);
@@ -32,7 +30,7 @@ const AccountHeader = ({ variant = 'legacy' }: AccountHeaderProps) => {
     componentName: clickComponentName,
   });
 
-  if (!isHydrated || !isIdctaAvailable) return null;
+  if (!isIdctaAvailable) return null;
 
   const href = isSignedIn ? settingsUrl : signInUrl;
   const label = isSignedIn

@@ -281,7 +281,8 @@ const MediaLoader = ({
   } = use(RequestContext);
 
   const [showPlaceholder, setShowPlaceholder] = useState(
-    !PAGETYPES_IGNORE_PLACEHOLDER.includes(pageType),
+    !loadPlayerOnInitialRender &&
+      !PAGETYPES_IGNORE_PLACEHOLDER.includes(pageType),
   );
   const [isFakeFullscreenActive, setIsFakeFullscreenActive] = useState(false);
   // Tracks whether *this* instance is the one that set the global fullscreen
