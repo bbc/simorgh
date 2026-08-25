@@ -9,7 +9,7 @@ exports[`Canonical Podcast Page Analytics ATI tracking pixel hostname 1`] = `"ht
 exports[`Canonical Podcast Page Analytics ATI tracking pixel search params 1`] = `
 [
   {
-    "s": "598342",
+    "s": "598343",
   },
   {
     "s2": "33",
@@ -140,27 +140,22 @@ exports[`Canonical Podcast Page Media Loader renders a valid container 1`] = `
   data-e2e="media-loader__container"
 >
   <div
-    class="css-rfn4r6"
-    data-simorgh-media-loader="inactive"
+    class="media-player css-1kf4wj3"
+    data-e2e="media-player"
   >
-    <div
-      class="media-player css-1kf4wj3"
-      data-e2e="media-player"
-    >
-      <noscript>
-        <div>
-          <div
-            class="css-1ezssgh"
+    <noscript>
+      <div>
+        <div
+          class="css-1ezssgh"
+        >
+          <strong
+            class="css-pow7hy"
           >
-            <strong
-              class="css-pow7hy"
-            >
-              A reprodução deste formato de vídeo não é compatível com seu dispositivo
-            </strong>
-          </div>
+            A reprodução deste formato de vídeo não é compatível com seu dispositivo
+          </strong>
         </div>
-      </noscript>
-    </div>
+      </div>
+    </noscript>
   </div>
 </figure>
 `;
@@ -189,7 +184,7 @@ exports[`Canonical Podcast Page Recent Episodes List items should match text and
 exports[`Canonical Podcast Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
-  "url": "http://192.168.1.106:7081/portuguese/images/icons/icon-192x192.png",
+  "url": "http://localhost:7081/portuguese/images/icons/icon-192x192.png",
 }
 `;
 
@@ -221,7 +216,7 @@ exports[`Canonical Podcast Page SEO Apple Touch Icon should match attributes 5`]
 }
 `;
 
-exports[`Canonical Podcast Page SEO Canonical link 1`] = `"http://192.168.1.106:7081/portuguese/podcasts/p07r3r3t/p083x9gr"`;
+exports[`Canonical Podcast Page SEO Canonical link 1`] = `"http://localhost:7081/portuguese/podcasts/p07r3r3t/p083x9gr"`;
 
 exports[`Canonical Podcast Page SEO Dir attribute 1`] = `"ltr"`;
 
@@ -249,10 +244,10 @@ exports[`Canonical Podcast Page SEO Linked data should match text 1`] = `
         "name": "Portuguese",
       },
       "mainEntity": {
-        "@id": "http://192.168.1.106:7081/portuguese/podcasts/p07r3r3t/p083x9gr#episode",
+        "@id": "http://localhost:7081/portuguese/podcasts/p07r3r3t/p083x9gr#episode",
       },
       "mainEntityOfPage": {
-        "@id": "http://192.168.1.106:7081/portuguese/podcasts/p07r3r3t/p083x9gr",
+        "@id": "http://localhost:7081/portuguese/podcasts/p07r3r3t/p083x9gr",
         "@type": "WebPage",
         "name": "'A vida secreta de meu filho que só conheci quando ele morreu' - Que História! - News Brasil",
       },
@@ -268,18 +263,18 @@ exports[`Canonical Podcast Page SEO Linked data should match text 1`] = `
         "publishingPrinciples": "https://www.bbc.com/portuguese/institutional-50054434",
       },
       "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/portuguese/images/metadata/poster-1024x576.png",
-      "url": "http://192.168.1.106:7081/portuguese/podcasts/p07r3r3t/p083x9gr",
+      "url": "http://localhost:7081/portuguese/podcasts/p07r3r3t/p083x9gr",
     },
     {
-      "@id": "http://192.168.1.106:7081/portuguese/podcasts/p07r3r3t#series",
+      "@id": "http://localhost:7081/portuguese/podcasts/p07r3r3t#series",
       "@type": "PodcastSeries",
       "name": "Que História!",
     },
     {
-      "@id": "http://192.168.1.106:7081/portuguese/podcasts/p07r3r3t/p083x9gr#episode",
+      "@id": "http://localhost:7081/portuguese/podcasts/p07r3r3t/p083x9gr#episode",
       "@type": "PodcastEpisode",
       "associatedMedia": {
-        "@id": "http://192.168.1.106:7081/portuguese/podcasts/p07r3r3t/p083x9gr#audio",
+        "@id": "http://localhost:7081/portuguese/podcasts/p07r3r3t/p083x9gr#audio",
         "@type": "AudioObject",
         "contentUrl": "https://open.live.bbc.co.uk/mediaselector/6/redir/version/2.0/mediaset/audio-nondrm-download-low/proto/https/vpid/p083x8gs.mp3",
         "description": "Pais de Mats Steen achavam que filho teve vida solitária; mas quando anunciaram sua morte, não tinham ideia da comoção que isso causaria.",
@@ -293,7 +288,7 @@ exports[`Canonical Podcast Page SEO Linked data should match text 1`] = `
       "description": "Pais de Mats Steen achavam que filho teve vida solitária; mas quando anunciaram sua morte, não tinham ideia da comoção que isso causaria.",
       "name": "'A vida secreta de meu filho que só conheci quando ele morreu'",
       "partOfSeries": {
-        "@id": "http://192.168.1.106:7081/portuguese/podcasts/p07r3r3t#series",
+        "@id": "http://localhost:7081/portuguese/podcasts/p07r3r3t#series",
       },
     },
   ],
@@ -314,7 +309,7 @@ exports[`Canonical Podcast Page SEO OG title 1`] = `"'A vida secreta de meu filh
 
 exports[`Canonical Podcast Page SEO OG type 1`] = `"website"`;
 
-exports[`Canonical Podcast Page SEO OG url 1`] = `"http://192.168.1.106:7081/portuguese/podcasts/p07r3r3t/p083x9gr"`;
+exports[`Canonical Podcast Page SEO OG url 1`] = `"http://localhost:7081/portuguese/podcasts/p07r3r3t/p083x9gr"`;
 
 exports[`Canonical Podcast Page SEO Page title 1`] = `"'A vida secreta de meu filho que só conheci quando ele morreu' - Que História! - News Brasil - BBC News Brasil"`;
 

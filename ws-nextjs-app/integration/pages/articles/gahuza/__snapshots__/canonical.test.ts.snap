@@ -9,7 +9,7 @@ exports[`Canonical Articles Analytics ATI tracking pixel hostname 1`] = `"https:
 exports[`Canonical Articles Analytics ATI tracking pixel search params 1`] = `
 [
   {
-    "s": "598342",
+    "s": "598343",
   },
   {
     "s2": "40",
@@ -196,7 +196,7 @@ exports[`Canonical Articles Most Read has item with rank 5`] = `
 exports[`Canonical Articles SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
-  "url": "http://192.168.1.106:7081/gahuza/images/icons/icon-192x192.png",
+  "url": "http://localhost:7081/gahuza/images/icons/icon-192x192.png",
 }
 `;
 
@@ -228,7 +228,7 @@ exports[`Canonical Articles SEO Apple Touch Icon should match attributes 5`] = `
 }
 `;
 
-exports[`Canonical Articles SEO Canonical link 1`] = `"http://192.168.1.106:7081/gahuza/articles/c5y51yxeg53o"`;
+exports[`Canonical Articles SEO Canonical link 1`] = `"http://localhost:7081/gahuza/articles/c5y51yxeg53o"`;
 
 exports[`Canonical Articles SEO Dir attribute 1`] = `"ltr"`;
 
@@ -277,7 +277,7 @@ exports[`Canonical Articles SEO Linked data should match text 1`] = `
         "name": "Kinyarwanda",
       },
       "mainEntityOfPage": {
-        "@id": "http://192.168.1.106:7081/gahuza/articles/c5y51yxeg53o",
+        "@id": "http://localhost:7081/gahuza/articles/c5y51yxeg53o",
         "@type": "WebPage",
         "name": "Russia: Yulia Navalnaya yabwiye BBC ko afite intego yo kuziyamamariza kuba Perezida",
       },
@@ -293,7 +293,7 @@ exports[`Canonical Articles SEO Linked data should match text 1`] = `
         "publishingPrinciples": "https://www.bbc.com/gahuza/institutional-49283343",
       },
       "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_gahuza/8654/live/6fd0abe0-8f8a-11ef-8e6d-e3e64e16c628.jpg",
-      "url": "http://192.168.1.106:7081/gahuza/articles/c5y51yxeg53o",
+      "url": "http://localhost:7081/gahuza/articles/c5y51yxeg53o",
     },
   ],
 }
@@ -313,7 +313,7 @@ exports[`Canonical Articles SEO OG title 1`] = `"Russia: Yulia Navalnaya yabwiye
 
 exports[`Canonical Articles SEO OG type 1`] = `"article"`;
 
-exports[`Canonical Articles SEO OG url 1`] = `"http://192.168.1.106:7081/gahuza/articles/c5y51yxeg53o"`;
+exports[`Canonical Articles SEO OG url 1`] = `"http://localhost:7081/gahuza/articles/c5y51yxeg53o"`;
 
 exports[`Canonical Articles SEO Page title 1`] = `"Russia: Yulia Navalnaya yabwiye BBC ko afite intego yo kuziyamamariza kuba Perezida - BBC News Gahuza"`;
 

@@ -9,7 +9,7 @@ exports[`Canonical Articles Analytics ATI tracking pixel hostname 1`] = `"https:
 exports[`Canonical Articles Analytics ATI tracking pixel search params 1`] = `
 [
   {
-    "s": "598342",
+    "s": "598343",
   },
   {
     "s2": "51",
@@ -134,7 +134,7 @@ exports[`Canonical Articles Main heading should match text 1`] = `"Wannan shine 
 exports[`Canonical Articles SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
-  "url": "http://192.168.1.106:7081/hausa/images/icons/icon-192x192.png",
+  "url": "http://localhost:7081/hausa/images/icons/icon-192x192.png",
 }
 `;
 
@@ -166,7 +166,7 @@ exports[`Canonical Articles SEO Apple Touch Icon should match attributes 5`] = `
 }
 `;
 
-exports[`Canonical Articles SEO Canonical link 1`] = `"http://192.168.1.106:7081/hausa/articles/c2nr6xqmnewo"`;
+exports[`Canonical Articles SEO Canonical link 1`] = `"http://localhost:7081/hausa/articles/c2nr6xqmnewo"`;
 
 exports[`Canonical Articles SEO Dir attribute 1`] = `"ltr"`;
 
@@ -209,7 +209,7 @@ exports[`Canonical Articles SEO Linked data should match text 1`] = `
         "name": "Hausa",
       },
       "mainEntityOfPage": {
-        "@id": "http://192.168.1.106:7081/hausa/articles/c2nr6xqmnewo",
+        "@id": "http://localhost:7081/hausa/articles/c2nr6xqmnewo",
         "@type": "WebPage",
         "name": "Wannan shine taken SEO na wannan labarin gwaji",
       },
@@ -225,7 +225,7 @@ exports[`Canonical Articles SEO Linked data should match text 1`] = `
         "publishingPrinciples": "https://www.bbc.com/hausa/game-da-mu-49283501",
       },
       "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/metadata/poster-1024x576.png",
-      "url": "http://192.168.1.106:7081/hausa/articles/c2nr6xqmnewo",
+      "url": "http://localhost:7081/hausa/articles/c2nr6xqmnewo",
     },
   ],
 }
@@ -258,7 +258,7 @@ exports[`Canonical Articles SEO OG title 1`] = `"Wannan shine taken SEO na wanna
 
 exports[`Canonical Articles SEO OG type 1`] = `"article"`;
 
-exports[`Canonical Articles SEO OG url 1`] = `"http://192.168.1.106:7081/hausa/articles/c2nr6xqmnewo"`;
+exports[`Canonical Articles SEO OG url 1`] = `"http://localhost:7081/hausa/articles/c2nr6xqmnewo"`;
 
 exports[`Canonical Articles SEO Page title 1`] = `"Wannan shine taken SEO na wannan labarin gwaji - BBC News Hausa"`;
 

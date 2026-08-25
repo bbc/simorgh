@@ -10,7 +10,7 @@ exports[`AMP Story Page Analytics ATI 1`] = `
     "base": "https://logws1363.ati-host.net/hit.xiti?",
     "pageview": [
       {
-        "s": "598342",
+        "s": "598343",
       },
       {
         "s2": "58",
@@ -86,7 +86,7 @@ exports[`AMP Story Page Analytics chartbeat 1`] = `
 {
   "vars": {
     "contentType": "STY",
-    "domain": "kyrgyz.bbc.co.uk",
+    "domain": "test.bbc.co.uk",
     "sections": "Kyrgyz, Kyrgyz - STY",
     "title": "Test STY for social embeds",
     "uid": 50924,
@@ -199,7 +199,7 @@ exports[`AMP Story Page Main heading should match text 1`] = `"Test STY for soci
 exports[`AMP Story Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
-  "url": "http://192.168.1.106:7081/kyrgyz/images/icons/icon-192x192.png",
+  "url": "http://localhost:7081/kyrgyz/images/icons/icon-192x192.png",
 }
 `;
 
@@ -231,7 +231,7 @@ exports[`AMP Story Page SEO Apple Touch Icon should match attributes 5`] = `
 }
 `;
 
-exports[`AMP Story Page SEO Canonical link 1`] = `"http://192.168.1.106:7081/kyrgyz/23292889"`;
+exports[`AMP Story Page SEO Canonical link 1`] = `"http://localhost:7081/kyrgyz/23292889"`;
 
 exports[`AMP Story Page SEO Dir attribute 1`] = `"ltr"`;
 
@@ -274,7 +274,7 @@ exports[`AMP Story Page SEO Linked data should match text 1`] = `
         "name": "Kyrgyz",
       },
       "mainEntityOfPage": {
-        "@id": "http://192.168.1.106:7081/kyrgyz/23292889",
+        "@id": "http://localhost:7081/kyrgyz/23292889",
         "@type": "WebPage",
         "name": "Test STY for social embeds",
       },
@@ -290,7 +290,7 @@ exports[`AMP Story Page SEO Linked data should match text 1`] = `
         "publishingPrinciples": "https://www.bbc.com/kyrgyz/institutional-49677275",
       },
       "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_kyrgyz/CF33/test/_63734035_socialmedia.jpg",
-      "url": "http://192.168.1.106:7081/kyrgyz/23292889",
+      "url": "http://localhost:7081/kyrgyz/23292889",
     },
   ],
 }
@@ -310,7 +310,7 @@ exports[`AMP Story Page SEO OG title 1`] = `"Test STY for social embeds - BBC Ne
 
 exports[`AMP Story Page SEO OG type 1`] = `"article"`;
 
-exports[`AMP Story Page SEO OG url 1`] = `"http://192.168.1.106:7081/kyrgyz/23292889"`;
+exports[`AMP Story Page SEO OG url 1`] = `"http://localhost:7081/kyrgyz/23292889"`;
 
 exports[`AMP Story Page SEO Page title 1`] = `"Test STY for social embeds - BBC News Кыргыз Кызматы"`;
 

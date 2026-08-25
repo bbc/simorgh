@@ -9,7 +9,7 @@ exports[`Canonical On Demand Audio Page Analytics ATI tracking pixel hostname 1`
 exports[`Canonical On Demand Audio Page Analytics ATI tracking pixel search params 1`] = `
 [
   {
-    "s": "598342",
+    "s": "598343",
   },
   {
     "s2": "68",
@@ -140,27 +140,22 @@ exports[`Canonical On Demand Audio Page Media Loader renders a valid container 1
   data-e2e="media-loader__container"
 >
   <div
-    class="css-rfn4r6"
-    data-simorgh-media-loader="inactive"
+    class="media-player css-1kf4wj3"
+    data-e2e="media-player"
   >
-    <div
-      class="media-player css-1kf4wj3"
-      data-e2e="media-player"
-    >
-      <noscript>
-        <div>
-          <div
-            class="css-q0ilh"
+    <noscript>
+      <div>
+        <div
+          class="css-q0ilh"
+        >
+          <strong
+            class="css-pow7hy"
           >
-            <strong
-              class="css-pow7hy"
-            >
-              په دې وسیله کې د غږ اوريدل او ویډیو لیدنه شونې نه ده.
-            </strong>
-          </div>
+            په دې وسیله کې د غږ اوريدل او ویډیو لیدنه شونې نه ده.
+          </strong>
         </div>
-      </noscript>
-    </div>
+      </div>
+    </noscript>
   </div>
 </figure>
 `;
@@ -196,7 +191,7 @@ exports[`Canonical On Demand Audio Page Recent Episodes List items should match 
 exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
-  "url": "http://192.168.1.106:7081/pashto/images/icons/icon-192x192.png",
+  "url": "http://localhost:7081/pashto/images/icons/icon-192x192.png",
 }
 `;
 
@@ -228,7 +223,7 @@ exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attrib
 }
 `;
 
-exports[`Canonical On Demand Audio Page SEO Canonical link 1`] = `"http://192.168.1.106:7081/pashto/bbc_pashto_radio/w3ct7cnw"`;
+exports[`Canonical On Demand Audio Page SEO Canonical link 1`] = `"http://localhost:7081/pashto/bbc_pashto_radio/w3ct7cnw"`;
 
 exports[`Canonical On Demand Audio Page SEO Dir attribute 1`] = `"rtl"`;
 
@@ -256,7 +251,7 @@ exports[`Canonical On Demand Audio Page SEO Linked data should match text 1`] = 
         "name": "Pashto",
       },
       "mainEntityOfPage": {
-        "@id": "http://192.168.1.106:7081/pashto/bbc_pashto_radio/w3ct7cnw",
+        "@id": "http://localhost:7081/pashto/bbc_pashto_radio/w3ct7cnw",
         "@type": "WebPage",
         "name": "Current Affairs Evening Programme  - ماښامنۍ خپرونه - Pashto",
       },
@@ -272,7 +267,7 @@ exports[`Canonical On Demand Audio Page SEO Linked data should match text 1`] = 
         "publishingPrinciples": "https://www.bbc.com/pashto/institutional-49283007",
       },
       "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pashto/images/metadata/poster-1024x576.png",
-      "url": "http://192.168.1.106:7081/pashto/bbc_pashto_radio/w3ct7cnw",
+      "url": "http://localhost:7081/pashto/bbc_pashto_radio/w3ct7cnw",
     },
     {
       "@type": "AudioObject",
@@ -300,7 +295,7 @@ exports[`Canonical On Demand Audio Page SEO OG title 1`] = `"Current Affairs Eve
 
 exports[`Canonical On Demand Audio Page SEO OG type 1`] = `"website"`;
 
-exports[`Canonical On Demand Audio Page SEO OG url 1`] = `"http://192.168.1.106:7081/pashto/bbc_pashto_radio/w3ct7cnw"`;
+exports[`Canonical On Demand Audio Page SEO OG url 1`] = `"http://localhost:7081/pashto/bbc_pashto_radio/w3ct7cnw"`;
 
 exports[`Canonical On Demand Audio Page SEO Page title 1`] = `"Current Affairs Evening Programme  - ماښامنۍ خپرونه - Pashto - BBC News پښتو"`;
 

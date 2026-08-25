@@ -9,7 +9,7 @@ exports[`Canonical Articles Analytics ATI tracking pixel hostname 1`] = `"https:
 exports[`Canonical Articles Analytics ATI tracking pixel search params 1`] = `
 [
   {
-    "s": "598342",
+    "s": "598343",
   },
   {
     "s2": "69",
@@ -232,7 +232,7 @@ exports[`Canonical Articles Paragraph should match paragraph text 1`] = `"شای
 exports[`Canonical Articles SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
-  "url": "http://192.168.1.106:7081/persian/images/icons/icon-192x192.png",
+  "url": "http://localhost:7081/persian/images/icons/icon-192x192.png",
 }
 `;
 
@@ -264,7 +264,7 @@ exports[`Canonical Articles SEO Apple Touch Icon should match attributes 5`] = `
 }
 `;
 
-exports[`Canonical Articles SEO Canonical link 1`] = `"http://192.168.1.106:7081/persian/articles/c4vlle3q337o"`;
+exports[`Canonical Articles SEO Canonical link 1`] = `"http://localhost:7081/persian/articles/c4vlle3q337o"`;
 
 exports[`Canonical Articles SEO Dir attribute 1`] = `"rtl"`;
 
@@ -307,7 +307,7 @@ exports[`Canonical Articles SEO Linked data should match text 1`] = `
         "name": "Persian",
       },
       "mainEntityOfPage": {
-        "@id": "http://192.168.1.106:7081/persian/articles/c4vlle3q337o",
+        "@id": "http://localhost:7081/persian/articles/c4vlle3q337o",
         "@type": "WebPage",
         "name": "پهپادی که برایتان قهوه می‌آورد",
       },
@@ -323,7 +323,7 @@ exports[`Canonical Articles SEO Linked data should match text 1`] = `
         "publishingPrinciples": "https://www.bbc.com/persian/institutional-49283091",
       },
       "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/metadata/poster-1024x576.png",
-      "url": "http://192.168.1.106:7081/persian/articles/c4vlle3q337o",
+      "url": "http://localhost:7081/persian/articles/c4vlle3q337o",
     },
   ],
 }
@@ -343,7 +343,7 @@ exports[`Canonical Articles SEO OG title 1`] = `"پهپادی که برایتا�
 
 exports[`Canonical Articles SEO OG type 1`] = `"article"`;
 
-exports[`Canonical Articles SEO OG url 1`] = `"http://192.168.1.106:7081/persian/articles/c4vlle3q337o"`;
+exports[`Canonical Articles SEO OG url 1`] = `"http://localhost:7081/persian/articles/c4vlle3q337o"`;
 
 exports[`Canonical Articles SEO Page title 1`] = `"پهپادی که برایتان قهوه می‌آورد - BBC News فارسی"`;
 

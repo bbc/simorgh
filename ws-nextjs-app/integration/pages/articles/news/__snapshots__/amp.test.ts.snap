@@ -179,7 +179,7 @@ exports[`AMP Articles Main heading should match text 1`] = `"Royal wedding flowe
 exports[`AMP Articles SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
-  "url": "http://192.168.1.106:7081/news/images/icons/icon-192x192.png",
+  "url": "http://localhost:7081/news/images/icons/icon-192x192.png",
 }
 `;
 
@@ -211,7 +211,7 @@ exports[`AMP Articles SEO Apple Touch Icon should match attributes 5`] = `
 }
 `;
 
-exports[`AMP Articles SEO Canonical link 1`] = `"http://192.168.1.106:7081/news/articles/c0g992jmmkko"`;
+exports[`AMP Articles SEO Canonical link 1`] = `"http://localhost:7081/news/articles/c0g992jmmkko"`;
 
 exports[`AMP Articles SEO Dir attribute 1`] = `"ltr"`;
 
@@ -275,7 +275,7 @@ exports[`AMP Articles SEO Linked data should match text 1`] = `
         "name": "English",
       },
       "mainEntityOfPage": {
-        "@id": "http://192.168.1.106:7081/news/articles/c0g992jmmkko",
+        "@id": "http://localhost:7081/news/articles/c0g992jmmkko",
         "@type": "WebPage",
         "name": "Royal wedding flowers given to Hackney hospice",
       },
@@ -291,7 +291,7 @@ exports[`AMP Articles SEO Linked data should match text 1`] = `
         "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
       },
       "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_news/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg",
-      "url": "http://192.168.1.106:7081/news/articles/c0g992jmmkko",
+      "url": "http://localhost:7081/news/articles/c0g992jmmkko",
     },
   ],
 }
@@ -311,7 +311,7 @@ exports[`AMP Articles SEO OG title 1`] = `"Royal wedding flowers given to Hackne
 
 exports[`AMP Articles SEO OG type 1`] = `"article"`;
 
-exports[`AMP Articles SEO OG url 1`] = `"http://192.168.1.106:7081/news/articles/c0g992jmmkko"`;
+exports[`AMP Articles SEO OG url 1`] = `"http://localhost:7081/news/articles/c0g992jmmkko"`;
 
 exports[`AMP Articles SEO Page title 1`] = `"Royal wedding flowers given to Hackney hospice - BBC News"`;
 

@@ -9,7 +9,7 @@ exports[`Canonical Most Read Page Analytics ATI tracking pixel hostname 1`] = `"
 exports[`Canonical Most Read Page Analytics ATI tracking pixel search params 1`] = `
 [
   {
-    "s": "598342",
+    "s": "598343",
   },
   {
     "s2": "70",
@@ -179,7 +179,7 @@ exports[`Canonical Most Read Page Most Read has item with rank 5`] = `
 exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
-  "url": "http://192.168.1.106:7081/pidgin/images/icons/icon-192x192.png",
+  "url": "http://localhost:7081/pidgin/images/icons/icon-192x192.png",
 }
 `;
 
@@ -211,7 +211,7 @@ exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 5
 }
 `;
 
-exports[`Canonical Most Read Page SEO Canonical link 1`] = `"http://192.168.1.106:7081/pidgin/popular/read"`;
+exports[`Canonical Most Read Page SEO Canonical link 1`] = `"http://localhost:7081/pidgin/popular/read"`;
 
 exports[`Canonical Most Read Page SEO Dir attribute 1`] = `"ltr"`;
 
@@ -240,7 +240,7 @@ exports[`Canonical Most Read Page SEO Linked data should match text 1`] = `
         "name": "Nigerian Pidgin",
       },
       "mainEntityOfPage": {
-        "@id": "http://192.168.1.106:7081/pidgin/popular/read",
+        "@id": "http://localhost:7081/pidgin/popular/read",
         "@type": "WebPage",
         "name": "Di one wey dem dey read well well",
       },
@@ -256,7 +256,7 @@ exports[`Canonical Most Read Page SEO Linked data should match text 1`] = `
         "publishingPrinciples": "https://www.bbc.com/pidgin/institutional-48528766",
       },
       "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/metadata/poster-1024x576.png",
-      "url": "http://192.168.1.106:7081/pidgin/popular/read",
+      "url": "http://localhost:7081/pidgin/popular/read",
     },
     {
       "@type": "ItemList",
@@ -282,7 +282,7 @@ exports[`Canonical Most Read Page SEO OG title 1`] = `"Di one wey dem dey read w
 
 exports[`Canonical Most Read Page SEO OG type 1`] = `"website"`;
 
-exports[`Canonical Most Read Page SEO OG url 1`] = `"http://192.168.1.106:7081/pidgin/popular/read"`;
+exports[`Canonical Most Read Page SEO OG url 1`] = `"http://localhost:7081/pidgin/popular/read"`;
 
 exports[`Canonical Most Read Page SEO Page title 1`] = `"Di one wey dem dey read well well - BBC News Pidgin"`;
 

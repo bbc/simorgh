@@ -94,7 +94,7 @@ exports[`AMP Articles Main heading should match text 1`] = `"This is the headlin
 exports[`AMP Articles SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
-  "url": "http://192.168.1.106:7081/scotland/images/icons/icon-192x192.png",
+  "url": "http://localhost:7081/scotland/images/icons/icon-192x192.png",
 }
 `;
 
@@ -126,7 +126,7 @@ exports[`AMP Articles SEO Apple Touch Icon should match attributes 5`] = `
 }
 `;
 
-exports[`AMP Articles SEO Canonical link 1`] = `"http://192.168.1.106:7081/scotland/articles/czwj5l0n210o"`;
+exports[`AMP Articles SEO Canonical link 1`] = `"http://localhost:7081/scotland/articles/czwj5l0n210o"`;
 
 exports[`AMP Articles SEO Dir attribute 1`] = `"ltr"`;
 
@@ -168,7 +168,7 @@ exports[`AMP Articles SEO Linked data should match text 1`] = `
         "name": "English",
       },
       "mainEntityOfPage": {
-        "@id": "http://192.168.1.106:7081/scotland/articles/czwj5l0n210o",
+        "@id": "http://localhost:7081/scotland/articles/czwj5l0n210o",
         "@type": "WebPage",
         "name": "This is the SEO headline of this test article",
       },
@@ -183,7 +183,7 @@ exports[`AMP Articles SEO Linked data should match text 1`] = `
         "name": "BBC",
       },
       "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/scotland/images/metadata/poster-1024x576.png",
-      "url": "http://192.168.1.106:7081/scotland/articles/czwj5l0n210o",
+      "url": "http://localhost:7081/scotland/articles/czwj5l0n210o",
     },
   ],
 }
@@ -216,7 +216,7 @@ exports[`AMP Articles SEO OG title 1`] = `"This is the SEO headline of this test
 
 exports[`AMP Articles SEO OG type 1`] = `"article"`;
 
-exports[`AMP Articles SEO OG url 1`] = `"http://192.168.1.106:7081/scotland/articles/czwj5l0n210o"`;
+exports[`AMP Articles SEO OG url 1`] = `"http://localhost:7081/scotland/articles/czwj5l0n210o"`;
 
 exports[`AMP Articles SEO Page title 1`] = `"This is the SEO headline of this test article - BBC Scotland"`;
 

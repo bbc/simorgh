@@ -9,7 +9,7 @@ exports[`Canonical Photo Gallery Page Analytics ATI tracking pixel hostname 1`] 
 exports[`Canonical Photo Gallery Page Analytics ATI tracking pixel search params 1`] = `
 [
   {
-    "s": "598342",
+    "s": "598343",
   },
   {
     "s2": "90",
@@ -158,7 +158,7 @@ exports[`Canonical Photo Gallery Page Main heading should match text 1`] = `"6 �
 exports[`Canonical Photo Gallery Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
-  "url": "http://192.168.1.106:7081/thai/images/icons/icon-192x192.png",
+  "url": "http://localhost:7081/thai/images/icons/icon-192x192.png",
 }
 `;
 
@@ -190,7 +190,7 @@ exports[`Canonical Photo Gallery Page SEO Apple Touch Icon should match attribut
 }
 `;
 
-exports[`Canonical Photo Gallery Page SEO Canonical link 1`] = `"http://192.168.1.106:7081/thai/thailand-49950038"`;
+exports[`Canonical Photo Gallery Page SEO Canonical link 1`] = `"http://localhost:7081/thai/thailand-49950038"`;
 
 exports[`Canonical Photo Gallery Page SEO Dir attribute 1`] = `"ltr"`;
 
@@ -233,7 +233,7 @@ exports[`Canonical Photo Gallery Page SEO Linked data should match text 1`] = `
         "name": "Thai",
       },
       "mainEntityOfPage": {
-        "@id": "http://192.168.1.106:7081/thai/thailand-49950038",
+        "@id": "http://localhost:7081/thai/thailand-49950038",
         "@type": "WebPage",
         "name": "6 ตุลา : ธรรมศาสตร์จัดกิจกรรมรำลึก 43 ปี 6 ตุลา 2519",
       },
@@ -249,7 +249,7 @@ exports[`Canonical Photo Gallery Page SEO Linked data should match text 1`] = `
         "publishingPrinciples": "https://www.bbc.com/thai/institutional-49281839",
       },
       "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_thai/17431/production/_109118259_01.jpg",
-      "url": "http://192.168.1.106:7081/thai/thailand-49950038",
+      "url": "http://localhost:7081/thai/thailand-49950038",
     },
   ],
 }
@@ -269,7 +269,7 @@ exports[`Canonical Photo Gallery Page SEO OG title 1`] = `"6 ตุลา : ธ�
 
 exports[`Canonical Photo Gallery Page SEO OG type 1`] = `"article"`;
 
-exports[`Canonical Photo Gallery Page SEO OG url 1`] = `"http://192.168.1.106:7081/thai/thailand-49950038"`;
+exports[`Canonical Photo Gallery Page SEO OG url 1`] = `"http://localhost:7081/thai/thailand-49950038"`;
 
 exports[`Canonical Photo Gallery Page SEO Page title 1`] = `"6 ตุลา : ธรรมศาสตร์จัดกิจกรรมรำลึก 43 ปี 6 ตุลา 2519 - BBC News ไทย"`;
 

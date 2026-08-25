@@ -10,7 +10,7 @@ exports[`AMP Story Page Analytics ATI 1`] = `
     "base": "https://logws1363.ati-host.net/hit.xiti?",
     "pageview": [
       {
-        "s": "598342",
+        "s": "598343",
       },
       {
         "s2": "51",
@@ -87,7 +87,7 @@ exports[`AMP Story Page Analytics chartbeat 1`] = `
   "vars": {
     "authors": "Kalkidan Yibeltal",
     "contentType": "STY",
-    "domain": "hausa.bbc.co.uk",
+    "domain": "test.bbc.co.uk",
     "sections": "Hausa, Hausa - STY",
     "title": "Ɗanɗano: Kuskure a Hausa da Ƙa’idar hira da baƙì - Ɓ ɓ ɗ Ɗ ƙ Ƙ",
     "uid": 50924,
@@ -209,7 +209,7 @@ exports[`AMP Story Page Main heading should match text 1`] = `"Ɗanɗano: Kuskur
 exports[`AMP Story Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
-  "url": "http://192.168.1.106:7081/hausa/images/icons/icon-192x192.png",
+  "url": "http://localhost:7081/hausa/images/icons/icon-192x192.png",
 }
 `;
 
@@ -241,7 +241,7 @@ exports[`AMP Story Page SEO Apple Touch Icon should match attributes 5`] = `
 }
 `;
 
-exports[`AMP Story Page SEO Canonical link 1`] = `"http://192.168.1.106:7081/hausa/labarai-23246985"`;
+exports[`AMP Story Page SEO Canonical link 1`] = `"http://localhost:7081/hausa/labarai-23246985"`;
 
 exports[`AMP Story Page SEO Dir attribute 1`] = `"ltr"`;
 
@@ -277,7 +277,7 @@ exports[`AMP Story Page SEO Linked data should match text 1`] = `
         "name": "Hausa",
       },
       "mainEntityOfPage": {
-        "@id": "http://192.168.1.106:7081/hausa/labarai-23246985",
+        "@id": "http://localhost:7081/hausa/labarai-23246985",
         "@type": "WebPage",
         "name": "Ɗanɗano: Kuskure a Hausa da Ƙa’idar hira da baƙì - Ɓ ɓ ɗ Ɗ ƙ Ƙ",
       },
@@ -293,7 +293,7 @@ exports[`AMP Story Page SEO Linked data should match text 1`] = `
         "publishingPrinciples": "https://www.bbc.com/hausa/game-da-mu-49283501",
       },
       "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_hausa/1745C/test/_63542359_hi035712328.jpg",
-      "url": "http://192.168.1.106:7081/hausa/labarai-23246985",
+      "url": "http://localhost:7081/hausa/labarai-23246985",
     },
   ],
 }
@@ -326,7 +326,7 @@ exports[`AMP Story Page SEO OG title 1`] = `"Ɗanɗano: Kuskure a Hausa da Ƙa�
 
 exports[`AMP Story Page SEO OG type 1`] = `"article"`;
 
-exports[`AMP Story Page SEO OG url 1`] = `"http://192.168.1.106:7081/hausa/labarai-23246985"`;
+exports[`AMP Story Page SEO OG url 1`] = `"http://localhost:7081/hausa/labarai-23246985"`;
 
 exports[`AMP Story Page SEO Page title 1`] = `"Ɗanɗano: Kuskure a Hausa da Ƙa’idar hira da baƙì - Ɓ ɓ ɗ Ɗ ƙ Ƙ - BBC News Hausa"`;
 
