@@ -1,20 +1,20 @@
 import {
-  getActivationContext,
-  setActivationContext,
-  resetActivationContext,
+  getActivationTrackingData,
+  setActivationTrackingData,
+  resetActivationTrackingData,
 } from '.';
 
-describe('activationContext', () => {
+describe('activationTrackingData', () => {
   afterEach(() => {
-    resetActivationContext();
+    resetActivationTrackingData();
   });
 
   it('should default to a disabled context', () => {
-    expect(getActivationContext()).toEqual({ trackingIsEnabled: false });
+    expect(getActivationTrackingData()).toEqual({ trackingIsEnabled: false });
   });
 
   it('should return the most recently set context', () => {
-    setActivationContext({
+    setActivationTrackingData({
       trackingIsEnabled: true,
       pageIdentifier: 'page-identifier',
       producerName: 'producer-name',
@@ -23,7 +23,7 @@ describe('activationContext', () => {
       hashedId: 'hashed-id',
     });
 
-    expect(getActivationContext()).toEqual({
+    expect(getActivationTrackingData()).toEqual({
       trackingIsEnabled: true,
       pageIdentifier: 'page-identifier',
       producerName: 'producer-name',
@@ -34,9 +34,9 @@ describe('activationContext', () => {
   });
 
   it('should reset back to a disabled context', () => {
-    setActivationContext({ trackingIsEnabled: true });
-    resetActivationContext();
+    setActivationTrackingData({ trackingIsEnabled: true });
+    resetActivationTrackingData();
 
-    expect(getActivationContext()).toEqual({ trackingIsEnabled: false });
+    expect(getActivationTrackingData()).toEqual({ trackingIsEnabled: false });
   });
 });

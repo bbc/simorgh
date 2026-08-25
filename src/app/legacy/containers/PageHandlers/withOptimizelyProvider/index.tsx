@@ -12,7 +12,7 @@ import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import { notifyDecision } from '#app/lib/optimizelyDecisionStore';
 import sendOptimizelyActivationEvent from '#app/lib/analyticsUtils/sendOptimizelyActivationEvent';
-import { getActivationContext } from '#app/lib/analyticsUtils/activationContext';
+import { getActivationTrackingData } from '#app/lib/analyticsUtils/activationTrackingData';
 import { TOKEN_COOKIE_NAME } from '#app/lib/uasApi/tokenRefresh/tokenManager';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -93,11 +93,11 @@ optimizely?.notificationCenter?.addNotificationListener(
 
       if (impressionDispatched) {
         if (isNewDecision) {
-          const activationContext = getActivationContext();
+          const activationTrackingData = getActivationTrackingData();
           sendOptimizelyActivationEvent({
             experimentName: decisionKey,
             experimentVariant: variationKey,
-            ...activationContext,
+            ...activationTrackingData,
           });
         }
 

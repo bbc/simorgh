@@ -706,7 +706,7 @@ describe('withOptimizelyProvider HOC', () => {
   describe('activation event tracking', () => {
     const mocksendOptimizelyActivationEvent = jest.fn();
     const mockNotifyDecision = jest.fn();
-    const mockActivationContext = {
+    const mockActivationTrackingData = {
       trackingIsEnabled: true,
       pageIdentifier: 'page-identifier',
       producerName: 'producer-name',
@@ -750,8 +750,8 @@ describe('withOptimizelyProvider HOC', () => {
           default: mocksendOptimizelyActivationEvent,
         }),
       );
-      jest.doMock('#app/lib/analyticsUtils/activationContext', () => ({
-        getActivationContext: () => mockActivationContext,
+      jest.doMock('#app/lib/analyticsUtils/activationTrackingData', () => ({
+        getActivationTrackingData: () => mockActivationTrackingData,
       }));
       // eslint-disable-next-line global-require
       require('./index');
@@ -774,7 +774,7 @@ describe('withOptimizelyProvider HOC', () => {
       expect(mocksendOptimizelyActivationEvent).toHaveBeenCalledWith({
         experimentName: 'test_flag',
         experimentVariant: 'control',
-        ...mockActivationContext,
+        ...mockActivationTrackingData,
       });
     });
 
