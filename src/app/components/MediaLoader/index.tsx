@@ -67,6 +67,49 @@ export const BumpLoader = ({ nonce }: BumpLoaderProps) => (
   </Helmet>
 );
 
+const AdvertTagLoader = () => {
+  const location = useLocation();
+  const queryString = location ? location.search : '';
+
+  useEffect(() => {
+    // Set window.dotcom to disabled if it doesn't load in 2 seconds.
+    const timeoutID = setTimeout(() => {
+      if (window.dotcom.ads.resolves) {
+        window.dotcom.ads.resolves.enabled.forEach(res => res(false));
+        window.dotcom.ads.resolves.getAdTag.forEach(res => res(''));
+      }
+    }, 2000);
+
+    // Initialise the ads object if it hasn't already been loaded.
+    window.dotcom = window.dotcom || { cmd: [] };
+    window.dotcom.ads = window.dotcom.ads || {
+      resolves: {
+        enabled: [],
+        getAdTag: [],
+      },
+      enabled() {
+        return new Promise(resolve => {
+          window.dotcom.ads.resolves.enabled.push(resolve);
+        });
+      },
+      getAdTag() {
+        return new Promise(resolve => {
+          window.dotcom.ads.resolves.getAdTag.push(resolve);
+        });
+      },
+    };
+
+    return () => clearTimeout(timeoutID);
+  }, [queryString]);
+
+  return (
+    <Helmet>
+      <script type="module" src={getBootstrapSrc(queryString)} async />
+      <script noModule src={getBootstrapSrc(queryString, true)} async />
+    </Helmet>
+  );
+};
+
 type MediaContainerProps = {
   playerConfig: PlayerConfig;
   showAds: boolean;
@@ -236,6 +279,7 @@ const MediaLoader = ({
     isAmp,
     isLite,
     showAdsBasedOnLocation,
+    nonce,
   } = use(RequestContext);
 
   const [showPlaceholder, setShowPlaceholder] = useState(
@@ -246,6 +290,8 @@ const MediaLoader = ({
   // Tracks whether *this* instance is the one that set the global fullscreen
   // classes, so its cleanup does not clobber another player's active fullscreen state.
   const hasActivatedFakeFullscreenRef = useRef(false);
+
+  if (isLite) return null;
 
   useEffect(() => {
     return () => {
@@ -395,6 +441,8 @@ const MediaLoader = ({
           // where GPU compositing does not bypass CSS stacking as it does on
           // desktop browsers.
           <>
+            {showAds && <AdvertTagLoader />}
+            <BumpLoader nonce={nonce} />
             {shouldHandleFakeFullscreen && (
               <div
                 aria-hidden="true"
