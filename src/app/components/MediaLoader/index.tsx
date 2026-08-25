@@ -32,7 +32,6 @@ import styles, {
   PLAYER_FULLSCREEN_CLASS,
   FAKE_FULLSCREEN_LAYER_CLASS,
   FAKE_FULLSCREEN_ACTIVE_CLASS,
-  ACTIVE_FULLSCREEN_LOADER_STATE,
   fakeFullscreenStyles,
 } from './index.styles';
 import { getBootstrapSrc } from '../Ad/Canonical';
@@ -47,54 +46,6 @@ const PAGETYPES_IGNORE_PLACEHOLDER: PageTypes[] = [
 ];
 
 const logger = nodeLogger(__filename);
-
-const FAKE_FULLSCREEN_STYLE_ID = 'simorgh-fake-fullscreen-styles';
-
-// The fake fullscreen CSS is static and shared by every player, so it is
-// injected once per page (guarded by its element id) rather than once per
-// MediaLoader instance. Injected client-side only, since fake fullscreen is a
-// client interaction; the nonce keeps it within the page's style CSP.
-const FakeFullscreenStyles = ({ nonce }: { nonce?: string | null }) => {
-  useEffect(() => {
-    if (document.getElementById(FAKE_FULLSCREEN_STYLE_ID)) return;
-
-    const styleElement = document.createElement('style');
-    styleElement.id = FAKE_FULLSCREEN_STYLE_ID;
-    if (nonce) styleElement.setAttribute('nonce', nonce);
-    styleElement.textContent = fakeFullscreenStyles;
-    document.head.appendChild(styleElement);
-  }, [nonce]);
-
-  return null;
-};
-
-// The backdrop is portalled to <body> so it escapes this component's (and any
-// ancestor modal's) stacking context and sits at the document root, alongside
-// the fixed, elevated player wrapper. Their z-indexes are then directly
-// comparable (backdrop < player), which is required on iOS Safari where GPU
-// compositing does not bypass CSS stacking as it does on desktop.
-const FakeFullscreenLayer = ({ isActive }: { isActive: boolean }) => {
-  // Defer the portal until after mount so the hydration render matches the
-  // server (both render nothing). Portalling during hydration would insert the
-  // backdrop into <body> before hydration completes, causing a mismatch.
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  if (!isMounted) return null;
-
-  return createPortal(
-    <div
-      aria-hidden="true"
-      className={`${FAKE_FULLSCREEN_LAYER_CLASS}${
-        isActive ? ` ${FAKE_FULLSCREEN_ACTIVE_CLASS}` : ''
-      }`}
-    />,
-    document.body,
-  );
-};
 
 type BumpLoaderProps = {
   nonce?: string | null;
@@ -115,49 +66,6 @@ export const BumpLoader = ({ nonce }: BumpLoaderProps) => (
     </script>
   </Helmet>
 );
-
-const AdvertTagLoader = () => {
-  const location = useLocation();
-  const queryString = location ? location.search : '';
-
-  useEffect(() => {
-    // Set window.dotcom to disabled if it doesn't load in 2 seconds.
-    const timeoutID = setTimeout(() => {
-      if (window.dotcom.ads.resolves) {
-        window.dotcom.ads.resolves.enabled.forEach(res => res(false));
-        window.dotcom.ads.resolves.getAdTag.forEach(res => res(''));
-      }
-    }, 2000);
-
-    // Initialise the ads object if it hasn't already been loaded.
-    window.dotcom = window.dotcom || { cmd: [] };
-    window.dotcom.ads = window.dotcom.ads || {
-      resolves: {
-        enabled: [],
-        getAdTag: [],
-      },
-      enabled() {
-        return new Promise(resolve => {
-          window.dotcom.ads.resolves.enabled.push(resolve);
-        });
-      },
-      getAdTag() {
-        return new Promise(resolve => {
-          window.dotcom.ads.resolves.getAdTag.push(resolve);
-        });
-      },
-    };
-
-    return () => clearTimeout(timeoutID);
-  }, [queryString]);
-
-  return (
-    <Helmet>
-      <script type="module" src={getBootstrapSrc(queryString)} async />
-      <script noModule src={getBootstrapSrc(queryString, true)} async />
-    </Helmet>
-  );
-};
 
 type MediaContainerProps = {
   playerConfig: PlayerConfig;
@@ -299,12 +207,6 @@ type Props = {
   embedded?: boolean;
   uniqueId?: string;
   eventMapping?: EventMapping;
-  // Set by callers that render the player inside their own fullscreen
-  // presentation (e.g. PortraitVideoModal, which is a full-viewport modal on
-  // mobile portrait). Prevents MediaLoader forcing SMP fake fullscreen and
-  // applying the global fullscreen page state, which would otherwise conflict
-  // with the caller's own fullscreen layout.
-  withinFullscreenContainer?: boolean;
   loadPlayerOnInitialRender?: boolean;
   // Set by callers that render the player inside their own fullscreen
   // presentation (e.g. PortraitVideoModal, which is a full-viewport modal on
@@ -320,7 +222,6 @@ const MediaLoader = ({
   embedded,
   uniqueId,
   eventMapping,
-  withinFullscreenContainer = false,
   loadPlayerOnInitialRender = false,
   withinFullscreenContainer = false,
 }: Props) => {
@@ -335,7 +236,6 @@ const MediaLoader = ({
     isAmp,
     isLite,
     showAdsBasedOnLocation,
-    nonce,
   } = use(RequestContext);
 
   const [showPlaceholder, setShowPlaceholder] = useState(
