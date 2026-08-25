@@ -135,6 +135,8 @@ The following sources that our configs folder currently support are:
 
 BUMP is loaded via RequireJS (`window.requirejs(['bump-4'], ...)`). The RequireJS callback cannot itself be `async`, so the player setup is wrapped in an inner `async` function that is invoked immediately. The player config is memoised (`useMemo`) so it keeps a stable identity across re-renders that aren't caused by a real input change (such as the fake fullscreen state toggling). Without this, `MediaContainer` would treat each render as a new config and tear down and recreate the BUMP player mid-playback.
 
+For the same reason, per-render config variations (`autoplay: false` when `loadPlayerOnInitialRender` is set, and `supportFakeFullscreen: true` when fake fullscreen is handled) are applied **inside** `MediaContainer`'s init effect rather than by spreading a new config object at the call site. The player-init effect depends on the stable `playerConfig` reference plus stable boolean flags, so a fake fullscreen toggle re-render never recreates the player.
+
 When a player is rendered inside a caller's own full-viewport presentation (for example `PortraitVideoModal` on mobile portrait), the caller passes `withinFullscreenContainer`. This prevents MediaLoader from forcing SMP fake fullscreen and applying the global fullscreen page state, which would otherwise conflict with the caller's own fullscreen layout.
 
 ## Fake fullscreen
@@ -152,6 +154,6 @@ The backdrop and the player wrapper both need to sit at the **document root stac
 - **The player wrapper** stays a fixed-position element with `z-index: 2147483647`. Because both it and the backdrop live at the document root, its `z-index` sits logically above the portalled backdrop.
 - **Cleanup** removes the global fullscreen classes from `<html>` and `<body>` on unmount, but only if this instance was the one that activated fullscreen (tracked via a ref), so it doesn't clobber another player's active fullscreen state.
 
-### Known issue
+### Playback stability during fullscreen transitions
 
-Fullscreen transitions can intermittently cause video playback to pause. The root cause is not yet understood — it may relate to portal mount timing and React hydration interactions, `z-index` interactions between fixed positioning and document-level rendering, iOS Safari GPU compositing with async portal rendering, or network conditions affecting portal mount timing. This behaviour still needs further investigation and testing.
+Entering or exiting fake fullscreen toggles `isFakeFullscreenActive` state, which re-renders `MediaLoader`. To keep playback uninterrupted across that transition, everything the BUMP player depends on must stay referentially stable: the memoised `playerConfig`, and the per-render config variations folded into the init effect (see [Player initialisation](#player-initialisation)). If any of these becomes a new value on the fullscreen re-render, `MediaContainer`'s init effect re-runs and recreates the player on the same DOM node, which tears down the playing video and shows a black screen. When adding new player options, apply them inside the init effect (keyed on stable dependencies) rather than by spreading a fresh config object at the call site.

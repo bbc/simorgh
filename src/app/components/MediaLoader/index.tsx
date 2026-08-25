@@ -152,6 +152,7 @@ type MediaContainerProps = {
   noJsMessage?: string;
   eventMapping?: EventMapping;
   shouldHandleFakeFullscreen?: boolean;
+  loadPlayerOnInitialRender?: boolean;
   onFakeFullscreenChange?: (isActive: boolean) => void;
 };
 
@@ -165,6 +166,7 @@ const MediaContainer = ({
   noJsMessage,
   eventMapping,
   shouldHandleFakeFullscreen = false,
+  loadPlayerOnInitialRender = false,
   onFakeFullscreenChange,
 }: MediaContainerProps) => {
   const playerElementRef = useRef<HTMLDivElement>(null);
@@ -178,9 +180,18 @@ const MediaContainer = ({
       window.requirejs(['bump-4'], (Bump: BumpType) => {
         if (playerElementRef?.current && playerConfig) {
           const initPlayer = async () => {
-            const effectiveConfig = shouldHandleFakeFullscreen
-              ? { ...playerConfig, supportFakeFullscreen: true }
-              : playerConfig;
+            const autoplayOverride = loadPlayerOnInitialRender
+              ? { autoplay: false }
+              : {};
+            const fakeFullscreenOverride = shouldHandleFakeFullscreen
+              ? { supportFakeFullscreen: true }
+              : {};
+
+            const effectiveConfig = {
+              ...playerConfig,
+              ...autoplayOverride,
+              ...fakeFullscreenOverride,
+            };
 
             const mediaPlayer = Bump.player(
               playerElementRef.current,
@@ -261,6 +272,7 @@ const MediaContainer = ({
     uniqueId,
     eventMapping,
     shouldHandleFakeFullscreen,
+    loadPlayerOnInitialRender,
   ]);
 
   return (
@@ -465,16 +477,13 @@ const MediaLoader = ({
                 />
               ) : (
                 <MediaContainer
-                  playerConfig={
-                    loadPlayerOnInitialRender
-                      ? { ...playerConfig, autoplay: false }
-                      : playerConfig
-                  }
+                  playerConfig={playerConfig}
                   showAds={showAds}
                   uniqueId={uniqueId}
                   noJsMessage={noJsMessage}
                   eventMapping={eventMapping}
                   shouldHandleFakeFullscreen={shouldHandleFakeFullscreen}
+                  loadPlayerOnInitialRender={loadPlayerOnInitialRender}
                   onFakeFullscreenChange={setFakeFullscreenPageState}
                 />
               )}

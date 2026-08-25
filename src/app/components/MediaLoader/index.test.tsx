@@ -5,7 +5,7 @@ import {
 } from '#app/components/react-testing-library-with-providers';
 import { Helmet } from 'react-helmet';
 import useLocation from '#app/hooks/useLocation';
-import { HOME_PAGE, TOPIC_PAGE, TV_PAGE } from '#app/routes/utils/pageTypes';
+import { HOME_PAGE, LIVE_PAGE, TOPIC_PAGE, TV_PAGE } from '#app/routes/utils/pageTypes';
 import MediaPlayer from '.';
 import {
   aresMediaBlocks,
@@ -122,6 +122,7 @@ describe('MediaLoader', () => {
       const mockRequire = jest.fn();
       const mockPlayer = {
         load: jest.fn(),
+        bind: jest.fn(),
       };
       const mockBump = {
         player: jest.fn(() => mockPlayer),
