@@ -454,7 +454,10 @@ const MediaLoader = ({
               <FakeFullscreenLayer isActive={isFakeFullscreenActive} />
             )}
             <div
-              css={styles.mediaPlayerWrapper}
+              css={styles.mediaPlayerWrapper({
+                isPortrait,
+                isFakeFullscreenActive,
+              })}
               data-simorgh-media-loader={
                 isFakeFullscreenActive
                   ? ACTIVE_FULLSCREEN_LOADER_STATE
