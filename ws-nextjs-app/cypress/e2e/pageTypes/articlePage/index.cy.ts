@@ -303,6 +303,18 @@ const nonSmokeCanonicalTestSuites = [
     tests: [...canonicalTests],
   },
   {
+    path: '/tamil/watch/cqxdxv159rlo',
+    runforEnv: ['local', 'live'],
+    service: 'tamil',
+    tests: [...canonicalTests],
+  },
+  {
+    path: '/tamil/listen/cqxdxv159rlo',
+    runforEnv: ['local', 'live'],
+    service: 'tamil',
+    tests: [...canonicalTests],
+  },
+  {
     path: '/ukrainian/articles/c8zv0eed9gko',
     runforEnv: ['live'],
     service: 'ukrainian',
