@@ -5,7 +5,12 @@ import {
 } from '#app/components/react-testing-library-with-providers';
 import { Helmet } from 'react-helmet';
 import useLocation from '#app/hooks/useLocation';
-import { HOME_PAGE, LIVE_PAGE, TOPIC_PAGE, TV_PAGE } from '#app/routes/utils/pageTypes';
+import {
+  HOME_PAGE,
+  LIVE_PAGE,
+  TOPIC_PAGE,
+  TV_PAGE,
+} from '#app/routes/utils/pageTypes';
 import MediaPlayer from '.';
 import {
   aresMediaBlocks,
@@ -14,6 +19,7 @@ import {
   onDemandTvBlocksWithOverrides,
 } from './fixture';
 import { MediaBlock } from './types';
+import { fakeFullscreenStyles } from './index.styles';
 import * as buildConfig from './utils/buildSettings';
 
 jest.mock('react', () => ({
@@ -544,6 +550,67 @@ describe('MediaLoader', () => {
       expect(ampIframeUrl).toEqual(
         'https://web-cdn.test.api.bbci.co.uk/ws/av-embeds/articles/cn8jgj8rjppo/p01k6msm/en-GB/amp',
       );
+    });
+  });
+
+  describe('FakeFullscreenStyles', () => {
+    const FAKE_FULLSCREEN_STYLE_ID = 'simorgh-fake-fullscreen-styles';
+
+    const getFakeFullscreenStyleElements = () =>
+      document.head.querySelectorAll(`style#${FAKE_FULLSCREEN_STYLE_ID}`);
+
+    afterEach(() => {
+      document
+        .getElementById(FAKE_FULLSCREEN_STYLE_ID)
+        ?.parentNode?.removeChild(
+          document.getElementById(FAKE_FULLSCREEN_STYLE_ID) as HTMLElement,
+        );
+    });
+
+    it('adds the fake fullscreen styles to the document head', async () => {
+      await act(async () => {
+        render(<MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} />, {
+          id: 'testId',
+        });
+      });
+
+      const styleElement = document.getElementById(FAKE_FULLSCREEN_STYLE_ID);
+
+      expect(styleElement).toBeInTheDocument();
+      expect(styleElement?.tagName).toBe('STYLE');
+      expect(styleElement?.textContent).toBe(fakeFullscreenStyles);
+    });
+
+    it('only adds the fake fullscreen styles once when multiple players are rendered', async () => {
+      await act(async () => {
+        render(
+          <>
+            <MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} />
+            <MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} />
+          </>,
+          {
+            id: 'testId',
+          },
+        );
+      });
+
+      expect(getFakeFullscreenStyleElements()).toHaveLength(1);
+    });
+
+    it('does not add the fake fullscreen styles for audio players', async () => {
+      await act(async () => {
+        render(
+          <MediaPlayer
+            blocks={[livePageAudioClipMediaBlock] as MediaBlock[]}
+          />,
+          {
+            id: 'testId',
+            pageType: LIVE_PAGE,
+          },
+        );
+      });
+
+      expect(document.getElementById(FAKE_FULLSCREEN_STYLE_ID)).toBeNull();
     });
   });
 });

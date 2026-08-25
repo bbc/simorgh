@@ -9,6 +9,10 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
   z-index: 2147483647;
 }
 
+body.simorgh-player-fullscreen .emotion-0 {
+  z-index: -1;
+}
+
 .emotion-2 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
@@ -1351,6 +1355,10 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
   left: 0;
   width: 100%;
   z-index: 2147483647;
+}
+
+body.simorgh-player-fullscreen .emotion-0 {
+  z-index: -1;
 }
 
 .emotion-2 {
@@ -2697,6 +2705,10 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   z-index: 2147483647;
 }
 
+body.simorgh-player-fullscreen .emotion-0 {
+  z-index: -1;
+}
+
 .emotion-2 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
@@ -4039,6 +4051,10 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   left: 0;
   width: 100%;
   z-index: 2147483647;
+}
+
+body.simorgh-player-fullscreen .emotion-0 {
+  z-index: -1;
 }
 
 .emotion-2 {
