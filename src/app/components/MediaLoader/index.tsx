@@ -408,8 +408,6 @@ const MediaLoader = ({
     ],
   );
 
-  if (isLite) return null;
-
   if (!config) return null;
 
   const {
