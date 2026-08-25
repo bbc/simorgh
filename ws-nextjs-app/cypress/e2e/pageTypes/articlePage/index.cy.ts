@@ -199,6 +199,7 @@ const nonSmokeCanonicalTestSuites = [
     service: 'afrique',
     tests: [...canonicalTests],
   },
+  // option
   {
     path: '/arabic/articles/cl5m3453w36o',
     runforEnv: ['test'],
