@@ -302,6 +302,7 @@ const nonSmokeCanonicalTestSuites = [
     service: 'tamil',
     tests: [...canonicalTests],
   },
+  // TODO: Temporarily disabled due to failing scheduled E2Es for Tamil watch/listen pages. Re-enable once the underlying issue is resolved.
   // {
   //   path: '/tamil/watch/cqxdxv159rlo',
   //   runforEnv: ['local', 'live'],
