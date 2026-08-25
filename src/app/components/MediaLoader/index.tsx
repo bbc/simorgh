@@ -73,7 +73,6 @@ const AdvertTagLoader = () => {
   const queryString = location ? location.search : '';
 
   useEffect(() => {
-    // Set window.dotcom to disabled if it doesn't load in 2 seconds.
     const timeoutID = setTimeout(() => {
       if (window.dotcom.ads.resolves) {
         window.dotcom.ads.resolves.enabled.forEach(res => res(false));
@@ -81,7 +80,6 @@ const AdvertTagLoader = () => {
       }
     }, 2000);
 
-    // Initialise the ads object if it hasn't already been loaded.
     window.dotcom = window.dotcom || { cmd: [] };
     window.dotcom.ads = window.dotcom.ads || {
       resolves: {
@@ -113,10 +111,6 @@ const AdvertTagLoader = () => {
 
 const FAKE_FULLSCREEN_STYLE_ID = 'simorgh-fake-fullscreen-styles';
 
-// The fake fullscreen CSS is static and shared by every player, so it is
-// injected once per page (guarded by its element id) rather than once per
-// MediaLoader instance. Injected client-side only, since fake fullscreen is a
-// client interaction; the nonce keeps it within the page's style CSP.
 const FakeFullscreenStyles = ({ nonce }: { nonce?: string | null }) => {
   useEffect(() => {
     if (document.getElementById(FAKE_FULLSCREEN_STYLE_ID)) return;
@@ -131,15 +125,7 @@ const FakeFullscreenStyles = ({ nonce }: { nonce?: string | null }) => {
   return null;
 };
 
-// The backdrop is portalled to <body> so it escapes this component's (and any
-// ancestor modal's) stacking context and sits at the document root, alongside
-// the fixed, elevated player wrapper. Their z-indexes are then directly
-// comparable (backdrop < player), which is required on iOS Safari where GPU
-// compositing does not bypass CSS stacking as it does on desktop.
 const FakeFullscreenLayer = ({ isActive }: { isActive: boolean }) => {
-  // Defer the portal until after mount so the hydration render matches the
-  // server (both render nothing). Portalling during hydration would insert the
-  // backdrop into <body> before hydration completes, causing a mismatch.
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -191,7 +177,6 @@ const MediaContainer = ({
     try {
       window.requirejs(['bump-4'], (Bump: BumpType) => {
         if (playerElementRef?.current && playerConfig) {
-          // The requirejs callback cannot be async, so we wrap async logic in an inner function and invoke it immediately.
           const initPlayer = async () => {
             const effectiveConfig = shouldHandleFakeFullscreen
               ? { ...playerConfig, supportFakeFullscreen: true }
@@ -211,7 +196,6 @@ const MediaContainer = ({
               }
             }
 
-            // Bind any events passed in to the player
             if (eventMapping && Object.keys(eventMapping || {}).length > 0) {
               Object.keys(eventMapping).forEach(bindingKey => {
                 const key = bindingKey as MediaPlayerEvents;
@@ -300,11 +284,6 @@ type Props = {
   uniqueId?: string;
   eventMapping?: EventMapping;
   loadPlayerOnInitialRender?: boolean;
-  // Set by callers that render the player inside their own fullscreen
-  // presentation (e.g. PortraitVideoModal, which is a full-viewport modal on
-  // mobile portrait). Prevents MediaLoader forcing SMP fake fullscreen and
-  // applying the global fullscreen page state, which would otherwise conflict
-  // with the caller's own fullscreen layout.
   withinFullscreenContainer?: boolean;
 };
 
@@ -336,21 +315,9 @@ const MediaLoader = ({
       !PAGETYPES_IGNORE_PLACEHOLDER.includes(pageType),
   );
   const [isFakeFullscreenActive, setIsFakeFullscreenActive] = useState(false);
-  // Tracks whether *this* instance is the one that set the global fullscreen
-  // classes, so its cleanup does not clobber another player's active fullscreen state.
   const hasActivatedFakeFullscreenRef = useRef(false);
 
   if (isLite) return null;
-
-  useEffect(() => {
-    return () => {
-      if (!onClient()) return;
-      if (!hasActivatedFakeFullscreenRef.current) return;
-
-      document.documentElement.classList.remove(PLAYER_FULLSCREEN_CLASS);
-      document.body.classList.remove(PLAYER_FULLSCREEN_CLASS);
-    };
-  }, []);
 
   useEffect(() => {
     return () => {
@@ -368,10 +335,6 @@ const MediaLoader = ({
   const producer = getProducerFromServiceName(service);
   const counterName = mediaOverrides?.pageIdentifierOverride || pageIdentifier;
 
-  // Memoised so playerConfig keeps a stable identity across re-renders that
-  // aren't caused by a real input change (e.g. the fake fullscreen state
-  // toggling), otherwise MediaContainer treats it as a new config and
-  // tears down/recreates the Bump player mid-playback.
   const config = useMemo(
     () =>
       buildConfig({
@@ -451,12 +414,9 @@ const MediaLoader = ({
 
   return (
     <>
-      {
-        // Prevents the av-embeds route itself rendering the Metadata component
-        !embedded && (
-          <Metadata blocks={blocks} embedURL={playerConfig?.externalEmbedUrl} />
-        )
-      }
+      {!embedded && (
+        <Metadata blocks={blocks} embedURL={playerConfig?.externalEmbedUrl} />
+      )}
       <figure
         data-e2e="media-loader__container"
         className={`media-container${className ? ` ${className}` : ''}`}
@@ -477,12 +437,6 @@ const MediaLoader = ({
             noJsMessage={noJsMessage}
           />
         ) : (
-          // During fake fullscreen the active player wrapper (below) is fixed
-          // and elevated above all page content, while the black backdrop
-          // layer is portalled to <body>. The Caption below stays in the page
-          // flow (page furniture is never pulled into the fullscreen layer),
-          // and portalling the backdrop keeps it at the document root so its
-          // z-index is directly comparable with the fixed player wrapper.
           <>
             {shouldHandleFakeFullscreen && (
               <FakeFullscreenLayer isActive={isFakeFullscreenActive} />
