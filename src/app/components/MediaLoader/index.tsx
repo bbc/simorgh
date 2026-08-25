@@ -159,10 +159,6 @@ const FakeFullscreenLayer = ({ isActive }: { isActive: boolean }) => {
   );
 };
 
-type BumpLoaderProps = {
-  nonce?: string | null;
-};
-
 type MediaContainerProps = {
   playerConfig: PlayerConfig;
   showAds: boolean;
