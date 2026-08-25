@@ -1,6 +1,6 @@
 import { use } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import useSportDataPolling from '#app/hooks/useSportDataPolling';
+import usePolling from '#app/hooks/usePolling';
 import useToggle from '#app/hooks/useToggle';
 import HeadToHeadHeader from './components/head-to-head-header';
 import { HeadToHeadBanner } from './components/head-to-head-banner';
@@ -26,10 +26,16 @@ export const HeadToHeadV2 = ({
   const { enabled: sportHeaderPollEnabled } = useToggle('sportDataPolling');
   const { translations, service } = use(ServiceContext);
 
-  const { currentSportData } = useSportDataPolling(
-    initialSportData,
-    Boolean(sportHeaderPollEnabled) && isSportDataLive,
-  );
+  const currentSportData = usePolling<
+    { sportDataEvent: HeadToHeadV2Data },
+    HeadToHeadV2Data
+  >({
+    initialData: initialSportData,
+    enabled: Boolean(sportHeaderPollEnabled) && isSportDataLive,
+    endpoint: 'sport',
+    params: { sportDataEventUrn: initialSportData.urn },
+    returnedData: response => response.sportDataEvent,
+  });
 
   const hasActions =
     (currentSportData?.home?.actions?.length ?? 0) > 0 ||

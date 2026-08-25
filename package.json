@@ -92,7 +92,6 @@
     "sharp": "0.35.3",
     "temporal-polyfill": "0.3.0",
     "undici": "8.9.0",
-    "uuid": "13.0.1",
     "winston": "patch:winston@3.8.2#./patches/winston-file-descriptor.patch"
   },
   "devDependencies": {
