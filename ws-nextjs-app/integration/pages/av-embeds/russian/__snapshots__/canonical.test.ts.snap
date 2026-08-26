@@ -162,77 +162,82 @@ exports[`Canonical Av-embeds Media Loader renders a valid container 1`] = `
   data-e2e="media-loader__container"
 >
   <div
-    class="css-145siv3"
-    data-e2e="media-loader__placeholder"
+    class="css-8432in"
+    data-simorgh-media-loader="inactive"
   >
     <div
-      class="css-xey5ks"
-      data-e2e="media-player__guidance"
+      class="css-145siv3"
+      data-e2e="media-loader__placeholder"
     >
-      <noscript
-        class="css-n2zqlz"
-      >
-        <strong>
-          Для просмотра этого контента вам надо включить JavaScript или использовать другой браузер
-        </strong>
-      </noscript>
-    </div>
-    <button
-      class="focusIndicatorRemove css-c2c21w"
-      type="button"
-    >
-      <span
-        class="css-5ku87v"
-      >
-        Play video, ""Здесь же кругом люди": жизнь в 100 метрах от взлетной полосы", Продолжительность 2,53
-      </span>
       <div
-        aria-hidden="true"
-        class="css-7qcky8"
+        class="css-xey5ks"
+        data-e2e="media-player__guidance"
       >
-        <svg
-          aria-hidden="true"
-          class="css-vja2s5 ew59ay91"
-          focusable="false"
-          height="12"
-          viewBox="0 0 12 12"
-          width="12"
-          xmlns="http://www.w3.org/2000/svg"
+        <noscript
+          class="css-n2zqlz"
         >
-          <g
-            fill="none"
-            fill-rule="evenodd"
-          >
-            <path
-              d="M.5.6h12v12H.5z"
-            />
-            <path
-              d="M2.144.96v11.28l8.712-5.64z"
-              fill="currentColor"
-            />
-          </g>
-        </svg>
+          <strong>
+            Для просмотра этого контента вам надо включить JavaScript или использовать другой браузер
+          </strong>
+        </noscript>
       </div>
-      <time
-        aria-hidden="true"
-        class="css-digyti"
-        datetime="PT2M53S"
+      <button
+        class="focusIndicatorRemove css-c2c21w"
+        type="button"
       >
-        02:53
-      </time>
-    </button>
-    <div
-      class="css-e398u2"
-      style="padding-bottom:0;overflow:hidden"
-    >
-      <img
-        alt=""
-        class="css-ey0vwc"
-        loading="eager"
-        src="https://ichef.bbci.co.uk/images/ic/512xn/p07q3ycc.jpg.webp"
-        srcset="https://ichef.bbci.co.uk/images/ic/240xn/p07q3ycc.jpg.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p07q3ycc.jpg.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p07q3ycc.jpg.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p07q3ycc.jpg.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p07q3ycc.jpg.webp 800w"
-        style="aspect-ratio:auto"
-      />
+        <span
+          class="css-5ku87v"
+        >
+          Play video, ""Здесь же кругом люди": жизнь в 100 метрах от взлетной полосы", Продолжительность 2,53
+        </span>
+        <div
+          aria-hidden="true"
+          class="css-7qcky8"
+        >
+          <svg
+            aria-hidden="true"
+            class="css-vja2s5 ew59ay91"
+            focusable="false"
+            height="12"
+            viewBox="0 0 12 12"
+            width="12"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              fill="none"
+              fill-rule="evenodd"
+            >
+              <path
+                d="M.5.6h12v12H.5z"
+              />
+              <path
+                d="M2.144.96v11.28l8.712-5.64z"
+                fill="currentColor"
+              />
+            </g>
+          </svg>
+        </div>
+        <time
+          aria-hidden="true"
+          class="css-digyti"
+          datetime="PT2M53S"
+        >
+          02:53
+        </time>
+      </button>
+      <div
+        class="css-e398u2"
+        style="padding-bottom:0;overflow:hidden"
+      >
+        <img
+          alt=""
+          class="css-ey0vwc"
+          loading="eager"
+          src="https://ichef.bbci.co.uk/images/ic/512xn/p07q3ycc.jpg.webp"
+          srcset="https://ichef.bbci.co.uk/images/ic/240xn/p07q3ycc.jpg.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p07q3ycc.jpg.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p07q3ycc.jpg.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p07q3ycc.jpg.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p07q3ycc.jpg.webp 800w"
+          style="aspect-ratio:auto"
+        />
+      </div>
     </div>
   </div>
 </figure>
