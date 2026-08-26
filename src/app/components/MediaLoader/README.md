@@ -152,7 +152,7 @@ The backdrop and the player wrapper both need to sit at the **document root stac
 - **`FakeFullscreenStyles`** injects the static fake-fullscreen CSS once per page. It is guarded by an element id so multiple players on the same page only add the `<style>` tag once, supports a Content Security Policy `nonce`, and is injected client-side only (fake fullscreen is a client interaction). Injection is deferred until after mount so it doesn't interfere with SSR hydration.
 - **`FakeFullscreenLayer`** portals the black backdrop to `document.body`. The portal is deferred with `useState`/`useEffect` until after mount so the hydration render matches the server (both render nothing); portalling during hydration would insert the backdrop into `<body>` before hydration completes and cause a mismatch. It receives an `isActive` prop that toggles the display class.
 - **The player wrapper** stays a fixed-position element with `z-index: 2147483647`. Because both it and the backdrop live at the document root, its `z-index` sits logically above the portalled backdrop.
-- **Cleanup** removes the global fullscreen classes from `<html>` and `<body>` on unmount, but only if this instance was the one that activated fullscreen (tracked via a ref), so it doesn't clobber another player's active fullscreen state.
+- **Cleanup** removes the global fullscreen classes from `<html>` and `<body>` on unmount if this instance is still in fake fullscreen, to avoid leaving the page stuck in a fullscreen state after the player is removed.
 
 ### Playback stability during fullscreen transitions
 
