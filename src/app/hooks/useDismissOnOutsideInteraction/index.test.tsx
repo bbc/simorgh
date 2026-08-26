@@ -66,7 +66,12 @@ describe('useDismissOnOutsideInteraction', () => {
 
   it('does not call onDismiss for an outside click within the grace period', () => {
     const onDismiss = jest.fn();
-    render(<TestComponent onDismiss={onDismiss} />);
+    render(
+      <TestComponent
+        onDismiss={onDismiss}
+        outsideClickGracePeriodMs={DEFAULT_GRACE_PERIOD_MS}
+      />,
+    );
 
     act(() => {
       jest.advanceTimersByTime(DEFAULT_GRACE_PERIOD_MS - 1);
@@ -78,7 +83,12 @@ describe('useDismissOnOutsideInteraction', () => {
 
   it('calls onDismiss when clicking outside the container after the grace period', () => {
     const onDismiss = jest.fn();
-    render(<TestComponent onDismiss={onDismiss} />);
+    render(
+      <TestComponent
+        onDismiss={onDismiss}
+        outsideClickGracePeriodMs={DEFAULT_GRACE_PERIOD_MS}
+      />,
+    );
 
     act(() => {
       jest.advanceTimersByTime(DEFAULT_GRACE_PERIOD_MS);
@@ -90,7 +100,12 @@ describe('useDismissOnOutsideInteraction', () => {
 
   it('does not call onDismiss when clicking inside the container after the grace period', () => {
     const onDismiss = jest.fn();
-    render(<TestComponent onDismiss={onDismiss} />);
+    render(
+      <TestComponent
+        onDismiss={onDismiss}
+        outsideClickGracePeriodMs={DEFAULT_GRACE_PERIOD_MS}
+      />,
+    );
 
     act(() => {
       jest.advanceTimersByTime(DEFAULT_GRACE_PERIOD_MS);
@@ -102,7 +117,13 @@ describe('useDismissOnOutsideInteraction', () => {
 
   it('does not attach an outside click listener when enableOutsideClick is false', () => {
     const onDismiss = jest.fn();
-    render(<TestComponent onDismiss={onDismiss} enableOutsideClick={false} />);
+    render(
+      <TestComponent
+        onDismiss={onDismiss}
+        enableOutsideClick={false}
+        outsideClickGracePeriodMs={DEFAULT_GRACE_PERIOD_MS}
+      />,
+    );
 
     act(() => {
       jest.advanceTimersByTime(DEFAULT_GRACE_PERIOD_MS);
