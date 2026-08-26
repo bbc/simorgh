@@ -145,10 +145,10 @@ exports[`Canonical Watch Image should match snapshot 1`] = `
 <noscript>
   <div>
     <div
-      class="css-y8ic1w"
+      class="css-1eqsq3g"
     >
       <strong
-        class="css-1ke8rid"
+        class="css-pow7hy"
       >
         Ntibishobora gukina mu cuma cawe
       </strong>
@@ -161,20 +161,20 @@ exports[`Canonical Watch Main heading should match text 1`] = `"Mpore: Iri torer
 
 exports[`Canonical Watch Media Loader renders a valid container 1`] = `
 <figure
-  class="media-container css-oy3c7d"
+  class="media-container css-1okmog4"
   data-e2e="media-loader__container"
 >
   <div
-    class="media-player css-1af23qw"
+    class="media-player css-9p9hvp"
     data-e2e="media-player"
   >
     <noscript>
       <div>
         <div
-          class="css-y8ic1w"
+          class="css-1eqsq3g"
         >
           <strong
-            class="css-1ke8rid"
+            class="css-pow7hy"
           >
             Ntibishobora gukina mu cuma cawe
           </strong>
@@ -183,14 +183,14 @@ exports[`Canonical Watch Media Loader renders a valid container 1`] = `
     </noscript>
   </div>
   <figcaption
-    class="css-otqtj6"
+    class="css-c6qikj"
     dir="ltr"
   >
     <span
       role="text"
     >
       <span
-        class="css-1dovx1k"
+        class="css-5ku87v"
       >
         Insiguro ya video, 
       </span>
