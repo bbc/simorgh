@@ -257,7 +257,7 @@ export const buildActivationEventModel = ({
       name: 'optimizely',
     },
     experience: {
-      engine_id: [`${experimentName}.${experimentVariant}`],
+      engine_id: [`optimizely.${experimentName}.${experimentVariant}`],
     },
   },
 });

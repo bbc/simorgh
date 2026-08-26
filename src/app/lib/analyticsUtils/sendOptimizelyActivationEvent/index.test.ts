@@ -32,7 +32,7 @@ describe('sendOptimizelyActivationEvent', () => {
           eventName: 'activation',
           eventPublisher: 'viewability',
           experience: {
-            engine_id: ['foo.control'],
+            engine_id: ['optimizely.foo.control'],
           },
         }),
       }),
