@@ -1,4 +1,5 @@
 import {
+  act,
   fireEvent,
   render,
   screen,
@@ -6,12 +7,16 @@ import {
 import { useRef } from 'react';
 import useDismissOnOutsideInteraction from '.';
 
+const DEFAULT_GRACE_PERIOD_MS = 1000;
+
 const TestComponent = ({
   onDismiss,
   enableOutsideClick,
+  outsideClickGracePeriodMs,
 }: {
   onDismiss: () => void;
   enableOutsideClick?: boolean;
+  outsideClickGracePeriodMs?: number;
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -19,6 +24,7 @@ const TestComponent = ({
     containerRef,
     onDismiss,
     enableOutsideClick,
+    outsideClickGracePeriodMs,
   });
 
   return (
@@ -32,6 +38,14 @@ const TestComponent = ({
 };
 
 describe('useDismissOnOutsideInteraction', () => {
+  beforeEach(() => {
+    jest.useFakeTimers();
+  });
+
+  afterEach(() => {
+    jest.useRealTimers();
+  });
+
   it('calls onDismiss when Escape is pressed', () => {
     const onDismiss = jest.fn();
     render(<TestComponent onDismiss={onDismiss} />);
@@ -50,19 +64,37 @@ describe('useDismissOnOutsideInteraction', () => {
     expect(onDismiss).not.toHaveBeenCalled();
   });
 
-  it('calls onDismiss when clicking outside the container', () => {
+  it('does not call onDismiss for an outside click within the grace period', () => {
     const onDismiss = jest.fn();
     render(<TestComponent onDismiss={onDismiss} />);
 
+    act(() => {
+      jest.advanceTimersByTime(DEFAULT_GRACE_PERIOD_MS - 1);
+    });
+    fireEvent.click(screen.getByTestId('outside'));
+
+    expect(onDismiss).not.toHaveBeenCalled();
+  });
+
+  it('calls onDismiss when clicking outside the container after the grace period', () => {
+    const onDismiss = jest.fn();
+    render(<TestComponent onDismiss={onDismiss} />);
+
+    act(() => {
+      jest.advanceTimersByTime(DEFAULT_GRACE_PERIOD_MS);
+    });
     fireEvent.click(screen.getByTestId('outside'));
 
     expect(onDismiss).toHaveBeenCalledTimes(1);
   });
 
-  it('does not call onDismiss when clicking inside the container', () => {
+  it('does not call onDismiss when clicking inside the container after the grace period', () => {
     const onDismiss = jest.fn();
     render(<TestComponent onDismiss={onDismiss} />);
 
+    act(() => {
+      jest.advanceTimersByTime(DEFAULT_GRACE_PERIOD_MS);
+    });
     fireEvent.click(screen.getByTestId('container'));
 
     expect(onDismiss).not.toHaveBeenCalled();
@@ -72,6 +104,9 @@ describe('useDismissOnOutsideInteraction', () => {
     const onDismiss = jest.fn();
     render(<TestComponent onDismiss={onDismiss} enableOutsideClick={false} />);
 
+    act(() => {
+      jest.advanceTimersByTime(DEFAULT_GRACE_PERIOD_MS);
+    });
     fireEvent.click(screen.getByTestId('outside'));
 
     expect(onDismiss).not.toHaveBeenCalled();
