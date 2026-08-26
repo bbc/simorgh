@@ -185,7 +185,7 @@ const MediaContainer = ({
               : { autoplay: true };
             const fakeFullscreenOverride = shouldHandleFakeFullscreen
               ? { supportFakeFullscreen: true }
-              : { supportFakeFullscreen: false };
+              : {};
 
             const effectiveConfig = {
               ...playerConfig,
