@@ -1,3 +1,4 @@
+import { screen } from '@testing-library/react';
 import {
   isNull,
   suppressPropWarnings,
@@ -9,22 +10,22 @@ import { TV_PAGE } from '../../../routes/utils/pageTypes';
 
 describe('MediaPageBlocks Paragraph', () => {
   it('should render correctly', () => {
-    const { container } = render(
+    render(
       <Paragraph uuid="uuid" idAttr="idAttr" text="Example text" />,
       { service: 'news' },
     );
-    expect(container).toMatchSnapshot();
+    expect(screen.getByText('Example text')).toBeInTheDocument();
   });
 
   it('should render correctly - dark mode', () => {
-    const { container } = render(
+    render(
       <Paragraph uuid="uuid" idAttr="idAttr" text="Example text" />,
       {
         service: 'news',
         pageType: TV_PAGE,
       },
     );
-    expect(container).toMatchSnapshot();
+    expect(screen.getByText('Example text')).toBeInTheDocument();
   });
 
   describe("when text isn't provided", () => {

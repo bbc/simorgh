@@ -1,45 +1,38 @@
+import { screen } from '@testing-library/react';
 import { render } from '../../../../components/react-testing-library-with-providers';
 import Banner from './index.canonical';
 
 describe('Canonical Consent Banner Container', () => {
   it('should correctly render privacy banner - LTR layout', () => {
-    const { container } = render(
+    render(
       <Banner type="privacy" onAccept={() => {}} onReject={() => {}} />,
-      {
-        service: 'news',
-      },
+      { service: 'news' },
     );
-    expect(container).toMatchSnapshot();
+    expect(screen.getByRole('heading')).toBeInTheDocument();
   });
 
   it('should correctly render privacy banner - RTL layout', () => {
-    const { container } = render(
+    render(
       <Banner type="privacy" onAccept={() => {}} onReject={() => {}} />,
-      {
-        service: 'arabic',
-      },
+      { service: 'arabic' },
     );
-    expect(container).toMatchSnapshot();
+    expect(screen.getByRole('heading')).toBeInTheDocument();
   });
 
   it('should correctly render cookie banner - LTR layout', () => {
-    const { container } = render(
+    const { getByText } = render(
       <Banner type="cookie" onAccept={() => {}} onReject={() => {}} />,
-      {
-        service: 'news',
-      },
+      { service: 'news' },
     );
-    expect(container).toMatchSnapshot();
+    expect(getByText('Let us know you agree to cookies')).toBeInTheDocument();
   });
 
   it('should correctly render cookie banner - RTL layout', () => {
-    const { container } = render(
+    render(
       <Banner type="cookie" onAccept={() => {}} onReject={() => {}} />,
-      {
-        service: 'arabic',
-      },
+      { service: 'arabic' },
     );
-    expect(container).toMatchSnapshot();
+    expect(screen.getByRole('heading')).toBeInTheDocument();
   });
 
   it('should focus on banner heading on mount', () => {

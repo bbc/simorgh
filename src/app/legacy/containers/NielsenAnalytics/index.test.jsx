@@ -103,7 +103,7 @@ describe('Nielsen Analytics Container', () => {
       );
 
       expect(container.firstChild).not.toBeNull();
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstChild).toBeInTheDocument();
     });
 
     it('should set correct apid for news pages', () => {

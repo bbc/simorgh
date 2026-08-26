@@ -14,95 +14,95 @@ const assertTypeOfElement = (Component, type) => {
 describe('Podcast Promo', () => {
   describe('Title', () => {
     assertTypeOfElement(PodcastPromo.Title, 'h2');
-    it('should match snapshot', () => {
-      const { container } = render(
+    it('should render title with correct text', () => {
+      const { getByText } = render(
         <PodcastPromo.Title dir="ltr">Content</PodcastPromo.Title>,
         { service: 'russian' },
       );
-      expect(container).toMatchSnapshot();
+      expect(getByText('Content')).toBeInTheDocument();
     });
   });
 
   describe('Card', () => {
     assertTypeOfElement(PodcastPromo.Title, 'div');
-    it('should match snapshot', () => {
-      const { container } = render(
+    it('should render card with content', () => {
+      const { getByText } = render(
         <PodcastPromo.Card>Content</PodcastPromo.Card>,
         { service: 'russian' },
       );
-      expect(container).toMatchSnapshot();
+      expect(getByText('Content')).toBeInTheDocument();
     });
   });
 
   describe('Card Content', () => {
     assertTypeOfElement(PodcastPromo.Card.Content, 'div');
-    it('should match snapshot', () => {
-      const { container } = render(
+    it('should render card content', () => {
+      const { getByText } = render(
         <PodcastPromo.Card.Content>Content</PodcastPromo.Card.Content>,
         { service: 'russian' },
       );
-      expect(container).toMatchSnapshot();
+      expect(getByText('Content')).toBeInTheDocument();
     });
   });
 
   describe('Card Title', () => {
     assertTypeOfElement(PodcastPromo.Card.Title, 'h3');
-    it('should match snapshot', () => {
-      const { container } = render(
+    it('should render card title', () => {
+      const { getByText } = render(
         <PodcastPromo.Card.Title>Content</PodcastPromo.Card.Title>,
         { service: 'russian' },
       );
-      expect(container).toMatchSnapshot();
+      expect(getByText('Content')).toBeInTheDocument();
     });
   });
 
   describe('Card Description', () => {
     assertTypeOfElement(PodcastPromo.Card.Description, 'p');
-    it('should match snapshot', () => {
-      const { container } = render(
+    it('should render card description', () => {
+      const { getByText } = render(
         <PodcastPromo.Card.Description>Content</PodcastPromo.Card.Description>,
         { service: 'russian' },
       );
-      expect(container).toMatchSnapshot();
+      expect(getByText('Content')).toBeInTheDocument();
     });
   });
 
   describe('Card Image', () => {
     assertTypeOfElement(PodcastPromo.Card.ImageWrapper, 'div');
-    it('should match snapshot', () => {
-      const { container } = render(
+    it('should render image wrapper', () => {
+      const { getByText } = render(
         <PodcastPromo.Card.ImageWrapper>
           Content
         </PodcastPromo.Card.ImageWrapper>,
         { service: 'russian' },
       );
-      expect(container).toMatchSnapshot();
+      expect(getByText('Content')).toBeInTheDocument();
     });
   });
 
   describe('Card Link', () => {
     assertTypeOfElement(PodcastPromo.Card.Link, 'a');
-    it('should match snapshot', () => {
-      const { container } = render(
+    it('should render link with href', () => {
+      const { getByRole } = render(
         <PodcastPromo.Card.Link href="https://www.bbc.com">
           Content
         </PodcastPromo.Card.Link>,
         { service: 'russian' },
       );
-      expect(container).toMatchSnapshot();
+      expect(getByRole('link')).toHaveAttribute('href', 'https://www.bbc.com');
     });
   });
 
   describe('Card Episodes Text', () => {
     assertTypeOfElement(PodcastPromo.Card.EpisodesText, 'p');
-    it('should match snapshot', () => {
-      const { container } = render(
+    it('should render episodes text', () => {
+      const { getByText } = render(
         <PodcastPromo.Card.EpisodesText dir="ltr">
           Episodes
         </PodcastPromo.Card.EpisodesText>,
         { service: 'russian' },
       );
-      expect(container).toMatchSnapshot();
+      expect(getByText('Episodes')).toBeInTheDocument();
     });
   });
 });

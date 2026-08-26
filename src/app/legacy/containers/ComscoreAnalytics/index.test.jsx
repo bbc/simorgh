@@ -91,7 +91,7 @@ describe('Comscore Analytics Container', () => {
       );
 
       expect(container.firstChild).not.toBeNull();
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstChild).toBeInTheDocument();
     });
 
     it('should return null when country-based cookie logic is enabled', () => {

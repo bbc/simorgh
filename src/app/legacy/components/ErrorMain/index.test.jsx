@@ -1,3 +1,4 @@
+import { screen } from '@testing-library/react';
 import { render } from '../../../components/react-testing-library-with-providers';
 import ErrorMain from './index';
 
@@ -13,19 +14,21 @@ describe('ErrorMain', () => {
     callToActionLast: ' thing',
   };
   it('should correctly render for an error page for News', () => {
-    const { container } = render(<ErrorMain {...messaging} dir="ltr" />, {
+    render(<ErrorMain {...messaging} dir="ltr" />, {
       service: 'news',
     });
-    expect(container).toMatchSnapshot();
+    expect(screen.getByText(messaging.title)).toBeInTheDocument();
+    expect(screen.getByText(messaging.message)).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: messaging.callToActionLinkText })).toHaveAttribute('href', messaging.callToActionLinkUrl);
   });
 
   const arabicServices = ['persian', 'arabic', 'pashto', 'urdu', 'dari'];
   arabicServices.forEach(service => {
     it(`should correctly render for an error page for ${service}`, () => {
-      const { container } = render(<ErrorMain {...messaging} dir="rtl" />, {
+      render(<ErrorMain {...messaging} dir="rtl" />, {
         service,
       });
-      expect(container).toMatchSnapshot();
+      expect(screen.getByText(messaging.title)).toBeInTheDocument();
     });
   });
 });

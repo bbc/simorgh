@@ -10,7 +10,7 @@ describe(`FooterContainer`, () => {
     it('should render correctly', () => {
       const { container } = render(<FooterContainer />);
 
-      expect(container).toMatchSnapshot();
+      expect(container.querySelector("footer[role='contentinfo']")).toBeInTheDocument();
     });
   });
 

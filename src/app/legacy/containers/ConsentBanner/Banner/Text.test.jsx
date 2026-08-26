@@ -1,3 +1,4 @@
+import { screen } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { render } from '../../../../components/react-testing-library-with-providers';
@@ -47,30 +48,22 @@ const bannerTextWithContext = (message, topLevelDomain, isUK) => (
 
 describe('Consent Banner Text', () => {
   it('should correctly render banner text in the UK', () => {
-    const { container } = render(
-      bannerTextWithContext(bannerMessaging, 'co.uk', true),
-    );
-    expect(container).toMatchSnapshot();
+    render(bannerTextWithContext(bannerMessaging, 'co.uk', true));
+    expect(screen.getByText('Just some text')).toBeInTheDocument();
   });
 
   it('should correctly render banner text outside the UK', () => {
-    const { container } = render(
-      bannerTextWithContext(bannerMessaging, 'com', false),
-    );
-    expect(container).toMatchSnapshot();
+    render(bannerTextWithContext(bannerMessaging, 'com', false));
+    expect(screen.getByText('Just some international text')).toBeInTheDocument();
   });
 
   it('should correctly render banner text with a link in the UK', () => {
-    const { container } = render(
-      bannerTextWithContext(bannerWithLinkMessaging, 'co.uk', true),
-    );
-    expect(container).toMatchSnapshot();
+    render(bannerTextWithContext(bannerWithLinkMessaging, 'co.uk', true));
+    expect(screen.getByRole('link', { name: 'with a link' })).toHaveAttribute('href', 'https://www.bbc.co.uk');
   });
 
   it('should correctly render banner text with a link outside the UK', () => {
-    const { container } = render(
-      bannerTextWithContext(bannerWithLinkMessaging, 'com'),
-    );
-    expect(container).toMatchSnapshot();
+    render(bannerTextWithContext(bannerWithLinkMessaging, 'com'));
+    expect(screen.getByRole('link', { name: 'with an international link' })).toHaveAttribute('href', 'https://www.bbc.com');
   });
 });

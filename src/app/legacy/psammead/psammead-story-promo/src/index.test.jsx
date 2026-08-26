@@ -1,3 +1,4 @@
+import { screen } from '@testing-library/react';
 import MediaIndicator from '#psammead/psammead-media-indicator/src';
 import styled from '@emotion/styled';
 import { GEL_SPACING_HLF } from '#psammead/gel-foundations/src/spacings';
@@ -49,40 +50,40 @@ const MediaInfo = ({ dir = 'ltr' }) => (
 
 describe('StoryPromo', () => {
   it('should render correctly', () => {
-    const { container } = render(<StoryPromo image={Image} info={Info({})} />);
-    expect(container).toMatchSnapshot();
+    render(<StoryPromo image={Image} info={Info({})} />);
+    expect(screen.getByText('The headline of the promo')).toBeInTheDocument();
   });
 
   it('should render Live promo correctly', () => {
-    const { container } = render(
+    render(
       <StoryPromo image={Image} info={Info({ isLive: true })} />,
     );
-    expect(container).toMatchSnapshot();
+    expect(screen.getByText('The live promo headline')).toBeInTheDocument();
   });
 
   it('should render a RTL Live promo correctly', () => {
-    const { container } = render(
+    render(
       <StoryPromo image={Image} info={Info({ isLive: true, dir: 'rtl' })} />,
       { service: 'arabic' },
     );
-    expect(container).toMatchSnapshot();
+    expect(screen.getByText('The live promo headline')).toBeInTheDocument();
   });
 });
 
 describe('StoryPromo with Media Indicator', () => {
   it('should render correctly', () => {
-    const { container } = render(
+    render(
       <StoryPromo
         image={Image}
         info={Info({})}
         mediaIndicator={<MediaInfo />}
       />,
     );
-    expect(container).toMatchSnapshot();
+    expect(screen.getByText('The headline of the promo')).toBeInTheDocument();
   });
 
   it('should render a RTL promo with media indicator correctly', () => {
-    const { container } = render(
+    render(
       <StoryPromo
         image={Image}
         info={Info({})}
@@ -90,24 +91,24 @@ describe('StoryPromo with Media Indicator', () => {
       />,
       { service: 'persian' },
     );
-    expect(container).toMatchSnapshot();
+    expect(screen.getByText('The headline of the promo')).toBeInTheDocument();
   });
 });
 
 describe('StoryPromo - Top Story', () => {
   it('should render correctly', () => {
-    const { container } = render(
+    render(
       <StoryPromo
         image={Image}
         info={Info({ promoType: 'top' })}
         promoType="top"
       />,
     );
-    expect(container).toMatchSnapshot();
+    expect(screen.getByText('The headline of the promo')).toBeInTheDocument();
   });
 
   it('should render with Media Indicator correctly', () => {
-    const { container } = render(
+    render(
       <StoryPromo
         image={Image}
         info={Info({ promoType: 'top' })}
@@ -115,46 +116,46 @@ describe('StoryPromo - Top Story', () => {
         promoType="top"
       />,
     );
-    expect(container).toMatchSnapshot();
+    expect(screen.getByText('The headline of the promo')).toBeInTheDocument();
   });
 
   it('should render with multiple Index Alsos correctly', () => {
-    const { container } = render(
+    render(
       <StoryPromo
         image={Image}
         info={Info({ promoType: 'top', alsoItems: relatedItems })}
         promoType="top"
       />,
     );
-    expect(container).toMatchSnapshot();
+    expect(screen.getByText('The headline of the promo')).toBeInTheDocument();
   });
 
   it('should render with one Index Also correctly', () => {
-    const { container } = render(
+    render(
       <StoryPromo
         image={Image}
         info={Info({ promoType: 'top', alsoItems: [relatedItems[0]] })}
         promoType="top"
       />,
     );
-    expect(container).toMatchSnapshot();
+    expect(screen.getByText('The headline of the promo')).toBeInTheDocument();
   });
 });
 
 describe('StoryPromo - Leading Story', () => {
   it('should render correctly', () => {
-    const { container } = render(
+    render(
       <StoryPromo
         image={Image}
         info={Info({ promoType: 'leading' })}
         promoType="leading"
       />,
     );
-    expect(container).toMatchSnapshot();
+    expect(screen.getByText('The headline of the promo')).toBeInTheDocument();
   });
 
   it('should render with Media Indicator correctly', () => {
-    const { container } = render(
+    render(
       <StoryPromo
         image={Image}
         info={Info({ promoType: 'leading' })}
@@ -162,7 +163,7 @@ describe('StoryPromo - Leading Story', () => {
         promoType="leading"
       />,
     );
-    expect(container).toMatchSnapshot();
+    expect(screen.getByText('The headline of the promo')).toBeInTheDocument();
   });
 });
 

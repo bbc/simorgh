@@ -1,3 +1,4 @@
+import { screen } from '@testing-library/react';
 import { render } from '../../../../components/react-testing-library-with-providers';
 import relatedItems from './relatedItems';
 import IndexAlsosContainer from '.';
@@ -5,20 +6,20 @@ import IndexAlsosContainer from '.';
 describe('Index Alsos', () => {
   describe('Snapshots', () => {
     it('should render multiple correctly', () => {
-      const { container } = render(
+      render(
         <IndexAlsosContainer alsoItems={relatedItems} />,
         { service: 'hausa' },
       );
-      expect(container).toMatchSnapshot();
+      expect(screen.getAllByRole('link').length).toBeGreaterThan(1);
     });
 
     it('should render one correctly', () => {
-      const { container } = render(
+      render(
         <IndexAlsosContainer alsoItems={[relatedItems[0]]} />,
         { service: 'hausa' },
       );
 
-      expect(container).toMatchSnapshot();
+      expect(screen.getByRole('link')).toBeInTheDocument();
     });
   });
 

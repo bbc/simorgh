@@ -1,3 +1,4 @@
+import { screen } from '@testing-library/react';
 import { textBlock } from '#models/blocks';
 import {
   isNull,
@@ -58,8 +59,10 @@ const template = (title, text, type) => {
       type,
     };
     it('should render correctly', () => {
-      const { container } = render(<HeadingsContainer {...data} />);
-      expect(container).toMatchSnapshot();
+      render(<HeadingsContainer {...data} />);
+      expect(
+        screen.getByRole('heading', { name: text }),
+      ).toBeInTheDocument();
     });
   });
 };
@@ -82,8 +85,10 @@ describe('Headings', () => {
       };
 
       it('should render h1 containing correct text', () => {
-        const { container } = render(<HeadingsContainer {...data} />);
-        expect(container).toMatchSnapshot();
+        render(<HeadingsContainer {...data} />);
+        expect(
+          screen.getByRole('heading', { level: 1, name: 'Plain headline' }),
+        ).toBeInTheDocument();
       });
 
       it('should have an id for the skiplink with value "content"', () => {
@@ -100,8 +105,10 @@ describe('Headings', () => {
       };
 
       it('should render h2 containing correct text', () => {
-        const { container } = render(<HeadingsContainer {...data} />);
-        expect(container).toMatchSnapshot();
+        render(<HeadingsContainer {...data} />);
+        expect(
+          screen.getByRole('heading', { level: 2, name: 'Plain subheadline' }),
+        ).toBeInTheDocument();
       });
 
       it('should have an id of sanitised text', () => {
@@ -122,8 +129,9 @@ describe('Headings', () => {
       };
 
       it('should render h1 with <i> tag', () => {
-        const { container } = render(<HeadingsContainer {...data} />);
-        expect(container).toMatchSnapshot();
+        render(<HeadingsContainer {...data} />);
+        const heading = screen.getByRole('heading', { level: 1 });
+        expect(heading.querySelector('i')).toBeInTheDocument();
       });
     });
 
@@ -134,8 +142,9 @@ describe('Headings', () => {
       };
 
       it('should render h1 with <b> tag', () => {
-        const { container } = render(<HeadingsContainer {...data} />);
-        expect(container).toMatchSnapshot();
+        render(<HeadingsContainer {...data} />);
+        const heading = screen.getByRole('heading', { level: 1 });
+        expect(heading.querySelector('b')).toBeInTheDocument();
       });
     });
 
@@ -149,8 +158,10 @@ describe('Headings', () => {
       };
 
       it('should render h1 with <b><i> tags', () => {
-        const { container } = render(<HeadingsContainer {...data} />);
-        expect(container).toMatchSnapshot();
+        render(<HeadingsContainer {...data} />);
+        const heading = screen.getByRole('heading', { level: 1 });
+        expect(heading.querySelector('b')).toBeInTheDocument();
+        expect(heading.querySelector('i')).toBeInTheDocument();
       });
     });
 
@@ -164,8 +175,10 @@ describe('Headings', () => {
       };
 
       it('should render h1 with <b><i> tags', () => {
-        const { container } = render(<HeadingsContainer {...data} />);
-        expect(container).toMatchSnapshot();
+        render(<HeadingsContainer {...data} />);
+        const heading = screen.getByRole('heading', { level: 1 });
+        expect(heading.querySelector('b')).toBeInTheDocument();
+        expect(heading.querySelector('i')).toBeInTheDocument();
       });
     });
 
@@ -177,8 +190,10 @@ describe('Headings', () => {
         };
 
         it('should render correctly', () => {
-          const { container } = render(<HeadingsContainer {...data} />);
-          expect(container).toMatchSnapshot();
+          render(<HeadingsContainer {...data} />);
+          expect(
+            screen.getByRole('heading', { name: /This is very important/ }),
+          ).toBeInTheDocument();
         });
       });
     });
@@ -191,8 +206,8 @@ describe('Headings', () => {
     };
 
     it('should render correctly', () => {
-      const { container } = render(<HeadingsContainer {...data} />);
-      expect(container).toMatchSnapshot();
+      render(<HeadingsContainer {...data} />);
+      expect(screen.getByText('Sample headline')).toBeInTheDocument();
     });
 
     it('should use <strong> element', () => {

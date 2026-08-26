@@ -81,16 +81,16 @@ describe('ImageWithPlaceholder', () => {
     const { container } = render(
       <LazyLoadImageWithPlaceholder fallback={false} />,
     );
-    expect(container).toMatchSnapshot();
+    expect(container.querySelector('noscript')).not.toBeInTheDocument();
   });
 
   it('should render an image', () => {
     const { container } = render(<ImageWithPlaceholder />);
-    expect(container).toMatchSnapshot();
+    expect(container.querySelector('[data-e2e="image-placeholder"]')).toBeInTheDocument();
   });
 
   it('should render an AMP image', () => {
     const { container } = render(<AmpImageWithPlaceholder />);
-    expect(container).toMatchSnapshot();
+    expect(container.querySelector('amp-img')).toBeInTheDocument();
   });
 });

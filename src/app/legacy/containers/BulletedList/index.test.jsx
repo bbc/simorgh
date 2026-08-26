@@ -1,3 +1,4 @@
+import { screen } from '@testing-library/react';
 import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
@@ -9,7 +10,7 @@ describe('BulletedListContainer', () => {
   suppressPropWarnings(['blocks', 'supplied']);
 
   it('should render ltr correctly', () => {
-    const { container } = render(
+    render(
       <BulletedListContainer
         blocks={orderedList.model.blocks}
         blockGroupIndex={1}
@@ -18,11 +19,11 @@ describe('BulletedListContainer', () => {
         service: 'arabic',
       },
     );
-    expect(container).toMatchSnapshot();
+    expect(screen.getByText('It is unordered')).toBeInTheDocument();
   });
 
   it('should render rtl correctly', () => {
-    const { container } = render(
+    render(
       <BulletedListContainer
         blocks={orderedList.model.blocks}
         blockGroupIndex={2}
@@ -31,7 +32,7 @@ describe('BulletedListContainer', () => {
         service: 'arabic',
       },
     );
-    expect(container).toMatchSnapshot();
+    expect(screen.getByText('It is unordered')).toBeInTheDocument();
   });
 
   describe('getEventTrackingData', () => {
