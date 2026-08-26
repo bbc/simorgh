@@ -230,21 +230,17 @@ export const assertPageViewResonance = ({
   siteId,
 }) => {
   it(`should send a resonance page view event with service = ${service}, page identifier = ${pageIdentifier}, site ID = ${siteId}, application type = ${applicationType} and content type = ${contentType}`, () => {
-    // Resonance POSTs a JSON body to the BBC Activity Gateway (BAG) via
-    // navigator.sendBeacon, so we intercept the POST rather than parsing a URL.
-    cy.intercept('POST', '**/v2/event', request => {
+    const resonanceBagEventUrl = /bag(\.test)?\.api\.bbc\.co\.uk\/v\d+\/event/; // TODO - check if this is going to change from 'https://bag.test.api.bbc.co.uk/v2/event' in future. If not, we could add this to our EnvironmentConfigType folder
+
+    cy.intercept('POST', resonanceBagEventUrl, request => {
       request.reply({ statusCode: 200 });
     }).as('resonance-page-view');
 
     cy.visit(path, { retryOnStatusCodeFailure: true });
 
     cy.wait('@resonance-page-view').then(({ request }) => {
-      const requestBody =
-        typeof request.body === 'string'
-          ? JSON.parse(request.body)
-          : request.body;
-
-      cy.log('Resonance page view request body', requestBody);
+      expect(request.body).to.have.property('bag_metadata');
+      expect(request.body).to.have.property('events');
     });
   });
 };
