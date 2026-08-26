@@ -239,7 +239,7 @@ exports[`Canonical Watch SEO Apple Touch Icon should match attributes 5`] = `
 }
 `;
 
-exports[`Canonical Watch SEO Canonical link 1`] = `"http://localhost:7081/gahuza/articles/clyw2p2x138o"`;
+exports[`Canonical Watch SEO Canonical link 1`] = `"http://localhost:7081/gahuza/watch/clyw2p2x138o"`;
 
 exports[`Canonical Watch SEO Dir attribute 1`] = `"ltr"`;
 
@@ -291,7 +291,7 @@ exports[`Canonical Watch SEO Linked data should match text 1`] = `
         "name": "Kinyarwanda",
       },
       "mainEntityOfPage": {
-        "@id": "http://localhost:7081/gahuza/articles/clyw2p2x138o",
+        "@id": "http://localhost:7081/gahuza/watch/clyw2p2x138o",
         "@type": "WebPage",
         "name": "Menya iri torero rimaze imyaka 30 ritoza imbyino nyarwanda i Paris muri France",
       },
@@ -307,7 +307,7 @@ exports[`Canonical Watch SEO Linked data should match text 1`] = `
         "publishingPrinciples": "https://www.bbc.com/gahuza/institutional-49283343",
       },
       "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_gahuza/0b59/live/57de7180-ed39-11f0-a422-4ba8a094a8fa.jpg",
-      "url": "http://localhost:7081/gahuza/articles/clyw2p2x138o",
+      "url": "http://localhost:7081/gahuza/watch/clyw2p2x138o",
     },
   ],
 }
@@ -340,7 +340,7 @@ exports[`Canonical Watch SEO OG title 1`] = `"Menya iri torero rimaze imyaka 30 
 
 exports[`Canonical Watch SEO OG type 1`] = `"article"`;
 
-exports[`Canonical Watch SEO OG url 1`] = `"http://localhost:7081/gahuza/articles/clyw2p2x138o"`;
+exports[`Canonical Watch SEO OG url 1`] = `"http://localhost:7081/gahuza/watch/clyw2p2x138o"`;
 
 exports[`Canonical Watch SEO Page title 1`] = `"Menya iri torero rimaze imyaka 30 ritoza imbyino nyarwanda i Paris muri France - BBC News Gahuza"`;
 
