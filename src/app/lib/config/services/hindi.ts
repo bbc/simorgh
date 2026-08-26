@@ -159,18 +159,18 @@ export const service: DefaultServiceConfig = {
       },
       actionTooltip: {
         success: {
-          titleBefore: 'यह लेख अब',
-          titleAfter: 'में सहेजा गया है',
+          titleBefore: 'यह लेख',
+          titleAfter: 'सेक्शन में सेव्ड है',
         },
         error: {
           title: 'क्षमा करें, कुछ गड़बड़ हो गई है',
           body: 'अपना कनेक्शन जांचें, पेज को रीफ्रेश करें और फिर से कोशिश करें',
         },
         removed: {
-          titleBefore: 'यह लेख अब',
-          titleAfter: 'से हटाया गया है',
+          titleBefore: 'यह लेख',
+          titleAfter: 'सेक्शन से डिलीट कर दिया गया है',
         },
-        myNewsLinkText: 'मेरी ख़बरों',
+        myNewsLinkText: 'माय न्यूज़',
         myNewsUrl: 'https://www.bbc.com/hindi/my-news',
         closeLabel: 'बंद करें',
       },
