@@ -11,6 +11,7 @@ import {
   getExpectedAtiDestination,
 } from '../helpers';
 import environment from '../../../../support/helpers/getAppEnv';
+import envs, { EnvironmentConfigType } from '../../../../support/config/envs';
 
 const usesReverbViewabilityModel = applicationType =>
   !['lite', 'amp'].includes(applicationType);
@@ -230,7 +231,8 @@ export const assertPageViewResonance = ({
   siteId,
 }) => {
   it(`should send a resonance page view event with service = ${service}, page identifier = ${pageIdentifier}, site ID = ${siteId}, application type = ${applicationType} and content type = ${contentType}`, () => {
-    const resonanceBagEventUrl = /bag(\.test)?\.api\.bbc\.co\.uk\/v\d+\/event/; // TODO - check if this is going to change from 'https://bag.test.api.bbc.co.uk/v2/event' in future. If not, we could add this to our EnvironmentConfigType folder
+    const resonanceBagBaseUrl = (envs as EnvironmentConfigType).resonanceBagUrl;
+    const resonanceBagEventUrl = `${resonanceBagBaseUrl}/v*/event`;
 
     cy.intercept('POST', resonanceBagEventUrl, request => {
       request.reply({ statusCode: 200 });
