@@ -1,6 +1,6 @@
 /**
- * @service gahuza
- * @pathname /gahuza/watch/clyw2p2x138o
+ * @service gujarati
+ * @pathname /gujarati/watch/cj4jdypqw9zo
  */
 import runMediaPlayerTests from '../../../common/mediaPlayer';
 import runCanonicalTests from '../../articles/canonicalTests';

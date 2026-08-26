@@ -15,6 +15,12 @@ exports[`Canonical Watch Analytics ATI tracking pixel search params 1`] = `
     "s2": "87",
   },
   {
+    "p": "tamil.watch.c6gjm3gede9zo.page",
+  },
+  {
+    "x1": "[urn:bbc:optimo:asset:c6gjm3gede9zo]",
+  },
+  {
     "x2": "[responsive]",
   },
   {
@@ -24,7 +30,19 @@ exports[`Canonical Watch Analytics ATI tracking pixel search params 1`] = `
     "x4": "[ta]",
   },
   {
+    "x7": "[article-sfv]",
+  },
+  {
     "x8": "[simorgh-nojs]",
+  },
+  {
+    "x9": "[Hear%20what%20life%20is%20like%20on%20the%20ocean%20wave]",
+  },
+  {
+    "x11": "[2026-08-12T12:32:05.077Z]",
+  },
+  {
+    "x12": "[2026-08-12T12:32:05.077Z]",
   },
 ]
 `;
@@ -114,7 +132,7 @@ exports[`Canonical Watch Header Navigation link should match text and url 1`] = 
 }
 `;
 
-exports[`Canonical Watch Image Caption should match text 1`] = `"காணொளிக் குறிப்பு, சேலை கட்டி உடற்பயிற்சி - 15,000 பெண்கள் ஊர்வலமாக சென்றது எதனால்?"`;
+exports[`Canonical Watch Image Caption should match text 1`] = `"காணொளிக் குறிப்பு, Hear what life is like on the ocean wave"`;
 
 exports[`Canonical Watch Image should match snapshot 1`] = `
 <noscript>
@@ -132,7 +150,7 @@ exports[`Canonical Watch Image should match snapshot 1`] = `
 </noscript>
 `;
 
-exports[`Canonical Watch Main heading should match text 1`] = `"சேலை கட்டி உடற்பயிற்சி - 15,000 பெண்கள் ஊர்வலமாக சென்றது எதனால்?"`;
+exports[`Canonical Watch Main heading should match text 1`] = `"Tamil - Watch - Captain of HMS Ship  describes life on board"`;
 
 exports[`Canonical Watch Media Loader renders a valid container 1`] = `
 <figure
@@ -172,7 +190,7 @@ exports[`Canonical Watch Media Loader renders a valid container 1`] = `
       <span
         data-testid="caption-paragraph"
       >
-        சேலை கட்டி உடற்பயிற்சி - 15,000 பெண்கள் ஊர்வலமாக சென்றது எதனால்?
+        Hear what life is like on the ocean wave
       </span>
     </span>
   </figcaption>
@@ -214,13 +232,13 @@ exports[`Canonical Watch SEO Apple Touch Icon should match attributes 5`] = `
 }
 `;
 
-exports[`Canonical Watch SEO Canonical link 1`] = `"http://localhost:7081/tamil/watch/c84m2jl4dpzo"`;
+exports[`Canonical Watch SEO Canonical link 1`] = `"http://localhost:7081/tamil/watch/c6gjm3gede9zo"`;
 
 exports[`Canonical Watch SEO Dir attribute 1`] = `"ltr"`;
 
 exports[`Canonical Watch SEO FB app ID 1`] = `"1609039196070050"`;
 
-exports[`Canonical Watch SEO Heading level 1 1`] = `"சேலை கட்டி உடற்பயிற்சி - 15,000 பெண்கள் ஊர்வலமாக சென்றது எதனால்?"`;
+exports[`Canonical Watch SEO Heading level 1 1`] = `"Tamil - Watch - Captain of HMS Ship  describes life on board"`;
 
 exports[`Canonical Watch SEO Lang attribute 1`] = `"ta"`;
 
@@ -229,52 +247,7 @@ exports[`Canonical Watch SEO Linked data should match text 1`] = `
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "ReportageNewsArticle",
-      "about": [
-        {
-          "@type": "Place",
-          "name": "சூரத்",
-        },
-        {
-          "@type": "Place",
-          "name": "குஜராத்",
-          "sameAs": [
-            "http://dbpedia.org/resource/Gujarat",
-          ],
-        },
-        {
-          "@type": "Place",
-          "name": "இந்தியா",
-          "sameAs": [
-            "http://dbpedia.org/resource/India",
-          ],
-        },
-        {
-          "@type": "Thing",
-          "name": "கலாச்சாரம்",
-          "sameAs": [
-            "http://dbpedia.org/resource/Culture",
-          ],
-        },
-        {
-          "@type": "Thing",
-          "name": "உணவு முறை",
-          "sameAs": [
-            "http://dbpedia.org/resource/Diet",
-          ],
-        },
-        {
-          "@type": "Thing",
-          "name": "உடல்நலம்",
-          "sameAs": [
-            "http://dbpedia.org/resource/Health",
-          ],
-        },
-        {
-          "@type": "Thing",
-          "name": "பெண்களின் ஆரோக்கியம்",
-        },
-      ],
+      "@type": "NewsArticle",
       "author": {
         "@type": "NewsMediaOrganization",
         "logo": {
@@ -286,13 +259,13 @@ exports[`Canonical Watch SEO Linked data should match text 1`] = `
         "name": "BBC News தமிழ்",
         "noBylinesPolicy": "https://www.bbc.com/tamil/institutional-50288575#authorexpertise",
       },
-      "dateModified": "2023-04-12T03:10:21.951Z",
-      "datePublished": "2023-04-12T03:10:21.951Z",
-      "headline": "சேலை கட்டி உடற்பயிற்சி - 15,000 பெண்கள் ஊர்வலமாக சென்றது எதனால்?",
+      "dateModified": "2026-08-12T12:32:05.077Z",
+      "datePublished": "2026-08-12T12:32:05.077Z",
+      "headline": "Hear what life is like on the ocean wave",
       "image": {
         "@type": "ImageObject",
         "height": 576,
-        "url": "https://ichef.bbci.co.uk/news/1024/branded_tamil/0b89/live/e0031ae0-d895-11ed-a5c2-11449a48c8d9.jpg",
+        "url": "https://ichef.bbci.co.uk/news/1024/branded_tamil/p01wxf61.jpg",
         "width": 1024,
       },
       "inLanguage": {
@@ -301,9 +274,9 @@ exports[`Canonical Watch SEO Linked data should match text 1`] = `
         "name": "Tamil",
       },
       "mainEntityOfPage": {
-        "@id": "http://localhost:7081/tamil/watch/c84m2jl4dpzo",
+        "@id": "http://localhost:7081/tamil/watch/c6gjm3gede9zo",
         "@type": "WebPage",
-        "name": "சேலை கட்டி உடற்பயிற்சி - 15,000 பெண்கள் ஊர்வலமாக சென்றது எதனால்?",
+        "name": "Hear what life is like on the ocean wave",
       },
       "publisher": {
         "@type": "NewsMediaOrganization",
@@ -316,8 +289,8 @@ exports[`Canonical Watch SEO Linked data should match text 1`] = `
         "name": "BBC News தமிழ்",
         "publishingPrinciples": "https://www.bbc.com/tamil/institutional-50288575",
       },
-      "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_tamil/0b89/live/e0031ae0-d895-11ed-a5c2-11449a48c8d9.jpg",
-      "url": "http://localhost:7081/tamil/watch/c84m2jl4dpzo",
+      "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_tamil/p01wxf61.jpg",
+      "url": "http://localhost:7081/tamil/watch/c6gjm3gede9zo",
     },
   ],
 }
@@ -327,32 +300,32 @@ exports[`Canonical Watch SEO Linked data should match text 2`] = `
 {
   "@context": "http://schema.org",
   "@type": "VideoObject",
-  "description": "சேலை கட்டி உடற்பயிற்சி - 15,000 பெண்கள் ஊர்வலமாக சென்றது எதனால்?",
-  "duration": "PT2M53S",
-  "embedURL": "https://www.test.bbc.com/ws/av-embeds/articles/c84m2jl4dpzo/p0fg2mcw/ta",
-  "name": "சேலை கட்டி உடற்பயிற்சி - 15,000 பெண்கள் ஊர்வலமாக சென்றது எதனால்?",
-  "thumbnailUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p0fg2mqn.jpg",
-  "uploadDate": "2023-04-11T18:22:19.000Z",
+  "description": "Hear what life is like on the ocean wave",
+  "duration": "PT38S",
+  "embedURL": "https://www.test.bbc.com/ws/av-embeds/articles/c6gjm3gede9zo/p01wxf47/ta",
+  "name": "Captain of HMS Ship  describes life on board",
+  "thumbnailUrl": "https://ichef.test.bbci.co.uk/images/ic/1024x576/p01wxf61.jpg",
+  "uploadDate": "2026-02-09T11:39:05.000Z",
 }
 `;
 
-exports[`Canonical Watch SEO OG description 1`] = `"சேலைக் கட்டி சென்று உடற்பயிற்சி குறித்து விழிப்புணர்வு ஏற்படுத்த வேண்டும் என்ற நோக்கத்தில் இந்த பேரணியில் பலர் கலந்து கொண்டனர்"`;
+exports[`Canonical Watch SEO OG description 1`] = `"Captain Ben Shipman tells people what it\`s like to be at sea for months at a time."`;
 
-exports[`Canonical Watch SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1200/branded_tamil/0b89/live/e0031ae0-d895-11ed-a5c2-11449a48c8d9.jpg"`;
+exports[`Canonical Watch SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1200/branded_tamil/p01wxf61.jpg"`;
 
-exports[`Canonical Watch SEO OG image alt 1`] = `"உடற்பயிற்சி "`;
+exports[`Canonical Watch SEO OG image alt 1`] = `"Captain on board HMS Ship"`;
 
 exports[`Canonical Watch SEO OG locale 1`] = `"ta-IN"`;
 
 exports[`Canonical Watch SEO OG site name 1`] = `"BBC News தமிழ்"`;
 
-exports[`Canonical Watch SEO OG title 1`] = `"சேலை கட்டி உடற்பயிற்சி - 15,000 பெண்கள் ஊர்வலமாக சென்றது எதனால்? - BBC News தமிழ்"`;
+exports[`Canonical Watch SEO OG title 1`] = `"Hear what life is like on the ocean wave - BBC News தமிழ்"`;
 
 exports[`Canonical Watch SEO OG type 1`] = `"article"`;
 
-exports[`Canonical Watch SEO OG url 1`] = `"http://localhost:7081/tamil/watch/c84m2jl4dpzo"`;
+exports[`Canonical Watch SEO OG url 1`] = `"http://localhost:7081/tamil/watch/c6gjm3gede9zo"`;
 
-exports[`Canonical Watch SEO Page title 1`] = `"சேலை கட்டி உடற்பயிற்சி - 15,000 பெண்கள் ஊர்வலமாக சென்றது எதனால்? - BBC News தமிழ்"`;
+exports[`Canonical Watch SEO Page title 1`] = `"Hear what life is like on the ocean wave - BBC News தமிழ்"`;
 
 exports[`Canonical Watch SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
@@ -360,19 +333,19 @@ exports[`Canonical Watch SEO Twitter card 1`] = `"summary_large_image"`;
 
 exports[`Canonical Watch SEO Twitter creator 1`] = `"@bbctamil"`;
 
-exports[`Canonical Watch SEO Twitter description 1`] = `"சேலைக் கட்டி சென்று உடற்பயிற்சி குறித்து விழிப்புணர்வு ஏற்படுத்த வேண்டும் என்ற நோக்கத்தில் இந்த பேரணியில் பலர் கலந்து கொண்டனர்"`;
+exports[`Canonical Watch SEO Twitter description 1`] = `"Captain Ben Shipman tells people what it\`s like to be at sea for months at a time."`;
 
-exports[`Canonical Watch SEO Twitter image alt 1`] = `"உடற்பயிற்சி "`;
+exports[`Canonical Watch SEO Twitter image alt 1`] = `"Captain on board HMS Ship"`;
 
-exports[`Canonical Watch SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1200/branded_tamil/0b89/live/e0031ae0-d895-11ed-a5c2-11449a48c8d9.jpg"`;
+exports[`Canonical Watch SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1200/branded_tamil/p01wxf61.jpg"`;
 
 exports[`Canonical Watch SEO Twitter site 1`] = `"@bbctamil"`;
 
-exports[`Canonical Watch SEO Twitter title 1`] = `"சேலை கட்டி உடற்பயிற்சி - 15,000 பெண்கள் ஊர்வலமாக சென்றது எதனால்? - BBC News தமிழ்"`;
+exports[`Canonical Watch SEO Twitter title 1`] = `"Hear what life is like on the ocean wave - BBC News தமிழ்"`;
 
 exports[`Canonical Watch Timestamp should match text and date 1`] = `
 {
-  "date": "2023-04-12",
-  "text": "12 ஏப்ரல் 2023",
+  "date": "2026-08-12",
+  "text": "12 ஆகஸ்ட் 2026",
 }
 `;

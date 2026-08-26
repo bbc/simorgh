@@ -15,6 +15,12 @@ exports[`Canonical Listen Analytics ATI tracking pixel search params 1`] = `
     "s2": "87",
   },
   {
+    "p": "tamil.listen.cw3xlkprxv82o.page",
+  },
+  {
+    "x1": "[urn:bbc:optimo:asset:cw3xlkprxv82o]",
+  },
+  {
     "x2": "[responsive]",
   },
   {
@@ -24,7 +30,19 @@ exports[`Canonical Listen Analytics ATI tracking pixel search params 1`] = `
     "x4": "[ta]",
   },
   {
+    "x7": "[article-sfv]",
+  },
+  {
     "x8": "[simorgh-nojs]",
+  },
+  {
+    "x9": "[Sound%20Effect]",
+  },
+  {
+    "x11": "[2026-08-12T12:33:08.756Z]",
+  },
+  {
+    "x12": "[2026-08-12T12:33:08.756Z]",
   },
 ]
 `;
@@ -114,7 +132,7 @@ exports[`Canonical Listen Header Navigation link should match text and url 1`] =
 }
 `;
 
-exports[`Canonical Listen Image Caption should match text 1`] = `"காணொளிக் குறிப்பு, சேலை கட்டி உடற்பயிற்சி - 15,000 பெண்கள் ஊர்வலமாக சென்றது எதனால்?"`;
+exports[`Canonical Listen Image Caption should match text 1`] = `"கேட்பொலிக் குறிப்பு, Test Audio For Optimo"`;
 
 exports[`Canonical Listen Image should match snapshot 1`] = `
 <noscript>
@@ -132,7 +150,7 @@ exports[`Canonical Listen Image should match snapshot 1`] = `
 </noscript>
 `;
 
-exports[`Canonical Listen Main heading should match text 1`] = `"சேலை கட்டி உடற்பயிற்சி - 15,000 பெண்கள் ஊர்வலமாக சென்றது எதனால்?"`;
+exports[`Canonical Listen Main heading should match text 1`] = `"Tamil - Listen - Test Audio For Optimo"`;
 
 exports[`Canonical Listen Media Loader renders a valid container 1`] = `
 <figure
@@ -167,12 +185,12 @@ exports[`Canonical Listen Media Loader renders a valid container 1`] = `
       <span
         class="css-5ku87v"
       >
-        காணொளிக் குறிப்பு, 
+        கேட்பொலிக் குறிப்பு, 
       </span>
       <span
         data-testid="caption-paragraph"
       >
-        சேலை கட்டி உடற்பயிற்சி - 15,000 பெண்கள் ஊர்வலமாக சென்றது எதனால்?
+        Test Audio For Optimo
       </span>
     </span>
   </figcaption>
@@ -214,13 +232,13 @@ exports[`Canonical Listen SEO Apple Touch Icon should match attributes 5`] = `
 }
 `;
 
-exports[`Canonical Listen SEO Canonical link 1`] = `"http://localhost:7081/tamil/listen/c84m2jl4dpzo"`;
+exports[`Canonical Listen SEO Canonical link 1`] = `"http://localhost:7081/tamil/listen/cw3xlkprxv82o"`;
 
 exports[`Canonical Listen SEO Dir attribute 1`] = `"ltr"`;
 
 exports[`Canonical Listen SEO FB app ID 1`] = `"1609039196070050"`;
 
-exports[`Canonical Listen SEO Heading level 1 1`] = `"சேலை கட்டி உடற்பயிற்சி - 15,000 பெண்கள் ஊர்வலமாக சென்றது எதனால்?"`;
+exports[`Canonical Listen SEO Heading level 1 1`] = `"Tamil - Listen - Test Audio For Optimo"`;
 
 exports[`Canonical Listen SEO Lang attribute 1`] = `"ta"`;
 
@@ -229,52 +247,7 @@ exports[`Canonical Listen SEO Linked data should match text 1`] = `
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "ReportageNewsArticle",
-      "about": [
-        {
-          "@type": "Place",
-          "name": "சூரத்",
-        },
-        {
-          "@type": "Place",
-          "name": "குஜராத்",
-          "sameAs": [
-            "http://dbpedia.org/resource/Gujarat",
-          ],
-        },
-        {
-          "@type": "Place",
-          "name": "இந்தியா",
-          "sameAs": [
-            "http://dbpedia.org/resource/India",
-          ],
-        },
-        {
-          "@type": "Thing",
-          "name": "கலாச்சாரம்",
-          "sameAs": [
-            "http://dbpedia.org/resource/Culture",
-          ],
-        },
-        {
-          "@type": "Thing",
-          "name": "உணவு முறை",
-          "sameAs": [
-            "http://dbpedia.org/resource/Diet",
-          ],
-        },
-        {
-          "@type": "Thing",
-          "name": "உடல்நலம்",
-          "sameAs": [
-            "http://dbpedia.org/resource/Health",
-          ],
-        },
-        {
-          "@type": "Thing",
-          "name": "பெண்களின் ஆரோக்கியம்",
-        },
-      ],
+      "@type": "NewsArticle",
       "author": {
         "@type": "NewsMediaOrganization",
         "logo": {
@@ -286,13 +259,13 @@ exports[`Canonical Listen SEO Linked data should match text 1`] = `
         "name": "BBC News தமிழ்",
         "noBylinesPolicy": "https://www.bbc.com/tamil/institutional-50288575#authorexpertise",
       },
-      "dateModified": "2023-04-12T03:10:21.951Z",
-      "datePublished": "2023-04-12T03:10:21.951Z",
-      "headline": "சேலை கட்டி உடற்பயிற்சி - 15,000 பெண்கள் ஊர்வலமாக சென்றது எதனால்?",
+      "dateModified": "2026-08-12T12:33:08.756Z",
+      "datePublished": "2026-08-12T12:33:08.756Z",
+      "headline": "Sound Effect",
       "image": {
         "@type": "ImageObject",
         "height": 576,
-        "url": "https://ichef.bbci.co.uk/news/1024/branded_tamil/0b89/live/e0031ae0-d895-11ed-a5c2-11449a48c8d9.jpg",
+        "url": "https://ichef.bbci.co.uk/news/1024/branded_tamil/p01vkjg8.png",
         "width": 1024,
       },
       "inLanguage": {
@@ -301,9 +274,9 @@ exports[`Canonical Listen SEO Linked data should match text 1`] = `
         "name": "Tamil",
       },
       "mainEntityOfPage": {
-        "@id": "http://localhost:7081/tamil/listen/c84m2jl4dpzo",
+        "@id": "http://localhost:7081/tamil/listen/cw3xlkprxv82o",
         "@type": "WebPage",
-        "name": "சேலை கட்டி உடற்பயிற்சி - 15,000 பெண்கள் ஊர்வலமாக சென்றது எதனால்?",
+        "name": "Sound Effect",
       },
       "publisher": {
         "@type": "NewsMediaOrganization",
@@ -316,8 +289,8 @@ exports[`Canonical Listen SEO Linked data should match text 1`] = `
         "name": "BBC News தமிழ்",
         "publishingPrinciples": "https://www.bbc.com/tamil/institutional-50288575",
       },
-      "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_tamil/0b89/live/e0031ae0-d895-11ed-a5c2-11449a48c8d9.jpg",
-      "url": "http://localhost:7081/tamil/listen/c84m2jl4dpzo",
+      "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_tamil/p01vkjg8.png",
+      "url": "http://localhost:7081/tamil/listen/cw3xlkprxv82o",
     },
   ],
 }
@@ -326,33 +299,33 @@ exports[`Canonical Listen SEO Linked data should match text 1`] = `
 exports[`Canonical Listen SEO Linked data should match text 2`] = `
 {
   "@context": "http://schema.org",
-  "@type": "VideoObject",
-  "description": "சேலை கட்டி உடற்பயிற்சி - 15,000 பெண்கள் ஊர்வலமாக சென்றது எதனால்?",
-  "duration": "PT2M53S",
-  "embedURL": "https://www.test.bbc.com/ws/av-embeds/articles/c84m2jl4dpzo/p0fg2mcw/ta",
-  "name": "சேலை கட்டி உடற்பயிற்சி - 15,000 பெண்கள் ஊர்வலமாக சென்றது எதனால்?",
-  "thumbnailUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p0fg2mqn.jpg",
-  "uploadDate": "2023-04-11T18:22:19.000Z",
+  "@type": "AudioObject",
+  "description": "Sound Effect",
+  "duration": "PT3S",
+  "embedURL": "https://www.test.bbc.com/ws/av-embeds/articles/cw3xlkprxv82o/p01w99jg/ta",
+  "name": "Test Audio For Optimo",
+  "thumbnailUrl": "https://ichef.test.bbci.co.uk/images/ic/1024x576/p01vkjg8.png",
+  "uploadDate": "2024-10-03T10:23:31.000Z",
 }
 `;
 
-exports[`Canonical Listen SEO OG description 1`] = `"சேலைக் கட்டி சென்று உடற்பயிற்சி குறித்து விழிப்புணர்வு ஏற்படுத்த வேண்டும் என்ற நோக்கத்தில் இந்த பேரணியில் பலர் கலந்து கொண்டனர்"`;
+exports[`Canonical Listen SEO OG description 1`] = `"Sound Effect"`;
 
-exports[`Canonical Listen SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1200/branded_tamil/0b89/live/e0031ae0-d895-11ed-a5c2-11449a48c8d9.jpg"`;
+exports[`Canonical Listen SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1200/branded_tamil/p01vkjg8.png"`;
 
-exports[`Canonical Listen SEO OG image alt 1`] = `"உடற்பயிற்சி "`;
+exports[`Canonical Listen SEO OG image alt 1`] = `"BBC flat logo 2023 default image"`;
 
 exports[`Canonical Listen SEO OG locale 1`] = `"ta-IN"`;
 
 exports[`Canonical Listen SEO OG site name 1`] = `"BBC News தமிழ்"`;
 
-exports[`Canonical Listen SEO OG title 1`] = `"சேலை கட்டி உடற்பயிற்சி - 15,000 பெண்கள் ஊர்வலமாக சென்றது எதனால்? - BBC News தமிழ்"`;
+exports[`Canonical Listen SEO OG title 1`] = `"Sound Effect - BBC News தமிழ்"`;
 
 exports[`Canonical Listen SEO OG type 1`] = `"article"`;
 
-exports[`Canonical Listen SEO OG url 1`] = `"http://localhost:7081/tamil/listen/c84m2jl4dpzo"`;
+exports[`Canonical Listen SEO OG url 1`] = `"http://localhost:7081/tamil/listen/cw3xlkprxv82o"`;
 
-exports[`Canonical Listen SEO Page title 1`] = `"சேலை கட்டி உடற்பயிற்சி - 15,000 பெண்கள் ஊர்வலமாக சென்றது எதனால்? - BBC News தமிழ்"`;
+exports[`Canonical Listen SEO Page title 1`] = `"Sound Effect - BBC News தமிழ்"`;
 
 exports[`Canonical Listen SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
@@ -360,19 +333,19 @@ exports[`Canonical Listen SEO Twitter card 1`] = `"summary_large_image"`;
 
 exports[`Canonical Listen SEO Twitter creator 1`] = `"@bbctamil"`;
 
-exports[`Canonical Listen SEO Twitter description 1`] = `"சேலைக் கட்டி சென்று உடற்பயிற்சி குறித்து விழிப்புணர்வு ஏற்படுத்த வேண்டும் என்ற நோக்கத்தில் இந்த பேரணியில் பலர் கலந்து கொண்டனர்"`;
+exports[`Canonical Listen SEO Twitter description 1`] = `"Sound Effect"`;
 
-exports[`Canonical Listen SEO Twitter image alt 1`] = `"உடற்பயிற்சி "`;
+exports[`Canonical Listen SEO Twitter image alt 1`] = `"BBC flat logo 2023 default image"`;
 
-exports[`Canonical Listen SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1200/branded_tamil/0b89/live/e0031ae0-d895-11ed-a5c2-11449a48c8d9.jpg"`;
+exports[`Canonical Listen SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1200/branded_tamil/p01vkjg8.png"`;
 
 exports[`Canonical Listen SEO Twitter site 1`] = `"@bbctamil"`;
 
-exports[`Canonical Listen SEO Twitter title 1`] = `"சேலை கட்டி உடற்பயிற்சி - 15,000 பெண்கள் ஊர்வலமாக சென்றது எதனால்? - BBC News தமிழ்"`;
+exports[`Canonical Listen SEO Twitter title 1`] = `"Sound Effect - BBC News தமிழ்"`;
 
 exports[`Canonical Listen Timestamp should match text and date 1`] = `
 {
-  "date": "2023-04-12",
-  "text": "12 ஏப்ரல் 2023",
+  "date": "2026-08-12",
+  "text": "12 ஆகஸ்ட் 2026",
 }
 `;

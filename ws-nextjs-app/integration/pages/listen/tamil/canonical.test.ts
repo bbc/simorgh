@@ -1,6 +1,6 @@
 /**
  * @service tamil
- * @pathname /tamil/listen/c84m2jl4dpzo
+ * @pathname /tamil/listen/cw3xlkprxv82o
  */
 import runMediaPlayerAudioTests from '../../../common/mediaPlayerAudio';
 import runCanonicalTests from '../../articles/canonicalTests';

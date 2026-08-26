@@ -1,6 +1,6 @@
 /**
  * @service tamil
- * @pathname /tamil/watch/c84m2jl4dpzo
+ * @pathname /tamil/watch/c6gjm3gede9zo
  */
 import runMediaPlayerTests from '../../../common/mediaPlayer';
 import runCanonicalTests from '../../articles/canonicalTests';
