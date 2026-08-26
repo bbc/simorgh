@@ -16,6 +16,10 @@ import envs, { EnvironmentConfigType } from '../../../../support/config/envs';
 const usesReverbViewabilityModel = applicationType =>
   !['lite', 'amp'].includes(applicationType);
 
+// To do - refactor with above or keep as seperate for now since logic will change?
+const usesResonance = applicationType =>
+  !['lite', 'amp'].includes(applicationType);
+
 const getAppName = service => {
   const customServiceAppName = {
     ws: '[news]',
@@ -29,6 +33,22 @@ const getAppName = service => {
   return ['archive', 'news', 'newsround', 'scotland', 'sport'].includes(service)
     ? `[${service}]`
     : `[news-${service}]`;
+};
+
+// to do - refactor with above or keep as seperate?
+const getResonanceAppName = service => {
+  const customServiceAppName = {
+    ws: 'news',
+    romania: 'news-romanian',
+  }[service];
+
+  if (customServiceAppName) {
+    return customServiceAppName;
+  }
+
+  return ['archive', 'news', 'newsround', 'scotland', 'sport'].includes(service)
+    ? `${service}`
+    : `news-${service}`;
 };
 
 const getATIParamsFromInterception = request => {
@@ -240,9 +260,45 @@ export const assertPageViewResonance = ({
 
     cy.visit(path, { retryOnStatusCodeFailure: true });
 
+    const sendsResonanceEvents = usesResonance(applicationType);
+
+    // TO DO - handle in a different way so that the test doesn't run at all for amp or lite?
+    if (!sendsResonanceEvents) {
+      cy.get('@resonance-page-view.all').should('have.length', 0);
+      return;
+    }
+
     cy.wait('@resonance-page-view').then(({ request }) => {
       expect(request.body).to.have.property('bag_metadata');
       expect(request.body).to.have.property('events');
+
+      const metadata = request.body.bag_metadata;
+
+      // TODO - decide if we want all or any these, since these come from Resonance lib not our code
+      expect(metadata).to.have.property('client_name');
+      expect(metadata).to.have.property('collection_library_name');
+      expect(metadata).to.have.property('collection_library_version');
+      expect(metadata).to.have.property('event_category');
+      expect(metadata).to.have.property('id');
+      expect(metadata).to.have.property('request_time');
+
+      const event = request.body.events[0];
+
+      expect(event).to.have.property('app_name', getResonanceAppName(service));
+      expect(event).to.have.property('browser_language');
+      expect(event).to.have.property('content_id');
+      expect(event).to.have.property('content_type', contentType);
+      expect(event).to.have.property('destination');
+      expect(event).to.have.property('event_id');
+      expect(event).to.have.property('event_time');
+      expect(event).to.have.property('event_name', 'page.display');
+      expect(event).to.have.property('event_ts');
+      expect(event).to.have.property('language');
+      expect(event).to.have.property('page_name', pageIdentifier);
+      expect(event).to.have.property('page_title');
+      expect(event).to.have.property('producer');
+      expect(event).to.have.property('site_id'); // NOTE - not the same as ATI Level 2 site ID
+      expect(event).to.have.property('url');
     });
   });
 };
