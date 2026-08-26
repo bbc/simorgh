@@ -1,7 +1,7 @@
 import { use, useEffect, useRef } from 'react';
 import styled from '@emotion/styled';
 import { ConsentBanner } from '#psammead/psammead-consent-banner/src';
-import { PLAYER_FULLSCREEN_CLASS } from '#lib/mediaPlayerFullscreen.const';
+import PLAYER_FULLSCREEN_CLASS from '#lib/mediaPlayerFullscreen.const';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import BannerText from './Text';
 import getDataAttribute from './getDataAttribute';

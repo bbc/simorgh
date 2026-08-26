@@ -1,5 +1,5 @@
 import pixelsToRem from '#app/utilities/pixelsToRem';
-import { PLAYER_FULLSCREEN_CLASS } from '#lib/mediaPlayerFullscreen.const';
+import PLAYER_FULLSCREEN_CLASS from '#lib/mediaPlayerFullscreen.const';
 import { css, Theme } from '@emotion/react';
 
 export { PLAYER_FULLSCREEN_CLASS };

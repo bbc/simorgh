@@ -1,7 +1,7 @@
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
 import { visuallyHiddenStyle } from '#app/lib/styles.const';
-import { PLAYER_FULLSCREEN_CLASS } from '#lib/mediaPlayerFullscreen.const';
+import PLAYER_FULLSCREEN_CLASS from '#lib/mediaPlayerFullscreen.const';
 
 const styles = {
   bodyOverflowHidden: () =>

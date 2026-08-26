@@ -329,8 +329,6 @@ const MediaLoader = ({
   const [isFakeFullscreenActive, setIsFakeFullscreenActive] = useState(false);
   const hasActivatedFakeFullscreenRef = useRef(false);
 
-  if (isLite) return null;
-
   useEffect(() => {
     return () => {
       if (!onClient()) return;
@@ -382,6 +380,8 @@ const MediaLoader = ({
       defaultImage,
     ],
   );
+
+  if (isLite) return null;
 
   if (!config) return null;
 
