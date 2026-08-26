@@ -182,10 +182,10 @@ const MediaContainer = ({
           const initPlayer = async () => {
             const autoplayOverride = loadPlayerOnInitialRender
               ? { autoplay: false }
-              : {};
+              : { autoplay: true };
             const fakeFullscreenOverride = shouldHandleFakeFullscreen
               ? { supportFakeFullscreen: true }
-              : {};
+              : { supportFakeFullscreen: false };
 
             const effectiveConfig = {
               ...playerConfig,
