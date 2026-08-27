@@ -16,7 +16,6 @@ import envs, { EnvironmentConfigType } from '../../../../support/config/envs';
 const usesReverbViewabilityModel = applicationType =>
   !['lite', 'amp'].includes(applicationType);
 
-// To do - refactor with above or keep as seperate for now since logic will change?
 const usesResonance = applicationType =>
   !['lite', 'amp'].includes(applicationType);
 
@@ -35,7 +34,6 @@ const getAppName = service => {
     : `[news-${service}]`;
 };
 
-// to do - refactor with above or keep as seperate?
 const getResonanceAppName = service => {
   const customServiceAppName = {
     ws: 'news',
@@ -46,9 +44,7 @@ const getResonanceAppName = service => {
     return customServiceAppName;
   }
 
-  return ['archive', 'news', 'newsround', 'scotland', 'sport'].includes(service)
-    ? `${service}`
-    : `news-${service}`;
+  return `news-${service}`;
 };
 
 const getATIParamsFromInterception = request => {
