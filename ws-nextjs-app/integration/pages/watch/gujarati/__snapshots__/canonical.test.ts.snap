@@ -403,6 +403,6 @@ exports[`Canonical Watch SEO Twitter title 1`] = `"નેપાળ : એવુ�
 exports[`Canonical Watch Timestamp should match text and date 1`] = `
 {
   "date": "2026-08-26",
-  "text": "5 કલાક પહેલા",
+  "text": "26 ઓગસ્ટ 2026",
 }
 `;
