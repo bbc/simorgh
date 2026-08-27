@@ -120,12 +120,12 @@ const assertResonancePageViewEventParamsExist = ({
   expect(event).to.have.property('event_id');
   expect(event).to.have.property('event_time');
   expect(event).to.have.property('event_name');
-  expect(event).to.have.property('event_ts');
+  expect(event).to.have.property('event_ts'); // timestamp
   expect(event).to.have.property('language');
   expect(event).to.have.property('page_name');
   expect(event).to.have.property('page_title');
   expect(event).to.have.property('producer');
-  expect(event).to.have.property('site_id'); // Not the same as 's2' Level 2 Site ID
+  expect(event).to.have.property('site_id'); // Level 1 Site ID. Different from 's2' Level 2 Site ID
   expect(event).to.have.property('url');
 
   if (!['list-datadriven', 'static'].includes(contentType)) {
@@ -341,7 +341,6 @@ export const assertResonancePageView = ({
 
     const sendsResonanceEvents = usesResonance(applicationType);
 
-    // TO DO - handle in a different way so that the test doesn't run at all for amp or lite?
     if (!sendsResonanceEvents) {
       cy.get('@resonance-page-view.all').should('have.length', 0);
       return;
