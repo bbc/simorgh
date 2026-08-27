@@ -82,9 +82,7 @@ const ActionTooltip = ({
         <div className={styles.content}>
           <div className={styles.header}>
             <StatusIcon status={status} />
-
             <Text
-              as="h2"
               id={titleId}
               size="pica"
               fontVariant="sansBold"
