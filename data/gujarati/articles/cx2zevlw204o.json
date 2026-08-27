@@ -3,38 +3,38 @@
     "article": {
       "metadata": {
         "atiAnalytics": {
-          "categoryName": "India~Culture~Kerala",
-          "contentId": "urn:bbc:optimo:asset:c93437jwkzpo",
+          "categoryName": "Gujarat~Monsoon~Severe+weather~Bay+of+Bengal",
+          "contentId": "urn:bbc:optimo:asset:cx2zevlw204o",
           "contentType": "article-sfv",
           "language": "gu",
-          "ldpThingIds": "5a08f030-710f-4168-acee-67294a90fc75~6a73afa3-ea6b-45c1-80bb-49060b99f864~e5b7a8e9-9117-4199-b629-acf6cd33da00",
-          "ldpThingLabels": "India~Culture~Kerala",
+          "ldpThingIds": "4317a084-9a75-42ad-bf1c-2f13ed498cc1~87822184-803f-421f-8037-13dec3dd235c~9b16a6c2-7c16-42b7-bff7-6549579622e8~bb3b401b-19f4-4bff-a824-4144c483d5a6",
+          "ldpThingLabels": "Gujarat~Monsoon~Severe+weather~Bay+of+Bengal",
           "nationsProducer": null,
-          "pageIdentifier": "gujarati.articles.c93437jwkzpo.page",
-          "pageTitle": "'શર્કરા વરટી' : કેરળની તહેવારો દરમિયાન ખવાતી આ કેળાની વૅફર કેવી રીતે બને છે?",
-          "timePublished": "2026-08-24T02:34:08.117Z",
-          "timeUpdated": "2026-08-24T02:34:08.117Z",
+          "pageIdentifier": "gujarati.articles.cx2zevlw204o.page",
+          "pageTitle": "Gujarat Weather : બંગાળની ખાડીની સિસ્ટમ આગળ વધી, ગુજરાતમાં વરસાદ વધશે?",
+          "timePublished": "2026-08-25T07:37:03.271Z",
+          "timeUpdated": "2026-08-25T07:37:03.271Z",
           "readTimeMilliseconds": 60000
         },
-        "id": "urn:bbc:ares::article:c93437jwkzpo",
+        "id": "urn:bbc:ares::article:cx2zevlw204o",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c93437jwkzpo",
-          "canonicalUrl": "https://www.bbc.com/gujarati/articles/c93437jwkzpo"
+          "optimoUrn": "urn:bbc:optimo:asset:cx2zevlw204o",
+          "canonicalUrl": "https://www.bbc.com/gujarati/articles/cx2zevlw204o"
         },
         "type": "article",
         "createdBy": "Gujarati",
         "language": "gu",
-        "firstPublished": 1787538848117,
-        "lastPublished": 1787538848117,
+        "firstPublished": 1787643423271,
+        "lastPublished": 1787643423271,
         "isOppm": false,
         "options": { "includeComments": false },
         "analyticsLabels": {
-          "ldp_tags": "India~Culture~Kerala",
-          "page": "gujarati.articles.c93437jwkzpo.page",
+          "ldp_tags": "Gujarat~Monsoon~Severe+weather~Bay+of+Bengal",
+          "page": "gujarati.articles.cx2zevlw204o.page",
           "irisKeyword": null,
-          "audience_motivation": "Divert me",
-          "ldp_ids": "5a08f030-710f-4168-acee-67294a90fc75~6a73afa3-ea6b-45c1-80bb-49060b99f864~e5b7a8e9-9117-4199-b629-acf6cd33da00",
-          "contentId": "urn:bbc:optimo:asset:c93437jwkzpo",
+          "audience_motivation": "Update me~Keep me on trend",
+          "ldp_ids": "4317a084-9a75-42ad-bf1c-2f13ed498cc1~87822184-803f-421f-8037-13dec3dd235c~9b16a6c2-7c16-42b7-bff7-6549579622e8~bb3b401b-19f4-4bff-a824-4144c483d5a6",
+          "contentId": "urn:bbc:optimo:asset:cx2zevlw204o",
           "producer": "Gujarati"
         },
         "passport": {
@@ -50,36 +50,44 @@
               "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
             },
             {
-              "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
-              "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
-            },
-            {
               "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
               "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
             },
             {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+              "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+            },
+            {
               "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
-              "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+              "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
             },
             {
               "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-              "value": "http://www.bbc.co.uk/things/e5b7a8e9-9117-4199-b629-acf6cd33da00#id"
+              "value": "http://www.bbc.co.uk/things/87822184-803f-421f-8037-13dec3dd235c#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/9b16a6c2-7c16-42b7-bff7-6549579622e8#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/bb3b401b-19f4-4bff-a824-4144c483d5a6#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/4317a084-9a75-42ad-bf1c-2f13ed498cc1#id"
             },
             {
               "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
-              "value": "http://www.bbc.co.uk/things/e1deed1e-0cab-4965-8e92-897b195f7a47#id"
+              "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
             },
             {
-              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-              "value": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id"
-            },
-            {
-              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-              "value": "http://www.bbc.co.uk/things/6a73afa3-ea6b-45c1-80bb-49060b99f864#id"
+              "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+              "value": "http://www.bbc.co.uk/things/e2c286b3-665d-4806-87f5-c8b005938ba4#id"
             },
             {
               "predicate": "http://www.bbc.co.uk/ontologies/creativework/dateFirstReleased",
-              "value": "2026-08-24T02:34:08.117Z"
+              "value": "2026-08-25T07:37:03.271Z"
             }
           ],
           "predicates": {
@@ -97,7 +105,7 @@
             ],
             "dateFirstReleased": [
               {
-                "value": "2026-08-24T02:34:08.117Z",
+                "value": "2026-08-25T07:37:03.271Z",
                 "type": "dateFirstReleased"
               }
             ],
@@ -109,16 +117,14 @@
             ],
             "formats": [
               {
-                "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
-                "thingLabel": "Feature",
-                "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
-                "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+                "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                "thingLabel": "News report",
+                "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
                 "thingType": ["tagging:TagConcept", "tagging:Format"],
-                "thingSameAs": [
-                  "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
-                ],
-                "thingEnglishLabel": "Feature",
-                "thingPreferredLabel": "Feature",
+                "thingSameAs": [],
+                "thingEnglishLabel": "Report",
+                "thingPreferredLabel": "Report",
                 "thingLabelLanguage": "gu",
                 "type": "formats"
               }
@@ -131,50 +137,57 @@
             ],
             "about": [
               {
-                "value": "http://www.bbc.co.uk/things/e5b7a8e9-9117-4199-b629-acf6cd33da00#id",
-                "thingLabel": "કેરળ",
-                "thingUri": "http://www.bbc.co.uk/things/e5b7a8e9-9117-4199-b629-acf6cd33da00#id",
-                "thingId": "e5b7a8e9-9117-4199-b629-acf6cd33da00",
-                "thingType": ["core:Thing", "tagging:TagConcept", "core:Place"],
-                "thingSameAs": [
-                  "http://dbpedia.org/resource/Kerala",
-                  "http://sws.geonames.org/1267254/",
-                  "http://www.wikidata.org/entity/Q1186"
-                ],
-                "thingEnglishLabel": "Kerala",
-                "type": "about"
-              },
-              {
-                "value": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
-                "thingLabel": "ભારત",
-                "thingUri": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
-                "thingId": "5a08f030-710f-4168-acee-67294a90fc75",
-                "thingType": [
-                  "core:Thing",
-                  "tagging:TagConcept",
-                  "core:Place",
-                  "geoname:Feature",
-                  "geoname:GeoTagConcept"
-                ],
-                "thingSameAs": [
-                  "http://sws.geonames.org/1269750/",
-                  "http://dbpedia.org/resource/India",
-                  "http://www.wikidata.org/entity/Q668"
-                ],
-                "thingEnglishLabel": "India",
-                "type": "about"
-              },
-              {
-                "value": "http://www.bbc.co.uk/things/6a73afa3-ea6b-45c1-80bb-49060b99f864#id",
-                "thingLabel": "સંસ્કૃતિ",
-                "thingUri": "http://www.bbc.co.uk/things/6a73afa3-ea6b-45c1-80bb-49060b99f864#id",
-                "thingId": "6a73afa3-ea6b-45c1-80bb-49060b99f864",
+                "value": "http://www.bbc.co.uk/things/87822184-803f-421f-8037-13dec3dd235c#id",
+                "thingLabel": "ચોમાસું",
+                "thingUri": "http://www.bbc.co.uk/things/87822184-803f-421f-8037-13dec3dd235c#id",
+                "thingId": "87822184-803f-421f-8037-13dec3dd235c",
                 "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
                 "thingSameAs": [
-                  "http://dbpedia.org/resource/Culture",
-                  "http://www.wikidata.org/entity/Q11042"
+                  "http://dbpedia.org/resource/Monsoon",
+                  "http://www.wikidata.org/entity/Q42967"
                 ],
-                "thingEnglishLabel": "Culture",
+                "thingEnglishLabel": "Monsoon",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/9b16a6c2-7c16-42b7-bff7-6549579622e8#id",
+                "thingLabel": "વાતાવરણ",
+                "thingUri": "http://www.bbc.co.uk/things/9b16a6c2-7c16-42b7-bff7-6549579622e8#id",
+                "thingId": "9b16a6c2-7c16-42b7-bff7-6549579622e8",
+                "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+                "thingSameAs": [
+                  "http://dbpedia.org/resource/Severe_weather",
+                  "http://www.wikidata.org/entity/Q741507"
+                ],
+                "thingEnglishLabel": "Severe weather",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/bb3b401b-19f4-4bff-a824-4144c483d5a6#id",
+                "thingLabel": "બંગાળની ખાડી ",
+                "thingUri": "http://www.bbc.co.uk/things/bb3b401b-19f4-4bff-a824-4144c483d5a6#id",
+                "thingId": "bb3b401b-19f4-4bff-a824-4144c483d5a6",
+                "thingType": ["core:Thing", "tagging:TagConcept", "core:Place"],
+                "thingSameAs": [
+                  "http://sws.geonames.org/1281789/",
+                  "http://www.wikidata.org/entity/Q38684",
+                  "http://dbpedia.org/resource/Bay_of_Bengal"
+                ],
+                "thingEnglishLabel": "Bay of Bengal",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/4317a084-9a75-42ad-bf1c-2f13ed498cc1#id",
+                "thingLabel": "ગુજરાત",
+                "thingUri": "http://www.bbc.co.uk/things/4317a084-9a75-42ad-bf1c-2f13ed498cc1#id",
+                "thingId": "4317a084-9a75-42ad-bf1c-2f13ed498cc1",
+                "thingType": ["core:Thing", "tagging:TagConcept", "core:Place"],
+                "thingSameAs": [
+                  "http://dbpedia.org/resource/Gujarat",
+                  "http://sws.geonames.org/1270770/",
+                  "http://www.wikidata.org/entity/Q1061"
+                ],
+                "thingEnglishLabel": "Gujarat",
                 "type": "about"
               }
             ]
@@ -183,75 +196,90 @@
         "tags": {
           "about": [
             {
-              "thingLabel": "કેરળ",
-              "thingUri": "http://www.bbc.co.uk/things/e5b7a8e9-9117-4199-b629-acf6cd33da00#id",
-              "thingId": "e5b7a8e9-9117-4199-b629-acf6cd33da00",
-              "thingType": ["core:Thing", "tagging:TagConcept", "core:Place"],
-              "thingSameAs": [
-                "http://dbpedia.org/resource/Kerala",
-                "http://sws.geonames.org/1267254/",
-                "http://www.wikidata.org/entity/Q1186"
-              ],
-              "topicName": "કેરળ",
-              "topicId": "c1gdq2919zgt",
-              "curationList": [
-                {
-                  "curationId": "77e5166e-1653-4ac6-b7c6-c41b8d5ecf8f",
-                  "curationType": "vivo-stream"
-                }
-              ],
-              "thingEnglishLabel": "Kerala",
-              "thingLabelLanguage": "gu",
-              "thingPreferredLabel": "Kerala"
-            },
-            {
-              "thingLabel": "ભારત",
-              "thingUri": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
-              "thingId": "5a08f030-710f-4168-acee-67294a90fc75",
-              "thingType": [
-                "core:Thing",
-                "tagging:TagConcept",
-                "core:Place",
-                "geoname:Feature",
-                "geoname:GeoTagConcept"
-              ],
-              "thingSameAs": [
-                "http://sws.geonames.org/1269750/",
-                "http://dbpedia.org/resource/India",
-                "http://www.wikidata.org/entity/Q668"
-              ],
-              "topicName": "ભારત",
-              "topicId": "c06gq3993v3t",
-              "curationList": [
-                {
-                  "curationId": "67142ad7-b5b0-4d9e-ae76-29e90b33535e",
-                  "curationType": "vivo-stream"
-                }
-              ],
-              "thingEnglishLabel": "India",
-              "thingLabelLanguage": "gu",
-              "thingPreferredLabel": "India"
-            },
-            {
-              "thingLabel": "સંસ્કૃતિ",
-              "thingUri": "http://www.bbc.co.uk/things/6a73afa3-ea6b-45c1-80bb-49060b99f864#id",
-              "thingId": "6a73afa3-ea6b-45c1-80bb-49060b99f864",
+              "thingLabel": "ચોમાસું",
+              "thingUri": "http://www.bbc.co.uk/things/87822184-803f-421f-8037-13dec3dd235c#id",
+              "thingId": "87822184-803f-421f-8037-13dec3dd235c",
               "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
               "thingSameAs": [
-                "http://dbpedia.org/resource/Culture",
-                "http://www.wikidata.org/entity/Q11042"
+                "http://dbpedia.org/resource/Monsoon",
+                "http://www.wikidata.org/entity/Q42967"
               ],
-              "topicName": "સંસ્કૃતિ",
-              "topicId": "c5qvpx8kqrnt",
+              "topicName": "ચોમાસું",
+              "topicId": "c28qpmmp7v2t",
               "curationList": [
                 {
-                  "curationId": "34691967-d6d7-4a37-8775-752457f4fe9c",
+                  "curationId": "908527df-b2dd-4fab-93fd-57022151be8d",
                   "curationType": "vivo-stream"
                 }
               ],
-              "thingEnglishLabel": "Culture",
+              "thingEnglishLabel": "Monsoon",
               "thingLabelLanguage": "gu",
-              "thingPreferredLabel": "Culture"
+              "thingPreferredLabel": "Monsoon"
+            },
+            {
+              "thingLabel": "વાતાવરણ",
+              "thingUri": "http://www.bbc.co.uk/things/9b16a6c2-7c16-42b7-bff7-6549579622e8#id",
+              "thingId": "9b16a6c2-7c16-42b7-bff7-6549579622e8",
+              "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+              "thingSameAs": [
+                "http://dbpedia.org/resource/Severe_weather",
+                "http://www.wikidata.org/entity/Q741507"
+              ],
+              "topicName": "વાતાવરણ",
+              "topicId": "c404vn5xw5vt",
+              "curationList": [
+                {
+                  "curationId": "4551075a-319d-410b-a6a7-0e16d4bc2292",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Severe weather",
+              "thingLabelLanguage": "gu",
+              "thingPreferredLabel": "Severe weather"
+            },
+            {
+              "thingLabel": "બંગાળની ખાડી ",
+              "thingUri": "http://www.bbc.co.uk/things/bb3b401b-19f4-4bff-a824-4144c483d5a6#id",
+              "thingId": "bb3b401b-19f4-4bff-a824-4144c483d5a6",
+              "thingType": ["core:Thing", "tagging:TagConcept", "core:Place"],
+              "thingSameAs": [
+                "http://sws.geonames.org/1281789/",
+                "http://www.wikidata.org/entity/Q38684",
+                "http://dbpedia.org/resource/Bay_of_Bengal"
+              ],
+              "topicName": "બંગાળની ખાડી ",
+              "topicId": "cmn32l4r7y8t",
+              "curationList": [
+                {
+                  "curationId": "5f1646e7-91a0-4e9b-b914-3e9505312044",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Bay of Bengal",
+              "thingLabelLanguage": "gu",
+              "thingPreferredLabel": "Bay of Bengal"
+            },
+            {
+              "thingLabel": "ગુજરાત",
+              "thingUri": "http://www.bbc.co.uk/things/4317a084-9a75-42ad-bf1c-2f13ed498cc1#id",
+              "thingId": "4317a084-9a75-42ad-bf1c-2f13ed498cc1",
+              "thingType": ["core:Thing", "tagging:TagConcept", "core:Place"],
+              "thingSameAs": [
+                "http://dbpedia.org/resource/Gujarat",
+                "http://sws.geonames.org/1270770/",
+                "http://www.wikidata.org/entity/Q1061"
+              ],
+              "topicName": "ગુજરાત",
+              "topicId": "cz74kjn4j5wt",
+              "curationList": [
+                {
+                  "curationId": "c988ff00-9647-41af-b726-f694a4ea58ef",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Gujarat",
+              "thingLabelLanguage": "gu",
+              "thingPreferredLabel": "Gujarat"
             }
           ]
         },
@@ -271,90 +299,113 @@
         "includeComments": false,
         "topics": [
           {
-            "topicName": "કેરળ",
-            "topicId": "c1gdq2919zgt",
+            "topicName": "ચોમાસું",
+            "topicId": "c28qpmmp7v2t",
             "subjectList": [
               {
-                "subjectId": "http://www.bbc.co.uk/things/e5b7a8e9-9117-4199-b629-acf6cd33da00#id",
+                "subjectId": "http://www.bbc.co.uk/things/87822184-803f-421f-8037-13dec3dd235c#id",
                 "subjectType": "tag"
               }
             ],
             "curationList": [
               {
-                "curationId": "77e5166e-1653-4ac6-b7c6-c41b8d5ecf8f",
+                "curationId": "908527df-b2dd-4fab-93fd-57022151be8d",
                 "curationType": "vivo-stream",
+                "position": 0,
                 "visualProminence": "NORMAL"
               }
             ],
-            "types": ["core:Thing", "tagging:TagConcept", "core:Place"],
+            "types": ["core:Thing", "tagging:TagConcept", "core:Theme"],
             "home": "http://www.bbc.co.uk/ontologies/passport/home/Gujarati",
-            "topicUrl": "/gujarati/topics/c1gdq2919zgt",
+            "topicUrl": "/gujarati/topics/c28qpmmp7v2t",
             "meta": {
-              "created": "2019-06-13T09:03:54.956Z",
-              "updated": "2024-09-18T15:05:37.716Z",
+              "created": "2023-02-27T12:51:45.160Z",
+              "updated": "2024-09-18T14:48:54.532Z",
               "transliterated": false,
               "script": "gu",
-              "variantId": "c1gdq2919zgt:gu"
+              "variantId": "c28qpmmp7v2t:gu"
             }
           },
           {
-            "topicName": "ભારત",
-            "topicId": "c06gq3993v3t",
+            "topicName": "વાતાવરણ",
+            "topicId": "c404vn5xw5vt",
             "subjectList": [
               {
-                "subjectId": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
+                "subjectId": "http://www.bbc.co.uk/things/9b16a6c2-7c16-42b7-bff7-6549579622e8#id",
                 "subjectType": "tag"
               }
             ],
             "curationList": [
               {
-                "curationId": "67142ad7-b5b0-4d9e-ae76-29e90b33535e",
-                "curationType": "vivo-stream",
-                "visualProminence": "NORMAL"
-              }
-            ],
-            "types": [
-              "core:Thing",
-              "tagging:TagConcept",
-              "core:Place",
-              "geoname:Feature",
-              "geoname:GeoTagConcept"
-            ],
-            "home": "http://www.bbc.co.uk/ontologies/passport/home/Gujarati",
-            "topicUrl": "/gujarati/topics/c06gq3993v3t",
-            "meta": {
-              "created": "2019-06-13T09:01:09.838Z",
-              "updated": "2024-09-18T15:05:56.996Z",
-              "transliterated": false,
-              "script": "gu",
-              "variantId": "c06gq3993v3t:gu"
-            }
-          },
-          {
-            "topicName": "સંસ્કૃતિ",
-            "topicId": "c5qvpx8kqrnt",
-            "subjectList": [
-              {
-                "subjectId": "http://www.bbc.co.uk/things/6a73afa3-ea6b-45c1-80bb-49060b99f864#id",
-                "subjectType": "tag"
-              }
-            ],
-            "curationList": [
-              {
-                "curationId": "34691967-d6d7-4a37-8775-752457f4fe9c",
+                "curationId": "4551075a-319d-410b-a6a7-0e16d4bc2292",
                 "curationType": "vivo-stream",
                 "visualProminence": "NORMAL"
               }
             ],
             "types": ["core:Thing", "tagging:TagConcept", "core:Theme"],
             "home": "http://www.bbc.co.uk/ontologies/passport/home/Gujarati",
-            "topicUrl": "/gujarati/topics/c5qvpx8kqrnt",
+            "topicUrl": "/gujarati/topics/c404vn5xw5vt",
             "meta": {
-              "created": "2019-06-13T09:01:22.793Z",
-              "updated": "2024-09-18T15:05:55.741Z",
+              "created": "2019-06-13T09:02:03.968Z",
+              "updated": "2024-09-18T15:05:49.995Z",
               "transliterated": false,
               "script": "gu",
-              "variantId": "c5qvpx8kqrnt:gu"
+              "variantId": "c404vn5xw5vt:gu"
+            }
+          },
+          {
+            "topicName": "બંગાળની ખાડી ",
+            "topicId": "cmn32l4r7y8t",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/bb3b401b-19f4-4bff-a824-4144c483d5a6#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "5f1646e7-91a0-4e9b-b914-3e9505312044",
+                "curationType": "vivo-stream",
+                "position": 0,
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": ["core:Thing", "tagging:TagConcept", "core:Place"],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Gujarati",
+            "topicUrl": "/gujarati/topics/cmn32l4r7y8t",
+            "meta": {
+              "created": "2023-02-27T13:36:04.746Z",
+              "updated": "2024-09-18T14:48:54.412Z",
+              "transliterated": false,
+              "script": "gu",
+              "variantId": "cmn32l4r7y8t:gu"
+            }
+          },
+          {
+            "topicName": "ગુજરાત",
+            "topicId": "cz74kjn4j5wt",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/4317a084-9a75-42ad-bf1c-2f13ed498cc1#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "c988ff00-9647-41af-b726-f694a4ea58ef",
+                "curationType": "vivo-stream",
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": ["core:Thing", "tagging:TagConcept", "core:Place"],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Gujarati",
+            "topicUrl": "/gujarati/topics/cz74kjn4j5wt",
+            "meta": {
+              "created": "2019-06-13T09:03:48.387Z",
+              "updated": "2024-09-18T15:05:38.618Z",
+              "transliterated": false,
+              "script": "gu",
+              "variantId": "cz74kjn4j5wt:gu"
             }
           }
         ],
@@ -362,8 +413,9 @@
         "allowAdvertising": true,
         "consumableOnRedButton": false,
         "consumableOnlyOnRedButton": false,
+        "breakingNews": { "isBreaking": false },
         "useSensitiveOnwardJourneys": false,
-        "stats": { "readTime": 1, "wordCount": 155 },
+        "stats": { "readTime": 1, "wordCount": 154 },
         "isTransliterated": false,
         "isKeyPointsFormatAsset": false
       },
@@ -371,26 +423,26 @@
         "model": {
           "blocks": [
             {
-              "id": "293dc28b",
+              "id": "ddcaf621",
               "type": "visuallyHiddenHeadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "8557de1c",
+                    "id": "e0099c32",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "2ce31e3a",
+                          "id": "525b3f77",
                           "type": "paragraph",
                           "model": {
-                            "text": "કેરળ : તહેવારો દરમિયાન ખવાતી 'શર્કરા વરટી' શું છે અને કેવી રીતે બને?",
+                            "text": "બંગાળની ખાડીની સિસ્ટમ આગળ વધી, ગુજરાતમાં વરસાદ વધશે?",
                             "blocks": [
                               {
-                                "id": "137a0e90",
+                                "id": "2ec9c3e2",
                                 "type": "fragment",
                                 "model": {
-                                  "text": "કેરળ : તહેવારો દરમિયાન ખવાતી 'શર્કરા વરટી' શું છે અને કેવી રીતે બને?",
+                                  "text": "બંગાળની ખાડીની સિસ્ટમ આગળ વધી, ગુજરાતમાં વરસાદ વધશે?",
                                   "attributes": []
                                 },
                                 "position": [1, 1, 1, 1]
@@ -408,32 +460,32 @@
               "position": [1]
             },
             {
-              "id": "aa9ff694",
+              "id": "907789d4",
               "type": "video",
               "model": {
-                "locator": "urn:bbc:pips:pid:p0p5y82c",
+                "locator": "urn:bbc:pips:pid:p0p64t3t",
                 "blocks": [
                   {
-                    "id": "86397713",
+                    "id": "fcb5599f",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "25c2ea1e",
+                          "id": "7191918a",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "e0af3b8e",
+                                "id": "6457e277",
                                 "type": "paragraph",
                                 "model": {
-                                  "text": "કેરળ: કેળાની એ વૅફર જે ગોળની ચાસણીમાંથી બને છે",
+                                  "text": "Gujarat Weather : બંગાળની ખાડીની સિસ્ટમ આગળ વધી, ગુજરાતમાં વરસાદ વધશે?",
                                   "blocks": [
                                     {
-                                      "id": "fd333e3b",
+                                      "id": "e2c003dd",
                                       "type": "fragment",
                                       "model": {
-                                        "text": "કેરળ: કેળાની એ વૅફર જે ગોળની ચાસણીમાંથી બને છે",
+                                        "text": "Gujarat Weather : બંગાળની ખાડીની સિસ્ટમ આગળ વધી, ગુજરાતમાં વરસાદ વધશે?",
                                         "attributes": []
                                       },
                                       "position": [2, 1, 1, 1, 1]
@@ -451,85 +503,85 @@
                     "position": [2, 1]
                   },
                   {
-                    "id": "9c7c942c",
+                    "id": "81a31c8a",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "0321fc4f",
-                          "blockId": "urn:bbc:ares::clip:p0p5y82c",
+                          "id": "94d37866",
+                          "blockId": "urn:bbc:ares::clip:p0p64t3t",
                           "type": "aresMediaMetadata",
                           "model": {
-                            "id": "p0p5y82c",
+                            "id": "p0p64t3t",
                             "subType": "clip",
                             "format": "video",
-                            "title": "કેરળ: કેળાની એ વૅફર જે ગોળની ચાસણીમાંથી બને છે",
+                            "title": "Gujarat Weather : બંગાળની ખાડીની સિસ્ટમ આગળ વધી, ગુજરાતમાં વરસાદ વધશે?",
                             "synopses": {
-                              "short": "કેરળ: કેળાની એ વૅફર જે ગોળની ચાસણીમાંથી બને છે",
-                              "long": "કેરળમાં ઓણમના તહેવાર દરમિયાન પીરસાતી પરંપરાગત વાનગીઓમાં શર્કરા વરટ્ટીનું ખાસ સ્થાન છે. એથક્કા કેળાને નાળિયેરના તેલમાં તળીને તેના પર ગોળની ચાસણી, સૂંઠ અને એલચીનો ભુક્કો નાખવામાં આવે છે. આ વર્ષે ભારે વરસાદ અને પૂરને કારણે કેળાના પાકને નુકસાન થતાં એથક્કા કેળા અને નાળિયેર તેલના ભાવ વધ્યા છે. આ કારણે શર્કરા વરટ્ટી મોંઘી થઈ છે, છતાં ઓણમમાં તેનું પરંપરાગત મહત્ત્વ જળવાયું છે અને લોકો તેની ખરીદી કરી રહ્યા છે."
+                              "short": "Gujarat Weather : બંગાળની ખાડીની સિસ્ટમ આગળ વધી, ગુજરાતમાં વરસાદ વધશે?",
+                              "long": "બંગાળની ખાડીમાં સર્જાયેલું લૉ પ્રેશર આગળ વધીને હાલ ઝારખંડ અને ઓડિશા આસપાસ પહોંચ્યું છે, જેના કારણે દિલ્હી, ઉત્તર ભારત, રાજસ્થાન અને મધ્યપ્રદેશમાં અસર જોવા મળી રહી છે. ગુજરાતમાં ભારે વરસાદ કે નવો રાઉન્ડ આવવાની શક્યતા નથી, પરંતુ આગામી બે દિવસ દક્ષિણ અને મધ્ય ગુજરાતના કેટલાક વિસ્તારો જેમ કે દાહોદ, પંચમહાલ, વડોદરા, સુરત અને નવસારીમાં હળવાથી મધ્યમ વરસાદી ઝાપટાં પડી શકે છે. સૌરાષ્ટ્ર, કચ્છ અને ઉત્તર ગુજરાતમાં વરસાદની કોઈ શક્યતા નથી. 28 ઓગસ્ટથી ફરી વરસાદનું જોર ઘટી જશે અને સપ્ટેમ્બરના પ્રારંભ સુધી મોટા ભાગના વિસ્તારો સૂકા રહેશે."
                             },
-                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0p5y86h.jpg",
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0p64tn8.jpg",
                             "imageCopyright": "BBC",
                             "embedding": true,
                             "advertising": true,
                             "versions": [
                               {
-                                "versionId": "p0p5y82h",
+                                "versionId": "p0p64t3y",
                                 "types": ["Original"],
-                                "duration": 49,
-                                "durationISO8601": "PT49S",
+                                "duration": 425,
+                                "durationISO8601": "PT7M5S",
                                 "warnings": {},
                                 "availableTerritories": {
                                   "uk": true,
                                   "nonUk": true
                                 },
-                                "availableFrom": 1787487673000
+                                "availableFrom": 1787643013000
                               }
                             ],
-                            "syndication": { "destinations": [] },
+                            "syndication": { "destinations": ["default"] },
                             "smpKind": "programme",
                             "webcastVersions": []
                           },
                           "position": [2, 2, 1]
                         },
                         {
-                          "id": "57780eed",
+                          "id": "56b684a2",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "4b32e27e",
+                                "id": "e2b1a171",
                                 "type": "rawImage",
                                 "model": {
-                                  "width": 1284,
-                                  "height": 722,
-                                  "locator": "ichef.bbci.co.uk/images/ic/$widthxn/p0p5y86h.jpg",
+                                  "width": 1920,
+                                  "height": 1080,
+                                  "locator": "ichef.bbci.co.uk/images/ic/$widthxn/p0p64tn8.jpg",
                                   "originCode": "mpv",
                                   "copyrightHolder": "BBC"
                                 },
                                 "position": [2, 2, 2, 1]
                               },
                               {
-                                "id": "3430cd1a",
+                                "id": "92309596",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "16a25fa9",
+                                      "id": "5d29936c",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "506ceb8c",
+                                            "id": "311ea93a",
                                             "type": "paragraph",
                                             "model": {
-                                              "text": "કેરળ: કેળાની એ વૅફર જે ગોળની ચાસણીમાંથી બને છે",
+                                              "text": "Keyframe #2",
                                               "blocks": [
                                                 {
-                                                  "id": "a61b89e3",
+                                                  "id": "8b0062c9",
                                                   "type": "fragment",
                                                   "model": {
-                                                    "text": "કેરળ: કેળાની એ વૅફર જે ગોળની ચાસણીમાંથી બને છે",
+                                                    "text": "Keyframe #2",
                                                     "attributes": []
                                                   },
                                                   "position": [
@@ -561,26 +613,26 @@
               "position": [2]
             },
             {
-              "id": "07e650d0",
+              "id": "e4d5a9c2",
               "type": "fauxHeadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "a235f1a0",
+                    "id": "f9aabcc4",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "d8fda3a2",
+                          "id": "633d2b63",
                           "type": "paragraph",
                           "model": {
-                            "text": "કેરળ : તહેવારો દરમિયાન ખવાતી 'શર્કરા વરટી' શું છે અને કેવી રીતે બને?",
+                            "text": "બંગાળની ખાડીની સિસ્ટમ આગળ વધી, ગુજરાતમાં વરસાદ વધશે?",
                             "blocks": [
                               {
-                                "id": "0c8cf1aa",
+                                "id": "eafffa57",
                                 "type": "fragment",
                                 "model": {
-                                  "text": "કેરળ : તહેવારો દરમિયાન ખવાતી 'શર્કરા વરટી' શું છે અને કેવી રીતે બને?",
+                                  "text": "બંગાળની ખાડીની સિસ્ટમ આગળ વધી, ગુજરાતમાં વરસાદ વધશે?",
                                   "attributes": []
                                 },
                                 "position": [3, 1, 1, 1]
@@ -598,31 +650,31 @@
               "position": [3]
             },
             {
-              "id": "3144e643",
+              "id": "8482b4c0",
               "type": "timestamp",
               "model": {
-                "firstPublished": 1787538848117,
-                "lastPublished": 1787538848117
+                "firstPublished": 1787643423271,
+                "lastPublished": 1787643423271
               },
               "position": [4]
             },
             {
-              "id": "552d8736",
+              "id": "b506d7f9",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "04286f3b",
+                    "id": "9ab49be9",
                     "type": "paragraph",
                     "model": {
-                      "text": "કેરળ રાજ્યમાં ઓણમના તહેવાર દરમિયાન પીરસાતી વાનગીઓમાં શર્કરા વરટ્ટી અચૂકપણે હોય.",
+                      "text": "આ વર્ષે બંગાળની ખાડીમાં ઘણી સિસ્ટમ બની છે પરંતુ ગુજરાત તરફ એ આવી નથી. તેના કારણે ગુજરાતમાં હળવાથી મધ્યમ પ્રકારનો જ વરસાદ પડે છે.",
                       "blocks": [
                         {
-                          "id": "a47f542f",
+                          "id": "1dc2ee80",
                           "type": "fragment",
                           "model": {
-                            "text": "કેરળ રાજ્યમાં ઓણમના તહેવાર દરમિયાન પીરસાતી વાનગીઓમાં શર્કરા વરટ્ટી અચૂકપણે હોય.",
-                            "attributes": ["bold"]
+                            "text": "આ વર્ષે બંગાળની ખાડીમાં ઘણી સિસ્ટમ બની છે પરંતુ ગુજરાત તરફ એ આવી નથી. તેના કારણે ગુજરાતમાં હળવાથી મધ્યમ પ્રકારનો જ વરસાદ પડે છે.",
+                            "attributes": []
                           },
                           "position": [5, 1, 1]
                         }
@@ -631,16 +683,16 @@
                     "position": [5, 1]
                   },
                   {
-                    "id": "fc20e2d2",
+                    "id": "c0b81950",
                     "type": "paragraph",
                     "model": {
-                      "text": "એથક્કા પ્રજાતિનાં મીઠાં કેળાને નાળિયેરના તેલમાં તળીને કૂરકરી ચિપ્સ બનાવવામાં આવે છે. એ પછી તેને ગોળની ચાસણી ચડાવવામાં આવે છે. આ સાથે તેની ઉપર સૂંઠ અને એલચીનો ભુક્કો છાંટવામાં આવે છે.",
+                      "text": "બંગાળની ખાડી નજીક પશ્ચિમ બંગાળ, ઓડિશા આસપાસ એક લૉ-પ્રેશર એરિયા બનેલો છે.",
                       "blocks": [
                         {
-                          "id": "797de8f9",
+                          "id": "74a541aa",
                           "type": "fragment",
                           "model": {
-                            "text": "એથક્કા પ્રજાતિનાં મીઠાં કેળાને નાળિયેરના તેલમાં તળીને કૂરકરી ચિપ્સ બનાવવામાં આવે છે. એ પછી તેને ગોળની ચાસણી ચડાવવામાં આવે છે. આ સાથે તેની ઉપર સૂંઠ અને એલચીનો ભુક્કો છાંટવામાં આવે છે.",
+                            "text": "બંગાળની ખાડી નજીક પશ્ચિમ બંગાળ, ઓડિશા આસપાસ એક લૉ-પ્રેશર એરિયા બનેલો છે.",
                             "attributes": []
                           },
                           "position": [5, 2, 1]
@@ -650,16 +702,16 @@
                     "position": [5, 2]
                   },
                   {
-                    "id": "fcd130b0",
+                    "id": "7fd1c6bf",
                     "type": "paragraph",
                     "model": {
-                      "text": "રાજ્યના કેટલાક ભાગોમાં આ વાનગી ઉપેરી કે શર્કરા ઉપેરી તરીકે પણ ઓળખાય છે.",
+                      "text": "આ સિસ્ટમ થોડી આગળ વધશે ત્યારે આજે તથા આવતીકાલે થોડો વરસાદ પૂર્વ ગુજરાતના અને દક્ષિણ ગુજરાતમાં પડી શકે છે. પરંતુ એ હળવાથી મધ્યમ પ્રકારનો જ વરસાદ હોઈ શકે છે.",
                       "blocks": [
                         {
-                          "id": "c0461654",
+                          "id": "796be149",
                           "type": "fragment",
                           "model": {
-                            "text": "રાજ્યના કેટલાક ભાગોમાં આ વાનગી ઉપેરી કે શર્કરા ઉપેરી તરીકે પણ ઓળખાય છે.",
+                            "text": "આ સિસ્ટમ થોડી આગળ વધશે ત્યારે આજે તથા આવતીકાલે થોડો વરસાદ પૂર્વ ગુજરાતના અને દક્ષિણ ગુજરાતમાં પડી શકે છે. પરંતુ એ હળવાથી મધ્યમ પ્રકારનો જ વરસાદ હોઈ શકે છે.",
                             "attributes": []
                           },
                           "position": [5, 3, 1]
@@ -669,16 +721,16 @@
                     "position": [5, 3]
                   },
                   {
-                    "id": "69a0d3f4",
+                    "id": "a0c477ec",
                     "type": "paragraph",
                     "model": {
-                      "text": "જોકે, વેપારીઓનું કહેવું છે કે આ વરસે ભારે વરસાદ અને પૂરને કારણે અનેક વિસ્તારોમાં કેળાના પાકને નુકસાન થયું છે એટલે એથક્કા કેળા મોંઘા થયા છે.",
+                      "text": "આજે મહિસાગર, અરવલ્લી, છોટાઉદેપુર, દાહોદ, પંચમહાલ, ખેડા, આણંદ, વલસાડ, નવસારી, સુરત, ડાંગ, ભરૂચ સહિતના જિલ્લામાં હળવો વરસાદ પડી શકે છે.",
                       "blocks": [
                         {
-                          "id": "2a98a118",
+                          "id": "acc43305",
                           "type": "fragment",
                           "model": {
-                            "text": "જોકે, વેપારીઓનું કહેવું છે કે આ વરસે ભારે વરસાદ અને પૂરને કારણે અનેક વિસ્તારોમાં કેળાના પાકને નુકસાન થયું છે એટલે એથક્કા કેળા મોંઘા થયા છે.",
+                            "text": "આજે મહિસાગર, અરવલ્લી, છોટાઉદેપુર, દાહોદ, પંચમહાલ, ખેડા, આણંદ, વલસાડ, નવસારી, સુરત, ડાંગ, ભરૂચ સહિતના જિલ્લામાં હળવો વરસાદ પડી શકે છે.",
                             "attributes": []
                           },
                           "position": [5, 4, 1]
@@ -692,27 +744,27 @@
               "position": [5]
             },
             {
-              "id": "cb9a276f",
+              "id": "be318f24",
               "type": "continueReading",
               "model": {},
               "position": [6]
             },
             {
-              "id": "de7144c4",
+              "id": "9238e708",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "f36513eb",
+                    "id": "2eec05d1",
                     "type": "paragraph",
                     "model": {
-                      "text": "તો નાળિયેર તેલના ભાવોમાં વધારો થયો છે, એટલે શર્કરા વરટ્ટી પણ મોંઘી બની છે. આમ છતાં તેનું પરંપરાગત મહત્ત્વ જળવાય રહ્યું છે અને લોકો તેની ખરીદી કરી રહ્યા છે.",
+                      "text": "આ સિવાય ઉત્તર ગુજરાતના વાવ-થરાદ, પાટણ, મહેસાણા સહિતાના વિસ્તારોમાં પણ કેટલાક વિસ્તારોમાં છૂટોછવાયો વરસાદ હળવોથી મધ્યમ પ્રકારનો વરસાદ વરસી શકે છે.",
                       "blocks": [
                         {
-                          "id": "41735570",
+                          "id": "67a7008d",
                           "type": "fragment",
                           "model": {
-                            "text": "તો નાળિયેર તેલના ભાવોમાં વધારો થયો છે, એટલે શર્કરા વરટ્ટી પણ મોંઘી બની છે. આમ છતાં તેનું પરંપરાગત મહત્ત્વ જળવાય રહ્યું છે અને લોકો તેની ખરીદી કરી રહ્યા છે.",
+                            "text": "આ સિવાય ઉત્તર ગુજરાતના વાવ-થરાદ, પાટણ, મહેસાણા સહિતાના વિસ્તારોમાં પણ કેટલાક વિસ્તારોમાં છૂટોછવાયો વરસાદ હળવોથી મધ્યમ પ્રકારનો વરસાદ વરસી શકે છે.",
                             "attributes": []
                           },
                           "position": [7, 1, 1]
@@ -726,31 +778,31 @@
               "position": [7]
             },
             {
-              "id": "fe3c3398",
+              "id": "3bdc61ed",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "1510d2fe",
+                    "id": "17db1721",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "cf1f7b95",
+                          "id": "6aa6ffc1",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "7fb68b7b",
+                                "id": "b4384e36",
                                 "type": "paragraph",
                                 "model": {
-                                  "text": "કેરળ : તહેવારો દરમિયાન ખવાતી 'શર્કરા વરટી' શું છે અને કેવી રીતે બને? બીબીસી ગુજરાતી ગુજરાત સમાચાર ન્યૂઝ અપડેટ",
+                                  "text": "આ વર્ષે બંગાળની ખાડીમાં ઘણી સિસ્ટમ બની છે પરંતુ ગુજરાત તરફ એ આવી નથી. તેના કારણે ગુજરાતમાં હળવાથી મધ્યમ પ્રકારનો જ વરસાદ પડે છે.",
                                   "blocks": [
                                     {
-                                      "id": "b04b55e5",
+                                      "id": "b4d4dba5",
                                       "type": "fragment",
                                       "model": {
-                                        "text": "કેરળ : તહેવારો દરમિયાન ખવાતી 'શર્કરા વરટી' શું છે અને કેવી રીતે બને? બીબીસી ગુજરાતી ગુજરાત સમાચાર ન્યૂઝ અપડેટ",
+                                        "text": "આ વર્ષે બંગાળની ખાડીમાં ઘણી સિસ્ટમ બની છે પરંતુ ગુજરાત તરફ એ આવી નથી. તેના કારણે ગુજરાતમાં હળવાથી મધ્યમ પ્રકારનો જ વરસાદ પડે છે.",
                                         "attributes": []
                                       },
                                       "position": [8, 1, 1, 1, 1]
@@ -768,14 +820,14 @@
                     "position": [8, 1]
                   },
                   {
-                    "id": "34e8605b",
+                    "id": "db4ad426",
                     "type": "rawImage",
                     "model": {
-                      "width": 1642,
-                      "height": 967,
-                      "locator": "0520/live/e0b397e0-9eed-11f1-a291-b542ee92de7c.jpg",
+                      "width": 800,
+                      "height": 450,
+                      "locator": "4b8e/live/a4ac9a10-a057-11f1-94bd-930e18756ae0.jpg",
                       "originCode": "cpsprodpb",
-                      "copyrightHolder": "BBC",
+                      "copyrightHolder": "Getty Images",
                       "suitableForSyndication": true
                     },
                     "position": [8, 2]
@@ -785,18 +837,18 @@
               "position": [8]
             },
             {
-              "id": "e4ef7662",
+              "id": "ea31b39e",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "2a7bdbd6",
+                    "id": "338dc52f",
                     "type": "paragraph",
                     "model": {
                       "text": "બીબીસી માટે કલેક્ટિવ ન્યૂઝરૂમનું પ્રકાશન",
                       "blocks": [
                         {
-                          "id": "7d214afc",
+                          "id": "43410675",
                           "type": "fragment",
                           "model": {
                             "text": "બીબીસી માટે કલેક્ટિવ ન્યૂઝરૂમનું પ્રકાશન",
@@ -817,7 +869,7 @@
       },
       "promo": {
         "headlines": {
-          "seoHeadline": "'શર્કરા વરટી' : કેરળની તહેવારો દરમિયાન ખવાતી આ કેળાની વૅફર કેવી રીતે બને છે?",
+          "seoHeadline": "Gujarat Weather : બંગાળની ખાડીની સિસ્ટમ આગળ વધી, ગુજરાતમાં વરસાદ વધશે?",
           "promoHeadline": {
             "blocks": [
               {
@@ -827,12 +879,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "કેરળ : તહેવારો દરમિયાન ખવાતી 'શર્કરા વરટી' શું છે અને કેવી રીતે બને?",
+                        "text": "બંગાળની ખાડીની સિસ્ટમ આગળ વધી, ગુજરાતમાં વરસાદ વધશે?",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "કેરળ : તહેવારો દરમિયાન ખવાતી 'શર્કરા વરટી' શું છે અને કેવી રીતે બને?",
+                              "text": "બંગાળની ખાડીની સિસ્ટમ આગળ વધી, ગુજરાતમાં વરસાદ વધશે?",
                               "attributes": []
                             }
                           }
@@ -859,12 +911,12 @@
                           {
                             "type": "paragraph",
                             "model": {
-                              "text": "કેરળ : તહેવારો દરમિયાન ખવાતી 'શર્કરા વરટી' શું છે અને કેવી રીતે બને? બીબીસી ગુજરાતી ગુજરાત સમાચાર ન્યૂઝ અપડેટ",
+                              "text": "આ વર્ષે બંગાળની ખાડીમાં ઘણી સિસ્ટમ બની છે પરંતુ ગુજરાત તરફ એ આવી નથી. તેના કારણે ગુજરાતમાં હળવાથી મધ્યમ પ્રકારનો જ વરસાદ પડે છે.",
                               "blocks": [
                                 {
                                   "type": "fragment",
                                   "model": {
-                                    "text": "કેરળ : તહેવારો દરમિયાન ખવાતી 'શર્કરા વરટી' શું છે અને કેવી રીતે બને? બીબીસી ગુજરાતી ગુજરાત સમાચાર ન્યૂઝ અપડેટ",
+                                    "text": "આ વર્ષે બંગાળની ખાડીમાં ઘણી સિસ્ટમ બની છે પરંતુ ગુજરાત તરફ એ આવી નથી. તેના કારણે ગુજરાતમાં હળવાથી મધ્યમ પ્રકારનો જ વરસાદ પડે છે.",
                                     "attributes": []
                                   }
                                 }
@@ -880,11 +932,11 @@
               {
                 "type": "rawImage",
                 "model": {
-                  "width": 1642,
-                  "height": 967,
-                  "locator": "0520/live/e0b397e0-9eed-11f1-a291-b542ee92de7c.jpg",
+                  "width": 800,
+                  "height": 450,
+                  "locator": "4b8e/live/a4ac9a10-a057-11f1-94bd-930e18756ae0.jpg",
                   "originCode": "cpsprodpb",
-                  "copyrightHolder": "BBC",
+                  "copyrightHolder": "Getty Images",
                   "suitableForSyndication": true
                 }
               }
@@ -900,12 +952,12 @@
                   {
                     "type": "paragraph",
                     "model": {
-                      "text": "એથક્કા પ્રજાતિના મીઠા કેળાને નાળિયેરના તેલમાં તળીને કૂરકરી ચિપ્સ બનાવવામાં આવે છે. એ પછી તેને ગોળની ચાસણી ચડાવવામાં આવે છે. આ સાથે તેની ઉપર સૂંઠ અને એલચીનો ભુક્કો છાંટવામાં આવે છે.",
+                      "text": "આ વર્ષે બંગાળની ખાડીમાં ઘણી સિસ્ટમ બની છે પરંતુ ગુજરાત તરફ એ આવી નથી. તેના કારણે ગુજરાતમાં હળવાથી મધ્યમ પ્રકારનો જ વરસાદ પડે છે.",
                       "blocks": [
                         {
                           "type": "fragment",
                           "model": {
-                            "text": "એથક્કા પ્રજાતિના મીઠા કેળાને નાળિયેરના તેલમાં તળીને કૂરકરી ચિપ્સ બનાવવામાં આવે છે. એ પછી તેને ગોળની ચાસણી ચડાવવામાં આવે છે. આ સાથે તેની ઉપર સૂંઠ અને એલચીનો ભુક્કો છાંટવામાં આવે છે.",
+                            "text": "આ વર્ષે બંગાળની ખાડીમાં ઘણી સિસ્ટમ બની છે પરંતુ ગુજરાત તરફ એ આવી નથી. તેના કારણે ગુજરાતમાં હળવાથી મધ્યમ પ્રકારનો જ વરસાદ પડે છે.",
                             "attributes": []
                           }
                         }
@@ -918,13 +970,14 @@
           ]
         },
         "serviceIdentifier": "Gujarati",
+        "breakingNews": { "isBreaking": false },
         "consumableAsSFV": true,
         "media": {
           "blocks": [
             {
               "type": "video",
               "model": {
-                "locator": "urn:bbc:pips:pid:p0p5y82c",
+                "locator": "urn:bbc:pips:pid:p0p64t3t",
                 "blocks": [
                   {
                     "type": "caption",
@@ -937,12 +990,12 @@
                               {
                                 "type": "paragraph",
                                 "model": {
-                                  "text": "કેરળ: કેળાની એ વૅફર જે ગોળની ચાસણીમાંથી બને છે",
+                                  "text": "Gujarat Weather : બંગાળની ખાડીની સિસ્ટમ આગળ વધી, ગુજરાતમાં વરસાદ વધશે?",
                                   "blocks": [
                                     {
                                       "type": "fragment",
                                       "model": {
-                                        "text": "કેરળ: કેળાની એ વૅફર જે ગોળની ચાસણીમાંથી બને છે",
+                                        "text": "Gujarat Weather : બંગાળની ખાડીની સિસ્ટમ આગળ વધી, ગુજરાતમાં વરસાદ વધશે?",
                                         "attributes": []
                                       }
                                     }
@@ -960,36 +1013,36 @@
                     "model": {
                       "blocks": [
                         {
-                          "blockId": "urn:bbc:ares::clip:p0p5y82c",
+                          "blockId": "urn:bbc:ares::clip:p0p64t3t",
                           "type": "aresMediaMetadata",
                           "model": {
-                            "id": "p0p5y82c",
+                            "id": "p0p64t3t",
                             "subType": "clip",
                             "format": "video",
-                            "title": "કેરળ: કેળાની એ વૅફર જે ગોળની ચાસણીમાંથી બને છે",
+                            "title": "Gujarat Weather : બંગાળની ખાડીની સિસ્ટમ આગળ વધી, ગુજરાતમાં વરસાદ વધશે?",
                             "synopses": {
-                              "short": "કેરળ: કેળાની એ વૅફર જે ગોળની ચાસણીમાંથી બને છે",
-                              "long": "કેરળમાં ઓણમના તહેવાર દરમિયાન પીરસાતી પરંપરાગત વાનગીઓમાં શર્કરા વરટ્ટીનું ખાસ સ્થાન છે. એથક્કા કેળાને નાળિયેરના તેલમાં તળીને તેના પર ગોળની ચાસણી, સૂંઠ અને એલચીનો ભુક્કો નાખવામાં આવે છે. આ વર્ષે ભારે વરસાદ અને પૂરને કારણે કેળાના પાકને નુકસાન થતાં એથક્કા કેળા અને નાળિયેર તેલના ભાવ વધ્યા છે. આ કારણે શર્કરા વરટ્ટી મોંઘી થઈ છે, છતાં ઓણમમાં તેનું પરંપરાગત મહત્ત્વ જળવાયું છે અને લોકો તેની ખરીદી કરી રહ્યા છે."
+                              "short": "Gujarat Weather : બંગાળની ખાડીની સિસ્ટમ આગળ વધી, ગુજરાતમાં વરસાદ વધશે?",
+                              "long": "બંગાળની ખાડીમાં સર્જાયેલું લૉ પ્રેશર આગળ વધીને હાલ ઝારખંડ અને ઓડિશા આસપાસ પહોંચ્યું છે, જેના કારણે દિલ્હી, ઉત્તર ભારત, રાજસ્થાન અને મધ્યપ્રદેશમાં અસર જોવા મળી રહી છે. ગુજરાતમાં ભારે વરસાદ કે નવો રાઉન્ડ આવવાની શક્યતા નથી, પરંતુ આગામી બે દિવસ દક્ષિણ અને મધ્ય ગુજરાતના કેટલાક વિસ્તારો જેમ કે દાહોદ, પંચમહાલ, વડોદરા, સુરત અને નવસારીમાં હળવાથી મધ્યમ વરસાદી ઝાપટાં પડી શકે છે. સૌરાષ્ટ્ર, કચ્છ અને ઉત્તર ગુજરાતમાં વરસાદની કોઈ શક્યતા નથી. 28 ઓગસ્ટથી ફરી વરસાદનું જોર ઘટી જશે અને સપ્ટેમ્બરના પ્રારંભ સુધી મોટા ભાગના વિસ્તારો સૂકા રહેશે."
                             },
-                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0p5y86h.jpg",
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0p64tn8.jpg",
                             "imageCopyright": "BBC",
                             "embedding": true,
                             "advertising": true,
                             "versions": [
                               {
-                                "versionId": "p0p5y82h",
+                                "versionId": "p0p64t3y",
                                 "types": ["Original"],
-                                "duration": 49,
-                                "durationISO8601": "PT49S",
+                                "duration": 425,
+                                "durationISO8601": "PT7M5S",
                                 "warnings": {},
                                 "availableTerritories": {
                                   "uk": true,
                                   "nonUk": true
                                 },
-                                "availableFrom": 1787487673000
+                                "availableFrom": 1787643013000
                               }
                             ],
-                            "syndication": { "destinations": [] },
+                            "syndication": { "destinations": ["default"] },
                             "smpKind": "programme",
                             "webcastVersions": []
                           }
@@ -1001,9 +1054,9 @@
                               {
                                 "type": "rawImage",
                                 "model": {
-                                  "width": 1284,
-                                  "height": 722,
-                                  "locator": "ichef.bbci.co.uk/images/ic/$widthxn/p0p5y86h.jpg",
+                                  "width": 1920,
+                                  "height": 1080,
+                                  "locator": "ichef.bbci.co.uk/images/ic/$widthxn/p0p64tn8.jpg",
                                   "originCode": "mpv",
                                   "copyrightHolder": "BBC"
                                 }
@@ -1019,12 +1072,12 @@
                                           {
                                             "type": "paragraph",
                                             "model": {
-                                              "text": "કેરળ: કેળાની એ વૅફર જે ગોળની ચાસણીમાંથી બને છે",
+                                              "text": "Keyframe #2",
                                               "blocks": [
                                                 {
                                                   "type": "fragment",
                                                   "model": {
-                                                    "text": "કેરળ: કેળાની એ વૅફર જે ગોળની ચાસણીમાંથી બને છે",
+                                                    "text": "Keyframe #2",
                                                     "attributes": []
                                                   }
                                                 }
@@ -1202,7 +1255,7 @@
         "cosmosReleaseUrl": "https://cosmos.tools.bbc.co.uk/lambdas/fabl-module-simorgh-bff/releases/672",
         "buildTime": "2026-08-27T09:14:13.914Z",
         "moduleType": "reads",
-        "traceId": "Root=1-6a9078f8-bfec41f7a12c0432ff965628;Parent=21a53395bde227e7;Sampled=1;Lineage=1:2829b227:0",
+        "traceId": "Root=1-6a909cad-c1e0c52ab4a7ceaec2a5de69;Parent=df1aff66d29f88c4;Sampled=1;Lineage=1:2829b227:0",
         "moduleEnvironment": "production",
         "personalisedRequest": "false",
         "environment": "live",
@@ -1221,17 +1274,17 @@
       {
         "response": {
           "headers": {
-            "date": "Thu, 27 Aug 2026 17:50:48 GMT",
+            "date": "Thu, 27 Aug 2026 20:23:09 GMT",
             "content-type": "application/json;charset=utf-8",
             "transfer-encoding": "chunked",
             "connection": "keep-alive",
             "personalised": "false",
             "vary": "accept-encoding, ctx-service-env",
-            "etag": "\"145197ee9c5f2170902174b698c6743c2fb0b865\"",
-            "last-modified": "Mon, 24 Aug 2026 02:34:17 GMT",
+            "etag": "\"874b9cfc9f848471e96d333b4a50b91d57caa8ff\"",
+            "last-modified": "Tue, 25 Aug 2026 07:37:07 GMT",
             "cache-control": "no-transform,max-age=60",
-            "x-ares-tracking-id": "21d4519b-8e8c-44ac-9fed-b1dc996a036a",
-            "expires": "Mon, 24 Aug 2026 02:35:23 GMT",
+            "x-ares-tracking-id": "2db60069-6d8f-4f12-bfa9-0c954d4cd740",
+            "expires": "Tue, 25 Aug 2026 07:38:14 GMT",
             "content-encoding": "gzip",
             "x-shared-cache": "HIT",
             "x-local-cache": "MISS"
@@ -1241,9 +1294,9 @@
         },
         "request": {
           "service": "ares",
-          "path": "/article/c93437jwkzpo",
+          "path": "/article/cx2zevlw204o",
           "timeout": 4000,
-          "url": "https://service-gateway.fabl.api.bbci.co.uk/service/ares/path/%2Farticle%2Fc93437jwkzpo"
+          "url": "https://service-gateway.fabl.api.bbci.co.uk/service/ares/path/%2Farticle%2Fcx2zevlw204o"
         }
       }
     ],
@@ -1251,19 +1304,19 @@
       {
         "response": {
           "headers": {
-            "date": "Thu, 27 Aug 2026 17:50:48 GMT",
+            "date": "Thu, 27 Aug 2026 20:23:09 GMT",
             "content-type": "application/json; charset=utf-8",
             "transfer-encoding": "chunked",
             "connection": "keep-alive",
             "vary": "Accept-Encoding, ctx-service-env, ctx-debug, ctx-unwrapped",
             "cache-control": "max-age=5",
-            "expires": "Thu, 27 Aug 2026 17:50:44 GMT",
+            "expires": "Thu, 27 Aug 2026 20:23:13 GMT",
             "content-encoding": "gzip",
-            "x-shared-cache": "STALE",
-            "x-local-cache": "EXPIRED"
+            "x-shared-cache": "HIT",
+            "x-local-cache": "MISS"
           },
           "responseCode": 200,
-          "responseTime": 6
+          "responseTime": 3
         },
         "request": {
           "module": "content-summaries",
@@ -1277,7 +1330,7 @@
     ],
     "tenantLogs": [
       {
-        "timestamp": 1787853048612,
+        "timestamp": 1787862189835,
         "message": "fetchTopicCuration [video]: service=gujarati topicId=null",
         "code": "DEBUG"
       }
@@ -1288,7 +1341,7 @@
     "params": {
       "service": "gujarati",
       "pageType": "article",
-      "id": "c93437jwkzpo"
+      "id": "cx2zevlw204o"
     }
   }
 }

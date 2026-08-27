@@ -34,39 +34,42 @@ export default ({ service, pageType }: ServiceParametersType) => {
             });
         });
 
-        it('should have a visible play button and valid duration', () => {
-          cy.window()
-            .getPageDataFromWindow()
-            .then(pageData => {
-              const media = getBlockData<ArticleContent & { type: string }>(
-                'video',
-                pageData,
-              );
+        it(
+          'should have a visible play button and valid duration',
+          { includeShadowDom: true },
+          () => {
+            cy.window()
+              .getPageDataFromWindow()
+              .then(pageData => {
+                const media = getBlockData<ArticleContent & { type: string }>(
+                  'video',
+                  pageData,
+                );
 
-              if (media && media.type === 'video') {
-                const aresMediaMetaDataBlock = (
-                  media.model.blocks[1] as AresMediaBlock
-                ).model.blocks[0] as AresMediaMetadataBlock;
+                if (media && media.type === 'video') {
+                  const aresMediaMetaDataBlock = (
+                    media.model.blocks[1] as AresMediaBlock
+                  ).model.blocks[0] as AresMediaMetadataBlock;
+                  const { durationISO8601 } =
+                    aresMediaMetaDataBlock.model.versions[0];
+                  cy.get('[data-e2e="media-loader__container"]')
+                    .first()
+                    .within(() => {
+                      cy.get('button.button.has_duration')
+                        .should('be.visible')
+                        .within(() => {
+                          cy.get('svg').should('be.visible');
+                        });
 
-                const { durationISO8601 } =
-                  aresMediaMetaDataBlock.model.versions[0];
-
-                cy.get('[data-e2e="media-loader__container"]')
-                  .first()
-                  .within(() => {
-                    cy.get('button')
-                      .should('be.visible')
-                      .within(() => {
-                        cy.get('svg').should('be.visible');
-                        cy.get('time')
-                          .should('be.visible')
-                          .should('have.attr', 'datetime')
-                          .and('eq', durationISO8601);
-                      });
-                  });
-              }
-            });
-        });
+                      cy.get('time')
+                        .should('be.visible')
+                        .should('have.attr', 'datetime')
+                        .and('eq', durationISO8601);
+                    });
+                }
+              });
+          },
+        );
       },
     );
   });
