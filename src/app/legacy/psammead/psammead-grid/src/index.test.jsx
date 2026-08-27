@@ -5,7 +5,7 @@ import { ExampleParagraph, ExampleFigure, ExampleImage } from './testHelpers';
 
 describe('Grid component', () => {
   it('should render Grid with Grid items', () => {
-    const { container } = render(
+    render(
       <Grid
         enableGelGutters
         columns={{
@@ -116,7 +116,7 @@ describe('Grid component', () => {
   });
 
   it('should render Grid with Grid items including nested non-Grid Figure element', () => {
-    const { container } = render(
+    render(
       <Grid
         columns={{
           group0: 6,

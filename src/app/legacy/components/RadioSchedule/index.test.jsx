@@ -1,4 +1,3 @@
-import { screen } from '@testing-library/react';
 import { render } from '../../../components/react-testing-library-with-providers';
 import { renderRadioSchedule } from './testHelpers/helper';
 import * as viewTracking from '../../../hooks/useViewTracker';
