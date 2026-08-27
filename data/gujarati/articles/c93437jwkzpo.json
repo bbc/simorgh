@@ -1,0 +1,1294 @@
+{
+  "data": {
+    "article": {
+      "metadata": {
+        "atiAnalytics": {
+          "categoryName": "India~Culture~Kerala",
+          "contentId": "urn:bbc:optimo:asset:c93437jwkzpo",
+          "contentType": "article-sfv",
+          "language": "gu",
+          "ldpThingIds": "5a08f030-710f-4168-acee-67294a90fc75~6a73afa3-ea6b-45c1-80bb-49060b99f864~e5b7a8e9-9117-4199-b629-acf6cd33da00",
+          "ldpThingLabels": "India~Culture~Kerala",
+          "nationsProducer": null,
+          "pageIdentifier": "gujarati.articles.c93437jwkzpo.page",
+          "pageTitle": "'શર્કરા વરટી' : કેરળની તહેવારો દરમિયાન ખવાતી આ કેળાની વૅફર કેવી રીતે બને છે?",
+          "timePublished": "2026-08-24T02:34:08.117Z",
+          "timeUpdated": "2026-08-24T02:34:08.117Z",
+          "readTimeMilliseconds": 60000
+        },
+        "id": "urn:bbc:ares::article:c93437jwkzpo",
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:c93437jwkzpo",
+          "canonicalUrl": "https://www.bbc.com/gujarati/articles/c93437jwkzpo"
+        },
+        "type": "article",
+        "createdBy": "Gujarati",
+        "language": "gu",
+        "firstPublished": 1787538848117,
+        "lastPublished": 1787538848117,
+        "isOppm": false,
+        "options": { "includeComments": false },
+        "analyticsLabels": {
+          "ldp_tags": "India~Culture~Kerala",
+          "page": "gujarati.articles.c93437jwkzpo.page",
+          "irisKeyword": null,
+          "audience_motivation": "Divert me",
+          "ldp_ids": "5a08f030-710f-4168-acee-67294a90fc75~6a73afa3-ea6b-45c1-80bb-49060b99f864~e5b7a8e9-9117-4199-b629-acf6cd33da00",
+          "contentId": "urn:bbc:optimo:asset:c93437jwkzpo",
+          "producer": "Gujarati"
+        },
+        "passport": {
+          "language": "gu",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Gujarati",
+          "taggings": [
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+              "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+              "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+              "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+              "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+              "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/e5b7a8e9-9117-4199-b629-acf6cd33da00#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+              "value": "http://www.bbc.co.uk/things/e1deed1e-0cab-4965-8e92-897b195f7a47#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/6a73afa3-ea6b-45c1-80bb-49060b99f864#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/dateFirstReleased",
+              "value": "2026-08-24T02:34:08.117Z"
+            }
+          ],
+          "predicates": {
+            "assetType": [
+              {
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                "type": "assetType"
+              }
+            ],
+            "primaryMediaType": [
+              {
+                "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                "type": "primaryMediaType"
+              }
+            ],
+            "dateFirstReleased": [
+              {
+                "value": "2026-08-24T02:34:08.117Z",
+                "type": "dateFirstReleased"
+              }
+            ],
+            "infoClass": [
+              {
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                "type": "infoClass"
+              }
+            ],
+            "formats": [
+              {
+                "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                "thingLabel": "Feature",
+                "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+                "thingType": ["tagging:TagConcept", "tagging:Format"],
+                "thingSameAs": [
+                  "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
+                ],
+                "thingEnglishLabel": "Feature",
+                "thingPreferredLabel": "Feature",
+                "thingLabelLanguage": "gu",
+                "type": "formats"
+              }
+            ],
+            "editorialSensitivity": [
+              {
+                "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                "type": "editorialSensitivity"
+              }
+            ],
+            "about": [
+              {
+                "value": "http://www.bbc.co.uk/things/e5b7a8e9-9117-4199-b629-acf6cd33da00#id",
+                "thingLabel": "કેરળ",
+                "thingUri": "http://www.bbc.co.uk/things/e5b7a8e9-9117-4199-b629-acf6cd33da00#id",
+                "thingId": "e5b7a8e9-9117-4199-b629-acf6cd33da00",
+                "thingType": ["core:Thing", "tagging:TagConcept", "core:Place"],
+                "thingSameAs": [
+                  "http://dbpedia.org/resource/Kerala",
+                  "http://sws.geonames.org/1267254/",
+                  "http://www.wikidata.org/entity/Q1186"
+                ],
+                "thingEnglishLabel": "Kerala",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
+                "thingLabel": "ભારત",
+                "thingUri": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
+                "thingId": "5a08f030-710f-4168-acee-67294a90fc75",
+                "thingType": [
+                  "core:Thing",
+                  "tagging:TagConcept",
+                  "core:Place",
+                  "geoname:Feature",
+                  "geoname:GeoTagConcept"
+                ],
+                "thingSameAs": [
+                  "http://sws.geonames.org/1269750/",
+                  "http://dbpedia.org/resource/India",
+                  "http://www.wikidata.org/entity/Q668"
+                ],
+                "thingEnglishLabel": "India",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/6a73afa3-ea6b-45c1-80bb-49060b99f864#id",
+                "thingLabel": "સંસ્કૃતિ",
+                "thingUri": "http://www.bbc.co.uk/things/6a73afa3-ea6b-45c1-80bb-49060b99f864#id",
+                "thingId": "6a73afa3-ea6b-45c1-80bb-49060b99f864",
+                "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+                "thingSameAs": [
+                  "http://dbpedia.org/resource/Culture",
+                  "http://www.wikidata.org/entity/Q11042"
+                ],
+                "thingEnglishLabel": "Culture",
+                "type": "about"
+              }
+            ]
+          }
+        },
+        "tags": {
+          "about": [
+            {
+              "thingLabel": "કેરળ",
+              "thingUri": "http://www.bbc.co.uk/things/e5b7a8e9-9117-4199-b629-acf6cd33da00#id",
+              "thingId": "e5b7a8e9-9117-4199-b629-acf6cd33da00",
+              "thingType": ["core:Thing", "tagging:TagConcept", "core:Place"],
+              "thingSameAs": [
+                "http://dbpedia.org/resource/Kerala",
+                "http://sws.geonames.org/1267254/",
+                "http://www.wikidata.org/entity/Q1186"
+              ],
+              "topicName": "કેરળ",
+              "topicId": "c1gdq2919zgt",
+              "curationList": [
+                {
+                  "curationId": "77e5166e-1653-4ac6-b7c6-c41b8d5ecf8f",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Kerala",
+              "thingLabelLanguage": "gu",
+              "thingPreferredLabel": "Kerala"
+            },
+            {
+              "thingLabel": "ભારત",
+              "thingUri": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
+              "thingId": "5a08f030-710f-4168-acee-67294a90fc75",
+              "thingType": [
+                "core:Thing",
+                "tagging:TagConcept",
+                "core:Place",
+                "geoname:Feature",
+                "geoname:GeoTagConcept"
+              ],
+              "thingSameAs": [
+                "http://sws.geonames.org/1269750/",
+                "http://dbpedia.org/resource/India",
+                "http://www.wikidata.org/entity/Q668"
+              ],
+              "topicName": "ભારત",
+              "topicId": "c06gq3993v3t",
+              "curationList": [
+                {
+                  "curationId": "67142ad7-b5b0-4d9e-ae76-29e90b33535e",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "India",
+              "thingLabelLanguage": "gu",
+              "thingPreferredLabel": "India"
+            },
+            {
+              "thingLabel": "સંસ્કૃતિ",
+              "thingUri": "http://www.bbc.co.uk/things/6a73afa3-ea6b-45c1-80bb-49060b99f864#id",
+              "thingId": "6a73afa3-ea6b-45c1-80bb-49060b99f864",
+              "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+              "thingSameAs": [
+                "http://dbpedia.org/resource/Culture",
+                "http://www.wikidata.org/entity/Q11042"
+              ],
+              "topicName": "સંસ્કૃતિ",
+              "topicId": "c5qvpx8kqrnt",
+              "curationList": [
+                {
+                  "curationId": "34691967-d6d7-4a37-8775-752457f4fe9c",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Culture",
+              "thingLabelLanguage": "gu",
+              "thingPreferredLabel": "Culture"
+            }
+          ]
+        },
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "video",
+          "caption",
+          "image",
+          "altText",
+          "rawImage",
+          "aresMedia",
+          "aresMediaMetadata"
+        ],
+        "includeComments": false,
+        "topics": [
+          {
+            "topicName": "કેરળ",
+            "topicId": "c1gdq2919zgt",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/e5b7a8e9-9117-4199-b629-acf6cd33da00#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "77e5166e-1653-4ac6-b7c6-c41b8d5ecf8f",
+                "curationType": "vivo-stream",
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": ["core:Thing", "tagging:TagConcept", "core:Place"],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Gujarati",
+            "topicUrl": "/gujarati/topics/c1gdq2919zgt",
+            "meta": {
+              "created": "2019-06-13T09:03:54.956Z",
+              "updated": "2024-09-18T15:05:37.716Z",
+              "transliterated": false,
+              "script": "gu",
+              "variantId": "c1gdq2919zgt:gu"
+            }
+          },
+          {
+            "topicName": "ભારત",
+            "topicId": "c06gq3993v3t",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "67142ad7-b5b0-4d9e-ae76-29e90b33535e",
+                "curationType": "vivo-stream",
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": [
+              "core:Thing",
+              "tagging:TagConcept",
+              "core:Place",
+              "geoname:Feature",
+              "geoname:GeoTagConcept"
+            ],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Gujarati",
+            "topicUrl": "/gujarati/topics/c06gq3993v3t",
+            "meta": {
+              "created": "2019-06-13T09:01:09.838Z",
+              "updated": "2024-09-18T15:05:56.996Z",
+              "transliterated": false,
+              "script": "gu",
+              "variantId": "c06gq3993v3t:gu"
+            }
+          },
+          {
+            "topicName": "સંસ્કૃતિ",
+            "topicId": "c5qvpx8kqrnt",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/6a73afa3-ea6b-45c1-80bb-49060b99f864#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "34691967-d6d7-4a37-8775-752457f4fe9c",
+                "curationType": "vivo-stream",
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Gujarati",
+            "topicUrl": "/gujarati/topics/c5qvpx8kqrnt",
+            "meta": {
+              "created": "2019-06-13T09:01:22.793Z",
+              "updated": "2024-09-18T15:05:55.741Z",
+              "transliterated": false,
+              "script": "gu",
+              "variantId": "c5qvpx8kqrnt:gu"
+            }
+          }
+        ],
+        "consumableAsSFV": true,
+        "allowAdvertising": true,
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false,
+        "useSensitiveOnwardJourneys": false,
+        "stats": { "readTime": 1, "wordCount": 155 },
+        "isTransliterated": false,
+        "isKeyPointsFormatAsset": false
+      },
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "293dc28b",
+              "type": "visuallyHiddenHeadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "8557de1c",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "2ce31e3a",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "કેરળ : તહેવારો દરમિયાન ખવાતી 'શર્કરા વરટી' શું છે અને કેવી રીતે બને?",
+                            "blocks": [
+                              {
+                                "id": "137a0e90",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "કેરળ : તહેવારો દરમિયાન ખવાતી 'શર્કરા વરટી' શું છે અને કેવી રીતે બને?",
+                                  "attributes": []
+                                },
+                                "position": [1, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [1, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [1, 1]
+                  }
+                ]
+              },
+              "position": [1]
+            },
+            {
+              "id": "aa9ff694",
+              "type": "video",
+              "model": {
+                "locator": "urn:bbc:pips:pid:p0p5y82c",
+                "blocks": [
+                  {
+                    "id": "86397713",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "25c2ea1e",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "e0af3b8e",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "કેરળ: કેળાની એ વૅફર જે ગોળની ચાસણીમાંથી બને છે",
+                                  "blocks": [
+                                    {
+                                      "id": "fd333e3b",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "કેરળ: કેળાની એ વૅફર જે ગોળની ચાસણીમાંથી બને છે",
+                                        "attributes": []
+                                      },
+                                      "position": [2, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [2, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [2, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [2, 1]
+                  },
+                  {
+                    "id": "9c7c942c",
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "0321fc4f",
+                          "blockId": "urn:bbc:ares::clip:p0p5y82c",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "p0p5y82c",
+                            "subType": "clip",
+                            "format": "video",
+                            "title": "કેરળ: કેળાની એ વૅફર જે ગોળની ચાસણીમાંથી બને છે",
+                            "synopses": {
+                              "short": "કેરળ: કેળાની એ વૅફર જે ગોળની ચાસણીમાંથી બને છે",
+                              "long": "કેરળમાં ઓણમના તહેવાર દરમિયાન પીરસાતી પરંપરાગત વાનગીઓમાં શર્કરા વરટ્ટીનું ખાસ સ્થાન છે. એથક્કા કેળાને નાળિયેરના તેલમાં તળીને તેના પર ગોળની ચાસણી, સૂંઠ અને એલચીનો ભુક્કો નાખવામાં આવે છે. આ વર્ષે ભારે વરસાદ અને પૂરને કારણે કેળાના પાકને નુકસાન થતાં એથક્કા કેળા અને નાળિયેર તેલના ભાવ વધ્યા છે. આ કારણે શર્કરા વરટ્ટી મોંઘી થઈ છે, છતાં ઓણમમાં તેનું પરંપરાગત મહત્ત્વ જળવાયું છે અને લોકો તેની ખરીદી કરી રહ્યા છે."
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0p5y86h.jpg",
+                            "imageCopyright": "BBC",
+                            "embedding": true,
+                            "advertising": true,
+                            "versions": [
+                              {
+                                "versionId": "p0p5y82h",
+                                "types": ["Original"],
+                                "duration": 49,
+                                "durationISO8601": "PT49S",
+                                "warnings": {},
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableFrom": 1787487673000
+                              }
+                            ],
+                            "syndication": { "destinations": [] },
+                            "smpKind": "programme",
+                            "webcastVersions": []
+                          },
+                          "position": [2, 2, 1]
+                        },
+                        {
+                          "id": "57780eed",
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "4b32e27e",
+                                "type": "rawImage",
+                                "model": {
+                                  "width": 1284,
+                                  "height": 722,
+                                  "locator": "ichef.bbci.co.uk/images/ic/$widthxn/p0p5y86h.jpg",
+                                  "originCode": "mpv",
+                                  "copyrightHolder": "BBC"
+                                },
+                                "position": [2, 2, 2, 1]
+                              },
+                              {
+                                "id": "3430cd1a",
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "16a25fa9",
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "id": "506ceb8c",
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "કેરળ: કેળાની એ વૅફર જે ગોળની ચાસણીમાંથી બને છે",
+                                              "blocks": [
+                                                {
+                                                  "id": "a61b89e3",
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "કેરળ: કેળાની એ વૅફર જે ગોળની ચાસણીમાંથી બને છે",
+                                                    "attributes": []
+                                                  },
+                                                  "position": [
+                                                    2, 2, 2, 2, 1, 1, 1
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            "position": [2, 2, 2, 2, 1, 1]
+                                          }
+                                        ]
+                                      },
+                                      "position": [2, 2, 2, 2, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [2, 2, 2, 2]
+                              }
+                            ]
+                          },
+                          "position": [2, 2, 2]
+                        }
+                      ]
+                    },
+                    "position": [2, 2]
+                  }
+                ]
+              },
+              "position": [2]
+            },
+            {
+              "id": "07e650d0",
+              "type": "fauxHeadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "a235f1a0",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "d8fda3a2",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "કેરળ : તહેવારો દરમિયાન ખવાતી 'શર્કરા વરટી' શું છે અને કેવી રીતે બને?",
+                            "blocks": [
+                              {
+                                "id": "0c8cf1aa",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "કેરળ : તહેવારો દરમિયાન ખવાતી 'શર્કરા વરટી' શું છે અને કેવી રીતે બને?",
+                                  "attributes": []
+                                },
+                                "position": [3, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [3, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [3, 1]
+                  }
+                ]
+              },
+              "position": [3]
+            },
+            {
+              "id": "3144e643",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1787538848117,
+                "lastPublished": 1787538848117
+              },
+              "position": [4]
+            },
+            {
+              "id": "552d8736",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "04286f3b",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "કેરળ રાજ્યમાં ઓણમના તહેવાર દરમિયાન પીરસાતી વાનગીઓમાં શર્કરા વરટ્ટી અચૂકપણે હોય.",
+                      "blocks": [
+                        {
+                          "id": "a47f542f",
+                          "type": "fragment",
+                          "model": {
+                            "text": "કેરળ રાજ્યમાં ઓણમના તહેવાર દરમિયાન પીરસાતી વાનગીઓમાં શર્કરા વરટ્ટી અચૂકપણે હોય.",
+                            "attributes": ["bold"]
+                          },
+                          "position": [5, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [5, 1]
+                  },
+                  {
+                    "id": "fc20e2d2",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "એથક્કા પ્રજાતિનાં મીઠાં કેળાને નાળિયેરના તેલમાં તળીને કૂરકરી ચિપ્સ બનાવવામાં આવે છે. એ પછી તેને ગોળની ચાસણી ચડાવવામાં આવે છે. આ સાથે તેની ઉપર સૂંઠ અને એલચીનો ભુક્કો છાંટવામાં આવે છે.",
+                      "blocks": [
+                        {
+                          "id": "797de8f9",
+                          "type": "fragment",
+                          "model": {
+                            "text": "એથક્કા પ્રજાતિનાં મીઠાં કેળાને નાળિયેરના તેલમાં તળીને કૂરકરી ચિપ્સ બનાવવામાં આવે છે. એ પછી તેને ગોળની ચાસણી ચડાવવામાં આવે છે. આ સાથે તેની ઉપર સૂંઠ અને એલચીનો ભુક્કો છાંટવામાં આવે છે.",
+                            "attributes": []
+                          },
+                          "position": [5, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [5, 2]
+                  },
+                  {
+                    "id": "fcd130b0",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "રાજ્યના કેટલાક ભાગોમાં આ વાનગી ઉપેરી કે શર્કરા ઉપેરી તરીકે પણ ઓળખાય છે.",
+                      "blocks": [
+                        {
+                          "id": "c0461654",
+                          "type": "fragment",
+                          "model": {
+                            "text": "રાજ્યના કેટલાક ભાગોમાં આ વાનગી ઉપેરી કે શર્કરા ઉપેરી તરીકે પણ ઓળખાય છે.",
+                            "attributes": []
+                          },
+                          "position": [5, 3, 1]
+                        }
+                      ]
+                    },
+                    "position": [5, 3]
+                  },
+                  {
+                    "id": "69a0d3f4",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "જોકે, વેપારીઓનું કહેવું છે કે આ વરસે ભારે વરસાદ અને પૂરને કારણે અનેક વિસ્તારોમાં કેળાના પાકને નુકસાન થયું છે એટલે એથક્કા કેળા મોંઘા થયા છે.",
+                      "blocks": [
+                        {
+                          "id": "2a98a118",
+                          "type": "fragment",
+                          "model": {
+                            "text": "જોકે, વેપારીઓનું કહેવું છે કે આ વરસે ભારે વરસાદ અને પૂરને કારણે અનેક વિસ્તારોમાં કેળાના પાકને નુકસાન થયું છે એટલે એથક્કા કેળા મોંઘા થયા છે.",
+                            "attributes": []
+                          },
+                          "position": [5, 4, 1]
+                        }
+                      ]
+                    },
+                    "position": [5, 4]
+                  }
+                ]
+              },
+              "position": [5]
+            },
+            {
+              "id": "cb9a276f",
+              "type": "continueReading",
+              "model": {},
+              "position": [6]
+            },
+            {
+              "id": "de7144c4",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "f36513eb",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "તો નાળિયેર તેલના ભાવોમાં વધારો થયો છે, એટલે શર્કરા વરટ્ટી પણ મોંઘી બની છે. આમ છતાં તેનું પરંપરાગત મહત્ત્વ જળવાય રહ્યું છે અને લોકો તેની ખરીદી કરી રહ્યા છે.",
+                      "blocks": [
+                        {
+                          "id": "41735570",
+                          "type": "fragment",
+                          "model": {
+                            "text": "તો નાળિયેર તેલના ભાવોમાં વધારો થયો છે, એટલે શર્કરા વરટ્ટી પણ મોંઘી બની છે. આમ છતાં તેનું પરંપરાગત મહત્ત્વ જળવાય રહ્યું છે અને લોકો તેની ખરીદી કરી રહ્યા છે.",
+                            "attributes": []
+                          },
+                          "position": [7, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [7, 1]
+                  }
+                ]
+              },
+              "position": [7]
+            },
+            {
+              "id": "fe3c3398",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "1510d2fe",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "cf1f7b95",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "7fb68b7b",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "કેરળ : તહેવારો દરમિયાન ખવાતી 'શર્કરા વરટી' શું છે અને કેવી રીતે બને? બીબીસી ગુજરાતી ગુજરાત સમાચાર ન્યૂઝ અપડેટ",
+                                  "blocks": [
+                                    {
+                                      "id": "b04b55e5",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "કેરળ : તહેવારો દરમિયાન ખવાતી 'શર્કરા વરટી' શું છે અને કેવી રીતે બને? બીબીસી ગુજરાતી ગુજરાત સમાચાર ન્યૂઝ અપડેટ",
+                                        "attributes": []
+                                      },
+                                      "position": [8, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [8, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [8, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [8, 1]
+                  },
+                  {
+                    "id": "34e8605b",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 1642,
+                      "height": 967,
+                      "locator": "0520/live/e0b397e0-9eed-11f1-a291-b542ee92de7c.jpg",
+                      "originCode": "cpsprodpb",
+                      "copyrightHolder": "BBC",
+                      "suitableForSyndication": true
+                    },
+                    "position": [8, 2]
+                  }
+                ]
+              },
+              "position": [8]
+            },
+            {
+              "id": "e4ef7662",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "2a7bdbd6",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "બીબીસી માટે કલેક્ટિવ ન્યૂઝરૂમનું પ્રકાશન",
+                      "blocks": [
+                        {
+                          "id": "7d214afc",
+                          "type": "fragment",
+                          "model": {
+                            "text": "બીબીસી માટે કલેક્ટિવ ન્યૂઝરૂમનું પ્રકાશન",
+                            "attributes": ["bold"]
+                          },
+                          "position": [9, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [9, 1]
+                  }
+                ]
+              },
+              "position": [9]
+            }
+          ]
+        }
+      },
+      "promo": {
+        "headlines": {
+          "seoHeadline": "'શર્કરા વરટી' : કેરળની તહેવારો દરમિયાન ખવાતી આ કેળાની વૅફર કેવી રીતે બને છે?",
+          "promoHeadline": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "કેરળ : તહેવારો દરમિયાન ખવાતી 'શર્કરા વરટી' શું છે અને કેવી રીતે બને?",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "કેરળ : તહેવારો દરમિયાન ખવાતી 'શર્કરા વરટી' શું છે અને કેવી રીતે બને?",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "images": {
+          "defaultPromoImage": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "કેરળ : તહેવારો દરમિયાન ખવાતી 'શર્કરા વરટી' શું છે અને કેવી રીતે બને? બીબીસી ગુજરાતી ગુજરાત સમાચાર ન્યૂઝ અપડેટ",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "કેરળ : તહેવારો દરમિયાન ખવાતી 'શર્કરા વરટી' શું છે અને કેવી રીતે બને? બીબીસી ગુજરાતી ગુજરાત સમાચાર ન્યૂઝ અપડેટ",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 1642,
+                  "height": 967,
+                  "locator": "0520/live/e0b397e0-9eed-11f1-a291-b542ee92de7c.jpg",
+                  "originCode": "cpsprodpb",
+                  "copyrightHolder": "BBC",
+                  "suitableForSyndication": true
+                }
+              }
+            ]
+          }
+        },
+        "summary": {
+          "blocks": [
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "એથક્કા પ્રજાતિના મીઠા કેળાને નાળિયેરના તેલમાં તળીને કૂરકરી ચિપ્સ બનાવવામાં આવે છે. એ પછી તેને ગોળની ચાસણી ચડાવવામાં આવે છે. આ સાથે તેની ઉપર સૂંઠ અને એલચીનો ભુક્કો છાંટવામાં આવે છે.",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": {
+                            "text": "એથક્કા પ્રજાતિના મીઠા કેળાને નાળિયેરના તેલમાં તળીને કૂરકરી ચિપ્સ બનાવવામાં આવે છે. એ પછી તેને ગોળની ચાસણી ચડાવવામાં આવે છે. આ સાથે તેની ઉપર સૂંઠ અને એલચીનો ભુક્કો છાંટવામાં આવે છે.",
+                            "attributes": []
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "serviceIdentifier": "Gujarati",
+        "consumableAsSFV": true,
+        "media": {
+          "blocks": [
+            {
+              "type": "video",
+              "model": {
+                "locator": "urn:bbc:pips:pid:p0p5y82c",
+                "blocks": [
+                  {
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "કેરળ: કેળાની એ વૅફર જે ગોળની ચાસણીમાંથી બને છે",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "કેરળ: કેળાની એ વૅફર જે ગોળની ચાસણીમાંથી બને છે",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "blockId": "urn:bbc:ares::clip:p0p5y82c",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "p0p5y82c",
+                            "subType": "clip",
+                            "format": "video",
+                            "title": "કેરળ: કેળાની એ વૅફર જે ગોળની ચાસણીમાંથી બને છે",
+                            "synopses": {
+                              "short": "કેરળ: કેળાની એ વૅફર જે ગોળની ચાસણીમાંથી બને છે",
+                              "long": "કેરળમાં ઓણમના તહેવાર દરમિયાન પીરસાતી પરંપરાગત વાનગીઓમાં શર્કરા વરટ્ટીનું ખાસ સ્થાન છે. એથક્કા કેળાને નાળિયેરના તેલમાં તળીને તેના પર ગોળની ચાસણી, સૂંઠ અને એલચીનો ભુક્કો નાખવામાં આવે છે. આ વર્ષે ભારે વરસાદ અને પૂરને કારણે કેળાના પાકને નુકસાન થતાં એથક્કા કેળા અને નાળિયેર તેલના ભાવ વધ્યા છે. આ કારણે શર્કરા વરટ્ટી મોંઘી થઈ છે, છતાં ઓણમમાં તેનું પરંપરાગત મહત્ત્વ જળવાયું છે અને લોકો તેની ખરીદી કરી રહ્યા છે."
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0p5y86h.jpg",
+                            "imageCopyright": "BBC",
+                            "embedding": true,
+                            "advertising": true,
+                            "versions": [
+                              {
+                                "versionId": "p0p5y82h",
+                                "types": ["Original"],
+                                "duration": 49,
+                                "durationISO8601": "PT49S",
+                                "warnings": {},
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableFrom": 1787487673000
+                              }
+                            ],
+                            "syndication": { "destinations": [] },
+                            "smpKind": "programme",
+                            "webcastVersions": []
+                          }
+                        },
+                        {
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "rawImage",
+                                "model": {
+                                  "width": 1284,
+                                  "height": 722,
+                                  "locator": "ichef.bbci.co.uk/images/ic/$widthxn/p0p5y86h.jpg",
+                                  "originCode": "mpv",
+                                  "copyrightHolder": "BBC"
+                                }
+                              },
+                              {
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "કેરળ: કેળાની એ વૅફર જે ગોળની ચાસણીમાંથી બને છે",
+                                              "blocks": [
+                                                {
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "કેરળ: કેળાની એ વૅફર જે ગોળની ચાસણીમાંથી બને છે",
+                                                    "attributes": []
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "latestMedia": [
+        {
+          "type": "video",
+          "duration": "PT15M54S",
+          "isLive": false,
+          "title": "નેપાળ : આખેઆખાં ગામો કઈ રીતે તણાઈ ગયાં? જુઓ તબાહીના પાંચ વીડિયો",
+          "firstPublished": "2026-08-27T11:07:07.933Z",
+          "lastPublished": "2026-08-27T15:36:52.912Z",
+          "link": "https://www.bbc.com/gujarati/watch/c3eq9e0klg8o",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/97ca/live/9cad7470-a22c-11f1-b109-879e35c24276.jpg.webp",
+          "description": "નેપાળમાં ભીષણ પૂર અને ભૂસ્ખલનથી ભારે તબાહી સર્જાઈ છે. આ દુર્ઘટનામાં અત્યાર સુધીમાં ઓછાંમાં ઓછાં 300થી વધારે લોકોનાં મોત થયાં છે. જોકે, મૃત્યુઆંક હજુ વધવાની આશંકા છે. ",
+          "imageAlt": "નેપાળ : આખેઆખાં ગામો કઈ રીતે તણાઈ ગયાં? જુઓ તબાહીના પાંચ વીડિયો",
+          "isPortraitImage": false,
+          "id": "c3eq9e0klg8o",
+          "attributions": [
+            {
+              "title": "Gujarati",
+              "link": {
+                "url": "https://www.bbc.co.uk/gujarati",
+                "scheme": "https",
+                "host": "www.bbc.co.uk",
+                "path": "/gujarati"
+              }
+            }
+          ],
+          "relatedTopic": {
+            "title": "નેપાળ",
+            "link": {
+              "url": "https://www.bbc.com/gujarati/topics/c404vn5789qt",
+              "scheme": "https",
+              "host": "www.bbc.com",
+              "path": "/gujarati/topics/c404vn5789qt"
+            }
+          }
+        },
+        {
+          "type": "video",
+          "duration": "PT34S",
+          "isLive": false,
+          "title": "યુક્રેનમાં 10 વર્ષીય દીકરી અચાનક સૈનિક પિતાને જોઈ ભાવુક થઈ",
+          "firstPublished": "2026-08-27T10:13:30.107Z",
+          "lastPublished": "2026-08-27T10:13:30.107Z",
+          "link": "https://www.bbc.com/gujarati/watch/c8jd7j177ewo",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/9e2d/live/8a2d6800-a1ff-11f1-a97e-999c5aae08bf.png.webp",
+          "description": "યુક્રેનની 10 વર્ષીય ઍના માટે તેમના જન્મદિવસે પિતાએ ખાસ સરપ્રાઇઝ આપી.",
+          "imageAlt": "યુક્રેન",
+          "isPortraitImage": true,
+          "id": "c8jd7j177ewo",
+          "attributions": [
+            {
+              "title": "Gujarati",
+              "link": {
+                "url": "https://www.bbc.co.uk/gujarati",
+                "scheme": "https",
+                "host": "www.bbc.co.uk",
+                "path": "/gujarati"
+              }
+            }
+          ],
+          "relatedTopic": {
+            "title": "રશિયા-યુક્રેન સંઘર્ષ",
+            "link": {
+              "url": "https://www.bbc.com/gujarati/topics/cg6d0k76j89t",
+              "scheme": "https",
+              "host": "www.bbc.com",
+              "path": "/gujarati/topics/cg6d0k76j89t"
+            }
+          }
+        },
+        {
+          "type": "video",
+          "duration": "PT1M25S",
+          "isLive": false,
+          "title": "પાકિસ્તાનની હૉસ્પિટલમાં આગ લાગતાં 14 બાળકોનાં મોત, પરિજનોની વ્યથા",
+          "firstPublished": "2026-08-27T10:06:14.280Z",
+          "lastPublished": "2026-08-27T10:07:12.405Z",
+          "link": "https://www.bbc.com/gujarati/watch/c4gv5g01398o",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/43f8/live/c823a3a0-a1fe-11f1-a97e-999c5aae08bf.png.webp",
+          "description": "ઇસ્લામાબાદની પીઆઇએમએસ હૉસ્પિટલના મેટરનિટી વૉર્ડમાં ભીષણ આગ લાગતાં 14 નવજાત બાળકોનાં મોત થયાં. ",
+          "imageAlt": "પાકિસ્તાન",
+          "isPortraitImage": true,
+          "id": "c4gv5g01398o",
+          "attributions": [
+            {
+              "title": "Gujarati",
+              "link": {
+                "url": "https://www.bbc.co.uk/gujarati",
+                "scheme": "https",
+                "host": "www.bbc.co.uk",
+                "path": "/gujarati"
+              }
+            }
+          ]
+        },
+        {
+          "type": "video",
+          "duration": "PT15M54S",
+          "isLive": false,
+          "title": "નેપાળમાં આવેલું પૂર કેમ આટલું ભયાનક છે?",
+          "firstPublished": "2026-08-27T09:23:27.771Z",
+          "lastPublished": "2026-08-27T10:04:38.489Z",
+          "link": "https://www.bbc.com/gujarati/watch/c5y3e3vdygvo",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/443e/live/75e6fe30-a1f8-11f1-aed2-8d6da8d75094.png.webp",
+          "description": "નેપાળની ભોટેકોશી નદીમાં બુધવારે આવેલા અચાનક પૂરે ત્રણ જિલ્લામાં ભારે વિનાશ વેર્યો છે.",
+          "imageAlt": "નેપાળ પૂર",
+          "isPortraitImage": false,
+          "id": "c5y3e3vdygvo",
+          "attributions": [
+            {
+              "title": "Gujarati",
+              "link": {
+                "url": "https://www.bbc.co.uk/gujarati",
+                "scheme": "https",
+                "host": "www.bbc.co.uk",
+                "path": "/gujarati"
+              }
+            }
+          ],
+          "relatedTopic": {
+            "title": "નેપાળ",
+            "link": {
+              "url": "https://www.bbc.com/gujarati/topics/c404vn5789qt",
+              "scheme": "https",
+              "host": "www.bbc.com",
+              "path": "/gujarati/topics/c404vn5789qt"
+            }
+          }
+        }
+      ],
+      "portraitVideoItems": null,
+      "countryCuration": null,
+      "videoCuration": null,
+      "countryTopicIdToReorder": null
+    }
+  },
+  "contentType": "application/json; charset=utf-8",
+  "debug": {
+    "context": {
+      "runtimeContext": {
+        "lambdaBootstrapVersion": "5.9.0",
+        "runtimeVersion": "6.9.0",
+        "standardLibraryVersion": "6.9.0",
+        "moduleName": "simorgh-bff",
+        "moduleVersion": "0.0.2",
+        "sourceUrl": "https://github.com/bbc/fabl-modules/tree/f8c7eda0392d7e1072ab0e721cff066e06f58f21/modules/application/simorgh-bff",
+        "cosmosReleaseUrl": "https://cosmos.tools.bbc.co.uk/lambdas/fabl-module-simorgh-bff/releases/672",
+        "buildTime": "2026-08-27T09:14:13.914Z",
+        "moduleType": "reads",
+        "traceId": "Root=1-6a9078f8-bfec41f7a12c0432ff965628;Parent=21a53395bde227e7;Sampled=1;Lineage=1:2829b227:0",
+        "moduleEnvironment": "production",
+        "personalisedRequest": "false",
+        "environment": "live",
+        "nodeJSVersion": "v22.23.1"
+      },
+      "systemContext": {
+        "service-env": "live",
+        "debug": "1",
+        "call-stack": "simorgh-bff",
+        "sandboxEnabled": true,
+        "logAllDebug": false,
+        "normaliseRequest": true
+      }
+    },
+    "serviceRequests": [
+      {
+        "response": {
+          "headers": {
+            "date": "Thu, 27 Aug 2026 17:50:48 GMT",
+            "content-type": "application/json;charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "etag": "\"145197ee9c5f2170902174b698c6743c2fb0b865\"",
+            "last-modified": "Mon, 24 Aug 2026 02:34:17 GMT",
+            "cache-control": "no-transform,max-age=60",
+            "x-ares-tracking-id": "21d4519b-8e8c-44ac-9fed-b1dc996a036a",
+            "expires": "Mon, 24 Aug 2026 02:35:23 GMT",
+            "content-encoding": "gzip",
+            "x-shared-cache": "HIT",
+            "x-local-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 2
+        },
+        "request": {
+          "service": "ares",
+          "path": "/article/c93437jwkzpo",
+          "timeout": 4000,
+          "url": "https://service-gateway.fabl.api.bbci.co.uk/service/ares/path/%2Farticle%2Fc93437jwkzpo"
+        }
+      }
+    ],
+    "moduleRequests": [
+      {
+        "response": {
+          "headers": {
+            "date": "Thu, 27 Aug 2026 17:50:48 GMT",
+            "content-type": "application/json; charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "vary": "Accept-Encoding, ctx-service-env, ctx-debug, ctx-unwrapped",
+            "cache-control": "max-age=5",
+            "expires": "Thu, 27 Aug 2026 17:50:44 GMT",
+            "content-encoding": "gzip",
+            "x-shared-cache": "STALE",
+            "x-local-cache": "EXPIRED"
+          },
+          "responseCode": 200,
+          "responseTime": 6
+        },
+        "request": {
+          "module": "content-summaries",
+          "params": {
+            "urn": "urn:bbc:vivo:curation:7c7fc1e5-cf2f-4fa0-b7d3-ebdf5b9b8741"
+          },
+          "timeout": 4000,
+          "url": "https://fabl.api.bbci.co.uk/module/content-summaries?urn=urn%3Abbc%3Avivo%3Acuration%3A7c7fc1e5-cf2f-4fa0-b7d3-ebdf5b9b8741"
+        }
+      }
+    ],
+    "tenantLogs": [
+      {
+        "timestamp": 1787853048612,
+        "message": "fetchTopicCuration [video]: service=gujarati topicId=null",
+        "code": "DEBUG"
+      }
+    ],
+    "privateContext": {},
+    "sandboxViolations": [],
+    "nonFatalErrors": [],
+    "params": {
+      "service": "gujarati",
+      "pageType": "article",
+      "id": "c93437jwkzpo"
+    }
+  }
+}
