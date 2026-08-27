@@ -114,9 +114,9 @@ const SaveArticleButtonAuthenticated = ({
   };
 
   const handleTooltipClose = (event?: React.MouseEvent) => {
-    onTooltipCloseClickTrack?.(event);
     setIsTooltipVisible(false);
     resetActionResult();
+    onTooltipCloseClickTrack?.(event);
   };
 
   return (
