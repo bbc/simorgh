@@ -6,14 +6,18 @@ import { MEDIA_ARTICLE_PAGE } from '../../../../routes/utils/pageTypes';
 describe('Paragraph', () => {
   it('should render correctly', () => {
     render(<Paragraph>This is text in a paragraph.</Paragraph>);
-    expect(screen.getByText('This is text in a paragraph.')).toBeInTheDocument();
+    expect(
+      screen.getByText('This is text in a paragraph.'),
+    ).toBeInTheDocument();
   });
 
   it('should render correctly on page types that support a dark ui', () => {
     render(<Paragraph>This is text in a paragraph.</Paragraph>, {
       pageType: MEDIA_ARTICLE_PAGE,
     });
-    expect(screen.getByText('This is text in a paragraph.')).toBeInTheDocument();
+    expect(
+      screen.getByText('This is text in a paragraph.'),
+    ).toBeInTheDocument();
   });
 
   it('should render correctly with arabic script typography values', () => {

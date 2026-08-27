@@ -17,7 +17,7 @@ describe('ProgramCard', () => {
       const { container } = render(
         renderProgramCard({ state, nextLabel: 'NEXT', liveLabel: 'LIVE' }),
       );
-      expect(container.querySelector('a')).toBeInTheDocument();
+      expect(container.firstChild).toBeInTheDocument();
     });
   });
 

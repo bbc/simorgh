@@ -54,16 +54,23 @@ describe('Consent Banner Text', () => {
 
   it('should correctly render banner text outside the UK', () => {
     render(bannerTextWithContext(bannerMessaging, 'com', false));
-    expect(screen.getByText('Just some international text')).toBeInTheDocument();
+    expect(
+      screen.getByText('Just some international text'),
+    ).toBeInTheDocument();
   });
 
   it('should correctly render banner text with a link in the UK', () => {
     render(bannerTextWithContext(bannerWithLinkMessaging, 'co.uk', true));
-    expect(screen.getByRole('link', { name: 'with a link' })).toHaveAttribute('href', 'https://www.bbc.co.uk');
+    expect(screen.getByRole('link', { name: 'with a link' })).toHaveAttribute(
+      'href',
+      'https://www.bbc.co.uk',
+    );
   });
 
   it('should correctly render banner text with a link outside the UK', () => {
     render(bannerTextWithContext(bannerWithLinkMessaging, 'com'));
-    expect(screen.getByRole('link', { name: 'with an international link' })).toHaveAttribute('href', 'https://www.bbc.com');
+    expect(
+      screen.getByRole('link', { name: 'with an international link' }),
+    ).toHaveAttribute('href', 'https://www.bbc.com');
   });
 });

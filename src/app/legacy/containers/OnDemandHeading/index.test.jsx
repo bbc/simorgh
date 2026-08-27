@@ -27,7 +27,9 @@ describe('AudioPlayer blocks OnDemandHeading', () => {
   it('should render correctly', () => {
     render(<Component />);
     expect(document.querySelector('h1')).toBeInTheDocument();
-    expect(getByText(document.querySelector('h1'), 'Dunia Pagi Ini')).toBeInTheDocument();
+    expect(
+      getByText(document.querySelector('h1'), 'Dunia Pagi Ini'),
+    ).toBeInTheDocument();
   });
 
   it('should render correctly - dark mode', () => {

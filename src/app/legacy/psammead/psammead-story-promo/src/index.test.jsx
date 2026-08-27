@@ -55,9 +55,7 @@ describe('StoryPromo', () => {
   });
 
   it('should render Live promo correctly', () => {
-    render(
-      <StoryPromo image={Image} info={Info({ isLive: true })} />,
-    );
+    render(<StoryPromo image={Image} info={Info({ isLive: true })} />);
     expect(screen.getByText('The live promo headline')).toBeInTheDocument();
   });
 

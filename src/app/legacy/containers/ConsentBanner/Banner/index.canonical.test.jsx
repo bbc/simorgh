@@ -4,18 +4,16 @@ import Banner from './index.canonical';
 
 describe('Canonical Consent Banner Container', () => {
   it('should correctly render privacy banner - LTR layout', () => {
-    render(
-      <Banner type="privacy" onAccept={() => {}} onReject={() => {}} />,
-      { service: 'news' },
-    );
+    render(<Banner type="privacy" onAccept={() => {}} onReject={() => {}} />, {
+      service: 'news',
+    });
     expect(screen.getByRole('heading')).toBeInTheDocument();
   });
 
   it('should correctly render privacy banner - RTL layout', () => {
-    render(
-      <Banner type="privacy" onAccept={() => {}} onReject={() => {}} />,
-      { service: 'arabic' },
-    );
+    render(<Banner type="privacy" onAccept={() => {}} onReject={() => {}} />, {
+      service: 'arabic',
+    });
     expect(screen.getByRole('heading')).toBeInTheDocument();
   });
 
@@ -28,10 +26,9 @@ describe('Canonical Consent Banner Container', () => {
   });
 
   it('should correctly render cookie banner - RTL layout', () => {
-    render(
-      <Banner type="cookie" onAccept={() => {}} onReject={() => {}} />,
-      { service: 'arabic' },
-    );
+    render(<Banner type="cookie" onAccept={() => {}} onReject={() => {}} />, {
+      service: 'arabic',
+    });
     expect(screen.getByRole('heading')).toBeInTheDocument();
   });
 

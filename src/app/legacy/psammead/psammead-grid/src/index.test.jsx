@@ -259,7 +259,9 @@ describe('Grid component', () => {
         ))}
       </Grid>,
     );
-    expect(screen.getByText(/Landscape image This is a long/)).toBeInTheDocument();
+    expect(
+      screen.getByText(/Landscape image This is a long/),
+    ).toBeInTheDocument();
   });
 
   it('should render Grid with enableGelGutters & margins on only one of the Grid items', () => {

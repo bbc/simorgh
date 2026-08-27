@@ -11,10 +11,9 @@ describe('Index Heading', () => {
   });
 
   it('should render correctly with arabic script typography values', () => {
-    render(
-      <HeadingIndex tabIndex={-1}>هذا عنوان الصفحة</HeadingIndex>,
-      { service: 'persian' },
-    );
+    render(<HeadingIndex tabIndex={-1}>هذا عنوان الصفحة</HeadingIndex>, {
+      service: 'persian',
+    });
     expect(
       screen.getByRole('heading', { level: 1, name: 'هذا عنوان الصفحة' }),
     ).toBeInTheDocument();

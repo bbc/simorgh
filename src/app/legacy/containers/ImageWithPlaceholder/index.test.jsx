@@ -86,7 +86,9 @@ describe('ImageWithPlaceholder', () => {
 
   it('should render an image', () => {
     const { container } = render(<ImageWithPlaceholder />);
-    expect(container.querySelector('[data-e2e="image-placeholder"]')).toBeInTheDocument();
+    expect(
+      container.querySelector('[data-e2e="image-placeholder"]'),
+    ).toBeInTheDocument();
   });
 
   it('should render an AMP image', () => {

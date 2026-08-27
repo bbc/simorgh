@@ -6,18 +6,16 @@ import IndexAlsosContainer from '.';
 describe('Index Alsos', () => {
   describe('Snapshots', () => {
     it('should render multiple correctly', () => {
-      render(
-        <IndexAlsosContainer alsoItems={relatedItems} />,
-        { service: 'hausa' },
-      );
+      render(<IndexAlsosContainer alsoItems={relatedItems} />, {
+        service: 'hausa',
+      });
       expect(screen.getAllByRole('link').length).toBeGreaterThan(1);
     });
 
     it('should render one correctly', () => {
-      render(
-        <IndexAlsosContainer alsoItems={[relatedItems[0]]} />,
-        { service: 'hausa' },
-      );
+      render(<IndexAlsosContainer alsoItems={[relatedItems[0]]} />, {
+        service: 'hausa',
+      });
 
       expect(screen.getByRole('link')).toBeInTheDocument();
     });

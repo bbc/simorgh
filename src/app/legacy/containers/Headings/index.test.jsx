@@ -60,9 +60,7 @@ const template = (title, text, type) => {
     };
     it('should render correctly', () => {
       render(<HeadingsContainer {...data} />);
-      expect(
-        screen.getByRole('heading', { name: text }),
-      ).toBeInTheDocument();
+      expect(screen.getByRole('heading', { name: text })).toBeInTheDocument();
     });
   });
 };

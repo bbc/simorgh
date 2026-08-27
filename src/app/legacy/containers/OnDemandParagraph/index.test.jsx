@@ -10,21 +10,17 @@ import { TV_PAGE } from '../../../routes/utils/pageTypes';
 
 describe('MediaPageBlocks Paragraph', () => {
   it('should render correctly', () => {
-    render(
-      <Paragraph uuid="uuid" idAttr="idAttr" text="Example text" />,
-      { service: 'news' },
-    );
+    render(<Paragraph uuid="uuid" idAttr="idAttr" text="Example text" />, {
+      service: 'news',
+    });
     expect(screen.getByText('Example text')).toBeInTheDocument();
   });
 
   it('should render correctly - dark mode', () => {
-    render(
-      <Paragraph uuid="uuid" idAttr="idAttr" text="Example text" />,
-      {
-        service: 'news',
-        pageType: TV_PAGE,
-      },
-    );
+    render(<Paragraph uuid="uuid" idAttr="idAttr" text="Example text" />, {
+      service: 'news',
+      pageType: TV_PAGE,
+    });
     expect(screen.getByText('Example text')).toBeInTheDocument();
   });
 

@@ -39,10 +39,9 @@ describe('SubHeading component', () => {
   });
 
   it('should render correctly on page types that support a dark ui', () => {
-    render(
-      <SubHeading tabIndex={-1}>This is a SubHeading</SubHeading>,
-      { pageType: MEDIA_ARTICLE_PAGE },
-    );
+    render(<SubHeading tabIndex={-1}>This is a SubHeading</SubHeading>, {
+      pageType: MEDIA_ARTICLE_PAGE,
+    });
     expect(
       screen.getByRole('heading', { name: 'This is a SubHeading' }),
     ).toBeInTheDocument();

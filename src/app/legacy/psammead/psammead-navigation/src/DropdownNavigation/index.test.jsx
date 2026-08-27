@@ -80,9 +80,7 @@ describe('Canonical', () => {
         />,
         { service: 'persian' },
       );
-      expect(
-        getByRole(container, 'button'),
-      ).toHaveAttribute('dir', 'rtl');
+      expect(getByRole(container, 'button')).toHaveAttribute('dir', 'rtl');
     });
   });
 
@@ -136,9 +134,7 @@ describe('Canonical', () => {
         />,
         { service: 'persian' },
       );
-      expect(
-        getByRole(container, 'button'),
-      ).toHaveAttribute('dir', 'rtl');
+      expect(getByRole(container, 'button')).toHaveAttribute('dir', 'rtl');
     });
   });
 });
