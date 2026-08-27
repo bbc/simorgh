@@ -101,6 +101,38 @@ const assertATIPageViewEventParamsExist = ({
   }
 };
 
+const assertResonancePageViewEventParamsExist = ({
+  metadata,
+  event,
+  contentType,
+}) => {
+  expect(metadata).to.have.property('client_name');
+  expect(metadata).to.have.property('collection_library_name');
+  expect(metadata).to.have.property('collection_library_version');
+  expect(metadata).to.have.property('event_category');
+  expect(metadata).to.have.property('id');
+  expect(metadata).to.have.property('request_time');
+
+  expect(event).to.have.property('app_name');
+  expect(event).to.have.property('browser_language');
+  expect(event).to.have.property('content_type');
+  expect(event).to.have.property('destination');
+  expect(event).to.have.property('event_id');
+  expect(event).to.have.property('event_time');
+  expect(event).to.have.property('event_name');
+  expect(event).to.have.property('event_ts');
+  expect(event).to.have.property('language');
+  expect(event).to.have.property('page_name');
+  expect(event).to.have.property('page_title');
+  expect(event).to.have.property('producer');
+  expect(event).to.have.property('site_id'); // Not the same as 's2' Level 2 Site ID
+  expect(event).to.have.property('url');
+
+  if (!['list-datadriven', 'static'].includes(contentType)) {
+    expect(event).to.have.property('content_id');
+  }
+};
+
 const assertLocationSpecificPianoDestinationExists = ({ service }) => {
   cy.get(
     'head script[src*="https://cdn.ampproject.org/v0/amp-geo-0.1.js"]',
@@ -238,67 +270,6 @@ const validateViewabilityEventDetails = ({ payload, actionType }) => {
   });
 };
 
-export const assertResonancePageView = ({
-  pageIdentifier,
-  applicationType,
-  contentType,
-  service,
-  path,
-  siteId,
-}) => {
-  it(`should send a Resonance page view event with service = ${service}, page identifier = ${pageIdentifier}, site ID = ${siteId}, application type = ${applicationType} and content type = ${contentType}`, () => {
-    const resonanceBagBaseUrl = (envs as EnvironmentConfigType).resonanceBagUrl;
-    const resonanceBagEventUrl = `${resonanceBagBaseUrl}/v*/event`;
-
-    cy.intercept('POST', resonanceBagEventUrl, request => {
-      request.reply({ statusCode: 200 });
-    }).as('resonance-page-view');
-
-    cy.visit(path, { retryOnStatusCodeFailure: true });
-
-    const sendsResonanceEvents = usesResonance(applicationType);
-
-    // TO DO - handle in a different way so that the test doesn't run at all for amp or lite?
-    if (!sendsResonanceEvents) {
-      cy.get('@resonance-page-view.all').should('have.length', 0);
-      return;
-    }
-
-    cy.wait('@resonance-page-view').then(({ request }) => {
-      expect(request.body).to.have.property('bag_metadata');
-      expect(request.body).to.have.property('events');
-
-      const metadata = request.body.bag_metadata;
-
-      // TODO - decide if we want all or any these, since these come from Resonance lib not our code
-      expect(metadata).to.have.property('client_name');
-      expect(metadata).to.have.property('collection_library_name');
-      expect(metadata).to.have.property('collection_library_version');
-      expect(metadata).to.have.property('event_category');
-      expect(metadata).to.have.property('id');
-      expect(metadata).to.have.property('request_time');
-
-      const event = request.body.events[0];
-
-      expect(event).to.have.property('app_name', getResonanceAppName(service));
-      expect(event).to.have.property('browser_language');
-      // expect(event).to.have.property('content_id'); // does not exist for mostRead page
-      expect(event).to.have.property('content_type', contentType);
-      expect(event).to.have.property('destination');
-      expect(event).to.have.property('event_id');
-      expect(event).to.have.property('event_time');
-      expect(event).to.have.property('event_name', 'page.display');
-      expect(event).to.have.property('event_ts');
-      expect(event).to.have.property('language');
-      expect(event).to.have.property('page_name', pageIdentifier);
-      expect(event).to.have.property('page_title');
-      expect(event).to.have.property('producer');
-      expect(event).to.have.property('site_id'); // NOTE - not the same as ATI Level 2 site ID
-      expect(event).to.have.property('url');
-    });
-  });
-};
-
 export const assertPageView = ({
   pageIdentifier,
   applicationType,
@@ -347,6 +318,53 @@ export const assertPageView = ({
     if (applicationType === 'amp') {
       assertLocationSpecificPianoDestinationExists({ service });
     }
+  });
+};
+
+export const assertResonancePageView = ({
+  pageIdentifier,
+  applicationType,
+  contentType,
+  service,
+  path,
+  siteId,
+}) => {
+  it(`should send a Resonance page view event with service = ${service}, page identifier = ${pageIdentifier}, site ID = ${siteId}, application type = ${applicationType} and content type = ${contentType}`, () => {
+    const resonanceBagBaseUrl = (envs as EnvironmentConfigType).resonanceBagUrl;
+    const resonanceBagEventUrl = `${resonanceBagBaseUrl}/v*/event`;
+
+    cy.intercept('POST', resonanceBagEventUrl, request => {
+      request.reply({ statusCode: 200 });
+    }).as('resonance-page-view');
+
+    cy.visit(path, { retryOnStatusCodeFailure: true });
+
+    const sendsResonanceEvents = usesResonance(applicationType);
+
+    // TO DO - handle in a different way so that the test doesn't run at all for amp or lite?
+    if (!sendsResonanceEvents) {
+      cy.get('@resonance-page-view.all').should('have.length', 0);
+      return;
+    }
+
+    cy.wait('@resonance-page-view').then(({ request }) => {
+      expect(request.body).to.have.property('bag_metadata');
+      expect(request.body).to.have.property('events');
+
+      const metadata = request.body.bag_metadata;
+      const event = request.body.events[0];
+
+      assertResonancePageViewEventParamsExist({
+        metadata,
+        event,
+        contentType,
+      });
+
+      expect(event).to.have.property('app_name', getResonanceAppName(service));
+      expect(event).to.have.property('content_type', contentType);
+      expect(event).to.have.property('event_name', 'page.display');
+      expect(event).to.have.property('page_name', pageIdentifier);
+    });
   });
 };
 
