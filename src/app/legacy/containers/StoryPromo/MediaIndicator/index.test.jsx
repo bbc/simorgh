@@ -116,6 +116,11 @@ describe('Story Promo Media Indicator', () => {
     expect(
       container.querySelector('[data-e2e="media-indicator"]'),
     ).toBeInTheDocument();
+    expect(container.querySelector('svg[viewBox="0 0 13 12"]')).toBeInTheDocument();
+    expect(container.querySelector('time')).toHaveAttribute(
+      'dateTime',
+      'PT59S',
+    );
   });
 
   it('should render a video item correctly', () => {
@@ -123,6 +128,11 @@ describe('Story Promo Media Indicator', () => {
     expect(
       container.querySelector('[data-e2e="media-indicator"]'),
     ).toBeInTheDocument();
+    expect(container.querySelector('svg[viewBox="0 0 12 12"]')).toBeInTheDocument();
+    expect(container.querySelector('time')).toHaveAttribute(
+      'dateTime',
+      'PT1H33M20S',
+    );
   });
 
   it('should render video indicator correctly when inline', () => {
@@ -132,6 +142,8 @@ describe('Story Promo Media Indicator', () => {
     expect(
       container.querySelector('[data-e2e="media-indicator"]'),
     ).toBeInTheDocument();
+    expect(container.querySelector('svg[viewBox="0 0 12 12"]')).toBeInTheDocument();
+    expect(container.querySelector('time')).not.toBeInTheDocument();
   });
 
   it('should render video indicator correctly when inline on RTL', () => {
@@ -140,8 +152,10 @@ describe('Story Promo Media Indicator', () => {
       { service: 'persian' },
     );
     expect(
-      container.querySelector('[data-e2e="media-indicator"]'),
+      container.querySelector('[data-e2e="media-indicator"][dir="rtl"]'),
     ).toBeInTheDocument();
+    expect(container.querySelector('svg[viewBox="0 0 12 12"]')).toBeInTheDocument();
+    expect(container.querySelector('time')).not.toBeInTheDocument();
   });
 
   it('should render a photo gallery item correctly', () => {
@@ -151,6 +165,8 @@ describe('Story Promo Media Indicator', () => {
     expect(
       container.querySelector('[data-e2e="media-indicator"]'),
     ).toBeInTheDocument();
+    expect(container.querySelector('svg[viewBox="0 0 32 26"]')).toBeInTheDocument();
+    expect(container.querySelector('time')).not.toBeInTheDocument();
   });
 
   it('should render correctly even without duration', () => {
@@ -160,6 +176,8 @@ describe('Story Promo Media Indicator', () => {
     expect(
       container.querySelector('[data-e2e="media-indicator"]'),
     ).toBeInTheDocument();
+    expect(container.querySelector('svg[viewBox="0 0 12 12"]')).toBeInTheDocument();
+    expect(container.querySelector('time')).not.toBeInTheDocument();
   });
 
   it('should render correctly even without duration and cps type', () => {

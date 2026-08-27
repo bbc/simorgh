@@ -34,6 +34,9 @@ describe('ConsentBanner', () => {
   it('should correctly render for rtl service', () => {
     render(<ConsentBanner {...rtlProps} />, { service: rtlProps.service });
     expect(screen.getByText('عنوان')).toBeInTheDocument();
+    expect(
+      screen.getByText('عنوان').closest('[dir="rtl"]'),
+    ).toBeInTheDocument();
   });
 
   describe('with hidden attribute on wrapper', () => {

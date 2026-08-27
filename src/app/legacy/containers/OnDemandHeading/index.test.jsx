@@ -32,12 +32,15 @@ describe('AudioPlayer blocks OnDemandHeading', () => {
     ).toBeInTheDocument();
   });
 
-  it('should render correctly - dark mode', () => {
+  it('should render heading correctly on dark UI page types', () => {
     render(<Component />, {
       pageType: TV_PAGE,
       service: 'afrique',
     });
     expect(document.querySelector('h1')).toBeInTheDocument();
+    expect(
+      getByText(document.querySelector('h1'), 'Dunia Pagi Ini'),
+    ).toBeInTheDocument();
   });
 
   it('should have semantic h1 with child span with role attribute = text so that screen readers read the BrandTitle and Datestamp in one go', () => {

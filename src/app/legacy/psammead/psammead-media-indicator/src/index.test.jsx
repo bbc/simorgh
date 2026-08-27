@@ -7,6 +7,7 @@ describe('MediaIndicator', () => {
     expect(
       container.querySelector('[data-e2e="media-indicator"]'),
     ).toBeInTheDocument();
+    expect(container.querySelector('svg[viewBox="0 0 12 12"]')).toBeInTheDocument();
   });
 
   it('should render video indicator correctly', () => {
@@ -14,6 +15,7 @@ describe('MediaIndicator', () => {
     expect(
       container.querySelector('[data-e2e="media-indicator"]'),
     ).toBeInTheDocument();
+    expect(container.querySelector('svg[viewBox="0 0 12 12"]')).toBeInTheDocument();
   });
 
   it('should render video indicator correctly when inline', () => {
@@ -21,6 +23,7 @@ describe('MediaIndicator', () => {
     expect(
       container.querySelector('[data-e2e="media-indicator"]'),
     ).toBeInTheDocument();
+    expect(container.querySelector('svg[viewBox="0 0 12 12"]')).toBeInTheDocument();
   });
 
   it('should render video indicator correctly when inline on RTL', () => {
@@ -31,6 +34,7 @@ describe('MediaIndicator', () => {
     expect(
       container.querySelector('[data-e2e="media-indicator"][dir="rtl"]'),
     ).toBeInTheDocument();
+    expect(container.querySelector('svg[viewBox="0 0 12 12"]')).toBeInTheDocument();
   });
 
   it('should render audio indicator correctly', () => {
@@ -38,6 +42,7 @@ describe('MediaIndicator', () => {
     expect(
       container.querySelector('[data-e2e="media-indicator"]'),
     ).toBeInTheDocument();
+    expect(container.querySelector('svg[viewBox="0 0 13 12"]')).toBeInTheDocument();
   });
 
   it('should render photogallery correctly', () => {
@@ -45,5 +50,6 @@ describe('MediaIndicator', () => {
     expect(
       container.querySelector('[data-e2e="media-indicator"]'),
     ).toBeInTheDocument();
+    expect(container.querySelector('svg[viewBox="0 0 32 26"]')).toBeInTheDocument();
   });
 });
