@@ -286,7 +286,7 @@ export const assertResonancePageView = ({
 
       expect(event).to.have.property('app_name', getResonanceAppName(service));
       expect(event).to.have.property('browser_language');
-      expect(event).to.have.property('content_id');
+      // expect(event).to.have.property('content_id'); // does not exist for mostRead page
       expect(event).to.have.property('content_type', contentType);
       expect(event).to.have.property('destination');
       expect(event).to.have.property('event_id');

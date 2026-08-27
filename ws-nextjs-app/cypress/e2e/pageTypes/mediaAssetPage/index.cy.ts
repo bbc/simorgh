@@ -1,5 +1,8 @@
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
-import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
+import {
+  assertPageView,
+  assertResonancePageView,
+} from '../../specialFeatures/atiAnalytics/assertions';
 import runTestsForPage, {
   TestDataType,
 } from '../../../support/helpers/runTestsForPage';
@@ -232,6 +235,16 @@ const atiAnalyticsTestSuites = [
     applicationType: 'responsive',
     contentType: 'article-media-asset',
     tests: [...atiAnalyticsTests],
+  },
+  {
+    path: '/arabic/media-53135426',
+    runforEnv: ['live'],
+    service: 'arabic',
+    pageIdentifier: 'arabic.embedded_media.media_asset.53135426.page',
+    siteId: 5,
+    applicationType: 'responsive',
+    contentType: 'article-media-asset',
+    tests: [assertResonancePageView],
   },
 ] as unknown as TestDataType[];
 
