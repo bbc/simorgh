@@ -1,37 +1,11 @@
-import { ReactNode } from 'react';
 import optimizelyReactSdk, { OptimizelyDecision } from '@optimizely/react-sdk';
-import { renderHook } from '#app/components/react-testing-library-with-providers';
-import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
-import { RequestContextProvider } from '#contexts/RequestContext';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { STORY_PAGE } from '#app/routes/utils/pageTypes';
-import { Toggles } from '#app/models/types/global';
+import {
+  renderHook,
+  AllTheProviders,
+} from '#app/components/react-testing-library-with-providers';
 import useClientSide from '.';
 
-const defaultToggles = { eventTracking: { enabled: true } } as Toggles;
-
-const wrapper = ({
-  children,
-  toggles = defaultToggles,
-}: {
-  children?: ReactNode | null;
-  toggles?: Toggles;
-}) => (
-  <RequestContextProvider
-    bbcOrigin="https://www.test.bbc.com"
-    pageType={STORY_PAGE}
-    isAmp={false}
-    service="news"
-    pathname="/news/articles/c0000000000o"
-  >
-    <ServiceContextProvider service="news">
-      <ToggleContextProvider toggles={toggles}>
-        <EventTrackingContextProvider>{children}</EventTrackingContextProvider>
-      </ToggleContextProvider>
-    </ServiceContextProvider>
-  </RequestContextProvider>
-);
+const wrapper = AllTheProviders;
 
 describe('useOptimizelyVariation - useClientSide', () => {
   const useDecisionSpy = jest.spyOn(optimizelyReactSdk, 'useDecision');

@@ -1,15 +1,12 @@
 import { PropsWithChildren } from 'react';
-import { renderHook, act } from '@testing-library/react';
-import { RequestContextProvider } from '#contexts/RequestContext';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
+import { act } from '@testing-library/react';
 import { OptimizelyProvider, ReactSDKClient } from '@optimizely/react-sdk';
 import {
-  PageTypes,
-  ServerSideExperiment,
-  Services,
-} from '#app/models/types/global';
+  renderHook,
+  AllTheProviders,
+} from '#app/components/react-testing-library-with-providers';
+import { ServerSideExperiment } from '#app/models/types/global';
+import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import useServerSide from '.';
 import * as activateExperiment from '../activateExperiment';
 
@@ -37,24 +34,19 @@ describe('useOptimizelyVariation - useServerSide', () => {
       withOptimizely = true,
     } = params;
 
-    const props = {
-      serverSideExperiments,
-      isAmp: false,
-      pageType: 'STY' as PageTypes,
-      service: 'news' as Services,
-      pathname: 'bar',
-    };
     const wrapper = ({ children }: PropsWithChildren) => {
       const providers = (
-        <ToggleContextProvider toggles={{ eventTracking: { enabled: true } }}>
-          <ServiceContextProvider service="news">
-            <RequestContextProvider {...props}>
-              <EventTrackingContextProvider>
-                {children}
-              </EventTrackingContextProvider>
-            </RequestContextProvider>
-          </ServiceContextProvider>
-        </ToggleContextProvider>
+        // HOME_PAGE avoids ReverbParamsContext's article ATI enrichment, which calls client-side Optimizely
+        <AllTheProviders
+          service="news"
+          pageType={HOME_PAGE}
+          pathname="bar"
+          isAmp={false}
+          toggles={{ eventTracking: { enabled: true } }}
+          serverSideExperiments={serverSideExperiments}
+        >
+          {children}
+        </AllTheProviders>
       );
 
       return withOptimizely ? (
