@@ -27,24 +27,24 @@ const testSuites = [
 
 const atiAnalyticsTestSuites = [
   {
-    path: '/tamil/watch/c36l16ny6klo',
-    runforEnv: ['local', 'live'],
+    path: '/tamil/listen/cw3xlkprxv82o',
+    runforEnv: ['local'],
     service: 'tamil',
-    pageIdentifier: 'tamil.watch.c36l16ny6klo.page',
+    pageIdentifier: 'tamil.listen.cw3xlkprxv82o.page',
     siteId: 87,
     applicationType: 'responsive',
     contentType: 'article-sfv',
     tests: [assertPageView],
   },
   {
-    path: '/gujarati/watch/cx2zevlw204o',
-    runforEnv: ['local', 'live'],
-    service: 'gujarati',
-    // This pageIdentifier assertion covers assets published before the /watch route was launched
-    pageIdentifier: 'gujarati.articles.cx2zevlw204o.page',
-    siteId: 50,
+    path: '/tamil/listen/cwyzlmrmy87o',
+    runforEnv: ['live'],
+    service: 'tamil',
+    // This pageIdentifier assertion covers assets published before the /listen route was launched
+    pageIdentifier: 'tamil.articles.cwyzlmrmy87o.page',
+    siteId: 87,
     applicationType: 'responsive',
-    contentType: 'article-sfv',
+    contentType: 'article',
     tests: [assertPageView],
   },
 ] as unknown as TestDataType[];
