@@ -92,7 +92,7 @@
     "sharp": "0.35.3",
     "temporal-polyfill": "0.3.0",
     "undici": "8.9.0",
-    "winston": "patch:winston@3.8.2#./patches/winston-file-descriptor.patch"
+    "winston": "3.19.0"
   },
   "devDependencies": {
     "@babel/eslint-parser": "7.29.7",
