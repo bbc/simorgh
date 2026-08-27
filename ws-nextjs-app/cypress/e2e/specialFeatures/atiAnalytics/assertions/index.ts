@@ -242,7 +242,7 @@ const validateViewabilityEventDetails = ({ payload, actionType }) => {
   });
 };
 
-export const assertPageViewResonance = ({
+export const assertResonancePageView = ({
   pageIdentifier,
   applicationType,
   contentType,
@@ -250,7 +250,7 @@ export const assertPageViewResonance = ({
   path,
   siteId,
 }) => {
-  it(`should send a resonance page view event with service = ${service}, page identifier = ${pageIdentifier}, site ID = ${siteId}, application type = ${applicationType} and content type = ${contentType}`, () => {
+  it(`should send a Resonance page view event with service = ${service}, page identifier = ${pageIdentifier}, site ID = ${siteId}, application type = ${applicationType} and content type = ${contentType}`, () => {
     const resonanceBagBaseUrl = (envs as EnvironmentConfigType).resonanceBagUrl;
     const resonanceBagEventUrl = `${resonanceBagBaseUrl}/v*/event`;
 

@@ -1,6 +1,9 @@
 /* eslint-disable import/no-relative-packages */
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
+import {
+  assertPageView,
+  assertResonancePageView,
+} from '../../specialFeatures/atiAnalytics/assertions';
 import runTestsForPage, {
   TestDataType,
 } from '../../../support/helpers/runTestsForPage';
@@ -199,7 +202,6 @@ const nonSmokeCanonicalTestSuites = [
     service: 'afrique',
     tests: [...canonicalTests],
   },
-  // option
   {
     path: '/arabic/articles/cl5m3453w36o',
     runforEnv: ['test'],
@@ -324,6 +326,16 @@ const nonSmokeCanonicalTestSuites = [
 ];
 
 const atiAnalyticsTestSuites = [
+  {
+    path: '/arabic/articles/cl5m3453w36o',
+    runforEnv: ['test'],
+    service: 'arabic',
+    pageIdentifier: 'arabic.articles.cl5m3453w36o.page',
+    siteId: 5,
+    applicationType: 'responsive',
+    contentType: 'article',
+    tests: [assertResonancePageView],
+  },
   {
     path: '/hausa/articles/cw43vy8zdjvo',
     runforEnv: ['local', 'live'],
@@ -505,7 +517,7 @@ const atiAmpTestSuites = atiAnalyticsTestSuites.map(testSuite => {
     ...testSuite,
     path: getPathWithSuffix({ path: testSuite.path, suffix: '.amp' }),
     applicationType: 'amp',
-    tests: [assertPageView],
+    tests: [assertPageView, assertResonancePageView], // asserts that the Resonance page view is not sent for amp articles - runs on all services - so will need refactoring once we are sending for specific services.
   };
 });
 
