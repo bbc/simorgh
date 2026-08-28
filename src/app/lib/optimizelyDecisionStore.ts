@@ -13,11 +13,13 @@ const subscribe = (callback: () => void) => {
 
 const getSnapshot = (): ReadonlySet<string> => snapshot;
 
-const notifyDecision = (flagKey: string) => {
-  if (activatedExperiments.has(flagKey)) return;
+// Returns whether this flagKey was newly recorded (false if already seen this session).
+const notifyDecision = (flagKey: string): boolean => {
+  if (activatedExperiments.has(flagKey)) return false;
   activatedExperiments.add(flagKey);
   snapshot = new Set(activatedExperiments);
   subscribers.forEach(cb => cb());
+  return true;
 };
 
 const resetDecisionStore = () => {
