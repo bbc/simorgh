@@ -38,6 +38,7 @@ module.exports = {
     'no-only-tests',
   ],
   globals: {
+    globalThis: false,
     cy: false,
     Cypress: false,
     expect: false,
