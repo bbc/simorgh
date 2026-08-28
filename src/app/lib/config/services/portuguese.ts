@@ -113,6 +113,10 @@ export const service: DefaultServiceConfig = {
       },
       currentPage: 'Página atual',
       skipLinkText: 'Vá para o conteúdo',
+      skipContent: {
+        text: 'Pular %title% e continuar',
+        endTextVisuallyHidden: 'Fim de %title%',
+      },
       relatedContent: 'Histórias relacionadas',
       relatedTopics: 'Tópicos relacionados',
       moreOnThis: '',
@@ -137,6 +141,62 @@ export const service: DefaultServiceConfig = {
         title: 'File Download',
       },
       gist: 'Pontos-chave',
+      account: {
+        signIn: 'Sign In',
+        signInAccessibleLabel: 'Sign in to My News',
+        forYou: 'Your Account',
+        register: 'Register',
+      },
+      accountPromoBanner: {
+        title: 'Your very own BBC',
+        description: 'Sign In or create an account for free',
+        closeLabel: 'Close',
+        buttonSeparatorText: 'or',
+      },
+      accountSignInModal: {
+        title: 'Sign in to save to My News',
+        description: 'Save stories and read them at your convenience',
+        closeLabel: 'Close',
+      },
+      saveArticleButton: {
+        loading: 'Loading',
+        save: 'Save for later',
+        saving: 'Saving',
+        saved: 'Saved to My News',
+        remove: 'Remove',
+        removeAccessible: 'Saved. Remove from My News',
+        removing: 'Removing',
+      },
+      myNews: {
+        title: 'My News',
+        guestTitle: 'Welcome to My News',
+        description: 'My saved articles',
+        guestDescription:
+          'Sign in to save articles to My News, and read them at your convenience.',
+        noArticles: 'You haven’t saved any articles yet',
+        errorText:
+          'This content doesn’t seem to be loading. Please try again later.',
+        loading: 'Loading',
+        noJsDescription:
+          'Please enable JavaScript or use another browser to view this content.',
+      },
+      actionTooltip: {
+        success: {
+          titleBefore: 'This article is now saved to',
+          titleAfter: '',
+        },
+        error: {
+          title: 'Sorry, something went wrong',
+          body: 'Check your connection, refresh the page and try again',
+        },
+        removed: {
+          titleBefore: 'This article has now been removed from',
+          titleAfter: '',
+        },
+        myNewsLinkText: 'My News',
+        myNewsUrl: 'https://www.bbc.com/portuguese/my-news',
+        closeLabel: 'Close',
+      },
       error: {
         404: {
           statusCode: '404',
@@ -409,6 +469,15 @@ export const service: DefaultServiceConfig = {
         ownGoal: 'Gol contra',
         venue: 'Local',
         attendance: 'Público',
+        versus: 'contra',
+        kickOff: 'início',
+        timeToBeConfirmed: 'Horário a confirmar',
+        teamToBeConfirmed: 'Equipe a ser confirmada',
+        afterFullTime: 'após o tempo regulamentar',
+        atFullTime: 'no fim do tempo regulamentar',
+        onPenalties: 'nos pênaltis',
+        onAggregate: 'no placar agregado',
+        win: 'vence',
         winOnPenalties: {
           prefix: 'vence por',
           suffix: 'nos pênaltis',

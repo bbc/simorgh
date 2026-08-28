@@ -144,7 +144,10 @@ const storybookConfig: StorybookConfig = {
       new webpack.ProvidePlugin({
         process: 'process/browser',
       }),
-      new MomentTimezoneInclude({ startYear: 2010, endYear: 2026 }),
+      new MomentTimezoneInclude({
+        startYear: 2010,
+        endYear: new Date().getFullYear() + 1,
+      }),
     );
 
     config.resolve!.fallback = {

@@ -217,6 +217,7 @@ type Props = {
   embedded?: boolean;
   uniqueId?: string;
   eventMapping?: EventMapping;
+  loadPlayerOnInitialRender?: boolean;
 };
 
 const MediaLoader = ({
@@ -225,6 +226,7 @@ const MediaLoader = ({
   embedded,
   uniqueId,
   eventMapping,
+  loadPlayerOnInitialRender = false,
 }: Props) => {
   const { lang, service, translations, defaultImage } = use(ServiceContext);
   const { pageIdentifier } = use(EventTrackingContext);
@@ -241,7 +243,8 @@ const MediaLoader = ({
   } = use(RequestContext);
 
   const [showPlaceholder, setShowPlaceholder] = useState(
-    !PAGETYPES_IGNORE_PLACEHOLDER.includes(pageType),
+    !loadPlayerOnInitialRender &&
+      !PAGETYPES_IGNORE_PLACEHOLDER.includes(pageType),
   );
 
   if (isLite) return null;
@@ -336,7 +339,11 @@ const MediaLoader = ({
               />
             ) : (
               <MediaContainer
-                playerConfig={playerConfig}
+                playerConfig={
+                  loadPlayerOnInitialRender
+                    ? { ...playerConfig, autoplay: false }
+                    : playerConfig
+                }
                 showAds={showAds}
                 uniqueId={uniqueId}
                 noJsMessage={noJsMessage}

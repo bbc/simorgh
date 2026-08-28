@@ -89,6 +89,10 @@ export const service: DefaultServiceConfig = {
       },
       currentPage: 'Hazırda olduğunuz səhifə',
       skipLinkText: 'Mətnə keçid',
+      skipContent: {
+        text: '%title% keç və davam et',
+        endTextVisuallyHidden: '%title% sonu',
+      },
       relatedContent: 'Bu barədə daha geniş',
       relatedTopics: 'Əlaqəli mövzular',
       moreOnThis: '',
@@ -338,6 +342,15 @@ export const service: DefaultServiceConfig = {
         afterExtraTime: 'Əlavə vaxtdan sonra',
         penaltyAbbreviation: 'PEN',
         ownGoal: 'öz qapısına qol',
+        versus: 'qarşı',
+        kickOff: 'başlanğıc',
+        timeToBeConfirmed: 'Vaxt təsdiqlənəcək',
+        teamToBeConfirmed: 'Komanda təsdiqlənəcək',
+        afterFullTime: 'tam vaxtdan sonra',
+        atFullTime: 'tam vaxtda',
+        onPenalties: 'penaltilərlə',
+        onAggregate: 'ümumi hesabla',
+        win: 'qalib gəlir',
         winOnPenalties: {
           prefix: 'penaltilərlə',
           suffix: 'qalib gəlir',
@@ -465,7 +478,7 @@ export const service: DefaultServiceConfig = {
       ],
       copyrightText: 'BBC. BBC kənar saytların məzmununa məsul deyil.',
     },
-    timezone: 'Asia/baku',
+    timezone: 'Asia/Baku',
     navigation: [
       {
         title: 'Xəbərlər',

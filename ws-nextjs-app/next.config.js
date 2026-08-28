@@ -1,6 +1,7 @@
 /* eslint-disable no-param-reassign */
 const path = require('path');
 const MomentTimezoneInclude = require('../src/app/legacy/psammead/moment-timezone-include/src');
+
 const DevCssExtractLoader =
   require.resolve('./scripts/DevCssExtractLoader.cjs');
 const {
@@ -11,6 +12,7 @@ const {
 const assetPrefix =
   process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN +
   process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH;
+const optimoIdPattern = 'c[a-zA-Z0-9]{10,}o';
 
 /** @type {import('next').NextConfig} */
 module.exports = {
@@ -57,12 +59,28 @@ module.exports = {
   async rewrites() {
     return [
       {
+        source: '/:service/og/:id',
+        destination: '/api/:service/og/:id',
+      },
+      {
         source: '/:service/sw.js',
         destination: '/sw.js',
       },
       {
-        source: '/:service/og/:id',
-        destination: '/api/:service/og/:id',
+        source: `/:service/watch/:id(${optimoIdPattern})`,
+        destination: '/:service/articles/:id',
+      },
+      {
+        source: `/:service/watch/:id(${optimoIdPattern})/:variant`,
+        destination: '/:service/articles/:id/:variant',
+      },
+      {
+        source: `/:service/listen/:id(${optimoIdPattern})`,
+        destination: '/:service/articles/:id',
+      },
+      {
+        source: `/:service/listen/:id(${optimoIdPattern})/:variant`,
+        destination: '/:service/articles/:id/:variant',
       },
     ];
   },
@@ -98,9 +116,11 @@ module.exports = {
         '../src/app/components/ThemeProviderSCSSModules',
       ),
     };
-
     config.plugins.push(
-      new MomentTimezoneInclude({ startYear: 2010, endYear: 2026 }),
+      new MomentTimezoneInclude({
+        startYear: 2010,
+        endYear: new Date().getFullYear() + 1,
+      }),
     );
 
     if (dev) {
