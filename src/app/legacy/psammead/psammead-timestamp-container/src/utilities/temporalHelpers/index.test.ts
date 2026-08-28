@@ -111,6 +111,47 @@ describe('Temporal Helper functions', () => {
     });
   });
 
+  describe('locale numbering system overrides', () => {
+    afterEach(() => {
+      jest.restoreAllMocks();
+    });
+
+    it('forces Eastern Arabic numerals for the `ps` locale', () => {
+      const numberFormatSpy = jest.spyOn(Intl, 'NumberFormat');
+
+      translateDigits(5, 2, 'ps');
+
+      expect(numberFormatSpy).toHaveBeenCalledWith(
+        'ps-u-nu-arabext',
+        expect.objectContaining({
+          minimumIntegerDigits: 2,
+          useGrouping: false,
+        }),
+      );
+    });
+
+    it('leaves locales without an explicit override unchanged', () => {
+      const numberFormatSpy = jest.spyOn(Intl, 'NumberFormat');
+
+      translateDigits(5, 2, 'fa');
+
+      expect(numberFormatSpy).toHaveBeenCalledWith(
+        'fa',
+        expect.objectContaining({
+          minimumIntegerDigits: 2,
+          useGrouping: false,
+        }),
+      );
+    });
+
+    it('resolves arabext unicode extension to the Eastern Arabic system', () => {
+      expect(
+        new Intl.NumberFormat('ps-u-nu-arabext').resolvedOptions()
+          .numberingSystem,
+      ).toEqual('arabext');
+    });
+  });
+
   describe('applyFormat', () => {
     describe('when format is provided', () => {
       it.each([
