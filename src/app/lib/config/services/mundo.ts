@@ -184,16 +184,18 @@ export const service: DefaultServiceConfig = {
       },
       actionTooltip: {
         success: {
-          titleBefore: 'This article is now saved to',
-          titleAfter: '',
+          title: 'This article is now saved',
+          bodyBefore: 'It will appear in',
+          bodyAfter: '',
         },
         error: {
           title: 'Sorry, something went wrong',
           body: 'Check your connection, refresh the page and try again',
         },
         removed: {
-          titleBefore: 'This article has now been removed from',
-          titleAfter: '',
+          title: 'This article is now removed',
+          bodyBefore: 'It will be removed from',
+          bodyAfter: '',
         },
         myNewsLinkText: 'My News',
         myNewsUrl: 'https://www.bbc.com/mundo/my-news',

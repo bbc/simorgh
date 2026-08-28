@@ -11,7 +11,7 @@ export type TooltipContent = Record<
   ActionTooltipStatus,
   {
     title: React.ReactNode;
-    body?: string;
+    body?: React.ReactNode;
   }
 >;
 
@@ -83,6 +83,7 @@ const ActionTooltip = ({
           <div className={styles.header}>
             <StatusIcon status={status} />
             <Text
+              as="h2"
               id={titleId}
               size="pica"
               fontVariant="sansBold"

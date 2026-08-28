@@ -7,16 +7,18 @@ const onClose = jest.fn();
 
 const mockTranslations = {
   success: {
-    titleBefore: 'This article is now saved to',
-    titleAfter: '',
+    title: 'This article is now saved',
+    bodyBefore: 'It will appear in',
+    bodyAfter: '',
   },
   error: {
     title: 'Sorry, something went wrong',
     body: 'Check your connection, refresh the page and try again',
   },
   removed: {
-    titleBefore: 'This article has now been removed from',
-    titleAfter: '',
+    title: 'This article is now removed',
+    bodyBefore: 'It will be removed from',
+    bodyAfter: '',
   },
   myNewsLinkText: 'My News',
   myNewsUrl: 'https://www.bbc.com/hindi/my-news',
@@ -41,8 +43,12 @@ describe('ActionTooltip', () => {
     );
 
     expect(
-      screen.getByText(/This article is now saved to/i),
+      screen.getByRole('heading', {
+        level: 2,
+        name: 'This article is now saved',
+      }),
     ).toBeInTheDocument();
+    expect(screen.getByText(/It will appear in/i)).toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'My News' })).toHaveAttribute(
       'href',
       'https://www.bbc.com/hindi/my-news',
@@ -63,7 +69,12 @@ describe('ActionTooltip', () => {
       { service: 'hindi' },
     );
 
-    expect(screen.getByText('Sorry, something went wrong')).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', {
+        level: 2,
+        name: 'Sorry, something went wrong',
+      }),
+    ).toBeInTheDocument();
     expect(
       screen.getByText('Check your connection, refresh the page and try again'),
     ).toBeInTheDocument();
@@ -82,8 +93,12 @@ describe('ActionTooltip', () => {
     );
 
     expect(
-      screen.getByText(/This article has now been removed from/i),
+      screen.getByRole('heading', {
+        level: 2,
+        name: 'This article is now removed',
+      }),
     ).toBeInTheDocument();
+    expect(screen.getByText(/It will be removed from/i)).toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'My News' })).toBeInTheDocument();
     expect(
       screen.queryByText(/check your connection/i),

@@ -9,16 +9,18 @@ const TooltipDemo = ({ status }: { status: ActionTooltipStatus }) => {
 
   const actionTooltip = {
     success: {
-      titleBefore: 'This article is now saved to the',
-      titleAfter: 'successfully',
+      title: 'This article is now saved',
+      bodyBefore: 'It will appear in',
+      bodyAfter: '',
     },
     error: {
       title: 'Sorry something went wrong ',
       body: 'Check your connection, refresh the page and try again',
     },
     removed: {
-      titleBefore: 'This article has been removed from',
-      titleAfter: '',
+      title: 'This article is now removed',
+      bodyBefore: 'It will be removed from',
+      bodyAfter: '',
     },
     myNewsLinkText: 'My News',
     myNewsUrl: '/my-news',

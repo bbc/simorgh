@@ -26,9 +26,10 @@ const getArticleTooltipContent = (
 
   return {
     success: {
-      title: (
+      title: success.title,
+      body: (
         <>
-          {success.titleBefore} {myNewsLink} {success.titleAfter}
+          {success.bodyBefore} {myNewsLink} {success.bodyAfter}
         </>
       ),
     },
@@ -37,9 +38,10 @@ const getArticleTooltipContent = (
       body: error.body,
     },
     removed: {
-      title: (
+      title: removed.title,
+      body: (
         <>
-          {removed.titleBefore} {myNewsLink} {removed.titleAfter}
+          {removed.bodyBefore} {myNewsLink} {removed.bodyAfter}
         </>
       ),
     },
