@@ -39,29 +39,25 @@ const sanitiseDuration = (duration: ISODuration) => {
   }
 };
 
-// TODO check undefined - does this currently fall back to en-gb?
-const normaliseLocale = (locale?: string): string | undefined => {
-  if (!locale) return undefined;
+const sanitiseLocale = (locale: string): string => {
   const transformed = locale.replace(/_/g, '-'); // transforms Locale To BCP 47 Lang Tag
   try {
     return new Intl.Locale(transformed).baseName; // alterntaive to Intl.getCanonicalLocales(transformedLocaleToBCP47LangTag)[0] - or just returning transformed and risking this being rejected further on
   } catch {
-    return undefined;
+    return 'en-GB';
   }
 };
 
-// TODO - check if undefined check needed
-const withArabicComma = (str: string, locale?: string) => {
-  if (!locale) return str;
+const withArabicComma = (str: string) => {
   return str.replace(/,/g, '،');
 };
 
 const translateDigits = (
   value: number,
   minDigits: number,
-  formattedLocale?: string,
+  sanitisedLocale: string,
 ) =>
-  new Intl.NumberFormat(formattedLocale, {
+  new Intl.NumberFormat(sanitisedLocale, {
     minimumIntegerDigits: minDigits,
     useGrouping: false,
   }).format(value);
@@ -74,19 +70,19 @@ const applyFormat = ({
   hours,
   minutes,
   seconds,
-  formattedLocale,
+  sanitisedLocale,
 }: {
   format?: string;
   hours: number;
   minutes: number;
   seconds: number;
-  formattedLocale?: string;
+  sanitisedLocale: string;
 }) => {
   const values = {
-    h: translateDigits(hours, 1, formattedLocale),
-    mm: translateDigits(minutes, 2, formattedLocale),
-    m: translateDigits(minutes, 1, formattedLocale),
-    ss: translateDigits(seconds, 2, formattedLocale),
+    h: translateDigits(hours, 1, sanitisedLocale),
+    mm: translateDigits(minutes, 2, sanitisedLocale),
+    m: translateDigits(minutes, 1, sanitisedLocale),
+    ss: translateDigits(seconds, 2, sanitisedLocale),
   };
 
   if (format) {
@@ -105,14 +101,14 @@ const applyFormat = ({
 export const formatDuration = ({
   duration, // seconds, see moment.duration(readTimeValue, 'minutes').toISOString() in Readtime,
   format, // examples are 'hh:mm:ss', 'mm:ss', 'm', 's' - see more https://momentjs.com/docs/#:~:text=Hour%2C%20minute%2C%20second%2C%20millisecond%2C%20and%20offset%20tokens
-  locale = 'en-gb', // this is commonly datetimeLocale which is not BCP 47 language tag
+  locale = 'en-GB', // this is commonly datetimeLocale which is not BCP 47 language tag
 }: {
   duration: ISODuration;
   format?: string;
   locale?: Locale;
 }): string => {
   // This is needed since some of the locales in our config do not match the BCP 47 language tag format, which is required by methods like Intl.NumberFormat and Intl.Locale.
-  const formattedLocale = normaliseLocale(locale);
+  const sanitisedLocale = sanitiseLocale(locale);
 
   const totalSeconds = sanitiseDuration(duration).total({
     unit: 'seconds',
@@ -126,14 +122,13 @@ export const formatDuration = ({
     hours,
     minutes,
     seconds,
-    formattedLocale,
+    sanitisedLocale,
   });
 
-  //   // Extract language code (e.g., 'fa' from 'fa-AF', 'ar' from 'ar-EG')
+  // Extract language code (e.g., 'fa' from 'fa-AF', 'ar' from 'ar-EG')
   const langCode = locale.split('-')[0];
   if (ARABIC_SCRIPT_LOCALES.has(langCode)) {
-    // Apply Arabic comma transformation once at the end
-    return withArabicComma(formattedString, formattedLocale);
+    return withArabicComma(formattedString);
   }
   return formattedString;
 };
