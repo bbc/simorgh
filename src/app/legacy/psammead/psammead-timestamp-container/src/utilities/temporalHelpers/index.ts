@@ -1,6 +1,11 @@
 type Locale = string;
 type ISODuration = string;
 
+// forces Eastern Arabic numerals, matching the explicit override in psammead-locales/moment/ps.js
+const LOCALE_NUMBERING_SYSTEM_OVERRIDES: Record<string, string> = {
+  ps: 'ps-u-nu-arabext',
+};
+
 export const sanitiseDuration = (duration: ISODuration) => {
   const durationApi = globalThis.Temporal?.Duration;
 
@@ -33,10 +38,13 @@ export const translateDigits = (
   minDigits: number,
   sanitisedLocale: Locale,
 ) =>
-  new Intl.NumberFormat(sanitisedLocale, {
-    minimumIntegerDigits: minDigits,
-    useGrouping: false,
-  }).format(value);
+  new Intl.NumberFormat(
+    LOCALE_NUMBERING_SYSTEM_OVERRIDES[sanitisedLocale] ?? sanitisedLocale,
+    {
+      minimumIntegerDigits: minDigits,
+      useGrouping: false,
+    },
+  ).format(value);
 
 // note, using Intl.NumberFormat and Intl.Locale does not take into account overrides in psammead-locales/moment
 // this is ok for duration I think since the only logic in them which affects duration is the Arabic comma.
