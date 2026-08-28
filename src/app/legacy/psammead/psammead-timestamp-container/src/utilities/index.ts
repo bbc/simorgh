@@ -9,7 +9,7 @@ import {
 type Locale = string;
 type ISODuration = string;
 
-// Locales that use Arabic script and require Arabic comma (U+060C)
+// Locales that use Arabic script and require Arabic comma
 const ARABIC_SCRIPT_LOCALES = new Set(['ar', 'fa', 'ps', 'ur']);
 
 // Note that this next section is globally configuring moment.
@@ -32,15 +32,14 @@ moment.relativeTimeThreshold('d', 30);
 moment.relativeTimeThreshold('M', 12);
 
 export const formatDuration = ({
-  duration, // seconds, see moment.duration(readTimeValue, 'minutes').toISOString() in Readtime,
-  format, // examples are 'hh:mm:ss', 'mm:ss', 'm', 's' - see more https://momentjs.com/docs/#:~:text=Hour%2C%20minute%2C%20second%2C%20millisecond%2C%20and%20offset%20tokens
-  locale = 'en-GB', // this is commonly datetimeLocale which is not BCP 47 language tag
+  duration,
+  format,
+  locale = 'en-gb',
 }: {
   duration: ISODuration;
   format?: string;
   locale?: Locale;
 }): string => {
-  // This is needed since some of the locales in our config do not match the BCP 47 language tag format, which is required by methods like Intl.NumberFormat and Intl.Locale.
   const sanitisedLocale = sanitiseLocale(locale);
 
   const totalSeconds = sanitiseDuration(duration).total({

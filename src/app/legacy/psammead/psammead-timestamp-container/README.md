@@ -58,19 +58,29 @@ const WrappingContainer = () => (
 ```jsx
 import { formatDuration } from '#psammead/psammead-timestamp-container/src/utilities';
 
-const localisedDuration = formatDuration({ duration: 'PTM30', locale: 'my' });
+const localisedDuration = formatDuration({ duration: 'PT30M', locale: 'my' });
 const customFormatDuration = formatDuration({
-  duration: 'PTM30',
+  duration: 'PT30M',
   format: 'mm,ss',
 });
 ```
 
+`formatDuration` is powered by the [`Temporal`](https://tc39.es/proposal-temporal/docs/) API rather than moment. `duration` is parsed with `Temporal.Duration.from()`; if `Temporal` isn't available in the runtime (e.g. an older browser without the [`temporal-polyfill`](https://www.npmjs.com/package/temporal-polyfill) loaded) or `duration` isn't a valid ISO 8601 duration string, it falls back to `0` seconds rather than throwing.
+
+`locale` doesn't need to be a strict BCP 47 language tag (e.g. underscore-separated locales like `fa_af` are normalised) — it's used to localise digits via `Intl.NumberFormat`, e.g. `locale: 'my'` renders Burmese digits (`၀`-`၉`). If `locale` is not provided or it can't be parsed, it falls back to `en-GB`.
+
+For Arabic-script locales (`ar`, `fa`, `ps`, `ur`), the `,` separator in `format` is rendered as the Arabic comma (`،`) instead.
+
+Pashto (`ps`) additionally forces the Eastern Arabic-Indic numbering system explicitly, matching the equivalent override in `psammead-locales/moment/ps.js`.
+
+Only the `h`, `mm`, `m` and `ss` tokens in `format` are replaced (each once) with localised digits — this isn't a full moment-style format string.
+
 <!-- prettier-ignore -->
 | Argument  | Type        | Required | Default | Example         |
 |-----------|-------------|----------|---------|-----------------|
-| duration  | string | Yes | N/A      | `PTH1M29S30` Duration string as specified by ISO 8601 standard. |
+| duration  | string | Yes | N/A      | `PT1H29M30S` Duration string as specified by ISO 8601 standard. |
 | format    | string | No  | `mm:ss`, or `h:mm:ss` if in hours | `mm,ss` |
-| locale    | string | No  | `en-gb`  | `fr` |
+| locale    | string | No  | `en-GB`  | `ar` |
 
 **localisedMoment**
 

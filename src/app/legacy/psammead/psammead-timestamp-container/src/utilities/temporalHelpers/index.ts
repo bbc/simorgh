@@ -16,14 +16,14 @@ export const sanitiseDuration = (duration: ISODuration) => {
   try {
     return durationApi.from(duration);
   } catch {
-    return durationApi.from('PT0S'); // fallback to 0 seconds if the duration is invalid
+    return durationApi.from('PT0S');
   }
 };
 
 export const sanitiseLocale = (locale: Locale): string => {
-  const transformed = locale.replace(/_/g, '-'); // transforms Locale To BCP 47 Lang Tag
+  const transformed = locale.replace(/_/g, '-');
   try {
-    return new Intl.Locale(transformed).baseName; // alterntaive to Intl.getCanonicalLocales(transformedLocaleToBCP47LangTag)[0] - or just returning transformed and risking this being rejected further on
+    return new Intl.Locale(transformed).baseName;
   } catch {
     return 'en-GB';
   }
@@ -45,9 +45,6 @@ export const translateDigits = (
       useGrouping: false,
     },
   ).format(value);
-
-// note, using Intl.NumberFormat and Intl.Locale does not take into account overrides in psammead-locales/moment
-// this is ok for duration I think since the only logic in them which affects duration is the Arabic comma.
 
 export const applyFormat = ({
   format,
