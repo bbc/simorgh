@@ -46,6 +46,18 @@ const normaliseLocale = (locale?: string): string | undefined => {
   }
 };
 
+// Locales that use Arabic script and require Arabic comma (U+060C)
+const ARABIC_SCRIPT_LOCALES = new Set(['ar', 'fa', 'ps', 'ur']);
+
+const withArabicComma = (str: string, locale?: string) => {
+  if (!locale) return str;
+  // Extract language code (e.g., 'fa' from 'fa-AF', 'ar' from 'ar-EG')
+  const langCode = locale.split('-')[0];
+  return ARABIC_SCRIPT_LOCALES.has(langCode)
+    ? str.replace(/,/g, '\u060C')
+    : str;
+};
+
 export const formatDuration = ({
   duration, // seconds, see moment.duration(readTimeValue, 'minutes').toISOString() in Readtime,
   format, // examples are 'hh:mm:ss', 'mm:ss', 'm', 's' - see more https://momentjs.com/docs/#:~:text=Hour%2C%20minute%2C%20second%2C%20millisecond%2C%20and%20offset%20tokens
@@ -66,19 +78,13 @@ export const formatDuration = ({
   const seconds = Math.floor(totalSeconds % 60);
 
   // note, using Intl.NumberFormat and Intl.Locale does not take into account overrides in psammead-locales/moment
+  // this is ok for duration I think since the only logic in them which affects duration is the Arabic comma.
   const translateDigits = (timeValueAsNumber: number, minDigits: number) =>
     // Using this instead of src/app/legacy/psammead/psammead-locales/src/numerals/index.js since this is a safe usecase.
     new Intl.NumberFormat(formattedLocale, {
       minimumIntegerDigits: minDigits,
       useGrouping: false,
     }).format(timeValueAsNumber);
-
-  const withArabicComma = (str: string) => {
-    if (!formattedLocale) return str;
-    return new Intl.Locale(formattedLocale).maximize().script === 'Arab'
-      ? str.replace(/,/g, '\u060C')
-      : str;
-  };
 
   if (format) {
     return withArabicComma(
@@ -87,6 +93,7 @@ export const formatDuration = ({
         .replace('mm', translateDigits(minutes, 2))
         .replace('ss', translateDigits(seconds, 2))
         .replace('m', translateDigits(minutes, 1)),
+      formattedLocale,
     );
   }
 
@@ -94,6 +101,7 @@ export const formatDuration = ({
     hours > 0
       ? `${translateDigits(hours, 1)}:${translateDigits(minutes, 2)}:${translateDigits(seconds, 2)}`
       : `${translateDigits(minutes, 2)}:${translateDigits(seconds, 2)}`,
+    formattedLocale,
   );
 };
 
