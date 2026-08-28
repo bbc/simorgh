@@ -36,30 +36,27 @@ const sanitiseDuration = (duration: ISODuration) => {
   }
 };
 
-// Extra confirmation
-// const normaliseLocale = (locale?: string): string | undefined => {
-//   if (!locale) return undefined;
-//   const transformedLocaleToBCP47LangTag = locale.replace(/_/g, '-');
-//   try {
-//     return Intl.getCanonicalLocales(transformedLocaleToBCP47LangTag)[0];
-//   } catch {
-//     return undefined;
-//   }
-// };
-
-const transformLocaleToBCP47LangTag = (locale: Locale) =>
-  locale.replace(/_/g, '-');
+const normaliseLocale = (locale?: string): string | undefined => {
+  if (!locale) return undefined;
+  const transformed = locale.replace(/_/g, '-'); // transforms Locale To BCP 47 Lang Tag
+  try {
+    return new Intl.Locale(transformed).baseName; // alterntaive to Intl.getCanonicalLocales(transformedLocaleToBCP47LangTag)[0] - or just returning transformed and risking this being rejected further on
+  } catch {
+    return undefined;
+  }
+};
 
 export const formatDuration = ({
-  duration,
-  format,
-  locale = 'en-gb',
+  duration, // seconds, see moment.duration(readTimeValue, 'minutes').toISOString() in Readtime,
+  format, // examples are 'hh:mm:ss', 'mm:ss', 'm', 's' - see more https://momentjs.com/docs/#:~:text=Hour%2C%20minute%2C%20second%2C%20millisecond%2C%20and%20offset%20tokens
+  locale = 'en-gb', // this is commonly datetimeLocale which is not BCP 47 language tag
 }: {
   duration: ISODuration;
   format?: string;
   locale?: Locale;
 }): string => {
-  const formattedLocale = transformLocaleToBCP47LangTag(locale) || undefined;
+  // This is needed since some of the locales in our config do not match the BCP 47 language tag format, which is required by methods like Intl.NumberFormat and Intl.Locale.
+  const formattedLocale = normaliseLocale(locale);
 
   const totalSeconds = sanitiseDuration(duration).total({
     unit: 'seconds',
