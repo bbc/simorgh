@@ -316,7 +316,7 @@ export const service: ChineseConfig = {
   trad: {
     ...baseServiceConfig,
     lang: `zh-hant`,
-    locale: `zh-hant`,
+    locale: `zh-Hant`,
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
     isoLang: 'zh-Hant',
     externalLinkText: ', 外部',
