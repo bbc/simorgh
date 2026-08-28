@@ -3,6 +3,9 @@ import moment from 'moment-timezone';
 type Locale = string;
 type ISODuration = string;
 
+// Locales that use Arabic script and require Arabic comma (U+060C)
+const ARABIC_SCRIPT_LOCALES = new Set(['ar', 'fa', 'ps', 'ur']);
+
 // Note that this next section is globally configuring moment.
 // It is not possible to configure these on specific moment instances.
 // The current requirements for rounding & thresholding are the same universally
@@ -36,6 +39,7 @@ const sanitiseDuration = (duration: ISODuration) => {
   }
 };
 
+// TODO check undefined - does this currently fall back to en-gb?
 const normaliseLocale = (locale?: string): string | undefined => {
   if (!locale) return undefined;
   const transformed = locale.replace(/_/g, '-'); // transforms Locale To BCP 47 Lang Tag
@@ -46,16 +50,48 @@ const normaliseLocale = (locale?: string): string | undefined => {
   }
 };
 
-// Locales that use Arabic script and require Arabic comma (U+060C)
-const ARABIC_SCRIPT_LOCALES = new Set(['ar', 'fa', 'ps', 'ur']);
-
+// TODO - check if undefined check needed
 const withArabicComma = (str: string, locale?: string) => {
   if (!locale) return str;
-  // Extract language code (e.g., 'fa' from 'fa-AF', 'ar' from 'ar-EG')
-  const langCode = locale.split('-')[0];
-  return ARABIC_SCRIPT_LOCALES.has(langCode)
-    ? str.replace(/,/g, '\u060C')
-    : str;
+  return str.replace(/,/g, '،');
+};
+
+// note, using Intl.NumberFormat and Intl.Locale does not take into account overrides in psammead-locales/moment
+// this is ok for duration I think since the only logic in them which affects duration is the Arabic comma.
+const translateDigits = (
+  timeValueAsNumber: number,
+  minDigits: number,
+  formattedLocale: string | undefined,
+) =>
+  // Using this instead of src/app/legacy/psammead/psammead-locales/src/numerals/index.js since this is a safe usecase.
+  new Intl.NumberFormat(formattedLocale, {
+    minimumIntegerDigits: minDigits,
+    useGrouping: false,
+  }).format(timeValueAsNumber);
+
+const applyFormat = ({
+  format,
+  hours,
+  minutes,
+  seconds,
+  formattedLocale,
+}: {
+  format?: string;
+  hours: number;
+  minutes: number;
+  seconds: number;
+  formattedLocale?: string;
+}) => {
+  if (format) {
+    return format
+      .replace('h', translateDigits(hours, 1, formattedLocale))
+      .replace('mm', translateDigits(minutes, 2, formattedLocale))
+      .replace('ss', translateDigits(seconds, 2, formattedLocale))
+      .replace('m', translateDigits(minutes, 1, formattedLocale));
+  }
+  return hours > 0
+    ? `${translateDigits(hours, 1, formattedLocale)}:${translateDigits(minutes, 2, formattedLocale)}:${translateDigits(seconds, 2, formattedLocale)}`
+    : `${translateDigits(minutes, 2, formattedLocale)}:${translateDigits(seconds, 2, formattedLocale)}`;
 };
 
 export const formatDuration = ({
@@ -77,32 +113,21 @@ export const formatDuration = ({
   const minutes = Math.floor((totalSeconds % 3600) / 60);
   const seconds = Math.floor(totalSeconds % 60);
 
-  // note, using Intl.NumberFormat and Intl.Locale does not take into account overrides in psammead-locales/moment
-  // this is ok for duration I think since the only logic in them which affects duration is the Arabic comma.
-  const translateDigits = (timeValueAsNumber: number, minDigits: number) =>
-    // Using this instead of src/app/legacy/psammead/psammead-locales/src/numerals/index.js since this is a safe usecase.
-    new Intl.NumberFormat(formattedLocale, {
-      minimumIntegerDigits: minDigits,
-      useGrouping: false,
-    }).format(timeValueAsNumber);
-
-  if (format) {
-    return withArabicComma(
-      format
-        .replace('h', translateDigits(hours, 1))
-        .replace('mm', translateDigits(minutes, 2))
-        .replace('ss', translateDigits(seconds, 2))
-        .replace('m', translateDigits(minutes, 1)),
-      formattedLocale,
-    );
-  }
-
-  return withArabicComma(
-    hours > 0
-      ? `${translateDigits(hours, 1)}:${translateDigits(minutes, 2)}:${translateDigits(seconds, 2)}`
-      : `${translateDigits(minutes, 2)}:${translateDigits(seconds, 2)}`,
+  const formattedString = applyFormat({
+    format,
+    hours,
+    minutes,
+    seconds,
     formattedLocale,
-  );
+  });
+
+  //   // Extract language code (e.g., 'fa' from 'fa-AF', 'ar' from 'ar-EG')
+  const langCode = locale.split('-')[0];
+  if (ARABIC_SCRIPT_LOCALES.has(langCode)) {
+    // Apply Arabic comma transformation once at the end
+    return withArabicComma(formattedString, formattedLocale);
+  }
+  return formattedString;
 };
 
 // if the date is invalid return false - https://stackoverflow.com/questions/1353684/detecting-an-invalid-date-date-instance-in-javascript#answer-1353711
