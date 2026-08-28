@@ -4,6 +4,7 @@ import {
   withArabicComma,
   translateDigits,
   applyFormat,
+  DurationFormat,
 } from '.';
 
 describe('Temporal Helper functions', () => {
@@ -154,7 +155,7 @@ describe('Temporal Helper functions', () => {
 
   describe('applyFormat', () => {
     describe('when format is provided', () => {
-      it.each([
+      it.each<[DurationFormat, string]>([
         ['mm,ss', '05,09'],
         ['h:mm:ss', '1:05:09'],
         ['m', '5'],
@@ -170,7 +171,7 @@ describe('Temporal Helper functions', () => {
         ).toEqual(expected);
       });
 
-      it.each([
+      it.each<[DurationFormat, string]>([
         ['mm,ss', '۰۵,۰۹'],
         ['h:mm:ss', '۱:۰۵:۰۹'],
         ['m', '۵'],
