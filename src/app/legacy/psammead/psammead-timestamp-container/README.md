@@ -73,13 +73,13 @@ For Arabic-script locales (`ar`, `fa`, `ps`, `ur`), the `,` separator in `format
 
 Pashto (`ps`) additionally forces the Eastern Arabic-Indic numbering system explicitly, matching the equivalent override in `psammead-locales/moment/ps.js`.
 
-Only the `h`, `mm`, `m` and `ss` tokens in `format` are replaced (each once) with localised digits — this isn't a full moment-style format string.
+Only the `h`, `mm`, `m` and `ss` tokens are recognised in `format`, joined by a single `:` or `,` separator (e.g. `'h:mm:ss'`, `'mm,ss'`, `'m'`) — this is enforced by the `DurationFormat` type, so passing anything else (e.g. a moment-style string like `'YYYY-MM-DD'`) is a TypeScript error.
 
 <!-- prettier-ignore -->
 | Argument  | Type        | Required | Default | Example         |
 |-----------|-------------|----------|---------|-----------------|
 | duration  | string | Yes | N/A      | `PT1H29M30S` Duration string as specified by ISO 8601 standard. |
-| format    | string | No  | `mm:ss`, or `h:mm:ss` if in hours | `mm,ss` |
+| format    | `DurationFormat` | No  | `mm:ss`, or `h:mm:ss` if in hours | `mm,ss` |
 | locale    | string | No  | `en-GB`  | `ar` |
 
 **localisedMoment**

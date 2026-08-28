@@ -4,6 +4,7 @@ import {
   sanitiseLocale,
   applyFormat,
   withArabicComma,
+  DurationFormat,
 } from './temporalHelpers';
 
 type Locale = string;
@@ -37,7 +38,7 @@ export const formatDuration = ({
   locale = 'en-gb',
 }: {
   duration: ISODuration;
-  format?: string;
+  format?: DurationFormat;
   locale?: Locale;
 }): string => {
   const sanitisedLocale = sanitiseLocale(locale);

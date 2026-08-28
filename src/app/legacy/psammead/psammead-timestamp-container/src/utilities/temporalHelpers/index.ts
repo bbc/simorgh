@@ -1,6 +1,14 @@
 type Locale = string;
 type ISODuration = string;
 
+// the only substrings applyFormat replaces - anything else in a format string is left as literal text
+type DurationFormatToken = 'h' | 'mm' | 'm' | 'ss';
+type DurationFormatSeparator = ':' | ',';
+export type DurationFormat =
+  | DurationFormatToken
+  | `${DurationFormatToken}${DurationFormatSeparator}${DurationFormatToken}`
+  | `${DurationFormatToken}${DurationFormatSeparator}${DurationFormatToken}${DurationFormatSeparator}${DurationFormatToken}`;
+
 // forces Eastern Arabic numerals, matching the explicit override in psammead-locales/moment/ps.js
 const LOCALE_NUMBERING_SYSTEM_OVERRIDES: Record<string, string> = {
   ps: 'ps-u-nu-arabext',
@@ -53,7 +61,7 @@ export const applyFormat = ({
   seconds,
   sanitisedLocale,
 }: {
-  format?: string;
+  format?: DurationFormat;
   hours: number;
   minutes: number;
   seconds: number;
