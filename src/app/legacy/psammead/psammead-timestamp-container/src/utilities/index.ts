@@ -56,18 +56,18 @@ const withArabicComma = (str: string, locale?: string) => {
   return str.replace(/,/g, '،');
 };
 
-// note, using Intl.NumberFormat and Intl.Locale does not take into account overrides in psammead-locales/moment
-// this is ok for duration I think since the only logic in them which affects duration is the Arabic comma.
 const translateDigits = (
-  timeValueAsNumber: number,
+  value: number,
   minDigits: number,
-  formattedLocale: string | undefined,
+  formattedLocale?: string,
 ) =>
-  // Using this instead of src/app/legacy/psammead/psammead-locales/src/numerals/index.js since this is a safe usecase.
   new Intl.NumberFormat(formattedLocale, {
     minimumIntegerDigits: minDigits,
     useGrouping: false,
-  }).format(timeValueAsNumber);
+  }).format(value);
+
+// note, using Intl.NumberFormat and Intl.Locale does not take into account overrides in psammead-locales/moment
+// this is ok for duration I think since the only logic in them which affects duration is the Arabic comma.
 
 const applyFormat = ({
   format,
@@ -82,16 +82,24 @@ const applyFormat = ({
   seconds: number;
   formattedLocale?: string;
 }) => {
+  const values = {
+    h: translateDigits(hours, 1, formattedLocale),
+    mm: translateDigits(minutes, 2, formattedLocale),
+    m: translateDigits(minutes, 1, formattedLocale),
+    ss: translateDigits(seconds, 2, formattedLocale),
+  };
+
   if (format) {
     return format
-      .replace('h', translateDigits(hours, 1, formattedLocale))
-      .replace('mm', translateDigits(minutes, 2, formattedLocale))
-      .replace('ss', translateDigits(seconds, 2, formattedLocale))
-      .replace('m', translateDigits(minutes, 1, formattedLocale));
+      .replace('h', values.h)
+      .replace('mm', values.mm)
+      .replace('ss', values.ss)
+      .replace('m', values.m);
   }
+
   return hours > 0
-    ? `${translateDigits(hours, 1, formattedLocale)}:${translateDigits(minutes, 2, formattedLocale)}:${translateDigits(seconds, 2, formattedLocale)}`
-    : `${translateDigits(minutes, 2, formattedLocale)}:${translateDigits(seconds, 2, formattedLocale)}`;
+    ? `${values.h}:${values.mm}:${values.ss}`
+    : `${values.mm}:${values.ss}`;
 };
 
 export const formatDuration = ({
