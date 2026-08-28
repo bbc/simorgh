@@ -122,7 +122,7 @@ const LocalStorageButtons: React.FC = (service) => {
         const topiclist = document.getElementById('topicList');
         topcats.forEach(topic => {
             let isActive = false;
-            if (myChosenTopics && myChosenTopics[service.service]) {
+            if (myChosenTopics && Object.keys(myChosenTopics).length && myChosenTopics[service.service]) {
                 Object.keys(myChosenTopics[service.service]).forEach(topicPath => {
                     if (myChosenTopics[service.service][topicPath] === topic.data.path) {
                         isActive = true;
@@ -131,9 +131,11 @@ const LocalStorageButtons: React.FC = (service) => {
             }
             storageItems.push({ title: topic.title, path: topic.data.path, id: topic.data.id, isActive });
         });
-        Object.keys(myChosenTopics[service.service]).forEach(topicPath => {
-            handleButtonClick(myChosenTopics[service.service][topicPath], false, true);
-        });
+        if (myChosenTopics && Object.keys(myChosenTopics).length && myChosenTopics[service.service]) {
+            Object.keys(myChosenTopics[service.service]).forEach(topicPath => {
+                handleButtonClick(myChosenTopics[service.service][topicPath], null, false, true);
+            });
+        }
     }
 // 
     setItems(storageItems);
@@ -144,7 +146,7 @@ const LocalStorageButtons: React.FC = (service) => {
   
 
   
-  const handleButtonClick = async (topic: string, storeTopic: Boolean, isActive: Boolean, index: integer) => {
+  const handleButtonClick = async (topic: string, topicTitle?: string, storeTopic: Boolean, isActive: Boolean, index: integer) => {
     
     const pieces = topic.split('/');
     const topicId = pieces.at(-1);
@@ -170,16 +172,17 @@ const LocalStorageButtons: React.FC = (service) => {
     }
     if (!isActive || !storeTopic) {
         try {
-          const response = await fetch(`https://web-cdn.api.bbci.co.uk/fd/simorgh-bff?id=${topicId}&service=${service}&pageType=topic`);
+          const response = await fetch(`https://web-cdn.api.bbci.co.uk/fd/simorgh-bff?id=${topicId}&service=${service}&onwardJourney=topicDiscovery`);
           // const response = await fetch(`${getEnvConfig().SIMORGH_MOST_READ_CDN_URL}/fd/simorgh-bff?id=${topicId}&service=${service}&pageType=topic`);
           const data = await response.json();
-          const articles = data.data.curations[0].summaries;
-          const topicTitle = data.data.title;
+          const articles = data.data.items;
+          console.log('articles', data)
+          const topicTitle = topicTitle;
           let topicArticles = {};
           topicArticles[topicTitle] = {};
           const textDir = ['arabic'].includes(service) ? 'rtl' : 'ltr';
           const lang = getLangFromService(service);
-          articles.slice(0, 6).forEach(({ title, imageUrl, description, imageAlt, id, link }) => {
+          articles.forEach(({ title, imageUrl, description, imageAlt, id, link }) => {
             const realImageUrl = imageUrl.replace('{width}', '320');
             topicArticles[topicTitle] = { topicTitle, topicId, title, imageUrl: realImageUrl, description, imageAlt, id, link };
             setTitles(prevTitles => [...prevTitles, { topicTitle, topicId, title, imageUrl: realImageUrl, description, imageAlt, id, link, textDir, lang }]);
@@ -208,7 +211,7 @@ const LocalStorageButtons: React.FC = (service) => {
     <>
     <div css={styles.buttons}>
       {items.map(({title, path, id, isActive}, index) => (
-        <button key={index} id={id} className={isActive ? 'active' : 'inactive'} onClick={() => handleButtonClick(path, true, isActive, index)}>
+        <button key={index} id={id} className={isActive ? 'active' : 'inactive'} onClick={() => handleButtonClick(path, title, true, isActive, index)}>
           {title}
         </button>
       ))}
