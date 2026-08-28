@@ -13,7 +13,13 @@ import {
   PageMetadata,
 } from '../contexts/ReverbParamsContext';
 import ThemeProvider from './ThemeProvider';
-import { PageTypes, Services, Toggles, Variants } from '../models/types/global';
+import {
+  PageTypes,
+  ServerSideExperiment,
+  Services,
+  Toggles,
+  Variants,
+} from '../models/types/global';
 
 jest.mock('./ThemeProvider');
 
@@ -43,6 +49,7 @@ interface Props extends PropsWithChildren {
   pageLang?: string;
   isUK?: boolean | null;
   idctaConfig?: IdctaConfig | null;
+  serverSideExperiments?: ServerSideExperiment[] | null;
 }
 
 const AllTheProviders: FC<Props> = ({
@@ -66,6 +73,7 @@ const AllTheProviders: FC<Props> = ({
   isNextJs = false,
   isUK = null,
   idctaConfig = null,
+  serverSideExperiments = null,
 }: Props) => {
   return (
     <ToggleContextProvider toggles={toggles}>
@@ -90,6 +98,7 @@ const AllTheProviders: FC<Props> = ({
           showCookieBannerBasedOnCountry={showCookieBannerBasedOnCountry}
           statusCode={statusCode}
           isUK={isUK}
+          serverSideExperiments={serverSideExperiments}
         >
           <AccountProvider initialConfig={idctaConfig}>
             <ReverbParamsContextProvider metadata={pageMetadata}>
@@ -135,6 +144,7 @@ const customRender = (
     pageLang,
     isUK,
     idctaConfig,
+    serverSideExperiments,
   } = options || {};
 
   return render(ui, {
@@ -160,6 +170,7 @@ const customRender = (
         pageLang={pageLang}
         isUK={isUK}
         idctaConfig={idctaConfig}
+        serverSideExperiments={serverSideExperiments}
       >
         {children}
       </AllTheProviders>
