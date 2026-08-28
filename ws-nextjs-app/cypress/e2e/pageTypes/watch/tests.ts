@@ -21,16 +21,16 @@ export default ({ service, pageType }: ServiceParametersType) => {
             .then(pageData => {
               const media = getBlockData('video', pageData);
 
-              if (media) {
-                cy.get('[data-e2e="media-loader__container"]')
-                  .first()
-                  .within(() => {
-                    cy.get('[data-e2e="media-player"]')
-                      .should('be.visible')
-                      .should('have.attr', 'id')
-                      .and('eq', 'bbcMediaPlayer0');
-                  });
-              }
+              expect(media, 'expected a video block in watch page data').to.exist;
+
+              cy.get('[data-e2e="media-loader__container"]')
+                .first()
+                .within(() => {
+                  cy.get('[data-e2e="media-player"]')
+                    .should('be.visible')
+                    .should('have.attr', 'id')
+                    .and('eq', 'bbcMediaPlayer0');
+                });
             });
         });
 
