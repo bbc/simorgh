@@ -12,15 +12,15 @@ const canonicalTests = [e2eTests, testsForAllPages, testsForAllCanonicalPages];
 
 const testSuites = [
   {
-    path: '/tamil/watch/c36l16ny6klo',
-    runforEnv: ['local', 'live'],
+    path: '/tamil/listen/cw3xlkprxv82o',
+    runforEnv: ['local'],
     service: 'tamil',
     tests: [...canonicalTests],
   },
   {
-    path: '/gujarati/watch/cx2zevlw204o',
-    runforEnv: ['local', 'live'],
-    service: 'gujarati',
+    path: '/tamil/listen/cwyzlmrmy87o',
+    runforEnv: ['live'],
+    service: 'tamil',
     tests: [...canonicalTests],
   },
 ];
