@@ -28,7 +28,7 @@ export const withArabicComma = (string: string) => {
   return string.replace(/,/g, '،');
 };
 
-const translateDigits = (
+export const translateDigits = (
   value: number,
   minDigits: number,
   sanitisedLocale: Locale,
