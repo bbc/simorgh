@@ -19,10 +19,6 @@ import {
   SEARCH_MID_ARTICLE_COMPONENT,
   SearchVariant,
 } from './searchReferrerComponentOrder';
-import {
-  SEARCH_OJ_ACTIVATION_EVENT_NAME,
-  SEARCH_OJ_EXPERIMENT_NAME,
-} from './SearchOjExperiment/config';
 
 jest.mock('#app/components/ThemeProvider');
 jest.mock('#app/components/ChartbeatAnalytics', () => {
