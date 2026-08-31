@@ -287,7 +287,7 @@ describe('SaveArticleButton', () => {
       );
 
       expect(screen.getByTestId('action-tooltip')).toHaveTextContent(
-        'यह लेख माय न्यूज़ सेक्शन से डिलीट कर दिया गया है',
+        'यह लेख अब हटा दिया गया हैयह माय न्यूज़ से हटा दिया जाएगा',
       );
     });
 
