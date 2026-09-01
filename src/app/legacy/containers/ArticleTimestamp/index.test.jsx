@@ -54,7 +54,7 @@ describe('ArticleTimestamp', () => {
       />,
     );
 
-    expect(getAllByText(regexDate).length).toBeGreaterThanOrEqual(1);
+    expect(getAllByText(regexDate).length).toEqual(2);
   });
 
   it('should render with a prefix', () => {
