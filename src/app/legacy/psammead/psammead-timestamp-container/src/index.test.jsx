@@ -37,6 +37,7 @@ describe('Timestamp', () => {
     );
     const time = container.querySelector('time');
     expect(time).toBeInTheDocument();
+    expect(time.textContent).not.toMatch(/^۰/);
   });
 
   it('should render correctly', () => {
