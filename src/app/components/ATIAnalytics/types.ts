@@ -109,6 +109,7 @@ export type ReverbPageVars = {
   name?: string | null;
   additionalProperties?: {
     app_name?: string | null;
+    app_type?: string | null;
     content_language?: string | null;
     type?: string | null;
   };
@@ -124,22 +125,30 @@ export type ReverbUserVars = {
 };
 
 export type ReverbEventDetails = {
+  actionName?: string;
   anchorElement?: HTMLElement;
+  background?: boolean;
+  container?: string;
   experience?: {
-    engine_type: Array<string>;
+    engine_type?: Array<string>;
     engine_id: Array<string>;
   };
   event?: {
     category: string;
-    action: 'select' | 'view';
+    action: 'select' | 'view' | 'serve';
     grouping?: string;
+    interaction_type?: string;
+    spec_id?: string;
+    spec_version?: string;
   };
-  eventName: 'pageView' | 'sectionView' | 'sectionClick';
+  eventName: 'pageView' | 'sectionView' | 'sectionClick' | 'activation';
   eventPublisher?: string;
   group?: string | object;
   isClick?: boolean;
   item?: string | object;
   originalEvent?: Event;
+  // Appended to 'actionName' by Reverb to form the 'creation' slot as 'actionName~type'
+  type?: string;
 };
 
 // possible task - type this ourselves and not rely on imported types
