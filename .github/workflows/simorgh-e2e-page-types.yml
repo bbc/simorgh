@@ -32,7 +32,7 @@ jobs:
 
           const root = 'ws-nextjs-app/cypress/e2e/pageTypes';
           const preferredGroups = [
-            ['articlePage'],
+            ['articlePage', 'watch', 'listen'],
             ['homePage', 'onDemandAudio'],
             [
               'topicPage',
