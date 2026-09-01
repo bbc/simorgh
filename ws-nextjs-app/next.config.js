@@ -56,20 +56,6 @@ module.exports = {
       },
     ];
   },
-  async redirects() {
-    return [
-      {
-        source: '/kyrgyz/bbc_kyrgyz_radio/live_radio',
-        destination: '/kyrgyz',
-        permanent: true,
-      },
-      {
-        source: '/kyrgyz/bbc_kyrgyz_radio/liveradio',
-        destination: '/kyrgyz',
-        permanent: true,
-      },
-    ];
-  },
   async rewrites() {
     return [
       {
