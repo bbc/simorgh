@@ -118,11 +118,7 @@ Valid scales: `atlas`, `elephant`, `imperial`, `royal`, `foolscap`, `canon`, `tr
 
 ### Grid widths
 
-`gridWidths.scss` is **not** forwarded by `themeTokens`. Import it directly when needed:
-
-```scss
-@use '@scss/gridWidths' as gridWidths;
-```
+`gridWidths.scss` is forwarded as `theme.$gridWidths-*` (e.g. `theme.$gridWidths-grid-width-600`).
 
 ## Step 3: Convert conditional logic out of JavaScript
 
