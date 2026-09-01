@@ -2,32 +2,34 @@
 
 ## Why
 
-Image rendering logic in Simorgh is currently spread across several components,
-each independently re-implementing srcset/mime-type/URL-building logic before
-handing the result to the shared [`Image`](../src/app/components/Image)
-component. This document is the output of the initial spike and defines the
-audit, the target API, and an incremental migration order so the work can be
-delivered as a series of small, low-risk PRs rather than one large refactor.
+The modern [`Image`](https://github.com/bbc/simorgh/blob/latest/src/app/components/Image/index.tsx)
+primitive is used by several image and promo components. However, image URL,
+source-set, MIME-type, and fallback preparation is still implemented in
+multiple places before values are passed to that primitive. This document
+records the initial audit and defines an incremental approach to consolidating
+that preparation logic.
 
 ## Current state (audit)
 
-All of the components below already render through the shared
-[`Image`](../src/app/components/Image/index.tsx) component. The duplication is
-in the **prep work** done before calling it.
+`StoryPromo` and `Promo.Image` already render through the shared
+[`Image`](https://github.com/bbc/simorgh/blob/latest/src/app/components/Image/index.tsx)
+primitive. The duplication is primarily in the preparation performed before
+rendering it. `EpisodeList` remains a separate legacy implementation.
 
-| Consumer              | Location                                                                                                                                | Prep logic used                                                                                | Notes                                                                                                      |
-| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `Billboard`           | [src/app/components/Billboard](../src/app/components/Billboard/index.tsx)                                                               | `createSrcsets` + `getOriginCode` + `getLocator` + `buildIChefURL` (from `#app/lib/utilities`) | Delegates to `MaskedImage` for non-high-prominence layout                                                  |
-| `MaskedImage`         | [src/app/components/MaskedImage](../src/app/components/MaskedImage/index.tsx)                                                           | `createSrcsets` + `getOriginCode` + `getLocator`                                               | Duplicates the same origin/locator/srcset derivation as `Billboard`                                        |
-| `MessageBanner`       | [src/app/components/MessageBanner](../src/app/components/MessageBanner/index.tsx)                                                       | ✅ Migrated to `getSrcSets` (`#app/utilities/getSrcSets`)                                      | Previously hand-rolled the same math that `getSrcSets` already implements and was already covered by tests |
-| `StoryPromo` (legacy) | [src/app/legacy/containers/StoryPromo](../src/app/legacy/containers/StoryPromo/index.jsx)                                               | `createSrcsets` + `getOriginCode` + `getLocator` + Psammead `ImagePlaceholder` fallback        | Rendered by `CurationGrid` and `HierarchicalGrid`; largest blast radius                                    |
-| `EpisodeList`         | [src/app/legacy/containers/EpisodeList/Image.jsx](../src/app/legacy/containers/EpisodeList/Image.jsx)                                   | Psammead `ImagePlaceholder`                                                                    | Still fully on the legacy placeholder component                                                            |
-| `PortraitVideoPromo`  | [src/app/components/PortraitVideoCarousel/PortraitVideoPromo](../src/app/components/PortraitVideoCarousel/PortraitVideoPromo/index.tsx) | `getSrcSets`                                                                                   | Reference implementation for the utility other consumers should move to                                    |
+| Consumer             | Location                                                                                                                                                                        | Prep logic used                                                    | Notes                                                                                                     |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------- |
+| `Billboard`          | [src/app/components/Billboard](https://github.com/bbc/simorgh/blob/latest/src/app/components/Billboard/index.tsx)                                                               | `createSrcsets` + `getOriginCode` + `getLocator` + `buildIChefURL` | Delegates to `MaskedImage` for non-high-prominence layout                                                 |
+| `MaskedImage`        | [src/app/components/MaskedImage](https://github.com/bbc/simorgh/blob/latest/src/app/components/MaskedImage/index.tsx)                                                           | `createSrcsets` + `getOriginCode` + `getLocator`                   | Repeats the image-preparation pattern used by `Billboard`                                                 |
+| `MessageBanner`      | [src/app/components/MessageBanner](https://github.com/bbc/simorgh/blob/latest/src/app/components/MessageBanner/index.tsx)                                                       | `getSrcSets` (`#app/utilities/getSrcSets`)                         | Uses the existing shared utility rather than constructing `srcSet` and `sizes` locally                    |
+| `StoryPromo`         | [src/app/legacy/containers/StoryPromo](https://github.com/bbc/simorgh/blob/latest/src/app/legacy/containers/StoryPromo/index.jsx)                                               | `createSrcsets` + `getOriginCode` + `getLocator` + `buildIChefURL` | Already renders the modern `Image` primitive; uses Psammead `ImagePlaceholder` when no image is available |
+| `Promo.Image`        | [src/app/legacy/components/Promo/image.jsx](https://github.com/bbc/simorgh/blob/latest/src/app/legacy/components/Promo/image.jsx)                                               | Local `createSrcSet` and `createSizes` helpers                     | Already renders the modern `Image` primitive but duplicates responsive image generation                   |
+| `EpisodeList`        | [src/app/legacy/containers/EpisodeList/Image.jsx](https://github.com/bbc/simorgh/blob/latest/src/app/legacy/containers/EpisodeList/Image.jsx)                                   | Direct `img` element plus Psammead `ImagePlaceholder`              | Separate legacy implementation                                                                            |
+| `PortraitVideoPromo` | [src/app/components/PortraitVideoCarousel/PortraitVideoPromo](https://github.com/bbc/simorgh/blob/latest/src/app/components/PortraitVideoCarousel/PortraitVideoPromo/index.tsx) | `getSrcSets`                                                       | Existing example of using the shared utility                                                              |
 
 Two parallel srcset utilities exist today and need to be reconciled:
 
-- [`#app/lib/utilities/srcSet`](../src/app/lib/utilities/srcSet/index.js) — `createSrcsets` / `getMimeType`. Produces a **primary + fallback** (webp/jpeg) pair from a fixed resolution ladder. Used by `Billboard`, `MaskedImage`, `StoryPromo`.
-- [`#app/utilities/getSrcSets`](../src/app/utilities/getSrcSets/index.ts) — produces a **2x-upscale small/large** srcset and matching `sizes`, driven by breakpoints. Used by `MessageBanner` (now), `PortraitVideoPromo`.
+- [`#app/lib/utilities/srcSet`](https://github.com/bbc/simorgh/blob/latest/src/app/lib/utilities/srcSet/index.js) — `createSrcsets` / `getMimeType`. Produces a **primary + fallback** (webp/jpeg) pair from a fixed resolution ladder. Used by `Billboard`, `MaskedImage`, and `StoryPromo`.
+- [`#app/utilities/getSrcSets`](https://github.com/bbc/simorgh/blob/latest/src/app/utilities/getSrcSets/index.ts) — produces a **2x-upscale small/large** srcset and matching `sizes`, driven by breakpoints. Used by `MessageBanner` and `PortraitVideoPromo`.
 
 They solve different layout problems (resolution-ladder vs breakpoint 2x-upscale), so the API design step below should decide whether both are kept as distinct, named utilities, or unified behind one configurable function.
 
@@ -38,13 +40,15 @@ flowchart TD
     subgraph Today
         Billboard1[Billboard] --> srcSet1[createSrcsets]
         MaskedImage1[MaskedImage] --> srcSet1
-        StoryPromo1[StoryPromo legacy] --> srcSet1
+      StoryPromo1[StoryPromo] --> srcSet1
+      PromoImage1[Promo.Image] --> LocalSrcSet[local createSrcSet/createSizes]
         StoryPromo1 --> Placeholder1[Psammead ImagePlaceholder]
         EpisodeList1[EpisodeList] --> Placeholder1
         MessageBanner1[MessageBanner] --> getSrcSets1[getSrcSets]
         PortraitVideoPromo1[PortraitVideoPromo] --> getSrcSets1
         srcSet1 --> Image1[Image component]
         getSrcSets1 --> Image1
+      LocalSrcSet --> Image1
     end
 ```
 
@@ -54,6 +58,7 @@ flowchart TD
         Billboard2[Billboard] --> SharedAPI[Shared image data API]
         MaskedImage2[MaskedImage] --> SharedAPI
         StoryPromo2[StoryPromo] --> SharedAPI
+      PromoImage2[Promo.Image] --> SharedAPI
         EpisodeList2[EpisodeList] --> SharedAPI
         MessageBanner2[MessageBanner] --> SharedAPI
         PortraitVideoPromo2[PortraitVideoPromo] --> SharedAPI
@@ -64,7 +69,7 @@ flowchart TD
 The "Shared image data API" is the outcome of step 2 below — a single,
 documented way to go from an iChef `urlTemplate` + a required width/breakpoint
 strategy to the `src` / `srcSet` / `sizes` / `mediaType` props that `Image`
-already accepts (see the [Image README](../src/app/components/Image/README.md)
+already accepts (see the [Image README](https://github.com/bbc/simorgh/blob/latest/src/app/components/Image/README.md)
 for the current prop contract).
 
 ## Migration order
@@ -75,8 +80,8 @@ flowchart LR
     B --> C[3. Extract shared utility]
     C --> D[4. Message Banner ✅]
     D --> E[5. Billboard + MaskedImage]
-    E --> F[6. StoryPromo + CurationGrid/HierarchicalGrid]
-    F --> G[7. Remove Psammead image components]
+   E --> F[6. StoryPromo and Promo.Image preparation]
+   F --> G[7. Review Psammead dependencies]
     B -.-> H[8. Investigate Next.js Image]
 ```
 
@@ -85,34 +90,37 @@ flowchart LR
    consumers call, and whether `srcSet` derivation should live in `Image`
    itself or stay as a standalone utility consumed before render.
 3. **Extract shared utility** — consolidate `createSrcsets` and `getSrcSets`
-   behind the agreed API, keeping [srcSet/index.test.js](../src/app/lib/utilities/srcSet/index.test.js)
-   and [getSrcSets/index.test.ts](../src/app/utilities/getSrcSets/index.test.ts)
+   behind the agreed API, keeping [srcSet/index.test.js](https://github.com/bbc/simorgh/blob/latest/src/app/lib/utilities/srcSet/index.test.js)
+   and [getSrcSets/index.test.ts](https://github.com/bbc/simorgh/blob/latest/src/app/utilities/getSrcSets/index.test.ts)
    as the regression baseline.
 4. **Message Banner** — ✅ done. Replaced hand-rolled srcset math with the
    existing, tested `getSrcSets` utility. No visual or markup change; all 11
    existing tests pass unmodified.
 5. **Billboard + MaskedImage** — migrate together, since `Billboard` already
    delegates to `MaskedImage` for its non-high-prominence layout.
-6. **StoryPromo legacy wrapper** — highest risk step: rendered via
-   `CurationGrid` and `HierarchicalGrid`, has large existing snapshots, and
-   still depends on the Psammead placeholder for the no-image case.
-7. **Remove Psammead image components** — only after confirming
-   `#psammead/psammead-image-placeholder` has no remaining references outside
-   `StoryPromo` and `EpisodeList`.
+6. **Review StoryPromo and Promo.Image preparation logic** — consolidate
+   duplicated source-set, fallback, and sizing logic while preserving their
+   existing primitive `Image` rendering.
+7. **Review Psammead dependencies** — identify all production consumers of
+   `psammead-image` and `psammead-image-placeholder`, including
+   `ImageWithPlaceholder`, `OnDemandImage`, `PodcastPromo`, `StoryPromo`, and
+   `EpisodeList`, before scheduling removals.
 8. **Investigate Next.js `<Image>`** — spike in parallel with step 2; check
    compatibility with the `{width}` iChef URL templating and AMP rendering
    path before committing to it as the long-term implementation.
 
 ## Risks / blockers
 
-- `StoryPromo`'s image path is exercised by large snapshot tests
-  ([`__snapshots__/index.test.jsx.snap`](../src/app/legacy/containers/StoryPromo/__snapshots__/index.test.jsx.snap))
-  — expect snapshot updates, not just logic changes, in step 6.
+- `StoryPromo` and `Promo.Image` already use the modern `Image` primitive.
+  Future changes should consolidate their image-preparation logic rather than
+  repeat the completed primitive migration.
+- Direct Psammead image and placeholder usage extends beyond `StoryPromo` and
+  `EpisodeList`; removal work requires a complete production-usage audit.
 - `Image`'s fallback (`<picture>`) rendering is currently gated to
-  `pageType === HOME_PAGE` only (see [Image/index.tsx](../src/app/components/Image/index.tsx)).
+  `pageType === HOME_PAGE` only (see [Image/index.tsx](https://github.com/bbc/simorgh/blob/latest/src/app/components/Image/index.tsx)).
   Any consumer relying on `fallbackSrcSet` outside the home page will not get
   the `<picture>` fallback today — worth resolving as part of step 2.
 - AMP rendering (`isAmp`) is a separate code path inside `Image` and must be
   covered by any consumer migration test.
-- Removing Psammead components (step 7) should not start until step 6 is
-  complete and merged, to avoid breaking `StoryPromo` mid-migration.
+- CAF rollout may remove legacy consumers. Reassess the scope before investing
+  in migrations for components expected to be removed.
