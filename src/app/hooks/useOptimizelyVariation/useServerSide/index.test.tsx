@@ -1,12 +1,12 @@
 import { PropsWithChildren } from 'react';
-import { renderHook } from '@testing-library/react';
-import { RequestContextProvider } from '#contexts/RequestContext';
+import { act } from '@testing-library/react';
 import { OptimizelyProvider, ReactSDKClient } from '@optimizely/react-sdk';
 import {
-  PageTypes,
-  ServerSideExperiment,
-  Services,
-} from '#app/models/types/global';
+  renderHook,
+  AllTheProviders,
+} from '#app/components/react-testing-library-with-providers';
+import { ServerSideExperiment } from '#app/models/types/global';
+import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import useServerSide from '.';
 import * as activateExperiment from '../activateExperiment';
 
@@ -26,31 +26,50 @@ describe('useOptimizelyVariation - useServerSide', () => {
   const renderUseServerSide = (params: {
     experimentName: string;
     serverSideExperiments?: ServerSideExperiment[];
+    withOptimizely?: boolean;
   }) => {
-    const { experimentName, serverSideExperiments } = params;
-
-    const props = {
+    const {
+      experimentName,
       serverSideExperiments,
-      isAmp: false,
-      pageType: 'STY' as PageTypes,
-      service: 'news' as Services,
-      pathname: 'bar',
+      withOptimizely = true,
+    } = params;
+
+    const wrapper = ({ children }: PropsWithChildren) => {
+      const providers = (
+        // HOME_PAGE avoids ReverbParamsContext's article ATI enrichment, which calls client-side Optimizely
+        <AllTheProviders
+          service="news"
+          pageType={HOME_PAGE}
+          pathname="bar"
+          isAmp={false}
+          toggles={{ eventTracking: { enabled: true } }}
+          serverSideExperiments={serverSideExperiments}
+        >
+          {children}
+        </AllTheProviders>
+      );
+
+      return withOptimizely ? (
+        <OptimizelyProvider
+          optimizely={optimizely as unknown as ReactSDKClient}
+          isServerSide
+        >
+          {providers}
+        </OptimizelyProvider>
+      ) : (
+        providers
+      );
     };
-    const wrapper = ({ children }: PropsWithChildren) => (
-      <OptimizelyProvider
-        optimizely={optimizely as unknown as ReactSDKClient}
-        isServerSide
-      >
-        <RequestContextProvider {...props}>{children}</RequestContextProvider>
-      </OptimizelyProvider>
-    );
     return renderHook(() => useServerSide(experimentName), {
       wrapper,
     });
   };
 
   it('should return null if optimizely is not defined', () => {
-    const { result } = renderHook(() => useServerSide('foo'));
+    const { result } = renderUseServerSide({
+      experimentName: 'foo',
+      withOptimizely: false,
+    });
     expect(result.current).toEqual(null);
   });
 
@@ -154,7 +173,7 @@ describe('useOptimizelyVariation - useServerSide', () => {
     expect(result.current).toBeNull();
   });
 
-  it('should call activate experiment if experiment is enabled', () => {
+  it('should call activate experiment (via useEffect) if experiment is enabled', async () => {
     const mockServerSideExperiments = [
       {
         experimentName: 'foo',
@@ -163,15 +182,18 @@ describe('useOptimizelyVariation - useServerSide', () => {
       },
     ];
 
-    renderUseServerSide({
-      serverSideExperiments:
-        mockServerSideExperiments as ServerSideExperiment[],
-      experimentName: 'foo',
+    await act(async () => {
+      renderUseServerSide({
+        serverSideExperiments:
+          mockServerSideExperiments as ServerSideExperiment[],
+        experimentName: 'foo',
+      });
     });
-    expect(spyActivateExperiment).toHaveBeenCalled();
+
+    expect(spyActivateExperiment).toHaveBeenCalledTimes(1);
   });
 
-  it('should not call activate experiment if experiment is disabled', () => {
+  it('should not call activate experiment if experiment is disabled', async () => {
     const mockServerSideExperiments = [
       {
         experimentName: 'foo',
@@ -180,26 +202,37 @@ describe('useOptimizelyVariation - useServerSide', () => {
       },
     ];
 
-    renderUseServerSide({
-      serverSideExperiments:
-        mockServerSideExperiments as ServerSideExperiment[],
-      experimentName: 'foo',
+    await act(async () => {
+      renderUseServerSide({
+        serverSideExperiments:
+          mockServerSideExperiments as ServerSideExperiment[],
+        experimentName: 'foo',
+      });
     });
+
     expect(spyActivateExperiment).not.toHaveBeenCalled();
   });
 
-  it('should not re-activate the experiment on rerender', () => {
-    const { rerender } = renderUseServerSide({
-      serverSideExperiments: [
-        { experimentName: 'foo', variation: 'control', enabled: true },
-      ] as ServerSideExperiment[],
-      experimentName: 'foo',
+  it('should not re-activate the experiment on rerender', async () => {
+    let rerender: (() => void) | undefined;
+
+    await act(async () => {
+      ({ rerender } = renderUseServerSide({
+        serverSideExperiments: [
+          { experimentName: 'foo', variation: 'control', enabled: true },
+        ] as ServerSideExperiment[],
+        experimentName: 'foo',
+      }));
     });
 
     expect(spyActivateExperiment).toHaveBeenCalledTimes(1);
 
-    rerender();
-    rerender();
+    await act(async () => {
+      rerender?.();
+    });
+    await act(async () => {
+      rerender?.();
+    });
 
     expect(spyActivateExperiment).toHaveBeenCalledTimes(1);
   });

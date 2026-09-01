@@ -524,6 +524,25 @@ describe('MediaLoader', () => {
         );
       },
     );
+
+    it('passes a supplied holding image to the player configuration', async () => {
+      const buildConfigSpy = jest.spyOn(buildConfig, 'default');
+      const holdingImageURL =
+        'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/promo-image.jpg.webp';
+
+      await act(async () => {
+        render(
+          <MediaPlayer
+            blocks={aresMediaBlocks as MediaBlock[]}
+            holdingImageURL={holdingImageURL}
+          />,
+        );
+      });
+
+      expect(buildConfigSpy).toHaveBeenCalledWith(
+        expect.objectContaining({ holdingImageURL }),
+      );
+    });
   });
 
   describe('AMP', () => {

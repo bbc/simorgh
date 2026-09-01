@@ -1,5 +1,8 @@
 import moment from 'moment-timezone';
 
+type Locale = string;
+type ISODuration = string;
+
 // Note that this next section is globally configuring moment.
 // It is not possible to configure these on specific moment instances.
 // The current requirements for rounding & thresholding are the same universally
@@ -19,7 +22,15 @@ moment.relativeTimeThreshold('h', 24);
 moment.relativeTimeThreshold('d', 30);
 moment.relativeTimeThreshold('M', 12);
 
-export const formatDuration = ({ duration, format, locale = 'en-gb' }) => {
+export const formatDuration = ({
+  duration,
+  format,
+  locale = 'en-gb',
+}: {
+  duration: ISODuration;
+  format?: string;
+  locale?: Locale;
+}): string => {
   const defaultDurationFormat = duration?.includes('H') ? 'h:mm:ss' : 'mm:ss';
   const durationInMilliseconds = moment.duration(duration).asMilliseconds();
   return moment
@@ -29,16 +40,22 @@ export const formatDuration = ({ duration, format, locale = 'en-gb' }) => {
 };
 
 // if the date is invalid return false - https://stackoverflow.com/questions/1353684/detecting-an-invalid-date-date-instance-in-javascript#answer-1353711
-export const isValidDateTime = dateTime => {
+export const isValidDateTime = (dateTime: unknown): boolean => {
   // eslint-disable-next-line no-restricted-globals
-  if (isNaN(dateTime) || dateTime === null) {
+  if (isNaN(dateTime as number) || dateTime === null) {
     return false;
   }
-  return !isNaN(new Date(dateTime)); // eslint-disable-line no-restricted-globals
+  return !isNaN(new Date(dateTime as number).getTime()); // eslint-disable-line no-restricted-globals
 };
 
 // when using the following 2 functions, we recommend using webpack configuration to only load in the relevant timezone, rather than all of moment-timezone
-export const localisedMoment = ({ locale, timestamp }) => {
+export const localisedMoment = ({
+  locale,
+  timestamp,
+}: {
+  locale: Locale;
+  timestamp: number;
+}): moment.Moment => {
   return moment(timestamp).locale(locale);
 };
 
@@ -48,10 +65,18 @@ export const formatUnixTimestamp = ({
   locale,
   timestamp,
   timezone,
-}) => {
+}: {
+  format?: string | null;
+  isRelative?: boolean;
+  locale?: Locale;
+  timestamp?: number;
+  timezone?: string;
+}): string | undefined => {
   if (!timestamp) return undefined;
 
-  const momentObj = moment(timestamp).locale(locale).tz(timezone);
+  const momentObj = moment(timestamp)
+    .locale(locale ?? '')
+    .tz(timezone ?? '');
 
   if (isRelative) {
     return momentObj.fromNow();
