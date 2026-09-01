@@ -297,6 +297,7 @@ type Props = {
   eventMapping?: EventMapping;
   loadPlayerOnInitialRender?: boolean;
   withinFullscreenContainer?: boolean;
+  holdingImageURL?: string;
 };
 
 const MediaLoader = ({
@@ -307,6 +308,7 @@ const MediaLoader = ({
   eventMapping,
   loadPlayerOnInitialRender = false,
   withinFullscreenContainer = false,
+  holdingImageURL,
 }: Props) => {
   const { lang, service, translations, defaultImage } = use(ServiceContext);
   const { pageIdentifier } = use(EventTrackingContext);
@@ -362,6 +364,7 @@ const MediaLoader = ({
         showAdsBasedOnLocation,
         embedded,
         defaultImage,
+        holdingImageURL,
       }),
     [
       id,
@@ -378,6 +381,7 @@ const MediaLoader = ({
       showAdsBasedOnLocation,
       embedded,
       defaultImage,
+      holdingImageURL,
     ],
   );
 
