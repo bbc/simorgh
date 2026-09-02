@@ -268,7 +268,7 @@ describe('SaveArticleButton', () => {
       );
 
       expect(
-        screen.getByText('क्षमा करें, कुछ गड़बड़ हो गई है'),
+        screen.getByText('माफ़ कीजिए, कुछ गड़बड़ी हुई है'),
       ).toBeInTheDocument();
     });
 
@@ -287,7 +287,7 @@ describe('SaveArticleButton', () => {
       );
 
       expect(screen.getByTestId('action-tooltip')).toHaveTextContent(
-        'यह लेख अब हटा दिया गया हैयह माय न्यूज़ से हटा दिया जाएगा',
+        'बंद करेंये आर्टिकिल अब हटा ली गई हैये माय न्यूज़ सेक्शन से हटा ली गई है',
       );
     });
 

@@ -141,7 +141,7 @@ export const service: DefaultServiceConfig = {
         saving: 'सहेजा जा रहा है',
         saved: 'मेरी ख़बरों में सहेजा गया',
         remove: 'हटाएं',
-        removeAccessible: 'सहेजा गया. मेरी ख़बरों से हटाएं',
+        removeAccessible: 'सेव्ड. माय न्यूज़ सेक्शन से हटा दीजिए',
         removing: 'हटाया जा रहा है',
       },
       myNews: {
@@ -159,18 +159,18 @@ export const service: DefaultServiceConfig = {
       },
       actionTooltip: {
         success: {
-          title: 'यह लेख अब सेव कर लिया गया है',
-          bodyBefore: 'यह',
-          bodyAfter: 'में दिखेगा',
+          title: 'ये आर्टिकिल अब सेव्ड है',
+          bodyBefore: 'ये',
+          bodyAfter: 'सेक्शन में दिखेगी.',
         },
         error: {
-          title: 'क्षमा करें, कुछ गड़बड़ हो गई है',
-          body: 'अपना कनेक्शन जांचें, पेज को रीफ्रेश करें और फिर से कोशिश करें',
+          title: 'माफ़ कीजिए, कुछ गड़बड़ी हुई है',
+          body: 'अपना कनेक्शन चेक कीजिए, पन्ना रिफ़्रेश कीजिए और फिर कोशिश कीजिए',
         },
         removed: {
-          title: 'यह लेख अब हटा दिया गया है',
-          bodyBefore: 'यह',
-          bodyAfter: 'से हटा दिया जाएगा',
+          title: 'ये आर्टिकिल अब हटा ली गई है',
+          bodyBefore: 'ये',
+          bodyAfter: 'सेक्शन से हटा ली गई है',
         },
         myNewsLinkText: 'माय न्यूज़',
         myNewsUrl: 'https://www.bbc.com/hindi/my-news',
