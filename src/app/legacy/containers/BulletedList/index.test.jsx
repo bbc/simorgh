@@ -16,7 +16,7 @@ describe('BulletedListContainer', () => {
         blockGroupIndex={1}
       />,
       {
-        service: 'arabic',
+        service: 'news',
       },
     );
     expect(screen.getByText('It is unordered')).toBeInTheDocument();
