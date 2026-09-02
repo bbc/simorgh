@@ -1,5 +1,5 @@
 // gridWidths.scss
-// SCSS variables for grid widths, matching gridWidths.ts
+// SCSS variables for grid widths (rem), derived from the px values in ThemeProvider/gridWidths.ts
 @use './px-to-rem' as *;
 
 $grid-width-240: px-to-rem(240);
