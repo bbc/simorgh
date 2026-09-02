@@ -1,23 +1,35 @@
+import { MouseEvent } from 'react';
 import Link from '#app/components/Footer/Link';
 import { TooltipContent } from '#app/components/ActionTooltip';
 import { Translations } from '#app/models/types/translations';
 
 type ArticleTooltipTranslations = NonNullable<Translations['actionTooltip']>;
 
-const getArticleTooltipContent = ({
-  success,
-  error,
-  removed,
-  myNewsLinkText,
-  myNewsUrl,
-}: ArticleTooltipTranslations): TooltipContent => {
-  const myNewsLink = <Link href={myNewsUrl} text={myNewsLinkText} inline />;
+const getArticleTooltipContent = (
+  {
+    success,
+    error,
+    removed,
+    myNewsLinkText,
+    myNewsUrl,
+  }: ArticleTooltipTranslations,
+  onMyNewsLinkClick?: (event: MouseEvent<HTMLAnchorElement>) => void,
+): TooltipContent => {
+  const myNewsLink = (
+    <Link
+      href={myNewsUrl}
+      text={myNewsLinkText}
+      inline
+      onClick={onMyNewsLinkClick}
+    />
+  );
 
   return {
     success: {
-      title: (
+      title: success.title,
+      body: (
         <>
-          {success.titleBefore} {myNewsLink} {success.titleAfter}
+          {success.bodyBefore} {myNewsLink} {success.bodyAfter}
         </>
       ),
     },
@@ -26,9 +38,10 @@ const getArticleTooltipContent = ({
       body: error.body,
     },
     removed: {
-      title: (
+      title: removed.title,
+      body: (
         <>
-          {removed.titleBefore} {myNewsLink} {removed.titleAfter}
+          {removed.bodyBefore} {myNewsLink} {removed.bodyAfter}
         </>
       ),
     },
