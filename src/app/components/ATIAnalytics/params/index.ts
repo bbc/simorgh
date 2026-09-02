@@ -7,9 +7,11 @@ export default ({
   atiData,
   isSignedIn,
   hashedId,
+  isPersonalisationOn,
 }: ReverbDetailsProviders & {
   isSignedIn?: boolean;
   hashedId?: string | null;
+  isPersonalisationOn?: boolean;
 }) => {
   return buildPageReverbParams({
     atiData,
@@ -17,5 +19,6 @@ export default ({
     serviceContext,
     isSignedIn,
     hashedId,
+    isPersonalisationOn,
   });
 };

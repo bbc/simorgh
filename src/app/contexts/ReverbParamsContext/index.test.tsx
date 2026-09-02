@@ -95,6 +95,7 @@ describe('ReverbParamsContext', () => {
           user: {
             hashedId: null,
             isSignedIn: false,
+            isPersonalisationOn: false,
           },
         },
       },
@@ -146,6 +147,7 @@ describe('ReverbParamsContext', () => {
           user: {
             hashedId: null,
             isSignedIn: false,
+            isPersonalisationOn: false,
           },
         },
       },
@@ -197,6 +199,7 @@ describe('ReverbParamsContext', () => {
           user: {
             hashedId: null,
             isSignedIn: false,
+            isPersonalisationOn: false,
           },
         },
       },
@@ -248,6 +251,7 @@ describe('ReverbParamsContext', () => {
           user: {
             hashedId: null,
             isSignedIn: false,
+            isPersonalisationOn: false,
           },
         },
       },
@@ -303,6 +307,7 @@ describe('ReverbParamsContext', () => {
           user: {
             hashedId: null,
             isSignedIn: false,
+            isPersonalisationOn: false,
           },
         },
       },

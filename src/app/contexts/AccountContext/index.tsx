@@ -16,7 +16,13 @@ import { getIdctaUserOrigin } from '#app/lib/idcta/getIDCTAUserOrigin';
 import useToggle from '#app/hooks/useToggle';
 import isLocal from '#app/lib/utilities/isLocal';
 import { USER_ID_COOKIE_KEY } from '#app/lib/uasApi/uasUtility';
-import { TOKEN_COOKIE_NAME } from '#app/lib/uasApi/tokenRefresh/tokenManager';
+import {
+  TOKEN_COOKIE_NAME,
+  getDecodedToken,
+} from '#app/lib/uasApi/tokenRefresh/tokenManager';
+
+// Claim set by Account in the ckns_id JWT when a signed-in user opts out of personalisation
+const ENABLE_PERSONALISATION_CLAIM = 'ep';
 
 export const AccountContext = createContext<AccountContextProps>(
   {} as AccountContextProps,
@@ -88,6 +94,13 @@ export const AccountProvider = ({
 
   const isPersonalizationEnabled = isPersonalizationAvailable && isSignedIn;
 
+  const decodedIdToken = signedInToken ? getDecodedToken(signedInToken) : null;
+  const hasOptedOutOfPersonalisation =
+    decodedIdToken?.[ENABLE_PERSONALISATION_CLAIM] === false;
+
+  const isPersonalisationOn =
+    isPersonalizationEnabled && !hasOptedOutOfPersonalisation;
+
   const isRefreshAvailable =
     isIdctaAvailable && initialConfig?.availability?.refresh === 'GREEN';
 
@@ -104,6 +117,7 @@ export const AccountProvider = ({
       forYouUrl,
       isPersonalizationAvailable,
       isPersonalizationEnabled,
+      isPersonalisationOn,
     }),
     [
       hashedUserId,
@@ -117,6 +131,7 @@ export const AccountProvider = ({
       signOutUrl,
       isPersonalizationAvailable,
       isPersonalizationEnabled,
+      isPersonalisationOn,
     ],
   );
 
