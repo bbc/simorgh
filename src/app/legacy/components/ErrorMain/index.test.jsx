@@ -31,6 +31,10 @@ describe('ErrorMain', () => {
         service,
       });
       expect(screen.getByText(messaging.title)).toBeInTheDocument();
+      expect(screen.getByText(messaging.message)).toBeInTheDocument();
+      expect(
+        screen.getByRole('link', { name: messaging.callToActionLinkText }),
+      ).toHaveAttribute('href', messaging.callToActionLinkUrl);
     });
   });
 });
