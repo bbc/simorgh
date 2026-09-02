@@ -22,6 +22,7 @@ const Header = ({
   imageWidth,
   mediaCollections,
   showSportData,
+  sportDataTitle,
 }: {
   showLiveLabel: boolean;
   title: string;
@@ -31,6 +32,7 @@ const Header = ({
   imageWidth?: number;
   mediaCollections?: MediaCollection[] | null;
   showSportData?: boolean;
+  sportDataTitle?: string;
 }) => {
   const [isMediaOpen, setLiveMediaOpen] = useState(false);
   const isHeaderImage = !!imageUrl && !!imageUrlTemplate && !!imageWidth;
@@ -69,6 +71,10 @@ const Header = ({
   );
 
   if (showSportData) {
+    const SportTitle = sportDataTitle ? (
+      <div css={styles.sportTitleText}>{sportDataTitle}</div>
+    ) : null;
+
     return (
       <div css={styles.headerContainer}>
         <div css={styles.backgroundContainer}>
@@ -84,16 +90,15 @@ const Header = ({
             tabIndex={-1}
             css={styles.heading}
           >
-            {showLiveLabel ? (
-              <LiveLabelHeader
-                isHeaderImage={isWithImageLayout}
-                showSportData={showSportData}
-              >
-                <VisuallyHiddenText>{title}</VisuallyHiddenText>
-              </LiveLabelHeader>
-            ) : (
-              <VisuallyHiddenText>{title}</VisuallyHiddenText>
-            )}
+            <div css={styles.sportTitleRow}>
+              {showLiveLabel && (
+                <LiveLabelHeader
+                  isHeaderImage={isWithImageLayout}
+                  showSportData={showSportData}
+                />
+              )}
+              {SportTitle}
+            </div>
           </Heading>
           <VisuallyHiddenText as="h2">{matchSummary}</VisuallyHiddenText>
         </div>

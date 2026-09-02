@@ -169,6 +169,36 @@ export default {
         width: '75%',
       },
     }),
+  sportTitleRow: ({ mq, spacings }: Theme) =>
+    css({
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'flex-start',
+      gap: `${spacings.FULL}rem`,
+      position: 'relative',
+      width: '100%',
+      marginTop: `${spacings.DOUBLE}rem`,
+      paddingBlockEnd: `${spacings.FULL}rem`,
+      [mq.GROUP_0_MAX_WIDTH]: {
+        marginTop: `${spacings.FULL}rem`,
+      },
+      '&::after': {
+        content: '""',
+        position: 'absolute',
+        insetBlockEnd: 0,
+        insetInlineStart: '50%',
+        width: `calc(100vw - ${spacings.TRIPLE * 2}rem)`,
+        transform: 'translateX(-50%)',
+        borderBlockEnd: `${pixelsToRem(1)}rem solid #505050`,
+      },
+    }),
+  sportTitleText: ({ palette, spacings }: Theme) =>
+    css({
+      display: 'block',
+      width: '100%',
+      color: palette.GREY_1,
+      paddingInline: `${spacings.DOUBLE}rem`,
+    }),
   description: ({ palette, spacings }: Theme) =>
     css({
       color: palette.GREY_2,

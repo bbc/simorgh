@@ -135,8 +135,11 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
     }
   };
 
-  const { sportDataEvent: sportData, live: isSportDataLive = false } =
-    sportDataEventContent || {};
+  const {
+    sportDataEvent: sportData,
+    live: isSportDataLive = false,
+    title: sportDataTitle,
+  } = sportDataEventContent || {};
   const showSportData = !!sportData && Boolean(sportHeaderEnabled);
 
   const {
@@ -244,6 +247,7 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
           imageWidth={imageWidth}
           mediaCollections={mediaCollections}
           showSportData={showSportData}
+          sportDataTitle={sportDataTitle}
         />
         {showSportData && (
           <HeadToHeadV2

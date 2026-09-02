@@ -817,7 +817,7 @@ describe('Live Page', () => {
       expect(title).toBeInTheDocument();
     });
 
-    it('should render a visually hidden h1 when displaying sportData', async () => {
+    it('should render the sportDataEventContent title visibly when displaying sportData', async () => {
       const pageDataWithSportData = {
         ...mockPageData,
         sportDataEventContent: sportDataFixture.data.sportDataEventContent,
@@ -828,13 +828,35 @@ describe('Live Page', () => {
         render(<Live pageData={pageDataWithSportData} />);
       });
 
-      const visuallyHiddenTitle = screen.getByText(
-        'Israeli tanks shell Jabalia camp as heavy fighting continues in north Gaza', // mock data, in production this would be a sport title
+      const sportTitle = screen.getByText(
+        sportDataFixture.data.sportDataEventContent.title,
       );
-      expect(visuallyHiddenTitle).toBeInTheDocument();
-      expect(visuallyHiddenTitle).toHaveStyle(
+      expect(sportTitle).toBeInTheDocument();
+      expect(sportTitle).not.toHaveStyle(
         'overflow: hidden; position: absolute; width: 1px;',
       );
+      expect(screen.queryByText(mockPageData.title)).not.toBeInTheDocument();
+    });
+
+    it('should not render a sport title when sportDataEventContent has no title', async () => {
+      const pageDataWithSportData = {
+        ...mockPageData,
+        sportDataEventContent: {
+          ...sportDataFixture.data.sportDataEventContent,
+          title: undefined,
+        },
+      } as unknown as ComponentProps['pageData'];
+      mockPollingUpdate(pageDataWithSportData);
+
+      const { container } = await act(async () => {
+        return render(<Live pageData={pageDataWithSportData} />);
+      });
+
+      expect(screen.queryByText(mockPageData.title)).not.toBeInTheDocument();
+      expect(
+        screen.queryByText(sportDataFixture.data.sportDataEventContent.title),
+      ).not.toBeInTheDocument();
+      expect(container.querySelector('h1')).toBeInTheDocument();
     });
 
     it('should not render HeadToHeadV2 when sportDataEventContent is not present', async () => {
