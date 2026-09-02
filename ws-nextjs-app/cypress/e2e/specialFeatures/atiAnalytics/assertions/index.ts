@@ -328,8 +328,16 @@ export const assertResonancePageView = ({
   service,
   path,
   siteId,
+  isServiceEnabled = true,
 }) => {
-  it(`should send a Resonance page view event with service = ${service}, page identifier = ${pageIdentifier}, site ID = ${siteId}, application type = ${applicationType} and content type = ${contentType}`, () => {
+  const sendsResonanceEvents =
+    usesResonance(applicationType) && isServiceEnabled;
+
+  const testDescription = sendsResonanceEvents
+    ? `should send a Resonance page view event with service = ${service}, page identifier = ${pageIdentifier}, producer ID = ${siteId}, application type = ${applicationType} and content type = ${contentType}`
+    : `should not send a Resonance page view event with service = ${service}, application type = ${applicationType}`;
+
+  it(testDescription, () => {
     const resonanceBagBaseUrl = (envs as EnvironmentConfigType).resonanceBagUrl;
     const resonanceBagEventUrl = `${resonanceBagBaseUrl}/v*/event`;
 
@@ -338,8 +346,6 @@ export const assertResonancePageView = ({
     }).as('resonance-page-view');
 
     cy.visit(path, { retryOnStatusCodeFailure: true });
-
-    const sendsResonanceEvents = usesResonance(applicationType);
 
     if (!sendsResonanceEvents) {
       cy.get('body').should('be.visible');
