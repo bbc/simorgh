@@ -13,6 +13,9 @@ The complete production inventory, legacy dependency graph, CAF disposition,
 risks, and validation matrix are maintained in the
 [Image Rendering Audit](./Image-Rendering-Audit.md).
 
+The proposed shared-preparation API and BFF transition boundary are documented
+in the [Image Preparation API Proposal](./Image-Preparation-API-Proposal.mdx).
+
 ## Current state (audit)
 
 `StoryPromo` and `Promo.Image` already render through the shared
@@ -91,9 +94,10 @@ flowchart LR
 
 1. **Audit** — complete. The detailed evidence and agreed decisions are in the
    [Image Rendering Audit](./Image-Rendering-Audit.md).
-2. **Define the shared API** — decide the final shape of the utility/utilities
-   consumers call, and whether `srcSet` derivation should live in `Image`
-   itself or stay as a standalone utility consumed before render.
+2. **Define the shared API** — review and agree the
+   [Image Preparation API Proposal](./Image-Preparation-API-Proposal.mdx).
+   `Image` remains renderer-only; source preparation stays a standalone
+   utility that can transition from iChef inputs to BFF renditions.
 3. **Extract shared utility** — consolidate `createSrcsets` and `getSrcSets`
    behind the agreed API, keeping [srcSet/index.test.js](https://github.com/bbc/simorgh/blob/latest/src/app/lib/utilities/srcSet/index.test.js)
    and [getSrcSets/index.test.ts](https://github.com/bbc/simorgh/blob/latest/src/app/utilities/getSrcSets/index.test.ts)
