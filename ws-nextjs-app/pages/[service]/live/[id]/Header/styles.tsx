@@ -169,7 +169,7 @@ export default {
         width: '75%',
       },
     }),
-  sportTitleRow: ({ mq, spacings }: Theme) =>
+  sportTitleRow: ({ mq, palette, spacings }: Theme) =>
     css({
       display: 'flex',
       flexDirection: 'column',
@@ -190,7 +190,7 @@ export default {
         insetInlineStart: '50%',
         width: `calc(100vw - ${spacings.TRIPLE * 2}rem)`,
         transform: 'translateX(-50%)',
-        borderBlockEnd: `${pixelsToRem(1)}rem solid #505050`,
+        borderBlockEnd: `${pixelsToRem(1)}rem solid ${palette.GREY_6}`,
       },
     }),
   sportTitleText: ({ palette, spacings }: Theme) =>
