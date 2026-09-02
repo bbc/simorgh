@@ -1,6 +1,7 @@
 import { ReverbClient } from '#app/models/types/eventTracking';
 import {
   ReverbBeaconConfig,
+  ResonanceBeaconConfig,
   ReverbEventDetails,
 } from '#app/components/ATIAnalytics/types';
 import onClient from '../../utilities/onClient';
@@ -89,7 +90,25 @@ const callReverb = async (eventDetails: ReverbEventDetails) => {
   );
 };
 
-const sendBeacon = async (reverbBeaconConfig: ReverbBeaconConfig) => {
+const callResonance = (
+  Resonance: typeof import('@bbc/resonance').Resonance,
+  resonanceParams: ResonanceBeaconConfig,
+) => {
+  try {
+    Resonance.initialise(
+      resonanceParams.resonanceProperties,
+      resonanceParams.baseProperties,
+      resonanceParams.pageviewProperties,
+    );
+  } catch (error) {
+    throw new Error(`Error initialising Resonance: ${error}`);
+  }
+};
+
+const sendBeacon = async (
+  reverbBeaconConfig: ReverbBeaconConfig,
+  resonanceBeaconConfig?: ResonanceBeaconConfig | null,
+) => {
   if (onClient()) {
     try {
       const { eventDetails } = reverbBeaconConfig;
@@ -99,6 +118,15 @@ const sendBeacon = async (reverbBeaconConfig: ReverbBeaconConfig) => {
       logger.error(ATI_LOGGING_ERROR, {
         error,
       });
+    }
+
+    if (resonanceBeaconConfig) {
+      try {
+        const { Resonance } = await import('@bbc/resonance');
+        callResonance(Resonance, resonanceBeaconConfig);
+      } catch (error) {
+        logger.error(ATI_LOGGING_ERROR, { error });
+      }
     }
   }
 };

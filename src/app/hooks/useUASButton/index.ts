@@ -1,4 +1,4 @@
-import { use } from 'react';
+import { use, useState } from 'react';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import useUASFetchSaveStatus from '#app/hooks/useUASFetchSaveStatus';
 import useUASMetadataSync from '#app/hooks/useUASMetadataSync';
@@ -15,11 +15,18 @@ enum UASAction {
   REMOVE = 'remove',
 }
 
+export type UASActionResult = {
+  status: 'success' | 'error';
+  action: UASAction;
+} | null;
+
 interface UseUASButtonReturn {
   isSaved: boolean;
   isLoading: boolean;
   isUpdating: boolean;
   error: Error | null;
+  actionResult: UASActionResult;
+  resetActionResult: () => void;
   handleSaveAction: (action: UASAction) => void;
 }
 export interface UseUASButtonProps {
@@ -38,6 +45,9 @@ const useUASButton = ({
   const queryClient = useQueryClient();
   const { isSaved, isLoading, error, savedMetadata } =
     useUASFetchSaveStatus(articleId);
+
+  // Only set by handleSaveAction, never by the background metadata resync.
+  const [actionResult, setActionResult] = useState<UASActionResult>(null);
 
   const mutation = useMutation({
     mutationFn: async (action: UASAction) => {
@@ -83,12 +93,26 @@ const useUASButton = ({
     savedArticleMetadata: savedMetadata,
     onMetadataOutOfDate: handleMetadataOutOfDate,
   });
+
+  const handleSaveAction = (action: UASAction) =>
+    mutation.mutate(action, {
+      onSuccess: () => setActionResult({ status: 'success', action }),
+      onError: () => setActionResult({ status: 'error', action }),
+    });
+
+  const resetActionResult = () => {
+    setActionResult(null);
+    mutation.reset();
+  };
+
   return {
     isSaved,
     isLoading,
     isUpdating: mutation.isPending,
     error: mutation.error || error,
-    handleSaveAction: mutation.mutate,
+    actionResult,
+    resetActionResult,
+    handleSaveAction,
   };
 };
 
