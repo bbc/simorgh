@@ -177,10 +177,11 @@ export default {
       gap: `${spacings.FULL}rem`,
       position: 'relative',
       width: '100%',
-      marginTop: `${spacings.DOUBLE}rem`,
+      marginTop: `${spacings.FULL}rem`,
       paddingBlockEnd: `${spacings.FULL}rem`,
-      [mq.GROUP_0_MAX_WIDTH]: {
-        marginTop: `${spacings.FULL}rem`,
+      [mq.GROUP_1_MIN_WIDTH]: {
+        marginTop: `${spacings.DOUBLE}rem`,
+        paddingBlockEnd: `${spacings.DOUBLE}rem`,
       },
       '&::after': {
         content: '""',
