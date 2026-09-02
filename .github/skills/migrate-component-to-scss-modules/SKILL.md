@@ -118,7 +118,7 @@ Valid scales: `atlas`, `elephant`, `imperial`, `royal`, `foolscap`, `canon`, `tr
 
 ### Grid widths
 
-`gridWidths.scss` is forwarded as `theme.$gridWidths-*` (e.g. `theme.$gridWidths-grid-width-600`).
+`gridWidths.scss` is forwarded as `theme.$gridWidths-*` (e.g. `theme.$gridWidths-grid-width-600`), already in `rem` — use it directly, no conversion needed.
 
 ## Step 3: Convert conditional logic out of JavaScript
 
