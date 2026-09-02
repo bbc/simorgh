@@ -22,12 +22,53 @@ import {
   ATIEventTrackingProps,
   ATIPageTrackingProps,
   ReverbBeaconConfig,
+  ResonanceBeaconConfig,
 } from '../types';
 
 /*
  * For AMP pages, certain browser and device values are determined
  * https://github.com/ampproject/amphtml/blob/master/spec/amp-var-substitutions.md#device-and-browser
  */
+
+const RESONANCE_MODE = { LIVE: 'live', TEST: 'test' } as const;
+
+export const buildResonanceAnalyticsModel = ({
+  appName,
+  contentId,
+  contentType,
+  language,
+  statsDestination,
+  destinationSiteId,
+  hashedId,
+  pageIdentifier,
+  producerName,
+  platform,
+}: ATIPageTrackingProps): ResonanceBeaconConfig => {
+  const env = getEnvConfig().SIMORGH_APP_ENV;
+
+  return {
+    resonanceProperties: {
+      mode: env === 'live' ? RESONANCE_MODE.LIVE : RESONANCE_MODE.TEST,
+    },
+    baseProperties: {
+      app: {
+        name: platform === 'app' ? `${appName}-app` : appName,
+      },
+      destination: statsDestination,
+      hashedUserId: hashedId ?? undefined,
+      pageName: pageIdentifier,
+      producer: producerName,
+      siteId: destinationSiteId,
+    },
+    pageviewProperties: {
+      contentId,
+      contentType,
+      language,
+      destination: statsDestination,
+      producer: producerName,
+    },
+  } as ResonanceBeaconConfig;
+};
 
 export const buildReverbAnalyticsModel = ({
   appName,

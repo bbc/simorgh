@@ -1,5 +1,6 @@
 /* eslint-disable no-console */
 import { use } from 'react';
+import { ResonanceBeaconConfig } from '#app/components/ATIAnalytics/types';
 import {
   render,
   screen,
@@ -11,6 +12,7 @@ import {
 } from '../../routes/utils/pageTypes';
 import { ReverbParamsContext, PageMetadata } from '.';
 import * as useOptimizelyVariation from '../../hooks/useOptimizelyVariation';
+import * as buildAnalyticsParamsModule from '../../components/ATIAnalytics/params';
 
 const pageMetadata = {
   atiAnalytics: {
@@ -99,6 +101,7 @@ describe('ReverbParamsContext', () => {
           },
         },
       },
+      resonanceParams: null,
     });
   });
 
@@ -151,6 +154,7 @@ describe('ReverbParamsContext', () => {
           },
         },
       },
+      resonanceParams: null,
     });
   });
 
@@ -203,6 +207,7 @@ describe('ReverbParamsContext', () => {
           },
         },
       },
+      resonanceParams: null,
     });
   });
 
@@ -255,6 +260,7 @@ describe('ReverbParamsContext', () => {
           },
         },
       },
+      resonanceParams: null,
     });
   });
 
@@ -311,11 +317,54 @@ describe('ReverbParamsContext', () => {
           },
         },
       },
+      resonanceParams: null,
       experimentProps: {
         experimentName: 'test_page_views_aa_3',
         experimentVariant: 'experimentVariant',
         sendOptimizelyEvents: true,
       },
     });
+  });
+
+  it('should provide resonanceParams to child components when resonanceEnabled is enabled', () => {
+    const mockResonanceParams = {
+      resonanceProperties: { mode: 'test' },
+      baseProperties: {
+        app: { name: 'news-pidgin' },
+        destination: 'WS_NEWS_LANGUAGES_TEST',
+        pageName: 'news::pidgin.news.story.51745682.page',
+        producer: 'PIDGIN',
+        siteId: 598343,
+      },
+      pageviewProperties: {
+        contentId:
+          'urn:bbc:cps:curie:asset:53870d86-88c5-6f4d-a260-f97c68606458',
+        contentType: 'article',
+        language: 'pcm',
+        destination: 'WS_NEWS_LANGUAGES_TEST',
+        producer: 'PIDGIN',
+      },
+    } as unknown as ResonanceBeaconConfig;
+
+    jest.spyOn(buildAnalyticsParamsModule, 'default').mockReturnValue({
+      reverbParams: {
+        params: {
+          page: { name: 'news::pidgin.news.story.51745682.page' },
+          user: { isSignedIn: false },
+        },
+        eventDetails: { eventName: 'pageView' },
+      },
+      resonanceParams: mockResonanceParams,
+    });
+
+    render(<TestComponent />, {
+      pageMetadata,
+      service: 'pidgin',
+    });
+
+    const testEl = screen.getByTestId('test-component');
+    const contextValue = JSON.parse(testEl.textContent as string);
+
+    expect(contextValue.resonanceParams).toEqual(mockResonanceParams);
   });
 });
