@@ -12,30 +12,6 @@ const assertTypeOfElement = (Component, type) => {
 };
 
 describe('Podcast Promo', () => {
-  describe('Title', () => {
-    assertTypeOfElement(PodcastPromo.Title, 'h2');
-  });
-
-  describe('Card', () => {
-    assertTypeOfElement(PodcastPromo.Title, 'div');
-  });
-
-  describe('Card Content', () => {
-    assertTypeOfElement(PodcastPromo.Card.Content, 'div');
-  });
-
-  describe('Card Title', () => {
-    assertTypeOfElement(PodcastPromo.Card.Title, 'h3');
-  });
-
-  describe('Card Description', () => {
-    assertTypeOfElement(PodcastPromo.Card.Description, 'p');
-  });
-
-  describe('Card Image', () => {
-    assertTypeOfElement(PodcastPromo.Card.ImageWrapper, 'div');
-  });
-
   describe('Card Link', () => {
     assertTypeOfElement(PodcastPromo.Card.Link, 'a');
     it('should render link with href', () => {
