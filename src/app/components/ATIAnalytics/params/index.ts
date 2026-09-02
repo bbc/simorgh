@@ -1,4 +1,4 @@
-import { buildPageReverbParams } from './buildParams';
+import { buildAnalyticsParams } from './buildParams';
 import { ReverbDetailsProviders } from '../types';
 
 export default ({
@@ -10,12 +10,11 @@ export default ({
 }: ReverbDetailsProviders & {
   isSignedIn?: boolean;
   hashedId?: string | null;
-}) => {
-  return buildPageReverbParams({
+}) =>
+  buildAnalyticsParams({
     atiData,
     requestContext,
     serviceContext,
     isSignedIn,
     hashedId,
   });
-};
