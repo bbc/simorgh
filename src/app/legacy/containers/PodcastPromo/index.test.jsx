@@ -41,30 +41,37 @@ describe('Inline', () => {
   const electionsIconPathSnippet = 'M18.1,7.2v2.6h8.7';
 
   it('Should render a promo for podcasts correctly', () => {
-    const { getByRole } = render(
+    const { getByRole, container } = render(
       <PromoWithContext inline config={burmeseServiceConfig} />,
       {
         service: 'burmese',
       },
     );
     expect(getByRole('region')).toBeInTheDocument();
+    expect(container.querySelector('a[href*="p02pc9lh"]')).toBeInTheDocument();
   });
 
   it('Should render a promo for whatsapp correctly', () => {
-    const { getByRole } = render(<PromoWithContext inline />, {
+    const { getByRole, container } = render(<PromoWithContext inline />, {
       service: 'russian',
     });
     expect(getByRole('region')).toBeInTheDocument();
+    expect(
+      container.querySelector('a[href*="whatsapp.com"]'),
+    ).toBeInTheDocument();
   });
 
   it('Should render a promo for youtube correctly', () => {
-    const { getByRole } = render(
+    const { getByRole, container } = render(
       <PromoWithContext inline config={amharicServiceConfig} />,
       {
         service: 'amharic',
       },
     );
     expect(getByRole('region')).toBeInTheDocument();
+    expect(
+      container.querySelector('a[href*="youtube.com"]'),
+    ).toBeInTheDocument();
   });
   it('Should render a generic promo for other socials correctly', () => {
     const genericPromoConfig = {
