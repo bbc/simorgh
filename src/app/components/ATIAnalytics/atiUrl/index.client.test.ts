@@ -1,6 +1,10 @@
 import { Platforms } from '#app/models/types/global';
 import * as genericLabelHelpers from '../../../lib/analyticsUtils';
-import { buildReverbAnalyticsModel, buildReverbEventModel } from '.';
+import {
+  buildActivationEventModel,
+  buildReverbAnalyticsModel,
+  buildReverbEventModel,
+} from '.';
 
 const mockAndSet = ({ name, source }, response) => {
   source[name] = jest.fn(); // eslint-disable-line no-param-reassign
@@ -16,18 +20,18 @@ const analyticsUtilFunctions = [
 ];
 
 describe('atiUrl', () => {
+  beforeEach(() => {
+    analyticsUtilFunctions.forEach(func => {
+      mockAndSet(func, func.name);
+    });
+  });
+
   afterEach(() => {
     jest.clearAllMocks();
   });
 
   describe('Reverb', () => {
     describe('buildReverbAnalyticsModel', () => {
-      beforeEach(() => {
-        analyticsUtilFunctions.forEach(func => {
-          mockAndSet(func, func.name);
-        });
-      });
-
       const input = {
         appName: 'news',
         campaigns: [
@@ -400,6 +404,77 @@ describe('atiUrl', () => {
               engine_id: ['optimizely.dummy_experiment.variant_1'],
             },
           });
+        });
+      });
+    });
+
+    describe('buildActivationEventModel', () => {
+      const input = {
+        pageIdentifier: 'mundo.page',
+        platform: 'canonical' as unknown as Platforms,
+        appName: 'news-mundo',
+        producerName: 'MUNDO',
+        statsDestination: 'statsDestination',
+        experimentName: 'dummy_experiment',
+        experimentVariant: 'variant_1',
+        isSignedIn: false,
+        hashedId: null,
+      };
+
+      it('should return the correct Reverb page section activation event model', () => {
+        const reverbExperimentActivationEventModel =
+          buildActivationEventModel(input);
+
+        const experimentActivationEventParams = {
+          destination: 'statsDestination',
+          name: 'mundo.page',
+          producer: 'MUNDO',
+          additionalProperties: {
+            type: 'AT',
+            app_name: 'news-mundo',
+            app_type: 'getAppType',
+          },
+        };
+
+        expect(reverbExperimentActivationEventModel.params.page).toEqual(
+          experimentActivationEventParams,
+        );
+      });
+
+      it('should return the correct Reverb user object configuration', () => {
+        const reverbExperimentActivationEventModel = buildActivationEventModel({
+          ...input,
+          isSignedIn: true,
+          hashedId: 'hashed-id',
+        });
+
+        expect(reverbExperimentActivationEventModel.params.user).toEqual({
+          isSignedIn: true,
+          hashedId: 'hashed-id',
+        });
+      });
+
+      it('should return the correct Reverb event details configuration', () => {
+        const reverbExperimentActivationEventModel =
+          buildActivationEventModel(input);
+
+        expect(reverbExperimentActivationEventModel.eventDetails).toEqual({
+          eventName: 'activation',
+          eventPublisher: 'viewability',
+          event: {
+            category: 'viewability',
+            action: 'serve',
+            interaction_type: 'optimizely_activation',
+            spec_id: '829257ce-28c6-4bbd-8e87-bdacba05de82',
+            spec_version: '1.0.1',
+          },
+          group: {
+            type: 'experiment',
+            name: 'optimizely',
+          },
+          experience: {
+            engine_id: ['optimizely.dummy_experiment.variant_1'],
+          },
         });
       });
     });
