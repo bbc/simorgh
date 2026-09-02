@@ -330,5 +330,29 @@ describe('sendBeacon', () => {
 
       expect(reverbMock.viewEvent).toHaveBeenCalledTimes(1);
     });
+
+    it('should call Reverb before Resonance.initialise', async () => {
+      const callOrder: string[] = [];
+
+      const orderedReverbMock = {
+        ...reverbMock,
+        viewEvent: jest.fn(async () => {
+          callOrder.push('reverb');
+        }),
+      };
+
+      (Resonance.initialise as jest.Mock).mockImplementationOnce(() => {
+        callOrder.push('resonance');
+      });
+
+      // eslint-disable-next-line no-underscore-dangle
+      window.__reverb = {
+        __reverbLoadedPromise: Promise.resolve(orderedReverbMock),
+      };
+
+      await sendBeacon(reverbConfig, resonanceConfig);
+
+      expect(callOrder).toEqual(['reverb', 'resonance']);
+    });
   });
 });

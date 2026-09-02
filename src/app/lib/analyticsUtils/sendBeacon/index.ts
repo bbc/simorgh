@@ -113,20 +113,20 @@ const sendBeacon = async (
     try {
       const { eventDetails } = reverbBeaconConfig;
 
-      if (resonanceBeaconConfig) {
-        try {
-          const { Resonance } = await import('@bbc/resonance');
-          callResonance(Resonance, resonanceBeaconConfig);
-        } catch (error) {
-          logger.error(ATI_LOGGING_ERROR, { error });
-        }
-      }
-
       await callReverb(eventDetails);
     } catch (error) {
       logger.error(ATI_LOGGING_ERROR, {
         error,
       });
+    }
+
+    if (resonanceBeaconConfig) {
+      try {
+        const { Resonance } = await import('@bbc/resonance');
+        callResonance(Resonance, resonanceBeaconConfig);
+      } catch (error) {
+        logger.error(ATI_LOGGING_ERROR, { error });
+      }
     }
   }
 };
