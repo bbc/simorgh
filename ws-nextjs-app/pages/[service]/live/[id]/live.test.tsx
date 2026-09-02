@@ -838,7 +838,7 @@ describe('Live Page', () => {
       expect(screen.queryByText(mockPageData.title)).not.toBeInTheDocument();
     });
 
-    it('should not render a sport title when sportDataEventContent has no title', async () => {
+    it('should fall back to a visually hidden page title when sportDataEventContent has no title', async () => {
       const pageDataWithSportData = {
         ...mockPageData,
         sportDataEventContent: {
@@ -848,15 +848,12 @@ describe('Live Page', () => {
       } as unknown as ComponentProps['pageData'];
       mockPollingUpdate(pageDataWithSportData);
 
-      const { container } = await act(async () => {
-        return render(<Live pageData={pageDataWithSportData} />);
+      await act(async () => {
+        render(<Live pageData={pageDataWithSportData} />);
       });
-
-      expect(screen.queryByText(mockPageData.title)).not.toBeInTheDocument();
-      expect(
-        screen.queryByText(sportDataFixture.data.sportDataEventContent.title),
-      ).not.toBeInTheDocument();
-      expect(container.querySelector('h1')).toBeInTheDocument();
+      expect(screen.getByText(mockPageData.title)).toHaveStyle(
+        'overflow: hidden; position: absolute; width: 1px;',
+      );
     });
 
     it('should not render HeadToHeadV2 when sportDataEventContent is not present', async () => {
