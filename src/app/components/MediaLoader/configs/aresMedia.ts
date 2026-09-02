@@ -29,6 +29,7 @@ export default ({
   showAdsBasedOnLocation = false,
   embedded,
   lang,
+  holdingImageURL: holdingImageURLOverride,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
   const { model: aresMedia }: AresMediaBlock =
     filterForBlockType(blocks, 'aresMedia') ?? {};
@@ -87,13 +88,15 @@ export default ({
   // Referred to as 'clip PID', 'episode PID' or 'parent PID'
   const parentPID = aresMediaMetadata?.id;
 
-  const holdingImageURL = rawImage
-    ? buildIChefURL({
-        originCode,
-        locator,
-        resolution: DEFAULT_WIDTH,
-      })
-    : aresMediaMetadata?.imageUrl;
+  const holdingImageURL =
+    holdingImageURLOverride?.replace('{width}', String(DEFAULT_WIDTH)) ||
+    (rawImage
+      ? buildIChefURL({
+          originCode,
+          locator,
+          resolution: DEFAULT_WIDTH,
+        })
+      : aresMediaMetadata?.imageUrl);
 
   const isLive = aresMediaMetadata?.live ?? false;
 
@@ -116,8 +119,10 @@ export default ({
     guidanceMessage,
     holdingImageURL,
     translations,
-    placeholderImageOriginCode: originCode,
-    placeholderImageLocator: locator,
+    placeholderImageOriginCode: holdingImageURLOverride
+      ? undefined
+      : originCode,
+    placeholderImageLocator: holdingImageURLOverride ? undefined : locator,
   });
 
   const ampIframeUrl = getAmpIframeUrl({ id, parentPID, versionPID, lang });

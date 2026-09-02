@@ -1,0 +1,685 @@
+{
+  "data": {
+    "article": {
+      "metadata": {
+        "atiAnalytics": {
+          "categoryName": null,
+          "contentId": "urn:bbc:optimo:asset:cw3xlkprxv82o",
+          "contentType": "article-sfv",
+          "language": "ta",
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "nationsProducer": null,
+          "pageIdentifier": "tamil.listen.cw3xlkprxv82o.page",
+          "pageTitle": "Sound Effect",
+          "timePublished": "2026-08-12T12:33:08.756Z",
+          "timeUpdated": "2026-08-12T12:33:08.756Z",
+          "readTimeMilliseconds": 60000
+        },
+        "id": "urn:bbc:ares::article:cw3xlkprxv82o",
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:cw3xlkprxv82o",
+          "canonicalUrl": "https://www.bbc.com/tamil/listen/cw3xlkprxv82o"
+        },
+        "type": "article",
+        "createdBy": "Tamil",
+        "language": "ta",
+        "firstPublished": 1786537988756,
+        "lastPublished": 1786537988756,
+        "isOppm": false,
+        "options": { "includeComments": false },
+        "analyticsLabels": {
+          "contentId": "urn:bbc:optimo:asset:cw3xlkprxv82o",
+          "producer": "Tamil",
+          "page": "tamil.listen.cw3xlkprxv82o.page",
+          "irisKeyword": null
+        },
+        "passport": {
+          "language": "ta",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Tamil",
+          "taggings": [
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+              "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+              "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+              "value": "http://www.bbc.co.uk/things/fe1fbc8a-bb44-4bf8-8b12-52e58c6345a4#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/dateFirstReleased",
+              "value": "2026-08-12T12:33:08.756Z"
+            }
+          ],
+          "predicates": {
+            "infoClass": [
+              {
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                "type": "infoClass"
+              }
+            ],
+            "assetType": [
+              {
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                "type": "assetType"
+              }
+            ],
+            "primaryMediaType": [
+              {
+                "value": "http://www.bbc.co.uk/things/fe1fbc8a-bb44-4bf8-8b12-52e58c6345a4#id",
+                "type": "primaryMediaType"
+              }
+            ],
+            "dateFirstReleased": [
+              {
+                "value": "2026-08-12T12:33:08.756Z",
+                "type": "dateFirstReleased"
+              }
+            ]
+          }
+        },
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "audio",
+          "caption",
+          "aresMedia",
+          "aresMediaMetadata",
+          "image",
+          "rawImage",
+          "altText"
+        ],
+        "includeComments": false,
+        "consumableAsSFV": true,
+        "allowAdvertising": true,
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false,
+        "useSensitiveOnwardJourneys": false,
+        "stats": { "readTime": 1, "wordCount": 12 },
+        "isTransliterated": false,
+        "isKeyPointsFormatAsset": false
+      },
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "06a02737",
+              "type": "visuallyHiddenHeadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "8fd7d1d4",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "4a610756",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "Tamil - Listen - Test Audio For Optimo",
+                            "blocks": [
+                              {
+                                "id": "658456f7",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Tamil - Listen - Test Audio For Optimo",
+                                  "attributes": []
+                                },
+                                "position": [1, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [1, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [1, 1]
+                  }
+                ]
+              },
+              "position": [1]
+            },
+            {
+              "id": "54acb777",
+              "type": "audio",
+              "model": {
+                "locator": "urn:bbc:pips:pid:p01w99jg",
+                "blocks": [
+                  {
+                    "id": "ece99802",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "41eb36c1",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "f97f782f",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Test Audio For Optimo",
+                                  "blocks": [
+                                    {
+                                      "id": "6af148ac",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Test Audio For Optimo",
+                                        "attributes": []
+                                      },
+                                      "position": [2, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [2, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [2, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [2, 1]
+                  },
+                  {
+                    "id": "aaf58ed4",
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "3a01e67b",
+                          "blockId": "urn:bbc:ares::clip:p01w99jg",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "p01w99jg",
+                            "subType": "clip",
+                            "format": "audio",
+                            "title": "Test Audio For Optimo",
+                            "synopses": { "short": "Sound Effect" },
+                            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01vkjg8.png",
+                            "embedding": true,
+                            "advertising": false,
+                            "versions": [
+                              {
+                                "versionId": "p01w99jj",
+                                "types": ["Original"],
+                                "duration": 3,
+                                "durationISO8601": "PT3S",
+                                "warnings": {},
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableFrom": 1727951011000
+                              }
+                            ],
+                            "syndication": { "destinations": [] },
+                            "smpKind": "radioProgramme",
+                            "webcastVersions": []
+                          },
+                          "position": [2, 2, 1]
+                        },
+                        {
+                          "id": "8d6ef0c6",
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "6bff6589",
+                                "type": "rawImage",
+                                "model": {
+                                  "width": 1920,
+                                  "height": 1080,
+                                  "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01vkjg8.png",
+                                  "originCode": "mpv"
+                                },
+                                "position": [2, 2, 2, 1]
+                              },
+                              {
+                                "id": "9ef83c5a",
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "6fd6a5c6",
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "id": "919dfd41",
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "BBC flat logo 2023 default image",
+                                              "blocks": [
+                                                {
+                                                  "id": "bd220dde",
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "BBC flat logo 2023 default image",
+                                                    "attributes": []
+                                                  },
+                                                  "position": [
+                                                    2, 2, 2, 2, 1, 1, 1
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            "position": [2, 2, 2, 2, 1, 1]
+                                          }
+                                        ]
+                                      },
+                                      "position": [2, 2, 2, 2, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [2, 2, 2, 2]
+                              }
+                            ]
+                          },
+                          "position": [2, 2, 2]
+                        }
+                      ]
+                    },
+                    "position": [2, 2]
+                  }
+                ]
+              },
+              "position": [2]
+            },
+            {
+              "id": "1357ea6b",
+              "type": "fauxHeadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "8655c96e",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "ff003c45",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "Tamil - Listen - Test Audio For Optimo",
+                            "blocks": [
+                              {
+                                "id": "6edb537c",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Tamil - Listen - Test Audio For Optimo",
+                                  "attributes": []
+                                },
+                                "position": [3, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [3, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [3, 1]
+                  }
+                ]
+              },
+              "position": [3]
+            },
+            {
+              "id": "48c73e11",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1786537988756,
+                "lastPublished": 1786537988756
+              },
+              "position": [4]
+            }
+          ]
+        }
+      },
+      "promo": {
+        "headlines": {
+          "seoHeadline": "Sound Effect",
+          "promoHeadline": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Tamil - Listen - Test Audio For Optimo",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Tamil - Listen - Test Audio For Optimo",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "images": {
+          "defaultPromoImage": {
+            "blocks": [
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 1920,
+                  "height": 1080,
+                  "locator": "p01vkjg8.png",
+                  "originCode": "mpv"
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "BBC flat logo 2023 default image",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "BBC flat logo 2023 default image",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "summary": {
+          "blocks": [
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": { "text": "", "attributes": [] }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "serviceIdentifier": "Tamil",
+        "consumableAsSFV": true,
+        "media": {
+          "blocks": [
+            {
+              "type": "audio",
+              "model": {
+                "locator": "urn:bbc:pips:pid:p01w99jg",
+                "blocks": [
+                  {
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Test Audio For Optimo",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Test Audio For Optimo",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "blockId": "urn:bbc:ares::clip:p01w99jg",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "p01w99jg",
+                            "subType": "clip",
+                            "format": "audio",
+                            "title": "Test Audio For Optimo",
+                            "synopses": { "short": "Sound Effect" },
+                            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01vkjg8.png",
+                            "embedding": true,
+                            "advertising": false,
+                            "versions": [
+                              {
+                                "versionId": "p01w99jj",
+                                "types": ["Original"],
+                                "duration": 3,
+                                "durationISO8601": "PT3S",
+                                "warnings": {},
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableFrom": 1727951011000
+                              }
+                            ],
+                            "syndication": { "destinations": [] },
+                            "smpKind": "radioProgramme",
+                            "webcastVersions": []
+                          }
+                        },
+                        {
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "rawImage",
+                                "model": {
+                                  "width": 1920,
+                                  "height": 1080,
+                                  "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01vkjg8.png",
+                                  "originCode": "mpv"
+                                }
+                              },
+                              {
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "BBC flat logo 2023 default image",
+                                              "blocks": [
+                                                {
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "BBC flat logo 2023 default image",
+                                                    "attributes": []
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "latestMedia": null,
+      "portraitVideoItems": null,
+      "countryCuration": null,
+      "videoCuration": null,
+      "countryTopicIdToReorder": null
+    }
+  },
+  "contentType": "application/json; charset=utf-8",
+  "debug": {
+    "context": {
+      "runtimeContext": {
+        "lambdaBootstrapVersion": "5.8.0",
+        "runtimeVersion": "6.8.0",
+        "standardLibraryVersion": "6.8.0",
+        "moduleName": "simorgh-bff",
+        "moduleVersion": "0.0.2",
+        "sourceUrl": "https://github.com/bbc/fabl-modules/tree/e42c8266b3f9a038e107e84800b0a9dae1f89946/modules/application/simorgh-bff",
+        "cosmosReleaseUrl": "https://cosmos.tools.bbc.co.uk/lambdas/fabl-module-simorgh-bff/releases/670",
+        "buildTime": "2026-08-20T14:36:56.786Z",
+        "moduleType": "reads",
+        "traceId": "Root=1-6a8f0a55-5e0ad4416bf228a2fc4af769;Parent=be93f298897ad9a2;Sampled=1;Lineage=1:2829b227:0",
+        "moduleEnvironment": "production",
+        "personalisedRequest": "false",
+        "environment": "live",
+        "nodeJSVersion": "v22.23.2"
+      },
+      "systemContext": {
+        "service-env": "test",
+        "debug": "1",
+        "call-stack": "simorgh-bff",
+        "sandboxEnabled": true,
+        "logAllDebug": false,
+        "normaliseRequest": true
+      }
+    },
+    "serviceRequests": [
+      {
+        "response": {
+          "headers": {
+            "date": "Wed, 26 Aug 2026 15:46:29 GMT",
+            "content-type": "application/json;charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "etag": "\"af75864d85b770059dc5cb482078dfcefc881cb0\"",
+            "last-modified": "Wed, 12 Aug 2026 12:33:13 GMT",
+            "cache-control": "no-transform,max-age=60",
+            "x-ares-tracking-id": "4cefc4fa-bb0a-4f06-a06b-e4302610624b",
+            "expires": "Wed, 26 Aug 2026 14:45:55 GMT",
+            "content-encoding": "gzip",
+            "x-shared-cache": "HIT",
+            "x-local-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 3
+        },
+        "request": {
+          "service": "ares",
+          "path": "/article/cw3xlkprxv82o",
+          "timeout": 3000,
+          "url": "https://service-gateway.fabl.api.bbci.co.uk/service/ares/path/%2Farticle%2Fcw3xlkprxv82o"
+        }
+      }
+    ],
+    "moduleRequests": [
+      {
+        "response": {
+          "headers": {
+            "date": "Wed, 26 Aug 2026 15:46:30 GMT",
+            "content-type": "application/json; charset=utf-8",
+            "content-length": "112",
+            "connection": "keep-alive",
+            "x-shared-cache": "MISS",
+            "vary": "Accept-Encoding, ctx-service-env, ctx-debug, ctx-unwrapped",
+            "cache-control": "max-age=5",
+            "expires": "Wed, 26 Aug 2026 15:46:35 GMT",
+            "x-local-cache": "MISS"
+          },
+          "responseCode": 400,
+          "responseTime": 25
+        },
+        "request": {
+          "module": "content-summaries",
+          "params": { "urn": "urn:bbc:vivo:curation:undefined" },
+          "timeout": 3000,
+          "url": "https://fabl.api.bbci.co.uk/module/content-summaries?urn=urn%3Abbc%3Avivo%3Acuration%3Aundefined"
+        }
+      }
+    ],
+    "tenantLogs": [
+      {
+        "timestamp": 1787759190014,
+        "message": "Bad Request (HTTP Status 400). Module: content-summaries; Parameters: {\"urn\":\"urn:bbc:vivo:curation:undefined\"}",
+        "code": "error_120"
+      },
+      {
+        "timestamp": 1787759190014,
+        "message": "fetchTopicCuration [video]: service=tamil topicId=null",
+        "code": "DEBUG"
+      }
+    ],
+    "privateContext": {},
+    "sandboxViolations": [],
+    "nonFatalErrors": [],
+    "params": {
+      "service": "tamil",
+      "pageType": "article",
+      "id": "cw3xlkprxv82o"
+    }
+  }
+}

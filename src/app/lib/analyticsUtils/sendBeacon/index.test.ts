@@ -153,6 +153,60 @@ describe('sendBeacon', () => {
       );
     });
 
+    it('should call Reverb userActionEvent with activation fields for an activation event', async () => {
+      const reverbActivationConfig = {
+        params: {
+          page: 'page',
+          user: '1234-5678',
+        },
+        eventDetails: {
+          eventName: 'activation',
+          eventPublisher: 'viewability',
+          event: {
+            category: 'viewability',
+            action: 'serve',
+            interaction_type: 'optimizely_activation',
+            spec_id: '829257ce-28c6-4bbd-8e87-bdacba05de82',
+            spec_version: '1.0.1',
+          },
+          group: {
+            type: 'experiment',
+            name: 'optimizely',
+          },
+          experience: {
+            engine_id: ['foo.bar'],
+          },
+        },
+      } as unknown as ReverbBeaconConfig;
+
+      await sendBeacon(reverbActivationConfig);
+
+      expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
+      expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
+        'viewability',
+        '',
+        {
+          event: {
+            category: 'viewability',
+            action: 'serve',
+            interaction_type: 'optimizely_activation',
+            spec_id: '829257ce-28c6-4bbd-8e87-bdacba05de82',
+            spec_version: '1.0.1',
+          },
+          group: {
+            type: 'experiment',
+            name: 'optimizely',
+          },
+          experience: {
+            engine_id: ['foo.bar'],
+          },
+        },
+        undefined,
+        undefined,
+        undefined,
+      );
+    });
+
     it(`should not call Reverb when not on client`, async () => {
       isOnClient = false;
 
