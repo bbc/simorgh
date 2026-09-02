@@ -1,0 +1,222 @@
+# Image Preparation API Proposal
+
+## Status
+
+Proposed for team agreement before implementation. This proposal keeps the
+existing [`Image`](../src/app/components/Image/index.tsx) public API and
+renderer behaviour unchanged. It introduces a shared preparation utility that
+normalises source data into the props that `Image` already accepts.
+
+## Decision summary
+
+- Keep `Image` renderer-only. It must not parse iChef templates, identify image
+  services, append extensions, or choose image renditions.
+- Introduce `prepareImage` as the single client-side preparation entry point.
+- Support explicit source strategies for iChef, Programme recipes, direct/SVG
+  assets, and future BFF-provided renditions.
+- Keep layout decisions in each consumer: `sizes`, candidate width policy,
+  aspect ratio, crop/portrait treatment, placeholder, lazy loading, preload,
+  and fetch priority.
+- Treat BFF-provided prepared renditions as the target input. Legacy iChef
+  preparation is a temporary adapter behind the same API.
+
+## Current behaviour to preserve
+
+| Current helper        | Source                                                        | Behaviour to retain                                                                     | Limitation addressed by the proposal                                        |
+| --------------------- | ------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `createSrcsets`       | [`srcSet`](../src/app/lib/utilities/srcSet/index.js)          | iChef resolution ladder, MIME detection, JPEG fallback, and `pips` source-set omission. | Requires callers to parse and pass iChef `originCode` and `locator`.        |
+| `getSrcSets`          | [`getSrcSets`](../src/app/utilities/getSrcSets/index.ts)      | Small/large 1x and 2x candidates plus breakpoint `sizes`.                               | Accepts only `{width}` templates and does not supply MIME or fallback data. |
+| `Promo.Image` helpers | [`Promo.Image`](../src/app/legacy/components/Promo/image.jsx) | Different standard/Programme ladders and layout-specific sizes.                         | Duplicates candidate and extension logic in a legacy component.             |
+| iChef URL builder     | [`ichefURL`](../src/app/lib/utilities/ichefURL/index.js)      | Environment base URL, supported WebP rules, `mpv`/`pips` placeholder handling.          | Its service-specific rules are exposed throughout client consumers.         |
+
+## Ownership boundaries
+
+| Concern                                                                                                              | Owner                                            | Rationale                                                                        |
+| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------------------------------------------------------------------- |
+| `<img>`, `<picture>`, AMP, Lite, placeholder lifecycle, native loading, preload markup, and aspect-ratio rendering   | [`Image`](../src/app/components/Image/index.tsx) | Browser and renderer behaviour is shared and its existing API is stable.         |
+| iChef URL construction, supported extension rules, and `mpv`/`pips` exceptions                                       | iChef adapter inside `prepareImage`              | These are source-service concerns, not rendering concerns.                       |
+| Candidate URL construction, source-set assembly, MIME types, and fallback sets                                       | `prepareImage` strategy adapters                 | Gives all consumers a consistent prepared-output contract.                       |
+| `sizes`, desired candidate widths, crop, aspect ratio, placeholder setting, lazy/preload setting, and fetch priority | Consumer/layout                                  | These depend on viewport placement and visual design.                            |
+| Image metadata and, eventually, rendition URLs/formats                                                               | Simorgh BFF                                      | The BFF can own delivery/source policy without changing layout or renderer code. |
+
+## Proposed contracts
+
+### Output contract
+
+`prepareImage` returns only existing `Image` data props. A consumer spreads the
+result into `Image` and continues to supply its own rendering/layout props.
+
+```ts
+type PreparedImage = {
+  src: string;
+  srcSet?: string;
+  fallbackSrcSet?: string;
+  mediaType?: string;
+  fallbackMediaType?: string;
+  sizes?: string;
+};
+```
+
+### Source contract
+
+The source is a discriminated union. It prevents a component from assuming that
+all image sources are iChef `{width}` templates.
+
+```ts
+type ImageSource =
+  | {
+      type: 'ichef';
+      originCode: string;
+      locator: string;
+      originalWidth: number;
+      subdomain?: string;
+    }
+  | {
+      type: 'ichefTemplate';
+      urlTemplate: string;
+    }
+  | {
+      type: 'programmeRecipe';
+      urlTemplate: string;
+    }
+  | {
+      type: 'direct';
+      src: string;
+      srcSet?: string;
+      fallbackSrcSet?: string;
+      mediaType?: string;
+      fallbackMediaType?: string;
+    }
+  | {
+      type: 'bffRenditions';
+      src: string;
+      srcSet?: string;
+      fallbackSrcSet?: string;
+      mediaType?: string;
+      fallbackMediaType?: string;
+    };
+```
+
+`direct` covers simple images and SVGs. It must preserve the supplied URL and
+must not append `.webp`, infer an iChef recipe, or manufacture a fallback.
+`bffRenditions` deliberately has the same output fields: after the BFF provides
+prepared data, it bypasses client iChef logic but does not require consumer or
+`Image` API changes.
+
+### Strategy contract
+
+```ts
+type ImageStrategy =
+  | {
+      type: 'resolutionLadder';
+      resolutions?: number[];
+      sizes: string;
+    }
+  | {
+      type: 'breakpoint2x';
+      smallWidth: number;
+      largeWidth: number;
+      sizes: string;
+    }
+  | {
+      type: 'programmeRecipe';
+      resolutions: number[];
+      sizes: string;
+      createFallback?: boolean;
+    }
+  | { type: 'passthrough' };
+
+declare function prepareImage(
+  source: ImageSource,
+  strategy: ImageStrategy,
+): PreparedImage | null;
+```
+
+`resolutionLadder` is the replacement boundary for `createSrcsets`.
+`breakpoint2x` is the replacement boundary for `getSrcSets`; the consumer
+calculates its layout-specific `sizes` from the theme before calling it.
+`programmeRecipe` preserves Programme `$recipe` URL handling and its different
+candidate ladder. `passthrough` supports BFF renditions and direct images.
+
+## Usage examples
+
+An iChef CMS image retains a layout-owned sizes value:
+
+```tsx
+const preparedImage = prepareImage(
+  { type: 'ichef', originCode, locator, originalWidth: width },
+  {
+    type: 'resolutionLadder',
+    resolutions: [240, 320, 480, 624, 800],
+    sizes: '(min-width: 1008px) 660px, 100vw',
+  },
+);
+
+<Image
+  alt={alt}
+  width={width}
+  height={height}
+  lazyLoad={lazyLoad}
+  {...preparedImage}
+/>;
+```
+
+A BFF-provided rendition bypasses client iChef processing while preserving the
+same `Image` call site:
+
+```tsx
+const preparedImage = prepareImage(
+  { type: 'bffRenditions', ...image.renditions },
+  { type: 'passthrough' },
+);
+
+<Image alt={image.alt} aspectRatio={[16, 9]} {...preparedImage} />;
+```
+
+## Fallback policy decision required
+
+Today, `Image` creates typed WebP/JPEG `<picture>` sources only on the home page.
+The preparation utility must return complete primary/fallback data where it is
+available, but it must not decide whether the renderer uses it. Before adopting
+the API, agree whether the renderer's home-page-only fallback behaviour is
+intentional. This decision is independent of iChef and BFF ownership.
+
+## BFF transition
+
+The target BFF contract should provide a presentation-neutral image rendition
+object: `src`, optional primary/fallback source sets and MIME types, intrinsic
+width/height, alt text, and attribution. It must not supply page-specific
+`sizes`, placeholder, lazy-loading, preload, or crop decisions.
+
+During transition:
+
+1. Existing consumers create `ichef`, `ichefTemplate`, or `programmeRecipe`
+   sources.
+2. `prepareImage` adapts them into `PreparedImage`.
+3. BFF-enabled routes supply `bffRenditions` instead.
+4. Remove iChef adapters only after no client callers require them.
+
+## Test strategy before implementation
+
+| Layer               | Tests required                                                                                                                                               |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| iChef adapter       | Supported/unsupported WebP recipes, environment base URL, `mpv`, `pips`, missing inputs, candidate widths, MIME types and fallback URLs.                     |
+| Breakpoint adapter  | `{width}` replacement, 1x/2x candidates, supplied small/large widths, `sizes`, and null template handling.                                                   |
+| Programme adapter   | `$recipe` replacement, Programme and standard ladders, existing WebP URLs, extension handling, and optional fallback generation.                             |
+| Direct/BFF adapter  | Plain images, SVGs, passthrough source sets, missing optional values, and no iChef extension mutation.                                                       |
+| `Image` integration | Canonical home/non-home fallback policy, AMP, Lite, placeholder, lazy/eager, preload/fetch priority, dimensions and aspect ratio.                            |
+| First migrations    | Snapshot/DOM regression tests for `Billboard` and `MaskedImage`, including their existing sizes, masks, vignette, placeholder, preload and priority choices. |
+
+The existing [`srcSet` tests](../src/app/lib/utilities/srcSet/index.test.js) and
+[`getSrcSets` tests](../src/app/utilities/getSrcSets/index.test.ts) are the
+behavioural baseline. No production consumer should migrate until the strategy
+unit tests and the `Image` fallback-policy decision are complete.
+
+## Approval checklist
+
+- [ ] Keep the `Image` API and renderer responsibilities unchanged.
+- [ ] Adopt `prepareImage` and the source/strategy contracts above.
+- [ ] Keep layout-specific width and loading decisions with consumers.
+- [ ] Confirm the home-page-only fallback policy.
+- [ ] Agree the BFF rendition contract and transition ownership.
+- [ ] Approve `Billboard` and `MaskedImage` as the first implementation slice.
