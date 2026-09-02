@@ -55,9 +55,13 @@ yarn install
 ```
 
 ## Local Development
+Export a relevant BFF_PATH so that simorgh can connect to the relevant fabl instance:
+```
+# For a local instance of fabl
+export BFF_PATH="http://localhost:3210/module/simorgh-bff"
+```
 
-To run this application locally, with hot-reloading:
-
+Start the application:
 ```
 cd ws-nextjs-app
 yarn dev
