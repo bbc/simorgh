@@ -9,6 +9,10 @@ multiple places before values are passed to that primitive. This document
 records the initial audit and defines an incremental approach to consolidating
 that preparation logic.
 
+The complete production inventory, legacy dependency graph, CAF disposition,
+risks, and validation matrix are maintained in the
+[Image Rendering Audit](./Image-Rendering-Audit.md).
+
 ## Current state (audit)
 
 `StoryPromo` and `Promo.Image` already render through the shared
@@ -85,7 +89,8 @@ flowchart LR
     B -.-> H[8. Investigate Next.js Image]
 ```
 
-1. **Audit** — complete (this document).
+1. **Audit** — complete. The detailed evidence and agreed decisions are in the
+   [Image Rendering Audit](./Image-Rendering-Audit.md).
 2. **Define the shared API** — decide the final shape of the utility/utilities
    consumers call, and whether `srcSet` derivation should live in `Image`
    itself or stay as a standalone utility consumed before render.
