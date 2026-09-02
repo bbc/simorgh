@@ -207,7 +207,7 @@ Where a value is truly dynamic (a computed height, an image offset):
 - Don't use physical CSS properties (`left`, `right`) for directional layouts
 - Don't hardcode pixel, colour or breakpoint values — use theme tokens
 - Don't use `max-width` media queries when `min-width` would work
-- Don't switch between multiple class names based on a prop value
+- Don't derive a class name from a continuous/computed value or from `dir` (see above)
 
 ## Step 3: Convert to TypeScript
 
