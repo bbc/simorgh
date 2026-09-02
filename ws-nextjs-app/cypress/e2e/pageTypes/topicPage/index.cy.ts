@@ -4,7 +4,10 @@ import urlValidationTest from '../../../support/helpers/urlValidationTest';
 import testsForAllCanonicalPages from '../../testsForAllCanonicalPages';
 import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
 import { assertLiteSiteSummaryComponentToMainSiteClick } from '../../specialFeatures/atiAnalytics/assertions/liteSiteSummary';
-import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
+import {
+  assertPageView,
+  assertResonancePageView,
+} from '../../specialFeatures/atiAnalytics/assertions';
 import {
   assertDropdownNavigationComponentClick,
   assertDropdownNavigationComponentView,
@@ -77,7 +80,7 @@ const testSuites = [
     tests,
     variant: 'lat',
   },
-];
+] as unknown as TestDataType[];
 
 const atiAnalyticsTestSuites = [
   {
@@ -88,7 +91,7 @@ const atiAnalyticsTestSuites = [
     siteId: 59,
     applicationType: 'responsive',
     contentType: 'index-category',
-    tests: [assertPageView],
+    tests: [assertPageView, assertResonancePageView],
   },
   {
     path: '/portuguese/topics/cx2ggnx4j72t',
