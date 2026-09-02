@@ -73,7 +73,9 @@ const Header = ({
   if (showSportData) {
     const SportTitle = sportDataTitle ? (
       <div css={styles.sportTitleText}>{sportDataTitle}</div>
-    ) : null;
+    ) : (
+      <VisuallyHiddenText>{title}</VisuallyHiddenText>
+    );
 
     return (
       <div css={styles.headerContainer}>
