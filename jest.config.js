@@ -10,6 +10,7 @@ const unitTests = {
   moduleNameMapper: {
     ...jestDirAlias,
     '\\.module\\.(css|scss)$': 'identity-obj-proxy',
+    '^@bbc/resonance$': '<rootDir>/src/testHelpers/resonanceMock.ts',
   },
   testEnvironment: 'jsdom',
   snapshotSerializers: ['@emotion/jest/serializer'],
@@ -43,6 +44,7 @@ const clientUnitTests = {
   moduleNameMapper: {
     ...jestDirAlias,
     '\\.module\\.(css|scss)$': 'identity-obj-proxy',
+    '^@bbc/resonance$': '<rootDir>/src/testHelpers/resonanceMock.ts',
   },
   testEnvironment: '@happy-dom/jest-environment',
   snapshotSerializers: ['@emotion/jest/serializer'],
