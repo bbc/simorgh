@@ -28,7 +28,10 @@ const reverbComponentTracking = async ({
   eventDetails,
 }: ReverbComponentTrackingProps) => {
   const {
+    actionName = '',
     anchorElement,
+    background,
+    container,
     experience,
     event,
     eventPublisher,
@@ -36,10 +39,18 @@ const reverbComponentTracking = async ({
     isClick,
     item,
     originalEvent,
+    type,
   } = eventDetails;
 
-  const actionName = '';
-  const actionAdditionalLabels = { event, group, item, experience };
+  const actionAdditionalLabels = {
+    event,
+    group,
+    item,
+    experience,
+    ...(type && { type }),
+    ...(background !== undefined && { background }),
+    ...(container && { container }),
+  };
 
   return reverbInstance.userActionEvent(
     eventPublisher,
@@ -55,6 +66,7 @@ const reverbHandlers = {
   pageView: reverbPageViews,
   sectionView: reverbComponentTracking,
   sectionClick: reverbComponentTracking,
+  activation: reverbComponentTracking,
 };
 
 const callReverb = async (eventDetails: ReverbEventDetails) => {
@@ -101,20 +113,20 @@ const sendBeacon = async (
     try {
       const { eventDetails } = reverbBeaconConfig;
 
-      if (resonanceBeaconConfig) {
-        try {
-          const { Resonance } = await import('@bbc/resonance');
-          callResonance(Resonance, resonanceBeaconConfig);
-        } catch (error) {
-          logger.error(ATI_LOGGING_ERROR, { error });
-        }
-      }
-
       await callReverb(eventDetails);
     } catch (error) {
       logger.error(ATI_LOGGING_ERROR, {
         error,
       });
+    }
+
+    if (resonanceBeaconConfig) {
+      try {
+        const { Resonance } = await import('@bbc/resonance');
+        callResonance(Resonance, resonanceBeaconConfig);
+      } catch (error) {
+        logger.error(ATI_LOGGING_ERROR, { error });
+      }
     }
   }
 };
