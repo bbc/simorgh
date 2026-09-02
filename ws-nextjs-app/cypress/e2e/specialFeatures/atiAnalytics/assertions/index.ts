@@ -339,9 +339,11 @@ export const assertResonancePageView = ({
 
   it(testDescription, () => {
     const resonanceBagBaseUrl = (envs as EnvironmentConfigType).resonanceBagUrl;
-    const resonanceBagEventUrl = `${resonanceBagBaseUrl}/v*/event`;
+    const resonanceBagEventUrlPattern = new RegExp(
+      `${resonanceBagBaseUrl}/v[0-9]+/event`,
+    );
 
-    cy.intercept('POST', resonanceBagEventUrl, request => {
+    cy.intercept('POST', resonanceBagEventUrlPattern, request => {
       request.reply({ statusCode: 200 });
     }).as('resonance-page-view');
 
