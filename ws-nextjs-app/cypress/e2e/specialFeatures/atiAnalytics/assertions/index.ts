@@ -342,6 +342,7 @@ export const assertResonancePageView = ({
     const sendsResonanceEvents = usesResonance(applicationType);
 
     if (!sendsResonanceEvents) {
+      cy.get('body').should('be.visible');
       cy.get('@resonance-page-view.all').should('have.length', 0);
       return;
     }
