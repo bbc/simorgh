@@ -48,7 +48,10 @@ describe('InlineLinkContainer', () => {
         />,
         { service: 'news' },
       );
-      expect(screen.getByRole('link')).toHaveAttribute('aria-label');
+      expect(screen.getByRole('link')).toHaveAttribute(
+        'aria-label',
+        'This is a link, external',
+      );
     });
 
     it('should be explicitly marked "external" for screen reader users & localised', () => {
@@ -60,7 +63,10 @@ describe('InlineLinkContainer', () => {
         />,
         { service: 'persian' },
       );
-      expect(screen.getByRole('link')).toHaveAttribute('aria-label');
+      expect(screen.getByRole('link')).toHaveAttribute(
+        'aria-label',
+        'این لینک هست، خارجی',
+      );
     });
 
     describe('onClick', () => {
