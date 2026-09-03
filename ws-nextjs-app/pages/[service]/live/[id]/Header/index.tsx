@@ -86,7 +86,7 @@ const Header = ({
         </div>
         <div css={styles.contentContainer}>
           <Heading
-            size="trafalgar"
+            size="canon"
             level={1}
             id="content"
             tabIndex={-1}
