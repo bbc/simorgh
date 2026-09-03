@@ -332,7 +332,7 @@ const atiAnalyticsTestSuites = [
     siteId: 51,
     applicationType: 'responsive',
     contentType: 'article-sfv',
-    isServiceResonanceEnabled: false,
+    expectsResonanceEvents: false,
     tests: [
       assertPageView,
       assertResonancePageView,
