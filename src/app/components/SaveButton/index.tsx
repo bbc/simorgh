@@ -45,6 +45,16 @@ const SaveButton = ({
     onClick(event);
   };
 
+  const getIcon = () => {
+    if (isBusy) return <Spinner />;
+    if (!isSaved) return <BookmarkIcon />;
+    return showRemoveAffordance ? (
+      <Close width="20" height="20" />
+    ) : (
+      <FilledBookmarkIcon />
+    );
+  };
+
   return (
     <button
       css={[styles.buttonWrapper, isUpdating && styles.updatingState]}
@@ -59,16 +69,10 @@ const SaveButton = ({
       {...rest}
     >
       <span aria-hidden="true" css={styles.iconText}>
-        {isBusy && <Spinner />}
-        {!isBusy && !isSaved && <BookmarkIcon />}
-        {!isBusy &&
-          isSaved &&
-          (showRemoveAffordance ? (
-            <Close width="20" height="20" />
-          ) : (
-            <FilledBookmarkIcon />
-          ))}
-        {displayedVisualLabel}
+        {getIcon()}
+        {/* Wrapper keeps the label in a stable element so browser translation
+            tools swapping text nodes don't crash React reconciliation. */}
+        <span>{displayedVisualLabel}</span>
       </span>
 
       <VisuallyHiddenText id={labelId} aria-live="assertive">

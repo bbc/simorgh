@@ -16,7 +16,6 @@ const experimentsForPageMetrics: ExperimentsForPageTypeMetrics = [
       'newswb_ws_article_account_promo_banner',
       // enable page metrics after this experiment is activated
       'newswb_ws_oj_order_referrer_search',
-      'newswb_ws_oj_order_referrer_search_aa_test',
     ],
   },
   {

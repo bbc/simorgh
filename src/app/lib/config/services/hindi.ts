@@ -141,7 +141,7 @@ export const service: DefaultServiceConfig = {
         saving: 'सहेजा जा रहा है',
         saved: 'मेरी ख़बरों में सहेजा गया',
         remove: 'हटाएं',
-        removeAccessible: 'सहेजा गया. मेरी ख़बरों से हटाएं',
+        removeAccessible: 'सेव्ड. माय न्यूज़ सेक्शन से हटा दीजिए',
         removing: 'हटाया जा रहा है',
       },
       // TBC : TODO: Ticket needed
@@ -169,20 +169,22 @@ export const service: DefaultServiceConfig = {
       },
       actionTooltip: {
         success: {
-          titleBefore: 'This article is now saved to',
-          titleAfter: '',
+          title: 'ये आर्टिकिल अब सेव्ड है',
+          bodyBefore: 'ये',
+          bodyAfter: 'सेक्शन में दिखेगी.',
         },
         error: {
-          title: 'Sorry, something went wrong',
-          body: 'Check your connection, refresh the page and try again',
+          title: 'माफ़ कीजिए, कुछ गड़बड़ी हुई है',
+          body: 'अपना कनेक्शन चेक कीजिए, पन्ना रिफ़्रेश कीजिए और फिर कोशिश कीजिए',
         },
         removed: {
-          titleBefore: 'This article has now been removed from',
-          titleAfter: '',
+          title: 'ये आर्टिकिल अब हटा ली गई है',
+          bodyBefore: 'ये',
+          bodyAfter: 'सेक्शन से हटा ली गई है',
         },
-        myNewsLinkText: 'My News',
+        myNewsLinkText: 'माय न्यूज़',
         myNewsUrl: 'https://www.bbc.com/hindi/my-news',
-        closeLabel: 'Close',
+        closeLabel: 'बंद करें',
       },
       gist: 'सारांश',
       error: {
