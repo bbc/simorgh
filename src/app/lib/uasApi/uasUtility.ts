@@ -23,12 +23,26 @@ const FAVOURITES_CONFIG = {
   action: 'favourited',
 } as const;
 
-export type ActivityType = (typeof FAVOURITES_CONFIG)['activityType'];
+/**
+ * POC (Follow Topics): configuration for the UAS `follows` activity type.
+ * Mirrors FAVOURITES_CONFIG so the same generic `uasApiRequest` handler,
+ * `buildGlobalId`, error handling and TanStack Query patterns can be reused.
+ */
+const FOLLOWS_CONFIG = {
+  activityType: 'follows',
+  resourceDomain: 'world-service-news',
+  resourceType: 'topic',
+  action: 'followed',
+} as const;
+
+export type ActivityType =
+  | (typeof FAVOURITES_CONFIG)['activityType']
+  | (typeof FOLLOWS_CONFIG)['activityType'];
 
 const buildGlobalId = (
   resourceId: string,
-  resourceDomain = FAVOURITES_CONFIG.resourceDomain,
-  resourceType = FAVOURITES_CONFIG.resourceType,
+  resourceDomain: string = FAVOURITES_CONFIG.resourceDomain,
+  resourceType: string = FAVOURITES_CONFIG.resourceType,
 ): string => `urn:bbc:${resourceDomain}:${resourceType}:${resourceId}`;
 
 interface MetadataComparisonResult {
@@ -103,11 +117,61 @@ const createFavouritesPayload = ({
   }),
 });
 
+/**
+ * POC (Follow Topics): the minimal set of topic fields we send to UAS so a
+ * followed topic can be rendered later (e.g. in a "Followed topics" list)
+ * without an extra lookup.
+ */
+export interface TopicFollowData {
+  topicId: string;
+  title: string;
+  service: Services;
+  url: string;
+  description?: string;
+  imageUrl?: string;
+}
+
+const buildTopicMetadata = ({
+  topicId,
+  title,
+  service,
+  url,
+  description,
+  imageUrl,
+}: TopicFollowData): Record<string, unknown> => ({
+  topicId,
+  service,
+  title: sanitiseMetadataString(title),
+  locatorUrl: url,
+  description: sanitiseMetadataString(description),
+  imageUrl,
+});
+
+/**
+ * POC (Follow Topics): builds the UAS request body for following a topic.
+ * Structurally identical to `createFavouritesPayload`, only the config and
+ * metadata differ — demonstrating the activity-agnostic reuse of the UAS layer.
+ */
+const createFollowsPayload = (
+  topicData: TopicFollowData,
+): UasApiRequestBody => ({
+  activityType: FOLLOWS_CONFIG.activityType,
+  resourceDomain: FOLLOWS_CONFIG.resourceDomain,
+  resourceType: FOLLOWS_CONFIG.resourceType,
+  resourceId: topicData.topicId,
+  action: FOLLOWS_CONFIG.action,
+  resourceTitle: topicData.service,
+  metaData: buildTopicMetadata(topicData),
+});
+
 export {
   USER_ID_COOKIE_KEY,
   FAVOURITES_CONFIG,
+  FOLLOWS_CONFIG,
   buildGlobalId,
   createFavouritesPayload,
+  createFollowsPayload,
+  buildTopicMetadata,
   buildCurrentMetadata,
   compareMetadataWithSaved,
   sanitiseMetadataString,
