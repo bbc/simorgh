@@ -30,6 +30,8 @@ import {
   livePagePortraitVideoClipMediaBlock,
 } from '../fixture';
 import {
+  AresMediaBlock,
+  AresMediaMetadataBlock,
   BuildConfigProps,
   ConfigBuilderReturnProps,
   MediaBlock,
@@ -604,6 +606,45 @@ describe('buildSettings', () => {
           subtitles: { enabled: true, defaultOn: true },
           fullscreen: { enabled: true },
         },
+      });
+    });
+
+    it('should treat a webcast version without a live flag as live', () => {
+      const webcastBlocks = JSON.parse(
+        JSON.stringify(aresMediaBlocks),
+      ) as MediaBlock[];
+      const aresMedia = webcastBlocks.find(
+        block => block.type === 'aresMedia',
+      ) as AresMediaBlock;
+      const metadataBlock = aresMedia.model.blocks.find(
+        block => block.type === 'aresMediaMetadata',
+      ) as AresMediaMetadataBlock;
+
+      delete metadataBlock.model.live;
+      metadataBlock.model.versions = [];
+      metadataBlock.model.webcastVersions = [
+        {
+          versionId: 'l0058gvr',
+          duration: 67583,
+          types: ['Original'],
+        },
+      ];
+
+      const result = buildSettings({
+        ...baseSettings,
+        blocks: webcastBlocks,
+      });
+
+      expect(result?.playerConfig.playlistObject).toMatchObject({
+        items: [
+          {
+            duration: 67583,
+            kind: 'programme',
+            live: true,
+            versionID: 'l0058gvr',
+          },
+        ],
+        simulcast: true,
       });
     });
 
