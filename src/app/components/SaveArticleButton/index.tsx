@@ -4,19 +4,28 @@ import type { SaveArticlePageData } from '#app/lib/utilities/extractSaveArticleP
 import ErrorBoundary from '#app/components/ErrorBoundary';
 import SaveArticleButtonAuthenticated from './SaveArticleButtonAuthenticated/lazy';
 import SaveArticleButtonGuest from './SaveArticleButtonGuest';
+import SaveArticleButtonGuestWithPreview from './SaveArticleButtonGuestWithPreview';
 import styles from './index.styles';
 
 export interface SaveArticleButtonProps {
   saveArticlePageData: SaveArticlePageData;
+  enableGuestPreview?: boolean;
 }
 
 const SAVE_ARTICLE_BUTTON_ID = 'save-article-button';
 
-const SaveArticleButton = (props: SaveArticleButtonProps) => {
+const SaveArticleButton = ({
+  saveArticlePageData,
+  enableGuestPreview = false,
+}: SaveArticleButtonProps) => {
   const { isPersonalizationAvailable, isPersonalizationEnabled } =
     use(AccountContext);
 
   if (!isPersonalizationAvailable) return null;
+
+  const GuestButton = enableGuestPreview
+    ? SaveArticleButtonGuestWithPreview
+    : SaveArticleButtonGuest;
 
   return (
     <ErrorBoundary componentName="SaveArticleButton">
@@ -25,9 +34,11 @@ const SaveArticleButton = (props: SaveArticleButtonProps) => {
       </noscript>
       <div css={styles.buttonWrapper} id={SAVE_ARTICLE_BUTTON_ID}>
         {isPersonalizationEnabled ? (
-          <SaveArticleButtonAuthenticated {...props} />
+          <SaveArticleButtonAuthenticated
+            saveArticlePageData={saveArticlePageData}
+          />
         ) : (
-          <SaveArticleButtonGuest />
+          <GuestButton saveArticlePageData={saveArticlePageData} />
         )}
       </div>
     </ErrorBoundary>
