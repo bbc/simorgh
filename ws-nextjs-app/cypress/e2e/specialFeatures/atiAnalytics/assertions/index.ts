@@ -328,10 +328,10 @@ export const assertResonancePageView = ({
   service,
   path,
   siteId,
-  isServiceEnabled = true,
+  isServiceResonanceEnabled = true,
 }) => {
   const sendsResonanceEvents =
-    usesResonance(applicationType) && isServiceEnabled;
+    usesResonance(applicationType) && isServiceResonanceEnabled;
 
   const testDescription = sendsResonanceEvents
     ? `should send a Resonance page view event with service = ${service}, page identifier = ${pageIdentifier}, producer ID = ${siteId}, application type = ${applicationType} and content type = ${contentType}`
