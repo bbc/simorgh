@@ -1,14 +1,12 @@
 import { css, Theme } from '@emotion/react';
-import { HALF, QUADRUPLE } from '#app/components/ThemeProvider/spacings';
+import { HALF } from '#app/components/ThemeProvider/spacings';
 
 const PULSE_END_MARGIN = HALF;
-const PULSE_SIZE_3_4 = QUADRUPLE;
-const PULSE_SIZE_TOTAL_WIDTH_3_MIN = PULSE_END_MARGIN + PULSE_SIZE_3_4;
 
 const styles = {
   liveLabelContainer: ({ mq, spacings }: Theme) =>
     css({
-      textAlign: 'center',
+      textAlign: 'start',
       paddingTop: `${spacings.DOUBLE}rem`,
       [mq.GROUP_3_MIN_WIDTH]: {
         paddingTop: `${spacings.TRIPLE}rem`,
@@ -45,13 +43,16 @@ const styles = {
         },
       },
     }),
-  liveLabelTextWithImage: ({ spacings }: Theme) =>
+  liveLabelTextWithImage: ({ mq, spacings }: Theme) =>
     css({
       'span:first-of-type': {
         display: 'inline',
       },
       'span:nth-of-type(3)': {
-        marginTop: `${spacings.DOUBLE}rem`,
+        [mq.GROUP_4_MIN_WIDTH]: {
+          display: 'block',
+          marginTop: `${spacings.DOUBLE}rem`,
+        },
       },
     }),
   liveLabelTextWithoutImage: ({ mq, fontSizes, fontVariants }: Theme) =>
@@ -64,12 +65,15 @@ const styles = {
           display: 'inline',
         },
         [mq.GROUP_4_MIN_WIDTH]: {
-          width: `calc(100% / 3  - ${PULSE_SIZE_TOTAL_WIDTH_3_MIN}rem)`,
+          display: 'inline-flex',
           ...fontVariants.sansBold,
           ...fontSizes.paragon,
         },
-        [mq.GROUP_5_MIN_WIDTH]: {
-          width: `calc(25%  - ${PULSE_SIZE_TOTAL_WIDTH_3_MIN}rem)`,
+      },
+      'span:nth-of-type(3)': {
+        [mq.GROUP_4_MIN_WIDTH]: {
+          display: 'block',
+          marginTop: `${HALF * 2}rem`,
         },
       },
     }),
