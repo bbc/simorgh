@@ -44,6 +44,9 @@ export const COMPONENTS = {
   DROPDOWN_NAVIGATION: 'dropdown-navigation',
   MOST_READ: 'most-read',
   RADIO_SCHEDULE: 'radio-schedule',
+  PODCAST_PROMO: 'promo-podcast',
+  RECENT_AUDIO_EPISODES: 'episodes-audio',
+  PODCAST_LINKS: 'third-party',
   LITE_SITE_SUMMARY: 'lite-site-summary',
   MESSAGE_BANNER: 'message-banner',
 };
