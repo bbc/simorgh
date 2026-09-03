@@ -14,9 +14,9 @@ export const LEGACY = [
   { colorName: 'DIM_GREY ', colorCode: '#696969' },
   { colorName: 'EBON ', colorCode: '#222222' },
   { colorName: 'GHOST ', colorCode: '#FDFDFD' },
-  { colorName: 'GREY_10 ', colorCode: '#141414' },
+  { colorName: 'GREY_10 ', colorCode: '#181818' },
   { colorName: 'GREY_11 ', colorCode: '#BABABA' },
-  { colorName: 'GREY_2 ', colorCode: '#F6F6F6' },
+  { colorName: 'GREY_2 ', colorCode: '#F8F8F8' },
   { colorName: 'GREY_3 ', colorCode: '#E6E8EA' },
   { colorName: 'GREY_4 ', colorCode: '#B0B2B4' },
   { colorName: 'GREY_5 ', colorCode: '#8A8C8E' },
@@ -77,7 +77,7 @@ export const SERVICE = [
 export const FOUNDATION = [
   { colorName: 'WHITE', colorCode: '#FFFFFF' },
   { colorName: 'GREY1', colorCode: '#FEFEFE' },
-  { colorName: 'GREY2', colorCode: '#F6F6F6' },
+  { colorName: 'GREY2', colorCode: '#F8F8F8' },
   { colorName: 'GREY3', colorCode: '#E6E8EA' },
   { colorName: 'GREY4', colorCode: '#B0B2B4' },
   { colorName: 'GREY5', colorCode: '#8A8C8E' },
@@ -85,6 +85,6 @@ export const FOUNDATION = [
   { colorName: 'GREY7', colorCode: '#3A3C3E' },
   { colorName: 'GREY8', colorCode: '#202224' },
   { colorName: 'GREY9', colorCode: '#141618' },
-  { colorName: 'GREY10', colorCode: '#141414' },
+  { colorName: 'GREY10', colorCode: '#181818' },
   { colorName: 'BLACK', colorCode: '#000000' },
 ];
