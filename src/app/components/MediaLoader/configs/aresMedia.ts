@@ -98,7 +98,8 @@ export default ({
         })
       : aresMediaMetadata?.imageUrl);
 
-  const isLive = aresMediaMetadata?.live ?? false;
+  // silver streams use webcast versions even when the live flag is missing
+  const isLive = Boolean(aresMediaMetadata?.live || hasWebcastItems);
 
   const items: PlaylistItem[] = [
     {
