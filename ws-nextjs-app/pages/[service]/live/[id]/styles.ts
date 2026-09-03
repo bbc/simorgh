@@ -8,6 +8,15 @@ export default {
       maxWidth: `${pixelsToRem(1008)}rem`,
       margin: `${pixelsToRem(20)}rem auto`,
     }),
+  heading: () =>
+    css({
+      gridColumn: '1 / 13',
+      textAlign: 'start',
+      '&:focus': {
+        outline: 'none',
+      },
+      marginBottom: '1rem',
+    }),
   outerGrid: ({ mq, gridWidths, spacings }: Theme) =>
     css({
       maxWidth: `${pixelsToRem(gridWidths[1280])}rem`,

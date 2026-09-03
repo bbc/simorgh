@@ -817,7 +817,7 @@ describe('Live Page', () => {
       expect(title).toBeInTheDocument();
     });
 
-    it('should render a visually hidden h1 when displaying sportData', async () => {
+    it('should render the title as the only visible h1 when displaying sportData', async () => {
       const pageDataWithSportData = {
         ...mockPageData,
         sportDataEventContent: sportDataFixture.data.sportDataEventContent,
@@ -828,13 +828,54 @@ describe('Live Page', () => {
         render(<Live pageData={pageDataWithSportData} />);
       });
 
-      const visuallyHiddenTitle = screen.getByText(
-        'Israeli tanks shell Jabalia camp as heavy fighting continues in north Gaza', // mock data, in production this would be a sport title
-      );
-      expect(visuallyHiddenTitle).toBeInTheDocument();
-      expect(visuallyHiddenTitle).toHaveStyle(
+      const title = screen.getByRole('heading', {
+        level: 1,
+        name: 'Israeli tanks shell Jabalia camp as heavy fighting continues in north Gaza', // mock data, in production this would be a sport title
+      });
+      expect(title).toBeInTheDocument();
+      expect(title).not.toHaveStyle(
         'overflow: hidden; position: absolute; width: 1px;',
       );
+    });
+
+    it('should render a translated visually hidden match summary h2 below the h1 when displaying sportData', async () => {
+      const pageDataWithSportData = {
+        ...mockPageData,
+        sportDataEventContent: sportDataFixture.data.sportDataEventContent,
+      } as unknown as ComponentProps['pageData'];
+      mockPollingUpdate(pageDataWithSportData);
+
+      await act(async () => {
+        render(<Live pageData={pageDataWithSportData} />, {
+          service: 'afaanoromoo',
+        });
+      });
+
+      const matchSummary = screen.getByRole('heading', {
+        level: 2,
+        name: 'Cuunfaa Taphaa',
+      });
+      expect(matchSummary).toHaveStyle(
+        'overflow: hidden; position: absolute; width: 1px;',
+      );
+    });
+
+    it('should render the sport banner before the headings grid in the DOM order when displaying sportData', async () => {
+      const pageDataWithSportData = {
+        ...mockPageData,
+        sportDataEventContent: sportDataFixture.data.sportDataEventContent,
+      } as unknown as ComponentProps['pageData'];
+      mockPollingUpdate(pageDataWithSportData);
+
+      const { container } = await act(async () => {
+        return render(<Live pageData={pageDataWithSportData} />);
+      });
+
+      const domOrder = Array.from(
+        container.querySelectorAll('h1, [data-testid="head-to-head-v2"]'),
+      );
+      expect(domOrder[0]).toHaveAttribute('data-testid', 'head-to-head-v2');
+      expect(domOrder[1].tagName).toBe('H1');
     });
 
     it('should not render HeadToHeadV2 when sportDataEventContent is not present', async () => {

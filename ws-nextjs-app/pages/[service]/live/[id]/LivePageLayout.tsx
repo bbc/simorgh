@@ -14,6 +14,8 @@ import { HeadToHeadV2Data } from '#app/components-webcore/SportDataHeader/head-t
 import { PortraitVideoItems } from '#app/models/types/optimo';
 import usePolling from '#app/hooks/usePolling';
 import useToggle from '#app/hooks/useToggle';
+import Heading from '#app/components/Heading';
+import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import {
   getImageFromPost,
   getHeadlineFromPost,
@@ -139,6 +141,8 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
     sportDataEventContent || {};
   const showSportData = !!sportData && Boolean(sportHeaderEnabled);
 
+  const matchSummary = translations.sport?.matchSummary ?? 'Match Summary';
+
   const {
     url: imageUrl,
     urlTemplate: imageUrlTemplate,
@@ -254,6 +258,17 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
           />
         )}
         <div css={styles.outerGrid}>
+          {showSportData && (
+            <Heading
+              level={2}
+              size="trafalgar"
+              id="content"
+              tabIndex={-1}
+              css={styles.heading}
+            >
+              {title}
+            </Heading>
+          )}
           <div css={styles.firstSection}>
             {keyPoints && (
               <KeyPoints keyPointsContent={keyPoints.model.blocks} />
