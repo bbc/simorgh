@@ -65,6 +65,7 @@
     "react-is": "19"
   },
   "dependencies": {
+    "@bbc/resonance": "https://mybbc-analytics.files.bbci.co.uk/resonance/resonance-2.7.2.tgz",
     "@bbc/reverb-url-helper": "https://mybbc-analytics.files.bbci.co.uk/reverb-url-helper/bbc-reverb-url-helper-2.5.0.tgz",
     "@bbc/web-vitals": "2.6.0",
     "@emotion/cache": "11.14.0",
@@ -91,8 +92,7 @@
     "sharp": "0.35.3",
     "temporal-polyfill": "0.3.0",
     "undici": "8.9.0",
-    "uuid": "13.0.1",
-    "winston": "patch:winston@3.8.2#./patches/winston-file-descriptor.patch"
+    "winston": "3.19.0"
   },
   "devDependencies": {
     "@babel/eslint-parser": "7.29.7",

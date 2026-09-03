@@ -30,10 +30,9 @@ jobs:
           const { readFileSync, readdirSync, statSync } = require('fs');
           const { join } = require('path');
 
-          const GROUP_COUNT = 3;
           const root = 'ws-nextjs-app/cypress/e2e/pageTypes';
           const preferredGroups = [
-            ['articlePage'],
+            ['articlePage', 'watch', 'listen'],
             ['homePage', 'onDemandAudio'],
             [
               'topicPage',

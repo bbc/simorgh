@@ -118,13 +118,13 @@ const cpsPGLPageAnalyticsData: ATIData = {
 describe('ATIAnalytics params', () => {
   describe('buildReverbParams', () => {
     it('should return the correct page view tracking params for an article page', () => {
-      const params = buildReverbParams({
+      const { reverbParams } = buildReverbParams({
         requestContext: { ...requestContext, pageType: ARTICLE_PAGE },
         atiData: articlePageAnalyticsData,
         serviceContext,
       });
 
-      expect(params).toEqual({
+      expect(reverbParams).toEqual({
         params: {
           page: {
             contentId: 'urn:bbc:optimo:asset:crgrx86em6yo',
@@ -162,13 +162,13 @@ describe('ATIAnalytics params', () => {
     });
 
     it('should return the correct page view tracking params for a home page', () => {
-      const params = buildReverbParams({
+      const { reverbParams } = buildReverbParams({
         requestContext: { ...requestContext, pageType: HOME_PAGE },
         atiData: homePageAnalyticsData,
         serviceContext,
       });
 
-      expect(params).toEqual({
+      expect(reverbParams).toEqual({
         params: {
           page: {
             contentId: 'urn:bbc:tipo:topic:cm7682qz7v1t',
@@ -200,13 +200,13 @@ describe('ATIAnalytics params', () => {
     });
 
     it('should return the correct page view tracking params for a media article page', () => {
-      const params = buildReverbParams({
+      const { reverbParams } = buildReverbParams({
         requestContext: { ...requestContext, pageType: MEDIA_ARTICLE_PAGE },
         atiData: mediaArticlePageAnalyticsData,
         serviceContext,
       });
 
-      expect(params).toEqual({
+      expect(reverbParams).toEqual({
         params: {
           page: {
             contentId: 'urn:bbc:optimo:asset:c4nrpd0d4nro',
@@ -244,13 +244,13 @@ describe('ATIAnalytics params', () => {
     });
 
     it('should return the correct page view tracking params for a MAP page', () => {
-      const params = buildReverbParams({
+      const { reverbParams } = buildReverbParams({
         requestContext: { ...requestContext, pageType: MEDIA_ASSET_PAGE },
         atiData: cpsMAPPageAnalyticsData,
         serviceContext,
       });
 
-      expect(params).toEqual({
+      expect(reverbParams).toEqual({
         params: {
           page: {
             contentId: 'urn:bbc:cps:4d36f80b-8711-0b4e-8da0-ef76ae8ac470',
@@ -287,13 +287,13 @@ describe('ATIAnalytics params', () => {
     });
 
     it('should return the correct page view tracking params for a PGL page', () => {
-      const params = buildReverbParams({
+      const { reverbParams } = buildReverbParams({
         requestContext: { ...requestContext, pageType: PHOTO_GALLERY_PAGE },
         atiData: cpsPGLPageAnalyticsData,
         serviceContext,
       });
 
-      expect(params).toEqual({
+      expect(reverbParams).toEqual({
         params: {
           page: {
             contentId:

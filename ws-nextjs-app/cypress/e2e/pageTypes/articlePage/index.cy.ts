@@ -1,6 +1,9 @@
 /* eslint-disable import/no-relative-packages */
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
+import {
+  assertPageView,
+  assertResonancePageView,
+} from '../../specialFeatures/atiAnalytics/assertions';
 import runTestsForPage, {
   TestDataType,
 } from '../../../support/helpers/runTestsForPage';
@@ -319,8 +322,10 @@ const atiAnalyticsTestSuites = [
     siteId: 51,
     applicationType: 'responsive',
     contentType: 'article-sfv',
+    isServiceEnabled: false,
     tests: [
       assertPageView,
+      assertResonancePageView,
       assertLatestMediaComponentView,
       assertLatestMediaComponentClick,
     ],
@@ -492,7 +497,7 @@ const atiAmpTestSuites = atiAnalyticsTestSuites.map(testSuite => {
     ...testSuite,
     path: getPathWithSuffix({ path: testSuite.path, suffix: '.amp' }),
     applicationType: 'amp',
-    tests: [assertPageView],
+    tests: [assertPageView, assertResonancePageView], // asserts that the Resonance page view is not sent for amp articles - runs on all services - so will need refactoring once we are sending for specific services.
   };
 });
 
