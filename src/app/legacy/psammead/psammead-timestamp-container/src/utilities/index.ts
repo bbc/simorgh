@@ -1,7 +1,17 @@
 import moment from 'moment-timezone';
+import {
+  sanitiseDuration,
+  sanitiseLocale,
+  applyFormat,
+  withArabicComma,
+  DurationFormat,
+} from './temporalHelpers';
 
 type Locale = string;
 type ISODuration = string;
+
+// Locales that use Arabic script and require Arabic comma
+const ARABIC_SCRIPT_LOCALES = new Set(['ar', 'fa', 'ps', 'ur']);
 
 // Note that this next section is globally configuring moment.
 // It is not possible to configure these on specific moment instances.
@@ -28,15 +38,32 @@ export const formatDuration = ({
   locale = 'en-gb',
 }: {
   duration: ISODuration;
-  format?: string;
+  format?: DurationFormat;
   locale?: Locale;
 }): string => {
-  const defaultDurationFormat = duration?.includes('H') ? 'h:mm:ss' : 'mm:ss';
-  const durationInMilliseconds = moment.duration(duration).asMilliseconds();
-  return moment
-    .utc(durationInMilliseconds)
-    .locale(locale)
-    .format(format || defaultDurationFormat);
+  const sanitisedLocale = sanitiseLocale(locale);
+
+  const totalSeconds = sanitiseDuration(duration).total({
+    unit: 'seconds',
+  });
+  const hours = Math.floor(totalSeconds / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = Math.floor(totalSeconds % 60);
+
+  const formattedString = applyFormat({
+    format,
+    hours,
+    minutes,
+    seconds,
+    sanitisedLocale,
+  });
+
+  // Extract language code (e.g., 'fa' from 'fa-AF', 'ar' from 'ar-EG')
+  const langCode = locale.split('-')[0];
+  if (ARABIC_SCRIPT_LOCALES.has(langCode)) {
+    return withArabicComma(formattedString);
+  }
+  return formattedString;
 };
 
 // if the date is invalid return false - https://stackoverflow.com/questions/1353684/detecting-an-invalid-date-date-instance-in-javascript#answer-1353711
