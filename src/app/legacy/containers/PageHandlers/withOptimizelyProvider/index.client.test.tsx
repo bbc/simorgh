@@ -405,11 +405,36 @@ describe('withOptimizelyProvider HOC', () => {
       expect(mockTrack).not.toHaveBeenCalled();
     });
 
-    it('should not call optimizely.track when flagKey is missing', () => {
+    it('should not call optimizely.track when both flagKey and experimentKey are missing', () => {
       capturedDecisionListener?.({
         decisionInfo: {
           variationKey: 'on',
           decisionEventDispatched: true,
+        },
+      });
+
+      expect(mockTrack).not.toHaveBeenCalled();
+    });
+
+    it('should call optimizely.track with page-views for a legacy activate() decision (experimentKey without decisionEventDispatched)', () => {
+      capturedDecisionListener?.({
+        decisionInfo: {
+          experimentKey: 'newswb_ws_article_account_promo_banner',
+          variationKey: 'on',
+        },
+      });
+
+      expect(mockTrack.mock.calls.map(call => call[0])).toEqual([
+        'visit',
+        'page-views',
+      ]);
+    });
+
+    it('should not call optimizely.track for a legacy activate() decision when variationKey is off', () => {
+      capturedDecisionListener?.({
+        decisionInfo: {
+          experimentKey: 'newswb_ws_article_account_promo_banner',
+          variationKey: 'off',
         },
       });
 
@@ -570,6 +595,71 @@ describe('withOptimizelyProvider HOC', () => {
       ]);
     });
 
+    describe('signed-in page view tracking', () => {
+      afterEach(() => {
+        Cookie.remove('ckns_id');
+      });
+
+      it('should send the signed-in-page-views event alongside page-views when the user is signed in', () => {
+        Cookie.set('ckns_id', 'signed-in-token');
+
+        capturedDecisionListener?.({
+          decisionInfo: {
+            flagKey: 'test_flag',
+            variationKey: 'on',
+            decisionEventDispatched: true,
+          },
+        });
+
+        expect(mockTrack.mock.calls.map(call => call[0])).toEqual([
+          'visit',
+          'page-views',
+          'signed-in-page-views',
+        ]);
+      });
+
+      it('should not send the signed-in-page-views event when the user is signed out', () => {
+        capturedDecisionListener?.({
+          decisionInfo: {
+            flagKey: 'test_flag',
+            variationKey: 'on',
+            decisionEventDispatched: true,
+          },
+        });
+
+        expect(mockTrack.mock.calls.map(call => call[0])).toEqual([
+          'visit',
+          'page-views',
+        ]);
+        expect(mockTrack).not.toHaveBeenCalledWith('signed-in-page-views');
+      });
+
+      it('should send the signed-in-page-views event only once per page view for the same URL', () => {
+        Cookie.set('ckns_id', 'signed-in-token');
+
+        capturedDecisionListener?.({
+          decisionInfo: {
+            flagKey: 'experiment_1',
+            variationKey: 'on',
+            decisionEventDispatched: true,
+          },
+        });
+        capturedDecisionListener?.({
+          decisionInfo: {
+            flagKey: 'experiment_2',
+            variationKey: 'on',
+            decisionEventDispatched: true,
+          },
+        });
+
+        expect(
+          mockTrack.mock.calls.filter(
+            call => call[0] === 'signed-in-page-views',
+          ),
+        ).toHaveLength(1);
+      });
+    });
+
     it('should not track or notify decisions when not on client', () => {
       jest.resetModules();
 
@@ -610,6 +700,145 @@ describe('withOptimizelyProvider HOC', () => {
 
       expect(serverMockTrack).not.toHaveBeenCalled();
       expect(serverMockNotifyDecision).not.toHaveBeenCalled();
+    });
+  });
+
+  describe('activation event tracking', () => {
+    const mocksendOptimizelyActivationEvent = jest.fn();
+    const mockNotifyDecision = jest.fn();
+    const mockActivationTrackingData = {
+      trackingIsEnabled: true,
+      pageIdentifier: 'page-identifier',
+      producerName: 'producer-name',
+      statsDestination: 'stats-destination',
+      isSignedIn: false,
+      hashedId: null,
+    };
+    let capturedDecisionListener: ((payload: object) => void) | undefined;
+
+    beforeEach(() => {
+      capturedDecisionListener = undefined;
+      mocksendOptimizelyActivationEvent.mockReset();
+      mockNotifyDecision.mockReset().mockReturnValue(true);
+
+      jest.resetModules();
+
+      jest.doMock('#lib/utilities/onClient', () =>
+        jest.fn().mockReturnValue(true),
+      );
+      jest.doMock('@optimizely/react-sdk', () => ({
+        createInstance: jest.fn(() => ({
+          notificationCenter: {
+            addNotificationListener: jest.fn((_, cb) => {
+              capturedDecisionListener = cb;
+            }),
+          },
+          track: jest.fn(),
+        })),
+        OptimizelyProvider: jest.fn(),
+        setLogger: jest.fn(),
+        enums: { NOTIFICATION_TYPES: { DECISION: 'DECISION' } },
+      }));
+      jest.doMock('./isCypress', () => jest.fn().mockReturnValue(false));
+      jest.doMock('#app/lib/optimizelyDecisionStore', () => ({
+        notifyDecision: mockNotifyDecision,
+      }));
+      jest.doMock(
+        '#app/lib/analyticsUtils/sendOptimizelyActivationEvent',
+        () => ({
+          __esModule: true,
+          default: mocksendOptimizelyActivationEvent,
+        }),
+      );
+      jest.doMock('#app/lib/analyticsUtils/activationTrackingData', () => ({
+        getActivationTrackingData: () => mockActivationTrackingData,
+      }));
+      // eslint-disable-next-line global-require
+      require('./index');
+    });
+
+    afterEach(() => {
+      jest.resetModules();
+    });
+
+    it('should send the activation event when a new decision is dispatched with an impression', () => {
+      capturedDecisionListener?.({
+        decisionInfo: {
+          flagKey: 'test_flag',
+          variationKey: 'control',
+          decisionEventDispatched: true,
+        },
+      });
+
+      expect(mocksendOptimizelyActivationEvent).toHaveBeenCalledTimes(1);
+      expect(mocksendOptimizelyActivationEvent).toHaveBeenCalledWith({
+        experimentName: 'test_flag',
+        experimentVariant: 'control',
+        ...mockActivationTrackingData,
+      });
+    });
+
+    it('should not send the activation event when no impression was dispatched', () => {
+      capturedDecisionListener?.({
+        decisionInfo: {
+          flagKey: 'test_flag',
+          variationKey: 'control',
+          decisionEventDispatched: false,
+        },
+      });
+
+      expect(mocksendOptimizelyActivationEvent).not.toHaveBeenCalled();
+    });
+
+    it('should not send the activation event when the variation is "off"', () => {
+      capturedDecisionListener?.({
+        decisionInfo: {
+          flagKey: 'test_flag',
+          variationKey: 'off',
+          decisionEventDispatched: true,
+        },
+      });
+
+      expect(mocksendOptimizelyActivationEvent).not.toHaveBeenCalled();
+    });
+
+    it('should not send the activation event again for a decision already recorded this session', () => {
+      capturedDecisionListener?.({
+        decisionInfo: {
+          flagKey: 'test_flag',
+          variationKey: 'control',
+          decisionEventDispatched: true,
+        },
+      });
+
+      mockNotifyDecision.mockReturnValue(false);
+
+      capturedDecisionListener?.({
+        decisionInfo: {
+          flagKey: 'test_flag',
+          variationKey: 'control',
+          decisionEventDispatched: true,
+        },
+      });
+
+      expect(mocksendOptimizelyActivationEvent).toHaveBeenCalledTimes(1);
+    });
+
+    it('should send the activation event for a legacy activate() decision (experimentKey without decisionEventDispatched)', () => {
+      capturedDecisionListener?.({
+        decisionInfo: {
+          experimentKey: 'newswb_ws_article_account_promo_banner',
+          variationKey: 'control',
+        },
+      });
+
+      expect(mocksendOptimizelyActivationEvent).toHaveBeenCalledTimes(1);
+      expect(mocksendOptimizelyActivationEvent).toHaveBeenCalledWith(
+        expect.objectContaining({
+          experimentName: 'newswb_ws_article_account_promo_banner',
+          experimentVariant: 'control',
+        }),
+      );
     });
   });
 });

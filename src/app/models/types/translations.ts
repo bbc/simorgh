@@ -81,6 +81,26 @@ export interface Translations {
     noArticles: string;
     errorText: string;
     loading: string;
+    noJsDescription: string;
+  };
+  actionTooltip?: {
+    success: {
+      title: string;
+      bodyBefore: string;
+      bodyAfter: string;
+    };
+    error: {
+      title: string;
+      body: string;
+    };
+    removed: {
+      title: string;
+      bodyBefore: string;
+      bodyAfter: string;
+    };
+    myNewsLinkText: string;
+    myNewsUrl: string;
+    closeLabel: string;
   };
   error: {
     home?: string;

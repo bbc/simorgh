@@ -8,7 +8,7 @@ import { addSendStaticBeaconToWindow } from '#app/lib/analyticsUtils/staticATITr
 import processClientDeviceAndSendStaticBeacon from '#app/lib/analyticsUtils/staticATITracking/processClientDeviceAndSendStaticBeacon';
 import * as beacon from '../../../lib/analyticsUtils/sendBeacon';
 import CanonicalATIAnalytics from '.';
-import { ReverbBeaconConfig } from '../types';
+import { ResonanceBeaconConfig, ReverbBeaconConfig } from '../types';
 
 describe('Canonical ATI Analytics', () => {
   afterEach(() => {
@@ -53,6 +53,24 @@ describe('Canonical ATI Analytics', () => {
     },
   } as ReverbBeaconConfig;
 
+  const mockResonanceParams = {
+    resonanceProperties: { mode: 'test' },
+    baseProperties: {
+      app: { name: 'news-pidgin' },
+      destination: 'statsDestination',
+      pageName: 'pidgin.articles.c0000000001o.page',
+      producer: 'PIDGIN',
+      siteId: 12345,
+    },
+    pageviewProperties: {
+      contentId: 'urn:bbc:optimo:asset:c0000000001o',
+      contentType: 'article',
+      language: 'pcm',
+      destination: 'statsDestination',
+      producer: 'PIDGIN',
+    },
+  } as ResonanceBeaconConfig;
+
   const mockSendBeacon = jest.fn().mockReturnValue('beacon-return-value');
   // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
   beacon.default = mockSendBeacon;
@@ -62,6 +80,20 @@ describe('Canonical ATI Analytics', () => {
 
     act(() => {
       render(<CanonicalATIAnalytics reverbParams={mockReverbParams} />);
+    });
+
+    const helmet = Helmet.peek();
+
+    expect(helmet.scriptTags).toHaveLength(2);
+  });
+
+  it('should add scripts to helmet for Opera Mini', () => {
+    jest.spyOn(isOperaProxy, 'default').mockImplementation(() => true);
+
+    act(() => {
+      render(<CanonicalATIAnalytics reverbParams={mockReverbParams} />, {
+        isLite: false,
+      });
     });
 
     const helmet = Helmet.peek();
@@ -79,7 +111,7 @@ describe('Canonical ATI Analytics', () => {
     const helmet = Helmet.peek();
 
     expect(helmet.scriptTags[0].innerHTML).toEqual(
-      addSendStaticBeaconToWindow(),
+      `(${addSendStaticBeaconToWindow.toString()})()`,
     );
   });
 
@@ -109,6 +141,54 @@ describe('Canonical ATI Analytics', () => {
     });
 
     expect(mockSendBeacon).not.toHaveBeenCalled();
+  });
+
+  it('should call sendBeacon with resonanceParams when provided', () => {
+    jest.spyOn(isOperaProxy, 'default').mockImplementation(() => false);
+
+    act(() => {
+      render(
+        <CanonicalATIAnalytics
+          reverbParams={mockReverbParams}
+          resonanceParams={mockResonanceParams}
+        />,
+      );
+    });
+
+    expect(mockSendBeacon).toHaveBeenCalledWith(
+      mockReverbParams,
+      mockResonanceParams,
+    );
+  });
+
+  it('should call sendBeacon with undefined resonanceParams when not provided', () => {
+    jest.spyOn(isOperaProxy, 'default').mockImplementation(() => false);
+
+    act(() => {
+      render(
+        <CanonicalATIAnalytics
+          reverbParams={mockReverbParams}
+          resonanceParams={undefined}
+        />,
+      );
+    });
+
+    expect(mockSendBeacon).toHaveBeenCalledWith(mockReverbParams, undefined);
+  });
+
+  it('should call sendBeacon with null resonanceParams when provided as null', () => {
+    jest.spyOn(isOperaProxy, 'default').mockImplementation(() => false);
+
+    act(() => {
+      render(
+        <CanonicalATIAnalytics
+          reverbParams={mockReverbParams}
+          resonanceParams={null}
+        />,
+      );
+    });
+
+    expect(mockSendBeacon).toHaveBeenCalledWith(mockReverbParams, null);
   });
 
   it('should render a noscript image for non-JS users', () => {

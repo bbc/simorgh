@@ -1,7 +1,11 @@
 /* eslint-disable global-require */
+import { Resonance } from '@bbc/resonance';
 import loggerMock from '#testHelpers/loggerMock';
 import { ATI_LOGGING_ERROR } from '#app/lib/logger.const';
-import { ReverbBeaconConfig } from '#app/components/ATIAnalytics/types';
+import {
+  ReverbBeaconConfig,
+  ResonanceBeaconConfig,
+} from '#app/components/ATIAnalytics/types';
 import { waitFor } from '#app/components/react-testing-library-with-providers';
 import sendBeacon from './index';
 import * as onClient from '../../utilities/onClient';
@@ -153,6 +157,60 @@ describe('sendBeacon', () => {
       );
     });
 
+    it('should call Reverb userActionEvent with activation fields for an activation event', async () => {
+      const reverbActivationConfig = {
+        params: {
+          page: 'page',
+          user: '1234-5678',
+        },
+        eventDetails: {
+          eventName: 'activation',
+          eventPublisher: 'viewability',
+          event: {
+            category: 'viewability',
+            action: 'serve',
+            interaction_type: 'optimizely_activation',
+            spec_id: '829257ce-28c6-4bbd-8e87-bdacba05de82',
+            spec_version: '1.0.1',
+          },
+          group: {
+            type: 'experiment',
+            name: 'optimizely',
+          },
+          experience: {
+            engine_id: ['foo.bar'],
+          },
+        },
+      } as unknown as ReverbBeaconConfig;
+
+      await sendBeacon(reverbActivationConfig);
+
+      expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
+      expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
+        'viewability',
+        '',
+        {
+          event: {
+            category: 'viewability',
+            action: 'serve',
+            interaction_type: 'optimizely_activation',
+            spec_id: '829257ce-28c6-4bbd-8e87-bdacba05de82',
+            spec_version: '1.0.1',
+          },
+          group: {
+            type: 'experiment',
+            name: 'optimizely',
+          },
+          experience: {
+            engine_id: ['foo.bar'],
+          },
+        },
+        undefined,
+        undefined,
+        undefined,
+      );
+    });
+
     it(`should not call Reverb when not on client`, async () => {
       isOnClient = false;
 
@@ -204,6 +262,97 @@ describe('sendBeacon', () => {
       expect(loggerMock.error).toHaveBeenCalledWith(ATI_LOGGING_ERROR, {
         error,
       });
+    });
+  });
+
+  describe('Resonance', () => {
+    const reverbConfig = {
+      params: { page: 'page', user: '1234-5678' },
+      eventDetails: { eventName: 'pageView' },
+    } as unknown as ReverbBeaconConfig;
+
+    const resonanceConfig = {
+      resonanceProperties: { mode: 'test' },
+      baseProperties: {
+        app: { name: 'news-pidgin' },
+        destination: 'statsDestination',
+        pageName: 'pidgin.page',
+        producer: 'PIDGIN',
+        siteId: 598343,
+      },
+      pageviewProperties: {
+        contentId: 'urn:bbc:optimo:asset:c0000000001o',
+        contentType: 'article',
+        language: 'pcm',
+        destination: 'statsDestination',
+        producer: 'PIDGIN',
+      },
+    } as unknown as ResonanceBeaconConfig;
+
+    it('should call Resonance.initialise with the correct params when resonanceBeaconConfig is provided', async () => {
+      await sendBeacon(reverbConfig, resonanceConfig);
+
+      expect(Resonance.initialise).toHaveBeenCalledTimes(1);
+      expect(Resonance.initialise).toHaveBeenCalledWith(
+        resonanceConfig.resonanceProperties,
+        resonanceConfig.baseProperties,
+        resonanceConfig.pageviewProperties,
+      );
+    });
+
+    it('should not call Resonance.initialise when resonanceBeaconConfig is null', async () => {
+      await sendBeacon(reverbConfig, null);
+
+      expect(Resonance.initialise).not.toHaveBeenCalled();
+    });
+
+    it('should send error to the logger when Resonance.initialise throws', async () => {
+      const error = new Error('Resonance failed');
+      (Resonance.initialise as jest.Mock).mockImplementationOnce(() => {
+        throw error;
+      });
+
+      await sendBeacon(reverbConfig, resonanceConfig);
+
+      expect(loggerMock.error).toHaveBeenCalledWith(ATI_LOGGING_ERROR, {
+        error: new Error(`Error initialising Resonance: ${error}`),
+      });
+    });
+
+    it('should still call Reverb when Resonance.initialise throws', async () => {
+      // eslint-disable-next-line no-underscore-dangle
+      window.__reverb = { __reverbLoadedPromise: Promise.resolve(reverbMock) };
+      (Resonance.initialise as jest.Mock).mockImplementationOnce(() => {
+        throw new Error('Resonance failed');
+      });
+
+      await sendBeacon(reverbConfig, resonanceConfig);
+
+      expect(reverbMock.viewEvent).toHaveBeenCalledTimes(1);
+    });
+
+    it('should call Reverb before Resonance.initialise', async () => {
+      const callOrder: string[] = [];
+
+      const orderedReverbMock = {
+        ...reverbMock,
+        viewEvent: jest.fn(async () => {
+          callOrder.push('reverb');
+        }),
+      };
+
+      (Resonance.initialise as jest.Mock).mockImplementationOnce(() => {
+        callOrder.push('resonance');
+      });
+
+      // eslint-disable-next-line no-underscore-dangle
+      window.__reverb = {
+        __reverbLoadedPromise: Promise.resolve(orderedReverbMock),
+      };
+
+      await sendBeacon(reverbConfig, resonanceConfig);
+
+      expect(callOrder).toEqual(['reverb', 'resonance']);
     });
   });
 });

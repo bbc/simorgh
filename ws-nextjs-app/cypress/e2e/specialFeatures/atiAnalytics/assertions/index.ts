@@ -11,8 +11,12 @@ import {
   getExpectedAtiDestination,
 } from '../helpers';
 import environment from '../../../../support/helpers/getAppEnv';
+import envs, { EnvironmentConfigType } from '../../../../support/config/envs';
 
 const usesReverbViewabilityModel = applicationType =>
+  !['lite', 'amp'].includes(applicationType);
+
+const usesResonance = applicationType =>
   !['lite', 'amp'].includes(applicationType);
 
 const getAppName = service => {
@@ -28,6 +32,34 @@ const getAppName = service => {
   return ['archive', 'news', 'newsround', 'scotland', 'sport'].includes(service)
     ? `[${service}]`
     : `[news-${service}]`;
+};
+
+const getResonanceAppName = service => {
+  const customServiceAppName = {
+    ws: 'news',
+    romania: 'news-romanian',
+  }[service];
+
+  if (customServiceAppName) {
+    return customServiceAppName;
+  }
+
+  return `news-${service}`;
+};
+
+const getATIParamsFromInterception = request => {
+  const queryParams = request?.query as Record<string, string | string[]>;
+
+  if (!queryParams || typeof queryParams !== 'object') {
+    return getATIParamsFromURL(request?.url || '');
+  }
+
+  return Object.fromEntries(
+    Object.entries(queryParams).map(([key, value]) => [
+      key,
+      Array.isArray(value) ? value[0] : value,
+    ]),
+  );
 };
 
 const assertATIPageViewEventParamsExist = ({
@@ -66,6 +98,38 @@ const assertATIPageViewEventParamsExist = ({
     expect(params).to.have.property('x12'); // last published
     expect(params).to.have.property('x13'); // ldp things
     expect(params).to.have.property('x17'); // category
+  }
+};
+
+const assertResonancePageViewEventParamsExist = ({
+  metadata,
+  event,
+  contentType,
+}) => {
+  expect(metadata).to.have.property('client_name');
+  expect(metadata).to.have.property('collection_library_name');
+  expect(metadata).to.have.property('collection_library_version');
+  expect(metadata).to.have.property('event_category');
+  expect(metadata).to.have.property('id');
+  expect(metadata).to.have.property('request_time');
+
+  expect(event).to.have.property('app_name');
+  expect(event).to.have.property('browser_language');
+  expect(event).to.have.property('content_type');
+  expect(event).to.have.property('destination');
+  expect(event).to.have.property('event_id');
+  expect(event).to.have.property('event_time');
+  expect(event).to.have.property('event_name');
+  expect(event).to.have.property('event_ts'); // timestamp
+  expect(event).to.have.property('language');
+  expect(event).to.have.property('page_name');
+  expect(event).to.have.property('page_title');
+  expect(event).to.have.property('producer');
+  expect(event).to.have.property('site_id'); // Level 1 Site ID. Different from 's2' Level 2 Site ID
+  expect(event).to.have.property('url');
+
+  if (!['list-datadriven', 'static'].includes(contentType)) {
+    expect(event).to.have.property('content_id');
   }
 };
 
@@ -118,7 +182,20 @@ const assertReverbViewabilityComponentEventParamsExist = ({
 const fieldIsValidString = field =>
   typeof field === 'string' && field.trim().length > 0;
 
+// Temporary debug - identify if long localised item text is producing invalid JSON.
+const assertEventsPayloadNotTruncated = (payload: string) => {
+  const trimmedPayload = payload.trim();
+  const lastChar = trimmedPayload[trimmedPayload.length - 1];
+
+  if (lastChar !== ']' && lastChar !== '}') {
+    throw new Error(
+      `ATI events payload appears truncated (length=${payload.length})`,
+    );
+  }
+};
+
 const validateViewabilityEventDetails = ({ payload, actionType }) => {
+  assertEventsPayloadNotTruncated(payload);
   const arr = JSON.parse(payload);
 
   return arr.some(event => {
@@ -244,6 +321,61 @@ export const assertPageView = ({
   });
 };
 
+export const assertResonancePageView = ({
+  pageIdentifier,
+  applicationType,
+  contentType,
+  service,
+  path,
+  siteId,
+  expectsResonanceEvents = true,
+}) => {
+  const sendsResonanceEvents =
+    usesResonance(applicationType) && expectsResonanceEvents;
+
+  const testDescription = sendsResonanceEvents
+    ? `should send a Resonance page view event with service = ${service}, page identifier = ${pageIdentifier}, producer ID = ${siteId}, application type = ${applicationType} and content type = ${contentType}`
+    : `should not send a Resonance page view event with service = ${service}, application type = ${applicationType}`;
+
+  it(testDescription, () => {
+    const resonanceBagBaseUrl = (envs as EnvironmentConfigType).resonanceBagUrl;
+    const resonanceBagEventUrlPattern = new RegExp(
+      `${resonanceBagBaseUrl}/v[0-9]+/event`,
+    );
+
+    cy.intercept('POST', resonanceBagEventUrlPattern, request => {
+      request.reply({ statusCode: 200 });
+    }).as('resonance-page-view');
+
+    cy.visit(path, { retryOnStatusCodeFailure: true });
+
+    if (!sendsResonanceEvents) {
+      cy.get('body').should('be.visible');
+      cy.get('@resonance-page-view.all').should('have.length', 0);
+      return;
+    }
+
+    cy.wait('@resonance-page-view').then(({ request }) => {
+      expect(request.body).to.have.property('bag_metadata');
+      expect(request.body).to.have.property('events');
+
+      const metadata = request.body.bag_metadata;
+      const event = request.body.events[0];
+
+      assertResonancePageViewEventParamsExist({
+        metadata,
+        event,
+        contentType,
+      });
+
+      expect(event).to.have.property('app_name', getResonanceAppName(service));
+      expect(event).to.have.property('content_type', contentType);
+      expect(event).to.have.property('event_name', 'page.display');
+      expect(event).to.have.property('page_name', pageIdentifier);
+    });
+  });
+};
+
 const assertViewabilityModelViewEvent = ({
   pageIdentifier,
   params,
@@ -264,18 +396,117 @@ const assertViewabilityModelViewEvent = ({
   expect(parseInt(eventContext[0].data.site.level2_id, 10)).to.equal(siteId);
 };
 
+const getMatchingViewabilityEventData = ({
+  payload,
+  actionType,
+  component,
+  expectedItemText,
+}) => {
+  assertEventsPayloadNotTruncated(payload);
+  const arr = JSON.parse(payload);
+
+  const matchingEvents = arr.filter(
+    event =>
+      event.name === `viewability.${actionType}` &&
+      event.data?.item?.name === component,
+  );
+
+  // Multiple items (e.g. several stream-embedded videos) can share the same
+  // componentName and land in the same beacon batch, so disambiguate using
+  // the known item text when available rather than taking the first match.
+  if (expectedItemText) {
+    const exactMatch = matchingEvents.find(
+      event => event.data?.item?.text === expectedItemText,
+    );
+
+    if (exactMatch) return exactMatch.data;
+  }
+
+  return matchingEvents[0]?.data;
+};
+
+const assertItemAndGroupTaxonomy = ({
+  payload,
+  actionType,
+  component,
+  expectedItemType,
+  expectedGroupType,
+  expectedItemText,
+}) => {
+  if (!expectedItemType && !expectedGroupType && !expectedItemText) return;
+
+  const eventData = getMatchingViewabilityEventData({
+    payload,
+    actionType,
+    component,
+    expectedItemText,
+  });
+
+  if (expectedItemType) {
+    expect(eventData?.item?.type).to.equal(
+      expectedItemType,
+      'eventDetails.item.type',
+    );
+  }
+
+  if (expectedItemText) {
+    expect(eventData?.item?.text).to.equal(
+      expectedItemText,
+      'eventDetails.item.text',
+    );
+  }
+
+  if (expectedGroupType) {
+    expect(eventData?.group?.type).to.equal(
+      expectedGroupType,
+      'eventDetails.group.type',
+    );
+  }
+};
+
+const findMatchingEventDataFromInterceptions = ({
+  interceptions,
+  component,
+  expectedItemText,
+}) => {
+  let matched;
+
+  interceptions.forEach(interception => {
+    if (matched) return;
+
+    const params = getATIParamsFromInterception(interception.request);
+
+    if (!params.events) return;
+
+    const eventData = getMatchingViewabilityEventData({
+      payload: params.events,
+      actionType: VIEW_EVENT,
+      component,
+      expectedItemText,
+    });
+
+    if (eventData) {
+      matched = { eventData, params };
+    }
+  });
+
+  return matched;
+};
+
 export const assertATIComponentViewEvent = ({
   component,
   pageIdentifier,
   applicationType,
   siteId,
+  expectedItemType,
+  expectedGroupType,
+  expectedItemText,
 }) => {
   const requestAlias = `@${component}-viewability-view`;
 
-  cy.wait(requestAlias)
-    .its('request.url')
-    .then(url => {
-      const params = getATIParamsFromURL(url);
+  if (!expectedItemText) {
+    cy.wait(requestAlias).then(({ request }) => {
+      const params = getATIParamsFromInterception(request);
 
       assertViewabilityModelViewEvent({
         pageIdentifier,
@@ -283,7 +514,80 @@ export const assertATIComponentViewEvent = ({
         applicationType,
         siteId,
       });
+
+      assertItemAndGroupTaxonomy({
+        payload: params.events,
+        actionType: VIEW_EVENT,
+        component,
+        expectedItemType,
+        expectedGroupType,
+        expectedItemText: undefined,
+      });
     });
+    return;
+  }
+
+  // Multiple items can share the same componentName (e.g. several
+  // stream-embedded videos), and their view events may arrive across
+  // several separate beacon requests as different videos become visible
+  // at different times. cy.wait() is used first to guarantee the alias
+  // actually exists in Cypress's registry (it's created dynamically inside
+  // the intercept handler, so cy.get('@alias.all') throws immediately
+  // rather than retrying if no matching request has occurred yet). Once at
+  // least one match exists, poll the full accumulated set of requests
+  // under this alias until one of them contains an event matching the
+  // expected item text, rather than assuming the first (or Nth) request
+  // to arrive is the one we scrolled to.
+  cy.wait(requestAlias, { timeout: 15000 });
+
+  cy.get(`${requestAlias}.all`, { timeout: 15000 }).should(interceptions => {
+    const matched = findMatchingEventDataFromInterceptions({
+      interceptions,
+      component,
+      expectedItemText,
+    });
+
+    const errorMessage = `a "${component}" viewability event with item.text "${expectedItemText}"`;
+
+    // eslint-disable-next-line no-unused-expressions
+    expect(matched, errorMessage).to.exist;
+  });
+
+  cy.get(`${requestAlias}.all`).then(interceptions => {
+    const matched = findMatchingEventDataFromInterceptions({
+      interceptions,
+      component,
+      expectedItemText,
+    });
+
+    const { eventData, params } = matched;
+
+    assertViewabilityModelViewEvent({
+      pageIdentifier,
+      params,
+      applicationType,
+      siteId,
+    });
+
+    if (expectedItemType) {
+      expect(eventData?.item?.type).to.equal(
+        expectedItemType,
+        'eventDetails.item.type',
+      );
+    }
+
+    expect(eventData?.item?.text).to.equal(
+      expectedItemText,
+      'eventDetails.item.text',
+    );
+
+    if (expectedGroupType) {
+      expect(eventData?.group?.type).to.equal(
+        expectedGroupType,
+        'eventDetails.group.type',
+      );
+    }
+  });
 };
 
 const assertViewabilityModelClickEvent = ({
@@ -320,15 +624,14 @@ export const assertATIComponentClickEvent = ({
 }) => {
   const requestAlias = `@${component}-viewability-click`;
 
-  cy.wait(requestAlias)
-    .its('request.url')
-    .then(url => {
-      const params = getATIParamsFromURL(url);
-      assertViewabilityModelClickEvent({
-        pageIdentifier,
-        params,
-        applicationType,
-        siteId,
-      });
+  cy.wait(requestAlias).then(({ request }) => {
+    const params = getATIParamsFromInterception(request);
+
+    assertViewabilityModelClickEvent({
+      pageIdentifier,
+      params,
+      applicationType,
+      siteId,
     });
+  });
 };

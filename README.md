@@ -4,7 +4,7 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/bbc/simorgh/badge.svg)](https://snyk.io/test/github/bbc/simorgh)
 [![Storybook](https://cdn.jsdelivr.net/gh/storybooks/brand@master/badge/badge-storybook.svg)](https://bbc.github.io/simorgh/)
 
-BBC World Service News websites are rendered using Simorgh, a ReactJS based application. Simorgh also renders AMP news article pages for World Service and Public Service News. 
+BBC World Service News websites are rendered using Simorgh, a ReactJS based application. Simorgh also renders AMP news article pages for World Service and Public Service News.
 
 Simorgh provides a fast and accessible web experience used by millions of people around the world each month ([see list of websites using Simorgh](https://github.com/bbc/simorgh/blob/latest/docs/Simorgh-Release-Info.mdx)). It is regularly maintained and well documented, and we welcome open source contributors.
 
@@ -55,9 +55,13 @@ yarn install
 ```
 
 ## Local Development
+Export a relevant BFF_PATH so that simorgh can connect to the relevant fabl instance:
+```
+# For a local instance of fabl
+export BFF_PATH="http://localhost:3210/module/simorgh-bff"
+```
 
-To run this application locally, with hot-reloading:
-
+Start the application:
 ```
 cd ws-nextjs-app
 yarn dev
@@ -66,6 +70,14 @@ yarn dev
 The nextJS application will start on [http://localhost:7081](http://localhost:7081).
 
 Once the application is running, you can visit a valid route, e.g. http://localhost:7081/pidgin.
+
+### Secret Environment Variables
+
+Some local-development commands used by BBC staff require additional environment variables that are not stored in this repository. BBC staff can follow this [guide](https://github.com/bbc/simorgh-infrastructure/tree/latest/scripts/addShellProfileEnvVariables) (requires access) to set them on your machine.
+
+### Feature toggles
+
+Some features are hidden/shown based on feature toggles set remotely via BBC internal systems. By default when running the application locally however, these values are not fetched remotely and are set in [these config files](https://github.com/bbc/simorgh/tree/latest/src/app/lib/config/toggles). As such, these may differ between environments. Please read the [toggles documentation](https://github.com/bbc/simorgh/blob/latest/src/app/lib/config/toggles/README.md) for more information and for instructions on how to fetch remote toggle values locally.
 
 ### Article pages
 
@@ -110,7 +122,7 @@ Topic pages use internal BBC APIs that are not publicly accessible. This can cau
 No BFF_PATH set as environment variable, you will not have access to topics
 ```
 
-Internal developers who need to work on topic pages locally should contact the team for access.
+Internal developers who need to work on topic pages locally should contact the team for access. See [Secret Environment Variables](#secret-environment-variables) for how to set the required environment variables.
 
 ### Other page types
 
