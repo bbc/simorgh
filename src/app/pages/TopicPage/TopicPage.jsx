@@ -34,7 +34,6 @@ const TopicPage = ({ pageData }) => {
 
   const { assetId: topicId } = parseRoute(pathname);
   const topStoriesTitle = path(['topStoriesTitle'], translations);
-  console.log('pageData', pageData);
   const { pageXOfY, previousPage, nextPage, page } = {
     pageXOfY: 'Page {x} of {y}',
     previousPage: 'Previous Page',
