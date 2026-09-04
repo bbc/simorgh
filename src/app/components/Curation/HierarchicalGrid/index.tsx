@@ -10,6 +10,7 @@ import VisuallyHiddenText from '../../VisuallyHiddenText';
 import formatDuration from '../../../lib/utilities/formatDuration';
 import Promo from '../../../legacy/components/Promo';
 import MediaLoader from '../../MediaLoader';
+import isLiveMedia from '../../MediaLoader/utils/isLiveMedia';
 import { DESKTOP, TABLET, MOBILE, SMALL } from './dataStructures';
 import { styles } from './index.styles';
 import { ServiceContext } from '../../../contexts/ServiceContext';
@@ -82,8 +83,6 @@ const HiearchicalGrid = ({
           const lazyLoadImages = !(isFirstPromo && isFirstCuration);
           const fetchpriority =
             isFirstPromo && isFirstCuration ? 'high' : undefined;
-          const showDuration =
-            promo.duration && ['video', 'audio'].includes(promo.type);
           const isMedia = isMediaType(promo.type);
           const typeTranslated =
             (promo.type === 'audio' && `${audioTranslation}, `) ||
@@ -111,7 +110,32 @@ const HiearchicalGrid = ({
 
           const inSituMediaBlocks =
             !isAmp && promo.inSituMedia?.length ? promo.inSituMedia : null;
+          // silver promos store their live state in the media blocks
+          const isLiveInSituMedia = Boolean(
+            inSituMediaBlocks && isLiveMedia(inSituMediaBlocks),
+          );
+          const showLiveLabel = Boolean(isLive || isLiveInSituMedia);
+          const showDuration =
+            !showLiveLabel &&
+            promo.duration &&
+            ['video', 'audio'].includes(promo.type);
           const linkCss = inSituMediaBlocks ? styles.headlineLink : undefined;
+          const mediaHeadline = (
+            <>
+              <VisuallyHiddenText data-testid="visually-hidden-text">
+                {typeTranslated}
+              </VisuallyHiddenText>
+              <Promo.MediaIcon
+                className="inline-icon"
+                type={promo.type}
+                css={styles.inlineIcon}
+              />
+              {promo.title}
+              {showDuration && (
+                <VisuallyHiddenText>{durationString}</VisuallyHiddenText>
+              )}
+            </>
+          );
           const promoText = (
             <>
               <Promo.Heading
@@ -128,22 +152,18 @@ const HiearchicalGrid = ({
                     css={linkCss}
                     {...clickTrackerHandler}
                   >
-                    <span id={promo.id} role="text">
-                      <VisuallyHiddenText data-testid="visually-hidden-text">
-                        {typeTranslated}
-                      </VisuallyHiddenText>
-                      <Promo.MediaIcon
-                        className="inline-icon"
-                        type={promo.type}
-                        css={styles.inlineIcon}
-                      />
-                      {promo.title}
-                      {showDuration && (
-                        <VisuallyHiddenText>
-                          {durationString}
-                        </VisuallyHiddenText>
-                      )}
-                    </span>
+                    {showLiveLabel ? (
+                      <LiveLabel
+                        id={promo.id}
+                        className={isFirstPromo ? 'first-promo' : undefined}
+                      >
+                        {mediaHeadline}
+                      </LiveLabel>
+                    ) : (
+                      <span id={promo.id} role="text">
+                        {mediaHeadline}
+                      </span>
+                    )}
                   </Promo.A>
                 ) : (
                   <Promo.A
@@ -151,7 +171,7 @@ const HiearchicalGrid = ({
                     css={linkCss}
                     {...clickTrackerHandler}
                   >
-                    {isLive ? (
+                    {showLiveLabel ? (
                       <LiveLabel
                         {...(isFirstPromo
                           ? {
@@ -170,7 +190,7 @@ const HiearchicalGrid = ({
               <Promo.Body className="promo-paragraph" css={styles.body}>
                 {promo.description}
               </Promo.Body>
-              {!isLive ? (
+              {!showLiveLabel ? (
                 <div css={styles.metadataAndTopicData}>
                   {relatedTopic && !isLiveEnvironment() && (
                     <a

@@ -1,5 +1,6 @@
 import { PageTypes, Services } from '#app/models/types/global';
 import { data as hindiTvProgramme } from '#data/hindi/bbc_hindi_tv/tv_programmes/w13xttlw.json';
+import arabicSilverLiveStreamFixture from '#data/arabic/articles/c5y35dxlpv2o.json';
 import {
   AUDIO_PAGE,
   LIVE_PAGE,
@@ -605,6 +606,34 @@ describe('buildSettings', () => {
           fullscreen: { enabled: true },
         },
       });
+    });
+
+    it('should configure a Silver webcast without a live flag as live', () => {
+      const [videoBlock] =
+        arabicSilverLiveStreamFixture.data.article.promo.media.blocks;
+
+      const result = buildSettings({
+        ...baseSettings,
+        service: 'arabic',
+        lang: 'ar',
+        producer: 'ARABIC',
+        blocks: videoBlock.model.blocks as unknown as MediaBlock[],
+      });
+
+      expect(result?.playerConfig.playlistObject).toMatchObject({
+        items: [
+          {
+            kind: 'programme',
+            live: true,
+            versionID: 'l0058t2x',
+          },
+        ],
+        simulcast: true,
+      });
+      expect(result?.playerConfig.ui.cta).toEqual({ mode: null });
+      expect(result?.playerConfig.playlistObject?.items[0]).not.toHaveProperty(
+        'duration',
+      );
     });
 
     it('Should process a LegacyMediaBlock into a valid playlist item for a "MAP" page', () => {

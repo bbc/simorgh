@@ -15,6 +15,7 @@ import getCaptionBlock from '../utils/getCaptionBlock';
 import buildPlaceholderConfig from '../utils/buildPlaceholderConfig';
 import shouldDisplayAds from '../utils/shouldDisplayAds';
 import getMediaOrientation from '../utils/getMediaOrientation';
+import isLiveMedia from '../utils/isLiveMedia';
 import { getAmpIframeUrl, getExternalEmbedUrl } from '../utils/urlConstructors';
 
 const DEFAULT_WIDTH = 512;
@@ -98,13 +99,14 @@ export default ({
         })
       : aresMediaMetadata?.imageUrl);
 
-  const isLive = aresMediaMetadata?.live ?? false;
+  const isLive = isLiveMedia(blocks);
 
+  // silver durations describe the session window rather than the video length
   const items: PlaylistItem[] = [
     {
       versionID: versionPID,
       kind,
-      duration: rawDuration,
+      ...(!hasWebcastItems && { duration: rawDuration }),
       ...(isLive && { live: true }),
     },
   ];
@@ -141,6 +143,13 @@ export default ({
       ...(embedded && { insideIframe: true, embeddedOffsite: true }),
       ...(externalEmbedUrl && { externalEmbedUrl }),
       autoplay: pageType !== 'mediaArticle',
+      // news players need this override to centre a live play icon without a duration
+      ...(hasWebcastItems && {
+        ui: {
+          ...basePlayerConfig.ui,
+          cta: { mode: null },
+        },
+      }),
       playlistObject: {
         title,
         summary: caption || '',

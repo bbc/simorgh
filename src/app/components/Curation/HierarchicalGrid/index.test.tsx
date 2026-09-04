@@ -1,8 +1,10 @@
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import * as isLiveEnv from '#lib/utilities/isLive';
+import arabicSilverLiveStreamFixture from '#data/arabic/articles/c5y35dxlpv2o.json';
 import { matchers } from '@emotion/jest';
 import MediaLoader from '../../MediaLoader';
 import { aresMediaBlocks } from '../../MediaLoader/fixture';
+import { MediaBlock } from '../../MediaLoader/types';
 import { fireEvent, render } from '../../react-testing-library-with-providers';
 import { pidginPromos as fixture } from './fixtures';
 import mediaFixture from './mediaFixtures';
@@ -31,6 +33,21 @@ const getSummariesWithInSituMedia = () => {
   return {
     inSituPromo,
     summaries: [inSituPromo, audioPromo, articlePromo, recentlyPublishedPromo],
+  };
+};
+
+const getSummariesWithLiveInSituMedia = () => {
+  const { inSituPromo, summaries } = getSummariesWithInSituMedia();
+  const [videoBlock] =
+    arabicSilverLiveStreamFixture.data.article.promo.media.blocks;
+  const liveInSituPromo = {
+    ...inSituPromo,
+    inSituMedia: videoBlock.model.blocks as unknown as MediaBlock[],
+  };
+
+  return {
+    inSituPromo: liveInSituPromo,
+    summaries: [liveInSituPromo, ...summaries.slice(1)],
   };
 };
 
@@ -250,6 +267,46 @@ describe('Hierarchical Grid Curation', () => {
       }),
       undefined,
     );
+  });
+
+  it('displays the translated live label on a Silver in-situ promo', () => {
+    const { inSituPromo, summaries } = getSummariesWithLiveInSituMedia();
+
+    const { container } = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={summaries}
+        eventTrackingData={minimalEventTrackingData}
+      />,
+      { service: 'arabic' },
+    );
+
+    const firstPromo = container.querySelector('li');
+
+    expect(firstPromo).toHaveTextContent('مباشر');
+    expect(firstPromo?.querySelector('a')).toHaveAttribute(
+      'href',
+      inSituPromo.link,
+    );
+    expect(
+      firstPromo?.querySelector('.promo-timestamp'),
+    ).not.toBeInTheDocument();
+    expect(firstPromo).not.toHaveTextContent('المدة');
+  });
+
+  it('does not display a live label on an on-demand in-situ promo', () => {
+    const { summaries } = getSummariesWithInSituMedia();
+
+    const { container } = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={summaries}
+        eventTrackingData={minimalEventTrackingData}
+      />,
+      { service: 'arabic' },
+    );
+
+    expect(container.querySelector('li')).not.toHaveTextContent('مباشر');
   });
 
   it('tracks the MAP article headline link when in-situ media is rendered', () => {
