@@ -1,5 +1,5 @@
 import { Platforms, Services } from '#app/models/types/global';
-import { buildActivationEventModel } from '#app/components/ATIAnalytics/atiUrl';
+import { buildActivationEventModel } from '../beaconModels';
 import sendBeacon from '../sendBeacon';
 
 type Props = {

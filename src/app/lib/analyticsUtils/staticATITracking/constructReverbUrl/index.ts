@@ -1,11 +1,11 @@
 import { use } from 'react';
 import { reverbUrlHelper } from '@bbc/reverb-url-helper';
-import { buildReverbEventModel } from '#app/components/ATIAnalytics/atiUrl';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
 import { EventTrackingProps } from '#app/lib/analyticsUtils/types';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import { buildReverbEventModel } from '../../beaconModels';
 
 export default ({
   eventTrackingData,

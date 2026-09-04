@@ -9,7 +9,7 @@ import { RequestContext } from '#app/contexts/RequestContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { AccountContext } from '#app/contexts/AccountContext';
 import withOptimizelyProvider from '#app/legacy/containers/PageHandlers/withOptimizelyProvider';
-import buildAnalyticsParams from '#app/components/ATIAnalytics/params';
+import { buildAnalyticsParams } from '#app/lib/analyticsUtils/buildParams';
 import {
   ATIData,
   ReverbBeaconConfig,
