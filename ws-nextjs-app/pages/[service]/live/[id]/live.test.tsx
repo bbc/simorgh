@@ -817,7 +817,7 @@ describe('Live Page', () => {
       expect(title).toBeInTheDocument();
     });
 
-    it('should render a visually hidden h1 when displaying sportData', async () => {
+    it('should render the page title visibly when displaying sportData', async () => {
       const pageDataWithSportData = {
         ...mockPageData,
         sportDataEventContent: sportDataFixture.data.sportDataEventContent,
@@ -828,11 +828,9 @@ describe('Live Page', () => {
         render(<Live pageData={pageDataWithSportData} />);
       });
 
-      const visuallyHiddenTitle = screen.getByText(
-        'Israeli tanks shell Jabalia camp as heavy fighting continues in north Gaza', // mock data, in production this would be a sport title
-      );
-      expect(visuallyHiddenTitle).toBeInTheDocument();
-      expect(visuallyHiddenTitle).toHaveStyle(
+      const pageTitle = screen.getByText(mockPageData.title);
+      expect(pageTitle).toBeInTheDocument();
+      expect(pageTitle).not.toHaveStyle(
         'overflow: hidden; position: absolute; width: 1px;',
       );
     });
