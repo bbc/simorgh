@@ -118,7 +118,7 @@ link: (hasMargin?: boolean) =>
 ```
 
 ```tsx
-<a className={`${styles.link}${hasMargin ? ` ${styles.linkWithMargin}` : ''}`}>
+<a className={clsx(styles.link, hasMargin && styles.linkWithMargin)}>
 ```
 
 If the variant **replaces** the same properties rather than adding new ones, don't apply both classes. Two classes setting identical properties makes the result depend on their order in the compiled CSS, and leaves the base declarations unused. Use one class or the other.
@@ -161,17 +161,21 @@ Note that the condition is a **prop**, not the style object — `styles.linkWith
 
 **After:**
 ```tsx
-<a className={`${styles.link}${hasMargin ? ` ${styles.linkWithMargin}` : ''}`}>
+import clsx from 'clsx';
+
+<a className={clsx(styles.link, hasMargin && styles.linkWithMargin)}>
 ```
 
-❌ Carrying `&&` across renders the literal string `false` into the class attribute:
+`clsx` drops falsy entries the same way Emotion's `css` array did, so this is a direct translation rather than a rewrite.
+
+❌ A plain template literal carries `&&` across as the literal string `false`:
 
 ```tsx
 // produces class="link_x1 false" when hasMargin is false
 <a className={`${styles.link} ${hasMargin && styles.linkWithMargin}`}>
 ```
 
-Always use a ternary with an empty-string fallback. Do not add `clsx` or `classnames` — neither is a dependency of this repo.
+Use `clsx` for any conditional combination of classes, however many branches are involved.
 
 ### Dynamic Styles
 
