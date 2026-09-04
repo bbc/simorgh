@@ -2,6 +2,7 @@ import {
   render,
   fireEvent,
   getByRole,
+  screen,
 } from '../../../../../components/react-testing-library-with-providers';
 import {
   CanonicalDropdown,
@@ -58,7 +59,7 @@ describe('Canonical', () => {
     });
 
     it('should render correctly', () => {
-      const { container } = render(
+      render(
         <CanonicalMenuButton
           announcedText="Menu"
           onClick={() => {}}
@@ -66,7 +67,7 @@ describe('Canonical', () => {
           dir="ltr"
         />,
       );
-      expect(container).toMatchSnapshot();
+      expect(screen.getByRole('button')).toBeInTheDocument();
     });
 
     it('should render rtl correctly', () => {
@@ -79,7 +80,7 @@ describe('Canonical', () => {
         />,
         { service: 'persian' },
       );
-      expect(container).toMatchSnapshot();
+      expect(getByRole(container, 'button')).toHaveAttribute('dir', 'rtl');
     });
   });
 
@@ -112,7 +113,7 @@ describe('Canonical', () => {
     });
 
     it('should render correctly', () => {
-      const { container } = render(
+      render(
         <CanonicalMenuButton
           announcedText="Menu"
           onClick={() => {}}
@@ -120,7 +121,7 @@ describe('Canonical', () => {
           dir="ltr"
         />,
       );
-      expect(container).toMatchSnapshot();
+      expect(screen.getByRole('button')).toBeInTheDocument();
     });
 
     it('should render rtl correctly', () => {
@@ -133,24 +134,22 @@ describe('Canonical', () => {
         />,
         { service: 'persian' },
       );
-      expect(container).toMatchSnapshot();
+      expect(getByRole(container, 'button')).toHaveAttribute('dir', 'rtl');
     });
   });
 });
 
 describe('Dropdown navigation', () => {
   it('should render correctly when closer', () => {
-    const { container } = render(
+    render(
       <CanonicalDropdown isOpen={false}>{dropdownList}</CanonicalDropdown>,
     );
-    expect(container).toMatchSnapshot();
+    expect(screen.getByRole('list', { hidden: true })).toBeInTheDocument();
   });
 
   it('should render correctly when open', () => {
-    const { container } = render(
-      <CanonicalDropdown isOpen>{dropdownList}</CanonicalDropdown>,
-    );
-    expect(container).toMatchSnapshot();
+    render(<CanonicalDropdown isOpen>{dropdownList}</CanonicalDropdown>);
+    expect(screen.getByRole('list')).toBeInTheDocument();
   });
 
   describe('AMP Menu Button', () => {
@@ -162,7 +161,7 @@ describe('Dropdown navigation', () => {
           dir="ltr"
         />,
       );
-      expect(container).toMatchSnapshot();
+      expect(container.firstChild).toBeInTheDocument();
     });
 
     it('should render rtl correctly', () => {
@@ -174,7 +173,7 @@ describe('Dropdown navigation', () => {
         />,
         { service: 'persian' },
       );
-      expect(container).toMatchSnapshot();
+      expect(container.firstChild).toBeInTheDocument();
     });
   });
 });

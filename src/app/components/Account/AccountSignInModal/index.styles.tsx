@@ -1,6 +1,7 @@
 import { Theme, css } from '@emotion/react';
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import PLAYER_FULLSCREEN_CLASS from '#lib/mediaPlayerFullscreen.const';
 
 const {
   SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
@@ -25,6 +26,10 @@ export default {
     justifyContent: 'center',
     overflowY: 'auto',
     overflowX: 'hidden',
+
+    [`body.${PLAYER_FULLSCREEN_CLASS} &`]: {
+      zIndex: -1,
+    },
   }),
 
   backdrop: css({

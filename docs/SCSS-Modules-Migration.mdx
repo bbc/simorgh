@@ -20,7 +20,7 @@ Legacy components need modernisation *and* a styling change. Converting them to 
 
 ## Definition of done
 
-This programme is complete when `src/app/components` contains no imports from `@emotion/*` and no `index.styles.*` files.
+This programme is complete when `src/app/components` contains no imports from `@emotion/*`, no `index.styles.*` files, and no `css` props. The last check matters because `tsconfig.json` sets `jsxImportSource` to `@emotion/react` globally, so a component can use Emotion's `css` prop — as `Heading` and `Paragraph` currently do — without importing `@emotion` or having its own `index.styles.*` file.
 
 ## Batching principles
 
@@ -51,6 +51,8 @@ These cannot be fully migrated without a decision that goes beyond styling. Keep
 | `MostRead/Canonical/Item` | Renders `Grid` from `legacy/components/Grid` |
 | `MostRead/Canonical/List` | Renders `psammead-grid` |
 | `MostRead/Label` | Passes a `css` prop into `psammead-section-label`, and uses a palette value as a runtime prop |
+| `RelatedTopics` | Passes a `css` prop into `psammead-section-label`, and uses a palette value as a runtime prop |
+| `Recommendations` | Passes a `css` prop into `psammead-section-label`, and uses a palette value as a runtime prop |
 | `RelatedContentSection` | Imports a legacy Emotion styles file directly (`OptimoPromos/PromoItem/index.styles`) |
 
 For the grid cases, our styling standards direct us away from `psammead-grid`, so these need a native layout replacement rather than a like-for-like port.
@@ -73,7 +75,7 @@ Legacy imports that are **pure utilities** never block migration. For example `R
 |---|---|---|
 | 1 | `Copyright`, `ReadTime`, `InlineLink` | Small, self-contained, have tests and stories, no snapshots — proves the pattern |
 | 2 | `VisuallyHiddenText`, `Spinner`, `LiveText` | `VisuallyHiddenText` is tiny but used in ~200 places, so it unlocks a lot for little risk |
-| 3 | `Footer/Link`, `RelatedTopics`, `Curation/CurationMessageBanner` | Small, with few consumers and no legacy imports |
+| 3 | `Footer/Link`, `Curation/CurationMessageBanner` | Small, with few consumers and no legacy imports |
 | 4 | `CallToActionLink` and its sub-components | A cohesive unit; migrating together avoids a split-brain component |
 
 ## Tooling

@@ -1,6 +1,7 @@
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
 import { visuallyHiddenStyle } from '#app/lib/styles.const';
+import PLAYER_FULLSCREEN_CLASS from '#lib/mediaPlayerFullscreen.const';
 
 const styles = {
   bodyOverflowHidden: () =>
@@ -27,6 +28,10 @@ const styles = {
       alignItems: 'center',
       justifyContent: 'center',
       zIndex: 2147483647,
+
+      [`body.${PLAYER_FULLSCREEN_CLASS} &`]: {
+        zIndex: -1,
+      },
 
       '&::after': {
         content: '""',

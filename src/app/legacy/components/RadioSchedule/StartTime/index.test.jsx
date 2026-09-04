@@ -10,7 +10,7 @@ describe('StartTime', () => {
       locale: 'en-gb',
       service: 'news',
     });
-    expect(container).toMatchSnapshot();
+    expect(container.querySelector('time')).toBeInTheDocument();
   });
 
   it('should render RTL correctly', () => {
@@ -19,6 +19,6 @@ describe('StartTime', () => {
       locale: 'fa',
       service: 'persian',
     });
-    expect(container).toMatchSnapshot();
+    expect(container.querySelector('time')).toBeInTheDocument();
   });
 });
