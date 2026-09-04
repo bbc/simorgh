@@ -55,7 +55,7 @@ export default ({ service, pageType }: ServiceParametersType) => {
                 cy.get('[data-e2e="media-loader__container"]')
                   .first()
                   .within(() => {
-                    cy.get('button.has_duration')
+                    cy.get('button.has_duration', { includeShadowDom: true })
                       .should('be.visible')
                       .within(() => {
                         cy.get('svg').should('be.visible');
