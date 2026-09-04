@@ -2,14 +2,11 @@ import { css, Theme } from '@emotion/react';
 import pixelsToRem from '../../../../../../src/app/utilities/pixelsToRem';
 
 export default {
-  headingStyles: ({ spacings, mq, fontSizes }: Theme) =>
+  headingStyles: ({ spacings, mq }: Theme) =>
     css({
       padding: `${spacings.FULL}rem 0 ${spacings.DOUBLE}rem`,
       [mq.GROUP_2_ONLY]: {
         paddingTop: 0,
-      },
-      [mq.GROUP_3_MIN_WIDTH]: {
-        ...fontSizes.doublePica,
       },
       [mq.GROUP_4_MIN_WIDTH]: {
         paddingTop: `${spacings.DOUBLE}rem`,
