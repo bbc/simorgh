@@ -83,10 +83,11 @@ export default class CustomApp extends App<Props> {
     console.log('PARSE_ROUTE_INPUT', asPath);
 
     // temp fallback
-    const { service = 'kyrgyz', variant } = parseRoute(asPath) as {
-      service: Services;
+    const { service: rawService, variant } = parseRoute(asPath) as {
+      service: Services | null;
       variant?: Variants;
     };
+    const service = rawService ?? 'kyrgyz';
 
     console.log('SERVICE_OUTPUT', service);
 
