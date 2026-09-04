@@ -84,16 +84,15 @@ const Header = ({
             tabIndex={-1}
             css={styles.heading}
           >
-            {showLiveLabel ? (
-              <LiveLabelHeader
-                isHeaderImage={isWithImageLayout}
-                showSportData={showSportData}
-              >
-                <VisuallyHiddenText>{title}</VisuallyHiddenText>
-              </LiveLabelHeader>
-            ) : (
-              <VisuallyHiddenText>{title}</VisuallyHiddenText>
-            )}
+            <div css={styles.sportTitleRow}>
+              {showLiveLabel && (
+                <LiveLabelHeader
+                  isHeaderImage={isWithImageLayout}
+                  showSportData={showSportData}
+                />
+              )}
+              <div css={styles.sportTitleText}>{title}</div>
+            </div>
           </Heading>
           <VisuallyHiddenText as="h2">{matchSummary}</VisuallyHiddenText>
         </div>

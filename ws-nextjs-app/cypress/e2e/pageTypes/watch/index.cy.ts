@@ -10,6 +10,10 @@ import testsForAllCanonicalPages from '../../testsForAllCanonicalPages';
 
 const canonicalTests = [e2eTests, testsForAllPages, testsForAllCanonicalPages];
 
+if (Cypress.env('APP_ENV') === 'local') {
+  Cypress.config('baseUrl', 'http://localhost.bbc.com:7081');
+}
+
 const testSuites = [
   {
     path: '/tamil/watch/c36l16ny6klo',
