@@ -2,6 +2,9 @@ import { Fragment, use } from 'react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import PWAPromotionalBanner from '#app/components/PWAPromotionalBanner';
 import AccountPromotionalBanner from '#app/components/Account/AccountPromotionalBanner';
+import useToggle from '#hooks/useToggle';
+import ListenLiveCTA from '#app/components/ListenLiveCTA';
+import { CurrentLiveProgramme } from '#app/models/types/radioSchedule';
 import useScrollDepthTracker, {
   getHomePageBounds,
 } from '#app/hooks/useScrollDepthTracker';
@@ -31,6 +34,7 @@ export interface HomePageProps {
     description: string;
     seoTitle?: string;
     seoDescription?: string;
+    currentLiveProgramme?: CurrentLiveProgramme | null;
     metadata: {
       type: string;
     };
@@ -48,7 +52,8 @@ const HomePage = ({ pageData }: HomePageProps) => {
   } = use(ServiceContext);
   const { topStoriesTitle, home } = translations;
   const { title, description, seoTitle, seoDescription } = pageData;
-  const { curations } = pageData;
+  const { curations, currentLiveProgramme } = pageData;
+  const { enabled: listenLiveCtaEnabled } = useToggle('listenLiveCta');
 
   const scrollDepthRef = useScrollDepthTracker(
     'homepage-scroll-depth',
@@ -91,6 +96,9 @@ const HomePage = ({ pageData }: HomePageProps) => {
         </VisuallyHiddenText>
         <div css={styles.inner}>
           <div css={styles.margins}>
+            {listenLiveCtaEnabled && currentLiveProgramme && (
+              <ListenLiveCTA programme={currentLiveProgramme} />
+            )}
             {curations.map(
               (
                 {
