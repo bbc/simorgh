@@ -630,6 +630,7 @@ describe('buildSettings', () => {
         ],
         simulcast: true,
       });
+      expect(result?.playerConfig.ui.cta).toEqual({ mode: null });
       expect(result?.playerConfig.playlistObject?.items[0]).not.toHaveProperty(
         'duration',
       );

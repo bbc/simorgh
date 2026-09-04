@@ -143,6 +143,13 @@ export default ({
       ...(embedded && { insideIframe: true, embeddedOffsite: true }),
       ...(externalEmbedUrl && { externalEmbedUrl }),
       autoplay: pageType !== 'mediaArticle',
+      // news players need this override to centre a live play icon without a duration
+      ...(hasWebcastItems && {
+        ui: {
+          ...basePlayerConfig.ui,
+          cta: { mode: null },
+        },
+      }),
       playlistObject: {
         title,
         summary: caption || '',
