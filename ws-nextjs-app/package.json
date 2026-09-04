@@ -78,6 +78,8 @@
     "ts-node": "10.9.2"
   },
   "dependencies": {
+<<<<<<< HEAD
+    "@aws-sdk/client-s3": "3.919.0",
     "autoprefixer": "10.5.4",
     "next": "16.2.11",
     "postcss": "8.5.24",
