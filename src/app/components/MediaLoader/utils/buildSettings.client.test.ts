@@ -1,5 +1,6 @@
 import { PageTypes, Services } from '#app/models/types/global';
 import { data as hindiTvProgramme } from '#data/hindi/bbc_hindi_tv/tv_programmes/w13xttlw.json';
+import arabicSilverLiveStreamFixture from '#data/arabic/articles/c5y35dxlpv2o.json';
 import {
   AUDIO_PAGE,
   LIVE_PAGE,
@@ -30,8 +31,6 @@ import {
   livePagePortraitVideoClipMediaBlock,
 } from '../fixture';
 import {
-  AresMediaBlock,
-  AresMediaMetadataBlock,
   BuildConfigProps,
   ConfigBuilderReturnProps,
   MediaBlock,
@@ -609,43 +608,31 @@ describe('buildSettings', () => {
       });
     });
 
-    it('should treat a webcast version without a live flag as live', () => {
-      const webcastBlocks = JSON.parse(
-        JSON.stringify(aresMediaBlocks),
-      ) as MediaBlock[];
-      const aresMedia = webcastBlocks.find(
-        block => block.type === 'aresMedia',
-      ) as AresMediaBlock;
-      const metadataBlock = aresMedia.model.blocks.find(
-        block => block.type === 'aresMediaMetadata',
-      ) as AresMediaMetadataBlock;
-
-      delete metadataBlock.model.live;
-      metadataBlock.model.versions = [];
-      metadataBlock.model.webcastVersions = [
-        {
-          versionId: 'l0058gvr',
-          duration: 67583,
-          types: ['Original'],
-        },
-      ];
+    it('should configure a Silver webcast without a live flag as live', () => {
+      const [videoBlock] =
+        arabicSilverLiveStreamFixture.data.article.promo.media.blocks;
 
       const result = buildSettings({
         ...baseSettings,
-        blocks: webcastBlocks,
+        service: 'arabic',
+        lang: 'ar',
+        producer: 'ARABIC',
+        blocks: videoBlock.model.blocks as unknown as MediaBlock[],
       });
 
       expect(result?.playerConfig.playlistObject).toMatchObject({
         items: [
           {
-            duration: 67583,
             kind: 'programme',
             live: true,
-            versionID: 'l0058gvr',
+            versionID: 'l0058t2x',
           },
         ],
         simulcast: true,
       });
+      expect(result?.playerConfig.playlistObject?.items[0]).not.toHaveProperty(
+        'duration',
+      );
     });
 
     it('Should process a LegacyMediaBlock into a valid playlist item for a "MAP" page', () => {

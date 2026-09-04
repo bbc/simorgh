@@ -15,6 +15,7 @@ import getCaptionBlock from '../utils/getCaptionBlock';
 import buildPlaceholderConfig from '../utils/buildPlaceholderConfig';
 import shouldDisplayAds from '../utils/shouldDisplayAds';
 import getMediaOrientation from '../utils/getMediaOrientation';
+import isLiveMedia from '../utils/isLiveMedia';
 import { getAmpIframeUrl, getExternalEmbedUrl } from '../utils/urlConstructors';
 
 const DEFAULT_WIDTH = 512;
@@ -98,14 +99,14 @@ export default ({
         })
       : aresMediaMetadata?.imageUrl);
 
-  // silver streams use webcast versions even when the live flag is missing
-  const isLive = Boolean(aresMediaMetadata?.live || hasWebcastItems);
+  const isLive = isLiveMedia(blocks);
 
+  // silver durations describe the session window rather than the video length
   const items: PlaylistItem[] = [
     {
       versionID: versionPID,
       kind,
-      duration: rawDuration,
+      ...(!hasWebcastItems && { duration: rawDuration }),
       ...(isLive && { live: true }),
     },
   ];
