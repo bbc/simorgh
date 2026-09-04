@@ -102,4 +102,10 @@ jobs:
         if: github.ref != 'refs/heads/latest'
         env:
           YARN_HTTP_TIMEOUT: 300000
-        run: yarn npm audit --all --severity low --no-deprecations
+        run: |
+          for attempt in 1 2 3; do
+          yarn npm audit --all --severity low --no-deprecations && exit 0
+          echo "Attempt $attempt failed, retrying in 30s..."
+          sleep 30
+          done
+          exit 1
