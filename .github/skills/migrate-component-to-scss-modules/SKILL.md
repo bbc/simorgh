@@ -124,7 +124,7 @@ Valid scales: `atlas`, `elephant`, `imperial`, `royal`, `foolscap`, `canon`, `tr
 
 | Emotion pattern | SCSS Module replacement |
 |---|---|
-| `css={[styles.base, cond && styles.modifier]}` | Two classes composed in `className` |
+| `css={[styles.base, cond && styles.modifier]}` | `clsx(styles.base, cond && styles.modifier)` |
 | Theme callback reading dark UI state | `:global([data-is-dark-ui='true']) &` |
 | `dir === 'rtl' ? ... : ...` | Logical properties (`padding-inline-start`) |
 | Opera Mini branch | `:global(.is-opera-mini) &` |
@@ -143,17 +143,19 @@ The condition is a **prop**, not the style object — `styles.alignWithMargin` a
 
 **After:**
 ```tsx
-<a className={`${styles.link}${alignWithMargin ? ` ${styles.alignWithMargin}` : ''}`}>
+import clsx from 'clsx';
+
+<a className={clsx(styles.link, alignWithMargin && styles.alignWithMargin)}>
 ```
 
-Emotion drops falsy entries from a `css` array automatically; `className` does not. Always use a ternary with an empty-string fallback — `&&` renders the literal string `false` into the class attribute:
+Emotion drops falsy entries from a `css` array automatically; `className` does not. `clsx` restores that behaviour, so this is a direct translation rather than a rewrite — a plain template literal would carry `&&` across as the literal string `false`:
 
 ```tsx
 // ❌ class="link_x1 false" when alignWithMargin is false
 <a className={`${styles.link} ${alignWithMargin && styles.alignWithMargin}`}>
 ```
 
-Compose with template literals. Do not add `clsx` or `classnames` — neither is a dependency of this repo. Keep both classes as separate rules in the SCSS file rather than merging them into one.
+Use `clsx` for any conditional combination of classes. Keep both classes as separate rules in the SCSS file rather than merging them into one.
 
 This works when the second class adds **different** properties to the base. If the variant instead **replaces** the same properties (a different font size, say), apply one class or the other rather than both — two classes setting identical properties makes the result depend on their order in the compiled CSS:
 
