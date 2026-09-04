@@ -854,7 +854,11 @@ describe('Article Page', () => {
               name: null,
               producer: 'PIDGIN',
             },
-            user: { hashedId: null, isSignedIn: false },
+            user: {
+              hashedId: null,
+              isSignedIn: false,
+              isPersonalisationOn: false,
+            },
           },
         },
       });
@@ -930,7 +934,11 @@ describe('Article Page', () => {
               name: null,
               producer: 'PIDGIN',
             },
-            user: { hashedId: null, isSignedIn: false },
+            user: {
+              hashedId: null,
+              isSignedIn: false,
+              isPersonalisationOn: false,
+            },
           },
         },
       });
