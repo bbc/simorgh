@@ -1037,7 +1037,7 @@ export const assertPodcastLinksComponentClick = async ({
       appEnv,
       component: COMPONENTS.PODCAST_LINKS,
     }),
-    linkToClick.click(),
+    linkToClick.click({ noWaitAfter: true }),
   ]);
 
   const params = getATIParamsFromURL(request.url());

@@ -196,6 +196,8 @@ const canonicalTestSuites: OnDemandAudioTestSuite[] = [
 
 const atiAnalyticsPodcastComponentTests: OnDemandAudioAtiTest[] = [
   'assertPageView',
+  'assertPodcastPromoComponentView',
+  'assertPodcastPromoComponentClick',
   'assertPodcastLinksComponentView',
   'assertPodcastLinksComponentClick',
   'assertRecentAudioEpisodesComponentView',

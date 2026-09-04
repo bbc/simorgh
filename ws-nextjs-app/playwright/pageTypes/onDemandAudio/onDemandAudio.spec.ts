@@ -463,17 +463,13 @@ test.describe('onDemandAudio', () => {
 						page.locator('nav [data-e2e="dropdown-nav"] ul'),
 					).not.toBeVisible();
 
-					await menuButton.evaluate(button => {
-						(button as HTMLButtonElement).click();
-					});
+					await menuButton.click();
 					await expect(menuButton).toHaveAttribute('aria-expanded', 'true');
 					await expect(
 						page.locator('nav [data-e2e="dropdown-nav"] ul'),
 					).toBeVisible();
 
-					await menuButton.evaluate(button => {
-						(button as HTMLButtonElement).click();
-					});
+					await menuButton.click();
 					await expect(menuButton).toHaveAttribute('aria-expanded', 'false');
 					await expect(
 						page.locator('nav [data-e2e="dropdown-nav"] ul'),
