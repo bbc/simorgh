@@ -155,6 +155,7 @@ export type MediaInfo = {
 };
 
 export type Player = {
+  currentTime: (time?: number) => number;
   dispatchEvent(
     dispatchEvent: string,
     parameters?: { adTag: string | null },
