@@ -42,7 +42,7 @@ import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ArticlePage from './ArticlePage';
 import ThemeProvider from '../../components/ThemeProvider';
 import * as ReverbParamsContext from '../../contexts/ReverbParamsContext';
-import * as buildReverbParams from '../../components/ATIAnalytics/params/buildParams';
+import * as buildReverbParams from '../../lib/analyticsUtils/buildParams';
 
 jest.mock('../../components/ThemeProvider');
 

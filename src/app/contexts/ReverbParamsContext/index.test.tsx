@@ -12,7 +12,7 @@ import {
 } from '../../routes/utils/pageTypes';
 import { ReverbParamsContext, PageMetadata } from '.';
 import * as useOptimizelyVariation from '../../hooks/useOptimizelyVariation';
-import * as buildAnalyticsParamsModule from '../../components/ATIAnalytics/params/buildParams';
+import * as buildAnalyticsParamsModule from '../../lib/analyticsUtils/buildParams';
 
 const pageMetadata = {
   atiAnalytics: {
