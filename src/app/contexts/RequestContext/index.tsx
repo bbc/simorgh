@@ -41,6 +41,7 @@ export type RequestContextProps = {
   timeOnServer: number | null;
   variant: Variants | null;
   country?: string | null;
+  primaryMediaType: string | null;
   nonce?: string | null;
   cspHeader: string | null;
 };
@@ -50,6 +51,7 @@ export const RequestContext = createContext<RequestContextProps>(
 );
 
 type RequestProviderProps = {
+  primaryMediaType?: string | null;
   bbcOrigin?: string | null;
   derivedPageType?: string | null;
   id?: string | null;
@@ -94,6 +96,7 @@ export const RequestContextProvider = ({
   timeOnServer = null,
   variant = null,
   isUK = null,
+  primaryMediaType = null,
 }: PropsWithChildren<RequestProviderProps>) => {
   let { origin } = getOriginContext(bbcOrigin);
   const env: Environments = getEnv(origin);
@@ -149,6 +152,7 @@ export const RequestContextProvider = ({
       country,
       nonce,
       cspHeader,
+      primaryMediaType
     }),
     [
       derivedPageType,
@@ -175,6 +179,7 @@ export const RequestContextProvider = ({
       country,
       cspHeader,
       nonce,
+      primaryMediaType,
     ],
   );
 
