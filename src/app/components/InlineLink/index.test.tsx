@@ -117,14 +117,14 @@ describe('InlineLink', () => {
   );
 
   it.each`
-    size          | expected
-    ${'atlas'}    | ${'4.875'}
-    ${'elephant'} | ${'3.75'}
-    ${'imperial'} | ${'3.125'}
-    ${'royal'}    | ${'2.5'}
-    ${'foolscap'} | ${'2'}
-    ${'canon'}    | ${'1.75'}
-  `('should apply provided font size ', ({ size, expected }) => {
+    size
+    ${'atlas'}
+    ${'elephant'}
+    ${'imperial'}
+    ${'royal'}
+    ${'foolscap'}
+    ${'canon'}
+  `('should apply provided font size ', ({ size }) => {
     render(
       <InlineLink
         to="/mundo/articles/ce42wzqr2mko"
@@ -133,33 +133,31 @@ describe('InlineLink', () => {
       />,
     );
 
-    expect(screen.getByText('Hello World!')).toHaveStyle({
-      'font-size': `${expected}rem`,
-    });
+    expect(screen.getByText('Hello World!')).toHaveAttribute(
+      'data-font-size',
+      size,
+    );
   });
 
   it.each`
-    variant                | fontWeight | fontStyle
-    ${'sansRegularItalic'} | ${400}     | ${'italic'}
-    ${'sansBold'}          | ${700}     | ${'normal'}
-    ${'serifMediumItalic'} | ${500}     | ${'italic'}
-    ${'serifLight'}        | ${300}     | ${'normal'}
-    ${'sansLight'}         | ${300}     | ${'normal'}
-  `(
-    'should apply provided font variant ',
-    ({ variant, fontWeight, fontStyle }) => {
-      render(
-        <InlineLink
-          to="/mundo/articles/ce42wzqr2mko"
-          text="Hello World!"
-          fontVariant={variant}
-        />,
-      );
+    variant
+    ${'sansRegularItalic'}
+    ${'sansBold'}
+    ${'serifMediumItalic'}
+    ${'serifLight'}
+    ${'sansLight'}
+  `('should apply provided font variant ', ({ variant }) => {
+    render(
+      <InlineLink
+        to="/mundo/articles/ce42wzqr2mko"
+        text="Hello World!"
+        fontVariant={variant}
+      />,
+    );
 
-      expect(screen.getByText('Hello World!')).toHaveStyle({
-        'font-style': fontStyle,
-        'font-weight': fontWeight,
-      });
-    },
-  );
+    expect(screen.getByText('Hello World!')).toHaveAttribute(
+      'data-font-variant',
+      variant,
+    );
+  });
 });

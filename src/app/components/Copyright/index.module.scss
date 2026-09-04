@@ -1,0 +1,18 @@
+@use '@scss/themeTokens' as theme;
+
+.copyright {
+  background-color: rgba(34, 34, 34, 0.75);
+  text-transform: uppercase;
+  color: theme.$palette-white;
+  padding: #{theme.$spacings-half} #{theme.$spacings-full};
+  position: absolute;
+  bottom: 0;
+  inset-inline-start: 0;
+  margin: 0;
+  font-family: ReithSans, Helvetica, Arial, sans-serif;
+  overflow: hidden;
+
+  span {
+    font-size: 0.75rem;
+  }
+}

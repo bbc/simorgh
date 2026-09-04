@@ -129,6 +129,7 @@ Valid scales: `atlas`, `elephant`, `imperial`, `royal`, `foolscap`, `canon`, `tr
 | `dir === 'rtl' ? ... : ...` | Logical properties (`padding-inline-start`) |
 | Opera Mini branch | `:global(.is-opera-mini) &` |
 | Per-instance numeric value | Inline CSS custom property + `var()` |
+| Prop with many possible values (e.g. a GEL scale) | `data-*` attribute + `&[data-x='value']` selector |
 
 ### Conditional style arrays
 
@@ -165,6 +166,46 @@ This works when the second class adds **different** properties to the base. If t
 
 A **discrete variant** (boolean or small union) can legitimately select or add a class. What the styling standards prohibit is deriving a class from a **continuous or computed value**, or from `dir` — use a CSS custom property or logical properties for those.
 
+### Large discrete enums
+
+A boolean or two/three-way union composes fine as classes (above). A prop with many possible values (a `GelFontSize` scale, say — 15 options) turns that into a class per value *plus* a JS lookup table mapping the prop to the right one, maintained twice.
+
+Pass the raw prop value through as a `data-*` attribute instead, and match it with an attribute selector nested in the base class — the same convention already used for `data-is-dark-ui`:
+
+**Before (class per value + lookup map):**
+```tsx
+const fontSizeClassNames: Record<GelFontSize, string> = {
+  atlas: styles.fontSizeAtlas,
+  elephant: styles.fontSizeElephant,
+  // ...13 more
+};
+
+<a className={clsx(styles.self, size && fontSizeClassNames[size])}>
+```
+
+**After:**
+```tsx
+<a className={styles.self} data-font-size={size}>
+```
+```scss
+.self {
+  &[data-font-size='atlas'] {
+    @include theme.fontSizes-gel-font-size(atlas);
+  }
+
+  &[data-font-size='elephant'] {
+    @include theme.fontSizes-gel-font-size(elephant);
+  }
+  // ...13 more
+}
+```
+
+React omits a `data-*` attribute when its value is `undefined`, so no `size &&` guard is needed. This removes the JS-side lookup table entirely — the SCSS file is the only place the value-to-style mapping lives, rather than keeping two copies in sync.
+
+Test this by asserting the attribute (`toHaveAttribute('data-font-size', 'atlas')`) rather than a class name — the class name is an implementation detail one step further removed from the prop being tested.
+
+See [src/app/components/InlineLink/index.module.scss](../../../src/app/components/InlineLink/index.module.scss) for a full example (`size` and `fontVariant`, 15 and 10 values respectively).
+
 ## Step 4: Apply the change
 
 1. Create `index.module.scss` alongside the component, converting each exported style key to a class.
@@ -184,9 +225,11 @@ yarn jest src/app/components/<ComponentName>
 - Only 19 component directories have snapshots. If the component has a `__snapshots__` folder, regenerate with `-u` and review the diff: class-name churn is expected, **structural DOM changes are not**.
 - Confirm no `@emotion` imports remain in the component: `grep -rn "@emotion" src/app/components/<ComponentName>`
 - Check an RTL service (e.g. `arabic`) and a dark-UI context, since those behaviours move from JS branching into SCSS selectors.
+- If the test asserts computed CSS with `toHaveStyle`, rewrite it to `toHaveClass` instead. `.module.scss` files are mocked with `identity-obj-proxy` in Jest, so no real stylesheet is ever loaded into jsdom — `toHaveStyle` assertions against migrated styles will fail even when the migration is correct.
 
 ## Reference implementations
 
 - [src/app/components/ArticleLinksBlock/index.module.scss](../../../src/app/components/ArticleLinksBlock/index.module.scss) — tokens, forced colours, dark UI
 - [src/app/components/ActionTooltip/index.module.scss](../../../src/app/components/ActionTooltip/index.module.scss)
 - [src/app/components/Example/index.module.scss](../../../src/app/components/Example/index.module.scss) — minimal case
+- [src/app/components/InlineLink/index.module.scss](../../../src/app/components/InlineLink/index.module.scss) — large discrete enums via `data-*` attribute selectors

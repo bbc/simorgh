@@ -1,0 +1,17 @@
+@use '@scss/themeTokens' as theme;
+
+.readTimeContainer {
+  margin: #{theme.$spacings-full} #{theme.$spacings-full} #{theme.$spacings-triple};
+
+  @media #{theme.$mediaQueries-group-2-min-width} {
+    margin: #{theme.$spacings-full} #{theme.$spacings-double} #{theme.$spacings-triple};
+  }
+
+  @media #{theme.$mediaQueries-group-4-min-width} {
+    margin: #{theme.$spacings-full} 0 #{theme.$spacings-double};
+  }
+}
+
+.readTimeText {
+  color: theme.$palette-grey-6;
+}
