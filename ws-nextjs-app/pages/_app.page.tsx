@@ -72,14 +72,28 @@ export default class CustomApp extends App<Props> {
   // The 'pageProps' returned are passed down to ALL pages and merged with page
   // specific 'pageProps' from their getInitialProps / getServerSideProps functions
   static async getInitialProps({ ctx }: AppContext) {
+    console.log('APP_CTX', {
+      asPath: ctx.asPath,
+      reqUrl: ctx.req?.url,
+    });
     const { asPath = '' } = ctx;
 
     const { isApp, isAmp, isLite } = getPathExtension(asPath);
+
+    console.log('PARSE_ROUTE_INPUT', asPath);
 
     const { service, variant } = parseRoute(asPath) as {
       service: Services;
       variant?: Variants;
     };
+
+    console.log('SERVICE_OUTPUT', service);
+
+    ctx.res?.setHeader('x-debug-url', ctx.req?.url || 'missing');
+
+    ctx.res?.setHeader('x-debug-aspath', ctx.asPath || 'missing');
+
+    ctx.res?.setHeader('x-debug-service', service || 'missing');
 
     const [togglesResult, navResult] = await Promise.allSettled([
       fetchToggles({ service, isAmp }),
@@ -126,6 +140,12 @@ export default class CustomApp extends App<Props> {
         toggles,
         idctaConfig: idctaResult,
         navItems,
+        debug: {
+          asPath: ctx.asPath,
+          reqUrl: ctx.req?.url,
+          pathname: ctx.pathname,
+          service,
+        },
       },
     };
   }
