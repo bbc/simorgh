@@ -8,6 +8,7 @@ export type OnDemandAudioTestSuite = {
 
 export type OnDemandAudioAtiTest =
   | 'assertPageView'
+  | 'assertResonancePageView'
   | 'assertPodcastLinksComponentView'
   | 'assertPodcastLinksComponentClick'
   | 'assertRecentAudioEpisodesComponentView'
@@ -226,7 +227,7 @@ const atiTestSuites: AtiOnDemandAudioTestSuite[] = [
     siteId: 5,
     applicationType: 'responsive',
     contentType: 'player-episode',
-    tests: ['assertPageView'],
+    tests: ['assertPageView', 'assertResonancePageView'],
   },
   {
     path: '/gahuza/podcasts/p07yh8hb',

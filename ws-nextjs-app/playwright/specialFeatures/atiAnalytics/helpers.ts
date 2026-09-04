@@ -14,10 +14,18 @@ const reverbAtiUrlByEnv: Record<AppEnv, string> = {
   live: 'https://a1.api.bbc.co.uk',
 };
 
+const resonanceBagUrlByEnv: Record<AppEnv, string> = {
+  local: 'https://bag.test.api.bbc.co.uk',
+  test: 'https://bag.test.api.bbc.co.uk',
+  live: 'https://bag.api.bbc.co.uk',
+};
+
 export const getATIUrls = (env: AppEnv) => ({
   atiUrl: atiUrlByEnv[env],
   reverbAtiUrl: reverbAtiUrlByEnv[env],
 });
+
+export const getResonanceBagUrl = (env: AppEnv) => resonanceBagUrlByEnv[env];
 
 export const getATIParamsFromURL = (url: string): Record<string, string> => {
   const parsedUrl = new URL(url);
@@ -39,14 +47,27 @@ export const getAppName = (service: string): string => {
     : `[news-${service}]`;
 };
 
+export const getResonanceAppName = (service: string): string => {
+  const customServiceAppName: Record<string, string> = {
+    ws: 'news',
+    romania: 'news-romanian',
+  };
+
+  if (customServiceAppName[service]) {
+    return customServiceAppName[service];
+  }
+
+  return `news-${service}`;
+};
+
 export const COMPONENTS = {
   SCROLLABLE_NAVIGATION: 'scrollable-navigation',
   DROPDOWN_NAVIGATION: 'dropdown-navigation',
   MOST_READ: 'most-read',
-  RADIO_SCHEDULE: 'radio-schedule',
   PODCAST_PROMO: 'promo-podcast',
-  RECENT_AUDIO_EPISODES: 'episodes-audio',
   PODCAST_LINKS: 'third-party',
+  RECENT_AUDIO_EPISODES: 'episodes-audio',
+  RADIO_SCHEDULE: 'radio-schedule',
   LITE_SITE_SUMMARY: 'lite-site-summary',
   MESSAGE_BANNER: 'message-banner',
 };

@@ -19,6 +19,7 @@ import {
 	assertRadioScheduleComponentView,
 	assertRecentAudioEpisodesComponentClick,
 	assertRecentAudioEpisodesComponentView,
+	assertResonancePageView,
 } from '../../specialFeatures/atiAnalytics/assertions';
 import { getATIUrls } from '../../specialFeatures/atiAnalytics/helpers';
 
@@ -456,9 +457,7 @@ test.describe('onDemandAudio', () => {
 
 					const menuButton = page.locator('nav button[aria-expanded]').first();
 
-					await expect(
-						page.locator('nav [data-e2e="scrollable-nav"]'),
-					).toBeVisible();
+					await expect(page.locator('nav [data-e2e="scrollable-nav"]')).toBeVisible();
 					await expect(menuButton).toHaveAttribute('aria-expanded', 'false');
 					await expect(
 						page.locator('nav [data-e2e="dropdown-nav"] ul'),
@@ -510,6 +509,19 @@ test.describe('onDemandAudio ATI Analytics', () => {
 						);
 
 						await assertPageView({ page, ...atiProps });
+					});
+				}
+
+				if (testSuite.tests.includes('assertResonancePageView')) {
+					test('should send a resonance page view event when applicable', async ({
+						page,
+					}) => {
+						test.skip(
+							!shouldRunForEnv(testSuite.runForEnv),
+							`Skipped for APP_ENV=${appEnvFromProcess}`,
+						);
+
+						await assertResonancePageView({ page, ...atiProps });
 					});
 				}
 
@@ -620,6 +632,19 @@ test.describe('onDemandAudio ATI Analytics Lite', () => {
 						);
 
 						await assertPageView({ page, ...atiProps });
+					});
+				}
+
+				if (testSuite.tests.includes('assertResonancePageView')) {
+					test('should send a resonance page view event when applicable', async ({
+						page,
+					}) => {
+						test.skip(
+							!shouldRunForEnv(testSuite.runForEnv),
+							`Skipped for APP_ENV=${appEnvFromProcess}`,
+						);
+
+						await assertResonancePageView({ page, ...atiProps });
 					});
 				}
 
