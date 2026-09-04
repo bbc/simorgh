@@ -21,7 +21,8 @@ export default ({ service, pageType }: ServiceParametersType) => {
             .then(pageData => {
               const media = getBlockData('video', pageData);
 
-              expect(media, 'expected a video block in watch page data').to.exist;
+              expect(media, 'expected a video block in watch page data').to
+                .exist;
 
               cy.get('[data-e2e="media-loader__container"]')
                 .first()
@@ -54,7 +55,7 @@ export default ({ service, pageType }: ServiceParametersType) => {
                 cy.get('[data-e2e="media-loader__container"]')
                   .first()
                   .within(() => {
-                    cy.get('button.button.has_duration')
+                    cy.get('button.has_duration', { includeShadowDom: true })
                       .should('be.visible')
                       .within(() => {
                         cy.get('svg').should('be.visible');

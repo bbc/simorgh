@@ -71,19 +71,16 @@ Below is a bare-bones example of how BUMP is used. To get a video working we pro
 
 ## Local Development
 
-So that the EMP can load video data, our localhost's domain name should be altered from `localhost:7080` to `localhost.bbc.com:7080` to fully encorporate the bbc domain name (bbc) and top-level domain (.com).
+So that the EMP can load video data, our localhost's domain name should be altered from `localhost:7081` to `localhost.bbc.com:7081` to fully incorporate the bbc domain name (bbc) and top-level domain (.com).
 
 First, run the command (you only need to run this once):
 
 `sudo -- sh -c -e "echo '127.0.0.1       localhost.bbc.com' >> /etc/hosts";`
 
-Then, access local pages using: `localhost.bbc.com:7080/`,
-eg.
-Express pages: `http://localhost.bbc.com:7080/afaanoromoo/articles/c4g19kgl85ko`
+Then, access local pages using `localhost.bbc.com:7081/`, eg.
+`http://localhost.bbc.com:7081/pidgin/articles/cw0x29n2railo`
 
-Next pages: `http://localhost.bbc.com:7081/pidgin/live/c7p765ynk9qt?renderer_env=test`
-
-Currently, the EMP is set to only load Live video assets by default. To load test assets, append the query `?renderer_env=test` to the url. Eg. `http://localhost.bbc.com:7080/afaanoromoo/articles/c4g19kgl85ko?renderer_env=test`
+Currently, the EMP is set to only load Live video assets by default. To load test assets, append the query `?renderer_env=test` to the url. Eg. `http://localhost.bbc.com:7081/pidgin/articles/cw0x29n2railo?renderer_env=test`
 
 ## Note on playback in local development
 
@@ -95,14 +92,24 @@ In the Next.js app we have `reactStrictMode: true`. This causes lifecycle hooks 
     	├── configs
     		├── aresMedia.ts
     		├── audio.ts
-    		├── clipMedia.ts
     		├── legacyMedia.ts
     		├── liveMedia.ts
+    		├── livePostClipMedia.ts
     		├── liveRadio.ts
+    		├── portraitClipMedia.ts
     		├── tv.ts
+    		├── constants.ts
+    		├── warningLevels.ts
     		├── index.ts
+    	├── utils
+    	├── Amp
+    	├── Message
+    	├── Metadata
     	├── Placeholder
     	├── index.tsx
+    	├── index.styles.ts
+    	├── index.stories.tsx
+    	├── types.ts
 
 The MediaLoader component takes in a video block from the BFF and converts it into a BUMP settings object. The BFF does not provide video blocks in a uniformed way since our editors publish videos from different sources. For greater flexibility, we allow the BFF to provide video data in its native form and use respective scripts within the configs folder to process the data into a BUMP settings object. The logic for this is as follows:
 
@@ -115,10 +122,38 @@ The following sources that our configs folder currently support are:
 |--|--|
 | aresMedia | For video content typically embedded on ArticlePage.|
 | audio | For audio content typically embedded on PodcastPage and OnDemandAudioPage pages.|
-| clipMedia | For video content typically embedded on Tipo curated pages, such as Live pages.|
 | legacyMedia | For videos content typically embedded on TC2 pages, such as MediaArticlePage pages.|
 | liveMedia | For live video content typically embedded on the header for the Live pages.|
+| livePostClipMedia | For video content embedded within live posts on Live pages.|
 | liveRadio | For live audio content typically embedded on the LiveRadioPage pages.|
+| portraitClipMedia | For portrait (vertical) video content, such as short-form clips.|
 | tv | For video content typically embedded on OnDemandTvPage pages.|
 
 **Important: The media loader will not play live videos on the test environment and vice-versa.**
+
+## Player initialisation
+
+BUMP is loaded via RequireJS (`window.requirejs(['bump-4'], ...)`). The RequireJS callback cannot itself be `async`, so the player setup is wrapped in an inner `async` function that is invoked immediately. The player config is memoised (`useMemo`) so it keeps a stable identity across re-renders that aren't caused by a real input change (such as the fake fullscreen state toggling). Without this, `MediaContainer` would treat each render as a new config and tear down and recreate the BUMP player mid-playback.
+
+For the same reason, per-render config variations (`autoplay: false` when `loadPlayerOnInitialRender` is set, and `supportFakeFullscreen: true` when fake fullscreen is handled) are applied **inside** `MediaContainer`'s init effect rather than by spreading a new config object at the call site. The player-init effect depends on the stable `playerConfig` reference plus stable boolean flags, so a fake fullscreen toggle re-render never recreates the player.
+
+When a player is rendered inside a caller's own full-viewport presentation (for example `PortraitVideoModal` on mobile portrait), the caller passes `withinFullscreenContainer`. This prevents MediaLoader from forcing SMP fake fullscreen and applying the global fullscreen page state, which would otherwise conflict with the caller's own fullscreen layout.
+
+## Fake fullscreen
+
+On devices that don't support native fullscreen for embedded players (notably iOS Safari), MediaLoader provides a "fake" fullscreen experience: the player wrapper expands to fill the viewport with a black backdrop behind it, while the rest of the page furniture (such as the caption) stays in the normal document flow.
+
+### Overview
+
+The backdrop and the player wrapper both need to sit at the **document root stacking context** rather than being constrained by an ancestor component's stacking context. This is achieved by rendering the backdrop into `document.body` via React's `createPortal`, so its `z-index` is directly comparable with the fixed, elevated player wrapper (backdrop below, player above). Escaping the ancestor stacking context is what makes this work on iOS Safari, where GPU compositing does not bypass CSS stacking as it does on desktop.
+
+### How it works
+
+- **`FakeFullscreenStyles`** injects the static fake-fullscreen CSS once per page. It is guarded by an element id so multiple players on the same page only add the `<style>` tag once, supports a Content Security Policy `nonce`, and is injected client-side only (fake fullscreen is a client interaction). Injection is deferred until after mount so it doesn't interfere with SSR hydration.
+- **`FakeFullscreenLayer`** portals the black backdrop to `document.body`. The portal is deferred with `useState`/`useEffect` until after mount so the hydration render matches the server (both render nothing); portalling during hydration would insert the backdrop into `<body>` before hydration completes and cause a mismatch. It receives an `isActive` prop that toggles the display class.
+- **The player wrapper** stays a fixed-position element with `z-index: 2147483647`. Because both it and the backdrop live at the document root, its `z-index` sits logically above the portalled backdrop.
+- **Cleanup** removes the global fullscreen classes from `<html>` and `<body>` on unmount if this instance is still in fake fullscreen, to avoid leaving the page stuck in a fullscreen state after the player is removed.
+
+### Playback stability during fullscreen transitions
+
+Entering or exiting fake fullscreen toggles `isFakeFullscreenActive` state, which re-renders `MediaLoader`. To keep playback uninterrupted across that transition, everything the BUMP player depends on must stay referentially stable: the memoised `playerConfig`, and the per-render config variations folded into the init effect (see [Player initialisation](#player-initialisation)). If any of these becomes a new value on the fullscreen re-render, `MediaContainer`'s init effect re-runs and recreates the player on the same DOM node, which tears down the playing video and shows a black screen. When adding new player options, apply them inside the init effect (keyed on stable dependencies) rather than by spreading a fresh config object at the call site.
