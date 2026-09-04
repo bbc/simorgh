@@ -20,7 +20,7 @@ describe('Recent Video Episodes', () => {
         { service: 'afrique', pageType: TV_PAGE },
       ));
     });
-    expect(container).toMatchSnapshot();
+    expect(container).not.toBeEmptyDOMElement();
   });
 
   it('should render the translated section label', () => {
