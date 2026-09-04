@@ -20,7 +20,7 @@ Legacy components need modernisation *and* a styling change. Converting them to 
 
 ## Definition of done
 
-This programme is complete when `src/app/components` contains no imports from `@emotion/*` and no `index.styles.*` files.
+This programme is complete when `src/app/components` contains no imports from `@emotion/*`, no `index.styles.*` files, and no `css` props. The last check matters because `tsconfig.json` sets `jsxImportSource` to `@emotion/react` globally, so a component can use Emotion's `css` prop — as `Heading` and `Paragraph` currently do — without importing `@emotion` or having its own `index.styles.*` file.
 
 ## Batching principles
 
