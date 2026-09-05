@@ -337,8 +337,9 @@ export const assertResonancePageView = async ({
 }: AtiAssertionFnProps) => {
   const sendsResonanceEvents = usesResonance(applicationType);
   const resonanceBagUrl = getResonanceBagUrl(appEnv);
+  const escapedBagUrl = resonanceBagUrl.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   const resonanceBagEventUrlPattern = new RegExp(
-    `${resonanceBagUrl}/v[0-9]+/event`,
+    `^${escapedBagUrl}/v\\d+/event(?:\\?.*)?$`,
   );
 
   const matchedRequests: Request[] = [];
@@ -842,6 +843,8 @@ export const assertPodcastPromoComponentView = async ({
   });
 
   await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+
+  // Double scroll intentional to reliably trigger viewability
   await page.locator('[data-e2e="podcast-promo"]').scrollIntoViewIfNeeded();
   await page.locator('[data-e2e="podcast-promo"]').scrollIntoViewIfNeeded();
 
