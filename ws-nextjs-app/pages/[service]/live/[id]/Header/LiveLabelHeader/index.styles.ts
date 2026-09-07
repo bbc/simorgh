@@ -6,13 +6,12 @@ const PULSE_SIZE_3_4 = QUADRUPLE;
 const PULSE_SIZE_TOTAL_WIDTH_3_MIN = PULSE_END_MARGIN + PULSE_SIZE_3_4;
 
 const styles = {
-  liveLabelContainer: ({ mq, spacings }: Theme) =>
+  liveLabelContainer: ({ spacings }: Theme) =>
     css({
-      textAlign: 'center',
-      paddingTop: `${spacings.DOUBLE}rem`,
-      [mq.GROUP_3_MIN_WIDTH]: {
-        paddingTop: `${spacings.TRIPLE}rem`,
-      },
+      display: 'flex',
+      alignItems: 'center',
+      flexShrink: 0,
+      paddingInlineStart: `${spacings.DOUBLE}rem`,
     }),
   liveLabelPulse: ({ mq, palette, spacings }: Theme) =>
     css({

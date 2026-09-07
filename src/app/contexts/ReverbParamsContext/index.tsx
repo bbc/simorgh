@@ -18,6 +18,7 @@ import {
 import {
   ARTICLE_PAGE,
   CORRESPONDENT_STORY_PAGE,
+  HOME_PAGE,
   MEDIA_ARTICLE_PAGE,
   MEDIA_ASSET_PAGE,
   MOST_READ_PAGE,
@@ -29,6 +30,7 @@ import setBbcPage from '#app/lib/analyticsUtils/setBbcPage';
 import getEnrichedArticleATIData from './getEnrichedArticleATIData';
 import getEnrichedMostReadATIData from './getEnrichedMostReadATIData';
 import getEnrichedMediaArticleATIData from './getEnrichedMediaArticleATIData';
+import getEnrichedHomePageATIData from './getEnrichedHomePageATIData';
 
 type ReverbParamsContextProps = {
   reverbParams: ReverbBeaconConfig;
@@ -61,6 +63,8 @@ const getPageTypeHandler = pageType => {
       return getEnrichedMediaArticleATIData;
     case MOST_READ_PAGE:
       return getEnrichedMostReadATIData;
+    case HOME_PAGE:
+      return getEnrichedHomePageATIData;
     default:
       return null;
   }

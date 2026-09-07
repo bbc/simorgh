@@ -5,14 +5,21 @@ import {
 } from '#app/components/react-testing-library-with-providers';
 import { Helmet } from 'react-helmet';
 import useLocation from '#app/hooks/useLocation';
-import { HOME_PAGE, TOPIC_PAGE, TV_PAGE } from '#app/routes/utils/pageTypes';
+import {
+  HOME_PAGE,
+  LIVE_PAGE,
+  TOPIC_PAGE,
+  TV_PAGE,
+} from '#app/routes/utils/pageTypes';
 import MediaPlayer from '.';
 import {
   aresMediaBlocks,
+  livePageAudioClipMediaBlock,
   onDemandTvBlocks,
   onDemandTvBlocksWithOverrides,
 } from './fixture';
 import { MediaBlock } from './types';
+import { fakeFullscreenStyles } from './index.styles';
 import * as buildConfig from './utils/buildSettings';
 
 jest.mock('react', () => ({
@@ -121,6 +128,7 @@ describe('MediaLoader', () => {
       const mockRequire = jest.fn();
       const mockPlayer = {
         load: jest.fn(),
+        bind: jest.fn(),
       };
       const mockBump = {
         player: jest.fn(() => mockPlayer),
@@ -174,6 +182,7 @@ describe('MediaLoader', () => {
       const mockRequire = jest.fn();
       const mockBump = {
         player: () => ({
+          bind: jest.fn(),
           load: jest.fn(),
         }),
       };
@@ -196,6 +205,136 @@ describe('MediaLoader', () => {
       callbackFn(mockBump);
 
       expect(window.mediaPlayers.testId).not.toBeNull();
+    });
+
+    it('adds and removes fullscreen classes on fake fullscreen enter/exit events', async () => {
+      const mockRequire = jest.fn();
+      const bind = jest.fn();
+      const mockBump = {
+        player: () => ({
+          bind,
+          load: jest.fn(),
+        }),
+      };
+
+      window.requirejs = mockRequire;
+
+      await act(async () => {
+        render(<MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} />, {
+          id: 'testId',
+        });
+      });
+
+      const callbackFn = mockRequire.mock.calls[0][1];
+      callbackFn(mockBump);
+
+      const enterFakeFullscreen = bind.mock.calls.find(
+        ([event]) => event === 'enterFakeFullscreen',
+      )?.[1];
+      const exitFakeFullscreen = bind.mock.calls.find(
+        ([event]) => event === 'exitFakeFullscreen',
+      )?.[1];
+
+      expect(typeof enterFakeFullscreen).toBe('function');
+      expect(typeof exitFakeFullscreen).toBe('function');
+
+      act(() => {
+        enterFakeFullscreen({});
+      });
+
+      expect(document.documentElement.classList).toContain(
+        'simorgh-player-fullscreen',
+      );
+      expect(document.body.classList).toContain('simorgh-player-fullscreen');
+
+      act(() => {
+        exitFakeFullscreen({});
+      });
+
+      expect(document.documentElement.classList).not.toContain(
+        'simorgh-player-fullscreen',
+      );
+      expect(document.body.classList).not.toContain(
+        'simorgh-player-fullscreen',
+      );
+    });
+
+    it('composes caller fake fullscreen handlers with internal fullscreen handlers', async () => {
+      const onEnterFakeFullscreen = jest.fn();
+      const mockRequire = jest.fn();
+      const bind = jest.fn();
+      const mockBump = {
+        player: () => ({
+          bind,
+          load: jest.fn(),
+        }),
+      };
+
+      window.requirejs = mockRequire;
+
+      await act(async () => {
+        render(
+          <MediaPlayer
+            blocks={aresMediaBlocks as MediaBlock[]}
+            eventMapping={{ enterFakeFullscreen: onEnterFakeFullscreen }}
+          />,
+          {
+            id: 'testId',
+          },
+        );
+      });
+
+      const callbackFn = mockRequire.mock.calls[0][1];
+      callbackFn(mockBump);
+
+      const enterFakeFullscreenBindings = bind.mock.calls.filter(
+        ([event]) => event === 'enterFakeFullscreen',
+      );
+
+      expect(enterFakeFullscreenBindings).toHaveLength(2);
+
+      act(() => {
+        enterFakeFullscreenBindings.forEach(([, handler]) => handler({}));
+      });
+
+      expect(onEnterFakeFullscreen).toHaveBeenCalled();
+      expect(document.documentElement.classList).toContain(
+        'simorgh-player-fullscreen',
+      );
+    });
+
+    it('does not bind fake fullscreen handlers for audio players', async () => {
+      const mockRequire = jest.fn();
+      const bind = jest.fn();
+      const mockBump = {
+        player: () => ({
+          bind,
+          load: jest.fn(),
+        }),
+      };
+
+      window.requirejs = mockRequire;
+
+      await act(async () => {
+        render(
+          <MediaPlayer
+            blocks={[livePageAudioClipMediaBlock] as MediaBlock[]}
+          />,
+          {
+            id: 'testId',
+            pageType: LIVE_PAGE,
+          },
+        );
+      });
+
+      const callbackFn = mockRequire.mock.calls[0][1];
+      callbackFn(mockBump);
+
+      const fakeFullscreenBindings = bind.mock.calls.filter(([event]) =>
+        ['enterFakeFullscreen', 'exitFakeFullscreen'].includes(event),
+      );
+
+      expect(fakeFullscreenBindings).toHaveLength(0);
     });
   });
 
@@ -430,6 +569,67 @@ describe('MediaLoader', () => {
       expect(ampIframeUrl).toEqual(
         'https://web-cdn.test.api.bbci.co.uk/ws/av-embeds/articles/cn8jgj8rjppo/p01k6msm/en-GB/amp',
       );
+    });
+  });
+
+  describe('FakeFullscreenStyles', () => {
+    const FAKE_FULLSCREEN_STYLE_ID = 'simorgh-fake-fullscreen-styles';
+
+    const getFakeFullscreenStyleElements = () =>
+      document.head.querySelectorAll(`style#${FAKE_FULLSCREEN_STYLE_ID}`);
+
+    afterEach(() => {
+      document
+        .getElementById(FAKE_FULLSCREEN_STYLE_ID)
+        ?.parentNode?.removeChild(
+          document.getElementById(FAKE_FULLSCREEN_STYLE_ID) as HTMLElement,
+        );
+    });
+
+    it('adds the fake fullscreen styles to the document head', async () => {
+      await act(async () => {
+        render(<MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} />, {
+          id: 'testId',
+        });
+      });
+
+      const styleElement = document.getElementById(FAKE_FULLSCREEN_STYLE_ID);
+
+      expect(styleElement).toBeInTheDocument();
+      expect(styleElement?.tagName).toBe('STYLE');
+      expect(styleElement?.textContent).toBe(fakeFullscreenStyles);
+    });
+
+    it('only adds the fake fullscreen styles once when multiple players are rendered', async () => {
+      await act(async () => {
+        render(
+          <>
+            <MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} />
+            <MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} />
+          </>,
+          {
+            id: 'testId',
+          },
+        );
+      });
+
+      expect(getFakeFullscreenStyleElements()).toHaveLength(1);
+    });
+
+    it('does not add the fake fullscreen styles for audio players', async () => {
+      await act(async () => {
+        render(
+          <MediaPlayer
+            blocks={[livePageAudioClipMediaBlock] as MediaBlock[]}
+          />,
+          {
+            id: 'testId',
+            pageType: LIVE_PAGE,
+          },
+        );
+      });
+
+      expect(document.getElementById(FAKE_FULLSCREEN_STYLE_ID)).toBeNull();
     });
   });
 });
