@@ -465,6 +465,7 @@ describe('Image - AMP pages', () => {
          sizes="(max-width: 600px) 480px, 800px"
          src="/test-image-500.webp"
          srcset="/test-image-200.webp 200w, /test-image-500.webp 500w"
+         style="background-color: rgb(253, 253, 253);"
        />
      </div>
     `);
