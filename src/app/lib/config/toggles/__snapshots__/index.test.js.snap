@@ -88,6 +88,9 @@ exports[`Toggles Config when application environment is live should contain corr
   "topBarOJs": {
     "enabled": true,
   },
+  "topicUasPersonalization": {
+    "enabled": false,
+  },
   "uasPersonalization": {
     "enabled": false,
   },
@@ -192,6 +195,10 @@ exports[`Toggles Config when application environment is local should contain cor
   "topBarOJs": {
     "enabled": true,
   },
+  "topicUasPersonalization": {
+    "enabled": true,
+    "value": "hindi|mundo|portuguese",
+  },
   "uasPersonalization": {
     "enabled": true,
     "value": "hindi|mundo|portuguese",
@@ -292,6 +299,9 @@ exports[`Toggles Config when application environment is test should contain corr
   },
   "topBarOJs": {
     "enabled": true,
+  },
+  "topicUasPersonalization": {
+    "enabled": false,
   },
   "uasPersonalization": {
     "enabled": false,
