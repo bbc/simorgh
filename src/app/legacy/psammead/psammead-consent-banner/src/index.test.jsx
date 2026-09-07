@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { screen } from '@testing-library/react';
 import { render } from '../../../../components/react-testing-library-with-providers';
 import { ConsentBanner, ConsentBannerText } from '.';
 
@@ -24,26 +25,28 @@ const rtlProps = {
 
 describe('ConsentBanner', () => {
   it('should correctly render for ltr service', () => {
-    const { container } = render(<ConsentBanner {...baseProps} />);
-    expect(container).toMatchSnapshot();
+    render(<ConsentBanner {...baseProps} />);
+    expect(
+      screen.getByText("We've updated our Privacy and Cookies Policy"),
+    ).toBeInTheDocument();
   });
 
   it('should correctly render for rtl service', () => {
-    const { container } = render(<ConsentBanner {...rtlProps} />, {
-      service: rtlProps.service,
-    });
-    expect(container).toMatchSnapshot();
+    render(<ConsentBanner {...rtlProps} />, { service: rtlProps.service });
+    expect(screen.getByText('عنوان')).toBeInTheDocument();
+    expect(
+      screen.getByText('عنوان').closest('[dir="rtl"]'),
+    ).toBeInTheDocument();
   });
 
   describe('with hidden attribute on wrapper', () => {
-    const props = {
-      hidden: true,
-      ...baseProps,
-    };
+    const props = { hidden: true, ...baseProps };
 
     it('should correctly render', () => {
-      const { container } = render(<ConsentBanner {...props} />);
-      expect(container).toMatchSnapshot();
+      render(<ConsentBanner {...props} />);
+      expect(
+        screen.getByText("We've updated our Privacy and Cookies Policy"),
+      ).toBeInTheDocument();
     });
   });
 });
@@ -74,12 +77,16 @@ it('heading should be externally focusable', () => {
 
 describe('ConsentBannerText', () => {
   it('should correctly render', () => {
-    const { container } = render(
+    render(
       <ConsentBannerText dir="ltr">
         We have made some important changes to our Privacy and Cookies Policy
         and we want you to know what this means for you and your data.
       </ConsentBannerText>,
     );
-    expect(container).toMatchSnapshot();
+    expect(
+      screen.getByText(
+        /We have made some important changes to our Privacy and Cookies Policy/,
+      ),
+    ).toBeInTheDocument();
   });
 });

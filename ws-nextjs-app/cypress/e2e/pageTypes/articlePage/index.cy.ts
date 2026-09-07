@@ -315,6 +315,16 @@ const nonSmokeCanonicalTestSuites = [
 
 const atiAnalyticsTestSuites = [
   {
+    path: '/arabic/articles/c8j91j2ljppo',
+    runforEnv: ['local', 'live'],
+    service: 'arabic',
+    pageIdentifier: 'arabic.articles.c8j91j2ljppo.page',
+    siteId: 5,
+    applicationType: 'responsive',
+    contentType: 'article',
+    tests: [assertResonancePageView],
+  },
+  {
     path: '/hausa/articles/cw43vy8zdjvo',
     runforEnv: ['local', 'live'],
     service: 'hausa',
@@ -322,7 +332,7 @@ const atiAnalyticsTestSuites = [
     siteId: 51,
     applicationType: 'responsive',
     contentType: 'article-sfv',
-    isServiceEnabled: false,
+    expectsResonanceEvents: false,
     tests: [
       assertPageView,
       assertResonancePageView,
