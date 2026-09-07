@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet';
-import { render } from '@testing-library/react';
+import { render } from '../../react-testing-library-with-providers';
 import CanonicalChartbeatAnalytics from '.';
 import setChartbeatConfig from './setChartbeatConfig';
 import { CanonicalChartbeatConfig } from '../types';
