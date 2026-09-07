@@ -12,10 +12,14 @@ export interface FollowTopicButtonProps {
 const FOLLOW_TOPIC_BUTTON_ID = 'follow-topic-button';
 
 const FollowTopicButton = ({ topicData }: FollowTopicButtonProps) => {
-  const { isPersonalizationAvailable, isPersonalizationEnabled } =
-    use(AccountContext);
+  const {
+    isTopicUasPersonalizationAvailable,
+    isTopicUasPersonalizationEnabled,
+  } = use(AccountContext);
 
-  if (!isPersonalizationAvailable) return null;
+  if (!isTopicUasPersonalizationAvailable) {
+    return null;
+  }
 
   return (
     <>
@@ -23,7 +27,7 @@ const FollowTopicButton = ({ topicData }: FollowTopicButtonProps) => {
         <style>{`#${FOLLOW_TOPIC_BUTTON_ID} { display: none; }`}</style>
       </noscript>
       <div css={styles.buttonWrapper} id={FOLLOW_TOPIC_BUTTON_ID}>
-        {isPersonalizationEnabled ? (
+        {isTopicUasPersonalizationEnabled ? (
           <FollowTopicButtonAuthenticated topicData={topicData} />
         ) : (
           <FollowTopicButtonGuest topicId={topicData.topicId} />
