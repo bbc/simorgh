@@ -18,7 +18,7 @@ import {
 import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 
-import ImageWithPlaceholder from '#containers/ImageWithPlaceholder';
+import Image from '#app/components/Image';
 import SkipLinkWrapper from '#components/SkipLinkWrapper';
 import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
@@ -239,15 +239,15 @@ const Promo = () => {
         >
           <PromoComponent.Card inlinePromo isOptimo={pageType === ARTICLE_PAGE}>
             <StyledImageWrapper>
-              <ImageWithPlaceholder
+              <Image
                 src={imgSrc}
-                srcset={srcset}
-                primaryMimeType={primaryMimeType}
+                srcSet={srcset}
+                mediaType={primaryMimeType}
                 sizes={sizes}
                 alt={alt}
                 height={100}
                 width={100}
-                ratio={100}
+                aspectRatio={[1, 1]}
                 lazyLoad
               />
             </StyledImageWrapper>
