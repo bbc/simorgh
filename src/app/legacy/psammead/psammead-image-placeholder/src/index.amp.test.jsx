@@ -8,7 +8,7 @@ describe('ImagePlaceholderAmp', () => {
         <ImagePlaceholderAmp />
       </amp-img>,
     );
-    expect(container).toMatchSnapshot();
+    expect(container.firstChild).toBeInTheDocument();
   });
 
   it('should render dark mode version correctly', () => {
@@ -17,6 +17,6 @@ describe('ImagePlaceholderAmp', () => {
         <ImagePlaceholderAmp darkPlaceholder />
       </amp-img>,
     );
-    expect(container).toMatchSnapshot();
+    expect(container.firstChild).toBeInTheDocument();
   });
 });

@@ -20,7 +20,10 @@ import {
   assertPodcastLinksComponentClick,
   assertPodcastLinksComponentView,
 } from '../../specialFeatures/atiAnalytics/assertions/podcastLinks';
-import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
+import {
+  assertPageView,
+  assertResonancePageView,
+} from '../../specialFeatures/atiAnalytics/assertions';
 import e2eTests from './tests';
 import testsForAllPages from '../../testsForAllPages';
 import testsForAllCanonicalPages from '../../testsForAllCanonicalPages';
@@ -242,7 +245,7 @@ const atiAnalyticsTestSuites = [
     siteId: 5,
     applicationType: 'responsive',
     contentType: 'player-episode',
-    tests: [assertPageView],
+    tests: [assertPageView, assertResonancePageView],
   },
   {
     path: '/gahuza/podcasts/p07yh8hb',
