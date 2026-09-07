@@ -9,7 +9,7 @@ import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/brea
 import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 
-import ImageWithPlaceholder from '#containers/ImageWithPlaceholder';
+import Image from '#app/components/Image';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import PromoComponent from './components';
 import getPromo from './shared';
@@ -57,15 +57,15 @@ const Promo = () => {
         </PromoComponent.Title>
         <PromoComponent.Card>
           <PromoComponent.Card.ImageWrapper>
-            <ImageWithPlaceholder
+            <Image
               src={imgSrc}
-              srcset={srcset}
-              primaryMimeType={primaryMimeType}
+              srcSet={srcset}
+              mediaType={primaryMimeType}
               sizes={sizes}
               alt={alt}
               height={1}
               width={1}
-              ratio={100}
+              aspectRatio={[1, 1]}
               lazyLoad
             />
           </PromoComponent.Card.ImageWrapper>
