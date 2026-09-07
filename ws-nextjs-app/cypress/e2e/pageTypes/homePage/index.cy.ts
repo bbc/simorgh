@@ -53,7 +53,8 @@ const testSuites = [
   },
   {
     path: '/kyrgyz',
-    runforEnv: ['local', 'test', 'live'],
+    // 'test' temporarily removed: https://www.test.bbc.com/kyrgyz currently returns 500 due to ongoing work
+    runforEnv: ['local', 'live'],
     service: 'kyrgyz',
     tests,
   },

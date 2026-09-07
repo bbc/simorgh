@@ -1,0 +1,3638 @@
+{
+  "data": {
+    "title": "Dünya Kupası: Türkiye-Avustralya maçında an an neler yaşandı?",
+    "description": "Türkiye, 24 yıl sonra ilk kez katıldığı Dünya Kupası'na mağlubiyetle başladı. Ay Yıldızlılar, D Grubu ilk maçında Avustralya'ya 2-0 kaybetti. Avustralya adına golleri 27'nci dakikada Irankunda ve 75'inci dakikada Metcalfe kaydetti",
+    "visibility": true,
+    "language": "tr",
+    "headerImage": null,
+    "promoImage": {
+      "url": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/5b9f/live/c0ca1350-67bb-11f1-b1db-af71d47507d6.jpg",
+      "urlTemplate": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/5b9f/live/c0ca1350-67bb-11f1-b1db-af71d47507d6.jpg",
+      "height": 682,
+      "width": 1024,
+      "altText": "Arda Güler",
+      "copyright": "Ercin Erturk/Anadolu via Getty Images",
+      "suitableForSyndication": true
+    },
+    "syndicationPromoImage": {
+      "url": "https://ichef.bbci.co.uk/ace/standard/raw/cpsprodpb/5b9f/live/c0ca1350-67bb-11f1-b1db-af71d47507d6.jpg",
+      "brandedUrl": "https://ichef.bbci.co.uk/ace/branded_bbc/1200/cpsprodpb/5b9f/live/c0ca1350-67bb-11f1-b1db-af71d47507d6.jpg",
+      "altText": "Arda Güler",
+      "copyright": "Ercin Erturk/Anadolu via Getty Images",
+      "suitableForSyndication": true,
+      "isPlaceholder": false,
+      "width": 1024,
+      "height": 682
+    },
+    "home": "turkce",
+    "section": null,
+    "commercialInfo": {
+      "hasAdvertising": true
+    },
+    "sportDataEvent": {
+      "id": "urn:bbc:sportsdata:football:event:s-5d1c5lu90p9hhk82c0kcp05qs",
+      "position": 2
+    },
+    "sportDataEventContent": {
+      "title": "Irankunda makes history as impressive Australia beat Turkey",
+      "live": true,
+      "startDateTime": "2026-06-14T03:30:00.000Z",
+      "countingServiceDataAverage": 0,
+      "sportDataEvent": {
+        "urn": "urn:bbc:sportsdata:football:event:s-5d1c5lu90p9hhk82c0kcp05qs",
+        "home": {
+          "id": "bl4fd8cxe6kjvjx8br82gkhnq",
+          "fullName": "Australia",
+          "shortName": "Australia",
+          "urn": "urn:bbc:sportsdata:football:team:australia",
+          "runningScores": {
+            "halftime": "1",
+            "fulltime": "2"
+          },
+          "scoreUnconfirmed": "2",
+          "actions": [
+            {
+              "playerUrn": "urn:bbc:sportsdata:football:player:s-2c81wahtsfjksewt89ccirris",
+              "playerName": "N. Irankunda",
+              "actionType": "goal",
+              "actions": [
+                {
+                  "type": "Goal",
+                  "typeLabel": {
+                    "value": "Goal",
+                    "accessible": "Goal"
+                  },
+                  "timeLabel": {
+                    "value": "27'",
+                    "accessible": "27 minutes"
+                  }
+                }
+              ]
+            },
+            {
+              "playerUrn": "urn:bbc:sportsdata:football:player:s-1igjz2w9dr9mj5f4ade5plsve",
+              "playerName": "C. Metcalfe",
+              "actionType": "goal",
+              "actions": [
+                {
+                  "type": "Goal",
+                  "typeLabel": {
+                    "value": "Goal",
+                    "accessible": "Goal"
+                  },
+                  "timeLabel": {
+                    "value": "75'",
+                    "accessible": "75 minutes"
+                  }
+                }
+              ]
+            }
+          ],
+          "score": "2",
+          "imageSrc": "https://ichef.bbci.co.uk/redbutton-ichef/$recipe/sport-assets/sport/country-flags/australia.c9620efb7c.webp.png"
+        },
+        "away": {
+          "id": "9s2kpeunkes0g17l95r3t91j6",
+          "fullName": "Turkey",
+          "shortName": "Turkey",
+          "urn": "urn:bbc:sportsdata:football:team:turkey",
+          "runningScores": {
+            "halftime": "0",
+            "fulltime": "0"
+          },
+          "scoreUnconfirmed": "0",
+          "actions": [],
+          "score": "0",
+          "imageSrc": "https://ichef.bbci.co.uk/redbutton-ichef/$recipe/sport-assets/sport/country-flags/turkey.62f1bb8607.webp.png"
+        },
+        "time": {
+          "accessibleTime": "05:00",
+          "displayTimeUK": "05:00",
+          "timeCertainty": true
+        },
+        "date": "Sun 14 Jun 2026",
+        "tournament": {
+          "id": "70excpe1synn9kadnbppahdn7",
+          "name": "FIFA World Cup",
+          "disambiguatedName": "FIFA World Cup",
+          "urn": "urn:bbc:sportsdata:football:tournament:world-cup",
+          "thingsGuid": "de6a07ff-47ff-4551-9b71-7494a71aceac"
+        },
+        "round": {
+          "id": "87p9q4r6vnxfm609dlmkh2b6c",
+          "name": "Group D",
+          "urn": ""
+        },
+        "stage": {
+          "id": "87i5eesbymvgzmz5d0y4a855g",
+          "name": "Group Stage",
+          "urn": ""
+        },
+        "period": "ft",
+        "venue": {
+          "id": "30n9kml9necgq641jla4r6iiu",
+          "urn": "urn:bbc:sportsdata:football:venue:s-30n9kml9necgq641jla4r6iiu",
+          "name": "BC Place",
+          "shortName": "BC Place"
+        },
+        "attendance": {
+          "value": 52497
+        },
+        "status": "PostEvent",
+        "periodLabel": {
+          "value": "FT",
+          "accessible": "Full time"
+        },
+        "winner": "home",
+        "tournamentDescriptionLabel": "FIFA World Cup - Group Stage - Group D",
+        "groupedActions": [
+          {
+            "groupName": {
+              "fullName": "Assists",
+              "shortName": "Assists"
+            },
+            "homeTeamActions": [
+              "P. Okon-Engstler (27')"
+            ],
+            "homeTeamAccessibleActions": [
+              "P. Okon-Engstler (27 minutes)"
+            ],
+            "awayTeamActions": [],
+            "awayTeamAccessibleActions": []
+          }
+        ],
+        "accessibleEventSummary": "{australia} 2 , {turkey} 0 {atFullTime}",
+        "sportDiscipline": "football"
+      },
+      "type": "oppm",
+      "headerImage": null,
+      "seoTimestamps": {
+        "lastModified": "2026-06-14T13:44:27.000Z",
+        "firstPublished": "2026-06-13T03:00:56.026Z"
+      },
+      "lastUpdatedString": "Updated over a week ago"
+    },
+    "eavisEvent": {
+      "id": null
+    },
+    "article": {
+      "id": null,
+      "position": null
+    },
+    "mediaCollections": null,
+    "keyHighlight": null,
+    "electionBanner": {
+      "id": null
+    },
+    "supportingLinks": {
+      "id": null,
+      "position": null
+    },
+    "riddle": {
+      "id": null,
+      "isPredictor": false,
+      "position": null
+    },
+    "ugcCampaign": {
+      "id": null,
+      "position": null
+    },
+    "comments": {
+      "id": null,
+      "locator": null,
+      "position": null
+    },
+    "seo": {
+      "seoTitle": "Dünya Kupası: Türkiye-Avustralya maçında an an neler yaşandı?",
+      "seoDescription": "Türkiye, 24 yıl sonra ilk kez katıldığı Dünya Kupası'na mağlubiyetle başladı. Ay Yıldızlılar, D Grubu ilk maçında Avustralya'ya 2-0 kaybetti. Avustralya adına golleri 27'nci dakikada Irankunda ve 75'inci dakikada Metcalfe kaydetti",
+      "datePublished": "2026-06-14T02:00:00.000Z",
+      "dateModified": "2026-06-14T06:59:39.000Z"
+    },
+    "telescope": {
+      "id": null,
+      "position": null
+    },
+    "playerRater": {
+      "id": null,
+      "position": null
+    },
+    "endDateTime": "2026-06-14T06:58:00.000Z",
+    "startDateTime": "2026-06-14T02:00:00.000Z",
+    "firstPublishedDateTime": "2026-06-13T15:03:21.377Z",
+    "type": "live-coverage",
+    "analytics": {
+      "page": {
+        "name": "live_coverage.c70yqnn9ekxt.page",
+        "contentId": "urn:bbc:tipo:topic:c70yqnn9ekxt"
+      }
+    },
+    "dataSource": "TIPO",
+    "isLive": false,
+    "portraitVideoItems": null,
+    "summaryPoints": {
+      "id": "urn:bbc:optimo:asset:cwydpjee530o",
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "badf3174",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "bdaa7577",
+                    "type": "unorderedList",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "997157e8",
+                          "type": "listItem",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "1994e4ab",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Türkiye, 2026 Dünya Kupası D Grubu ilk maçında Avustralya'ya 2-0 kaybetti",
+                                  "blocks": [
+                                    {
+                                      "id": "e2123409",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Türkiye, 2026 Dünya Kupası D Grubu ilk maçında Avustralya'ya 2-0 kaybetti",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "id": "5e063258",
+                          "type": "listItem",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "c265fd43",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Avustralya adına golleri 27'nci dakikada Irakunda ve 75'inci dakikada Metcalfe kaydetti",
+                                  "blocks": [
+                                    {
+                                      "id": "23a40b19",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Avustralya adına golleri 27'nci dakikada Irakunda ve 75'inci dakikada Metcalfe kaydetti",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "id": "3a911420",
+                          "type": "listItem",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "c7735df4",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "TSİ 07.00'de başlayan maç Kanada'nın Vancouver şehrinde oynandı. Stadyumla ilgili detayları buradan okuyabilirsiniz",
+                                  "blocks": [
+                                    {
+                                      "id": "0fe01cac",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "TSİ 07.00'de başlayan maç Kanada'nın Vancouver şehrinde oynandı. Stadyumla ilgili ",
+                                        "attributes": []
+                                      }
+                                    },
+                                    {
+                                      "id": "e05b6e58",
+                                      "type": "urlLink",
+                                      "model": {
+                                        "text": "detayları",
+                                        "blocks": [
+                                          {
+                                            "id": "79af5b7f",
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "detayları",
+                                              "attributes": [
+                                                "bold"
+                                              ]
+                                            }
+                                          }
+                                        ],
+                                        "locator": "https://www.bbc.com/turkce/extra/zup2hn8k46/world-cup-2026-stadium-guide-bbc-turkish#section-BC-Place-Vancouver-o2ahrOjL9s",
+                                        "isExternal": false
+                                      }
+                                    },
+                                    {
+                                      "id": "77dea52d",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": " buradan okuyabilirsiniz",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "id": "7ba1ba5a",
+                          "type": "listItem",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "3e89983d",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "ABD, D Grubu'ndaki ilk maçında Paraguay'ı 4-1 mağlup etti",
+                                  "blocks": [
+                                    {
+                                      "id": "c6a76900",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "ABD, D Grubu'ndaki ilk maçında Paraguay'ı 4-1 mağlup etti",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "id": "f2955143",
+                          "type": "listItem",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "807ed121",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Turnuva ile ilgili en son haberler, takım profilleri ve analizler BBC Türkçe Dünya Kupası özel sayfasında",
+                                  "blocks": [
+                                    {
+                                      "id": "a7be825d",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Turnuva ile ilgili en son haberler, takım profilleri ve analizler ",
+                                        "attributes": []
+                                      }
+                                    },
+                                    {
+                                      "id": "b981df81",
+                                      "type": "urlLink",
+                                      "model": {
+                                        "text": "BBC Türkçe Dünya Kupası özel sayfasında",
+                                        "blocks": [
+                                          {
+                                            "id": "602a007f",
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "BBC Türkçe Dünya Kupası özel sayfasında",
+                                              "attributes": []
+                                            }
+                                          }
+                                        ],
+                                        "locator": "https://www.bbc.com/turkce/topics/ceq17090840t",
+                                        "isExternal": false
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "id": "555717dd",
+                          "type": "listItem",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "af0ea4ce",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Türkiye'nin Dünya Kupası'ndaki ilk rakibi Avustralya nasıl bir takım?",
+                                  "blocks": [
+                                    {
+                                      "id": "d0b7c7a8",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Türkiye'nin Dünya Kupası'ndaki ilk rakibi ",
+                                        "attributes": []
+                                      }
+                                    },
+                                    {
+                                      "id": "ea95637a",
+                                      "type": "urlLink",
+                                      "model": {
+                                        "text": "Avustralya",
+                                        "blocks": [
+                                          {
+                                            "id": "1fbf1245",
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "Avustralya",
+                                              "attributes": []
+                                            }
+                                          }
+                                        ],
+                                        "locator": "https://www.bbc.com/turkce/articles/cly83n81v3no",
+                                        "isExternal": false
+                                      }
+                                    },
+                                    {
+                                      "id": "9139d29a",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": " nasıl bir takım?",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "liveTextStream": {
+      "id": "7A68BEF3D49E4020BA94EF206D31B5A2",
+      "contributors": "Burak Abatay tarafından, yapay zeka desteğiyle hazırlandı",
+      "content": {
+        "data": {
+          "results": [
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": []
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "\n      ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Canlı anlatım sayfamızın sonuna geliyoruz.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Canlı anlatım sayfamızın sonuna geliyoruz.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Türkiye'nin 20 Haziran'da Paraguay'la oynayacağı bir sonraki maçında yeniden görüşmek üzere!",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Türkiye'nin 20 Haziran'da Paraguay'la oynayacağı bir sonraki maçında yeniden görüşmek üzere!",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Türkiye'nin Dünya Kupası'ndaki rakipleri: Paraguay",
+                        "blocks": [
+                          {
+                            "type": "urlLink",
+                            "model": {
+                              "text": "Türkiye'nin Dünya Kupası'ndaki rakipleri: Paraguay",
+                              "locator": "https://www.bbc.com/turkce/articles/clyel7pr91lo",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Türkiye'nin Dünya Kupası'ndaki rakipleri: Paraguay",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "\n    ",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:7d39b34c-1994-496b-86c5-c5e77813a58b",
+              "type": "POST",
+              "options": {
+                "isBreakingNews": false,
+                "includeComments": false
+              },
+              "dates": {
+                "firstPublished": "2026-06-14T06:58:27.000Z",
+                "lastPublished": "2026-06-14T06:59:39.000Z",
+                "time": null,
+                "curated": "2026-06-14T06:58:28.297Z"
+              },
+              "titles": [
+                {
+                  "title": null,
+                  "source": "primary"
+                }
+              ],
+              "descriptions": [
+                {
+                  "text": null,
+                  "source": "summary"
+                }
+              ],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            },
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Montella: Devam ediyoruz, hâlâ oyunun içindeyiz",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Montella: Devam ediyoruz, hâlâ oyunun içindeyiz",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "\n      ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "height": 697,
+                              "width": 1024,
+                              "locator": "vivo/live/images/2026/6/14/df249ea1-e007-48ff-bc71-0f379babbc2b.jpg",
+                              "originCode": "cpsprodpb",
+                              "copyrightHolder": "Jared C. Tilton - FIFA/FIFA via Getty Images"
+                            }
+                          },
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Montella",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Montella",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Montella'nın basın toplantısından:",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Montella'nın basın toplantısından:",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "\"Çok üzgünüz. Durumu düzeltebiliriz, vaktimiz var. Takımımız biraz yavaştı ve birkaç kez aslında rakip takımın bildiğimiz taktikleri işledi.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "\"Çok üzgünüz. Durumu düzeltebiliriz, vaktimiz var. Takımımız biraz yavaştı ve birkaç kez aslında rakip takımın bildiğimiz taktikleri işledi.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "\"Devam ediyoruz, oyunun içindeyiz hala. \n\nBazı futbolcuların eline iyi fırsatlar geldi. Eleştirileri her zaman kabul ettim. Başka oyuncularımız da var. \n\nArda'yı sahada tutmaya devam etmek istedim. Kenan da ikinci yarıda oyuna girdi ve biliyoruz ki Kenan, sol tarafta iyi oynuyor.\"",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "\"Devam ediyoruz, oyunun içindeyiz hala. \n\nBazı futbolcuların eline iyi fırsatlar geldi. Eleştirileri her zaman kabul ettim. Başka oyuncularımız da var. \n\nArda'yı sahada tutmaya devam etmek istedim. Kenan da ikinci yarıda oyuna girdi ve biliyoruz ki Kenan, sol tarafta iyi oynuyor.\"",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "\n    ",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:7eb2ba8c-eece-46ed-ac61-4ade6e071011",
+              "type": "POST",
+              "options": {
+                "isBreakingNews": false,
+                "includeComments": false
+              },
+              "dates": {
+                "firstPublished": "2026-06-14T06:50:09.000Z",
+                "lastPublished": "2026-06-14T06:50:09.000Z",
+                "time": null,
+                "curated": "2026-06-14T06:50:10.200Z"
+              },
+              "titles": [
+                {
+                  "title": null,
+                  "source": "primary"
+                }
+              ],
+              "descriptions": [
+                {
+                  "text": null,
+                  "source": "summary"
+                }
+              ],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            },
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Montella: Savunmaları uzun boyluydu, bu tarz rakiplerle oynamak kolay değil",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Montella: Savunmaları uzun boyluydu, bu tarz rakiplerle oynamak kolay değil",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "\n      ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Montella rakibe karşı oyunda kurulan hakimiyetten bahsetti.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Montella rakibe karşı oyunda kurulan hakimiyetten bahsetti.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Topa yüzde 78 oranında sahip olduklarını ve 30 tane şut attıklarını söyleyen Montella şöyle devam etti:",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Topa yüzde 78 oranında sahip olduklarını ve 30 tane şut attıklarını söyleyen Montella şöyle devam etti:",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "\"Ama son vuruşları gerçekleştiremedik. Gole çok yaklaştık ama savunmayı aşmakta zorlandık. Savunmaları uzun boyluydu, bu tarz rakiplerle oynamak kolay değil\"",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "\"Ama son vuruşları gerçekleştiremedik. Gole çok yaklaştık ama savunmayı aşmakta zorlandık. Savunmaları uzun boyluydu, bu tarz rakiplerle oynamak kolay değil\"",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "\n    ",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:192bf57b-eb7f-4971-b8af-9a0e559b0a92",
+              "type": "POST",
+              "options": {
+                "isBreakingNews": false,
+                "includeComments": false
+              },
+              "dates": {
+                "firstPublished": "2026-06-14T06:47:27.000Z",
+                "lastPublished": "2026-06-14T06:47:27.000Z",
+                "time": null,
+                "curated": "2026-06-14T06:47:27.721Z"
+              },
+              "titles": [
+                {
+                  "title": null,
+                  "source": "primary"
+                }
+              ],
+              "descriptions": [
+                {
+                  "text": null,
+                  "source": "summary"
+                }
+              ],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            },
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Montella: Kaybedince bütün eleştirileri kabul etmeniz gerekiyor",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Montella: Kaybedince bütün eleştirileri kabul etmeniz gerekiyor",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "\n      ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Vincenzo Montella, basın toplantısında \"Kaybedince bütün eleştirileri kabul etmeniz gerekiyor, adil olduğunu düşünmeseniz bile\" dedi.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Vincenzo Montella, basın toplantısında \"Kaybedince bütün eleştirileri kabul etmeniz gerekiyor, adil olduğunu düşünmeseniz bile\" dedi.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "İtalyan teknik direktör \"Bütün görüşlere saygı duyuyorum\" diye konuştu.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "İtalyan teknik direktör \"Bütün görüşlere saygı duyuyorum\" diye konuştu.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "\n    ",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:6515549a-6b21-459f-b156-f0069edd3b54",
+              "type": "POST",
+              "options": {
+                "isBreakingNews": false,
+                "includeComments": false
+              },
+              "dates": {
+                "firstPublished": "2026-06-14T06:46:19.000Z",
+                "lastPublished": "2026-06-14T06:46:19.000Z",
+                "time": null,
+                "curated": "2026-06-14T06:46:19.416Z"
+              },
+              "titles": [
+                {
+                  "title": null,
+                  "source": "primary"
+                }
+              ],
+              "descriptions": [
+                {
+                  "text": null,
+                  "source": "summary"
+                }
+              ],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            },
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Montella: Kenan Yıldız’ın dar alandaki özelliklerini kullanmak istedik",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Montella: Kenan Yıldız’ın dar alandaki özelliklerini kullanmak istedik",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "\n      ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Türkiye A Milli TAkım Teknik Direktörü Vincenzo Montella, Avustralya mağlubiyetinin ardından açıklamalarda bulunuyor.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Türkiye A Milli TAkım Teknik Direktörü Vincenzo Montella, Avustralya mağlubiyetinin ardından açıklamalarda bulunuyor.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Rakibin oyunu daralttığı için Kenan Yıldız’ın dar alandaki özelliklerini kullanmak istediklerini söyleyen Montella, \"Barış Alper Yılmaz’ı biliyorsunuz, alan bulduğu zaman ne kadar etkili olduğunu görüyor ama rakibin yerleşik savunmasına karşı bu şekilde oynadık\" dedi.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Rakibin oyunu daralttığı için Kenan Yıldız’ın dar alandaki özelliklerini kullanmak istediklerini söyleyen Montella, \"Barış Alper Yılmaz’ı biliyorsunuz, alan bulduğu zaman ne kadar etkili olduğunu görüyor ama rakibin yerleşik savunmasına karşı bu şekilde oynadık\" dedi.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "\n    ",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:f0c269c8-63cb-4b32-b991-4841cea55a67",
+              "type": "POST",
+              "options": {
+                "isBreakingNews": false,
+                "includeComments": false
+              },
+              "dates": {
+                "firstPublished": "2026-06-14T06:45:29.000Z",
+                "lastPublished": "2026-06-14T06:45:29.000Z",
+                "time": null,
+                "curated": "2026-06-14T06:45:29.982Z"
+              },
+              "titles": [
+                {
+                  "title": null,
+                  "source": "primary"
+                }
+              ],
+              "descriptions": [
+                {
+                  "text": null,
+                  "source": "summary"
+                }
+              ],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            },
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Irankunda 'Maçın Oyuncusu' seçildi",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Irankunda 'Maçın Oyuncusu' seçildi",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "\n      ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Avustralya'da Nestory Irankunda \"Maçın En İyi Oyuncusu\" seçildi. ",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Avustralya'da Nestory Irankunda \"Maçın En İyi Oyuncusu\" seçildi. ",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Championship'te Watford forması giyen Irankunda takımının ilk golünü kaydetti.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Championship'te Watford forması giyen Irankunda takımının ilk golünü kaydetti.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "height": 784,
+                              "width": 1024,
+                              "locator": "vivo/live/images/2026/6/14/d4b36e6b-2db2-4c6f-a540-6c30b7a7bfa2.jpg",
+                              "originCode": "cpsprodpb",
+                              "copyrightHolder": "Jared C. Tilton - FIFA/FIFA via Getty Images"
+                            }
+                          },
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Irakunda",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Irakunda",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "\n    ",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:42136c6d-22ad-4f56-8243-6304acc6862c",
+              "type": "POST",
+              "options": {
+                "isBreakingNews": false,
+                "includeComments": false
+              },
+              "dates": {
+                "firstPublished": "2026-06-14T06:41:18.000Z",
+                "lastPublished": "2026-06-14T06:41:18.000Z",
+                "time": null,
+                "curated": "2026-06-14T06:41:19.320Z"
+              },
+              "titles": [
+                {
+                  "title": null,
+                  "source": "primary"
+                }
+              ],
+              "descriptions": [
+                {
+                  "text": null,
+                  "source": "summary"
+                }
+              ],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            },
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "D Grubu'nda puan durumu ve gelecek maçlar nasıl?",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "D Grubu'nda puan durumu ve gelecek maçlar nasıl?",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "\n      ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "height": 1600,
+                              "width": 1321,
+                              "locator": "vivo/live/images/2026/6/14/c04a650f-7140-47dd-b76e-d908514090b7.jpg",
+                              "originCode": "cpsprodpb",
+                              "copyrightHolder": "BBC"
+                            }
+                          },
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Grafik",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Grafik",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "\n    ",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:dc241ce3-a9e2-4d8b-ba0f-e800298da093",
+              "type": "POST",
+              "options": {
+                "isBreakingNews": false,
+                "includeComments": false
+              },
+              "dates": {
+                "firstPublished": "2026-06-14T06:22:13.000Z",
+                "lastPublished": "2026-06-14T06:24:06.000Z",
+                "time": null,
+                "curated": "2026-06-14T06:22:13.814Z"
+              },
+              "titles": [
+                {
+                  "title": null,
+                  "source": "primary"
+                }
+              ],
+              "descriptions": [
+                {
+                  "text": null,
+                  "source": "summary"
+                }
+              ],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            },
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Türkiye'nin istatistiklerde kurduğu üstünlük mağlubiyeti önleyemedi",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Türkiye'nin istatistiklerde kurduğu üstünlük mağlubiyeti önleyemedi",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "subheadline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "MS: Avustralya 2-0 Türkiye",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "MS: Avustralya 2-0 Türkiye",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "\n      ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Türkiye rakibi karşısında istatistiklerde üstünlük kurdu.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Türkiye rakibi karşısında istatistiklerde üstünlük kurdu.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Ancak bu mağlubiyeti önlemeye yetmedi.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Ancak bu mağlubiyeti önlemeye yetmedi.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "İyi kapanan Avustralya savunmasını aşmakta çok zorlanan Türkiye, rakip kaleye 30 şut attı. Bu şutların yalnızca sekiz tanesi kaleyi buldu.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "İyi kapanan Avustralya savunmasını aşmakta çok zorlanan Türkiye, rakip kaleye 30 şut attı. Bu şutların yalnızca sekiz tanesi kaleyi buldu.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Avustralya ise dokuz şutta dört isabet sağladı. Bunların ikisi de gol oldu.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Avustralya ise dokuz şutta dört isabet sağladı. Bunların ikisi de gol oldu.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Türkiye maç genelinde topa da hakim oldu ve yüzde 71,7'lik topla oynama oranı yakaladı.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Türkiye maç genelinde topa da hakim oldu ve yüzde 71,7'lik topla oynama oranı yakaladı.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "height": 1000,
+                              "width": 800,
+                              "locator": "vivo/live/images/2026/6/14/c5cb30e8-dfba-4f27-b1ff-57de85f65899.jpg",
+                              "originCode": "cpsprodpb",
+                              "copyrightHolder": "BBC"
+                            }
+                          },
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Grafik",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Grafik",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "\n    ",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:6d5edd55-7dd3-4211-9c89-6162e324b949",
+              "type": "POST",
+              "options": {
+                "isBreakingNews": false,
+                "includeComments": false
+              },
+              "dates": {
+                "firstPublished": "2026-06-14T06:20:55.000Z",
+                "lastPublished": "2026-06-14T06:20:55.000Z",
+                "time": null,
+                "curated": "2026-06-14T06:20:56.642Z"
+              },
+              "titles": [
+                {
+                  "title": null,
+                  "source": "primary"
+                }
+              ],
+              "descriptions": [
+                {
+                  "text": null,
+                  "source": "summary"
+                }
+              ],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            },
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Down Under'lı kutlama",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Down Under'lı kutlama",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "\n      ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Efe Öç, BBC Türkçe Muhabiri - BC Place Vancouver",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Efe Öç, BBC Türkçe Muhabiri - BC Place Vancouver",
+                              "attributes": [
+                                "bold"
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "FIFA, turnuvadaki her maçın ardından kazanan takımla özdeşleşen bir şarkıyı çalma geleneği uyguluyor.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "FIFA, turnuvadaki her maçın ardından kazanan takımla özdeşleşen bir şarkıyı çalma geleneği uyguluyor.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Avustralya'nın galibiyetinin ardından da Vancouver'da hoparlörlerden, Avustralyalı grup Men at Work'ün ünlü şarkısı Down Under yükseldi.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Avustralya'nın galibiyetinin ardından da Vancouver'da hoparlörlerden, Avustralyalı grup Men at Work'ün ünlü şarkısı Down Under yükseldi.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Avustralyalı taraftarlar şarkıyla beraber büyük bir kutlama yaptı.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Avustralyalı taraftarlar şarkıyla beraber büyük bir kutlama yaptı.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Türk tarafında ise büyük bir hüzün hakim.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Türk tarafında ise büyük bir hüzün hakim.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "\n    ",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:b950ad83-fc53-46f9-8535-c94280b4b6e8",
+              "type": "POST",
+              "options": {
+                "isBreakingNews": false,
+                "includeComments": false
+              },
+              "dates": {
+                "firstPublished": "2026-06-14T06:14:48.000Z",
+                "lastPublished": "2026-06-14T06:14:48.000Z",
+                "time": null,
+                "curated": "2026-06-14T06:14:48.849Z"
+              },
+              "titles": [
+                {
+                  "title": null,
+                  "source": "primary"
+                }
+              ],
+              "descriptions": [
+                {
+                  "text": null,
+                  "source": "summary"
+                }
+              ],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            },
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Bir tarafta hüzün, bir tarafta sevinç hakim",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Bir tarafta hüzün, bir tarafta sevinç hakim",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "\n      ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Türkiye, 24 yıl sonra ilk kez katıldığı Dünya Kupası'na Avustralya karşısında mağlubiyetle başladı.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Türkiye, 24 yıl sonra ilk kez katıldığı Dünya Kupası'na Avustralya karşısında mağlubiyetle başladı.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "İki ülkede de birçok kente dev ekranlar kuruldu.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "İki ülkede de birçok kente dev ekranlar kuruldu.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Melbourne'de sevinç, İstanbul'da ise hüzün hakim.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Melbourne'de sevinç, İstanbul'da ise hüzün hakim.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "height": 683,
+                              "width": 1024,
+                              "locator": "vivo/live/images/2026/6/14/2a9fc31f-d859-41c8-95bc-a1f282eac79d.jpg",
+                              "originCode": "cpsprodpb",
+                              "copyrightHolder": "Morgan Hancock/Getty Images"
+                            }
+                          },
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Melbourne'deki taraftarlar",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Melbourne'deki taraftarlar",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "caption",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Melbourne'deki taraftarlar buldukları gollerin ardından büyük sevinç yaşadılar",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Melbourne'deki taraftarlar buldukları gollerin ardından büyük sevinç yaşadılar",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "height": 682,
+                              "width": 1024,
+                              "locator": "vivo/live/images/2026/6/14/61d99d19-7763-4717-9755-88caaef6bdf4.jpg",
+                              "originCode": "cpsprodpb",
+                              "copyrightHolder": "Muhammed Enes Yildirim/Anadolu via Getty Images"
+                            }
+                          },
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Üsküdar'daki taraftarlar maçın ardından büyük bir üzüntü yaşadı",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Üsküdar'daki taraftarlar maçın ardından büyük bir üzüntü yaşadı",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "caption",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Üsküdar'daki taraftarlar maçın ardından büyük bir üzüntü yaşadı",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Üsküdar'daki taraftarlar maçın ardından büyük bir üzüntü yaşadı",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "\n    ",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:8b5b0748-eb3a-44a4-af2e-22e24915a965",
+              "type": "POST",
+              "options": {
+                "isBreakingNews": false,
+                "includeComments": false
+              },
+              "dates": {
+                "firstPublished": "2026-06-14T06:11:35.000Z",
+                "lastPublished": "2026-06-14T06:11:35.000Z",
+                "time": null,
+                "curated": "2026-06-14T06:11:36.172Z"
+              },
+              "titles": [
+                {
+                  "title": null,
+                  "source": "primary"
+                }
+              ],
+              "descriptions": [
+                {
+                  "text": null,
+                  "source": "summary"
+                }
+              ],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            },
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Maç sonu: Türkiye turnuvaya mağlubiyetle başladı",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Maç sonu: Türkiye turnuvaya mağlubiyetle başladı",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "\n      ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Maç, 90 dakika sonucunda Avustralya'nın 2-0'lık galibiyetiyle sona erdi.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Maç, 90 dakika sonucunda Avustralya'nın 2-0'lık galibiyetiyle sona erdi.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Böylelikle Türkiye, 24 sonra ilk kez katıldığı Dünya Kupası'na mağlubiyetle başladı.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Böylelikle Türkiye, 24 sonra ilk kez katıldığı Dünya Kupası'na mağlubiyetle başladı.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "\n    ",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:c020501f-057a-4f3d-a2f6-b2a87166cb38",
+              "type": "POST",
+              "options": {
+                "isBreakingNews": true,
+                "includeComments": false
+              },
+              "dates": {
+                "firstPublished": "2026-06-14T05:58:16.000Z",
+                "lastPublished": "2026-06-14T05:58:16.000Z",
+                "time": null,
+                "curated": "2026-06-14T05:58:16.824Z"
+              },
+              "titles": [
+                {
+                  "title": null,
+                  "source": "primary"
+                }
+              ],
+              "descriptions": [
+                {
+                  "text": null,
+                  "source": "summary"
+                }
+              ],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            },
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Kerem Aktürkoğlu oyundan çıkarken yuhalandı",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Kerem Aktürkoğlu oyundan çıkarken yuhalandı",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "\n      ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "height": 682,
+                              "width": 1024,
+                              "locator": "vivo/live/images/2026/6/14/7af1ce13-6a84-420c-86ce-5169021a6777.jpg",
+                              "originCode": "cpsprodpb",
+                              "copyrightHolder": "Ercin Erturk/Anadolu via Getty Images"
+                            }
+                          },
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Kerem Aktürkoğlu",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Kerem Aktürkoğlu",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Efe Öç, BC Place Vancouver",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Efe Öç, BC Place Vancouver",
+                              "attributes": [
+                                "bold"
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Vancouver'daki Türk taraftarların bazıları, 85'inci dakikada oyundan alınan Kerem Aktürkoğlu'nu yuhaladı.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Vancouver'daki Türk taraftarların bazıları, 85'inci dakikada oyundan alınan Kerem Aktürkoğlu'nu yuhaladı.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Taraftarların bazıları ise yuhalayan taraftarları susturmaya çalıştı ve milli futbolcuya destek verdi.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Taraftarların bazıları ise yuhalayan taraftarları susturmaya çalıştı ve milli futbolcuya destek verdi.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Aktürkoğlu, oyundan alındığı 85 dakika boyunca takımının ileri hattında oynadı. Ancak kalabalık Avustralya savunması karşısında etkili olamadı.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Aktürkoğlu, oyundan alındığı 85 dakika boyunca takımının ileri hattında oynadı. Ancak kalabalık Avustralya savunması karşısında etkili olamadı.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "\n    ",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:c533f7e6-1816-41d8-87b0-c94b9b1f32c0",
+              "type": "POST",
+              "options": {
+                "isBreakingNews": false,
+                "includeComments": false
+              },
+              "dates": {
+                "firstPublished": "2026-06-14T05:56:25.000Z",
+                "lastPublished": "2026-06-14T05:56:25.000Z",
+                "time": null,
+                "curated": "2026-06-14T05:56:26.569Z"
+              },
+              "titles": [
+                {
+                  "title": null,
+                  "source": "primary"
+                }
+              ],
+              "descriptions": [
+                {
+                  "text": null,
+                  "source": "summary"
+                }
+              ],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            },
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Altı dakika uzatma",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Altı dakika uzatma",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "\n      ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Maçın sonuna altı dakika uzatma verildi.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Maçın sonuna altı dakika uzatma verildi.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Türkiye'nin gol arayışı sürüyor.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Türkiye'nin gol arayışı sürüyor.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "\n    ",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:0a909d25-1626-46fc-96b9-0bdbe7762428",
+              "type": "POST",
+              "options": {
+                "isBreakingNews": false,
+                "includeComments": false
+              },
+              "dates": {
+                "firstPublished": "2026-06-14T05:53:04.000Z",
+                "lastPublished": "2026-06-14T05:53:04.000Z",
+                "time": null,
+                "curated": "2026-06-14T05:53:04.362Z"
+              },
+              "titles": [
+                {
+                  "title": null,
+                  "source": "primary"
+                }
+              ],
+              "descriptions": [
+                {
+                  "text": null,
+                  "source": "summary"
+                }
+              ],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            },
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Türkiye gol arıyor",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Türkiye gol arıyor",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "\n      ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Maçın 90 dakikası sona ererken Türkiye, kapanan Avustralya savunması karşısında gol arıyor.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Maçın 90 dakikası sona ererken Türkiye, kapanan Avustralya savunması karşısında gol arıyor.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Kenar ortaları uzun Avustralya savunmasını aşamıyor. Savunma göbeği ise çok kalabalık. ",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Kenar ortaları uzun Avustralya savunmasını aşamıyor. Savunma göbeği ise çok kalabalık. ",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Avustralya ise geçiş hücumlarında gol aramaya çalışacak.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Avustralya ise geçiş hücumlarında gol aramaya çalışacak.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "\n    ",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:fec59646-06f6-4494-92a8-6db5a77a0f97",
+              "type": "POST",
+              "options": {
+                "isBreakingNews": false,
+                "includeComments": false
+              },
+              "dates": {
+                "firstPublished": "2026-06-14T05:52:44.000Z",
+                "lastPublished": "2026-06-14T05:52:44.000Z",
+                "time": null,
+                "curated": "2026-06-14T05:52:45.184Z"
+              },
+              "titles": [
+                {
+                  "title": null,
+                  "source": "primary"
+                }
+              ],
+              "descriptions": [
+                {
+                  "text": null,
+                  "source": "summary"
+                }
+              ],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            },
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Yunus sarı kart gördü",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Yunus sarı kart gördü",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "subheadline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Avustralya 2-0 Türkiye",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Avustralya 2-0 Türkiye",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "\n      ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Yunus Akgün, Aiden O'Neill'e yaptığı faul nedeniyle 87'nci dakikada sarı kart gördü.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Yunus Akgün, Aiden O'Neill'e yaptığı faul nedeniyle 87'nci dakikada sarı kart gördü.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "\n    ",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:01a7ddab-460c-4f65-abcd-3e722aaa0999",
+              "type": "POST",
+              "options": {
+                "isBreakingNews": false,
+                "includeComments": false
+              },
+              "dates": {
+                "firstPublished": "2026-06-14T05:48:56.000Z",
+                "lastPublished": "2026-06-14T05:48:56.000Z",
+                "time": null,
+                "curated": "2026-06-14T05:48:56.712Z"
+              },
+              "titles": [
+                {
+                  "title": null,
+                  "source": "primary"
+                }
+              ],
+              "descriptions": [
+                {
+                  "text": null,
+                  "source": "summary"
+                }
+              ],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            },
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Oyuncu değişikliği",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Oyuncu değişikliği",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "subheadline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Avustralya 2-0 Türkiye",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Avustralya 2-0 Türkiye",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "\n      ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "85'inci dakikada Kerem Aktürkoğlu'nu yerine Deniz Gül oyuna girdi.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "85'inci dakikada Kerem Aktürkoğlu'nu yerine Deniz Gül oyuna girdi.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "\n    ",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:56fab1bd-d785-406a-a922-7d87a132c0a5",
+              "type": "POST",
+              "options": {
+                "isBreakingNews": false,
+                "includeComments": false
+              },
+              "dates": {
+                "firstPublished": "2026-06-14T05:47:38.000Z",
+                "lastPublished": "2026-06-14T05:47:38.000Z",
+                "time": null,
+                "curated": "2026-06-14T05:47:39.069Z"
+              },
+              "titles": [
+                {
+                  "title": null,
+                  "source": "primary"
+                }
+              ],
+              "descriptions": [
+                {
+                  "text": null,
+                  "source": "summary"
+                }
+              ],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            },
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Oyuncu değişikliği",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Oyuncu değişikliği",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "subheadline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Avustralya 2-0 Türkiye",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Avustralya 2-0 Türkiye",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "\n      ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Avustralya şimdi iki oyuncu değişikliği yapıyor. ",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Avustralya şimdi iki oyuncu değişikliği yapıyor. ",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "84'üncü dakikada Jackson Irvine ve Aziz Behic, Jordan Bos ve Paul Okon-Engstler'in yerine oyuna giriyor.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "84'üncü dakikada Jackson Irvine ve Aziz Behic, Jordan Bos ve Paul Okon-Engstler'in yerine oyuna giriyor.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "\n    ",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:33c18774-e095-4cc9-bd3e-fc4d76706c56",
+              "type": "POST",
+              "options": {
+                "isBreakingNews": false,
+                "includeComments": false
+              },
+              "dates": {
+                "firstPublished": "2026-06-14T05:45:05.000Z",
+                "lastPublished": "2026-06-14T05:45:05.000Z",
+                "time": null,
+                "curated": "2026-06-14T05:45:05.915Z"
+              },
+              "titles": [
+                {
+                  "title": null,
+                  "source": "primary"
+                }
+              ],
+              "descriptions": [
+                {
+                  "text": null,
+                  "source": "summary"
+                }
+              ],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            },
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "'Türkiye geçiş hücumlarını iyi savunamıyor'",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "'Türkiye geçiş hücumlarını iyi savunamıyor'",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "subheadline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Avustralya 2-0 Türkiye",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Avustralya 2-0 Türkiye",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "\n      ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Curtis Davies, eski Premier Lig savunma oyuncusu, BBC Radio 5 Live yayını",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Curtis Davies, eski Premier Lig savunma oyuncusu, BBC Radio 5 Live yayını",
+                              "attributes": [
+                                "bold"
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Başından beri Türkiye'nin ne kadar savunma açığı olduğunu söylüyorduk.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Başından beri Türkiye'nin ne kadar savunma açığı olduğunu söylüyorduk.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Avustralya savunmada rahat oynadı ama Türkiye hızlı hücumlarda savunmaya hazır değil.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Avustralya savunmada rahat oynadı ama Türkiye hızlı hücumlarda savunmaya hazır değil.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "\n    ",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:b7cba5ce-83d9-42a7-99a7-00ad539b5e3f",
+              "type": "POST",
+              "options": {
+                "isBreakingNews": false,
+                "includeComments": false
+              },
+              "dates": {
+                "firstPublished": "2026-06-14T05:42:08.000Z",
+                "lastPublished": "2026-06-14T05:42:08.000Z",
+                "time": null,
+                "curated": "2026-06-14T05:42:08.786Z"
+              },
+              "titles": [
+                {
+                  "title": null,
+                  "source": "primary"
+                }
+              ],
+              "descriptions": [
+                {
+                  "text": null,
+                  "source": "summary"
+                }
+              ],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            },
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Avustralya: 2 - 0 Türkiye",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Avustralya: 2 - 0 Türkiye",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "subheadline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "75'inci dakika",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "75'inci dakika",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "\n      ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Connor Metcalfe, 75'inci dakikada attığı golle Avustralya'yı 2-0'lık üstünlüğe taşıdı.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Connor Metcalfe, 75'inci dakikada attığı golle Avustralya'yı 2-0'lık üstünlüğe taşıdı.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Metcalfe, kaleye yaklaşık 20 metre mesafede topu kontrol etti ve topu yakın direğin içinden, Uğurcan Çakır'ın uzanamayacağı bir noktaya gönderdi.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Metcalfe, kaleye yaklaşık 20 metre mesafede topu kontrol etti ve topu yakın direğin içinden, Uğurcan Çakır'ın uzanamayacağı bir noktaya gönderdi.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "\n    ",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:7df3b122-eead-4d3c-854c-44fa67129f13",
+              "type": "POST",
+              "options": {
+                "isBreakingNews": false,
+                "includeComments": false
+              },
+              "dates": {
+                "firstPublished": "2026-06-14T05:37:25.000Z",
+                "lastPublished": "2026-06-14T05:37:50.000Z",
+                "time": null,
+                "curated": "2026-06-14T05:37:25.714Z"
+              },
+              "titles": [
+                {
+                  "title": null,
+                  "source": "primary"
+                }
+              ],
+              "descriptions": [
+                {
+                  "text": null,
+                  "source": "summary"
+                }
+              ],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            },
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "İkinci yarıdaki su molası sona erdi",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "İkinci yarıdaki su molası sona erdi",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "\n      ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "İkinci yarıda da su molası verildi.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "İkinci yarıda da su molası verildi.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Bu aranın ardından maç yeniden başladı.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Bu aranın ardından maç yeniden başladı.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "\n    ",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:2083e9c4-9a63-48f8-9e3e-d068b1098184",
+              "type": "POST",
+              "options": {
+                "isBreakingNews": false,
+                "includeComments": false
+              },
+              "dates": {
+                "firstPublished": "2026-06-14T05:35:05.000Z",
+                "lastPublished": "2026-06-14T05:37:46.000Z",
+                "time": null,
+                "curated": "2026-06-14T05:35:05.993Z"
+              },
+              "titles": [
+                {
+                  "title": null,
+                  "source": "primary"
+                }
+              ],
+              "descriptions": [
+                {
+                  "text": null,
+                  "source": "summary"
+                }
+              ],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            }
+          ],
+          "page": {
+            "index": 1,
+            "total": 4
+          }
+        }
+      }
+    },
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:c70yqnn9ekxt",
+        "contentType": "live-coverage",
+        "pageIdentifier": "live_coverage.c70yqnn9ekxt.page",
+        "pageTitle": "Dünya Kupası: Türkiye-Avustralya maçında an an neler yaşandı?",
+        "timePublished": "2026-06-14T02:00:00.000Z",
+        "timeUpdated": "2026-06-14T06:59:39.000Z"
+      },
+      "type": "live"
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}
