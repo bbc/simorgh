@@ -265,6 +265,7 @@ test.describe('onDemandAudio', () => {
 					}
 
 					if (scheduleIsEnabled && !hasScheduleData) {
+                        await expect(radioSchedule).not.toBeVisible();
 						return;
 					}
 
