@@ -1,7 +1,10 @@
 import styled from '@emotion/styled';
 
 const A = styled.a`
-  color: ${props => props.theme.palette.GREY_10};
+  color: ${props =>
+    props.theme.isDarkUi
+      ? props.theme.palette.GREY_2
+      : props.theme.palette.GREY_10};
   text-decoration: none;
   display: block;
   &:hover,
