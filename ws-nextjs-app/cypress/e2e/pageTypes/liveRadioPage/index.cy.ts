@@ -4,7 +4,10 @@ import runTestsForPage, {
 import e2eTests from './tests';
 import testsForAllPages from '../../testsForAllPages';
 import testsForAllCanonicalPages from '../../testsForAllCanonicalPages';
-import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
+import {
+  assertPageView,
+  assertResonancePageView,
+} from '../../specialFeatures/atiAnalytics/assertions';
 import {
   assertRadioScheduleComponentClick,
   assertRadioScheduleComponentView,
@@ -121,6 +124,16 @@ const atiAnalyticsTestSuites = [
       assertRadioScheduleComponentView,
       assertRadioScheduleComponentClick,
     ],
+  },
+  {
+    path: '/korean/bbc_korean_radio/liveradio',
+    runforEnv: ['local', 'live'],
+    service: 'korean',
+    pageIdentifier: 'korean.bbc_korean_radio.liveradio.page',
+    siteId: 57,
+    applicationType: 'responsive',
+    contentType: 'player-live',
+    tests: [assertResonancePageView],
   },
 ] as unknown as TestDataType[];
 
