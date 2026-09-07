@@ -1,9 +1,15 @@
 import {
+  ACTIVATION_EVENT,
+  ACTIVATION_EVENT_INTERACTION_TYPE,
+  ACTIVATION_EVENT_SERVE_ACTION,
+  ACTIVATION_EVENT_SPEC_ID,
+  ACTIVATION_EVENT_SPEC_VERSION,
   CLICK_EVENT,
   VIEW_EVENT,
   VIEWABILITY_CLICK_EVENT,
 } from '#app/lib/analyticsUtils/analytics.const';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import { Platforms } from '#app/models/types/global';
 import {
   getAppType,
   getHref,
@@ -16,12 +22,53 @@ import {
   ATIEventTrackingProps,
   ATIPageTrackingProps,
   ReverbBeaconConfig,
+  ResonanceBeaconConfig,
 } from '../types';
 
 /*
  * For AMP pages, certain browser and device values are determined
  * https://github.com/ampproject/amphtml/blob/master/spec/amp-var-substitutions.md#device-and-browser
  */
+
+const RESONANCE_MODE = { LIVE: 'live', TEST: 'test' } as const;
+
+export const buildResonanceAnalyticsModel = ({
+  appName,
+  contentId,
+  contentType,
+  language,
+  statsDestination,
+  destinationSiteId,
+  hashedId,
+  pageIdentifier,
+  producerName,
+  platform,
+}: ATIPageTrackingProps): ResonanceBeaconConfig => {
+  const env = getEnvConfig().SIMORGH_APP_ENV;
+
+  return {
+    resonanceProperties: {
+      mode: env === 'live' ? RESONANCE_MODE.LIVE : RESONANCE_MODE.TEST,
+    },
+    baseProperties: {
+      app: {
+        name: platform === 'app' ? `${appName}-app` : appName,
+      },
+      destination: statsDestination,
+      hashedUserId: hashedId ?? undefined,
+      pageName: pageIdentifier,
+      producer: producerName,
+      siteId: destinationSiteId,
+    },
+    pageviewProperties: {
+      contentId,
+      contentType,
+      language,
+      destination: statsDestination,
+      producer: producerName,
+    },
+  } as ResonanceBeaconConfig;
+};
 
 export const buildReverbAnalyticsModel = ({
   appName,
@@ -189,3 +236,69 @@ export const buildReverbEventModel = ({
     },
   };
 };
+
+type ActivationEventProps = {
+  pageIdentifier?: string;
+  platform?: Platforms;
+  appName?: string;
+  producerName?: string;
+  statsDestination?: string;
+  experimentName: string;
+  experimentVariant: string;
+  isSignedIn?: boolean;
+  hashedId?: string | null;
+};
+
+/**
+ * Builds the standalone Piano/Reverb "activation" beacon fired when a user is
+ * activated into an Optimizely experiment, decoupled from any view/click event.
+ * Follows the "Activation (v1.0.1) on Web" event-catalogue spec (viewability model),
+ * spec ID ACTIVATION_EVENT_SPEC_ID - see https://broxy.tools.bbc.co.uk/bbc-event-catalogue/xbbc/viewability-events/specs/experiment/activation-web/1.0.1/
+ */
+export const buildActivationEventModel = ({
+  pageIdentifier,
+  platform,
+  appName,
+  producerName,
+  statsDestination,
+  experimentName,
+  experimentVariant,
+  isSignedIn = false,
+  hashedId = null,
+}: ActivationEventProps): ReverbBeaconConfig => ({
+  params: {
+    page: {
+      destination: statsDestination,
+      name: pageIdentifier,
+      producer: producerName,
+      additionalProperties: {
+        type: 'AT',
+        app_name: platform === 'app' ? `${appName}-app` : appName,
+        app_type: getAppType(platform),
+      },
+    },
+    user: {
+      isSignedIn,
+      hashedId,
+    },
+  },
+  eventDetails: {
+    eventName: ACTIVATION_EVENT,
+    eventPublisher: 'viewability',
+    event: {
+      category: 'viewability',
+      action: ACTIVATION_EVENT_SERVE_ACTION,
+      // Identifies this 'serve' event as an activation event, pending a dedicated event_action value in the spec
+      interaction_type: ACTIVATION_EVENT_INTERACTION_TYPE,
+      spec_id: ACTIVATION_EVENT_SPEC_ID,
+      spec_version: ACTIVATION_EVENT_SPEC_VERSION,
+    },
+    group: {
+      type: 'experiment',
+      name: 'optimizely',
+    },
+    experience: {
+      engine_id: [`optimizely.${experimentName}.${experimentVariant}`],
+    },
+  },
+});

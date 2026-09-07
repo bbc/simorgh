@@ -205,6 +205,7 @@ const HiearchicalGrid = ({
                       blocks={inSituMediaBlocks}
                       uniqueId={`in-situ-${promo.id || i}`}
                       loadPlayerOnInitialRender
+                      holdingImageURL={promo.imageUrl}
                     />
                   </div>
                   <div className="promo-text">{promoText}</div>

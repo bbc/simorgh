@@ -412,6 +412,24 @@ describe('buildSettings', () => {
   });
 
   describe('AresMedia', () => {
+    it('uses a supplied holding image instead of the Ares media image', () => {
+      const holdingImageURL =
+        'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/promo-image.jpg.webp';
+      const result = buildSettings({
+        ...baseSettings,
+        blocks: aresMediaBlocks as MediaBlock[],
+        holdingImageURL,
+      });
+
+      expect(result?.playerConfig.playlistObject?.holdingImageURL).toBe(
+        holdingImageURL.replace('{width}', '512'),
+      );
+      expect(result?.placeholderConfig).toMatchObject({
+        placeholderSrc: holdingImageURL.replace('{width}', '512'),
+        placeholderSrcset: '',
+      });
+    });
+
     it('Should process an AresMedia block into a valid playlist item for an "article" page.', () => {
       const result = buildSettings({
         ...baseSettings,

@@ -1,43 +1,53 @@
 @use '@scss/themeTokens' as theme;
 
 .wrapper {
-  position: relative;
+  position: absolute;
+  top: calc(100% + #{theme.$spacings-triple});
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
 }
 
 .container {
   position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  max-width: 21rem;
-  width: 100%;
+  top: 0;
+  inset-inline-start: 0;
+  width: max-content;
+  max-width: min(95vw, 21rem);
   padding: 0.75rem;
   border: 1px solid theme.$palette-grey-4;
-  margin: 0 #{theme.$spacings-half};
+  margin: 0;
   background: theme.$palette-white;
+  pointer-events: auto;
+
+  &::before,
+  &::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    clip-path: polygon(0 100%, 50% 0, 100% 100%);
+    width: 1rem;
+    height: 0.8125rem;
+    left: 1rem;
+  }
 
   &::before {
-    content: '';
-    position: absolute;
-    top: -0.8125rem; 
-    left: 1rem;
-    width: 0;
-    height: 0;
-    border-left: 0.5rem solid transparent;
-    border-right: 0.5rem solid transparent;
-    border-bottom: 0.8125rem solid theme.$palette-grey-4;
+    top: -0.8125rem;
+    background-color: theme.$palette-grey-4;
+
+    @media (forced-colors: active) {
+      background-color: CanvasText;
+    }
   }
 
   &::after {
-    content: '';
-    position: absolute;
-    top: -0.75rem;
-    left: 1.0625rem;
-    width: 0;
-    height: 0;
-    border-left: 0.4375rem solid transparent;
-    border-right: 0.4375rem solid transparent;
-    border-bottom: 0.75rem solid theme.$palette-white;
+    top: -0.6875rem;
+    background-color: theme.$palette-white;
+
+    @media (forced-colors: active) {
+      background-color: Canvas;
+    }
   }
 }
 
@@ -49,6 +59,7 @@
     color: inherit;
     text-decoration: underline;
     padding-block: 0;
+    white-space: nowrap;
 
     &:hover,
     &:active {
@@ -66,6 +77,7 @@
 .header {
   display: flex;
   align-items: flex-start;
+  padding-inline-end: 3rem;
 }
 
 .icon {
@@ -73,6 +85,7 @@
   width: 1.375rem;
   height: 1.375rem;
   margin-inline-end: 0.5rem;
+  fill: currentColor;
 }
 
 .title {
@@ -89,10 +102,9 @@
 }
 
 .closeButton {
-  flex-shrink: 0;
-  margin-inline-start: 1.5rem;
-  margin-block-start: -0.75rem;
-  margin-inline-end: -0.75rem;
+  position: absolute;
+  top: 0;
+  inset-inline-end: 0;
   width: 2.75rem;
   height: 2.75rem;
   padding: 0;
@@ -106,6 +118,9 @@
   svg {
     display: block;
     fill: theme.$palette-grey-10;
+    @media #{theme.$mediaQueries-forced-colours} {
+      fill: ButtonText;
+    }
   }
 
   &:hover {
@@ -113,10 +128,13 @@
 
     svg {
       fill: theme.$palette-white;
+      @media #{theme.$mediaQueries-forced-colours} {
+        fill: Highlight;
+      }
     }
   }
 
-  &:focus-visible {
+  &:focus {
     background: theme.$palette-postbox;
     outline: 2px solid theme.$palette-white;
     box-shadow: 0 0 0 0.25rem theme.$palette-grey-10;

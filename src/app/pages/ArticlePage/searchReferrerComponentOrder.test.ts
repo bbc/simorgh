@@ -19,10 +19,6 @@ import {
   SEARCH_MID_ARTICLE_COMPONENT,
   SearchVariant,
 } from './searchReferrerComponentOrder';
-import {
-  SEARCH_OJ_ACTIVATION_EVENT_NAME,
-  SEARCH_OJ_EXPERIMENT_NAME,
-} from './SearchOjExperiment/config';
 
 jest.mock('#app/components/ThemeProvider');
 jest.mock('#app/components/ChartbeatAnalytics', () => {
@@ -141,28 +137,6 @@ describe('useMobileOJComponentOrder', () => {
       },
     });
   };
-
-  describe('Search OJ activation tracking', () => {
-    it('sends one activation event for a valid variation', async () => {
-      renderArticlePageWithDecision('control');
-
-      await waitFor(() => expect(mockTrackActivation).toHaveBeenCalledTimes(1));
-
-      expect(mockUseCustomEventTracker).toHaveBeenCalledWith({
-        eventName: SEARCH_OJ_ACTIVATION_EVENT_NAME,
-        experimentName: SEARCH_OJ_EXPERIMENT_NAME,
-        experimentVariant: 'control',
-      });
-    });
-
-    it('does not send an activation event for an invalid variation', async () => {
-      renderArticlePageWithDecision('invalid_variation');
-
-      await waitFor(() => expect(mockUseCustomEventTracker).toHaveBeenCalled());
-
-      expect(mockTrackActivation).not.toHaveBeenCalled();
-    });
-  });
 
   describe('Desktop behavior', () => {
     it('should return null regardless of variant when on desktop', () => {

@@ -1,5 +1,8 @@
 import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
-import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
+import {
+  assertPageView,
+  assertResonancePageView,
+} from '../../specialFeatures/atiAnalytics/assertions';
 import mediaPlayerTests from './mediaPlayer';
 import pageVisit from './pageVisit';
 import keyPoints from './keyPoints';
@@ -50,6 +53,7 @@ const atiAnalyticsTestSuites = [
     contentType: 'live-coverage',
     tests: [
       assertPageView,
+      assertResonancePageView,
       assertScrollableNavigationComponentView,
       assertScrollableNavigationComponentClick,
       assertDropdownNavigationComponentView,

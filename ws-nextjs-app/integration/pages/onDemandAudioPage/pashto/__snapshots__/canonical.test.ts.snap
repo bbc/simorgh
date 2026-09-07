@@ -140,22 +140,27 @@ exports[`Canonical On Demand Audio Page Media Loader renders a valid container 1
   data-e2e="media-loader__container"
 >
   <div
-    class="media-player css-1kf4wj3"
-    data-e2e="media-player"
+    class="css-8432in"
+    data-simorgh-media-loader="inactive"
   >
-    <noscript>
-      <div>
-        <div
-          class="css-q0ilh"
-        >
-          <strong
-            class="css-pow7hy"
+    <div
+      class="media-player css-1kf4wj3"
+      data-e2e="media-player"
+    >
+      <noscript>
+        <div>
+          <div
+            class="css-q0ilh"
           >
-            په دې وسیله کې د غږ اوريدل او ویډیو لیدنه شونې نه ده.
-          </strong>
+            <strong
+              class="css-pow7hy"
+            >
+              په دې وسیله کې د غږ اوريدل او ویډیو لیدنه شونې نه ده.
+            </strong>
+          </div>
         </div>
-      </div>
-    </noscript>
+      </noscript>
+    </div>
   </div>
 </figure>
 `;

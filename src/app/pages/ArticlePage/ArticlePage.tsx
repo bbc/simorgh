@@ -5,7 +5,6 @@ import {
   useCallback,
   use,
   useEffect,
-  useRef,
 } from 'react';
 import { useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
@@ -15,7 +14,6 @@ import useOptimizelyVariation, {
   ExperimentType,
 } from '#hooks/useOptimizelyVariation';
 import useScrollDepthTracker from '#hooks/useScrollDepthTracker';
-import useCustomEventTracker from '#hooks/useCustomEventTracker';
 import { GROUP_4_MIN_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
 import { singleTextBlock } from '#app/models/blocks';
 import { BylineLinkedData } from '#app/components/LinkedData/types';
@@ -118,7 +116,6 @@ import SearchOjExperiment from './SearchOjExperiment';
 import {
   isSearchOjVariant,
   MID_ARTICLE_OJ_EXPERIMENT_TRIGGER_ID,
-  SEARCH_OJ_ACTIVATION_EVENT_NAME,
   SEARCH_OJ_EXPERIMENT_NAME,
   SearchOjVariant,
 } from './SearchOjExperiment/config';
@@ -134,27 +131,14 @@ const ActivateSearchOjExperiment = ({
     experimentName: SEARCH_OJ_EXPERIMENT_NAME,
     experimentType: ExperimentType.CLIENT_SIDE,
   });
-  // this sends piano the same experiment and variation chosen by optimizely
-  const trackActivation = useCustomEventTracker({
-    eventName: SEARCH_OJ_ACTIVATION_EVENT_NAME,
-    experimentName: SEARCH_OJ_EXPERIMENT_NAME,
-    experimentVariant: variation ?? undefined,
-  });
-  // this makes sure rerenders do not send the activation event again
-  const hasTrackedActivation = useRef(false);
 
   useEffect(() => {
     if (variation !== null) {
       const validVariation = isSearchOjVariant(variation) ? variation : null;
 
       onDecision(validVariation);
-
-      if (validVariation && !hasTrackedActivation.current) {
-        hasTrackedActivation.current = true;
-        trackActivation();
-      }
     }
-  }, [onDecision, trackActivation, variation]);
+  }, [onDecision, variation]);
 
   return null;
 };

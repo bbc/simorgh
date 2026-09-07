@@ -27,9 +27,10 @@ jest.mock('./getOriginContext');
 jest.mock('./getEnv');
 jest.mock('./getMetaUrls');
 
-(getStatsDestination.default as jest.Mock).mockReturnValue(
-  'getStatsDestination',
-);
+(getStatsDestination.default as jest.Mock).mockReturnValue({
+  destinationName: 'getStatsDestination',
+  destinationSiteId: 12345,
+});
 (getOriginContext.default as jest.Mock).mockReturnValue({
   origin: 'origin',
 });
@@ -72,6 +73,7 @@ const expectedOutput = {
   variant: 'simp',
   timeOnServer: null,
   statsDestination: 'getStatsDestination',
+  destinationSiteId: 12345,
   statusCode: 200,
   canonicalLink: 'canonicalLink',
   ampLink: 'ampLink',

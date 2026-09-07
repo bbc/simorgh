@@ -246,6 +246,7 @@ describe('Hierarchical Grid Curation', () => {
         blocks: aresMediaBlocks,
         uniqueId: `in-situ-${inSituPromo.id}`,
         loadPlayerOnInitialRender: true,
+        holdingImageURL: inSituPromo.imageUrl,
       }),
       undefined,
     );
