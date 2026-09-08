@@ -302,3 +302,64 @@ export const buildActivationEventModel = ({
     },
   },
 });
+
+type ErrorEventProps = {
+  pageIdentifier?: string;
+  producerName?: string;
+  statsDestination?: string;
+  feature: string;
+  action: string;
+  errorCode?: string;
+  errorMessage?: string;
+  statusCode?: number;
+  isSignedIn?: boolean;
+  hashedId?: string | null;
+};
+
+/**
+ * Builds a standalone Piano/Reverb "error" beacon reported when a client-side
+ * feature (e.g. UAS) fails. `feature` identifies the system and `action` the
+ * operation that failed; the optional service code/message/status add
+ * diagnostics without carrying PII or tokens.
+ */
+export const buildErrorEventModel = ({
+  pageIdentifier,
+  producerName,
+  statsDestination,
+  feature,
+  action,
+  errorCode,
+  errorMessage,
+  statusCode,
+  isSignedIn = false,
+  hashedId = null,
+}: ErrorEventProps): ReverbBeaconConfig => ({
+  params: {
+    page: {
+      destination: statsDestination,
+      name: pageIdentifier,
+      producer: producerName,
+      additionalProperties: {
+        type: 'AT',
+      },
+    },
+    user: {
+      isSignedIn,
+      hashedId,
+    },
+  },
+  eventDetails: {
+    eventName: 'error',
+    eventPublisher: 'viewability',
+    event: {
+      category: 'error',
+    },
+    error: {
+      type: feature,
+      name: `${action} error`,
+      ...(errorMessage && { message: errorMessage }),
+      ...(errorCode && { code: errorCode }),
+      ...(statusCode !== undefined && { status: statusCode }),
+    },
+  },
+});

@@ -135,13 +135,25 @@ export type ReverbEventDetails = {
   };
   event?: {
     category: string;
-    action: 'select' | 'view' | 'serve';
+    action?: 'select' | 'view' | 'serve';
     grouping?: string;
     interaction_type?: string;
     spec_id?: string;
     spec_version?: string;
   };
-  eventName: 'pageView' | 'sectionView' | 'sectionClick' | 'activation';
+  error?: {
+    type?: string;
+    name?: string;
+    message?: string;
+    code?: string;
+    status?: number;
+  };
+  eventName:
+    | 'pageView'
+    | 'sectionView'
+    | 'sectionClick'
+    | 'activation'
+    | 'error';
   eventPublisher?: string;
   group?: string | object;
   isClick?: boolean;

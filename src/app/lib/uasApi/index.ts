@@ -3,7 +3,7 @@ import type { Services } from '#app/models/types/global';
 import getAuthHeaders from './getAuthHeaders';
 import type { ActivityType } from './uasUtility';
 import { refreshTokensIfExpired } from './tokenRefresh/tokenManager';
-import UasError from './errors';
+import UasError, { type UasErrorBody } from './errors';
 
 export { default as UasError } from './errors';
 
@@ -67,6 +67,26 @@ const validateRequest = (method: UasMethod, options: UasRequestOptions) => {
   // TODO : Add more validation , if needed
 };
 
+// UAS returns JSON ({ key, message }) for some errors and a plain-text string
+// for others, so we read the raw text and only parse JSON when possible.
+const parseUasErrorBody = async (
+  response: Response,
+): Promise<UasErrorBody | undefined> => {
+  const text = await Promise.resolve()
+    .then(() => response.clone().text())
+    .catch(() => undefined);
+
+  const trimmedText = text?.trim();
+
+  if (!trimmedText) return undefined;
+
+  try {
+    return JSON.parse(trimmedText) as UasErrorBody;
+  } catch {
+    return { message: trimmedText };
+  }
+};
+
 const uasApiRequest = async (
   method: UasMethod,
   activityType: ActivityType,
@@ -102,14 +122,24 @@ const uasApiRequest = async (
     headers,
     credentials: 'include',
     body: method === 'POST' ? JSON.stringify(body) : undefined,
-    signal: signal ?? AbortSignal.timeout(UAS_CLIENT_TIMEOUT_MS),
+    // signal: signal ?? AbortSignal.timeout(UAS_CLIENT_TIMEOUT_MS),
   });
 
   if (!response.ok) {
-    throw new UasError(response.status);
+    const errorBody = await parseUasErrorBody(response);
+    throw new UasError(response.status, errorBody);
   }
 
   return response;
 };
 
 export default uasApiRequest;
+
+const error1 = {
+  activityType: 'favourites1',
+  resourceDomain: 'world-service-news1',
+  resourceType: 'article',
+  resourceId: 'cj94erzl8e8o',
+  action: 'favourited',
+  resourceTitle: 'hindi',
+};

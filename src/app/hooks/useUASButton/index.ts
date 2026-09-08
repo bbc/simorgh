@@ -1,4 +1,4 @@
-import { use, useState } from 'react';
+import { use, useEffect, useState } from 'react';
 import {
   onlineManager,
   useMutation,
@@ -6,6 +6,7 @@ import {
 } from '@tanstack/react-query';
 import useUASFetchSaveStatus from '#app/hooks/useUASFetchSaveStatus';
 import useUASMetadataSync from '#app/hooks/useUASMetadataSync';
+import useErrorTracking from '#app/hooks/useErrorTracking';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import uasApiRequest from '#app/lib/uasApi';
 import { buildGlobalId, FAVOURITES_CONFIG } from '#app/lib/uasApi/uasUtility';
@@ -56,8 +57,17 @@ const useUASButton = ({
   const { service } = use(ServiceContext);
   const { hashedUserId = '', isRefreshAvailable } = use(AccountContext);
   const queryClient = useQueryClient();
+  const trackError = useErrorTracking();
   const { isSaved, isLoading, error, savedMetadata } =
     useUASFetchSaveStatus(articleId);
+
+  // A failed save-status fetch is a background error the user never triggered.
+  // TODO - instead of useEffect use onError callback from useUASFetchSaveStatus if available?
+  useEffect(() => {
+    if (error) {
+      trackError({ error, feature: 'uas', action: 'fetch-status' });
+    }
+  }, [error, trackError]);
 
   // Only set by handleSaveAction, never by the background metadata resync.
   const [actionResult, setActionResult] = useState<UASActionResult>(null);
@@ -94,9 +104,15 @@ const useUASButton = ({
     },
   });
 
-  const handleMetadataOutOfDate = () => {
-    mutation.mutate(UASAction.SAVE);
-  };
+  const handleMetadataOutOfDate = () =>
+    mutation.mutate(UASAction.SAVE, {
+      onError: mutationError =>
+        trackError({
+          error: mutationError,
+          feature: 'uas',
+          action: 'metadata-sync',
+        }),
+    });
 
   useUASMetadataSync({
     saveArticlePageData,
@@ -115,7 +131,11 @@ const useUASButton = ({
 
     return mutation.mutate(action, {
       onSuccess: () => setActionResult({ status: 'success', action }),
-      onError: () => setActionResult({ status: 'error', action }),
+      onError: mutationError => {
+        console.error({ mutationError });
+        setActionResult({ status: 'error', action });
+        trackError({ error: mutationError, feature: 'uas', action });
+      },
     });
   };
 

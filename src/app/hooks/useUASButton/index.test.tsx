@@ -15,6 +15,12 @@ import useUASButton, { UASAction, UseUASButtonProps } from './index';
 jest.mock('#app/hooks/useUASFetchSaveStatus');
 jest.mock('#app/hooks/useUASMetadataSync');
 jest.mock('#app/lib/uasApi');
+
+const mockTrackError = jest.fn();
+jest.mock('#app/hooks/useErrorTracking', () => ({
+  __esModule: true,
+  default: () => mockTrackError,
+}));
 jest.mock('react', () => ({
   ...jest.requireActual('react'),
   use: jest.fn(),
@@ -262,8 +268,81 @@ describe('useUASButton', () => {
       expect(mockSetQueryData).not.toHaveBeenCalled();
       // Offline is an expected state, not a genuine failure, so it must not be tracked.
       expect(result.current.error).toBeNull();
+      expect(mockTrackError).not.toHaveBeenCalled();
 
       onlineSpy.mockRestore();
+    });
+  });
+
+  describe('error tracking', () => {
+    it('tracks a failed user-initiated save/remove action', async () => {
+      mockUasApiRequest.mockRejectedValueOnce(
+        new Error('UAS request failed with status 500'),
+      );
+
+      const { result } = renderHook(() => useUASButton(defaultProps));
+
+      await act(async () => {
+        await expect(
+          result.current.handleSaveAction(UASAction.REMOVE),
+        ).rejects.toThrow('UAS request failed with status 500');
+      });
+
+      expect(mockTrackError).toHaveBeenCalledWith({
+        error: expect.any(Error),
+        feature: 'uas',
+        action: UASAction.REMOVE,
+      });
+    });
+
+    it('tracks a failed background metadata resync', async () => {
+      mockUasApiRequest.mockRejectedValueOnce(
+        new Error('UAS request failed with status 500'),
+      );
+
+      let onMetadataOutOfDate: (() => unknown) | undefined;
+      mockUseUASMetadataSync.mockImplementation(
+        ({ onMetadataOutOfDate: callback }) => {
+          onMetadataOutOfDate = callback;
+        },
+      );
+
+      renderHook(() => useUASButton(defaultProps));
+
+      await act(async () => {
+        // The mock rethrows so the fire-and-forget mutation rejects; swallow it
+        // here since production TanStack routes the failure through onError only.
+        await (onMetadataOutOfDate?.() as Promise<void>).catch(() => undefined);
+      });
+
+      expect(mockTrackError).toHaveBeenCalledWith({
+        error: expect.any(Error),
+        feature: 'uas',
+        action: 'metadata-sync',
+      });
+    });
+
+    it('tracks a failed save-status fetch', () => {
+      mockUseUASFetchSaveStatus.mockReturnValue({
+        isSaved: false,
+        isLoading: false,
+        error: new Error('failed to fetch save status'),
+        savedMetadata: undefined,
+      });
+
+      renderHook(() => useUASButton(defaultProps));
+
+      expect(mockTrackError).toHaveBeenCalledWith({
+        error: expect.any(Error),
+        feature: 'uas',
+        action: 'fetch-status',
+      });
+    });
+
+    it('does not track when there is no error', () => {
+      renderHook(() => useUASButton(defaultProps));
+
+      expect(mockTrackError).not.toHaveBeenCalled();
     });
   });
 

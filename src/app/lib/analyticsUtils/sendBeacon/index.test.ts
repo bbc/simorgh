@@ -218,6 +218,48 @@ describe('sendBeacon', () => {
 
       expect(reverbMock.viewEvent).not.toHaveBeenCalled();
     });
+
+    it('should forward the error label to Reverb for an error event', async () => {
+      const reverbErrorConfig = {
+        params: {
+          page: 'page',
+          user: '1234-5678',
+        },
+        eventDetails: {
+          eventName: 'error',
+          eventPublisher: 'viewability',
+          event: {
+            category: 'error',
+          },
+          error: {
+            type: 'uas',
+            name: 'save error',
+            code: 'unknownTokenKey',
+            status: 500,
+          },
+        },
+      } as unknown as ReverbBeaconConfig;
+
+      await sendBeacon(reverbErrorConfig);
+
+      expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
+      expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
+        'viewability',
+        '',
+        expect.objectContaining({
+          event: { category: 'error' },
+          error: {
+            type: 'uas',
+            name: 'save error',
+            code: 'unknownTokenKey',
+            status: 500,
+          },
+        }),
+        undefined,
+        undefined,
+        undefined,
+      );
+    });
   });
 
   describe('Error Handling', () => {
