@@ -1,4 +1,5 @@
 import { use } from 'react';
+import { onlineManager } from '@tanstack/react-query';
 import {
   renderHook,
   act,
@@ -241,6 +242,31 @@ describe('useUASButton', () => {
     });
   });
 
+  describe('offline handling', () => {
+    it('reports an error and skips the request when the user acts while offline', async () => {
+      const onlineSpy = jest
+        .spyOn(onlineManager, 'isOnline')
+        .mockReturnValue(false);
+
+      const { result } = renderHook(() => useUASButton(defaultProps));
+
+      await act(async () => {
+        result.current.handleSaveAction(UASAction.SAVE);
+      });
+
+      expect(result.current.actionResult).toEqual({
+        status: 'error',
+        action: UASAction.SAVE,
+      });
+      expect(mockUasApiRequest).not.toHaveBeenCalled();
+      expect(mockSetQueryData).not.toHaveBeenCalled();
+      // Offline is an expected state, not a genuine failure, so it must not be tracked.
+      expect(result.current.error).toBeNull();
+
+      onlineSpy.mockRestore();
+    });
+  });
+
   describe('useUASMetadataSync integration', () => {
     it('calls useUASMetadataSync with correct parameters when article is saved with metadata', () => {
       const mockMetadata = {
@@ -345,6 +371,29 @@ describe('useUASButton', () => {
       rerender();
 
       expect(result.current.actionResult).toBeNull();
+    });
+  });
+
+  describe('error', () => {
+    it('is null before any action is taken', () => {
+      const { result } = renderHook(() => useUASButton(defaultProps));
+
+      expect(result.current.error).toBeNull();
+    });
+
+    it('exposes the underlying error when a genuine request fails', async () => {
+      const failure = new Error('UAS request failed with status 500');
+      mockUasApiRequest.mockRejectedValueOnce(failure);
+      const { result, rerender } = renderHook(() => useUASButton(defaultProps));
+
+      await act(async () => {
+        await expect(
+          result.current.handleSaveAction(UASAction.REMOVE),
+        ).rejects.toThrow('UAS request failed with status 500');
+      });
+      rerender();
+
+      expect(result.current.error).toBe(failure);
     });
   });
 });

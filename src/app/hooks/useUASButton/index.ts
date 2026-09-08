@@ -1,5 +1,9 @@
 import { use, useState } from 'react';
-import { useMutation, useQueryClient } from '@tanstack/react-query';
+import {
+  onlineManager,
+  useMutation,
+  useQueryClient,
+} from '@tanstack/react-query';
 import useUASFetchSaveStatus from '#app/hooks/useUASFetchSaveStatus';
 import useUASMetadataSync from '#app/hooks/useUASMetadataSync';
 import { ServiceContext } from '#app/contexts/ServiceContext';
@@ -34,8 +38,17 @@ export interface UseUASButtonProps {
   saveArticlePageData: SaveArticlePageData;
 }
 
-// NOTE: Using this hook anywhere in the app will eagerly pull TanStack Query into the bundle.
-// All TanStack-related code must live exclusively inside the lazy boundary.
+/**
+ * Combines the current save-status fetch, user-initiated save/remove mutations
+ * and the background metadata sync behind a single button hook.
+ *
+ * actionResult is only populated for user-initiated actions so the UI can
+ * surface additional information (e.g. a tooltip);
+ *
+ * NOTE: Using this hook anywhere in the app will eagerly pull TanStack Query
+ * into the bundle. All TanStack-related code must live exclusively inside the
+ * lazy boundary.
+ */
 const useUASButton = ({
   articleId,
   saveArticlePageData,
@@ -94,11 +107,17 @@ const useUASButton = ({
     onMetadataOutOfDate: handleMetadataOutOfDate,
   });
 
-  const handleSaveAction = (action: UASAction) =>
-    mutation.mutate(action, {
+  const handleSaveAction = (action: UASAction) => {
+    if (!onlineManager.isOnline()) {
+      setActionResult({ status: 'error', action });
+      return undefined;
+    }
+
+    return mutation.mutate(action, {
       onSuccess: () => setActionResult({ status: 'success', action }),
       onError: () => setActionResult({ status: 'error', action }),
     });
+  };
 
   const resetActionResult = () => {
     setActionResult(null);
@@ -108,7 +127,7 @@ const useUASButton = ({
   return {
     isSaved,
     isLoading,
-    isUpdating: mutation.isPending,
+    isUpdating: mutation.isPending && !mutation.isPaused,
     error: mutation.error || error,
     actionResult,
     resetActionResult,
