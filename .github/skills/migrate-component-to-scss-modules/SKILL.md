@@ -227,6 +227,7 @@ yarn jest src/app/components/<ComponentName>
 - Check an RTL service (e.g. `arabic`) and a dark-UI context, since those behaviours move from JS branching into SCSS selectors.
 - `.module.scss` files are mocked with `identity-obj-proxy` in Jest, so `yarn jest` never compiles or validates the SCSS itself — a typo or invalid selector won't fail a test. Catching that relies on the Next.js build (fails on invalid SCSS) and Storybook/Chromatic (catches visually broken output), not on Jest.
 - If the test asserts computed CSS with `toHaveStyle`, rewrite it to `toHaveClass` instead. `.module.scss` files are mocked with `identity-obj-proxy` in Jest, so no real stylesheet is ever loaded into jsdom — `toHaveStyle` assertions against migrated styles will fail even when the migration is correct.
+- Run `yarn build` from `ws-nextjs-app` once per PR (not per component). Jest only exercises files that import the component under test, so it won't catch a legacy page elsewhere still importing the deleted `index.styles.*` directly — the build's TypeScript check will.
 
 ## Reference implementations
 
