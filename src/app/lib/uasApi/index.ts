@@ -122,7 +122,7 @@ const uasApiRequest = async (
     headers,
     credentials: 'include',
     body: method === 'POST' ? JSON.stringify(body) : undefined,
-    // signal: signal ?? AbortSignal.timeout(UAS_CLIENT_TIMEOUT_MS),
+    signal: signal ?? AbortSignal.timeout(UAS_CLIENT_TIMEOUT_MS),
   });
 
   if (!response.ok) {
@@ -134,12 +134,3 @@ const uasApiRequest = async (
 };
 
 export default uasApiRequest;
-
-const error1 = {
-  activityType: 'favourites1',
-  resourceDomain: 'world-service-news1',
-  resourceType: 'article',
-  resourceId: 'cj94erzl8e8o',
-  action: 'favourited',
-  resourceTitle: 'hindi',
-};

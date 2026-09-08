@@ -132,7 +132,6 @@ const useUASButton = ({
     return mutation.mutate(action, {
       onSuccess: () => setActionResult({ status: 'success', action }),
       onError: mutationError => {
-        console.error({ mutationError });
         setActionResult({ status: 'error', action });
         trackError({ error: mutationError, feature: 'uas', action });
       },
