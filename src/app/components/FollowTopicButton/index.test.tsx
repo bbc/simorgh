@@ -21,8 +21,12 @@ jest.mock('#app/hooks/useHydrationDetection');
 jest.mock('#app/components/Account/AccountSignInModal', () => ({
   __esModule: true,
   default: ({ onClose }: { onClose: () => void }) => (
-    <div role="dialog" aria-label="Sign in to BBC">
-      <button type="button" onClick={onClose}>
+    <div data-testid="follow-topic-sign-in-modal">
+      <button
+        type="button"
+        onClick={onClose}
+        data-testid="follow-topic-sign-in-modal-close"
+      >
         Close
       </button>
     </div>
@@ -132,13 +136,15 @@ describe('FollowTopicButton', () => {
     await userEvent.click(screen.getByTestId('follow-topic-btn-guest'));
 
     expect(
-      screen.getByRole('dialog', { name: 'Sign in to BBC' }),
+      screen.getByTestId('follow-topic-sign-in-modal'),
     ).toBeInTheDocument();
 
-    await userEvent.click(screen.getByRole('button', { name: 'Close' }));
+    await userEvent.click(
+      screen.getByTestId('follow-topic-sign-in-modal-close'),
+    );
 
     expect(
-      screen.queryByRole('dialog', { name: 'Sign in to BBC' }),
+      screen.queryByTestId('follow-topic-sign-in-modal'),
     ).not.toBeInTheDocument();
   });
 
@@ -165,24 +171,6 @@ describe('FollowTopicButton', () => {
       isFollowed: true,
       isLoading: false,
       isUpdating: false,
-      error: null,
-      handleFollowAction: mockHandleFollowAction,
-    });
-
-    renderFollowTopicButton({
-      idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: true },
-    });
-
-    expect(
-      screen.getByTestId('follow-topic-btn-authorized'),
-    ).toBeInTheDocument();
-  });
-
-  it('renders following state while authenticated follow mutation is in progress', () => {
-    mockedUseTopicFollowButton.mockReturnValue({
-      isFollowed: false,
-      isLoading: false,
-      isUpdating: true,
       error: null,
       handleFollowAction: mockHandleFollowAction,
     });

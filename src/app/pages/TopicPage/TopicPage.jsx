@@ -19,7 +19,7 @@ import getItemList from '../../lib/seoUtils/getItemList';
 import getNthCurationByStyleAndProminence from '../utils/getNthCurationByStyleAndProminence';
 
 const TopicPage = ({ pageData }) => {
-  const { lang, translations, brandName, service } = use(ServiceContext);
+  const { lang, translations, brandName } = use(ServiceContext);
   const { pathname, canonicalLink } = use(RequestContext);
   const {
     title,
@@ -85,10 +85,7 @@ const TopicPage = ({ pageData }) => {
                 topicData={{
                   topicId,
                   title,
-                  service,
                   url: canonicalLink,
-                  description,
-                  imageUrl: imageData?.url,
                 }}
               />
             )}
