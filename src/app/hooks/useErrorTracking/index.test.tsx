@@ -46,9 +46,9 @@ describe('useErrorTracking', () => {
     expect(mockSendErrorEvent).toHaveBeenCalledTimes(1);
     expect(mockSendErrorEvent).toHaveBeenCalledWith({
       feature: 'uas',
-      action: 'save',
+      errorName: 'save',
       statusCode: undefined,
-      errorCode: undefined,
+      errorKey: undefined,
       errorMessage: 'boom',
       trackingIsEnabled: true,
       pageIdentifier: 'page-id',
@@ -79,9 +79,9 @@ describe('useErrorTracking', () => {
     expect(mockSendErrorEvent).toHaveBeenCalledWith(
       expect.objectContaining({
         feature: 'uas',
-        action: 'remove',
+        errorName: 'remove',
         statusCode: 500,
-        errorCode: 'unknownTokenKey',
+        errorKey: 'unknownTokenKey',
         errorMessage: 'An unknown error occurred.',
       }),
     );

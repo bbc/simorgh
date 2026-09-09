@@ -26,7 +26,7 @@ const extractErrorDetails = (error: Error) => {
 
   return {
     statusCode: status,
-    errorCode: code,
+    errorKey: code,
     errorMessage: serviceMessage ?? error.message,
   };
 };
@@ -53,15 +53,14 @@ const useErrorTracking = () => {
     ({ error, feature, action }: TrackErrorParams) => {
       if (!isTrackableError(error)) return;
 
-      const { statusCode, errorCode, errorMessage } =
-        extractErrorDetails(error);
+      const { statusCode, errorKey, errorMessage } = extractErrorDetails(error);
 
       sendErrorEvent({
         feature,
-        action,
-        statusCode,
-        errorCode,
+        errorName: action,
+        errorKey,
         errorMessage,
+        statusCode,
         trackingIsEnabled,
         pageIdentifier,
         producerName,

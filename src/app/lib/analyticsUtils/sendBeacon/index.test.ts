@@ -232,10 +232,10 @@ describe('sendBeacon', () => {
             category: 'error',
           },
           error: {
-            type: 'uas',
-            name: 'save error',
-            code: 'unknownTokenKey',
-            status: 500,
+            engine: 'uas',
+            name: 'save',
+            type: 'unknownTokenKey',
+            code: '500',
           },
         },
       } as unknown as ReverbBeaconConfig;
@@ -249,10 +249,10 @@ describe('sendBeacon', () => {
         expect.objectContaining({
           event: { category: 'error' },
           error: {
-            type: 'uas',
-            name: 'save error',
-            code: 'unknownTokenKey',
-            status: 500,
+            engine: 'uas',
+            name: 'save',
+            type: 'unknownTokenKey',
+            code: '500',
           },
         }),
         undefined,

@@ -3,8 +3,8 @@ import sendBeacon from '../sendBeacon';
 
 type Props = {
   feature: string;
-  action: string;
-  errorCode?: string;
+  errorName: string;
+  errorKey?: string;
   errorMessage?: string;
   statusCode?: number;
   trackingIsEnabled: boolean;
@@ -22,8 +22,8 @@ type Props = {
  */
 const sendErrorEvent = async ({
   feature,
-  action,
-  errorCode,
+  errorName,
+  errorKey,
   errorMessage,
   statusCode,
   trackingIsEnabled,
@@ -39,7 +39,7 @@ const sendErrorEvent = async ({
 
   const shouldSendEvent = [
     feature,
-    action,
+    errorName,
     pageIdentifier,
     producerName,
     statsDestination,
@@ -54,8 +54,8 @@ const sendErrorEvent = async ({
     producerName,
     statsDestination,
     feature,
-    action,
-    errorCode,
+    errorName,
+    errorKey,
     errorMessage,
     statusCode,
     isSignedIn,

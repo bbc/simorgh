@@ -142,11 +142,11 @@ export type ReverbEventDetails = {
     spec_version?: string;
   };
   error?: {
-    type?: string;
+    engine?: string;
     name?: string;
     message?: string;
     code?: string;
-    status?: number;
+    type?: string;
   };
   eventName:
     | 'pageView'

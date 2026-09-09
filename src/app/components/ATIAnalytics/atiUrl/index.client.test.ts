@@ -559,7 +559,7 @@ describe('atiUrl', () => {
         producerName: 'MUNDO',
         statsDestination: 'statsDestination',
         feature: 'uas',
-        action: 'save',
+        errorName: 'save',
       };
 
       it('should return the correct Reverb page and user configuration', () => {
@@ -588,9 +588,9 @@ describe('atiUrl', () => {
       it('should build a first-class error event with diagnostics', () => {
         const reverbErrorEventModel = buildErrorEventModel({
           ...input,
-          action: 'remove',
+          errorName: 'remove',
           statusCode: 500,
-          errorCode: 'unknownTokenKey',
+          errorKey: 'unknownTokenKey',
           errorMessage: 'An unknown error occurred.',
         });
 
@@ -601,11 +601,11 @@ describe('atiUrl', () => {
             category: 'error',
           },
           error: {
-            type: 'uas',
-            name: 'remove error',
+            engine: 'uas',
+            name: 'remove',
             message: 'An unknown error occurred.',
-            code: 'unknownTokenKey',
-            status: 500,
+            code: '500',
+            type: 'unknownTokenKey',
           },
         });
       });
@@ -614,8 +614,8 @@ describe('atiUrl', () => {
         const reverbErrorEventModel = buildErrorEventModel(input);
 
         expect(reverbErrorEventModel.eventDetails.error).toEqual({
-          type: 'uas',
-          name: 'save error',
+          engine: 'uas',
+          name: 'save',
         });
       });
     });

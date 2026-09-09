@@ -308,8 +308,8 @@ type ErrorEventProps = {
   producerName?: string;
   statsDestination?: string;
   feature: string;
-  action: string;
-  errorCode?: string;
+  errorName: string;
+  errorKey?: string;
   errorMessage?: string;
   statusCode?: number;
   isSignedIn?: boolean;
@@ -327,8 +327,8 @@ export const buildErrorEventModel = ({
   producerName,
   statsDestination,
   feature,
-  action,
-  errorCode,
+  errorName,
+  errorKey,
   errorMessage,
   statusCode,
   isSignedIn = false,
@@ -355,11 +355,11 @@ export const buildErrorEventModel = ({
       category: 'error',
     },
     error: {
-      type: feature,
-      name: `${action} error`,
+      engine: feature,
+      name: errorName,
       ...(errorMessage && { message: errorMessage }),
-      ...(errorCode && { code: errorCode }),
-      ...(statusCode !== undefined && { status: statusCode }),
+      ...(statusCode && { code: String(statusCode) }),
+      ...(errorKey && { type: errorKey }),
     },
   },
 });

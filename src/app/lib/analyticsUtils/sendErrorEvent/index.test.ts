@@ -6,9 +6,9 @@ jest.mock('../sendBeacon');
 describe('sendErrorEvent', () => {
   const validProps = {
     feature: 'uas',
-    action: 'save',
+    errorName: 'save',
     statusCode: 500,
-    errorCode: 'unknownTokenKey',
+    errorKey: 'unknownTokenKey',
     errorMessage: 'An unknown error occurred.',
     trackingIsEnabled: true,
     pageIdentifier: 'page-identifier',
@@ -33,11 +33,11 @@ describe('sendErrorEvent', () => {
           eventPublisher: 'viewability',
           event: { category: 'error' },
           error: {
-            type: 'uas',
-            name: 'save error',
+            engine: 'uas',
+            name: 'save',
             message: 'An unknown error occurred.',
-            code: 'unknownTokenKey',
-            status: 500,
+            code: '500',
+            type: 'unknownTokenKey',
           },
         }),
       }),
@@ -59,7 +59,7 @@ describe('sendErrorEvent', () => {
   it('omits optional diagnostics when they are absent', async () => {
     await sendErrorEvent({
       feature: 'uas',
-      action: 'fetch-status',
+      errorName: 'fetch-status',
       trackingIsEnabled: true,
       pageIdentifier: 'page-identifier',
       producerName: 'producer-name',
@@ -70,8 +70,8 @@ describe('sendErrorEvent', () => {
       expect.objectContaining({
         eventDetails: expect.objectContaining({
           error: {
-            type: 'uas',
-            name: 'fetch-status error',
+            engine: 'uas',
+            name: 'fetch-status',
           },
         }),
       }),
