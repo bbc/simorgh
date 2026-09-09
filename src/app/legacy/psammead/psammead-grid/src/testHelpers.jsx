@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import Paragraph from '#psammead/psammead-paragraph/src';
-import Image from '#psammead/psammead-image/src';
+import Image from '#app/components/Image';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,
@@ -40,14 +40,14 @@ export const ExampleImage = () => {
         alt="Robert Downey Junior in Iron Man"
         src={imageSrc.replace('[WIDTH]', 660)}
         width="640"
-        srcset={imageSizes
+        srcSet={imageSizes
           .map(size => `${imageSrc.replace('[WIDTH]', size)}.webp ${size}w`)
           .join(', ')}
-        fallbackSrcset={imageSizes
+        fallbackSrcSet={imageSizes
           .map(size => `${imageSrc.replace('[WIDTH]', size)} ${size}w`)
           .join(', ')}
-        primaryMimeType="image/webp"
-        fallbackMimeType="image/jpeg"
+        mediaType="image/webp"
+        fallbackMediaType="image/jpeg"
       />
     </ImageSpacing>
   );

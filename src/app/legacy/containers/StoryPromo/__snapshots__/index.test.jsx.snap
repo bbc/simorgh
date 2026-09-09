@@ -339,6 +339,7 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
             sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
             src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp"
             srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
+            style="background-color: rgb(253, 253, 253);"
             width="2048"
           />
         </div>
@@ -1266,6 +1267,7 @@ exports[`StoryPromo Container should render audio promoType leading on amp 1`] =
             sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
             src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp"
             srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
+            style="background-color: rgb(253, 253, 253);"
             width="2048"
           />
         </div>
@@ -1650,6 +1652,7 @@ exports[`StoryPromo Container should render audio promoType top on amp 1`] = `
             sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
             src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp"
             srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
+            style="background-color: rgb(253, 253, 253);"
             width="2048"
           />
         </div>
@@ -2074,6 +2077,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
             sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
             src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp"
             srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
+            style="background-color: rgb(253, 253, 253);"
             width="2048"
           />
         </div>
@@ -2966,6 +2970,7 @@ exports[`StoryPromo Container should render audio with no duration promoType lea
             sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
             src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp"
             srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
+            style="background-color: rgb(253, 253, 253);"
             width="2048"
           />
         </div>
@@ -3340,6 +3345,7 @@ exports[`StoryPromo Container should render audio with no duration promoType top
             sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
             src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp"
             srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
+            style="background-color: rgb(253, 253, 253);"
             width="2048"
           />
         </div>
@@ -3695,6 +3701,7 @@ exports[`StoryPromo Container should render featureLink correctly for amp 1`] = 
             sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
             src="https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp"
             srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 660w"
+            style="background-color: rgb(253, 253, 253);"
             width="976"
           />
         </div>
@@ -4393,6 +4400,7 @@ exports[`StoryPromo Container should render featureLink promoType leading on amp
             sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
             src="https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp"
             srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 660w"
+            style="background-color: rgb(253, 253, 253);"
             width="976"
           />
         </div>
@@ -4682,6 +4690,7 @@ exports[`StoryPromo Container should render featureLink promoType top on amp 1`]
             sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
             src="https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp"
             srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 660w"
+            style="background-color: rgb(253, 253, 253);"
             width="976"
           />
         </div>
@@ -5008,6 +5017,7 @@ exports[`StoryPromo Container should render full width promos correctly for amp 
             sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
             src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp"
             srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
+            style="background-color: rgb(253, 253, 253);"
             width="2048"
           />
         </div>
@@ -5435,15 +5445,13 @@ exports[`StoryPromo Container should render item without an image correctly for 
 .emotion-6 {
   position: relative;
   height: 0;
-  overflow: hidden;
-  background-color: #F2F2F2;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2Ij48ZyBmaWxsPSIjZDVkMGNkIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Im00NTAgOTItMyAxcS0xNyAxMC0zNCAxMGMtMjQgMC0zOS0xNC0zOS0zNHMxNi0zNSAzOC0zNXExNyAwIDM0IDEwbDMgMVYyN2gtMXEtMjAtOC0zNi04LTI0IDAtNDAgMTR0LTE2IDM3cTAgMTcgMTMgMzIgMTMgMTYgNDMgMTcgMjMtMSAzNy05aDF6bS0xMTYgNDRoMTQ0VjBIMzM0ek0yNzcgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDEtMTAtOC0xOC03LTgtMjQtOGgtMzF2OThoMzZxMTktMSAyOC05IDgtOCA4LTE4bS0xMTAgNDZoMTQ0VjBIMTY3ek0xMTAgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDAtMTAtOC0xOHQtMjQtOEgzOHY5OGgzNnExOS0xIDI4LTkgOC04IDgtMThNMCAxMzZoMTQ0VjBIMHoiLz48cGF0aCBkPSJNMjU5IDg4cTAgNS00IDktNCA1LTE2IDVoLTE3Vjc1aDE2cTExIDEgMTYgNHQ1IDlNOTIgODhxMCA1LTQgOS00IDUtMTYgNUg1NVY3NWgxNnExMSAxIDE2IDR0NSA5TTI0NSA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00aC0xMnYyNWg4cTEwIDAgMTUtM003OCA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00SDU1djI1aDhxMTAgMCAxNS0zIi8+PC9nPjwvc3ZnPg==);
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  width: 100%;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2Ij48ZyBmaWxsPSIjZDVkMGNkIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Im00NTAgOTItMyAxcS0xNyAxMC0zNCAxMGMtMjQgMC0zOS0xNC0zOS0zNHMxNi0zNSAzOC0zNXExNyAwIDM0IDEwbDMgMVYyN2gtMXEtMjAtOC0zNi04LTI0IDAtNDAgMTR0LTE2IDM3cTAgMTcgMTMgMzIgMTMgMTYgNDMgMTcgMjMtMSAzNy05aDF6bS0xMTYgNDRoMTQ0VjBIMzM0ek0yNzcgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDEtMTAtOC0xOC03LTgtMjQtOGgtMzF2OThoMzZxMTktMSAyOC05IDgtOCA4LTE4bS0xMTAgNDZoMTQ0VjBIMTY3ek0xMTAgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDAtMTAtOC0xOHQtMjQtOEgzOHY5OGgzNnExOS0xIDI4LTkgOC04IDgtMThNMCAxMzZoMTQ0VjBIMHoiLz48cGF0aCBkPSJNMjU5IDg4cTAgNS00IDktNCA1LTE2IDVoLTE3Vjc1aDE2cTExIDEgMTYgNHQ1IDlNOTIgODhxMCA1LTQgOS00IDUtMTYgNUg1NVY3NWgxNnExMSAxIDE2IDR0NSA5TTI0NSA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00aC0xMnYyNWg4cTEwIDAgMTUtM003OCA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00SDU1djI1aDhxMTAgMCAxNS0zIi8+PC9nPjwvc3ZnPg==);
+  background-color: #F2F2F2;
 }
 
 @media (min-width: 25rem) {
@@ -5461,25 +5469,25 @@ exports[`StoryPromo Container should render item without an image correctly for 
 }
 
 @media (min-width: 25rem) {
-  .emotion-8 {
+  .emotion-7 {
     position: absolute;
     bottom: 0;
   }
 }
 
-.emotion-8>* {
+.emotion-7>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-8>* {
+  .emotion-7>* {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
-.emotion-10 {
+.emotion-9 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -5487,13 +5495,13 @@ exports[`StoryPromo Container should render item without an image correctly for 
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-10 {
+  .emotion-9 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-10 {
+  .emotion-9 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -5501,7 +5509,7 @@ exports[`StoryPromo Container should render item without an image correctly for 
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-10 {
+  .emotion-9 {
     display: block;
     width: initial;
     padding: initial;
@@ -5509,13 +5517,13 @@ exports[`StoryPromo Container should render item without an image correctly for 
   }
 
   @media (min-width: 63rem) {
-    .emotion-10 {
+    .emotion-9 {
       padding-top: 0.5rem;
     }
   }
 }
 
-.emotion-12 {
+.emotion-11 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -5527,20 +5535,20 @@ exports[`StoryPromo Container should render item without an image correctly for 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-12 {
+  .emotion-11 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-12 {
+  .emotion-11 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-14 {
+.emotion-13 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -5550,7 +5558,7 @@ exports[`StoryPromo Container should render item without an image correctly for 
   overflow-wrap: anywhere;
 }
 
-.emotion-14:before {
+.emotion-13:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -5562,17 +5570,17 @@ exports[`StoryPromo Container should render item without an image correctly for 
   z-index: 1;
 }
 
-.emotion-14:hover,
-.emotion-14:focus {
+.emotion-13:hover,
+.emotion-13:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-14:visited {
+.emotion-13:visited {
   color: #6E6E73;
 }
 
-.emotion-16 {
+.emotion-15 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -5584,34 +5592,34 @@ exports[`StoryPromo Container should render item without an image correctly for 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-16 {
+  .emotion-15 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-16 {
+  .emotion-15 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-16 {
+  .emotion-15 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-16 {
+  .emotion-15 {
     display: none;
     visibility: hidden;
   }
 }
 
-.emotion-18 {
+.emotion-17 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #545658;
@@ -5622,14 +5630,14 @@ exports[`StoryPromo Container should render item without an image correctly for 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-18 {
+  .emotion-17 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-17 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -5648,25 +5656,24 @@ exports[`StoryPromo Container should render item without an image correctly for 
         class="emotion-4 emotion-5"
       >
         <div
-          class="emotion-6 emotion-7"
-          data-e2e="image-placeholder"
-          style="padding-bottom: 56.25%;"
+          class="emotion-6"
+          style="padding-bottom: 56.25%; overflow: hidden;"
         />
         <div
-          class="emotion-8 emotion-9"
+          class="emotion-7 emotion-8"
         />
       </div>
     </div>
     <div
-      class="emotion-10 emotion-11"
+      class="emotion-9 emotion-10"
       dir="ltr"
     >
       <h3
-        class="emotion-12 emotion-13"
+        class="emotion-11 emotion-12"
       >
         <a
           aria-labelledby="promo-1"
-          class="focusIndicatorDisplayInlineBlock emotion-14 emotion-15"
+          class="focusIndicatorDisplayInlineBlock emotion-13 emotion-14"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -5677,12 +5684,12 @@ exports[`StoryPromo Container should render item without an image correctly for 
         </a>
       </h3>
       <p
-        class="emotion-16 emotion-17"
+        class="emotion-15 emotion-16"
       >
         Summary text
       </p>
       <time
-        class="emotion-18 emotion-19"
+        class="emotion-17 emotion-18"
         datetime="2019-05-02"
       >
         2 Mee 2019
@@ -5745,15 +5752,13 @@ exports[`StoryPromo Container should render item without an image correctly for 
 .emotion-6 {
   position: relative;
   height: 0;
-  overflow: hidden;
-  background-color: #F2F2F2;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2Ij48ZyBmaWxsPSIjZDVkMGNkIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Im00NTAgOTItMyAxcS0xNyAxMC0zNCAxMGMtMjQgMC0zOS0xNC0zOS0zNHMxNi0zNSAzOC0zNXExNyAwIDM0IDEwbDMgMVYyN2gtMXEtMjAtOC0zNi04LTI0IDAtNDAgMTR0LTE2IDM3cTAgMTcgMTMgMzIgMTMgMTYgNDMgMTcgMjMtMSAzNy05aDF6bS0xMTYgNDRoMTQ0VjBIMzM0ek0yNzcgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDEtMTAtOC0xOC03LTgtMjQtOGgtMzF2OThoMzZxMTktMSAyOC05IDgtOCA4LTE4bS0xMTAgNDZoMTQ0VjBIMTY3ek0xMTAgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDAtMTAtOC0xOHQtMjQtOEgzOHY5OGgzNnExOS0xIDI4LTkgOC04IDgtMThNMCAxMzZoMTQ0VjBIMHoiLz48cGF0aCBkPSJNMjU5IDg4cTAgNS00IDktNCA1LTE2IDVoLTE3Vjc1aDE2cTExIDEgMTYgNHQ1IDlNOTIgODhxMCA1LTQgOS00IDUtMTYgNUg1NVY3NWgxNnExMSAxIDE2IDR0NSA5TTI0NSA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00aC0xMnYyNWg4cTEwIDAgMTUtM003OCA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00SDU1djI1aDhxMTAgMCAxNS0zIi8+PC9nPjwvc3ZnPg==);
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  width: 100%;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2Ij48ZyBmaWxsPSIjZDVkMGNkIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Im00NTAgOTItMyAxcS0xNyAxMC0zNCAxMGMtMjQgMC0zOS0xNC0zOS0zNHMxNi0zNSAzOC0zNXExNyAwIDM0IDEwbDMgMVYyN2gtMXEtMjAtOC0zNi04LTI0IDAtNDAgMTR0LTE2IDM3cTAgMTcgMTMgMzIgMTMgMTYgNDMgMTcgMjMtMSAzNy05aDF6bS0xMTYgNDRoMTQ0VjBIMzM0ek0yNzcgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDEtMTAtOC0xOC03LTgtMjQtOGgtMzF2OThoMzZxMTktMSAyOC05IDgtOCA4LTE4bS0xMTAgNDZoMTQ0VjBIMTY3ek0xMTAgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDAtMTAtOC0xOHQtMjQtOEgzOHY5OGgzNnExOS0xIDI4LTkgOC04IDgtMThNMCAxMzZoMTQ0VjBIMHoiLz48cGF0aCBkPSJNMjU5IDg4cTAgNS00IDktNCA1LTE2IDVoLTE3Vjc1aDE2cTExIDEgMTYgNHQ1IDlNOTIgODhxMCA1LTQgOS00IDUtMTYgNUg1NVY3NWgxNnExMSAxIDE2IDR0NSA5TTI0NSA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00aC0xMnYyNWg4cTEwIDAgMTUtM003OCA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00SDU1djI1aDhxMTAgMCAxNS0zIi8+PC9nPjwvc3ZnPg==);
+  background-color: #F2F2F2;
 }
 
 @media (min-width: 25rem) {
@@ -5771,25 +5776,25 @@ exports[`StoryPromo Container should render item without an image correctly for 
 }
 
 @media (min-width: 25rem) {
-  .emotion-8 {
+  .emotion-7 {
     position: absolute;
     bottom: 0;
   }
 }
 
-.emotion-8>* {
+.emotion-7>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-8>* {
+  .emotion-7>* {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
-.emotion-10 {
+.emotion-9 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -5797,13 +5802,13 @@ exports[`StoryPromo Container should render item without an image correctly for 
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-10 {
+  .emotion-9 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-10 {
+  .emotion-9 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -5811,7 +5816,7 @@ exports[`StoryPromo Container should render item without an image correctly for 
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-10 {
+  .emotion-9 {
     display: block;
     width: initial;
     padding: initial;
@@ -5819,13 +5824,13 @@ exports[`StoryPromo Container should render item without an image correctly for 
   }
 
   @media (min-width: 63rem) {
-    .emotion-10 {
+    .emotion-9 {
       padding-top: 0.5rem;
     }
   }
 }
 
-.emotion-12 {
+.emotion-11 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -5837,20 +5842,20 @@ exports[`StoryPromo Container should render item without an image correctly for 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-12 {
+  .emotion-11 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-12 {
+  .emotion-11 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-14 {
+.emotion-13 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -5860,7 +5865,7 @@ exports[`StoryPromo Container should render item without an image correctly for 
   overflow-wrap: anywhere;
 }
 
-.emotion-14:before {
+.emotion-13:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -5872,17 +5877,17 @@ exports[`StoryPromo Container should render item without an image correctly for 
   z-index: 1;
 }
 
-.emotion-14:hover,
-.emotion-14:focus {
+.emotion-13:hover,
+.emotion-13:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-14:visited {
+.emotion-13:visited {
   color: #6E6E73;
 }
 
-.emotion-16 {
+.emotion-15 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -5894,34 +5899,34 @@ exports[`StoryPromo Container should render item without an image correctly for 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-16 {
+  .emotion-15 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-16 {
+  .emotion-15 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-16 {
+  .emotion-15 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-16 {
+  .emotion-15 {
     display: none;
     visibility: hidden;
   }
 }
 
-.emotion-18 {
+.emotion-17 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #545658;
@@ -5932,14 +5937,14 @@ exports[`StoryPromo Container should render item without an image correctly for 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-18 {
+  .emotion-17 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-17 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -5958,25 +5963,24 @@ exports[`StoryPromo Container should render item without an image correctly for 
         class="emotion-4 emotion-5"
       >
         <div
-          class="emotion-6 emotion-7"
-          data-e2e="image-placeholder"
-          style="padding-bottom: 56.25%;"
+          class="emotion-6"
+          style="padding-bottom: 56.25%; overflow: hidden;"
         />
         <div
-          class="emotion-8 emotion-9"
+          class="emotion-7 emotion-8"
         />
       </div>
     </div>
     <div
-      class="emotion-10 emotion-11"
+      class="emotion-9 emotion-10"
       dir="ltr"
     >
       <h3
-        class="emotion-12 emotion-13"
+        class="emotion-11 emotion-12"
       >
         <a
           aria-labelledby="promo-1"
-          class="focusIndicatorDisplayInlineBlock emotion-14 emotion-15"
+          class="focusIndicatorDisplayInlineBlock emotion-13 emotion-14"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -5987,12 +5991,12 @@ exports[`StoryPromo Container should render item without an image correctly for 
         </a>
       </h3>
       <p
-        class="emotion-16 emotion-17"
+        class="emotion-15 emotion-16"
       >
         Summary text
       </p>
       <time
-        class="emotion-18 emotion-19"
+        class="emotion-17 emotion-18"
         datetime="2019-05-02"
       >
         2 Mee 2019
@@ -6242,15 +6246,13 @@ exports[`StoryPromo Container should render item without an image promoType lead
 .emotion-16 {
   position: relative;
   height: 0;
-  overflow: hidden;
-  background-color: #F2F2F2;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2Ij48ZyBmaWxsPSIjZDVkMGNkIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Im00NTAgOTItMyAxcS0xNyAxMC0zNCAxMGMtMjQgMC0zOS0xNC0zOS0zNHMxNi0zNSAzOC0zNXExNyAwIDM0IDEwbDMgMVYyN2gtMXEtMjAtOC0zNi04LTI0IDAtNDAgMTR0LTE2IDM3cTAgMTcgMTMgMzIgMTMgMTYgNDMgMTcgMjMtMSAzNy05aDF6bS0xMTYgNDRoMTQ0VjBIMzM0ek0yNzcgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDEtMTAtOC0xOC03LTgtMjQtOGgtMzF2OThoMzZxMTktMSAyOC05IDgtOCA4LTE4bS0xMTAgNDZoMTQ0VjBIMTY3ek0xMTAgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDAtMTAtOC0xOHQtMjQtOEgzOHY5OGgzNnExOS0xIDI4LTkgOC04IDgtMThNMCAxMzZoMTQ0VjBIMHoiLz48cGF0aCBkPSJNMjU5IDg4cTAgNS00IDktNCA1LTE2IDVoLTE3Vjc1aDE2cTExIDEgMTYgNHQ1IDlNOTIgODhxMCA1LTQgOS00IDUtMTYgNUg1NVY3NWgxNnExMSAxIDE2IDR0NSA5TTI0NSA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00aC0xMnYyNWg4cTEwIDAgMTUtM003OCA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00SDU1djI1aDhxMTAgMCAxNS0zIi8+PC9nPjwvc3ZnPg==);
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  width: 100%;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2Ij48ZyBmaWxsPSIjZDVkMGNkIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Im00NTAgOTItMyAxcS0xNyAxMC0zNCAxMGMtMjQgMC0zOS0xNC0zOS0zNHMxNi0zNSAzOC0zNXExNyAwIDM0IDEwbDMgMVYyN2gtMXEtMjAtOC0zNi04LTI0IDAtNDAgMTR0LTE2IDM3cTAgMTcgMTMgMzIgMTMgMTYgNDMgMTcgMjMtMSAzNy05aDF6bS0xMTYgNDRoMTQ0VjBIMzM0ek0yNzcgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDEtMTAtOC0xOC03LTgtMjQtOGgtMzF2OThoMzZxMTktMSAyOC05IDgtOCA4LTE4bS0xMTAgNDZoMTQ0VjBIMTY3ek0xMTAgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDAtMTAtOC0xOHQtMjQtOEgzOHY5OGgzNnExOS0xIDI4LTkgOC04IDgtMThNMCAxMzZoMTQ0VjBIMHoiLz48cGF0aCBkPSJNMjU5IDg4cTAgNS00IDktNCA1LTE2IDVoLTE3Vjc1aDE2cTExIDEgMTYgNHQ1IDlNOTIgODhxMCA1LTQgOS00IDUtMTYgNUg1NVY3NWgxNnExMSAxIDE2IDR0NSA5TTI0NSA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00aC0xMnYyNWg4cTEwIDAgMTUtM003OCA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00SDU1djI1aDhxMTAgMCAxNS0zIi8+PC9nPjwvc3ZnPg==);
+  background-color: #F2F2F2;
 }
 
 @media (min-width: 25rem) {
@@ -6267,12 +6269,12 @@ exports[`StoryPromo Container should render item without an image promoType lead
   }
 }
 
-.emotion-18 {
+.emotion-17 {
   position: absolute;
   bottom: 0;
 }
 
-.emotion-18>* {
+.emotion-17>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
@@ -6321,12 +6323,11 @@ exports[`StoryPromo Container should render item without an image promoType lead
         class="emotion-14 emotion-15"
       >
         <div
-          class="emotion-16 emotion-17"
-          data-e2e="image-placeholder"
-          style="padding-bottom: 56.25%;"
+          class="emotion-16"
+          style="padding-bottom: 56.25%; overflow: hidden;"
         />
         <div
-          class="emotion-18 emotion-19"
+          class="emotion-17 emotion-18"
         />
       </div>
     </div>
@@ -6400,15 +6401,13 @@ exports[`StoryPromo Container should render item without an image promoType top 
 .emotion-6 {
   position: relative;
   height: 0;
-  overflow: hidden;
-  background-color: #F2F2F2;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2Ij48ZyBmaWxsPSIjZDVkMGNkIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Im00NTAgOTItMyAxcS0xNyAxMC0zNCAxMGMtMjQgMC0zOS0xNC0zOS0zNHMxNi0zNSAzOC0zNXExNyAwIDM0IDEwbDMgMVYyN2gtMXEtMjAtOC0zNi04LTI0IDAtNDAgMTR0LTE2IDM3cTAgMTcgMTMgMzIgMTMgMTYgNDMgMTcgMjMtMSAzNy05aDF6bS0xMTYgNDRoMTQ0VjBIMzM0ek0yNzcgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDEtMTAtOC0xOC03LTgtMjQtOGgtMzF2OThoMzZxMTktMSAyOC05IDgtOCA4LTE4bS0xMTAgNDZoMTQ0VjBIMTY3ek0xMTAgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDAtMTAtOC0xOHQtMjQtOEgzOHY5OGgzNnExOS0xIDI4LTkgOC04IDgtMThNMCAxMzZoMTQ0VjBIMHoiLz48cGF0aCBkPSJNMjU5IDg4cTAgNS00IDktNCA1LTE2IDVoLTE3Vjc1aDE2cTExIDEgMTYgNHQ1IDlNOTIgODhxMCA1LTQgOS00IDUtMTYgNUg1NVY3NWgxNnExMSAxIDE2IDR0NSA5TTI0NSA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00aC0xMnYyNWg4cTEwIDAgMTUtM003OCA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00SDU1djI1aDhxMTAgMCAxNS0zIi8+PC9nPjwvc3ZnPg==);
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  width: 100%;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2Ij48ZyBmaWxsPSIjZDVkMGNkIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Im00NTAgOTItMyAxcS0xNyAxMC0zNCAxMGMtMjQgMC0zOS0xNC0zOS0zNHMxNi0zNSAzOC0zNXExNyAwIDM0IDEwbDMgMVYyN2gtMXEtMjAtOC0zNi04LTI0IDAtNDAgMTR0LTE2IDM3cTAgMTcgMTMgMzIgMTMgMTYgNDMgMTcgMjMtMSAzNy05aDF6bS0xMTYgNDRoMTQ0VjBIMzM0ek0yNzcgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDEtMTAtOC0xOC03LTgtMjQtOGgtMzF2OThoMzZxMTktMSAyOC05IDgtOCA4LTE4bS0xMTAgNDZoMTQ0VjBIMTY3ek0xMTAgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDAtMTAtOC0xOHQtMjQtOEgzOHY5OGgzNnExOS0xIDI4LTkgOC04IDgtMThNMCAxMzZoMTQ0VjBIMHoiLz48cGF0aCBkPSJNMjU5IDg4cTAgNS00IDktNCA1LTE2IDVoLTE3Vjc1aDE2cTExIDEgMTYgNHQ1IDlNOTIgODhxMCA1LTQgOS00IDUtMTYgNUg1NVY3NWgxNnExMSAxIDE2IDR0NSA5TTI0NSA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00aC0xMnYyNWg4cTEwIDAgMTUtM003OCA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00SDU1djI1aDhxMTAgMCAxNS0zIi8+PC9nPjwvc3ZnPg==);
+  background-color: #F2F2F2;
 }
 
 @media (min-width: 25rem) {
@@ -6425,36 +6424,36 @@ exports[`StoryPromo Container should render item without an image promoType top 
   }
 }
 
-.emotion-8 {
+.emotion-7 {
   position: absolute;
   bottom: 0;
 }
 
-.emotion-8>* {
+.emotion-7>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
-.emotion-10 {
+.emotion-9 {
   display: inline-block;
   vertical-align: top;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-10 {
+  .emotion-9 {
     width: 50%;
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-10 {
+  .emotion-9 {
     width: 50%;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-10 {
+  .emotion-9 {
     display: block;
     width: initial;
     padding: initial;
@@ -6462,19 +6461,19 @@ exports[`StoryPromo Container should render item without an image promoType top 
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-10 {
+    .emotion-9 {
       grid-column: 4/span 3;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-10 {
+    .emotion-9 {
       grid-column: 7/span 6;
     }
   }
 }
 
-.emotion-12 {
+.emotion-11 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -6486,20 +6485,20 @@ exports[`StoryPromo Container should render item without an image promoType top 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-12 {
+  .emotion-11 {
     font-size: 1.375rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-12 {
+  .emotion-11 {
     font-size: 1.75rem;
     line-height: 2rem;
   }
 }
 
-.emotion-14 {
+.emotion-13 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -6509,7 +6508,7 @@ exports[`StoryPromo Container should render item without an image promoType top 
   overflow-wrap: anywhere;
 }
 
-.emotion-14:before {
+.emotion-13:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -6521,17 +6520,17 @@ exports[`StoryPromo Container should render item without an image promoType top 
   z-index: 1;
 }
 
-.emotion-14:hover,
-.emotion-14:focus {
+.emotion-13:hover,
+.emotion-13:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-14:visited {
+.emotion-13:visited {
   color: #6E6E73;
 }
 
-.emotion-16 {
+.emotion-15 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -6543,27 +6542,27 @@ exports[`StoryPromo Container should render item without an image promoType top 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-16 {
+  .emotion-15 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-16 {
+  .emotion-15 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-16 {
+  .emotion-15 {
     display: none;
     visibility: hidden;
   }
 }
 
-.emotion-18 {
+.emotion-17 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #545658;
@@ -6574,14 +6573,14 @@ exports[`StoryPromo Container should render item without an image promoType top 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-18 {
+  .emotion-17 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-17 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -6600,25 +6599,24 @@ exports[`StoryPromo Container should render item without an image promoType top 
         class="emotion-4 emotion-5"
       >
         <div
-          class="emotion-6 emotion-7"
-          data-e2e="image-placeholder"
-          style="padding-bottom: 56.25%;"
+          class="emotion-6"
+          style="padding-bottom: 56.25%; overflow: hidden;"
         />
         <div
-          class="emotion-8 emotion-9"
+          class="emotion-7 emotion-8"
         />
       </div>
     </div>
     <div
-      class="emotion-10 emotion-11"
+      class="emotion-9 emotion-10"
       dir="ltr"
     >
       <h3
-        class="emotion-12 emotion-13"
+        class="emotion-11 emotion-12"
       >
         <a
           aria-labelledby="promo-1"
-          class="focusIndicatorDisplayInlineBlock emotion-14 emotion-15"
+          class="focusIndicatorDisplayInlineBlock emotion-13 emotion-14"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -6629,12 +6627,12 @@ exports[`StoryPromo Container should render item without an image promoType top 
         </a>
       </h3>
       <p
-        class="emotion-16 emotion-17"
+        class="emotion-15 emotion-16"
       >
         Summary text
       </p>
       <time
-        class="emotion-18 emotion-19"
+        class="emotion-17 emotion-18"
         datetime="2019-05-02"
       >
         2 Mee 2019
@@ -6958,6 +6956,7 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
             sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
             src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp"
             srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
+            style="background-color: rgb(253, 253, 253);"
             width="2048"
           />
         </div>
@@ -7830,6 +7829,7 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
             sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
             src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp"
             srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
+            style="background-color: rgb(253, 253, 253);"
             width="2048"
           />
         </div>
@@ -8172,6 +8172,7 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
             sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
             src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp"
             srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
+            style="background-color: rgb(253, 253, 253);"
             width="2048"
           />
         </div>
@@ -8836,15 +8837,13 @@ exports[`StoryPromo Container should render podcastLink correctly for amp 1`] = 
 .emotion-6 {
   position: relative;
   height: 0;
-  overflow: hidden;
-  background-color: #F2F2F2;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2Ij48ZyBmaWxsPSIjZDVkMGNkIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Im00NTAgOTItMyAxcS0xNyAxMC0zNCAxMGMtMjQgMC0zOS0xNC0zOS0zNHMxNi0zNSAzOC0zNXExNyAwIDM0IDEwbDMgMVYyN2gtMXEtMjAtOC0zNi04LTI0IDAtNDAgMTR0LTE2IDM3cTAgMTcgMTMgMzIgMTMgMTYgNDMgMTcgMjMtMSAzNy05aDF6bS0xMTYgNDRoMTQ0VjBIMzM0ek0yNzcgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDEtMTAtOC0xOC03LTgtMjQtOGgtMzF2OThoMzZxMTktMSAyOC05IDgtOCA4LTE4bS0xMTAgNDZoMTQ0VjBIMTY3ek0xMTAgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDAtMTAtOC0xOHQtMjQtOEgzOHY5OGgzNnExOS0xIDI4LTkgOC04IDgtMThNMCAxMzZoMTQ0VjBIMHoiLz48cGF0aCBkPSJNMjU5IDg4cTAgNS00IDktNCA1LTE2IDVoLTE3Vjc1aDE2cTExIDEgMTYgNHQ1IDlNOTIgODhxMCA1LTQgOS00IDUtMTYgNUg1NVY3NWgxNnExMSAxIDE2IDR0NSA5TTI0NSA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00aC0xMnYyNWg4cTEwIDAgMTUtM003OCA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00SDU1djI1aDhxMTAgMCAxNS0zIi8+PC9nPjwvc3ZnPg==);
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  width: 100%;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2Ij48ZyBmaWxsPSIjZDVkMGNkIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Im00NTAgOTItMyAxcS0xNyAxMC0zNCAxMGMtMjQgMC0zOS0xNC0zOS0zNHMxNi0zNSAzOC0zNXExNyAwIDM0IDEwbDMgMVYyN2gtMXEtMjAtOC0zNi04LTI0IDAtNDAgMTR0LTE2IDM3cTAgMTcgMTMgMzIgMTMgMTYgNDMgMTcgMjMtMSAzNy05aDF6bS0xMTYgNDRoMTQ0VjBIMzM0ek0yNzcgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDEtMTAtOC0xOC03LTgtMjQtOGgtMzF2OThoMzZxMTktMSAyOC05IDgtOCA4LTE4bS0xMTAgNDZoMTQ0VjBIMTY3ek0xMTAgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDAtMTAtOC0xOHQtMjQtOEgzOHY5OGgzNnExOS0xIDI4LTkgOC04IDgtMThNMCAxMzZoMTQ0VjBIMHoiLz48cGF0aCBkPSJNMjU5IDg4cTAgNS00IDktNCA1LTE2IDVoLTE3Vjc1aDE2cTExIDEgMTYgNHQ1IDlNOTIgODhxMCA1LTQgOS00IDUtMTYgNUg1NVY3NWgxNnExMSAxIDE2IDR0NSA5TTI0NSA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00aC0xMnYyNWg4cTEwIDAgMTUtM003OCA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00SDU1djI1aDhxMTAgMCAxNS0zIi8+PC9nPjwvc3ZnPg==);
+  background-color: #F2F2F2;
 }
 
 @media (min-width: 25rem) {
@@ -8862,25 +8861,25 @@ exports[`StoryPromo Container should render podcastLink correctly for amp 1`] = 
 }
 
 @media (min-width: 25rem) {
-  .emotion-8 {
+  .emotion-7 {
     position: absolute;
     bottom: 0;
   }
 }
 
-.emotion-8>* {
+.emotion-7>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-8>* {
+  .emotion-7>* {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
-.emotion-10 {
+.emotion-9 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -8888,13 +8887,13 @@ exports[`StoryPromo Container should render podcastLink correctly for amp 1`] = 
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-10 {
+  .emotion-9 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-10 {
+  .emotion-9 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -8902,7 +8901,7 @@ exports[`StoryPromo Container should render podcastLink correctly for amp 1`] = 
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-10 {
+  .emotion-9 {
     display: block;
     width: initial;
     padding: initial;
@@ -8910,13 +8909,13 @@ exports[`StoryPromo Container should render podcastLink correctly for amp 1`] = 
   }
 
   @media (min-width: 63rem) {
-    .emotion-10 {
+    .emotion-9 {
       padding-top: 0.5rem;
     }
   }
 }
 
-.emotion-12 {
+.emotion-11 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -8928,20 +8927,20 @@ exports[`StoryPromo Container should render podcastLink correctly for amp 1`] = 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-12 {
+  .emotion-11 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-12 {
+  .emotion-11 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-14 {
+.emotion-13 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -8951,7 +8950,7 @@ exports[`StoryPromo Container should render podcastLink correctly for amp 1`] = 
   overflow-wrap: anywhere;
 }
 
-.emotion-14:before {
+.emotion-13:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -8963,17 +8962,17 @@ exports[`StoryPromo Container should render podcastLink correctly for amp 1`] = 
   z-index: 1;
 }
 
-.emotion-14:hover,
-.emotion-14:focus {
+.emotion-13:hover,
+.emotion-13:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-14:visited {
+.emotion-13:visited {
   color: #6E6E73;
 }
 
-.emotion-16 {
+.emotion-15 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -8985,28 +8984,28 @@ exports[`StoryPromo Container should render podcastLink correctly for amp 1`] = 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-16 {
+  .emotion-15 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-16 {
+  .emotion-15 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-16 {
+  .emotion-15 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-16 {
+  .emotion-15 {
     display: none;
     visibility: hidden;
   }
@@ -9025,25 +9024,24 @@ exports[`StoryPromo Container should render podcastLink correctly for amp 1`] = 
         class="emotion-4 emotion-5"
       >
         <div
-          class="emotion-6 emotion-7"
-          data-e2e="image-placeholder"
-          style="padding-bottom: 56.25%;"
+          class="emotion-6"
+          style="padding-bottom: 56.25%; overflow: hidden;"
         />
         <div
-          class="emotion-8 emotion-9"
+          class="emotion-7 emotion-8"
         />
       </div>
     </div>
     <div
-      class="emotion-10 emotion-11"
+      class="emotion-9 emotion-10"
       dir="ltr"
     >
       <h3
-        class="emotion-12 emotion-13"
+        class="emotion-11 emotion-12"
       >
         <a
           aria-labelledby="promo-indonesiamedia45640737-podcast-1"
-          class="focusIndicatorDisplayInlineBlock emotion-14 emotion-15"
+          class="focusIndicatorDisplayInlineBlock emotion-13 emotion-14"
           href="/indonesia/media-45640737"
         >
           <span
@@ -9054,7 +9052,7 @@ exports[`StoryPromo Container should render podcastLink correctly for amp 1`] = 
         </a>
       </h3>
       <p
-        class="emotion-16 emotion-17"
+        class="emotion-15 emotion-16"
       >
         BBC Indonesia
       </p>
@@ -9116,15 +9114,13 @@ exports[`StoryPromo Container should render podcastLink correctly for canonical 
 .emotion-6 {
   position: relative;
   height: 0;
-  overflow: hidden;
-  background-color: #F2F2F2;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2Ij48ZyBmaWxsPSIjZDVkMGNkIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Im00NTAgOTItMyAxcS0xNyAxMC0zNCAxMGMtMjQgMC0zOS0xNC0zOS0zNHMxNi0zNSAzOC0zNXExNyAwIDM0IDEwbDMgMVYyN2gtMXEtMjAtOC0zNi04LTI0IDAtNDAgMTR0LTE2IDM3cTAgMTcgMTMgMzIgMTMgMTYgNDMgMTcgMjMtMSAzNy05aDF6bS0xMTYgNDRoMTQ0VjBIMzM0ek0yNzcgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDEtMTAtOC0xOC03LTgtMjQtOGgtMzF2OThoMzZxMTktMSAyOC05IDgtOCA4LTE4bS0xMTAgNDZoMTQ0VjBIMTY3ek0xMTAgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDAtMTAtOC0xOHQtMjQtOEgzOHY5OGgzNnExOS0xIDI4LTkgOC04IDgtMThNMCAxMzZoMTQ0VjBIMHoiLz48cGF0aCBkPSJNMjU5IDg4cTAgNS00IDktNCA1LTE2IDVoLTE3Vjc1aDE2cTExIDEgMTYgNHQ1IDlNOTIgODhxMCA1LTQgOS00IDUtMTYgNUg1NVY3NWgxNnExMSAxIDE2IDR0NSA5TTI0NSA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00aC0xMnYyNWg4cTEwIDAgMTUtM003OCA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00SDU1djI1aDhxMTAgMCAxNS0zIi8+PC9nPjwvc3ZnPg==);
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  width: 100%;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2Ij48ZyBmaWxsPSIjZDVkMGNkIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Im00NTAgOTItMyAxcS0xNyAxMC0zNCAxMGMtMjQgMC0zOS0xNC0zOS0zNHMxNi0zNSAzOC0zNXExNyAwIDM0IDEwbDMgMVYyN2gtMXEtMjAtOC0zNi04LTI0IDAtNDAgMTR0LTE2IDM3cTAgMTcgMTMgMzIgMTMgMTYgNDMgMTcgMjMtMSAzNy05aDF6bS0xMTYgNDRoMTQ0VjBIMzM0ek0yNzcgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDEtMTAtOC0xOC03LTgtMjQtOGgtMzF2OThoMzZxMTktMSAyOC05IDgtOCA4LTE4bS0xMTAgNDZoMTQ0VjBIMTY3ek0xMTAgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDAtMTAtOC0xOHQtMjQtOEgzOHY5OGgzNnExOS0xIDI4LTkgOC04IDgtMThNMCAxMzZoMTQ0VjBIMHoiLz48cGF0aCBkPSJNMjU5IDg4cTAgNS00IDktNCA1LTE2IDVoLTE3Vjc1aDE2cTExIDEgMTYgNHQ1IDlNOTIgODhxMCA1LTQgOS00IDUtMTYgNUg1NVY3NWgxNnExMSAxIDE2IDR0NSA5TTI0NSA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00aC0xMnYyNWg4cTEwIDAgMTUtM003OCA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00SDU1djI1aDhxMTAgMCAxNS0zIi8+PC9nPjwvc3ZnPg==);
+  background-color: #F2F2F2;
 }
 
 @media (min-width: 25rem) {
@@ -9142,25 +9138,25 @@ exports[`StoryPromo Container should render podcastLink correctly for canonical 
 }
 
 @media (min-width: 25rem) {
-  .emotion-8 {
+  .emotion-7 {
     position: absolute;
     bottom: 0;
   }
 }
 
-.emotion-8>* {
+.emotion-7>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-8>* {
+  .emotion-7>* {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
-.emotion-10 {
+.emotion-9 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -9168,13 +9164,13 @@ exports[`StoryPromo Container should render podcastLink correctly for canonical 
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-10 {
+  .emotion-9 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-10 {
+  .emotion-9 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -9182,7 +9178,7 @@ exports[`StoryPromo Container should render podcastLink correctly for canonical 
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-10 {
+  .emotion-9 {
     display: block;
     width: initial;
     padding: initial;
@@ -9190,13 +9186,13 @@ exports[`StoryPromo Container should render podcastLink correctly for canonical 
   }
 
   @media (min-width: 63rem) {
-    .emotion-10 {
+    .emotion-9 {
       padding-top: 0.5rem;
     }
   }
 }
 
-.emotion-12 {
+.emotion-11 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -9208,20 +9204,20 @@ exports[`StoryPromo Container should render podcastLink correctly for canonical 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-12 {
+  .emotion-11 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-12 {
+  .emotion-11 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-14 {
+.emotion-13 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -9231,7 +9227,7 @@ exports[`StoryPromo Container should render podcastLink correctly for canonical 
   overflow-wrap: anywhere;
 }
 
-.emotion-14:before {
+.emotion-13:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -9243,17 +9239,17 @@ exports[`StoryPromo Container should render podcastLink correctly for canonical 
   z-index: 1;
 }
 
-.emotion-14:hover,
-.emotion-14:focus {
+.emotion-13:hover,
+.emotion-13:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-14:visited {
+.emotion-13:visited {
   color: #6E6E73;
 }
 
-.emotion-16 {
+.emotion-15 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -9265,28 +9261,28 @@ exports[`StoryPromo Container should render podcastLink correctly for canonical 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-16 {
+  .emotion-15 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-16 {
+  .emotion-15 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-16 {
+  .emotion-15 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-16 {
+  .emotion-15 {
     display: none;
     visibility: hidden;
   }
@@ -9305,25 +9301,24 @@ exports[`StoryPromo Container should render podcastLink correctly for canonical 
         class="emotion-4 emotion-5"
       >
         <div
-          class="emotion-6 emotion-7"
-          data-e2e="image-placeholder"
-          style="padding-bottom: 56.25%;"
+          class="emotion-6"
+          style="padding-bottom: 56.25%; overflow: hidden;"
         />
         <div
-          class="emotion-8 emotion-9"
+          class="emotion-7 emotion-8"
         />
       </div>
     </div>
     <div
-      class="emotion-10 emotion-11"
+      class="emotion-9 emotion-10"
       dir="ltr"
     >
       <h3
-        class="emotion-12 emotion-13"
+        class="emotion-11 emotion-12"
       >
         <a
           aria-labelledby="promo-indonesiamedia45640737-podcast-1"
-          class="focusIndicatorDisplayInlineBlock emotion-14 emotion-15"
+          class="focusIndicatorDisplayInlineBlock emotion-13 emotion-14"
           href="/indonesia/media-45640737"
         >
           <span
@@ -9334,7 +9329,7 @@ exports[`StoryPromo Container should render podcastLink correctly for canonical 
         </a>
       </h3>
       <p
-        class="emotion-16 emotion-17"
+        class="emotion-15 emotion-16"
       >
         BBC Indonesia
       </p>
@@ -9559,15 +9554,13 @@ exports[`StoryPromo Container should render podcastLink promoType leading on amp
 .emotion-14 {
   position: relative;
   height: 0;
-  overflow: hidden;
-  background-color: #F2F2F2;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2Ij48ZyBmaWxsPSIjZDVkMGNkIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Im00NTAgOTItMyAxcS0xNyAxMC0zNCAxMGMtMjQgMC0zOS0xNC0zOS0zNHMxNi0zNSAzOC0zNXExNyAwIDM0IDEwbDMgMVYyN2gtMXEtMjAtOC0zNi04LTI0IDAtNDAgMTR0LTE2IDM3cTAgMTcgMTMgMzIgMTMgMTYgNDMgMTcgMjMtMSAzNy05aDF6bS0xMTYgNDRoMTQ0VjBIMzM0ek0yNzcgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDEtMTAtOC0xOC03LTgtMjQtOGgtMzF2OThoMzZxMTktMSAyOC05IDgtOCA4LTE4bS0xMTAgNDZoMTQ0VjBIMTY3ek0xMTAgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDAtMTAtOC0xOHQtMjQtOEgzOHY5OGgzNnExOS0xIDI4LTkgOC04IDgtMThNMCAxMzZoMTQ0VjBIMHoiLz48cGF0aCBkPSJNMjU5IDg4cTAgNS00IDktNCA1LTE2IDVoLTE3Vjc1aDE2cTExIDEgMTYgNHQ1IDlNOTIgODhxMCA1LTQgOS00IDUtMTYgNUg1NVY3NWgxNnExMSAxIDE2IDR0NSA5TTI0NSA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00aC0xMnYyNWg4cTEwIDAgMTUtM003OCA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00SDU1djI1aDhxMTAgMCAxNS0zIi8+PC9nPjwvc3ZnPg==);
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  width: 100%;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2Ij48ZyBmaWxsPSIjZDVkMGNkIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Im00NTAgOTItMyAxcS0xNyAxMC0zNCAxMGMtMjQgMC0zOS0xNC0zOS0zNHMxNi0zNSAzOC0zNXExNyAwIDM0IDEwbDMgMVYyN2gtMXEtMjAtOC0zNi04LTI0IDAtNDAgMTR0LTE2IDM3cTAgMTcgMTMgMzIgMTMgMTYgNDMgMTcgMjMtMSAzNy05aDF6bS0xMTYgNDRoMTQ0VjBIMzM0ek0yNzcgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDEtMTAtOC0xOC03LTgtMjQtOGgtMzF2OThoMzZxMTktMSAyOC05IDgtOCA4LTE4bS0xMTAgNDZoMTQ0VjBIMTY3ek0xMTAgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDAtMTAtOC0xOHQtMjQtOEgzOHY5OGgzNnExOS0xIDI4LTkgOC04IDgtMThNMCAxMzZoMTQ0VjBIMHoiLz48cGF0aCBkPSJNMjU5IDg4cTAgNS00IDktNCA1LTE2IDVoLTE3Vjc1aDE2cTExIDEgMTYgNHQ1IDlNOTIgODhxMCA1LTQgOS00IDUtMTYgNUg1NVY3NWgxNnExMSAxIDE2IDR0NSA5TTI0NSA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00aC0xMnYyNWg4cTEwIDAgMTUtM003OCA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00SDU1djI1aDhxMTAgMCAxNS0zIi8+PC9nPjwvc3ZnPg==);
+  background-color: #F2F2F2;
 }
 
 @media (min-width: 25rem) {
@@ -9584,12 +9577,12 @@ exports[`StoryPromo Container should render podcastLink promoType leading on amp
   }
 }
 
-.emotion-16 {
+.emotion-15 {
   position: absolute;
   bottom: 0;
 }
 
-.emotion-16>* {
+.emotion-15>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
@@ -9632,12 +9625,11 @@ exports[`StoryPromo Container should render podcastLink promoType leading on amp
         class="emotion-12 emotion-13"
       >
         <div
-          class="emotion-14 emotion-15"
-          data-e2e="image-placeholder"
-          style="padding-bottom: 56.25%;"
+          class="emotion-14"
+          style="padding-bottom: 56.25%; overflow: hidden;"
         />
         <div
-          class="emotion-16 emotion-17"
+          class="emotion-15 emotion-16"
         />
       </div>
     </div>
@@ -9711,15 +9703,13 @@ exports[`StoryPromo Container should render podcastLink promoType top on amp 1`]
 .emotion-6 {
   position: relative;
   height: 0;
-  overflow: hidden;
-  background-color: #F2F2F2;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2Ij48ZyBmaWxsPSIjZDVkMGNkIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Im00NTAgOTItMyAxcS0xNyAxMC0zNCAxMGMtMjQgMC0zOS0xNC0zOS0zNHMxNi0zNSAzOC0zNXExNyAwIDM0IDEwbDMgMVYyN2gtMXEtMjAtOC0zNi04LTI0IDAtNDAgMTR0LTE2IDM3cTAgMTcgMTMgMzIgMTMgMTYgNDMgMTcgMjMtMSAzNy05aDF6bS0xMTYgNDRoMTQ0VjBIMzM0ek0yNzcgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDEtMTAtOC0xOC03LTgtMjQtOGgtMzF2OThoMzZxMTktMSAyOC05IDgtOCA4LTE4bS0xMTAgNDZoMTQ0VjBIMTY3ek0xMTAgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDAtMTAtOC0xOHQtMjQtOEgzOHY5OGgzNnExOS0xIDI4LTkgOC04IDgtMThNMCAxMzZoMTQ0VjBIMHoiLz48cGF0aCBkPSJNMjU5IDg4cTAgNS00IDktNCA1LTE2IDVoLTE3Vjc1aDE2cTExIDEgMTYgNHQ1IDlNOTIgODhxMCA1LTQgOS00IDUtMTYgNUg1NVY3NWgxNnExMSAxIDE2IDR0NSA5TTI0NSA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00aC0xMnYyNWg4cTEwIDAgMTUtM003OCA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00SDU1djI1aDhxMTAgMCAxNS0zIi8+PC9nPjwvc3ZnPg==);
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  width: 100%;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2Ij48ZyBmaWxsPSIjZDVkMGNkIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Im00NTAgOTItMyAxcS0xNyAxMC0zNCAxMGMtMjQgMC0zOS0xNC0zOS0zNHMxNi0zNSAzOC0zNXExNyAwIDM0IDEwbDMgMVYyN2gtMXEtMjAtOC0zNi04LTI0IDAtNDAgMTR0LTE2IDM3cTAgMTcgMTMgMzIgMTMgMTYgNDMgMTcgMjMtMSAzNy05aDF6bS0xMTYgNDRoMTQ0VjBIMzM0ek0yNzcgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDEtMTAtOC0xOC03LTgtMjQtOGgtMzF2OThoMzZxMTktMSAyOC05IDgtOCA4LTE4bS0xMTAgNDZoMTQ0VjBIMTY3ek0xMTAgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDAtMTAtOC0xOHQtMjQtOEgzOHY5OGgzNnExOS0xIDI4LTkgOC04IDgtMThNMCAxMzZoMTQ0VjBIMHoiLz48cGF0aCBkPSJNMjU5IDg4cTAgNS00IDktNCA1LTE2IDVoLTE3Vjc1aDE2cTExIDEgMTYgNHQ1IDlNOTIgODhxMCA1LTQgOS00IDUtMTYgNUg1NVY3NWgxNnExMSAxIDE2IDR0NSA5TTI0NSA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00aC0xMnYyNWg4cTEwIDAgMTUtM003OCA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00SDU1djI1aDhxMTAgMCAxNS0zIi8+PC9nPjwvc3ZnPg==);
+  background-color: #F2F2F2;
 }
 
 @media (min-width: 25rem) {
@@ -9736,36 +9726,36 @@ exports[`StoryPromo Container should render podcastLink promoType top on amp 1`]
   }
 }
 
-.emotion-8 {
+.emotion-7 {
   position: absolute;
   bottom: 0;
 }
 
-.emotion-8>* {
+.emotion-7>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
-.emotion-10 {
+.emotion-9 {
   display: inline-block;
   vertical-align: top;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-10 {
+  .emotion-9 {
     width: 50%;
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-10 {
+  .emotion-9 {
     width: 50%;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-10 {
+  .emotion-9 {
     display: block;
     width: initial;
     padding: initial;
@@ -9773,19 +9763,19 @@ exports[`StoryPromo Container should render podcastLink promoType top on amp 1`]
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-10 {
+    .emotion-9 {
       grid-column: 4/span 3;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-10 {
+    .emotion-9 {
       grid-column: 7/span 6;
     }
   }
 }
 
-.emotion-12 {
+.emotion-11 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -9797,20 +9787,20 @@ exports[`StoryPromo Container should render podcastLink promoType top on amp 1`]
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-12 {
+  .emotion-11 {
     font-size: 1.375rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-12 {
+  .emotion-11 {
     font-size: 1.75rem;
     line-height: 2rem;
   }
 }
 
-.emotion-14 {
+.emotion-13 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -9820,7 +9810,7 @@ exports[`StoryPromo Container should render podcastLink promoType top on amp 1`]
   overflow-wrap: anywhere;
 }
 
-.emotion-14:before {
+.emotion-13:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -9832,17 +9822,17 @@ exports[`StoryPromo Container should render podcastLink promoType top on amp 1`]
   z-index: 1;
 }
 
-.emotion-14:hover,
-.emotion-14:focus {
+.emotion-13:hover,
+.emotion-13:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-14:visited {
+.emotion-13:visited {
   color: #6E6E73;
 }
 
-.emotion-16 {
+.emotion-15 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -9854,21 +9844,21 @@ exports[`StoryPromo Container should render podcastLink promoType top on amp 1`]
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-16 {
+  .emotion-15 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-16 {
+  .emotion-15 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-16 {
+  .emotion-15 {
     display: none;
     visibility: hidden;
   }
@@ -9887,25 +9877,24 @@ exports[`StoryPromo Container should render podcastLink promoType top on amp 1`]
         class="emotion-4 emotion-5"
       >
         <div
-          class="emotion-6 emotion-7"
-          data-e2e="image-placeholder"
-          style="padding-bottom: 56.25%;"
+          class="emotion-6"
+          style="padding-bottom: 56.25%; overflow: hidden;"
         />
         <div
-          class="emotion-8 emotion-9"
+          class="emotion-7 emotion-8"
         />
       </div>
     </div>
     <div
-      class="emotion-10 emotion-11"
+      class="emotion-9 emotion-10"
       dir="ltr"
     >
       <h3
-        class="emotion-12 emotion-13"
+        class="emotion-11 emotion-12"
       >
         <a
           aria-labelledby="promo-indonesiamedia45640737-podcast-1"
-          class="focusIndicatorDisplayInlineBlock emotion-14 emotion-15"
+          class="focusIndicatorDisplayInlineBlock emotion-13 emotion-14"
           href="/indonesia/media-45640737"
         >
           <span
@@ -9916,7 +9905,7 @@ exports[`StoryPromo Container should render podcastLink promoType top on amp 1`]
         </a>
       </h3>
       <p
-        class="emotion-16 emotion-17"
+        class="emotion-15 emotion-16"
       >
         BBC Indonesia
       </p>
@@ -10202,6 +10191,7 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
             sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
             src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp"
             srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
+            style="background-color: rgb(253, 253, 253);"
             width="2048"
           />
         </div>
@@ -10900,6 +10890,7 @@ exports[`StoryPromo Container should render standard promoType leading on amp 1`
             sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
             src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp"
             srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
+            style="background-color: rgb(253, 253, 253);"
             width="2048"
           />
         </div>
@@ -11189,6 +11180,7 @@ exports[`StoryPromo Container should render standard promoType top on amp 1`] = 
             sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
             src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp"
             srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
+            style="background-color: rgb(253, 253, 253);"
             width="2048"
           />
         </div>
@@ -11509,6 +11501,7 @@ exports[`StoryPromo Container should render standardLink correctly for amp 1`] =
             sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
             src="https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp"
             srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 660w"
+            style="background-color: rgb(253, 253, 253);"
             width="976"
           />
         </div>
@@ -12207,6 +12200,7 @@ exports[`StoryPromo Container should render standardLink promoType leading on am
             sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
             src="https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp"
             srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 660w"
+            style="background-color: rgb(253, 253, 253);"
             width="976"
           />
         </div>
@@ -12496,6 +12490,7 @@ exports[`StoryPromo Container should render standardLink promoType top on amp 1`
             sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
             src="https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp"
             srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 660w"
+            style="background-color: rgb(253, 253, 253);"
             width="976"
           />
         </div>
@@ -12816,6 +12811,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
             sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
             src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp"
             srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
+            style="background-color: rgb(253, 253, 253);"
             width="2048"
           />
         </div>
@@ -13514,6 +13510,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType l
             sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
             src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp"
             srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
+            style="background-color: rgb(253, 253, 253);"
             width="2048"
           />
         </div>
@@ -13803,6 +13800,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType t
             sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
             src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp"
             srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
+            style="background-color: rgb(253, 253, 253);"
             width="2048"
           />
         </div>
@@ -14185,6 +14183,7 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
             sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
             src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp"
             srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
+            style="background-color: rgb(253, 253, 253);"
             width="2048"
           />
         </div>
@@ -15126,6 +15125,7 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
             sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
             src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp"
             srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
+            style="background-color: rgb(253, 253, 253);"
             width="2048"
           />
         </div>
@@ -15517,6 +15517,7 @@ exports[`StoryPromo Container should render video promoType top on amp 1`] = `
             sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
             src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp"
             srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
+            style="background-color: rgb(253, 253, 253);"
             width="2048"
           />
         </div>

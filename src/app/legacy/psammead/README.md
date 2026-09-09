@@ -49,8 +49,10 @@ You can do this in pure CSS:
     font-family: 'ReithSans';
     font-style: normal;
     font-weight: 400;
-    src: url('https://static.files.bbci.co.uk/fonts/reith/2.610/BBCReithSans_W_Rg.woff2')
-        format('woff2'), url('https://static.files.bbci.co.uk/fonts/reith/2.610/BBCReithSans_W_Rg.woff')
+    src:
+      url('https://static.files.bbci.co.uk/fonts/reith/2.610/BBCReithSans_W_Rg.woff2')
+        format('woff2'),
+      url('https://static.files.bbci.co.uk/fonts/reith/2.610/BBCReithSans_W_Rg.woff')
         format('woff');
   }
   @font-face {
@@ -58,8 +60,10 @@ You can do this in pure CSS:
     font-family: 'ReithSerif';
     font-style: normal;
     font-weight: 600;
-    src: url('https://static.files.bbci.co.uk/fonts/reith/2.610/BBCReithSerif_W_Md.woff2')
-        format('woff2'), url('https://static.files.bbci.co.uk/fonts/reith/2.610/BBCReithSerif_W_Md.woff')
+    src:
+      url('https://static.files.bbci.co.uk/fonts/reith/2.610/BBCReithSerif_W_Md.woff2')
+        format('woff2'),
+      url('https://static.files.bbci.co.uk/fonts/reith/2.610/BBCReithSerif_W_Md.woff')
         format('woff');
   }
 </style>
@@ -84,8 +88,6 @@ Or if you're using [styled-components](https://styled-components.com), you can u
 | [`#legacy/psammead-figure/src`](./components/psammead-figure) |[![npm version](https://img.shields.io/npm/v/#legacy/psammead-figure/src.svg)](https://www.npmjs.com/package/#legacy/psammead-figure/src) |[![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-figure)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-figure) | [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-figure)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-figure&type=peer) |
 | [`#legacy/psammead-grid/src`](./components/psammead-grid) |[![npm version](https://img.shields.io/npm/v/#legacy/psammead-grid/src.svg)](https://www.npmjs.com/package/#legacy/psammead-grid/src) |[![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-grid)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-grid) | [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-grid)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-grid&type=peer) |
 | [`#legacy/psammead-headings/src`](./components/psammead-headings) |[![npm version](https://img.shields.io/npm/v/#legacy/psammead-headings/src.svg)](https://www.npmjs.com/package/#legacy/psammead-headings/src) |[![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-headings)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-headings) | [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-headings)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-headings&type=peer) |
-| [`#legacy/psammead-image/src`](./components/psammead-image) |[![npm version](https://img.shields.io/npm/v/#legacy/psammead-image/src.svg)](https://www.npmjs.com/package/#legacy/psammead-image/src) |[![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-image)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-image) | [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-image)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-image&type=peer) |
-| [`#legacy/psammead-image-placeholder/src`](./components/psammead-image-placeholder) |[![npm version](https://img.shields.io/npm/v/#legacy/psammead-image-placeholder/src.svg)](https://www.npmjs.com/package/#legacy/psammead-image-placeholder/src) |[![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-image-placeholder)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-image-placeholder) | [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-image-placeholder)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-image-placeholder&type=peer) |
 | [`#legacy/psammead-inline-link/src`](./components/psammead-inline-link) |[![npm version](https://img.shields.io/npm/v/#legacy/psammead-inline-link/src.svg)](https://www.npmjs.com/package/#legacy/psammead-inline-link/src) |[![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-inline-link)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-inline-link) | [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-inline-link)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-inline-link&type=peer) |
 | [`#legacy/psammead-media-indicator/src`](./components/psammead-media-indicator) |[![npm version](https://img.shields.io/npm/v/#legacy/psammead-media-indicator/src.svg)](https://www.npmjs.com/package/#legacy/psammead-media-indicator/src) |[![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-media-indicator)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-media-indicator) | [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-media-indicator)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-media-indicator&type=peer) |
 | [`@bbc/psammead-media-player`](./components/psammead-media-player) |[![npm version](https://img.shields.io/npm/v/@bbc/psammead-media-player.svg)](https://www.npmjs.com/package/@bbc/psammead-media-player) |[![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-media-player)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-media-player) | [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-media-player)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-media-player&type=peer) |

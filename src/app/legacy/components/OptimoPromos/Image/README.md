@@ -2,7 +2,8 @@
 
 ## Description
 
-A component that is implemented using psammead-image and imageWithPlaceholder. However, this component takes it a step further by styling the psammead-image in order to fix a bug with aspect-ratio.
+A component that uses the canonical Image component and adds styling to preserve
+the required aspect ratio.
 
 ## Props
 
