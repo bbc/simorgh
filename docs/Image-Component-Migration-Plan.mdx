@@ -110,10 +110,10 @@ flowchart LR
 6. **Review StoryPromo and Promo.Image preparation logic** — consolidate
    duplicated source-set, fallback, and sizing logic while preserving their
    existing primitive `Image` rendering.
-7. **Review Psammead dependencies** — identify all production consumers of
-   `psammead-image` and `psammead-image-placeholder`, including
-   `ImageWithPlaceholder`, `OnDemandImage`, `PodcastPromo`, `StoryPromo`, and
-   `EpisodeList`, before scheduling removals.
+7. **Review Psammead dependencies** — ✅ done. All production image consumers
+   now render through the canonical `Image`; the legacy image packages and
+   `ImageWithPlaceholder` have been removed. Remaining CAF decisions concern
+   legacy container/layout ownership, not image rendering dependencies.
 8. **Investigate Next.js `<Image>`** — spike in parallel with step 2; check
    compatibility with the `{width}` iChef URL templating and AMP rendering
    path before committing to it as the long-term implementation.
