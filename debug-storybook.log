@@ -1,0 +1,36 @@
+[10:01:26.709] [INFO] storybook v10.4.1
+[10:01:28.674] [DEBUG] Getting package.json info for /Users/deksnv01/BBC/simorgh/package.json...
+[10:01:29.630] [DEBUG] Serving static files from [36m.storybook/static[39m at [36m/[39m
+[10:01:29.630] [DEBUG] Serving static files from [36mdata[39m at [36m/data[39m
+[10:01:29.642] [INFO] Starting...
+[10:01:29.828] [DEBUG] Starting preview..
+[10:01:29.861] [INFO] Addon-docs: using MDX3
+[10:01:30.214] [INFO] Using implicit CSS loaders
+[10:01:30.217] [INFO] => [@storybook/addon-styling-webpack] Applying custom Storybook webpack configuration styling.
+[10:01:30.217] [INFO] => [@storybook/addon-styling-webpack] Replacing Storybook's webpack rules for styles with given rules.
+[10:01:30.318] [INFO] Using default Webpack5 setup
+[10:01:31.375] [DEBUG] Using tsconfig paths for react-docgen
+[10:01:43.065] [WARN] Should not import the named export 'data' (imported as 'pashto') from default-exporting module (only default export is available soon)
+[10:01:43.066] [WARN] Should not import the named export 'data' (imported as 'afrique') from default-exporting module (only default export is available soon)
+[10:01:43.066] [WARN] Should not import the named export 'data' (imported as 'afrique') from default-exporting module (only default export is available soon)
+[10:01:43.067] [WARN] Should not import the named export 'data' (imported as 'liveTvFixture') from default-exporting module (only default export is available soon)
+[10:01:43.067] [WARN] Should not import the named export 'data' (imported as 'liveTvFixture') from default-exporting module (only default export is available soon)
+[10:01:43.068] [WARN] Should not import the named export 'data' (imported as 'liveTvFixture') from default-exporting module (only default export is available soon)
+[10:01:43.068] [WARN] Should not import the named export 'data' (imported as 'liveTvFixture') from default-exporting module (only default export is available soon)
+[10:01:43.069] [ERROR] Failed to build the preview
+[10:01:43.086] [WARN] Force closed preview build
+[10:01:43.088] [ERROR] [38;2;241;97;97mSB_BUILDER-WEBPACK5_0003 (WebpackCompilationError): There were problems when compiling your code with Webpack.
+Run Storybook with --debug-webpack for more information.[39m
+    at starter (file://./node_modules/@storybook/builder-webpack5/dist/index.js:857:11)
+    at starter.next (<anonymous>)
+    at Module.start (file://./node_modules/@storybook/builder-webpack5/dist/index.js:915:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async storybookDevServer (file://./node_modules/storybook/dist/core-server/index.js:18917:158)
+    at async buildOrThrow (file://./node_modules/storybook/dist/core-server/index.js:8205:12)
+    at async buildDevStandalone (file://./node_modules/storybook/dist/core-server/index.js:19478:41)
+    at async withTelemetry (file://./node_modules/storybook/dist/_node-chunks/chunk-CUZMMOHY.js:655:12)
+    at async dev (file://./node_modules/storybook/dist/bin/core.js:2736:3)
+    at async _Command.<anonymous> (file://./node_modules/storybook/dist/bin/core.js:2806:92)
+[10:01:43.089] [WARN] Broken build, fix the error above.
+You may need to refresh the browser.
+[10:01:56.076] [PROMPT] Would you like to send anonymous crash reports to improve Storybook and fix bugs faster? {"choice":true}
