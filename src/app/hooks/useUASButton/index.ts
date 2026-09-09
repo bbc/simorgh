@@ -61,8 +61,6 @@ const useUASButton = ({
   const { isSaved, isLoading, error, savedMetadata } =
     useUASFetchSaveStatus(articleId);
 
-  // A failed save-status fetch is a background error the user never triggered.
-  // TODO - instead of useEffect use onError callback from useUASFetchSaveStatus if available?
   useEffect(() => {
     if (error) {
       trackError({ error, feature: 'uas', action: 'fetch-status' });
