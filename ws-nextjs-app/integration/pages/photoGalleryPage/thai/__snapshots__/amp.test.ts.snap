@@ -184,6 +184,13 @@ exports[`AMP Photo Gallery Page Header Navigation link should match text and url
 }
 `;
 
+exports[`AMP Photo Gallery Page Header Navigation link should match text and url 2`] = `
+{
+  "text": "รับชมวิดีโอ",
+  "url": "/thai/topics/c5ljd3jng4nt",
+}
+`;
+
 exports[`AMP Photo Gallery Page Image Caption should match text 1`] = `"คำบรรยายภาพ, ประติมานุสรณ์ ม. ธรรมศาสตร์ เป็นพื้นที่ความทรงจำในเหตุการณ์ 6 ตุลา 2519"`;
 
 exports[`AMP Photo Gallery Page Image should match snapshot 1`] = `
@@ -197,6 +204,7 @@ exports[`AMP Photo Gallery Page Image should match snapshot 1`] = `
   layout="responsive"
   src="https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/17431/production/_109118259_01.jpg.webp"
   srcset="https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/17431/production/_109118259_01.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/17431/production/_109118259_01.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsprodpb/17431/production/_109118259_01.jpg.webp 480w, https://ichef.bbci.co.uk/ace/ws/624/cpsprodpb/17431/production/_109118259_01.jpg.webp 624w, https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/17431/production/_109118259_01.jpg.webp 800w"
+  style="background-color:#FDFDFD"
   width="976"
 />
 `;
