@@ -151,7 +151,6 @@ const SaveArticleButtonAuthenticatedInner = ({
 };
 
 const SaveArticleButtonErrorFallback = ({ error }: { error: Error }) => {
-  console.log(`SaveArticleButtonErrorFallback called`, { error });
   const trackError = useErrorTracking();
 
   useEffect(() => {
