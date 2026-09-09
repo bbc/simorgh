@@ -87,6 +87,13 @@ exports[`AMP Articles Header Navigation link should match text and url 1`] = `
 }
 `;
 
+exports[`AMP Articles Header Navigation link should match text and url 2`] = `
+{
+  "text": "صفحه فعلی, ببینید",
+  "url": "/persian/watch/bbc_persian_tv/live",
+}
+`;
+
 exports[`AMP Articles Image Caption should match text 1`] = `"توضیح تصویر، این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد."`;
 
 exports[`AMP Articles Image should match snapshot 1`] = `
@@ -100,6 +107,7 @@ exports[`AMP Articles Image should match snapshot 1`] = `
   layout="responsive"
   src="https://ichef.bbci.co.uk/ace/ws/640/cpsdevpb/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg.webp"
   srcset="https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsdevpb/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg.webp 480w, https://ichef.bbci.co.uk/ace/ws/624/cpsdevpb/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg.webp 624w, https://ichef.bbci.co.uk/ace/ws/800/cpsdevpb/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg.webp 800w"
+  style="background-color:#FDFDFD"
   width="976"
 />
 `;
