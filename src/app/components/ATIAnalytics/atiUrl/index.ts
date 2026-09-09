@@ -318,8 +318,8 @@ type ErrorEventProps = {
 
 /**
  * Builds a standalone Piano/Reverb "error" beacon reported when a client-side
- * feature (e.g. UAS) fails. `feature` identifies the system and `action` the
- * operation that failed; the optional service code/message/status add
+ * feature (e.g. UAS) fails. `feature` identifies the system and `errorName` the
+ * operation that failed; the optional service message/status add
  * diagnostics without carrying PII or tokens.
  */
 export const buildErrorEventModel = ({
