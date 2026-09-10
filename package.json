@@ -89,7 +89,7 @@
     "react-dom": "19.2.8",
     "react-helmet": "6.1.0",
     "react-lazyload": "3.2.1",
-    "sharp": "0.35.3",
+    "sharp": "0.35.4",
     "temporal-polyfill": "0.3.0",
     "undici": "8.9.0",
     "winston": "3.19.0"
