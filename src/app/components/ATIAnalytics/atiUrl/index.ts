@@ -34,17 +34,29 @@ const RESONANCE_MODE = { LIVE: 'live', TEST: 'test' } as const;
 
 export const buildResonanceAnalyticsModel = ({
   appName,
+  categoryName,
   contentId,
   contentType,
-  language,
-  statsDestination,
   destinationSiteId,
   hashedId,
+  language,
+  ldpThingIds,
+  ldpThingLabels,
   pageIdentifier,
-  producerName,
+  pageTitle,
   platform,
+  producerName,
+  statsDestination,
+  timePublished,
+  timeUpdated,
 }: ATIPageTrackingProps): ResonanceBeaconConfig => {
   const env = getEnvConfig().SIMORGH_APP_ENV;
+  // const href = getHref(platform);
+  // const referrer = getReferrer(platform);
+
+  // const aggregatedCampaigns = (Array.isArray(campaigns) ? campaigns : [])
+  //   .map(({ campaignName }) => campaignName)
+  //   .join('~');
 
   return {
     resonanceProperties: {
@@ -66,6 +78,14 @@ export const buildResonanceAnalyticsModel = ({
       language,
       destination: statsDestination,
       producer: producerName,
+      // ...(href && { url: href }),
+      // ...(referrerUrl && { referrerUrl: referrer }),
+      ...(pageTitle && { pageTitle: sanitise(pageTitle) }),
+      ...(timePublished && { publicationDate: timePublished }),
+      ...(timeUpdated && { pubUpdateDate: timeUpdated }),
+      ...(ldpThingLabels && { ldpTags: ldpThingLabels }),
+      ...(ldpThingIds && { ldpIds: ldpThingIds }),
+      ...(categoryName && { section: categoryName }),
     },
   } as ResonanceBeaconConfig;
 };

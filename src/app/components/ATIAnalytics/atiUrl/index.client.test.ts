@@ -46,6 +46,14 @@ describe('atiUrl', () => {
         pageIdentifier: 'pidgin.articles.c0000000001o.page',
         producerName: 'PIDGIN',
         platform: 'canonical' as Platforms,
+        categoryName: 'categoryName',
+        ldpThingIds: 'ldpThingIds',
+        ldpThingLabels: 'ldpThingLabels',
+        libraryVersion: 'libraryVersion',
+        pageTitle: 'pageTitle',
+        nationsProducer: '',
+        timePublished: 'timePublished',
+        timeUpdated: 'timeUpdated',
       };
 
       it('should return the correct Resonance analytics model', () => {
@@ -68,7 +76,45 @@ describe('atiUrl', () => {
           language: 'pcm',
           destination: 'statsDestination',
           producer: 'PIDGIN',
+          ldpIds: 'ldpThingIds',
+          ldpTags: 'ldpThingLabels',
+          pageTitle: 'sanitise',
+          pubUpdateDate: 'timeUpdated',
+          publicationDate: 'timePublished',
+          section: 'categoryName',
         });
+      });
+
+      // it('should return url and referrerUrl using getHref and getReferrer', () => {
+      //   const result = buildResonanceAnalyticsModel(input);
+
+      //   expect(result.pageviewProperties.url).toBe('getHref');
+      //   expect(result.pageviewProperties.referrerUrl).toBe('getReferrer');
+      // });
+
+      // it('should populate app.type using getAppType', () => {
+      //   const result = buildResonanceAnalyticsModel(input);
+
+      //   expect(result.baseProperties.app.type).toBe('getAppType');
+      // });
+
+      it('should omit optional fields when no value is provided', () => {
+        const result = buildResonanceAnalyticsModel({
+          ...input,
+          pageTitle: undefined,
+          timePublished: '',
+          timeUpdated: '',
+          ldpThingLabels: '',
+          ldpThingIds: '',
+          categoryName: '',
+        });
+
+        expect(result.pageviewProperties).not.toHaveProperty('pageTitle');
+        expect(result.pageviewProperties).not.toHaveProperty('publicationDate');
+        expect(result.pageviewProperties).not.toHaveProperty('pubUpdateDate');
+        expect(result.pageviewProperties).not.toHaveProperty('ldpTags');
+        expect(result.pageviewProperties).not.toHaveProperty('ldpIds');
+        expect(result.pageviewProperties).not.toHaveProperty('section');
       });
 
       it('should suffix app name with "-app" when platform is app', () => {
