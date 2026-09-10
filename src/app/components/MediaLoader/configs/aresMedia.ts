@@ -76,11 +76,13 @@ export default ({
 
   const guidanceMessage = versionsBlock?.warnings?.short;
 
-  const showAds = shouldDisplayAds({
-    adsEnabled,
-    showAdsBasedOnLocation,
-    duration: rawDuration,
-  });
+  const showAds =
+    !hasWebcastItems &&
+    shouldDisplayAds({
+      adsEnabled,
+      showAdsBasedOnLocation,
+      duration: rawDuration,
+    });
 
   const embeddingAllowed = aresMediaMetadata?.embedding ?? false;
 
@@ -116,8 +118,10 @@ export default ({
   const placeholderConfig = buildPlaceholderConfig({
     title,
     type: actualFormat || 'video',
-    duration: rawDuration,
-    durationISO8601: versionsBlock?.durationISO8601,
+    ...(!hasWebcastItems && {
+      duration: rawDuration,
+      durationISO8601: versionsBlock?.durationISO8601,
+    }),
     guidanceMessage,
     holdingImageURL,
     translations,

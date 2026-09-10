@@ -618,6 +618,8 @@ describe('buildSettings', () => {
         lang: 'ar',
         producer: 'ARABIC',
         blocks: videoBlock.model.blocks as unknown as MediaBlock[],
+        adsEnabled: true,
+        showAdsBasedOnLocation: true,
       });
 
       expect(result?.playerConfig.playlistObject).toMatchObject({
@@ -634,6 +636,11 @@ describe('buildSettings', () => {
       expect(result?.playerConfig.playlistObject?.items[0]).not.toHaveProperty(
         'duration',
       );
+      expect(result?.playerConfig.playlistObject?.items).not.toContainEqual({
+        kind: 'advert',
+      });
+      expect(result?.placeholderConfig?.mediaInfo.datetime).toBeUndefined();
+      expect(result?.showAds).toBe(false);
     });
 
     it('Should process a LegacyMediaBlock into a valid playlist item for a "MAP" page', () => {
