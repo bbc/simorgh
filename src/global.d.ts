@@ -61,6 +61,8 @@ declare global {
       reverbUrl?: string;
       forwardingUrl?: string;
     }) => void;
+    // eslint-disable-next-line camelcase
+    _sf_async_config?: Record<string, unknown>;
   }
 }
 
