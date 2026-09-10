@@ -34,17 +34,29 @@ const RESONANCE_MODE = { LIVE: 'live', TEST: 'test' } as const;
 
 export const buildResonanceAnalyticsModel = ({
   appName,
+  categoryName,
   contentId,
   contentType,
-  language,
-  statsDestination,
   destinationSiteId,
   hashedId,
+  language,
+  ldpThingIds,
+  ldpThingLabels,
   pageIdentifier,
-  producerName,
+  pageTitle,
   platform,
+  producerName,
+  statsDestination,
+  timePublished,
+  timeUpdated,
 }: ATIPageTrackingProps): ResonanceBeaconConfig => {
   const env = getEnvConfig().SIMORGH_APP_ENV;
+  // const href = getHref(platform);
+  // const referrer = getReferrer(platform);
+
+  // const aggregatedCampaigns = (Array.isArray(campaigns) ? campaigns : [])
+  //   .map(({ campaignName }) => campaignName)
+  //   .join('~');
 
   return {
     resonanceProperties: {
@@ -66,6 +78,14 @@ export const buildResonanceAnalyticsModel = ({
       language,
       destination: statsDestination,
       producer: producerName,
+      // ...(href && { url: href }),
+      // ...(referrerUrl && { referrerUrl: referrer }),
+      ...(pageTitle && { pageTitle: sanitise(pageTitle) }),
+      ...(timePublished && { publicationDate: timePublished }),
+      ...(timeUpdated && { pubUpdateDate: timeUpdated }),
+      ...(ldpThingLabels && { ldpTags: ldpThingLabels }),
+      ...(ldpThingIds && { ldpIds: ldpThingIds }),
+      ...(categoryName && { section: categoryName }),
     },
   } as ResonanceBeaconConfig;
 };
@@ -249,12 +269,6 @@ type ActivationEventProps = {
   hashedId?: string | null;
 };
 
-/**
- * Builds the standalone Piano/Reverb "activation" beacon fired when a user is
- * activated into an Optimizely experiment, decoupled from any view/click event.
- * Follows the "Activation (v1.0.1) on Web" event-catalogue spec (viewability model),
- * spec ID ACTIVATION_EVENT_SPEC_ID - see https://broxy.tools.bbc.co.uk/bbc-event-catalogue/xbbc/viewability-events/specs/experiment/activation-web/1.0.1/
- */
 export const buildActivationEventModel = ({
   pageIdentifier,
   platform,
@@ -288,7 +302,6 @@ export const buildActivationEventModel = ({
     event: {
       category: 'viewability',
       action: ACTIVATION_EVENT_SERVE_ACTION,
-      // Identifies this 'serve' event as an activation event, pending a dedicated event_action value in the spec
       interaction_type: ACTIVATION_EVENT_INTERACTION_TYPE,
       spec_id: ACTIVATION_EVENT_SPEC_ID,
       spec_version: ACTIVATION_EVENT_SPEC_VERSION,
