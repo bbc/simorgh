@@ -7,9 +7,11 @@ export default ({
   atiData,
   isSignedIn,
   hashedId,
+  isPersonalisationOn,
 }: ReverbDetailsProviders & {
   isSignedIn?: boolean;
   hashedId?: string | null;
+  isPersonalisationOn?: boolean;
 }) =>
   buildAnalyticsParams({
     atiData,
@@ -17,4 +19,5 @@ export default ({
     serviceContext,
     isSignedIn,
     hashedId,
+    isPersonalisationOn,
   });

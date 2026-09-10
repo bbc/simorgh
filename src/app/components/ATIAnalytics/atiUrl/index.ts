@@ -92,6 +92,7 @@ export const buildReverbAnalyticsModel = ({
   experimentVariant,
   isSignedIn = false,
   hashedId = null,
+  isPersonalisationOn = false,
 }: ATIPageTrackingProps): ReverbBeaconConfig => {
   const href = getHref(platform);
   const referrer = getReferrer(platform);
@@ -140,6 +141,7 @@ export const buildReverbAnalyticsModel = ({
       user: {
         isSignedIn,
         hashedId,
+        isPersonalisationOn,
       },
     },
     eventDetails,
