@@ -269,6 +269,12 @@ type ActivationEventProps = {
   hashedId?: string | null;
 };
 
+/**
+ * Builds the standalone Piano/Reverb "activation" beacon fired when a user is
+ * activated into an Optimizely experiment, decoupled from any view/click event.
+ * Follows the "Activation (v1.0.1) on Web" event-catalogue spec (viewability model),
+ * spec ID ACTIVATION_EVENT_SPEC_ID - see https://broxy.tools.bbc.co.uk/bbc-event-catalogue/xbbc/viewability-events/specs/experiment/activation-web/1.0.1/
+ */
 export const buildActivationEventModel = ({
   pageIdentifier,
   platform,
@@ -302,6 +308,7 @@ export const buildActivationEventModel = ({
     event: {
       category: 'viewability',
       action: ACTIVATION_EVENT_SERVE_ACTION,
+      // Identifies this 'serve' event as an activation event, pending a dedicated event_action value in the spec
       interaction_type: ACTIVATION_EVENT_INTERACTION_TYPE,
       spec_id: ACTIVATION_EVENT_SPEC_ID,
       spec_version: ACTIVATION_EVENT_SPEC_VERSION,

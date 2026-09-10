@@ -98,24 +98,24 @@ describe('atiUrl', () => {
       //   expect(result.baseProperties.app.type).toBe('getAppType');
       // });
 
-      // it('should omit optional parity fields when provided as empty strings', () => {
-      //   const result = buildResonanceAnalyticsModel({
-      //     ...input,
-      //     pageTitle: '',
-      //     timePublished: '',
-      //     timeUpdated: '',
-      //     ldpThingLabels: '',
-      //     ldpThingIds: '',
-      //     categoryName: '',
-      //   });
+      it('should omit optional fields when no value is provided', () => {
+        const result = buildResonanceAnalyticsModel({
+          ...input,
+          pageTitle: undefined,
+          timePublished: '',
+          timeUpdated: '',
+          ldpThingLabels: '',
+          ldpThingIds: '',
+          categoryName: '',
+        });
 
-      //   expect(result.pageviewProperties).not.toHaveProperty('pageTitle');
-      //   expect(result.pageviewProperties).not.toHaveProperty('publicationDate');
-      //   expect(result.pageviewProperties).not.toHaveProperty('pubUpdateDate');
-      //   expect(result.pageviewProperties).not.toHaveProperty('ldpTags');
-      //   expect(result.pageviewProperties).not.toHaveProperty('ldpIds');
-      //   expect(result.pageviewProperties).not.toHaveProperty('section');
-      // });
+        expect(result.pageviewProperties).not.toHaveProperty('pageTitle');
+        expect(result.pageviewProperties).not.toHaveProperty('publicationDate');
+        expect(result.pageviewProperties).not.toHaveProperty('pubUpdateDate');
+        expect(result.pageviewProperties).not.toHaveProperty('ldpTags');
+        expect(result.pageviewProperties).not.toHaveProperty('ldpIds');
+        expect(result.pageviewProperties).not.toHaveProperty('section');
+      });
 
       it('should suffix app name with "-app" when platform is app', () => {
         const result = buildResonanceAnalyticsModel({
