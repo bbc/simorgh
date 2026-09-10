@@ -5,7 +5,10 @@ import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import canonicalTests from './testsForCanonicalOnly';
 import testsForAllCanonicalPages from '../../testsForAllCanonicalPages';
 import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
-import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
+import {
+  assertPageView,
+  assertResonancePageView,
+} from '../../specialFeatures/atiAnalytics/assertions';
 import {
   assertBillboardComponentView,
   assertBillboardComponentClick,
@@ -50,7 +53,8 @@ const testSuites = [
   },
   {
     path: '/kyrgyz',
-    runforEnv: ['local', 'test', 'live'],
+    // 'test' temporarily removed: https://www.test.bbc.com/kyrgyz currently returns 500 due to ongoing work
+    runforEnv: ['local', 'live'],
     service: 'kyrgyz',
     tests,
   },
@@ -172,6 +176,16 @@ const atiAnalyticsTestSuites = [
     applicationType: 'responsive',
     contentType: 'index-home',
     tests: [assertPageView],
+  },
+  {
+    path: '/marathi',
+    runforEnv: ['local', 'live'],
+    service: 'marathi',
+    pageIdentifier: 'marathi.page',
+    siteId: 59,
+    applicationType: 'responsive',
+    contentType: 'index-home',
+    tests: [assertResonancePageView],
   },
   {
     path: '/pashto',

@@ -13,10 +13,10 @@ jobs:
       matrix: ${{ steps.generate-matrix.outputs.matrix }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Use Node.js (from .nvmrc)
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version-file: '.nvmrc'
 
@@ -30,10 +30,9 @@ jobs:
           const { readFileSync, readdirSync, statSync } = require('fs');
           const { join } = require('path');
 
-          const GROUP_COUNT = 3;
           const root = 'ws-nextjs-app/cypress/e2e/pageTypes';
           const preferredGroups = [
-            ['articlePage'],
+            ['articlePage', 'watch', 'listen'],
             ['homePage', 'onDemandAudio'],
             [
               'topicPage',
@@ -139,10 +138,10 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Use Node.js ${{ matrix['node-version'] }}
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: ${{ matrix['node-version'] }}
 

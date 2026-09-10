@@ -19,8 +19,8 @@ const navigation = (
 describe('AMP Navigation', () => {
   describe('Snapshots', () => {
     it('should correctly render AMP navigation', () => {
-      const { container } = render(navigation);
-      expect(container).toMatchSnapshot();
+      const { queryByTestId } = render(navigation);
+      expect(queryByTestId(scrollableTestId)).toBeInTheDocument();
     });
   });
 

@@ -27,6 +27,8 @@ import addOperaMiniClassScript from '#app/lib/utilities/addOperaMiniClassScript'
 import handleServerLogging from '#utilities/handleServerLogging';
 import getAmpLiteCss from '#utilities/getAmpLiteCss';
 import optimiseCssPrefixes from '#utilities/optimiseCssPrefixes';
+import setSimorghEnvVars from '#app/lib/utilities/setSimorghEnvVars';
+import removeNoJsClass from '#app/lib/utilities/removeNoJsClass';
 import ComponentTracking from '../renderers/ComponentTracking';
 import ReverbTemplate from '../renderers/ReverbTemplate';
 import litePageTransforms from '../renderers/litePageTransforms';
@@ -168,12 +170,12 @@ export default class AppDocument extends Document<DocProps> {
               <script
                 type="text/javascript"
                 dangerouslySetInnerHTML={{
-                  __html: `document.documentElement.classList.remove("no-js");`,
+                  __html: `(${removeNoJsClass.toString()})()`,
                 }}
               />
               {addOperaMiniClassScript()}
               <Script strategy="beforeInteractive">
-                {`window.SIMORGH_ENV_VARS=${JSON.stringify(clientSideEnvVariables)}`}
+                {`(${setSimorghEnvVars.toString()})(${JSON.stringify(clientSideEnvVariables)})`}
               </Script>
               {pageType === 'live' && (
                 <script src="https://www.riddle.com/embed/build-embedjs/embedV2.js" />

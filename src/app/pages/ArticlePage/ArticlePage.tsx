@@ -5,7 +5,6 @@ import {
   useCallback,
   use,
   useEffect,
-  useRef,
 } from 'react';
 import { useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
@@ -15,7 +14,6 @@ import useOptimizelyVariation, {
   ExperimentType,
 } from '#hooks/useOptimizelyVariation';
 import useScrollDepthTracker from '#hooks/useScrollDepthTracker';
-import useCustomEventTracker from '#hooks/useCustomEventTracker';
 import { GROUP_4_MIN_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
 import { singleTextBlock } from '#app/models/blocks';
 import { BylineLinkedData } from '#app/components/LinkedData/types';
@@ -116,61 +114,14 @@ import {
 import TopStoriesSection from './PagePromoSections/TopStoriesSection';
 import SearchOjExperiment from './SearchOjExperiment';
 import {
-  isSearchOjAaVariant,
   isSearchOjVariant,
   MID_ARTICLE_OJ_EXPERIMENT_TRIGGER_ID,
-  SEARCH_OJ_AA_ACTIVATION_EVENT_NAME,
-  SEARCH_OJ_AA_EXPERIMENT_NAME,
-  SEARCH_OJ_ACTIVATION_EVENT_NAME,
   SEARCH_OJ_EXPERIMENT_NAME,
-  SearchOjAaVariant,
   SearchOjVariant,
 } from './SearchOjExperiment/config';
 
-// keep the flag name with the variation so tracking knows which experiment was chosen
-type SearchOjExperimentDecision = {
-  experimentName:
-    | typeof SEARCH_OJ_EXPERIMENT_NAME
-    | typeof SEARCH_OJ_AA_EXPERIMENT_NAME;
-  experimentVariant: SearchOjVariant | SearchOjAaVariant;
-  searchVariant: SearchVariant | null;
-};
-
 type ActivateSearchOjExperimentProps = {
-  onDecision: (decision: SearchOjExperimentDecision) => void;
-};
-
-const ActivateSearchOjAaExperiment = ({
-  onDecision,
-}: ActivateSearchOjExperimentProps) => {
-  const variation = useOptimizelyVariation({
-    experimentName: SEARCH_OJ_AA_EXPERIMENT_NAME,
-    experimentType: ExperimentType.CLIENT_SIDE,
-  });
-  const trackActivation = useCustomEventTracker({
-    eventName: SEARCH_OJ_AA_ACTIVATION_EVENT_NAME,
-    experimentName: SEARCH_OJ_AA_EXPERIMENT_NAME,
-    experimentVariant: variation ?? undefined,
-  });
-  const hasTrackedActivation = useRef(false);
-
-  useEffect(() => {
-    if (isSearchOjAaVariant(variation)) {
-      onDecision({
-        experimentName: SEARCH_OJ_AA_EXPERIMENT_NAME,
-        experimentVariant: variation,
-        // both aa groups keep the normal page layout
-        searchVariant: null,
-      });
-
-      if (!hasTrackedActivation.current) {
-        hasTrackedActivation.current = true;
-        trackActivation();
-      }
-    }
-  }, [onDecision, trackActivation, variation]);
-
-  return null;
+  onDecision: (variation: SearchOjVariant | null) => void;
 };
 
 const ActivateSearchOjExperiment = ({
@@ -180,35 +131,14 @@ const ActivateSearchOjExperiment = ({
     experimentName: SEARCH_OJ_EXPERIMENT_NAME,
     experimentType: ExperimentType.CLIENT_SIDE,
   });
-  // this sends piano the same experiment and variation chosen by optimizely
-  const trackActivation = useCustomEventTracker({
-    eventName: SEARCH_OJ_ACTIVATION_EVENT_NAME,
-    experimentName: SEARCH_OJ_EXPERIMENT_NAME,
-    experimentVariant: variation ?? undefined,
-  });
-  // this makes sure rerenders do not send the activation event again
-  const hasTrackedActivation = useRef(false);
 
   useEffect(() => {
-    if (isSearchOjVariant(variation)) {
-      onDecision({
-        experimentName: SEARCH_OJ_EXPERIMENT_NAME,
-        experimentVariant: variation,
-        searchVariant: variation === 'control' ? null : variation,
-      });
+    if (variation !== null) {
+      const validVariation = isSearchOjVariant(variation) ? variation : null;
 
-      if (!hasTrackedActivation.current) {
-        hasTrackedActivation.current = true;
-        trackActivation();
-      }
+      onDecision(validVariation);
     }
-  }, [onDecision, trackActivation, variation]);
-
-  // only check the aa flag after optimizely says the real flag is off
-  // this lets the dashboard choose which experiment runs without another deployment
-  if (variation === 'off') {
-    return <ActivateSearchOjAaExperiment onDecision={onDecision} />;
-  }
+  }, [onDecision, variation]);
 
   return null;
 };
@@ -363,13 +293,13 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const [isDesktopViewport, setIsDesktopViewport] = useState(false);
   const [hasExpandedContinueReading, setHasExpandedContinueReading] =
     useState(false);
-  const [experimentDecision, setExperimentDecision] =
-    useState<SearchOjExperimentDecision | null>(null);
+  const [experimentVariant, setExperimentVariant] =
+    useState<SearchOjVariant | null>(null);
   const searchOjExperimentProps: ComponentExperimentProps | undefined =
-    experimentDecision
+    experimentVariant
       ? {
-          experimentName: experimentDecision.experimentName,
-          experimentVariant: experimentDecision.experimentVariant,
+          experimentName: SEARCH_OJ_EXPERIMENT_NAME,
+          experimentVariant,
           sendOptimizelyEvents: true,
         }
       : undefined;
@@ -595,7 +525,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     promoImageRawBlock?.model as { locator?: string } | undefined
   )?.locator;
 
-  const searchVariant = experimentDecision?.searchVariant ?? null;
+  const searchVariant: SearchVariant | null =
+    experimentVariant === 'control' ? null : experimentVariant;
   const mobileOJOrder = useMobileOJComponentOrder(searchVariant);
 
   const componentsToRender = {
@@ -812,7 +743,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       <AccountPromotionalBannerExperiment />
 
       {(isNearMidArticleOj || hasExpandedContinueReading) && (
-        <ActivateSearchOjExperiment onDecision={setExperimentDecision} />
+        <ActivateSearchOjExperiment onDecision={setExperimentVariant} />
       )}
 
       <ATIAnalytics />

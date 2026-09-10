@@ -149,7 +149,28 @@ describe('LinkedData', () => {
       },
     );
 
-    expect(getLinkedDataOutput()).toMatchSnapshot();
+    const graph = getLinkedDataOutput()['@graph'];
+    const findByType = (type: string) =>
+      graph.find((item: Record<string, unknown>) => item['@type'] === type);
+
+    expect(findByType('PodcastSeries')).toMatchObject({
+      '@id': seriesId,
+      name: "Imvo n'imvano",
+    });
+
+    const podcastEpisode = findByType('PodcastEpisode');
+
+    expect(podcastEpisode).toMatchObject({
+      '@id': episodeId,
+      name: 'Episode Title',
+      partOfSeries: { '@id': seriesId },
+    });
+    expect(podcastEpisode.associatedMedia).toMatchObject({
+      '@type': 'AudioObject',
+      '@id': audioId,
+      name: 'Episode Title',
+      duration: 'PT29M30S',
+    });
   });
 
   describe('SpeakableSpecification schema', () => {
@@ -197,7 +218,17 @@ describe('LinkedData', () => {
       </Context>,
     );
 
-    expect(getLinkedDataOutput()).toMatchSnapshot();
+    const graph = getLinkedDataOutput()['@graph'];
+    const findByType = (type: string) =>
+      graph.find((item: Record<string, unknown>) => item['@type'] === type);
+
+    expect(findByType('WebPage')).toBeTruthy();
+    expect(findByType('AudioObject')).toMatchObject({
+      name: 'ماښامنۍ خپرونه',
+      duration: 'PT29M30S',
+      embedURL:
+        'https://test.bbc.com/ws/av-embeds/media/korean/externalId/id/ko',
+    });
   });
 
   it('should correctly render linked data for Photo Gallery page', () => {
@@ -207,7 +238,14 @@ describe('LinkedData', () => {
       </Context>,
     );
 
-    expect(getLinkedDataOutput()).toMatchSnapshot();
+    const [article] = getLinkedDataOutput()['@graph'];
+
+    expect(article).toMatchObject({
+      '@type': 'Article',
+      headline: 'PGL Headline for Magnificent Gallery',
+      description: 'Some photos in a gallery',
+      mainEntityOfPage: { name: 'PGL Headline for SEO' },
+    });
   });
 
   it('should correctly render linked data for articles', () => {
@@ -217,17 +255,55 @@ describe('LinkedData', () => {
       </Context>,
     );
 
-    expect(getLinkedDataOutput()).toMatchSnapshot();
+    const [article] = getLinkedDataOutput()['@graph'];
+
+    expect(article).toMatchObject({
+      '@type': 'Article',
+      headline: 'Article Headline for SEO',
+      author: { '@type': 'NewsMediaOrganization', name: 'BBC News' },
+      publisher: { name: 'BBC News' },
+    });
   });
 
   it('should correctly render linked data for articles with byline', () => {
+    const articleWithByline = assocPath(
+      ['bylineLinkedData'],
+      [
+        {
+          authorName: 'John',
+          jobRole: 'Journalist',
+          twitterText: 'BBC News',
+          twitterLink: 'https://twitter.com/BBCNews',
+          authorImage:
+            'https://ichef.bbci.co.uk/images/ic/1024x576/p063j1dv.jpg',
+          location: 'London',
+          authorTopicUrl: 'https://www.bbc.co.uk/news/topics/cg2gmrxlde0t',
+        },
+      ],
+      propsForArticle,
+    );
+
     render(
       <Context>
-        <LinkedData {...propsForArticle} />
+        <LinkedData {...articleWithByline} />
       </Context>,
     );
 
-    expect(getLinkedDataOutput()).toMatchSnapshot();
+    const [article] = getLinkedDataOutput()['@graph'];
+
+    expect(article).toMatchObject({
+      '@type': 'Article',
+      author: {
+        '@type': 'Person',
+        name: 'John',
+        image: 'https://ichef.bbci.co.uk/images/ic/1024x576/p063j1dv.jpg',
+        sameAs: [
+          'https://www.bbc.co.uk/news/topics/cg2gmrxlde0t',
+          'https://twitter.com/BBCNews',
+        ],
+      },
+      locationCreated: { '@place': 'London' },
+    });
   });
 
   it('should correctly render linked data for radio pages', () => {
@@ -237,7 +313,12 @@ describe('LinkedData', () => {
       </Context>,
     );
 
-    expect(getLinkedDataOutput()).toMatchSnapshot();
+    const [radioChannel] = getLinkedDataOutput()['@graph'];
+
+    expect(radioChannel).toMatchObject({
+      '@type': 'RadioChannel',
+      mainEntityOfPage: { name: 'BBC News Radio' },
+    });
   });
 
   it('should correctly render linked data for home pages', () => {
@@ -247,7 +328,12 @@ describe('LinkedData', () => {
       </Context>,
     );
 
-    expect(getLinkedDataOutput()).toMatchSnapshot();
+    const [webPage] = getLinkedDataOutput()['@graph'];
+
+    expect(webPage).toMatchObject({
+      '@type': 'WebPage',
+      mainEntityOfPage: { name: 'Home - BBC News' },
+    });
   });
 
   it('should correctly render linked data for article pages for service with no trust project markup', () => {
@@ -257,7 +343,13 @@ describe('LinkedData', () => {
       </Context>,
     );
 
-    expect(getLinkedDataOutput()).toMatchSnapshot();
+    const [article] = getLinkedDataOutput()['@graph'];
+
+    expect(article.publisher).toMatchObject({
+      '@type': 'Organization',
+      name: 'BBC',
+    });
+    expect(article.publisher.publishingPrinciples).toBeUndefined();
   });
 
   it('should correctly render publisherLogo for news', () => {
@@ -267,7 +359,15 @@ describe('LinkedData', () => {
       </Context>,
     );
 
-    expect(getLinkedDataOutput()).toMatchSnapshot();
+    const [article] = getLinkedDataOutput()['@graph'];
+
+    expect(article.publisher).toMatchObject({
+      '@type': 'NewsMediaOrganization',
+      name: 'BBC News',
+      logo: {
+        url: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/publisher-nx16.png',
+      },
+    });
   });
 
   it('should correctly render publisherLogo for sport', () => {
@@ -277,7 +377,14 @@ describe('LinkedData', () => {
       </Context>,
     );
 
-    expect(getLinkedDataOutput()).toMatchSnapshot();
+    const [article] = getLinkedDataOutput()['@graph'];
+
+    expect(article.publisher).toMatchObject({
+      name: 'BBC',
+      logo: {
+        url: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/sport/images/metadata/publisher-nx16.png',
+      },
+    });
   });
 
   it('should correctly render publisherLogo for non-news services', () => {
@@ -287,7 +394,15 @@ describe('LinkedData', () => {
       </Context>,
     );
 
-    expect(getLinkedDataOutput()).toMatchSnapshot();
+    const [article] = getLinkedDataOutput()['@graph'];
+
+    expect(article.publisher).toMatchObject({
+      '@type': 'NewsMediaOrganization',
+      name: 'BBC News Mundo',
+      logo: {
+        url: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/metadata/poster-1024x576.png',
+      },
+    });
   });
 
   describe('showAuthor', () => {
@@ -300,7 +415,14 @@ describe('LinkedData', () => {
         </Context>,
       );
 
-      expect(getLinkedDataOutput()).toMatchSnapshot();
+      const [article] = getLinkedDataOutput()['@graph'];
+
+      expect(article).toMatchObject({
+        '@type': 'Article',
+        headline: 'Article Headline for SEO',
+        publisher: { name: 'BBC News' },
+      });
+      expect(article.author).toBeUndefined();
     });
   });
 
@@ -330,7 +452,18 @@ describe('LinkedData', () => {
         </Context>,
       );
 
-      expect(getLinkedDataOutput()).toMatchSnapshot();
+      const [article] = getLinkedDataOutput()['@graph'];
+
+      expect(article.author).toMatchObject({
+        '@type': 'Person',
+        name: 'John',
+        image: 'https://ichef.bbci.co.uk/images/ic/1024x576/p063j1dv.jpg',
+        sameAs: [
+          'https://www.bbc.co.uk/news/topics/cg2gmrxlde0t',
+          'https://twitter.com/BBCNews',
+        ],
+      });
+      expect(article.locationCreated).toEqual({ '@place': 'London' });
     });
   });
 });

@@ -33,6 +33,7 @@ type Props = {
       type: PageTypes;
       topics?: { topicName: string }[];
     };
+    blockTypes?: string[];
     content?: { model?: ModelType };
     secondaryColumn?: { topStories: TopStoryItem[] };
     mostRead?: { items: (OptimoMostReadRecord | CPSMostReadRecord)[] };
@@ -54,6 +55,20 @@ const PageLayoutWrapper = ({
 
   const isErrorPage = ![200].includes(status) || !status;
   const pageType = pageData?.metadata?.type;
+
+  const primaryMediaType = (() => {
+    const blockTypes = pageData?.blockTypes ?? [];
+    if (blockTypes.includes('audio')) return 'audio' as const;
+    if (blockTypes.includes('video')) return 'video' as const;
+    // Fallback: scan top-level content blocks for an audio or video block.
+    // This covers SFV articles where blockTypes may not be populated.
+    const contentBlocks = (pageData?.content?.model?.blocks ?? []) as {
+      type: string;
+    }[];
+    if (contentBlocks.some(b => b.type === 'audio')) return 'audio' as const;
+    if (contentBlocks.some(b => b.type === 'video')) return 'video' as const;
+    return undefined;
+  })();
   const reportingPageType = pageType?.replace(/ /g, '');
   const isOfflinePage = pageType === OFFLINE_PAGE;
   const isWindowValid = typeof window !== 'undefined';
@@ -233,6 +248,7 @@ const PageLayoutWrapper = ({
       <div id="main-wrapper" css={styles.wrapper}>
         <HeaderContainer
           navItems={navItems}
+          primaryMediaType={primaryMediaType}
           propsForTopBarOJComponent={{
             blocks: pageData?.secondaryColumn?.topStories || [],
           }}

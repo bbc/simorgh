@@ -1,0 +1,752 @@
+{
+  "data": {
+    "article": {
+      "metadata": {
+        "atiAnalytics": {
+          "categoryName": null,
+          "contentId": "urn:bbc:optimo:asset:c6gjm3gede9zo",
+          "contentType": "article-sfv",
+          "language": "ta",
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "nationsProducer": null,
+          "pageIdentifier": "tamil.watch.c6gjm3gede9zo.page",
+          "pageTitle": "Hear what life is like on the ocean wave",
+          "timePublished": "2026-08-12T12:32:05.077Z",
+          "timeUpdated": "2026-08-12T12:32:05.077Z",
+          "readTimeMilliseconds": 60000
+        },
+        "id": "urn:bbc:ares::article:c6gjm3gede9zo",
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:c6gjm3gede9zo",
+          "canonicalUrl": "https://www.bbc.com/tamil/watch/c6gjm3gede9zo"
+        },
+        "type": "article",
+        "createdBy": "Tamil",
+        "language": "ta",
+        "firstPublished": 1786537925077,
+        "lastPublished": 1786537925077,
+        "isOppm": false,
+        "options": { "includeComments": false },
+        "analyticsLabels": {
+          "contentId": "urn:bbc:optimo:asset:c6gjm3gede9zo",
+          "producer": "Tamil",
+          "page": "tamil.watch.c6gjm3gede9zo.page",
+          "irisKeyword": null
+        },
+        "passport": {
+          "language": "ta",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Tamil",
+          "taggings": [
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+              "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+              "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+              "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/dateFirstReleased",
+              "value": "2026-08-12T12:32:05.077Z"
+            }
+          ],
+          "predicates": {
+            "infoClass": [
+              {
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                "type": "infoClass"
+              }
+            ],
+            "assetType": [
+              {
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                "type": "assetType"
+              }
+            ],
+            "primaryMediaType": [
+              {
+                "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                "type": "primaryMediaType"
+              }
+            ],
+            "dateFirstReleased": [
+              {
+                "value": "2026-08-12T12:32:05.077Z",
+                "type": "dateFirstReleased"
+              }
+            ]
+          }
+        },
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "video",
+          "caption",
+          "aresMedia",
+          "aresMediaMetadata",
+          "image",
+          "rawImage",
+          "altText"
+        ],
+        "includeComments": false,
+        "consumableAsSFV": true,
+        "allowAdvertising": true,
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false,
+        "useSensitiveOnwardJourneys": false,
+        "stats": { "readTime": 1, "wordCount": 44 },
+        "isTransliterated": false,
+        "isKeyPointsFormatAsset": false
+      },
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "594746d2",
+              "type": "visuallyHiddenHeadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "d7a33568",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "0e5c886e",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "Tamil - Watch - Captain of HMS Ship  describes life on board",
+                            "blocks": [
+                              {
+                                "id": "29d2856f",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Tamil - Watch - Captain of HMS Ship  describes life on board",
+                                  "attributes": []
+                                },
+                                "position": [1, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [1, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [1, 1]
+                  }
+                ]
+              },
+              "position": [1]
+            },
+            {
+              "id": "e061aef2",
+              "type": "video",
+              "model": {
+                "locator": "urn:bbc:pips:pid:p01wxf47",
+                "blocks": [
+                  {
+                    "id": "d67bc5fc",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "f13485c7",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "bfe1cece",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Hear what life is like on the ocean wave",
+                                  "blocks": [
+                                    {
+                                      "id": "2700a021",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Hear what life is like on the ocean wave",
+                                        "attributes": []
+                                      },
+                                      "position": [2, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [2, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [2, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [2, 1]
+                  },
+                  {
+                    "id": "eb7742aa",
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "095e581a",
+                          "blockId": "urn:bbc:ares::clip:p01wxf47",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "p01wxf47",
+                            "subType": "clip",
+                            "format": "video",
+                            "title": "Captain of HMS Ship  describes life on board",
+                            "synopses": {
+                              "short": "Hear what life is like on the ocean wave",
+                              "medium": "Captain Ben Shipman tells people what it`s like to be at sea for months at a time.",
+                              "long": "Captain Ben Shipman tells us about life on board and what it is like at sea for months on end.\n\nBob reports."
+                            },
+                            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01wxf61.jpg",
+                            "imageCopyright": "BBC",
+                            "embedding": true,
+                            "advertising": true,
+                            "caption": "Hear what life is like on the ocean wave",
+                            "versions": [
+                              {
+                                "versionId": "p01wxf49",
+                                "types": ["Original"],
+                                "duration": 38,
+                                "durationISO8601": "PT38S",
+                                "warnings": {
+                                  "short": "Contains some nudity.",
+                                  "long": "Contains some nudity."
+                                },
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableFrom": 1770637145000
+                              }
+                            ],
+                            "syndication": { "destinations": ["default"] },
+                            "smpKind": "programme",
+                            "webcastVersions": []
+                          },
+                          "position": [2, 2, 1]
+                        },
+                        {
+                          "id": "11e28380",
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "a02de6a7",
+                                "type": "rawImage",
+                                "model": {
+                                  "width": 1280,
+                                  "height": 720,
+                                  "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01wxf61.jpg",
+                                  "originCode": "mpv",
+                                  "copyrightHolder": "BBC"
+                                },
+                                "position": [2, 2, 2, 1]
+                              },
+                              {
+                                "id": "efaf01a1",
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "86f7be2e",
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "id": "38213afa",
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "Captain on board HMS Ship",
+                                              "blocks": [
+                                                {
+                                                  "id": "0af9bab2",
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "Captain on board HMS Ship",
+                                                    "attributes": []
+                                                  },
+                                                  "position": [
+                                                    2, 2, 2, 2, 1, 1, 1
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            "position": [2, 2, 2, 2, 1, 1]
+                                          }
+                                        ]
+                                      },
+                                      "position": [2, 2, 2, 2, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [2, 2, 2, 2]
+                              }
+                            ]
+                          },
+                          "position": [2, 2, 2]
+                        }
+                      ]
+                    },
+                    "position": [2, 2]
+                  }
+                ]
+              },
+              "position": [2]
+            },
+            {
+              "id": "10f4b995",
+              "type": "fauxHeadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "1acb3cc0",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "d702366d",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "Tamil - Watch - Captain of HMS Ship  describes life on board",
+                            "blocks": [
+                              {
+                                "id": "278bdd3f",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Tamil - Watch - Captain of HMS Ship  describes life on board",
+                                  "attributes": []
+                                },
+                                "position": [3, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [3, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [3, 1]
+                  }
+                ]
+              },
+              "position": [3]
+            },
+            {
+              "id": "0f938cd8",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1786537925077,
+                "lastPublished": 1786537925077
+              },
+              "position": [4]
+            },
+            {
+              "id": "2d85516b",
+              "type": "text",
+              "model": {
+                "suitableForAbridgement": false,
+                "blocks": [
+                  {
+                    "id": "6d286172",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Captain Ben Shipman tells us about life on board and what it is like at sea for months on end.",
+                      "blocks": [
+                        {
+                          "id": "79cc5cfb",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Captain Ben Shipman tells us about life on board and what it is like at sea for months on end.",
+                            "attributes": []
+                          },
+                          "position": [5, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [5, 1]
+                  },
+                  {
+                    "id": "a198bba7",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Bob reports.",
+                      "blocks": [
+                        {
+                          "id": "e092ca9f",
+                          "type": "fragment",
+                          "model": { "text": "Bob reports.", "attributes": [] },
+                          "position": [5, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [5, 2]
+                  }
+                ]
+              },
+              "position": [5]
+            }
+          ]
+        }
+      },
+      "promo": {
+        "headlines": {
+          "seoHeadline": "Hear what life is like on the ocean wave",
+          "promoHeadline": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Tamil - Watch - Captain of HMS Ship  describes life on board",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Tamil - Watch - Captain of HMS Ship  describes life on board",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "images": {
+          "defaultPromoImage": {
+            "blocks": [
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 1280,
+                  "height": 720,
+                  "locator": "p01wxf61.jpg",
+                  "originCode": "mpv",
+                  "copyrightHolder": "BBC"
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Captain on board HMS Ship",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Captain on board HMS Ship",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "summary": {
+          "blocks": [
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Captain Ben Shipman tells people what it`s like to be at sea for months at a time.",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": {
+                            "text": "Captain Ben Shipman tells people what it`s like to be at sea for months at a time.",
+                            "attributes": []
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "serviceIdentifier": "Tamil",
+        "consumableAsSFV": true,
+        "media": {
+          "blocks": [
+            {
+              "type": "video",
+              "model": {
+                "locator": "urn:bbc:pips:pid:p01wxf47",
+                "blocks": [
+                  {
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Hear what life is like on the ocean wave",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Hear what life is like on the ocean wave",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "blockId": "urn:bbc:ares::clip:p01wxf47",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "p01wxf47",
+                            "subType": "clip",
+                            "format": "video",
+                            "title": "Captain of HMS Ship  describes life on board",
+                            "synopses": {
+                              "short": "Hear what life is like on the ocean wave",
+                              "medium": "Captain Ben Shipman tells people what it`s like to be at sea for months at a time.",
+                              "long": "Captain Ben Shipman tells us about life on board and what it is like at sea for months on end.\n\nBob reports."
+                            },
+                            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01wxf61.jpg",
+                            "imageCopyright": "BBC",
+                            "embedding": true,
+                            "advertising": true,
+                            "caption": "Hear what life is like on the ocean wave",
+                            "versions": [
+                              {
+                                "versionId": "p01wxf49",
+                                "types": ["Original"],
+                                "duration": 38,
+                                "durationISO8601": "PT38S",
+                                "warnings": {
+                                  "short": "Contains some nudity.",
+                                  "long": "Contains some nudity."
+                                },
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableFrom": 1770637145000
+                              }
+                            ],
+                            "syndication": { "destinations": ["default"] },
+                            "smpKind": "programme",
+                            "webcastVersions": []
+                          }
+                        },
+                        {
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "rawImage",
+                                "model": {
+                                  "width": 1280,
+                                  "height": 720,
+                                  "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01wxf61.jpg",
+                                  "originCode": "mpv",
+                                  "copyrightHolder": "BBC"
+                                }
+                              },
+                              {
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "Captain on board HMS Ship",
+                                              "blocks": [
+                                                {
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "Captain on board HMS Ship",
+                                                    "attributes": []
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "latestMedia": [],
+      "portraitVideoItems": null,
+      "countryCuration": null,
+      "videoCuration": null,
+      "countryTopicIdToReorder": null
+    }
+  },
+  "contentType": "application/json; charset=utf-8",
+  "debug": {
+    "context": {
+      "runtimeContext": {
+        "lambdaBootstrapVersion": "5.8.0",
+        "runtimeVersion": "6.8.0",
+        "standardLibraryVersion": "6.8.0",
+        "moduleName": "simorgh-bff",
+        "moduleVersion": "0.0.2",
+        "sourceUrl": "https://github.com/bbc/fabl-modules/tree/e42c8266b3f9a038e107e84800b0a9dae1f89946/modules/application/simorgh-bff",
+        "cosmosReleaseUrl": "https://cosmos.tools.bbc.co.uk/lambdas/fabl-module-simorgh-bff/releases/670",
+        "buildTime": "2026-08-20T14:36:56.786Z",
+        "moduleType": "reads",
+        "traceId": "Root=1-6a8f0abf-7b5708f7d402793f2b8d77e0;Parent=0926698e8a0c21b2;Sampled=1;Lineage=1:2829b227:0",
+        "moduleEnvironment": "production",
+        "personalisedRequest": "false",
+        "environment": "live",
+        "nodeJSVersion": "v22.23.2"
+      },
+      "systemContext": {
+        "service-env": "test",
+        "debug": "1",
+        "call-stack": "simorgh-bff",
+        "sandboxEnabled": true,
+        "logAllDebug": false,
+        "normaliseRequest": true
+      }
+    },
+    "serviceRequests": [
+      {
+        "response": {
+          "headers": {
+            "date": "Wed, 26 Aug 2026 15:48:15 GMT",
+            "content-type": "application/json;charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "etag": "\"1e54cf9cce2d33e47a28133296e01a762541d928\"",
+            "last-modified": "Wed, 12 Aug 2026 12:32:12 GMT",
+            "cache-control": "no-transform,max-age=60",
+            "x-ares-tracking-id": "7ea42ec4-247a-470e-aa36-73bb4332f577",
+            "expires": "Wed, 26 Aug 2026 15:36:21 GMT",
+            "content-encoding": "gzip",
+            "x-shared-cache": "HIT",
+            "x-local-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 2
+        },
+        "request": {
+          "service": "ares",
+          "path": "/article/c6gjm3gede9zo",
+          "timeout": 3000,
+          "url": "https://service-gateway.fabl.api.bbci.co.uk/service/ares/path/%2Farticle%2Fc6gjm3gede9zo"
+        }
+      }
+    ],
+    "moduleRequests": [
+      {
+        "response": {
+          "headers": {
+            "date": "Wed, 26 Aug 2026 15:48:15 GMT",
+            "content-type": "application/json; charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "x-shared-cache": "MISS",
+            "vary": "Accept-Encoding, ctx-service-env, ctx-debug, ctx-unwrapped",
+            "cache-control": "max-age=5",
+            "expires": "Wed, 26 Aug 2026 15:48:20 GMT",
+            "content-encoding": "gzip",
+            "x-local-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 29
+        },
+        "request": {
+          "module": "content-summaries",
+          "params": {
+            "urn": "urn:bbc:vivo:curation:b6d16258-ebb4-474a-9e87-e150dbf33816"
+          },
+          "timeout": 3000,
+          "url": "https://fabl.api.bbci.co.uk/module/content-summaries?urn=urn%3Abbc%3Avivo%3Acuration%3Ab6d16258-ebb4-474a-9e87-e150dbf33816"
+        }
+      }
+    ],
+    "tenantLogs": [
+      {
+        "timestamp": 1787759295901,
+        "message": "fetchTopicCuration [video]: service=tamil topicId=null",
+        "code": "DEBUG"
+      }
+    ],
+    "privateContext": {},
+    "sandboxViolations": [],
+    "nonFatalErrors": [],
+    "params": {
+      "service": "tamil",
+      "pageType": "article",
+      "id": "c6gjm3gede9zo"
+    }
+  }
+}

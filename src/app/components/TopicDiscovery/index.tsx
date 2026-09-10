@@ -5,6 +5,8 @@ import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { ComponentExperimentProps } from '#app/models/types/global';
 import { TopicTag } from '#app/models/types/metadata';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import { RequestContext } from '#app/contexts/RequestContext';
+import getTopicPageUrl from '#app/lib/utilities/getTopicPageUrl';
 import ScrollableTabs from './ScrollableTabs';
 import styles from './index.styles';
 import useFetchTopicPromos from './useFetchTopicPromos';
@@ -27,12 +29,21 @@ const TopicDiscovery = ({
   className,
   experimentProps,
 }: TopicDiscoveryProps) => {
-  const { translations, dir } = use(ServiceContext);
+  const { service, translations, dir } = use(ServiceContext);
+  const { variant } = use(RequestContext);
   const {
     heading = 'Discover more',
     moreAboutTopic = 'More about {topic}',
     fetchErrorMessage = 'Failed to load. Please try again later.',
   } = translations.topicDiscovery || {};
+
+  const buildTopicPageUrl = (topicId: string) =>
+    getTopicPageUrl({
+      service,
+      topicId,
+      variant,
+      topicsPath: translations?.topicsPath,
+    });
 
   const [activeTabId, setActiveTabId] = useState(topics?.[0]?.topicId || '');
   const [shouldFocusPromos, setShouldFocusPromos] = useState(false);
@@ -139,6 +150,8 @@ const TopicDiscovery = ({
 
   if (!topics || topics.length === 0) return null;
   const selectedTopic = currentTopic as ExtractedTopic;
+  const selectedTopicUrl =
+    selectedTopic.topicUrl || buildTopicPageUrl(selectedTopic.topicId);
 
   const showLoadingState = Boolean(isLoading && !isError);
   const showErrorMessage = Boolean(!isLoading && isError);
@@ -217,7 +230,7 @@ const TopicDiscovery = ({
                       groupTracker: {
                         name: selectedTopic.topicName,
                         type: 'topic-discovery-curation-grid',
-                        link: selectedTopic.topicUrl,
+                        link: selectedTopicUrl,
                         resourceId: selectedTopic.topicId,
                         ...(topicPromos?.length > 0 && {
                           itemCount: topicPromos.length,
@@ -227,7 +240,7 @@ const TopicDiscovery = ({
                   />
                   <a
                     css={styles.moreAboutLink}
-                    href={selectedTopic.topicUrl}
+                    href={selectedTopicUrl}
                     data-testid="topic-discovery-more-about"
                     onKeyDown={handleMoreLinkKeyDown}
                     {...moreAboutLinkClickTracker}

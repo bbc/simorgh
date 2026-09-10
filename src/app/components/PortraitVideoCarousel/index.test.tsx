@@ -52,6 +52,25 @@ describe('PortraitVideoCarousel', () => {
     expect(linkElement).toHaveAttribute('href', link);
   });
 
+  it('Should render the heading with a URI link correctly', async () => {
+    const uriLink = 'https://www.bbc.com/news';
+    await act(async () => {
+      render(
+        <Component
+          {...fixture}
+          link={uriLink}
+          eventTrackingData={eventTrackingData}
+        />,
+      );
+    });
+
+    const heading = screen.getByRole('heading', { level: 2 });
+    expect(heading).toHaveTextContent(fixture.title);
+
+    const linkElement = screen.getByRole('link', { name: fixture.title });
+    expect(linkElement).toHaveAttribute('href', uriLink);
+  });
+
   it('Should render without a title', async () => {
     await act(async () => {
       render(

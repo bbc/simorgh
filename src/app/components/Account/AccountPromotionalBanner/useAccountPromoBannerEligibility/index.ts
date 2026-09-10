@@ -3,21 +3,28 @@ import { AccountContext } from '#contexts/AccountContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import useToggle from '#app/hooks/useToggle';
 
-// Server-side-knowable eligibility for the account promotional banner. Shared by
-// the experiment wrapper (to gate both the control and "on" arms before either
-// view event can fire) and the banner itself. The localStorage frequency-cap and
-// in-session dismissal checks are deliberately excluded here: they are client
-// only and handled separately via the inline script and component state.
-const useAccountPromoBannerEligibility = (): boolean => {
+type UseAccountPromoBannerEligibilityOptions = {
+  excludeSignedInUsers?: boolean;
+};
+
+// Server-side-knowable eligibility for the account promotional banner. Excludes
+// the client-only frequency-cap/dismissal checks, handled separately.
+//
+// `excludeSignedInUsers` lets the experiment wrapper activate Optimizely for
+// signed-in users while still gating the banner/view tracking to signed-out users.
+const useAccountPromoBannerEligibility = ({
+  excludeSignedInUsers = true,
+}: UseAccountPromoBannerEligibilityOptions = {}): boolean => {
   const { enabled: accountEnabled } = useToggle('account');
   const { isSignedIn, isIdctaAvailable, signInUrl, registerUrl } =
     use(AccountContext);
   const { translations } = use(ServiceContext);
   const accountPromoBannerTranslations = translations?.accountPromoBanner;
+  const passesSignInCheck = !excludeSignedInUsers || !isSignedIn;
 
   return Boolean(
     accountEnabled &&
-    !isSignedIn &&
+    passesSignInCheck &&
     isIdctaAvailable &&
     signInUrl &&
     registerUrl &&

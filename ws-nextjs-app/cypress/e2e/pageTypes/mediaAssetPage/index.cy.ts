@@ -1,5 +1,8 @@
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
-import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
+import {
+  assertPageView,
+  assertResonancePageView,
+} from '../../specialFeatures/atiAnalytics/assertions';
 import runTestsForPage, {
   TestDataType,
 } from '../../../support/helpers/runTestsForPage';
@@ -44,13 +47,6 @@ const canonicalSmokeTestSuites = [
     runforEnv: ['live'],
     tests: canonicalTests,
   },
-  // DISABLED DUE TO AN UNKNOWN FAULT ARISING FROM AMP MEDIA LOADER WHEN SERVING AUDIO CONTENT.
-  // {
-  //   path: '/persian/tv-and-radio-51780528', // CPS MAP with audio clip
-  //   service: 'persian',
-  //   runforEnv: ['live'],
-  //   tests: canonicalTests,
-  // },
   {
     path: '/persian/iran-23231114', // CPS MAP with audio clip
     service: 'persian',
@@ -232,6 +228,16 @@ const atiAnalyticsTestSuites = [
     applicationType: 'responsive',
     contentType: 'article-media-asset',
     tests: [...atiAnalyticsTests],
+  },
+  {
+    path: '/arabic/media-53135426',
+    runforEnv: ['live'],
+    service: 'arabic',
+    pageIdentifier: 'arabic.embedded_media.media_asset.53135426.page',
+    siteId: 5,
+    applicationType: 'responsive',
+    contentType: 'article-media-asset',
+    tests: [assertResonancePageView],
   },
 ] as unknown as TestDataType[];
 

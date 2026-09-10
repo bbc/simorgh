@@ -1,38 +1,51 @@
-import { render } from '../react-testing-library-with-providers';
+import { render, screen } from '../react-testing-library-with-providers';
 import LiveLabel from '.';
 
 describe('LiveLabel', () => {
   it('should render correctly with localised live text', () => {
-    const { container } = render(<LiveLabel />, {
+    render(<LiveLabel />, {
       service: 'pidgin',
     });
-    expect(container).toMatchSnapshot();
+
+    expect(screen.getByRole('text')).toHaveTextContent('As E Dey Happen');
   });
 
   it('should render correctly with English live text', () => {
-    const { container } = render(<LiveLabel />, {
+    render(<LiveLabel />, {
       service: 'russian',
     });
-    expect(container).toMatchSnapshot();
+
+    const liveLabel = screen.getByRole('text');
+
+    expect(liveLabel.querySelector('[aria-hidden="true"]')).toHaveTextContent(
+      'LIVE',
+    );
+    expect(liveLabel).toHaveTextContent('Live');
   });
 
   it('should render correctly with English live text and children', () => {
-    const { container } = render(<LiveLabel> this is a headline </LiveLabel>, {
+    render(<LiveLabel> this is a headline </LiveLabel>, {
       service: 'news',
     });
-    expect(container).toMatchSnapshot();
+
+    expect(screen.getByRole('text')).toHaveTextContent('this is a headline');
   });
 
   it('should render correctly with custom offscreen text', () => {
-    const { container } = render(<LiveLabel offScreenText="Watch Live" />);
-    expect(container).toMatchSnapshot();
+    render(<LiveLabel offScreenText="Watch Live" />);
+
+    expect(screen.getByRole('text')).toHaveTextContent('Watch Live');
   });
 
   it('should correctly render for RTL service', () => {
-    const { container } = render(<LiveLabel />, {
+    render(<LiveLabel />, {
       service: 'arabic',
     });
-    expect(container).toMatchSnapshot();
+
+    const liveLabel = screen.getByRole('text');
+
+    expect(liveLabel).toHaveTextContent('مباشر');
+    expect(liveLabel.querySelector('[dir="rtl"]')).toBeInTheDocument();
   });
 
   describe('Screenreader Text', () => {
