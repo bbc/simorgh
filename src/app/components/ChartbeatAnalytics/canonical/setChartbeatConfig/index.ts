@@ -4,8 +4,8 @@ import { CanonicalChartbeatConfig } from '../../types';
 const setChartbeatConfig = function (
   chartbeatConfig: CanonicalChartbeatConfig,
 ) {
-  // eslint-disable-next-line no-underscore-dangle, camelcase
-  const sfAsyncConfig = window._sf_async_config || {};
+  // eslint-disable-next-line no-underscore-dangle, camelcase, no-var
+  var sfAsyncConfig = window._sf_async_config || {};
   // eslint-disable-next-line no-underscore-dangle, camelcase
   window._sf_async_config = sfAsyncConfig;
 
