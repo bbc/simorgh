@@ -7,6 +7,7 @@ import { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
 import { PageTypes } from './global';
 import { MetadataFormats, MetadataTaggings, TopicTag } from './metadata';
 import { Curation, Summary } from './curationData';
+import { CurrentLiveProgramme } from './radioSchedule';
 
 export type OptimoBlock = {
   type: string;
@@ -141,6 +142,7 @@ export type SecondaryColumn = {
   features: object[];
   personalisedContent?: object[];
   latestMedia?: LatestMedia[];
+  currentLiveProgramme?: CurrentLiveProgramme | null;
 };
 
 export type Recommendation = {
