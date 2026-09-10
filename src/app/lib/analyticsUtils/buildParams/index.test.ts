@@ -1,7 +1,7 @@
 import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
-import { RequestContextProps } from '../../../../contexts/RequestContext';
-import { ServiceConfig } from '../../../../models/types/serviceConfig';
-import { Platforms } from '../../../../models/types/global';
+import { RequestContextProps } from '../../../contexts/RequestContext';
+import { ServiceConfig } from '../../../models/types/serviceConfig';
+import { Platforms } from '../../../models/types/global';
 import { buildPageATIParams, buildAnalyticsParams } from '.';
 
 jest
