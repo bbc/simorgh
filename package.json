@@ -142,7 +142,7 @@
     "cypress": "15.11.0",
     "cypress-axe": "1.7.0",
     "cypress-multi-reporters": "2.0.5",
-    "cypress-terminal-report": "7.2.1",
+    "cypress-terminal-report": "7.3.3",
     "depcheck": "1.4.7",
     "eslint": "7.32.0",
     "eslint-config-airbnb": "19.0.4",
