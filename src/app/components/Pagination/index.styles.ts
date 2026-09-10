@@ -52,10 +52,10 @@ const styles = {
       },
     }),
 
-  textSummary: ({ fontVariants, mq, palette }: Theme) =>
+  textSummary: ({ fontVariants, mq, palette, isDarkUi }: Theme) =>
     css({
       ...fontVariants.sansRegular,
-      color: palette.GREY_6,
+      color: isDarkUi ? palette.GREY_2 : palette.GREY_6,
       display: 'inline-block',
       margin: '0 1.375rem',
       b: {
