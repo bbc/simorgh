@@ -13,5 +13,10 @@
 }
 
 .readTimeText {
-  color: theme.$palette-grey-6;
+  // Doubled selector deliberately increases specificity above Text's own Emotion-applied
+  // default colour, since single-class selectors are otherwise order-dependent across
+  // Emotion and SCSS Modules stylesheets. Remove once Text moves off Emotion.
+  &.readTimeText {
+    color: theme.$palette-grey-6;
+  }
 }
