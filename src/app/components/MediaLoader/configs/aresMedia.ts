@@ -103,7 +103,6 @@ export default ({
 
   const isLive = isLiveMedia(blocks);
 
-  // silver durations describe the session window rather than the video length
   const items: PlaylistItem[] = [
     {
       versionID: versionPID,
@@ -147,7 +146,6 @@ export default ({
       ...(embedded && { insideIframe: true, embeddedOffsite: true }),
       ...(externalEmbedUrl && { externalEmbedUrl }),
       autoplay: pageType !== 'mediaArticle',
-      // news players need this override to centre a live play icon without a duration
       ...(hasWebcastItems && {
         ui: {
           ...basePlayerConfig.ui,

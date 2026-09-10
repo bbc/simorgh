@@ -110,7 +110,6 @@ const HiearchicalGrid = ({
 
           const inSituMediaBlocks =
             !isAmp && promo.inSituMedia?.length ? promo.inSituMedia : null;
-          // silver promos store their live state in the media blocks
           const isLiveInSituMedia = Boolean(
             inSituMediaBlocks && isLiveMedia(inSituMediaBlocks),
           );

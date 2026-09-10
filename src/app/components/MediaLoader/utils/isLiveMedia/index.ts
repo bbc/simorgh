@@ -12,7 +12,6 @@ const isLiveMedia = (blocks: MediaBlock[]) => {
     'aresMediaMetadata',
   ) as AresMediaMetadataBlock;
 
-  // silver streams use webcast versions instead of a live flag
   return Boolean(
     metadata?.model?.live || metadata?.model?.webcastVersions?.length,
   );
