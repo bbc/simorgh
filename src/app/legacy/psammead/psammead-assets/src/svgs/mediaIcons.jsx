@@ -5,6 +5,7 @@ import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
 } from '#psammead/gel-foundations/src/spacings';
+import { GEL_GROUP_1_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/breakpoints';
 
 const GEL_GROUP_1_WIDTH_260PX = '16.25rem';
 
@@ -24,6 +25,10 @@ const MediaIcon = styled.svg`
 const VideoMediaIcon = styled(MediaIcon)`
   width: 0.75rem;
   height: 0.75rem;
+  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
+    color: ${({ theme }) =>
+      theme.isDarkUi ? theme.palette.WHITE : theme.palette.EBON};
+  }
 `;
 
 const AudioMediaIcon = styled(MediaIcon)`
