@@ -72,9 +72,12 @@ const validateRequest = (method: UasMethod, options: UasRequestOptions) => {
 const parseUasErrorBody = async (
   response: Response,
 ): Promise<UasErrorBody | undefined> => {
-  const text = await Promise.resolve()
-    .then(() => response.clone().text())
-    .catch(() => undefined);
+  let text: string | undefined;
+  try {
+    text = await response.clone().text();
+  } catch {
+    text = undefined;
+  }
 
   const trimmedText = text?.trim();
 
