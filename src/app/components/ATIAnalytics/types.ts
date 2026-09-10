@@ -199,6 +199,13 @@ export interface ItemTracker {
   text?: string;
   position?: number;
   duration?: number;
+  // supports portrait video playback summary events in reverb/piano
+  watchedDuration?: number;
+  totalDuration?: number;
+  completionRate?: number;
+  skipRate?: number;
+  playbackTrigger?: string;
+  versionId?: string;
   resourceId?: string;
   label?: string;
   mediaType?: string;
