@@ -26,8 +26,12 @@ export const TYPES = {
 // GROUP 5 = BACKGROUND - BLACK, COLOR - WHITE
 const Wrapper = styled.div`
   padding: ${GEL_SPACING_HLF};
-  color: ${props => props.theme.palette.EBON};
-  background-color: ${props => props.theme.palette.WHITE};
+  color: ${props =>
+    props.theme.isLite ? props.theme.palette.WHITE : props.theme.palette.EBON};
+  background-color: ${props =>
+    props.theme.isLite
+      ? props.theme.palette.GREY_10
+      : props.theme.palette.WHITE};
   ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
   ${({ theme: { fontSizes } }) => fontSizes.minion};
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {

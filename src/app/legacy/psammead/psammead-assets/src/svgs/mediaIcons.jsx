@@ -25,6 +25,8 @@ const MediaIcon = styled.svg`
 const VideoMediaIcon = styled(MediaIcon)`
   width: 0.75rem;
   height: 0.75rem;
+  color: ${props =>
+    props.theme.isLite ? props.theme.palette.WHITE : props.theme.palette.EBON};
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
     color: ${({ theme }) =>
       theme.isDarkUi ? theme.palette.WHITE : theme.palette.EBON};
