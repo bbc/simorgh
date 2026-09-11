@@ -16,10 +16,12 @@ describe('Media Message', () => {
     expect(message).toBeInTheDocument();
   });
 
-  it('matches media message snapshot', () => {
-    const { container } = render(
+  it('should display the media message without a placeholder image', () => {
+    const { container, getByText } = render(
       <Message message="Контент більше не доступний" />,
     );
-    expect(container).toMatchSnapshot();
+
+    expect(getByText('Контент більше не доступний')).toBeInTheDocument();
+    expect(container.querySelector('img')).not.toBeInTheDocument();
   });
 });

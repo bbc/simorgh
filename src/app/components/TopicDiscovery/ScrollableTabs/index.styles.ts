@@ -2,12 +2,16 @@ import { css, Theme } from '@emotion/react';
 import pixelsToRem from '#app/utilities/pixelsToRem';
 
 const styles = {
-  wrapper: ({ palette, spacings }: Theme) =>
+  wrapper: ({ palette, spacings, isDarkUi, mq }: Theme) =>
     css({
       display: 'flex',
       alignItems: 'center',
       gap: `${spacings.HALF}rem`,
-      borderBottom: `${pixelsToRem(1)}rem solid ${palette.GREY_5}`,
+      [mq.GROUP_3_MIN_WIDTH]: {
+        borderBottom: `${pixelsToRem(1)}rem solid ${
+          isDarkUi ? palette.GREY_6 : palette.GREY_5
+        }`,
+      },
     }),
 
   tabList: () =>
@@ -22,7 +26,7 @@ const styles = {
       },
     }),
 
-  tab: ({ palette, spacings, fontSizes, fontVariants, mq }: Theme) =>
+  tab: ({ palette, spacings, fontSizes, fontVariants, mq, isDarkUi }: Theme) =>
     css({
       ...fontVariants.sansBold,
       ...fontSizes.pica,
@@ -32,15 +36,15 @@ const styles = {
       border: 'none',
       padding: `${pixelsToRem(12)}rem ${spacings.FULL}rem`,
       cursor: 'pointer',
-      color: palette.GREY_10,
+      color: isDarkUi ? palette.GREY_2 : palette.GREY_10,
 
       [mq.FORCED_COLOURS]: {
         forcedColorAdjust: 'none',
-        color: 'ButtonText',
-        fill: 'ButtonText',
+        color: 'CanvasText',
+        fill: 'CanvasText',
       },
 
-      '&:hover': {
+      '&:hover:not(:focus-visible)': {
         '&::after': {
           content: '""',
           position: 'absolute',
@@ -54,7 +58,11 @@ const styles = {
       },
       '[type=button]&:focus-visible': {
         outlineOffset: `${pixelsToRem(-3)}rem`,
+        outlineColor: isDarkUi ? palette.WHITE : palette.BLACK,
         boxShadow: 'none',
+        '&::after': {
+          display: 'none',
+        },
       },
     }),
 
@@ -72,7 +80,7 @@ const styles = {
       },
     }),
 
-  scrollButton: ({ palette, spacings }: Theme) =>
+  scrollButton: ({ palette, spacings, isDarkUi }: Theme) =>
     css({
       position: 'relative',
       display: 'flex',
@@ -84,7 +92,7 @@ const styles = {
       border: 'none',
       cursor: 'pointer',
       padding: 0,
-      color: palette.GREY_10,
+      color: isDarkUi ? palette.GREY_2 : palette.GREY_10,
       '& svg': {
         width: `${spacings.DOUBLE}rem`,
         height: `${spacings.DOUBLE}rem`,
@@ -92,7 +100,12 @@ const styles = {
       },
       '&:disabled': {
         cursor: 'default',
-        color: `${palette.GREY_5}`,
+        color: isDarkUi ? palette.GREY_2 : palette.GREY_5,
+        ...(!isDarkUi && {
+          '@media (prefers-color-scheme: dark)': {
+            color: palette.GREY_2,
+          },
+        }),
       },
       '[type=button]&:focus-visible': {
         outlineOffset: `${pixelsToRem(-3)}rem`,
@@ -113,8 +126,9 @@ const styles = {
       display: 'none',
     }),
 
-  scrollButtonFadeStart: ({ palette, spacings }: Theme) =>
-    css({
+  scrollButtonFadeStart: ({ palette, spacings, isDarkUi }: Theme) => {
+    const bg = isDarkUi ? palette.GREY_10 : palette.GREY_2;
+    return css({
       position: 'absolute',
       top: 0,
       height: '100%',
@@ -123,16 +137,18 @@ const styles = {
       zIndex: 1,
       "[dir='ltr'] &": {
         right: `-${spacings.TRIPLE}rem`,
-        background: `linear-gradient(to right, ${palette.GREY_2}, ${palette.GREY_2}00)`,
+        background: `linear-gradient(to right, ${bg}, ${bg}00)`,
       },
       "[dir='rtl'] &": {
         left: `-${spacings.TRIPLE}rem`,
-        background: `linear-gradient(to right, ${palette.GREY_2}00, ${palette.GREY_2})`,
+        background: `linear-gradient(to right, ${bg}00, ${bg})`,
       },
-    }),
+    });
+  },
 
-  scrollButtonFadeEnd: ({ palette, spacings }: Theme) =>
-    css({
+  scrollButtonFadeEnd: ({ palette, spacings, isDarkUi }: Theme) => {
+    const bg = isDarkUi ? palette.GREY_10 : palette.GREY_2;
+    return css({
       position: 'absolute',
       top: 0,
       height: '100%',
@@ -141,13 +157,14 @@ const styles = {
       zIndex: 1,
       "[dir='ltr'] &": {
         left: `-${spacings.TRIPLE}rem`,
-        background: `linear-gradient(to right, ${palette.GREY_2}00, ${palette.GREY_2})`,
+        background: `linear-gradient(to right, ${bg}00, ${bg})`,
       },
       "[dir='rtl'] &": {
         right: `-${spacings.TRIPLE}rem`,
-        background: `linear-gradient(to right, ${palette.GREY_2}, ${palette.GREY_2}00)`,
+        background: `linear-gradient(to right, ${bg}, ${bg}00)`,
       },
-    }),
+    });
+  },
 };
 
 export default styles;

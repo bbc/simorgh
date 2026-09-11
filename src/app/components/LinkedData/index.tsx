@@ -97,7 +97,7 @@ const LinkedData = ({
   const LANGUAGE_TYPE = 'Language';
   const isNotRadioChannel = type !== 'RadioChannel';
   const brandedIndexImage = imageLocator
-    ? getBrandedImage(imageLocator, service)
+    ? getBrandedImage({ locator: imageLocator, service })
     : null;
 
   const logo = {

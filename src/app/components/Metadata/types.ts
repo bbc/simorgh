@@ -7,7 +7,6 @@ export interface AppleItunesApp {
   iTunesAppId?: number;
   canonicalLink?: string;
   isAmp?: boolean;
-  hasAppleItunesAppBanner?: boolean;
 }
 
 export interface IconSizes {
@@ -42,6 +41,5 @@ export interface MetadataProps {
   imageWidth?: number;
   imageHeight?: number;
   children?: string[];
-  hasAppleItunesAppBanner?: boolean;
   hasAmpPage?: boolean;
 }

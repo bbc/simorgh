@@ -8,9 +8,10 @@ const isClientError = (error: unknown) => {
   return status !== undefined && status >= 400 && status < 500;
 };
 
+// Retry failed requests up to 2 times, but only if the error is not a client error (4xx)
 const retryConfig = {
   retry: (failureCount: number, error: unknown) =>
-    !isClientError(error) && failureCount < 3,
+    !isClientError(error) && failureCount < 2,
 };
 
 const STALE_TIME = 5 * 60 * 1000;

@@ -1,3 +1,4 @@
+import { isLiveStatus } from '../helpers/event-status-groups';
 import styles from '../index.styles';
 import type { EventStatusType } from '../types';
 
@@ -28,7 +29,7 @@ const Score = ({
   return (
     <div css={styles.score} data-testid="score" aria-hidden="true">
       <div css={styles.homeScore}>{matchStatusLetter || homeScore}</div>
-      <div css={styles.verticalLine} />
+      <div css={styles.verticalLine({ isLive: isLiveStatus(status) })} />
       <div css={styles.awayScore}>{matchStatusLetter || awayScore}</div>
     </div>
   );

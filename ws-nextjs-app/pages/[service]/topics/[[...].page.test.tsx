@@ -3,9 +3,16 @@ import {
   screen,
   act,
 } from '#app/components/react-testing-library-with-providers';
+import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import { Summary } from '#app/models/types/curationData';
 import { Services } from '#app/models/types/global';
 import TopicsIndexPage from './TopicsIndexPage';
+
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  default: jest.fn(),
+}));
 
 const validTopicsData = {
   service: 'afrique' as Services,
@@ -34,6 +41,10 @@ const validTopicsData = {
 };
 
 describe('TopicsIndexPage', () => {
+  beforeEach(() => {
+    mockMatchMedia();
+  });
+
   it('renders topics page for valid service and matches snapshot', async () => {
     await act(async () => {
       render(<TopicsIndexPage {...validTopicsData} />);

@@ -1,0 +1,13 @@
+// gridWidths.scss
+// SCSS variables for grid widths, matching gridWidths.ts
+$grid-width-240: 240;
+$grid-width-360: 360;
+$grid-width-400: 400;
+$grid-width-600: 600;
+$grid-width-900: 900;
+$grid-width-1008: 1008;
+$grid-width-1280: 1280;
+
+// Usage example:
+// width: #{$grid-width-240}px;
+// width: #{$grid-width-1280 / 16}rem;

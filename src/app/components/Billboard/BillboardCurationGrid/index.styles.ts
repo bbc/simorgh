@@ -145,6 +145,18 @@ const styles = {
         },
       },
     }),
+  billboardCurationGridStylingOverrides: ({ palette }: Theme) =>
+    css({
+      '.related-topic-link': {
+        color: palette.WHITE,
+        '&::after': {
+          backgroundColor: palette.WHITE,
+        },
+      },
+      '.metadata-and-topic-data .promo-timestamp': {
+        color: palette.WHITE,
+      },
+    }),
 };
 
 export default styles;

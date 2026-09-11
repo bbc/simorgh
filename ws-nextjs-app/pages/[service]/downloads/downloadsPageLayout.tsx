@@ -25,11 +25,10 @@ const DownloadsPageLayout = ({ service, pageData }: PageProps) => {
 
   const capitalisedService = service[0].toUpperCase() + service.slice(1);
   const description = `${capitalisedService} Downloads`;
-  const atiData = pageData?.metadata?.atiAnalytics || {};
   const pageTitle = pageData?.metadata?.pageTitle || '';
   return (
     <>
-      <ATIAnalytics atiData={atiData} />
+      <ATIAnalytics />
       <ChartbeatAnalytics title={pageTitle} />
       <Metadata
         title={title}

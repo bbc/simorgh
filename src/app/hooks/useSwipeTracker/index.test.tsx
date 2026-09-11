@@ -7,12 +7,12 @@ import {
 } from '#app/components/react-testing-library-with-providers';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import { ATIData } from '#app/components/ATIAnalytics/types';
-import { Toggles } from '#app/models/types/global';
+import { PageTypes, Toggles } from '#app/models/types/global';
 import useSwipeTracker from '.';
 import fixtureData from './fixtureData.json';
 
 const {
-  metadata: { atiAnalytics },
+  metadata: { atiAnalytics, type },
 } = fixtureData;
 
 const eventTrackingData = {
@@ -39,16 +39,16 @@ window.__reverb = {
 };
 
 const wrapper = ({
-  atiData,
+  pageMetadata,
   children,
   toggles = defaultToggles,
 }: {
-  atiData?: ATIData;
+  pageMetadata?: { atiAnalytics: ATIData; type: PageTypes };
   children?: ReactNode | null;
   toggles?: Toggles;
 }) => (
   <AllTheProviders
-    atiData={atiData}
+    pageMetadata={pageMetadata}
     bbcOrigin="https://www.test.bbc.com"
     pageData={fixtureData}
     pageType={HOME_PAGE}
@@ -83,7 +83,8 @@ describe('useSwipeTracker', () => {
           const {
             result: { current: swipeTracker },
           } = renderHook(() => useSwipeTracker(eventTrackingData), {
-            wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
+            wrapper: props =>
+              wrapper({ ...props, pageMetadata: { atiAnalytics, type } }),
           });
 
           await swipeTracker({

@@ -1,0 +1,9 @@
+@use '../../palette.scss' as palette;
+
+:root {
+  --brand-background: #{palette.$sport-yellow};
+  --brand-logo: #{palette.$black};
+  --brand-foreground: #{palette.$midnight-black};
+  --brand-highlight: #{palette.$sport-yellow-30};
+  --brand-border: #{palette.$black};
+}

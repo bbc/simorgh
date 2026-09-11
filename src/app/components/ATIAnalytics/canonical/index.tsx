@@ -38,7 +38,10 @@ const addScript = ({ script, parameters, nonce }: InlineScriptProps) => {
   return <Helmet>{addInlineScript({ script, parameters, nonce })}</Helmet>;
 };
 
-const CanonicalATIAnalytics = ({ reverbParams }: ATIAnalyticsProps) => {
+const CanonicalATIAnalytics = ({
+  reverbParams,
+  resonanceParams,
+}: ATIAnalyticsProps) => {
   const { isLite, nonce } = use(RequestContext);
 
   usePWAInstallTracker();
@@ -48,10 +51,11 @@ const CanonicalATIAnalytics = ({ reverbParams }: ATIAnalyticsProps) => {
   usePWAOfflineTracking();
 
   const [reverbBeaconConfig] = useState(reverbParams);
+  const [resonanceBeaconConfig] = useState(resonanceParams);
 
   useEffect(() => {
-    if (!isOperaProxy()) sendBeacon(reverbBeaconConfig);
-  }, [reverbBeaconConfig]);
+    if (!isOperaProxy()) sendBeacon(reverbBeaconConfig, resonanceBeaconConfig);
+  }, [reverbBeaconConfig, resonanceBeaconConfig]);
 
   const liteSiteReverbURL = reverbUrlHelper.getLitePageViewUrl(reverbParams);
   const operaMiniPageViewReverbURL =
@@ -59,7 +63,7 @@ const CanonicalATIAnalytics = ({ reverbParams }: ATIAnalyticsProps) => {
 
   return (
     <>
-      {addScript({ script: addSendStaticBeaconToWindow(), nonce })}
+      {addScript({ script: addSendStaticBeaconToWindow, nonce })}
       {isLite &&
         addScript({
           script: sendPageViewBeaconLite,
@@ -68,7 +72,8 @@ const CanonicalATIAnalytics = ({ reverbParams }: ATIAnalyticsProps) => {
         })}
       {!isLite &&
         addScript({
-          script: sendPageViewBeaconOperaMini(operaMiniPageViewReverbURL),
+          script: sendPageViewBeaconOperaMini,
+          parameters: [operaMiniPageViewReverbURL, isOperaProxy],
           nonce,
         })}
       {renderNoScriptTrackingPixel({ reverbParams })}

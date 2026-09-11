@@ -1,24 +1,28 @@
 {
+  "lastUpdated": {
+    "day": 12,
+    "month": "June",
+    "year": 2026
+  },
   "uxAccessibilityDoc": {
     "done": true,
     "reference": {
-      "url": "",
-      "label": "Screenreader UX"
+      "url": "https://www.dropbox.com/scl/fi/do6f7e7bw7qmkxlak2lsv/A11y-Criteria-and-Screen-Reader-UX-Sport-Data-Header-component.paper?rlkey=5xv7uflmu92lo65mzycrzpeqs&dl=0",
+      "label": "Screenreader UX (non-translated requirements)"
     }
   },
   "acceptanceCriteria": {
     "done": true,
     "reference": {
-      "url": "https://jira.dev.bbc.co.uk/browse/SWD-2208",
-      "label": "Acceptance criteria"
+      "url": "https://www.dropbox.com/scl/fi/do6f7e7bw7qmkxlak2lsv/A11y-Criteria-and-Screen-Reader-UX-Sport-Data-Header-component.paper?rlkey=5xv7uflmu92lo65mzycrzpeqs&dl=0",
+      "label": "Acceptance criteria (non-translated requirements)"
     }
   },
   "swarm": {
-    "done": false,
+    "done": true,
     "reference": {
-      "url": "https://paper.dropbox.com/folder/show/Head-to-Head-e.1gg8YzoPEhbTkrhvQwJ2zzo3g3aKslj5mXLzEJbxSH2zyS7TwiyR",
-      "label": "Swarm template"
+      "url": "https://www.dropbox.com/scl/fi/78n3tu4trn264iz02dj50/A11Y-Swarm-Sports-Data-Header.paper?rlkey=af023e7wpm0k7f7k0pezd7cv0&dl=0",
+      "label": "A11y Swarm (non-translated requirements)"
     }
-  },
-  "creationDate": "2022-11-24"
+  }
 }

@@ -1,13 +1,12 @@
 import { GetServerSidePropsContext } from 'next';
 import liveRadioJson from '#data/korean/bbc_korean_radio/liveradio.json';
 import { LIVE_RADIO_PAGE } from '#app/routes/utils/pageTypes';
-import { Toggles } from '#app/models/types/global';
-import * as getTogglesModule from '#app/lib/utilities/getToggles/withCache';
+import * as getTogglesModule from '#app/lib/utilities/fetchToggles';
 import * as getPageDataModule from '../../../utilities/pageRequests/getPageData';
 import handleLiveRadioRoute from './handleLiveRadioRoute';
 
 jest.mock('../../../utilities/pageRequests/getPageData');
-jest.mock('#app/lib/utilities/getToggles/withCache');
+jest.mock('#app/lib/utilities/fetchToggles');
 
 describe('handleLiveRadioRoute', () => {
   const mockSetHeader = jest.fn();
@@ -39,7 +38,7 @@ describe('handleLiveRadioRoute', () => {
 
     jest.spyOn(getTogglesModule, 'default').mockResolvedValue({
       liveRadioSchedule: { enabled: true },
-    } as Toggles);
+    });
   });
 
   it('returns expected props if data fetch succeeds', async () => {
@@ -83,7 +82,7 @@ describe('handleLiveRadioRoute', () => {
   it('should pass disableRadioSchedule as true when toggle is disabled', async () => {
     jest.spyOn(getTogglesModule, 'default').mockResolvedValue({
       liveRadioSchedule: { enabled: false },
-    } as Toggles);
+    });
 
     await handleLiveRadioRoute(mockGetServerSidePropsContext);
 

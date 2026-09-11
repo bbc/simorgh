@@ -12,7 +12,7 @@ A couple of scenarios that we expect these tests would fail and need updating wo
 
 - Change in the timeformat logic [here](../timeFormats)
 
-- Changes in DST times across different timezones.
+- Changes in Daylight Saving Time (DST) times across different timezones.
 
 - ... please add more if you find any
 

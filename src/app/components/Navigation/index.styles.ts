@@ -224,6 +224,7 @@ export default {
     css({
       backgroundColor: palette.POSTBOX,
       color: palette.WHITE,
+      overflow: 'hidden',
 
       width: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
       height: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,

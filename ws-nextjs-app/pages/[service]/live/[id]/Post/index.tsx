@@ -13,11 +13,11 @@ import Byline from '#app/components/Byline';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import isTenHoursAgo from '#app/lib/utilities/isTenHoursAgo';
 import filterForBlockType from '#app/lib/utilities/blockHandlers';
-import { isPortraitVideo } from '#app/components/MediaLoader/utils/isPortraitVideo';
 import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
 import SocialEmbedContainer from '#app/legacy/containers/SocialEmbed';
 import { MediaBlock } from '#app/components/MediaLoader/types';
 import dynamic from 'next/dynamic';
+import StreamVideoPost from './StreamVideoPost';
 import styles from './styles';
 import {
   Post as PostType,
@@ -134,8 +134,8 @@ const PostHeading = ({
 
       return (
         <Text
-          fontVariant={'sansBold'}
-          size={'greatPrimer'}
+          fontVariant="sansBold"
+          size="greatPrimer"
           className="headingStyling"
           css={[styles.postHeadings, styles.postHeadline]}
         >
@@ -152,8 +152,8 @@ const PostHeading = ({
         <>
           <VisuallyHiddenText>{`, `}</VisuallyHiddenText>
           <Text
-            fontVariant={'sansRegular'}
-            size={'brevier'}
+            fontVariant="sansRegular"
+            size="brevier"
             className="headingStyling"
             css={[styles.postHeadings, styles.postSubHeadline]}
           >
@@ -215,19 +215,9 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
         position={[9]}
       />
     ),
-    video: (props: { blocks: MediaBlock[] }) => {
-      const { blocks } = props;
-      const isPortrait = isPortraitVideo(blocks);
-
-      return (
-        <div css={isPortrait && styles.portraitVideoPlayer}>
-          <MediaLoader
-            blocks={props.blocks}
-            css={[styles.bodyMedia, styles.videoPost]}
-          />
-        </div>
-      );
-    },
+    video: (props: { blocks: MediaBlock[] }) => (
+      <StreamVideoPost blocks={props.blocks} />
+    ),
     audio: (props: { blocks: MediaBlock[] }) => (
       <MediaLoader blocks={props.blocks} css={styles.audioPost} />
     ),

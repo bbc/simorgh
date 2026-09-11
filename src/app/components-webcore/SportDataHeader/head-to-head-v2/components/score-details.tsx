@@ -1,3 +1,4 @@
+import { Translations } from '#app/models/types/translations';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 import styles from '../index.styles';
 import type { RunningScores } from '../types';
@@ -7,6 +8,7 @@ interface ScoreDetailsProps {
   awayName: string;
   homeRunningScores?: RunningScores;
   awayRunningScores?: RunningScores;
+  translations?: Translations['sport'];
 }
 
 const ScoreDetails = ({
@@ -14,6 +16,7 @@ const ScoreDetails = ({
   awayName,
   homeRunningScores,
   awayRunningScores,
+  translations,
 }: ScoreDetailsProps) => {
   const shouldDisplayHT = Boolean(
     homeRunningScores?.halftime && awayRunningScores?.halftime,
@@ -29,27 +32,31 @@ const ScoreDetails = ({
     return null;
   }
 
+  const { ft = 'FT', ht = 'HT' } = translations || {};
+  const ftAccessible = ft === 'FT' ? 'Full Time' : ft;
+  const htAccessible = ht === 'HT' ? 'Half Time' : ht;
+
   return (
     <div css={styles.scoreDetailsWrapper}>
       {shouldDisplayFT && (
         <>
-          <VisuallyHiddenText>{`Full Time ${homeName} ${homeRunningScores?.fulltime} , ${awayName} ${awayRunningScores?.fulltime}`}</VisuallyHiddenText>
+          <VisuallyHiddenText>{`${ftAccessible} ${homeName} ${homeRunningScores?.fulltime} , ${awayName} ${awayRunningScores?.fulltime}`}</VisuallyHiddenText>
 
           <div
             css={styles.scoreDetailsScore}
             aria-hidden="true"
-          >{`FT ${homeRunningScores?.fulltime}-${awayRunningScores?.fulltime}`}</div>
+          >{`${ft} ${homeRunningScores?.fulltime}-${awayRunningScores?.fulltime}`}</div>
 
           <span css={styles.scoreDetailsComma}>,</span>
         </>
       )}
       {shouldDisplayHT && (
         <>
-          <VisuallyHiddenText>{`Half Time ${homeName} ${homeRunningScores?.halftime} , ${awayName} ${awayRunningScores?.halftime}`}</VisuallyHiddenText>{' '}
+          <VisuallyHiddenText>{`${htAccessible} ${homeName} ${homeRunningScores?.halftime} , ${awayName} ${awayRunningScores?.halftime}`}</VisuallyHiddenText>{' '}
           <div
             css={styles.scoreDetailsScore}
             aria-hidden="true"
-          >{`HT ${homeRunningScores?.halftime}-${awayRunningScores?.halftime}`}</div>
+          >{`${ht} ${homeRunningScores?.halftime}-${awayRunningScores?.halftime}`}</div>
         </>
       )}
     </div>

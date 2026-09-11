@@ -5,9 +5,12 @@ import moment from 'moment';
 import path from 'ramda/src/path';
 import isMediaType from '#app/lib/utilities/isMedia';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import isLiveEnvironment from '#lib/utilities/isLive';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import formatDuration from '../../../lib/utilities/formatDuration';
 import Promo from '../../../legacy/components/Promo';
+import MediaLoader from '../../MediaLoader';
+import isLiveMedia from '../../MediaLoader/utils/isLiveMedia';
 import { DESKTOP, TABLET, MOBILE, SMALL } from './dataStructures';
 import { styles } from './index.styles';
 import { ServiceContext } from '../../../contexts/ServiceContext';
@@ -80,18 +83,129 @@ const HiearchicalGrid = ({
           const lazyLoadImages = !(isFirstPromo && isFirstCuration);
           const fetchpriority =
             isFirstPromo && isFirstCuration ? 'high' : undefined;
-          const showDuration =
-            promo.duration && ['video', 'audio'].includes(promo.type);
           const isMedia = isMediaType(promo.type);
           const typeTranslated =
             (promo.type === 'audio' && `${audioTranslation}, `) ||
             (promo.type === 'video' && `${videoTranslation}, `) ||
             (promo.type === 'photogallery' && `${photoGalleryTranslation}, `);
-          const { isLive } = promo;
+          const { isLive, relatedTopic } = promo;
 
           const promoEventTrackingData = buildPromoEventTrackingData(promo, i);
           const clickTrackerHandler = getClickTrackerHandler(
             promoEventTrackingData,
+          );
+
+          const relatedTopicEventTrackingData = {
+            ...promoEventTrackingData,
+            itemTracker: {
+              ...promoEventTrackingData.itemTracker,
+              type: 'hierarchical-curation-grid-topic',
+              text: relatedTopic?.title,
+            },
+          };
+
+          const relatedTopicClickTrackerHandler = getClickTrackerHandler(
+            relatedTopicEventTrackingData,
+          );
+
+          const inSituMediaBlocks =
+            !isAmp && promo.inSituMedia?.length ? promo.inSituMedia : null;
+          const isLiveInSituMedia = Boolean(
+            inSituMediaBlocks && isLiveMedia(inSituMediaBlocks),
+          );
+          const showLiveLabel = Boolean(isLive || isLiveInSituMedia);
+          const showDuration =
+            !showLiveLabel &&
+            promo.duration &&
+            ['video', 'audio'].includes(promo.type);
+          const linkCss = inSituMediaBlocks ? styles.headlineLink : undefined;
+          const mediaHeadline = (
+            <>
+              <VisuallyHiddenText data-testid="visually-hidden-text">
+                {typeTranslated}
+              </VisuallyHiddenText>
+              <Promo.MediaIcon
+                className="inline-icon"
+                type={promo.type}
+                css={styles.inlineIcon}
+              />
+              {promo.title}
+              {showDuration && (
+                <VisuallyHiddenText>{durationString}</VisuallyHiddenText>
+              )}
+            </>
+          );
+          const promoText = (
+            <>
+              <Promo.Heading
+                as={`h${headingLevel}`}
+                css={(theme: Theme) => ({
+                  color: theme.palette.GREY_10,
+                  ...(i === 0 && theme.fontSizes.paragon),
+                })}
+              >
+                {isMedia ? (
+                  <Promo.A
+                    href={promo.link}
+                    aria-labelledby={promo.id}
+                    css={linkCss}
+                    {...clickTrackerHandler}
+                  >
+                    {showLiveLabel ? (
+                      <LiveLabel
+                        id={promo.id}
+                        className={isFirstPromo ? 'first-promo' : undefined}
+                      >
+                        {mediaHeadline}
+                      </LiveLabel>
+                    ) : (
+                      <span id={promo.id} role="text">
+                        {mediaHeadline}
+                      </span>
+                    )}
+                  </Promo.A>
+                ) : (
+                  <Promo.A
+                    href={promo.link}
+                    css={linkCss}
+                    {...clickTrackerHandler}
+                  >
+                    {showLiveLabel ? (
+                      <LiveLabel
+                        {...(isFirstPromo
+                          ? {
+                              className: 'first-promo',
+                            }
+                          : undefined)}
+                      >
+                        {promo.title}
+                      </LiveLabel>
+                    ) : (
+                      promo.title
+                    )}
+                  </Promo.A>
+                )}
+              </Promo.Heading>
+              <Promo.Body className="promo-paragraph" css={styles.body}>
+                {promo.description}
+              </Promo.Body>
+              {!showLiveLabel ? (
+                <div css={styles.metadataAndTopicData}>
+                  {relatedTopic && !isLiveEnvironment() && (
+                    <a
+                      href={relatedTopic.link.url}
+                      css={styles.relatedTopicLink}
+                      {...relatedTopicClickTrackerHandler}
+                    >
+                      {relatedTopic.title}
+                    </a>
+                  )}
+                  <Promo.Timestamp className="promo-timestamp">
+                    {promo.lastPublished}
+                  </Promo.Timestamp>
+                </div>
+              ) : null}
+            </>
           );
 
           return (
@@ -102,79 +216,39 @@ const HiearchicalGrid = ({
                 getStyles(promoItems.length, i, mq),
               ]}
             >
-              <Promo className="">
-                <Promo.Image
-                  useLargeImages={useLargeImages}
-                  src={promo.imageUrl || null}
-                  alt={promo.imageAlt}
-                  lazyLoad={lazyLoadImages}
-                  fetchPriority={fetchpriority}
-                  isAmp={isAmp}
-                  isPortraitImage={promo.isPortraitImage}
-                >
-                  {isMedia && (
-                    <Promo.MediaIcon type={promo.type}>
-                      {showDuration ? promo.duration : ''}
-                    </Promo.MediaIcon>
-                  )}
-                </Promo.Image>
-                <Promo.Heading
-                  as={`h${headingLevel}`}
-                  css={(theme: Theme) => ({
-                    color: theme.palette.GREY_10,
-                    ...(i === 0 && theme.fontSizes.paragon),
-                  })}
-                >
-                  {isMedia ? (
-                    <Promo.A
-                      href={promo.link}
-                      aria-labelledby={promo.id}
-                      {...clickTrackerHandler}
-                    >
-                      <span id={promo.id} role="text">
-                        <VisuallyHiddenText data-testid="visually-hidden-text">
-                          {typeTranslated}
-                        </VisuallyHiddenText>
-                        <Promo.MediaIcon
-                          className="inline-icon"
-                          type={promo.type}
-                          css={styles.inlineIcon}
-                        />
-                        {promo.title}
-                        {showDuration && (
-                          <VisuallyHiddenText>
-                            {durationString}
-                          </VisuallyHiddenText>
-                        )}
-                      </span>
-                    </Promo.A>
-                  ) : (
-                    <Promo.A href={promo.link} {...clickTrackerHandler}>
-                      {isLive ? (
-                        <LiveLabel
-                          {...(isFirstPromo
-                            ? {
-                                className: 'first-promo',
-                              }
-                            : undefined)}
-                        >
-                          {promo.title}
-                        </LiveLabel>
-                      ) : (
-                        promo.title
-                      )}
-                    </Promo.A>
-                  )}
-                </Promo.Heading>
-                <Promo.Body className="promo-paragraph" css={styles.body}>
-                  {promo.description}
-                </Promo.Body>
-                {!isLive ? (
-                  <Promo.Timestamp className="promo-timestamp">
-                    {promo.lastPublished}
-                  </Promo.Timestamp>
-                ) : null}
-              </Promo>
+              {inSituMediaBlocks ? (
+                <div>
+                  <div css={styles.inSituMedia}>
+                    {/* use the same one-tap player setup as a media article without its high preload */}
+                    <MediaLoader
+                      blocks={inSituMediaBlocks}
+                      uniqueId={`in-situ-${promo.id || i}`}
+                      loadPlayerOnInitialRender
+                      holdingImageURL={promo.imageUrl}
+                    />
+                  </div>
+                  <div className="promo-text">{promoText}</div>
+                </div>
+              ) : (
+                <Promo className="">
+                  <Promo.Image
+                    useLargeImages={useLargeImages}
+                    src={promo.imageUrl || null}
+                    alt={promo.imageAlt}
+                    lazyLoad={lazyLoadImages}
+                    fetchPriority={fetchpriority}
+                    isAmp={isAmp}
+                    isPortraitImage={promo.isPortraitImage}
+                  >
+                    {isMedia && (
+                      <Promo.MediaIcon type={promo.type}>
+                        {showDuration ? promo.duration : ''}
+                      </Promo.MediaIcon>
+                    )}
+                  </Promo.Image>
+                  {promoText}
+                </Promo>
+              )}
             </li>
           );
         })}

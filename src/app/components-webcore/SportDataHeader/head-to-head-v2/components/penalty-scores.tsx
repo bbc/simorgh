@@ -1,3 +1,5 @@
+import { use } from 'react';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 import styles from '../index.styles';
 import type { HeadToHeadV2Data } from '../types';
@@ -8,6 +10,11 @@ interface PenaltyScoresProps {
 
 const PenaltyScores = ({ data }: PenaltyScoresProps) => {
   const { winner, seriesWinner, multiLeg, status } = data;
+
+  const { translations } = use(ServiceContext);
+  const { winOnPenalties } = translations?.sport || {};
+  const { prefix = 'win', suffix = 'on penalties' } = winOnPenalties ?? {};
+  const shortSuffix = suffix === 'on penalties' ? 'on pens' : suffix;
 
   const isPostEvent = status?.toLowerCase() === 'postevent';
   const hasWinner = winner !== undefined;
@@ -36,7 +43,7 @@ const PenaltyScores = ({ data }: PenaltyScoresProps) => {
   return (
     <div css={styles.penaltyScoresContainer}>
       <VisuallyHiddenText>
-        {`${winnerOnPenaltiesName} win ${winnerOnPenaltiesScore} - ${loserOnPenaltiesScore} on penalties`}
+        {`${winnerOnPenaltiesName} ${prefix} ${winnerOnPenaltiesScore} - ${loserOnPenaltiesScore} ${suffix}`}
       </VisuallyHiddenText>
       <div
         css={styles.penaltiesText}
@@ -44,7 +51,7 @@ const PenaltyScores = ({ data }: PenaltyScoresProps) => {
         data-testid="penalties-text"
       >
         <span css={styles.winningTeamName}>{`${winnerOnPenaltiesName}`}</span>
-        {` win ${winnerOnPenaltiesScore}-${loserOnPenaltiesScore} on pens`}
+        {` ${prefix} ${winnerOnPenaltiesScore}-${loserOnPenaltiesScore} ${shortSuffix}`}
       </div>
     </div>
   );

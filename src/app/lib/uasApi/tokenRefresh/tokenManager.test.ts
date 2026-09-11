@@ -1,5 +1,6 @@
 import Cookie from 'js-cookie';
 import onClient from '#app/lib/utilities/onClient';
+import { UasError } from '#app/lib/uasApi';
 import refreshTokens from './refreshTokens';
 import { refreshTokensIfExpired, isTokenValidFor } from './tokenManager';
 
@@ -94,10 +95,12 @@ describe('refreshTokensIfExpired', () => {
 
   it('includes the original error message when the refresh request fails', async () => {
     mockCookieGet.mockReturnValue(undefined);
-    mockRefreshTokens.mockRejectedValue(new Error('Network error'));
+    mockRefreshTokens.mockRejectedValue(
+      new Error('Network error during refresh'),
+    );
 
     await expect(refreshTokensIfExpired(true)).rejects.toThrow(
-      'Error while ensuring tokens: Network error',
+      'Network error during refresh',
     );
   });
 
@@ -107,26 +110,26 @@ describe('refreshTokensIfExpired', () => {
       mockCookieGet.mockReturnValue(validToken);
 
       await refreshTokensIfExpired(false);
-      await refreshTokensIfExpired(undefined);
+      await refreshTokensIfExpired(undefined as unknown as boolean);
 
       expect(mockRefreshTokens).not.toHaveBeenCalled();
     });
 
-    it('throws when token is invalid and refresh is unavailable', async () => {
+    it('throws a UasError(401) when token is invalid and refresh is unavailable', async () => {
       mockCookieGet.mockReturnValue(undefined);
 
-      await expect(refreshTokensIfExpired(false)).rejects.toThrow(
-        'Token refresh is unavailable and existing tokens are invalid',
-      );
+      const error = await refreshTokensIfExpired(false).catch(e => e);
+      expect(error).toBeInstanceOf(UasError);
+      expect(error.status).toBe(401);
     });
 
-    it('throws when token is expired and refresh is unavailable', async () => {
+    it('throws a UasError(401) when token is expired and refresh is unavailable', async () => {
       const expiredToken = createTestToken(ONE_HOUR_AGO);
       mockCookieGet.mockReturnValue(expiredToken);
 
-      await expect(refreshTokensIfExpired(undefined)).rejects.toThrow(
-        'Token refresh is unavailable and existing tokens are invalid',
-      );
+      const error = await refreshTokensIfExpired(false).catch(e => e);
+      expect(error).toBeInstanceOf(UasError);
+      expect(error.status).toBe(401);
     });
   });
 });

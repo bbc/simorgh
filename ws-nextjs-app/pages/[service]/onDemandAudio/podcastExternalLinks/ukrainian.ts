@@ -12,4 +12,17 @@ export default {
       linkType: 'apple',
     },
   ],
+  p0nxhsdm: [
+    {
+      linkText: 'Spotify',
+      linkUrl: 'https://open.spotify.com/show/033LRA80UEJg7EwvadkIiR',
+      linkType: 'spotify',
+    },
+    {
+      linkText: 'Apple',
+      linkUrl:
+        'https://podcasts.apple.com/us/podcast/я-тебе-врятую/id6788703762',
+      linkType: 'apple',
+    },
+  ],
 };

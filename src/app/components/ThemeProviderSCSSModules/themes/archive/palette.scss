@@ -1,0 +1,9 @@
+@use '../../palette.scss' as palette;
+
+:root {
+  --brand-background: #{palette.$archive-blue};
+  --brand-logo: #{palette.$white};
+  --brand-foreground: #{palette.$white};
+  --brand-highlight: #{palette.$white};
+  --brand-border: #{palette.$white};
+}

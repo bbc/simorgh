@@ -30,6 +30,14 @@ const StyledScrollableNav = styled.div`
     scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
 
+    /* Reserve space matching the fade-out gradient below, so that when a focused
+       item is scrolled into view (see NavigationLi's onFocus handler), it isn't
+       left partially obscured underneath the gradient overlay. */
+    scroll-padding-inline-end: ${GEL_SPACING_SEXT};
+    @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+      scroll-padding-inline-end: 6rem;
+    }
+
     /* Hide scrollbar */
     scrollbar-width: none;
     -ms-overflow-style: none;

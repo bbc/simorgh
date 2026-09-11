@@ -1,25 +1,11 @@
 import { test, expect, type APIRequestContext } from '@playwright/test';
-import { AppEnv, errorPage404Suites } from './suites';
+import { errorPage404Suites } from './suites';
+import {
+  appEnvFromProcess,
+  baseURL,
+  shouldRunForEnv,
+} from '../../utilities/env';
 import appConfig from '../../../utilities/serviceConfigs';
-
-const baseUrlByEnv: Record<AppEnv, string> = {
-  local: 'http://localhost:7081',
-  test: 'https://www.test.bbc.com',
-  live: 'https://www.bbc.com',
-};
-
-const isAppEnv = (value: string | undefined): value is AppEnv =>
-  value !== undefined && value in baseUrlByEnv;
-
-const appEnvFromProcess: AppEnv = isAppEnv(process.env.APP_ENV)
-  ? process.env.APP_ENV
-  : 'local';
-
-const baseURL =
-  process.env.PLAYWRIGHT_BASE_URL || baseUrlByEnv[appEnvFromProcess];
-
-const shouldRunForEnv = (runforEnv: AppEnv[]) =>
-  runforEnv.includes(appEnvFromProcess);
 
 const getServiceConfig = (service: string, variant?: string) => {
   return appConfig[service as keyof typeof appConfig][variant || 'default'];
@@ -55,7 +41,7 @@ test.describe('errorPage404', () => {
       test.describe(`Tests for ${suiteName} errorPage404`, () => {
         test('should return a 404 error code', async ({ request }) => {
           test.skip(
-            !shouldRunForEnv(testSuite.runforEnv),
+            !shouldRunForEnv(testSuite.runForEnv),
             `Skipped for APP_ENV=${appEnvFromProcess}`,
           );
 
@@ -67,7 +53,7 @@ test.describe('errorPage404', () => {
             page,
           }) => {
             test.skip(
-              !shouldRunForEnv(testSuite.runforEnv),
+              !shouldRunForEnv(testSuite.runForEnv),
               `Skipped for APP_ENV=${appEnvFromProcess}`,
             );
 
@@ -88,7 +74,7 @@ test.describe('errorPage404', () => {
             page,
           }) => {
             test.skip(
-              !shouldRunForEnv(testSuite.runforEnv),
+              !shouldRunForEnv(testSuite.runForEnv),
               `Skipped for APP_ENV=${appEnvFromProcess}`,
             );
 
@@ -110,7 +96,7 @@ test.describe('errorPage404', () => {
             page,
           }) => {
             test.skip(
-              !shouldRunForEnv(testSuite.runforEnv),
+              !shouldRunForEnv(testSuite.runForEnv),
               `Skipped for APP_ENV=${appEnvFromProcess}`,
             );
 
@@ -143,7 +129,7 @@ test.describe('errorPage404', () => {
 
           test('should have lang attribute', async ({ page }) => {
             test.skip(
-              !shouldRunForEnv(testSuite.runforEnv),
+              !shouldRunForEnv(testSuite.runForEnv),
               `Skipped for APP_ENV=${appEnvFromProcess}`,
             );
 

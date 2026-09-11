@@ -1,4 +1,4 @@
-import { getFallbackFootballPeriodLabel } from '../helpers/event-summary';
+import getFallbackFootballPeriodLabel from '../helpers/getFallbackFootballPeriodLabel';
 import { isInProgressStatus } from '../helpers/event-status-groups';
 import { shouldShowScores } from './centre';
 import Period from './period';
@@ -22,14 +22,14 @@ const MatchProgress = ({ data, isConciseView }: MatchProgressProps) => {
 
   const fallbackPeriod =
     periodLabel &&
-    getFallbackFootballPeriodLabel(
-      periodLabel,
+    getFallbackFootballPeriodLabel({
+      labels: periodLabel,
       status,
-      home.runningScores,
-      away.runningScores,
-      home.fullName,
-      away.fullName,
-    );
+      homeRunningScores: home.runningScores,
+      awayRunningScores: away.runningScores,
+      homeName: home.fullName,
+      awayName: away.fullName,
+    });
 
   const shouldDisplayPeriod =
     periodLabel && fallbackPeriod && shouldShowScores(status);

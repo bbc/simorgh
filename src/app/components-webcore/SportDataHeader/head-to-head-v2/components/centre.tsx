@@ -42,7 +42,7 @@ const Centre = ({ data, maxScoreLength }: CentreProps) => {
       {shouldShowScores(status) ? (
         <Played data={data} />
       ) : (
-        <Time time={data.time} />
+        <Time date={data.date} time={data.time} />
       )}
     </div>
   );

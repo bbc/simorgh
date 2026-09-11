@@ -9,6 +9,7 @@ interface KeyEventsProps {
   awayKeyEvents: PlayerActions[];
   homeName: string;
   awayName: string;
+  keyEventsTitle?: string;
 }
 
 export const KeyEvents = ({
@@ -16,16 +17,21 @@ export const KeyEvents = ({
   awayKeyEvents,
   homeName,
   awayName,
-}: KeyEventsProps) => (
-  <>
-    <VisuallyHiddenText as="h3">Key Events</VisuallyHiddenText>
-    <div css={styles.keyEventsHome}>
-      <VisuallyHiddenText as="h4">{homeName}</VisuallyHiddenText>
-      <Action contestantActions={homeKeyEvents} alignment="home" />
-    </div>
-    <div css={styles.keyEventsAway}>
-      <VisuallyHiddenText as="h4">{awayName}</VisuallyHiddenText>
-      <Action contestantActions={awayKeyEvents} alignment="away" />
-    </div>
-  </>
-);
+  keyEventsTitle,
+}: KeyEventsProps) => {
+  const title = keyEventsTitle || 'Key Events';
+
+  return (
+    <>
+      <VisuallyHiddenText as="h3">{title}</VisuallyHiddenText>
+      <div css={styles.keyEventsHome}>
+        <VisuallyHiddenText as="h4">{homeName}</VisuallyHiddenText>
+        <Action contestantActions={homeKeyEvents} alignment="home" />
+      </div>
+      <div css={styles.keyEventsAway}>
+        <VisuallyHiddenText as="h4">{awayName}</VisuallyHiddenText>
+        <Action contestantActions={awayKeyEvents} alignment="away" />
+      </div>
+    </>
+  );
+};

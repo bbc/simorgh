@@ -10,6 +10,7 @@ exports[`VisuallyHiddenHeadline with headline data should render correctly 1`] =
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 <div>
@@ -33,6 +34,7 @@ exports[`VisuallyHiddenHeadline with plain text headline should render h1 contai
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 <div>

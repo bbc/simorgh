@@ -5,6 +5,7 @@ import { useTheme } from '@emotion/react';
 import { servicesWithVariants } from '#lib/utilities/variantHandler';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '../../../contexts/RequestContext';
+import { isGlobalLanguageHomepage } from '../Header/NewLogoBanner';
 
 const StyledBrand = styled(Brand)`
   position: relative;
@@ -36,6 +37,7 @@ const BrandContainer = ({
   const { variant } = use(RequestContext);
 
   const { brandSVG } = useTheme();
+
   const svgMaxHeight = 24;
   const svgMinHeight = 16;
   const svgRatio = brandSVG && brandSVG.ratio;
@@ -43,6 +45,8 @@ const BrandContainer = ({
   const maxWidth = svgRatio * svgMaxHeight;
 
   const brandPath = getBrandPath(service, variant);
+  const { pathname } = use(RequestContext);
+  const isLanguagesPage = isGlobalLanguageHomepage(pathname);
 
   return (
     <StyledBrand
@@ -56,6 +60,7 @@ const BrandContainer = ({
       skipLink={skipLink}
       scriptLink={scriptLink}
       ref={brandRef}
+      isLanguagesPage={isLanguagesPage}
       {...props}
     >
       {children}

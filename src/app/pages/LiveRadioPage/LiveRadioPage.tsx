@@ -25,7 +25,7 @@ const LiveRadioPage = ({ pageData }: { pageData: LiveRadioPageProps }) => {
   const hasRadioScheduleData = Boolean(radioScheduleData);
   return (
     <>
-      <ATIAnalytics atiData={pageData?.metadata.atiAnalytics} />
+      <ATIAnalytics />
       <ChartbeatAnalytics
         mediaPageType="Radio"
         title={name}

@@ -83,7 +83,6 @@ const MetadataWithContext = ({
   imageHeight,
   aboutTags,
   mentionsTags,
-  hasAppleItunesAppBanner,
   hasAmpPage,
   isUK = false,
   isLite = false,
@@ -113,7 +112,6 @@ const MetadataWithContext = ({
         imageAltText={imageAltText}
         imageHeight={imageHeight}
         imageWidth={imageWidth}
-        hasAppleItunesAppBanner={hasAppleItunesAppBanner}
         hasAmpPage={hasAmpPage}
       />
     </RequestContextProvider>
@@ -1133,13 +1131,11 @@ describe('Metadata', () => {
     interface CanonicalCPSAssetInternationalOriginProps {
       service: Services;
       platform: Platform;
-      hasAppleItunesAppBanner: boolean;
     }
 
     const CanonicalCPSAssetInternationalOrigin = ({
       service,
       platform,
-      hasAppleItunesAppBanner,
     }: CanonicalCPSAssetInternationalOriginProps) => (
       <MetadataWithContext
         service={service}
@@ -1149,23 +1145,50 @@ describe('Metadata', () => {
         pageType={STORY_PAGE}
         pathname={`/${service}/asset-12345678`}
         {...newsArticleMetadataProps}
-        hasAppleItunesAppBanner={hasAppleItunesAppBanner}
       />
     );
 
     it.each`
-      service     | reason                                            | platform       | hasAppleItunesAppBanner
-      ${'arabic'} | ${'platform is AMP'}                              | ${'amp'}       | ${true}
-      ${'mundo'}  | ${'hasAppleItunesAppBanner is false'}             | ${'canonical'} | ${false}
-      ${'pidgin'} | ${'service does not have iTunesAppId configured'} | ${'canonical'} | ${true}
+      service      | iTunesAppId
+      ${'arabic'}  | ${6761256736}
+      ${'mundo'}   | ${6761256736}
+      ${'russian'} | ${6761256736}
+      ${'hindi'}   | ${6761256736}
+    `(
+      'should be rendered for $service because iTunesAppId is configured ($iTunesAppId)',
+      async ({ service, iTunesAppId }) => {
+        render(
+          <CanonicalCPSAssetInternationalOrigin
+            service={service}
+            platform="canonical"
+          />,
+        );
+
+        await waitFor(() => {
+          const appleItunesApp = document.querySelector(
+            'head > meta[name=apple-itunes-app]',
+          );
+          expect(appleItunesApp).toBeInTheDocument();
+
+          const content = appleItunesApp?.getAttribute('content');
+          expect(content).toEqual(
+            `app-id=${iTunesAppId}, app-argument=https://www.bbc.com/${service}/asset-12345678?utm_medium=banner&utm_content=apple-itunes-app`,
+          );
+        });
+      },
+    );
+
+    it.each`
+      service     | reason                                            | platform
+      ${'arabic'} | ${'platform is AMP'}                              | ${'amp'}
+      ${'pidgin'} | ${'service does not have iTunesAppId configured'} | ${'canonical'}
     `(
       `should not be rendered for $service because $reason`,
-      ({ service, platform, hasAppleItunesAppBanner }) => {
+      ({ service, platform }) => {
         render(
           <CanonicalCPSAssetInternationalOrigin
             service={service}
             platform={platform}
-            hasAppleItunesAppBanner={hasAppleItunesAppBanner}
           />,
         );
 

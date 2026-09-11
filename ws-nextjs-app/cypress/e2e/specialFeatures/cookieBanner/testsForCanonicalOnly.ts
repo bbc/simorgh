@@ -53,7 +53,7 @@ const ensureExplicitPolicyCookieExpiryDates = () => {
 
 export default ({ service, variant = 'default', pageType, path }) => {
   describe('Canonical consent banner', () => {
-    before(() => cy.getToggles(service));
+    before(() => cy.fetchToggles(service));
     beforeEach(() => cy.fixture(`toggles/${service}.json`).as('toggles'));
 
     it('should have a privacy & cookie banner, which disappears once "accepted" ', function test() {

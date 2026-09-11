@@ -3,6 +3,7 @@ import {
   screen,
   act,
 } from '#app/components/react-testing-library-with-providers';
+import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import KeyPoints from '.';
 import { singleKeyPoint, multipleKeyPoints, emptyKeyPoints } from './fixture';
 
@@ -10,7 +11,17 @@ const singleKeyPointBlocks = singleKeyPoint.model.blocks;
 const multipleKeyPointsBlocks = multipleKeyPoints.model.blocks;
 const emptyKeyPointsBlocks = emptyKeyPoints.model.blocks;
 
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  default: jest.fn(),
+}));
+
 describe('Key Points', () => {
+  beforeEach(() => {
+    mockMatchMedia();
+  });
+
   it('should render a section with data-e2e, role and aria-label attributes', async () => {
     const { container } = await act(async () => {
       return render(<KeyPoints keyPointsContent={singleKeyPointBlocks} />);

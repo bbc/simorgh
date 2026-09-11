@@ -1,0 +1,780 @@
+{
+  "data": {
+    "generated": "2026-06-18T16:29:57.191766775Z",
+    "lastRecordTimeStamp": "2026-06-18T16:27:00Z",
+    "firstRecordTimeStamp": "2026-06-18T14:57:00Z",
+    "items": [
+      {
+        "id": "urn:bbc:optimo:asset:c4gz9w8g74po",
+        "rank": 1,
+        "title": "Nemcsak melegünk van: a hőség az agyműködésünkre is hatással van",
+        "href": "https://www.bbc.com/magyarul/articles/c4gz9w8g74po",
+        "timestamp": "2026-06-16T05:37:53.940Z",
+        "images": {
+          "defaultPromoImage": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Az agy nemcsak reagál a hőségre hanem változik is",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Az agy nemcsak reagál a hőségre hanem változik is",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Szerkesztett grafikus kép az agyról, felülről, egy nyitott koponyában,  a bal féltekén narancssárga folttal ",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Szerkesztett grafikus kép az agyról, felülről, egy nyitott koponyában,  a bal féltekén narancssárga folttal ",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 1600,
+                  "height": 900,
+                  "locator": "99ff/live/b5dcb7e0-710d-11f0-af20-030418be2ca5.jpg",
+                  "originCode": "cpsprodpb",
+                  "copyrightHolder": "Serenity Strull/Getty Images",
+                  "suitableForSyndication": true
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cm20ylg31jjo",
+        "rank": 2,
+        "title": "Mit ígért Kijev Budapestnek az EU‑tárgyalások megkezdéséért?",
+        "href": "https://www.bbc.com/magyarul/articles/cm20ylg31jjo",
+        "timestamp": "2026-06-18T06:24:35.095Z",
+        "images": {
+          "defaultPromoImage": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Két gyerek halad a tüntetők előtt egy budapesti utcán, egyikük kezében egy ukrán, a másik kezében egy magyar zászló. Mögöttük Ukrajna melletti jelszavakat tartó emberek láthatók.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Két gyerek halad a tüntetők előtt egy budapesti utcán, egyikük kezében egy ukrán, a másik kezében egy magyar zászló. Mögöttük Ukrajna melletti jelszavakat tartó emberek láthatók.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 559,
+                  "height": 314,
+                  "locator": "a15e/live/71b48170-6747-11f1-b4c1-47ccd10ce929.jpg",
+                  "originCode": "cpsprodpb",
+                  "copyrightHolder": "Getty Images",
+                  "suitableForSyndication": true
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cy9r4zy7ex0o",
+        "rank": 3,
+        "title": "Gyengíti-e az új magyar kormány Kína EU-s pozícióit?",
+        "href": "https://www.bbc.com/magyarul/articles/cy9r4zy7ex0o",
+        "timestamp": "2026-06-15T23:41:25.102Z",
+        "images": {
+          "defaultPromoImage": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Kínai és magyar zászlók a budapesti Erzsébet-hídon a kínai elnök látogatása előtt 2024 májusában",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Kínai és magyar zászlók a budapesti Erzsébet-hídon a kínai elnök látogatása előtt 2024 májusában",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Kínai és magyar zászlók sorakoznak egy hídon Budapesten, a háttérben egy szobor és oszlopos építmény látható a Gellért-hegy alján.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Kínai és magyar zászlók sorakoznak egy hídon Budapesten, a háttérben egy szobor és oszlopos építmény látható a Gellért-hegy alján.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 1014,
+                  "height": 571,
+                  "locator": "32c8/live/ace1f2a0-6913-11f1-a2ed-5dda09a2c9f9.jpg",
+                  "originCode": "cpsprodpb",
+                  "copyrightHolder": "ATTILA KISBENEDEK/AFP via Getty Images",
+                  "suitableForSyndication": true
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c4gymr3rm23o",
+        "rank": 4,
+        "title": "BBC-nyomozás: OnlyFans „ügynökök\" irányítják és fenyegetik a modelleket, miközben elveszik a bevételeik felét",
+        "href": "https://www.bbc.com/magyarul/articles/c4gymr3rm23o",
+        "timestamp": "2026-06-18T10:14:08.286Z",
+        "images": {
+          "defaultPromoImage": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Rebecca OnlyFans‑modell, aki bántalmazó üzeneteknek és erőszaknak volt kitéve",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Rebecca OnlyFans‑modell, aki bántalmazó üzeneteknek és erőszaknak volt kitéve",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Rebecca félalakos portréja világos kőfal előtt. Hosszú, hullámos szőke haja van, fekete felsőt és világos rózsaszín dzsekit visel. Merengve néz a kamerába.\n",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Rebecca félalakos portréja világos kőfal előtt. Hosszú, hullámos szőke haja van, fekete felsőt és világos rózsaszín dzsekit visel. Merengve néz a kamerába.\n",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 1920,
+                  "height": 1080,
+                  "locator": "e7fd/live/0293ddf0-6683-11f1-8546-8f19e4fe30f4.jpg",
+                  "originCode": "cpsprodpb",
+                  "copyrightHolder": "Gus Palmer/BBC",
+                  "suitableForSyndication": true
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cp3x429vljpo",
+        "rank": 5,
+        "title": "2026-os FIFA labdarúgó-világbajnokság: mérkőzések, csoportok, helyszínek és eredmények",
+        "href": "https://www.bbc.com/magyarul/articles/cp3x429vljpo",
+        "timestamp": "2026-06-17T14:37:12.073Z",
+        "images": {
+          "defaultPromoImage": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Egy focilabda látható a képen és egy felé közelítő láb, a labda körül zöld vonalak, a bal alsó sarokban ott a 2026-os szám",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Egy focilabda látható a képen és egy felé közelítő láb, a labda körül zöld vonalak, a bal alsó sarokban ott a 2026-os szám",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 1920,
+                  "height": 1080,
+                  "locator": "9d91/live/5983af10-6a56-11f1-b1db-af71d47507d6.png",
+                  "originCode": "cpsprodpb",
+                  "copyrightHolder": "BBC",
+                  "suitableForSyndication": true
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "urn:bbc:optimo:asset:crrpy847e94o",
+        "rank": 6,
+        "title": "Egy külföldi tudósító kalandjai Magyarországon",
+        "href": "https://www.bbc.com/magyarul/articles/crrpy847e94o",
+        "timestamp": "2026-06-15T11:17:54.427Z",
+        "images": {
+          "defaultPromoImage": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Nick Thorpe, a BBC budapesti tudósítója Orbán Viktor akkori magyar miniszterelnököt kérdezi a 2010. október 4-i ajkai vörösiszap-katasztrófa után",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Nick Thorpe, a BBC budapesti tudósítója Orbán Viktor akkori magyar miniszterelnököt kérdezi a 2010. október 4-i ajkai vörösiszap-katasztrófa után",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Újságírók láthatók egy fekete-fehér képen, középen Nick Thorpe, a BBC budapesti újságírója. A fotón csak hátulról látható Orbán Viktort, akkori magyar miniszterelnököt kérdezik a 2010. október 4-i ajkai vörösiszap-katasztrófa után.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Újságírók láthatók egy fekete-fehér képen, középen Nick Thorpe, a BBC budapesti újságírója. A fotón csak hátulról látható Orbán Viktort, akkori magyar miniszterelnököt kérdezik a 2010. október 4-i ajkai vörösiszap-katasztrófa után.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 5616,
+                  "height": 3159,
+                  "locator": "140d/live/3a269760-68ab-11f1-a887-c513fdcee6e6.jpg",
+                  "originCode": "cpsprodpb",
+                  "copyrightHolder": "Pörneczi Bálint",
+                  "suitableForSyndication": true
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c709wepqg21o",
+        "rank": 7,
+        "title": "Tényleg vannak, akik úgy születtek, hogy rosszak matekból?",
+        "href": "https://www.bbc.com/magyarul/articles/c709wepqg21o",
+        "timestamp": "2026-06-15T15:48:30.735Z",
+        "images": {
+          "defaultPromoImage": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Egy fiú arcát egy, az asztalon nyitva lévő könyvbe temetve ül egy széken",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Egy fiú arcát egy, az asztalon nyitva lévő könyvbe temetve ül egy széken",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Egy barna hajú fiú arcát egy, az asztalon nyitva lévő könyvbe temetve ül egy kék széken, az asztalon látható egy íróeszköz is, de a fiú keze nem. A háttér elmosódva látszik, egy ablak van a fiú mögött, a könyvnek az elején tart.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Egy barna hajú fiú arcát egy, az asztalon nyitva lévő könyvbe temetve ül egy kék széken, az asztalon látható egy íróeszköz is, de a fiú keze nem. A háttér elmosódva látszik, egy ablak van a fiú mögött, a könyvnek az elején tart.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 2119,
+                  "height": 1192,
+                  "locator": "9fb0/live/67355500-a058-11f0-b687-23a5afa8b42e.jpg",
+                  "originCode": "cpsprodpb",
+                  "copyrightHolder": "djedzura/Getty Images",
+                  "suitableForSyndication": true
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cvgmdg5p5deo",
+        "rank": 8,
+        "title": "„Borzalmas volt olyasmin dolgozni, ami életeket követel\" – félrevezetett afrikai nők egy orosz dróngyárban",
+        "href": "https://www.bbc.com/magyarul/articles/cvgmdg5p5deo",
+        "timestamp": "2026-06-16T10:19:26.702Z",
+        "images": {
+          "defaultPromoImage": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Montázskép ami az orosz zászlót, a dél-szudáni zászlót, drónok sziluettjét és egy nő sziluettjét ábrázolja.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Montázskép ami az orosz zászlót, a dél-szudáni zászlót, drónok sziluettjét és egy nő sziluettjét ábrázolja.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 1920,
+                  "height": 1080,
+                  "locator": "6144/live/2d28c0d0-ae69-11f0-b2a1-6f537f66f9aa.png",
+                  "originCode": "cpsprodpb",
+                  "copyrightHolder": "Getty Images / BBC",
+                  "suitableForSyndication": true
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "urn:bbc:optimo:asset:cze9gzenpryo",
+        "rank": 9,
+        "title": "Óriási lakomák borzolják a radikális baloldal kedélyét Franciaországban",
+        "href": "https://www.bbc.com/magyarul/articles/cze9gzenpryo",
+        "timestamp": "2026-06-15T11:22:44.078Z",
+        "images": {
+          "defaultPromoImage": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Egy csoport fiatal férfi svájcisapkában és sportmezben ül egy hosszú asztal két oldalán. Az asztalon étellel teli tálak és borok",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Egy csoport fiatal férfi svájcisapkában és sportmezben ül egy hosszú asztal két oldalán. Az asztalon étellel teli tálak és borok",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 4000,
+                  "height": 2250,
+                  "locator": "c09f/live/692c9090-60c8-11f1-89a3-d1f559421220.jpg",
+                  "originCode": "cpsprodpb",
+                  "copyrightHolder": "BBC",
+                  "suitableForSyndication": true
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "urn:bbc:optimo:asset:c621xnln608o",
+        "rank": 10,
+        "title": "G7: Ukrajna ismét napirenden, a résztvevők Trump kedvét keresik",
+        "href": "https://www.bbc.com/magyarul/articles/c621xnln608o",
+        "timestamp": "2026-06-18T10:59:51.717Z",
+        "images": {
+          "defaultPromoImage": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Keir Starmer brit miniszterelnök, Donald Trump amerikai elnök és Emmanuel Macron francia elnök egy fehér asztalnál ülnek. Donald Trump jobb kezét felemeli, és előre felé mutat.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Keir Starmer brit miniszterelnök, Donald Trump amerikai elnök és Emmanuel Macron francia elnök egy fehér asztalnál ülnek. Donald Trump jobb kezét felemeli, és előre felé mutat.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 5500,
+                  "height": 3094,
+                  "locator": "451b/live/af28ab90-6b06-11f1-aa02-f994d64872ca.jpg",
+                  "originCode": "cpsprodpb",
+                  "copyrightHolder": "Reuters",
+                  "suitableForSyndication": true
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentType": "list-datadriven",
+        "pageIdentifier": "hungarian.popular.read.page",
+        "timePublished": "2026-06-18T14:57:00Z",
+        "timeUpdated": "2026-06-18T16:27:00Z"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}

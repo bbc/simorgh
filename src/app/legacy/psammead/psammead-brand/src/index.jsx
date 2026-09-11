@@ -36,17 +36,20 @@ const Banner = styled.div`
   align-items: stretch;
 
   @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
-    min-height: ${60 / 16}rem;
+    min-height: ${props =>
+      props.isLanguagesPage ? `${44 / 16}rem` : `${60 / 16}rem`};
     padding: 0 ${GEL_SPACING};
   }
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    min-height: ${60 / 16}rem;
+    min-height: ${props =>
+      props.isLanguagesPage ? `${44 / 16}rem` : `${60 / 16}rem`};
     padding: 0 ${GEL_SPACING_DBL};
   }
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    min-height: ${64 / 16}rem;
+    min-height: ${props =>
+      props.isLanguagesPage ? `${44 / 16}rem` : `${64 / 16}rem`};
   }
 `;
 
@@ -89,7 +92,8 @@ const BrandSvg = styled.svg`
   }
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    height: ${30 / 16}rem;
+    height: ${props =>
+      props.isLanguagesPage ? `${24 / 16}rem` : `${30 / 16}rem`};
   }
 
   @media screen and (-ms-high-contrast: active), print {
@@ -115,7 +119,13 @@ const LocalisedBrandName = ({
   );
 };
 
-const StyledBrand = ({ linkId, product, serviceLocalisedName = null, svg }) => {
+const StyledBrand = ({
+  linkId,
+  product,
+  serviceLocalisedName = null,
+  svg,
+  isLanguagesPage = false,
+}) => {
   return svg ? (
     <>
       <BrandSvg
@@ -130,6 +140,7 @@ const StyledBrand = ({ linkId, product, serviceLocalisedName = null, svg }) => {
         focusable="false"
         aria-hidden="true"
         height="32"
+        isLanguagesPage={isLanguagesPage && linkId !== 'footer'}
       >
         {svg.group}
       </BrandSvg>
@@ -152,11 +163,18 @@ const Brand = forwardRef((props, ref) => {
     skipLink = null,
     linkId = null,
     children,
+    serviceLocalisedName,
+    isLanguagesPage,
     ...rest
   } = props;
 
   return (
-    <Banner svgHeight={svgHeight} scriptLink={scriptLink} {...rest}>
+    <Banner
+      svgHeight={svgHeight}
+      scriptLink={scriptLink}
+      isLanguagesPage={isLanguagesPage && linkId !== 'footer'}
+      {...rest}
+    >
       <SvgWrapper ref={ref} className="brand-svg-wrapper">
         {url ? (
           <StyledLink

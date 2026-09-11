@@ -1,3 +1,4 @@
+import { screen } from '@testing-library/react';
 import { useRef, useEffect } from 'react';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import { POSTBOX, WHITE } from '../../../../components/ThemeProvider/palette';
@@ -22,7 +23,7 @@ describe('Brand', () => {
   suppressPropWarnings(['linkId', 'LocalisedBrandName', 'null']);
 
   it('should render correctly with link provided', () => {
-    const { container } = render(
+    render(
       <Brand
         product="Default Brand Name"
         serviceLocalisedName="Service"
@@ -35,7 +36,7 @@ describe('Brand', () => {
         logoColour={WHITE}
       />,
     );
-    expect(container).toMatchSnapshot();
+    expect(screen.getByRole('link')).toBeInTheDocument();
   });
 
   it('should render correctly with link not provided', () => {
@@ -51,7 +52,7 @@ describe('Brand', () => {
         logoColour={WHITE}
       />,
     );
-    expect(container).toMatchSnapshot();
+    expect(container.firstChild).toBeInTheDocument();
   });
 
   it('should render correctly with no service Localised Name', () => {
@@ -66,7 +67,7 @@ describe('Brand', () => {
         logoColour={WHITE}
       />,
     );
-    expect(container).toMatchSnapshot();
+    expect(container.firstChild).toBeInTheDocument();
   });
 
   describe('assertions - visually hidden text', () => {

@@ -40,6 +40,7 @@ import ComscoreAnalytics from '../../legacy/containers/ComscoreAnalytics';
 import SocialEmbedContainer from '../../legacy/containers/SocialEmbed';
 import fauxHeadline from '../../legacy/containers/FauxHeadline';
 import RelatedTopics from '../../components/RelatedTopics';
+import TopicDiscovery from '../../components/TopicDiscovery';
 import NielsenAnalytics from '../../legacy/containers/NielsenAnalytics';
 import ArticleMetadata from '../../legacy/containers/ArticleMetadata';
 import EmbedImages from '../../components/Embeds/EmbedImages';
@@ -141,15 +142,12 @@ const getTimestampComponent =
     showTimestamp ? <Timestamp {...props} popOut={false} /> : null;
 
 const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
-  const { pageType } = use(RequestContext);
+  const { pageType, isAmp, isLite } = use(RequestContext);
 
-  const {
-    articleAuthor,
-    isTrustProjectParticipant,
-    showRelatedTopics,
-    brandName,
-  } = use(ServiceContext);
+  const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
+    use(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
+  const { enabled: topicDiscoveryEnabled } = useToggle('topicDiscovery');
 
   const headline = getHeadline(pageData) ?? '';
   const description = getSummary(pageData) || getHeadline(pageData);
@@ -180,20 +178,14 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const formats = pageData?.metadata?.passport?.predicates?.formats ?? [];
 
-  // ATI
   const {
-    metadata: { atiAnalytics, type },
+    metadata: { type },
   } = pageData;
 
   const isCpsMap = type === MEDIA_ASSET_PAGE;
   const isTC2Asset = pageData?.metadata?.analyticsLabels?.contentId
     ?.split(':')
     ?.includes('topcat');
-
-  const atiData = {
-    ...atiAnalytics,
-    ...(isCpsMap && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
-  };
 
   const promoImageBlocks =
     pageData?.promo?.images?.defaultPromoImage?.blocks ?? [];
@@ -210,7 +202,10 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const promoImage = promoImageRawBlock?.model?.locator;
 
-  const showTopics = Boolean(showRelatedTopics && topics.length > 0);
+  const showTopicDiscovery = topicDiscoveryEnabled && !isAmp && !isLite;
+  const showTopics = Boolean(
+    showRelatedTopics && topics.length > 0 && !showTopicDiscovery,
+  );
 
   const isLiveMedia = checkIsLiveMedia(blocks);
 
@@ -245,7 +240,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
   // flags mirror article page for page views per visit tracking
   return (
     <div css={styles.pageWrapper}>
-      <ATIAnalytics atiData={atiData} />
+      <ATIAnalytics />
       <ChartbeatAnalytics
         categoryName={pageData?.metadata?.passport?.category?.categoryName}
         title={headline}
@@ -290,7 +285,8 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
           <main css={styles.mainContent} role="main">
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </main>
-          <OptimizelyPageMetrics trackPageView trackPageDepth trackVisit />
+          <OptimizelyPageMetrics trackPageDepth />
+          {showTopicDiscovery && <TopicDiscovery topics={topics} />}
           {showTopics && (
             <RelatedTopics css={styles.relatedTopics} topics={topics} />
           )}

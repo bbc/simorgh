@@ -2,6 +2,7 @@ import {
   act,
   render,
 } from '#app/components/react-testing-library-with-providers';
+import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import * as FormContext from '../FormContext';
 import FormField, { FormComponentProps } from '.';
 import { Field } from '../types';
@@ -9,6 +10,12 @@ import { ContextProps } from '../FormContext';
 
 jest.mock('next/router', () => ({
   useRouter: () => ({ query: { id: 'u1234' } }),
+}));
+
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  default: jest.fn(),
 }));
 
 jest.mock('../FormContext', () => {
@@ -34,6 +41,8 @@ const ComponentWithContext = ({
 describe('FormField', () => {
   beforeEach(() => {
     jest.restoreAllMocks();
+
+    mockMatchMedia();
   });
 
   it('should render a text input with an associated label', async () => {

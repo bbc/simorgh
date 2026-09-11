@@ -14,6 +14,12 @@ type ScrollableTabsProps = {
   labelledBy: string;
   groupTracker?: EventTrackingData['groupTracker'];
   experimentProps?: ComponentExperimentProps;
+  setShouldFocusPromos?: (value: boolean) => void;
+  onTabKeyDown?: (
+    event: React.KeyboardEvent<HTMLButtonElement>,
+    tabId: string,
+    isActive: boolean,
+  ) => void;
 };
 
 const ScrollableTabs = ({
@@ -23,6 +29,7 @@ const ScrollableTabs = ({
   labelledBy,
   groupTracker,
   experimentProps,
+  onTabKeyDown,
 }: ScrollableTabsProps) => {
   const { dir } = use(ServiceContext);
   const tabListRef = useRef<HTMLDivElement>(null);
@@ -135,10 +142,18 @@ const ScrollableTabs = ({
               aria-selected={isActive}
               aria-controls={`tabpanel-${tab.id}`}
               css={[styles.tab, isActive && styles.tabActive]}
+              onFocus={event => {
+                event.currentTarget.scrollIntoView({
+                  block: 'nearest',
+                  inline: 'nearest',
+                  behavior: 'smooth',
+                });
+              }}
               onClick={event => {
                 onTabChange(tab.id);
                 clickTrackerHandler?.onClick?.(event);
               }}
+              onKeyDown={event => onTabKeyDown?.(event, tab.id, isActive)}
             >
               {tab.label}
             </button>

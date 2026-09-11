@@ -304,7 +304,7 @@ exports[`AMP Media Asset Page SEO Linked data should match text 2`] = `
 
 exports[`AMP Media Asset Page SEO OG description 1`] = `"Lorem ipsum dolor sit amet, consectetur this is a change"`;
 
-exports[`AMP Media Asset Page SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg"`;
+exports[`AMP Media Asset Page SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1200/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg"`;
 
 exports[`AMP Media Asset Page SEO OG image alt 1`] = `"connectionAltText"`;
 
@@ -330,7 +330,7 @@ exports[`AMP Media Asset Page SEO Twitter description 1`] = `"Lorem ipsum dolor 
 
 exports[`AMP Media Asset Page SEO Twitter image alt 1`] = `"connectionAltText"`;
 
-exports[`AMP Media Asset Page SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg"`;
+exports[`AMP Media Asset Page SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1200/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg"`;
 
 exports[`AMP Media Asset Page SEO Twitter site 1`] = `"@BBCNews"`;
 

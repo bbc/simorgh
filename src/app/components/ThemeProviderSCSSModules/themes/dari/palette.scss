@@ -1,0 +1,9 @@
+@use '../../palette.scss' as palette;
+
+:root {
+  --brand-background: #{palette.$postbox};
+  --brand-logo: #{palette.$white};
+  --brand-foreground: #{palette.$ghost};
+  --brand-highlight: #{palette.$white};
+  --brand-border: #{palette.$postbox-30};
+}

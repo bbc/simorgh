@@ -25,9 +25,11 @@ jest.mock('#app/lib/utilities/getUUID', () =>
 
 describe('Ad Container', () => {
   const originalConfigUrl = process.env.SIMORGH_CONFIG_URL;
+  const originalWebCdnUrl = process.env.WEB_CDN_URL;
 
   beforeAll(() => {
     process.env.SIMORGH_CONFIG_URL = 'https://mock-toggles-endpoint.bbc.co.uk';
+    process.env.WEB_CDN_URL = 'https://web-cdn.test';
 
     // @ts-expect-error dotcom is added to the window object by BBC Ads script
     window.dotcom = {
@@ -38,6 +40,7 @@ describe('Ad Container', () => {
 
   afterAll(() => {
     process.env.SIMORGH_CONFIG_URL = originalConfigUrl;
+    process.env.WEB_CDN_URL = originalWebCdnUrl;
     // @ts-expect-error dotcom is added to the window object by BBC Ads script
     window.dotcom = undefined;
   });

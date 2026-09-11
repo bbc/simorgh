@@ -230,7 +230,7 @@ exports[`Canonical Media Asset Page SEO Linked data should match text 1`] = `
 
 exports[`Canonical Media Asset Page SEO OG description 1`] = `"شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها"`;
 
-exports[`Canonical Media Asset Page SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_arabic/worldservice/test/assets/images/2014/09/22/140922130059_144x81.jpg"`;
+exports[`Canonical Media Asset Page SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1200/branded_arabic/worldservice/test/assets/images/2014/09/22/140922130059_144x81.jpg"`;
 
 exports[`Canonical Media Asset Page SEO OG image alt 1`] = `"BBC News عربي"`;
 
@@ -256,7 +256,7 @@ exports[`Canonical Media Asset Page SEO Twitter description 1`] = `"شركة ش�
 
 exports[`Canonical Media Asset Page SEO Twitter image alt 1`] = `"BBC News عربي"`;
 
-exports[`Canonical Media Asset Page SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_arabic/worldservice/test/assets/images/2014/09/22/140922130059_144x81.jpg"`;
+exports[`Canonical Media Asset Page SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1200/branded_arabic/worldservice/test/assets/images/2014/09/22/140922130059_144x81.jpg"`;
 
 exports[`Canonical Media Asset Page SEO Twitter site 1`] = `"@BBCArabic"`;
 

@@ -294,7 +294,7 @@ exports[`AMP Media Asset Page SEO Linked data should match text 2`] = `
 
 exports[`AMP Media Asset Page SEO OG description 1`] = `"Trump summary text"`;
 
-exports[`AMP Media Asset Page SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_persian/14DFC/test/_63700558_p01lmkk5.jpg"`;
+exports[`AMP Media Asset Page SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1200/branded_persian/14DFC/test/_63700558_p01lmkk5.jpg"`;
 
 exports[`AMP Media Asset Page SEO OG image alt 1`] = `"Trump getting upset"`;
 
@@ -320,7 +320,7 @@ exports[`AMP Media Asset Page SEO Twitter description 1`] = `"Trump summary text
 
 exports[`AMP Media Asset Page SEO Twitter image alt 1`] = `"Trump getting upset"`;
 
-exports[`AMP Media Asset Page SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_persian/14DFC/test/_63700558_p01lmkk5.jpg"`;
+exports[`AMP Media Asset Page SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1200/branded_persian/14DFC/test/_63700558_p01lmkk5.jpg"`;
 
 exports[`AMP Media Asset Page SEO Twitter site 1`] = `"@bbcpersian"`;
 

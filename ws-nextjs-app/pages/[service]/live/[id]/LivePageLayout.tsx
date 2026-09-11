@@ -4,7 +4,6 @@ import Pagination from '#app/components/Pagination';
 import PortraitVideoCarousel from '#app/components/PortraitVideoCarousel';
 import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
 import ATIAnalytics from '#app/components/ATIAnalytics';
-import { ATIData } from '#app/components/ATIAnalytics/types';
 import { RequestContext } from '#app/contexts/RequestContext';
 import MetadataContainer from '#app/components/Metadata';
 import LinkedDataContainer from '#app/components/LinkedData';
@@ -13,7 +12,7 @@ import { MediaCollection } from '#app/components/MediaLoader/types';
 import HeadToHeadV2 from '#app/components-webcore/SportDataHeader/head-to-head-v2';
 import { HeadToHeadV2Data } from '#app/components-webcore/SportDataHeader/head-to-head-v2/types';
 import { PortraitVideoItems } from '#app/models/types/optimo';
-import useLivePagePolling from '#app/hooks/useLivePagePolling';
+import usePolling from '#app/hooks/usePolling';
 import useToggle from '#app/hooks/useToggle';
 import {
   getImageFromPost,
@@ -61,7 +60,6 @@ export type ComponentProps = {
     promoImage: LivePromoImage | null;
     startDateTime?: string;
     endDateTime?: string;
-    metadata: { atiAnalytics: ATIData };
     mediaCollections: MediaCollection[] | null;
     portraitVideoItems?: PortraitVideoItems | null;
     sportDataEventContent?: {
@@ -101,7 +99,6 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
     isLive,
     summaryPoints: { content: keyPoints },
     liveTextStream,
-    metadata: { atiAnalytics = undefined } = {},
     headerImage,
     promoImage,
     mediaCollections,
@@ -109,14 +106,37 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
     sportDataEventContent,
   } = pageData;
 
-  const { currentStreamData, hasPendingUpdate, applyPendingUpdate } =
-    useLivePagePolling(pageData, livePagePollingEnabled && isLive);
+  const initialStreamData = liveTextStream?.content?.data ?? null;
 
-  const {
-    sportDataEvent: sportData,
-    live: isSportDataLive = false,
-    title: sportDataTitle,
-  } = sportDataEventContent || {};
+  const polledStreamData = usePolling<
+    StreamResponse['data'],
+    StreamResponse['data'] | null
+  >({
+    initialData: initialStreamData,
+    enabled:
+      livePagePollingEnabled && isLive && initialStreamData?.page?.index === 1,
+    endpoint: 'stream',
+    params: { liveTextStreamId: liveTextStream.id, type: 'curated' },
+    returnedData: response =>
+      response?.results && response.results.length > 0 ? response : null,
+  });
+
+  const [currentStreamData, setCurrentStreamData] = useState(initialStreamData);
+
+  const polledFirstPostUrn = polledStreamData?.results?.[0]?.urn;
+  const currentFirstPostUrn = currentStreamData?.results?.[0]?.urn;
+  const hasPendingUpdate = Boolean(
+    polledFirstPostUrn && polledFirstPostUrn !== currentFirstPostUrn,
+  );
+
+  const applyPendingUpdate = () => {
+    if (hasPendingUpdate) {
+      setCurrentStreamData(polledStreamData);
+    }
+  };
+
+  const { sportDataEvent: sportData, live: isSportDataLive = false } =
+    sportDataEventContent || {};
   const showSportData = !!sportData && Boolean(sportHeaderEnabled);
 
   const {
@@ -182,7 +202,7 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
 
   return (
     <>
-      <ATIAnalytics atiData={atiAnalytics} />
+      <ATIAnalytics />
       <ChartbeatAnalytics title={metaTitle ?? pageTitle} />
       <MetadataContainer
         title={metaTitle}
@@ -217,7 +237,7 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
       <main>
         <Header
           showLiveLabel={showSportData ? isSportDataLive : isLive}
-          title={showSportData && !!sportDataTitle ? sportDataTitle : title}
+          title={title}
           description={description}
           imageUrl={imageUrl}
           imageUrlTemplate={imageUrlTemplate}
@@ -260,6 +280,7 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
               isFirstPostVisible={isFirstPostVisible}
               hasPendingUpdate={hasPendingUpdate}
               streamRef={streamRef as RefObject<HTMLDivElement>}
+              pageId={liveTextStream.id}
             />
           </div>
         </div>

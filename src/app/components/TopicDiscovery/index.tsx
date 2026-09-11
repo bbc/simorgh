@@ -2,14 +2,19 @@ import { useState, use } from 'react';
 import CurationGrid from '#app/components/Curation/CurationGrid';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import { ComponentExperimentProps } from '#app/models/types/global';
 import { TopicTag } from '#app/models/types/metadata';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import { ComponentExperimentProps } from '#app/models/types/global';
+import { RequestContext } from '#app/contexts/RequestContext';
+import getTopicPageUrl from '#app/lib/utilities/getTopicPageUrl';
 import ScrollableTabs from './ScrollableTabs';
 import styles from './index.styles';
 import useFetchTopicPromos from './useFetchTopicPromos';
 
-type ExtractedTopic = Pick<TopicTag, 'topicId' | 'topicName' | 'topicUrl'>;
+export type ExtractedTopic = Pick<
+  TopicTag,
+  'topicId' | 'topicName' | 'topicUrl'
+>;
 
 type TopicDiscoveryProps = {
   topics: ExtractedTopic[];
@@ -24,14 +29,24 @@ const TopicDiscovery = ({
   className,
   experimentProps,
 }: TopicDiscoveryProps) => {
-  const { translations } = use(ServiceContext);
+  const { service, translations, dir } = use(ServiceContext);
+  const { variant } = use(RequestContext);
   const {
     heading = 'Discover more',
-    moreFromTopic = 'More from {topic}',
+    moreAboutTopic = 'More about {topic}',
     fetchErrorMessage = 'Failed to load. Please try again later.',
   } = translations.topicDiscovery || {};
 
+  const buildTopicPageUrl = (topicId: string) =>
+    getTopicPageUrl({
+      service,
+      topicId,
+      variant,
+      topicsPath: translations?.topicsPath,
+    });
+
   const [activeTabId, setActiveTabId] = useState(topics?.[0]?.topicId || '');
+  const [shouldFocusPromos, setShouldFocusPromos] = useState(false);
   const activeTopic = topics?.find(topic => topic.topicId === activeTabId);
   const currentTopic = activeTopic || topics?.[0];
   const tabs = topics
@@ -40,6 +55,11 @@ const TopicDiscovery = ({
         label: topic.topicName,
       }))
     : [];
+
+  const handleTabChange = (tabId: string) => {
+    setActiveTabId(tabId);
+    setShouldFocusPromos(true);
+  };
   const groupTracker = {
     name: heading,
     type: 'topic-discovery',
@@ -61,21 +81,77 @@ const TopicDiscovery = ({
     componentName: 'topic-discovery-fetch-error-message',
   });
 
-  const moreFromLinkClickTracker = useClickTrackerHandler({
-    componentName: 'topic-discovery-more-from-link',
+  const moreAboutLinkClickTracker = useClickTrackerHandler({
+    componentName: 'topic-discovery-more-about-link',
     groupTracker,
+    ...(experimentProps && experimentProps),
     itemTracker: {
-      type: 'topic-discovery-more-from-link',
+      type: 'topic-discovery-more-about-link',
       text: currentTopic
-        ? moreFromTopic.replace('{topic}', currentTopic.topicName)
+        ? moreAboutTopic.replace('{topic}', currentTopic.topicName)
         : undefined,
       resourceId: currentTopic?.topicId,
     },
-    ...(experimentProps && experimentProps),
   });
+
+  const focusNextTab = () => {
+    const currentIndex = tabs.findIndex(tab => tab.id === activeTabId);
+    const nextTab = tabs[currentIndex + 1];
+
+    if (!nextTab) return false;
+
+    setActiveTabId(nextTab.id);
+    setShouldFocusPromos(false);
+    requestAnimationFrame(() => {
+      document.getElementById(`tab-${nextTab.id}`)?.focus();
+    });
+
+    return true;
+  };
+  const handleMoreLinkKeyDown = (
+    event: React.KeyboardEvent<HTMLAnchorElement>,
+  ) => {
+    if (event.key !== 'Tab' || event.shiftKey) {
+      return;
+    }
+    const movedToNextTab = focusNextTab();
+
+    if (movedToNextTab) {
+      event.preventDefault();
+    }
+  };
+
+  const handleTabKeyDown = (
+    event: React.KeyboardEvent<HTMLButtonElement>,
+    tabId: string,
+    isActive: boolean,
+  ) => {
+    if (
+      event.key !== 'Tab' ||
+      event.shiftKey ||
+      !isActive ||
+      !shouldFocusPromos
+    ) {
+      return;
+    }
+
+    const firstPromoLink = document.querySelector(
+      `#tabpanel-${tabId} a, #tabpanel-${tabId} button`,
+    ) as HTMLElement | null;
+
+    if (!firstPromoLink) {
+      return;
+    }
+
+    event.preventDefault();
+    firstPromoLink.focus();
+    setShouldFocusPromos(false);
+  };
 
   if (!topics || topics.length === 0) return null;
   const selectedTopic = currentTopic as ExtractedTopic;
+  const selectedTopicUrl =
+    selectedTopic.topicUrl || buildTopicPageUrl(selectedTopic.topicId);
 
   const showLoadingState = Boolean(isLoading && !isError);
   const showErrorMessage = Boolean(!isLoading && isError);
@@ -87,6 +163,7 @@ const TopicDiscovery = ({
       css={styles.section}
       className={className}
       data-testid="topic-discovery"
+      dir={dir}
       {...viewTracker}
     >
       <h2 id={HEADING_ID} css={styles.heading}>
@@ -95,12 +172,15 @@ const TopicDiscovery = ({
       <ScrollableTabs
         tabs={tabs}
         activeTabId={activeTabId}
-        onTabChange={setActiveTabId}
+        onTabChange={handleTabChange}
         labelledBy={HEADING_ID}
         groupTracker={groupTracker}
+        setShouldFocusPromos={setShouldFocusPromos}
+        onTabKeyDown={handleTabKeyDown}
         experimentProps={experimentProps}
       />
       <div
+        key={activeTabId}
         role="tabpanel"
         id={`tabpanel-${activeTabId}`}
         aria-labelledby={`tab-${activeTabId}`}
@@ -124,16 +204,20 @@ const TopicDiscovery = ({
                       </div>
                     ))}
                   </div>
-                  <div css={styles.skeletonMoreFromLinkContainer}>
-                    <div css={styles.skeletonMoreFromLink} aria-hidden />
+                  <div css={styles.skeletonMoreAboutLinkContainer}>
+                    <div css={styles.skeletonMoreAboutLink} aria-hidden />
                   </div>
                 </>
               );
             case showErrorMessage:
               return (
-                <p css={styles.errorMessage} {...errorMessageViewTracker}>
+                <div
+                  role="alert"
+                  css={styles.errorMessage}
+                  {...errorMessageViewTracker}
+                >
                   {fetchErrorMessage}
-                </p>
+                </div>
               );
             default:
               return (
@@ -142,25 +226,26 @@ const TopicDiscovery = ({
                     summaries={topicPromos}
                     eventTrackingData={{
                       componentName: 'topic-discovery-curation-grid',
+                      ...(experimentProps && experimentProps),
                       groupTracker: {
                         name: selectedTopic.topicName,
                         type: 'topic-discovery-curation-grid',
-                        link: selectedTopic.topicUrl,
+                        link: selectedTopicUrl,
                         resourceId: selectedTopic.topicId,
                         ...(topicPromos?.length > 0 && {
                           itemCount: topicPromos.length,
                         }),
                       },
-                      ...(experimentProps && experimentProps),
                     }}
                   />
                   <a
-                    css={styles.moreFromLink}
-                    href={selectedTopic.topicUrl}
-                    data-testid="topic-discovery-more-from"
-                    {...moreFromLinkClickTracker}
+                    css={styles.moreAboutLink}
+                    href={selectedTopicUrl}
+                    data-testid="topic-discovery-more-about"
+                    onKeyDown={handleMoreLinkKeyDown}
+                    {...moreAboutLinkClickTracker}
                   >
-                    {moreFromTopic.replace('{topic}', selectedTopic.topicName)}
+                    {moreAboutTopic.replace('{topic}', selectedTopic.topicName)}
                   </a>
                 </>
               );

@@ -10,6 +10,7 @@ const styles = {
       position: 'absolute',
       width: '1px',
       margin: '0',
+      whiteSpace: 'nowrap',
     }),
 };
 

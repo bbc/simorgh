@@ -3,6 +3,7 @@ import {
   render,
   fireEvent,
 } from '#app/components/react-testing-library-with-providers';
+import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import {
   title,
   description,
@@ -19,6 +20,12 @@ jest.mock('next/router', () => ({
   useRouter: () => ({
     query: { id: '123' },
   }),
+}));
+
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  default: jest.fn(),
 }));
 
 jest.mock('../FormContext', () => {
@@ -43,6 +50,10 @@ const mockContextValue = {
 };
 
 describe('Form', () => {
+  beforeEach(() => {
+    mockMatchMedia();
+  });
+
   it('should render a form with title and fields', async () => {
     jest
       .spyOn(FormContextModule, 'useFormContext')

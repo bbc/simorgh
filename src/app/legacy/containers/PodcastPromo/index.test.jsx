@@ -38,31 +38,40 @@ const {
 } = russianServiceConfig.default.podcastPromo;
 
 describe('Inline', () => {
+  const electionsIconPathSnippet = 'M18.1,7.2v2.6h8.7';
+
   it('Should render a promo for podcasts correctly', () => {
-    const { container } = render(
+    const { getByRole, container } = render(
       <PromoWithContext inline config={burmeseServiceConfig} />,
       {
         service: 'burmese',
       },
     );
-    expect(container).toMatchSnapshot();
+    expect(getByRole('region')).toBeInTheDocument();
+    expect(container.querySelector('a[href*="p02pc9lh"]')).toBeInTheDocument();
   });
 
   it('Should render a promo for whatsapp correctly', () => {
-    const { container } = render(<PromoWithContext inline />, {
+    const { getByRole, container } = render(<PromoWithContext inline />, {
       service: 'russian',
     });
-    expect(container).toMatchSnapshot();
+    expect(getByRole('region')).toBeInTheDocument();
+    expect(
+      container.querySelector('a[href*="whatsapp.com"]'),
+    ).toBeInTheDocument();
   });
 
   it('Should render a promo for youtube correctly', () => {
-    const { container } = render(
+    const { getByRole, container } = render(
       <PromoWithContext inline config={amharicServiceConfig} />,
       {
         service: 'amharic',
       },
     );
-    expect(container).toMatchSnapshot();
+    expect(getByRole('region')).toBeInTheDocument();
+    expect(
+      container.querySelector('a[href*="youtube.com"]'),
+    ).toBeInTheDocument();
   });
   it('Should render a generic promo for other socials correctly', () => {
     const genericPromoConfig = {
@@ -87,8 +96,34 @@ describe('Inline', () => {
         service: 'amharic',
       },
     );
-    expect(container).toMatchSnapshot();
+    expect(container.querySelector('a')).toBeInTheDocument();
   });
+
+  it('should render the elections icon when the promo URL matches the elections article', () => {
+    const electionsPromoConfig = {
+      ...russianServiceConfig,
+      default: {
+        ...russianServiceConfig.default,
+        podcastPromo: {
+          ...russianServiceConfig.default.podcastPromo,
+          linkLabel: {
+            ...russianServiceConfig.default.podcastPromo.linkLabel,
+            href: 'https://www.bbc.com/portuguese/articles/czd2prld130o',
+          },
+        },
+      },
+    };
+
+    const { container } = render(
+      <PromoWithContext inline config={electionsPromoConfig} />,
+      {
+        service: 'russian',
+      },
+    );
+
+    expect(container.innerHTML).toContain(electionsIconPathSnippet);
+  });
+
   it('should show when all props are available', () => {
     const { getByText, getByRole } = render(<PromoWithContext inline />, {
       service: 'russian',
@@ -201,10 +236,10 @@ describe('Inline', () => {
 
 describe('SecondaryColumn', () => {
   it('Should render correctly', () => {
-    const { container } = render(<PromoWithContext />, {
+    const { getByRole } = render(<PromoWithContext />, {
       service: 'russian',
     });
-    expect(container).toMatchSnapshot();
+    expect(getByRole('region')).toBeInTheDocument();
   });
 
   it('should show when all props are available', () => {

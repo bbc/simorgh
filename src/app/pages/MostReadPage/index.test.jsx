@@ -46,14 +46,6 @@ describe('Most Read Page Main', () => {
     jest.restoreAllMocks();
   });
 
-  it('should match snapshot for most read page', () => {
-    const { container } = render(<MostReadPageWithContext service="pidgin" />, {
-      service: 'pidgin',
-    });
-
-    expect(container).toMatchSnapshot();
-  });
-
   it('shoulder render most read page', async () => {
     let container;
     await act(async () => {

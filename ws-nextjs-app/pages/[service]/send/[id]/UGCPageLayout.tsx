@@ -1,7 +1,7 @@
 import { use } from 'react';
 import Metadata from '#app/components/Metadata';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import styles from './styles';
+import styles, { buildImageBackground, fallbackBackground } from './styles';
 import { PageProps } from './types';
 import { FormContext, FormContextProvider } from './FormContext';
 import FormScreen from './FormScreen';
@@ -34,6 +34,14 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
     settings,
   } = pageData;
 
+  const { pageBackgroundTemplateUrl } = settings;
+
+  const hasBackgroundImage = Boolean(pageBackgroundTemplateUrl);
+
+  const background = pageBackgroundTemplateUrl
+    ? buildImageBackground(pageBackgroundTemplateUrl)
+    : fallbackBackground;
+
   const { fields } = sections?.[0] ?? {};
   const sectionTitle = sections?.[0].sectionText?.title ?? '';
 
@@ -49,7 +57,13 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
         openGraphType="website"
         hasAmpPage={false}
       />
-      <div css={styles.background} />
+      <div
+        data-testid="ugc-page-background"
+        css={[
+          styles.background(background),
+          hasBackgroundImage && styles.backgroundFixed,
+        ]}
+      />
       <div css={styles.grid}>
         <div css={styles.primaryColumn}>
           <main role="main" css={styles.mainContent}>

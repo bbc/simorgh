@@ -8,9 +8,11 @@ import uasApiRequest from '#app/lib/uasApi';
 import uasKeys from '#app/lib/uasApi/queryKeys';
 import { AccountContext } from '#app/contexts/AccountContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import useUASMetadataSync from '#app/hooks/useUASMetadataSync/index';
 import useUASButton, { UASAction, UseUASButtonProps } from './index';
 
 jest.mock('#app/hooks/useUASFetchSaveStatus');
+jest.mock('#app/hooks/useUASMetadataSync');
 jest.mock('#app/lib/uasApi');
 jest.mock('react', () => ({
   ...jest.requireActual('react'),
@@ -25,6 +27,19 @@ jest.mock('@tanstack/react-query', () => {
     mutationFn?: (action: string) => Promise<unknown>;
     onSuccess?: (result: unknown, action: string) => void;
     onError?: (error: unknown) => void;
+  };
+  let mutationState: {
+    isPending: boolean;
+    isSuccess: boolean;
+    isError: boolean;
+    error: Error | null;
+    variables?: string;
+  } = {
+    isPending: false,
+    isSuccess: false,
+    isError: false,
+    error: null,
+    variables: undefined,
   };
 
   return {
@@ -41,17 +56,51 @@ jest.mock('@tanstack/react-query', () => {
       capturedMutationConfig = config;
 
       return {
-        mutate: async (action: string) => {
+        mutate: async (
+          action: string,
+          options?: {
+            onSuccess?: (result: unknown, mutationAction: string) => void;
+            onError?: (error: unknown, mutationAction: string) => void;
+          },
+        ) => {
           try {
             const result = await capturedMutationConfig.mutationFn?.(action);
             capturedMutationConfig.onSuccess?.(result, action);
+            options?.onSuccess?.(result, action);
+            mutationState = {
+              isPending: false,
+              isSuccess: true,
+              isError: false,
+              error: null,
+              variables: action,
+            };
           } catch (err) {
             capturedMutationConfig.onError?.(err);
+            options?.onError?.(err, action);
+            mutationState = {
+              isPending: false,
+              isSuccess: false,
+              isError: true,
+              error: err as Error,
+              variables: action,
+            };
             throw err;
           }
         },
-        isPending: false,
-        error: null,
+        isPending: mutationState.isPending,
+        isSuccess: mutationState.isSuccess,
+        isError: mutationState.isError,
+        error: mutationState.error,
+        variables: mutationState.variables,
+        reset: () => {
+          mutationState = {
+            isPending: false,
+            isSuccess: false,
+            isError: false,
+            error: null,
+            variables: undefined,
+          };
+        },
       };
     },
   };
@@ -59,14 +108,14 @@ jest.mock('@tanstack/react-query', () => {
 
 const mockUseUASFetchSaveStatus = useUASFetchSaveStatus as jest.Mock;
 const mockUasApiRequest = uasApiRequest as jest.Mock;
+const mockUseUASMetadataSync = useUASMetadataSync as jest.Mock;
 
 describe('useUASButton', () => {
   const defaultProps = {
     articleId: '123',
-    articleTitle: 'Test Article',
-    articlePageData: {
-      metadata: { locators: { canonicalUrl: 'https://bbc.com/article' } },
-    },
+    saveArticlePageData: {
+      canonicalUrl: 'https://bbc.com/article',
+    } as unknown as UseUASButtonProps['saveArticlePageData'],
   } as UseUASButtonProps;
 
   beforeEach(() => {
@@ -77,6 +126,7 @@ describe('useUASButton', () => {
       isLoading: false,
       isUpdating: false,
       error: null,
+      savedMetadata: undefined,
     });
 
     (use as jest.Mock).mockImplementation(context => {
@@ -112,6 +162,7 @@ describe('useUASButton', () => {
             activityType: 'favourites',
             action: 'favourited',
             resourceType: 'article',
+            resourceTitle: 'hindi',
           }),
           isRefreshAvailable: true,
         }),
@@ -127,7 +178,9 @@ describe('useUASButton', () => {
 
       expect(mockSetQueryData).toHaveBeenCalledWith(
         uasKeys.favouriteStatus('user-123', '123'),
-        true,
+        expect.objectContaining({
+          isSaved: true,
+        }),
       );
     });
 
@@ -153,7 +206,9 @@ describe('useUASButton', () => {
 
       expect(mockSetQueryData).toHaveBeenCalledWith(
         uasKeys.favouriteStatus('user-123', '123'),
-        false,
+        expect.objectContaining({
+          isSaved: false,
+        }),
       );
     });
 
@@ -183,6 +238,113 @@ describe('useUASButton', () => {
       expect(mockInvalidateQueries).toHaveBeenCalledWith({
         queryKey: uasKeys.favouritesList('user-123'),
       });
+    });
+  });
+
+  describe('useUASMetadataSync integration', () => {
+    it('calls useUASMetadataSync with correct parameters when article is saved with metadata', () => {
+      const mockMetadata = {
+        title: 'Saved Article',
+        promoImage: 'https://ichef.bbc.co.uk/saved.jpg',
+      };
+
+      mockUseUASFetchSaveStatus.mockReturnValue({
+        isSaved: true,
+        isLoading: false,
+        error: null,
+        savedMetadata: mockMetadata,
+      });
+
+      renderHook(() => useUASButton(defaultProps));
+
+      expect(mockUseUASMetadataSync).toHaveBeenCalledWith(
+        expect.objectContaining({
+          saveArticlePageData: defaultProps.saveArticlePageData,
+          articleId: '123',
+          service: 'hindi',
+          isSaved: true,
+          savedArticleMetadata: mockMetadata,
+          onMetadataOutOfDate: expect.any(Function),
+        }),
+      );
+    });
+  });
+
+  describe('actionResult', () => {
+    it('is null before any action is taken', () => {
+      const { result } = renderHook(() => useUASButton(defaultProps));
+
+      expect(result.current.actionResult).toBeNull();
+    });
+
+    it('reflects a successful user-triggered save', async () => {
+      const { result, rerender } = renderHook(() => useUASButton(defaultProps));
+
+      await act(async () => {
+        await result.current.handleSaveAction(UASAction.SAVE);
+      });
+      rerender();
+
+      expect(result.current.actionResult).toEqual({
+        status: 'success',
+        action: UASAction.SAVE,
+      });
+    });
+
+    it('reflects a failed user-triggered remove', async () => {
+      mockUasApiRequest.mockRejectedValueOnce(new Error('UAS request failed'));
+      const { result, rerender } = renderHook(() => useUASButton(defaultProps));
+
+      await act(async () => {
+        await expect(
+          result.current.handleSaveAction(UASAction.REMOVE),
+        ).rejects.toThrow('UAS request failed');
+      });
+      rerender();
+
+      expect(result.current.actionResult).toEqual({
+        status: 'error',
+        action: UASAction.REMOVE,
+      });
+    });
+
+    it('does not populate when a save is triggered by the background metadata sync', async () => {
+      let onMetadataOutOfDate: (() => void) | undefined;
+      mockUseUASMetadataSync.mockImplementation(
+        ({ onMetadataOutOfDate: callback }) => {
+          onMetadataOutOfDate = callback;
+        },
+      );
+
+      const { result, rerender } = renderHook(() => useUASButton(defaultProps));
+
+      await act(async () => {
+        onMetadataOutOfDate?.();
+        // Flush the mutation's internal awaits before asserting.
+        await new Promise(resolve => {
+          setTimeout(resolve, 0);
+        });
+      });
+      rerender();
+
+      expect(result.current.actionResult).toBeNull();
+    });
+
+    it('clears the action result and resets the underlying mutation', async () => {
+      const { result, rerender } = renderHook(() => useUASButton(defaultProps));
+
+      await act(async () => {
+        await result.current.handleSaveAction(UASAction.SAVE);
+      });
+      rerender();
+      expect(result.current.actionResult).not.toBeNull();
+
+      act(() => {
+        result.current.resetActionResult();
+      });
+      rerender();
+
+      expect(result.current.actionResult).toBeNull();
     });
   });
 });

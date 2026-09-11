@@ -4,9 +4,16 @@ import {
   act,
   waitFor,
 } from '#app/components/react-testing-library-with-providers';
+import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import useUASRecentActivity from '#app/hooks/useUASRecentActivity';
 import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
 import MyNewsPage from '.';
+
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  default: jest.fn(),
+}));
 
 jest.mock('#app/hooks/useUASRecentActivity');
 
@@ -50,6 +57,7 @@ describe('MyNewsPage', () => {
       isLoading: false,
       error: null,
     });
+    mockMatchMedia();
   });
 
   it('should render loading state initially', async () => {
@@ -64,7 +72,11 @@ describe('MyNewsPage', () => {
       render(<MyNewsPage />, renderOptions);
     });
 
-    expect(screen.getByText('Loading your articles...')).toBeInTheDocument();
+    const spinnerWrapper = screen.getByTestId('my-news-page-spinner');
+    const spinnerSvg = spinnerWrapper.querySelector('svg');
+
+    expect(spinnerWrapper).toBeInTheDocument();
+    expect(spinnerSvg).toBeInTheDocument();
   });
 
   it('should render saved articles after fetching', async () => {
@@ -92,7 +104,7 @@ describe('MyNewsPage', () => {
 
     await waitFor(() => {
       expect(
-        screen.getByText("You haven't saved any articles yet"),
+        screen.getByText('आपने अभी तक कोई लेख सहेजा नहीं है'),
       ).toBeInTheDocument();
     });
   });
@@ -112,7 +124,7 @@ describe('MyNewsPage', () => {
     await waitFor(() => {
       expect(
         screen.getByText(
-          'This content does not seem to be working. Please try again later.',
+          'लगता है यह कंटेंट लोड नहीं हो रहा है. कृपया बाद में पुनः प्रयास करें.',
         ),
       ).toBeInTheDocument();
     });
@@ -151,9 +163,23 @@ describe('MyNewsPage', () => {
 
     expect(mockUseRecentActivity).toHaveBeenCalledWith(
       expect.objectContaining({
-        itemsPerPage: 10,
+        itemsPerPage: 24,
         startIndex: 0,
       }),
     );
+  });
+
+  it('should render guest page with action buttons when user is not logged in', async () => {
+    await act(async () => {
+      render(<MyNewsPage />, {
+        ...renderOptions,
+        idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: false },
+      });
+    });
+
+    expect(
+      screen.getByTestId('my-news-guest-sign-in-link'),
+    ).toBeInTheDocument();
+    expect(screen.getByTestId('my-news-register-link')).toBeInTheDocument();
   });
 });

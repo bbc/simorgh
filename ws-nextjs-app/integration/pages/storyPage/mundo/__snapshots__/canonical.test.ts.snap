@@ -329,7 +329,7 @@ exports[`Canonical Story Page SEO Linked data should match text 1`] = `
 
 exports[`Canonical Story Page SEO OG description 1`] = `"Tras casi cuatro años de desacuerdos y negociaciones, este viernes Reino Unido dejará formalmente la Unión Europea. ¿Qué cambios supone esto para quienes quieran hacer turismo, estudiar o trabajar en Reino Unido?"`;
 
-exports[`Canonical Story Page SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_mundo/17D42/production/_110620679_gettyimages-542984918.jpg"`;
+exports[`Canonical Story Page SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1200/branded_mundo/17D42/production/_110620679_gettyimages-542984918.jpg"`;
 
 exports[`Canonical Story Page SEO OG image alt 1`] = `"A person holding a union jack umbrella in front of Big Ben"`;
 
@@ -355,7 +355,7 @@ exports[`Canonical Story Page SEO Twitter description 1`] = `"Tras casi cuatro a
 
 exports[`Canonical Story Page SEO Twitter image alt 1`] = `"A person holding a union jack umbrella in front of Big Ben"`;
 
-exports[`Canonical Story Page SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_mundo/17D42/production/_110620679_gettyimages-542984918.jpg"`;
+exports[`Canonical Story Page SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1200/branded_mundo/17D42/production/_110620679_gettyimages-542984918.jpg"`;
 
 exports[`Canonical Story Page SEO Twitter site 1`] = `"@bbcmundo"`;
 

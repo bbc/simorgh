@@ -18,7 +18,7 @@ import SERVICES_WITH_NEW_NAV from '#app/components/Navigation/config';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import ConsentBanner from '../ConsentBanner';
 import BrandContainer from '../Brand';
-import NewLogoBanner from './NewLogoBanner';
+import NewLogoBanner, { isGlobalLanguageHomepage } from './NewLogoBanner';
 import styles from './index.styles';
 
 const Header = ({
@@ -62,7 +62,11 @@ const Header = ({
   );
 };
 
-const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
+const HeaderContainer = ({
+  navItems,
+  propsForTopBarOJComponent,
+  primaryMediaType,
+}) => {
   const { isAmp, isApp, pageType, isLite } = use(RequestContext);
   const { service, translations, dir, scriptLink, lang, serviceLang } =
     use(ServiceContext);
@@ -88,6 +92,12 @@ const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
 
   const shouldUseNewNav = SERVICES_WITH_NEW_NAV.includes(service);
 
+  const { pathname } = use(RequestContext);
+
+  const isLanguagesPage = isGlobalLanguageHomepage(pathname);
+
+  const shouldShowNewLogoBanner = shouldUseNewNav || isLanguagesPage;
+
   let shouldRenderScriptSwitch = false;
 
   if (scriptLink) {
@@ -110,9 +120,13 @@ const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
     ? NewNavigationContainer
     : LegacyNavigationContainer;
 
+  const brandBarAccountHeader = shouldShowNewLogoBanner ? null : (
+    <AccountHeader />
+  );
+
   return (
     <header role="banner" lang={serviceLang}>
-      {shouldUseNewNav && <NewLogoBanner />}
+      {shouldShowNewLogoBanner && <NewLogoBanner />}
       {isAmp ? (
         <Header
           linkId="brandLink"
@@ -120,7 +134,7 @@ const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
           scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
           css={headerBrandCss}
         >
-          <AccountHeader />
+          {brandBarAccountHeader}
         </Header>
       ) : (
         <Header
@@ -129,13 +143,14 @@ const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
           scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
           css={headerBrandCss}
         >
-          <AccountHeader />
+          {brandBarAccountHeader}
         </Header>
       )}
       {isLite && <LiteSiteSummary />}
       <NavigationComponent
         navItems={navItems}
         propsForTopBarOJComponent={propsForTopBarOJComponent}
+        primaryMediaType={primaryMediaType}
       />
     </header>
   );

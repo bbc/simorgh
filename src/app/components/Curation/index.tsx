@@ -13,7 +13,7 @@ import CurationGrid from './CurationGrid';
 import HierarchicalGrid from './HierarchicalGrid';
 import Subheading from './Subhead';
 import getComponentName, { COMPONENT_NAMES } from './getComponentName';
-import MessageBanner from '../MessageBanner';
+import CurationMessageBanner from './CurationMessageBanner';
 import MostRead from '../MostRead';
 import { GHOST } from '../ThemeProvider/palette';
 import Embed from '../Embeds/OEmbed';
@@ -49,20 +49,6 @@ const getGridComponent = (componentName: string | null) => {
     case SIMPLE_CURATION_GRID:
     default:
       return CurationGrid;
-  }
-};
-
-const enterFakeScreenCallback = () => {
-  const consentBanner = document.getElementById('consent-banner');
-  if (consentBanner) {
-    consentBanner.style.zIndex = '-1';
-  }
-};
-
-const exitFakeScreenCallback = () => {
-  const consentBanner = document.getElementById('consent-banner');
-  if (consentBanner) {
-    consentBanner.style.zIndex = '2147483647';
   }
 };
 
@@ -141,7 +127,8 @@ export default ({
     case NOT_SUPPORTED:
       return null;
     case BILLBOARD: {
-      const billboardId = `billboard-${nthCurationByStyleAndProminence}`;
+      const billboardId =
+        `billboard-${visualProminence}-${nthCurationByStyleAndProminence}`.toLowerCase();
       if (firstSummary) {
         return (
           <div css={styles.billboardContainer}>
@@ -151,6 +138,7 @@ export default ({
               link={summaryLink}
               image={imageUrl}
               id={billboardId}
+              prominence={visualProminence}
               eventTrackingData={eventTrackingData}
               showLiveLabel={summaryIsLive}
               altText={imageAlt}
@@ -164,7 +152,7 @@ export default ({
     case MESSAGE_BANNER:
       if (firstSummary) {
         return (
-          <MessageBanner
+          <CurationMessageBanner
             heading={title}
             description={description}
             link={summaryLink}
@@ -236,13 +224,7 @@ export default ({
           aria-labelledby="bbcMediaPlayer0"
           data-testid={mediaCollectionId}
         >
-          <MediaLoader
-            blocks={mediaCollection}
-            eventMapping={{
-              enterFakeFullscreen: enterFakeScreenCallback,
-              exitFakeFullscreen: exitFakeScreenCallback,
-            }}
-          />
+          <MediaLoader blocks={mediaCollection} />
         </section>
       ) : null;
     }

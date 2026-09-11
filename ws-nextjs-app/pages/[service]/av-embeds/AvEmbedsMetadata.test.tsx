@@ -2,10 +2,17 @@ import {
   render,
   waitFor,
 } from '#app/components/react-testing-library-with-providers';
+import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import serbianCyrCps from '#data/serbian/av-embeds/cyr/srbija-68707945.json';
 import { AV_EMBEDS } from '#app/routes/utils/pageTypes';
 import { MediaBlock } from '#app/components/MediaLoader/types';
 import AvEmbedsMetadata from './AvEmbedsMetadata';
+
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  default: jest.fn(),
+}));
 
 const avEmbedsMetadataProps = {
   pageData: {
@@ -29,6 +36,10 @@ const avEmbedsMetadataProps = {
 };
 
 describe('AV Embeds Page', () => {
+  beforeEach(() => {
+    mockMatchMedia();
+  });
+
   it('should render the noindex meta tag', async () => {
     render(<AvEmbedsMetadata {...avEmbedsMetadataProps} />);
 

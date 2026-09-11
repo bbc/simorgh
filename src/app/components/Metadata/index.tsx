@@ -99,7 +99,6 @@ const MetadataContainer = ({
   imageWidth,
   imageHeight,
   children,
-  hasAppleItunesAppBanner = false,
   hasAmpPage = true,
 }: MetadataProps) => {
   const {
@@ -222,7 +221,6 @@ const MetadataContainer = ({
         iTunesAppId,
         canonicalLink,
         isAmp,
-        hasAppleItunesAppBanner,
       })}
       <meta name="apple-mobile-web-app-title" content={brandName} />
       <meta name="application-name" content={brandName} />

@@ -21,7 +21,7 @@ const ArticleMetadata = ({
 }) => {
   const { service } = use(ServiceContext);
   const brandedImage = imageLocator
-    ? getBrandedImage(imageLocator, service)
+    ? getBrandedImage({ locator: imageLocator, service, width: 1200 })
     : null;
 
   return (

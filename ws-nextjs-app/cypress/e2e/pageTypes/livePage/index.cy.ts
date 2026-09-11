@@ -1,5 +1,8 @@
 import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
-import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
+import {
+  assertPageView,
+  assertResonancePageView,
+} from '../../specialFeatures/atiAnalytics/assertions';
 import mediaPlayerTests from './mediaPlayer';
 import pageVisit from './pageVisit';
 import keyPoints from './keyPoints';
@@ -13,6 +16,9 @@ import {
   assertScrollableNavigationComponentClick,
   assertScrollableNavigationComponentView,
 } from '../../specialFeatures/atiAnalytics/assertions/navigation';
+import assertStreamEmbeddedVideoComponentView from '../../specialFeatures/atiAnalytics/assertions/liveStreamVideo';
+import assertPortraitVideoCarouselComponentView from '../../specialFeatures/atiAnalytics/assertions/portraitVideoCarousel';
+import assertPortraitVideoModalComponentView from '../../specialFeatures/atiAnalytics/assertions/portraitVideoModal';
 
 const testDetails = [
   {
@@ -47,6 +53,7 @@ const atiAnalyticsTestSuites = [
     contentType: 'live-coverage',
     tests: [
       assertPageView,
+      assertResonancePageView,
       assertScrollableNavigationComponentView,
       assertScrollableNavigationComponentClick,
       assertDropdownNavigationComponentView,
@@ -84,6 +91,54 @@ const atiAnalyticsTestSuites = [
       assertDropdownNavigationComponentView,
       assertDropdownNavigationComponentClick,
     ],
+  },
+  {
+    path: '/pidgin/live/c7p765ynk9qt',
+    runforEnv: ['local'],
+    service: 'pidgin',
+    pageIdentifier: 'live_coverage.c7p765ynk9qt.page',
+    siteId: 70,
+    applicationType: 'responsive',
+    contentType: 'live-coverage',
+    scrollAnchorText: 'Gary Lineker talks Messi',
+    expectedItemType: 'landscape-video',
+    expectedItemText: 'Lionel Messi Skills',
+    tests: [assertStreamEmbeddedVideoComponentView],
+  },
+  {
+    path: '/pidgin/live/c7p765ynk9qt',
+    runforEnv: ['local'],
+    service: 'pidgin',
+    pageIdentifier: 'live_coverage.c7p765ynk9qt.page',
+    siteId: 70,
+    applicationType: 'responsive',
+    contentType: 'live-coverage',
+    scrollAnchorText: 'The Mormons are coming',
+    expectedItemType: 'portrait-video',
+    expectedItemText: 'The Mormons are coming',
+    tests: [assertStreamEmbeddedVideoComponentView],
+  },
+  {
+    path: '/mundo/live/cjnk1wrpkdk7t',
+    runforEnv: ['local'],
+    service: 'mundo',
+    pageIdentifier: 'live_coverage.cjnk1wrpkdk7t.page',
+    siteId: 62,
+    applicationType: 'responsive',
+    contentType: 'live-coverage',
+    tests: [assertPageView, assertPortraitVideoCarouselComponentView],
+  },
+  {
+    path: '/mundo/live/cjnk1wrpkdk7t',
+    runforEnv: ['local'],
+    service: 'mundo',
+    pageIdentifier: 'live_coverage.cjnk1wrpkdk7t.page',
+    siteId: 62,
+    applicationType: 'responsive',
+    contentType: 'live-coverage',
+    expectedItemType: 'portrait-video',
+    expectedGroupType: 'portrait-video-modal',
+    tests: [assertPortraitVideoModalComponentView],
   },
 ] as unknown as TestDataType[];
 

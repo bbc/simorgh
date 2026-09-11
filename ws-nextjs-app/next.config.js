@@ -1,9 +1,18 @@
 /* eslint-disable no-param-reassign */
+const path = require('path');
 const MomentTimezoneInclude = require('../src/app/legacy/psammead/moment-timezone-include/src');
+
+const DevCssExtractLoader =
+  require.resolve('./scripts/DevCssExtractLoader.cjs');
+const {
+  injectExtractLoader,
+  replaceIgnoreLoaderForScss,
+} = require('./scripts/webpackDevLoaderUtils.cjs');
 
 const assetPrefix =
   process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN +
   process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH;
+const optimoIdPattern = 'c[a-zA-Z0-9]{10,}o';
 
 /** @type {import('next').NextConfig} */
 module.exports = {
@@ -50,12 +59,28 @@ module.exports = {
   async rewrites() {
     return [
       {
+        source: '/:service/og/:id',
+        destination: '/api/:service/og/:id',
+      },
+      {
         source: '/:service/sw.js',
         destination: '/sw.js',
       },
       {
-        source: '/:service/og/:id',
-        destination: '/api/:service/og/:id',
+        source: `/:service/watch/:id(${optimoIdPattern})`,
+        destination: '/:service/articles/:id',
+      },
+      {
+        source: `/:service/watch/:id(${optimoIdPattern})/:variant`,
+        destination: '/:service/articles/:id/:variant',
+      },
+      {
+        source: `/:service/listen/:id(${optimoIdPattern})`,
+        destination: '/:service/articles/:id',
+      },
+      {
+        source: `/:service/listen/:id(${optimoIdPattern})/:variant`,
+        destination: '/:service/articles/:id/:variant',
       },
     ];
   },
@@ -78,15 +103,53 @@ module.exports = {
   poweredByHeader: false,
   reactStrictMode: true,
   transpilePackages: ['simorgh'],
-  webpack: (config, { webpack, isServer }) => {
+  webpack: (config, { webpack, isServer, dev }) => {
     config.resolve.fallback = {
       ...config.resolve.fallback,
       fs: false,
     };
 
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@scss': path.join(
+        __dirname,
+        '../src/app/components/ThemeProviderSCSSModules',
+      ),
+    };
     config.plugins.push(
-      new MomentTimezoneInclude({ startYear: 2010, endYear: 2026 }),
+      new MomentTimezoneInclude({
+        startYear: 2010,
+        endYear: new Date().getFullYear() + 1,
+      }),
     );
+
+    if (dev) {
+      // Inject our loader immediately before css-loader in every SCSS rule.
+      // webpack processes the use array right-to-left, so inserting before css-loader
+      // means our loader receives css-loader's JS output — which contains the CSS string
+      // with hashed CSS module class names (e.g. .Subhead_h2__K8gJ6) already applied.
+      injectExtractLoader(config.module.rules, DevCssExtractLoader);
+
+      if (isServer) {
+        // On the server, Next.js uses ignore-loader for global (non-module) SCSS
+        // files, so DevCssExtractLoader never runs for them and :root {} custom
+        // properties (CSS variables) and @font-face declarations from theme files
+        // are never written to dev-css-modules.css. Replace those ignore-loader
+        // rules with a sass-loader → css-loader → DevCssExtractLoader chain so
+        // the global CSS is captured for AMP/Lite inlining alongside CSS modules.
+        const sassLoaderPath = require.resolve('sass-loader');
+        const cssLoaderPath = require.resolve('css-loader');
+
+        replaceIgnoreLoaderForScss(config.module.rules, [
+          DevCssExtractLoader,
+          {
+            loader: cssLoaderPath,
+            options: { modules: false, url: false, import: false },
+          },
+          { loader: sassLoaderPath },
+        ]);
+      }
+    }
 
     /*
       Taken from https://github.com/bbc/simorgh/blob/861c2b50df3d41cdc9e854752a898ed4b1b89727/webpack.config.client.js#L213-L228

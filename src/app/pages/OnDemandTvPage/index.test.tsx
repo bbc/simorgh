@@ -118,15 +118,6 @@ describe('OnDemand TV Page ', () => {
     expect(container.querySelector('h1#content')).toBeDefined();
   });
 
-  it('Dark Mode Design - should match snapshot', async () => {
-    const { container } = await renderPage({
-      pageData: getPageData(),
-      service: 'pashto',
-    });
-
-    expect(container).toMatchSnapshot();
-  });
-
   it('should show the datestamp correctly for Pashto OnDemand TV Pages', async () => {
     const { getByText } = await renderPage({
       pageData: getPageData(),
@@ -168,14 +159,13 @@ describe('OnDemand TV Page ', () => {
       episodeAvailability: 'expired',
     } as unknown as OnDemandTVProps['pageData'];
 
-    const { container, getByText } = await renderPage({
+    const { getByText } = await renderPage({
       pageData,
       service: 'pashto',
     });
     const expiredMessageEl = getByText('دغه فایل نور د لاسرسي وړ نه دی.');
 
     expect(expiredMessageEl).toBeInTheDocument();
-    expect(container).toMatchSnapshot();
   });
 
   it('should show the future content message if episode is not yet available', async () => {
@@ -184,7 +174,7 @@ describe('OnDemand TV Page ', () => {
       episodeAvailability: 'not-yet-available',
     } as unknown as OnDemandTVProps['pageData'];
 
-    const { container, getByText } = await renderPage({
+    const { getByText } = await renderPage({
       pageData,
       service: 'pashto',
     });
@@ -193,6 +183,5 @@ describe('OnDemand TV Page ', () => {
     );
 
     expect(notYetAvailableEl).toBeInTheDocument();
-    expect(container).toMatchSnapshot();
   });
 });

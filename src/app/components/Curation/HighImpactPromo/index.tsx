@@ -1,5 +1,5 @@
 import { use } from 'react';
-import { Summary } from '#app/models/types/curationData';
+import { Summary, RelatedTopic } from '#app/models/types/curationData';
 import Promo from '#components/Promo';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { RequestContext } from '#app/contexts/RequestContext';
@@ -7,17 +7,6 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import { getBrandPath } from '#app/legacy/containers/Brand';
 import styles from './index.styles';
 
-type RelatedTopicLink = {
-  url: string;
-  scheme?: string;
-  host?: string;
-  path?: string;
-};
-
-type RelatedTopic = {
-  link: RelatedTopicLink;
-  title: string;
-};
 export interface HighImpactPromoProps extends Summary {
   relatedTopic?: RelatedTopic | null;
 }

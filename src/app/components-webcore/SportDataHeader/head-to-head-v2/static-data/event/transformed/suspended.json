@@ -75,8 +75,11 @@
     "score": "0",
     "actions": []
   },
-  "time": "15:00",
-  "accessibleTime": "15:00",
+  "time": {
+    "accessibleTime": "15:00",
+    "displayTimeUK": "15:00",
+    "timeCertainty": true
+  },
   "date": "Thu 14 Jul 2022",
   "accessibleEventSummary": ""
 }

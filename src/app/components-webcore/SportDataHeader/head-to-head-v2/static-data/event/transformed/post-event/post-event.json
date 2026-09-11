@@ -124,10 +124,10 @@
         "actionType": "goal",
         "actions": [
           {
-            "type": "Goal",
+            "type": "Own Goal",
             "typeLabel": {
-              "value": "Goal",
-              "accessible": "Goal"
+              "value": "Own Goal",
+              "accessible": "Own Goal"
             },
             "timeLabel": {
               "value": "67'",

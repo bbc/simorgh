@@ -1,7 +1,6 @@
+import { whereEq } from 'ramda';
 import type { Services } from '#app/models/types/global';
-import type { OptimoRawImageBlock, Article } from '#app/models/types/optimo';
-import buildIChefURL from '#app/lib/utilities/ichefURL';
-import extractPromoImage from '#app/lib/utilities/extractPromoImage';
+import type { SaveArticlePageData } from '#app/lib/utilities/extractSaveArticleProps';
 import type { UasApiRequestBody } from './index';
 
 export interface SavedArticle {
@@ -32,71 +31,86 @@ const buildGlobalId = (
   resourceType = FAVOURITES_CONFIG.resourceType,
 ): string => `urn:bbc:${resourceDomain}:${resourceType}:${resourceId}`;
 
+interface MetadataComparisonResult {
+  hasChanges: boolean;
+}
+
+/**
+ * Extracts current live metadata from article page data.
+ *
+ * To add a new field: add it to the returned object below.
+ * The compareMetadataWithSaved function will automatically include it.
+ *
+ * @param saveArticlePageData - Current article metadata props
+ * @param articleId - Article's unique identifier
+ * @param service - BBC service name (e.g., 'arabic', 'portuguese')
+ * @returns Object with tracked metadata fields
+ */
+const sanitiseMetadataString = (value: string | null | undefined): string =>
+  value?.replace(/\s+/g, ' ').trim() ?? '';
+
+const buildCurrentMetadata = (
+  saveArticlePageData: SaveArticlePageData,
+  { articleId, service }: { articleId: string; service: Services },
+): Record<string, unknown> => {
+  const { headline, promoImage, promoImageAltText, canonicalUrl } =
+    saveArticlePageData;
+  return {
+    articleId,
+    service,
+    title: sanitiseMetadataString(headline),
+    promoImage,
+    promoImageAltText: sanitiseMetadataString(promoImageAltText),
+    locatorUrl: canonicalUrl,
+  };
+};
+
+/**
+ * Compares current article metadata against saved metadata.
+ *
+ * Uses Ramda's whereEq for structural equality. New fields added to
+ * buildCurrentMetadata() are automatically included in comparisons.
+ *
+ * @param currentMetadata - Live metadata from article
+ * @param savedMetadata - Metadata stored in UAS
+ * @returns Object with hasChanges flag
+ */
+const compareMetadataWithSaved = (
+  currentMetadata: Record<string, unknown>,
+  savedMetadata: Record<string, unknown>,
+): MetadataComparisonResult => ({
+  hasChanges: !whereEq(currentMetadata, savedMetadata),
+});
+
 const createFavouritesPayload = ({
   articleId,
   service,
-  articleTitle,
-  promoImage,
-  promoImageAltText,
-  locatorUrl,
+  saveArticlePageData,
 }: {
   articleId: string;
   service: Services;
-  articleTitle: string;
-  promoImage?: string;
-  promoImageAltText?: string;
-  locatorUrl?: string;
+  saveArticlePageData: SaveArticlePageData;
 }): UasApiRequestBody => ({
   activityType: FAVOURITES_CONFIG.activityType,
   resourceDomain: FAVOURITES_CONFIG.resourceDomain,
   resourceType: FAVOURITES_CONFIG.resourceType,
   resourceId: articleId,
   action: FAVOURITES_CONFIG.action,
-  metaData: {
-    service,
+  resourceTitle: service,
+  metaData: buildCurrentMetadata(saveArticlePageData, {
     articleId,
-    title: articleTitle,
-    promoImage: promoImage || '',
-    promoImageAltText: promoImageAltText || '',
-    locatorUrl: locatorUrl || '',
-  },
+    service,
+  }),
 });
-
-const extractPromoImageFromArticleData = (articlePageData?: Article) => {
-  const promoImageBlocks =
-    articlePageData?.promo?.images?.defaultPromoImage?.blocks ?? [];
-
-  const { altText, rawBlock } = extractPromoImage(promoImageBlocks);
-
-  return {
-    altText,
-    promoImageRawBlock: rawBlock,
-  };
-};
-
-const buildPromoImageUrl = (promoImageObj?: {
-  altText: string;
-  promoImageRawBlock?: OptimoRawImageBlock;
-}): string => {
-  if (
-    !promoImageObj?.promoImageRawBlock?.model?.locator ||
-    !promoImageObj?.promoImageRawBlock?.model?.originCode
-  ) {
-    return '';
-  }
-
-  return buildIChefURL({
-    originCode: promoImageObj.promoImageRawBlock.model.originCode,
-    locator: promoImageObj.promoImageRawBlock.model.locator,
-    resolution: 320,
-  });
-};
 
 export {
   USER_ID_COOKIE_KEY,
   FAVOURITES_CONFIG,
   buildGlobalId,
   createFavouritesPayload,
-  extractPromoImageFromArticleData,
-  buildPromoImageUrl,
+  buildCurrentMetadata,
+  compareMetadataWithSaved,
+  sanitiseMetadataString,
 };
+
+export type { MetadataComparisonResult };

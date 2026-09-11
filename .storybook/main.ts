@@ -61,6 +61,34 @@ const storybookConfig: StorybookConfig = {
         transcludeMarkdown: true,
       },
     },
+    {
+      name: '@storybook/addon-styling-webpack',
+      options: {
+        rules: [
+          {
+            test: /\.module\.scss$/,
+            use: [
+              'style-loader',
+              {
+                loader: 'css-loader',
+                options: {
+                  modules: true,
+                  importLoaders: 1,
+                  esModule: false,
+                },
+              },
+              {
+                loader: 'sass-loader',
+              },
+            ],
+          },
+          {
+            test: /(?<!\.module)\.scss$/,
+            use: ['style-loader', 'css-loader', 'sass-loader'],
+          },
+        ],
+      },
+    },
   ],
   env: config => ({
     ...config,
@@ -116,7 +144,10 @@ const storybookConfig: StorybookConfig = {
       new webpack.ProvidePlugin({
         process: 'process/browser',
       }),
-      new MomentTimezoneInclude({ startYear: 2010, endYear: 2026 }),
+      new MomentTimezoneInclude({
+        startYear: 2010,
+        endYear: new Date().getFullYear() + 1,
+      }),
     );
 
     config.resolve!.fallback = {

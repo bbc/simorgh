@@ -110,6 +110,9 @@ export type PlayerUiConfig = {
   pictureInPicture?: {
     enabled: boolean;
   };
+  cta?: {
+    mode?: 'duration' | null;
+  };
 };
 
 export type ConfigBuilderProps = {
@@ -124,6 +127,7 @@ export type ConfigBuilderProps = {
   embedded?: boolean;
   lang: string;
   defaultImage: string;
+  holdingImageURL?: string;
 };
 
 export type Orientations = 'landscape' | 'portrait';
@@ -382,4 +386,5 @@ export type BuildConfigProps = {
   showAdsBasedOnLocation?: boolean;
   embedded?: boolean;
   defaultImage: string;
+  holdingImageURL?: string;
 };

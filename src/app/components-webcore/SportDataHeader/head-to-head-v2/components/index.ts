@@ -11,6 +11,7 @@ export { default as ConditionalOnwardJourneyLink } from './conditional-onward-jo
 export { default as FixtureTime } from './fixture-time';
 export { default as GroupedEvents } from './grouped-events';
 export { HeadToHeadBanner } from './head-to-head-banner';
+export { default as HeadToHeadHeader } from './head-to-head-header';
 export { KeyEvents } from './key-events';
 export { default as MatchProgress } from './match-progress';
 export { default as PenaltyScores } from './penalty-scores';

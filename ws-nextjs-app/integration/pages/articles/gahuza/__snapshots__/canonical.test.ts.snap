@@ -301,7 +301,7 @@ exports[`Canonical Articles SEO Linked data should match text 1`] = `
 
 exports[`Canonical Articles SEO OG description 1`] = `"Yulia Navalnaya yavuze ibi mu kumurika igitabo umugabo we Alexei Navalny yandikaga ari muri gereza mbere y'uko apfa. "`;
 
-exports[`Canonical Articles SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_gahuza/8654/live/6fd0abe0-8f8a-11ef-8e6d-e3e64e16c628.jpg"`;
+exports[`Canonical Articles SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1200/branded_gahuza/8654/live/6fd0abe0-8f8a-11ef-8e6d-e3e64e16c628.jpg"`;
 
 exports[`Canonical Articles SEO OG image alt 1`] = `"Alexei Navalny na Yulia Navalnaya bari i Moscow mu 2013 muri metingi yo kwiyamamaza kw'abakuru b'imijyi"`;
 
@@ -327,7 +327,7 @@ exports[`Canonical Articles SEO Twitter description 1`] = `"Yulia Navalnaya yavu
 
 exports[`Canonical Articles SEO Twitter image alt 1`] = `"Alexei Navalny na Yulia Navalnaya bari i Moscow mu 2013 muri metingi yo kwiyamamaza kw'abakuru b'imijyi"`;
 
-exports[`Canonical Articles SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_gahuza/8654/live/6fd0abe0-8f8a-11ef-8e6d-e3e64e16c628.jpg"`;
+exports[`Canonical Articles SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1200/branded_gahuza/8654/live/6fd0abe0-8f8a-11ef-8e6d-e3e64e16c628.jpg"`;
 
 exports[`Canonical Articles SEO Twitter site 1`] = `"@bbcgahuza"`;
 

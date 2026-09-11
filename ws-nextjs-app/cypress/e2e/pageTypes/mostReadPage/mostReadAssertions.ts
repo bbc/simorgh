@@ -1,6 +1,6 @@
 /* eslint-disable import/no-unresolved */
 import appConfig from '#utilities/serviceConfigs';
-import { serviceNumerals } from '#app/components/MostRead/Canonical/Rank';
+import serviceNumerals from '#app/components/MostRead/utilities/getServiceNumerals';
 
 const MOST_READ_EXCLUDED_SERVICES = ['ukchina'];
 
@@ -13,7 +13,7 @@ export default ({ service, variant = 'default' }) => {
     if (hasMostRead) {
       describe('Most Read Component', () => {
         beforeEach(() => {
-          cy.getToggles(service);
+          cy.fetchToggles(service);
         });
 
         it('should not render section label', () => {

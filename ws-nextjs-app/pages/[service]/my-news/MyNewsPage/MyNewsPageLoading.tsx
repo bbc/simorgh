@@ -1,17 +1,27 @@
+import { use } from 'react';
 import Heading from '#app/components/Heading';
-import Text from '#app/components/Text';
-import styles from '../styles';
+import { ServiceContext } from '#app/contexts/ServiceContext';
+import Spinner from '#app/components/Spinner';
+import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
+import styles from './styles';
 
-// TODO: Placeholder component to be updated.
-const MyNewsPageLoading = () => (
-  <>
-    <Heading level={1} css={styles.heading}>
-      My News
-    </Heading>
-    <Text size="doublePica" fontVariant="sansBold">
-      Loading your articles...
-    </Text>
-  </>
-);
+const MyNewsPageLoading = () => {
+  const { translations } = use(ServiceContext);
+  const loadingText = translations?.myNews?.loading;
+
+  return (
+    <>
+      <Heading level={1} css={styles.heading}>
+        {translations?.myNews?.title}
+      </Heading>
+      <div css={styles.spinnerWrapper} data-testid="my-news-page-spinner">
+        <VisuallyHiddenText aria-live="polite">
+          {loadingText}
+        </VisuallyHiddenText>
+        <Spinner css={styles.spinner} />
+      </div>
+    </>
+  );
+};
 
 export default MyNewsPageLoading;

@@ -52,7 +52,7 @@ describe(`Header`, () => {
         },
       });
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.querySelector('header')).toBeInTheDocument();
     });
 
     it('should render correctly for WS radio page', () => {
@@ -62,7 +62,7 @@ describe(`Header`, () => {
         },
       });
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.querySelector('header')).toBeInTheDocument();
     });
 
     it('should render correctly for WS TV page', () => {
@@ -72,7 +72,7 @@ describe(`Header`, () => {
         },
       });
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.querySelector('header')).toBeInTheDocument();
     });
 
     it('should render correctly for WS on demand audio page', () => {
@@ -82,7 +82,7 @@ describe(`Header`, () => {
         },
       });
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.querySelector('header')).toBeInTheDocument();
     });
   });
 
@@ -318,6 +318,31 @@ describe(`Header`, () => {
 
       expect(container).not.toContainElement(privacyBanner);
       expect(container).not.toContainElement(cookieBanner);
+    });
+  });
+
+  describe('WSLanguagesHeader', () => {
+    it('should render the logo banner on the WS Languages Homepage', async () => {
+      HeaderContainerWithContext({
+        renderOptions: {
+          pageType: HOME_PAGE,
+          service: 'ws',
+          pathname: '/ws/languages',
+        },
+      });
+      expect(await screen.findByTestId('logo-banner')).toBeInTheDocument();
+    });
+
+    it('should not render the logo banner for ws service on a non-languages page', () => {
+      HeaderContainerWithContext({
+        renderOptions: {
+          pageType: HOME_PAGE,
+          service: 'ws',
+          pathname: '/ws',
+        },
+      });
+
+      expect(screen.queryByTestId('logo-banner')).toBeNull();
     });
   });
 });

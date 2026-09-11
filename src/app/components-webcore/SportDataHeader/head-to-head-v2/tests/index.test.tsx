@@ -1,7 +1,11 @@
+import { act, renderHook } from '@testing-library/react';
 import {
   render,
   screen,
 } from '#app/components/react-testing-library-with-providers';
+import * as fetchPolledData from '#app/lib/utilities/fetchPolledData';
+import sportData from '../fixture/sportData';
+import sportDataUpdate from '../fixture/sportDataUpdate';
 import cancelledMockData from '../static-data/event/transformed/cancelled.json';
 import postponedMockData from '../static-data/event/transformed/postponed.json';
 import suspendedMockData from '../static-data/event/transformed/suspended.json';
@@ -24,16 +28,18 @@ import {
   inPensAetData,
   beforePensAetData,
   inPens90Data,
-  secondHalf90Data,
 } from '../static-data/event/transformed/mid-event/index';
 import HeadToHead from '../head-to-head-v2';
 import type { HeadToHeadV2Data } from '../types';
 
-jest.mock('#app/hooks/useSportDataPolling', () => ({
+jest.mock('#app/hooks/usePolling', () => ({
   __esModule: true,
-  default: jest.fn(initialSportData => ({
-    currentSportData: initialSportData,
-  })),
+  default: jest.fn(({ initialData }) => initialData),
+}));
+
+jest.mock('../helpers/localise-datetime', () => ({
+  getLocalisedDate: jest.fn(date => date),
+  getLocalisedTime: jest.fn((date, time) => time),
 }));
 
 interface RenderOptions {
@@ -237,6 +243,43 @@ describe('Skipped Tests for MVP', () => {
 });
 
 describe('Head to Head Component', () => {
+  test('renders head to head component of PreEvent status with No teams', () => {
+    renderHeadToHead({ data: asH2HData(preEventNoTeamsMockData) });
+
+    const date = screen.queryByText('Sat 6 Aug 2022');
+    const tournament = screen.queryByText('Premier League');
+    const teamName = screen.getByText(
+      'Team to be confirmed versus Team to be confirmed kick off 12:30',
+    );
+
+    expect(date).toBeInTheDocument();
+    expect(tournament).toBeInTheDocument();
+    expect(teamName).toBeInTheDocument();
+  });
+
+  test('renders head to head component of PreEvent status', () => {
+    renderHeadToHead({ data: asH2HData(preEventMockData) });
+
+    const date = screen.queryByText('Sat 6 Aug 2022');
+    const tournamentLabel = screen.queryByText('Premier League');
+
+    expect(date).toBeInTheDocument();
+    expect(tournamentLabel).toBeInTheDocument();
+  });
+
+  test('renders the head to head of MidEvent status', () => {
+    const tournamentDescriptionLabel = 'UEFA Europa Conference League';
+
+    renderHeadToHead({
+      data: asH2HData({ ...firstHalfData, tournamentDescriptionLabel }),
+    });
+
+    const tournamentText = screen.queryByText(tournamentDescriptionLabel);
+    const time = screen.queryByText(firstHalfData.date);
+
+    expect(tournamentText).toBeInTheDocument();
+    expect(time).not.toBeInTheDocument();
+  });
   test('renders head to head with half time, full time scores for a MidEvent in Extra Time', () => {
     renderHeadToHead({ data: asH2HData(etFirstHalfData) });
 
@@ -780,4 +823,117 @@ describe('Head to Head Component', () => {
       expect(screen.queryByTestId('penalties-text')).not.toBeInTheDocument();
     },
   );
+});
+
+describe('head-to-head-v2 sport data polling', () => {
+  const { default: usePolling, POLLING_INTERVAL } = jest.requireActual<
+    typeof import('#app/hooks/usePolling')
+  >('#app/hooks/usePolling');
+
+  const initialSportData = sportData.data
+    .sportDataEvent as unknown as HeadToHeadV2Data;
+  const updatedSportData = sportDataUpdate.data
+    .sportDataEvent as unknown as HeadToHeadV2Data;
+
+  const advancePolling = async () => {
+    await act(async () => {
+      jest.advanceTimersByTime(POLLING_INTERVAL);
+      await Promise.resolve();
+    });
+  };
+
+  const renderSportDataPolling = (enabled = true) =>
+    renderHook(() =>
+      usePolling<{ sportDataEvent: HeadToHeadV2Data }, HeadToHeadV2Data>({
+        initialData: initialSportData,
+        enabled,
+        endpoint: 'sport',
+        params: { sportDataEventUrn: initialSportData.urn },
+        returnedData: response => response.sportDataEvent,
+      }),
+    );
+
+  beforeAll(() => {
+    jest.useFakeTimers();
+  });
+
+  afterAll(() => {
+    jest.useRealTimers();
+  });
+
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
+  it('should return the initial sport data on initialisation', () => {
+    jest.spyOn(fetchPolledData, 'default').mockResolvedValue(null);
+
+    const { result } = renderSportDataPolling();
+
+    expect(result.current).toStrictEqual(initialSportData);
+  });
+
+  it('should poll the sport endpoint with the encoded event urn when enabled', async () => {
+    const fetchSpy = jest
+      .spyOn(fetchPolledData, 'default')
+      .mockResolvedValue(null);
+
+    renderSportDataPolling(true);
+
+    await advancePolling();
+
+    expect(fetchSpy).toHaveBeenCalledTimes(1);
+    expect(fetchSpy).toHaveBeenCalledWith('sport', {
+      params: { sportDataEventUrn: initialSportData.urn },
+    });
+  });
+
+  it('should not fetch data when polling is disabled', async () => {
+    const fetchSpy = jest
+      .spyOn(fetchPolledData, 'default')
+      .mockResolvedValue(null);
+
+    renderSportDataPolling(false);
+
+    await advancePolling();
+
+    expect(fetchSpy).not.toHaveBeenCalled();
+  });
+
+  it('should update sport data when new data is returned after polling', async () => {
+    jest.spyOn(fetchPolledData, 'default').mockResolvedValue({
+      data: { sportDataEvent: updatedSportData },
+      status: 200,
+    });
+
+    const { result } = renderSportDataPolling();
+
+    await advancePolling();
+
+    expect(result.current).toStrictEqual(updatedSportData);
+  });
+
+  it('should keep the current sport data when no data is returned after polling', async () => {
+    jest.spyOn(fetchPolledData, 'default').mockResolvedValue(null);
+
+    const { result } = renderSportDataPolling();
+
+    await advancePolling();
+
+    expect(result.current).toStrictEqual(initialSportData);
+  });
+
+  it('should clear the polling interval when unmounted', async () => {
+    const fetchSpy = jest
+      .spyOn(fetchPolledData, 'default')
+      .mockResolvedValue(null);
+
+    const { unmount } = renderSportDataPolling();
+
+    unmount();
+
+    await advancePolling();
+
+    expect(fetchSpy).not.toHaveBeenCalled();
+  });
 });

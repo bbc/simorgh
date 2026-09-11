@@ -10,6 +10,7 @@ exports[`Story Promo Link Contents should render with visually hidden text for m
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 <div>
@@ -43,6 +44,7 @@ exports[`Story Promo Link Contents should render with visually hidden text for m
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 <div>
@@ -76,6 +78,7 @@ exports[`Story Promo Link Contents should render with visually hidden text for p
   position: absolute;
   width: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
 <div>

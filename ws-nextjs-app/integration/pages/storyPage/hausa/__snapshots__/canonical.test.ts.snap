@@ -296,7 +296,7 @@ exports[`Canonical Story Page SEO Linked data should match text 2`] = `
 
 exports[`Canonical Story Page SEO OG description 1`] = `"French football fans sing God Save The Queen ahead of the match between France and England in tribute to the victims of attacks in London and Manchester."`;
 
-exports[`Canonical Story Page SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_hausa/1745C/test/_63542359_hi035712328.jpg"`;
+exports[`Canonical Story Page SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1200/branded_hausa/1745C/test/_63542359_hi035712328.jpg"`;
 
 exports[`Canonical Story Page SEO OG image alt 1`] = `"hai;le"`;
 
@@ -322,7 +322,7 @@ exports[`Canonical Story Page SEO Twitter description 1`] = `"French football fa
 
 exports[`Canonical Story Page SEO Twitter image alt 1`] = `"hai;le"`;
 
-exports[`Canonical Story Page SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_hausa/1745C/test/_63542359_hi035712328.jpg"`;
+exports[`Canonical Story Page SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1200/branded_hausa/1745C/test/_63542359_hi035712328.jpg"`;
 
 exports[`Canonical Story Page SEO Twitter site 1`] = `"@bbchausa"`;
 

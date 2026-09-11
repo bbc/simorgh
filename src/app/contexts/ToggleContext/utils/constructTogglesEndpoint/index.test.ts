@@ -1,25 +1,38 @@
-import getTogglesEndpoint from './index';
+import constructTogglesEndpoint from './index';
+
+const originalEnv = process.env;
 
 beforeEach(() => {
-  process.env.SIMORGH_CONFIG_URL = 'https://config.test.api.bbci.co.uk/';
+  process.env = {
+    ...originalEnv,
+    TOGGLES_BFF_PATH: 'https://some-url.co.uk/toggles',
+    WEB_CDN_URL: 'https://web-cdn.test',
+  };
 });
 
 afterEach(() => {
   jest.resetAllMocks();
+  process.env = originalEnv;
 });
 
 describe('Toggles endpoint constructor', () => {
-  it('returns correct endpoint during ssr', () => {
-    expect(getTogglesEndpoint('mundo', null)).toEqual(
-      `https://config.test.api.bbci.co.uk/?application=simorgh&service=mundo&__amp_source_origin=https://www.test.bbc.com`,
+  it('returns the simorgh BFF endpoint by default', () => {
+    expect(constructTogglesEndpoint({ service: 'mundo' })).toEqual(
+      `https://some-url.co.uk/toggles?service=mundo&application=simorgh`,
     );
   });
 
-  it('returns correct endpoint when on live', () => {
-    process.env.SIMORGH_CONFIG_URL = 'https://config.api.bbci.co.uk/';
+  it('uses the web-cdn amp endpoint when isAmp is true', () => {
+    expect(constructTogglesEndpoint({ service: 'mundo', isAmp: true })).toEqual(
+      `https://web-cdn.test/fd/ws-toggles?service=mundo&application=simorgh`,
+    );
+  });
 
-    expect(getTogglesEndpoint('mundo', 'https://www.bbc.com')).toEqual(
-      `https://config.api.bbci.co.uk/?application=simorgh&service=mundo&__amp_source_origin=https://www.bbc.com`,
+  it('defaults to the simorgh BFF endpoint when isAmp is false', () => {
+    expect(
+      constructTogglesEndpoint({ service: 'mundo', isAmp: false }),
+    ).toEqual(
+      `https://some-url.co.uk/toggles?service=mundo&application=simorgh`,
     );
   });
 });

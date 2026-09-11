@@ -1,4 +1,5 @@
 import WithTimeMachine from '../../../../testHelpers/withTimeMachine';
+import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import ArticleTimestamp from '.';
 import { timestampGenerator } from './testHelpers';
 
@@ -93,3 +94,46 @@ export const H = () => (
 );
 H.storyName =
   'lastPublished today and more than 10 hours ago and firstPublished before today';
+
+// Timezone and locale migration checks for Moment → Temporal
+const timezoneLocaleServices = [
+  { service: 'news', label: 'English (Europe/London)' },
+  { service: 'azeri', label: 'Azeri (Asia/Baku)' },
+  { service: 'persian', label: 'Persian (GMT, Jalali calendar)' },
+  { service: 'arabic', label: 'Arabic (GMT, RTL)' },
+  { service: 'portuguese', label: 'Portuguese (America/Sao_Paulo)' },
+  { service: 'nepali', label: 'Nepali (Asia/Kathmandu)' },
+];
+
+const dstBoundaryTimestamp = Date.UTC(2021, 2, 28, 1, 0, 0); // 28 March 2021 01:00 UTC (DST boundary)
+const fixedOlderTimestamp = Date.UTC(2021, 2, 27, 12, 0, 0); // 27 March 2021 12:00 UTC
+
+export const TimezoneAndLocaleChecks = () => (
+  <div>
+    {timezoneLocaleServices.map(({ service, label }) => (
+      <ServiceContextProvider key={service} service={service}>
+        <div
+          style={{
+            marginBottom: '2rem',
+            padding: '1rem',
+            border: '1px solid #ccc',
+          }}
+        >
+          <strong>{label}</strong>
+          <div style={{ marginTop: '0.5rem' }}>
+            <ArticleTimestamp
+              firstPublished={fixedOlderTimestamp}
+              lastPublished={dstBoundaryTimestamp}
+            />
+          </div>
+        </div>
+      </ServiceContextProvider>
+    ))}
+  </div>
+);
+TimezoneAndLocaleChecks.parameters = {
+  chromatic: {
+    disable: false,
+  },
+};
+TimezoneAndLocaleChecks.tags = ['!dev'];

@@ -7,7 +7,11 @@ const unitTests = {
     './src/testHelpers/setupTests.js',
     'jest-expect-message',
   ],
-  moduleNameMapper: jestDirAlias,
+  moduleNameMapper: {
+    ...jestDirAlias,
+    '\\.module\\.(css|scss)$': 'identity-obj-proxy',
+    '^@bbc/resonance$': '<rootDir>/src/testHelpers/resonanceMock.ts',
+  },
   testEnvironment: 'jsdom',
   snapshotSerializers: ['@emotion/jest/serializer'],
   transform: {
@@ -37,7 +41,11 @@ const clientUnitTests = {
     './src/testHelpers/setupTests.js',
     'jest-expect-message',
   ],
-  moduleNameMapper: jestDirAlias,
+  moduleNameMapper: {
+    ...jestDirAlias,
+    '\\.module\\.(css|scss)$': 'identity-obj-proxy',
+    '^@bbc/resonance$': '<rootDir>/src/testHelpers/resonanceMock.ts',
+  },
   testEnvironment: '@happy-dom/jest-environment',
   snapshotSerializers: ['@emotion/jest/serializer'],
   transform: {
