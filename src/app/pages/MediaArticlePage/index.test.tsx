@@ -1,9 +1,11 @@
 import { PropsWithChildren } from 'react';
-import { waitFor, screen } from '@testing-library/react';
+import { act, waitFor, screen } from '@testing-library/react';
 import { Article } from '#app/models/types/optimo';
 import { Helmet } from 'react-helmet';
+import useUASButton from '#app/hooks/useUASButton';
+import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
 import { render } from '../../components/react-testing-library-with-providers';
-import { ARTICLE_PAGE } from '../../routes/utils/pageTypes';
+import { ARTICLE_PAGE, MEDIA_ASSET_PAGE } from '../../routes/utils/pageTypes';
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
@@ -23,6 +25,10 @@ jest.mock('../../components/ChartbeatAnalytics', () => {
 jest.mock('#src/app/components/ATIAnalytics', () => () => (
   <div>ATI Analytics</div>
 ));
+
+jest.mock('#app/hooks/useUASButton');
+
+const mockedUseUASButton = useUASButton as jest.Mock;
 
 type ContextProps = {
   service: Services;
@@ -281,6 +287,129 @@ describe('MediaArticlePage', () => {
         toggles: { topicDiscovery: { enabled: false } },
       });
       expect(queryByTestId('topic-discovery')).not.toBeInTheDocument();
+    });
+  });
+
+  describe('SaveArticleButton', () => {
+    const personalizedRenderOptions = {
+      service: 'hindi' as const,
+      toggles: { uasPersonalization: { enabled: true, value: 'hindi' } },
+      idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: true },
+    };
+
+    const bylineBlock = {
+      id: 'byline-block',
+      type: 'byline',
+      model: {
+        blocks: [
+          {
+            type: 'contributor',
+            model: {
+              topicId: '',
+              topicUrl: '',
+              blocks: [
+                {
+                  type: 'name',
+                  model: {
+                    blocks: [
+                      {
+                        type: 'text',
+                        model: {
+                          blocks: [
+                            {
+                              type: 'paragraph',
+                              model: {
+                                text: 'A Reporter',
+                                blocks: [
+                                  {
+                                    type: 'fragment',
+                                    model: {
+                                      text: 'A Reporter',
+                                      attributes: [],
+                                    },
+                                  },
+                                ],
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    };
+
+    const pidginPageDataWithByline = {
+      ...pidginPageData,
+      content: {
+        model: {
+          blocks: [...pidginPageData.content.model.blocks, bylineBlock],
+        },
+      },
+    } as unknown as Article;
+
+    const cpsMediaAssetPageData = {
+      ...pidginPageData,
+      metadata: { ...pidginPageData.metadata, type: MEDIA_ASSET_PAGE },
+    } as unknown as Article;
+
+    beforeEach(() => {
+      mockedUseUASButton.mockReturnValue({
+        isSaved: false,
+        isLoading: false,
+        isUpdating: false,
+        error: null,
+        handleSaveAction: jest.fn(),
+      });
+    });
+
+    it('renders after the byline when the article has a byline', async () => {
+      await act(async () => {
+        render(
+          <MediaArticlePage pageData={pidginPageDataWithByline} />,
+          personalizedRenderOptions,
+        );
+      });
+      expect(
+        document.querySelector('#save-article-button'),
+      ).toBeInTheDocument();
+    });
+
+    it('renders after the standalone timestamp when the article has no byline', async () => {
+      await act(async () => {
+        render(
+          <MediaArticlePage pageData={pidginPageData as unknown as Article} />,
+          personalizedRenderOptions,
+        );
+      });
+      expect(
+        document.querySelector('#save-article-button'),
+      ).toBeInTheDocument();
+    });
+
+    it('does NOT render for legacy CPS media asset pages', async () => {
+      await act(async () => {
+        render(
+          <MediaArticlePage pageData={cpsMediaAssetPageData} />,
+          personalizedRenderOptions,
+        );
+      });
+      expect(document.querySelector('#save-article-button')).toBeNull();
+    });
+
+    it('does NOT render when personalization is unavailable', async () => {
+      await act(async () => {
+        render(
+          <MediaArticlePage pageData={pidginPageData as unknown as Article} />,
+          { service: 'hindi' },
+        );
+      });
+      expect(document.querySelector('#save-article-button')).toBeNull();
     });
   });
 });
