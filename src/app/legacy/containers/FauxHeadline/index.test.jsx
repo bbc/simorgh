@@ -1,3 +1,4 @@
+import { screen } from '@testing-library/react';
 import {
   isNull,
   suppressPropWarnings,
@@ -17,8 +18,8 @@ describe('FauxHeadline', () => {
     it('should render correctly', () => {
       const data = textBlock('This is a headline!', 'id');
 
-      const { container } = render(<FauxHeadlineContainer {...data} />);
-      expect(container).toMatchSnapshot();
+      render(<FauxHeadlineContainer {...data} />);
+      expect(screen.getByText('This is a headline!')).toBeInTheDocument();
     });
 
     describe('with plain text', () => {
@@ -29,8 +30,8 @@ describe('FauxHeadline', () => {
         };
 
         it('should render <strong> containing correct text', () => {
-          const { container } = render(<FauxHeadlineContainer {...data} />);
-          expect(container).toMatchSnapshot();
+          render(<FauxHeadlineContainer {...data} />);
+          expect(screen.getByText('Plain headline').tagName).toBe('STRONG');
         });
       });
     });

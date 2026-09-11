@@ -824,35 +824,38 @@ describe('Article Page', () => {
       expect(metadata).toEqual({ atiAnalytics, type });
 
       expect(buildReverbParamsSpy).toHaveReturnedWith({
-        eventDetails: { eventName: 'pageView' },
-        params: {
-          env: undefined,
-          page: {
-            additionalProperties: {
-              app_name: 'news-pidgin',
-              app_type: 'responsive',
-              content_language: 'pcm',
-              product_platform: null,
-              referrer_url: null,
-              x10: null,
-              x11: '2018-01-01T12:01:00.000Z',
-              x12: '2018-01-01T14:00:00.000Z',
-              x13: null,
-              x14: null,
-              x16: '',
-              x17: null,
-              x18: null,
-              x5: null,
-              x8: 'simorgh',
-              x9: 'Article%20Headline%20for%20SEO%20in%20Pidgin%20-%20BBC%20News%20Pidgin',
+        resonanceParams: null,
+        reverbParams: {
+          eventDetails: { eventName: 'pageView' },
+          params: {
+            env: undefined,
+            page: {
+              additionalProperties: {
+                app_name: 'news-pidgin',
+                app_type: 'responsive',
+                content_language: 'pcm',
+                product_platform: null,
+                referrer_url: null,
+                x10: null,
+                x11: '2018-01-01T12:01:00.000Z',
+                x12: '2018-01-01T14:00:00.000Z',
+                x13: null,
+                x14: null,
+                x16: '',
+                x17: null,
+                x18: null,
+                x5: null,
+                x8: 'simorgh',
+                x9: 'Article%20Headline%20for%20SEO%20in%20Pidgin%20-%20BBC%20News%20Pidgin',
+              },
+              contentId: 'urn:bbc:optimo:c0000000001o',
+              contentType: undefined,
+              destination: 'WS_NEWS_LANGUAGES_TEST',
+              name: null,
+              producer: 'PIDGIN',
             },
-            contentId: 'urn:bbc:optimo:c0000000001o',
-            contentType: undefined,
-            destination: 'WS_NEWS_LANGUAGES_TEST',
-            name: null,
-            producer: 'PIDGIN',
+            user: { hashedId: null, isSignedIn: false },
           },
-          user: { hashedId: null, isSignedIn: false },
         },
       });
     });
@@ -897,35 +900,38 @@ describe('Article Page', () => {
       expect(metadata).toEqual({ atiAnalytics, type });
 
       expect(buildReverbParamsSpy).toHaveReturnedWith({
-        eventDetails: { eventName: 'pageView' },
-        params: {
-          env: undefined,
-          page: {
-            additionalProperties: {
-              app_name: 'news-pidgin',
-              app_type: 'responsive',
-              content_language: 'pcm',
-              product_platform: null,
-              referrer_url: null,
-              x10: null,
-              x11: '2018-01-01T12:01:00.000Z',
-              x12: '2018-01-01T14:00:00.000Z',
-              x13: null,
-              x14: null,
-              x16: '',
-              x17: null,
-              x18: null,
-              x5: null,
-              x8: 'simorgh',
-              x9: 'Article%20Headline%20for%20SEO%20in%20Pidgin%20-%20BBC%20News%20Pidgin',
+        resonanceParams: null,
+        reverbParams: {
+          eventDetails: { eventName: 'pageView' },
+          params: {
+            env: undefined,
+            page: {
+              additionalProperties: {
+                app_name: 'news-pidgin',
+                app_type: 'responsive',
+                content_language: 'pcm',
+                product_platform: null,
+                referrer_url: null,
+                x10: null,
+                x11: '2018-01-01T12:01:00.000Z',
+                x12: '2018-01-01T14:00:00.000Z',
+                x13: null,
+                x14: null,
+                x16: '',
+                x17: null,
+                x18: null,
+                x5: null,
+                x8: 'simorgh',
+                x9: 'Article%20Headline%20for%20SEO%20in%20Pidgin%20-%20BBC%20News%20Pidgin',
+              },
+              contentId: 'urn:bbc:optimo:c0000000001o',
+              contentType: undefined,
+              destination: 'WS_NEWS_LANGUAGES_TEST',
+              name: null,
+              producer: 'PIDGIN',
             },
-            contentId: 'urn:bbc:optimo:c0000000001o',
-            contentType: undefined,
-            destination: 'WS_NEWS_LANGUAGES_TEST',
-            name: null,
-            producer: 'PIDGIN',
+            user: { hashedId: null, isSignedIn: false },
           },
-          user: { hashedId: null, isSignedIn: false },
         },
       });
     });
