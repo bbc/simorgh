@@ -7,6 +7,7 @@ import {
   buildActivationEventModel,
   buildReverbAnalyticsModel,
   buildReverbEventModel,
+  buildErrorEventModel,
 } from '.';
 
 const mockAndSet = ({ name, source }, response) => {
@@ -548,6 +549,73 @@ describe('atiUrl', () => {
           experience: {
             engine_id: ['optimizely.dummy_experiment.variant_1'],
           },
+        });
+      });
+    });
+
+    describe('buildErrorEventModel', () => {
+      const input = {
+        pageIdentifier: 'mundo.page',
+        producerName: 'MUNDO',
+        statsDestination: 'statsDestination',
+        feature: 'uas',
+        errorName: 'save',
+      };
+
+      it('should return the correct Reverb page and user configuration', () => {
+        const reverbErrorEventModel = buildErrorEventModel({
+          ...input,
+          isSignedIn: true,
+          hashedId: 'hashed-id',
+        });
+
+        expect(reverbErrorEventModel.params).toEqual({
+          page: {
+            destination: 'statsDestination',
+            name: 'mundo.page',
+            producer: 'MUNDO',
+            additionalProperties: {
+              type: 'AT',
+            },
+          },
+          user: {
+            isSignedIn: true,
+            hashedId: 'hashed-id',
+          },
+        });
+      });
+
+      it('should build a first-class error event with diagnostics', () => {
+        const reverbErrorEventModel = buildErrorEventModel({
+          ...input,
+          errorName: 'remove',
+          statusCode: 500,
+          errorKey: 'unknownTokenKey',
+          errorMessage: 'An unknown error occurred.',
+        });
+
+        expect(reverbErrorEventModel.eventDetails).toEqual({
+          eventName: 'error',
+          eventPublisher: 'viewability',
+          event: {
+            category: 'error',
+          },
+          error: {
+            engine: 'uas',
+            name: 'remove',
+            message: 'An unknown error occurred.',
+            code: '500',
+            type: 'unknownTokenKey',
+          },
+        });
+      });
+
+      it('should omit optional diagnostics when they are absent', () => {
+        const reverbErrorEventModel = buildErrorEventModel(input);
+
+        expect(reverbErrorEventModel.eventDetails.error).toEqual({
+          engine: 'uas',
+          name: 'save',
         });
       });
     });
