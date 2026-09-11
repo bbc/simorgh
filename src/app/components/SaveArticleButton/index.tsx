@@ -1,6 +1,7 @@
 import { use } from 'react';
 import { AccountContext } from '#contexts/AccountContext';
 import type { SaveArticlePageData } from '#app/lib/utilities/extractSaveArticleProps';
+import ErrorBoundary from '#app/components/ErrorBoundary';
 import SaveArticleButtonAuthenticated from './SaveArticleButtonAuthenticated/lazy';
 import SaveArticleButtonGuest from './SaveArticleButtonGuest';
 import styles from './index.styles';
@@ -18,7 +19,7 @@ const SaveArticleButton = (props: SaveArticleButtonProps) => {
   if (!isPersonalizationAvailable) return null;
 
   return (
-    <>
+    <ErrorBoundary componentName="SaveArticleButton">
       <noscript>
         <style>{`#${SAVE_ARTICLE_BUTTON_ID} { display: none; }`}</style>
       </noscript>
@@ -29,7 +30,7 @@ const SaveArticleButton = (props: SaveArticleButtonProps) => {
           <SaveArticleButtonGuest />
         )}
       </div>
-    </>
+    </ErrorBoundary>
   );
 };
 

@@ -52,7 +52,8 @@ const AUDIT_URLS = {
       'https://www.bbc.com/uzbek/lat',
     ],
     test: [
-      'https://www.test.bbc.com/kyrgyz?renderer_env=live',
+      // Temporarily disabled: https://www.test.bbc.com/kyrgyz currently returns 500 due to ongoing work
+      // 'https://www.test.bbc.com/kyrgyz?renderer_env=live',
       'https://www.test.bbc.com/serbian/lat?renderer_env=live',
     ],
   },

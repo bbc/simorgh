@@ -7,16 +7,18 @@ const onClose = jest.fn();
 
 const mockTranslations = {
   success: {
-    titleBefore: 'This article is now saved to',
-    titleAfter: '',
+    title: 'This article is now saved',
+    bodyBefore: 'It will appear in',
+    bodyAfter: '',
   },
   error: {
     title: 'Sorry, something went wrong',
     body: 'Check your connection, refresh the page and try again',
   },
   removed: {
-    titleBefore: 'This article has now been removed from',
-    titleAfter: '',
+    title: 'This article is now removed',
+    bodyBefore: 'It will be removed from',
+    bodyAfter: '',
   },
   myNewsLinkText: 'My News',
   myNewsUrl: 'https://www.bbc.com/hindi/my-news',
@@ -41,8 +43,12 @@ describe('ActionTooltip', () => {
     );
 
     expect(
-      screen.getByText(/This article is now saved to/i),
+      screen.getByRole('heading', {
+        level: 2,
+        name: 'This article is now saved',
+      }),
     ).toBeInTheDocument();
+    expect(screen.getByText(/It will appear in/i)).toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'My News' })).toHaveAttribute(
       'href',
       'https://www.bbc.com/hindi/my-news',
@@ -63,7 +69,12 @@ describe('ActionTooltip', () => {
       { service: 'hindi' },
     );
 
-    expect(screen.getByText('Sorry, something went wrong')).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', {
+        level: 2,
+        name: 'Sorry, something went wrong',
+      }),
+    ).toBeInTheDocument();
     expect(
       screen.getByText('Check your connection, refresh the page and try again'),
     ).toBeInTheDocument();
@@ -78,12 +89,16 @@ describe('ActionTooltip', () => {
         closeLabel={closeLabel}
         onClose={onClose}
       />,
-      { service: 'hindi' },
+      { service: 'ws' },
     );
 
     expect(
-      screen.getByText(/This article has now been removed from/i),
+      screen.getByRole('heading', {
+        level: 2,
+        name: 'This article is now removed',
+      }),
     ).toBeInTheDocument();
+    expect(screen.getByText(/It will be removed from/i)).toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'My News' })).toBeInTheDocument();
     expect(
       screen.queryByText(/check your connection/i),
@@ -106,7 +121,7 @@ describe('ActionTooltip', () => {
     expect(onClose).toHaveBeenCalledTimes(1);
   });
 
-  it('exposes the tooltip as a polite live region for assistive technology', () => {
+  it('labels the tooltip group with its title for assistive technology', () => {
     render(
       <ActionTooltip
         status="success"
@@ -119,8 +134,47 @@ describe('ActionTooltip', () => {
 
     const tooltip = screen.getByTestId('action-tooltip');
 
-    expect(tooltip).toHaveAttribute('role', 'status');
-    expect(tooltip).toHaveAttribute('aria-live', 'polite');
-    expect(tooltip).toHaveAttribute('aria-atomic', 'true');
+    expect(tooltip).toHaveAttribute('role', 'group');
+    const titleId = tooltip.getAttribute('aria-labelledby');
+    expect(titleId).toBeTruthy();
+    expect(document.getElementById(titleId as string)).toBeInTheDocument();
+  });
+
+  it('moves focus to the close button when the tooltip appears', () => {
+    render(
+      <ActionTooltip
+        status="success"
+        content={content}
+        closeLabel={closeLabel}
+        onClose={onClose}
+      />,
+      { service: 'hindi' },
+    );
+
+    expect(screen.getByTestId('action-tooltip-close')).toHaveFocus();
+  });
+
+  it('restores focus to the previously focused element when unmounted', () => {
+    const triggerButton = document.createElement('button');
+    document.body.appendChild(triggerButton);
+    triggerButton.focus();
+
+    const { unmount } = render(
+      <ActionTooltip
+        status="success"
+        content={content}
+        closeLabel={closeLabel}
+        onClose={onClose}
+      />,
+      { service: 'hindi' },
+    );
+
+    expect(screen.getByTestId('action-tooltip-close')).toHaveFocus();
+
+    unmount();
+
+    expect(triggerButton).toHaveFocus();
+
+    triggerButton.remove();
   });
 });

@@ -1,8 +1,13 @@
 /* eslint-disable import/no-relative-packages */
-import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
+import runTestsForPage, {
+  TestDataType,
+} from '#nextjs/cypress/support/helpers/runTestsForPage';
 import e2eTests from './tests';
 import testsForAllCanonicalPages from '../../testsForAllCanonicalPages';
-import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
+import {
+  assertPageView,
+  assertResonancePageView,
+} from '../../specialFeatures/atiAnalytics/assertions';
 import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
 import { assertLiteSiteSummaryComponentToMainSiteClick } from '../../specialFeatures/atiAnalytics/assertions/liteSiteSummary';
 import {
@@ -200,7 +205,7 @@ const testSuites = [
     runforEnv: ['test', 'live'],
     tests,
   },
-];
+] as unknown as TestDataType[];
 
 const atiAnalyticsTestSuites = [
   {
@@ -223,7 +228,17 @@ const atiAnalyticsTestSuites = [
     contentType: 'player-episode',
     tests: [assertPageView],
   },
-];
+  {
+    path: '/arabic/bbc_arabic_tv/tv_programmes/w13xtw9k',
+    runforEnv: ['local'],
+    service: 'arabic',
+    pageIdentifier: 'arabic.bbc_arabic_tv.tv_programmes.w13xtw9k.page',
+    siteId: 5,
+    applicationType: 'responsive',
+    contentType: 'player-episode',
+    tests: [assertResonancePageView],
+  },
+] as unknown as TestDataType[];
 
 const liteTestSuites = testSuites.map(testSuite => {
   return {
@@ -257,7 +272,7 @@ const atiAnalyticsLiteTestSuites = atiAnalyticsTestSuites.map(testSuite => {
 
 runTestsForPage({
   pageType,
-  testSuites: [...testSuites, ...liteTestSuites],
+  testSuites: [...testSuites, ...liteTestSuites] as unknown as TestDataType[],
 });
 
 runTestsForPage({

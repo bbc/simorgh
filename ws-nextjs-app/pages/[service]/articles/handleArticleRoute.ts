@@ -33,13 +33,15 @@ const getDerivedArticleType = (metadata: ArticleMetadata) => {
 export default async (context: GetServerSidePropsContext) => {
   const {
     resolvedUrl,
-    req: { headers: reqHeaders },
+    req: { headers: reqHeaders, url: requestUrl },
   } = context;
 
   const { service, renderer_env: rendererEnv } =
     context.query as PageDataParams;
 
   const resolvedUrlWithoutQuery = resolvedUrl.split('?')?.[0];
+  const canonicalPathname =
+    requestUrl?.split('?')?.[0] || resolvedUrlWithoutQuery;
 
   const { isAmp } = getPathExtension(resolvedUrlWithoutQuery);
   const { variant } = parseRoute(resolvedUrl);
@@ -94,7 +96,7 @@ export default async (context: GetServerSidePropsContext) => {
         timeOnServer: Date.now(),
         variant: variant || null,
         pageType: ARTICLE_PAGE,
-        pathname: resolvedUrlWithoutQuery,
+        pathname: canonicalPathname,
       },
     };
   }
@@ -154,7 +156,7 @@ export default async (context: GetServerSidePropsContext) => {
         countryTopicIdToReorder,
       },
       pageType: derivedPageType,
-      pathname: resolvedUrlWithoutQuery,
+      pathname: canonicalPathname,
       service,
       status,
       variant: variant || null,

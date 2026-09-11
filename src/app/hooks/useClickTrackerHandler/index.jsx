@@ -33,7 +33,6 @@ const OJ_COMPONENT_NAMES = [
 const OJ_OPTIMIZELY_EXPERIMENTS = [
   'test_page_views_aa_3',
   'newswb_ws_oj_order_referrer_search',
-  'newswb_ws_oj_order_referrer_search_aa_test',
 ];
 
 const OJ_OPTIMIZELY_CLICK_EVENTS = ['oj_clicks'];

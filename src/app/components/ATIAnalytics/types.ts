@@ -1,4 +1,9 @@
 /* eslint-disable camelcase */
+import type {
+  ResonanceProperties,
+  PageviewProperties,
+  BaseProperties,
+} from '@bbc/resonance';
 import { PageTypes, Platforms, Services } from '../../models/types/global';
 import { RequestContextProps } from '../../contexts/RequestContext';
 import { ServiceConfig } from '../../models/types/serviceConfig';
@@ -104,6 +109,7 @@ export type ReverbPageVars = {
   name?: string | null;
   additionalProperties?: {
     app_name?: string | null;
+    app_type?: string | null;
     content_language?: string | null;
     type?: string | null;
   };
@@ -119,22 +125,37 @@ export type ReverbUserVars = {
 };
 
 export type ReverbEventDetails = {
+  actionName?: string;
   anchorElement?: HTMLElement;
+  background?: boolean;
+  container?: string;
   experience?: {
-    engine_type: Array<string>;
+    engine_type?: Array<string>;
     engine_id: Array<string>;
   };
   event?: {
     category: string;
-    action: 'select' | 'view';
+    action: 'select' | 'view' | 'serve';
     grouping?: string;
+    interaction_type?: string;
+    spec_id?: string;
+    spec_version?: string;
   };
-  eventName: 'pageView' | 'sectionView' | 'sectionClick';
+  eventName: 'pageView' | 'sectionView' | 'sectionClick' | 'activation';
   eventPublisher?: string;
   group?: string | object;
   isClick?: boolean;
   item?: string | object;
   originalEvent?: Event;
+  // Appended to 'actionName' by Reverb to form the 'creation' slot as 'actionName~type'
+  type?: string;
+};
+
+// possible task - type this ourselves and not rely on imported types
+export type ResonanceBeaconConfig = {
+  resonanceProperties: ResonanceProperties;
+  pageviewProperties: PageviewProperties;
+  baseProperties: BaseProperties;
 };
 
 export type ReverbBeaconConfig = {
@@ -144,6 +165,7 @@ export type ReverbBeaconConfig = {
 
 export interface ATIAnalyticsProps {
   reverbParams: ReverbBeaconConfig;
+  resonanceParams?: ResonanceBeaconConfig | null;
 }
 
 export interface ATIEventTrackingProps {
@@ -205,6 +227,7 @@ export interface ATIPageTrackingProps {
   libraryVersion?: string;
   platform?: Platforms;
   statsDestination?: string;
+  destinationSiteId?: number | null;
   timePublished?: string | null;
   timeUpdated?: string | null;
   categoryName?: string | null;
