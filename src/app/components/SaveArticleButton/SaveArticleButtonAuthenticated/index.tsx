@@ -7,6 +7,10 @@ import useUASButton, {
   UASActionResult,
 } from '#app/hooks/useUASButton';
 import useErrorTracking from '#app/hooks/useErrorTracking';
+import {
+  ERROR_TRACKING_FEATURES,
+  UAS_ERROR_ACTIONS,
+} from '#app/hooks/useErrorTracking/errorTracking.const';
 import ErrorBoundary from '#app/components/ErrorBoundary';
 import useClickTracker from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
@@ -154,7 +158,11 @@ const SaveArticleButtonErrorFallback = ({ error }: { error: Error }) => {
   const trackError = useErrorTracking();
 
   useEffect(() => {
-    trackError({ error, feature: 'uas', action: 'render' });
+    trackError({
+      error,
+      feature: ERROR_TRACKING_FEATURES.UAS,
+      action: UAS_ERROR_ACTIONS.RENDER,
+    });
   }, [error, trackError]);
 
   return null;

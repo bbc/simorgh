@@ -7,6 +7,10 @@ import {
 import useUASFetchSaveStatus from '#app/hooks/useUASFetchSaveStatus';
 import useUASMetadataSync from '#app/hooks/useUASMetadataSync';
 import useErrorTracking from '#app/hooks/useErrorTracking';
+import {
+  ERROR_TRACKING_FEATURES,
+  UAS_ERROR_ACTIONS,
+} from '#app/hooks/useErrorTracking/errorTracking.const';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import uasApiRequest from '#app/lib/uasApi';
 import { buildGlobalId, FAVOURITES_CONFIG } from '#app/lib/uasApi/uasUtility';
@@ -63,7 +67,11 @@ const useUASButton = ({
 
   useEffect(() => {
     if (error) {
-      trackError({ error, feature: 'uas', action: 'fetch-status' });
+      trackError({
+        error,
+        feature: ERROR_TRACKING_FEATURES.UAS,
+        action: UAS_ERROR_ACTIONS.FETCH_STATUS,
+      });
     }
   }, [error, trackError]);
 
@@ -107,8 +115,8 @@ const useUASButton = ({
       onError: mutationError =>
         trackError({
           error: mutationError,
-          feature: 'uas',
-          action: 'metadata-sync',
+          feature: ERROR_TRACKING_FEATURES.UAS,
+          action: UAS_ERROR_ACTIONS.METADATA_SYNC,
         }),
     });
 
@@ -131,7 +139,11 @@ const useUASButton = ({
       onSuccess: () => setActionResult({ status: 'success', action }),
       onError: mutationError => {
         setActionResult({ status: 'error', action });
-        trackError({ error: mutationError, feature: 'uas', action });
+        trackError({
+          error: mutationError,
+          feature: ERROR_TRACKING_FEATURES.UAS,
+          action,
+        });
       },
     });
   };

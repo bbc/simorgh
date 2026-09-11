@@ -5,6 +5,10 @@ import type { SavedArticle } from '#app/lib/uasApi/uasUtility';
 import uasKeys from '#app/lib/uasApi/queryKeys';
 import { AccountContext } from '#app/contexts/AccountContext';
 import useErrorTracking from '../useErrorTracking';
+import {
+  ERROR_TRACKING_FEATURES,
+  UAS_ERROR_ACTIONS,
+} from '../useErrorTracking/errorTracking.const';
 
 interface UseRecentActivityParams {
   itemsPerPage?: number;
@@ -40,7 +44,11 @@ const useUASRecentActivity = ({
 
   useEffect(() => {
     if (error) {
-      trackError({ error, feature: 'uas', action: 'recent-activity' });
+      trackError({
+        error,
+        feature: ERROR_TRACKING_FEATURES.UAS,
+        action: UAS_ERROR_ACTIONS.RECENT_ACTIVITY,
+      });
     }
   }, [error, trackError]);
 

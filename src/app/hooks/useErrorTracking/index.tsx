@@ -1,4 +1,4 @@
-import { useCallback } from 'react';
+import { useCallback, useRef } from 'react';
 import { onlineManager } from '@tanstack/react-query';
 import { VIEW_EVENT } from '#app/lib/analyticsUtils/analytics.const';
 import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
@@ -48,10 +48,15 @@ const useErrorTracking = () => {
   } = extractATITrackingProps({
     eventType: VIEW_EVENT,
   });
+  // for an unrelated reason (e.g. trackError's identity changing once auth
+  // state resolves) while the underlying query error hasn't actually changed.
+  const lastTrackedErrorRef = useRef<unknown>(null);
 
   return useCallback(
     ({ error, feature, action }: TrackErrorParams) => {
       if (!isTrackableError(error)) return;
+      if (error === lastTrackedErrorRef.current) return;
+      lastTrackedErrorRef.current = error;
 
       const { statusCode, errorKey, errorMessage } = extractErrorDetails(error);
 

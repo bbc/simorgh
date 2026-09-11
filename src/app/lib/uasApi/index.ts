@@ -74,19 +74,17 @@ const parseUasErrorBody = async (
 ): Promise<UasErrorBody | undefined> => {
   let text: string | undefined;
   try {
-    text = await response.clone().text();
+    text = (await response.clone().text()).trim();
   } catch {
-    text = undefined;
+    return undefined;
   }
 
-  const trimmedText = text?.trim();
-
-  if (!trimmedText) return undefined;
+  if (!text) return undefined;
 
   try {
-    return JSON.parse(trimmedText) as UasErrorBody;
+    return JSON.parse(text) as UasErrorBody;
   } catch {
-    return { message: trimmedText };
+    return { message: text };
   }
 };
 

@@ -125,4 +125,41 @@ describe('useErrorTracking', () => {
 
     onlineSpy.mockRestore();
   });
+
+  it('does not track the same error object twice in a row', () => {
+    const onlineSpy = jest
+      .spyOn(onlineManager, 'isOnline')
+      .mockReturnValue(true);
+    const { result } = renderHook(() => useErrorTracking());
+    const error = new TypeError('boom');
+
+    result.current({ error, feature: 'uas', action: 'save' });
+    result.current({ error, feature: 'uas', action: 'save' });
+
+    expect(mockSendErrorEvent).toHaveBeenCalledTimes(1);
+
+    onlineSpy.mockRestore();
+  });
+
+  it('tracks a new error object even with the same feature and action', () => {
+    const onlineSpy = jest
+      .spyOn(onlineManager, 'isOnline')
+      .mockReturnValue(true);
+    const { result } = renderHook(() => useErrorTracking());
+
+    result.current({
+      error: new TypeError('boom'),
+      feature: 'uas',
+      action: 'save',
+    });
+    result.current({
+      error: new TypeError('boom again'),
+      feature: 'uas',
+      action: 'save',
+    });
+
+    expect(mockSendErrorEvent).toHaveBeenCalledTimes(2);
+
+    onlineSpy.mockRestore();
+  });
 });
