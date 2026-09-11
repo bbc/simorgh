@@ -131,6 +131,20 @@ describe('Temporal Helper functions', () => {
       );
     });
 
+    it('suppresses Eastern numeral conversion for the `ar` locale', () => {
+      const numberFormatSpy = jest.spyOn(Intl, 'NumberFormat');
+
+      translateDigits(5, 2, 'ar');
+
+      expect(numberFormatSpy).toHaveBeenCalledWith(
+        'ar-u-nu-latn',
+        expect.objectContaining({
+          minimumIntegerDigits: 2,
+          useGrouping: false,
+        }),
+      );
+    });
+
     it('leaves locales without an explicit override unchanged', () => {
       const numberFormatSpy = jest.spyOn(Intl, 'NumberFormat');
 

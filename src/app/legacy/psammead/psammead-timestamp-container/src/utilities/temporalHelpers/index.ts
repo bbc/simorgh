@@ -9,9 +9,9 @@ export type DurationFormat =
   | `${DurationFormatToken}${DurationFormatSeparator}${DurationFormatToken}`
   | `${DurationFormatToken}${DurationFormatSeparator}${DurationFormatToken}${DurationFormatSeparator}${DurationFormatToken}`;
 
-// forces Eastern Arabic numerals, matching the explicit override in psammead-locales/moment/ps.js
 const LOCALE_NUMBERING_SYSTEM_OVERRIDES: Record<string, string> = {
-  ps: 'ps-u-nu-arabext',
+  ar: 'ar-u-nu-latn', // forces Latin numerals, matching the suppression in psammead-locales/moment/ar.js
+  ps: 'ps-u-nu-arabext', // forces Eastern Arabic numerals, matching the explicit override in psammead-locales/moment/ps.js
 };
 
 export const sanitiseDuration = (duration: ISODuration) => {
