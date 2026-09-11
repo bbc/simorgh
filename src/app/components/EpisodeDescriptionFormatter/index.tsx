@@ -184,11 +184,12 @@ const ChapterList = ({
       {lines
         .filter(line => line.trim() !== '')
         .map((line, i) => {
-          const spaceIndex = line.indexOf(' ');
+          const trimmedLine = line.trim();
+          const spaceIndex = trimmedLine.search(/\s/);
           const timestamp =
-            spaceIndex > -1 ? line.slice(0, spaceIndex) : line.trim();
+            spaceIndex > -1 ? trimmedLine.slice(0, spaceIndex) : trimmedLine;
           const label =
-            spaceIndex > -1 ? line.slice(spaceIndex + 1).trim() : '';
+            spaceIndex > -1 ? trimmedLine.slice(spaceIndex + 1).trim() : '';
           const isInteractive = Boolean(playerId);
           return (
             // eslint-disable-next-line react/no-array-index-key
