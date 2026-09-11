@@ -10,6 +10,7 @@ import {
 import uasKeys from '#app/lib/uasApi/queryKeys';
 import { AccountContext } from '#app/contexts/AccountContext';
 import useTopicFollowStatus from '#app/hooks/useTopicFollowStatus';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 
 enum FollowAction {
   FOLLOW = 'follow',
@@ -28,6 +29,7 @@ const useTopicFollowButton = (
   topicData: TopicFollowData,
 ): UseTopicFollowButtonReturn => {
   const { topicId } = topicData;
+  const { service } = use(ServiceContext);
   const { hashedUserId = '', isRefreshAvailable } = use(AccountContext);
   const queryClient = useQueryClient();
   const { isFollowed, isLoading, error } = useTopicFollowStatus(topicId);
@@ -35,7 +37,7 @@ const useTopicFollowButton = (
   const mutation = useMutation({
     mutationFn: async (action: FollowAction) => {
       if (action === FollowAction.FOLLOW) {
-        const body = createFollowsPayload(topicData);
+        const body = createFollowsPayload(topicData, service);
         await uasApiRequest('POST', FOLLOWS_CONFIG.activityType, {
           body,
           isRefreshAvailable,

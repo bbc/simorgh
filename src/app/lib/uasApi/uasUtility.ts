@@ -125,26 +125,17 @@ const createFavouritesPayload = ({
 export interface TopicFollowData {
   topicId: string;
   title: string;
-  service: Services;
   url: string;
-  description?: string;
-  imageUrl?: string;
 }
 
-const buildTopicMetadata = ({
+const buildTopicMetadata = (
+  { topicId, title, url }: TopicFollowData,
+  service: Services,
+): Record<string, unknown> => ({
   topicId,
-  title,
-  service,
-  url,
-  description,
-  imageUrl,
-}: TopicFollowData): Record<string, unknown> => ({
-  topicId,
-  service,
   title: sanitiseMetadataString(title),
   locatorUrl: url,
-  description: sanitiseMetadataString(description),
-  imageUrl,
+  service,
 });
 
 /**
@@ -154,14 +145,15 @@ const buildTopicMetadata = ({
  */
 const createFollowsPayload = (
   topicData: TopicFollowData,
+  service: Services,
 ): UasApiRequestBody => ({
   activityType: FOLLOWS_CONFIG.activityType,
   resourceDomain: FOLLOWS_CONFIG.resourceDomain,
   resourceType: FOLLOWS_CONFIG.resourceType,
   resourceId: topicData.topicId,
   action: FOLLOWS_CONFIG.action,
-  resourceTitle: topicData.service,
-  metaData: buildTopicMetadata(topicData),
+  resourceTitle: service,
+  metaData: buildTopicMetadata(topicData, service),
 });
 
 export {
