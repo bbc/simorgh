@@ -21,7 +21,7 @@ Check the component against these exclusions and **stop and report** if any appl
 | Uses a palette/spacing value as a runtime prop (not a style) | SCSS variables can't be passed as props; needs a design decision |
 | Component is outside `src/app/components` | Legacy/container/psammead components need modernisation first |
 
-Known blocked components: `Disclaimer`, `MostRead/Canonical/Item`, `MostRead/Canonical/List`, `MostRead/Label`, `RelatedContentSection`.
+Known blocked components: `Disclaimer`, `MostRead/Canonical/Item`, `MostRead/Canonical/List`, `MostRead/Label`, `RelatedTopics`, `Recommendations`, `RelatedContentSection`.
 
 Rendering a legacy component is **not** by itself a blocker — `ArticleLinksBlock` renders `SkipLinkWrapper` and migrated cleanly. It only blocks when the legacy child controls layout or receives styles.
 
@@ -29,7 +29,9 @@ Rendering a legacy component is **not** by itself a blocker — `ArticleLinksBlo
 
 Legacy imports that are **pure utilities** (e.g. `formatDuration` from `psammead-timestamp-container`) do not block migration.
 
-Before converting a shared component, search its consumers for `css` overrides. An un-migrated consumer may intentionally replace the component's default styles; migrate that consumer in the same change or stop and report it as blocked. Do not add a compatibility heuristic based on Emotion-generated `css-*` class names: it can suppress unrelated default styles, including pseudo-state rules.
+Before converting a shared component, search its consumers for Emotion `css` props such as `css={styles.inlineLink}`. An un-migrated consumer may intentionally replace the shared component's default styles; migrate that consumer in the same change or stop and report it as blocked.
+
+When a consumer owns a real DOM context for an override, express that relationship in SCSS rather than adding a wrapper solely to increase specificity. Use an ancestor selector (for example `.errorLinkWrapper .inlineLink`) or an element-qualified selector when the component fixes the element type (for example `p.copyright`). Exclude pseudo-states that remain owned by the shared component, such as `:visited`, `:hover`, and `:focus`. CSS Modules scopes class names but does not give a parent component automatic precedence. Use duplicated selectors only as a documented last resort when no meaningful context exists.
 
 ## Step 2: Map Emotion theme values to SCSS tokens
 
@@ -208,6 +210,22 @@ Test this by asserting the attribute (`toHaveAttribute('data-font-size', 'atlas'
 
 See [src/app/components/InlineLink/index.module.scss](../../../src/app/components/InlineLink/index.module.scss) for a full example (`size` and `fontVariant`, 15 and 10 values respectively).
 
+### Consumer-owned style overrides
+
+When a migrated component needs a consumer-specific default style, keep the shared component's state rules and scope the override to the consumer's DOM context:
+
+```scss
+.errorLinkWrapper {
+  .inlineLink:not(:visited):not(:hover):not(:focus) {
+    color: theme.$palette-black;
+    border-bottom: #{theme.pixelsToRem-px-to-rem(1)} solid
+      theme.$palette-black;
+  }
+}
+```
+
+Do not assume the order of classes in the HTML or the React parent-child relationship controls the CSS cascade. Do not add a wrapper only to manufacture a selector context. Custom properties are appropriate for genuinely configurable component values, but adding a new override variable for every consumer couples the shared component to its consumers.
+
 ## Step 4: Apply the change
 
 1. Create `index.module.scss` alongside the component, converting each exported style key to a class.
@@ -237,3 +255,4 @@ yarn jest src/app/components/<ComponentName>
 - [src/app/components/ActionTooltip/index.module.scss](../../../src/app/components/ActionTooltip/index.module.scss)
 - [src/app/components/Example/index.module.scss](../../../src/app/components/Example/index.module.scss) — minimal case
 - [src/app/components/InlineLink/index.module.scss](../../../src/app/components/InlineLink/index.module.scss) — large discrete enums via `data-*` attribute selectors
+- [src/app/components/Embeds/EmbedError/index.module.scss](../../../src/app/components/Embeds/EmbedError/index.module.scss) — consumer-owned contextual override

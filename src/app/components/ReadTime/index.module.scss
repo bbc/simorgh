@@ -10,13 +10,8 @@
   @media #{theme.$mediaQueries-group-4-min-width} {
     margin: #{theme.$spacings-full} 0 #{theme.$spacings-double};
   }
-}
 
-.readTimeText {
-  // Doubled selector deliberately increases specificity above Text's own Emotion-applied
-  // default colour, since single-class selectors are otherwise order-dependent across
-  // Emotion and SCSS Modules stylesheets. Remove once Text moves off Emotion.
-  &.readTimeText {
+  .readTimeText {
     color: theme.$palette-grey-6;
   }
 }

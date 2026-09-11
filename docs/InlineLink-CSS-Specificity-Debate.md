@@ -63,11 +63,11 @@ MDN describes selector duplication as a technique to increase specificity, but r
 }
 ```
 
-A consumer override must not accidentally take over those states. The current rule therefore excludes them:
+A consumer override must not accidentally take over those states. The current implementation uses the real DOM context owned by `EmbedError` and excludes them:
 
 ```scss
-.inlineLink {
-  &:not(:visited):not(:hover):not(:focus) {
+.errorLinkWrapper {
+  .inlineLink:not(:visited):not(:hover):not(:focus) {
     color: theme.$palette-black;
     border-bottom: #{theme.pixelsToRem-px-to-rem(1)} solid
       theme.$palette-black;
@@ -75,7 +75,7 @@ A consumer override must not accidentally take over those states. The current ru
 }
 ```
 
-The `:not()` arguments add specificity, so the duplicated `&.inlineLink` is technically redundant here. The exclusions are the important part: the consumer rule stops matching during visited, hover, and focus, leaving those states to `InlineLink`.
+The `.errorLinkWrapper` ancestor expresses the actual component relationship and adds specificity without duplicating a class selector. The exclusions are important: the consumer rule stops matching during visited, hover, and focus, leaving those states to `InlineLink`.
 
 ## Alternative: custom properties
 
@@ -106,8 +106,8 @@ The most explicit option is to migrate `EmbedError` alongside `InlineLink`, as i
 
 Which trade-off should we prefer for future migrations?
 
-1. Use a narrowly scoped specificity override for a consumer-owned modifier, with a comment and state exclusions.
+1. Use a contextual selector for a consumer-owned modifier, with state exclusions.
 2. Add custom properties to the shared component for every supported override.
 3. Migrate or block every consumer that passes styles into the component before deleting its Emotion styles.
 
-The current implementation uses option 1 for `EmbedError`, while the migration guidance recommends identifying styled consumers before converting a shared component.
+The current implementation uses option 1 for `EmbedError`. The double-selector technique remains a valid CSS fallback, documented by MDN above, but is not needed when the component owns a meaningful ancestor or element context. The migration guidance recommends identifying styled consumers before converting a shared component.

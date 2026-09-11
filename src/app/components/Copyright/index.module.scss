@@ -1,6 +1,6 @@
 @use '@scss/themeTokens' as theme;
 
-.copyright {
+p.copyright {
   background-color: rgba(34, 34, 34, 0.75);
   text-transform: uppercase;
   padding: #{theme.$spacings-half} #{theme.$spacings-full};
@@ -10,13 +10,7 @@
   margin: 0;
   font-family: ReithSans, Helvetica, Arial, sans-serif;
   overflow: hidden;
-
-  // Doubled selector deliberately increases specificity above Text's own Emotion-applied
-  // default colour, since single-class selectors are otherwise order-dependent across
-  // Emotion and SCSS Modules stylesheets. Remove once Text moves off Emotion.
-  &.copyright {
-    color: theme.$palette-white;
-  }
+  color: theme.$palette-white;
 
   span {
     font-size: 0.75rem;
