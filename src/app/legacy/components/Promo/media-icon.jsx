@@ -14,9 +14,11 @@ export const TYPES = {
 const Wrapper = styled.div`
   padding: ${GEL_SPACING_HLF};
   color: ${props =>
-    props.theme.isLite ? props.theme.palette.WHITE : props.theme.palette.EBON};
+    props.theme.isLite && props.theme.isDarkUi
+      ? props.theme.palette.WHITE
+      : props.theme.palette.EBON};
   background-color: ${props =>
-    props.theme.isLite
+    props.theme.isLite && props.theme.isDarkUi
       ? props.theme.palette.GREY_10
       : props.theme.palette.WHITE};
   ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
