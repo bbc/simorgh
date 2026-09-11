@@ -5,6 +5,7 @@ import PageDataParams from '#app/models/types/pageDataParams';
 import { INTERNAL_SERVER_ERROR, OK } from '#app/lib/statusCodes.const';
 import nodeLogger from '#lib/logger.node';
 import { ROUTING_INFORMATION } from '#app/lib/logger.const';
+
 import getPageData from '../../utilities/pageRequests/getPageData';
 
 const HomePage = dynamic(() => import('#pages/HomePage/HomePage'));
@@ -62,4 +63,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
   };
 };
 
-export default HomePage;
+const LanguagesPage = props => <HomePage {...props} />;
+
+export default LanguagesPage;
