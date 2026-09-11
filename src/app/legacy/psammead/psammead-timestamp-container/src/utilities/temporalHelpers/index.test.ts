@@ -131,6 +131,20 @@ describe('Temporal Helper functions', () => {
       );
     });
 
+    it('falls back to Eastern Arabic numerals when the runtime ignores arabext', () => {
+      const NativeNumberFormat = Intl.NumberFormat;
+
+      jest.spyOn(Intl, 'NumberFormat').mockImplementation(
+        () =>
+          new NativeNumberFormat('en-GB', {
+            minimumIntegerDigits: 2,
+            useGrouping: false,
+          }),
+      );
+
+      expect(translateDigits(5, 2, 'ps')).toEqual('۰۵');
+    });
+
     it('suppresses Eastern numeral conversion for the `ar` locale', () => {
       const numberFormatSpy = jest.spyOn(Intl, 'NumberFormat');
 

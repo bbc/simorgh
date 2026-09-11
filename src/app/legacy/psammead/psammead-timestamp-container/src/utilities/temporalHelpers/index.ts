@@ -1,3 +1,8 @@
+import {
+  EasternArabic,
+  makeNumeralTranslator,
+} from '#psammead/psammead-locales/src/numerals';
+
 type Locale = string;
 type ISODuration = string;
 
@@ -9,9 +14,27 @@ export type DurationFormat =
   | `${DurationFormatToken}${DurationFormatSeparator}${DurationFormatToken}`
   | `${DurationFormatToken}${DurationFormatSeparator}${DurationFormatToken}${DurationFormatSeparator}${DurationFormatToken}`;
 
-const LOCALE_NUMBERING_SYSTEM_OVERRIDES: Record<string, string> = {
-  ar: 'ar-u-nu-latn', // forces Latin numerals, matching the suppression in psammead-locales/moment/ar.js
-  ps: 'ps-u-nu-arabext', // forces Eastern Arabic numerals, matching the explicit override in psammead-locales/moment/ps.js
+type LocaleNumberingSystemOverride = {
+  locale: string;
+  numberingSystem: string;
+  fallback?: (value: string) => string;
+};
+
+const translateEasternArabicNumerals = makeNumeralTranslator(EasternArabic);
+
+const LOCALE_NUMBERING_SYSTEM_OVERRIDES: Record<
+  string,
+  LocaleNumberingSystemOverride
+> = {
+  ar: {
+    locale: 'ar-u-nu-latn',
+    numberingSystem: 'latn',
+  },
+  ps: {
+    locale: 'ps-u-nu-arabext',
+    numberingSystem: 'arabext',
+    fallback: translateEasternArabicNumerals,
+  },
 };
 
 export const sanitiseDuration = (duration: ISODuration) => {
@@ -45,14 +68,27 @@ export const translateDigits = (
   value: number,
   minDigits: number,
   sanitisedLocale: Locale,
-) =>
-  new Intl.NumberFormat(
-    LOCALE_NUMBERING_SYSTEM_OVERRIDES[sanitisedLocale] ?? sanitisedLocale,
+) => {
+  const localeOverride = LOCALE_NUMBERING_SYSTEM_OVERRIDES[sanitisedLocale];
+  const numberFormatter = new Intl.NumberFormat(
+    localeOverride?.locale ?? sanitisedLocale,
     {
       minimumIntegerDigits: minDigits,
       useGrouping: false,
     },
-  ).format(value);
+  );
+  const returnedValue = numberFormatter.format(value);
+
+  if (
+    localeOverride?.fallback &&
+    numberFormatter.resolvedOptions().numberingSystem !==
+      localeOverride.numberingSystem
+  ) {
+    return localeOverride.fallback(returnedValue);
+  }
+
+  return returnedValue;
+};
 
 export const applyFormat = ({
   format,
