@@ -110,6 +110,9 @@ export type PlayerUiConfig = {
   pictureInPicture?: {
     enabled: boolean;
   };
+  cta?: {
+    mode?: 'duration' | null;
+  };
 };
 
 export type ConfigBuilderProps = {
