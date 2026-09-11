@@ -40,6 +40,7 @@ const buildSettings = ({
   showAdsBasedOnLocation = false,
   embedded,
   defaultImage,
+  holdingImageURL,
 }: BuildConfigProps) => {
   const { model: mediaOverrides } =
     filterForBlockType(blocks, 'mediaOverrides') || {};
@@ -86,6 +87,7 @@ const buildSettings = ({
     embedded,
     lang,
     defaultImage,
+    holdingImageURL,
   });
 
   if (!config) return null;

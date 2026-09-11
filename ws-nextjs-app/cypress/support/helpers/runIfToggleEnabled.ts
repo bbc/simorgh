@@ -13,11 +13,8 @@ export default ({
 }) => {
   if (service === 'scotland') return;
 
-  cy.log(`DEBUG cy.getToggles: type = ${typeof cy.getToggles}`);
-  cy.log(`DEBUG cy.getToggles: ${cy.getToggles}`);
-
-  if (typeof cy.getToggles === 'function') {
-    cy.getToggles(service);
+  if (typeof cy.fetchToggles === 'function') {
+    cy.fetchToggles(service);
 
     cy.fixture(`toggles/${service}.json`).then(toggles => {
       const { enabled } = toggles[toggleName] || { enabled: false };

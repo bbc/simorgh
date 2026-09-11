@@ -31,7 +31,12 @@ it('should render Copyright with news service context', () => {
       newsServiceContextStub as ServiceConfig,
     ),
   );
-  expect(container).toMatchSnapshot();
+
+  const copyright = container.querySelector('p[role="text"]');
+
+  expect(copyright).toBeInTheDocument();
+  expect(copyright).toHaveTextContent('Image source,');
+  expect(copyright).toHaveTextContent('This is some copyright text');
 });
 
 it('should render Copyright with persian service context', () => {
@@ -41,5 +46,10 @@ it('should render Copyright with persian service context', () => {
       persianServiceContextStub as ServiceConfig,
     ),
   );
-  expect(container).toMatchSnapshot();
+
+  const copyright = container.querySelector('p[role="text"]');
+
+  expect(copyright).toBeInTheDocument();
+  expect(copyright).toHaveTextContent('منبع تصویر');
+  expect(copyright).toHaveTextContent('Getty Images');
 });

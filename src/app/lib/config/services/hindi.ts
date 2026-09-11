@@ -141,7 +141,7 @@ export const service: DefaultServiceConfig = {
         saving: 'सहेजा जा रहा है',
         saved: 'मेरी ख़बरों में सहेजा गया',
         remove: 'हटाएं',
-        removeAccessible: 'सहेजा गया. मेरी ख़बरों से हटाएं',
+        removeAccessible: 'सेव्ड. माय न्यूज़ सेक्शन से हटा दीजिए',
         removing: 'हटाया जा रहा है',
       },
       myNews: {
@@ -156,6 +156,25 @@ export const service: DefaultServiceConfig = {
         loading: 'लोड हो रहा है',
         noJsDescription:
           'कृपया जावास्क्रिप्ट चालू करें या इस सामग्री को देखने के लिए किसी दूसरे ब्राउज़र का इस्तेमाल करें।',
+      },
+      actionTooltip: {
+        success: {
+          title: 'ये आर्टिकिल अब सेव्ड है',
+          bodyBefore: 'ये',
+          bodyAfter: 'सेक्शन में दिखेगी.',
+        },
+        error: {
+          title: 'माफ़ कीजिए, कुछ गड़बड़ी हुई है',
+          body: 'अपना कनेक्शन चेक कीजिए, पन्ना रिफ़्रेश कीजिए और फिर कोशिश कीजिए',
+        },
+        removed: {
+          title: 'ये आर्टिकिल अब हटा ली गई है',
+          bodyBefore: 'ये',
+          bodyAfter: 'सेक्शन से हटा ली गई है',
+        },
+        myNewsLinkText: 'माय न्यूज़',
+        myNewsUrl: 'https://www.bbc.com/hindi/my-news',
+        closeLabel: 'बंद करें',
       },
       gist: 'सारांश',
       error: {

@@ -55,7 +55,7 @@ declare global {
       bootstrap: () => void;
       cmd: { push: () => void };
     };
-    sendStaticBeacon: (url: string, data?: BodyInit | null) => boolean;
+    sendStaticBeacon: (url: string, data?: BodyInit | null) => void;
     processClientDeviceAndSendStaticBeacon: (props: {
       atiUrl?: string;
       reverbUrl?: string;

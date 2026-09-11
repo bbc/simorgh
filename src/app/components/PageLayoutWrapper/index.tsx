@@ -33,6 +33,7 @@ type Props = {
       type: PageTypes;
       topics?: { topicName: string }[];
     };
+    blockTypes?: string[];
     content?: { model?: ModelType };
     secondaryColumn?: { topStories: TopStoryItem[] };
     mostRead?: { items: (OptimoMostReadRecord | CPSMostReadRecord)[] };
@@ -49,11 +50,25 @@ const PageLayoutWrapper = ({
   status,
   navItems,
 }: PropsWithChildren<Props>) => {
-  const { atiAnalyticsProducerId, service } = use(ServiceContext);
+  const { service } = use(ServiceContext);
   const { isLite, isAmp, nonce, cspHeader } = use(RequestContext);
 
   const isErrorPage = ![200].includes(status) || !status;
   const pageType = pageData?.metadata?.type;
+
+  const primaryMediaType = (() => {
+    const blockTypes = pageData?.blockTypes ?? [];
+    if (blockTypes.includes('audio')) return 'audio' as const;
+    if (blockTypes.includes('video')) return 'video' as const;
+    // Fallback: scan top-level content blocks for an audio or video block.
+    // This covers SFV articles where blockTypes may not be populated.
+    const contentBlocks = (pageData?.content?.model?.blocks ?? []) as {
+      type: string;
+    }[];
+    if (contentBlocks.some(b => b.type === 'audio')) return 'audio' as const;
+    if (contentBlocks.some(b => b.type === 'video')) return 'video' as const;
+    return undefined;
+  })();
   const reportingPageType = pageType?.replace(/ /g, '');
   const isOfflinePage = pageType === OFFLINE_PAGE;
   const isWindowValid = typeof window !== 'undefined';
@@ -201,62 +216,6 @@ const PageLayoutWrapper = ({
                 wrappedContentsShortcut.pageTypeCounts.${reportingPageType} = wrappedContentsShortcut.pageTypeCounts.${reportingPageType} ? wrappedContentsShortcut.pageTypeCounts.${reportingPageType} + 1 : 1;
                 wrappedContentsShortcut.byMonth[wrappedMonth] = wrappedContentsShortcut.byMonth[wrappedMonth] ? wrappedContentsShortcut.byMonth[wrappedMonth] + 1 : 1;
                 wrappedContents[wrappedYear] = wrappedContentsShortcut;
-                const numberOfLanguagesConsumed = Object.keys(topicsContents).length;
-                if (topicsContents.hasOwnProperty("${service}") && Object.keys(topicsContents.${service}).length) {
-                    const topcats = Object.keys(topicsContents.${service}).filter(topic => topicsContents.${service}[topic].count > 1).sort((a, b) => topicsContents.${service}[b].count - topicsContents.${service}[a].count);
-                    let allTopicsCount = 0;
-                    if (topcats && topcats.length){
-                        for (var i = 0; i < topcats.length; i++) {
-                            allTopicsCount += topicsContents.${service}[topcats[i]].count;
-                        }
-                        var topCatRatio = Math.round((topicsContents.${service}[topcats[0]].count / allTopicsCount) * 100);
-                        function getCookie(name) {
-                            var value = "; " + document.cookie;
-                            var parts = value.split("; " + name + "=");
-                            if (parts.length == 2) {
-                                return parts.pop().split(";").shift();
-                            }
-                            return null;
-                        }
-                        var atuseridCookie = getCookie('atuserid');
-                        var atuseridCookieValue = null;
-                         if (atuseridCookie) {
-                             try {
-                                 atuseridCookieValue = JSON.parse(decodeURIComponent(atuseridCookie)).val;
-                             } catch (e) {
-                                 atuseridCookieValue = null;
-                             }
-                         }
-                        if (!atuseridCookieValue) {
-                            if (window.crypto){
-                                atuseridCookieValue = crypto.randomUUID();
-                            }
-                            else {
-                                atuseridCookieValue = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, c => {
-                                  var r = Math.random() * 16 | 0;
-                                  return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
-                                });
-                            }
-                        }
-                        var deliveryPoint = 'https://a1.api.bbc.co.uk/hit.xiti?s=598342&idclient=' + atuseridCookieValue + '&col=2&ts=' + Date.now() + '&ptag=js&context=' + encodeURIComponent(JSON.stringify([{"data":{"page":{"$":"${service}.page"},"site":{"level2_id":${atiAnalyticsProducerId}}}}])) + '&events=';
-                        var payload = new Array();
-                        payload.push(deliveryPoint + encodeURIComponent(JSON.stringify([{"name":"viewability.view","data":{"group":{"name":"topics-viewed","type":""},"event":{"category":"viewability","action":"view","grouping":"topics-viewed"},"user":{"id":"' + atuseridCookieValue + '"},"app":{"type":"responsive","name":"news-${service}"},"item":{"name":"languages-viewed", "position": numberOfLanguagesConsumed }}}])));
-                        payload.push(deliveryPoint + encodeURIComponent(JSON.stringify([{"name":"viewability.view","data":{"group":{"name":"topics-viewed","type":""},"event":{"category":"viewability","action":"view","grouping":"topics-viewed"},"user":{"id":"' + atuseridCookieValue + '"},"app":{"type":"responsive","name":"news-${service}"},"item":{"name":"topics-viewed", "position": topcats.length }}}])));
-                        payload.push(deliveryPoint + encodeURIComponent(JSON.stringify([{"name":"viewability.view","data":{"group":{"name":"topics-viewed","type":""},"event":{"category":"viewability","action":"view","grouping":"topics-viewed"},"user":{"id":"' + atuseridCookieValue + '"},"app":{"type":"responsive","name":"news-${service}"},"item":{"name":"top-topic-id", "position": topCatRatio, "text": topicsContents.${service}[topcats[0]].id }}}])));
-                        var trackingDivContainer = document.createElement('DIV');
-                        for (var i = 0; i < payload.length; i++) {
-                            var key = payload[i];
-                            var trackingImage = document.createElement('img');
-                            trackingImage.width = 1;
-                            trackingImage.height = 1;
-                            trackingImage.src = key;
-                            trackingDivContainer.appendChild(trackingImage);
-                        }
-                        document.addEventListener("DOMContentLoaded", function(arg) {
-                            document.body.appendChild(trackingDivContainer);
-                        });
-                    }
-                }
                 localStorage.setItem(topicsStorageKey, JSON.stringify(topicsContents));
     `;
 
@@ -289,6 +248,7 @@ const PageLayoutWrapper = ({
       <div id="main-wrapper" css={styles.wrapper}>
         <HeaderContainer
           navItems={navItems}
+          primaryMediaType={primaryMediaType}
           propsForTopBarOJComponent={{
             blocks: pageData?.secondaryColumn?.topStories || [],
           }}

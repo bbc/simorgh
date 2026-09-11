@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet';
 
+import { renderHook } from '@testing-library/react';
 import {
   render,
   screen,
@@ -11,11 +12,14 @@ import postFixture from '#data/pidgin/posts/postFixture.json';
 import sportDataFixture from '#data/afrique/live/c7gk1vjglxn1t.json';
 import { GetServerSidePropsContext } from 'next';
 import MockIntersectionObserver from '#app/components/intersection-observer-testing-library';
-import * as useLivePagePolling from '#app/hooks/useLivePagePolling';
+import * as usePolling from '#app/hooks/usePolling';
+import * as fetchPolledData from '#app/lib/utilities/fetchPolledData';
 import useToggle from '#app/hooks/useToggle';
 import Live, { ComponentProps } from './LivePageLayout';
 import { getServerSideProps } from './[[...variant]].page';
 import { StreamResponse } from './Post/types';
+import livePageData from './fixture/livePageData';
+import streamDataUpdate from './fixture/streamDataUpdate';
 
 jest.mock('#app/hooks/useOptimizelyVariation', () => ({
   __esModule: true,
@@ -23,7 +27,7 @@ jest.mock('#app/hooks/useOptimizelyVariation', () => ({
   default: jest.fn(),
 }));
 
-jest.mock('#app/hooks/useLivePagePolling', () => ({
+jest.mock('#app/hooks/usePolling', () => ({
   __esModule: true,
   default: jest.fn(),
 }));
@@ -32,6 +36,8 @@ jest.mock('#app/lib/utilities/isLive', () => ({
   __esModule: true,
   default: jest.fn(() => false),
 }));
+
+jest.mock('#app/lib/utilities/fetchPolledData');
 
 jest.mock('#app/components-webcore/SportDataHeader/head-to-head-v2', () => ({
   __esModule: true,
@@ -218,13 +224,7 @@ const mockPollingUpdate = (pageData: ComponentProps['pageData']) => {
   const streamData = pageData.liveTextStream.content
     ?.data as StreamResponse['data'];
 
-  jest.spyOn(useLivePagePolling, 'default').mockReturnValue({
-    currentStreamData: streamData,
-    hasPendingUpdate: false,
-    applyPendingUpdate: () => {
-      return null;
-    },
-  });
+  jest.spyOn(usePolling, 'default').mockReturnValue(streamData);
 };
 
 const mockIntersectionObserver = new MockIntersectionObserver();
@@ -817,7 +817,7 @@ describe('Live Page', () => {
       expect(title).toBeInTheDocument();
     });
 
-    it('should render a visually hidden h1 when displaying sportData', async () => {
+    it('should render the page title visibly when displaying sportData', async () => {
       const pageDataWithSportData = {
         ...mockPageData,
         sportDataEventContent: sportDataFixture.data.sportDataEventContent,
@@ -828,11 +828,9 @@ describe('Live Page', () => {
         render(<Live pageData={pageDataWithSportData} />);
       });
 
-      const visuallyHiddenTitle = screen.getByText(
-        'Israeli tanks shell Jabalia camp as heavy fighting continues in north Gaza', // mock data, in production this would be a sport title
-      );
-      expect(visuallyHiddenTitle).toBeInTheDocument();
-      expect(visuallyHiddenTitle).toHaveStyle(
+      const pageTitle = screen.getByText(mockPageData.title);
+      expect(pageTitle).toBeInTheDocument();
+      expect(pageTitle).not.toHaveStyle(
         'overflow: hidden; position: absolute; width: 1px;',
       );
     });
@@ -878,5 +876,117 @@ describe('Live Page', () => {
         ),
       ).toBeInTheDocument();
     });
+  });
+});
+
+describe('LivePageLayout live text polling', () => {
+  const { default: usePollingHook, POLLING_INTERVAL } = jest.requireActual<
+    typeof import('#app/hooks/usePolling')
+  >('#app/hooks/usePolling');
+
+  const initialStreamData = livePageData.liveTextStream.content
+    ?.data as StreamResponse['data'];
+
+  const advancePolling = async () => {
+    await act(async () => {
+      jest.advanceTimersByTime(POLLING_INTERVAL);
+      await Promise.resolve();
+    });
+  };
+
+  const renderLivePagePolling = ({
+    streamData = initialStreamData,
+    enableFeature = true,
+    isLive = true,
+  }: {
+    streamData?: StreamResponse['data'];
+    enableFeature?: boolean;
+    isLive?: boolean;
+  } = {}) =>
+    renderHook(() =>
+      usePollingHook<StreamResponse['data'], StreamResponse['data'] | null>({
+        initialData: streamData,
+        enabled: enableFeature && isLive && streamData?.page?.index === 1,
+        endpoint: 'stream',
+        params: { liveTextStreamId: 'stream-id', type: 'curated' },
+        returnedData: response =>
+          response?.results && response.results.length > 0 ? response : null,
+      }),
+    );
+
+  beforeAll(() => {
+    jest.useFakeTimers();
+  });
+
+  afterAll(() => {
+    jest.useRealTimers();
+  });
+
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
+  it('should return the initial stream data on initialisation', () => {
+    jest.mocked(fetchPolledData.default).mockResolvedValue(null);
+
+    const { result } = renderLivePagePolling();
+
+    expect(result.current).toStrictEqual(initialStreamData);
+  });
+
+  it('should poll the live endpoint with the stream params when enabled', async () => {
+    const fetchSpy = jest
+      .mocked(fetchPolledData.default)
+      .mockResolvedValue(null);
+
+    renderLivePagePolling();
+
+    await advancePolling();
+
+    expect(fetchSpy).toHaveBeenCalledWith('stream', {
+      params: { liveTextStreamId: 'stream-id', type: 'curated' },
+    });
+  });
+
+  it('should update the stream data when new posts are in the returned data after polling', async () => {
+    jest.mocked(fetchPolledData.default).mockResolvedValue({
+      data: streamDataUpdate,
+      status: 200,
+    });
+
+    const { result } = renderLivePagePolling();
+
+    await advancePolling();
+
+    expect(result.current).toStrictEqual(streamDataUpdate);
+  });
+
+  it('should not poll if the user is not on the first page', async () => {
+    const fetchSpy = jest
+      .mocked(fetchPolledData.default)
+      .mockResolvedValue(null);
+
+    renderLivePagePolling({
+      streamData: {
+        ...initialStreamData,
+        page: { index: 2 },
+      } as StreamResponse['data'],
+    });
+
+    await advancePolling();
+
+    expect(fetchSpy).not.toHaveBeenCalled();
+  });
+
+  it('should not poll when the live page polling feature is disabled', async () => {
+    const fetchSpy = jest
+      .mocked(fetchPolledData.default)
+      .mockResolvedValue(null);
+
+    renderLivePagePolling({ enableFeature: false });
+
+    await advancePolling();
+
+    expect(fetchSpy).not.toHaveBeenCalled();
   });
 });

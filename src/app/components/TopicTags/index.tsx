@@ -6,6 +6,7 @@ import { TopicTag } from '#app/models/types/metadata';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
+import getTopicPageUrl from '#app/lib/utilities/getTopicPageUrl';
 import styles from './index.styles';
 
 interface TopicTagsProps {
@@ -62,13 +63,14 @@ export const TopicTags = ({ tags, experimentProps }: TopicTagsProps) => {
 
   if (tags?.length === 0) return null;
 
-  const getTopicPageUrl = (id: string) => {
-    const isPublicService = ['news', 'cymrufyw', 'naidheachdan'];
-    const hostname = `https://www.bbc.${isPublicService.includes(service) ? 'co.uk' : 'com'}`;
-    const topicsPath = translations?.topicsPath ?? 'topics';
-
-    return `${hostname}/${service}/${topicsPath}/${id}${variant ? `/${variant}` : ''}`;
-  };
+  const buildTopicPageUrl = (topicId: string) =>
+    getTopicPageUrl({
+      service,
+      topicId,
+      variant,
+      topicsPath: translations?.topicsPath,
+      absolute: true,
+    });
 
   const hasMultiple = tags.length > 1;
 
@@ -83,7 +85,7 @@ export const TopicTags = ({ tags, experimentProps }: TopicTagsProps) => {
         <li key={tag.topicId} css={styles.topicTagItem}>
           <TopicTagLink
             tag={tag}
-            href={getTopicPageUrl(tag.topicId)}
+            href={buildTopicPageUrl(tag.topicId)}
             position={index + 1}
             eventTrackingData={eventTrackingData}
           />
@@ -99,7 +101,7 @@ export const TopicTags = ({ tags, experimentProps }: TopicTagsProps) => {
       <div css={styles.topicTagItem}>
         <TopicTagLink
           tag={tags[0]}
-          href={getTopicPageUrl(tags[0].topicId)}
+          href={buildTopicPageUrl(tags[0].topicId)}
           position={1}
           eventTrackingData={eventTrackingData}
         />

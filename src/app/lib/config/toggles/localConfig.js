@@ -4,7 +4,7 @@ export default {
   _environment: 'local',
   account: {
     enabled: true,
-    value: 'hindi',
+    value: 'hindi|mundo|portuguese',
   },
   ads: {
     enabled: true,
@@ -94,7 +94,7 @@ export default {
   },
   uasPersonalization: {
     enabled: true,
-    value: 'hindi',
+    value: 'hindi|mundo|portuguese',
   },
   webVitalsMonitoring: {
     enabled: true,

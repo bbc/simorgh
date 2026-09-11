@@ -1076,6 +1076,99 @@ describe('Home Page', () => {
   });
 });
 
+describe('associatedContent', () => {
+  it('should use associatedContent.uri as link fallback for curations without a link property', () => {
+    const testUri = 'https://www.bbc.com/test-associated-content';
+
+    const testCuration = {
+      curationId: 'test-curation-with-associated-content',
+      position: 999,
+      title: 'Test Associated Content',
+      visualStyle: 'grid',
+      visualProminence: 'NORMAL',
+      summaries: [
+        {
+          type: 'article',
+          title: 'Test Article',
+          link: 'https://www.bbc.com/article',
+          id: 'test-article-1',
+        },
+      ],
+      link: undefined,
+      associatedContent: {
+        uri: testUri,
+      },
+    };
+
+    const testHomePageData = {
+      ...pidginHomePageData,
+      curations: [...pidginHomePageData.curations, testCuration],
+    };
+
+    // @ts-expect-error suppress pageData prop type conflicts
+    const { container } = render(<HomePage pageData={testHomePageData} />, {
+      service: 'pidgin',
+    });
+
+    const subheadingLinks = Array.from(container.querySelectorAll('h2 a'));
+    const associatedContentLink = subheadingLinks.find(link =>
+      link.getAttribute('href')?.includes(testUri),
+    );
+
+    expect(associatedContentLink).toBeInTheDocument();
+    expect(associatedContentLink?.textContent).toContain(
+      'Test Associated Content',
+    );
+  });
+
+  it('should prioritize link over associatedContent.uri when both are provided', () => {
+    const testLink = 'https://www.bbc.com/test-link';
+    const testUri = 'https://www.bbc.com/test-associated-uri';
+
+    const testCuration = {
+      curationId: 'test-curation-with-both-links',
+      position: 999,
+      title: 'Test Both Links',
+      visualStyle: 'grid',
+      visualProminence: 'NORMAL',
+      summaries: [
+        {
+          type: 'article',
+          title: 'Test Article',
+          link: 'https://www.bbc.com/article',
+          id: 'test-article-2',
+        },
+      ],
+      link: testLink,
+      associatedContent: {
+        uri: testUri,
+      },
+    };
+
+    const testHomePageData = {
+      ...pidginHomePageData,
+      curations: [...pidginHomePageData.curations, testCuration],
+    };
+
+    // @ts-expect-error suppress pageData prop type conflicts
+    const { container } = render(<HomePage pageData={testHomePageData} />, {
+      service: 'pidgin',
+    });
+
+    const subheadingLinks = Array.from(container.querySelectorAll('h2 a'));
+    const linkElement = subheadingLinks.find(link =>
+      link.getAttribute('href')?.includes(testLink),
+    );
+    const associatedLink = subheadingLinks.find(link =>
+      link.getAttribute('href')?.includes(testUri),
+    );
+
+    expect(linkElement).toBeInTheDocument();
+    expect(linkElement?.textContent).toContain('Test Both Links');
+    expect(associatedLink).toBeFalsy();
+  });
+});
+
 describe('Linked Data', () => {
   it('should correctly render linked data for home pages', () => {
     // @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations
