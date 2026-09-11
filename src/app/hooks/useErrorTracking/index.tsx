@@ -48,8 +48,6 @@ const useErrorTracking = () => {
   } = extractATITrackingProps({
     eventType: VIEW_EVENT,
   });
-  // for an unrelated reason (e.g. trackError's identity changing once auth
-  // state resolves) while the underlying query error hasn't actually changed.
   const lastTrackedErrorRef = useRef<unknown>(null);
 
   return useCallback(
