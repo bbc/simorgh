@@ -10,7 +10,9 @@
     "correctness": "off"
   },
   "env": {
-    "builtin": true
+    "builtin": true,
+    "browser": true,
+    "node": true
   },
   "ignorePatterns": [
     "**/tz/**",
@@ -20,6 +22,13 @@
     ".storybook/**/*"
   ],
   "rules": {
+    "react/prop-types": "off",
+    "react/forbid-foreign-prop-types": "error",
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/function-component-definition": "off",
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
     "react/no-unknown-property": [
       "error",
       {
@@ -42,6 +51,20 @@
         "json": "ignorePackages"
       }
     ],
+    "import/no-import-module-exports": [
+      "error",
+      {
+        "exceptions": ["**/*/startServer.js"]
+      }
+    ],
+    "import/no-extraneous-dependencies": "off",
+    "import/no-unresolved": [
+      "error",
+      {
+        "ignore": ["^#psammead/moment-timezone-include/tz/"]
+      }
+    ],
+    "jsx-a11y/no-redundant-roles": "off",
     "no-only-tests/no-only-tests": "error",
     "no-unsafe-optional-chaining": "error",
     "cypress/no-assigning-return-values": "error",
@@ -55,6 +78,12 @@
     {
       "files": ["**/*.ts", "**/*.tsx"],
       "rules": {
+        "react/jsx-filename-extension": [
+          "error",
+          {
+            "extensions": [".jsx", ".tsx"]
+          }
+        ],
         "typescript/no-use-before-define": "error",
         "typescript/no-unused-vars": [
           "warn",
