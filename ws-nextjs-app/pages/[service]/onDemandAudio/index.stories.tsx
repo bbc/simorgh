@@ -2,9 +2,13 @@ import { StoryArgs, StoryProps } from '#app/models/types/storybook';
 import koreanAudioResponse from '#data/korean/bbc_korean_radio/w3ct1vk5.json';
 import gahuzaAudioResponse from '#data/gahuza/bbc_gahuza_radio/p02pcb5c.json';
 import portugueseAudioResponse from '#data/portuguese/podcasts/p07r3r3t.json';
+import russianAudioResponse from '#data/russian/bbc_russian_radio/p076qqzl.json';
 import _OnDemandAudioPage from './OnDemandAudioLayout';
 import withMediaError from '#app/lib/utilities/episodeAvailability/withMediaError';
 import PageLayoutWrapper from '#app/components/PageLayoutWrapper';
+import { RequestContextProvider } from '#app/contexts/RequestContext';
+import { ServiceContextProvider } from '#app/contexts/ServiceContext';
+import ThemeProvider from '#app/components/ThemeProvider';
 
 const OnDemandAudioPage = withMediaError(_OnDemandAudioPage);
 
@@ -48,19 +52,46 @@ const externalLinks = [
 const gahuza = gahuzaAudioResponse.data;
 const korean = koreanAudioResponse.data;
 const portuguese = { ...portugueseAudioResponse.data, externalLinks };
+const russian = russianAudioResponse.data;
 
 const onDemandAudioFixtures = {
   gahuza,
   korean,
   portuguese,
+  russian,
 };
 
-const Component = ({ service }: StoryProps) => {
+const Component = ({ service, variant }: StoryProps) => {
   const pageData = onDemandAudioFixtures[service] || gahuza;
+  const isPodcast = pageData?.metadata?.type === 'Podcast';
+  
+  // Generate appropriate pathname based on service
+  let pathname: string;
+  if (service === 'russian' && isPodcast) {
+    // Russian podcast pathway
+    pathname = `/russian/podcasts/что-это-было/p076qqzl`;
+  } else if (service === 'portuguese' && isPodcast) {
+    // Portuguese podcast pathway
+    pathname = `/portuguese/podcasts/que-historia/p07r3r3t`;
+  } else {
+    // Radio pathway (gahuza, korean)
+    pathname = `/${service}/bbc_gahuza_radio/w3ct1vk5`;
+  }
+
   return (
-    <PageLayoutWrapper pageData={pageData} status={200}>
-      <OnDemandAudioPage pageData={pageData} />
-    </PageLayoutWrapper>
+    <ServiceContextProvider service={service} variant={variant}>
+      <RequestContextProvider
+        service={service}
+        pathname={pathname}
+        pageType={pageData?.metadata?.type || 'Radio'}
+      >
+        <ThemeProvider service={service} variant={variant}>
+          <PageLayoutWrapper pageData={pageData} status={200}>
+            <OnDemandAudioPage pageData={pageData} />
+          </PageLayoutWrapper>
+        </ThemeProvider>
+      </RequestContextProvider>
+    </ServiceContextProvider>
   );
 };
 
@@ -128,6 +159,21 @@ export const TestPodcastLite = {
     <Component service="portuguese" variant={variant} isLite />
   ),
   tags: ['!dev'],
+  parameters: {
+    chromatic: {
+      viewports: [
+        399, // Group 1
+        899, // Group 3
+      ],
+    },
+  },
+};
+
+// This story showcases a Russian podcast with formatted timestamps and external links
+export const RussianPodcastWithTimestamps = {
+  render: (_: StoryArgs, { variant }: StoryProps) => (
+    <Component service="russian" variant={variant} />
+  ),
   parameters: {
     chromatic: {
       viewports: [

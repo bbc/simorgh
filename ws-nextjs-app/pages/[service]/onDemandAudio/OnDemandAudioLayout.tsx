@@ -14,11 +14,12 @@ import ATIAnalytics from '#app/components/ATIAnalytics';
 import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
 import MetadataContainer from '#app/components/Metadata';
 import LinkedData from '#app/components/LinkedData';
+import EpisodeDescriptionFormatter from '#app/components/EpisodeDescriptionFormatter';
+import getOnDemandAudioLinkedData from '#nextjs/pages/[service]/onDemandAudio/getOnDemandAudioLinkedData';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { ContentType } from '#app/components/ChartbeatAnalytics/types';
 import ContinueReadingButton from '#app/components/ContinueReadingButton';
-import getOnDemandAudioLinkedData from './getOnDemandAudioLinkedData';
 import styles from './index.styles';
 import { OnDemandAudioProps } from './types';
 
@@ -37,6 +38,7 @@ const OnDemandAudioPage = ({
     headline,
     summary,
     shortSynopsis,
+    longSynopsis,
     masterBrand,
     releaseDateTimeStamp,
     imageUrl,
@@ -54,6 +56,8 @@ const OnDemandAudioPage = ({
     episodeTitle,
     externalLinks,
   } = pageData;
+
+  const PLAYER_ID = 'on-demand-audio-player';
 
   const pageType = path(['metadata', 'type'], pageData);
 
@@ -106,7 +110,10 @@ const OnDemandAudioPage = ({
 
   const [showAllContent, setShowAllContent] = useState(false);
 
-  const summaryIsShort = Boolean(summary === shortSynopsis);
+  const displayText =
+    isPodcastEpisodePage && longSynopsis ? longSynopsis : summary;
+
+  const summaryIsShort = Boolean(displayText === shortSynopsis);
 
   const shouldShowContinueReadingButton =
     isPodcast && !isLite && !summaryIsShort;
@@ -154,7 +161,10 @@ const OnDemandAudioPage = ({
                   </div>
                 )}
                 {mediaIsAvailable ? (
-                  <MediaLoader blocks={pageData?.mediaBlocks} />
+                  <MediaLoader
+                    blocks={pageData?.mediaBlocks}
+                    uniqueId={PLAYER_ID}
+                  />
                 ) : (
                   //  @ts-expect-error allow rendering of MediaError component when media is not available
                   <MediaError skin="audio" />
@@ -169,7 +179,18 @@ const OnDemandAudioPage = ({
               />
             </div>
             <div css={summaryStyles}>
-              <OnDemandParagraphContainer testid="summary" text={summary} />
+              {isPodcastEpisodePage ? (
+                <EpisodeDescriptionFormatter
+                  text={displayText}
+                  data-testid="synopsis"
+                  playerId={PLAYER_ID}
+                  eventTrackingData={{
+                    componentName: 'podcast-chapter-timestamp',
+                  }}
+                />
+              ) : (
+                <OnDemandParagraphContainer testid="summary" text={summary} />
+              )}
             </div>
             {shouldShowContinueReadingButton && (
               <ContinueReadingButton
