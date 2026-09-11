@@ -375,9 +375,14 @@ describe('MediaArticlePage', () => {
           personalizedRenderOptions,
         );
       });
-      expect(
-        document.querySelector('#save-article-button'),
-      ).toBeInTheDocument();
+      const byline = screen.getByTestId('byline');
+      const saveButton = document.querySelector(
+        '#save-article-button',
+      ) as HTMLElement;
+      expect(saveButton).toBeInTheDocument();
+      expect(byline.compareDocumentPosition(saveButton)).toBe(
+        Node.DOCUMENT_POSITION_FOLLOWING,
+      );
     });
 
     it('renders after the standalone timestamp when the article has no byline', async () => {
@@ -387,9 +392,14 @@ describe('MediaArticlePage', () => {
           personalizedRenderOptions,
         );
       });
-      expect(
-        document.querySelector('#save-article-button'),
-      ).toBeInTheDocument();
+      const timestamp = document.querySelector('time') as HTMLElement;
+      const saveButton = document.querySelector(
+        '#save-article-button',
+      ) as HTMLElement;
+      expect(saveButton).toBeInTheDocument();
+      expect(timestamp.compareDocumentPosition(saveButton)).toBe(
+        Node.DOCUMENT_POSITION_FOLLOWING,
+      );
     });
 
     it('does NOT render for legacy CPS media asset pages', async () => {
