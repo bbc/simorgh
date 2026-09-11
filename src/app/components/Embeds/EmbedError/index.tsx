@@ -1,4 +1,4 @@
-import styles from './index.styles';
+import styles from './index.module.scss';
 import InlineLink from '../../InlineLink';
 import Text from '../../Text';
 
@@ -12,13 +12,17 @@ type Props = {
 
 const EmbedError = ({ message, link }: Props) => {
   return (
-    <div css={styles.embedDiv} data-e2e="embed-error">
+    <div className={styles.embedDiv} data-e2e="embed-error">
       <Text as="strong" fontVariant="sansRegular" size="longPrimer">
         {message}
       </Text>
-      <div css={styles.errorLinkWrapper}>
+      <div className={styles.errorLinkWrapper}>
         {link?.text && link.href && (
-          <InlineLink to={link.href} text={link.text} css={styles.inlineLink} />
+          <InlineLink
+            to={link.href}
+            text={link.text}
+            className={styles.inlineLink}
+          />
         )}
       </div>
     </div>

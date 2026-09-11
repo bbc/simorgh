@@ -18,6 +18,7 @@ Simorgh is progressively migrating its styling foundation from Emotion (CSS-in-J
 - Use `gap` for spacing between flex/grid items rather than margins or paddings.
 - Prefer a mobile-first approach: write base styles for mobile, then use `min-width` media queries from `themeTokens` (e.g. `theme.$mediaQueries-group-3-min-width`) for larger viewports.
 - Avoid generating dynamic class names or inline style objects for per-instance values. Where a per-instance dynamic value is genuinely needed, set a single CSS custom property inline and reference it from the `.module.scss` file.
+- For consumer-specific overrides, such as replacing styles previously passed through Emotion's `css` prop, prefer a real ancestor or element-qualified selector owned by the consumer (for example `.errorLinkWrapper .inlineLink` or `p.copyright`). CSS Modules do not give React parent components automatic precedence. Do not add wrappers only to manufacture specificity; preserve child pseudo-states with explicit state exclusions. Use duplicated selectors only as a documented last resort (e.g. `.inlineLink.inlineLink`).
 - Keep conditional logic in the React component, not the style definition.
 - CSS Grid may only be used for page layout, not smaller components, because Opera Mini falls back to inline layout. Scope any unavoidable Opera Mini-specific override with `:global(.is-opera-mini) &`. Do not use `psammead-grid`.
 

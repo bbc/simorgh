@@ -21,13 +21,17 @@ Check the component against these exclusions and **stop and report** if any appl
 | Uses a palette/spacing value as a runtime prop (not a style) | SCSS variables can't be passed as props; needs a design decision |
 | Component is outside `src/app/components` | Legacy/container/psammead components need modernisation first |
 
-Known blocked components: `Disclaimer`, `MostRead/Canonical/Item`, `MostRead/Canonical/List`, `MostRead/Label`, `RelatedContentSection`.
+Known blocked components: `Disclaimer`, `MostRead/Canonical/Item`, `MostRead/Canonical/List`, `MostRead/Label`, `RelatedTopics`, `Recommendations`, `RelatedContentSection`.
 
 Rendering a legacy component is **not** by itself a blocker — `ArticleLinksBlock` renders `SkipLinkWrapper` and migrated cleanly. It only blocks when the legacy child controls layout or receives styles.
 
 `getAmpLiteCss` inlines `.module.scss` chunks automatically, so AMP and Lite components need no special wiring. They do need manual verification on the AMP platform, so flag it if the component renders there.
 
 Legacy imports that are **pure utilities** (e.g. `formatDuration` from `psammead-timestamp-container`) do not block migration.
+
+Before converting a shared component, search its consumers for Emotion `css` props such as `css={styles.inlineLink}`. An un-migrated consumer may intentionally replace the shared component's default styles; migrate that consumer in the same change or stop and report it as blocked.
+
+When a consumer owns a real DOM context for an override, express that relationship in SCSS rather than adding a wrapper solely to increase specificity. Use an ancestor selector (for example `.errorLinkWrapper .inlineLink`) or an element-qualified selector when the component fixes the element type (for example `p.copyright`). Exclude pseudo-states that remain owned by the shared component, such as `:visited`, `:hover`, and `:focus`. CSS Modules scopes class names but does not give a parent component automatic precedence. Use duplicated selectors only as a documented last resort when no meaningful context exists.
 
 ## Step 2: Map Emotion theme values to SCSS tokens
 
@@ -129,6 +133,7 @@ Valid scales: `atlas`, `elephant`, `imperial`, `royal`, `foolscap`, `canon`, `tr
 | `dir === 'rtl' ? ... : ...` | Logical properties (`padding-inline-start`) |
 | Opera Mini branch | `:global(.is-opera-mini) &` |
 | Per-instance numeric value | Inline CSS custom property + `var()` |
+| Prop with many possible values (e.g. a GEL scale) | `data-*` attribute + `&[data-x='value']` selector |
 
 ### Conditional style arrays
 
@@ -165,6 +170,62 @@ This works when the second class adds **different** properties to the base. If t
 
 A **discrete variant** (boolean or small union) can legitimately select or add a class. What the styling standards prohibit is deriving a class from a **continuous or computed value**, or from `dir` — use a CSS custom property or logical properties for those.
 
+### Large discrete enums
+
+A boolean or two/three-way union composes fine as classes (above). A prop with many possible values (a `GelFontSize` scale, say — 15 options) turns that into a class per value *plus* a JS lookup table mapping the prop to the right one, maintained twice.
+
+Pass the raw prop value through as a `data-*` attribute instead, and match it with an attribute selector nested in the base class — the same convention already used for `data-is-dark-ui`:
+
+**Before (class per value + lookup map):**
+```tsx
+const fontSizeClassNames: Record<GelFontSize, string> = {
+  atlas: styles.fontSizeAtlas,
+  elephant: styles.fontSizeElephant,
+  // ...13 more
+};
+
+<a className={clsx(styles.self, size && fontSizeClassNames[size])}>
+```
+
+**After:**
+```tsx
+<a className={styles.self} data-font-size={size}>
+```
+```scss
+.self {
+  &[data-font-size='atlas'] {
+    @include theme.fontSizes-gel-font-size(atlas);
+  }
+
+  &[data-font-size='elephant'] {
+    @include theme.fontSizes-gel-font-size(elephant);
+  }
+  // ...13 more
+}
+```
+
+React omits a `data-*` attribute when its value is `undefined`, so no `size &&` guard is needed. This removes the JS-side lookup table entirely — the SCSS file is the only place the value-to-style mapping lives, rather than keeping two copies in sync.
+
+Test this by asserting the attribute (`toHaveAttribute('data-font-size', 'atlas')`) rather than a class name — the class name is an implementation detail one step further removed from the prop being tested.
+
+See [src/app/components/InlineLink/index.module.scss](../../../src/app/components/InlineLink/index.module.scss) for a full example (`size` and `fontVariant`, 15 and 10 values respectively).
+
+### Consumer-owned style overrides
+
+When a migrated component needs a consumer-specific default style, keep the shared component's state rules and scope the override to the consumer's DOM context:
+
+```scss
+.errorLinkWrapper {
+  .inlineLink:not(:visited):not(:hover):not(:focus) {
+    color: theme.$palette-black;
+    border-bottom: #{theme.pixelsToRem-px-to-rem(1)} solid
+      theme.$palette-black;
+  }
+}
+```
+
+Do not assume the order of classes in the HTML or the React parent-child relationship controls the CSS cascade. Do not add a wrapper only to manufacture a selector context. Custom properties are appropriate for genuinely configurable component values, but adding a new override variable for every consumer couples the shared component to its consumers.
+
 ## Step 4: Apply the change
 
 1. Create `index.module.scss` alongside the component, converting each exported style key to a class.
@@ -185,9 +246,13 @@ yarn jest src/app/components/<ComponentName>
 - Confirm no `@emotion` imports remain in the component: `grep -rn "@emotion" src/app/components/<ComponentName>`
 - Check an RTL service (e.g. `arabic`) and a dark-UI context, since those behaviours move from JS branching into SCSS selectors.
 - `.module.scss` files are mocked with `identity-obj-proxy` in Jest, so `yarn jest` never compiles or validates the SCSS itself — a typo or invalid selector won't fail a test. Catching that relies on the Next.js build (fails on invalid SCSS) and Storybook/Chromatic (catches visually broken output), not on Jest.
+- If the test asserts computed CSS with `toHaveStyle`, rewrite it to `toHaveClass` instead. `.module.scss` files are mocked with `identity-obj-proxy` in Jest, so no real stylesheet is ever loaded into jsdom — `toHaveStyle` assertions against migrated styles will fail even when the migration is correct.
+- Run `yarn build` from `ws-nextjs-app` once per PR (not per component). Jest only exercises files that import the component under test, so it won't catch a legacy page elsewhere still importing the deleted `index.styles.*` directly — the build's TypeScript check will.
 
 ## Reference implementations
 
 - [src/app/components/ArticleLinksBlock/index.module.scss](../../../src/app/components/ArticleLinksBlock/index.module.scss) — tokens, forced colours, dark UI
 - [src/app/components/ActionTooltip/index.module.scss](../../../src/app/components/ActionTooltip/index.module.scss)
 - [src/app/components/Example/index.module.scss](../../../src/app/components/Example/index.module.scss) — minimal case
+- [src/app/components/InlineLink/index.module.scss](../../../src/app/components/InlineLink/index.module.scss) — large discrete enums via `data-*` attribute selectors
+- [src/app/components/Embeds/EmbedError/index.module.scss](../../../src/app/components/Embeds/EmbedError/index.module.scss) — consumer-owned contextual override
