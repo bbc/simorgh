@@ -3,6 +3,7 @@ import path from 'ramda/src/path';
 import Curation from '#app/components/Curation';
 import FollowTopicButton from '#app/components/FollowTopicButton';
 import parseRoute from '#app/routes/utils/parseRoute';
+import getTopicPageUrl from '#app/lib/utilities/getTopicPageUrl';
 import AdContainer from '../../components/Ad';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
@@ -19,8 +20,8 @@ import getItemList from '../../lib/seoUtils/getItemList';
 import getNthCurationByStyleAndProminence from '../utils/getNthCurationByStyleAndProminence';
 
 const TopicPage = ({ pageData }) => {
-  const { lang, translations, brandName } = use(ServiceContext);
-  const { pathname, canonicalLink } = use(RequestContext);
+  const { lang, translations, brandName, service } = use(ServiceContext);
+  const { pathname, variant } = use(RequestContext);
   const {
     title,
     description,
@@ -52,6 +53,14 @@ const TopicPage = ({ pageData }) => {
   const metadataDescription = seoDescription || description;
 
   const itemList = getItemList({ curations, name: brandName });
+
+  const buildTopicURL = getTopicPageUrl({
+    service,
+    topicId,
+    variant,
+    topicsPath: translations?.topicsPath,
+    absolute: true,
+  });
 
   return (
     <>
@@ -85,7 +94,7 @@ const TopicPage = ({ pageData }) => {
                 topicData={{
                   topicId,
                   title,
-                  url: canonicalLink,
+                  url: buildTopicURL,
                 }}
               />
             )}
