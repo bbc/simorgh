@@ -21,16 +21,16 @@
 
 .errorLinkWrapper {
   padding-top: #{theme.$spacings-full};
-}
 
-.inlineLink {
-  @include theme.fontVariants-gel-font-variant('sans-regular');
-  @include theme.fontSizes-gel-font-size(bodyCopy);
+  .inlineLink {
+    @include theme.fontVariants-gel-font-variant('sans-regular');
+    @include theme.fontSizes-gel-font-size(bodyCopy);
 
-  // Override only the default state; InlineLink owns visited and focus/hover states.
-  &.inlineLink:not(:visited):not(:hover):not(:focus) {
-    color: theme.$palette-black;
-    border-bottom: #{theme.pixelsToRem-px-to-rem(1)} solid
-      theme.$palette-black;
+    // Override only the default state; InlineLink owns visited and focus/hover states.
+    &:not(:visited):not(:hover):not(:focus) {
+      color: theme.$palette-black;
+      border-bottom: #{theme.pixelsToRem-px-to-rem(1)} solid
+        theme.$palette-black;
+    }
   }
 }
