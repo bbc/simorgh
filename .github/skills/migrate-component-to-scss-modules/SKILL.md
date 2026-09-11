@@ -29,6 +29,8 @@ Rendering a legacy component is **not** by itself a blocker — `ArticleLinksBlo
 
 Legacy imports that are **pure utilities** (e.g. `formatDuration` from `psammead-timestamp-container`) do not block migration.
 
+Before converting a shared component, search its consumers for `css` overrides. An un-migrated consumer may intentionally replace the component's default styles; migrate that consumer in the same change or stop and report it as blocked. Do not add a compatibility heuristic based on Emotion-generated `css-*` class names: it can suppress unrelated default styles, including pseudo-state rules.
+
 ## Step 2: Map Emotion theme values to SCSS tokens
 
 All tokens are forwarded from `@scss/themeTokens`. Start every file with:

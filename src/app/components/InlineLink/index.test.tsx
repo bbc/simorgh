@@ -1,5 +1,6 @@
 import InlineLink from '.';
 import { render, screen } from '../react-testing-library-with-providers';
+import styles from './index.module.scss';
 
 const setCurrentLocation = (location: string) => {
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -20,6 +21,7 @@ describe('InlineLink', () => {
 
     expect(anchorEl.nodeName).toBe('A');
     expect(anchorEl).toHaveAttribute('href', '/mundo/articles/ce42wzqr2mko');
+    expect(anchorEl).toHaveClass(styles.self);
   });
 
   it.each`

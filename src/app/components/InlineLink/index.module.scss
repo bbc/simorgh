@@ -2,7 +2,8 @@
 
 .self {
   color: theme.$palette-ebon;
-  border-bottom: #{theme.pixelsToRem-px-to-rem(1)} solid theme.$palette-postbox;
+  border-bottom: #{theme.pixelsToRem-px-to-rem(1)} solid
+    theme.$palette-postbox;
   text-decoration: none;
 
   &:visited {
