@@ -141,6 +141,25 @@ describe('EpisodeDescriptionFormatter', () => {
     expect(container.querySelector('ol')).toBeInTheDocument();
   });
 
+  it('handles indented chapter lines with leading whitespace', () => {
+    const text = '  00:00 Indented intro\n\t00:43 Indented chapter\n 01:30 Another indented';
+    const { container } = render(<EpisodeDescriptionFormatter text={text} />);
+    const timeElements = container.querySelectorAll('time');
+    expect(timeElements).toHaveLength(3);
+    expect(timeElements[0]).toHaveTextContent('00:00');
+    expect(timeElements[1]).toHaveTextContent('00:43');
+    expect(timeElements[2]).toHaveTextContent('01:30');
+    expect(
+      container.querySelectorAll('.chapterLabel')[0],
+    ).toHaveTextContent('Indented intro');
+    expect(
+      container.querySelectorAll('.chapterLabel')[1],
+    ).toHaveTextContent('Indented chapter');
+    expect(
+      container.querySelectorAll('.chapterLabel')[2],
+    ).toHaveTextContent('Another indented');
+  });
+
   describe('inline timecodes (timecodes embedded within a paragraph)', () => {
     const INLINE_TEXT =
       'Intro description text. 00:00 Chapter one 00:34 Chapter two 06:03 Chapter three';
@@ -353,6 +372,40 @@ describe('EpisodeDescriptionFormatter', () => {
 
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       delete (window as any).mediaPlayers;
+    });
+
+    it('sends a click tracking beacon with itemTracker details when an auto-linked URL is clicked', () => {
+      const onClickSpy = jest.fn();
+      const clickTrackerSpy = jest
+        .spyOn(clickTracking, 'default')
+        .mockImplementation(() => ({ onClick: onClickSpy }));
+
+      const textWithUrl =
+        'Check out this resource: https://www.example.com/path?query=value for more info.';
+
+      render(
+        <EpisodeDescriptionFormatter
+          text={textWithUrl}
+          eventTrackingData={{ componentName: 'podcast-description' }}
+        />,
+      );
+
+      expect(clickTrackerSpy).toHaveBeenCalledWith(
+        expect.objectContaining({
+          componentName: 'podcast-description',
+          itemTracker: expect.objectContaining({
+            type: 'podcast-description-link',
+            text: 'https://www.example.com/path?query=value',
+          }),
+        }),
+      );
+
+      const link = screen.getByRole('link', {
+        name: /www.example.com/,
+      });
+      fireEvent.click(link);
+
+      expect(onClickSpy).toHaveBeenCalledTimes(1);
     });
   });
 });
