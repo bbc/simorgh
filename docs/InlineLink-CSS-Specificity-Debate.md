@@ -1,4 +1,4 @@
-# InlineLink CSS specificity debate
+# InlineLink CSS override decision record
 
 ## Context
 
@@ -10,45 +10,29 @@
 
 Both components ultimately add classes to the same `<a>` element. CSS does not know that `EmbedError` is the React parent of `InlineLink`, and CSS Modules only scopes and hashes class names. It does not give a consumer class automatic precedence.
 
-## Why a plain override is fragile
+## Migration context
 
-This is a possible implementation:
+Consumers that pass Emotion styles into a shared component should be migrated in the same change or reported as blocked. During this migration we briefly tried detecting Emotion-generated `css-*` class names and suppressing the shared component's base class. We rejected that workaround because the generated class does not express which declarations the consumer intends to replace; suppressing the base class also removed unrelated defaults, including pseudo-state rules. This is why the final implementation migrates `EmbedError` instead of inspecting generated class names at runtime.
+
+## Decision
+
+Use selectors based on DOM context owned by the consuming component, or on an element type fixed by that component. Keep the shared component responsible for its own interactive states, and exclude those states from the consumer override where necessary.
+
+For `EmbedError`, the chosen pattern is:
 
 ```scss
-/* InlineLink */
-.self {
-  color: #222;
-}
-
-/* EmbedError */
-.inlineLink {
-  color: #000;
+.errorLinkWrapper {
+  .inlineLink:not(:visited):not(:hover):not(:focus) {
+    color: theme.$palette-black;
+    border-bottom: #{theme.pixelsToRem-px-to-rem(1)} solid
+      theme.$palette-black;
+  }
 }
 ```
 
-Both selectors have specificity `0-1-0`. The class order in the HTML does not decide the winner. If the stylesheet rules have equal specificity, the later rule in the compiled CSS wins. That order can vary with bundling, code splitting, SSR, AMP/Lite extraction, Storybook, or future import changes.
+This expresses the actual DOM relationship, avoids adding a wrapper solely for specificity, and does not require `InlineLink` to expose a new custom property for every consumer-specific variation.
 
-React component hierarchy is not a CSS cascade mechanism.
-
-## Double selectors
-
-CSS permits the same class selector to appear more than once in a compound selector:
-
-```scss
-.inlineLink.inlineLink {
-  color: #000;
-}
-```
-
-The element only needs one matching class in its HTML. Repeating the selector increases its specificity from `0-1-0` to `0-2-0` without requiring `!important`.
-
-MDN documents this technique directly:
-
-[Increasing specificity by duplicating selector - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascade/Specificity#increasing_specificity_by_duplicating_selector)
-
-MDN describes selector duplication as a technique to increase specificity, but recommends using it sparingly and documenting why it is needed. It is a valid CSS technique, but it is a specificity workaround rather than a normal component-composition API.
-
-## State handling
+### Preserving stateful styles
 
 `InlineLink` also has more specific state rules:
 
@@ -77,7 +61,49 @@ A consumer override must not accidentally take over those states. The current im
 
 The `.errorLinkWrapper` ancestor expresses the actual component relationship and adds specificity without duplicating a class selector. The exclusions are important: the consumer rule stops matching during visited, hover, and focus, leaving those states to `InlineLink`.
 
-## Alternative: custom properties
+For a component that fixes its rendered element type, an element-qualified selector is also appropriate. `Copyright` always renders `Text as="p"`, so `p.copyright` can override the remaining Emotion colour rule without adding a wrapper or duplicating the class.
+
+## Alternatives considered
+
+### Class-order override
+
+This is a possible implementation:
+
+```scss
+/* InlineLink */
+.self {
+  color: #222;
+}
+
+/* EmbedError */
+.inlineLink {
+  color: #000;
+}
+```
+
+Both selectors have specificity `0-1-0`. The class order in the HTML does not decide the winner. If the stylesheet rules have equal specificity, the later rule in the compiled CSS wins. That order can vary with bundling, code splitting, SSR, AMP/Lite extraction, Storybook, or future import changes.
+
+React component hierarchy is not a CSS cascade mechanism.
+
+### Duplicated selectors
+
+CSS permits the same class selector to appear more than once in a compound selector:
+
+```scss
+.inlineLink.inlineLink {
+  color: #000;
+}
+```
+
+The element only needs one matching class in its HTML. Repeating the selector increases its specificity from `0-1-0` to `0-2-0` without requiring `!important`.
+
+MDN documents this technique directly:
+
+[Increasing specificity by duplicating selector - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascade/Specificity#increasing_specificity_by_duplicating_selector)
+
+MDN describes selector duplication as a technique to increase specificity, but recommends using it sparingly and documenting why it is needed. It is valid CSS, but it is a specificity workaround rather than the preferred pattern when a meaningful DOM context exists.
+
+### Custom properties
 
 Another approach is to make `InlineLink` consume override variables:
 
@@ -96,18 +122,8 @@ Another approach is to make `InlineLink` consume override variables:
 }
 ```
 
-This avoids a specificity fight and lets `InlineLink` keep ownership of its pseudo-states. The trade-off is that every future consumer override requires `InlineLink` to expose another custom property, which weakens the open-closed argument and couples the base component to its consumers.
+This avoids a specificity fight and lets `InlineLink` keep ownership of its pseudo-states. The trade-off is that every future consumer override requires `InlineLink` to expose another custom property, which violates the open-closed principle and couples the base component to its consumers.
 
-## Alternative: migrate consumers together
+## Outcome
 
-The most explicit option is to migrate `EmbedError` alongside `InlineLink`, as its own SCSS class can then express the intended override without passing a legacy Emotion `css` prop. Consumers that still pass Emotion styles, such as the blocked `Disclaimer`, need their own migration decision rather than a generic compatibility heuristic.
-
-## Question for review
-
-Which trade-off should we prefer for future migrations?
-
-1. Use a contextual selector for a consumer-owned modifier, with state exclusions.
-2. Add custom properties to the shared component for every supported override.
-3. Migrate or block every consumer that passes styles into the component before deleting its Emotion styles.
-
-The current implementation uses option 1 for `EmbedError`. The double-selector technique remains a valid CSS fallback, documented by MDN above, but is not needed when the component owns a meaningful ancestor or element context. The migration guidance recommends identifying styled consumers before converting a shared component.
+The migration uses contextual selectors for `EmbedError`, `ReadTime`, and `Copyright`. Custom properties remain appropriate when a shared component is intentionally designed to expose configurable values, but adding one for every consumer override would couple the component to its consumers. Duplicated selectors remain a documented fallback when no meaningful DOM or element context exists.
