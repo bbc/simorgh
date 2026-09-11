@@ -1,9 +1,6 @@
 import type { CollapsibleNavigationSection } from '#app/components/CollapsibleNavigation/types';
 
-export type Region = {
-  id: string;
-  name: string;
-};
+import type { Region } from '#app/components/3d/3dModels/types';
 
 /*
 sub-meshes 1 to 6 on the globe.glb will map directly to WS content regions(Africa, Asia Pacific, Asia South, Europe, Latin America and Middle East).

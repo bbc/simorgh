@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unknown-property */
 import { useState } from 'react';
 import { useGLTF } from '@react-three/drei';
+import { ThreeEvent } from '@react-three/fiber';
 import { Mesh } from 'three';
 import {
   POSTBOX,
@@ -16,14 +17,14 @@ import {
 
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 
-import type { Region } from '../3dComponents/Globe/regions';
+import type { Region } from '#app/components/3d/3dModels/types';
 
 const {
   SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
   SIMORGH_PUBLIC_STATIC_ASSETS_PATH,
 } = getEnvConfig();
 
-const MODEL_PATH = `${SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${SIMORGH_PUBLIC_STATIC_ASSETS_PATH}3d/Models/test_globe.glb`;
+const MODEL_PATH = `${SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${SIMORGH_PUBLIC_STATIC_ASSETS_PATH}3d/Models/test_globe_v4.glb`;
 
 const MESH_COLORS = [
   GHOST,
@@ -55,20 +56,25 @@ export function Globe({ position, regions }: GlobeProps) {
 
   const [selectedSubMesh, setSelectedSubMesh] = useState<number | null>(null);
 
-  const handleClick = (index: number) => () => {
+  const handleClick = (index: number) => (event: ThreeEvent<MouseEvent>) => {
+    event.stopPropagation();
     setSelectedSubMesh(index);
     console.log('your region is', regions[index].name);
   };
 
+  // Sub-meshes are ordered region caps first, then the globe body sphere last.
+  const regionKeys = subMeshKeys.slice(0, regions.length);
+  const bodyKey = subMeshKeys[regions.length];
+
   return (
     <group position={position}>
-      {subMeshKeys.map((key, i) => {
-        const region = regions[i];
+      {regionKeys.map((key, i) => {
+        const node = subMesh[key] as Mesh;
         return (
           <mesh
             key={key}
-            name={region?.id}
-            geometry={(subMesh[key] as Mesh).geometry}
+            name={regions[i].id}
+            geometry={node.geometry}
             onClick={handleClick(i)}
           >
             <meshBasicMaterial
@@ -77,6 +83,11 @@ export function Globe({ position, regions }: GlobeProps) {
           </mesh>
         );
       })}
+      {bodyKey && (
+        <mesh geometry={(subMesh[bodyKey] as Mesh).geometry} scale={0.995}>
+          <meshBasicMaterial color={MESH_COLORS[regions.length]} />
+        </mesh>
+      )}
     </group>
   );
 }
