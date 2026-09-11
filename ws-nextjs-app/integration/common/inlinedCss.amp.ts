@@ -10,10 +10,10 @@ export default () => {
       expect(styleEl?.textContent?.trim()).not.toBe('');
     });
 
-    it('should inline CSS custom properties from the SCSS module palette (--brand-background)', () => {
+    it('should tree-shake unused SCSS module palette custom properties (--brand-background)', () => {
       const css = getAmpCustomStyle()?.textContent ?? '';
 
-      expect(css).toContain('--brand-background');
+      expect(css).not.toContain('--brand-background');
     });
 
     it('should inline CSS custom properties from the SCSS module font variants (--sans-regular-font-family)', () => {

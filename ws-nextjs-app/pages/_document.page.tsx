@@ -27,6 +27,8 @@ import addOperaMiniClassScript from '#app/lib/utilities/addOperaMiniClassScript'
 import handleServerLogging from '#utilities/handleServerLogging';
 import getAmpLiteCss from '#utilities/getAmpLiteCss';
 import optimiseCssPrefixes from '#utilities/optimiseCssPrefixes';
+import treeshakeCssCustomProperties from '#utilities/treeshakeCssCustomProperties';
+import trimFontFaceSourcesToWoff2 from '#utilities/trimFontFaceSourcesToWoff2';
 import setSimorghEnvVars from '#app/lib/utilities/setSimorghEnvVars';
 import removeNoJsClass from '#app/lib/utilities/removeNoJsClass';
 import ComponentTracking from '../renderers/ComponentTracking';
@@ -48,6 +50,11 @@ type DocProps = {
   isLite: boolean;
   title: ReactElement;
 };
+
+const optimiseInlineCss = (css: string): string =>
+  optimiseCssPrefixes(
+    trimFontFaceSourcesToWoff2(treeshakeCssCustomProperties(css)),
+  );
 
 export default class AppDocument extends Document<DocProps> {
   static async getInitialProps(ctx: DocumentContext) {
@@ -129,10 +136,10 @@ export default class AppDocument extends Document<DocProps> {
       };
     };
 
+    const inlineCss = optimiseInlineCss(css + getAmpLiteCss(getNextData()));
+
     switch (true) {
       case isAmp && pageType === 'article': {
-        const ampLiteCss = getAmpLiteCss(getNextData());
-        const combinedCss = optimiseCssPrefixes(css + ampLiteCss);
         return (
           <AmpRenderer
             bodyContent={<Main />}
@@ -141,14 +148,12 @@ export default class AppDocument extends Document<DocProps> {
             helmetScriptTags={helmetScriptTags}
             htmlAttrs={htmlAttrs}
             ids={ids}
-            styles={combinedCss}
+            styles={inlineCss}
             title={title}
           />
         );
       }
       case isLite: {
-        const ampLiteCss = getAmpLiteCss(getNextData());
-        const liteCss = optimiseCssPrefixes(css + ampLiteCss);
         return (
           <LiteRenderer
             bodyContent={<Main />}
@@ -156,7 +161,7 @@ export default class AppDocument extends Document<DocProps> {
             helmetMetaTags={helmetMetaTags}
             helmetScriptTags={helmetScriptTags}
             htmlAttrs={htmlAttrs}
-            styles={liteCss}
+            styles={inlineCss}
             title={title}
           />
         );
