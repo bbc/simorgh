@@ -15,6 +15,7 @@ import getCaptionBlock from '../utils/getCaptionBlock';
 import buildPlaceholderConfig from '../utils/buildPlaceholderConfig';
 import shouldDisplayAds from '../utils/shouldDisplayAds';
 import getMediaOrientation from '../utils/getMediaOrientation';
+import isLiveMedia from '../utils/isLiveMedia';
 import { getAmpIframeUrl, getExternalEmbedUrl } from '../utils/urlConstructors';
 
 const DEFAULT_WIDTH = 512;
@@ -75,11 +76,13 @@ export default ({
 
   const guidanceMessage = versionsBlock?.warnings?.short;
 
-  const showAds = shouldDisplayAds({
-    adsEnabled,
-    showAdsBasedOnLocation,
-    duration: rawDuration,
-  });
+  const showAds =
+    !hasWebcastItems &&
+    shouldDisplayAds({
+      adsEnabled,
+      showAdsBasedOnLocation,
+      duration: rawDuration,
+    });
 
   const embeddingAllowed = aresMediaMetadata?.embedding ?? false;
 
@@ -98,13 +101,13 @@ export default ({
         })
       : aresMediaMetadata?.imageUrl);
 
-  const isLive = aresMediaMetadata?.live ?? false;
+  const isLive = isLiveMedia(blocks);
 
   const items: PlaylistItem[] = [
     {
       versionID: versionPID,
       kind,
-      duration: rawDuration,
+      ...(!hasWebcastItems && { duration: rawDuration }),
       ...(isLive && { live: true }),
     },
   ];
@@ -114,8 +117,10 @@ export default ({
   const placeholderConfig = buildPlaceholderConfig({
     title,
     type: actualFormat || 'video',
-    duration: rawDuration,
-    durationISO8601: versionsBlock?.durationISO8601,
+    ...(!hasWebcastItems && {
+      duration: rawDuration,
+      durationISO8601: versionsBlock?.durationISO8601,
+    }),
     guidanceMessage,
     holdingImageURL,
     translations,
@@ -141,6 +146,12 @@ export default ({
       ...(embedded && { insideIframe: true, embeddedOffsite: true }),
       ...(externalEmbedUrl && { externalEmbedUrl }),
       autoplay: pageType !== 'mediaArticle',
+      ...(hasWebcastItems && {
+        ui: {
+          ...basePlayerConfig.ui,
+          cta: { mode: null },
+        },
+      }),
       playlistObject: {
         title,
         summary: caption || '',
