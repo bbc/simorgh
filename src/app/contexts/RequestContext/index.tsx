@@ -152,7 +152,7 @@ export const RequestContextProvider = ({
       country,
       nonce,
       cspHeader,
-      primaryMediaType
+      primaryMediaType,
     }),
     [
       derivedPageType,
