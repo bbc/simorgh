@@ -1,10 +1,14 @@
 import { PropsWithChildren } from 'react';
-import { act, waitFor, screen } from '@testing-library/react';
 import { Article } from '#app/models/types/optimo';
 import { Helmet } from 'react-helmet';
 import useUASButton from '#app/hooks/useUASButton';
 import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
-import { render } from '../../components/react-testing-library-with-providers';
+import {
+  render,
+  act,
+  waitFor,
+  screen,
+} from '../../components/react-testing-library-with-providers';
 import { ARTICLE_PAGE, MEDIA_ASSET_PAGE } from '../../routes/utils/pageTypes';
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';

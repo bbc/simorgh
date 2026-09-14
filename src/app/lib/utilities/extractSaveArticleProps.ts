@@ -1,4 +1,4 @@
-import type { Article } from '#app/models/types/optimo';
+import type { Article, OptimoBlock } from '#app/models/types/optimo';
 import extractPromoImage from '#app/lib/utilities/extractPromoImage';
 import buildIChefURL from '#app/lib/utilities/ichefURL';
 import filterForBlockType from '#app/lib/utilities/blockHandlers';
@@ -21,11 +21,26 @@ export interface SaveArticlePageData {
   headline?: string | null;
 }
 
+// MediaArticle pages nest their promo image inside an audio/video block
+// rather than as a top-level content block.
+const MEDIA_BLOCK_TYPES = ['audio', 'video'];
+
+const findPromoImageBlocks = (contentBlocks?: OptimoBlock[]) => {
+  const topLevelImageBlock = filterForBlockType(contentBlocks, 'image');
+  if (topLevelImageBlock) return topLevelImageBlock;
+
+  const mediaBlock = contentBlocks?.find(block =>
+    MEDIA_BLOCK_TYPES.includes(block.type),
+  );
+
+  return filterForBlockType(mediaBlock?.model?.blocks, 'image');
+};
+
 const extractSaveArticleProps = (
   articlePageData: Article,
 ): SaveArticlePageData => {
   const contentBlocks = articlePageData?.content?.model?.blocks;
-  const promoImageBlocks = filterForBlockType(contentBlocks, 'image');
+  const promoImageBlocks = findPromoImageBlocks(contentBlocks);
   const { altText, rawBlock } = extractPromoImage(
     promoImageBlocks?.model?.blocks ?? [],
   );
@@ -40,7 +55,9 @@ const extractSaveArticleProps = (
 
   const headlineBlock = filterForBlockType(contentBlocks, 'headline');
   const headline =
-    headlineBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text || '';
+    headlineBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text ||
+    articlePageData?.promo?.headlines?.seoHeadline ||
+    '';
 
   return {
     canonicalUrl: articlePageData?.metadata?.locators?.canonicalUrl || '',
