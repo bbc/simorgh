@@ -35,15 +35,12 @@
 
   &:focus-visible {
     outline: #{theme.pixelsToRem-px-to-rem(3)} solid theme.$palette-grey-8;
-    box-shadow:
-      0 0 0 #{theme.pixelsToRem-px-to-rem(4)} theme.$palette-white,
-      0 0 0 #{theme.pixelsToRem-px-to-rem(9)} theme.$palette-grey-8;
+    outline-offset: #{theme.pixelsToRem-px-to-rem(3)};
+    box-shadow: 0 0 0 #{theme.pixelsToRem-px-to-rem(3)} theme.$palette-white;
 
     :global([data-is-dark-ui='true']) & {
       outline-color: theme.$palette-white;
-      box-shadow:
-        0 0 0 #{theme.pixelsToRem-px-to-rem(4)} theme.$palette-grey-10,
-        0 0 0 #{theme.pixelsToRem-px-to-rem(9)} theme.$palette-white;
+      box-shadow: 0 0 0 #{theme.pixelsToRem-px-to-rem(3)} theme.$palette-black;
     }
   }
 
