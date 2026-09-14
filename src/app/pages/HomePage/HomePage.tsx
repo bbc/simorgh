@@ -1,6 +1,5 @@
 import { Fragment, use } from 'react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
-import PWAPromotionalBanner from '#app/components/PWAPromotionalBanner';
 import AccountPromotionalBannerHomePageExperiment from '#app/components/Account/AccountPromotionalBannerHomePageExperiment';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import useScrollDepthTracker, {
