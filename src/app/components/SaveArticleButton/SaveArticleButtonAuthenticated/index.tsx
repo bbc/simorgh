@@ -31,7 +31,8 @@ const SaveArticleButtonAuthenticated = ({
   const { translations } = use(ServiceContext);
   const { saveArticleButton, actionTooltip } = translations || {};
   const { assetId: articleId } = parseRoute(pathname);
-  // TODO: remove once the dark-UI tooltip design is ready; suppresses ActionTooltip on dark-UI pages for now.
+  // TODO: remove once the dark-UI tooltip design is ready; suppresses success/removed
+  // tooltips on dark-UI pages
   const { isDarkUi } = useTheme();
 
   const {
@@ -135,18 +136,22 @@ const SaveArticleButtonAuthenticated = ({
         testId="save-article-btn-authorized"
         {...viewTracker}
       />
-      {!isDarkUi && isTooltipVisible && actionResult && actionTooltip && (
-        <ActionTooltip
-          status={getTooltipStatus(actionResult)}
-          content={getArticleTooltipContent(
-            actionTooltip,
-            onMyNewsLinkClickTrack,
-          )}
-          closeLabel={actionTooltip.closeLabel}
-          onClose={handleTooltipClose}
-          {...tooltipViewTracker}
-        />
-      )}
+      {isTooltipVisible &&
+        actionResult &&
+        actionTooltip &&
+        // TODO: remove as per comment above
+        (!isDarkUi || actionResult.status === 'error') && (
+          <ActionTooltip
+            status={getTooltipStatus(actionResult)}
+            content={getArticleTooltipContent(
+              actionTooltip,
+              onMyNewsLinkClickTrack,
+            )}
+            closeLabel={actionTooltip.closeLabel}
+            onClose={handleTooltipClose}
+            {...tooltipViewTracker}
+          />
+        )}
     </>
   );
 };
