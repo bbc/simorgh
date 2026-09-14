@@ -65,18 +65,11 @@ const Component = ({ service, variant }: StoryProps) => {
   const pageData = onDemandAudioFixtures[service] || gahuza;
   const isPodcast = pageData?.metadata?.type === 'Podcast';
   
-  // Generate appropriate pathname based on service
-  let pathname: string;
-  if (service === 'russian' && isPodcast) {
-    // Russian podcast pathway
-    pathname = `/russian/podcasts/что-это-было/p076qqzl`;
-  } else if (service === 'portuguese' && isPodcast) {
-    // Portuguese podcast pathway
-    pathname = `/portuguese/podcasts/que-historia/p07r3r3t`;
-  } else {
-    // Radio pathway (gahuza, korean)
-    pathname = `/${service}/bbc_gahuza_radio/w3ct1vk5`;
-  }
+  // Use a simple pathname that triggers the right code path
+  // isPodcastEpisodePage regex requires /podcasts/ to match
+  const pathname = isPodcast 
+    ? `/${service}/podcasts/episode/test-id` 
+    : `/${service}/radio`;
 
   return (
     <ServiceContextProvider service={service} variant={variant}>
