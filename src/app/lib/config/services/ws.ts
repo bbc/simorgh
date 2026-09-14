@@ -87,6 +87,25 @@ export const service: DefaultServiceConfig = {
         closeLabel: 'Close',
         buttonSeparatorText: 'or',
       },
+      actionTooltip: {
+        success: {
+          title: 'This article is now saved',
+          bodyBefore: 'It will appear in',
+          bodyAfter: '',
+        },
+        error: {
+          title: 'Sorry, something went wrong',
+          body: 'Check your connection, refresh the page and try again',
+        },
+        removed: {
+          title: 'This article is now removed',
+          bodyBefore: 'It will be removed from',
+          bodyAfter: '',
+        },
+        myNewsLinkText: 'My News',
+        myNewsUrl: 'https://www.bbc.com/hindi/my-news',
+        closeLabel: 'Close',
+      },
       error: {
         404: {
           statusCode: '404',

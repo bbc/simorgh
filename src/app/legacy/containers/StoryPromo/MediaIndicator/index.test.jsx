@@ -113,19 +113,43 @@ const noMediaFormat = {
 describe('Story Promo Media Indicator', () => {
   it('should render an audio item correctly', () => {
     const { container } = render(<MediaIndicator dir="ltr" item={audioItem} />);
-    expect(container).toMatchSnapshot();
+    expect(
+      container.querySelector('[data-e2e="media-indicator"]'),
+    ).toBeInTheDocument();
+    expect(
+      container.querySelector('svg[viewBox="0 0 13 12"]'),
+    ).toBeInTheDocument();
+    expect(container.querySelector('time')).toHaveAttribute(
+      'dateTime',
+      'PT59S',
+    );
   });
 
   it('should render a video item correctly', () => {
     const { container } = render(<MediaIndicator dir="ltr" item={videoItem} />);
-    expect(container).toMatchSnapshot();
+    expect(
+      container.querySelector('[data-e2e="media-indicator"]'),
+    ).toBeInTheDocument();
+    expect(
+      container.querySelector('svg[viewBox="0 0 12 12"]'),
+    ).toBeInTheDocument();
+    expect(container.querySelector('time')).toHaveAttribute(
+      'dateTime',
+      'PT1H33M20S',
+    );
   });
 
   it('should render video indicator correctly when inline', () => {
     const { container } = render(
       <MediaIndicator dir="ltr" item={videoItem} isInline />,
     );
-    expect(container).toMatchSnapshot();
+    expect(
+      container.querySelector('[data-e2e="media-indicator"]'),
+    ).toBeInTheDocument();
+    expect(
+      container.querySelector('svg[viewBox="0 0 12 12"]'),
+    ).toBeInTheDocument();
+    expect(container.querySelector('time')).not.toBeInTheDocument();
   });
 
   it('should render video indicator correctly when inline on RTL', () => {
@@ -133,21 +157,39 @@ describe('Story Promo Media Indicator', () => {
       <MediaIndicator dir="rtl" item={videoItem} isInline />,
       { service: 'persian' },
     );
-    expect(container).toMatchSnapshot();
+    expect(
+      container.querySelector('[data-e2e="media-indicator"][dir="rtl"]'),
+    ).toBeInTheDocument();
+    expect(
+      container.querySelector('svg[viewBox="0 0 12 12"]'),
+    ).toBeInTheDocument();
+    expect(container.querySelector('time')).not.toBeInTheDocument();
   });
 
   it('should render a photo gallery item correctly', () => {
     const { container } = render(
       <MediaIndicator dir="ltr" item={photogalleryItem} />,
     );
-    expect(container).toMatchSnapshot();
+    expect(
+      container.querySelector('[data-e2e="media-indicator"]'),
+    ).toBeInTheDocument();
+    expect(
+      container.querySelector('svg[viewBox="0 0 32 26"]'),
+    ).toBeInTheDocument();
+    expect(container.querySelector('time')).not.toBeInTheDocument();
   });
 
   it('should render correctly even without duration', () => {
     const { container } = render(
       <MediaIndicator dir="ltr" item={noDurationItem} />,
     );
-    expect(container).toMatchSnapshot();
+    expect(
+      container.querySelector('[data-e2e="media-indicator"]'),
+    ).toBeInTheDocument();
+    expect(
+      container.querySelector('svg[viewBox="0 0 12 12"]'),
+    ).toBeInTheDocument();
+    expect(container.querySelector('time')).not.toBeInTheDocument();
   });
 
   it('should render correctly even without duration and cps type', () => {

@@ -3,6 +3,8 @@ import {
   getATIParamsFromURL,
   getATIUrls,
   getAppName,
+  getResonanceAppName,
+  getResonanceBagUrl,
   isViewabilityViewRequest,
   isViewabilityClickRequest,
   COMPONENTS,
@@ -156,6 +158,45 @@ const assertViewabilityEventParams = (
 const usesReverbViewabilityModel = (applicationType: string): boolean =>
   !['lite', 'amp'].includes(applicationType);
 
+const usesResonance = (applicationType: string): boolean =>
+  !['lite', 'amp'].includes(applicationType);
+
+const assertResonancePageViewParamsExist = ({
+  metadata,
+  event,
+  contentType,
+}: {
+  metadata: Record<string, unknown>;
+  event: Record<string, unknown>;
+  contentType: string;
+}) => {
+  expect(metadata).toHaveProperty('client_name');
+  expect(metadata).toHaveProperty('collection_library_name');
+  expect(metadata).toHaveProperty('collection_library_version');
+  expect(metadata).toHaveProperty('event_category');
+  expect(metadata).toHaveProperty('id');
+  expect(metadata).toHaveProperty('request_time');
+
+  expect(event).toHaveProperty('app_name');
+  expect(event).toHaveProperty('browser_language');
+  expect(event).toHaveProperty('content_type');
+  expect(event).toHaveProperty('destination');
+  expect(event).toHaveProperty('event_id');
+  expect(event).toHaveProperty('event_time');
+  expect(event).toHaveProperty('event_name');
+  expect(event).toHaveProperty('event_ts');
+  expect(event).toHaveProperty('language');
+  expect(event).toHaveProperty('page_name');
+  expect(event).toHaveProperty('page_title');
+  expect(event).toHaveProperty('producer');
+  expect(event).toHaveProperty('site_id');
+  expect(event).toHaveProperty('url');
+
+  if (!['list-datadriven', 'static'].includes(contentType)) {
+    expect(event).toHaveProperty('content_id');
+  }
+};
+
 const buildPageViewRequestMatcher = ({
   applicationType,
   atiUrl,
@@ -281,6 +322,108 @@ export const assertPageView = async ({
   expect(params.x2).toBe(`[${applicationType}]`);
   expect(params.x3).toBe(getAppName(service));
   expect(params.x7).toBe(`[${contentType}]`);
+};
+
+export const assertResonancePageView = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  siteId,
+  applicationType,
+  contentType,
+  service,
+  appEnv,
+}: AtiAssertionFnProps) => {
+  const sendsResonanceEvents = usesResonance(applicationType);
+  const resonanceBagUrl = getResonanceBagUrl(appEnv);
+  const escapedBagUrl = resonanceBagUrl.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const resonanceBagEventUrlPattern = new RegExp(
+    `^${escapedBagUrl}/v\\d+/event(?:\\?.*)?$`,
+  );
+
+  const matchedRequests: Request[] = [];
+  const parseResonanceBody = (request: Request) => {
+    const rawPostData = request.postData();
+    if (!rawPostData) return null;
+
+    try {
+      return JSON.parse(rawPostData) as {
+        bag_metadata?: Record<string, unknown>;
+        events?: Array<Record<string, unknown>>;
+      };
+    } catch {
+      return null;
+    }
+  };
+
+  const requestListener = (request: Request) => {
+    if (
+      request.method() === 'POST' &&
+      resonanceBagEventUrlPattern.test(request.url())
+    ) {
+      matchedRequests.push(request);
+    }
+  };
+
+  page.on('request', requestListener);
+
+  try {
+    await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+
+    if (!sendsResonanceEvents) {
+      await page.waitForLoadState('networkidle');
+      expect(matchedRequests).toHaveLength(0);
+      return;
+    }
+
+    await expect
+      .poll(() => matchedRequests.length, {
+        timeout: 15000,
+      })
+      .toBeGreaterThan(0);
+
+    await expect
+      .poll(
+        () =>
+          matchedRequests
+            .map(parseResonanceBody)
+            .find(body => body?.bag_metadata && body?.events),
+        {
+          timeout: 15000,
+        },
+      )
+      .not.toBeNull();
+
+    const body = matchedRequests
+      .map(parseResonanceBody)
+      .find(body => body?.bag_metadata && body?.events);
+
+    if (!body) {
+      expect(matchedRequests.length).toBeGreaterThan(0);
+      return;
+    }
+
+    expect(body).toHaveProperty('bag_metadata');
+    expect(body).toHaveProperty('events');
+
+    const metadata = body?.bag_metadata ?? {};
+    const event = body?.events?.[0] ?? {};
+
+    assertResonancePageViewParamsExist({
+      metadata,
+      event,
+      contentType,
+    });
+
+    expect(event.app_name).toBe(getResonanceAppName(service));
+    expect(event.content_type).toBe(contentType);
+    expect(event.event_name).toBe('page.display');
+    expect(event.page_name).toBe(pageIdentifier);
+    expect(event.producer).toBe(siteId);
+  } finally {
+    page.off('request', requestListener);
+  }
 };
 
 export const assertScrollableNavigationComponentView = async ({
@@ -671,6 +814,233 @@ export const assertRadioScheduleComponentClick = async ({
       component: COMPONENTS.RADIO_SCHEDULE,
     }),
     page.locator('[data-e2e="onDemand"]').locator('a').first().click(),
+  ]);
+
+  const params = getATIParamsFromURL(request.url());
+
+  assertViewabilityEventParams(
+    params,
+    pageIdentifier,
+    siteId,
+    applicationType,
+    'select',
+  );
+};
+
+export const assertPodcastPromoComponentView = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  siteId,
+  applicationType,
+  appEnv,
+}: AtiAssertionFnProps) => {
+  const viewPromise = waitForComponentViewRequest({
+    page,
+    appEnv,
+    component: COMPONENTS.PODCAST_PROMO,
+  });
+
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+
+  // Double scroll intentional to reliably trigger viewability
+  await page.locator('[data-e2e="podcast-promo"]').scrollIntoViewIfNeeded();
+  await page.locator('[data-e2e="podcast-promo"]').scrollIntoViewIfNeeded();
+
+  const request = await viewPromise;
+  const params = getATIParamsFromURL(request.url());
+
+  assertViewabilityEventParams(
+    params,
+    pageIdentifier,
+    siteId,
+    applicationType,
+    'view',
+  );
+};
+
+export const assertPodcastPromoComponentClick = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  siteId,
+  applicationType,
+  appEnv,
+}: AtiAssertionFnProps) => {
+  const pageViewPromise = waitForPageViewRequest({
+    page,
+    appEnv,
+    applicationType,
+  });
+
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+  await pageViewPromise;
+  await page.locator('[data-e2e="podcast-promo"]').scrollIntoViewIfNeeded();
+  await page.locator('[data-e2e="podcast-promo"] a').last().waitFor();
+
+  const [request] = await Promise.all([
+    waitForComponentClickRequest({
+      page,
+      appEnv,
+      component: COMPONENTS.PODCAST_PROMO,
+    }),
+    page.locator('[data-e2e="podcast-promo"]').locator('a').last().click(),
+  ]);
+
+  const params = getATIParamsFromURL(request.url());
+
+  assertViewabilityEventParams(
+    params,
+    pageIdentifier,
+    siteId,
+    applicationType,
+    'select',
+  );
+};
+
+export const assertRecentAudioEpisodesComponentView = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  siteId,
+  applicationType,
+  appEnv,
+}: AtiAssertionFnProps) => {
+  const viewPromise = waitForComponentViewRequest({
+    page,
+    appEnv,
+    component: COMPONENTS.RECENT_AUDIO_EPISODES,
+  });
+
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+  await page
+    .locator('[data-e2e="recent-episodes-list"]')
+    .scrollIntoViewIfNeeded();
+
+  const request = await viewPromise;
+  const params = getATIParamsFromURL(request.url());
+
+  assertViewabilityEventParams(
+    params,
+    pageIdentifier,
+    siteId,
+    applicationType,
+    'view',
+  );
+};
+
+export const assertRecentAudioEpisodesComponentClick = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  siteId,
+  applicationType,
+  appEnv,
+}: AtiAssertionFnProps) => {
+  const pageViewPromise = waitForPageViewRequest({
+    page,
+    appEnv,
+    applicationType,
+  });
+
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+  await pageViewPromise;
+  await page
+    .locator('[data-e2e="recent-episodes-list"]')
+    .scrollIntoViewIfNeeded();
+  await page.locator('[data-e2e="recent-episodes-list"] a').first().waitFor();
+
+  const [request] = await Promise.all([
+    waitForComponentClickRequest({
+      page,
+      appEnv,
+      component: COMPONENTS.RECENT_AUDIO_EPISODES,
+    }),
+    page
+      .locator('[data-e2e="recent-episodes-list"]')
+      .locator('a')
+      .first()
+      .click(),
+  ]);
+
+  const params = getATIParamsFromURL(request.url());
+
+  assertViewabilityEventParams(
+    params,
+    pageIdentifier,
+    siteId,
+    applicationType,
+    'select',
+  );
+};
+
+export const assertPodcastLinksComponentView = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  siteId,
+  applicationType,
+  appEnv,
+}: AtiAssertionFnProps) => {
+  const viewPromise = waitForComponentViewRequest({
+    page,
+    appEnv,
+    component: COMPONENTS.PODCAST_LINKS,
+  });
+
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+  await page.locator('[data-e2e="podcast-links"]').scrollIntoViewIfNeeded();
+
+  const request = await viewPromise;
+  const params = getATIParamsFromURL(request.url());
+
+  assertViewabilityEventParams(
+    params,
+    pageIdentifier,
+    siteId,
+    applicationType,
+    'view',
+  );
+};
+
+export const assertPodcastLinksComponentClick = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  siteId,
+  applicationType,
+  appEnv,
+}: AtiAssertionFnProps) => {
+  const pageViewPromise = waitForPageViewRequest({
+    page,
+    appEnv,
+    applicationType,
+  });
+
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+  await pageViewPromise;
+  await page.locator('[data-e2e="podcast-links"]').scrollIntoViewIfNeeded();
+
+  const podcastLinks = page.locator('[data-e2e="podcast-links"]');
+  const rssLink = podcastLinks.getByRole('link', { name: /rss/i });
+
+  const linkToClick =
+    (await rssLink.count()) > 0 ? rssLink.first() : podcastLinks.locator('a').first();
+  await linkToClick.waitFor();
+
+  const [request] = await Promise.all([
+    waitForComponentClickRequest({
+      page,
+      appEnv,
+      component: COMPONENTS.PODCAST_LINKS,
+    }),
+    linkToClick.click({ noWaitAfter: true }),
   ]);
 
   const params = getATIParamsFromURL(request.url());

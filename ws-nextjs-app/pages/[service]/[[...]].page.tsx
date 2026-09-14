@@ -14,6 +14,7 @@ import {
   AUDIO_PAGE,
   TV_PAGE,
   LIVE_RADIO_PAGE,
+  OFFLINE_PAGE,
 } from '#app/routes/utils/pageTypes';
 import { PageTypes } from '#app/models/types/global';
 import PageDataParams from '#app/models/types/pageDataParams';
@@ -43,6 +44,8 @@ import { OnDemandAudioProps } from './onDemandAudio/types';
 import handleOnDemandTvRoute from './onDemandTv/handleOnDemandTvRoute';
 // Live Radio
 import handleLiveRadioRoute from './liveRadio/handleLiveRadioRoute';
+// Offline
+import handleOfflineRoute from './offline/handleOfflineRoute';
 
 // Dynamic imports of page layouts
 const AvEmbedsPageLayout = dynamic(
@@ -63,6 +66,8 @@ const OnDemandTvPage = dynamic(
 const LiveRadioPage = dynamic(
   () => import('#app/pages/LiveRadioPage/LiveRadioPage'),
 );
+
+const OfflinePage = dynamic(() => import('./offline/OfflinePage'));
 
 const getPageType = ({
   resolvedUrl,
@@ -96,6 +101,7 @@ const ROUTE_HANDLERS = {
   [AUDIO_PAGE]: handleOnDemandAudioRoute,
   [TV_PAGE]: handleOnDemandTvRoute,
   [LIVE_RADIO_PAGE]: handleLiveRadioRoute,
+  [OFFLINE_PAGE]: handleOfflineRoute,
 };
 
 export const getServerSideProps: GetServerSideProps = async context => {
@@ -164,6 +170,9 @@ export default function PageTypeToRender({ pageType, ...props }: PageProps) {
     // Home Page
     case HOME_PAGE:
       return withOptimizelyProvider(HomePage)({ ...props });
+    // Offline Page
+    case OFFLINE_PAGE:
+      return <OfflinePage />;
     default:
       // Return nothing, 404 is handled in _app.tsx
       return null;

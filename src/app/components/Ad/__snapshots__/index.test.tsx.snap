@@ -83,7 +83,7 @@ exports[`Ad Container Snapshots AMP should correctly render a leaderboard ad 1`]
 
 <div>
   <div
-    amp-access="toggles.ads.enabled"
+    amp-access="data.toggles.ads.enabled"
     amp-access-hide="true"
     class="emotion-0"
   >
@@ -220,7 +220,7 @@ exports[`Ad Container Snapshots AMP should correctly render an mpu ad 1`] = `
 
 <div>
   <div
-    amp-access="toggles.ads.enabled"
+    amp-access="data.toggles.ads.enabled"
     amp-access-hide="true"
     class="emotion-0"
   >
@@ -361,7 +361,7 @@ exports[`Ad Container Snapshots AMP should render a leaderboard ad with placehol
         class="emotion-2"
       >
         <div
-          amp-access="toggles.ads.enabled"
+          amp-access="data.toggles.ads.enabled"
           amp-access-hide="true"
           class="emotion-3"
         >
@@ -491,7 +491,7 @@ exports[`Ad Container Snapshots AMP should render a leaderboard ad without a pla
 
 <div>
   <div
-    amp-access="toggles.ads.enabled"
+    amp-access="data.toggles.ads.enabled"
     amp-access-hide="true"
     class="emotion-0"
   >

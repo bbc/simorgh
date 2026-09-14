@@ -18,11 +18,17 @@ const experimentsForPageMetrics: ExperimentsForPageTypeMetrics = [
     activeExperiments: [
       'test_page_views_aa_3',
       'newswb_ws_article_account_promo_banner',
+      // enable page metrics after this experiment is activated
+      'newswb_ws_oj_order_referrer_search',
     ],
   },
   {
     pageType: MEDIA_ARTICLE_PAGE,
     activeExperiments: ['test_page_views_aa_3'],
+  },
+  {
+    pageType: HOME_PAGE,
+    activeExperiments: ['test_page_views_aa_4'],
   },
   {
     pageType: HOME_PAGE,

@@ -5,7 +5,7 @@ import chartbeatTests from '../../../support/helpers/chartbeatTests';
 export default ({ service, pageType }) =>
   describe(`Tests for ${service} ${pageType}`, () => {
     beforeEach(() => {
-      cy.getToggles(service);
+      cy.fetchToggles(service);
     });
     describe('LinkedData', () => {
       // will be addressed by this https://github.com/bbc/simorgh/issues/3117

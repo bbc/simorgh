@@ -9,35 +9,18 @@ import useViewTracker from '#app/hooks/useViewTracker';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { Direction, Navigation, PageTypes } from '#app/models/types/global';
+import {
+  TV_PAGE,
+  LIVE_TV_PAGE,
+  AUDIO_PAGE,
+  LIVE_RADIO_PAGE,
+  MEDIA_ARTICLE_PAGE,
+  ARTICLE_PAGE,
+} from '#app/routes/utils/pageTypes';
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import Canonical from './index.canonical';
 import Amp from './index.amp';
 import styles from './index.styles';
-
-const getTopItemA11yProps = ({
-  item,
-  index,
-  active,
-  pageType,
-}: {
-  item: Navigation;
-  index: number;
-  active: boolean;
-  pageType?: PageTypes;
-}) => {
-  const shouldAnnounceCurrentPage =
-    pageType === 'home' && active && index === 0;
-
-  if (!active || shouldAnnounceCurrentPage) {
-    return {};
-  }
-
-  return {
-    'aria-current': undefined,
-    'aria-label': item.title,
-    'aria-labelledby': undefined,
-  };
-};
 
 /**
  * EXPECTED DATA SHAPE (from server):
@@ -58,8 +41,14 @@ type RenderListItemsArgs = {
   activeIndex: number;
   clickTracker: ReturnType<typeof useClickTrackerHandler>;
   viewTracker?: ReturnType<typeof useViewTracker>;
-  pageType?: PageTypes;
-  navType?: 'top' | 'bottom' | 'dropdown';
+  // For the top nav: controls whether "current page" is announced to screen
+  // readers. True when activeIndex reflects a genuine URL match or a real
+  // Watch/Listen category attribution. False when Home is highlighted only as
+  // a last-resort default (no match, or categorized Watch/Listen doesn't exist
+  // in nav so falls back to Home). The bottom nav only marks items active on
+  // genuine URL matches and always announces. The dropdown nav never marks
+  // anything active.
+  shouldAnnounce?: boolean;
 };
 
 const renderListItems = ({
@@ -70,14 +59,15 @@ const renderListItems = ({
   activeIndex,
   clickTracker,
   viewTracker,
-  pageType,
-  navType,
+  shouldAnnounce = true,
 }: RenderListItemsArgs) =>
   navigation.map((item, index) => {
     const { title, url } = item;
     const active = index === activeIndex;
-    const a11yProps =
-      getTopItemA11yProps({ item, index, active, pageType }) ?? {};
+    // Only announce "current page" to screen readers when the highlight
+    // genuinely reflects the user's location, not when Home is highlighted
+    // purely as a last-resort default/fallback categorisation.
+    const announceCurrentPage = active && shouldAnnounce;
 
     return (
       <Li
@@ -85,10 +75,10 @@ const renderListItems = ({
         url={url}
         active={active}
         currentPageText={currentPage}
+        announceCurrentPage={announceCurrentPage}
         dir={dir}
         clickTracker={clickTracker}
         {...(viewTracker && { viewTracker })}
-        {...(navType === 'top' ? a11yProps : {})}
       >
         {title}
       </Li>
@@ -119,23 +109,36 @@ const matchesUrl = ({
 
 /**
  * Find which top item should be active:
- * - If current page matches a top item url -> that index is active
+ * - If current page URL matches a top item url -> that index is active
  * - Else if it matches any subItem url -> parent index is active
- * - Else if pageType === 'home' -> 0
- * - Else -> -1 (no active)
+ * - Else use page-type attribution:
+ *   - Video page (tv, liveTV), video mediaArticle, or article with video primaryMediaType -> index 1 (Watch)
+ *   - Audio page (audio, liveRadio), audio mediaArticle, or article with audio primaryMediaType -> index 2 (Listen)
+ *   - Any other type (non-media article, topic, home, etc.) -> index 0 (Home)
+ * Nav items are hopefully always ordered: 0=Home, 1=Watch, 2=Listen, otherwise it won't be possible to know which one to highlight when we aren't matching on url
+ * primaryMediaType must be explicitly 'video' or 'audio' to trigger Watch/Listen attribution.
+ * Home is the default/fallback for every page that isn't a Watch or Listen match.
+ * Returns shouldAnnounce: true when the active index genuinely reflects the
+ * user's location - a direct/subItem URL match, or a real Watch/Listen
+ * category attribution - false when Home is highlighted only as a
+ * last-resort default (no match at all, or the categorised Watch/Listen item
+ * doesn't exist in the nav so it falls back to Home). Used to decide whether
+ * to announce "current page" to screen readers.
  */
 const getActiveTopIndex = ({
   topItems,
   canonicalLink,
   origin,
   pageType,
+  primaryMediaType,
 }: {
   topItems: Navigation[];
   origin: string;
   canonicalLink?: string;
   pageType?: PageTypes;
-}) => {
-  if (!topItems?.length) return -1;
+  primaryMediaType?: 'audio' | 'video';
+}): { index: number; shouldAnnounce: boolean } => {
+  if (!topItems?.length) return { index: -1, shouldAnnounce: false };
 
   // try to find a direct match on the top-level items with the current page URL
   // it returns the index of the first item that matches or -1 if none match
@@ -143,7 +146,9 @@ const getActiveTopIndex = ({
     matchesUrl({ canonicalLink, origin, navUrl: item.url }),
   );
   // if a match is found, return the index of the matching top-level item (this is the active item)
-  if (directMatchIndex > -1) return directMatchIndex;
+  if (directMatchIndex > -1) {
+    return { index: directMatchIndex, shouldAnnounce: true };
+  }
 
   // if no direct match in the top level items, check if any of the subItems match the current page URL
   // this is so that if a subItem matches the current page, its parent top-level item will be marked as active in the navigation
@@ -156,13 +161,52 @@ const getActiveTopIndex = ({
       matchesUrl({ canonicalLink, origin, navUrl: child.url }),
     ),
   );
-  if (parentIndexByChild > -1) return parentIndexByChild;
+  if (parentIndexByChild > -1) {
+    // Home's subItems are just categorisation (e.g. topic links), not
+    // pages that represent "being on the home page" itself, so a subItem
+    // match on Home shouldn't announce "current page" - only a direct match
+    // on Home's own URL should. Watch/Listen subItem matches (e.g. a video
+    // page nested under Watch) do genuinely represent being on that section,
+    // so those should still announce.
+    return {
+      index: parentIndexByChild,
+      shouldAnnounce: parentIndexByChild !== 0,
+    };
+  }
 
-  // We always want the first top level nav item to be active on the home page,
-  // and the first nav item should always be 'Home'
-  if (pageType === 'home') return 0;
+  const watchIndex = topItems.findIndex(item => item.type === 'watch');
+  const listenIndex = topItems.findIndex(item => item.type === 'listen');
 
-  return -1;
+  // Video pages, video mediaArticles, and article pages with a video primaryMediaType.
+  // If there's no Watch item to attribute to, this falls back to highlighting
+  // Home as a default categorisation only, so it shouldn't be announced.
+  if (
+    pageType === TV_PAGE ||
+    pageType === LIVE_TV_PAGE ||
+    (pageType === MEDIA_ARTICLE_PAGE && primaryMediaType === 'video') ||
+    (pageType === ARTICLE_PAGE && primaryMediaType === 'video')
+  ) {
+    return watchIndex > -1
+      ? { index: watchIndex, shouldAnnounce: true }
+      : { index: 0, shouldAnnounce: false };
+  }
+
+  // Audio pages, audio mediaArticles, and article pages with an audio primaryMediaType
+  // If there's no Listen item to attribute to, this falls back to highlighting
+  // Home as a default categorisation only, so it shouldn't be announced.
+  if (
+    pageType === AUDIO_PAGE ||
+    pageType === LIVE_RADIO_PAGE ||
+    (pageType === MEDIA_ARTICLE_PAGE && primaryMediaType === 'audio') ||
+    (pageType === ARTICLE_PAGE && primaryMediaType === 'audio')
+  ) {
+    return listenIndex > -1
+      ? { index: listenIndex, shouldAnnounce: true }
+      : { index: 0, shouldAnnounce: false };
+  }
+
+  // All other page types (article, topic, home, live, etc.) default to Home (index 0).
+  return { index: 0, shouldAnnounce: false };
 };
 
 type NavigationContainerProps = {
@@ -170,6 +214,7 @@ type NavigationContainerProps = {
   propsForTopBarOJComponent?: {
     blocks?: TopStoryItem[];
   };
+  primaryMediaType?: 'audio' | 'video';
 };
 
 const navEventTrackingMetadata = { componentName: 'scrollable-navigation' };
@@ -178,6 +223,7 @@ const dropdownNavEventTrackingData = { componentName: 'dropdown-navigation' };
 const NavigationContainer: React.FC<NavigationContainerProps> = ({
   navItems,
   propsForTopBarOJComponent,
+  primaryMediaType,
 }) => {
   const { isAmp, isLite, pageType, canonicalLink, origin } =
     use(RequestContext);
@@ -217,18 +263,24 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
     return null;
   }
 
-  // For Lite pages, filter out any items that should be hidden on the Lite site
-  const navigationItems = navItemsFromPropsOrServiceConfig.filter(
-    item => !(item.hideOnLiteSite && isLite),
-  );
+  // For Lite pages, filter out any items that should be hidden on the Lite site.
+  // Watch/Listen items must never appear on Lite
+  const navigationItems = navItemsFromPropsOrServiceConfig.filter(item => {
+    if (!isLite) return true;
+    if (item.hideOnLiteSite) return false;
+    if (item.type === 'watch' || item.type === 'listen') return false;
+    return true;
+  });
 
   // Compute which top item is active based on current URL
-  const topActiveIndex = getActiveTopIndex({
-    topItems: navigationItems,
-    canonicalLink,
-    origin,
-    pageType,
-  });
+  const { index: topActiveIndex, shouldAnnounce: topShouldAnnounce } =
+    getActiveTopIndex({
+      topItems: navigationItems,
+      canonicalLink,
+      origin,
+      pageType,
+      primaryMediaType,
+    });
 
   const topScrollableListItems = (
     <NavigationUl>
@@ -240,8 +292,7 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
         activeIndex: topActiveIndex,
         clickTracker: topNavClickTrackerHandler,
         viewTracker: topNavViewTracker,
-        pageType,
-        navType: 'top',
+        shouldAnnounce: topShouldAnnounce,
       })}
     </NavigationUl>
   );
@@ -270,7 +321,6 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
         dir,
         activeIndex: activeBottomIndex,
         clickTracker: bottomNavClickTrackerHandler,
-        pageType,
       })}
     </NavigationUl>
   );
@@ -293,7 +343,6 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
         activeIndex: -1,
         clickTracker: dropdownNavClickTrackerHandler,
         viewTracker: dropdownNavViewTracker,
-        pageType,
       })}
     </DropdownUl>
   );

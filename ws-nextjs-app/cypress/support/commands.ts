@@ -4,8 +4,8 @@ import identity from 'ramda/src/identity';
 import defaultToggles from '#app/lib/config/toggles';
 import testResponseCodeAndRetry from './helpers/testResponseCodeAndRetry';
 import getAppEnv from './helpers/getAppEnv';
-import envConfig, { EnvironmentConfigType } from './config/envs';
 import handleContinueReadingButton from './helpers/handleContinueReadingButton';
+import envConfig, { EnvironmentConfigType } from './config/envs';
 
 interface TestResponseCodeAndRetry {
   url: string;
@@ -23,7 +23,7 @@ declare global {
       testResponseCodeAndRetry: (
         props: TestResponseCodeAndRetry,
       ) => Chainable<Record<string, unknown>>;
-      getToggles(serviceID: string): Chainable;
+      fetchToggles(serviceID: string): Chainable;
       hasNoscriptImgAtiUrl(atiUrl: string): Chainable;
       testResponseCodeAndType(
         props: TestResponseAndTypeFunctionProps,
@@ -42,20 +42,26 @@ const getPageDataFromWindow = () => {
 };
 
 const keyGenFn = identity as (...v: unknown[]) => string;
-const environmentConfig = envConfig as EnvironmentConfigType;
-const getToggles = memoizeWith(keyGenFn, service => {
+const fetchToggles = memoizeWith(keyGenFn, service => {
   const togglesFixture = `cypress/fixtures/toggles/${service}.json`;
+  const togglesEndpoint = new URL(
+    `${(envConfig as EnvironmentConfigType).togglesUrl}/fd/ws-toggles`,
+  );
+  togglesEndpoint.searchParams.set('service', service);
+  togglesEndpoint.searchParams.set('application', 'simorgh');
 
-  if (getAppEnv() === 'local') {
+  const appEnv = getAppEnv();
+
+  if (appEnv === 'local') {
     cy.writeFile(togglesFixture, defaultToggles.local);
   } else {
     cy.request({
-      url: `${environmentConfig.togglesUrl}?application=simorgh&service=${service}&__amp_source_origin=${environmentConfig.baseUrl}`,
-      headers: {
-        Origin: 'https://www.bbc.com',
-      },
+      url: togglesEndpoint.toString(),
+      ...(appEnv !== 'live' && {
+        headers: { 'ctx-service-env': 'test' },
+      }),
     }).then(response => {
-      cy.writeFile(togglesFixture, response.body.toggles);
+      cy.writeFile(togglesFixture, response.body.data.toggles);
     });
   }
 });
@@ -129,7 +135,7 @@ const testResponseCodeAndType = ({
 
 Cypress.Commands.add('getPageDataFromWindow', getPageDataFromWindow);
 Cypress.Commands.add('testResponseCodeAndRetry', testResponseCodeAndRetry);
-Cypress.Commands.add('getToggles', getToggles);
+Cypress.Commands.add('fetchToggles', fetchToggles);
 Cypress.Commands.add('hasNoscriptImgAtiUrl', hasNoscriptImgAtiUrl);
 Cypress.Commands.add('testResponseCodeAndType', testResponseCodeAndType);
 

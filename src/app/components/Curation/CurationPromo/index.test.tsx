@@ -216,6 +216,22 @@ describe('Curation Promo', () => {
       );
     });
 
+    it('should allow a related topic link to wrap when it cannot fit on one line', () => {
+      const longRelatedTopic = {
+        ...relatedTopic,
+        title: 'A related topic title that is too long to fit on one line',
+      };
+
+      render(<Fixture relatedTopic={longRelatedTopic} />);
+
+      expect(
+        screen.getByRole('link', { name: longRelatedTopic.title }),
+      ).toHaveStyle({
+        flexShrink: 0,
+        whiteSpace: 'normal',
+      });
+    });
+
     it('should not render a related topic link when relatedTopic is not provided', () => {
       render(<Fixture />);
 

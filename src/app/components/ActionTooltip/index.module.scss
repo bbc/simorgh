@@ -1,0 +1,146 @@
+@use '@scss/themeTokens' as theme;
+
+.wrapper {
+  position: absolute;
+  top: calc(100% + #{theme.$spacings-triple});
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  inset-inline-start: 0;
+  width: max-content;
+  max-width: min(95vw, 21rem);
+  padding: 0.75rem;
+  border: 1px solid theme.$palette-grey-4;
+  margin: 0;
+  background: theme.$palette-white;
+  pointer-events: auto;
+
+  &::before,
+  &::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    clip-path: polygon(0 100%, 50% 0, 100% 100%);
+    width: 1rem;
+    height: 0.8125rem;
+    left: 1rem;
+  }
+
+  &::before {
+    top: -0.8125rem;
+    background-color: theme.$palette-grey-4;
+
+    @media (forced-colors: active) {
+      background-color: CanvasText;
+    }
+  }
+
+  &::after {
+    top: -0.6875rem;
+    background-color: theme.$palette-white;
+
+    @media (forced-colors: active) {
+      background-color: Canvas;
+    }
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+    padding-block: 0;
+    white-space: nowrap;
+
+    &:hover,
+    &:active {
+      color: theme.$palette-postbox;
+    }
+
+    &:focus-visible {
+      color: theme.$palette-postbox;
+      outline: 1px solid black;
+      outline-offset: 2px;
+    }
+  }
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  padding-inline-end: 3rem;
+}
+
+.icon {
+  flex-shrink: 0;
+  width: 1.375rem;
+  height: 1.375rem;
+  margin-inline-end: 0.5rem;
+  fill: currentColor;
+}
+
+.title {
+  flex: 1;
+  margin: 0;
+}
+
+.body {
+  margin: 1rem 0 0;
+
+  @media #{theme.$mediaQueries-group-0-max-width} {
+    display: none;
+  }
+}
+
+.closeButton {
+  position: absolute;
+  top: 0;
+  inset-inline-end: 0;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: theme.$palette-white;
+  border: none;
+  cursor: pointer;
+
+  svg {
+    display: block;
+    fill: theme.$palette-grey-10;
+    @media #{theme.$mediaQueries-forced-colours} {
+      fill: ButtonText;
+    }
+  }
+
+  &:hover {
+    background: theme.$palette-postbox;
+
+    svg {
+      fill: theme.$palette-white;
+      @media #{theme.$mediaQueries-forced-colours} {
+        fill: Highlight;
+      }
+    }
+  }
+
+  &:focus {
+    background: theme.$palette-postbox;
+    outline: 2px solid theme.$palette-white;
+    box-shadow: 0 0 0 0.25rem theme.$palette-grey-10;
+
+    svg {
+      fill: theme.$palette-white;
+    }
+  }
+}

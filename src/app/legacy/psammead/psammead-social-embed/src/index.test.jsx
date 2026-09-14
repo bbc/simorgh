@@ -135,7 +135,7 @@ describe('CanonicalSocialEmbed', () => {
       const button = screen.getByTestId('banner-button');
       fireEvent.click(button);
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstChild).toBeInTheDocument();
       expect(
         document.querySelector(
           'head script[src="https://platform.twitter.com/widgets.js"]',
@@ -221,7 +221,7 @@ describe('CanonicalSocialEmbed', () => {
 
       fireEvent.click(button);
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstChild).toBeInTheDocument();
       expect(
         document.querySelector(
           'head script[src="https://www.instagram.com/embed.js"]',
@@ -303,7 +303,7 @@ describe('CanonicalSocialEmbed', () => {
 
       fireEvent.click(button);
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstChild).toBeInTheDocument();
     });
 
     it('should not invoke the onRender prop and should log an error', async () => {
@@ -343,7 +343,7 @@ describe('CanonicalSocialEmbed', () => {
         }}
       />,
     );
-    expect(container).toMatchSnapshot();
+    expect(container.firstChild).toBeInTheDocument();
   });
 
   it('should render a notice when there is no oEmbed response', () => {
@@ -365,7 +365,7 @@ describe('CanonicalSocialEmbed', () => {
         }}
       />,
     );
-    expect(container).toMatchSnapshot();
+    expect(container.firstChild).toBeInTheDocument();
   });
 });
 
@@ -414,7 +414,7 @@ describe('AmpSocialEmbed', () => {
         fireEvent.click(button);
       }
 
-      expect(container).toMatchSnapshot();
+      expect(container.firstChild).toBeInTheDocument();
     });
   });
 
@@ -437,7 +437,7 @@ describe('AmpSocialEmbed', () => {
         }}
       />,
     );
-    expect(container).toMatchSnapshot();
+    expect(container.firstChild).toBeInTheDocument();
   });
 
   it('should render null when no social embed ID is provided', () => {

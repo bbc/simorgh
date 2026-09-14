@@ -141,6 +141,64 @@ export const service: DefaultServiceConfig = {
         title: 'File Download',
       },
       gist: 'Pontos-chave',
+      account: {
+        signIn: 'Sign In',
+        signInAccessibleLabel: 'Sign in to My News',
+        forYou: 'Your Account',
+        register: 'Register',
+      },
+      accountPromoBanner: {
+        title: 'Your very own BBC',
+        description: 'Sign In or create an account for free',
+        closeLabel: 'Close',
+        buttonSeparatorText: 'or',
+      },
+      accountSignInModal: {
+        title: 'Sign in to save to My News',
+        description: 'Save stories and read them at your convenience',
+        closeLabel: 'Close',
+      },
+      saveArticleButton: {
+        loading: 'Loading',
+        save: 'Save for later',
+        saving: 'Saving',
+        saved: 'Saved to My News',
+        remove: 'Remove',
+        removeAccessible: 'Saved. Remove from My News',
+        removing: 'Removing',
+      },
+      myNews: {
+        title: 'My News',
+        guestTitle: 'Welcome to My News',
+        description: 'My saved articles',
+        guestDescription:
+          'Sign in to save articles to My News, and read them at your convenience.',
+        noArticles: 'You haven’t saved any articles yet',
+        errorText:
+          'This content doesn’t seem to be loading. Please try again later.',
+        loading: 'Loading',
+        noJsDescription:
+          'Please enable JavaScript or use another browser to view this content.',
+      },
+      actionTooltip: {
+        success: {
+          title: 'This article is now saved',
+          bodyBefore: 'It will appear in',
+          bodyAfter: '',
+        },
+        error: {
+          title: 'Sorry, something went wrong',
+          body: 'Check your connection, refresh the page and try again',
+        },
+        removed: {
+          title: 'This article is now removed',
+          bodyBefore: 'It will be removed from',
+          bodyAfter: '',
+        },
+        myNewsLinkText: 'My News',
+        myNewsUrl: 'https://www.bbc.com/portuguese/my-news',
+        closeLabel: 'Close',
+      },
       error: {
         404: {
           statusCode: '404',

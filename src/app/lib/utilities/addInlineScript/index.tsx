@@ -1,6 +1,6 @@
 export type InlineScriptProps = {
   script: string | { toString: () => string };
-  parameters?: string | string[];
+  parameters?: string | string[] | (string | (() => boolean))[];
   nonce?: string | null;
 };
 
@@ -8,7 +8,12 @@ export default ({ script, parameters, nonce }: InlineScriptProps) => {
   let inlineScript = script;
   const stringifiedParams = [parameters]
     .flat()
-    .map(param => `"${param}"`)
+    .map(param => {
+      if (typeof param === 'function') {
+        return param.toString();
+      }
+      return `"${param}"`;
+    })
     .join(', ');
 
   let paramLiteral = '';

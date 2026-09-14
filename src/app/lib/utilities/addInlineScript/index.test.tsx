@@ -73,4 +73,22 @@ describe('addInlineScript', () => {
       </script>,
     );
   });
+
+  it('should inject callable functions as script parameters', () => {
+    const script = (callback: () => void) => callback();
+    const callback = () => 'Foo bar';
+
+    const inlineScript = addInlineScript({
+      script,
+      parameters: [callback],
+    });
+
+    expect(inlineScript).toStrictEqual(
+      <script type="text/javascript">
+        {`(function script(callback) {
+      return callback();
+    })(${callback.toString()})`}
+      </script>,
+    );
+  });
 });

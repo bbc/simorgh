@@ -22,12 +22,18 @@ const OJ_COMPONENT_NAMES = [
   'related-content',
   'most-read',
   'topic-discovery-curation-grid-promo',
-  'topic-discovery-more-from-link',
   'topics',
+  'topic-discovery-more-about-link',
+  'location-based-topic-oj',
+  'portrait-video-carousel-article',
+  'video-curation-grid',
 ];
 
 // handle the total oj clicks event to specific onward journey experiments
-const OJ_OPTIMIZELY_EXPERIMENTS = ['test_page_views_aa_3'];
+const OJ_OPTIMIZELY_EXPERIMENTS = [
+  'test_page_views_aa_3',
+  'newswb_ws_oj_order_referrer_search',
+];
 
 const OJ_OPTIMIZELY_CLICK_EVENTS = ['oj_clicks'];
 

@@ -5,7 +5,7 @@ import logResponseTime from '#utilities/logResponseTime';
 
 import deriveVariant from '#utilities/deriveVariant';
 import PageDataParams from '#app/models/types/pageDataParams';
-import getToggles from '#app/lib/utilities/getToggles/withCache';
+import fetchToggles from '#app/lib/utilities/fetchToggles';
 import dataFetch from './dataFetch';
 
 const downloadsPageLayout = dynamic(() => import('./downloadsPageLayout'));
@@ -42,7 +42,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
   const variant = deriveVariant(variantFromUrl);
 
   const downloadData = await dataFetch(service);
-  const toggles = await getToggles(service);
+  const toggles = await fetchToggles({ service });
 
   return {
     props: {

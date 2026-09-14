@@ -1,6 +1,6 @@
 import nodeLogger from '#app/lib/logger.node';
-import getToggleDefinitions from '#app/lib/utilities/getToggleDefinition';
 import isLocal from '#app/lib/utilities/isLocal';
+import getToggle from '#app/lib/utilities/getToggle';
 import { IdctaConfig } from '#app/models/types/account';
 import { Toggles, Services } from '#app/models/types/global';
 import { IncomingHttpHeaders } from 'http';
@@ -21,9 +21,10 @@ export default async function getIdctaConfig(
   service: Services,
   requestHeaders?: IncomingHttpHeaders,
 ): Promise<IdctaConfig | null> {
-  const toggleDefinitions = getToggleDefinitions(toggles);
-  const { enabled: isAccountEnabled, value: accountService = '' } =
-    toggleDefinitions.account || {};
+  const { enabled: isAccountEnabled, value: accountService = '' } = getToggle(
+    toggles,
+    'account',
+  );
 
   const shouldFetchConfig =
     isAccountEnabled &&

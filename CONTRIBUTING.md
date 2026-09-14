@@ -31,6 +31,8 @@ There are issue templates available for bug fix and feature requests, so you kno
 
 If you never created a pull request before, [here is a great tutorial on how to send a PR](https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github).
 
+If committing with Copilot-authored changes, append `[copilot]` to commit messages.
+
 ### Project setup
 
 Fork the project, clone your fork, configure the remotes and install the dependencies:

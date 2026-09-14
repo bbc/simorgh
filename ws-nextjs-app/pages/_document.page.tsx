@@ -26,6 +26,9 @@ import CanonicalToLiteRedirect from '#utilities/CanonicalToLiteRedirect';
 import addOperaMiniClassScript from '#app/lib/utilities/addOperaMiniClassScript';
 import handleServerLogging from '#utilities/handleServerLogging';
 import getAmpLiteCss from '#utilities/getAmpLiteCss';
+import optimiseCssPrefixes from '#utilities/optimiseCssPrefixes';
+import setSimorghEnvVars from '#app/lib/utilities/setSimorghEnvVars';
+import removeNoJsClass from '#app/lib/utilities/removeNoJsClass';
 import ComponentTracking from '../renderers/ComponentTracking';
 import ReverbTemplate from '../renderers/ReverbTemplate';
 import litePageTransforms from '../renderers/litePageTransforms';
@@ -45,47 +48,6 @@ type DocProps = {
   isLite: boolean;
   title: ReactElement;
 };
-
-const stripVendorPrefixes = (css: string): string => {
-  let output = css;
-  let previous = '';
-
-  while (output !== previous) {
-    previous = output;
-
-    output = output
-      // Remove vendor-prefixed property declarations
-      .replace(
-        /(^|[;{])\s*-(webkit|moz|ms|o)-[\w-]+\s*:\s*[^;{}]+;?/gm,
-        '$1',
-      )
-      // Remove declarations with vendor-prefixed values
-      .replace(
-        /(^|[;{])\s*[\w-]+\s*:\s*-(webkit|moz|ms|o)-[^;{}]+;?/gm,
-        '$1',
-      )
-      // Remove vendor-prefixed pseudo-element/class rules only when simple
-      .replace(
-        /(^|})\s*[^{}]*::?-(webkit|moz|ms|o)-[\w-]+[^{}]*\{[^{}]*\}/gm,
-        '$1',
-      )
-      // Remove empty rules
-      .replace(/[^{}]+\{\s*\}/g, '')
-      // Cleanup
-      .replace(/;{2,}/g, ';')
-      .replace(/\{\s*;/g, '{')
-      .replace(/;\s*\}/g, '}');
-  }
-
-  return output.trim();
-};
-
-const optimiseAmpCss = (css: string): string =>
-  stripVendorPrefixes(css)
-    .replace(/;\}/g, '}')
-    .replace(/\s{2,}/g, ' ')
-    .trim();
-
 
 export default class AppDocument extends Document<DocProps> {
   static async getInitialProps(ctx: DocumentContext) {
@@ -169,7 +131,8 @@ export default class AppDocument extends Document<DocProps> {
 
     switch (true) {
       case isAmp && pageType === 'article': {
-        const ampCss = optimiseAmpCss(css + getAmpLiteCss(getNextData()));
+        const ampLiteCss = getAmpLiteCss(getNextData());
+        const combinedCss = optimiseCssPrefixes(css + ampLiteCss);
         return (
           <AmpRenderer
             bodyContent={<Main />}
@@ -178,13 +141,14 @@ export default class AppDocument extends Document<DocProps> {
             helmetScriptTags={helmetScriptTags}
             htmlAttrs={htmlAttrs}
             ids={ids}
-            styles={ampCss}
+            styles={combinedCss}
             title={title}
           />
         );
       }
       case isLite: {
-        const liteCss = css + getAmpLiteCss(getNextData());
+        const ampLiteCss = getAmpLiteCss(getNextData());
+        const liteCss = optimiseCssPrefixes(css + ampLiteCss);
         return (
           <LiteRenderer
             bodyContent={<Main />}
@@ -206,12 +170,12 @@ export default class AppDocument extends Document<DocProps> {
               <script
                 type="text/javascript"
                 dangerouslySetInnerHTML={{
-                  __html: `document.documentElement.classList.remove("no-js");`,
+                  __html: `(${removeNoJsClass.toString()})()`,
                 }}
               />
               {addOperaMiniClassScript()}
               <Script strategy="beforeInteractive">
-                {`window.SIMORGH_ENV_VARS=${JSON.stringify(clientSideEnvVariables)}`}
+                {`(${setSimorghEnvVars.toString()})(${JSON.stringify(clientSideEnvVariables)})`}
               </Script>
               {pageType === 'live' && (
                 <script src="https://www.riddle.com/embed/build-embedjs/embedV2.js" />

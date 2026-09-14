@@ -39,7 +39,9 @@ const getUgcId = (path: string) => path.match(/(u[a-zA-Z0-9]{8,})/)?.[1];
 export const isUgcIdCheck = (path: string) =>
   /\/send\/(u[a-zA-Z0-9]{8,})/.test(path);
 export const isOptimoIdCheck = (path: string) =>
-  /\/(articles|sgeulachdan|erthyglau)\/(c[a-zA-Z0-9]{10,}o)/.test(path);
+  /\/(articles|sgeulachdan|erthyglau|watch|listen)\/(c[a-zA-Z0-9]{10,}o)/.test(
+    path,
+  );
 export const isCpsIdCheck = (path: string) =>
   /[a-z0-9\-_]*[0-9]{5,9}[a-z0-9\-_]*(\/[a-z]+)?$/.test(path);
 export const isTipoIdCheck = (path: string) =>

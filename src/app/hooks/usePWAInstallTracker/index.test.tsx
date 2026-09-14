@@ -1,4 +1,6 @@
+import { PropsWithChildren } from 'react';
 import { renderHook } from '@testing-library/react';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 import * as useCustomEventTrackerModule from '../useCustomEventTracker';
 import usePWAInstallTracker from '.';
 
@@ -6,6 +8,10 @@ const mockTrackEvent = jest.fn();
 const mockUseCustomEventTracker = jest.spyOn(
   useCustomEventTrackerModule,
   'default',
+);
+
+const wrapper = ({ children }: PropsWithChildren) => (
+  <ToggleContextProvider>{children}</ToggleContextProvider>
 );
 
 describe('usePWAInstallTracker', () => {
@@ -23,7 +29,7 @@ describe('usePWAInstallTracker', () => {
   });
 
   it('should initialize useCustomEventTracker with correct eventName', () => {
-    renderHook(() => usePWAInstallTracker());
+    renderHook(() => usePWAInstallTracker(), { wrapper });
 
     expect(mockUseCustomEventTracker).toHaveBeenCalledWith({
       eventName: 'pwa-installed',
@@ -31,7 +37,7 @@ describe('usePWAInstallTracker', () => {
   });
 
   it('should add appinstalled event listener on mount', () => {
-    renderHook(() => usePWAInstallTracker());
+    renderHook(() => usePWAInstallTracker(), { wrapper });
 
     expect(addEventListenerSpy).toHaveBeenCalledWith(
       'appinstalled',
@@ -40,7 +46,7 @@ describe('usePWAInstallTracker', () => {
   });
 
   it('should call trackEvent when appinstalled event is fired', () => {
-    renderHook(() => usePWAInstallTracker());
+    renderHook(() => usePWAInstallTracker(), { wrapper });
 
     expect(addEventListenerSpy.mock.calls[0][0]).toBe('appinstalled');
 
@@ -53,7 +59,7 @@ describe('usePWAInstallTracker', () => {
   });
 
   it('should only track the event once even if appinstalled event is fired multiple times', () => {
-    renderHook(() => usePWAInstallTracker());
+    renderHook(() => usePWAInstallTracker(), { wrapper });
 
     const addedHandler = addEventListenerSpy.mock.calls[0][1];
 

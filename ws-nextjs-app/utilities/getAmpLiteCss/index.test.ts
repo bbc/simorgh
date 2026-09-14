@@ -24,13 +24,15 @@ describe('getAmpLiteCss utilities', () => {
 
   afterAll(() => {
     cwdSpy.mockRestore();
-    process.env.NODE_ENV = originalNodeEnv;
+    (process.env as { [key: string]: string | undefined }).NODE_ENV =
+      originalNodeEnv;
   });
 
   afterEach(() => {
     jest.clearAllMocks();
     resetManifestCaches();
-    process.env.NODE_ENV = originalNodeEnv;
+    (process.env as { [key: string]: string | undefined }).NODE_ENV =
+      originalNodeEnv;
   });
 
   describe('resolveCssFilePath', () => {
@@ -458,7 +460,8 @@ describe('getAmpLiteCss utilities', () => {
 
     describe('in development', () => {
       beforeEach(() => {
-        process.env.NODE_ENV = 'development';
+        (process.env as { [key: string]: string | undefined }).NODE_ENV =
+          'development';
       });
 
       it('returns the full dev CSS when dev-css-modules.css exists', () => {
@@ -494,7 +497,8 @@ describe('getAmpLiteCss utilities', () => {
 
     describe('in production', () => {
       beforeEach(() => {
-        process.env.NODE_ENV = 'production';
+        (process.env as { [key: string]: string | undefined }).NODE_ENV =
+          'production';
       });
 
       it('returns combined build manifest CSS and dynamic import CSS', () => {

@@ -8,12 +8,12 @@ Local toggle configs are global and configured for the application environment, 
 
 Simorgh has 3 toggle config files for `test`, `local` and `live` environments. Remote toggles on iSite also take precendence over local toggles when the toggle response is fetched:
 
-https://github.com/bbc/simorgh/blob/9fecaba6ef30b3fff627ef9a75f0286d63f0a343/src/app/lib/utilities/getToggles/index.js#L48-L54
+https://github.com/bbc/simorgh/blob/latest/src/app/lib/utilities/fetchToggles/index.ts#L48-L54
 
 If a toggle is not configured in iSite or in the local toggle configs deployed with Simorgh, then the toggle value will default to false.
 
 > [!WARNING]  
-> There are some cases where a toggle **is** configured in iSite (an entry is present in iSite) but may not have values configured. The fetched response overwrites the local config file via destructuring (see [`getToggles()`](https://github.com/bbc/simorgh/blob/latest/src/app/lib/utilities/getToggles/index.js#L83-L85) ). However if no value is configured, the local config file values will be used.
+> There are some cases where a toggle **is** configured in iSite (an entry is present in iSite) but may not have values configured. The fetched response overwrites the local config file via destructuring (see [`fetchToggles()`](https://github.com/bbc/simorgh/blob/latest/src/app/lib/utilities/fetchToggles/index.ts#L83-L85) ). However if no value is configured, the local config file values will be used.
 > E.g. The `adsNonce` toggle is a valid toggle on iSite with valid entries as of 28/11/2025. This toggle affects services listed as entries on iSite, but for services **not** present as entries there, the local config files will be used. This caused issues before as all config files set this value as `true`. See https://github.com/bbc/simorgh/pull/13338 for more details.
 
 Feature toggles can be found in `src/app/lib/config/toggles`
@@ -26,34 +26,30 @@ The toggles response can be viewed here (for test, live). The `Origin` header mu
 
 By default, fetching toggles from iSite is not enabled on the local environment - it will just use the default values from the [localConfig file](https://github.com/bbc/simorgh/blob/latest/src/app/lib/config/toggles/localConfig.js). Note that this file is **not** service aware - it will set the same value for all services.
 
-In cases where the toggles response needs to be tested/validated, the following commands can be run.
+In cases where the toggles response needs to be tested/validated, the following commands can be run from `ws-nextjs-app`.
 
-For **Test iSite**:
-
-```
-FETCH_TOGGLES=true yarn dev
-```
-
-For **Live iSite toggles**:
+For toggles from **Test iSite**:
 
 ```
-yarn build:live:debug && yarn start
+yarn dev:toggles:test
 ```
 
-> [!NOTE]  
-> Hot reloading will not work using this command - if you make a code change you need to rebuild & restart the application server.
-> If hot reloading is necessary:
->
-> - set `SIMORGH_APP_ENV=live` in local.env (ensure these changes are not committed)
-> - run `FETCH_TOGGLES=true yarn dev` to start the application server.
->
-> This will also use data from the live BFF FABL module.
+For toggles from **Live iSite**:
+
+```
+yarn dev:toggles:live
+```
+
+Both commands enable remote toggle fetching (`FETCH_TOGGLES=true`) and set the `ctx-service-env` header (via `TOGGLES_SERVICE_ENV`) so you can switch environments without a rebuild. When fetching toggles locally the response cache is bypassed, so every request re-fetches the latest toggles from the endpoint. Hot reloading continues to work with these commands.
+
+> [!NOTE]
+> These commands set the environment variables inline, so there is no need to edit `local.env`.
 
 # Simorgh Application Toggles
 
 | Toggle Name             | Description                                                                         | Toggle Value                                                             | Example                                               |
 | ----------------------- | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------ | ----------------------------------------------------- |
-| `account`               | Enable Account functionality and IDCTA config fetching                              | Pipe-separated list of services (local env) to enable account for        | enabled: true, value: `hindi\|hausa`                   |
+| `account`               | Enable Account functionality and IDCTA config fetching                              | Pipe-separated list of services (local env) to enable account for        | enabled: true, value: `hindi\|hausa`                  |
 | `ads`                   | Display Advertisements on Front Pages                                               |                                                                          |                                                       |
 | `articleLiteSiteLink`   | Display the link to the lite site on Article pages                                  |                                                                          |                                                       |
 | `articlePortraitVideo`  | Display portrait video carousel on Article pages                                    |                                                                          |                                                       |

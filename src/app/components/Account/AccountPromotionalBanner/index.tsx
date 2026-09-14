@@ -2,14 +2,13 @@ import { use, useState, useCallback } from 'react';
 import { Helmet } from 'react-helmet';
 import PromotionalBanner from '#app/components/PromotionalBanner';
 import AccountActionButtons from '#app/components/Account/AccountActionButtons';
-import { AccountContext } from '#contexts/AccountContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
-import useToggle from '#app/hooks/useToggle';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import addInlineScript from '#app/lib/utilities/addInlineScript';
 import onClient from '#app/lib/utilities/onClient';
+import useAccountPromoBannerEligibility from './useAccountPromoBannerEligibility';
 import {
   setAccountPromoBannerDismissed,
   buildAccountBannerClientScript,
@@ -30,9 +29,7 @@ const AccountPromotionalBanner = ({
   title: titleOverride,
   description: descriptionOverride,
 }: AccountPromotionalBannerProps = {}) => {
-  const { enabled: accountEnabled } = useToggle('account');
-  const { isSignedIn, isIdctaAvailable, signInUrl, registerUrl } =
-    use(AccountContext);
+  const isEligible = useAccountPromoBannerEligibility();
   const { translations } = use(ServiceContext);
   const { nonce } = use(RequestContext);
   const accountPromoBannerTranslations = translations?.accountPromoBanner;
@@ -66,15 +63,7 @@ const AccountPromotionalBanner = ({
     [onCloseClickTrack],
   );
 
-  if (
-    isDismissed ||
-    isSignedIn ||
-    !accountEnabled ||
-    !isIdctaAvailable ||
-    !signInUrl ||
-    !registerUrl ||
-    !accountPromoBannerTranslations
-  ) {
+  if (isDismissed || !isEligible || !accountPromoBannerTranslations) {
     return null;
   }
 

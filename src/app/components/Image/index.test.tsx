@@ -1,5 +1,3 @@
-import { JSDOM } from 'jsdom';
-
 import {
   render,
   screen,
@@ -11,9 +9,13 @@ import BASE64_PLACEHOLDER_IMAGE from './base64Placeholder';
 import { SHADOW } from '../ThemeProvider/palette';
 
 const removeStyles = (el: HTMLElement) => {
-  const dom = new JSDOM(el.innerHTML.replace(/class=".+?"/gm, ''));
+  const clone = el.cloneNode(true) as HTMLElement;
 
-  return dom.window.document.body.firstChild;
+  clone
+    .querySelectorAll('[class]')
+    .forEach(node => node.removeAttribute('class'));
+
+  return clone.firstChild;
 };
 
 const Fixture = ({ ...props }) => (
