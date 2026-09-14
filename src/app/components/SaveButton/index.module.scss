@@ -50,19 +50,19 @@
   // Compound selector guarantees this beats the plain dark-UI background
   // rule above regardless of stylesheet order.
   &.updatingState {
-    background-color: theme.$palette-grey-8;
-    color: theme.$palette-white;
+    background-color: theme.$palette-white;
+    color: theme.$palette-grey-8;
     border-color: theme.$palette-grey-8;
     cursor: not-allowed;
 
     :global([data-is-dark-ui='true']) & {
-      background-color: theme.$palette-black;
-      color: theme.$palette-white;
-      border-color: theme.$palette-white;
+      background-color: theme.$palette-white;
+      color: theme.$palette-black;
+      border-color: theme.$palette-black;
     }
 
     svg {
-      fill: theme.$palette-white;
+      fill: currentColor;
     }
   }
 }
