@@ -28,11 +28,10 @@ const experimentsForPageMetrics: ExperimentsForPageTypeMetrics = [
   },
   {
     pageType: HOME_PAGE,
-    activeExperiments: ['test_page_views_aa_4'],
-  },
-  {
-    pageType: HOME_PAGE,
-    activeExperiments: ['newswb_ws_homepage_account_promo_banner_copy'],
+    activeExperiments: [
+      'test_page_views_aa_4',
+      'newswb_ws_homepage_account_promo_banner_copy',
+    ],
   },
 ];
 

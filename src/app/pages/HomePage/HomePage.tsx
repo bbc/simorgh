@@ -64,8 +64,6 @@ const HomePage = ({ pageData }: HomePageProps) => {
 
   return (
     <>
-      {/* EXPERIMENT: PWA Promotional Banner */}
-      <PWAPromotionalBanner />
       {/* EXPERIMENT: newswb_ws_homepage_account_promo_banner_copy */}
       <AccountPromotionalBannerHomePageExperiment />
       <ChartbeatAnalytics title={title} />
