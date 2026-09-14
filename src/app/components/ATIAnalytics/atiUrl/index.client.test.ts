@@ -63,9 +63,8 @@ describe('atiUrl', () => {
           mode: ResonanceMode.TEST,
         });
         expect(result.baseProperties).toEqual({
-          app: { name: 'news-pidgin' },
+          app: { name: 'news-pidgin', type: 'getAppType' },
           destination: 'statsDestination',
-          hashedUserId: undefined,
           pageName: 'pidgin.articles.c0000000001o.page',
           producer: 'PIDGIN',
           siteId: 12345,
@@ -74,29 +73,16 @@ describe('atiUrl', () => {
           contentId: 'urn:bbc:optimo:asset:c0000000001o',
           contentType: 'article',
           language: 'pcm',
-          destination: 'statsDestination',
-          producer: 'PIDGIN',
           ldpIds: 'ldpThingIds',
           ldpTags: 'ldpThingLabels',
           pageTitle: 'sanitise',
           pubUpdateDate: 'timeUpdated',
           publicationDate: 'timePublished',
+          referrerUrl: 'getReferrer',
           section: 'categoryName',
+          url: 'getHref',
         });
       });
-
-      // it('should return url and referrerUrl using getHref and getReferrer', () => {
-      //   const result = buildResonanceAnalyticsModel(input);
-
-      //   expect(result.pageviewProperties.url).toBe('getHref');
-      //   expect(result.pageviewProperties.referrerUrl).toBe('getReferrer');
-      // });
-
-      // it('should populate app.type using getAppType', () => {
-      //   const result = buildResonanceAnalyticsModel(input);
-
-      //   expect(result.baseProperties.app.type).toBe('getAppType');
-      // });
 
       it('should omit optional fields when no value is provided', () => {
         const result = buildResonanceAnalyticsModel({
@@ -123,7 +109,10 @@ describe('atiUrl', () => {
           platform: 'app' as Platforms,
         });
 
-        expect(result.baseProperties.app).toEqual({ name: 'news-pidgin-app' });
+        expect(result.baseProperties.app).toEqual({
+          name: 'news-pidgin-app',
+          type: 'getAppType',
+        });
       });
 
       it('should pass hashedId through as hashedUserId when provided', () => {
