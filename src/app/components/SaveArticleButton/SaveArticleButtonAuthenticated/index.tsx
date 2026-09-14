@@ -1,4 +1,5 @@
 import { use, useEffect, useState } from 'react';
+import { useTheme } from '@emotion/react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
 import parseRoute from '#app/routes/utils/parseRoute';
@@ -30,6 +31,8 @@ const SaveArticleButtonAuthenticated = ({
   const { translations } = use(ServiceContext);
   const { saveArticleButton, actionTooltip } = translations || {};
   const { assetId: articleId } = parseRoute(pathname);
+  // TODO: remove once the dark-UI tooltip design is ready; suppresses ActionTooltip on dark-UI pages for now.
+  const { isDarkUi } = useTheme();
 
   const {
     isSaved,
@@ -132,7 +135,7 @@ const SaveArticleButtonAuthenticated = ({
         testId="save-article-btn-authorized"
         {...viewTracker}
       />
-      {isTooltipVisible && actionResult && actionTooltip && (
+      {!isDarkUi && isTooltipVisible && actionResult && actionTooltip && (
         <ActionTooltip
           status={getTooltipStatus(actionResult)}
           content={getArticleTooltipContent(

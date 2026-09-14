@@ -21,19 +21,28 @@ export interface SaveArticlePageData {
   headline?: string | null;
 }
 
-// MediaArticle pages nest their promo image inside an audio/video block
-// rather than as a top-level content block.
+// MediaArticle pages nest their promo image inside an audio/video block's
+// aresMedia block, rather than as a top-level content block.
 const MEDIA_BLOCK_TYPES = ['audio', 'video'];
+
+type OptimoContainerBlock = OptimoBlock & {
+  model: { blocks?: OptimoBlock[] };
+};
+
+const isMediaBlock = (block: OptimoBlock): block is OptimoContainerBlock =>
+  MEDIA_BLOCK_TYPES.includes(block.type);
 
 const findPromoImageBlocks = (contentBlocks?: OptimoBlock[]) => {
   const topLevelImageBlock = filterForBlockType(contentBlocks, 'image');
   if (topLevelImageBlock) return topLevelImageBlock;
 
-  const mediaBlock = contentBlocks?.find(block =>
-    MEDIA_BLOCK_TYPES.includes(block.type),
-  );
+  const mediaBlock = contentBlocks?.find(isMediaBlock);
+  const aresMediaBlock = filterForBlockType(
+    mediaBlock?.model?.blocks,
+    'aresMedia',
+  ) as OptimoContainerBlock | undefined;
 
-  return filterForBlockType(mediaBlock?.model?.blocks, 'image');
+  return filterForBlockType(aresMediaBlock?.model?.blocks, 'image');
 };
 
 const extractSaveArticleProps = (
