@@ -42,7 +42,7 @@ const useTopicFollowButton = (
           body,
           isRefreshAvailable,
         });
-        return;
+        return body.metaData;
       }
       const globalId = buildGlobalId(
         topicId,
@@ -53,10 +53,15 @@ const useTopicFollowButton = (
         globalId,
         isRefreshAvailable,
       });
+
+      return undefined;
     },
-    onSuccess: (_result, action) => {
+    onSuccess: (metadata, action) => {
+      const isFollowedAction = action === FollowAction.FOLLOW;
+
       queryClient.setQueryData(uasKeys.followStatus(hashedUserId, topicId), {
-        isFollowed: action === FollowAction.FOLLOW,
+        isFollowed: isFollowedAction,
+        metadata: isFollowedAction ? metadata : undefined,
       });
       queryClient.invalidateQueries({
         queryKey: uasKeys.followsList(hashedUserId),

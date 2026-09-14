@@ -17,6 +17,7 @@ const useTopicFollowStatus = createUASStatusHook({
   queryKeyFn: (hashedUserId, topicId) =>
     uasKeys.followStatus(hashedUserId, topicId) as unknown as unknown[],
   statusField: UASStatusField.FOLLOWED,
+  enabledFn: (topicId, hashedUserId) => !!topicId && !!hashedUserId,
 });
 
 export default useTopicFollowStatus;
