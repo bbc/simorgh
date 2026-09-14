@@ -1,0 +1,1081 @@
+{
+  "data": {
+    "article": {
+      "metadata": {
+        "atiAnalytics": {
+          "categoryName": "Donald+Trump~Amal+Clooney~George+Clooney",
+          "contentId": "urn:bbc:optimo:asset:c5y35dxlpv2o",
+          "contentType": "article-sfv",
+          "language": "ar",
+          "ldpThingIds": "78080d81-2849-497e-bc3a-bf364626456b~9a897cd9-0a5e-4ef2-866b-9555504ff736~9f6e8744-04fc-491f-ba72-f9a51347b42b",
+          "ldpThingLabels": "Donald+Trump~Amal+Clooney~George+Clooney",
+          "nationsProducer": null,
+          "pageIdentifier": "arabic.articles.c5y35dxlpv2o.page",
+          "pageTitle": "كيف رد النجم العالمي جورج كلوني على هجوم ترامب إثر منحه الجنسية الفرنسية؟",
+          "timePublished": "2026-01-02T16:49:33.529Z",
+          "timeUpdated": "2026-01-02T16:49:33.529Z",
+          "readTimeMilliseconds": 60000
+        },
+        "id": "urn:bbc:ares::article:c5y35dxlpv2o",
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:c5y35dxlpv2o",
+          "canonicalUrl": "https://www.bbc.com/arabic/articles/c5y35dxlpv2o"
+        },
+        "type": "article",
+        "createdBy": "Arabic",
+        "language": "ar",
+        "firstPublished": 1767372573529,
+        "lastPublished": 1767372573529,
+        "isOppm": false,
+        "options": {
+          "includeComments": false
+        },
+        "analyticsLabels": {
+          "ldp_tags": "Donald+Trump~Amal+Clooney~George+Clooney",
+          "page": "arabic.articles.c5y35dxlpv2o.page",
+          "irisKeyword": null,
+          "audience_motivation": "Divert me",
+          "ldp_ids": "78080d81-2849-497e-bc3a-bf364626456b~9a897cd9-0a5e-4ef2-866b-9555504ff736~9f6e8744-04fc-491f-ba72-f9a51347b42b",
+          "contentId": "urn:bbc:optimo:asset:c5y35dxlpv2o",
+          "producer": "Arabic"
+        },
+        "passport": {
+          "language": "ar",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Arabic",
+          "taggings": [
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+              "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+              "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/brand",
+              "value": "http://www.bbc.co.uk/things/050ce7b4-924c-4254-a306-321a918ecc6b#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+              "value": "http://www.bbc.co.uk/things/975c0c2b-70a7-42fc-86ed-e95ec0a1e7b6#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+              "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/78080d81-2849-497e-bc3a-bf364626456b#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/9f6e8744-04fc-491f-ba72-f9a51347b42b#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/9a897cd9-0a5e-4ef2-866b-9555504ff736#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+              "value": "http://www.bbc.co.uk/things/e1deed1e-0cab-4965-8e92-897b195f7a47#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/dateFirstReleased",
+              "value": "2026-01-02T16:49:33.529Z"
+            }
+          ],
+          "predicates": {
+            "assetType": [
+              {
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                "type": "assetType"
+              }
+            ],
+            "primaryMediaType": [
+              {
+                "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                "type": "primaryMediaType"
+              }
+            ],
+            "dateFirstReleased": [
+              {
+                "value": "2026-01-02T16:49:33.529Z",
+                "type": "dateFirstReleased"
+              }
+            ],
+            "brand": [
+              {
+                "value": "http://www.bbc.co.uk/things/050ce7b4-924c-4254-a306-321a918ecc6b#id",
+                "type": "brand"
+              }
+            ],
+            "infoClass": [
+              {
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                "type": "infoClass"
+              }
+            ],
+            "formats": [
+              {
+                "value": "http://www.bbc.co.uk/things/975c0c2b-70a7-42fc-86ed-e95ec0a1e7b6#id",
+                "thingLabel": "ترويج",
+                "thingUri": "http://www.bbc.co.uk/things/975c0c2b-70a7-42fc-86ed-e95ec0a1e7b6#id",
+                "thingId": "975c0c2b-70a7-42fc-86ed-e95ec0a1e7b6",
+                "thingType": ["tagging:TagConcept", "tagging:Format"],
+                "thingSameAs": [],
+                "thingEnglishLabel": "Promotion",
+                "thingPreferredLabel": "Promotion",
+                "thingLabelLanguage": "ar",
+                "type": "formats"
+              }
+            ],
+            "about": [
+              {
+                "value": "http://www.bbc.co.uk/things/78080d81-2849-497e-bc3a-bf364626456b#id",
+                "thingLabel": "دونالد ترامب",
+                "thingUri": "http://www.bbc.co.uk/things/78080d81-2849-497e-bc3a-bf364626456b#id",
+                "thingId": "78080d81-2849-497e-bc3a-bf364626456b",
+                "thingType": [
+                  "core:Thing",
+                  "tagging:TagConcept",
+                  "tagging:AmbiguousTerm",
+                  "core:Person",
+                  "tagging:Agent"
+                ],
+                "thingSameAs": [
+                  "http://dbpedia.org/resource/Donald_Trump",
+                  "http://www.wikidata.org/entity/Q22686",
+                  "https://www.imdb.com/name/nm0874339/"
+                ],
+                "thingEnglishLabel": "Donald Trump",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/9f6e8744-04fc-491f-ba72-f9a51347b42b#id",
+                "thingLabel": "جورج كلوني",
+                "thingUri": "http://www.bbc.co.uk/things/9f6e8744-04fc-491f-ba72-f9a51347b42b#id",
+                "thingId": "9f6e8744-04fc-491f-ba72-f9a51347b42b",
+                "thingType": [
+                  "core:Thing",
+                  "tagging:TagConcept",
+                  "tagging:AmbiguousTerm",
+                  "core:Person",
+                  "tagging:Agent"
+                ],
+                "thingSameAs": [
+                  "http://dbpedia.org/resource/George_Clooney",
+                  "http://www.wikidata.org/entity/Q23844",
+                  "https://www.imdb.com/name/nm0000123/"
+                ],
+                "thingEnglishLabel": "George Clooney",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/9a897cd9-0a5e-4ef2-866b-9555504ff736#id",
+                "thingLabel": "أمل كلوني",
+                "thingUri": "http://www.bbc.co.uk/things/9a897cd9-0a5e-4ef2-866b-9555504ff736#id",
+                "thingId": "9a897cd9-0a5e-4ef2-866b-9555504ff736",
+                "thingType": [
+                  "core:Thing",
+                  "tagging:TagConcept",
+                  "tagging:AmbiguousTerm",
+                  "core:Person",
+                  "tagging:Agent"
+                ],
+                "thingSameAs": [
+                  "http://dbpedia.org/resource/Amal_Clooney",
+                  "http://www.wikidata.org/entity/Q16769592",
+                  "https://www.imdb.com/name/nm5007802/"
+                ],
+                "thingEnglishLabel": "Amal Clooney",
+                "type": "about"
+              }
+            ]
+          }
+        },
+        "tags": {
+          "about": [
+            {
+              "thingLabel": "دونالد ترامب",
+              "thingUri": "http://www.bbc.co.uk/things/78080d81-2849-497e-bc3a-bf364626456b#id",
+              "thingId": "78080d81-2849-497e-bc3a-bf364626456b",
+              "thingType": [
+                "core:Thing",
+                "tagging:TagConcept",
+                "tagging:AmbiguousTerm",
+                "core:Person",
+                "tagging:Agent"
+              ],
+              "thingSameAs": [
+                "http://dbpedia.org/resource/Donald_Trump",
+                "http://www.wikidata.org/entity/Q22686",
+                "https://www.imdb.com/name/nm0874339/"
+              ],
+              "topicName": "دونالد ترامب",
+              "topicId": "cvjp21r7j4qt",
+              "curationList": [
+                {
+                  "curationId": "ca0b1aff-0157-4328-8828-fb8383dfe9a7",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Donald Trump",
+              "thingLabelLanguage": "ar",
+              "thingPreferredLabel": "Donald Trump"
+            },
+            {
+              "thingLabel": "جورج كلوني",
+              "thingUri": "http://www.bbc.co.uk/things/9f6e8744-04fc-491f-ba72-f9a51347b42b#id",
+              "thingId": "9f6e8744-04fc-491f-ba72-f9a51347b42b",
+              "thingType": [
+                "core:Thing",
+                "tagging:TagConcept",
+                "tagging:AmbiguousTerm",
+                "core:Person",
+                "tagging:Agent"
+              ],
+              "thingSameAs": [
+                "http://dbpedia.org/resource/George_Clooney",
+                "http://www.wikidata.org/entity/Q23844",
+                "https://www.imdb.com/name/nm0000123/"
+              ],
+              "thingEnglishLabel": "George Clooney",
+              "thingLabelLanguage": "ar",
+              "thingPreferredLabel": "George Clooney"
+            },
+            {
+              "thingLabel": "أمل كلوني",
+              "thingUri": "http://www.bbc.co.uk/things/9a897cd9-0a5e-4ef2-866b-9555504ff736#id",
+              "thingId": "9a897cd9-0a5e-4ef2-866b-9555504ff736",
+              "thingType": [
+                "core:Thing",
+                "tagging:TagConcept",
+                "tagging:AmbiguousTerm",
+                "core:Person",
+                "tagging:Agent"
+              ],
+              "thingSameAs": [
+                "http://dbpedia.org/resource/Amal_Clooney",
+                "http://www.wikidata.org/entity/Q16769592",
+                "https://www.imdb.com/name/nm5007802/"
+              ],
+              "thingEnglishLabel": "Amal Clooney",
+              "thingLabelLanguage": "ar",
+              "thingPreferredLabel": "Amal Clooney"
+            }
+          ]
+        },
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "video",
+          "caption",
+          "urlLink",
+          "aresMedia",
+          "aresMediaMetadata",
+          "image",
+          "rawImage",
+          "altText"
+        ],
+        "includeComments": false,
+        "topics": [
+          {
+            "topicName": "دونالد ترامب",
+            "topicId": "cvjp21r7j4qt",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/78080d81-2849-497e-bc3a-bf364626456b#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "ca0b1aff-0157-4328-8828-fb8383dfe9a7",
+                "curationType": "vivo-stream",
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": [
+              "core:Thing",
+              "tagging:TagConcept",
+              "tagging:AmbiguousTerm",
+              "core:Person",
+              "tagging:Agent"
+            ],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Arabic",
+            "topicUrl": "/arabic/topics/cvjp21r7j4qt",
+            "meta": {
+              "created": "2019-06-12T13:59:54.817Z",
+              "updated": "2024-09-18T15:08:49.912Z",
+              "transliterated": false,
+              "script": "ar",
+              "variantId": "cvjp21r7j4qt:ar"
+            }
+          }
+        ],
+        "consumableAsSFV": true,
+        "allowAdvertising": true,
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false,
+        "breakingNews": {
+          "isBreaking": false
+        },
+        "useSensitiveOnwardJourneys": false,
+        "stats": {
+          "readTime": 1,
+          "wordCount": 138
+        },
+        "isTransliterated": false,
+        "isKeyPointsFormatAsset": false
+      },
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "5aacb0ff",
+              "type": "visuallyHiddenHeadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "efd5e4b1",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "46f17d52",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "كيف رد النجم العالمي جورج كلوني على هجوم ترامب إثر منحه الجنسية الفرنسية؟",
+                            "blocks": [
+                              {
+                                "id": "f9872db6",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "كيف رد النجم العالمي جورج كلوني على هجوم ترامب إثر منحه الجنسية الفرنسية؟",
+                                  "attributes": []
+                                },
+                                "position": [1, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [1, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [1, 1]
+                  }
+                ]
+              },
+              "position": [1]
+            },
+            {
+              "id": "d2811641",
+              "type": "video",
+              "model": {
+                "locator": "urn:bbc:pips:pid:l0058t2w",
+                "blocks": [
+                  {
+                    "id": "61d0d0cb",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "1612b2e1",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "6201a73c",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "BBC Weather Live",
+                                  "blocks": [
+                                    {
+                                      "id": "e211d7c8",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "BBC Weather Live",
+                                        "attributes": []
+                                      },
+                                      "position": [2, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [2, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [2, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [2, 1]
+                  },
+                  {
+                    "id": "a4b1dd4a",
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "7ab79a3e",
+                          "blockId": "urn:bbc:ares::clip:l0058t2w",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "l0058t2w",
+                            "subType": "episode",
+                            "format": "video",
+                            "title": "BBC Weather Live",
+                            "synopses": {
+                              "short": "Watch the weather unfold in locations across the UK with our live cameras",
+                              "medium": "Watch the weather unfold in locations across the UK with our live cameras."
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0n8sf6w.jpg",
+                            "embedding": false,
+                            "advertising": false,
+                            "versions": [],
+                            "syndication": {
+                              "destinations": []
+                            },
+                            "smpKind": "programme",
+                            "webcastVersions": [
+                              {
+                                "versionId": "l0058t2x",
+                                "types": ["Original"],
+                                "duration": 85608,
+                                "durationISO8601": "PT23H46M48S",
+                                "warnings": {},
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableUntil": 1788515699000,
+                                "availableFrom": 1788429827000
+                              }
+                            ]
+                          },
+                          "position": [2, 2, 1]
+                        },
+                        {
+                          "id": "d2b2ed7e",
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "86ce66e8",
+                                "type": "rawImage",
+                                "model": {
+                                  "width": 1920,
+                                  "height": 1080,
+                                  "locator": "ichef.bbci.co.uk/images/ic/$widthxn/p0n8sf6w.jpg",
+                                  "originCode": "mpv"
+                                },
+                                "position": [2, 2, 2, 1]
+                              },
+                              {
+                                "id": "58351e31",
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "9f77a6e3",
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "id": "9ff0d6e1",
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "Watch Live UK weather conditions from cameras across the UK",
+                                              "blocks": [
+                                                {
+                                                  "id": "eefd5cba",
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "Watch Live UK weather conditions from cameras across the UK",
+                                                    "attributes": []
+                                                  },
+                                                  "position": [
+                                                    2, 2, 2, 2, 1, 1, 1
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            "position": [2, 2, 2, 2, 1, 1]
+                                          }
+                                        ]
+                                      },
+                                      "position": [2, 2, 2, 2, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [2, 2, 2, 2]
+                              }
+                            ]
+                          },
+                          "position": [2, 2, 2]
+                        }
+                      ]
+                    },
+                    "position": [2, 2]
+                  }
+                ]
+              },
+              "position": [2]
+            },
+            {
+              "id": "2c43ff50",
+              "type": "fauxHeadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "212691d2",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "b6d12cf1",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "كيف رد النجم العالمي جورج كلوني على هجوم ترامب إثر منحه الجنسية الفرنسية؟",
+                            "blocks": [
+                              {
+                                "id": "74f273a7",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "كيف رد النجم العالمي جورج كلوني على هجوم ترامب إثر منحه الجنسية الفرنسية؟",
+                                  "attributes": []
+                                },
+                                "position": [3, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [3, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [3, 1]
+                  }
+                ]
+              },
+              "position": [3]
+            },
+            {
+              "id": "46e9a25e",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1767372573529,
+                "lastPublished": 1767372573529
+              },
+              "position": [4]
+            },
+            {
+              "id": "7de6fd6c",
+              "type": "text",
+              "model": {
+                "suitableForAbridgement": false,
+                "blocks": [
+                  {
+                    "id": "cf8dbfa2",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "الرئيس دونالد ترامب لم يفوّت فرصة حصول النجم جورج كلوني وزوجته أمل علم الدين على الجنسية الفرنسية دون سخرية.",
+                      "blocks": [
+                        {
+                          "id": "8ffe5943",
+                          "type": "fragment",
+                          "model": {
+                            "text": "الرئيس دونالد ترامب لم يفوّت فرصة حصول النجم جورج كلوني وزوجته أمل علم الدين على الجنسية الفرنسية دون سخرية.",
+                            "attributes": []
+                          },
+                          "position": [5, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [5, 1]
+                  },
+                  {
+                    "id": "e3173cdc",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "فمن منصته \"تروث سوشال\"، وصف ترامب الزوجين بأنهما \"أسوأ متنبئين سياسيين\"، وسخر من انتقالهما لفرنسا قائلاً إن \"فرنسا التي تعاني من الجريمة وسوء إدارة الهجرة تماماً كما حدث في عهد بايدن. ولم يتوقف عند هذا، بل قلل من تاريخ كلوني الفني واصفاً إياه بالممثل المتواضع.. ليرد كلوني بجملة واحدة هزت منصات التواصل أنا أتفق تماماً مع الرئيس الحالي.. علينا فعلاً أن نجعل أمريكا عظيمة مرة أخرى وسنبدأ في نوفمبر القادم ملمحاً إلى الانتخابات النصفية في نوفمبر 2026 للإطاحة بنفوذ ترامب",
+                      "blocks": [
+                        {
+                          "id": "187dee87",
+                          "type": "fragment",
+                          "model": {
+                            "text": "فمن منصته \"تروث سوشال\"، وصف ترامب الزوجين بأنهما \"أسوأ متنبئين سياسيين\"، وسخر من انتقالهما لفرنسا قائلاً إن \"فرنسا التي تعاني من الجريمة وسوء إدارة الهجرة تماماً كما حدث في عهد بايدن. ولم يتوقف عند هذا، بل قلل من تاريخ كلوني الفني واصفاً إياه بالممثل المتواضع.. ليرد كلوني بجملة واحدة هزت منصات التواصل أنا أتفق تماماً مع الرئيس الحالي.. علينا فعلاً أن نجعل أمريكا عظيمة مرة أخرى وسنبدأ في نوفمبر القادم ملمحاً إلى الانتخابات النصفية في نوفمبر 2026 للإطاحة بنفوذ ترامب",
+                            "attributes": []
+                          },
+                          "position": [5, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [5, 2]
+                  },
+                  {
+                    "id": "d8e00061",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "يمكنكم مشاهدة الحلقات اليومية من البرنامج الساعة الثالثة بتوقيت غرينيتش، من الإثنين إلى الجمعة، وبإمكانكم أيضا الاطلاع على قصص ترندينغ بالضغط هنا.",
+                      "blocks": [
+                        {
+                          "id": "eb6e9347",
+                          "type": "fragment",
+                          "model": {
+                            "text": "يمكنكم مشاهدة الحلقات اليومية من البرنامج الساعة الثالثة بتوقيت غرينيتش، من الإثنين إلى الجمعة، وبإمكانكم أيضا الاطلاع على قصص ترندينغ بالضغط ",
+                            "attributes": []
+                          },
+                          "position": [5, 3, 1]
+                        },
+                        {
+                          "id": "c6cf3346",
+                          "type": "urlLink",
+                          "model": {
+                            "text": "هنا",
+                            "blocks": [
+                              {
+                                "id": "49b34cc2",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "هنا",
+                                  "attributes": []
+                                },
+                                "position": [5, 3, 2, 1]
+                              }
+                            ],
+                            "locator": "https://www.bbc.com/arabic/topics/cx0zyg28kwjt",
+                            "isExternal": false
+                          },
+                          "position": [5, 3, 2]
+                        },
+                        {
+                          "id": "6f21e877",
+                          "type": "fragment",
+                          "model": {
+                            "text": ".",
+                            "attributes": []
+                          },
+                          "position": [5, 3, 3]
+                        }
+                      ]
+                    },
+                    "position": [5, 3]
+                  }
+                ]
+              },
+              "position": [5]
+            }
+          ]
+        }
+      },
+      "promo": {
+        "headlines": {
+          "seoHeadline": "كيف رد النجم العالمي جورج كلوني على هجوم ترامب إثر منحه الجنسية الفرنسية؟",
+          "promoHeadline": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "كيف رد النجم العالمي جورج كلوني على هجوم ترامب إثر منحه الجنسية الفرنسية؟",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "كيف رد النجم العالمي جورج كلوني على هجوم ترامب إثر منحه الجنسية الفرنسية؟",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "images": {
+          "defaultPromoImage": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "BBC",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "BBC",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 1280,
+                  "height": 720,
+                  "locator": "0f70/live/eb865e10-e7f9-11f0-b67b-690eb873de1b.jpg",
+                  "originCode": "cpsprodpb",
+                  "copyrightHolder": "BBC",
+                  "suitableForSyndication": true
+                }
+              }
+            ]
+          }
+        },
+        "summary": {
+          "blocks": [
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "كيف رد النجم العالمي جورج كلوني على هجوم ترامب إثر منحه الجنسية الفرنسية؟",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": {
+                            "text": "كيف رد النجم العالمي جورج كلوني على هجوم ترامب إثر منحه الجنسية الفرنسية؟",
+                            "attributes": []
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "serviceIdentifier": "Arabic",
+        "breakingNews": {
+          "isBreaking": false
+        },
+        "consumableAsSFV": true,
+        "media": {
+          "blocks": [
+            {
+              "type": "video",
+              "model": {
+                "locator": "urn:bbc:pips:pid:l0058t2w",
+                "blocks": [
+                  {
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "BBC Weather Live",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "BBC Weather Live",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "blockId": "urn:bbc:ares::clip:l0058t2w",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "l0058t2w",
+                            "subType": "episode",
+                            "format": "video",
+                            "title": "BBC Weather Live",
+                            "synopses": {
+                              "short": "Watch the weather unfold in locations across the UK with our live cameras",
+                              "medium": "Watch the weather unfold in locations across the UK with our live cameras."
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0n8sf6w.jpg",
+                            "embedding": false,
+                            "advertising": false,
+                            "versions": [],
+                            "syndication": {
+                              "destinations": []
+                            },
+                            "smpKind": "programme",
+                            "webcastVersions": [
+                              {
+                                "versionId": "l0058t2x",
+                                "types": ["Original"],
+                                "duration": 85608,
+                                "durationISO8601": "PT23H46M48S",
+                                "warnings": {},
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableUntil": 1788515699000,
+                                "availableFrom": 1788429827000
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "rawImage",
+                                "model": {
+                                  "width": 1920,
+                                  "height": 1080,
+                                  "locator": "ichef.bbci.co.uk/images/ic/$widthxn/p0n8sf6w.jpg",
+                                  "originCode": "mpv"
+                                }
+                              },
+                              {
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "Watch Live UK weather conditions from cameras across the UK",
+                                              "blocks": [
+                                                {
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "Watch Live UK weather conditions from cameras across the UK",
+                                                    "attributes": []
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "latestMedia": [
+        {
+          "type": "video",
+          "duration": "PT8M33S",
+          "isLive": false,
+          "title": "رعاية مريض الزهايمر... ما كنت أتمنى معرفته",
+          "firstPublished": "2026-09-03T14:58:21.954Z",
+          "lastPublished": "2026-09-03T14:58:21.954Z",
+          "link": "https://www.bbc.com/arabic/articles/clyeqvyeyeeo",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/8976/live/879e46b0-a7a7-11f1-a291-b542ee92de7c.jpg.webp",
+          "description": "الزهايمر يتجاوز حدود النسيان المعتاد، إذ يمكن أن يؤدي إلى عجز عن إتمام مهام يومية بسيطة مثل اتباع وصفة للطهي أو استخدام بطاقة مصرفية، لذلك يحتاج المصاب بالزهايمر لرعاية خاصة من أحد المقربين له",
+          "imageAlt": "داليا الجلاد مقدمة رعاية لمريضة الزهايمر",
+          "isPortraitImage": false,
+          "id": "clyeqvyeyeeo",
+          "attributions": [
+            {
+              "title": "Arabic",
+              "link": {
+                "url": "https://www.bbc.co.uk/arabic",
+                "scheme": "https",
+                "host": "www.bbc.co.uk",
+                "path": "/arabic"
+              }
+            }
+          ],
+          "relatedTopic": {
+            "title": "أمراض",
+            "link": {
+              "url": "https://www.bbc.com/arabic/topics/ckdxnjkw4pzt",
+              "scheme": "https",
+              "host": "www.bbc.com",
+              "path": "/arabic/topics/ckdxnjkw4pzt"
+            }
+          }
+        },
+        {
+          "type": "video",
+          "duration": "PT6M13S",
+          "isLive": false,
+          "title": "كيف تساعد الطحالب في تنقية الهواء",
+          "firstPublished": "2026-09-03T14:02:40.686Z",
+          "lastPublished": "2026-09-03T14:02:40.686Z",
+          "link": "https://www.bbc.com/arabic/articles/c5yw4g9802vo",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/35bc/live/09d424e0-a7a0-11f1-b109-879e35c24276.jpg.webp",
+          "description": "كيف تساعد الطحالب في تنقية الهواء",
+          "imageAlt": "كيف تساعد الطحالب في تنقية الهواء",
+          "isPortraitImage": false,
+          "id": "c5yw4g9802vo",
+          "attributions": [
+            {
+              "title": "Arabic",
+              "link": {
+                "url": "https://www.bbc.co.uk/arabic",
+                "scheme": "https",
+                "host": "www.bbc.co.uk",
+                "path": "/arabic"
+              }
+            }
+          ],
+          "relatedTopic": {
+            "title": "تكنولوجيا",
+            "link": {
+              "url": "https://www.bbc.com/arabic/topics/cxnyk7x01x7t",
+              "scheme": "https",
+              "host": "www.bbc.com",
+              "path": "/arabic/topics/cxnyk7x01x7t"
+            }
+          }
+        },
+        {
+          "type": "video",
+          "duration": "PT1M11S",
+          "isLive": false,
+          "title": "فرشاة أسنان بـ500 دولار.. هل تشتريها؟",
+          "firstPublished": "2026-09-03T13:40:10.683Z",
+          "lastPublished": "2026-09-03T13:40:10.683Z",
+          "link": "https://www.bbc.com/arabic/articles/cn0jwxw7nlno",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/052d/live/ee772b00-a79c-11f1-aed2-8d6da8d75094.jpg.webp",
+          "description": "فرشاة أسنان بـ500 دولار.. هل تشتريها؟",
+          "imageAlt": "فرشاة أسنان بـ500 دولار.. هل تشتريها؟",
+          "isPortraitImage": true,
+          "id": "cn0jwxw7nlno",
+          "attributions": [
+            {
+              "title": "Arabic",
+              "link": {
+                "url": "https://www.bbc.co.uk/arabic",
+                "scheme": "https",
+                "host": "www.bbc.co.uk",
+                "path": "/arabic"
+              }
+            }
+          ]
+        },
+        {
+          "type": "video",
+          "duration": "PT56S",
+          "isLive": false,
+          "title": "العيش البطيء، حياة أبسط أم ترند جديد؟",
+          "firstPublished": "2026-09-03T10:59:57.354Z",
+          "lastPublished": "2026-09-03T10:59:57.354Z",
+          "link": "https://www.bbc.com/arabic/articles/c4gj7dy1y3no",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/7553/live/59071a50-a786-11f1-a291-b542ee92de7c.jpg.webp",
+          "description": "لماذا يختار بعض الشباب الابتعاد عن السرعة والاستهلاك والعودة إلى حياة أبسط؟ هذا ما نحاول فهمه في حلقة بي بي سي إكسترا هذا الأسبوع مع شباب من منطقة الشرق الأوسط وشمال أفريقيا.",
+          "imageAlt": "صورة من حلقة بي بي سي إكسترا",
+          "isPortraitImage": false,
+          "id": "c4gj7dy1y3no",
+          "attributions": [
+            {
+              "title": "Arabic",
+              "link": {
+                "url": "https://www.bbc.co.uk/arabic",
+                "scheme": "https",
+                "host": "www.bbc.co.uk",
+                "path": "/arabic"
+              }
+            }
+          ],
+          "relatedTopic": {
+            "title": "وسائل التواصل الاجتماعي",
+            "link": {
+              "url": "https://www.bbc.com/arabic/topics/c6vzyk7dg8zt",
+              "scheme": "https",
+              "host": "www.bbc.com",
+              "path": "/arabic/topics/c6vzyk7dg8zt"
+            }
+          }
+        }
+      ],
+      "portraitVideoItems": null,
+      "countryCuration": null,
+      "videoCuration": null,
+      "countryTopicIdToReorder": null
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}
