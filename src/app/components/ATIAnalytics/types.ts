@@ -122,6 +122,7 @@ export type ReverbPageVars = {
 export type ReverbUserVars = {
   isSignedIn: boolean;
   hashedId?: string | null;
+  isPersonalisationOn?: boolean;
 };
 
 export type ReverbEventDetails = {
@@ -250,6 +251,7 @@ export interface ATIPageTrackingProps {
   experimentVariant?: string | null;
   isSignedIn?: boolean;
   hashedId?: string | null;
+  isPersonalisationOn?: boolean;
 }
 
 export interface ATIProps {

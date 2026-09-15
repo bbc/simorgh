@@ -93,6 +93,7 @@ describe('ATI Analytics Container', () => {
             },
           },
           user: {
+            isPersonalisationOn: false,
             isSignedIn: false,
             hashedId: null,
           },
@@ -213,7 +214,11 @@ describe('ATI Analytics Container', () => {
               x18: false,
             },
           },
-          user: { isSignedIn: false, hashedId: null },
+          user: {
+            isSignedIn: false,
+            hashedId: null,
+            isPersonalisationOn: false,
+          },
         },
         eventDetails: { eventName: 'pageView' },
       });
@@ -379,7 +384,11 @@ describe('ATI Analytics Container', () => {
               x18: false,
             },
           },
-          user: { isSignedIn: false, hashedId: null },
+          user: {
+            isSignedIn: false,
+            hashedId: null,
+            isPersonalisationOn: false,
+          },
         },
         eventDetails: { eventName: 'pageView' },
       });
@@ -483,7 +492,11 @@ describe('ATI Analytics Container', () => {
               x18: false,
             },
           },
-          user: { isSignedIn: false, hashedId: null },
+          user: {
+            isSignedIn: false,
+            hashedId: null,
+            isPersonalisationOn: false,
+          },
         },
         eventDetails: { eventName: 'pageView' },
       });
@@ -640,6 +653,7 @@ describe('ATI Analytics Container', () => {
             },
           },
           user: {
+            isPersonalisationOn: false,
             isSignedIn: false,
             hashedId: null,
           },
@@ -746,6 +760,7 @@ describe('ATI Analytics Container', () => {
             },
           },
           user: {
+            isPersonalisationOn: false,
             isSignedIn: false,
             hashedId: null,
           },

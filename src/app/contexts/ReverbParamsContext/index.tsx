@@ -84,7 +84,11 @@ const ReverbParamsContextProviderComponent = ({
 }: PropsWithChildren<ReverbParamsProviderProps>) => {
   const requestContext = use(RequestContext);
   const serviceContext = use(ServiceContext);
-  const { isSignedIn, hashedUserId: hashedId } = use(AccountContext);
+  const {
+    isSignedIn,
+    hashedUserId: hashedId,
+    isPersonalisationOn,
+  } = use(AccountContext);
 
   const enrichedAtiData = getEnrichedATIData({
     pageMetadata: metadata,
@@ -98,6 +102,7 @@ const ReverbParamsContextProviderComponent = ({
     atiData: enrichedAtiData,
     isSignedIn,
     hashedId,
+    isPersonalisationOn,
   });
 
   const {
