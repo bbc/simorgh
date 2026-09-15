@@ -1,26 +1,8 @@
 import { createContext, ReactNode, FC, use } from 'react';
 import { Helmet } from 'react-helmet';
+import isDarkUiPage from '#app/lib/utilities/isDarkUIPage';
 import { RequestContext } from '../../contexts/RequestContext';
-import {
-  LIVE_TV_PAGE,
-  MEDIA_ARTICLE_PAGE,
-  TOPIC_PAGE,
-  TV_PAGE,
-} from '../../routes/utils/pageTypes';
-import { PageTypes } from '../../models/types/global';
 import { BrandSVG } from '../../models/types/theming';
-
-const isDarkUiPage = ({
-  pageType,
-  primaryMediaType,
-}: {
-  pageType: PageTypes;
-  primaryMediaType?: string | null;
-}) =>
-  (primaryMediaType === 'video' && pageType === TOPIC_PAGE) ||
-  ([MEDIA_ARTICLE_PAGE, TV_PAGE, LIVE_TV_PAGE] as PageTypes[]).includes(
-    pageType,
-  );
 
 export const ThemeContext = createContext<Theme | undefined>(undefined);
 
