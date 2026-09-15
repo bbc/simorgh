@@ -1,5 +1,6 @@
 /* eslint-disable max-classes-per-file */
 import { jest } from '@jest/globals';
+import 'temporal-polyfill/global';
 import path from 'path';
 import { TextEncoder, TextDecoder } from 'util';
 import { ReadableStream } from 'node:stream/web';
