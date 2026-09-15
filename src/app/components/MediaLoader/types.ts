@@ -14,8 +14,10 @@ export type SMPEvent = {
     items: PlaylistItem[];
   };
   direction?: string;
-  method?: 'swipe' | 'wheel';
+  method?: 'swipe' | 'wheel' | 'button';
   ended?: boolean;
+  currentTime?: number;
+  duration?: number;
 };
 
 export type MediaPlayerEvents =
@@ -24,6 +26,10 @@ export type MediaPlayerEvents =
   | 'fullscreenExit'
   | 'statsNavigation'
   | 'pause'
+  | 'ended'
+  | 'playing'
+  | 'timeupdate'
+  | 'significanttimeupdate'
   | 'enterFakeFullscreen'
   | 'exitFakeFullscreen';
 
