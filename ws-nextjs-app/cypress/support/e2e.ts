@@ -50,9 +50,10 @@ const KNOWN_ERRORS = [
 ];
 
 // Google RUM intermittently throws `int64` from this external script in the e2es.
-// Match the stack as well as the message so other application errors are not hidden.
+// Match the exact host and a path ending in `/js/rum.js` so both known URL variants
+// are covered without hiding unrelated application errors.
 const GOOGLE_RUM_SCRIPT =
-  'pagead2.googlesyndication.com/googlesyndication/js/rum.js';
+  /https:\/\/pagead2\.googlesyndication\.com\/(?:[^/\s]+\/)*js\/rum\.js(?:[?#:\s]|$)/;
 
 // eslint-disable-next-line consistent-return
 Cypress.on('uncaught:exception', (err, _runnable, promise) => {
@@ -60,7 +61,7 @@ Cypress.on('uncaught:exception', (err, _runnable, promise) => {
   if (
     err.message &&
     (KNOWN_ERRORS.some(knownErr => err.message.includes(knownErr)) ||
-      (err.message === 'int64' && err.stack?.includes(GOOGLE_RUM_SCRIPT)))
+      (err.message === 'int64' && GOOGLE_RUM_SCRIPT.test(err.stack ?? '')))
   ) {
     return false;
   }
