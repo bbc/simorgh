@@ -80,7 +80,6 @@ export const buildResonanceAnalyticsModel = ({
       ...(timeUpdated && { pubUpdateDate: timeUpdated }),
       ...(ldpThingLabels && { ldpTags: ldpThingLabels }),
       ...(ldpThingIds && { ldpIds: ldpThingIds }),
-      ...(categoryName && { section: categoryName }),
     },
   } as ResonanceBeaconConfig;
 };

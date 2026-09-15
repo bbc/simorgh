@@ -79,7 +79,6 @@ describe('atiUrl', () => {
           pubUpdateDate: 'timeUpdated',
           publicationDate: 'timePublished',
           referrerUrl: 'getReferrer',
-          section: 'categoryName',
           url: 'getHref',
         });
       });

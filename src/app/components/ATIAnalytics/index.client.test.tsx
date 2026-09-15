@@ -964,7 +964,6 @@ describe('ATI Analytics Container', () => {
           pageTitle: 'Article%20Headline%20for%20SEO',
           pubUpdateDate: '2018-01-01T14:00:00.000Z',
           publicationDate: '2018-01-01T12:01:00.000Z',
-          section: 'Royal+Wedding+2018~Duchess+of+Sussex',
           url: 'http://localhost/',
         },
         resonanceProperties: {
