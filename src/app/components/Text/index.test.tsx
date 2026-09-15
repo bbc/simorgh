@@ -20,7 +20,7 @@ describe('Text', () => {
     });
 
     expect(screen.getByText('Hello World!')).toHaveStyle({
-      color: '#141414',
+      color: '#181818',
       fontSize: '0.9375rem',
       lineHeight: '1.25rem',
       fontFamily: 'ReithSans,Helvetica,Arial,sans-serif',
@@ -35,7 +35,7 @@ describe('Text', () => {
     });
 
     expect(screen.getByText('Hello World!')).toHaveStyle({
-      color: '#141414',
+      color: '#181818',
       fontSize: '0.9375rem',
       lineHeight: '1.25rem',
       fontFamily: 'ReithSerif,Helvetica,Arial,sans-serif',
@@ -50,7 +50,7 @@ describe('Text', () => {
     });
 
     expect(screen.getByText('Hello World!')).toHaveStyle({
-      color: '#141414',
+      color: '#181818',
       fontSize: '0.9375rem',
       lineHeight: '1.5rem',
       fontFamily:
@@ -64,7 +64,7 @@ describe('Text', () => {
     render(<Text size="atlas">Hello World!</Text>);
 
     expect(screen.getByText('Hello World!')).toHaveStyle({
-      color: '#141414',
+      color: '#181818',
       fontSize: '4.875rem',
       lineHeight: '5.25rem',
       fontFamily: 'ReithSans,Helvetica,Arial,sans-serif',
@@ -79,7 +79,7 @@ describe('Text', () => {
     });
 
     expect(screen.getByText('Hello World!')).toHaveStyle({
-      color: '#141414',
+      color: '#181818',
       fontSize: '0.9375rem',
       lineHeight: '1.25rem',
       fontFamily: 'ReithSans,Helvetica,Arial,sans-serif',
@@ -94,7 +94,7 @@ describe('Text', () => {
     });
 
     expect(screen.getByText('Hello World!')).toHaveStyle({
-      color: '#141414',
+      color: '#181818',
       fontSize: '0.9375rem',
       lineHeight: '1.25rem',
       fontFamily: 'ReithSerif,Helvetica,Arial,sans-serif',
@@ -109,7 +109,7 @@ describe('Text', () => {
     });
 
     expect(screen.getByText('Hello World!')).toHaveStyle({
-      color: '#141414',
+      color: '#181818',
       fontSize: '0.9375rem',
       lineHeight: '1.5rem',
       fontFamily:
