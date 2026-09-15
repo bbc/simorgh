@@ -77,6 +77,23 @@ describe('extractSaveArticleProps', () => {
     });
   });
 
+  it('prefers the nested media image over a later top-level image block', () => {
+    const article = buildArticle([
+      buildHeadlineBlock('Media article headline'),
+      buildNestedMediaImageBlock(IMAGE_LOCATOR, 'Nested alt text'),
+      buildImageBlock(
+        'ichef.test.bbci.co.uk/images/ic/$widthxn/body-image.jpg',
+        'Body image alt text',
+      ),
+    ]);
+
+    expect(extractSaveArticleProps(article)).toMatchObject({
+      promoImage: EXPECTED_PROMO_IMAGE,
+      promoImageAltText: 'Nested alt text',
+      headline: 'Media article headline',
+    });
+  });
+
   it('falls back to promo.headlines.seoHeadline when there is no headline block', () => {
     expect(extractSaveArticleProps(buildArticle([]))).toMatchObject({
       headline: 'Fallback seo headline',

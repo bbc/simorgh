@@ -33,16 +33,19 @@ const isMediaBlock = (block: OptimoBlock): block is OptimoContainerBlock =>
   MEDIA_BLOCK_TYPES.includes(block.type);
 
 const findPromoImageBlocks = (contentBlocks?: OptimoBlock[]) => {
-  const topLevelImageBlock = filterForBlockType(contentBlocks, 'image');
-  if (topLevelImageBlock) return topLevelImageBlock;
-
   const mediaBlock = contentBlocks?.find(isMediaBlock);
   const aresMediaBlock = filterForBlockType(
     mediaBlock?.model?.blocks,
     'aresMedia',
   ) as OptimoContainerBlock | undefined;
 
-  return filterForBlockType(aresMediaBlock?.model?.blocks, 'image');
+  const mediaImageBlock = filterForBlockType(
+    aresMediaBlock?.model?.blocks,
+    'image',
+  );
+  if (mediaImageBlock) return mediaImageBlock;
+
+  return filterForBlockType(contentBlocks, 'image');
 };
 
 const extractSaveArticleProps = (
