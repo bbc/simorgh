@@ -50,10 +50,10 @@ const KNOWN_ERRORS = [
 ];
 
 // Google RUM intermittently throws `int64` from this external script in the e2es.
-// Match the domain and script path so both known URL variants are covered without
-// hiding unrelated application errors.
-const GOOGLE_RUM_DOMAIN = 'googlesyndication.com';
-const RUM_SCRIPT_PATH = '/js/rum.js';
+// Match the exact host and a path ending in `/js/rum.js` so both known URL variants
+// are covered without hiding unrelated application errors.
+const GOOGLE_RUM_SCRIPT =
+  /https:\/\/pagead2\.googlesyndication\.com\/(?:[^/\s]+\/)*js\/rum\.js(?:[?#:\s]|$)/;
 
 // eslint-disable-next-line consistent-return
 Cypress.on('uncaught:exception', (err, _runnable, promise) => {
@@ -61,9 +61,7 @@ Cypress.on('uncaught:exception', (err, _runnable, promise) => {
   if (
     err.message &&
     (KNOWN_ERRORS.some(knownErr => err.message.includes(knownErr)) ||
-      (err.message === 'int64' &&
-        err.stack?.includes(GOOGLE_RUM_DOMAIN) &&
-        err.stack?.includes(RUM_SCRIPT_PATH)))
+      (err.message === 'int64' && GOOGLE_RUM_SCRIPT.test(err.stack ?? '')))
   ) {
     return false;
   }
