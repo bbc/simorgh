@@ -15,7 +15,7 @@ interface UseUASStatusHookParams<StatusField extends string> {
   config: UseUASStatusHookConfig;
   queryKeyFn: (hashedUserId: string, resourceId: string) => unknown[];
   statusField: StatusField;
-  enabledFn?: (resourceId: string, hashedUserId: string) => boolean;
+  enabledFn: (resourceId: string, hashedUserId: string) => boolean;
 }
 
 type UseUASStatusHookReturn<StatusField extends string> = Record<
@@ -56,9 +56,7 @@ const createUASStatusHook = <StatusField extends string>(
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const { hashedUserId = '', isRefreshAvailable } = use(AccountContext);
 
-    const isEnabled = enabledFn
-      ? enabledFn(resourceId, hashedUserId)
-      : !!resourceId && !!hashedUserId;
+    const isEnabled = enabledFn(resourceId, hashedUserId);
 
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const {
