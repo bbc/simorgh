@@ -1,6 +1,5 @@
 import { useTheme } from '@emotion/react';
 import useViewTracker from '#app/hooks/useViewTracker';
-import getSrcSets from '#app/utilities/getSrcSets';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import Paragraph from '../Paragraph';
 import Image from '../Image';
@@ -37,16 +36,19 @@ const MessageBanner = ({
 
   const { mq } = useTheme();
 
-  const imageSrcSets = getSrcSets({
-    imageUrlTemplate: image,
-    mq,
-    imageWidthSmall: styles.IMAGE_WIDTH,
-    imageWidthLarge: styles.IMAGE_WIDTH_GROUP_3_MIN_WIDTH,
-  });
+  const IMAGE_SRC_SMALL_2X_UPSCALE_WIDTH = styles.IMAGE_WIDTH * 2;
+  const IMAGE_SRC_LARGE_2X_UPSCALE_WIDTH =
+    styles.IMAGE_WIDTH_GROUP_3_MIN_WIDTH * 2;
+
+  const replaceWidth = (width: number) => image?.replace('{width}', `${width}`);
+
+  const imgSrcSmall = replaceWidth(styles.IMAGE_WIDTH);
+  const imgSrcSmall2x = replaceWidth(IMAGE_SRC_SMALL_2X_UPSCALE_WIDTH);
   const imgSrcLarge = image?.replace(
     '{width}',
     `${styles.IMAGE_WIDTH_GROUP_3_MIN_WIDTH}`,
   );
+  const imgSrcLarge2x = replaceWidth(IMAGE_SRC_LARGE_2X_UPSCALE_WIDTH);
 
   return (
     <div {...viewTracker} css={styles.card}>
@@ -73,13 +75,16 @@ const MessageBanner = ({
             </CallToActionLink.Text>
           </CallToActionLink.ButtonLikeWrapper>
         </CallToActionLink>
-        {image && imageSrcSets && (
+        {image && (
           <div css={styles.image}>
             <Image
               alt=""
               src={imgSrcLarge as string}
-              srcSet={imageSrcSets.srcSet}
-              sizes={imageSrcSets.sizes}
+              srcSet={`${imgSrcSmall} ${styles.IMAGE_WIDTH}w,
+                ${imgSrcSmall2x} ${IMAGE_SRC_SMALL_2X_UPSCALE_WIDTH}w,
+                ${imgSrcLarge} ${styles.IMAGE_WIDTH_GROUP_3_MIN_WIDTH}w,
+                ${imgSrcLarge2x} ${IMAGE_SRC_LARGE_2X_UPSCALE_WIDTH}w`}
+              sizes={`${mq.GROUP_2_MAX_WIDTH.replace('@media ', '')} ${styles.IMAGE_WIDTH}px, ${styles.IMAGE_WIDTH_GROUP_3_MIN_WIDTH}px`}
               placeholder={false}
               aspectRatio={[16, 9]}
             />

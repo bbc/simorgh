@@ -1,5 +1,5 @@
 import { Fragment, PropsWithChildren, useState, use } from 'react';
-import { Global, useTheme } from '@emotion/react';
+import { Global } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 import styles from './index.styles';
 import { RequestContext } from '../../contexts/RequestContext';
@@ -12,7 +12,6 @@ export type ImageProps = {
   className?: string;
   fallbackMediaType?: string;
   fallbackSrcSet?: string;
-  fallback?: boolean;
   height?: number;
   lazyLoad?: boolean;
   placeholder?: boolean;
@@ -42,7 +41,6 @@ const Image = ({
   className,
   fallbackMediaType,
   fallbackSrcSet,
-  fallback = false,
   height,
   lazyLoad = false,
   placeholder = true,
@@ -60,7 +58,6 @@ const Image = ({
   style,
 }: PropsWithChildren<ImageProps>) => {
   const { pageType, isLite, isAmp } = use(RequestContext);
-  const imageTheme = useTheme();
   const [isLoaded, setIsLoaded] = useState(false);
   if (isLite) return null;
   const showPlaceholder = !src || (placeholder && !isLoaded);
@@ -92,8 +89,6 @@ const Image = ({
   };
   const imgSrcSet = getImgSrcSet();
   const imgSizes = getImgSizes();
-  const renderNoScriptFallback = fallback && lazyLoad && src;
-  const isJpeg = src?.endsWith('.jpg') || src?.endsWith('.jpeg');
   return (
     <>
       {preload && (
@@ -156,9 +151,6 @@ const Image = ({
                 {...(srcSet && { srcSet: imgSrcSet })}
                 {...(imgSizes && { sizes: imgSizes })}
                 {...(preload && { 'data-hero': 'true' })}
-                {...(!isJpeg && {
-                  style: { backgroundColor: imageTheme.palette.GHOST },
-                })}
               />
             </>
           ) : (
@@ -198,18 +190,6 @@ const Image = ({
               />
             </ImageWrapper>
           ))}
-        {renderNoScriptFallback && (
-          <noscript>
-            <img
-              src={src}
-              {...(srcSet && { srcSet: imgSrcSet })}
-              {...(imgSizes && { sizes: imgSizes })}
-              alt={alt}
-              width={width}
-              height={height}
-            />
-          </noscript>
-        )}
         {children}
       </div>
     </>
