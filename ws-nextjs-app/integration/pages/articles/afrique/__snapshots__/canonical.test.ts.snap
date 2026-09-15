@@ -38,7 +38,7 @@ exports[`Canonical Articles Media Loader renders a figure caption 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="css-vja2s5 ew59ay91"
+        class="css-1ggua7q e1txgu0u1"
         focusable="false"
         height="12"
         viewBox="0 0 12 12"
@@ -115,7 +115,7 @@ exports[`Canonical Articles Media Loader renders a placeholder 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="css-vja2s5 ew59ay91"
+        class="css-1ggua7q e1txgu0u1"
         focusable="false"
         height="12"
         viewBox="0 0 12 12"
@@ -200,7 +200,7 @@ exports[`Canonical Articles Media Loader renders a valid container 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="css-vja2s5 ew59ay91"
+            class="css-1ggua7q e1txgu0u1"
             focusable="false"
             height="12"
             viewBox="0 0 12 12"

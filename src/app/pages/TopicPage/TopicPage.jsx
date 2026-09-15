@@ -50,7 +50,7 @@ const TopicPage = ({ pageData }) => {
   const itemList = getItemList({ curations, name: brandName });
 
   return (
-    <>
+    <div css={theme => (theme.isDarkUi ? styles.pageWrapper : undefined)}>
       <AdContainer slotType="leaderboard" />
       <main css={styles.main} role="main">
         <div css={styles.inner}>
@@ -126,7 +126,7 @@ const TopicPage = ({ pageData }) => {
           />
         </div>
       </main>
-    </>
+    </div>
   );
 };
 
