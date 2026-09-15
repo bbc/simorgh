@@ -63,8 +63,10 @@ const StyledPromoComponent = styled(PromoComponent)`
 const StyledImageWrapper = styled(PromoComponent.Card.ImageWrapper)`
   display: block;
   width: 100%;
+  height: 0;
   margin: 0;
   padding: 0;
+  padding-bottom: 100%;
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
     display: none;
   }
