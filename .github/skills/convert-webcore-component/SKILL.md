@@ -148,6 +148,22 @@ title: (isLarge?: boolean) =>
 
 This is distinct from the anti-pattern in the styling standards. A **discrete variant prop** (a boolean or a small union) can legitimately select or add a class. What to avoid is deriving a class from a **continuous or computed value** (`height > 100 ? styles.tall : styles.short`) or from `dir` — use the custom property or logical-property approaches below instead.
 
+### Consumer-owned style overrides
+
+If a child component has a consumer-specific style override, use the DOM context the consumer already owns rather than relying on class order:
+
+```scss
+.errorLinkWrapper {
+  .inlineLink:not(:visited):not(:hover):not(:focus) {
+    color: theme.$palette-black;
+    border-bottom: #{theme.pixelsToRem-px-to-rem(1)} solid
+      theme.$palette-black;
+  }
+}
+```
+
+CSS Modules scope class names but do not give a React parent automatic precedence. The order of class names in HTML does not control the cascade. Prefer an ancestor selector or an element-qualified selector when the component owns the element type (for example `p.copyright`). Do not add a wrapper solely to manufacture specificity. Exclude pseudo-states that remain owned by the child component. Use duplicated selectors only as a documented last resort when no meaningful DOM context exists.
+
 ### Combining Class Names
 
 Emotion's `css` array silently ignores falsy entries. `className` is a plain string and does not, so translating the array directly introduces a bug.
