@@ -724,10 +724,10 @@ exports[`Canonical Home Page messageBanner has an image 1`] = `
   loading="eager"
   sizes="(max-width: 37.4375rem) 184px, 224px"
   src="https://ichef.test.bbci.co.uk/ace/ws/224/cpsdevpb/0af7/test/5a5151c0-a3aa-11ed-9015-6935ab4fa6ca.png.webp"
-  srcset="https://ichef.test.bbci.co.uk/ace/ws/184/cpsdevpb/0af7/test/5a5151c0-a3aa-11ed-9015-6935ab4fa6ca.png.webp 184w, 
-                          https://ichef.test.bbci.co.uk/ace/ws/368/cpsdevpb/0af7/test/5a5151c0-a3aa-11ed-9015-6935ab4fa6ca.png.webp 368w, 
-                          https://ichef.test.bbci.co.uk/ace/ws/224/cpsdevpb/0af7/test/5a5151c0-a3aa-11ed-9015-6935ab4fa6ca.png.webp 224w, 
-                          https://ichef.test.bbci.co.uk/ace/ws/448/cpsdevpb/0af7/test/5a5151c0-a3aa-11ed-9015-6935ab4fa6ca.png.webp 448w"
+  srcset="https://ichef.test.bbci.co.uk/ace/ws/184/cpsdevpb/0af7/test/5a5151c0-a3aa-11ed-9015-6935ab4fa6ca.png.webp 184w,
+                https://ichef.test.bbci.co.uk/ace/ws/368/cpsdevpb/0af7/test/5a5151c0-a3aa-11ed-9015-6935ab4fa6ca.png.webp 368w,
+                https://ichef.test.bbci.co.uk/ace/ws/224/cpsdevpb/0af7/test/5a5151c0-a3aa-11ed-9015-6935ab4fa6ca.png.webp 224w,
+                https://ichef.test.bbci.co.uk/ace/ws/448/cpsdevpb/0af7/test/5a5151c0-a3aa-11ed-9015-6935ab4fa6ca.png.webp 448w"
   style="aspect-ratio:16 / 9"
 />
 `;
