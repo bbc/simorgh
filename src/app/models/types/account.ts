@@ -30,4 +30,6 @@ export type AccountContextProps = {
   hashedUserId?: string;
   isPersonalizationEnabled: boolean;
   isPersonalizationAvailable: boolean;
+  isTopicUasPersonalizationEnabled: boolean;
+  isTopicUasPersonalizationAvailable: boolean;
 };

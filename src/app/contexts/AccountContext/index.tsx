@@ -40,6 +40,10 @@ export const AccountProvider = ({
   const { service } = use(ServiceContext);
   const { enabled: isPersonalizationToggleEnabled, value: accountService } =
     useToggle('uasPersonalization');
+  const {
+    enabled: topicUasPersonalizationEnabled,
+    value: topicAccountService,
+  } = useToggle('topicUasPersonalization');
 
   useEffect(() => {
     setPageToReturnTo(window.location.href);
@@ -79,6 +83,7 @@ export const AccountProvider = ({
     isIdctaAvailable &&
     Boolean(initialConfig?.initialIsSignedIn || signedInToken);
 
+  // Personalization for saved articles
   const isPersonalizationAvailable =
     isIdctaAvailable &&
     isPersonalizationToggleEnabled &&
@@ -87,6 +92,17 @@ export const AccountProvider = ({
       : true);
 
   const isPersonalizationEnabled = isPersonalizationAvailable && isSignedIn;
+
+  // Personalization for followed topics
+  const isTopicUasPersonalizationAvailable =
+    isIdctaAvailable &&
+    topicUasPersonalizationEnabled &&
+    (isLocal()
+      ? topicAccountService?.toString().split('|').includes(service)
+      : true);
+
+  const isTopicUasPersonalizationEnabled =
+    isTopicUasPersonalizationAvailable && isSignedIn;
 
   const isRefreshAvailable =
     isIdctaAvailable && initialConfig?.availability?.refresh === 'GREEN';
@@ -104,6 +120,8 @@ export const AccountProvider = ({
       forYouUrl,
       isPersonalizationAvailable,
       isPersonalizationEnabled,
+      isTopicUasPersonalizationAvailable,
+      isTopicUasPersonalizationEnabled,
     }),
     [
       hashedUserId,
@@ -117,6 +135,8 @@ export const AccountProvider = ({
       signOutUrl,
       isPersonalizationAvailable,
       isPersonalizationEnabled,
+      isTopicUasPersonalizationAvailable,
+      isTopicUasPersonalizationEnabled,
     ],
   );
 
