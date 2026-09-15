@@ -14,8 +14,8 @@ export default () => {
       expect(hasContent).toBe(true);
     });
 
-    it('should inline CSS custom properties from the SCSS module palette (--brand-background)', () => {
-      expect(getInlinedCss()).toContain('--brand-background');
+    it('should tree-shake unused SCSS module palette custom properties (--brand-background)', () => {
+      expect(getInlinedCss()).not.toContain('--brand-background');
     });
 
     it('should inline CSS custom properties from the SCSS module font variants (--sans-regular-font-family)', () => {
