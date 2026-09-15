@@ -1,0 +1,74 @@
+@use '@scss/themeTokens' as theme;
+
+.buttonWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.75rem;
+  width: 100%;
+  padding: #{theme.$spacings-full} #{theme.$spacings-double};
+  cursor: pointer;
+  background-color: theme.$palette-white;
+  color: theme.$palette-grey-8;
+  border: #{theme.pixelsToRem-px-to-rem(1)} solid theme.$palette-grey-8;
+
+  :global([data-is-dark-ui='true']) & {
+    background-color: theme.$palette-grey-10;
+    color: theme.$palette-white;
+    border-color: theme.$palette-white;
+  }
+
+  svg {
+    fill: currentColor;
+  }
+
+  &:hover,
+  &:focus-visible {
+    background-color: theme.$palette-grey-8;
+    color: theme.$palette-white;
+
+    :global([data-is-dark-ui='true']) & {
+      background-color: theme.$palette-white;
+      color: theme.$palette-black;
+    }
+  }
+
+  &:focus-visible {
+    outline: #{theme.pixelsToRem-px-to-rem(3)} solid theme.$palette-grey-8;
+    outline-offset: #{theme.pixelsToRem-px-to-rem(3)};
+    box-shadow: 0 0 0 #{theme.pixelsToRem-px-to-rem(3)} theme.$palette-white;
+
+    :global([data-is-dark-ui='true']) & {
+      outline-color: theme.$palette-white;
+      box-shadow: 0 0 0 #{theme.pixelsToRem-px-to-rem(3)} theme.$palette-black;
+    }
+  }
+
+  // Compound selector guarantees this beats the plain dark-UI background
+  // rule above regardless of stylesheet order.
+  &.updatingState {
+    background-color: theme.$palette-white;
+    color: theme.$palette-grey-8;
+    border-color: theme.$palette-grey-8;
+    cursor: not-allowed;
+
+    :global([data-is-dark-ui='true']) & {
+      background-color: theme.$palette-white;
+      color: theme.$palette-black;
+      border-color: theme.$palette-black;
+    }
+
+    svg {
+      fill: currentColor;
+    }
+  }
+}
+
+.iconText {
+  display: flex;
+  align-items: center;
+  gap: #{theme.$spacings-full};
+  white-space: nowrap;
+  @include theme.fontVariants-gel-font-variant('sans-bold');
+  @include theme.fontSizes-gel-font-size(pica);
+}
