@@ -34,7 +34,6 @@ const RESONANCE_MODE = { LIVE: 'live', TEST: 'test' } as const;
 
 export const buildResonanceAnalyticsModel = ({
   appName,
-  categoryName,
   contentId,
   contentType,
   destinationSiteId,
