@@ -22,7 +22,7 @@ const analyticsUtilFunctions = [
   { name: 'sanitise', source: genericLabelHelpers },
 ];
 
-describe('beaconModels', () => {
+describe('atiUrl', () => {
   beforeEach(() => {
     analyticsUtilFunctions.forEach(func => {
       mockAndSet(func, func.name);

@@ -3,7 +3,7 @@ import { LIBRARY_VERSION } from '..';
 import {
   buildReverbAnalyticsModel,
   buildResonanceAnalyticsModel,
-} from '../beaconModels';
+} from '../atiUrl';
 
 export const buildPageATIParams = ({
   atiData,

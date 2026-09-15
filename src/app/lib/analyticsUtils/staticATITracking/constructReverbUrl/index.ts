@@ -5,7 +5,7 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
 import { EventTrackingProps } from '#app/lib/analyticsUtils/types';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
-import { buildReverbEventModel } from '../../beaconModels';
+import { buildReverbEventModel } from '../../atiUrl';
 
 export default ({
   eventTrackingData,
