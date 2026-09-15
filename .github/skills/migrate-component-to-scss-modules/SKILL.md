@@ -210,6 +210,8 @@ Test this by asserting the attribute (`toHaveAttribute('data-font-size', 'atlas'
 
 See [src/app/components/InlineLink/index.module.scss](../../../src/app/components/InlineLink/index.module.scss) for a full example (`size` and `fontVariant`, 15 and 10 values respectively).
 
+For large enums on shared, AMP, or Lite components, measure the compiled CSS before using this pattern. Each attribute-selector branch is shipped with the component's CSS chunk even when only one value is used at runtime. Prefer a compact CSS custom-property bridge — one responsive rule set with selected theme variable references supplied inline — when the full enum would materially increase the AMP/Lite payload. Put token-name mapping and theme fallback logic in a shared `ThemeProviderSCSSModules` typography helper, not in the component; see [typography.ts](../../../src/app/components/ThemeProviderSCSSModules/typography.ts). This keeps the theme values service-aware without emitting one responsive rule set per enum value or duplicating theme knowledge in consumers.
+
 ### Consumer-owned style overrides
 
 When a migrated component needs a consumer-specific default style, keep the shared component's state rules and scope the override to the consumer's DOM context:

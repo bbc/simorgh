@@ -3,6 +3,7 @@ import clsx from 'clsx';
 
 import { FontVariant, GelFontSize } from '../../models/types/theming';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import { getTypographyStyles } from '../ThemeProviderSCSSModules/typography';
 import styles from './index.module.scss';
 
 interface Props extends HTMLAttributes<HTMLElement> {
@@ -29,6 +30,7 @@ const InlineLink: FC<Props> = ({
   size,
   text,
   to,
+  style,
   ...htmlAttributes
 }: Props) => {
   const { externalLinkText } = use(ServiceContext);
@@ -41,8 +43,10 @@ const InlineLink: FC<Props> = ({
         'aria-label': text.concat(externalLinkText),
       }),
     className: clsx(styles.self, className),
-    'data-font-size': size,
-    'data-font-variant': fontVariant,
+    style: {
+      ...getTypographyStyles({ size, fontVariant }),
+      ...style,
+    },
     ...htmlAttributes,
   };
 

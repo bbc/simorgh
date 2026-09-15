@@ -135,10 +135,15 @@ describe('InlineLink', () => {
       />,
     );
 
-    expect(screen.getByText('Hello World!')).toHaveAttribute(
-      'data-font-size',
-      size,
+    const inlineLink = screen.getByText('Hello World!');
+    const scale = size.replace(
+      /[A-Z]/g,
+      character => `-${character.toLowerCase()}`,
     );
+
+    expect(
+      inlineLink.style.getPropertyValue('--gel-typography-font-size-group-a'),
+    ).toBe(`var(--font-size-${scale}-group-a, inherit)`);
   });
 
   it.each`
@@ -157,9 +162,30 @@ describe('InlineLink', () => {
       />,
     );
 
-    expect(screen.getByText('Hello World!')).toHaveAttribute(
-      'data-font-variant',
-      variant,
+    const inlineLink = screen.getByText('Hello World!');
+
+    expect(
+      inlineLink.style.getPropertyValue('--gel-typography-font-family'),
+    ).toContain(
+      `--${variant.replace(/[A-Z]/g, character => `-${character.toLowerCase()}`)}-font-family`,
+    );
+  });
+
+  it('should preserve serif light font fallbacks', () => {
+    render(
+      <InlineLink
+        to="/mundo/articles/ce42wzqr2mko"
+        text="Hello World!"
+        fontVariant="serifLight"
+      />,
+    );
+
+    expect(
+      screen
+        .getByText('Hello World!')
+        .style.getPropertyValue('--gel-typography-font-family'),
+    ).toBe(
+      'var(--serif-light-font-family, var(--serif-medium-font-family, var(--sans-regular-font-family, inherit)))',
     );
   });
 });

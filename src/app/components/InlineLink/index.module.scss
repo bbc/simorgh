@@ -5,6 +5,21 @@
   border-bottom: #{theme.pixelsToRem-px-to-rem(1)} solid
     theme.$palette-postbox;
   text-decoration: none;
+  font-family: var(--gel-typography-font-family, inherit);
+  font-style: var(--gel-typography-font-style, inherit);
+  font-weight: var(--gel-typography-font-weight, inherit);
+  font-size: var(--gel-typography-font-size-group-a, inherit);
+  line-height: var(--gel-typography-line-height-group-a, inherit);
+
+  @media #{theme.$mediaQueries-group-2-min-width} {
+    font-size: var(--gel-typography-font-size-group-b, inherit);
+    line-height: var(--gel-typography-line-height-group-b, inherit);
+  }
+
+  @media #{theme.$mediaQueries-group-4-min-width} {
+    font-size: var(--gel-typography-font-size-group-d, inherit);
+    line-height: var(--gel-typography-line-height-group-d, inherit);
+  }
 
   &:visited {
     color: theme.$palette-metal;
@@ -17,103 +32,4 @@
     color: theme.$palette-postbox;
   }
 
-  &[data-font-size='atlas'] {
-    @include theme.fontSizes-gel-font-size(atlas);
-  }
-
-  &[data-font-size='elephant'] {
-    @include theme.fontSizes-gel-font-size(elephant);
-  }
-
-  &[data-font-size='imperial'] {
-    @include theme.fontSizes-gel-font-size(imperial);
-  }
-
-  &[data-font-size='royal'] {
-    @include theme.fontSizes-gel-font-size(royal);
-  }
-
-  &[data-font-size='foolscap'] {
-    @include theme.fontSizes-gel-font-size(foolscap);
-  }
-
-  &[data-font-size='canon'] {
-    @include theme.fontSizes-gel-font-size(canon);
-  }
-
-  &[data-font-size='trafalgar'] {
-    @include theme.fontSizes-gel-font-size(trafalgar);
-  }
-
-  &[data-font-size='paragon'] {
-    @include theme.fontSizes-gel-font-size(paragon);
-  }
-
-  &[data-font-size='doublePica'] {
-    @include theme.fontSizes-gel-font-size(doublePica);
-  }
-
-  &[data-font-size='greatPrimer'] {
-    @include theme.fontSizes-gel-font-size(greatPrimer);
-  }
-
-  &[data-font-size='bodyCopy'] {
-    @include theme.fontSizes-gel-font-size(bodyCopy);
-  }
-
-  &[data-font-size='pica'] {
-    @include theme.fontSizes-gel-font-size(pica);
-  }
-
-  &[data-font-size='longPrimer'] {
-    @include theme.fontSizes-gel-font-size(longPrimer);
-  }
-
-  &[data-font-size='brevier'] {
-    @include theme.fontSizes-gel-font-size(brevier);
-  }
-
-  &[data-font-size='minion'] {
-    @include theme.fontSizes-gel-font-size(minion);
-  }
-
-  &[data-font-variant='sansRegular'] {
-    @include theme.fontVariants-gel-font-variant('sans-regular');
-  }
-
-  &[data-font-variant='sansRegularItalic'] {
-    @include theme.fontVariants-gel-font-variant('sans-regular-italic');
-  }
-
-  &[data-font-variant='sansBold'] {
-    @include theme.fontVariants-gel-font-variant('sans-bold');
-  }
-
-  &[data-font-variant='sansBoldItalic'] {
-    @include theme.fontVariants-gel-font-variant('sans-bold-italic');
-  }
-
-  &[data-font-variant='sansLight'] {
-    @include theme.fontVariants-gel-font-variant('sans-light');
-  }
-
-  &[data-font-variant='serifRegular'] {
-    @include theme.fontVariants-gel-font-variant('serif-regular');
-  }
-
-  &[data-font-variant='serifMedium'] {
-    @include theme.fontVariants-gel-font-variant('serif-medium');
-  }
-
-  &[data-font-variant='serifMediumItalic'] {
-    @include theme.fontVariants-gel-font-variant('serif-medium-italic');
-  }
-
-  &[data-font-variant='serifBold'] {
-    @include theme.fontVariants-gel-font-variant('serif-bold');
-  }
-
-  &[data-font-variant='serifLight'] {
-    @include theme.fontVariants-gel-font-variant('serif-light');
-  }
 }
