@@ -401,4 +401,73 @@ describe('setPageWrapperInlineJs', () => {
       expect(wrapped[year].wordCount).toBeNull();
     });
   });
+
+  describe('font caching and wrapped analytics combined', () => {
+    it('caches fonts and tracks wrapped/topic/duration stats independently when both are present in the same call', () => {
+      jest.useFakeTimers().setSystemTime(new Date('2026-01-01T10:00:00Z'));
+
+      const font = buildFont();
+      window.fetch = jest.fn().mockResolvedValue({
+        blob: () => Promise.resolve(new Blob(['font-data'])),
+      }) as unknown as typeof fetch;
+      window.FileReader = MockFileReader as unknown as typeof FileReader;
+
+      setPageWrapperInlineJs({
+        serviceFonts: [font],
+        wrappedTopics: [{ topicName: 'Climate Change', topicId: 'c000000001' }],
+        service: 'arabic',
+        wordCount: 42,
+        reportingPageType: 'article',
+      });
+
+      // Font caching kicks off its own async work (fetch/FileReader), while
+      // wrapped/topic tracking runs synchronously in the same invocation -
+      // assert the synchronous analytics work isn't blocked or altered by the
+      // pending font caching work.
+      const topics = JSON.parse(
+        localStorage.getItem('ws_bbc_topics') as string,
+      );
+      expect(topics.arabic['Climate Change']).toEqual({
+        count: 1,
+        id: 'c000000001',
+        path: '/arabic/topics/c000000001',
+      });
+
+      setVisibilityState('hidden');
+      jest.setSystemTime(new Date('2026-01-01T10:00:08Z'));
+      document.onvisibilitychange?.(new Event('visibilitychange'));
+
+      const year = new Date().getFullYear();
+      const wrapped = JSON.parse(
+        localStorage.getItem('ws_bbc_wrapped') as string,
+      );
+      expect(wrapped[year].wordCount).toBe(42);
+      expect(wrapped[year].serviceCounts.arabic).toBe(1);
+      expect(wrapped[year].pageTypeCounts.article).toBe(1);
+      expect(wrapped[year].topicCounts['Climate Change']).toBe(1);
+      expect(wrapped[year].duration).toBe(8000);
+
+      // Now let the font caching promise chain resolve and confirm it still
+      // completes correctly, unaffected by the wrapped analytics work above.
+      window.dispatchEvent(new Event('load'));
+      jest.useRealTimers();
+
+      return flushPromises()
+        .then(() => flushPromises())
+        .then(() => {
+          const storedFont = JSON.parse(
+            localStorage.getItem(`font-${font.name}`) as string,
+          );
+          expect(storedFont).toEqual({
+            base64Contents: 'data:font/woff2;base64,MOCKDATA',
+            fontFamily: font.fontFamily,
+            fontWeight: font.fontWeight,
+            fontVersion: font.version,
+          });
+
+          const style = document.head.querySelector('style');
+          expect(style?.innerHTML).toContain(font.fontFamily);
+        });
+    });
+  });
 });
