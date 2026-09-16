@@ -6,6 +6,12 @@ import useUASButton, {
   UASAction,
   UASActionResult,
 } from '#app/hooks/useUASButton';
+import useErrorTracking from '#app/hooks/useErrorTracking';
+import {
+  ERROR_TRACKING_FEATURES,
+  UAS_ERROR_ACTIONS,
+} from '#app/hooks/useErrorTracking/errorTracking.const';
+import ErrorBoundary from '#app/components/ErrorBoundary';
 import useClickTracker from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
 import SaveButton from '#app/components/SaveButton';
@@ -23,7 +29,7 @@ const getTooltipStatus = (
   return actionResult.action === UASAction.SAVE ? 'success' : 'removed';
 };
 
-const SaveArticleButtonAuthenticated = ({
+const SaveArticleButtonAuthenticatedInner = ({
   saveArticlePageData,
 }: SaveArticleButtonProps) => {
   const { pathname } = use(RequestContext);
@@ -147,5 +153,30 @@ const SaveArticleButtonAuthenticated = ({
     </>
   );
 };
+
+const SaveArticleButtonErrorFallback = ({ error }: { error: Error }) => {
+  const trackError = useErrorTracking();
+
+  useEffect(() => {
+    trackError({
+      error,
+      feature: ERROR_TRACKING_FEATURES.UAS,
+      action: UAS_ERROR_ACTIONS.RENDER,
+    });
+  }, [error, trackError]);
+
+  return null;
+};
+
+const SaveArticleButtonAuthenticated = (props: SaveArticleButtonProps) => (
+  <ErrorBoundary
+    componentName="SaveArticleButtonAuthenticated"
+    // Stable module-scope component - safe to reference from the fallback prop.
+    // eslint-disable-next-line react/no-unstable-nested-components
+    fallback={error => <SaveArticleButtonErrorFallback error={error} />}
+  >
+    <SaveArticleButtonAuthenticatedInner {...props} />
+  </ErrorBoundary>
+);
 
 export default SaveArticleButtonAuthenticated;

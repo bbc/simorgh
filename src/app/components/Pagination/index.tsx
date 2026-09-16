@@ -9,6 +9,7 @@ import {
 import { RequestContext } from '#app/contexts/RequestContext';
 import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import { Direction } from '#app/models/types/global';
+import isDarkUiPage from '#app/lib/utilities/isDarkUIPage';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import buildBlocks, { VISIBILITY } from './buildBlocks';
 import { Ellipsis, LeftChevron, RightChevron } from '../icons';
@@ -64,17 +65,25 @@ const LinkComponent = ({
   pageNumber,
   isActive,
   ...rest
-}: PropsWithChildren<LinkComponentProps>) => (
-  <a
-    css={isActive ? styles.activeA : styles.inactiveA}
-    href={`?page=${pageNumber}`}
-    className="focusIndicatorOutlineBlack"
-    {...(isActive && { 'aria-current': 'page' })}
-    {...rest}
-  >
-    {children}
-  </a>
-);
+}: PropsWithChildren<LinkComponentProps>) => {
+  const { pageType, primaryMediaType } = use(RequestContext);
+
+  const focusIndicatorClassName = isDarkUiPage({ pageType, primaryMediaType })
+    ? 'focusIndicatorInvert'
+    : 'focusIndicatorOutlineBlack';
+
+  return (
+    <a
+      css={isActive ? styles.activeA : styles.inactiveA}
+      href={`?page=${pageNumber}`}
+      className={focusIndicatorClassName}
+      {...(isActive && { 'aria-current': 'page' })}
+      {...rest}
+    >
+      {children}
+    </a>
+  );
+};
 
 const PreviousArrow = ({
   activePage,

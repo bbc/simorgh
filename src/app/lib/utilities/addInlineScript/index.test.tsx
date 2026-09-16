@@ -91,4 +91,22 @@ describe('addInlineScript', () => {
       </script>,
     );
   });
+
+  it('should inject objects as JSON serialized script parameters', () => {
+    const script = (config: Record<string, unknown>) => config;
+    const config = { title: 'Page A', uid: 123, virtualReferrer: null };
+
+    const inlineScript = addInlineScript({
+      script,
+      parameters: [config],
+    });
+
+    expect(inlineScript).toStrictEqual(
+      <script type="text/javascript">
+        {`(function script(config) {
+      return config;
+    })(${JSON.stringify(config)})`}
+      </script>,
+    );
+  });
 });

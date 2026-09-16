@@ -88,6 +88,7 @@ const expectedOutput = {
   serverSideExperiments: input.serverSideExperiments,
   nonce: null,
   cspHeader: null,
+  primaryMediaType: null,
 };
 
 describe('RequestContext', () => {
@@ -135,6 +136,24 @@ describe('RequestContext', () => {
       isAmp: false,
       isApp: true,
       platform: 'app',
+    });
+  });
+
+  it('should return expected values for Topic Pages where primaryMediaType is set', () => {
+    const primaryMediaTypeInput = {
+      ...input,
+      primaryMediaType: 'video',
+    };
+
+    render(
+      <RequestContextProvider {...primaryMediaTypeInput}>
+        <Component />
+      </RequestContextProvider>,
+    );
+
+    expect(use).toHaveReturnedWith({
+      ...expectedOutput,
+      primaryMediaType: 'video',
     });
   });
 

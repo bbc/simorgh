@@ -1,6 +1,12 @@
 import { css } from '@emotion/react';
 
 const styles = {
+  pageWrapper: ({ palette, isDarkUi }) =>
+    css({
+      ...(isDarkUi && {
+        backgroundColor: palette.GREY_10,
+      }),
+    }),
   main: ({ spacings, mq }) =>
     css({
       margin: `0 ${spacings.FULL}rem`,

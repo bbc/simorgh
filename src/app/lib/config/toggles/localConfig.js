@@ -38,6 +38,9 @@ export default {
   include: {
     enabled: true,
   },
+  livePagePolling: {
+    enabled: true,
+  },
   liveRadioSchedule: {
     enabled: true,
   },

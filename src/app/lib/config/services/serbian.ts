@@ -144,7 +144,7 @@ export const service: SerbianConfig = {
       seeAll: 'Pogledajte sve',
       home: 'Glavna stranica',
       topicDiscovery: {
-        heading: 'Otkrijte više',
+        heading: 'Saznajte (više)',
         moreAboutTopic: 'Više o {topic}',
         fetchErrorMessage: 'Učitavanje nije uspelo. Pokušajte ponovo',
       },
@@ -630,7 +630,7 @@ export const service: SerbianConfig = {
       seeAll: 'Погледајте све',
       home: 'Главна страница',
       topicDiscovery: {
-        heading: 'Откријте више',
+        heading: 'Сазнајте (више)',
         moreAboutTopic: 'Више о {topic}',
         fetchErrorMessage: 'Учитавање није успело. Покушајте поново',
       },

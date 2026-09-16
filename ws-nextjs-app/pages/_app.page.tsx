@@ -50,6 +50,7 @@ interface Props {
         type: PageTypes;
         atiAnalytics?: ATIData;
       };
+      primaryMediaType?: string | null;
     };
     pageLang?: string;
     pageType: PageTypes;
@@ -159,7 +160,10 @@ export default class CustomApp extends App<Props> {
       navItems,
     } = pageProps;
 
-    const { metadata: { atiAnalytics = undefined } = {} } = pageData ?? {};
+    const {
+      metadata: { atiAnalytics = undefined } = {},
+      primaryMediaType = null,
+    } = pageData ?? {};
 
     const RenderChildrenOrError =
       status === 200 ? (
@@ -193,6 +197,7 @@ export default class CustomApp extends App<Props> {
             country={country}
             isNextJs={isNextJs}
             isUK={isUK ?? false}
+            primaryMediaType={primaryMediaType}
           >
             <AccountProvider initialConfig={idctaConfig}>
               <ReverbParamsContextProvider metadata={pageData?.metadata}>

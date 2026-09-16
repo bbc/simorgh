@@ -32,6 +32,7 @@ const reverbComponentTracking = async ({
     anchorElement,
     background,
     container,
+    error,
     experience,
     event,
     eventPublisher,
@@ -47,6 +48,7 @@ const reverbComponentTracking = async ({
     group,
     item,
     experience,
+    ...(error && { error }),
     ...(type && { type }),
     ...(background !== undefined && { background }),
     ...(container && { container }),
@@ -67,6 +69,7 @@ const reverbHandlers = {
   sectionView: reverbComponentTracking,
   sectionClick: reverbComponentTracking,
   activation: reverbComponentTracking,
+  error: reverbComponentTracking,
 };
 
 const callReverb = async (eventDetails: ReverbEventDetails) => {

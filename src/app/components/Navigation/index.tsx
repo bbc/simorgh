@@ -326,7 +326,6 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
   );
 
   // Dropdown menu: prioritise the first top-level item and all its subitems
-  // CHANGE WHEN HAVE ANSWER TO THE QUESTION ABOUT THIS
   const dropdownSource = (() => {
     if (!navigationItems.length) return [];
     const [first] = navigationItems;
