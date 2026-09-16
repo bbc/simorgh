@@ -1,5 +1,5 @@
 import { use } from 'react';
-import { useQuery } from '@tanstack/react-query';
+import { useQuery, type QueryKey } from '@tanstack/react-query';
 import uasApiRequest from '#app/lib/uasApi';
 import { buildGlobalId, type ActivityType } from '#app/lib/uasApi/uasUtility';
 import { HTTP_NO_CONTENT } from '#app/lib/statusCodes.const';
@@ -14,7 +14,7 @@ interface UseUASStatusHookConfig {
 interface UseUASStatusHookParams<StatusField extends string> {
   resourceId: string;
   config: UseUASStatusHookConfig;
-  queryKeyFn: (hashedUserId: string, resourceId: string) => unknown[];
+  queryKeyFn: (hashedUserId: string, resourceId: string) => QueryKey;
   statusField: StatusField;
   enabledFn: (resourceId: string, hashedUserId: string) => boolean;
 }

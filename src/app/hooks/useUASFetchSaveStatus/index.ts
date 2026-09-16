@@ -20,8 +20,7 @@ const useUASFetchSaveStatus = (
   const { isSaved, isLoading, error, metadata } = useUASStatusHook({
     resourceId: articleId,
     config: FAVOURITES_CONFIG,
-    queryKeyFn: (hashedUserId, id) =>
-      uasKeys.favouriteStatus(hashedUserId, id) as unknown as unknown[],
+    queryKeyFn: (hashedUserId, id) => uasKeys.favouriteStatus(hashedUserId, id),
     statusField: UASStatusField.SAVED,
     enabledFn: id => !!id,
   });

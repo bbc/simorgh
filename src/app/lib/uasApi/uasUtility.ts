@@ -23,11 +23,6 @@ const FAVOURITES_CONFIG = {
   action: 'favourited',
 } as const;
 
-/**
- * (Follow Topics): configuration for the UAS `follows` activity type.
- * Mirrors FAVOURITES_CONFIG so the same generic `uasApiRequest` handler,
- * `buildGlobalId`, error handling and TanStack Query patterns can be reused.
- */
 const FOLLOWS_CONFIG = {
   activityType: 'follows',
   resourceDomain: 'world-service-news',
@@ -117,11 +112,6 @@ const createFavouritesPayload = ({
   }),
 });
 
-/**
- * (Follow Topics): the minimal set of topic fields we send to UAS so a
- * followed topic can be rendered later (e.g. in a "Followed topics" list)
- * without an extra lookup.
- */
 export interface FollowTopicData {
   topicId: string;
   title: string;
@@ -138,11 +128,6 @@ const buildTopicMetadata = (
   service,
 });
 
-/**
- * (Follow Topics): builds the UAS request body for following a topic.
- * Structurally identical to `createFavouritesPayload`, only the config and
- * metadata differ — demonstrating the activity-agnostic reuse of the UAS layer.
- */
 const createFollowsPayload = (
   topicData: FollowTopicData,
   service: Services,

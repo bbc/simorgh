@@ -10,8 +10,7 @@ const useTopicFollowStatus = (topicId: string) =>
   useUASStatusHook({
     resourceId: topicId,
     config: FOLLOWS_CONFIG,
-    queryKeyFn: (hashedUserId, id) =>
-      uasKeys.followStatus(hashedUserId, id) as unknown as unknown[],
+    queryKeyFn: (hashedUserId, id) => uasKeys.followStatus(hashedUserId, id),
     statusField: UASStatusField.FOLLOWED,
     enabledFn: (id, hashedUserId) => !!id && !!hashedUserId,
   });

@@ -261,4 +261,32 @@ describe('FollowTopicButton', () => {
       screen.queryByTestId('follow-topic-btn-authorized'),
     ).not.toBeInTheDocument();
   });
+
+  it('does not render when topicId is missing', () => {
+    render(
+      <FollowTopicButton
+        topicData={
+          {
+            title: topicData.title,
+            service: topicData.service,
+            url: topicData.url,
+          } as unknown as typeof topicData
+        }
+      />,
+      {
+        service: 'hindi',
+        idctaConfig: mockIdctaConfig,
+        toggles: {
+          topicUasPersonalization: { enabled: true, value: 'hindi' },
+        },
+      },
+    );
+
+    expect(
+      screen.queryByTestId('follow-topic-btn-guest'),
+    ).not.toBeInTheDocument();
+    expect(
+      screen.queryByTestId('follow-topic-btn-authorized'),
+    ).not.toBeInTheDocument();
+  });
 });

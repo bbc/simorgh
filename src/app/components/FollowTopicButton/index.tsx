@@ -13,12 +13,14 @@ export interface FollowTopicButtonProps {
 const FOLLOW_TOPIC_BUTTON_ID = 'follow-topic-button';
 
 const FollowTopicButton = ({ topicData }: FollowTopicButtonProps) => {
+  const topicId = topicData?.topicId;
+
   const {
     isTopicUasPersonalizationAvailable,
     isTopicUasPersonalizationEnabled,
   } = use(AccountContext);
 
-  if (!isTopicUasPersonalizationAvailable) {
+  if (!isTopicUasPersonalizationAvailable || !topicId) {
     return null;
   }
 
@@ -31,7 +33,7 @@ const FollowTopicButton = ({ topicData }: FollowTopicButtonProps) => {
         {isTopicUasPersonalizationEnabled ? (
           <FollowTopicButtonAuthenticated topicData={topicData} />
         ) : (
-          <FollowTopicButtonGuest topicId={topicData.topicId} />
+          <FollowTopicButtonGuest topicId={topicId} />
         )}
       </div>
     </ErrorBoundary>
