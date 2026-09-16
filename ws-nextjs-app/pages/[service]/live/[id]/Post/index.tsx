@@ -121,7 +121,6 @@ const PostHeaderBanner = ({
   );
 };
 
-// Defined outside the component so Blocks always receives the same component references and doesn't remount children on every render.
 const postHeadingComponentsToRender = {
   headline: (props: { blocks: PostHeadline['model'] }) => {
     const { blocks } = props;
@@ -181,7 +180,6 @@ const PostByline = ({
   return <Byline blocks={[contributorData]} />;
 };
 
-// Defined outside the component so Blocks always receives the same component references and doesn't remount children (including the media player) on every render.
 const postContentComponentsToRender = {
   paragraph: (props: ComponentToRenderProps) => (
     <Paragraph
