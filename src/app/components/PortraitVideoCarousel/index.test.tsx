@@ -1,8 +1,13 @@
 import { act } from 'react';
 import { service as pidginConfig } from '#lib/config/services/pidgin';
 import Component from '.';
-import { screen, render } from '../react-testing-library-with-providers';
+import {
+  screen,
+  render,
+  fireEvent,
+} from '../react-testing-library-with-providers';
 import fixture from './fixture';
+import { Player } from '../MediaLoader/types';
 
 const eventTrackingData = {
   componentName: 'portrait-video-carousel',
@@ -11,6 +16,46 @@ const eventTrackingData = {
 const defaultAriaLabel = pidginConfig.default.translations.media.watch;
 
 describe('PortraitVideoCarousel', () => {
+  it('does not pause or reload an open video when its parent updates', () => {
+    const mockPlayer = {
+      load: jest.fn(),
+      bind: jest.fn(),
+      pause: jest.fn(),
+    } satisfies Partial<Player>;
+    const originalRequirejs = window.requirejs;
+    const originalEmbeddedMedia = window.embeddedMedia;
+    window.requirejs = jest.fn((dependencies, callback) =>
+      callback({ player: () => mockPlayer }),
+    );
+    Object.defineProperty(window, 'embeddedMedia', {
+      configurable: true,
+      writable: true,
+      value: { api: { players: () => ({ carousel: mockPlayer }) } },
+    });
+
+    const { rerender, unmount } = render(
+      <Component {...fixture} eventTrackingData={eventTrackingData} />,
+      { service: 'portuguese', pageType: 'live' },
+    );
+
+    try {
+      fireEvent.click(screen.getAllByTestId('promo-button')[0]);
+      expect(mockPlayer.load).toHaveBeenCalledTimes(1);
+
+      rerender(
+        <Component {...fixture} eventTrackingData={{ ...eventTrackingData }} />,
+      );
+
+      expect(screen.getByRole('dialog')).toBeInTheDocument();
+      expect(mockPlayer.pause).not.toHaveBeenCalled();
+      expect(mockPlayer.load).toHaveBeenCalledTimes(1);
+    } finally {
+      unmount();
+      window.requirejs = originalRequirejs;
+      window.embeddedMedia = originalEmbeddedMedia;
+    }
+  });
+
   it('Should contain the expected number of portrait video blocks', async () => {
     await act(async () => {
       render(<Component {...fixture} eventTrackingData={eventTrackingData} />);
