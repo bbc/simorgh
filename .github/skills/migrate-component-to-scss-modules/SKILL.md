@@ -139,7 +139,8 @@ component tests; test changes to those chains at the theme/Sass layer.
 | `dir === 'rtl' ? ... : ...` | Logical properties (`padding-inline-start`) |
 | Opera Mini branch | `:global(.is-opera-mini) &` |
 | Per-instance numeric value | Inline CSS custom property + `var()` |
-| Prop with many possible values (e.g. a GEL scale) | `data-*` attribute + `&[data-x='value']` selector |
+| Small set of named style variants | `data-*` attribute + `&[data-x='value']` selector |
+| Large set of possible values (e.g. a GEL scale) | Typed helper + inline CSS custom properties consumed by one SCSS rule set |
 
 ### Conditional style arrays
 
