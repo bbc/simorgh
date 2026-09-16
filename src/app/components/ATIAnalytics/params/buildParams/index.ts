@@ -11,9 +11,11 @@ export const buildPageATIParams = ({
   serviceContext,
   isSignedIn = false,
   hashedId = null,
+  isPersonalisationOn = false,
 }: ATIDataWithContexts & {
   isSignedIn?: boolean;
   hashedId?: string | null;
+  isPersonalisationOn?: boolean;
 }) => {
   const { isUK, platform, statsDestination, destinationSiteId } =
     requestContext;
@@ -67,6 +69,7 @@ export const buildPageATIParams = ({
     timeUpdated,
     isSignedIn,
     hashedId,
+    isPersonalisationOn,
     ...(ampExperimentName && { ampExperimentName }),
     ...(experimentName && { experimentName }),
     ...(experimentVariant && { experimentVariant }),
@@ -76,6 +79,7 @@ export const buildPageATIParams = ({
 type BuildPageParamsArgs = ATIDataWithContexts & {
   isSignedIn?: boolean;
   hashedId?: string | null;
+  isPersonalisationOn?: boolean;
 };
 
 const buildPageReverbParams = ({
@@ -84,6 +88,7 @@ const buildPageReverbParams = ({
   serviceContext,
   isSignedIn,
   hashedId,
+  isPersonalisationOn,
 }: BuildPageParamsArgs) =>
   buildReverbAnalyticsModel(
     buildPageATIParams({
@@ -92,6 +97,7 @@ const buildPageReverbParams = ({
       serviceContext,
       isSignedIn,
       hashedId,
+      isPersonalisationOn,
     }),
   );
 
@@ -118,6 +124,7 @@ export const buildAnalyticsParams = ({
   serviceContext,
   isSignedIn,
   hashedId,
+  isPersonalisationOn,
 }: BuildPageParamsArgs) => {
   const { resonanceEnabled } = serviceContext;
   const { platform } = requestContext;
@@ -132,6 +139,7 @@ export const buildAnalyticsParams = ({
       serviceContext,
       isSignedIn,
       hashedId,
+      isPersonalisationOn,
     }),
     resonanceParams: sendResonanceEvents
       ? buildPageResonanceParams({

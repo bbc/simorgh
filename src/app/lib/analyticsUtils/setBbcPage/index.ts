@@ -25,6 +25,7 @@ export type BBCPage = {
 export type BBCUser = {
   getHashedId: () => Promise<string | null>;
   isSignedIn: () => Promise<boolean>;
+  isPersonalisationOn: () => Promise<boolean>;
 };
 
 const setReverbPageValues = async ({
@@ -77,6 +78,8 @@ const setReverbPageValues = async ({
   window.bbcuser = {
     getHashedId: () => Promise.resolve(userVars.hashedId ?? null),
     isSignedIn: () => Promise.resolve(userVars.isSignedIn),
+    isPersonalisationOn: () =>
+      Promise.resolve(userVars.isPersonalisationOn ?? false),
   };
 };
 

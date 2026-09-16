@@ -163,7 +163,11 @@ describe('atiUrl', () => {
             x18: 'isLocServeCookieSet',
           },
         };
-        const userParams = { isSignedIn: false, hashedId: null };
+        const userParams = {
+          isSignedIn: false,
+          hashedId: null,
+          isPersonalisationOn: false,
+        };
 
         expect(reverbAnalyticsModel.params.page).toEqual(pageParams);
         expect(reverbAnalyticsModel.params.user).toEqual(userParams);
@@ -204,7 +208,11 @@ describe('atiUrl', () => {
             x18: 'isLocServeCookieSet',
           },
         };
-        const userParams = { isSignedIn: false, hashedId: null };
+        const userParams = {
+          isSignedIn: false,
+          hashedId: null,
+          isPersonalisationOn: false,
+        };
 
         expect(reverbAnalyticsModel.params.page).toEqual(pageParams);
         expect(reverbAnalyticsModel.params.user).toEqual(userParams);
