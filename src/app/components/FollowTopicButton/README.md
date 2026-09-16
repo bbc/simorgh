@@ -59,8 +59,8 @@ If these translations are missing, the authenticated variant does not render.
 ## Data source and dependencies
 
 - `AccountContext`
-  - `isTopicUasPersonalizationAvailable`
-  - `isTopicUasPersonalizationEnabled`
+  - `isTopicPersonalizationAvailable`
+  - `isTopicPersonalizationEnabled`
   - `signInUrl`
   - `registerUrl`
 - `ServiceContext`

@@ -84,25 +84,26 @@ export const AccountProvider = ({
     Boolean(initialConfig?.initialIsSignedIn || signedInToken);
 
   // Personalization for saved articles
-  const isPersonalizationAvailable =
+  const isArticlePersonalizationAvailable =
     isIdctaAvailable &&
     isPersonalizationToggleEnabled &&
     (isLocal()
       ? accountService?.toString().split('|').includes(service)
       : true);
 
-  const isPersonalizationEnabled = isPersonalizationAvailable && isSignedIn;
+  const isArticlePersonalizationEnabled =
+    isArticlePersonalizationAvailable && isSignedIn;
 
   // Personalization for followed topics
-  const isTopicUasPersonalizationAvailable =
+  const isTopicPersonalizationAvailable =
     isIdctaAvailable &&
     topicUasPersonalizationEnabled &&
     (isLocal()
       ? topicAccountService?.toString().split('|').includes(service)
       : true);
 
-  const isTopicUasPersonalizationEnabled =
-    isTopicUasPersonalizationAvailable && isSignedIn;
+  const isTopicPersonalizationEnabled =
+    isTopicPersonalizationAvailable && isSignedIn;
 
   const isRefreshAvailable =
     isIdctaAvailable && initialConfig?.availability?.refresh === 'GREEN';
@@ -118,10 +119,10 @@ export const AccountProvider = ({
       registerUrl,
       settingsUrl,
       forYouUrl,
-      isPersonalizationAvailable,
-      isPersonalizationEnabled,
-      isTopicUasPersonalizationAvailable,
-      isTopicUasPersonalizationEnabled,
+      isArticlePersonalizationAvailable,
+      isArticlePersonalizationEnabled,
+      isTopicPersonalizationAvailable,
+      isTopicPersonalizationEnabled,
     }),
     [
       hashedUserId,
@@ -133,10 +134,10 @@ export const AccountProvider = ({
       settingsUrl,
       signInUrl,
       signOutUrl,
-      isPersonalizationAvailable,
-      isPersonalizationEnabled,
-      isTopicUasPersonalizationAvailable,
-      isTopicUasPersonalizationEnabled,
+      isArticlePersonalizationAvailable,
+      isArticlePersonalizationEnabled,
+      isTopicPersonalizationAvailable,
+      isTopicPersonalizationEnabled,
     ],
   );
 

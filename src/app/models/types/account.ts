@@ -28,8 +28,8 @@ export type AccountContextProps = {
   signOutUrl?: string;
   forYouUrl?: string;
   hashedUserId?: string;
-  isPersonalizationEnabled: boolean;
-  isPersonalizationAvailable: boolean;
-  isTopicUasPersonalizationEnabled: boolean;
-  isTopicUasPersonalizationAvailable: boolean;
+  isArticlePersonalizationEnabled: boolean;
+  isArticlePersonalizationAvailable: boolean;
+  isTopicPersonalizationEnabled: boolean;
+  isTopicPersonalizationAvailable: boolean;
 };
