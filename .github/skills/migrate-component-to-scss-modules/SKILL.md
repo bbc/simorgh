@@ -25,7 +25,7 @@ Known blocked components: `Disclaimer`, `MostRead/Canonical/Item`, `MostRead/Can
 
 Rendering a legacy component is **not** by itself a blocker — `ArticleLinksBlock` renders `SkipLinkWrapper` and migrated cleanly. It only blocks when the legacy child controls layout or receives styles.
 
-`getAmpLiteCss` inlines `.module.scss` chunks automatically, so AMP and Lite components need no special wiring. They do need manual verification on the AMP platform, so flag it if the component renders there.
+`getAmpLiteCss` inlines `.module.scss` chunks automatically, so AMP and Lite components need no special wiring. Minimize the compiled CSS for every edition; if the component renders in AMP, manually verify that the final inlined `style[amp-custom]` payload remains below AMP's hard 75 KB limit.
 
 Legacy imports that are **pure utilities** (e.g. `formatDuration` from `psammead-timestamp-container`) do not block migration.
 
@@ -116,6 +116,12 @@ Valid scales: `atlas`, `elephant`, `imperial`, `royal`, `foolscap`, `canon`, `tr
 | `serifBold` | `'serif-bold'` |
 | `serifLight` | `'serif-light'` |
 
+Font fallback resolution belongs to the theme layer. `ThemeProviderSCSSModules`
+font variant files expose the raw variant variables and the shared
+`fontVariantAliases.scss` file builds the fallback aliases consumed by the
+component mixins. Do not copy fallback chains into a component helper or its
+component tests; test changes to those chains at the theme/Sass layer.
+
 ### Pixel conversion
 
 `pixelsToRem(3)` → `theme.pixelsToRem-px-to-rem(3)` (returns a value with `rem` units already applied).
@@ -170,47 +176,64 @@ This works when the second class adds **different** properties to the base. If t
 
 A **discrete variant** (boolean or small union) can legitimately select or add a class. What the styling standards prohibit is deriving a class from a **continuous or computed value**, or from `dir` — use a CSS custom property or logical properties for those.
 
-### Large discrete enums
+### Props with many possible values
 
-A boolean or two/three-way union composes fine as classes (above). A prop with many possible values (a `GelFontSize` scale, say — 15 options) turns that into a class per value *plus* a JS lookup table mapping the prop to the right one, maintained twice.
+When a prop has many possible values, avoid creating a separate class and CSS
+rule for every value unless the list is small. The browser downloads all of
+those rules, even though each instance uses only one value.
 
-Pass the raw prop value through as a `data-*` attribute instead, and match it with an attribute selector nested in the base class — the same convention already used for `data-is-dark-ui`:
+For a small list, keep the value in a `data-*` attribute and select the matching
+rule in SCSS:
 
-**Before (class per value + lookup map):**
 ```tsx
-const fontSizeClassNames: Record<GelFontSize, string> = {
-  atlas: styles.fontSizeAtlas,
-  elephant: styles.fontSizeElephant,
-  // ...13 more
-};
-
-<a className={clsx(styles.self, size && fontSizeClassNames[size])}>
+<a className={styles.link} data-size={size} />
 ```
 
-**After:**
-```tsx
-<a className={styles.self} data-font-size={size}>
-```
 ```scss
-.self {
-  &[data-font-size='atlas'] {
-    @include theme.fontSizes-gel-font-size(atlas);
-  }
-
-  &[data-font-size='elephant'] {
-    @include theme.fontSizes-gel-font-size(elephant);
-  }
-  // ...13 more
+.link[data-size='small'] {
+  font-size: 1rem;
 }
 ```
 
-React omits a `data-*` attribute when its value is `undefined`, so no `size &&` guard is needed. This removes the JS-side lookup table entirely — the SCSS file is the only place the value-to-style mapping lives, rather than keeping two copies in sync.
+For a larger list, use one set of responsive rules and pass the selected values
+as CSS custom properties:
 
-Test this by asserting the attribute (`toHaveAttribute('data-font-size', 'atlas')`) rather than a class name — the class name is an implementation detail one step further removed from the prop being tested.
+```tsx
+import type { CSSProperties } from 'react';
 
-See [src/app/components/InlineLink/index.module.scss](../../../src/app/components/InlineLink/index.module.scss) for a full example (`size` and `fontVariant`, 15 and 10 values respectively).
+type LinkSize = 'small' | 'large';
 
-For large enums on shared, AMP, or Lite components, measure the compiled CSS before using this pattern. Each attribute-selector branch is shipped with the component's CSS chunk even when only one value is used at runtime. Prefer a compact CSS custom-property bridge — one responsive rule set with selected theme variable references supplied inline — when the full enum would materially increase the AMP/Lite payload. Put token-name mapping and theme fallback logic in a shared `ThemeProviderSCSSModules` typography helper, not in the component; see [typography.ts](../../../src/app/components/ThemeProviderSCSSModules/typography.ts). This keeps the theme values service-aware without emitting one responsive rule set per enum value or duplicating theme knowledge in consumers.
+type LinkStyles = CSSProperties & {
+  '--link-font-size': string;
+  '--link-line-height': string;
+};
+
+const getStylesForSize = (size: LinkSize): LinkStyles => ({
+  '--link-font-size': size === 'small' ? '1rem' : '1.25rem',
+  '--link-line-height': size === 'small' ? '1.5' : '1.25',
+});
+
+<a className={styles.link} style={getStylesForSize(size)} />
+```
+
+```scss
+.link {
+  font-size: var(--link-font-size, inherit);
+  line-height: var(--link-line-height, inherit);
+}
+```
+
+Keep the code that maps prop values to custom-property values in one typed
+helper or at the component boundary. Do not repeat that mapping in both
+TypeScript and SCSS. Keep fallback behavior with the code that owns those
+values.
+
+See [src/app/components/InlineLink/index.module.scss](../../../src/app/components/InlineLink/index.module.scss) for a concrete compact CSS custom-property bridge: `size` and `fontVariant` are mapped by [typography.ts](../../../src/app/components/ThemeProviderSCSSModules/typography.ts) to inline `--gel-typography-*` values, which one responsive rule set consumes.
+
+Keep the CSS small for every edition. If the component renders in AMP, measure
+the final inlined `style[amp-custom]` payload and keep the total below AMP's
+hard 75 KB limit. This is an additional AMP requirement; the CSS-minimization
+guidance applies to all editions.
 
 ### Consumer-owned style overrides
 
@@ -248,7 +271,8 @@ yarn jest src/app/components/<ComponentName>
 - Confirm no `@emotion` imports remain in the component: `grep -rn "@emotion" src/app/components/<ComponentName>`
 - Check an RTL service (e.g. `arabic`) and a dark-UI context, since those behaviours move from JS branching into SCSS selectors.
 - `.module.scss` files are mocked with `identity-obj-proxy` in Jest, so `yarn jest` never compiles or validates the SCSS itself — a typo or invalid selector won't fail a test. Catching that relies on the Next.js build (fails on invalid SCSS) and Storybook/Chromatic (catches visually broken output), not on Jest.
-- If the test asserts computed CSS with `toHaveStyle`, rewrite it to `toHaveClass` instead. `.module.scss` files are mocked with `identity-obj-proxy` in Jest, so no real stylesheet is ever loaded into jsdom — `toHaveStyle` assertions against migrated styles will fail even when the migration is correct.
+- For a `data-*` enum, assert the attribute value rather than a generated class. For a compact inline CSS custom-property bridge, assert `element.style.getPropertyValue(...)` against explicit expected values in the `it.each` table; do not repeat the production value-conversion logic in the assertion.
+- Do not use `toHaveStyle` to validate declarations that only come from the mocked `.module.scss` stylesheet. Inline custom properties deliberately emitted by React are different: their values are present in jsdom and can be asserted directly.
 - Run `yarn build` from `ws-nextjs-app` once per PR (not per component). Jest only exercises files that import the component under test, so it won't catch a legacy page elsewhere still importing the deleted `index.styles.*` directly — the build's TypeScript check will.
 
 ## Reference implementations
@@ -256,5 +280,5 @@ yarn jest src/app/components/<ComponentName>
 - [src/app/components/ArticleLinksBlock/index.module.scss](../../../src/app/components/ArticleLinksBlock/index.module.scss) — tokens, forced colours, dark UI
 - [src/app/components/ActionTooltip/index.module.scss](../../../src/app/components/ActionTooltip/index.module.scss)
 - [src/app/components/Example/index.module.scss](../../../src/app/components/Example/index.module.scss) — minimal case
-- [src/app/components/InlineLink/index.module.scss](../../../src/app/components/InlineLink/index.module.scss) — large discrete enums via `data-*` attribute selectors
+- [src/app/components/InlineLink/index.module.scss](../../../src/app/components/InlineLink/index.module.scss) — compact CSS custom-property bridge for large enums on a shared component
 - [src/app/components/Embeds/EmbedError/index.module.scss](../../../src/app/components/Embeds/EmbedError/index.module.scss) — consumer-owned contextual override

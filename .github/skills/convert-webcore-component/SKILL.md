@@ -221,6 +221,62 @@ Where a value is truly dynamic (a computed height, an image offset):
 }
 ```
 
+### Props with many possible values
+
+When a prop has many possible values, avoid creating a separate class and CSS
+rule for every value unless the list is small. The browser downloads all of
+those rules, even though each instance uses only one value.
+
+For a small list, keep the value in a `data-*` attribute and select the matching
+rule in SCSS:
+
+```tsx
+<a className={styles.link} data-size={size} />
+```
+
+```scss
+.link[data-size='small'] {
+  font-size: 1rem;
+}
+```
+
+For a larger list, use one set of responsive rules and pass the selected values
+as CSS custom properties:
+
+```tsx
+import type { CSSProperties } from 'react';
+
+type LinkSize = 'small' | 'large';
+
+type LinkStyles = CSSProperties & {
+  '--link-font-size': string;
+  '--link-line-height': string;
+};
+
+const getStylesForSize = (size: LinkSize): LinkStyles => ({
+  '--link-font-size': size === 'small' ? '1rem' : '1.25rem',
+  '--link-line-height': size === 'small' ? '1.5' : '1.25',
+});
+
+<a className={styles.link} style={getStylesForSize(size)} />
+```
+
+```scss
+.link {
+  font-size: var(--link-font-size, inherit);
+  line-height: var(--link-line-height, inherit);
+}
+```
+
+Keep the code that maps prop values to custom-property values in one typed
+helper or at the component boundary. Do not repeat that mapping in both
+TypeScript and SCSS. Keep fallback behavior with the code that owns those
+values.
+
+When the component renders in AMP, measure the final inlined `style[amp-custom]`
+payload and keep the total below AMP's hard 75 KB limit. This is an additional
+AMP requirement; the CSS-minimization guidance applies to all editions.
+
 ### Styling Mistakes to Avoid
 
 - Don't produce `index.styles.ts` files or use Emotion's `css` prop / `styled` API
