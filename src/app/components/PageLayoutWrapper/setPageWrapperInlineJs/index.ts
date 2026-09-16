@@ -34,7 +34,7 @@ const setPageWrapperInlineJs = function (params: PageWrapperInlineJsParams) {
           })
           .then(function readBlob(blob) {
             if (blob && blob.constructor.name === 'Blob') {
-              const reader = new FileReader();
+              var reader = new FileReader();
               reader.addEventListener('load', function onLoad() {
                 resolve(reader.result);
               });
@@ -48,8 +48,8 @@ const setPageWrapperInlineJs = function (params: PageWrapperInlineJsParams) {
     var createStyleAndAttach = function attachFontStyle(
       styleInnerText: string,
     ) {
-      const head = document.head || document.getElementsByTagName('head')[0];
-      const fontStylePlaceholder = document.createElement('style');
+      var head = document.head || document.getElementsByTagName('head')[0];
+      var fontStylePlaceholder = document.createElement('style');
       fontStylePlaceholder.innerHTML = styleInnerText;
       head.appendChild(fontStylePlaceholder);
     };
@@ -61,7 +61,7 @@ const setPageWrapperInlineJs = function (params: PageWrapperInlineJsParams) {
     ) {
       window.addEventListener('load', function onWindowLoad() {
         getFont(font.downloadSrc).then(function onFontRetrieved(fontContents) {
-          const forStorage = {
+          var forStorage = {
             base64Contents: fontContents,
             fontFamily: font.fontFamily,
             fontWeight: font.fontWeight,
@@ -70,7 +70,7 @@ const setPageWrapperInlineJs = function (params: PageWrapperInlineJsParams) {
           localStorage.setItem(storageKey, JSON.stringify(forStorage));
 
           if (shouldAttachStyle) {
-            const styleInnerText =
+            var styleInnerText =
               '@font-face{font-family: "' +
               font.fontFamily +
               '"; font-weight: ' +
@@ -85,14 +85,14 @@ const setPageWrapperInlineJs = function (params: PageWrapperInlineJsParams) {
     };
 
     serviceFonts.forEach(function setFont(font) {
-      const storageKey = 'font-' + font.name;
-      const fontContents = localStorage.getItem(storageKey);
+      var storageKey = 'font-' + font.name;
+      var fontContents = localStorage.getItem(storageKey);
 
       if (!fontContents) {
         retrieveAndStoreFont(font, storageKey, true);
       } else {
-        const parsedFontContents = JSON.parse(fontContents);
-        const styleInnerText =
+        var parsedFontContents = JSON.parse(fontContents);
+        var styleInnerText =
           '@font-face{font-family: "' +
           parsedFontContents.fontFamily +
           '"; font-weight: ' +
@@ -110,13 +110,13 @@ const setPageWrapperInlineJs = function (params: PageWrapperInlineJsParams) {
   }
 
   var wrappedPageTimeStart = new Date();
-  const wrappedYear = wrappedPageTimeStart.getFullYear();
-  const wrappedMonth = wrappedPageTimeStart.getMonth() + 1;
-  const wrappedStorageKey = 'ws_bbc_wrapped';
+  var wrappedYear = wrappedPageTimeStart.getFullYear();
+  var wrappedMonth = wrappedPageTimeStart.getMonth() + 1;
+  var wrappedStorageKey = 'ws_bbc_wrapped';
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const wrappedContents: Record<string, any> = {};
-  const topicsStorageKey = 'ws_bbc_topics';
-  const topicsContents = JSON.parse(
+  var wrappedContents: Record<string, any> = {};
+  var topicsStorageKey = 'ws_bbc_topics';
+  var topicsContents = JSON.parse(
     localStorage.getItem(topicsStorageKey) || '{}',
   );
 
@@ -134,10 +134,10 @@ const setPageWrapperInlineJs = function (params: PageWrapperInlineJsParams) {
     localStorage.setItem(wrappedStorageKey, JSON.stringify(wrappedContents));
   }
 
-  const wrappedLocalStorageContents = localStorage.getItem(wrappedStorageKey);
+  var wrappedLocalStorageContents = localStorage.getItem(wrappedStorageKey);
 
   if (wrappedLocalStorageContents) {
-    const wrappedLocalStorageContentsParsed = JSON.parse(
+    var wrappedLocalStorageContentsParsed = JSON.parse(
       wrappedLocalStorageContents,
     );
 
@@ -156,12 +156,12 @@ const setPageWrapperInlineJs = function (params: PageWrapperInlineJsParams) {
     }
   }
 
-  const wrappedContentsShortcut = wrappedContents[wrappedYear];
+  var wrappedContentsShortcut = wrappedContents[wrappedYear];
 
   if (wrappedTopics) {
     wrappedTopics.forEach(function setTopicCount(topic) {
-      const topicName = topic.topicName;
-      const topicId = topic.topicId;
+      var topicName = topic.topicName;
+      var topicId = topic.topicId;
 
       if (!topicsContents[service]) {
         topicsContents[service] = {};
@@ -186,8 +186,8 @@ const setPageWrapperInlineJs = function (params: PageWrapperInlineJsParams) {
 
   document.onvisibilitychange = function onVisibilityChange() {
     if (document.visibilityState === 'hidden') {
-      const wrappedTimeNow = new Date();
-      const wrappedDifference =
+      var wrappedTimeNow = new Date();
+      var wrappedDifference =
         wrappedTimeNow.getTime() - wrappedPageTimeStart.getTime();
       wrappedContentsShortcut.duration = wrappedContentsShortcut.duration
         ? wrappedContentsShortcut.duration + wrappedDifference
