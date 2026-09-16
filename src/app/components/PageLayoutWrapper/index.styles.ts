@@ -1,13 +1,13 @@
 import { css, Theme } from '@emotion/react';
 
 export default {
-  wrapper: ({ palette }: Theme) =>
+  wrapper: ({ palette, isDarkUi }: Theme) =>
     css({
       minHeight: '100vh',
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'space-between',
-      backgroundColor: palette.GHOST,
+      backgroundColor: isDarkUi ? palette.GREY_10 : palette.GHOST,
     }),
   content: css({
     flexGrow: 1,
