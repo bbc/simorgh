@@ -28,8 +28,8 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
     const { componentName } = this.props;
     logger.error(CLIENT_COMPONENT_RENDER_ERROR, {
       componentName,
-      error: error.message,
-      componentStack: errorInfo.componentStack,
+      error: error?.message,
+      componentStack: errorInfo?.componentStack,
     });
   }
 
