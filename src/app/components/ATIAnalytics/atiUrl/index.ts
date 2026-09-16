@@ -36,15 +36,22 @@ export const buildResonanceAnalyticsModel = ({
   appName,
   contentId,
   contentType,
-  language,
-  statsDestination,
   destinationSiteId,
   hashedId,
+  language,
+  ldpThingIds,
+  ldpThingLabels,
   pageIdentifier,
-  producerName,
+  pageTitle,
   platform,
+  producerName,
+  statsDestination,
+  timePublished,
+  timeUpdated,
 }: ATIPageTrackingProps): ResonanceBeaconConfig => {
   const env = getEnvConfig().SIMORGH_APP_ENV;
+  const href = getHref(platform);
+  const referrer = getReferrer(platform);
 
   return {
     resonanceProperties: {
@@ -53,6 +60,7 @@ export const buildResonanceAnalyticsModel = ({
     baseProperties: {
       app: {
         name: platform === 'app' ? `${appName}-app` : appName,
+        type: getAppType(platform),
       },
       destination: statsDestination,
       hashedUserId: hashedId ?? undefined,
@@ -64,8 +72,13 @@ export const buildResonanceAnalyticsModel = ({
       contentId,
       contentType,
       language,
-      destination: statsDestination,
-      producer: producerName,
+      ...(href && { url: href }),
+      ...(referrer && { referrerUrl: referrer }),
+      ...(pageTitle && { pageTitle: sanitise(pageTitle) }),
+      ...(timePublished && { publicationDate: timePublished }),
+      ...(timeUpdated && { pubUpdateDate: timeUpdated }),
+      ...(ldpThingLabels && { ldpTags: ldpThingLabels }),
+      ...(ldpThingIds && { ldpIds: ldpThingIds }),
     },
   } as ResonanceBeaconConfig;
 };
