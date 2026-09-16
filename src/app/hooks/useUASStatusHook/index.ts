@@ -33,6 +33,21 @@ enum UASStatusField {
   FOLLOWED = 'isFollowed',
 }
 
+/**
+ * Generic UAS status hook used by feature-specific hooks (e.g. useUASFetchSaveStatus, useTopicFollowStatus).
+ *
+ * It performs a UAS GET request for a resource and returns a standard status shape containing:
+ * - a dynamic status field (`isSaved` / `isFollowed`)
+ * - loading and error state from React Query
+ * - optional metadata returned by UAS
+ *
+ * @param params.resourceId - Resource identifier (articleId, topicId, etc.)
+ * @param params.config - UAS activity configuration (activity type, resource domain/type)
+ * @param params.queryKeyFn - Function to build the React Query cache key
+ * @param params.statusField - Name of the boolean status field to return
+ * @param params.enabledFn - Predicate controlling whether the query should run
+ * @returns Status object keyed by `statusField`, plus `isLoading`, `error`, and optional `metadata`
+ */
 const useUASStatusHook = <StatusField extends string>(
   params: UseUASStatusHookParams<StatusField>,
 ): UseUASStatusHookReturn<StatusField> => {

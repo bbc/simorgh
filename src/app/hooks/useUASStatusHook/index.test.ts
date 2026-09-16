@@ -3,7 +3,7 @@ import { renderHook } from '#app/components/react-testing-library-with-providers
 import uasApiRequest from '#app/lib/uasApi';
 import { buildGlobalId } from '#app/lib/uasApi/uasUtility';
 import { AccountContext } from '#app/contexts/AccountContext';
-import useUASStatusHook, { UASStatusField } from './createUASStatusHook';
+import useUASStatusHook, { UASStatusField } from '.';
 
 jest.mock('#app/lib/uasApi');
 jest.mock('#app/lib/uasApi/uasUtility', () => {

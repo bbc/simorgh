@@ -1,8 +1,6 @@
 import { FAVOURITES_CONFIG } from '#app/lib/uasApi/uasUtility';
 import uasKeys from '#app/lib/uasApi/queryKeys';
-import useUASStatusHook, {
-  UASStatusField,
-} from '#app/hooks/createUASStatusHook';
+import useUASStatusHook, { UASStatusField } from '#app/hooks/useUASStatusHook';
 
 /**
  * Fetches an article's saved status from UAS.
