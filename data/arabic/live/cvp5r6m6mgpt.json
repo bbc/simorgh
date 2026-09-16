@@ -85,116 +85,13 @@
     "firstPublishedDateTime": "2024-12-20T11:26:28.576Z",
     "type": "live-coverage",
     "dataSource": "TIPO",
-    "isLive": true,
-    "portraitVideoItems": {
-      "title": "مقاطع قصيرة",
-      "portraitVideo": {
-        "blocks": [
-          {
-            "type": "portraitClipMedia",
-            "model": {
-              "type": "video",
-              "images": [
-                {
-                  "source": "https://ichef.bbci.co.uk/ace/ws/1024/cpsprodpb/d032/live/bd48a6a0-a6e6-11f1-b109-879e35c24276.jpg.webp",
-                  "urlTemplate": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/d032/live/bd48a6a0-a6e6-11f1-b109-879e35c24276.jpg.webp",
-                  "altText": "bbc"
-                },
-                {
-                  "source": "https://ichef.bbci.co.uk/ace/ws/1024/cpsprodpb/d032/live/bd48a6a0-a6e6-11f1-b109-879e35c24276.jpg.webp",
-                  "urlTemplate": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/d032/live/bd48a6a0-a6e6-11f1-b109-879e35c24276.jpg.webp",
-                  "altText": "bbc"
-                }
-              ],
-              "video": {
-                "id": "urn:bbc:optimo:asset:clyj2z4g0l0o",
-                "title": "كيف حولته عيونه الزرقاء من بائع متجول لأشهر طفل باليمن؟",
-                "holdingImageURL": "https://ichef.bbci.co.uk/ace/standard/512/cpsprodpb/d032/live/bd48a6a0-a6e6-11f1-b109-879e35c24276.jpg",
-                "version": {
-                  "id": "p0p7kxxm",
-                  "duration": "PT1M7S",
-                  "kind": "programme",
-                  "guidance": null,
-                  "territories": ["uk", "nonuk"]
-                },
-                "isEmbeddingAllowed": false,
-                "shareUrl": "/arabic/articles/clyj2z4g0l0o"
-              }
-            }
-          },
-          {
-            "type": "portraitClipMedia",
-            "model": {
-              "type": "video",
-              "images": [
-                {
-                  "source": "https://ichef.bbci.co.uk/ace/ws/1024/cpsprodpb/8a4b/live/38e45a10-a6ca-11f1-b109-879e35c24276.jpg.webp",
-                  "urlTemplate": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/8a4b/live/38e45a10-a6ca-11f1-b109-879e35c24276.jpg.webp",
-                  "altText": "ما قصة حادثة الطعن في تايمز سكوير؟"
-                },
-                {
-                  "source": "https://ichef.bbci.co.uk/ace/ws/1024/cpsprodpb/8a4b/live/38e45a10-a6ca-11f1-b109-879e35c24276.jpg.webp",
-                  "urlTemplate": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/8a4b/live/38e45a10-a6ca-11f1-b109-879e35c24276.jpg.webp",
-                  "altText": "ما قصة حادثة الطعن في تايمز سكوير؟"
-                }
-              ],
-              "video": {
-                "id": "urn:bbc:optimo:asset:cddvy5yz3rro",
-                "title": "ما قصة حادثة الطعن في تايمز سكوير؟",
-                "holdingImageURL": "https://ichef.bbci.co.uk/ace/standard/512/cpsprodpb/8a4b/live/38e45a10-a6ca-11f1-b109-879e35c24276.jpg",
-                "version": {
-                  "id": "p0p7j563",
-                  "duration": "PT59S",
-                  "kind": "programme",
-                  "guidance": null,
-                  "territories": ["uk", "nonuk"]
-                },
-                "isEmbeddingAllowed": false,
-                "shareUrl": "/arabic/articles/cddvy5yz3rro"
-              }
-            }
-          },
-          {
-            "type": "portraitClipMedia",
-            "model": {
-              "type": "video",
-              "images": [
-                {
-                  "source": "https://ichef.bbci.co.uk/ace/ws/1024/cpsprodpb/180f/live/3e2f2050-a601-11f1-a291-b542ee92de7c.jpg.webp",
-                  "urlTemplate": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/180f/live/3e2f2050-a601-11f1-a291-b542ee92de7c.jpg.webp",
-                  "altText": "من هو الـGOAT مارادونا أم ميسي؟"
-                },
-                {
-                  "source": "https://ichef.bbci.co.uk/ace/ws/1024/cpsprodpb/180f/live/3e2f2050-a601-11f1-a291-b542ee92de7c.jpg.webp",
-                  "urlTemplate": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/180f/live/3e2f2050-a601-11f1-a291-b542ee92de7c.jpg.webp",
-                  "altText": "من هو الـGOAT مارادونا أم ميسي؟"
-                }
-              ],
-              "video": {
-                "id": "urn:bbc:optimo:asset:cgjq23eejvvo",
-                "title": "من هو الـGOAT مارادونا أم ميسي؟",
-                "holdingImageURL": "https://ichef.bbci.co.uk/ace/standard/512/cpsprodpb/180f/live/3e2f2050-a601-11f1-a291-b542ee92de7c.jpg",
-                "version": {
-                  "id": "p0p7c9r3",
-                  "duration": "PT1M33S",
-                  "kind": "programme",
-                  "guidance": null,
-                  "territories": ["uk", "nonuk"]
-                },
-                "isEmbeddingAllowed": false,
-                "shareUrl": "/arabic/articles/cgjq23eejvvo"
-              }
-            }
-          }
-        ]
-      }
-    },
+    "isLive": false,
     "summaryPoints": {
       "id": null,
       "content": null
     },
     "liveTextStream": {
-      "id": "3CFE876A75E449DD9EDF3D62CD84737B",
+      "id": "39A9B954BC394441ACFDC0A2E6CAD80F",
       "contributors": null,
       "content": {
         "data": {

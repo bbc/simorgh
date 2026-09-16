@@ -1,5 +1,6 @@
 import { act } from 'react';
 import { service as pidginConfig } from '#lib/config/services/pidgin';
+import hindiLivePage from '#data/hindi/live/cm93v1d6rw4pt.json';
 import Component from '.';
 import {
   screen,
@@ -7,7 +8,7 @@ import {
   fireEvent,
 } from '../react-testing-library-with-providers';
 import fixture from './fixture';
-import { Player } from '../MediaLoader/types';
+import { Player, PortraitClipMediaBlock } from '../MediaLoader/types';
 
 const eventTrackingData = {
   componentName: 'portrait-video-carousel',
@@ -16,17 +17,19 @@ const eventTrackingData = {
 const defaultAriaLabel = pidginConfig.default.translations.media.watch;
 
 describe('PortraitVideoCarousel', () => {
-  it('does not pause or reload an open video when its parent updates', () => {
+  it('does not pause or reload the Hindi live-page carousel when its parent updates', () => {
+    const blocks = hindiLivePage.data.portraitVideoItems.portraitVideo
+      .blocks as PortraitClipMediaBlock[];
     const mockPlayer = {
       load: jest.fn(),
       bind: jest.fn(),
       pause: jest.fn(),
     } satisfies Partial<Player>;
+    const mockRequire = jest.fn();
+    const mockBump = { player: () => mockPlayer };
     const originalRequirejs = window.requirejs;
     const originalEmbeddedMedia = window.embeddedMedia;
-    window.requirejs = jest.fn((dependencies, callback) =>
-      callback({ player: () => mockPlayer }),
-    );
+    window.requirejs = mockRequire;
     Object.defineProperty(window, 'embeddedMedia', {
       configurable: true,
       writable: true,
@@ -34,19 +37,26 @@ describe('PortraitVideoCarousel', () => {
     });
 
     const { rerender, unmount } = render(
-      <Component {...fixture} eventTrackingData={eventTrackingData} />,
-      { service: 'portuguese', pageType: 'live' },
+      <Component blocks={blocks} eventTrackingData={eventTrackingData} />,
+      { service: 'hindi', pageType: 'live' },
     );
 
     try {
       fireEvent.click(screen.getAllByTestId('promo-button')[0]);
+      const initialisePlayer = mockRequire.mock.calls[0][1];
+      initialisePlayer(mockBump);
       expect(mockPlayer.load).toHaveBeenCalledTimes(1);
 
+      // Successful polls redraw the page even when the videos are unchanged.
       rerender(
-        <Component {...fixture} eventTrackingData={{ ...eventTrackingData }} />,
+        <Component
+          blocks={blocks}
+          eventTrackingData={{ ...eventTrackingData }}
+        />,
       );
 
       expect(screen.getByRole('dialog')).toBeInTheDocument();
+      expect(mockRequire).toHaveBeenCalledTimes(1);
       expect(mockPlayer.pause).not.toHaveBeenCalled();
       expect(mockPlayer.load).toHaveBeenCalledTimes(1);
     } finally {
