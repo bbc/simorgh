@@ -1,6 +1,7 @@
 import { use } from 'react';
 import { AccountContext } from '#contexts/AccountContext';
 import type { TopicFollowData } from '#app/lib/uasApi/uasUtility';
+import ErrorBoundary from '#app/components/ErrorBoundary';
 import styles from './index.styles';
 import FollowTopicButtonAuthenticated from './FollowTopicButtonAuthenticated/lazy';
 import FollowTopicButtonGuest from './FollowTopicButtonGuest';
@@ -22,7 +23,7 @@ const FollowTopicButton = ({ topicData }: FollowTopicButtonProps) => {
   }
 
   return (
-    <>
+    <ErrorBoundary componentName="FollowTopicButton">
       <noscript>
         <style>{`#${FOLLOW_TOPIC_BUTTON_ID} { display: none; }`}</style>
       </noscript>
@@ -33,7 +34,7 @@ const FollowTopicButton = ({ topicData }: FollowTopicButtonProps) => {
           <FollowTopicButtonGuest topicId={topicData.topicId} />
         )}
       </div>
-    </>
+    </ErrorBoundary>
   );
 };
 

@@ -16,7 +16,7 @@ interface UseUASStatusHookParams<StatusField extends string> {
   config: UseUASStatusHookConfig;
   queryKeyFn: (hashedUserId: string, resourceId: string) => unknown[];
   statusField: StatusField;
-  enabledFn?: (resourceId: string, hashedUserId: string) => boolean;
+  enabledFn: (resourceId: string, hashedUserId: string) => boolean;
 }
 
 type UseUASStatusHookReturn<StatusField extends string> = Record<

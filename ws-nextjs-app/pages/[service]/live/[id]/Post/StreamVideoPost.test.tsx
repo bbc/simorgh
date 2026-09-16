@@ -162,6 +162,18 @@ describe('StreamVideoPost', () => {
     );
   });
 
+  it('should keep tracking data stable when the component rerenders', () => {
+    const { rerender } = render(
+      <StreamVideoPost blocks={landscapeClipMediaBlocks} />,
+      { pageType: 'live' },
+    );
+    const initialTrackingData = mockedUseViewTracker.mock.calls[0][0];
+
+    rerender(<StreamVideoPost blocks={landscapeClipMediaBlocks} />);
+
+    expect(mockedUseViewTracker.mock.calls[1][0]).toBe(initialTrackingData);
+  });
+
   it('should render MediaLoader', () => {
     const { getByTestId } = render(
       <StreamVideoPost blocks={landscapeClipMediaBlocks} />,
