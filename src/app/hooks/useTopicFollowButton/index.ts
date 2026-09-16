@@ -72,7 +72,7 @@ const useTopicFollowButton = (
   return {
     isFollowed,
     isLoading,
-    isUpdating: mutation.isPending,
+    isUpdating: mutation.isPending && !mutation.isPaused,
     error: mutation.error || error,
     handleFollowAction: mutation.mutate,
   };

@@ -33,6 +33,10 @@ jest.mock('react', () => ({
 
 const mockSetQueryData = jest.fn();
 const mockInvalidateQueries = jest.fn();
+const mutationState = {
+  isPending: false,
+  isPaused: false,
+};
 
 jest.mock('@tanstack/react-query', () => {
   let capturedMutationConfig: {
@@ -58,7 +62,8 @@ jest.mock('@tanstack/react-query', () => {
           capturedMutationConfig.onSuccess?.(result, action);
           return result;
         },
-        isPending: false,
+        isPending: mutationState.isPending,
+        isPaused: mutationState.isPaused,
         error: null,
       };
     },
@@ -87,6 +92,8 @@ describe('useTopicFollowButton', () => {
 
   beforeEach(() => {
     jest.clearAllMocks();
+    mutationState.isPending = false;
+    mutationState.isPaused = false;
 
     mockUseTopicFollowStatus.mockReturnValue({
       isFollowed: false,
@@ -267,5 +274,23 @@ describe('useTopicFollowButton', () => {
     expect(result.current.isLoading).toBe(true);
     expect(result.current.error).toBe(statusError);
     expect(result.current.isUpdating).toBe(false);
+  });
+
+  it('returns isUpdating false when mutation is pending but paused', () => {
+    mutationState.isPending = true;
+    mutationState.isPaused = true;
+
+    const { result } = renderHook(() => useTopicFollowButton(topicData));
+
+    expect(result.current.isUpdating).toBe(false);
+  });
+
+  it('returns isUpdating true when mutation is pending and not paused', () => {
+    mutationState.isPending = true;
+    mutationState.isPaused = false;
+
+    const { result } = renderHook(() => useTopicFollowButton(topicData));
+
+    expect(result.current.isUpdating).toBe(true);
   });
 });
