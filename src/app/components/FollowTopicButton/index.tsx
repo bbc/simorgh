@@ -2,7 +2,7 @@ import { use } from 'react';
 import { AccountContext } from '#contexts/AccountContext';
 import type { TopicFollowData } from '#app/lib/uasApi/uasUtility';
 import ErrorBoundary from '#app/components/ErrorBoundary';
-import styles from './index.styles';
+import styles from './index.module.scss';
 import FollowTopicButtonAuthenticated from './FollowTopicButtonAuthenticated/lazy';
 import FollowTopicButtonGuest from './FollowTopicButtonGuest';
 
@@ -27,7 +27,7 @@ const FollowTopicButton = ({ topicData }: FollowTopicButtonProps) => {
       <noscript>
         <style>{`#${FOLLOW_TOPIC_BUTTON_ID} { display: none; }`}</style>
       </noscript>
-      <div css={styles.buttonWrapper} id={FOLLOW_TOPIC_BUTTON_ID}>
+      <div className={styles.buttonWrapper} id={FOLLOW_TOPIC_BUTTON_ID}>
         {isTopicUasPersonalizationEnabled ? (
           <FollowTopicButtonAuthenticated topicData={topicData} />
         ) : (
