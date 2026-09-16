@@ -47,6 +47,14 @@ describe('atiUrl', () => {
         pageIdentifier: 'pidgin.articles.c0000000001o.page',
         producerName: 'PIDGIN',
         platform: 'canonical' as Platforms,
+        categoryName: 'categoryName',
+        ldpThingIds: 'ldpThingIds',
+        ldpThingLabels: 'ldpThingLabels',
+        libraryVersion: 'libraryVersion',
+        pageTitle: 'pageTitle',
+        nationsProducer: '',
+        timePublished: 'timePublished',
+        timeUpdated: 'timeUpdated',
       };
 
       it('should return the correct Resonance analytics model', () => {
@@ -56,9 +64,8 @@ describe('atiUrl', () => {
           mode: ResonanceMode.TEST,
         });
         expect(result.baseProperties).toEqual({
-          app: { name: 'news-pidgin' },
+          app: { name: 'news-pidgin', type: 'getAppType' },
           destination: 'statsDestination',
-          hashedUserId: undefined,
           pageName: 'pidgin.articles.c0000000001o.page',
           producer: 'PIDGIN',
           siteId: 12345,
@@ -67,9 +74,33 @@ describe('atiUrl', () => {
           contentId: 'urn:bbc:optimo:asset:c0000000001o',
           contentType: 'article',
           language: 'pcm',
-          destination: 'statsDestination',
-          producer: 'PIDGIN',
+          ldpIds: 'ldpThingIds',
+          ldpTags: 'ldpThingLabels',
+          pageTitle: 'sanitise',
+          pubUpdateDate: 'timeUpdated',
+          publicationDate: 'timePublished',
+          referrerUrl: 'getReferrer',
+          url: 'getHref',
         });
+      });
+
+      it('should omit optional fields when no value is provided', () => {
+        const result = buildResonanceAnalyticsModel({
+          ...input,
+          pageTitle: undefined,
+          timePublished: '',
+          timeUpdated: '',
+          ldpThingLabels: '',
+          ldpThingIds: '',
+          categoryName: '',
+        });
+
+        expect(result.pageviewProperties).not.toHaveProperty('pageTitle');
+        expect(result.pageviewProperties).not.toHaveProperty('publicationDate');
+        expect(result.pageviewProperties).not.toHaveProperty('pubUpdateDate');
+        expect(result.pageviewProperties).not.toHaveProperty('ldpTags');
+        expect(result.pageviewProperties).not.toHaveProperty('ldpIds');
+        expect(result.pageviewProperties).not.toHaveProperty('section');
       });
 
       it('should suffix app name with "-app" when platform is app', () => {
@@ -78,7 +109,10 @@ describe('atiUrl', () => {
           platform: 'app' as Platforms,
         });
 
-        expect(result.baseProperties.app).toEqual({ name: 'news-pidgin-app' });
+        expect(result.baseProperties.app).toEqual({
+          name: 'news-pidgin-app',
+          type: 'getAppType',
+        });
       });
 
       it('should pass hashedId through as hashedUserId when provided', () => {
