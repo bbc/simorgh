@@ -1,5 +1,6 @@
 import SERVICES from '#app/lib/config/services';
 import { Services } from '#app/models/types/global';
+import { Helmet } from 'react-helmet';
 import { act, render } from '../react-testing-library-with-providers';
 import PageLayoutWrapper from '.';
 
@@ -42,5 +43,43 @@ describe('PageLayoutWrapper', () => {
       'font-style': style.getPropertyValue('font-style'),
       'font-weight': style.getPropertyValue('font-weight'),
     }).toMatchSnapshot();
+  });
+
+  it('escapes a `</script>` breakout attempt in a topic name before it is inlined', async () => {
+    const originalJestWorkerId = process.env.JEST_WORKER_ID;
+    delete process.env.JEST_WORKER_ID;
+
+    try {
+      await act(() =>
+        render(
+          <PageLayoutWrapper
+            status={200}
+            pageData={{
+              metadata: {
+                type: 'article',
+                topics: [
+                  {
+                    topicName: '</script><script>alert(1)</script>',
+                    topicId: 'c000000001',
+                  },
+                ],
+              },
+            }}
+          />,
+          { service: 'arabic' },
+        ),
+      );
+
+      const { scriptTags } = Helmet.peek();
+      const wrapperScript = scriptTags.find(scriptTag =>
+        scriptTag.innerHTML.includes('wrappedTopics'),
+      );
+
+      expect(wrapperScript).toBeDefined();
+      expect(wrapperScript?.innerHTML).not.toContain('</script>');
+      expect(wrapperScript?.innerHTML).toContain('&lt;/script>&lt;script>');
+    } finally {
+      process.env.JEST_WORKER_ID = originalJestWorkerId;
+    }
   });
 });
