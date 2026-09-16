@@ -122,14 +122,14 @@ const createFavouritesPayload = ({
  * followed topic can be rendered later (e.g. in a "Followed topics" list)
  * without an extra lookup.
  */
-export interface TopicFollowData {
+export interface FollowTopicData {
   topicId: string;
   title: string;
   url: string;
 }
 
 const buildTopicMetadata = (
-  { topicId, title, url }: TopicFollowData,
+  { topicId, title, url }: FollowTopicData,
   service: Services,
 ): Record<string, unknown> => ({
   topicId,
@@ -144,7 +144,7 @@ const buildTopicMetadata = (
  * metadata differ — demonstrating the activity-agnostic reuse of the UAS layer.
  */
 const createFollowsPayload = (
-  topicData: TopicFollowData,
+  topicData: FollowTopicData,
   service: Services,
 ): UasApiRequestBody => ({
   activityType: FOLLOWS_CONFIG.activityType,

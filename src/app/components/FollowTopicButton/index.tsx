@@ -1,13 +1,13 @@
 import { use } from 'react';
 import { AccountContext } from '#contexts/AccountContext';
-import type { TopicFollowData } from '#app/lib/uasApi/uasUtility';
+import type { FollowTopicData } from '#app/lib/uasApi/uasUtility';
 import ErrorBoundary from '#app/components/ErrorBoundary';
 import styles from './index.module.scss';
 import FollowTopicButtonAuthenticated from './FollowTopicButtonAuthenticated/lazy';
 import FollowTopicButtonGuest from './FollowTopicButtonGuest';
 
 export interface FollowTopicButtonProps {
-  topicData: TopicFollowData;
+  topicData: FollowTopicData;
 }
 
 const FOLLOW_TOPIC_BUTTON_ID = 'follow-topic-button';

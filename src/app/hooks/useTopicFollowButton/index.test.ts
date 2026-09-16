@@ -9,7 +9,7 @@ import {
   createFollowsPayload,
   FOLLOWS_CONFIG,
   buildGlobalId,
-  type TopicFollowData,
+  type FollowTopicData,
 } from '#app/lib/uasApi/uasUtility';
 import { AccountContext } from '#app/contexts/AccountContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
@@ -83,7 +83,7 @@ describe('useTopicFollowButton', () => {
     topicId: 'urn:bbc:topic:climate-change',
     title: 'Climate change',
     url: '/hindi/topics/climate-change',
-  } as TopicFollowData;
+  } as FollowTopicData;
 
   beforeEach(() => {
     jest.clearAllMocks();

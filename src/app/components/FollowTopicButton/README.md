@@ -6,10 +6,10 @@ Renders a topic follow call-to-action on topic pages, with signed-in and signed-
 
 ```ts
 interface FollowTopicButtonProps {
-  topicData: TopicFollowData;
+  topicData: FollowTopicData;
 }
 
-interface TopicFollowData {
+interface FollowTopicData {
   topicId: string;
   title: string;
   service: Services;

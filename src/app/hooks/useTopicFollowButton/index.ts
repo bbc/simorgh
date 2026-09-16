@@ -4,7 +4,7 @@ import uasApiRequest from '#app/lib/uasApi';
 import {
   createFollowsPayload,
   FOLLOWS_CONFIG,
-  type TopicFollowData,
+  type FollowTopicData,
   buildGlobalId,
 } from '#app/lib/uasApi/uasUtility';
 import uasKeys from '#app/lib/uasApi/queryKeys';
@@ -26,7 +26,7 @@ interface UseTopicFollowButtonReturn {
 }
 
 const useTopicFollowButton = (
-  topicData: TopicFollowData,
+  topicData: FollowTopicData,
 ): UseTopicFollowButtonReturn => {
   const { topicId } = topicData;
   const { service } = use(ServiceContext);
