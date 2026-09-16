@@ -270,8 +270,7 @@ const getStylesForSize = (size: LinkSize): LinkStyles => ({
 
 Keep the code that maps prop values to custom-property values in one typed
 helper or at the component boundary. Do not repeat that mapping in both
-TypeScript and SCSS. Keep fallback behavior with the code that owns those
-values.
+TypeScript and SCSS.
 
 When the component renders in AMP, measure the final inlined `style[amp-custom]`
 payload and keep the total below AMP's hard 75 KB limit. This is an additional

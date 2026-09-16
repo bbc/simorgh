@@ -225,8 +225,7 @@ const getStylesForSize = (size: LinkSize): LinkStyles => ({
 
 Keep the code that maps prop values to custom-property values in one typed
 helper or at the component boundary. Do not repeat that mapping in both
-TypeScript and SCSS. Keep fallback behavior with the code that owns those
-values.
+TypeScript and SCSS.
 
 See [src/app/components/InlineLink/index.module.scss](../../../src/app/components/InlineLink/index.module.scss) for a concrete compact CSS custom-property bridge: `size` and `fontVariant` are mapped by [typography.ts](../../../src/app/components/ThemeProviderSCSSModules/typography.ts) to inline `--gel-typography-*` values, which one responsive rule set consumes.
 
