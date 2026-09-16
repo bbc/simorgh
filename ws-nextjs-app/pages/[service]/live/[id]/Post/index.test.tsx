@@ -274,7 +274,7 @@ describe('Post', () => {
 
       const renderOptions = {
         id: 'c7p765ynk9qt',
-        service: 'pidgin',
+        service: 'pidgin' as const,
         pageType: LIVE_PAGE,
         pathname: '/pidgin/live/c7p765ynk9qt',
       };
