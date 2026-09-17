@@ -9,8 +9,7 @@ const GOOGLE_PREFERRED_SOURCE_URL =
 const GooglePreferredSource = () => {
   const { translations } = use(ServiceContext);
   const linkText = translations?.googlePreferredSource?.linkText;
-  if (!linkText) return null;
-  if (!isGoogleReferral()) return null;
+  if (!linkText || !isGoogleReferral()) return null;
 
   return (
     <a
