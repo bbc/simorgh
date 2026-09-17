@@ -14,6 +14,7 @@ import activateExperiment from '#app/hooks/useOptimizelyVariation/activateExperi
 import { getSnapshot } from '#app/lib/optimizelyDecisionStore';
 import {
   HOMEPAGE_ARTICLE_PROMO_CLICK_EVENT,
+  HOMEPAGE_ARTICLE_PROMO_CTR_EVENT,
   HOMEPAGE_ARTICLE_PROMO_TYPES,
   HOMEPAGE_RELATED_TOPIC_EXPERIMENT,
   isHomepageRelatedTopicVariation,
@@ -135,6 +136,11 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
                 });
 
                 if (getSnapshot().has(experimentName)) {
+                  optimizely.track(
+                    HOMEPAGE_ARTICLE_PROMO_CTR_EVENT,
+                    id,
+                    attributes,
+                  );
                   optimizely.track(
                     HOMEPAGE_ARTICLE_PROMO_CLICK_EVENT,
                     id,
