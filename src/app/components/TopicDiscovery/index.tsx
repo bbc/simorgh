@@ -2,7 +2,6 @@ import { useState, use } from 'react';
 import CurationGrid from '#app/components/Curation/CurationGrid';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
-import { ComponentExperimentProps } from '#app/models/types/global';
 import { TopicTag } from '#app/models/types/metadata';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
@@ -19,16 +18,11 @@ export type ExtractedTopic = Pick<
 type TopicDiscoveryProps = {
   topics: ExtractedTopic[];
   className?: string;
-  experimentProps?: ComponentExperimentProps;
 };
 
 const HEADING_ID = 'topic-discovery-heading';
 
-const TopicDiscovery = ({
-  topics,
-  className,
-  experimentProps,
-}: TopicDiscoveryProps) => {
+const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
   const { service, translations, dir } = use(ServiceContext);
   const { variant } = use(RequestContext);
   const {
@@ -68,7 +62,6 @@ const TopicDiscovery = ({
   const eventTrackingData = {
     componentName: 'topic-discovery',
     groupTracker,
-    ...(experimentProps && experimentProps),
   };
 
   const { topicPromos, isLoading, isError } = useFetchTopicPromos({
@@ -84,7 +77,6 @@ const TopicDiscovery = ({
   const moreAboutLinkClickTracker = useClickTrackerHandler({
     componentName: 'topic-discovery-more-about-link',
     groupTracker,
-    ...(experimentProps && experimentProps),
     itemTracker: {
       type: 'topic-discovery-more-about-link',
       text: currentTopic
@@ -177,7 +169,6 @@ const TopicDiscovery = ({
         groupTracker={groupTracker}
         setShouldFocusPromos={setShouldFocusPromos}
         onTabKeyDown={handleTabKeyDown}
-        experimentProps={experimentProps}
       />
       <div
         key={activeTabId}
@@ -226,7 +217,6 @@ const TopicDiscovery = ({
                     summaries={topicPromos}
                     eventTrackingData={{
                       componentName: 'topic-discovery-curation-grid',
-                      ...(experimentProps && experimentProps),
                       groupTracker: {
                         name: selectedTopic.topicName,
                         type: 'topic-discovery-curation-grid',

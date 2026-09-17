@@ -8615,6 +8615,13 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
+  color: #222222;
+}
+
+@media (max-width: 24.9375rem) {
+  .emotion-33 {
+    color: #222222;
+  }
 }
 
 <div>
@@ -13985,6 +13992,13 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
+  color: #222222;
+}
+
+@media (max-width: 24.9375rem) {
+  .emotion-13 {
+    color: #222222;
+  }
 }
 
 .emotion-15 {
@@ -14426,6 +14440,13 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
+  color: #222222;
+}
+
+@media (max-width: 24.9375rem) {
+  .emotion-14 {
+    color: #222222;
+  }
 }
 
 .emotion-16 {
@@ -15050,6 +15071,13 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
+  color: #222222;
+}
+
+@media (max-width: 24.9375rem) {
+  .emotion-25 {
+    color: #222222;
+  }
 }
 
 .emotion-27 {
@@ -15321,6 +15349,13 @@ exports[`StoryPromo Container should render video promoType top on amp 1`] = `
   fill: currentColor;
   width: 0.75rem;
   height: 0.75rem;
+  color: #222222;
+}
+
+@media (max-width: 24.9375rem) {
+  .emotion-13 {
+    color: #222222;
+  }
 }
 
 .emotion-15 {

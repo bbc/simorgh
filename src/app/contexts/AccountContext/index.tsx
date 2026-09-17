@@ -40,6 +40,10 @@ export const AccountProvider = ({
   const { service } = use(ServiceContext);
   const { enabled: isPersonalizationToggleEnabled, value: accountService } =
     useToggle('uasPersonalization');
+  const {
+    enabled: topicUasPersonalizationEnabled,
+    value: topicAccountService,
+  } = useToggle('topicUasPersonalization');
 
   useEffect(() => {
     setPageToReturnTo(window.location.href);
@@ -79,14 +83,27 @@ export const AccountProvider = ({
     isIdctaAvailable &&
     Boolean(initialConfig?.initialIsSignedIn || signedInToken);
 
-  const isPersonalizationAvailable =
+  // Personalization for saved articles
+  const isArticlePersonalizationAvailable =
     isIdctaAvailable &&
     isPersonalizationToggleEnabled &&
     (isLocal()
       ? accountService?.toString().split('|').includes(service)
       : true);
 
-  const isPersonalizationEnabled = isPersonalizationAvailable && isSignedIn;
+  const isArticlePersonalizationEnabled =
+    isArticlePersonalizationAvailable && isSignedIn;
+
+  // Personalization for followed topics
+  const isTopicPersonalizationAvailable =
+    isIdctaAvailable &&
+    topicUasPersonalizationEnabled &&
+    (isLocal()
+      ? topicAccountService?.toString().split('|').includes(service)
+      : true);
+
+  const isTopicPersonalizationEnabled =
+    isTopicPersonalizationAvailable && isSignedIn;
 
   const isRefreshAvailable =
     isIdctaAvailable && initialConfig?.availability?.refresh === 'GREEN';
@@ -102,8 +119,10 @@ export const AccountProvider = ({
       registerUrl,
       settingsUrl,
       forYouUrl,
-      isPersonalizationAvailable,
-      isPersonalizationEnabled,
+      isArticlePersonalizationAvailable,
+      isArticlePersonalizationEnabled,
+      isTopicPersonalizationAvailable,
+      isTopicPersonalizationEnabled,
     }),
     [
       hashedUserId,
@@ -115,8 +134,10 @@ export const AccountProvider = ({
       settingsUrl,
       signInUrl,
       signOutUrl,
-      isPersonalizationAvailable,
-      isPersonalizationEnabled,
+      isArticlePersonalizationAvailable,
+      isArticlePersonalizationEnabled,
+      isTopicPersonalizationAvailable,
+      isTopicPersonalizationEnabled,
     ],
   );
 
