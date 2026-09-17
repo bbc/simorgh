@@ -2,6 +2,8 @@ import dissocPath from 'ramda/src/dissocPath';
 import identity from 'ramda/src/identity';
 
 import { ToggleContextProvider } from '#contexts/ToggleContext';
+import * as viewTracking from '#hooks/useViewTracker';
+import * as clickTracking from '#hooks/useClickTrackerHandler';
 
 import { render } from '../../../components/react-testing-library-with-providers';
 import { service as russianServiceConfig } from '../../../lib/config/services/russian';
@@ -227,5 +229,29 @@ describe('Inline', () => {
 
     expect(focusableAttrs.every(attr => attr === 'false')).toBe(true);
     expect(ariaHiddenAttrs.every(attr => attr === 'true')).toBe(true);
+  });
+});
+
+describe('Event Tracking', () => {
+  it('should call the view tracking hook with the correct params', () => {
+    const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
+    render(<PromoWithContext />, {
+      service: 'russian',
+    });
+
+    expect(viewTrackerSpy).toHaveBeenCalledWith({
+      componentName: 'promo-podcast',
+    });
+  });
+
+  it('should call the click tracking hook with the correct params', () => {
+    const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
+    render(<PromoWithContext />, {
+      service: 'russian',
+    });
+
+    expect(clickTrackerSpy).toHaveBeenCalledWith({
+      componentName: 'promo-podcast',
+    });
   });
 });
