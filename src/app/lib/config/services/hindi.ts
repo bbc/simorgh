@@ -144,6 +144,16 @@ export const service: DefaultServiceConfig = {
         removeAccessible: 'सेव्ड. माय न्यूज़ सेक्शन से हटा दीजिए',
         removing: 'हटाया जा रहा है',
       },
+      // TBC : TODO: Ticket needed
+      followTopicButton: {
+        loading: 'Loading...',
+        follow: 'Follow',
+        following: 'Following...',
+        followed: 'Followed',
+        unfollow: 'Unfollow',
+        unfollowAccessible: 'Followed. Unfollow',
+        unfollowing: 'Unfollowing...',
+      },
       myNews: {
         title: 'मेरी ख़बरें',
         guestTitle: 'मेरी ख़बरों में आपका स्वागत है',

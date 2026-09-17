@@ -88,6 +88,10 @@ module.exports = {
       numberOfRuns: 3,
       settings: {
         chromeFlags: '--no-sandbox --headless',
+        // Non-live environments send x-robots-tag: noindex, so is-crawlable always fails there
+        ...(process.env.LIGHTHOUSE_APP_ENV !== 'live' && {
+          skipAudits: ['is-crawlable'],
+        }),
       },
     },
     assert: {
@@ -107,10 +111,7 @@ module.exports = {
         ],
         'categories:seo': [
           'error',
-          {
-            aggregationMethod: 'optimistic',
-            minScore: process.env.LIGHTHOUSE_APP_ENV === 'live' ? 0.6 : 0.5,
-          },
+          { aggregationMethod: 'optimistic', minScore: 0.85 },
         ],
         'third-party-cookies': 'off',
       },
