@@ -77,14 +77,12 @@ const getPageType = ({
   reqHeaders: IncomingHttpHeaders;
 }) => {
   const resolvedPathname = resolvedUrl?.split('?')?.[0];
+  const pageTypeHeader = reqHeaders['page-type']?.toString() as PageTypes;
+  const { SIMORGH_APP_ENV } = getEnvConfig();
 
-  if (resolvedPathname?.endsWith('/offline')) {
+  if (SIMORGH_APP_ENV !== 'local' && resolvedPathname?.endsWith('/offline')) {
     return OFFLINE_PAGE;
   }
-
-  const pageTypeHeader = reqHeaders['page-type']?.toString() as PageTypes;
-
-  const { SIMORGH_APP_ENV } = getEnvConfig();
 
   switch (SIMORGH_APP_ENV) {
     // In local development, use the 'page-type' header if it exists,

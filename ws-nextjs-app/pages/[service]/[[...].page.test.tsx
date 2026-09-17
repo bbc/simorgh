@@ -245,6 +245,28 @@ describe('catch-all route', () => {
         process.env.SIMORGH_APP_ENV = originalEnv;
       }
     });
+
+    it('should honor page-type header for /offline URL in local environments', async () => {
+      const originalEnv = process.env.SIMORGH_APP_ENV;
+      process.env.SIMORGH_APP_ENV = 'local';
+
+      try {
+        const context = {
+          ...commonContext,
+          resolvedUrl: '/pidgin/offline?foo=bar',
+          req: {
+            headers: { 'page-type': 'article' },
+          } as unknown as GetServerSidePropsContext['req'],
+        };
+
+        await getServerSideProps(context);
+
+        expect(handleArticleRoute).toHaveBeenCalled();
+        expect(handleOfflineRoute).not.toHaveBeenCalled();
+      } finally {
+        process.env.SIMORGH_APP_ENV = originalEnv;
+      }
+    });
   });
 
   it('should return 404 for unsupported page types', async () => {
