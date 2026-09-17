@@ -10,8 +10,10 @@ describe('GooglePreferredSource', () => {
   it('renders the supplied link text and Google Preferred Sources URL', () => {
     mockIsGoogleReferral.mockReturnValue(true);
 
-    const linkText = 'Add as preferred on Google';
-    const { getByRole } = render(<GooglePreferredSource linkText={linkText} />);
+    const linkText = 'Google पर पसंदीदा स्रोत के रूप में जोड़ें';
+    const { getByRole } = render(<GooglePreferredSource />, {
+      service: 'hindi',
+    });
 
     const link = getByRole('link', { name: linkText });
 
@@ -24,9 +26,9 @@ describe('GooglePreferredSource', () => {
   it('does not render for non-Google traffic', () => {
     mockIsGoogleReferral.mockReturnValue(false);
 
-    const { queryByRole } = render(
-      <GooglePreferredSource linkText="Add as preferred on Google" />,
-    );
+    const { queryByRole } = render(<GooglePreferredSource />, {
+      service: 'hindi',
+    });
 
     expect(queryByRole('link')).not.toBeInTheDocument();
   });

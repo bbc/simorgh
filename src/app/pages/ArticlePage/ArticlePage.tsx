@@ -73,6 +73,7 @@ import SaveArticleButton from '#app/components/SaveArticleButton';
 import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
 import AccountPromotionalBannerExperiment from '#app/components/Account/AccountPromotionalBannerExperiment';
 import repositionCountryTopic from '#app/components/TopicDiscovery/RepositionCountryTopic';
+import GooglePreferredSource from '#app/components/GooglePreferredSource';
 import ElectionBanner from './ElectionBanner';
 import ArticleMessageBanner from './ArticleMessageBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
@@ -161,6 +162,9 @@ const getTimestampComponent =
     readTimeValue: number | undefined,
     readTimeTranslations: Translations['readTime'],
     articlePageData: Article,
+    isAmp: boolean,
+    isApp: boolean,
+    isLite: boolean,
   ) =>
   (props: ComponentToRenderProps & TimeStampProps) => {
     const shouldDisplayReadTime = !!(readTimeTranslations && readTimeValue);
@@ -191,6 +195,7 @@ const getTimestampComponent =
             )}
           </>
         )}
+        {!isAmp && !isLite && !isApp && <GooglePreferredSource />}
         <SaveArticleButton
           saveArticlePageData={extractSaveArticleProps(articlePageData)}
         />
@@ -545,6 +550,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       readTimeValue,
       translations.readTime,
       pageData,
+      isAmp,
+      isApp,
+      isLite,
     ),
     social: SocialEmbedContainer,
     embed: UnsupportedEmbed,
