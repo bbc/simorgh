@@ -63,7 +63,7 @@ const TopicPage = ({ pageData }) => {
   });
 
   return (
-    <div css={theme => (theme.isDarkUi ? styles.darkUIPageWrapper : undefined)}>
+    <div css={theme => (theme.isDarkUi ? styles.pageWrapper : undefined)}>
       <AdContainer slotType="leaderboard" />
       <main css={styles.main} role="main">
         <div css={styles.inner}>

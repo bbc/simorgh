@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 
 const styles = {
-  darkUIPageWrapper: ({ palette }) =>
+  pageWrapper: ({ palette }) =>
     css({
       backgroundColor: palette.GREY_10,
       display: 'grid',
