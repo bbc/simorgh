@@ -90,7 +90,10 @@ const PageLayoutWrapper = ({
 
   const serviceFonts = fontFaces();
 
-  const wrappedTopics = pageData?.metadata?.topics;
+  const wrappedTopics = pageData?.metadata?.topics?.map(topic => ({
+    topicName: topic.topicName,
+    topicId: topic.topicId,
+  }));
 
   const shouldRenderPageWrapperInlineJs =
     !isLite &&
