@@ -1,4 +1,3 @@
-import 'temporal-polyfill/global';
 import { getLocalisedDate } from '../../helpers/localise-datetime';
 
 describe('getLocalisedDate', () => {
