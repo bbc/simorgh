@@ -223,6 +223,28 @@ describe('catch-all route', () => {
 
       expect(handleOfflineRoute).toHaveBeenCalled();
     });
+
+    it('should call the Offline route handler for /offline URL in non-local environments even when page-type header conflicts', async () => {
+      const originalEnv = process.env.SIMORGH_APP_ENV;
+      process.env.SIMORGH_APP_ENV = 'live';
+
+      try {
+        const context = {
+          ...commonContext,
+          resolvedUrl: '/pidgin/offline?foo=bar',
+          req: {
+            headers: { 'page-type': 'article' },
+          } as unknown as GetServerSidePropsContext['req'],
+        };
+
+        await getServerSideProps(context);
+
+        expect(handleOfflineRoute).toHaveBeenCalled();
+        expect(handleArticleRoute).not.toHaveBeenCalled();
+      } finally {
+        process.env.SIMORGH_APP_ENV = originalEnv;
+      }
+    });
   });
 
   it('should return 404 for unsupported page types', async () => {

@@ -76,6 +76,12 @@ const getPageType = ({
   resolvedUrl: string;
   reqHeaders: IncomingHttpHeaders;
 }) => {
+  const resolvedPathname = resolvedUrl?.split('?')?.[0];
+
+  if (resolvedPathname?.endsWith('/offline')) {
+    return OFFLINE_PAGE;
+  }
+
   const pageTypeHeader = reqHeaders['page-type']?.toString() as PageTypes;
 
   const { SIMORGH_APP_ENV } = getEnvConfig();
