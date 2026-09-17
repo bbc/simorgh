@@ -22,8 +22,7 @@
     fill: currentColor;
   }
 
-  &:hover,
-  &:focus-visible {
+  &:hover {
     background-color: theme.$palette-grey-8;
     color: theme.$palette-white;
 
@@ -34,28 +33,33 @@
   }
 
   &:focus-visible {
-    outline: #{theme.pixelsToRem-px-to-rem(3)} solid theme.$palette-grey-8;
-    outline-offset: #{theme.pixelsToRem-px-to-rem(3)};
-    box-shadow: 0 0 0 #{theme.pixelsToRem-px-to-rem(3)} theme.$palette-white;
+    background-color: theme.$palette-grey-8;
+    color: theme.$palette-white;
+    outline: #{theme.pixelsToRem-px-to-rem(1)} solid theme.$palette-grey-8;
+    outline-offset: 0 !important;
+    border-width: #{theme.pixelsToRem-px-to-rem(3)};
+    border-color: theme.$palette-white;
 
     :global([data-is-dark-ui='true']) & {
+      background-color: theme.$palette-white;
+      color: theme.$palette-black;
       outline-color: theme.$palette-white;
-      box-shadow: 0 0 0 #{theme.pixelsToRem-px-to-rem(3)} theme.$palette-black;
+      border-color: theme.$palette-black;
     }
   }
 
   // Compound selector guarantees this beats the plain dark-UI background
   // rule above regardless of stylesheet order.
   &.updatingState {
-    background-color: theme.$palette-white;
-    color: theme.$palette-grey-8;
+    background-color: theme.$palette-grey-8;
+    color: theme.$palette-white;
     border-color: theme.$palette-grey-8;
     cursor: not-allowed;
 
     :global([data-is-dark-ui='true']) & {
       background-color: theme.$palette-white;
       color: theme.$palette-black;
-      border-color: theme.$palette-black;
+      border-color: theme.$palette-white;
     }
 
     svg {
