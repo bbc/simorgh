@@ -11,7 +11,6 @@ import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import constructReverbUrl from '#app/lib/analyticsUtils/staticATITracking/constructReverbUrl';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import activateExperiment from '#app/hooks/useOptimizelyVariation/activateExperiment';
-import { getSnapshot } from '#app/lib/optimizelyDecisionStore';
 import {
   HOMEPAGE_ARTICLE_PROMO_CLICK_EVENT,
   HOMEPAGE_ARTICLE_PROMO_CTR_EVENT,
@@ -122,38 +121,32 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
           event.stopPropagation();
           event.preventDefault();
 
-          if (optimizely && isHomepageArticlePromoClick) {
-            // experiment: an early click can precede the homepage activation
-            try {
-              const { success } = await optimizely.onReady({ timeout: 1000 });
-              const { id, attributes } = optimizely.user;
-
-              if (success && id) {
-                await activateExperiment({
-                  optimizely,
-                  experimentName,
-                  experimentVariation: experimentVariant,
-                });
-
-                if (getSnapshot().has(experimentName)) {
-                  optimizely.track(
-                    HOMEPAGE_ARTICLE_PROMO_CTR_EVENT,
-                    id,
-                    attributes,
-                  );
-                  optimizely.track(
-                    HOMEPAGE_ARTICLE_PROMO_CLICK_EVENT,
-                    id,
-                    attributes,
-                  );
-                }
-              }
-            } catch {
-              // analytics must not prevent navigation if the sdk fails
-            }
-          }
-
           if (optimizely && experimentVariant && sendOptimizelyEvents) {
+            // experiment: activate before recording an early homepage click
+            if (isHomepageArticlePromoClick) {
+              try {
+                const { success } = await optimizely.onReady({ timeout: 1000 });
+                const { id, attributes } = optimizely.user;
+
+                if (success && id) {
+                  await activateExperiment({
+                    optimizely,
+                    experimentName,
+                    experimentVariation: experimentVariant,
+                  });
+
+                  [
+                    HOMEPAGE_ARTICLE_PROMO_CTR_EVENT,
+                    HOMEPAGE_ARTICLE_PROMO_CLICK_EVENT,
+                  ].forEach(eventName => {
+                    optimizely.track(eventName, id, attributes);
+                  });
+                }
+              } catch {
+                // analytics must not prevent navigation if the sdk fails
+              }
+            }
+
             const overrideAttributes = optimizely?.user.attributes;
 
             if (experimentVariant !== 'off') {

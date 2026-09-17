@@ -5,7 +5,6 @@ import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import moment from 'moment';
 import { RequestContext } from '#app/contexts/RequestContext';
 import isMedia from '#app/lib/utilities/isMedia';
-import { HOMEPAGE_RELATED_TOPIC_EXPERIMENT } from '#app/lib/experiments/homepageRelatedTopicPromos';
 import styles from './index.styles';
 import CurationPromo from '../CurationPromo';
 import HighImpactPromo from '../HighImpactPromo';
@@ -62,25 +61,13 @@ const CurationGrid = ({
   const renderPromo = (promo: Summary, index: number) => {
     const isFirstPromo = index === 0;
     const service = extractWorldServiceFromUrl(promo.link);
-    const isHighImpactPromo = isHighImpact(promo) && !isMedia(promo.type);
-    const shouldUseHighImpact = isHighImpactPromo && !isLite;
-    const promoEventTrackingData = buildPromoEventTrackingData(promo, index);
-
-    // experiment: high impact promos are excluded, including their lite fallback
-    if (
-      isHighImpactPromo &&
-      promoEventTrackingData.experimentName ===
-        HOMEPAGE_RELATED_TOPIC_EXPERIMENT
-    ) {
-      delete promoEventTrackingData.experimentName;
-      delete promoEventTrackingData.experimentVariant;
-      delete promoEventTrackingData.sendOptimizelyEvents;
-    }
+    const shouldUseHighImpact =
+      isHighImpact(promo) && !isMedia(promo.type) && !isLite;
 
     const commonProps = {
       ...promo,
       lazy: !(isFirstPromo && isFirstCuration),
-      eventTrackingData: promoEventTrackingData,
+      eventTrackingData: buildPromoEventTrackingData(promo, index),
       position: index,
     };
     if (!shouldUseHighImpact) {
@@ -88,9 +75,7 @@ const CurationGrid = ({
         <CurationPromo
           {...commonProps}
           headingLevel={headingLevel}
-          showRelatedTopicExperiment={
-            showRelatedTopicExperiment && !isHighImpactPromo
-          }
+          showRelatedTopicExperiment={showRelatedTopicExperiment}
         />
       );
     }
