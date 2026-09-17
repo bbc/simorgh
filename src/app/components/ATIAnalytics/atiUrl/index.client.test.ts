@@ -1,6 +1,14 @@
+import { ResonanceMode } from '@bbc/resonance';
 import { Platforms } from '#app/models/types/global';
+import * as getEnvConfigModule from '#app/lib/utilities/getEnvConfig';
 import * as genericLabelHelpers from '../../../lib/analyticsUtils';
-import { buildReverbAnalyticsModel, buildReverbEventModel } from '.';
+import {
+  buildResonanceAnalyticsModel,
+  buildActivationEventModel,
+  buildReverbAnalyticsModel,
+  buildReverbEventModel,
+  buildErrorEventModel,
+} from '.';
 
 const mockAndSet = ({ name, source }, response) => {
   source[name] = jest.fn(); // eslint-disable-line no-param-reassign
@@ -16,18 +24,122 @@ const analyticsUtilFunctions = [
 ];
 
 describe('atiUrl', () => {
+  beforeEach(() => {
+    analyticsUtilFunctions.forEach(func => {
+      mockAndSet(func, func.name);
+    });
+  });
+
   afterEach(() => {
     jest.clearAllMocks();
   });
 
-  describe('Reverb', () => {
-    describe('buildReverbAnalyticsModel', () => {
-      beforeEach(() => {
-        analyticsUtilFunctions.forEach(func => {
-          mockAndSet(func, func.name);
+  describe('Resonance', () => {
+    describe('buildResonanceAnalyticsModel', () => {
+      const input = {
+        appName: 'news-pidgin',
+        contentId: 'urn:bbc:optimo:asset:c0000000001o',
+        contentType: 'article',
+        language: 'pcm',
+        statsDestination: 'statsDestination',
+        destinationSiteId: 12345,
+        hashedId: null,
+        pageIdentifier: 'pidgin.articles.c0000000001o.page',
+        producerName: 'PIDGIN',
+        platform: 'canonical' as Platforms,
+        categoryName: 'categoryName',
+        ldpThingIds: 'ldpThingIds',
+        ldpThingLabels: 'ldpThingLabels',
+        libraryVersion: 'libraryVersion',
+        pageTitle: 'pageTitle',
+        nationsProducer: '',
+        timePublished: 'timePublished',
+        timeUpdated: 'timeUpdated',
+      };
+
+      it('should return the correct Resonance analytics model', () => {
+        const result = buildResonanceAnalyticsModel(input);
+
+        expect(result.resonanceProperties).toEqual({
+          mode: ResonanceMode.TEST,
+        });
+        expect(result.baseProperties).toEqual({
+          app: { name: 'news-pidgin', type: 'getAppType' },
+          destination: 'statsDestination',
+          pageName: 'pidgin.articles.c0000000001o.page',
+          producer: 'PIDGIN',
+          siteId: 12345,
+        });
+        expect(result.pageviewProperties).toEqual({
+          contentId: 'urn:bbc:optimo:asset:c0000000001o',
+          contentType: 'article',
+          language: 'pcm',
+          ldpIds: 'ldpThingIds',
+          ldpTags: 'ldpThingLabels',
+          pageTitle: 'sanitise',
+          pubUpdateDate: 'timeUpdated',
+          publicationDate: 'timePublished',
+          referrerUrl: 'getReferrer',
+          url: 'getHref',
         });
       });
 
+      it('should omit optional fields when no value is provided', () => {
+        const result = buildResonanceAnalyticsModel({
+          ...input,
+          pageTitle: undefined,
+          timePublished: '',
+          timeUpdated: '',
+          ldpThingLabels: '',
+          ldpThingIds: '',
+          categoryName: '',
+        });
+
+        expect(result.pageviewProperties).not.toHaveProperty('pageTitle');
+        expect(result.pageviewProperties).not.toHaveProperty('publicationDate');
+        expect(result.pageviewProperties).not.toHaveProperty('pubUpdateDate');
+        expect(result.pageviewProperties).not.toHaveProperty('ldpTags');
+        expect(result.pageviewProperties).not.toHaveProperty('ldpIds');
+        expect(result.pageviewProperties).not.toHaveProperty('section');
+      });
+
+      it('should suffix app name with "-app" when platform is app', () => {
+        const result = buildResonanceAnalyticsModel({
+          ...input,
+          platform: 'app' as Platforms,
+        });
+
+        expect(result.baseProperties.app).toEqual({
+          name: 'news-pidgin-app',
+          type: 'getAppType',
+        });
+      });
+
+      it('should pass hashedId through as hashedUserId when provided', () => {
+        const result = buildResonanceAnalyticsModel({
+          ...input,
+          hashedId: 'abc123hasheduser',
+        });
+
+        expect(result.baseProperties.hashedUserId).toBe('abc123hasheduser');
+      });
+
+      it('should use LIVE mode when SIMORGH_APP_ENV is live', () => {
+        jest
+          .spyOn(getEnvConfigModule, 'getEnvConfig')
+          .mockReturnValue({ SIMORGH_APP_ENV: 'live' } as ReturnType<
+            typeof getEnvConfigModule.getEnvConfig
+          >);
+
+        const result = buildResonanceAnalyticsModel(input);
+
+        expect(result.resonanceProperties.mode).toBe(ResonanceMode.LIVE);
+      });
+    });
+  });
+
+  describe('Reverb', () => {
+    describe('buildReverbAnalyticsModel', () => {
       const input = {
         appName: 'news',
         campaigns: [
@@ -400,6 +512,144 @@ describe('atiUrl', () => {
               engine_id: ['optimizely.dummy_experiment.variant_1'],
             },
           });
+        });
+      });
+    });
+
+    describe('buildActivationEventModel', () => {
+      const input = {
+        pageIdentifier: 'mundo.page',
+        platform: 'canonical' as unknown as Platforms,
+        appName: 'news-mundo',
+        producerName: 'MUNDO',
+        statsDestination: 'statsDestination',
+        experimentName: 'dummy_experiment',
+        experimentVariant: 'variant_1',
+        isSignedIn: false,
+        hashedId: null,
+      };
+
+      it('should return the correct Reverb page section activation event model', () => {
+        const reverbExperimentActivationEventModel =
+          buildActivationEventModel(input);
+
+        const experimentActivationEventParams = {
+          destination: 'statsDestination',
+          name: 'mundo.page',
+          producer: 'MUNDO',
+          additionalProperties: {
+            type: 'AT',
+            app_name: 'news-mundo',
+            app_type: 'getAppType',
+          },
+        };
+
+        expect(reverbExperimentActivationEventModel.params.page).toEqual(
+          experimentActivationEventParams,
+        );
+      });
+
+      it('should return the correct Reverb user object configuration', () => {
+        const reverbExperimentActivationEventModel = buildActivationEventModel({
+          ...input,
+          isSignedIn: true,
+          hashedId: 'hashed-id',
+        });
+
+        expect(reverbExperimentActivationEventModel.params.user).toEqual({
+          isSignedIn: true,
+          hashedId: 'hashed-id',
+        });
+      });
+
+      it('should return the correct Reverb event details configuration', () => {
+        const reverbExperimentActivationEventModel =
+          buildActivationEventModel(input);
+
+        expect(reverbExperimentActivationEventModel.eventDetails).toEqual({
+          eventName: 'activation',
+          eventPublisher: 'viewability',
+          event: {
+            category: 'viewability',
+            action: 'serve',
+            interaction_type: 'optimizely_activation',
+            spec_id: '829257ce-28c6-4bbd-8e87-bdacba05de82',
+            spec_version: '1.0.1',
+          },
+          group: {
+            type: 'experiment',
+            name: 'optimizely',
+          },
+          experience: {
+            engine_id: ['optimizely.dummy_experiment.variant_1'],
+          },
+        });
+      });
+    });
+
+    describe('buildErrorEventModel', () => {
+      const input = {
+        pageIdentifier: 'mundo.page',
+        producerName: 'MUNDO',
+        statsDestination: 'statsDestination',
+        feature: 'uas',
+        errorName: 'save',
+      };
+
+      it('should return the correct Reverb page and user configuration', () => {
+        const reverbErrorEventModel = buildErrorEventModel({
+          ...input,
+          isSignedIn: true,
+          hashedId: 'hashed-id',
+        });
+
+        expect(reverbErrorEventModel.params).toEqual({
+          page: {
+            destination: 'statsDestination',
+            name: 'mundo.page',
+            producer: 'MUNDO',
+            additionalProperties: {
+              type: 'AT',
+            },
+          },
+          user: {
+            isSignedIn: true,
+            hashedId: 'hashed-id',
+          },
+        });
+      });
+
+      it('should build a first-class error event with diagnostics', () => {
+        const reverbErrorEventModel = buildErrorEventModel({
+          ...input,
+          errorName: 'remove',
+          statusCode: 500,
+          errorKey: 'unknownTokenKey',
+          errorMessage: 'An unknown error occurred.',
+        });
+
+        expect(reverbErrorEventModel.eventDetails).toEqual({
+          eventName: 'error',
+          eventPublisher: 'viewability',
+          event: {
+            category: 'error',
+          },
+          error: {
+            engine: 'uas',
+            name: 'remove',
+            message: 'An unknown error occurred.',
+            code: '500',
+            type: 'unknownTokenKey',
+          },
+        });
+      });
+
+      it('should omit optional diagnostics when they are absent', () => {
+        const reverbErrorEventModel = buildErrorEventModel(input);
+
+        expect(reverbErrorEventModel.eventDetails.error).toEqual({
+          engine: 'uas',
+          name: 'save',
         });
       });
     });

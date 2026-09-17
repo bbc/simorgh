@@ -2160,7 +2160,7 @@ exports[`Metadata Snapshot should match for WS Media liveradio 1`] = `
       "property": "og:image:alt",
     },
     {
-      "content": "ko-KO",
+      "content": "ko",
       "property": "og:locale",
     },
     {

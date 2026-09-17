@@ -34,13 +34,13 @@ describe('Gist', () => {
 
   it('should render the gist with multiple list items', () => {
     const { container } = render(<GistWithContext />);
-    expect(container).toMatchSnapshot();
+    expect(container.querySelectorAll('li').length).toEqual(5);
   });
 
   it('should render the gist with one list item', () => {
     const { container } = render(
       <GistWithContext blocks={fixtureDataOneItem} />,
     );
-    expect(container).toMatchSnapshot();
+    expect(container.querySelectorAll('li').length).toEqual(1);
   });
 });

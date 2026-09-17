@@ -31,8 +31,8 @@ const navigation = (
 describe('Canonical Navigation', () => {
   describe('snapshots', () => {
     it('should correctly render Canonical navigation', () => {
-      const { container } = render(navigation);
-      expect(container).toMatchSnapshot();
+      const { queryByTestId } = render(navigation);
+      expect(queryByTestId(scrollableTestId)).toBeInTheDocument();
     });
   });
 

@@ -4,6 +4,7 @@ import { css, Theme } from '@emotion/react';
 const styles = {
   buttonWrapper: ({ spacings, mq }: Theme) =>
     css({
+      position: 'relative',
       marginBlock: `${spacings.TRIPLE}rem`,
       marginInline: `${spacings.FULL}rem`,
 

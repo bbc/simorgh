@@ -1,26 +1,59 @@
-import { use } from 'react';
+import { use, useEffect, useState } from 'react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
 import parseRoute from '#app/routes/utils/parseRoute';
-import useUASButton, { UASAction } from '#app/hooks/useUASButton';
+import useUASButton, {
+  UASAction,
+  UASActionResult,
+} from '#app/hooks/useUASButton';
+import useErrorTracking from '#app/hooks/useErrorTracking';
+import {
+  ERROR_TRACKING_FEATURES,
+  UAS_ERROR_ACTIONS,
+} from '#app/hooks/useErrorTracking/errorTracking.const';
+import ErrorBoundary from '#app/components/ErrorBoundary';
 import useClickTracker from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
 import SaveButton from '#app/components/SaveButton';
+import ActionTooltip, {
+  ActionTooltipStatus,
+} from '#app/components/ActionTooltip';
+import getArticleTooltipContent from '#app/components/ActionTooltip/ArticleTooltipContent';
 
 import type { SaveArticleButtonProps } from '../index';
 
-const SaveArticleButtonAuthenticated = ({
+const getTooltipStatus = (
+  actionResult: NonNullable<UASActionResult>,
+): ActionTooltipStatus => {
+  if (actionResult.status === 'error') return 'error';
+  return actionResult.action === UASAction.SAVE ? 'success' : 'removed';
+};
+
+const SaveArticleButtonAuthenticatedInner = ({
   saveArticlePageData,
 }: SaveArticleButtonProps) => {
   const { pathname } = use(RequestContext);
   const { translations } = use(ServiceContext);
-  const { saveArticleButton } = translations || {};
+  const { saveArticleButton, actionTooltip } = translations || {};
   const { assetId: articleId } = parseRoute(pathname);
 
-  const { isSaved, isLoading, isUpdating, handleSaveAction } = useUASButton({
+  const {
+    isSaved,
+    isLoading,
+    isUpdating,
+    actionResult,
+    resetActionResult,
+    handleSaveAction,
+  } = useUASButton({
     articleId,
     saveArticlePageData,
   });
+
+  const [isTooltipVisible, setIsTooltipVisible] = useState(false);
+
+  useEffect(() => {
+    if (actionResult) setIsTooltipVisible(true);
+  }, [actionResult]);
 
   const clickComponentName = `save-article-button-click-${
     isSaved ? UASAction.REMOVE : UASAction.SAVE
@@ -30,8 +63,28 @@ const SaveArticleButtonAuthenticated = ({
     componentName: 'save-article-button-view',
   });
 
+  const tooltipViewTracker = useViewTracker({
+    componentName: `save-article-tooltip-view-${
+      actionResult ? getTooltipStatus(actionResult) : 'none'
+    }`,
+  });
+
   const { onClick: onClickTrack } = useClickTracker({
     componentName: clickComponentName,
+    itemTracker: {
+      resourceId: articleId,
+    },
+  });
+
+  const { onClick: onTooltipCloseClickTrack } = useClickTracker({
+    componentName: 'save-article-tooltip-close',
+    itemTracker: {
+      resourceId: articleId,
+    },
+  });
+
+  const { onClick: onMyNewsLinkClickTrack } = useClickTracker({
+    componentName: 'save-article-tooltip-my-news-link',
     itemTracker: {
       resourceId: articleId,
     },
@@ -66,19 +119,64 @@ const SaveArticleButtonAuthenticated = ({
     handleSaveAction(isSaved ? UASAction.REMOVE : UASAction.SAVE);
   };
 
+  const handleTooltipClose = (event?: React.MouseEvent) => {
+    setIsTooltipVisible(false);
+    resetActionResult();
+    onTooltipCloseClickTrack?.(event);
+  };
+
   return (
-    <SaveButton
-      onClick={handleClick}
-      isLoading={isLoading}
-      isUpdating={isUpdating}
-      isSaved={isSaved}
-      visualLabel={getVisualLabel()}
-      hoverVisualLabel={hoverVisualLabel}
-      accessibleLabel={getAccessibleLabel()}
-      testId="save-article-btn-authorized"
-      {...viewTracker}
-    />
+    <>
+      <SaveButton
+        onClick={handleClick}
+        isLoading={isLoading}
+        isUpdating={isUpdating}
+        isSaved={isSaved}
+        visualLabel={getVisualLabel()}
+        hoverVisualLabel={hoverVisualLabel}
+        accessibleLabel={getAccessibleLabel()}
+        testId="save-article-btn-authorized"
+        {...viewTracker}
+      />
+      {isTooltipVisible && actionResult && actionTooltip && (
+        <ActionTooltip
+          status={getTooltipStatus(actionResult)}
+          content={getArticleTooltipContent(
+            actionTooltip,
+            onMyNewsLinkClickTrack,
+          )}
+          closeLabel={actionTooltip.closeLabel}
+          onClose={handleTooltipClose}
+          {...tooltipViewTracker}
+        />
+      )}
+    </>
   );
 };
+
+const SaveArticleButtonErrorFallback = ({ error }: { error: Error }) => {
+  const trackError = useErrorTracking();
+
+  useEffect(() => {
+    trackError({
+      error,
+      feature: ERROR_TRACKING_FEATURES.UAS,
+      action: UAS_ERROR_ACTIONS.RENDER,
+    });
+  }, [error, trackError]);
+
+  return null;
+};
+
+const SaveArticleButtonAuthenticated = (props: SaveArticleButtonProps) => (
+  <ErrorBoundary
+    componentName="SaveArticleButtonAuthenticated"
+    // Stable module-scope component - safe to reference from the fallback prop.
+    // eslint-disable-next-line react/no-unstable-nested-components
+    fallback={error => <SaveArticleButtonErrorFallback error={error} />}
+  >
+    <SaveArticleButtonAuthenticatedInner {...props} />
+  </ErrorBoundary>
+);
 
 export default SaveArticleButtonAuthenticated;

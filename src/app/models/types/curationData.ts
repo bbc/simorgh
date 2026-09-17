@@ -1,6 +1,7 @@
 import { OEmbedData } from '#app/components/Embeds/types';
 import {
   MediaCollection,
+  MediaBlock,
   PortraitClipMediaBlock,
 } from '#app/components/MediaLoader/types';
 import { RadioScheduleData } from '#app/models/types/radioSchedule';
@@ -43,6 +44,7 @@ export interface Summary extends BaseSummary {
   eventTrackingData?: EventTrackingData;
   visualProminence?: VisualProminence | string;
   isPortraitImage?: boolean;
+  inSituMedia?: MediaBlock[];
   relatedTopic?: RelatedTopic | null;
 }
 
