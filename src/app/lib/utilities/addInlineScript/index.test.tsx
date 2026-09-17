@@ -109,4 +109,21 @@ describe('addInlineScript', () => {
       </script>,
     );
   });
+
+  it('should escape a `</script>` breakout attempt in an object parameter', () => {
+    const script = (config: Record<string, unknown>) => config;
+    const config = { title: '</script><script>alert(1)</script>' };
+
+    const inlineScript = addInlineScript({
+      script,
+      parameters: [config],
+    });
+
+    const scriptContents = (inlineScript as JSX.Element).props.children;
+
+    expect(scriptContents).not.toContain('</script>');
+    expect(scriptContents).toContain(
+      '{"title":"\\u003c/script>\\u003cscript>alert(1)\\u003c/script>"}',
+    );
+  });
 });
