@@ -76,6 +76,15 @@ export interface Translations {
     removeAccessible: string;
     removing: string;
   };
+  followTopicButton?: {
+    loading: string;
+    follow: string;
+    following: string;
+    followed: string;
+    unfollow: string;
+    unfollowAccessible: string;
+    unfollowing: string;
+  };
   myNews?: {
     title: string;
     guestTitle: string;
