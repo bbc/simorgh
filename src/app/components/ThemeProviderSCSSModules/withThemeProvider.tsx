@@ -1,18 +1,8 @@
 import { createContext, ReactNode, FC, use } from 'react';
 import { Helmet } from 'react-helmet';
+import isDarkUiPage from '#app/lib/utilities/isDarkUIPage';
 import { RequestContext } from '../../contexts/RequestContext';
-import {
-  LIVE_TV_PAGE,
-  MEDIA_ARTICLE_PAGE,
-  TV_PAGE,
-} from '../../routes/utils/pageTypes';
-import { PageTypes } from '../../models/types/global';
 import { BrandSVG } from '../../models/types/theming';
-
-const isDarkUiPage = (pageType: PageTypes) =>
-  ([MEDIA_ARTICLE_PAGE, TV_PAGE, LIVE_TV_PAGE] as PageTypes[]).includes(
-    pageType,
-  );
 
 export const ThemeContext = createContext<Theme | undefined>(undefined);
 
@@ -26,8 +16,8 @@ type Props = {
 
 const withThemeProvider = (theme: Theme) => {
   const ThemeProvider: FC<Props> = ({ children }) => {
-    const { pageType } = use(RequestContext);
-    const isDarkUi = isDarkUiPage(pageType);
+    const { pageType, primaryMediaType } = use(RequestContext);
+    const isDarkUi = isDarkUiPage({ pageType, primaryMediaType });
 
     // eslint-disable-next-line react/jsx-no-constructed-context-values
     return (

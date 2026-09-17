@@ -1,7 +1,16 @@
-import { use, useState } from 'react';
-import { useMutation, useQueryClient } from '@tanstack/react-query';
+import { use, useEffect, useState } from 'react';
+import {
+  onlineManager,
+  useMutation,
+  useQueryClient,
+} from '@tanstack/react-query';
 import useUASFetchSaveStatus from '#app/hooks/useUASFetchSaveStatus';
 import useUASMetadataSync from '#app/hooks/useUASMetadataSync';
+import useErrorTracking from '#app/hooks/useErrorTracking';
+import {
+  ERROR_TRACKING_FEATURES,
+  UAS_ERROR_ACTIONS,
+} from '#app/hooks/useErrorTracking/errorTracking.const';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import uasApiRequest from '#app/lib/uasApi';
 import { buildGlobalId, FAVOURITES_CONFIG } from '#app/lib/uasApi/uasUtility';
@@ -34,8 +43,17 @@ export interface UseUASButtonProps {
   saveArticlePageData: SaveArticlePageData;
 }
 
-// NOTE: Using this hook anywhere in the app will eagerly pull TanStack Query into the bundle.
-// All TanStack-related code must live exclusively inside the lazy boundary.
+/**
+ * Combines the current save-status fetch, user-initiated save/remove mutations
+ * and the background metadata sync behind a single button hook.
+ *
+ * actionResult is only populated for user-initiated actions so the UI can
+ * surface additional information (e.g. a tooltip);
+ *
+ * NOTE: Using this hook anywhere in the app will eagerly pull TanStack Query
+ * into the bundle. All TanStack-related code must live exclusively inside the
+ * lazy boundary.
+ */
 const useUASButton = ({
   articleId,
   saveArticlePageData,
@@ -43,8 +61,19 @@ const useUASButton = ({
   const { service } = use(ServiceContext);
   const { hashedUserId = '', isRefreshAvailable } = use(AccountContext);
   const queryClient = useQueryClient();
+  const trackError = useErrorTracking();
   const { isSaved, isLoading, error, savedMetadata } =
     useUASFetchSaveStatus(articleId);
+
+  useEffect(() => {
+    if (error) {
+      trackError({
+        error,
+        feature: ERROR_TRACKING_FEATURES.UAS,
+        action: UAS_ERROR_ACTIONS.FETCH_STATUS,
+      });
+    }
+  }, [error, trackError]);
 
   // Only set by handleSaveAction, never by the background metadata resync.
   const [actionResult, setActionResult] = useState<UASActionResult>(null);
@@ -81,9 +110,15 @@ const useUASButton = ({
     },
   });
 
-  const handleMetadataOutOfDate = () => {
-    mutation.mutate(UASAction.SAVE);
-  };
+  const handleMetadataOutOfDate = () =>
+    mutation.mutate(UASAction.SAVE, {
+      onError: mutationError =>
+        trackError({
+          error: mutationError,
+          feature: ERROR_TRACKING_FEATURES.UAS,
+          action: UAS_ERROR_ACTIONS.METADATA_SYNC,
+        }),
+    });
 
   useUASMetadataSync({
     saveArticlePageData,
@@ -94,11 +129,24 @@ const useUASButton = ({
     onMetadataOutOfDate: handleMetadataOutOfDate,
   });
 
-  const handleSaveAction = (action: UASAction) =>
-    mutation.mutate(action, {
+  const handleSaveAction = (action: UASAction) => {
+    if (!onlineManager.isOnline()) {
+      setActionResult({ status: 'error', action });
+      return undefined;
+    }
+
+    return mutation.mutate(action, {
       onSuccess: () => setActionResult({ status: 'success', action }),
-      onError: () => setActionResult({ status: 'error', action }),
+      onError: mutationError => {
+        setActionResult({ status: 'error', action });
+        trackError({
+          error: mutationError,
+          feature: ERROR_TRACKING_FEATURES.UAS,
+          action,
+        });
+      },
     });
+  };
 
   const resetActionResult = () => {
     setActionResult(null);
@@ -108,7 +156,7 @@ const useUASButton = ({
   return {
     isSaved,
     isLoading,
-    isUpdating: mutation.isPending,
+    isUpdating: mutation.isPending && !mutation.isPaused,
     error: mutation.error || error,
     actionResult,
     resetActionResult,

@@ -158,22 +158,27 @@ exports[`Canonical Watch Media Loader renders a valid container 1`] = `
   data-e2e="media-loader__container"
 >
   <div
-    class="media-player css-9p9hvp"
-    data-e2e="media-player"
+    class="css-8432in"
+    data-simorgh-media-loader="inactive"
   >
-    <noscript>
-      <div>
-        <div
-          class="css-nsgrcm"
-        >
-          <strong
-            class="css-pow7hy"
+    <div
+      class="media-player css-9p9hvp"
+      data-e2e="media-player"
+    >
+      <noscript>
+        <div>
+          <div
+            class="css-nsgrcm"
           >
-            ஒலிபரப்பு மென்பொருள் உங்கள் கணினியில் இல்லை
-          </strong>
+            <strong
+              class="css-pow7hy"
+            >
+              ஒலிபரப்பு மென்பொருள் உங்கள் கணினியில் இல்லை
+            </strong>
+          </div>
         </div>
-      </div>
-    </noscript>
+      </noscript>
+    </div>
   </div>
   <figcaption
     class="css-xe4jyu"

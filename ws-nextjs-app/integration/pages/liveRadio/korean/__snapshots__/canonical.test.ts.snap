@@ -132,22 +132,27 @@ exports[`Canonical Korean Live Radio Page Media Loader renders a valid container
   data-e2e="media-loader__container"
 >
   <div
-    class="media-player css-1kf4wj3"
-    data-e2e="media-player"
+    class="css-8432in"
+    data-simorgh-media-loader="inactive"
   >
-    <noscript>
-      <div>
-        <div
-          class="css-i4t8f7"
-        >
-          <strong
-            class="css-pow7hy"
+    <div
+      class="media-player css-1kf4wj3"
+      data-e2e="media-player"
+    >
+      <noscript>
+        <div>
+          <div
+            class="css-i4t8f7"
           >
-            사용 기기에서 미디어 재생이 지원되지 않습니다
-          </strong>
+            <strong
+              class="css-pow7hy"
+            >
+              사용 기기에서 미디어 재생이 지원되지 않습니다
+            </strong>
+          </div>
         </div>
-      </div>
-    </noscript>
+      </noscript>
+    </div>
   </div>
 </figure>
 `;
