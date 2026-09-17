@@ -220,7 +220,7 @@ describe('Curation Promo', () => {
       );
     });
 
-    it('should truncate a related topic link when it cannot fit on one line', () => {
+    it('should allow a related topic link to wrap when it cannot fit on one line', () => {
       const longRelatedTopic = {
         ...relatedTopic,
         title: 'A related topic title that is too long to fit on one line',
@@ -234,9 +234,7 @@ describe('Curation Promo', () => {
         screen.getByRole('link', { name: longRelatedTopic.title }),
       ).toHaveStyle({
         flexShrink: 0,
-        overflow: 'hidden',
-        textOverflow: 'ellipsis',
-        whiteSpace: 'nowrap',
+        whiteSpace: 'normal',
       });
     });
 
