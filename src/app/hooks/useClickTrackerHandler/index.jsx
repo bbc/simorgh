@@ -9,6 +9,15 @@ import {
 import { RequestContext } from '#app/contexts/RequestContext';
 import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import constructReverbUrl from '#app/lib/analyticsUtils/staticATITracking/constructReverbUrl';
+import { HOME_PAGE } from '#app/routes/utils/pageTypes';
+import activateExperiment from '#app/hooks/useOptimizelyVariation/activateExperiment';
+import { getSnapshot } from '#app/lib/optimizelyDecisionStore';
+import {
+  HOMEPAGE_ARTICLE_PROMO_CLICK_EVENT,
+  HOMEPAGE_ARTICLE_PROMO_TYPES,
+  HOMEPAGE_RELATED_TOPIC_EXPERIMENT,
+  isHomepageRelatedTopicVariation,
+} from '#app/lib/experiments/homepageRelatedTopicPromos';
 import useTrackingToggle from '../useTrackingToggle';
 import { sendEventBeacon } from '../../components/ATIAnalytics/beacon/index';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -67,6 +76,19 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
 
   const { service } = use(ServiceContext);
   const { optimizely } = use(OptimizelyContext);
+  const { service: pageService, pageType, isAmp } = use(RequestContext);
+
+  // experiment: newswb_ws_homepage_related_topic_promos
+  // classify the article link, excluding topic links and curation headings
+  const isHomepageArticlePromoClick =
+    pageService === 'afrique' &&
+    pageType === HOME_PAGE &&
+    !isAmp &&
+    experimentName === HOMEPAGE_RELATED_TOPIC_EXPERIMENT &&
+    isHomepageRelatedTopicVariation(experimentVariant) &&
+    sendOptimizelyEvents &&
+    itemTracker?.mediaType === 'article' &&
+    HOMEPAGE_ARTICLE_PROMO_TYPES.includes(itemTracker?.type);
 
   return useCallback(
     async event => {
@@ -76,7 +98,8 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
 
       const shouldRegisterClick = [
         trackingIsEnabled,
-        !wasClicked,
+        // count legitimate repeat clicks; optimizely calculates unique users
+        !wasClicked || isHomepageArticlePromoClick,
         isValidClick(event),
       ].every(Boolean);
 
@@ -97,6 +120,32 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
         if (shouldSendEvent) {
           event.stopPropagation();
           event.preventDefault();
+
+          if (optimizely && isHomepageArticlePromoClick) {
+            // experiment: an early click can precede the homepage activation
+            try {
+              const { success } = await optimizely.onReady({ timeout: 1000 });
+              const { id, attributes } = optimizely.user;
+
+              if (success && id) {
+                await activateExperiment({
+                  optimizely,
+                  experimentName,
+                  experimentVariation: experimentVariant,
+                });
+
+                if (getSnapshot().has(experimentName)) {
+                  optimizely.track(
+                    HOMEPAGE_ARTICLE_PROMO_CLICK_EVENT,
+                    id,
+                    attributes,
+                  );
+                }
+              }
+            } catch {
+              // analytics must not prevent navigation if the sdk fails
+            }
+          }
 
           if (optimizely && experimentVariant && sendOptimizelyEvents) {
             const overrideAttributes = optimizely?.user.attributes;
@@ -181,6 +230,7 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
       preventNavigation,
       isSignedIn,
       hashedId,
+      isHomepageArticlePromoClick,
     ],
   );
 };
