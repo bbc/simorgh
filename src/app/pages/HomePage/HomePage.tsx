@@ -75,7 +75,8 @@ const HomePage = ({ pageData }: HomePageProps) => {
         }
       : undefined;
   const showRelatedTopicExperiment =
-    Boolean(relatedTopicExperimentProps) && relatedTopicVariant === 'on';
+    Boolean(relatedTopicExperimentProps) &&
+    relatedTopicVariant === 'related_topic';
 
   const scrollDepthRef = useScrollDepthTracker(
     'homepage-scroll-depth',

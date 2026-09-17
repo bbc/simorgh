@@ -7,8 +7,8 @@ export const HOMEPAGE_ARTICLE_PROMO_CLICK_EVENT =
 
 export const isHomepageRelatedTopicVariation = (
   variation?: string | null,
-): variation is 'control' | 'on' =>
-  variation === 'control' || variation === 'on';
+): variation is 'control' | 'related_topic' =>
+  variation === 'control' || variation === 'related_topic';
 
 export const HOMEPAGE_ARTICLE_PROMO_TYPES = [
   'hierarchical-curation-grid-promo',
