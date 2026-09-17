@@ -1,0 +1,7 @@
+@use '@scss/themeTokens' as theme;
+
+.link {
+    @include theme.fontSizes-gel-font-size(pica);
+    @include theme.fontVariants-gel-font-variant('sans-bold');
+    color: theme.$palette-black;
+}
