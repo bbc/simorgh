@@ -77,7 +77,9 @@ describe('PageLayoutWrapper', () => {
 
       expect(wrapperScript).toBeDefined();
       expect(wrapperScript?.innerHTML).not.toContain('</script>');
-      expect(wrapperScript?.innerHTML).toContain('&lt;/script>&lt;script>');
+      expect(wrapperScript?.innerHTML).toContain(
+        '\\u003c/script>\\u003cscript>',
+      );
     } finally {
       process.env.JEST_WORKER_ID = originalJestWorkerId;
     }
@@ -151,10 +153,10 @@ describe('PageLayoutWrapper', () => {
       });
     });
 
-    it('safely escapes a `</script>` breakout attempt without executing injected script content', async () => {
-      await renderWithTopic(
-        '</script><script>window.xssExecuted = true;</script>',
-      );
+    it('safely escapes a `</script>` breakout attempt without executing injected script content, while preserving the original topic name', async () => {
+      const topicName = '</script><script>window.xssExecuted = true;</script>';
+
+      await renderWithTopic(topicName);
 
       expect(
         (window as unknown as { xssExecuted?: boolean }).xssExecuted,
@@ -164,11 +166,7 @@ describe('PageLayoutWrapper', () => {
         localStorage.getItem('ws_bbc_topics') as string,
       );
 
-      expect(
-        topics.arabic[
-          '&lt;/script>&lt;script>window.xssExecuted = true;&lt;/script>'
-        ],
-      ).toEqual({
+      expect(topics.arabic[topicName]).toEqual({
         count: 1,
         id: 'c000000001',
         path: '/arabic/topics/c000000001',

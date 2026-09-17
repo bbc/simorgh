@@ -51,11 +51,6 @@ type Props = {
 
 type wordCountType = number | undefined;
 
-// Prevents a `</script>` breakout from topic names/ids when they
-// are serialised into the inline script via JSON.stringify (which does not
-// escape `<`). This was picked up as a security concern by copilot.
-const escapeForInlineScript = (value: string) => value.replace(/</g, '&lt;');
-
 const PageLayoutWrapper = ({
   children,
   pageData,
@@ -95,10 +90,7 @@ const PageLayoutWrapper = ({
 
   const serviceFonts = fontFaces();
 
-  const wrappedTopics = pageData?.metadata?.topics?.map(topic => ({
-    topicName: escapeForInlineScript(topic.topicName),
-    topicId: escapeForInlineScript(topic.topicId),
-  }));
+  const wrappedTopics = pageData?.metadata?.topics;
 
   const shouldRenderPageWrapperInlineJs =
     !isLite &&
