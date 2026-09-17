@@ -1,4 +1,4 @@
-import { use, useRef, useState } from 'react';
+import { use, useCallback, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
@@ -65,6 +65,11 @@ const PortraitVideoCarousel = ({
 
   const subheadingClickTracker = useClickTrackerHandler(eventTrackingData);
 
+  const handleCloseModal = useCallback(() => {
+    setIsModalOpen(false);
+    setSelectedVideoIndex(null);
+  }, []);
+
   if (isLite || isAmp) return null;
 
   const handlePromoClick = (index: number) => {
@@ -72,11 +77,6 @@ const PortraitVideoCarousel = ({
       setSelectedVideoIndex(index);
       setIsModalOpen(true);
     }
-  };
-
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-    setSelectedVideoIndex(null);
   };
 
   return (
