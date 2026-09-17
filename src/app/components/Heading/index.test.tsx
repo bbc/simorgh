@@ -20,7 +20,7 @@ describe('Heading', () => {
     });
 
     expect(screen.getByText('Hello World!')).toHaveStyle({
-      color: '#141414',
+      color: '#181818',
       fontSize: '1.75rem',
       lineHeight: '2.25rem',
       fontFamily: 'ReithSans,Helvetica,Arial,sans-serif',
