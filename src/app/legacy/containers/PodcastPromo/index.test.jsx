@@ -51,13 +51,13 @@ describe('Inline', () => {
     expect(container.querySelector('a[href*="p02pc9lh"]')).toBeInTheDocument();
   });
 
-  it('Should render a promo for whatsapp correctly', () => {
+  it('Should render a promo for the Chrome extension correctly', () => {
     const { getByRole, container } = render(<PromoWithContext inline />, {
       service: 'russian',
     });
     expect(getByRole('region')).toBeInTheDocument();
     expect(
-      container.querySelector('a[href*="whatsapp.com"]'),
+      container.querySelector('a[href*="chromewebstore.google.com"]'),
     ).toBeInTheDocument();
   });
 
@@ -216,7 +216,7 @@ describe('Inline', () => {
       service: 'russian',
     });
 
-    expect(getByText('Подписывайтесь').closest('p')).toBeInTheDocument();
+    expect(getByText('Загрузить расширение').closest('p')).toBeInTheDocument();
   });
 
   it('SVGs should use focusable=false and aria-hidden=true to ensure the icon is not focusable in the tabbing order (IE 11)', () => {
@@ -325,7 +325,7 @@ describe('SecondaryColumn', () => {
       service: 'russian',
     });
 
-    expect(getByText('Подписывайтесь').closest('p')).toBeInTheDocument();
+    expect(getByText('Загрузить расширение').closest('p')).toBeInTheDocument();
   });
 
   it('SVGs should use focusable=false and aria-hidden=true to ensure the icon is not focusable in the tabbing order (IE 11)', () => {
