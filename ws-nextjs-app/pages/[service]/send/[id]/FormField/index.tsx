@@ -8,6 +8,7 @@ import Checkbox from './Checkbox';
 import Telephone from './Telephone';
 import TextArea from './TextArea';
 import File from './File';
+import RadioButton from './RadioButton';
 
 const FormComponents: Record<
   string,
@@ -19,6 +20,7 @@ const FormComponents: Record<
   phone: Telephone,
   textarea: TextArea,
   file: File,
+  radiobutton: RadioButton,
 };
 
 export type FormComponentProps = {
