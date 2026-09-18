@@ -4,7 +4,7 @@ import { LiveRegionContextProvider } from '#app/components/LiveRegion/LiveRegion
 import LiveRegion from '#app/components/LiveRegion';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { useFormContext } from '../FormContext';
-import { Field } from '../types';
+import { Section } from '../types';
 import FormField from '../FormField';
 import styles from './styles';
 import Submit from '../SubmitButton';
@@ -13,17 +13,15 @@ import ErrorSummaryBox from '../MessageBox/ErrorSummaryBox';
 
 type Props = {
   title: string;
-  sectionTitle: string;
   description: string;
-  fields: Field[];
+  sections: Section[];
   privacyNotice: string;
 };
 
 export default function FormScreen({
   title,
-  sectionTitle,
   description,
-  fields,
+  sections,
   privacyNotice,
 }: Props) {
   const { handleSubmit, submitted, validationErrors, attemptedSubmitCount } =
@@ -59,14 +57,34 @@ export default function FormScreen({
     validationRequired,
   ]);
 
-  const formFields = fields?.map(({ id, label, htmlType }) => (
-    <FormField key={id} id={id} label={label} htmlType={htmlType} />
-  ));
+  const fields = sections?.flatMap(section => section.fields ?? []) ?? [];
 
   const labelMap: Record<string, string> = {};
   fields?.forEach(({ id, label }) => {
     labelMap[id] = label;
   });
+
+  const formSections = sections?.map(
+    ({ sectionText, fields: sectionFields = [] }, index) => (
+      <section key={`${sectionText?.title}-${index}`}>
+        {sectionText?.title && (
+          <Heading level={2} size="doublePica">
+            {sectionText.title}
+          </Heading>
+        )}
+        {sectionText?.description && (
+          <div
+            // eslint-disable-next-line react/no-danger
+            dangerouslySetInnerHTML={{ __html: sectionText.description }}
+            css={styles.description}
+          />
+        )}
+        {sectionFields.map(({ id, label, htmlType }) => (
+          <FormField key={id} id={id} label={label} htmlType={htmlType} />
+        ))}
+      </section>
+    ),
+  );
 
   return (
     <>
@@ -86,17 +104,12 @@ export default function FormScreen({
           css={styles.description}
         />
       )}
-      {sectionTitle && (
-        <Heading level={2} size="doublePica">
-          {sectionTitle}
-        </Heading>
-      )}
       <form onSubmit={handleSubmit} noValidate>
         <LiveRegionContextProvider>
           {hasAttemptedSubmit && hasValidationErrors && (
             <ErrorSummaryBox ref={ref} labelMap={labelMap} />
           )}
-          {formFields}
+          {formSections}
 
           {privacyNotice && (
             <div css={styles.privacyContainer}>

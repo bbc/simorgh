@@ -121,4 +121,60 @@ export default {
     css({
       border: `solid 0.0625rem ${palette.ERROR_CORE}`,
     }),
+  radioButtonFieldset: () =>
+    css({
+      border: 0,
+      margin: 0,
+      padding: 0,
+    }),
+  radioButtonOptions: ({ spacings }: Theme) =>
+    css({
+      display: 'flex',
+      flexDirection: 'column',
+      gap: `${spacings.FULL}rem`,
+    }),
+  radioButtonContainer: () =>
+    css({
+      display: 'flex',
+      flexWrap: 'nowrap',
+    }),
+  radioButtonLabel: ({ spacings }: Theme) =>
+    css({
+      flex: 'auto',
+      marginInlineStart: `${spacings.DOUBLE}rem`,
+      cursor: 'pointer',
+    }),
+  radioButton: ({ palette, mq }: Theme) =>
+    css({
+      scrollMarginTop: `${pixelsToRem(8)}rem`,
+      display: 'inline-block',
+      flex: 'initial',
+      flexShrink: 0,
+      width: `${pixelsToRem(30)}rem`,
+      height: `${pixelsToRem(30)}rem`,
+      cursor: 'pointer',
+      boxSizing: 'border-box',
+      border: `solid 0.0625rem ${palette.GREY_10}`,
+      borderRadius: '50%',
+      appearance: 'none',
+      '&:checked::after': {
+        content: '""',
+        display: 'block',
+        width: `${pixelsToRem(12)}rem`,
+        height: `${pixelsToRem(12)}rem`,
+        margin: `${pixelsToRem(8)}rem`,
+        backgroundColor: palette.GREY_10,
+        borderRadius: '50%',
+      },
+      [mq.FORCED_COLOURS]: {
+        appearance: 'auto',
+        '&:checked::after': {
+          content: 'none',
+        },
+      },
+    }),
+  radioButtonError: ({ palette }: Theme) =>
+    css({
+      border: `solid 0.0625rem ${palette.ERROR_CORE}`,
+    }),
 };
