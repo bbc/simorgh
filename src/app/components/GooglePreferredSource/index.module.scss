@@ -1,0 +1,10 @@
+@use '@scss/themeTokens' as theme;
+
+.link {
+    font-size: theme.pixelsToRem-px-to-rem(15);
+    @include theme.fontVariants-gel-font-variant('sans-bold');
+    color: theme.$palette-black;
+}
+.wrapper {
+    padding-block-end: theme.$spacings-double;
+}
