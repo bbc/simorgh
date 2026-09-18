@@ -33,8 +33,7 @@ Co-locate an `index.module.scss` file next to the component, import it as a `sty
 }
 
 .link {
-  @include theme.fontSizes-gel-font-size(pica);
-  @include theme.fontVariants-gel-font-variant('serif-bold');
+  @include theme.typography-from-scale-and-variant(pica, 'serif-bold');
   color: theme.$palette-grey-8;
 
   &:visited {
@@ -82,8 +81,7 @@ Design tokens (palette, spacing, font sizes/variants, media queries) are exposed
 @use '@scss/themeTokens' as theme;
 
 .label {
-  @include theme.fontSizes-gel-font-size(brevier);
-  @include theme.fontVariants-gel-font-variant('sans-regular');
+  @include theme.typography-from-scale-and-variant(brevier, 'sans-regular');
   color: theme.$palette-shadow;
   padding: 0 #{theme.$spacings-double};
 
@@ -107,7 +105,7 @@ Design tokens (palette, spacing, font sizes/variants, media queries) are exposed
 }
 ```
 
-Service-specific brand/theme values (e.g. brand colours, font families, font scripts) are set as **CSS custom properties on `:root`** by each service's theme module (see `ThemeProviderSCSSModules/themes/<service>/`). Access these through the SCSS mixins provided by `themeTokens`, such as `theme.fontVariants-gel-font-variant('sans-regular')` and `theme.fontSizes-gel-font-size(pica)`, which resolve to the correct custom properties (with fallbacks) for the active service.
+Service-specific brand/theme values (e.g. brand colours, font families, font scripts) are set as **CSS custom properties on `:root`** by each service's theme module (see `ThemeProviderSCSSModules/themes/<service>/`). Access typography through `theme.typography-from-scale-and-variant(pica, 'sans-regular')`, which emits the responsive size and variant declarations together. The lower-level size and variant mixins remain available when a component intentionally sets only one of them.
 
 ## Handling dark UI
 

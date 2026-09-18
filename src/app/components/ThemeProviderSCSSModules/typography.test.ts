@@ -11,20 +11,32 @@ const compileTypography = () =>
     .compileString(
       `@use 'themeTokens' as theme;
 
-.self {
-  @include theme.typography-gel-font-styles;
+.static {
+  @include theme.typography-from-scale-and-variant(pica, 'sans-regular');
+}
+
+.dynamic {
+  @include theme.typography-from-custom-properties;
 }`,
       { loadPaths: [themeProviderPath] },
     )
     .css.replace(/\s+/g, ' ');
 
 describe('typography mixins', () => {
-  it('uses the GEL font breakpoints for responsive typography', () => {
+  it('emits size and variant declarations for compile-known typography', () => {
     const css = compileTypography();
 
     expect(css).toContain(
-      '@media (min-width: 20rem) and (max-width: 37.4375rem)',
+      '.static { font-family: var(--gel-font-variant-sans-regular-font-family); font-style: var(--gel-font-variant-sans-regular-font-style); font-weight: var(--gel-font-variant-sans-regular-font-weight); font-size: var(--font-size-pica-group-a); line-height: var(--line-height-pica-group-a); }',
     );
-    expect(css).toContain('@media (min-width: 37.5rem)');
+  });
+
+  it('uses the GEL font breakpoints for both typography paths', () => {
+    const css = compileTypography();
+
+    expect(
+      css.match(/@media \(min-width: 20rem\) and \(max-width: 37\.4375rem\)/g),
+    ).toHaveLength(2);
+    expect(css.match(/@media \(min-width: 37\.5rem\)/g)).toHaveLength(2);
   });
 });

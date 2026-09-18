@@ -1,7 +1,7 @@
 @use '@scss/themeTokens' as theme;
 
 .self {
-  @include theme.typography-gel-font-styles;
+  @include theme.typography-from-custom-properties;
 
   color: theme.$palette-ebon;
   border-bottom: #{theme.pixelsToRem-px-to-rem(1)} solid

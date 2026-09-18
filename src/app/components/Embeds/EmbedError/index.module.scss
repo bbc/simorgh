@@ -23,8 +23,7 @@
   padding-top: #{theme.$spacings-full};
 
   .inlineLink {
-    @include theme.fontVariants-gel-font-variant('sans-regular');
-    @include theme.fontSizes-gel-font-size(bodyCopy);
+    @include theme.typography-from-scale-and-variant(bodyCopy, 'sans-regular');
 
     // Override only the default state; InlineLink owns visited and focus/hover states.
     &:not(:visited):not(:hover):not(:focus) {
