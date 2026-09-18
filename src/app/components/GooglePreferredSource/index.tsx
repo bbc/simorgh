@@ -21,7 +21,7 @@ const GooglePreferredSource = () => {
   if (!linkText || !isGoogleReferral()) return null;
 
   return (
-    <div {...viewTracker}>
+    <div className={styles.wrapper} {...viewTracker}>
       <a
         className={styles.link}
         href={GOOGLE_PREFERRED_SOURCE_URL}
