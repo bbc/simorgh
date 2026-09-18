@@ -1,5 +1,6 @@
 import InlineLink from '.';
 import { render, screen } from '../react-testing-library-with-providers';
+import styles from './index.module.scss';
 
 const setCurrentLocation = (location: string) => {
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -20,6 +21,7 @@ describe('InlineLink', () => {
 
     expect(anchorEl.nodeName).toBe('A');
     expect(anchorEl).toHaveAttribute('href', '/mundo/articles/ce42wzqr2mko');
+    expect(anchorEl).toHaveClass(styles.self);
   });
 
   it.each`
@@ -118,12 +120,12 @@ describe('InlineLink', () => {
 
   it.each`
     size          | expected
-    ${'atlas'}    | ${'4.875'}
-    ${'elephant'} | ${'3.75'}
-    ${'imperial'} | ${'3.125'}
-    ${'royal'}    | ${'2.5'}
-    ${'foolscap'} | ${'2'}
-    ${'canon'}    | ${'1.75'}
+    ${'atlas'}    | ${'var(--font-size-atlas-group-a, inherit)'}
+    ${'elephant'} | ${'var(--font-size-elephant-group-a, inherit)'}
+    ${'imperial'} | ${'var(--font-size-imperial-group-a, inherit)'}
+    ${'royal'}    | ${'var(--font-size-royal-group-a, inherit)'}
+    ${'foolscap'} | ${'var(--font-size-foolscap-group-a, inherit)'}
+    ${'canon'}    | ${'var(--font-size-canon-group-a, inherit)'}
   `('should apply provided font size ', ({ size, expected }) => {
     render(
       <InlineLink
@@ -133,33 +135,32 @@ describe('InlineLink', () => {
       />,
     );
 
-    expect(screen.getByText('Hello World!')).toHaveStyle({
-      'font-size': `${expected}rem`,
-    });
+    const inlineLink = screen.getByText('Hello World!');
+
+    expect(
+      inlineLink.style.getPropertyValue('--gel-typography-font-size-group-a'),
+    ).toBe(expected);
   });
 
-  it.each`
-    variant                | fontWeight | fontStyle
-    ${'sansRegularItalic'} | ${400}     | ${'italic'}
-    ${'sansBold'}          | ${700}     | ${'normal'}
-    ${'serifMediumItalic'} | ${500}     | ${'italic'}
-    ${'serifLight'}        | ${300}     | ${'normal'}
-    ${'sansLight'}         | ${300}     | ${'normal'}
-  `(
-    'should apply provided font variant ',
-    ({ variant, fontWeight, fontStyle }) => {
-      render(
-        <InlineLink
-          to="/mundo/articles/ce42wzqr2mko"
-          text="Hello World!"
-          fontVariant={variant}
-        />,
-      );
+  it('should pass font variant custom properties to the rendered link', () => {
+    render(
+      <InlineLink
+        to="/mundo/articles/ce42wzqr2mko"
+        text="Hello World!"
+        fontVariant="sansBold"
+      />,
+    );
 
-      expect(screen.getByText('Hello World!')).toHaveStyle({
-        'font-style': fontStyle,
-        'font-weight': fontWeight,
-      });
-    },
-  );
+    const inlineLink = screen.getByText('Hello World!');
+
+    expect(
+      inlineLink.style.getPropertyValue('--gel-typography-font-family'),
+    ).toBeTruthy();
+    expect(
+      inlineLink.style.getPropertyValue('--gel-typography-font-style'),
+    ).toBeTruthy();
+    expect(
+      inlineLink.style.getPropertyValue('--gel-typography-font-weight'),
+    ).toBeTruthy();
+  });
 });

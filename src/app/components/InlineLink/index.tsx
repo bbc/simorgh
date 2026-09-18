@@ -1,9 +1,10 @@
 import { use, FC, HTMLAttributes } from 'react';
-import { Theme } from '@emotion/react';
+import clsx from 'clsx';
 
 import { FontVariant, GelFontSize } from '../../models/types/theming';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import { styles } from './index.styles';
+import { getTypographyStyles } from '../ThemeProviderSCSSModules/typography';
+import styles from './index.module.scss';
 
 interface Props extends HTMLAttributes<HTMLElement> {
   className?: string;
@@ -29,6 +30,7 @@ const InlineLink: FC<Props> = ({
   size,
   text,
   to,
+  style,
   ...htmlAttributes
 }: Props) => {
   const { externalLinkText } = use(ServiceContext);
@@ -40,12 +42,11 @@ const InlineLink: FC<Props> = ({
       typeof text === 'string' && {
         'aria-label': text.concat(externalLinkText),
       }),
-    className,
-    css: ({ fontSizes, fontVariants }: Theme) => [
-      styles.self,
-      size && fontSizes[size],
-      fontVariant && fontVariants[fontVariant],
-    ],
+    className: clsx(styles.self, className),
+    style: {
+      ...getTypographyStyles({ size, fontVariant }),
+      ...style,
+    },
     ...htmlAttributes,
   };
 
