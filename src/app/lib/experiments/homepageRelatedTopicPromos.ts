@@ -5,8 +5,6 @@ export const HOMEPAGE_RELATED_TOPIC_EXPERIMENT =
 export const HOMEPAGE_ARTICLE_PROMO_CLICK_EVENT =
   'homepage-article-promo-clicks';
 
-export const HOMEPAGE_ARTICLE_PROMO_CTR_EVENT = 'homepage-article-promo-ctr';
-
 export const isHomepageRelatedTopicVariation = (
   variation?: string | null,
 ): variation is 'control' | 'related_topic' =>
