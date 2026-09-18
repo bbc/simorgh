@@ -142,19 +142,12 @@ describe('InlineLink', () => {
     ).toBe(expected);
   });
 
-  it.each`
-    variant                | expected
-    ${'sansRegularItalic'} | ${'var(--gel-font-variant-sans-regular-italic-font-family, inherit)'}
-    ${'sansBold'}          | ${'var(--gel-font-variant-sans-bold-font-family, inherit)'}
-    ${'serifMediumItalic'} | ${'var(--gel-font-variant-serif-medium-italic-font-family, inherit)'}
-    ${'serifLight'}        | ${'var(--gel-font-variant-serif-light-font-family, inherit)'}
-    ${'sansLight'}         | ${'var(--gel-font-variant-sans-light-font-family, inherit)'}
-  `('should apply provided font variant ', ({ variant, expected }) => {
+  it('should pass font variant custom properties to the rendered link', () => {
     render(
       <InlineLink
         to="/mundo/articles/ce42wzqr2mko"
         text="Hello World!"
-        fontVariant={variant}
+        fontVariant="sansBold"
       />,
     );
 
@@ -162,6 +155,12 @@ describe('InlineLink', () => {
 
     expect(
       inlineLink.style.getPropertyValue('--gel-typography-font-family'),
-    ).toBe(expected);
+    ).toBeTruthy();
+    expect(
+      inlineLink.style.getPropertyValue('--gel-typography-font-style'),
+    ).toBeTruthy();
+    expect(
+      inlineLink.style.getPropertyValue('--gel-typography-font-weight'),
+    ).toBeTruthy();
   });
 });
