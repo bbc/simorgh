@@ -8,12 +8,16 @@ import { Summary } from '#app/models/types/curationData';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import isMediaType from '#app/lib/utilities/isMedia';
 import { MY_NEWS_PAGE } from '#app/routes/utils/pageTypes';
-import isLiveEnvironment from '#app/lib/utilities/isLive';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '../../../contexts/RequestContext';
 import LiveLabel from '../../LiveLabel';
 import styles from './index.styles';
+
+interface CurationPromoProps extends Summary {
+  // experiment: newswb_ws_homepage_related_topic_promos
+  showRelatedTopicExperiment?: boolean;
+}
 
 const CurationPromo = ({
   id,
@@ -30,7 +34,8 @@ const CurationPromo = ({
   eventTrackingData,
   isPortraitImage,
   relatedTopic,
-}: Summary) => {
+  showRelatedTopicExperiment = false,
+}: CurationPromoProps) => {
   const { isAmp, isLite, pageType } = use(RequestContext);
   const { translations } = use(ServiceContext);
 
@@ -55,6 +60,14 @@ const CurationPromo = ({
     (type === 'photogallery' && `${photoGalleryTranslation}, `);
 
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
+
+  // experiment: only eligible article promos in the homepage variant show a topic
+  const hasRelatedTopic = Boolean(
+    showRelatedTopicExperiment &&
+    type === 'article' &&
+    relatedTopic?.title?.trim() &&
+    relatedTopic.link?.url,
+  );
 
   const relatedTopicEventTrackingData = {
     ...eventTrackingData,
@@ -117,9 +130,9 @@ const CurationPromo = ({
           css={styles.metadataAndTopicData}
           className="metadata-and-topic-data"
         >
-          {relatedTopic && !isLiveEnvironment() && (
+          {hasRelatedTopic && relatedTopic && (
             <a
-              href={relatedTopic?.link?.url}
+              href={relatedTopic.link.url}
               css={styles.relatedTopicLink}
               className="related-topic-link"
               {...relatedTopicClickTrackerHandler}
