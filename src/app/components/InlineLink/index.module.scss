@@ -1,25 +1,12 @@
 @use '@scss/themeTokens' as theme;
 
 .self {
+  @include theme.typography-gel-font-styles;
+
   color: theme.$palette-ebon;
   border-bottom: #{theme.pixelsToRem-px-to-rem(1)} solid
     theme.$palette-postbox;
   text-decoration: none;
-  font-family: var(--gel-typography-font-family, inherit);
-  font-style: var(--gel-typography-font-style, inherit);
-  font-weight: var(--gel-typography-font-weight, inherit);
-  font-size: var(--gel-typography-font-size-group-a, inherit);
-  line-height: var(--gel-typography-line-height-group-a, inherit);
-
-  @media #{theme.$mediaQueries-group-2-min-width} {
-    font-size: var(--gel-typography-font-size-group-b, inherit);
-    line-height: var(--gel-typography-line-height-group-b, inherit);
-  }
-
-  @media #{theme.$mediaQueries-group-4-min-width} {
-    font-size: var(--gel-typography-font-size-group-d, inherit);
-    line-height: var(--gel-typography-line-height-group-d, inherit);
-  }
 
   &:visited {
     color: theme.$palette-metal;
