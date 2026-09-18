@@ -13,7 +13,6 @@ import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import activateExperiment from '#app/hooks/useOptimizelyVariation/activateExperiment';
 import {
   HOMEPAGE_ARTICLE_PROMO_CLICK_EVENT,
-  HOMEPAGE_ARTICLE_PROMO_CTR_EVENT,
   HOMEPAGE_ARTICLE_PROMO_TYPES,
   HOMEPAGE_RELATED_TOPIC_EXPERIMENT,
   isHomepageRelatedTopicVariation,
@@ -135,12 +134,11 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
                     experimentVariation: experimentVariant,
                   });
 
-                  [
-                    HOMEPAGE_ARTICLE_PROMO_CTR_EVENT,
+                  optimizely.track(
                     HOMEPAGE_ARTICLE_PROMO_CLICK_EVENT,
-                  ].forEach(eventName => {
-                    optimizely.track(eventName, id, attributes);
-                  });
+                    id,
+                    attributes,
+                  );
                 }
               } catch {
                 // analytics must not prevent navigation if the sdk fails
