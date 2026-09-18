@@ -279,8 +279,7 @@ export const service: DefaultServiceConfig = {
       },
       linkLabel: {
         text: 'Загрузить расширение',
-        href:
-        'https://chromewebstore.google.com/detail/bbc-news-%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%B0%D1%8F-%D1%81%D0%BB%D1%83%D0%B6%D0%B1%D0%B0/bnliibjlmflplmjlfnecbkdkbpglkpio?utm_source=ext_app_menu',
+        href: 'https://chromewebstore.google.com/detail/bbc-news-%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%B0%D1%8F-%D1%81%D0%BB%D1%83%D0%B6%D0%B1%D0%B0/bnliibjlmflplmjlfnecbkdkbpglkpio?utm_source=ext_app_menu',
       },
       skipLink: {
         text: 'Пропустить %title% и продолжить чтение.',
