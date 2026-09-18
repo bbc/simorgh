@@ -25,7 +25,12 @@ const setPageWrapperInlineJs = function (params: PageWrapperInlineJsParams) {
   var wordCount = params.wordCount;
   var reportingPageType = String(params.reportingPageType);
 
-  if ('FileReader' in window && 'Promise' in window && 'fetch' in window) {
+  if (
+    'FileReader' in window &&
+    'Promise' in window &&
+    'fetch' in window &&
+    'localStorage' in window
+  ) {
     var getFont = function getFontRequest(location: string) {
       return new Promise(function fontPromise(resolve, reject) {
         fetch(location)
@@ -109,110 +114,114 @@ const setPageWrapperInlineJs = function (params: PageWrapperInlineJsParams) {
     });
   }
 
-  var wrappedPageTimeStart = new Date();
-  var wrappedYear = wrappedPageTimeStart.getFullYear();
-  var wrappedMonth = wrappedPageTimeStart.getMonth() + 1;
-  var wrappedStorageKey = 'ws_bbc_wrapped';
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  var wrappedContents: Record<string, any> = {};
-  var topicsStorageKey = 'ws_bbc_topics';
-  var topicsContents = JSON.parse(
-    localStorage.getItem(topicsStorageKey) || '{}',
-  );
-
-  wrappedContents[wrappedYear] = {
-    byMonth: {},
-    pageTypeCounts: {},
-    serviceCounts: {},
-    topicCounts: {},
-    duration: 0,
-    wordCount: 0,
-  };
-  wrappedContents[wrappedYear].byMonth[wrappedMonth] = 0;
-
-  function saveWrapped() {
-    localStorage.setItem(wrappedStorageKey, JSON.stringify(wrappedContents));
-  }
-
-  var wrappedLocalStorageContents = localStorage.getItem(wrappedStorageKey);
-
-  if (wrappedLocalStorageContents) {
-    var wrappedLocalStorageContentsParsed = JSON.parse(
-      wrappedLocalStorageContents,
+  if ('localStorage' in window) {
+    var wrappedPageTimeStart = new Date();
+    var wrappedYear = wrappedPageTimeStart.getFullYear();
+    var wrappedMonth = wrappedPageTimeStart.getMonth() + 1;
+    var wrappedStorageKey = 'ws_bbc_wrapped';
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    var wrappedContents: Record<string, any> = {};
+    var topicsStorageKey = 'ws_bbc_topics';
+    var topicsContents = JSON.parse(
+      localStorage.getItem(topicsStorageKey) || '{}',
     );
 
-    if (
-      Object.prototype.hasOwnProperty.call(
-        wrappedLocalStorageContentsParsed,
-        wrappedYear,
-      )
-    ) {
-      wrappedContents[wrappedYear] =
-        wrappedLocalStorageContentsParsed[wrappedYear] ||
-        wrappedContents[wrappedYear];
-      wrappedContents[wrappedYear].byMonth[wrappedMonth] =
-        wrappedLocalStorageContentsParsed[wrappedYear].byMonth[wrappedMonth] ||
-        0;
+    wrappedContents[wrappedYear] = {
+      byMonth: {},
+      pageTypeCounts: {},
+      serviceCounts: {},
+      topicCounts: {},
+      duration: 0,
+      wordCount: 0,
+    };
+    wrappedContents[wrappedYear].byMonth[wrappedMonth] = 0;
+
+    // eslint-disable-next-line no-inner-declarations
+    function saveWrapped() {
+      localStorage.setItem(wrappedStorageKey, JSON.stringify(wrappedContents));
     }
-  }
 
-  var wrappedContentsShortcut = wrappedContents[wrappedYear];
+    var wrappedLocalStorageContents = localStorage.getItem(wrappedStorageKey);
 
-  if (wrappedTopics) {
-    wrappedTopics.forEach(function setTopicCount(topic) {
-      var topicName = topic.topicName;
-      var topicId = topic.topicId;
+    if (wrappedLocalStorageContents) {
+      var wrappedLocalStorageContentsParsed = JSON.parse(
+        wrappedLocalStorageContents,
+      );
 
-      if (!topicsContents[service]) {
-        topicsContents[service] = {};
+      if (
+        Object.prototype.hasOwnProperty.call(
+          wrappedLocalStorageContentsParsed,
+          wrappedYear,
+        )
+      ) {
+        wrappedContents[wrappedYear] =
+          wrappedLocalStorageContentsParsed[wrappedYear] ||
+          wrappedContents[wrappedYear];
+        wrappedContents[wrappedYear].byMonth[wrappedMonth] =
+          wrappedLocalStorageContentsParsed[wrappedYear].byMonth[
+            wrappedMonth
+          ] || 0;
       }
+    }
 
-      if (topicsContents[service][topicName]) {
-        topicsContents[service][topicName].count += 1;
+    var wrappedContentsShortcut = wrappedContents[wrappedYear];
+
+    if (wrappedTopics) {
+      wrappedTopics.forEach(function setTopicCount(topic) {
+        var topicName = topic.topicName;
+        var topicId = topic.topicId;
+
+        if (!topicsContents[service]) {
+          topicsContents[service] = {};
+        }
+
+        if (topicsContents[service][topicName]) {
+          topicsContents[service][topicName].count += 1;
+        } else {
+          topicsContents[service][topicName] = {
+            count: 1,
+            id: topicId,
+            path: '/' + service + '/topics/' + topicId,
+          };
+        }
+
+        wrappedContentsShortcut.topicCounts[topicName] = wrappedContentsShortcut
+          .topicCounts[topicName]
+          ? wrappedContentsShortcut.topicCounts[topicName] + 1
+          : 1;
+      });
+    }
+
+    document.onvisibilitychange = function onVisibilityChange() {
+      if (document.visibilityState === 'hidden') {
+        var wrappedTimeNow = new Date();
+        var wrappedDifference =
+          wrappedTimeNow.getTime() - wrappedPageTimeStart.getTime();
+        wrappedContentsShortcut.duration = wrappedContentsShortcut.duration
+          ? wrappedContentsShortcut.duration + wrappedDifference
+          : wrappedDifference;
+        saveWrapped();
       } else {
-        topicsContents[service][topicName] = {
-          count: 1,
-          id: topicId,
-          path: '/' + service + '/topics/' + topicId,
-        };
+        wrappedPageTimeStart = new Date();
       }
+    };
 
-      wrappedContentsShortcut.topicCounts[topicName] = wrappedContentsShortcut
-        .topicCounts[topicName]
-        ? wrappedContentsShortcut.topicCounts[topicName] + 1
-        : 1;
-    });
-  }
-
-  document.onvisibilitychange = function onVisibilityChange() {
-    if (document.visibilityState === 'hidden') {
-      var wrappedTimeNow = new Date();
-      var wrappedDifference =
-        wrappedTimeNow.getTime() - wrappedPageTimeStart.getTime();
-      wrappedContentsShortcut.duration = wrappedContentsShortcut.duration
-        ? wrappedContentsShortcut.duration + wrappedDifference
-        : wrappedDifference;
-      saveWrapped();
-    } else {
-      wrappedPageTimeStart = new Date();
-    }
-  };
-
-  wrappedContentsShortcut.wordCount += wordCount;
-  wrappedContentsShortcut.serviceCounts[service] = wrappedContentsShortcut
-    .serviceCounts[service]
-    ? wrappedContentsShortcut.serviceCounts[service] + 1
-    : 1;
-  wrappedContentsShortcut.pageTypeCounts[reportingPageType] =
-    wrappedContentsShortcut.pageTypeCounts[reportingPageType]
-      ? wrappedContentsShortcut.pageTypeCounts[reportingPageType] + 1
+    wrappedContentsShortcut.wordCount += wordCount;
+    wrappedContentsShortcut.serviceCounts[service] = wrappedContentsShortcut
+      .serviceCounts[service]
+      ? wrappedContentsShortcut.serviceCounts[service] + 1
       : 1;
-  wrappedContentsShortcut.byMonth[wrappedMonth] = wrappedContentsShortcut
-    .byMonth[wrappedMonth]
-    ? wrappedContentsShortcut.byMonth[wrappedMonth] + 1
-    : 1;
-  wrappedContents[wrappedYear] = wrappedContentsShortcut;
-  localStorage.setItem(topicsStorageKey, JSON.stringify(topicsContents));
+    wrappedContentsShortcut.pageTypeCounts[reportingPageType] =
+      wrappedContentsShortcut.pageTypeCounts[reportingPageType]
+        ? wrappedContentsShortcut.pageTypeCounts[reportingPageType] + 1
+        : 1;
+    wrappedContentsShortcut.byMonth[wrappedMonth] = wrappedContentsShortcut
+      .byMonth[wrappedMonth]
+      ? wrappedContentsShortcut.byMonth[wrappedMonth] + 1
+      : 1;
+    wrappedContents[wrappedYear] = wrappedContentsShortcut;
+    localStorage.setItem(topicsStorageKey, JSON.stringify(topicsContents));
+  }
 };
 
 export default setPageWrapperInlineJs;
