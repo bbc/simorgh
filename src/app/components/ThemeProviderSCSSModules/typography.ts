@@ -2,21 +2,21 @@ import type { CSSProperties } from 'react';
 
 import type { FontVariant, GelFontSize } from '#app/models/types/theming';
 
-export type TypographyStyles = CSSProperties & {
+export type TypographyCustomPropertyStyles = CSSProperties & {
   [property: `--gel-typography-${string}`]: string;
 };
 
 const toKebabCase = (value: string) =>
   value.replace(/[A-Z]/g, character => `-${character.toLowerCase()}`);
 
-export const getTypographyStyles = ({
+export const getTypographyCustomProperties = ({
   size,
   fontVariant,
 }: {
   size?: GelFontSize;
   fontVariant?: FontVariant;
-}): TypographyStyles => {
-  const styles: TypographyStyles = {};
+}): TypographyCustomPropertyStyles => {
+  const styles: TypographyCustomPropertyStyles = {};
 
   if (size) {
     const scale = toKebabCase(size);

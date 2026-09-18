@@ -3,7 +3,7 @@ import clsx from 'clsx';
 
 import { FontVariant, GelFontSize } from '../../models/types/theming';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import { getTypographyStyles } from '../ThemeProviderSCSSModules/typography';
+import { getTypographyCustomProperties } from '../ThemeProviderSCSSModules/typography';
 import styles from './index.module.scss';
 
 interface Props extends HTMLAttributes<HTMLElement> {
@@ -44,7 +44,7 @@ const InlineLink: FC<Props> = ({
       }),
     className: clsx(styles.self, className),
     style: {
-      ...getTypographyStyles({ size, fontVariant }),
+      ...getTypographyCustomProperties({ size, fontVariant }),
       ...style,
     },
     ...htmlAttributes,

@@ -1,6 +1,13 @@
 @use './fontMediaQueries.scss' as fontMediaQueries;
+@use './fontSizes.scss' as fontSizes;
+@use './fontVariants.scss' as fontVariants;
 
-@mixin gel-font-styles {
+@mixin from-scale-and-variant($scale, $variant) {
+  @include fontVariants.gel-font-variant($variant);
+  @include fontSizes.gel-font-size($scale);
+}
+
+@mixin from-custom-properties {
   font-family: var(--gel-typography-font-family, inherit);
   font-style: var(--gel-typography-font-style, inherit);
   font-weight: var(--gel-typography-font-weight, inherit);

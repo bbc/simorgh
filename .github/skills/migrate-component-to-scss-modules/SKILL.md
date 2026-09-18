@@ -93,15 +93,19 @@ Emotion values include the `@media` prefix; SCSS variables contain only the cond
 
 `GROUP_N_ONLY` and `GROUP_1_AND_GROUP_2` have no direct equivalent — compose min and max variables in a single query.
 
-### Font sizes
+### Typography
 
-`fontSizes[scale]` → `@include theme.fontSizes-gel-font-size(<scale>);` (unquoted). The mixin applies responsive `font-size` and `line-height` across breakpoint groups, so remove any manual `line-height` the Emotion styles set alongside it.
+When the Emotion style sets both a font size and variant, use the combined mixin:
+
+```scss
+@include theme.typography-from-scale-and-variant(<scale>, '<variant>');
+```
+
+The scale is unquoted and the variant is quoted kebab-case. The mixin emits the font family, style and weight together with responsive font size and line height. Remove any manual `line-height` the Emotion styles set alongside the GEL scale.
+
+Use the lower-level `theme.fontSizes-gel-font-size(<scale>)` or `theme.fontVariants-gel-font-variant('<variant>')` mixin only when the existing component intentionally sets one without the other.
 
 Valid scales: `atlas`, `elephant`, `imperial`, `royal`, `foolscap`, `canon`, `trafalgar`, `paragon`, `doublePica`, `greatPrimer`, `bodyCopy`, `pica`, `longPrimer`, `brevier`, `minion`.
-
-### Font variants
-
-`fontVariants[variant]` → `@include theme.fontVariants-gel-font-variant('<variant>');` (**quoted**, kebab-case).
 
 | Emotion | SCSS argument |
 |---|---|
