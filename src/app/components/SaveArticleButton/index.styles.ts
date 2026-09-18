@@ -6,7 +6,7 @@ const styles = {
     css({
       position: 'relative',
       marginBlockStart: 0,
-      marginBlockEnd: `${spacings.TRIPLE}rem`,
+      marginBlockEnd: `${spacings.DOUBLE}rem`,
       marginInline: `${spacings.FULL}rem`,
 
       [mq.GROUP_2_MIN_WIDTH]: {
