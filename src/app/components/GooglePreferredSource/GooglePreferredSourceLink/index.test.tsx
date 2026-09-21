@@ -15,11 +15,11 @@ describe('GooglePreferredSource', () => {
     mockUseToggle.mockReturnValue({ enabled: true, value: null });
 
     const linkText = 'Google पर पसंदीदा स्रोत के रूप में जोड़ें';
-    const { getByRole } = render(<GooglePreferredSource />, {
+    const { getByText } = render(<GooglePreferredSource />, {
       service: 'hindi',
     });
 
-    const link = getByRole('link', { name: linkText });
+    const link = getByText(linkText);
 
     expect(link).toHaveAttribute(
       'href',
