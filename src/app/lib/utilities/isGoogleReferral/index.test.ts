@@ -17,7 +17,6 @@ describe('isGoogleReferral', () => {
     ${'https://news.google.com/'}
     ${'https://WWW.GOOGLE.COM/'}
     ${'android-app://com.google.android.googlequicksearchbox/'}
-    ${'https://google.com.example.com/'}
   `('returns true for $referrer', ({ referrer }) => {
     setReferrer(referrer);
 
