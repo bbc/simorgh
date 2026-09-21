@@ -9,21 +9,21 @@
     "done": false,
     "reference": {
       "url": "",
-      "label": "Screen Reader UX"
+      "label": "https://www.figma.com/design/O5es2iJ7Ocjm85He1wc38q/WS-Save-for-later-Component?node-id=1-183&p=f&t=YLBi5ebLmBHJ70B9-0"
     }
   },
   "acceptanceCriteria": {
     "done": false,
     "reference": {
       "url": "",
-      "label": "Accessibility Acceptance Criteria"
+      "label": "https://www.dropbox.com/scl/fi/0i7tnoc01nabvyc1ztw5v/A11Y-Swarm_-WS-Save-for-later.paper?rlkey=wzy1wmlbhfhbny2kz84y1ftsm&dl=0#:uid=498267043951661048890089&h2=Accessibility-Checklist"
     }
   },
   "swarm": {
     "done": false,
     "reference": {
       "url": "",
-      "label": "Accessibility Swarm Notes"
+      "label": "https://www.dropbox.com/scl/fi/0i7tnoc01nabvyc1ztw5v/A11Y-Swarm-WS-Save-for-later.paper?rlkey=wzy1wmlbhfhbny2kz84y1ftsm&dl=0"
     }
   }
 }
