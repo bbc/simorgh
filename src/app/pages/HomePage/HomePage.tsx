@@ -169,7 +169,9 @@ const HomePage = ({ pageData }: HomePageProps) => {
           </div>
         </div>
       </main>
-      {relatedTopicExperimentProps && <OptimizelyPageMetrics trackPageComplete trackPageDepth />}
+      {relatedTopicExperimentProps && (
+        <OptimizelyPageMetrics trackPageComplete trackPageDepth />
+      )}
     </>
   );
 };
