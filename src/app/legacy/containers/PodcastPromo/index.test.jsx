@@ -38,6 +38,22 @@ const {
 describe('Inline', () => {
   const electionsIconPathSnippet = 'M18.1,7.2v2.6h8.7';
 
+  it('should omit the canonical sizes hint for AMP images', () => {
+    const { container: canonicalContainer } = render(<PromoWithContext />, {
+      service: 'russian',
+    });
+    const { container: ampContainer } = render(<PromoWithContext />, {
+      service: 'russian',
+      isAmp: true,
+    });
+
+    expect(canonicalContainer.querySelector('img')).toHaveAttribute(
+      'sizes',
+      '(min-width: 1008px) 228px, 30vw',
+    );
+    expect(ampContainer.querySelector('amp-img')).not.toHaveAttribute('sizes');
+  });
+
   it('Should render a promo for podcasts correctly', () => {
     const { getByRole, container } = render(
       <PromoWithContext inline config={burmeseServiceConfig} />,

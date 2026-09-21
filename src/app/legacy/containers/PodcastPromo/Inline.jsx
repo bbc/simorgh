@@ -188,7 +188,7 @@ const getIconFromUrl = url => {
 
 const Promo = () => {
   const { podcastPromo, dir } = use(ServiceContext);
-  const { pageType, isLite } = use(RequestContext);
+  const { pageType, isAmp, isLite } = use(RequestContext);
   const {
     podcastPromoTitle,
     podcastBrandTitle,
@@ -245,7 +245,7 @@ const Promo = () => {
                 src={imgSrc}
                 srcSet={srcset}
                 mediaType={primaryMimeType}
-                sizes={sizes}
+                sizes={isAmp ? undefined : sizes}
                 alt={alt}
                 height={100}
                 width={100}
