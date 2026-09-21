@@ -343,5 +343,68 @@ describe('getRecentActivity', () => {
 
       expect(result.savedArticles).toHaveLength(0);
     });
+
+    it('retains items matched via metaData.service when resourceTitle is missing', async () => {
+      const responseWithoutResourceTitle = {
+        total: 1,
+        pagination: { startIndex: 0, itemsPerPage: 10 },
+        items: [
+          {
+            activityType: 'favourites',
+            resourceId: 'legacy-hindi-article',
+            resourceType: 'article',
+            resourceDomain: 'world-service-news',
+            created: '2026-01-10T09:00:00Z',
+            action: 'favourited',
+            metaData: {
+              service: 'hindi',
+              title: 'Legacy Hindi Article',
+              locatorUrl: '/hindi/articles/legacy-hindi-article',
+            },
+            '@id': 'urn:bbc:world-service-news:article:legacy-hindi-article',
+          } as UasActivityItem,
+        ],
+      };
+
+      mockUasApiRequest.mockResolvedValueOnce({
+        json: jest.fn().mockResolvedValueOnce(responseWithoutResourceTitle),
+      } as unknown as Response);
+
+      const result = await getRecentActivity({ service: 'hindi' });
+
+      expect(result.savedArticles).toHaveLength(1);
+      expect(result.savedArticles[0].id).toBe('legacy-hindi-article');
+    });
+
+    it('excludes items matched via metaData.service when it belongs to a different service', async () => {
+      const responseWithoutResourceTitle = {
+        total: 1,
+        pagination: { startIndex: 0, itemsPerPage: 10 },
+        items: [
+          {
+            activityType: 'favourites',
+            resourceId: 'legacy-arabic-article',
+            resourceType: 'article',
+            resourceDomain: 'world-service-news',
+            created: '2026-01-10T09:00:00Z',
+            action: 'favourited',
+            metaData: {
+              service: 'arabic',
+              title: 'Legacy Arabic Article',
+              locatorUrl: '/arabic/articles/legacy-arabic-article',
+            },
+            '@id': 'urn:bbc:world-service-news:article:legacy-arabic-article',
+          } as UasActivityItem,
+        ],
+      };
+
+      mockUasApiRequest.mockResolvedValueOnce({
+        json: jest.fn().mockResolvedValueOnce(responseWithoutResourceTitle),
+      } as unknown as Response);
+
+      const result = await getRecentActivity({ service: 'hindi' });
+
+      expect(result.savedArticles).toHaveLength(0);
+    });
   });
 });

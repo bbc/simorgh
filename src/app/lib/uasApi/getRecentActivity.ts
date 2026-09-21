@@ -43,8 +43,13 @@ interface GetRecentActivityParams {
   service?: Services;
 }
 
-const belongsToService = (item: UasActivityItem, service?: Services) =>
-  !service || item.resourceTitle?.toLowerCase() === service.toLowerCase();
+const belongsToService = (item: UasActivityItem, service?: Services) => {
+  if (!service) return true;
+
+  const itemService = item.resourceTitle || item.metaData?.service;
+
+  return itemService?.toLowerCase() === service.toLowerCase();
+};
 
 const transformActivityToSavedArticle = (
   item: UasActivityItem,
