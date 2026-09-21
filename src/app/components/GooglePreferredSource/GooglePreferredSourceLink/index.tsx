@@ -3,12 +3,16 @@ import { use } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import useToggle from '#hooks/useToggle';
 import styles from './index.module.scss';
 
 const GOOGLE_PREFERRED_SOURCE_URL =
   'https://www.google.com/preferences/source?q=bbc.com';
 
 const GooglePreferredSource = () => {
+  const toggle = useToggle('googlePreferredSource');
+  const googlePreferredSourceEnabled = toggle.enabled;
+
   const eventTrackingData = {
     componentName: 'google-preferred-source',
   };
@@ -18,7 +22,8 @@ const GooglePreferredSource = () => {
 
   const { translations } = use(ServiceContext);
   const linkText = translations?.googlePreferredSource?.linkText;
-  if (!linkText || !isGoogleReferral()) return null;
+  if (!linkText || !isGoogleReferral() || !googlePreferredSourceEnabled)
+    return null;
 
   return (
     <div className={styles.wrapper} {...viewTracker}>
