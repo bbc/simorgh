@@ -250,6 +250,88 @@ export const buildReverbEventModel = ({
   };
 };
 
+export const buildResonanceEventModel = ({
+  pageIdentifier,
+  producerName,
+  statsDestination,
+  componentName,
+  campaignID,
+  type,
+  advertiserID,
+  url,
+  experimentName,
+  experimentVariant,
+  itemTracker = {},
+  groupTracker = {},
+  eventGroupingName,
+  isSignedIn = false,
+  hashedId = null,
+}: ATIEventTrackingProps) => {
+  const resonanceEventModel = {
+    event: {
+      action: type === VIEW_EVENT ? 'view' : 'select',
+      category: 'viewability',
+      ...(eventGroupingName && { grouping: eventGroupingName }),
+      ...(type === CLICK_EVENT && {
+        interaction_type: VIEWABILITY_CLICK_EVENT,
+      }),
+    },
+    ...(((groupTracker && Object.keys(groupTracker).length > 0) ||
+      campaignID) && {
+      group: {
+        ...((groupTracker.name || campaignID) && {
+          name: groupTracker.name || campaignID,
+        }),
+        ...(groupTracker.itemCount && { itemCount: groupTracker.itemCount }),
+        ...(groupTracker.resourceId && {
+          resourceId: groupTracker.resourceId,
+        }),
+        ...(groupTracker.position && { position: groupTracker.position }),
+        ...(groupTracker.link && { link: groupTracker.link }),
+        ...(groupTracker.type && { type: groupTracker.type }),
+      },
+    }),
+    ...(itemTracker &&
+      Object.keys(itemTracker).length > 0 && {
+        item: {
+          ...(componentName && { name: componentName }),
+          ...(advertiserID && { attribution: advertiserID }),
+          ...(url && { link: url }),
+          ...(itemTracker.type && { type: itemTracker.type }),
+          ...(itemTracker.text && { text: itemTracker.text }),
+          ...(itemTracker.position && { position: itemTracker.position }),
+          ...(itemTracker.duration && { duration: itemTracker.duration }),
+          ...(itemTracker.mediaType && { mediaType: itemTracker.mediaType }),
+          ...(itemTracker.label && { label: itemTracker.label }),
+          ...(itemTracker.resourceId && { resourceId: itemTracker.resourceId }),
+        },
+      }),
+    ...(experimentName || experimentVariant
+      ? {
+          mv: {
+            ...(experimentName && { engineName: experimentName }),
+            ...(experimentVariant && { variationId: experimentVariant }),
+            ...(experimentName && { experimentId: experimentName }),
+          },
+        }
+      : {}),
+    ...(pageIdentifier && { pageTitle: pageIdentifier }),
+    ...(producerName && { contentBrand: producerName }),
+    ...(statsDestination && { contentId: statsDestination }),
+    ...(url && { url }),
+    ...(isSignedIn !== undefined || hashedId
+      ? {
+          user: {
+            ...(isSignedIn !== undefined && { isSignedIn }),
+            ...(hashedId && { hashedId }),
+          },
+        }
+      : {}),
+  };
+
+  return resonanceEventModel;
+};
+
 type ActivationEventProps = {
   pageIdentifier?: string;
   platform?: Platforms;
