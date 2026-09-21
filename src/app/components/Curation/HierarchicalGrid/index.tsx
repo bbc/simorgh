@@ -89,7 +89,6 @@ const HiearchicalGrid = ({
             (promo.type === 'video' && `${videoTranslation}, `) ||
             (promo.type === 'photogallery' && `${photoGalleryTranslation}, `);
           const { isLive, relatedTopic } = promo;
-          // experiment: newswb_ws_homepage_related_topic_promos
           const hasRelatedTopic = Boolean(
             showRelatedTopicExperiment &&
             promo.type === 'article' &&
