@@ -24,6 +24,7 @@ export type FileData = {
 
 export type OnChangeInputValue =
   | ChangeEvent<HTMLInputElement>['target']['value']
+  | string[]
   | FileData[]
   | boolean;
 
@@ -92,6 +93,7 @@ export type ValidationConditions = {
   max?: number;
   fileTypes?: string[];
   mandatory?: boolean;
+  multiSelect?: boolean;
   options?: FieldOption[];
   wordLimit?: number;
 };

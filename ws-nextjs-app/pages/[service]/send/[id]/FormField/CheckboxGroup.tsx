@@ -17,7 +17,7 @@ export default ({
 }: InputProps) => {
   const {
     isValid,
-    value = '',
+    value = [],
     required,
     wasInvalid,
     messageCode,
@@ -26,8 +26,17 @@ export default ({
   const {
     translations: { ugc: { optional = fallbackTranslations.optional } = {} },
   } = use(ServiceContext);
+  const selectedValues = value as string[];
   const useErrorTheme = hasAttemptedSubmit && !isValid;
   const errorBoxId = `${id}-error`;
+
+  const updateSelectedValues = (optionValue: string, checked: boolean) => {
+    const nextValues = checked
+      ? [...selectedValues, optionValue]
+      : selectedValues.filter(selectedValue => selectedValue !== optionValue);
+
+    handleChange(name, nextValues);
+  };
 
   return (
     <>
@@ -54,20 +63,19 @@ export default ({
               <div key={option.value} css={styles.radioButtonContainer}>
                 <input
                   css={[
-                    styles.radioButton,
+                    styles.checkbox,
                     styles.focusIndicatorInput,
-                    useErrorTheme && styles.radioButtonError,
+                    useErrorTheme && styles.checkboxError,
                   ]}
                   id={optionId}
                   name={name}
-                  type="radio"
+                  type="checkbox"
                   value={option.value}
-                  checked={value === option.value}
+                  checked={selectedValues.includes(option.value)}
                   onChange={event =>
-                    handleChange(event.target.name, event.target.value)
+                    updateSelectedValues(option.value, event.target.checked)
                   }
                   onBlur={event => handleFocusOut(event.target.name)}
-                  required={required}
                 />
                 <Text
                   as="label"

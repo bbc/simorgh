@@ -1,5 +1,6 @@
 import {
   act,
+  fireEvent,
   render,
 } from '#app/components/react-testing-library-with-providers';
 import mockMatchMedia from '#testHelpers/mockMatchMedia';
@@ -192,6 +193,98 @@ describe('FormField', () => {
 
     expect(label).toBeInTheDocument();
     expect(checkboxInput).toBeInTheDocument();
+  });
+
+  it('should render and select one constrained-list radio option', async () => {
+    const { container } = await act(() => {
+      return render(
+        <ComponentWithContext
+          props={{
+            id: 'testRadioID',
+            htmlType: 'radiobutton',
+            label: 'Choose one option',
+          }}
+          fields={[
+            {
+              id: 'testRadioID',
+              type: 'constrained-list',
+              htmlType: 'radiobutton',
+              label: 'Choose one option',
+              description: '',
+              validation: {
+                mandatory: true,
+                multiSelect: false,
+                options: [
+                  { label: 'First option', value: 'first' },
+                  { label: 'Second option', value: 'second' },
+                ],
+              },
+            },
+          ]}
+        />,
+      );
+    });
+
+    const fieldset = container.querySelector('fieldset');
+    const firstRadio = container.querySelector(
+      'input[type=radio][value=first]',
+    ) as HTMLInputElement;
+    const secondRadio = container.querySelector(
+      'input[type=radio][value=second]',
+    ) as HTMLInputElement;
+
+    expect(fieldset).toHaveTextContent('Choose one option');
+    expect(firstRadio).toBeInTheDocument();
+    expect(secondRadio).toBeInTheDocument();
+
+    fireEvent.click(firstRadio);
+    fireEvent.click(secondRadio);
+
+    expect(firstRadio).not.toBeChecked();
+    expect(secondRadio).toBeChecked();
+  });
+
+  it('should render and select multiple constrained-list checkbox options', async () => {
+    const { container } = await act(() => {
+      return render(
+        <ComponentWithContext
+          props={{
+            id: 'testCheckboxGroupID',
+            htmlType: 'checkbox',
+            label: 'Choose all that apply',
+          }}
+          fields={[
+            {
+              id: 'testCheckboxGroupID',
+              type: 'constrained-list',
+              htmlType: 'checkbox',
+              label: 'Choose all that apply',
+              description: '',
+              validation: {
+                mandatory: true,
+                multiSelect: true,
+                options: [
+                  { label: 'First option', value: 'first' },
+                  { label: 'Second option', value: 'second' },
+                ],
+              },
+            },
+          ]}
+        />,
+      );
+    });
+
+    const checkboxes = container.querySelectorAll('input[type=checkbox]');
+    const firstCheckbox = checkboxes[0] as HTMLInputElement;
+    const secondCheckbox = checkboxes[1] as HTMLInputElement;
+
+    expect(checkboxes).toHaveLength(2);
+
+    fireEvent.click(firstCheckbox);
+    fireEvent.click(secondCheckbox);
+
+    expect(firstCheckbox).toBeChecked();
+    expect(secondCheckbox).toBeChecked();
   });
 
   it('should render a tel input with an associated label', async () => {
