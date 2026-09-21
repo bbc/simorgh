@@ -1,19 +1,22 @@
+import { use } from 'react';
 import useOptimizelyVariation, {
   ExperimentType,
 } from '#app/hooks/useOptimizelyVariation';
 import AccountPromotionalBanner from '#app/components/Account/AccountPromotionalBanner';
+import useAccountPromoBannerEligibility from '#app/components/Account/AccountPromotionalBanner/useAccountPromoBannerEligibility';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 
 // EXPERIMENT: newswb_ws_homepage_account_promo_banner_copy
 const HOMEPAGE_ACCOUNT_PROMO_BANNER_EXPERIMENT_NAME =
   'newswb_ws_homepage_account_promo_banner_copy';
+
+const EXPERIMENT_SERVICE = 'hindi';
 
 type VariantCopy = {
   title: string;
   description: string;
 };
 
-// Hindi-only copy variants for the homepage sign-in banner experiment.
-// `control` intentionally has no override so the existing translated copy is used.
 const experimentVariantCopy: Record<string, VariantCopy> = {
   variant_1: {
     title: 'इस आर्टिकल को बाद के लिए सेव कीजिए',
@@ -32,7 +35,9 @@ const experimentVariantCopy: Record<string, VariantCopy> = {
   },
 };
 
-const AccountPromotionalBannerHomePageExperiment = () => {
+// Calling useOptimizelyVariation activates the experiment in Optimizely, so it is
+// only mounted once the banner's eligibility criteria are met.
+const EligibleAccountPromotionalBannerHomePageExperiment = () => {
   const experimentVariant = useOptimizelyVariation({
     experimentName: HOMEPAGE_ACCOUNT_PROMO_BANNER_EXPERIMENT_NAME,
     experimentType: ExperimentType.SERVER_SIDE,
@@ -54,6 +59,23 @@ const AccountPromotionalBannerHomePageExperiment = () => {
       })}
     />
   );
+};
+
+// Only Hindi runs this copy experiment; every other service gets the standard
+// banner without mounting the child, so Optimizely is never activated for them.
+// Signed-in users stay eligible so their page views are activated and tracked,
+// even though AccountPromotionalBanner renders nothing for them.
+const AccountPromotionalBannerHomePageExperiment = () => {
+  const { service } = use(ServiceContext);
+  const isEligible = useAccountPromoBannerEligibility({
+    excludeSignedInUsers: false,
+  });
+
+  if (!isEligible || service !== EXPERIMENT_SERVICE) {
+    return <AccountPromotionalBanner />;
+  }
+
+  return <EligibleAccountPromotionalBannerHomePageExperiment />;
 };
 
 export default AccountPromotionalBannerHomePageExperiment;
