@@ -61,7 +61,8 @@ import ContinueReadingButton, {
 import SaveArticleButton from '#app/components/SaveArticleButton';
 import AccountPromotionalBannerExperiment from '#app/components/Account/AccountPromotionalBannerExperiment';
 import repositionCountryTopic from '#app/components/TopicDiscovery/RepositionCountryTopic';
-import GooglePreferredSource from '#app/components/GooglePreferredSource';
+import GooglePreferredSource from '#app/components/GooglePreferredSource/GooglePreferredSourceLink';
+import GooglePreferredSourceDivider from '#app/components/GooglePreferredSource/GooglePreferredSourceDivider';
 import ElectionBanner from './ElectionBanner';
 import ArticleMessageBanner from './ArticleMessageBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
@@ -150,6 +151,7 @@ const getTimestampComponent =
         <SaveArticleButton
           saveArticlePageData={extractSaveArticleProps(articlePageData)}
         />
+        {!isAmp && !isLite && !isApp && <GooglePreferredSourceDivider />}
       </>
     );
   };

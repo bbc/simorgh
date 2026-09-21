@@ -5,6 +5,7 @@
     @include theme.fontVariants-gel-font-variant('sans-bold');
     color: theme.$palette-black;
 }
+
 .wrapper {
     padding-block-end: theme.$spacings-double;
 }
