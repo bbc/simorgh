@@ -20,7 +20,7 @@ const GooglePreferredSource = () => {
   const viewTracker = useViewTracker(eventTrackingData);
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
 
-  const { translations } = use(ServiceContext);
+  const { translations, externalLinkText } = use(ServiceContext);
   const linkText = translations?.googlePreferredSource?.linkText;
   if (!linkText || !isGoogleReferral() || !googlePreferredSourceEnabled)
     return null;
@@ -33,6 +33,7 @@ const GooglePreferredSource = () => {
         rel="noopener noreferrer"
         target="_blank"
         {...clickTrackerHandler}
+        aria-label={`${linkText} ${externalLinkText}`}
       >
         {linkText}
       </a>
