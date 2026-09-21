@@ -7,7 +7,7 @@ const GooglePreferredSourceDivider = () => {
   const { translations } = use(ServiceContext);
   const linkText = translations?.googlePreferredSource?.linkText;
 
-  // if (!linkText || !isGoogleReferral()) return null;
+  if (!linkText || !isGoogleReferral()) return null;
 
   return <div className={styles.divider} aria-hidden="true" />;
 };
