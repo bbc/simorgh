@@ -33,7 +33,7 @@ const useUASRecentActivity = ({
   const trackError = useErrorTracking();
 
   const { data, isLoading, error } = useQuery({
-    queryKey: uasKeys.favouritesPage(hashedUserId, startIndex),
+    queryKey: uasKeys.favouritesPage(hashedUserId, startIndex, service),
     queryFn: ({ signal }) =>
       getRecentActivity({
         itemsPerPage,
