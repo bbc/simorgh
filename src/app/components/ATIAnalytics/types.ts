@@ -152,10 +152,56 @@ export type ReverbEventDetails = {
 };
 
 // possible task - type this ourselves and not rely on imported types
-export type ResonanceBeaconConfig = {
+export type ResonancePageViewBeaconConfig = {
   resonanceProperties: ResonanceProperties;
   pageviewProperties: PageviewProperties;
   baseProperties: BaseProperties;
+};
+
+export type ResonanceEventBeaconConfig = {
+  event: {
+    action?: string;
+    category?: string;
+    pixelThreshold?: number;
+    subcategory?: string;
+    grouping?: string;
+  };
+  experience: {
+    breakpoint?: string;
+    globalPlatform?: string;
+    isAccount?: boolean;
+  };
+  item: {
+    type?: string;
+    text?: string;
+    position?: number;
+    duration?: number;
+    label?: string;
+    mediaType?: string;
+    resourceId?: string;
+    attribution?: string;
+    campaignName?: string;
+    link?: string;
+    name?: string;
+  };
+  group: {
+    itemCount?: number;
+    link?: string;
+    name?: string;
+    position?: string | number;
+    resourceId?: string;
+    type?: string;
+  };
+  mv?: {
+    engineName?: string;
+    variationId?: string;
+    experimentId?: string;
+  };
+  destination?: string;
+  producer?: string;
+  service?: string;
+  isSignedIn?: boolean;
+  hashedId?: string | null;
 };
 
 export type ReverbBeaconConfig = {
@@ -165,7 +211,7 @@ export type ReverbBeaconConfig = {
 
 export interface ATIAnalyticsProps {
   reverbParams: ReverbBeaconConfig;
-  resonanceParams?: ResonanceBeaconConfig | null;
+  resonanceParams?: ResonancePageViewBeaconConfig | null;
 }
 
 export interface ATIEventTrackingProps {

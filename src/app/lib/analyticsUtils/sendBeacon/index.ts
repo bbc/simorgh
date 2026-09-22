@@ -1,8 +1,9 @@
 import { ReverbClient } from '#app/models/types/eventTracking';
 import {
   ReverbBeaconConfig,
-  ResonanceBeaconConfig,
+  ResonancePageViewBeaconConfig,
   ReverbEventDetails,
+  ResonanceEventBeaconConfig,
 } from '#app/components/ATIAnalytics/types';
 import onClient from '../../utilities/onClient';
 import nodeLogger from '../../logger.node';
@@ -90,9 +91,9 @@ const callReverb = async (eventDetails: ReverbEventDetails) => {
   );
 };
 
-const callResonance = (
+const initialiseResonance = (
   Resonance: typeof import('@bbc/resonance').Resonance,
-  resonanceParams: ResonanceBeaconConfig,
+  resonanceParams: ResonancePageViewBeaconConfig,
 ) => {
   try {
     Resonance.initialise(
@@ -105,9 +106,16 @@ const callResonance = (
   }
 };
 
+const callResonance = () => {
+  // TBC
+};
+
 const sendBeacon = async (
   reverbBeaconConfig: ReverbBeaconConfig,
-  resonanceBeaconConfig?: ResonanceBeaconConfig | null,
+  resonanceBeaconConfig?:
+    | ResonancePageViewBeaconConfig
+    | ResonanceEventBeaconConfig
+    | null,
 ) => {
   if (onClient()) {
     try {
@@ -123,7 +131,10 @@ const sendBeacon = async (
     if (resonanceBeaconConfig) {
       try {
         const { Resonance } = await import('@bbc/resonance');
-        callResonance(Resonance, resonanceBeaconConfig);
+        initialiseResonance(
+          Resonance,
+          resonanceBeaconConfig as ResonancePageViewBeaconConfig,
+        );
       } catch (error) {
         logger.error(ATI_LOGGING_ERROR, { error });
       }

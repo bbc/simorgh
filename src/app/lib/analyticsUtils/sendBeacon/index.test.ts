@@ -4,7 +4,7 @@ import loggerMock from '#testHelpers/loggerMock';
 import { ATI_LOGGING_ERROR } from '#app/lib/logger.const';
 import {
   ReverbBeaconConfig,
-  ResonanceBeaconConfig,
+  ResonancePageViewBeaconConfig,
 } from '#app/components/ATIAnalytics/types';
 import { waitFor } from '#app/components/react-testing-library-with-providers';
 import sendBeacon from './index';
@@ -287,7 +287,7 @@ describe('sendBeacon', () => {
         destination: 'statsDestination',
         producer: 'PIDGIN',
       },
-    } as unknown as ResonanceBeaconConfig;
+    } as unknown as ResonancePageViewBeaconConfig;
 
     it('should call Resonance.initialise with the correct params when resonanceBeaconConfig is provided', async () => {
       await sendBeacon(reverbConfig, resonanceConfig);

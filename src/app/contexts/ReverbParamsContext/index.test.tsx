@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import { use } from 'react';
-import { ResonanceBeaconConfig } from '#app/components/ATIAnalytics/types';
+import { ResonancePageViewBeaconConfig } from '#app/components/ATIAnalytics/types';
 import {
   render,
   screen,
@@ -339,7 +339,7 @@ describe('ReverbParamsContext', () => {
         destination: 'WS_NEWS_LANGUAGES_TEST',
         producer: 'PIDGIN',
       },
-    } as unknown as ResonanceBeaconConfig;
+    } as unknown as ResonancePageViewBeaconConfig;
 
     jest.spyOn(buildAnalyticsParamsModule, 'default').mockReturnValue({
       reverbParams: {

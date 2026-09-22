@@ -13,7 +13,7 @@ import buildAnalyticsParams from '#app/components/ATIAnalytics/params';
 import {
   ATIData,
   ReverbBeaconConfig,
-  ResonanceBeaconConfig,
+  ResonancePageViewBeaconConfig,
 } from '#app/components/ATIAnalytics/types';
 import {
   ARTICLE_PAGE,
@@ -34,7 +34,7 @@ import getEnrichedHomePageATIData from './getEnrichedHomePageATIData';
 
 type ReverbParamsContextProps = {
   reverbParams: ReverbBeaconConfig;
-  resonanceParams: ResonanceBeaconConfig | null;
+  resonanceParams: ResonancePageViewBeaconConfig | null;
   experimentProps?: ComponentExperimentProps;
 };
 

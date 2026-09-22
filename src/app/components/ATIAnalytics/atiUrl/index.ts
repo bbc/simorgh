@@ -1,3 +1,4 @@
+import { isMobile } from '#app/legacy/containers/PageHandlers/withOptimizelyProvider/userAttributes';
 import {
   ACTIVATION_EVENT,
   ACTIVATION_EVENT_INTERACTION_TYPE,
@@ -22,7 +23,8 @@ import {
   ATIEventTrackingProps,
   ATIPageTrackingProps,
   ReverbBeaconConfig,
-  ResonanceBeaconConfig,
+  ResonancePageViewBeaconConfig,
+  ResonanceEventBeaconConfig,
 } from '../types';
 
 /*
@@ -43,7 +45,7 @@ export const buildResonanceAnalyticsModel = ({
   pageIdentifier,
   producerName,
   platform,
-}: ATIPageTrackingProps): ResonanceBeaconConfig => {
+}: ATIPageTrackingProps): ResonancePageViewBeaconConfig => {
   const env = getEnvConfig().SIMORGH_APP_ENV;
 
   return {
@@ -67,7 +69,7 @@ export const buildResonanceAnalyticsModel = ({
       destination: statsDestination,
       producer: producerName,
     },
-  } as ResonanceBeaconConfig;
+  } as ResonancePageViewBeaconConfig;
 };
 
 export const buildReverbAnalyticsModel = ({
@@ -234,6 +236,83 @@ export const buildReverbEventModel = ({
         },
       }),
     },
+  };
+};
+
+export const buildResonanceEventModel = ({
+  pageIdentifier,
+  producerName,
+  componentName,
+  campaignID,
+  type,
+  url,
+  experimentName,
+  experimentVariant,
+  itemTracker = {},
+  groupTracker = {},
+  isSignedIn = false,
+  viewThreshold,
+  platform,
+}: ATIEventTrackingProps): ResonanceEventBeaconConfig => {
+  const {
+    name = campaignID,
+    itemCount,
+    resourceId: groupResourceId,
+    position: groupPosition,
+    link,
+    type: groupType,
+  } = groupTracker;
+
+  const {
+    type: itemType,
+    text,
+    position,
+    duration,
+    label,
+    mediaType,
+    resourceId: itemResourceId,
+  } = itemTracker;
+
+  return {
+    event: {
+      action: type === VIEW_EVENT ? 'view' : 'select',
+      grouping: pageIdentifier,
+      pixelThreshold: viewThreshold,
+      subcategory: componentName,
+    },
+    experience: {
+      breakpoint: isMobile() ? 'mobile' : 'desktop',
+      globalPlatform: platform,
+      isAccount: isSignedIn,
+    },
+    group: {
+      itemCount,
+      link,
+      name,
+      position: groupPosition,
+      resourceId: groupResourceId,
+      type: groupType,
+    },
+    item: {
+      type: itemType,
+      text,
+      position,
+      duration,
+      label,
+      mediaType,
+      resourceId: itemResourceId,
+      attribution: producerName,
+      campaignName: campaignID,
+      link: url,
+      name: label,
+    },
+    ...(experimentVariant && {
+      mv: {
+        engineName: 'Optimizely',
+        variationId: experimentVariant,
+        experimentId: experimentName,
+      },
+    }),
   };
 };
 

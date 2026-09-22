@@ -15,9 +15,6 @@ import useTrackingToggle from '../useTrackingToggle';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import dispatchTrackingRequests from '../../lib/analyticsUtils/dispatchTrackingRequests';
 import getIntersectionObserver from './getIntersectionObserver';
-// Temporary Resonance dual-run (see ticket) - safe to remove as a unit once Reverb is retired.
-import buildViewabilityEventModel from '../../components/ATIAnalytics/resonanceViewability/buildViewabilityEventModel';
-import dispatchViewabilityEvent from '../../components/ATIAnalytics/resonanceViewability/dispatchViewabilityEvent';
 
 const VIEWED_DURATION_MS = 1000;
 
@@ -47,6 +44,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     eventTrackingData,
     eventType: VIEW_EVENT,
   });
+
   const { optimizely } = use(OptimizelyContext);
 
   const observer = useRef(null);
@@ -56,7 +54,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
   const [eventSent, setEventSent] = useState(false);
   const { trackingIsEnabled } = useTrackingToggle(componentName);
 
-  const { service, resonanceEnabled } = use(ServiceContext);
+  const { service } = use(ServiceContext);
 
   useEffect(() => {
     if (componentHasComeIntoView && !timer.current) {
@@ -100,26 +98,6 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
           },
         });
 
-        // Temporary Resonance dual-run, independent of the Reverb dispatch above (see ticket).
-        if (resonanceEnabled) {
-          dispatchViewabilityEvent(
-            buildViewabilityEventModel({
-              pageIdentifier,
-              campaignID,
-              componentName,
-              producerName,
-              type: VIEW_EVENT,
-              url,
-              experimentName,
-              experimentVariant,
-              itemTracker,
-              groupTracker,
-              viewThreshold,
-              platform,
-            }),
-          );
-        }
-
         if (!alwaysInView) {
           setEventSent(true);
 
@@ -149,7 +127,6 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     producerId,
     producerName,
     service,
-    resonanceEnabled,
     statsDestination,
     trackingIsEnabled,
     eventSent,
@@ -166,6 +143,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     isSignedIn,
     hashedId,
   ]);
+
   const viewTracker = useCallback(
     async (element: HTMLElement) => {
       const shouldSetupIntersectionObserver = alwaysInView

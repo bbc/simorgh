@@ -8,7 +8,7 @@ import { addSendStaticBeaconToWindow } from '#app/lib/analyticsUtils/staticATITr
 import processClientDeviceAndSendStaticBeacon from '#app/lib/analyticsUtils/staticATITracking/processClientDeviceAndSendStaticBeacon';
 import * as beacon from '../../../lib/analyticsUtils/sendBeacon';
 import CanonicalATIAnalytics from '.';
-import { ResonanceBeaconConfig, ReverbBeaconConfig } from '../types';
+import { ResonancePageViewBeaconConfig, ReverbBeaconConfig } from '../types';
 
 describe('Canonical ATI Analytics', () => {
   afterEach(() => {
@@ -69,7 +69,7 @@ describe('Canonical ATI Analytics', () => {
       destination: 'statsDestination',
       producer: 'PIDGIN',
     },
-  } as ResonanceBeaconConfig;
+  } as ResonancePageViewBeaconConfig;
 
   const mockSendBeacon = jest.fn().mockReturnValue('beacon-return-value');
   // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
