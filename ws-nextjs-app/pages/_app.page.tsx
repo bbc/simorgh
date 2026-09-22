@@ -38,12 +38,15 @@ import fetchConfig from '#app/lib/utilities/fetchConfig';
 interface Props {
   pageProps: {
     bbcOrigin?: string;
+    // TODO: TBC if needed for the appendAdDomainsToCSPHeader in PageLayoutWrapper
+    cspHeader?: string | null;
     id?: string;
     isAmp: boolean;
     isApp?: boolean;
     isLite?: boolean;
     isNextJs: boolean;
     isAvEmbeds?: boolean;
+    nonce?: string | null;
     serverSideExperiments: ServerSideExperiment[] | null;
     pageData: {
       metadata: {
@@ -101,6 +104,7 @@ export default class CustomApp extends App<Props> {
         : null;
 
     const requestHeaders = ctx.req?.headers;
+    const extractedHeaders = extractHeaders(requestHeaders || {});
     const idctaResult = await getIdctaConfig(toggles, service, requestHeaders);
     const pageType =
       (ctx.req?.headers['page-type'] as PageTypes) || derivePageType(asPath);
@@ -111,14 +115,21 @@ export default class CustomApp extends App<Props> {
     });
 
     addServiceChainHeader({ ctx });
-    addCspHeader({ ctx, service, toggles });
+    const { nonce, cspHeader } = addCspHeader({
+      ctx,
+      service,
+      toggles,
+      country: extractedHeaders.country,
+    });
     addOnionLocationHeader({ ctx });
     addVaryHeader({ ctx, serverSideExperiments });
     addLinkHeader({ ctx });
 
     return {
       pageProps: {
-        ...extractHeaders(ctx.req?.headers || {}),
+        ...extractedHeaders,
+        cspHeader,
+        nonce,
         isApp,
         isAmp,
         isLite,
@@ -136,12 +147,14 @@ export default class CustomApp extends App<Props> {
 
     const {
       bbcOrigin,
+      cspHeader = null,
       id,
       isAmp,
       isApp = false,
       isLite = false,
       isNextJs = true,
       isAvEmbeds = false,
+      nonce = null,
       serverSideExperiments = null,
       pageData,
       pageLang = '',
@@ -181,10 +194,12 @@ export default class CustomApp extends App<Props> {
         >
           <RequestContextProvider
             bbcOrigin={bbcOrigin}
+            cspHeader={cspHeader}
             id={id}
             isAmp={isAmp}
             isApp={isApp}
             isLite={isLite}
+            nonce={nonce}
             pageType={pageType}
             service={service}
             statusCode={status}

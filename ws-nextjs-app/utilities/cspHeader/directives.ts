@@ -364,6 +364,9 @@ export const generateScriptSrc = ({
 }) => {
   if (shouldServeRelaxedCsp)
     return ["https: 'unsafe-inline' 'unsafe-eval' blob: data: 'self'"];
+  // TODO: WS-3302 - to be double-checked with the team. Browsers ignore
+  // 'unsafe-inline' when a nonce is present, so on the nonce tier every inline
+  // script must carry the nonce or it will be blocked.
   const insertedNonce = nonce
     ? [`'nonce-${nonce}'`, 'blob:', 'data:', "'unsafe-eval'"]
     : [];
@@ -412,7 +415,7 @@ export const generateWorkerSrc = ({ isAmp, shouldServeRelaxedCsp = false }) => {
 export const cspDirectives = ({
   isAmp,
   isLive,
-  nonce = null,
+  nonce = null as string | null,
   shouldServeRelaxedCsp = false,
   country = '',
 }) => {
