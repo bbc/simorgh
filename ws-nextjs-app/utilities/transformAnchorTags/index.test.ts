@@ -1,8 +1,8 @@
-import createHrefExtensionTransform from '.';
+import transformAnchorTags from '.';
 
-describe('createHrefExtensionTransform', () => {
+describe('transformAnchorTags', () => {
   it('should append the given extension to eligible hrefs by default', () => {
-    const transform = createHrefExtensionTransform({
+    const transform = transformAnchorTags({
       extension: 'lite',
     });
 
@@ -12,7 +12,7 @@ describe('createHrefExtensionTransform', () => {
   });
 
   it('should only append the extension when isEligiblePath returns true', () => {
-    const transform = createHrefExtensionTransform({
+    const transform = transformAnchorTags({
       extension: 'app',
       isEligiblePath: pathname => pathname.includes('/articles/'),
     });
@@ -29,7 +29,7 @@ describe('createHrefExtensionTransform', () => {
   });
 
   it('should not append the extension when the derived ignore attribute is present', () => {
-    const transform = createHrefExtensionTransform({
+    const transform = transformAnchorTags({
       extension: 'lite',
     });
 

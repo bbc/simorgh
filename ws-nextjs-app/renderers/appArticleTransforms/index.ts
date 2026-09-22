@@ -1,6 +1,6 @@
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import createHrefExtensionTransform from '#utilities/createHrefExtensionTransform';
 import derivePageType from '#utilities/derivePageType';
+import transformAnchorTags from '#utilities/transformAnchorTags';
 
 type Fn = (html: string) => string;
 
@@ -9,9 +9,9 @@ const pipe =
   (x: string) =>
     fns.reduce((result, nextFn) => nextFn(result), x);
 
-const transformAnchorTags = createHrefExtensionTransform({
-  extension: 'app',
-  isEligiblePath: pathname => derivePageType(pathname) === ARTICLE_PAGE,
-});
-
-export default pipe(transformAnchorTags);
+export default pipe(
+  transformAnchorTags({
+    extension: 'app',
+    isEligiblePath: pathname => derivePageType(pathname) === ARTICLE_PAGE,
+  }),
+);

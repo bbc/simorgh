@@ -1,4 +1,4 @@
-import createHrefExtensionTransform from '#utilities/createHrefExtensionTransform';
+import transformAnchorTags from '#utilities/transformAnchorTags';
 
 type Fn = (html: string) => string;
 
@@ -7,8 +7,4 @@ const pipe =
   (x: string) =>
     fns.reduce((result, nextFn) => nextFn(result), x);
 
-const transformAnchorTags = createHrefExtensionTransform({
-  extension: 'lite',
-});
-
-export default pipe(transformAnchorTags);
+export default pipe(transformAnchorTags({ extension: 'lite' }));
