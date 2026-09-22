@@ -7829,21 +7829,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"baseline-browser-mapping@npm:^2.11.12":
-  version: 2.11.20
-  resolution: "baseline-browser-mapping@npm:2.11.20"
+"baseline-browser-mapping@npm:^2.11.12, baseline-browser-mapping@npm:^2.9.19":
+  version: 2.11.21
+  resolution: "baseline-browser-mapping@npm:2.11.21"
   bin:
     baseline-browser-mapping: dist/cli.cjs
-  checksum: 10/5263ac0e5f2d5cac5f48fe131a97a2e7a267487934403443282119c7a1a76670762fcb48e42a0eab4501dd1f2bb5021f4033e3fa07d96dddae4ebca6ae3bb24d
-  languageName: node
-  linkType: hard
-
-"baseline-browser-mapping@npm:^2.9.19":
-  version: 2.10.8
-  resolution: "baseline-browser-mapping@npm:2.10.8"
-  bin:
-    baseline-browser-mapping: dist/cli.cjs
-  checksum: 10/820972372c87c65c2e665134d70aa44d5722492fb907aa79170fec84086a75de4675f6a7b717cf0a31b4c4f71cd0289b056b71e32007de97a37973a501d31dcb
+  checksum: 10/b4d223df8dbb8deeaa3dae3b9b60ad48b24c57a5473827b5a6ee1c21917e7c37af2185224c5366f2932654ec5fb1a9fee4f95fe7213cc29f4347550f25e4234b
   languageName: node
   linkType: hard
 
@@ -8939,16 +8930,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cypress-terminal-report@npm:7.2.1":
-  version: 7.2.1
-  resolution: "cypress-terminal-report@npm:7.2.1"
+"cypress-terminal-report@npm:7.3.3":
+  version: 7.3.3
+  resolution: "cypress-terminal-report@npm:7.3.3"
   dependencies:
     chalk: "npm:^4.0.0"
     compare-versions: "npm:^6.1.1"
     superstruct: "npm:0.14.2"
   peerDependencies:
     cypress: ">=10.0.0"
-  checksum: 10/31ef7828a93036b6bf534ac43b04c9573a4a6449aea8494e0409bdbc4b45e77aae3efd9d03cf5095d99221dee3bbfca59ca85a285efab748c0cfc4c15cafd27d
+  checksum: 10/5c8a9a64f39bec3befc96d84d8c424d1786bd48daeae541b67698c9a95a7d25036466859c8a754e69f7cedf21d68780a67e6b6aecf09cb49e921771e66e87fdc
   languageName: node
   linkType: hard
 
@@ -16656,7 +16647,7 @@ __metadata:
     cypress: "npm:15.11.0"
     cypress-axe: "npm:1.7.0"
     cypress-multi-reporters: "npm:2.0.5"
-    cypress-terminal-report: "npm:7.2.1"
+    cypress-terminal-report: "npm:7.3.3"
     jest: "npm:30.3.0"
     jest-environment-jsdom: "npm:30.2.0"
     mocha-junit-reporter: "npm:2.2.1"
@@ -16734,7 +16725,7 @@ __metadata:
     cypress: "npm:15.11.0"
     cypress-axe: "npm:1.7.0"
     cypress-multi-reporters: "npm:2.0.5"
-    cypress-terminal-report: "npm:7.2.1"
+    cypress-terminal-report: "npm:7.3.3"
     depcheck: "npm:1.4.7"
     dotenv: "npm:17.4.2"
     eslint: "npm:7.32.0"

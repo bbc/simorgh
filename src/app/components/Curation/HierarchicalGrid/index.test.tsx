@@ -1,8 +1,9 @@
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
-import * as isLiveEnv from '#lib/utilities/isLive';
+import arabicSilverLiveStreamFixture from '#data/arabic/articles/c5y35dxlpv2o.json';
 import { matchers } from '@emotion/jest';
 import MediaLoader from '../../MediaLoader';
 import { aresMediaBlocks } from '../../MediaLoader/fixture';
+import { MediaBlock } from '../../MediaLoader/types';
 import { fireEvent, render } from '../../react-testing-library-with-providers';
 import { pidginPromos as fixture } from './fixtures';
 import mediaFixture from './mediaFixtures';
@@ -31,6 +32,21 @@ const getSummariesWithInSituMedia = () => {
   return {
     inSituPromo,
     summaries: [inSituPromo, audioPromo, articlePromo, recentlyPublishedPromo],
+  };
+};
+
+const getSummariesWithLiveInSituMedia = () => {
+  const { inSituPromo, summaries } = getSummariesWithInSituMedia();
+  const [videoBlock] =
+    arabicSilverLiveStreamFixture.data.article.promo.media.blocks;
+  const liveInSituPromo = {
+    ...inSituPromo,
+    inSituMedia: videoBlock.model.blocks as unknown as MediaBlock[],
+  };
+
+  return {
+    inSituPromo: liveInSituPromo,
+    summaries: [liveInSituPromo, ...summaries.slice(1)],
   };
 };
 
@@ -252,6 +268,46 @@ describe('Hierarchical Grid Curation', () => {
     );
   });
 
+  it('displays the translated live label on a Silver in-situ promo', () => {
+    const { inSituPromo, summaries } = getSummariesWithLiveInSituMedia();
+
+    const { container } = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={summaries}
+        eventTrackingData={minimalEventTrackingData}
+      />,
+      { service: 'arabic' },
+    );
+
+    const firstPromo = container.querySelector('li');
+
+    expect(firstPromo).toHaveTextContent('مباشر');
+    expect(firstPromo?.querySelector('a')).toHaveAttribute(
+      'href',
+      inSituPromo.link,
+    );
+    expect(
+      firstPromo?.querySelector('.promo-timestamp'),
+    ).not.toBeInTheDocument();
+    expect(firstPromo).not.toHaveTextContent('المدة');
+  });
+
+  it('does not display a live label on an on-demand in-situ promo', () => {
+    const { summaries } = getSummariesWithInSituMedia();
+
+    const { container } = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={summaries}
+        eventTrackingData={minimalEventTrackingData}
+      />,
+      { service: 'arabic' },
+    );
+
+    expect(container.querySelector('li')).not.toHaveTextContent('مباشر');
+  });
+
   it('tracks the MAP article headline link when in-situ media is rendered', () => {
     const { inSituPromo, summaries } = getSummariesWithInSituMedia();
     const clickTrackerSpy = jest
@@ -343,7 +399,7 @@ describe('Hierarchical Grid Curation', () => {
     expect(MediaLoader).not.toHaveBeenCalled();
   });
 
-  it('preserves a related topic when in-situ media is rendered', () => {
+  it('does not show related topics on in-situ media promos', () => {
     const { summaries } = getSummariesWithInSituMedia();
     const relatedTopic = {
       link: {
@@ -356,21 +412,19 @@ describe('Hierarchical Grid Curation', () => {
       ...summaries.slice(1),
     ];
 
-    const { getByText } = render(
+    const { queryByText } = render(
       <HierarchicalGrid
         headingLevel={headingLevel}
         summaries={summariesWithRelatedTopic}
         eventTrackingData={minimalEventTrackingData}
+        showRelatedTopicExperiment
       />,
       {
         service: 'pidgin',
       },
     );
 
-    expect(getByText('Nigeria').closest('a')).toHaveAttribute(
-      'href',
-      relatedTopic.link.url,
-    );
+    expect(queryByText('Nigeria')).not.toBeInTheDocument();
   });
 
   it('should render related topic link when relatedTopic exists on a Promo', () => {
@@ -379,6 +433,7 @@ describe('Hierarchical Grid Curation', () => {
         headingLevel={headingLevel}
         summaries={fixture}
         eventTrackingData={minimalEventTrackingData}
+        showRelatedTopicExperiment
       />,
       {
         service: 'pidgin',
@@ -411,6 +466,7 @@ describe('Hierarchical Grid Curation', () => {
         headingLevel={headingLevel}
         summaries={summariesWithLongRelatedTopic}
         eventTrackingData={minimalEventTrackingData}
+        showRelatedTopicExperiment
       />,
       {
         service: 'pidgin',
@@ -430,6 +486,7 @@ describe('Hierarchical Grid Curation', () => {
         headingLevel={headingLevel}
         summaries={fixture}
         eventTrackingData={minimalEventTrackingData}
+        showRelatedTopicExperiment
       />,
       {
         service: 'pidgin',
@@ -468,6 +525,7 @@ describe('Hierarchical Grid Curation', () => {
         headingLevel={headingLevel}
         summaries={fixture}
         eventTrackingData={minimalEventTrackingData}
+        showRelatedTopicExperiment
       />,
       {
         service: 'pidgin',
@@ -499,9 +557,7 @@ describe('Hierarchical Grid Curation', () => {
     clickTrackerSpy.mockRestore();
   });
 
-  it('should not render related topic links when environment is live', () => {
-    const isLiveSpy = jest.spyOn(isLiveEnv, 'default').mockReturnValue(true);
-
+  it('should not render related topic links when the display flag is omitted', () => {
     const { queryByText } = render(
       <HierarchicalGrid
         headingLevel={headingLevel}
@@ -513,10 +569,6 @@ describe('Hierarchical Grid Curation', () => {
       },
     );
 
-    // The fixture contains promos with related topics (e.g. 'Nigeria')
-    // but in live environment they should not be rendered
     expect(queryByText('Nigeria')).not.toBeInTheDocument();
-
-    isLiveSpy.mockRestore();
   });
 });

@@ -68,7 +68,7 @@
     "cypress": "15.11.0",
     "cypress-axe": "1.7.0",
     "cypress-multi-reporters": "2.0.5",
-    "cypress-terminal-report": "7.2.1",
+    "cypress-terminal-report": "7.3.3",
     "jest": "30.3.0",
     "jest-environment-jsdom": "30.2.0",
     "mocha-junit-reporter": "2.2.1",
