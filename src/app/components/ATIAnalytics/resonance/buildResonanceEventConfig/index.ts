@@ -1,11 +1,11 @@
 import { isMobile } from '#app/legacy/containers/PageHandlers/withOptimizelyProvider/userAttributes';
 import { VIEW_EVENT } from '#app/lib/analyticsUtils/analytics.const';
 import { ATIEventTrackingProps } from '../../types';
-import { ResonanceViewabilityEventDetail } from '../types';
+import { ResonanceEventModel } from '../types';
 
-// DRAFT mapping - field names are a best guess from the existing Reverb view event props
-// and have not yet been confirmed against the Viewability Events properties reference.
-const buildViewabilityEventModel = ({
+// Resonance calls this the Viewability model. We have called this buildResonanceEventModel to avoid confusion, since this is used for both click and view events.
+// https://bbc.atlassian.net/wiki/spaces/DAS/pages/834246852/Resonance+-+TypeScript+Integration+Guide#Viewability
+export default ({
   pageIdentifier,
   producerName,
   componentName,
@@ -19,7 +19,7 @@ const buildViewabilityEventModel = ({
   isSignedIn = false,
   viewThreshold,
   platform,
-}: ATIEventTrackingProps): ResonanceViewabilityEventDetail => {
+}: ATIEventTrackingProps): ResonanceEventModel => {
   const {
     name = campaignID,
     itemCount,
@@ -81,5 +81,3 @@ const buildViewabilityEventModel = ({
     }),
   };
 };
-
-export default buildViewabilityEventModel;

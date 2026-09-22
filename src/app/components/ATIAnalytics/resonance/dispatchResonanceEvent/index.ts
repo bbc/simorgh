@@ -1,7 +1,7 @@
 import onClient from '#app/lib/utilities/onClient';
 import nodeLogger from '../../../../lib/logger.node';
 import { ATI_LOGGING_ERROR } from '../../../../lib/logger.const';
-import { ResonanceViewabilityEventDetail } from '../types';
+import { ResonanceEventModel } from '../types';
 
 const logger = nodeLogger(__filename);
 
@@ -9,7 +9,7 @@ const logger = nodeLogger(__filename);
 // `document.addEventListener('viewability', ...)` once `Resonance.initialise()` has run.
 const RESONANCE_VIEWABILITY_EVENT_NAME = 'viewability';
 
-const dispatchViewabilityEvent = (detail: ResonanceViewabilityEventDetail) => {
+export default (detail: ResonanceEventModel) => {
   if (!onClient()) return;
 
   try {
@@ -20,5 +20,3 @@ const dispatchViewabilityEvent = (detail: ResonanceViewabilityEventDetail) => {
     logger.error(ATI_LOGGING_ERROR, { error });
   }
 };
-
-export default dispatchViewabilityEvent;

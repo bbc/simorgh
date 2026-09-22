@@ -16,8 +16,8 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import dispatchTrackingRequests from '../../lib/analyticsUtils/dispatchTrackingRequests';
 import getIntersectionObserver from './getIntersectionObserver';
 // Temporary Resonance dual-run (see ticket) - safe to remove as a unit once Reverb is retired.
-import buildViewabilityEventModel from '../../components/ATIAnalytics/resonanceViewability/buildViewabilityEventModel';
-import dispatchViewabilityEvent from '../../components/ATIAnalytics/resonanceViewability/dispatchViewabilityEvent';
+import buildResonanceEventConfig from '../../components/ATIAnalytics/resonance/buildResonanceEventConfig';
+import dispatchViewabilityEvent from '../../components/ATIAnalytics/resonance/dispatchResonanceEvent';
 
 const VIEWED_DURATION_MS = 1000;
 
@@ -103,7 +103,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
         // Temporary Resonance dual-run, independent of the Reverb dispatch above (see ticket).
         if (resonanceEnabled) {
           dispatchViewabilityEvent(
-            buildViewabilityEventModel({
+            buildResonanceEventConfig({
               pageIdentifier,
               campaignID,
               componentName,

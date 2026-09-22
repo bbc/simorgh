@@ -9,8 +9,8 @@ import {
 import { RequestContext } from '#app/contexts/RequestContext';
 import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import constructReverbUrl from '#app/lib/analyticsUtils/staticATITracking/constructReverbUrl';
-import dispatchViewabilityEvent from '#app/components/ATIAnalytics/resonanceViewability/dispatchViewabilityEvent';
-import buildViewabilityEventModel from '#app/components/ATIAnalytics/resonanceViewability/buildViewabilityEventModel';
+import dispatchViewabilityEvent from '#app/components/ATIAnalytics/resonance/dispatchResonanceEvent';
+import buildResonanceEventConfig from '#app/components/ATIAnalytics/resonance/buildResonanceEventConfig';
 import useTrackingToggle from '../useTrackingToggle';
 import { sendEventBeacon } from '../../components/ATIAnalytics/beacon/index';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -154,7 +154,7 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
 
             if (resonanceEnabled) {
               dispatchViewabilityEvent(
-                buildViewabilityEventModel({
+                buildResonanceEventConfig({
                   type: CLICK_EVENT,
                   campaignID,
                   componentName,
