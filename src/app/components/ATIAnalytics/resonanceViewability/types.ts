@@ -4,14 +4,43 @@
 // Replace this with the confirmed shape from the Viewability Events properties reference
 // (linked in the ticket) before this leaves draft status.
 export type ResonanceViewabilityEventDetail = {
-  event?: {
+  event: {
     action?: string;
     category?: string;
+    pixelThreshold?: number;
+    subcategory?: string;
+    grouping?: string;
   };
-  item?: {
+  experience: {
+    breakpoint?: string;
+    globalPlatform?: string;
+    isAccount?: boolean;
+  };
+  item: {
     type?: string;
     text?: string;
     position?: number;
+    duration?: number;
+    label?: string;
+    mediaType?: string;
+    resourceId?: string;
+    attribution?: string;
+    campaignName?: string;
+    link?: string;
+    name?: string;
+  };
+  group: {
+    itemCount?: number;
+    link?: string;
+    name?: string;
+    position?: string | number;
+    resourceId?: string;
+    type?: string;
+  };
+  mv?: {
+    engineName?: string;
+    variationId?: string;
+    experimentId?: string;
   };
   destination?: string;
   producer?: string;

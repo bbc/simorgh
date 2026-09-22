@@ -47,7 +47,6 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     eventTrackingData,
     eventType: VIEW_EVENT,
   });
-
   const { optimizely } = use(OptimizelyContext);
 
   const observer = useRef(null);
@@ -105,13 +104,18 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
         if (resonanceEnabled) {
           dispatchViewabilityEvent(
             buildViewabilityEventModel({
+              pageIdentifier,
+              campaignID,
               componentName,
               producerName,
-              statsDestination,
-              service,
-              isSignedIn,
-              hashedId,
+              type: VIEW_EVENT,
+              url,
+              experimentName,
+              experimentVariant,
               itemTracker,
+              groupTracker,
+              viewThreshold,
+              platform,
             }),
           );
         }
@@ -162,7 +166,6 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     isSignedIn,
     hashedId,
   ]);
-
   const viewTracker = useCallback(
     async (element: HTMLElement) => {
       const shouldSetupIntersectionObserver = alwaysInView
