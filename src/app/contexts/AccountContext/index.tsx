@@ -20,7 +20,6 @@ import {
   TOKEN_COOKIE_NAME,
   getDecodedToken,
 } from '#app/lib/uasApi/tokenRefresh/tokenManager';
-import { is } from 'ramda';
 
 // Claim set by Account in the ckns_id JWT when a signed-in user opts out of personalisation
 const ENABLE_PERSONALISATION_CLAIM = 'ep';
