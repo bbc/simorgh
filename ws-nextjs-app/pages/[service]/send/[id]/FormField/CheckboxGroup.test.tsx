@@ -3,6 +3,7 @@ import {
   fireEvent,
   render,
 } from '#app/components/react-testing-library-with-providers';
+import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import { FieldData, InvalidMessageCodes } from '../types';
 import CheckboxGroup from './CheckboxGroup';
 
@@ -47,6 +48,10 @@ const renderCheckboxGroup = (
 };
 
 describe('CheckboxGroup', () => {
+  beforeEach(() => {
+    mockMatchMedia();
+  });
+
   it('renders a fieldset, legend, checkbox for each option, and associated labels', async () => {
     const { container } = await act(() => renderCheckboxGroup());
 

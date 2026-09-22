@@ -123,8 +123,8 @@ export default {
     }),
   constrainedListCheckbox: () =>
     css({
-      width: `${pixelsToRem(32)}rem`,
-      height: `${pixelsToRem(32)}rem`,
+      width: `${pixelsToRem(30)}rem`,
+      height: `${pixelsToRem(30)}rem`,
     }),
   radioButtonFieldset: () =>
     css({
