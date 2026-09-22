@@ -31,6 +31,7 @@ import setSimorghEnvVars from '#app/lib/utilities/setSimorghEnvVars';
 import removeNoJsClass from '#app/lib/utilities/removeNoJsClass';
 import ComponentTracking from '../renderers/ComponentTracking';
 import ReverbTemplate from '../renderers/ReverbTemplate';
+import appPageTransforms from '../renderers/appPageTransforms';
 import litePageTransforms from '../renderers/litePageTransforms';
 import LiteRenderer from '../renderers/LiteRenderer';
 import AmpRenderer from '../renderers/AmpRenderer';
@@ -73,6 +74,10 @@ export default class AppDocument extends Document<DocProps> {
 
     if (isLite) {
       initialProps.html = litePageTransforms(initialProps.html);
+    }
+
+    if (isApp) {
+      initialProps.html = appPageTransforms(initialProps.html);
     }
 
     const { css, ids } = extractCritical(initialProps.html);
