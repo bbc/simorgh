@@ -121,6 +121,11 @@ export default {
     css({
       border: `solid 0.0625rem ${palette.ERROR_CORE}`,
     }),
+  constrainedListCheckbox: () =>
+    css({
+      width: `${pixelsToRem(32)}rem`,
+      height: `${pixelsToRem(32)}rem`,
+    }),
   radioButtonFieldset: () =>
     css({
       border: 0,
@@ -131,18 +136,21 @@ export default {
     css({
       display: 'flex',
       flexDirection: 'column',
-      gap: `${spacings.FULL}rem`,
+      gap: `${spacings.DOUBLE}rem`,
     }),
   radioButtonContainer: () =>
     css({
       display: 'flex',
       flexWrap: 'nowrap',
+      alignItems: 'flex-start',
     }),
-  radioButtonLabel: ({ spacings }: Theme) =>
+  radioButtonLabel: ({ spacings, fontSizes }: Theme) =>
     css({
       flex: 'auto',
       marginInlineStart: `${spacings.DOUBLE}rem`,
+      paddingBlockStart: `${pixelsToRem(5)}rem`,
       cursor: 'pointer',
+      ...fontSizes.pica,
     }),
   radioButton: ({ palette, mq }: Theme) =>
     css({
@@ -150,8 +158,8 @@ export default {
       display: 'inline-block',
       flex: 'initial',
       flexShrink: 0,
-      width: `${pixelsToRem(30)}rem`,
-      height: `${pixelsToRem(30)}rem`,
+      width: `${pixelsToRem(32)}rem`,
+      height: `${pixelsToRem(32)}rem`,
       cursor: 'pointer',
       boxSizing: 'border-box',
       border: `solid 0.0625rem ${palette.GREY_10}`,
@@ -160,9 +168,9 @@ export default {
       '&:checked::after': {
         content: '""',
         display: 'block',
-        width: `${pixelsToRem(12)}rem`,
-        height: `${pixelsToRem(12)}rem`,
-        margin: `${pixelsToRem(8)}rem`,
+        width: `${pixelsToRem(16)}rem`,
+        height: `${pixelsToRem(16)}rem`,
+        margin: `${pixelsToRem(7)}rem`,
         backgroundColor: palette.GREY_10,
         borderRadius: '50%',
       },

@@ -64,6 +64,7 @@ export default ({
                 <input
                   css={[
                     styles.checkbox,
+                    styles.constrainedListCheckbox,
                     styles.focusIndicatorInput,
                     useErrorTheme && styles.checkboxError,
                   ]}
