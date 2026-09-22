@@ -5,6 +5,7 @@ import moment from 'moment';
 import path from 'ramda/src/path';
 import isMediaType from '#app/lib/utilities/isMedia';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import { getRelatedTopicForPromo } from '#app/lib/experiments/homepageRelatedTopicPromos';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import formatDuration from '../../../lib/utilities/formatDuration';
 import Promo from '../../../legacy/components/Promo';
@@ -89,11 +90,10 @@ const HiearchicalGrid = ({
             (promo.type === 'video' && `${videoTranslation}, `) ||
             (promo.type === 'photogallery' && `${photoGalleryTranslation}, `);
           const { isLive, relatedTopic } = promo;
-          const hasRelatedTopic = Boolean(
-            showRelatedTopicExperiment &&
-            promo.type === 'article' &&
-            relatedTopic?.title?.trim() &&
-            relatedTopic.link?.url,
+          const relatedTopicToShow = getRelatedTopicForPromo(
+            relatedTopic,
+            promo.type,
+            showRelatedTopicExperiment,
           );
 
           const promoEventTrackingData = buildPromoEventTrackingData(promo, i);
@@ -197,13 +197,13 @@ const HiearchicalGrid = ({
               </Promo.Body>
               {!showLiveLabel ? (
                 <div css={styles.metadataAndTopicData}>
-                  {hasRelatedTopic && relatedTopic && (
+                  {relatedTopicToShow && (
                     <a
-                      href={relatedTopic.link.url}
+                      href={relatedTopicToShow.link.url}
                       css={styles.relatedTopicLink}
                       {...relatedTopicClickTrackerHandler}
                     >
-                      {relatedTopic.title}
+                      {relatedTopicToShow.title}
                     </a>
                   )}
                   <Promo.Timestamp className="promo-timestamp">
