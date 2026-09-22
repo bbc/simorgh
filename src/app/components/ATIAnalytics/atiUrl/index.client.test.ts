@@ -7,6 +7,7 @@ import {
   buildActivationEventModel,
   buildReverbAnalyticsModel,
   buildReverbEventModel,
+  buildErrorEventModel,
 } from '.';
 
 const mockAndSet = ({ name, source }, response) => {
@@ -46,6 +47,14 @@ describe('atiUrl', () => {
         pageIdentifier: 'pidgin.articles.c0000000001o.page',
         producerName: 'PIDGIN',
         platform: 'canonical' as Platforms,
+        categoryName: 'categoryName',
+        ldpThingIds: 'ldpThingIds',
+        ldpThingLabels: 'ldpThingLabels',
+        libraryVersion: 'libraryVersion',
+        pageTitle: 'pageTitle',
+        nationsProducer: '',
+        timePublished: 'timePublished',
+        timeUpdated: 'timeUpdated',
       };
 
       it('should return the correct Resonance analytics model', () => {
@@ -55,9 +64,8 @@ describe('atiUrl', () => {
           mode: ResonanceMode.TEST,
         });
         expect(result.baseProperties).toEqual({
-          app: { name: 'news-pidgin' },
+          app: { name: 'news-pidgin', type: 'getAppType' },
           destination: 'statsDestination',
-          hashedUserId: undefined,
           pageName: 'pidgin.articles.c0000000001o.page',
           producer: 'PIDGIN',
           siteId: 12345,
@@ -66,9 +74,33 @@ describe('atiUrl', () => {
           contentId: 'urn:bbc:optimo:asset:c0000000001o',
           contentType: 'article',
           language: 'pcm',
-          destination: 'statsDestination',
-          producer: 'PIDGIN',
+          ldpIds: 'ldpThingIds',
+          ldpTags: 'ldpThingLabels',
+          pageTitle: 'sanitise',
+          pubUpdateDate: 'timeUpdated',
+          publicationDate: 'timePublished',
+          referrerUrl: 'getReferrer',
+          url: 'getHref',
         });
+      });
+
+      it('should omit optional fields when no value is provided', () => {
+        const result = buildResonanceAnalyticsModel({
+          ...input,
+          pageTitle: undefined,
+          timePublished: '',
+          timeUpdated: '',
+          ldpThingLabels: '',
+          ldpThingIds: '',
+          categoryName: '',
+        });
+
+        expect(result.pageviewProperties).not.toHaveProperty('pageTitle');
+        expect(result.pageviewProperties).not.toHaveProperty('publicationDate');
+        expect(result.pageviewProperties).not.toHaveProperty('pubUpdateDate');
+        expect(result.pageviewProperties).not.toHaveProperty('ldpTags');
+        expect(result.pageviewProperties).not.toHaveProperty('ldpIds');
+        expect(result.pageviewProperties).not.toHaveProperty('section');
       });
 
       it('should suffix app name with "-app" when platform is app', () => {
@@ -77,7 +109,10 @@ describe('atiUrl', () => {
           platform: 'app' as Platforms,
         });
 
-        expect(result.baseProperties.app).toEqual({ name: 'news-pidgin-app' });
+        expect(result.baseProperties.app).toEqual({
+          name: 'news-pidgin-app',
+          type: 'getAppType',
+        });
       });
 
       it('should pass hashedId through as hashedUserId when provided', () => {
@@ -556,6 +591,73 @@ describe('atiUrl', () => {
           experience: {
             engine_id: ['optimizely.dummy_experiment.variant_1'],
           },
+        });
+      });
+    });
+
+    describe('buildErrorEventModel', () => {
+      const input = {
+        pageIdentifier: 'mundo.page',
+        producerName: 'MUNDO',
+        statsDestination: 'statsDestination',
+        feature: 'uas',
+        errorName: 'save',
+      };
+
+      it('should return the correct Reverb page and user configuration', () => {
+        const reverbErrorEventModel = buildErrorEventModel({
+          ...input,
+          isSignedIn: true,
+          hashedId: 'hashed-id',
+        });
+
+        expect(reverbErrorEventModel.params).toEqual({
+          page: {
+            destination: 'statsDestination',
+            name: 'mundo.page',
+            producer: 'MUNDO',
+            additionalProperties: {
+              type: 'AT',
+            },
+          },
+          user: {
+            isSignedIn: true,
+            hashedId: 'hashed-id',
+          },
+        });
+      });
+
+      it('should build a first-class error event with diagnostics', () => {
+        const reverbErrorEventModel = buildErrorEventModel({
+          ...input,
+          errorName: 'remove',
+          statusCode: 500,
+          errorKey: 'unknownTokenKey',
+          errorMessage: 'An unknown error occurred.',
+        });
+
+        expect(reverbErrorEventModel.eventDetails).toEqual({
+          eventName: 'error',
+          eventPublisher: 'viewability',
+          event: {
+            category: 'error',
+          },
+          error: {
+            engine: 'uas',
+            name: 'remove',
+            message: 'An unknown error occurred.',
+            code: '500',
+            type: 'unknownTokenKey',
+          },
+        });
+      });
+
+      it('should omit optional diagnostics when they are absent', () => {
+        const reverbErrorEventModel = buildErrorEventModel(input);
+
+        expect(reverbErrorEventModel.eventDetails.error).toEqual({
+          engine: 'uas',
+          name: 'save',
         });
       });
     });

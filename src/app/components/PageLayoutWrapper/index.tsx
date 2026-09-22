@@ -2,7 +2,9 @@ import { PropsWithChildren, use } from 'react';
 import { Helmet } from 'react-helmet';
 import GlobalStyles from '#psammead/psammead-styles/src/global-styles';
 import { Navigation, PageTypes } from '#app/models/types/global';
+import { MetadataTaggings } from '#app/models/types/metadata';
 import appendAdDomainsToCSPHeader from '#app/utilities/appendAdDomainsToCSPHeader';
+import getPrimaryMediaType from '#lib/utilities/getPrimaryMediaType';
 import { OFFLINE_PAGE } from '#app/routes/utils/pageTypes';
 import { TopStoryItem } from '../../pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import WebVitals from '../../legacy/containers/WebVitals';
@@ -32,6 +34,9 @@ type Props = {
     metadata: {
       type: PageTypes;
       topics?: { topicName: string }[];
+      passport?: {
+        taggings?: MetadataTaggings;
+      };
     };
     blockTypes?: string[];
     content?: { model?: ModelType };
@@ -56,19 +61,9 @@ const PageLayoutWrapper = ({
   const isErrorPage = ![200].includes(status) || !status;
   const pageType = pageData?.metadata?.type;
 
-  const primaryMediaType = (() => {
-    const blockTypes = pageData?.blockTypes ?? [];
-    if (blockTypes.includes('audio')) return 'audio' as const;
-    if (blockTypes.includes('video')) return 'video' as const;
-    // Fallback: scan top-level content blocks for an audio or video block.
-    // This covers SFV articles where blockTypes may not be populated.
-    const contentBlocks = (pageData?.content?.model?.blocks ?? []) as {
-      type: string;
-    }[];
-    if (contentBlocks.some(b => b.type === 'audio')) return 'audio' as const;
-    if (contentBlocks.some(b => b.type === 'video')) return 'video' as const;
-    return undefined;
-  })();
+  const primaryMediaType = getPrimaryMediaType(
+    pageData?.metadata?.passport?.taggings,
+  );
   const reportingPageType = pageType?.replace(/ /g, '');
   const isOfflinePage = pageType === OFFLINE_PAGE;
   const isWindowValid = typeof window !== 'undefined';

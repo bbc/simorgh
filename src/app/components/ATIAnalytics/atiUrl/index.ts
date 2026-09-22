@@ -36,15 +36,22 @@ export const buildResonanceAnalyticsModel = ({
   appName,
   contentId,
   contentType,
-  language,
-  statsDestination,
   destinationSiteId,
   hashedId,
+  language,
+  ldpThingIds,
+  ldpThingLabels,
   pageIdentifier,
-  producerName,
+  pageTitle,
   platform,
+  producerName,
+  statsDestination,
+  timePublished,
+  timeUpdated,
 }: ATIPageTrackingProps): ResonanceBeaconConfig => {
   const env = getEnvConfig().SIMORGH_APP_ENV;
+  const href = getHref(platform);
+  const referrer = getReferrer(platform);
 
   return {
     resonanceProperties: {
@@ -53,6 +60,7 @@ export const buildResonanceAnalyticsModel = ({
     baseProperties: {
       app: {
         name: platform === 'app' ? `${appName}-app` : appName,
+        type: getAppType(platform),
       },
       destination: statsDestination,
       hashedUserId: hashedId ?? undefined,
@@ -64,8 +72,13 @@ export const buildResonanceAnalyticsModel = ({
       contentId,
       contentType,
       language,
-      destination: statsDestination,
-      producer: producerName,
+      ...(href && { url: href }),
+      ...(referrer && { referrerUrl: referrer }),
+      ...(pageTitle && { pageTitle: sanitise(pageTitle) }),
+      ...(timePublished && { publicationDate: timePublished }),
+      ...(timeUpdated && { pubUpdateDate: timeUpdated }),
+      ...(ldpThingLabels && { ldpTags: ldpThingLabels }),
+      ...(ldpThingIds && { ldpIds: ldpThingIds }),
     },
   } as ResonanceBeaconConfig;
 };
@@ -301,6 +314,67 @@ export const buildActivationEventModel = ({
     },
     experience: {
       engine_id: [`optimizely.${experimentName}.${experimentVariant}`],
+    },
+  },
+});
+
+type ErrorEventProps = {
+  pageIdentifier?: string;
+  producerName?: string;
+  statsDestination?: string;
+  feature: string;
+  errorName: string;
+  errorKey?: string;
+  errorMessage?: string;
+  statusCode?: number;
+  isSignedIn?: boolean;
+  hashedId?: string | null;
+};
+
+/**
+ * Builds a standalone Piano/Reverb "error" beacon reported when a client-side
+ * feature (e.g. UAS) fails. `feature` identifies the system and `errorName` the
+ * operation that failed; the optional service message/status add
+ * diagnostics without carrying PII or tokens.
+ */
+export const buildErrorEventModel = ({
+  pageIdentifier,
+  producerName,
+  statsDestination,
+  feature,
+  errorName,
+  errorKey,
+  errorMessage,
+  statusCode,
+  isSignedIn = false,
+  hashedId = null,
+}: ErrorEventProps): ReverbBeaconConfig => ({
+  params: {
+    page: {
+      destination: statsDestination,
+      name: pageIdentifier,
+      producer: producerName,
+      additionalProperties: {
+        type: 'AT',
+      },
+    },
+    user: {
+      isSignedIn,
+      hashedId,
+    },
+  },
+  eventDetails: {
+    eventName: 'error',
+    eventPublisher: 'viewability',
+    event: {
+      category: 'error',
+    },
+    error: {
+      engine: feature,
+      name: errorName,
+      ...(errorMessage && { message: errorMessage }),
+      ...(statusCode && { code: String(statusCode) }),
+      ...(errorKey && { type: errorKey }),
     },
   },
 });

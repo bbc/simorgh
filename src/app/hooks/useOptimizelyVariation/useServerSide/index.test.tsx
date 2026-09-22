@@ -10,6 +10,12 @@ import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import useServerSide from '.';
 import * as activateExperiment from '../activateExperiment';
 
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  default: jest.fn(() => null),
+}));
+
 const spyActivateExperiment = jest
   .spyOn(activateExperiment, 'default')
   .mockImplementation(jest.fn());

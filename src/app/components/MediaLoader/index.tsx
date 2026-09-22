@@ -1,4 +1,5 @@
-import { use, useEffect, useRef, useState } from 'react';
+import { use, useEffect, useMemo, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
 import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
@@ -13,6 +14,7 @@ import {
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import { PageTypes } from '#app/models/types/global';
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
+import onClient from '#app/lib/utilities/onClient';
 import {
   BumpType,
   EventMapping,
@@ -26,7 +28,13 @@ import buildConfig from './utils/buildSettings';
 import Placeholder from './Placeholder';
 import getProducerFromServiceName from './utils/getProducerFromServiceName';
 import getCaptionBlock from './utils/getCaptionBlock';
-import styles from './index.styles';
+import styles, {
+  PLAYER_FULLSCREEN_CLASS,
+  FAKE_FULLSCREEN_LAYER_CLASS,
+  FAKE_FULLSCREEN_ACTIVE_CLASS,
+  ACTIVE_FULLSCREEN_LOADER_STATE,
+  fakeFullscreenStyles,
+} from './index.styles';
 import { getBootstrapSrc } from '../Ad/Canonical';
 import Metadata from './Metadata';
 import AmpMediaLoader from './Amp';
@@ -65,7 +73,6 @@ const AdvertTagLoader = () => {
   const queryString = location ? location.search : '';
 
   useEffect(() => {
-    // Set window.dotcom to disabled if it doesn't load in 2 seconds.
     const timeoutID = setTimeout(() => {
       if (window.dotcom.ads.resolves) {
         window.dotcom.ads.resolves.enabled.forEach(res => res(false));
@@ -73,7 +80,6 @@ const AdvertTagLoader = () => {
       }
     }, 2000);
 
-    // Initialise the ads object if it hasn't already been loaded.
     window.dotcom = window.dotcom || { cmd: [] };
     window.dotcom.ads = window.dotcom.ads || {
       resolves: {
@@ -103,12 +109,51 @@ const AdvertTagLoader = () => {
   );
 };
 
+const FAKE_FULLSCREEN_STYLE_ID = 'simorgh-fake-fullscreen-styles';
+
+const FakeFullscreenStyles = ({ nonce }: { nonce?: string | null }) => {
+  useEffect(() => {
+    if (document.getElementById(FAKE_FULLSCREEN_STYLE_ID)) return;
+
+    const styleElement = document.createElement('style');
+    styleElement.id = FAKE_FULLSCREEN_STYLE_ID;
+    if (nonce) styleElement.setAttribute('nonce', nonce);
+    styleElement.textContent = fakeFullscreenStyles;
+    document.head.appendChild(styleElement);
+  }, [nonce]);
+
+  return null;
+};
+
+const FakeFullscreenLayer = ({ isActive }: { isActive: boolean }) => {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) return null;
+
+  return createPortal(
+    <div
+      aria-hidden="true"
+      className={`${FAKE_FULLSCREEN_LAYER_CLASS}${
+        isActive ? ` ${FAKE_FULLSCREEN_ACTIVE_CLASS}` : ''
+      }`}
+    />,
+    document.body,
+  );
+};
+
 type MediaContainerProps = {
   playerConfig: PlayerConfig;
   showAds: boolean;
   uniqueId?: string;
   noJsMessage?: string;
   eventMapping?: EventMapping;
+  shouldHandleFakeFullscreen?: boolean;
+  loadPlayerOnInitialRender?: boolean;
+  onFakeFullscreenChange?: (isActive: boolean) => void;
 };
 
 const isAudioPlayer = (playerConfig: PlayerConfig) =>
@@ -120,19 +165,37 @@ const MediaContainer = ({
   uniqueId,
   noJsMessage,
   eventMapping,
+  shouldHandleFakeFullscreen = false,
+  loadPlayerOnInitialRender = false,
+  onFakeFullscreenChange,
 }: MediaContainerProps) => {
   const playerElementRef = useRef<HTMLDivElement>(null);
+  const onFakeFullscreenChangeRef = useRef(onFakeFullscreenChange);
   const isAudio = isAudioPlayer(playerConfig);
+
+  onFakeFullscreenChangeRef.current = onFakeFullscreenChange;
 
   useEffect(() => {
     try {
       window.requirejs(['bump-4'], (Bump: BumpType) => {
         if (playerElementRef?.current && playerConfig) {
-          // The requirejs callback cannot be async, so we wrap async logic in an inner function and invoke it immediately.
           const initPlayer = async () => {
+            const autoplayOverride = loadPlayerOnInitialRender
+              ? { autoplay: false }
+              : {};
+            const fakeFullscreenOverride = shouldHandleFakeFullscreen
+              ? { supportFakeFullscreen: true }
+              : {};
+
+            const effectiveConfig = {
+              ...playerConfig,
+              ...autoplayOverride,
+              ...fakeFullscreenOverride,
+            };
+
             const mediaPlayer = Bump.player(
               playerElementRef.current,
-              playerConfig,
+              effectiveConfig,
             );
 
             if (uniqueId != null) {
@@ -144,13 +207,21 @@ const MediaContainer = ({
               }
             }
 
-            // Bind any events passed in to the player
             if (eventMapping && Object.keys(eventMapping || {}).length > 0) {
               Object.keys(eventMapping).forEach(bindingKey => {
                 const key = bindingKey as MediaPlayerEvents;
                 const handler = eventMapping[key];
 
                 if (handler) mediaPlayer.bind(key, handler);
+              });
+            }
+
+            if (shouldHandleFakeFullscreen) {
+              mediaPlayer.bind('enterFakeFullscreen', () => {
+                onFakeFullscreenChangeRef.current?.(true);
+              });
+              mediaPlayer.bind('exitFakeFullscreen', () => {
+                onFakeFullscreenChangeRef.current?.(false);
               });
             }
 
@@ -195,7 +266,14 @@ const MediaContainer = ({
     } catch (error) {
       logger.error(MEDIA_PLAYER_STATUS, error);
     }
-  }, [playerConfig, showAds, uniqueId, eventMapping]);
+  }, [
+    playerConfig,
+    showAds,
+    uniqueId,
+    eventMapping,
+    shouldHandleFakeFullscreen,
+    loadPlayerOnInitialRender,
+  ]);
 
   return (
     <div
@@ -218,6 +296,7 @@ type Props = {
   uniqueId?: string;
   eventMapping?: EventMapping;
   loadPlayerOnInitialRender?: boolean;
+  withinFullscreenContainer?: boolean;
   holdingImageURL?: string;
 };
 
@@ -228,6 +307,7 @@ const MediaLoader = ({
   uniqueId,
   eventMapping,
   loadPlayerOnInitialRender = false,
+  withinFullscreenContainer = false,
   holdingImageURL,
 }: Props) => {
   const { lang, service, translations, defaultImage } = use(ServiceContext);
@@ -248,30 +328,64 @@ const MediaLoader = ({
     !loadPlayerOnInitialRender &&
       !PAGETYPES_IGNORE_PLACEHOLDER.includes(pageType),
   );
+  const [isFakeFullscreenActive, setIsFakeFullscreenActive] = useState(false);
+  const hasActivatedFakeFullscreenRef = useRef(false);
 
-  if (isLite) return null;
+  useEffect(() => {
+    return () => {
+      if (!onClient()) return;
+      if (!hasActivatedFakeFullscreenRef.current) return;
+
+      document.documentElement.classList.remove(PLAYER_FULLSCREEN_CLASS);
+      document.body.classList.remove(PLAYER_FULLSCREEN_CLASS);
+    };
+  }, []);
 
   const { model: mediaOverrides } =
     filterForBlockType(blocks, 'mediaOverrides') || {};
 
   const producer = getProducerFromServiceName(service);
-  const config = buildConfig({
-    id: id || '',
-    blocks,
-    counterName: mediaOverrides?.pageIdentifierOverride || pageIdentifier,
-    statsDestination,
-    producer,
-    isAmp,
-    lang,
-    pageType,
-    service,
-    translations,
-    adsEnabled,
-    showAdsBasedOnLocation,
-    embedded,
-    defaultImage,
-    holdingImageURL,
-  });
+  const counterName = mediaOverrides?.pageIdentifierOverride || pageIdentifier;
+
+  const config = useMemo(
+    () =>
+      buildConfig({
+        id: id || '',
+        blocks,
+        counterName,
+        statsDestination,
+        producer,
+        isAmp,
+        lang,
+        pageType,
+        service,
+        translations,
+        adsEnabled,
+        showAdsBasedOnLocation,
+        embedded,
+        defaultImage,
+        holdingImageURL,
+      }),
+    [
+      id,
+      blocks,
+      counterName,
+      statsDestination,
+      producer,
+      isAmp,
+      lang,
+      pageType,
+      service,
+      translations,
+      adsEnabled,
+      showAdsBasedOnLocation,
+      embedded,
+      defaultImage,
+      holdingImageURL,
+    ],
+  );
+
+  if (isLite) return null;
 
   if (!config) return null;
 
@@ -299,15 +413,26 @@ const MediaLoader = ({
   const noJsMessage = translatedNoJSMessage || translations?.media?.noJs;
 
   const hasPlaceholder = Boolean(showPlaceholder && placeholderSrc);
+  const shouldHandleFakeFullscreen =
+    !isAmp && !embedded && !isAudio && !withinFullscreenContainer;
+
+  const setFakeFullscreenPageState = (isActive: boolean) => {
+    if (!onClient()) return;
+
+    document.documentElement.classList.toggle(
+      PLAYER_FULLSCREEN_CLASS,
+      isActive,
+    );
+    document.body.classList.toggle(PLAYER_FULLSCREEN_CLASS, isActive);
+    hasActivatedFakeFullscreenRef.current = isActive;
+    setIsFakeFullscreenActive(isActive);
+  };
 
   return (
     <>
-      {
-        // Prevents the av-embeds route itself rendering the Metadata component
-        !embedded && (
-          <Metadata blocks={blocks} embedURL={playerConfig?.externalEmbedUrl} />
-        )
-      }
+      {!embedded && (
+        <Metadata blocks={blocks} embedURL={playerConfig?.externalEmbedUrl} />
+      )}
       <figure
         data-e2e="media-loader__container"
         className={`media-container${className ? ` ${className}` : ''}`}
@@ -329,30 +454,47 @@ const MediaLoader = ({
           />
         ) : (
           <>
-            {showAds && <AdvertTagLoader />}
-            <BumpLoader nonce={nonce} />
-            {hasPlaceholder ? (
-              <Placeholder
-                src={placeholderSrc}
-                srcSet={placeholderSrcset}
-                noJsMessage={noJsMessage}
-                mediaInfo={mediaInfo}
-                onClick={() => setShowPlaceholder(false)}
-                isPortraitOrientation={!!isPortrait}
-              />
-            ) : (
-              <MediaContainer
-                playerConfig={
-                  loadPlayerOnInitialRender
-                    ? { ...playerConfig, autoplay: false }
-                    : playerConfig
-                }
-                showAds={showAds}
-                uniqueId={uniqueId}
-                noJsMessage={noJsMessage}
-                eventMapping={eventMapping}
-              />
+            {shouldHandleFakeFullscreen && (
+              <FakeFullscreenLayer isActive={isFakeFullscreenActive} />
             )}
+            <div
+              css={styles.mediaPlayerWrapper({
+                isPortrait,
+                isFakeFullscreenActive,
+              })}
+              data-simorgh-media-loader={
+                isFakeFullscreenActive
+                  ? ACTIVE_FULLSCREEN_LOADER_STATE
+                  : 'inactive'
+              }
+            >
+              {showAds && <AdvertTagLoader />}
+              <BumpLoader nonce={nonce} />
+              {shouldHandleFakeFullscreen && (
+                <FakeFullscreenStyles nonce={nonce} />
+              )}
+              {hasPlaceholder ? (
+                <Placeholder
+                  src={placeholderSrc}
+                  srcSet={placeholderSrcset}
+                  noJsMessage={noJsMessage}
+                  mediaInfo={mediaInfo}
+                  onClick={() => setShowPlaceholder(false)}
+                  isPortraitOrientation={!!isPortrait}
+                />
+              ) : (
+                <MediaContainer
+                  playerConfig={playerConfig}
+                  showAds={showAds}
+                  uniqueId={uniqueId}
+                  noJsMessage={noJsMessage}
+                  eventMapping={eventMapping}
+                  shouldHandleFakeFullscreen={shouldHandleFakeFullscreen}
+                  loadPlayerOnInitialRender={loadPlayerOnInitialRender}
+                  onFakeFullscreenChange={setFakeFullscreenPageState}
+                />
+              )}
+            </div>
           </>
         )}
         {captionBlock && (

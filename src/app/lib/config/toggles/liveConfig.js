@@ -85,6 +85,9 @@ export default {
   topBarOJs: {
     enabled: true,
   },
+  topicUasPersonalization: {
+    enabled: false,
+  },
   variantCookie: {
     enabled: true,
   },

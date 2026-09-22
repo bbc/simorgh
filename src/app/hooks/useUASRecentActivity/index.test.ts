@@ -14,6 +14,12 @@ jest.mock('react', () => ({
   use: jest.fn(),
 }));
 
+const mockTrackError = jest.fn();
+jest.mock('../useErrorTracking', () => ({
+  __esModule: true,
+  default: () => mockTrackError,
+}));
+
 let mockQueryFn: (opts: { signal: AbortSignal }) => Promise<RecentActivityData>;
 let mockQueryKey: readonly unknown[];
 let mockEnabled: boolean | undefined;
@@ -130,6 +136,32 @@ describe('useUASRecentActivity', () => {
 
     expect(result.current.error).toBe(error);
     expect(result.current.savedArticles).toEqual([]);
+  });
+
+  it('should track a recent-activity error when the query fails', () => {
+    const error = new Error('Some error');
+    mockUseQueryReturn.error = error;
+
+    renderHook(() => useUASRecentActivity());
+
+    expect(mockTrackError).toHaveBeenCalledWith({
+      error,
+      feature: 'uas',
+      action: 'recent-activity',
+    });
+  });
+
+  it('should not track an error when the query succeeds', () => {
+    mockUseQueryReturn.data = {
+      savedArticles: mockSavedArticles,
+      total: 25,
+      itemsPerPage: 10,
+      startIndex: 0,
+    };
+
+    renderHook(() => useUASRecentActivity());
+
+    expect(mockTrackError).not.toHaveBeenCalled();
   });
 
   it('should be disabled when hashedUserId is empty', () => {

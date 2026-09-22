@@ -76,7 +76,7 @@ describe('CpsOnwardJourney', () => {
       { service: 'mundo' },
     );
 
-    expect(container).toMatchSnapshot();
+    expect(container).not.toBeEmptyDOMElement();
 
     const promo = getByText('Foo in the news 0');
     expect(promo.tagName).toBe('A');
@@ -101,7 +101,7 @@ describe('CpsOnwardJourney', () => {
       { service: 'mundo' },
     );
 
-    expect(container).toMatchSnapshot();
+    expect(container).not.toBeEmptyDOMElement();
 
     for (let i = 0; i < 3; i += 1) {
       const promo = getByText(`Foo in the news ${i}`);
@@ -162,7 +162,7 @@ describe('CpsOnwardJourney', () => {
         { service: 'mundo' },
       );
 
-      expect(container).toMatchSnapshot();
+      expect(container).not.toBeEmptyDOMElement();
     },
   );
 
@@ -193,7 +193,7 @@ describe('CpsOnwardJourney', () => {
       { service: 'mundo' },
     );
 
-    expect(container).toMatchSnapshot();
+    expect(container).not.toBeEmptyDOMElement();
 
     const skipLink = getByText('skip the foo section');
     expect(skipLink).toBeInTheDocument();

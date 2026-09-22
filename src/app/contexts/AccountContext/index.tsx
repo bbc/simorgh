@@ -20,6 +20,7 @@ import {
   TOKEN_COOKIE_NAME,
   getDecodedToken,
 } from '#app/lib/uasApi/tokenRefresh/tokenManager';
+import { is } from 'ramda';
 
 // Claim set by Account in the ckns_id JWT when a signed-in user opts out of personalisation
 const ENABLE_PERSONALISATION_CLAIM = 'ep';
@@ -46,6 +47,10 @@ export const AccountProvider = ({
   const { service } = use(ServiceContext);
   const { enabled: isPersonalizationToggleEnabled, value: accountService } =
     useToggle('uasPersonalization');
+  const {
+    enabled: topicUasPersonalizationEnabled,
+    value: topicAccountService,
+  } = useToggle('topicUasPersonalization');
 
   useEffect(() => {
     setPageToReturnTo(window.location.href);
@@ -85,21 +90,34 @@ export const AccountProvider = ({
     isIdctaAvailable &&
     Boolean(initialConfig?.initialIsSignedIn || signedInToken);
 
-  const isPersonalizationAvailable =
+  // Personalization for saved articles
+  const isArticlePersonalizationAvailable =
     isIdctaAvailable &&
     isPersonalizationToggleEnabled &&
     (isLocal()
       ? accountService?.toString().split('|').includes(service)
       : true);
 
-  const isPersonalizationEnabled = isPersonalizationAvailable && isSignedIn;
+  const isArticlePersonalizationEnabled =
+    isArticlePersonalizationAvailable && isSignedIn;
+
+  // Personalization for followed topics
+  const isTopicPersonalizationAvailable =
+    isIdctaAvailable &&
+    topicUasPersonalizationEnabled &&
+    (isLocal()
+      ? topicAccountService?.toString().split('|').includes(service)
+      : true);
+
+  const isTopicPersonalizationEnabled =
+    isTopicPersonalizationAvailable && isSignedIn;
 
   const decodedIdToken = signedInToken ? getDecodedToken(signedInToken) : null;
   const hasOptedOutOfPersonalisation =
     decodedIdToken?.[ENABLE_PERSONALISATION_CLAIM] === false;
 
   const isPersonalisationOn =
-    isPersonalizationEnabled && !hasOptedOutOfPersonalisation;
+    isArticlePersonalizationEnabled && !hasOptedOutOfPersonalisation;
 
   const isRefreshAvailable =
     isIdctaAvailable && initialConfig?.availability?.refresh === 'GREEN';
@@ -115,8 +133,10 @@ export const AccountProvider = ({
       registerUrl,
       settingsUrl,
       forYouUrl,
-      isPersonalizationAvailable,
-      isPersonalizationEnabled,
+      isArticlePersonalizationAvailable,
+      isArticlePersonalizationEnabled,
+      isTopicPersonalizationAvailable,
+      isTopicPersonalizationEnabled,
       isPersonalisationOn,
     }),
     [
@@ -129,8 +149,10 @@ export const AccountProvider = ({
       settingsUrl,
       signInUrl,
       signOutUrl,
-      isPersonalizationAvailable,
-      isPersonalizationEnabled,
+      isArticlePersonalizationAvailable,
+      isArticlePersonalizationEnabled,
+      isTopicPersonalizationAvailable,
+      isTopicPersonalizationEnabled,
       isPersonalisationOn,
     ],
   );

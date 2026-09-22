@@ -15,23 +15,23 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [22.x]
+        node-version: [24.x]
     env:
       CI: true
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 2
 
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: ${{ matrix.node-version }}
 
       - name: Cache Node Modules
         id: cache
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: |
             node_modules
@@ -100,4 +100,12 @@ jobs:
 
       - name: NPM Audit
         if: github.ref != 'refs/heads/latest'
-        run: yarn npm audit --all --severity low --no-deprecations
+        env:
+          YARN_HTTP_TIMEOUT: 300000
+        run: |
+          for attempt in 1 2 3; do
+          yarn npm audit --all --severity low --no-deprecations && exit 0
+          echo "Attempt $attempt failed, retrying in 30s..."
+          sleep 30
+          done
+          exit 1
