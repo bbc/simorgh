@@ -28,13 +28,13 @@ describe('createHrefExtensionTransform', () => {
     `);
   });
 
-  //   it('should respect a custom ignoreAttribute name', () => {
-  //     const transform = createHrefExtensionTransform({
-  //       extension: 'lite',
-  //     });
+  it('should not append the extension when the derived ignore attribute is present', () => {
+    const transform = createHrefExtensionTransform({
+      extension: 'lite',
+    });
 
-  //     const html = '<a href="/news" data-ignore-lite="true">News</a>';
+    const html = '<a href="/news" data-ignore-lite="true">News</a>';
 
-  //     expect(transform(html)).toEqual(html);
-  //   });
+    expect(transform(html)).toEqual(html);
+  });
 });

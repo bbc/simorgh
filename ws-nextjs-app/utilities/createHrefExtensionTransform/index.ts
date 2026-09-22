@@ -20,7 +20,8 @@ type Config = {
 };
 
 export default ({ extension, isEligiblePath = () => true }: Config) => {
-  const ignoreAttribute = `data-ignore-${extension}`; // to delete?
+  const ignoreAttribute = `data-ignore-${extension}`;
+
   const addExtension = (href?: string) => {
     if (!href) return null;
 
