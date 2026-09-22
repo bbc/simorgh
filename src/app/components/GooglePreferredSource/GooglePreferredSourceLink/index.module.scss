@@ -5,7 +5,10 @@
     @include theme.fontVariants-gel-font-variant('sans-bold');
     color: theme.$palette-black;
     text-decoration: none;
-    
+
+    :global([data-is-dark-ui='true']) & {
+            color: theme.$palette-white;
+        }
         @media (hover: hover) {
             &:hover {
                 text-decoration: underline;
