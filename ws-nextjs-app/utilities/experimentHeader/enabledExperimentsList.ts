@@ -1,4 +1,5 @@
 import { PageTypes, Services } from '#app/models/types/global';
+import { HOMEPAGE_RELATED_TOPIC_EXPERIMENT } from '#app/lib/experiments/homepageRelatedTopicPromos';
 
 /* 
 This is a maintained list of serverside experiments that we are running.
@@ -17,10 +18,21 @@ type ServerSideExperimentConfig = {
 };
 
 const enabledExperimentList: ServerSideExperimentConfig[] = [
+  // experiment: newswb_ws_homepage_related_topic_promos
+  {
+    name: HOMEPAGE_RELATED_TOPIC_EXPERIMENT,
+    services: ['afrique'],
+    pageTypes: ['home'],
+  },
   {
     name: 'newswb_ws_article_account_promo_banner',
     services: ['hindi'],
     pageTypes: ['article'],
+  },
+  {
+    name: 'newswb_ws_homepage_account_promo_banner_copy',
+    services: ['hindi'],
+    pageTypes: ['home'],
   },
 ];
 
