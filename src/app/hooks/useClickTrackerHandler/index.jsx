@@ -9,6 +9,8 @@ import {
 import { RequestContext } from '#app/contexts/RequestContext';
 import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import constructReverbUrl from '#app/lib/analyticsUtils/staticATITracking/constructReverbUrl';
+import dispatchViewabilityEvent from '#app/components/ATIAnalytics/resonance/dispatchResonanceEvent';
+import buildResonanceEventConfig from '#app/components/ATIAnalytics/resonance/buildResonanceEventConfig';
 import useTrackingToggle from '../useTrackingToggle';
 import { sendEventBeacon } from '../../components/ATIAnalytics/beacon/index';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -65,7 +67,7 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
   const { trackingIsEnabled } = useTrackingToggle(componentName);
   const [clickedIdentifier, setClickedIdentifier] = useState(null);
 
-  const { service } = use(ServiceContext);
+  const { service, resonanceEnabled } = use(ServiceContext);
   const { optimizely } = use(OptimizelyContext);
 
   return useCallback(
@@ -146,6 +148,35 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
                   experimentVariant,
                 }),
             });
+
+            if (resonanceEnabled) {
+              dispatchViewabilityEvent(
+                buildResonanceEventConfig({
+                  type: CLICK_EVENT,
+                  campaignID,
+                  componentName,
+                  format,
+                  pageIdentifier,
+                  platform,
+                  producerId,
+                  producerName,
+                  service,
+                  advertiserID,
+                  statsDestination,
+                  url: url || nextPageUrl,
+                  detailedPlacement,
+                  ...(groupTracker && { groupTracker }),
+                  ...(itemTracker && { itemTracker }),
+                  isSignedIn,
+                  hashedId,
+                  ...(experimentVariant &&
+                    experimentVariant !== 'off' && {
+                      experimentName,
+                      experimentVariant,
+                    }),
+                }),
+              );
+            }
           } finally {
             if (nextPageUrl && !preventNavigation) {
               if (optimizely) {
@@ -171,16 +202,17 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
       optimizely,
       experimentVariant,
       sendOptimizelyEvents,
+      experimentName,
       format,
       advertiserID,
       url,
       detailedPlacement,
       groupTracker,
       itemTracker,
-      experimentName,
-      preventNavigation,
       isSignedIn,
       hashedId,
+      resonanceEnabled,
+      preventNavigation,
     ],
   );
 };

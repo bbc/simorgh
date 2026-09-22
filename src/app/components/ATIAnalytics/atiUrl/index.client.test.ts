@@ -3,7 +3,7 @@ import { Platforms } from '#app/models/types/global';
 import * as getEnvConfigModule from '#app/lib/utilities/getEnvConfig';
 import * as genericLabelHelpers from '../../../lib/analyticsUtils';
 import {
-  buildResonanceAnalyticsModel,
+  buildResonancePageViewModel,
   buildActivationEventModel,
   buildReverbAnalyticsModel,
   buildReverbEventModel,
@@ -58,7 +58,7 @@ describe('atiUrl', () => {
       };
 
       it('should return the correct Resonance analytics model', () => {
-        const result = buildResonanceAnalyticsModel(input);
+        const result = buildResonancePageViewModel(input);
 
         expect(result.resonanceProperties).toEqual({
           mode: ResonanceMode.TEST,
@@ -104,7 +104,7 @@ describe('atiUrl', () => {
       });
 
       it('should suffix app name with "-app" when platform is app', () => {
-        const result = buildResonanceAnalyticsModel({
+        const result = buildResonancePageViewModel({
           ...input,
           platform: 'app' as Platforms,
         });
@@ -116,7 +116,7 @@ describe('atiUrl', () => {
       });
 
       it('should pass hashedId through as hashedUserId when provided', () => {
-        const result = buildResonanceAnalyticsModel({
+        const result = buildResonancePageViewModel({
           ...input,
           hashedId: 'abc123hasheduser',
         });
@@ -131,7 +131,7 @@ describe('atiUrl', () => {
             typeof getEnvConfigModule.getEnvConfig
           >);
 
-        const result = buildResonanceAnalyticsModel(input);
+        const result = buildResonancePageViewModel(input);
 
         expect(result.resonanceProperties.mode).toBe(ResonanceMode.LIVE);
       });
