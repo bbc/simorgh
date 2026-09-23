@@ -69,20 +69,6 @@ Both commands enable remote toggle fetching (`FETCH_TOGGLES=true`) and set the `
 | `adsNonce`              | Serve the nonce-based CSP tier. "enabled" switches the service on                   | Allow-list of countries that get the nonce CSP (comma separated)         | enabled: true, value: 'es,mx'                         |
 | `relaxedCsp`            | Serve the relaxed CSP tier. "enabled" switches the service on                       | Allow-list of countries that get the relaxed CSP (comma separated)       | enabled: true, value: 'in'                            |
 
-### CSP tiers
-
-`relaxedCsp` and `adsNonce` select one of three Content-Security-Policy tiers per request. Both `value`
-fields are **allow-lists**: a country only gets that tier if it is explicitly listed.
-
-1. **Strict** — the default. Applied to every country that is not listed in either toggle, and to any
-   service or page format that cannot support the other tiers.
-2. **Nonce** (`adsNonce`) — for countries where ads are wanted but local entities are not trusted. Adds a
-   per-request nonce to `script-src`. Not available on AMP or Lite pages.
-3. **Relaxed** (`relaxedCsp`) — for trusted target ad markets. Takes precedence over `adsNonce` when a
-   country appears in both lists.
-
-Leaving a `value` empty, omitting the toggle, or failing to resolve a country all fall back to **strict**.
-
 ## Default Toggle (Fallback) Values
 
 [Local Environment](localConfig.js)

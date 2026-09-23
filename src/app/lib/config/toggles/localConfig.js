@@ -9,8 +9,6 @@ export default {
   ads: {
     enabled: true,
   },
-  // TODO: WS-3302 - placeholder country list pending the agreed classification.
-  // Countries where ads are wanted but local entities are not trusted.
   adsNonce: {
     enabled: true,
     value: 'ng,ke',
@@ -83,8 +81,6 @@ export default {
     enabled: true,
     value: 4,
   },
-  // TODO: WS-3302 - placeholder country list pending the agreed classification.
-  // Trusted target ad markets. Every country absent from this and adsNonce gets strict CSP.
   relaxedCsp: {
     enabled: true,
     value: 'in',

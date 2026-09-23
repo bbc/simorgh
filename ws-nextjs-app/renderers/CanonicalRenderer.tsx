@@ -79,8 +79,7 @@ const showScripts = (
 
 /**
  * @deprecated WS-3302 - not imported anywhere. `_document.page.tsx` renders canonical pages
- * inline and only delegates to `AmpRenderer` and `LiteRenderer`. Kept for reference while the
- * nonce plumbing is ported into `_document`; to be deleted in a follow-up PR.
+ * inline and only delegates to `AmpRenderer` and `LiteRenderer`.
  */
 export default function CanonicalRenderer({
   data,

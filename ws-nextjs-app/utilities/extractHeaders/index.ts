@@ -1,7 +1,6 @@
 import { IncomingHttpHeaders } from 'http';
 import { COUNTRIES_WITH_COOKIE_BANNER } from '#app/lib/utilities/cookieCountries';
 
-// Duplicate headers from an upstream proxy can arrive as an array; only the first value is meaningful
 const firstHeaderValue = (value: string | string[] | undefined) =>
   Array.isArray(value) ? value[0] : value;
 

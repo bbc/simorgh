@@ -25,6 +25,8 @@ type GetCspTierProps = {
   isLite: boolean;
 };
 
+// Selects one of three CSP tiers per request based on allow-listed countries.
+// Precedence: relaxed > nonce > strict (the default for unlisted countries, and always for AMP/Lite pages).
 const getCspTier = ({
   service,
   country,
