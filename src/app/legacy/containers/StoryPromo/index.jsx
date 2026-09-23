@@ -8,7 +8,6 @@ import StoryPromo, {
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
 import pathOr from 'ramda/src/pathOr';
 import LiveLabel from '#app/components/LiveLabel';
-import ImagePlaceholder from '#psammead/psammead-image-placeholder/src';
 import { RequestContext } from '#contexts/RequestContext';
 import { createSrcsets } from '#lib/utilities/srcSet';
 import buildIChefURL from '#lib/utilities/ichefURL';
@@ -75,8 +74,7 @@ const StoryPromoImage = ({
   pageType = '',
 }) => {
   if (!imageValues) {
-    const landscapeRatio = (9 / 16) * 100;
-    return <ImagePlaceholder ratio={landscapeRatio} />;
+    return <Image alt="" aspectRatio={[16, 9]} />;
   }
 
   // eslint-disable-next-line prefer-const

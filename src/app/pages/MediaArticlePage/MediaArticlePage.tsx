@@ -11,6 +11,8 @@ import {
 } from '#app/models/types/optimo';
 import { MediaOverrides } from '#app/models/types/media';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
+import SaveArticleButton from '#app/components/SaveArticleButton';
+import extractSaveArticleProps from '#app/lib/utilities/extractSaveArticleProps';
 import useToggle from '../../hooks/useToggle';
 import {
   getArticleId,
@@ -112,16 +114,25 @@ const getBylineComponent =
     bylineContribBlocks: OptimoBylineContributorBlock[],
     firstPublished: string,
     lastPublished: string,
+    showSaveArticleButton: boolean,
+    pageData: Article,
   ) =>
   () =>
     hasByline ? (
-      <Byline blocks={bylineContribBlocks}>
-        <Timestamp
-          firstPublished={new Date(firstPublished).getTime()}
-          lastPublished={new Date(lastPublished).getTime()}
-          popOut={false}
-        />
-      </Byline>
+      <>
+        <Byline blocks={bylineContribBlocks}>
+          <Timestamp
+            firstPublished={new Date(firstPublished).getTime()}
+            lastPublished={new Date(lastPublished).getTime()}
+            popOut={false}
+          />
+        </Byline>
+        {showSaveArticleButton && (
+          <SaveArticleButton
+            saveArticlePageData={extractSaveArticleProps(pageData)}
+          />
+        )}
+      </>
     ) : null;
 
 const Links = (props: ComponentToRenderProps) => (
@@ -138,8 +149,18 @@ const getImageComponent =
   );
 
 const getTimestampComponent =
-  (showTimestamp: boolean) => (props: TimestampProps) =>
-    showTimestamp ? <Timestamp {...props} popOut={false} /> : null;
+  (showTimestamp: boolean, showSaveArticleButton: boolean, pageData: Article) =>
+  (props: TimestampProps) =>
+    showTimestamp ? (
+      <>
+        <Timestamp {...props} popOut={false} />
+        {showSaveArticleButton && (
+          <SaveArticleButton
+            saveArticlePageData={extractSaveArticleProps(pageData)}
+          />
+        )}
+      </>
+    ) : null;
 
 const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
   const { pageType, isAmp, isLite } = use(RequestContext);
@@ -183,6 +204,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
   } = pageData;
 
   const isCpsMap = type === MEDIA_ASSET_PAGE;
+  const showSaveArticleButton = !isCpsMap;
   const isTC2Asset = pageData?.metadata?.analyticsLabels?.contentId
     ?.split(':')
     ?.includes('topcat');
@@ -225,9 +247,15 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
       bylineContribBlocks,
       firstPublished,
       lastPublished,
+      showSaveArticleButton,
+      pageData,
     ),
     image: getImageComponent(preloadLeadImageToggle),
-    timestamp: getTimestampComponent(showTimestamp),
+    timestamp: getTimestampComponent(
+      showTimestamp,
+      showSaveArticleButton,
+      pageData,
+    ),
     social: SocialEmbedContainer,
     embedHtml: EmbedHtml,
     embedImages: EmbedImages,

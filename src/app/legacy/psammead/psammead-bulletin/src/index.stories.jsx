@@ -1,7 +1,7 @@
 import { withKnobs, boolean } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react-webpack5';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
-import Image from '#psammead/psammead-image/src';
+import Image from '#app/components/Image';
 import notes from '../README.md';
 import Bulletin from '.';
 
@@ -20,14 +20,14 @@ const BulletinComponent = ({ mediaType, hasImage, dir, text }) => {
     <Image
       src={imageSrc.replace('[WIDTH]', 660)}
       alt="Iron man"
-      srcset={imageSizes
+      srcSet={imageSizes
         .map(size => `${imageSrc.replace('[WIDTH]', size)}.webp ${size}w`)
         .join(', ')}
-      fallbackSrcset={imageSizes
+      fallbackSrcSet={imageSizes
         .map(size => `${imageSrc.replace('[WIDTH]', size)} ${size}w`)
         .join(', ')}
-      primaryMimeType="image/webp"
-      fallbackMimeType="image/jpeg"
+      mediaType="image/webp"
+      fallbackMediaType="image/jpeg"
     />
   );
 
