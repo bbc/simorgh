@@ -78,7 +78,7 @@ const Image = props => {
     sizesBuilder: () => sizes,
   }).srcSet;
   const fallbackSrcSet = createResponsiveSrcSet({
-    imageUrlTemplate: src,
+    imageUrlTemplate: src.replaceAll('.webp', ''),
     widths: resolutions,
     mq: { GROUP_2_MAX_WIDTH: '' },
     sizesBuilder: () => sizes,
