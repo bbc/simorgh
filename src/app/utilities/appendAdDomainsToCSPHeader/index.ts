@@ -9,10 +9,8 @@ import AD_DOMAINS from './constants';
  * @param adDomains - An array of ad domains to append to the `script-src` directive. Defaults to `AD_DOMAINS`.
  * @returns The modified CSP header with ad domains added to script-src
  *
- * TODO: WS-3302 - probably this was an error in the code itself. A meta CSP can only
- * intersect with the header policy, never widen it, so this cannot add domains the
- * header does not already allow. To be confirmed before deleting or folding these
- * domains into the header policy.
+ * TBC: multiple policies (header + meta) are enforced by intersection, never union,
+ * so a meta CSP can only narrow what the header already allows?
  */
 
 export default (cspHeader: string, adDomains = AD_DOMAINS): string => {
