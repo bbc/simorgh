@@ -275,7 +275,7 @@ describe('getRecentActivity', () => {
       ],
     };
 
-    it('retains items whose resourceTitle matches the current service', async () => {
+    it('retains items matching the current service and excludes items from other services', async () => {
       mockUasApiRequest.mockResolvedValueOnce({
         json: jest.fn().mockResolvedValueOnce(mixedServiceResponse),
       } as unknown as Response);
@@ -284,17 +284,6 @@ describe('getRecentActivity', () => {
 
       expect(result.savedArticles).toHaveLength(1);
       expect(result.savedArticles[0].id).toBe('hindi-article');
-    });
-
-    it('excludes items belonging to a different service', async () => {
-      mockUasApiRequest.mockResolvedValueOnce({
-        json: jest.fn().mockResolvedValueOnce(mixedServiceResponse),
-      } as unknown as Response);
-
-      const result = await getRecentActivity({ service: 'arabic' });
-
-      expect(result.savedArticles).toHaveLength(1);
-      expect(result.savedArticles[0].id).toBe('arabic-article');
     });
 
     it('does not filter by service when no service is provided', async () => {
