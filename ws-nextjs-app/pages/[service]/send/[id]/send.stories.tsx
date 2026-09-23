@@ -4,6 +4,7 @@ import { NextRouter } from 'next/router';
 import { RouterContext } from 'next/dist/shared/lib/router-context.shared-runtime';
 import mundoFormFixture from '#data/mundo/send/test2qq3x8vt.json';
 import somaliFormFixture from '#data/somali/send/u130092370.json';
+import swahiliFormFixture from '#data/swahili/send/u244742000.json';
 import hausaClosedFormFixture from '#data/hausa/send/u143732177.json';
 import UGCPage from './UGCPageLayout';
 import { FormScreen, PageProps } from './types';
@@ -63,4 +64,8 @@ export const ErrorScreen = () => (
 );
 export const ClosedScreen = () => (
   <Component initialScreen="form" fixtureData={hausaClosedFormFixture} />
+);
+
+export const FormComplex = () => (
+  <Component initialScreen="form" fixtureData={swahiliFormFixture} />
 );
