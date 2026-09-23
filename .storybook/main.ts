@@ -107,6 +107,10 @@ const storybookConfig: StorybookConfig = {
       rules: [
         ...(config.module?.rules || []),
         {
+          test: /\.md$/,
+          use: 'raw-loader',
+        },
+        {
           test: typescriptOptions.skipCompiler
             ? /\.((c|m)?jsx?)$/
             : /\.((c|m)?(j|t)sx?)$/,
