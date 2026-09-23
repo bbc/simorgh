@@ -2,6 +2,11 @@
 import { use } from 'react';
 import { IdctaConfig } from '#app/models/types/account';
 import useToggle from '#app/hooks/useToggle';
+import Cookie from 'js-cookie';
+import {
+  getDecodedToken,
+  TOKEN_COOKIE_NAME,
+} from '#app/lib/uasApi/tokenRefresh/tokenManager';
 import { AccountContext } from '.';
 import {
   render,
@@ -10,8 +15,17 @@ import {
 } from '../../components/react-testing-library-with-providers';
 
 jest.mock('#app/hooks/useToggle');
+jest.mock('js-cookie');
+jest.mock('#app/lib/uasApi/tokenRefresh/tokenManager', () => ({
+  ...jest.requireActual('#app/lib/uasApi/tokenRefresh/tokenManager'),
+  getDecodedToken: jest.fn(),
+}));
 
 const mockUseToggle = useToggle as jest.MockedFunction<typeof useToggle>;
+const mockGetDecodedToken = getDecodedToken as jest.MockedFunction<
+  typeof getDecodedToken
+>;
+const mockCookieGet = Cookie.get as jest.Mock;
 
 const mockIdctaConfig = {
   'id-availability': 'GREEN',
@@ -27,6 +41,9 @@ const mockIdctaConfig = {
 describe('AccountContext', () => {
   beforeEach(() => {
     jest.clearAllMocks();
+
+    mockCookieGet.mockReturnValue(undefined);
+    mockGetDecodedToken.mockReturnValue(null);
 
     mockUseToggle.mockImplementation(toggleName => {
       if (toggleName === 'uasPersonalization') {
@@ -280,29 +297,41 @@ describe('AccountContext', () => {
     expect(context.isRefreshAvailable).toBe(false);
   });
 
-  it('should set isPersonalisationOn to true when topic personalization is enabled and article personalization is disabled', () => {
-    mockUseToggle.mockImplementation(toggleName => {
-      if (toggleName === 'uasPersonalization') {
-        return { enabled: false, value: '' };
-      }
-
-      if (toggleName === 'topicUasPersonalization') {
-        return { enabled: true, value: '' };
-      }
-
-      return { enabled: false, value: '' };
-    });
+  it('should set isPersonalisationOn to false when token contains ep=false opt-out claim', () => {
+    mockCookieGet.mockImplementation((cookieName: string) =>
+      cookieName === TOKEN_COOKIE_NAME ? 'signed-in-token' : undefined,
+    );
+    mockGetDecodedToken.mockReturnValue({ ep: false });
 
     render(<TestComponent />, {
-      idctaConfig: mockIdctaConfig,
+      idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: false },
       service: 'hindi',
     });
 
     const testEl = screen.getByTestId('test-component');
     const context = JSON.parse(testEl.textContent as string);
 
-    expect(context.isArticlePersonalizationEnabled).toBe(false);
-    expect(context.isTopicPersonalizationEnabled).toBe(true);
+    expect(context.isSignedIn).toBe(true);
+    expect(context.isArticlePersonalizationEnabled).toBe(true);
+    expect(context.isPersonalisationOn).toBe(false);
+  });
+
+  it('should set isPersonalisationOn to true when token does not opt out of personalisation', () => {
+    mockCookieGet.mockImplementation((cookieName: string) =>
+      cookieName === TOKEN_COOKIE_NAME ? 'signed-in-token' : undefined,
+    );
+    mockGetDecodedToken.mockReturnValue({ ep: true });
+
+    render(<TestComponent />, {
+      idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: false },
+      service: 'hindi',
+    });
+
+    const testEl = screen.getByTestId('test-component');
+    const context = JSON.parse(testEl.textContent as string);
+
+    expect(context.isSignedIn).toBe(true);
+    expect(context.isArticlePersonalizationEnabled).toBe(true);
     expect(context.isPersonalisationOn).toBe(true);
   });
 });
