@@ -65,25 +65,36 @@ export default function FormScreen({
   });
 
   const formSections = sections?.map(
-    ({ sectionText, fields: sectionFields = [] }, index) => (
-      <section key={`${sectionText?.title}-${index}`}>
-        {sectionText?.title && (
-          <Heading level={2} size="doublePica">
-            {sectionText.title}
-          </Heading>
-        )}
-        {sectionText?.description && (
-          <div
-            // eslint-disable-next-line react/no-danger
-            dangerouslySetInnerHTML={{ __html: sectionText.description }}
-            css={styles.description}
-          />
-        )}
-        {sectionFields.map(({ id, label, htmlType }) => (
-          <FormField key={id} id={id} label={label} htmlType={htmlType} />
-        ))}
-      </section>
-    ),
+    ({ sectionText, fields: sectionFields = [] }) => {
+      const sectionKey =
+        sectionText?.title ??
+        sectionFields.map(({ id }) => id).join('-') ??
+        'section';
+
+      return (
+        <fieldset key={sectionKey} css={styles.fieldset}>
+          {(sectionText?.title || sectionText?.description) && (
+            <legend css={styles.legend}>
+              {sectionText?.title && (
+                <Heading level={2} size="doublePica">
+                  {sectionText.title}
+                </Heading>
+              )}
+              {sectionText?.description && (
+                <div
+                  // eslint-disable-next-line react/no-danger
+                  dangerouslySetInnerHTML={{ __html: sectionText.description }}
+                  css={styles.description}
+                />
+              )}
+            </legend>
+          )}
+          {sectionFields.map(({ id, label, htmlType }) => (
+            <FormField key={id} id={id} label={label} htmlType={htmlType} />
+          ))}
+        </fieldset>
+      );
+    },
   );
 
   return (

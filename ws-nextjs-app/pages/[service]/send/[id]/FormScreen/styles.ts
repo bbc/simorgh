@@ -17,6 +17,30 @@ export default {
         outline: 'none',
       },
     }),
+  fieldset: () =>
+    css({
+      border: 0,
+      margin: 0,
+      minWidth: 0,
+      padding: 0,
+      width: '100%',
+    }),
+  legend: () =>
+    css({
+      boxSizing: 'border-box',
+      display: 'block',
+      margin: 0,
+      maxWidth: '100%',
+      padding: 0,
+      width: '100%',
+      '& h2': {
+        margin: 0,
+        maxWidth: '100%',
+      },
+      '& > div': {
+        maxWidth: '100%',
+      },
+    }),
   description: ({ palette, spacings, fontVariants, fontSizes, mq }: Theme) =>
     css({
       borderBottom: `${pixelsToRem(1)}rem solid ${palette.GREY_5}`,
