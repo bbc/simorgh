@@ -1,7 +1,6 @@
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import { createSrcsets } from '#lib/utilities/srcSet';
-import buildIChefURL from '#app/lib/utilities/ichefURL';
+import { createIchefSrcSet } from '#app/utilities/imageSrcSets';
 import Promo from '#components/OptimoPromos';
 import isEmpty from 'ramda/src/isEmpty';
 import { ViewTracker } from '#app/lib/analyticsUtils/types';
@@ -133,17 +132,12 @@ const RelatedContentItem = ({
     item,
   );
 
-  const { primarySrcset, fallbackSrcset } = createSrcsets({
-    originCode,
-    locator,
+  const { primarySrcset, fallbackSrcset, src } = createIchefSrcSet({
+    originCode: originCode as string,
+    locator: locator as string,
     originalImageWidth: width,
     imageResolutions,
-  });
-
-  const src = buildIChefURL({
-    originCode,
-    locator,
-    resolution: DEFAULT_IMAGE_RES,
+    srcResolution: DEFAULT_IMAGE_RES,
   });
 
   const timestamp = pathOr<string>(
