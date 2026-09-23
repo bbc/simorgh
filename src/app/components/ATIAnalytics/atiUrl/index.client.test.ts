@@ -351,6 +351,7 @@ describe('atiUrl', () => {
         expect(reverbPageSectionViewEventModel.params.user).toEqual({
           isSignedIn: false,
           hashedId: null,
+          isPersonalisationOn: false,
         });
       });
 
@@ -567,6 +568,7 @@ describe('atiUrl', () => {
         expect(reverbExperimentActivationEventModel.params.user).toEqual({
           isSignedIn: true,
           hashedId: 'hashed-id',
+          isPersonalisationOn: false,
         });
       });
 
@@ -623,6 +625,7 @@ describe('atiUrl', () => {
           user: {
             isSignedIn: true,
             hashedId: 'hashed-id',
+            isPersonalisationOn: false,
           },
         });
       });

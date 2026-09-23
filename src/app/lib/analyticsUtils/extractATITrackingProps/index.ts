@@ -34,6 +34,7 @@ export default ({
     producerName,
     isSignedIn,
     hashedId,
+    isPersonalisationOn,
   } = eventTrackingContext;
 
   const campaignID =
@@ -62,5 +63,6 @@ export default ({
     alwaysInView,
     isSignedIn,
     hashedId,
+    isPersonalisationOn,
   };
 };

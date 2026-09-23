@@ -205,6 +205,7 @@ export interface ATIEventTrackingProps {
   eventGroupingName?: string;
   isSignedIn?: boolean;
   hashedId?: string | null;
+  isPersonalisationOn?: boolean;
 }
 
 export interface ItemTracker {
