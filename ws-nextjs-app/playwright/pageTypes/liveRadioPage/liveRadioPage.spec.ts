@@ -14,6 +14,7 @@ import {
   assertPageView,
   assertRadioScheduleComponentClick,
   assertRadioScheduleComponentView,
+  assertResonancePageView,
 } from '../../specialFeatures/atiAnalytics/assertions';
 import { getATIUrls } from '../../specialFeatures/atiAnalytics/helpers';
 
@@ -332,36 +333,53 @@ test.describe('liveRadioPage ATI Analytics', () => {
           appEnv: appEnvFromProcess,
         };
 
-        test('should send a page view event', async ({ page }) => {
-          test.skip(
-            !shouldRunForEnv(testSuite.runForEnv),
-            `Skipped for APP_ENV=${appEnvFromProcess}`,
-          );
+        if (testSuite.tests.includes('assertPageView')) {
+          test('should send a page view event', async ({ page }) => {
+            test.skip(
+              !shouldRunForEnv(testSuite.runForEnv),
+              `Skipped for APP_ENV=${appEnvFromProcess}`,
+            );
 
-          await assertPageView({ page, ...atiProps });
-        });
+            await assertPageView({ page, ...atiProps });
+          });
+        }
 
-        test('should send a view event for the Radio Schedule component', async ({
-          page,
-        }) => {
-          test.skip(
-            !shouldRunForEnv(testSuite.runForEnv),
-            `Skipped for APP_ENV=${appEnvFromProcess}`,
-          );
+        if (testSuite.tests.includes('assertResonancePageView')) {
+          test('should send a resonance page view event', async ({ page }) => {
+            test.skip(
+              !shouldRunForEnv(testSuite.runForEnv),
+              `Skipped for APP_ENV=${appEnvFromProcess}`,
+            );
 
-          await assertRadioScheduleComponentView({ page, ...atiProps });
-        });
+            await assertResonancePageView({ page, ...atiProps });
+          });
+        }
 
-        test('should send a click event for the Radio Schedule component', async ({
-          page,
-        }) => {
-          test.skip(
-            !shouldRunForEnv(testSuite.runForEnv),
-            `Skipped for APP_ENV=${appEnvFromProcess}`,
-          );
+        if (testSuite.tests.includes('assertRadioScheduleComponentView')) {
+          test('should send a view event for the Radio Schedule component', async ({
+            page,
+          }) => {
+            test.skip(
+              !shouldRunForEnv(testSuite.runForEnv),
+              `Skipped for APP_ENV=${appEnvFromProcess}`,
+            );
 
-          await assertRadioScheduleComponentClick({ page, ...atiProps });
-        });
+            await assertRadioScheduleComponentView({ page, ...atiProps });
+          });
+        }
+
+        if (testSuite.tests.includes('assertRadioScheduleComponentClick')) {
+          test('should send a click event for the Radio Schedule component', async ({
+            page,
+          }) => {
+            test.skip(
+              !shouldRunForEnv(testSuite.runForEnv),
+              `Skipped for APP_ENV=${appEnvFromProcess}`,
+            );
+
+            await assertRadioScheduleComponentClick({ page, ...atiProps });
+          });
+        }
       });
     });
   });
