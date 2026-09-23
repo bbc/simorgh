@@ -7,9 +7,9 @@ import {
   GEL_SPACING_TRPL,
 } from '#psammead/gel-foundations/src/spacings';
 import { getMimeType } from '#lib/utilities/srcSet';
+import Image from '#app/components/Image';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '../../../contexts/RequestContext';
-import ImageWithPlaceholder from '../ImageWithPlaceholder';
 
 const paddingDir = ({ dir }) => `padding-${dir === 'rtl' ? 'left' : 'right'}`;
 
@@ -61,13 +61,13 @@ const OnDemandImage = ({
 
   return (
     <ImageContainer data-e2e="on-demand-image" dir={dir} className={className}>
-      <ImageWithPlaceholder
+      <Image
         src={src}
         alt={alt}
-        srcset={srcset}
-        primaryMimeType={getMimeType(srcset)}
+        srcSet={srcset}
+        mediaType={getMimeType(srcset)}
         sizes={sizes}
-        ratio={100}
+        aspectRatio={[1, 1]}
         width={mediumImageSize}
         height={mediumImageSize}
       />
