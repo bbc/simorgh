@@ -30,8 +30,6 @@ const GooglePreferredSource = () => {
       <a
         className={styles.link}
         href={GOOGLE_PREFERRED_SOURCE_URL}
-        rel="noopener noreferrer"
-        target="_blank"
         {...clickTrackerHandler}
         aria-label={`${linkText} ${externalLinkText}`}
       >
