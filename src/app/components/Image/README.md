@@ -77,18 +77,19 @@ This is how to render a responsive webp image with a jpeg fallback:
 />
 ```
 
-You can generate the `srcSet`, `mediaType`, `fallbackSrcSet`, and `fallbackMediaType` props using the [`createSrcsets`](../../lib/utilities/srcSet/index.js) function. For example:
+You can generate the `src`, `srcSet`, `mediaType`, `fallbackSrcSet`, and `fallbackMediaType` props using the [`createIchefSrcSet`](../../utilities/imageSrcSets/index.ts) function. For example:
 
 ```tsx
 const src =
   'https://ichef.bbci.co.uk/ace/ws/624/cpsprodpb/164AF/production/_110911319_antartica.jpg';
 
-const { srcSet, primaryMimeType, fallbackSrcSet, fallbackMimeType } =
-  createSrcsets({
+const { src, srcSet, primaryMimeType, fallbackSrcSet, fallbackMimeType } =
+  createIchefSrcSet({
     originCode: 'cpsprodpb',
-    locator: src,
+    locator: '164AF/production/_110911319_antartica.jpg',
     originalImageWidth: 500,
     imageResolutions: [200, 500, 1000],
+    srcResolution: 500,
   });
 
 <Image
