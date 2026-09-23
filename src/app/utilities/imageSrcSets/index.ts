@@ -11,6 +11,11 @@ type IchefSrcSetParams = {
   srcResolution?: number;
 };
 
+type PlaceholderSrcSetParams = Pick<
+  IchefSrcSetParams,
+  'originCode' | 'locator'
+>;
+
 type ResponsiveSrcSetParams = {
   imageUrlTemplate?: string;
   mq: Theme['mq'];
@@ -131,7 +136,7 @@ export const createResponsiveSrcSet = ({
 export const getPlaceholderSrcSet = ({
   originCode,
   locator,
-}: IchefSrcSetParams) => {
+}: PlaceholderSrcSetParams) => {
   if (!originCode || !locator) return '';
   return DEFAULT_RESOLUTIONS.map(
     resolution =>

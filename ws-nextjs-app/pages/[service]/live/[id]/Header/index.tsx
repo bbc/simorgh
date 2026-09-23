@@ -6,8 +6,7 @@ import { MediaCollection } from '#app/components/MediaLoader/types';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import Image from '#app/components/Image';
-import buildIChefURL from '#app/lib/utilities/ichefURL';
-import { createSrcsets } from '#app/lib/utilities/srcSet';
+import { createIchefSrcSet } from '#app/utilities/imageSrcSets';
 import getOriginCode from '#app/lib/utilities/imageSrcHelpers/originCode';
 import getLocator from '#app/lib/utilities/imageSrcHelpers/locator';
 import styles from './styles';
@@ -46,18 +45,17 @@ const Header = ({
   const originCode = getOriginCode(url);
   const locator = getLocator(url);
 
-  const { primarySrcset, primaryMimeType, fallbackSrcset, fallbackMimeType } =
-    createSrcsets({
-      originCode,
-      locator,
-      originalImageWidth: imageWidth,
-    });
-
-  const DEFAULT_IMAGE_RES = 480;
-  const srcWebp = buildIChefURL({
+  const {
+    src: srcWebp,
+    primarySrcset,
+    primaryMimeType,
+    fallbackSrcset,
+    fallbackMimeType,
+  } = createIchefSrcSet({
     originCode,
     locator,
-    resolution: DEFAULT_IMAGE_RES,
+    originalImageWidth: imageWidth ?? 0,
+    srcResolution: 480,
   });
 
   const Title = (
