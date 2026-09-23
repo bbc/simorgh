@@ -57,7 +57,14 @@ export const createIchefSrcSet = ({
 }: IchefSrcSetParams) => {
   if (originCode === 'pips') {
     return {
-      src: undefined,
+      src:
+        srcResolution === undefined
+          ? undefined
+          : buildIChefURL({
+              originCode,
+              locator,
+              resolution: srcResolution,
+            }),
       primarySrcset: undefined,
       primaryMimeType: undefined,
       fallbackSrcset: undefined,
