@@ -46,6 +46,18 @@ describe('typography mixins', () => {
     expect(css).toContain(
       '@media (min-width: 20rem) and (max-width: 37.4375rem)',
     );
+    expect(css).toContain(
+      'font-size: var(--gel-typography-font-size-group-b, inherit);',
+    );
+    expect(css).toContain(
+      'line-height: var(--gel-typography-line-height-group-b, inherit);',
+    );
     expect(css).toContain('@media (min-width: 37.5rem)');
+    expect(css).toContain(
+      'font-size: var(--gel-typography-font-size-group-d, inherit);',
+    );
+    expect(css).toContain(
+      'line-height: var(--gel-typography-line-height-group-d, inherit);',
+    );
   });
 });
