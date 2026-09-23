@@ -1,12 +1,17 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { use } from 'react';
 import { IdctaConfig } from '#app/models/types/account';
+import useToggle from '#app/hooks/useToggle';
 import { AccountContext } from '.';
 import {
   render,
   screen,
   waitFor,
 } from '../../components/react-testing-library-with-providers';
+
+jest.mock('#app/hooks/useToggle');
+
+const mockUseToggle = useToggle as jest.MockedFunction<typeof useToggle>;
 
 const mockIdctaConfig = {
   'id-availability': 'GREEN',
@@ -22,6 +27,18 @@ const mockIdctaConfig = {
 describe('AccountContext', () => {
   beforeEach(() => {
     jest.clearAllMocks();
+
+    mockUseToggle.mockImplementation(toggleName => {
+      if (toggleName === 'uasPersonalization') {
+        return { enabled: true, value: '' };
+      }
+
+      if (toggleName === 'topicUasPersonalization') {
+        return { enabled: false, value: '' };
+      }
+
+      return { enabled: false, value: '' };
+    });
 
     delete (window as any).location;
     window.location = { href: 'https://example.com/current-page' } as any;
@@ -261,5 +278,31 @@ describe('AccountContext', () => {
     const context = JSON.parse(testEl.textContent as string);
 
     expect(context.isRefreshAvailable).toBe(false);
+  });
+
+  it('should set isPersonalisationOn to true when topic personalization is enabled and article personalization is disabled', () => {
+    mockUseToggle.mockImplementation(toggleName => {
+      if (toggleName === 'uasPersonalization') {
+        return { enabled: false, value: '' };
+      }
+
+      if (toggleName === 'topicUasPersonalization') {
+        return { enabled: true, value: '' };
+      }
+
+      return { enabled: false, value: '' };
+    });
+
+    render(<TestComponent />, {
+      idctaConfig: mockIdctaConfig,
+      service: 'hindi',
+    });
+
+    const testEl = screen.getByTestId('test-component');
+    const context = JSON.parse(testEl.textContent as string);
+
+    expect(context.isArticlePersonalizationEnabled).toBe(false);
+    expect(context.isTopicPersonalizationEnabled).toBe(true);
+    expect(context.isPersonalisationOn).toBe(true);
   });
 });

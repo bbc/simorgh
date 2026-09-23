@@ -116,7 +116,8 @@ export const AccountProvider = ({
     decodedIdToken?.[ENABLE_PERSONALISATION_CLAIM] === false;
 
   const isPersonalisationOn =
-    isArticlePersonalizationEnabled && !hasOptedOutOfPersonalisation;
+    (isArticlePersonalizationEnabled || isTopicPersonalizationEnabled) &&
+    !hasOptedOutOfPersonalisation;
 
   const isRefreshAvailable =
     isIdctaAvailable && initialConfig?.availability?.refresh === 'GREEN';
