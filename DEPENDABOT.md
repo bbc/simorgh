@@ -25,7 +25,7 @@ We chose to group all minor and patch updates for [loadable](https://github.com/
 
 ## Group BBC Non-Major Deps
 
-We chose to [group updates to BBC packages](https://github.com/bbc/simorgh/blob/c17b20ef183e8bc94afb66d2414bc7e5ac14a845/.github/dependabot.yml#L14-L19) into one PR for minor and patch updates. Major package updates will generate seperate PRs as you would expect allowing you to bring them in seperately for the feature/breaking change you are introducing. 
+We chose to [group updates to BBC packages](https://github.com/bbc/simorgh/blob/c17b20ef183e8bc94afb66d2414bc7e5ac14a845/.github/dependabot.yml#L14-L19) into one PR for minor and patch updates. Major package updates will generate separate PRs as you would expect allowing you to bring them in separately for the feature/breaking change you are introducing. 
 
 
 ## Ignored Dependencies
