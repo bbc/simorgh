@@ -2,6 +2,13 @@ import { Fragment, use } from 'react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import AccountPromotionalBannerHomePageExperiment from '#app/components/Account/AccountPromotionalBannerHomePageExperiment';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
+import useOptimizelyVariation, {
+  ExperimentType,
+} from '#app/hooks/useOptimizelyVariation';
+import {
+  HOMEPAGE_RELATED_TOPIC_EXPERIMENT,
+  isHomepageRelatedTopicVariation,
+} from '#app/lib/experiments/homepageRelatedTopicPromos';
 import useScrollDepthTracker, {
   getHomePageBounds,
 } from '#app/hooks/useScrollDepthTracker';
@@ -45,10 +52,30 @@ const HomePage = ({ pageData }: HomePageProps) => {
     homePageTitle,
     lang,
     brandName,
+    service,
   } = use(ServiceContext);
   const { topStoriesTitle, home } = translations;
   const { title, description, seoTitle, seoDescription } = pageData;
   const { curations } = pageData;
+
+  // experiment: newswb_ws_homepage_related_topic_promos
+  // read the server assignment before rendering and activate both groups on load
+  const relatedTopicVariant = useOptimizelyVariation({
+    experimentName: HOMEPAGE_RELATED_TOPIC_EXPERIMENT,
+    experimentType: ExperimentType.SERVER_SIDE,
+  });
+  const relatedTopicExperimentProps =
+    service === 'afrique' &&
+    isHomepageRelatedTopicVariation(relatedTopicVariant)
+      ? {
+          experimentName: HOMEPAGE_RELATED_TOPIC_EXPERIMENT,
+          experimentVariant: relatedTopicVariant,
+          sendOptimizelyEvents: true,
+        }
+      : undefined;
+  const showRelatedTopicExperiment =
+    Boolean(relatedTopicExperimentProps) &&
+    relatedTopicVariant === 'related_topic';
 
   const scrollDepthRef = useScrollDepthTracker(
     'homepage-scroll-depth',
@@ -131,6 +158,8 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       renderVisuallyHiddenH2Title={position === 0}
                       curationId={curationId}
                       {...curationProps}
+                      experimentProps={relatedTopicExperimentProps}
+                      showRelatedTopicExperiment={showRelatedTopicExperiment}
                     />
                     {index === indexOfFirstNonBanner && <MPU />}
                   </Fragment>
@@ -140,7 +169,9 @@ const HomePage = ({ pageData }: HomePageProps) => {
           </div>
         </div>
       </main>
-      <OptimizelyPageMetrics trackPageComplete trackPageDepth />
+      {relatedTopicExperimentProps && (
+        <OptimizelyPageMetrics trackPageComplete trackPageDepth />
+      )}
     </>
   );
 };
