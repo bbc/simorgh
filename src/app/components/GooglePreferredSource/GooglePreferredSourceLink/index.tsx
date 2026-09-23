@@ -1,5 +1,5 @@
 import isGoogleReferral from '#app/lib/utilities/isGoogleReferral';
-import { use } from 'react';
+import { use, useEffect, useState } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
@@ -12,6 +12,11 @@ const GOOGLE_PREFERRED_SOURCE_URL =
 const GooglePreferredSource = () => {
   const toggle = useToggle('googlePreferredSource');
   const googlePreferredSourceEnabled = toggle.enabled;
+  const [isGoogleReferralTraffic, setIsGoogleReferralTraffic] = useState(false);
+
+  useEffect(() => {
+    setIsGoogleReferralTraffic(isGoogleReferral());
+  }, []);
 
   const eventTrackingData = {
     componentName: 'google-preferred-source',
@@ -22,7 +27,7 @@ const GooglePreferredSource = () => {
 
   const { translations, externalLinkText } = use(ServiceContext);
   const linkText = translations?.googlePreferredSource?.linkText;
-  if (!linkText || !isGoogleReferral() || !googlePreferredSourceEnabled)
+  if (!linkText || !isGoogleReferralTraffic || !googlePreferredSourceEnabled)
     return null;
 
   return (
