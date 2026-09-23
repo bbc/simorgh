@@ -22,6 +22,22 @@ describe('InlineLink', () => {
     expect(anchorEl.nodeName).toBe('A');
     expect(anchorEl).toHaveAttribute('href', '/mundo/articles/ce42wzqr2mko');
     expect(anchorEl).toHaveClass(styles.self);
+    expect(anchorEl).toHaveClass('focusIndicatorReducedWidth');
+  });
+
+  it('should preserve its default focus class when a custom class is provided', () => {
+    render(
+      <InlineLink
+        to="/mundo/articles/ce42wzqr2mko"
+        text="Hello World!"
+        className="custom-link"
+      />,
+    );
+
+    const anchorEl = screen.getByText('Hello World!');
+
+    expect(anchorEl).toHaveClass('custom-link');
+    expect(anchorEl).toHaveClass('focusIndicatorReducedWidth');
   });
 
   it.each`

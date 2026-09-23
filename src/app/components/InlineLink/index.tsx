@@ -25,7 +25,7 @@ const bbcDomains = [
 ];
 
 const InlineLink: FC<Props> = ({
-  className = 'focusIndicatorReducedWidth',
+  className,
   fontVariant,
   size,
   text,
@@ -42,7 +42,7 @@ const InlineLink: FC<Props> = ({
       typeof text === 'string' && {
         'aria-label': text.concat(externalLinkText),
       }),
-    className: clsx(styles.self, className),
+    className: clsx(styles.self, 'focusIndicatorReducedWidth', className),
     style: {
       ...getTypographyStyles({ size, fontVariant }),
       ...style,
