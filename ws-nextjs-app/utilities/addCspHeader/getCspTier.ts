@@ -46,7 +46,7 @@ const getCspTier = ({
     'adsNonce',
   );
 
-if (
+  if (
     isAmp ||
     isLite ||
     !showAdsBasedOnLocation ||
