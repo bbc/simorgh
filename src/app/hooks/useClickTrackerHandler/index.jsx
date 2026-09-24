@@ -15,6 +15,7 @@ import {
   HOMEPAGE_ARTICLE_PROMO_CLICK_EVENT,
   HOMEPAGE_ARTICLE_PROMO_TYPES,
   HOMEPAGE_RELATED_TOPIC_EXPERIMENT,
+  HOMEPAGE_RELATED_TOPIC_SERVICES,
   isHomepageRelatedTopicVariation,
 } from '#app/lib/experiments/homepageRelatedTopicPromos';
 import useTrackingToggle from '../useTrackingToggle';
@@ -80,7 +81,7 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
   // experiment: newswb_ws_homepage_related_topic_promos
   // classify the article link, excluding topic links and curation headings
   const isHomepageArticlePromoClick =
-    pageService === 'afrique' &&
+    HOMEPAGE_RELATED_TOPIC_SERVICES.includes(pageService) &&
     pageType === HOME_PAGE &&
     !isAmp &&
     experimentName === HOMEPAGE_RELATED_TOPIC_EXPERIMENT &&
