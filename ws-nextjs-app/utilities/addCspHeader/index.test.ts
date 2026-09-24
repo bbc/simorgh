@@ -3,7 +3,7 @@ import addCspHeader from '.';
 
 const MOCK_NONCE = 'mock-nonce';
 
-jest.mock('#app/lib/utilities/getUUID', () => () => 'mock-nonce');
+jest.mock('./createNonce', () => () => 'mock-nonce');
 
 const createDocumentContext = (pathname: string) => {
   const url = new URL(`https://www.test.bbc.com${pathname}`);

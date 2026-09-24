@@ -2,9 +2,9 @@ import { NextPageContext } from 'next/types';
 import { cspDirectives } from '#utilities/cspHeader/directives';
 import getPathExtension from '#app/utilities/getPathExtension';
 import isLiveEnv from '#lib/utilities/isLive';
-import getUUID from '#app/lib/utilities/getUUID';
 import { Services, Toggles } from '#app/models/types/global';
 import getCspTier from './getCspTier';
+import createNonce from './createNonce';
 
 const LOCALHOST_DOMAINS = ['localhost', '127.0.0.1'];
 
@@ -58,7 +58,7 @@ const addCspHeader = ({
     isLite,
   });
 
-  const nonce = cspTier === 'nonce' ? getUUID() : null;
+  const nonce = cspTier === 'nonce' ? createNonce() : null;
 
   const { directives } = cspDirectives({
     isAmp,

@@ -34,7 +34,7 @@ const getCspTier = ({
   isAmp,
   isLite,
 }: GetCspTierProps): CspTier => {
-  if (!SERVICES.includes(service)) return 'strict';
+  if (!SERVICES.includes(service) || isAmp || isLite) return 'strict';
 
   const { enabled: relaxedCspEnabled, value: relaxedCspCountries } = getToggle(
     toggles,
@@ -50,14 +50,7 @@ const getCspTier = ({
     'adsNonce',
   );
 
-  // AMP and Lite pages cannot carry a nonce on their inline scripts
-  const supportsNonce = !isAmp && !isLite;
-
-  if (
-    supportsNonce &&
-    adsNonceEnabled &&
-    isCountryInList(adsNonceCountries, country)
-  ) {
+  if (adsNonceEnabled && isCountryInList(adsNonceCountries, country)) {
     return 'nonce';
   }
 
