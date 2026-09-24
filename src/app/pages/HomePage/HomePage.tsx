@@ -108,6 +108,20 @@ const HomePage = ({ pageData }: HomePageProps) => {
         entities={[itemList]}
       />
       <Ad slotType="leaderboard" />
+      <iframe
+        className="ap-embed"
+        loading="lazy"
+        title="Live election results via the Associated Press"
+        src="https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/33021.html"
+        width="100%"
+        frameBorder="0"
+        scrolling="no"
+        marginHeight={0}
+      />
+      <script
+        defer
+        src="https://interactives.apelections.org/election-results/assets/microsite/resizeClient.js"
+      />
       <main role="main" css={styles.main} ref={scrollDepthRef}>
         <ATIAnalytics />
         <VisuallyHiddenText id="content" tabIndex={-1} as="h1">
