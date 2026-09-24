@@ -1,18 +1,21 @@
-import isGoogleReferral from '#app/lib/utilities/isGoogleReferral';
 import { use } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
-import useToggle from '#hooks/useToggle';
 import styles from './index.module.scss';
+
+type Props = {
+  isGoogleReferralTraffic: boolean;
+  googlePreferredSourceEnabled: boolean;
+};
 
 const GOOGLE_PREFERRED_SOURCE_URL =
   'https://www.google.com/preferences/source?q=bbc.com';
 
-const GooglePreferredSource = () => {
-  const toggle = useToggle('googlePreferredSource');
-  const googlePreferredSourceEnabled = toggle.enabled;
-
+const GooglePreferredSource = ({
+  isGoogleReferralTraffic,
+  googlePreferredSourceEnabled,
+}: Props) => {
   const eventTrackingData = {
     componentName: 'google-preferred-source',
   };
@@ -22,7 +25,7 @@ const GooglePreferredSource = () => {
 
   const { translations, externalLinkText } = use(ServiceContext);
   const linkText = translations?.googlePreferredSource?.linkText;
-  if (!linkText || !isGoogleReferral() || !googlePreferredSourceEnabled)
+  if (!linkText || !isGoogleReferralTraffic || !googlePreferredSourceEnabled)
     return null;
 
   return (

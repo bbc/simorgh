@@ -63,6 +63,7 @@ import AccountPromotionalBannerExperiment from '#app/components/Account/AccountP
 import repositionCountryTopic from '#app/components/TopicDiscovery/RepositionCountryTopic';
 import GooglePreferredSource from '#app/components/GooglePreferredSource/GooglePreferredSourceLink';
 import GooglePreferredSourceDivider from '#app/components/GooglePreferredSource/GooglePreferredSourceDivider';
+import isGoogleReferral from '#app/lib/utilities/isGoogleReferral';
 import ElectionBanner from './ElectionBanner';
 import ArticleMessageBanner from './ArticleMessageBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
@@ -117,6 +118,8 @@ const getTimestampComponent =
     isAmp: boolean,
     isApp: boolean,
     isLite: boolean,
+    isGoogleReferralTraffic: boolean,
+    googlePreferredSourceEnabled: boolean,
   ) =>
   (props: ComponentToRenderProps & TimeStampProps) => {
     const shouldDisplayReadTime = !!(readTimeTranslations && readTimeValue);
@@ -147,11 +150,21 @@ const getTimestampComponent =
             )}
           </>
         )}
-        {!isAmp && !isLite && !isApp && <GooglePreferredSource />}
+        {!isAmp && !isLite && !isApp && (
+          <GooglePreferredSource
+            isGoogleReferralTraffic={isGoogleReferralTraffic}
+            googlePreferredSourceEnabled={googlePreferredSourceEnabled}
+          />
+        )}
         <SaveArticleButton
           saveArticlePageData={extractSaveArticleProps(articlePageData)}
         />
-        {!isAmp && !isLite && !isApp && <GooglePreferredSourceDivider />}
+        {!isAmp && !isLite && !isApp && (
+          <GooglePreferredSourceDivider
+            isGoogleReferralTraffic={isGoogleReferralTraffic}
+            googlePreferredSourceEnabled={googlePreferredSourceEnabled}
+          />
+        )}
       </>
     );
   };
@@ -242,6 +255,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     'continueReadingButton',
   );
   const { enabled: topicDiscoveryEnabled } = useToggle('topicDiscovery');
+  const { enabled: googlePreferredSourceEnabled } = useToggle(
+    'googlePreferredSource',
+  );
+
+  const isGoogleReferralTraffic = isGoogleReferral();
 
   const {
     palette: { GREY_2 },
@@ -393,6 +411,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       isAmp,
       isApp,
       isLite,
+      isGoogleReferralTraffic,
+      googlePreferredSourceEnabled,
     ),
     social: SocialEmbedContainer,
     embed: UnsupportedEmbed,
