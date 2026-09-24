@@ -149,8 +149,12 @@ describe('CSP tiers', () => {
     addCspHeader({
       ctx,
       service: 'pidgin',
-      toggles: { relaxedCsp: { enabled: true, value: 'in,br' } },
+      toggles: {
+        ads: { enabled: true },
+        relaxedCsp: { enabled: true, value: 'in,br' },
+      },
       country: 'in',
+      showAdsBasedOnLocation: true,
     });
 
     expect(getCspHeader(ctx)).toEqual(expectedRelaxedCsp);
@@ -162,8 +166,12 @@ describe('CSP tiers', () => {
     const { nonce } = addCspHeader({
       ctx,
       service: 'pidgin',
-      toggles: { adsNonce: { enabled: true, value: 'ke' } },
+      toggles: {
+        ads: { enabled: true },
+        adsNonce: { enabled: true, value: 'ke' },
+      },
       country: 'ke',
+      showAdsBasedOnLocation: true,
     });
 
     expect(nonce).toBe(MOCK_NONCE);
@@ -176,8 +184,12 @@ describe('CSP tiers', () => {
     const { nonce } = addCspHeader({
       ctx,
       service: 'pidgin',
-      toggles: { relaxedCsp: { enabled: true, value: 'in' } },
+      toggles: {
+        ads: { enabled: true },
+        relaxedCsp: { enabled: true, value: 'in' },
+      },
       country: 'in',
+      showAdsBasedOnLocation: true,
     });
 
     expect(nonce).toBeNull();

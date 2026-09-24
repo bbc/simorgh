@@ -120,6 +120,7 @@ export default class CustomApp extends App<Props> {
       service,
       toggles,
       country: extractedHeaders.country,
+      showAdsBasedOnLocation: extractedHeaders.showAdsBasedOnLocation,
     });
     addOnionLocationHeader({ ctx });
     addVaryHeader({ ctx, serverSideExperiments });

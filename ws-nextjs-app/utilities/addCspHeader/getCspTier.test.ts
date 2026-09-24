@@ -5,16 +5,20 @@ const defaultProps = {
   service: 'pidgin' as Services,
   isAmp: false,
   isLite: false,
+  showAdsBasedOnLocation: true,
 };
 
 const toggles = ({
+  ads = { enabled: true },
   relaxedCsp,
   adsNonce,
 }: {
+  ads?: { enabled: boolean };
   relaxedCsp?: { enabled: boolean; value?: string };
   adsNonce?: { enabled: boolean; value?: string };
 }) =>
   ({
+    ads,
     ...(relaxedCsp && { relaxedCsp }),
     ...(adsNonce && { adsNonce }),
   }) as Toggles;
@@ -89,6 +93,34 @@ describe('getCspTier', () => {
         expect(tier).toBe('strict');
       },
     );
+
+    it('should return strict when ads are disabled', () => {
+      const tier = getCspTier({
+        ...defaultProps,
+        country: 'in',
+        toggles: toggles({
+          ads: { enabled: false },
+          relaxedCsp: { enabled: true, value: 'in' },
+          adsNonce: { enabled: true, value: 'in' },
+        }),
+      });
+
+      expect(tier).toBe('strict');
+    });
+
+    it('should return strict when ads are unavailable for the location', () => {
+      const tier = getCspTier({
+        ...defaultProps,
+        country: 'in',
+        showAdsBasedOnLocation: false,
+        toggles: toggles({
+          relaxedCsp: { enabled: true, value: 'in' },
+          adsNonce: { enabled: true, value: 'in' },
+        }),
+      });
+
+      expect(tier).toBe('strict');
+    });
   });
 
   describe('relaxed', () => {

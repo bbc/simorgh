@@ -23,9 +23,10 @@ type GetCspTierProps = {
   toggles: Toggles;
   isAmp: boolean;
   isLite: boolean;
+  showAdsBasedOnLocation: boolean;
 };
 
-// Selects one of three CSP tiers per request based on allow-listed countries.
+// Selects one of three CSP tiers per request when ads are enabled and available, using country allow lists.
 // Precedence: relaxed > nonce > strict (the default for unlisted countries, and always for AMP/Lite pages).
 const getCspTier = ({
   service,
@@ -33,22 +34,32 @@ const getCspTier = ({
   toggles,
   isAmp,
   isLite,
+  showAdsBasedOnLocation,
 }: GetCspTierProps): CspTier => {
-  if (!SERVICES.includes(service) || isAmp || isLite) return 'strict';
-
+  const { enabled: adsEnabled } = getToggle(toggles, 'ads');
   const { enabled: relaxedCspEnabled, value: relaxedCspCountries } = getToggle(
     toggles,
     'relaxedCsp',
   );
-
-  if (relaxedCspEnabled && isCountryInList(relaxedCspCountries, country)) {
-    return 'relaxed';
-  }
-
   const { enabled: adsNonceEnabled, value: adsNonceCountries } = getToggle(
     toggles,
     'adsNonce',
   );
+
+if (
+    isAmp ||
+    isLite ||
+    !showAdsBasedOnLocation ||
+    !SERVICES.includes(service)
+  ) {
+    return 'strict';
+  }
+
+  if (!adsEnabled) return 'strict';
+
+  if (relaxedCspEnabled && isCountryInList(relaxedCspCountries, country)) {
+    return 'relaxed';
+  }
 
   if (adsNonceEnabled && isCountryInList(adsNonceCountries, country)) {
     return 'nonce';

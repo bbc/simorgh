@@ -26,6 +26,7 @@ type AddCspHeaderProps = {
   service: Services;
   toggles: Toggles;
   country?: string | null;
+  showAdsBasedOnLocation?: boolean;
 };
 
 const addCspHeader = ({
@@ -33,6 +34,7 @@ const addCspHeader = ({
   service,
   toggles,
   country,
+  showAdsBasedOnLocation = false,
 }: AddCspHeaderProps) => {
   const hostname = ctx.req?.headers.host || '';
 
@@ -56,6 +58,7 @@ const addCspHeader = ({
     toggles,
     isAmp,
     isLite,
+    showAdsBasedOnLocation,
   });
 
   const nonce = cspTier === 'nonce' ? createNonce() : null;
