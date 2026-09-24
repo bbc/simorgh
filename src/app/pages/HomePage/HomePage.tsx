@@ -88,6 +88,10 @@ const HomePage = ({ pageData }: HomePageProps) => {
   const metadataDescription = seoDescription || description;
 
   const itemList = getItemList({ curations, name: brandName });
+  const apEmbedUrl =
+    service === 'arabic'
+      ? 'https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/33031.html'
+      : 'https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/33021.html';
 
   return (
     <>
@@ -112,7 +116,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
         className="ap-embed"
         loading="lazy"
         title="Live election results via the Associated Press"
-        src="https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/33021.html"
+        src={apEmbedUrl}
         width="100%"
         frameBorder="0"
         scrolling="no"
