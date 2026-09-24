@@ -88,6 +88,7 @@ const directives = {
       'https://flo.uri.sh', // STY includes
       'https://www.riddle.com', // STY Includes
       'https://public.flourish.studio', // Flourish embeds
+      'https://interactives.apelections.org', // AP election results embeds
       'https://*.mapcreator.io', // Election includes
       'https://*.thomsonreuters.com', // Election includes
       ...advertisingDirectives.frameSrc,
@@ -122,6 +123,7 @@ const directives = {
       'https://flo.uri.sh', // STY includes
       'https://www.riddle.com', // STY Includes
       'https://public.flourish.studio', // Flourish embeds
+      'https://interactives.apelections.org', // AP election results embeds
       'https://*.mapcreator.io', // Election includes
       'https://*.thomsonreuters.com', // Election includes
       ...advertisingDirectives.frameSrc,
@@ -214,6 +216,7 @@ const directives = {
       'https://*.twimg.com', // Social Embeds
       'https://public.flourish.studio', // STY includes
       'https://www.riddle.com',
+      'https://interactives.apelections.org', // AP election results resize script
       'https://*.mapcreator.io', // Election includes
       'https://*.thomsonreuters.com', // Election includes
       ...advertisingDirectives.scriptSrc,
@@ -246,6 +249,7 @@ const directives = {
       'https://*.twimg.com', // Social Embeds
       'https://public.flourish.studio', // STY includes
       'https://www.riddle.com',
+      'https://interactives.apelections.org', // AP election results resize script
       'https://*.mapcreator.io', // Election includes
       'https://*.thomsonreuters.com', // Election includes
       ...advertisingDirectives.scriptSrc,
