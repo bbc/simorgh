@@ -19,6 +19,7 @@ const ReverbTemplate = ({ nonce }: { nonce?: string | null }) => {
             }, 5000);
             const reverbScript = document.createElement('script');
             reverbScript.setAttribute('src','${envConfig?.SIMORGH_REVERB_SOURCE ?? ''}');
+            ${nonce ? `reverbScript.setAttribute('nonce','${nonce}');` : ''}
             document.head.appendChild(reverbScript);
             `,
       }}

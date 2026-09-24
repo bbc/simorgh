@@ -45,9 +45,9 @@ export const OptOutOfLiteRedirect = () => {
 
 // THIS COMPONENT IS ONLY TO BE USED WITH CANONICAL RENDERERS
 // DO NOT USE IT WITH LITE AND AMP RENDERERS
-export default () => {
+export default ({ nonce = null }: { nonce?: string | null } = {}) => {
   return (
-    <script>
+    <script {...(nonce ? { nonce } : {})}>
       {`
         (${redirectScript.toString()})(window)
       `}

@@ -35,6 +35,7 @@ import litePageTransforms from '../renderers/litePageTransforms';
 import LiteRenderer from '../renderers/LiteRenderer';
 import AmpRenderer from '../renderers/AmpRenderer';
 import derivePageType from '../utilities/derivePageType';
+import getNonceFromCspHeader from '../utilities/addCspHeader/getNonceFromCspHeader';
 
 type DocProps = {
   clientSideEnvVariables: EnvConfig;
@@ -46,6 +47,7 @@ type DocProps = {
   isAmp: boolean;
   isApp: boolean;
   isLite: boolean;
+  nonce: string | null;
   title: ReactElement;
 };
 
@@ -82,6 +84,11 @@ export default class AppDocument extends Document<DocProps> {
 
     handleServerLogging({ ctx, pageType });
 
+    // addCspHeader runs in _app's getInitialProps, which completes before this.
+    const nonce = getNonceFromCspHeader(ctx.res);
+
+    console.log('📌 _document.page CSP Nonce:', nonce);
+
     return {
       ...initialProps,
       clientSideEnvVariables,
@@ -92,6 +99,7 @@ export default class AppDocument extends Document<DocProps> {
       isAmp,
       isApp,
       isLite,
+      nonce,
     };
   }
 
@@ -105,6 +113,7 @@ export default class AppDocument extends Document<DocProps> {
       isAmp,
       isApp,
       isLite,
+      nonce,
     } = this.props;
 
     const htmlAttrs = helmet.htmlAttributes.toComponent();
@@ -164,21 +173,25 @@ export default class AppDocument extends Document<DocProps> {
       default:
         return (
           <Html lang="en-GB" {...htmlAttrs} className={NO_JS_CLASSNAME}>
-            <Head>
-              <CanonicalToLiteRedirect />
-              <ReverbTemplate />
+            <Head nonce={nonce ?? undefined}>
+              <CanonicalToLiteRedirect nonce={nonce} />
+              <ReverbTemplate nonce={nonce} />
               <script
                 type="text/javascript"
+                {...(nonce ? { nonce } : {})}
                 dangerouslySetInnerHTML={{
                   __html: `(${removeNoJsClass.toString()})()`,
                 }}
               />
-              {addOperaMiniClassScript()}
-              <Script strategy="beforeInteractive">
+              {addOperaMiniClassScript(nonce)}
+              <Script strategy="beforeInteractive" nonce={nonce ?? undefined}>
                 {`(${setSimorghEnvVars.toString()})(${JSON.stringify(clientSideEnvVariables)})`}
               </Script>
               {pageType === 'live' && (
-                <script src="https://www.riddle.com/embed/build-embedjs/embedV2.js" />
+                <script
+                  src="https://www.riddle.com/embed/build-embedjs/embedV2.js"
+                  {...(nonce ? { nonce } : {})}
+                />
               )}
               {isApp && <meta name="robots" content="noindex" />}
               {title}
@@ -187,6 +200,7 @@ export default class AppDocument extends Document<DocProps> {
               <ComponentTracking
                 trackComponentViews={false}
                 enableStaticClickTrackingOnOperaMiniOnly
+                nonce={nonce ?? undefined}
               />
               {helmetScriptTags}
               <style
@@ -196,7 +210,7 @@ export default class AppDocument extends Document<DocProps> {
             </Head>
             <body>
               <Main />
-              <NextScript />
+              <NextScript nonce={nonce ?? undefined} />
             </body>
           </Html>
         );
