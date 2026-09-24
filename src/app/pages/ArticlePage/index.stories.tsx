@@ -31,6 +31,15 @@ import PageLayoutWrapper from '#app/components/PageLayoutWrapper';
 
 const Page = withOptimizelyProvider(ArticlePageComponent);
 
+const withGoogleReferral = Story => {
+  Object.defineProperty(document, 'referrer', {
+    value: 'https://www.google.com/',
+    writable: true,
+  });
+
+  return <Story />;
+};
+
 const serviceContextMock = {
   ...newsConfig.default,
   service: 'news',
@@ -66,6 +75,7 @@ type Props = {
   podcastEnabled?: boolean;
   electionBanner?: boolean;
   articleLiteSiteLinkEnabled?: boolean;
+  googlePreferredSourceEnabled?: boolean;
 };
 
 const ComponentWithContext = ({
@@ -74,6 +84,7 @@ const ComponentWithContext = ({
   podcastEnabled = false,
   electionBanner = false,
   articleLiteSiteLinkEnabled = false,
+  googlePreferredSourceEnabled = false,
 }: Props) => {
   return (
     <ToggleContextProvider
@@ -85,6 +96,7 @@ const ComponentWithContext = ({
         electionBanner: { enabled: electionBanner },
         articleLiteSiteLink: { enabled: articleLiteSiteLinkEnabled },
         articleVideoCuration: { enabled: true },
+        googlePreferredSource: { enabled: googlePreferredSourceEnabled },
       }}
     >
       {/* Service set to news to enable most read. Article data is in english */}
@@ -297,6 +309,20 @@ export const ArticlePageWithLiteSiteLink = {
   ),
   parameters: {
     chromatic: { disableSnapshot: true },
+  },
+};
+
+export const ArticlePageWithGooglePreferredSource = {
+  render: () => (
+    <ComponentWithContext
+      data={articleData}
+      service="hindi"
+      googlePreferredSourceEnabled
+    />
+  ),
+  decorators: [withGoogleReferral],
+  globals: {
+    service: { service: 'hindi', variant: 'default' },
   },
 };
 
