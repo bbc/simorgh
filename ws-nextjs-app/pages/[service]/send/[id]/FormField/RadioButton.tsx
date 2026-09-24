@@ -32,6 +32,8 @@ export default ({
   return (
     <>
       <fieldset
+        id={id}
+        tabIndex={-1}
         css={styles.radioButtonFieldset}
         {...(hasAttemptedSubmit && {
           ...(wasInvalid && { 'aria-invalid': !isValid }),
