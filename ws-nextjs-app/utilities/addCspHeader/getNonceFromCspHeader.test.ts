@@ -15,17 +15,17 @@ describe('getNonceFromCspHeader', () => {
     expect(getNonceFromCspHeader(res)).toBe('abc-123');
   });
 
-  it('returns null when the policy contains no nonce', () => {
+  it('returns undefined when the policy contains no nonce', () => {
     const res = resWithCspHeader("script-src 'self' 'unsafe-inline';");
 
-    expect(getNonceFromCspHeader(res)).toBeNull();
+    expect(getNonceFromCspHeader(res)).toBeUndefined();
   });
 
-  it('returns null when no policy has been set', () => {
-    expect(getNonceFromCspHeader(resWithCspHeader())).toBeNull();
+  it('returns undefined when no policy has been set', () => {
+    expect(getNonceFromCspHeader(resWithCspHeader())).toBeUndefined();
   });
 
-  it('returns null when there is no response', () => {
-    expect(getNonceFromCspHeader(undefined)).toBeNull();
+  it('returns undefined when there is no response', () => {
+    expect(getNonceFromCspHeader(undefined)).toBeUndefined();
   });
 });

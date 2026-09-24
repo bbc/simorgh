@@ -21,7 +21,6 @@ const QueryProvider = ({ children }: PropsWithChildren) => {
 
   if (!isAnyPersonalizationEnabled) return children;
 
-  // TODO - suspense related script is not getting nonce value
   return (
     <Suspense fallback={children}>
       <PersistentQueryProvider>{children}</PersistentQueryProvider>

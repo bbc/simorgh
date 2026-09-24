@@ -7,11 +7,9 @@ const NONCE_PATTERN = /'nonce-([^']+)'/;
 const getNonceFromCspHeader = (res: ServerResponse | undefined) => {
   const cspHeader = res?.getHeader('Content-Security-Policy');
 
-  console.log('📌 CSP Header:', cspHeader);
+  if (typeof cspHeader !== 'string') return undefined;
 
-  if (typeof cspHeader !== 'string') return null;
-
-  return NONCE_PATTERN.exec(cspHeader)?.[1] ?? null;
+  return NONCE_PATTERN.exec(cspHeader)?.[1];
 };
 
 export default getNonceFromCspHeader;

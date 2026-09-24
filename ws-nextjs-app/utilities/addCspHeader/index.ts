@@ -42,8 +42,7 @@ const addCspHeader = ({
 
   const PRODUCTION_ONLY = !isLocalhost && process.env.NODE_ENV === 'production';
 
-  // TEMP - using for testing locally
-  if (!PRODUCTION_ONLY && false) return { nonce: null, cspHeader: null };
+  if (!PRODUCTION_ONLY) return { nonce: null, cspHeader: null };
 
   const reqUrl = ctx.req?.url || '';
   const { isAmp, isLite } = getPathExtension(reqUrl);
@@ -58,8 +57,6 @@ const addCspHeader = ({
     isAmp,
     isLite,
   });
-
-  console.log('📌 CSP Tier:', cspTier);
 
   const nonce = cspTier === 'nonce' ? getUUID() : null;
 

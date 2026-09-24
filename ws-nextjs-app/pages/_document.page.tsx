@@ -36,6 +36,7 @@ import LiteRenderer from '../renderers/LiteRenderer';
 import AmpRenderer from '../renderers/AmpRenderer';
 import derivePageType from '../utilities/derivePageType';
 import getNonceFromCspHeader from '../utilities/addCspHeader/getNonceFromCspHeader';
+import addNonceToReactFizzScripts from '../utilities/addNonceToReactFizzScripts';
 
 type DocProps = {
   clientSideEnvVariables: EnvConfig;
@@ -47,7 +48,7 @@ type DocProps = {
   isAmp: boolean;
   isApp: boolean;
   isLite: boolean;
-  nonce: string | null;
+  nonce?: string;
   title: ReactElement;
 };
 
@@ -73,6 +74,9 @@ export default class AppDocument extends Document<DocProps> {
 
     const initialProps = await Document.getInitialProps(ctx);
 
+    const nonce = getNonceFromCspHeader(ctx.res);
+    initialProps.html = addNonceToReactFizzScripts(initialProps.html, nonce);
+
     if (isLite) {
       initialProps.html = litePageTransforms(initialProps.html);
     }
@@ -83,11 +87,6 @@ export default class AppDocument extends Document<DocProps> {
     const clientSideEnvVariables = getProcessEnvAppVariables();
 
     handleServerLogging({ ctx, pageType });
-
-    // addCspHeader runs in _app's getInitialProps, which completes before this.
-    const nonce = getNonceFromCspHeader(ctx.res);
-
-    console.log('📌 _document.page CSP Nonce:', nonce);
 
     return {
       ...initialProps,
@@ -173,7 +172,7 @@ export default class AppDocument extends Document<DocProps> {
       default:
         return (
           <Html lang="en-GB" {...htmlAttrs} className={NO_JS_CLASSNAME}>
-            <Head nonce={nonce ?? undefined}>
+            <Head nonce={nonce}>
               <CanonicalToLiteRedirect nonce={nonce} />
               <ReverbTemplate nonce={nonce} />
               <script
@@ -184,7 +183,7 @@ export default class AppDocument extends Document<DocProps> {
                 }}
               />
               {addOperaMiniClassScript(nonce)}
-              <Script strategy="beforeInteractive" nonce={nonce ?? undefined}>
+              <Script strategy="beforeInteractive" nonce={nonce}>
                 {`(${setSimorghEnvVars.toString()})(${JSON.stringify(clientSideEnvVariables)})`}
               </Script>
               {pageType === 'live' && (
@@ -200,7 +199,7 @@ export default class AppDocument extends Document<DocProps> {
               <ComponentTracking
                 trackComponentViews={false}
                 enableStaticClickTrackingOnOperaMiniOnly
-                nonce={nonce ?? undefined}
+                nonce={nonce}
               />
               {helmetScriptTags}
               <style
@@ -210,7 +209,7 @@ export default class AppDocument extends Document<DocProps> {
             </Head>
             <body>
               <Main />
-              <NextScript nonce={nonce ?? undefined} />
+              <NextScript nonce={nonce} />
             </body>
           </Html>
         );
