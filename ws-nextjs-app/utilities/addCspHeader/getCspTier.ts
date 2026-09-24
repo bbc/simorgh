@@ -50,12 +50,11 @@ const getCspTier = ({
     isAmp ||
     isLite ||
     !showAdsBasedOnLocation ||
-    !SERVICES.includes(service)
+    !SERVICES.includes(service) ||
+    !adsEnabled
   ) {
     return 'strict';
   }
-
-  if (!adsEnabled) return 'strict';
 
   if (relaxedCspEnabled && isCountryInList(relaxedCspCountries, country)) {
     return 'relaxed';
