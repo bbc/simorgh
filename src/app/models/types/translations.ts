@@ -64,6 +64,9 @@ export interface Translations {
     description: string;
     closeLabel: string;
   };
+  googlePreferredSource?: {
+    linkText: string;
+  };
   saveArticleButton?: {
     loading: string;
     save: string;
