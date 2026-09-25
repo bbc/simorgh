@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import AccountPromotionalBannerHomePageExperiment from '#app/components/Account/AccountPromotionalBannerHomePageExperiment';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
-import useLocation from '#app/hooks/useLocation';
 import useOptimizelyVariation, {
   ExperimentType,
 } from '#app/hooks/useOptimizelyVariation';
@@ -25,7 +24,6 @@ import HomeCuration from '../../components/Curation';
 import Ad from '../../components/Ad';
 import MPU from '../../components/Ad/MPU';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import { RequestContext } from '../../contexts/RequestContext';
 import styles from './index.styles';
 import MetadataContainer from '../../components/Metadata';
 import LinkedData from '../../components/LinkedData';
@@ -61,8 +59,6 @@ const HomePage = ({ pageData }: HomePageProps) => {
     brandName,
     service,
   } = use(ServiceContext);
-  const { isAmp, isLite } = use(RequestContext);
-  const location = useLocation();
   const { topStoriesTitle, home } = translations;
   const { title, description, seoTitle, seoDescription } = pageData;
   const { curations } = pageData;
