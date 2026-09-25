@@ -3,7 +3,7 @@ import { PropsWithChildren, use } from 'react';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import Text from '../Text';
-import styles from './index.styles';
+import styles from './index.module.scss';
 
 const CopyrightContainer = ({ children }: PropsWithChildren) => {
   const { imageCopyrightOffscreenText, lang } = use(ServiceContext);
@@ -14,7 +14,7 @@ const CopyrightContainer = ({ children }: PropsWithChildren) => {
       role="text"
       fontVariant="sansRegular"
       size="minion"
-      css={styles.copyright}
+      className={styles.copyright}
     >
       {imageCopyrightOffscreenText ? (
         <VisuallyHiddenText>{imageCopyrightOffscreenText}</VisuallyHiddenText>

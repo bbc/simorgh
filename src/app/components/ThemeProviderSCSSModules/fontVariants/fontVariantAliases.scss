@@ -1,0 +1,68 @@
+@use 'sass:list';
+
+@function fallback-value($property, $variant, $fallbacks...) {
+  $variants: ($variant,);
+
+  @each $fallback in $fallbacks {
+    $variants: list.append($variants, $fallback, comma);
+  }
+
+  $value: inherit;
+
+  // This is Sass syntax to count down from the length of the variants array to 1.
+  // For example, three variants build var(--first, var(--second, var(--third, inherit))).
+  @for $index from list.length($variants) through 1 {
+    $current-variant: list.nth($variants, $index);
+    $value: var(--#{$current-variant}-#{$property}, #{$value});
+  }
+
+  @return $value;
+}
+
+@mixin define-font-variant($variant, $fallbacks...) {
+  --gel-font-variant-#{$variant}-font-family: #{fallback-value(
+    font-family,
+    $variant,
+    $fallbacks...
+  )};
+  --gel-font-variant-#{$variant}-font-style: #{fallback-value(
+    font-style,
+    $variant,
+    $fallbacks...
+  )};
+  --gel-font-variant-#{$variant}-font-weight: #{fallback-value(
+    font-weight,
+    $variant,
+    $fallbacks...
+  )};
+}
+
+:root {
+  @include define-font-variant('sans-regular');
+  @include define-font-variant('sans-regular-italic', 'sans-regular');
+  @include define-font-variant('sans-bold', 'sans-regular');
+  @include define-font-variant(
+    'sans-bold-italic',
+    'sans-bold',
+    'sans-regular'
+  );
+  @include define-font-variant('sans-light', 'sans-regular');
+  @include define-font-variant(
+    'serif-regular',
+    'serif-medium',
+    'sans-regular'
+  );
+  @include define-font-variant('serif-medium', 'sans-bold', 'sans-regular');
+  @include define-font-variant(
+    'serif-medium-italic',
+    'sans-bold-italic',
+    'sans-bold',
+    'sans-regular'
+  );
+  @include define-font-variant('serif-bold', 'sans-bold', 'sans-regular');
+  @include define-font-variant(
+    'serif-light',
+    'serif-medium',
+    'sans-regular'
+  );
+}

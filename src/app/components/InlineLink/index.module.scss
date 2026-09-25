@@ -1,0 +1,22 @@
+@use '@scss/themeTokens' as theme;
+
+.self {
+  @include theme.typography-gel-font-styles;
+
+  color: theme.$palette-ebon;
+  border-bottom: #{theme.pixelsToRem-px-to-rem(1)} solid
+    theme.$palette-postbox;
+  text-decoration: none;
+
+  &:visited {
+    color: theme.$palette-metal;
+    border-bottom: #{theme.pixelsToRem-px-to-rem(1)} solid theme.$palette-metal;
+  }
+
+  &:focus,
+  &:hover {
+    border-bottom: #{theme.pixelsToRem-px-to-rem(2)} solid theme.$palette-postbox;
+    color: theme.$palette-postbox;
+  }
+
+}
