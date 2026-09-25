@@ -142,22 +142,23 @@ describe('EpisodeDescriptionFormatter', () => {
   });
 
   it('handles indented chapter lines with leading whitespace', () => {
-    const text = '  00:00 Indented intro\n\t00:43 Indented chapter\n 01:30 Another indented';
+    const text =
+      '  00:00 Indented intro\n\t00:43 Indented chapter\n 01:30 Another indented';
     const { container } = render(<EpisodeDescriptionFormatter text={text} />);
     const timeElements = container.querySelectorAll('time');
     expect(timeElements).toHaveLength(3);
     expect(timeElements[0]).toHaveTextContent('00:00');
     expect(timeElements[1]).toHaveTextContent('00:43');
     expect(timeElements[2]).toHaveTextContent('01:30');
-    expect(
-      container.querySelectorAll('.chapterLabel')[0],
-    ).toHaveTextContent('Indented intro');
-    expect(
-      container.querySelectorAll('.chapterLabel')[1],
-    ).toHaveTextContent('Indented chapter');
-    expect(
-      container.querySelectorAll('.chapterLabel')[2],
-    ).toHaveTextContent('Another indented');
+    expect(container.querySelectorAll('.chapterLabel')[0]).toHaveTextContent(
+      'Indented intro',
+    );
+    expect(container.querySelectorAll('.chapterLabel')[1]).toHaveTextContent(
+      'Indented chapter',
+    );
+    expect(container.querySelectorAll('.chapterLabel')[2]).toHaveTextContent(
+      'Another indented',
+    );
   });
 
   describe('inline timecodes (timecodes embedded within a paragraph)', () => {
