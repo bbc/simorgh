@@ -109,8 +109,12 @@ export const FormContextProvider = ({
     const currState = { ...prevState, value };
     let validatedData = currState;
 
-    if (currState.htmlType === 'file') {
-      const validateFunction = validateFunctions.file;
+    const validatesOnChange = ['file', 'checkbox', 'radiobutton'].includes(
+      currState.htmlType,
+    );
+
+    if (validatesOnChange) {
+      const validateFunction = validateFunctions[currState.htmlType];
       validatedData = validateFunction
         ? validateFunction(currState)
         : currState;
@@ -119,7 +123,7 @@ export const FormContextProvider = ({
     const newFormState = { ...formState, ...updatedState };
     setFormState(newFormState);
 
-    if (currState.htmlType === 'file') {
+    if (validatesOnChange) {
       const validationErrorsList = getValidationErrors(newFormState);
       setValidationErrors(validationErrorsList);
     }
