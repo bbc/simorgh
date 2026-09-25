@@ -41,5 +41,13 @@ describe('serialiseForScript', () => {
     it('undefined', () => {
       expect(serialiseForScript(undefined)).toBeUndefined();
     });
+
+    it('returns undefined when toJSON returns undefined', () => {
+      expect(
+        serialiseForScript({
+          toJSON: () => undefined,
+        }),
+      ).toBeUndefined();
+    });
   });
 });
