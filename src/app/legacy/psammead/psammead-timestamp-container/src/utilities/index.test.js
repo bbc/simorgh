@@ -393,5 +393,11 @@ describe('Moment configuration', () => {
       const duration = 'PT30M'; // 30:00
       expect(formatDuration({ duration, locale: 'my' })).toEqual('၃၀:၀၀');
     });
+    it.each(['P1W', 'P1M', 'P1Y'])(
+      'should return zero instead of throwing for calendar duration %s',
+      duration => {
+        expect(formatDuration({ duration })).toEqual('00:00');
+      },
+    );
   });
 });

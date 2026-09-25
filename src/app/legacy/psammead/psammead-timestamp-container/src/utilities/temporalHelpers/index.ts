@@ -42,7 +42,13 @@ export const sanitiseDuration = (duration: ISODuration) => {
   }
 
   try {
-    return durationApi.from(duration);
+    const parsedDuration = durationApi.from(duration);
+
+    if (parsedDuration.years || parsedDuration.months || parsedDuration.weeks) {
+      return durationApi.from('PT0S');
+    }
+
+    return parsedDuration;
   } catch {
     return durationApi.from('PT0S');
   }

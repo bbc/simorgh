@@ -22,6 +22,17 @@ describe('Temporal Helper functions', () => {
       });
     });
 
+    describe('duration input with calendar units', () => {
+      it.each(['P1W', 'P1M', 'P1Y'])(
+        'falls back to 0 seconds for %p',
+        duration => {
+          expect(sanitiseDuration(duration).total({ unit: 'seconds' })).toEqual(
+            0,
+          );
+        },
+      );
+    });
+
     describe('invalid duration input', () => {
       it.each(['garbage', ''])(
         'falls back to 0 seconds for invalid duration %p',
