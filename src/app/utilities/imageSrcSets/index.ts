@@ -108,8 +108,15 @@ const defaultSizesBuilder = ({
 }: {
   widths: number[];
   mq: Theme['mq'];
-}) =>
-  `${mq.GROUP_2_MAX_WIDTH.replace('@media ', '')} ${widths[0]}px, ${widths[2]}px`;
+}) => {
+  if (widths.length < 3) {
+    throw new Error(
+      'createResponsiveSrcSet requires at least three widths when using the default sizes builder.',
+    );
+  }
+
+  return `${mq.GROUP_2_MAX_WIDTH.replace('@media ', '')} ${widths[0]}px, ${widths[2]}px`;
+};
 
 export const createResponsiveSrcSet = ({
   imageUrlTemplate,

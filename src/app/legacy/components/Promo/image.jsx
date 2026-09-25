@@ -8,6 +8,9 @@ import IMAGE from '#app/components/Image';
 import BlurredBackground from '#app/components/Image/BlurredBackground';
 import { createResponsiveSrcSet } from '#app/utilities/imageSrcSets';
 
+const IMAGE_RESOLUTIONS = [85, 120, 170, 232, 325, 450, 660, 800];
+const PROGRAMME_IMAGE_RESOLUTIONS = [96, 128, 176, 240, 352, 464, 672, 800];
+
 const Wrapper = styled.div`
   margin-bottom: ${GEL_SPACING};
   position: relative;
@@ -68,8 +71,8 @@ const Image = props => {
   );
   const suffix = src.endsWith('.webp') ? '' : '.webp';
   const resolutions = isProgrammeImage
-    ? [96, 128, 176, 240, 352, 464, 672, 800]
-    : [85, 120, 170, 232, 325, 450, 660, 800];
+    ? PROGRAMME_IMAGE_RESOLUTIONS
+    : IMAGE_RESOLUTIONS;
   const sizes = buildSizes(useLargeImages, isProgrammeImage);
   const primarySrcSet = createResponsiveSrcSet({
     imageUrlTemplate: `${src}${suffix}`,
