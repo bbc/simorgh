@@ -1,5 +1,4 @@
 /* eslint-disable react/no-unknown-property */
-import { useState } from 'react';
 import { useGLTF } from '@react-three/drei';
 import { ThreeEvent } from '@react-three/fiber';
 import { Mesh } from 'three';
@@ -46,20 +45,24 @@ type Vector3 = [number, number, number];
 type GlobeProps = {
   position?: Vector3;
   regions: Region[];
+  selectedRegionId: string | null;
+  onSelectedRegion: (regionId: string) => void;
 };
 
-export function Globe({ position, regions }: GlobeProps) {
+export function Globe({
+  position,
+  regions,
+  selectedRegionId,
+  onSelectedRegion,
+}: GlobeProps) {
   const { nodes: subMesh } = useGLTF(MODEL_PATH);
   const subMeshKeys = Object.keys(subMesh).filter(
     key => 'geometry' in subMesh[key],
   );
 
-  const [selectedSubMesh, setSelectedSubMesh] = useState<number | null>(null);
-
   const handleClick = (index: number) => (event: ThreeEvent<MouseEvent>) => {
     event.stopPropagation();
-    setSelectedSubMesh(index);
-    console.log('your region is', regions[index].name);
+    onSelectedRegion(regions[index].id);
   };
 
   // Sub-meshes are ordered region caps first, then the globe body sphere last.
@@ -70,6 +73,8 @@ export function Globe({ position, regions }: GlobeProps) {
     <group position={position}>
       {regionKeys.map((key, i) => {
         const node = subMesh[key] as Mesh;
+        const isSelected = regions[i].id === selectedRegionId;
+
         return (
           <mesh
             key={key}
@@ -78,7 +83,7 @@ export function Globe({ position, regions }: GlobeProps) {
             onClick={handleClick(i)}
           >
             <meshBasicMaterial
-              color={selectedSubMesh === i ? SELECTED_COLOR : MESH_COLORS[i]}
+              color={isSelected ? SELECTED_COLOR : MESH_COLORS[i]}
             />
           </mesh>
         );

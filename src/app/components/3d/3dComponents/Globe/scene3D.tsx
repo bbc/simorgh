@@ -7,7 +7,12 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import usePrefersReducedMotion from '#app/hooks/usePrefersReducedMotion';
 import styles from './index.module.scss';
 
-const Scene3D = () => {
+type Scene3DProps = {
+  selectedRegionId: string | null;
+  onSelectedRegion: (regionId: string) => void;
+};
+
+const Scene3D = ({ selectedRegionId, onSelectedRegion }: Scene3DProps) => {
   const { collapsibleNavigation } = use(ServiceContext);
   const regions = getRegions(collapsibleNavigation);
 
@@ -27,7 +32,12 @@ const Scene3D = () => {
           autoRotateSpeed={1}
           enablePan={false}
         />
-        <Globe position={[0, 0, 0]} regions={regions} />
+        <Globe
+          position={[0, 0, 0]}
+          regions={regions}
+          selectedRegionId={selectedRegionId}
+          onSelectedRegion={onSelectedRegion}
+        />
       </Canvas>
     </div>
   );
