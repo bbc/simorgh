@@ -17,18 +17,25 @@ export default {
         outline: 'none',
       },
     }),
-  fieldset: ({ spacings, mq }: Theme) =>
+  fieldset: ({ spacings, palette, mq }: Theme) =>
     css({
       border: 0,
       margin: 0,
       padding: 0,
       width: '100%',
       marginTop: `${spacings.DOUBLE}rem`,
+      paddingBottom: `${spacings.DOUBLE}rem`,
+      borderBottom: `${pixelsToRem(1)}rem solid ${palette.GREY_5}`,
       '&:first-of-type': {
         marginTop: 0,
       },
+      '&:last-of-type': {
+        paddingBottom: 0,
+        borderBottom: 'none',
+      },
       [mq.GROUP_2_MIN_WIDTH]: {
         marginTop: `${spacings.TRIPLE}rem`,
+        paddingBottom: `${spacings.TRIPLE}rem`,
         '&:first-of-type': {
           marginTop: 0,
         },
