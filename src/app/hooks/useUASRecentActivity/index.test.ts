@@ -6,6 +6,7 @@ import getRecentActivity, {
 import type { SavedArticle } from '#app/lib/uasApi/uasUtility';
 import uasKeys from '#app/lib/uasApi/queryKeys';
 import { AccountContext } from '#app/contexts/AccountContext';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import useUASRecentActivity from '.';
 
 jest.mock('#app/lib/uasApi/getRecentActivity');
@@ -185,6 +186,26 @@ describe('useUASRecentActivity', () => {
     renderHook(() => useUASRecentActivity({ startIndex: 10 }));
 
     expect(mockQueryKey).toEqual(uasKeys.favouritesPage('user-123', 10));
+  });
+
+  it('should include the current service in the query key and pass it to getRecentActivity', async () => {
+    (use as jest.Mock).mockImplementation((context: unknown) => {
+      if (context === AccountContext) return { hashedUserId: 'user-123' };
+      if (context === ServiceContext) return { service: 'mundo' };
+      return {};
+    });
+
+    renderHook(() => useUASRecentActivity({ startIndex: 10 }));
+
+    expect(mockQueryKey).toEqual(
+      uasKeys.favouritesPage('user-123', 10, 'mundo'),
+    );
+
+    await mockQueryFn({ signal: new AbortController().signal });
+
+    expect(mockGetRecentActivity).toHaveBeenCalledWith(
+      expect.objectContaining({ service: 'mundo' }),
+    );
   });
 
   it('should pass AbortSignal to getRecentActivity', async () => {

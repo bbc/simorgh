@@ -57,12 +57,7 @@ const DisclaimerComponent = ({
               const linkText: string = (para as Disclaimer).text;
               const linkUrl: string = (para as Disclaimer).url;
               return linkUrl ? (
-                <InlineLink
-                  className="focusIndicatorReducedWidth"
-                  key={linkText}
-                  text={linkText}
-                  to={linkUrl}
-                />
+                <InlineLink key={linkText} text={linkText} to={linkUrl} />
               ) : (
                 (para as string)
               );
