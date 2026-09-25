@@ -401,7 +401,7 @@ describe('EpisodeDescriptionFormatter', () => {
       );
 
       const link = screen.getByRole('link', {
-        name: /www.example.com/,
+        name: /www\.example\.com/,
       });
       fireEvent.click(link);
 
