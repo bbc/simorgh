@@ -153,9 +153,9 @@ describe('InlineLink', () => {
 
     const inlineLink = screen.getByText('Hello World!');
 
-    expect(
-      inlineLink.style.getPropertyValue('--gel-typography-font-size-group-a'),
-    ).toBe(expected);
+    expect(inlineLink.style.getPropertyValue('--gel-font-size-group-a')).toBe(
+      expected,
+    );
   });
 
   it('should pass font variant custom properties to the rendered link', () => {
@@ -169,14 +169,8 @@ describe('InlineLink', () => {
 
     const inlineLink = screen.getByText('Hello World!');
 
-    expect(
-      inlineLink.style.getPropertyValue('--gel-typography-font-family'),
-    ).toBeTruthy();
-    expect(
-      inlineLink.style.getPropertyValue('--gel-typography-font-style'),
-    ).toBeTruthy();
-    expect(
-      inlineLink.style.getPropertyValue('--gel-typography-font-weight'),
-    ).toBeTruthy();
+    expect(inlineLink.style.getPropertyValue('--gel-font-family')).toBeTruthy();
+    expect(inlineLink.style.getPropertyValue('--gel-font-style')).toBeTruthy();
+    expect(inlineLink.style.getPropertyValue('--gel-font-weight')).toBeTruthy();
   });
 });

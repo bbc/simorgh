@@ -3,7 +3,7 @@ import type { CSSProperties } from 'react';
 import type { FontVariant, GelFontSize } from '#app/models/types/theming';
 
 export type TypographyCustomPropertyStyles = CSSProperties & {
-  [property: `--gel-typography-${string}`]: string;
+  [property: `--gel-${string}`]: string;
 };
 
 const toKebabCase = (value: string) =>
@@ -20,27 +20,27 @@ export const getTypographyCustomProperties = ({
 
   if (size) {
     const scale = toKebabCase(size);
-    styles['--gel-typography-font-size-group-a'] =
+    styles['--gel-font-size-group-a'] =
       `var(--font-size-${scale}-group-a, inherit)`;
-    styles['--gel-typography-line-height-group-a'] =
+    styles['--gel-line-height-group-a'] =
       `var(--line-height-${scale}-group-a, inherit)`;
-    styles['--gel-typography-font-size-group-b'] =
+    styles['--gel-font-size-group-b'] =
       `var(--font-size-${scale}-group-b, inherit)`;
-    styles['--gel-typography-line-height-group-b'] =
+    styles['--gel-line-height-group-b'] =
       `var(--line-height-${scale}-group-b, inherit)`;
-    styles['--gel-typography-font-size-group-d'] =
+    styles['--gel-font-size-group-d'] =
       `var(--font-size-${scale}-group-d, inherit)`;
-    styles['--gel-typography-line-height-group-d'] =
+    styles['--gel-line-height-group-d'] =
       `var(--line-height-${scale}-group-d, inherit)`;
   }
 
   if (fontVariant) {
     const variant = toKebabCase(fontVariant);
-    styles['--gel-typography-font-family'] =
+    styles['--gel-font-family'] =
       `var(--gel-font-variant-${variant}-font-family, inherit)`;
-    styles['--gel-typography-font-style'] =
+    styles['--gel-font-style'] =
       `var(--gel-font-variant-${variant}-font-style, inherit)`;
-    styles['--gel-typography-font-weight'] =
+    styles['--gel-font-weight'] =
       `var(--gel-font-variant-${variant}-font-weight, inherit)`;
   }
 
