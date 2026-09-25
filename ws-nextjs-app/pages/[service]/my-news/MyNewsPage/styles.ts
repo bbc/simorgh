@@ -37,6 +37,17 @@ const styles = {
       },
     }),
 
+  section: ({ spacings, mq }: Theme) =>
+    css({
+      marginTop: `${spacings.QUADRUPLE}rem`,
+      '&:first-of-type': {
+        marginTop: 0,
+      },
+      [mq.GROUP_3_MIN_WIDTH]: {
+        marginTop: `${spacings.SEXTUPLE}rem`,
+      },
+    }),
+
   spinnerWrapper: css({
     display: 'flex',
     justifyContent: 'center',
