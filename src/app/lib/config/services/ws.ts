@@ -87,6 +87,42 @@ export const service: DefaultServiceConfig = {
         closeLabel: 'Close',
         buttonSeparatorText: 'or',
       },
+      accountSignInModal: {
+        title: 'Sign in to save to My News',
+        description: 'Save stories and read them at your convenience',
+        closeLabel: 'Close',
+      },
+      saveArticleButton: {
+        loading: 'Loading',
+        save: 'Save for later',
+        saving: 'Saving',
+        saved: 'Saved to My News',
+        remove: 'Remove',
+        removeAccessible: 'Saved. Remove from My News',
+        removing: 'Removing',
+      },
+      followTopicButton: {
+        loading: 'Loading...',
+        follow: 'Follow',
+        following: 'Following...',
+        followed: 'Followed',
+        unfollow: 'Unfollow',
+        unfollowAccessible: 'Followed. Unfollow',
+        unfollowing: 'Unfollowing...',
+      },
+      myNews: {
+        title: 'My News',
+        guestTitle: 'Welcome to My News',
+        description: 'My saved articles',
+        guestDescription:
+          'Sign in to save stories to My News, and read them at your convenience.',
+        noArticles: "You haven't saved any articles yet",
+        errorText:
+          'It looks like this content is not loading. Please try again later.',
+        loading: 'Loading',
+        noJsDescription:
+          'Please enable JavaScript or use a different browser to view this content.',
+      },
       actionTooltip: {
         success: {
           title: 'This article is now saved',

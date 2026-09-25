@@ -144,7 +144,7 @@ describe('SaveArticleButton', () => {
         render(<SaveArticleButton {...defaultProps} />, signedInRenderOptions),
       );
       expect(screen.getByRole('button')).toHaveTextContent(
-        'बाद में पढ़ने के लिए सहेजें',
+        'बाद में पढ़ने के लिए सेव करें',
       );
     });
 
@@ -155,7 +155,7 @@ describe('SaveArticleButton', () => {
         render(<SaveArticleButton {...defaultProps} />, signedInRenderOptions),
       );
       expect(screen.getByRole('button')).toHaveTextContent(
-        'मेरी ख़बरों में सहेजा गया',
+        'माई न्यूज़ में सेव किया गया है',
       );
     });
 
@@ -170,7 +170,7 @@ describe('SaveArticleButton', () => {
       );
       const button = screen.getByRole('button');
 
-      expect(button).toHaveTextContent('लोड हो रहा है');
+      expect(button).toHaveTextContent('पेज खुल रहा है');
       expect(button).toBeEnabled();
     });
 
@@ -188,7 +188,7 @@ describe('SaveArticleButton', () => {
       );
       const button = screen.getByRole('button');
 
-      expect(button).toHaveTextContent('सहेजा जा रहा है');
+      expect(button).toHaveTextContent('सेव हो रहा है');
       expect(button).toBeEnabled();
     });
 
@@ -287,7 +287,7 @@ describe('SaveArticleButton', () => {
       );
 
       expect(screen.getByTestId('action-tooltip')).toHaveTextContent(
-        'बंद करेंये आर्टिकिल अब हटा ली गई हैये माय न्यूज़ सेक्शन से हटा ली गई है',
+        'बंद करेंये आर्टिकल अब हटा लिया गया हैये माई न्यूज़ सेक्शन से हटा ली गई है',
       );
     });
 
