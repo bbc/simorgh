@@ -1,0 +1,19 @@
+@use './fontMediaQueries.scss' as fontMediaQueries;
+
+@mixin gel-font-styles {
+  font-family: var(--gel-typography-font-family, inherit);
+  font-style: var(--gel-typography-font-style, inherit);
+  font-weight: var(--gel-typography-font-weight, inherit);
+  font-size: var(--gel-typography-font-size-group-a, inherit);
+  line-height: var(--gel-typography-line-height-group-a, inherit);
+
+  @media #{fontMediaQueries.$group-b-only} {
+    font-size: var(--gel-typography-font-size-group-b, inherit);
+    line-height: var(--gel-typography-line-height-group-b, inherit);
+  }
+
+  @media #{fontMediaQueries.$group-d-min-width} {
+    font-size: var(--gel-typography-font-size-group-d, inherit);
+    line-height: var(--gel-typography-line-height-group-d, inherit);
+  }
+}

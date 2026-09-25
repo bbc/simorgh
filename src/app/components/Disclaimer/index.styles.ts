@@ -17,6 +17,18 @@ export default {
       [mq.GROUP_4_MIN_WIDTH]: {
         marginBottom: `${spacings.QUADRUPLE}rem`,
       },
+      '& a:not(:visited):not(:hover):not(:focus)': {
+        color: palette.GREY_10,
+        borderBottom: `${pixelsToRem(1)}rem solid ${palette.GREY_10}`,
+      },
+      '& a:visited': {
+        color: palette.GREY_6,
+        borderBottom: `${pixelsToRem(1)}rem solid ${palette.GREY_6}`,
+      },
+      '& a:focus, & a:hover': {
+        borderBottom: `${pixelsToRem(2)}rem solid ${palette.POSTBOX}`,
+        color: palette.POSTBOX,
+      },
     }),
 
   increaseTopMargin: ({ spacings, mq }: Theme) =>
@@ -31,20 +43,6 @@ export default {
     css({
       [mq.GROUP_4_MIN_WIDTH]: {
         padding: `${spacings.DOUBLE}rem ${spacings.QUINTUPLE}rem`,
-      },
-    }),
-
-  inlineLink: ({ palette }: Theme) =>
-    css({
-      color: palette.GREY_10,
-      borderBottom: `${pixelsToRem(1)}rem solid ${palette.GREY_10}`,
-      '&:visited': {
-        color: palette.GREY_6,
-        borderBottom: `${pixelsToRem(1)}rem solid ${palette.GREY_6}`,
-      },
-      '&:focus, &:hover': {
-        borderBottom: `${pixelsToRem(2)}rem solid ${palette.POSTBOX}`,
-        color: palette.POSTBOX,
       },
     }),
 };
