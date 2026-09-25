@@ -1,8 +1,7 @@
 @use '@scss/themeTokens' as theme;
 
 .link {
-  @include theme.fontSizes-gel-font-size(pica);
-  @include theme.fontVariants-gel-font-variant('serif-bold');
+  @include theme.typography-from-scale-and-variant(pica, 'serif-bold');
   display: inline-block;
   vertical-align: middle;
   text-decoration: none;
