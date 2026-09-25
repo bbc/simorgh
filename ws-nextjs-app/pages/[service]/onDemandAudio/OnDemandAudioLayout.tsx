@@ -183,7 +183,7 @@ const OnDemandAudioPage = ({
                 <EpisodeDescriptionFormatter
                   text={displayText}
                   data-testid="synopsis"
-                  playerId={PLAYER_ID}
+                  playerId={mediaIsAvailable && !isLite ? PLAYER_ID : undefined}
                   eventTrackingData={{
                     componentName: 'podcast-chapter-timestamp',
                   }}
