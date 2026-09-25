@@ -38,6 +38,9 @@ export default {
   include: {
     enabled: true,
   },
+  livePagePolling: {
+    enabled: true,
+  },
   liveRadioSchedule: {
     enabled: true,
   },
@@ -88,6 +91,10 @@ export default {
   },
   topBarOJs: {
     enabled: true,
+  },
+  topicUasPersonalization: {
+    enabled: true,
+    value: 'hindi|mundo|portuguese',
   },
   variantCookie: {
     enabled: true,

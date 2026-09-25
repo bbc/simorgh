@@ -18,7 +18,7 @@ import {
 import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 
-import ImageWithPlaceholder from '#containers/ImageWithPlaceholder';
+import Image from '#app/components/Image';
 import SkipLinkWrapper from '#components/SkipLinkWrapper';
 import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
@@ -63,8 +63,10 @@ const StyledPromoComponent = styled(PromoComponent)`
 const StyledImageWrapper = styled(PromoComponent.Card.ImageWrapper)`
   display: block;
   width: 100%;
+  height: 0;
   margin: 0;
   padding: 0;
+  padding-bottom: 100%;
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
     display: none;
   }
@@ -186,7 +188,7 @@ const getIconFromUrl = url => {
 
 const Promo = () => {
   const { podcastPromo, dir } = use(ServiceContext);
-  const { pageType, isLite } = use(RequestContext);
+  const { pageType, isAmp, isLite } = use(RequestContext);
   const {
     podcastPromoTitle,
     podcastBrandTitle,
@@ -239,15 +241,15 @@ const Promo = () => {
         >
           <PromoComponent.Card inlinePromo isOptimo={pageType === ARTICLE_PAGE}>
             <StyledImageWrapper>
-              <ImageWithPlaceholder
+              <Image
                 src={imgSrc}
-                srcset={srcset}
-                primaryMimeType={primaryMimeType}
-                sizes={sizes}
+                srcSet={srcset}
+                mediaType={primaryMimeType}
+                sizes={isAmp ? undefined : sizes}
                 alt={alt}
                 height={100}
                 width={100}
-                ratio={100}
+                aspectRatio={[1, 1]}
                 lazyLoad
               />
             </StyledImageWrapper>
