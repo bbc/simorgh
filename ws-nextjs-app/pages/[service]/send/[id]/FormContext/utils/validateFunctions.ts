@@ -63,8 +63,9 @@ const isValidCheck: (data: FieldData) => FieldData = (data: FieldData) => {
   const { required, value = false, wasInvalid } = data;
   let messageCode: InvalidMessageCodes | null = null;
 
+  const hasValue = Array.isArray(value) ? value.length > 0 : Boolean(value);
   let isValid = true;
-  if (required && !(value as boolean)) {
+  if (required && !hasValue) {
     messageCode = InvalidMessageCodes.FieldRequired;
     isValid = false;
   }
@@ -181,6 +182,7 @@ const validateFunctions: Record<string, (_data: FieldData) => FieldData> = {
   text: isValidText,
   email: isValidEmail,
   checkbox: isValidCheck,
+  radiobutton: isValidText,
   phone: isValidTel,
   textarea: isValidText,
   file: isValidFiles,

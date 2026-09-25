@@ -42,8 +42,7 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
     ? buildImageBackground(pageBackgroundTemplateUrl)
     : fallbackBackground;
 
-  const { fields } = sections?.[0] ?? {};
-  const sectionTitle = sections?.[0].sectionText?.title ?? '';
+  const fields = sections?.flatMap(section => section.fields ?? []) ?? [];
 
   const metadataTitle =
     campaignStatus === 'open' ? title : `${closedHeading}: ${title}`;
@@ -86,9 +85,8 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
                             <FormScreen
                               title={title}
                               description={description}
-                              sectionTitle={sectionTitle}
                               privacyNotice={privacyNotice?.default}
-                              fields={fields}
+                              sections={sections}
                             />
                           );
                         case 'uploading':
