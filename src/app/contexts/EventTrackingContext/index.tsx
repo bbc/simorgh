@@ -93,7 +93,7 @@ export const EventTrackingContextProvider = ({
     atiAnalyticsProducerName,
   } = serviceContext;
 
-  const { isSignedIn, hashedUserId } = use(AccountContext);
+  const { isSignedIn, hashedUserId, isPersonalisationOn } = use(AccountContext);
   const { enabled: eventTrackingIsEnabled } = useToggle('eventTracking');
 
   const trackingProps = useMemo(() => {
@@ -111,6 +111,7 @@ export const EventTrackingContextProvider = ({
         statsDestination,
         isSignedIn,
         hashedId: hashedUserId || null,
+        isPersonalisationOn,
       };
     }
     return null;
@@ -125,6 +126,7 @@ export const EventTrackingContextProvider = ({
     statsDestination,
     isSignedIn,
     hashedUserId,
+    isPersonalisationOn,
   ]);
 
   if (!eventTrackingIsEnabled || !atiData) {
@@ -159,6 +161,7 @@ export const EventTrackingContextProvider = ({
     statsDestination: trackingProps?.statsDestination,
     isSignedIn: trackingProps?.isSignedIn,
     hashedId: trackingProps?.hashedId,
+    isPersonalisationOn: trackingProps?.isPersonalisationOn,
   };
   setActivationTrackingData(activationTrackingData);
 

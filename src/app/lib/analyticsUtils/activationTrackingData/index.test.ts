@@ -21,6 +21,7 @@ describe('activationTrackingData', () => {
       statsDestination: 'stats-destination',
       isSignedIn: true,
       hashedId: 'hashed-id',
+      isPersonalisationOn: true,
     });
 
     expect(getActivationTrackingData()).toEqual({
@@ -30,6 +31,7 @@ describe('activationTrackingData', () => {
       statsDestination: 'stats-destination',
       isSignedIn: true,
       hashedId: 'hashed-id',
+      isPersonalisationOn: true,
     });
   });
 

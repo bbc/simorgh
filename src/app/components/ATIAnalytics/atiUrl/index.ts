@@ -105,6 +105,7 @@ export const buildReverbAnalyticsModel = ({
   experimentVariant,
   isSignedIn = false,
   hashedId = null,
+  isPersonalisationOn = false,
 }: ATIPageTrackingProps): ReverbBeaconConfig => {
   const href = getHref(platform);
   const referrer = getReferrer(platform);
@@ -153,6 +154,7 @@ export const buildReverbAnalyticsModel = ({
       user: {
         isSignedIn,
         hashedId,
+        isPersonalisationOn,
       },
     },
     eventDetails,
@@ -177,6 +179,7 @@ export const buildReverbEventModel = ({
   eventGroupingName,
   isSignedIn = false,
   hashedId = null,
+  isPersonalisationOn = false,
 }: ATIEventTrackingProps): ReverbBeaconConfig => {
   const {
     type: itemType,
@@ -209,6 +212,7 @@ export const buildReverbEventModel = ({
       user: {
         isSignedIn,
         hashedId,
+        isPersonalisationOn,
       },
     },
     eventDetails: {
@@ -260,6 +264,7 @@ type ActivationEventProps = {
   experimentVariant: string;
   isSignedIn?: boolean;
   hashedId?: string | null;
+  isPersonalisationOn?: boolean;
 };
 
 /**
@@ -278,6 +283,7 @@ export const buildActivationEventModel = ({
   experimentVariant,
   isSignedIn = false,
   hashedId = null,
+  isPersonalisationOn = false,
 }: ActivationEventProps): ReverbBeaconConfig => ({
   params: {
     page: {
@@ -293,6 +299,7 @@ export const buildActivationEventModel = ({
     user: {
       isSignedIn,
       hashedId,
+      isPersonalisationOn,
     },
   },
   eventDetails: {
@@ -327,6 +334,7 @@ type ErrorEventProps = {
   statusCode?: number;
   isSignedIn?: boolean;
   hashedId?: string | null;
+  isPersonalisationOn?: boolean;
 };
 
 /**
@@ -346,6 +354,7 @@ export const buildErrorEventModel = ({
   statusCode,
   isSignedIn = false,
   hashedId = null,
+  isPersonalisationOn = false,
 }: ErrorEventProps): ReverbBeaconConfig => ({
   params: {
     page: {
@@ -359,6 +368,7 @@ export const buildErrorEventModel = ({
     user: {
       isSignedIn,
       hashedId,
+      isPersonalisationOn,
     },
   },
   eventDetails: {
