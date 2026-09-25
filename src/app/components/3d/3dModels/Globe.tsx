@@ -65,7 +65,7 @@ export function Globe({
     onSelectedRegion(regions[index].id);
   };
 
-  // Sub-meshes are ordered region caps first, then the globe body sphere last.
+  // Sub meshes 1-6 map to WS regions; sub mesh 7 is a sphere, to complete the look of a globe.
   const regionKeys = subMeshKeys.slice(0, regions.length);
   const bodyKey = subMeshKeys[regions.length];
 
