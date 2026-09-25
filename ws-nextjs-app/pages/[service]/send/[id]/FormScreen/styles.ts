@@ -17,12 +17,22 @@ export default {
         outline: 'none',
       },
     }),
-  fieldset: () =>
+  fieldset: ({ spacings, mq }: Theme) =>
     css({
       border: 0,
       margin: 0,
       padding: 0,
       width: '100%',
+      marginTop: `${spacings.DOUBLE}rem`,
+      '&:first-of-type': {
+        marginTop: 0,
+      },
+      [mq.GROUP_2_MIN_WIDTH]: {
+        marginTop: `${spacings.TRIPLE}rem`,
+        '&:first-of-type': {
+          marginTop: 0,
+        },
+      },
     }),
   legend: () =>
     css({
