@@ -7,6 +7,7 @@ import useOptimizelyVariation, {
 } from '#app/hooks/useOptimizelyVariation';
 import {
   HOMEPAGE_RELATED_TOPIC_EXPERIMENT,
+  HOMEPAGE_RELATED_TOPIC_SERVICES,
   isHomepageRelatedTopicVariation,
 } from '#app/lib/experiments/homepageRelatedTopicPromos';
 import useScrollDepthTracker, {
@@ -65,7 +66,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
     experimentType: ExperimentType.SERVER_SIDE,
   });
   const relatedTopicExperimentProps =
-    service === 'afrique' &&
+    HOMEPAGE_RELATED_TOPIC_SERVICES.includes(service) &&
     isHomepageRelatedTopicVariation(relatedTopicVariant)
       ? {
           experimentName: HOMEPAGE_RELATED_TOPIC_EXPERIMENT,
