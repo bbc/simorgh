@@ -26,15 +26,7 @@ const LOCALE_NUMBERING_SYSTEM_OVERRIDES: Record<
   string,
   LocaleNumberingSystemOverride
 > = {
-  ar: {
-    locale: 'ar-u-nu-latn',
-    numberingSystem: 'latn',
-  },
-  gu: { locale: 'gu-u-nu-latn', numberingSystem: 'latn' },
-  hi: { locale: 'hi-u-nu-latn', numberingSystem: 'latn' },
   mr: { locale: 'mr-u-nu-latn', numberingSystem: 'latn' },
-  'pa-IN': { locale: 'pa-IN-u-nu-latn', numberingSystem: 'latn' },
-  ta: { locale: 'ta-u-nu-latn', numberingSystem: 'latn' },
   ps: {
     locale: 'ps-u-nu-arabext',
     numberingSystem: 'arabext',
