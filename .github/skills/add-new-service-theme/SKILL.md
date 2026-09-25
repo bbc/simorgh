@@ -29,6 +29,11 @@ The theme is made available to be dynamically imported in src/app/components/The
    - `./palette.scss`
    - `withThemeProvider` from `#app/components/ThemeProviderSCSSModules/withThemeProvider`
    - `brandSVG` from `../../chameleonLogos/<service>` (see step 5)
+   If creating a new font variant SCSS file under
+   `ThemeProviderSCSSModules/fontVariants/`, load
+   `./fontVariantAliases.scss` from that file so the shared
+   `--gel-font-variant-*` fallback aliases are available to the variant
+   mixins.
 5. **Create the chameleon logo** at `src/app/components/ThemeProviderSCSSModules/chameleonLogos/<service>.tsx` — this step is easy to miss and must not be skipped
 6. **Register the theme in `loadableConfig.ts`** at `src/app/components/ThemeProviderSCSSModules/themes/loadableConfig.ts`, adding a new entry following the same pattern as `mundo` — this step is easy to miss and must not be skipped
 7. Present this for feedback and iterate.
@@ -37,5 +42,6 @@ The theme is made available to be dynamically imported in src/app/components/The
 Before considering a new service theme complete, verify all of the following:
 - [ ] `themes/<service>/palette.scss` created with correct CSS custom properties
 - [ ] `themes/<service>/<service>.ts` created, importing font faces, variants, script, palette, and brandSVG
+- [ ] Any new font variant file loads `fontVariantAliases.scss`
 - [ ] `chameleonLogos/<service>.tsx` created
 - [ ] `themes/loadableConfig.ts` updated to include the new service
