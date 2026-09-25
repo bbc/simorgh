@@ -69,7 +69,6 @@ export default ({
                     handleChange(event.target.name, event.target.value)
                   }
                   onBlur={event => handleFocusOut(event.target.name)}
-                  required={required}
                 />
                 <Text
                   as="label"
