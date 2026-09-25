@@ -97,6 +97,8 @@ const AD_DOMAINS = [
   'casalemedia.com',
   'cdn-cf.justpremium.com',
   'cdn.adhigh.net',
+  // TODO: TEMP - used for testing
+  'cdn.jsdelivr.net',
   'cdn.stickyadstv.com',
   'cdn.thoughtleadr.com',
   'colossusssp.com',
