@@ -163,7 +163,7 @@ const getTimestampComponent =
     ) : null;
 
 const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
-  const { pageType, isAmp, isLite } = use(RequestContext);
+  const { pageType, isAmp, isLite, isApp } = use(RequestContext);
 
   const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
     use(ServiceContext);
@@ -224,7 +224,8 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const promoImage = promoImageRawBlock?.model?.locator;
 
-  const showTopicDiscovery = topicDiscoveryEnabled && !isAmp && !isLite;
+  const showTopicDiscovery =
+    topicDiscoveryEnabled && !isAmp && !isLite && !isApp;
   const showTopics = Boolean(
     showRelatedTopics && topics.length > 0 && !showTopicDiscovery,
   );
