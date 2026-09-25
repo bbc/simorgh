@@ -14,7 +14,14 @@ export type AtiLiveRadioPageTestSuite = {
   siteId: number;
   applicationType: string;
   contentType: string;
+  tests: LiveRadioAtiTest[];
 };
+
+export type LiveRadioAtiTest =
+  | 'assertPageView'
+  | 'assertResonancePageView'
+  | 'assertRadioScheduleComponentView'
+  | 'assertRadioScheduleComponentClick';
 
 const canonicalTestSuites: LiveRadioPageTestSuite[] = [
   {
@@ -103,6 +110,21 @@ const atiTestSuites: AtiLiveRadioPageTestSuite[] = [
     siteId: 51,
     applicationType: 'responsive',
     contentType: 'player-live',
+    tests: [
+      'assertPageView',
+      'assertRadioScheduleComponentView',
+      'assertRadioScheduleComponentClick',
+    ],
+  },
+  {
+    path: '/korean/bbc_korean_radio/liveradio',
+    runForEnv: ['local', 'live'],
+    service: 'korean',
+    pageIdentifier: 'korean.bbc_korean_radio.liveradio.page',
+    siteId: 57,
+    applicationType: 'responsive',
+    contentType: 'player-live',
+    tests: ['assertResonancePageView'],
   },
 ];
 
