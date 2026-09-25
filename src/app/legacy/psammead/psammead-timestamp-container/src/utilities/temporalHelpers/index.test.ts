@@ -145,19 +145,29 @@ describe('Temporal Helper functions', () => {
       expect(translateDigits(5, 2, 'ps')).toEqual('۰۵');
     });
 
-    it('suppresses Eastern numeral conversion for the `ar` locale', () => {
-      const numberFormatSpy = jest.spyOn(Intl, 'NumberFormat');
+    it.each([
+      ['ar', 'ar-u-nu-latn'],
+      ['gu', 'gu-u-nu-latn'],
+      ['hi', 'hi-u-nu-latn'],
+      ['mr', 'mr-u-nu-latn'],
+      ['pa-IN', 'pa-IN-u-nu-latn'],
+      ['ta', 'ta-u-nu-latn'],
+    ])(
+      'forces Latin numerals for the `%s` locale',
+      (locale, expectedLocale) => {
+        const numberFormatSpy = jest.spyOn(Intl, 'NumberFormat');
 
-      translateDigits(5, 2, 'ar');
+        translateDigits(5, 2, locale);
 
-      expect(numberFormatSpy).toHaveBeenCalledWith(
-        'ar-u-nu-latn',
-        expect.objectContaining({
-          minimumIntegerDigits: 2,
-          useGrouping: false,
-        }),
-      );
-    });
+        expect(numberFormatSpy).toHaveBeenCalledWith(
+          expectedLocale,
+          expect.objectContaining({
+            minimumIntegerDigits: 2,
+            useGrouping: false,
+          }),
+        );
+      },
+    );
 
     it('leaves locales without an explicit override unchanged', () => {
       const numberFormatSpy = jest.spyOn(Intl, 'NumberFormat');

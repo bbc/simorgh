@@ -30,6 +30,11 @@ const LOCALE_NUMBERING_SYSTEM_OVERRIDES: Record<
     locale: 'ar-u-nu-latn',
     numberingSystem: 'latn',
   },
+  gu: { locale: 'gu-u-nu-latn', numberingSystem: 'latn' },
+  hi: { locale: 'hi-u-nu-latn', numberingSystem: 'latn' },
+  mr: { locale: 'mr-u-nu-latn', numberingSystem: 'latn' },
+  'pa-IN': { locale: 'pa-IN-u-nu-latn', numberingSystem: 'latn' },
+  ta: { locale: 'ta-u-nu-latn', numberingSystem: 'latn' },
   ps: {
     locale: 'ps-u-nu-arabext',
     numberingSystem: 'arabext',
@@ -70,24 +75,24 @@ export const translateDigits = (
   sanitisedLocale: Locale,
 ) => {
   const localeOverride = LOCALE_NUMBERING_SYSTEM_OVERRIDES[sanitisedLocale];
-  const numberFormatter = new Intl.NumberFormat(
+  const formatter = new Intl.NumberFormat(
     localeOverride?.locale ?? sanitisedLocale,
     {
       minimumIntegerDigits: minDigits,
       useGrouping: false,
     },
   );
-  const returnedValue = numberFormatter.format(value);
+  const formattedDigits = formatter.format(value);
 
-  if (
-    localeOverride?.fallback &&
-    numberFormatter.resolvedOptions().numberingSystem !==
-      localeOverride.numberingSystem
-  ) {
-    return localeOverride.fallback(returnedValue);
-  }
+  if (!localeOverride?.fallback) return formattedDigits;
 
-  return returnedValue;
+  const matchesExpectedSystem =
+    formatter.resolvedOptions().numberingSystem ===
+    localeOverride.numberingSystem;
+
+  return matchesExpectedSystem
+    ? formattedDigits
+    : localeOverride.fallback(formattedDigits);
 };
 
 export const applyFormat = ({
