@@ -1,4 +1,4 @@
-import { getInlineLinkStyles } from '#app/components/InlineLink/index.styles';
+import { getInlineLinkStyles } from '../styles';
 import { css, Theme } from '@emotion/react';
 
 export default {

@@ -148,6 +148,22 @@ title: (isLarge?: boolean) =>
 
 This is distinct from the anti-pattern in the styling standards. A **discrete variant prop** (a boolean or a small union) can legitimately select or add a class. What to avoid is deriving a class from a **continuous or computed value** (`height > 100 ? styles.tall : styles.short`) or from `dir` — use the custom property or logical-property approaches below instead.
 
+### Consumer-owned style overrides
+
+If a child component has a consumer-specific style override, use the DOM context the consumer already owns rather than relying on class order:
+
+```scss
+.errorLinkWrapper {
+  .inlineLink:not(:visited):not(:hover):not(:focus) {
+    color: theme.$palette-black;
+    border-bottom: #{theme.pixelsToRem-px-to-rem(1)} solid
+      theme.$palette-black;
+  }
+}
+```
+
+CSS Modules scope class names but do not give a React parent automatic precedence. The order of class names in HTML does not control the cascade. Prefer an ancestor selector or an element-qualified selector when the component owns the element type (for example `p.copyright`). Do not add a wrapper solely to manufacture specificity. Exclude pseudo-states that remain owned by the child component. Use duplicated selectors only as a documented last resort when no meaningful DOM context exists.
+
 ### Combining Class Names
 
 Emotion's `css` array silently ignores falsy entries. `className` is a plain string and does not, so translating the array directly introduces a bug.
@@ -204,6 +220,61 @@ Where a value is truly dynamic (a computed height, an image offset):
   height: var(--promo-height);
 }
 ```
+
+### Props with many possible values
+
+When a prop has many possible values, avoid creating a separate class and CSS
+rule for every value unless the list is small. The browser downloads all of
+those rules, even though each instance uses only one value.
+
+For a small list, keep the value in a `data-*` attribute and select the matching
+rule in SCSS:
+
+```tsx
+<a className={styles.link} data-size={size} />
+```
+
+```scss
+.link[data-size='small'] {
+  font-size: 1rem;
+}
+```
+
+For a larger list, use one set of responsive rules and pass the selected values
+as CSS custom properties:
+
+```tsx
+import type { CSSProperties } from 'react';
+
+type LinkSize = 'small' | 'large';
+
+type LinkStyles = CSSProperties & {
+  '--link-font-size': string;
+  '--link-line-height': string;
+};
+
+const getStylesForSize = (size: LinkSize): LinkStyles => ({
+  '--link-font-size': size === 'small' ? '1rem' : '1.25rem',
+  '--link-line-height': size === 'small' ? '1.5' : '1.25',
+});
+
+<a className={styles.link} style={getStylesForSize(size)} />
+```
+
+```scss
+.link {
+  font-size: var(--link-font-size, inherit);
+  line-height: var(--link-line-height, inherit);
+}
+```
+
+Keep the code that maps prop values to custom-property values in one typed
+helper or at the component boundary. Do not repeat that mapping in both
+TypeScript and SCSS.
+
+When the component renders in AMP, measure the final inlined `style[amp-custom]`
+payload and keep the total below AMP's hard 75 KB limit. This is an additional
+AMP requirement; the CSS-minimization guidance applies to all editions.
 
 ### Styling Mistakes to Avoid
 

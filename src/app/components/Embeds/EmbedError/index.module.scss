@@ -1,0 +1,36 @@
+@use '@scss/themeTokens' as theme;
+
+.embedDiv {
+  background-color: theme.$palette-white;
+  max-width: 100%;
+  margin: 0 #{theme.$spacings-full} #{theme.$spacings-triple};
+  padding: #{theme.$spacings-double};
+
+  @media #{theme.$mediaQueries-group-2-min-width} {
+    margin: 0 #{theme.$spacings-double} #{theme.$spacings-triple};
+  }
+
+  @media #{theme.$mediaQueries-group-4-min-width} {
+    margin: 0 0 #{theme.$spacings-triple};
+  }
+
+  @media #{theme.$mediaQueries-forced-colours} {
+    border: #{theme.pixelsToRem-px-to-rem(3)} solid transparent;
+  }
+}
+
+.errorLinkWrapper {
+  padding-top: #{theme.$spacings-full};
+
+  .inlineLink {
+    @include theme.fontVariants-gel-font-variant('sans-regular');
+    @include theme.fontSizes-gel-font-size(bodyCopy);
+
+    // Override only the default state; InlineLink owns visited and focus/hover states.
+    &:not(:visited):not(:hover):not(:focus) {
+      color: theme.$palette-black;
+      border-bottom: #{theme.pixelsToRem-px-to-rem(1)} solid
+        theme.$palette-black;
+    }
+  }
+}
