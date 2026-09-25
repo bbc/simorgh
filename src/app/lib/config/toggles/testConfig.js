@@ -31,6 +31,9 @@ export default {
   eventTracking: {
     enabled: true,
   },
+  googlePreferredSource: {
+    enabled: false,
+  },
   homePageRadioSchedule: {
     enabled: true,
   },
@@ -84,6 +87,9 @@ export default {
   },
   topBarOJs: {
     enabled: true,
+  },
+  topicUasPersonalization: {
+    enabled: false,
   },
   variantCookie: {
     enabled: true,

@@ -1,7 +1,7 @@
 import { useState, useId } from 'react';
 import { BookmarkIcon, FilledBookmarkIcon, Close } from '#app/components/icons';
 import Spinner from '#app/components/Spinner';
-import styles from './index.styles';
+import styles from './index.module.scss';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 
 export interface SaveButtonProps {
@@ -24,6 +24,8 @@ const SaveButton = ({
   isSaved = false,
   onClick,
   testId,
+  // TODO :Ticket needed
+  //  Add a buttonType prop (e.g. follow, favourites) to determine which icon to display.
   ...rest
 }: SaveButtonProps) => {
   const [isFocusedOrHovered, setIsFocusedOrHovered] = useState(false);
@@ -55,7 +57,7 @@ const SaveButton = ({
 
   return (
     <button
-      css={[styles.buttonWrapper, isUpdating && styles.updatingState]}
+      className={`${styles.buttonWrapper}${isUpdating ? ` ${styles.updatingState}` : ''}`}
       type="button"
       aria-labelledby={labelId}
       onClick={handleClick}
@@ -66,7 +68,7 @@ const SaveButton = ({
       {...(testId && { 'data-testid': testId })}
       {...rest}
     >
-      <span aria-hidden="true" css={styles.iconText}>
+      <span aria-hidden="true" className={styles.iconText}>
         {getIcon()}
         {/* Wrapper keeps the label in a stable element so browser translation
             tools swapping text nodes don't crash React reconciliation. */}

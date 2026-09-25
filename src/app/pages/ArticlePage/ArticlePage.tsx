@@ -1,18 +1,7 @@
-import {
-  Fragment,
-  ReactNode,
-  useState,
-  useCallback,
-  use,
-  useEffect,
-} from 'react';
+import { useState, useCallback, use } from 'react';
 import { useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import useMediaQuery from '#hooks/useMediaQuery';
-import useNearViewport from '#hooks/useNearViewport';
-import useOptimizelyVariation, {
-  ExperimentType,
-} from '#hooks/useOptimizelyVariation';
 import useScrollDepthTracker from '#hooks/useScrollDepthTracker';
 import { GROUP_4_MIN_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
 import { singleTextBlock } from '#app/models/blocks';
@@ -70,9 +59,11 @@ import ContinueReadingButton, {
   ContinueReadingButtonProps,
 } from '#app/components/ContinueReadingButton';
 import SaveArticleButton from '#app/components/SaveArticleButton';
-import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
 import AccountPromotionalBannerExperiment from '#app/components/Account/AccountPromotionalBannerExperiment';
 import repositionCountryTopic from '#app/components/TopicDiscovery/RepositionCountryTopic';
+import GooglePreferredSource from '#app/components/GooglePreferredSource/GooglePreferredSourceLink';
+import GooglePreferredSourceDivider from '#app/components/GooglePreferredSource/GooglePreferredSourceDivider';
+import isGoogleReferral from '#app/lib/utilities/isGoogleReferral';
 import ElectionBanner from './ElectionBanner';
 import ArticleMessageBanner from './ArticleMessageBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
@@ -97,7 +88,6 @@ import RelatedContentSection from '../../components/RelatedContentSection';
 import TopicDiscovery from '../../components/TopicDiscovery';
 import Disclaimer from '../../components/Disclaimer';
 import SecondaryColumn from './SecondaryColumn';
-import useMobileOJComponentOrder from './useMobileOJComponentOrder';
 import styles from './ArticlePage.styles';
 import { ComponentToRenderProps, TimeStampProps } from './types';
 import ArticleHeadline from './ArticleHeadline';
@@ -106,42 +96,6 @@ import {
   isPortraitVideoUnderHeadline,
 } from '../../components/MediaLoader/utils/isPortraitVideo';
 import LocationBasedTopicOJ from '../../components/LocationBasedTopicOJ';
-import {
-  OJComponentKey,
-  SEARCH_MID_ARTICLE_COMPONENT,
-  SearchVariant,
-} from './searchReferrerComponentOrder';
-import TopStoriesSection from './PagePromoSections/TopStoriesSection';
-import SearchOjExperiment from './SearchOjExperiment';
-import {
-  isSearchOjVariant,
-  MID_ARTICLE_OJ_EXPERIMENT_TRIGGER_ID,
-  SEARCH_OJ_EXPERIMENT_NAME,
-  SearchOjVariant,
-} from './SearchOjExperiment/config';
-
-type ActivateSearchOjExperimentProps = {
-  onDecision: (variation: SearchOjVariant | null) => void;
-};
-
-const ActivateSearchOjExperiment = ({
-  onDecision,
-}: ActivateSearchOjExperimentProps) => {
-  const variation = useOptimizelyVariation({
-    experimentName: SEARCH_OJ_EXPERIMENT_NAME,
-    experimentType: ExperimentType.CLIENT_SIDE,
-  });
-
-  useEffect(() => {
-    if (variation !== null) {
-      const validVariation = isSearchOjVariant(variation) ? variation : null;
-
-      onDecision(validVariation);
-    }
-  }, [onDecision, variation]);
-
-  return null;
-};
 
 const getImageComponent =
   (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (
@@ -161,6 +115,11 @@ const getTimestampComponent =
     readTimeValue: number | undefined,
     readTimeTranslations: Translations['readTime'],
     articlePageData: Article,
+    isAmp: boolean,
+    isApp: boolean,
+    isLite: boolean,
+    isGoogleReferralTraffic: boolean,
+    googlePreferredSourceEnabled: boolean,
   ) =>
   (props: ComponentToRenderProps & TimeStampProps) => {
     const shouldDisplayReadTime = !!(readTimeTranslations && readTimeValue);
@@ -191,9 +150,21 @@ const getTimestampComponent =
             )}
           </>
         )}
+        {!isAmp && !isLite && !isApp && (
+          <GooglePreferredSource
+            isGoogleReferralTraffic={isGoogleReferralTraffic}
+            googlePreferredSourceEnabled={googlePreferredSourceEnabled}
+          />
+        )}
         <SaveArticleButton
           saveArticlePageData={extractSaveArticleProps(articlePageData)}
         />
+        {!isAmp && !isLite && !isApp && (
+          <GooglePreferredSourceDivider
+            isGoogleReferralTraffic={isGoogleReferralTraffic}
+            googlePreferredSourceEnabled={googlePreferredSourceEnabled}
+          />
+        )}
       </>
     );
   };
@@ -211,29 +182,6 @@ const getWsojComponent = ({
 }) => (
   <Recommendations data={data} {...(experimentProps && { experimentProps })} />
 );
-
-type SearchWsojComponentProps = {
-  isDesktopViewport: boolean;
-  renderSearchMidArticleOj: (props: {
-    data: Recommendation[];
-    experimentProps?: ComponentExperimentProps;
-    searchVariant: SearchVariant | null;
-  }) => ReactNode;
-  experimentProps?: ComponentExperimentProps;
-  searchVariant: SearchVariant | null;
-};
-
-const getSearchWsojComponent =
-  ({
-    isDesktopViewport,
-    renderSearchMidArticleOj,
-    experimentProps,
-    searchVariant,
-  }: SearchWsojComponentProps) =>
-  ({ data }: { data: Recommendation[] }) =>
-    !isDesktopViewport
-      ? renderSearchMidArticleOj({ data, experimentProps, searchVariant })
-      : getWsojComponent({ data, experimentProps });
 
 const DisclaimerWithPaddingOverride = (props: ComponentToRenderProps) => (
   <Disclaimer {...props} increasePaddingOnDesktop={false} />
@@ -271,44 +219,19 @@ const getContinueReadingButton =
     showAllContent,
     setShowAllContent,
     experimentProps,
-    onExpand,
   }: ContinueReadingButtonProps) =>
   () => (
     <ContinueReadingButton
       showAllContent={showAllContent}
       setShowAllContent={setShowAllContent}
       experimentProps={experimentProps}
-      onExpand={onExpand}
     />
-  );
-
-const getSearchOjExperiment =
-  (experimentProps?: ComponentExperimentProps) =>
-  ({ data }: { data: Recommendation[] }) => (
-    <SearchOjExperiment data={data} experimentProps={experimentProps} />
   );
 
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const [showAllContent, setShowAllContent] = useState(false);
   const [isDesktopViewport, setIsDesktopViewport] = useState(false);
-  const [hasExpandedContinueReading, setHasExpandedContinueReading] =
-    useState(false);
-  const [experimentVariant, setExperimentVariant] =
-    useState<SearchOjVariant | null>(null);
-  const searchOjExperimentProps: ComponentExperimentProps | undefined =
-    experimentVariant
-      ? {
-          experimentName: SEARCH_OJ_EXPERIMENT_NAME,
-          experimentVariant,
-          sendOptimizelyEvents: true,
-        }
-      : undefined;
   const { isApp, isAmp, isLite, pageType } = use(RequestContext);
-
-  const isNearMidArticleOj = useNearViewport({
-    elementId: MID_ARTICLE_OJ_EXPERIMENT_TRIGGER_ID,
-    bottomViewportMargin: 1,
-  });
 
   const {
     articleAuthor,
@@ -332,6 +255,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     'continueReadingButton',
   );
   const { enabled: topicDiscoveryEnabled } = useToggle('topicDiscovery');
+  const { enabled: googlePreferredSourceEnabled } = useToggle(
+    'googlePreferredSource',
+  );
+
+  const isGoogleReferralTraffic = isGoogleReferral();
 
   const {
     palette: { GREY_2 },
@@ -406,66 +334,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     pageData?.countryCuration?.summaries?.length,
   );
 
-  const hasRelatedContent = blocks.some(
-    block => block.type === 'relatedContent',
-  );
-
-  const getSearchMidArticleOJ = ({
-    data,
-    experimentProps,
-    searchVariant,
-  }: {
-    data: Recommendation[];
-    experimentProps?: ComponentExperimentProps;
-    searchVariant: SearchVariant | null;
-  }) => {
-    const midarticleOJ = searchVariant
-      ? SEARCH_MID_ARTICLE_COMPONENT[searchVariant]
-      : null;
-    switch (midarticleOJ) {
-      case 'mostRead':
-        return (
-          <Recommendations data={data} experimentProps={experimentProps} />
-        );
-
-      case 'relatedContent':
-        return hasRelatedContent ? (
-          <div css={styles.midArticleOJ}>
-            <RelatedContentSection
-              content={blocks}
-              experimentProps={experimentProps}
-            />
-          </div>
-        ) : (
-          <Recommendations data={data} experimentProps={experimentProps} />
-        );
-
-      case 'topicDiscovery':
-        return (
-          <TopicDiscovery
-            topics={topicDiscoveryTopics}
-            css={styles.midArticleOJ}
-            experimentProps={experimentProps}
-          />
-        );
-
-      case 'locationBasedOJ':
-        return showCountryCuration ? (
-          <div css={styles.midArticleOJ}>
-            <LocationBasedTopicOJ
-              pageData={pageData}
-              experimentProps={experimentProps}
-            />
-          </div>
-        ) : (
-          <Recommendations data={data} experimentProps={experimentProps} />
-        );
-
-      default:
-        return getWsojComponent({ data, experimentProps });
-    }
-  };
-
   const showPortraitVideoCarousel = Boolean(
     pageData?.portraitVideoItems?.portraitVideo?.blocks?.length &&
     articlePortraitVideoEnabled,
@@ -480,7 +348,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     eventTrackingData: {
       componentName: 'portrait-video-carousel-article',
       groupTracker: { name: portraitVideoCarouselTitle },
-      ...(searchOjExperimentProps && searchOjExperimentProps),
     },
     backgroundColor: 'rgba(246, 246, 246, 0.75)',
   };
@@ -525,10 +392,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     promoImageRawBlock?.model as { locator?: string } | undefined
   )?.locator;
 
-  const searchVariant: SearchVariant | null =
-    experimentVariant === 'control' ? null : experimentVariant;
-  const mobileOJOrder = useMobileOJComponentOrder(searchVariant);
-
   const componentsToRender = {
     visuallyHiddenHeadline,
     headline: getHeadlineComponent,
@@ -545,6 +408,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       readTimeValue,
       translations.readTime,
       pageData,
+      isAmp,
+      isApp,
+      isLite,
+      isGoogleReferralTraffic,
+      googlePreferredSourceEnabled,
     ),
     social: SocialEmbedContainer,
     embed: UnsupportedEmbed,
@@ -555,23 +423,13 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     group: gist,
     links: ArticleLinksBlock,
     mpu: getMpuComponent(allowAdvertising),
-    // keep delayed search oj bucketing inside the oj component
-    // renders wsoj if user is on desktop, otherwise renders a chosen OJ based on search referrer experiment on mobile
-    wsoj: searchVariant
-      ? getSearchWsojComponent({
-          isDesktopViewport,
-          renderSearchMidArticleOj: getSearchMidArticleOJ,
-          experimentProps: searchOjExperimentProps,
-          searchVariant,
-        })
-      : getSearchOjExperiment(searchOjExperimentProps),
+    wsoj: getWsojComponent,
     disclaimer: DisclaimerWithPaddingOverride,
     podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
     ...(showContinueReadingButton && {
       continueReading: getContinueReadingButton({
         showAllContent,
         setShowAllContent,
-        onExpand: () => setHasExpandedContinueReading(true),
       }),
     }),
   };
@@ -588,18 +446,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
 
-  const showTopicDiscovery = topicDiscoveryEnabled && !isAmp && !isLite;
-
-  // Topic Discovery shows in the mid-article position for one variant
-  // We want to hide RelatedTopics when this happens
-  const topicDiscoveryInMidArticlePosition =
-    !isDesktopViewport && searchVariant === 'variant_5_recommended_mid';
+  const showTopicDiscovery =
+    topicDiscoveryEnabled && !isAmp && !isLite && !isApp;
 
   const showRelatedTopicsComponent = Boolean(
-    showRelatedTopics &&
-    topics.length > 0 &&
-    !showTopicDiscovery &&
-    !topicDiscoveryInMidArticlePosition,
+    showRelatedTopics && topics.length > 0 && !showTopicDiscovery,
   );
 
   const showMediaCuration = Boolean(
@@ -611,129 +462,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     articleVideoCurationEnabled,
   );
 
-  const topStoriesContent = pageData?.secondaryColumn?.topStories;
-  const featuresContent = pageData?.secondaryColumn?.features;
-
-  const getTopicDiscoverySlot = () => {
-    if (showTopicDiscovery) {
-      return (
-        <TopicDiscovery
-          css={[
-            ...(showContinueReadingButton
-              ? [!showAllContent && styles.hideTopicDiscovery]
-              : []),
-          ]}
-          topics={topicDiscoveryTopics}
-          experimentProps={searchOjExperimentProps}
-        />
-      );
-    }
-    if (showRelatedTopicsComponent) {
-      return (
-        <RelatedTopics
-          css={[
-            styles.relatedTopics,
-            ...(showContinueReadingButton
-              ? [!showAllContent && styles.hideRelatedTopics]
-              : []),
-          ]}
-          topics={topics}
-          mobileDivider={false}
-          experimentProps={searchOjExperimentProps}
-        />
-      );
-    }
-    return null;
-  };
-
-  const topicDiscoverySlot = getTopicDiscoverySlot();
-
-  const getVideoOJComponent = (): ReactNode => {
-    if (showPortraitVideoCarousel) {
-      return (
-        <PortraitVideoCarousel
-          {...portraitVideoCarouselProps}
-          css={styles.portraitVideoCarousel}
-        />
-      );
-    }
-    if (showMediaCuration) {
-      return (
-        <div css={styles.mediaCurationRow}>
-          <div data-testid="media-curation">
-            <Curation
-              visualStyle={VISUAL_STYLE.FEED}
-              visualProminence={VISUAL_PROMINENCE.NORMAL}
-              summaries={mediaCurationContent?.summaries}
-              title={mediaCurationContent?.title}
-              position={mediaCurationContent?.position || 0}
-              curationId={mediaCurationContent?.curationId}
-              curationLength={1}
-              link={mediaCurationContent?.link}
-              curationContentType="video"
-              pageType={pageType}
-              experimentProps={searchOjExperimentProps}
-            />
-          </div>
-        </div>
-      );
-    }
-    return null;
-  };
-
-  const mobileOJComponents: Record<OJComponentKey, ReactNode> = {
-    mostRead:
-      !isApp && !isPGL ? (
-        <MostRead
-          css={styles.mostReadSection}
-          data={mostReadInitialData}
-          columnLayout="twoColumn"
-          size="default"
-          headingBackgroundColour={GREY_2}
-          mobileDivider={showRelatedTopicsComponent}
-          experimentProps={searchOjExperimentProps}
-        />
-      ) : null,
-    topicDiscovery: topicDiscoverySlot,
-    relatedContent: (
-      <RelatedContentSection
-        content={blocks}
-        experimentProps={searchOjExperimentProps}
-      />
-    ),
-    videoOJ: getVideoOJComponent(),
-    topStories:
-      !isApp && !isPGL && topStoriesContent ? (
-        <div
-          css={styles.topStoriesSection}
-          data-testid="top-stories"
-          data-experiment-position="secondaryColumn"
-        >
-          <TopStoriesSection
-            content={topStoriesContent}
-            experimentProps={searchOjExperimentProps}
-          />
-        </div>
-      ) : null,
-    featuredArticles:
-      !isApp && !isPGL && featuresContent ? (
-        <div css={styles.featuresSection} data-testid="features">
-          <FeaturesAnalysis
-            content={featuresContent}
-            parentColumns={{}}
-            sectionLabelBackground={GREY_2}
-            experimentProps={searchOjExperimentProps}
-          />
-        </div>
-      ) : null,
-    locationBasedOJ: showCountryCuration ? (
-      <LocationBasedTopicOJ
-        pageData={pageData}
-        experimentProps={searchOjExperimentProps}
-      />
-    ) : null,
-  };
-
   const shouldApplyCollapsedArticleSpacing =
     showContinueReadingButton && !showAllContent;
 
@@ -741,10 +469,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     <div css={styles.pageWrapper}>
       {/* EXPERIMENT: newswb_ws_article_account_promo_banner */}
       <AccountPromotionalBannerExperiment />
-
-      {(isNearMidArticleOj || hasExpandedContinueReading) && (
-        <ActivateSearchOjExperiment onDecision={setExperimentVariant} />
-      )}
 
       <ATIAnalytics />
       <ChartbeatAnalytics
@@ -813,7 +537,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             <OptimizelyPageMetrics trackPageComplete />
           </main>
           <OptimizelyPageMetrics trackPageDepth />
-          {!mobileOJOrder && showTopicDiscovery && (
+          {showTopicDiscovery && (
             <TopicDiscovery
               css={[
                 ...(showContinueReadingButton
@@ -821,10 +545,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
                   : []),
               ]}
               topics={topicDiscoveryTopics}
-              experimentProps={searchOjExperimentProps}
             />
           )}
-          {!mobileOJOrder && showRelatedTopicsComponent && (
+          {showRelatedTopicsComponent && (
             <RelatedTopics
               css={[
                 styles.relatedTopics,
@@ -834,28 +557,17 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               ]}
               topics={topics}
               mobileDivider={false}
-              experimentProps={searchOjExperimentProps}
             />
           )}
-          {!mobileOJOrder && showCountryCuration && (
-            <LocationBasedTopicOJ
-              pageData={pageData}
-              experimentProps={searchOjExperimentProps}
-            />
-          )}
-          {!mobileOJOrder && showPortraitVideoCarousel && (
+          {showCountryCuration && <LocationBasedTopicOJ pageData={pageData} />}
+          {showPortraitVideoCarousel && (
             <PortraitVideoCarousel
               {...portraitVideoCarouselProps}
               css={styles.portraitVideoCarousel}
             />
           )}
-          {!mobileOJOrder && (
-            <RelatedContentSection
-              content={blocks}
-              experimentProps={searchOjExperimentProps}
-            />
-          )}
-          {!mobileOJOrder && showMediaCuration && (
+          <RelatedContentSection content={blocks} />
+          {showMediaCuration && (
             <div css={styles.mediaCurationRow}>
               <div data-testid="media-curation">
                 <Curation
@@ -869,30 +581,16 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
                   link={mediaCurationContent?.link}
                   curationContentType="video"
                   pageType={pageType}
-                  experimentProps={searchOjExperimentProps}
                 />
               </div>
             </div>
           )}
         </div>
 
-        {!isApp && !isPGL && !mobileOJOrder && (
-          <SecondaryColumn
-            pageData={pageData}
-            experimentProps={searchOjExperimentProps}
-          />
-        )}
+        {!isApp && !isPGL && <SecondaryColumn pageData={pageData} />}
       </div>
 
-      {mobileOJOrder && (
-        <div css={styles.mobileOJContainer} data-testid="mobile-oj-container">
-          {mobileOJOrder.map(key => (
-            <Fragment key={key}>{mobileOJComponents[key]}</Fragment>
-          ))}
-        </div>
-      )}
-
-      {!isApp && !isPGL && !mobileOJOrder && (
+      {!isApp && !isPGL && (
         <MostRead
           css={styles.mostReadSection}
           data={mostReadInitialData}
@@ -900,7 +598,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           size="default"
           headingBackgroundColour={GREY_2}
           mobileDivider={showRelatedTopicsComponent}
-          experimentProps={searchOjExperimentProps}
         />
       )}
     </div>

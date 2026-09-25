@@ -135,6 +135,9 @@ export const service: DefaultServiceConfig = {
         description: 'स्टोरीज़ सेव करें और अपनी सुविधा से पढ़ें',
         closeLabel: 'बंद करें',
       },
+      googlePreferredSource: {
+        linkText: 'Google पर पसंदीदा स्रोत के रूप में जोड़ें',
+      },
       saveArticleButton: {
         loading: 'लोड हो रहा है',
         save: 'बाद में पढ़ने के लिए सहेजें',
@@ -143,6 +146,16 @@ export const service: DefaultServiceConfig = {
         remove: 'हटाएं',
         removeAccessible: 'सेव्ड. माय न्यूज़ सेक्शन से हटा दीजिए',
         removing: 'हटाया जा रहा है',
+      },
+      // TBC : TODO: Ticket needed
+      followTopicButton: {
+        loading: 'Loading...',
+        follow: 'Follow',
+        following: 'Following...',
+        followed: 'Followed',
+        unfollow: 'Unfollow',
+        unfollowAccessible: 'Followed. Unfollow',
+        unfollowing: 'Unfollowing...',
       },
       myNews: {
         title: 'मेरी ख़बरें',
