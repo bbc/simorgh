@@ -6,7 +6,7 @@ import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
 } from '#psammead/gel-foundations/src/spacings';
-import { getMimeType } from '#lib/utilities/srcSet';
+import { getMimeType } from '#app/utilities/imageSrcSets';
 import Image from '#app/components/Image';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '../../../contexts/RequestContext';

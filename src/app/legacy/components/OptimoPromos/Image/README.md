@@ -19,22 +19,22 @@ the required aspect ratio.
 ## Example ltr/rtl
 
 ```javascript
-import buildIChefURL from '#app/lib/utilities/ichefURL';
+import { createIchefSrcSet } from '#app/utilities/imageSrcSets';
 
 const imageResolutions = [70, 95, 144, 183, 240, 320, 660];
 
-const { srcset, fallbackSrcset } = createSrcsets({
+const { srcSet, fallbackSrcSet } = createIchefSrcSet({
   originCode,
   locator,
-  originalImageWidth: originalImageWidth,
+  originalImageWidth,
   imageResolutions,
 });
 
 <Image
   src="this-is-an-image.png"
   altText="This is a random image"
-  srcset={srcset}
-  fallbackSrcset={fallbackSrcset}
+  srcset={srcSet}
+  fallbackSrcset={fallbackSrcSet}
   width={originalImageWidth}
   height={originalImageHeight}
 />;
