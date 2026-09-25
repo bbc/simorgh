@@ -10,7 +10,8 @@ export default {
     enabled: true,
   },
   adsNonce: {
-    enabled: false,
+    enabled: true,
+    value: 'ng,ke',
   },
   articleLiteSiteLink: { enabled: true },
   articlePortraitVideo: {
@@ -82,6 +83,10 @@ export default {
   recentVideoEpisodes: {
     enabled: true,
     value: 4,
+  },
+  relaxedCsp: {
+    enabled: true,
+    value: 'in',
   },
   scriptLink: {
     enabled: true,

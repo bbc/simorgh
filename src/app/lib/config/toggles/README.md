@@ -66,7 +66,8 @@ Both commands enable remote toggle fetching (`FETCH_TOGGLES=true`) and set the `
 | `preroll`               | Display Preroll Advertisements on Media Asset (MAP) Pages                           |                                                                          |                                                       |
 | `scriptLink`            | Display Script Switching link for services with variants                            |                                                                          |                                                       |
 | `variantCookie`         | Set variant cookie for services with variants                                       |                                                                          |                                                       |
-| `adsNonce`              | Uses "enabled" to check service as a boolean and "value" as countries list          | value is a coma separated countries                                      | enabled: true, value: 'es,mx'                         |
+| `adsNonce`              | Serve the nonce-based CSP tier. "enabled" switches the service on                   | Allow-list of countries that get the nonce CSP (comma separated)         | enabled: true, value: 'es,mx'                         |
+| `relaxedCsp`            | Serve the relaxed CSP tier. "enabled" switches the service on                       | Allow-list of countries that get the relaxed CSP (comma separated)       | enabled: true, value: 'in'                            |
 
 ## Default Toggle (Fallback) Values
 

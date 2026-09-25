@@ -1,4 +1,4 @@
-import { Fragment, use } from 'react';
+import { Fragment, use, useEffect } from 'react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import AccountPromotionalBannerHomePageExperiment from '#app/components/Account/AccountPromotionalBannerHomePageExperiment';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
@@ -30,6 +30,10 @@ import getItemList from '../../lib/seoUtils/getItemList';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import getNthCurationByStyleAndProminence from '../utils/getNthCurationByStyleAndProminence';
 import getIndexOfFirstNonBanner from '../utils/getIndexOfFirstNonBanner';
+
+const CSP_META_TEST_SCRIPT_SRC =
+  'https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js';
+const CSP_META_TEST_SCRIPT_DELAY_MS = 2000;
 
 export interface HomePageProps {
   pageData: {
@@ -88,6 +92,23 @@ const HomePage = ({ pageData }: HomePageProps) => {
   const metadataDescription = seoDescription || description;
 
   const itemList = getItemList({ curations, name: brandName });
+
+  // TODO: temp test
+  useEffect(() => {
+    let testScript: HTMLScriptElement | undefined;
+    const timeoutId = window.setTimeout(() => {
+      testScript = document.createElement('script');
+      testScript.async = true;
+      testScript.dataset.cspMetaTest = 'true';
+      testScript.src = CSP_META_TEST_SCRIPT_SRC;
+      document.head.appendChild(testScript);
+    }, CSP_META_TEST_SCRIPT_DELAY_MS);
+
+    return () => {
+      window.clearTimeout(timeoutId);
+      testScript?.remove();
+    };
+  }, []);
 
   return (
     <>
