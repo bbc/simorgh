@@ -135,6 +135,9 @@ export const service: DefaultServiceConfig = {
         description: 'स्टोरीज़ सेव करें और अपनी सुविधा से पढ़ें',
         closeLabel: 'बंद करें',
       },
+      googlePreferredSource: {
+        linkText: 'Google पर पसंदीदा स्रोत के रूप में जोड़ें',
+      },
       saveArticleButton: {
         loading: 'लोड हो रहा है',
         save: 'बाद में पढ़ने के लिए सहेजें',

@@ -4,8 +4,8 @@ const uasKeys = {
     [...uasKeys.all(userId), 'favourites'] as const,
   favouritesList: (userId: string) =>
     [...uasKeys.favourites(userId), 'list'] as const,
-  favouritesPage: (userId: string, startIndex: number) =>
-    [...uasKeys.favouritesList(userId), startIndex] as const,
+  favouritesPage: (userId: string, startIndex: number, service?: string) =>
+    [...uasKeys.favouritesList(userId), service, startIndex] as const,
   favouriteStatus: (userId: string, articleId: string) =>
     [...uasKeys.favourites(userId), 'status', articleId] as const,
   follows: (userId: string) => [...uasKeys.all(userId), 'follows'] as const,

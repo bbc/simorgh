@@ -1,4 +1,5 @@
 import { use } from 'react';
+import clsx from 'clsx';
 import moment from 'moment';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { Services } from '#app/models/types/global';
@@ -6,7 +7,7 @@ import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useViewTracker from '#app/hooks/useViewTracker';
 import Text from '#app/components/Text';
 import { formatDuration } from '#app/legacy/psammead/psammead-timestamp-container/src/utilities';
-import styles from './index.styles';
+import styles from './index.module.scss';
 
 type ReadTimeProps = {
   readTimeValue: number;
@@ -90,12 +91,11 @@ const ReadTimeArticle = ({ readTimeValue, className }: ReadTimeProps) => {
 
   return (
     <div
-      className={className}
-      css={styles.readTimeContainer}
+      className={clsx(styles.readTimeContainer, className)}
       {...viewRef}
       data-testid="read-time"
     >
-      <Text css={styles.readTimeText} size="brevier">
+      <Text className={styles.readTimeText} size="brevier">
         {readTimeText}
       </Text>
     </div>
