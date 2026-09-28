@@ -139,7 +139,7 @@ Files:
 ## How to test UAS endpoints locally
 
 Please refer to the documentation in the simorgh-infrastructure repo for the steps:  
-[https://github.com/bbc/simorgh-infrastructure/blob/create-doc-on-UAS-testing-locally/documentation/testing-simorgh-uas-endpoints-locally.md](https://github.com/bbc/simorgh-infrastructure/blob/create-doc-on-UAS-testing-locally/documentation/testing-simorgh-uas-endpoints-locally.md)
+[https://github.com/bbc/simorgh-infrastructure/blob/latest/documentation/testing-simorgh-uas-endpoints-locally.md](https://github.com/bbc/simorgh-infrastructure/blob/latest/documentation/testing-simorgh-uas-endpoints-locally.md)
 
 ## Testing expectations
 
