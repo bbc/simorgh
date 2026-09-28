@@ -271,11 +271,15 @@ test.describe('onDemandTV', () => {
               '[data-e2e="recent-episodes-list"]',
             );
 
+            // More than one episode expected
             if (recentEpisodesEnabled) {
               const pageData = await getOnDemandTVPageData(page);
               const recentEpisodes = pageData?.recentEpisodes;
 
-              if ((recentEpisodes?.length ?? 0) > 0 && recentEpisodesMaxNumber > 0) {
+              if (
+                (recentEpisodes?.length ?? 0) > 1 &&
+                recentEpisodesMaxNumber > 1
+              ) {
                 await expect(recentEpisodesList).toBeVisible();
 
                 const renderedCount = await recentEpisodesList
@@ -289,7 +293,11 @@ test.describe('onDemandTV', () => {
               return;
             }
 
-            await expect(recentEpisodesList).toHaveCount(0);
+            // Not toggled on for this service
+            else{
+                await expect(recentEpisodesList).not.toBeVisible();
+                await expect(recentEpisodesList).toHaveCount(0);
+            }
           });
 
           if (!isLite) {
