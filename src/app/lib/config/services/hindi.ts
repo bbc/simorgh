@@ -126,7 +126,7 @@ export const service: DefaultServiceConfig = {
       },
       accountPromoBanner: {
         title: 'आपका अपना BBC',
-        description: 'लॉग इन करें या निःशुल्क नया खाता बनाएं',
+        description: 'लॉग इन करें या निःशुल्क नया अकाउंट बनाएं',
         closeLabel: 'बंद करें',
         buttonSeparatorText: 'या',
       },
