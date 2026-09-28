@@ -7,7 +7,16 @@ import {
 import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import useUASRecentActivity from '#app/hooks/useUASRecentActivity';
 import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
+import { service as hindiServiceConfig } from '#app/lib/config/services/hindi';
 import MyNewsPage from '.';
+
+const myNewsTranslations = hindiServiceConfig.default.translations.myNews;
+
+if (!myNewsTranslations) {
+  throw new Error(
+    'Hindi config must include translations.myNews for MyNewsPage tests',
+  );
+}
 
 jest.mock('#app/hooks/useOptimizelyVariation', () => ({
   __esModule: true,
@@ -104,7 +113,7 @@ describe('MyNewsPage', () => {
 
     await waitFor(() => {
       expect(
-        screen.getByText('आपने अभी तक कोई लेख सहेजा नहीं है'),
+        screen.getByText(myNewsTranslations.noArticles),
       ).toBeInTheDocument();
     });
   });
@@ -123,9 +132,7 @@ describe('MyNewsPage', () => {
 
     await waitFor(() => {
       expect(
-        screen.getByText(
-          'लगता है यह कंटेंट लोड नहीं हो रहा है. कृपया बाद में पुनः प्रयास करें.',
-        ),
+        screen.getByText(myNewsTranslations.errorText),
       ).toBeInTheDocument();
     });
   });
