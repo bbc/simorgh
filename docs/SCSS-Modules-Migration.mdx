@@ -1,0 +1,94 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="docs/SCSS-Modules-Migration" />
+
+# SCSS Modules migration
+
+Simorgh is migrating component styling from Emotion CSS-in-JS (`ThemeProvider`) to SCSS Modules + CSS custom properties (`ThemeProviderSCSSModules`).
+
+This page covers **how the migration is being sequenced**. For the styling rules themselves, see [Coding standards: Styles](https://github.com/bbc/simorgh/blob/latest/docs/Coding-Standards/Styles.mdx).
+
+## Scope
+
+This programme covers `src/app/components/**` only. Components under `src/app/legacy/**` — including `containers/` and `psammead/` — are explicitly out of scope for now, as is page-level styling in `ws-nextjs-app/pages` (for example `live/[id]`, `av-embeds`, `my-news`).
+
+Legacy components need modernisation *and* a styling change. Converting them to SCSS Modules now would invest effort in code that may later be removed or rewritten. They are handled after the modern set, and each one gets one of three decisions:
+
+- **Delete** — nothing uses it any more.
+- **Fold in** — still used, but doesn't warrant being its own component. Inline it into its consumer, or merge it into an existing modern component that already does the same job.
+- **Modernise and convert** — it earns its place, so bring it up to current standards and move it to SCSS Modules.
+
+## Definition of done
+
+This programme is complete when `src/app/components` contains no imports from `@emotion/*`, no `index.styles.*` files, and no `css` props. The last check matters because `tsconfig.json` sets `jsxImportSource` to `@emotion/react` globally, so a component can use Emotion's `css` prop — as `Heading` and `Paragraph` currently do — without importing `@emotion` or having its own `index.styles.*` file.
+
+## Batching principles
+
+Work is submitted in small PRs so review stays tractable.
+
+- **Size by style-line count, not component count.** Three 20-line components is a very different review from three 250-line ones. Roughly 150 lines of style per PR keeps review effort consistent.
+- **Delete the `index.styles.*` file in the same PR.** Never leave two sources of truth for one component.
+- **Order by risk**, using the four axes below.
+
+### Risk axes
+
+| Axis | Lower risk | Higher risk |
+|---|---|---|
+| Blast radius | Used in one or two places | Shared primitive used across many pages |
+| Test churn | No `__snapshots__` folder | Has snapshots |
+| Verification effort | Canonical only | Also renders on AMP or Lite |
+| Coupling | Self-contained | Renders, or passes styles into, an Emotion-styled legacy component |
+
+Most components have no snapshots, so snapshot churn is limited and predictable.
+
+## Blocked components
+
+These cannot be fully migrated without a decision that goes beyond styling. Keep them out of the styling-only batches described above — each needs its own piece of work.
+
+| Component | Blocker |
+|---|---|
+| `Disclaimer` | Renders `GridItemLarge` from `legacy/components/Grid` |
+| `MostRead/Canonical/Item` | Renders `Grid` from `legacy/components/Grid` |
+| `MostRead/Canonical/List` | Renders `psammead-grid` |
+| `MostRead/Label` | Passes a `css` prop into `psammead-section-label`, and uses a palette value as a runtime prop |
+| `RelatedTopics` | Passes a `css` prop into `psammead-section-label`, and uses a palette value as a runtime prop |
+| `Recommendations` | Passes a `css` prop into `psammead-section-label`, and uses a palette value as a runtime prop |
+| `RelatedContentSection` | Imports a legacy Emotion styles file directly (`OptimoPromos/PromoItem/index.styles`) |
+
+For the grid cases, our styling standards direct us away from `psammead-grid`, so these need a native layout replacement rather than a like-for-like port.
+
+Rendering a legacy component is not itself a blocker. `ArticleLinksBlock` renders `SkipLinkWrapper` and migrated fine, because the legacy child is self-contained and keeps its own styles. The problem arises when the legacy child **controls the layout of your content**, or when styles are **passed into** it.
+
+Legacy imports that are **pure utilities** never block migration. For example `ReadTime` imports `formatDuration` from `psammead-timestamp-container`, which has no styling implications.
+
+## Deferred to the end
+
+- **AMP and Lite components** — `Ad/*`, `MostRead/Amp`, `AmpIframe`, `Embeds/AmpIframeEmbed`, `MediaLoader/Amp`. Grouping these lets them share a single round of manual testing on the AMP platform rather than requiring one per batch.
+- **The largest components** — `Curation/HierarchicalGrid`, `MostRead/Canonical/Rank`, `Navigation`, `CollapsibleNavigation`. Each warrants a dedicated PR rather than sharing one.
+- **Components with heavy legacy coupling** — `MostRead`, `Navigation` and `Curation` hold most of the remaining legacy imports.
+
+## Suggested early sequence
+
+**As of August 2026, at the outset of the migration.** This was the starting plan and is not kept in step with progress — treat it as an illustration of how the principles above were applied, not as a live status. It may be updated periodically or superseded by external tracking.
+
+| Batch | Components | Why |
+|---|---|---|
+| 1 | `Copyright`, `ReadTime`, `InlineLink` | Small, self-contained, have tests and stories, no snapshots — proves the pattern |
+| 2 | `VisuallyHiddenText`, `Spinner`, `LiveText` | `VisuallyHiddenText` is tiny but used in ~200 places, so it unlocks a lot for little risk |
+| 3 | `Footer/Link`, `Curation/CurationMessageBanner` | Small, with few consumers and no legacy imports |
+| 4 | `CallToActionLink` and its sub-components | A cohesive unit; migrating together avoids a split-brain component |
+
+## Tooling
+
+Migrations are largely done by AI. Two files tell it how:
+
+- `.github/instructions/styling-standards.instructions.md` — the styling rules, applied automatically whenever a file in `src/app/components` is edited.
+- `.github/skills/migrate-component-to-scss-modules/SKILL.md` — the step-by-step conversion process, including the Emotion-to-SCSS value lookup and the checks listed above.
+
+This page isn't read by the AI. It's here for engineers planning the work.
+
+## Verifying a batch
+
+1. Run the component's tests. Regenerate snapshots only where the component has a `__snapshots__` folder, and review the diff — class-name churn is expected, structural DOM changes are not.
+2. Confirm no `@emotion` imports remain in the migrated component.
+3. Check an RTL service (for example `arabic`) and a dark UI context. Those two behaviours move out of JavaScript branching and into SCSS selectors, so they are the most likely regressions.

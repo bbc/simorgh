@@ -34,6 +34,9 @@ exports[`Toggles Config when application environment is live should contain corr
   "eventTracking": {
     "enabled": true,
   },
+  "googlePreferredSource": {
+    "enabled": false,
+  },
   "homePageRadioSchedule": {
     "enabled": false,
   },
@@ -137,6 +140,9 @@ exports[`Toggles Config when application environment is local should contain cor
   },
   "eventTracking": {
     "enabled": true,
+  },
+  "googlePreferredSource": {
+    "enabled": false,
   },
   "homePageRadioSchedule": {
     "enabled": true,
@@ -248,6 +254,9 @@ exports[`Toggles Config when application environment is test should contain corr
   },
   "eventTracking": {
     "enabled": true,
+  },
+  "googlePreferredSource": {
+    "enabled": false,
   },
   "homePageRadioSchedule": {
     "enabled": true,
