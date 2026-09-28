@@ -6,6 +6,7 @@ import {
 } from '#psammead/gel-foundations/src/breakpoints';
 import IMAGE from '#app/components/Image';
 import BlurredBackground from '#app/components/Image/BlurredBackground';
+import { createResponsiveSrcSet } from '#app/utilities/imageSrcSets';
 
 const Wrapper = styled.div`
   margin-bottom: ${GEL_SPACING};
@@ -27,20 +28,7 @@ const ChildWrapper = styled.div`
 
 // promos with images via Programmes (which can be of type audio and possibly others) use a different iChef recipe requiring a second set of resolutions
 // https://github.com/bbc/programme-images/tree/master/webapp/ichef/recipes
-const createSrcSet = (imageUrl, isProgrammeImage, suffix = '') => {
-  const imageResolutions = [85, 120, 170, 232, 325, 450, 660, 800];
-  const imageResolutionsProgrammes = [96, 128, 176, 240, 352, 464, 672, 800];
-
-  const resolutions = isProgrammeImage
-    ? imageResolutionsProgrammes
-    : imageResolutions;
-
-  return resolutions
-    .map(res => `${imageUrl.replace(`{width}`, res)}${suffix} ${res}w`)
-    .join(', ');
-};
-
-const createSizes = (useLargeImages, isProgrammeImage) => {
+const buildSizes = (useLargeImages, isProgrammeImage) => {
   // 4 columns of fixed width
   const DESKTOP_SIZE = useLargeImages
     ? `(min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) 800px`
@@ -79,12 +67,22 @@ const Image = props => {
     'https://ichef.bbci.co.uk/images/ic/',
   );
   const suffix = src.endsWith('.webp') ? '' : '.webp';
-  const primarySrcSet = createSrcSet(src, isProgrammeImage, suffix);
-  const fallbackSrcSet = createSrcSet(src, isProgrammeImage).replaceAll(
-    '.webp',
-    '',
-  );
-  const sizes = createSizes(useLargeImages, isProgrammeImage);
+  const resolutions = isProgrammeImage
+    ? [96, 128, 176, 240, 352, 464, 672, 800]
+    : [85, 120, 170, 232, 325, 450, 660, 800];
+  const sizes = buildSizes(useLargeImages, isProgrammeImage);
+  const primarySrcSet = createResponsiveSrcSet({
+    imageUrlTemplate: `${src}${suffix}`,
+    widths: resolutions,
+    mq: { GROUP_2_MAX_WIDTH: '' },
+    sizesBuilder: () => sizes,
+  }).srcSet;
+  const fallbackSrcSet = createResponsiveSrcSet({
+    imageUrlTemplate: src.replaceAll('.webp', ''),
+    widths: resolutions,
+    mq: { GROUP_2_MAX_WIDTH: '' },
+    sizesBuilder: () => sizes,
+  }).srcSet;
   const srcWith240Width = src.replace('{width}', 240);
 
   return (
