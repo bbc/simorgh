@@ -74,6 +74,7 @@ export default class CustomApp extends App<Props> {
   // specific 'pageProps' from their getInitialProps / getServerSideProps functions
   static async getInitialProps({ ctx }: AppContext) {
     const { asPath = '' } = ctx;
+    console.log('main ctx path: ', asPath);
 
     const { isApp, isAmp, isLite } = getPathExtension(asPath);
 

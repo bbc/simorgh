@@ -37,6 +37,10 @@ const fetchConfig = async <T>({
   fetchUrl.searchParams.set('service', service);
   fetchUrl.searchParams.set('config', configType);
 
+  console.log('path in fetchConfig: ', pagePath);
+  console.log('fetchURL: ', fetchUrl);
+
+
   if (variant) {
     fetchUrl.searchParams.set('variant', variant);
   }
