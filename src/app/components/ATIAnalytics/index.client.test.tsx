@@ -947,7 +947,7 @@ describe('ATI Analytics Container', () => {
 
       expect(resonanceParams).toEqual({
         baseProperties: {
-          app: { name: 'news-arabic' },
+          app: { name: 'news-arabic', type: 'responsive' },
           destination: 'WS_NEWS_LANGUAGES_TEST',
           hashedUserId: undefined,
           pageName: 'news.articles.c0000000001o.page',
@@ -957,9 +957,14 @@ describe('ATI Analytics Container', () => {
         pageviewProperties: {
           contentId: 'urn:bbc:optimo:c0000000001o',
           contentType: 'article',
-          destination: 'WS_NEWS_LANGUAGES_TEST',
           language: 'en-gb',
-          producer: 'ARABIC',
+          ldpIds:
+            '2351f2b2-ce36-4f44-996d-c3c4f7f90eaa~803eaeb9-c0c3-4f1b-9a66-90efac3df2dc',
+          ldpTags: 'Royal+Wedding+2018~Duchess+of+Sussex',
+          pageTitle: 'Article%20Headline%20for%20SEO',
+          pubUpdateDate: '2018-01-01T14:00:00.000Z',
+          publicationDate: '2018-01-01T12:01:00.000Z',
+          url: 'http://localhost/',
         },
         resonanceProperties: {
           mode: 'test',

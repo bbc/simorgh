@@ -35,11 +35,11 @@ npm install #legacy/psammead-bulletin/src --save
 
 ```jsx
 import Bulletin from '#psammead/psammead-bulletin/src';
-import { Image } from '#psammead/psammead-image/src';
+import Image from '#app/components/Image';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 
 const WrappingComponent = () => {
-  const image = <Image src="/image.png" altText="alt text" />;
+  const image = <Image src="/image.png" alt="alt text" />;
 
   return (
     <Bulletin

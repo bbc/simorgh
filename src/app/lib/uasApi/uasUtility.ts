@@ -23,12 +23,21 @@ const FAVOURITES_CONFIG = {
   action: 'favourited',
 } as const;
 
-export type ActivityType = (typeof FAVOURITES_CONFIG)['activityType'];
+const FOLLOWS_CONFIG = {
+  activityType: 'follows',
+  resourceDomain: 'world-service-news',
+  resourceType: 'topic',
+  action: 'followed',
+} as const;
+
+export type ActivityType =
+  | (typeof FAVOURITES_CONFIG)['activityType']
+  | (typeof FOLLOWS_CONFIG)['activityType'];
 
 const buildGlobalId = (
   resourceId: string,
-  resourceDomain = FAVOURITES_CONFIG.resourceDomain,
-  resourceType = FAVOURITES_CONFIG.resourceType,
+  resourceDomain: string = FAVOURITES_CONFIG.resourceDomain,
+  resourceType: string = FAVOURITES_CONFIG.resourceType,
 ): string => `urn:bbc:${resourceDomain}:${resourceType}:${resourceId}`;
 
 interface MetadataComparisonResult {
@@ -103,11 +112,43 @@ const createFavouritesPayload = ({
   }),
 });
 
+export interface FollowTopicData {
+  topicId: string;
+  title: string;
+  url: string;
+}
+
+const buildTopicMetadata = (
+  { topicId, title, url }: FollowTopicData,
+  service: Services,
+): Record<string, unknown> => ({
+  topicId,
+  title: sanitiseMetadataString(title),
+  locatorUrl: url,
+  service,
+});
+
+const createFollowsPayload = (
+  topicData: FollowTopicData,
+  service: Services,
+): UasApiRequestBody => ({
+  activityType: FOLLOWS_CONFIG.activityType,
+  resourceDomain: FOLLOWS_CONFIG.resourceDomain,
+  resourceType: FOLLOWS_CONFIG.resourceType,
+  resourceId: topicData.topicId,
+  action: FOLLOWS_CONFIG.action,
+  resourceTitle: service,
+  metaData: buildTopicMetadata(topicData, service),
+});
+
 export {
   USER_ID_COOKIE_KEY,
   FAVOURITES_CONFIG,
+  FOLLOWS_CONFIG,
   buildGlobalId,
   createFavouritesPayload,
+  createFollowsPayload,
+  buildTopicMetadata,
   buildCurrentMetadata,
   compareMetadataWithSaved,
   sanitiseMetadataString,

@@ -37,22 +37,10 @@ const InlineDiv = styled.div`
   display: inline;
 `;
 
-const getAmpImageComponent =
-  ({ image, altText }) =>
-  () => (
-    <amp-img
-      layout="responsive"
-      width="16"
-      height="9"
-      src={image}
-      alt={altText}
-    />
-  );
-
 const RecentVideoEpisodes = ({ masterBrand, episodes }) => {
   const { service, dir, timezone, datetimeLocale, translations } =
     use(ServiceContext);
-  const { isAmp, variant } = use(RequestContext);
+  const { variant } = use(RequestContext);
 
   const {
     palette: { MIDNIGHT_BLACK },
@@ -104,9 +92,6 @@ const RecentVideoEpisodes = ({ masterBrand, episodes }) => {
               duration={formatDuration({
                 duration: episode.duration,
                 locale: datetimeLocale,
-              })}
-              {...(isAmp && {
-                as: getAmpImageComponent(episode),
               })}
             />
             {/* these must be concatenated for screen reader UX */}

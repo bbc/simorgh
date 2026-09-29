@@ -22,10 +22,10 @@ const styles = {
       textAlign: 'center',
       [mq.GROUP_1_MAX_WIDTH]: { display: 'none' },
     }),
-  activeA: ({ palette }: Theme) =>
+  activeA: ({ palette, isDarkUi }: Theme) =>
     css({
       display: 'block',
-      color: palette.GREY_10,
+      color: isDarkUi ? palette.GREY_2 : palette.GREY_10,
       textDecoration: 'none',
       height: '100%',
       width: '100%',
@@ -38,10 +38,10 @@ const styles = {
       },
     }),
 
-  inactiveA: ({ palette }: Theme) =>
+  inactiveA: ({ palette, isDarkUi }: Theme) =>
     css({
       display: 'block',
-      color: palette.GREY_10,
+      color: isDarkUi ? palette.GREY_2 : palette.GREY_10,
       textDecoration: 'none',
       height: '100%',
       width: '100%',
@@ -52,10 +52,10 @@ const styles = {
       },
     }),
 
-  textSummary: ({ fontVariants, mq, palette }: Theme) =>
+  textSummary: ({ fontVariants, mq, palette, isDarkUi }: Theme) =>
     css({
       ...fontVariants.sansRegular,
-      color: palette.GREY_6,
+      color: isDarkUi ? palette.GREY_2 : palette.GREY_6,
       display: 'inline-block',
       margin: '0 1.375rem',
       b: {
@@ -84,7 +84,7 @@ const styles = {
         top: '0.2rem',
       },
     }),
-  elipsisBlock: ({ fontVariants, mq, palette }: Theme) =>
+  elipsisBlock: ({ fontVariants, mq, palette, isDarkUi }: Theme) =>
     css({
       ...fontVariants.sansBold,
       width: '2.75rem',
@@ -92,7 +92,7 @@ const styles = {
       lineHeight: '2.75rem',
       textAlign: 'center',
       margin: '0 0.125rem',
-      color: palette.GREY_5,
+      color: isDarkUi ? palette.GREY_2 : palette.GREY_5,
       svg: {
         [mq.FORCED_COLOURS]: {
           fill: 'canvasText',
