@@ -72,12 +72,13 @@ export default ({
       link: url,
       name: label,
     },
-    ...(experimentVariant && {
-      mv: {
-        engineName: 'Optimizely',
-        variationId: experimentVariant,
-        experimentId: experimentName,
-      },
-    }),
+    ...(experimentVariant &&
+      experimentVariant !== 'off' && {
+        mv: {
+          engineName: 'Optimizely',
+          variationId: experimentVariant,
+          experimentId: experimentName,
+        },
+      }),
   };
 };

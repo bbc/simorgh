@@ -169,6 +169,16 @@ describe('buildResonanceEventConfig', () => {
     });
   });
 
+  it('should not include the mv object when experimentVariant is "off"', () => {
+    const result = buildResonanceEventConfig({
+      ...baseProps,
+      experimentName: 'experimentName',
+      experimentVariant: 'off',
+    });
+
+    expect(result).not.toHaveProperty('mv');
+  });
+
   it('should pass through the platform value', () => {
     const result = buildResonanceEventConfig(baseProps);
 
