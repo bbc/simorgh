@@ -1,4 +1,3 @@
-
 ## UAS integration in Simorgh
 
 This folder contains the browser-side integration with BBC User Activity Service (UAS) for World Service personalisation features.
@@ -25,13 +24,13 @@ To avoid cross-service leakage, Simorgh writes service information into each act
 Where this is wired:
 
 - `createFavouritesPayload` / `createFollowsPayload` set:
-	- `resourceDomain`
-	- `resourceType`
-	- `resourceTitle` (service)
-	- `metaData.service`
-	- file: `src/app/lib/uasApi/uasUtility.ts`
+  - `resourceDomain`
+  - `resourceType`
+  - `resourceTitle` (service)
+  - `metaData.service`
+  - file: `src/app/lib/uasApi/uasUtility.ts`
 - `getRecentActivity` reads favourites with `resourceDomain/resourceType/action` query params and then applies service filtering in-app (`belongsToService`)
-	- file: `src/app/lib/uasApi/getRecentActivity.ts`
+  - file: `src/app/lib/uasApi/getRecentActivity.ts`
 
 ## Request model
 
@@ -43,8 +42,8 @@ All UAS requests go through `uasApiRequest`:
 - credentials: `include` (browser sends auth cookies automatically)
 - timeout: `UAS_CLIENT_TIMEOUT_MS = 10000`
 - host:
-	- live: `activity.api.bbc.com`
-	- non-live: `activity.test.api.bbc.com`
+  - live: `activity.api.bbc.com`
+  - non-live: `activity.test.api.bbc.com`
 
 Token refresh is handled before requests when needed:
 
