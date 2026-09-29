@@ -38,7 +38,6 @@ import fetchConfig from '#app/lib/utilities/fetchConfig';
 interface Props {
   pageProps: {
     bbcOrigin?: string;
-    // TODO: TBC if needed for the appendAdDomainsToCSPHeader in PageLayoutWrapper
     cspHeader?: string | null;
     id?: string;
     isAmp: boolean;
