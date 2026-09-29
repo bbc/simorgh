@@ -70,4 +70,4 @@ jobs:
           path: |
             ws-nextjs-app/playwright-report
             ws-nextjs-app/test-results
-          if-no-files-found: ignores
+          if-no-files-found: ignore
