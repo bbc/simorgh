@@ -166,6 +166,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     alwaysInView,
     isSignedIn,
     hashedId,
+    viewThreshold,
   ]);
   const viewTracker = useCallback(
     async (element: HTMLElement) => {
