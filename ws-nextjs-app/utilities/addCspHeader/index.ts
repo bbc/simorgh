@@ -90,10 +90,12 @@ const addCspHeader = ({
     }),
   );
 
-  ctx.res?.setHeader(
-    'Content-Security-Policy',
-    contentSecurityPolicyHeaderValue,
-  );
+  if (!nonce) {
+    ctx.res?.setHeader(
+      'Content-Security-Policy',
+      contentSecurityPolicyHeaderValue,
+    );
+  }
 
   return { nonce, cspHeader: contentSecurityPolicyHeaderValue };
 };
