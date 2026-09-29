@@ -39,6 +39,7 @@ All UAS requests go through `uasApiRequest`:
 - file: `src/app/lib/uasApi/index.ts`
 - methods supported: `GET`, `POST`, `DELETE`
 - auth header: `X-API-Key` from `SIMORGH_UAS_PUBLIC_API_KEY`
+- API key scope: this key is provisioned for World Service UAS integration (used with the shared `world-service-news` domain), so requests stay within the intended product boundary
 - credentials: `include` (browser sends auth cookies automatically)
 - timeout: `UAS_CLIENT_TIMEOUT_MS = 10000`
 - host:
@@ -49,6 +50,24 @@ Token refresh is handled before requests when needed:
 
 - file: `src/app/lib/uasApi/tokenRefresh/tokenManager.ts`
 - `refreshTokensIfExpired(isRefreshAvailable)` prevents parallel refresh races and throws `401` when refresh is unavailable and tokens are invalid.
+
+## Why client-side rendering is used
+
+UAS calls are made from the browser because they depend on user-specific BBC Account auth/session state:
+
+- access/refresh token flows are tied to the signed-in browser session
+- BBC Account cookies used for UAS auth are `httpOnly` and automatically attached by the browser when `credentials: 'include'` is set
+- server-side page rendering in Simorgh does not have direct access to those browser-only auth cookies in the same way as the client runtime for this integration path
+
+This is why UAS status/save/remove interactions are handled in client hooks rather than during SSR.
+
+## Why there is no Next.js proxy layer for UAS
+
+Simorgh intentionally performs direct browser-to-UAS calls for this integration instead of routing through a Next.js proxy.
+
+Decision record:
+
+- [Direct UAS API calls ADR (2026-03-02)](https://github.com/bbc/simorgh-infrastructure/blob/latest/documentation/architecture-decision-records/2026-03-02-direct-UAS-Api-calls.md)
 
 ## Global ID contract
 
