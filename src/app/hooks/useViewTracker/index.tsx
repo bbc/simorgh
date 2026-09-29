@@ -116,6 +116,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
               groupTracker,
               viewThreshold,
               platform,
+              isSignedIn,
             }),
           );
         }
