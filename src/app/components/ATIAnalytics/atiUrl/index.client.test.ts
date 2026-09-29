@@ -85,7 +85,7 @@ describe('atiUrl', () => {
       });
 
       it('should omit optional fields when no value is provided', () => {
-        const result = buildResonanceAnalyticsModel({
+        const result = buildResonancePageViewModel({
           ...input,
           pageTitle: undefined,
           timePublished: '',
