@@ -107,6 +107,8 @@ Design tokens (palette, spacing, font sizes/variants, media queries) are exposed
 
 Service-specific brand/theme values (e.g. brand colours, font families, font scripts) are set as **CSS custom properties on `:root`** by each service's theme module (see `ThemeProviderSCSSModules/themes/<service>/`). Access typography through `theme.typography-from-scale-and-variant(pica, 'sans-regular')`, which emits the responsive size and variant declarations together. The lower-level size and variant mixins remain available when a component intentionally sets only one of them.
 
+When `size` and/or font variant are only known at runtime (component props rather than literals), use the paired runtime API instead: `getTypographyCustomProperties({ size, fontVariant })` from `ThemeProviderSCSSModules/typography.ts` sets inline `--gel-*` custom properties, consumed in SCSS with `@include theme.typography-from-custom-properties;`.
+
 ## Handling dark UI
 
 Use the `:global([data-is-dark-ui='true']) &` selector inside a component's `.module.scss` to override styles for dark UI, rather than branching in JavaScript/TypeScript:
