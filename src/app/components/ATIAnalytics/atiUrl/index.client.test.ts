@@ -34,7 +34,7 @@ describe('atiUrl', () => {
   });
 
   describe('Resonance', () => {
-    describe('buildResonanceAnalyticsModel', () => {
+    describe('buildResonancePageViewModel', () => {
       const input = {
         appName: 'news-pidgin',
         contentId: 'urn:bbc:optimo:asset:c0000000001o',
