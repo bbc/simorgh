@@ -64,10 +64,10 @@ jobs:
 
       - name: Upload Playwright test artifacts
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: playwright-error-page404-artifacts
           path: |
             ws-nextjs-app/playwright-report
             ws-nextjs-app/test-results
-          if-no-files-found: ignore
+          if-no-files-found: ignores
