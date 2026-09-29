@@ -18,6 +18,7 @@ const CurationGrid = ({
   isFirstCuration,
   headingLevel,
   eventTrackingData,
+  showRelatedTopicExperiment = false,
 }: CurationGridProps) => {
   const { isLite } = use(RequestContext);
 
@@ -70,7 +71,13 @@ const CurationGrid = ({
       position: index,
     };
     if (!shouldUseHighImpact) {
-      return <CurationPromo {...commonProps} headingLevel={headingLevel} />;
+      return (
+        <CurationPromo
+          {...commonProps}
+          headingLevel={headingLevel}
+          showRelatedTopicExperiment={showRelatedTopicExperiment}
+        />
+      );
     }
 
     return service ? (

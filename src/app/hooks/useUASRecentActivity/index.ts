@@ -4,6 +4,7 @@ import getRecentActivity from '#app/lib/uasApi/getRecentActivity';
 import type { SavedArticle } from '#app/lib/uasApi/uasUtility';
 import uasKeys from '#app/lib/uasApi/queryKeys';
 import { AccountContext } from '#app/contexts/AccountContext';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import useErrorTracking from '../useErrorTracking';
 import {
   ERROR_TRACKING_FEATURES,
@@ -27,17 +28,19 @@ const useUASRecentActivity = ({
   startIndex = 0,
 }: UseRecentActivityParams = {}): UseRecentActivityReturn => {
   const { hashedUserId = '', isRefreshAvailable } = use(AccountContext);
+  const { service } = use(ServiceContext);
 
   const trackError = useErrorTracking();
 
   const { data, isLoading, error } = useQuery({
-    queryKey: uasKeys.favouritesPage(hashedUserId, startIndex),
+    queryKey: uasKeys.favouritesPage(hashedUserId, startIndex, service),
     queryFn: ({ signal }) =>
       getRecentActivity({
         itemsPerPage,
         startIndex,
         signal,
         isRefreshAvailable,
+        service,
       }),
     enabled: !!hashedUserId,
   });

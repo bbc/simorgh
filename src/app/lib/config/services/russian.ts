@@ -125,6 +125,9 @@ export const service: DefaultServiceConfig = {
         moreAboutTopic: 'Больше по теме: {topic}',
         fetchErrorMessage: 'Не удалось загрузить. Пожалуйста, попробуйте снова',
       },
+      googlePreferredSource: {
+        linkText: 'Добавить как предпочтительный источник в Google',
+      },
       sport: {
         keyEventsTitle: 'Ключевые события',
         matchSummary: 'Обзор матча',
