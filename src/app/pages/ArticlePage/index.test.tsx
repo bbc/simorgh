@@ -645,7 +645,7 @@ describe('Article Page', () => {
       { service: 'russian' },
     );
 
-    expect(getByText('Канал Би-би-си в WhatsApp')).toBeInTheDocument();
+    expect(getByText('Расширение BBC News Russian')).toBeInTheDocument();
   });
   it('should render oEmbed component when passed', async () => {
     const pageDataWithRiddle = {

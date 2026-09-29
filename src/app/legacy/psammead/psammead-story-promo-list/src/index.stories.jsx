@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/react-webpack5';
 import { boolean, withKnobs } from '@storybook/addon-knobs';
 import Timestamp from '#psammead/psammead-timestamp/src';
-import Image from '#psammead/psammead-image/src';
+import Image from '#app/components/Image';
 import StoryPromo, {
   Headline,
   Summary,
@@ -17,10 +17,10 @@ const ImageComponent = ({ alt, src }) => (
     alt={alt}
     src={src}
     width="640"
-    srcset={`${src}.webp 640w`}
-    fallbackSrcset={`${src} 640w`}
-    primaryMimeType="image/webp"
-    fallbackMimeType="image/jpeg"
+    srcSet={`${src}.webp 640w`}
+    fallbackSrcSet={`${src} 640w`}
+    mediaType="image/webp"
+    fallbackMediaType="image/jpeg"
   />
 );
 

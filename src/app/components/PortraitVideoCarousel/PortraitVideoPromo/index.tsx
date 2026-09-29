@@ -11,7 +11,7 @@ import { RequestContext } from '#app/contexts/RequestContext';
 import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
-import getSrcSets from '#app/utilities/getSrcSets';
+import { createResponsiveSrcSet } from '#app/utilities/imageSrcSets';
 import { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import styles from './index.styles';
@@ -83,18 +83,20 @@ export default ({
     });
   };
 
-  const srcSets = getSrcSets({
+  const srcSets = createResponsiveSrcSet({
     imageUrlTemplate,
     mq,
     imageWidthSmall: 64,
     imageWidthLarge: 256,
+    srcSetSeparator: ', \n                          ',
   });
 
-  const fallbackSrcSets = getSrcSets({
+  const fallbackSrcSets = createResponsiveSrcSet({
     imageUrlTemplate: imageUrlTemplate?.replace('.webp', ''),
     mq,
     imageWidthSmall: 64,
     imageWidthLarge: 256,
+    srcSetSeparator: ', \n                          ',
   });
 
   const eventTrackingDataExtended = {

@@ -13,10 +13,10 @@ export interface SaveArticleButtonProps {
 const SAVE_ARTICLE_BUTTON_ID = 'save-article-button';
 
 const SaveArticleButton = (props: SaveArticleButtonProps) => {
-  const { isPersonalizationAvailable, isPersonalizationEnabled } =
+  const { isArticlePersonalizationAvailable, isArticlePersonalizationEnabled } =
     use(AccountContext);
 
-  if (!isPersonalizationAvailable) return null;
+  if (!isArticlePersonalizationAvailable) return null;
 
   return (
     <ErrorBoundary componentName="SaveArticleButton">
@@ -24,7 +24,7 @@ const SaveArticleButton = (props: SaveArticleButtonProps) => {
         <style>{`#${SAVE_ARTICLE_BUTTON_ID} { display: none; }`}</style>
       </noscript>
       <div css={styles.buttonWrapper} id={SAVE_ARTICLE_BUTTON_ID}>
-        {isPersonalizationEnabled ? (
+        {isArticlePersonalizationEnabled ? (
           <SaveArticleButtonAuthenticated {...props} />
         ) : (
           <SaveArticleButtonGuest />

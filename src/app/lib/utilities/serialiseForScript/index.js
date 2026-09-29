@@ -8,4 +8,12 @@
 // See also:
 // https://html.spec.whatwg.org/multipage/scripting.html#restrictions-for-contents-of-script-elements
 
-export default obj => obj && JSON.stringify(obj).replace(/</g, '\\u003c');
+export default obj => {
+  if (!obj) return obj;
+
+  const serialised = JSON.stringify(obj);
+
+  return serialised === undefined
+    ? undefined
+    : serialised.replace(/</g, '\\u003c');
+};
