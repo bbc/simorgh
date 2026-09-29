@@ -1,7 +1,10 @@
 import { useTheme } from '@emotion/react';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
-import { createResponsiveSrcSet } from '#app/utilities/imageSrcSets';
+import {
+  createResponsiveSrcSet,
+  MULTILINE_SRCSET_SEPARATOR,
+} from '#app/utilities/imageSrcSets';
 import Paragraph from '../Paragraph';
 import Image from '../Image';
 import styles from './index.styles';
@@ -47,8 +50,7 @@ const MessageBanner = ({
     mq,
     imageWidthSmall: styles.IMAGE_WIDTH,
     imageWidthLarge: styles.IMAGE_WIDTH_GROUP_3_MIN_WIDTH,
-    // Preserves the exact multiline srcSet formatting this banner rendered before the shared utility.
-    srcSetSeparator: ', \n                          ',
+    srcSetSeparator: MULTILINE_SRCSET_SEPARATOR,
   });
 
   return (
