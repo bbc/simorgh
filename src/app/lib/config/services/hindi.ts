@@ -139,7 +139,7 @@ export const service: DefaultServiceConfig = {
         linkText: 'Google पर पसंदीदा स्रोत के रूप में जोड़ें',
       },
       saveArticleButton: {
-        loading: 'पेज खुल रहा है',
+        loading: 'लोड हो रहा है',
         save: 'बाद में पढ़ने के लिए सेव करें',
         saving: 'सेव हो रहा है',
         saved: 'माई न्यूज़ में सेव किया गया है',
