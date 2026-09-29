@@ -5,6 +5,7 @@ import isLiveEnv from '#lib/utilities/isLive';
 import { Services, Toggles } from '#app/models/types/global';
 import getCspTier from './getCspTier';
 import createNonce from './createNonce';
+import { setRequestNonce } from './requestNonce';
 
 const LOCALHOST_DOMAINS = ['localhost', '127.0.0.1'];
 
@@ -63,6 +64,8 @@ const addCspHeader = ({
 
   const nonce = cspTier === 'nonce' ? createNonce() : null;
 
+  setRequestNonce(ctx.req, nonce);
+
   const { directives } = cspDirectives({
     isAmp,
     isLive,
@@ -90,6 +93,7 @@ const addCspHeader = ({
     }),
   );
 
+  // The nonce tier ships its policy as a meta tag (httpEquiv="Content-Security-Policy) instead
   if (!nonce) {
     ctx.res?.setHeader(
       'Content-Security-Policy',

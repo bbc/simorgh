@@ -36,7 +36,7 @@ import litePageTransforms from '../renderers/litePageTransforms';
 import LiteRenderer from '../renderers/LiteRenderer';
 import AmpRenderer from '../renderers/AmpRenderer';
 import derivePageType from '../utilities/derivePageType';
-import getNonceFromCspHeader from '../utilities/addCspHeader/getNonceFromCspHeader';
+import { getRequestNonce } from '../utilities/addCspHeader/requestNonce';
 import addNonceToReactFizzScripts from '../utilities/addNonceToReactFizzScripts';
 
 type DocProps = {
@@ -75,7 +75,7 @@ export default class AppDocument extends Document<DocProps> {
 
     const initialProps = await Document.getInitialProps(ctx);
 
-    const nonce = getNonceFromCspHeader(ctx.res);
+    const nonce = getRequestNonce(ctx.req);
     initialProps.html = addNonceToReactFizzScripts(initialProps.html, nonce);
 
     if (isLite) {

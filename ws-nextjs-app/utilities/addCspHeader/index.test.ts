@@ -1,5 +1,6 @@
 import { NextPageContext } from 'next/types';
 import addCspHeader from '.';
+import { getRequestNonce } from './requestNonce';
 
 const MOCK_NONCE = 'mock-nonce';
 
@@ -163,7 +164,7 @@ describe('CSP tiers', () => {
   it('adds the nonce to script-src when the country is in the adsNonce allow list', () => {
     const ctx = createDocumentContext('/pidgin/live/c7p765ynk9qt');
 
-    const { nonce } = addCspHeader({
+    const { nonce, cspHeader } = addCspHeader({
       ctx,
       service: 'pidgin',
       toggles: {
@@ -175,7 +176,25 @@ describe('CSP tiers', () => {
     });
 
     expect(nonce).toBe(MOCK_NONCE);
-    expect(getCspHeader(ctx)).toContain(`'nonce-${MOCK_NONCE}'`);
+    expect(cspHeader).toContain(`'nonce-${MOCK_NONCE}'`);
+  });
+
+  it('omits the CSP response header on the nonce tier, passing the nonce on the request instead', () => {
+    const ctx = createDocumentContext('/pidgin/live/c7p765ynk9qt');
+
+    addCspHeader({
+      ctx,
+      service: 'pidgin',
+      toggles: {
+        ads: { enabled: true },
+        adsNonce: { enabled: true, value: 'ke' },
+      },
+      country: 'ke',
+      showAdsBasedOnLocation: true,
+    });
+
+    expect(getCspHeader(ctx)).toBeUndefined();
+    expect(getRequestNonce(ctx.req)).toBe(MOCK_NONCE);
   });
 
   it('does not add a nonce on the strict or relaxed tiers', () => {
@@ -194,6 +213,7 @@ describe('CSP tiers', () => {
 
     expect(nonce).toBeNull();
     expect(getCspHeader(ctx)).not.toContain('nonce-');
+    expect(getRequestNonce(ctx.req)).toBeUndefined();
   });
 
   it('returns the CSP header value that was set on the response', () => {
