@@ -121,30 +121,25 @@ export default {
     css({
       border: `solid 0.0625rem ${palette.ERROR_CORE}`,
     }),
-  constrainedListCheckbox: () =>
-    css({
-      width: `${pixelsToRem(30)}rem`,
-      height: `${pixelsToRem(30)}rem`,
-    }),
-  radioButtonFieldset: () =>
+  constrainedListFieldset: () =>
     css({
       border: 0,
       margin: 0,
       padding: 0,
     }),
-  radioButtonOptions: ({ spacings }: Theme) =>
+  constrainedListOptions: ({ spacings }: Theme) =>
     css({
       display: 'flex',
       flexDirection: 'column',
       gap: `${spacings.DOUBLE}rem`,
     }),
-  radioButtonContainer: () =>
+  constrainedListContainer: () =>
     css({
       display: 'flex',
       flexWrap: 'nowrap',
       alignItems: 'flex-start',
     }),
-  radioButtonLabel: ({ spacings, fontSizes }: Theme) =>
+  constrainedListLabel: ({ spacings, fontSizes }: Theme) =>
     css({
       flex: 'auto',
       marginInlineStart: `${spacings.DOUBLE}rem`,

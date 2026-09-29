@@ -66,6 +66,6 @@ export const ClosedScreen = () => (
   <Component initialScreen="form" fixtureData={hausaClosedFormFixture} />
 );
 
-export const FormComplex = () => (
+export const FormWithMultipleSections = () => (
   <Component initialScreen="form" fixtureData={swahiliFormFixture} />
 );

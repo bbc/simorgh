@@ -34,7 +34,7 @@ export default ({
       <fieldset
         id={id}
         tabIndex={-1}
-        css={styles.radioButtonFieldset}
+        css={styles.constrainedListFieldset}
         {...(hasAttemptedSubmit && {
           ...(wasInvalid && { 'aria-invalid': !isValid }),
           ...(required && !isValid && { 'aria-required': required }),
@@ -48,12 +48,12 @@ export default ({
             __html: required ? label : `${label} (${optional})`,
           }}
         />
-        <div css={styles.radioButtonOptions}>
+        <div css={styles.constrainedListOptions}>
           {options.map((option, index) => {
             const optionId = `${id}-${index}`;
 
             return (
-              <div key={option.value} css={styles.radioButtonContainer}>
+              <div key={option.value} css={styles.constrainedListContainer}>
                 <input
                   css={[
                     styles.radioButton,
@@ -73,7 +73,7 @@ export default ({
                 <Text
                   as="label"
                   htmlFor={optionId}
-                  css={styles.radioButtonLabel}
+                  css={styles.constrainedListLabel}
                   dangerouslySetInnerHTML={{ __html: option.label }}
                 />
               </div>
