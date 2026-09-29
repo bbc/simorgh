@@ -4,12 +4,10 @@ import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import pick from 'ramda/src/pick';
 
+import { createIchefSrcSet } from '#app/utilities/imageSrcSets';
 import PromoTimestamp from '../../legacy/components/Promo/timestamp';
 import getOriginCode from '../../lib/utilities/imageSrcHelpers/originCode';
 import getLocator from '../../lib/utilities/imageSrcHelpers/locator';
-import buildIChefURL from '../../lib/utilities/ichefURL';
-
-import { createSrcsets } from '../../lib/utilities/srcSet';
 import { RequestContext } from '../../contexts/RequestContext';
 
 import styles from './styles';
@@ -43,18 +41,18 @@ const buildImageProperties = (imageProps?: ImageProps) => {
   const originCode = optimoOriginCode || getOriginCode(url);
   const locator = optimoLocator || getLocator(url);
 
-  const { primarySrcset, primaryMimeType, fallbackSrcset, fallbackMimeType } =
-    createSrcsets({
-      originCode,
-      locator,
-      originalImageWidth: width,
-      imageResolutions: [400],
-    });
-
-  const src = buildIChefURL({
+  const {
+    src,
+    primarySrcset,
+    primaryMimeType,
+    fallbackSrcset,
+    fallbackMimeType,
+  } = createIchefSrcSet({
     originCode,
     locator,
-    resolution: 400,
+    originalImageWidth: width,
+    imageResolutions: [400],
+    srcResolution: 400,
   });
 
   return {
