@@ -11,7 +11,10 @@ import { RequestContext } from '#app/contexts/RequestContext';
 import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
-import { createResponsiveSrcSet } from '#app/utilities/imageSrcSets';
+import {
+  createResponsiveSrcSet,
+  MULTILINE_SRCSET_SEPARATOR,
+} from '#app/utilities/imageSrcSets';
 import { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import styles from './index.styles';
@@ -88,7 +91,7 @@ export default ({
     mq,
     imageWidthSmall: 64,
     imageWidthLarge: 256,
-    srcSetSeparator: ', \n                          ',
+    srcSetSeparator: MULTILINE_SRCSET_SEPARATOR,
   });
 
   const fallbackSrcSets = createResponsiveSrcSet({
@@ -96,7 +99,7 @@ export default ({
     mq,
     imageWidthSmall: 64,
     imageWidthLarge: 256,
-    srcSetSeparator: ', \n                          ',
+    srcSetSeparator: MULTILINE_SRCSET_SEPARATOR,
   });
 
   const eventTrackingDataExtended = {
