@@ -107,7 +107,7 @@ Use the lower-level `theme.fontSizes-gel-font-size(<scale>)` or `theme.fontVaria
 
 #### Runtime typography (size/variant known only from props)
 
-Sass mixin arguments must be compile-time literals, so `typography-from-scale-and-variant` cannot take a variable. When `size` and/or `fontVariant` are component props, use the paired runtime API instead:
+Sass mixin arguments are resolved at compile time, so `typography-from-scale-and-variant` cannot consume values supplied by component props at runtime. When `size` and/or `fontVariant` are component props, use the paired runtime API instead:
 
 ```tsx
 import { getTypographyCustomProperties } from '#app/components/ThemeProviderSCSSModules/typography';
