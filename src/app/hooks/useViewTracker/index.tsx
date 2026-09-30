@@ -13,7 +13,9 @@ import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import constructReverbUrl from '#app/lib/analyticsUtils/staticATITracking/constructReverbUrl';
 import useTrackingToggle from '../useTrackingToggle';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import dispatchTrackingRequests from '../../lib/analyticsUtils/dispatchTrackingRequests';
+import dispatchTrackingRequests, {
+  shouldDispatchEventBeacon,
+} from '../../lib/analyticsUtils/dispatchTrackingRequests';
 import getIntersectionObserver from './getIntersectionObserver';
 // Temporary Resonance dual-run (see ticket) - safe to remove as a unit once Reverb is retired.
 import buildResonanceEventConfig from '../../components/ATIAnalytics/resonance/buildResonanceEventConfig';
@@ -102,23 +104,38 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
 
         // Temporary Resonance dual-run, independent of the Reverb dispatch above (see ticket).
         if (resonanceEnabled) {
-          dispatchViewabilityEvent(
-            buildResonanceEventConfig({
-              pageIdentifier,
-              campaignID,
-              componentName,
-              producerName,
-              type: VIEW_EVENT,
-              url,
-              experimentName,
-              experimentVariant,
-              itemTracker,
-              groupTracker,
-              viewThreshold,
-              platform,
-              isSignedIn,
-            }),
-          );
+          const shouldSendResonanceEvent = shouldDispatchEventBeacon({
+            campaignID,
+            componentName,
+            pageIdentifier,
+            platform,
+            producerId,
+            producerName,
+            service,
+            statsDestination,
+            trackingIsEnabled,
+            eventSent,
+            alwaysInView,
+          });
+          if (shouldSendResonanceEvent) {
+            dispatchViewabilityEvent(
+              buildResonanceEventConfig({
+                pageIdentifier,
+                campaignID,
+                componentName,
+                producerName,
+                type: VIEW_EVENT,
+                url,
+                experimentName,
+                experimentVariant,
+                itemTracker,
+                groupTracker,
+                viewThreshold,
+                platform,
+                isSignedIn,
+              }),
+            );
+          }
         }
 
         if (!alwaysInView) {
