@@ -101,7 +101,7 @@ export const RadioButtonList = () => (
   />
 );
 
-export const CheckButtonList = () => (
+export const CheckBoxList = () => (
   <Component
     id={fieldsData4[0].id}
     htmlType="checkbox"
