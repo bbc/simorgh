@@ -13,8 +13,13 @@ import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import constructReverbUrl from '#app/lib/analyticsUtils/staticATITracking/constructReverbUrl';
 import useTrackingToggle from '../useTrackingToggle';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import dispatchTrackingRequests from '../../lib/analyticsUtils/dispatchTrackingRequests';
+import dispatchTrackingRequests, {
+  shouldDispatchEventBeacon,
+} from '../../lib/analyticsUtils/dispatchTrackingRequests';
 import getIntersectionObserver from './getIntersectionObserver';
+// Temporary Resonance dual-run (see ticket) - safe to remove as a unit once Reverb is retired.
+import buildResonanceEventConfig from '../../components/ATIAnalytics/resonance/buildResonanceEventConfig';
+import dispatchViewabilityEvent from '../../components/ATIAnalytics/resonance/dispatchResonanceEvent';
 
 const VIEWED_DURATION_MS = 1000;
 
@@ -44,7 +49,6 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     eventTrackingData,
     eventType: VIEW_EVENT,
   });
-
   const { optimizely } = use(OptimizelyContext);
 
   const observer = useRef(null);
@@ -54,7 +58,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
   const [eventSent, setEventSent] = useState(false);
   const { trackingIsEnabled } = useTrackingToggle(componentName);
 
-  const { service } = use(ServiceContext);
+  const { service, resonanceEnabled } = use(ServiceContext);
 
   useEffect(() => {
     if (componentHasComeIntoView && !timer.current) {
@@ -98,6 +102,42 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
           },
         });
 
+        // Temporary Resonance dual-run, independent of the Reverb dispatch above (see ticket).
+        if (resonanceEnabled) {
+          const shouldSendResonanceEvent = shouldDispatchEventBeacon({
+            campaignID,
+            componentName,
+            pageIdentifier,
+            platform,
+            producerId,
+            producerName,
+            service,
+            statsDestination,
+            trackingIsEnabled,
+            eventSent,
+            alwaysInView,
+          });
+          if (shouldSendResonanceEvent) {
+            dispatchViewabilityEvent(
+              buildResonanceEventConfig({
+                pageIdentifier,
+                campaignID,
+                componentName,
+                producerName,
+                type: VIEW_EVENT,
+                url,
+                experimentName,
+                experimentVariant,
+                itemTracker,
+                groupTracker,
+                viewThreshold,
+                platform,
+                isSignedIn,
+              }),
+            );
+          }
+        }
+
         if (!alwaysInView) {
           setEventSent(true);
 
@@ -127,6 +167,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     producerId,
     producerName,
     service,
+    resonanceEnabled,
     statsDestination,
     trackingIsEnabled,
     eventSent,
@@ -142,8 +183,8 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     alwaysInView,
     isSignedIn,
     hashedId,
+    viewThreshold,
   ]);
-
   const viewTracker = useCallback(
     async (element: HTMLElement) => {
       const shouldSetupIntersectionObserver = alwaysInView
