@@ -159,95 +159,54 @@ test.describe('onDemandTV', () => {
     const testLabel = `${baseURL}${testSuite.path}`;
 
     test.describe(testLabel, () => {
-      test.describe(
-        `Tests for ${testSuite.service} onDemandTV${isLite ? ' - isLite' : ''}`,
-        () => {
-          test('should return a 200 status code', async ({ request }) => {
+      test.describe(`Tests for ${testSuite.service} onDemandTV${isLite ? ' - isLite' : ''}`, () => {
+        test('should return a 200 status code', async ({ request }) => {
+          test.skip(
+            !shouldRunForEnv(testSuite.runForEnv),
+            `Skipped for APP_ENV=${appEnvFromProcess}`,
+          );
+
+          await assert200HtmlResponse({
+            request,
+            path: testSuite.path,
+            baseURL,
+          });
+        });
+
+        if (!isLite) {
+          test('should render a valid media player', async ({ page }) => {
             test.skip(
               !shouldRunForEnv(testSuite.runForEnv),
               `Skipped for APP_ENV=${appEnvFromProcess}`,
             );
 
-            await assert200HtmlResponse({
-              request,
-              path: testSuite.path,
-              baseURL,
+            await page.goto(`${baseURL}${testSuite.path}`, {
+              waitUntil: 'domcontentloaded',
             });
+
+            const pageData = await getOnDemandTVPageData(page);
+            test.skip(
+              !getEpisodeAvailability(pageData),
+              `Episode is not available: ${testSuite.path}`,
+            );
+
+            await expect(
+              page.locator('[data-e2e="media-loader__container"]'),
+            ).toBeVisible();
+
+            const placeholderImage = page.locator(
+              '[data-e2e="media-loader__placeholder"] div img',
+            );
+
+            await expect(placeholderImage).toBeVisible();
+            const src = await placeholderImage.getAttribute('src');
+            const expectedSrc = videoPlaceholderImageUrl(pageData);
+
+            expect(src).toBeTruthy();
+            expect(src).toBe(expectedSrc);
           });
 
-          if (!isLite) {
-            test('should render a valid media player', async ({ page }) => {
-              test.skip(
-                !shouldRunForEnv(testSuite.runForEnv),
-                `Skipped for APP_ENV=${appEnvFromProcess}`,
-              );
-
-              await page.goto(`${baseURL}${testSuite.path}`, {
-                waitUntil: 'domcontentloaded',
-              });
-
-              const pageData = await getOnDemandTVPageData(page);
-              test.skip(
-                !getEpisodeAvailability(pageData),
-                `Episode is not available: ${testSuite.path}`,
-              );
-
-              await expect(
-                page.locator('[data-e2e="media-loader__container"]'),
-              ).toBeVisible();
-
-              const placeholderImage = page.locator(
-                '[data-e2e="media-loader__placeholder"] div img',
-              );
-
-              await expect(placeholderImage).toBeVisible();
-              const src = await placeholderImage.getAttribute('src');
-              const expectedSrc = videoPlaceholderImageUrl(pageData);
-
-              expect(src).toBeTruthy();
-              expect(src).toBe(expectedSrc);
-            });
-
-            test('should have a script with src value set to chartbeat source', async ({
-              page,
-            }) => {
-              test.skip(
-                !shouldRunForEnv(testSuite.runForEnv),
-                `Skipped for APP_ENV=${appEnvFromProcess}`,
-              );
-
-              await page.goto(`${baseURL}${testSuite.path}`, {
-                waitUntil: 'domcontentloaded',
-              });
-
-              await expect(
-                page.locator(
-                  'script[src="https://static.chartbeat.com/js/chartbeat.js"]',
-                ),
-              ).toHaveCount(1);
-            });
-
-            test('should have chartbeat config set to window object', async ({
-              page,
-            }) => {
-              test.skip(
-                !shouldRunForEnv(testSuite.runForEnv),
-                `Skipped for APP_ENV=${appEnvFromProcess}`,
-              );
-
-              await page.goto(`${baseURL}${testSuite.path}`, {
-                waitUntil: 'domcontentloaded',
-              });
-
-              const hasChartbeatConfig = await page.evaluate(
-                () => !!(window as OnDemandTVWindow)._sf_async_config,
-              );
-
-              expect(hasChartbeatConfig).toBe(true);
-            });
-          }
-
-          test('should be displayed if the toggle is on, and shows the expected number of items', async ({
+          test('should have a script with src value set to chartbeat source', async ({
             page,
           }) => {
             test.skip(
@@ -255,150 +214,196 @@ test.describe('onDemandTV', () => {
               `Skipped for APP_ENV=${appEnvFromProcess}`,
             );
 
-            const toggles = await getOnDemandTVServiceToggles(testSuite.service);
-            const recentEpisodesEnabled = toggles?.recentVideoEpisodes?.enabled;
+            await page.goto(`${baseURL}${testSuite.path}`, {
+              waitUntil: 'domcontentloaded',
+            });
 
-            const recentEpisodesMaxNumber = parseInt(
-              String(toggles?.recentVideoEpisodes?.value ?? '0'),
-              10,
+            await expect(
+              page.locator(
+                'script[src="https://static.chartbeat.com/js/chartbeat.js"]',
+              ),
+            ).toHaveCount(1);
+          });
+
+          test('should have chartbeat config set to window object', async ({
+            page,
+          }) => {
+            test.skip(
+              !shouldRunForEnv(testSuite.runForEnv),
+              `Skipped for APP_ENV=${appEnvFromProcess}`,
             );
 
             await page.goto(`${baseURL}${testSuite.path}`, {
               waitUntil: 'domcontentloaded',
             });
 
-            const recentEpisodesList = page.locator(
-              '[data-e2e="recent-episodes-list"]',
+            const hasChartbeatConfig = await page.evaluate(
+              () => !!(window as OnDemandTVWindow)._sf_async_config,
             );
 
-            // More than one episode expected
-            if (recentEpisodesEnabled) {
-              const pageData = await getOnDemandTVPageData(page);
-              const recentEpisodes = pageData?.recentEpisodes;
+            expect(hasChartbeatConfig).toBe(true);
+          });
+        }
 
-              if (
-                (recentEpisodes?.length ?? 0) > 1 &&
-                recentEpisodesMaxNumber > 1
-              ) {
-                await expect(recentEpisodesList).toBeVisible();
+        test('should be displayed if the toggle is on, and shows the expected number of items', async ({
+          page,
+        }) => {
+          test.skip(
+            !shouldRunForEnv(testSuite.runForEnv),
+            `Skipped for APP_ENV=${appEnvFromProcess}`,
+          );
 
-                const renderedCount = await recentEpisodesList
-                  .locator('[data-e2e="recent-episodes-list-item"]')
-                  .count();
+          const toggles = await getOnDemandTVServiceToggles(testSuite.service);
+          const recentEpisodesEnabled = toggles?.recentVideoEpisodes?.enabled;
 
-                expect(renderedCount).toBeLessThanOrEqual(recentEpisodesMaxNumber);
-                return;
-              }
+          const recentEpisodesMaxNumber = parseInt(
+            String(toggles?.recentVideoEpisodes?.value ?? '0'),
+            10,
+          );
 
-              return;
+          await page.goto(`${baseURL}${testSuite.path}`, {
+            waitUntil: 'domcontentloaded',
+          });
+
+          const recentEpisodesList = page.locator(
+            '[data-e2e="recent-episodes-list"]',
+          );
+
+          // More than one episode expected
+          if (recentEpisodesEnabled) {
+            const pageData = await getOnDemandTVPageData(page);
+            const recentEpisodes = pageData?.recentEpisodes;
+
+            if (
+              (recentEpisodes?.length ?? 0) > 1 &&
+              recentEpisodesMaxNumber > 1
+            ) {
+              await expect(recentEpisodesList).toBeVisible();
+
+              const renderedCount = await recentEpisodesList
+                .locator('[data-e2e="recent-episodes-list-item"]')
+                .count();
+
+              expect(renderedCount).toBeLessThanOrEqual(
+                recentEpisodesMaxNumber,
+              );
+            } else {
+              await expect(recentEpisodesList).not.toBeVisible();
+              await expect(recentEpisodesList).toHaveCount(0);
             }
+          }
 
-            // Not toggled on for this service
-            else{
-                await expect(recentEpisodesList).not.toBeVisible();
-                await expect(recentEpisodesList).toHaveCount(0);
+          // Not toggled on for this service
+          else {
+            await expect(recentEpisodesList).not.toBeVisible();
+            await expect(recentEpisodesList).toHaveCount(0);
+          }
+        });
+
+        if (!isLite) {
+          test('should have a noscript img tag with the ati url', async ({
+            page,
+          }) => {
+            test.skip(
+              !shouldRunForEnv(testSuite.runForEnv) || !process.env.SMOKE,
+              `Skipped for APP_ENV=${appEnvFromProcess}`,
+            );
+
+            const { atiUrl } = getATIUrls(appEnvFromProcess);
+
+            await page.goto(`${baseURL}${testSuite.path}`, {
+              waitUntil: 'domcontentloaded',
+            });
+
+            const noScriptText = await page
+              .locator('noscript[id="analytics-noscript"]')
+              .textContent();
+
+            if (noScriptText) {
+              expect(noScriptText).toContain(
+                `<img height="1px" width="1px" alt="" style="position:absolute" src="${atiUrl}`,
+              );
             }
           });
 
-          if (!isLite) {
-            test('should have a noscript img tag with the ati url', async ({
+          test('should show two tier navigation on desktop', async ({
+            page,
+          }) => {
+            test.skip(
+              !shouldRunForEnv(testSuite.runForEnv) ||
+                !shouldTestTwoTierNav(testSuite.service),
+              `Skipped for APP_ENV=${appEnvFromProcess}`,
+            );
+
+            await page.goto(`${baseURL}${testSuite.path}`, {
+              waitUntil: 'domcontentloaded',
+            });
+
+            await assertTwoTierNavigation({
               page,
-            }) => {
-              test.skip(
-                !shouldRunForEnv(testSuite.runForEnv) || !process.env.SMOKE,
-                `Skipped for APP_ENV=${appEnvFromProcess}`,
-              );
+              viewport: { width: 1008, height: 900 },
+            });
+          });
 
-              const { atiUrl } = getATIUrls(appEnvFromProcess);
+          test('should show two tier navigation on mobile', async ({
+            page,
+          }) => {
+            test.skip(
+              !shouldRunForEnv(testSuite.runForEnv) ||
+                !shouldTestTwoTierNav(testSuite.service),
+              `Skipped for APP_ENV=${appEnvFromProcess}`,
+            );
 
-              await page.goto(`${baseURL}${testSuite.path}`, {
-                waitUntil: 'domcontentloaded',
-              });
-
-              const noScriptText = await page
-                .locator('noscript[id="analytics-noscript"]')
-                .textContent();
-
-              if (noScriptText) {
-                expect(noScriptText).toContain(
-                  `<img height="1px" width="1px" alt="" style="position:absolute" src="${atiUrl}`,
-                );
-              }
+            await page.goto(`${baseURL}${testSuite.path}`, {
+              waitUntil: 'domcontentloaded',
             });
 
-            test('should show two tier navigation on desktop', async ({ page }) => {
-              test.skip(
-                !shouldRunForEnv(testSuite.runForEnv) ||
-                  !shouldTestTwoTierNav(testSuite.service),
-                `Skipped for APP_ENV=${appEnvFromProcess}`,
-              );
-
-              await page.goto(`${baseURL}${testSuite.path}`, {
-                waitUntil: 'domcontentloaded',
-              });
-
-              await assertTwoTierNavigation({
-                page,
-                viewport: { width: 1008, height: 900 },
-              });
-            });
-
-            test('should show two tier navigation on mobile', async ({ page }) => {
-              test.skip(
-                !shouldRunForEnv(testSuite.runForEnv) ||
-                  !shouldTestTwoTierNav(testSuite.service),
-                `Skipped for APP_ENV=${appEnvFromProcess}`,
-              );
-
-              await page.goto(`${baseURL}${testSuite.path}`, {
-                waitUntil: 'domcontentloaded',
-              });
-
-              await assertTwoTierNavigation({
-                page,
-                viewport: { width: 320, height: 480 },
-              });
-            });
-
-            test('dropdown menu should open and close when the menu button is clicked', async ({
+            await assertTwoTierNavigation({
               page,
-            }) => {
-              test.skip(
-                !shouldRunForEnv(testSuite.runForEnv) ||
-                  !shouldTestTwoTierNav(testSuite.service),
-                `Skipped for APP_ENV=${appEnvFromProcess}`,
-              );
-
-              await page.setViewportSize({ width: 320, height: 480 });
-              await page.goto(`${baseURL}${testSuite.path}`, {
-                waitUntil: 'domcontentloaded',
-              });
-
-              const menuButton = page.locator('nav button[aria-expanded]').first();
-
-              await expect(
-                page.locator('nav [data-e2e="scrollable-nav"]'),
-              ).toBeVisible();
-              await expect(menuButton).toHaveAttribute('aria-expanded', 'false');
-              await expect(
-                page.locator('nav [data-e2e="dropdown-nav"] ul'),
-              ).not.toBeVisible();
-
-              await menuButton.click();
-              await expect(menuButton).toHaveAttribute('aria-expanded', 'true');
-              await expect(
-                page.locator('nav [data-e2e="dropdown-nav"] ul'),
-              ).toBeVisible();
-
-              await menuButton.click();
-              await expect(menuButton).toHaveAttribute('aria-expanded', 'false');
-              await expect(
-                page.locator('nav [data-e2e="dropdown-nav"] ul'),
-              ).not.toBeVisible();
+              viewport: { width: 320, height: 480 },
             });
-          }
-        },
-      );
+          });
+
+          test('dropdown menu should open and close when the menu button is clicked', async ({
+            page,
+          }) => {
+            test.skip(
+              !shouldRunForEnv(testSuite.runForEnv) ||
+                !shouldTestTwoTierNav(testSuite.service),
+              `Skipped for APP_ENV=${appEnvFromProcess}`,
+            );
+
+            await page.setViewportSize({ width: 320, height: 480 });
+            await page.goto(`${baseURL}${testSuite.path}`, {
+              waitUntil: 'domcontentloaded',
+            });
+
+            const menuButton = page
+              .locator('nav button[aria-expanded]')
+              .first();
+
+            await expect(
+              page.locator('nav [data-e2e="scrollable-nav"]'),
+            ).toBeVisible();
+            await expect(menuButton).toHaveAttribute('aria-expanded', 'false');
+            await expect(
+              page.locator('nav [data-e2e="dropdown-nav"] ul'),
+            ).not.toBeVisible();
+
+            await menuButton.click();
+            await expect(menuButton).toHaveAttribute('aria-expanded', 'true');
+            await expect(
+              page.locator('nav [data-e2e="dropdown-nav"] ul'),
+            ).toBeVisible();
+
+            await menuButton.click();
+            await expect(menuButton).toHaveAttribute('aria-expanded', 'false');
+            await expect(
+              page.locator('nav [data-e2e="dropdown-nav"] ul'),
+            ).not.toBeVisible();
+          });
+        }
+      });
     });
   });
 });
@@ -457,7 +462,9 @@ test.describe('onDemandTV ATI Analytics', () => {
           });
         }
 
-        if (testSuite.tests.includes('assertDropdownNavigationComponentClick')) {
+        if (
+          testSuite.tests.includes('assertDropdownNavigationComponentClick')
+        ) {
           test('should send a click event for the Dropdown Navigation component', async ({
             page,
           }) => {
@@ -515,9 +522,7 @@ test.describe('onDemandTV ATI Analytics Lite', () => {
           });
         }
 
-        if (
-          testSuite.tests.includes('assertDropdownNavigationComponentView')
-        ) {
+        if (testSuite.tests.includes('assertDropdownNavigationComponentView')) {
           test('should send a view event for the Dropdown Navigation component', async ({
             page,
           }) => {
@@ -546,7 +551,9 @@ test.describe('onDemandTV ATI Analytics Lite', () => {
         }
 
         if (
-          testSuite.tests.includes('assertLiteSiteSummaryComponentToMainSiteClick')
+          testSuite.tests.includes(
+            'assertLiteSiteSummaryComponentToMainSiteClick',
+          )
         ) {
           test('should send a click event for the Lite Site Summary component to main site link', async ({
             page,
