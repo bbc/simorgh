@@ -185,6 +185,7 @@ test.describe('onDemandTV', () => {
             });
 
             const pageData = await getOnDemandTVPageData(page);
+
             test.skip(
               !getEpisodeAvailability(pageData),
               `Episode is not available: ${testSuite.path}`,
@@ -271,25 +272,28 @@ test.describe('onDemandTV', () => {
 
           // More than one episode expected
           if (recentEpisodesEnabled) {
-            const pageData = await getOnDemandTVPageData(page);
-            const recentEpisodes = pageData?.recentEpisodes;
+            // Assertions are limited to Canonical where __NEXT_DATA__ is available
+            if (!isLite) {
+              const pageData = await getOnDemandTVPageData(page);
+              const recentEpisodes = pageData?.recentEpisodes;
 
-            if (
-              (recentEpisodes?.length ?? 0) > 1 &&
-              recentEpisodesMaxNumber > 1
-            ) {
-              await expect(recentEpisodesList).toBeVisible();
+              if (
+                (recentEpisodes?.length ?? 0) > 1 &&
+                recentEpisodesMaxNumber > 1
+              ) {
+                await expect(recentEpisodesList).toBeVisible();
 
-              const renderedCount = await recentEpisodesList
-                .locator('[data-e2e="recent-episodes-list-item"]')
-                .count();
+                const renderedCount = await recentEpisodesList
+                  .locator('[data-e2e="recent-episodes-list-item"]')
+                  .count();
 
-              expect(renderedCount).toBeLessThanOrEqual(
-                recentEpisodesMaxNumber,
-              );
-            } else {
-              await expect(recentEpisodesList).not.toBeVisible();
-              await expect(recentEpisodesList).toHaveCount(0);
+                expect(renderedCount).toBeLessThanOrEqual(
+                  recentEpisodesMaxNumber,
+                );
+              } else {
+                await expect(recentEpisodesList).not.toBeVisible();
+                await expect(recentEpisodesList).toHaveCount(0);
+              }
             }
           }
 
