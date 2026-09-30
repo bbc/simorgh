@@ -84,7 +84,7 @@ export default function FormScreen({
                 <div
                   // eslint-disable-next-line react/no-danger
                   dangerouslySetInnerHTML={{ __html: sectionText.description }}
-                  css={styles.description}
+                  css={[styles.description, styles.fieldsetDescription]}
                 />
               )}
             </legend>
@@ -112,7 +112,7 @@ export default function FormScreen({
         <div
           // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{ __html: description }}
-          css={styles.description}
+          css={[styles.description, styles.formDescription]}
         />
       )}
       <form onSubmit={handleSubmit} noValidate>

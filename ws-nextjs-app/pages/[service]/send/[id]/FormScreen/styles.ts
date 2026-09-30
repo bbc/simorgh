@@ -44,20 +44,25 @@ export default {
       padding: 0,
       width: '100%',
     }),
-  description: ({ palette, spacings, fontVariants, fontSizes, mq }: Theme) =>
+  description: ({ palette, fontVariants, fontSizes }: Theme) =>
+    css({
+      ...fontVariants.sansRegular,
+      ...fontSizes.bodyCopy,
+      p: { color: palette.BLACK },
+      a: { ...getInlineLinkStyles(palette), ...fontVariants.sansBold },
+    }),
+  formDescription: ({ palette, spacings, mq }: Theme) =>
     css({
       borderBottom: `${pixelsToRem(1)}rem solid ${palette.GREY_5}`,
       marginBottom: `${spacings.DOUBLE}rem`,
-
-      ...fontVariants.sansRegular,
-      ...fontSizes.bodyCopy,
-
       [mq.GROUP_2_MIN_WIDTH]: {
         paddingBottom: `${spacings.FULL}rem`,
         marginBottom: `${spacings.TRIPLE}rem`,
       },
-      p: { color: palette.BLACK },
-      a: { ...getInlineLinkStyles(palette), ...fontVariants.sansBold },
+    }),
+  fieldsetDescription: ({ spacings }: Theme) =>
+    css({
+      marginTop: `${spacings.DOUBLE}rem`,
     }),
   privacyNotice: ({ palette, fontVariants, fontSizes }: Theme) =>
     css({

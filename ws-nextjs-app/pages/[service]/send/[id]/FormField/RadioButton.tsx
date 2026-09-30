@@ -74,8 +74,9 @@ export default ({
                   as="label"
                   htmlFor={optionId}
                   css={styles.constrainedListLabel}
-                  dangerouslySetInnerHTML={{ __html: option.label }}
-                />
+                >
+                  {option.label}
+                </Text>
               </div>
             );
           })}
