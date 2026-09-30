@@ -27,6 +27,7 @@ import addOperaMiniClassScript from '#app/lib/utilities/addOperaMiniClassScript'
 import handleServerLogging from '#utilities/handleServerLogging';
 import getAmpLiteCss from '#utilities/getAmpLiteCss';
 import optimiseCssPrefixes from '#utilities/optimiseCssPrefixes';
+import mergeCssMediaQueries from '#utilities/mergeCssMediaQueries';
 import treeshakeCssCustomProperties from '#utilities/treeshakeCssCustomProperties';
 import trimFontFaceSourcesToWoff2 from '#utilities/trimFontFaceSourcesToWoff2';
 import setSimorghEnvVars from '#app/lib/utilities/setSimorghEnvVars';
@@ -52,9 +53,14 @@ type DocProps = {
   title: ReactElement;
 };
 
+// Merging runs last so it also folds any blocks the earlier steps rewrote.
 const optimiseInlineCss = (css: string, renderedHtml: string): string =>
-  optimiseCssPrefixes(
-    trimFontFaceSourcesToWoff2(treeshakeCssCustomProperties(css, renderedHtml)),
+  mergeCssMediaQueries(
+    optimiseCssPrefixes(
+      trimFontFaceSourcesToWoff2(
+        treeshakeCssCustomProperties(css, renderedHtml),
+      ),
+    ),
   );
 
 export default class AppDocument extends Document<DocProps> {

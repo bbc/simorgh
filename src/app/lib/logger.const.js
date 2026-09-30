@@ -100,6 +100,9 @@ const logCodes = {
 
   // AMP/Lite CSS vendor-prefix optimisation
   AMP_LITE_CSS_AUTOPREFIXER_ERROR: 'amp_lite_css_autoprefixer_error',
+
+  // AMP/Lite CSS media query merging
+  AMP_LITE_CSS_MEDIA_MERGE_ERROR: 'amp_lite_css_media_merge_error',
 };
 
 module.exports = logCodes;
