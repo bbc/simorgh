@@ -2,6 +2,7 @@ import { Theme } from '@emotion/react';
 import buildIChefURL from '#app/lib/utilities/ichefURL';
 
 const DEFAULT_RESOLUTIONS = [240, 320, 480, 624, 800];
+export const MULTILINE_SRCSET_SEPARATOR = ', \n                          ';
 
 type IchefSrcSetParams = {
   originCode?: string;
