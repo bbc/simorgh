@@ -7,8 +7,14 @@ const matchNames = (input: string, pattern: RegExp): string[] =>
     match => match[1],
   );
 
-const collectUsedProperties = (css: string): Set<string> => {
-  const used = new Set<string>(matchNames(css, CUSTOM_PROPERTY_USAGE));
+const collectUsedProperties = (
+  css: string,
+  usageSource: string,
+): Set<string> => {
+  const used = new Set<string>([
+    ...matchNames(css, CUSTOM_PROPERTY_USAGE),
+    ...matchNames(usageSource, CUSTOM_PROPERTY_USAGE),
+  ]);
 
   const declarationDependencies = new Map<string, string[]>();
   [...css.matchAll(ROOT_BLOCK)].forEach(([, body]) => {
@@ -35,8 +41,13 @@ const collectUsedProperties = (css: string): Set<string> => {
   return used;
 };
 
-const treeshakeCssCustomProperties = (css: string): string => {
-  const usedProperties = collectUsedProperties(css);
+// usageSource carries the rendered HTML so custom properties referenced only from
+// inline style attributes, such as runtime typography, are not treated as unused.
+const treeshakeCssCustomProperties = (
+  css: string,
+  usageSource = '',
+): string => {
+  const usedProperties = collectUsedProperties(css, usageSource);
 
   return css.replace(ROOT_BLOCK, (_match, body) => {
     const remainingBody = body.replace(
