@@ -24,7 +24,7 @@ Before converting, audit imports for missing dependencies. **If dependencies are
 ### @bbc/web-gel-foundations imports
 - `SPACING_*` → `theme.$spacings-*`
 - `GROUP_*` → `theme.$mediaQueries-group-*`
-- `fontScale*`, `fontStandard` → `theme.fontSizes-gel-font-size()` / `theme.fontVariants-gel-font-variant()`
+- `fontScale*` + `fontStandard` → `theme.typography-from-scale-and-variant(<scale>, '<variant>')` (use `getTypographyCustomProperties` + `theme.typography-from-custom-properties` instead when size/variant are runtime props — see [migrate-component-to-scss-modules](../migrate-component-to-scss-modules/SKILL.md#runtime-typography-sizevariant-known-only-from-props))
 - `createSize` → `theme.pixelsToRem-px-to-rem()`
 
 ## Step 2: Convert Styles
