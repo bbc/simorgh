@@ -11,6 +11,18 @@ moment.updateLocale('pt-br', {
     LLL: 'D MMMM YYYY [às] HH:mm',
     LLLL: 'dddd, D MMMM YYYY [às] HH:mm',
   },
+  calendar: {
+    sameDay: '[Hoje às] LT',
+    nextDay: '[Amanhã às] LT',
+    nextWeek: 'dddd [às] LT',
+    lastDay: '[Ontem às] LT',
+    lastWeek() {
+      return this.day() === 0 || this.day() === 6
+        ? '[Último] dddd [às] LT'
+        : '[Última] dddd [às] LT';
+    },
+    sameElse: 'L',
+  },
   relativeTime: {
     past: 'Há %s',
     m: '1 minuto',

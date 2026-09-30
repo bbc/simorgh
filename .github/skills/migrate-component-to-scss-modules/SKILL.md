@@ -93,15 +93,37 @@ Emotion values include the `@media` prefix; SCSS variables contain only the cond
 
 `GROUP_N_ONLY` and `GROUP_1_AND_GROUP_2` have no direct equivalent — compose min and max variables in a single query.
 
-### Font sizes
+### Typography
 
-`fontSizes[scale]` → `@include theme.fontSizes-gel-font-size(<scale>);` (unquoted). The mixin applies responsive `font-size` and `line-height` across breakpoint groups, so remove any manual `line-height` the Emotion styles set alongside it.
+When the Emotion style sets both a font size and variant, use the combined mixin:
+
+```scss
+@include theme.typography-from-scale-and-variant(<scale>, '<variant>');
+```
+
+The scale is unquoted and the variant is quoted kebab-case. The mixin emits the font family, style and weight together with responsive font size and line height. Remove any manual `line-height` the Emotion styles set alongside the GEL scale.
+
+Use the lower-level `theme.fontSizes-gel-font-size(<scale>)` or `theme.fontVariants-gel-font-variant('<variant>')` mixin only when the existing component intentionally sets one without the other.
+
+#### Runtime typography (size/variant known only from props)
+
+Sass mixin arguments are resolved at compile time, so `typography-from-scale-and-variant` cannot consume values supplied by component props at runtime. When `size` and/or `fontVariant` are component props, use the paired runtime API instead:
+
+```tsx
+import { getTypographyCustomProperties } from '#app/components/ThemeProviderSCSSModules/typography';
+
+<a className={styles.link} style={getTypographyCustomProperties({ size, fontVariant })} />;
+```
+
+```scss
+.link {
+  @include theme.typography-from-custom-properties;
+}
+```
+
+`getTypographyCustomProperties` writes inline `--gel-font-family`, `--gel-font-style`, `--gel-font-weight`, `--gel-font-size-group-{a,b,d}` and `--gel-line-height-group-{a,b,d}` custom properties from the runtime values; `typography-from-custom-properties` reads them back with `inherit` fallbacks. These runtime channel names are deliberately distinct from the static, variant-keyed theme tokens the compile-known mixin resolves directly (`--gel-font-variant-<variant>-font-family`, `--font-size-<scale>-group-{a,b,d}`) — see [typography.test.ts](../../../src/app/components/ThemeProviderSCSSModules/typography.test.ts) for the full static-vs-runtime contract.
 
 Valid scales: `atlas`, `elephant`, `imperial`, `royal`, `foolscap`, `canon`, `trafalgar`, `paragon`, `doublePica`, `greatPrimer`, `bodyCopy`, `pica`, `longPrimer`, `brevier`, `minion`.
-
-### Font variants
-
-`fontVariants[variant]` → `@include theme.fontVariants-gel-font-variant('<variant>');` (**quoted**, kebab-case).
 
 | Emotion | SCSS argument |
 |---|---|
@@ -228,7 +250,7 @@ Keep the code that maps prop values to custom-property values in one typed
 helper or at the component boundary. Do not repeat that mapping in both
 TypeScript and SCSS.
 
-See [src/app/components/InlineLink/index.module.scss](../../../src/app/components/InlineLink/index.module.scss) for a concrete compact CSS custom-property bridge: `size` and `fontVariant` are mapped by [typography.ts](../../../src/app/components/ThemeProviderSCSSModules/typography.ts) to inline `--gel-typography-*` values, which one responsive rule set consumes.
+See [src/app/components/InlineLink/index.module.scss](../../../src/app/components/InlineLink/index.module.scss) for a concrete compact CSS custom-property bridge: `size` and `fontVariant` are mapped by [typography.ts](../../../src/app/components/ThemeProviderSCSSModules/typography.ts) to inline `--gel-*` values, which one responsive rule set consumes via `theme.typography-from-custom-properties`.
 
 Keep the CSS small for every edition. If the component renders in AMP, measure
 the final inlined `style[amp-custom]` payload and keep the total below AMP's
