@@ -1,4 +1,5 @@
 import postcss, { AtRule, ChildNode, Rule } from 'postcss';
+import selectorParser from 'postcss-selector-parser';
 import nodeLogger from '#lib/logger.node';
 import logCodes from '#app/lib/logger.const';
 
@@ -29,13 +30,33 @@ const normaliseParams = (params: string) =>
     .trim();
 
 // Emotion (.css-<hash>, .emotion-N) and CSS Modules (.Name_key__hash).
-const HASHED_CLASS =
-  /\.(css-[a-z0-9]+|emotion-\d+|[A-Za-z][\w]*_[\w]+__[\w-]+)/;
+const HASHED_CLASS_NAME =
+  /^(?:css-[a-z0-9]+|emotion-\d+|[A-Za-z][\w]*_[\w]+__[\w-]+)$/;
+
+const isSafeSelectorNode = (node: selectorParser.Node): boolean => {
+  if (node.type === 'class') {
+    return HASHED_CLASS_NAME.test(node.value);
+  }
+
+  if (node.type === 'combinator') return true;
+
+  if (node.type === 'pseudo') {
+    return node.nodes.every(isSafeSelectorNode);
+  }
+
+  if (node.type === 'root' || node.type === 'selector') {
+    return node.nodes.every(isSafeSelectorNode);
+  }
+
+  return false;
+};
 
 const isHashedSelector = (selector: string) => {
-  const trimmed = selector.trim();
-  // A leading element name means the rule can match outside its component.
-  return HASHED_CLASS.test(trimmed) && !/^[a-z]/i.test(trimmed);
+  try {
+    return selectorParser().astSync(selector).nodes.every(isSafeSelectorNode);
+  } catch {
+    return false;
+  }
 };
 
 const isSafeToMove = (node: ChildNode): node is Rule =>

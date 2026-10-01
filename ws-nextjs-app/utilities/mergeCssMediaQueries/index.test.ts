@@ -45,11 +45,15 @@ describe('mergeCssMediaQueries', () => {
   });
 
   it.each`
-    selector          | reason
-    ${'body'}         | ${'bare element selector'}
-    ${'a.css-1a2b3c'} | ${'element-qualified selector'}
-    ${'html .a_x__1'} | ${'global ancestor selector'}
-    ${'.plain'}       | ${'unhashed class'}
+    selector                       | reason
+    ${'body'}                      | ${'bare element selector'}
+    ${'a.css-1a2b3c'}              | ${'element-qualified selector'}
+    ${'html .a_x__1'}              | ${'global ancestor selector'}
+    ${'.is-opera-mini .a_x__1'}    | ${'global class ancestor'}
+    ${'[data-is-dark-ui] .a_x__1'} | ${'global attribute ancestor'}
+    ${'.a_x__1 .plain'}            | ${'unhashed descendant class'}
+    ${'#global .a_x__1'}           | ${'global id ancestor'}
+    ${'* .a_x__1'}                 | ${'universal ancestor'}
   `(
     'leaves blocks containing a $reason unmerged',
     ({ selector }: { selector: string }) => {
@@ -68,6 +72,14 @@ describe('mergeCssMediaQueries', () => {
     const css =
       '@media (min-width:20rem){.css-1a2b3c{color:red}}' +
       '@media (min-width:20rem){.Promo_link__ab12{color:blue}}';
+
+    expect(mediaBlocks(mergeCssMediaQueries(css))).toBe(1);
+  });
+
+  it('allows hashed classes with safe pseudo-classes', () => {
+    const css =
+      '@media (min-width:20rem){.a_x__1:hover{color:red}}' +
+      '@media (min-width:20rem){.b_y__2:not(:visited){color:blue}}';
 
     expect(mediaBlocks(mergeCssMediaQueries(css))).toBe(1);
   });
