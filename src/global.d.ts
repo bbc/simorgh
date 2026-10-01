@@ -33,6 +33,7 @@ declare global {
     bbcuser: {
       getHashedId: () => Promise<string | null>;
       isSignedIn: () => Promise<boolean>;
+      isPersonalisationOn: () => Promise<boolean>;
     };
     __reverb: {
       __reverbLoadedPromise: Promise<ReverbClient>;
