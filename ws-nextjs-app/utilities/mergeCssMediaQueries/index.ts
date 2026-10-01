@@ -69,7 +69,7 @@ const mergeCssMediaQueries = (css: string): string => {
 
     return root.toString();
   } catch (e) {
-    logger.error(logCodes.AMP_LITE_CSS_MEDIA_MERGE_ERROR, {
+    logger.error(logCodes.AMP_LITE_CSS_MEDIA_QUERY_MERGE_ERROR, {
       message: e instanceof Error ? e.message : String(e),
       stack: e instanceof Error ? e.stack : undefined,
     });
