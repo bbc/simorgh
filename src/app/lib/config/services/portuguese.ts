@@ -111,6 +111,9 @@ export const service: DefaultServiceConfig = {
         moreAboutTopic: 'Mais sobre {topic}',
         fetchErrorMessage: 'Falha ao carregar. Tente novamente',
       },
+      googlePreferredSource: {
+        linkText: 'Adicionar como fonte preferida no Google',
+      },
       currentPage: 'Página atual',
       skipLinkText: 'Vá para o conteúdo',
       skipContent: {
