@@ -40,4 +40,33 @@ describe('treeshakeCssCustomProperties', () => {
       ':root{--a:1;}:root{--c:3}.x{width:var(--a)}.y{height:var(--c)}',
     );
   });
+
+  // Runtime typography sets --gel-font-family in an inline style attribute, so the
+  // only reference to the variant alias lives in the HTML, not in the CSS.
+  it('keeps font variant aliases referenced only from inline style attributes', () => {
+    const css = [
+      ":root{--serif-light-font-family:'ReithSerif';--sans-regular-font-family:'ReithSans'}",
+      ':root{--gel-font-variant-serif-light-font-family:var(--serif-light-font-family, var(--sans-regular-font-family, inherit))}',
+      '.InlineLink_self__abc{font-family:var(--gel-font-family, inherit)}',
+    ].join('');
+    const html =
+      '<a style="--gel-font-family:var(--gel-font-variant-serif-light-font-family, inherit)">Hello</a>';
+
+    const result = treeshakeCssCustomProperties(css, html);
+
+    expect(result).toContain('--gel-font-variant-serif-light-font-family');
+    expect(result).toContain("--serif-light-font-family:'ReithSerif'");
+  });
+
+  it('still removes font variant aliases that no inline style references', () => {
+    const css = [
+      ":root{--serif-light-font-family:'ReithSerif'}",
+      ':root{--gel-font-variant-serif-light-font-family:var(--serif-light-font-family, inherit)}',
+      '.InlineLink_self__abc{font-family:var(--gel-font-family, inherit)}',
+    ].join('');
+
+    expect(
+      treeshakeCssCustomProperties(css, '<a>No inline typography</a>'),
+    ).not.toContain('--gel-font-variant-serif-light-font-family');
+  });
 });
