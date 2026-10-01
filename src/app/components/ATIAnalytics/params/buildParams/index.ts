@@ -1,7 +1,7 @@
 import { LIBRARY_VERSION } from '../../../../lib/analyticsUtils';
 import {
   buildReverbAnalyticsModel,
-  buildResonanceAnalyticsModel,
+  buildResonancePageViewModel,
 } from '../../atiUrl';
 import { ATIDataWithContexts } from '../../types';
 
@@ -108,7 +108,7 @@ const buildPageResonanceParams = ({
   isSignedIn,
   hashedId,
 }: BuildPageParamsArgs) =>
-  buildResonanceAnalyticsModel(
+  buildResonancePageViewModel(
     buildPageATIParams({
       atiData,
       requestContext,

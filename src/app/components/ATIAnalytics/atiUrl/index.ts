@@ -32,7 +32,7 @@ import {
 
 const RESONANCE_MODE = { LIVE: 'live', TEST: 'test' } as const;
 
-export const buildResonanceAnalyticsModel = ({
+export const buildResonancePageViewModel = ({
   appName,
   contentId,
   contentType,

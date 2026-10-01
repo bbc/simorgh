@@ -37,8 +37,8 @@
     "test:unit:ci": "yarn test:unit:local --ci",
     "test:unit:watch": "yarn test:unit -- --watch",
     "test:unit:updatesnapshots": "NODE_OPTIONS=--experimental-vm-modules jest --updateSnapshot --silent=false --colors --testPathIgnorePatterns=\"src/integration/pages\" \"puppeteer\" \"ws-nextjs-app\"",
-    "test:integration": "NODE_OPTIONS=\"--experimental-vm-modules\" node ws-nextjs-app/integration/utils/runTests.ts",
-    "test:integration:updatesnapshots": "NODE_OPTIONS=\"--experimental-vm-modules\" node ws-nextjs-app/integration/utils/runTests.ts  --updateSnapshot",
+    "test:integration": "NODE_OPTIONS=\"--experimental-vm-modules --experimental-strip-types\" node ws-nextjs-app/integration/utils/runTests.ts",
+    "test:integration:updatesnapshots": "NODE_OPTIONS=\"--experimental-vm-modules --experimental-strip-types\" node ws-nextjs-app/integration/utils/runTests.ts --updateSnapshot",
     "test:linkey": "node scripts/linkeySetup.js && jest src/app/lib/config/services/*.test.js --verbose true; yarn test:linkey:cleanup",
     "test:linkey:cleanup": "find src/app/lib/config/services -type f -name '*.test.js' -delete",
     "updateMinorPatch": "rm -rf node_modules/ && yarn install && npm update && yarn install"
@@ -62,7 +62,8 @@
     "@types/react": "19.2.18",
     "js-yaml": "3.14.2",
     "on-headers": "1.1.0",
-    "react-is": "19"
+    "react-is": "19",
+    "moment": "2.31.0"
   },
   "dependencies": {
     "@bbc/resonance": "https://mybbc-analytics.files.bbci.co.uk/resonance/resonance-2.7.2.tgz",
@@ -83,14 +84,13 @@
     "jalaali-js": "1.2.8",
     "js-cookie": "3.0.7",
     "lru-cache": "11.2.7",
-    "moment": "2.30.1",
+    "moment": "2.31.0",
     "moment-timezone": "0.6.0",
     "ramda": "0.32.0",
     "react": "19.2.8",
     "react-dom": "19.2.8",
     "react-helmet": "6.1.0",
     "react-lazyload": "3.2.1",
-    "sharp": "0.35.4",
     "temporal-polyfill": "0.3.0",
     "undici": "8.10.2",
     "winston": "3.19.0"
