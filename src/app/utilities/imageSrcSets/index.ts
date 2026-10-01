@@ -1,5 +1,7 @@
 import { Theme } from '@emotion/react';
 import buildIChefURL from '#app/lib/utilities/ichefURL';
+import getOriginCode from '#app/lib/utilities/imageSrcHelpers/originCode';
+import getLocator from '#app/lib/utilities/imageSrcHelpers/locator';
 
 const DEFAULT_RESOLUTIONS = [240, 320, 480, 624, 800];
 export const MULTILINE_SRCSET_SEPARATOR = ', \n                          ';
@@ -10,6 +12,13 @@ type IchefSrcSetParams = {
   originalImageWidth: number;
   imageResolutions?: number[];
   srcResolution?: number;
+};
+
+type PrepareIchefImageParams = Pick<
+  IchefSrcSetParams,
+  'originalImageWidth' | 'imageResolutions' | 'srcResolution'
+> & {
+  imageUrlTemplate: string;
 };
 
 type PlaceholderSrcSetParams = Pick<
@@ -101,6 +110,24 @@ export const createIchefSrcSet = ({
     fallbackSrcset,
     fallbackMimeType: getMimeType(fallbackSrcset),
   };
+};
+
+// Derives the originCode/locator from an iChef template url before building the srcset
+export const prepareIchefImage = ({
+  imageUrlTemplate,
+  originalImageWidth,
+  imageResolutions,
+  srcResolution,
+}: PrepareIchefImageParams) => {
+  const url = imageUrlTemplate.split('{width}')[1];
+
+  return createIchefSrcSet({
+    originCode: getOriginCode(url),
+    locator: getLocator(url),
+    originalImageWidth,
+    imageResolutions,
+    srcResolution,
+  });
 };
 
 const defaultSizesBuilder = ({
