@@ -11,20 +11,20 @@ export default {
     css({
       marginBottom: `${spacings.FULL}rem`,
     }),
-  // electionBannerIframe:
-  //   ({ mobile, tablet, desktop }: Heights) =>
-  //   ({ mq }: Theme) =>
-  //     css({
-  //       border: 'none',
-  //       width: '100%',
-  //       height: `${pixelsToRem(mobile)}rem`,
-  //       [mq.GROUP_3_MIN_WIDTH]: {
-  //         height: `${pixelsToRem(tablet)}rem`,
-  //       },
-  //       [mq.GROUP_4_MIN_WIDTH]: {
-  //         height: `${pixelsToRem(desktop)}rem`,
-  //       },
-  //     }),
+  electionBannerIframe:
+    ({ mobile, tablet, desktop }: Heights) =>
+    ({ mq }: Theme) =>
+      css({
+        border: 'none',
+        width: '100%',
+        height: `${pixelsToRem(mobile)}rem`,
+        [mq.GROUP_3_MIN_WIDTH]: {
+          height: `${pixelsToRem(tablet)}rem`,
+        },
+        [mq.GROUP_4_MIN_WIDTH]: {
+          height: `${pixelsToRem(desktop)}rem`,
+        },
+      }),
   electionBannerIframeExtra:
     ({ mobile, tablet, desktop }: Heights) =>
     ({ mq }: Theme) =>

@@ -18,9 +18,15 @@ type ToggleType = {
   value: string | null;
 };
 
-const DEFAULT_HEIGHTS = {
-  desktop: 200,
-  tablet: 200,
+const DEFAULT_HEIGHTS_VJ = {
+  desktop: 350,
+  tablet: 320,
+  mobile: 315,
+};
+
+const DEFAULT_HEIGHTS_AP = {
+  desktop: 216,
+  tablet: 216,
   mobile: 315,
 };
 
@@ -35,10 +41,14 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
   if (isLite || !electionBanner) return null;
 
   const {
-    heights = DEFAULT_HEIGHTS,
+    // @ts-expect-error - need to type
+    heightsAp = DEFAULT_HEIGHTS_AP,
+    // @ts-expect-error - need to type
+    heightsVj = DEFAULT_HEIGHTS_VJ,
     iframeSrc,
     iframeDevSrc,
     electionThingIds,
+    assocPressIframeSrc,
   } = electionBanner;
 
   const isEditoriallySensitive = taggings?.some(({ value }) =>
@@ -60,14 +70,12 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
     SIMORGH_INCLUDES_BASE_AMP_URL,
   } = getEnvConfig();
 
-  const iframeSrcToUse = SIMORGH_APP_ENV === 'live' ? iframeSrc : iframeDevSrc;
-
-  if (isAmp) {
+  if (assocPressIframeSrc && isAmp) {
     return (
       <div
         data-testid="election-banner"
         // not minheight
-        css={styles.electionBannerWrapperAmp(heights)}
+        css={styles.electionBannerWrapperAmp(heightsAp)}
       >
         <AmpIframe
           ampMetadata={{
@@ -89,29 +97,66 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
     );
   }
 
+  if (assocPressIframeSrc && !isAmp) {
+    return (
+      <div
+        data-testid="election-banner"
+        css={styles.electionBannerWrapper}
+        // css={[styles.electionBannerWrapper, styles.electionBannerIframe(heights)]}
+      >
+        <iframe
+          className="ap-embed" // needed for script
+          title={validAboutTag.thingLabel}
+          // title="Live election results via the Associated Press"
+          // loading="lazy"
+          src={assocPressIframeSrc}
+          scrolling="no"
+          // css={styles.electionBannerIframe(heights)}
+          css={styles.electionBannerIframeExtra(heightsAp)} // minHeights
+          height={heightsAp.desktop}
+          width="100%"
+          // frameBorder="0"
+          // marginHeight="0"
+        />
+        <script
+          defer
+          src="https://interactives.apelections.org/election-results/assets/microsite/resizeClient.js"
+        />
+      </div>
+    );
+  }
+
+  const iframeSrcToUse = SIMORGH_APP_ENV === 'live' ? iframeSrc : iframeDevSrc;
+
+  if (isAmp) {
+    return (
+      <div
+        data-testid="election-banner"
+        css={styles.electionBannerWrapperAmp(heightsVj)}
+      >
+        <AmpIframe
+          ampMetadata={{
+            imageWidth: 1,
+            imageHeight: 1,
+            src: `${SIMORGH_INCLUDES_BASE_AMP_URL}/${iframeSrcToUse}/amp`,
+            image:
+              'https://news.files.bbci.co.uk/include/vjassets/img/app-launcher.png',
+            title: validAboutTag.thingLabel,
+          }}
+        />
+      </div>
+    );
+  }
+
   return (
-    <div
-      data-testid="election-banner"
-      css={styles.electionBannerWrapper}
-      // css={[styles.electionBannerWrapper, styles.electionBannerIframe(heights)]}
-    >
+    <div data-testid="election-banner" css={styles.electionBannerWrapper}>
       <iframe
-        className="ap-embed" // needed for script
         title={validAboutTag.thingLabel}
-        // title="Live election results via the Associated Press"
-        // loading="lazy"
-        src="https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/33021.html"
+        src={`${SIMORGH_INCLUDES_BASE_URL}/${iframeSrcToUse}`}
         scrolling="no"
-        // css={styles.electionBannerIframe(heights)}
-        css={styles.electionBannerIframeExtra(heights)} // minHeights
-        height={heights.desktop}
+        css={styles.electionBannerIframe(heightsVj)}
+        height={heightsVj.desktop}
         width="100%"
-        // frameBorder="0"
-        // marginHeight="0"
-      />
-      <script
-        defer
-        src="https://interactives.apelections.org/election-results/assets/microsite/resizeClient.js"
       />
     </div>
   );
