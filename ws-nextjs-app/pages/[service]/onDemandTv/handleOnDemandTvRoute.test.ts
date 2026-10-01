@@ -1,21 +1,12 @@
 import { GetServerSidePropsContext } from 'next';
 import onDemandTvJson from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn4.json';
 import { ToggleDefinition } from '#app/models/types/global';
-import * as isTest from '#app/lib/utilities/isTest';
 import * as getTogglesModule from '#app/lib/utilities/fetchToggles';
 import * as getPageDataModule from '../../../utilities/pageRequests/getPageData';
 import handleOnDemandTvRoute from './handleOnDemandTvRoute';
 
 jest.mock('../../../utilities/pageRequests/getPageData');
 jest.mock('#app/lib/utilities/fetchToggles');
-
-jest.mock('#app/lib/utilities/isTest', () => {
-  const originalModule = jest.requireActual('#app/lib/utilities/isTest');
-  return {
-    __esModule: true,
-    ...originalModule,
-  };
-});
 
 describe('handleOnDemandTvRoute', () => {
   const mockSetHeader = jest.fn();

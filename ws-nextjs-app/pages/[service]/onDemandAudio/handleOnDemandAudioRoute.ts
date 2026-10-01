@@ -8,7 +8,6 @@ import nodeLogger from '#lib/logger.node';
 import { ROUTING_INFORMATION } from '#app/lib/logger.const';
 import handleError from '#app/routes/utils/handleError';
 import fetchToggles from '#app/lib/utilities/fetchToggles';
-import isTest from '#app/lib/utilities/isTest';
 import getPodcastExternalLinks from './podcastExternalLinks';
 
 const logger = nodeLogger(__filename);
