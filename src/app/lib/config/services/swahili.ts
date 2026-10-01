@@ -87,6 +87,9 @@ export const service: DefaultServiceConfig = {
         moreAboutTopic: 'Zaidi kuhusu {topic}',
         fetchErrorMessage: 'Imeshindwa kupakia. Tafadhali jaribu tena',
       },
+      googlePreferredSource: {
+        linkText: 'Ongeza kama chanzo unachopendelea kwenye Google',
+      },
       continueReading: 'Soma zaidi',
       currentPage: 'Ukurasa uliopo ',
       skipLinkText: 'Ruka hadi maelezo',
