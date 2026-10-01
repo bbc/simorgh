@@ -37,6 +37,11 @@ declare global {
     };
     __reverb: {
       __reverbLoadedPromise: Promise<ReverbClient>;
+      __resolveReverbLoaded: (
+        value: ReverbClient | PromiseLike<ReverbClient>,
+      ) => void;
+      __rejectReverbLoaded: (reason?: any) => void;
+      __reverbTimeout: NodeJS.Timeout;
     };
     requirejs: (
       bumpVersion: string[],

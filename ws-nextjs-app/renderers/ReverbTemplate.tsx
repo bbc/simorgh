@@ -4,7 +4,7 @@ import addInlineScript from '#app/lib/utilities/addInlineScript';
 
 // eslint-disable-next-line func-names
 const reverbScaffold = function (envConfig: EnvConfig) {
-  window.__reverb = {};
+  window.__reverb = {} as Window['__reverb'];
 
   window.__reverb.__reverbLoadedPromise = new Promise((resolve, reject) => {
     window.__reverb.__resolveReverbLoaded = resolve;
