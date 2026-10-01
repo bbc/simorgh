@@ -19,8 +19,8 @@ type ToggleType = {
 };
 
 const DEFAULT_HEIGHTS = {
-  desktop: 350,
-  tablet: 320,
+  desktop: 200,
+  tablet: 200,
   mobile: 315,
 };
 
@@ -66,31 +66,52 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
     return (
       <div
         data-testid="election-banner"
+        // not minheight
         css={styles.electionBannerWrapperAmp(heights)}
       >
         <AmpIframe
           ampMetadata={{
             imageWidth: 1,
             imageHeight: 1,
-            src: `${SIMORGH_INCLUDES_BASE_AMP_URL}/${iframeSrcToUse}/amp`,
+            // might need /amp
+            src: `https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/33021.html`,
             image:
               'https://news.files.bbci.co.uk/include/vjassets/img/app-launcher.png',
             title: validAboutTag.thingLabel,
           }}
         />
+        {/* // not sure if this will work */}
+        {/* <script
+          defer
+          src="https://interactives.apelections.org/election-results/assets/microsite/resizeClient.js"
+        /> */}
       </div>
     );
   }
 
   return (
-    <div data-testid="election-banner" css={styles.electionBannerWrapper}>
+    <div
+      data-testid="election-banner"
+      css={styles.electionBannerWrapper}
+      // css={[styles.electionBannerWrapper, styles.electionBannerIframe(heights)]}
+    >
       <iframe
+        className="ap-embed" // needed for script
         title={validAboutTag.thingLabel}
-        src={`${SIMORGH_INCLUDES_BASE_URL}/${iframeSrcToUse}`}
+        // title="Live election results via the Associated Press"
+        // loading="lazy"
+        src="https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/33021.html"
         scrolling="no"
-        css={styles.electionBannerIframe(heights)}
+        // css={styles.electionBannerIframe(heights)}
+        css={styles.electionBannerIframeExtra(heights)} // minHeights
         height={heights.desktop}
         width="100%"
+        // frameBorder="0"
+        // marginHeight="0"
+      />
+      <script
+        defer
+        src="https://interactives.apelections.org/election-results/assets/microsite/resizeClient.js"
       />
     </div>
   );
