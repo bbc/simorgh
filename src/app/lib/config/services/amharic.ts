@@ -81,6 +81,9 @@ export const service: DefaultServiceConfig = {
         moreAboutTopic: 'ስለ {topic} ተጨማሪ',
         fetchErrorMessage: 'መጫን አልተሳካም። እባክዎ እንደገና ይሞክሩ',
       },
+      googlePreferredSource: {
+        linkText: 'በGoogle ላይ እንደ ተመራጭ ያክሉ',
+      },
       currentPage: 'መነሻ ገፅ',
       skipLinkText: 'ወደ ዋናው ይዘት ይለፉ',
       skipContent: {
