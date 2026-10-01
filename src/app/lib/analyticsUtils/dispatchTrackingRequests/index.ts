@@ -33,7 +33,7 @@ type ViewTrackerRequestsParameters = {
   };
 };
 
-const shouldDispatchEventBeacon = ({
+export const shouldDispatchEventBeacon = ({
   campaignID,
   componentName,
   pageIdentifier,
