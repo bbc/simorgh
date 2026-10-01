@@ -51,9 +51,16 @@ const isSafeSelectorNode = (node: selectorParser.Node): boolean => {
   return false;
 };
 
+const isSafeSelector = (node: selectorParser.Node): boolean =>
+  node.type === 'selector' &&
+  node.nodes.some(
+    child => child.type === 'class' && HASHED_CLASS_NAME.test(child.value),
+  ) &&
+  isSafeSelectorNode(node);
+
 const isHashedSelector = (selector: string) => {
   try {
-    return selectorParser().astSync(selector).nodes.every(isSafeSelectorNode);
+    return selectorParser().astSync(selector).nodes.every(isSafeSelector);
   } catch {
     return false;
   }

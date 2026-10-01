@@ -54,6 +54,10 @@ describe('mergeCssMediaQueries', () => {
     ${'.a_x__1 .plain'}            | ${'unhashed descendant class'}
     ${'#global .a_x__1'}           | ${'global id ancestor'}
     ${'* .a_x__1'}                 | ${'universal ancestor'}
+    ${':root'}                     | ${'standalone root pseudo'}
+    ${':hover'}                    | ${'standalone state pseudo'}
+    ${'::before'}                  | ${'standalone pseudo-element'}
+    ${':not(.a_x__1)'}             | ${'pseudo without direct hashed class'}
   `(
     'leaves blocks containing a $reason unmerged',
     ({ selector }: { selector: string }) => {
