@@ -42,6 +42,11 @@ const canonicalTestSuites: OnDemandTVTestSuite[] = [
     runForEnv: ['local', 'test', 'live'],
   },
   {
+    path: '/afrique/bbc_afrique_tv/tv_programmes/w13xttpz',
+    service: 'afrique',
+    runForEnv: ['local'],
+  },
+  {
     path: '/afrique/bbc_afrique_tv/tv/w172xtjgc2szrpv',
     service: 'afrique',
     runForEnv: ['test', 'live'],
