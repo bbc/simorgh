@@ -16,6 +16,12 @@ if (Cypress.env('APP_ENV') === 'local') {
 
 const testSuites = [
   {
+    path: '/hindi/watch/c0469479x9xo',
+    runforEnv: ['local', 'test'],
+    service: 'hindi',
+    tests: [...canonicalTests],
+  },
+  {
     path: '/tamil/watch/c36l16ny6klo',
     runforEnv: ['local', 'live'],
     service: 'tamil',
