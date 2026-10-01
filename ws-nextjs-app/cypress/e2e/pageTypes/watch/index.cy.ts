@@ -16,10 +16,28 @@ if (Cypress.env('APP_ENV') === 'local') {
 
 const testSuites = [
   {
-    path: '/hindi/watch/c0469479x9xo',
-    runforEnv: ['local', 'test'],
+    path: '/hindi/watch/cw1ldl595v1yo',
+    runforEnv: ['local'],
     service: 'hindi',
-    tests: [...canonicalTests],
+    tests: [testsForAllPages, testsForAllCanonicalPages],
+  },
+  {
+    path: '/punjabi/watch/cy9dkd8l9lrdo',
+    runforEnv: ['local'],
+    service: 'punjabi',
+    tests: [testsForAllPages, testsForAllCanonicalPages],
+  },
+  {
+    path: '/telugu/watch/c7k9x9jzg39jo',
+    runforEnv: ['local'],
+    service: 'telugu',
+    tests: [testsForAllPages, testsForAllCanonicalPages],
+  },
+  {
+    path: '/urdu/watch/c463r38dp7qeo',
+    runforEnv: ['local'],
+    service: 'urdu',
+    tests: [testsForAllPages, testsForAllCanonicalPages],
   },
   {
     path: '/tamil/watch/c36l16ny6klo',
@@ -36,6 +54,46 @@ const testSuites = [
 ];
 
 const atiAnalyticsTestSuites = [
+  {
+    path: '/hindi/watch/cw1ldl595v1yo',
+    runforEnv: ['local'],
+    service: 'hindi',
+    pageIdentifier: 'hindi.watch.cw1ldl595v1yo.page',
+    siteId: 52,
+    applicationType: 'responsive',
+    contentType: 'article-sfv',
+    tests: [assertPageView],
+  },
+  {
+    path: '/punjabi/watch/cy9dkd8l9lrdo',
+    runforEnv: ['local'],
+    service: 'punjabi',
+    pageIdentifier: 'punjabi.watch.cy9dkd8l9lrdo.page',
+    siteId: 73,
+    applicationType: 'responsive',
+    contentType: 'article-sfv',
+    tests: [assertPageView],
+  },
+  {
+    path: '/telugu/watch/c7k9x9jzg39jo',
+    runforEnv: ['local'],
+    service: 'telugu',
+    pageIdentifier: 'telugu.watch.c7k9x9jzg39jo.page',
+    siteId: 89,
+    applicationType: 'responsive',
+    contentType: 'article-sfv',
+    tests: [assertPageView],
+  },
+  {
+    path: '/urdu/watch/c463r38dp7qeo',
+    runforEnv: ['local'],
+    service: 'urdu',
+    pageIdentifier: 'urdu.watch.c463r38dp7qeo.page',
+    siteId: 95,
+    applicationType: 'responsive',
+    contentType: 'article-sfv',
+    tests: [assertPageView],
+  },
   {
     path: '/tamil/watch/c36l16ny6klo',
     runforEnv: ['local', 'live'],

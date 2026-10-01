@@ -12,12 +12,6 @@ const canonicalTests = [e2eTests, testsForAllPages, testsForAllCanonicalPages];
 
 const testSuites = [
   {
-    path: '/hindi/listen/c0469479x9xo',
-    runforEnv: ['local', 'test'],
-    service: 'hindi',
-    tests: [testsForAllPages, testsForAllCanonicalPages],
-  },
-  {
     path: '/tamil/listen/cw3xlkprxv82o',
     runforEnv: ['local'],
     service: 'tamil',
