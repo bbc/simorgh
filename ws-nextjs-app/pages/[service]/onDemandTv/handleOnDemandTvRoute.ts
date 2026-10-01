@@ -38,7 +38,7 @@ export default async (context: GetServerSidePropsContext) => {
     id: resolvedUrlWithoutQuery,
     service,
     variant: variant || undefined,
-    rendererEnv: isTest() ? 'live' : rendererEnv,
+    rendererEnv,
     resolvedUrl: resolvedUrlWithoutQuery,
     pageType: TV_PAGE,
   });

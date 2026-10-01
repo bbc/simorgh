@@ -54,7 +54,7 @@ export default async (context: GetServerSidePropsContext) => {
     id: resolvedUrlWithoutQuery,
     service,
     variant: variant || undefined,
-    rendererEnv: isTest() ? 'live' : rendererEnv,
+    rendererEnv,
     resolvedUrl: resolvedUrlWithoutQuery,
     pageType: AUDIO_PAGE,
   });
@@ -100,11 +100,11 @@ export default async (context: GetServerSidePropsContext) => {
 
   const externalLinks = isPodcast
     ? await getPodcastExternalLinks({
-      service,
-      variant: variant || undefined,
-      brandId,
-      versionId: externalLinkVersionId,
-    })
+        service,
+        variant: variant || undefined,
+        brandId,
+        versionId: externalLinkVersionId,
+      })
     : [];
 
   context.res.setHeader(
