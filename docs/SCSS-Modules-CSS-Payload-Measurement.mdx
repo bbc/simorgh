@@ -1,0 +1,155 @@
+# SCSS Modules CSS payload measurement
+
+A before/after measurement of the CSS payload Simorgh ships, taken to answer whether the Emotion to SCSS Modules migration has increased CSS size in production.
+
+**Date measured:** 30 September 2026. **Updated:** 1 October 2026, with payload composition and a follow-up investigation into reducing the AMP/Lite payload.
+
+**Short answer:** Yes, but only on AMP and Lite. Canonical is unaffected or slightly improved for repeat visitors. The increase is a roughly fixed 5–10 KB per page, and Arabic AMP is now close to AMP's hard limit. The increase is **not** mainly CSS custom properties — on a real page, Emotion's own rules are still the largest single contributor to the AMP payload, because the Emotion-to-SCSS-Modules migration is only partially complete.
+
+## Why this was measured
+
+Production monitoring suggested the SCSS Modules approach had increased CSS size, with CSS custom properties the suspected cause. Component-level estimates were inconclusive, so a full-page comparison was run against real rendered pages.
+
+## Method
+
+Two isolated `git worktree` checkouts were created, each given its own `yarn install` and a full `yarn build:local` production build, then served via the standalone server. Real article pages were fetched over HTTP and the CSS they actually ship was measured. Both builds were produced on the same machine with the same method.
+
+|        | Commit       | Tag      | Notes                                                                                           |
+| ------ | ------------ | -------- | ----------------------------------------------------------------------------------------------- |
+| Before | `7d30124190` | 4.3591.0 | The commit immediately before PR #13013 merged. Verified to contain zero CSS custom properties. |
+| After  | `e6215c62e1` | 4.3786.0 | `origin/latest`                                                                                 |
+
+What was counted per edition:
+
+- **AMP** — the contents of the inline `style[amp-custom]` block, excluding AMP boilerplate.
+- **Lite** — the contents of the inline `style` block.
+- **Canonical** — inline `style` contents plus every linked stylesheet, fetched and measured.
+
+Both raw and gzipped sizes are reported. Raw matters most for AMP because **AMP's 75 KB stylesheet limit applies to uncompressed bytes**.
+
+## Results
+
+### AMP — inline CSS
+
+Raw bytes, with percentage of the 75 KB AMP limit.
+
+| Service | Before         | After              | Change          |
+| ------- | -------------- | ------------------ | --------------- |
+| mundo   | 32,478 (42.3%) | 42,234 (55.0%)     | +9,756 (+30.0%) |
+| news    | 39,305 (51.2%) | 48,658 (63.4%)     | +9,353 (+23.8%) |
+| arabic  | 50,095 (65.2%) | **55,440 (72.2%)** | +5,345 (+10.7%) |
+
+Gzipped, the same pages:
+
+| Service | Before | After | Change        |
+| ------- | ------ | ----- | ------------- |
+| mundo   | 6,930  | 7,620 | +690 (+10.0%) |
+| news    | 7,850  | 8,450 | +600 (+7.6%)  |
+| arabic  | 8,751  | 9,142 | +391 (+4.5%)  |
+
+### Lite — inline CSS
+
+| Service      | Before | After  | Change           |
+| ------------ | ------ | ------ | ---------------- |
+| mundo (raw)  | 32,763 | 44,220 | +11,457 (+35.0%) |
+| mundo (gzip) | 5,399  | 7,289  | +1,890 (+35.0%)  |
+
+### Canonical — total CSS
+
+| Service | Before | After  | Change |
+| ------- | ------ | ------ | ------ |
+| mundo   | 32,675 | 56,545 | +73.1% |
+| news    | 49,646 | 66,336 | +33.6% |
+| arabic  | 57,589 | 71,568 | +24.3% |
+
+That headline is misleading on its own, because canonical CSS splits into two very different categories. Inline CSS is re-sent in every HTML response and cannot be cached. Linked stylesheets are fetched once and cached across pages.
+
+| Service | Inline before | Inline after | Change    | Linked after      |
+| ------- | ------------- | ------------ | --------- | ----------------- |
+| mundo   | 32,675        | 35,549       | +8.8%     | 20,996 in 4 files |
+| news    | 49,646        | 45,346       | **−8.7%** | 20,990 in 4 files |
+| arabic  | 57,589        | 52,041       | **−9.6%** | 19,527 in 4 files |
+
+The per-request HTML payload **decreased** for news and arabic. Component styles moved out of Emotion's inline critical CSS and into cacheable stylesheets.
+
+### CSS custom properties on the rendered page
+
+| Service | Before | After                  |
+| ------- | ------ | ---------------------- |
+| mundo   | 0      | 63 in 2 `:root` blocks |
+| news    | 0      | 63 in 2 `:root` blocks |
+| arabic  | 0      | 39 in 2 `:root` blocks |
+
+The theme layer declares roughly 155 custom properties per service, so `treeshakeCssCustomProperties` is removing the large majority of them before they reach the page.
+
+### AMP payload composition
+
+To find out what actually makes up the AMP payload (rather than just how much it grew), the inline CSS for a real rendered page was parsed and every top-level rule classified by its origin.
+
+| Category                   | Arabic (55,440 bytes) | Mundo (42,234 bytes) |
+| -------------------------- | --------------------: | -------------------: |
+| Emotion-generated rules    |    29,058 (**52.4%**) |   17,883 (**42.3%**) |
+| SCSS Modules component CSS |         8,018 (14.5%) |        8,018 (19.0%) |
+| `@supports` blocks         |          2,952 (5.3%) |                    — |
+| `:root` custom properties  |          2,234 (4.0%) |         3,247 (7.7%) |
+| Element/global rules       |          2,013 (3.6%) |                    — |
+| `@font-face`               |            858 (1.5%) |                    — |
+
+**Emotion, not SCSS Modules, is still the largest single contributor to the AMP payload.** This is the direct consequence of the migration being partway done: only 15 of roughly 96 components have moved to SCSS Modules, but `tsconfig.json` sets `jsxImportSource` to `@emotion/react` globally, so the Emotion runtime and its critical CSS ship on every page regardless. Custom properties, the original suspect, are a small and already-treeshaken 4–8% of the payload.
+
+## Analysis
+
+**The regression is confined to AMP and Lite.** Those editions inline all CSS into every response, so nothing is cacheable and everything counts against AMP's hard cap. Canonical moved bytes from uncacheable inline CSS into cacheable files, which is neutral to positive.
+
+**The increase is close to fixed, not proportional.** The absolute change is about 5–10 KB regardless of service or page complexity, which is consistent with a one-off theme and token layer rather than a per-component cost. It will therefore not shrink on its own as more components migrate.
+
+**Custom properties are not the dominant cost.** They were the original suspicion, but only 39–63 survive treeshaking on a real page. The remainder of the increase is the theme layer as a whole, including font variant and font script declarations.
+
+**Arabic AMP has little headroom.** At 55,440 bytes it sits at 72.2% of the 75 KB limit, leaving roughly 2.8 KB. With the majority of components still on Emotion, this needs attention before the migration continues.
+
+## Follow-up investigation: merging duplicate `@media` blocks
+
+A real article page ships **219 `@media` blocks covering only 35 distinct queries**, partly because Emotion emits `(min-width: 37.5rem)` and the Next CSS pipeline emits `(min-width:37.5rem)` — the same query, differing by one space, so it never merges with itself. This looked like the single biggest readily-available saving, so it was built, reviewed, and tested as [PR #14435](https://github.com/bbc/simorgh/pull/14435). It was ultimately **abandoned**, and the reason is worth recording because it changes how any future CSS-reordering optimisation should be verified.
+
+The implementation folded repeated `@media` blocks into one, restricted to rules built only from hashed, per-component class names (Emotion's `.css-<hash>` or CSS Modules' `.Name_key__hash`), on the reasoning that such classes can't collide with another component's rules. Code review repeatedly found real gaps in that selector-safety logic — global ancestor selectors passing undetected, then standalone pseudo-selectors such as `:root` or `:hover` passing undetected. Each was fixed in turn.
+
+The fix that mattered came from testing the actual output in a browser rather than reasoning about selectors further: **a single DOM element routinely carries several hashed classes at once** (for example `class="e1w96o8o0 css-h18n80 e78myk41"`). Hashed class names are unique, but not mutually exclusive, so moving one rule past another can change which declaration wins on an element that matches both. A full Chromium comparison of computed styles, before and after merging, on real pages confirmed this produced real regressions — changed padding, font sizes, and positioning — on exactly the elements predicted.
+
+| Strategy                                                  | Saving (raw) | Correctness (real-page computed-style diffs)    |
+| --------------------------------------------------------- | -----------: | ----------------------------------------------- |
+| Merge all matching blocks                                 |    7.7–10.2% | **Broken** — 52 to 778 diffs per viewport       |
+| Conflict-aware merge (only cross provably disjoint rules) |        ~1.0% | **Still broken** — thousands of diffs on Arabic |
+| Merge only adjacent matching blocks                       |     0.0–0.2% | Clean — 0 diffs                                 |
+
+There is no safe variant worth shipping: the only genuinely correct option saves a fraction of a percent, and no feasible amount of selector analysis closes the gap, because proving two selectors can never match the same element requires knowing every runtime class combination, which isn't statically decidable.
+
+**Methodological lesson:** the verification used earlier in this investigation — resolving every `(media context, selector, property)` to its winning value and comparing — is not sufficient for any change that reorders CSS. It cannot see a conflict between two _different_ selectors landing on the same multi-class element. Only comparing actual computed styles across every element, in a real browser, at multiple viewports, caught the bug. Any future CSS-reordering change should be verified the same way, with a noise control (identical CSS loaded twice) to separate real regressions from rendering jitter.
+
+## Recommendations
+
+1. **Add a CI budget for AMP inline CSS.** There is currently no automated check. A threshold below the 75 KB cap, asserted for representative services including arabic, would prevent an accidental breach. This is now the single highest-priority item, since Arabic AMP already sits at 72% of the limit with no further easy reductions available.
+2. **Do not pursue further CSS-reordering optimisations** (media-query merging, rule deduplication across non-adjacent blocks, etc.) without the browser-based computed-style verification described above. The byte savings available this way are small once correctness is respected.
+3. **Do not optimise the custom property layer.** Treeshaking already removes most of it, it is only 4–8% of a real page's AMP payload, and flattening the font variant alias fallback chains was measured and would save only a few hundred bytes, which does not justify changing load-bearing fallback behaviour that Jest cannot validate, since `.module.scss` is mocked in tests.
+4. **Completing the Emotion-to-SCSS-Modules migration is now the most promising lever for reducing AMP/Lite size,** because the payload composition shows Emotion rules, not SCSS Modules rules, are the largest single contributor (52% on Arabic). This is a reversal of the original assumption that finishing the migration would make things worse; per-component CSS size is roughly neutral between the two systems, so migrating the remaining components removes an entire duplicate styling system rather than trading one cost for another.
+
+## Caveats
+
+- Figures come from local `build:local` builds using local fixture data. Absolute values in live environments will differ; the before/after comparison is the meaningful part.
+- One article per service was measured. Other page types, in particular Live and Topic pages, have not been measured and may differ.
+- The `treeshakeCssCustomProperties` fix for custom properties referenced only from inline style attributes was **not** present in the measured `origin/latest` build. That fix has since merged ([PR #14434](https://github.com/bbc/simorgh/pull/14434)); it intentionally retains more properties, so it will add a small number of bytes back in exchange for correcting a visual defect on AMP and Lite.
+- The media-query merging figures above were measured with a hand-rolled implementation outside the main codebase, mirroring the logic in the abandoned [PR #14435](https://github.com/bbc/simorgh/pull/14435) at the time of testing. They are not re-derived from a merged change, since the change was not merged.
+
+## Reproducing
+
+```bash
+# Before
+git worktree add --detach /tmp/simorgh-before <pre-migration-commit>
+cd /tmp/simorgh-before && yarn install
+cd ws-nextjs-app && yarn build:local
+NODE_ENV=production HOSTNAME=127.0.0.1 PORT=7082 \
+  node build/standalone/ws-nextjs-app/server.js
+
+# After: repeat with origin/latest on PORT=7083
+```
+
+Then fetch `/<service>/articles/<id>` with no suffix, `.amp` and `.lite`, and measure the inline `style` blocks plus any linked stylesheets. Note that env config emits absolute stylesheet URLs, so hrefs must be repointed at the host under test.
