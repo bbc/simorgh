@@ -1,4 +1,10 @@
-import { createContext, FormEvent, PropsWithChildren, use, useState } from 'react';
+import {
+  createContext,
+  FormEvent,
+  PropsWithChildren,
+  use,
+  useState,
+} from 'react';
 
 import { useRouter } from 'next/router';
 import { OK } from '#app/lib/statusCodes.const';
@@ -53,7 +59,8 @@ const getInitialFormState = (
         isValid: true,
         required: field.validation.mandatory ?? false,
         wordLimit: field.validation.wordLimit ?? undefined,
-        value: field.htmlType === 'file' ? [] : '',
+        value:
+          field.htmlType === 'file' || field.validation.multiSelect ? [] : '',
         htmlType: field.htmlType,
         messageCode: null,
         wasInvalid: false,
@@ -102,8 +109,12 @@ export const FormContextProvider = ({
     const currState = { ...prevState, value };
     let validatedData = currState;
 
-    if (currState.htmlType === 'file') {
-      const validateFunction = validateFunctions.file;
+    const validatesOnChange = ['file', 'checkbox', 'radiobutton'].includes(
+      currState.htmlType,
+    );
+
+    if (validatesOnChange) {
+      const validateFunction = validateFunctions[currState.htmlType];
       validatedData = validateFunction
         ? validateFunction(currState)
         : currState;
@@ -112,7 +123,7 @@ export const FormContextProvider = ({
     const newFormState = { ...formState, ...updatedState };
     setFormState(newFormState);
 
-    if (currState.htmlType === 'file') {
+    if (validatesOnChange) {
       const validationErrorsList = getValidationErrors(newFormState);
       setValidationErrors(validationErrorsList);
     }
@@ -166,6 +177,10 @@ export const FormContextProvider = ({
       }
       if (typeof fieldValue === 'boolean') {
         if (fieldValue) formData.append(key, 'true');
+        return;
+      }
+      if (Array.isArray(fieldValue)) {
+        fieldValue.forEach(value => formData.append(key, value as string));
         return;
       }
       formData.append(key, fieldValue as string);

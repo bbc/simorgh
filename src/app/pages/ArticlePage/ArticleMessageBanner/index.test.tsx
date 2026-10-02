@@ -50,7 +50,7 @@ describe('ArticleMessageBanner', () => {
     );
 
     expect(
-      getByText('Quem está à frente nas pesquisas para presidente?'),
+      getByText('Eleições 2026: resultados em tempo real'),
     ).toBeInTheDocument();
   });
 
@@ -84,7 +84,7 @@ describe('ArticleMessageBanner', () => {
     );
 
     expect(
-      getByText('Quem está à frente nas pesquisas para presidente?'),
+      getByText('Eleições 2026: resultados em tempo real'),
     ).toBeInTheDocument();
 
     expect(
@@ -101,6 +101,22 @@ describe('ArticleMessageBanner', () => {
       {
         toggles: { electionBanner: { enabled: true } },
         service: 'portuguese',
+      },
+    );
+
+    expect(queryByTestId('article-message-banner')).not.toBeInTheDocument();
+  });
+
+  it('does not render when the banner linkHref matches the current page path', () => {
+    const { queryByTestId } = render(
+      <ArticleMessageBanner
+        aboutTags={brazilElectionAboutTags}
+        taggings={mockTaggings}
+      />,
+      {
+        toggles: { electionBanner: { enabled: true } },
+        service: 'portuguese',
+        pathname: '/portuguese/articles/cwly7mke0mpdo',
       },
     );
 

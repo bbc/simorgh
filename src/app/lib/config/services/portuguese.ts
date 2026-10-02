@@ -51,13 +51,13 @@ export const service: DefaultServiceConfig = {
     articleMessageBanners: [
       {
         thingIds: ['b91eaef4-fdf2-47a6-b3ec-05b5a55a4843'],
-        linkHref: 'https://www.bbc.com/portuguese/articles/czd2prld130o',
-        heading: 'Quem está à frente nas pesquisas para presidente?',
+        linkHref: 'https://www.bbc.com/portuguese/articles/cwly7mke0mpdo',
+        heading: 'Eleições 2026: resultados em tempo real',
         description:
-          'Veja as estimativas de intenção de voto no Agregador de Pesquisas da BBC News Brasil',
+          'Acompanhe a apuração para presidente e governador em seu Estado e município com o mapa interativo da BBC News Brasil',
         linkText: 'Clique aqui',
         image:
-          'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/caa9/live/a04f7e60-4a1c-11f1-b55d-0f258dce1735.png.webp',
+          'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/3605/live/c8960690-bcaf-11f1-a64c-550be9e3c66b.png.webp',
       },
       {
         thingIds: ['f30c1edd-b1de-449c-a57e-1003edc03174'],
@@ -71,20 +71,20 @@ export const service: DefaultServiceConfig = {
       },
     ],
     podcastPromo: {
-      title: 'Promoção Agregador de pesquisas',
-      brandTitle: 'Veja Agregador de Pesquisas da BBC News Brasil',
+      title: 'Promoção da eleição 2026',
+      brandTitle: 'Acompanhe apuração em tempo real',
       brandDescription: ' ',
       image: {
-        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0njcpky.jpg',
-        alt: 'O agregador de pesquisas da BBC News Brasil',
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0pd013r.png',
+        alt: 'Resultados da eleição 2026',
       },
       linkLabel: {
         text: 'Clique aqui',
-        href: 'https://www.bbc.com/portuguese/articles/czd2prld130o',
+        href: 'https://www.bbc.com/portuguese/articles/cwly7mke0mpdo',
       },
       skipLink: {
         text: 'Pule %title% e continue lendo',
-        endTextVisuallyHidden: 'Fim do %title%',
+        endTextVisuallyHidden: 'Fim da %title%',
       },
     },
     translations: {
@@ -110,6 +110,9 @@ export const service: DefaultServiceConfig = {
         heading: 'Descubra mais',
         moreAboutTopic: 'Mais sobre {topic}',
         fetchErrorMessage: 'Falha ao carregar. Tente novamente',
+      },
+      googlePreferredSource: {
+        linkText: 'Adicionar como fonte preferida no Google',
       },
       currentPage: 'Página atual',
       skipLinkText: 'Vá para o conteúdo',
