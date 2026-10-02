@@ -106,4 +106,20 @@ describe('ArticleMessageBanner', () => {
 
     expect(queryByTestId('article-message-banner')).not.toBeInTheDocument();
   });
+
+  it('does not render when the banner linkHref matches the current page path', () => {
+    const { queryByTestId } = render(
+      <ArticleMessageBanner
+        aboutTags={brazilElectionAboutTags}
+        taggings={mockTaggings}
+      />,
+      {
+        toggles: { electionBanner: { enabled: true } },
+        service: 'portuguese',
+        pathname: '/portuguese/articles/cwly7mke0mpdo',
+      },
+    );
+
+    expect(queryByTestId('article-message-banner')).not.toBeInTheDocument();
+  });
 });
