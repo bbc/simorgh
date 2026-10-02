@@ -31,7 +31,6 @@ export default {
     () =>
       css({
         background: AP_EMBED_BACKGROUND,
-        inset: 0,
         width: '100%',
         minHeight: `${pixelsToRem(desktop)}rem`,
         [AP_BREAKPOINTS.max767]: {
@@ -70,7 +69,9 @@ export default {
     () =>
       css({
         border: 'none',
+        display: 'block', // required for margin auto centring to take effect
         maxWidth: AP_EMBED_MAX_WIDTH, // limit width on desktop, in line with VJ design
+        margin: '0 auto', // centre on desktop
         minHeight: `${pixelsToRem(desktop)}rem`,
         [AP_BREAKPOINTS.max767]: {
           minHeight: `${pixelsToRem(max767)}rem`,

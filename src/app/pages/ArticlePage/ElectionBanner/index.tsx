@@ -114,7 +114,6 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
             // loading="lazy"
             src={assocPressIframeSrc}
             scrolling="no"
-            // css={styles.electionBannerIframe(heights)}
             css={styles.electionBannerIframeExtra(heightsAp)} // minHeights
             height={heightsAp.desktop}
             width="100%"
