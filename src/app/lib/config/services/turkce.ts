@@ -71,6 +71,9 @@ export const service: DefaultServiceConfig = {
         moreAboutTopic: '{topic} hakkında daha fazla',
         fetchErrorMessage: 'Yüklenemedi. Lütfen daha sonra tekrar deneyin',
       },
+      googlePreferredSource: {
+        linkText: 'Google’da tercih edilen kaynak olarak ekle',
+      },
       currentPage: 'Bulunduğunuz sayfa',
       skipLinkText: 'İçeriğe götür',
       skipContent: {
