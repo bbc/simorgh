@@ -5,6 +5,7 @@ import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { getBrandPath } from '#app/legacy/containers/Brand';
+import { HOMEPAGE_RELATED_TOPIC_EXPERIMENT } from '#app/lib/experiments/homepageRelatedTopicPromos';
 import styles from './index.styles';
 
 export interface HighImpactPromoProps extends Summary {
@@ -30,6 +31,19 @@ const HighImpactPromo = ({
   const hasSubject = Boolean(subjectLink && subjectText);
 
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
+  // experiment: keep topic and brand links out of article click metrics
+  const relatedTopicClickTrackerHandler = useClickTrackerHandler({
+    ...eventTrackingData,
+    itemTracker: {
+      ...eventTrackingData?.itemTracker,
+      type: 'simple-curation-grid-related-topic',
+      text: subjectText,
+    },
+  });
+  const subjectClickTrackerHandler =
+    eventTrackingData?.experimentName === HOMEPAGE_RELATED_TOPIC_EXPERIMENT
+      ? relatedTopicClickTrackerHandler
+      : clickTrackerHandler;
 
   return (
     <div data-testid="high-impact-promo" css={styles.promo} dir={dir}>
@@ -58,7 +72,7 @@ const HighImpactPromo = ({
           <Promo.A
             href={subjectLink}
             css={styles.subject}
-            {...clickTrackerHandler}
+            {...subjectClickTrackerHandler}
           >
             {subjectText}
           </Promo.A>

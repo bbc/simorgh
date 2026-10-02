@@ -645,7 +645,7 @@ describe('Article Page', () => {
       { service: 'russian' },
     );
 
-    expect(getByText('Канал Би-би-си в WhatsApp')).toBeInTheDocument();
+    expect(getByText('Расширение BBC News Russian')).toBeInTheDocument();
   });
   it('should render oEmbed component when passed', async () => {
     const pageDataWithRiddle = {
@@ -854,7 +854,11 @@ describe('Article Page', () => {
               name: null,
               producer: 'PIDGIN',
             },
-            user: { hashedId: null, isSignedIn: false },
+            user: {
+              hashedId: null,
+              isSignedIn: false,
+              isPersonalisationOn: false,
+            },
           },
         },
       });
@@ -930,7 +934,11 @@ describe('Article Page', () => {
               name: null,
               producer: 'PIDGIN',
             },
-            user: { hashedId: null, isSignedIn: false },
+            user: {
+              hashedId: null,
+              isSignedIn: false,
+              isPersonalisationOn: false,
+            },
           },
         },
       });

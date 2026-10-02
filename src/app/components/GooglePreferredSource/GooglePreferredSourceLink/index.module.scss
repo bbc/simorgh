@@ -1,0 +1,30 @@
+@use '@scss/themeTokens' as theme;
+
+.link {
+    font-size: theme.pixelsToRem-px-to-rem(15);
+    @include theme.fontVariants-gel-font-variant('sans-bold');
+    color: theme.$palette-black;
+    text-decoration: none;
+
+    :global([data-is-dark-ui='true']) & {
+            color: theme.$palette-white;
+        }
+        @media (hover: hover) {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+}
+
+.wrapper {
+    padding-block-end: theme.$spacings-double;
+    margin-inline-start: theme.$spacings-full;
+    
+        @media #{theme.$mediaQueries-group-2-min-width} {
+            margin-inline-start: theme.$spacings-double;
+        }
+    
+        @media #{theme.$mediaQueries-group-4-min-width} {
+            margin-inline-start: 0;
+        }
+}

@@ -67,6 +67,9 @@ export const service: DefaultServiceConfig = {
         moreAboutTopic: 'เพิ่มเติมเกี่ยวกับ {topic}',
         fetchErrorMessage: 'โหลดไม่สำเร็จ กรุณาลองอีกครั้ง',
       },
+      googlePreferredSource: {
+        linkText: 'เพิ่มเป็นแหล่งข่าวที่ต้องการบน Google',
+      },
       currentPage: 'หน้าปัจจุบัน',
       skipLinkText: 'ข้ามไปยังเนื้อหา',
       skipContent: {

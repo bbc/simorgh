@@ -13,9 +13,13 @@ const PersistentQueryProvider = dynamic(
 // TanstackQuery Provider is only needed when personalization features are enabled.
 // This prevents the unnecessary loading of the Tanstack Query library and its dependencies
 const QueryProvider = ({ children }: PropsWithChildren) => {
-  const { isPersonalizationEnabled } = use(AccountContext);
+  const { isArticlePersonalizationEnabled, isTopicPersonalizationEnabled } =
+    use(AccountContext);
 
-  if (!isPersonalizationEnabled) return children;
+  const isAnyPersonalizationEnabled =
+    isArticlePersonalizationEnabled || isTopicPersonalizationEnabled;
+
+  if (!isAnyPersonalizationEnabled) return children;
 
   return (
     <Suspense fallback={children}>

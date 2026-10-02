@@ -82,6 +82,9 @@ export const service: DefaultServiceConfig = {
         moreAboutTopic: '{topic} ගැන තවත්',
         fetchErrorMessage: 'පූරණය අසාර්ථකයි. කරුණාකර නැවත උත්සාහ කරන්න',
       },
+      googlePreferredSource: {
+        linkText: 'Google හි ප්‍රියතම මූලාශ්‍රයක් ලෙස එක් කරන්න',
+      },
       currentPage: 'දැන් සිටින පිටුව',
       skipLinkText: 'අන්තර්ගතයට පිවිසෙන්න',
       skipContent: {

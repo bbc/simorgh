@@ -87,6 +87,9 @@ export const service: DefaultServiceConfig = {
         moreAboutTopic: 'Ƙari game da {topic}',
         fetchErrorMessage: 'An kasa lodawa. Da fatan a sake gwadawa',
       },
+      googlePreferredSource: {
+        linkText: 'Ƙara a matsayin tushen da aka fi so a Google',
+      },
       currentPage: 'Shafin da ake ciki',
       skipLinkText: 'Tsallaka zuwa abubuwan da ke ciki',
       skipContent: {

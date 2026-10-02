@@ -144,9 +144,12 @@ export const service: SerbianConfig = {
       seeAll: 'Pogledajte sve',
       home: 'Glavna stranica',
       topicDiscovery: {
-        heading: 'Saznajte (više)',
+        heading: 'Saznajte više',
         moreAboutTopic: 'Više o {topic}',
         fetchErrorMessage: 'Učitavanje nije uspelo. Pokušajte ponovo',
+      },
+      googlePreferredSource: {
+        linkText: 'Dodaj kao preferirani izvor na Google-u',
       },
       currentPage: 'Otvorena stranica',
       skipLinkText: 'Pređite na sadržaj',
@@ -630,9 +633,12 @@ export const service: SerbianConfig = {
       seeAll: 'Погледајте све',
       home: 'Главна страница',
       topicDiscovery: {
-        heading: 'Сазнајте (више)',
+        heading: 'Сазнајте више',
         moreAboutTopic: 'Више о {topic}',
         fetchErrorMessage: 'Учитавање није успело. Покушајте поново',
+      },
+      googlePreferredSource: {
+        linkText: 'Додај као преферирани извор на Google-у',
       },
       currentPage: 'Отворена страница',
       skipLinkText: 'Пређите на садржај',

@@ -263,10 +263,10 @@ describe('Promo component - Timestamp', () => {
     });
     describe('Relative time more than 10 hours ago', () => {
       moment.locale('es');
-      const dateTenHoursAgo = moment().subtract({ h: 10 }).format('LL');
       // We are using 10 to test more than 10 hours, because by the time the test has reached the expect assertion, milliseconds have passed.
       it('should render timestamp in ISO string format', () => {
         const overTenHoursString = calcTimestampHoursAgo(10).toISOString();
+        const dateTenHoursAgo = moment.utc(overTenHoursString).format('LL');
         const { getByText } = render(
           <Fixture timestamp={overTenHoursString} />,
           {
@@ -277,6 +277,7 @@ describe('Promo component - Timestamp', () => {
       });
       it('should render timestamp in epoch format', () => {
         const overTenHoursEpoch = calcTimestampHoursAgo(10).getTime();
+        const dateTenHoursAgo = moment.utc(overTenHoursEpoch).format('LL');
         const { getByText } = render(
           <Fixture timestamp={overTenHoursEpoch} />,
           {

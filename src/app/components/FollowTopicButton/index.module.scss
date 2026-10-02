@@ -1,0 +1,9 @@
+@use '@scss/themeTokens' as theme;
+
+.buttonWrapper {
+  margin-block: #{theme.$spacings-double};
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    width: #{theme.pixelsToRem-px-to-rem(280)};
+  }
+}

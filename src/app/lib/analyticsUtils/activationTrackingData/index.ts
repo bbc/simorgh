@@ -9,6 +9,7 @@ export type ActivationTrackingData = {
   statsDestination?: string;
   isSignedIn?: boolean;
   hashedId?: string | null;
+  isPersonalisationOn?: boolean;
 };
 
 const NO_ACTIVATION_TRACKING_DATA: ActivationTrackingData = {
