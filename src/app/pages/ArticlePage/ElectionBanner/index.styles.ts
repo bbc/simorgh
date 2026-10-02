@@ -6,24 +6,19 @@ type Heights = NonNullable<
   NonNullable<ServiceConfig['electionBanner']>['heights']
 >;
 
+// to do - type
 type AssociatedPressHeights = {
-  max265: number;
-  max419: number;
-  max526: number;
-  max767: number;
+  mobile: number;
+  tablet: number; // not used
   desktop: number;
 };
 
 const AP_BREAKPOINTS = {
-  min266: `@media (min-width: ${pixelsToRem(266)}rem)`,
-  min420: `@media (min-width: ${pixelsToRem(420)}rem)`,
-  min527: `@media (min-width: ${pixelsToRem(527)}rem)`,
-  min768: `@media (min-width: ${pixelsToRem(768)}rem)`,
+  desktop: `@media (min-width: ${pixelsToRem(768)}rem)`, // desktop
 };
 
 const AP_EMBED_MAX_WIDTH = `${pixelsToRem(1008)}rem`;
-const AP_EMBED_BACKGROUND =
-  'linear-gradient(180deg, #2D0059 0%, #230046 50%, #000000 100%)';
+const AP_EMBED_BACKGROUND_BLACK = '#000000';
 
 export default {
   electionBannerWrapper: ({ spacings }: Theme) =>
@@ -68,51 +63,41 @@ export default {
         },
       }),
   assocPressElectionBannerBackground:
-    ({ max265, max419, max526, max767, desktop }: AssociatedPressHeights) =>
+    ({ mobile, desktop }: AssociatedPressHeights) =>
     () =>
       css({
-        background: AP_EMBED_BACKGROUND,
+        background: AP_EMBED_BACKGROUND_BLACK,
         width: '100%',
+        margin: '0 auto',
         borderBottom: `solid ${pixelsToRem(1)}rem transparent`,
-        minHeight: `${pixelsToRem(max265)}rem`,
-        [AP_BREAKPOINTS.min266]: {
-          minHeight: `${pixelsToRem(max419)}rem`,
-        },
-        [AP_BREAKPOINTS.min420]: {
-          minHeight: `${pixelsToRem(max526)}rem`,
-        },
-        [AP_BREAKPOINTS.min527]: {
-          minHeight: `${pixelsToRem(max767)}rem`,
-        },
-        [AP_BREAKPOINTS.min768]: {
+        minHeight: `${pixelsToRem(mobile)}rem`,
+        [AP_BREAKPOINTS.desktop]: {
           minHeight: `${pixelsToRem(desktop)}rem`,
         },
       }),
   assocPressElectionBannerIframe:
-    ({ max265, max419, max526, max767, desktop }: AssociatedPressHeights) =>
+    ({ mobile, desktop }: AssociatedPressHeights) =>
     () =>
       css({
         border: 'none',
         display: 'block', // required for margin auto centring to take effect
         maxWidth: AP_EMBED_MAX_WIDTH, // limit width on desktop, in line with VJ design
         margin: '0 auto', // centre on desktop
-        minHeight: `${pixelsToRem(max265)}rem`,
-        [AP_BREAKPOINTS.min266]: {
-          minHeight: `${pixelsToRem(max419)}rem`,
-        },
-        [AP_BREAKPOINTS.min420]: {
-          minHeight: `${pixelsToRem(max526)}rem`,
-        },
-        [AP_BREAKPOINTS.min527]: {
-          minHeight: `${pixelsToRem(max767)}rem`,
-        },
-        [AP_BREAKPOINTS.min768]: {
+        minHeight: `${pixelsToRem(mobile)}rem`, // fallback for non-AMP iframe
+        [AP_BREAKPOINTS.desktop]: {
           minHeight: `${pixelsToRem(desktop)}rem`,
         },
       }),
+  limitsAmpToMobileViewport: ({ mq }: Theme) =>
+    css({
+      [mq.GROUP_3_MIN_WIDTH]: {
+        display: 'none',
+      }, // hides on larger breakpoints on .amp
+    }),
   assocPressElectionBannerWrapperAmp:
-    ({ max265, max419, max526, max767, desktop }: AssociatedPressHeights) =>
-    ({ spacings }: Theme) =>
+    ({ mobile, desktop }: AssociatedPressHeights) =>
+    // ({ default, }: AssociatedPressHeights) =>
+    ({ spacings, mq }: Theme) =>
       css({
         overflow: 'hidden',
         marginBottom: `${spacings.FULL}rem`,
@@ -124,18 +109,9 @@ export default {
         '& amp-iframe': {
           border: 'none',
           width: '100%',
-          height: `${pixelsToRem(max265)}rem`, // fixed height - problematic if embed will grow or shrink dynamically
-          [AP_BREAKPOINTS.min266]: {
-            height: `${pixelsToRem(max419)}rem`,
-          },
-          [AP_BREAKPOINTS.min420]: {
-            height: `${pixelsToRem(max526)}rem`,
-          },
-          [AP_BREAKPOINTS.min527]: {
-            height: `${pixelsToRem(max767)}rem`,
-          },
-          [AP_BREAKPOINTS.min768]: {
-            height: `${pixelsToRem(desktop)}rem`,
+          minHeight: `${pixelsToRem(mobile)}rem`, // fallback for AMP iframe
+          [AP_BREAKPOINTS.desktop]: {
+            minHeight: `${pixelsToRem(desktop)}rem`,
           },
         },
       }),

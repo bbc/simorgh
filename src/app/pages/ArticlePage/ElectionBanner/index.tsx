@@ -1,4 +1,5 @@
 import { use } from 'react';
+import Script from 'next/script';
 import { RequestContext } from '#app/contexts/RequestContext';
 import AmpIframe from '#app/components/AmpIframe';
 import useToggle from '#app/hooks/useToggle';
@@ -25,11 +26,9 @@ const DEFAULT_HEIGHTS_VJ = {
 };
 
 const DEFAULT_HEIGHTS_AP = {
-  max265: 377,
-  max419: 349,
-  max526: 339,
-  max767: 379,
-  desktop: 216,
+  desktop: 250,
+  tablet: 400, // not used
+  mobile: 400,
 };
 
 const SENSITIVE_ARTICLE_ID = 'f2b5dd0e-dda0-454c-893d-792d46ff48c3';
@@ -75,10 +74,14 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
   if (assocPressIframeSrc && isAmp) {
     return (
       // minHeight here is fine since iframe itself has fixed height styles applied
-      <div css={styles.assocPressElectionBannerBackground(heightsAp)}>
+      <div
+        css={[
+          styles.assocPressElectionBannerBackground(heightsAp),
+          styles.limitsAmpToMobileViewport,
+        ]}
+      >
         <div
           data-testid="election-banner"
-          // not minheight
           css={styles.assocPressElectionBannerWrapperAmp(heightsAp)}
         >
           <AmpIframe
@@ -91,11 +94,6 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
               title: validAboutTag.thingLabel,
             }}
           />
-          {/* // not sure if this will work */}
-          {/* <script
-          defer
-          src="https://interactives.apelections.org/election-results/assets/microsite/resizeClient.js"
-        /> */}
         </div>
       </div>
     );
@@ -113,14 +111,14 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
             src={assocPressIframeSrc}
             scrolling="no"
             css={styles.assocPressElectionBannerIframe(heightsAp)} // minHeights
-            height={heightsAp.desktop}
+            height={heightsAp.desktop} // I don't think this has an effect - copied from below
             width="100%"
             // frameBorder="0" - from AP
             // marginHeight="0" - from AP
           />
-          <script
-            defer
+          <Script
             src="https://interactives.apelections.org/election-results/assets/microsite/resizeClient.js"
+            strategy="lazyOnload"
           />
         </div>
       </div>
