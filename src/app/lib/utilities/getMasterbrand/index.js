@@ -1,6 +1,4 @@
-import pathOr from 'ramda/src/pathOr';
-
 const getMasterBrand = (externalId, liveRadioIdOverrides) =>
-  pathOr(externalId, ['masterBrand', externalId], liveRadioIdOverrides);
+  liveRadioIdOverrides?.masterBrand?.[externalId] ?? externalId;
 
 export default getMasterBrand;
