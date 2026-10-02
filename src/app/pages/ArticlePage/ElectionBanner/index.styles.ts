@@ -22,7 +22,8 @@ const AP_BREAKPOINTS = {
 };
 
 const AP_EMBED_MAX_WIDTH = `${pixelsToRem(1008)}rem`;
-const AP_EMBED_BACKGROUND = 'linear-gradient(180deg, #2e1065 0%, #000 100%)';
+const AP_EMBED_BACKGROUND =
+  'linear-gradient(180deg, #2D0059 0%, #230046 50%, #000000 100%)';
 
 export default {
   electionBannerBackground:
