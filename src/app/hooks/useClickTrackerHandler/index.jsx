@@ -72,6 +72,7 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
     itemTracker,
     isSignedIn,
     hashedId,
+    isPersonalisationOn,
   } = extractATITrackingProps({ eventTrackingData, eventType: CLICK_EVENT });
 
   const { trackingIsEnabled } = useTrackingToggle(componentName);
@@ -191,6 +192,7 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
               ...(itemTracker && { itemTracker }),
               isSignedIn,
               hashedId,
+              isPersonalisationOn,
               ...(experimentVariant &&
                 experimentVariant !== 'off' && {
                   experimentName,
@@ -260,6 +262,7 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
       itemTracker,
       isSignedIn,
       hashedId,
+      isPersonalisationOn,
       // UNCOMMENT FOR RESONANCE CLICK TRACKING , BLOCKED FOR NOW
       /* ,resonanceEnabled */
       preventNavigation,

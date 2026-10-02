@@ -197,7 +197,11 @@ describe('atiUrl', () => {
             x18: 'isLocServeCookieSet',
           },
         };
-        const userParams = { isSignedIn: false, hashedId: null };
+        const userParams = {
+          isSignedIn: false,
+          hashedId: null,
+          isPersonalisationOn: false,
+        };
 
         expect(reverbAnalyticsModel.params.page).toEqual(pageParams);
         expect(reverbAnalyticsModel.params.user).toEqual(userParams);
@@ -238,7 +242,11 @@ describe('atiUrl', () => {
             x18: 'isLocServeCookieSet',
           },
         };
-        const userParams = { isSignedIn: false, hashedId: null };
+        const userParams = {
+          isSignedIn: false,
+          hashedId: null,
+          isPersonalisationOn: false,
+        };
 
         expect(reverbAnalyticsModel.params.page).toEqual(pageParams);
         expect(reverbAnalyticsModel.params.user).toEqual(userParams);
@@ -343,6 +351,7 @@ describe('atiUrl', () => {
         expect(reverbPageSectionViewEventModel.params.user).toEqual({
           isSignedIn: false,
           hashedId: null,
+          isPersonalisationOn: false,
         });
       });
 
@@ -559,6 +568,7 @@ describe('atiUrl', () => {
         expect(reverbExperimentActivationEventModel.params.user).toEqual({
           isSignedIn: true,
           hashedId: 'hashed-id',
+          isPersonalisationOn: false,
         });
       });
 
@@ -615,6 +625,7 @@ describe('atiUrl', () => {
           user: {
             isSignedIn: true,
             hashedId: 'hashed-id',
+            isPersonalisationOn: false,
           },
         });
       });
