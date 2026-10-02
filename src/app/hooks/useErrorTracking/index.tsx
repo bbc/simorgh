@@ -45,6 +45,7 @@ const useErrorTracking = () => {
     statsDestination,
     isSignedIn,
     hashedId,
+    isPersonalisationOn,
   } = extractATITrackingProps({
     eventType: VIEW_EVENT,
   });
@@ -70,6 +71,7 @@ const useErrorTracking = () => {
         statsDestination,
         isSignedIn,
         hashedId,
+        isPersonalisationOn,
       });
     },
     [
@@ -79,6 +81,7 @@ const useErrorTracking = () => {
       statsDestination,
       isSignedIn,
       hashedId,
+      isPersonalisationOn,
     ],
   );
 };
