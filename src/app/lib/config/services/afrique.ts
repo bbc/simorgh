@@ -86,6 +86,9 @@ export const service: DefaultServiceConfig = {
         moreAboutTopic: 'Plus sur {topic}',
         fetchErrorMessage: 'Échec du chargement. Veuillez réessayer',
       },
+      googlePreferredSource: {
+        linkText: 'Ajouter comme source préférée sur Google',
+      },
       continueReading: 'Continuer la lecture',
       currentPage: 'Page en cours',
       skipLinkText: 'Aller au contenu',

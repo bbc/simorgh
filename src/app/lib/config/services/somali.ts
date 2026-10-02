@@ -87,6 +87,9 @@ export const service: DefaultServiceConfig = {
         fetchErrorMessage:
           'Ku shubiddu waa fashilantay. Fadlan isku day mar kale',
       },
+      googlePreferredSource: {
+        linkText: 'Ku dar il la doorbidayo Google-ka',
+      },
       continueReading: 'Sii Akhri',
       currentPage: 'Bogga hadda',
       skipLinkText: 'U gudub qaybta macluumaadka',
