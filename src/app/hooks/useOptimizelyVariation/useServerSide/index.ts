@@ -1,7 +1,6 @@
 import { OptimizelyContext } from '@optimizely/react-sdk';
 import { useContext, useEffect } from 'react';
 import { RequestContext } from '#app/contexts/RequestContext';
-import trackPageEvents from '#app/legacy/containers/PageHandlers/withOptimizelyProvider/trackPageEvents';
 import activateExperiment from '../activateExperiment';
 
 export default (experimentName: string) => {
@@ -18,17 +17,13 @@ export default (experimentName: string) => {
 
   useEffect(() => {
     if (optimizely && activeVariation) {
-      const activateAndTrack = async () => {
+      const activateExperimentForUser = async () => {
         try {
-          const wasActivated = await activateExperiment({
+          await activateExperiment({
             optimizely,
             experimentName,
             experimentVariation: activeVariation,
           });
-
-          if (wasActivated) {
-            trackPageEvents(optimizely);
-          }
         } catch (error) {
           // eslint-disable-next-line no-console
           console.error(
@@ -38,7 +33,7 @@ export default (experimentName: string) => {
         }
       };
 
-      activateAndTrack();
+      activateExperimentForUser();
     }
   }, [optimizely, experimentName, activeVariation]);
 

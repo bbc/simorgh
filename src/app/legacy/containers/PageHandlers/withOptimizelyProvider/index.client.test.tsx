@@ -310,9 +310,13 @@ describe('withOptimizelyProvider HOC', () => {
   describe('page view tracking', () => {
     const mockTrack = jest.fn();
     let capturedDecisionListener: ((payload: object) => void) | undefined;
+    let capturedActivateListener: ((payload: object) => void) | undefined;
+    let notificationListenerCount = 0;
 
     beforeEach(() => {
       capturedDecisionListener = undefined;
+      capturedActivateListener = undefined;
+      notificationListenerCount = 0;
       mockTrack.mockReset();
       localStorage.clear();
       Object.defineProperty(window, 'location', {
@@ -325,7 +329,7 @@ describe('withOptimizelyProvider HOC', () => {
       // are in place. To test the listener we need to:
       //   1. jest.resetModules() — clear the module registry so the next require is a fresh load
       //   2. jest.doMock(...)    — queue controlled mocks, including the addNotificationListener
-      //                           spy that captures the callback into capturedDecisionListener
+      //                           spy that captures the callbacks by notification type
       //   3. require('./index') — trigger a fresh module load against those mocks, causing the
       //                           listener registration to run synchronously
       // Each test can then call capturedDecisionListener directly to exercise the listener logic.
@@ -335,7 +339,13 @@ describe('withOptimizelyProvider HOC', () => {
         createInstance: jest.fn(() => ({
           notificationCenter: {
             addNotificationListener: jest.fn((_, cb) => {
-              capturedDecisionListener = cb;
+              if (notificationListenerCount === 0) {
+                capturedDecisionListener = cb;
+              }
+              if (notificationListenerCount === 1) {
+                capturedActivateListener = cb;
+              }
+              notificationListenerCount += 1;
             }),
           },
           track: mockTrack,
@@ -343,7 +353,10 @@ describe('withOptimizelyProvider HOC', () => {
         OptimizelyProvider: jest.fn(),
         setLogger: jest.fn(),
         enums: {
-          NOTIFICATION_TYPES: { DECISION: 'DECISION' },
+          NOTIFICATION_TYPES: {
+            DECISION: 'DECISION',
+            ACTIVATE: 'ACTIVATE',
+          },
         },
       }));
       jest.doMock('./isCypress', () => jest.fn().mockReturnValue(false));
@@ -422,6 +435,18 @@ describe('withOptimizelyProvider HOC', () => {
           experimentKey: 'newswb_ws_article_account_promo_banner',
           variationKey: 'on',
         },
+      });
+
+      expect(mockTrack.mock.calls.map(call => call[0])).toEqual([
+        'visit',
+        'page-views',
+      ]);
+    });
+
+    it('should call optimizely.track for a legacy ACTIVATE notification', () => {
+      capturedActivateListener?.({
+        experiment: { key: 'newswb_ws_article_account_promo_banner' },
+        variation: { key: 'on' },
       });
 
       expect(mockTrack.mock.calls.map(call => call[0])).toEqual([
@@ -681,7 +706,12 @@ describe('withOptimizelyProvider HOC', () => {
         })),
         OptimizelyProvider: jest.fn(),
         setLogger: jest.fn(),
-        enums: { NOTIFICATION_TYPES: { DECISION: 'DECISION' } },
+        enums: {
+          NOTIFICATION_TYPES: {
+            DECISION: 'DECISION',
+            ACTIVATE: 'ACTIVATE',
+          },
+        },
       }));
       jest.doMock('./isCypress', () => jest.fn().mockReturnValue(false));
       jest.doMock('#app/lib/optimizelyDecisionStore', () => ({
@@ -715,9 +745,13 @@ describe('withOptimizelyProvider HOC', () => {
       hashedId: null,
     };
     let capturedDecisionListener: ((payload: object) => void) | undefined;
+    let capturedActivateListener: ((payload: object) => void) | undefined;
+    let notificationListenerCount = 0;
 
     beforeEach(() => {
       capturedDecisionListener = undefined;
+      capturedActivateListener = undefined;
+      notificationListenerCount = 0;
       mocksendOptimizelyActivationEvent.mockReset();
       mockNotifyDecision.mockReset().mockReturnValue(true);
 
@@ -730,14 +764,25 @@ describe('withOptimizelyProvider HOC', () => {
         createInstance: jest.fn(() => ({
           notificationCenter: {
             addNotificationListener: jest.fn((_, cb) => {
-              capturedDecisionListener = cb;
+              if (notificationListenerCount === 0) {
+                capturedDecisionListener = cb;
+              }
+              if (notificationListenerCount === 1) {
+                capturedActivateListener = cb;
+              }
+              notificationListenerCount += 1;
             }),
           },
           track: jest.fn(),
         })),
         OptimizelyProvider: jest.fn(),
         setLogger: jest.fn(),
-        enums: { NOTIFICATION_TYPES: { DECISION: 'DECISION' } },
+        enums: {
+          NOTIFICATION_TYPES: {
+            DECISION: 'DECISION',
+            ACTIVATE: 'ACTIVATE',
+          },
+        },
       }));
       jest.doMock('./isCypress', () => jest.fn().mockReturnValue(false));
       jest.doMock('#app/lib/optimizelyDecisionStore', () => ({
@@ -824,12 +869,10 @@ describe('withOptimizelyProvider HOC', () => {
       expect(mocksendOptimizelyActivationEvent).toHaveBeenCalledTimes(1);
     });
 
-    it('should send the activation event for a legacy activate() decision (experimentKey without decisionEventDispatched)', () => {
-      capturedDecisionListener?.({
-        decisionInfo: {
-          experimentKey: 'newswb_ws_article_account_promo_banner',
-          variationKey: 'control',
-        },
+    it('should send the activation event for a legacy ACTIVATE notification', () => {
+      capturedActivateListener?.({
+        experiment: { key: 'newswb_ws_article_account_promo_banner' },
+        variation: { key: 'control' },
       });
 
       expect(mocksendOptimizelyActivationEvent).toHaveBeenCalledTimes(1);

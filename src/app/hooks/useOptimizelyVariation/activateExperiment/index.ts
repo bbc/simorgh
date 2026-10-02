@@ -17,17 +17,15 @@ const activateExperiment = async ({
   optimizely,
   experimentName,
   experimentVariation,
-}: Props): Promise<boolean> => {
-  if (!onClient() || !optimizely) return false;
+}: Props) => {
+  if (!onClient() || !optimizely) return;
 
   const { success } = await optimizely.onReady();
-  if (!success || activatedExperiments.has(experimentName)) return false;
+  if (!success || activatedExperiments.has(experimentName)) return;
 
   activatedExperiments.add(experimentName);
   optimizely.setForcedVariation(experimentName, experimentVariation);
   optimizely.activate(experimentName);
-
-  return true;
 };
 
 export default activateExperiment;

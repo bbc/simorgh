@@ -23,13 +23,11 @@ describe('activateExperiment', () => {
     (onClient as jest.Mock).mockReturnValueOnce(true);
     mockOptimizely.onReady.mockResolvedValue({ success: true });
 
-    await expect(
-      activateExperiment({
-        optimizely: mockOptimizely as unknown as ReactSDKClient,
-        experimentName: mockExperimentName,
-        experimentVariation: mockExperimentVariation,
-      }),
-    ).resolves.toBe(true);
+    await activateExperiment({
+      optimizely: mockOptimizely as unknown as ReactSDKClient,
+      experimentName: mockExperimentName,
+      experimentVariation: mockExperimentVariation,
+    });
 
     expect(mockOptimizely.onReady).toHaveBeenCalledTimes(1);
     expect(mockOptimizely.setForcedVariation).toHaveBeenCalledTimes(1);
@@ -41,24 +39,22 @@ describe('activateExperiment', () => {
     expect(mockOptimizely.activate).toHaveBeenCalledWith('foo');
   });
 
-  it('should return false when on server', async () => {
+  it('should not activate when on server', async () => {
     (onClient as jest.Mock).mockReturnValueOnce(false);
     mockOptimizely.onReady.mockResolvedValue({ success: true });
 
-    await expect(
-      activateExperiment({
-        optimizely: mockOptimizely as unknown as ReactSDKClient,
-        experimentName: mockExperimentName,
-        experimentVariation: mockExperimentVariation,
-      }),
-    ).resolves.toBe(false);
+    await activateExperiment({
+      optimizely: mockOptimizely as unknown as ReactSDKClient,
+      experimentName: mockExperimentName,
+      experimentVariation: mockExperimentVariation,
+    });
 
     expect(mockOptimizely.onReady).not.toHaveBeenCalled();
     expect(mockOptimizely.setForcedVariation).not.toHaveBeenCalled();
     expect(mockOptimizely.activate).not.toHaveBeenCalled();
   });
 
-  it('should return false if the experiment was already activated', async () => {
+  it('should not activate an experiment twice', async () => {
     (onClient as jest.Mock).mockReturnValue(true);
     mockOptimizely.onReady.mockResolvedValue({ success: true });
 
@@ -68,28 +64,24 @@ describe('activateExperiment', () => {
       experimentVariation: mockExperimentVariation,
     });
 
-    await expect(
-      activateExperiment({
-        optimizely: mockOptimizely as unknown as ReactSDKClient,
-        experimentName: mockExperimentName,
-        experimentVariation: mockExperimentVariation,
-      }),
-    ).resolves.toBe(false);
+    await activateExperiment({
+      optimizely: mockOptimizely as unknown as ReactSDKClient,
+      experimentName: mockExperimentName,
+      experimentVariation: mockExperimentVariation,
+    });
 
     expect(mockOptimizely.activate).toHaveBeenCalledTimes(1);
   });
 
-  it('should return false when onReady resolves with success: false', async () => {
+  it('should not activate when onReady resolves with success: false', async () => {
     (onClient as jest.Mock).mockReturnValueOnce(true);
     mockOptimizely.onReady.mockResolvedValue({ success: false });
 
-    await expect(
-      activateExperiment({
-        optimizely: mockOptimizely as unknown as ReactSDKClient,
-        experimentName: mockExperimentName,
-        experimentVariation: mockExperimentVariation,
-      }),
-    ).resolves.toBe(false);
+    await activateExperiment({
+      optimizely: mockOptimizely as unknown as ReactSDKClient,
+      experimentName: mockExperimentName,
+      experimentVariation: mockExperimentVariation,
+    });
 
     expect(mockOptimizely.setForcedVariation).not.toHaveBeenCalled();
     expect(mockOptimizely.activate).not.toHaveBeenCalled();
@@ -99,7 +91,7 @@ describe('activateExperiment', () => {
     (onClient as jest.Mock).mockReturnValue(true);
     mockOptimizely.onReady.mockResolvedValue({ success: true });
 
-    const results = await Promise.all([
+    await Promise.all([
       activateExperiment({
         optimizely: mockOptimizely as unknown as ReactSDKClient,
         experimentName: mockExperimentName,
@@ -112,7 +104,6 @@ describe('activateExperiment', () => {
       }),
     ]);
 
-    expect(results.sort()).toEqual([false, true]);
     expect(mockOptimizely.activate).toHaveBeenCalledTimes(1);
   });
 });

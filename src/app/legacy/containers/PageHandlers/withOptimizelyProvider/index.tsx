@@ -46,13 +46,11 @@ type DecisionInfo = {
   decisionEventDispatched?: boolean;
 };
 
-// Optimizely reports a decision in one of two shapes depending on the experiment type.
-// We normalise both into a single `decisionKey` + `impressionDispatched` so the rest
-// of the app doesn't need to know which type it was:
-// - Client-side (Flags/decide API): uses `flagKey`; an impression is only counted
-//   when `decisionEventDispatched` is true.
-// - Server-side (legacy activate API): uses `experimentKey` (the rule key) and
-//   always counts an impression.
+type ActivateNotification = ListenerPayload & {
+  experiment?: { key?: string } | null;
+  variation?: { key?: string } | null;
+};
+
 const resolveDecision = (decisionInfo?: DecisionInfo) => {
   const clientSideFlagKey = decisionInfo?.flagKey;
   const serverSideRuleKey = decisionInfo?.experimentKey;
@@ -69,31 +67,57 @@ const resolveDecision = (decisionInfo?: DecisionInfo) => {
       };
 };
 
+const handleDecision = ({
+  decisionKey,
+  variationKey,
+  impressionDispatched,
+}: {
+  decisionKey?: string;
+  variationKey?: string;
+  impressionDispatched: boolean;
+}) => {
+  if (!onClient()) return;
+
+  if (decisionKey && variationKey && variationKey !== 'off') {
+    const isNewDecision = notifyDecision(decisionKey);
+
+    if (impressionDispatched) {
+      if (isNewDecision) {
+        const activationTrackingData = getActivationTrackingData();
+        sendOptimizelyActivationEvent({
+          experimentName: decisionKey,
+          experimentVariant: variationKey,
+          ...activationTrackingData,
+        });
+      }
+
+      trackPageEvents(optimizely);
+    }
+  }
+};
+
 optimizely?.notificationCenter?.addNotificationListener(
   enums.NOTIFICATION_TYPES.DECISION,
   (notification: ListenerPayload & { decisionInfo?: DecisionInfo }) => {
-    if (!onClient()) return;
-
     const { decisionInfo } = notification;
-    const variationKey = decisionInfo?.variationKey;
     const { decisionKey, impressionDispatched } = resolveDecision(decisionInfo);
 
-    if (decisionKey && variationKey && variationKey !== 'off') {
-      const isNewDecision = notifyDecision(decisionKey);
+    handleDecision({
+      decisionKey,
+      variationKey: decisionInfo?.variationKey,
+      impressionDispatched,
+    });
+  },
+);
 
-      if (impressionDispatched) {
-        if (isNewDecision) {
-          const activationTrackingData = getActivationTrackingData();
-          sendOptimizelyActivationEvent({
-            experimentName: decisionKey,
-            experimentVariant: variationKey,
-            ...activationTrackingData,
-          });
-        }
-
-        trackPageEvents(optimizely);
-      }
-    }
+optimizely?.notificationCenter?.addNotificationListener(
+  enums.NOTIFICATION_TYPES.ACTIVATE,
+  (notification: ActivateNotification) => {
+    handleDecision({
+      decisionKey: notification.experiment?.key,
+      variationKey: notification.variation?.key,
+      impressionDispatched: Boolean(notification.experiment?.key),
+    });
   },
 );
 
