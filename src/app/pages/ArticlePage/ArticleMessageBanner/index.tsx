@@ -6,6 +6,7 @@ import { MetadataTaggings } from '#app/models/types/metadata';
 import { ArticleMessageBannerConfig } from '#app/models/types/serviceConfig';
 import MessageBanner from '#app/components/MessageBanner';
 import Text from '#app/components/Text';
+import { RequestContext } from '#app/contexts/RequestContext';
 import styles from './index.styles';
 
 type Props = {
@@ -26,9 +27,10 @@ type MatchingBanner = {
 
 const ArticleMessageBanner = ({ aboutTags, taggings }: Props) => {
   const { articleMessageBanners } = use(ServiceContext);
+  const { pathname } = use(RequestContext);
+
   const { enabled: electionBannerEnabled }: ToggleType =
     useToggle('electionBanner');
-
   if (!articleMessageBanners?.length) return null;
 
   const matchingBanner = articleMessageBanners
@@ -38,8 +40,11 @@ const ArticleMessageBanner = ({ aboutTags, taggings }: Props) => {
       const hasMatchingTag = aboutTags?.some(({ thingId }) =>
         bannerDefinition.thingIds.includes(thingId),
       );
+      const linksToCurrentPage = bannerDefinition?.linkHref.includes(pathname);
 
-      return hasMatchingTag ? { bannerDefinition } : null;
+      return hasMatchingTag && !linksToCurrentPage
+        ? { bannerDefinition }
+        : null;
     })
     .find((bannerOrNull): bannerOrNull is MatchingBanner =>
       Boolean(bannerOrNull),
