@@ -40,7 +40,7 @@ declare global {
       __resolveReverbLoaded: (
         value: ReverbClient | PromiseLike<ReverbClient>,
       ) => void;
-      __rejectReverbLoaded: (reason?: any) => void;
+      __rejectReverbLoaded: (reason?: unknown) => void;
       __reverbTimeout: NodeJS.Timeout;
     };
     requirejs: (
