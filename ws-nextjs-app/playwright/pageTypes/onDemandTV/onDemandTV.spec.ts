@@ -278,8 +278,8 @@ test.describe('onDemandTV', () => {
               const recentEpisodes = pageData?.recentEpisodes;
 
               if (
-                (recentEpisodes?.length ?? 0) > 1 &&
-                recentEpisodesMaxNumber > 1
+                (recentEpisodes?.length ?? 0) >= 1 &&
+                recentEpisodesMaxNumber >= 1
               ) {
                 await expect(recentEpisodesList).toBeVisible();
 
