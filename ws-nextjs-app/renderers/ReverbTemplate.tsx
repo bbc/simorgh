@@ -15,7 +15,8 @@ const reverbScaffold = function (envConfig: EnvConfig) {
     window.__reverb.__rejectReverbLoaded();
   }, 5000);
 
-  const reverbScript = document.createElement('script');
+  // eslint-disable-next-line no-var, vars-on-top
+  var reverbScript = document.createElement('script');
   reverbScript.setAttribute('src', envConfig?.SIMORGH_REVERB_SOURCE ?? '');
   document.head.appendChild(reverbScript);
 };
