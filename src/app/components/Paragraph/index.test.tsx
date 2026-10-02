@@ -14,7 +14,7 @@ describe('Paragraph', () => {
     });
 
     expect(screen.getByText('Hello World!')).toHaveStyle({
-      color: '#141414',
+      color: '#181818',
       fontSize: '0.9375rem',
       lineHeight: '1.25rem',
       fontFamily: 'ReithSans,Helvetica,Arial,sans-serif',
@@ -30,7 +30,7 @@ describe('Paragraph', () => {
     });
 
     expect(screen.getByText('Hello World!')).toHaveStyle({
-      color: '#141414',
+      color: '#181818',
       fontSize: '0.9375rem',
       lineHeight: '1.5rem',
       fontFamily:

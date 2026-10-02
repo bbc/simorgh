@@ -54,7 +54,7 @@ const styles = {
       width: '100%',
       color: palette.BLACK,
       '&:hover, &:focus': {
-        backgroundColor: '#F6F6F6',
+        backgroundColor: '#F8F8F8',
         color: palette.BLACK,
       },
       [mq.GROUP_3_MIN_WIDTH]: {
