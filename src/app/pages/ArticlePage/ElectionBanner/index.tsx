@@ -85,7 +85,7 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
             ampMetadata={{
               imageWidth: 1,
               imageHeight: 1,
-              src: `https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/33021.html`,
+              src: assocPressIframeSrc,
               image:
                 'https://news.files.bbci.co.uk/include/vjassets/img/app-launcher.png',
               title: validAboutTag.thingLabel,
