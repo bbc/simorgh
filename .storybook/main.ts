@@ -46,7 +46,7 @@ const storybookConfig: StorybookConfig = {
     '../src/app/pages/**/*.stories.@(t|j)sx',
     './DocsDecorator/**/*.stories.@(t|j)sx',
     './StorybookComponents/**/*.stories.@(t|j)sx',
-    '../ws-nextjs-app/**/*.stories.tsx',
+    '../ws-nextjs-app/pages/**/*.stories.tsx',
     '../docs/**/*.mdx',
     '../src/**/*.mdx',
   ],

@@ -1,11 +1,10 @@
 import { css } from '@emotion/react';
 
 const styles = {
-  pageWrapper: ({ palette, isDarkUi }) =>
+  pageWrapper: ({ palette }) =>
     css({
-      ...(isDarkUi && {
-        backgroundColor: palette.GREY_10,
-      }),
+      backgroundColor: palette.GREY_10,
+      display: 'grid',
     }),
   main: ({ spacings, mq }) =>
     css({

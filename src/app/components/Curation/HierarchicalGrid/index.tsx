@@ -5,7 +5,7 @@ import moment from 'moment';
 import path from 'ramda/src/path';
 import isMediaType from '#app/lib/utilities/isMedia';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
-import isLiveEnvironment from '#lib/utilities/isLive';
+import { getRelatedTopicForPromo } from '#app/lib/experiments/homepageRelatedTopicPromos';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import formatDuration from '../../../lib/utilities/formatDuration';
 import Promo from '../../../legacy/components/Promo';
@@ -40,6 +40,7 @@ const HiearchicalGrid = ({
   headingLevel,
   isFirstCuration,
   eventTrackingData,
+  showRelatedTopicExperiment = false,
 }: CurationGridProps) => {
   const { isAmp } = use(RequestContext);
   const { translations } = use(ServiceContext);
@@ -89,6 +90,11 @@ const HiearchicalGrid = ({
             (promo.type === 'video' && `${videoTranslation}, `) ||
             (promo.type === 'photogallery' && `${photoGalleryTranslation}, `);
           const { isLive, relatedTopic } = promo;
+          const relatedTopicToShow = getRelatedTopicForPromo(
+            relatedTopic,
+            promo.type,
+            showRelatedTopicExperiment,
+          );
 
           const promoEventTrackingData = buildPromoEventTrackingData(promo, i);
           const clickTrackerHandler = getClickTrackerHandler(
@@ -191,13 +197,13 @@ const HiearchicalGrid = ({
               </Promo.Body>
               {!showLiveLabel ? (
                 <div css={styles.metadataAndTopicData}>
-                  {relatedTopic && !isLiveEnvironment() && (
+                  {relatedTopicToShow && (
                     <a
-                      href={relatedTopic.link.url}
+                      href={relatedTopicToShow.link.url}
                       css={styles.relatedTopicLink}
                       {...relatedTopicClickTrackerHandler}
                     >
-                      {relatedTopic.title}
+                      {relatedTopicToShow.title}
                     </a>
                   )}
                   <Promo.Timestamp className="promo-timestamp">
