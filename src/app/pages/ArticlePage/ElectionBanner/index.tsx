@@ -101,29 +101,31 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
 
   if (assocPressIframeSrc && !isAmp) {
     return (
-      <div
-        data-testid="election-banner"
-        css={styles.electionBannerWrapper}
-        // css={[styles.electionBannerWrapper, styles.electionBannerIframe(heights)]}
-      >
-        <iframe
-          className="ap-embed" // needed for script
-          title={validAboutTag.thingLabel}
-          // title="Live election results via the Associated Press"
-          // loading="lazy"
-          src={assocPressIframeSrc}
-          scrolling="no"
-          // css={styles.electionBannerIframe(heights)}
-          css={styles.electionBannerIframeExtra(heightsAp)} // minHeights
-          height={heightsAp.desktop}
-          width="100%"
-          // frameBorder="0"
-          // marginHeight="0"
-        />
-        <script
-          defer
-          src="https://interactives.apelections.org/election-results/assets/microsite/resizeClient.js"
-        />
+      <div css={styles.electionBannerBackground(heightsAp)}>
+        <div
+          data-testid="election-banner"
+          css={styles.electionBannerWrapper}
+          // css={[styles.electionBannerWrapper, styles.electionBannerIframe(heights)]}
+        >
+          <iframe
+            className="ap-embed" // needed for script
+            title={validAboutTag.thingLabel}
+            // title="Live election results via the Associated Press"
+            // loading="lazy"
+            src={assocPressIframeSrc}
+            scrolling="no"
+            // css={styles.electionBannerIframe(heights)}
+            css={styles.electionBannerIframeExtra(heightsAp)} // minHeights
+            height={heightsAp.desktop}
+            width="100%"
+            // frameBorder="0"
+            // marginHeight="0"
+          />
+          <script
+            defer
+            src="https://interactives.apelections.org/election-results/assets/microsite/resizeClient.js"
+          />
+        </div>
       </div>
     );
   }

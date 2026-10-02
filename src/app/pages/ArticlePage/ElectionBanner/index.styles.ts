@@ -21,7 +21,31 @@ const AP_BREAKPOINTS = {
   max767: `@media (max-width: ${pixelsToRem(767)}rem)`,
 };
 
+const AP_EMBED_MAX_WIDTH = `${pixelsToRem(1008)}rem`;
+const AP_EMBED_BACKGROUND = 'linear-gradient(180deg, #2e1065 0%, #000 100%)';
+
 export default {
+  electionBannerBackground:
+    ({ max265, max419, max526, max767, desktop }: AssociatedPressHeights) =>
+    () =>
+      css({
+        background: AP_EMBED_BACKGROUND,
+        inset: 0,
+        width: '100%',
+        minHeight: `${pixelsToRem(desktop)}rem`,
+        [AP_BREAKPOINTS.max767]: {
+          minHeight: `${pixelsToRem(max767)}rem`,
+        },
+        [AP_BREAKPOINTS.max526]: {
+          minHeight: `${pixelsToRem(max526)}rem`,
+        },
+        [AP_BREAKPOINTS.max419]: {
+          minHeight: `${pixelsToRem(max419)}rem`,
+        },
+        [AP_BREAKPOINTS.max265]: {
+          minHeight: `${pixelsToRem(max265)}rem`,
+        },
+      }),
   electionBannerWrapper: ({ spacings }: Theme) =>
     css({
       marginBottom: `${spacings.FULL}rem`,
@@ -45,7 +69,7 @@ export default {
     () =>
       css({
         border: 'none',
-        maxWidth: `${pixelsToRem(1008)}rem`, // limit width on desktop, in line with VJ design
+        maxWidth: AP_EMBED_MAX_WIDTH, // limit width on desktop, in line with VJ design
         minHeight: `${pixelsToRem(desktop)}rem`,
         [AP_BREAKPOINTS.max767]: {
           minHeight: `${pixelsToRem(max767)}rem`,
