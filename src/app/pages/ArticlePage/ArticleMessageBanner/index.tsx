@@ -40,8 +40,9 @@ const ArticleMessageBanner = ({ aboutTags, taggings }: Props) => {
       const hasMatchingTag = aboutTags?.some(({ thingId }) =>
         bannerDefinition.thingIds.includes(thingId),
       );
-      const linksToCurrentPage = bannerDefinition?.linkHref.includes(pathname);
-
+      const linksToCurrentPage = bannerDefinition?.linkHref.includes(
+        pathname.replace(/\.(amp|app|lite)$/, ''),
+      );
       return hasMatchingTag && !linksToCurrentPage
         ? { bannerDefinition }
         : null;
