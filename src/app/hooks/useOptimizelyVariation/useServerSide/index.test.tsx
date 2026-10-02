@@ -18,7 +18,7 @@ jest.mock('#app/hooks/useOptimizelyVariation', () => ({
 
 const spyActivateExperiment = jest
   .spyOn(activateExperiment, 'default')
-  .mockResolvedValue(undefined);
+  .mockImplementation(jest.fn());
 
 const optimizely = {
   setUser: jest.fn(() => Promise.resolve()),
@@ -197,29 +197,6 @@ describe('useOptimizelyVariation - useServerSide', () => {
     });
 
     expect(spyActivateExperiment).toHaveBeenCalledTimes(1);
-  });
-
-  it('should log activation errors', async () => {
-    const error = new Error('activation failed');
-    const consoleErrorSpy = jest
-      .spyOn(console, 'error')
-      .mockImplementation(() => undefined);
-    spyActivateExperiment.mockRejectedValueOnce(error);
-
-    await act(async () => {
-      renderUseServerSide({
-        serverSideExperiments: [
-          { experimentName: 'foo', variation: 'control', enabled: true },
-        ] as ServerSideExperiment[],
-        experimentName: 'foo',
-      });
-    });
-
-    expect(consoleErrorSpy).toHaveBeenCalledWith(
-      'Optimizely server-side activation failed for foo',
-      error,
-    );
-    consoleErrorSpy.mockRestore();
   });
 
   it('should not call activate experiment if experiment is disabled', async () => {

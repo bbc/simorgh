@@ -17,23 +17,11 @@ export default (experimentName: string) => {
 
   useEffect(() => {
     if (optimizely && activeVariation) {
-      const activateExperimentForUser = async () => {
-        try {
-          await activateExperiment({
-            optimizely,
-            experimentName,
-            experimentVariation: activeVariation,
-          });
-        } catch (error) {
-          // eslint-disable-next-line no-console
-          console.error(
-            `Optimizely server-side activation failed for ${experimentName}`,
-            error,
-          );
-        }
-      };
-
-      activateExperimentForUser();
+      activateExperiment({
+        optimizely,
+        experimentName,
+        experimentVariation: activeVariation,
+      });
     }
   }, [optimizely, experimentName, activeVariation]);
 

@@ -39,7 +39,7 @@ describe('activateExperiment', () => {
     expect(mockOptimizely.activate).toHaveBeenCalledWith('foo');
   });
 
-  it('should not activate when on server', async () => {
+  it('should not set a forced variation or experiment when on server', async () => {
     (onClient as jest.Mock).mockReturnValueOnce(false);
     mockOptimizely.onReady.mockResolvedValue({ success: true });
 
@@ -54,7 +54,7 @@ describe('activateExperiment', () => {
     expect(mockOptimizely.activate).not.toHaveBeenCalled();
   });
 
-  it('should not activate an experiment twice', async () => {
+  it('should not activate again if the experiment was already activated', async () => {
     (onClient as jest.Mock).mockReturnValue(true);
     mockOptimizely.onReady.mockResolvedValue({ success: true });
 
@@ -71,20 +71,6 @@ describe('activateExperiment', () => {
     });
 
     expect(mockOptimizely.activate).toHaveBeenCalledTimes(1);
-  });
-
-  it('should not activate when onReady resolves with success: false', async () => {
-    (onClient as jest.Mock).mockReturnValueOnce(true);
-    mockOptimizely.onReady.mockResolvedValue({ success: false });
-
-    await activateExperiment({
-      optimizely: mockOptimizely as unknown as ReactSDKClient,
-      experimentName: mockExperimentName,
-      experimentVariation: mockExperimentVariation,
-    });
-
-    expect(mockOptimizely.setForcedVariation).not.toHaveBeenCalled();
-    expect(mockOptimizely.activate).not.toHaveBeenCalled();
   });
 
   it('should not activate again for a concurrent hook instance activating the same experiment', async () => {
@@ -105,5 +91,19 @@ describe('activateExperiment', () => {
     ]);
 
     expect(mockOptimizely.activate).toHaveBeenCalledTimes(1);
+  });
+
+  it('should not set a forced variation or activate when onReady resolves with success: false', async () => {
+    (onClient as jest.Mock).mockReturnValueOnce(true);
+    mockOptimizely.onReady.mockResolvedValue({ success: false });
+
+    await activateExperiment({
+      optimizely: mockOptimizely as unknown as ReactSDKClient,
+      experimentName: mockExperimentName,
+      experimentVariation: mockExperimentVariation,
+    });
+
+    expect(mockOptimizely.setForcedVariation).not.toHaveBeenCalled();
+    expect(mockOptimizely.activate).not.toHaveBeenCalled();
   });
 });

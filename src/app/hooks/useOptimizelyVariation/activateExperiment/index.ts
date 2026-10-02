@@ -18,14 +18,14 @@ const activateExperiment = async ({
   experimentName,
   experimentVariation,
 }: Props) => {
-  if (!onClient() || !optimizely) return;
-
-  const { success } = await optimizely.onReady();
-  if (!success || activatedExperiments.has(experimentName)) return;
-
-  activatedExperiments.add(experimentName);
-  optimizely.setForcedVariation(experimentName, experimentVariation);
-  optimizely.activate(experimentName);
+  if (onClient() && optimizely) {
+    const { success } = await optimizely.onReady();
+    if (success && !activatedExperiments.has(experimentName)) {
+      activatedExperiments.add(experimentName);
+      optimizely.setForcedVariation(experimentName, experimentVariation);
+      optimizely.activate(experimentName);
+    }
+  }
 };
 
 export default activateExperiment;
