@@ -112,6 +112,9 @@ export const service: DefaultServiceConfig = {
         moreAboutTopic: 'Más sobre {topic}',
         fetchErrorMessage: 'Error al cargar. Inténtalo de nuevo',
       },
+      googlePreferredSource: {
+        linkText: 'Agregar como fuente preferida en Google',
+      },
       continueReading: 'Continuar leyendo',
       currentPage: 'Página actual',
       skipLinkText: 'Ir al contenido',
