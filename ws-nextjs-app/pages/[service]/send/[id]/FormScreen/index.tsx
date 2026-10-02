@@ -1,4 +1,4 @@
-import { useEffect, useRef, use } from 'react';
+import { useEffect, useMemo, useRef, use } from 'react';
 import Heading from '#app/components/Heading';
 import { LiveRegionContextProvider } from '#app/components/LiveRegion/LiveRegionContext';
 import LiveRegion from '#app/components/LiveRegion';
@@ -40,6 +40,10 @@ export default function FormScreen({
 
   const hasAttemptedSubmit = attemptedSubmitCount > 0;
   const hasValidationErrors = validationErrors.length > 0;
+  const privacyNoticeMarkup = useMemo(
+    () => ({ __html: privacyNotice }),
+    [privacyNotice],
+  );
 
   useEffect(() => {
     if (hasValidationErrors && hasAttemptedSubmit) {
@@ -56,6 +60,27 @@ export default function FormScreen({
     attemptedSubmitCount,
     validationRequired,
   ]);
+
+  useEffect(() => {
+    if (process.env.NODE_ENV === 'production') return undefined;
+
+    const handleFocusChange = (event: FocusEvent) => {
+      // eslint-disable-next-line no-console
+      console.log(`[${event.type}]`, {
+        activeElement: document.activeElement,
+        target: event.target,
+        relatedTarget: event.relatedTarget,
+      });
+    };
+
+    document.addEventListener('focusin', handleFocusChange);
+    document.addEventListener('focusout', handleFocusChange);
+
+    return () => {
+      document.removeEventListener('focusin', handleFocusChange);
+      document.removeEventListener('focusout', handleFocusChange);
+    };
+  }, []);
 
   const fields = sections?.flatMap(section => section.fields ?? []) ?? [];
 
@@ -127,7 +152,7 @@ export default function FormScreen({
               <strong css={styles.privacyHeading}>{dataPolicyHeading}</strong>
               <div
                 // eslint-disable-next-line react/no-danger
-                dangerouslySetInnerHTML={{ __html: privacyNotice }}
+                dangerouslySetInnerHTML={privacyNoticeMarkup}
                 css={styles.privacyNotice}
               />
             </div>
