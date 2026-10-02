@@ -74,51 +74,49 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
 
   if (assocPressIframeSrc && isAmp) {
     return (
-      <div
-        data-testid="election-banner"
-        // not minheight
-        css={styles.electionBannerWrapperAmpExtra(heightsAp)}
-      >
-        <AmpIframe
-          ampMetadata={{
-            imageWidth: 1,
-            imageHeight: 1,
-            // might need /amp
-            src: `https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/33021.html`,
-            image:
-              'https://news.files.bbci.co.uk/include/vjassets/img/app-launcher.png',
-            title: validAboutTag.thingLabel,
-          }}
-        />
-        {/* // not sure if this will work */}
-        {/* <script
+      // minHeight here is fine since iframe itself has fixed height styles applied
+      <div css={styles.assocPressElectionBannerBackground(heightsAp)}>
+        <div
+          data-testid="election-banner"
+          // not minheight
+          css={styles.assocPressElectionBannerWrapperAmp(heightsAp)}
+        >
+          <AmpIframe
+            ampMetadata={{
+              imageWidth: 1,
+              imageHeight: 1,
+              src: `https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/33021.html`,
+              image:
+                'https://news.files.bbci.co.uk/include/vjassets/img/app-launcher.png',
+              title: validAboutTag.thingLabel,
+            }}
+          />
+          {/* // not sure if this will work */}
+          {/* <script
           defer
           src="https://interactives.apelections.org/election-results/assets/microsite/resizeClient.js"
         /> */}
+        </div>
       </div>
     );
   }
 
   if (assocPressIframeSrc && !isAmp) {
     return (
-      <div css={styles.electionBannerBackground(heightsAp)}>
-        <div
-          data-testid="election-banner"
-          css={styles.electionBannerWrapper}
-          // css={[styles.electionBannerWrapper, styles.electionBannerIframe(heights)]}
-        >
+      <div css={styles.assocPressElectionBannerBackground(heightsAp)}>
+        <div data-testid="election-banner" css={styles.electionBannerWrapper}>
           <iframe
             className="ap-embed" // needed for script
             title={validAboutTag.thingLabel}
-            // title="Live election results via the Associated Press"
-            // loading="lazy"
+            // title="Live election results via the Associated Press" - from AP
+            // loading="lazy" - from AP
             src={assocPressIframeSrc}
             scrolling="no"
-            css={styles.electionBannerIframeExtra(heightsAp)} // minHeights
+            css={styles.assocPressElectionBannerIframe(heightsAp)} // minHeights
             height={heightsAp.desktop}
             width="100%"
-            // frameBorder="0"
-            // marginHeight="0"
+            // frameBorder="0" - from AP
+            // marginHeight="0" - from AP
           />
           <script
             defer
