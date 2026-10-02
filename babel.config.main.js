@@ -20,6 +20,7 @@ module.exports = api => {
     [
       '@babel/preset-env',
       {
+        bugfixes: false,
         targets: {
           ...(useModern
             ? {
