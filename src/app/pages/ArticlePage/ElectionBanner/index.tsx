@@ -1,4 +1,5 @@
 import { use } from 'react';
+import Script from 'next/script';
 import { RequestContext } from '#app/contexts/RequestContext';
 import AmpIframe from '#app/components/AmpIframe';
 import useToggle from '#app/hooks/useToggle';
@@ -18,10 +19,16 @@ type ToggleType = {
   value: string | null;
 };
 
-const DEFAULT_HEIGHTS = {
+const DEFAULT_HEIGHTS_VJ = {
   desktop: 350,
   tablet: 320,
   mobile: 315,
+};
+
+const DEFAULT_HEIGHTS_AP = {
+  desktop: 250,
+  tablet: 400, // not used
+  mobile: 400,
 };
 
 const SENSITIVE_ARTICLE_ID = 'f2b5dd0e-dda0-454c-893d-792d46ff48c3';
@@ -35,10 +42,14 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
   if (isLite || !electionBanner) return null;
 
   const {
-    heights = DEFAULT_HEIGHTS,
+    // @ts-expect-error - need to type
+    heightsAp = DEFAULT_HEIGHTS_AP,
+    // @ts-expect-error - need to type
+    heightsVj = DEFAULT_HEIGHTS_VJ,
     iframeSrc,
     iframeDevSrc,
     electionThingIds,
+    assocPressIframeSrc,
   } = electionBanner;
 
   const isEditoriallySensitive = taggings?.some(({ value }) =>
@@ -60,13 +71,67 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
     SIMORGH_INCLUDES_BASE_AMP_URL,
   } = getEnvConfig();
 
+  if (assocPressIframeSrc && isAmp) {
+    return (
+      // minHeight here is fine since iframe itself has fixed height styles applied
+      <div
+        css={[
+          styles.assocPressElectionBannerBackground(heightsAp),
+          styles.limitsAmpToMobileViewport,
+        ]}
+      >
+        <div
+          data-testid="election-banner"
+          css={styles.assocPressElectionBannerWrapperAmp(heightsAp)}
+        >
+          <AmpIframe
+            ampMetadata={{
+              imageWidth: 1,
+              imageHeight: 1,
+              src: assocPressIframeSrc,
+              image:
+                'https://news.files.bbci.co.uk/include/vjassets/img/app-launcher.png',
+              title: validAboutTag.thingLabel,
+            }}
+          />
+        </div>
+      </div>
+    );
+  }
+
+  if (assocPressIframeSrc && !isAmp) {
+    return (
+      <div css={styles.assocPressElectionBannerBackground(heightsAp)}>
+        <div data-testid="election-banner" css={styles.electionBannerWrapper}>
+          <iframe
+            className="ap-embed" // needed for script
+            title={validAboutTag.thingLabel}
+            // title="Live election results via the Associated Press" - from AP
+            // loading="lazy" - from AP
+            src={assocPressIframeSrc}
+            scrolling="no"
+            css={styles.assocPressElectionBannerIframe(heightsAp)} // minHeights
+            height={heightsAp.desktop} // I don't think this has an effect - copied from below
+            width="100%"
+            // frameBorder="0" - from AP
+            // marginHeight="0" - from AP
+          />
+          <Script
+            src="https://interactives.apelections.org/election-results/assets/microsite/resizeClient.js"
+            strategy="lazyOnload"
+          />
+        </div>
+      </div>
+    );
+  }
+
   const iframeSrcToUse = SIMORGH_APP_ENV === 'live' ? iframeSrc : iframeDevSrc;
 
   if (isAmp) {
     return (
       <div
         data-testid="election-banner"
-        css={styles.electionBannerWrapperAmp(heights)}
+        css={styles.electionBannerWrapperAmp(heightsVj)}
       >
         <AmpIframe
           ampMetadata={{
@@ -88,8 +153,8 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
         title={validAboutTag.thingLabel}
         src={`${SIMORGH_INCLUDES_BASE_URL}/${iframeSrcToUse}`}
         scrolling="no"
-        css={styles.electionBannerIframe(heights)}
-        height={heights.desktop}
+        css={styles.electionBannerIframe(heightsVj)}
+        height={heightsVj.desktop}
         width="100%"
       />
     </div>
