@@ -13,15 +13,20 @@ import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import { notifyDecision } from '#app/lib/optimizelyDecisionStore';
 import sendOptimizelyActivationEvent from '#app/lib/analyticsUtils/sendOptimizelyActivationEvent';
 import { getActivationTrackingData } from '#app/lib/analyticsUtils/activationTrackingData';
+import { TOKEN_COOKIE_NAME } from '#app/lib/uasApi/tokenRefresh/tokenManager';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import isCypress from './isCypress';
-import trackPageEvents from './trackPageEvents';
+import registerVisitActivity from './visitTracking';
 import { getClientTimeOfDay, getReferrer, isMobile } from './userAttributes';
 
+const PAGE_VIEW_EVENT_NAME = 'page-views';
+const SIGNED_IN_PAGE_VIEW_EVENT_NAME = 'signed-in-page-views';
+const VISIT_EVENT_NAME = 'visit';
 const isInCypress = isCypress();
 const isStoryBook = process.env.STORYBOOK;
 const disableOptimizely = isStoryBook || isInCypress;
+let lastTrackedUrl: string | null = null;
 
 if (isLive() || isInCypress) {
   setLogger(null);
@@ -33,11 +38,36 @@ const getUserId = () => {
   return Cookie.get('ckns_mvt') ?? null;
 };
 
+const isSignedIn = () => {
+  if (!onClient() || isOperaProxy()) return false;
+  return Boolean(Cookie.get(TOKEN_COOKIE_NAME));
+};
+
 const optimizely = createInstance({
   sdkKey: getEnvConfig().SIMORGH_OPTIMIZELY_SDK_KEY,
   eventBatchSize: 10,
   eventFlushInterval: 100,
 });
+
+const trackPageEvents = () => {
+  if (!onClient() || isOperaProxy()) return;
+
+  const currentUrl = window.location.pathname + window.location.search;
+  if (currentUrl === lastTrackedUrl) return;
+
+  lastTrackedUrl = currentUrl;
+
+  // The visit (denominator) must be sent before the page view (numerator).
+  if (registerVisitActivity(Date.now())) {
+    optimizely.track(VISIT_EVENT_NAME);
+  }
+
+  optimizely.track(PAGE_VIEW_EVENT_NAME);
+
+  if (isSignedIn()) {
+    optimizely.track(SIGNED_IN_PAGE_VIEW_EVENT_NAME);
+  }
+};
 
 type DecisionInfo = {
   flagKey?: string;
@@ -91,7 +121,7 @@ const handleDecision = ({
         });
       }
 
-      trackPageEvents(optimizely);
+      trackPageEvents();
     }
   }
 };
