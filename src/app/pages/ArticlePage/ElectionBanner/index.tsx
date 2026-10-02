@@ -25,9 +25,11 @@ const DEFAULT_HEIGHTS_VJ = {
 };
 
 const DEFAULT_HEIGHTS_AP = {
+  max265: 377,
+  max419: 349,
+  max526: 339,
+  max767: 379,
   desktop: 216,
-  tablet: 216,
-  mobile: 315,
 };
 
 const SENSITIVE_ARTICLE_ID = 'f2b5dd0e-dda0-454c-893d-792d46ff48c3';
@@ -75,7 +77,7 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
       <div
         data-testid="election-banner"
         // not minheight
-        css={styles.electionBannerWrapperAmp(heightsAp)}
+        css={styles.electionBannerWrapperAmpExtra(heightsAp)}
       >
         <AmpIframe
           ampMetadata={{
