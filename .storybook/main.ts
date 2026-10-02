@@ -94,6 +94,19 @@ const storybookConfig: StorybookConfig = {
     ...config,
     ...DOT_ENV_CONFIG.parsed,
   }),
+  // Drop preset-env's `bugfixes` option, which breaks Storybook's webpack babel-loader config
+  babel: async options => {
+    const storybookOverrides = options.overrides[0];
+    const storybookBabelPreset = storybookOverrides.presets[0];
+
+    // Remove bugfixes
+    const [presetPath, presetOptions] = storybookBabelPreset;
+    const { bugfixes, ...remainingOptions } = presetOptions;
+
+    options.overrides[0].presets[0] = [presetPath, remainingOptions];
+
+    return options;
+  },
   webpackFinal: async (config, options) => {
     const babelOptions = await options.presets.apply('babel', {}, options);
     const typescriptOptions = await options.presets.apply(
