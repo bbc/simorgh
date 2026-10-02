@@ -349,6 +349,6 @@ exports[`Canonical Watch SEO Twitter title 1`] = `"BBC świadkiem ataku izraelsk
 exports[`Canonical Watch Timestamp should match text and date 1`] = `
 {
   "date": "2026-10-01",
-  "text": "2 گھنٹے قبل",
+  "text": "1 اکتوبر 2026",
 }
 `;
