@@ -13,17 +13,12 @@ import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import { notifyDecision } from '#app/lib/optimizelyDecisionStore';
 import sendOptimizelyActivationEvent from '#app/lib/analyticsUtils/sendOptimizelyActivationEvent';
 import { getActivationTrackingData } from '#app/lib/analyticsUtils/activationTrackingData';
-import { TOKEN_COOKIE_NAME } from '#app/lib/uasApi/tokenRefresh/tokenManager';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import isCypress from './isCypress';
-import registerVisitActivity from './visitTracking';
+import trackPageEvents from './trackPageEvents';
 import { getClientTimeOfDay, getReferrer, isMobile } from './userAttributes';
 
-const PAGE_VIEW_EVENT_NAME = 'page-views';
-const SIGNED_IN_PAGE_VIEW_EVENT_NAME = 'signed-in-page-views';
-const VISIT_EVENT_NAME = 'visit';
-let lastTrackedUrl: string | null = null;
 const isInCypress = isCypress();
 const isStoryBook = process.env.STORYBOOK;
 const disableOptimizely = isStoryBook || isInCypress;
@@ -36,11 +31,6 @@ const getUserId = () => {
   if (disableOptimizely || !onClient() || isOperaProxy()) return null;
 
   return Cookie.get('ckns_mvt') ?? null;
-};
-
-const isSignedIn = () => {
-  if (disableOptimizely || !onClient() || isOperaProxy()) return false;
-  return Boolean(Cookie.get(TOKEN_COOKIE_NAME));
 };
 
 const optimizely = createInstance({
@@ -101,24 +91,7 @@ optimizely?.notificationCenter?.addNotificationListener(
           });
         }
 
-        const currentUrl = window.location.pathname + window.location.search;
-        if (currentUrl !== lastTrackedUrl) {
-          lastTrackedUrl = currentUrl;
-
-          // the visit (denominator) must be sent before the page view (numerator)
-          // so the page view falls inside Optimizely's ratio metric attribution window
-          if (registerVisitActivity(Date.now())) {
-            optimizely.track(VISIT_EVENT_NAME);
-          }
-
-          optimizely.track(PAGE_VIEW_EVENT_NAME);
-
-          // proxy metric for sign-in experiments: additional to page-views,
-          // fired only when the user is in a signed-in state
-          if (isSignedIn()) {
-            optimizely.track(SIGNED_IN_PAGE_VIEW_EVENT_NAME);
-          }
-        }
+        trackPageEvents(optimizely);
       }
     }
   },
