@@ -270,7 +270,7 @@ test.describe('onDemandTV', () => {
             '[data-e2e="recent-episodes-list"]',
           );
 
-          // More than one episode expected
+        
           if (recentEpisodesEnabled) {
             // Assertions are limited to Canonical where __NEXT_DATA__ is available
             if (!isLite) {
@@ -278,8 +278,8 @@ test.describe('onDemandTV', () => {
               const recentEpisodes = pageData?.recentEpisodes;
 
               if (
-                (recentEpisodes?.length ?? 0) >= 1 &&
-                recentEpisodesMaxNumber >= 1
+                (recentEpisodes?.length ?? 0) > 0 &&
+                recentEpisodesMaxNumber > 0
               ) {
                 await expect(recentEpisodesList).toBeVisible();
 
