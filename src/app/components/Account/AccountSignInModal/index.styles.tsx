@@ -29,6 +29,8 @@ export default {
 
     [`body.${PLAYER_FULLSCREEN_CLASS} &`]: {
       zIndex: -1,
+      visibility: 'hidden',
+      pointerEvents: 'none',
     },
   }),
 
