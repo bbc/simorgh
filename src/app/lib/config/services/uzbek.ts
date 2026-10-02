@@ -94,7 +94,7 @@ const defaultCyrillicConfig = {
       fetchErrorMessage: 'Юклаб бўлмади. Илтимос, яна уриниб кўринг',
     },
     googlePreferredSource: {
-      linkText: 'TGoogle’да афзал манба сифатида қўшиш',
+      linkText: 'Google’да афзал манба сифатида қўшиш',
     },
     currentPage: 'Жорий саҳифа',
     skipLinkText: 'Саҳифага ўтиш',

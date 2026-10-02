@@ -83,7 +83,7 @@ export const service: DefaultServiceConfig = {
         fetchErrorMessage: 'ဖွင့်ရန် မအောင်မြင်ပါ။ ထပ်ကြိုးစားပါ',
       },
       googlePreferredSource: {
-        linkText: 'TGoogle တွင် ဦးစားပေးရင်းမြစ်အဖြစ် ထည့်ပါ',
+        linkText: 'Google တွင် ဦးစားပေးရင်းမြစ်အဖြစ် ထည့်ပါ',
       },
       currentPage: 'လက်ရှိကြည့်နေသော စာမျက်နှာ',
       skipLinkText: 'အကြောင်းအရာများဆီ ကျော်သွားရန်',
