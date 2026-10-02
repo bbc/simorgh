@@ -149,7 +149,7 @@ export const service: SerbianConfig = {
         fetchErrorMessage: 'Učitavanje nije uspelo. Pokušajte ponovo',
       },
       googlePreferredSource: {
-        linkText: 'Додај као преферирани извор на Google-у',
+        linkText: 'Dodaj kao preferirani izvor na Google-u',
       },
       currentPage: 'Otvorena stranica',
       skipLinkText: 'Pređite na sadržaj',
@@ -638,7 +638,7 @@ export const service: SerbianConfig = {
         fetchErrorMessage: 'Учитавање није успело. Покушајте поново',
       },
       googlePreferredSource: {
-        linkText: 'Dodaj kao preferirani izvor na Google-u',
+        linkText: 'Додај као преферирани извор на Google-у',
       },
       currentPage: 'Отворена страница',
       skipLinkText: 'Пређите на садржај',
