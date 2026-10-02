@@ -73,6 +73,9 @@ export const service: DefaultServiceConfig = {
         moreAboutTopic: 'Mai mult despre {topic}',
         fetchErrorMessage: 'Încărcarea a eșuat. Vă rugăm să încercați din nou',
       },
+      googlePreferredSource: {
+        linkText: 'Adaugă ca sursă preferată pe Google',
+      },
       currentPage: 'Pagina curentă',
       skipLinkText: 'Acces direct la conținut',
       skipContent: {

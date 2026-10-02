@@ -88,6 +88,9 @@ export const service: DefaultServiceConfig = {
         moreAboutTopic: '{topic} সম্পর্কে আরও',
         fetchErrorMessage: 'লোড হতে ব্যর্থ। অনুগ্রহ করে আবার চেষ্টা করুন',
       },
+      googlePreferredSource: {
+        linkText: 'Google-এ পছন্দের উৎস হিসেবে যোগ করুন',
+      },
       currentPage: 'বর্তমান পেজ',
       skipLinkText: 'সরাসরি কনটেন্টে যান',
       skipContent: {

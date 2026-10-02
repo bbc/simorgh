@@ -87,6 +87,9 @@ export const service: DefaultServiceConfig = {
         fetchErrorMessage:
           'Yükləmə uğursuz oldu. Zəhmət olmasa yenidən yoxlayın',
       },
+      googlePreferredSource: {
+        linkText: 'Google-da üstün tutulan mənbə kimi əlavə et',
+      },
       currentPage: 'Hazırda olduğunuz səhifə',
       skipLinkText: 'Mətnə keçid',
       skipContent: {
