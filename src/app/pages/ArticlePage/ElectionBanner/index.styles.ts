@@ -97,7 +97,7 @@ export default {
   assocPressElectionBannerWrapperAmp:
     ({ mobile, desktop }: AssociatedPressHeights) =>
     // ({ default, }: AssociatedPressHeights) =>
-    ({ spacings, mq }: Theme) =>
+    ({ spacings }: Theme) =>
       css({
         overflow: 'hidden',
         marginBottom: `${spacings.FULL}rem`,
