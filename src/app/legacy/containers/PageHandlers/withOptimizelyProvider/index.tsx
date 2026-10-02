@@ -23,10 +23,10 @@ import { getClientTimeOfDay, getReferrer, isMobile } from './userAttributes';
 const PAGE_VIEW_EVENT_NAME = 'page-views';
 const SIGNED_IN_PAGE_VIEW_EVENT_NAME = 'signed-in-page-views';
 const VISIT_EVENT_NAME = 'visit';
-let lastTrackedUrl: string | null = null;
 const isInCypress = isCypress();
 const isStoryBook = process.env.STORYBOOK;
 const disableOptimizely = isStoryBook || isInCypress;
+let lastTrackedUrl: string | null = null;
 
 if (isLive() || isInCypress) {
   setLogger(null);
@@ -39,7 +39,7 @@ const getUserId = () => {
 };
 
 const isSignedIn = () => {
-  if (disableOptimizely || !onClient() || isOperaProxy()) return false;
+  if (!onClient() || isOperaProxy()) return false;
   return Boolean(Cookie.get(TOKEN_COOKIE_NAME));
 };
 
@@ -49,6 +49,26 @@ const optimizely = createInstance({
   eventFlushInterval: 100,
 });
 
+const trackPageEvents = () => {
+  if (!onClient() || isOperaProxy()) return;
+
+  const currentUrl = window.location.pathname + window.location.search;
+  if (currentUrl === lastTrackedUrl) return;
+
+  lastTrackedUrl = currentUrl;
+
+  // The visit (denominator) must be sent before the page view (numerator).
+  if (registerVisitActivity(Date.now())) {
+    optimizely.track(VISIT_EVENT_NAME);
+  }
+
+  optimizely.track(PAGE_VIEW_EVENT_NAME);
+
+  if (isSignedIn()) {
+    optimizely.track(SIGNED_IN_PAGE_VIEW_EVENT_NAME);
+  }
+};
+
 type DecisionInfo = {
   flagKey?: string;
   experimentKey?: string;
@@ -56,13 +76,11 @@ type DecisionInfo = {
   decisionEventDispatched?: boolean;
 };
 
-// Optimizely reports a decision in one of two shapes depending on the experiment type.
-// We normalise both into a single `decisionKey` + `impressionDispatched` so the rest
-// of the app doesn't need to know which type it was:
-// - Client-side (Flags/decide API): uses `flagKey`; an impression is only counted
-//   when `decisionEventDispatched` is true.
-// - Server-side (legacy activate API): uses `experimentKey` (the rule key) and
-//   always counts an impression.
+type ActivateNotification = ListenerPayload & {
+  experiment?: { key?: string } | null;
+  variation?: { key?: string } | null;
+};
+
 const resolveDecision = (decisionInfo?: DecisionInfo) => {
   const clientSideFlagKey = decisionInfo?.flagKey;
   const serverSideRuleKey = decisionInfo?.experimentKey;
@@ -79,48 +97,57 @@ const resolveDecision = (decisionInfo?: DecisionInfo) => {
       };
 };
 
+const handleDecision = ({
+  decisionKey,
+  variationKey,
+  impressionDispatched,
+}: {
+  decisionKey?: string;
+  variationKey?: string;
+  impressionDispatched: boolean;
+}) => {
+  if (!onClient()) return;
+
+  if (decisionKey && variationKey && variationKey !== 'off') {
+    const isNewDecision = notifyDecision(decisionKey);
+
+    if (impressionDispatched) {
+      if (isNewDecision) {
+        const activationTrackingData = getActivationTrackingData();
+        sendOptimizelyActivationEvent({
+          experimentName: decisionKey,
+          experimentVariant: variationKey,
+          ...activationTrackingData,
+        });
+      }
+
+      trackPageEvents();
+    }
+  }
+};
+
 optimizely?.notificationCenter?.addNotificationListener(
   enums.NOTIFICATION_TYPES.DECISION,
   (notification: ListenerPayload & { decisionInfo?: DecisionInfo }) => {
-    if (!onClient()) return;
-
     const { decisionInfo } = notification;
-    const variationKey = decisionInfo?.variationKey;
     const { decisionKey, impressionDispatched } = resolveDecision(decisionInfo);
 
-    if (decisionKey && variationKey && variationKey !== 'off') {
-      const isNewDecision = notifyDecision(decisionKey);
+    handleDecision({
+      decisionKey,
+      variationKey: decisionInfo?.variationKey,
+      impressionDispatched,
+    });
+  },
+);
 
-      if (impressionDispatched) {
-        if (isNewDecision) {
-          const activationTrackingData = getActivationTrackingData();
-          sendOptimizelyActivationEvent({
-            experimentName: decisionKey,
-            experimentVariant: variationKey,
-            ...activationTrackingData,
-          });
-        }
-
-        const currentUrl = window.location.pathname + window.location.search;
-        if (currentUrl !== lastTrackedUrl) {
-          lastTrackedUrl = currentUrl;
-
-          // the visit (denominator) must be sent before the page view (numerator)
-          // so the page view falls inside Optimizely's ratio metric attribution window
-          if (registerVisitActivity(Date.now())) {
-            optimizely.track(VISIT_EVENT_NAME);
-          }
-
-          optimizely.track(PAGE_VIEW_EVENT_NAME);
-
-          // proxy metric for sign-in experiments: additional to page-views,
-          // fired only when the user is in a signed-in state
-          if (isSignedIn()) {
-            optimizely.track(SIGNED_IN_PAGE_VIEW_EVENT_NAME);
-          }
-        }
-      }
-    }
+optimizely?.notificationCenter?.addNotificationListener(
+  enums.NOTIFICATION_TYPES.ACTIVATE,
+  (notification: ActivateNotification) => {
+    handleDecision({
+      decisionKey: notification.experiment?.key,
+      variationKey: notification.variation?.key,
+      impressionDispatched: Boolean(notification.experiment?.key),
+    });
   },
 );
 
