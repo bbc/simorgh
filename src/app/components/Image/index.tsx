@@ -1,4 +1,11 @@
-import { Fragment, PropsWithChildren, useState, use } from 'react';
+import {
+  Fragment,
+  PropsWithChildren,
+  useState,
+  use,
+  useEffect,
+  useRef,
+} from 'react';
 import { Global } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 import styles from './index.styles';
@@ -26,6 +33,7 @@ export type ImageProps = {
   hasCaption?: boolean;
   isPortraitOrientation?: boolean;
   style?: React.CSSProperties;
+  recoverCachedLoad?: boolean;
 };
 
 const roundNumber = (num: number) => Math.round(num * 100) / 100;
@@ -56,9 +64,20 @@ const Image = ({
   hasCaption,
   isPortraitOrientation,
   style,
+  recoverCachedLoad = false,
 }: PropsWithChildren<ImageProps>) => {
   const { pageType, isLite, isAmp } = use(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
+  const imageRef = useRef<HTMLImageElement>(null);
+
+  useEffect(() => {
+    const image = imageRef.current;
+
+    if (recoverCachedLoad && image?.complete && image.naturalWidth > 0) {
+      setIsLoaded(true);
+    }
+  }, [recoverCachedLoad, src, srcSet]);
+
   if (isLite) return null;
   const showPlaceholder = !src || (placeholder && !isLoaded);
   const hasDimensions = width && height;
@@ -89,6 +108,7 @@ const Image = ({
   };
   const imgSrcSet = getImgSrcSet();
   const imgSizes = getImgSizes();
+
   return (
     <>
       {preload && (
@@ -166,6 +186,7 @@ const Image = ({
                 </>
               )}
               <img
+                ref={imageRef}
                 onLoad={() => setIsLoaded(true)}
                 src={src}
                 {...(srcSet && { srcSet: imgSrcSet })}

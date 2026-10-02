@@ -124,6 +124,7 @@ const Header = ({
               fetchPriority="high"
               preload
               placeholder
+              recoverCachedLoad
               style={{ display: 'block' }}
             />
           </div>
