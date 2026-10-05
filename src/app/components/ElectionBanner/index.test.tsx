@@ -26,7 +26,7 @@ const mockTaggings: MetadataTaggings = [
       'http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id',
   },
   {
-    predicate: 'http://www.bbc.co.uk/ontologies/bbc/creativework/about',
+    predicate: 'http://www.bbc.co.uk/ontologies/creativework/about',
     value:
       'http://www.bbc.co.uk/things/647d5613-e0e2-4ef5-b0ce-b491de38bdbd#id',
   },
