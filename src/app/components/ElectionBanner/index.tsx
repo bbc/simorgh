@@ -65,22 +65,23 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
 
   if (assocPressIframeSrc && isAmp) {
     return (
-      <div css={styles.assocPressElectionBannerBackground}>
-        <div
-          data-testid="election-banner"
-          css={styles.assocPressElectionBannerWrapperAmp}
-        >
-          <AmpIframe
-            ampMetadata={{
-              imageHeight: DEFAULT_HEIGHTS_AP.mobile,
-              src: assocPressIframeSrc,
-              image:
-                'https://news.files.bbci.co.uk/include/vjassets/img/app-launcher.png',
-              title: validAboutTag.thingLabel,
-              layout: 'fixed-height',
-            }}
-          />
-        </div>
+      <div
+        data-testid="election-banner"
+        css={[
+          styles.assocPressElectionBannerWrapperAmp,
+          styles.assocPressElectionBannerBackground,
+        ]}
+      >
+        <AmpIframe
+          ampMetadata={{
+            imageHeight: DEFAULT_HEIGHTS_AP.mobile,
+            src: assocPressIframeSrc,
+            image:
+              'https://news.files.bbci.co.uk/include/vjassets/img/app-launcher.png',
+            title: validAboutTag.thingLabel,
+            layout: 'fixed-height',
+          }}
+        />
       </div>
     );
   }
