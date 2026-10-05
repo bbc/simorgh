@@ -88,22 +88,26 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
 
   if (assocPressIframeSrc && !isAmp) {
     return (
-      <div css={styles.assocPressElectionBannerBackground}>
-        <div data-testid="election-banner" css={styles.electionBannerWrapper}>
-          <iframe
-            className="ap-embed" // needed for script
-            title={validAboutTag.thingLabel}
-            src={assocPressIframeSrc}
-            scrolling="no"
-            css={styles.assocPressElectionBannerIframe}
-            height={DEFAULT_HEIGHTS_AP.desktop} // I don't think this has an effect - copied from below
-            width="100%"
-          />
-          <Script
-            src="https://interactives.apelections.org/election-results/assets/microsite/resizeClient.js"
-            strategy="lazyOnload"
-          />
-        </div>
+      <div
+        data-testid="election-banner"
+        css={[
+          styles.electionBannerWrapper,
+          styles.assocPressElectionBannerBackground,
+        ]}
+      >
+        <iframe
+          className="ap-embed" // needed for script
+          title={validAboutTag.thingLabel}
+          src={assocPressIframeSrc}
+          scrolling="no"
+          css={styles.assocPressElectionBannerIframe}
+          height={DEFAULT_HEIGHTS_AP.desktop} // I don't think this has an effect - copied from below
+          width="100%"
+        />
+        <Script
+          src="https://interactives.apelections.org/election-results/assets/microsite/resizeClient.js"
+          strategy="lazyOnload"
+        />
       </div>
     );
   }
