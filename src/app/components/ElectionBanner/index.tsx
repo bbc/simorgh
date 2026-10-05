@@ -7,7 +7,7 @@ import { Tag } from '#app/components/Metadata/types';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { MetadataTaggings } from '#app/models/types/metadata';
-import styles from './index.styles';
+import styles, { DEFAULT_HEIGHTS_AP, DEFAULT_HEIGHTS_VJ } from './index.styles';
 
 type Props = {
   aboutTags: Tag[];
@@ -17,18 +17,6 @@ type Props = {
 type ToggleType = {
   enabled: boolean | null;
   value: string | null;
-};
-
-const DEFAULT_HEIGHTS_VJ = {
-  desktop: 350,
-  tablet: 320,
-  mobile: 315,
-};
-
-const DEFAULT_HEIGHTS_AP = {
-  desktop: 250,
-  tablet: 400, // not used
-  mobile: 400,
 };
 
 const SENSITIVE_ARTICLE_ID = 'f2b5dd0e-dda0-454c-893d-792d46ff48c3';
@@ -67,10 +55,7 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
     return (
       <div
         data-testid="election-banner"
-        css={[
-          styles.assocPressElectionBannerWrapperAmp,
-          styles.assocPressElectionBannerBackground,
-        ]}
+        css={styles.assocPressElectionBannerWrapperAmp}
       >
         <AmpIframe
           ampMetadata={{
@@ -90,10 +75,7 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
     return (
       <div
         data-testid="election-banner"
-        css={[
-          styles.electionBannerWrapper,
-          styles.assocPressElectionBannerBackground,
-        ]}
+        css={styles.assocPressElectionBannerWrapper}
       >
         <iframe
           className="ap-embed" // needed for script
@@ -101,7 +83,6 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
           src={assocPressIframeSrc}
           scrolling="no"
           css={styles.assocPressElectionBannerIframe}
-          height={DEFAULT_HEIGHTS_AP.desktop} // I don't think this has an effect - copied from below
           width="100%"
         />
         <Script

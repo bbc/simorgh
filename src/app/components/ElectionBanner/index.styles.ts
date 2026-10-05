@@ -8,6 +8,18 @@ type Heights = NonNullable<
 
 const AP_EMBED_MAX_WIDTH = `${pixelsToRem(1008)}rem`;
 
+export const DEFAULT_HEIGHTS_VJ = {
+  desktop: 350,
+  tablet: 320,
+  mobile: 315,
+};
+
+export const DEFAULT_HEIGHTS_AP = {
+  desktop: 216,
+  tablet: 400, // not used
+  mobile: 340,
+};
+
 export default {
   electionBannerWrapper: ({ spacings }: Theme) =>
     css({
@@ -50,11 +62,20 @@ export default {
           },
         },
       }),
-  assocPressElectionBannerBackground: () =>
+  assocPressElectionBannerWrapper: ({ spacings, mq }: Theme) =>
     css({
       width: '100%',
       margin: '0 auto',
       borderBottom: `solid ${pixelsToRem(1)}rem transparent`,
+      padding: `${spacings.FULL}rem 0`,
+
+      '& iframe': {
+        height: `${pixelsToRem(DEFAULT_HEIGHTS_AP.mobile)}rem`,
+
+        [mq.GROUP_3_MIN_WIDTH]: {
+          height: `${pixelsToRem(DEFAULT_HEIGHTS_AP.desktop)}rem`,
+        },
+      },
     }),
   assocPressElectionBannerIframe: () =>
     css({
