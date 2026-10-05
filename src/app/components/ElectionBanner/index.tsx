@@ -73,15 +73,14 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
 
   if (assocPressIframeSrc && isAmp) {
     return (
-      // minHeight here is fine since iframe itself has fixed height styles applied
       <div css={styles.assocPressElectionBannerBackground}>
         <div
           data-testid="election-banner"
-          css={styles.assocPressElectionBannerWrapperAmp(heightsAp)}
+          css={styles.assocPressElectionBannerWrapperAmp}
         >
           <AmpIframe
             ampMetadata={{
-              imageHeight: heightsAp.desktop,
+              imageHeight: heightsAp.mobile,
               src: assocPressIframeSrc,
               image:
                 'https://news.files.bbci.co.uk/include/vjassets/img/app-launcher.png',
@@ -103,7 +102,7 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
             title={validAboutTag.thingLabel}
             src={assocPressIframeSrc}
             scrolling="no"
-            css={styles.assocPressElectionBannerIframe} // minHeights
+            css={styles.assocPressElectionBannerIframe}
             height={heightsAp.desktop} // I don't think this has an effect - copied from below
             width="100%"
           />

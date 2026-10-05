@@ -6,17 +6,6 @@ type Heights = NonNullable<
   NonNullable<ServiceConfig['electionBanner']>['heights']
 >;
 
-// to do - type
-type AssociatedPressHeights = {
-  mobile: number;
-  tablet: number; // not used
-  desktop: number;
-};
-
-const AP_BREAKPOINTS = {
-  desktop: `@media (min-width: ${pixelsToRem(768)}rem)`, // desktop
-};
-
 const AP_EMBED_MAX_WIDTH = `${pixelsToRem(1008)}rem`;
 
 export default {
@@ -74,25 +63,22 @@ export default {
       maxWidth: AP_EMBED_MAX_WIDTH, // limit width on desktop, in line with VJ design
       margin: '0 auto', // centre on desktop
     }),
-  assocPressElectionBannerWrapperAmp:
-    ({ mobile, desktop }: AssociatedPressHeights) =>
-    // ({ default, }: AssociatedPressHeights) =>
-    ({ spacings }: Theme) =>
-      css({
-        overflow: 'hidden',
-        marginBottom: `${spacings.FULL}rem`,
-        '> div': { padding: '0' },
-        '& amp-img': {
-          maxWidth: 640,
-          margin: '0 auto',
-        },
-        '& amp-iframe': {
-          border: 'none',
-          width: '100%',
-          minHeight: `${pixelsToRem(mobile)}rem`, // fallback for AMP iframe
-          [AP_BREAKPOINTS.desktop]: {
-            minHeight: `${pixelsToRem(desktop)}rem`,
-          },
-        },
-      }),
+  assocPressElectionBannerWrapperAmp: ({ spacings, mq }: Theme) =>
+    css({
+      overflow: 'hidden',
+      marginBottom: `${spacings.FULL}rem`,
+      '> div': { padding: '0' },
+      '& amp-img': {
+        maxWidth: 640,
+        margin: '0 auto',
+      },
+      '& amp-iframe': {
+        border: 'none',
+        width: '100%',
+      },
+
+      [mq.GROUP_3_MIN_WIDTH]: {
+        display: 'none',
+      }, // hides on larger breakpoints on .amp
+    }),
 };
