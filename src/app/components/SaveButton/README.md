@@ -4,17 +4,17 @@ A reusable button component that handles common interactive states including loa
 
 ## Props
 
-| Name | Type | Required | Default | Description |
-|------|------|----------|---------|-------------|
-| `onClick` | `(event: React.MouseEvent<HTMLButtonElement>) => void` | Yes | - | Function called when the button is clicked |
-| `visualLabel` | `string` | Yes | - | Visible text displayed on the button |
-| `hoverVisualLabel` | `string` | No | - | Visible text shown instead of `visualLabel` when the button is saved and hovered/focused (e.g. "Remove" or "Unfollow") |
-| `accessibleLabel` | `string` | Yes | - | Accessible name announced to screen readers |
-| `isLoading` | `boolean` | No | `false` | Shows the loading state and prevents activation |
-| `isUpdating` | `boolean` | No | `false` | Shows the in-progress state and prevents activation |
-| `isSaved` | `boolean` | No | `false` | Shows the saved/following state |
-| `variant` | `'save' \| 'follow'` | No | `'save'` | Selects the icon set and colour scheme: `'save'` for Save for later, `'follow'` for Follow Topic |
-| `testId` | `string` | No | - | Sets a `data-testid` attribute for testing |
+| Name               | Type                                                   | Required | Default  | Description                                                                                                            |
+| ------------------ | ------------------------------------------------------ | -------- | -------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `onClick`          | `(event: React.MouseEvent<HTMLButtonElement>) => void` | Yes      | -        | Function called when the button is clicked                                                                             |
+| `visualLabel`      | `string`                                               | Yes      | -        | Visible text displayed on the button                                                                                   |
+| `hoverVisualLabel` | `string`                                               | No       | -        | Visible text shown instead of `visualLabel` when the button is saved and hovered/focused (e.g. "Remove" or "Unfollow") |
+| `accessibleLabel`  | `string`                                               | Yes      | -        | Accessible name announced to screen readers                                                                            |
+| `isLoading`        | `boolean`                                              | No       | `false`  | Shows the loading state and prevents activation                                                                        |
+| `isUpdating`       | `boolean`                                              | No       | `false`  | Shows the in-progress state and prevents activation                                                                    |
+| `isSaved`          | `boolean`                                              | No       | `false`  | Shows the saved/following state                                                                                        |
+| `variant`          | `'save' \| 'follow'`                                   | No       | `'save'` | Selects the icon set and colour scheme: `'save'` for Save for later, `'follow'` for Follow Topic                       |
+| `testId`           | `string`                                               | No       | -        | Sets a `data-testid` attribute for testing                                                                             |
 
 ## Usage
 
@@ -31,7 +31,7 @@ const handleSaveArticle = () => {
   onClick={handleSaveArticle}
   accessibleLabel="Save this article"
   visualLabel="Save article"
-/>
+/>;
 ```
 
 ### Loading State
@@ -83,7 +83,11 @@ View all component states and interactions in [Storybook](./index.stories.tsx).
 The component can be tested using the enhanced testing library:
 
 ```tsx
-import { render, screen, fireEvent } from '#app/components/react-testing-library-with-providers';
+import {
+  render,
+  screen,
+  fireEvent,
+} from '#app/components/react-testing-library-with-providers';
 import SaveButton from '.';
 
 test('calls onClick when clicked', () => {
@@ -94,7 +98,7 @@ test('calls onClick when clicked', () => {
       onClick={handleClick}
       visualLabel="Save for later"
       accessibleLabel="Save for later"
-    />
+    />,
   );
 
   const button = screen.getByRole('button', { name: 'Save for later' });
