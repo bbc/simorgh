@@ -1,9 +1,20 @@
+import { ReactElement } from 'react';
 import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { PlusIcon, TickIcon, Close } from '#app/components/icons';
+import Spinner from '#app/components/Spinner';
 import { render } from '../react-testing-library-with-providers';
 import SaveButton from '.';
 
 const noop = () => undefined;
+
+const getIconPathData = (container: HTMLElement) =>
+  container.querySelector('svg path')?.getAttribute('d');
+
+const renderIconPathData = (icon: ReactElement) => {
+  const { container } = render(icon);
+  return getIconPathData(container);
+};
 
 describe('SaveButton', () => {
   it('renders the button with the accessible label as its name', () => {
@@ -171,7 +182,7 @@ describe('SaveButton', () => {
       expect(handleClick).toHaveBeenCalledTimes(1);
     });
 
-    it('shows the hover label while exposing the unfollow action to screen readers', () => {
+    it('shows the resting visual label while exposing the unfollow action to screen readers', () => {
       render(
         <SaveButton
           onClick={noop}
@@ -186,6 +197,101 @@ describe('SaveButton', () => {
       expect(
         screen.getByRole('button', { name: 'Unfollow this topic' }),
       ).toBeInTheDocument();
+    });
+
+    it('shows the plus icon when not following', () => {
+      const { container } = render(
+        <SaveButton
+          onClick={noop}
+          variant="follow"
+          visualLabel="Follow"
+          accessibleLabel="Follow"
+        />,
+      );
+      expect(getIconPathData(container)).toBe(renderIconPathData(<PlusIcon />));
+    });
+
+    it('shows the tick icon when following and not hovered or focused', () => {
+      const { container } = render(
+        <SaveButton
+          onClick={noop}
+          variant="follow"
+          visualLabel="Following"
+          hoverVisualLabel="Unfollow"
+          accessibleLabel="Unfollow this topic"
+          isSaved
+        />,
+      );
+      expect(getIconPathData(container)).toBe(renderIconPathData(<TickIcon />));
+    });
+
+    it('shows the close icon and hover label on hover, without changing the accessible name', async () => {
+      const { container } = render(
+        <SaveButton
+          onClick={noop}
+          variant="follow"
+          visualLabel="Following"
+          hoverVisualLabel="Unfollow"
+          accessibleLabel="Unfollow this topic"
+          isSaved
+        />,
+      );
+      await userEvent.hover(screen.getByRole('button'));
+      expect(screen.getByText('Unfollow')).toBeInTheDocument();
+      expect(getIconPathData(container)).toBe(
+        renderIconPathData(<Close width="20" height="20" />),
+      );
+      expect(
+        screen.getByRole('button', { name: 'Unfollow this topic' }),
+      ).toBeInTheDocument();
+    });
+
+    it('shows the close icon and hover label on keyboard focus, without changing the accessible name', async () => {
+      const { container } = render(
+        <SaveButton
+          onClick={noop}
+          variant="follow"
+          visualLabel="Following"
+          hoverVisualLabel="Unfollow"
+          accessibleLabel="Unfollow this topic"
+          isSaved
+        />,
+      );
+      await userEvent.tab();
+      expect(screen.getByRole('button')).toHaveFocus();
+      expect(screen.getByText('Unfollow')).toBeInTheDocument();
+      expect(getIconPathData(container)).toBe(
+        renderIconPathData(<Close width="20" height="20" />),
+      );
+      expect(
+        screen.getByRole('button', { name: 'Unfollow this topic' }),
+      ).toBeInTheDocument();
+    });
+
+    it('shows the spinner while loading', () => {
+      const { container } = render(
+        <SaveButton
+          onClick={noop}
+          variant="follow"
+          visualLabel="Loading"
+          accessibleLabel="Loading"
+          isLoading
+        />,
+      );
+      expect(getIconPathData(container)).toBe(renderIconPathData(<Spinner />));
+    });
+
+    it('shows the spinner while updating', () => {
+      const { container } = render(
+        <SaveButton
+          onClick={noop}
+          variant="follow"
+          visualLabel="Following"
+          accessibleLabel="Following"
+          isUpdating
+        />,
+      );
+      expect(getIconPathData(container)).toBe(renderIconPathData(<Spinner />));
     });
   });
 });
