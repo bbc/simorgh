@@ -1,8 +1,16 @@
 import { useState, useId } from 'react';
-import { BookmarkIcon, FilledBookmarkIcon, Close } from '#app/components/icons';
+import {
+  BookmarkIcon,
+  FilledBookmarkIcon,
+  Close,
+  PlusIcon,
+  TickIcon,
+} from '#app/components/icons';
 import Spinner from '#app/components/Spinner';
 import styles from './index.module.scss';
 import VisuallyHiddenText from '../VisuallyHiddenText';
+
+export type SaveButtonVariant = 'save' | 'follow';
 
 export interface SaveButtonProps {
   visualLabel: string;
@@ -11,6 +19,7 @@ export interface SaveButtonProps {
   isLoading?: boolean;
   isUpdating?: boolean;
   isSaved?: boolean;
+  variant?: SaveButtonVariant;
   onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
   testId?: string;
 }
@@ -22,10 +31,9 @@ const SaveButton = ({
   isLoading = false,
   isUpdating = false,
   isSaved = false,
+  variant = 'save',
   onClick,
   testId,
-  // TODO :Ticket needed
-  //  Add a buttonType prop (e.g. follow, favourites) to determine which icon to display.
   ...rest
 }: SaveButtonProps) => {
   const [isFocusedOrHovered, setIsFocusedOrHovered] = useState(false);
@@ -47,6 +55,14 @@ const SaveButton = ({
 
   const getIcon = () => {
     if (isBusy) return <Spinner />;
+    if (variant === 'follow') {
+      if (!isSaved) return <PlusIcon />;
+      return showRemoveAffordance ? (
+        <Close width="20" height="20" />
+      ) : (
+        <TickIcon />
+      );
+    }
     if (!isSaved) return <BookmarkIcon />;
     return showRemoveAffordance ? (
       <Close width="20" height="20" />
@@ -55,9 +71,18 @@ const SaveButton = ({
     );
   };
 
+  const className = [
+    styles.buttonWrapper,
+    variant === 'follow' && styles.followVariant,
+    variant === 'follow' && isSaved && styles.savedState,
+    isUpdating && styles.updatingState,
+  ]
+    .filter(Boolean)
+    .join(' ');
+
   return (
     <button
-      className={`${styles.buttonWrapper}${isUpdating ? ` ${styles.updatingState}` : ''}`}
+      className={className}
       type="button"
       aria-labelledby={labelId}
       onClick={handleClick}

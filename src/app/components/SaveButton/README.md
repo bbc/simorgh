@@ -1,17 +1,20 @@
 # SaveButton
 
-A reusable button component that handles common interactive states including loading, disabled, and accessibility features.
+A reusable button component that handles common interactive states including loading, saving and accessibility features. It supports two visual variants: the default "Save for later" style and a "Follow" style used for following topics.
 
 ## Props
 
 | Name | Type | Required | Default | Description |
 |------|------|----------|---------|-------------|
-| `onClick` | `() => void` | Yes | - | Function called when button is clicked |
-| `isLoading` | `boolean` | No | `false` | Shows loading state and disables interaction |
-| `isSaved` | `boolean` | No | `false` | Shows the saved state to indicate the action has completed |
-| `disabled` | `boolean` | No | `false` | Disables the button |
-| `label` | `string` | Yes | - | Accessible label for screen readers |
-| `buttonText` | `string` | Yes | - | Visible text displayed on the button |
+| `onClick` | `(event: React.MouseEvent<HTMLButtonElement>) => void` | Yes | - | Function called when the button is clicked |
+| `visualLabel` | `string` | Yes | - | Visible text displayed on the button |
+| `hoverVisualLabel` | `string` | No | - | Visible text shown instead of `visualLabel` when the button is saved and hovered/focused (e.g. "Remove" or "Unfollow") |
+| `accessibleLabel` | `string` | Yes | - | Accessible name announced to screen readers |
+| `isLoading` | `boolean` | No | `false` | Shows the loading state and prevents activation |
+| `isUpdating` | `boolean` | No | `false` | Shows the in-progress state and prevents activation |
+| `isSaved` | `boolean` | No | `false` | Shows the saved/following state |
+| `variant` | `'save' \| 'follow'` | No | `'save'` | Selects the icon set and colour scheme: `'save'` for Save for later, `'follow'` for Follow Topic |
+| `testId` | `string` | No | - | Sets a `data-testid` attribute for testing |
 
 ## Usage
 
@@ -26,8 +29,8 @@ const handleSaveArticle = () => {
 
 <SaveButton
   onClick={handleSaveArticle}
-  label="Save this article"
-  buttonText="Save article"
+  accessibleLabel="Save this article"
+  visualLabel="Save article"
 />
 ```
 
@@ -37,38 +40,39 @@ const handleSaveArticle = () => {
 <SaveButton
   onClick={handleSaveArticle}
   isLoading={true}
-  label="Saving article"
-  buttonText="Saving..."
+  visualLabel="Loading"
+  accessibleLabel="Loading"
 />
 ```
 
-### Disabled State
+### Follow Topic Variant
 
 ```tsx
 <SaveButton
-  onClick={handleSaveArticle}
-  disabled={true}
-  label="Save this article"
-  buttonText="Save article"
+  variant="follow"
+  onClick={handleFollowTopic}
+  isSaved={isFollowed}
+  visualLabel="Follow"
+  hoverVisualLabel="Unfollow"
+  accessibleLabel="Follow"
 />
 ```
 
 ## Accessibility
 
 - Uses semantic `button` element
-- Includes `aria-label` for screen readers
-- Provides `title` attribute for tooltips
-- Automatically disables interaction when loading or disabled
+- Accessible name is communicated through `aria-labelledby`, pointing at visually hidden text so hover/focus-only label changes never change the announced name
+- Automatically guards activation in JavaScript while loading or updating, instead of using the `disabled` attribute, so the button stays focusable and is never announced as "unavailable"
 - Button state is communicated through both visual and programmatic means
 
 ## States
 
-The component supports the following states:
+The component supports the following states, for both the `save` and `follow` variants:
 
 - **Default**: Interactive button ready for user action
-- **Loading**: Shows processing state, prevents multiple submissions
-- **Disabled**: Prevents interaction when action is not available
-- **Saved**: Can be used to indicate completed action
+- **Loading**: Shows the initial loading state, prevents multiple submissions
+- **Updating**: Shows an in-progress state while a save/follow action is being processed
+- **Saved**: Indicates the save/follow action has completed
 
 ## Storybook
 
@@ -84,18 +88,18 @@ import SaveButton from '.';
 
 test('calls onClick when clicked', () => {
   const handleClick = jest.fn();
-  
+
   render(
     <SaveButton
       onClick={handleClick}
-      label="Test button"
-      buttonText="Click me"
+      visualLabel="Save for later"
+      accessibleLabel="Save for later"
     />
   );
-  
-  const button = screen.getByRole('button', { name: 'Test button' });
+
+  const button = screen.getByRole('button', { name: 'Save for later' });
   fireEvent.click(button);
-  
+
   expect(handleClick).toHaveBeenCalledTimes(1);
 });
 ```

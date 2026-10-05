@@ -57,3 +57,39 @@ export const Removing = {
     accessibleLabel: 'Removing',
   },
 };
+
+export const FollowTopic = {
+  args: {
+    variant: 'follow',
+    visualLabel: 'Follow',
+    accessibleLabel: 'Follow',
+  },
+};
+
+export const FollowTopicLoading = {
+  args: {
+    variant: 'follow',
+    isLoading: true,
+    visualLabel: 'Loading',
+    accessibleLabel: 'Loading',
+  },
+};
+
+export const FollowTopicFollowing = {
+  args: {
+    variant: 'follow',
+    isSaved: true,
+    visualLabel: 'Following',
+    hoverVisualLabel: 'Unfollow',
+    accessibleLabel: 'Unfollow this topic',
+  },
+};
+
+export const FollowTopicUpdating = {
+  args: {
+    variant: 'follow',
+    isUpdating: true,
+    visualLabel: 'Following',
+    accessibleLabel: 'Following',
+  },
+};

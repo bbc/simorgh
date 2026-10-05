@@ -113,4 +113,79 @@ describe('SaveButton', () => {
       screen.getByRole('button', { name: 'Remove from My News' }),
     ).toBeInTheDocument();
   });
+
+  it('defaults to the save variant styling when no variant is provided', () => {
+    render(
+      <SaveButton
+        onClick={noop}
+        visualLabel="Save for later"
+        accessibleLabel="Save for later"
+      />,
+    );
+    const button = screen.getByRole('button');
+    expect(button.className).not.toContain('followVariant');
+  });
+
+  describe('follow variant', () => {
+    it('applies the follow variant styling', () => {
+      render(
+        <SaveButton
+          onClick={noop}
+          variant="follow"
+          visualLabel="Follow"
+          accessibleLabel="Follow"
+        />,
+      );
+      const button = screen.getByRole('button');
+      expect(button.className).toContain('followVariant');
+      expect(button.className).not.toContain('savedState');
+    });
+
+    it('applies the saved state styling when following', () => {
+      render(
+        <SaveButton
+          onClick={noop}
+          variant="follow"
+          visualLabel="Following"
+          hoverVisualLabel="Unfollow"
+          accessibleLabel="Unfollow this topic"
+          isSaved
+        />,
+      );
+      const button = screen.getByRole('button');
+      expect(button.className).toContain('followVariant');
+      expect(button.className).toContain('savedState');
+    });
+
+    it('calls onClick when clicked', async () => {
+      const handleClick = jest.fn();
+      render(
+        <SaveButton
+          onClick={handleClick}
+          variant="follow"
+          visualLabel="Follow"
+          accessibleLabel="Follow"
+        />,
+      );
+      await userEvent.click(screen.getByRole('button'));
+      expect(handleClick).toHaveBeenCalledTimes(1);
+    });
+
+    it('shows the hover label while exposing the unfollow action to screen readers', () => {
+      render(
+        <SaveButton
+          onClick={noop}
+          variant="follow"
+          visualLabel="Following"
+          hoverVisualLabel="Unfollow"
+          accessibleLabel="Unfollow this topic"
+          isSaved
+        />,
+      );
+      expect(screen.getByText('Following')).toBeInTheDocument();
+      expect(
+        screen.getByRole('button', { name: 'Unfollow this topic' }),
+      ).toBeInTheDocument();
+    });
+  });
 });

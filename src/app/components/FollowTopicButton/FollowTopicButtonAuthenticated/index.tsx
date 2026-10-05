@@ -71,6 +71,7 @@ const FollowTopicButtonAuthenticated = ({
 
   return (
     <SaveButton
+      variant="follow"
       onClick={handleClick}
       isLoading={isLoading}
       isUpdating={isUpdating}

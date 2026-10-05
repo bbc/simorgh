@@ -43,6 +43,7 @@ const FollowTopicButtonGuest = ({ topicId }: FollowTopicButtonGuestProps) => {
   return (
     <>
       <SaveButton
+        variant="follow"
         onClick={handleClick}
         visualLabel={label ?? ''}
         accessibleLabel={label ?? ''}
