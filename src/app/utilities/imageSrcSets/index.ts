@@ -121,6 +121,16 @@ export const prepareIchefImage = ({
 }: PrepareIchefImageParams) => {
   const url = imageUrlTemplate.split('{width}')[1];
 
+  if (!url) {
+    return {
+      src: undefined,
+      primarySrcset: undefined,
+      primaryMimeType: undefined,
+      fallbackSrcset: undefined,
+      fallbackMimeType: undefined,
+    };
+  }
+
   return createIchefSrcSet({
     originCode: getOriginCode(url),
     locator: getLocator(url),

@@ -228,4 +228,20 @@ describe('prepareIchefImage', () => {
       }),
     );
   });
+
+  it('returns no sources when the template has no image path', () => {
+    expect(
+      prepareIchefImage({
+        imageUrlTemplate: 'https://ichef.bbci.co.uk/ace/ws/{width}',
+        originalImageWidth: 800,
+        srcResolution: 480,
+      }),
+    ).toEqual({
+      src: undefined,
+      primarySrcset: undefined,
+      primaryMimeType: undefined,
+      fallbackSrcset: undefined,
+      fallbackMimeType: undefined,
+    });
+  });
 });
