@@ -74,24 +74,19 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
   if (assocPressIframeSrc && isAmp) {
     return (
       // minHeight here is fine since iframe itself has fixed height styles applied
-      <div
-        css={[
-          styles.assocPressElectionBannerBackground(heightsAp),
-          styles.limitsAmpToMobileViewport,
-        ]}
-      >
+      <div css={styles.assocPressElectionBannerBackground}>
         <div
           data-testid="election-banner"
           css={styles.assocPressElectionBannerWrapperAmp(heightsAp)}
         >
           <AmpIframe
             ampMetadata={{
-              imageWidth: 1,
-              imageHeight: 1,
+              imageHeight: heightsAp.desktop,
               src: assocPressIframeSrc,
               image:
                 'https://news.files.bbci.co.uk/include/vjassets/img/app-launcher.png',
               title: validAboutTag.thingLabel,
+              layout: 'fixed-height',
             }}
           />
         </div>
@@ -101,20 +96,16 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
 
   if (assocPressIframeSrc && !isAmp) {
     return (
-      <div css={styles.assocPressElectionBannerBackground(heightsAp)}>
+      <div css={styles.assocPressElectionBannerBackground}>
         <div data-testid="election-banner" css={styles.electionBannerWrapper}>
           <iframe
             className="ap-embed" // needed for script
             title={validAboutTag.thingLabel}
-            // title="Live election results via the Associated Press" - from AP
-            // loading="lazy" - from AP
             src={assocPressIframeSrc}
             scrolling="no"
-            css={styles.assocPressElectionBannerIframe(heightsAp)} // minHeights
+            css={styles.assocPressElectionBannerIframe} // minHeights
             height={heightsAp.desktop} // I don't think this has an effect - copied from below
             width="100%"
-            // frameBorder="0" - from AP
-            // marginHeight="0" - from AP
           />
           <Script
             src="https://interactives.apelections.org/election-results/assets/microsite/resizeClient.js"
