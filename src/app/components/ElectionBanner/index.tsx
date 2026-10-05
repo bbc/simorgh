@@ -41,16 +41,8 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
 
   if (isLite || !electionBanner) return null;
 
-  const {
-    // @ts-expect-error - need to type
-    heightsAp = DEFAULT_HEIGHTS_AP,
-    // @ts-expect-error - need to type
-    heightsVj = DEFAULT_HEIGHTS_VJ,
-    iframeSrc,
-    iframeDevSrc,
-    electionThingIds,
-    assocPressIframeSrc,
-  } = electionBanner;
+  const { iframeSrc, iframeDevSrc, electionThingIds, assocPressIframeSrc } =
+    electionBanner;
 
   const isEditoriallySensitive = taggings?.some(({ value }) =>
     value.includes(SENSITIVE_ARTICLE_ID),
@@ -80,7 +72,7 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
         >
           <AmpIframe
             ampMetadata={{
-              imageHeight: heightsAp.mobile,
+              imageHeight: DEFAULT_HEIGHTS_AP.mobile,
               src: assocPressIframeSrc,
               image:
                 'https://news.files.bbci.co.uk/include/vjassets/img/app-launcher.png',
@@ -103,7 +95,7 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
             src={assocPressIframeSrc}
             scrolling="no"
             css={styles.assocPressElectionBannerIframe}
-            height={heightsAp.desktop} // I don't think this has an effect - copied from below
+            height={DEFAULT_HEIGHTS_AP.desktop} // I don't think this has an effect - copied from below
             width="100%"
           />
           <Script
@@ -121,7 +113,7 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
     return (
       <div
         data-testid="election-banner"
-        css={styles.electionBannerWrapperAmp(heightsVj)}
+        css={styles.electionBannerWrapperAmp(DEFAULT_HEIGHTS_VJ)}
       >
         <AmpIframe
           ampMetadata={{
@@ -143,8 +135,8 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
         title={validAboutTag.thingLabel}
         src={`${SIMORGH_INCLUDES_BASE_URL}/${iframeSrcToUse}`}
         scrolling="no"
-        css={styles.electionBannerIframe(heightsVj)}
-        height={heightsVj.desktop}
+        css={styles.electionBannerIframe(DEFAULT_HEIGHTS_VJ)}
+        height={DEFAULT_HEIGHTS_VJ.desktop}
         width="100%"
       />
     </div>
