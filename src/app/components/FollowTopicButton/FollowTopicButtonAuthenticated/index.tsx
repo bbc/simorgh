@@ -5,7 +5,7 @@ import useTopicFollowButton, {
 } from '#app/hooks/useTopicFollowButton';
 import useClickTracker from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
-import SaveButton from '#app/components/SaveButton';
+import SaveButton, { SAVE_BUTTON_VARIANTS } from '#app/components/SaveButton';
 
 import type { FollowTopicButtonProps } from '../index';
 
@@ -71,7 +71,7 @@ const FollowTopicButtonAuthenticated = ({
 
   return (
     <SaveButton
-      variant="follow"
+      variant={SAVE_BUTTON_VARIANTS.FOLLOW}
       onClick={handleClick}
       isLoading={isLoading}
       isUpdating={isUpdating}

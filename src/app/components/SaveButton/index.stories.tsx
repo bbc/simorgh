@@ -1,4 +1,4 @@
-import SaveButton from '.';
+import SaveButton, { SAVE_BUTTON_VARIANTS } from '.';
 import metadata from './metadata.json';
 import readme from './README.md';
 
@@ -58,35 +58,26 @@ export const Removing = {
   },
 };
 
-export const FollowTopicResting = {
+export const Unfollowed = {
   args: {
-    variant: 'follow',
+    variant: SAVE_BUTTON_VARIANTS.FOLLOW,
     visualLabel: 'Follow',
     accessibleLabel: 'Follow',
   },
 };
 
-export const FollowTopicLoading = {
+export const Following = {
   args: {
-    variant: 'follow',
-    isLoading: true,
-    visualLabel: 'Loading',
-    accessibleLabel: 'Loading',
-  },
-};
-
-export const FollowTopicFollowingUpdating = {
-  args: {
-    variant: 'follow',
+    variant: SAVE_BUTTON_VARIANTS.FOLLOW,
     isUpdating: true,
     visualLabel: 'Following',
     accessibleLabel: 'Following',
   },
 };
 
-export const FollowTopicFollowedResting = {
+export const Followed = {
   args: {
-    variant: 'follow',
+    variant: SAVE_BUTTON_VARIANTS.FOLLOW,
     isSaved: true,
     visualLabel: 'Following',
     hoverVisualLabel: 'Unfollow',
@@ -94,9 +85,9 @@ export const FollowTopicFollowedResting = {
   },
 };
 
-export const FollowTopicUnfollowingUpdating = {
+export const Unfollowing = {
   args: {
-    variant: 'follow',
+    variant: SAVE_BUTTON_VARIANTS.FOLLOW,
     isUpdating: true,
     isSaved: true,
     visualLabel: 'Unfollowing',

@@ -4,7 +4,7 @@ import userEvent from '@testing-library/user-event';
 import { PlusIcon, TickIcon, Close } from '#app/components/icons';
 import Spinner from '#app/components/Spinner';
 import { render } from '../react-testing-library-with-providers';
-import SaveButton from '.';
+import SaveButton, { SAVE_BUTTON_VARIANTS } from '.';
 
 const noop = () => undefined;
 
@@ -142,7 +142,7 @@ describe('SaveButton', () => {
       render(
         <SaveButton
           onClick={noop}
-          variant="follow"
+          variant={SAVE_BUTTON_VARIANTS.FOLLOW}
           visualLabel="Follow"
           accessibleLabel="Follow"
         />,
@@ -156,7 +156,7 @@ describe('SaveButton', () => {
       render(
         <SaveButton
           onClick={noop}
-          variant="follow"
+          variant={SAVE_BUTTON_VARIANTS.FOLLOW}
           visualLabel="Following"
           hoverVisualLabel="Unfollow"
           accessibleLabel="Unfollow this topic"
@@ -173,7 +173,7 @@ describe('SaveButton', () => {
       render(
         <SaveButton
           onClick={handleClick}
-          variant="follow"
+          variant={SAVE_BUTTON_VARIANTS.FOLLOW}
           visualLabel="Follow"
           accessibleLabel="Follow"
         />,
@@ -186,7 +186,7 @@ describe('SaveButton', () => {
       render(
         <SaveButton
           onClick={noop}
-          variant="follow"
+          variant={SAVE_BUTTON_VARIANTS.FOLLOW}
           visualLabel="Following"
           hoverVisualLabel="Unfollow"
           accessibleLabel="Unfollow this topic"
@@ -203,7 +203,7 @@ describe('SaveButton', () => {
       const { container } = render(
         <SaveButton
           onClick={noop}
-          variant="follow"
+          variant={SAVE_BUTTON_VARIANTS.FOLLOW}
           visualLabel="Follow"
           accessibleLabel="Follow"
         />,
@@ -215,7 +215,7 @@ describe('SaveButton', () => {
       const { container } = render(
         <SaveButton
           onClick={noop}
-          variant="follow"
+          variant={SAVE_BUTTON_VARIANTS.FOLLOW}
           visualLabel="Following"
           hoverVisualLabel="Unfollow"
           accessibleLabel="Unfollow this topic"
@@ -229,7 +229,7 @@ describe('SaveButton', () => {
       const { container } = render(
         <SaveButton
           onClick={noop}
-          variant="follow"
+          variant={SAVE_BUTTON_VARIANTS.FOLLOW}
           visualLabel="Following"
           hoverVisualLabel="Unfollow"
           accessibleLabel="Unfollow this topic"
@@ -250,7 +250,7 @@ describe('SaveButton', () => {
       const { container } = render(
         <SaveButton
           onClick={noop}
-          variant="follow"
+          variant={SAVE_BUTTON_VARIANTS.FOLLOW}
           visualLabel="Following"
           hoverVisualLabel="Unfollow"
           accessibleLabel="Unfollow this topic"
@@ -272,7 +272,7 @@ describe('SaveButton', () => {
       const { container } = render(
         <SaveButton
           onClick={noop}
-          variant="follow"
+          variant={SAVE_BUTTON_VARIANTS.FOLLOW}
           visualLabel="Loading"
           accessibleLabel="Loading"
           isLoading
@@ -285,7 +285,7 @@ describe('SaveButton', () => {
       const { container } = render(
         <SaveButton
           onClick={noop}
-          variant="follow"
+          variant={SAVE_BUTTON_VARIANTS.FOLLOW}
           visualLabel="Following"
           accessibleLabel="Following"
           isUpdating

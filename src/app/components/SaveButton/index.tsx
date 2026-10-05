@@ -10,7 +10,13 @@ import Spinner from '#app/components/Spinner';
 import styles from './index.module.scss';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 
-export type SaveButtonVariant = 'save' | 'follow';
+export const SAVE_BUTTON_VARIANTS = {
+  SAVE: 'save',
+  FOLLOW: 'follow',
+} as const;
+
+export type SaveButtonVariant =
+  (typeof SAVE_BUTTON_VARIANTS)[keyof typeof SAVE_BUTTON_VARIANTS];
 
 export interface SaveButtonProps {
   visualLabel: string;
@@ -31,7 +37,7 @@ const SaveButton = ({
   isLoading = false,
   isUpdating = false,
   isSaved = false,
-  variant = 'save',
+  variant = SAVE_BUTTON_VARIANTS.SAVE,
   onClick,
   testId,
   ...rest
@@ -55,7 +61,7 @@ const SaveButton = ({
 
   const getIcon = () => {
     if (isBusy) return <Spinner />;
-    if (variant === 'follow') {
+    if (variant === SAVE_BUTTON_VARIANTS.FOLLOW) {
       if (!isSaved) return <PlusIcon />;
       return showRemoveAffordance ? (
         <Close width="20" height="20" />
@@ -73,8 +79,8 @@ const SaveButton = ({
 
   const className = [
     styles.buttonWrapper,
-    variant === 'follow' && styles.followVariant,
-    variant === 'follow' && isSaved && styles.savedState,
+    variant === SAVE_BUTTON_VARIANTS.FOLLOW && styles.followVariant,
+    variant === SAVE_BUTTON_VARIANTS.FOLLOW && isSaved && styles.savedState,
     isUpdating && styles.updatingState,
   ]
     .filter(Boolean)

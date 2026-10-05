@@ -2,7 +2,7 @@ import { use, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { AccountContext } from '#app/contexts/AccountContext';
-import SaveButton from '#app/components/SaveButton';
+import SaveButton, { SAVE_BUTTON_VARIANTS } from '#app/components/SaveButton';
 import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import AccountSignInModal from '#app/components/Account/AccountSignInModal';
 import useClickTracker from '#app/hooks/useClickTrackerHandler';
@@ -43,7 +43,7 @@ const FollowTopicButtonGuest = ({ topicId }: FollowTopicButtonGuestProps) => {
   return (
     <>
       <SaveButton
-        variant="follow"
+        variant={SAVE_BUTTON_VARIANTS.FOLLOW}
         onClick={handleClick}
         visualLabel={label ?? ''}
         accessibleLabel={label ?? ''}
