@@ -1,6 +1,9 @@
+import type { ComponentProps } from 'react';
 import { render } from '#app/components/react-testing-library-with-providers';
 import { Tag } from '#app/components/Metadata/types';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import { MetadataTaggings } from '#app/models/types/metadata';
+import { ServiceConfig } from '#app/models/types/serviceConfig';
 import ElectionBanner from '.';
 
 const MOCK_ELECTION_THING_ID = '647d5613-e0e2-4ef5-b0ce-b491de38bdbd';
@@ -34,6 +37,25 @@ const mockTaggings: MetadataTaggings = [
 
 const ELEMENT_ID = 'election-banner';
 
+const mockServiceContext = {
+  electionBanner: {
+    electionThingIds: [MOCK_ELECTION_THING_ID],
+    iframeSrc: MOCK_IFRAME_LIVE_SRC,
+    iframeDevSrc: MOCK_IFRAME_DEV_SRC,
+  },
+} as ServiceConfig;
+
+const renderElectionBanner = (
+  props: ComponentProps<typeof ElectionBanner>,
+  options?: Parameters<typeof render>[1],
+) =>
+  render(
+    <ServiceContext.Provider value={mockServiceContext}>
+      <ElectionBanner {...props} />
+    </ServiceContext.Provider>,
+    options,
+  );
+
 describe('ElectionBanner', () => {
   const originalEnv = process.env;
 
@@ -42,8 +64,8 @@ describe('ElectionBanner', () => {
   });
 
   it('should not render ElectionBanner when isLite is true', () => {
-    const { queryByTestId } = render(
-      <ElectionBanner aboutTags={mockAboutTags} taggings={mockTaggings} />,
+    const { queryByTestId } = renderElectionBanner(
+      { aboutTags: mockAboutTags, taggings: mockTaggings },
       { isLite: true },
     );
 
@@ -75,8 +97,8 @@ describe('ElectionBanner', () => {
 
         process.env.SIMORGH_APP_ENV = appEnv;
 
-        const { getByTestId } = render(
-          <ElectionBanner aboutTags={mockAboutTags} taggings={mockTaggings} />,
+        const { getByTestId } = renderElectionBanner(
+          { aboutTags: mockAboutTags, taggings: mockTaggings },
           {
             toggles: {
               electionBanner: { enabled: true },
@@ -102,8 +124,8 @@ describe('ElectionBanner', () => {
     );
 
     it('should render ElectionBanner when aboutTags contain the correct thingLabel', () => {
-      const { getByTestId } = render(
-        <ElectionBanner aboutTags={mockAboutTags} taggings={mockTaggings} />,
+      const { getByTestId } = renderElectionBanner(
+        { aboutTags: mockAboutTags, taggings: mockTaggings },
         {
           toggles: {
             electionBanner: { enabled: true },
@@ -117,10 +139,10 @@ describe('ElectionBanner', () => {
     });
 
     it('should not render ElectionBanner when taggings contain the editorialSensitivityId', () => {
-      const { queryByTestId } = render(
-        <ElectionBanner
-          aboutTags={mockAboutTags}
-          taggings={[
+      const { queryByTestId } = renderElectionBanner(
+        {
+          aboutTags: mockAboutTags,
+          taggings: [
             ...mockTaggings,
             {
               predicate:
@@ -128,8 +150,8 @@ describe('ElectionBanner', () => {
               value:
                 'http://www.bbc.co.uk/things/f2b5dd0e-dda0-454c-893d-792d46ff48c3#id',
             },
-          ]}
-        />,
+          ],
+        },
         {
           toggles: { electionBanner: { enabled: true } },
           isAmp,
@@ -140,11 +162,11 @@ describe('ElectionBanner', () => {
     });
 
     it('should not render ElectionBanner when aboutTags do not contain the correct thingLabel', () => {
-      const { queryByTestId } = render(
-        <ElectionBanner
-          aboutTags={[{ thingLabel: 'thing1' }] as Tag[]}
-          taggings={mockTaggings}
-        />,
+      const { queryByTestId } = renderElectionBanner(
+        {
+          aboutTags: [{ thingLabel: 'thing1' }] as Tag[],
+          taggings: mockTaggings,
+        },
         { isAmp },
       );
 
@@ -152,8 +174,8 @@ describe('ElectionBanner', () => {
     });
 
     it('should not render ElectionBanner when aboutTags is empty', () => {
-      const { queryByTestId } = render(
-        <ElectionBanner aboutTags={[]} taggings={mockTaggings} />,
+      const { queryByTestId } = renderElectionBanner(
+        { aboutTags: [], taggings: mockTaggings },
         {
           isAmp,
         },
@@ -163,8 +185,8 @@ describe('ElectionBanner', () => {
     });
 
     it('should not render ElectionBanner when toggle is disabled', () => {
-      const { queryByTestId } = render(
-        <ElectionBanner aboutTags={mockAboutTags} taggings={mockTaggings} />,
+      const { queryByTestId } = renderElectionBanner(
+        { aboutTags: mockAboutTags, taggings: mockTaggings },
         {
           toggles: { electionBanner: { enabled: false } },
           isAmp,
@@ -175,8 +197,8 @@ describe('ElectionBanner', () => {
     });
 
     it('should not render ElectionBanner when toggle is null', () => {
-      const { queryByTestId } = render(
-        <ElectionBanner aboutTags={mockAboutTags} taggings={mockTaggings} />,
+      const { queryByTestId } = renderElectionBanner(
+        { aboutTags: mockAboutTags, taggings: mockTaggings },
         {
           toggles: {
             someOtherToggle: { enabled: true },
