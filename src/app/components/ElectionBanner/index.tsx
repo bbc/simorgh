@@ -51,64 +51,33 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
     SIMORGH_INCLUDES_BASE_AMP_URL,
   } = getEnvConfig();
 
-  if (assocPressIframeSrc && isAmp) {
-    return (
-      <div
-        data-testid="election-banner"
-        css={styles.assocPressElectionBannerWrapperAmp}
-      >
-        <AmpIframe
-          ampMetadata={{
-            imageHeight: DEFAULT_HEIGHTS_AP.mobile,
-            src: assocPressIframeSrc,
-            image:
-              'https://news.files.bbci.co.uk/include/vjassets/img/app-launcher.png',
-            title: validAboutTag.thingLabel,
-            layout: 'fixed-height',
-          }}
-        />
-      </div>
-    );
-  }
-
-  if (assocPressIframeSrc && !isAmp) {
-    return (
-      <div
-        data-testid="election-banner"
-        css={styles.assocPressElectionBannerWrapper}
-      >
-        <iframe
-          className="ap-embed" // needed for script
-          title={validAboutTag.thingLabel}
-          src={assocPressIframeSrc}
-          scrolling="no"
-          css={styles.assocPressElectionBannerIframe}
-          width="100%"
-        />
-        <Script
-          src="https://interactives.apelections.org/election-results/assets/microsite/resizeClient.js"
-          strategy="lazyOnload"
-        />
-      </div>
-    );
-  }
-
   const iframeSrcToUse = SIMORGH_APP_ENV === 'live' ? iframeSrc : iframeDevSrc;
+  const isAssocPress = Boolean(assocPressIframeSrc);
+  const src =
+    assocPressIframeSrc ||
+    `${
+      isAmp ? SIMORGH_INCLUDES_BASE_AMP_URL : SIMORGH_INCLUDES_BASE_URL
+    }/${iframeSrcToUse}${isAmp ? '/amp' : ''}`;
 
   if (isAmp) {
     return (
       <div
         data-testid="election-banner"
-        css={styles.electionBannerWrapperAmp(DEFAULT_HEIGHTS_VJ)}
+        css={
+          isAssocPress
+            ? styles.assocPressElectionBannerWrapperAmp
+            : styles.electionBannerWrapperAmp(DEFAULT_HEIGHTS_VJ)
+        }
       >
         <AmpIframe
           ampMetadata={{
-            imageWidth: 1,
-            imageHeight: 1,
-            src: `${SIMORGH_INCLUDES_BASE_AMP_URL}/${iframeSrcToUse}/amp`,
+            ...(!isAssocPress && { imageWidth: 1 }),
+            imageHeight: isAssocPress ? DEFAULT_HEIGHTS_AP.mobile : 1,
+            src,
             image:
               'https://news.files.bbci.co.uk/include/vjassets/img/app-launcher.png',
             title: validAboutTag.thingLabel,
+            ...(isAssocPress && { layout: 'fixed-height' as const }),
           }}
         />
       </div>
@@ -116,15 +85,33 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
   }
 
   return (
-    <div data-testid="election-banner" css={styles.electionBannerWrapper}>
+    <div
+      data-testid="election-banner"
+      css={
+        isAssocPress
+          ? styles.assocPressElectionBannerWrapper
+          : styles.electionBannerWrapper
+      }
+    >
       <iframe
+        {...(isAssocPress && { className: 'ap-embed' })}
         title={validAboutTag.thingLabel}
-        src={`${SIMORGH_INCLUDES_BASE_URL}/${iframeSrcToUse}`}
+        src={src}
         scrolling="no"
-        css={styles.electionBannerIframe(DEFAULT_HEIGHTS_VJ)}
-        height={DEFAULT_HEIGHTS_VJ.desktop}
+        css={
+          isAssocPress
+            ? styles.assocPressElectionBannerIframe
+            : styles.electionBannerIframe(DEFAULT_HEIGHTS_VJ)
+        }
+        {...(!isAssocPress && { height: DEFAULT_HEIGHTS_VJ.desktop })}
         width="100%"
       />
+      {isAssocPress && (
+        <Script
+          src="https://interactives.apelections.org/election-results/assets/microsite/resizeClient.js"
+          strategy="lazyOnload"
+        />
+      )}
     </div>
   );
 }
