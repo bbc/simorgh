@@ -116,23 +116,23 @@
                 "model": {
                     "blocks": [
                         {
-                            "id": "eb213afc",
+                            "id": "f2d50c06",
                             "type": "visuallyHiddenHeadline",
                             "model": {
                                 "blocks": [
                                     {
-                                        "id": "09accfa1",
+                                        "id": "bad4cc96",
                                         "type": "text",
                                         "model": {
                                             "blocks": [
                                                 {
-                                                    "id": "ead21c1e",
+                                                    "id": "a1a626e4",
                                                     "type": "paragraph",
                                                     "model": {
                                                         "text": "syndication test run",
                                                         "blocks": [
                                                             {
-                                                                "id": "754c2293",
+                                                                "id": "5e48ed38",
                                                                 "type": "fragment",
                                                                 "model": {
                                                                     "text": "syndication test run",
@@ -167,29 +167,29 @@
                             ]
                         },
                         {
-                            "id": "5f024b83",
+                            "id": "c1af8465",
                             "type": "audio",
                             "model": {
                                 "locator": "urn:bbc:pips:pid:p01wnb1g",
                                 "blocks": [
                                     {
-                                        "id": "f83a9adc",
+                                        "id": "79d9c32f",
                                         "type": "caption",
                                         "model": {
                                             "blocks": [
                                                 {
-                                                    "id": "a1efce95",
+                                                    "id": "a9e83a1b",
                                                     "type": "text",
                                                     "model": {
                                                         "blocks": [
                                                             {
-                                                                "id": "e329eac9",
+                                                                "id": "8e490c85",
                                                                 "type": "paragraph",
                                                                 "model": {
                                                                     "text": "syndication test run",
                                                                     "blocks": [
                                                                         {
-                                                                            "id": "003dc9ea",
+                                                                            "id": "4f57f737",
                                                                             "type": "fragment",
                                                                             "model": {
                                                                                 "text": "syndication test run",
@@ -228,12 +228,12 @@
                                         ]
                                     },
                                     {
-                                        "id": "901d41eb",
+                                        "id": "6cd158e7",
                                         "type": "aresMedia",
                                         "model": {
                                             "blocks": [
                                                 {
-                                                    "id": "3923d5e1",
+                                                    "id": "2b6ab4e8",
                                                     "blockId": "urn:bbc:ares::clip:p01wnb1g",
                                                     "type": "aresMediaMetadata",
                                                     "model": {
@@ -278,12 +278,12 @@
                                                     ]
                                                 },
                                                 {
-                                                    "id": "b7cd68ea",
+                                                    "id": "13809d2f",
                                                     "type": "image",
                                                     "model": {
                                                         "blocks": [
                                                             {
-                                                                "id": "df2c8e7d",
+                                                                "id": "ae75fb15",
                                                                 "type": "rawImage",
                                                                 "model": {
                                                                     "locator": null,
@@ -318,23 +318,23 @@
                             ]
                         },
                         {
-                            "id": "e266ef73",
+                            "id": "f8975a6e",
                             "type": "fauxHeadline",
                             "model": {
                                 "blocks": [
                                     {
-                                        "id": "35343824",
+                                        "id": "6e6377f2",
                                         "type": "text",
                                         "model": {
                                             "blocks": [
                                                 {
-                                                    "id": "b2a59a62",
+                                                    "id": "e949bf94",
                                                     "type": "paragraph",
                                                     "model": {
                                                         "text": "syndication test run",
                                                         "blocks": [
                                                             {
-                                                                "id": "41da885f",
+                                                                "id": "01a03589",
                                                                 "type": "fragment",
                                                                 "model": {
                                                                     "text": "syndication test run",
@@ -369,7 +369,7 @@
                             ]
                         },
                         {
-                            "id": "868c4a17",
+                            "id": "75239dc9",
                             "type": "timestamp",
                             "model": {
                                 "firstPublished": 1791287773022,
