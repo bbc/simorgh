@@ -50,7 +50,6 @@ export const service: DefaultServiceConfig = {
     googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     electionBanner: {
       title: 'الانتخابات الأمريكية 2026',
-      electionThingIds: ['19994837-27b8-463f-965d-fbb0ac1622a3'],
     },
     podcastPromo: {
       title: 'البودكاست',
