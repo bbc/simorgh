@@ -331,6 +331,34 @@ export const FilledBookmarkIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
+export const PlusIcon = ({ className }: { className?: string }) => (
+  <svg
+    width="20"
+    height="20"
+    viewBox="0 0 32 32"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+    aria-hidden="true"
+    focusable="false"
+  >
+    <path d="M14 2h4v12h12v4H18v12h-4V18H2v-4h12V2z" />
+  </svg>
+);
+
+export const TickIcon = ({ className }: { className?: string }) => (
+  <svg
+    width="20"
+    height="20"
+    viewBox="0 0 32 32"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+    aria-hidden="true"
+    focusable="false"
+  >
+    <path d="M12 21.56 6.44 16l-1.89 1.88L12 25.33 28 9.33l-1.88-1.88z" />
+  </svg>
+);
+
 export const Spinner = ({ className }: { className?: string }) => (
   <svg
     viewBox="0 0 32 32"
