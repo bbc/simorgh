@@ -6,12 +6,17 @@ import addInlineScript from '#app/lib/utilities/addInlineScript';
 const reverbScaffold = function (envConfig: EnvConfig) {
   window.__reverb = {} as Window['__reverb'];
 
-  window.__reverb.__reverbLoadedPromise = new Promise((resolve, reject) => {
+  // eslint-disable-next-line func-names
+  window.__reverb.__reverbLoadedPromise = new Promise(function (
+    resolve,
+    reject,
+  ) {
     window.__reverb.__resolveReverbLoaded = resolve;
     window.__reverb.__rejectReverbLoaded = reject;
   });
 
-  window.__reverb.__reverbTimeout = setTimeout(() => {
+  // eslint-disable-next-line func-names
+  window.__reverb.__reverbTimeout = setTimeout(function () {
     window.__reverb.__rejectReverbLoaded();
   }, 5000);
 
