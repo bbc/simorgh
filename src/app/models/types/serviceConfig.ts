@@ -125,8 +125,8 @@ export type ServiceConfig = {
       mobile: number;
     };
     electionThingIds: string[];
-    iframeSrc: string;
-    iframeDevSrc: string;
+    iframeSrc?: string;
+    iframeDevSrc?: string;
     assocPressIframeSrc?: string;
   };
   articleMessageBanners?: ArticleMessageBannerConfig[];
