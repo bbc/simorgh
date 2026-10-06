@@ -1,0 +1,631 @@
+{
+    "data": {
+        "article": {
+            "metadata": {
+                "atiAnalytics": {
+                    "categoryName": null,
+                    "contentId": "urn:bbc:optimo:asset:c9gkv52xww12o",
+                    "contentType": "article-sfv",
+                    "language": "ro",
+                    "ldpThingIds": null,
+                    "ldpThingLabels": null,
+                    "nationsProducer": null,
+                    "pageIdentifier": "romania.articles.c9gkv52xww12o.page",
+                    "pageTitle": "Test",
+                    "timePublished": "2026-10-06T11:54:33.382Z",
+                    "timeUpdated": "2026-10-06T11:54:33.382Z",
+                    "readTimeMilliseconds": 60000
+                },
+                "id": "urn:bbc:ares::article:c9gkv52xww12o",
+                "locators": {
+                    "optimoUrn": "urn:bbc:optimo:asset:c9gkv52xww12o",
+                    "canonicalUrl": "https://www.bbc.com/romania/articles/c9gkv52xww12o"
+                },
+                "type": "article",
+                "createdBy": "Romania",
+                "language": "ro",
+                "firstPublished": 1791287673382,
+                "lastPublished": 1791287673382,
+                "isOppm": false,
+                "options": {
+                    "includeComments": false
+                },
+                "analyticsLabels": {
+                    "contentId": "urn:bbc:optimo:asset:c9gkv52xww12o",
+                    "producer": "Romanian",
+                    "page": "romania.articles.c9gkv52xww12o.page",
+                    "irisKeyword": null
+                },
+                "passport": {
+                    "language": "ro",
+                    "home": "http://www.bbc.co.uk/ontologies/passport/home/Romania",
+                    "taggings": [
+                        {
+                            "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                            "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+                        },
+                        {
+                            "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                            "value": "http://www.bbc.co.uk/things/fe1fbc8a-bb44-4bf8-8b12-52e58c6345a4#id"
+                        },
+                        {
+                            "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                            "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                        },
+                        {
+                            "predicate": "http://www.bbc.co.uk/ontologies/creativework/dateFirstReleased",
+                            "value": "2026-10-06T11:54:33.382Z"
+                        }
+                    ],
+                    "predicates": {
+                        "infoClass": [
+                            {
+                                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                                "type": "infoClass"
+                            }
+                        ],
+                        "primaryMediaType": [
+                            {
+                                "value": "http://www.bbc.co.uk/things/fe1fbc8a-bb44-4bf8-8b12-52e58c6345a4#id",
+                                "type": "primaryMediaType"
+                            }
+                        ],
+                        "assetType": [
+                            {
+                                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                                "type": "assetType"
+                            }
+                        ],
+                        "dateFirstReleased": [
+                            {
+                                "value": "2026-10-06T11:54:33.382Z",
+                                "type": "dateFirstReleased"
+                            }
+                        ]
+                    }
+                },
+                "blockTypes": [
+                    "headline",
+                    "text",
+                    "paragraph",
+                    "fragment",
+                    "audio",
+                    "caption",
+                    "aresMedia",
+                    "aresMediaMetadata",
+                    "image",
+                    "rawImage"
+                ],
+                "includeComments": false,
+                "consumableAsSFV": true,
+                "allowAdvertising": true,
+                "consumableOnRedButton": false,
+                "consumableOnlyOnRedButton": false,
+                "useSensitiveOnwardJourneys": false,
+                "stats": {
+                    "readTime": 1,
+                    "wordCount": 6
+                },
+                "isTransliterated": false,
+                "isKeyPointsFormatAsset": false
+            },
+            "content": {
+                "model": {
+                    "blocks": [
+                        {
+                            "id": "eb74fd20",
+                            "type": "visuallyHiddenHeadline",
+                            "model": {
+                                "blocks": [
+                                    {
+                                        "id": "01ebe88f",
+                                        "type": "text",
+                                        "model": {
+                                            "blocks": [
+                                                {
+                                                    "id": "cda6bc6e",
+                                                    "type": "paragraph",
+                                                    "model": {
+                                                        "text": "syndication test run",
+                                                        "blocks": [
+                                                            {
+                                                                "id": "550c533a",
+                                                                "type": "fragment",
+                                                                "model": {
+                                                                    "text": "syndication test run",
+                                                                    "attributes": []
+                                                                },
+                                                                "position": [
+                                                                    1,
+                                                                    1,
+                                                                    1,
+                                                                    1
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    "position": [
+                                                        1,
+                                                        1,
+                                                        1
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "position": [
+                                            1,
+                                            1
+                                        ]
+                                    }
+                                ]
+                            },
+                            "position": [
+                                1
+                            ]
+                        },
+                        {
+                            "id": "0b719292",
+                            "type": "audio",
+                            "model": {
+                                "locator": "urn:bbc:pips:pid:p01wnb1g",
+                                "blocks": [
+                                    {
+                                        "id": "9233cce7",
+                                        "type": "caption",
+                                        "model": {
+                                            "blocks": [
+                                                {
+                                                    "id": "97d1b80f",
+                                                    "type": "text",
+                                                    "model": {
+                                                        "blocks": [
+                                                            {
+                                                                "id": "7d372435",
+                                                                "type": "paragraph",
+                                                                "model": {
+                                                                    "text": "syndication test run",
+                                                                    "blocks": [
+                                                                        {
+                                                                            "id": "6b6cff51",
+                                                                            "type": "fragment",
+                                                                            "model": {
+                                                                                "text": "syndication test run",
+                                                                                "attributes": []
+                                                                            },
+                                                                            "position": [
+                                                                                2,
+                                                                                1,
+                                                                                1,
+                                                                                1,
+                                                                                1
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                "position": [
+                                                                    2,
+                                                                    1,
+                                                                    1,
+                                                                    1
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    "position": [
+                                                        2,
+                                                        1,
+                                                        1
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "position": [
+                                            2,
+                                            1
+                                        ]
+                                    },
+                                    {
+                                        "id": "fe8131f4",
+                                        "type": "aresMedia",
+                                        "model": {
+                                            "blocks": [
+                                                {
+                                                    "id": "751372bc",
+                                                    "blockId": "urn:bbc:ares::clip:p01wnb1g",
+                                                    "type": "aresMediaMetadata",
+                                                    "model": {
+                                                        "id": "p01wnb1g",
+                                                        "subType": "clip",
+                                                        "format": "audio",
+                                                        "title": "syndication test run",
+                                                        "synopses": {
+                                                            "short": "ssss"
+                                                        },
+                                                        "imageUrl": null,
+                                                        "embedding": true,
+                                                        "advertising": true,
+                                                        "versions": [
+                                                            {
+                                                                "versionId": "p01wnb1j",
+                                                                "types": [
+                                                                    "Original"
+                                                                ],
+                                                                "duration": 139,
+                                                                "durationISO8601": "PT2M19S",
+                                                                "warnings": {},
+                                                                "availableTerritories": {
+                                                                    "uk": true,
+                                                                    "nonUk": true
+                                                                },
+                                                                "availableFrom": 1751456634000
+                                                            }
+                                                        ],
+                                                        "syndication": {
+                                                            "destinations": [
+                                                                "default"
+                                                            ]
+                                                        },
+                                                        "smpKind": "radioProgramme",
+                                                        "webcastVersions": []
+                                                    },
+                                                    "position": [
+                                                        2,
+                                                        2,
+                                                        1
+                                                    ]
+                                                },
+                                                {
+                                                    "id": "af2329df",
+                                                    "type": "image",
+                                                    "model": {
+                                                        "blocks": [
+                                                            {
+                                                                "id": "ea9e2ef4",
+                                                                "type": "rawImage",
+                                                                "model": {
+                                                                    "locator": null,
+                                                                    "originCode": "mpv"
+                                                                },
+                                                                "position": [
+                                                                    2,
+                                                                    2,
+                                                                    2,
+                                                                    1
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    "position": [
+                                                        2,
+                                                        2,
+                                                        2
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "position": [
+                                            2,
+                                            2
+                                        ]
+                                    }
+                                ]
+                            },
+                            "position": [
+                                2
+                            ]
+                        },
+                        {
+                            "id": "98546f9b",
+                            "type": "fauxHeadline",
+                            "model": {
+                                "blocks": [
+                                    {
+                                        "id": "9291cb0e",
+                                        "type": "text",
+                                        "model": {
+                                            "blocks": [
+                                                {
+                                                    "id": "f44efdfa",
+                                                    "type": "paragraph",
+                                                    "model": {
+                                                        "text": "syndication test run",
+                                                        "blocks": [
+                                                            {
+                                                                "id": "0f524334",
+                                                                "type": "fragment",
+                                                                "model": {
+                                                                    "text": "syndication test run",
+                                                                    "attributes": []
+                                                                },
+                                                                "position": [
+                                                                    3,
+                                                                    1,
+                                                                    1,
+                                                                    1
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    "position": [
+                                                        3,
+                                                        1,
+                                                        1
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "position": [
+                                            3,
+                                            1
+                                        ]
+                                    }
+                                ]
+                            },
+                            "position": [
+                                3
+                            ]
+                        },
+                        {
+                            "id": "29ca55a2",
+                            "type": "timestamp",
+                            "model": {
+                                "firstPublished": 1791287673382,
+                                "lastPublished": 1791287673382
+                            },
+                            "position": [
+                                4
+                            ]
+                        }
+                    ]
+                }
+            },
+            "promo": {
+                "headlines": {
+                    "seoHeadline": "Test",
+                    "promoHeadline": {
+                        "blocks": [
+                            {
+                                "type": "text",
+                                "model": {
+                                    "blocks": [
+                                        {
+                                            "type": "paragraph",
+                                            "model": {
+                                                "text": "syndication test run",
+                                                "blocks": [
+                                                    {
+                                                        "type": "fragment",
+                                                        "model": {
+                                                            "text": "syndication test run",
+                                                            "attributes": []
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                "images": {
+                    "defaultPromoImage": {
+                        "blocks": [
+                            {
+                                "type": "caption",
+                                "model": {
+                                    "blocks": [
+                                        {
+                                            "type": "text",
+                                            "model": {
+                                                "blocks": [
+                                                    {
+                                                        "type": "paragraph",
+                                                        "model": {
+                                                            "text": "",
+                                                            "blocks": [
+                                                                {
+                                                                    "type": "fragment",
+                                                                    "model": {
+                                                                        "text": "",
+                                                                        "attributes": []
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "altText",
+                                "model": {
+                                    "blocks": [
+                                        {
+                                            "type": "text",
+                                            "model": {
+                                                "blocks": [
+                                                    {
+                                                        "type": "paragraph",
+                                                        "model": {
+                                                            "text": "test",
+                                                            "blocks": [
+                                                                {
+                                                                    "type": "fragment",
+                                                                    "model": {
+                                                                        "text": "test",
+                                                                        "attributes": []
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "rawImage",
+                                "model": {
+                                    "width": 1920,
+                                    "height": 1080,
+                                    "locator": "38a7/test/801325c0-c17c-11f1-9cfa-8df2c2f12d1d.png",
+                                    "originCode": "cpsdevpb",
+                                    "copyrightHolder": "BBC",
+                                    "suitableForSyndication": false
+                                }
+                            }
+                        ]
+                    }
+                },
+                "summary": {
+                    "blocks": [
+                        {
+                            "type": "text",
+                            "model": {
+                                "blocks": [
+                                    {
+                                        "type": "paragraph",
+                                        "model": {
+                                            "text": "",
+                                            "blocks": [
+                                                {
+                                                    "type": "fragment",
+                                                    "model": {
+                                                        "text": "",
+                                                        "attributes": []
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                "serviceIdentifier": "Romania",
+                "consumableAsSFV": true,
+                "media": {
+                    "blocks": [
+                        {
+                            "type": "audio",
+                            "model": {
+                                "locator": "urn:bbc:pips:pid:p01wnb1g",
+                                "blocks": [
+                                    {
+                                        "type": "caption",
+                                        "model": {
+                                            "blocks": [
+                                                {
+                                                    "type": "text",
+                                                    "model": {
+                                                        "blocks": [
+                                                            {
+                                                                "type": "paragraph",
+                                                                "model": {
+                                                                    "text": "syndication test run",
+                                                                    "blocks": [
+                                                                        {
+                                                                            "type": "fragment",
+                                                                            "model": {
+                                                                                "text": "syndication test run",
+                                                                                "attributes": []
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "type": "aresMedia",
+                                        "model": {
+                                            "blocks": [
+                                                {
+                                                    "blockId": "urn:bbc:ares::clip:p01wnb1g",
+                                                    "type": "aresMediaMetadata",
+                                                    "model": {
+                                                        "id": "p01wnb1g",
+                                                        "subType": "clip",
+                                                        "format": "audio",
+                                                        "title": "syndication test run",
+                                                        "synopses": {
+                                                            "short": "ssss"
+                                                        },
+                                                        "imageUrl": null,
+                                                        "embedding": true,
+                                                        "advertising": true,
+                                                        "versions": [
+                                                            {
+                                                                "versionId": "p01wnb1j",
+                                                                "types": [
+                                                                    "Original"
+                                                                ],
+                                                                "duration": 139,
+                                                                "durationISO8601": "PT2M19S",
+                                                                "warnings": {},
+                                                                "availableTerritories": {
+                                                                    "uk": true,
+                                                                    "nonUk": true
+                                                                },
+                                                                "availableFrom": 1751456634000
+                                                            }
+                                                        ],
+                                                        "syndication": {
+                                                            "destinations": [
+                                                                "default"
+                                                            ]
+                                                        },
+                                                        "smpKind": "radioProgramme",
+                                                        "webcastVersions": []
+                                                    }
+                                                },
+                                                {
+                                                    "type": "image",
+                                                    "model": {
+                                                        "blocks": [
+                                                            {
+                                                                "type": "rawImage",
+                                                                "model": {
+                                                                    "locator": null,
+                                                                    "originCode": "mpv"
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        "secondaryData": {
+            "topStories": null,
+            "features": null,
+            "mostRead": null,
+            "latestMedia": null,
+            "portraitVideoItems": null,
+            "electionBanner": null,
+            "countryCuration": null,
+            "videoCuration": null,
+            "countryTopicIdToReorder": null
+        }
+    },
+    "contentType": "application/json; charset=utf-8"
+}
