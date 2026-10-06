@@ -84,7 +84,7 @@ export default {
       maxWidth: AP_EMBED_MAX_WIDTH, // limit width on desktop, in line with VJ design
       margin: '0 auto', // centre on desktop
     }),
-  assocPressElectionBannerWrapperAmp: ({ spacings, mq }: Theme) =>
+  assocPressElectionBannerWrapperAmp: ({ spacings }: Theme) =>
     css({
       overflow: 'hidden',
       marginBottom: `${spacings.FULL}rem`,
@@ -96,10 +96,9 @@ export default {
       '& amp-iframe': {
         border: 'none',
         width: '100%',
+        display: 'block', // required for margin auto centring to take effect
+        maxWidth: AP_EMBED_MAX_WIDTH, // limit width on desktop, in line with VJ design
+        margin: '0 auto', // centre on desktop
       },
-
-      [mq.GROUP_3_MIN_WIDTH]: {
-        display: 'none',
-      }, // hides on larger breakpoints on .amp
     }),
 };
