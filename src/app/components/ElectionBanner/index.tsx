@@ -3,7 +3,6 @@ import Script from 'next/script';
 import clsx from 'clsx';
 import { RequestContext } from '#app/contexts/RequestContext';
 import AmpIframe from '#app/components/AmpIframe';
-import Text from '#app/components/Text';
 import useToggle from '#app/hooks/useToggle';
 import { Tag } from '#app/components/Metadata/types';
 import { ServiceContext } from '#app/contexts/ServiceContext';
@@ -90,26 +89,20 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
             : styles.electionBannerWrapperAmp
         }
       >
-        {hasTitle && (
-          <Text
-            size="doublePica"
-            fontVariant="sansBold"
-            className={styles.title}
-          >
-            {title}
-          </Text>
-        )}
-        <AmpIframe
-          ampMetadata={{
-            ...(!isAssocPress && { imageWidth: 1 }),
-            imageHeight: isAssocPress ? DEFAULT_HEIGHTS_AP.mobile : 1,
-            src,
-            image:
-              'https://news.files.bbci.co.uk/include/vjassets/img/app-launcher.png',
-            title: validAboutTag.thingLabel,
-            ...(isAssocPress && { layout: 'fixed-height' as const }),
-          }}
-        />
+        <div className={styles.electionBannerContent}>
+          {hasTitle && <span className={styles.title}>{title}</span>}
+          <AmpIframe
+            ampMetadata={{
+              ...(!isAssocPress && { imageWidth: 1 }),
+              imageHeight: isAssocPress ? DEFAULT_HEIGHTS_AP.mobile : 1,
+              src,
+              image:
+                'https://news.files.bbci.co.uk/include/vjassets/img/app-launcher.png',
+              title: validAboutTag.thingLabel,
+              ...(isAssocPress && { layout: 'fixed-height' as const }),
+            }}
+          />
+        </div>
       </div>
     );
   }
@@ -123,30 +116,28 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
           : styles.electionBannerWrapper
       }
     >
-      {hasTitle && (
-        <Text size="doublePica" fontVariant="sansBold" className={styles.title}>
-          {title}
-        </Text>
-      )}
-      <iframe
-        className={clsx(
-          isAssocPress && 'ap-embed',
-          isAssocPress
-            ? styles.assocPressElectionBannerIframe
-            : styles.electionBannerIframe,
-        )}
-        title={validAboutTag.thingLabel}
-        src={src}
-        scrolling="no"
-        {...(!isAssocPress && { height: DEFAULT_HEIGHTS_VJ.desktop })}
-        width="100%"
-      />
-      {isAssocPress && (
-        <Script
-          src="https://interactives.apelections.org/election-results/assets/microsite/resizeClient.js"
-          strategy="lazyOnload"
+      <div className={styles.electionBannerContent}>
+        {hasTitle && <span className={styles.title}>{title}</span>}
+        <iframe
+          className={clsx(
+            isAssocPress && 'ap-embed',
+            isAssocPress
+              ? styles.assocPressElectionBannerIframe
+              : styles.electionBannerIframe,
+          )}
+          title={validAboutTag.thingLabel}
+          src={src}
+          scrolling="no"
+          {...(!isAssocPress && { height: DEFAULT_HEIGHTS_VJ.desktop })}
+          width="100%"
         />
-      )}
+        {isAssocPress && (
+          <Script
+            src="https://interactives.apelections.org/election-results/assets/microsite/resizeClient.js"
+            strategy="lazyOnload"
+          />
+        )}
+      </div>
     </div>
   );
 }

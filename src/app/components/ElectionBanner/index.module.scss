@@ -1,23 +1,29 @@
 @use '@scss/themeTokens' as theme;
 
 .title {
+  @include theme.fontSizes-gel-font-size(doublePica);
+  @include theme.fontVariants-gel-font-variant('sans-bold');
   display: block;
   width: 100%;
-  margin: 0;
-  margin-bottom: #{theme.$spacings-double};
+  margin: 0 0 #{theme.$spacings-double};
   padding-bottom: #{theme.$spacings-full};
-  border-bottom: #{theme.pixelsToRem-px-to-rem(2)} solid
-    #{theme.$palette-grey-3};
+  color: #{theme.$palette-white};
+  border-bottom: #{theme.pixelsToRem-px-to-rem(2)} solid #{theme.$palette-white};
 }
 
 .electionBannerWrapper {
   padding: #{theme.$spacings-full} 0;
 }
 
+.electionBannerContent {
+  padding: #{theme.$spacings-double};
+  background: linear-gradient(180deg, #2d0059 0%, #230046 50%, #000000 100%);
+}
+
 .electionBannerIframe {
-  border: none;
   width: 100%;
   height: #{theme.pixelsToRem-px-to-rem(315)};
+  border: none;
 
   @media #{theme.$mediaQueries-group-3-min-width} {
     height: #{theme.pixelsToRem-px-to-rem(320)};
@@ -33,18 +39,14 @@
   overflow: hidden;
   margin-bottom: #{theme.$spacings-full};
 
-  > div {
-    padding: 0;
-  }
-
   & amp-img {
-    max-width: 640px;
     margin: 0 auto;
+    max-width: 640px;
   }
 
   & amp-iframe {
-    border: none;
     width: 100%;
+    border: none;
   }
 }
 
@@ -64,10 +66,10 @@
 
 .assocPressElectionBannerWrapper,
 .assocPressElectionBannerWrapperAmp {
-  border-bottom: solid #{theme.pixelsToRem-px-to-rem(1)} transparent;
-  padding: #{theme.$spacings-double};
   max-width: #{theme.pixelsToRem-px-to-rem(1008)};
   margin: 0 auto;
+  padding: #{theme.$spacings-double} #{theme.$spacings-double} 0;
+  border-bottom: solid #{theme.pixelsToRem-px-to-rem(1)} transparent;
 
   .title {
     max-width: #{theme.pixelsToRem-px-to-rem(1008)};
@@ -76,11 +78,11 @@
 }
 
 .assocPressElectionBannerIframe {
-  border: none;
   display: block;
   max-width: #{theme.pixelsToRem-px-to-rem(1008)};
-  margin: 0 auto;
   height: #{theme.pixelsToRem-px-to-rem(340)};
+  margin: 0 auto;
+  border: none;
 
   @media #{theme.$mediaQueries-group-3-min-width} {
     height: #{theme.pixelsToRem-px-to-rem(216)};
