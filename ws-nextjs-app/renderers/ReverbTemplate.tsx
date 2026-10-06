@@ -22,7 +22,11 @@ const reverbScaffold = function (envConfig: EnvConfig) {
 
   // eslint-disable-next-line no-var, vars-on-top
   var reverbScript = document.createElement('script');
-  reverbScript.setAttribute('src', envConfig?.SIMORGH_REVERB_SOURCE ?? '');
+  reverbScript.setAttribute(
+    'src',
+    // eslint-disable-next-line @typescript-eslint/prefer-optional-chain
+    (envConfig && envConfig.SIMORGH_REVERB_SOURCE) || '',
+  );
   document.head.appendChild(reverbScript);
 };
 
