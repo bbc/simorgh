@@ -8,6 +8,7 @@ import { AccountContext } from '#app/contexts/AccountContext';
 interface UseFollowedTopicsParams {
   itemsPerPage?: number;
   startIndex?: number;
+  enabled?: boolean;
 }
 
 interface UseFollowedTopicsReturn {
@@ -20,8 +21,10 @@ interface UseFollowedTopicsReturn {
 const useUASFollowedTopics = ({
   itemsPerPage = 10,
   startIndex = 0,
+  enabled = false,
 }: UseFollowedTopicsParams = {}): UseFollowedTopicsReturn => {
   const { hashedUserId = '', isRefreshAvailable } = use(AccountContext);
+  const isQueryEnabled = !!hashedUserId && enabled;
 
   const { data, isLoading, error } = useQuery({
     queryKey: uasKeys.followsList(hashedUserId),
@@ -32,8 +35,18 @@ const useUASFollowedTopics = ({
         signal,
         isRefreshAvailable,
       }),
-    enabled: !!hashedUserId,
+    enabled: isQueryEnabled,
   });
+
+  // required to prevent from showing cached data when not expected
+  if (!isQueryEnabled) {
+    return {
+      followedTopics: [],
+      total: 0,
+      isLoading: false,
+      error: null,
+    };
+  }
 
   return {
     followedTopics: data?.followedTopics ?? [],
