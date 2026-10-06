@@ -1,5 +1,8 @@
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
-import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
+import {
+  assertPageView,
+  assertResonancePageView,
+} from '../../specialFeatures/atiAnalytics/assertions';
 import runTestsForPage, {
   TestDataType,
 } from '../../../support/helpers/runTestsForPage';
@@ -225,6 +228,16 @@ const atiAnalyticsTestSuites = [
     applicationType: 'responsive',
     contentType: 'article',
     tests: [...atiAnalyticsTests],
+  },
+  {
+    path: '/marathi/india-53414454',
+    runforEnv: ['live'],
+    service: 'marathi',
+    pageIdentifier: 'marathi.india.story.53414454.page',
+    siteId: 59,
+    applicationType: 'responsive',
+    contentType: 'article',
+    tests: [assertResonancePageView],
   },
 ] as unknown as TestDataType[];
 

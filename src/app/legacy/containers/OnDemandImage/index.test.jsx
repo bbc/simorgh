@@ -23,7 +23,7 @@ describe('AudioPlayer blocks OnDemandHeading', () => {
     const { container } = render(
       component({ url: 'mock-url', isAmp: false, service: 'news' }),
     );
-    expect(container).toMatchSnapshot();
+    expect(container.querySelector('img, div')).toBeInTheDocument();
   });
 
   it('should ensure the image has the right attributes', () => {

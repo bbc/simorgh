@@ -68,6 +68,9 @@ export const service: DefaultServiceConfig = {
         moreAboutTopic: 'More about {topic}',
         fetchErrorMessage: 'E no load. Abeg try again',
       },
+      googlePreferredSource: {
+        linkText: 'Add am as preferred source for Google',
+      },
       continueReading: 'Kontinu to dey read',
       currentPage: 'Page where you dey',
       skipLinkText: 'Waka go wetin de inside',

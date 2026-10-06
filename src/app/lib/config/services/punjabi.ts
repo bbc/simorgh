@@ -67,6 +67,9 @@ export const service: DefaultServiceConfig = {
         moreAboutTopic: '{topic} ਬਾਰੇ ਹੋਰ',
         fetchErrorMessage: 'ਲੋਡ ਨਹੀਂ ਹੋਇਆ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ',
       },
+      googlePreferredSource: {
+        linkText: "Google 'ਤੇ ਮਨਪਸੰਦ ਸਰੋਤ ਵਜੋਂ ਸ਼ਾਮਲ ਕਰੋ",
+      },
       continueReading: 'ਅੱਗੇ ਪੜ੍ਹੋ',
       currentPage: 'ਮੌਜੂਦਾ ਪੇਜ',
       skipLinkText: `ਸਮੱਗਰੀ 'ਤੇ ਜਾਓ`,

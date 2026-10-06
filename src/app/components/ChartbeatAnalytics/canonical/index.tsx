@@ -1,6 +1,8 @@
 import { Helmet } from 'react-helmet';
+import addInlineScript from '#app/lib/utilities/addInlineScript';
 import { CanonicalChartbeatProps } from '../types';
 import { chartbeatSource as defaultChartbeatSource } from '../utils';
+import setChartbeatConfig from './setChartbeatConfig';
 
 const CanonicalChartbeatBeacon = ({
   chartbeatConfig,
@@ -8,17 +10,11 @@ const CanonicalChartbeatBeacon = ({
   chartbeatSource = defaultChartbeatSource,
 }: CanonicalChartbeatProps) => (
   <Helmet>
-    <script {...(nonce ? { nonce } : {})} async type="text/javascript">
-      {`
-        (function(){
-          var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          var config = ${JSON.stringify(chartbeatConfig)};
-          for (var key in config) {
-            _sf_async_config[key] = config[key];
-          }
-        })();
-      `}
-    </script>
+    {addInlineScript({
+      script: setChartbeatConfig,
+      parameters: [chartbeatConfig],
+      nonce,
+    })}
     <script
       {...(nonce ? { nonce } : {})}
       defer

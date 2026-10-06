@@ -1,8 +1,7 @@
 @use '@scss/themeTokens' as theme;
 
 .h2 {
-  @include theme.fontVariants-gel-font-variant('sans-bold');
-  @include theme.fontSizes-gel-font-size(doublePica);
+  @include theme.typography-from-scale-and-variant(doublePica, 'sans-bold');
   color: theme.$palette-grey-10;
 
   :global([data-is-dark-ui='true']) & {

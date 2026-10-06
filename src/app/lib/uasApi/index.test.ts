@@ -126,6 +126,55 @@ describe('uasApiRequest', () => {
     expect(error.message).toBe('UAS request failed with status 500');
   });
 
+  it('should capture the service key and message from a JSON error response body', async () => {
+    (global.fetch as jest.Mock).mockResolvedValue({
+      ok: false,
+      status: 500,
+      statusText: 'Internal Server Error',
+      clone: () => ({
+        text: () =>
+          Promise.resolve(
+            JSON.stringify({
+              key: 'unknownTokenKey',
+              message: 'An unknown error occurred.',
+            }),
+          ),
+      }),
+    });
+
+    const error = await uasApiRequest('GET', 'favourites', {
+      isRefreshAvailable: true,
+    }).catch(e => e);
+
+    expect(error).toBeInstanceOf(UasError);
+    expect(error.code).toBe('unknownTokenKey');
+    expect(error.serviceMessage).toBe('An unknown error occurred.');
+  });
+
+  it('should capture a plain-text error response body as the service message', async () => {
+    (global.fetch as jest.Mock).mockResolvedValue({
+      ok: false,
+      status: 400,
+      statusText: 'Bad Request',
+      clone: () => ({
+        text: () =>
+          Promise.resolve(
+            'myactivity.favourites.invalidRequestParam : resourceType -> is invalid.',
+          ),
+      }),
+    });
+
+    const error = await uasApiRequest('GET', 'favourites', {
+      isRefreshAvailable: true,
+    }).catch(e => e);
+
+    expect(error).toBeInstanceOf(UasError);
+    expect(error.code).toBeUndefined();
+    expect(error.serviceMessage).toBe(
+      'myactivity.favourites.invalidRequestParam : resourceType -> is invalid.',
+    );
+  });
+
   it('should throw an error when API key is missing', async () => {
     // Mock the scenario where the API key is not configured
     (mockCookie.get as jest.Mock).mockReturnValue('mocked-token');

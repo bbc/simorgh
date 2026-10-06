@@ -1,4 +1,5 @@
 import nodeLogger from '#lib/logger.node';
+import type { Services } from '#app/models/types/global';
 import { UAS_API_ERROR } from '../logger.const';
 import uasApiRequest from './index';
 import type { SavedArticle } from './uasUtility';
@@ -11,6 +12,7 @@ export interface UasActivityItem {
   resourceId: string;
   resourceType: string;
   resourceDomain: string;
+  resourceTitle?: string;
   created: string;
   action: string;
   metaData?: {
@@ -38,7 +40,16 @@ interface GetRecentActivityParams {
   startIndex?: number;
   signal?: AbortSignal;
   isRefreshAvailable: boolean;
+  service?: Services;
 }
+
+const belongsToService = (item: UasActivityItem, service?: Services) => {
+  if (!service) return true;
+
+  const itemService = item.resourceTitle || item.metaData?.service;
+
+  return itemService?.toLowerCase() === service.toLowerCase();
+};
 
 const transformActivityToSavedArticle = (
   item: UasActivityItem,
@@ -67,6 +78,7 @@ const getRecentActivity = async ({
   startIndex = 0,
   signal,
   isRefreshAvailable,
+  service,
 }: GetRecentActivityParams): Promise<RecentActivityData> => {
   try {
     const response = await uasApiRequest(
@@ -91,6 +103,7 @@ const getRecentActivity = async ({
 
     const savedArticles = allItems
       .filter(item => item.metaData != null)
+      .filter(item => belongsToService(item, service))
       .map(transformActivityToSavedArticle);
 
     return {

@@ -86,6 +86,9 @@ export const service: DefaultServiceConfig = {
         moreAboutTopic: '{topic} жөнүндө көбүрөөк',
         fetchErrorMessage: 'Жүктөө ишке ашкан жок. Кайра аракет кылыңыз',
       },
+      googlePreferredSource: {
+        linkText: "Google'да артыкчылыктуу булак катары кошуу",
+      },
       currentPage: 'Ачылып турган баракча',
       skipLinkText: 'Сайтка өтүү',
       skipContent: {

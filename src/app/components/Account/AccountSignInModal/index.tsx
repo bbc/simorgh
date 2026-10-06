@@ -1,7 +1,8 @@
 import { Global } from '@emotion/react';
-import { useEffect, use, useCallback } from 'react';
+import { use, useCallback } from 'react';
 import { Close } from '#app/components/icons';
 import useTrappedFocus from '#app/hooks/useTrappedFocus';
+import useDismissOnOutsideInteraction from '#app/hooks/useDismissOnOutsideInteraction';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import Heading from '#app/components/Heading';
 import Paragraph from '#app/components/Paragraph';
@@ -39,26 +40,17 @@ const AccountSignInModal = ({ onClose }: AccountSignInModalProps) => {
   });
 
   const handleClose = useCallback(
-    (event?: React.MouseEvent) => {
+    (event?: React.MouseEvent | MouseEvent | KeyboardEvent) => {
       onCloseClickTrack?.(event);
       onClose();
     },
     [onCloseClickTrack, onClose],
   );
 
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
-        handleClose();
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-    };
-  }, [handleClose]);
+  useDismissOnOutsideInteraction({
+    onDismiss: handleClose,
+    containerRef,
+  });
 
   return (
     <>
@@ -70,7 +62,7 @@ const AccountSignInModal = ({ onClose }: AccountSignInModalProps) => {
         css={styles.modal}
         {...viewTracker}
       >
-        <div aria-hidden="true" onClick={handleClose} css={styles.backdrop} />
+        <div aria-hidden="true" css={styles.backdrop} />
         <div ref={containerRef} css={styles.modalContainer}>
           <div aria-hidden="true" css={styles.imageSection} />
           <div css={styles.textSection}>

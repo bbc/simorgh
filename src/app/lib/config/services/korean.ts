@@ -27,7 +27,7 @@ export const service: DefaultServiceConfig = {
     audioCaptionOffscreenText: '오디오 설명, ',
     defaultCaptionOffscreenText: '설명, ',
     imageCopyrightOffscreenText: '사진 출처, ',
-    locale: `ko-KO`,
+    locale: `ko`,
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
     isoLang: 'ko',
     datetimeLocale: `ko`,
@@ -66,6 +66,9 @@ export const service: DefaultServiceConfig = {
         heading: '더 알아보기',
         moreAboutTopic: '{topic}에 대해 더 보기',
         fetchErrorMessage: '로드하지 못했습니다. 다시 시도해 주세요',
+      },
+      googlePreferredSource: {
+        linkText: 'Google에서 선호 소스로 추가',
       },
       currentPage: '현재 페이지',
       skipLinkText: '내용 보기',
@@ -437,6 +440,7 @@ export const service: DefaultServiceConfig = {
       },
     ],
     timezone: 'Asia/Seoul',
+    resonanceEnabled: true,
   },
 };
 

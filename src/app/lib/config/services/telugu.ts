@@ -67,6 +67,9 @@ export const service: DefaultServiceConfig = {
         moreAboutTopic: '{topic} గురించి మరింత',
         fetchErrorMessage: 'లోడ్ విఫలమైంది. దయచేసి మళ్ళీ ప్రయత్నించండి',
       },
+      googlePreferredSource: {
+        linkText: 'Googleలో ప్రాధాన్య మూలంగా జోడించండి',
+      },
       continueReading: 'ఇంకా చదవండి',
       currentPage: 'ప్రస్తుత పేజీ',
       skipLinkText: 'కంటెంట్‌కు వెళ్లండి',

@@ -36,6 +36,7 @@ const useCustomEventTracker = ({
     producerName,
     isSignedIn,
     hashedId,
+    isPersonalisationOn,
   } = extractATITrackingProps({
     eventType: VIEW_EVENT,
   });
@@ -75,6 +76,7 @@ const useCustomEventTracker = ({
             experimentVariant,
             isSignedIn,
             hashedId,
+            isPersonalisationOn,
           });
         } catch (error) {
           // eslint-disable-next-line no-console
@@ -96,6 +98,7 @@ const useCustomEventTracker = ({
       experimentVariant,
       isSignedIn,
       hashedId,
+      isPersonalisationOn,
     ],
   );
 

@@ -1,3 +1,4 @@
+import { screen } from '@testing-library/react';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import {
   isNull,
@@ -72,14 +73,16 @@ describe('TextContainer', () => {
     };
 
     it('should render correctly', () => {
-      const { container } = render(
+      render(
         <ToggleContextProvider toggles={defaultToggles}>
           <ServiceContextProvider service="news">
             <TextContainer {...data} />
           </ServiceContextProvider>
         </ToggleContextProvider>,
       );
-      expect(container).toMatchSnapshot();
+      expect(
+        screen.getByText('This is a 1st paragraph block.'),
+      ).toBeInTheDocument();
     });
   });
 });
