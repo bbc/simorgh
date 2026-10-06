@@ -27,7 +27,7 @@ export const service: DefaultServiceConfig = {
     audioCaptionOffscreenText: 'توضیح صدا، ',
     defaultCaptionOffscreenText: 'توضیح، ',
     imageCopyrightOffscreenText: 'منبع تصویر، ',
-    locale: 'fa-af',
+    locale: 'fa-AF',
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
     isoLang: 'fa-af',
     datetimeLocale: 'fa-af',
@@ -66,6 +66,9 @@ export const service: DefaultServiceConfig = {
         heading: 'بیشتر بخوانید',
         moreAboutTopic: 'بیشتر درباره {topic}',
         fetchErrorMessage: 'بارگیری ناموفق بود. لطفاً دوباره تلاش کنید',
+      },
+      googlePreferredSource: {
+        linkText: 'به عنوان منبع ترجیحی در Google اضافه کنید',
       },
       currentPage: 'صفحه فعلی',
       skipLinkText: 'مشاهده محتوا',

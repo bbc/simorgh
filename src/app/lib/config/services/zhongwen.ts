@@ -58,7 +58,7 @@ export const service: ZhongwenConfig = {
     externalLinkText: ', 外部',
     homePageTitle: '主页',
     lang: `zh-hans`,
-    locale: `zh-hans`,
+    locale: `zh-Hans`,
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
     isoLang: 'zh-Hans',
     datetimeLocale: 'zh-cn',
@@ -153,6 +153,9 @@ export const service: ZhongwenConfig = {
         heading: '发现更多',
         moreAboutTopic: '更多关于{topic}',
         fetchErrorMessage: '加载失败。请重试',
+      },
+      googlePreferredSource: {
+        linkText: '添加为 Google 首选来源',
       },
       currentPage: '目前页面',
       skipLinkText: '跳过此内容',
@@ -448,7 +451,7 @@ export const service: ZhongwenConfig = {
   trad: {
     ...baseServiceConfig,
     lang: `zh-hant`,
-    locale: `zh-hant`,
+    locale: `zh-Hant`,
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
     isoLang: 'zh-Hant',
     datetimeLocale: 'zh-tw',
@@ -545,6 +548,9 @@ export const service: ZhongwenConfig = {
         heading: '探索更多',
         moreAboutTopic: '更多關於{topic}',
         fetchErrorMessage: '載入失敗。請再試一次',
+      },
+      googlePreferredSource: {
+        linkText: '新增為 Google 首選來源',
       },
       currentPage: '目前頁面',
       skipLinkText: '跳過此內容',

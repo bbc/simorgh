@@ -50,6 +50,24 @@ describe('handleArticleRoute', () => {
     expect(result.props.status).toEqual(200);
   });
 
+  it('uses the public watch path for canonical metadata after rewriting', async () => {
+    const requestUrl = '/gujarati/watch/cr5el5kw591o';
+    const resolvedUrl = '/gujarati/articles/cr5el5kw591o';
+    const rewrittenRequest = {
+      ...mockGetServerSidePropsContext,
+      req: {
+        headers: {},
+        url: requestUrl,
+      } as unknown as GetServerSidePropsContext['req'],
+      resolvedUrl,
+      query: { service: 'gujarati' },
+    } satisfies GetServerSidePropsContext;
+
+    const result = await handleArticleRoute(rewrittenRequest);
+
+    expect(result.props.pathname).toEqual(requestUrl);
+  });
+
   it('returns correct cache-control header if article is older than six hours', async () => {
     jest.spyOn(Date, 'now').mockImplementation(() => 2673964957894);
 

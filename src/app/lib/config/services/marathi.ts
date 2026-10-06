@@ -83,6 +83,9 @@ export const service: DefaultServiceConfig = {
         moreAboutTopic: '{topic} बद्दल अधिक',
         fetchErrorMessage: 'लोड करण्यात अयशस्वी. कृपया पुन्हा प्रयत्न करा',
       },
+      googlePreferredSource: {
+        linkText: 'Google वर प्राधान्य स्रोत म्हणून जोडा',
+      },
       currentPage: 'सध्याचे पान',
       skipLinkText: 'थेट मजकुरावर जा',
       skipContent: {
@@ -452,6 +455,7 @@ export const service: DefaultServiceConfig = {
         url: '/marathi',
       },
     ],
+    resonanceEnabled: true,
   },
 };
 

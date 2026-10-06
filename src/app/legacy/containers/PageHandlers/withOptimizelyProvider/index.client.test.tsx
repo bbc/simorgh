@@ -702,4 +702,143 @@ describe('withOptimizelyProvider HOC', () => {
       expect(serverMockNotifyDecision).not.toHaveBeenCalled();
     });
   });
+
+  describe('activation event tracking', () => {
+    const mocksendOptimizelyActivationEvent = jest.fn();
+    const mockNotifyDecision = jest.fn();
+    const mockActivationTrackingData = {
+      trackingIsEnabled: true,
+      pageIdentifier: 'page-identifier',
+      producerName: 'producer-name',
+      statsDestination: 'stats-destination',
+      isSignedIn: false,
+      hashedId: null,
+    };
+    let capturedDecisionListener: ((payload: object) => void) | undefined;
+
+    beforeEach(() => {
+      capturedDecisionListener = undefined;
+      mocksendOptimizelyActivationEvent.mockReset();
+      mockNotifyDecision.mockReset().mockReturnValue(true);
+
+      jest.resetModules();
+
+      jest.doMock('#lib/utilities/onClient', () =>
+        jest.fn().mockReturnValue(true),
+      );
+      jest.doMock('@optimizely/react-sdk', () => ({
+        createInstance: jest.fn(() => ({
+          notificationCenter: {
+            addNotificationListener: jest.fn((_, cb) => {
+              capturedDecisionListener = cb;
+            }),
+          },
+          track: jest.fn(),
+        })),
+        OptimizelyProvider: jest.fn(),
+        setLogger: jest.fn(),
+        enums: { NOTIFICATION_TYPES: { DECISION: 'DECISION' } },
+      }));
+      jest.doMock('./isCypress', () => jest.fn().mockReturnValue(false));
+      jest.doMock('#app/lib/optimizelyDecisionStore', () => ({
+        notifyDecision: mockNotifyDecision,
+      }));
+      jest.doMock(
+        '#app/lib/analyticsUtils/sendOptimizelyActivationEvent',
+        () => ({
+          __esModule: true,
+          default: mocksendOptimizelyActivationEvent,
+        }),
+      );
+      jest.doMock('#app/lib/analyticsUtils/activationTrackingData', () => ({
+        getActivationTrackingData: () => mockActivationTrackingData,
+      }));
+      // eslint-disable-next-line global-require
+      require('./index');
+    });
+
+    afterEach(() => {
+      jest.resetModules();
+    });
+
+    it('should send the activation event when a new decision is dispatched with an impression', () => {
+      capturedDecisionListener?.({
+        decisionInfo: {
+          flagKey: 'test_flag',
+          variationKey: 'control',
+          decisionEventDispatched: true,
+        },
+      });
+
+      expect(mocksendOptimizelyActivationEvent).toHaveBeenCalledTimes(1);
+      expect(mocksendOptimizelyActivationEvent).toHaveBeenCalledWith({
+        experimentName: 'test_flag',
+        experimentVariant: 'control',
+        ...mockActivationTrackingData,
+      });
+    });
+
+    it('should not send the activation event when no impression was dispatched', () => {
+      capturedDecisionListener?.({
+        decisionInfo: {
+          flagKey: 'test_flag',
+          variationKey: 'control',
+          decisionEventDispatched: false,
+        },
+      });
+
+      expect(mocksendOptimizelyActivationEvent).not.toHaveBeenCalled();
+    });
+
+    it('should not send the activation event when the variation is "off"', () => {
+      capturedDecisionListener?.({
+        decisionInfo: {
+          flagKey: 'test_flag',
+          variationKey: 'off',
+          decisionEventDispatched: true,
+        },
+      });
+
+      expect(mocksendOptimizelyActivationEvent).not.toHaveBeenCalled();
+    });
+
+    it('should not send the activation event again for a decision already recorded this session', () => {
+      capturedDecisionListener?.({
+        decisionInfo: {
+          flagKey: 'test_flag',
+          variationKey: 'control',
+          decisionEventDispatched: true,
+        },
+      });
+
+      mockNotifyDecision.mockReturnValue(false);
+
+      capturedDecisionListener?.({
+        decisionInfo: {
+          flagKey: 'test_flag',
+          variationKey: 'control',
+          decisionEventDispatched: true,
+        },
+      });
+
+      expect(mocksendOptimizelyActivationEvent).toHaveBeenCalledTimes(1);
+    });
+
+    it('should send the activation event for a legacy activate() decision (experimentKey without decisionEventDispatched)', () => {
+      capturedDecisionListener?.({
+        decisionInfo: {
+          experimentKey: 'newswb_ws_article_account_promo_banner',
+          variationKey: 'control',
+        },
+      });
+
+      expect(mocksendOptimizelyActivationEvent).toHaveBeenCalledTimes(1);
+      expect(mocksendOptimizelyActivationEvent).toHaveBeenCalledWith(
+        expect.objectContaining({
+          experimentName: 'newswb_ws_article_account_promo_banner',
+          experimentVariant: 'control',
+        }),
+      );
+    });
+  });
 });

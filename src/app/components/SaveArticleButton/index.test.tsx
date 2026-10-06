@@ -2,8 +2,26 @@ import useUASButton from '#app/hooks/useUASButton';
 import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
 import extractArticleMetadata from '#app/lib/utilities/extractSaveArticleProps';
 import { Article } from '#app/models/types/optimo';
+import { service as hindiServiceConfig } from '#lib/config/services/hindi';
 import { render, screen, act } from '../react-testing-library-with-providers';
 import SaveArticleButton from '.';
+
+const saveArticleButtonTranslations =
+  hindiServiceConfig.default.translations.saveArticleButton;
+const actionTooltipTranslations =
+  hindiServiceConfig.default.translations.actionTooltip;
+
+if (!saveArticleButtonTranslations) {
+  throw new Error(
+    'Hindi config must include translations.saveArticleButton for SaveArticleButton tests',
+  );
+}
+
+if (!actionTooltipTranslations) {
+  throw new Error(
+    'Hindi config must include translations.actionTooltip for SaveArticleButton tests',
+  );
+}
 
 jest.mock('#app/components/Account/AccountSignInModal', () => ({
   __esModule: true,
@@ -144,7 +162,7 @@ describe('SaveArticleButton', () => {
         render(<SaveArticleButton {...defaultProps} />, signedInRenderOptions),
       );
       expect(screen.getByRole('button')).toHaveTextContent(
-        'बाद में पढ़ने के लिए सहेजें',
+        saveArticleButtonTranslations.save,
       );
     });
 
@@ -155,7 +173,7 @@ describe('SaveArticleButton', () => {
         render(<SaveArticleButton {...defaultProps} />, signedInRenderOptions),
       );
       expect(screen.getByRole('button')).toHaveTextContent(
-        'मेरी ख़बरों में सहेजा गया',
+        saveArticleButtonTranslations.saved,
       );
     });
 
@@ -170,7 +188,7 @@ describe('SaveArticleButton', () => {
       );
       const button = screen.getByRole('button');
 
-      expect(button).toHaveTextContent('लोड हो रहा है');
+      expect(button).toHaveTextContent(saveArticleButtonTranslations.loading);
       expect(button).toBeEnabled();
     });
 
@@ -188,7 +206,7 @@ describe('SaveArticleButton', () => {
       );
       const button = screen.getByRole('button');
 
-      expect(button).toHaveTextContent('सहेजा जा रहा है');
+      expect(button).toHaveTextContent(saveArticleButtonTranslations.saving);
       expect(button).toBeEnabled();
     });
 
@@ -206,7 +224,7 @@ describe('SaveArticleButton', () => {
       );
       const button = screen.getByRole('button');
 
-      expect(button).toHaveTextContent('हटाया जा रहा है');
+      expect(button).toHaveTextContent(saveArticleButtonTranslations.removing);
       expect(button).toBeEnabled();
     });
 
@@ -234,6 +252,91 @@ describe('SaveArticleButton', () => {
           articleId: 'c1l97706v5mo',
         }),
       );
+    });
+
+    it('shows a success tooltip after the article is saved', async () => {
+      mockedUseUASButton.mockReturnValue({
+        isSaved: true,
+        isLoading: false,
+        isUpdating: false,
+        actionResult: { status: 'success', action: 'save' },
+        resetActionResult: jest.fn(),
+        handleSaveAction: mockHandleSaveAction,
+      });
+
+      await act(async () =>
+        render(<SaveArticleButton {...defaultProps} />, signedInRenderOptions),
+      );
+
+      expect(screen.getByTestId('action-tooltip')).toBeInTheDocument();
+    });
+
+    it('shows an error tooltip when the save action fails', async () => {
+      mockedUseUASButton.mockReturnValue({
+        isSaved: false,
+        isLoading: false,
+        isUpdating: false,
+        actionResult: { status: 'error', action: 'save' },
+        resetActionResult: jest.fn(),
+        handleSaveAction: mockHandleSaveAction,
+      });
+
+      await act(async () =>
+        render(<SaveArticleButton {...defaultProps} />, signedInRenderOptions),
+      );
+
+      expect(
+        screen.getByText(actionTooltipTranslations.error.title),
+      ).toBeInTheDocument();
+    });
+
+    it('shows a removed tooltip after the article is removed', async () => {
+      mockedUseUASButton.mockReturnValue({
+        isSaved: false,
+        isLoading: false,
+        isUpdating: false,
+        actionResult: { status: 'success', action: 'remove' },
+        resetActionResult: jest.fn(),
+        handleSaveAction: mockHandleSaveAction,
+      });
+
+      await act(async () =>
+        render(<SaveArticleButton {...defaultProps} />, signedInRenderOptions),
+      );
+
+      expect(screen.getByTestId('action-tooltip')).toHaveTextContent(
+        `${actionTooltipTranslations.closeLabel}${actionTooltipTranslations.removed.title}${actionTooltipTranslations.removed.bodyBefore} ${actionTooltipTranslations.myNewsLinkText} ${actionTooltipTranslations.removed.bodyAfter}`,
+      );
+    });
+
+    it('closes the tooltip and resets the action result when the close button is clicked', async () => {
+      const mockResetActionResult = jest.fn();
+      mockedUseUASButton.mockReturnValue({
+        isSaved: true,
+        isLoading: false,
+        isUpdating: false,
+        actionResult: { status: 'success', action: 'save' },
+        resetActionResult: mockResetActionResult,
+        handleSaveAction: mockHandleSaveAction,
+      });
+
+      await act(async () =>
+        render(<SaveArticleButton {...defaultProps} />, signedInRenderOptions),
+      );
+      await act(async () => {
+        screen.getByTestId('action-tooltip-close').click();
+      });
+
+      expect(mockResetActionResult).toHaveBeenCalledTimes(1);
+      expect(screen.queryByTestId('action-tooltip')).not.toBeInTheDocument();
+    });
+
+    it('does not show a tooltip when there is no action result', async () => {
+      await act(async () =>
+        render(<SaveArticleButton {...defaultProps} />, signedInRenderOptions),
+      );
+
+      expect(screen.queryByTestId('action-tooltip')).not.toBeInTheDocument();
     });
   });
 

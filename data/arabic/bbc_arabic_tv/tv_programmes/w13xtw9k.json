@@ -1,0 +1,269 @@
+{
+  "data": {
+    "metadata": {
+      "type": "On Demand TV",
+      "atiAnalytics": {
+        "pageIdentifier": "arabic.bbc_arabic_tv.tv_programmes.w13xtw9k.page",
+        "contentType": "player-episode",
+        "pageTitle": "فن للحياة - BBC News Arabic",
+        "language": "ar",
+        "contentId": "urn:bbc:pips:w13xtw9k"
+      }
+    },
+    "language": "ar",
+    "brandTitle": "فن للحياة",
+    "episodeTitle": "23/08/2026 19:30 GMT",
+    "headline": "فن للحياة",
+    "shortSynopsis": "برنامج جديد من بي بي سي نيوز عربي يستكشف أعمالا فنية تعكس الواقع بشكل غير متوقع!",
+    "mediumSynopsis": "برنامج جديد من بي بي سي نيوز عربي يستكشف أعمالا فنية تعكس الواقع بشكل غير متوقع!",
+    "longSynopsis": "برنامج جديد من بي بي سي نيوز عربي يستكشف أعمالا فنية تعكس الواقع بشكل غير متوقع!",
+    "episodeShortSynopsis": "برنامج جديد من بي بي سي نيوز عربي يستكشف أعمالا فنية تعكس الواقع بشكل غير متوقع!",
+    "episodeMediumSynopsis": "برنامج جديد من بي بي سي نيوز عربي يستكشف أعمالا فنية تعكس الواقع بشكل غير متوقع!",
+    "episodeLongSynopsis": "برنامج جديد من بي بي سي نيوز عربي يستكشف أعمالا فنية تعكس الواقع بشكل غير متوقع!",
+    "brandShortSynopsis": "",
+    "brandMediumSynopsis": "برنامج جديد من بي بي سي نيوز عربي يستكشف أعمالا فنية تعكس الواقع بشكل غير متوقع!",
+    "brandLongSynopsis": "برنامج جديد من بي بي سي نيوز عربي يستكشف أعمالا فنية تعكس الواقع بشكل غير متوقع!",
+    "id": "urn:bbc:ares:ws_media:brand:bbc_arabic_tv/w13xtw9k",
+    "brandId": "w13xtw9k",
+    "episodeId": "n12t28fds",
+    "masterBrand": "bbc_arabic_tv",
+    "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0mxkr8m.png",
+    "imageAltText": null,
+    "promoBrandTitle": "فن للحياة",
+    "promoSeriesTitle": null,
+    "durationISO8601": "PT30M",
+    "thumbnailImageUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p0mxkr8m.png",
+    "episodeAvailability": "available",
+    "recentEpisodes": [
+      {
+        "id": "n12t28fdr",
+        "brandTitle": "فن للحياة",
+        "episodeTitle": "16/08/2026 19:30 GMT",
+        "duration": "PT30M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0mxkr8m.png",
+        "altText": "فن للحياة",
+        "timestamp": "2026-08-16T00:00:00.000Z"
+      },
+      {
+        "id": "n12t28fdq",
+        "brandTitle": "فن للحياة",
+        "episodeTitle": "09/08/2026 19:30 GMT",
+        "duration": "PT30M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0mxkr8m.png",
+        "altText": "فن للحياة",
+        "timestamp": "2026-08-09T00:00:00.000Z"
+      },
+      {
+        "id": "n12t28fdp",
+        "brandTitle": "فن للحياة",
+        "episodeTitle": "02/08/2026 19:30 GMT",
+        "duration": "PT30M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0mxkr8m.png",
+        "altText": "فن للحياة",
+        "timestamp": "2026-08-02T00:00:00.000Z"
+      },
+      {
+        "id": "n12t28fdn",
+        "brandTitle": "فن للحياة",
+        "episodeTitle": "26/07/2026 19:30 GMT",
+        "duration": "PT30M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0mxkr8m.png",
+        "altText": "فن للحياة",
+        "timestamp": "2026-07-26T00:00:00.000Z"
+      },
+      {
+        "id": "n12t28fdm",
+        "brandTitle": "فن للحياة",
+        "episodeTitle": "19/07/2026 19:30 GMT",
+        "duration": "PT30M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0mxkr8m.png",
+        "altText": "فن للحياة",
+        "timestamp": "2026-07-19T00:00:00.000Z"
+      },
+      {
+        "id": "n12t28fdl",
+        "brandTitle": "فن للحياة",
+        "episodeTitle": "12/07/2026 19:30 GMT",
+        "duration": "PT30M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0mxkr8m.png",
+        "altText": "فن للحياة",
+        "timestamp": "2026-07-12T00:00:00.000Z"
+      },
+      {
+        "id": "n12t28fdk",
+        "brandTitle": "فن للحياة",
+        "episodeTitle": "05/07/2026 19:30 GMT",
+        "duration": "PT30M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0mxkr8m.png",
+        "altText": "فن للحياة",
+        "timestamp": "2026-07-05T00:00:00.000Z"
+      },
+      {
+        "id": "n12t28fdj",
+        "brandTitle": "فن للحياة",
+        "episodeTitle": "28/06/2026 19:30 GMT",
+        "duration": "PT30M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0mxkr8m.png",
+        "altText": "فن للحياة",
+        "timestamp": "2026-06-28T00:00:00.000Z"
+      },
+      {
+        "id": "n12t28fdh",
+        "brandTitle": "فن للحياة",
+        "episodeTitle": "21/06/2026 19:30 GMT",
+        "duration": "PT30M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0mxkr8m.png",
+        "altText": "فن للحياة",
+        "timestamp": "2026-06-21T00:00:00.000Z"
+      },
+      {
+        "id": "n12t28fdg",
+        "brandTitle": "فن للحياة",
+        "episodeTitle": "14/06/2026 19:30 GMT",
+        "duration": "PT30M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0mxkr8m.png",
+        "altText": "فن للحياة",
+        "timestamp": "2026-06-14T00:00:00.000Z"
+      },
+      {
+        "id": "n12t28fdd",
+        "brandTitle": "فن للحياة",
+        "episodeTitle": "31/05/2026 19:30 GMT",
+        "duration": "PT30M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0mxkr8m.png",
+        "altText": "فن للحياة",
+        "timestamp": "2026-05-31T00:00:00.000Z"
+      },
+      {
+        "id": "n12t28fdc",
+        "brandTitle": "فن للحياة",
+        "episodeTitle": "24/05/2026 19:30 GMT",
+        "duration": "PT30M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0mxkr8m.png",
+        "altText": "فن للحياة",
+        "timestamp": "2026-05-24T00:00:00.000Z"
+      },
+      {
+        "id": "n12t28fdb",
+        "brandTitle": "فن للحياة",
+        "episodeTitle": "17/05/2026 19:30 GMT",
+        "duration": "PT30M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0mxkr8m.png",
+        "altText": "فن للحياة",
+        "timestamp": "2026-05-17T00:00:00.000Z"
+      },
+      {
+        "id": "n12t28fd9",
+        "brandTitle": "فن للحياة",
+        "episodeTitle": "10/05/2026 19:30 GMT",
+        "duration": "PT30M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0mxkr8m.png",
+        "altText": "فن للحياة",
+        "timestamp": "2026-05-10T00:00:00.000Z"
+      },
+      {
+        "id": "n12t28fd8",
+        "brandTitle": "فن للحياة",
+        "episodeTitle": "03/05/2026 19:30 GMT",
+        "duration": "PT30M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0mxkr8m.png",
+        "altText": "فن للحياة",
+        "timestamp": "2026-05-03T00:00:00.000Z"
+      },
+      {
+        "id": "n12t28fd7",
+        "brandTitle": "فن للحياة",
+        "episodeTitle": "26/04/2026 19:30 GMT",
+        "duration": "PT30M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0mxkr8m.png",
+        "altText": "فن للحياة",
+        "timestamp": "2026-04-26T00:00:00.000Z"
+      },
+      {
+        "id": "n12t28fd6",
+        "brandTitle": "فن للحياة",
+        "episodeTitle": "19/04/2026 19:30 GMT",
+        "duration": "PT30M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0mxkr8m.png",
+        "altText": "فن للحياة",
+        "timestamp": "2026-04-19T00:00:00.000Z"
+      },
+      {
+        "id": "n12t28fd5",
+        "brandTitle": "فن للحياة",
+        "episodeTitle": "12/04/2026 19:30 GMT",
+        "duration": "PT30M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0mxkr8m.png",
+        "altText": "فن للحياة",
+        "timestamp": "2026-04-12T00:00:00.000Z"
+      },
+      {
+        "id": "n12t28fd4",
+        "brandTitle": "فن للحياة",
+        "episodeTitle": "05/04/2026 19:30 GMT",
+        "duration": "PT30M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0mxkr8m.png",
+        "altText": "فن للحياة",
+        "timestamp": "2026-04-05T00:00:00.000Z"
+      },
+      {
+        "id": "n12t28fd3",
+        "brandTitle": "فن للحياة",
+        "episodeTitle": "29/03/2026 19:30 GMT",
+        "duration": "PT30M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0mxkr8m.png",
+        "altText": "فن للحياة",
+        "timestamp": "2026-03-29T00:00:00.000Z"
+      }
+    ],
+    "mediaBlocks": [
+      {
+        "type": "tv",
+        "model": {
+          "id": "n12t28fds",
+          "subType": "episode",
+          "format": "Video",
+          "title": "فن للحياة",
+          "synopses": {
+            "short": "برنامج جديد من بي بي سي نيوز عربي يستكشف أعمالا فنية تعكس الواقع بشكل غير متوقع!",
+            "medium": "برنامج جديد من بي بي سي نيوز عربي يستكشف أعمالا فنية تعكس الواقع بشكل غير متوقع!",
+            "long": "برنامج جديد من بي بي سي نيوز عربي يستكشف أعمالا فنية تعكس الواقع بشكل غير متوقع!"
+          },
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0mxkr8m.png",
+          "embedding": false,
+          "advertising": false,
+          "versions": [
+            {
+              "versionId": "n1g2cd8ny",
+              "types": ["Original"],
+              "duration": 1800,
+              "durationISO8601": "PT30M",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true,
+                "world": false
+              },
+              "availableFrom": "2026-08-23T19:30:00.000Z",
+              "availabilityStatus": "available",
+              "availableUntil": null
+            }
+          ],
+          "availability": "available",
+          "smpKind": "programme",
+          "episodeTitle": "23/08/2026 19:30 GMT",
+          "type": "media"
+        }
+      },
+      {
+        "type": "mediaOverrides",
+        "model": {
+          "language": "ar",
+          "pageIdentifierOverride": "arabic.bbc_arabic_tv.tv.n12t28fds.page"
+        }
+      }
+    ],
+    "releaseDateTimeStamp": "2026-08-23T00:00:00.000Z"
+  },
+  "contentType": "application/json; charset=utf-8"
+}

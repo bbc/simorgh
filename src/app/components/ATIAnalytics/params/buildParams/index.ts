@@ -1,5 +1,8 @@
 import { LIBRARY_VERSION } from '../../../../lib/analyticsUtils';
-import { buildReverbAnalyticsModel } from '../../atiUrl';
+import {
+  buildReverbAnalyticsModel,
+  buildResonancePageViewModel,
+} from '../../atiUrl';
 import { ATIDataWithContexts } from '../../types';
 
 export const buildPageATIParams = ({
@@ -8,11 +11,14 @@ export const buildPageATIParams = ({
   serviceContext,
   isSignedIn = false,
   hashedId = null,
+  isPersonalisationOn = false,
 }: ATIDataWithContexts & {
   isSignedIn?: boolean;
   hashedId?: string | null;
+  isPersonalisationOn?: boolean;
 }) => {
-  const { isUK, platform, statsDestination } = requestContext;
+  const { isUK, platform, statsDestination, destinationSiteId } =
+    requestContext;
   const {
     atiAnalyticsAppName,
     atiAnalyticsProducerId,
@@ -58,27 +64,51 @@ export const buildPageATIParams = ({
     producerName: atiAnalyticsProducerName,
     service,
     statsDestination,
+    destinationSiteId,
     timePublished,
     timeUpdated,
     isSignedIn,
     hashedId,
+    isPersonalisationOn,
     ...(ampExperimentName && { ampExperimentName }),
     ...(experimentName && { experimentName }),
     ...(experimentVariant && { experimentVariant }),
   };
 };
 
-export const buildPageReverbParams = ({
+type BuildPageParamsArgs = ATIDataWithContexts & {
+  isSignedIn?: boolean;
+  hashedId?: string | null;
+  isPersonalisationOn?: boolean;
+};
+
+const buildPageReverbParams = ({
   atiData,
   requestContext,
   serviceContext,
   isSignedIn,
   hashedId,
-}: ATIDataWithContexts & {
-  isSignedIn?: boolean;
-  hashedId?: string | null;
-}) =>
+  isPersonalisationOn,
+}: BuildPageParamsArgs) =>
   buildReverbAnalyticsModel(
+    buildPageATIParams({
+      atiData,
+      requestContext,
+      serviceContext,
+      isSignedIn,
+      hashedId,
+      isPersonalisationOn,
+    }),
+  );
+
+const buildPageResonanceParams = ({
+  atiData,
+  requestContext,
+  serviceContext,
+  isSignedIn,
+  hashedId,
+}: BuildPageParamsArgs) =>
+  buildResonancePageViewModel(
     buildPageATIParams({
       atiData,
       requestContext,
@@ -87,3 +117,38 @@ export const buildPageReverbParams = ({
       hashedId,
     }),
   );
+
+export const buildAnalyticsParams = ({
+  atiData,
+  requestContext,
+  serviceContext,
+  isSignedIn,
+  hashedId,
+  isPersonalisationOn,
+}: BuildPageParamsArgs) => {
+  const { resonanceEnabled } = serviceContext;
+  const { platform } = requestContext;
+
+  const sendResonanceEvents =
+    resonanceEnabled && (platform === 'canonical' || platform === 'app');
+
+  return {
+    reverbParams: buildPageReverbParams({
+      atiData,
+      requestContext,
+      serviceContext,
+      isSignedIn,
+      hashedId,
+      isPersonalisationOn,
+    }),
+    resonanceParams: sendResonanceEvents
+      ? buildPageResonanceParams({
+          atiData,
+          requestContext,
+          serviceContext,
+          isSignedIn,
+          hashedId,
+        })
+      : null,
+  };
+};

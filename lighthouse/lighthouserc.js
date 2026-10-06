@@ -52,7 +52,8 @@ const AUDIT_URLS = {
       'https://www.bbc.com/uzbek/lat',
     ],
     test: [
-      'https://www.test.bbc.com/kyrgyz?renderer_env=live',
+      // Temporarily disabled: https://www.test.bbc.com/kyrgyz currently returns 500 due to ongoing work
+      // 'https://www.test.bbc.com/kyrgyz?renderer_env=live',
       'https://www.test.bbc.com/serbian/lat?renderer_env=live',
     ],
   },
@@ -87,6 +88,10 @@ module.exports = {
       numberOfRuns: 3,
       settings: {
         chromeFlags: '--no-sandbox --headless',
+        // Non-live environments send x-robots-tag: noindex, so is-crawlable always fails there
+        ...(process.env.LIGHTHOUSE_APP_ENV !== 'live' && {
+          skipAudits: ['is-crawlable'],
+        }),
       },
     },
     assert: {
@@ -106,10 +111,7 @@ module.exports = {
         ],
         'categories:seo': [
           'error',
-          {
-            aggregationMethod: 'optimistic',
-            minScore: process.env.LIGHTHOUSE_APP_ENV === 'live' ? 0.6 : 0.5,
-          },
+          { aggregationMethod: 'optimistic', minScore: 0.85 },
         ],
         'third-party-cookies': 'off',
       },

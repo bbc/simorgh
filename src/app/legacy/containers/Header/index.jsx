@@ -62,7 +62,11 @@ const Header = ({
   );
 };
 
-const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
+const HeaderContainer = ({
+  navItems,
+  propsForTopBarOJComponent,
+  primaryMediaType,
+}) => {
   const { isAmp, isApp, pageType, isLite } = use(RequestContext);
   const { service, translations, dir, scriptLink, lang, serviceLang } =
     use(ServiceContext);
@@ -146,6 +150,7 @@ const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
       <NavigationComponent
         navItems={navItems}
         propsForTopBarOJComponent={propsForTopBarOJComponent}
+        primaryMediaType={primaryMediaType}
       />
     </header>
   );
