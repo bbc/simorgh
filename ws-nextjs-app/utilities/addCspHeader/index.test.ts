@@ -79,6 +79,17 @@ describe('shouldServeRelaxedCsp', () => {
     jest.clearAllMocks();
   });
 
+  const addElectionSourcesToExpectedCsp = (csp: string) =>
+    csp
+      .replace(
+        'https://flo.uri.sh ',
+        'https://flo.uri.sh https://interactives.apelections.org ',
+      )
+      .replace(
+        'https://connect.facebook.net ',
+        'https://connect.facebook.net https://interactives.apelections.org ',
+      );
+
   const expectedRelaxedCsp =
     "default-src  *.bbc.co.uk *.bbc.com *.bbci.co.uk *.bbci.com https:;child-src  blob: https: 'self';connect-src  'self' https: ws: wss:;font-src  https: data: blob: 'self';frame-src  https: data:;img-src  https: data: blob:;script-src  https: 'unsafe-inline' 'unsafe-eval' blob: data: 'self';style-src  https: 'unsafe-inline';media-src  'self' blob: data: https:;worker-src  blob: data: 'self' *.bbc.co.uk *.bbc.com;report-to  worldsvc;upgrade-insecure-requests;";
 
@@ -136,7 +147,9 @@ describe('shouldServeRelaxedCsp', () => {
       call => call[0] === 'Content-Security-Policy',
     )?.[1];
 
-    expect(requestCsp).toEqual(expectedFullCsp);
+    expect(requestCsp).toEqual(
+      addElectionSourcesToExpectedCsp(expectedFullCsp),
+    );
   });
 
   it('returns "full" CSP when adsNonce.enabled is false', () => {
@@ -152,7 +165,9 @@ describe('shouldServeRelaxedCsp', () => {
       call => call[0] === 'Content-Security-Policy',
     )?.[1];
 
-    expect(requestCsp).toEqual(expectedFullCsp);
+    expect(requestCsp).toEqual(
+      addElectionSourcesToExpectedCsp(expectedFullCsp),
+    );
   });
 
   it('should include the country-specific Google domain in script-src when country is set', () => {
