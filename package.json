@@ -63,7 +63,8 @@
     "js-yaml": "3.14.2",
     "on-headers": "1.1.0",
     "react-is": "19",
-    "moment": "2.31.0"
+    "moment": "2.31.0",
+    "webpack": "5.111.1"
   },
   "dependencies": {
     "@bbc/resonance": "https://mybbc-analytics.files.bbci.co.uk/resonance/resonance-2.7.2.tgz",
@@ -181,7 +182,7 @@
     "ts-jest": "29.4.9",
     "typescript": "6.0.3",
     "typescript-plugin-css-modules": "5.2.0",
-    "webpack": "5.106.2"
+    "webpack": "5.111.1"
   },
   "spec": {
     "executable": [

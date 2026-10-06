@@ -10,6 +10,11 @@ This guide explains how to set up and run Playwright tests for the Next.js app.
 
 This is intentionally general so additional page types can be added over time.
 
+## Test scenarios
+
+https://bbc.atlassian.net/wiki/spaces/PDG1/folder/905874618/WS+Test+scenarios
+
+
 ## Prerequisites
 
 1. Use the correct Node version for this repo.
