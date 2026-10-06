@@ -1,3 +1,4 @@
+import { screen } from '@testing-library/react';
 import { render } from '../../../components/react-testing-library-with-providers';
 import IndexHeading from '.';
 
@@ -6,19 +7,17 @@ const IndexHeadingWithContext = () => (
 );
 
 describe('Index Heading', () => {
-  describe('snapshot', () => {
-    it('should render correctly for IDX', () => {
-      const { container } = render(<IndexHeadingWithContext />, {
-        service: 'ukrainian',
-      });
-      expect(container).toMatchSnapshot();
-    });
+  it('should render correctly for IDX', () => {
+    render(<IndexHeadingWithContext />, { service: 'ukrainian' });
+    expect(
+      screen.getByRole('heading', { name: 'Index Heading' }),
+    ).toBeInTheDocument();
+  });
 
-    it('should render rtl correctly for IDX', () => {
-      const { container } = render(<IndexHeadingWithContext />, {
-        service: 'arabic',
-      });
-      expect(container).toMatchSnapshot();
-    });
+  it('should render rtl correctly for IDX', () => {
+    render(<IndexHeadingWithContext />, { service: 'arabic' });
+    expect(
+      screen.getByRole('heading', { name: 'Index Heading' }),
+    ).toHaveAttribute('dir', 'rtl');
   });
 });

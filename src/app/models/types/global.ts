@@ -27,6 +27,7 @@ export type Toggles =
 export type Navigation = {
   title: string;
   url: string;
+  type?: string;
   hideOnLiteSite?: boolean;
   subItems?: Navigation[];
 };

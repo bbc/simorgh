@@ -8,10 +8,12 @@ jest.mock('../getEnvironment', () =>
 describe('certsRequired', () => {
   const originaLighthouseBuild = process.env.LIGHTHOUSE_BUILD;
   const originalCypressAppEnv = process.env.CYPRESS_APP_ENV;
+  const originalBffPath = process.env.BFF_PATH;
 
   afterEach(() => {
     process.env.LIGHTHOUSE_BUILD = originaLighthouseBuild;
     process.env.CYPRESS_APP_ENV = originalCypressAppEnv;
+    process.env.BFF_PATH = originalBffPath;
   });
 
   it.each`
@@ -34,6 +36,7 @@ describe('certsRequired', () => {
     'returns $expected when environment is $environment, lighthouseBuild is $lighthouseBuild, cypressAppEnv is $cypressAppEnv, and url is $url',
     ({ url, environment, lighthouseBuild, cypressAppEnv, expected }) => {
       (getEnvironment as jest.Mock).mockImplementationOnce(() => environment);
+      delete process.env.BFF_PATH;
       process.env.LIGHTHOUSE_BUILD = lighthouseBuild;
       process.env.CYPRESS_APP_ENV = cypressAppEnv;
       expect(certsRequired(url)).toBe(expected);

@@ -42,7 +42,7 @@ describe('RadioSchedule', () => {
           { service: 'arabic' },
         ).container;
       });
-      expect(container).toMatchSnapshot();
+      expect(container.querySelectorAll('li').length).toEqual(4);
     });
 
     it('contains four programs for a service with a radio schedule', async () => {

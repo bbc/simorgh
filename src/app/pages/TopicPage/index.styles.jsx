@@ -1,6 +1,11 @@
 import { css } from '@emotion/react';
 
 const styles = {
+  pageWrapper: ({ palette }) =>
+    css({
+      backgroundColor: palette.GREY_10,
+      display: 'grid',
+    }),
   main: ({ spacings, mq }) =>
     css({
       margin: `0 ${spacings.FULL}rem`,

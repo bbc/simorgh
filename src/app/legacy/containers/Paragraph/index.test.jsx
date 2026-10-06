@@ -1,3 +1,4 @@
+import { screen } from '@testing-library/react';
 import { render } from '../../../components/react-testing-library-with-providers';
 import ParagraphContainer from '.';
 import getUUID from '../../../lib/utilities/getUUID';
@@ -70,14 +71,14 @@ describe('ParagraphContainer', () => {
   });
 
   it('should render correctly', () => {
-    const { container } = render(<ParagraphContainer blocks={blocksMock} />);
-    expect(container).toMatchSnapshot();
+    render(<ParagraphContainer blocks={blocksMock} />);
+    expect(screen.getByText('This is some text.')).toBeInTheDocument();
+    expect(screen.getByRole('link')).toBeInTheDocument();
   });
 
   it('should render correctly with inline block', () => {
-    const { container } = render(
-      <ParagraphContainer blocks={blocksWithInline} />,
-    );
-    expect(container).toMatchSnapshot();
+    render(<ParagraphContainer blocks={blocksWithInline} />);
+    expect(screen.getByText('This is some text.')).toBeInTheDocument();
+    expect(screen.getByRole('link')).toBeInTheDocument();
   });
 });

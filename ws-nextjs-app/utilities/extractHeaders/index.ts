@@ -4,8 +4,8 @@ import { COUNTRIES_WITH_COOKIE_BANNER } from '#app/lib/utilities/cookieCountries
 const extractHeaders = (headers: IncomingHttpHeaders) => {
   let isUK = false;
   let showCookieBannerBasedOnCountry = true;
-  if (headers['x-bbc-edge-isuk']) {
-    isUK = headers['x-bbc-edge-isuk'] === 'yes';
+  if (headers['x-ip_is_uk_combined']) {
+    isUK = headers['x-ip_is_uk_combined'] === 'yes';
   }
   if (headers['x-country']) {
     isUK = isUK || headers['x-country'] === 'gb';

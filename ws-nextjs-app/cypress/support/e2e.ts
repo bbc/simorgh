@@ -49,12 +49,20 @@ const KNOWN_ERRORS = [
   `Cannot read properties of undefined (reading 'count')`,
 ];
 
+// Google RUM intermittently throws `int64` from this external script in the e2es.
+// Match the exact host and a path ending in `/js/rum.js` so both known URL variants
+// are covered without hiding unrelated application errors.
+const GOOGLE_RUM_SCRIPT =
+  /https:\/\/pagead2\.googlesyndication\.com\/(?:[^/\s]+\/)*js\/rum\.js(?:[?#:\s]|$)/;
+
 // eslint-disable-next-line consistent-return
 Cypress.on('uncaught:exception', (err, _runnable, promise) => {
   // returning false here prevents Cypress from failing the test
   if (
     err.message &&
-    KNOWN_ERRORS.some(knownErr => err.message.includes(knownErr))
+    (KNOWN_ERRORS.some(knownErr => err.message.includes(knownErr)) ||
+      (err.message.includes('int64') &&
+        GOOGLE_RUM_SCRIPT.test(err.stack ?? '')))
   ) {
     return false;
   }

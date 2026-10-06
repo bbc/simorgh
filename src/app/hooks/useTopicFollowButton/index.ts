@@ -4,12 +4,13 @@ import uasApiRequest from '#app/lib/uasApi';
 import {
   createFollowsPayload,
   FOLLOWS_CONFIG,
-  type TopicFollowData,
+  type FollowTopicData,
   buildGlobalId,
 } from '#app/lib/uasApi/uasUtility';
 import uasKeys from '#app/lib/uasApi/queryKeys';
 import { AccountContext } from '#app/contexts/AccountContext';
 import useTopicFollowStatus from '#app/hooks/useTopicFollowStatus';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 
 enum FollowAction {
   FOLLOW = 'follow',
@@ -25,9 +26,10 @@ interface UseTopicFollowButtonReturn {
 }
 
 const useTopicFollowButton = (
-  topicData: TopicFollowData,
+  topicData: FollowTopicData,
 ): UseTopicFollowButtonReturn => {
   const { topicId } = topicData;
+  const { service } = use(ServiceContext);
   const { hashedUserId = '', isRefreshAvailable } = use(AccountContext);
   const queryClient = useQueryClient();
   const { isFollowed, isLoading, error } = useTopicFollowStatus(topicId);
@@ -35,12 +37,12 @@ const useTopicFollowButton = (
   const mutation = useMutation({
     mutationFn: async (action: FollowAction) => {
       if (action === FollowAction.FOLLOW) {
-        const body = createFollowsPayload(topicData);
+        const body = createFollowsPayload(topicData, service);
         await uasApiRequest('POST', FOLLOWS_CONFIG.activityType, {
           body,
           isRefreshAvailable,
         });
-        return;
+        return body.metaData;
       }
       const globalId = buildGlobalId(
         topicId,
@@ -51,10 +53,15 @@ const useTopicFollowButton = (
         globalId,
         isRefreshAvailable,
       });
+
+      return undefined;
     },
-    onSuccess: (_result, action) => {
+    onSuccess: (metadata, action) => {
+      const isFollowedAction = action === FollowAction.FOLLOW;
+
       queryClient.setQueryData(uasKeys.followStatus(hashedUserId, topicId), {
-        isFollowed: action === FollowAction.FOLLOW,
+        isFollowed: isFollowedAction,
+        metadata: isFollowedAction ? metadata : undefined,
       });
       queryClient.invalidateQueries({
         queryKey: uasKeys.followsList(hashedUserId),
@@ -65,7 +72,7 @@ const useTopicFollowButton = (
   return {
     isFollowed,
     isLoading,
-    isUpdating: mutation.isPending,
+    isUpdating: mutation.isPending && !mutation.isPaused,
     error: mutation.error || error,
     handleFollowAction: mutation.mutate,
   };

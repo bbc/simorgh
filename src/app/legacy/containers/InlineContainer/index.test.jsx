@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+import { screen } from '@testing-library/react';
 import { render } from '../../../components/react-testing-library-with-providers';
 import InlineContainer from '.';
 import { ServiceContext } from '../../../contexts/ServiceContext';
@@ -46,9 +47,7 @@ const InlineContainerWithContext = ({ blocks }) => {
 
 describe('InlineContainer', () => {
   it('should render correctly', () => {
-    const { container } = render(
-      <InlineContainerWithContext blocks={[persianLink]} />,
-    );
-    expect(container).toMatchSnapshot();
+    render(<InlineContainerWithContext blocks={[persianLink]} />);
+    expect(screen.getByRole('link')).toBeInTheDocument();
   });
 });

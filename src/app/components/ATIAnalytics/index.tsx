@@ -6,10 +6,8 @@ import AmpATIAnalytics from './amp';
 import AmpGeo from '../../legacy/components/AmpGeo';
 
 const ATIAnalytics = () => {
-  const requestContext = use(RequestContext);
-  const { isAmp } = requestContext;
-
-  const { reverbParams } = use(ReverbParamsContext);
+  const { isAmp } = use(RequestContext);
+  const { reverbParams, resonanceParams } = use(ReverbParamsContext);
 
   return isAmp ? (
     <>
@@ -17,7 +15,10 @@ const ATIAnalytics = () => {
       <AmpATIAnalytics reverbParams={reverbParams} />
     </>
   ) : (
-    <CanonicalATIAnalytics reverbParams={reverbParams} />
+    <CanonicalATIAnalytics
+      reverbParams={reverbParams}
+      resonanceParams={resonanceParams}
+    />
   );
 };
 

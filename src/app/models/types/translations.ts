@@ -64,6 +64,9 @@ export interface Translations {
     description: string;
     closeLabel: string;
   };
+  googlePreferredSource?: {
+    linkText: string;
+  };
   saveArticleButton?: {
     loading: string;
     save: string;
@@ -94,16 +97,18 @@ export interface Translations {
   };
   actionTooltip?: {
     success: {
-      titleBefore: string;
-      titleAfter: string;
+      title: string;
+      bodyBefore: string;
+      bodyAfter: string;
     };
     error: {
       title: string;
       body: string;
     };
     removed: {
-      titleBefore: string;
-      titleAfter: string;
+      title: string;
+      bodyBefore: string;
+      bodyAfter: string;
     };
     myNewsLinkText: string;
     myNewsUrl: string;

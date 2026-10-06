@@ -1,9 +1,9 @@
 import extractHeaders from '.';
 
 describe('extractHeader', () => {
-  it(`sets isUK to true when 'x-bbc-edge-isuk' is set to yes`, () => {
+  it(`sets isUK to true when 'x-ip_is_uk_combined' is set to yes`, () => {
     const actual = extractHeaders({
-      'x-bbc-edge-isuk': 'yes',
+      'x-ip_is_uk_combined': 'yes',
     });
     expect(actual).toStrictEqual({
       bbcOrigin: null,
@@ -25,10 +25,10 @@ describe('extractHeader', () => {
     });
   });
 
-  it(`sets showCookieBannerBasedOnCountry to false when 'x-country' is set to 'za' and 'x-bbc-edge-isuk' is set to 'no'`, () => {
+  it(`sets showCookieBannerBasedOnCountry to false when 'x-country' is set to 'za' and 'x-ip_is_uk_combined' is set to 'no'`, () => {
     const actual = extractHeaders({
       'x-country': 'za',
-      'x-bbc-edge-isuk': 'no',
+      'x-ip_is_uk_combined': 'no',
     });
     expect(actual).toStrictEqual({
       bbcOrigin: null,
@@ -38,10 +38,10 @@ describe('extractHeader', () => {
     });
   });
 
-  it(`sets showCookieBannerBasedOnCountry to true when 'x-country' is set to 'za' and 'x-bbc-edge-isuk' is set to 'yes'`, () => {
+  it(`sets showCookieBannerBasedOnCountry to true when 'x-country' is set to 'za' and 'x-ip_is_uk_combined' is set to 'yes'`, () => {
     const actual = extractHeaders({
       'x-country': 'za',
-      'x-bbc-edge-isuk': 'yes',
+      'x-ip_is_uk_combined': 'yes',
     });
     expect(actual).toStrictEqual({
       bbcOrigin: null,

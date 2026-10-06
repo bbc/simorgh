@@ -11,24 +11,19 @@ export default (experimentName: string) => {
     ({ experimentName: serverSideExperiment }) =>
       serverSideExperiment === experimentName,
   );
-
-  const { enabled, variation = null } = experiment ?? {};
-
-  const isActiveVariant = Boolean(
-    enabled && variation && variation !== 'false',
-  );
+  const { enabled, variation } = experiment || {};
+  const activeVariation =
+    enabled && variation && variation !== 'false' ? variation : null;
 
   useEffect(() => {
-    if (optimizely && isActiveVariant && variation) {
+    if (optimizely && activeVariation) {
       activateExperiment({
         optimizely,
         experimentName,
-        experimentVariation: variation,
+        experimentVariation: activeVariation,
       });
     }
-  }, [optimizely, isActiveVariant, variation, experimentName]);
+  }, [optimizely, experimentName, activeVariation]);
 
-  if (!optimizely || !isActiveVariant) return null;
-
-  return variation;
+  return optimizely ? activeVariation : null;
 };

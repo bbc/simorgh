@@ -2,9 +2,10 @@ import { useState, use } from 'react';
 import CurationGrid from '#app/components/Curation/CurationGrid';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
-import { ComponentExperimentProps } from '#app/models/types/global';
 import { TopicTag } from '#app/models/types/metadata';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import { RequestContext } from '#app/contexts/RequestContext';
+import getTopicPageUrl from '#app/lib/utilities/getTopicPageUrl';
 import ScrollableTabs from './ScrollableTabs';
 import styles from './index.styles';
 import useFetchTopicPromos from './useFetchTopicPromos';
@@ -17,22 +18,26 @@ export type ExtractedTopic = Pick<
 type TopicDiscoveryProps = {
   topics: ExtractedTopic[];
   className?: string;
-  experimentProps?: ComponentExperimentProps;
 };
 
 const HEADING_ID = 'topic-discovery-heading';
 
-const TopicDiscovery = ({
-  topics,
-  className,
-  experimentProps,
-}: TopicDiscoveryProps) => {
-  const { translations, dir } = use(ServiceContext);
+const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
+  const { service, translations, dir } = use(ServiceContext);
+  const { variant } = use(RequestContext);
   const {
     heading = 'Discover more',
     moreAboutTopic = 'More about {topic}',
     fetchErrorMessage = 'Failed to load. Please try again later.',
   } = translations.topicDiscovery || {};
+
+  const buildTopicPageUrl = (topicId: string) =>
+    getTopicPageUrl({
+      service,
+      topicId,
+      variant,
+      topicsPath: translations?.topicsPath,
+    });
 
   const [activeTabId, setActiveTabId] = useState(topics?.[0]?.topicId || '');
   const [shouldFocusPromos, setShouldFocusPromos] = useState(false);
@@ -57,7 +62,6 @@ const TopicDiscovery = ({
   const eventTrackingData = {
     componentName: 'topic-discovery',
     groupTracker,
-    ...(experimentProps && experimentProps),
   };
 
   const { topicPromos, isLoading, isError } = useFetchTopicPromos({
@@ -73,7 +77,6 @@ const TopicDiscovery = ({
   const moreAboutLinkClickTracker = useClickTrackerHandler({
     componentName: 'topic-discovery-more-about-link',
     groupTracker,
-    ...(experimentProps && experimentProps),
     itemTracker: {
       type: 'topic-discovery-more-about-link',
       text: currentTopic
@@ -139,6 +142,8 @@ const TopicDiscovery = ({
 
   if (!topics || topics.length === 0) return null;
   const selectedTopic = currentTopic as ExtractedTopic;
+  const selectedTopicUrl =
+    selectedTopic.topicUrl || buildTopicPageUrl(selectedTopic.topicId);
 
   const showLoadingState = Boolean(isLoading && !isError);
   const showErrorMessage = Boolean(!isLoading && isError);
@@ -164,7 +169,6 @@ const TopicDiscovery = ({
         groupTracker={groupTracker}
         setShouldFocusPromos={setShouldFocusPromos}
         onTabKeyDown={handleTabKeyDown}
-        experimentProps={experimentProps}
       />
       <div
         key={activeTabId}
@@ -213,11 +217,10 @@ const TopicDiscovery = ({
                     summaries={topicPromos}
                     eventTrackingData={{
                       componentName: 'topic-discovery-curation-grid',
-                      ...(experimentProps && experimentProps),
                       groupTracker: {
                         name: selectedTopic.topicName,
                         type: 'topic-discovery-curation-grid',
-                        link: selectedTopic.topicUrl,
+                        link: selectedTopicUrl,
                         resourceId: selectedTopic.topicId,
                         ...(topicPromos?.length > 0 && {
                           itemCount: topicPromos.length,
@@ -227,7 +230,7 @@ const TopicDiscovery = ({
                   />
                   <a
                     css={styles.moreAboutLink}
-                    href={selectedTopic.topicUrl}
+                    href={selectedTopicUrl}
                     data-testid="topic-discovery-more-about"
                     onKeyDown={handleMoreLinkKeyDown}
                     {...moreAboutLinkClickTracker}

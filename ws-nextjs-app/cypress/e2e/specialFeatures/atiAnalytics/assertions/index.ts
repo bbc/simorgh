@@ -11,8 +11,12 @@ import {
   getExpectedAtiDestination,
 } from '../helpers';
 import environment from '../../../../support/helpers/getAppEnv';
+import envs, { EnvironmentConfigType } from '../../../../support/config/envs';
 
 const usesReverbViewabilityModel = applicationType =>
+  !['lite', 'amp'].includes(applicationType);
+
+const usesResonance = applicationType =>
   !['lite', 'amp'].includes(applicationType);
 
 const getAppName = service => {
@@ -28,6 +32,19 @@ const getAppName = service => {
   return ['archive', 'news', 'newsround', 'scotland', 'sport'].includes(service)
     ? `[${service}]`
     : `[news-${service}]`;
+};
+
+const getResonanceAppName = service => {
+  const customServiceAppName = {
+    ws: 'news',
+    romania: 'news-romanian',
+  }[service];
+
+  if (customServiceAppName) {
+    return customServiceAppName;
+  }
+
+  return `news-${service}`;
 };
 
 const getATIParamsFromInterception = request => {
@@ -81,6 +98,38 @@ const assertATIPageViewEventParamsExist = ({
     expect(params).to.have.property('x12'); // last published
     expect(params).to.have.property('x13'); // ldp things
     expect(params).to.have.property('x17'); // category
+  }
+};
+
+const assertResonancePageViewEventParamsExist = ({
+  metadata,
+  event,
+  contentType,
+}) => {
+  expect(metadata).to.have.property('client_name');
+  expect(metadata).to.have.property('collection_library_name');
+  expect(metadata).to.have.property('collection_library_version');
+  expect(metadata).to.have.property('event_category');
+  expect(metadata).to.have.property('id');
+  expect(metadata).to.have.property('request_time');
+
+  expect(event).to.have.property('app_name');
+  expect(event).to.have.property('browser_language');
+  expect(event).to.have.property('content_type');
+  expect(event).to.have.property('destination');
+  expect(event).to.have.property('event_id');
+  expect(event).to.have.property('event_time');
+  expect(event).to.have.property('event_name');
+  expect(event).to.have.property('event_ts'); // timestamp
+  expect(event).to.have.property('language');
+  expect(event).to.have.property('page_name');
+  expect(event).to.have.property('page_title');
+  expect(event).to.have.property('producer');
+  expect(event).to.have.property('site_id'); // Level 1 Site ID. Different from 's2' Level 2 Site ID
+  expect(event).to.have.property('url');
+
+  if (!['list-datadriven', 'static'].includes(contentType)) {
+    expect(event).to.have.property('content_id');
   }
 };
 
@@ -269,6 +318,61 @@ export const assertPageView = ({
     if (applicationType === 'amp') {
       assertLocationSpecificPianoDestinationExists({ service });
     }
+  });
+};
+
+export const assertResonancePageView = ({
+  pageIdentifier,
+  applicationType,
+  contentType,
+  service,
+  path,
+  siteId,
+  expectsResonanceEvents = true,
+}) => {
+  const sendsResonanceEvents =
+    usesResonance(applicationType) && expectsResonanceEvents;
+
+  const testDescription = sendsResonanceEvents
+    ? `should send a Resonance page view event with service = ${service}, page identifier = ${pageIdentifier}, producer ID = ${siteId}, application type = ${applicationType} and content type = ${contentType}`
+    : `should not send a Resonance page view event with service = ${service}, application type = ${applicationType}`;
+
+  it(testDescription, () => {
+    const resonanceBagBaseUrl = (envs as EnvironmentConfigType).resonanceBagUrl;
+    const resonanceBagEventUrlPattern = new RegExp(
+      `${resonanceBagBaseUrl}/v[0-9]+/event`,
+    );
+
+    cy.intercept('POST', resonanceBagEventUrlPattern, request => {
+      request.reply({ statusCode: 200 });
+    }).as('resonance-page-view');
+
+    cy.visit(path, { retryOnStatusCodeFailure: true });
+
+    if (!sendsResonanceEvents) {
+      cy.get('body').should('be.visible');
+      cy.get('@resonance-page-view.all').should('have.length', 0);
+      return;
+    }
+
+    cy.wait('@resonance-page-view').then(({ request }) => {
+      expect(request.body).to.have.property('bag_metadata');
+      expect(request.body).to.have.property('events');
+
+      const metadata = request.body.bag_metadata;
+      const event = request.body.events[0];
+
+      assertResonancePageViewEventParamsExist({
+        metadata,
+        event,
+        contentType,
+      });
+
+      expect(event).to.have.property('app_name', getResonanceAppName(service));
+      expect(event).to.have.property('content_type', contentType);
+      expect(event).to.have.property('event_name', 'page.display');
+      expect(event).to.have.property('page_name', pageIdentifier);
+    });
   });
 };
 
