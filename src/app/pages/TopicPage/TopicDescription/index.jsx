@@ -12,7 +12,10 @@ import {
 const Paragraph = styled.p`
   ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
   ${({ theme: { fontSizes } }) => fontSizes.greatPrimer};
-  color: ${props => props.theme.palette.GREY_10};
+  color: ${props =>
+    props.theme.isDarkUi
+      ? props.theme.palette.WHITE
+      : props.theme.palette.GREY_10};
   padding-top: ${GEL_SPACING_DBL};
   margin: 0;
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {

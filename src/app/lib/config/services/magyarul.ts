@@ -70,6 +70,9 @@ export const service: DefaultServiceConfig = {
         moreAboutTopic: 'Több a {topic} témáról',
         fetchErrorMessage: 'Nem sikerült betölteni. Kérjük, próbálja újra',
       },
+      googlePreferredSource: {
+        linkText: 'Hozzáadás preferált forrásként a Google-on',
+      },
       currentPage: 'Jelenlegi oldal',
       skipLinkText: 'Ugrás a tartalomra',
       skipContent: {

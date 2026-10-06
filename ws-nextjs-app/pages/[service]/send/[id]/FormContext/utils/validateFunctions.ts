@@ -7,7 +7,7 @@ const wasPreviouslyInvalidCheck = (wasInvalid: boolean, isValid: boolean) => {
 const isStringEmpty = (str: string) =>
   str == null || str.replaceAll(/\s/g, '').length <= 0;
 
-const isValidText: (data: FieldData) => FieldData = (data: FieldData) => {
+const isValidString: (data: FieldData) => FieldData = (data: FieldData) => {
   const { required, value, wasInvalid } = data;
 
   let messageCode: InvalidMessageCodes | null = null;
@@ -63,8 +63,9 @@ const isValidCheck: (data: FieldData) => FieldData = (data: FieldData) => {
   const { required, value = false, wasInvalid } = data;
   let messageCode: InvalidMessageCodes | null = null;
 
+  const hasValue = Array.isArray(value) ? value.length > 0 : Boolean(value);
   let isValid = true;
-  if (required && !(value as boolean)) {
+  if (required && !hasValue) {
     messageCode = InvalidMessageCodes.FieldRequired;
     isValid = false;
   }
@@ -178,11 +179,12 @@ const isValidFiles: (data: FieldData) => FieldData = (data: FieldData) => {
 };
 
 const validateFunctions: Record<string, (_data: FieldData) => FieldData> = {
-  text: isValidText,
+  text: isValidString,
   email: isValidEmail,
   checkbox: isValidCheck,
+  radiobutton: isValidString,
   phone: isValidTel,
-  textarea: isValidText,
+  textarea: isValidString,
   file: isValidFiles,
 };
 

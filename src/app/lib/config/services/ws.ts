@@ -87,18 +87,56 @@ export const service: DefaultServiceConfig = {
         closeLabel: 'Close',
         buttonSeparatorText: 'or',
       },
+      accountSignInModal: {
+        title: 'Sign in to save to My News',
+        description: 'Save stories and read them at your convenience',
+        closeLabel: 'Close',
+      },
+      saveArticleButton: {
+        loading: 'Loading',
+        save: 'Save for later',
+        saving: 'Saving',
+        saved: 'Saved to My News',
+        remove: 'Remove',
+        removeAccessible: 'Saved. Remove from My News',
+        removing: 'Removing',
+      },
+      followTopicButton: {
+        loading: 'Loading...',
+        follow: 'Follow',
+        following: 'Following...',
+        followed: 'Followed',
+        unfollow: 'Unfollow',
+        unfollowAccessible: 'Followed. Unfollow',
+        unfollowing: 'Unfollowing...',
+      },
+      myNews: {
+        title: 'My News',
+        guestTitle: 'Welcome to My News',
+        description: 'My saved articles',
+        guestDescription:
+          'Sign in to save stories to My News, and read them at your convenience.',
+        noArticles: "You haven't saved any articles yet",
+        errorText:
+          'It looks like this content is not loading. Please try again later.',
+        loading: 'Loading',
+        noJsDescription:
+          'Please enable JavaScript or use a different browser to view this content.',
+      },
       actionTooltip: {
         success: {
-          titleBefore: 'This article is now saved to',
-          titleAfter: '',
+          title: 'This article is now saved',
+          bodyBefore: 'It will appear in',
+          bodyAfter: '',
         },
         error: {
           title: 'Sorry, something went wrong',
           body: 'Check your connection, refresh the page and try again',
         },
         removed: {
-          titleBefore: 'This article has now been removed from',
-          titleAfter: '',
+          title: 'This article is now removed',
+          bodyBefore: 'It will be removed from',
+          bodyAfter: '',
         },
         myNewsLinkText: 'My News',
         myNewsUrl: 'https://www.bbc.com/hindi/my-news',

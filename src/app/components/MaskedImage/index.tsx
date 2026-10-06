@@ -1,7 +1,7 @@
 import { use } from 'react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Image from '#app/components/Image';
-import { createSrcsets } from '#app/lib/utilities/srcSet';
+import { createIchefSrcSet } from '#app/utilities/imageSrcSets';
 import getOriginCode from '#app/lib/utilities/imageSrcHelpers/originCode';
 import getLocator from '#app/lib/utilities/imageSrcHelpers/locator';
 import styles from './styles';
@@ -56,7 +56,7 @@ const MaskedImage = ({
   const locator = getLocator(url);
 
   const { primarySrcset, primaryMimeType, fallbackSrcset, fallbackMimeType } =
-    createSrcsets({
+    createIchefSrcSet({
       originCode,
       locator,
       originalImageWidth: imageWidth,

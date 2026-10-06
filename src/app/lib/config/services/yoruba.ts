@@ -81,6 +81,9 @@ export const service: DefaultServiceConfig = {
         moreAboutTopic: 'Díẹ̀ síì nípa {topic}',
         fetchErrorMessage: 'Ó kuna láti ṣàkójọpọ̀. Jọ̀wọ́ gbìyànjú lẹ́ẹ̀kan síi',
       },
+      googlePreferredSource: {
+        linkText: 'Fi kun gẹ́gẹ́ bí orísun tí a fẹ́ràn lórí Google',
+      },
       currentPage: 'Ojú ewé to wà yìí',
       skipLinkText: 'Fò kọjá sí nnkan tí ó wà nínú rẹ̀',
       skipContent: {

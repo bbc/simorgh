@@ -6,6 +6,7 @@ import { getProcessEnvAppVariables } from '#app/lib/utilities/getEnvConfig';
 import serialiseForScript from '#app/lib/utilities/serialiseForScript';
 import CanonicalToLiteRedirect from '#utilities/CanonicalToLiteRedirect';
 import addOperaMiniClassScript from '#app/lib/utilities/addOperaMiniClassScript';
+import removeNoJsClass from '#app/lib/utilities/removeNoJsClass';
 import { BaseRendererProps } from './types';
 import ReverbTemplate from './ReverbTemplate';
 import ComponentTracking from './ComponentTracking';
@@ -144,7 +145,7 @@ export default function CanonicalRenderer({
           {...(nonce ? { nonce } : {})}
           type="text/javascript"
           dangerouslySetInnerHTML={{
-            __html: `document.documentElement.classList.remove("no-js");`,
+            __html: `(${removeNoJsClass.toString()})()`,
           }}
         />
       </body>

@@ -39,7 +39,7 @@ const ErrorMetadata = ({ dir, lang, messaging, brandName, themeColor }) => {
 const ErrorPage = ({ errorCode }) => {
   const { brandName, dir, lang, translations } = use(ServiceContext);
   const { pageType } = use(RequestContext);
-  const { isPersonalizationEnabled } = use(AccountContext);
+  const { isArticlePersonalizationEnabled } = use(AccountContext);
   const messaging = translations.error[errorCode] || translations.error[500];
 
   const {
@@ -47,7 +47,7 @@ const ErrorPage = ({ errorCode }) => {
   } = useTheme();
 
   const shouldRenderArticleCleanup =
-    isPersonalizationEnabled &&
+    isArticlePersonalizationEnabled &&
     errorCode === NOT_FOUND &&
     (pageType === ARTICLE_PAGE || pageType === MEDIA_ARTICLE_PAGE);
 

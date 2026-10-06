@@ -3,7 +3,7 @@ import type { Services } from '#app/models/types/global';
 import getAuthHeaders from './getAuthHeaders';
 import type { ActivityType } from './uasUtility';
 import { refreshTokensIfExpired } from './tokenRefresh/tokenManager';
-import UasError from './errors';
+import UasError, { type UasErrorBody } from './errors';
 
 export { default as UasError } from './errors';
 
@@ -67,6 +67,27 @@ const validateRequest = (method: UasMethod, options: UasRequestOptions) => {
   // TODO : Add more validation , if needed
 };
 
+// UAS returns JSON ({ key, message }) for some errors and a plain-text string
+// for others, so we read the raw text and only parse JSON when possible.
+const parseUasErrorBody = async (
+  response: Response,
+): Promise<UasErrorBody | undefined> => {
+  let text: string | undefined;
+  try {
+    text = (await response.clone().text()).trim();
+  } catch {
+    return undefined;
+  }
+
+  if (!text) return undefined;
+
+  try {
+    return JSON.parse(text) as UasErrorBody;
+  } catch {
+    return { message: text };
+  }
+};
+
 const uasApiRequest = async (
   method: UasMethod,
   activityType: ActivityType,
@@ -106,7 +127,8 @@ const uasApiRequest = async (
   });
 
   if (!response.ok) {
-    throw new UasError(response.status);
+    const errorBody = await parseUasErrorBody(response);
+    throw new UasError(response.status, errorBody);
   }
 
   return response;

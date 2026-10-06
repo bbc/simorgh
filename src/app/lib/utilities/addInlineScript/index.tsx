@@ -1,25 +1,30 @@
+import serialiseForScript from '../serialiseForScript';
+
+export type InlineScriptParameter =
+  | string
+  | Record<string, unknown>
+  | (() => boolean);
+
 export type InlineScriptProps = {
   script: string | { toString: () => string };
-  parameters?: string | string[] | (string | (() => boolean))[];
+  parameters?: string | InlineScriptParameter[];
   nonce?: string | null;
 };
 
 export default ({ script, parameters, nonce }: InlineScriptProps) => {
   let inlineScript = script;
-  const stringifiedParams = [parameters]
-    .flat()
+  const paramList = parameters ? [parameters].flat() : [];
+  const paramLiteral = paramList
     .map(param => {
       if (typeof param === 'function') {
         return param.toString();
       }
+      if (typeof param === 'object' && param !== null) {
+        return serialiseForScript(param);
+      }
       return `"${param}"`;
     })
     .join(', ');
-
-  let paramLiteral = '';
-  if (parameters && parameters.length > 0 && stringifiedParams) {
-    paramLiteral = stringifiedParams;
-  }
 
   if (typeof script === 'function') {
     inlineScript = `(${script.toString()})(${paramLiteral})`;

@@ -74,6 +74,9 @@ export const service: DefaultServiceConfig = {
         moreAboutTopic: 'Więcej o {topic}',
         fetchErrorMessage: 'Nie udało się załadować. Spróbuj ponownie',
       },
+      googlePreferredSource: {
+        linkText: 'Dodaj jako preferowane źródło w Google',
+      },
       currentPage: 'Strona bieżąca',
       skipLinkText: 'Przejdź do treści',
       skipContent: {

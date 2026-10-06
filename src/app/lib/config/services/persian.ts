@@ -88,6 +88,9 @@ export const service: DefaultServiceConfig = {
         moreAboutTopic: 'بیشتر درباره {topic}',
         fetchErrorMessage: 'بارگذاری ناموفق بود. لطفاً دوباره تلاش کنید',
       },
+      googlePreferredSource: {
+        linkText: 'به عنوان منبع ترجیحی در Google اضافه کنید',
+      },
       continueReading: 'ادامه مطلب را بخوانید',
       currentPage: 'صفحه فعلی',
       skipLinkText: 'مشاهده محتوا',

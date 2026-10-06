@@ -85,6 +85,9 @@ export const service: DefaultServiceConfig = {
         moreAboutTopic: '{topic} વિશે વધુ',
         fetchErrorMessage: 'લોડ કરવામાં નિષ્ફળ. કૃપા કરીને ફરી પ્રયાસ કરો',
       },
+      googlePreferredSource: {
+        linkText: 'Google પર પસંદગીના સ્રોત તરીકે ઉમેરો',
+      },
       continueReading: 'આગળ વાંચો',
       currentPage: 'વર્તમાન પેજ',
       skipLinkText: 'કન્ટેન્ટ પર જાવ',

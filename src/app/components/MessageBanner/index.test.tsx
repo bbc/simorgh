@@ -112,6 +112,37 @@ describe('MessageBanner', () => {
       );
     });
 
+    it('should render an image with the correct srcSet and sizes', () => {
+      render(
+        <MessageBanner
+          description={summary.description}
+          link={summary.link}
+          linkText={summary.title}
+          image={summary.imageUrl}
+        >
+          <Heading level={2} id="banner-heading">
+            {kyrgyzMessageBannerOnePromo.title}
+          </Heading>
+        </MessageBanner>,
+      );
+      const image = screen.getByAltText('');
+      const imagePath =
+        'cpsdevpb/66b8/test/d1be6bc0-8114-11ed-bd83-8f15ba358e41.png';
+      const separator = ', \n                          ';
+
+      expect(image.getAttribute('srcset')).toEqual(
+        [
+          `https://ichef.test.bbci.co.uk/ace/ws/184/${imagePath} 184w`,
+          `https://ichef.test.bbci.co.uk/ace/ws/368/${imagePath} 368w`,
+          `https://ichef.test.bbci.co.uk/ace/ws/224/${imagePath} 224w`,
+          `https://ichef.test.bbci.co.uk/ace/ws/448/${imagePath} 448w`,
+        ].join(separator),
+      );
+      expect(image.getAttribute('sizes')).toEqual(
+        '(max-width: 37.4375rem) 184px, 224px',
+      );
+    });
+
     it('should have an image with an empty alt text', () => {
       render(
         <MessageBanner

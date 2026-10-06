@@ -9,7 +9,12 @@ export const hasInformationPageLinkTranslation = ({
     ?.informationPageLink;
 };
 
-export default ({ service, pageType, variant }: ServiceParametersType) => {
+export default ({
+  service,
+  pageType,
+  variant,
+  path,
+}: ServiceParametersType) => {
   describe(`Running testsForLiteOnly for ${service} ${pageType}`, () => {
     describe('Lite Site Summary', () => {
       it('Clicking the link to the main site should navigate to canonical site', () => {
@@ -23,6 +28,7 @@ export default ({ service, pageType, variant }: ServiceParametersType) => {
       });
       if (hasInformationPageLinkTranslation({ service, variant })) {
         it('Clicking the link to the Information page should navigate to lite site', () => {
+          cy.visit(path);
           cy.get('[data-e2e="information-page"] a')
             .should('have.attr', 'href')
             .then($href => {

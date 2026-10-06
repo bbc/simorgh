@@ -267,6 +267,35 @@ describe('Post', () => {
       ).toBeInTheDocument();
     });
 
+    it('should not reinitialise the media player when Post rerenders for an unrelated reason', async () => {
+      const mockRequire = jest.fn();
+      const originalRequirejs = window.requirejs;
+      window.requirejs = mockRequire;
+
+      const renderOptions = {
+        id: 'c7p765ynk9qt',
+        service: 'pidgin' as const,
+        pageType: LIVE_PAGE,
+        pathname: '/pidgin/live/c7p765ynk9qt',
+      };
+
+      try {
+        const { rerender } = await act(async () => {
+          return render(<Post post={videoSamplePost} />, renderOptions);
+        });
+
+        expect(mockRequire).toHaveBeenCalledTimes(1);
+
+        await act(async () => {
+          rerender(<Post post={videoSamplePost} hasShareApi />);
+        });
+
+        expect(mockRequire).toHaveBeenCalledTimes(1);
+      } finally {
+        window.requirejs = originalRequirejs;
+      }
+    });
+
     it('should not render share button by default', async () => {
       await act(async () => {
         render(<Post post={singlePostWithTitle} />);

@@ -93,6 +93,9 @@ const defaultCyrillicConfig = {
       moreAboutTopic: '{topic} ҳақида кӯпроқ',
       fetchErrorMessage: 'Юклаб бўлмади. Илтимос, яна уриниб кўринг',
     },
+    googlePreferredSource: {
+      linkText: 'Google’да афзал манба сифатида қўшиш',
+    },
     currentPage: 'Жорий саҳифа',
     skipLinkText: 'Саҳифага ўтиш',
     skipContent: {
@@ -540,6 +543,9 @@ export const service: UzbekConfig = {
         heading: "Ko'proq kashf qiling",
         moreAboutTopic: "{topic} haqida ko'proq",
         fetchErrorMessage: "Yuklab bo'lmadi. Iltimos, yana urinib ko'ring",
+      },
+      googlePreferredSource: {
+        linkText: 'Google’da afzal manba sifatida qo‘shish',
       },
       currentPage: 'Joriy sahifa',
       skipLinkText: 'Sahifaga o‘tish',

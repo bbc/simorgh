@@ -54,8 +54,10 @@ describe('Expected use', () => {
     const trackingData = JSON.parse(testEl.textContent as string);
 
     expect(trackingData).toEqual({
+      appName: 'news-pidgin',
       campaignID: 'article-sty',
       hashedId: null,
+      isPersonalisationOn: false,
       isSignedIn: false,
       pageIdentifier: 'news::pidgin.news.story.51745682.page',
       platform: 'canonical',
@@ -78,8 +80,10 @@ describe('Expected use', () => {
     const trackingData = JSON.parse(testEl.textContent as string);
 
     expect(trackingData).toEqual({
+      appName: 'news-kyrgyz',
       campaignID: 'index-home',
       hashedId: null,
+      isPersonalisationOn: false,
       isSignedIn: false,
       pageIdentifier: 'kyrgyz.page',
       platform: 'canonical',
