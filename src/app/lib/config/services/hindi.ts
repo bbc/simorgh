@@ -155,7 +155,7 @@ export const service: DefaultServiceConfig = {
         removing: 'हटाया जा रहा है',
       },
       followTopicButton: {
-        loading: 'सेव किया जा रहा है…',
+        loading: 'लोड हो रहा है…',
         follow: 'फ़ॉलो करें',
         following: 'फ़ॉलो कर रहे हैं',
         followed: 'फ़ॉलो कर रहे हैं',
