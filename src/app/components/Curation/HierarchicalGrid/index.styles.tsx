@@ -3,11 +3,11 @@ import { GROUP_1_MAX_WIDTH } from '#app/components/ThemeProvider/mediaQueries';
 import pixelsToRem from '#app/utilities/pixelsToRem';
 
 const styles = {
-  body: ({ spacings, palette, fontSizes }: Theme) =>
+  body: ({ spacings, palette, fontSizes, isDarkUi }: Theme) =>
     css({
       marginTop: 0,
       marginBottom: `${spacings.DOUBLE}rem`,
-      color: palette.GREY_10,
+      color: isDarkUi ? palette.GREY_2 : palette.GREY_10,
       ...fontSizes.longPrimer,
     }),
   item: ({ mq, spacings }: Theme) =>

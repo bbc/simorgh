@@ -122,6 +122,7 @@ export type ReverbPageVars = {
 export type ReverbUserVars = {
   isSignedIn: boolean;
   hashedId?: string | null;
+  isPersonalisationOn?: boolean;
 };
 
 export type ReverbEventDetails = {
@@ -135,13 +136,25 @@ export type ReverbEventDetails = {
   };
   event?: {
     category: string;
-    action: 'select' | 'view' | 'serve';
+    action?: 'select' | 'view' | 'serve';
     grouping?: string;
     interaction_type?: string;
     spec_id?: string;
     spec_version?: string;
   };
-  eventName: 'pageView' | 'sectionView' | 'sectionClick' | 'activation';
+  error?: {
+    engine?: string;
+    name?: string;
+    message?: string;
+    code?: string;
+    type?: string;
+  };
+  eventName:
+    | 'pageView'
+    | 'sectionView'
+    | 'sectionClick'
+    | 'activation'
+    | 'error';
   eventPublisher?: string;
   group?: string | object;
   isClick?: boolean;
@@ -192,6 +205,7 @@ export interface ATIEventTrackingProps {
   eventGroupingName?: string;
   isSignedIn?: boolean;
   hashedId?: string | null;
+  isPersonalisationOn?: boolean;
 }
 
 export interface ItemTracker {
@@ -238,6 +252,7 @@ export interface ATIPageTrackingProps {
   experimentVariant?: string | null;
   isSignedIn?: boolean;
   hashedId?: string | null;
+  isPersonalisationOn?: boolean;
 }
 
 export interface ATIProps {

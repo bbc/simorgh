@@ -32,6 +32,7 @@ const reverbComponentTracking = async ({
     anchorElement,
     background,
     container,
+    error,
     experience,
     event,
     eventPublisher,
@@ -47,6 +48,7 @@ const reverbComponentTracking = async ({
     group,
     item,
     experience,
+    ...(error && { error }),
     ...(type && { type }),
     ...(background !== undefined && { background }),
     ...(container && { container }),
@@ -67,6 +69,7 @@ const reverbHandlers = {
   sectionView: reverbComponentTracking,
   sectionClick: reverbComponentTracking,
   activation: reverbComponentTracking,
+  error: reverbComponentTracking,
 };
 
 const callReverb = async (eventDetails: ReverbEventDetails) => {
@@ -90,7 +93,7 @@ const callReverb = async (eventDetails: ReverbEventDetails) => {
   );
 };
 
-const callResonance = (
+const initialiseResonance = (
   Resonance: typeof import('@bbc/resonance').Resonance,
   resonanceParams: ResonanceBeaconConfig,
 ) => {
@@ -123,7 +126,7 @@ const sendBeacon = async (
     if (resonanceBeaconConfig) {
       try {
         const { Resonance } = await import('@bbc/resonance');
-        callResonance(Resonance, resonanceBeaconConfig);
+        initialiseResonance(Resonance, resonanceBeaconConfig);
       } catch (error) {
         logger.error(ATI_LOGGING_ERROR, { error });
       }

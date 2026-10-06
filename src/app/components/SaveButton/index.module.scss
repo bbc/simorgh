@@ -1,0 +1,79 @@
+@use '@scss/themeTokens' as theme;
+
+.buttonWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.75rem;
+  width: 100%;
+  padding: #{theme.$spacings-full} #{theme.$spacings-double};
+  cursor: pointer;
+  background-color: theme.$palette-white;
+  color: theme.$palette-grey-8;
+  border: #{theme.pixelsToRem-px-to-rem(1)} solid theme.$palette-grey-8;
+
+  :global([data-is-dark-ui='true']) & {
+    background-color: theme.$palette-grey-10;
+    color: theme.$palette-white;
+    border-color: theme.$palette-white;
+  }
+
+  svg {
+    fill: currentColor;
+  }
+
+  &:hover {
+    background-color: theme.$palette-grey-8;
+    color: theme.$palette-white;
+
+    :global([data-is-dark-ui='true']) & {
+      background-color: theme.$palette-white;
+      color: theme.$palette-black;
+    }
+  }
+
+  // Compound selector guarantees this beats the plain dark-UI background
+  // rule above regardless of stylesheet order.
+  &.updatingState {
+    background-color: theme.$palette-grey-8;
+    color: theme.$palette-white;
+    border-color: theme.$palette-grey-8;
+    cursor: not-allowed;
+
+    :global([data-is-dark-ui='true']) & {
+      background-color: theme.$palette-white;
+      color: theme.$palette-black;
+      border-color: theme.$palette-white;
+    }
+
+    svg {
+      fill: currentColor;
+    }
+  }
+}
+
+button[type='button'].buttonWrapper:focus-visible {
+  background-color: theme.$palette-grey-8;
+  color: theme.$palette-white;
+  outline: #{theme.pixelsToRem-px-to-rem(3)} solid theme.$palette-grey-8;
+  outline-offset: 0;
+  box-shadow: none;
+  border-width: #{theme.pixelsToRem-px-to-rem(3)};
+  border-color: theme.$palette-white;
+
+  :global([data-is-dark-ui='true']) & {
+    background-color: theme.$palette-white;
+    color: theme.$palette-black;
+    outline-color: theme.$palette-white;
+    border-color: theme.$palette-black;
+  }
+}
+
+.iconText {
+  display: flex;
+  align-items: center;
+  gap: #{theme.$spacings-full};
+  white-space: nowrap;
+  @include theme.fontVariants-gel-font-variant('sans-bold');
+  @include theme.fontSizes-gel-font-size(pica);
+}

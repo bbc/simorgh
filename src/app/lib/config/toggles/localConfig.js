@@ -32,10 +32,16 @@ export default {
   eventTracking: {
     enabled: true,
   },
+  googlePreferredSource: {
+    enabled: false,
+  },
   homePageRadioSchedule: {
     enabled: true,
   },
   include: {
+    enabled: true,
+  },
+  livePagePolling: {
     enabled: true,
   },
   liveRadioSchedule: {
@@ -88,6 +94,10 @@ export default {
   },
   topBarOJs: {
     enabled: true,
+  },
+  topicUasPersonalization: {
+    enabled: true,
+    value: 'hindi|mundo|portuguese',
   },
   variantCookie: {
     enabled: true,

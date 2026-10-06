@@ -2,7 +2,10 @@ import { PropsWithChildren, use } from 'react';
 import { Helmet } from 'react-helmet';
 import GlobalStyles from '#psammead/psammead-styles/src/global-styles';
 import { Navigation, PageTypes } from '#app/models/types/global';
+import { MetadataTaggings } from '#app/models/types/metadata';
 import appendAdDomainsToCSPHeader from '#app/utilities/appendAdDomainsToCSPHeader';
+import addInlineScript from '#app/lib/utilities/addInlineScript';
+import getPrimaryMediaType from '#lib/utilities/getPrimaryMediaType';
 import { OFFLINE_PAGE } from '#app/routes/utils/pageTypes';
 import { TopStoryItem } from '../../pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import WebVitals from '../../legacy/containers/WebVitals';
@@ -15,6 +18,7 @@ import { RequestContext } from '../../contexts/RequestContext';
 import fontFaces from '../ThemeProvider/fontFaces';
 import styles from './index.styles';
 import { OptimoMostReadRecord, CPSMostReadRecord } from '../MostRead/types';
+import setPageWrapperInlineJs from './setPageWrapperInlineJs';
 
 type ModelType = {
   blocks?: [
@@ -31,7 +35,10 @@ type Props = {
   pageData: {
     metadata: {
       type: PageTypes;
-      topics?: { topicName: string }[];
+      topics?: { topicName: string; topicId: string }[];
+      passport?: {
+        taggings?: MetadataTaggings;
+      };
     };
     blockTypes?: string[];
     content?: { model?: ModelType };
@@ -56,19 +63,9 @@ const PageLayoutWrapper = ({
   const isErrorPage = ![200].includes(status) || !status;
   const pageType = pageData?.metadata?.type;
 
-  const primaryMediaType = (() => {
-    const blockTypes = pageData?.blockTypes ?? [];
-    if (blockTypes.includes('audio')) return 'audio' as const;
-    if (blockTypes.includes('video')) return 'video' as const;
-    // Fallback: scan top-level content blocks for an audio or video block.
-    // This covers SFV articles where blockTypes may not be populated.
-    const contentBlocks = (pageData?.content?.model?.blocks ?? []) as {
-      type: string;
-    }[];
-    if (contentBlocks.some(b => b.type === 'audio')) return 'audio' as const;
-    if (contentBlocks.some(b => b.type === 'video')) return 'video' as const;
-    return undefined;
-  })();
+  const primaryMediaType = getPrimaryMediaType(
+    pageData?.metadata?.passport?.taggings,
+  );
   const reportingPageType = pageType?.replace(/ /g, '');
   const isOfflinePage = pageType === OFFLINE_PAGE;
   const isWindowValid = typeof window !== 'undefined';
@@ -93,144 +90,35 @@ const PageLayoutWrapper = ({
 
   const serviceFonts = fontFaces();
 
-  const fontJs =
-    isLite ||
-    isAmp ||
-    !serviceFonts.length ||
-    process.env.JEST_WORKER_ID !== undefined
-      ? ''
-      : `
-  				if ("FileReader" in window && "Promise" in window && "fetch" in window) {
-  				const fontsForStorage = ${JSON.stringify(serviceFonts)};
-                const getFont = (location) => {
-                	return new Promise(function (resolve, reject) {
-						fetch(location).then(function (res) {
-						  return res.blob()
-						}).then(function (blob) {
-						  if (blob && blob.constructor.name === 'Blob') {
-							  var reader = new FileReader()
-							  reader.addEventListener('load', function () {
-								resolve(this.result)
-							  })
-							  reader.readAsDataURL(blob)
-						  }
-						}).catch(reject)
-					  })
-                };
-                const createStyleAndAttach = (styleInnerText) => {
-                    const head = document.head || document.getElementsByTagName('head')[0];
-					const fontStylePlaceholder = document.createElement('style');
-					fontStylePlaceholder.innerHTML = styleInnerText;
-					head.appendChild(fontStylePlaceholder);
-                };
-                const retrieveAndStoreFont = (font, storageKey, shouldAttachStyle) => {
-                    window.addEventListener("load", (e) => {
-                    getFont(font.downloadSrc).then((fontContents) => {
-                    	const forStorage = { base64Contents: fontContents, fontFamily: font.fontFamily, fontWeight: font.fontWeight, fontVersion: font.version };
-                    	localStorage.setItem(storageKey, JSON.stringify(forStorage));
-                    	if (shouldAttachStyle) {
-                    		const styleInnerText = '@font-face{font-family: "' + font.fontFamily + '"; font-weight: ' + font.fontWeight + ';src:url("' + fontContents + '") format("woff2");font-display: swap;}';
-                    		createStyleAndAttach(styleInnerText);
-                		}
-                    });
-                    });
-                };
-                fontsForStorage.forEach(font => {
-                    const storageKey = 'font-' + font.name;
-                    let fontContents = localStorage.getItem(storageKey);
+  const wrappedTopics = pageData?.metadata?.topics?.map(topic => ({
+    topicName: topic.topicName,
+    topicId: topic.topicId,
+  }));
 
-                    if (!fontContents) {
-                        retrieveAndStoreFont(font, storageKey, true);
-                    }
-                    else {
-                    	const { base64Contents, fontFamily, fontWeight, fontVersion } = JSON.parse(fontContents);
-                    	const styleInnerText = '@font-face{font-family: "' + fontFamily + '"; font-weight: ' + fontWeight + '; src:url("' + base64Contents + '") format("woff2");font-display: swap;}';
-                		createStyleAndAttach(styleInnerText);
-                		if (fontVersion !== font.version) {
-                			retrieveAndStoreFont(font, storageKey, false);
-                		}
-                    }
-                });
-                }
-                let wrappedPageTimeStart = new Date();
-                let wrappedYear = wrappedPageTimeStart.getFullYear();
-                let wrappedMonth = wrappedPageTimeStart.getMonth() + 1;
-                let wrappedStorageKey = 'ws_bbc_wrapped';
-                let wrappedContents = {};
-                let topicsStorageKey = 'ws_bbc_topics';
-                let topicsContents = localStorage.getItem(topicsStorageKey) || "{}";
-                topicsContents = JSON.parse(topicsContents);
-                wrappedContents[wrappedYear] = {
-                    'byMonth': {},
-                    'pageTypeCounts': {},
-                    'serviceCounts': {},
-                    'topicCounts': {},
-                    'duration': 0,
-                    'wordCount': 0,
-                };
-                wrappedContents[wrappedYear].byMonth[wrappedMonth] = 0;
-                let saveWrapped = () => {
-                    localStorage.setItem(wrappedStorageKey, JSON.stringify(wrappedContents));
-                }
-                let wrappedLocalStorageContents = localStorage.getItem(wrappedStorageKey);
-                if (wrappedLocalStorageContents) {
-                    const wrappedLocalStorageContentsParsed = JSON.parse(wrappedLocalStorageContents);
-                    if (wrappedLocalStorageContentsParsed.hasOwnProperty(wrappedYear)) {
-                        wrappedContents[wrappedYear] = wrappedLocalStorageContentsParsed[wrappedYear] || wrappedContents[wrappedYear];
-                        wrappedContents[wrappedYear].byMonth[wrappedMonth] = wrappedLocalStorageContentsParsed[wrappedYear].byMonth[wrappedMonth] || 0;
-                    }
-                }
-                let wrappedContentsShortcut = wrappedContents[wrappedYear];
-                let wrappedTopics = ${JSON.stringify(
-                  pageData?.metadata?.topics,
-                )};
-                if (wrappedTopics) {
-                    wrappedTopics.forEach(({ topicName, topicId }) => {
-                        if (!topicsContents.${service}) topicsContents.${service} = {};
-                        if (topicsContents.${service}[topicName]) {
-                            topicsContents.${service}[topicName].count++;
-                        }
-                        else {
-                            topicsContents.${service}[topicName] = {
-                                'count': 1,
-                                'id': topicId,
-                                'path': "/${service}/topics/" + topicId
-                            };
-                        }
-                        wrappedContentsShortcut.topicCounts[topicName] = wrappedContentsShortcut.topicCounts[topicName] ? wrappedContentsShortcut.topicCounts[topicName] + 1 : 1;
-                    });
-                }
-                document.onvisibilitychange = () => {
-                  if (document.visibilityState === "hidden") {
-                    const wrappedTimeNow = new Date();
-                    const wrappedDifference = wrappedTimeNow - wrappedPageTimeStart;
-                    wrappedContentsShortcut.duration = wrappedContentsShortcut.duration ? wrappedContentsShortcut.duration + wrappedDifference : wrappedDifference;
-                    saveWrapped();
-                  }
-                  else {
-                    wrappedPageTimeStart = new Date();
-                  }
-                };
-                wrappedContentsShortcut.wordCount = wrappedContentsShortcut.wordCount + ${wordCount};
-                wrappedContentsShortcut.serviceCounts.${service} = wrappedContentsShortcut.serviceCounts.${service} ? wrappedContentsShortcut.serviceCounts.${service} + 1 : 1;
-                wrappedContentsShortcut.pageTypeCounts.${reportingPageType} = wrappedContentsShortcut.pageTypeCounts.${reportingPageType} ? wrappedContentsShortcut.pageTypeCounts.${reportingPageType} + 1 : 1;
-                wrappedContentsShortcut.byMonth[wrappedMonth] = wrappedContentsShortcut.byMonth[wrappedMonth] ? wrappedContentsShortcut.byMonth[wrappedMonth] + 1 : 1;
-                wrappedContents[wrappedYear] = wrappedContentsShortcut;
-                localStorage.setItem(topicsStorageKey, JSON.stringify(topicsContents));
-    `;
+  const shouldRenderPageWrapperInlineJs =
+    !isLite &&
+    !isAmp &&
+    serviceFonts.length > 0 &&
+    process.env.JEST_WORKER_ID === undefined;
 
   return (
     <>
-      {fontJs && (
-        <Helmet
-          script={[
-            {
-              type: 'text/javascript',
-              innerHTML: `(function() { ${fontJs} })();`,
-              ...(nonce && { nonce }),
-            },
-          ]}
-        />
+      {shouldRenderPageWrapperInlineJs && (
+        <Helmet>
+          {addInlineScript({
+            script: setPageWrapperInlineJs,
+            parameters: [
+              {
+                serviceFonts,
+                wrappedTopics,
+                service,
+                wordCount,
+                reportingPageType,
+              },
+            ],
+            nonce,
+          })}
+        </Helmet>
       )}
 
       {nonce && cspHeader && (

@@ -110,6 +110,9 @@ export type PlayerUiConfig = {
   pictureInPicture?: {
     enabled: boolean;
   };
+  cta?: {
+    mode?: 'duration' | null;
+  };
 };
 
 export type ConfigBuilderProps = {
@@ -155,6 +158,7 @@ export type MediaInfo = {
 };
 
 export type Player = {
+  currentTime: (time?: number) => number;
   dispatchEvent(
     dispatchEvent: string,
     parameters?: { adTag: string | null },

@@ -8,10 +8,8 @@ import StoryPromo, {
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
 import pathOr from 'ramda/src/pathOr';
 import LiveLabel from '#app/components/LiveLabel';
-import ImagePlaceholder from '#psammead/psammead-image-placeholder/src';
 import { RequestContext } from '#contexts/RequestContext';
-import { createSrcsets } from '#lib/utilities/srcSet';
-import buildIChefURL from '#lib/utilities/ichefURL';
+import { createIchefSrcSet } from '#app/utilities/imageSrcSets';
 import getOriginCode from '#lib/utilities/imageSrcHelpers/originCode';
 import getLocator from '#lib/utilities/imageSrcHelpers/locator';
 import {
@@ -75,8 +73,7 @@ const StoryPromoImage = ({
   pageType = '',
 }) => {
   if (!imageValues) {
-    const landscapeRatio = (9 / 16) * 100;
-    return <ImagePlaceholder ratio={landscapeRatio} />;
+    return <Image alt="" aspectRatio={[16, 9]} />;
   }
 
   // eslint-disable-next-line prefer-const
@@ -95,26 +92,25 @@ const StoryPromoImage = ({
     copyrightHolder = rawImageBlock.copyrightHolder;
   }
   const imageResolutions = [70, 95, 144, 183, 240, 320, 660];
-  const { primarySrcset, primaryMimeType, fallbackSrcset, fallbackMimeType } =
-    createSrcsets({
-      originCode,
-      locator,
-      originalImageWidth: width,
-      imageResolutions,
-    });
+  const {
+    src,
+    primarySrcset,
+    primaryMimeType,
+    fallbackSrcset,
+    fallbackMimeType,
+  } = createIchefSrcSet({
+    originCode,
+    locator,
+    originalImageWidth: width,
+    imageResolutions,
+    srcResolution: 660,
+  });
   let sizes = useLargeImages
     ? '(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw'
     : '(min-width: 1020px) 232px, calc(31.86vw - 7px)';
   if (pageType === STORY_PAGE) {
     sizes = '(min-width: 1080px) 315px, 29.74vw';
   }
-  const DEFAULT_IMAGE_RES = 660;
-  const src = buildIChefURL({
-    originCode,
-    locator,
-    resolution: DEFAULT_IMAGE_RES,
-  });
-
   return (
     <Image
       isAmp={isAmp}
