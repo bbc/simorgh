@@ -1,0 +1,102 @@
+@use '@scss/themeTokens' as theme;
+
+.title {
+  display: block;
+  width: 100%;
+  padding-bottom: #{theme.$spacings-half};
+  border-bottom: #{theme.pixelsToRem-px-to-rem(1)} solid theme.$palette-black;
+}
+
+.electionBannerWrapper,
+.assocPressElectionBannerWrapper,
+.electionBannerWrapperAmp,
+.assocPressElectionBannerWrapperAmp {
+  display: flex;
+  flex-direction: column;
+  gap: #{theme.$spacings-half};
+}
+
+.electionBannerWrapper {
+  padding: #{theme.$spacings-full} 0;
+}
+
+.electionBannerIframe {
+  border: none;
+  width: 100%;
+  height: #{theme.pixelsToRem-px-to-rem(315)};
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    height: #{theme.pixelsToRem-px-to-rem(320)};
+  }
+
+  @media #{theme.$mediaQueries-group-4-min-width} {
+    height: #{theme.pixelsToRem-px-to-rem(350)};
+  }
+}
+
+.electionBannerWrapperAmp,
+.assocPressElectionBannerWrapperAmp {
+  overflow: hidden;
+  margin-bottom: #{theme.$spacings-full};
+
+  > div {
+    padding: 0;
+  }
+
+  & amp-img {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  & amp-iframe {
+    border: none;
+    width: 100%;
+  }
+}
+
+.electionBannerWrapperAmp {
+  & amp-iframe {
+    height: #{theme.pixelsToRem-px-to-rem(315)};
+
+    @media #{theme.$mediaQueries-group-3-min-width} {
+      height: #{theme.pixelsToRem-px-to-rem(320)};
+    }
+
+    @media #{theme.$mediaQueries-group-4-min-width} {
+      height: #{theme.pixelsToRem-px-to-rem(350)};
+    }
+  }
+}
+
+.assocPressElectionBannerWrapper,
+.assocPressElectionBannerWrapperAmp {
+  width: 100%;
+  margin: 0 auto;
+  border-bottom: solid #{theme.pixelsToRem-px-to-rem(1)} transparent;
+  padding: #{theme.$spacings-full} 0;
+
+  .title {
+    max-width: #{theme.pixelsToRem-px-to-rem(1008)};
+    margin-inline: auto;
+  }
+}
+
+.assocPressElectionBannerIframe {
+  border: none;
+  display: block;
+  max-width: #{theme.pixelsToRem-px-to-rem(1008)};
+  margin: 0 auto;
+  height: #{theme.pixelsToRem-px-to-rem(340)};
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    height: #{theme.pixelsToRem-px-to-rem(216)};
+  }
+}
+
+.assocPressElectionBannerWrapperAmp {
+  & amp-iframe {
+    display: block;
+    max-width: #{theme.pixelsToRem-px-to-rem(1008)};
+    margin: 0 auto;
+  }
+}

@@ -1,13 +1,15 @@
 import { use } from 'react';
 import Script from 'next/script';
+import clsx from 'clsx';
 import { RequestContext } from '#app/contexts/RequestContext';
 import AmpIframe from '#app/components/AmpIframe';
+import Heading from '#app/components/Heading';
 import useToggle from '#app/hooks/useToggle';
 import { Tag } from '#app/components/Metadata/types';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { MetadataTaggings } from '#app/models/types/metadata';
-import styles, { DEFAULT_HEIGHTS_AP, DEFAULT_HEIGHTS_VJ } from './index.styles';
+import styles from './index.module.scss';
 
 type Props = {
   aboutTags: Tag[];
@@ -21,6 +23,18 @@ type ToggleType = {
 
 const SENSITIVE_ARTICLE_ID = 'f2b5dd0e-dda0-454c-893d-792d46ff48c3';
 
+export const DEFAULT_HEIGHTS_VJ = {
+  desktop: 350,
+  tablet: 320,
+  mobile: 315,
+};
+
+export const DEFAULT_HEIGHTS_AP = {
+  desktop: 216,
+  tablet: 400,
+  mobile: 340,
+};
+
 export default function ElectionBanner({ aboutTags, taggings }: Props) {
   const { electionBanner } = use(ServiceContext);
   const { isAmp, isLite } = use(RequestContext);
@@ -29,8 +43,13 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
 
   if (isLite || !electionBanner) return null;
 
-  const { iframeSrc, iframeDevSrc, electionThingIds, assocPressIframeSrc } =
-    electionBanner;
+  const {
+    title,
+    iframeSrc,
+    iframeDevSrc,
+    electionThingIds,
+    assocPressIframeSrc,
+  } = electionBanner;
 
   const isEditoriallySensitive = taggings?.some(({ value }) =>
     value.includes(SENSITIVE_ARTICLE_ID),
@@ -63,12 +82,15 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
     return (
       <div
         data-testid="election-banner"
-        css={
+        className={
           isAssocPress
             ? styles.assocPressElectionBannerWrapperAmp
-            : styles.electionBannerWrapperAmp(DEFAULT_HEIGHTS_VJ)
+            : styles.electionBannerWrapperAmp
         }
       >
+        <Heading level={2} size="paragon" className={styles.title}>
+          {title}
+        </Heading>
         <AmpIframe
           ampMetadata={{
             ...(!isAssocPress && { imageWidth: 1 }),
@@ -87,22 +109,25 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
   return (
     <div
       data-testid="election-banner"
-      css={
+      className={
         isAssocPress
           ? styles.assocPressElectionBannerWrapper
           : styles.electionBannerWrapper
       }
     >
+      <Heading level={2} size="paragon" className={styles.title}>
+        {title}
+      </Heading>
       <iframe
-        {...(isAssocPress && { className: 'ap-embed' })}
+        className={clsx(
+          isAssocPress && 'ap-embed',
+          isAssocPress
+            ? styles.assocPressElectionBannerIframe
+            : styles.electionBannerIframe,
+        )}
         title={validAboutTag.thingLabel}
         src={src}
         scrolling="no"
-        css={
-          isAssocPress
-            ? styles.assocPressElectionBannerIframe
-            : styles.electionBannerIframe(DEFAULT_HEIGHTS_VJ)
-        }
         {...(!isAssocPress && { height: DEFAULT_HEIGHTS_VJ.desktop })}
         width="100%"
       />
