@@ -73,7 +73,7 @@ The first batch was small by style-line count, but `InlineLink` was a shared pri
 
 The CSS payload investigation found that the SCSS theme adds a fixed cost to AMP/Lite, where CSS is inlined and subject to AMP's 75 KB limit. Measure representative production pages after each meaningful batch and do not introduce CSS reordering optimisations without browser-level computed-style comparisons. A media-query compaction experiment saved bytes but produced real cascade regressions when elements carried multiple generated classes.
 
-The existing `amp:validate` check now includes the large Russian article fixture (`c6wyzl2xdyz2o`). The production local fixture measures 68,169 bytes against 69,116 bytes on the live page, and `amphtml-validator` fails with `STYLESHEET_TOO_LONG` above the 75,000-byte limit. This is a hard-limit guard, not an early-warning budget report; add further representative fixtures or explicit byte reporting if migration headroom becomes difficult to track.
+The existing `amp:validate` check now includes the large Russian article fixture (`c6wyzl2xdyz2o`). The production local fixture measures 68,169 bytes against 69,116 bytes on the live page, and `amphtml-validator` fails with `STYLESHEET_TOO_LONG` above the 75,000-byte limit. This is a large representative canary, not a claim that it is the the page with largest CSS below the limit: CSS varies by service, page composition, feature flags, and rendered components. Keep multiple service/page fixtures and preserve headroom rather than trying to discover one definitive maximum.
 
 ## Batching principles
 
@@ -154,8 +154,8 @@ The original batches grouped components by approximate size and cohesion. The fi
 
 ## Ongoing guardrails
 
-1. **Measure representative AMP/Lite pages after each meaningful batch.** The migration has a fixed theme cost, and Arabic AMP is the closest measured page to the 75 KB limit; use production builds and real rendered pages rather than Jest's mocked SCSS output.
-2. **Maintain representative AMP fixture coverage.** The existing validator now guards the large Russian article against AMP's 75 KB hard limit; add another local fixture when a different service or page shape becomes the new high-water mark.
+1. **Measure representative AMP/Lite pages after each meaningful batch.** The migration has a fixed theme cost, and no single asset should be treated as the definitive high-water mark; use production builds and real rendered pages rather than Jest's mocked SCSS output.
+2. **Maintain representative, service-aware AMP fixture coverage.** Keep the large Russian canary and add coverage for other high-risk shapes, including Arabic and different component combinations. The goal is to protect a headroom margin below 75 KB, not to find a single page that sits exactly at the limit.
 3. **Do not use CSS reordering as a migration shortcut.** The abandoned media-query compaction experiment produced real computed-style regressions when elements carried multiple generated classes. Any future CSS transformation must be verified with browser-level computed styles across representative viewports.
 
 ## Tooling
