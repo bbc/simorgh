@@ -1,4 +1,4 @@
-import { use, useState } from 'react';
+import { use, useState, useEffect, useRef } from 'react';
 import Heading from '#app/components/Heading';
 import Text from '#app/components/Text';
 import LiveHeaderMedia from '#app/components/LiveHeaderMedia';
@@ -31,6 +31,10 @@ const Header = ({
   mediaCollections?: MediaCollection[] | null;
   showSportData?: boolean;
 }) => {
+  const imageRef = useRef<HTMLImageElement>(null);
+  const [isHeaderImageAlreadyLoaded, setIsHeaderImageAlreadyLoaded] =
+    useState(false);
+
   const [isMediaOpen, setLiveMediaOpen] = useState(false);
   const isHeaderImage = !!imageUrl && !!imageUrlTemplate && !!imageWidth;
   const isWithImageLayout = isHeaderImage || !!mediaCollections;
@@ -57,6 +61,14 @@ const Header = ({
     originalImageWidth: imageWidth ?? 0,
     srcResolution: 480,
   });
+
+  useEffect(() => {
+    const image = imageRef.current;
+
+    setIsHeaderImageAlreadyLoaded(
+      Boolean(image?.complete && image.naturalWidth > 0),
+    );
+  }, [srcWebp, primarySrcset, isHeaderImage, showSportData]);
 
   const Title = (
     <span
@@ -123,8 +135,8 @@ const Header = ({
               sizes="(min-width: 1008px) 660px, 100vw"
               fetchPriority="high"
               preload
-              placeholder
-              recoverCachedLoad
+              placeholder={!isHeaderImageAlreadyLoaded}
+              imageRef={imageRef}
               style={{ display: 'block' }}
             />
           </div>

@@ -33,7 +33,7 @@ export type ImageProps = {
   hasCaption?: boolean;
   isPortraitOrientation?: boolean;
   style?: React.CSSProperties;
-  recoverCachedLoad?: boolean;
+  imageRef?: React.Ref<HTMLImageElement>;
 };
 
 const roundNumber = (num: number) => Math.round(num * 100) / 100;
@@ -64,19 +64,10 @@ const Image = ({
   hasCaption,
   isPortraitOrientation,
   style,
-  recoverCachedLoad = false,
+  imageRef,
 }: PropsWithChildren<ImageProps>) => {
   const { pageType, isLite, isAmp } = use(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
-  const imageRef = useRef<HTMLImageElement>(null);
-
-  useEffect(() => {
-    const image = imageRef.current;
-
-    if (recoverCachedLoad && image?.complete && image.naturalWidth > 0) {
-      setIsLoaded(true);
-    }
-  }, [recoverCachedLoad, src, srcSet]);
 
   if (isLite) return null;
   const showPlaceholder = !src || (placeholder && !isLoaded);

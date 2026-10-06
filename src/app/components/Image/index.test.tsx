@@ -1,3 +1,4 @@
+import { createRef } from 'react';
 import {
   render,
   screen,
@@ -155,59 +156,12 @@ describe('Image - Canonical', () => {
     });
   });
 
-  describe('cached-load recovery', () => {
-    beforeEach(() => {
-      jest
-        .spyOn(HTMLImageElement.prototype, 'complete', 'get')
-        .mockReturnValue(true);
-      jest
-        .spyOn(HTMLImageElement.prototype, 'naturalWidth', 'get')
-        .mockReturnValue(500);
-    });
+  it('should attach imageRef to the native image element', () => {
+    const imageRef = createRef<HTMLImageElement>();
 
-    afterEach(() => {
-      jest.restoreAllMocks();
-    });
+    render(<Fixture imageRef={imageRef} />);
 
-    it('should remove the placeholder for a cached image without a load event when recovery is enabled', () => {
-      render(<Fixture recoverCachedLoad />);
-
-      const imageEl = screen.getByAltText('Test image alt text');
-      expect(imageEl.parentNode).not.toHaveStyle({
-        backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
-      });
-    });
-
-    it.each([
-      { state: 'incomplete', complete: false, naturalWidth: 500 },
-      { state: 'failed', complete: true, naturalWidth: 0 },
-    ])(
-      'should retain the placeholder when the image is $state and recovery is enabled',
-      ({ complete, naturalWidth }) => {
-        jest
-          .spyOn(HTMLImageElement.prototype, 'complete', 'get')
-          .mockReturnValue(complete);
-        jest
-          .spyOn(HTMLImageElement.prototype, 'naturalWidth', 'get')
-          .mockReturnValue(naturalWidth);
-
-        render(<Fixture recoverCachedLoad />);
-
-        const imageEl = screen.getByAltText('Test image alt text');
-        expect(imageEl.parentNode).toHaveStyle({
-          backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
-        });
-      },
-    );
-
-    it('should retain the placeholder for a cached image when recovery is disabled by default', () => {
-      render(<Fixture />);
-
-      const imageEl = screen.getByAltText('Test image alt text');
-      expect(imageEl.parentNode).toHaveStyle({
-        backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
-      });
-    });
+    expect(imageRef.current).toBe(screen.getByAltText('Test image alt text'));
   });
 
   it('should render the container with an aspect ratio based on width and height', () => {
