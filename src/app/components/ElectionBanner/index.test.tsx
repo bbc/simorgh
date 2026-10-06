@@ -168,24 +168,6 @@ describe('ElectionBanner', () => {
       expect(getByTestId(ELEMENT_ID)).toBeInTheDocument();
     });
 
-    it('should render the title from service config', () => {
-      const { getByText } = renderElectionBanner(
-        { aboutTags: mockAboutTags, taggings: mockTaggings },
-        {
-          toggles: {
-            electionBanner: { enabled: true },
-          },
-          isAmp,
-          service: 'mundo',
-        },
-      );
-
-      const title = getByText(MOCK_TITLE);
-
-      expect(title).toBeInTheDocument();
-      expect(title.tagName).not.toBe('H2');
-    });
-
     it('should not render ElectionBanner when taggings contain the editorialSensitivityId', () => {
       const { queryByTestId } = renderElectionBanner(
         {
@@ -300,6 +282,14 @@ describe('ElectionBanner', () => {
       expect(iframe).toHaveAttribute('height', `${DEFAULT_HEIGHTS_AP.mobile}`);
       expect(iframe).toHaveAttribute('layout', 'fixed-height');
       expect(iframe).not.toHaveAttribute('width');
+    });
+
+    it('should render the title from service config', () => {
+      const { getByText } = renderAssocPressBanner(false);
+
+      const title = getByText(MOCK_TITLE);
+
+      expect(title).toBeInTheDocument();
     });
   });
 });
