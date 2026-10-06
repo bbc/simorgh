@@ -4,12 +4,10 @@ const uasKeys = {
     [...uasKeys.all(userId), 'favourites'] as const,
   favouritesList: (userId: string) =>
     [...uasKeys.favourites(userId), 'list'] as const,
-  favouritesPage: (userId: string, startIndex: number) =>
-    [...uasKeys.favouritesList(userId), startIndex] as const,
+  favouritesPage: (userId: string, startIndex: number, service?: string) =>
+    [...uasKeys.favouritesList(userId), service, startIndex] as const,
   favouriteStatus: (userId: string, articleId: string) =>
     [...uasKeys.favourites(userId), 'status', articleId] as const,
-  // POC (Follow Topics): mirrors the favourites key structure under a
-  // separate `follows` namespace so topic caches never collide with articles.
   follows: (userId: string) => [...uasKeys.all(userId), 'follows'] as const,
   followsList: (userId: string) =>
     [...uasKeys.follows(userId), 'list'] as const,

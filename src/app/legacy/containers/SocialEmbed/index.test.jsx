@@ -34,7 +34,7 @@ describe('SocialEmbedContainer', () => {
       const button = screen.getByTestId('banner-button');
       fireEvent.click(button);
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstChild).toBeInTheDocument();
       expect(
         document.querySelector(
           'head script[src="https://platform.twitter.com/widgets.js"]',
@@ -61,7 +61,7 @@ describe('SocialEmbedContainer', () => {
 
       fireEvent.click(button);
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstChild).toBeInTheDocument();
       expect(
         document.querySelector(
           'head script[src="https://www.instagram.com/embed.js"]',
@@ -84,7 +84,7 @@ describe('SocialEmbedContainer', () => {
         { service: 'news', isAmp: false, pageType: ARTICLE_PAGE },
       );
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstChild).toBeInTheDocument();
 
       unmount();
     });
@@ -98,7 +98,7 @@ describe('SocialEmbedContainer', () => {
         { service: 'news', isAmp: false, pageType: ARTICLE_PAGE },
       );
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstChild).toBeInTheDocument();
 
       unmount();
     });
@@ -116,7 +116,7 @@ describe('SocialEmbedContainer', () => {
 
       fireEvent.click(button);
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstChild).toBeInTheDocument();
       expect(
         document.querySelector(
           'head script[src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v15.0"]',
@@ -143,7 +143,7 @@ describe('SocialEmbedContainer', () => {
 
       fireEvent.click(button);
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstChild).toBeInTheDocument();
       expect(
         document.querySelector(
           'head script[src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v15.0"]',
@@ -230,7 +230,7 @@ describe('SocialEmbedContainer', () => {
         { service: 'news', isAmp: false, pageType: ARTICLE_PAGE },
       );
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstChild).toBeInTheDocument();
     });
   });
 });

@@ -88,6 +88,9 @@ export const service: DefaultServiceConfig = {
         moreAboutTopic: 'المزيد عن {topic}',
         fetchErrorMessage: 'فشل في التحميل. يرجى المحاولة مرة أخرى',
       },
+      googlePreferredSource: {
+        linkText: 'أضف كمصدر مفضل على Google',
+      },
       continueReading: 'واصل القراءة',
       currentPage: 'الصفحة الحالية',
       skipLinkText: 'إذهب الى المحتوى',
@@ -530,6 +533,7 @@ export const service: DefaultServiceConfig = {
         url: '/arabic',
       },
     ],
+    resonanceEnabled: true,
   },
 };
 

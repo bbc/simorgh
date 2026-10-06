@@ -2,18 +2,11 @@ import { Article } from '#app/models/types/optimo';
 import CurationGrid from '#app/components/Curation/CurationGrid';
 import Subheading from '#app/components/Curation/Subhead';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
-import { ComponentExperimentProps } from '#app/models/types/global';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import styles from '#app/components/RelatedContentSection/index.styles';
 
-const LocationBasedTopicOJ = ({
-  pageData,
-  experimentProps,
-}: {
-  pageData: Article;
-  experimentProps?: ComponentExperimentProps;
-}) => {
+const LocationBasedTopicOJ = ({ pageData }: { pageData: Article }) => {
   const countryCuration = pageData?.countryCuration;
 
   const { title, summaries = [], link, topicId } = countryCuration || {};
@@ -21,7 +14,6 @@ const LocationBasedTopicOJ = ({
   const eventTrackingData: EventTrackingData = {
     componentName: 'location-based-topic-oj',
     sendOptimizelyEvents: true,
-    ...(experimentProps && experimentProps),
     groupTracker: {
       name: title,
       type: 'location-based-topic-oj',

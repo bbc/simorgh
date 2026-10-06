@@ -88,6 +88,9 @@ export const service: DefaultServiceConfig = {
         moreAboutTopic: 'Lebih banyak tentang {topic}',
         fetchErrorMessage: 'Gagal memuat. Silakan coba lagi',
       },
+      googlePreferredSource: {
+        linkText: 'Tambahkan sebagai sumber pilihan di Google',
+      },
       currentPage: 'Halaman saat ini',
       skipLinkText: 'Langsung ke konten',
       skipContent: {

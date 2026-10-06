@@ -1,7 +1,8 @@
 import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
 import { RequestContextProps } from '../../../../contexts/RequestContext';
 import { ServiceConfig } from '../../../../models/types/serviceConfig';
-import { buildPageATIParams } from '.';
+import { Platforms } from '../../../../models/types/global';
+import { buildPageATIParams, buildAnalyticsParams } from '.';
 
 jest
   .spyOn(document, 'referrer', 'get')
@@ -12,6 +13,7 @@ jest.mock('#lib/utilities/onClient', () => jest.fn().mockReturnValue(true));
 const requestContext: RequestContextProps = {
   platform: 'canonical',
   statsDestination: 'statsDestination',
+  destinationSiteId: 12345,
   id: 'validId',
 };
 
@@ -42,6 +44,7 @@ describe('implementation of buildPageATIParams', () => {
       categoryName: undefined,
       contentId: 'urn:bbc:tipo:topic:cm7682qz7v1t',
       contentType: 'index-home',
+      isPersonalisationOn: false,
       hashedId: null,
       isSignedIn: false,
       isUk: undefined,
@@ -56,6 +59,7 @@ describe('implementation of buildPageATIParams', () => {
       producerId: 'atiAnalyticsProducerId',
       producerName: 'atiAnalyticsProducerName',
       service: 'pidgin',
+      destinationSiteId: 12345,
       statsDestination: 'statsDestination',
       timePublished: undefined,
       timeUpdated: undefined,
@@ -106,6 +110,7 @@ describe('implementation of buildPageATIParams', () => {
       categoryName: 'Refugees%20and%20asylum%20seekers~Myanmar~Military',
       contentId: 'urn:bbc:optimo:asset:c9wxnzvwp3mo',
       contentType: 'article',
+      isPersonalisationOn: false,
       hashedId: null,
       isSignedIn: false,
       isUK: false,
@@ -122,6 +127,7 @@ describe('implementation of buildPageATIParams', () => {
       producerId: 'atiAnalyticsProducerId',
       producerName: 'atiAnalyticsProducerName',
       service: 'burmese',
+      destinationSiteId: 12345,
       statsDestination: 'statsDestination',
       timePublished: '2023-07-13T05:03:56.214Z',
       timeUpdated: '2023-07-13T08:35:47.388Z',
@@ -195,6 +201,7 @@ describe('implementation of buildPageATIParams', () => {
       categoryName: 'Environment~Narendra+Modi~Nature~India~Severe+weather',
       contentId: 'urn:bbc:optimo:asset:c4nrpd0d4nro',
       contentType: 'article-sfv',
+      isPersonalisationOn: false,
       hashedId: null,
       isSignedIn: false,
       isUK: false,
@@ -211,6 +218,7 @@ describe('implementation of buildPageATIParams', () => {
       producerId: 'atiAnalyticsProducerId',
       producerName: 'atiAnalyticsProducerName',
       service: 'hausa',
+      destinationSiteId: 12345,
       statsDestination: 'statsDestination',
       timePublished: '2023-07-11T17:42:48.771Z',
       timeUpdated: '2023-07-11T17:42:48.771Z',
@@ -244,6 +252,7 @@ describe('implementation of buildPageATIParams', () => {
       categoryName: undefined,
       contentId: 'urn:bbc:tipo:topic:c95y35941vrt',
       contentType: 'index-category',
+      isPersonalisationOn: false,
       hashedId: null,
       isSignedIn: false,
       isUK: undefined,
@@ -258,6 +267,7 @@ describe('implementation of buildPageATIParams', () => {
       producerId: 'atiAnalyticsProducerId',
       producerName: 'atiAnalyticsProducerName',
       service: 'pidgin',
+      destinationSiteId: 12345,
       statsDestination: 'statsDestination',
       timePublished: undefined,
       timeUpdated: undefined,
@@ -300,6 +310,7 @@ describe('implementation of buildPageATIParams', () => {
       categoryName: undefined,
       contentId: undefined,
       contentType: 'list-datadriven',
+      isPersonalisationOn: false,
       hashedId: null,
       isSignedIn: false,
       isUK: undefined,
@@ -314,6 +325,7 @@ describe('implementation of buildPageATIParams', () => {
       producerId: 'atiAnalyticsProducerId',
       producerName: 'atiAnalyticsProducerName',
       service: 'pidgin',
+      destinationSiteId: 12345,
       statsDestination: 'statsDestination',
       timePublished: '2023-08-01T12:00:00Z',
       timeUpdated: '2023-08-01T12:15:00Z',
@@ -380,6 +392,7 @@ describe('implementation of buildPageATIParams', () => {
         contentId:
           'urn:bbc:cps:curie:asset:3137d6de-62c2-4637-a002-29d2ab075990',
         contentType: 'article',
+        isPersonalisationOn: false,
         hashedId: null,
         isSignedIn: false,
         isUK: undefined,
@@ -397,6 +410,7 @@ describe('implementation of buildPageATIParams', () => {
         producerId: 'atiAnalyticsProducerId',
         producerName: 'atiAnalyticsProducerName',
         service: 'mundo',
+        destinationSiteId: 12345,
         statsDestination: 'statsDestination',
         timePublished: '2023-02-10T02:00:41.000Z',
         timeUpdated: '2023-02-10T02:00:41.000Z',
@@ -458,6 +472,7 @@ describe('implementation of buildPageATIParams', () => {
         contentId:
           'urn:bbc:cps:curie:asset:6d745333-c79d-e245-a5b2-f4acb7de35e1',
         contentType: 'article-media-asset',
+        isPersonalisationOn: false,
         hashedId: null,
         isSignedIn: false,
         isUK: undefined,
@@ -474,6 +489,7 @@ describe('implementation of buildPageATIParams', () => {
         producerId: 'atiAnalyticsProducerId',
         producerName: 'atiAnalyticsProducerName',
         service: 'mundo',
+        destinationSiteId: 12345,
         statsDestination: 'statsDestination',
         timePublished: '2017-09-14T14:09:14.000Z',
         timeUpdated: '2017-09-14T14:09:14.000Z',
@@ -534,6 +550,7 @@ describe('implementation of buildPageATIParams', () => {
         contentId:
           'urn:bbc:cps:curie:asset:08e22e90-7361-cd47-b586-7cb53fc5a012',
         contentType: 'article-photo-gallery',
+        isPersonalisationOn: false,
         hashedId: null,
         isSignedIn: false,
         isUK: undefined,
@@ -549,6 +566,7 @@ describe('implementation of buildPageATIParams', () => {
         producerId: 'atiAnalyticsProducerId',
         producerName: 'atiAnalyticsProducerName',
         service: 'mundo',
+        destinationSiteId: 12345,
         statsDestination: 'statsDestination',
         timePublished: '2016-08-07T09:21:02.000Z',
         timeUpdated: '2016-08-07T09:21:02.000Z',
@@ -591,6 +609,7 @@ describe('implementation of buildPageATIParams', () => {
         pageTitle: "Tech Tent: The new 'space race' for computer chips",
         producerId: '64',
         producerName: 'NEWS',
+        destinationSiteId: 12345,
         timePublished: '2021-03-05T13:37:50.000Z',
         timeUpdated: '2021-03-05T13:37:50.000Z',
       };
@@ -602,6 +621,7 @@ describe('implementation of buildPageATIParams', () => {
         contentId:
           'urn:bbc:cps:curie:asset:c1c8b1bf-4c9c-44e8-be0d-c81a2aa59e46',
         contentType: 'article-correspondent',
+        isPersonalisationOn: false,
         hashedId: null,
         isSignedIn: false,
         isUK: undefined,
@@ -619,6 +639,7 @@ describe('implementation of buildPageATIParams', () => {
         producerId: '64',
         producerName: 'atiAnalyticsProducerName',
         service: 'news',
+        destinationSiteId: 12345,
         statsDestination: 'statsDestination',
         timePublished: '2021-03-05T13:37:50.000Z',
         timeUpdated: '2021-03-05T13:37:50.000Z',
@@ -674,5 +695,86 @@ describe('implementation of buildPageATIParams', () => {
         expect(result).toEqual(expectedParamsWithOverride);
       });
     });
+  });
+});
+
+describe('buildAnalyticsParams', () => {
+  const atiData = {
+    contentId: 'urn:bbc:tipo:topic:c95y35941vrt',
+    contentType: 'index-category',
+    pageIdentifier: 'pidgin.topics.c95y35941vrt.page',
+    pageTitle: 'Donald Trump',
+  };
+
+  it('should return null for resonanceParams when resonanceEnabled is not set', () => {
+    const { resonanceParams } = buildAnalyticsParams({
+      atiData,
+      requestContext,
+      // @ts-expect-error - invalid type required for testing purposes
+      serviceContext: { ...serviceContext, resonanceEnabled: null },
+    });
+
+    expect(resonanceParams).toBeNull();
+  });
+
+  it('should return null for resonanceParams when resonanceEnabled is false', () => {
+    const { resonanceParams } = buildAnalyticsParams({
+      atiData,
+      requestContext,
+      serviceContext: { ...serviceContext, resonanceEnabled: false },
+    });
+
+    expect(resonanceParams).toBeNull();
+  });
+
+  it('should return resonanceParams when resonanceEnabled is true', () => {
+    const { resonanceParams } = buildAnalyticsParams({
+      atiData,
+      requestContext,
+      serviceContext: { ...serviceContext, resonanceEnabled: true },
+    });
+
+    expect(resonanceParams).not.toBeNull();
+    expect(resonanceParams).toHaveProperty('resonanceProperties');
+    expect(resonanceParams).toHaveProperty('baseProperties');
+    expect(resonanceParams).toHaveProperty('pageviewProperties');
+  });
+
+  it.each([
+    { platform: 'app', shouldReturnResonanceParams: true },
+    { platform: 'canonical', shouldReturnResonanceParams: true },
+    { platform: 'amp', shouldReturnResonanceParams: false },
+    { platform: 'lite', shouldReturnResonanceParams: false },
+  ])(
+    'should return resonanceParams: $shouldReturnResonanceParams when resonanceEnabled is true and platform is $platform',
+    ({ platform, shouldReturnResonanceParams }) => {
+      const { resonanceParams } = buildAnalyticsParams({
+        atiData,
+        requestContext: { ...requestContext, platform: platform as Platforms },
+        serviceContext: { ...serviceContext, resonanceEnabled: true },
+      });
+
+      if (shouldReturnResonanceParams) {
+        expect(resonanceParams).not.toBeNull();
+      } else {
+        expect(resonanceParams).toBeNull();
+      }
+    },
+  );
+
+  it('should always return reverbParams regardless of resonanceEnabled', () => {
+    const withResonance = buildAnalyticsParams({
+      atiData,
+      requestContext,
+      serviceContext: { ...serviceContext, resonanceEnabled: true },
+    });
+    const withoutResonance = buildAnalyticsParams({
+      atiData,
+      requestContext,
+      serviceContext: { ...serviceContext, resonanceEnabled: false },
+    });
+
+    expect(withResonance.reverbParams).toBeDefined();
+    expect(withoutResonance.reverbParams).toBeDefined();
   });
 });

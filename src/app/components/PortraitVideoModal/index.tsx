@@ -1,8 +1,9 @@
 import { Global } from '@emotion/react';
-import { use, useEffect, useRef } from 'react';
+import { use, useEffect, useMemo, useRef } from 'react';
 import moment from 'moment-timezone';
 import MediaLoader from '#app/components/MediaLoader';
 import {
+  EventMapping,
   Player,
   Playlist,
   PlaylistItem,
@@ -256,6 +257,37 @@ const PortraitVideoModal = ({
     }),
   );
 
+  const trackingRef = useRef({ eventTrackingData, swipeTracker });
+  trackingRef.current = { eventTrackingData, swipeTracker };
+
+  // Unrelated page updates must not reload the playing video.
+  const selectedBlocks = useMemo(
+    () => [blocks[selectedVideoIndex]],
+    [blocks, selectedVideoIndex],
+  );
+  const eventMapping = useMemo<EventMapping>(
+    () => ({
+      playlistLoaded: event => playlistLoadedCallback(event, blocks),
+      pluginLoaded: pluginLoadedCallback,
+      fullscreenExit: onClose,
+      statsNavigation: event =>
+        statsNavigationCallback(
+          event,
+          blocks,
+          trackingRef.current.eventTrackingData,
+          trackingRef.current.swipeTracker,
+        ),
+      pause: event =>
+        playbackEndedCallback(
+          event,
+          blocks,
+          trackingRef.current.eventTrackingData,
+          trackingRef.current.swipeTracker,
+        ),
+    }),
+    [blocks, onClose],
+  );
+
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const endOfContentButtonRef = useRef<HTMLButtonElement>(null);
 
@@ -364,21 +396,9 @@ const PortraitVideoModal = ({
         </div>
         <MediaLoader
           css={styles.mediaWrapper}
-          blocks={[blocks?.[selectedVideoIndex]]}
-          eventMapping={{
-            playlistLoaded: e => playlistLoadedCallback(e, blocks),
-            pluginLoaded: pluginLoadedCallback,
-            fullscreenExit: onClose,
-            statsNavigation: e =>
-              statsNavigationCallback(
-                e,
-                blocks,
-                eventTrackingData,
-                swipeTracker,
-              ),
-            pause: e =>
-              playbackEndedCallback(e, blocks, eventTrackingData, swipeTracker),
-          }}
+          blocks={selectedBlocks}
+          withinFullscreenContainer
+          eventMapping={eventMapping}
         />
         <button
           ref={endOfContentButtonRef}

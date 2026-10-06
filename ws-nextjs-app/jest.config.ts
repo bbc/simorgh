@@ -22,9 +22,10 @@ const buildConfig = async (config: Config): Promise<Config> => {
   })();
 };
 
-const moduleNameMapper = pathsToModuleNameMapper(compilerOptionsPaths, {
-  prefix: '<rootDir>/',
-});
+const moduleNameMapper = {
+  ...pathsToModuleNameMapper(compilerOptionsPaths, { prefix: '<rootDir>/' }),
+  '^@bbc/resonance$': '<rootDir>/../src/testHelpers/resonanceMock.ts',
+};
 
 export default async (): Promise<Config> => {
   const canonicalIntegrationTests = await buildConfig({

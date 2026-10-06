@@ -2,7 +2,7 @@ import { use, useId } from 'react';
 import getOriginCode from '#app/lib/utilities/imageSrcHelpers/originCode';
 import { Summary } from '#app/models/types/curationData';
 import { RequestContext } from '#app/contexts/RequestContext';
-import { createSrcsets } from '#lib/utilities/srcSet';
+import { createIchefSrcSet } from '#app/utilities/imageSrcSets';
 import getLocator from '#lib/utilities/imageSrcHelpers/locator';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
@@ -42,7 +42,7 @@ const SocialLinkImage = ({ imageUrl }: { imageUrl: string }) => {
   }
 
   const { primarySrcset, primaryMimeType, fallbackSrcset, fallbackMimeType } =
-    createSrcsets({
+    createIchefSrcSet({
       originCode: getOriginCode(imagePath),
       locator: getLocator(imagePath),
       imageResolutions: [DEFAULT_IMAGE_SIZE, DEFAULT_IMAGE_SIZE_2X],

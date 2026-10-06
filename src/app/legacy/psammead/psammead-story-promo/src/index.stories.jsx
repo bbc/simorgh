@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/react-webpack5';
 import { withKnobs, text, boolean, select } from '@storybook/addon-knobs';
-import Image from '#psammead/psammead-image/src';
+import Image from '#app/components/Image';
 import MediaIndicator from '#psammead/psammead-media-indicator/src';
 import LiveLabel from '#psammead/psammead-live-label/src';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
@@ -23,14 +23,14 @@ const buildImg = () => {
       alt={text('Image alt text', 'Robert Downey Junior in Iron Man')}
       src={text('Image src', imageSrc.replace('[WIDTH]', 660))}
       width="640"
-      srcset={imageSizes
+      srcSet={imageSizes
         .map(size => `${imageSrc.replace('[WIDTH]', size)}.webp ${size}w`)
         .join(', ')}
-      fallbackSrcset={imageSizes
+      fallbackSrcSet={imageSizes
         .map(size => `${imageSrc.replace('[WIDTH]', size)} ${size}w`)
         .join(', ')}
-      primaryMimeType="image/webp"
-      fallbackMimeType="image/jpeg"
+      mediaType="image/webp"
+      fallbackMediaType="image/jpeg"
     />
   );
 };
@@ -51,11 +51,11 @@ const MediaIndicatorComponent = ({ type, dir, mediaIndicatorIsInline }) => {
 
 const HiddenText = ({ type, headline }) => (
   /* eslint-disable-next-line jsx-a11y/aria-role */
-  (<span role="text">
+  <span role="text">
     <VisuallyHiddenText>{`${type}, `}</VisuallyHiddenText>
     <span>{headline}</span>
     <VisuallyHiddenText>, 2,15</VisuallyHiddenText>
-  </span>)
+  </span>
 );
 
 const InfoComponent = ({

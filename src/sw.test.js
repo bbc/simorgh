@@ -220,7 +220,7 @@ describe('Service Worker', () => {
       'https://static.test.files.bbci.co.uk/ws/simorgh-assets/public/igbo/images/icons/icon-144x144.png?v=2',
       'https://static.files.bbci.co.uk/ws/simorgh-assets/public/igbo/images/icons/icon-144x144.png?v=2',
       // Reverb - preview1, preview2, test & live
-      'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/reverb-3.12.0.js',
+      'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/reverb-3.14.0.js',
       // Smart Tag
       'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/smarttag-5.29.4.min.js',
     ];
@@ -620,8 +620,8 @@ describe('Service Worker', () => {
 
   describe('version', () => {
     const CURRENT_VERSION = {
-      number: 'v0.3.7',
-      fileContentHash: '3dde8c270fdc0f5d005d437b8f5813a6',
+      number: 'v0.3.8',
+      fileContentHash: '8b0ba8bb11dd447960259e1e8f7b2fc5',
     };
 
     it(`version number should be ${CURRENT_VERSION.number}`, async () => {

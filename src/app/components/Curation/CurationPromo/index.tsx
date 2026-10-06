@@ -8,12 +8,16 @@ import { Summary } from '#app/models/types/curationData';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import isMediaType from '#app/lib/utilities/isMedia';
 import { MY_NEWS_PAGE } from '#app/routes/utils/pageTypes';
-import isLiveEnvironment from '#app/lib/utilities/isLive';
+import { getRelatedTopicForPromo } from '#app/lib/experiments/homepageRelatedTopicPromos';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '../../../contexts/RequestContext';
 import LiveLabel from '../../LiveLabel';
 import styles from './index.styles';
+
+interface CurationPromoProps extends Summary {
+  showRelatedTopicExperiment?: boolean;
+}
 
 const CurationPromo = ({
   id,
@@ -30,7 +34,8 @@ const CurationPromo = ({
   eventTrackingData,
   isPortraitImage,
   relatedTopic,
-}: Summary) => {
+  showRelatedTopicExperiment = false,
+}: CurationPromoProps) => {
   const { isAmp, isLite, pageType } = use(RequestContext);
   const { translations } = use(ServiceContext);
 
@@ -55,6 +60,12 @@ const CurationPromo = ({
     (type === 'photogallery' && `${photoGalleryTranslation}, `);
 
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
+
+  const relatedTopicToShow = getRelatedTopicForPromo(
+    relatedTopic,
+    type,
+    showRelatedTopicExperiment,
+  );
 
   const relatedTopicEventTrackingData = {
     ...eventTrackingData,
@@ -117,14 +128,14 @@ const CurationPromo = ({
           css={styles.metadataAndTopicData}
           className="metadata-and-topic-data"
         >
-          {relatedTopic && !isLiveEnvironment() && (
+          {relatedTopicToShow && (
             <a
-              href={relatedTopic?.link?.url}
+              href={relatedTopicToShow.link.url}
               css={styles.relatedTopicLink}
               className="related-topic-link"
               {...relatedTopicClickTrackerHandler}
             >
-              {relatedTopic.title}
+              {relatedTopicToShow.title}
             </a>
           )}
           <Promo.Timestamp className="promo-timestamp">

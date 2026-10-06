@@ -68,6 +68,9 @@ export const service: DefaultServiceConfig = {
         moreAboutTopic: '{topic} についてもっと',
         fetchErrorMessage: '読み込みに失敗しました。もう一度お試しください',
       },
+      googlePreferredSource: {
+        linkText: 'Googleで優先ソースとして追加',
+      },
       currentPage: '現在のページ',
       skipLinkText: 'コンテンツへ移動',
       skipContent: {

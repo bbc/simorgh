@@ -84,6 +84,9 @@ const baseServiceConfig = {
       moreAboutTopic: 'Більше про {topic}',
       fetchErrorMessage: 'Не вдалося завантажити. Спробуйте ще раз',
     },
+    googlePreferredSource: {
+      linkText: 'Додати як пріоритетне джерело в Google',
+    },
     currentPage: 'Поточна сторінка',
     skipLinkText: 'Перейти до змісту',
     skipContent: {
