@@ -55,7 +55,7 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
   );
 
   const validAboutTag = aboutTags?.find(({ thingId }) =>
-    electionThingIds.includes(thingId),
+    electionThingIds?.includes(thingId),
   );
 
   const showBanner =
