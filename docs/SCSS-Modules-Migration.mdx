@@ -22,6 +22,57 @@ Legacy components need modernisation *and* a styling change. Converting them to 
 
 This programme is complete when `src/app/components` contains no imports from `@emotion/*`, no `index.styles.*` files, and no `css` props. The last check matters because `tsconfig.json` sets `jsxImportSource` to `@emotion/react` globally, so a component can use Emotion's `css` prop — as `Heading` and `Paragraph` currently do — without importing `@emotion` or having its own `index.styles.*` file.
 
+## Current status
+
+The initial Batch 1 migration is complete. As of October 2026, the latest branch contains:
+
+- 15 `index.module.scss` files under `src/app/components`.
+- 82 remaining `index.styles.*` files under `src/app/components`.
+- Production components currently using SCSS Modules include `Copyright`, `ReadTime`, `InlineLink`, `ArticleLinksBlock` and its `Promo`/`PromoList` children, `Curation/Subhead`, `EmbedError`, `SaveButton`, `FollowTopicButton`, `ActionTooltip`, `EpisodeDescriptionFormatter`, and both `GooglePreferredSource` link components.
+- `Example/index.module.scss` is a reference implementation rather than a production migration.
+
+The SCSS Modules foundation and service themes are now established. The remaining work is the incremental removal of the 82 Emotion style files, with legacy-coupled and AMP/Lite components still requiring the dedicated decisions described below.
+
+## Lessons from the first migration batch
+
+The component migrations happened in [PR #14371](https://github.com/bbc/simorgh/pull/14371), which was merged into [PR #14332](https://github.com/bbc/simorgh/pull/14332) before that work reached `latest`. [PR #14410](https://github.com/bbc/simorgh/pull/14410) then followed up on the typography API and documentation. The review process exposed several changes to the migration plan.
+
+### Audit consumers before deleting Emotion styles
+
+The owning component is not the whole styling contract. Before removing an `index.styles.*` file, search every consumer for:
+
+- **Consumer `css` overrides:** Find overrides such as `Disclaimer`'s `css={styles.inlineLink}` before deleting the shared style file. Either migrate the consumer's override, keep a compatibility path, or stop and report the consumer as blocked; otherwise the prop may reach the DOM unused and silently lose its styling.
+- **Replacing rather than composing classes:** Check every consumer that supplies `className`. `EmbedError` originally passed a module class to `InlineLink`, which replaced `InlineLink`'s default `focusIndicatorReducedWidth` class. Preserve shared defaults by composing classes or making the shared component merge its own class with consumer classes.
+- **Direct helper imports:** Search for consumers importing helpers from `index.styles.*`. The legacy send-form pages imported `InlineLink` style helpers, so those styles had to be localised in the page tree before the component's Emotion style file could be removed.
+- **Contextual cascade overrides:** Identify which component owns each default, visited, hover, focus, and focus-visible state. For example, move an `EmbedError` default-state override into a meaningful ancestor selector such as `.errorLinkWrapper .inlineLink`, leave `:visited`, `:hover`, and `:focus` to `InlineLink` when it owns those states, and do not rely on Emotion's stylesheet injection order. Verify the result in AMP/Lite as well as canonical output because stylesheet order and inlining differ by edition.
+
+### Treat typography as two APIs
+
+Typography has a compile-known path and a runtime path. When scale and variant are SCSS literals, use `typography-from-scale-and-variant`. When values arrive as React props, use the typed `getTypographyCustomProperties` helper with `typography-from-custom-properties`. Sass variables and mixin arguments cannot consume React runtime values.
+
+Use GEL typography breakpoints for typography, not layout breakpoints: Group B begins at 320px and Group D at 600px. Test the compiled Sass output for all responsive groups and test the runtime helper's custom-property mappings independently.
+
+Font fallback aliases are part of the public typography contract. Compare a new alias chain with the legacy resolver before changing it, especially for variants such as `serifRegular`, where fallback order affects font weight.
+
+### Expand verification beyond Jest
+
+Jest mocks `.module.scss`, so component tests cannot validate compiled selectors, Sass mixins, cascade order, or service theme output. Every migration batch should include:
+
+1. Focused component tests for DOM/class/attribute contracts and consumer overrides.
+2. A production build to catch SCSS, TypeScript, and deleted-style-file consumers.
+3. Sass contract tests when shared typography or theme mixins change.
+4. Browser or Storybook/Chromatic checks for RTL, dark UI, responsive typography, and AMP/Lite-rendered components.
+
+Snapshots are useful for structural changes, but they are not a substitute for compiled-CSS or visual verification.
+
+### Order by contract risk, not only style size
+
+The first batch was small by style-line count, but `InlineLink` was a shared primitive with many consumers and therefore had a larger contract surface than its size suggested. Future batches should score shared components by consumer count, runtime props, legacy consumers, service/theme sensitivity, and AMP/Lite exposure before assigning them to an early batch.
+
+### Measure AMP/Lite during the migration
+
+The CSS payload investigation found that the SCSS theme adds a fixed cost to AMP/Lite, where CSS is inlined and subject to AMP's 75 KB limit. Measure representative production pages after each meaningful batch, add an automated inline-CSS budget before the deferred AMP/Lite work begins, and do not introduce CSS reordering optimisations without browser-level computed-style comparisons. A media-query compaction experiment saved bytes but produced real cascade regressions when elements carried multiple generated classes.
+
 ## Batching principles
 
 Work is submitted in small PRs so review stays tractable.
@@ -67,16 +118,43 @@ Legacy imports that are **pure utilities** never block migration. For example `R
 - **The largest components** — `Curation/HierarchicalGrid`, `MostRead/Canonical/Rank`, `Navigation`, `CollapsibleNavigation`. Each warrants a dedicated PR rather than sharing one.
 - **Components with heavy legacy coupling** — `MostRead`, `Navigation` and `Curation` hold most of the remaining legacy imports.
 
-## Suggested early sequence
+## Original suggested early sequence
 
-**As of August 2026, at the outset of the migration.** This was the starting plan and is not kept in step with progress — treat it as an illustration of how the principles above were applied, not as a live status. It may be updated periodically or superseded by external tracking.
+**As of August 2026, at the outset of the migration.** This was the starting plan. The status column below reflects the current tree; the ordering remains a useful guide, not a complete project tracker.
 
-| Batch | Components | Why |
+| Batch | Components                                      | Why                                                                                       | Status         |
+| ----- | ----------------------------------------------- | ----------------------------------------------------------------------------------------- | -------------- |
+| 1     | `Copyright`, `ReadTime`, `InlineLink`           | Small, self-contained, have tests and stories, no snapshots — proves the pattern          | **Complete**   |
+| 2     | `VisuallyHiddenText`, `Spinner`, `LiveText`     | `VisuallyHiddenText` is tiny but used in ~200 places, so it unlocks a lot for little risk | Next candidate |
+| 3     | `Footer/Link`, `Curation/CurationMessageBanner` | Small, with few consumers and no legacy imports                                           | Pending        |
+| 4     | `CallToActionLink` and its sub-components       | A cohesive unit; migrating together avoids a split-brain component                        | Pending        |
+
+## Revised sequence
+
+The original batches grouped components by approximate size and cohesion. The first migration showed that the more important measure is the contract surface: consumer count, runtime props, accessibility behaviour, theme/service inputs, pseudo-states, and dependencies on other Emotion components.
+
+| Order | Scope | Reason for the revised order |
 |---|---|---|
-| 1 | `Copyright`, `ReadTime`, `InlineLink` | Small, self-contained, have tests and stories, no snapshots — proves the pattern |
-| 2 | `VisuallyHiddenText`, `Spinner`, `LiveText` | `VisuallyHiddenText` is tiny but used in ~200 places, so it unlocks a lot for little risk |
-| 3 | `Footer/Link`, `Curation/CurationMessageBanner` | Small, with few consumers and no legacy imports |
-| 4 | `CallToActionLink` and its sub-components | A cohesive unit; migrating together avoids a split-brain component |
+| 1 | `Spinner` | Small visual contract with a focused class-composition check on the underlying icon. |
+| 2 | `VisuallyHiddenText` | Simple styles but roughly 200 consumers; give the high fan-out primitive its own PR and accessibility verification. |
+| 3 | `LiveText` | Follow `VisuallyHiddenText`; it combines service translations, direction, screen-reader behaviour, and live-label typography. |
+| 4 | `Footer/Link` | Handle separately because it combines runtime visibility, dynamic display, focus inversion, hover/focus states, and a consumer in `ActionTooltip`. |
+| 5 | `Curation/CurationMessageBanner` | Defer until its `Heading`, `Text`, and `MessageBanner` styling contracts are understood or migrated; it currently passes Emotion styles into shared children. |
+| 6 | `CallToActionLink` and its sub-components | Keep the family together, but treat it as a dedicated higher-risk PR because it has several consumers, inherited text styles, nested pseudo-state selectors, and consumer `css` overrides. |
+
+## Next steps
+
+1. **Start with `Spinner`**, then give `VisuallyHiddenText` its own high-fan-out migration PR.
+2. **Migrate `LiveText` after `VisuallyHiddenText`** and verify that the styling change preserves its functional output: translated live-label text, the `dir` value, `aria-hidden` states, visually hidden screen-reader text, typography, and AMP/Lite rendering.
+3. **Audit `Footer/Link` consumers before migrating it**, especially `ActionTooltip` and the `focusIndicatorInvert` contract.
+4. **Do not migrate `CurationMessageBanner` in isolation** until its shared `Heading`/`Text`/`MessageBanner` styling boundaries are resolved.
+5. **Plan `CallToActionLink` as a dedicated PR** with a complete consumer audit rather than treating its sub-components as a low-risk batch.
+
+## Ongoing guardrails
+
+1. **Measure representative AMP/Lite pages after each meaningful batch.** The migration has a fixed theme cost, and Arabic AMP is the closest measured page to the 75 KB limit; use production builds and real rendered pages rather than Jest's mocked SCSS output.
+2. **Add an automated AMP inline-CSS budget** before the migration reaches the deferred AMP/Lite components. This protects the remaining headroom as more component CSS is moved into the inline payload.
+3. **Do not use CSS reordering as a migration shortcut.** The abandoned media-query compaction experiment produced real computed-style regressions when elements carried multiple generated classes. Any future CSS transformation must be verified with browser-level computed styles across representative viewports.
 
 ## Tooling
 
