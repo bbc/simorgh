@@ -14,6 +14,7 @@ import {
 interface UseRecentActivityParams {
   itemsPerPage?: number;
   startIndex?: number;
+  enabled?: boolean;
 }
 
 interface UseRecentActivityReturn {
@@ -26,11 +27,13 @@ interface UseRecentActivityReturn {
 const useUASRecentActivity = ({
   itemsPerPage = 10,
   startIndex = 0,
+  enabled = false,
 }: UseRecentActivityParams = {}): UseRecentActivityReturn => {
   const { hashedUserId = '', isRefreshAvailable } = use(AccountContext);
   const { service } = use(ServiceContext);
 
   const trackError = useErrorTracking();
+  const isQueryEnabled = !!hashedUserId && enabled;
 
   const { data, isLoading, error } = useQuery({
     queryKey: uasKeys.favouritesPage(hashedUserId, startIndex, service),
@@ -42,7 +45,7 @@ const useUASRecentActivity = ({
         isRefreshAvailable,
         service,
       }),
-    enabled: !!hashedUserId,
+    enabled: isQueryEnabled,
   });
 
   useEffect(() => {
@@ -54,6 +57,16 @@ const useUASRecentActivity = ({
       });
     }
   }, [error, trackError]);
+
+  // required to prevent from showing cached data when not expected
+  if (!isQueryEnabled) {
+    return {
+      savedArticles: [],
+      total: 0,
+      isLoading: false,
+      error: null,
+    };
+  }
 
   return {
     savedArticles: data?.savedArticles ?? [],
