@@ -60,11 +60,11 @@ import ContinueReadingButton, {
 } from '#app/components/ContinueReadingButton';
 import SaveArticleButton from '#app/components/SaveArticleButton';
 import AccountPromotionalBannerExperiment from '#app/components/Account/AccountPromotionalBannerExperiment';
+import ElectionBanner from '#app/components/ElectionBanner';
 import repositionCountryTopic from '#app/components/TopicDiscovery/RepositionCountryTopic';
 import GooglePreferredSource from '#app/components/GooglePreferredSource/GooglePreferredSourceLink';
 import GooglePreferredSourceDivider from '#app/components/GooglePreferredSource/GooglePreferredSourceDivider';
 import isGoogleReferral from '#app/lib/utilities/isGoogleReferral';
-import ElectionBanner from './ElectionBanner';
 import ArticleMessageBanner from './ArticleMessageBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
