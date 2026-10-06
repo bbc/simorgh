@@ -3,7 +3,7 @@ import Script from 'next/script';
 import clsx from 'clsx';
 import { RequestContext } from '#app/contexts/RequestContext';
 import AmpIframe from '#app/components/AmpIframe';
-import Heading from '#app/components/Heading';
+import Text from '#app/components/Text';
 import useToggle from '#app/hooks/useToggle';
 import { Tag } from '#app/components/Metadata/types';
 import { ServiceContext } from '#app/contexts/ServiceContext';
@@ -78,6 +78,8 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
       isAmp ? SIMORGH_INCLUDES_BASE_AMP_URL : SIMORGH_INCLUDES_BASE_URL
     }/${iframeSrcToUse}${isAmp ? '/amp' : ''}`;
 
+  const hasTitle = isAssocPress && title;
+
   if (isAmp) {
     return (
       <div
@@ -88,9 +90,15 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
             : styles.electionBannerWrapperAmp
         }
       >
-        <Heading level={2} size="paragon" className={styles.title}>
-          {title}
-        </Heading>
+        {hasTitle && (
+          <Text
+            size="doublePica"
+            fontVariant="sansBold"
+            className={styles.title}
+          >
+            {title}
+          </Text>
+        )}
         <AmpIframe
           ampMetadata={{
             ...(!isAssocPress && { imageWidth: 1 }),
@@ -115,9 +123,11 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
           : styles.electionBannerWrapper
       }
     >
-      <Heading level={2} size="paragon" className={styles.title}>
-        {title}
-      </Heading>
+      {hasTitle && (
+        <Text size="doublePica" fontVariant="sansBold" className={styles.title}>
+          {title}
+        </Text>
+      )}
       <iframe
         className={clsx(
           isAssocPress && 'ap-embed',

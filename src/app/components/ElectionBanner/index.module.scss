@@ -3,17 +3,11 @@
 .title {
   display: block;
   width: 100%;
-  padding-bottom: #{theme.$spacings-half};
-  border-bottom: #{theme.pixelsToRem-px-to-rem(1)} solid theme.$palette-black;
-}
-
-.electionBannerWrapper,
-.assocPressElectionBannerWrapper,
-.electionBannerWrapperAmp,
-.assocPressElectionBannerWrapperAmp {
-  display: flex;
-  flex-direction: column;
-  gap: #{theme.$spacings-half};
+  margin: 0;
+  margin-bottom: #{theme.$spacings-double};
+  padding-bottom: #{theme.$spacings-full};
+  border-bottom: #{theme.pixelsToRem-px-to-rem(2)} solid
+    #{theme.$palette-grey-3};
 }
 
 .electionBannerWrapper {
@@ -70,8 +64,6 @@
 
 .assocPressElectionBannerWrapper,
 .assocPressElectionBannerWrapperAmp {
-  width: 100%;
-  margin: 0 auto;
   border-bottom: solid #{theme.pixelsToRem-px-to-rem(1)} transparent;
   padding: #{theme.$spacings-full} 0;
 

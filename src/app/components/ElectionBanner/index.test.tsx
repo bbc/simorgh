@@ -169,7 +169,7 @@ describe('ElectionBanner', () => {
     });
 
     it('should render the title from service config', () => {
-      const { getByRole } = renderElectionBanner(
+      const { getByText } = renderElectionBanner(
         { aboutTags: mockAboutTags, taggings: mockTaggings },
         {
           toggles: {
@@ -180,7 +180,10 @@ describe('ElectionBanner', () => {
         },
       );
 
-      expect(getByRole('heading', { level: 2 })).toHaveTextContent(MOCK_TITLE);
+      const title = getByText(MOCK_TITLE);
+
+      expect(title).toBeInTheDocument();
+      expect(title.tagName).not.toBe('H2');
     });
 
     it('should not render ElectionBanner when taggings contain the editorialSensitivityId', () => {
