@@ -20,8 +20,6 @@ interface MyNewsPageContentProps {
 
 const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
   const { translations, lang } = use(ServiceContext);
-  const { isArticlePersonalizationEnabled, isTopicPersonalizationEnabled } =
-    use(AccountContext);
 
   const activePage = Math.max(1, Number(page) || 1);
   const startIndex = (activePage - 1) * ITEMS_PER_PAGE;
@@ -29,7 +27,6 @@ const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
   const { savedArticles, total, isLoading, error } = useUASRecentActivity({
     itemsPerPage: ITEMS_PER_PAGE,
     startIndex,
-    enabled: isArticlePersonalizationEnabled,
   });
 
   const {
@@ -39,7 +36,6 @@ const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
     error: topicsError,
   } = useUASFollowedTopics({
     itemsPerPage: 100, // Load all topics at once for now
-    enabled: isTopicPersonalizationEnabled,
   });
 
   const pageCount = Math.max(1, Math.ceil(total / ITEMS_PER_PAGE));
