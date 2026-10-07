@@ -7,11 +7,7 @@ export type Platforms = 'amp' | 'canonical' | 'app' | 'lite';
 export type Direction = 'rtl' | 'ltr';
 
 export type SocialEmbedProviders =
-  | 'facebook'
-  | 'twitter'
-  | 'instagram'
-  | 'youtube'
-  | 'tiktok';
+  'facebook' | 'twitter' | 'instagram' | 'youtube' | 'tiktok';
 
 export type PageTypes = (typeof PAGE_TYPES)[keyof typeof PAGE_TYPES];
 
@@ -21,8 +17,7 @@ export type ToggleDefinition = {
 };
 
 export type Toggles =
-  | Record<string, ToggleDefinition>
-  | { _environment: string };
+  Record<string, ToggleDefinition> | { _environment: string };
 
 export type Navigation = {
   title: string;
@@ -131,12 +126,10 @@ export type ServicesWithNoVariants = {
 };
 
 export type Services =
-  | ServicesWithNoVariants['service']
-  | ServicesWithVariants['service'];
+  ServicesWithNoVariants['service'] | ServicesWithVariants['service'];
 
 export type Variants =
-  | ServicesWithNoVariants['variant']
-  | ServicesWithVariants['variant'];
+  ServicesWithNoVariants['variant'] | ServicesWithVariants['variant'];
 
 export type ServicesVariantsProps = {
   service: Services;
@@ -144,9 +137,4 @@ export type ServicesVariantsProps = {
 };
 
 export type EffectiveNetworkType =
-  | 'slow-2g'
-  | '2g'
-  | '3g'
-  | '4g'
-  | '5g'
-  | 'unknown';
+  'slow-2g' | '2g' | '3g' | '4g' | '5g' | 'unknown';

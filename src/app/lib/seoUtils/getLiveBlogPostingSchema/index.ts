@@ -40,8 +40,7 @@ const getAuthor = (post: Post, orgAuthor: Record<string, unknown>) => {
 const getImage = (post: Post): string | undefined => {
   const contentBlocks = post?.content?.model?.blocks;
   const imageBlock = contentBlocks?.find(block => block.type === 'image') as
-    | OptimoImageBlock
-    | undefined;
+    OptimoImageBlock | undefined;
   if (!imageBlock) return undefined;
 
   const [rawImage] = imageBlock.model.blocks;
