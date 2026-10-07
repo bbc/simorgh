@@ -71,7 +71,6 @@ const trackPageEvents = () => {
 
 type DecisionInfo = {
   flagKey?: string;
-  experimentKey?: string;
   variationKey?: string;
   decisionEventDispatched?: boolean;
 };
@@ -82,19 +81,10 @@ type ActivateNotification = ListenerPayload & {
 };
 
 const resolveDecision = (decisionInfo?: DecisionInfo) => {
-  const clientSideFlagKey = decisionInfo?.flagKey;
-  const serverSideRuleKey = decisionInfo?.experimentKey;
-  const isClientSideDecision = Boolean(clientSideFlagKey);
-
-  return isClientSideDecision
-    ? {
-        decisionKey: clientSideFlagKey,
-        impressionDispatched: Boolean(decisionInfo?.decisionEventDispatched),
-      }
-    : {
-        decisionKey: serverSideRuleKey,
-        impressionDispatched: Boolean(serverSideRuleKey),
-      };
+  return {
+    decisionKey: decisionInfo?.flagKey,
+    impressionDispatched: Boolean(decisionInfo?.decisionEventDispatched),
+  };
 };
 
 const handleDecision = ({

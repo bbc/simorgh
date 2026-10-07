@@ -382,7 +382,7 @@ describe('withOptimizelyProvider HOC', () => {
       );
     });
 
-    it('should call optimizely.track with page-views when decisionEventDispatched is true and the flag is active', () => {
+    it('should track page-views for a DECISION with decisionEventDispatched true and a valid flagKey', () => {
       capturedDecisionListener?.({
         decisionInfo: {
           flagKey: 'test_flag',
@@ -394,7 +394,7 @@ describe('withOptimizelyProvider HOC', () => {
       expect(mockTrack).toHaveBeenCalledWith('page-views');
     });
 
-    it('should not call optimizely.track when decisionEventDispatched is false', () => {
+    it('should not track a DECISION when decisionEventDispatched is false', () => {
       capturedDecisionListener?.({
         decisionInfo: {
           flagKey: 'test_flag',
@@ -406,7 +406,7 @@ describe('withOptimizelyProvider HOC', () => {
       expect(mockTrack).not.toHaveBeenCalled();
     });
 
-    it('should not call optimizely.track when variationKey is off', () => {
+    it('should not track a DECISION with variationKey off', () => {
       capturedDecisionListener?.({
         decisionInfo: {
           flagKey: 'test_flag',
@@ -418,7 +418,7 @@ describe('withOptimizelyProvider HOC', () => {
       expect(mockTrack).not.toHaveBeenCalled();
     });
 
-    it('should not call optimizely.track when variationKey is undefined', () => {
+    it('should not track a DECISION without variationKey', () => {
       capturedDecisionListener?.({
         decisionInfo: {
           flagKey: 'test_flag',
@@ -429,7 +429,7 @@ describe('withOptimizelyProvider HOC', () => {
       expect(mockTrack).not.toHaveBeenCalled();
     });
 
-    it('should not call optimizely.track when both flagKey and experimentKey are missing', () => {
+    it('should not track a DECISION without flagKey', () => {
       capturedDecisionListener?.({
         decisionInfo: {
           variationKey: 'on',
@@ -438,20 +438,6 @@ describe('withOptimizelyProvider HOC', () => {
       });
 
       expect(mockTrack).not.toHaveBeenCalled();
-    });
-
-    it('should call optimizely.track with page-views for a legacy activate() decision (experimentKey without decisionEventDispatched)', () => {
-      capturedDecisionListener?.({
-        decisionInfo: {
-          experimentKey: 'newswb_ws_article_account_promo_banner',
-          variationKey: 'on',
-        },
-      });
-
-      expect(mockTrack.mock.calls.map(call => call[0])).toEqual([
-        'visit',
-        'page-views',
-      ]);
     });
 
     it('should call optimizely.track for a legacy ACTIVATE notification', () => {
@@ -466,12 +452,10 @@ describe('withOptimizelyProvider HOC', () => {
       ]);
     });
 
-    it('should not call optimizely.track for a legacy activate() decision when variationKey is off', () => {
-      capturedDecisionListener?.({
-        decisionInfo: {
-          experimentKey: 'newswb_ws_article_account_promo_banner',
-          variationKey: 'off',
-        },
+    it('should not call optimizely.track for a legacy ACTIVATE notification when variation.key is off', () => {
+      capturedActivateListener?.({
+        experiment: { key: 'newswb_ws_article_account_promo_banner' },
+        variation: { key: 'off' },
       });
 
       expect(mockTrack).not.toHaveBeenCalled();
@@ -508,7 +492,7 @@ describe('withOptimizelyProvider HOC', () => {
       expect(mockTrack).toHaveBeenCalledWith('page-views');
     });
 
-    it('should send visit then page-views exactly once when multiple experiments fire decisions for the same URL', () => {
+    it('should send visit then page-views once for multiple DECISION notifications on the same URL', () => {
       capturedDecisionListener?.({
         decisionInfo: {
           flagKey: 'experiment_1',
@@ -696,7 +680,7 @@ describe('withOptimizelyProvider HOC', () => {
       });
     });
 
-    it('should not track or notify decisions when not on client', () => {
+    it('should not track or notify DECISION notifications when not on client', () => {
       jest.resetModules();
 
       let serverCapturedListener: ((payload: object) => void) | undefined;
@@ -827,7 +811,7 @@ describe('withOptimizelyProvider HOC', () => {
       );
     });
 
-    it('should send the activation event when a new decision is dispatched with an impression', () => {
+    it('should send the activation event for a new DECISION with decisionEventDispatched true', () => {
       capturedDecisionListener?.({
         decisionInfo: {
           flagKey: 'test_flag',
@@ -844,7 +828,7 @@ describe('withOptimizelyProvider HOC', () => {
       });
     });
 
-    it('should not send the activation event when no impression was dispatched', () => {
+    it('should not send the activation event when decisionEventDispatched is false', () => {
       capturedDecisionListener?.({
         decisionInfo: {
           flagKey: 'test_flag',
@@ -856,7 +840,7 @@ describe('withOptimizelyProvider HOC', () => {
       expect(mocksendOptimizelyActivationEvent).not.toHaveBeenCalled();
     });
 
-    it('should not send the activation event when the variation is "off"', () => {
+    it('should not send the activation event when variationKey is "off"', () => {
       capturedDecisionListener?.({
         decisionInfo: {
           flagKey: 'test_flag',
@@ -868,7 +852,7 @@ describe('withOptimizelyProvider HOC', () => {
       expect(mocksendOptimizelyActivationEvent).not.toHaveBeenCalled();
     });
 
-    it('should not send the activation event again for a decision already recorded this session', () => {
+    it('should not send the activation event again for a DECISION already recorded this session', () => {
       capturedDecisionListener?.({
         decisionInfo: {
           flagKey: 'test_flag',
