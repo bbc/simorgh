@@ -69,10 +69,10 @@ const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
   }
 
   const transformTopicsForRelatedTopics = () =>
-    followedTopics?.map(topic => ({
+    followedTopics.map(topic => ({
       topicId: topic.id,
       topicName: topic.title,
-    })) ?? [];
+    }));
 
   const hasError = error || topicsError;
 
