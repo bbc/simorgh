@@ -80,13 +80,6 @@ type ActivateNotification = ListenerPayload & {
   variation?: { key?: string } | null;
 };
 
-const resolveDecision = (decisionInfo?: DecisionInfo) => {
-  return {
-    decisionKey: decisionInfo?.flagKey,
-    impressionDispatched: Boolean(decisionInfo?.decisionEventDispatched),
-  };
-};
-
 const handleDecision = ({
   decisionKey,
   variationKey,
@@ -120,12 +113,11 @@ optimizely?.notificationCenter?.addNotificationListener(
   enums.NOTIFICATION_TYPES.DECISION,
   (notification: ListenerPayload & { decisionInfo?: DecisionInfo }) => {
     const { decisionInfo } = notification;
-    const { decisionKey, impressionDispatched } = resolveDecision(decisionInfo);
 
     handleDecision({
-      decisionKey,
+      decisionKey: decisionInfo?.flagKey,
       variationKey: decisionInfo?.variationKey,
-      impressionDispatched,
+      impressionDispatched: Boolean(decisionInfo?.decisionEventDispatched),
     });
   },
 );
