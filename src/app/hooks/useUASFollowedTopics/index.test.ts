@@ -7,11 +7,11 @@ import type { FollowedTopic } from '#app/lib/uasApi/getFollowedTopics';
 import uasKeys from '#app/lib/uasApi/queryKeys';
 import { AccountContext } from '#app/contexts/AccountContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import useUASFollowedTopics from '.';
 import {
   UAS_ERROR_ACTIONS,
   ERROR_TRACKING_FEATURES,
 } from '#app/hooks/useErrorTracking/errorTracking.const';
+import useUASFollowedTopics from '.';
 
 jest.mock('#app/lib/uasApi/getFollowedTopics');
 jest.mock('react', () => ({
