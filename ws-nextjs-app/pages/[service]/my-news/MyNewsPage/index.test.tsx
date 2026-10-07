@@ -6,6 +6,7 @@ import {
 } from '#app/components/react-testing-library-with-providers';
 import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import useUASRecentActivity from '#app/hooks/useUASRecentActivity';
+import useUASFollowedTopics from '#app/hooks/useUASFollowedTopics';
 import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
 import { service as hindiServiceConfig } from '#app/lib/config/services/hindi';
 import MyNewsPage from '.';
@@ -25,14 +26,22 @@ jest.mock('#app/hooks/useOptimizelyVariation', () => ({
 }));
 
 jest.mock('#app/hooks/useUASRecentActivity');
+jest.mock('#app/hooks/useUASFollowedTopics');
 
 const mockUseRecentActivity = useUASRecentActivity as jest.MockedFunction<
   typeof useUASRecentActivity
 >;
 
+const mockUseFollowedTopics = useUASFollowedTopics as jest.MockedFunction<
+  typeof useUASFollowedTopics
+>;
+
 const renderOptions = {
   service: 'hindi' as const,
-  toggles: { uasPersonalization: { enabled: true, value: 'hindi' } },
+  toggles: {
+    uasPersonalization: { enabled: true, value: 'hindi' },
+    topicUasPersonalization: { enabled: true, value: 'hindi' },
+  },
   idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: true },
 };
 
@@ -62,6 +71,12 @@ describe('MyNewsPage', () => {
     jest.clearAllMocks();
     mockUseRecentActivity.mockReturnValue({
       savedArticles: [],
+      total: 0,
+      isLoading: false,
+      error: null,
+    });
+    mockUseFollowedTopics.mockReturnValue({
+      followedTopics: [],
       total: 0,
       isLoading: false,
       error: null,
