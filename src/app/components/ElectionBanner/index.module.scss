@@ -1,13 +1,11 @@
 @use '@scss/themeTokens' as theme;
 
 .title {
-  @include theme.typography-from-scale-and-variant(doublePica, 'sans-bold');
+  @include theme.typography-from-scale-and-variant(canon, 'sans-bold');
   display: block;
   width: 100%;
-  margin: 0 0 #{theme.$spacings-double};
-  padding-bottom: #{theme.$spacings-full};
   color: #{theme.$palette-white};
-  border-bottom: #{theme.pixelsToRem-px-to-rem(2)} solid #{theme.$palette-white};
+  padding-bottom: #{theme.$spacings-double};
 }
 
 .electionBannerWrapper {
