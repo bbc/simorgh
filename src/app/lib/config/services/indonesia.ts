@@ -101,6 +101,13 @@ export const service: DefaultServiceConfig = {
       relatedTopics: 'Topik terkait',
       moreOnThis: '',
       navMenuText: 'Kategori',
+      liteSite: {
+        onboardingMessage:
+          'Anda sedang melihat versi teks saja dari situs web ini yang menggunakan lebih sedikit data. Lihat versi utama situs web yang menyertakan semua gambar dan video.',
+        toMainSite: 'Bawa saya ke situs web utama',
+        informationPage: 'Cari tahu lebih lanjut tentang versi hemat data ini',
+        dataSaving: 'Versi hemat data',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Pemutar Media',
         audioPlayer: 'Pemutar Audio',
