@@ -4,6 +4,13 @@ import addInlineScript from '#app/lib/utilities/addInlineScript';
 
 // eslint-disable-next-line func-names
 const reverbScaffold = function (envConfig: EnvConfig) {
+  // eslint-disable-next-line no-var
+  var simorghReverbSource =
+    // eslint-disable-next-line @typescript-eslint/prefer-optional-chain
+    envConfig && envConfig.SIMORGH_REVERB_SOURCE
+      ? envConfig.SIMORGH_REVERB_SOURCE
+      : '';
+
   window.__reverb = {} as Window['__reverb'];
 
   // eslint-disable-next-line func-names
@@ -22,12 +29,6 @@ const reverbScaffold = function (envConfig: EnvConfig) {
 
   // eslint-disable-next-line no-var, vars-on-top
   var reverbScript = document.createElement('script');
-  // eslint-disable-next-line no-var, vars-on-top
-  var simorghReverbSource =
-    // eslint-disable-next-line @typescript-eslint/prefer-optional-chain
-    envConfig && envConfig.SIMORGH_REVERB_SOURCE
-      ? envConfig.SIMORGH_REVERB_SOURCE
-      : '';
   reverbScript.setAttribute('src', simorghReverbSource);
   document.head.appendChild(reverbScript);
 };
