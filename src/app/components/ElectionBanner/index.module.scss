@@ -1,11 +1,16 @@
+@use 'sass:map';
 @use '@scss/themeTokens' as theme;
 
-$election-banner-iframe-height-mobile: 315;
-$election-banner-iframe-height-tablet: 320;
-$election-banner-iframe-height-desktop: 0;
+$election-banner-iframe-heights: (
+  mobile: 315,
+  tablet: 320,
+  desktop: 0,
+);
 
-$ap-election-banner-iframe-height-mobile: 340;
-$ap-election-banner-iframe-height-desktop: 216;
+$ap-election-banner-iframe-heights: (
+  mobile: 340,
+  desktop: 216,
+);
 
 .title {
   @include theme.typography-from-scale-and-variant(canon, 'sans-bold');
@@ -26,18 +31,20 @@ $ap-election-banner-iframe-height-desktop: 216;
 
 .electionBannerIframe {
   width: 100%;
-  height: #{theme.pixelsToRem-px-to-rem($election-banner-iframe-height-mobile)};
+  height: #{theme.pixelsToRem-px-to-rem(
+      map.get($election-banner-iframe-heights, mobile)
+    )};
   border: none;
 
   @media #{theme.$mediaQueries-group-3-min-width} {
     height: #{theme.pixelsToRem-px-to-rem(
-        $election-banner-iframe-height-tablet
+        map.get($election-banner-iframe-heights, tablet)
       )};
   }
 
   @media #{theme.$mediaQueries-group-4-min-width} {
     height: #{theme.pixelsToRem-px-to-rem(
-        $election-banner-iframe-height-desktop
+        map.get($election-banner-iframe-heights, desktop)
       )};
   }
 }
@@ -61,18 +68,18 @@ $ap-election-banner-iframe-height-desktop: 216;
 .electionBannerWrapperAmp {
   & amp-iframe {
     height: #{theme.pixelsToRem-px-to-rem(
-        $election-banner-iframe-height-mobile
+        map.get($election-banner-iframe-heights, mobile)
       )};
 
     @media #{theme.$mediaQueries-group-3-min-width} {
       height: #{theme.pixelsToRem-px-to-rem(
-          $election-banner-iframe-height-tablet
+          map.get($election-banner-iframe-heights, tablet)
         )};
     }
 
     @media #{theme.$mediaQueries-group-4-min-width} {
       height: #{theme.pixelsToRem-px-to-rem(
-          $election-banner-iframe-height-desktop
+          map.get($election-banner-iframe-heights, desktop)
         )};
     }
   }
@@ -93,14 +100,14 @@ $ap-election-banner-iframe-height-desktop: 216;
   display: block;
   max-width: #{theme.pixelsToRem-px-to-rem(1008)};
   height: #{theme.pixelsToRem-px-to-rem(
-      $ap-election-banner-iframe-height-mobile
+      map.get($ap-election-banner-iframe-heights, mobile)
     )};
   margin: 0 auto;
   border: none;
 
   @media #{theme.$mediaQueries-group-3-min-width} {
     height: #{theme.pixelsToRem-px-to-rem(
-        $ap-election-banner-iframe-height-desktop
+        map.get($ap-election-banner-iframe-heights, desktop)
       )};
   }
 }
