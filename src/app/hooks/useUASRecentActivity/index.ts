@@ -14,7 +14,6 @@ import {
 interface UseRecentActivityParams {
   itemsPerPage?: number;
   startIndex?: number;
-  enabled?: boolean;
 }
 
 interface UseRecentActivityReturn {
@@ -27,13 +26,16 @@ interface UseRecentActivityReturn {
 const useUASRecentActivity = ({
   itemsPerPage = 10,
   startIndex = 0,
-  enabled = false,
 }: UseRecentActivityParams = {}): UseRecentActivityReturn => {
-  const { hashedUserId = '', isRefreshAvailable } = use(AccountContext);
+  const {
+    hashedUserId = '',
+    isRefreshAvailable,
+    isArticlePersonalizationEnabled,
+  } = use(AccountContext);
   const { service } = use(ServiceContext);
 
   const trackError = useErrorTracking();
-  const isQueryEnabled = !!hashedUserId && enabled;
+  const isQueryEnabled = !!hashedUserId && isArticlePersonalizationEnabled;
 
   const { data, isLoading, error } = useQuery({
     queryKey: uasKeys.favouritesPage(hashedUserId, startIndex, service),

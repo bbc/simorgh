@@ -74,6 +74,7 @@ const mockSavedArticles: SavedArticle[] = [
     description: 'Hindi',
   },
 ];
+const hashedUserId = 'user-123';
 
 describe('useUASRecentActivity', () => {
   beforeEach(() => {
@@ -81,7 +82,11 @@ describe('useUASRecentActivity', () => {
     mockUseQueryReturn = { data: undefined, isLoading: false, error: null };
 
     (use as jest.Mock).mockImplementation((context: unknown) => {
-      if (context === AccountContext) return { hashedUserId: 'user-123' };
+      if (context === AccountContext)
+        return {
+          hashedUserId,
+          isArticlePersonalizationEnabled: true,
+        };
       return {};
     });
   });
@@ -176,6 +181,33 @@ describe('useUASRecentActivity', () => {
     expect(mockEnabled).toBe(false);
   });
 
+  it('should be disabled and hide cached articles when isArticlePersonalizationEnabled is false', () => {
+    (use as jest.Mock).mockImplementationOnce((context: unknown) => {
+      if (context === AccountContext)
+        return {
+          hashedUserId,
+          isArticlePersonalizationEnabled: false,
+        };
+      return {};
+    });
+    mockUseQueryReturn.data = {
+      savedArticles: mockSavedArticles,
+      total: 25,
+      itemsPerPage: 10,
+      startIndex: 0,
+    };
+
+    const { result } = renderHook(() => useUASRecentActivity());
+
+    expect(mockEnabled).toBe(false);
+    expect(result.current).toEqual({
+      savedArticles: [],
+      total: 0,
+      isLoading: false,
+      error: null,
+    });
+  });
+
   it('should be enabled when hashedUserId is present', () => {
     renderHook(() => useUASRecentActivity());
 
@@ -185,12 +217,12 @@ describe('useUASRecentActivity', () => {
   it('should include hashedUserId and startIndex in the query key', () => {
     renderHook(() => useUASRecentActivity({ startIndex: 10 }));
 
-    expect(mockQueryKey).toEqual(uasKeys.favouritesPage('user-123', 10));
+    expect(mockQueryKey).toEqual(uasKeys.favouritesPage(hashedUserId, 10));
   });
 
   it('should include the current service in the query key and pass it to getRecentActivity', async () => {
     (use as jest.Mock).mockImplementation((context: unknown) => {
-      if (context === AccountContext) return { hashedUserId: 'user-123' };
+      if (context === AccountContext) return { hashedUserId };
       if (context === ServiceContext) return { service: 'mundo' };
       return {};
     });
@@ -198,7 +230,7 @@ describe('useUASRecentActivity', () => {
     renderHook(() => useUASRecentActivity({ startIndex: 10 }));
 
     expect(mockQueryKey).toEqual(
-      uasKeys.favouritesPage('user-123', 10, 'mundo'),
+      uasKeys.favouritesPage(hashedUserId, 10, 'mundo'),
     );
 
     await mockQueryFn({ signal: new AbortController().signal });
