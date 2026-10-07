@@ -1,5 +1,12 @@
 @use '@scss/themeTokens' as theme;
 
+$election-banner-iframe-height-mobile: 315;
+$election-banner-iframe-height-tablet: 320;
+$election-banner-iframe-height-desktop: 0;
+
+$ap-election-banner-iframe-height-mobile: 340;
+$ap-election-banner-iframe-height-desktop: 216;
+
 .title {
   @include theme.typography-from-scale-and-variant(canon, 'sans-bold');
   display: block;
@@ -19,15 +26,19 @@
 
 .electionBannerIframe {
   width: 100%;
-  height: #{theme.pixelsToRem-px-to-rem(315)};
+  height: #{theme.pixelsToRem-px-to-rem($election-banner-iframe-height-mobile)};
   border: none;
 
   @media #{theme.$mediaQueries-group-3-min-width} {
-    height: #{theme.pixelsToRem-px-to-rem(320)};
+    height: #{theme.pixelsToRem-px-to-rem(
+        $election-banner-iframe-height-tablet
+      )};
   }
 
   @media #{theme.$mediaQueries-group-4-min-width} {
-    height: #{theme.pixelsToRem-px-to-rem(350)};
+    height: #{theme.pixelsToRem-px-to-rem(
+        $election-banner-iframe-height-desktop
+      )};
   }
 }
 
@@ -49,14 +60,20 @@
 
 .electionBannerWrapperAmp {
   & amp-iframe {
-    height: #{theme.pixelsToRem-px-to-rem(315)};
+    height: #{theme.pixelsToRem-px-to-rem(
+        $election-banner-iframe-height-mobile
+      )};
 
     @media #{theme.$mediaQueries-group-3-min-width} {
-      height: #{theme.pixelsToRem-px-to-rem(320)};
+      height: #{theme.pixelsToRem-px-to-rem(
+          $election-banner-iframe-height-tablet
+        )};
     }
 
     @media #{theme.$mediaQueries-group-4-min-width} {
-      height: #{theme.pixelsToRem-px-to-rem(350)};
+      height: #{theme.pixelsToRem-px-to-rem(
+          $election-banner-iframe-height-desktop
+        )};
     }
   }
 }
@@ -75,12 +92,16 @@
 .assocPressElectionBannerIframe {
   display: block;
   max-width: #{theme.pixelsToRem-px-to-rem(1008)};
-  height: #{theme.pixelsToRem-px-to-rem(340)};
+  height: #{theme.pixelsToRem-px-to-rem(
+      $ap-election-banner-iframe-height-mobile
+    )};
   margin: 0 auto;
   border: none;
 
   @media #{theme.$mediaQueries-group-3-min-width} {
-    height: #{theme.pixelsToRem-px-to-rem(216)};
+    height: #{theme.pixelsToRem-px-to-rem(
+        $ap-election-banner-iframe-height-desktop
+      )};
   }
 }
 
