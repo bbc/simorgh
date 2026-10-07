@@ -60,16 +60,6 @@ const useUASRecentActivity = ({
     }
   }, [error, trackError]);
 
-  // required to prevent from showing cached data when not expected
-  if (!isQueryEnabled) {
-    return {
-      savedArticles: [],
-      total: 0,
-      isLoading: false,
-      error: null,
-    };
-  }
-
   return {
     savedArticles: data?.savedArticles ?? [],
     total: data?.total ?? 0,
