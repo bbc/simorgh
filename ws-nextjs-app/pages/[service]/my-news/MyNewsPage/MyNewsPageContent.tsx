@@ -119,30 +119,15 @@ const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
           }}
         />
 
-        {hasArticles && (
-          <section css={styles.section}>
-            <Heading level={2} css={styles.subheading} size="doublePica">
-              {description}
-            </Heading>
-            <CurationGrid
-              summaries={savedArticles}
-              headingLevel={3}
-              eventTrackingData={{
-                componentName: 'my-news-curation-grid',
-              }}
-            />
-
-            {pageCount > 1 && (
-              <Pagination
-                activePage={activePage}
-                pageCount={pageCount}
-                pageXOfY={pageXOfY}
-                previousPage={previousPage}
-                nextPage={nextPage}
-                page={pageLabel}
-              />
-            )}
-          </section>
+        {pageCount > 1 && (
+          <Pagination
+            activePage={activePage}
+            pageCount={pageCount}
+            pageXOfY={pageXOfY}
+            previousPage={previousPage}
+            nextPage={nextPage}
+            page={pageLabel}
+          />
         )}
       </section>
     );
