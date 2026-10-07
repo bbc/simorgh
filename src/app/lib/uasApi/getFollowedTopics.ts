@@ -8,10 +8,7 @@ const logger = nodeLogger(__filename);
 export interface FollowedTopic {
   id: string;
   title: string;
-  link: string;
-  description?: string;
   service?: string;
-  type: string;
 }
 
 export interface UasFollowItem {
@@ -25,8 +22,6 @@ export interface UasFollowItem {
     service?: string;
     topicId?: string;
     title?: string;
-    description?: string;
-    locatorUrl?: string;
   };
   '@id': string;
 }
@@ -49,12 +44,13 @@ interface GetFollowedTopicsParams {
 
 const transformFollowToTopic = (item: UasFollowItem): FollowedTopic => ({
   id: item.resourceId,
-  title: item?.metaData?.title || '',
-  link: item?.metaData?.locatorUrl || '',
-  description: item?.metaData?.description,
-  service: item?.metaData?.service,
-  type: item.resourceType,
+  title: item.metaData?.title ?? '',
+  service: item.metaData?.service,
 });
+
+// A topic with no title can't be rendered meaningfully, so treat it as malformed
+const hasRenderableMetadata = (item: UasFollowItem): boolean =>
+  Boolean(item.resourceId && item.metaData?.title);
 
 export type FollowedTopicsData = {
   followedTopics: FollowedTopic[];
@@ -82,19 +78,18 @@ const getFollowedTopics = async ({
       isRefreshAvailable,
     });
 
-    const data: UasFollowsResponse = await response.json();
+    const data: Partial<UasFollowsResponse> = await response.json();
+    const { items = [], total = 0, pagination } = data;
 
-    const { items: allItems } = data;
-
-    const followedTopics = allItems
-      .filter(item => item.metaData != null)
+    const followedTopics = items
+      .filter(hasRenderableMetadata)
       .map(transformFollowToTopic);
 
     return {
       followedTopics,
-      total: data.total,
-      itemsPerPage: data.pagination.itemsPerPage,
-      startIndex: data.pagination.startIndex,
+      total,
+      itemsPerPage: pagination?.itemsPerPage ?? itemsPerPage,
+      startIndex: pagination?.startIndex ?? startIndex,
     };
   } catch (error) {
     logger.error(UAS_API_ERROR, {

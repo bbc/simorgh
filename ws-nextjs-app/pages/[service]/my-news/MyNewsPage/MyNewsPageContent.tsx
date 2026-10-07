@@ -69,7 +69,6 @@ const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
     followedTopics.map(topic => ({
       topicId: topic.id,
       topicName: topic.title,
-      link: topic.link,
     }));
 
   const renderContent = () => {
@@ -100,11 +99,6 @@ const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
             <Heading level={2} css={styles.subheading} size="doublePica">
               Followed Topics ({topicsTotal})
             </Heading>
-            {/* <RelatedTopics
-              topics={transformTopicsForRelatedTopics()}
-              mobileDivider={false}
-              bar={false}
-            /> */}
             <TopicTags tags={transformTopicsForRelatedTopics()} />
           </section>
         )}
