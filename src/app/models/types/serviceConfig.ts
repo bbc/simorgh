@@ -118,7 +118,7 @@ export type ServiceConfig = {
   googleSiteVerification?: string;
   promotionalBanner?: PromotionalBannerConfig;
   electionBanner?: {
-    title: string;
+    title?: string;
     heights?: {
       desktop: number;
       tablet: number;
