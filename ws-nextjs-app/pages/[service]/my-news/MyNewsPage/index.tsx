@@ -18,12 +18,8 @@ const MyNewsPageContent = dynamic(() => import('./MyNewsPageContent'), {
 });
 
 const MyNewsPage = ({ page }: MyNewsPageProps) => {
-  const {
-    isArticlePersonalizationAvailable,
-    isArticlePersonalizationEnabled,
-    isTopicPersonalizationAvailable,
-    isTopicPersonalizationEnabled,
-  } = use(AccountContext);
+  const { isArticlePersonalizationAvailable, isArticlePersonalizationEnabled } =
+    use(AccountContext);
   const { lang, translations } = use(ServiceContext);
   const noJsHeading =
     translations?.myNews?.title || fallbackTranslations.noJsHeading;
@@ -31,11 +27,7 @@ const MyNewsPage = ({ page }: MyNewsPageProps) => {
     translations?.myNews?.noJsDescription ||
     fallbackTranslations.noJsDescription;
 
-  if (
-    (!isArticlePersonalizationAvailable && !isTopicPersonalizationAvailable) ||
-    !translations?.myNews
-  )
-    return null;
+  if (!isArticlePersonalizationAvailable || !translations?.myNews) return null;
 
   return (
     <main css={styles.main}>
@@ -55,7 +47,7 @@ const MyNewsPage = ({ page }: MyNewsPageProps) => {
           </div>
         </noscript>
         <div css={styles.innerContent}>
-          {isArticlePersonalizationEnabled || isTopicPersonalizationEnabled ? (
+          {isArticlePersonalizationEnabled ? (
             <MyNewsPageContent page={page} />
           ) : (
             <MyNewsPageGuest />
