@@ -175,6 +175,35 @@ describe('uasApiRequest', () => {
     );
   });
 
+  it('should capture the code and description from a documented validation/auth error response body', async () => {
+    (global.fetch as jest.Mock).mockResolvedValue({
+      ok: false,
+      status: 400,
+      statusText: 'Bad Request',
+      clone: () => ({
+        text: () =>
+          Promise.resolve(
+            JSON.stringify({
+              errors: [
+                {
+                  code: 'myactivity.favourites.invalidRequestParam',
+                  description: 'resourceDomain -> may not be null',
+                },
+              ],
+            }),
+          ),
+      }),
+    });
+
+    const error = await uasApiRequest('GET', 'favourites', {
+      isRefreshAvailable: true,
+    }).catch(e => e);
+
+    expect(error).toBeInstanceOf(UasError);
+    expect(error.code).toBe('myactivity.favourites.invalidRequestParam');
+    expect(error.serviceMessage).toBe('resourceDomain -> may not be null');
+  });
+
   it('should throw an error when API key is missing', async () => {
     // Mock the scenario where the API key is not configured
     (mockCookie.get as jest.Mock).mockReturnValue('mocked-token');

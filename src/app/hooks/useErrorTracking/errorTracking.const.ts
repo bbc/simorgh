@@ -9,6 +9,7 @@ export const UAS_ERROR_ACTIONS = {
   FETCH_STATUS: 'fetch-status',
   METADATA_SYNC: 'metadata-sync',
   RECENT_ACTIVITY: 'recent-activity',
+  FOLLOWED_TOPICS: 'followed-topics',
   RENDER: 'render',
 } as const;
 
