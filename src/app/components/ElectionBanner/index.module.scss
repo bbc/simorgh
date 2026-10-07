@@ -1,8 +1,7 @@
 @use '@scss/themeTokens' as theme;
 
 .title {
-  @include theme.fontSizes-gel-font-size(doublePica);
-  @include theme.fontVariants-gel-font-variant('sans-bold');
+  @include theme.typography-from-scale-and-variant(doublePica, 'sans-bold');
   display: block;
   width: 100%;
   margin: 0 0 #{theme.$spacings-double};
