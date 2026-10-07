@@ -529,6 +529,7 @@ export const service: ZhongwenConfig = {
       variant: 'simp',
     },
     electionBanner: {
+      title: '美國大選 2026',
       electionThingIds: ['19994837-27b8-463f-965d-fbb0ac1622a3'],
       assocPressIframeSrc: '',
     },
