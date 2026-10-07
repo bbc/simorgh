@@ -1,17 +1,28 @@
-import { render } from '#app/components/react-testing-library-with-providers';
+import type { ComponentProps } from 'react';
+import {
+  render,
+  waitFor,
+} from '#app/components/react-testing-library-with-providers';
 import { Tag } from '#app/components/Metadata/types';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import { MetadataTaggings } from '#app/models/types/metadata';
+import { ServiceConfig } from '#app/models/types/serviceConfig';
 import ElectionBanner from '.';
+import { DEFAULT_HEIGHTS_AP } from './index.styles';
 
 const MOCK_ELECTION_THING_ID = '647d5613-e0e2-4ef5-b0ce-b491de38bdbd';
 const MOCK_IFRAME_LIVE_SRC =
   'include/vjafwest/1365-2024-us-presidential-election-banner/mundo/app';
 const MOCK_IFRAME_DEV_SRC =
   'include/vjafwest/1365-2024-us-presidential-election-banner/develop/mundo/app';
+const MOCK_ASSOC_PRESS_IFRAME_SRC =
+  'https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/33021.html';
+const ASSOC_PRESS_RESIZE_SCRIPT_SRC =
+  'https://interactives.apelections.org/election-results/assets/microsite/resizeClient.js';
 const mockAboutTags = [
   { thingId: 'thing1' },
   { thingId: 'thing2' },
-  { thingId: MOCK_ELECTION_THING_ID },
+  { thingId: MOCK_ELECTION_THING_ID, thingLabel: 'Election banner' },
 ] as Tag[];
 
 const mockTaggings: MetadataTaggings = [
@@ -34,6 +45,35 @@ const mockTaggings: MetadataTaggings = [
 
 const ELEMENT_ID = 'election-banner';
 
+const mockServiceContext = {
+  electionBanner: {
+    electionThingIds: [MOCK_ELECTION_THING_ID],
+    iframeSrc: MOCK_IFRAME_LIVE_SRC,
+    iframeDevSrc: MOCK_IFRAME_DEV_SRC,
+  },
+} as ServiceConfig;
+
+const mockAssocPressServiceContext = {
+  electionBanner: {
+    electionThingIds: [MOCK_ELECTION_THING_ID],
+    iframeSrc: MOCK_IFRAME_LIVE_SRC,
+    iframeDevSrc: MOCK_IFRAME_DEV_SRC,
+    assocPressIframeSrc: MOCK_ASSOC_PRESS_IFRAME_SRC,
+  },
+} as ServiceConfig;
+
+const renderElectionBanner = (
+  props: ComponentProps<typeof ElectionBanner>,
+  options?: Parameters<typeof render>[1],
+  serviceContext: ServiceConfig = mockServiceContext,
+) =>
+  render(
+    <ServiceContext.Provider value={serviceContext}>
+      <ElectionBanner {...props} />
+    </ServiceContext.Provider>,
+    options,
+  );
+
 describe('ElectionBanner', () => {
   const originalEnv = process.env;
 
@@ -42,9 +82,19 @@ describe('ElectionBanner', () => {
   });
 
   it('should not render ElectionBanner when isLite is true', () => {
-    const { queryByTestId } = render(
-      <ElectionBanner aboutTags={mockAboutTags} taggings={mockTaggings} />,
+    const { queryByTestId } = renderElectionBanner(
+      { aboutTags: mockAboutTags, taggings: mockTaggings },
       { isLite: true },
+    );
+
+    expect(queryByTestId(ELEMENT_ID)).not.toBeInTheDocument();
+  });
+
+  it('should not render ElectionBanner when electionBanner is not configured', () => {
+    const { queryByTestId } = renderElectionBanner(
+      { aboutTags: mockAboutTags, taggings: mockTaggings },
+      undefined,
+      {} as ServiceConfig,
     );
 
     expect(queryByTestId(ELEMENT_ID)).not.toBeInTheDocument();
@@ -75,8 +125,8 @@ describe('ElectionBanner', () => {
 
         process.env.SIMORGH_APP_ENV = appEnv;
 
-        const { getByTestId } = render(
-          <ElectionBanner aboutTags={mockAboutTags} taggings={mockTaggings} />,
+        const { getByTestId } = renderElectionBanner(
+          { aboutTags: mockAboutTags, taggings: mockTaggings },
           {
             toggles: {
               electionBanner: { enabled: true },
@@ -102,8 +152,8 @@ describe('ElectionBanner', () => {
     );
 
     it('should render ElectionBanner when aboutTags contain the correct thingLabel', () => {
-      const { getByTestId } = render(
-        <ElectionBanner aboutTags={mockAboutTags} taggings={mockTaggings} />,
+      const { getByTestId } = renderElectionBanner(
+        { aboutTags: mockAboutTags, taggings: mockTaggings },
         {
           toggles: {
             electionBanner: { enabled: true },
@@ -117,10 +167,10 @@ describe('ElectionBanner', () => {
     });
 
     it('should not render ElectionBanner when taggings contain the editorialSensitivityId', () => {
-      const { queryByTestId } = render(
-        <ElectionBanner
-          aboutTags={mockAboutTags}
-          taggings={[
+      const { queryByTestId } = renderElectionBanner(
+        {
+          aboutTags: mockAboutTags,
+          taggings: [
             ...mockTaggings,
             {
               predicate:
@@ -128,8 +178,8 @@ describe('ElectionBanner', () => {
               value:
                 'http://www.bbc.co.uk/things/f2b5dd0e-dda0-454c-893d-792d46ff48c3#id',
             },
-          ]}
-        />,
+          ],
+        },
         {
           toggles: { electionBanner: { enabled: true } },
           isAmp,
@@ -140,11 +190,11 @@ describe('ElectionBanner', () => {
     });
 
     it('should not render ElectionBanner when aboutTags do not contain the correct thingLabel', () => {
-      const { queryByTestId } = render(
-        <ElectionBanner
-          aboutTags={[{ thingLabel: 'thing1' }] as Tag[]}
-          taggings={mockTaggings}
-        />,
+      const { queryByTestId } = renderElectionBanner(
+        {
+          aboutTags: [{ thingLabel: 'thing1' }] as Tag[],
+          taggings: mockTaggings,
+        },
         { isAmp },
       );
 
@@ -152,8 +202,8 @@ describe('ElectionBanner', () => {
     });
 
     it('should not render ElectionBanner when aboutTags is empty', () => {
-      const { queryByTestId } = render(
-        <ElectionBanner aboutTags={[]} taggings={mockTaggings} />,
+      const { queryByTestId } = renderElectionBanner(
+        { aboutTags: [], taggings: mockTaggings },
         {
           isAmp,
         },
@@ -163,8 +213,8 @@ describe('ElectionBanner', () => {
     });
 
     it('should not render ElectionBanner when toggle is disabled', () => {
-      const { queryByTestId } = render(
-        <ElectionBanner aboutTags={mockAboutTags} taggings={mockTaggings} />,
+      const { queryByTestId } = renderElectionBanner(
+        { aboutTags: mockAboutTags, taggings: mockTaggings },
         {
           toggles: { electionBanner: { enabled: false } },
           isAmp,
@@ -175,8 +225,8 @@ describe('ElectionBanner', () => {
     });
 
     it('should not render ElectionBanner when toggle is null', () => {
-      const { queryByTestId } = render(
-        <ElectionBanner aboutTags={mockAboutTags} taggings={mockTaggings} />,
+      const { queryByTestId } = renderElectionBanner(
+        { aboutTags: mockAboutTags, taggings: mockTaggings },
         {
           toggles: {
             someOtherToggle: { enabled: true },
@@ -186,6 +236,50 @@ describe('ElectionBanner', () => {
       );
 
       expect(queryByTestId(ELEMENT_ID)).not.toBeInTheDocument();
+    });
+  });
+
+  describe('Association Press', () => {
+    const renderAssocPressBanner = (isAmp: boolean) =>
+      renderElectionBanner(
+        { aboutTags: mockAboutTags, taggings: mockTaggings },
+        {
+          toggles: {
+            electionBanner: { enabled: true },
+          },
+          isAmp,
+          service: 'mundo',
+        },
+        mockAssocPressServiceContext,
+      );
+
+    it('should render the Association Press iframe on canonical', async () => {
+      const { getByTestId } = renderAssocPressBanner(false);
+      const wrappingEl = getByTestId(ELEMENT_ID);
+      const iframe = wrappingEl.querySelector('iframe');
+
+      expect(iframe).toHaveAttribute('src', MOCK_ASSOC_PRESS_IFRAME_SRC);
+      expect(iframe).toHaveClass('ap-embed');
+      expect(iframe).toHaveAttribute('title', 'Election banner');
+      expect(iframe).not.toHaveAttribute('height');
+      await waitFor(() => {
+        expect(
+          document.querySelector(
+            `script[src="${ASSOC_PRESS_RESIZE_SCRIPT_SRC}"]`,
+          ),
+        ).toBeInTheDocument();
+      });
+    });
+
+    it('should render the Association Press iframe on AMP', () => {
+      const { getByTestId } = renderAssocPressBanner(true);
+      const wrappingEl = getByTestId(ELEMENT_ID);
+      const iframe = wrappingEl.querySelector('amp-iframe');
+
+      expect(iframe).toHaveAttribute('src', MOCK_ASSOC_PRESS_IFRAME_SRC);
+      expect(iframe).toHaveAttribute('height', `${DEFAULT_HEIGHTS_AP.mobile}`);
+      expect(iframe).toHaveAttribute('layout', 'fixed-height');
+      expect(iframe).not.toHaveAttribute('width');
     });
   });
 });

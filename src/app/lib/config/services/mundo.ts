@@ -53,6 +53,8 @@ export const service: DefaultServiceConfig = {
         'include/vjafwest/1365-2024-us-presidential-election-banner/mundo/app',
       iframeDevSrc:
         'include/vjafwest/1365-2024-us-presidential-election-banner/develop/mundo/app',
+      assocPressIframeSrc:
+        'https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/33021.html',
     },
     podcastPromo: {
       title: 'Anuncio app',

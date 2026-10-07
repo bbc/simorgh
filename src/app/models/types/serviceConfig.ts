@@ -126,6 +126,7 @@ export type ServiceConfig = {
     electionThingIds: string[];
     iframeSrc: string;
     iframeDevSrc: string;
+    assocPressIframeSrc?: string;
   };
   articleMessageBanners?: ArticleMessageBannerConfig[];
   resonanceEnabled?: boolean;
