@@ -39,7 +39,7 @@ const getUserId = () => {
 };
 
 const isSignedIn = () => {
-  if (!onClient() || isOperaProxy()) return false;
+  if (disableOptimizely || !onClient() || isOperaProxy()) return false;
   return Boolean(Cookie.get(TOKEN_COOKIE_NAME));
 };
 
