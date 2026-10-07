@@ -683,7 +683,9 @@ describe('withOptimizelyProvider HOC', () => {
     it('should not track or notify DECISION notifications when not on client', () => {
       jest.resetModules();
 
-      let serverCapturedListener: ((payload: object) => void) | undefined;
+      let serverCapturedDecisionListener:
+        | ((payload: object) => void)
+        | undefined;
       const serverMockTrack = jest.fn();
       const serverMockNotifyDecision = jest.fn();
 
@@ -693,8 +695,10 @@ describe('withOptimizelyProvider HOC', () => {
       jest.doMock('@optimizely/react-sdk', () => ({
         createInstance: jest.fn(() => ({
           notificationCenter: {
-            addNotificationListener: jest.fn((_, cb) => {
-              serverCapturedListener = cb;
+            addNotificationListener: jest.fn((notificationType, cb) => {
+              if (notificationType === notificationTypes.DECISION) {
+                serverCapturedDecisionListener = cb;
+              }
             }),
           },
           track: serverMockTrack,
@@ -718,7 +722,7 @@ describe('withOptimizelyProvider HOC', () => {
       // eslint-disable-next-line global-require
       require('./index');
 
-      serverCapturedListener?.({
+      serverCapturedDecisionListener?.({
         decisionInfo: {
           flagKey: 'test_flag',
           variationKey: 'on',
