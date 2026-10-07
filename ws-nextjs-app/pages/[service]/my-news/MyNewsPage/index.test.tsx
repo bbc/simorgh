@@ -35,10 +35,6 @@ const mockUseFollowedTopics = useUASFollowedTopics as jest.MockedFunction<
   typeof useUASFollowedTopics
 >;
 
-const mockUseFollowedTopics = useUASFollowedTopics as jest.MockedFunction<
-  typeof useUASFollowedTopics
->;
-
 const renderOptions = {
   service: 'hindi' as const,
   toggles: {
