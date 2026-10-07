@@ -113,6 +113,12 @@ $ap-election-banner-iframe-heights: (
 }
 
 .assocPressElectionBannerWrapperAmp {
+  .electionBannerContent {
+    > div {
+      padding: 0;
+    }
+  }
+
   & amp-iframe {
     display: block;
     max-width: #{theme.pixelsToRem-px-to-rem(1008)};
