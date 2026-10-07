@@ -309,14 +309,17 @@ describe('withOptimizelyProvider HOC', () => {
 
   describe('page view tracking', () => {
     const mockTrack = jest.fn();
+    const notificationTypes = {
+      DECISION: 'DECISION',
+      ACTIVATE: 'ACTIVATE',
+    };
     let capturedDecisionListener: ((payload: object) => void) | undefined;
     let capturedActivateListener: ((payload: object) => void) | undefined;
-    let notificationListenerCount = 0;
+    let addNotificationListener: jest.Mock;
 
     beforeEach(() => {
       capturedDecisionListener = undefined;
       capturedActivateListener = undefined;
-      notificationListenerCount = 0;
       mockTrack.mockReset();
       localStorage.clear();
       Object.defineProperty(window, 'location', {
@@ -335,29 +338,30 @@ describe('withOptimizelyProvider HOC', () => {
       // Each test can then call capturedDecisionListener directly to exercise the listener logic.
       jest.resetModules();
 
+      addNotificationListener = jest.fn((notificationType, cb) => {
+        if (notificationType === notificationTypes.DECISION) {
+          capturedDecisionListener = cb;
+        }
+        if (notificationType === notificationTypes.ACTIVATE) {
+          capturedActivateListener = cb;
+        }
+      });
+
       jest.doMock('@optimizely/react-sdk', () => ({
         createInstance: jest.fn(() => ({
           notificationCenter: {
-            addNotificationListener: jest.fn((_, cb) => {
-              if (notificationListenerCount === 0) {
-                capturedDecisionListener = cb;
-              }
-              if (notificationListenerCount === 1) {
-                capturedActivateListener = cb;
-              }
-              notificationListenerCount += 1;
-            }),
+            addNotificationListener,
           },
           track: mockTrack,
         })),
         OptimizelyProvider: jest.fn(),
         setLogger: jest.fn(),
         enums: {
-          NOTIFICATION_TYPES: {
-            DECISION: 'DECISION',
-            ACTIVATE: 'ACTIVATE',
-          },
+          NOTIFICATION_TYPES: notificationTypes,
         },
+      }));
+      jest.doMock('@optimizely/optimizely-sdk', () => ({
+        enums: { NOTIFICATION_TYPES: notificationTypes },
       }));
       jest.doMock('./isCypress', () => jest.fn().mockReturnValue(false));
       jest.doMock('#app/lib/optimizelyDecisionStore', () => ({
@@ -369,6 +373,13 @@ describe('withOptimizelyProvider HOC', () => {
 
     afterEach(() => {
       jest.resetModules();
+    });
+
+    it('should register an ACTIVATE notification listener', () => {
+      expect(addNotificationListener).toHaveBeenCalledWith(
+        notificationTypes.ACTIVATE,
+        expect.any(Function),
+      );
     });
 
     it('should call optimizely.track with page-views when decisionEventDispatched is true and the flag is active', () => {
@@ -713,6 +724,9 @@ describe('withOptimizelyProvider HOC', () => {
           },
         },
       }));
+      jest.doMock('@optimizely/optimizely-sdk', () => ({
+        enums: { NOTIFICATION_TYPES: notificationTypes },
+      }));
       jest.doMock('./isCypress', () => jest.fn().mockReturnValue(false));
       jest.doMock('#app/lib/optimizelyDecisionStore', () => ({
         notifyDecision: serverMockNotifyDecision,
@@ -736,6 +750,10 @@ describe('withOptimizelyProvider HOC', () => {
   describe('activation event tracking', () => {
     const mocksendOptimizelyActivationEvent = jest.fn();
     const mockNotifyDecision = jest.fn();
+    const notificationTypes = {
+      DECISION: 'DECISION',
+      ACTIVATE: 'ACTIVATE',
+    };
     const mockActivationTrackingData = {
       trackingIsEnabled: true,
       pageIdentifier: 'page-identifier',
@@ -746,12 +764,11 @@ describe('withOptimizelyProvider HOC', () => {
     };
     let capturedDecisionListener: ((payload: object) => void) | undefined;
     let capturedActivateListener: ((payload: object) => void) | undefined;
-    let notificationListenerCount = 0;
+    let addNotificationListener: jest.Mock;
 
     beforeEach(() => {
       capturedDecisionListener = undefined;
       capturedActivateListener = undefined;
-      notificationListenerCount = 0;
       mocksendOptimizelyActivationEvent.mockReset();
       mockNotifyDecision.mockReset().mockReturnValue(true);
 
@@ -760,28 +777,25 @@ describe('withOptimizelyProvider HOC', () => {
       jest.doMock('#lib/utilities/onClient', () =>
         jest.fn().mockReturnValue(true),
       );
+      addNotificationListener = jest.fn((notificationType, cb) => {
+        if (notificationType === notificationTypes.DECISION) {
+          capturedDecisionListener = cb;
+        }
+        if (notificationType === notificationTypes.ACTIVATE) {
+          capturedActivateListener = cb;
+        }
+      });
       jest.doMock('@optimizely/react-sdk', () => ({
         createInstance: jest.fn(() => ({
           notificationCenter: {
-            addNotificationListener: jest.fn((_, cb) => {
-              if (notificationListenerCount === 0) {
-                capturedDecisionListener = cb;
-              }
-              if (notificationListenerCount === 1) {
-                capturedActivateListener = cb;
-              }
-              notificationListenerCount += 1;
-            }),
+            addNotificationListener,
           },
           track: jest.fn(),
         })),
         OptimizelyProvider: jest.fn(),
         setLogger: jest.fn(),
         enums: {
-          NOTIFICATION_TYPES: {
-            DECISION: 'DECISION',
-            ACTIVATE: 'ACTIVATE',
-          },
+          NOTIFICATION_TYPES: notificationTypes,
         },
       }));
       jest.doMock('./isCypress', () => jest.fn().mockReturnValue(false));
@@ -804,6 +818,13 @@ describe('withOptimizelyProvider HOC', () => {
 
     afterEach(() => {
       jest.resetModules();
+    });
+
+    it('should register an ACTIVATE notification listener', () => {
+      expect(addNotificationListener).toHaveBeenCalledWith(
+        notificationTypes.ACTIVATE,
+        expect.any(Function),
+      );
     });
 
     it('should send the activation event when a new decision is dispatched with an impression', () => {
