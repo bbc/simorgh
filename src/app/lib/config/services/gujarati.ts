@@ -99,6 +99,13 @@ export const service: DefaultServiceConfig = {
       relatedTopics: 'સંબંધિત મુદ્દા',
       moreOnThis: '',
       navMenuText: 'વિભાગો',
+      liteSite: {
+        onboardingMessage:
+          'તમે આ વેબસાઇટનું ટેક્સ્ટ-ઓન્લી વર્ઝન જોઈ રહ્યા છો જે ઓછો ડેટા વાપરે છે. તમામ ફોટા અને વીડિયો સાથેનું વેબસાઇટનું મુખ્ય વર્ઝન જુઓ.',
+        toMainSite: 'મને મુખ્ય વેબસાઇટ પર લઈ જાઓ',
+        informationPage: 'આ ડેટા-સેવિંગ વર્ઝન વિશે વધુ જાણો',
+        dataSaving: 'ડેટા સેવિંગ વર્ઝન',
+      },
       mediaAssetPage: {
         mediaPlayer: 'મીડિયા પ્લેયર',
         audioPlayer: 'ઓડિયો પ્લેયર',

@@ -124,6 +124,13 @@ export const service: DefaultServiceConfig = {
       relatedTopics: 'Tópicos relacionados',
       moreOnThis: '',
       navMenuText: 'Seções',
+      liteSite: {
+        onboardingMessage:
+          'Você está vendo uma versão somente texto deste site que usa menos dados. Veja a versão principal do site com todas as imagens e vídeos.',
+        toMainSite: 'Me leve para o site principal',
+        informationPage: 'Saiba mais sobre esta versão que economiza dados',
+        dataSaving: 'Versão que economiza dados',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',

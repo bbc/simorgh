@@ -102,6 +102,13 @@ export const service: DefaultServiceConfig = {
       relatedTopics: 'كلمات مفتاحية',
       moreOnThis: '',
       navMenuText: 'أقسام',
+      liteSite: {
+        onboardingMessage:
+          'أنت تشاهد نسخة نصية فقط من هذا الموقع تستخدم بيانات أقل. شاهد النسخة الرئيسية للموقع التي تتضمن جميع الصور ومقاطع الفيديو.',
+        toMainSite: 'انتقل إلى الموقع الرئيسي',
+        informationPage: 'اعرف المزيد عن هذه النسخة الموفرة للبيانات',
+        dataSaving: 'نسخة موفرة للبيانات',
+      },
       mediaAssetPage: {
         mediaPlayer: 'مشغل وسائط',
         audioPlayer: 'مشغل ملف صوتي',
