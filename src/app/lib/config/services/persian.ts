@@ -48,6 +48,10 @@ export const service: DefaultServiceConfig = {
     homePageTitle: 'صفحه اول',
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    electionBanner: {
+      electionThingIds: ['19994837-27b8-463f-965d-fbb0ac1622a3'],
+      assocPressIframeSrc: '',
+    },
     podcastPromo: {
       title: 'معرفی خبرنامه',
       brandTitle: 'خبرنامه بی‌بی‌سی فارسی',
