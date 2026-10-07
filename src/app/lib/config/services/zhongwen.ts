@@ -528,6 +528,10 @@ export const service: ZhongwenConfig = {
       text: '简',
       variant: 'simp',
     },
+    electionBanner: {
+      electionThingIds: ['19994837-27b8-463f-965d-fbb0ac1622a3'],
+      assocPressIframeSrc: '',
+    },
     translations: {
       and: '和',
       readTime: {
