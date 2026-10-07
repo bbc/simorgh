@@ -3,7 +3,6 @@ import Heading from '#app/components/Heading';
 import Pagination from '#app/components/Pagination';
 import MetadataContainer from '#app/components/Metadata';
 import TopicTags from '#app/components/TopicTags';
-import { AccountContext } from '#app/contexts/AccountContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { use } from 'react';
 import useUASRecentActivity from '#app/hooks/useUASRecentActivity';
