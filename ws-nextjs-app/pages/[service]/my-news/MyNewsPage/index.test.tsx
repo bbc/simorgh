@@ -31,6 +31,9 @@ jest.mock('#app/hooks/useUASFollowedTopics');
 const mockUseRecentActivity = useUASRecentActivity as jest.MockedFunction<
   typeof useUASRecentActivity
 >;
+const mockUseFollowedTopics = useUASFollowedTopics as jest.MockedFunction<
+  typeof useUASFollowedTopics
+>;
 
 const mockUseFollowedTopics = useUASFollowedTopics as jest.MockedFunction<
   typeof useUASFollowedTopics
@@ -203,5 +206,92 @@ describe('MyNewsPage', () => {
       screen.getByTestId('my-news-guest-sign-in-link'),
     ).toBeInTheDocument();
     expect(screen.getByTestId('my-news-register-link')).toBeInTheDocument();
+  });
+
+  it('should render followed topics when there are no saved articles', async () => {
+    mockUseFollowedTopics.mockReturnValue({
+      followedTopics: [
+        { id: 'topic-1', title: 'Cricket', service: 'hindi' },
+        { id: 'topic-2', title: 'Elections', service: 'hindi' },
+      ],
+      total: 2,
+      isLoading: false,
+      error: null,
+    });
+
+    await act(async () => {
+      render(<MyNewsPage />, renderOptions);
+    });
+
+    await waitFor(() => {
+      expect(screen.getByText('Followed Topics (2)')).toBeInTheDocument();
+      expect(screen.getByRole('link', { name: 'Cricket' })).toBeInTheDocument();
+      expect(
+        screen.getByRole('link', { name: 'Elections' }),
+      ).toBeInTheDocument();
+      expect(
+        screen.queryByText(myNewsTranslations.noArticles),
+      ).not.toBeInTheDocument();
+    });
+  });
+
+  it('should render followed topics alongside saved articles', async () => {
+    mockUseRecentActivity.mockReturnValue({
+      savedArticles: mockSavedArticles,
+      total: 2,
+      isLoading: false,
+      error: null,
+    });
+    mockUseFollowedTopics.mockReturnValue({
+      followedTopics: [{ id: 'topic-1', title: 'Cricket', service: 'hindi' }],
+      total: 1,
+      isLoading: false,
+      error: null,
+    });
+
+    await act(async () => {
+      render(<MyNewsPage />, renderOptions);
+    });
+
+    await waitFor(() => {
+      expect(screen.getByText('Followed Topics (1)')).toBeInTheDocument();
+      expect(screen.getByRole('link', { name: 'Cricket' })).toBeInTheDocument();
+      expect(screen.getByText('Saved Article One')).toBeInTheDocument();
+      expect(screen.getByText('Saved Article Two')).toBeInTheDocument();
+    });
+  });
+
+  it('should render loading state while followed topics are loading', async () => {
+    mockUseFollowedTopics.mockReturnValue({
+      followedTopics: [],
+      total: 0,
+      isLoading: true,
+      error: null,
+    });
+
+    await act(async () => {
+      render(<MyNewsPage />, renderOptions);
+    });
+
+    expect(screen.getByTestId('my-news-page-spinner')).toBeInTheDocument();
+  });
+
+  it('should display error state when followed topics API fails', async () => {
+    mockUseFollowedTopics.mockReturnValue({
+      followedTopics: [],
+      total: 0,
+      isLoading: false,
+      error: new Error('Failed to load topics'),
+    });
+
+    await act(async () => {
+      render(<MyNewsPage />, renderOptions);
+    });
+
+    await waitFor(() => {
+      expect(
+        screen.getByText(myNewsTranslations.errorText),
+      ).toBeInTheDocument();
+    });
   });
 });

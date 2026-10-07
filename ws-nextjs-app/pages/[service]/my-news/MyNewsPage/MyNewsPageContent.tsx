@@ -32,16 +32,13 @@ const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
   });
 
   const {
-    // followedTopics,
-    followedTopics: actualFollowedTopics,
+    followedTopics,
     total: topicsTotal,
     isLoading: topicsLoading,
     error: topicsError,
   } = useUASFollowedTopics({
     itemsPerPage: 100, // Load all topics at once for now
   });
-
-  const followedTopics = [];
 
   const pageCount = Math.max(1, Math.ceil(total / ITEMS_PER_PAGE));
 
@@ -123,15 +120,30 @@ const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
           }}
         />
 
-        {pageCount > 1 && (
-          <Pagination
-            activePage={activePage}
-            pageCount={pageCount}
-            pageXOfY={pageXOfY}
-            previousPage={previousPage}
-            nextPage={nextPage}
-            page={pageLabel}
-          />
+        {hasArticles && (
+          <section css={styles.section}>
+            <Heading level={2} css={styles.subheading} size="doublePica">
+              {description}
+            </Heading>
+            <CurationGrid
+              summaries={savedArticles}
+              headingLevel={3}
+              eventTrackingData={{
+                componentName: 'my-news-curation-grid',
+              }}
+            />
+
+            {pageCount > 1 && (
+              <Pagination
+                activePage={activePage}
+                pageCount={pageCount}
+                pageXOfY={pageXOfY}
+                previousPage={previousPage}
+                nextPage={nextPage}
+                page={pageLabel}
+              />
+            )}
+          </section>
         )}
       </section>
     );

@@ -1,4 +1,5 @@
 import nodeLogger from '#lib/logger.node';
+import type { Services } from '#app/models/types/global';
 import { UAS_API_ERROR } from '../logger.const';
 import uasApiRequest from './index';
 import { FOLLOWS_CONFIG } from './uasUtility';
@@ -8,10 +9,7 @@ const logger = nodeLogger(__filename);
 export interface FollowedTopic {
   id: string;
   title: string;
-  link: string;
-  description?: string;
   service?: string;
-  type: string;
 }
 
 export interface UasFollowItem {
@@ -25,8 +23,6 @@ export interface UasFollowItem {
     service?: string;
     topicId?: string;
     title?: string;
-    description?: string;
-    locatorUrl?: string;
   };
   '@id': string;
 }
@@ -45,16 +41,40 @@ interface GetFollowedTopicsParams {
   startIndex?: number;
   signal?: AbortSignal;
   isRefreshAvailable: boolean;
+  service?: Services;
 }
 
 const transformFollowToTopic = (item: UasFollowItem): FollowedTopic => ({
   id: item.resourceId,
-  title: item?.metaData?.title || '',
-  link: item?.metaData?.locatorUrl || '',
-  description: item?.metaData?.description,
-  service: item?.metaData?.service,
-  type: item.resourceType,
+  title: item.metaData?.title ?? '',
+  service: item.metaData?.service,
 });
+
+const hasRenderableMetadata = (item: UasFollowItem): boolean =>
+  Boolean(item.resourceId && item.metaData?.title);
+
+const belongsToService = (item: UasFollowItem, service?: Services): boolean => {
+  if (!service) return true;
+
+  return item.metaData?.service?.toLowerCase() === service.toLowerCase();
+};
+
+interface SafeFollowsResponse {
+  items: UasFollowItem[];
+  pagination?: UasFollowsResponse['pagination'];
+}
+
+const toSafeFollowsResponse = (data: unknown): SafeFollowsResponse => {
+  const body =
+    typeof data === 'object' && data !== null
+      ? (data as Partial<UasFollowsResponse>)
+      : {};
+
+  return {
+    items: Array.isArray(body.items) ? body.items : [],
+    pagination: body.pagination,
+  };
+};
 
 export type FollowedTopicsData = {
   followedTopics: FollowedTopic[];
@@ -68,6 +88,7 @@ const getFollowedTopics = async ({
   startIndex = 0,
   signal,
   isRefreshAvailable,
+  service,
 }: GetFollowedTopicsParams): Promise<FollowedTopicsData> => {
   try {
     const response = await uasApiRequest('GET', FOLLOWS_CONFIG.activityType, {
@@ -82,19 +103,19 @@ const getFollowedTopics = async ({
       isRefreshAvailable,
     });
 
-    const data: UasFollowsResponse = await response.json();
+    const data: unknown = await response.json();
+    const { items, pagination } = toSafeFollowsResponse(data);
 
-    const { items: allItems } = data;
-
-    const followedTopics = allItems
-      .filter(item => item.metaData != null)
+    const followedTopics = items
+      .filter(hasRenderableMetadata)
+      .filter(item => belongsToService(item, service))
       .map(transformFollowToTopic);
 
     return {
       followedTopics,
-      total: data.total,
-      itemsPerPage: data.pagination.itemsPerPage,
-      startIndex: data.pagination.startIndex,
+      total: followedTopics.length,
+      itemsPerPage: pagination?.itemsPerPage ?? itemsPerPage,
+      startIndex: pagination?.startIndex ?? startIndex,
     };
   } catch (error) {
     logger.error(UAS_API_ERROR, {
