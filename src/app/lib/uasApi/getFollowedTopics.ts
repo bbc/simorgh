@@ -1,4 +1,5 @@
 import nodeLogger from '#lib/logger.node';
+import type { Services } from '#app/models/types/global';
 import { UAS_API_ERROR } from '../logger.const';
 import uasApiRequest from './index';
 import { FOLLOWS_CONFIG } from './uasUtility';
@@ -40,6 +41,7 @@ interface GetFollowedTopicsParams {
   startIndex?: number;
   signal?: AbortSignal;
   isRefreshAvailable: boolean;
+  service?: Services;
 }
 
 const transformFollowToTopic = (item: UasFollowItem): FollowedTopic => ({
@@ -48,9 +50,31 @@ const transformFollowToTopic = (item: UasFollowItem): FollowedTopic => ({
   service: item.metaData?.service,
 });
 
-// A topic with no title can't be rendered meaningfully, so treat it as malformed
 const hasRenderableMetadata = (item: UasFollowItem): boolean =>
   Boolean(item.resourceId && item.metaData?.title);
+
+const belongsToService = (item: UasFollowItem, service?: Services): boolean => {
+  if (!service) return true;
+
+  return item.metaData?.service?.toLowerCase() === service.toLowerCase();
+};
+
+interface SafeFollowsResponse {
+  items: UasFollowItem[];
+  pagination?: UasFollowsResponse['pagination'];
+}
+
+const toSafeFollowsResponse = (data: unknown): SafeFollowsResponse => {
+  const body =
+    typeof data === 'object' && data !== null
+      ? (data as Partial<UasFollowsResponse>)
+      : {};
+
+  return {
+    items: Array.isArray(body.items) ? body.items : [],
+    pagination: body.pagination,
+  };
+};
 
 export type FollowedTopicsData = {
   followedTopics: FollowedTopic[];
@@ -64,6 +88,7 @@ const getFollowedTopics = async ({
   startIndex = 0,
   signal,
   isRefreshAvailable,
+  service,
 }: GetFollowedTopicsParams): Promise<FollowedTopicsData> => {
   try {
     const response = await uasApiRequest('GET', FOLLOWS_CONFIG.activityType, {
@@ -78,16 +103,17 @@ const getFollowedTopics = async ({
       isRefreshAvailable,
     });
 
-    const data: Partial<UasFollowsResponse> = await response.json();
-    const { items = [], total = 0, pagination } = data;
+    const data: unknown = await response.json();
+    const { items, pagination } = toSafeFollowsResponse(data);
 
     const followedTopics = items
       .filter(hasRenderableMetadata)
+      .filter(item => belongsToService(item, service))
       .map(transformFollowToTopic);
 
     return {
       followedTopics,
-      total,
+      total: followedTopics.length,
       itemsPerPage: pagination?.itemsPerPage ?? itemsPerPage,
       startIndex: pagination?.startIndex ?? startIndex,
     };
