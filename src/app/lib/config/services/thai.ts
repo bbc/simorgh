@@ -80,6 +80,13 @@ export const service: DefaultServiceConfig = {
       relatedTopics: 'ข่าวที่เกี่ยวข้อง',
       moreOnThis: '',
       navMenuText: 'หมวดข่าว',
+      liteSite: {
+        onboardingMessage:
+          'คุณกำลังดูเวอร์ชันข้อความล้วนของเว็บไซต์นี้ซึ่งใช้ข้อมูลน้อยลง ดูเวอร์ชันหลักของเว็บไซต์ที่มีภาพและวิดีโอทั้งหมด',
+        toMainSite: 'พาฉันไปที่เว็บไซต์หลัก',
+        informationPage: 'ดูข้อมูลเพิ่มเติมเกี่ยวกับเวอร์ชันประหยัดข้อมูลนี้',
+        dataSaving: 'เวอร์ชันประหยัดข้อมูล',
+      },
       mediaAssetPage: {
         mediaPlayer: 'มีเดีย เพลเยอร์',
         audioPlayer: 'ออดิโอ เพลเยอร์',

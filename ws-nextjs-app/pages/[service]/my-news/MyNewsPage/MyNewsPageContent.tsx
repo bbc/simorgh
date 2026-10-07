@@ -3,7 +3,6 @@ import Heading from '#app/components/Heading';
 import Pagination from '#app/components/Pagination';
 import MetadataContainer from '#app/components/Metadata';
 import TopicTags from '#app/components/TopicTags';
-import { AccountContext } from '#app/contexts/AccountContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { use } from 'react';
 import useUASRecentActivity from '#app/hooks/useUASRecentActivity';
@@ -20,8 +19,6 @@ interface MyNewsPageContentProps {
 
 const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
   const { translations, lang } = use(ServiceContext);
-  const { isArticlePersonalizationEnabled, isTopicPersonalizationEnabled } =
-    use(AccountContext);
 
   const activePage = Math.max(1, Number(page) || 1);
   const startIndex = (activePage - 1) * ITEMS_PER_PAGE;
@@ -32,16 +29,13 @@ const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
   });
 
   const {
-    // followedTopics,
-    followedTopics: actualFollowedTopics,
+    followedTopics,
     total: topicsTotal,
     isLoading: topicsLoading,
     error: topicsError,
   } = useUASFollowedTopics({
     itemsPerPage: 100, // Load all topics at once for now
   });
-
-  const followedTopics = [];
 
   const pageCount = Math.max(1, Math.ceil(total / ITEMS_PER_PAGE));
 
@@ -72,37 +66,25 @@ const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
   }
 
   const transformTopicsForRelatedTopics = () =>
-    followedTopics?.map(topic => ({
+    followedTopics.map(topic => ({
       topicId: topic.id,
       topicName: topic.title,
-      link: topic.link,
-    })) ?? [];
+    }));
 
-  const hasError = error || topicsError;
-
-  const renderFollowedTopicsContent = () => {
-    const hasTopics = followedTopics.length > 0;
-
-    return (
-      <section css={styles.section}>
-        <Heading level={2} css={styles.subheading} size="doublePica">
-          Followed Topics ({topicsTotal})
-        </Heading>
-        {!hasTopics ? (
-          <Text size="longPrimer" fontVariant="sansRegular">
-            You haven’t followed any topics yet
-          </Text>
-        ) : (
-          <TopicTags tags={transformTopicsForRelatedTopics()} />
-        )}
-      </section>
-    );
-  };
-
-  const renderSavedArticlesContent = () => {
+  const renderContent = () => {
     const hasArticles = savedArticles.length > 0;
+    const hasTopics = followedTopics.length > 0;
+    const hasError = error || topicsError;
 
-    if (!hasArticles) {
+    if (hasError) {
+      return (
+        <Text size="doublePica" fontVariant="sansBold">
+          {errorText}
+        </Text>
+      );
+    }
+
+    if (!hasArticles && !hasTopics) {
       return (
         <Text size="doublePica" fontVariant="sansBold">
           {noArticles}
@@ -111,29 +93,42 @@ const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
     }
 
     return (
-      <section css={styles.section}>
-        <Heading level={2} css={styles.subheading} size="doublePica">
-          {description}
-        </Heading>
-        <CurationGrid
-          summaries={savedArticles}
-          headingLevel={3}
-          eventTrackingData={{
-            componentName: 'my-news-curation-grid',
-          }}
-        />
-
-        {pageCount > 1 && (
-          <Pagination
-            activePage={activePage}
-            pageCount={pageCount}
-            pageXOfY={pageXOfY}
-            previousPage={previousPage}
-            nextPage={nextPage}
-            page={pageLabel}
-          />
+      <>
+        {hasTopics && (
+          <section css={styles.section}>
+            <Heading level={2} css={styles.subheading} size="doublePica">
+              Followed Topics ({topicsTotal})
+            </Heading>
+            <TopicTags tags={transformTopicsForRelatedTopics()} />
+          </section>
         )}
-      </section>
+
+        {hasArticles && (
+          <section css={styles.section}>
+            <Heading level={2} css={styles.subheading} size="doublePica">
+              {description}
+            </Heading>
+            <CurationGrid
+              summaries={savedArticles}
+              headingLevel={3}
+              eventTrackingData={{
+                componentName: 'my-news-curation-grid',
+              }}
+            />
+
+            {pageCount > 1 && (
+              <Pagination
+                activePage={activePage}
+                pageCount={pageCount}
+                pageXOfY={pageXOfY}
+                previousPage={previousPage}
+                nextPage={nextPage}
+                page={pageLabel}
+              />
+            )}
+          </section>
+        )}
+      </>
     );
   };
 
@@ -148,13 +143,7 @@ const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
       <Heading level={1} id="content" tabIndex={-1} css={styles.heading}>
         {title}
       </Heading>
-      {hasError && (
-        <Text size="doublePica" fontVariant="sansBold">
-          {errorText}
-        </Text>
-      )}
-      {isTopicPersonalizationEnabled && renderFollowedTopicsContent()}
-      {isArticlePersonalizationEnabled && renderSavedArticlesContent()}
+      {renderContent()}
     </>
   );
 };

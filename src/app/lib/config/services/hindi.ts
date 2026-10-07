@@ -99,6 +99,13 @@ export const service: DefaultServiceConfig = {
       relatedTopics: 'मिलते-जुलते मुद्दे',
       moreOnThis: '',
       navMenuText: 'सेक्शन',
+      liteSite: {
+        onboardingMessage:
+          'आप इस वेबसाइट का टेक्स्ट-ओनली वर्शन देख रहे हैं जो कम डेटा खर्च करता है. सभी तस्वीरों और वीडियो के साथ वेबसाइट का मुख्य वर्शन देखें.',
+        toMainSite: 'मुझे मुख्य वेबसाइट पर ले जाएं',
+        informationPage: 'डेटा बचाने वाले इस वर्शन के बारे में और जानें',
+        dataSaving: 'डेटा बचाने वाला वर्शन',
+      },
       mediaAssetPage: {
         mediaPlayer: 'मीडिया प्लेयर',
         audioPlayer: 'ऑडिया प्लेयर',
@@ -148,7 +155,7 @@ export const service: DefaultServiceConfig = {
         removing: 'हटाया जा रहा है',
       },
       followTopicButton: {
-        loading: 'सेव किया जा रहा है…',
+        loading: 'लोड हो रहा है…',
         follow: 'फ़ॉलो करें',
         following: 'फ़ॉलो कर रहे हैं',
         followed: 'फ़ॉलो कर रहे हैं',
