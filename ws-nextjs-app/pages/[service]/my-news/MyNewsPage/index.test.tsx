@@ -226,7 +226,7 @@ describe('MyNewsPage', () => {
         screen.getByRole('link', { name: 'Elections' }),
       ).toBeInTheDocument();
       expect(
-        screen.queryByText(myNewsTranslations.noArticles),
+        screen.queryByText('You haven’t followed any topics yet'),
       ).not.toBeInTheDocument();
     });
   });
