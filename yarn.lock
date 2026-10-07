@@ -3020,18 +3020,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@happy-dom/jest-environment@npm:20.13.2":
-  version: 20.13.2
-  resolution: "@happy-dom/jest-environment@npm:20.13.2"
+"@happy-dom/jest-environment@npm:20.14.5":
+  version: 20.14.5
+  resolution: "@happy-dom/jest-environment@npm:20.14.5"
   dependencies:
-    happy-dom: "npm:^20.13.2"
+    happy-dom: "npm:^20.14.5"
   peerDependencies:
     "@jest/environment": ">=25.0.0"
     "@jest/fake-timers": ">=25.0.0"
     "@jest/types": ">=25.0.0"
     jest-mock: ">=25.0.0"
     jest-util: ">=25.0.0"
-  checksum: 10/093480110f106812a5f15bd92d8a34d8888963a20642c78fe4ee0822ced8002cce594ba428a6c5a992ea7275a046b68a6bd750f77e424a44b8e1908c34ddf8a6
+  checksum: 10/b64b97feaf7cc5ddf7b6fd8fbdc4232543c79f5afe94da17b962fc99974e5d24561b4807b321842090276fe8ef19d581f7d3f596349bdf555f4933a4392b892c
   languageName: node
   linkType: hard
 
@@ -11218,9 +11218,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"happy-dom@npm:20.13.2":
-  version: 20.13.2
-  resolution: "happy-dom@npm:20.13.2"
+"happy-dom@npm:20.14.5, happy-dom@npm:^20.14.5":
+  version: 20.14.5
+  resolution: "happy-dom@npm:20.14.5"
   dependencies:
     "@types/node": "npm:>=20.0.0"
     "@types/whatwg-mimetype": "npm:^3.0.2"
@@ -11229,22 +11229,7 @@ __metadata:
     entities: "npm:^7.0.1"
     whatwg-mimetype: "npm:^3.0.0"
     ws: "npm:^8.21.0"
-  checksum: 10/a9da471036dd74832c80f8989d1c88380133b1c72f671971da123c3887549b980665f3ba9f5f7f0b970b8c28e48f27763de4f8a06bc181ad9833f7306b9413c9
-  languageName: node
-  linkType: hard
-
-"happy-dom@npm:^20.13.2":
-  version: 20.14.0
-  resolution: "happy-dom@npm:20.14.0"
-  dependencies:
-    "@types/node": "npm:>=20.0.0"
-    "@types/whatwg-mimetype": "npm:^3.0.2"
-    "@types/ws": "npm:^8.18.1"
-    buffer-image-size: "npm:^0.6.4"
-    entities: "npm:^7.0.1"
-    whatwg-mimetype: "npm:^3.0.0"
-    ws: "npm:^8.21.0"
-  checksum: 10/d6cc3d22c4cec42e163225eddf2afe7fe9c98d38a69d5870d0b6195c83478f0d833c9747ba44f4a3cfb99f94d0c6ce4ab9a5b8174e8500a8d6b7f53f21bc0426
+  checksum: 10/5a1f177622e7d08d0ee27b2bdd4d2c86365989e04342c67b6afd623da968ace87d551fb9ea60085159d4d9174db040cd9b5320a430a0b899a06fbbfd1acf2374
   languageName: node
   linkType: hard
 
@@ -16700,7 +16685,7 @@ __metadata:
     "@emotion/react": "npm:11.14.0"
     "@emotion/server": "npm:11.11.0"
     "@emotion/styled": "npm:11.14.1"
-    "@happy-dom/jest-environment": "npm:20.13.2"
+    "@happy-dom/jest-environment": "npm:20.14.5"
     "@jest/environment": "npm:30.2.0"
     "@jest/globals": "npm:30.2.0"
     "@optimizely/optimizely-sdk": "npm:5.4.1"
@@ -16761,7 +16746,7 @@ __metadata:
     eslint-plugin-prettier: "npm:5.5.4"
     eslint-plugin-react: "npm:7.37.5"
     eslint-plugin-react-hooks: "npm:7.1.1"
-    happy-dom: "npm:20.13.2"
+    happy-dom: "npm:20.14.5"
     husky: "npm:9.1.7"
     identity-obj-proxy: "npm:3.0.0"
     jalaali-js: "npm:1.2.8"
