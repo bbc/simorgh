@@ -3,6 +3,7 @@ import Heading from '#app/components/Heading';
 import Pagination from '#app/components/Pagination';
 import MetadataContainer from '#app/components/Metadata';
 import TopicTags from '#app/components/TopicTags';
+import { AccountContext } from '#app/contexts/AccountContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { use } from 'react';
 import useUASRecentActivity from '#app/hooks/useUASRecentActivity';
@@ -19,6 +20,8 @@ interface MyNewsPageContentProps {
 
 const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
   const { translations, lang } = use(ServiceContext);
+  const { isArticlePersonalizationEnabled, isTopicPersonalizationEnabled } =
+    use(AccountContext);
 
   const activePage = Math.max(1, Number(page) || 1);
   const startIndex = (activePage - 1) * ITEMS_PER_PAGE;
@@ -95,7 +98,7 @@ const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
 
     return (
       <>
-        {hasTopics && (
+        {isTopicPersonalizationEnabled && hasTopics && (
           <section css={styles.section}>
             <Heading level={2} css={styles.subheading} size="doublePica">
               Followed Topics ({topicsTotal})
@@ -109,7 +112,7 @@ const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
           </section>
         )}
 
-        {hasArticles && (
+        {isArticlePersonalizationEnabled && hasArticles && (
           <section css={styles.section}>
             <Heading level={2} css={styles.subheading} size="doublePica">
               {description}
