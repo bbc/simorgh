@@ -249,6 +249,118 @@ describe('getFollowedTopics', () => {
     });
   });
 
+  it('should fall back to defaults when the response body is null', async () => {
+    mockUasApiRequest.mockResolvedValueOnce({
+      json: jest.fn().mockResolvedValueOnce(null),
+    } as unknown as Response);
+
+    const result = await getFollowedTopics({
+      itemsPerPage: 15,
+      startIndex: 5,
+      isRefreshAvailable: false,
+    });
+
+    expect(result).toEqual({
+      followedTopics: [],
+      total: 0,
+      itemsPerPage: 15,
+      startIndex: 5,
+    });
+  });
+
+  it('should fall back to an empty list when items is null', async () => {
+    mockUasApiRequest.mockResolvedValueOnce({
+      json: jest.fn().mockResolvedValueOnce({
+        total: 0,
+        pagination: { startIndex: 0, itemsPerPage: 10 },
+        items: null,
+      }),
+    } as unknown as Response);
+
+    const result = await getFollowedTopics({ isRefreshAvailable: false });
+
+    expect(result.followedTopics).toHaveLength(0);
+  });
+
+  it('should fall back to an empty list when items is not an array', async () => {
+    mockUasApiRequest.mockResolvedValueOnce({
+      json: jest.fn().mockResolvedValueOnce({
+        total: 0,
+        pagination: { startIndex: 0, itemsPerPage: 10 },
+        items: 'not-an-array',
+      }),
+    } as unknown as Response);
+
+    const result = await getFollowedTopics({ isRefreshAvailable: false });
+
+    expect(result.followedTopics).toHaveLength(0);
+  });
+
+  it('should only include topics followed under the current service', async () => {
+    mockUasApiRequest.mockResolvedValueOnce({
+      json: jest.fn().mockResolvedValueOnce(mockFollowsResponse),
+    } as unknown as Response);
+
+    const result = await getFollowedTopics({
+      isRefreshAvailable: false,
+      service: 'hindi',
+    });
+
+    expect(result.followedTopics.map(topic => topic.id)).toEqual([
+      'topic1',
+      'topic2',
+    ]);
+  });
+
+  it('should exclude topics followed under a different service', async () => {
+    mockUasApiRequest.mockResolvedValueOnce({
+      json: jest.fn().mockResolvedValueOnce(mockFollowsResponse),
+    } as unknown as Response);
+
+    const result = await getFollowedTopics({
+      isRefreshAvailable: false,
+      service: 'urdu',
+    });
+
+    expect(result.followedTopics).toHaveLength(0);
+  });
+
+  it('should report total as the filtered count, not the raw UAS total', async () => {
+    const responseWithMixedServices = {
+      total: 3,
+      pagination: { startIndex: 0, itemsPerPage: 10 },
+      items: [
+        ...mockFollowsResponse.items,
+        {
+          activityType: 'follows',
+          resourceId: 'topic3',
+          resourceType: 'topic',
+          resourceDomain: 'world-service-news',
+          created: '2026-02-10T09:00:00Z',
+          action: 'followed',
+          metaData: {
+            service: 'urdu',
+            topicId: 'topic3',
+            title: 'Topic Title 3',
+          },
+          '@id': 'urn:bbc:world-service-news:topic:topic3',
+        } as UasFollowItem,
+      ],
+    };
+
+    mockUasApiRequest.mockResolvedValueOnce({
+      json: jest.fn().mockResolvedValueOnce(responseWithMixedServices),
+    } as unknown as Response);
+
+    const result = await getFollowedTopics({
+      isRefreshAvailable: false,
+      service: 'hindi',
+    });
+
+    expect(result.followedTopics).toHaveLength(2);
+    expect(result.total).toBe(2);
+  });
+
   it('should pass signal for abort control', async () => {
     mockUasApiRequest.mockResolvedValueOnce({
       json: jest.fn().mockResolvedValueOnce(mockFollowsResponse),

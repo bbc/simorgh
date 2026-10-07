@@ -11,6 +11,18 @@ const uasKeys = {
   follows: (userId: string) => [...uasKeys.all(userId), 'follows'] as const,
   followsList: (userId: string) =>
     [...uasKeys.follows(userId), 'list'] as const,
+  followsPage: (
+    userId: string,
+    startIndex: number,
+    itemsPerPage: number,
+    service?: string,
+  ) =>
+    [
+      ...uasKeys.followsList(userId),
+      service,
+      startIndex,
+      itemsPerPage,
+    ] as const,
   followStatus: (userId: string, topicId: string) =>
     [...uasKeys.follows(userId), 'status', topicId] as const,
 };

@@ -6,6 +6,7 @@ import getFollowedTopics, {
 import type { FollowedTopic } from '#app/lib/uasApi/getFollowedTopics';
 import uasKeys from '#app/lib/uasApi/queryKeys';
 import { AccountContext } from '#app/contexts/AccountContext';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import useUASFollowedTopics from '.';
 
 jest.mock('#app/lib/uasApi/getFollowedTopics');
@@ -163,9 +164,31 @@ describe('useUASFollowedTopics', () => {
     expect(mockEnabled).toBe(true);
   });
 
-  it('should include hashedUserId in the query key', () => {
-    renderHook(() => useUASFollowedTopics());
+  it('should include hashedUserId and startIndex in the query key', () => {
+    renderHook(() => useUASFollowedTopics({ startIndex: 10 }));
 
-    expect(mockQueryKey).toEqual(uasKeys.followsList('user-123'));
+    expect(mockQueryKey).toEqual(
+      uasKeys.followsPage('user-123', 10, 10, undefined),
+    );
+  });
+
+  it('should include the current service in the query key and pass it to getFollowedTopics', async () => {
+    (use as jest.Mock).mockImplementation((context: unknown) => {
+      if (context === AccountContext) return { hashedUserId: 'user-123' };
+      if (context === ServiceContext) return { service: 'hindi' };
+      return {};
+    });
+
+    renderHook(() => useUASFollowedTopics({ startIndex: 10 }));
+
+    expect(mockQueryKey).toEqual(
+      uasKeys.followsPage('user-123', 10, 10, 'hindi'),
+    );
+
+    await mockQueryFn({ signal: new AbortController().signal });
+
+    expect(mockGetFollowedTopics).toHaveBeenCalledWith(
+      expect.objectContaining({ service: 'hindi' }),
+    );
   });
 });
