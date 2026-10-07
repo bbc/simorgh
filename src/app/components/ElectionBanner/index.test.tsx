@@ -284,8 +284,16 @@ describe('ElectionBanner', () => {
       expect(iframe).not.toHaveAttribute('width');
     });
 
-    it('should render the title from service config', () => {
+    it('should render the title from service config on canonical', () => {
       const { getByText } = renderAssocPressBanner(false);
+
+      const title = getByText(MOCK_TITLE);
+
+      expect(title).toBeInTheDocument();
+    });
+
+    it('should render the title from service config on AMP', () => {
+      const { getByText } = renderAssocPressBanner(true);
 
       const title = getByText(MOCK_TITLE);
 
