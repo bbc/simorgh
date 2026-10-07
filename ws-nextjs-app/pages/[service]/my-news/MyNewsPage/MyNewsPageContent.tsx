@@ -72,7 +72,6 @@ const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
     followedTopics?.map(topic => ({
       topicId: topic.id,
       topicName: topic.title,
-      link: topic.link,
     })) ?? [];
 
   const hasError = error || topicsError;
