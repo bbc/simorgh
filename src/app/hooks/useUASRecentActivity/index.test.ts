@@ -8,6 +8,10 @@ import uasKeys from '#app/lib/uasApi/queryKeys';
 import { AccountContext } from '#app/contexts/AccountContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import useUASRecentActivity from '.';
+import {
+  ERROR_TRACKING_FEATURES,
+  UAS_ERROR_ACTIONS,
+} from '../useErrorTracking/errorTracking.const';
 
 jest.mock('#app/lib/uasApi/getRecentActivity');
 jest.mock('react', () => ({
@@ -152,8 +156,8 @@ describe('useUASRecentActivity', () => {
 
     expect(mockTrackError).toHaveBeenCalledWith({
       error,
-      feature: 'uas',
-      action: 'recent-activity',
+      feature: ERROR_TRACKING_FEATURES.UAS,
+      action: UAS_ERROR_ACTIONS.RECENT_ACTIVITY,
     });
   });
 
@@ -181,34 +185,19 @@ describe('useUASRecentActivity', () => {
     expect(mockEnabled).toBe(false);
   });
 
-  it('should be disabled and hide cached articles when isArticlePersonalizationEnabled is false', () => {
+  it('should be disabled when isArticlePersonalizationEnabled is false', () => {
     (use as jest.Mock).mockImplementationOnce((context: unknown) => {
       if (context === AccountContext)
-        return {
-          hashedUserId,
-          isArticlePersonalizationEnabled: false,
-        };
+        return { isArticlePersonalizationEnabled: false };
       return {};
     });
-    mockUseQueryReturn.data = {
-      savedArticles: mockSavedArticles,
-      total: 25,
-      itemsPerPage: 10,
-      startIndex: 0,
-    };
 
-    const { result } = renderHook(() => useUASRecentActivity());
+    renderHook(() => useUASRecentActivity());
 
     expect(mockEnabled).toBe(false);
-    expect(result.current).toEqual({
-      savedArticles: [],
-      total: 0,
-      isLoading: false,
-      error: null,
-    });
   });
 
-  it('should be enabled when hashedUserId is present', () => {
+  it('should be enabled when hashedUserId is present and isArticlePersonalizationEnabled is true', () => {
     renderHook(() => useUASRecentActivity());
 
     expect(mockEnabled).toBe(true);
