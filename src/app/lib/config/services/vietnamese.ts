@@ -69,6 +69,9 @@ export const service: DefaultServiceConfig = {
         moreAboutTopic: 'Thêm về {topic}',
         fetchErrorMessage: 'Tải không thành công. Vui lòng thử lại',
       },
+      googlePreferredSource: {
+        linkText: 'Thêm làm nguồn ưu tiên trên Google',
+      },
       currentPage: 'Trang hiện nay',
       skipLinkText: 'Bỏ qua để xem nội dung',
       skipContent: {

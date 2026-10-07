@@ -85,6 +85,9 @@ export const service: DefaultServiceConfig = {
         moreAboutTopic: 'Ihe ndị ọzọzọ banyere {topic}',
         fetchErrorMessage: 'Ọ dara ịgbakwunye. Biko nwalee ọzọ',
       },
+      googlePreferredSource: {
+        linkText: 'Tinye dịka ebe isi mmalite a họọrọ na Google',
+      },
       continueReading: "Gaa n'ihu gụọ",
       currentPage: 'Peegi ị nọ ugbua',
       skipLinkText: 'Wụga n’ọdịnaya',

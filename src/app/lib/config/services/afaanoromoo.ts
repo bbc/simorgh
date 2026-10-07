@@ -86,6 +86,9 @@ export const service: DefaultServiceConfig = {
         moreAboutTopic: '{topic} irratti dabalata',
         fetchErrorMessage: "Wal bira hin geenye. Mee irra deebi'ii yaali",
       },
+      googlePreferredSource: {
+        linkText: 'Google irratti akka filatamaa ta`etti dabali',
+      },
       currentPage: 'Fuula kan ammaa',
       skipLinkText: 'Qabiyyeetti darbi',
       skipContent: {

@@ -86,6 +86,9 @@ export const service: DefaultServiceConfig = {
         moreAboutTopic: '{topic} பற்றி மேலும்',
         fetchErrorMessage: 'ஏற்ற முடியவில்லை. மீண்டும் முயற்சிக்கவும்',
       },
+      googlePreferredSource: {
+        linkText: 'Google இல் விருப்பமான ஆதாரமாகச் சேர்க்கவும்',
+      },
       continueReading: 'தொடர்ந்து படியுங்கள்',
       currentPage: 'தற்போதுள்ள பக்கம்',
       skipLinkText: 'உள்ளடக்கத்துக்குத் தாண்டிச் செல்க',

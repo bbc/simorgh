@@ -4,6 +4,7 @@ import {
   createIchefSrcSet,
   createResponsiveSrcSet,
   getPlaceholderSrcSet,
+  prepareIchefImage,
 } from '.';
 
 describe('createResponsiveSrcSet', () => {
@@ -190,5 +191,57 @@ describe('getPlaceholderSrcSet', () => {
     ).toBe(
       'https://ichef.test.bbci.co.uk/images/ic/240xn/p01mt2kt.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01mt2kt.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01mt2kt.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01mt2kt.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01mt2kt.jpg.webp 800w',
     );
+  });
+});
+
+describe('prepareIchefImage', () => {
+  it('derives the origin code and locator from an iChef template url', () => {
+    expect(
+      prepareIchefImage({
+        imageUrlTemplate:
+          'https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/testland.jpg',
+        originalImageWidth: 1024,
+      }),
+    ).toEqual(
+      createIchefSrcSet({
+        originCode: 'cpsdevpb',
+        locator: 'testland.jpg',
+        originalImageWidth: 1024,
+      }),
+    );
+  });
+
+  it('passes through a requested source resolution', () => {
+    expect(
+      prepareIchefImage({
+        imageUrlTemplate:
+          'https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/testland.jpg',
+        originalImageWidth: 800,
+        srcResolution: 480,
+      }),
+    ).toEqual(
+      createIchefSrcSet({
+        originCode: 'cpsdevpb',
+        locator: 'testland.jpg',
+        originalImageWidth: 800,
+        srcResolution: 480,
+      }),
+    );
+  });
+
+  it('returns no sources when the template has no image path', () => {
+    expect(
+      prepareIchefImage({
+        imageUrlTemplate: 'https://ichef.bbci.co.uk/ace/ws/{width}',
+        originalImageWidth: 800,
+        srcResolution: 480,
+      }),
+    ).toEqual({
+      src: undefined,
+      primarySrcset: undefined,
+      primaryMimeType: undefined,
+      fallbackSrcset: undefined,
+      fallbackMimeType: undefined,
+    });
   });
 });
