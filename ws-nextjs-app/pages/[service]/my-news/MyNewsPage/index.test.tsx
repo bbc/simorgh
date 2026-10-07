@@ -62,6 +62,11 @@ const mockSavedArticles = [
   },
 ];
 
+const mockFollowedTopics = [
+  { id: 'topic-1', title: 'Cricket', service: 'hindi' },
+  { id: 'topic-2', title: 'Elections', service: 'hindi' },
+];
+
 describe('MyNewsPage', () => {
   beforeEach(() => {
     jest.clearAllMocks();
@@ -203,11 +208,8 @@ describe('MyNewsPage', () => {
 
   it('should render followed topics when there are no saved articles', async () => {
     mockUseFollowedTopics.mockReturnValue({
-      followedTopics: [
-        { id: 'topic-1', title: 'Cricket', service: 'hindi' },
-        { id: 'topic-2', title: 'Elections', service: 'hindi' },
-      ],
-      total: 2,
+      followedTopics: mockFollowedTopics,
+      total: mockFollowedTopics.length,
       isLoading: false,
       error: null,
     });
@@ -217,10 +219,14 @@ describe('MyNewsPage', () => {
     });
 
     await waitFor(() => {
-      expect(screen.getByText('Followed Topics (2)')).toBeInTheDocument();
-      expect(screen.getByRole('link', { name: 'Cricket' })).toBeInTheDocument();
       expect(
-        screen.getByRole('link', { name: 'Elections' }),
+        screen.getByText(`Followed Topics (${mockFollowedTopics.length})`),
+      ).toBeInTheDocument();
+      expect(
+        screen.getByRole('link', { name: mockFollowedTopics[0].title }),
+      ).toBeInTheDocument();
+      expect(
+        screen.getByRole('link', { name: mockFollowedTopics[1].title }),
       ).toBeInTheDocument();
       expect(
         screen.queryByText(myNewsTranslations.noArticles),
@@ -229,6 +235,8 @@ describe('MyNewsPage', () => {
   });
 
   it('should render followed topics alongside saved articles', async () => {
+    const [singleFollowedTopic] = mockFollowedTopics;
+
     mockUseRecentActivity.mockReturnValue({
       savedArticles: mockSavedArticles,
       total: 2,
@@ -236,7 +244,7 @@ describe('MyNewsPage', () => {
       error: null,
     });
     mockUseFollowedTopics.mockReturnValue({
-      followedTopics: [{ id: 'topic-1', title: 'Cricket', service: 'hindi' }],
+      followedTopics: [singleFollowedTopic],
       total: 1,
       isLoading: false,
       error: null,
@@ -248,7 +256,9 @@ describe('MyNewsPage', () => {
 
     await waitFor(() => {
       expect(screen.getByText('Followed Topics (1)')).toBeInTheDocument();
-      expect(screen.getByRole('link', { name: 'Cricket' })).toBeInTheDocument();
+      expect(
+        screen.getByRole('link', { name: singleFollowedTopic.title }),
+      ).toBeInTheDocument();
       expect(screen.getByText('Saved Article One')).toBeInTheDocument();
       expect(screen.getByText('Saved Article Two')).toBeInTheDocument();
     });
