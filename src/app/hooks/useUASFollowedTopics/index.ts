@@ -40,16 +40,6 @@ const useUASFollowedTopics = ({
     enabled: isQueryEnabled,
   });
 
-  // required to prevent from showing cached data when not expected
-  if (!isQueryEnabled) {
-    return {
-      followedTopics: [],
-      total: 0,
-      isLoading: false,
-      error: null,
-    };
-  }
-
   return {
     followedTopics: data?.followedTopics ?? [],
     total: data?.total ?? 0,
