@@ -7,10 +7,10 @@ import { Tag } from '#app/components/Metadata/types';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { MetadataTaggings } from '#app/models/types/metadata';
 import { ServiceConfig } from '#app/models/types/serviceConfig';
-import ElectionBanner from '.';
-import { DEFAULT_HEIGHTS_AP } from './index.styles';
+import ElectionBanner, { DEFAULT_HEIGHTS_AP } from '.';
 
 const MOCK_ELECTION_THING_ID = '647d5613-e0e2-4ef5-b0ce-b491de38bdbd';
+const MOCK_TITLE = 'Elecciones de mitad de período en Estados Unidos 2026';
 const MOCK_IFRAME_LIVE_SRC =
   'include/vjafwest/1365-2024-us-presidential-election-banner/mundo/app';
 const MOCK_IFRAME_DEV_SRC =
@@ -47,6 +47,7 @@ const ELEMENT_ID = 'election-banner';
 
 const mockServiceContext = {
   electionBanner: {
+    title: MOCK_TITLE,
     electionThingIds: [MOCK_ELECTION_THING_ID],
     iframeSrc: MOCK_IFRAME_LIVE_SRC,
     iframeDevSrc: MOCK_IFRAME_DEV_SRC,
@@ -55,6 +56,7 @@ const mockServiceContext = {
 
 const mockAssocPressServiceContext = {
   electionBanner: {
+    title: MOCK_TITLE,
     electionThingIds: [MOCK_ELECTION_THING_ID],
     iframeSrc: MOCK_IFRAME_LIVE_SRC,
     iframeDevSrc: MOCK_IFRAME_DEV_SRC,
@@ -76,6 +78,10 @@ const renderElectionBanner = (
 
 describe('ElectionBanner', () => {
   const originalEnv = process.env;
+
+  beforeEach(() => {
+    process.env = { ...originalEnv, SIMORGH_APP_ENV: 'test' };
+  });
 
   afterEach(() => {
     process.env = originalEnv;
@@ -103,26 +109,13 @@ describe('ElectionBanner', () => {
   describe.each(['canonical', 'amp'])('%s', platform => {
     const isAmp = platform === 'amp';
 
-    it.each(['live', 'test'])(
+    it.each(['local', 'test'])(
       'should use the correct URL for the iframe when SIMORGH_APP_ENV is "%s"',
       appEnv => {
-        let expectedIframeSrc = '';
-        if (appEnv === 'live') {
-          process.env.SIMORGH_INCLUDES_BASE_URL =
-            'https://www.bbc.com/ws/includes';
-          process.env.SIMORGH_INCLUDES_BASE_AMP_URL =
-            'https://news.files.bbci.co.uk';
-          expectedIframeSrc = MOCK_IFRAME_LIVE_SRC;
-        }
-
-        if (appEnv === 'test') {
-          process.env.SIMORGH_INCLUDES_BASE_URL =
-            'https://www.test.bbc.com/ws/includes';
-          process.env.SIMORGH_INCLUDES_BASE_AMP_URL =
-            'https://news.test.files.bbci.co.uk';
-          expectedIframeSrc = MOCK_IFRAME_DEV_SRC;
-        }
-
+        process.env.SIMORGH_INCLUDES_BASE_URL =
+          'https://www.test.bbc.com/ws/includes';
+        process.env.SIMORGH_INCLUDES_BASE_AMP_URL =
+          'https://news.test.files.bbci.co.uk';
         process.env.SIMORGH_APP_ENV = appEnv;
 
         const { getByTestId } = renderElectionBanner(
@@ -146,8 +139,30 @@ describe('ElectionBanner', () => {
           : process.env.SIMORGH_INCLUDES_BASE_URL;
 
         expect(iframeSrc).toEqual(
-          `${domain}/${expectedIframeSrc}${isAmp ? '/amp' : ''}`,
+          `${domain}/${MOCK_IFRAME_DEV_SRC}${isAmp ? '/amp' : ''}`,
         );
+      },
+    );
+
+    it.each([
+      ['VJ', mockServiceContext],
+      ['Associated Press', mockAssocPressServiceContext],
+    ])(
+      'should not render the %s ElectionBanner in Live even when enabled',
+      (_, serviceContext) => {
+        process.env.SIMORGH_APP_ENV = 'live';
+
+        const { container } = renderElectionBanner(
+          { aboutTags: mockAboutTags, taggings: mockTaggings },
+          {
+            toggles: { electionBanner: { enabled: true } },
+            isAmp,
+            service: 'mundo',
+          },
+          serviceContext,
+        );
+
+        expect(container).toBeEmptyDOMElement();
       },
     );
 
@@ -298,6 +313,22 @@ describe('ElectionBanner', () => {
       expect(iframe).toHaveAttribute('height', `${DEFAULT_HEIGHTS_AP.mobile}`);
       expect(iframe).toHaveAttribute('layout', 'fixed-height');
       expect(iframe).not.toHaveAttribute('width');
+    });
+
+    it('should render the title from service config on canonical', () => {
+      const { getByText } = renderAssocPressBanner(false);
+
+      const title = getByText(MOCK_TITLE);
+
+      expect(title).toBeInTheDocument();
+    });
+
+    it('should render the title from service config on AMP', () => {
+      const { getByText } = renderAssocPressBanner(true);
+
+      const title = getByText(MOCK_TITLE);
+
+      expect(title).toBeInTheDocument();
     });
   });
 });
