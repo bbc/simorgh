@@ -27,10 +27,15 @@ const useUASRecentActivity = ({
   itemsPerPage = 10,
   startIndex = 0,
 }: UseRecentActivityParams = {}): UseRecentActivityReturn => {
-  const { hashedUserId = '', isRefreshAvailable } = use(AccountContext);
+  const {
+    hashedUserId = '',
+    isRefreshAvailable,
+    isArticlePersonalizationEnabled,
+  } = use(AccountContext);
   const { service } = use(ServiceContext);
 
   const trackError = useErrorTracking();
+  const isQueryEnabled = !!hashedUserId && isArticlePersonalizationEnabled;
 
   const { data, isLoading, error } = useQuery({
     queryKey: uasKeys.favouritesPage(hashedUserId, startIndex, service),
@@ -42,7 +47,7 @@ const useUASRecentActivity = ({
         isRefreshAvailable,
         service,
       }),
-    enabled: !!hashedUserId,
+    enabled: isQueryEnabled,
   });
 
   useEffect(() => {
