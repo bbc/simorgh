@@ -107,6 +107,7 @@ $ap-election-banner-iframe-heights: (
 }
 
 .assocPressElectionBannerWrapperLivePage {
+  max-width: #{theme.pixelsToRem-px-to-rem(1280)};
   border-bottom: none;
 }
 
@@ -124,6 +125,10 @@ $ap-election-banner-iframe-heights: (
         map.get($ap-election-banner-iframe-heights, desktop)
       )};
   }
+}
+
+.assocPressElectionBannerIframeLivePage {
+  max-width: #{theme.pixelsToRem-px-to-rem(1280)};
 }
 
 .assocPressElectionBannerWrapperAmp {

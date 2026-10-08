@@ -359,8 +359,24 @@ describe('ElectionBanner', () => {
       );
 
       expect(getByTestId(ELEMENT_ID)).toHaveClass(
-        'assocPressElectionBannerWrapperLive',
+        'assocPressElectionBannerWrapperLivePage',
       );
+    });
+
+    it('should widen the Associated Press iframe max-width on Live pages', () => {
+      const { getByTestId } = renderElectionBanner(
+        { taggings: mockTaggings },
+        {
+          toggles: { electionBanner: { enabled: true } },
+          service: 'mundo',
+          pageType: LIVE_PAGE,
+        },
+        mockAssocPressServiceContext,
+      );
+
+      const iframe = getByTestId(ELEMENT_ID).querySelector('iframe');
+
+      expect(iframe).toHaveClass('assocPressElectionBannerIframeLivePage');
     });
 
     it('should not apply the full-bleed wrapper class on article pages', () => {

@@ -145,6 +145,9 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
               isAssocPress
                 ? styles.assocPressElectionBannerIframe
                 : styles.electionBannerIframe,
+              isLivePage &&
+                isAssocPress &&
+                styles.assocPressElectionBannerIframeLivePage,
             )}
             title={bannerTitle}
             src={src}
