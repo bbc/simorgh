@@ -1,5 +1,5 @@
 import { use } from 'react';
-import useCombinedClickTrackerHandler from '#containers/StoryPromo/useCombinedClickTrackerHandler';
+import useCombinedClickTrackerHandler from '#hooks/useCombinedClickTrackerHandler';
 import makeRelativeUrlPath from '../../../../lib/utilities/makeRelativeUrlPath';
 import StyledLink from './index.styles';
 import PromoContext from '../PromoContext';
