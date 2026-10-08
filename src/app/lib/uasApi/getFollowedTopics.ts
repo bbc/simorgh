@@ -64,6 +64,9 @@ interface SafeFollowsResponse {
   pagination?: UasFollowsResponse['pagination'];
 }
 
+const isUasFollowItem = (item: unknown): item is UasFollowItem =>
+  typeof item === 'object' && item !== null;
+
 const toSafeFollowsResponse = (data: unknown): SafeFollowsResponse => {
   const body =
     typeof data === 'object' && data !== null
@@ -71,7 +74,7 @@ const toSafeFollowsResponse = (data: unknown): SafeFollowsResponse => {
       : {};
 
   return {
-    items: Array.isArray(body.items) ? body.items : [],
+    items: Array.isArray(body.items) ? body.items.filter(isUasFollowItem) : [],
     pagination: body.pagination,
   };
 };
