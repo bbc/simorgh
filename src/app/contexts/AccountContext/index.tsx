@@ -10,7 +10,6 @@ import { AccountContextProps, IdctaConfig } from '#app/models/types/account';
 import appendCtaQueryParams from '#app/lib/idcta/appendCtaQueryParams';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
-import onClient from '#app/lib/utilities/onClient';
 import Cookie from 'js-cookie';
 import { getIdctaUserOrigin } from '#app/lib/idcta/getIDCTAUserOrigin';
 import useToggle from '#app/hooks/useToggle';
@@ -32,10 +31,6 @@ type AccountProviderProps = {
   initialConfig: IdctaConfig | null;
 };
 
-const getClientCookie = (cookieName: string) => {
-  return onClient() ? Cookie.get(cookieName) : undefined;
-};
-
 export const AccountProvider = ({
   children,
   initialConfig,
@@ -43,6 +38,10 @@ export const AccountProvider = ({
   const { locale, atiAnalyticsProducerName } = use(ServiceContext);
   const { isAmp = false, isApp = false, isLite = false } = use(RequestContext);
   const [pageToReturnTo, setPageToReturnTo] = useState<string | null>(null);
+  const [clientCookies, setClientCookies] = useState<{
+    signedInToken?: string;
+    hashedUserId?: string;
+  }>({});
   const { service } = use(ServiceContext);
   const { enabled: isPersonalizationToggleEnabled, value: accountService } =
     useToggle('uasPersonalization');
@@ -54,6 +53,15 @@ export const AccountProvider = ({
   useEffect(() => {
     setPageToReturnTo(window.location.href);
   }, []);
+
+  useEffect(() => {
+    setClientCookies({
+      signedInToken: Cookie.get(
+        initialConfig?.identity?.idSignedInCookieName || TOKEN_COOKIE_NAME,
+      ),
+      hashedUserId: Cookie.get(USER_ID_COOKIE_KEY),
+    });
+  }, [initialConfig]);
 
   // IDCTA / UAS is not available on AMP, Lite or App platforms — ensure provider
   // centralises this logic so individual components don't need to check platform.
@@ -79,11 +87,7 @@ export const AccountProvider = ({
   const signOutUrl = buildAccountUrl(initialConfig?.signout_url);
   const forYouUrl = buildAccountUrl(initialConfig?.foryou_url);
 
-  const signedInToken = getClientCookie(
-    initialConfig?.identity?.idSignedInCookieName || TOKEN_COOKIE_NAME,
-  );
-
-  const hashedUserId = getClientCookie(USER_ID_COOKIE_KEY);
+  const { signedInToken, hashedUserId } = clientCookies;
 
   const isSignedIn =
     isIdctaAvailable &&
