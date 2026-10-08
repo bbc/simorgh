@@ -50,6 +50,12 @@ const baseServiceConfig = {
   showAdPlaceholder: true,
   showRelatedTopics: true,
   timezone: 'GMT',
+  electionBanner: {
+    title: '美國大選 2026',
+    electionThingIds: ['19994837-27b8-463f-965d-fbb0ac1622a3'],
+    assocPressIframeSrc:
+      'https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/33245.html',
+  },
 };
 
 export const service: ZhongwenConfig = {
@@ -534,12 +540,6 @@ export const service: ZhongwenConfig = {
     scriptLink: {
       text: '简',
       variant: 'simp',
-    },
-    electionBanner: {
-      title: '美國大選 2026',
-      electionThingIds: ['19994837-27b8-463f-965d-fbb0ac1622a3'],
-      assocPressIframeSrc:
-        'https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/33245.html',
     },
     translations: {
       and: '和',
