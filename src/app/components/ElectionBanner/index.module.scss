@@ -24,6 +24,10 @@ $ap-election-banner-iframe-heights: (
   padding: #{theme.$spacings-full} 0;
 }
 
+.electionBannerWrapperLive {
+  padding: 0;
+}
+
 .electionBannerContent {
   padding: #{theme.$spacings-double};
   background: linear-gradient(180deg, #2d0059 0%, #230046 50%, #000000 100%);
@@ -94,6 +98,13 @@ $ap-election-banner-iframe-heights: (
   @media #{theme.$mediaQueries-group-4-min-width} {
     padding: #{theme.$spacings-double} #{theme.$spacings-double} 0;
   }
+}
+
+.assocPressElectionBannerWrapperLive {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: none;
 }
 
 .assocPressElectionBannerIframe {

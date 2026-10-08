@@ -8,6 +8,7 @@ import { Tag } from '#app/components/Metadata/types';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import isLive from '#app/lib/utilities/isLive';
+import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import { MetadataTaggings } from '#app/models/types/metadata';
 import styles from './index.module.scss';
 
@@ -38,9 +39,10 @@ export const DEFAULT_HEIGHTS_AP = {
 
 export default function ElectionBanner({ aboutTags, taggings }: Props) {
   const { electionBanner } = use(ServiceContext);
-  const { isAmp, isLite } = use(RequestContext);
+  const { isAmp, isLite, pageType } = use(RequestContext);
   const { enabled: electionBannerEnabled }: ToggleType =
     useToggle('electionBanner');
+  const isLivePage = pageType === LIVE_PAGE;
 
   if (isLive() || isLite || !electionBanner) return null;
 
@@ -57,7 +59,7 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
   );
 
   const hasValidTagLivePage = taggings?.some(({ value }) =>
-    electionThingIds.some(electionThingId => value.includes(electionThingId)),
+    electionThingIds?.some(electionThingId => value.includes(electionThingId)),
   );
 
   const validAboutTag = aboutTags?.find(({ thingId }) =>
@@ -120,11 +122,15 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
   return (
     <div
       data-testid="election-banner"
-      className={
+      className={clsx(
         isAssocPress
           ? styles.assocPressElectionBannerWrapper
-          : styles.electionBannerWrapper
-      }
+          : styles.electionBannerWrapper,
+        isLivePage &&
+          (isAssocPress
+            ? styles.assocPressElectionBannerWrapperLive
+            : styles.electionBannerWrapperLive),
+      )}
     >
       <div className={styles.electionBannerContent}>
         {hasTitle && <span className={styles.title}>{title}</span>}

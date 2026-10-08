@@ -203,8 +203,6 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
   const showPortraitVideoCarousel =
     portraitVideoItems && portraitVideoItems.portraitVideo.blocks.length > 0;
 
-  console.log('I have passportTaggings that are', passportTaggings);
-
   return (
     <>
       <ATIAnalytics />
