@@ -121,38 +121,44 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
 
   return (
     <div
-      data-testid="election-banner"
-      className={clsx(
-        isAssocPress
-          ? styles.assocPressElectionBannerWrapper
-          : styles.electionBannerWrapper,
-        isLivePage &&
-          (isAssocPress
-            ? styles.assocPressElectionBannerWrapperLive
-            : styles.electionBannerWrapperLive),
-      )}
+      {...(isLivePage && {
+        className: styles.assocPressElectionBannerBackgroundLivePage,
+      })}
     >
-      <div className={styles.electionBannerContent}>
-        {hasTitle && <span className={styles.title}>{title}</span>}
-        <iframe
-          className={clsx(
-            isAssocPress && 'ap-embed',
-            isAssocPress
-              ? styles.assocPressElectionBannerIframe
-              : styles.electionBannerIframe,
-          )}
-          title={bannerTitle}
-          src={src}
-          scrolling="no"
-          {...(!isAssocPress && { height: DEFAULT_HEIGHTS_VJ.desktop })}
-          width="100%"
-        />
-        {isAssocPress && (
-          <Script
-            src="https://interactives.apelections.org/election-results/assets/microsite/resizeClient.js"
-            strategy="lazyOnload"
-          />
+      <div
+        data-testid="election-banner"
+        className={clsx(
+          isAssocPress
+            ? styles.assocPressElectionBannerWrapper
+            : styles.electionBannerWrapper,
+          isLivePage &&
+            (isAssocPress
+              ? styles.assocPressElectionBannerWrapperLivePage
+              : styles.electionBannerWrapperLive),
         )}
+      >
+        <div className={styles.electionBannerContent}>
+          {hasTitle && <span className={styles.title}>{title}</span>}
+          <iframe
+            className={clsx(
+              isAssocPress && 'ap-embed',
+              isAssocPress
+                ? styles.assocPressElectionBannerIframe
+                : styles.electionBannerIframe,
+            )}
+            title={bannerTitle}
+            src={src}
+            scrolling="no"
+            {...(!isAssocPress && { height: DEFAULT_HEIGHTS_VJ.desktop })}
+            width="100%"
+          />
+          {isAssocPress && (
+            <Script
+              src="https://interactives.apelections.org/election-results/assets/microsite/resizeClient.js"
+              strategy="lazyOnload"
+            />
+          )}
+        </div>
       </div>
     </div>
   );

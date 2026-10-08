@@ -100,10 +100,13 @@ $ap-election-banner-iframe-heights: (
   }
 }
 
-.assocPressElectionBannerWrapperLive {
-  max-width: none;
-  margin: 0;
-  padding: 0;
+
+.assocPressElectionBannerBackgroundLivePage {
+    background: linear-gradient(180deg, #2d0059 0%, #230046 50%, #000000 100%);
+    border-bottom: solid #{theme.pixelsToRem-px-to-rem(1)} #{theme.$palette-black};
+}
+
+.assocPressElectionBannerWrapperLivePage {
   border-bottom: none;
 }
 
