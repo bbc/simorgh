@@ -48,6 +48,11 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
+    electionBanner: {
+      title: 'الانتخابات الأمريكية 2026',
+      electionThingIds: ['19994837-27b8-463f-965d-fbb0ac1622a3'],
+      assocPressIframeSrc: '',
+    },
     podcastPromo: {
       title: 'البودكاست',
       brandTitle: 'يستحق الانتباه',
@@ -102,6 +107,13 @@ export const service: DefaultServiceConfig = {
       relatedTopics: 'كلمات مفتاحية',
       moreOnThis: '',
       navMenuText: 'أقسام',
+      liteSite: {
+        onboardingMessage:
+          'أنت تشاهد نسخة نصية فقط من هذا الموقع تستخدم بيانات أقل. شاهد النسخة الرئيسية للموقع التي تتضمن جميع الصور ومقاطع الفيديو.',
+        toMainSite: 'انتقل إلى الموقع الرئيسي',
+        informationPage: 'اعرف المزيد عن هذه النسخة الموفرة للبيانات',
+        dataSaving: 'نسخة موفرة للبيانات',
+      },
       mediaAssetPage: {
         mediaPlayer: 'مشغل وسائط',
         audioPlayer: 'مشغل ملف صوتي',

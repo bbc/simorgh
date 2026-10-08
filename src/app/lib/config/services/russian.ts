@@ -10,6 +10,13 @@ const headerFooterTranslations = {
   home: 'Главная',
   currentPage: 'Текущая страница',
   navMenuText: 'Разделы',
+  liteSite: {
+    onboardingMessage:
+      'Вы просматриваете текстовую версию этого сайта, которая использует меньше данных. Посмотрите основную версию сайта со всеми изображениями и видео.',
+    toMainSite: 'Перейти на основную версию сайта',
+    informationPage: 'Узнать больше об этой версии с экономией трафика',
+    dataSaving: 'Версия с экономией трафика',
+  },
   consentBanner: {
     privacy: {
       title: 'Мы обновили наши правила использования личных данных и куки.',
@@ -108,6 +115,12 @@ const headerFooterTranslations = {
 
 export const service: DefaultServiceConfig = {
   default: {
+    electionBanner: {
+      title: 'Выборы в Конгресс США 2026',
+      electionThingIds: ['19994837-27b8-463f-965d-fbb0ac1622a3'],
+      assocPressIframeSrc:
+        'https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/33043.html',
+    },
     translations: {
       and: 'и',
       readTime: {

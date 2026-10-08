@@ -167,6 +167,13 @@ export const service: ZhongwenConfig = {
       relatedTopics: '相关主题内容',
       moreOnThis: '',
       navMenuText: '分类',
+      liteSite: {
+        onboardingMessage:
+          '您正在浏览本网站数据用量较少的纯文字版本。查看包含所有图片和视频的网站主版本。',
+        toMainSite: '带我去主网站',
+        informationPage: '了解更多关于这个省流量版本的信息',
+        dataSaving: '省流量版本',
+      },
       mediaAssetPage: {
         mediaPlayer: '多媒体播放器',
         audioPlayer: '音频播放器',
@@ -528,6 +535,11 @@ export const service: ZhongwenConfig = {
       text: '简',
       variant: 'simp',
     },
+    electionBanner: {
+      title: '美國大選 2026',
+      electionThingIds: ['19994837-27b8-463f-965d-fbb0ac1622a3'],
+      assocPressIframeSrc: '',
+    },
     translations: {
       and: '和',
       readTime: {
@@ -561,6 +573,13 @@ export const service: ZhongwenConfig = {
       relatedContent: '更多相關內容',
       relatedTopics: '相關主題內容',
       navMenuText: '分類',
+      liteSite: {
+        onboardingMessage:
+          '您正在瀏覽本網站數據用量較少的純文字版本。查看包含所有圖片和影片的網站主版本。',
+        toMainSite: '帶我去主網站',
+        informationPage: '了解更多關於這個省流量版本的資訊',
+        dataSaving: '省流量版本',
+      },
       mediaAssetPage: {
         mediaPlayer: '多媒體播放器',
         audioPlayer: '音頻播放器',

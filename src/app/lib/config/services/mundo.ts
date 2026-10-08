@@ -48,7 +48,8 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     electionBanner: {
-      electionThingIds: ['647d5613-e0e2-4ef5-b0ce-b491de38bdbd'],
+      title: 'Elecciones de mitad de período en Estados Unidos 2026',
+      electionThingIds: ['19994837-27b8-463f-965d-fbb0ac1622a3'],
       iframeSrc:
         'include/vjafwest/1365-2024-us-presidential-election-banner/mundo/app',
       iframeDevSrc:
@@ -128,6 +129,13 @@ export const service: DefaultServiceConfig = {
       relatedTopics: 'Temas relacionados',
       moreOnThis: '',
       navMenuText: 'Secciones',
+      liteSite: {
+        onboardingMessage:
+          'Estás viendo una versión de solo texto de este sitio web que usa menos datos. Mira la versión principal del sitio con todas las imágenes y videos.',
+        toMainSite: 'Llévame al sitio web principal',
+        informationPage: 'Descubre más sobre esta versión que ahorra datos',
+        dataSaving: 'Versión que ahorra datos',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Reproductor multimedia',
         audioPlayer: 'Reproductor de audio',
