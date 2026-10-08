@@ -47,6 +47,11 @@ export const service: DefaultServiceConfig = {
     homePageTitle: 'Accueil',
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    electionBanner: {
+      title: 'Élections de 2026 aux États-Unis',
+      electionThingIds: ['19994837-27b8-463f-965d-fbb0ac1622a3'],
+      assocPressIframeSrc: '',
+    },
     podcastPromo: {
       title: 'Promotion WhatsApp',
       brandTitle: 'BBC Afrique est sur WhatsApp',
