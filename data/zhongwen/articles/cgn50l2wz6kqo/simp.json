@@ -4,36 +4,36 @@
             "metadata": {
                 "atiAnalytics": {
                     "categoryName": null,
-                    "contentId": "urn:bbc:optimo:asset:cj631qdkpnr2o",
+                    "contentId": "urn:bbc:optimo:asset:cgn50l2wz6kqo",
                     "contentType": "article-sfv",
-                    "language": "zh-hant",
+                    "language": "zh-hans",
                     "ldpThingIds": null,
                     "ldpThingLabels": null,
                     "nationsProducer": null,
-                    "pageIdentifier": "zhongwen.articles.cj631qdkpnr2o.trad.page",
+                    "pageIdentifier": "zhongwen.listen.cgn50l2wz6kqo.simp.page",
                     "pageTitle": "Test",
-                    "timePublished": "2026-10-06T11:56:13.022Z",
-                    "timeUpdated": "2026-10-06T11:56:13.022Z",
+                    "timePublished": "2026-10-07T16:11:02.773Z",
+                    "timeUpdated": "2026-10-07T16:11:02.773Z",
                     "readTimeMilliseconds": 60000
                 },
-                "id": "urn:bbc:ares::article:cj631qdkpnr2o",
+                "id": "urn:bbc:ares::article:cgn50l2wz6kqo/zh-hans",
                 "locators": {
-                    "optimoUrn": "urn:bbc:optimo:asset:cj631qdkpnr2o",
-                    "canonicalUrl": "https://www.bbc.com/zhongwen/articles/cj631qdkpnr2o/trad"
+                    "optimoUrn": "urn:bbc:optimo:asset:cgn50l2wz6kqo",
+                    "canonicalUrl": "https://www.bbc.com/zhongwen/listen/cgn50l2wz6kqo/simp"
                 },
                 "type": "article",
                 "createdBy": "Zhongwen",
-                "language": "zh-hant",
-                "firstPublished": 1791287773022,
-                "lastPublished": 1791287773022,
+                "language": "zh-hans",
+                "firstPublished": 1791389462773,
+                "lastPublished": 1791389462773,
                 "isOppm": false,
                 "options": {
                     "includeComments": false
                 },
                 "analyticsLabels": {
-                    "contentId": "urn:bbc:optimo:asset:cj631qdkpnr2o",
+                    "contentId": "urn:bbc:optimo:asset:cgn50l2wz6kqo",
                     "producer": "Chinese",
-                    "page": "zhongwen.articles.cj631qdkpnr2o.trad.page",
+                    "page": "zhongwen.listen.cgn50l2wz6kqo.simp.page",
                     "irisKeyword": null
                 },
                 "passport": {
@@ -54,7 +54,7 @@
                         },
                         {
                             "predicate": "http://www.bbc.co.uk/ontologies/creativework/dateFirstReleased",
-                            "value": "2026-10-06T11:56:13.022Z"
+                            "value": "2026-10-07T16:11:02.773Z"
                         }
                     ],
                     "predicates": {
@@ -78,7 +78,7 @@
                         ],
                         "dateFirstReleased": [
                             {
-                                "value": "2026-10-06T11:56:13.022Z",
+                                "value": "2026-10-07T16:11:02.773Z",
                                 "type": "dateFirstReleased"
                             }
                         ]
@@ -109,30 +109,30 @@
                     "readTime": 1,
                     "wordCount": 6
                 },
-                "isTransliterated": false,
+                "isTransliterated": true,
                 "isKeyPointsFormatAsset": false
             },
             "content": {
                 "model": {
                     "blocks": [
                         {
-                            "id": "f2d50c06",
+                            "id": "6a55f4c7",
                             "type": "visuallyHiddenHeadline",
                             "model": {
                                 "blocks": [
                                     {
-                                        "id": "bad4cc96",
+                                        "id": "b245f9b2",
                                         "type": "text",
                                         "model": {
                                             "blocks": [
                                                 {
-                                                    "id": "a1a626e4",
+                                                    "id": "e8fd8bb3",
                                                     "type": "paragraph",
                                                     "model": {
                                                         "text": "syndication test run",
                                                         "blocks": [
                                                             {
-                                                                "id": "5e48ed38",
+                                                                "id": "662defd0",
                                                                 "type": "fragment",
                                                                 "model": {
                                                                     "text": "syndication test run",
@@ -167,29 +167,29 @@
                             ]
                         },
                         {
-                            "id": "c1af8465",
+                            "id": "a512674b",
                             "type": "audio",
                             "model": {
                                 "locator": "urn:bbc:pips:pid:p01wnb1g",
                                 "blocks": [
                                     {
-                                        "id": "79d9c32f",
+                                        "id": "bb8ee331",
                                         "type": "caption",
                                         "model": {
                                             "blocks": [
                                                 {
-                                                    "id": "a9e83a1b",
+                                                    "id": "b0005883",
                                                     "type": "text",
                                                     "model": {
                                                         "blocks": [
                                                             {
-                                                                "id": "8e490c85",
+                                                                "id": "e6ced8c5",
                                                                 "type": "paragraph",
                                                                 "model": {
                                                                     "text": "syndication test run",
                                                                     "blocks": [
                                                                         {
-                                                                            "id": "4f57f737",
+                                                                            "id": "c5e4aba0",
                                                                             "type": "fragment",
                                                                             "model": {
                                                                                 "text": "syndication test run",
@@ -228,12 +228,12 @@
                                         ]
                                     },
                                     {
-                                        "id": "6cd158e7",
+                                        "id": "8d863448",
                                         "type": "aresMedia",
                                         "model": {
                                             "blocks": [
                                                 {
-                                                    "id": "2b6ab4e8",
+                                                    "id": "be4a6dfb",
                                                     "blockId": "urn:bbc:ares::clip:p01wnb1g",
                                                     "type": "aresMediaMetadata",
                                                     "model": {
@@ -278,12 +278,12 @@
                                                     ]
                                                 },
                                                 {
-                                                    "id": "13809d2f",
+                                                    "id": "08ad9d27",
                                                     "type": "image",
                                                     "model": {
                                                         "blocks": [
                                                             {
-                                                                "id": "ae75fb15",
+                                                                "id": "f6b6295d",
                                                                 "type": "rawImage",
                                                                 "model": {
                                                                     "locator": null,
@@ -318,23 +318,23 @@
                             ]
                         },
                         {
-                            "id": "f8975a6e",
+                            "id": "221c270c",
                             "type": "fauxHeadline",
                             "model": {
                                 "blocks": [
                                     {
-                                        "id": "6e6377f2",
+                                        "id": "e8d540a4",
                                         "type": "text",
                                         "model": {
                                             "blocks": [
                                                 {
-                                                    "id": "e949bf94",
+                                                    "id": "3062dfed",
                                                     "type": "paragraph",
                                                     "model": {
                                                         "text": "syndication test run",
                                                         "blocks": [
                                                             {
-                                                                "id": "01a03589",
+                                                                "id": "ff157bae",
                                                                 "type": "fragment",
                                                                 "model": {
                                                                     "text": "syndication test run",
@@ -369,11 +369,11 @@
                             ]
                         },
                         {
-                            "id": "75239dc9",
+                            "id": "c43e6d8c",
                             "type": "timestamp",
                             "model": {
-                                "firstPublished": 1791287773022,
-                                "lastPublished": 1791287773022
+                                "firstPublished": 1791389462773,
+                                "lastPublished": 1791389462773
                             },
                             "position": [
                                 4
@@ -627,7 +627,7 @@
             "topStories": null,
             "features": null,
             "mostRead": null,
-            "latestMedia": [],
+            "latestMedia": null,
             "portraitVideoItems": null,
             "electionBanner": null,
             "countryCuration": null,
