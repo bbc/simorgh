@@ -457,11 +457,6 @@ export const service: ZhongwenConfig = {
   },
   trad: {
     ...baseServiceConfig,
-    electionBanner: {
-      electionThingIds: ['647d5613-e0e2-4ef5-b0ce-b491de38bdbd'],
-      assocPressIframeSrc:
-        'https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/33245.html',
-    },
     lang: `zh-hant`,
     locale: `zh-Hant`,
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
@@ -543,7 +538,8 @@ export const service: ZhongwenConfig = {
     electionBanner: {
       title: '美國大選 2026',
       electionThingIds: ['19994837-27b8-463f-965d-fbb0ac1622a3'],
-      assocPressIframeSrc: '',
+      assocPressIframeSrc:
+        'https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/33245.html',
     },
     translations: {
       and: '和',

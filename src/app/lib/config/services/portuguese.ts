@@ -49,7 +49,8 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     electionBanner: {
-      electionThingIds: ['647d5613-e0e2-4ef5-b0ce-b491de38bdbd'],
+      title: 'Eleições nos EUA 2026',
+      electionThingIds: ['19994837-27b8-463f-965d-fbb0ac1622a3'],
       assocPressIframeSrc:
         'https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/33042.html',
     },
@@ -91,11 +92,6 @@ export const service: DefaultServiceConfig = {
         text: 'Pule %title% e continue lendo',
         endTextVisuallyHidden: 'Fim da %title%',
       },
-    },
-    electionBanner: {
-      title: 'Eleições nos EUA 2026',
-      electionThingIds: ['19994837-27b8-463f-965d-fbb0ac1622a3'],
-      assocPressIframeSrc: '',
     },
     translations: {
       and: 'e',
