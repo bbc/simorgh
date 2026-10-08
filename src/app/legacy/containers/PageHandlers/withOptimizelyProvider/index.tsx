@@ -4,7 +4,11 @@ import {
   OptimizelyProvider,
   setLogger,
 } from '@optimizely/react-sdk';
-import { enums, ListenerPayload } from '@optimizely/optimizely-sdk';
+import { enums } from '@optimizely/optimizely-sdk';
+import type {
+  ActivateListenerPayload,
+  DecisionListenerPayload,
+} from '@optimizely/optimizely-sdk';
 import Cookie from 'js-cookie';
 import isLive from '#lib/utilities/isLive';
 import onClient from '#lib/utilities/onClient';
@@ -69,24 +73,13 @@ const trackPageEvents = () => {
   }
 };
 
-type DecisionInfo = {
-  flagKey?: string;
-  variationKey?: string;
-  decisionEventDispatched?: boolean;
-};
-
-type ActivateNotification = ListenerPayload & {
-  experiment?: { key?: string } | null;
-  variation?: { key?: string } | null;
-};
-
 const handleDecision = ({
   decisionKey,
   variationKey,
   impressionDispatched,
 }: {
   decisionKey?: string;
-  variationKey?: string;
+  variationKey?: string | null;
   impressionDispatched: boolean;
 }) => {
   if (!onClient()) return;
@@ -111,20 +104,22 @@ const handleDecision = ({
 
 optimizely?.notificationCenter?.addNotificationListener(
   enums.NOTIFICATION_TYPES.DECISION,
-  (notification: ListenerPayload & { decisionInfo?: DecisionInfo }) => {
+  (notification: DecisionListenerPayload) => {
+    if (notification.type !== enums.DECISION_NOTIFICATION_TYPES.FLAG) return;
+
     const { decisionInfo } = notification;
 
     handleDecision({
-      decisionKey: decisionInfo?.flagKey,
-      variationKey: decisionInfo?.variationKey,
-      impressionDispatched: Boolean(decisionInfo?.decisionEventDispatched),
+      decisionKey: decisionInfo.flagKey,
+      variationKey: decisionInfo.variationKey,
+      impressionDispatched: decisionInfo.decisionEventDispatched,
     });
   },
 );
 
 optimizely?.notificationCenter?.addNotificationListener(
   enums.NOTIFICATION_TYPES.ACTIVATE,
-  (notification: ActivateNotification) => {
+  (notification: ActivateListenerPayload) => {
     handleDecision({
       decisionKey: notification.experiment?.key,
       variationKey: notification.variation?.key,

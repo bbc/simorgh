@@ -2,6 +2,7 @@
 import { useMemo } from 'react';
 import * as optimizelyReactSdk from '@optimizely/react-sdk';
 import { UserInfo } from '@optimizely/react-sdk/dist/utils';
+import { enums as optimizelyEnums } from '@optimizely/optimizely-sdk';
 import { render } from '@testing-library/react';
 import Cookie from 'js-cookie';
 import { GROUP_3_MAX_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
@@ -309,10 +310,9 @@ describe('withOptimizelyProvider HOC', () => {
 
   describe('page view tracking', () => {
     const mockTrack = jest.fn();
-    const notificationTypes = {
-      DECISION: 'DECISION',
-      ACTIVATE: 'ACTIVATE',
-    };
+    const notificationTypes = optimizelyEnums.NOTIFICATION_TYPES;
+    const decisionNotificationTypes =
+      optimizelyEnums.DECISION_NOTIFICATION_TYPES;
     let capturedDecisionListener: ((payload: object) => void) | undefined;
     let capturedActivateListener: ((payload: object) => void) | undefined;
     let addNotificationListener: jest.Mock;
@@ -340,7 +340,8 @@ describe('withOptimizelyProvider HOC', () => {
 
       addNotificationListener = jest.fn((notificationType, cb) => {
         if (notificationType === notificationTypes.DECISION) {
-          capturedDecisionListener = cb;
+          capturedDecisionListener = payload =>
+            cb({ ...payload, type: decisionNotificationTypes.FLAG });
         }
         if (notificationType === notificationTypes.ACTIVATE) {
           capturedActivateListener = cb;
@@ -361,7 +362,10 @@ describe('withOptimizelyProvider HOC', () => {
         },
       }));
       jest.doMock('@optimizely/optimizely-sdk', () => ({
-        enums: { NOTIFICATION_TYPES: notificationTypes },
+        enums: {
+          NOTIFICATION_TYPES: notificationTypes,
+          DECISION_NOTIFICATION_TYPES: decisionNotificationTypes,
+        },
       }));
       jest.doMock('./isCypress', () => jest.fn().mockReturnValue(false));
       jest.doMock('#app/lib/optimizelyDecisionStore', () => ({
@@ -697,7 +701,8 @@ describe('withOptimizelyProvider HOC', () => {
           notificationCenter: {
             addNotificationListener: jest.fn((notificationType, cb) => {
               if (notificationType === notificationTypes.DECISION) {
-                serverCapturedDecisionListener = cb;
+                serverCapturedDecisionListener = payload =>
+                  cb({ ...payload, type: decisionNotificationTypes.FLAG });
               }
             }),
           },
@@ -713,7 +718,10 @@ describe('withOptimizelyProvider HOC', () => {
         },
       }));
       jest.doMock('@optimizely/optimizely-sdk', () => ({
-        enums: { NOTIFICATION_TYPES: notificationTypes },
+        enums: {
+          NOTIFICATION_TYPES: notificationTypes,
+          DECISION_NOTIFICATION_TYPES: decisionNotificationTypes,
+        },
       }));
       jest.doMock('./isCypress', () => jest.fn().mockReturnValue(false));
       jest.doMock('#app/lib/optimizelyDecisionStore', () => ({
@@ -738,10 +746,9 @@ describe('withOptimizelyProvider HOC', () => {
   describe('activation event tracking', () => {
     const mocksendOptimizelyActivationEvent = jest.fn();
     const mockNotifyDecision = jest.fn();
-    const notificationTypes = {
-      DECISION: 'DECISION',
-      ACTIVATE: 'ACTIVATE',
-    };
+    const notificationTypes = optimizelyEnums.NOTIFICATION_TYPES;
+    const decisionNotificationTypes =
+      optimizelyEnums.DECISION_NOTIFICATION_TYPES;
     const mockActivationTrackingData = {
       trackingIsEnabled: true,
       pageIdentifier: 'page-identifier',
@@ -767,7 +774,8 @@ describe('withOptimizelyProvider HOC', () => {
       );
       addNotificationListener = jest.fn((notificationType, cb) => {
         if (notificationType === notificationTypes.DECISION) {
-          capturedDecisionListener = cb;
+          capturedDecisionListener = payload =>
+            cb({ ...payload, type: decisionNotificationTypes.FLAG });
         }
         if (notificationType === notificationTypes.ACTIVATE) {
           capturedActivateListener = cb;
@@ -784,6 +792,12 @@ describe('withOptimizelyProvider HOC', () => {
         setLogger: jest.fn(),
         enums: {
           NOTIFICATION_TYPES: notificationTypes,
+        },
+      }));
+      jest.doMock('@optimizely/optimizely-sdk', () => ({
+        enums: {
+          NOTIFICATION_TYPES: notificationTypes,
+          DECISION_NOTIFICATION_TYPES: decisionNotificationTypes,
         },
       }));
       jest.doMock('./isCypress', () => jest.fn().mockReturnValue(false));
