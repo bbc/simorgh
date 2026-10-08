@@ -7,6 +7,7 @@ import useToggle from '#app/hooks/useToggle';
 import { Tag } from '#app/components/Metadata/types';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import isLive from '#app/lib/utilities/isLive';
 import { MetadataTaggings } from '#app/models/types/metadata';
 import styles from './index.module.scss';
 
@@ -40,7 +41,7 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
   const { enabled: electionBannerEnabled }: ToggleType =
     useToggle('electionBanner');
 
-  if (isLite || !electionBanner) return null;
+  if (isLive() || isLite || !electionBanner) return null;
 
   const {
     title,
