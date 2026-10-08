@@ -4,36 +4,36 @@
             "metadata": {
                 "atiAnalytics": {
                     "categoryName": null,
-                    "contentId": "urn:bbc:optimo:asset:clzq251rxrvjo",
+                    "contentId": "urn:bbc:optimo:asset:c7vxryk46w0qo",
                     "contentType": "article-sfv",
                     "language": "ar",
                     "ldpThingIds": null,
                     "ldpThingLabels": null,
                     "nationsProducer": null,
-                    "pageIdentifier": "arabic.articles.clzq251rxrvjo.page",
+                    "pageIdentifier": "arabic.watch.c7vxryk46w0qo.page",
                     "pageTitle": "BBC świadkiem ataku izraelskich osadników na grupę Palestyńczyków na Zachodnim Brzegu.",
-                    "timePublished": "2026-10-06T11:58:23.317Z",
-                    "timeUpdated": "2026-10-06T11:58:23.317Z",
+                    "timePublished": "2026-10-07T16:12:57.064Z",
+                    "timeUpdated": "2026-10-07T16:12:57.064Z",
                     "readTimeMilliseconds": 60000
                 },
-                "id": "urn:bbc:ares::article:clzq251rxrvjo",
+                "id": "urn:bbc:ares::article:c7vxryk46w0qo",
                 "locators": {
-                    "optimoUrn": "urn:bbc:optimo:asset:clzq251rxrvjo",
-                    "canonicalUrl": "https://www.bbc.com/arabic/articles/clzq251rxrvjo"
+                    "optimoUrn": "urn:bbc:optimo:asset:c7vxryk46w0qo",
+                    "canonicalUrl": "https://www.bbc.com/arabic/watch/c7vxryk46w0qo"
                 },
                 "type": "article",
                 "createdBy": "Arabic",
                 "language": "ar",
-                "firstPublished": 1791287903317,
-                "lastPublished": 1791287903317,
+                "firstPublished": 1791389577064,
+                "lastPublished": 1791389577064,
                 "isOppm": false,
                 "options": {
                     "includeComments": false
                 },
                 "analyticsLabels": {
-                    "contentId": "urn:bbc:optimo:asset:clzq251rxrvjo",
+                    "contentId": "urn:bbc:optimo:asset:c7vxryk46w0qo",
                     "producer": "Arabic",
-                    "page": "arabic.articles.clzq251rxrvjo.page",
+                    "page": "arabic.watch.c7vxryk46w0qo.page",
                     "irisKeyword": null
                 },
                 "passport": {
@@ -54,7 +54,7 @@
                         },
                         {
                             "predicate": "http://www.bbc.co.uk/ontologies/creativework/dateFirstReleased",
-                            "value": "2026-10-06T11:58:23.317Z"
+                            "value": "2026-10-07T16:12:57.064Z"
                         }
                     ],
                     "predicates": {
@@ -78,7 +78,7 @@
                         ],
                         "dateFirstReleased": [
                             {
-                                "value": "2026-10-06T11:58:23.317Z",
+                                "value": "2026-10-07T16:12:57.064Z",
                                 "type": "dateFirstReleased"
                             }
                         ]
@@ -114,23 +114,23 @@
                 "model": {
                     "blocks": [
                         {
-                            "id": "2b6343bd",
+                            "id": "cf683c21",
                             "type": "visuallyHiddenHeadline",
                             "model": {
                                 "blocks": [
                                     {
-                                        "id": "636d9bb3",
+                                        "id": "2c9c0de8",
                                         "type": "text",
                                         "model": {
                                             "blocks": [
                                                 {
-                                                    "id": "75d16dc0",
+                                                    "id": "0ec045e5",
                                                     "type": "paragraph",
                                                     "model": {
                                                         "text": "BBC świadkiem ataku izraelskich osadników na palestyńską farmę na Zachodnim Brzegu",
                                                         "blocks": [
                                                             {
-                                                                "id": "7cffe152",
+                                                                "id": "104e7c42",
                                                                 "type": "fragment",
                                                                 "model": {
                                                                     "text": "BBC świadkiem ataku izraelskich osadników na palestyńską farmę na Zachodnim Brzegu",
@@ -165,29 +165,29 @@
                             ]
                         },
                         {
-                            "id": "6899e156",
+                            "id": "568f628e",
                             "type": "video",
                             "model": {
                                 "locator": "urn:bbc:pips:pid:p01wppb0",
                                 "blocks": [
                                     {
-                                        "id": "7f15ddeb",
+                                        "id": "65dbdb92",
                                         "type": "caption",
                                         "model": {
                                             "blocks": [
                                                 {
-                                                    "id": "39bc9e37",
+                                                    "id": "d516a566",
                                                     "type": "text",
                                                     "model": {
                                                         "blocks": [
                                                             {
-                                                                "id": "27b0ac53",
+                                                                "id": "fa5aa938",
                                                                 "type": "paragraph",
                                                                 "model": {
                                                                     "text": "BBC świadkiem ataku izraelskich osadników na palestyńską farmę na Zachodnim Brzegu",
                                                                     "blocks": [
                                                                         {
-                                                                            "id": "60141ca8",
+                                                                            "id": "93755b7c",
                                                                             "type": "fragment",
                                                                             "model": {
                                                                                 "text": "BBC świadkiem ataku izraelskich osadników na palestyńską farmę na Zachodnim Brzegu",
@@ -226,12 +226,12 @@
                                         ]
                                     },
                                     {
-                                        "id": "e6f97b3c",
+                                        "id": "923585eb",
                                         "type": "aresMedia",
                                         "model": {
                                             "blocks": [
                                                 {
-                                                    "id": "61314d71",
+                                                    "id": "af4c6d3a",
                                                     "blockId": "urn:bbc:ares::clip:p01wppb0",
                                                     "type": "aresMediaMetadata",
                                                     "model": {
@@ -277,12 +277,12 @@
                                                     ]
                                                 },
                                                 {
-                                                    "id": "c469f1df",
+                                                    "id": "807232f9",
                                                     "type": "image",
                                                     "model": {
                                                         "blocks": [
                                                             {
-                                                                "id": "91fefa42",
+                                                                "id": "262620c3",
                                                                 "type": "rawImage",
                                                                 "model": {
                                                                     "width": 1280,
@@ -299,23 +299,23 @@
                                                                 ]
                                                             },
                                                             {
-                                                                "id": "6a3be66b",
+                                                                "id": "1f1fbd0e",
                                                                 "type": "altText",
                                                                 "model": {
                                                                     "blocks": [
                                                                         {
-                                                                            "id": "e8b6669d",
+                                                                            "id": "8af82da3",
                                                                             "type": "text",
                                                                             "model": {
                                                                                 "blocks": [
                                                                                     {
-                                                                                        "id": "7c168f1f",
+                                                                                        "id": "48cc96a7",
                                                                                         "type": "paragraph",
                                                                                         "model": {
                                                                                             "text": "Korespondentka BBC Lucy Williamson na palestyńskiej farmie na Zachodnim Brzegu, gdzie doszło do ataku.",
                                                                                             "blocks": [
                                                                                                 {
-                                                                                                    "id": "444f7506",
+                                                                                                    "id": "6d353b44",
                                                                                                     "type": "fragment",
                                                                                                     "model": {
                                                                                                         "text": "Korespondentka BBC Lucy Williamson na palestyńskiej farmie na Zachodnim Brzegu, gdzie doszło do ataku.",
@@ -383,23 +383,23 @@
                             ]
                         },
                         {
-                            "id": "9e1d664a",
+                            "id": "acee94b9",
                             "type": "fauxHeadline",
                             "model": {
                                 "blocks": [
                                     {
-                                        "id": "05e85e80",
+                                        "id": "2ce62049",
                                         "type": "text",
                                         "model": {
                                             "blocks": [
                                                 {
-                                                    "id": "18767d72",
+                                                    "id": "0a6f2eea",
                                                     "type": "paragraph",
                                                     "model": {
                                                         "text": "BBC świadkiem ataku izraelskich osadników na palestyńską farmę na Zachodnim Brzegu",
                                                         "blocks": [
                                                             {
-                                                                "id": "a3be4746",
+                                                                "id": "f32e35c4",
                                                                 "type": "fragment",
                                                                 "model": {
                                                                     "text": "BBC świadkiem ataku izraelskich osadników na palestyńską farmę na Zachodnim Brzegu",
@@ -434,11 +434,11 @@
                             ]
                         },
                         {
-                            "id": "19523fa9",
+                            "id": "59552600",
                             "type": "timestamp",
                             "model": {
-                                "firstPublished": 1791287903317,
-                                "lastPublished": 1791287903317
+                                "firstPublished": 1791389577064,
+                                "lastPublished": 1791389577064
                             },
                             "position": [
                                 4
