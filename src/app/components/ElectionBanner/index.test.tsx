@@ -166,6 +166,24 @@ describe('ElectionBanner', () => {
       expect(getByTestId(ELEMENT_ID)).toBeInTheDocument();
     });
 
+    it('should render ElectionBanner when live-page taggings contain an election thing ID', () => {
+      const { getByTestId } = renderElectionBanner(
+        { taggings: mockTaggings },
+        {
+          toggles: {
+            electionBanner: { enabled: true },
+          },
+          isAmp,
+          service: 'mundo',
+        },
+      );
+
+      const wrappingEl = getByTestId(ELEMENT_ID);
+      const iframe = wrappingEl.querySelector('iframe, amp-iframe');
+
+      expect(iframe).toHaveAttribute('title', 'Election banner');
+    });
+
     it('should not render ElectionBanner when taggings contain the editorialSensitivityId', () => {
       const { queryByTestId } = renderElectionBanner(
         {

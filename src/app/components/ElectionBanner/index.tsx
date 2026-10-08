@@ -10,7 +10,7 @@ import { MetadataTaggings } from '#app/models/types/metadata';
 import styles, { DEFAULT_HEIGHTS_AP, DEFAULT_HEIGHTS_VJ } from './index.styles';
 
 type Props = {
-  aboutTags: Tag[];
+  aboutTags?: Tag[];
   taggings: MetadataTaggings;
 };
 
@@ -20,6 +20,7 @@ type ToggleType = {
 };
 
 const SENSITIVE_ARTICLE_ID = 'f2b5dd0e-dda0-454c-893d-792d46ff48c3';
+const ELECTION_BANNER_TITLE = 'Election banner';
 
 export default function ElectionBanner({ aboutTags, taggings }: Props) {
   const { electionBanner } = use(ServiceContext);
@@ -36,14 +37,22 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
     value.includes(SENSITIVE_ARTICLE_ID),
   );
 
+  const hasValidTagLivePage = taggings?.some(({ value }) =>
+    electionThingIds.some(electionThingId => value.includes(electionThingId)),
+  );
+
   const validAboutTag = aboutTags?.find(({ thingId }) =>
     electionThingIds.includes(thingId),
   );
 
+  const hasValidElectionTag = Boolean(validAboutTag || hasValidTagLivePage);
+
   const showBanner =
-    !isEditoriallySensitive && validAboutTag && electionBannerEnabled;
+    !isEditoriallySensitive && hasValidElectionTag && electionBannerEnabled;
 
   if (!showBanner) return null;
+
+  const bannerTitle = validAboutTag?.thingLabel ?? ELECTION_BANNER_TITLE;
 
   const {
     SIMORGH_APP_ENV,
@@ -76,7 +85,7 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
             src,
             image:
               'https://news.files.bbci.co.uk/include/vjassets/img/app-launcher.png',
-            title: validAboutTag.thingLabel,
+            title: bannerTitle,
             ...(isAssocPress && { layout: 'fixed-height' as const }),
           }}
         />
@@ -95,7 +104,7 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
     >
       <iframe
         {...(isAssocPress && { className: 'ap-embed' })}
-        title={validAboutTag.thingLabel}
+        title={bannerTitle}
         src={src}
         scrolling="no"
         css={

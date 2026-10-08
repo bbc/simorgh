@@ -14,6 +14,7 @@ import { HeadToHeadV2Data } from '#app/components-webcore/SportDataHeader/head-t
 import { PortraitVideoItems } from '#app/models/types/optimo';
 import usePolling from '#app/hooks/usePolling';
 import useToggle from '#app/hooks/useToggle';
+import ElectionBanner from '#app/components/ElectionBanner';
 import {
   getImageFromPost,
   getHeadlineFromPost,
@@ -67,6 +68,7 @@ export type ComponentProps = {
       sportDataEvent: HeadToHeadV2Data;
       title: string;
     } | null;
+    passportTaggings?: []; // TODO - type
   };
 };
 
@@ -104,6 +106,7 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
     mediaCollections,
     portraitVideoItems,
     sportDataEventContent,
+    passportTaggings,
   } = pageData;
 
   const initialStreamData = liveTextStream?.content?.data ?? null;
@@ -200,6 +203,8 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
   const showPortraitVideoCarousel =
     portraitVideoItems && portraitVideoItems.portraitVideo.blocks.length > 0;
 
+  console.log('I have passportTaggings that are', passportTaggings);
+
   return (
     <>
       <ATIAnalytics />
@@ -235,6 +240,7 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
         })}
       />
       <main>
+        {passportTaggings && <ElectionBanner taggings={passportTaggings} />}
         <Header
           showLiveLabel={showSportData ? isSportDataLive : isLive}
           title={title}
