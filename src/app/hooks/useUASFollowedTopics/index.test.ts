@@ -7,6 +7,10 @@ import type { FollowedTopic } from '#app/lib/uasApi/getFollowedTopics';
 import uasKeys from '#app/lib/uasApi/queryKeys';
 import { AccountContext } from '#app/contexts/AccountContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import {
+  UAS_ERROR_ACTIONS,
+  ERROR_TRACKING_FEATURES,
+} from '#app/hooks/useErrorTracking/errorTracking.const';
 import useUASFollowedTopics from '.';
 
 jest.mock('#app/lib/uasApi/getFollowedTopics');
@@ -57,6 +61,8 @@ const mockFollowedTopics: FollowedTopic[] = [
   { id: 'topic-2', title: 'Topic Two', service: 'hindi' },
 ];
 
+const mockHashedUserId = 'user-123';
+
 describe('useUASFollowedTopics', () => {
   beforeEach(() => {
     jest.clearAllMocks();
@@ -65,7 +71,7 @@ describe('useUASFollowedTopics', () => {
     (use as jest.Mock).mockImplementation((context: unknown) => {
       if (context === AccountContext)
         return {
-          hashedUserId: 'user-123',
+          hashedUserId: mockHashedUserId,
           isTopicPersonalizationEnabled: true,
         };
       return {};
@@ -133,8 +139,8 @@ describe('useUASFollowedTopics', () => {
 
     expect(mockTrackError).toHaveBeenCalledWith({
       error,
-      feature: 'uas',
-      action: 'followed-topics',
+      feature: ERROR_TRACKING_FEATURES.UAS,
+      action: UAS_ERROR_ACTIONS.FOLLOWED_TOPICS,
     });
   });
 
@@ -184,13 +190,13 @@ describe('useUASFollowedTopics', () => {
     renderHook(() => useUASFollowedTopics({ startIndex: 10 }));
 
     expect(mockQueryKey).toEqual(
-      uasKeys.followsPage('user-123', 10, 10, undefined),
+      uasKeys.followsPage(mockHashedUserId, 10, 10, undefined),
     );
   });
 
   it('should include the current service in the query key and pass it to getFollowedTopics', async () => {
     (use as jest.Mock).mockImplementation((context: unknown) => {
-      if (context === AccountContext) return { hashedUserId: 'user-123' };
+      if (context === AccountContext) return { hashedUserId: mockHashedUserId };
       if (context === ServiceContext) return { service: 'hindi' };
       return {};
     });
@@ -198,7 +204,7 @@ describe('useUASFollowedTopics', () => {
     renderHook(() => useUASFollowedTopics({ startIndex: 10 }));
 
     expect(mockQueryKey).toEqual(
-      uasKeys.followsPage('user-123', 10, 10, 'hindi'),
+      uasKeys.followsPage(mockHashedUserId, 10, 10, 'hindi'),
     );
 
     await mockQueryFn({ signal: new AbortController().signal });
