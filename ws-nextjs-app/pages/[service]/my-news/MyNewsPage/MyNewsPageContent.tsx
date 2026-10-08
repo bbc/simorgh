@@ -144,13 +144,16 @@ const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
       <Heading level={1} id="content" tabIndex={-1} css={styles.heading}>
         {title}
       </Heading>
-      {hasError && (
+      {hasError ? (
         <Text size="doublePica" fontVariant="sansBold">
           {errorText}
         </Text>
+      ) : (
+        <>
+          {isTopicPersonalizationEnabled && renderFollowedTopicsContent()}
+          {isArticlePersonalizationEnabled && renderSavedArticlesContent()}
+        </>
       )}
-      {isTopicPersonalizationEnabled && renderFollowedTopicsContent()}
-      {isArticlePersonalizationEnabled && renderSavedArticlesContent()}
     </>
   );
 };
