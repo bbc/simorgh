@@ -473,10 +473,6 @@
       {
         "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
         "value": "http://www.bbc.co.uk/things/19994837-27b8-463f-965d-fbb0ac1622a3#id"
-      },
-      {
-        "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-        "value": "http://www.bbc.co.uk/things/19994837-27b8-463f-965d-fbb0ac1622a3#id"
       }
     ]
   },
