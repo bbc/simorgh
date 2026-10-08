@@ -83,6 +83,8 @@ const mockBuildGlobalId = buildGlobalId as jest.MockedFunction<
   typeof buildGlobalId
 >;
 
+const mockHashedUserId = 'user-123';
+
 describe('useTopicFollowButton', () => {
   const topicData = {
     topicId: 'urn:bbc:topic:climate-change',
@@ -106,7 +108,7 @@ describe('useTopicFollowButton', () => {
       if (context === ServiceContext) return { service: 'hindi' };
       if (context === AccountContext)
         return {
-          hashedUserId: 'user-123',
+          hashedUserId: mockHashedUserId,
           isRefreshAvailable: true,
         };
       return {};
@@ -192,7 +194,7 @@ describe('useTopicFollowButton', () => {
     });
 
     expect(mockSetQueryData).toHaveBeenCalledWith(
-      uasKeys.followStatus('user-123', topicData.topicId),
+      uasKeys.followStatus(mockHashedUserId, topicData.topicId),
       {
         isFollowed: true,
         metadata: {
@@ -204,7 +206,7 @@ describe('useTopicFollowButton', () => {
       },
     );
     expect(mockInvalidateQueries).toHaveBeenCalledWith({
-      queryKey: uasKeys.followsList('user-123'),
+      queryKey: uasKeys.followsList(mockHashedUserId),
     });
   });
 
@@ -216,14 +218,14 @@ describe('useTopicFollowButton', () => {
     });
 
     expect(mockSetQueryData).toHaveBeenCalledWith(
-      uasKeys.followStatus('user-123', topicData.topicId),
+      uasKeys.followStatus(mockHashedUserId, topicData.topicId),
       {
         isFollowed: false,
         metadata: undefined,
       },
     );
     expect(mockInvalidateQueries).toHaveBeenCalledWith({
-      queryKey: uasKeys.followsList('user-123'),
+      queryKey: uasKeys.followsList(mockHashedUserId),
     });
   });
 
