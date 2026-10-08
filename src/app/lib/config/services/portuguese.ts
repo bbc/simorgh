@@ -48,6 +48,11 @@ export const service: DefaultServiceConfig = {
     passportHomes: ['brasil'],
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    electionBanner: {
+      electionThingIds: ['647d5613-e0e2-4ef5-b0ce-b491de38bdbd'],
+      assocPressIframeSrc:
+        'https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/33042.html',
+    },
     articleMessageBanners: [
       {
         thingIds: ['b91eaef4-fdf2-47a6-b3ec-05b5a55a4843'],

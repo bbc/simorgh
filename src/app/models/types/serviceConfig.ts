@@ -124,10 +124,18 @@ export type ServiceConfig = {
       mobile: number;
     };
     electionThingIds: string[];
-    iframeSrc: string;
-    iframeDevSrc: string;
-    assocPressIframeSrc?: string;
-  };
+  } & (
+    | {
+        iframeSrc: string;
+        iframeDevSrc: string;
+        assocPressIframeSrc?: string;
+      }
+    | {
+        assocPressIframeSrc: string;
+        iframeSrc?: never;
+        iframeDevSrc?: never;
+      }
+  );
   articleMessageBanners?: ArticleMessageBannerConfig[];
   resonanceEnabled?: boolean;
 };

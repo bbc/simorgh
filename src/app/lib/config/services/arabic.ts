@@ -47,6 +47,11 @@ export const service: DefaultServiceConfig = {
     iTunesAppId: 6761256736,
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    electionBanner: {
+      electionThingIds: ['647d5613-e0e2-4ef5-b0ce-b491de38bdbd'],
+      assocPressIframeSrc:
+        'https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/33031.html',
+    },
     googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     podcastPromo: {
       title: 'البودكاست',
