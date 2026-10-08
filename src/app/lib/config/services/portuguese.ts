@@ -92,6 +92,11 @@ export const service: DefaultServiceConfig = {
         endTextVisuallyHidden: 'Fim da %title%',
       },
     },
+    electionBanner: {
+      title: 'Eleições nos EUA 2026',
+      electionThingIds: ['19994837-27b8-463f-965d-fbb0ac1622a3'],
+      assocPressIframeSrc: '',
+    },
     translations: {
       and: 'e',
       readTime: {

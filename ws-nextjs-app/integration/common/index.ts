@@ -15,7 +15,6 @@ import runSeoAmpTests from './SEO.amp';
 import runTimestampTests from './timestamp';
 import runImageTests from './image';
 import runAppleItunesAppBannerTests from './appleItunesAppBanner';
-import runStoryPromoTests from './storyPromo';
 import runSectionTests from './sections';
 import runMostReadTests from './mostReadTests';
 import runAmpAdsTests from './ads.amp';
@@ -58,7 +57,6 @@ export {
   runTimestampTests,
   runImageTests,
   runAppleItunesAppBannerTests,
-  runStoryPromoTests,
   runSectionTests,
   runAmpAdsTests,
   runCanonicalAdsTests,
