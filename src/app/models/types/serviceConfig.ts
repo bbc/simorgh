@@ -129,6 +129,12 @@ export type ServiceConfig = {
     assocPressIframeSrc?: string;
   };
   articleMessageBanners?: ArticleMessageBannerConfig[];
+  electionResults?: {
+    // About-tag thingIds of articles that show the native election results banner
+    thingIds: string[];
+    // Optional link for the 'LIVE updates' call to action
+    liveLink?: string;
+  };
   resonanceEnabled?: boolean;
 };
 

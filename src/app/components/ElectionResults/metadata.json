@@ -1,0 +1,29 @@
+{
+  "alpha": true,
+  "lastUpdated": {
+    "day": 8,
+    "month": "October",
+    "year": 2026
+  },
+  "uxAccessibilityDoc": {
+    "done": false,
+    "reference": {
+      "url": "https://www.figma.com/design/0NEhrBl5QqkhH4iPuAiDBY/WS-Election-Component?node-id=282-17944&t=CxOBCqReOnHKxgSN-1",
+      "label": "Screen Reader UX"
+    }
+  },
+  "acceptanceCriteria": {
+    "done": false,
+    "reference": {
+      "url": "<Dropbox Link>",
+      "label": "Accessibility Acceptance Criteria"
+    }
+  },
+  "swarm": {
+    "done": false,
+    "reference": {
+      "url": "<Dropbox Link>",
+      "label": "Accessibility Swarm Notes"
+    }
+  }
+}

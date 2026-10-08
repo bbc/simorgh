@@ -1,0 +1,33 @@
+@use '@scss/themeTokens' as theme;
+
+.wireframe {
+  padding: #{theme.$spacings-full};
+  border: #{theme.pixelsToRem-px-to-rem(1)} dashed theme.$palette-grey-5;
+  background-color: theme.$palette-white;
+  color: theme.$palette-black;
+
+  :global([data-is-dark-ui='true']) & {
+    background-color: theme.$palette-black;
+    color: theme.$palette-white;
+  }
+}
+
+.title {
+  margin: 0 0 #{theme.$spacings-full};
+}
+
+.list {
+  margin: 0 0 #{theme.$spacings-full};
+  padding-inline-start: #{theme.$spacings-double};
+
+  &:last-child {
+    margin-block-end: 0;
+  }
+}
+
+// Party colour comes from the BFF data, passed in as a CSS custom property
+.candidate {
+  padding-inline-start: #{theme.$spacings-half};
+  border-inline-start: #{theme.pixelsToRem-px-to-rem(4)} solid
+    var(--party-colour, #{theme.$palette-grey-5});
+}

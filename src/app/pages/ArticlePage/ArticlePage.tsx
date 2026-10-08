@@ -65,6 +65,7 @@ import repositionCountryTopic from '#app/components/TopicDiscovery/RepositionCou
 import GooglePreferredSource from '#app/components/GooglePreferredSource/GooglePreferredSourceLink';
 import GooglePreferredSourceDivider from '#app/components/GooglePreferredSource/GooglePreferredSourceDivider';
 import isGoogleReferral from '#app/lib/utilities/isGoogleReferral';
+import ArticleElectionResults from './ArticleElectionResults';
 import ArticleMessageBanner from './ArticleMessageBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -513,7 +514,15 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       {allowAdvertising && (
         <AdContainer slotType="leaderboard" adcampaign={adcampaign} />
       )}
-      <ElectionBanner aboutTags={aboutTags} taggings={taggings} />
+      {pageData?.electionBanner ? (
+        <ArticleElectionResults
+          results={pageData.electionBanner}
+          aboutTags={aboutTags}
+          taggings={taggings}
+        />
+      ) : (
+        <ElectionBanner aboutTags={aboutTags} taggings={taggings} />
+      )}
       <ArticleMessageBanner aboutTags={aboutTags} taggings={taggings} />
       <div css={styles.grid}>
         <div

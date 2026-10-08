@@ -1,0 +1,7 @@
+@use '@scss/themeTokens' as theme;
+
+.wrapper {
+  max-width: #{theme.pixelsToRem-px-to-rem(1008)};
+  margin-inline: auto;
+  padding-block: #{theme.$spacings-triple};
+}

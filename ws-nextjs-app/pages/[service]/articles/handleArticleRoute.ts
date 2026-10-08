@@ -125,6 +125,7 @@ export default async (context: GetServerSidePropsContext) => {
     portraitVideoItems = null,
     countryCuration = null,
     countryTopicIdToReorder = null,
+    electionBanner = null,
   } = secondaryData || {};
 
   const transformedArticleData = transformPageData()(article);
@@ -154,6 +155,7 @@ export default async (context: GetServerSidePropsContext) => {
         portraitVideoItems,
         countryCuration,
         countryTopicIdToReorder,
+        electionBanner,
       },
       pageType: derivedPageType,
       pathname: canonicalPathname,

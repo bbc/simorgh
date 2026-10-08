@@ -68,6 +68,32 @@ describe('handleArticleRoute', () => {
     expect(result.props.pathname).toEqual(requestUrl);
   });
 
+  it('passes BFF election results through to pageData', async () => {
+    const electionBanner = { title: 'Nigeria Presidential Election 2027' };
+    jest.spyOn(getPageDataModule, 'default').mockResolvedValue({
+      data: {
+        pageData: {
+          ...pidginMediaArticleFixtureData.data,
+          secondaryData: {
+            ...pidginMediaArticleFixtureData.data.secondaryData,
+            electionBanner,
+          },
+        },
+        status: 200,
+      },
+    });
+
+    const result = await handleArticleRoute(mockGetServerSidePropsContext);
+
+    expect(result.props.pageData?.electionBanner).toEqual(electionBanner);
+  });
+
+  it('defaults election results to null when the BFF sends none', async () => {
+    const result = await handleArticleRoute(mockGetServerSidePropsContext);
+
+    expect(result.props.pageData?.electionBanner).toBeNull();
+  });
+
   it('returns correct cache-control header if article is older than six hours', async () => {
     jest.spyOn(Date, 'now').mockImplementation(() => 2673964957894);
 
