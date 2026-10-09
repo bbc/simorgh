@@ -239,7 +239,7 @@ describe('Timestamp utility functions', () => {
           timezone: 'GMT',
           locale: 'ar',
         }),
-      ).toEqual('١٩ أكتوبر ٢٠١٨');
+      ).toEqual('19 أكتوبر/ تشرين الأول 2018');
     });
 
     it('should apply locale-sensitive format tokens (LL, LT) for a non-Latin locale', () => {
@@ -250,7 +250,7 @@ describe('Timestamp utility functions', () => {
           timezone: 'GMT',
           locale: 'ar',
         }),
-      ).toEqual('١٩ أكتوبر ٢٠١٨، ١٧:١٠ GMT');
+      ).toEqual('19 أكتوبر/ تشرين الأول 2018، 17:10 GMT');
     });
 
     it('should return relative timestamp in the provided locale', () => {
