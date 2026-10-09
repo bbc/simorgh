@@ -13,6 +13,7 @@ import {
 import useScrollDepthTracker, {
   getHomePageBounds,
 } from '#app/hooks/useScrollDepthTracker';
+import Riddle from '#app/components/Riddle';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import {
   Curation,
@@ -118,6 +119,12 @@ const HomePage = ({ pageData }: HomePageProps) => {
         </VisuallyHiddenText>
         <div css={styles.inner}>
           <div css={styles.margins}>
+            <div css={styles.riddleContainer}>
+              <div css={styles.riddleMaxWidth}>
+                <Riddle />
+              </div>
+            </div>
+
             {curations.map(
               (
                 {

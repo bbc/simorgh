@@ -1,0 +1,61 @@
+import { use, useEffect, useState } from 'react';
+import onClient from '#app/lib/utilities/onClient';
+import Text from '../../../Text';
+import style from './index.styles';
+import { LocalStorageContext } from '../../LocalStorageProvider';
+
+const ReadMeter = ({ wordCount = 0 }: { wordCount?: number }) => {
+  const { coins, addCoins } = use(LocalStorageContext);
+  const [message, setMessage] = useState<null | string>(null);
+
+  useEffect(() => {
+    let prevTime = new Date().getTime();
+    let prevScrollDepth = window.scrollY;
+
+    const RATE_OF_SCROLL_THRESHOLD = 300;
+    const listener = () => {
+      const documentHeight = document.body.scrollHeight;
+      const currTime = new Date().getTime();
+      const currScrollDepth = window.scrollY;
+      const scrollDelta = currScrollDepth - prevScrollDepth;
+      const rateOfScroll = (scrollDelta / (currTime - prevTime)) * 1000;
+
+      const wordsPerLine = wordCount / documentHeight;
+      const wordsReadInScroll = Math.ceil(scrollDelta * wordsPerLine);
+
+      if (rateOfScroll > 0 && rateOfScroll <= RATE_OF_SCROLL_THRESHOLD) {
+        addCoins(wordsReadInScroll);
+      } else if (rateOfScroll > 0) {
+        setMessage('TOO FAST!');
+        setTimeout(() => {
+          setMessage(null);
+        }, 2000);
+      }
+
+      prevTime = currTime;
+      prevScrollDepth = currScrollDepth;
+    };
+    console.log('CHECK', wordCount);
+    document.addEventListener('scrollend', listener);
+    return () => {
+      document.removeEventListener('scrollend', listener);
+    };
+  }, [addCoins, wordCount]);
+
+  return (
+    <div css={style.container}>
+      <Text css={style.heading} size="brevier" fontVariant="sansBold">
+        CREDITS
+      </Text>
+      <Text css={style.guage} size="pica" fontVariant="serifLight">
+        {message ?? coins}
+      </Text>
+    </div>
+  );
+};
+
+export default ({ wordCount }: { wordCount?: number }) => {
+  const ReadMeterWithProvider = <ReadMeter wordCount={wordCount} />;
+
+  return onClient() ? ReadMeterWithProvider : null;
+};
