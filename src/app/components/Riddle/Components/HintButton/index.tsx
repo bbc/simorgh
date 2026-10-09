@@ -23,47 +23,45 @@ export default ({
   const paidStatus = paidHints[index];
 
   const isAffordable = price <= coins;
-
-  return <div>{priceText}</div>;
-  // return (
-  //   <div css={style.hintContainer}>
-  //     <button
-  //       type="button"
-  //       css={style.hintButton}
-  //       onClick={() => {
-  //         if (onClickFn) {
-  //           onClickFn();
-  //         }
-  //         buyHint(index, price);
-  //       }}
-  //       {...((paidStatus || !isAffordable) && { disabled: true })}
-  //     >
-  //       {paidStatus && (
-  //         <div css={style.paidIcon}>
-  //           <Text size="minion" fontVariant="sansBold">
-  //             Paid
-  //           </Text>
-  //         </div>
-  //       )}
-  //       <Text css={style.hintPrice} size="pica" fontVariant="serifLight">
-  //         {paidStatus ? paidSymbol : priceText}
-  //       </Text>
-  //       <Text css={style.hintSummaryText} size="pica" fontVariant="sansBold">
-  //         {title.length > 0 ? title : 'Hint'}
-  //       </Text>
-  //       {!paidStatus && !isAffordable && (
-  //         <div css={style.notEnough}>
-  //           <Text size="minion" fontVariant="sansBold">
-  //             Not enough credits
-  //           </Text>
-  //         </div>
-  //       )}
-  //       {paidStatus && (
-  //         <Text css={style.hintAnswerText} size="pica" fontVariant="sansBold">
-  //           {hintText}
-  //         </Text>
-  //       )}
-  //     </button>
-  //   </div>
-  // );
+  return (
+    <div css={style.hintContainer}>
+      <button
+        type="button"
+        css={style.hintButton}
+        onClick={() => {
+          if (onClickFn) {
+            onClickFn();
+          }
+          buyHint(index, price);
+        }}
+        {...((paidStatus || !isAffordable) && { disabled: true })}
+      >
+        {paidStatus && (
+          <div css={style.paidIcon}>
+            <Text size="minion" fontVariant="sansBold">
+              Paid
+            </Text>
+          </div>
+        )}
+        <Text css={style.hintPrice} size="pica" fontVariant="serifLight">
+          {paidStatus ? paidSymbol : priceText}
+        </Text>
+        <Text css={style.hintSummaryText} size="pica" fontVariant="sansBold">
+          {title.length > 0 ? title : 'Hint'}
+        </Text>
+        {!paidStatus && !isAffordable && (
+          <div css={style.notEnough}>
+            <Text size="minion" fontVariant="sansBold">
+              Not enough credits
+            </Text>
+          </div>
+        )}
+        {paidStatus && (
+          <Text css={style.hintAnswerText} size="pica" fontVariant="sansBold">
+            {hintText}
+          </Text>
+        )}
+      </button>
+    </div>
+  );
 };
