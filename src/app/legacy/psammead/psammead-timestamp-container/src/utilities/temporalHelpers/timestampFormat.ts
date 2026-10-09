@@ -26,6 +26,10 @@ const EDITORIAL_DATE_NUMBERING_SYSTEM_OVERRIDES = {
   ar: { locale: 'ar-u-nu-latn', numberingSystem: 'latn' },
 };
 
+const DATE_LOCALE_OVERRIDES: Record<string, string> = {
+  sr: 'sr-Latn',
+};
+
 const NATIVE_LONG_DATE_LOCALES = new Set(['hu', 'ja', 'ko', 'zh-cn', 'zh-tw']);
 
 const TIMEZONE_LABEL_OVERRIDES: Record<string, string> = {
@@ -49,30 +53,43 @@ const getLocaleNumberingSystemOverride = (sanitisedLocale: Locale) => {
   );
 };
 
+const getDateLocale = (sanitisedLocale: Locale) => {
+  const localeOverride = getLocaleNumberingSystemOverride(sanitisedLocale);
+
+  return (
+    localeOverride?.locale ??
+    DATE_LOCALE_OVERRIDES[sanitisedLocale.toLowerCase()] ??
+    sanitisedLocale
+  );
+};
+
 const formatDatePart = ({
   timestamp,
   timezone,
   sanitisedLocale,
   options,
+  part,
 }: {
   timestamp: number;
   timezone?: string;
   sanitisedLocale: Locale;
   options: Intl.DateTimeFormatOptions;
+  part?: Intl.DateTimeFormatPartTypes;
 }) => {
   const localeOverride = getLocaleNumberingSystemOverride(sanitisedLocale);
-  const formatter = new Intl.DateTimeFormat(
-    localeOverride?.locale ?? sanitisedLocale,
-    {
-      ...options,
-      calendar: 'gregory',
-      ...(localeOverride
-        ? { numberingSystem: localeOverride.numberingSystem }
-        : {}),
-      timeZone: getTimeZone(timezone),
-    },
-  );
-  const formattedDate = formatter.format(new Date(timestamp));
+  const formatter = new Intl.DateTimeFormat(getDateLocale(sanitisedLocale), {
+    ...options,
+    calendar: 'gregory',
+    ...(localeOverride
+      ? { numberingSystem: localeOverride.numberingSystem }
+      : {}),
+    timeZone: getTimeZone(timezone),
+  });
+  const formattedDate = part
+    ? (formatter
+        .formatToParts(new Date(timestamp))
+        .find(({ type }) => type === part)?.value ?? '')
+    : formatter.format(new Date(timestamp));
 
   if (!localeOverride?.fallback) return formattedDate;
 
@@ -95,6 +112,7 @@ const formatYear = ({
     timezone,
     sanitisedLocale,
     options: { year: 'numeric' },
+    part: 'year',
   });
 
 const formatMonth = ({
@@ -115,18 +133,15 @@ const formatMonth = ({
   if (editorialMonthName) return editorialMonthName;
 
   const localeOverride = getLocaleNumberingSystemOverride(sanitisedLocale);
-  const monthPart = new Intl.DateTimeFormat(
-    localeOverride?.locale ?? sanitisedLocale,
-    {
-      calendar: 'gregory',
-      day: 'numeric',
-      month: 'long',
-      ...(localeOverride
-        ? { numberingSystem: localeOverride.numberingSystem }
-        : {}),
-      timeZone: getTimeZone(timezone),
-    },
-  )
+  const monthPart = new Intl.DateTimeFormat(getDateLocale(sanitisedLocale), {
+    calendar: 'gregory',
+    day: 'numeric',
+    month: 'long',
+    ...(localeOverride
+      ? { numberingSystem: localeOverride.numberingSystem }
+      : {}),
+    timeZone: getTimeZone(timezone),
+  })
     .formatToParts(new Date(timestamp))
     .find(({ type }) => type === 'month')?.value;
 

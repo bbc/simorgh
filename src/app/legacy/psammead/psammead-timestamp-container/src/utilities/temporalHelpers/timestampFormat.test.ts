@@ -118,6 +118,7 @@ describe('Timestamp formatting Temporal helpers', () => {
       ['ky', '21 ноябрь 2024'],
       ['ne', '२१ नोभेम्बर २०२४'],
       ['mr', '21 नोव्हेंबर 2024'],
+      ['ru', '21 ноября 2024'],
     ])('formats the editorial date style for %s', (locale, expected) => {
       expect(
         formatTimestampToken({
@@ -128,6 +129,23 @@ describe('Timestamp formatting Temporal helpers', () => {
         }),
       ).toEqual(expected);
     });
+
+    it.each([
+      ['sr', '18 oktobar 2024'],
+      ['sr-cyrl', '18 октобар 2024'],
+    ])(
+      'formats Serbian dates without a year terminator for %s',
+      (locale, expected) => {
+        expect(
+          formatTimestampToken({
+            format: 'LL',
+            timestamp: Date.UTC(2024, 9, 18),
+            timezone: 'UTC',
+            locale,
+          }),
+        ).toEqual(expected);
+      },
+    );
 
     it.each([
       ['fa-AF', '۲۱ نوامبر ۲۰۲۴ ۰۰:۰۰'],
