@@ -68,6 +68,7 @@ describe('Timestamp formatting Temporal helpers', () => {
     it.each<[TimestampFormat, string]>([
       ['LL, LT z', '19 October 2018, 17:10 GMT'],
       ['LL', '19 October 2018'],
+      ['LLL', '19 October 2018 17:10'],
       ['D MMMM YYYY, HH:mm z', '19 October 2018, 17:10 GMT'],
       ['D MMMM YYYY', '19 October 2018'],
       ['DD MMMM YYYY', '19 October 2018'],
@@ -95,7 +96,7 @@ describe('Timestamp formatting Temporal helpers', () => {
       ).toEqual('09 October 2018');
     });
 
-    it('localises Arabic digits and replaces the default comma', () => {
+    it('preserves Arabic editorial digits and replaces the default comma', () => {
       expect(
         formatTimestampToken({
           format: 'LL, LT z',
@@ -103,13 +104,19 @@ describe('Timestamp formatting Temporal helpers', () => {
           timezone: 'GMT',
           locale: 'ar',
         }),
-      ).toEqual('١٩ أكتوبر/ تشرين الأول ٢٠١٨، ١٧:١٠ GMT');
+      ).toEqual('19 أكتوبر/ تشرين الأول 2018، 17:10 GMT');
     });
 
     it.each([
       ['fa-AF', '۲۱ نوامبر ۲۰۲۴'],
       ['pt-BR', '21 novembro 2024'],
       ['zh-TW', '2024年11月21日'],
+      ['zh-CN', '2024年11月21日'],
+      ['hu', '2024. november 21.'],
+      ['ja', '2024年11月21日'],
+      ['ko', '2024년 11월 21일'],
+      ['ky', '21 ноябрь 2024'],
+      ['ne', '२१ नोभेम्बर २०२४'],
       ['mr', '21 नोव्हेंबर 2024'],
     ])('formats the editorial date style for %s', (locale, expected) => {
       expect(
@@ -121,6 +128,27 @@ describe('Timestamp formatting Temporal helpers', () => {
         }),
       ).toEqual(expected);
     });
+
+    it.each([
+      ['fa-AF', '۲۱ نوامبر ۲۰۲۴ ۰۰:۰۰'],
+      ['hu', '2024. november 21. 0:00'],
+      ['ja', '2024年11月21日 00:00'],
+      ['ko', '2024년 11월 21일 오전 12:00'],
+      ['zh-CN', '2024年11月21日凌晨12点00分'],
+      ['zh-TW', '2024年11月21日 00:00'],
+    ])(
+      'formats the long editorial date and time for %s',
+      (locale, expected) => {
+        expect(
+          formatTimestampToken({
+            format: 'LLL',
+            timestamp: Date.UTC(2024, 10, 21),
+            timezone: 'UTC',
+            locale,
+          }),
+        ).toEqual(expected);
+      },
+    );
 
     it('uses the Gregorian calendar and existing field order for Pashto', () => {
       expect(

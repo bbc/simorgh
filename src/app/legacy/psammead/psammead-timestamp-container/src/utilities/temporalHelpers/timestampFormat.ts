@@ -13,6 +13,7 @@ type Locale = string;
 export type TimestampFormat =
   | 'LL, LT z'
   | 'LL'
+  | 'LLL'
   | 'D MMMM YYYY, HH:mm z'
   | 'D MMMM YYYY'
   | 'HH:mm'
@@ -20,6 +21,12 @@ export type TimestampFormat =
   | 'DD MMMM YYYY';
 
 const ARABIC_SCRIPT_LOCALES = new Set(['ar', 'fa', 'ps', 'ur']);
+
+const EDITORIAL_DATE_NUMBERING_SYSTEM_OVERRIDES = {
+  ar: { locale: 'ar-u-nu-latn', numberingSystem: 'latn' },
+};
+
+const NATIVE_LONG_DATE_LOCALES = new Set(['hu', 'ja', 'ko', 'zh-cn', 'zh-tw']);
 
 const TIMEZONE_LABEL_OVERRIDES: Record<string, string> = {
   'Africa/Lagos': 'WAT',
@@ -35,6 +42,8 @@ const getLocaleNumberingSystemOverride = (sanitisedLocale: Locale) => {
   const languageCode = localeKey.split('-')[0];
 
   return (
+    EDITORIAL_DATE_NUMBERING_SYSTEM_OVERRIDES[localeKey] ??
+    EDITORIAL_DATE_NUMBERING_SYSTEM_OVERRIDES[languageCode] ??
     LOCALE_NUMBERING_SYSTEM_OVERRIDES[localeKey] ??
     LOCALE_NUMBERING_SYSTEM_OVERRIDES[languageCode]
   );
@@ -143,6 +152,50 @@ const getDayNumber = ({
       timeZone: getTimeZone(timezone),
     }).format(new Date(timestamp)),
   );
+
+const getHourNumber = ({
+  timestamp,
+  timezone,
+}: Pick<Parameters<typeof formatDatePart>[0], 'timestamp' | 'timezone'>) =>
+  Number(
+    new Intl.DateTimeFormat('en-US', {
+      calendar: 'gregory',
+      hour: 'numeric',
+      hourCycle: 'h23',
+      timeZone: getTimeZone(timezone),
+    }).format(new Date(timestamp)),
+  );
+
+const getMinuteNumber = ({
+  timestamp,
+  timezone,
+}: Pick<Parameters<typeof formatDatePart>[0], 'timestamp' | 'timezone'>) =>
+  Number(
+    new Intl.DateTimeFormat('en-US', {
+      calendar: 'gregory',
+      minute: 'numeric',
+      timeZone: getTimeZone(timezone),
+    }).format(new Date(timestamp)),
+  );
+
+const getChineseMeridiem = ({
+  timestamp,
+  timezone,
+}: Pick<Parameters<typeof formatDatePart>[0], 'timestamp' | 'timezone'>) => {
+  const time =
+    getHourNumber({ timestamp, timezone }) * 100 +
+    getMinuteNumber({
+      timestamp,
+      timezone,
+    });
+
+  if (time < 600) return '凌晨';
+  if (time < 900) return '早上';
+  if (time < 1130) return '上午';
+  if (time < 1230) return '中午';
+  if (time < 1800) return '下午';
+  return '晚上';
+};
 
 const formatDay = ({
   timestamp,
@@ -259,7 +312,7 @@ export const formatTimestampToken = ({
   const dateParts = { timestamp, timezone, sanitisedLocale };
   const langCode = sanitisedLocale.split('-')[0];
   const formatLongDate = () =>
-    sanitisedLocale.toLowerCase() === 'zh-tw'
+    NATIVE_LONG_DATE_LOCALES.has(sanitisedLocale.toLowerCase())
       ? formatDatePart({
           ...dateParts,
           options: { day: 'numeric', month: 'long', year: 'numeric' },
@@ -268,6 +321,41 @@ export const formatTimestampToken = ({
           getEditorialOrdinalDay(sanitisedLocale, getDayNumber(dateParts)) ??
           formatDay(dateParts)
         } ${formatMonth(dateParts)} ${formatYear(dateParts)}`;
+  const formatLongDateTime = () => {
+    const localeKey = sanitisedLocale.toLowerCase();
+
+    if (localeKey === 'ko') {
+      return formatDatePart({
+        ...dateParts,
+        options: {
+          day: 'numeric',
+          month: 'long',
+          year: 'numeric',
+          hour: 'numeric',
+          minute: '2-digit',
+          hourCycle: 'h12',
+        },
+      });
+    }
+
+    if (localeKey === 'zh-cn') {
+      const hour = getHourNumber(dateParts);
+      const minute = getMinuteNumber(dateParts);
+
+      return `${formatLongDate()}${getChineseMeridiem(
+        dateParts,
+      )}${hour % 12 || 12}点${String(minute).padStart(2, '0')}分`;
+    }
+
+    if (localeKey === 'hu') {
+      return `${formatLongDate()} ${formatDatePart({
+        ...dateParts,
+        options: { hour: 'numeric', minute: '2-digit', hourCycle: 'h23' },
+      })}`;
+    }
+
+    return `${formatLongDate()} ${formatTime(dateParts)}`;
+  };
   const timezoneLabel = () =>
     resolveTimeZoneLabel({ timestamp, timezone, locale });
 
@@ -277,6 +365,8 @@ export const formatTimestampToken = ({
         return `${formatLongDate()}, ${formatTime(dateParts)} ${timezoneLabel()}`;
       case 'LL':
         return formatLongDate();
+      case 'LLL':
+        return formatLongDateTime();
       case 'D MMMM YYYY, HH:mm z':
         return `${formatDay(dateParts)} ${formatMonth(dateParts)} ${formatYear(
           dateParts,
