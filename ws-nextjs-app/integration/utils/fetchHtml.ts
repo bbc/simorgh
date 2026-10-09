@@ -47,6 +47,10 @@ export default ({ url, headers }) =>
           'text/html',
         );
 
+        document
+          .querySelectorAll('div[hidden][id^="S:"]')
+          .forEach(segment => segment.remove());
+
         resolve({ window, document });
       } catch (error) {
         // @ts-ignore
