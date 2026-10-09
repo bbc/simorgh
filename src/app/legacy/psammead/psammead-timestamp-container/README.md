@@ -67,7 +67,7 @@ const customFormatDuration = formatDuration({
 
 `formatDuration` is powered by the [`Temporal`](https://tc39.es/proposal-temporal/docs/) API rather than moment. `duration` is parsed with `Temporal.Duration.from()`; if `Temporal` isn't available in the runtime (e.g. an older browser without the [`temporal-polyfill`](https://www.npmjs.com/package/temporal-polyfill) loaded) or `duration` isn't a valid ISO 8601 duration string, it falls back to `0` seconds rather than throwing.
 
-Durations containing weeks, months, or years also fall back to `0` seconds. Temporal requires a `relativeTo` date to convert these calendar units to seconds, and this formatter does not define calendar semantics for them. Durations containing days or time units are supported.
+Durations containing weeks, months, or years, and negative durations, fall back to `0` seconds. Temporal requires a `relativeTo` date to convert calendar units to seconds, and this formatter does not define calendar semantics for them. Durations containing days or time units are supported.
 
 `locale` doesn't need to be a strict BCP 47 language tag (e.g. underscore-separated locales like `fa_af` are normalised) — it's used to localise digits via `Intl.NumberFormat`, e.g. `locale: 'my'` renders Burmese digits (`၀`-`၉`). If `locale` is not provided or it can't be parsed, it falls back to `en-GB`.
 
@@ -77,7 +77,7 @@ Pashto (`ps`) additionally forces the Eastern Arabic-Indic numbering system expl
 
 Marathi (`mr`) additionally forces Latin numerals explicitly, matching the equivalent override in `psammead-locales/moment/mr.js`.
 
-Only the `h`, `mm`, `m` and `ss` tokens are recognised in `format`, joined by a single `:` or `,` separator (e.g. `'h:mm:ss'`, `'mm,ss'`, `'m'`) — this is enforced by the `DurationFormat` type, so passing anything else (e.g. a moment-style string like `'YYYY-MM-DD'`) is a TypeScript error.
+Only the `h`, `mm`, `m` and `ss` tokens are recognised in `format`, separated by `:` or `,` (e.g. `'h:mm:ss'`, `'mm,ss'`, `'m'`). Tokens may be repeated (e.g. `'h:h'`), and every occurrence is replaced. This is enforced by the `DurationFormat` type, so passing anything else (e.g. a moment-style string like `'YYYY-MM-DD'`) is a TypeScript error.
 
 <!-- prettier-ignore -->
 | Argument  | Type        | Required | Default | Example         |
