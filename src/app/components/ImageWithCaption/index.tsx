@@ -9,8 +9,6 @@ import styles from './index.styles';
 import { RequestContext } from '../../contexts/RequestContext';
 
 const DEFAULT_IMAGE_RES = 640;
-const LAZYLOAD_FROM_BLOCK = 4;
-
 const getText = ({ model }) => model.blocks[0].model.blocks[0].model.text;
 
 const getCopyright = (copyrightHolder: string) => {
@@ -21,8 +19,8 @@ const getCopyright = (copyrightHolder: string) => {
   return copyrightHolder;
 };
 
-const shouldLazyLoad = (position: number[]) =>
-  !!urlWithPageAnchor() || position[0] > LAZYLOAD_FROM_BLOCK;
+const shouldLazyLoad = (isLeadImage: boolean) =>
+  !!urlWithPageAnchor() || !isLeadImage;
 
 const renderCopyright = (copyright: string) =>
   copyright && <Copyright>{copyright}</Copyright>;
@@ -37,6 +35,7 @@ type Props = {
   position?: number[];
   sizes?: string;
   shouldPreload?: boolean;
+  isLeadImage?: boolean;
 };
 
 const ImageWithCaption = ({
@@ -45,6 +44,7 @@ const ImageWithCaption = ({
   position = [1],
   sizes,
   shouldPreload,
+  isLeadImage = position[0] === 1,
 }: Props) => {
   const { isAmp, isLite } = use(RequestContext);
 
@@ -55,8 +55,7 @@ const ImageWithCaption = ({
   const altTextBlock = filterForBlockType(blocks, 'altText');
   const captionBlock = filterForBlockType(blocks, 'caption');
 
-  const shouldPreloadLeadImage =
-    position[0] <= LAZYLOAD_FROM_BLOCK && shouldPreload;
+  const shouldPreloadLeadImage = isLeadImage && shouldPreload;
 
   if (!rawImageBlock || !altTextBlock) {
     return null;
@@ -82,7 +81,7 @@ const ImageWithCaption = ({
     srcResolution: DEFAULT_IMAGE_RES,
   });
 
-  const lazyLoad = shouldLazyLoad(position);
+  const lazyLoad = shouldLazyLoad(isLeadImage);
 
   return (
     <figure className={className} css={styles.figure}>

@@ -2,6 +2,7 @@ import { OptimoBlock } from '../../models/types/optimo';
 
 export type ComponentToRenderProps = {
   blocks: OptimoBlock[];
+  position?: number[];
 };
 
 export type TimestampProps = {
