@@ -16,7 +16,7 @@ describe('liveMediaStream', () => {
     jest.clearAllMocks();
   });
 
-  it('Displays all components on intial render.', () => {
+  it('Loads the media player when the watch button is clicked.', () => {
     const { container } = render(
       <LiveHeaderMedia mediaCollection={fixtureData as MediaCollection[]} />,
     );
@@ -24,10 +24,13 @@ describe('liveMediaStream', () => {
     const playCloseButton = container.querySelector(
       'button[data-testid="watch-now-close-button"]',
     );
-    const mediaLoader = container.querySelector('figure');
 
     expect(playCloseButton).toBeInTheDocument();
-    expect(mediaLoader).toBeInTheDocument();
+    expect(container.querySelector('figure')).not.toBeInTheDocument();
+
+    fireEvent.click(playCloseButton as HTMLButtonElement);
+
+    expect(container.querySelector('figure')).toBeInTheDocument();
   });
 
   it('Displays a warning message when needed.', () => {

@@ -1,4 +1,4 @@
-import { memo, use, useState } from 'react';
+import { memo, use, useCallback, useRef, useState } from 'react';
 import Text from '#app/components/Text';
 import { MediaCollection } from '#app/components/MediaLoader/types';
 import MediaLoader from '#app/components/MediaLoader';
@@ -40,6 +40,16 @@ const LiveHeaderMedia = ({
   const { translations } = use(ServiceContext);
   const { isLite } = use(RequestContext);
   const [showMedia, setShowMedia] = useState(false);
+  const [hasOpenedMedia, setHasOpenedMedia] = useState(false);
+  const shouldPlayWhenReady = useRef(false);
+  const playerIdRef = useRef<string | undefined>(undefined);
+  const playMediaWhenReady = useCallback(() => {
+    const playerId = playerIdRef.current;
+    if (!shouldPlayWhenReady.current || !playerId) return;
+
+    window.mediaPlayers?.[playerId]?.play();
+    shouldPlayWhenReady.current = false;
+  }, []);
 
   const eventTrackingData: EventTrackingMetadata = {
     componentName: 'live-header-media',
@@ -71,6 +81,7 @@ const LiveHeaderMedia = ({
       version: { vpid, warnings },
     },
   } = mediaItem;
+  playerIdRef.current = vpid;
 
   const titleHasPunctuation = regexPunctuationSymbols.test(
     short.trim().slice(-1),
@@ -95,13 +106,18 @@ const LiveHeaderMedia = ({
   const clickToggleMedia = () => {
     const mediaPlayer = window.mediaPlayers?.[vpid];
     if (showMedia) {
+      shouldPlayWhenReady.current = false;
       mediaPlayer?.pause();
       setShowMedia(false);
     } else {
-      if (warningLevel < WARNING_LEVELS.L1) {
-        mediaPlayer?.play();
-      }
+      const shouldPlay = warningLevel < WARNING_LEVELS.L1;
+      shouldPlayWhenReady.current = shouldPlay;
+      setHasOpenedMedia(true);
       setShowMedia(true);
+      if (shouldPlay && mediaPlayer) {
+        mediaPlayer?.play();
+        shouldPlayWhenReady.current = false;
+      }
     }
 
     clickCallback();
@@ -184,7 +200,13 @@ const LiveHeaderMedia = ({
           )}
         </button>
         <div css={showMedia ? styles.mediaLoader : styles.hideComponent}>
-          <MemoizedMediaPlayer blocks={mediaCollection} uniqueId={vpid} />
+          {hasOpenedMedia && (
+            <MemoizedMediaPlayer
+              blocks={mediaCollection}
+              uniqueId={vpid}
+              onPlayerReady={playMediaWhenReady}
+            />
+          )}
         </div>
       </div>
     </>

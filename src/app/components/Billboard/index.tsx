@@ -30,6 +30,7 @@ interface BillboardProps {
   eventTrackingData?: EventTrackingData;
   showLiveLabel?: boolean;
   summaries?: Summary[];
+  isFirstCuration?: boolean;
 }
 
 const IMAGE_WIDTH = 800;
@@ -46,6 +47,7 @@ export default ({
   showLiveLabel,
   eventTrackingData = { componentName: 'billboard' },
   summaries = [],
+  isFirstCuration = false,
 }: BillboardProps) => {
   const { translations } = use(ServiceContext);
   const showMoreOnThisTitle = translations.moreOnThis;
@@ -73,6 +75,7 @@ export default ({
           showPlaceholder={false}
           showVignette={hasPromoItems}
           singleImageLayout={isSingleImageLayout}
+          preload={isFirstCuration}
         />
       );
     }
@@ -102,8 +105,7 @@ export default ({
           width={800}
           height={533}
           placeholder={false}
-          fetchPriority="high"
-          preload
+          {...(isFirstCuration && { fetchPriority: 'high', preload: true })}
         />
       </div>
     );

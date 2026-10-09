@@ -97,23 +97,24 @@ describe('Image', () => {
       const sizesAttribute = sourceEl?.getAttribute('sizes');
       expect(sizesAttribute).toBe('100vw');
     });
-    it('should preload an image if the image is before the 5th block', async () => {
+    it('should preload the lead image', async () => {
       render(
-        <ImageContainer sizes="100vw" position={[4]} {...data} shouldPreload />,
+        <ImageContainer
+          sizes="100vw"
+          position={[1]}
+          {...data}
+          shouldPreload
+          isLeadImage
+        />,
       );
       await waitFor(() => {
         const linkPreload = document.querySelector('head link');
         expect(linkPreload).toBeInTheDocument();
       });
     });
-    it('should not preload an image if the image is before the 5th block but shouldPreload is false', async () => {
+    it('should not preload an image after the lead image', async () => {
       render(
-        <ImageContainer
-          sizes="100vw"
-          position={[4]}
-          {...data}
-          shouldPreload={false}
-        />,
+        <ImageContainer sizes="100vw" position={[4]} {...data} shouldPreload />,
       );
       await waitFor(() => {
         const linkPreload = document.querySelector('head link');

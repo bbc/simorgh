@@ -153,6 +153,7 @@ type MediaContainerProps = {
   eventMapping?: EventMapping;
   shouldHandleFakeFullscreen?: boolean;
   loadPlayerOnInitialRender?: boolean;
+  onPlayerReady?: () => void;
   onFakeFullscreenChange?: (isActive: boolean) => void;
 };
 
@@ -167,6 +168,7 @@ const MediaContainer = ({
   eventMapping,
   shouldHandleFakeFullscreen = false,
   loadPlayerOnInitialRender = false,
+  onPlayerReady,
   onFakeFullscreenChange,
 }: MediaContainerProps) => {
   const playerElementRef = useRef<HTMLDivElement>(null);
@@ -258,6 +260,7 @@ const MediaContainer = ({
             }
 
             mediaPlayer.load();
+            onPlayerReady?.();
           };
 
           initPlayer();
@@ -273,6 +276,7 @@ const MediaContainer = ({
     eventMapping,
     shouldHandleFakeFullscreen,
     loadPlayerOnInitialRender,
+    onPlayerReady,
   ]);
 
   return (
@@ -296,6 +300,7 @@ type Props = {
   uniqueId?: string;
   eventMapping?: EventMapping;
   loadPlayerOnInitialRender?: boolean;
+  onPlayerReady?: () => void;
   withinFullscreenContainer?: boolean;
   holdingImageURL?: string;
 };
@@ -307,6 +312,7 @@ const MediaLoader = ({
   uniqueId,
   eventMapping,
   loadPlayerOnInitialRender = false,
+  onPlayerReady,
   withinFullscreenContainer = false,
   holdingImageURL,
 }: Props) => {
@@ -491,6 +497,7 @@ const MediaLoader = ({
                   eventMapping={eventMapping}
                   shouldHandleFakeFullscreen={shouldHandleFakeFullscreen}
                   loadPlayerOnInitialRender={loadPlayerOnInitialRender}
+                  onPlayerReady={onPlayerReady}
                   onFakeFullscreenChange={setFakeFullscreenPageState}
                 />
               )}
