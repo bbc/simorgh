@@ -73,8 +73,7 @@ export const service: DefaultServiceConfig = {
     ],
     podcastPromo: {
       title: 'Promoção Agregador de pesquisas',
-      brandTitle:
-        'Veja Agregador de Pesquisas da BBC News Brasil',
+      brandTitle: 'Veja Agregador de Pesquisas da BBC News Brasil',
       brandDescription:
         'Veja a intenção de voto no 2º turno no Agregador de Pesquisas da BBC News Brasil',
       image: {
