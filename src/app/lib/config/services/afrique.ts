@@ -48,9 +48,10 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     electionBanner: {
+      assocPressIframeSrc:
+        'https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/33244.html',
       title: 'Élections de 2026 aux États-Unis',
       electionThingIds: ['19994837-27b8-463f-965d-fbb0ac1622a3'],
-      assocPressIframeSrc: '',
     },
     podcastPromo: {
       title: 'Promotion WhatsApp',
