@@ -44,6 +44,7 @@ const runValidator = async () => {
     '/mundo/articles/ce42wzqr2mko',
     '/news/articles/cn7k01xp8kxo',
     '/persian/articles/cej3lzd5e0go',
+    '/russian/articles/c6wyzl2xdyz2o',
     '/serbian/articles/c805k05kr73o/cyr',
     '/serbian/articles/c805k05kr73o/lat',
   ];
