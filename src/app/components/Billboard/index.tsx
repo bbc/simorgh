@@ -105,8 +105,7 @@ export default ({
           width={800}
           height={533}
           placeholder={false}
-          fetchPriority={isFirstCuration ? 'high' : undefined}
-          preload={isFirstCuration}
+          {...(isFirstCuration && { fetchPriority: 'high', preload: true })}
         />
       </div>
     );
