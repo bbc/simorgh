@@ -58,6 +58,7 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
     value.includes(SENSITIVE_ARTICLE_ID),
   );
 
+  // to do - refactor - now duplicated in src/app/components/ElectionBanner/utilities/index.ts
   const hasValidTagLivePage = taggings?.some(({ value }) =>
     electionThingIds?.some(electionThingId => value.includes(electionThingId)),
   );
