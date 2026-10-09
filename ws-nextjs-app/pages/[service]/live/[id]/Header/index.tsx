@@ -20,11 +20,11 @@ const getBackgroundStyle = ({
   withElectionBanner?: boolean;
   hasMediaCollections: boolean;
 }) => {
-  if (!withElectionBanner) return styles.backgroundColor;
+  if (!withElectionBanner) return styles.backgroundColorDefault;
 
   return hasMediaCollections
-    ? styles.backgroundColourElectionBannerWithMedia
-    : styles.backgroundColourElectionBanner;
+    ? styles.backgroundColorElectionBannerWithMedia
+    : styles.backgroundColorElectionBanner;
 };
 
 const Header = ({
@@ -104,7 +104,11 @@ const Header = ({
       <div css={styles.headerContainer}>
         <div css={styles.backgroundContainer}>
           <div
-            css={[styles.backgroundColor, styles.backgroundColorSportData]}
+            css={[
+              styles.background,
+              styles.backgroundColorDefault,
+              styles.backgroundColorSportData,
+            ]}
           />
         </div>
         <div css={styles.contentContainer}>
@@ -134,7 +138,7 @@ const Header = ({
   return (
     <div css={[styles.headerContainer, styles.headerContainerForcedColours]}>
       <div css={styles.backgroundContainer}>
-        <div css={backgroundStyle} />
+        <div css={[styles.background, backgroundStyle]} />
       </div>
       <div
         css={[

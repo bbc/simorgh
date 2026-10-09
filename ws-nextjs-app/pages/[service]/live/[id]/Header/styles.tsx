@@ -34,29 +34,24 @@ export default {
       width: '100%',
       overflow: 'hidden',
     }),
-  backgroundColor: ({ palette }: Theme) =>
+  background: () =>
+    css({
+      width: '100%',
+      top: 0,
+      bottom: 0,
+      position: 'absolute',
+    }),
+  backgroundColorDefault: ({ palette }: Theme) =>
     css({
       backgroundColor: palette.GREY_10,
-      width: '100%',
-      top: 0,
-      bottom: 0,
-      position: 'absolute',
     }),
-  backgroundColourElectionBanner: () =>
+  backgroundColorElectionBanner: () =>
     css({
       backgroundColor: '#2d0059',
-      width: '100%',
-      top: 0,
-      bottom: 0,
-      position: 'absolute',
     }),
-  backgroundColourElectionBannerWithMedia: () =>
+  backgroundColorElectionBannerWithMedia: ({ palette }: Theme) =>
     css({
-      backgroundColor: '#2d0059',
-      width: '100%',
-      top: 0,
-      bottom: 0,
-      position: 'absolute',
+      backgroundColor: palette.BLACK,
     }),
   backgroundColorSportData: ({ palette }: Theme) =>
     css({

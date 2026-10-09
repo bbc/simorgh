@@ -138,7 +138,9 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
         )}
       >
         <div className={styles.electionBannerContent}>
-          {hasTitle && <span className={styles.title}>{title}</span>}
+          {hasTitle && !isLivePage && (
+            <span className={styles.title}>{title}</span>
+          )}
           <iframe
             className={clsx(
               isAssocPress && 'ap-embed',

@@ -213,6 +213,9 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
     taggings: passportTaggings,
   });
 
+  // refactor - copied up
+  const isHeaderImage = !!imageUrl && !!imageUrlTemplate && !!imageWidth;
+
   return (
     <>
       <ATIAnalytics />
@@ -269,6 +272,9 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
             shouldShowActions={false} // defaulted to false for developement/ MVP
             isSportDataLive={isSportDataLive}
           />
+        )}
+        {shouldShowElectionBanner && passportTaggings && !mediaCollections && (
+          <ElectionBanner taggings={passportTaggings} />
         )}
         <div css={styles.outerGrid}>
           <div css={styles.firstSection}>
