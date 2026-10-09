@@ -8,7 +8,8 @@ export type TimestampFormat =
   | 'D MMMM YYYY, HH:mm z'
   | 'D MMMM YYYY'
   | 'HH:mm'
-  | 'YYYY-MM-DD';
+  | 'YYYY-MM-DD'
+  | 'DD MMMM YYYY';
 
 const ARABIC_SCRIPT_LOCALES = new Set(['ar', 'fa', 'ps', 'ur']);
 
@@ -207,6 +208,10 @@ export const formatTimestampToken = ({
         return `${formatDay(dateParts)} ${formatMonth(dateParts)} ${formatYear(
           dateParts,
         )}`;
+      case 'DD MMMM YYYY':
+        return `${formatNumericDay(dateParts)} ${formatMonth(
+          dateParts,
+        )} ${formatYear(dateParts)}`;
       case 'HH:mm':
         return formatTime(dateParts);
       case 'YYYY-MM-DD':

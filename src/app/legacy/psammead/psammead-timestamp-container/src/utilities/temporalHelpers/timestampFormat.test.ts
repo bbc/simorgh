@@ -70,6 +70,7 @@ describe('Timestamp formatting Temporal helpers', () => {
       ['LL', '19 October 2018'],
       ['D MMMM YYYY, HH:mm z', '19 October 2018, 17:10 GMT'],
       ['D MMMM YYYY', '19 October 2018'],
+      ['DD MMMM YYYY', '19 October 2018'],
       ['HH:mm', '17:10'],
       ['YYYY-MM-DD', '2018-10-19'],
     ])('formats %s as %s', (format, expected) => {
@@ -81,6 +82,17 @@ describe('Timestamp formatting Temporal helpers', () => {
           locale: 'en-GB',
         }),
       ).toEqual(expected);
+    });
+
+    it('pads the day for DD MMMM YYYY', () => {
+      expect(
+        formatTimestampToken({
+          format: 'DD MMMM YYYY',
+          timestamp: Date.UTC(2018, 9, 9, 16, 30, 6),
+          timezone: 'GMT',
+          locale: 'en-GB',
+        }),
+      ).toEqual('09 October 2018');
     });
 
     it('localises Arabic digits and replaces the default comma', () => {
