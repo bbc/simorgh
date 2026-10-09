@@ -1,3 +1,4 @@
+import { createRef } from 'react';
 import {
   render,
   screen,
@@ -153,6 +154,14 @@ describe('Image - Canonical', () => {
     expect(imageEl.parentNode).not.toHaveStyle({
       backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
     });
+  });
+
+  it('should attach imageRef to the native image element', () => {
+    const imageRef = createRef<HTMLImageElement>();
+
+    render(<Fixture imageRef={imageRef} />);
+
+    expect(imageRef.current).toBe(screen.getByAltText('Test image alt text'));
   });
 
   it('should render the container with an aspect ratio based on width and height', () => {
