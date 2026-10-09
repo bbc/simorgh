@@ -103,7 +103,23 @@ describe('Timestamp formatting Temporal helpers', () => {
           timezone: 'GMT',
           locale: 'ar',
         }),
-      ).toEqual('١٩ أكتوبر ٢٠١٨، ١٧:١٠ GMT');
+      ).toEqual('١٩ أكتوبر/ تشرين الأول ٢٠١٨، ١٧:١٠ GMT');
+    });
+
+    it.each([
+      ['fa-AF', '۲۱ نوامبر ۲۰۲۴'],
+      ['pt-BR', '21 novembro 2024'],
+      ['zh-TW', '2024年11月21日'],
+      ['mr', '21 नोव्हेंबर 2024'],
+    ])('formats the editorial date style for %s', (locale, expected) => {
+      expect(
+        formatTimestampToken({
+          format: 'LL',
+          timestamp: Date.UTC(2024, 10, 21),
+          timezone: 'UTC',
+          locale,
+        }),
+      ).toEqual(expected);
     });
 
     it('uses the Gregorian calendar and existing field order for Pashto', () => {

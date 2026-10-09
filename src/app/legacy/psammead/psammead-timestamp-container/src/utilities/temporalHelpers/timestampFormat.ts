@@ -1,4 +1,9 @@
-import { sanitiseLocale, withArabicComma } from '.';
+import {
+  LOCALE_NUMBERING_SYSTEM_OVERRIDES,
+  sanitiseLocale,
+  withArabicComma,
+} from '.';
+import { getEditorialMonthName } from './editorialMonthNames';
 
 type Locale = string;
 
@@ -33,15 +38,33 @@ const formatDatePart = ({
   sanitisedLocale: Locale;
   options: Intl.DateTimeFormatOptions;
 }) => {
-  const langCode = sanitisedLocale.split('-')[0];
-  const formatter = new Intl.DateTimeFormat(sanitisedLocale, {
-    ...options,
-    calendar: 'gregory',
-    ...(langCode === 'ar' ? { numberingSystem: 'arab' } : {}),
-    timeZone: getTimeZone(timezone),
-  });
+  const localeKey = sanitisedLocale.toLowerCase();
+  const languageCode = localeKey.split('-')[0];
+  const localeOverride =
+    LOCALE_NUMBERING_SYSTEM_OVERRIDES[localeKey] ??
+    LOCALE_NUMBERING_SYSTEM_OVERRIDES[languageCode];
+  const formatter = new Intl.DateTimeFormat(
+    localeOverride?.locale ?? sanitisedLocale,
+    {
+      ...options,
+      calendar: 'gregory',
+      ...(localeOverride
+        ? { numberingSystem: localeOverride.numberingSystem }
+        : {}),
+      timeZone: getTimeZone(timezone),
+    },
+  );
+  const formattedDate = formatter.format(new Date(timestamp));
 
-  return formatter.format(new Date(timestamp));
+  if (!localeOverride?.fallback) return formattedDate;
+
+  const matchesExpectedSystem =
+    formatter.resolvedOptions().numberingSystem ===
+    localeOverride.numberingSystem;
+
+  return matchesExpectedSystem
+    ? formattedDate
+    : localeOverride.fallback(formattedDate);
 };
 
 const formatYear = ({
@@ -61,6 +84,16 @@ const formatMonth = ({
   timezone,
   sanitisedLocale,
 }: Omit<Parameters<typeof formatDatePart>[0], 'options'>) =>
+  getEditorialMonthName(
+    sanitisedLocale,
+    Number(
+      new Intl.DateTimeFormat('en-US', {
+        calendar: 'gregory',
+        month: 'numeric',
+        timeZone: getTimeZone(timezone),
+      }).format(new Date(timestamp)),
+    ) - 1,
+  ) ??
   formatDatePart({
     timestamp,
     timezone,
@@ -183,14 +216,14 @@ export const formatTimestampToken = ({
   const dateParts = { timestamp, timezone, sanitisedLocale };
   const langCode = sanitisedLocale.split('-')[0];
   const formatLongDate = () =>
-    langCode === 'ps'
-      ? `${formatDay(dateParts)} ${formatMonth(dateParts)} ${formatYear(
-          dateParts,
-        )}`
-      : formatDatePart({
+    sanitisedLocale.toLowerCase() === 'zh-tw'
+      ? formatDatePart({
           ...dateParts,
           options: { day: 'numeric', month: 'long', year: 'numeric' },
-        });
+        })
+      : `${formatDay(dateParts)} ${formatMonth(dateParts)} ${formatYear(
+          dateParts,
+        )}`;
   const timezoneLabel = () =>
     resolveTimeZoneLabel({ timestamp, timezone, locale });
 

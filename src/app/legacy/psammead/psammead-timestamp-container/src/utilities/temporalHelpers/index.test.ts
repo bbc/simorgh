@@ -129,6 +129,9 @@ describe('Temporal Helper functions', () => {
       ['fa', '۰۵'],
       ['fa-AF', '۰۵'],
       ['ps', '۰۵'],
+      ['ar-EG', '٠٥'],
+      ['mr-IN', '05'],
+      ['ps-AF', '۰۵'],
     ])('translates digits into the %p numeral system', (locale, expected) => {
       expect(translateDigits(5, 2, locale)).toEqual(expected);
     });
