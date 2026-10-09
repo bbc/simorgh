@@ -1,6 +1,7 @@
 export interface UasErrorBody {
   key?: string;
   message?: string;
+  errors?: { code?: string; description?: string }[];
 }
 
 class UasError extends Error {
@@ -14,8 +15,11 @@ class UasError extends Error {
     super(`UAS request failed with status ${status}`);
     this.name = 'UasError';
     this.status = status;
-    this.code = body?.key;
-    this.serviceMessage = body?.message;
+
+    // Validation/auth errors (400/401) nest code & description inside errors[0]
+    const [firstError] = body?.errors ?? [];
+    this.code = body?.key ?? firstError?.code;
+    this.serviceMessage = body?.message ?? firstError?.description;
   }
 }
 
