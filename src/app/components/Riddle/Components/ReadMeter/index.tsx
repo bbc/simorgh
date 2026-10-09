@@ -35,7 +35,7 @@ const ReadMeter = ({ wordCount = 0 }: { wordCount?: number }) => {
       prevTime = currTime;
       prevScrollDepth = currScrollDepth;
     };
-
+    console.log('CHECK', wordCount);
     document.addEventListener('scrollend', listener);
     return () => {
       document.removeEventListener('scrollend', listener);
