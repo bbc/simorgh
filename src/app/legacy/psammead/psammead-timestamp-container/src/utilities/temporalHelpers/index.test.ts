@@ -33,6 +33,17 @@ describe('Temporal Helper functions', () => {
       );
     });
 
+    describe('negative duration input', () => {
+      it.each(['-PT1S', '-PT1H30M45S'])(
+        'falls back to 0 seconds for %p',
+        duration => {
+          expect(sanitiseDuration(duration).total({ unit: 'seconds' })).toEqual(
+            0,
+          );
+        },
+      );
+    });
+
     describe('invalid duration input', () => {
       it.each(['garbage', ''])(
         'falls back to 0 seconds for invalid duration %p',
@@ -199,6 +210,23 @@ describe('Temporal Helper functions', () => {
         ['h:mm:ss', '1:05:09'],
         ['m', '5'],
       ])('replaces the %p format token', (format, expected) => {
+        expect(
+          applyFormat({
+            format,
+            hours: 1,
+            minutes: 5,
+            seconds: 9,
+            sanitisedLocale: 'en-GB',
+          }),
+        ).toEqual(expected);
+      });
+
+      it.each<[DurationFormat, string]>([
+        ['h:h', '1:1'],
+        ['mm:mm', '05:05'],
+        ['m:m', '5:5'],
+        ['ss:ss', '09:09'],
+      ])('replaces every occurrence in the %p format', (format, expected) => {
         expect(
           applyFormat({
             format,

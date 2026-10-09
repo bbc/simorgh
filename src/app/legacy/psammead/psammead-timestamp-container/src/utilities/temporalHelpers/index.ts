@@ -20,6 +20,10 @@ type LocaleNumberingSystemOverride = {
   fallback?: (value: string) => string;
 };
 
+export const withArabicComma = (string: string) => {
+  return string.replace(/,/g, '،');
+};
+
 const translateEasternArabicNumerals = makeNumeralTranslator(EasternArabic);
 
 const LOCALE_NUMBERING_SYSTEM_OVERRIDES: Record<
@@ -44,7 +48,12 @@ export const sanitiseDuration = (duration: ISODuration) => {
   try {
     const parsedDuration = durationApi.from(duration);
 
-    if (parsedDuration.years || parsedDuration.months || parsedDuration.weeks) {
+    if (
+      parsedDuration.sign === -1 ||
+      parsedDuration.years ||
+      parsedDuration.months ||
+      parsedDuration.weeks
+    ) {
       return durationApi.from('PT0S');
     }
 
@@ -61,10 +70,6 @@ export const sanitiseLocale = (locale: Locale): string => {
   } catch {
     return 'en-GB';
   }
-};
-
-export const withArabicComma = (string: string) => {
-  return string.replace(/,/g, '،');
 };
 
 export const translateDigits = (
@@ -114,11 +119,10 @@ export const applyFormat = ({
   };
 
   if (format) {
-    return format
-      .replace('h', values.h)
-      .replace('mm', values.mm)
-      .replace('ss', values.ss)
-      .replace('m', values.m);
+    return format.replace(
+      /mm|ss|h|m/g,
+      token => values[token as DurationFormatToken],
+    );
   }
 
   return hours > 0
