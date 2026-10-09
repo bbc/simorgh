@@ -104,9 +104,74 @@ exports[`Canonical Podcast Page Footer Anchors should match text and url 9`] = `
 }
 `;
 
+exports[`Canonical Podcast Page Footer Anchors should match text and url 10`] = `
+{
+  "text": "BBC News, Brasil",
+  "url": "/portuguese",
+}
+`;
+
+exports[`Canonical Podcast Page Footer Anchors should match text and url 11`] = `
+{
+  "text": "Por que você pode confiar na BBC",
+  "url": "https://www.bbc.com/portuguese/institutional-50054434",
+}
+`;
+
+exports[`Canonical Podcast Page Footer Anchors should match text and url 12`] = `
+{
+  "text": "Termos de Uso",
+  "url": "https://www.bbc.com/portuguese/institutional-36202448",
+}
+`;
+
+exports[`Canonical Podcast Page Footer Anchors should match text and url 13`] = `
+{
+  "text": "Sobre a BBC",
+  "url": "https://www.bbc.com/portuguese/institutional-36202452",
+}
+`;
+
+exports[`Canonical Podcast Page Footer Anchors should match text and url 14`] = `
+{
+  "text": "Política de privacidade",
+  "url": "https://www.bbc.com/portuguese/institutional-36202454",
+}
+`;
+
+exports[`Canonical Podcast Page Footer Anchors should match text and url 15`] = `
+{
+  "text": "Cookies",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
+
+exports[`Canonical Podcast Page Footer Anchors should match text and url 16`] = `
+{
+  "text": "Contate a BBC",
+  "url": "https://www.bbc.co.uk/portuguese/send/u50853599",
+}
+`;
+
+exports[`Canonical Podcast Page Footer Anchors should match text and url 17`] = `
+{
+  "text": "BBC News em outras línguas",
+  "url": "https://www.bbc.com/ws/languages",
+}
+`;
+
+exports[`Canonical Podcast Page Footer Anchors should match text and url 18`] = `
+{
+  "text": "Leia sobre nossa política em relação a links externos.",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/links-and-feeds",
+}
+`;
+
 exports[`Canonical Podcast Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/portuguese"`;
 
 exports[`Canonical Podcast Page Footer Paragraphs should match text 1`] = `"© 2026 BBC. A BBC não se responsabiliza pelo conteúdo de sites externos. Leia sobre nossa política em relação a links externos."`;
+
+exports[`Canonical Podcast Page Footer Paragraphs should match text 2`] = `"© 2026 BBC. A BBC não se responsabiliza pelo conteúdo de sites externos. Leia sobre nossa política em relação a links externos."`;
 
 exports[`Canonical Podcast Page Header I can see the branding 1`] = `
 {
@@ -136,24 +201,24 @@ exports[`Canonical Podcast Page Main heading should match text 1`] = `"Que Hist�
 
 exports[`Canonical Podcast Page Media Loader renders a valid container 1`] = `
 <figure
-  class="media-container css-ucozvf"
+  class="media-container css-1wqs6tp"
   data-e2e="media-loader__container"
 >
   <div
-    class="css-8432in"
+    class="css-zmtwe4"
     data-simorgh-media-loader="inactive"
   >
     <div
-      class="media-player css-1kf4wj3"
+      class="media-player css-1tc6vz2"
       data-e2e="media-player"
     >
       <noscript>
         <div>
           <div
-            class="css-1ezssgh"
+            class="css-ma77bn"
           >
             <strong
-              class="css-pow7hy"
+              class="css-1mo6435"
             >
               A reprodução deste formato de vídeo não é compatível com seu dispositivo
             </strong>
@@ -180,6 +245,27 @@ exports[`Canonical Podcast Page Recent Episodes List items should match text and
 `;
 
 exports[`Canonical Podcast Page Recent Episodes List items should match text and url 3`] = `
+{
+  "text": "Áudio, Que História!, Bem-vindo a Que História!,  Duration 00,39  Duration 00:3914 outubro 2019",
+  "url": "/portuguese/podcasts/p07r3r3t/p07r3s60",
+}
+`;
+
+exports[`Canonical Podcast Page Recent Episodes List items should match text and url 4`] = `
+{
+  "text": "Áudio, Que História!, Vem aí a 3ª temporada do 'Que História!': ouça o trailer,  Duration 00,43  Duration 00:4323 julho 2024",
+  "url": "/portuguese/podcasts/p07r3r3t/p0jd7041",
+}
+`;
+
+exports[`Canonical Podcast Page Recent Episodes List items should match text and url 5`] = `
+{
+  "text": "Áudio, Que História!, Segunda temporada vem aí: ouça o trailer,  Duration 00,49  Duration 00:4931 março 2021",
+  "url": "/portuguese/podcasts/p07r3r3t/p09chbv1",
+}
+`;
+
+exports[`Canonical Podcast Page Recent Episodes List items should match text and url 6`] = `
 {
   "text": "Áudio, Que História!, Bem-vindo a Que História!,  Duration 00,39  Duration 00:3914 outubro 2019",
   "url": "/portuguese/podcasts/p07r3r3t/p07r3s60",
