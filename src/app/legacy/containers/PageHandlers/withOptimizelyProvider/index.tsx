@@ -4,7 +4,11 @@ import {
   OptimizelyProvider,
   setLogger,
 } from '@optimizely/react-sdk';
-import { enums, ListenerPayload } from '@optimizely/optimizely-sdk';
+import { enums } from '@optimizely/optimizely-sdk';
+import type {
+  ActivateListenerPayload,
+  DecisionListenerPayload,
+} from '@optimizely/optimizely-sdk';
 import Cookie from 'js-cookie';
 import isLive from '#lib/utilities/isLive';
 import onClient from '#lib/utilities/onClient';
@@ -23,10 +27,10 @@ import { getClientTimeOfDay, getReferrer, isMobile } from './userAttributes';
 const PAGE_VIEW_EVENT_NAME = 'page-views';
 const SIGNED_IN_PAGE_VIEW_EVENT_NAME = 'signed-in-page-views';
 const VISIT_EVENT_NAME = 'visit';
-let lastTrackedUrl: string | null = null;
 const isInCypress = isCypress();
 const isStoryBook = process.env.STORYBOOK;
 const disableOptimizely = isStoryBook || isInCypress;
+let lastTrackedUrl: string | null = null;
 
 if (isLive() || isInCypress) {
   setLogger(null);
@@ -49,78 +53,78 @@ const optimizely = createInstance({
   eventFlushInterval: 100,
 });
 
-type DecisionInfo = {
-  flagKey?: string;
-  experimentKey?: string;
-  variationKey?: string;
-  decisionEventDispatched?: boolean;
+const trackPageEvents = () => {
+  if (!onClient() || isOperaProxy()) return;
+
+  const currentUrl = window.location.pathname + window.location.search;
+  if (currentUrl === lastTrackedUrl) return;
+
+  lastTrackedUrl = currentUrl;
+
+  // The visit (denominator) must be sent before the page view (numerator).
+  if (registerVisitActivity(Date.now())) {
+    optimizely.track(VISIT_EVENT_NAME);
+  }
+
+  optimizely.track(PAGE_VIEW_EVENT_NAME);
+
+  if (isSignedIn()) {
+    optimizely.track(SIGNED_IN_PAGE_VIEW_EVENT_NAME);
+  }
 };
 
-// Optimizely reports a decision in one of two shapes depending on the experiment type.
-// We normalise both into a single `decisionKey` + `impressionDispatched` so the rest
-// of the app doesn't need to know which type it was:
-// - Client-side (Flags/decide API): uses `flagKey`; an impression is only counted
-//   when `decisionEventDispatched` is true.
-// - Server-side (legacy activate API): uses `experimentKey` (the rule key) and
-//   always counts an impression.
-const resolveDecision = (decisionInfo?: DecisionInfo) => {
-  const clientSideFlagKey = decisionInfo?.flagKey;
-  const serverSideRuleKey = decisionInfo?.experimentKey;
-  const isClientSideDecision = Boolean(clientSideFlagKey);
+const handleDecision = ({
+  decisionKey,
+  variationKey,
+  impressionDispatched,
+}: {
+  decisionKey?: string;
+  variationKey?: string | null;
+  impressionDispatched: boolean;
+}) => {
+  if (!onClient()) return;
 
-  return isClientSideDecision
-    ? {
-        decisionKey: clientSideFlagKey,
-        impressionDispatched: Boolean(decisionInfo?.decisionEventDispatched),
+  if (decisionKey && variationKey && variationKey !== 'off') {
+    const isNewDecision = notifyDecision(decisionKey);
+
+    if (impressionDispatched) {
+      if (isNewDecision) {
+        const activationTrackingData = getActivationTrackingData();
+        sendOptimizelyActivationEvent({
+          experimentName: decisionKey,
+          experimentVariant: variationKey,
+          ...activationTrackingData,
+        });
       }
-    : {
-        decisionKey: serverSideRuleKey,
-        impressionDispatched: Boolean(serverSideRuleKey),
-      };
+
+      trackPageEvents();
+    }
+  }
 };
 
 optimizely?.notificationCenter?.addNotificationListener(
   enums.NOTIFICATION_TYPES.DECISION,
-  (notification: ListenerPayload & { decisionInfo?: DecisionInfo }) => {
-    if (!onClient()) return;
+  (notification: DecisionListenerPayload) => {
+    if (notification.type !== enums.DECISION_NOTIFICATION_TYPES.FLAG) return;
 
     const { decisionInfo } = notification;
-    const variationKey = decisionInfo?.variationKey;
-    const { decisionKey, impressionDispatched } = resolveDecision(decisionInfo);
 
-    if (decisionKey && variationKey && variationKey !== 'off') {
-      const isNewDecision = notifyDecision(decisionKey);
+    handleDecision({
+      decisionKey: decisionInfo.flagKey,
+      variationKey: decisionInfo.variationKey,
+      impressionDispatched: decisionInfo.decisionEventDispatched,
+    });
+  },
+);
 
-      if (impressionDispatched) {
-        if (isNewDecision) {
-          const activationTrackingData = getActivationTrackingData();
-          sendOptimizelyActivationEvent({
-            experimentName: decisionKey,
-            experimentVariant: variationKey,
-            ...activationTrackingData,
-          });
-        }
-
-        const currentUrl = window.location.pathname + window.location.search;
-        if (currentUrl !== lastTrackedUrl) {
-          lastTrackedUrl = currentUrl;
-
-          // the visit (denominator) must be sent before the page view (numerator)
-          // so the page view falls inside Optimizely's ratio metric attribution window
-          if (registerVisitActivity(Date.now())) {
-            optimizely.track(VISIT_EVENT_NAME);
-          }
-
-          optimizely.track(PAGE_VIEW_EVENT_NAME);
-
-          // proxy metric for sign-in experiments: additional to page-views,
-          // fired only when the user is in a signed-in state
-          if (isSignedIn()) {
-            optimizely.track(SIGNED_IN_PAGE_VIEW_EVENT_NAME);
-          }
-        }
-      }
-    }
+optimizely?.notificationCenter?.addNotificationListener(
+  enums.NOTIFICATION_TYPES.ACTIVATE,
+  (notification: ActivateListenerPayload) => {
+    handleDecision({
+      decisionKey: notification.experiment?.key,
+      variationKey: notification.variation?.key,
+      impressionDispatched: Boolean(notification.experiment?.key),
+    });
   },
 );
 
