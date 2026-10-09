@@ -29,9 +29,9 @@ const accountContext: AccountContextProps = {
 
 const TestProvider = ({
   children,
-  ...overrides
-}: PropsWithChildren<Partial<AccountContextProps>>) => (
-  <AccountContext.Provider value={{ ...accountContext, ...overrides }}>
+  value = accountContext,
+}: PropsWithChildren<{ value?: AccountContextProps }>) => (
+  <AccountContext.Provider value={value}>
     <QueryProvider>{children}</QueryProvider>
   </AccountContext.Provider>
 );
@@ -86,8 +86,11 @@ describe('QueryProvider', () => {
     }) => {
       render(
         <TestProvider
-          isArticlePersonalizationAvailable={isArticlePersonalizationAvailable}
-          isTopicPersonalizationAvailable={isTopicPersonalizationAvailable}
+          value={{
+            ...accountContext,
+            isArticlePersonalizationAvailable,
+            isTopicPersonalizationAvailable,
+          }}
         >
           <p>Page content</p>
         </TestProvider>,
@@ -104,10 +107,13 @@ describe('QueryProvider', () => {
     initialIsSignedIn => {
       const { rerender } = render(
         <TestProvider
-          isArticlePersonalizationAvailable
-          isSignedIn={initialIsSignedIn}
-          isArticlePersonalizationEnabled={initialIsSignedIn}
-          isPersonalisationOn={initialIsSignedIn}
+          value={{
+            ...accountContext,
+            isArticlePersonalizationAvailable: true,
+            isSignedIn: initialIsSignedIn,
+            isArticlePersonalizationEnabled: initialIsSignedIn,
+            isPersonalisationOn: initialIsSignedIn,
+          }}
         >
           <StatefulChild />
         </TestProvider>,
@@ -119,10 +125,13 @@ describe('QueryProvider', () => {
 
       rerender(
         <TestProvider
-          isArticlePersonalizationAvailable
-          isSignedIn={!initialIsSignedIn}
-          isArticlePersonalizationEnabled={!initialIsSignedIn}
-          isPersonalisationOn={!initialIsSignedIn}
+          value={{
+            ...accountContext,
+            isArticlePersonalizationAvailable: true,
+            isSignedIn: !initialIsSignedIn,
+            isArticlePersonalizationEnabled: !initialIsSignedIn,
+            isPersonalisationOn: !initialIsSignedIn,
+          }}
         >
           <StatefulChild />
         </TestProvider>,
