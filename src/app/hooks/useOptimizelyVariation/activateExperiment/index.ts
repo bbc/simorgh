@@ -23,11 +23,13 @@ const activateExperiment = async ({
     if (success && !activatedExperiments.has(experimentName)) {
       activatedExperiments.add(experimentName);
       optimizely.setForcedDecision(
-        { flagKey: experimentName },
+        {
+          ruleKey: experimentName,
+          flagKey: experimentName,
+        },
         { variationKey: experimentVariation },
       );
-      const test = optimizely.decide(experimentName);
-      console.log(test);
+      optimizely.decide(experimentName);
     }
   }
 };
