@@ -18,7 +18,9 @@ export type TimestampFormat =
   | 'D MMMM YYYY'
   | 'HH:mm'
   | 'YYYY-MM-DD'
-  | 'DD MMMM YYYY';
+  | 'DD MMMM YYYY'
+  | 'YYYY年M月D日'
+  | 'YYYY年M月DD日';
 
 const ARABIC_SCRIPT_LOCALES = new Set(['ar', 'fa', 'ps', 'ur']);
 
@@ -222,6 +224,7 @@ const formatDay = ({
     timezone,
     sanitisedLocale,
     options: { day: 'numeric' },
+    part: 'day',
   });
 
 const formatNumericMonth = ({
@@ -234,6 +237,20 @@ const formatNumericMonth = ({
     timezone,
     sanitisedLocale,
     options: { month: '2-digit' },
+    part: 'month',
+  });
+
+const formatMonthNumber = ({
+  timestamp,
+  timezone,
+  sanitisedLocale,
+}: Omit<Parameters<typeof formatDatePart>[0], 'options'>) =>
+  formatDatePart({
+    timestamp,
+    timezone,
+    sanitisedLocale,
+    options: { month: 'numeric' },
+    part: 'month',
   });
 
 const formatNumericDay = ({
@@ -246,6 +263,7 @@ const formatNumericDay = ({
     timezone,
     sanitisedLocale,
     options: { day: '2-digit' },
+    part: 'day',
   });
 
 const formatTime = ({
@@ -400,6 +418,14 @@ export const formatTimestampToken = ({
         return `${formatYear(dateParts)}-${formatNumericMonth(
           dateParts,
         )}-${formatNumericDay(dateParts)}`;
+      case 'YYYY年M月D日':
+        return `${formatYear(dateParts)}年${formatMonthNumber(
+          dateParts,
+        )}月${formatDay(dateParts)}日`;
+      case 'YYYY年M月DD日':
+        return `${formatYear(dateParts)}年${formatMonthNumber(
+          dateParts,
+        )}月${formatNumericDay(dateParts)}日`;
       default:
         throw new Error(`Unsupported timestamp format: ${format}`);
     }

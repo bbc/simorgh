@@ -47,6 +47,24 @@ describe('Timestamp formatting Temporal helpers', () => {
       ).toEqual(expected);
     });
 
+    it.each([
+      [Date.UTC(2021, 2, 28, 0, 30), 'GMT'],
+      [Date.UTC(2021, 2, 28, 1, 30), 'BST'],
+    ])(
+      'resolves Europe/London DST labels to %s',
+      (timestampValue, expected) => {
+        expect(
+          resolveTimeZoneLabel({
+            timestamp: timestampValue,
+            timezone: 'Europe/London',
+            locale: 'en-GB',
+          }),
+        ).toEqual(expected);
+      },
+    );
+  });
+
+  describe('formatTimestampToken', () => {
     it('formats Nepali numeric timestamps with Devanagari numerals', () => {
       const timestampValue = Date.UTC(2024, 10, 21, 0, 5);
 
@@ -69,24 +87,20 @@ describe('Timestamp formatting Temporal helpers', () => {
       ).toEqual('००:०५');
     });
 
-    it.each([
-      [Date.UTC(2021, 2, 28, 0, 30), 'GMT'],
-      [Date.UTC(2021, 2, 28, 1, 30), 'BST'],
-    ])(
-      'resolves Europe/London DST labels to %s',
-      (timestampValue, expected) => {
-        expect(
-          resolveTimeZoneLabel({
-            timestamp: timestampValue,
-            timezone: 'Europe/London',
-            locale: 'en-GB',
-          }),
-        ).toEqual(expected);
-      },
-    );
-  });
+    it.each<[TimestampFormat, string]>([
+      ['YYYY年M月D日', '2024年11月1日'],
+      ['YYYY年M月DD日', '2024年11月01日'],
+    ])('formats Zhongwen compatibility token %s', (format, expected) => {
+      expect(
+        formatTimestampToken({
+          format,
+          timestamp: Date.UTC(2024, 10, 1),
+          timezone: 'UTC',
+          locale: 'zh-cn',
+        }),
+      ).toEqual(expected);
+    });
 
-  describe('formatTimestampToken', () => {
     it.each<[TimestampFormat, string]>([
       ['LL, LT z', '19 October 2018, 17:10 GMT'],
       ['LL', '19 October 2018'],
