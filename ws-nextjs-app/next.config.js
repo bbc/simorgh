@@ -117,6 +117,12 @@ module.exports = {
       ),
     };
     config.plugins.push(
+      new webpack.IgnorePlugin({
+        resourceRegExp: /^\.\/locale$/,
+        contextRegExp: /moment$/,
+      }),
+    );
+    config.plugins.push(
       new MomentTimezoneInclude({
         startYear: 2010,
         endYear: new Date().getFullYear() + 1,
