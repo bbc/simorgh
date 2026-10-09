@@ -138,10 +138,10 @@ exports[`Canonical Listen Image should match snapshot 1`] = `
 <noscript>
   <div>
     <div
-      class="css-19pw9of"
+      class="css-nsgrcm"
     >
       <strong
-        class="css-1mo6435"
+        class="css-pow7hy"
       >
         ஒலிபரப்பு மென்பொருள் உங்கள் கணினியில் இல்லை
       </strong>
@@ -154,24 +154,24 @@ exports[`Canonical Listen Main heading should match text 1`] = `"Tamil - Listen 
 
 exports[`Canonical Listen Media Loader renders a valid container 1`] = `
 <figure
-  class="media-container css-1ocpd8x"
+  class="media-container css-1okmog4"
   data-e2e="media-loader__container"
 >
   <div
-    class="css-zmtwe4"
+    class="css-8432in"
     data-simorgh-media-loader="inactive"
   >
     <div
-      class="media-player css-mw2k38"
+      class="media-player css-9p9hvp"
       data-e2e="media-player"
     >
       <noscript>
         <div>
           <div
-            class="css-19pw9of"
+            class="css-nsgrcm"
           >
             <strong
-              class="css-1mo6435"
+              class="css-pow7hy"
             >
               ஒலிபரப்பு மென்பொருள் உங்கள் கணினியில் இல்லை
             </strong>
@@ -181,14 +181,14 @@ exports[`Canonical Listen Media Loader renders a valid container 1`] = `
     </div>
   </div>
   <figcaption
-    class="css-xlt47w"
+    class="css-xe4jyu"
     dir="ltr"
   >
     <span
       role="text"
     >
       <span
-        class="css-ju1gaf"
+        class="css-5ku87v"
       >
         கேட்பொலிக் குறிப்பு, 
       </span>

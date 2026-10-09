@@ -160,7 +160,7 @@ exports[`Canonical Articles Image Caption should match text 1`] = `"Image captio
 exports[`Canonical Articles Image should match snapshot 1`] = `
 <img
   alt="Pauline Clayton"
-  class="css-15ldsha"
+  class="css-1seqhu9"
   fetchpriority="high"
   height="360"
   loading="eager"

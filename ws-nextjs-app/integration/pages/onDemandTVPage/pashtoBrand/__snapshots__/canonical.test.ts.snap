@@ -139,15 +139,15 @@ exports[`Canonical On Demand T V Page Media Loader a11y assistive technology can
 
 exports[`Canonical On Demand T V Page Media Loader renders a figure caption 1`] = `
 <div
-  class="css-14m7ljj"
+  class="css-145siv3"
   data-e2e="media-loader__placeholder"
 >
   <div
-    class="css-ypnfco"
+    class="css-1gynr2b"
     data-e2e="media-player__guidance"
   >
     <noscript
-      class="css-fube8f"
+      class="css-n2zqlz"
     >
       <strong>
         په دې وسیله کې د غږ اوريدل او ویډیو لیدنه شونې نه ده.
@@ -155,21 +155,21 @@ exports[`Canonical On Demand T V Page Media Loader renders a figure caption 1`] 
     </noscript>
   </div>
   <button
-    class="focusIndicatorRemove css-qu3gnu"
+    class="focusIndicatorRemove css-1s7djye"
     type="button"
   >
     <span
-      class="css-ju1gaf"
+      class="css-5ku87v"
     >
       Play video, " د بي بي سي خبرونه ", موده 28,00
     </span>
     <div
       aria-hidden="true"
-      class="css-cimshd"
+      class="css-7qcky8"
     >
       <svg
         aria-hidden="true"
-        class="css-1lojl5o-MediaIcon-VideoMediaIcon e1txgu0u1"
+        class="css-q8pkrf e1txgu0u1"
         focusable="false"
         height="12"
         viewBox="0 0 12 12"
@@ -192,19 +192,19 @@ exports[`Canonical On Demand T V Page Media Loader renders a figure caption 1`] 
     </div>
     <time
       aria-hidden="true"
-      class="css-9rvtdr"
+      class="css-digyti"
       datetime="PT28M"
     >
       28:00
     </time>
   </button>
   <div
-    class="css-h9n6eo"
+    class="css-e398u2"
     style="padding-bottom:0;overflow:hidden"
   >
     <img
       alt=""
-      class="css-aa90md"
+      class="css-ey0vwc"
       loading="eager"
       src="https://ichef.bbci.co.uk/images/ic/$recipe/p0k5s1yz.png"
       srcset="https://ichef.bbci.co.uk/images/ic/240xn/p0k5s1yz.png.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p0k5s1yz.png.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p0k5s1yz.png.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p0k5s1yz.png.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p0k5s1yz.png.webp 800w"
@@ -216,15 +216,15 @@ exports[`Canonical On Demand T V Page Media Loader renders a figure caption 1`] 
 
 exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
 <div
-  class="css-14m7ljj"
+  class="css-145siv3"
   data-e2e="media-loader__placeholder"
 >
   <div
-    class="css-ypnfco"
+    class="css-1gynr2b"
     data-e2e="media-player__guidance"
   >
     <noscript
-      class="css-fube8f"
+      class="css-n2zqlz"
     >
       <strong>
         په دې وسیله کې د غږ اوريدل او ویډیو لیدنه شونې نه ده.
@@ -232,21 +232,21 @@ exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
     </noscript>
   </div>
   <button
-    class="focusIndicatorRemove css-qu3gnu"
+    class="focusIndicatorRemove css-1s7djye"
     type="button"
   >
     <span
-      class="css-ju1gaf"
+      class="css-5ku87v"
     >
       Play video, " د بي بي سي خبرونه ", موده 28,00
     </span>
     <div
       aria-hidden="true"
-      class="css-cimshd"
+      class="css-7qcky8"
     >
       <svg
         aria-hidden="true"
-        class="css-1lojl5o-MediaIcon-VideoMediaIcon e1txgu0u1"
+        class="css-q8pkrf e1txgu0u1"
         focusable="false"
         height="12"
         viewBox="0 0 12 12"
@@ -269,19 +269,19 @@ exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
     </div>
     <time
       aria-hidden="true"
-      class="css-9rvtdr"
+      class="css-digyti"
       datetime="PT28M"
     >
       28:00
     </time>
   </button>
   <div
-    class="css-h9n6eo"
+    class="css-e398u2"
     style="padding-bottom:0;overflow:hidden"
   >
     <img
       alt=""
-      class="css-aa90md"
+      class="css-ey0vwc"
       loading="eager"
       src="https://ichef.bbci.co.uk/images/ic/$recipe/p0k5s1yz.png"
       srcset="https://ichef.bbci.co.uk/images/ic/240xn/p0k5s1yz.png.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p0k5s1yz.png.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p0k5s1yz.png.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p0k5s1yz.png.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p0k5s1yz.png.webp 800w"
@@ -293,23 +293,23 @@ exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
 
 exports[`Canonical On Demand T V Page Media Loader renders a valid container 1`] = `
 <figure
-  class="media-container css-1brxdrc"
+  class="media-container css-12jlusf"
   data-e2e="media-loader__container"
 >
   <div
-    class="css-zmtwe4"
+    class="css-8432in"
     data-simorgh-media-loader="inactive"
   >
     <div
-      class="css-14m7ljj"
+      class="css-145siv3"
       data-e2e="media-loader__placeholder"
     >
       <div
-        class="css-ypnfco"
+        class="css-1gynr2b"
         data-e2e="media-player__guidance"
       >
         <noscript
-          class="css-fube8f"
+          class="css-n2zqlz"
         >
           <strong>
             په دې وسیله کې د غږ اوريدل او ویډیو لیدنه شونې نه ده.
@@ -317,21 +317,21 @@ exports[`Canonical On Demand T V Page Media Loader renders a valid container 1`]
         </noscript>
       </div>
       <button
-        class="focusIndicatorRemove css-qu3gnu"
+        class="focusIndicatorRemove css-1s7djye"
         type="button"
       >
         <span
-          class="css-ju1gaf"
+          class="css-5ku87v"
         >
           Play video, " د بي بي سي خبرونه ", موده 28,00
         </span>
         <div
           aria-hidden="true"
-          class="css-cimshd"
+          class="css-7qcky8"
         >
           <svg
             aria-hidden="true"
-            class="css-1lojl5o-MediaIcon-VideoMediaIcon e1txgu0u1"
+            class="css-q8pkrf e1txgu0u1"
             focusable="false"
             height="12"
             viewBox="0 0 12 12"
@@ -354,19 +354,19 @@ exports[`Canonical On Demand T V Page Media Loader renders a valid container 1`]
         </div>
         <time
           aria-hidden="true"
-          class="css-9rvtdr"
+          class="css-digyti"
           datetime="PT28M"
         >
           28:00
         </time>
       </button>
       <div
-        class="css-h9n6eo"
+        class="css-e398u2"
         style="padding-bottom:0;overflow:hidden"
       >
         <img
           alt=""
-          class="css-aa90md"
+          class="css-ey0vwc"
           loading="eager"
           src="https://ichef.bbci.co.uk/images/ic/$recipe/p0k5s1yz.png"
           srcset="https://ichef.bbci.co.uk/images/ic/240xn/p0k5s1yz.png.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p0k5s1yz.png.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p0k5s1yz.png.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p0k5s1yz.png.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p0k5s1yz.png.webp 800w"
