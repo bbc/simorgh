@@ -80,6 +80,9 @@ export const service: DefaultServiceConfig = {
         moreAboutTopic: 'Ibindi bijyanye na {topic}',
         fetchErrorMessage: 'Ntibyashoboye gufunguka. Ongera ugerageze',
       },
+      googlePreferredSource: {
+        linkText: 'Ongeraho nk’isoko wifuza kuri Google',
+      },
       continueReading: 'Komeza usome',
       currentPage: 'Uru rupapuro',
       skipLinkText: 'Simbira ku birimwo',

@@ -67,6 +67,9 @@ export const service: DefaultServiceConfig = {
         moreAboutTopic: '{topic}에 대해 더 보기',
         fetchErrorMessage: '로드하지 못했습니다. 다시 시도해 주세요',
       },
+      googlePreferredSource: {
+        linkText: 'Google에서 선호 소스로 추가',
+      },
       currentPage: '현재 페이지',
       skipLinkText: '내용 보기',
       skipContent: {
@@ -77,6 +80,13 @@ export const service: DefaultServiceConfig = {
       relatedTopics: '관련 토픽',
       moreOnThis: '',
       navMenuText: '섹션',
+      liteSite: {
+        onboardingMessage:
+          '데이터를 적게 사용하는 텍스트 전용 버전의 웹사이트를 보고 계십니다. 모든 이미지와 동영상이 포함된 웹사이트의 메인 버전을 보세요.',
+        toMainSite: '메인 웹사이트로 이동',
+        informationPage: '데이터 절약 버전에 대해 자세히 알아보기',
+        dataSaving: '데이터 절약 버전',
+      },
       mediaAssetPage: {
         mediaPlayer: '미디어 플레이어',
         audioPlayer: '오디오 플레이어',

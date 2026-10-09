@@ -86,6 +86,9 @@ export const service: DefaultServiceConfig = {
         moreAboutTopic: '{topic} жөнүндө көбүрөөк',
         fetchErrorMessage: 'Жүктөө ишке ашкан жок. Кайра аракет кылыңыз',
       },
+      googlePreferredSource: {
+        linkText: "Google'да артыкчылыктуу булак катары кошуу",
+      },
       currentPage: 'Ачылып турган баракча',
       skipLinkText: 'Сайтка өтүү',
       skipContent: {
@@ -96,6 +99,13 @@ export const service: DefaultServiceConfig = {
       relatedTopics: 'Тектеш темалар',
       moreOnThis: '',
       navMenuText: 'Бөлүмдөр',
+      liteSite: {
+        onboardingMessage:
+          'Сиз бул сайттын азыраак дата коротуучу, тексттен турган версиясын көрүп жатасыз. Сайттын бардык сүрөттөрдү жана видеолорду камтыган негизги версиясын көрүңүз.',
+        toMainSite: 'Мени негизги сайтка алып бар',
+        informationPage: 'Дата үнөмдөөчү бул версия жөнүндө көбүрөөк билиңиз',
+        dataSaving: 'Дата үнөмдөөчү версия',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',

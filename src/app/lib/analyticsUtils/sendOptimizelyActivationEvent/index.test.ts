@@ -16,6 +16,7 @@ describe('sendOptimizelyActivationEvent', () => {
     service: 'news' as const,
     isSignedIn: true,
     hashedId: 'hashed-id',
+    isPersonalisationOn: true,
   };
 
   afterEach(() => {
@@ -28,6 +29,13 @@ describe('sendOptimizelyActivationEvent', () => {
     expect(sendBeacon).toHaveBeenCalledTimes(1);
     expect(sendBeacon).toHaveBeenCalledWith(
       expect.objectContaining({
+        params: expect.objectContaining({
+          user: {
+            isSignedIn: true,
+            hashedId: 'hashed-id',
+            isPersonalisationOn: true,
+          },
+        }),
         eventDetails: expect.objectContaining({
           eventName: 'activation',
           eventPublisher: 'viewability',

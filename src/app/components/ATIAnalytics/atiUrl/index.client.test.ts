@@ -3,7 +3,7 @@ import { Platforms } from '#app/models/types/global';
 import * as getEnvConfigModule from '#app/lib/utilities/getEnvConfig';
 import * as genericLabelHelpers from '../../../lib/analyticsUtils';
 import {
-  buildResonanceAnalyticsModel,
+  buildResonancePageViewModel,
   buildActivationEventModel,
   buildReverbAnalyticsModel,
   buildReverbEventModel,
@@ -35,7 +35,7 @@ describe('atiUrl', () => {
   });
 
   describe('Resonance', () => {
-    describe('buildResonanceAnalyticsModel', () => {
+    describe('buildResonancePageViewModel', () => {
       const input = {
         appName: 'news-pidgin',
         contentId: 'urn:bbc:optimo:asset:c0000000001o',
@@ -58,7 +58,7 @@ describe('atiUrl', () => {
       };
 
       it('should return the correct Resonance analytics model', () => {
-        const result = buildResonanceAnalyticsModel(input);
+        const result = buildResonancePageViewModel(input);
 
         expect(result.resonanceProperties).toEqual({
           mode: ResonanceMode.TEST,
@@ -85,7 +85,7 @@ describe('atiUrl', () => {
       });
 
       it('should omit optional fields when no value is provided', () => {
-        const result = buildResonanceAnalyticsModel({
+        const result = buildResonancePageViewModel({
           ...input,
           pageTitle: undefined,
           timePublished: '',
@@ -104,7 +104,7 @@ describe('atiUrl', () => {
       });
 
       it('should suffix app name with "-app" when platform is app', () => {
-        const result = buildResonanceAnalyticsModel({
+        const result = buildResonancePageViewModel({
           ...input,
           platform: 'app' as Platforms,
         });
@@ -116,7 +116,7 @@ describe('atiUrl', () => {
       });
 
       it('should pass hashedId through as hashedUserId when provided', () => {
-        const result = buildResonanceAnalyticsModel({
+        const result = buildResonancePageViewModel({
           ...input,
           hashedId: 'abc123hasheduser',
         });
@@ -131,7 +131,7 @@ describe('atiUrl', () => {
             typeof getEnvConfigModule.getEnvConfig
           >);
 
-        const result = buildResonanceAnalyticsModel(input);
+        const result = buildResonancePageViewModel(input);
 
         expect(result.resonanceProperties.mode).toBe(ResonanceMode.LIVE);
       });
@@ -197,7 +197,11 @@ describe('atiUrl', () => {
             x18: 'isLocServeCookieSet',
           },
         };
-        const userParams = { isSignedIn: false, hashedId: null };
+        const userParams = {
+          isSignedIn: false,
+          hashedId: null,
+          isPersonalisationOn: false,
+        };
 
         expect(reverbAnalyticsModel.params.page).toEqual(pageParams);
         expect(reverbAnalyticsModel.params.user).toEqual(userParams);
@@ -238,7 +242,11 @@ describe('atiUrl', () => {
             x18: 'isLocServeCookieSet',
           },
         };
-        const userParams = { isSignedIn: false, hashedId: null };
+        const userParams = {
+          isSignedIn: false,
+          hashedId: null,
+          isPersonalisationOn: false,
+        };
 
         expect(reverbAnalyticsModel.params.page).toEqual(pageParams);
         expect(reverbAnalyticsModel.params.user).toEqual(userParams);
@@ -343,6 +351,7 @@ describe('atiUrl', () => {
         expect(reverbPageSectionViewEventModel.params.user).toEqual({
           isSignedIn: false,
           hashedId: null,
+          isPersonalisationOn: false,
         });
       });
 
@@ -559,6 +568,7 @@ describe('atiUrl', () => {
         expect(reverbExperimentActivationEventModel.params.user).toEqual({
           isSignedIn: true,
           hashedId: 'hashed-id',
+          isPersonalisationOn: false,
         });
       });
 
@@ -615,6 +625,7 @@ describe('atiUrl', () => {
           user: {
             isSignedIn: true,
             hashedId: 'hashed-id',
+            isPersonalisationOn: false,
           },
         });
       });

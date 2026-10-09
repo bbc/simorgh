@@ -67,6 +67,9 @@ export const service: DefaultServiceConfig = {
         moreAboutTopic: '{topic} ਬਾਰੇ ਹੋਰ',
         fetchErrorMessage: 'ਲੋਡ ਨਹੀਂ ਹੋਇਆ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ',
       },
+      googlePreferredSource: {
+        linkText: "Google 'ਤੇ ਮਨਪਸੰਦ ਸਰੋਤ ਵਜੋਂ ਸ਼ਾਮਲ ਕਰੋ",
+      },
       continueReading: 'ਅੱਗੇ ਪੜ੍ਹੋ',
       currentPage: 'ਮੌਜੂਦਾ ਪੇਜ',
       skipLinkText: `ਸਮੱਗਰੀ 'ਤੇ ਜਾਓ`,
@@ -78,6 +81,13 @@ export const service: DefaultServiceConfig = {
       relatedTopics: 'ਸਬੰਧਿਤ ਵਿਸ਼ੇ',
       moreOnThis: '',
       navMenuText: 'ਸੈਕਸ਼ਨਜ਼',
+      liteSite: {
+        onboardingMessage:
+          'ਤੁਸੀਂ ਇਸ ਵੈੱਬਸਾਈਟ ਦਾ ਸਿਰਫ਼-ਟੈਕਸਟ ਵਰਜ਼ਨ ਦੇਖ ਰਹੇ ਹੋ ਜੋ ਘੱਟ ਡਾਟਾ ਵਰਤਦਾ ਹੈ। ਸਾਰੀਆਂ ਤਸਵੀਰਾਂ ਅਤੇ ਵੀਡੀਓ ਸਮੇਤ ਵੈੱਬਸਾਈਟ ਦਾ ਮੁੱਖ ਵਰਜ਼ਨ ਦੇਖੋ।',
+        toMainSite: `ਮੈਨੂੰ ਮੁੱਖ ਵੈੱਬਸਾਈਟ 'ਤੇ ਲੈ ਜਾਓ`,
+        informationPage: 'ਇਸ ਡਾਟਾ-ਬਚਤ ਵਰਜ਼ਨ ਬਾਰੇ ਹੋਰ ਜਾਣੋ',
+        dataSaving: 'ਡਾਟਾ-ਬਚਤ ਵਰਜ਼ਨ',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',

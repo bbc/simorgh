@@ -1,9 +1,7 @@
 import { use, useId } from 'react';
-import getOriginCode from '#app/lib/utilities/imageSrcHelpers/originCode';
 import { Summary } from '#app/models/types/curationData';
 import { RequestContext } from '#app/contexts/RequestContext';
-import { createSrcsets } from '#lib/utilities/srcSet';
-import getLocator from '#lib/utilities/imageSrcHelpers/locator';
+import { prepareIchefImage } from '#app/utilities/imageSrcSets';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useViewTracker from '#app/hooks/useViewTracker';
@@ -42,9 +40,8 @@ const SocialLinkImage = ({ imageUrl }: { imageUrl: string }) => {
   }
 
   const { primarySrcset, primaryMimeType, fallbackSrcset, fallbackMimeType } =
-    createSrcsets({
-      originCode: getOriginCode(imagePath),
-      locator: getLocator(imagePath),
+    prepareIchefImage({
+      imageUrlTemplate: imageUrl,
       imageResolutions: [DEFAULT_IMAGE_SIZE, DEFAULT_IMAGE_SIZE_2X],
       originalImageWidth: DEFAULT_IMAGE_SIZE_2X,
     });

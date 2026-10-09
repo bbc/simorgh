@@ -171,7 +171,7 @@ const icons = {
 };
 
 const iconOverridesByUrl = {
-  '/portuguese/articles/czd2prld130o': mediaIcons.elections,
+  '/portuguese/articles/cm1dlv13yql9o': mediaIcons.elections,
 };
 
 const getIconFromUrl = url => {

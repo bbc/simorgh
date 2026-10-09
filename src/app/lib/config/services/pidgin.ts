@@ -68,6 +68,9 @@ export const service: DefaultServiceConfig = {
         moreAboutTopic: 'More about {topic}',
         fetchErrorMessage: 'E no load. Abeg try again',
       },
+      googlePreferredSource: {
+        linkText: 'Add am as preferred source for Google',
+      },
       continueReading: 'Kontinu to dey read',
       currentPage: 'Page where you dey',
       skipLinkText: 'Waka go wetin de inside',
@@ -79,6 +82,13 @@ export const service: DefaultServiceConfig = {
       relatedTopics: 'Topics Wey Dem Resemble',
       moreOnThis: '',
       navMenuText: 'Plenti seshon',
+      liteSite: {
+        onboardingMessage:
+          'You dey view text-only version of dis website wey dey use small data. Check di main version of di website wey get all images and videos.',
+        toMainSite: 'Carry me go di main website',
+        informationPage: 'Find out more about dis data-saving version',
+        dataSaving: 'Data-saving version',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',

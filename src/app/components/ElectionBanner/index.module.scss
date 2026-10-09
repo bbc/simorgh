@@ -1,0 +1,127 @@
+@use 'sass:map';
+@use '@scss/themeTokens' as theme;
+
+$election-banner-iframe-heights: (
+  mobile: 315,
+  tablet: 320,
+  desktop: 350,
+);
+
+$ap-election-banner-iframe-heights: (
+  mobile: 340,
+  desktop: 216,
+);
+
+.title {
+  @include theme.typography-from-scale-and-variant(canon, 'sans-bold');
+  display: block;
+  width: 100%;
+  color: #{theme.$palette-white};
+  padding-bottom: #{theme.$spacings-double};
+}
+
+.electionBannerWrapper {
+  padding: #{theme.$spacings-full} 0;
+}
+
+.electionBannerContent {
+  padding: #{theme.$spacings-double};
+  background: linear-gradient(180deg, #2d0059 0%, #230046 50%, #000000 100%);
+}
+
+.electionBannerIframe {
+  width: 100%;
+  height: #{theme.pixelsToRem-px-to-rem(
+      map.get($election-banner-iframe-heights, mobile)
+    )};
+  border: none;
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    height: #{theme.pixelsToRem-px-to-rem(
+        map.get($election-banner-iframe-heights, tablet)
+      )};
+  }
+
+  @media #{theme.$mediaQueries-group-4-min-width} {
+    height: #{theme.pixelsToRem-px-to-rem(
+        map.get($election-banner-iframe-heights, desktop)
+      )};
+  }
+}
+
+.electionBannerWrapperAmp,
+.assocPressElectionBannerWrapperAmp {
+  overflow: hidden;
+  margin-bottom: #{theme.$spacings-full};
+
+  & amp-img {
+    margin: 0 auto;
+    max-width: 640px;
+  }
+
+  & amp-iframe {
+    width: 100%;
+    border: none;
+  }
+}
+
+.electionBannerWrapperAmp {
+  & amp-iframe {
+    height: #{theme.pixelsToRem-px-to-rem(
+        map.get($election-banner-iframe-heights, mobile)
+      )};
+
+    @media #{theme.$mediaQueries-group-3-min-width} {
+      height: #{theme.pixelsToRem-px-to-rem(
+          map.get($election-banner-iframe-heights, tablet)
+        )};
+    }
+
+    @media #{theme.$mediaQueries-group-4-min-width} {
+      height: #{theme.pixelsToRem-px-to-rem(
+          map.get($election-banner-iframe-heights, desktop)
+        )};
+    }
+  }
+}
+
+.assocPressElectionBannerWrapper,
+.assocPressElectionBannerWrapperAmp {
+  max-width: #{theme.pixelsToRem-px-to-rem(1008)};
+  margin: 0 auto;
+  border-bottom: solid #{theme.pixelsToRem-px-to-rem(1)} transparent;
+
+  @media #{theme.$mediaQueries-group-4-min-width} {
+    padding: #{theme.$spacings-double} #{theme.$spacings-double} 0;
+  }
+}
+
+.assocPressElectionBannerIframe {
+  display: block;
+  max-width: #{theme.pixelsToRem-px-to-rem(1008)};
+  height: #{theme.pixelsToRem-px-to-rem(
+      map.get($ap-election-banner-iframe-heights, mobile)
+    )};
+  margin: 0 auto;
+  border: none;
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    height: #{theme.pixelsToRem-px-to-rem(
+        map.get($ap-election-banner-iframe-heights, desktop)
+      )};
+  }
+}
+
+.assocPressElectionBannerWrapperAmp {
+  .electionBannerContent {
+    > div {
+      padding: 0;
+    }
+  }
+
+  & amp-iframe {
+    display: block;
+    max-width: #{theme.pixelsToRem-px-to-rem(1008)};
+    margin: 0 auto;
+  }
+}
