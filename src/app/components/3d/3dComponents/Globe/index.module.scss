@@ -1,13 +1,14 @@
 @use '@scss/themeTokens' as theme;
 
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}
+
 .globeScene {
   width: 100%;
   aspect-ratio: 1;
-
-  @media #{theme.$mediaQueries-group-3-min-width} {
-    width: 500px;
-    height: 500px;
-  }
 }
 
 .canvasContainer {

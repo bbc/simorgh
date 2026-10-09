@@ -42,6 +42,13 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      serviceDiscovery: {
+        title: 'BBC News in 45 languages',
+        intro:
+          'BBC News is the world’s most trusted international news organisation with a weekly audience of 418 million people. BBC World Service - in 45 languages with journalists in 64 countries - reaches 313 million people every week with its independent, impartial and accurate journalism.',
+        learnMoreLabel: 'Read more',
+        learnMoreUrl: 'https://www.bbc.com/aboutthebbc/whatwedo/worldservice',
+      },
       ads: {
         advertisementLabel: 'Advertisement',
       },
