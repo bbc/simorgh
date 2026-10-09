@@ -269,6 +269,25 @@ export const EDITORIAL_MONTH_NAMES: Record<string, EditorialMonthNames> = {
   ],
 };
 
+const EDITORIAL_ORDINAL_DAY_LOCALES = new Set(['pcm']);
+
+const getEnglishOrdinalSuffix = (day: number) => {
+  const lastTwoDigits = day % 100;
+
+  if (lastTwoDigits >= 11 && lastTwoDigits <= 13) return 'th';
+
+  switch (day % 10) {
+    case 1:
+      return 'st';
+    case 2:
+      return 'nd';
+    case 3:
+      return 'rd';
+    default:
+      return 'th';
+  }
+};
+
 export const getEditorialMonthName = (locale: string, monthIndex: number) => {
   const localeKey = locale.toLowerCase();
   const languageCode = localeKey.split('-')[0];
@@ -276,4 +295,18 @@ export const getEditorialMonthName = (locale: string, monthIndex: number) => {
     EDITORIAL_MONTH_NAMES[localeKey] ?? EDITORIAL_MONTH_NAMES[languageCode];
 
   return monthNames?.[monthIndex];
+};
+
+export const getEditorialOrdinalDay = (locale: string, day: number) => {
+  const localeKey = locale.toLowerCase();
+  const languageCode = localeKey.split('-')[0];
+
+  if (
+    !EDITORIAL_ORDINAL_DAY_LOCALES.has(localeKey) &&
+    !EDITORIAL_ORDINAL_DAY_LOCALES.has(languageCode)
+  ) {
+    return undefined;
+  }
+
+  return `${day}${getEnglishOrdinalSuffix(day)}`;
 };

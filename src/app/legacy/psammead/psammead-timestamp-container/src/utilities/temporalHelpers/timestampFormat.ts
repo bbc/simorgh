@@ -3,7 +3,10 @@ import {
   sanitiseLocale,
   withArabicComma,
 } from '.';
-import { getEditorialMonthName } from './editorialMonthNames';
+import {
+  getEditorialMonthName,
+  getEditorialOrdinalDay,
+} from './editorialMonthNames';
 
 type Locale = string;
 
@@ -27,6 +30,16 @@ const OFFSET_TIMEZONE_LABEL = /^(?:GMT|UTC)([+-])(\d{1,2})(?::?(\d{2}))?$/;
 
 const getTimeZone = (timezone?: string) => timezone || 'UTC';
 
+const getLocaleNumberingSystemOverride = (sanitisedLocale: Locale) => {
+  const localeKey = sanitisedLocale.toLowerCase();
+  const languageCode = localeKey.split('-')[0];
+
+  return (
+    LOCALE_NUMBERING_SYSTEM_OVERRIDES[localeKey] ??
+    LOCALE_NUMBERING_SYSTEM_OVERRIDES[languageCode]
+  );
+};
+
 const formatDatePart = ({
   timestamp,
   timezone,
@@ -38,11 +51,7 @@ const formatDatePart = ({
   sanitisedLocale: Locale;
   options: Intl.DateTimeFormatOptions;
 }) => {
-  const localeKey = sanitisedLocale.toLowerCase();
-  const languageCode = localeKey.split('-')[0];
-  const localeOverride =
-    LOCALE_NUMBERING_SYSTEM_OVERRIDES[localeKey] ??
-    LOCALE_NUMBERING_SYSTEM_OVERRIDES[languageCode];
+  const localeOverride = getLocaleNumberingSystemOverride(sanitisedLocale);
   const formatter = new Intl.DateTimeFormat(
     localeOverride?.locale ?? sanitisedLocale,
     {
@@ -83,23 +92,57 @@ const formatMonth = ({
   timestamp,
   timezone,
   sanitisedLocale,
-}: Omit<Parameters<typeof formatDatePart>[0], 'options'>) =>
-  getEditorialMonthName(
-    sanitisedLocale,
+}: Omit<Parameters<typeof formatDatePart>[0], 'options'>) => {
+  const monthIndex =
     Number(
       new Intl.DateTimeFormat('en-US', {
         calendar: 'gregory',
         month: 'numeric',
         timeZone: getTimeZone(timezone),
       }).format(new Date(timestamp)),
-    ) - 1,
-  ) ??
-  formatDatePart({
-    timestamp,
-    timezone,
-    sanitisedLocale,
-    options: { month: 'long' },
-  });
+    ) - 1;
+  const editorialMonthName = getEditorialMonthName(sanitisedLocale, monthIndex);
+
+  if (editorialMonthName) return editorialMonthName;
+
+  const localeOverride = getLocaleNumberingSystemOverride(sanitisedLocale);
+  const monthPart = new Intl.DateTimeFormat(
+    localeOverride?.locale ?? sanitisedLocale,
+    {
+      calendar: 'gregory',
+      day: 'numeric',
+      month: 'long',
+      ...(localeOverride
+        ? { numberingSystem: localeOverride.numberingSystem }
+        : {}),
+      timeZone: getTimeZone(timezone),
+    },
+  )
+    .formatToParts(new Date(timestamp))
+    .find(({ type }) => type === 'month')?.value;
+
+  return (
+    monthPart ??
+    formatDatePart({
+      timestamp,
+      timezone,
+      sanitisedLocale,
+      options: { month: 'long' },
+    })
+  );
+};
+
+const getDayNumber = ({
+  timestamp,
+  timezone,
+}: Pick<Parameters<typeof formatDatePart>[0], 'timestamp' | 'timezone'>) =>
+  Number(
+    new Intl.DateTimeFormat('en-US', {
+      calendar: 'gregory',
+      day: 'numeric',
+      timeZone: getTimeZone(timezone),
+    }).format(new Date(timestamp)),
+  );
 
 const formatDay = ({
   timestamp,
@@ -221,9 +264,10 @@ export const formatTimestampToken = ({
           ...dateParts,
           options: { day: 'numeric', month: 'long', year: 'numeric' },
         })
-      : `${formatDay(dateParts)} ${formatMonth(dateParts)} ${formatYear(
-          dateParts,
-        )}`;
+      : `${
+          getEditorialOrdinalDay(sanitisedLocale, getDayNumber(dateParts)) ??
+          formatDay(dateParts)
+        } ${formatMonth(dateParts)} ${formatYear(dateParts)}`;
   const timezoneLabel = () =>
     resolveTimeZoneLabel({ timestamp, timezone, locale });
 

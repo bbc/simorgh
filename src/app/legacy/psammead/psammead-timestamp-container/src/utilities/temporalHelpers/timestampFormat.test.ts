@@ -132,5 +132,30 @@ describe('Timestamp formatting Temporal helpers', () => {
         }),
       ).toEqual('۲۱ نومبر ۲۰۲۴');
     });
+
+    it.each<[TimestampFormat, string]>([
+      ['LL', '24th March 2026'],
+      ['LL, LT z', '24th March 2026, 00:00 GMT'],
+    ])('uses Pidgin ordinal days for %s', (format, expected) => {
+      expect(
+        formatTimestampToken({
+          format,
+          timestamp: Date.UTC(2026, 2, 24),
+          timezone: 'GMT',
+          locale: 'pcm',
+        }),
+      ).toEqual(expected);
+    });
+
+    it('keeps explicit numeric day formats unchanged for Pidgin', () => {
+      expect(
+        formatTimestampToken({
+          format: 'D MMMM YYYY',
+          timestamp: Date.UTC(2026, 2, 24),
+          timezone: 'GMT',
+          locale: 'pcm',
+        }),
+      ).toEqual('24 March 2026');
+    });
   });
 });
