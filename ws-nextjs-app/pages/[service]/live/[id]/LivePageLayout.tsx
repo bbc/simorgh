@@ -15,6 +15,7 @@ import { PortraitVideoItems } from '#app/models/types/optimo';
 import usePolling from '#app/hooks/usePolling';
 import useToggle from '#app/hooks/useToggle';
 import ElectionBanner from '#app/components/ElectionBanner';
+import isElectionBannerVisible from '#app/components/ElectionBanner/utilities';
 import {
   getImageFromPost,
   getHeadlineFromPost,
@@ -84,10 +85,12 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
     brandName,
     publishingPrinciples,
     service,
+    electionBanner,
   } = use(ServiceContext);
-  const { canonicalNonUkLink } = use(RequestContext);
+  const { canonicalNonUkLink, isLite } = use(RequestContext);
   const { enabled: livePagePollingEnabled } = useToggle('livePagePolling');
   const { enabled: sportHeaderEnabled } = useToggle('showSportDataHeader');
+  const { enabled: electionBannerEnabled } = useToggle('electionBanner');
 
   const streamRef = useRef<HTMLDivElement>(null);
   const [isFirstPostVisible, setIsFirstPostVisible] = useState(true);
@@ -203,6 +206,13 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
   const showPortraitVideoCarousel =
     portraitVideoItems && portraitVideoItems.portraitVideo.blocks.length > 0;
 
+  const shouldShowElectionBanner = isElectionBannerVisible({
+    electionBannerEnabled,
+    electionThingIds: electionBanner?.electionThingIds,
+    isLite,
+    taggings: passportTaggings,
+  });
+
   return (
     <>
       <ATIAnalytics />
@@ -238,7 +248,9 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
         })}
       />
       <main>
-        {passportTaggings && <ElectionBanner taggings={passportTaggings} />}
+        {shouldShowElectionBanner && passportTaggings && mediaCollections && (
+          <ElectionBanner taggings={passportTaggings} />
+        )}
         <Header
           showLiveLabel={showSportData ? isSportDataLive : isLive}
           title={title}
@@ -248,6 +260,7 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
           imageWidth={imageWidth}
           mediaCollections={mediaCollections}
           showSportData={showSportData}
+          withElectionBanner={shouldShowElectionBanner}
         />
         {showSportData && (
           <HeadToHeadV2

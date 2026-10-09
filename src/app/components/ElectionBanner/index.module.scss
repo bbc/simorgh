@@ -108,6 +108,7 @@ $ap-election-banner-iframe-heights: (
 
 .assocPressElectionBannerWrapperLivePage {
   max-width: #{theme.pixelsToRem-px-to-rem(1280)};
+  padding: #{theme.$spacings-double} 0 0;
   border-bottom: none;
 }
 

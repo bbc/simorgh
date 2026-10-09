@@ -6,11 +6,26 @@ import { MediaCollection } from '#app/components/MediaLoader/types';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import Image from '#app/components/Image';
+import ElectionBanner from '#app/components/ElectionBanner';
 import { createIchefSrcSet } from '#app/utilities/imageSrcSets';
 import getOriginCode from '#app/lib/utilities/imageSrcHelpers/originCode';
 import getLocator from '#app/lib/utilities/imageSrcHelpers/locator';
 import styles from './styles';
 import LiveLabelHeader from './LiveLabelHeader';
+
+const getBackgroundStyle = ({
+  withElectionBanner,
+  hasMediaCollections,
+}: {
+  withElectionBanner?: boolean;
+  hasMediaCollections: boolean;
+}) => {
+  if (!withElectionBanner) return styles.backgroundColor;
+
+  return hasMediaCollections
+    ? styles.backgroundColourElectionBannerWithMedia
+    : styles.backgroundColourElectionBanner;
+};
 
 const Header = ({
   showLiveLabel,
@@ -21,6 +36,7 @@ const Header = ({
   imageWidth,
   mediaCollections,
   showSportData,
+  withElectionBanner,
 }: {
   showLiveLabel: boolean;
   title: string;
@@ -30,6 +46,7 @@ const Header = ({
   imageWidth?: number;
   mediaCollections?: MediaCollection[] | null;
   showSportData?: boolean;
+  withElectionBanner?: boolean;
 }) => {
   const imageRef = useRef<HTMLImageElement>(null);
   const [isHeaderImageAlreadyLoaded, setIsHeaderImageAlreadyLoaded] =
@@ -38,6 +55,10 @@ const Header = ({
   const [isMediaOpen, setLiveMediaOpen] = useState(false);
   const isHeaderImage = !!imageUrl && !!imageUrlTemplate && !!imageWidth;
   const isWithImageLayout = isHeaderImage || !!mediaCollections;
+  const backgroundStyle = getBackgroundStyle({
+    withElectionBanner,
+    hasMediaCollections: Boolean(mediaCollections),
+  });
   const {
     translations: { sport: { matchSummary = 'Match Summary' } = {} },
   } = use(ServiceContext);
@@ -113,7 +134,7 @@ const Header = ({
   return (
     <div css={[styles.headerContainer, styles.headerContainerForcedColours]}>
       <div css={styles.backgroundContainer}>
-        <div css={styles.backgroundColor} />
+        <div css={backgroundStyle} />
       </div>
       <div
         css={[

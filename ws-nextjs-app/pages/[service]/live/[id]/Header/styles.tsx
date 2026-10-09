@@ -42,6 +42,22 @@ export default {
       bottom: 0,
       position: 'absolute',
     }),
+  backgroundColourElectionBanner: () =>
+    css({
+      backgroundColor: '#2d0059',
+      width: '100%',
+      top: 0,
+      bottom: 0,
+      position: 'absolute',
+    }),
+  backgroundColourElectionBannerWithMedia: () =>
+    css({
+      backgroundColor: '#2d0059',
+      width: '100%',
+      top: 0,
+      bottom: 0,
+      position: 'absolute',
+    }),
   backgroundColorSportData: ({ palette }: Theme) =>
     css({
       backgroundColor: palette.GREY_16, // non-concise view background colour - MVP
