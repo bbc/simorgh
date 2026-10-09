@@ -65,9 +65,74 @@ exports[`Canonical Send Footer Anchors should match text and url 9`] = `
 }
 `;
 
+exports[`Canonical Send Footer Anchors should match text and url 10`] = `
+{
+  "text": "BBC News, Mundo",
+  "url": "/mundo",
+}
+`;
+
+exports[`Canonical Send Footer Anchors should match text and url 11`] = `
+{
+  "text": "Por qué puedes confiar en la BBC",
+  "url": "https://www.bbc.com/mundo/institucional-51359666",
+}
+`;
+
+exports[`Canonical Send Footer Anchors should match text and url 12`] = `
+{
+  "text": "Términos de uso",
+  "url": "https://www.bbc.com/mundo/institucional-36400005",
+}
+`;
+
+exports[`Canonical Send Footer Anchors should match text and url 13`] = `
+{
+  "text": "Sobre la BBC",
+  "url": "https://www.bbc.com/mundo/institucional-36400007",
+}
+`;
+
+exports[`Canonical Send Footer Anchors should match text and url 14`] = `
+{
+  "text": "Política de privacidad",
+  "url": "https://www.bbc.com/mundo/institucional-36400009",
+}
+`;
+
+exports[`Canonical Send Footer Anchors should match text and url 15`] = `
+{
+  "text": "Cookies",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
+
+exports[`Canonical Send Footer Anchors should match text and url 16`] = `
+{
+  "text": "Escribe a BBC Mundo",
+  "url": "https://www.bbc.co.uk/mundo/send/u50853489",
+}
+`;
+
+exports[`Canonical Send Footer Anchors should match text and url 17`] = `
+{
+  "text": "Otros idiomas",
+  "url": "https://www.bbc.com/ws/languages",
+}
+`;
+
+exports[`Canonical Send Footer Anchors should match text and url 18`] = `
+{
+  "text": "Lee sobre nuestra postura acerca de enlaces externos.",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/links-and-feeds",
+}
+`;
+
 exports[`Canonical Send Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/mundo"`;
 
 exports[`Canonical Send Footer Paragraphs should match text 1`] = `"© 2026 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
+
+exports[`Canonical Send Footer Paragraphs should match text 2`] = `"© 2026 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
 
 exports[`Canonical Send Header I can see the branding 1`] = `
 {

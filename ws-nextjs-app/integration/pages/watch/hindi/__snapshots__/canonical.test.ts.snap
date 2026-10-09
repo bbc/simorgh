@@ -110,11 +110,78 @@ exports[`Canonical Watch Footer Anchors should match text and url 9`] = `
 }
 `;
 
+exports[`Canonical Watch Footer Anchors should match text and url 10`] = `
+{
+  "text": "BBC News, हिंदी",
+  "url": "/hindi",
+}
+`;
+
+exports[`Canonical Watch Footer Anchors should match text and url 11`] = `
+{
+  "text": "आप बीबीसी पर क्यों भरोसा कर सकते हैं",
+  "url": "https://www.bbc.com/hindi/institutional-50223932",
+}
+`;
+
+exports[`Canonical Watch Footer Anchors should match text and url 12`] = `
+{
+  "text": "इस्तेमाल की शर्तें",
+  "url": "https://www.bbc.com/hindi/institutional-37342293",
+}
+`;
+
+exports[`Canonical Watch Footer Anchors should match text and url 13`] = `
+{
+  "text": "बीबीसी के बारे में",
+  "url": "https://www.bbc.com/hindi/institutional-37343168",
+}
+`;
+
+exports[`Canonical Watch Footer Anchors should match text and url 14`] = `
+{
+  "text": "निजता की नीति",
+  "url": "https://www.bbc.com/hindi/institutional-37342614",
+}
+`;
+
+exports[`Canonical Watch Footer Anchors should match text and url 15`] = `
+{
+  "text": "कुकीज़",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
+
+exports[`Canonical Watch Footer Anchors should match text and url 16`] = `
+{
+  "text": "बीबीसी से संपर्क",
+  "url": "https://www.bbc.co.uk/hindi/send/u50853357",
+}
+`;
+
+exports[`Canonical Watch Footer Anchors should match text and url 17`] = `
+{
+  "text": "अन्य भाषाएँ",
+  "url": "https://www.bbc.com/ws/languages",
+}
+`;
+
+exports[`Canonical Watch Footer Anchors should match text and url 18`] = `
+{
+  "text": "बाहरी साइटों का लिंक देने की हमारी नीति के बारे में पढ़ें.",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/links-and-feeds",
+}
+`;
+
 exports[`Canonical Watch Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/hindi"`;
 
 exports[`Canonical Watch Footer Paragraphs should match text 1`] = `"बीबीसी के लिए कलेक्टिव न्यूज़रूम की ओर से प्रकाशित"`;
 
 exports[`Canonical Watch Footer Paragraphs should match text 2`] = `"© 2026 BBC. बाहरी साइटों की सामग्री के लिए बीबीसी ज़िम्मेदार नहीं है. बाहरी साइटों का लिंक देने की हमारी नीति के बारे में पढ़ें."`;
+
+exports[`Canonical Watch Footer Paragraphs should match text 3`] = `"बीबीसी के लिए कलेक्टिव न्यूज़रूम की ओर से प्रकाशित"`;
+
+exports[`Canonical Watch Footer Paragraphs should match text 4`] = `"© 2026 BBC. बाहरी साइटों की सामग्री के लिए बीबीसी ज़िम्मेदार नहीं है. बाहरी साइटों का लिंक देने की हमारी नीति के बारे में पढ़ें."`;
 
 exports[`Canonical Watch Header I can see the branding 1`] = `
 {
@@ -138,10 +205,10 @@ exports[`Canonical Watch Image should match snapshot 1`] = `
 <noscript>
   <div>
     <div
-      class="css-8xj2on"
+      class="css-dubb6m"
     >
       <strong
-        class="css-pow7hy"
+        class="css-1mo6435"
       >
         प्लेबैक आपके उपकरण पर नहीं हो पा रहा
       </strong>
@@ -154,24 +221,24 @@ exports[`Canonical Watch Main heading should match text 1`] = `"BBC świadkiem a
 
 exports[`Canonical Watch Media Loader renders a valid container 1`] = `
 <figure
-  class="media-container css-1okmog4"
+  class="media-container css-1ocpd8x"
   data-e2e="media-loader__container"
 >
   <div
-    class="css-8432in"
+    class="css-zmtwe4"
     data-simorgh-media-loader="inactive"
   >
     <div
-      class="media-player css-9p9hvp"
+      class="media-player css-mw2k38"
       data-e2e="media-player"
     >
       <noscript>
         <div>
           <div
-            class="css-8xj2on"
+            class="css-dubb6m"
           >
             <strong
-              class="css-pow7hy"
+              class="css-1mo6435"
             >
               प्लेबैक आपके उपकरण पर नहीं हो पा रहा
             </strong>
@@ -181,14 +248,14 @@ exports[`Canonical Watch Media Loader renders a valid container 1`] = `
     </div>
   </div>
   <figcaption
-    class="css-6ry3b0"
+    class="css-wa4nsy"
     dir="ltr"
   >
     <span
       role="text"
     >
       <span
-        class="css-5ku87v"
+        class="css-ju1gaf"
       >
         वीडियो कैप्शन, 
       </span>
