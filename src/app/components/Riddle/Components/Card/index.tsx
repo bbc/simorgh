@@ -1,6 +1,3 @@
-/** @jsxFrag React.Fragment */
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import { use, useLayoutEffect, useRef, useState } from 'react';
 import Heading from '#app/components/Heading';
 import Text from '../../../Text';

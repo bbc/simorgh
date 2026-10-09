@@ -1,7 +1,4 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-import React, { PropsWithChildren, use } from 'react';
-import { jsx } from '@emotion/react';
+import { PropsWithChildren, use } from 'react';
 import Text from '../../../Text';
 import style from './index.styles';
 import { LocalStorageContext } from '../../LocalStorageProvider';

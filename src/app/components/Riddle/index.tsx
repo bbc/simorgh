@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import onClient from '#app/lib/utilities/onClient';
 import Card from './Components/Card';
 import RiddleProvider from './RiddleProvider';

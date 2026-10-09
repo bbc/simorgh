@@ -1,10 +1,6 @@
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
 
-//   border: `${pixelsToRem(7)}rem solid transparent`,
-//   borderImage: `url(https://www.dropbox.com/scl/fi/5p4y98asfvgrxksxlgwqs/back23.png?rlkey=cu9mmwhnxq5vph4lvcacy2v15&st=z3pwywc4&raw=1) 33% round`,
-//   borderRadius: `${pixelsToRem(7)}rem`,
-
 export default {
   container: ({ mq }: Theme) =>
     css({

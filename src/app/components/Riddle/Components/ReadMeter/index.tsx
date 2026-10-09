@@ -1,6 +1,4 @@
-/** @jsx jsx */
 import { use, useEffect, useState } from 'react';
-import { jsx } from '@emotion/react';
 import onClient from '#app/lib/utilities/onClient';
 import Text from '../../../Text';
 import style from './index.styles';

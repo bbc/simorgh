@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import Text from '../../../Text';
 import style from './index.styles';
 
