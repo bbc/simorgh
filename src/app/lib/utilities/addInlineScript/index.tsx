@@ -9,9 +9,15 @@ export type InlineScriptProps = {
   script: string | { toString: () => string };
   parameters?: string | InlineScriptParameter[];
   nonce?: string | null;
+  setInnerHTML?: boolean;
 };
 
-export default ({ script, parameters, nonce }: InlineScriptProps) => {
+export default ({
+  script,
+  parameters,
+  nonce,
+  setInnerHTML,
+}: InlineScriptProps) => {
   let inlineScript = script;
   const paramList = parameters ? [parameters].flat() : [];
   const paramLiteral = paramList
@@ -30,7 +36,15 @@ export default ({ script, parameters, nonce }: InlineScriptProps) => {
     inlineScript = `(${script.toString()})(${paramLiteral})`;
   }
 
-  return (
+  return setInnerHTML ? (
+    <script
+      {...(nonce ? { nonce } : {})}
+      // eslint-disable-next-line react/no-danger
+      dangerouslySetInnerHTML={{
+        __html: inlineScript as string,
+      }}
+    />
+  ) : (
     <script type="text/javascript" {...(nonce ? { nonce } : {})}>
       {inlineScript as string}
     </script>
