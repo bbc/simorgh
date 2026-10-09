@@ -22,8 +22,12 @@ const activateExperiment = async ({
     const { success } = await optimizely.onReady();
     if (success && !activatedExperiments.has(experimentName)) {
       activatedExperiments.add(experimentName);
-      optimizely.setForcedVariation(experimentName, experimentVariation);
-      optimizely.activate(experimentName);
+      optimizely.setForcedDecision(
+        { flagKey: experimentName },
+        { variationKey: experimentVariation },
+      );
+      const test = optimizely.decide(experimentName);
+      console.log(test);
     }
   }
 };
