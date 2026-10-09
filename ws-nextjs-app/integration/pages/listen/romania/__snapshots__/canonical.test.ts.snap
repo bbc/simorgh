@@ -1,0 +1,353 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Canonical Listen A11y I can see the skip to content link 1`] = `"Acces direct la conținut"`;
+
+exports[`Canonical Listen Analytics ATI tracking pixel excluding src 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" >"`;
+
+exports[`Canonical Listen Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
+
+exports[`Canonical Listen Analytics ATI tracking pixel search params 1`] = `
+[
+  {
+    "s": "598343",
+  },
+  {
+    "s2": "136",
+  },
+  {
+    "p": "romania.listen.cwn607ex79dro.page",
+  },
+  {
+    "x1": "[urn:bbc:optimo:asset:cwn607ex79dro]",
+  },
+  {
+    "x2": "[responsive]",
+  },
+  {
+    "x3": "[news-romanian]",
+  },
+  {
+    "x4": "[ro]",
+  },
+  {
+    "x7": "[article-sfv]",
+  },
+  {
+    "x8": "[simorgh-nojs]",
+  },
+  {
+    "x9": "[Test]",
+  },
+  {
+    "x11": "[2026-10-07T16:09:17.881Z]",
+  },
+  {
+    "x12": "[2026-10-07T16:09:17.881Z]",
+  },
+]
+`;
+
+exports[`Canonical Listen Footer Anchors should match text and url 1`] = `
+{
+  "text": "BBC News, România",
+  "url": "/romania",
+}
+`;
+
+exports[`Canonical Listen Footer Anchors should match text and url 2`] = `
+{
+  "text": "De ce poți avea încredere în BBC",
+  "url": "https://www.bbc.com/romania/articles/cn97vddlxe2o",
+}
+`;
+
+exports[`Canonical Listen Footer Anchors should match text and url 3`] = `
+{
+  "text": "Termeni de utilizare",
+  "url": "https://www.bbc.com/romania/articles/ckgznn006r0o",
+}
+`;
+
+exports[`Canonical Listen Footer Anchors should match text and url 4`] = `
+{
+  "text": "Despre BBC",
+  "url": "https://www.bbc.com/romania/articles/c993yged1xno",
+}
+`;
+
+exports[`Canonical Listen Footer Anchors should match text and url 5`] = `
+{
+  "text": "Politica de confidențialitate",
+  "url": "https://www.bbc.com/romania/articles/c0jdnq25g30o",
+}
+`;
+
+exports[`Canonical Listen Footer Anchors should match text and url 6`] = `
+{
+  "text": "Cookies",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
+
+exports[`Canonical Listen Footer Anchors should match text and url 7`] = `
+{
+  "text": "Contactează BBC",
+  "url": "https://www.bbc.com/accessibility/",
+}
+`;
+
+exports[`Canonical Listen Footer Anchors should match text and url 8`] = `
+{
+  "text": "BBC News în alte limbi",
+  "url": "https://www.bbc.com/ws/languages",
+}
+`;
+
+exports[`Canonical Listen Footer Anchors should match text and url 9`] = `
+{
+  "text": "Aflați mai multe despre politica noastră privind utilizarea link-urilor externe",
+  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
+}
+`;
+
+exports[`Canonical Listen Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/romania"`;
+
+exports[`Canonical Listen Footer Paragraphs should match text 1`] = `"© 2026 BBC. BBC nu este responsabil de conținutul altor site-uri. Aflați mai multe despre politica noastră privind utilizarea link-urilor externe"`;
+
+exports[`Canonical Listen Header I can see the branding 1`] = `
+{
+  "brandLink": "BBC News, România",
+  "svg": <path
+    d="M174.426 34.9999C172.244 31.5036 170.034 28.0002 167.797 24.4894C165.558 20.9794 163.349 17.5737 161.167 14.2729V34.9999H154.958V5.00024H161.503C163.769 8.38495 165.999 11.7764 168.195 15.175C170.391 18.5734 172.58 22.0211 174.762 25.5174V5.00024H180.971V34.9999H174.426Z"
+  />,
+}
+`;
+
+exports[`Canonical Listen Header Navigation link should match text and url 1`] = `
+{
+  "text": "Ultimele știri",
+  "url": "/romania",
+}
+`;
+
+exports[`Canonical Listen Image Caption should match text 1`] = `"Legendă audiosyndication test run"`;
+
+exports[`Canonical Listen Image should match snapshot 1`] = `
+<noscript>
+  <div>
+    <div
+      class="css-13p1cq8"
+    >
+      <strong
+        class="css-pow7hy"
+      >
+        Pentru a reda acest conținut, te rugăm să activezi JavaScript sau să încerci alt browser.
+      </strong>
+    </div>
+  </div>
+</noscript>
+`;
+
+exports[`Canonical Listen Main heading should match text 1`] = `"syndication test run"`;
+
+exports[`Canonical Listen Media Loader renders a valid container 1`] = `
+<figure
+  class="media-container css-1okmog4"
+  data-e2e="media-loader__container"
+>
+  <div
+    class="css-8432in"
+    data-simorgh-media-loader="inactive"
+  >
+    <div
+      class="media-player css-9p9hvp"
+      data-e2e="media-player"
+    >
+      <noscript>
+        <div>
+          <div
+            class="css-13p1cq8"
+          >
+            <strong
+              class="css-pow7hy"
+            >
+              Pentru a reda acest conținut, te rugăm să activezi JavaScript sau să încerci alt browser.
+            </strong>
+          </div>
+        </div>
+      </noscript>
+    </div>
+  </div>
+  <figcaption
+    class="css-120hw7u"
+    dir="ltr"
+  >
+    <span
+      role="text"
+    >
+      <span
+        class="css-5ku87v"
+      >
+        Legendă audio
+      </span>
+      <span
+        data-testid="caption-paragraph"
+      >
+        syndication test run
+      </span>
+    </span>
+  </figcaption>
+</figure>
+`;
+
+exports[`Canonical Listen SEO Apple Touch Icon should match attributes 1`] = `
+{
+  "sizes": null,
+  "url": "http://localhost:7081/romania/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`Canonical Listen SEO Apple Touch Icon should match attributes 2`] = `
+{
+  "sizes": "152x152",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/romania/images/icons/icon-152x152.png",
+}
+`;
+
+exports[`Canonical Listen SEO Apple Touch Icon should match attributes 3`] = `
+{
+  "sizes": "180x180",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/romania/images/icons/icon-180x180.png",
+}
+`;
+
+exports[`Canonical Listen SEO Apple Touch Icon should match attributes 4`] = `
+{
+  "sizes": "384x384",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/romania/images/icons/icon-384x384.png",
+}
+`;
+
+exports[`Canonical Listen SEO Apple Touch Icon should match attributes 5`] = `
+{
+  "sizes": "512x512",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/romania/images/icons/icon-512x512.png",
+}
+`;
+
+exports[`Canonical Listen SEO Canonical link 1`] = `"http://localhost:7081/romania/listen/cwn607ex79dro"`;
+
+exports[`Canonical Listen SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical Listen SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical Listen SEO Heading level 1 1`] = `"syndication test run"`;
+
+exports[`Canonical Listen SEO Lang attribute 1`] = `"ro"`;
+
+exports[`Canonical Listen SEO Linked data should match text 1`] = `
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "NewsArticle",
+      "author": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/romania/images/metadata/poster-1024x576.png",
+          "width": 1024,
+        },
+        "name": "BBC News România",
+        "noBylinesPolicy": "https://www.bbc.com/news/help-41670342#authorexpertise",
+      },
+      "dateModified": "2026-10-07T16:09:17.881Z",
+      "datePublished": "2026-10-07T16:09:17.881Z",
+      "headline": "Test",
+      "image": {
+        "@type": "ImageObject",
+        "height": 576,
+        "url": "https://ichef.bbci.co.uk/news/1024/branded_romania/38a7/test/801325c0-c17c-11f1-9cfa-8df2c2f12d1d.png",
+        "width": 1024,
+      },
+      "inLanguage": {
+        "@type": "Language",
+        "alternateName": "ro",
+        "name": "Rom",
+      },
+      "mainEntityOfPage": {
+        "@id": "http://localhost:7081/romania/listen/cwn607ex79dro",
+        "@type": "WebPage",
+        "name": "Test",
+      },
+      "publisher": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/romania/images/metadata/poster-1024x576.png",
+          "width": 1024,
+        },
+        "name": "BBC News România",
+        "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
+      },
+      "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_romania/38a7/test/801325c0-c17c-11f1-9cfa-8df2c2f12d1d.png",
+      "url": "http://localhost:7081/romania/listen/cwn607ex79dro",
+    },
+  ],
+}
+`;
+
+exports[`Canonical Listen SEO Linked data should match text 2`] = `
+{
+  "@context": "http://schema.org",
+  "@type": "AudioObject",
+  "description": "ssss",
+  "duration": "PT2M19S",
+  "embedURL": "https://www.test.bbc.com/ws/av-embeds/articles/cwn607ex79dro/p01wnb1g/ro",
+  "name": "syndication test run",
+  "uploadDate": "2025-07-02T11:43:54.000Z",
+}
+`;
+
+exports[`Canonical Listen SEO OG description 1`] = `"Test"`;
+
+exports[`Canonical Listen SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1200/branded_romania/38a7/test/801325c0-c17c-11f1-9cfa-8df2c2f12d1d.png"`;
+
+exports[`Canonical Listen SEO OG image alt 1`] = `"test"`;
+
+exports[`Canonical Listen SEO OG locale 1`] = `"ro_RO"`;
+
+exports[`Canonical Listen SEO OG site name 1`] = `"BBC News România"`;
+
+exports[`Canonical Listen SEO OG title 1`] = `"Test - BBC News România"`;
+
+exports[`Canonical Listen SEO OG type 1`] = `"article"`;
+
+exports[`Canonical Listen SEO OG url 1`] = `"http://localhost:7081/romania/listen/cwn607ex79dro"`;
+
+exports[`Canonical Listen SEO Page title 1`] = `"Test - BBC News România"`;
+
+exports[`Canonical Listen SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
+
+exports[`Canonical Listen SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical Listen SEO Twitter creator 1`] = `"@BBCNewsRomania"`;
+
+exports[`Canonical Listen SEO Twitter description 1`] = `"Test"`;
+
+exports[`Canonical Listen SEO Twitter image alt 1`] = `"test"`;
+
+exports[`Canonical Listen SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1200/branded_romania/38a7/test/801325c0-c17c-11f1-9cfa-8df2c2f12d1d.png"`;
+
+exports[`Canonical Listen SEO Twitter site 1`] = `"@BBCNewsRomania"`;
+
+exports[`Canonical Listen SEO Twitter title 1`] = `"Test - BBC News România"`;
+
+exports[`Canonical Listen Timestamp should match text and date 1`] = `
+{
+  "date": "2026-10-07",
+  "text": "7 octombrie 2026",
+}
+`;
