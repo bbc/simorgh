@@ -12,6 +12,7 @@ type Props = {
   showPlaceholder?: boolean;
   showVignette?: boolean;
   singleImageLayout?: boolean;
+  preload?: boolean;
 };
 
 const getGradientStyles = ({
@@ -44,6 +45,7 @@ const MaskedImage = ({
   showPlaceholder = true,
   showVignette = false,
   singleImageLayout = false,
+  preload = false,
 }: Props) => {
   const { dir } = use(ServiceContext);
   const isRtl = dir === 'rtl';
@@ -80,8 +82,8 @@ const MaskedImage = ({
         fallbackMediaType={fallbackMimeType || undefined}
         sizes="(min-width: 1008px) 660px, 100vw"
         {...(shouldFillHeight ? {} : { width: 800, height: 533 })}
-        fetchPriority="high"
-        preload
+        fetchPriority={preload ? 'high' : undefined}
+        preload={preload}
         placeholder={showPlaceholder}
       />
     </div>
