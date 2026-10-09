@@ -59,7 +59,7 @@ export const formatDuration = ({
   });
 
   // Extract language code (e.g., 'fa' from 'fa-AF', 'ar' from 'ar-EG')
-  const langCode = locale.split('-')[0];
+  const langCode = sanitisedLocale.split('-')[0];
   if (ARABIC_SCRIPT_LOCALES.has(langCode)) {
     return withArabicComma(formattedString);
   }

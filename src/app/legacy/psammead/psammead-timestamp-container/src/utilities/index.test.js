@@ -389,12 +389,31 @@ describe('Moment configuration', () => {
       const duration = 'PT30M'; // 30:00
       expect(formatDuration({ duration, format: 'mm,ss' })).toEqual('30,00');
     });
+    it.each(['AR', 'fa_AF', 'fa-af'])(
+      'should use the Arabic comma for normalized locale %s',
+      testLocale => {
+        const output = formatDuration({
+          duration: 'PT30M',
+          format: 'mm,ss',
+          locale: testLocale,
+        });
+
+        expect(output).toContain('،');
+        expect(output).not.toContain(',');
+      },
+    );
     it('should return duration that is localised when locale is passed in', () => {
       const duration = 'PT30M'; // 30:00
       expect(formatDuration({ duration, locale: 'my' })).toEqual('၃၀:၀၀');
     });
     it.each(['P1W', 'P1M', 'P1Y'])(
       'should return zero instead of throwing for calendar duration %s',
+      duration => {
+        expect(formatDuration({ duration })).toEqual('00:00');
+      },
+    );
+    it.each(['-PT1S', '-PT1H30M45S'])(
+      'should return zero instead of formatting negative duration %s',
       duration => {
         expect(formatDuration({ duration })).toEqual('00:00');
       },
