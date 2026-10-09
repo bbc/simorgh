@@ -213,7 +213,9 @@ export const themes = [
 }, {}) as ThemeWithVariant | ThemeWithNoVariant;
 
 type ServiceThemeWithNoVariantWithPWATypography = {
-  [_service in ServicesWithNoVariantsWithPWATypography['service']]: Partial<ServiceTheme>;
+  [
+    _service in ServicesWithNoVariantsWithPWATypography['service']
+  ]: Partial<ServiceTheme>;
 };
 
 type ServiceThemeWithVariantWithPWATypography = {

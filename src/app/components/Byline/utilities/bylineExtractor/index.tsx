@@ -23,9 +23,7 @@ const pathOrZeroIndexModelBlocks = (
   noModelBlocks: number,
   endModelType: string,
   block:
-    | OptimoBylineContributorMetadataBlock
-    | PostContributorImage
-    | undefined,
+    OptimoBylineContributorMetadataBlock | PostContributorImage | undefined,
 ) => {
   if (!block) return '';
 

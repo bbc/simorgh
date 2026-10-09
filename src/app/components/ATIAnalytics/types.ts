@@ -150,11 +150,7 @@ export type ReverbEventDetails = {
     type?: string;
   };
   eventName:
-    | 'pageView'
-    | 'sectionView'
-    | 'sectionClick'
-    | 'activation'
-    | 'error';
+    'pageView' | 'sectionView' | 'sectionClick' | 'activation' | 'error';
   eventPublisher?: string;
   group?: string | object;
   isClick?: boolean;
