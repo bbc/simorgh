@@ -129,10 +129,10 @@ exports[`Canonical Listen Image should match snapshot 1`] = `
 <noscript>
   <div>
     <div
-      class="css-tegvql"
+      class="css-118uw6v"
     >
       <strong
-        class="css-1cnbroz"
+        class="css-pow7hy"
       >
         你的器材不支持播放多媒體材料
       </strong>
@@ -145,24 +145,24 @@ exports[`Canonical Listen Main heading should match text 1`] = `"syndication tes
 
 exports[`Canonical Listen Media Loader renders a valid container 1`] = `
 <figure
-  class="media-container css-1vwdzux"
+  class="media-container css-1okmog4"
   data-e2e="media-loader__container"
 >
   <div
-    class="css-uym7w5"
+    class="css-8432in"
     data-simorgh-media-loader="inactive"
   >
     <div
-      class="media-player css-eyhmom"
+      class="media-player css-9p9hvp"
       data-e2e="media-player"
     >
       <noscript>
         <div>
           <div
-            class="css-tegvql"
+            class="css-118uw6v"
           >
             <strong
-              class="css-1cnbroz"
+              class="css-pow7hy"
             >
               你的器材不支持播放多媒體材料
             </strong>
@@ -172,14 +172,14 @@ exports[`Canonical Listen Media Loader renders a valid container 1`] = `
     </div>
   </div>
   <figcaption
-    class="css-10p8o3k"
+    class="css-zo50gi"
     dir="ltr"
   >
     <span
       role="text"
     >
       <span
-        class="css-m967i5"
+        class="css-5ku87v"
       >
         音频加注文字，
       </span>
