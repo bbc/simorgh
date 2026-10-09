@@ -1,5 +1,6 @@
 import {
   EasternArabic,
+  Nepali,
   makeNumeralTranslator,
 } from '#psammead/psammead-locales/src/numerals';
 
@@ -25,6 +26,7 @@ export const withArabicComma = (string: string) => {
 };
 
 const translateEasternArabicNumerals = makeNumeralTranslator(EasternArabic);
+const translateNepaliNumerals = makeNumeralTranslator(Nepali);
 
 export const LOCALE_NUMBERING_SYSTEM_OVERRIDES: Record<
   string,
@@ -32,6 +34,11 @@ export const LOCALE_NUMBERING_SYSTEM_OVERRIDES: Record<
 > = {
   ar: { locale: 'ar-u-nu-arab', numberingSystem: 'arab' },
   mr: { locale: 'mr-u-nu-latn', numberingSystem: 'latn' },
+  ne: {
+    locale: 'ne-u-nu-deva',
+    numberingSystem: 'deva',
+    fallback: translateNepaliNumerals,
+  },
   ps: {
     locale: 'ps-u-nu-arabext',
     numberingSystem: 'arabext',

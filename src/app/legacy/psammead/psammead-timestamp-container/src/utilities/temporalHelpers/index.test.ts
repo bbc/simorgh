@@ -184,6 +184,34 @@ describe('Temporal Helper functions', () => {
       );
     });
 
+    it('forces Devanagari numerals for the `ne` locale', () => {
+      const numberFormatSpy = jest.spyOn(Intl, 'NumberFormat');
+
+      translateDigits(5, 2, 'ne');
+
+      expect(numberFormatSpy).toHaveBeenCalledWith(
+        'ne-u-nu-deva',
+        expect.objectContaining({
+          minimumIntegerDigits: 2,
+          useGrouping: false,
+        }),
+      );
+    });
+
+    it('falls back to Nepali numerals when the runtime ignores deva', () => {
+      const NativeNumberFormat = Intl.NumberFormat;
+
+      jest.spyOn(Intl, 'NumberFormat').mockImplementation(
+        () =>
+          new NativeNumberFormat('en-GB', {
+            minimumIntegerDigits: 2,
+            useGrouping: false,
+          }),
+      );
+
+      expect(translateDigits(5, 2, 'ne')).toEqual('०५');
+    });
+
     it('leaves locales without an explicit override unchanged', () => {
       const numberFormatSpy = jest.spyOn(Intl, 'NumberFormat');
 

@@ -47,6 +47,28 @@ describe('Timestamp formatting Temporal helpers', () => {
       ).toEqual(expected);
     });
 
+    it('formats Nepali numeric timestamps with Devanagari numerals', () => {
+      const timestampValue = Date.UTC(2024, 10, 21, 0, 5);
+
+      expect(
+        formatTimestampToken({
+          format: 'YYYY-MM-DD',
+          timestamp: timestampValue,
+          timezone: 'UTC',
+          locale: 'ne',
+        }),
+      ).toEqual('२०२४-११-२१');
+
+      expect(
+        formatTimestampToken({
+          format: 'HH:mm',
+          timestamp: timestampValue,
+          timezone: 'UTC',
+          locale: 'ne',
+        }),
+      ).toEqual('००:०५');
+    });
+
     it.each([
       [Date.UTC(2021, 2, 28, 0, 30), 'GMT'],
       [Date.UTC(2021, 2, 28, 1, 30), 'BST'],
