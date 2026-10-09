@@ -51,7 +51,8 @@ describe('ArticleMessageBanner', () => {
 
     expect(
       getByText(
-        'Lula x Flávio Bolsonaro: Quem está à frente nas pesquisas para presidente?'),
+        'Lula x Flávio Bolsonaro: Quem está à frente nas pesquisas para presidente?',
+      ),
     ).toBeInTheDocument();
   });
 
@@ -86,7 +87,8 @@ describe('ArticleMessageBanner', () => {
 
     expect(
       getByText(
-        'Lula x Flávio Bolsonaro: Quem está à frente nas pesquisas para presidente?'),
+        'Lula x Flávio Bolsonaro: Quem está à frente nas pesquisas para presidente?',
+      ),
     ).toBeInTheDocument();
 
     expect(
