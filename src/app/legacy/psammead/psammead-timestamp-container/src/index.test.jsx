@@ -1,8 +1,6 @@
-import React from 'react';
 import { isNull } from '#psammead/psammead-test-helpers/src';
 import moment from 'moment';
 import { render } from '../../../../components/react-testing-library-with-providers';
-import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import '#psammead/psammead-locales/moment/ha';
 import Timestamp from '.';
 
@@ -33,12 +31,13 @@ describe('Timestamp', () => {
         dateTimeFormat="YYYY-MM-DD"
         format="D MMMM YYYY"
         isRelative={false}
-        script={latin}
         locale="fa"
-        service="persian"
       />,
+      { service: 'persian' },
     );
-    expect(container).toMatchSnapshot();
+    const time = container.querySelector('time');
+    expect(time).toBeInTheDocument();
+    expect(time.textContent).not.toMatch(/^۰/);
   });
 
   it('should render correctly', () => {
@@ -48,11 +47,10 @@ describe('Timestamp', () => {
         dateTimeFormat="YYYY-MM-DD"
         format="D MMMM YYYY"
         isRelative={false}
-        script={latin}
-        service="news"
       />,
     );
-    expect(container).toMatchSnapshot();
+    const time = container.querySelector('time');
+    expect(time.textContent).toEqual('19 October 2018');
   });
 
   isNull(
@@ -62,8 +60,6 @@ describe('Timestamp', () => {
       dateTimeFormat="YYYY-MM-DD"
       format="D MMMM YYYY"
       isRelative={false}
-      script={latin}
-      service="news"
     />,
   );
 
@@ -76,11 +72,11 @@ describe('Timestamp', () => {
         isRelative={false}
         prefix="Prefix here"
         suffix="suffix here"
-        script={latin}
-        service="news"
       />,
     );
-    expect(container).toMatchSnapshot();
+    const time = container.querySelector('time');
+    expect(time.textContent).toContain('Prefix here');
+    expect(time.textContent).toContain('suffix here');
   });
 
   describe('assertions', () => {
@@ -92,11 +88,10 @@ describe('Timestamp', () => {
             dateTimeFormat="YYYY-MM-DD"
             format="D MMMM YYYY"
             isRelative={false}
-            script={latin}
             locale="fa"
-            service="persian"
             altCalendar={mockCalendar}
           />,
+          { service: 'persian' },
         );
 
         const time = container.querySelector('time');
@@ -110,11 +105,10 @@ describe('Timestamp', () => {
             dateTimeFormat="YYYY-MM-DD"
             format="D MMMM YYYY"
             isRelative
-            script={latin}
             locale="fa"
-            service="persian"
             altCalendar={mockCalendar}
           />,
+          { service: 'persian' },
         );
 
         const time = container.querySelector('time');
@@ -129,10 +123,9 @@ describe('Timestamp', () => {
           dateTimeFormat="YYYY-MM-DD"
           format="D MMMM YYYY"
           isRelative={false}
-          script={latin}
           locale="ha"
-          service="hausa"
         />,
+        { service: 'hausa' },
       );
 
       const time = container.querySelector('time');
@@ -146,10 +139,9 @@ describe('Timestamp', () => {
           dateTimeFormat="YYYY-MM-DD"
           format="D MMMM YYYY"
           isRelative={false}
-          script={latin}
           locale="ha"
-          service="hausa"
         />,
+        { service: 'hausa' },
       );
 
       const time = container.querySelector('time');
@@ -163,10 +155,9 @@ describe('Timestamp', () => {
           dateTimeFormat="YYYY-MM-DD"
           format="D MMMM YYYY"
           isRelative
-          script={latin}
           locale="ha"
-          service="hausa"
         />,
+        { service: 'hausa' },
       );
 
       const time = container.querySelector('time');

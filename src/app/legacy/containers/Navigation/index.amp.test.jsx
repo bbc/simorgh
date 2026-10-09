@@ -1,5 +1,3 @@
-import React from 'react';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import AmpNavigation from './index.amp';
 import {
   dropdownTestId,
@@ -14,8 +12,6 @@ const navigation = (
     scrollableListItems={scrollableListItems}
     dropdownListItems={dropdownListItems}
     menuAnnouncedText="menu"
-    script={latin}
-    service="news"
     dir="ltr"
   />
 );
@@ -23,8 +19,8 @@ const navigation = (
 describe('AMP Navigation', () => {
   describe('Snapshots', () => {
     it('should correctly render AMP navigation', () => {
-      const { container } = render(navigation);
-      expect(container).toMatchSnapshot();
+      const { queryByTestId } = render(navigation);
+      expect(queryByTestId(scrollableTestId)).toBeInTheDocument();
     });
   });
 

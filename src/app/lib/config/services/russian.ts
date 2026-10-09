@@ -3,12 +3,20 @@ import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/ru';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
+import russianUkrainianSharedTranslations from './russianUkrainianSharedTranslations';
 
 // Translations used in the header and footer elements of the page
 const headerFooterTranslations = {
   home: 'Главная',
   currentPage: 'Текущая страница',
   navMenuText: 'Разделы',
+  liteSite: {
+    onboardingMessage:
+      'Вы просматриваете текстовую версию этого сайта, которая использует меньше данных. Посмотрите основную версию сайта со всеми изображениями и видео.',
+    toMainSite: 'Перейти на основную версию сайта',
+    informationPage: 'Узнать больше об этой версии с экономией трафика',
+    dataSaving: 'Версия с экономией трафика',
+  },
   consentBanner: {
     privacy: {
       title: 'Мы обновили наши правила использования личных данных и куки.',
@@ -105,215 +113,116 @@ const headerFooterTranslations = {
   },
 };
 
-// Translations used in the main element of the page
-export const mainTranslations = {
-  pagination: {
-    previousPage: 'НАЗАД',
-    nextPage: 'ВПЕРЕД',
-    pageXOfY: 'Page {x} из {y}',
-  },
-  ads: {
-    advertisementLabel: 'Реклама',
-  },
-  seeAll: 'Посмотреть все',
-  continueReading: 'Читать дальше',
-  skipLinkText: 'Перейти к содержанию',
-  relatedContent: 'Читайте также',
-  relatedTopics: 'Темы',
-  moreOnThis: '',
-  mediaAssetPage: {
-    mediaPlayer: 'Медиа плеер',
-    audioPlayer: 'Аудио плеер',
-    videoPlayer: 'Видео плеер',
-  },
-  liveExperiencePage: {
-    liveLabel: 'Онлайн',
-    liveCoverage: 'Онлайн-трансляция',
-    breaking: 'Срочно',
-    postedAt: 'Отправлено в',
-    summary: 'Коротко',
-    shareButtonText: 'Поделиться',
-  },
-  downloads: {
-    instructions: 'You can download and view today’s news.',
-    title: 'File Download',
-  },
-  gist: 'Коротко',
-  error: {
-    404: {
-      statusCode: '404',
-      title: 'Страница не найдена',
-      message:
-        'Извините, мы не нашли страницу, которую вы искали. Попробуйте это:',
-      solutions: [
-        'Проверьте еще раз адрес ссылки',
-        'Нажмите на кнопку "обновить" в браузере',
-        'Искать страницу в поисковом окне Би-би-си',
-      ],
-      callToActionFirst: 'Попробуйте зайти на ',
-      callToActionLinkText: 'главную страницу Русской службы',
-      callToActionLast: '',
-      callToActionLinkUrl: 'https://www.bbc.com/russian',
-    },
-    500: {
-      statusCode: '500',
-      title: 'Ошибка сервера',
-      message:
-        'Извините, мы не смогли найти страницу, которую вы искали. Попробуйте:',
-      solutions: [
-        'Нажать кнопку "обновить" в вашем браузере',
-        'Попытайтесь позже',
-      ],
-      callToActionFirst: 'Попробуйте зайти на ',
-      callToActionLinkText: 'главную страницу Русской службы',
-      callToActionLast: '',
-      callToActionLinkUrl: 'https://www.bbc.com/russian',
-    },
-  },
-  byline: {
-    articleInformation: 'О статье',
-    author: 'Автор',
-    listItemImage: 'Добавить фото',
-    published: 'Опубликовано',
-    reportingFrom: 'Место сообщения',
-    role: 'Место работы',
-  },
-  media: {
-    noJs: 'Для просмотра этого контента вам надо включить JavaScript или использовать другой браузер',
-    contentExpired: 'Контент больше не доступен.',
-    contentNotYetAvailable: 'Эта передача еще не доступна для воспроизведения.',
-    audio: 'Аудио',
-    photogallery: 'Фотогалерея',
-    video: 'Видео',
-    bbc_russian_radio: {
-      title: 'Русская служба Би-би-си',
-      subtitle:
-        'мировые новости с местным колоритом. Как видятся события в России и регионе из-за рубежа.',
-    },
-    bbc_russian_tv: {
-      title: 'Выпуск новостей Русской службы Би-би-си',
-      subtitle:
-        'Смотрите лучшие репортажи Би-би-си из России и со всего мира. Каждый день - с понедельника по пятницу – в выпуске теленовостей Би-би-си наши корреспонденты помогут вам понять, что происходит и почему это важно для вас.',
-    },
-    listen: 'Слушать',
-    watch: 'Смотреть',
-    listenLive: 'Слушать LIVE',
-    listenNext: 'Вперед',
-    liveLabel: 'LIVE',
-    nextLabel: 'Дальше',
-    previousRadioShow: 'Предыдущая передача',
-    nextRadioShow: 'Следующая передача',
-    duration: 'Продолжительность',
-    recentEpisodes: 'Прошлые передачи',
-    episodes: 'передачи',
-    podcastExternalLinks: 'Этот подкаст доступен на',
-    download: 'Загрузить эпизод',
-    closeVideo: 'Выйти',
-    endOfContentClose: 'Конец этого контента. Выйти',
-  },
-  socialEmbed: {
-    caption: {
-      textPrefixVisuallyHidden: 'Подпись к видео, ',
-      text: 'Внимание: Контент других сайтов может содержать рекламу.',
-      articleText:
-        'Внимание: Би-би-си не несет ответственности за контент других сайтов.',
-      articleAdditionalText: 'Контент %provider_name% может содержать рекламу.',
-    },
-    fallback: {
-      text: 'Контент недоступен',
-      linkText: 'Смотреть еще в %provider_name%',
-      linkTextSuffixVisuallyHidden: ', внешняя ссылка',
-      warningText:
-        'Би-би-си не несёт ответственности за содержание других сайтов.',
-    },
-    skipLink: {
-      text: 'Пропустить контент из %provider_name%',
-      endTextVisuallyHidden: 'Контент из %provider_name% окончен',
-    },
-    consentBanner: {
-      heading: `Разрешить контент [social_media_site]?`,
-      body: `Этот материал содержит контент, предоставленный [social_media_site].  Мы просим вашего разрешения до загрузки, потому что он может использовать кукис и другие технологии. Вы можете ознакомиться с [link] правилами кукис [/link] и [link] политикой личных данных [/link] [social_media_site], прежде чем дать согласие. Чтобы увидеть этот контент, выберите “Согласиться и продолжить”.`,
-      button: 'Согласиться и продолжить',
-    },
-  },
-  include: {
-    errorMessage:
-      'К сожалению, мы не можем показать вам эту часть истории из-за малого объема мобильной страницы.',
-    linkText: 'Откройте полную версию страницы, чтобы увидеть весь контент.',
-  },
-  topStoriesTitle: 'Главное',
-  featuresAnalysisTitle: 'Не пропустите',
-  latestMediaTitle: 'Актуальное',
-  infoBannerLabel: 'Информация',
-  ugc: {
-    // No JavaScript
-    noJsHeading: undefined,
-    noJsDescription: undefined,
-
-    // Optional
-    optional: 'Дополнительное поле',
-
-    // File upload
-    fileUploadLiveRegionText: undefined,
-    fileUploadLiveRegionUpdateText: undefined,
-    fileUploadListHeading: 'Вы загружаете:',
-    fileUploadButton: 'Выбрать файл',
-    fileUploadRemoveButton: undefined,
-
-    // Submit button
-    submitButton: 'Отправить',
-
-    // Validation
-    validationRequired: 'Чего-то не хватает.',
-    validationInvalidEmail: 'Что-то не так. Пожалуйста, впишите верный адрес.',
-    validationInvalidTelephone: undefined,
-    validationFilesNotEnough:
-      'Файлов недостаточно. Минимальное число файлов: {{minFiles}}.',
-    validationFilesTooMany:
-      'Слишком много файлов. Максимальное число файлов: {{maxFiles}}.',
-    validationFilesInvalidType:
-      'Извините, мы не можем использовать файлы такого типа. Выберите из списка {{fileTypes}}.',
-    validationFilesTooSmall: 'Файл сломан. Выберите другой файл.',
-    validationFilesSizeExceeded:
-      'Извините, но ваши файлы слишком большие. Файлы не должны превышать 1,2 гигабайта.',
-    validationWordLimit: 'Максимум {{wordLimit}} слов',
-
-    // Messaging
-    retentionPeriodDays: undefined,
-    referenceNumber: 'Запишите этот номер',
-    submissionInfoSignedOutMessage: 'Запишите эти детали для вашего сведения.',
-    privacyInfoHtml: undefined,
-    emailToHtml:
-      'Если вы передумали и не хотите, чтобы мы это использовали, просто отправьте нам сообщение на {{emailLink}}. Не забудьте регистрационный номер отправления.',
-    removalGuidelineText:
-      'Если вы прислали что-то для передачи или онлайн-страницы, мы не сможем удалить ваш материал после того, как он был использован.',
-
-    // Form Screen
-    dataPolicyHeading: undefined,
-
-    // Uploading Screen
-    uploadingHeading: 'Файлы загружаются...',
-    uploadingDescription: 'Пожалуйста, подождите.',
-
-    // Success Screen
-    successHeading: 'Письмо отправлено',
-    successDescription: 'Спасибо за контакт!',
-    privacyPolicyLinkHref: undefined,
-    privacyPolicyLinkText: undefined,
-
-    // Error Screen
-    errorHeading: 'Ваше сообщение не отправлено',
-    errorDescription: 'Попробуйте отправить еще раз',
-
-    // Closed Screen
-    closedHeading: 'Прием закрыт',
-    closedDescription: 'Прием закрылся {{date}}.',
-  },
-};
-
 export const service: DefaultServiceConfig = {
   default: {
-    translations: { ...mainTranslations, ...headerFooterTranslations },
+    translations: {
+      and: 'и',
+      readTime: {
+        readTimePrefix: 'Время чтения',
+        minute: 'мин',
+      },
+      ...russianUkrainianSharedTranslations,
+      ...headerFooterTranslations,
+      skipContent: {
+        text: 'Пропустить %title% и продолжить',
+        endTextVisuallyHidden: 'Конец %title%',
+      },
+      topicDiscovery: {
+        heading: 'Узнать больше',
+        moreAboutTopic: 'Больше по теме: {topic}',
+        fetchErrorMessage: 'Не удалось загрузить. Пожалуйста, попробуйте снова',
+      },
+      googlePreferredSource: {
+        linkText: 'Добавить как предпочтительный источник в Google',
+      },
+      sport: {
+        keyEventsTitle: 'Ключевые события',
+        matchSummary: 'Обзор матча',
+        assists: 'Голевые передачи',
+        penalties: 'Пенальти',
+        ht: 'Конец первого тайма',
+        ft: 'Конец матча',
+        et: 'Дополнительное время',
+        afterExtraTime: 'После дополнительного времени',
+        penaltyAbbreviation: 'пен',
+        ownGoal: 'автогол',
+        versus: 'против',
+        kickOff: 'начало',
+        timeToBeConfirmed: 'Время уточняется',
+        teamToBeConfirmed: 'Команда уточняется',
+        afterFullTime: 'после основного времени',
+        atFullTime: 'в основное время',
+        onPenalties: 'по пенальти',
+        onAggregate: 'по сумме',
+        win: 'выигрывает',
+        winOnPenalties: {
+          prefix: 'выигрывает',
+          suffix: 'по пенальти',
+        },
+        worldCupTeamNames: {
+          algeria: 'Алжир',
+          argentina: 'Аргентина',
+          australia: 'Австралия',
+          austria: 'Австрия',
+          belgium: 'Бельгия',
+          'bosnia-herzegovina': 'Босния и Герцеговина',
+          brazil: 'Бразилия',
+          canada: 'Канада',
+          'cape-verde': 'Кабо-Верде',
+          colombia: 'Колумбия',
+          croatia: 'Хорватия',
+          curacao: 'Кюрасао',
+          'czech-republic': 'Чехия',
+          'dr-congo': 'ДР Конго',
+          ecuador: 'Эквадор',
+          egypt: 'Египет',
+          england: 'Англия',
+          france: 'Франция',
+          germany: 'Германия',
+          ghana: 'Гана',
+          haiti: 'Гаити',
+          iran: 'Иран',
+          iraq: 'Ирак',
+          'ivory-coast': 'Кот-д’Ивуар',
+          japan: 'Япония',
+          jordan: 'Иордания',
+          mexico: 'Мексика',
+          morocco: 'Марокко',
+          netherlands: 'Нидерланды',
+          'new-zealand': 'Новая Зеландия',
+          norway: 'Норвегия',
+          panama: 'Панама',
+          paraguay: 'Парагвай',
+          portugal: 'Португалия',
+          qatar: 'Катар',
+          'saudi-arabia': 'Саудовская Аравия',
+          scotland: 'Шотландия',
+          senegal: 'Сенегал',
+          'south-africa': 'ЮАР',
+          'south-korea': 'Южная Корея',
+          spain: 'Испания',
+          sweden: 'Швеция',
+          switzerland: 'Швейцария',
+          tunisia: 'Тунис',
+          turkey: 'Турция',
+          uruguay: 'Уругвай',
+          usa: 'США',
+          uzbekistan: 'Узбекистан',
+        },
+        tournaments: {
+          fifaWorldCup: 'ЧМ по футболу',
+        },
+        stages: {
+          groupStage: 'Групповой этап',
+          last32: '1/16 финала',
+          last16: '1/8 финала',
+          quarterFinals: 'Четвертьфинал',
+          semiFinals: 'Полуфинал',
+          final: 'Финал',
+          thirdPlaceFinal: 'За третье место',
+        },
+      },
+    },
     lang: `ru`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Обновлено',
@@ -321,12 +230,12 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-russian',
     atiAnalyticsProducerId: '75',
     atiAnalyticsProducerName: 'RUSSIAN',
-    useReverb: true,
     chartbeatDomain: 'russian.bbc.co.uk',
     brandName: 'BBC News Русская служба',
     product: 'BBC News',
     serviceLocalizedName: 'Русская служба',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/russian.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/russian/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Русская служба',
     dir: `ltr`,
     externalLinkText: ', внешняя',
@@ -352,7 +261,7 @@ export const service: DefaultServiceConfig = {
     manifestPath: '/russian/manifest.json',
     swPath: '/sw.js',
     homePageTitle: 'Главная',
-    iTunesAppId: 504278066,
+    iTunesAppId: 6761256736,
     showAdPlaceholder: true,
     showRelatedTopics: true,
     googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
@@ -370,21 +279,21 @@ export const service: DefaultServiceConfig = {
       },
     },
     podcastPromo: {
-      title: 'WhatsApp',
-      brandTitle: 'Канал Би-би-си в WhatsApp',
+      title: 'Расширение для браузера Chrome - ссылка',
+      brandTitle: 'Расширение BBC News Russian',
       brandDescription:
-        'Тут мы публикуем только главные новости и самые интересные тексты. Канал доступен для нероссийских номеров.',
+        'Это расширение поможет, если возникают трудности с доступом к сайту Русской службы Би-би-си.',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0jq48n8.png',
-        alt: 'WhatsApp',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0pb8pp9.png',
+        alt: 'Как нас читать с расширением для браузера Chrome',
       },
       linkLabel: {
-        text: 'Подписывайтесь',
-        href: 'https://whatsapp.com/channel/0029VaZ437k4Y9li4jkzIU0G',
+        text: 'Загрузить расширение',
+        href: 'https://chromewebstore.google.com/detail/bbc-news-%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%B0%D1%8F-%D1%81%D0%BB%D1%83%D0%B6%D0%B1%D0%B0/bnliibjlmflplmjlfnecbkdkbpglkpio?utm_source=ext_app_menu',
       },
       skipLink: {
-        text: 'Пропустить Реклама WhatsApp-канала и продолжить чтение.',
-        endTextVisuallyHidden: 'Конец истории Реклама WhatsApp-канала',
+        text: 'Пропустить %title% и продолжить чтение.',
+        endTextVisuallyHidden: 'Конец истории %title%',
       },
     },
     disclaimer: {
@@ -447,30 +356,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Главная',
         url: '/russian',
-      },
-      {
-        title: 'Война в Украине',
-        url: '/russian/topics/cez0n29ggrdt',
-      },
-      {
-        title: 'Сводка потерь',
-        url: '/russian/topics/cqx9qqylwvgt',
-      },
-      {
-        title: 'Истории',
-        url: '/russian/topics/cv27xky1pppt',
-      },
-      {
-        title: 'Видео',
-        url: '/russian/topics/c44vyp57qy4t',
-      },
-      {
-        title: 'Фильмы',
-        url: '/russian/topics/cl4x0jkk3e5t',
-      },
-      {
-        title: 'Подкасты',
-        url: '/russian/topics/c3l19z3z0p2t',
       },
     ],
   },

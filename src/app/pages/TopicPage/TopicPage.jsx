@@ -1,6 +1,9 @@
-import React, { use } from 'react';
+import { Fragment, use } from 'react';
 import path from 'ramda/src/path';
 import Curation from '#app/components/Curation';
+import FollowTopicButton from '#app/components/FollowTopicButton';
+import parseRoute from '#app/routes/utils/parseRoute';
+import getTopicPageUrl from '#app/lib/utilities/getTopicPageUrl';
 import AdContainer from '../../components/Ad';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
@@ -8,6 +11,7 @@ import LinkedData from '../../components/LinkedData';
 import styles from './index.styles';
 import MetadataContainer from '../../components/Metadata';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import { RequestContext } from '../../contexts/RequestContext';
 import TopicImage from './TopicImage';
 import TopicTitle from './TopicTitle';
 import TopicDescription from './TopicDescription';
@@ -16,7 +20,8 @@ import getItemList from '../../lib/seoUtils/getItemList';
 import getNthCurationByStyleAndProminence from '../utils/getNthCurationByStyleAndProminence';
 
 const TopicPage = ({ pageData }) => {
-  const { lang, translations, brandName } = use(ServiceContext);
+  const { lang, translations, brandName, service } = use(ServiceContext);
+  const { pathname, variant } = use(RequestContext);
   const {
     title,
     description,
@@ -26,11 +31,10 @@ const TopicPage = ({ pageData }) => {
     curations,
     pageCount,
     activePage,
-    metadata: { atiAnalytics } = {},
   } = pageData;
 
+  const { assetId: topicId } = parseRoute(pathname);
   const topStoriesTitle = path(['topStoriesTitle'], translations);
-
   const { pageXOfY, previousPage, nextPage, page } = {
     pageXOfY: 'Page {x} of {y}',
     previousPage: 'Previous Page',
@@ -50,12 +54,20 @@ const TopicPage = ({ pageData }) => {
 
   const itemList = getItemList({ curations, name: brandName });
 
+  const buildTopicURL = getTopicPageUrl({
+    service,
+    topicId,
+    variant,
+    topicsPath: translations?.topicsPath,
+    absolute: true,
+  });
+
   return (
-    <>
+    <div css={theme => (theme.isDarkUi ? styles.pageWrapper : undefined)}>
       <AdContainer slotType="leaderboard" />
       <main css={styles.main} role="main">
         <div css={styles.inner}>
-          <ATIAnalytics atiData={atiAnalytics} />
+          <ATIAnalytics />
           <ChartbeatAnalytics title={title} />
           <MetadataContainer
             title={metadataTitle}
@@ -77,6 +89,15 @@ const TopicPage = ({ pageData }) => {
               <TopicTitle>{title}</TopicTitle>
             </div>
             {description && <TopicDescription>{description}</TopicDescription>}
+            {topicId && (
+              <FollowTopicButton
+                topicData={{
+                  topicId,
+                  title,
+                  url: buildTopicURL,
+                }}
+              />
+            )}
           </div>
           {curations.map(
             ({
@@ -98,7 +119,7 @@ const TopicPage = ({ pageData }) => {
                 });
 
               return (
-                <React.Fragment key={`${curationId}-${position}`}>
+                <Fragment key={`${curationId}-${position}`}>
                   <Curation
                     visualStyle={visualStyle}
                     visualProminence={visualProminence}
@@ -113,7 +134,7 @@ const TopicPage = ({ pageData }) => {
                     }
                     {...curationProps}
                   />
-                </React.Fragment>
+                </Fragment>
               );
             },
           )}
@@ -127,7 +148,7 @@ const TopicPage = ({ pageData }) => {
           />
         </div>
       </main>
-    </>
+    </div>
   );
 };
 

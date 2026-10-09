@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import { render } from '@testing-library/react';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import * as getStatsDestination from './getStatsDestination';
@@ -27,9 +27,10 @@ jest.mock('./getOriginContext');
 jest.mock('./getEnv');
 jest.mock('./getMetaUrls');
 
-(getStatsDestination.default as jest.Mock).mockReturnValue(
-  'getStatsDestination',
-);
+(getStatsDestination.default as jest.Mock).mockReturnValue({
+  destinationName: 'getStatsDestination',
+  destinationSiteId: 12345,
+});
 (getOriginContext.default as jest.Mock).mockReturnValue({
   origin: 'origin',
 });
@@ -72,6 +73,7 @@ const expectedOutput = {
   variant: 'simp',
   timeOnServer: null,
   statsDestination: 'getStatsDestination',
+  destinationSiteId: 12345,
   statusCode: 200,
   canonicalLink: 'canonicalLink',
   ampLink: 'ampLink',
@@ -86,6 +88,7 @@ const expectedOutput = {
   serverSideExperiments: input.serverSideExperiments,
   nonce: null,
   cspHeader: null,
+  primaryMediaType: null,
 };
 
 describe('RequestContext', () => {
@@ -112,7 +115,7 @@ describe('RequestContext', () => {
 
     expect(getMetaUrls.default).toHaveBeenCalledWith('origin', '/current-path');
 
-    expect(React.use).toHaveReturnedWith(expectedOutput);
+    expect(use).toHaveReturnedWith(expectedOutput);
   });
 
   it('should return expected values for app requests', () => {
@@ -128,11 +131,29 @@ describe('RequestContext', () => {
       </RequestContextProvider>,
     );
 
-    expect(React.use).toHaveReturnedWith({
+    expect(use).toHaveReturnedWith({
       ...expectedOutput,
       isAmp: false,
       isApp: true,
       platform: 'app',
+    });
+  });
+
+  it('should return expected values for Topic Pages where primaryMediaType is set', () => {
+    const primaryMediaTypeInput = {
+      ...input,
+      primaryMediaType: 'video',
+    };
+
+    render(
+      <RequestContextProvider {...primaryMediaTypeInput}>
+        <Component />
+      </RequestContextProvider>,
+    );
+
+    expect(use).toHaveReturnedWith({
+      ...expectedOutput,
+      primaryMediaType: 'video',
     });
   });
 
@@ -144,7 +165,7 @@ describe('RequestContext', () => {
         </RequestContextProvider>,
       );
 
-      expect(React.use).toHaveReturnedWith({
+      expect(use).toHaveReturnedWith({
         ...expectedOutput,
         isAmp: true,
         platform: 'amp',
@@ -158,7 +179,7 @@ describe('RequestContext', () => {
         </RequestContextProvider>,
       );
 
-      expect(React.use).toHaveReturnedWith({
+      expect(use).toHaveReturnedWith({
         ...expectedOutput,
         isAmp: false,
         platform: 'canonical',
@@ -172,7 +193,7 @@ describe('RequestContext', () => {
         </RequestContextProvider>,
       );
 
-      expect(React.use).toHaveReturnedWith({
+      expect(use).toHaveReturnedWith({
         ...expectedOutput,
         isAmp: false,
         isApp: true,
@@ -187,7 +208,7 @@ describe('RequestContext', () => {
         </RequestContextProvider>,
       );
 
-      expect(React.use).toHaveReturnedWith({
+      expect(use).toHaveReturnedWith({
         ...expectedOutput,
         isAmp: false,
         isApp: false,
@@ -226,7 +247,7 @@ describe('RequestContext', () => {
         </RequestContextProvider>,
       );
 
-      expect(React.use).toHaveReturnedWith({
+      expect(use).toHaveReturnedWith({
         ...expectedOutput,
         isUK: false,
       });

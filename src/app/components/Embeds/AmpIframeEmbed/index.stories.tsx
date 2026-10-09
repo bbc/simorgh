@@ -1,4 +1,3 @@
-import React from 'react';
 import AmpIframeEmbed from '.';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import { RequestContextProvider } from '../../../contexts/RequestContext';

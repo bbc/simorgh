@@ -30,7 +30,7 @@ const ID_COOKIE = 'ckns_sylphid';
 
 export const chartbeatUID = 50924;
 export const useCanonical = true;
-export const chartbeatSource = '//static.chartbeat.com/js/chartbeat.js';
+export const chartbeatSource = 'https://static.chartbeat.com/js/chartbeat.js';
 
 const capitalize = (s = '') => `${s?.charAt(0).toUpperCase()}${s?.slice(1)}`;
 

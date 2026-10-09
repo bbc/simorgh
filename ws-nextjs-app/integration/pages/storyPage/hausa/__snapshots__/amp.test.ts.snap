@@ -161,7 +161,7 @@ exports[`AMP Story Page Footer Anchors should match text and url 9`] = `
 
 exports[`AMP Story Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/hausa"`;
 
-exports[`AMP Story Page Footer Paragraphs should match text 1`] = `"© 2025 BBC. BBC ba za ta dauki alhakin abubuwan da wasu shafukan daban suka wallafa ba.  Karanta hanyoyin da muke bi dangane da adireshin waje."`;
+exports[`AMP Story Page Footer Paragraphs should match text 1`] = `"© 2026 BBC. BBC ba za ta dauki alhakin abubuwan da wasu shafukan daban suka wallafa ba.  Karanta hanyoyin da muke bi dangane da adireshin waje."`;
 
 exports[`AMP Story Page Header I can see the branding 1`] = `
 {
@@ -179,48 +179,6 @@ exports[`AMP Story Page Header Navigation link should match text and url 1`] = `
 }
 `;
 
-exports[`AMP Story Page Header Navigation link should match text and url 2`] = `
-{
-  "text": "Wasanni",
-  "url": "/hausa/topics/cz74kjgv220t",
-}
-`;
-
-exports[`AMP Story Page Header Navigation link should match text and url 3`] = `
-{
-  "text": "Nishadi",
-  "url": "/hausa/topics/cg726kz37wdt",
-}
-`;
-
-exports[`AMP Story Page Header Navigation link should match text and url 4`] = `
-{
-  "text": "Cikakkun Rahotanni",
-  "url": "/hausa/topics/cnl7wd77wj2t",
-}
-`;
-
-exports[`AMP Story Page Header Navigation link should match text and url 5`] = `
-{
-  "text": "Bidiyo",
-  "url": "/hausa/topics/cn09qmz4jryt",
-}
-`;
-
-exports[`AMP Story Page Header Navigation link should match text and url 6`] = `
-{
-  "text": "Shirye-shirye na Musamman",
-  "url": "/hausa/topics/cnl7wd9pddlt",
-}
-`;
-
-exports[`AMP Story Page Header Navigation link should match text and url 7`] = `
-{
-  "text": "Shirye-shiryen rediyo",
-  "url": "/hausa/topics/c4nx34q5724t",
-}
-`;
-
 exports[`AMP Story Page Image Caption should match text 1`] = `"Bayanan sautiमुंबई इंडियन्सला आता दुसऱ्या क्वॉलिफायर लढतीत खेळावे लागणार आहे."`;
 
 exports[`AMP Story Page Image should match snapshot 1`] = `
@@ -229,7 +187,7 @@ exports[`AMP Story Page Image should match snapshot 1`] = `
     <img
       alt=""
       aria-hidden="true"
-      class="css-1ukiuui"
+      class="css-bk1kai"
       src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01b7w9z.jpg.webp"
       srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01b7w9z.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01b7w9z.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01b7w9z.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01b7w9z.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01b7w9z.jpg.webp 800w"
     />
@@ -295,7 +253,7 @@ exports[`AMP Story Page SEO Lang attribute 1`] = `"ha"`;
 
 exports[`AMP Story Page SEO Linked data should match text 1`] = `
 {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "NewsArticle",
@@ -328,7 +286,7 @@ exports[`AMP Story Page SEO Linked data should match text 1`] = `
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News Hausa",
@@ -356,7 +314,7 @@ exports[`AMP Story Page SEO Linked data should match text 2`] = `
 
 exports[`AMP Story Page SEO OG description 1`] = `"French football fans sing God Save The Queen ahead of the match between France and England in tribute to the victims of attacks in London and Manchester."`;
 
-exports[`AMP Story Page SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_hausa/1745C/test/_63542359_hi035712328.jpg"`;
+exports[`AMP Story Page SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1200/branded_hausa/1745C/test/_63542359_hi035712328.jpg"`;
 
 exports[`AMP Story Page SEO OG image alt 1`] = `"hai;le"`;
 
@@ -382,7 +340,7 @@ exports[`AMP Story Page SEO Twitter description 1`] = `"French football fans sin
 
 exports[`AMP Story Page SEO Twitter image alt 1`] = `"hai;le"`;
 
-exports[`AMP Story Page SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_hausa/1745C/test/_63542359_hi035712328.jpg"`;
+exports[`AMP Story Page SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1200/branded_hausa/1745C/test/_63542359_hi035712328.jpg"`;
 
 exports[`AMP Story Page SEO Twitter site 1`] = `"@bbchausa"`;
 

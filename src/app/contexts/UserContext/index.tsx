@@ -1,4 +1,5 @@
-import React, {
+import {
+  createContext,
   PropsWithChildren,
   useState,
   Dispatch,
@@ -18,7 +19,7 @@ export type UserContextProps = {
   personalisationEnabled: boolean;
 };
 
-export const UserContext = React.createContext<UserContextProps>(
+export const UserContext = createContext<UserContextProps>(
   {} as UserContextProps,
 );
 

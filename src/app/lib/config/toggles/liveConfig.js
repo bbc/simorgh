@@ -2,6 +2,9 @@ import SERVICES from '../services';
 
 export default {
   _environment: 'live',
+  account: {
+    enabled: false,
+  },
   ads: {
     enabled: false,
   },
@@ -9,6 +12,9 @@ export default {
     enabled: false,
   },
   articleLiteSiteLink: { enabled: true },
+  articlePortraitVideo: {
+    enabled: true,
+  },
   comscoreAnalytics: {
     enabled: true,
   },
@@ -24,6 +30,9 @@ export default {
   },
   eventTracking: {
     enabled: true,
+  },
+  googlePreferredSource: {
+    enabled: false,
   },
   homePageRadioSchedule: {
     enabled: false,
@@ -70,11 +79,23 @@ export default {
   scriptLink: {
     enabled: true,
   },
+  sportDataPolling: {
+    enabled: false,
+  },
+  showSportDataHeader: {
+    enabled: false,
+  },
   topBarOJs: {
     enabled: true,
   },
+  topicUasPersonalization: {
+    enabled: false,
+  },
   variantCookie: {
     enabled: true,
+  },
+  uasPersonalization: {
+    enabled: false,
   },
   webVitalsMonitoring: {
     enabled: true,

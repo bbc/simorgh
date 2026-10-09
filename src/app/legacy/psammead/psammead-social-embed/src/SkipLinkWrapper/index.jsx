@@ -1,7 +1,4 @@
-import React from 'react';
 import styled from '@emotion/styled';
-import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
-import { GEL_BREVIER } from '#psammead/gel-foundations/src/typography';
 
 import { detokenise, dictionaryFactory } from '../utilities';
 
@@ -19,8 +16,8 @@ const Wrapper = styled.div`
 `;
 
 const SkipLink = styled.a`
-  ${({ service }) => getSansRegular(service)}
-  ${GEL_BREVIER}
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
+  ${({ theme: { fontSizes } }) => fontSizes.brevier};
   background-color: ${props => props.theme.palette.WHITE};
   border: ${BORDER_WEIGHT} solid ${props => props.theme.palette.EBON};
   display: block;
@@ -55,7 +52,6 @@ const EndText = styled.p`
 
 const SkipLinkWrapper = ({
   provider,
-  service,
   endTextId,
   text,
   children,
@@ -66,7 +62,6 @@ const SkipLinkWrapper = ({
   return (
     <Wrapper>
       <SkipLink
-        service={service}
         href={`#${detokenise(endTextId, dictionary)}`}
         className="focusIndicatorRemove"
         {...(describedById && { 'aria-describedby': describedById })}

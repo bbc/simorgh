@@ -1,7 +1,15 @@
 import { ReverbClient } from '#models/types/eventTracking';
 import { BumpType, Player } from '#app/components/MediaLoader/types';
+import { EffectiveNetworkType } from '#app/models/types/global';
 
 declare global {
+  interface Navigator {
+    connection?: {
+      effectiveType?: EffectiveNetworkType;
+      addEventListener?: (type: string, listener: () => void) => void;
+      removeEventListener?: (type: string, listener: () => void) => void;
+    };
+  }
   interface Window {
     bbcpage:
       | {
@@ -23,8 +31,9 @@ declare global {
         }
       | object;
     bbcuser: {
-      getHashedId: () => null;
+      getHashedId: () => Promise<string | null>;
       isSignedIn: () => Promise<boolean>;
+      isPersonalisationOn: () => Promise<boolean>;
     };
     __reverb: {
       __reverbLoadedPromise: Promise<ReverbClient>;
@@ -35,9 +44,7 @@ declare global {
     ) => void;
     embeddedMedia: {
       api: {
-        players: () => {
-          bbcMediaPlayer0: Player;
-        };
+        players: () => Record<string, Player>;
       };
     };
     mediaPlayers: Record<string, Player>;
@@ -49,12 +56,14 @@ declare global {
       bootstrap: () => void;
       cmd: { push: () => void };
     };
-    sendStaticBeacon: (url: string, data?: BodyInit | null) => boolean;
+    sendStaticBeacon: (url: string, data?: BodyInit | null) => void;
     processClientDeviceAndSendStaticBeacon: (props: {
       atiUrl?: string;
       reverbUrl?: string;
       forwardingUrl?: string;
     }) => void;
+    // eslint-disable-next-line camelcase
+    _sf_async_config?: Record<string, unknown>;
   }
 }
 

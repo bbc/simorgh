@@ -1,12 +1,7 @@
-/** @jsx jsx */
 import { use } from 'react';
-import { jsx } from '@emotion/react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Image from '#app/components/Image';
-import buildIChefURL from '#app/lib/utilities/ichefURL';
-import { createSrcsets } from '#app/lib/utilities/srcSet';
-import getOriginCode from '#app/lib/utilities/imageSrcHelpers/originCode';
-import getLocator from '#app/lib/utilities/imageSrcHelpers/locator';
+import { prepareIchefImage } from '#app/utilities/imageSrcSets';
 import styles from './styles';
 
 type Props = {
@@ -16,7 +11,6 @@ type Props = {
   altText?: string;
   showPlaceholder?: boolean;
   showVignette?: boolean;
-  isLivePageHeaderImage?: boolean;
   singleImageLayout?: boolean;
 };
 
@@ -49,30 +43,16 @@ const MaskedImage = ({
   altText = '',
   showPlaceholder = true,
   showVignette = false,
-  isLivePageHeaderImage = false,
   singleImageLayout = false,
 }: Props) => {
   const { dir } = use(ServiceContext);
   const isRtl = dir === 'rtl';
 
-  const url = imageUrlTemplate.split('{width}')[1];
-
-  const originCode = getOriginCode(url);
-  const locator = getLocator(url);
-
   const { primarySrcset, primaryMimeType, fallbackSrcset, fallbackMimeType } =
-    createSrcsets({
-      originCode,
-      locator,
+    prepareIchefImage({
+      imageUrlTemplate,
       originalImageWidth: imageWidth,
     });
-
-  const DEFAULT_IMAGE_RES = 480;
-  const srcWebp = buildIChefURL({
-    originCode,
-    locator,
-    resolution: DEFAULT_IMAGE_RES,
-  });
 
   const shouldFillHeight = singleImageLayout;
   const shouldDisableExtraWideMask = singleImageLayout;
@@ -93,7 +73,7 @@ const MaskedImage = ({
     >
       <Image
         alt={altText}
-        src={isLivePageHeaderImage ? srcWebp : imageUrl}
+        src={imageUrl}
         srcSet={primarySrcset || undefined}
         fallbackSrcSet={fallbackSrcset || undefined}
         mediaType={primaryMimeType || undefined}

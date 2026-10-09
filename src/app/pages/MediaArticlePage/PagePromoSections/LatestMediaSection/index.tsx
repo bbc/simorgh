@@ -1,6 +1,4 @@
-/** @jsx jsx */
 import { use } from 'react';
-import { jsx } from '@emotion/react';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import PromoItem from '../../../../legacy/components/OptimoPromos/PromoItem/index.styles';
@@ -12,7 +10,7 @@ import styles from './index.styles';
 import { LatestMedia } from './types';
 
 const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
-  const { service, dir, translations, script } = use(ServiceContext);
+  const { dir, translations } = use(ServiceContext);
 
   const eventTrackingData = {
     block: {
@@ -51,8 +49,6 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
         href=""
         labelId={LABEL_ID}
         linkText=""
-        script={script}
-        service={service}
         backgroundColor="transparent"
         overrideHeadingAs=""
         visuallyHidden={false}
@@ -67,6 +63,7 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
             ariaLabelledBy={ariaLabelledBy}
             ref={viewTracker}
             eventTrackingData={eventTrackingData}
+            isPortraitImage={singleItem.isPortraitImage}
           />
         </div>
       ) : (

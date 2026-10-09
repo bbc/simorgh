@@ -1,15 +1,27 @@
-import React from 'react';
 import styled from '@emotion/styled';
 import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
-import IMAGE from '../../../components/Image';
+import IMAGE from '#app/components/Image';
+import BlurredBackground from '#app/components/Image/BlurredBackground';
+import { createResponsiveSrcSet } from '#app/utilities/imageSrcSets';
+
+const IMAGE_RESOLUTIONS = [85, 120, 170, 232, 325, 450, 660, 800];
+const PROGRAMME_IMAGE_RESOLUTIONS = [96, 128, 176, 240, 352, 464, 672, 800];
 
 const Wrapper = styled.div`
   margin-bottom: ${GEL_SPACING};
   position: relative;
+  overflow: hidden;
+  ${({ isPortraitImage }) =>
+    isPortraitImage &&
+    `
+      > * img {
+        object-fit: contain;
+      }
+    `}
 `;
 
 const ChildWrapper = styled.div`
@@ -19,20 +31,7 @@ const ChildWrapper = styled.div`
 
 // promos with images via Programmes (which can be of type audio and possibly others) use a different iChef recipe requiring a second set of resolutions
 // https://github.com/bbc/programme-images/tree/master/webapp/ichef/recipes
-const createSrcSet = (imageUrl, isProgrammeImage, suffix = '') => {
-  const imageResolutions = [85, 120, 170, 232, 325, 450, 660, 800];
-  const imageResolutionsProgrammes = [96, 128, 176, 240, 352, 464, 672, 800];
-
-  const resolutions = isProgrammeImage
-    ? imageResolutionsProgrammes
-    : imageResolutions;
-
-  return resolutions
-    .map(res => `${imageUrl.replace(`{width}`, res)}${suffix} ${res}w`)
-    .join(', ');
-};
-
-const createSizes = (useLargeImages, isProgrammeImage) => {
+const buildSizes = (useLargeImages, isProgrammeImage) => {
   // 4 columns of fixed width
   const DESKTOP_SIZE = useLargeImages
     ? `(min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) 800px`
@@ -63,31 +62,45 @@ const Image = props => {
     src,
     useLargeImages = false,
     className,
+    isPortraitImage,
+    isLite,
     ...rest
   } = props;
   const isProgrammeImage = src.startsWith(
     'https://ichef.bbci.co.uk/images/ic/',
   );
   const suffix = src.endsWith('.webp') ? '' : '.webp';
-  const primarySrcSet = createSrcSet(src, isProgrammeImage, suffix);
+  const resolutions = isProgrammeImage
+    ? PROGRAMME_IMAGE_RESOLUTIONS
+    : IMAGE_RESOLUTIONS;
+  const sizes = buildSizes(useLargeImages, isProgrammeImage);
+  const primarySrcSet = createResponsiveSrcSet({
+    imageUrlTemplate: `${src}${suffix}`,
+    widths: resolutions,
+    mq: { GROUP_2_MAX_WIDTH: '' },
+    sizesBuilder: () => sizes,
+  }).srcSet;
+  const fallbackSrcSet = createResponsiveSrcSet({
+    imageUrlTemplate: src.replaceAll('.webp', ''),
+    widths: resolutions,
+    mq: { GROUP_2_MAX_WIDTH: '' },
+    sizesBuilder: () => sizes,
+  }).srcSet;
+  const srcWith240Width = src.replace('{width}', 240);
 
-  const fallbackSrcSet = createSrcSet(src, isProgrammeImage).replaceAll(
-    '.webp',
-    '',
-  );
-
-  const sizes = createSizes(useLargeImages, isProgrammeImage);
   return (
-    <Wrapper>
+    <Wrapper isPortraitImage={isPortraitImage}>
+      {isPortraitImage && <BlurredBackground src={srcWith240Width} />}
       <IMAGE
         {...rest}
-        src={src.replace('{width}', 240)}
+        src={srcWith240Width}
         srcSet={primarySrcSet}
         mediaType="image/webp"
         fallbackSrcSet={fallbackSrcSet}
         fallbackMediaType="image/jpeg"
         sizes={sizes}
         aspectRatio={[16, 9]}
+        {...(isPortraitImage && { placeholder: false })}
       />
       {children && (
         <ChildWrapper className={className}>{children}</ChildWrapper>

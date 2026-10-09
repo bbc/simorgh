@@ -1,0 +1,29 @@
+{
+  "alpha": true,
+  "lastUpdated": {
+    "day": 12,
+    "month": "Jan",
+    "year": 2026
+  },
+  "uxAccessibilityDoc": {
+    "done": true,
+    "reference": {
+      "url": "https://www.figma.com/design/1xyFlVCuc8EHbL0CaK1Hms/WS-Live-Pages-improvements?node-id=4-18076&p=f&t=LIWzG3Puf0D7SdIG-0",
+      "label": "Screen Reader UX"
+    }
+  },
+  "acceptanceCriteria": {
+    "done": true,
+    "reference": {
+      "url": "https://www.dropbox.com/scl/fi/5xmnkbet2dwqwbhvkpas9/Latest-Post-Update-Button-A11y-Acceptance-Criteria-AAC.paper?rlkey=uhrg0kncrq4u13bllq9auatpu&dl=0",
+      "label": "Accessibility Acceptance Criteria"
+    }
+  },
+  "swarm": {
+    "done": true,
+    "reference": {
+      "url": "https://www.dropbox.com/scl/fi/6fgrkpk39wh6o5lxqeorc/A11Y-Swarm-Latest-Post-Update-Button.paper?rlkey=7iaqyzyq3evdtdd5xltj2cqg4&dl=0",
+      "label": "Accessibility Swarm Notes"
+    }
+  }
+}

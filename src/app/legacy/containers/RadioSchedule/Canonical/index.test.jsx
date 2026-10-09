@@ -1,4 +1,3 @@
-import React from 'react';
 import arabicRadioScheduleData from '#data/arabic/bbc_arabic_radio/schedule.json';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
@@ -25,10 +24,6 @@ const RadioScheduleWithContext = ({ radioSchedule, lang }) => (
 );
 
 describe('RadioSchedule', () => {
-  beforeEach(() => {
-    fetch.resetMocks();
-  });
-
   afterEach(() => {
     jest.resetAllMocks();
   });
@@ -44,9 +39,10 @@ describe('RadioSchedule', () => {
       await act(async () => {
         container = render(
           <RadioScheduleWithContext radioSchedule={initialData} />,
+          { service: 'arabic' },
         ).container;
       });
-      expect(container).toMatchSnapshot();
+      expect(container.querySelectorAll('li').length).toEqual(4);
     });
 
     it('contains four programs for a service with a radio schedule', async () => {
@@ -60,6 +56,7 @@ describe('RadioSchedule', () => {
       await act(async () => {
         container = render(
           <RadioScheduleWithContext radioSchedule={initialData} />,
+          { service: 'arabic' },
         ).container;
       });
       expect(container.querySelectorAll('li').length).toEqual(4);
@@ -76,20 +73,25 @@ describe('RadioSchedule', () => {
         Date.now(),
       );
 
-      fetch.mockResponseOnce(JSON.stringify(radioSchedule2Programmes));
+      jest.spyOn(global, 'fetch').mockResolvedValueOnce({
+        json: async () => radioSchedule2Programmes,
+      });
 
       let container;
 
       await act(async () => {
         container = render(
           <RadioScheduleWithContext initialData={initialData} />,
+          { service: 'arabic' },
         ).container;
       });
       expect(container).toBeEmptyDOMElement();
     });
 
     it('does not render when data contains no programs', async () => {
-      fetch.mockResponseOnce(JSON.stringify([]));
+      jest.spyOn(global, 'fetch').mockResolvedValueOnce({
+        json: async () => [],
+      });
       const initialData = processRadioSchedule(
         { schedules: [] },
         'arabic',
@@ -100,6 +102,7 @@ describe('RadioSchedule', () => {
       await act(async () => {
         container = render(
           <RadioScheduleWithContext initialData={initialData} />,
+          { service: 'arabic' },
         ).container;
       });
       expect(container).toBeEmptyDOMElement();

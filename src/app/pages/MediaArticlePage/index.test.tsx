@@ -1,10 +1,15 @@
-import React, { PropsWithChildren } from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import { render, waitFor, screen } from '@testing-library/react';
-import { FetchMock } from 'jest-fetch-mock';
+import { PropsWithChildren } from 'react';
 import { Article } from '#app/models/types/optimo';
 import { Helmet } from 'react-helmet';
-import { ARTICLE_PAGE } from '../../routes/utils/pageTypes';
+import useUASButton from '#app/hooks/useUASButton';
+import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
+import {
+  render,
+  act,
+  waitFor,
+  screen,
+} from '../../components/react-testing-library-with-providers';
+import { ARTICLE_PAGE, MEDIA_ASSET_PAGE } from '../../routes/utils/pageTypes';
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
@@ -25,6 +30,10 @@ jest.mock('#src/app/components/ATIAnalytics', () => () => (
   <div>ATI Analytics</div>
 ));
 
+jest.mock('#app/hooks/useUASButton');
+
+const mockedUseUASButton = useUASButton as jest.Mock;
+
 type ContextProps = {
   service: Services;
   adsToggledOn?: boolean;
@@ -39,54 +48,54 @@ const Context = ({
   mostReadToggledOn = true,
   showAdsBasedOnLocation = false,
 }: PropsWithChildren<ContextProps>) => (
-  <BrowserRouter>
-    <ThemeProvider service={service} variant="default">
-      <ToggleContextProvider
-        toggles={{
-          mostRead: {
-            enabled: mostReadToggledOn,
-          },
-          ads: {
-            enabled: adsToggledOn,
-          },
-        }}
+  <ThemeProvider service={service} variant="default">
+    <ToggleContextProvider
+      toggles={{
+        mostRead: {
+          enabled: mostReadToggledOn,
+        },
+        ads: {
+          enabled: adsToggledOn,
+        },
+      }}
+    >
+      <RequestContextProvider
+        bbcOrigin="https://www.test.bbc.co.uk"
+        id="c0000000000o"
+        isAmp={false}
+        isApp={false}
+        pageType={ARTICLE_PAGE}
+        pathname="/pathname"
+        service={service}
+        statusCode={200}
+        showAdsBasedOnLocation={showAdsBasedOnLocation}
+        isUK
       >
-        <RequestContextProvider
-          bbcOrigin="https://www.test.bbc.co.uk"
-          id="c0000000000o"
-          isAmp={false}
-          isApp={false}
-          pageType={ARTICLE_PAGE}
-          pathname="/pathname"
-          service={service}
-          statusCode={200}
-          showAdsBasedOnLocation={showAdsBasedOnLocation}
-          isUK
-        >
-          <ServiceContextProvider service={service}>
-            {children}
-          </ServiceContextProvider>
-        </RequestContextProvider>
-      </ToggleContextProvider>
-    </ThemeProvider>
-  </BrowserRouter>
+        <ServiceContextProvider service={service}>
+          {children}
+        </ServiceContextProvider>
+      </RequestContextProvider>
+    </ToggleContextProvider>
+  </ThemeProvider>
 );
 
-const fetchMock = fetch as FetchMock;
-
 describe('MediaArticlePage', () => {
+  const mockMostReadResponse = () =>
+    jest.spyOn(global, 'fetch').mockResolvedValue({
+      json: async () => newsMostReadData,
+    } as Response);
+
   beforeEach(() => {
     process.env.SIMORGH_ICHEF_BASE_URL = 'https://ichef.test.bbci.co.uk';
-
-    fetchMock.resetMocks();
   });
 
   afterEach(() => {
     delete process.env.SIMORGH_ICHEF_BASE_URL;
+    jest.restoreAllMocks();
   });
 
   it('should render a news article correctly', async () => {
-    fetchMock.mockResponse(JSON.stringify(newsMostReadData));
+    mockMostReadResponse();
 
     const { container } = render(
       <Context service="news">
@@ -94,9 +103,24 @@ describe('MediaArticlePage', () => {
       </Context>,
     );
 
-    await waitFor(() => {
-      expect(container).toMatchSnapshot();
-    });
+    const headline = container.querySelector('h1');
+    expect(headline).toBeInTheDocument();
+    expect(headline).toHaveTextContent('WS Media (1) -Media above title');
+
+    const mediaPLayer = container.querySelector(
+      '[data-e2e="media-loader__container"]',
+    );
+
+    expect(mediaPLayer).toBeInTheDocument();
+
+    const caption = container.querySelector(
+      '[data-testid="caption-paragraph"]',
+    );
+    expect(caption).toBeInTheDocument();
+
+    const subheadline = container.querySelector('h2');
+    expect(subheadline).toBeInTheDocument();
+    expect(subheadline).toHaveTextContent('Headline');
   });
 
   it('should set "amphtml" link tag for asset', async () => {
@@ -141,7 +165,7 @@ describe('MediaArticlePage', () => {
   });
 
   it('should NOT render mpu or advert leaderboard', async () => {
-    fetchMock.mockResponse(JSON.stringify(newsMostReadData));
+    mockMostReadResponse();
 
     const { container } = render(
       <Context service="news" adsToggledOn showAdsBasedOnLocation>
@@ -233,5 +257,173 @@ describe('MediaArticlePage', () => {
 
     expect(modifiedTime).toBeUndefined();
     expect(publishedTime).toBeUndefined();
+  });
+
+  describe('TopicDiscovery', () => {
+    const data = {
+      ...pidginPageData,
+      metadata: {
+        ...pidginPageData.metadata,
+        topics: [
+          {
+            topicId: '1',
+            topicName: 'Topic 1',
+          },
+          {
+            topicId: '2',
+            topicName: 'Topic 2',
+          },
+        ],
+      },
+    } as unknown as Article;
+
+    it('should render TopicDiscovery when topicDiscovery toggle is enabled', () => {
+      const { queryByTestId } = render(<MediaArticlePage pageData={data} />, {
+        service: 'pidgin',
+        toggles: { topicDiscovery: { enabled: true } },
+      });
+      expect(queryByTestId('topic-discovery')).toBeInTheDocument();
+    });
+
+    it('should NOT render TopicDiscovery when topicDiscovery toggle is disabled', () => {
+      const { queryByTestId } = render(<MediaArticlePage pageData={data} />, {
+        service: 'pidgin',
+        toggles: { topicDiscovery: { enabled: false } },
+      });
+      expect(queryByTestId('topic-discovery')).not.toBeInTheDocument();
+    });
+  });
+
+  describe('SaveArticleButton', () => {
+    const personalizedRenderOptions = {
+      service: 'hindi' as const,
+      toggles: { uasPersonalization: { enabled: true, value: 'hindi' } },
+      idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: true },
+    };
+
+    const bylineBlock = {
+      id: 'byline-block',
+      type: 'byline',
+      model: {
+        blocks: [
+          {
+            type: 'contributor',
+            model: {
+              topicId: '',
+              topicUrl: '',
+              blocks: [
+                {
+                  type: 'name',
+                  model: {
+                    blocks: [
+                      {
+                        type: 'text',
+                        model: {
+                          blocks: [
+                            {
+                              type: 'paragraph',
+                              model: {
+                                text: 'A Reporter',
+                                blocks: [
+                                  {
+                                    type: 'fragment',
+                                    model: {
+                                      text: 'A Reporter',
+                                      attributes: [],
+                                    },
+                                  },
+                                ],
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    };
+
+    const pidginPageDataWithByline = {
+      ...pidginPageData,
+      content: {
+        model: {
+          blocks: [...pidginPageData.content.model.blocks, bylineBlock],
+        },
+      },
+    } as unknown as Article;
+
+    const cpsMediaAssetPageData = {
+      ...pidginPageData,
+      metadata: { ...pidginPageData.metadata, type: MEDIA_ASSET_PAGE },
+    } as unknown as Article;
+
+    beforeEach(() => {
+      mockedUseUASButton.mockReturnValue({
+        isSaved: false,
+        isLoading: false,
+        isUpdating: false,
+        error: null,
+        handleSaveAction: jest.fn(),
+      });
+    });
+
+    it('renders after the byline when the article has a byline', async () => {
+      await act(async () => {
+        render(
+          <MediaArticlePage pageData={pidginPageDataWithByline} />,
+          personalizedRenderOptions,
+        );
+      });
+      const byline = screen.getByTestId('byline');
+      const saveButton = document.querySelector(
+        '#save-article-button',
+      ) as HTMLElement;
+      expect(saveButton).toBeInTheDocument();
+      expect(byline.compareDocumentPosition(saveButton)).toBe(
+        Node.DOCUMENT_POSITION_FOLLOWING,
+      );
+    });
+
+    it('renders after the standalone timestamp when the article has no byline', async () => {
+      await act(async () => {
+        render(
+          <MediaArticlePage pageData={pidginPageData as unknown as Article} />,
+          personalizedRenderOptions,
+        );
+      });
+      const timestamp = document.querySelector('time') as HTMLElement;
+      const saveButton = document.querySelector(
+        '#save-article-button',
+      ) as HTMLElement;
+      expect(saveButton).toBeInTheDocument();
+      expect(timestamp.compareDocumentPosition(saveButton)).toBe(
+        Node.DOCUMENT_POSITION_FOLLOWING,
+      );
+    });
+
+    it('does NOT render for legacy CPS media asset pages', async () => {
+      await act(async () => {
+        render(
+          <MediaArticlePage pageData={cpsMediaAssetPageData} />,
+          personalizedRenderOptions,
+        );
+      });
+      expect(document.querySelector('#save-article-button')).toBeNull();
+    });
+
+    it('does NOT render when personalization is unavailable', async () => {
+      await act(async () => {
+        render(
+          <MediaArticlePage pageData={pidginPageData as unknown as Article} />,
+          { service: 'hindi' },
+        );
+      });
+      expect(document.querySelector('#save-article-button')).toBeNull();
+    });
   });
 });

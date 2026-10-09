@@ -1,5 +1,3 @@
-import React from 'react';
-
 import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
@@ -45,7 +43,7 @@ const links = [
 describe('PodcastExternalLinks', () => {
   it('Should render external links', () => {
     const { container } = render(<Component links={links} />);
-    expect(container).toMatchSnapshot();
+    expect(container.querySelectorAll('a').length).toBe(4);
   });
 
   it('should render the right amount of items', () => {

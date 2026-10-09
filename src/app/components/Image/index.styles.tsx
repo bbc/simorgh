@@ -38,6 +38,28 @@ const styles = {
   portraitOrientation: css({
     position: 'absolute',
   }),
+  blurredBackground: css({
+    display: 'block',
+    position: 'absolute',
+    backgroundColor: 'black',
+    /* When the image is blurred by the filter, it leaves a transparent gradient
+     around the edge that's double the length of the blur. We are hiding the
+     edge using positioning to compensate. */
+    top: '-30px',
+    right: '-30px',
+    bottom: '-30px',
+    left: '-30px',
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    filter: 'blur(15px)',
+    '&::after': {
+      content: '""',
+      position: 'absolute',
+      inset: 0,
+      background: 'rgba(0,0,0,.3)',
+    },
+  }),
 };
 
 export default styles;

@@ -1,17 +1,18 @@
-/** @jsx jsx */
-
 import { use } from 'react';
-import { jsx, useTheme, Theme } from '@emotion/react';
+import { Theme } from '@emotion/react';
 import MediaLoader from '#app/components/MediaLoader';
 import { MediaBlock } from '#app/components/MediaLoader/types';
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
-import { Tag } from '#app/components/LinkedData/types';
+import { BylineLinkedData, Tag } from '#app/components/LinkedData/types';
 import {
   Article,
   OptimoBylineBlock,
   OptimoBylineContributorBlock,
 } from '#app/models/types/optimo';
 import { MediaOverrides } from '#app/models/types/media';
+import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
+import SaveArticleButton from '#app/components/SaveArticleButton';
+import extractSaveArticleProps from '#app/lib/utilities/extractSaveArticleProps';
 import useToggle from '../../hooks/useToggle';
 import {
   getArticleId,
@@ -26,7 +27,7 @@ import {
 } from '../../lib/utilities/parseAssetData';
 import filterForBlockType from '../../lib/utilities/blockHandlers';
 
-import ScrollablePromo from '../../legacy/components/ScrollablePromo';
+import ArticleLinksBlock from '../../components/ArticleLinksBlock';
 
 import headings from '../../legacy/containers/Headings';
 import visuallyHiddenHeadline from '../../legacy/containers/VisuallyHiddenHeadline';
@@ -40,7 +41,8 @@ import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import ComscoreAnalytics from '../../legacy/containers/ComscoreAnalytics';
 import SocialEmbedContainer from '../../legacy/containers/SocialEmbed';
 import fauxHeadline from '../../legacy/containers/FauxHeadline';
-import RelatedTopics from '../../legacy/containers/RelatedTopics';
+import RelatedTopics from '../../components/RelatedTopics';
+import TopicDiscovery from '../../components/TopicDiscovery';
 import NielsenAnalytics from '../../legacy/containers/NielsenAnalytics';
 import ArticleMetadata from '../../legacy/containers/ArticleMetadata';
 import EmbedImages from '../../components/Embeds/EmbedImages';
@@ -57,6 +59,7 @@ import {
 } from '../../components/Byline/utilities';
 
 import { ServiceContext } from '../../contexts/ServiceContext';
+import { RequestContext } from '../../contexts/RequestContext';
 import RelatedContentSection from '../../components/RelatedContentSection';
 
 import SecondaryColumn from './SecondaryColumn';
@@ -65,12 +68,12 @@ import styles from './MediaArticlePage.styles';
 import { ComponentToRenderProps, TimestampProps } from './types';
 import checkIsLiveMedia from './utils/checkIsLiveMedia';
 
-import { isPortraitVideo } from '../utils/portraitVideo';
+import { isPortraitVideo } from '../../components/MediaLoader/utils/isPortraitVideo';
 
 const getAudioVideoComponent =
   (isCpsMap: boolean) => (props: ComponentToRenderProps) => {
     const { blocks } = props;
-    const isPortrait = isPortraitVideo(blocks);
+    const isPortrait = isPortraitVideo(blocks as MediaBlock[]);
     const className = isPortrait ? 'portrait-media-loader' : '';
 
     return (
@@ -111,19 +114,30 @@ const getBylineComponent =
     bylineContribBlocks: OptimoBylineContributorBlock[],
     firstPublished: string,
     lastPublished: string,
+    showSaveArticleButton: boolean,
+    pageData: Article,
   ) =>
   () =>
     hasByline ? (
-      <Byline blocks={bylineContribBlocks}>
-        <Timestamp
-          firstPublished={new Date(firstPublished).getTime()}
-          lastPublished={new Date(lastPublished).getTime()}
-          popOut={false}
-        />
-      </Byline>
+      <>
+        <Byline blocks={bylineContribBlocks}>
+          <Timestamp
+            firstPublished={new Date(firstPublished).getTime()}
+            lastPublished={new Date(lastPublished).getTime()}
+            popOut={false}
+          />
+        </Byline>
+        {showSaveArticleButton && (
+          <SaveArticleButton
+            saveArticlePageData={extractSaveArticleProps(pageData)}
+          />
+        )}
+      </>
     ) : null;
 
-const Links = (props: ComponentToRenderProps) => <ScrollablePromo {...props} />;
+const Links = (props: ComponentToRenderProps) => (
+  <ArticleLinksBlock {...props} />
+);
 
 const getImageComponent =
   (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (
@@ -135,21 +149,26 @@ const getImageComponent =
   );
 
 const getTimestampComponent =
-  (showTimestamp: boolean) => (props: TimestampProps) =>
-    showTimestamp ? <Timestamp {...props} popOut={false} /> : null;
+  (showTimestamp: boolean, showSaveArticleButton: boolean, pageData: Article) =>
+  (props: TimestampProps) =>
+    showTimestamp ? (
+      <>
+        <Timestamp {...props} popOut={false} />
+        {showSaveArticleButton && (
+          <SaveArticleButton
+            saveArticlePageData={extractSaveArticleProps(pageData)}
+          />
+        )}
+      </>
+    ) : null;
 
 const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
-  const {
-    articleAuthor,
-    isTrustProjectParticipant,
-    showRelatedTopics,
-    brandName,
-  } = use(ServiceContext);
-  const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
+  const { pageType, isAmp, isLite, isApp } = use(RequestContext);
 
-  const {
-    palette: { GREY_2, WHITE },
-  } = useTheme();
+  const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
+    use(ServiceContext);
+  const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
+  const { enabled: topicDiscoveryEnabled } = useToggle('topicDiscovery');
 
   const headline = getHeadline(pageData) ?? '';
   const description = getSummary(pageData) || getHeadline(pageData);
@@ -165,7 +184,10 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const bylineContribBlocks = bylineBlock?.model?.blocks || [];
 
-  const bylineLinkedData = bylineExtractor(bylineContribBlocks);
+  const bylineLinkedData = bylineExtractor({
+    blocks: bylineContribBlocks,
+    pageType,
+  }) as BylineLinkedData[];
 
   const hasByline = bylineLinkedData.length > 0;
 
@@ -177,20 +199,15 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const formats = pageData?.metadata?.passport?.predicates?.formats ?? [];
 
-  // ATI
   const {
-    metadata: { atiAnalytics, type },
+    metadata: { type },
   } = pageData;
 
   const isCpsMap = type === MEDIA_ASSET_PAGE;
+  const showSaveArticleButton = !isCpsMap;
   const isTC2Asset = pageData?.metadata?.analyticsLabels?.contentId
     ?.split(':')
     ?.includes('topcat');
-
-  const atiData = {
-    ...atiAnalytics,
-    ...(isCpsMap && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
-  };
 
   const promoImageBlocks =
     pageData?.promo?.images?.defaultPromoImage?.blocks ?? [];
@@ -207,7 +224,11 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const promoImage = promoImageRawBlock?.model?.locator;
 
-  const showTopics = Boolean(showRelatedTopics && topics.length > 0);
+  const showTopicDiscovery =
+    topicDiscoveryEnabled && !isAmp && !isLite && !isApp;
+  const showTopics = Boolean(
+    showRelatedTopics && topics.length > 0 && !showTopicDiscovery,
+  );
 
   const isLiveMedia = checkIsLiveMedia(blocks);
 
@@ -227,9 +248,15 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
       bylineContribBlocks,
       firstPublished,
       lastPublished,
+      showSaveArticleButton,
+      pageData,
     ),
     image: getImageComponent(preloadLeadImageToggle),
-    timestamp: getTimestampComponent(showTimestamp),
+    timestamp: getTimestampComponent(
+      showTimestamp,
+      showSaveArticleButton,
+      pageData,
+    ),
     social: SocialEmbedContainer,
     embedHtml: EmbedHtml,
     embedImages: EmbedImages,
@@ -238,9 +265,11 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
     links: Links,
   };
 
+  // metrics are gated by experimentsForPageMetrics; add map experiment names there when ready
+  // flags mirror article page for page views per visit tracking
   return (
     <div css={styles.pageWrapper}>
-      <ATIAnalytics atiData={atiData} />
+      <ATIAnalytics />
       <ChartbeatAnalytics
         categoryName={pageData?.metadata?.passport?.category?.categoryName}
         title={headline}
@@ -285,13 +314,10 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
           <main css={styles.mainContent} role="main">
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </main>
+          <OptimizelyPageMetrics trackPageDepth />
+          {showTopicDiscovery && <TopicDiscovery topics={topics} />}
           {showTopics && (
-            <RelatedTopics
-              css={styles.relatedTopics}
-              topics={topics}
-              backgroundColour={GREY_2}
-              tagBackgroundColour={WHITE}
-            />
+            <RelatedTopics css={styles.relatedTopics} topics={topics} />
           )}
           <RelatedContentSection content={blocks} />
         </div>

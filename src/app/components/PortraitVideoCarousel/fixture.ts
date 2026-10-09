@@ -1,6 +1,6 @@
 import { PortraitClipMediaBlock } from '../MediaLoader/types';
 
-const portraitVideoFixture = {
+export const portraitVideoFixture = {
   title: 'Portrait Video Carousel',
   curationId: 'urn:bbc:tipo:list:65faa8a9-78d7-46ea-a159-9bc06c6146f5',
   blocks: [

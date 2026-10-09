@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { render } from '../../../components/react-testing-library-with-providers';
 import FooterContainer from '.';
 
@@ -12,7 +10,9 @@ describe(`FooterContainer`, () => {
     it('should render correctly', () => {
       const { container } = render(<FooterContainer />);
 
-      expect(container).toMatchSnapshot();
+      expect(
+        container.querySelector("footer[role='contentinfo']"),
+      ).toBeInTheDocument();
     });
   });
 

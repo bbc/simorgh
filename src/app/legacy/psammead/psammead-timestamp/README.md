@@ -22,25 +22,13 @@ When a date or time is to be displayed inline inside a paragraph.
 | Argument   | Type   | Required | Default | Example                  |
 |------------|--------|----------|---------|--------------------------|
 | `datetime` | string ([supported formats](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time#Valid_datetime_Values)) | Yes | N/A | `2006-09-24T05:00-07:00` |
-| `typographyFunc` | function | No | getBrevier | `function getPica(script){ return 'font-size: 28'; }` |
 | `padding` | boolean | No | `true` | `false` |
-| `script` | object | Yes | N/A | { canon: { groupA: { fontSize: '28', lineHeight: '32',}, groupB: { fontSize: '32', lineHeight: '36', }, groupD: { fontSize: '44', lineHeight: '48', }, }, trafalgar: { groupA: { fontSize: '20', lineHeight: '24', }, groupB: { fontSize: '24', lineHeight: '28', }, groupD: { fontSize: '32', lineHeight: '36', }, }, }|
-| service | string | Yes | N/A | `'news'` |
 
 ## Usage
 
 ```jsx
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
-import { getPica } from '#psammead/gel-foundations/src/typography';
-
 const WrappingContainer = () => (
-  <Timestamp
-    datetime="2019-03-01T14:00+00:00"
-    typographyFunc={getPica}
-    padding={false}
-    script={latin}
-    service="news"
-  >
+  <Timestamp datetime="2019-03-01T14:00+00:00" padding={false}>
     Friday 1 March 2019
   </Timestamp>
 );

@@ -1,30 +1,28 @@
-import React from 'react';
 import dissocPath from 'ramda/src/dissocPath';
 import identity from 'ramda/src/identity';
 
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-
 import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 
 import { render } from '../../../components/react-testing-library-with-providers';
 import { service as russianServiceConfig } from '../../../lib/config/services/russian';
+import { service as burmeseServiceConfig } from '../../../lib/config/services/burmese';
+import { service as amharicServiceConfig } from '../../../lib/config/services/amharic';
 import { ServiceContext } from '../../../contexts/ServiceContext';
-import { InlinePodcastPromo, SecondaryColumnPodcastPromo } from '.';
+import InlinePodcastPromo from './Inline';
 
 const PromoWithContext = ({
-  inline = false,
   serviceConfigTransformer = identity,
+  config = russianServiceConfig,
 }) => (
   <ToggleContextProvider
     toggles={{
       eventTracking: { enabled: true },
     }}
   >
-    <ServiceContext.Provider
-      value={serviceConfigTransformer(russianServiceConfig.default)}
-    >
-      {inline ? <InlinePodcastPromo /> : <SecondaryColumnPodcastPromo />}
+    <ServiceContext.Provider value={serviceConfigTransformer(config.default)}>
+      <InlinePodcastPromo />
     </ServiceContext.Provider>
   </ToggleContextProvider>
 );
@@ -38,13 +36,112 @@ const {
 } = russianServiceConfig.default.podcastPromo;
 
 describe('Inline', () => {
-  it('Should render correctly', () => {
-    const { container } = render(<PromoWithContext inline />);
-    expect(container).toMatchSnapshot();
+  const electionsIconPathSnippet = 'M18.1,7.2v2.6h8.7';
+
+  it('should omit the canonical sizes hint for AMP images', () => {
+    const { container: canonicalContainer } = render(<PromoWithContext />, {
+      service: 'russian',
+    });
+    const { container: ampContainer } = render(<PromoWithContext />, {
+      service: 'russian',
+      isAmp: true,
+    });
+
+    expect(canonicalContainer.querySelector('img')).toHaveAttribute(
+      'sizes',
+      '(min-width: 1008px) 228px, 30vw',
+    );
+    expect(ampContainer.querySelector('amp-img')).not.toHaveAttribute('sizes');
+  });
+
+  it('Should render a promo for podcasts correctly', () => {
+    const { getByRole, container } = render(
+      <PromoWithContext inline config={burmeseServiceConfig} />,
+      {
+        service: 'burmese',
+      },
+    );
+    expect(getByRole('region')).toBeInTheDocument();
+    expect(container.querySelector('a[href*="p02pc9lh"]')).toBeInTheDocument();
+  });
+
+  it('Should render a promo for the Chrome extension correctly', () => {
+    const { getByRole, container } = render(<PromoWithContext inline />, {
+      service: 'russian',
+    });
+    expect(getByRole('region')).toBeInTheDocument();
+    expect(
+      container.querySelector('a[href*="chromewebstore.google.com"]'),
+    ).toBeInTheDocument();
+  });
+
+  it('Should render a promo for youtube correctly', () => {
+    const { getByRole, container } = render(
+      <PromoWithContext inline config={amharicServiceConfig} />,
+      {
+        service: 'amharic',
+      },
+    );
+    expect(getByRole('region')).toBeInTheDocument();
+    expect(
+      container.querySelector('a[href*="youtube.com"]'),
+    ).toBeInTheDocument();
+  });
+  it('Should render a generic promo for other socials correctly', () => {
+    const genericPromoConfig = {
+      ...amharicServiceConfig,
+      default: {
+        ...amharicServiceConfig.default,
+        podcastPromo: {
+          ...amharicServiceConfig.default.podcastPromo,
+          image: {
+            ...amharicServiceConfig.default.podcastPromo.image,
+          },
+          linkLabel: {
+            ...amharicServiceConfig.default.podcastPromo.linkLabel,
+            href: 'other-social-url',
+          },
+        },
+      },
+    };
+    const { container } = render(
+      <PromoWithContext inline config={genericPromoConfig} />,
+      {
+        service: 'amharic',
+      },
+    );
+    expect(container.querySelector('a')).toBeInTheDocument();
+  });
+
+  it('should render the elections icon when the promo URL matches the elections article', () => {
+    const electionsPromoConfig = {
+      ...russianServiceConfig,
+      default: {
+        ...russianServiceConfig.default,
+        podcastPromo: {
+          ...russianServiceConfig.default.podcastPromo,
+          linkLabel: {
+            ...russianServiceConfig.default.podcastPromo.linkLabel,
+            href: 'https://www.bbc.com/portuguese/articles/cwly7mke0mpdo',
+          },
+        },
+      },
+    };
+
+    const { container } = render(
+      <PromoWithContext inline config={electionsPromoConfig} />,
+      {
+        service: 'russian',
+      },
+    );
+
+    expect(container.innerHTML).toContain(electionsIconPathSnippet);
   });
 
   it('should show when all props are available', () => {
-    const { getByText, getByRole } = render(<PromoWithContext inline />);
+    const { getByText, getByRole } = render(<PromoWithContext inline />, {
+      service: 'russian',
+    });
     const section = getByRole('region');
     const element = getByText(brandTitle);
 
@@ -58,25 +155,34 @@ describe('Inline', () => {
         serviceConfigTransformer={dissocPath(['podcastPromo'])}
         inline
       />,
+      {
+        service: 'russian',
+      },
     );
     const sections = container.getElementsByTagName('section');
     expect(sections.length).toBe(0);
   });
 
   it('should render the wrapping section element with role=region attribute', () => {
-    const { getByRole } = render(<PromoWithContext inline />);
+    const { getByRole } = render(<PromoWithContext inline />, {
+      service: 'russian',
+    });
 
     expect(getByRole('region')).toBeInTheDocument();
   });
 
   it('should render podcast in a strong element', () => {
-    const { getByText } = render(<PromoWithContext inline />);
+    const { getByText } = render(<PromoWithContext inline />, {
+      service: 'russian',
+    });
 
     expect(getByText(brandTitle).closest('strong')).toBeInTheDocument();
   });
 
   it('should contain a link to skip to end of podcast component', () => {
-    const { container } = render(<PromoWithContext inline />);
+    const { container } = render(<PromoWithContext inline />, {
+      service: 'russian',
+    });
 
     const links = container.querySelectorAll('a');
     const skipLink = links[0];
@@ -93,6 +199,9 @@ describe('Inline', () => {
         inline
         serviceConfigTransformer={dissocPath(['podcastPromo', 'skipLink'])}
       />,
+      {
+        service: 'russian',
+      },
     );
 
     expect(
@@ -101,111 +210,33 @@ describe('Inline', () => {
   });
 
   it('should render the title text in a <a> element', () => {
-    const { getByText } = render(<PromoWithContext inline />);
+    const { getByText } = render(<PromoWithContext inline />, {
+      service: 'russian',
+    });
 
     expect(getByText(brandTitle).closest('a')).toBeInTheDocument();
   });
 
   it('should render the description in a paragraph element', () => {
-    const { getByText } = render(<PromoWithContext inline />);
+    const { getByText } = render(<PromoWithContext inline />, {
+      service: 'russian',
+    });
 
     expect(getByText(brandDescription).closest('p')).toBeInTheDocument();
   });
 
   it('should render the "Episodes" call to action in a paragraph element', () => {
-    const { getByText } = render(<PromoWithContext inline />);
+    const { getByText } = render(<PromoWithContext inline />, {
+      service: 'russian',
+    });
 
-    expect(getByText('Подписывайтесь').closest('p')).toBeInTheDocument();
+    expect(getByText('Загрузить расширение').closest('p')).toBeInTheDocument();
   });
 
   it('SVGs should use focusable=false and aria-hidden=true to ensure the icon is not focusable in the tabbing order (IE 11)', () => {
-    const { container } = render(<PromoWithContext inline />);
-    const svgEls = Array.from(container.querySelectorAll('svg'));
-    const focusableAttrs = svgEls.map(svgEl => svgEl.getAttribute('focusable'));
-    const ariaHiddenAttrs = svgEls.map(svgEl =>
-      svgEl.getAttribute('aria-hidden'),
-    );
-
-    expect(focusableAttrs.every(attr => attr === 'false')).toBe(true);
-    expect(ariaHiddenAttrs.every(attr => attr === 'true')).toBe(true);
-  });
-});
-
-describe('SecondaryColumn', () => {
-  it('Should render correctly', () => {
-    const { container } = render(<PromoWithContext />);
-    expect(container).toMatchSnapshot();
-  });
-
-  it('should show when all props are available', () => {
-    const { getByText, getByRole } = render(<PromoWithContext />);
-    const section = getByRole('region');
-    const element = getByText(brandTitle);
-
-    expect(element).toBeInTheDocument();
-    expect(section).toBeInTheDocument();
-  });
-
-  it('should not show when props are not available', () => {
-    const { container } = render(
-      <PromoWithContext
-        serviceConfigTransformer={dissocPath(['podcastPromo'])}
-      />,
-    );
-    const sections = container.getElementsByTagName('section');
-    expect(sections.length).toBe(0);
-  });
-
-  it('should render the wrapping section element with role=region attribute', () => {
-    const { getByRole } = render(<PromoWithContext />);
-
-    expect(getByRole('region')).toBeInTheDocument();
-  });
-
-  it('should render podcast in a h2 element', () => {
-    const { getByText } = render(<PromoWithContext />);
-
-    expect(getByText(title).closest('h2')).toBeInTheDocument();
-  });
-
-  it('should render the section header/label', () => {
-    const { getByRole, getByText } = render(<PromoWithContext />);
-    const section = getByRole('region');
-    const ariaLabelledByAttr = section.getAttribute('aria-labelledby');
-
-    expect(getByText(title).closest('h2').getAttribute('id')).toEqual(
-      ariaLabelledByAttr,
-    );
-  });
-
-  it('should render the title text in a h3 element', () => {
-    const { getByText } = render(<PromoWithContext />);
-
-    expect(getByText(brandTitle).closest('h3')).toBeInTheDocument();
-  });
-
-  it('should render the link inside the h3 element and should wrap the title text', () => {
-    const { getByText } = render(<PromoWithContext />);
-
-    expect(
-      getByText(brandTitle).closest('a').closest('h3'),
-    ).toBeInTheDocument();
-  });
-
-  it('should render the description in a paragraph element', () => {
-    const { getByText } = render(<PromoWithContext />);
-
-    expect(getByText(brandDescription).closest('p')).toBeInTheDocument();
-  });
-
-  it('should render the "Episodes" call to action in a paragraph element', () => {
-    const { getByText } = render(<PromoWithContext />);
-
-    expect(getByText('Подписывайтесь').closest('p')).toBeInTheDocument();
-  });
-
-  it('SVGs should use focusable=false and aria-hidden=true to ensure the icon is not focusable in the tabbing order (IE 11)', () => {
-    const { container } = render(<PromoWithContext />);
+    const { container } = render(<PromoWithContext inline />, {
+      service: 'russian',
+    });
     const svgEls = Array.from(container.querySelectorAll('svg'));
     const focusableAttrs = svgEls.map(svgEl => svgEl.getAttribute('focusable'));
     const ariaHiddenAttrs = svgEls.map(svgEl =>
@@ -220,7 +251,9 @@ describe('SecondaryColumn', () => {
 describe('Event Tracking', () => {
   it('should call the view tracking hook with the correct params', () => {
     const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
-    render(<PromoWithContext />);
+    render(<PromoWithContext />, {
+      service: 'russian',
+    });
 
     expect(viewTrackerSpy).toHaveBeenCalledWith({
       componentName: 'promo-podcast',
@@ -229,7 +262,9 @@ describe('Event Tracking', () => {
 
   it('should call the click tracking hook with the correct params', () => {
     const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
-    render(<PromoWithContext />);
+    render(<PromoWithContext />, {
+      service: 'russian',
+    });
 
     expect(clickTrackerSpy).toHaveBeenCalledWith({
       componentName: 'promo-podcast',

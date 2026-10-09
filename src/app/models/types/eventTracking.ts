@@ -32,5 +32,8 @@ export type EventTrackingContextProps =
       producerId: string;
       statsDestination: string;
       producerName: string;
+      isSignedIn?: boolean;
+      hashedId?: string | null;
+      isPersonalisationOn?: boolean;
     }
   | Record<string, never>;

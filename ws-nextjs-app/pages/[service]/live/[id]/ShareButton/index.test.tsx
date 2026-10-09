@@ -1,11 +1,17 @@
-import React from 'react';
 import {
   render,
   screen,
   act,
 } from '#app/components/react-testing-library-with-providers';
+import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import userEvent from '@testing-library/user-event';
 import ShareButton from '.';
+
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  default: jest.fn(),
+}));
 
 const share = jest.fn().mockImplementation(() => Promise.resolve());
 Object.assign(navigator, {
@@ -13,6 +19,10 @@ Object.assign(navigator, {
 });
 
 describe('ShareButton', () => {
+  beforeEach(() => {
+    mockMatchMedia();
+  });
+
   afterEach(() => {
     jest.clearAllMocks();
   });

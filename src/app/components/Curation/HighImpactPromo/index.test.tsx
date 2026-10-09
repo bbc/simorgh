@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import {
   render,
   screen,
@@ -14,21 +12,18 @@ const promoFixtureData = summaries?.[0] as HighImpactPromoProps;
 interface FixtureProps {
   promoData?: HighImpactPromoProps;
   headingLevel?: number;
-  attribution?: {
-    link: string;
-    text: string;
-  };
+  relatedTopic?: { title: string; link: { url: string } } | null | undefined;
 }
 
 const Fixture = ({
   promoData = promoFixtureData,
   headingLevel,
-  attribution,
+  relatedTopic,
 }: FixtureProps) => (
   <HighImpactPromo
     {...promoData}
     headingLevel={headingLevel}
-    attribution={attribution}
+    {...(relatedTopic !== undefined && { relatedTopic })}
   />
 );
 
@@ -69,36 +64,22 @@ describe('High Impact Promo', () => {
     );
   });
 
-  it('should render default values if attribution prop is not provided', () => {
+  it('should render default subject values when relatedTopic prop is not provided', () => {
     render(<Fixture />, { service: 'mundo' });
 
-    const attributionLink = screen.getByRole('link', {
+    const subjectLink = screen.getByRole('link', {
       name: 'BBC News Mundo',
     });
-    expect(attributionLink).toBeInTheDocument();
-    expect(attributionLink).toHaveAttribute('href', '/mundo');
+    expect(subjectLink).toBeInTheDocument();
+    expect(subjectLink).toHaveAttribute('href', '/mundo');
 
-    const divider = attributionLink.previousElementSibling;
+    const divider = subjectLink.previousElementSibling;
     expect(divider).toBeInTheDocument();
     expect(divider).toHaveStyle({
       'background-color': '#EB0000',
       width: '2.5rem',
       height: '0.1875rem',
     });
-  });
-
-  it('should render correct attribution when an attribution prop is provided', () => {
-    const customAttribution = {
-      link: '/pidgin',
-      text: 'BBC News Pidgin',
-    };
-    render(<Fixture attribution={customAttribution} />, { service: 'mundo' });
-
-    const attributionLink = screen.getByRole('link', {
-      name: 'BBC News Pidgin',
-    });
-    expect(attributionLink).toBeInTheDocument();
-    expect(attributionLink).toHaveAttribute('href', '/pidgin');
   });
 
   it.each<[Services, string]>([
@@ -108,5 +89,22 @@ describe('High Impact Promo', () => {
     render(<Fixture />, { service });
     const promo = screen.getByTestId('high-impact-promo');
     expect(promo).toHaveAttribute('dir', dir);
+  });
+
+  it('should render relatedTopic when provided', () => {
+    const relatedTopic = {
+      title: 'Россия',
+      link: { url: 'https://www.bbc.com/russian/topics/cw6eyw7m0m1t' },
+    };
+    render(<Fixture relatedTopic={relatedTopic} />);
+
+    const relatedTopicLink = screen.getByRole('link', {
+      name: 'Россия',
+    });
+    expect(relatedTopicLink).toBeInTheDocument();
+    expect(relatedTopicLink).toHaveAttribute(
+      'href',
+      'https://www.bbc.com/russian/topics/cw6eyw7m0m1t',
+    );
   });
 });

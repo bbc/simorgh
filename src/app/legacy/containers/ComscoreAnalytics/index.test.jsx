@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 import { Helmet } from 'react-helmet';
 import { render } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -91,7 +91,17 @@ describe('Comscore Analytics Container', () => {
       );
 
       expect(container.firstChild).not.toBeNull();
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstChild).toMatchInlineSnapshot(`
+        <amp-analytics
+          type="comscore"
+        >
+          <script
+            type="application/json"
+          >
+            {"vars":{"c2":"17986528"},"extraUrlParams":{"comscorekw":"amp"}}
+          </script>
+        </amp-analytics>
+      `);
     });
 
     it('should return null when country-based cookie logic is enabled', () => {

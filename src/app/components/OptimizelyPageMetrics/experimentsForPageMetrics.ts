@@ -1,6 +1,10 @@
 import { PageTypes } from '#app/models/types/global';
-import { ARTICLE_PAGE, HOME_PAGE } from '#app/routes/utils/pageTypes';
-
+import { HOMEPAGE_RELATED_TOPIC_EXPERIMENT } from '#app/lib/experiments/homepageRelatedTopicPromos';
+import {
+  ARTICLE_PAGE,
+  MEDIA_ARTICLE_PAGE,
+  HOME_PAGE,
+} from '#app/routes/utils/pageTypes';
 // Any running serverside and client side experiments which collect Optimizely Page Metrics; page view, page complete, scroll depth
 // Includes PageType so that different experiments can be run on different pageTypes
 
@@ -11,18 +15,24 @@ type ExperimentsForPageTypeMetrics = {
 
 const experimentsForPageMetrics: ExperimentsForPageTypeMetrics = [
   {
-    // EXPERIMENT: Continue Reading button for articles & EXPERIMENT: Article Read Time 2
     pageType: ARTICLE_PAGE,
     activeExperiments: [
-      'newswb_ws_read_more_b',
-      'newswb_ws_article_read_time_2',
-      'newswb_ws_tod_article',
+      'test_page_views_aa_3',
+      'newswb_ws_article_account_promo_banner',
     ],
   },
   {
-    // EXPERIMENT: Homepage Time of Day Adaptive Curations
+    pageType: MEDIA_ARTICLE_PAGE,
+    activeExperiments: ['test_page_views_aa_3'],
+  },
+  {
     pageType: HOME_PAGE,
-    activeExperiments: ['newswb_ws_tod_homepage'],
+    activeExperiments: [
+      'test_page_views_aa_4',
+      // experiment: newswb_ws_homepage_related_topic_promos
+      HOMEPAGE_RELATED_TOPIC_EXPERIMENT,
+      'newswb_ws_homepage_account_promo_banner_copy',
+    ],
   },
 ];
 

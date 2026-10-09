@@ -1,17 +1,12 @@
 /* eslint-disable import/no-relative-packages */
 import { interceptATIAnalyticsBeacons, COMPONENTS } from '../helpers';
-import {
-  assertATIComponentClickEvent,
-  assertATIComponentViewEvent,
-} from '../../../../../../cypress/e2e/specialFeatures/atiAnalytics/assertions';
+import { assertATIComponentClickEvent, assertATIComponentViewEvent } from '.';
 import { AtiAssertionFnProps } from './type';
 
 const { ARTICLE_LITE_SITE_LINK } = COMPONENTS;
 
 export const assertArticleLiteSiteLinkComponentView = ({
   pageIdentifier,
-  contentType,
-  useReverb,
   path,
   applicationType,
   siteId,
@@ -27,8 +22,6 @@ export const assertArticleLiteSiteLinkComponentView = ({
     assertATIComponentViewEvent({
       component: ARTICLE_LITE_SITE_LINK,
       pageIdentifier,
-      contentType,
-      useReverb,
       applicationType,
       siteId,
     });
@@ -37,8 +30,6 @@ export const assertArticleLiteSiteLinkComponentView = ({
 
 export const assertArticleLiteSiteLinkComponentClick = ({
   pageIdentifier,
-  contentType,
-  useReverb,
   path,
   applicationType,
   siteId,
@@ -57,8 +48,6 @@ export const assertArticleLiteSiteLinkComponentClick = ({
     assertATIComponentClickEvent({
       component: ARTICLE_LITE_SITE_LINK,
       pageIdentifier,
-      contentType,
-      useReverb,
       applicationType,
       siteId,
     });

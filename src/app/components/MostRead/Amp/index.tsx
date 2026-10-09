@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import { use } from 'react';
 import { Helmet } from 'react-helmet';
 import {
@@ -105,6 +103,7 @@ const AmpMostRead = ({ endpoint, size = 'default' }: AmpMostReadProps) => {
               size={size}
               id=""
               position="{{index}}"
+              isAmp
             />
           </MostReadItemWrapper>
         </template>

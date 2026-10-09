@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   act,
   fireEvent,
@@ -6,6 +5,7 @@ import {
   screen,
   waitFor,
 } from '#app/components/react-testing-library-with-providers';
+import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import userEvent from '@testing-library/user-event';
 import { LiveRegionContextProvider } from '#app/components/LiveRegion/LiveRegionContext';
 
@@ -62,6 +62,10 @@ const imageFileInputState = {
 };
 
 describe('File', () => {
+  beforeEach(() => {
+    mockMatchMedia();
+  });
+
   afterEach(() => {
     jest.restoreAllMocks();
   });

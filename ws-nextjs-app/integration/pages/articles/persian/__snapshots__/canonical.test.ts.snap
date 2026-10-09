@@ -112,7 +112,7 @@ exports[`Canonical Articles Footer Anchors should match text and url 9`] = `
 
 exports[`Canonical Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/persian"`;
 
-exports[`Canonical Articles Footer Paragraphs should match text 1`] = `"© 2025 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
+exports[`Canonical Articles Footer Paragraphs should match text 1`] = `"© 2026 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
 
 exports[`Canonical Articles Header I can see the branding 1`] = `
 {
@@ -130,90 +130,6 @@ exports[`Canonical Articles Header Navigation link should match text and url 1`]
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 2`] = `
-{
-  "text": "جنگ اسرائیل-ایران",
-  "url": "/persian/topics/cwy6874zgpqt",
-}
-`;
-
-exports[`Canonical Articles Header Navigation link should match text and url 3`] = `
-{
-  "text": "پخش زنده",
-  "url": "/persian/media-49522521",
-}
-`;
-
-exports[`Canonical Articles Header Navigation link should match text and url 4`] = `
-{
-  "text": "ویدیو",
-  "url": "/persian/topics/c6z7mnr559gt",
-}
-`;
-
-exports[`Canonical Articles Header Navigation link should match text and url 5`] = `
-{
-  "text": "تلویزیون",
-  "url": "/persian/topics/cw9qgeqd1zqt",
-}
-`;
-
-exports[`Canonical Articles Header Navigation link should match text and url 6`] = `
-{
-  "text": "ايران",
-  "url": "/persian/topics/ckdxnwvwwjnt",
-}
-`;
-
-exports[`Canonical Articles Header Navigation link should match text and url 7`] = `
-{
-  "text": "افغانستان",
-  "url": "/persian/topics/cvjp23v3083t",
-}
-`;
-
-exports[`Canonical Articles Header Navigation link should match text and url 8`] = `
-{
-  "text": "جهان",
-  "url": "/persian/topics/c1d8ye58xl8t",
-}
-`;
-
-exports[`Canonical Articles Header Navigation link should match text and url 9`] = `
-{
-  "text": "هنر",
-  "url": "/persian/topics/c9wpm0epm45t",
-}
-`;
-
-exports[`Canonical Articles Header Navigation link should match text and url 10`] = `
-{
-  "text": "ورزش",
-  "url": "/persian/topics/cnq6879k7yjt",
-}
-`;
-
-exports[`Canonical Articles Header Navigation link should match text and url 11`] = `
-{
-  "text": "اقتصاد",
-  "url": "/persian/topics/cl8l9mvlllqt",
-}
-`;
-
-exports[`Canonical Articles Header Navigation link should match text and url 12`] = `
-{
-  "text": "دانش",
-  "url": "/persian/topics/ckdxnwr4r1yt",
-}
-`;
-
-exports[`Canonical Articles Header Navigation link should match text and url 13`] = `
-{
-  "text": "فراتر از خبر",
-  "url": "/persian/topics/cxr3ex12k6et",
-}
-`;
-
 exports[`Canonical Articles Image Caption should match text 1`] = `"توضیح تصویر، نوشیدنی‌ها داغ در بسته‌های سربسته توزیع می‌شوند "`;
 
 exports[`Canonical Articles Image Copyright Non BBC should match snapshot 1`] = `
@@ -227,7 +143,8 @@ exports[`Canonical Articles Image Copyright Non BBC should match snapshot 1`] = 
 exports[`Canonical Articles Image should match snapshot 1`] = `
 <img
   alt="قهوه"
-  class="css-4ejld5"
+  class="css-1seqhu9"
+  fetchpriority="high"
   height="360"
   loading="eager"
   sizes="(min-width: 1008px) 760px, 100vw"
@@ -359,7 +276,7 @@ exports[`Canonical Articles SEO Lang attribute 1`] = `"fa"`;
 
 exports[`Canonical Articles SEO Linked data should match text 1`] = `
 {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "NewsArticle",
@@ -368,7 +285,7 @@ exports[`Canonical Articles SEO Linked data should match text 1`] = `
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News فارسی",
@@ -381,7 +298,7 @@ exports[`Canonical Articles SEO Linked data should match text 1`] = `
       "image": {
         "@type": "ImageObject",
         "height": 576,
-        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+        "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/metadata/poster-1024x576.png",
         "width": 1024,
       },
       "inLanguage": {
@@ -399,13 +316,13 @@ exports[`Canonical Articles SEO Linked data should match text 1`] = `
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News فارسی",
         "publishingPrinciples": "https://www.bbc.com/persian/institutional-49283091",
       },
-      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+      "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/metadata/poster-1024x576.png",
       "url": "http://localhost:7081/persian/articles/c4vlle3q337o",
     },
   ],
@@ -414,7 +331,7 @@ exports[`Canonical Articles SEO Linked data should match text 1`] = `
 
 exports[`Canonical Articles SEO OG description 1`] = `"پهپادی که برایتان قهوه می‌آورد"`;
 
-exports[`Canonical Articles SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png"`;
+exports[`Canonical Articles SEO OG image 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/metadata/poster-1024x576.png"`;
 
 exports[`Canonical Articles SEO OG image alt 1`] = `"BBC News فارسی"`;
 
@@ -440,7 +357,7 @@ exports[`Canonical Articles SEO Twitter description 1`] = `"پهپادی که ب
 
 exports[`Canonical Articles SEO Twitter image alt 1`] = `"BBC News فارسی"`;
 
-exports[`Canonical Articles SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png"`;
+exports[`Canonical Articles SEO Twitter image src 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/metadata/poster-1024x576.png"`;
 
 exports[`Canonical Articles SEO Twitter site 1`] = `"@bbcpersian"`;
 

@@ -1,0 +1,4181 @@
+{
+  "data": {
+    "article": {
+      "metadata": {
+        "atiAnalytics": {
+          "categoryName": "Luiz+Inacio+Lula+da+Silva~Brazil~National+Congress+of+Brazil~Politics",
+          "contentId": "urn:bbc:optimo:asset:cgmpgpllnp7o",
+          "contentType": "article",
+          "language": "pt-br",
+          "ldpThingIds": "142b3898-9e04-4cca-bbd2-c96b48fda3ea~15f1bcf6-b6ab-48e8-b708-efed41e43d31~75354734-2a5f-4a06-b8a1-335e36b6508f~75612fa6-147c-4a43-97fa-fcf70d9cced3",
+          "ldpThingLabels": "Luiz+Inacio+Lula+da+Silva~Brazil~National+Congress+of+Brazil~Politics",
+          "nationsProducer": null,
+          "pageIdentifier": "portuguese.articles.cgmpgpllnp7o.page",
+          "pageTitle": "Lula derrotado em dose dupla: governo virou \"refém\" do Congresso?",
+          "timePublished": "2026-05-01T07:21:02.507Z",
+          "timeUpdated": "2026-05-01T07:21:02.507Z",
+          "readTimeMilliseconds": 600000
+        },
+        "id": "urn:bbc:ares::article:cgmpgpllnp7o",
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:cgmpgpllnp7o",
+          "canonicalUrl": "https://www.bbc.com/portuguese/articles/cgmpgpllnp7o"
+        },
+        "type": "article",
+        "createdBy": "Brasil",
+        "language": "pt-br",
+        "firstPublished": 1777620062507,
+        "lastPublished": 1777620062507,
+        "isOppm": false,
+        "options": {
+          "includeComments": false
+        },
+        "analyticsLabels": {
+          "ldp_tags": "Luiz+Inacio+Lula+da+Silva~Brazil~National+Congress+of+Brazil~Politics",
+          "page": "portuguese.articles.cgmpgpllnp7o.page",
+          "irisKeyword": null,
+          "audience_motivation": "Help me understand",
+          "ldp_ids": "142b3898-9e04-4cca-bbd2-c96b48fda3ea~15f1bcf6-b6ab-48e8-b708-efed41e43d31~75354734-2a5f-4a06-b8a1-335e36b6508f~75612fa6-147c-4a43-97fa-fcf70d9cced3",
+          "contentId": "urn:bbc:optimo:asset:cgmpgpllnp7o",
+          "producer": "Brasil"
+        },
+        "passport": {
+          "language": "pt-br",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil",
+          "taggings": [
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+              "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+              "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+              "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/15f1bcf6-b6ab-48e8-b708-efed41e43d31#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/75354734-2a5f-4a06-b8a1-335e36b6508f#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/dateFirstReleased",
+              "value": "2026-05-01T07:21:02.507Z"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/142b3898-9e04-4cca-bbd2-c96b48fda3ea#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+              "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+              "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+              "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+            }
+          ],
+          "predicates": {
+            "assetType": [
+              {
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                "type": "assetType"
+              }
+            ],
+            "primaryMediaType": [
+              {
+                "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id",
+                "type": "primaryMediaType"
+              }
+            ],
+            "dateFirstReleased": [
+              {
+                "value": "2026-05-01T07:21:02.507Z",
+                "type": "dateFirstReleased"
+              }
+            ],
+            "infoClass": [
+              {
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                "type": "infoClass"
+              }
+            ],
+            "formats": [
+              {
+                "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                "thingLabel": "News report",
+                "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                "thingType": [
+                  "tagging:TagConcept",
+                  "tagging:Format"
+                ],
+                "thingSameAs": [],
+                "thingEnglishLabel": "Report",
+                "thingPreferredLabel": "Report",
+                "thingLabelLanguage": "pt-br",
+                "type": "formats"
+              }
+            ],
+            "editorialSensitivity": [
+              {
+                "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                "type": "editorialSensitivity"
+              }
+            ],
+            "about": [
+              {
+                "value": "http://www.bbc.co.uk/things/142b3898-9e04-4cca-bbd2-c96b48fda3ea#id",
+                "thingLabel": "Luiz Inácio Lula da Silva",
+                "thingUri": "http://www.bbc.co.uk/things/142b3898-9e04-4cca-bbd2-c96b48fda3ea#id",
+                "thingId": "142b3898-9e04-4cca-bbd2-c96b48fda3ea",
+                "thingType": [
+                  "core:Thing",
+                  "tagging:TagConcept",
+                  "tagging:AmbiguousTerm",
+                  "core:Person",
+                  "tagging:Agent"
+                ],
+                "thingSameAs": [
+                  "http://www.wikidata.org/entity/Q37181",
+                  "http://dbpedia.org/resource/Luiz_Inácio_Lula_da_Silva",
+                  "https://www.imdb.com/name/nm1300752/"
+                ],
+                "thingEnglishLabel": "Luiz Inacio Lula da Silva",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/15f1bcf6-b6ab-48e8-b708-efed41e43d31#id",
+                "thingLabel": "Brasil",
+                "thingUri": "http://www.bbc.co.uk/things/15f1bcf6-b6ab-48e8-b708-efed41e43d31#id",
+                "thingId": "15f1bcf6-b6ab-48e8-b708-efed41e43d31",
+                "thingType": [
+                  "core:Thing",
+                  "tagging:TagConcept",
+                  "core:Place",
+                  "geoname:Feature",
+                  "geoname:GeoTagConcept"
+                ],
+                "thingSameAs": [
+                  "http://sws.geonames.org/3469034/",
+                  "http://www.wikidata.org/entity/Q155"
+                ],
+                "thingEnglishLabel": "Brazil",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/75354734-2a5f-4a06-b8a1-335e36b6508f#id",
+                "thingLabel": "Congresso Nacional",
+                "thingUri": "http://www.bbc.co.uk/things/75354734-2a5f-4a06-b8a1-335e36b6508f#id",
+                "thingId": "75354734-2a5f-4a06-b8a1-335e36b6508f",
+                "thingType": [
+                  "core:Thing",
+                  "tagging:TagConcept",
+                  "tagging:AmbiguousTerm",
+                  "core:Organisation",
+                  "tagging:Agent"
+                ],
+                "thingSameAs": [
+                  "http://dbpedia.org/resource/National_Congress_of_Brazil",
+                  "http://www.wikidata.org/entity/Q949699"
+                ],
+                "thingEnglishLabel": "National Congress of Brazil",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+                "thingLabel": "Política",
+                "thingUri": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+                "thingId": "75612fa6-147c-4a43-97fa-fcf70d9cced3",
+                "thingType": [
+                  "core:Thing",
+                  "tagging:TagConcept",
+                  "core:Theme",
+                  "tagging:AmbiguousTerm",
+                  "tagging:Genre"
+                ],
+                "thingSameAs": [
+                  "http://dbpedia.org/resource/Politics",
+                  "http://www.wikidata.org/entity/Q7163"
+                ],
+                "thingEnglishLabel": "Politics",
+                "type": "about"
+              }
+            ]
+          }
+        },
+        "tags": {
+          "about": [
+            {
+              "thingLabel": "Luiz Inácio Lula da Silva",
+              "thingUri": "http://www.bbc.co.uk/things/142b3898-9e04-4cca-bbd2-c96b48fda3ea#id",
+              "thingId": "142b3898-9e04-4cca-bbd2-c96b48fda3ea",
+              "thingType": [
+                "core:Thing",
+                "tagging:TagConcept",
+                "tagging:AmbiguousTerm",
+                "core:Person",
+                "tagging:Agent"
+              ],
+              "thingSameAs": [
+                "http://www.wikidata.org/entity/Q37181",
+                "http://dbpedia.org/resource/Luiz_Inácio_Lula_da_Silva",
+                "https://www.imdb.com/name/nm1300752/"
+              ],
+              "topicName": "Luiz Inácio Lula da Silva",
+              "topicId": "cpzd4zx0272t",
+              "curationList": [
+                {
+                  "curationId": "2e572195-0afa-4f19-8b73-9ebff287e6f5",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Luiz Inacio Lula da Silva",
+              "thingLabelLanguage": "pt-br",
+              "thingPreferredLabel": "Luiz Inacio Lula da Silva"
+            },
+            {
+              "thingLabel": "Brasil",
+              "thingUri": "http://www.bbc.co.uk/things/15f1bcf6-b6ab-48e8-b708-efed41e43d31#id",
+              "thingId": "15f1bcf6-b6ab-48e8-b708-efed41e43d31",
+              "thingType": [
+                "core:Thing",
+                "tagging:TagConcept",
+                "core:Place",
+                "geoname:Feature",
+                "geoname:GeoTagConcept"
+              ],
+              "thingSameAs": [
+                "http://sws.geonames.org/3469034/",
+                "http://www.wikidata.org/entity/Q155"
+              ],
+              "topicName": "Brasil",
+              "topicId": "cz74k717pw5t",
+              "curationList": [
+                {
+                  "curationId": "bcf15bdb-b59d-4726-ba50-9eba0a3e90f2",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Brazil",
+              "thingLabelLanguage": "pt-br",
+              "thingPreferredLabel": "Brazil"
+            },
+            {
+              "thingLabel": "Congresso Nacional",
+              "thingUri": "http://www.bbc.co.uk/things/75354734-2a5f-4a06-b8a1-335e36b6508f#id",
+              "thingId": "75354734-2a5f-4a06-b8a1-335e36b6508f",
+              "thingType": [
+                "core:Thing",
+                "tagging:TagConcept",
+                "tagging:AmbiguousTerm",
+                "core:Organisation",
+                "tagging:Agent"
+              ],
+              "thingSameAs": [
+                "http://dbpedia.org/resource/National_Congress_of_Brazil",
+                "http://www.wikidata.org/entity/Q949699"
+              ],
+              "topicName": "Congresso Nacional",
+              "topicId": "c2lemz0vkm8t",
+              "curationList": [
+                {
+                  "curationId": "4f4a1d7a-c76e-4469-b9fe-c27bc0e48239",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "National Congress of Brazil",
+              "thingLabelLanguage": "pt-br",
+              "thingPreferredLabel": "National Congress of Brazil"
+            },
+            {
+              "thingLabel": "Política",
+              "thingUri": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+              "thingId": "75612fa6-147c-4a43-97fa-fcf70d9cced3",
+              "thingType": [
+                "core:Thing",
+                "tagging:TagConcept",
+                "core:Theme",
+                "tagging:AmbiguousTerm",
+                "tagging:Genre"
+              ],
+              "thingSameAs": [
+                "http://dbpedia.org/resource/Politics",
+                "http://www.wikidata.org/entity/Q7163"
+              ],
+              "topicName": "Política",
+              "topicId": "cg7267qwzx1t",
+              "curationList": [
+                {
+                  "curationId": "a69e456a-3cdc-417b-bd7d-92e2a44cf04e",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Politics",
+              "thingLabelLanguage": "pt-br",
+              "thingPreferredLabel": "Politics"
+            }
+          ]
+        },
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "image",
+          "caption",
+          "altText",
+          "rawImage",
+          "byline",
+          "contributor",
+          "name",
+          "role",
+          "link",
+          "urlLink",
+          "subheadline",
+          "links",
+          "aresLink"
+        ],
+        "includeComments": false,
+        "topics": [
+          {
+            "topicName": "Congresso Nacional",
+            "topicId": "c2lemz0vkm8t",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/75354734-2a5f-4a06-b8a1-335e36b6508f#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "4f4a1d7a-c76e-4469-b9fe-c27bc0e48239",
+                "curationType": "vivo-stream",
+                "position": 0,
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": [
+              "core:Thing",
+              "tagging:TagConcept",
+              "tagging:AmbiguousTerm",
+              "core:Organisation",
+              "tagging:Agent"
+            ],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil",
+            "topicUrl": "/portuguese/topics/c2lemz0vkm8t",
+            "meta": {
+              "created": "2020-05-01T01:38:09.227Z",
+              "updated": "2024-09-18T14:11:57.861Z",
+              "transliterated": false,
+              "script": "pt-br",
+              "variantId": "c2lemz0vkm8t:pt-br"
+            }
+          },
+          {
+            "topicName": "Política",
+            "topicId": "cg7267qwzx1t",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "a69e456a-3cdc-417b-bd7d-92e2a44cf04e",
+                "curationType": "vivo-stream",
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": [
+              "core:Thing",
+              "tagging:TagConcept",
+              "core:Theme",
+              "tagging:AmbiguousTerm",
+              "tagging:Genre"
+            ],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil",
+            "topicUrl": "/portuguese/topics/cg7267qwzx1t",
+            "meta": {
+              "created": "2019-06-13T11:30:33.181Z",
+              "updated": "2024-09-18T14:58:24.368Z",
+              "transliterated": false,
+              "script": "pt-br",
+              "variantId": "cg7267qwzx1t:pt-br"
+            }
+          },
+          {
+            "topicName": "Luiz Inácio Lula da Silva",
+            "topicId": "cpzd4zx0272t",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/142b3898-9e04-4cca-bbd2-c96b48fda3ea#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "2e572195-0afa-4f19-8b73-9ebff287e6f5",
+                "curationType": "vivo-stream",
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": [
+              "core:Thing",
+              "tagging:TagConcept",
+              "tagging:AmbiguousTerm",
+              "core:Person",
+              "tagging:Agent"
+            ],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil",
+            "topicUrl": "/portuguese/topics/cpzd4zx0272t",
+            "meta": {
+              "created": "2019-06-13T11:31:28.165Z",
+              "updated": "2024-09-18T14:58:19.036Z",
+              "transliterated": false,
+              "script": "pt-br",
+              "variantId": "cpzd4zx0272t:pt-br"
+            }
+          },
+          {
+            "topicName": "Brasil",
+            "topicId": "cz74k717pw5t",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/15f1bcf6-b6ab-48e8-b708-efed41e43d31#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "bcf15bdb-b59d-4726-ba50-9eba0a3e90f2",
+                "curationType": "vivo-stream",
+                "position": 0,
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": [
+              "core:Thing",
+              "tagging:TagConcept",
+              "core:Place"
+            ],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil",
+            "topicUrl": "/portuguese/topics/cz74k717pw5t",
+            "meta": {
+              "created": "2019-06-13T11:27:59.918Z",
+              "updated": "2025-01-20T15:50:30.321Z",
+              "dateIssued": "2025-01-20T15:50:30.308Z",
+              "transliterated": false,
+              "script": "pt-br",
+              "variantId": "cz74k717pw5t:pt-br"
+            }
+          }
+        ],
+        "consumableAsSFV": false,
+        "allowAdvertising": true,
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false,
+        "breakingNews": {
+          "isBreaking": false
+        },
+        "useSensitiveOnwardJourneys": false,
+        "stats": {
+          "readTime": 10,
+          "wordCount": 2491
+        },
+        "isTransliterated": false,
+        "isKeyPointsFormatAsset": false
+      },
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "e2327a21",
+              "type": "headline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "39152b1e",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "34d7b9ad",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "Derrota em dose dupla: o governo Lula virou \"refém\" do Congresso?",
+                            "blocks": [
+                              {
+                                "id": "876b8109",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Derrota em dose dupla: o governo Lula virou \"refém\" do Congresso?",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      1,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                1
+              ]
+            },
+            {
+              "id": "04f83ffa",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "c5c64d70",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "457baa61",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "64b4d484",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Davi Alcolumbre e o senador Flávio Bolsonaro durante votação que derrubou veto do PL da Dosimetria",
+                                  "blocks": [
+                                    {
+                                      "id": "e9081b82",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Davi Alcolumbre e o senador Flávio Bolsonaro durante votação que derrubou veto do PL da Dosimetria",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            2,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      2,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "5e120072",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "0aae84d5",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "94ae7546",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Davi Alcolumbre e Flávio Bolsonaro usando ternos, em sessão do Senado, com Davi sentado em poltrona e sendo abraçado por Flávio Bolsonaro",
+                                  "blocks": [
+                                    {
+                                      "id": "390da125",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Davi Alcolumbre e Flávio Bolsonaro usando ternos, em sessão do Senado, com Davi sentado em poltrona e sendo abraçado por Flávio Bolsonaro",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        2,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  2,
+                                  2,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            2,
+                            2,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      2,
+                      2
+                    ]
+                  },
+                  {
+                    "id": "9da82984",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 799,
+                      "height": 579,
+                      "locator": "079a/live/903605c0-44cd-11f1-b55d-0f258dce1735.jpg",
+                      "originCode": "cpsprodpb",
+                      "copyrightHolder": "AFP via Getty Images",
+                      "suitableForSyndication": true
+                    },
+                    "position": [
+                      2,
+                      3
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                2
+              ]
+            },
+            {
+              "id": "e551a58d",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1777620062507,
+                "lastPublished": 1777620062507
+              },
+              "position": [
+                3
+              ]
+            },
+            {
+              "id": "ec27758d",
+              "type": "byline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "23db45a3",
+                    "type": "contributor",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "d5a5152e",
+                          "type": "name",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "f6eb38be",
+                                "type": "text",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "8e36e8fb",
+                                      "type": "paragraph",
+                                      "model": {
+                                        "text": "Leandro Prazeres",
+                                        "blocks": [
+                                          {
+                                            "id": "d650719f",
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "Leandro Prazeres",
+                                              "attributes": []
+                                            },
+                                            "position": [
+                                              4,
+                                              1,
+                                              1,
+                                              1,
+                                              1,
+                                              1
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      "position": [
+                                        4,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  4,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            4,
+                            1,
+                            1
+                          ]
+                        },
+                        {
+                          "id": "28c1d635",
+                          "type": "role",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "909774c2",
+                                "type": "text",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "f02c96a2",
+                                      "type": "paragraph",
+                                      "model": {
+                                        "text": "Da BBC News Brasil em Brasília",
+                                        "blocks": [
+                                          {
+                                            "id": "0f5bb21b",
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "Da BBC News Brasil em Brasília",
+                                              "attributes": []
+                                            },
+                                            "position": [
+                                              4,
+                                              1,
+                                              2,
+                                              1,
+                                              1,
+                                              1
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      "position": [
+                                        4,
+                                        1,
+                                        2,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  4,
+                                  1,
+                                  2,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            4,
+                            1,
+                            2
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      4,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                4
+              ]
+            },
+            {
+              "id": "c25242e4",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "a1fdb143",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Couto e Teixeira avaliam que ainda não é possível afirmar que o governo tenha se tornado \"refém\" do Congresso.",
+                      "blocks": [
+                        {
+                          "id": "ca85eb80",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Couto e Teixeira avaliam que ainda não é possível afirmar que o governo tenha se tornado \"refém\" do Congresso.",
+                            "attributes": []
+                          },
+                          "position": [
+                            19,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      19,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "14eec655",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Eles explicam que ao longo do seu terceiro mandato, mesmo sem maioria consolidada, o governo Lula conseguiu aprovar projetos de seu interesse como o que criou o programa \"Pé-de-Meia\" e a reforma tributária.",
+                      "blocks": [
+                        {
+                          "id": "e5da8ce2",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Eles explicam que ao longo do seu terceiro mandato, mesmo sem maioria consolidada, o governo Lula conseguiu aprovar projetos de seu interesse como o que criou o programa \"Pé-de-Meia\" e a reforma tributária.",
+                            "attributes": []
+                          },
+                          "position": [
+                            19,
+                            2,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      19,
+                      2
+                    ]
+                  },
+                  {
+                    "id": "73e683ca",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "No caso da derrubada do veto de Lula ao PL da Dosimetria, porém, esse movimento já estaria \"precificado\".",
+                      "blocks": [
+                        {
+                          "id": "ee76186f",
+                          "type": "fragment",
+                          "model": {
+                            "text": "No caso da derrubada do veto de Lula ao PL da Dosimetria, porém, esse movimento já estaria \"precificado\".",
+                            "attributes": []
+                          },
+                          "position": [
+                            19,
+                            3,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      19,
+                      3
+                    ]
+                  },
+                  {
+                    "id": "20a3b59a",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "\"A derrubada do veto era certa. Com a composição atual do Congresso, seria muito difícil o governo reverter\", diz Cláudio Couto.",
+                      "blocks": [
+                        {
+                          "id": "9b9a6e52",
+                          "type": "fragment",
+                          "model": {
+                            "text": "\"A derrubada do veto era certa. Com a composição atual do Congresso, seria muito difícil o governo reverter\", diz Cláudio Couto.",
+                            "attributes": []
+                          },
+                          "position": [
+                            19,
+                            4,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      19,
+                      4
+                    ]
+                  },
+                  {
+                    "id": "6d3d1180",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Além disso, a votação do veto também teria contado com a ajuda de Alcolumbre, que pautou o tema logo após a votação da derrota da indicação de Messias.",
+                      "blocks": [
+                        {
+                          "id": "3e6c45f5",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Além disso, a votação do veto também teria contado com a ajuda de Alcolumbre, que pautou o tema logo após a votação da derrota da indicação de Messias.",
+                            "attributes": []
+                          },
+                          "position": [
+                            19,
+                            5,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      19,
+                      5
+                    ]
+                  },
+                  {
+                    "id": "3896df5f",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "À BBC News Brasil, o deputado Sóstenes Cavalcante afirmou que o senador deu aval para que o Congresso vote o veto de Lula de uma maneira que impedisse, pelo menos em tese, que ele atinja pontos da Lei Antifacção aprovada neste ano.",
+                      "blocks": [
+                        {
+                          "id": "eeb123b6",
+                          "type": "fragment",
+                          "model": {
+                            "text": "À BBC News Brasil, o deputado Sóstenes Cavalcante afirmou que o senador deu aval para que o Congresso vote o veto de Lula de uma maneira que impedisse, pelo menos em tese, que ele atinja pontos da Lei Antifacção aprovada neste ano.",
+                            "attributes": []
+                          },
+                          "position": [
+                            19,
+                            6,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      19,
+                      6
+                    ]
+                  },
+                  {
+                    "id": "c5374c18",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "A ala governista vinha defendendo a manutenção do veto sob o argumento de que se ele fosse derrubado e o PL da Dosimetria passasse a vigorar, isso teria como efeito a redução no tempo que condenados por outros tipos de crimes teriam de passar no regime fechado antes de progredirem para regimes mais brandos. ",
+                      "blocks": [
+                        {
+                          "id": "2569f206",
+                          "type": "fragment",
+                          "model": {
+                            "text": "A ala governista vinha defendendo a manutenção do veto sob o argumento de que se ele fosse derrubado e o PL da Dosimetria passasse a vigorar, isso teria como efeito a redução no tempo que condenados por outros tipos de crimes teriam de passar no regime fechado antes de progredirem para regimes mais brandos. ",
+                            "attributes": []
+                          },
+                          "position": [
+                            19,
+                            7,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      19,
+                      7
+                    ]
+                  },
+                  {
+                    "id": "4fe17681",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Isso aconteceria porque o PL da Dosimetria usou como base trechos da Lei de Execução Penal que foram revogados posteriormente pela Lei Antifacção.",
+                      "blocks": [
+                        {
+                          "id": "1f369b2f",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Isso aconteceria porque o PL da Dosimetria usou como base trechos da Lei de Execução Penal que foram revogados posteriormente pela Lei Antifacção.",
+                            "attributes": []
+                          },
+                          "position": [
+                            19,
+                            8,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      19,
+                      8
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                19
+              ]
+            },
+            {
+              "id": "666085d8",
+              "type": "relatedContent",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "304800df",
+                    "type": "link",
+                    "model": {
+                      "locator": "urn:bbc:optimo:asset:cwy29k5z29yo",
+                      "blocks": [
+                        {
+                          "id": "1eb48a7b",
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "7c2c34ea",
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "535f62b2",
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "id": "32223ef0",
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "Davi Alcolumbre diate do painel do Senado em sessão conjunta do Congresso que derrubou veto de Lula à dosimetria ",
+                                              "blocks": [
+                                                {
+                                                  "id": "90055f2f",
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "Davi Alcolumbre diate do painel do Senado em sessão conjunta do Congresso que derrubou veto de Lula à dosimetria ",
+                                                    "attributes": []
+                                                  },
+                                                  "position": [
+                                                    20,
+                                                    1,
+                                                    1,
+                                                    1,
+                                                    1,
+                                                    1,
+                                                    1
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            "position": [
+                                              20,
+                                              1,
+                                              1,
+                                              1,
+                                              1,
+                                              1
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      "position": [
+                                        20,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  20,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              },
+                              {
+                                "id": "67b12f20",
+                                "type": "rawImage",
+                                "model": {
+                                  "width": 3543,
+                                  "height": 1993,
+                                  "locator": "e6d0/live/a16796d0-44c6-11f1-9e0b-03e26e181ce8.jpg",
+                                  "originCode": "cpsprodpb",
+                                  "copyrightHolder": "Agência Senado"
+                                },
+                                "position": [
+                                  20,
+                                  1,
+                                  1,
+                                  2
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            20,
+                            1,
+                            1
+                          ]
+                        },
+                        {
+                          "id": "8ad77366",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "cc16445e",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Em nova derrota para o governo, Congresso derruba veto de Lula e abre caminho para redução de pena de Bolsonaro ",
+                                  "blocks": [
+                                    {
+                                      "id": "d5d9b043",
+                                      "type": "urlLink",
+                                      "model": {
+                                        "text": "Em nova derrota para o governo, Congresso derruba veto de Lula e abre caminho para redução de pena de Bolsonaro ",
+                                        "locator": "https://www.bbc.com/portuguese/articles/cwy29k5z29yo",
+                                        "blocks": [
+                                          {
+                                            "id": "e2b69bc3",
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "Em nova derrota para o governo, Congresso derruba veto de Lula e abre caminho para redução de pena de Bolsonaro ",
+                                              "attributes": []
+                                            },
+                                            "position": [
+                                              20,
+                                              1,
+                                              2,
+                                              1,
+                                              1,
+                                              1
+                                            ]
+                                          }
+                                        ],
+                                        "isExternal": false
+                                      },
+                                      "position": [
+                                        20,
+                                        1,
+                                        2,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  20,
+                                  1,
+                                  2,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            20,
+                            1,
+                            2
+                          ]
+                        },
+                        {
+                          "id": "a2de507f",
+                          "type": "aresLink",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "59d0366f",
+                                "type": "optimoLinkMetadata",
+                                "model": {
+                                  "timestamp": 1777574850000,
+                                  "consumableAsSFV": false
+                                },
+                                "position": [
+                                  20,
+                                  1,
+                                  3,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            20,
+                            1,
+                            3
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      20,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "4b5c5b99",
+                    "type": "link",
+                    "model": {
+                      "locator": "urn:bbc:optimo:asset:c5y73ljd6qdo",
+                      "blocks": [
+                        {
+                          "id": "20a54e1c",
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "334d429a",
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "f8f9d63a",
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "id": "534a1b97",
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "Jorge Messias, de terno, aparece em close, com os olhos fechados e o rosto parcialmente coberto pelas mãos enquanto segura um lenço. Ao lado, há um microfone.",
+                                              "blocks": [
+                                                {
+                                                  "id": "51e13e9b",
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "Jorge Messias, de terno, aparece em close, com os olhos fechados e o rosto parcialmente coberto pelas mãos enquanto segura um lenço. Ao lado, há um microfone.",
+                                                    "attributes": []
+                                                  },
+                                                  "position": [
+                                                    20,
+                                                    2,
+                                                    1,
+                                                    1,
+                                                    1,
+                                                    1,
+                                                    1
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            "position": [
+                                              20,
+                                              2,
+                                              1,
+                                              1,
+                                              1,
+                                              1
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      "position": [
+                                        20,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  20,
+                                  2,
+                                  1,
+                                  1
+                                ]
+                              },
+                              {
+                                "id": "f16b7712",
+                                "type": "rawImage",
+                                "model": {
+                                  "width": 3667,
+                                  "height": 2063,
+                                  "locator": "8ec9/live/d541f570-4478-11f1-b55d-0f258dce1735.jpg",
+                                  "originCode": "cpsprodpb",
+                                  "copyrightHolder": "Jorge Silva/Reuters"
+                                },
+                                "position": [
+                                  20,
+                                  2,
+                                  1,
+                                  2
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            20,
+                            2,
+                            1
+                          ]
+                        },
+                        {
+                          "id": "69c56078",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "8f4bfdc2",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "A reação das lideranças evangélicas à rejeição de Jorge Messias para o STF",
+                                  "blocks": [
+                                    {
+                                      "id": "aa975c5c",
+                                      "type": "urlLink",
+                                      "model": {
+                                        "text": "A reação das lideranças evangélicas à rejeição de Jorge Messias para o STF",
+                                        "locator": "https://www.bbc.com/portuguese/articles/c5y73ljd6qdo",
+                                        "blocks": [
+                                          {
+                                            "id": "9d4b97d3",
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "A reação das lideranças evangélicas à rejeição de Jorge Messias para o STF",
+                                              "attributes": []
+                                            },
+                                            "position": [
+                                              20,
+                                              2,
+                                              2,
+                                              1,
+                                              1,
+                                              1
+                                            ]
+                                          }
+                                        ],
+                                        "isExternal": false
+                                      },
+                                      "position": [
+                                        20,
+                                        2,
+                                        2,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  20,
+                                  2,
+                                  2,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            20,
+                            2,
+                            2
+                          ]
+                        },
+                        {
+                          "id": "e0a0eec8",
+                          "type": "aresLink",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "8fc8e298",
+                                "type": "optimoLinkMetadata",
+                                "model": {
+                                  "timestamp": 1777546985347,
+                                  "consumableAsSFV": false
+                                },
+                                "position": [
+                                  20,
+                                  2,
+                                  3,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            20,
+                            2,
+                            3
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      20,
+                      2
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                20
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "secondaryData": {
+      "mediaCuration": null,
+      "billboardCuration": null,
+      "topStories": [
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:cgmpgpllnp7o",
+            "canonicalUrl": "https://www.bbc.com/portuguese/articles/cgmpgpllnp7o"
+          },
+          "timestamp": 1777620062507,
+          "suitableForSyndication": true,
+          "language": "pt-br",
+          "headlines": {
+            "seoHeadline": "Lula derrotado em dose dupla: governo virou \"refém\" do Congresso?",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "Derrota em dose dupla: o governo Lula virou \"refém\" do Congresso?",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "Derrota em dose dupla: o governo Lula virou \"refém\" do Congresso?",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Em menos de 24 horas, o governo sofreu duas derrotas significativas, com rejeição do nome de Jorge Messias ao STF e derrubada de veto do presidente ao PL da Dosimetria.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Em menos de 24 horas, o governo sofreu duas derrotas significativas, com rejeição do nome de Jorge Messias ao STF e derrubada de veto do presidente ao PL da Dosimetria.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "serviceIdentifier": "Brasil",
+          "breakingNews": {
+            "isBreaking": false
+          },
+          "consumableAsSFV": false,
+          "id": "urn:bbc:ares::article:cgmpgpllnp7o",
+          "type": "optimo"
+        },
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:c78kd5ekjp3o",
+            "canonicalUrl": "https://www.bbc.com/portuguese/articles/c78kd5ekjp3o"
+          },
+          "timestamp": 1777642536386,
+          "suitableForSyndication": true,
+          "language": "pt-br",
+          "headlines": {
+            "seoHeadline": "Como a alta do petróleo afeta o dia a dia da economia global",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "Como a alta do petróleo afeta o dia a dia da economia global",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "Como a alta do petróleo afeta o dia a dia da economia global",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Especialistas alertam para um efeito dominó que pode se espalhar por toda a economia global.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Especialistas alertam para um efeito dominó que pode se espalhar por toda a economia global.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "serviceIdentifier": "Brasil",
+          "breakingNews": {
+            "isBreaking": false
+          },
+          "consumableAsSFV": false,
+          "id": "urn:bbc:ares::article:c78kd5ekjp3o",
+          "type": "optimo"
+        },
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:c87qxd14w02o",
+            "canonicalUrl": "https://www.bbc.com/portuguese/articles/c87qxd14w02o"
+          },
+          "timestamp": 1777644227258,
+          "suitableForSyndication": true,
+          "language": "pt-br",
+          "headlines": {
+            "seoHeadline": "Bolsonaro é internado para passar por cirurgia no ombro; entenda quadro",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "Bolsonaro é internado para passar por cirurgia no ombro; entenda quadro",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "Bolsonaro é internado para passar por cirurgia no ombro; entenda quadro",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Segundo decisão judicial, a necessidade da cirurgia foi comprovada por relatórios médicos que apontam dores recorrentes e intermitentes no ombro.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Segundo decisão judicial, a necessidade da cirurgia foi comprovada por relatórios médicos que apontam dores recorrentes e intermitentes no ombro.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "serviceIdentifier": "Brasil",
+          "breakingNews": {
+            "isBreaking": false
+          },
+          "consumableAsSFV": false,
+          "id": "urn:bbc:ares::article:c87qxd14w02o",
+          "type": "optimo"
+        }
+      ],
+      "features": [
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:c5y73ljd6qdo",
+            "canonicalUrl": "https://www.bbc.com/portuguese/articles/c5y73ljd6qdo"
+          },
+          "timestamp": 1777546985347,
+          "suitableForSyndication": true,
+          "language": "pt-br",
+          "headlines": {
+            "seoHeadline": "Senado rejeita Jorge Messias no STF: a reação das lideranças evangélicas à votação",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "A reação das lideranças evangélicas à rejeição de Jorge Messias para o STF",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "A reação das lideranças evangélicas à rejeição de Jorge Messias para o STF",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "caption",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Jorge Messias chora após ter seu nome rejeitado para o STF pelo plenário do Senado",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Jorge Messias chora após ter seu nome rejeitado para o STF pelo plenário do Senado",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Jorge Messias, de terno, aparece em close, com os olhos fechados e o rosto parcialmente coberto pelas mãos enquanto segura um lenço. Ao lado, há um microfone.",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Jorge Messias, de terno, aparece em close, com os olhos fechados e o rosto parcialmente coberto pelas mãos enquanto segura um lenço. Ao lado, há um microfone.",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 3667,
+                    "height": 2063,
+                    "locator": "8ec9/live/d541f570-4478-11f1-b55d-0f258dce1735.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "Jorge Silva/Reuters",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Indicado de Lula, que disse ser um 'servo de Deus', tinha mais apoio fora do eixo político em Brasília e encontrou resistência no Senado mesmo entre os parlamentares religiosos.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Indicado de Lula, que disse ser um 'servo de Deus', tinha mais apoio fora do eixo político em Brasília e encontrou resistência no Senado mesmo entre os parlamentares religiosos.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "byline": {
+            "blocks": [
+              {
+                "type": "contributor",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "name",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "BBC News Brasil em Londres",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "BBC News Brasil em Londres",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "role",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "serviceIdentifier": "Brasil",
+          "breakingNews": {
+            "isBreaking": false
+          },
+          "consumableAsSFV": false,
+          "id": "urn:bbc:ares::article:c5y73ljd6qdo",
+          "type": "optimo"
+        },
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:c5ye0gk6pk2o",
+            "canonicalUrl": "https://www.bbc.com/portuguese/articles/c5ye0gk6pk2o"
+          },
+          "timestamp": 1777510438821,
+          "suitableForSyndication": true,
+          "language": "pt-br",
+          "headlines": {
+            "seoHeadline": "Messias rejeitado no Senado: o que explica derrota histórica de Lula ",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "O que explica derrota histórica de Lula no Senado (e qual recado envia ao STF)",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "O que explica derrota histórica de Lula no Senado (e qual recado envia ao STF)",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Jorge Messias enxuga o rosto, cobrindo sua face com as duas mãos",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Jorge Messias enxuga o rosto, cobrindo sua face com as duas mãos",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 2817,
+                    "height": 1585,
+                    "locator": "e37a/live/b82ce060-442a-11f1-84a0-55946b952877.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "EPA/Shutterstock",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Para analistas ouvidos pela BBC News Brasil, parlamentares rejeitaram indicado por sua proximidade com presidente e deram também recado ao STF, mas decisão deve ter impacto eleitoral limitado",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Para analistas ouvidos pela BBC News Brasil, parlamentares rejeitaram indicado por sua proximidade com presidente e deram também recado ao STF, mas decisão deve ter impacto eleitoral limitado",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "byline": {
+            "blocks": [
+              {
+                "type": "contributor",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "name",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Mariana Schreiber",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Mariana Schreiber",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "role",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Da BBC News Brasil em Brasília",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Da BBC News Brasil em Brasília",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "serviceIdentifier": "Brasil",
+          "breakingNews": {
+            "isBreaking": false
+          },
+          "consumableAsSFV": false,
+          "id": "urn:bbc:ares::article:c5ye0gk6pk2o",
+          "type": "optimo"
+        },
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:c142882ggzjo",
+            "canonicalUrl": "https://www.bbc.com/portuguese/articles/c142882ggzjo"
+          },
+          "timestamp": 1777503236908,
+          "suitableForSyndication": true,
+          "language": "pt-br",
+          "headlines": {
+            "seoHeadline": "'Temos que aceitar': o que Messias disse durante sabatina e após rejeição no Senado para o STF ",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "'Temos que aceitar': o que Messias disse durante sabatina no Senado e após rejeição de seu nome ao STF ",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "'Temos que aceitar': o que Messias disse durante sabatina no Senado e após rejeição de seu nome ao STF ",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Jorge Messias na sabatina do Senado",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Jorge Messias na sabatina do Senado",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 799,
+                    "height": 449,
+                    "locator": "ba59/live/b8070120-43e3-11f1-ab33-71d613cbf6ef.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "Agência Senado",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Advogado-geral da União se apresentou como 'servo de Deus', defendeu o Estado laico, disse ser contra o aborto além do que já está previsto em lei e comentou sobre as prisões do 8 de Janeiro.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Advogado-geral da União se apresentou como 'servo de Deus', defendeu o Estado laico, disse ser contra o aborto além do que já está previsto em lei e comentou sobre as prisões do 8 de Janeiro.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "serviceIdentifier": "Brasil",
+          "breakingNews": {
+            "isBreaking": false
+          },
+          "consumableAsSFV": false,
+          "id": "urn:bbc:ares::article:c142882ggzjo",
+          "type": "optimo"
+        },
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:c4g059w2d9qo",
+            "canonicalUrl": "https://www.bbc.com/portuguese/articles/c4g059w2d9qo"
+          },
+          "timestamp": 1777510565139,
+          "suitableForSyndication": true,
+          "language": "pt-br",
+          "headlines": {
+            "seoHeadline": "Messias rejeitado no STF: Antes de Lula, quem foi último presidente a ter indicado barrado pelo Senado",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "Antes de Lula, quem foi o último presidente a ter indicado ao STF barrado pelo Senado",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "Antes de Lula, quem foi o último presidente a ter indicado ao STF barrado pelo Senado",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "caption",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Floriano Peixoto teve 5 indicações rejeitadas",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Floriano Peixoto teve 5 indicações rejeitadas",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Floriano Peixoto teve 5 indicações rejeitadas",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Floriano Peixoto teve 5 indicações rejeitadas",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 375,
+                    "height": 211,
+                    "locator": "3eaa/live/28c5b7f0-441e-11f1-9b96-3d83a97d8801.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "Arquivo Histórico do Itamaraty",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Todos os casos de rejeição até Jorge Messias haviam sido durante a gestão do presidente Floriano Peixoto (1839-1895), que governou o país de 1891 a 1894.\n",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Todos os casos de rejeição até Jorge Messias haviam sido durante a gestão do presidente Floriano Peixoto (1839-1895), que governou o país de 1891 a 1894.\n",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "byline": {
+            "blocks": [
+              {
+                "type": "contributor",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "name",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Edison Veiga",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Edison Veiga",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "role",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "De Bled (Eslovênia) para a BBC News Brasil",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "De Bled (Eslovênia) para a BBC News Brasil",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "serviceIdentifier": "Brasil",
+          "breakingNews": {
+            "isBreaking": false
+          },
+          "consumableAsSFV": false,
+          "id": "urn:bbc:ares::article:c4g059w2d9qo",
+          "type": "optimo"
+        },
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:c202mex8yz2o",
+            "canonicalUrl": "https://www.bbc.com/portuguese/articles/c202mex8yz2o"
+          },
+          "timestamp": 1777540883149,
+          "suitableForSyndication": true,
+          "language": "pt-br",
+          "headlines": {
+            "seoHeadline": "Antissemitismo: a série de ataques que fez Reino Unido declarar 'emergência de segurança nacional'",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "A série de ataques que fez Reino Unido classificar antissemitismo como 'emergência de segurança nacional'",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "A série de ataques que fez Reino Unido classificar antissemitismo como 'emergência de segurança nacional'",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "caption",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "A composite image of police officers arresting a man and CCTV footage of a man lunging at another man",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "A composite image of police officers arresting a man and CCTV footage of a man lunging at another man",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 1920,
+                    "height": 1080,
+                    "locator": "124a/live/a84a22d0-43f7-11f1-a314-cde9f81d6d3e.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "UGC",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Na quarta-feira, um homem de 45 anos foi preso suspeito de um ataque com faca no norte de Londres.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Na quarta-feira, um homem de 45 anos foi preso suspeito de um ataque com faca no norte de Londres.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "byline": {
+            "blocks": [
+              {
+                "type": "contributor",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "name",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Anna Lamche",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Anna Lamche",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "role",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "contributor",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "name",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Gabriela Pomeroy",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Gabriela Pomeroy",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "role",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "serviceIdentifier": "Brasil",
+          "breakingNews": {
+            "isBreaking": false
+          },
+          "consumableAsSFV": false,
+          "id": "urn:bbc:ares::article:c202mex8yz2o",
+          "type": "optimo"
+        },
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:cj94dmk9e92o",
+            "canonicalUrl": "https://www.bbc.com/portuguese/articles/cj94dmk9e92o"
+          },
+          "timestamp": 1777485581744,
+          "suitableForSyndication": true,
+          "language": "pt-br",
+          "headlines": {
+            "seoHeadline": "'Língua dos anjos': a fervorosa maneira como pentecostais oram",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "'Língua dos anjos': a fervorosa maneira como pentecostais oram",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "'Língua dos anjos': a fervorosa maneira como pentecostais oram",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "caption",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Imagem",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Imagem",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 833,
+                    "height": 469,
+                    "locator": "c181/live/2698c270-43f5-11f1-aff3-751a52cf329b.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "Domínio Público",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "No geral, entende-se a  glossolalia como uma consequência de uma conversão genuína em que a pessoa recebe o próprio Deus em sua forma espiritual e assume uma mudança radical de vida, a serviço de um propósito sagrado.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "No geral, entende-se a  glossolalia como uma consequência de uma conversão genuína em que a pessoa recebe o próprio Deus em sua forma espiritual e assume uma mudança radical de vida, a serviço de um propósito sagrado.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "byline": {
+            "blocks": [
+              {
+                "type": "contributor",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "name",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "  Edison Veiga",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "  Edison Veiga",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "role",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "De Bled (Eslovênia) para a BBC News Brasil",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "De Bled (Eslovênia) para a BBC News Brasil",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "serviceIdentifier": "Brasil",
+          "breakingNews": {
+            "isBreaking": false
+          },
+          "consumableAsSFV": false,
+          "id": "urn:bbc:ares::article:cj94dmk9e92o",
+          "type": "optimo"
+        },
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:cglp2z419ndo",
+            "canonicalUrl": "https://www.bbc.com/portuguese/articles/cglp2z419ndo"
+          },
+          "timestamp": 1777583061924,
+          "suitableForSyndication": true,
+          "language": "pt-br",
+          "headlines": {
+            "seoHeadline": "Voto no exterior: como quem mora fora do Brasil pode regularizar o título até 6 de maio para votar nas eleições de 2026",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "Voto no exterior: como regularizar o título até 6 de maio para votar nas eleições de 2026",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "Voto no exterior: como regularizar o título até 6 de maio para votar nas eleições de 2026",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "título eleitoral",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "título eleitoral",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 2121,
+                    "height": 1193,
+                    "locator": "b963/live/c87d4770-42ea-11f1-9516-81393c122a1a.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "Getty Images",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "O prazo para tirar, transferir ou regularizar o título de eleitor termina em 6 de maio",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "O prazo para tirar, transferir ou regularizar o título de eleitor termina em 6 de maio",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "serviceIdentifier": "Brasil",
+          "breakingNews": {
+            "isBreaking": false
+          },
+          "consumableAsSFV": false,
+          "id": "urn:bbc:ares::article:cglp2z419ndo",
+          "type": "optimo"
+        },
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:cg5p8m5pjyjo",
+            "canonicalUrl": "https://www.bbc.com/portuguese/articles/cg5p8m5pjyjo"
+          },
+          "timestamp": 1777488460034,
+          "suitableForSyndication": true,
+          "language": "pt-br",
+          "headlines": {
+            "seoHeadline": "Os países onde as pessoas mais odeiam receber áudios do WhatsApp",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "Os países onde as pessoas mais odeiam receber áudios do WhatsApp",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "Os países onde as pessoas mais odeiam receber áudios do WhatsApp",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "caption",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Entre os mais ávidos defensores das mensagens de voz, estão os mexicanos",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Entre os mais ávidos defensores das mensagens de voz, estão os mexicanos",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Mulher no meio da rua, enviando uma mensagem de voz, sorrindo e com o celular na mão",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Mulher no meio da rua, enviando uma mensagem de voz, sorrindo e com o celular na mão",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 2113,
+                    "height": 1188,
+                    "locator": "c4e5/live/2dcac440-42f5-11f1-9516-81393c122a1a.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "Getty Images",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "A diáspora e a cultura de cada local são alguns dos motivos destacados pelos especialistas para explicar por que as mensagens de voz são mais populares em alguns países do que em outros.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "A diáspora e a cultura de cada local são alguns dos motivos destacados pelos especialistas para explicar por que as mensagens de voz são mais populares em alguns países do que em outros.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "byline": {
+            "blocks": [
+              {
+                "type": "contributor",
+                "model": {
+                  "thingUri": "http://www.bbc.co.uk/things/74af4d2f-866f-46c8-b3a4-db4293cde980#id",
+                  "blocks": [
+                    {
+                      "type": "name",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Ashitha Nagesh",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Ashitha Nagesh",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "role",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "BBC News",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "BBC News",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "serviceIdentifier": "Brasil",
+          "breakingNews": {
+            "isBreaking": false
+          },
+          "consumableAsSFV": false,
+          "id": "urn:bbc:ares::article:cg5p8m5pjyjo",
+          "type": "optimo"
+        },
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:cx2e38yn525o",
+            "canonicalUrl": "https://www.bbc.com/portuguese/articles/cx2e38yn525o"
+          },
+          "timestamp": 1777367196664,
+          "suitableForSyndication": true,
+          "language": "pt-br",
+          "headlines": {
+            "seoHeadline": "A gaúcha que mudou de país por trauma com enchente histórica",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "A gaúcha que mudou de país após trauma com enchente histórica",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "A gaúcha que mudou de país após trauma com enchente histórica",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "caption",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Renata de Brito mora há quase dois anos no Paraguai",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Renata de Brito mora há quase dois anos no Paraguai",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Renata, de camisa laranja, aparece de perfil sorrindo",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Renata, de camisa laranja, aparece de perfil sorrindo",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 1920,
+                    "height": 1080,
+                    "locator": "05b6/live/38a5a860-4009-11f1-ac78-2112837ce2aa.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "Fernando Otto/BBC",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Renata viu seu sítio ser afetado pelas cheias no Rio Grande do Sul. Angustiada a cada nova chuva, decidiu se mudar para cidade paraguaia onde sente estar mais segura. ",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Renata viu seu sítio ser afetado pelas cheias no Rio Grande do Sul. Angustiada a cada nova chuva, decidiu se mudar para cidade paraguaia onde sente estar mais segura. ",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "byline": {
+            "blocks": [
+              {
+                "type": "contributor",
+                "model": {
+                  "thingUri": "http://www.bbc.co.uk/things/e41b3887-255d-4820-98a3-4377b6d9e2df#id",
+                  "blocks": [
+                    {
+                      "type": "name",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Vitor Tavares e Fernando Otto",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Vitor Tavares e Fernando Otto",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "role",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Enviados da BBC News Brasil a Ciudad del Este, Paraguai",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Enviados da BBC News Brasil a Ciudad del Este, Paraguai",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "serviceIdentifier": "Brasil",
+          "breakingNews": {
+            "isBreaking": false
+          },
+          "consumableAsSFV": false,
+          "id": "urn:bbc:ares::article:cx2e38yn525o",
+          "type": "optimo"
+        }
+      ],
+      "mostRead": {
+        "generated": "2026-05-01T15:03:25.018329998Z",
+        "lastRecordTimeStamp": "2026-05-01T15:01:00Z",
+        "firstRecordTimeStamp": "2026-05-01T14:46:00Z",
+        "items": [
+          {
+            "id": "urn:bbc:optimo:asset:cn0pd2kl8j1o",
+            "rank": 1,
+            "title": "Banksy revela mistério de estátua que apareceu de um dia para o outro no centro de Londres",
+            "href": "https://www.bbc.com/portuguese/articles/cn0pd2kl8j1o",
+            "timestamp": "2026-05-01T08:45:47.696Z",
+            "images": {
+              "defaultPromoImage": {
+                "blocks": [
+                  {
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "A estátua apareceu em um pedestal em Waterloo Place na quarta-feira",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "A estátua apareceu em um pedestal em Waterloo Place na quarta-feira",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Uma estátua cinza de um homem vestindo um terno, caminhando para frente, carregando uma bandeira que cobre seu rosto\n\n",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Uma estátua cinza de um homem vestindo um terno, caminhando para frente, carregando uma bandeira que cobre seu rosto\n\n",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "rawImage",
+                    "model": {
+                      "width": 1920,
+                      "height": 1080,
+                      "locator": "e523/live/fff53410-449d-11f1-9b4f-919a6264e39f.jpg",
+                      "originCode": "cpsprodpb",
+                      "copyrightHolder": "Getty Images",
+                      "suitableForSyndication": true
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "urn:bbc:optimo:asset:c8e8r0kj725o",
+            "rank": 2,
+            "title": "O bilionário indiano que se oferece para salvar os 80 hipopótamos de Pablo Escobar condenados à eutanásia na Colômbia",
+            "href": "https://www.bbc.com/portuguese/articles/c8e8r0kj725o",
+            "timestamp": "2026-04-29T10:33:19.343Z",
+            "images": {
+              "defaultPromoImage": {
+                "blocks": [
+                  {
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Anant Ambani com sua esposa. Ele é filho do bilionário Mukesh Ambani, considerado o homem mais rico da Ásia.",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Anant Ambani com sua esposa. Ele é filho do bilionário Mukesh Ambani, considerado o homem mais rico da Ásia.",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Anant Ambani com sua esposa, usando roupas tradicionais indianas",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Anant Ambani com sua esposa, usando roupas tradicionais indianas",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "rawImage",
+                    "model": {
+                      "width": 820,
+                      "height": 461,
+                      "locator": "2918/live/a09328c0-4366-11f1-bc45-0574403f50fd.jpg",
+                      "originCode": "cpsprodpb",
+                      "copyrightHolder": "Getty Images",
+                      "suitableForSyndication": true
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "urn:bbc:optimo:asset:cdrpdd628gzo",
+            "rank": 3,
+            "title": "O que muda para o Brasil com o acordo UE-Mercosul em vigor",
+            "href": "https://www.bbc.com/portuguese/articles/cdrpdd628gzo",
+            "timestamp": "2026-05-01T13:06:06.946Z",
+            "images": {
+              "defaultPromoImage": {
+                "blocks": [
+                  {
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "campo de plantação com máquinas para colheita",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "campo de plantação com máquinas para colheita",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "rawImage",
+                    "model": {
+                      "width": 2309,
+                      "height": 1299,
+                      "locator": "1fc1/live/99903fa0-454a-11f1-ac78-2112837ce2aa.jpg",
+                      "originCode": "cpsprodpb",
+                      "copyrightHolder": "Getty Images",
+                      "suitableForSyndication": true
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "urn:bbc:optimo:asset:c5y73ljd6qdo",
+            "rank": 4,
+            "title": "A reação das lideranças evangélicas à rejeição de Jorge Messias para o STF",
+            "href": "https://www.bbc.com/portuguese/articles/c5y73ljd6qdo",
+            "timestamp": "2026-04-30T11:03:05.347Z",
+            "images": {
+              "defaultPromoImage": {
+                "blocks": [
+                  {
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Jorge Messias chora após ter seu nome rejeitado para o STF pelo plenário do Senado",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Jorge Messias chora após ter seu nome rejeitado para o STF pelo plenário do Senado",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Jorge Messias, de terno, aparece em close, com os olhos fechados e o rosto parcialmente coberto pelas mãos enquanto segura um lenço. Ao lado, há um microfone.",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Jorge Messias, de terno, aparece em close, com os olhos fechados e o rosto parcialmente coberto pelas mãos enquanto segura um lenço. Ao lado, há um microfone.",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "rawImage",
+                    "model": {
+                      "width": 3667,
+                      "height": 2063,
+                      "locator": "8ec9/live/d541f570-4478-11f1-b55d-0f258dce1735.jpg",
+                      "originCode": "cpsprodpb",
+                      "copyrightHolder": "Jorge Silva/Reuters",
+                      "suitableForSyndication": true
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "urn:bbc:optimo:asset:cj407y5qprqo",
+            "rank": 5,
+            "title": "Qual é o melhor aeroporto do mundo (e por que é considerado um paraíso por quem viaja)",
+            "href": "https://www.bbc.com/portuguese/articles/cj407y5qprqo",
+            "timestamp": "2026-04-28T18:29:11.571Z",
+            "images": {
+              "defaultPromoImage": {
+                "blocks": [
+                  {
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Entrada e passarela que levam ao aeroporto Changi, em Singapura",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Entrada e passarela que levam ao aeroporto Changi, em Singapura",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "rawImage",
+                    "model": {
+                      "width": 1024,
+                      "height": 576,
+                      "locator": "de79/live/52a39c40-3f00-11f1-b55d-0f258dce1735.jpg",
+                      "originCode": "cpsprodpb",
+                      "copyrightHolder": "Getty Images",
+                      "suitableForSyndication": true
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "urn:bbc:optimo:asset:c5yvnpe3617o",
+            "rank": 6,
+            "title": "'O massacre dos idosos': como doença do filho de chefe de facção no Haiti levou à maior chacina do século nas Américas",
+            "href": "https://www.bbc.com/portuguese/articles/c5yvnpe3617o",
+            "timestamp": "2026-04-27T21:37:45.956Z",
+            "images": {
+              "defaultPromoImage": {
+                "blocks": [
+                  {
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Mulheres choram no enterro coletivo de oito vítimas de um ataque com drone. O alvo era um suposto chefe de quadrilha de Porto Príncipe, no Haiti, mas o ataque tirou a vida de 11 civis no dia 20 de setembro de 2025",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Mulheres choram no enterro coletivo de oito vítimas de um ataque com drone. O alvo era um suposto chefe de quadrilha de Porto Príncipe, no Haiti, mas o ataque tirou a vida de 11 civis no dia 20 de setembro de 2025",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Mulheres choram sobre um caixão durante o enterro coletivo de oito pessoas mortas em um ataque com drones em Porto Príncipe, no Haiti, em 4 de outubro de 2025. O alvo dos drones era o suposto líder de uma gangue criminosa em um bairro de Porto Príncipe e acabou matando 11 civis no dia 20 de setembro daquele ano",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Mulheres choram sobre um caixão durante o enterro coletivo de oito pessoas mortas em um ataque com drones em Porto Príncipe, no Haiti, em 4 de outubro de 2025. O alvo dos drones era o suposto líder de uma gangue criminosa em um bairro de Porto Príncipe e acabou matando 11 civis no dia 20 de setembro daquele ano",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "rawImage",
+                    "model": {
+                      "width": 1164,
+                      "height": 655,
+                      "locator": "6864/live/017c7f50-3f17-11f1-80a9-03674e4a073c.png",
+                      "originCode": "cpsprodpb",
+                      "copyrightHolder": "CLARENS SIFFROY",
+                      "suitableForSyndication": true
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "urn:bbc:optimo:asset:cx21kz57e8po",
+            "rank": 7,
+            "title": "Novo Desenrola Brasil terá FGTS, desconto de até 90% e bloqueio de bets: o que Lula anunciou",
+            "href": "https://www.bbc.com/portuguese/articles/cx21kz57e8po",
+            "timestamp": "2026-05-01T01:46:38.852Z",
+            "images": {
+              "defaultPromoImage": {
+                "blocks": [
+                  {
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Lula durante pronunciamento.",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Lula durante pronunciamento.",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "rawImage",
+                    "model": {
+                      "width": 786,
+                      "height": 442,
+                      "locator": "b1fa/live/68c76e60-44f6-11f1-b31a-1d206af1842d.png",
+                      "originCode": "cpsprodpb",
+                      "copyrightHolder": "Reprodução/CanalGov",
+                      "suitableForSyndication": true
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "urn:bbc:optimo:asset:cj94dmk9e92o",
+            "rank": 8,
+            "title": "'Língua dos anjos': a fervorosa maneira como pentecostais oram",
+            "href": "https://www.bbc.com/portuguese/articles/cj94dmk9e92o",
+            "timestamp": "2026-04-29T17:59:41.744Z",
+            "images": {
+              "defaultPromoImage": {
+                "blocks": [
+                  {
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Imagem",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Imagem",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "rawImage",
+                    "model": {
+                      "width": 833,
+                      "height": 469,
+                      "locator": "c181/live/2698c270-43f5-11f1-aff3-751a52cf329b.jpg",
+                      "originCode": "cpsprodpb",
+                      "copyrightHolder": "Domínio Público",
+                      "suitableForSyndication": true
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "urn:bbc:optimo:asset:cgmpgpllnp7o",
+            "rank": 9,
+            "title": "Derrota em dose dupla: o governo Lula virou \"refém\" do Congresso?",
+            "href": "https://www.bbc.com/portuguese/articles/cgmpgpllnp7o",
+            "timestamp": "2026-05-01T07:21:02.507Z",
+            "images": {
+              "defaultPromoImage": {
+                "blocks": [
+                  {
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Davi Alcolumbre e o senador Flávio Bolsonaro durante votação que derrubou veto do PL da Dosimetria",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Davi Alcolumbre e o senador Flávio Bolsonaro durante votação que derrubou veto do PL da Dosimetria",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Davi Alcolumbre e Flávio Bolsonaro usando ternos, em sessão do Senado, com Davi sentado em poltrona e sendo abraçado por Flávio Bolsonaro",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Davi Alcolumbre e Flávio Bolsonaro usando ternos, em sessão do Senado, com Davi sentado em poltrona e sendo abraçado por Flávio Bolsonaro",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "rawImage",
+                    "model": {
+                      "width": 799,
+                      "height": 579,
+                      "locator": "079a/live/903605c0-44cd-11f1-b55d-0f258dce1735.jpg",
+                      "originCode": "cpsprodpb",
+                      "copyrightHolder": "AFP via Getty Images",
+                      "suitableForSyndication": true
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "urn:bbc:optimo:asset:cx2e2zn8xwzo",
+            "rank": 10,
+            "title": "Como zonas proibidas de Chernobyl e entre as Coreias se tornaram paraíso da vida selvagem",
+            "href": "https://www.bbc.com/portuguese/articles/cx2e2zn8xwzo",
+            "timestamp": "2026-04-27T17:14:01.068Z",
+            "images": {
+              "defaultPromoImage": {
+                "blocks": [
+                  {
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Primeiro plano de um lobo olhando fixamente para a câmera, com as ruínas de uma casa de madeira ao fundo.",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Primeiro plano de um lobo olhando fixamente para a câmera, com as ruínas de uma casa de madeira ao fundo.",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "rawImage",
+                    "model": {
+                      "width": 3138,
+                      "height": 2248,
+                      "locator": "fe74/live/4d7b8300-3f36-11f1-bd52-e755d604ece4.jpg",
+                      "originCode": "cpsprodpb",
+                      "copyrightHolder": "Vasily Fedosenko/Reuters",
+                      "suitableForSyndication": true
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}

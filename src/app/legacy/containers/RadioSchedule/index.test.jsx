@@ -1,4 +1,3 @@
-import React from 'react';
 import podcastProgramme from '#data/gahuza/bbc_gahuza_radio/p07yh8hb.json';
 import {
   render,
@@ -7,10 +6,6 @@ import {
 import RadioSchedulesWithContext from './utilities/testHelpers';
 
 describe('RadioScheduleData', () => {
-  afterEach(() => {
-    fetch.resetMocks();
-  });
-
   it('does not render when radio schedule toggle is disabled', async () => {
     const { radioScheduleData } = podcastProgramme.data;
     const { container } = render(

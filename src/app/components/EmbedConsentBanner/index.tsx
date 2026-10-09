@@ -1,4 +1,5 @@
-import React, { useState, PropsWithChildren, type JSX } from 'react';
+import { type JSX } from 'react';
+import { useState, PropsWithChildren } from 'react';
 import ConsentBanner from './ConsentBanner';
 
 import { SocialEmbedProviders } from '../../models/types/global';

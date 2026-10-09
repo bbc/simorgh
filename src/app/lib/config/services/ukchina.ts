@@ -12,7 +12,6 @@ const baseServiceConfig = {
   atiAnalyticsAppName: 'news-ukchina',
   atiAnalyticsProducerId: '93',
   atiAnalyticsProducerName: 'UK_CHINA',
-  useReverb: true,
   chartbeatDomain: 'ukchina.bbc.co.uk',
   brandName: 'BBC 英伦网',
   product: 'BBC',
@@ -41,7 +40,7 @@ export const service: ChineseConfig = {
     externalLinkText: ', 外部',
     homePageTitle: '主页',
     lang: `zh-hans`,
-    locale: `zh-hans`,
+    locale: `zh-Hans`,
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
     isoLang: 'zh-Hans',
     defaultCaptionOffscreenText: '说明文字, ',
@@ -127,10 +126,21 @@ export const service: ChineseConfig = {
       home: '主页',
       currentPage: '目前页面',
       skipLinkText: '跳过此内容',
+      skipContent: {
+        text: '跳过%title%并继续',
+        endTextVisuallyHidden: '%title%结束',
+      },
       relatedContent: '更多相关内容',
       relatedTopics: '相关主题内容',
       moreOnThis: '',
       navMenuText: '分类',
+      liteSite: {
+        onboardingMessage:
+          '您正在浏览本网站数据用量较少的纯文字版本。查看包含所有图片和视频的网站主版本。',
+        toMainSite: '带我去主网站',
+        informationPage: '了解更多关于这个省流量版本的信息',
+        dataSaving: '省流量版本',
+      },
       mediaAssetPage: {
         mediaPlayer: '多媒体播放器',
         audioPlayer: '音频播放器',
@@ -313,7 +323,7 @@ export const service: ChineseConfig = {
   trad: {
     ...baseServiceConfig,
     lang: `zh-hant`,
-    locale: `zh-hant`,
+    locale: `zh-Hant`,
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
     isoLang: 'zh-Hant',
     externalLinkText: ', 外部',
@@ -398,9 +408,20 @@ export const service: ChineseConfig = {
       home: '主頁',
       currentPage: '目前頁面',
       skipLinkText: '跳過此內容',
+      skipContent: {
+        text: '跳過%title%並繼續',
+        endTextVisuallyHidden: '%title%結束',
+      },
       relatedContent: '更多相關內容',
       relatedTopics: '相關主題內容',
       navMenuText: '分類',
+      liteSite: {
+        onboardingMessage:
+          '您正在瀏覽本網站數據用量較少的純文字版本。查看包含所有圖片和影片的網站主版本。',
+        toMainSite: '帶我去主網站',
+        informationPage: '了解更多關於這個省流量版本的資訊',
+        dataSaving: '省流量版本',
+      },
       mediaAssetPage: {
         mediaPlayer: '多媒體播放器',
         audioPlayer: '音頻播放器',

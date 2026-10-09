@@ -4,13 +4,16 @@ import {
   twoPixelFocusIndicatorThickness,
   twoPixelFocusIndicatorStyle,
 } from '#app/components/ThemeProvider/focusIndicator';
-import { calculatePromoWidth, PROMO_ITEM_WIDTH_MIN } from '../utils/styleUtils';
+import {
+  calculatePromoWidth,
+  PROMO_ITEM_WIDTH_MIN,
+  getContainerQuery,
+} from '../utils/styleUtils';
 
 const styles = {
-  container: ({ mq, spacings }: Theme) =>
+  container: ({ mq, spacings, gridWidths }: Theme) =>
     css({
       all: 'unset',
-      scrollSnapAlign: 'start',
       textDecoration: 'none',
       display: 'block',
       position: 'relative',
@@ -42,18 +45,22 @@ const styles = {
         },
       },
       [mq.GROUP_4_MIN_WIDTH]: {
-        flexBasis: calculatePromoWidth({
-          fitForNItems: 4,
-          gapWidth: spacings.DOUBLE,
-          navButtonAffordance: true,
-        }),
+        [getContainerQuery(gridWidths[900])]: {
+          flexBasis: calculatePromoWidth({
+            fitForNItems: 4,
+            gapWidth: spacings.DOUBLE,
+            navButtonAffordance: true,
+          }),
+        },
       },
       [mq.GROUP_5_MIN_WIDTH]: {
-        flexBasis: calculatePromoWidth({
-          fitForNItems: 5,
-          gapWidth: spacings.DOUBLE,
-          navButtonAffordance: true,
-        }),
+        [getContainerQuery(gridWidths[1008])]: {
+          flexBasis: calculatePromoWidth({
+            fitForNItems: 5,
+            gapWidth: spacings.DOUBLE,
+            navButtonAffordance: true,
+          }),
+        },
       },
     }),
   button: ({ palette }: Theme) =>
@@ -102,13 +109,6 @@ const styles = {
       fill: 'currentcolor',
       width: `${pixelsToRem(12)}rem`,
       height: `${pixelsToRem(12)}rem`,
-    }),
-  // EXPERIMENT: Portrait Video Homepage Play Duration Sizing
-  playIconLarge: () =>
-    css({
-      fill: 'currentcolor',
-      width: `${pixelsToRem(15)}rem`,
-      height: `${pixelsToRem(15)}rem`,
     }),
   duration: ({ palette, spacings }: Theme) =>
     css({

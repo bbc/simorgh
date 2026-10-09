@@ -1,0 +1,1347 @@
+{
+  "data": {
+    "article": {
+      "metadata": {
+        "atiAnalytics": {
+          "categoryName": "Gujarat~Monsoon~Severe+weather~Bay+of+Bengal",
+          "contentId": "urn:bbc:optimo:asset:cx2zevlw204o",
+          "contentType": "article-sfv",
+          "language": "gu",
+          "ldpThingIds": "4317a084-9a75-42ad-bf1c-2f13ed498cc1~87822184-803f-421f-8037-13dec3dd235c~9b16a6c2-7c16-42b7-bff7-6549579622e8~bb3b401b-19f4-4bff-a824-4144c483d5a6",
+          "ldpThingLabels": "Gujarat~Monsoon~Severe+weather~Bay+of+Bengal",
+          "nationsProducer": null,
+          "pageIdentifier": "gujarati.articles.cx2zevlw204o.page",
+          "pageTitle": "Gujarat Weather : બંગાળની ખાડીની સિસ્ટમ આગળ વધી, ગુજરાતમાં વરસાદ વધશે?",
+          "timePublished": "2026-08-25T07:37:03.271Z",
+          "timeUpdated": "2026-08-25T07:37:03.271Z",
+          "readTimeMilliseconds": 60000
+        },
+        "id": "urn:bbc:ares::article:cx2zevlw204o",
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:cx2zevlw204o",
+          "canonicalUrl": "https://www.bbc.com/gujarati/articles/cx2zevlw204o"
+        },
+        "type": "article",
+        "createdBy": "Gujarati",
+        "language": "gu",
+        "firstPublished": 1787643423271,
+        "lastPublished": 1787643423271,
+        "isOppm": false,
+        "options": { "includeComments": false },
+        "analyticsLabels": {
+          "ldp_tags": "Gujarat~Monsoon~Severe+weather~Bay+of+Bengal",
+          "page": "gujarati.articles.cx2zevlw204o.page",
+          "irisKeyword": null,
+          "audience_motivation": "Update me~Keep me on trend",
+          "ldp_ids": "4317a084-9a75-42ad-bf1c-2f13ed498cc1~87822184-803f-421f-8037-13dec3dd235c~9b16a6c2-7c16-42b7-bff7-6549579622e8~bb3b401b-19f4-4bff-a824-4144c483d5a6",
+          "contentId": "urn:bbc:optimo:asset:cx2zevlw204o",
+          "producer": "Gujarati"
+        },
+        "passport": {
+          "language": "gu",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Gujarati",
+          "taggings": [
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+              "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+              "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+              "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+              "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+              "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/87822184-803f-421f-8037-13dec3dd235c#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/9b16a6c2-7c16-42b7-bff7-6549579622e8#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/bb3b401b-19f4-4bff-a824-4144c483d5a6#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/4317a084-9a75-42ad-bf1c-2f13ed498cc1#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+              "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+              "value": "http://www.bbc.co.uk/things/e2c286b3-665d-4806-87f5-c8b005938ba4#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/dateFirstReleased",
+              "value": "2026-08-25T07:37:03.271Z"
+            }
+          ],
+          "predicates": {
+            "assetType": [
+              {
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                "type": "assetType"
+              }
+            ],
+            "primaryMediaType": [
+              {
+                "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                "type": "primaryMediaType"
+              }
+            ],
+            "dateFirstReleased": [
+              {
+                "value": "2026-08-25T07:37:03.271Z",
+                "type": "dateFirstReleased"
+              }
+            ],
+            "infoClass": [
+              {
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                "type": "infoClass"
+              }
+            ],
+            "formats": [
+              {
+                "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                "thingLabel": "News report",
+                "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                "thingType": ["tagging:TagConcept", "tagging:Format"],
+                "thingSameAs": [],
+                "thingEnglishLabel": "Report",
+                "thingPreferredLabel": "Report",
+                "thingLabelLanguage": "gu",
+                "type": "formats"
+              }
+            ],
+            "editorialSensitivity": [
+              {
+                "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                "type": "editorialSensitivity"
+              }
+            ],
+            "about": [
+              {
+                "value": "http://www.bbc.co.uk/things/87822184-803f-421f-8037-13dec3dd235c#id",
+                "thingLabel": "ચોમાસું",
+                "thingUri": "http://www.bbc.co.uk/things/87822184-803f-421f-8037-13dec3dd235c#id",
+                "thingId": "87822184-803f-421f-8037-13dec3dd235c",
+                "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+                "thingSameAs": [
+                  "http://dbpedia.org/resource/Monsoon",
+                  "http://www.wikidata.org/entity/Q42967"
+                ],
+                "thingEnglishLabel": "Monsoon",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/9b16a6c2-7c16-42b7-bff7-6549579622e8#id",
+                "thingLabel": "વાતાવરણ",
+                "thingUri": "http://www.bbc.co.uk/things/9b16a6c2-7c16-42b7-bff7-6549579622e8#id",
+                "thingId": "9b16a6c2-7c16-42b7-bff7-6549579622e8",
+                "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+                "thingSameAs": [
+                  "http://dbpedia.org/resource/Severe_weather",
+                  "http://www.wikidata.org/entity/Q741507"
+                ],
+                "thingEnglishLabel": "Severe weather",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/bb3b401b-19f4-4bff-a824-4144c483d5a6#id",
+                "thingLabel": "બંગાળની ખાડી ",
+                "thingUri": "http://www.bbc.co.uk/things/bb3b401b-19f4-4bff-a824-4144c483d5a6#id",
+                "thingId": "bb3b401b-19f4-4bff-a824-4144c483d5a6",
+                "thingType": ["core:Thing", "tagging:TagConcept", "core:Place"],
+                "thingSameAs": [
+                  "http://sws.geonames.org/1281789/",
+                  "http://www.wikidata.org/entity/Q38684",
+                  "http://dbpedia.org/resource/Bay_of_Bengal"
+                ],
+                "thingEnglishLabel": "Bay of Bengal",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/4317a084-9a75-42ad-bf1c-2f13ed498cc1#id",
+                "thingLabel": "ગુજરાત",
+                "thingUri": "http://www.bbc.co.uk/things/4317a084-9a75-42ad-bf1c-2f13ed498cc1#id",
+                "thingId": "4317a084-9a75-42ad-bf1c-2f13ed498cc1",
+                "thingType": ["core:Thing", "tagging:TagConcept", "core:Place"],
+                "thingSameAs": [
+                  "http://dbpedia.org/resource/Gujarat",
+                  "http://sws.geonames.org/1270770/",
+                  "http://www.wikidata.org/entity/Q1061"
+                ],
+                "thingEnglishLabel": "Gujarat",
+                "type": "about"
+              }
+            ]
+          }
+        },
+        "tags": {
+          "about": [
+            {
+              "thingLabel": "ચોમાસું",
+              "thingUri": "http://www.bbc.co.uk/things/87822184-803f-421f-8037-13dec3dd235c#id",
+              "thingId": "87822184-803f-421f-8037-13dec3dd235c",
+              "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+              "thingSameAs": [
+                "http://dbpedia.org/resource/Monsoon",
+                "http://www.wikidata.org/entity/Q42967"
+              ],
+              "topicName": "ચોમાસું",
+              "topicId": "c28qpmmp7v2t",
+              "curationList": [
+                {
+                  "curationId": "908527df-b2dd-4fab-93fd-57022151be8d",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Monsoon",
+              "thingLabelLanguage": "gu",
+              "thingPreferredLabel": "Monsoon"
+            },
+            {
+              "thingLabel": "વાતાવરણ",
+              "thingUri": "http://www.bbc.co.uk/things/9b16a6c2-7c16-42b7-bff7-6549579622e8#id",
+              "thingId": "9b16a6c2-7c16-42b7-bff7-6549579622e8",
+              "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+              "thingSameAs": [
+                "http://dbpedia.org/resource/Severe_weather",
+                "http://www.wikidata.org/entity/Q741507"
+              ],
+              "topicName": "વાતાવરણ",
+              "topicId": "c404vn5xw5vt",
+              "curationList": [
+                {
+                  "curationId": "4551075a-319d-410b-a6a7-0e16d4bc2292",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Severe weather",
+              "thingLabelLanguage": "gu",
+              "thingPreferredLabel": "Severe weather"
+            },
+            {
+              "thingLabel": "બંગાળની ખાડી ",
+              "thingUri": "http://www.bbc.co.uk/things/bb3b401b-19f4-4bff-a824-4144c483d5a6#id",
+              "thingId": "bb3b401b-19f4-4bff-a824-4144c483d5a6",
+              "thingType": ["core:Thing", "tagging:TagConcept", "core:Place"],
+              "thingSameAs": [
+                "http://sws.geonames.org/1281789/",
+                "http://www.wikidata.org/entity/Q38684",
+                "http://dbpedia.org/resource/Bay_of_Bengal"
+              ],
+              "topicName": "બંગાળની ખાડી ",
+              "topicId": "cmn32l4r7y8t",
+              "curationList": [
+                {
+                  "curationId": "5f1646e7-91a0-4e9b-b914-3e9505312044",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Bay of Bengal",
+              "thingLabelLanguage": "gu",
+              "thingPreferredLabel": "Bay of Bengal"
+            },
+            {
+              "thingLabel": "ગુજરાત",
+              "thingUri": "http://www.bbc.co.uk/things/4317a084-9a75-42ad-bf1c-2f13ed498cc1#id",
+              "thingId": "4317a084-9a75-42ad-bf1c-2f13ed498cc1",
+              "thingType": ["core:Thing", "tagging:TagConcept", "core:Place"],
+              "thingSameAs": [
+                "http://dbpedia.org/resource/Gujarat",
+                "http://sws.geonames.org/1270770/",
+                "http://www.wikidata.org/entity/Q1061"
+              ],
+              "topicName": "ગુજરાત",
+              "topicId": "cz74kjn4j5wt",
+              "curationList": [
+                {
+                  "curationId": "c988ff00-9647-41af-b726-f694a4ea58ef",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Gujarat",
+              "thingLabelLanguage": "gu",
+              "thingPreferredLabel": "Gujarat"
+            }
+          ]
+        },
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "video",
+          "caption",
+          "image",
+          "altText",
+          "rawImage",
+          "aresMedia",
+          "aresMediaMetadata"
+        ],
+        "includeComments": false,
+        "topics": [
+          {
+            "topicName": "ચોમાસું",
+            "topicId": "c28qpmmp7v2t",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/87822184-803f-421f-8037-13dec3dd235c#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "908527df-b2dd-4fab-93fd-57022151be8d",
+                "curationType": "vivo-stream",
+                "position": 0,
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Gujarati",
+            "topicUrl": "/gujarati/topics/c28qpmmp7v2t",
+            "meta": {
+              "created": "2023-02-27T12:51:45.160Z",
+              "updated": "2024-09-18T14:48:54.532Z",
+              "transliterated": false,
+              "script": "gu",
+              "variantId": "c28qpmmp7v2t:gu"
+            }
+          },
+          {
+            "topicName": "વાતાવરણ",
+            "topicId": "c404vn5xw5vt",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/9b16a6c2-7c16-42b7-bff7-6549579622e8#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "4551075a-319d-410b-a6a7-0e16d4bc2292",
+                "curationType": "vivo-stream",
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Gujarati",
+            "topicUrl": "/gujarati/topics/c404vn5xw5vt",
+            "meta": {
+              "created": "2019-06-13T09:02:03.968Z",
+              "updated": "2024-09-18T15:05:49.995Z",
+              "transliterated": false,
+              "script": "gu",
+              "variantId": "c404vn5xw5vt:gu"
+            }
+          },
+          {
+            "topicName": "બંગાળની ખાડી ",
+            "topicId": "cmn32l4r7y8t",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/bb3b401b-19f4-4bff-a824-4144c483d5a6#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "5f1646e7-91a0-4e9b-b914-3e9505312044",
+                "curationType": "vivo-stream",
+                "position": 0,
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": ["core:Thing", "tagging:TagConcept", "core:Place"],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Gujarati",
+            "topicUrl": "/gujarati/topics/cmn32l4r7y8t",
+            "meta": {
+              "created": "2023-02-27T13:36:04.746Z",
+              "updated": "2024-09-18T14:48:54.412Z",
+              "transliterated": false,
+              "script": "gu",
+              "variantId": "cmn32l4r7y8t:gu"
+            }
+          },
+          {
+            "topicName": "ગુજરાત",
+            "topicId": "cz74kjn4j5wt",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/4317a084-9a75-42ad-bf1c-2f13ed498cc1#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "c988ff00-9647-41af-b726-f694a4ea58ef",
+                "curationType": "vivo-stream",
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": ["core:Thing", "tagging:TagConcept", "core:Place"],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Gujarati",
+            "topicUrl": "/gujarati/topics/cz74kjn4j5wt",
+            "meta": {
+              "created": "2019-06-13T09:03:48.387Z",
+              "updated": "2024-09-18T15:05:38.618Z",
+              "transliterated": false,
+              "script": "gu",
+              "variantId": "cz74kjn4j5wt:gu"
+            }
+          }
+        ],
+        "consumableAsSFV": true,
+        "allowAdvertising": true,
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false,
+        "breakingNews": { "isBreaking": false },
+        "useSensitiveOnwardJourneys": false,
+        "stats": { "readTime": 1, "wordCount": 154 },
+        "isTransliterated": false,
+        "isKeyPointsFormatAsset": false
+      },
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "ddcaf621",
+              "type": "visuallyHiddenHeadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "e0099c32",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "525b3f77",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "બંગાળની ખાડીની સિસ્ટમ આગળ વધી, ગુજરાતમાં વરસાદ વધશે?",
+                            "blocks": [
+                              {
+                                "id": "2ec9c3e2",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "બંગાળની ખાડીની સિસ્ટમ આગળ વધી, ગુજરાતમાં વરસાદ વધશે?",
+                                  "attributes": []
+                                },
+                                "position": [1, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [1, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [1, 1]
+                  }
+                ]
+              },
+              "position": [1]
+            },
+            {
+              "id": "907789d4",
+              "type": "video",
+              "model": {
+                "locator": "urn:bbc:pips:pid:p0p64t3t",
+                "blocks": [
+                  {
+                    "id": "fcb5599f",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "7191918a",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "6457e277",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Gujarat Weather : બંગાળની ખાડીની સિસ્ટમ આગળ વધી, ગુજરાતમાં વરસાદ વધશે?",
+                                  "blocks": [
+                                    {
+                                      "id": "e2c003dd",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Gujarat Weather : બંગાળની ખાડીની સિસ્ટમ આગળ વધી, ગુજરાતમાં વરસાદ વધશે?",
+                                        "attributes": []
+                                      },
+                                      "position": [2, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [2, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [2, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [2, 1]
+                  },
+                  {
+                    "id": "81a31c8a",
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "94d37866",
+                          "blockId": "urn:bbc:ares::clip:p0p64t3t",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "p0p64t3t",
+                            "subType": "clip",
+                            "format": "video",
+                            "title": "Gujarat Weather : બંગાળની ખાડીની સિસ્ટમ આગળ વધી, ગુજરાતમાં વરસાદ વધશે?",
+                            "synopses": {
+                              "short": "Gujarat Weather : બંગાળની ખાડીની સિસ્ટમ આગળ વધી, ગુજરાતમાં વરસાદ વધશે?",
+                              "long": "બંગાળની ખાડીમાં સર્જાયેલું લૉ પ્રેશર આગળ વધીને હાલ ઝારખંડ અને ઓડિશા આસપાસ પહોંચ્યું છે, જેના કારણે દિલ્હી, ઉત્તર ભારત, રાજસ્થાન અને મધ્યપ્રદેશમાં અસર જોવા મળી રહી છે. ગુજરાતમાં ભારે વરસાદ કે નવો રાઉન્ડ આવવાની શક્યતા નથી, પરંતુ આગામી બે દિવસ દક્ષિણ અને મધ્ય ગુજરાતના કેટલાક વિસ્તારો જેમ કે દાહોદ, પંચમહાલ, વડોદરા, સુરત અને નવસારીમાં હળવાથી મધ્યમ વરસાદી ઝાપટાં પડી શકે છે. સૌરાષ્ટ્ર, કચ્છ અને ઉત્તર ગુજરાતમાં વરસાદની કોઈ શક્યતા નથી. 28 ઓગસ્ટથી ફરી વરસાદનું જોર ઘટી જશે અને સપ્ટેમ્બરના પ્રારંભ સુધી મોટા ભાગના વિસ્તારો સૂકા રહેશે."
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0p64tn8.jpg",
+                            "imageCopyright": "BBC",
+                            "embedding": true,
+                            "advertising": true,
+                            "versions": [
+                              {
+                                "versionId": "p0p64t3y",
+                                "types": ["Original"],
+                                "duration": 425,
+                                "durationISO8601": "PT7M5S",
+                                "warnings": {},
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableFrom": 1787643013000
+                              }
+                            ],
+                            "syndication": { "destinations": ["default"] },
+                            "smpKind": "programme",
+                            "webcastVersions": []
+                          },
+                          "position": [2, 2, 1]
+                        },
+                        {
+                          "id": "56b684a2",
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "e2b1a171",
+                                "type": "rawImage",
+                                "model": {
+                                  "width": 1920,
+                                  "height": 1080,
+                                  "locator": "ichef.bbci.co.uk/images/ic/$widthxn/p0p64tn8.jpg",
+                                  "originCode": "mpv",
+                                  "copyrightHolder": "BBC"
+                                },
+                                "position": [2, 2, 2, 1]
+                              },
+                              {
+                                "id": "92309596",
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "5d29936c",
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "id": "311ea93a",
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "Keyframe #2",
+                                              "blocks": [
+                                                {
+                                                  "id": "8b0062c9",
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "Keyframe #2",
+                                                    "attributes": []
+                                                  },
+                                                  "position": [
+                                                    2, 2, 2, 2, 1, 1, 1
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            "position": [2, 2, 2, 2, 1, 1]
+                                          }
+                                        ]
+                                      },
+                                      "position": [2, 2, 2, 2, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [2, 2, 2, 2]
+                              }
+                            ]
+                          },
+                          "position": [2, 2, 2]
+                        }
+                      ]
+                    },
+                    "position": [2, 2]
+                  }
+                ]
+              },
+              "position": [2]
+            },
+            {
+              "id": "e4d5a9c2",
+              "type": "fauxHeadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "f9aabcc4",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "633d2b63",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "બંગાળની ખાડીની સિસ્ટમ આગળ વધી, ગુજરાતમાં વરસાદ વધશે?",
+                            "blocks": [
+                              {
+                                "id": "eafffa57",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "બંગાળની ખાડીની સિસ્ટમ આગળ વધી, ગુજરાતમાં વરસાદ વધશે?",
+                                  "attributes": []
+                                },
+                                "position": [3, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [3, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [3, 1]
+                  }
+                ]
+              },
+              "position": [3]
+            },
+            {
+              "id": "8482b4c0",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1787643423271,
+                "lastPublished": 1787643423271
+              },
+              "position": [4]
+            },
+            {
+              "id": "b506d7f9",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "9ab49be9",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "આ વર્ષે બંગાળની ખાડીમાં ઘણી સિસ્ટમ બની છે પરંતુ ગુજરાત તરફ એ આવી નથી. તેના કારણે ગુજરાતમાં હળવાથી મધ્યમ પ્રકારનો જ વરસાદ પડે છે.",
+                      "blocks": [
+                        {
+                          "id": "1dc2ee80",
+                          "type": "fragment",
+                          "model": {
+                            "text": "આ વર્ષે બંગાળની ખાડીમાં ઘણી સિસ્ટમ બની છે પરંતુ ગુજરાત તરફ એ આવી નથી. તેના કારણે ગુજરાતમાં હળવાથી મધ્યમ પ્રકારનો જ વરસાદ પડે છે.",
+                            "attributes": []
+                          },
+                          "position": [5, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [5, 1]
+                  },
+                  {
+                    "id": "c0b81950",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "બંગાળની ખાડી નજીક પશ્ચિમ બંગાળ, ઓડિશા આસપાસ એક લૉ-પ્રેશર એરિયા બનેલો છે.",
+                      "blocks": [
+                        {
+                          "id": "74a541aa",
+                          "type": "fragment",
+                          "model": {
+                            "text": "બંગાળની ખાડી નજીક પશ્ચિમ બંગાળ, ઓડિશા આસપાસ એક લૉ-પ્રેશર એરિયા બનેલો છે.",
+                            "attributes": []
+                          },
+                          "position": [5, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [5, 2]
+                  },
+                  {
+                    "id": "7fd1c6bf",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "આ સિસ્ટમ થોડી આગળ વધશે ત્યારે આજે તથા આવતીકાલે થોડો વરસાદ પૂર્વ ગુજરાતના અને દક્ષિણ ગુજરાતમાં પડી શકે છે. પરંતુ એ હળવાથી મધ્યમ પ્રકારનો જ વરસાદ હોઈ શકે છે.",
+                      "blocks": [
+                        {
+                          "id": "796be149",
+                          "type": "fragment",
+                          "model": {
+                            "text": "આ સિસ્ટમ થોડી આગળ વધશે ત્યારે આજે તથા આવતીકાલે થોડો વરસાદ પૂર્વ ગુજરાતના અને દક્ષિણ ગુજરાતમાં પડી શકે છે. પરંતુ એ હળવાથી મધ્યમ પ્રકારનો જ વરસાદ હોઈ શકે છે.",
+                            "attributes": []
+                          },
+                          "position": [5, 3, 1]
+                        }
+                      ]
+                    },
+                    "position": [5, 3]
+                  },
+                  {
+                    "id": "a0c477ec",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "આજે મહિસાગર, અરવલ્લી, છોટાઉદેપુર, દાહોદ, પંચમહાલ, ખેડા, આણંદ, વલસાડ, નવસારી, સુરત, ડાંગ, ભરૂચ સહિતના જિલ્લામાં હળવો વરસાદ પડી શકે છે.",
+                      "blocks": [
+                        {
+                          "id": "acc43305",
+                          "type": "fragment",
+                          "model": {
+                            "text": "આજે મહિસાગર, અરવલ્લી, છોટાઉદેપુર, દાહોદ, પંચમહાલ, ખેડા, આણંદ, વલસાડ, નવસારી, સુરત, ડાંગ, ભરૂચ સહિતના જિલ્લામાં હળવો વરસાદ પડી શકે છે.",
+                            "attributes": []
+                          },
+                          "position": [5, 4, 1]
+                        }
+                      ]
+                    },
+                    "position": [5, 4]
+                  }
+                ]
+              },
+              "position": [5]
+            },
+            {
+              "id": "be318f24",
+              "type": "continueReading",
+              "model": {},
+              "position": [6]
+            },
+            {
+              "id": "9238e708",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "2eec05d1",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "આ સિવાય ઉત્તર ગુજરાતના વાવ-થરાદ, પાટણ, મહેસાણા સહિતાના વિસ્તારોમાં પણ કેટલાક વિસ્તારોમાં છૂટોછવાયો વરસાદ હળવોથી મધ્યમ પ્રકારનો વરસાદ વરસી શકે છે.",
+                      "blocks": [
+                        {
+                          "id": "67a7008d",
+                          "type": "fragment",
+                          "model": {
+                            "text": "આ સિવાય ઉત્તર ગુજરાતના વાવ-થરાદ, પાટણ, મહેસાણા સહિતાના વિસ્તારોમાં પણ કેટલાક વિસ્તારોમાં છૂટોછવાયો વરસાદ હળવોથી મધ્યમ પ્રકારનો વરસાદ વરસી શકે છે.",
+                            "attributes": []
+                          },
+                          "position": [7, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [7, 1]
+                  }
+                ]
+              },
+              "position": [7]
+            },
+            {
+              "id": "3bdc61ed",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "17db1721",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "6aa6ffc1",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "b4384e36",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "આ વર્ષે બંગાળની ખાડીમાં ઘણી સિસ્ટમ બની છે પરંતુ ગુજરાત તરફ એ આવી નથી. તેના કારણે ગુજરાતમાં હળવાથી મધ્યમ પ્રકારનો જ વરસાદ પડે છે.",
+                                  "blocks": [
+                                    {
+                                      "id": "b4d4dba5",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "આ વર્ષે બંગાળની ખાડીમાં ઘણી સિસ્ટમ બની છે પરંતુ ગુજરાત તરફ એ આવી નથી. તેના કારણે ગુજરાતમાં હળવાથી મધ્યમ પ્રકારનો જ વરસાદ પડે છે.",
+                                        "attributes": []
+                                      },
+                                      "position": [8, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [8, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [8, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [8, 1]
+                  },
+                  {
+                    "id": "db4ad426",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 800,
+                      "height": 450,
+                      "locator": "4b8e/live/a4ac9a10-a057-11f1-94bd-930e18756ae0.jpg",
+                      "originCode": "cpsprodpb",
+                      "copyrightHolder": "Getty Images",
+                      "suitableForSyndication": true
+                    },
+                    "position": [8, 2]
+                  }
+                ]
+              },
+              "position": [8]
+            },
+            {
+              "id": "ea31b39e",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "338dc52f",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "બીબીસી માટે કલેક્ટિવ ન્યૂઝરૂમનું પ્રકાશન",
+                      "blocks": [
+                        {
+                          "id": "43410675",
+                          "type": "fragment",
+                          "model": {
+                            "text": "બીબીસી માટે કલેક્ટિવ ન્યૂઝરૂમનું પ્રકાશન",
+                            "attributes": ["bold"]
+                          },
+                          "position": [9, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [9, 1]
+                  }
+                ]
+              },
+              "position": [9]
+            }
+          ]
+        }
+      },
+      "promo": {
+        "headlines": {
+          "seoHeadline": "Gujarat Weather : બંગાળની ખાડીની સિસ્ટમ આગળ વધી, ગુજરાતમાં વરસાદ વધશે?",
+          "promoHeadline": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "બંગાળની ખાડીની સિસ્ટમ આગળ વધી, ગુજરાતમાં વરસાદ વધશે?",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "બંગાળની ખાડીની સિસ્ટમ આગળ વધી, ગુજરાતમાં વરસાદ વધશે?",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "images": {
+          "defaultPromoImage": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "આ વર્ષે બંગાળની ખાડીમાં ઘણી સિસ્ટમ બની છે પરંતુ ગુજરાત તરફ એ આવી નથી. તેના કારણે ગુજરાતમાં હળવાથી મધ્યમ પ્રકારનો જ વરસાદ પડે છે.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "આ વર્ષે બંગાળની ખાડીમાં ઘણી સિસ્ટમ બની છે પરંતુ ગુજરાત તરફ એ આવી નથી. તેના કારણે ગુજરાતમાં હળવાથી મધ્યમ પ્રકારનો જ વરસાદ પડે છે.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 800,
+                  "height": 450,
+                  "locator": "4b8e/live/a4ac9a10-a057-11f1-94bd-930e18756ae0.jpg",
+                  "originCode": "cpsprodpb",
+                  "copyrightHolder": "Getty Images",
+                  "suitableForSyndication": true
+                }
+              }
+            ]
+          }
+        },
+        "summary": {
+          "blocks": [
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "આ વર્ષે બંગાળની ખાડીમાં ઘણી સિસ્ટમ બની છે પરંતુ ગુજરાત તરફ એ આવી નથી. તેના કારણે ગુજરાતમાં હળવાથી મધ્યમ પ્રકારનો જ વરસાદ પડે છે.",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": {
+                            "text": "આ વર્ષે બંગાળની ખાડીમાં ઘણી સિસ્ટમ બની છે પરંતુ ગુજરાત તરફ એ આવી નથી. તેના કારણે ગુજરાતમાં હળવાથી મધ્યમ પ્રકારનો જ વરસાદ પડે છે.",
+                            "attributes": []
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "serviceIdentifier": "Gujarati",
+        "breakingNews": { "isBreaking": false },
+        "consumableAsSFV": true,
+        "media": {
+          "blocks": [
+            {
+              "type": "video",
+              "model": {
+                "locator": "urn:bbc:pips:pid:p0p64t3t",
+                "blocks": [
+                  {
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Gujarat Weather : બંગાળની ખાડીની સિસ્ટમ આગળ વધી, ગુજરાતમાં વરસાદ વધશે?",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Gujarat Weather : બંગાળની ખાડીની સિસ્ટમ આગળ વધી, ગુજરાતમાં વરસાદ વધશે?",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "blockId": "urn:bbc:ares::clip:p0p64t3t",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "p0p64t3t",
+                            "subType": "clip",
+                            "format": "video",
+                            "title": "Gujarat Weather : બંગાળની ખાડીની સિસ્ટમ આગળ વધી, ગુજરાતમાં વરસાદ વધશે?",
+                            "synopses": {
+                              "short": "Gujarat Weather : બંગાળની ખાડીની સિસ્ટમ આગળ વધી, ગુજરાતમાં વરસાદ વધશે?",
+                              "long": "બંગાળની ખાડીમાં સર્જાયેલું લૉ પ્રેશર આગળ વધીને હાલ ઝારખંડ અને ઓડિશા આસપાસ પહોંચ્યું છે, જેના કારણે દિલ્હી, ઉત્તર ભારત, રાજસ્થાન અને મધ્યપ્રદેશમાં અસર જોવા મળી રહી છે. ગુજરાતમાં ભારે વરસાદ કે નવો રાઉન્ડ આવવાની શક્યતા નથી, પરંતુ આગામી બે દિવસ દક્ષિણ અને મધ્ય ગુજરાતના કેટલાક વિસ્તારો જેમ કે દાહોદ, પંચમહાલ, વડોદરા, સુરત અને નવસારીમાં હળવાથી મધ્યમ વરસાદી ઝાપટાં પડી શકે છે. સૌરાષ્ટ્ર, કચ્છ અને ઉત્તર ગુજરાતમાં વરસાદની કોઈ શક્યતા નથી. 28 ઓગસ્ટથી ફરી વરસાદનું જોર ઘટી જશે અને સપ્ટેમ્બરના પ્રારંભ સુધી મોટા ભાગના વિસ્તારો સૂકા રહેશે."
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0p64tn8.jpg",
+                            "imageCopyright": "BBC",
+                            "embedding": true,
+                            "advertising": true,
+                            "versions": [
+                              {
+                                "versionId": "p0p64t3y",
+                                "types": ["Original"],
+                                "duration": 425,
+                                "durationISO8601": "PT7M5S",
+                                "warnings": {},
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableFrom": 1787643013000
+                              }
+                            ],
+                            "syndication": { "destinations": ["default"] },
+                            "smpKind": "programme",
+                            "webcastVersions": []
+                          }
+                        },
+                        {
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "rawImage",
+                                "model": {
+                                  "width": 1920,
+                                  "height": 1080,
+                                  "locator": "ichef.bbci.co.uk/images/ic/$widthxn/p0p64tn8.jpg",
+                                  "originCode": "mpv",
+                                  "copyrightHolder": "BBC"
+                                }
+                              },
+                              {
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "Keyframe #2",
+                                              "blocks": [
+                                                {
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "Keyframe #2",
+                                                    "attributes": []
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "latestMedia": [
+        {
+          "type": "video",
+          "duration": "PT15M54S",
+          "isLive": false,
+          "title": "નેપાળ : આખેઆખાં ગામો કઈ રીતે તણાઈ ગયાં? જુઓ તબાહીના પાંચ વીડિયો",
+          "firstPublished": "2026-08-27T11:07:07.933Z",
+          "lastPublished": "2026-08-27T15:36:52.912Z",
+          "link": "https://www.bbc.com/gujarati/watch/c3eq9e0klg8o",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/97ca/live/9cad7470-a22c-11f1-b109-879e35c24276.jpg.webp",
+          "description": "નેપાળમાં ભીષણ પૂર અને ભૂસ્ખલનથી ભારે તબાહી સર્જાઈ છે. આ દુર્ઘટનામાં અત્યાર સુધીમાં ઓછાંમાં ઓછાં 300થી વધારે લોકોનાં મોત થયાં છે. જોકે, મૃત્યુઆંક હજુ વધવાની આશંકા છે. ",
+          "imageAlt": "નેપાળ : આખેઆખાં ગામો કઈ રીતે તણાઈ ગયાં? જુઓ તબાહીના પાંચ વીડિયો",
+          "isPortraitImage": false,
+          "id": "c3eq9e0klg8o",
+          "attributions": [
+            {
+              "title": "Gujarati",
+              "link": {
+                "url": "https://www.bbc.co.uk/gujarati",
+                "scheme": "https",
+                "host": "www.bbc.co.uk",
+                "path": "/gujarati"
+              }
+            }
+          ],
+          "relatedTopic": {
+            "title": "નેપાળ",
+            "link": {
+              "url": "https://www.bbc.com/gujarati/topics/c404vn5789qt",
+              "scheme": "https",
+              "host": "www.bbc.com",
+              "path": "/gujarati/topics/c404vn5789qt"
+            }
+          }
+        },
+        {
+          "type": "video",
+          "duration": "PT34S",
+          "isLive": false,
+          "title": "યુક્રેનમાં 10 વર્ષીય દીકરી અચાનક સૈનિક પિતાને જોઈ ભાવુક થઈ",
+          "firstPublished": "2026-08-27T10:13:30.107Z",
+          "lastPublished": "2026-08-27T10:13:30.107Z",
+          "link": "https://www.bbc.com/gujarati/watch/c8jd7j177ewo",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/9e2d/live/8a2d6800-a1ff-11f1-a97e-999c5aae08bf.png.webp",
+          "description": "યુક્રેનની 10 વર્ષીય ઍના માટે તેમના જન્મદિવસે પિતાએ ખાસ સરપ્રાઇઝ આપી.",
+          "imageAlt": "યુક્રેન",
+          "isPortraitImage": true,
+          "id": "c8jd7j177ewo",
+          "attributions": [
+            {
+              "title": "Gujarati",
+              "link": {
+                "url": "https://www.bbc.co.uk/gujarati",
+                "scheme": "https",
+                "host": "www.bbc.co.uk",
+                "path": "/gujarati"
+              }
+            }
+          ],
+          "relatedTopic": {
+            "title": "રશિયા-યુક્રેન સંઘર્ષ",
+            "link": {
+              "url": "https://www.bbc.com/gujarati/topics/cg6d0k76j89t",
+              "scheme": "https",
+              "host": "www.bbc.com",
+              "path": "/gujarati/topics/cg6d0k76j89t"
+            }
+          }
+        },
+        {
+          "type": "video",
+          "duration": "PT1M25S",
+          "isLive": false,
+          "title": "પાકિસ્તાનની હૉસ્પિટલમાં આગ લાગતાં 14 બાળકોનાં મોત, પરિજનોની વ્યથા",
+          "firstPublished": "2026-08-27T10:06:14.280Z",
+          "lastPublished": "2026-08-27T10:07:12.405Z",
+          "link": "https://www.bbc.com/gujarati/watch/c4gv5g01398o",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/43f8/live/c823a3a0-a1fe-11f1-a97e-999c5aae08bf.png.webp",
+          "description": "ઇસ્લામાબાદની પીઆઇએમએસ હૉસ્પિટલના મેટરનિટી વૉર્ડમાં ભીષણ આગ લાગતાં 14 નવજાત બાળકોનાં મોત થયાં. ",
+          "imageAlt": "પાકિસ્તાન",
+          "isPortraitImage": true,
+          "id": "c4gv5g01398o",
+          "attributions": [
+            {
+              "title": "Gujarati",
+              "link": {
+                "url": "https://www.bbc.co.uk/gujarati",
+                "scheme": "https",
+                "host": "www.bbc.co.uk",
+                "path": "/gujarati"
+              }
+            }
+          ]
+        },
+        {
+          "type": "video",
+          "duration": "PT15M54S",
+          "isLive": false,
+          "title": "નેપાળમાં આવેલું પૂર કેમ આટલું ભયાનક છે?",
+          "firstPublished": "2026-08-27T09:23:27.771Z",
+          "lastPublished": "2026-08-27T10:04:38.489Z",
+          "link": "https://www.bbc.com/gujarati/watch/c5y3e3vdygvo",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/443e/live/75e6fe30-a1f8-11f1-aed2-8d6da8d75094.png.webp",
+          "description": "નેપાળની ભોટેકોશી નદીમાં બુધવારે આવેલા અચાનક પૂરે ત્રણ જિલ્લામાં ભારે વિનાશ વેર્યો છે.",
+          "imageAlt": "નેપાળ પૂર",
+          "isPortraitImage": false,
+          "id": "c5y3e3vdygvo",
+          "attributions": [
+            {
+              "title": "Gujarati",
+              "link": {
+                "url": "https://www.bbc.co.uk/gujarati",
+                "scheme": "https",
+                "host": "www.bbc.co.uk",
+                "path": "/gujarati"
+              }
+            }
+          ],
+          "relatedTopic": {
+            "title": "નેપાળ",
+            "link": {
+              "url": "https://www.bbc.com/gujarati/topics/c404vn5789qt",
+              "scheme": "https",
+              "host": "www.bbc.com",
+              "path": "/gujarati/topics/c404vn5789qt"
+            }
+          }
+        }
+      ],
+      "portraitVideoItems": null,
+      "countryCuration": null,
+      "videoCuration": null,
+      "countryTopicIdToReorder": null
+    }
+  },
+  "contentType": "application/json; charset=utf-8",
+  "debug": {
+    "context": {
+      "runtimeContext": {
+        "lambdaBootstrapVersion": "5.9.0",
+        "runtimeVersion": "6.9.0",
+        "standardLibraryVersion": "6.9.0",
+        "moduleName": "simorgh-bff",
+        "moduleVersion": "0.0.2",
+        "sourceUrl": "https://github.com/bbc/fabl-modules/tree/f8c7eda0392d7e1072ab0e721cff066e06f58f21/modules/application/simorgh-bff",
+        "cosmosReleaseUrl": "https://cosmos.tools.bbc.co.uk/lambdas/fabl-module-simorgh-bff/releases/672",
+        "buildTime": "2026-08-27T09:14:13.914Z",
+        "moduleType": "reads",
+        "traceId": "Root=1-6a909cad-c1e0c52ab4a7ceaec2a5de69;Parent=df1aff66d29f88c4;Sampled=1;Lineage=1:2829b227:0",
+        "moduleEnvironment": "production",
+        "personalisedRequest": "false",
+        "environment": "live",
+        "nodeJSVersion": "v22.23.1"
+      },
+      "systemContext": {
+        "service-env": "live",
+        "debug": "1",
+        "call-stack": "simorgh-bff",
+        "sandboxEnabled": true,
+        "logAllDebug": false,
+        "normaliseRequest": true
+      }
+    },
+    "serviceRequests": [
+      {
+        "response": {
+          "headers": {
+            "date": "Thu, 27 Aug 2026 20:23:09 GMT",
+            "content-type": "application/json;charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "etag": "\"874b9cfc9f848471e96d333b4a50b91d57caa8ff\"",
+            "last-modified": "Tue, 25 Aug 2026 07:37:07 GMT",
+            "cache-control": "no-transform,max-age=60",
+            "x-ares-tracking-id": "2db60069-6d8f-4f12-bfa9-0c954d4cd740",
+            "expires": "Tue, 25 Aug 2026 07:38:14 GMT",
+            "content-encoding": "gzip",
+            "x-shared-cache": "HIT",
+            "x-local-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 2
+        },
+        "request": {
+          "service": "ares",
+          "path": "/article/cx2zevlw204o",
+          "timeout": 4000,
+          "url": "https://service-gateway.fabl.api.bbci.co.uk/service/ares/path/%2Farticle%2Fcx2zevlw204o"
+        }
+      }
+    ],
+    "moduleRequests": [
+      {
+        "response": {
+          "headers": {
+            "date": "Thu, 27 Aug 2026 20:23:09 GMT",
+            "content-type": "application/json; charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "vary": "Accept-Encoding, ctx-service-env, ctx-debug, ctx-unwrapped",
+            "cache-control": "max-age=5",
+            "expires": "Thu, 27 Aug 2026 20:23:13 GMT",
+            "content-encoding": "gzip",
+            "x-shared-cache": "HIT",
+            "x-local-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 3
+        },
+        "request": {
+          "module": "content-summaries",
+          "params": {
+            "urn": "urn:bbc:vivo:curation:7c7fc1e5-cf2f-4fa0-b7d3-ebdf5b9b8741"
+          },
+          "timeout": 4000,
+          "url": "https://fabl.api.bbci.co.uk/module/content-summaries?urn=urn%3Abbc%3Avivo%3Acuration%3A7c7fc1e5-cf2f-4fa0-b7d3-ebdf5b9b8741"
+        }
+      }
+    ],
+    "tenantLogs": [
+      {
+        "timestamp": 1787862189835,
+        "message": "fetchTopicCuration [video]: service=gujarati topicId=null",
+        "code": "DEBUG"
+      }
+    ],
+    "privateContext": {},
+    "sandboxViolations": [],
+    "nonFatalErrors": [],
+    "params": {
+      "service": "gujarati",
+      "pageType": "article",
+      "id": "cx2zevlw204o"
+    }
+  }
+}

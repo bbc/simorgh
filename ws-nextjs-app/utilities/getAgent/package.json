@@ -1,0 +1,6 @@
+{
+  "browser": "client.ts",
+  "main": "index.ts",
+  "name": "@bbc/simorgh-getAgent",
+  "description": "This package.json ensures that the getAgent function can only run on the server side."
+}

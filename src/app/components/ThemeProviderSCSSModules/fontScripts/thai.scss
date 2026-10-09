@@ -1,0 +1,109 @@
+@use '../px-to-rem' as *;
+
+:root {
+  --font-size-atlas-group-a: #{px-to-rem(78)};
+  --line-height-atlas-group-a: #{px-to-rem(84)};
+  --font-size-atlas-group-b: #{px-to-rem(96)};
+  --line-height-atlas-group-b: #{px-to-rem(104)};
+  --font-size-atlas-group-d: #{px-to-rem(140)};
+  --line-height-atlas-group-d: #{px-to-rem(148)};
+
+  --font-size-elephant-group-a: #{px-to-rem(60)};
+  --line-height-elephant-group-a: #{px-to-rem(64)};
+  --font-size-elephant-group-b: #{px-to-rem(78)};
+  --line-height-elephant-group-b: #{px-to-rem(84)};
+  --font-size-elephant-group-d: #{px-to-rem(116)};
+  --line-height-elephant-group-d: #{px-to-rem(124)};
+
+  --font-size-imperial-group-a: #{px-to-rem(50)};
+  --line-height-imperial-group-a: #{px-to-rem(54)};
+  --font-size-imperial-group-b: #{px-to-rem(52)};
+  --line-height-imperial-group-b: #{px-to-rem(72)};
+  --font-size-imperial-group-d: #{px-to-rem(76)};
+  --line-height-imperial-group-d: #{px-to-rem(104)};
+
+  --font-size-royal-group-a: #{px-to-rem(40)};
+  --line-height-royal-group-a: #{px-to-rem(44)};
+  --font-size-royal-group-b: #{px-to-rem(40)};
+  --line-height-royal-group-b: #{px-to-rem(58)};
+  --font-size-royal-group-d: #{px-to-rem(56)};
+  --line-height-royal-group-d: #{px-to-rem(84)};
+
+  --font-size-foolscap-group-a: #{px-to-rem(32)};
+  --line-height-foolscap-group-a: #{px-to-rem(36)};
+  --font-size-foolscap-group-b: #{px-to-rem(36)};
+  --line-height-foolscap-group-b: #{px-to-rem(54)};
+  --font-size-foolscap-group-d: #{px-to-rem(50)};
+  --line-height-foolscap-group-d: #{px-to-rem(76)};
+
+  --font-size-canon-group-a: #{px-to-rem(24)};
+  --line-height-canon-group-a: #{px-to-rem(30)};
+  --font-size-canon-group-b: #{px-to-rem(28)};
+  --line-height-canon-group-b: #{px-to-rem(38)};
+  --font-size-canon-group-d: #{px-to-rem(40)};
+  --line-height-canon-group-d: #{px-to-rem(52)};
+
+  --font-size-trafalgar-group-a: #{px-to-rem(20)};
+  --line-height-trafalgar-group-a: #{px-to-rem(26)};
+  --font-size-trafalgar-group-b: #{px-to-rem(24)};
+  --line-height-trafalgar-group-b: #{px-to-rem(30)};
+  --font-size-trafalgar-group-d: #{px-to-rem(30)};
+  --line-height-trafalgar-group-d: #{px-to-rem(42)};
+
+  --font-size-paragon-group-a: #{px-to-rem(20)};
+  --line-height-paragon-group-a: #{px-to-rem(26)};
+  --font-size-paragon-group-b: #{px-to-rem(22)};
+  --line-height-paragon-group-b: #{px-to-rem(28)};
+  --font-size-paragon-group-d: #{px-to-rem(28)};
+  --line-height-paragon-group-d: #{px-to-rem(36)};
+
+  --font-size-double-pica-group-a: #{px-to-rem(20)};
+  --line-height-double-pica-group-a: #{px-to-rem(26)};
+  --font-size-double-pica-group-b: #{px-to-rem(20)};
+  --line-height-double-pica-group-b: #{px-to-rem(26)};
+  --font-size-double-pica-group-d: #{px-to-rem(24)};
+  --line-height-double-pica-group-d: #{px-to-rem(32)};
+
+  --font-size-great-primer-group-a: #{px-to-rem(16)};
+  --line-height-great-primer-group-a: #{px-to-rem(20)};
+  --font-size-great-primer-group-b: #{px-to-rem(18)};
+  --line-height-great-primer-group-b: #{px-to-rem(22)};
+  --font-size-great-primer-group-d: #{px-to-rem(20)};
+  --line-height-great-primer-group-d: #{px-to-rem(26)};
+
+  --font-size-body-copy-group-a: #{px-to-rem(16)};
+  --line-height-body-copy-group-a: #{px-to-rem(22)};
+  --font-size-body-copy-group-b: #{px-to-rem(16)};
+  --line-height-body-copy-group-b: #{px-to-rem(24)};
+  --font-size-body-copy-group-d: #{px-to-rem(16)};
+  --line-height-body-copy-group-d: #{px-to-rem(28)};
+
+  --font-size-pica-group-a: #{px-to-rem(16)};
+  --line-height-pica-group-a: #{px-to-rem(20)};
+  --font-size-pica-group-b: #{px-to-rem(16)};
+  --line-height-pica-group-b: #{px-to-rem(22)};
+  --font-size-pica-group-d: #{px-to-rem(16)};
+  --line-height-pica-group-d: #{px-to-rem(22)};
+
+  --font-size-long-primer-group-a: #{px-to-rem(15)};
+  --line-height-long-primer-group-a: #{px-to-rem(20)};
+  --font-size-long-primer-group-b: #{px-to-rem(15)};
+  --line-height-long-primer-group-b: #{px-to-rem(20)};
+  --font-size-long-primer-group-d: #{px-to-rem(15)};
+  --line-height-long-primer-group-d: #{px-to-rem(20)};
+
+  --font-size-brevier-group-a: #{px-to-rem(14)};
+  --line-height-brevier-group-a: #{px-to-rem(18)};
+  --font-size-brevier-group-b: #{px-to-rem(14)};
+  --line-height-brevier-group-b: #{px-to-rem(18)};
+  --font-size-brevier-group-d: #{px-to-rem(14)};
+  --line-height-brevier-group-d: #{px-to-rem(18)};
+
+  --font-size-minion-group-a: #{px-to-rem(12)};
+  --line-height-minion-group-a: #{px-to-rem(16)};
+  --font-size-minion-group-b: #{px-to-rem(12)};
+  --line-height-minion-group-b: #{px-to-rem(16)};
+  --font-size-minion-group-d: #{px-to-rem(12)};
+  --line-height-minion-group-d: #{px-to-rem(16)};
+
+}

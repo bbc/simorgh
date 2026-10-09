@@ -8,7 +8,7 @@ import Document, {
 } from 'next/document';
 import Script from 'next/script';
 
-import React, { HTMLAttributes, ReactElement } from 'react';
+import { HTMLAttributes, ReactElement } from 'react';
 import { Helmet, HelmetData } from 'react-helmet';
 import { CacheProvider } from '@emotion/react';
 import createEmotionServer from '@emotion/server/create-instance';
@@ -19,69 +19,25 @@ import {
   getProcessEnvAppVariables,
 } from '#lib/utilities/getEnvConfig';
 
-import AmpRenderer from '#server/Document/Renderers/AmpRenderer';
-import LiteRenderer from '#server/Document/Renderers/LiteRenderer';
-import litePageTransforms from '#server/Document/Renderers/litePageTransforms';
-import sendCustomMetric from '#server/utilities/customMetrics';
-import { NON_200_RESPONSE } from '#server/utilities/customMetrics/metrics.const';
-
-import nodeLogger from '#lib/logger.node';
-import {
-  SERVER_SIDE_RENDER_REQUEST_RECEIVED,
-  SERVER_SIDE_REQUEST_FAILED,
-} from '#lib/logger.const';
-import { OK, INTERNAL_SERVER_ERROR } from '#app/lib/statusCodes.const';
 import NO_JS_CLASSNAME from '#app/lib/noJs.const';
 
 import getPathExtension from '#app/utilities/getPathExtension';
-import ReverbTemplate from '#src/server/Document/Renderers/ReverbTemplate';
-import { PageTypes } from '#app/models/types/global';
-import ComponentTracking from '#src/server/Document/Renderers/ComponentTracking';
+import CanonicalToLiteRedirect from '#utilities/CanonicalToLiteRedirect';
 import addOperaMiniClassScript from '#app/lib/utilities/addOperaMiniClassScript';
-import removeSensitiveHeaders from '../utilities/removeSensitiveHeaders';
+import handleServerLogging from '#utilities/handleServerLogging';
+import getAmpLiteCss from '#utilities/getAmpLiteCss';
+import optimiseCssPrefixes from '#utilities/optimiseCssPrefixes';
+import treeshakeCssCustomProperties from '#utilities/treeshakeCssCustomProperties';
+import trimFontFaceSourcesToWoff2 from '#utilities/trimFontFaceSourcesToWoff2';
+import setSimorghEnvVars from '#app/lib/utilities/setSimorghEnvVars';
+import removeNoJsClass from '#app/lib/utilities/removeNoJsClass';
+import ComponentTracking from '../renderers/ComponentTracking';
+import ReverbTemplate from '../renderers/ReverbTemplate';
+import appArticleTransforms from '../renderers/appArticleTransforms';
+import litePageTransforms from '../renderers/litePageTransforms';
+import LiteRenderer from '../renderers/LiteRenderer';
+import AmpRenderer from '../renderers/AmpRenderer';
 import derivePageType from '../utilities/derivePageType';
-
-const logger = nodeLogger(__filename);
-
-const handleServerLogging = ({
-  ctx,
-  pageType,
-}: {
-  ctx: DocumentContext;
-  pageType: PageTypes | 'Unknown';
-}) => {
-  const url = ctx.asPath || '';
-  const headers = removeSensitiveHeaders(ctx.req?.headers);
-  const { statusCode } = ctx.res || {};
-  const { cause, message, name, stack } = ctx.err || {};
-
-  switch (statusCode) {
-    case OK:
-      logger.debug(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
-        url,
-        headers,
-        pageType,
-      });
-      break;
-    case INTERNAL_SERVER_ERROR:
-      sendCustomMetric({
-        metricName: NON_200_RESPONSE,
-        statusCode,
-        pageType,
-        requestUrl: url,
-      });
-      logger.error(SERVER_SIDE_REQUEST_FAILED, {
-        status: INTERNAL_SERVER_ERROR,
-        message: { cause, message, name, stack, url },
-        url,
-        headers,
-        pageType,
-      });
-      break;
-    default:
-      break;
-  }
-};
 
 type DocProps = {
   clientSideEnvVariables: EnvConfig;
@@ -95,6 +51,11 @@ type DocProps = {
   isLite: boolean;
   title: ReactElement;
 };
+
+const optimiseInlineCss = (css: string, renderedHtml: string): string =>
+  optimiseCssPrefixes(
+    trimFontFaceSourcesToWoff2(treeshakeCssCustomProperties(css, renderedHtml)),
+  );
 
 export default class AppDocument extends Document<DocProps> {
   static async getInitialProps(ctx: DocumentContext) {
@@ -120,6 +81,10 @@ export default class AppDocument extends Document<DocProps> {
 
     if (isLite) {
       initialProps.html = litePageTransforms(initialProps.html);
+    }
+
+    if (isApp) {
+      initialProps.html = appArticleTransforms(initialProps.html);
     }
 
     const { css, ids } = extractCritical(initialProps.html);
@@ -160,8 +125,28 @@ export default class AppDocument extends Document<DocProps> {
     const helmetLinkTags = helmet.link.toComponent();
     const helmetScriptTags = helmet.script.toComponent();
 
+    type NextDataProps = { page: string; dynamicIds?: Array<string | number> };
+    type PropsWithNextData = typeof this.props & {
+      // eslint-disable-next-line no-underscore-dangle
+      __NEXT_DATA__?: NextDataProps;
+    };
+
+    const getNextData = () => {
+      /* eslint-disable no-underscore-dangle */
+      const nextData = (this.props as PropsWithNextData).__NEXT_DATA__;
+      /* eslint-enable no-underscore-dangle */
+      return {
+        page: nextData?.page ?? '',
+        dynamicIds: nextData?.dynamicIds ?? [],
+      };
+    };
+
+    // Only AMP and Lite inline CSS, so canonical renders must not pay for this work.
+    const getInlineCss = () =>
+      optimiseInlineCss(css + getAmpLiteCss(getNextData()), this.props.html);
+
     switch (true) {
-      case isAmp && pageType === 'article':
+      case isAmp && pageType === 'article': {
         return (
           <AmpRenderer
             bodyContent={<Main />}
@@ -170,11 +155,12 @@ export default class AppDocument extends Document<DocProps> {
             helmetScriptTags={helmetScriptTags}
             htmlAttrs={htmlAttrs}
             ids={ids}
-            styles={css}
+            styles={getInlineCss()}
             title={title}
           />
         );
-      case isLite:
+      }
+      case isLite: {
         return (
           <LiteRenderer
             bodyContent={<Main />}
@@ -182,25 +168,30 @@ export default class AppDocument extends Document<DocProps> {
             helmetMetaTags={helmetMetaTags}
             helmetScriptTags={helmetScriptTags}
             htmlAttrs={htmlAttrs}
-            styles={css}
+            styles={getInlineCss()}
             title={title}
           />
         );
+      }
       default:
         return (
           <Html lang="en-GB" {...htmlAttrs} className={NO_JS_CLASSNAME}>
             <Head>
+              <CanonicalToLiteRedirect />
               <ReverbTemplate />
               <script
                 type="text/javascript"
                 dangerouslySetInnerHTML={{
-                  __html: `document.documentElement.classList.remove("no-js");`,
+                  __html: `(${removeNoJsClass.toString()})()`,
                 }}
               />
               {addOperaMiniClassScript()}
               <Script strategy="beforeInteractive">
-                {`window.SIMORGH_ENV_VARS=${JSON.stringify(clientSideEnvVariables)}`}
+                {`(${setSimorghEnvVars.toString()})(${JSON.stringify(clientSideEnvVariables)})`}
               </Script>
+              {pageType === 'live' && (
+                <script src="https://www.riddle.com/embed/build-embedjs/embedV2.js" />
+              )}
               {isApp && <meta name="robots" content="noindex" />}
               {title}
               {helmetMetaTags}

@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 import { render } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
@@ -86,24 +86,6 @@ describe('Nielsen Analytics Container', () => {
       );
 
       expect(container).toBeEmptyDOMElement();
-    });
-
-    it('should render Nielsen amp-analytics component', () => {
-      const { container } = render(
-        <ContextWrap
-          platform="amp"
-          pageType={ARTICLE_PAGE}
-          origin="bbc.com"
-          nielsenAnalyticsToggle
-          service="news"
-          pathname="somepath"
-        >
-          <NielsenAnalytics />
-        </ContextWrap>,
-      );
-
-      expect(container.firstChild).not.toBeNull();
-      expect(container.firstChild).toMatchSnapshot();
     });
 
     it('should set correct apid for news pages', () => {

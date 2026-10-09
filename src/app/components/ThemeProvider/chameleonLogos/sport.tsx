@@ -1,4 +1,3 @@
-import React from 'react';
 import build from '.';
 
 export default build({

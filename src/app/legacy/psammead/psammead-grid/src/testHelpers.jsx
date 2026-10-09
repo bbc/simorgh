@@ -1,16 +1,14 @@
-import React from 'react';
 import styled from '@emotion/styled';
 import Paragraph from '#psammead/psammead-paragraph/src';
-import Image from '#psammead/psammead-image/src';
+import Image from '#app/components/Image';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,
 } from '#psammead/gel-foundations/src/spacings';
 import MediaIndicator from '#psammead/psammead-media-indicator/src';
-import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 
 export const ExampleParagraph = ({ identifier = '1' }) => (
-  <Paragraph script={latin} service="news">
+  <Paragraph>
     {identifier}This is a long paragraph that will wrap for several lines. This
     is a long paragraph that will wrap for several lines. This is a long
     paragraph that will wrap for several lines. This is a long paragraph that
@@ -42,14 +40,14 @@ export const ExampleImage = () => {
         alt="Robert Downey Junior in Iron Man"
         src={imageSrc.replace('[WIDTH]', 660)}
         width="640"
-        srcset={imageSizes
+        srcSet={imageSizes
           .map(size => `${imageSrc.replace('[WIDTH]', size)}.webp ${size}w`)
           .join(', ')}
-        fallbackSrcset={imageSizes
+        fallbackSrcSet={imageSizes
           .map(size => `${imageSrc.replace('[WIDTH]', size)} ${size}w`)
           .join(', ')}
-        primaryMimeType="image/webp"
-        fallbackMimeType="image/jpeg"
+        mediaType="image/webp"
+        fallbackMediaType="image/jpeg"
       />
     </ImageSpacing>
   );

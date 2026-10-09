@@ -12,6 +12,7 @@ export type LatestMedia = {
   title: string;
   type: Media;
   imageAlt?: string;
+  isPortraitImage?: boolean;
 };
 
 export type LatestMediaItemProp = {
@@ -19,6 +20,7 @@ export type LatestMediaItemProp = {
   ariaLabelledBy: string;
   ref: () => Promise<void>;
   eventTrackingData: EventTrackingBlock;
+  isPortraitImage?: boolean;
 };
 
 export type ImageProp = {

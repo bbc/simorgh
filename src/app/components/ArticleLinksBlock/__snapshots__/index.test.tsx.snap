@@ -1,0 +1,529 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Article Links Block Mid Page Article Links Block it should match a11y snapshot for list 1`] = `
+.emotion-0 {
+  position: relative;
+}
+
+.emotion-2 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  background-color: #FFFFFF;
+  border: 0.125rem solid #222222;
+  color: #222222;
+  display: block;
+  left: 0;
+  line-height: 1;
+  padding: 0.75rem;
+  position: absolute;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  top: 0;
+  z-index: 10;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-2:not(:focus):not(:active) {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-4 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+<div>
+  <section
+    aria-labelledby="Show-all-links-no-images"
+    data-e2e="article-links-block"
+    role="region"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <a
+        class="emotion-2 emotion-3"
+        href="#end-of-article-links-block"
+      >
+        Skip content and continue reading
+      </a>
+      <strong
+        class="labelComponent"
+        data-testid="eoj-recommendations-heading"
+        id="Show-all-links-no-images"
+      >
+        Show all links (no images)
+      </strong>
+      <div
+        class="promo"
+      >
+        <ul>
+          <li
+            class="list"
+          >
+            <div
+              class="promoBox"
+            >
+              <a
+                class="link"
+                href="https://www.bbc.co.uk/pidgin"
+              >
+                Show headline
+                <svg
+                  aria-hidden="true"
+                  class="chevron"
+                  focusable="false"
+                  height="12"
+                  viewBox="0 0 32 32"
+                  width="12"
+                >
+                  <path
+                    d="M21.6 14.3L5.5 31h6.4l14.6-15L11.9 1H5.5l16.1 16.7v-3.4z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </li>
+          <li
+            class="list"
+          >
+            <div
+              class="promoBox"
+            >
+              <a
+                class="link"
+                href="https://www.bbc.com/mundo"
+              >
+                Link with Headline
+                <svg
+                  aria-hidden="true"
+                  class="chevron"
+                  focusable="false"
+                  height="12"
+                  viewBox="0 0 32 32"
+                  width="12"
+                >
+                  <path
+                    d="M21.6 14.3L5.5 31h6.4l14.6-15L11.9 1H5.5l16.1 16.7v-3.4z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </li>
+          <li
+            class="list"
+          >
+            <div
+              class="promoBox"
+            >
+              <a
+                class="link"
+                href="https://www.bbc.com/brasil"
+              >
+                Brasil homepage
+                <svg
+                  aria-hidden="true"
+                  class="chevron"
+                  focusable="false"
+                  height="12"
+                  viewBox="0 0 32 32"
+                  width="12"
+                >
+                  <path
+                    d="M21.6 14.3L5.5 31h6.4l14.6-15L11.9 1H5.5l16.1 16.7v-3.4z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <p
+        class="emotion-4 emotion-5"
+        id="end-of-article-links-block"
+        tabindex="-1"
+      >
+        End of content
+      </p>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`Article Links Block Mid Page Article Links Block it should match a11y snapshot for list with no title 1`] = `
+.emotion-0 {
+  position: relative;
+}
+
+.emotion-2 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  background-color: #FFFFFF;
+  border: 0.125rem solid #222222;
+  color: #222222;
+  display: block;
+  left: 0;
+  line-height: 1;
+  padding: 0.75rem;
+  position: absolute;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  top: 0;
+  z-index: 10;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-2:not(:focus):not(:active) {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-4 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+<div>
+  <section
+    aria-label="Related content"
+    data-e2e="article-links-block"
+    role="region"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <a
+        class="emotion-2 emotion-3"
+        href="#end-of-article-links-block"
+      >
+        Skip content and continue reading
+      </a>
+      <div
+        class="promoContainer"
+      >
+        <div
+          class="promoBox"
+        >
+          <a
+            class="link"
+            href="https://www.bbc.com/pidgin"
+          >
+            Single link
+            <svg
+              aria-hidden="true"
+              class="chevron"
+              focusable="false"
+              height="12"
+              viewBox="0 0 32 32"
+              width="12"
+            >
+              <path
+                d="M21.6 14.3L5.5 31h6.4l14.6-15L11.9 1H5.5l16.1 16.7v-3.4z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <p
+        class="emotion-4 emotion-5"
+        id="end-of-article-links-block"
+        tabindex="-1"
+      >
+        End of content
+      </p>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`Article Links Block Mid Page Article Links Block it should match a11y snapshot for single card 1`] = `
+.emotion-0 {
+  position: relative;
+}
+
+.emotion-2 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  background-color: #FFFFFF;
+  border: 0.125rem solid #222222;
+  color: #222222;
+  display: block;
+  left: 0;
+  line-height: 1;
+  padding: 0.75rem;
+  position: absolute;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  top: 0;
+  z-index: 10;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-2:not(:focus):not(:active) {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-4 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+<div>
+  <section
+    aria-labelledby="Single-link"
+    data-e2e="article-links-block"
+    role="region"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <a
+        class="emotion-2 emotion-3"
+        href="#end-of-article-links-block"
+      >
+        Skip content and continue reading
+      </a>
+      <strong
+        class="labelComponent"
+        data-testid="eoj-recommendations-heading"
+        id="Single-link"
+      >
+        Single link
+      </strong>
+      <div
+        class="promoContainer"
+      >
+        <div
+          class="promoBox"
+        >
+          <a
+            class="link"
+            href="https://www.bbc.com/pidgin"
+          >
+            Single link
+            <svg
+              aria-hidden="true"
+              class="chevron"
+              focusable="false"
+              height="12"
+              viewBox="0 0 32 32"
+              width="12"
+            >
+              <path
+                d="M21.6 14.3L5.5 31h6.4l14.6-15L11.9 1H5.5l16.1 16.7v-3.4z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <p
+        class="emotion-4 emotion-5"
+        id="end-of-article-links-block"
+        tabindex="-1"
+      >
+        End of content
+      </p>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`Article Links Block Mid Page Article Links Block it should match snapshot when in dark ui mode 1`] = `
+.emotion-0 {
+  position: relative;
+}
+
+.emotion-2 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  background-color: #FFFFFF;
+  border: 0.125rem solid #222222;
+  color: #222222;
+  display: block;
+  left: 0;
+  line-height: 1;
+  padding: 0.75rem;
+  position: absolute;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  top: 0;
+  z-index: 10;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-2:not(:focus):not(:active) {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-4 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+<div>
+  <section
+    aria-label="Related content"
+    data-e2e="article-links-block"
+    role="region"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <a
+        class="emotion-2 emotion-3"
+        href="#end-of-article-links-block"
+      >
+        Skip content and continue reading
+      </a>
+      <div
+        class="promoContainer"
+      >
+        <div
+          class="promoBox"
+        >
+          <a
+            class="link"
+            href="https://www.bbc.com/pidgin"
+          >
+            Single link
+            <svg
+              aria-hidden="true"
+              class="chevron"
+              focusable="false"
+              height="12"
+              viewBox="0 0 32 32"
+              width="12"
+            >
+              <path
+                d="M21.6 14.3L5.5 31h6.4l14.6-15L11.9 1H5.5l16.1 16.7v-3.4z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <p
+        class="emotion-4 emotion-5"
+        id="end-of-article-links-block"
+        tabindex="-1"
+      >
+        End of content
+      </p>
+    </div>
+  </section>
+</div>
+`;

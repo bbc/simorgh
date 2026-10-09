@@ -19,9 +19,10 @@ The `OptimizelyPageMetric` component:
 
 | Name              | type    | default | Description                         |
 | ----------------- | ------- | ------- | ----------------------------------- |
-| trackPageView     | boolean | false   | Enables tracking of page views.     |
 | trackPageDepth    | boolean | false   | Enables tracking of scroll depth.   |
 | trackPageComplete | boolean | false   | Enables tracking of page completes. |
+
+> Page view (`page-views`) and visit (`visit`) events are not controlled by this component. They are tracked from the Optimizely `DECISION` notification listener in [`withOptimizelyProvider`](../../legacy/containers/PageHandlers/withOptimizelyProvider/index.tsx). See [Page views per visit ratio metric](#page-views-per-visit-ratio-metric) below.
 
 ## experimentsForPageMetrics Array
 
@@ -60,7 +61,7 @@ You can use once on a page
 
 ```tsx
 {
-  <OptimizelyPageMetrics trackPageComplete trackPageView trackPageDepth />;
+  <OptimizelyPageMetrics trackPageComplete trackPageDepth />;
 }
 ```
 
@@ -73,8 +74,21 @@ Or multiple times to invoke different page metrics in different sections of the 
     <OptimizelyPageMetrics trackPageComplete />
   </main>;
   {
-    /* Track page views & scroll depth outside the main section of the page */
+    /* Track scroll depth outside the main section of the page */
   }
-  <OptimizelyPageMetrics trackPageView trackPageDepth />;
+  <OptimizelyPageMetrics trackPageDepth />;
 }
 ```
+
+## Page views per visit ratio metric
+
+The page views per visit ratio metric is built from two Optimizely events:
+
+- numerator: `page-views`
+- denominator: `visit`
+
+Both events are tracked from the `DECISION` notification listener in [`withOptimizelyProvider`](../../legacy/containers/PageHandlers/withOptimizelyProvider/index.tsx), not from this component. Tracking them from the listener ensures the visit (denominator) is always sent before the page view (numerator) on the same page load, so the page view falls inside Optimizely's 48 hour attribution window for the denominator. Tracking from the listener also guarantees the events fire for every activated experiment, independent of this component's render lifecycle.
+
+Events are de-duplicated per navigation: while the current URL (pathname + query string) is unchanged, multiple `DECISION` notifications will only emit `page-views` (and `visit`) once; navigating to a different URL and later returning may emit `page-views` again, and `visit` will only emit when the 30-minute inactivity window has elapsed.
+
+For interpretation, add the numerator and denominator events as separate metrics alongside the ratio metric in Optimizely.

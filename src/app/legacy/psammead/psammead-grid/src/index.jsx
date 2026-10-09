@@ -1,4 +1,4 @@
-import React from 'react';
+import { forwardRef, Children, cloneElement } from 'react';
 import styled from '@emotion/styled';
 import {
   GEL_MARGIN_BELOW_400PX,
@@ -276,7 +276,7 @@ const GridComponent = styled.div`
   }
 `;
 
-const Grid = React.forwardRef(
+const Grid = forwardRef(
   (
     {
       children,
@@ -298,12 +298,12 @@ const Grid = React.forwardRef(
     ref,
   ) => {
     const renderChildren = () =>
-      React.Children.map(children, child => {
+      Children.map(children, child => {
         if (child) {
           const isNestedGridComponent = child.type === Grid;
 
           if (isNestedGridComponent) {
-            return React.cloneElement(child, {
+            return cloneElement(child, {
               parentColumns: otherProps.columns,
               parentEnableGelGutters: enableGelGutters,
             });

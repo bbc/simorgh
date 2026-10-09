@@ -1,6 +1,3 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-import { jsx } from '@emotion/react';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
@@ -19,7 +16,6 @@ const Promo = ({ block, eventTrackingData }: PromoProps) => {
   const overtypedHeadline = block?.headlines?.overtyped ?? '';
   const mainHeadline = block?.headlines?.headline ?? '';
   const headlineBlockText =
-    // @ts-expect-error - Optimo nested block structure
     block?.headlines?.promoHeadline?.blocks?.[0]?.model?.blocks?.[0]?.model
       ?.text ?? '';
   const name = block?.name ?? '';

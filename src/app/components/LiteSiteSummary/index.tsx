@@ -1,6 +1,4 @@
-/** @jsx jsx */
 import { use } from 'react';
-import { jsx } from '@emotion/react';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import Paragraph from '../Paragraph';
 import Text from '../Text';
@@ -42,6 +40,7 @@ const LiteSiteSummary = () => {
         </Paragraph>
         <Paragraph data-e2e="to-main-site">
           <CallToActionLink
+            id="go-back-to-canonical-link"
             url={canonicalLink}
             data-ignore-lite
             {...clickTrackerHandler}

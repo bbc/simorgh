@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import Timestamp from '#psammead/psammead-timestamp-container/src';
 import isTenHoursAgo from '#lib/utilities/isTenHoursAgo';
 import { ServiceContext } from '../../../contexts/ServiceContext';
@@ -8,8 +8,7 @@ const PromoTimestamp = ({
   serviceDatetimeLocale = '',
   className = '',
 }) => {
-  const { altCalendar, script, datetimeLocale, service, timezone } =
-    use(ServiceContext);
+  const { altCalendar, datetimeLocale, timezone } = use(ServiceContext);
 
   const locale = serviceDatetimeLocale || datetimeLocale;
 
@@ -22,9 +21,7 @@ const PromoTimestamp = ({
       locale={locale}
       dateTimeFormat="YYYY-MM-DD"
       format="LL"
-      script={script}
       padding={false}
-      service={service}
       timezone={timezone}
       isRelative={isRelative}
       className={className}

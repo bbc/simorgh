@@ -1,5 +1,4 @@
 import { GetServerSidePropsContext } from 'next';
-import extractHeaders from '#server/utilities/extractHeaders';
 import { AV_EMBEDS } from '#app/routes/utils/pageTypes';
 import fetchPageData from '#app/routes/utils/fetchPageData';
 import certsRequired from '#app/routes/utils/certsRequired';
@@ -11,17 +10,14 @@ import filterForBlockType from '#app/lib/utilities/blockHandlers';
 import nodeLogger from '#lib/logger.node';
 import { OK } from '#app/lib/statusCodes.const';
 import { BFF_FETCH_ERROR, ROUTING_INFORMATION } from '#app/lib/logger.const';
-import sendCustomMetric from '#server/utilities/customMetrics';
-import { NON_200_RESPONSE } from '#server/utilities/customMetrics/metrics.const';
-import getAgent from '#server/utilities/getAgent';
+import sendCustomMetric from '#utilities/customMetrics';
+import { NON_200_RESPONSE } from '#utilities/customMetrics/metrics.const';
+import getAgent from '#utilities/getAgent';
 
 const logger = nodeLogger(__filename);
 
 export default async (context: GetServerSidePropsContext) => {
-  const {
-    resolvedUrl,
-    req: { headers: reqHeaders },
-  } = context;
+  const { resolvedUrl } = context;
 
   let pageStatus;
   let pageJson;
@@ -128,7 +124,6 @@ export default async (context: GetServerSidePropsContext) => {
   return {
     props: {
       id: resolvedUrl,
-      isNextJs: true,
       isAvEmbeds: true,
       pageData: avEmbed
         ? {
@@ -150,7 +145,6 @@ export default async (context: GetServerSidePropsContext) => {
       service,
       status: pageStatus,
       variant,
-      ...extractHeaders(reqHeaders),
     },
   };
 };

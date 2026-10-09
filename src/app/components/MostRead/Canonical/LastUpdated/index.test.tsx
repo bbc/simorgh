@@ -1,20 +1,20 @@
-import React from 'react';
-import { render } from '../../../react-testing-library-with-providers';
-import latin from '../../../ThemeProvider/fontScripts/latin';
+import { render, screen } from '../../../react-testing-library-with-providers';
 import LastUpdated from '.';
 
 describe('MostReadCanonical - LastUpdated', () => {
   it('should render LastUpdated correctly', () => {
-    const { container } = render(
+    render(
       <LastUpdated
         timestamp={864691200}
         prefix="Last Updated:"
-        script={latin}
-        service="news"
         locale="en-gb"
         timezone="Europe/London"
       />,
     );
-    expect(container).toMatchSnapshot();
+
+    const time = screen.getByText('Last Updated: 11 January 1970');
+
+    expect(time.tagName).toBe('TIME');
+    expect(time).toHaveAttribute('datetime', '1970-01-11');
   });
 });

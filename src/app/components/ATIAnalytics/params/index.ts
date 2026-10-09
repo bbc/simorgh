@@ -1,37 +1,23 @@
-import {
-  buildPageATIUrl,
-  buildPageATIParams,
-  buildPageReverbParams,
-} from './buildParams';
-import {
-  ATIConfigurationDetailsProviders,
-  ReverbDetailsProviders,
-} from '../types';
+import { buildAnalyticsParams } from './buildParams';
+import { ReverbDetailsProviders } from '../types';
 
-export const buildATIUrl = ({
+export default ({
   requestContext,
   serviceContext,
   atiData,
-}: ATIConfigurationDetailsProviders) => {
-  return buildPageATIUrl({ atiData, requestContext, serviceContext });
-};
-
-export const buildReverbParams = ({
-  requestContext,
-  serviceContext,
-  atiData,
-}: ReverbDetailsProviders) => {
-  return buildPageReverbParams({ atiData, requestContext, serviceContext });
-};
-
-export const buildATIEventTrackingParams = ({
-  requestContext,
-  serviceContext,
-  atiData,
-}: ATIConfigurationDetailsProviders) => {
-  return buildPageATIParams({
+  isSignedIn,
+  hashedId,
+  isPersonalisationOn,
+}: ReverbDetailsProviders & {
+  isSignedIn?: boolean;
+  hashedId?: string | null;
+  isPersonalisationOn?: boolean;
+}) =>
+  buildAnalyticsParams({
     atiData,
     requestContext,
     serviceContext,
+    isSignedIn,
+    hashedId,
+    isPersonalisationOn,
   });
-};

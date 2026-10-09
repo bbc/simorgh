@@ -1,6 +1,3 @@
-/** @jsx jsx */
-
-import { jsx } from '@emotion/react';
 import { ForwardedRef, forwardRef } from 'react';
 import { getIsLive } from '#lib/utilities/getStoryPromoInfo';
 import Promo from '#components/OptimoPromos';
@@ -13,7 +10,6 @@ const getArticleTopStoryItem = (item: TopStoryItem) => {
   const overtypedHeadline = item?.headlines?.overtyped ?? '';
   const mainHeadline = item?.headlines?.headline ?? '';
   const headlineBlockText =
-    // @ts-expect-error - nested block structure
     item?.headlines?.promoHeadline?.blocks?.[0]?.model?.blocks?.[0]?.model
       ?.text ?? '';
 

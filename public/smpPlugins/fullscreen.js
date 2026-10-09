@@ -1,4 +1,7 @@
 /* eslint-disable no-unused-vars */
+/* eslint-disable no-var */
+/* eslint-disable vars-on-top */
+/* eslint-disable func-names */
 
 class FullScreenPlugin {
   pluginInitialisation(pluginUtils) {
@@ -15,8 +18,7 @@ class FullScreenPlugin {
   }
 }
 
-const runPlugin = () => {
+var runPlugin = function () {
   const fullScreenPlugin = new FullScreenPlugin();
-
   return fullScreenPlugin;
 };

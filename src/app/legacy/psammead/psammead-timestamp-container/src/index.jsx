@@ -1,4 +1,3 @@
-import React from 'react';
 import Timestamp from '#psammead/psammead-timestamp/src';
 import {
   isValidDateTime,
@@ -15,9 +14,7 @@ const TimestampContainer = ({
   prefix = '',
   suffix = '',
   timezone = 'Europe/London',
-  script,
   locale = 'en-gb',
-  service,
   altCalendar,
   className = '',
 }) => {
@@ -53,8 +50,6 @@ const TimestampContainer = ({
         timezone,
       })}
       padding={padding}
-      script={script}
-      service={service}
       className={className}
     >
       {timestampText}

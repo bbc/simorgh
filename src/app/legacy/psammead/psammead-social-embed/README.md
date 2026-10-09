@@ -119,7 +119,7 @@ This component takes an `onRender` prop which is invoked when the embed is fully
 #### Example
 
 ```jsx
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styled from '@emotion/styled';
 
 const DEFAULT_MIN_HEIGHT = '18.75rem';

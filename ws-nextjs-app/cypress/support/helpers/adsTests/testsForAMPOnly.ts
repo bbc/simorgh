@@ -9,7 +9,7 @@ export default ({ service }: ServiceParametersType) => {
       const config = serviceConfig[service] as ServiceConfigDataType;
       const serviceName = config.name;
 
-      cy.getToggles(serviceName).then(() => {
+      cy.fetchToggles(serviceName).then(() => {
         cy.fixture(`toggles/${serviceName}.json`).then(toggles => {
           const adsEnabled = path(['ads', 'enabled'], toggles);
 

@@ -726,27 +726,6 @@
             }
           ],
           "type": "list"
-        },
-        {
-          "text": "Загрузите наше приложение:",
-          "markupType": "plain_text",
-          "type": "paragraph"
-        },
-        {
-          "numbered": false,
-          "items": [
-            {
-              "text": "<link><caption>iOS</caption><url href=\"https://apps.apple.com/us/app/%D0%BD%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8-%D0%B1%D0%B8-%D0%B1%D0%B8-%D1%81%D0%B8/id504278066\" platform=\"highweb\"/></link>",
-              "markupType": "candy_xml",
-              "type": "listItem"
-            },
-            {
-              "text": "<link><caption>Android</caption><url href=\"https://play.google.com/store/apps/details?id=uk.co.bbc.russian\" platform=\"highweb\"/></link>",
-              "markupType": "candy_xml",
-              "type": "listItem"
-            }
-          ],
-          "type": "list"
         }
       ]
     },

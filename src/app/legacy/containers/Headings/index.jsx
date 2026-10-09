@@ -1,10 +1,8 @@
-import React, { use } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
 import { Headline, SubHeading } from '#psammead/psammead-headings/src';
 import idSanitiser from '#lib/utilities/idSanitiser';
 import { GridItemMedium, GridItemLarge } from '#components/Grid';
-import { ServiceContext } from '../../../contexts/ServiceContext';
 import Fragment from '../Fragment';
 import InlineContainer from '../InlineContainer';
 import Blocks from '../Blocks';
@@ -48,7 +46,6 @@ const HeadingsContainer = ({
   type,
   className,
 }) => {
-  const { script, service } = use(ServiceContext);
   const Heading = Headings[type];
   const GridItem = GridItems[type];
 
@@ -68,18 +65,19 @@ const HeadingsContainer = ({
   const headingId = isFirstBlock ? 'content' : null; // Used for the skiplink
   const subHeadingId = sanitiseSubheadline(type, text);
   const isHeading = type === 'headline';
+  const isSubHeading = type === 'subheadline';
+
   const headingProps = {
+    ...(isHeading && isFirstBlock && { tabIndex: '-1' }),
+    ...(isSubHeading && { tabIndex: '-1' }),
     id: isHeading ? headingId : subHeadingId,
     as: isHeading && !isFirstBlock ? 'strong' : null,
-    tabIndex: isHeading && !isFirstBlock ? null : '-1',
     className,
   };
 
   return (
     <GridItem>
-      <Heading script={script} service={service} {...headingProps}>
-        {renderText()}
-      </Heading>
+      <Heading {...headingProps}>{renderText()}</Heading>
     </GridItem>
   );
 };

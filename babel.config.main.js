@@ -1,15 +1,8 @@
-const plugins = [
-  '@babel/plugin-proposal-object-rest-spread', // allows ...spread notation
-  '@babel/plugin-syntax-dynamic-import', // allows `await import()` syntax
-  '@babel/plugin-proposal-export-default-from',
-  '@babel/plugin-transform-runtime',
-  '@loadable/babel-plugin',
-];
+const plugins = ['@emotion/babel-plugin'];
 
 // allows dynamic `import()` in Node tests.
 if (process.env.NODE_ENV === 'test') {
   plugins.push('dynamic-import-node');
-  plugins.push('@babel/plugin-proposal-throw-expressions'); // allows `throw new Error();`
 }
 
 const overrides = [
@@ -49,14 +42,13 @@ module.exports = api => {
               }),
           node: 'current',
         },
-        // analyses code & polyfills only the features that are used, only for the targeted browsers
-        useBuiltIns: 'usage',
-        corejs: '3',
       },
     ],
-    '@babel/preset-react', // transform JSX to JS
+    [
+      '@babel/preset-react',
+      { runtime: 'automatic', importSource: '@emotion/react' },
+    ],
     '@babel/preset-typescript',
-    '@emotion/babel-preset-css-prop',
   ];
 
   return {

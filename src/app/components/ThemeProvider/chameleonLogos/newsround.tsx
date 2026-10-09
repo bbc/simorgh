@@ -1,5 +1,3 @@
-import React from 'react';
-
 const height = 24.34;
 const width = 133.34;
 const newsround = {

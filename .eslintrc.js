@@ -38,6 +38,7 @@ module.exports = {
     'no-only-tests',
   ],
   globals: {
+    globalThis: false,
     cy: false,
     Cypress: false,
     expect: false,
@@ -59,6 +60,8 @@ module.exports = {
     'react/jsx-one-expression-per-line': 'off',
     'react/jsx-props-no-spreading': 'off',
     'react/function-component-definition': 'off',
+    'react/jsx-uses-react': 'off',
+    'react/react-in-jsx-scope': 'off',
     'react/no-unknown-property': [
       'error',
       {
@@ -91,6 +94,12 @@ module.exports = {
       },
     ],
     'import/extensions': [1, { json: 'ignorePackages' }],
+    'import/no-unresolved': [
+      'error',
+      {
+        ignore: ['^#psammead/moment-timezone-include/tz/'],
+      },
+    ],
     'jsx-a11y/no-redundant-roles': 'off',
     'no-only-tests/no-only-tests': 'error',
     'no-unsafe-optional-chaining': 'error',

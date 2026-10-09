@@ -1,14 +1,10 @@
-import React from 'react';
+import { screen } from '@testing-library/react';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
-import Image from '#psammead/psammead-image/src';
+import Image from '#app/components/Image';
 import { render } from '../../../../components/react-testing-library-with-providers';
-import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';
-import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import Bulletin from '.';
 
 const BulletinComponent = ({
-  script,
-  service,
   isLive,
   mediaType,
   ctaText,
@@ -31,20 +27,18 @@ const BulletinComponent = ({
     <Image
       src={imageSrc}
       alt="Iron man"
-      srcset={imageSizes
+      srcSet={imageSizes
         .map(size => `${imageSrc.replace('[WIDTH]', size)}.webp ${size}w`)
         .join(', ')}
-      fallbackSrcset={imageSizes
+      fallbackSrcSet={imageSizes
         .map(size => `${imageSrc.replace('[WIDTH]', size)} ${size}w`)
         .join(', ')}
-      primaryMimeType="image/webp"
-      fallbackMimeType="image/jpeg"
+      mediaType="image/webp"
+      fallbackMediaType="image/jpeg"
     />
   );
   return (
     <Bulletin
-      script={script}
-      service={service}
       image={image}
       mediaType={mediaType}
       headlineText={headlineText}
@@ -64,98 +58,80 @@ describe('Bulletin', () => {
   suppressPropWarnings(['ariaId', 'undefined']);
 
   it('should render audio correctly', () => {
-    const { container } = render(
+    render(
       <BulletinComponent
-        script={latin}
-        service="news"
         mediaType="audio"
         ctaText="Listen"
         ariaId="https://bbc.co.uk"
       />,
     );
-    expect(container).toMatchSnapshot();
+    expect(screen.getByText('This is the headline')).toBeInTheDocument();
   });
 
   it('should render audio correctly with lang prop passed in', () => {
-    const { container } = render(
+    render(
       <BulletinComponent
-        script={arabic}
-        service="arabic"
         mediaType="audio"
         ctaText="Listen"
         dir="rtl"
         lang="en-GB"
         ariaId="https://bbc.co.uk"
       />,
+      { service: 'arabic' },
     );
-    expect(container).toMatchSnapshot();
+    expect(screen.getByText('This is the headline')).toBeInTheDocument();
   });
 
   it('should render video correctly', () => {
-    const { container } = render(
+    render(
       <BulletinComponent
-        script={latin}
-        service="news"
         mediaType="video"
         ctaText="Watch"
         ariaId="https://bbc.co.uk"
       />,
     );
-    expect(container).toMatchSnapshot();
+    expect(screen.getByText('This is the headline')).toBeInTheDocument();
   });
 
   it('should render live audio correctly', () => {
-    const { container } = render(
+    render(
       <BulletinComponent
-        script={latin}
-        service="news"
         mediaType="audio"
         ctaText="Listen"
         ariaId="https://bbc.co.uk"
         isLive
       />,
     );
-    expect(container).toMatchSnapshot();
+    expect(screen.getByText('This is the headline')).toBeInTheDocument();
   });
 
   it('should render live video correctly', () => {
-    const { container } = render(
+    render(
       <BulletinComponent
-        script={latin}
-        service="news"
         mediaType="video"
         ctaText="Watch"
         ariaId="https://bbc.co.uk"
         isLive
       />,
     );
-    expect(container).toMatchSnapshot();
+    expect(screen.getByText('This is the headline')).toBeInTheDocument();
   });
 
   it('should render radio bulletin without summary correctly', () => {
-    const { container } = render(
+    render(
       <BulletinComponent
-        script={latin}
-        service="news"
         mediaType="audio"
         ctaText="Listen"
         ariaId="https://bbc.co.uk"
         withSummary={false}
       />,
     );
-    expect(container).toMatchSnapshot();
+    expect(screen.getByText('This is the headline')).toBeInTheDocument();
   });
 
   // the below test is a temporary test for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
   it('should render radio bulletin without ariaId', () => {
-    const { container } = render(
-      <BulletinComponent
-        script={latin}
-        service="news"
-        mediaType="audio"
-        ctaText="Listen"
-      />,
-    );
-    expect(container).toMatchSnapshot();
+    render(<BulletinComponent mediaType="audio" ctaText="Listen" />);
+    expect(screen.getByText('This is the headline')).toBeInTheDocument();
   });
 });

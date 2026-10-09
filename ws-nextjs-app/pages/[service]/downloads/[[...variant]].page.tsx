@@ -1,12 +1,11 @@
 import { GetServerSideProps } from 'next';
 import dynamic from 'next/dynamic';
 import { DOWNLOADS_PAGE } from '#app/routes/utils/pageTypes';
-import logResponseTime from '#server/utilities/logResponseTime';
+import logResponseTime from '#utilities/logResponseTime';
 
-import deriveVariant from '#nextjs/utilities/deriveVariant';
+import deriveVariant from '#utilities/deriveVariant';
 import PageDataParams from '#app/models/types/pageDataParams';
-import getToggles from '#app/lib/utilities/getToggles/withCache';
-import extractHeaders from '#server/utilities/extractHeaders';
+import fetchToggles from '#app/lib/utilities/fetchToggles';
 import dataFetch from './dataFetch';
 
 const downloadsPageLayout = dynamic(() => import('./downloadsPageLayout'));
@@ -43,15 +42,11 @@ export const getServerSideProps: GetServerSideProps = async context => {
   const variant = deriveVariant(variantFromUrl);
 
   const downloadData = await dataFetch(service);
-  const toggles = await getToggles(service);
-
-  const { headers: reqHeaders } = context.req;
+  const toggles = await fetchToggles({ service });
 
   return {
     props: {
       error: null,
-      isAmp: false,
-      isNextJs: true,
       pageData: {
         downloadData,
         metadata: {
@@ -67,7 +62,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
       timeOnServer: Date.now(), // TODO: check if needed?
       toggles,
       variant,
-      ...extractHeaders(reqHeaders),
     },
   };
 };

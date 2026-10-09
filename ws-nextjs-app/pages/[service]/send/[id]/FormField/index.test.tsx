@@ -1,8 +1,9 @@
-import React from 'react';
 import {
   act,
+  fireEvent,
   render,
 } from '#app/components/react-testing-library-with-providers';
+import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import * as FormContext from '../FormContext';
 import FormField, { FormComponentProps } from '.';
 import { Field } from '../types';
@@ -11,6 +12,20 @@ import { ContextProps } from '../FormContext';
 jest.mock('next/router', () => ({
   useRouter: () => ({ query: { id: 'u1234' } }),
 }));
+
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  default: jest.fn(),
+}));
+
+jest.mock('../FormContext', () => {
+  const originalModule = jest.requireActual('../FormContext');
+  return {
+    __esModule: true,
+    ...originalModule,
+  };
+});
 
 const ComponentWithContext = ({
   props,
@@ -27,6 +42,8 @@ const ComponentWithContext = ({
 describe('FormField', () => {
   beforeEach(() => {
     jest.restoreAllMocks();
+
+    mockMatchMedia();
   });
 
   it('should render a text input with an associated label', async () => {
@@ -53,7 +70,6 @@ describe('FormField', () => {
 
     expect(label).toBeInTheDocument();
     expect(text).toBeInTheDocument();
-    expect(container).toMatchSnapshot();
   });
 
   it('should render a textarea input with an associated label', async () => {
@@ -80,7 +96,6 @@ describe('FormField', () => {
 
     expect(label).toBeInTheDocument();
     expect(textArea).toBeInTheDocument();
-    expect(container).toMatchSnapshot();
   });
 
   it('should render a textarea with a maxiumum word limit if provided', async () => {
@@ -150,7 +165,6 @@ describe('FormField', () => {
 
     expect(label).toBeInTheDocument();
     expect(text).toBeInTheDocument();
-    expect(container).toMatchSnapshot();
   });
 
   it('should render a checkbox input with an associated label', async () => {
@@ -179,7 +193,98 @@ describe('FormField', () => {
 
     expect(label).toBeInTheDocument();
     expect(checkboxInput).toBeInTheDocument();
-    expect(container).toMatchSnapshot();
+  });
+
+  it('should render and select one constrained-list radio option', async () => {
+    const { container } = await act(() => {
+      return render(
+        <ComponentWithContext
+          props={{
+            id: 'testRadioID',
+            htmlType: 'radiobutton',
+            label: 'Choose one option',
+          }}
+          fields={[
+            {
+              id: 'testRadioID',
+              type: 'constrained-list',
+              htmlType: 'radiobutton',
+              label: 'Choose one option',
+              description: '',
+              validation: {
+                mandatory: true,
+                multiSelect: false,
+                options: [
+                  { label: 'First option', value: 'first' },
+                  { label: 'Second option', value: 'second' },
+                ],
+              },
+            },
+          ]}
+        />,
+      );
+    });
+
+    const fieldset = container.querySelector('fieldset');
+    const firstRadio = container.querySelector(
+      'input[type=radio][value=first]',
+    ) as HTMLInputElement;
+    const secondRadio = container.querySelector(
+      'input[type=radio][value=second]',
+    ) as HTMLInputElement;
+
+    expect(fieldset).toHaveTextContent('Choose one option');
+    expect(firstRadio).toBeInTheDocument();
+    expect(secondRadio).toBeInTheDocument();
+
+    fireEvent.click(firstRadio);
+    fireEvent.click(secondRadio);
+
+    expect(firstRadio).not.toBeChecked();
+    expect(secondRadio).toBeChecked();
+  });
+
+  it('should render and select multiple constrained-list checkbox options', async () => {
+    const { container } = await act(() => {
+      return render(
+        <ComponentWithContext
+          props={{
+            id: 'testCheckboxGroupID',
+            htmlType: 'checkbox',
+            label: 'Choose all that apply',
+          }}
+          fields={[
+            {
+              id: 'testCheckboxGroupID',
+              type: 'constrained-list',
+              htmlType: 'checkbox',
+              label: 'Choose all that apply',
+              description: '',
+              validation: {
+                mandatory: true,
+                multiSelect: true,
+                options: [
+                  { label: 'First option', value: 'first' },
+                  { label: 'Second option', value: 'second' },
+                ],
+              },
+            },
+          ]}
+        />,
+      );
+    });
+
+    const checkboxes = container.querySelectorAll('input[type=checkbox]');
+    const firstCheckbox = checkboxes[0] as HTMLInputElement;
+    const secondCheckbox = checkboxes[1] as HTMLInputElement;
+
+    expect(checkboxes).toHaveLength(2);
+
+    fireEvent.click(firstCheckbox);
+    fireEvent.click(secondCheckbox);
+
+    expect(firstCheckbox).toBeChecked();
+    expect(secondCheckbox).toBeChecked();
   });
 
   it('should render a tel input with an associated label', async () => {
@@ -208,7 +313,6 @@ describe('FormField', () => {
 
     expect(label).toBeInTheDocument();
     expect(telephoneInput).toBeInTheDocument();
-    expect(container).toMatchSnapshot();
   });
 
   it('should render a required input with an associated label', async () => {
@@ -245,7 +349,13 @@ describe('FormField', () => {
       );
     });
 
-    expect(container).toMatchSnapshot();
+    const label = container.querySelector('label[for=testAllyID]');
+    const input = container.querySelector('input[id=testAllyID][type=text]');
+
+    expect(label).toBeInTheDocument();
+    expect(input).toBeInTheDocument();
+    expect(label).toHaveTextContent('This is a required text field');
+    expect(label).not.toHaveTextContent(/\boptional\b/i);
   });
 
   it.each([

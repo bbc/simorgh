@@ -1,12 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
-import {
-  Burmese,
-  Bengali,
-  EasternArabic,
-  Nepali,
-  WesternArabic,
-} from '../../../../legacy/psammead/psammead-locales/src/numerals';
 import { Services } from '../../../../models/types/global';
 import { ColumnLayout, MostReadRankProps, Size } from '../../types';
 import styles, {
@@ -15,17 +6,7 @@ import styles, {
   getMultiColumnCss,
 } from './index.styles';
 
-export const serviceNumerals = (service: Services) => {
-  const servicesNonWesternNumerals = {
-    bengali: Bengali,
-    burmese: Burmese,
-    dari: EasternArabic,
-    nepali: Nepali,
-    pashto: EasternArabic,
-    persian: EasternArabic,
-  };
-  return servicesNonWesternNumerals[service] || WesternArabic;
-};
+import serviceNumerals from '../../utilities/getServiceNumerals';
 
 interface ColumnCssProps {
   listIndex: number | string;
@@ -80,6 +61,7 @@ const MostReadRank = ({
   return (
     <div css={columnCss} dir={dir}>
       <span
+        data-e2e="most-read-rank"
         css={[
           styles.span,
           size === 'small' ? styles.smallFont : styles.defaultFont,

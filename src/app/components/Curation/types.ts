@@ -6,6 +6,6 @@ export interface CurationGridProps {
   headingLevel?: number;
   isFirstCuration?: boolean;
   eventTrackingData: EventTrackingData;
-  timeOfDayExperimentName?: string;
-  timeOfDayVariant?: string;
+  // experiment: newswb_ws_homepage_related_topic_promos
+  showRelatedTopicExperiment?: boolean;
 }

@@ -67,7 +67,7 @@ exports[`Canonical Articles Footer Anchors should match text and url 9`] = `
 
 exports[`Canonical Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/news"`;
 
-exports[`Canonical Articles Footer Paragraphs should match text 1`] = `"© 2025 BBC. The BBC is not responsible for the content of external sites. Read about our approach to external linking."`;
+exports[`Canonical Articles Footer Paragraphs should match text 1`] = `"© 2026 BBC. The BBC is not responsible for the content of external sites. Read about our approach to external linking."`;
 
 exports[`Canonical Articles Header I can see the branding 1`] = `
 {
@@ -160,7 +160,8 @@ exports[`Canonical Articles Image Caption should match text 1`] = `"Image captio
 exports[`Canonical Articles Image should match snapshot 1`] = `
 <img
   alt="Pauline Clayton"
-  class="css-4ejld5"
+  class="css-1seqhu9"
+  fetchpriority="high"
   height="360"
   loading="eager"
   sizes="(min-width: 1008px) 760px, 100vw"
@@ -290,7 +291,7 @@ exports[`Canonical Articles SEO Lang attribute 1`] = `"en-gb"`;
 
 exports[`Canonical Articles SEO Linked data should match text 1`] = `
 {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "NewsArticle",
@@ -366,7 +367,7 @@ exports[`Canonical Articles SEO Linked data should match text 1`] = `
 
 exports[`Canonical Articles SEO OG description 1`] = `"Royal wedding flowers given to Hackney hospice"`;
 
-exports[`Canonical Articles SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_news/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg"`;
+exports[`Canonical Articles SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1200/branded_news/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg"`;
 
 exports[`Canonical Articles SEO OG image alt 1`] = `"Pauline Clayton"`;
 
@@ -392,7 +393,7 @@ exports[`Canonical Articles SEO Twitter description 1`] = `"Royal wedding flower
 
 exports[`Canonical Articles SEO Twitter image alt 1`] = `"Pauline Clayton"`;
 
-exports[`Canonical Articles SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_news/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg"`;
+exports[`Canonical Articles SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1200/branded_news/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg"`;
 
 exports[`Canonical Articles SEO Twitter site 1`] = `"@BBCNews"`;
 

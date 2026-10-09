@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import { use, MouseEvent } from 'react';
 import pathOr from 'ramda/src/pathOr';
 

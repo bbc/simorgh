@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import { NavigationUl, NavigationLi } from '#psammead/psammead-navigation/src';
 import {
   DropdownUl,
@@ -15,9 +15,7 @@ import Amp from './index.amp';
 const renderListItems = (
   Li,
   navigation,
-  script,
   currentPage,
-  service,
   dir,
   activeIndex,
   clickTracker,
@@ -34,10 +32,8 @@ const renderListItems = (
       <Li
         key={title}
         url={url}
-        script={script}
         active={active}
         currentPageText={currentPage}
-        service={service}
         dir={dir}
         clickTracker={clickTracker}
         viewTracker={viewTracker}
@@ -49,14 +45,13 @@ const renderListItems = (
     return [...listAcc, listItem];
   }, []);
 
-const NavigationContainer = ({ propsForTopBarOJComponent }) => {
+const NavigationContainer = ({ navItems, propsForTopBarOJComponent }) => {
   const { isAmp, isLite } = use(RequestContext);
+
   const { blocks = [] } = propsForTopBarOJComponent || {};
   const {
-    script,
     translations,
-    navigation,
-    service,
+    navigation: navFromServiceConfig,
     dir,
     collapsibleNavigation,
   } = use(ServiceContext);
@@ -92,6 +87,10 @@ const NavigationContainer = ({ propsForTopBarOJComponent }) => {
     return <LanguageNavigation />;
   }
 
+  // Prefer navItems passed from props over service config
+  // Eventually all services will migrate to passing navItems via props
+  const navigation = navItems || navFromServiceConfig;
+
   if (!navigation || navigation.length === 0) {
     return null;
   }
@@ -105,9 +104,7 @@ const NavigationContainer = ({ propsForTopBarOJComponent }) => {
       {renderListItems(
         NavigationLi,
         navigation,
-        script,
         currentPage,
-        service,
         dir,
         activeIndex,
         scrollableNavClickTrackerHandler,
@@ -118,13 +115,11 @@ const NavigationContainer = ({ propsForTopBarOJComponent }) => {
   );
 
   const dropdownListItems = (
-    <DropdownUl>
+    <DropdownUl role="list">
       {renderListItems(
         DropdownLi,
         navigation,
-        script,
         currentPage,
-        service,
         dir,
         activeIndex,
         dropdownNavClickTrackerHandler,
@@ -141,8 +136,6 @@ const NavigationContainer = ({ propsForTopBarOJComponent }) => {
       dropdownListItems={dropdownListItems}
       menuAnnouncedText={navMenuText}
       dir={dir}
-      script={script}
-      service={service}
       blocks={blocks}
     />
   );

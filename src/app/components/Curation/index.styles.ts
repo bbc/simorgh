@@ -8,6 +8,17 @@ const styles = {
       position: 'relative',
       zIndex: 1,
     }),
+
+  pvCarousel: ({ spacings, mq }: Theme) =>
+    css({
+      margin: `${spacings.DOUBLE}rem 0`,
+      [mq.GROUP_1_MIN_WIDTH]: {
+        margin: `${spacings.TRIPLE}rem 0`,
+      },
+      [mq.GROUP_3_MIN_WIDTH]: {
+        margin: `${spacings.DOUBLE}rem 0`,
+      },
+    }),
 };
 
 export default styles;

@@ -1,5 +1,4 @@
 import { GetServerSidePropsContext } from 'next';
-import extractHeaders from '#server/utilities/extractHeaders';
 import { ARTICLE_PAGE, MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import parseRoute from '#app/routes/utils/parseRoute';
 import nodeLogger from '#lib/logger.node';
@@ -8,17 +7,18 @@ import { ROUTING_INFORMATION } from '#app/lib/logger.const';
 import getPathExtension from '#app/utilities/getPathExtension';
 import PageDataParams from '#app/models/types/pageDataParams';
 import handleError from '#app/routes/utils/handleError';
-import { PageTypes, Toggles } from '#app/models/types/global';
-import augmentWithDisclaimer from '#app/routes/article/utils/augmentWithDisclaimer';
-import shouldRender from '#app/legacy/containers/PageHandlers/withData/shouldRender';
+import { PageTypes } from '#app/models/types/global';
+
 import { ArticleMetadata } from '#app/models/types/optimo';
-import { getServerExperiments } from '#server/utilities/experimentHeader';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import augmentWithDisclaimer from './augmentWithDisclaimer';
+import shouldRender from '../../../utilities/shouldRender';
 import getPageData from '../../../utilities/pageRequests/getPageData';
 
 const logger = nodeLogger(__filename);
 
-const transformPageData = (toggles?: Toggles) =>
-  augmentWithDisclaimer({ toggles, positionFromTimestamp: 0 });
+const transformPageData = () =>
+  augmentWithDisclaimer({ positionFromTimestamp: 0 });
 
 const getDerivedArticleType = (metadata: ArticleMetadata) => {
   let pageType: PageTypes = metadata?.type;
@@ -33,18 +33,30 @@ const getDerivedArticleType = (metadata: ArticleMetadata) => {
 export default async (context: GetServerSidePropsContext) => {
   const {
     resolvedUrl,
-    req: { headers: reqHeaders },
+    req: { headers: reqHeaders, url: requestUrl },
   } = context;
 
   const { service, renderer_env: rendererEnv } =
     context.query as PageDataParams;
 
   const resolvedUrlWithoutQuery = resolvedUrl.split('?')?.[0];
+  const canonicalPathname =
+    requestUrl?.split('?')?.[0] || resolvedUrlWithoutQuery;
 
-  const { isAmp, isApp, isLite } = getPathExtension(resolvedUrlWithoutQuery);
+  const { isAmp } = getPathExtension(resolvedUrlWithoutQuery);
   const { variant } = parseRoute(resolvedUrl);
 
-  const { data, toggles } = await getPageData({
+  const countryHeader =
+    reqHeaders['x-country'] || reqHeaders['x-bbc-edge-country'];
+  const country = countryHeader
+    ? (Array.isArray(countryHeader) ? countryHeader[0] : countryHeader)
+        .toString()
+        .toLowerCase()
+    : null;
+
+  const shouldFetchCountryCuration = getEnvConfig().SIMORGH_APP_ENV !== 'live';
+
+  const { data } = await getPageData({
     id: resolvedUrlWithoutQuery,
     service,
     variant: variant || undefined,
@@ -52,6 +64,7 @@ export default async (context: GetServerSidePropsContext) => {
     resolvedUrl: resolvedUrlWithoutQuery,
     pageType: ARTICLE_PAGE,
     isAmp,
+    ...(shouldFetchCountryCuration && country && { country }),
   });
 
   const { pageData, status } = data;
@@ -61,30 +74,29 @@ export default async (context: GetServerSidePropsContext) => {
   let routingInfoLogger = logger.debug;
 
   const { hasRequestSucceeded, status: renderStatus } = shouldRender(
-    { pageData, status },
+    { pageData: pageData?.article, status },
     service,
-    resolvedUrlWithoutQuery,
-    ARTICLE_PAGE,
+    ['brasil', 'BBCScotland'], // Passport homes to ignore for service validation
   );
 
   // If request has fails or should not be rendered, return non-200 status
   if (!hasRequestSucceeded && renderStatus !== OK) {
     routingInfoLogger = logger.error;
 
+    routingInfoLogger(ROUTING_INFORMATION, {
+      url: resolvedUrlWithoutQuery,
+      status: renderStatus,
+      pageType: ARTICLE_PAGE,
+    });
+
     return {
       props: {
-        isApp,
-        isAmp,
-        isLite,
-        isNextJs: true,
         service,
         status: renderStatus,
         timeOnServer: Date.now(),
         variant: variant || null,
         pageType: ARTICLE_PAGE,
-        pathname: resolvedUrlWithoutQuery,
-        toggles,
-        ...extractHeaders(reqHeaders),
+        pathname: canonicalPathname,
       },
     };
   }
@@ -94,8 +106,8 @@ export default async (context: GetServerSidePropsContext) => {
   }
 
   const { article, secondaryData } = data?.pageData || {};
-
-  const isArticleOlderThanSixHours = Date.now() - article.metadata.lastPublished > 21600000;
+  const isArticleOlderThanSixHours =
+    Date.now() - article.metadata.lastPublished > 21600000;
   const maxAge = isArticleOlderThanSixHours ? 90 : 45;
 
   context.res.setHeader(
@@ -109,10 +121,13 @@ export default async (context: GetServerSidePropsContext) => {
     latestMedia = null,
     mostRead = null,
     billboardCuration = null,
-    mediaCuration = null,
-  } = secondaryData;
+    videoCuration: mediaCuration = null,
+    portraitVideoItems = null,
+    countryCuration = null,
+    countryTopicIdToReorder = null,
+  } = secondaryData || {};
 
-  const transformedArticleData = transformPageData(toggles)(article);
+  const transformedArticleData = transformPageData()(article);
 
   routingInfoLogger(ROUTING_INFORMATION, {
     url: resolvedUrlWithoutQuery,
@@ -122,19 +137,10 @@ export default async (context: GetServerSidePropsContext) => {
 
   const derivedPageType = getDerivedArticleType(article.metadata);
 
-  const serverSideExperiments = getServerExperiments({
-    headers: reqHeaders,
-    service,
-    pageType: derivedPageType,
-  });
-
   return {
     props: {
+      country,
       id: resolvedUrlWithoutQuery,
-      isAmp,
-      isApp,
-      isLite,
-      isNextJs: true,
       pageData: {
         ...transformedArticleData,
         secondaryColumn: {
@@ -145,15 +151,15 @@ export default async (context: GetServerSidePropsContext) => {
           billboardCuration,
         },
         mostRead,
+        portraitVideoItems,
+        countryCuration,
+        countryTopicIdToReorder,
       },
       pageType: derivedPageType,
-      pathname: resolvedUrlWithoutQuery,
-      serverSideExperiments,
+      pathname: canonicalPathname,
       service,
       status,
-      toggles,
       variant: variant || null,
-      ...extractHeaders(reqHeaders),
     },
   };
 };

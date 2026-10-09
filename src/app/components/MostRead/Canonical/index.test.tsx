@@ -1,4 +1,3 @@
-import React from 'react';
 import type { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import { data as arabicMostReadData } from '../../../../../data/arabic/mostRead/index.json';
 import { data as pidginMostReadData } from '../../../../../data/pidgin/mostRead/index.json';
@@ -50,6 +49,45 @@ const MostReadCanonicalWithContext = ({
 describe('MostRead Canonical', () => {
   beforeEach(() => {
     jest.clearAllMocks();
+  });
+
+  it('should render the live label only for items with isLive: true', () => {
+    const testData = {
+      items: [
+        {
+          id: '1',
+          rank: 1,
+          title: 'Live News',
+          href: '/news/live',
+          isLive: true,
+          timestamp: 1686821815000,
+        },
+        {
+          id: '2',
+          rank: 2,
+          title: 'Ancient News',
+          href: '/news/ancient',
+          timestamp: 1686821815001,
+        },
+      ],
+      lastRecordTimeStamp: '2026-05-03T14:42:00Z',
+      firstRecordTimeStamp: '2026-05-03T14:27:00Z',
+      generated: '2026-05-03T14:44:35.496Z',
+    };
+
+    const { container } = render(
+      <MostReadCanonicalWithContext service="pidgin" data={testData} />,
+    );
+
+    const items = container.querySelectorAll('li');
+    // First item should have the live label
+    expect(
+      items[0].querySelector('[data-e2e="most-read-live-pulse"]'),
+    ).toBeInTheDocument();
+    // Second item should not have the live label
+    expect(
+      items[1].querySelector('[data-e2e="most-read-live-pulse"]'),
+    ).toBeNull();
   });
 
   [

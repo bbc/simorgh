@@ -1,6 +1,4 @@
 /* eslint-disable jsx-a11y/aria-role */
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import { use } from 'react';
 import moment from 'moment';
 import path from 'ramda/src/path';
@@ -9,13 +7,17 @@ import Promo from '#components/Promo';
 import { Summary } from '#app/models/types/curationData';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import isMediaType from '#app/lib/utilities/isMedia';
+import { MY_NEWS_PAGE } from '#app/routes/utils/pageTypes';
+import { getRelatedTopicForPromo } from '#app/lib/experiments/homepageRelatedTopicPromos';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '../../../contexts/RequestContext';
-
 import LiveLabel from '../../LiveLabel';
-
 import styles from './index.styles';
+
+interface CurationPromoProps extends Summary {
+  showRelatedTopicExperiment?: boolean;
+}
 
 const CurationPromo = ({
   id,
@@ -30,11 +32,14 @@ const CurationPromo = ({
   headingLevel = 2,
   isLive,
   eventTrackingData,
-  timeOfDayExperimentName,
-  timeOfDayVariant,
-}: Summary) => {
-  const { isAmp, isLite } = use(RequestContext);
+  isPortraitImage,
+  relatedTopic,
+  showRelatedTopicExperiment = false,
+}: CurationPromoProps) => {
+  const { isAmp, isLite, pageType } = use(RequestContext);
   const { translations } = use(ServiceContext);
+
+  const shouldShowFallbackPlaceholder = !imageUrl && pageType === MY_NEWS_PAGE;
 
   const audioTranslation = path(['media', 'audio'], translations);
   const videoTranslation = path(['media', 'video'], translations);
@@ -54,23 +59,36 @@ const CurationPromo = ({
     (type === 'video' && `${videoTranslation}, `) ||
     (type === 'photogallery' && `${photoGalleryTranslation}, `);
 
-  const clickTrackerHandler = useClickTrackerHandler({
+  const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
+
+  const relatedTopicToShow = getRelatedTopicForPromo(
+    relatedTopic,
+    type,
+    showRelatedTopicExperiment,
+  );
+
+  const relatedTopicEventTrackingData = {
     ...eventTrackingData,
-    ...(timeOfDayVariant && {
-      sendOptimizelyEvents: true,
-      experimentName: timeOfDayExperimentName,
-      experimentVariant: timeOfDayVariant,
-    }),
-  });
+    itemTracker: {
+      ...eventTrackingData?.itemTracker,
+      type: 'simple-curation-grid-related-topic',
+      text: relatedTopic?.title,
+    },
+  };
+
+  const relatedTopicClickTrackerHandler = useClickTrackerHandler(
+    relatedTopicEventTrackingData,
+  );
 
   return (
     <Promo css={styles.promo} className="">
-      {imageUrl && (
+      {(imageUrl || shouldShowFallbackPlaceholder) && (
         <Promo.Image
           src={imageUrl}
           alt={imageAlt}
           lazyLoad={lazy}
           isAmp={isAmp}
+          isPortraitImage={isPortraitImage}
           {...(isLite && { css: styles.image })}
         >
           {isMedia && (
@@ -95,14 +113,35 @@ const CurationPromo = ({
           </Promo.A>
         ) : (
           <Promo.A href={link} {...clickTrackerHandler}>
-            {isLive ? <LiveLabel>{title}</LiveLabel> : title}
+            {isLive ? (
+              <span css={styles.liveLabel}>
+                <LiveLabel>{title}</LiveLabel>
+              </span>
+            ) : (
+              title
+            )}
           </Promo.A>
         )}
       </Promo.Heading>
       {!isLive ? (
-        <Promo.Timestamp className="promo-timestamp">
-          {lastPublished}
-        </Promo.Timestamp>
+        <div
+          css={styles.metadataAndTopicData}
+          className="metadata-and-topic-data"
+        >
+          {relatedTopicToShow && (
+            <a
+              href={relatedTopicToShow.link.url}
+              css={styles.relatedTopicLink}
+              className="related-topic-link"
+              {...relatedTopicClickTrackerHandler}
+            >
+              {relatedTopicToShow.title}
+            </a>
+          )}
+          <Promo.Timestamp className="promo-timestamp">
+            {lastPublished}
+          </Promo.Timestamp>
+        </div>
       ) : null}
     </Promo>
   );

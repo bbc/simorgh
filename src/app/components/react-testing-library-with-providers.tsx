@@ -1,14 +1,25 @@
-import React, { FC, PropsWithChildren, ReactElement } from 'react';
+import { FC, PropsWithChildren, ReactElement } from 'react';
 import { render, RenderOptions } from '@testing-library/react';
 
+import { AccountProvider } from '#app/contexts/AccountContext';
+import { IdctaConfig } from '#app/models/types/account';
 import { ServiceContextProvider } from '../contexts/ServiceContext';
 import { RequestContextProvider } from '../contexts/RequestContext';
 import { ToggleContextProvider } from '../contexts/ToggleContext';
 import { UserContextProvider } from '../contexts/UserContext';
 import { EventTrackingContextProvider } from '../contexts/EventTrackingContext';
+import {
+  ReverbParamsContextProvider,
+  PageMetadata,
+} from '../contexts/ReverbParamsContext';
 import ThemeProvider from './ThemeProvider';
-import { PageTypes, Services, Toggles, Variants } from '../models/types/global';
-import { ATIData } from './ATIAnalytics/types';
+import {
+  PageTypes,
+  ServerSideExperiment,
+  Services,
+  Toggles,
+  Variants,
+} from '../models/types/global';
 
 jest.mock('./ThemeProvider');
 
@@ -23,7 +34,7 @@ interface Props extends PropsWithChildren {
   isApp?: boolean;
   isLite?: boolean;
   pageData?: object;
-  atiData?: ATIData;
+  pageMetadata?: PageMetadata;
   bbcOrigin?: string | null;
   pageType?: PageTypes;
   derivedPageType?: string | null;
@@ -37,11 +48,13 @@ interface Props extends PropsWithChildren {
   isNextJs?: boolean;
   pageLang?: string;
   isUK?: boolean | null;
+  idctaConfig?: IdctaConfig | null;
+  serverSideExperiments?: ServerSideExperiment[] | null;
 }
 
 const AllTheProviders: FC<Props> = ({
   children,
-  atiData,
+  pageMetadata,
   id = null,
   isAmp = false,
   isApp = false,
@@ -59,6 +72,8 @@ const AllTheProviders: FC<Props> = ({
   statusCode = null,
   isNextJs = false,
   isUK = null,
+  idctaConfig = null,
+  serverSideExperiments = null,
 }: Props) => {
   return (
     <ToggleContextProvider toggles={toggles}>
@@ -83,14 +98,21 @@ const AllTheProviders: FC<Props> = ({
           showCookieBannerBasedOnCountry={showCookieBannerBasedOnCountry}
           statusCode={statusCode}
           isUK={isUK}
+          serverSideExperiments={serverSideExperiments}
         >
-          <EventTrackingContextProvider atiData={atiData}>
-            <UserContextProvider>
-              <ThemeProvider service={service} variant={variant}>
-                {children}
-              </ThemeProvider>
-            </UserContextProvider>
-          </EventTrackingContextProvider>
+          <AccountProvider initialConfig={idctaConfig}>
+            <ReverbParamsContextProvider metadata={pageMetadata}>
+              <EventTrackingContextProvider
+                atiData={pageMetadata?.atiAnalytics}
+              >
+                <UserContextProvider>
+                  <ThemeProvider service={service} variant={variant}>
+                    {children}
+                  </ThemeProvider>
+                </UserContextProvider>
+              </EventTrackingContextProvider>
+            </ReverbParamsContextProvider>
+          </AccountProvider>
         </RequestContextProvider>
       </ServiceContextProvider>
     </ToggleContextProvider>
@@ -109,7 +131,7 @@ const customRender = (
     bbcOrigin,
     pageData,
     pageType,
-    atiData,
+    pageMetadata,
     derivedPageType,
     pathname,
     service,
@@ -121,6 +143,8 @@ const customRender = (
     isNextJs,
     pageLang,
     isUK,
+    idctaConfig,
+    serverSideExperiments,
   } = options || {};
 
   return render(ui, {
@@ -132,7 +156,7 @@ const customRender = (
         isLite={isLite}
         bbcOrigin={bbcOrigin}
         pageData={pageData}
-        atiData={atiData}
+        pageMetadata={pageMetadata}
         pageType={pageType}
         derivedPageType={derivedPageType}
         pathname={pathname}
@@ -145,6 +169,8 @@ const customRender = (
         isNextJs={isNextJs}
         pageLang={pageLang}
         isUK={isUK}
+        idctaConfig={idctaConfig}
+        serverSideExperiments={serverSideExperiments}
       >
         {children}
       </AllTheProviders>

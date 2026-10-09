@@ -1,4 +1,3 @@
-import React from 'react';
 import { PageTypes, Services } from '#app/models/types/global';
 import { RequestContextProvider } from '#app/contexts/RequestContext';
 import MediaLoaderComponent from '.';

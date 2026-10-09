@@ -1,6 +1,7 @@
 import { OEmbedData } from '#app/components/Embeds/types';
 import {
   MediaCollection,
+  MediaBlock,
   PortraitClipMediaBlock,
 } from '#app/components/MediaLoader/types';
 import { RadioScheduleData } from '#app/models/types/radioSchedule';
@@ -23,6 +24,18 @@ interface BaseSummary {
   position?: number;
 }
 
+export type RelatedTopicLink = {
+  url: string;
+  scheme?: string;
+  host?: string;
+  path?: string;
+};
+
+export type RelatedTopic = {
+  link: RelatedTopicLink;
+  title: string;
+};
+
 export interface Summary extends BaseSummary {
   mediaType?: 'audio' | 'video' | 'photogallery';
   lazy?: boolean;
@@ -30,8 +43,9 @@ export interface Summary extends BaseSummary {
   readTime?: number;
   eventTrackingData?: EventTrackingData;
   visualProminence?: VisualProminence | string;
-  timeOfDayExperimentName?: string | null;
-  timeOfDayVariant?: string | null;
+  isPortraitImage?: boolean;
+  inSituMedia?: MediaBlock[];
+  relatedTopic?: RelatedTopic | null;
 }
 
 export const VISUAL_STYLE = {
@@ -84,6 +98,9 @@ export interface BaseCuration {
   contentType?: string;
   pageTitle?: string;
   mediaCollection?: MediaCollection[];
+  associatedContent?: {
+    uri?: string;
+  };
 }
 
 export interface Curation extends BaseCuration {
@@ -91,6 +108,4 @@ export interface Curation extends BaseCuration {
   curationLength?: number;
   nthCurationByStyleAndProminence?: number;
   renderVisuallyHiddenH2Title?: boolean;
-  timeOfDayVariant?: string | null;
-  timeOfDayExperimentName?: string | null;
 }

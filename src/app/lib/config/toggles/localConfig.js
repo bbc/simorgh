@@ -2,6 +2,10 @@ import SERVICES from '../services';
 
 export default {
   _environment: 'local',
+  account: {
+    enabled: true,
+    value: 'hindi|mundo|portuguese',
+  },
   ads: {
     enabled: true,
   },
@@ -9,6 +13,9 @@ export default {
     enabled: false,
   },
   articleLiteSiteLink: { enabled: true },
+  articlePortraitVideo: {
+    enabled: true,
+  },
   comscoreAnalytics: {
     enabled: true,
   },
@@ -25,13 +32,22 @@ export default {
   eventTracking: {
     enabled: true,
   },
+  googlePreferredSource: {
+    enabled: false,
+  },
   homePageRadioSchedule: {
     enabled: true,
   },
   include: {
     enabled: true,
   },
+  livePagePolling: {
+    enabled: true,
+  },
   liveRadioSchedule: {
+    enabled: true,
+  },
+  locationTopicCuration: {
     enabled: true,
   },
   midArticleOnwardJourney: {
@@ -70,11 +86,25 @@ export default {
   scriptLink: {
     enabled: true,
   },
+  sportDataPolling: {
+    enabled: true,
+  },
+  showSportDataHeader: {
+    enabled: true,
+  },
   topBarOJs: {
     enabled: true,
   },
+  topicUasPersonalization: {
+    enabled: true,
+    value: 'hindi|mundo|portuguese',
+  },
   variantCookie: {
     enabled: true,
+  },
+  uasPersonalization: {
+    enabled: true,
+    value: 'hindi|mundo|portuguese',
   },
   webVitalsMonitoring: {
     enabled: true,

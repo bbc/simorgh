@@ -3,18 +3,15 @@ import dynamic from 'next/dynamic';
 import isLive from '#app/lib/utilities/isLive';
 import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import nodeLogger from '#lib/logger.node';
-import logResponseTime from '#server/utilities/logResponseTime';
-
-import getPathExtension from '#app/utilities/getPathExtension';
+import logResponseTime from '#utilities/logResponseTime';
 import { ROUTING_INFORMATION } from '#app/lib/logger.const';
 import { OK } from '#app/lib/statusCodes.const';
-import sendCustomMetric from '#server/utilities/customMetrics';
-import { NON_200_RESPONSE } from '#server/utilities/customMetrics/metrics.const';
+import sendCustomMetric from '#utilities/customMetrics';
+import { NON_200_RESPONSE } from '#utilities/customMetrics/metrics.const';
 import PageDataParams from '#app/models/types/pageDataParams';
-import deriveVariant from '#nextjs/utilities/deriveVariant';
-import extractHeaders from '#server/utilities/extractHeaders';
-import isValidPageNumber from '#nextjs/utilities/pageQueryValidator';
-import getPageData from '#nextjs/utilities/pageRequests/getPageData';
+import deriveVariant from '#utilities/deriveVariant';
+import isValidPageNumber from '#utilities/pageQueryValidator';
+import getPageData from '#utilities/pageRequests/getPageData';
 
 const LivePageLayout = dynamic(() => import('./LivePageLayout'));
 
@@ -43,10 +40,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
     post: assetId,
   } = context.query as PageDataParams;
 
-  const { headers: reqHeaders } = context.req;
-
-  const { isApp, isLite } = getPathExtension(context.resolvedUrl);
-
   const variant = deriveVariant(variantFromUrl);
 
   if (!isValidPageNumber(page)) {
@@ -61,19 +54,15 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
     return {
       props: {
-        isApp,
-        isLite,
-        isNextJs: true,
         service,
         status: 404,
         timeOnServer: Date.now(),
         variant,
-        ...extractHeaders(reqHeaders),
       },
     };
   }
 
-  const { data, toggles } = await getPageData({
+  const { data } = await getPageData({
     id,
     page,
     service,
@@ -105,10 +94,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
     props: {
       error: data?.error || null,
       id,
-      isApp,
-      isLite,
-      isAmp: false,
-      isNextJs: true,
       page: page || null,
       pageData: data?.pageData
         ? {
@@ -125,9 +110,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
       service,
       status: data.status,
       timeOnServer: Date.now(), // TODO: check if needed?
-      toggles,
       variant,
-      ...extractHeaders(reqHeaders),
     },
   };
 };

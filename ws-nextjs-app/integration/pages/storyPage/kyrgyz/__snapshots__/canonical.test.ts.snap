@@ -112,7 +112,7 @@ exports[`Canonical Story Page Footer Anchors should match text and url 9`] = `
 
 exports[`Canonical Story Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/kyrgyz"`;
 
-exports[`Canonical Story Page Footer Paragraphs should match text 1`] = `"© 2025 BBC. Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес. Башка интернет сайттардын мазмуну боюнча биздин позиция."`;
+exports[`Canonical Story Page Footer Paragraphs should match text 1`] = `"© 2026 BBC. Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес. Башка интернет сайттардын мазмуну боюнча биздин позиция."`;
 
 exports[`Canonical Story Page Header I can see the branding 1`] = `
 {
@@ -130,47 +130,13 @@ exports[`Canonical Story Page Header Navigation link should match text and url 1
 }
 `;
 
-exports[`Canonical Story Page Header Navigation link should match text and url 2`] = `
-{
-  "text": "Видео жаңылыктар",
-  "url": "/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=4t",
-}
-`;
-
-exports[`Canonical Story Page Header Navigation link should match text and url 3`] = `
-{
-  "text": "Шайлоо-2025",
-  "url": "/kyrgyz/topics/cpdmzj1382mt",
-}
-`;
-
-exports[`Canonical Story Page Header Navigation link should match text and url 4`] = `
-{
-  "text": "Кыргызстан",
-  "url": "/kyrgyz/topics/cz74kjpyk07t",
-}
-`;
-
-exports[`Canonical Story Page Header Navigation link should match text and url 5`] = `
-{
-  "text": "Дүйнө",
-  "url": "/kyrgyz/topics/ck2l9z012nkt",
-}
-`;
-
-exports[`Canonical Story Page Header Navigation link should match text and url 6`] = `
-{
-  "text": "Журнал",
-  "url": "/kyrgyz/topics/czp8pjrkgp0t",
-}
-`;
-
 exports[`Canonical Story Page Image Caption should match text 1`] = `"Сүрөттүн түшүндүрмөсү, Social media"`;
 
 exports[`Canonical Story Page Image should match snapshot 1`] = `
 <img
   alt="social media"
-  class="css-4ejld5"
+  class="css-1seqhu9"
+  fetchpriority="high"
   height="351"
   loading="eager"
   sizes="(min-width: 1008px) 760px, 100vw"
@@ -267,7 +233,7 @@ exports[`Canonical Story Page SEO Lang attribute 1`] = `"ky"`;
 
 exports[`Canonical Story Page SEO Linked data should match text 1`] = `
 {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "NewsArticle",
@@ -276,7 +242,7 @@ exports[`Canonical Story Page SEO Linked data should match text 1`] = `
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News Кыргыз Кызматы",
@@ -307,7 +273,7 @@ exports[`Canonical Story Page SEO Linked data should match text 1`] = `
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News Кыргыз Кызматы",
@@ -322,7 +288,7 @@ exports[`Canonical Story Page SEO Linked data should match text 1`] = `
 
 exports[`Canonical Story Page SEO OG description 1`] = `"A test STY for social embeds"`;
 
-exports[`Canonical Story Page SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_kyrgyz/CF33/test/_63734035_socialmedia.jpg"`;
+exports[`Canonical Story Page SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1200/branded_kyrgyz/CF33/test/_63734035_socialmedia.jpg"`;
 
 exports[`Canonical Story Page SEO OG image alt 1`] = `"social media"`;
 
@@ -348,7 +314,7 @@ exports[`Canonical Story Page SEO Twitter description 1`] = `"A test STY for soc
 
 exports[`Canonical Story Page SEO Twitter image alt 1`] = `"social media"`;
 
-exports[`Canonical Story Page SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_kyrgyz/CF33/test/_63734035_socialmedia.jpg"`;
+exports[`Canonical Story Page SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1200/branded_kyrgyz/CF33/test/_63734035_socialmedia.jpg"`;
 
 exports[`Canonical Story Page SEO Twitter site 1`] = `"@bbckyrgyz"`;
 

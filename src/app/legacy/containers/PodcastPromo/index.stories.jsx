@@ -1,15 +1,11 @@
-import React from 'react';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
 import InlinePodcastPromo from './Inline';
-import SecondaryColumnPodcastPromo from './SecondaryColumn';
 
 const serviceContextMock = {
-  service: 'news',
-  script: latin,
   dir: 'ltr',
+  service: 'news',
   podcastPromo: {
     title: 'Podcast',
     brandTitle: 'Sounds of the 90s with Fearne Cotton',
@@ -30,14 +26,57 @@ const serviceContextMock = {
   },
 };
 
-const Component = ({ inline = false }) => (
+const serviceContextMockYoutube = {
+  ...serviceContextMock,
+  podcastPromo: {
+    ...serviceContextMock.podcastPromo,
+    linkLabel: {
+      ...serviceContextMock.podcastPromo.linkLabel,
+      href: 'https://www.youtube.com',
+    },
+  },
+};
+
+const serviceContextMockPodcast = {
+  ...serviceContextMock,
+  podcastPromo: {
+    ...serviceContextMock.podcastPromo,
+    linkLabel: {
+      ...serviceContextMock.podcastPromo.linkLabel,
+      href: 'https://www.bbc.co.uk/podcast',
+    },
+  },
+};
+const serviceContextMockWhatsapp = {
+  ...serviceContextMock,
+  podcastPromo: {
+    ...serviceContextMock.podcastPromo,
+    linkLabel: {
+      ...serviceContextMock.podcastPromo.linkLabel,
+      href: 'https://whatsapp',
+    },
+  },
+};
+
+const serviceContextMockElections = {
+  ...serviceContextMock,
+  podcastPromo: {
+    ...serviceContextMock.podcastPromo,
+    linkLabel: {
+      ...serviceContextMock.podcastPromo.linkLabel,
+      href: 'https://www.bbc.com/portuguese/articles/czd2prld130o',
+    },
+  },
+};
+
+const Component = ({ value = serviceContextMock }) => (
   <ToggleContextProvider
     toggles={{
       eventTracking: { enabled: true },
     }}
   >
-    <ServiceContext.Provider value={serviceContextMock}>
-      {inline ? <InlinePodcastPromo /> : <SecondaryColumnPodcastPromo />}
+    <ServiceContext.Provider value={value}>
+      <InlinePodcastPromo />
     </ServiceContext.Provider>
   </ToggleContextProvider>
 );
@@ -47,5 +86,16 @@ export default {
   Component,
 };
 
-export const SecondaryColumnPromo = () => <Component />;
-export const InlinePromo = () => <Component inline />;
+export const InlinePromoGeneric = () => <Component />;
+export const InlinePromoWhatsapp = () => (
+  <Component value={serviceContextMockWhatsapp} />
+);
+export const InlinePromoYoutube = () => (
+  <Component value={serviceContextMockYoutube} />
+);
+export const InlinePromoPodcast = () => (
+  <Component value={serviceContextMockPodcast} />
+);
+export const InlinePromoElections = () => (
+  <Component value={serviceContextMockElections} />
+);

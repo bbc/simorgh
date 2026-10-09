@@ -13,7 +13,7 @@ export type MetadataFormats = {
   type: string;
 }[];
 
-export type MetadataTopics = {
+export type TopicTag = {
   topicName: string;
   topicId: string;
   subjectList: {
@@ -28,4 +28,4 @@ export type MetadataTopics = {
   types: string[];
   home: string;
   topicUrl: string;
-}[];
+};

@@ -1,8 +1,8 @@
-import React from 'react';
 import {
   act,
   render,
 } from '#app/components/react-testing-library-with-providers';
+import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import SuccessScreen from '.';
 import * as FormContext from '../FormContext';
 import { ContextProps } from '../FormContext';
@@ -11,6 +11,20 @@ jest.mock('next/router', () => ({
   useRouter: () => ({ query: { id: 'u1234' } }),
 }));
 
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  default: jest.fn(),
+}));
+
+jest.mock('../FormContext', () => {
+  const originalModule = jest.requireActual('../FormContext');
+  return {
+    __esModule: true,
+    ...originalModule,
+  };
+});
+
 const MOCK_TITLE = 'Test Title';
 const MOCK_EMAIL = 'test@bbc.co.uk';
 const MOCK_RETENTION_PERIOD = '270';
@@ -18,6 +32,8 @@ const MOCK_RETENTION_PERIOD = '270';
 describe('SuccessScreen', () => {
   beforeEach(() => {
     jest.restoreAllMocks();
+
+    mockMatchMedia();
   });
 
   it('Should have a h1', async () => {

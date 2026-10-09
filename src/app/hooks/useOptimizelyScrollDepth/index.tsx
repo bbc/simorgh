@@ -18,6 +18,14 @@ const useOptimizelyScrollDepth = () => {
   const [scrollHundred, setScrollHundred] = useState(false);
 
   useEffect(() => {
+    const handleScroll = () => setScrollDepth(getScrollDepth);
+
+    document.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => document.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
     if (scrollDepth >= 25 && !scrollTwentyFive) {
       optimizely?.track('scroll25');
       setScrollTwentyFive(true);
@@ -37,14 +45,6 @@ const useOptimizelyScrollDepth = () => {
       optimizely?.track('scroll100');
       setScrollHundred(true);
     }
-
-    document.addEventListener('scroll', () => setScrollDepth(getScrollDepth), {
-      passive: true,
-    });
-    return () =>
-      document.removeEventListener('scroll', () =>
-        setScrollDepth(getScrollDepth),
-      );
   }, [
     optimizely,
     scrollDepth,

@@ -1,7 +1,5 @@
-import React, { useMemo } from 'react';
+import { screen } from '@testing-library/react';
 import { render } from '../../../components/react-testing-library-with-providers';
-import { ServiceContext } from '../../../contexts/ServiceContext';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import ParagraphContainer from '.';
 import getUUID from '../../../lib/utilities/getUUID';
 
@@ -63,19 +61,6 @@ const blocksWithInline = [
   inlinePersianBlock,
 ];
 
-const ParagraphContainerWithContext = ({ blocks }) => {
-  const memoizedServiceContextValue = useMemo(
-    () => ({ script: latin, service: 'news' }),
-    [],
-  );
-
-  return (
-    <ServiceContext.Provider value={memoizedServiceContextValue}>
-      <ParagraphContainer blocks={blocks} />
-    </ServiceContext.Provider>
-  );
-};
-
 jest.mock('#app/lib/utilities/getUUID', () =>
   jest.fn().mockImplementation(() => 'mockId'),
 );
@@ -86,16 +71,14 @@ describe('ParagraphContainer', () => {
   });
 
   it('should render correctly', () => {
-    const { container } = render(
-      <ParagraphContainerWithContext blocks={blocksMock} />,
-    );
-    expect(container).toMatchSnapshot();
+    render(<ParagraphContainer blocks={blocksMock} />);
+    expect(screen.getByText('This is some text.')).toBeInTheDocument();
+    expect(screen.getByRole('link')).toBeInTheDocument();
   });
 
   it('should render correctly with inline block', () => {
-    const { container } = render(
-      <ParagraphContainerWithContext blocks={blocksWithInline} />,
-    );
-    expect(container).toMatchSnapshot();
+    render(<ParagraphContainer blocks={blocksWithInline} />);
+    expect(screen.getByText('This is some text.')).toBeInTheDocument();
+    expect(screen.getByRole('link')).toBeInTheDocument();
   });
 });

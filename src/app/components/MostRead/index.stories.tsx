@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import Url from 'url-parse';
+import { useEffect, useState } from 'react';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import metadata from './metadata.json';
@@ -24,11 +23,9 @@ const Component = ({
   useEffect(() => {
     const loadPageData = async () => {
       const response = await fetch(
-        new Url(
-          `data/${service}/mostRead/${
-            variant === 'default' ? 'index' : variant
-          }.json`,
-        ).toString(),
+        `data/${service}/mostRead/${
+          variant === 'default' ? 'index' : variant
+        }.json`,
       );
 
       const { data } = await response.json();
@@ -106,10 +103,18 @@ export const SmallOneColumn = (_: StoryArgs, { service, variant }: Props) => (
   />
 );
 
-export const Japanese1Column = (_: StoryArgs, { variant }: Props) => (
-  <Component service="japanese" variant={variant} columnLayout="oneColumn" />
+export const Japanese1Column = (_: StoryArgs, { variant, service }: Props) => (
+  <Component service={service} variant={variant} columnLayout="oneColumn" />
 );
 
-export const Persian1Column = (_: StoryArgs, { variant }: Props) => (
-  <Component service="persian" variant={variant} columnLayout="oneColumn" />
+Japanese1Column.globals = {
+  service: { service: 'japanese', variant: 'default' },
+};
+
+export const Persian1Column = (_: StoryArgs, { variant, service }: Props) => (
+  <Component service={service} variant={variant} columnLayout="oneColumn" />
 );
+
+Persian1Column.globals = {
+  service: { service: 'persian', variant: 'default' },
+};

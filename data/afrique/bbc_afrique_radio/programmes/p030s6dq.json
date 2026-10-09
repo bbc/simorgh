@@ -1,0 +1,293 @@
+{
+  "data": {
+    "isPodcast": false,
+    "metadata": {
+      "type": "On Demand Radio",
+      "atiAnalytics": {
+        "pageIdentifier": "afrique.bbc_afrique_radio.programmes.p030s6dq.page",
+        "contentType": "player-episode",
+        "pageTitle": "Bulletin D'informations - BBC News Afrique",
+        "contentId": "urn:bbc:pips:w172zzz2x3918yn"
+      }
+    },
+    "language": "fr",
+    "brandTitle": "Bulletin D'informations",
+    "episodeTitle": "Bulletin D'informations",
+    "headline": "Bulletin D'informations",
+    "shortSynopsis": "Le tour du monde de l'actualité en 2 minutes ",
+    "id": "urn:bbc:ares:ws_media:brand:bbc_afrique_radio/p030s6dq",
+    "brandId": "p030s6dq",
+    "summary": "Le tour du monde de l'actualité en 2 minutes ",
+    "contentType": "player-episode",
+    "episodeId": "w172zzz2x3918yn",
+    "masterBrand": "bbc_afrique_radio",
+    "releaseDateTimeStamp": 1732579200000,
+    "pageTitle": "Bulletin D'informations - BBC News Afrique",
+    "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+    "imageAltText": null,
+    "promoBrandTitle": "Bulletin D'informations",
+    "durationISO8601": "PT5M",
+    "thumbnailImageUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p0gsjjjl.png",
+    "episodeAvailability": "available",
+    "radioScheduleData": [
+      {
+        "id": "p0jzl02q",
+        "state": "next",
+        "startTime": "2024-11-26T18:00:00.000Z",
+        "link": "/afrique/bbc_afrique_radio/w17300vglvjtr5j",
+        "brandTitle": "BBC Soir",
+        "summary": "La grande édition d'information de la soirée ",
+        "duration": "PT10M"
+      },
+      {
+        "id": "p0jzdl33",
+        "state": "onDemand",
+        "startTime": "2024-11-26T12:20:00.000Z",
+        "link": "/afrique/bbc_afrique_radio/w172zzrjc8gjdsj",
+        "brandTitle": "A Vous L'antenne",
+        "summary": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité ",
+        "duration": "PT10M"
+      },
+      {
+        "id": "p0jzdl31",
+        "state": "onDemand",
+        "startTime": "2024-11-26T12:10:00.000Z",
+        "link": "/afrique/bbc_afrique_radio/w172zzx198s9kj8",
+        "brandTitle": "Au Coeur De L'actu",
+        "summary": "Un jour, un thème pour aller plus en profondeur sur les sujets qui font bouger l’Afrique",
+        "duration": "PT10M"
+      },
+      {
+        "id": "p0jzkzbh",
+        "state": "onDemand",
+        "startTime": "2024-11-26T12:00:00.000Z",
+        "link": "/afrique/bbc_afrique_radio/w17300vwb6v4nxd",
+        "brandTitle": "BBC Midi",
+        "summary": "Le point de l'actualité à la mi-journée",
+        "duration": "PT10M"
+      }
+    ],
+    "recentEpisodes": [
+      {
+        "id": "w172zzz2x3904p3",
+        "brandTitle": "Bulletin D'informations",
+        "episodeTitle": "Bulletin D'informations",
+        "timestamp": "2024-11-26T00:00:00.000Z",
+        "duration": "PT5M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0gsjjjl.png",
+        "altText": "Bulletin D'informations"
+      },
+      {
+        "id": "w172zzz2x3904cf",
+        "brandTitle": "Bulletin D'informations",
+        "episodeTitle": "Bulletin D'informations",
+        "timestamp": "2024-11-26T00:00:00.000Z",
+        "duration": "PT5M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0gsjjjl.png",
+        "altText": "Bulletin D'informations"
+      },
+      {
+        "id": "w172zzz2x3900xz",
+        "brandTitle": "Bulletin D'informations",
+        "episodeTitle": "Bulletin D'informations",
+        "timestamp": "2024-11-26T00:00:00.000Z",
+        "duration": "PT5M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0gsjjjl.png",
+        "altText": "Bulletin D'informations"
+      },
+      {
+        "id": "w172zzz2x3900m9",
+        "brandTitle": "Bulletin D'informations",
+        "episodeTitle": "Bulletin D'informations",
+        "timestamp": "2024-11-26T00:00:00.000Z",
+        "duration": "PT5M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0gsjjjl.png",
+        "altText": "Bulletin D'informations"
+      },
+      {
+        "id": "w172zzyp5qzphzw",
+        "brandTitle": "Bulletin D'informations",
+        "episodeTitle": "Bulletin D'informations",
+        "timestamp": "2024-11-26T00:00:00.000Z",
+        "duration": "PT2M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0gsjjjl.png",
+        "altText": "Bulletin D'informations"
+      },
+      {
+        "id": "w172zzyp5qzpd7r",
+        "brandTitle": "Bulletin D'informations",
+        "episodeTitle": "Bulletin D'informations",
+        "timestamp": "2024-11-26T00:00:00.000Z",
+        "duration": "PT2M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0gsjjjl.png",
+        "altText": "Bulletin D'informations"
+      },
+      {
+        "id": "w172zzyp5qzp10c",
+        "brandTitle": "Bulletin D'informations",
+        "episodeTitle": "Bulletin D'informations",
+        "timestamp": "2024-11-26T00:00:00.000Z",
+        "duration": "PT2M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0gsjjjl.png",
+        "altText": "Bulletin D'informations"
+      },
+      {
+        "id": "w172zzyp5qznx87",
+        "brandTitle": "Bulletin D'informations",
+        "episodeTitle": "Bulletin D'informations",
+        "timestamp": "2024-11-26T00:00:00.000Z",
+        "duration": "PT2M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0gsjjjl.png",
+        "altText": "Bulletin D'informations"
+      },
+      {
+        "id": "w172zzyp5qznsj3",
+        "brandTitle": "Bulletin D'informations",
+        "episodeTitle": "Bulletin D'informations",
+        "timestamp": "2024-11-26T00:00:00.000Z",
+        "duration": "PT2M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0gsjjjl.png",
+        "altText": "Bulletin D'informations"
+      },
+      {
+        "id": "w172zzyp5qznnrz",
+        "brandTitle": "Bulletin D'informations",
+        "episodeTitle": "Bulletin D'informations",
+        "timestamp": "2024-11-26T00:00:00.000Z",
+        "duration": "PT2M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0gsjjjl.png",
+        "altText": "Bulletin D'informations"
+      },
+      {
+        "id": "w172zzz2x38yd1k",
+        "brandTitle": "Bulletin D'informations",
+        "episodeTitle": "Bulletin D'informations",
+        "timestamp": "2024-11-25T00:00:00.000Z",
+        "duration": "PT5M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0gsjjjl.png",
+        "altText": "Bulletin D'informations"
+      },
+      {
+        "id": "w172zzz2x38x7s0",
+        "brandTitle": "Bulletin D'informations",
+        "episodeTitle": "Bulletin D'informations",
+        "timestamp": "2024-11-25T00:00:00.000Z",
+        "duration": "PT5M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0gsjjjl.png",
+        "altText": "Bulletin D'informations"
+      },
+      {
+        "id": "w172zzz2x38x7gb",
+        "brandTitle": "Bulletin D'informations",
+        "episodeTitle": "Bulletin D'informations",
+        "timestamp": "2024-11-25T00:00:00.000Z",
+        "duration": "PT5M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0gsjjjl.png",
+        "altText": "Bulletin D'informations"
+      },
+      {
+        "id": "w172zzz2x38x40w",
+        "brandTitle": "Bulletin D'informations",
+        "episodeTitle": "Bulletin D'informations",
+        "timestamp": "2024-11-25T00:00:00.000Z",
+        "duration": "PT5M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0gsjjjl.png",
+        "altText": "Bulletin D'informations"
+      },
+      {
+        "id": "w172zzz2x38x3q6",
+        "brandTitle": "Bulletin D'informations",
+        "episodeTitle": "Bulletin D'informations",
+        "timestamp": "2024-11-25T00:00:00.000Z",
+        "duration": "PT5M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0gsjjjl.png",
+        "altText": "Bulletin D'informations"
+      },
+      {
+        "id": "w172zzyp5qzlm2s",
+        "brandTitle": "Bulletin D'informations",
+        "episodeTitle": "Bulletin D'informations",
+        "timestamp": "2024-11-25T00:00:00.000Z",
+        "duration": "PT2M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0gsjjjl.png",
+        "altText": "Bulletin D'informations"
+      },
+      {
+        "id": "w172zzyp5qzlhbn",
+        "brandTitle": "Bulletin D'informations",
+        "episodeTitle": "Bulletin D'informations",
+        "timestamp": "2024-11-25T00:00:00.000Z",
+        "duration": "PT2M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0gsjjjl.png",
+        "altText": "Bulletin D'informations"
+      },
+      {
+        "id": "w172zzyp5qzl438",
+        "brandTitle": "Bulletin D'informations",
+        "episodeTitle": "Bulletin D'informations",
+        "timestamp": "2024-11-25T00:00:00.000Z",
+        "duration": "PT2M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0gsjjjl.png",
+        "altText": "Bulletin D'informations"
+      },
+      {
+        "id": "w172zzyp5qzl0c4",
+        "brandTitle": "Bulletin D'informations",
+        "episodeTitle": "Bulletin D'informations",
+        "timestamp": "2024-11-25T00:00:00.000Z",
+        "duration": "PT2M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0gsjjjl.png",
+        "altText": "Bulletin D'informations"
+      },
+      {
+        "id": "w172zzyp5qzkwm0",
+        "brandTitle": "Bulletin D'informations",
+        "episodeTitle": "Bulletin D'informations",
+        "timestamp": "2024-11-25T00:00:00.000Z",
+        "duration": "PT2M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0gsjjjl.png",
+        "altText": "Bulletin D'informations"
+      }
+    ],
+    "externalLinkVersionId": "w1mslblghzlxffm",
+    "mediaBlocks": [
+      {
+        "type": "audio",
+        "model": {
+          "id": "w172zzz2x3918yn",
+          "subType": "episode",
+          "format": "Audio",
+          "title": "26/11/2024 GMT",
+          "synopses": {
+            "short": "Le tour du monde de l'actualité en 2 minutes ",
+            "medium": "Le tour du monde de l'actualité en 2 minutes "
+          },
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+          "embedding": false,
+          "advertising": false,
+          "versions": [
+            {
+              "versionId": "w1mslblghzlxffm",
+              "types": ["Original"],
+              "duration": 300,
+              "durationISO8601": "PT5M",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true,
+                "world": false
+              },
+              "availableFrom": "2024-11-26T16:05:00.000Z",
+              "availabilityStatus": "available",
+              "availableUntil": null
+            }
+          ],
+          "availability": "available",
+          "smpKind": "radioProgramme",
+          "episodeTitle": "Bulletin D'informations",
+          "type": "media"
+        }
+      }
+    ]
+  }
+}

@@ -67,7 +67,7 @@ exports[`Canonical Live Footer Anchors should match text and url 9`] = `
 
 exports[`Canonical Live Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/serbian/lat"`;
 
-exports[`Canonical Live Footer Paragraphs should match text 1`] = `"© 2025 BBC. BBC nije odgovoran za sadržaj drugih sajtova. Pročitajte naša pravila o linkovanju drugih sajtova."`;
+exports[`Canonical Live Footer Paragraphs should match text 1`] = `"© 2026 BBC. BBC nije odgovoran za sadržaj drugih sajtova. Pročitajte naša pravila o linkovanju drugih sajtova."`;
 
 exports[`Canonical Live Header I can see the branding 1`] = `
 {
@@ -82,48 +82,6 @@ exports[`Canonical Live Header Navigation link should match text and url 1`] = `
 {
   "text": "Početna strana",
   "url": "/serbian/lat",
-}
-`;
-
-exports[`Canonical Live Header Navigation link should match text and url 2`] = `
-{
-  "text": "Studentske blokade",
-  "url": "/serbian/topics/cly9dd4w09wt/lat",
-}
-`;
-
-exports[`Canonical Live Header Navigation link should match text and url 3`] = `
-{
-  "text": "Srbija",
-  "url": "/serbian/topics/cr50vdy9q6wt/lat",
-}
-`;
-
-exports[`Canonical Live Header Navigation link should match text and url 4`] = `
-{
-  "text": "Balkan",
-  "url": "/serbian/topics/c06g87137jgt/lat",
-}
-`;
-
-exports[`Canonical Live Header Navigation link should match text and url 5`] = `
-{
-  "text": "Svet",
-  "url": "/serbian/topics/c2lej05e1eqt/lat",
-}
-`;
-
-exports[`Canonical Live Header Navigation link should match text and url 6`] = `
-{
-  "text": "Video",
-  "url": "/serbian/topics/c44vyp5g049t/lat",
-}
-`;
-
-exports[`Canonical Live Header Navigation link should match text and url 7`] = `
-{
-  "text": "Najpopularnije",
-  "url": "/serbian/lat/popular/read",
 }
 `;
 
@@ -176,16 +134,17 @@ exports[`Canonical Live SEO Lang attribute 1`] = `"sr-latn"`;
 
 exports[`Canonical Live SEO Linked data should match text 1`] = `
 {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "NewsArticle",
+      "@id": "http://localhost:7081/serbian/live/media-23179005/lat",
+      "@type": "WebPage",
       "author": {
         "@type": "NewsMediaOrganization",
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News na srpskom",
@@ -193,17 +152,22 @@ exports[`Canonical Live SEO Linked data should match text 1`] = `
       },
       "dateModified": "2018-01-10T15:00:00.000Z",
       "datePublished": "2018-01-10T15:00:00.000Z",
+      "description": "Live test page",
       "headline": "Live test page",
       "image": {
         "@type": "ImageObject",
         "height": 576,
-        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png",
+        "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png",
         "width": 1024,
       },
       "inLanguage": {
         "@type": "Language",
         "alternateName": "sr-latn",
         "name": "Serbian",
+      },
+      "isAccessibleForFree": true,
+      "mainEntity": {
+        "@id": "http://localhost:7081/serbian/live/media-23179005/lat#liveblog",
       },
       "mainEntityOfPage": {
         "@id": "http://localhost:7081/serbian/live/media-23179005/lat",
@@ -215,20 +179,91 @@ exports[`Canonical Live SEO Linked data should match text 1`] = `
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News na srpskom",
         "publishingPrinciples": "https://www.bbc.com/serbian/lat/institutional-50173730",
       },
-      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png",
+      "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png",
       "url": "http://localhost:7081/serbian/live/media-23179005/lat",
     },
     {
+      "@id": "http://localhost:7081/serbian/live/media-23179005/lat#liveblog",
       "@type": "LiveBlogPosting",
+      "author": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png",
+        },
+        "name": "BBC News na srpskom",
+        "publishingPrinciples": "https://www.bbc.com/serbian/lat/institutional-50173730",
+        "url": "https://www.bbc.com/serbian",
+      },
       "coverageEndTime": "2018-01-10T22:00:00.000Z",
       "coverageStartTime": "2018-01-10T15:00:00.000Z",
+      "dateModified": "2018-01-10T22:00:00.000Z",
+      "datePublished": "2018-01-10T15:00:00.000Z",
+      "headline": "Live test page",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png",
+      },
+      "isAccessibleForFree": true,
       "liveBlogUpdate": [],
+      "mainEntityOfPage": {
+        "@id": "http://localhost:7081/serbian/live/media-23179005/lat",
+      },
+      "publisher": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png",
+        },
+        "name": "BBC News na srpskom",
+        "publishingPrinciples": "https://www.bbc.com/serbian/lat/institutional-50173730",
+        "url": "https://www.bbc.com/serbian",
+      },
+      "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png",
+      "url": "http://localhost:7081/serbian/live/media-23179005/lat",
+    },
+    {
+      "@id": "http://localhost:7081/serbian/live/media-23179005/lat#newsarticle",
+      "@type": "NewsArticle",
+      "author": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png",
+        },
+        "name": "BBC News na srpskom",
+        "publishingPrinciples": "https://www.bbc.com/serbian/lat/institutional-50173730",
+        "url": "https://www.bbc.com/serbian",
+      },
+      "dateModified": "2018-01-10T22:00:00.000Z",
+      "datePublished": "2018-01-10T15:00:00.000Z",
+      "description": "Live test page",
+      "headline": "Live test page",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png",
+      },
+      "isAccessibleForFree": true,
+      "mainEntityOfPage": {
+        "@id": "http://localhost:7081/serbian/live/media-23179005/lat",
+      },
+      "publisher": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png",
+        },
+        "name": "BBC News na srpskom",
+        "publishingPrinciples": "https://www.bbc.com/serbian/lat/institutional-50173730",
+        "url": "https://www.bbc.com/serbian",
+      },
+      "url": "http://localhost:7081/serbian/live/media-23179005/lat",
     },
   ],
 }
@@ -236,7 +271,7 @@ exports[`Canonical Live SEO Linked data should match text 1`] = `
 
 exports[`Canonical Live SEO OG description 1`] = `"Live test page"`;
 
-exports[`Canonical Live SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png"`;
+exports[`Canonical Live SEO OG image 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png"`;
 
 exports[`Canonical Live SEO OG image alt 1`] = `"BBC News na srpskom"`;
 
@@ -262,7 +297,7 @@ exports[`Canonical Live SEO Twitter description 1`] = `"Live test page"`;
 
 exports[`Canonical Live SEO Twitter image alt 1`] = `"BBC News na srpskom"`;
 
-exports[`Canonical Live SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png"`;
+exports[`Canonical Live SEO Twitter image src 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png"`;
 
 exports[`Canonical Live SEO Twitter site 1`] = `"@bbcnasrpskom"`;
 

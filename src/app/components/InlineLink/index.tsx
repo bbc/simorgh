@@ -1,12 +1,10 @@
-/** @jsx jsx */
-
 import { use, FC, HTMLAttributes } from 'react';
-import { jsx, Theme } from '@emotion/react';
-import Url from 'url-parse';
+import clsx from 'clsx';
 
 import { FontVariant, GelFontSize } from '../../models/types/theming';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import { styles } from './index.styles';
+import { getTypographyCustomProperties } from '../ThemeProviderSCSSModules/typography';
+import styles from './index.module.scss';
 
 interface Props extends HTMLAttributes<HTMLElement> {
   className?: string;
@@ -27,15 +25,16 @@ const bbcDomains = [
 ];
 
 const InlineLink: FC<Props> = ({
-  className = 'focusIndicatorReducedWidth',
+  className,
   fontVariant,
   size,
   text,
   to,
+  style,
   ...htmlAttributes
 }: Props) => {
   const { externalLinkText } = use(ServiceContext);
-  const { hostname } = new Url(to);
+  const { hostname } = new URL(to, 'https://www.bbc.com');
   const isExternalLink =
     hostname && !bbcDomains.some(bbcDomain => hostname === bbcDomain);
   const linkProps = {
@@ -43,12 +42,11 @@ const InlineLink: FC<Props> = ({
       typeof text === 'string' && {
         'aria-label': text.concat(externalLinkText),
       }),
-    className,
-    css: ({ fontSizes, fontVariants }: Theme) => [
-      styles.self,
-      size && fontSizes[size],
-      fontVariant && fontVariants[fontVariant],
-    ],
+    className: clsx(styles.self, 'focusIndicatorReducedWidth', className),
+    style: {
+      ...getTypographyCustomProperties({ size, fontVariant }),
+      ...style,
+    },
     ...htmlAttributes,
   };
 

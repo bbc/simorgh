@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import { useContext } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { Warning } from '#app/components/icons';

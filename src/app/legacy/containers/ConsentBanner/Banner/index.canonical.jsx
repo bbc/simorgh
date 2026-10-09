@@ -1,6 +1,7 @@
-import React, { use, useEffect, useRef } from 'react';
+import { use, useEffect, useRef } from 'react';
 import styled from '@emotion/styled';
 import { ConsentBanner } from '#psammead/psammead-consent-banner/src';
+import PLAYER_FULLSCREEN_CLASS from '#lib/mediaPlayerFullscreen.const';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import BannerText from './Text';
 import getDataAttribute from './getDataAttribute';
@@ -16,6 +17,10 @@ const ConsentBannerWrapper = styled.div`
   left: 0;
   width: 100%;
   z-index: 2147483647;
+
+  body.${PLAYER_FULLSCREEN_CLASS} & {
+    z-index: -1;
+  }
 `;
 
 const AcceptButton = ({ message, onClick, dataAttribute }) => (
@@ -61,7 +66,7 @@ const CanonicalConsentBannerContainer = ({
   }, []);
 
   return (
-    <ConsentBannerWrapper>
+    <ConsentBannerWrapper id="consent-banner">
       <ConsentBanner
         dir={dir}
         title={consentBannerConfig.title}

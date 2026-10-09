@@ -4,8 +4,8 @@ import identity from 'ramda/src/identity';
 import defaultToggles from '#app/lib/config/toggles';
 import testResponseCodeAndRetry from './helpers/testResponseCodeAndRetry';
 import getAppEnv from './helpers/getAppEnv';
-import envConfig, { EnvironmentConfigType } from './config/envs';
 import handleContinueReadingButton from './helpers/handleContinueReadingButton';
+import envConfig, { EnvironmentConfigType } from './config/envs';
 
 interface TestResponseCodeAndRetry {
   url: string;
@@ -23,7 +23,7 @@ declare global {
       testResponseCodeAndRetry: (
         props: TestResponseCodeAndRetry,
       ) => Chainable<Record<string, unknown>>;
-      getToggles(serviceID: string): Chainable;
+      fetchToggles(serviceID: string): Chainable;
       hasNoscriptImgAtiUrl(atiUrl: string): Chainable;
       testResponseCodeAndType(
         props: TestResponseAndTypeFunctionProps,
@@ -42,20 +42,26 @@ const getPageDataFromWindow = () => {
 };
 
 const keyGenFn = identity as (...v: unknown[]) => string;
-const environmentConfig = envConfig as EnvironmentConfigType;
-const getToggles = memoizeWith(keyGenFn, service => {
+const fetchToggles = memoizeWith(keyGenFn, service => {
   const togglesFixture = `cypress/fixtures/toggles/${service}.json`;
+  const togglesEndpoint = new URL(
+    `${(envConfig as EnvironmentConfigType).togglesUrl}/fd/ws-toggles`,
+  );
+  togglesEndpoint.searchParams.set('service', service);
+  togglesEndpoint.searchParams.set('application', 'simorgh');
 
-  if (getAppEnv() === 'local') {
+  const appEnv = getAppEnv();
+
+  if (appEnv === 'local') {
     cy.writeFile(togglesFixture, defaultToggles.local);
   } else {
     cy.request({
-      url: `${environmentConfig.togglesUrl}?application=simorgh&service=${service}&__amp_source_origin=${environmentConfig.baseUrl}`,
-      headers: {
-        Origin: 'https://www.bbc.com',
-      },
+      url: togglesEndpoint.toString(),
+      ...(appEnv !== 'live' && {
+        headers: { 'ctx-service-env': 'test' },
+      }),
     }).then(response => {
-      cy.writeFile(togglesFixture, response.body.toggles);
+      cy.writeFile(togglesFixture, response.body.data.toggles);
     });
   }
 });
@@ -129,13 +135,71 @@ const testResponseCodeAndType = ({
 
 Cypress.Commands.add('getPageDataFromWindow', getPageDataFromWindow);
 Cypress.Commands.add('testResponseCodeAndRetry', testResponseCodeAndRetry);
-Cypress.Commands.add('getToggles', getToggles);
+Cypress.Commands.add('fetchToggles', fetchToggles);
 Cypress.Commands.add('hasNoscriptImgAtiUrl', hasNoscriptImgAtiUrl);
 Cypress.Commands.add('testResponseCodeAndType', testResponseCodeAndType);
 
-Cypress.Commands.overwrite('visit', (originalFn, url, options) => {
-  return originalFn(url, options).then(() => {
-    // Handle Continue Reading button if it appears when cy.visit() is called
-    handleContinueReadingButton();
-  });
-});
+Cypress.Commands.overwrite(
+  'visit',
+  (originalFn, urlOrOptions, ...rest): Cypress.Chainable => {
+    // Keeps the original signature of cy.visit() intact while allowing for flexible options handling https://docs.cypress.io/api/commands/visit#Usage
+    const [options] = rest as [Partial<Cypress.VisitOptions>?];
+
+    const visitUrl =
+      typeof urlOrOptions === 'string' ? urlOrOptions : urlOrOptions.url;
+    const visitOptionsObj =
+      typeof urlOrOptions === 'string' ? (options ?? {}) : urlOrOptions;
+    const { failOnStatusCode = true, headers } = visitOptionsObj;
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const originalFnAsAny = originalFn as (...args: any[]) => Cypress.Chainable;
+    const runVisit = () => {
+      if (typeof urlOrOptions === 'string') {
+        return originalFnAsAny(urlOrOptions, options);
+      }
+
+      return originalFnAsAny(urlOrOptions);
+    };
+
+    if (!failOnStatusCode || getAppEnv() === 'local') {
+      return runVisit().then(() => {
+        // Handle Continue Reading button if it appears when cy.visit() is called
+        handleContinueReadingButton();
+      });
+    }
+
+    const checkStatus = (retriesLeft = 2): Cypress.Chainable => {
+      return cy
+        .request({
+          url: visitUrl,
+          failOnStatusCode: false,
+          ...(headers && { headers }),
+        })
+        .then(({ status }) => {
+          if (status === 200) {
+            const noOp = () => undefined;
+            return cy.then(noOp);
+          }
+
+          if (retriesLeft > 0) {
+            // eslint-disable-next-line cypress/no-unnecessary-waiting
+            return cy.wait(10000).then(() => checkStatus(retriesLeft - 1));
+          }
+
+          throw new Error(
+            `Expected status 200 but got ${status} for ${visitUrl} after all retries`,
+          );
+        });
+    };
+
+    // Pre-check: Verify the page returns a 200 response before visiting.
+    // This mitigates Lambda cold-start failures where the first request returns a 500,
+    // retrying here means before() hooks never surface these transient failures directly.
+    return checkStatus().then(() => {
+      return runVisit().then(() => {
+        // Handle Continue Reading button if it appears when cy.visit() is called
+        handleContinueReadingButton();
+      });
+    });
+  },
+);

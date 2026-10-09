@@ -1,6 +1,4 @@
-/** @jsx jsx */
-
-import { jsx, useTheme } from '@emotion/react';
+import { useTheme } from '@emotion/react';
 import { use } from 'react';
 import useViewTracker from '#hooks/useViewTracker';
 import SectionLabel from '#psammead/psammead-section-label/src';
@@ -20,7 +18,7 @@ const TopStoriesSection = ({
   content: TopStoryItem[];
   experimentProps?: ComponentExperimentProps;
 }) => {
-  const { translations, script, service } = use(ServiceContext);
+  const { translations } = use(ServiceContext);
 
   const eventTrackingData = {
     block: {
@@ -63,8 +61,6 @@ const TopStoriesSection = ({
         labelId={LABEL_ID}
         columnType="secondary"
         backgroundColor={GREY_2}
-        script={script}
-        service={service}
       >
         {title}
       </SectionLabel>

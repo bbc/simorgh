@@ -1,6 +1,5 @@
-/** @jsx jsx */
-import { jsx, useTheme } from '@emotion/react';
 import { use } from 'react';
+import { useTheme } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
 import { Environments, PageTypes, Services } from '#app/models/types/global';
@@ -100,7 +99,6 @@ const MetadataContainer = ({
   imageWidth,
   imageHeight,
   children,
-  hasAppleItunesAppBanner = false,
   hasAmpPage = true,
 }: MetadataProps) => {
   const {
@@ -223,7 +221,6 @@ const MetadataContainer = ({
         iTunesAppId,
         canonicalLink,
         isAmp,
-        hasAppleItunesAppBanner,
       })}
       <meta name="apple-mobile-web-app-title" content={brandName} />
       <meta name="application-name" content={brandName} />

@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from 'react';
+import { PropsWithChildren } from 'react';
 import {
   renderHook,
   act,
@@ -75,6 +75,40 @@ describe('useOptimizelyScrollDepth', () => {
     expect(removeEventListenerSpy).toHaveBeenCalledWith(
       'scroll',
       expect.any(Function),
+    );
+  });
+
+  it('keeps one scroll listener across depth updates and removes it on unmount', () => {
+    const { result, rerender, unmount } = renderHook(
+      () => useOptimizelyScrollDepth(),
+      { wrapper },
+    );
+    const scrollListener = addEventListenerSpy.mock.calls.find(
+      ([event]) => event === 'scroll',
+    )?.[1];
+
+    [25, 50, 75, 100, 0, 100].forEach(depth => {
+      act(() => {
+        result.current.setScrollDepth(depth);
+      });
+    });
+    rerender();
+
+    expect(
+      addEventListenerSpy.mock.calls.filter(([event]) => event === 'scroll'),
+    ).toHaveLength(1);
+    expect(optimizelyMock.track.mock.calls).toEqual([
+      ['scroll25'],
+      ['scroll50'],
+      ['scroll75'],
+      ['scroll100'],
+    ]);
+
+    unmount();
+
+    expect(removeEventListenerSpy).toHaveBeenCalledWith(
+      'scroll',
+      scrollListener,
     );
   });
 

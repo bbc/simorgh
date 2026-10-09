@@ -1,0 +1,168 @@
+import { use, useEffect, useState } from 'react';
+import {
+  onlineManager,
+  useMutation,
+  useQueryClient,
+} from '@tanstack/react-query';
+import useUASFetchSaveStatus from '#app/hooks/useUASFetchSaveStatus';
+import useUASMetadataSync from '#app/hooks/useUASMetadataSync';
+import useErrorTracking from '#app/hooks/useErrorTracking';
+import {
+  ERROR_TRACKING_FEATURES,
+  UAS_ERROR_ACTIONS,
+} from '#app/hooks/useErrorTracking/errorTracking.const';
+import { ServiceContext } from '#app/contexts/ServiceContext';
+import uasApiRequest from '#app/lib/uasApi';
+import { buildGlobalId, FAVOURITES_CONFIG } from '#app/lib/uasApi/uasUtility';
+import type { SaveArticlePageData } from '#app/lib/utilities/extractSaveArticleProps';
+import uasKeys from '#app/lib/uasApi/queryKeys';
+import { AccountContext } from '#app/contexts/AccountContext';
+import upsertArticleData from '#app/lib/uasApi/upsertArticleData';
+
+enum UASAction {
+  SAVE = 'save',
+  REMOVE = 'remove',
+}
+
+export type UASActionResult = {
+  status: 'success' | 'error';
+  action: UASAction;
+} | null;
+
+interface UseUASButtonReturn {
+  isSaved: boolean;
+  isLoading: boolean;
+  isUpdating: boolean;
+  error: Error | null;
+  actionResult: UASActionResult;
+  resetActionResult: () => void;
+  handleSaveAction: (action: UASAction) => void;
+}
+export interface UseUASButtonProps {
+  articleId: string;
+  saveArticlePageData: SaveArticlePageData;
+}
+
+/**
+ * Combines the current save-status fetch, user-initiated save/remove mutations
+ * and the background metadata sync behind a single button hook.
+ *
+ * actionResult is only populated for user-initiated actions so the UI can
+ * surface additional information (e.g. a tooltip);
+ *
+ * NOTE: Using this hook anywhere in the app will eagerly pull TanStack Query
+ * into the bundle. All TanStack-related code must live exclusively inside the
+ * lazy boundary.
+ */
+const useUASButton = ({
+  articleId,
+  saveArticlePageData,
+}: UseUASButtonProps): UseUASButtonReturn => {
+  const { service } = use(ServiceContext);
+  const { hashedUserId = '', isRefreshAvailable } = use(AccountContext);
+  const queryClient = useQueryClient();
+  const trackError = useErrorTracking();
+  const { isSaved, isLoading, error, savedMetadata } =
+    useUASFetchSaveStatus(articleId);
+
+  useEffect(() => {
+    if (error) {
+      trackError({
+        error,
+        feature: ERROR_TRACKING_FEATURES.UAS,
+        action: UAS_ERROR_ACTIONS.FETCH_STATUS,
+      });
+    }
+  }, [error, trackError]);
+
+  // Only set by handleSaveAction, never by the background metadata resync.
+  const [actionResult, setActionResult] = useState<UASActionResult>(null);
+
+  const mutation = useMutation({
+    mutationFn: async (action: UASAction) => {
+      if (action === UASAction.SAVE) {
+        return upsertArticleData({
+          saveArticlePageData,
+          articleId,
+          service,
+          isRefreshAvailable,
+        });
+      }
+      const globalId = buildGlobalId(articleId);
+      await uasApiRequest('DELETE', FAVOURITES_CONFIG.activityType, {
+        globalId,
+        isRefreshAvailable,
+      });
+      return undefined;
+    },
+    onSuccess: (metadata, action) => {
+      const isSavedAction = action === UASAction.SAVE;
+      queryClient.setQueryData(
+        uasKeys.favouriteStatus(hashedUserId, articleId),
+        {
+          isSaved: isSavedAction,
+          metadata: isSavedAction ? metadata : undefined,
+        },
+      );
+      queryClient.invalidateQueries({
+        queryKey: uasKeys.favouritesList(hashedUserId),
+      });
+    },
+  });
+
+  const handleMetadataOutOfDate = () =>
+    mutation.mutate(UASAction.SAVE, {
+      onError: mutationError =>
+        trackError({
+          error: mutationError,
+          feature: ERROR_TRACKING_FEATURES.UAS,
+          action: UAS_ERROR_ACTIONS.METADATA_SYNC,
+        }),
+    });
+
+  useUASMetadataSync({
+    saveArticlePageData,
+    articleId,
+    service,
+    isSaved,
+    savedArticleMetadata: savedMetadata,
+    onMetadataOutOfDate: handleMetadataOutOfDate,
+  });
+
+  const handleSaveAction = (action: UASAction) => {
+    if (!onlineManager.isOnline()) {
+      setActionResult({ status: 'error', action });
+      return undefined;
+    }
+
+    return mutation.mutate(action, {
+      onSuccess: () => setActionResult({ status: 'success', action }),
+      onError: mutationError => {
+        setActionResult({ status: 'error', action });
+        trackError({
+          error: mutationError,
+          feature: ERROR_TRACKING_FEATURES.UAS,
+          action,
+        });
+      },
+    });
+  };
+
+  const resetActionResult = () => {
+    setActionResult(null);
+    mutation.reset();
+  };
+
+  return {
+    isSaved,
+    isLoading,
+    isUpdating: mutation.isPending && !mutation.isPaused,
+    error: mutation.error || error,
+    actionResult,
+    resetActionResult,
+    handleSaveAction,
+  };
+};
+
+export { UASAction };
+export default useUASButton;

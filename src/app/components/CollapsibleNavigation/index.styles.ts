@@ -45,9 +45,9 @@ const styles = {
         transform: 'translateY(-50%)',
         width: `${pixelsToRem(1)}rem`,
         height: `${pixelsToRem(20)}rem`,
-        backgroundColor: palette.GREY_10,
+        backgroundColor: palette.GREY_5,
       },
-      '&:last-of-type::after': {
+      '&:nth-last-child(2)::after': {
         background: 'none',
       },
     }),
@@ -222,6 +222,9 @@ const styles = {
         backgroundColor: palette.WHITE,
       },
     }),
+  collapsed: css({
+    display: 'none',
+  }),
 };
 
 export default styles;

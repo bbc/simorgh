@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from '@emotion/styled';
 import {
   GEL_SPACING_HLF,
@@ -15,16 +14,6 @@ import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
-import {
-  getParagon,
-  getLongPrimer,
-  getPica,
-  getDoublePica,
-} from '#psammead/gel-foundations/src/typography';
-import {
-  getSansRegular,
-  getSerifMedium,
-} from '#psammead/psammead-styles/src/font-styles';
 import { grid } from '#psammead/psammead-styles/src/detection';
 import ImageGridItem from './ImageStyles';
 import TextGridItem from './TextStyles';
@@ -105,33 +94,26 @@ const ImageOverlayWrapper = styled.div`
   ${({ promoType }) => mediaIndicatorStyles[promoType]}
 `;
 
-const headlineTopStoryTypography = script => getParagon(script);
-
-const headlineRegularTypography = script => getPica(script);
-
-const headlineLeadingStoryTypography = script => getDoublePica(script);
-
-const headlineTypography = script => ({
-  top: headlineTopStoryTypography(script),
-  regular: headlineRegularTypography(script),
-  leading: headlineLeadingStoryTypography(script),
+/**
+ * @deprecated
+ */
+const headlineTypography = fontSizes => ({
+  top: fontSizes.paragon,
+  regular: fontSizes.pica,
+  leading: fontSizes.doublePica,
 });
 
 export const Headline = styled.h3`
   color: ${props => props.theme.palette.EBON};
   margin: 0; /* Reset */
   padding-bottom: ${GEL_SPACING};
-  ${({ service }) => getSerifMedium(service)}
-  ${({ script, promoType }) => script && headlineTypography(script)[promoType]}
+  ${({ theme: { fontVariants } }) => fontVariants.serifMedium};
+  ${({ promoType, theme: { fontSizes } }) =>
+    headlineTypography(fontSizes)[promoType]};
   ${({ promoHasImage }) =>
     !promoHasImage &&
-    `display: inline-block;`} /* Needed for aligning Media Indicator with Headline */
+    `display: inline-block;`}/* Needed for aligning Media Indicator with Headline */
 `;
-
-Headline.defaultProps = {
-  promoHasImage: true,
-  promoType: 'regular',
-};
 
 const summaryTopStoryStyles = `
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
@@ -159,8 +141,8 @@ const summaryStyles = {
 };
 
 export const Summary = styled.p`
-  ${({ script }) => script && getLongPrimer(script)};
-  ${({ service }) => getSansRegular(service)}
+  ${({ theme: { fontSizes } }) => fontSizes.longPrimer};
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
   color: ${props => props.theme.palette.SHADOW};
   margin: 0; /* Reset */
   padding-bottom: ${GEL_SPACING};
@@ -169,11 +151,6 @@ export const Summary = styled.p`
 
   ${({ promoType }) => summaryStyles[promoType]}
 `;
-
-Summary.defaultProps = {
-  promoHasImage: true,
-  promoType: 'regular',
-};
 
 // `display: inline-block` has been used to resolve Focus Indicator bug in Firefox high contrast mode.
 export const Link = styled.a`

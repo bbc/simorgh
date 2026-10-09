@@ -1,15 +1,12 @@
-import React from 'react';
 import styled from '@emotion/styled';
 import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
-import { getMinion } from '#psammead/gel-foundations/src/typography';
-import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
 
 const StyledMediaIndicator = styled.div`
   color: ${props => props.theme.palette.EBON};
   background-color: ${props => props.theme.palette.WHITE};
-  ${({ service }) => getSansRegular(service)}
-  ${({ script }) => script && getMinion(script)};
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
+  ${({ theme: { fontSizes } }) => fontSizes.minion};
 
   ${({ isInline, dir }) =>
     isInline
@@ -31,8 +28,6 @@ const FlexWrapper = styled.div`
 
 const MediaIndicator = ({
   type = 'video',
-  script,
-  service,
   dir = 'ltr',
   isInline = false,
   children = null,
@@ -40,8 +35,6 @@ const MediaIndicator = ({
   <StyledMediaIndicator
     data-e2e="media-indicator"
     aria-hidden="true"
-    script={script}
-    service={service}
     dir={dir}
     isInline={isInline}
   >

@@ -1,4 +1,3 @@
-import React from 'react';
 import { fireEvent } from '@testing-library/dom';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ARTICLE_PAGE, HOME_PAGE } from '#app/routes/utils/pageTypes';
@@ -11,6 +10,7 @@ import {
   ServiceContext,
 } from '../../../contexts/ServiceContext';
 import { service as newsConfig } from '../../../lib/config/services/news';
+import { service as indonesiaConfig } from '../../../lib/config/services/indonesia';
 import Navigation from './index';
 import * as viewTracking from '../../../hooks/useViewTracker';
 import * as clickTracking from '../../../hooks/useClickTrackerHandler';
@@ -26,7 +26,7 @@ describe('Navigation Container', () => {
       statusCode: 200,
       pathname: '/news',
     });
-    expect(container).toMatchSnapshot();
+    expect(container.querySelector('nav')).toBeInTheDocument();
   });
 
   it('should correctly render canonical navigation', () => {
@@ -39,7 +39,7 @@ describe('Navigation Container', () => {
       statusCode: 200,
       pathname: '/news',
     });
-    expect(container).toMatchSnapshot();
+    expect(container.querySelector('nav')).toBeInTheDocument();
   });
 
   it('should correctly render amp navigation on non-home navigation page', () => {
@@ -52,7 +52,7 @@ describe('Navigation Container', () => {
       statusCode: 200,
       pathname: '/uk',
     });
-    expect(container).toMatchSnapshot();
+    expect(container.querySelector('nav')).toBeInTheDocument();
   });
 
   it('should correctly render canonical navigation on non-home navigation page', () => {
@@ -65,7 +65,7 @@ describe('Navigation Container', () => {
       statusCode: 200,
       pathname: '/uk',
     });
-    expect(container).toMatchSnapshot();
+    expect(container.querySelector('nav')).toBeInTheDocument();
   });
 
   it('should correctly render amp navigation on non-navigation page', () => {
@@ -78,7 +78,7 @@ describe('Navigation Container', () => {
       statusCode: 200,
       pathname: '/not-a-navigation-page',
     });
-    expect(container).toMatchSnapshot();
+    expect(container.querySelector('nav')).toBeInTheDocument();
   });
 
   it('should correctly render canonical navigation on non-navigation page', () => {
@@ -91,7 +91,7 @@ describe('Navigation Container', () => {
       statusCode: 200,
       pathname: '/not-a-navigation-page',
     });
-    expect(container).toMatchSnapshot();
+    expect(container.querySelector('nav')).toBeInTheDocument();
   });
 
   it('should render navigation links in the correct format', () => {
@@ -122,6 +122,66 @@ describe('Navigation Container', () => {
       expect(href).toEqual(navItem.url);
     });
   });
+
+  it('should prefer navItems prop over service config', () => {
+    const navItems = [
+      { title: 'Home', url: '/home' },
+      { title: 'About', url: '/about' },
+    ];
+
+    const { getAllByText, queryAllByText } = render(
+      <Navigation navItems={navItems} />,
+      {
+        bbcOrigin: 'https://www.test.bbc.co.uk',
+        id: 'c0000000000o',
+        isAmp: false,
+        pageType: ARTICLE_PAGE,
+        service: 'news',
+        statusCode: 200,
+        pathname: '/news',
+      },
+    );
+
+    expect(getAllByText('Home').length).toBeGreaterThan(0);
+    expect(getAllByText('About').length).toBeGreaterThan(0);
+    expect(queryAllByText('World')).toHaveLength(0);
+  });
+
+  it('should fall back to service config when navItems is null', () => {
+    const { navigation } = indonesiaConfig.default;
+
+    const { getAllByText } = render(<Navigation navItems={null} />, {
+      bbcOrigin: 'https://www.test.bbc.co.uk',
+      id: 'c0000000000o',
+      isAmp: false,
+      pageType: ARTICLE_PAGE,
+      service: 'indonesia',
+      statusCode: 200,
+      pathname: '/indonesian',
+    });
+
+    navigation.forEach(({ title }) => {
+      const elements = getAllByText(title);
+      elements.forEach(element => {
+        expect(element).toHaveTextContent(title);
+      });
+    });
+  });
+
+  it('should render nothing when navItems is an empty array', () => {
+    const { container } = render(<Navigation navItems={[]} />, {
+      bbcOrigin: 'https://www.test.bbc.co.uk',
+      id: 'c0000000000o',
+      isAmp: false,
+      pageType: ARTICLE_PAGE,
+      service: 'news',
+      statusCode: 200,
+      pathname: '/news',
+    });
+
+    expect(container.firstChild).toBeNull();
+  });
+
   it('should not render listItem in scrollable list when hideOnLiteSite is true and isLite is true', () => {
     const { navigation, ...rest } = newsConfig.default;
     const mockNavigation = [

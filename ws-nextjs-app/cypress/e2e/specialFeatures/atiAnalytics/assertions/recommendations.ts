@@ -1,17 +1,12 @@
 /* eslint-disable import/no-relative-packages */
 import { interceptATIAnalyticsBeacons, COMPONENTS } from '../helpers';
-import {
-  assertATIComponentClickEvent,
-  assertATIComponentViewEvent,
-} from '../../../../../../cypress/e2e/specialFeatures/atiAnalytics/assertions';
+import { assertATIComponentClickEvent, assertATIComponentViewEvent } from '.';
 import { AtiAssertionFnProps } from './type';
 
 const { RECOMMENDATIONS } = COMPONENTS;
 
 export const assertRecommendationsComponentView = ({
   pageIdentifier,
-  contentType,
-  useReverb,
   path,
   applicationType,
   siteId,
@@ -31,8 +26,6 @@ export const assertRecommendationsComponentView = ({
     assertATIComponentViewEvent({
       component: RECOMMENDATIONS,
       pageIdentifier,
-      contentType,
-      useReverb,
       applicationType,
       siteId,
     });
@@ -41,8 +34,6 @@ export const assertRecommendationsComponentView = ({
 
 export const assertRecommendationsComponentClick = ({
   pageIdentifier,
-  contentType,
-  useReverb,
   path,
   applicationType,
   siteId,
@@ -64,8 +55,6 @@ export const assertRecommendationsComponentClick = ({
     assertATIComponentClickEvent({
       component: RECOMMENDATIONS,
       pageIdentifier,
-      contentType,
-      useReverb,
       applicationType,
       siteId,
     });

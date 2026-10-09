@@ -56,6 +56,20 @@
           {
             "type": "link",
             "isLive": false,
+            "title": "BBC Pashto Whatsapp",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.whatsapp.com/channel/0029Vb7QbM3LCoX5XSrthR1i",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/5231/test/1bd8e960-2450-11f1-9b8d-d9450237c3c8.png.webp",
+            "imageAlt": "logo",
+            "isPortraitImage": false,
+            "id": "https%3A%2F%2Fwww.whatsapp.com%2Fchannel%2F0029Vb7QbM3LCoX5XSrthR1i",
+            "attributions": [],
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "link",
+            "isLive": false,
             "title": "BBC Arabic YT channel",
             "firstPublished": "",
             "lastPublished": "",
@@ -105,6 +119,17 @@
             "type": "link",
             "isLive": false,
             "title": "Send our programme makers your thoughts",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/arabic/send/u50853203",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
+            "id": "https%3A%2F%2Fwww.bbc.com%2Farabic%2Fsend%2Fu50853203",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "Example 2nd Link",
             "firstPublished": "",
             "lastPublished": "",
             "link": "https://www.bbc.com/arabic/send/u50853203",

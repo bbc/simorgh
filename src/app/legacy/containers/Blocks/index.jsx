@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import { Fragment } from 'react';
 import styled from '@emotion/styled';
 import path from 'ramda/src/path';
 
@@ -25,8 +25,9 @@ const Blocks = ({ blocks, componentsToRender }) =>
       : Fragment;
 
     const { type: typeOfPreviousBlock } = blocks[index - 1] || {};
+
     return (
-      <Wrapper key={id}>
+      <Wrapper key={id ?? index}>
         <Block
           position={position}
           type={type}

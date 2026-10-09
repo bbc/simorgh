@@ -1,6 +1,4 @@
-/** @jsx jsx */
 import { PropsWithChildren } from 'react';
-import { jsx } from '@emotion/react';
 import styles from './index.styles';
 
 type ButtonLikeWrapperProps = {
@@ -10,9 +8,10 @@ type ButtonLikeWrapperProps = {
 const ButtonLikeWrapper = ({
   children,
   className,
+  ...rest
 }: PropsWithChildren<ButtonLikeWrapperProps>) => {
   return (
-    <div css={styles.flexWrapper} className={className}>
+    <div css={styles.flexWrapper} className={className} {...rest}>
       {children}
     </div>
   );

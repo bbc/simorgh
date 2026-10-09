@@ -1,4 +1,3 @@
-import React from 'react';
 import isLive from '#lib/utilities/isLive';
 import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';

@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from '@emotion/styled';
 
 // styled-components removes non-standard attributes (such as AMP attributes) on

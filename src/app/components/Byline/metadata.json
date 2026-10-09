@@ -1,0 +1,29 @@
+{
+  "alpha": false,
+  "lastUpdated": {
+    "day": 3,
+    "month": "December",
+    "year": 2025
+  },
+  "uxAccessibilityDoc": {
+    "done": true,
+    "reference": {
+      "url": "https://paper.dropbox.com/doc/Byline-Align-with-PS-Screen-Reader-UX--CyPr9RDBiVv5N25SG_ExYfo5Ag-KkuXbgpO6Gz7vWrx4zWB8",
+      "label": "Screen Reader UX"
+    }
+  },
+  "acceptanceCriteria": {
+    "done": true,
+    "reference": {
+      "url": "https://paper.dropbox.com/doc/Byline-Align-with-PS-A11y-AACs--CyP2ud4yeJYYBPtbYcJptny3Ag-sPAMbF7fDUyLa62IoxVqy",
+      "label": "Accessibility Acceptance Criteria"
+    }
+  },
+  "swarm": {
+    "done": true,
+    "reference": {
+      "url": "https://paper.dropbox.com/doc/A11Y-Swarm-Byline-update-to-align-with-PS-designs--CyQiEg627KoqdqjQYYUbOWYSAg-3IDM6WWNjengQxpTLXvLe",
+      "label": "Accessibility Swarm Notes"
+    }
+  }
+}

@@ -1,18 +1,12 @@
 /* eslint-disable import/no-relative-packages */
 import { interceptATIAnalyticsBeacons, COMPONENTS } from '../helpers';
-import {
-  assertATIComponentClickEvent,
-  assertATIComponentViewEvent,
-} from '../../../../../../cypress/e2e/specialFeatures/atiAnalytics/assertions';
+import { assertATIComponentClickEvent, assertATIComponentViewEvent } from '.';
 import { AtiAssertionFnProps } from './type';
 
 const { SCROLLABLE_NAVIGATION, DROPDOWN_NAVIGATION } = COMPONENTS;
 
 export const assertScrollableNavigationComponentView = ({
   pageIdentifier,
-  contentType,
-  componentTrackingContentType,
-  useReverb,
   path,
   applicationType,
   siteId,
@@ -32,8 +26,6 @@ export const assertScrollableNavigationComponentView = ({
     assertATIComponentViewEvent({
       component: SCROLLABLE_NAVIGATION,
       pageIdentifier,
-      contentType: componentTrackingContentType || contentType,
-      useReverb,
       applicationType,
       siteId,
     });
@@ -42,9 +34,6 @@ export const assertScrollableNavigationComponentView = ({
 
 export const assertScrollableNavigationComponentClick = ({
   pageIdentifier,
-  contentType,
-  componentTrackingContentType,
-  useReverb,
   path,
   applicationType,
   siteId,
@@ -63,8 +52,6 @@ export const assertScrollableNavigationComponentClick = ({
     assertATIComponentClickEvent({
       component: SCROLLABLE_NAVIGATION,
       pageIdentifier,
-      contentType: componentTrackingContentType || contentType,
-      useReverb,
       applicationType,
       siteId,
     });
@@ -74,9 +61,6 @@ export const assertScrollableNavigationComponentClick = ({
 // Assertions for nav bar at smaller breakpoints
 export const assertDropdownNavigationComponentView = ({
   pageIdentifier,
-  contentType,
-  componentTrackingContentType,
-  useReverb,
   path,
   applicationType,
   siteId,
@@ -91,8 +75,6 @@ export const assertDropdownNavigationComponentView = ({
     assertATIComponentViewEvent({
       component: DROPDOWN_NAVIGATION,
       pageIdentifier,
-      contentType: componentTrackingContentType || contentType,
-      useReverb,
       applicationType,
       siteId,
     });
@@ -101,9 +83,6 @@ export const assertDropdownNavigationComponentView = ({
 
 export const assertDropdownNavigationComponentClick = ({
   pageIdentifier,
-  contentType,
-  componentTrackingContentType,
-  useReverb,
   path,
   applicationType,
   siteId,
@@ -121,8 +100,6 @@ export const assertDropdownNavigationComponentClick = ({
     assertATIComponentClickEvent({
       component: DROPDOWN_NAVIGATION,
       pageIdentifier,
-      contentType: componentTrackingContentType || contentType,
-      useReverb,
       applicationType,
       siteId,
     });

@@ -11,23 +11,14 @@ The `HeadingIndex` uses a `h1` HTML element and is used on index pages such as M
 
 ## Props
 
-<!-- prettier-ignore -->
-| Argument  | Type | Required | Default | Example |
-| --------- | ---- | -------- | ------- | ------- |
-| script    | object | yes | latin | { canon: { groupA: { fontSize: '28', lineHeight: '32',}, groupB: { fontSize: '32', lineHeight: '36', }, groupD: { fontSize: '44', lineHeight: '48', }, }, trafalgar: { groupA: { fontSize: '20', lineHeight: '24', }, groupB: { fontSize: '24', lineHeight: '28', }, groupD: { fontSize: '32', lineHeight: '36', }, }, }|
-| service | string | yes | N/A | `'news'` |
-
 ## Usage
 
 ```jsx
 import HeadingIndex from '#psammead/psammead-heading-index/src';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
 
 const Wrapper = () => (
   <Fragment>
-    <HeadingIndex script={latin} service="news">
-      Heading
-    </HeadingIndex>
+    <HeadingIndex>Heading</HeadingIndex>
   </Fragment>
 );
 ```
@@ -39,9 +30,7 @@ This component is designed to be used once at the top of the page.
 The `HeadingIndex` can take an optional `id` attribute which can be used as an anchor when referencing content.
 
 ```jsx
-<HeadingIndex id="content" script={latin} service="news">
-  Heading
-</HeadingIndex>
+<HeadingIndex id="content">Heading</HeadingIndex>
 ```
 
 <!-- ### When not to use this component -->

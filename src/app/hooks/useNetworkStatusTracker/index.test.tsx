@@ -1,7 +1,7 @@
 import { renderHook, act } from '@testing-library/react';
 import { renderHook as renderSSRHook } from '@testing-library/react-hooks/server';
+import { EffectiveNetworkType } from '#app/models/types/global';
 import useNetworkStatus from './index';
-import { EffectiveNetworkType } from './type';
 
 describe('useNetworkStatus', () => {
   const originalNavigator = window.navigator;

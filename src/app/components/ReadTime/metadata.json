@@ -1,28 +1,28 @@
 {
   "alpha": true,
   "lastUpdated": {
-    "day": 23,
-    "month": "Jul",
-    "year": 2025
+    "day": 12,
+    "month": "Jan",
+    "year": 2026
   },
   "uxAccessibilityDoc": {
-    "done": false,
+    "done": true,
     "reference": {
-      "url": "https://www.figma.com/design/xIOunUThBXwKijvaF5HS7X/Read-Time-designs?node-id=446-34909&p=f&t=wOPIXu3CST8CMuDp-0",
+      "url": "https://www.figma.com/design/xIOunUThBXwKijvaF5HS7X/Read-Time-designs?node-id=1-184&p=f&t=Eqofh6kYiI6UY5Bh-0",
       "label": "Screen Reader UX"
     }
   },
   "acceptanceCriteria": {
-    "done": false,
+    "done": true,
     "reference": {
-      "url": "https://paper.dropbox.com/doc/Read-Time-for-Homepage-OJs-Experiment--CtZgjG_Huelwx4b87JzFBgRaAg-padKUYgd2fRw3zcS0ag3d",
+      "url": "https://paper.dropbox.com/doc/Read-Time-1-on-Article-page-A11y-Acceptance-Criteria-AAC--C1GZ8TsYi968TaBkgYneucWQAg-2ve3KcsIk2ZO5m0vMdQrj",
       "label": "Accessibility Acceptance Criteria"
     }
   },
   "swarm": {
-    "done": false,
+    "done": true,
     "reference": {
-      "url": "https://paper.dropbox.com/doc/A11Y-Swarm-Article-Read-Time-Homepage-Experiment--CtYNO6jbnVAYw7CkKv4HCr2NAg-zLTlvrNpD89QQl3UzAWsj",
+      "url": "https://paper.dropbox.com/doc/A11Y-Swarm-Article-Read-Time-Experiment--C1Avg9kGq58UTgBh5qicsOopAg-qz77913Je6AjGorYxog3n",
       "label": "Accessibility Swarm Notes"
     }
   }

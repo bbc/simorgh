@@ -2,7 +2,7 @@
 import { PageTypes } from '#app/models/types/global';
 import handleContinueReadingButton from './handleContinueReadingButton';
 import { ServiceParametersType } from '../../types';
-import getOptimizelyKey from '../../../../cypress/support/helpers/getOptimizelyKey';
+import getOptimizelyKey from './getOptimizelyKey';
 
 type TestType = (props: ServiceParametersType) => void;
 
@@ -11,7 +11,6 @@ export type TestDataType = {
   tests: TestType[];
   runforEnv: string[];
   service: string;
-  useReverb?: boolean;
   contentType?: string;
   applicationType?: string;
   siteId?: string;
@@ -27,6 +26,7 @@ type FunctionProps = {
   testIsolation?: boolean;
   deleteServiceWorker?: boolean;
   headers?: Record<string, string>;
+  clearCache?: boolean;
 };
 
 export default ({
@@ -38,6 +38,7 @@ export default ({
   testIsolation = false,
   deleteServiceWorker = false,
   headers,
+  clearCache,
 }: FunctionProps) => {
   const serviceToRun = Cypress.env('ONLY_SERVICE');
 
@@ -61,14 +62,6 @@ export default ({
           before(() => {
             beforeAll.forEach(runBeforeAll => runBeforeAll());
 
-            // Ensure that the page is returning a 200 response code
-            if (failOnStatusCode) {
-              cy.testResponseCodeAndRetry({
-                url: path,
-                headers,
-              });
-            }
-
             // Potential fix for a11y tests causing a 'Failed to register a ServiceWorker: The document is in an invalid state.' error.
             const removeServiceWorker = (win: Window) => {
               if (win.navigator.serviceWorker) {
@@ -82,6 +75,10 @@ export default ({
                   });
               }
             };
+
+            if (clearCache) {
+              cy.clearLocalStorage();
+            }
 
             cy.visit(path, {
               failOnStatusCode,

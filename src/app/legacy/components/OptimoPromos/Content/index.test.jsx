@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 import { render, screen } from '@testing-library/react';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import LinkContents from '.';

@@ -1,16 +1,8 @@
 import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
-import * as analyticsUtils from '#lib/analyticsUtils';
 import { RequestContextProps } from '../../../../contexts/RequestContext';
 import { ServiceConfig } from '../../../../models/types/serviceConfig';
-import { buildPageATIParams, buildPageATIUrl } from '.';
-
-(analyticsUtils.getAtUserId as jest.Mock) = jest.fn();
-(analyticsUtils.getCurrentTime as jest.Mock) = jest
-  .fn()
-  .mockReturnValue('00-00-00');
-(analyticsUtils.getPublishedDatetime as jest.Mock) = jest
-  .fn()
-  .mockReturnValue('1970-01-01T00:00:00.000Z');
+import { Platforms } from '../../../../models/types/global';
+import { buildPageATIParams, buildAnalyticsParams } from '.';
 
 jest
   .spyOn(document, 'referrer', 'get')
@@ -21,6 +13,7 @@ jest.mock('#lib/utilities/onClient', () => jest.fn().mockReturnValue(true));
 const requestContext: RequestContextProps = {
   platform: 'canonical',
   statsDestination: 'statsDestination',
+  destinationSiteId: 12345,
   id: 'validId',
 };
 
@@ -33,7 +26,7 @@ const serviceContext: ServiceConfig = {
   lang: 'pcm',
 };
 
-describe('implementation of buildPageATIParams and buildPageATIUrl', () => {
+describe('implementation of buildPageATIParams', () => {
   afterEach(() => {
     jest.clearAllMocks();
   });
@@ -51,6 +44,9 @@ describe('implementation of buildPageATIParams and buildPageATIUrl', () => {
       categoryName: undefined,
       contentId: 'urn:bbc:tipo:topic:cm7682qz7v1t',
       contentType: 'index-home',
+      isPersonalisationOn: false,
+      hashedId: null,
+      isSignedIn: false,
       isUk: undefined,
       language: 'pcm',
       ldpThingIds: undefined,
@@ -63,6 +59,7 @@ describe('implementation of buildPageATIParams and buildPageATIUrl', () => {
       producerId: 'atiAnalyticsProducerId',
       producerName: 'atiAnalyticsProducerName',
       service: 'pidgin',
+      destinationSiteId: 12345,
       statsDestination: 'statsDestination',
       timePublished: undefined,
       timeUpdated: undefined,
@@ -88,40 +85,6 @@ describe('implementation of buildPageATIParams and buildPageATIUrl', () => {
       });
       expect(result).toEqual(validPageURLParams);
     });
-
-    it('should return the correct url for a page given the ATI configuration', () => {
-      const url = buildPageATIUrl({
-        atiData: homePageAtiData,
-        requestContext,
-        serviceContext,
-      });
-
-      const parsedATIURLParams = Object.fromEntries(
-        new URLSearchParams(url as string),
-      );
-
-      const expectedATIURLParams = {
-        s: '598285',
-        s2: 'atiAnalyticsProducerId',
-        p: 'kyrgyz.page',
-        r: '0x0x24x24',
-        re: '1024x768',
-        ref: 'https://www.example.com',
-        hl: '00-00-00',
-        lng: 'en-US',
-        x1: '[urn:bbc:tipo:topic:cm7682qz7v1t]',
-        x2: '[responsive]',
-        x3: '[atiAnalyticsAppName]',
-        x4: '[pcm]',
-        x5: '[http%3A%2F%2Flocalhost%2F]',
-        x6: '[https%3A%2F%2Fwww.example.com]',
-        x7: '[index-home]',
-        x8: '[simorgh]',
-        x9: '[pageTitle]',
-      };
-
-      expect(parsedATIURLParams).toEqual(expectedATIURLParams);
-    });
   });
 
   describe('Article Page', () => {
@@ -143,9 +106,13 @@ describe('implementation of buildPageATIParams and buildPageATIUrl', () => {
 
     const validPageURLParams = {
       appName: 'atiAnalyticsAppName',
+      campaigns: undefined,
       categoryName: 'Refugees%20and%20asylum%20seekers~Myanmar~Military',
       contentId: 'urn:bbc:optimo:asset:c9wxnzvwp3mo',
       contentType: 'article',
+      isPersonalisationOn: false,
+      hashedId: null,
+      isSignedIn: false,
       isUK: false,
       language: 'my',
       ldpThingIds:
@@ -160,6 +127,7 @@ describe('implementation of buildPageATIParams and buildPageATIUrl', () => {
       producerId: 'atiAnalyticsProducerId',
       producerName: 'atiAnalyticsProducerName',
       service: 'burmese',
+      destinationSiteId: 12345,
       statsDestination: 'statsDestination',
       timePublished: '2023-07-13T05:03:56.214Z',
       timeUpdated: '2023-07-13T08:35:47.388Z',
@@ -189,49 +157,6 @@ describe('implementation of buildPageATIParams and buildPageATIUrl', () => {
         serviceContext: { ...serviceContext, service: 'burmese', lang: 'my' },
       });
       expect(result).toEqual(validPageURLParams);
-    });
-
-    it('should return the correct url for a page given the ATI configuration', () => {
-      const url = buildPageATIUrl({
-        atiData: articlePageAtiData,
-        requestContext: {
-          ...requestContext,
-          isUK: false,
-          pageType: 'article',
-        },
-        serviceContext: { ...serviceContext, service: 'burmese', lang: 'my' },
-      });
-
-      const parsedATIURLParams = Object.fromEntries(
-        new URLSearchParams(url as string),
-      );
-
-      const expectedATIURLParams = {
-        s: '598285',
-        s2: 'atiAnalyticsProducerId',
-        p: 'burmese.articles.c9wxnzvwp3mo.page',
-        r: '0x0x24x24',
-        re: '1024x768',
-        ref: 'https://www.example.com',
-        hl: '00-00-00',
-        lng: 'en-US',
-        x1: '[urn:bbc:optimo:asset:c9wxnzvwp3mo]',
-        x2: '[responsive]',
-        x3: '[atiAnalyticsAppName]',
-        x4: '[my]',
-        x5: '[http%3A%2F%2Flocalhost%2F]',
-        x6: '[https%3A%2F%2Fwww.example.com]',
-        x7: '[article]',
-        x8: '[simorgh]',
-        x9: '[ဇူလိုင်လ%20၁၃%20ရက်ထိပ်တန်းသတင်းများ-%20ဒုက္ခသည်စခန်းဗုံးကြဲခံရလို့%20ထိုင်းကိုထွက်ပြေးသူတွေဆက်ရှိ]',
-        x11: '[2023-07-13T05:03:56.214Z]',
-        x12: '[2023-07-13T08:35:47.388Z]',
-        x13: '[Refugees%20and%20asylum%20seekers~Myanmar~Military]',
-        x14: '[0cd55773-e753-44ad-ad07-1366bf1aa6bc~a26174f5-fa3c-4cf8-95a2-29d877175eab~ce5c43ee-8982-4f88-9472-9aa79aeb09cc]',
-        x17: '[Refugees%20and%20asylum%20seekers~Myanmar~Military]',
-      };
-
-      expect(parsedATIURLParams).toEqual(expectedATIURLParams);
     });
 
     it('should return ampExperimentName only if it is present in atiData', () => {
@@ -276,6 +201,9 @@ describe('implementation of buildPageATIParams and buildPageATIUrl', () => {
       categoryName: 'Environment~Narendra+Modi~Nature~India~Severe+weather',
       contentId: 'urn:bbc:optimo:asset:c4nrpd0d4nro',
       contentType: 'article-sfv',
+      isPersonalisationOn: false,
+      hashedId: null,
+      isSignedIn: false,
       isUK: false,
       language: 'ha',
       ldpThingIds:
@@ -290,6 +218,7 @@ describe('implementation of buildPageATIParams and buildPageATIUrl', () => {
       producerId: 'atiAnalyticsProducerId',
       producerName: 'atiAnalyticsProducerName',
       service: 'hausa',
+      destinationSiteId: 12345,
       statsDestination: 'statsDestination',
       timePublished: '2023-07-11T17:42:48.771Z',
       timeUpdated: '2023-07-11T17:42:48.771Z',
@@ -307,49 +236,6 @@ describe('implementation of buildPageATIParams and buildPageATIUrl', () => {
       });
       expect(result).toEqual(validPageURLParams);
     });
-
-    it('should return the correct url for a page given the ATI configuration', () => {
-      const url = buildPageATIUrl({
-        atiData: optimoMediaArticlePageAtiData,
-        requestContext: {
-          ...requestContext,
-          isUK: false,
-          pageType: 'article',
-        },
-        serviceContext: { ...serviceContext, service: 'hausa', lang: 'ha' },
-      });
-
-      const parsedATIURLParams = Object.fromEntries(
-        new URLSearchParams(url as string),
-      );
-
-      const expectedATIURLParams = {
-        s: '598285',
-        s2: 'atiAnalyticsProducerId',
-        p: 'hausa.articles.c4nrpd0d4nro.page',
-        r: '0x0x24x24',
-        re: '1024x768',
-        ref: 'https://www.example.com',
-        hl: '00-00-00',
-        lng: 'en-US',
-        x1: '[urn:bbc:optimo:asset:c4nrpd0d4nro]',
-        x2: '[responsive]',
-        x3: '[atiAnalyticsAppName]',
-        x4: '[ha]',
-        x5: '[http%3A%2F%2Flocalhost%2F]',
-        x6: '[https%3A%2F%2Fwww.example.com]',
-        x7: '[article-sfv]',
-        x8: '[simorgh]',
-        x9: '[Kalli%20yadda%20ambaliya%20ta%20tagayyara%20wani%20yanki%20na%20Indiya]',
-        x11: '[2023-07-11T17:42:48.771Z]',
-        x12: '[2023-07-11T17:42:48.771Z]',
-        x13: '[Environment~Narendra+Modi~Nature~India~Severe+weather]',
-        x14: '[0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f~103fc7e4-3a8d-491c-9a75-3c37c299d48f~12e69b92-a7ba-4463-84e0-be107b9805d0~5a08f030-710f-4168-acee-67294a90fc75~9b16a6c2-7c16-42b7-bff7-6549579622e8]',
-        x17: '[Environment~Narendra+Modi~Nature~India~Severe+weather]',
-      };
-
-      expect(parsedATIURLParams).toEqual(expectedATIURLParams);
-    });
   });
 
   describe('Topic Page', () => {
@@ -362,10 +248,14 @@ describe('implementation of buildPageATIParams and buildPageATIUrl', () => {
     // timePublished and timeUpdated are not returned via BFF implementation so set to undefined in test
     const validPageURLParams = {
       appName: 'atiAnalyticsAppName',
+      campaigns: undefined,
       categoryName: undefined,
       contentId: 'urn:bbc:tipo:topic:c95y35941vrt',
       contentType: 'index-category',
-      isUk: undefined,
+      isPersonalisationOn: false,
+      hashedId: null,
+      isSignedIn: false,
+      isUK: undefined,
       language: 'pcm',
       ldpThingIds: undefined,
       ldpThingLabels: undefined,
@@ -377,6 +267,7 @@ describe('implementation of buildPageATIParams and buildPageATIUrl', () => {
       producerId: 'atiAnalyticsProducerId',
       producerName: 'atiAnalyticsProducerName',
       service: 'pidgin',
+      destinationSiteId: 12345,
       statsDestination: 'statsDestination',
       timePublished: undefined,
       timeUpdated: undefined,
@@ -402,40 +293,6 @@ describe('implementation of buildPageATIParams and buildPageATIUrl', () => {
       });
       expect(result).toEqual(validPageURLParams);
     });
-
-    it('should return the correct url for a page given the ATI configuration', () => {
-      const url = buildPageATIUrl({
-        atiData: topicPageAtiData,
-        requestContext,
-        serviceContext,
-      });
-
-      const parsedATIURLParams = Object.fromEntries(
-        new URLSearchParams(url as string),
-      );
-
-      const expectedATIURLParams = {
-        s: '598285',
-        s2: 'atiAnalyticsProducerId',
-        p: 'pidgin.topics.c95y35941vrt.page',
-        r: '0x0x24x24',
-        re: '1024x768',
-        ref: 'https://www.example.com',
-        hl: '00-00-00',
-        lng: 'en-US',
-        x1: '[urn:bbc:tipo:topic:c95y35941vrt]',
-        x2: '[responsive]',
-        x3: '[atiAnalyticsAppName]',
-        x4: '[pcm]',
-        x5: '[http%3A%2F%2Flocalhost%2F]',
-        x6: '[https%3A%2F%2Fwww.example.com]',
-        x7: '[index-category]',
-        x8: '[simorgh]',
-        x9: '[Donald%20Trump]',
-      };
-
-      expect(parsedATIURLParams).toEqual(expectedATIURLParams);
-    });
   });
 
   describe('Most Read Page', () => {
@@ -449,10 +306,14 @@ describe('implementation of buildPageATIParams and buildPageATIUrl', () => {
 
     const validPageURLParams = {
       appName: 'atiAnalyticsAppName',
+      campaigns: undefined,
       categoryName: undefined,
       contentId: undefined,
       contentType: 'list-datadriven',
-      isUk: undefined,
+      isPersonalisationOn: false,
+      hashedId: null,
+      isSignedIn: false,
+      isUK: undefined,
       language: 'pcm',
       ldpThingIds: undefined,
       ldpThingLabels: undefined,
@@ -464,6 +325,7 @@ describe('implementation of buildPageATIParams and buildPageATIUrl', () => {
       producerId: 'atiAnalyticsProducerId',
       producerName: 'atiAnalyticsProducerName',
       service: 'pidgin',
+      destinationSiteId: 12345,
       statsDestination: 'statsDestination',
       timePublished: '2023-08-01T12:00:00Z',
       timeUpdated: '2023-08-01T12:15:00Z',
@@ -488,41 +350,6 @@ describe('implementation of buildPageATIParams and buildPageATIUrl', () => {
         serviceContext,
       });
       expect(result).toEqual(validPageURLParams);
-    });
-
-    it('should return the correct url for a page given the ATI configuration', () => {
-      const url = buildPageATIUrl({
-        atiData: mostReadPageAtiData,
-        requestContext,
-        serviceContext,
-      });
-
-      const parsedATIURLParams = Object.fromEntries(
-        new URLSearchParams(url as string),
-      );
-
-      const expectedATIURLParams = {
-        s: '598285',
-        s2: 'atiAnalyticsProducerId',
-        p: 'pidgin.popular.read.page',
-        r: '0x0x24x24',
-        re: '1024x768',
-        ref: 'https://www.example.com',
-        hl: '00-00-00',
-        lng: 'en-US',
-        x2: '[responsive]',
-        x3: '[atiAnalyticsAppName]',
-        x4: '[pcm]',
-        x5: '[http%3A%2F%2Flocalhost%2F]',
-        x6: '[https%3A%2F%2Fwww.example.com]',
-        x7: '[list-datadriven]',
-        x8: '[simorgh]',
-        x9: '[MostReadPageTitle]',
-        x11: '[2023-08-01T12:00:00Z]',
-        x12: '[2023-08-01T12:15:00Z]',
-      };
-
-      expect(parsedATIURLParams).toEqual(expectedATIURLParams);
     });
   });
 
@@ -565,6 +392,9 @@ describe('implementation of buildPageATIParams and buildPageATIUrl', () => {
         contentId:
           'urn:bbc:cps:curie:asset:3137d6de-62c2-4637-a002-29d2ab075990',
         contentType: 'article',
+        isPersonalisationOn: false,
+        hashedId: null,
+        isSignedIn: false,
         isUK: undefined,
         language: 'es',
         ldpThingIds:
@@ -580,6 +410,7 @@ describe('implementation of buildPageATIParams and buildPageATIUrl', () => {
         producerId: 'atiAnalyticsProducerId',
         producerName: 'atiAnalyticsProducerName',
         service: 'mundo',
+        destinationSiteId: 12345,
         statsDestination: 'statsDestination',
         timePublished: '2023-02-10T02:00:41.000Z',
         timeUpdated: '2023-02-10T02:00:41.000Z',
@@ -601,46 +432,6 @@ describe('implementation of buildPageATIParams and buildPageATIUrl', () => {
           serviceContext: { ...serviceContext, service: 'mundo', lang: 'es' },
         });
         expect(result).toEqual(validPageURLParams);
-      });
-
-      it('should return the correct url for a page given the ATI configuration', () => {
-        const url = buildPageATIUrl({
-          atiData: cpsSTYAtiData,
-          requestContext,
-          serviceContext,
-        });
-
-        const parsedATIURLParams = Object.fromEntries(
-          new URLSearchParams(url as string),
-        );
-
-        const expectedATIURLParams = {
-          hl: '00-00-00',
-          lng: 'en-US',
-          p: 'latin_america::mundo.latin_america.story.64591782.page',
-          r: '0x0x24x24',
-          re: '1024x768',
-          ref: 'https://www.example.com',
-          s: '598285',
-          s2: 'atiAnalyticsProducerId',
-          x1: '[urn:bbc:cps:curie:asset:3137d6de-62c2-4637-a002-29d2ab075990]',
-          x2: '[responsive]',
-          x3: '[atiAnalyticsAppName]',
-          x4: '[es]',
-          x5: '[http%3A%2F%2Flocalhost%2F]',
-          x6: '[https%3A%2F%2Fwww.example.com]',
-          x7: '[article]',
-          x8: '[simorgh]',
-          x9: '[4%20claves%20para%20entender%20la%20"sorpresiva"%20liberación%20y%20envío%20a%20EE.UU.%20de%20222%20opositores%20nicaragüenses%20-%20BBC%20News%20Mundo]',
-          x11: '[2023-02-10T02:00:41.000Z]',
-          x12: '[2023-02-10T02:00:41.000Z]',
-          x13: '[Politics~Nicaragua~Latin+America]',
-          x14: '[75612fa6-147c-4a43-97fa-fcf70d9cced3~7613abe4-1c05-4594-a5ec-3ccf6268b220~e0d04166-b92f-468e-9e68-d5f9330e6ae7]',
-          x16: '[WS - Update me]',
-          x17: '[Explainer]',
-        };
-
-        expect(parsedATIURLParams).toEqual(expectedATIURLParams);
       });
     });
 
@@ -681,6 +472,9 @@ describe('implementation of buildPageATIParams and buildPageATIUrl', () => {
         contentId:
           'urn:bbc:cps:curie:asset:6d745333-c79d-e245-a5b2-f4acb7de35e1',
         contentType: 'article-media-asset',
+        isPersonalisationOn: false,
+        hashedId: null,
+        isSignedIn: false,
         isUK: undefined,
         language: 'es',
         ldpThingIds:
@@ -695,6 +489,7 @@ describe('implementation of buildPageATIParams and buildPageATIUrl', () => {
         producerId: 'atiAnalyticsProducerId',
         producerName: 'atiAnalyticsProducerName',
         service: 'mundo',
+        destinationSiteId: 12345,
         statsDestination: 'statsDestination',
         timePublished: '2017-09-14T14:09:14.000Z',
         timeUpdated: '2017-09-14T14:09:14.000Z',
@@ -716,46 +511,6 @@ describe('implementation of buildPageATIParams and buildPageATIUrl', () => {
           serviceContext: { ...serviceContext, service: 'mundo', lang: 'es' },
         });
         expect(result).toEqual(validPageURLParams);
-      });
-
-      it('should return the correct url for a page given the ATI configuration', () => {
-        const url = buildPageATIUrl({
-          atiData: cpsMAPAtiData,
-          requestContext,
-          serviceContext,
-        });
-
-        const parsedATIURLParams = Object.fromEntries(
-          new URLSearchParams(url as string),
-        );
-
-        const expectedATIURLParams = {
-          hl: '00-00-00',
-          lng: 'en-US',
-          p: 'media::mundo.media.media_asset.41174775.page',
-          r: '0x0x24x24',
-          re: '1024x768',
-          ref: 'https://www.example.com',
-          s: '598285',
-          s2: 'atiAnalyticsProducerId',
-          x1: '[urn:bbc:cps:curie:asset:6d745333-c79d-e245-a5b2-f4acb7de35e1]',
-          x2: '[responsive]',
-          x3: '[atiAnalyticsAppName]',
-          x4: '[es]',
-          x5: '[http%3A%2F%2Flocalhost%2F]',
-          x6: '[https%3A%2F%2Fwww.example.com]',
-          x7: '[article-media-asset]',
-          x8: '[simorgh]',
-          x9: '[¿Qué%20es%20el%20albur%20en%20México%20y%20cómo%20puedes%20saber%20si%20te%20están%20"albureando"?]',
-          x11: '[2017-09-14T14:09:14.000Z]',
-          x12: '[2017-09-14T14:09:14.000Z]',
-          x13: '[Politics~Nicaragua~Latin+America]',
-          x14: '[75612fa6-147c-4a43-97fa-fcf70d9cced3~7613abe4-1c05-4594-a5ec-3ccf6268b220~e0d04166-b92f-468e-9e68-d5f9330e6ae7]',
-          x16: '[WS - Update me]',
-          x17: '[News]',
-        };
-
-        expect(parsedATIURLParams).toEqual(expectedATIURLParams);
       });
     });
 
@@ -795,6 +550,9 @@ describe('implementation of buildPageATIParams and buildPageATIUrl', () => {
         contentId:
           'urn:bbc:cps:curie:asset:08e22e90-7361-cd47-b586-7cb53fc5a012',
         contentType: 'article-photo-gallery',
+        isPersonalisationOn: false,
+        hashedId: null,
+        isSignedIn: false,
         isUK: undefined,
         language: 'es',
         ldpThingIds: '25844b6e-80b0-4de9-8ea0-7a35e7d4086f',
@@ -808,6 +566,7 @@ describe('implementation of buildPageATIParams and buildPageATIUrl', () => {
         producerId: 'atiAnalyticsProducerId',
         producerName: 'atiAnalyticsProducerName',
         service: 'mundo',
+        destinationSiteId: 12345,
         statsDestination: 'statsDestination',
         timePublished: '2016-08-07T09:21:02.000Z',
         timeUpdated: '2016-08-07T09:21:02.000Z',
@@ -830,46 +589,6 @@ describe('implementation of buildPageATIParams and buildPageATIUrl', () => {
         });
         expect(result).toEqual(validPageURLParams);
       });
-
-      it('should return the correct url for a page given the ATI configuration', () => {
-        const url = buildPageATIUrl({
-          atiData: cpsPGLAtiData,
-          requestContext,
-          serviceContext,
-        });
-
-        const parsedATIURLParams = Object.fromEntries(
-          new URLSearchParams(url as string),
-        );
-
-        const expectedATIURLParams = {
-          hl: '00-00-00',
-          lng: 'en-US',
-          p: 'sport::mundo.sport.photo_gallery.36935058.page',
-          r: '0x0x24x24',
-          re: '1024x768',
-          ref: 'https://www.example.com',
-          s: '598285',
-          s2: 'atiAnalyticsProducerId',
-          x1: '[urn:bbc:cps:curie:asset:08e22e90-7361-cd47-b586-7cb53fc5a012]',
-          x2: '[responsive]',
-          x3: '[atiAnalyticsAppName]',
-          x4: '[es]',
-          x5: '[http%3A%2F%2Flocalhost%2F]',
-          x6: '[https%3A%2F%2Fwww.example.com]',
-          x7: '[article-photo-gallery]',
-          x8: '[simorgh]',
-          x9: '[Río%202016,%20el%20antes%20y%20el%20ahora:%20cómo%20ha%20cambiado%20la%20ropa%20deportiva%20en%20más%20de%20un%20siglo%20de%20juegos%20olímpicos]',
-          x11: '[2016-08-07T09:21:02.000Z]',
-          x12: '[2016-08-07T09:21:02.000Z]',
-          x13: '[Technology]',
-          x14: '[25844b6e-80b0-4de9-8ea0-7a35e7d4086f]',
-          x16: '[WS - Divert me]',
-          x17: '[News]',
-        };
-
-        expect(parsedATIURLParams).toEqual(expectedATIURLParams);
-      });
     });
 
     describe('CSP', () => {
@@ -890,6 +609,7 @@ describe('implementation of buildPageATIParams and buildPageATIUrl', () => {
         pageTitle: "Tech Tent: The new 'space race' for computer chips",
         producerId: '64',
         producerName: 'NEWS',
+        destinationSiteId: 12345,
         timePublished: '2021-03-05T13:37:50.000Z',
         timeUpdated: '2021-03-05T13:37:50.000Z',
       };
@@ -901,6 +621,9 @@ describe('implementation of buildPageATIParams and buildPageATIUrl', () => {
         contentId:
           'urn:bbc:cps:curie:asset:c1c8b1bf-4c9c-44e8-be0d-c81a2aa59e46',
         contentType: 'article-correspondent',
+        isPersonalisationOn: false,
+        hashedId: null,
+        isSignedIn: false,
         isUK: undefined,
         language: 'en-gb',
         ldpThingIds:
@@ -916,6 +639,7 @@ describe('implementation of buildPageATIParams and buildPageATIUrl', () => {
         producerId: '64',
         producerName: 'atiAnalyticsProducerName',
         service: 'news',
+        destinationSiteId: 12345,
         statsDestination: 'statsDestination',
         timePublished: '2021-03-05T13:37:50.000Z',
         timeUpdated: '2021-03-05T13:37:50.000Z',
@@ -970,45 +694,87 @@ describe('implementation of buildPageATIParams and buildPageATIUrl', () => {
         };
         expect(result).toEqual(expectedParamsWithOverride);
       });
-
-      it('should return the correct url for a page given the ATI configuration', () => {
-        const url = buildPageATIUrl({
-          atiData: cpsCSPAtiData,
-          requestContext,
-          serviceContext,
-        });
-
-        const parsedATIURLParams = Object.fromEntries(
-          new URLSearchParams(url as string),
-        );
-
-        const expectedATIURLParams = {
-          hl: '00-00-00',
-          lng: 'en-US',
-          p: 'technology::news.technology.correspondent_story.56294493.page',
-          r: '0x0x24x24',
-          re: '1024x768',
-          ref: 'https://www.example.com',
-          s: '598285',
-          s2: '64',
-          x1: '[urn:bbc:cps:curie:asset:c1c8b1bf-4c9c-44e8-be0d-c81a2aa59e46]',
-          x2: '[responsive]',
-          x3: '[atiAnalyticsAppName]',
-          x4: '[en-gb]',
-          x5: '[http%3A%2F%2Flocalhost%2F]',
-          x6: '[https%3A%2F%2Fwww.example.com]',
-          x7: '[article-correspondent]',
-          x8: '[simorgh]',
-          x9: "[Tech%20Tent:%20The%20new%20'space%20race'%20for%20computer%20chips]",
-          x11: '[2021-03-05T13:37:50.000Z]',
-          x12: '[2021-03-05T13:37:50.000Z]',
-          x13: '[Intel~Technology+of+business~Business~Technology~Car+industry~China~Taiwan~Computer+chip~Semiconductors]',
-          x14: '[0d358111-576d-4d61-a7c7-e2e71931b579~2c493367-e5a2-4c19-be5f-6e9342f5c591~2f2db234-3c2d-40a4-b4ac-eea661faadd0~31684f19-84d6-41f6-b033-7ae08098572a~65ba56b4-3f50-4217-ab8e-b3c1fe890364~6892384e-1966-4c03-9ce3-f694a8f9f69e~7a48b6e0-9074-4303-ae82-011003058e16~b054a2d3-6c1e-44de-b8db-0e2501c035c0~f7bf39da-286c-4e37-8ee0-a01395f09ac2]',
-          x17: '[News]',
-        };
-
-        expect(parsedATIURLParams).toEqual(expectedATIURLParams);
-      });
     });
+  });
+});
+
+describe('buildAnalyticsParams', () => {
+  const atiData = {
+    contentId: 'urn:bbc:tipo:topic:c95y35941vrt',
+    contentType: 'index-category',
+    pageIdentifier: 'pidgin.topics.c95y35941vrt.page',
+    pageTitle: 'Donald Trump',
+  };
+
+  it('should return null for resonanceParams when resonanceEnabled is not set', () => {
+    const { resonanceParams } = buildAnalyticsParams({
+      atiData,
+      requestContext,
+      // @ts-expect-error - invalid type required for testing purposes
+      serviceContext: { ...serviceContext, resonanceEnabled: null },
+    });
+
+    expect(resonanceParams).toBeNull();
+  });
+
+  it('should return null for resonanceParams when resonanceEnabled is false', () => {
+    const { resonanceParams } = buildAnalyticsParams({
+      atiData,
+      requestContext,
+      serviceContext: { ...serviceContext, resonanceEnabled: false },
+    });
+
+    expect(resonanceParams).toBeNull();
+  });
+
+  it('should return resonanceParams when resonanceEnabled is true', () => {
+    const { resonanceParams } = buildAnalyticsParams({
+      atiData,
+      requestContext,
+      serviceContext: { ...serviceContext, resonanceEnabled: true },
+    });
+
+    expect(resonanceParams).not.toBeNull();
+    expect(resonanceParams).toHaveProperty('resonanceProperties');
+    expect(resonanceParams).toHaveProperty('baseProperties');
+    expect(resonanceParams).toHaveProperty('pageviewProperties');
+  });
+
+  it.each([
+    { platform: 'app', shouldReturnResonanceParams: true },
+    { platform: 'canonical', shouldReturnResonanceParams: true },
+    { platform: 'amp', shouldReturnResonanceParams: false },
+    { platform: 'lite', shouldReturnResonanceParams: false },
+  ])(
+    'should return resonanceParams: $shouldReturnResonanceParams when resonanceEnabled is true and platform is $platform',
+    ({ platform, shouldReturnResonanceParams }) => {
+      const { resonanceParams } = buildAnalyticsParams({
+        atiData,
+        requestContext: { ...requestContext, platform: platform as Platforms },
+        serviceContext: { ...serviceContext, resonanceEnabled: true },
+      });
+
+      if (shouldReturnResonanceParams) {
+        expect(resonanceParams).not.toBeNull();
+      } else {
+        expect(resonanceParams).toBeNull();
+      }
+    },
+  );
+
+  it('should always return reverbParams regardless of resonanceEnabled', () => {
+    const withResonance = buildAnalyticsParams({
+      atiData,
+      requestContext,
+      serviceContext: { ...serviceContext, resonanceEnabled: true },
+    });
+    const withoutResonance = buildAnalyticsParams({
+      atiData,
+      requestContext,
+      serviceContext: { ...serviceContext, resonanceEnabled: false },
+    });
+
+    expect(withResonance.reverbParams).toBeDefined();
+    expect(withoutResonance.reverbParams).toBeDefined();
   });
 });

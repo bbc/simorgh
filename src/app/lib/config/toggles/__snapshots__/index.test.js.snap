@@ -3,6 +3,9 @@
 exports[`Toggles Config when application environment is live should contain correct default values 1`] = `
 {
   "_environment": "live",
+  "account": {
+    "enabled": false,
+  },
   "ads": {
     "enabled": false,
   },
@@ -10,6 +13,9 @@ exports[`Toggles Config when application environment is live should contain corr
     "enabled": false,
   },
   "articleLiteSiteLink": {
+    "enabled": true,
+  },
+  "articlePortraitVideo": {
     "enabled": true,
   },
   "comscoreAnalytics": {
@@ -27,6 +33,9 @@ exports[`Toggles Config when application environment is live should contain corr
   },
   "eventTracking": {
     "enabled": true,
+  },
+  "googlePreferredSource": {
+    "enabled": false,
   },
   "homePageRadioSchedule": {
     "enabled": false,
@@ -73,8 +82,20 @@ exports[`Toggles Config when application environment is live should contain corr
   "scriptLink": {
     "enabled": true,
   },
+  "showSportDataHeader": {
+    "enabled": false,
+  },
+  "sportDataPolling": {
+    "enabled": false,
+  },
   "topBarOJs": {
     "enabled": true,
+  },
+  "topicUasPersonalization": {
+    "enabled": false,
+  },
+  "uasPersonalization": {
+    "enabled": false,
   },
   "variantCookie": {
     "enabled": true,
@@ -88,6 +109,10 @@ exports[`Toggles Config when application environment is live should contain corr
 exports[`Toggles Config when application environment is local should contain correct default values 1`] = `
 {
   "_environment": "local",
+  "account": {
+    "enabled": true,
+    "value": "hindi|mundo|portuguese",
+  },
   "ads": {
     "enabled": true,
   },
@@ -95,6 +120,9 @@ exports[`Toggles Config when application environment is local should contain cor
     "enabled": false,
   },
   "articleLiteSiteLink": {
+    "enabled": true,
+  },
+  "articlePortraitVideo": {
     "enabled": true,
   },
   "comscoreAnalytics": {
@@ -113,13 +141,22 @@ exports[`Toggles Config when application environment is local should contain cor
   "eventTracking": {
     "enabled": true,
   },
+  "googlePreferredSource": {
+    "enabled": false,
+  },
   "homePageRadioSchedule": {
     "enabled": true,
   },
   "include": {
     "enabled": true,
   },
+  "livePagePolling": {
+    "enabled": true,
+  },
   "liveRadioSchedule": {
+    "enabled": true,
+  },
+  "locationTopicCuration": {
     "enabled": true,
   },
   "midArticleOnwardJourney": {
@@ -158,8 +195,22 @@ exports[`Toggles Config when application environment is local should contain cor
   "scriptLink": {
     "enabled": true,
   },
+  "showSportDataHeader": {
+    "enabled": true,
+  },
+  "sportDataPolling": {
+    "enabled": true,
+  },
   "topBarOJs": {
     "enabled": true,
+  },
+  "topicUasPersonalization": {
+    "enabled": true,
+    "value": "hindi|mundo|portuguese",
+  },
+  "uasPersonalization": {
+    "enabled": true,
+    "value": "hindi|mundo|portuguese",
   },
   "variantCookie": {
     "enabled": true,
@@ -173,6 +224,9 @@ exports[`Toggles Config when application environment is local should contain cor
 exports[`Toggles Config when application environment is test should contain correct default values 1`] = `
 {
   "_environment": "test",
+  "account": {
+    "enabled": false,
+  },
   "ads": {
     "enabled": false,
   },
@@ -180,6 +234,9 @@ exports[`Toggles Config when application environment is test should contain corr
     "enabled": false,
   },
   "articleLiteSiteLink": {
+    "enabled": true,
+  },
+  "articlePortraitVideo": {
     "enabled": true,
   },
   "comscoreAnalytics": {
@@ -197,6 +254,9 @@ exports[`Toggles Config when application environment is test should contain corr
   },
   "eventTracking": {
     "enabled": true,
+  },
+  "googlePreferredSource": {
+    "enabled": false,
   },
   "homePageRadioSchedule": {
     "enabled": true,
@@ -243,8 +303,20 @@ exports[`Toggles Config when application environment is test should contain corr
   "scriptLink": {
     "enabled": true,
   },
+  "showSportDataHeader": {
+    "enabled": false,
+  },
+  "sportDataPolling": {
+    "enabled": false,
+  },
   "topBarOJs": {
     "enabled": true,
+  },
+  "topicUasPersonalization": {
+    "enabled": false,
+  },
+  "uasPersonalization": {
+    "enabled": false,
   },
   "variantCookie": {
     "enabled": true,

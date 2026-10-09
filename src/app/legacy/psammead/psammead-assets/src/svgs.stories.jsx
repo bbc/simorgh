@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from '@emotion/styled';
 import { storiesOf } from '@storybook/react-webpack5';
 import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';

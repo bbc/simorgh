@@ -1,5 +1,5 @@
 import { Theme } from '@emotion/react';
-
+import pixelsToRem from '#app/utilities/pixelsToRem';
 import {
   calculatePromoWidth,
   calculateVariedNavContainerWidths,
@@ -41,11 +41,26 @@ describe('styleUtils', () => {
       POINTER: 'pointer',
     } as Theme['mq'];
 
+    const mockGridWidths = {
+      900: 900,
+      1008: 1008,
+    } as Theme['gridWidths'];
+
     const navButtonWidths = calculateVariedNavContainerWidths({
       mq: mockMq,
       display: 'block',
       widthParameter: 'flexBasis',
+      gridWidths: mockGridWidths,
     });
+
+    const expectedContainerQueryGroup4 = `@container (min-width: ${pixelsToRem(
+      900,
+    )}rem)`;
+
+    const expectedContainerQueryGroup5 = `@container (min-width: ${pixelsToRem(
+      1008,
+    )}rem)`;
+
     expect(navButtonWidths).toStrictEqual({
       'group 3 min': {
         pointer: {
@@ -54,12 +69,16 @@ describe('styleUtils', () => {
         },
       },
       'group 4 min': {
-        display: 'block',
-        flexBasis: 'calc(calc((100% / 4.5) - 0rem) * 0.5)',
+        [expectedContainerQueryGroup4]: {
+          display: 'block',
+          flexBasis: 'calc(calc((100% / 4.5) - 0rem) * 0.5)',
+        },
       },
       'group 5 min': {
-        display: 'block',
-        flexBasis: 'calc(calc((100% / 5.5) - 0rem) * 0.5)',
+        [expectedContainerQueryGroup5]: {
+          display: 'block',
+          flexBasis: 'calc(calc((100% / 5.5) - 0rem) * 0.5)',
+        },
       },
     });
   });

@@ -1,0 +1,1729 @@
+{
+  "data": {
+    "article": {
+      "metadata": {
+        "atiAnalytics": {
+          "categoryName": "Narendra+Modi~Nepal~Xi+Jinping~India~China~Flood~Severe+weather",
+          "contentId": "urn:bbc:optimo:asset:cj4jdypqw9zo",
+          "contentType": "article-sfv",
+          "language": "gu",
+          "ldpThingIds": "103fc7e4-3a8d-491c-9a75-3c37c299d48f~1de7eccb-d633-4e93-97c2-1771b7841345~47172845-9973-40ac-8d1e-b18a302cabf0~5a08f030-710f-4168-acee-67294a90fc75~6892384e-1966-4c03-9ce3-f694a8f9f69e~7789f256-a806-479a-b6d0-50e3d4cd9abc~9b16a6c2-7c16-42b7-bff7-6549579622e8",
+          "ldpThingLabels": "Narendra+Modi~Nepal~Xi+Jinping~India~China~Flood~Severe+weather",
+          "nationsProducer": null,
+          "pageIdentifier": "gujarati.articles.cj4jdypqw9zo.page",
+          "pageTitle": "નેપાળ : એવું ભયંકર પૂર આવ્યું કે વાહનો, પુલ, બિલ્ડિંગો તણાઈ ગયાં",
+          "timePublished": "2026-08-26T13:22:55.569Z",
+          "timeUpdated": "2026-08-26T13:22:55.569Z",
+          "readTimeMilliseconds": 60000
+        },
+        "id": "urn:bbc:ares::article:cj4jdypqw9zo",
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:cj4jdypqw9zo",
+          "canonicalUrl": "https://www.bbc.com/gujarati/articles/cj4jdypqw9zo"
+        },
+        "type": "article",
+        "createdBy": "Gujarati",
+        "language": "gu",
+        "firstPublished": 1787750575569,
+        "lastPublished": 1787750575569,
+        "isOppm": false,
+        "options": { "includeComments": false },
+        "analyticsLabels": {
+          "ldp_tags": "Narendra+Modi~Nepal~Xi+Jinping~India~China~Flood~Severe+weather",
+          "page": "gujarati.articles.cj4jdypqw9zo.page",
+          "irisKeyword": null,
+          "audience_motivation": "Keep me on trend~Update me",
+          "ldp_ids": "103fc7e4-3a8d-491c-9a75-3c37c299d48f~1de7eccb-d633-4e93-97c2-1771b7841345~47172845-9973-40ac-8d1e-b18a302cabf0~5a08f030-710f-4168-acee-67294a90fc75~6892384e-1966-4c03-9ce3-f694a8f9f69e~7789f256-a806-479a-b6d0-50e3d4cd9abc~9b16a6c2-7c16-42b7-bff7-6549579622e8",
+          "contentId": "urn:bbc:optimo:asset:cj4jdypqw9zo",
+          "producer": "Gujarati"
+        },
+        "passport": {
+          "language": "gu",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Gujarati",
+          "taggings": [
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+              "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+              "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+              "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+              "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+              "value": "http://www.bbc.co.uk/things/95036386-18ed-4344-ad32-fb02e21816b5#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/1de7eccb-d633-4e93-97c2-1771b7841345#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/47172845-9973-40ac-8d1e-b18a302cabf0#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/103fc7e4-3a8d-491c-9a75-3c37c299d48f#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+              "value": "http://www.bbc.co.uk/things/e2c286b3-665d-4806-87f5-c8b005938ba4#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+              "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/7789f256-a806-479a-b6d0-50e3d4cd9abc#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/9b16a6c2-7c16-42b7-bff7-6549579622e8#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/dateFirstReleased",
+              "value": "2026-08-26T13:22:55.569Z"
+            }
+          ],
+          "predicates": {
+            "assetType": [
+              {
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                "type": "assetType"
+              }
+            ],
+            "primaryMediaType": [
+              {
+                "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                "type": "primaryMediaType"
+              }
+            ],
+            "dateFirstReleased": [
+              {
+                "value": "2026-08-26T13:22:55.569Z",
+                "type": "dateFirstReleased"
+              }
+            ],
+            "infoClass": [
+              {
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                "type": "infoClass"
+              }
+            ],
+            "formats": [
+              {
+                "value": "http://www.bbc.co.uk/things/95036386-18ed-4344-ad32-fb02e21816b5#id",
+                "thingLabel": "Horizontal",
+                "thingUri": "http://www.bbc.co.uk/things/95036386-18ed-4344-ad32-fb02e21816b5#id",
+                "thingId": "95036386-18ed-4344-ad32-fb02e21816b5",
+                "thingType": ["tagging:TagConcept", "tagging:Format"],
+                "thingSameAs": [],
+                "thingEnglishLabel": "Horizontal",
+                "thingPreferredLabel": "Horizontal",
+                "thingLabelLanguage": "gu",
+                "type": "formats"
+              }
+            ],
+            "editorialSensitivity": [
+              {
+                "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                "type": "editorialSensitivity"
+              }
+            ],
+            "about": [
+              {
+                "value": "http://www.bbc.co.uk/things/1de7eccb-d633-4e93-97c2-1771b7841345#id",
+                "thingLabel": "નેપાળ",
+                "thingUri": "http://www.bbc.co.uk/things/1de7eccb-d633-4e93-97c2-1771b7841345#id",
+                "thingId": "1de7eccb-d633-4e93-97c2-1771b7841345",
+                "thingType": [
+                  "core:Thing",
+                  "tagging:TagConcept",
+                  "core:Place",
+                  "geoname:Feature",
+                  "geoname:GeoTagConcept"
+                ],
+                "thingSameAs": [
+                  "http://sws.geonames.org/1282988/",
+                  "http://www.wikidata.org/entity/Q837"
+                ],
+                "thingEnglishLabel": "Nepal",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/47172845-9973-40ac-8d1e-b18a302cabf0#id",
+                "thingLabel": "શી જિનપિંગ",
+                "thingUri": "http://www.bbc.co.uk/things/47172845-9973-40ac-8d1e-b18a302cabf0#id",
+                "thingId": "47172845-9973-40ac-8d1e-b18a302cabf0",
+                "thingType": [
+                  "core:Thing",
+                  "tagging:TagConcept",
+                  "tagging:AmbiguousTerm",
+                  "core:Person",
+                  "tagging:Agent"
+                ],
+                "thingSameAs": [
+                  "http://dbpedia.org/resource/Xi_Jinping",
+                  "http://www.wikidata.org/entity/Q15031",
+                  "https://www.imdb.com/name/nm7010941/"
+                ],
+                "thingEnglishLabel": "Xi Jinping",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
+                "thingLabel": "ભારત",
+                "thingUri": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
+                "thingId": "5a08f030-710f-4168-acee-67294a90fc75",
+                "thingType": [
+                  "core:Thing",
+                  "tagging:TagConcept",
+                  "core:Place",
+                  "geoname:Feature",
+                  "geoname:GeoTagConcept"
+                ],
+                "thingSameAs": [
+                  "http://sws.geonames.org/1269750/",
+                  "http://dbpedia.org/resource/India",
+                  "http://www.wikidata.org/entity/Q668"
+                ],
+                "thingEnglishLabel": "India",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
+                "thingLabel": "ચીન",
+                "thingUri": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
+                "thingId": "6892384e-1966-4c03-9ce3-f694a8f9f69e",
+                "thingType": [
+                  "core:Thing",
+                  "tagging:TagConcept",
+                  "core:Place",
+                  "geoname:Feature",
+                  "geoname:GeoTagConcept"
+                ],
+                "thingSameAs": [
+                  "http://sws.geonames.org/1814991/",
+                  "http://dbpedia.org/resource/China",
+                  "http://www.wikidata.org/entity/Q148"
+                ],
+                "thingEnglishLabel": "China",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/103fc7e4-3a8d-491c-9a75-3c37c299d48f#id",
+                "thingLabel": "નરેન્દ્ર મોદી",
+                "thingUri": "http://www.bbc.co.uk/things/103fc7e4-3a8d-491c-9a75-3c37c299d48f#id",
+                "thingId": "103fc7e4-3a8d-491c-9a75-3c37c299d48f",
+                "thingType": [
+                  "core:Thing",
+                  "tagging:TagConcept",
+                  "tagging:AmbiguousTerm",
+                  "core:Person",
+                  "tagging:Agent"
+                ],
+                "thingSameAs": [
+                  "http://dbpedia.org/resource/Narendra_Modi",
+                  "http://www.wikidata.org/entity/Q1058",
+                  "https://www.imdb.com/name/nm5177533/"
+                ],
+                "thingEnglishLabel": "Narendra Modi",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/7789f256-a806-479a-b6d0-50e3d4cd9abc#id",
+                "thingLabel": "પૂર",
+                "thingUri": "http://www.bbc.co.uk/things/7789f256-a806-479a-b6d0-50e3d4cd9abc#id",
+                "thingId": "7789f256-a806-479a-b6d0-50e3d4cd9abc",
+                "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+                "thingSameAs": [
+                  "http://dbpedia.org/resource/Flood",
+                  "http://www.wikidata.org/entity/Q8068"
+                ],
+                "thingEnglishLabel": "Flood",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/9b16a6c2-7c16-42b7-bff7-6549579622e8#id",
+                "thingLabel": "વાતાવરણ",
+                "thingUri": "http://www.bbc.co.uk/things/9b16a6c2-7c16-42b7-bff7-6549579622e8#id",
+                "thingId": "9b16a6c2-7c16-42b7-bff7-6549579622e8",
+                "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+                "thingSameAs": [
+                  "http://dbpedia.org/resource/Severe_weather",
+                  "http://www.wikidata.org/entity/Q741507"
+                ],
+                "thingEnglishLabel": "Severe weather",
+                "type": "about"
+              }
+            ]
+          }
+        },
+        "tags": {
+          "about": [
+            {
+              "thingLabel": "નેપાળ",
+              "thingUri": "http://www.bbc.co.uk/things/1de7eccb-d633-4e93-97c2-1771b7841345#id",
+              "thingId": "1de7eccb-d633-4e93-97c2-1771b7841345",
+              "thingType": [
+                "core:Thing",
+                "tagging:TagConcept",
+                "core:Place",
+                "geoname:Feature",
+                "geoname:GeoTagConcept"
+              ],
+              "thingSameAs": [
+                "http://sws.geonames.org/1282988/",
+                "http://www.wikidata.org/entity/Q837"
+              ],
+              "topicName": "નેપાળ",
+              "topicId": "c404vn5789qt",
+              "curationList": [
+                {
+                  "curationId": "32bcce5b-99ed-48a0-99ed-ac2fe5cacefc",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Nepal",
+              "thingLabelLanguage": "gu",
+              "thingPreferredLabel": "Nepal"
+            },
+            {
+              "thingLabel": "શી જિનપિંગ",
+              "thingUri": "http://www.bbc.co.uk/things/47172845-9973-40ac-8d1e-b18a302cabf0#id",
+              "thingId": "47172845-9973-40ac-8d1e-b18a302cabf0",
+              "thingType": [
+                "core:Thing",
+                "tagging:TagConcept",
+                "tagging:AmbiguousTerm",
+                "core:Person",
+                "tagging:Agent"
+              ],
+              "thingSameAs": [
+                "http://dbpedia.org/resource/Xi_Jinping",
+                "http://www.wikidata.org/entity/Q15031",
+                "https://www.imdb.com/name/nm7010941/"
+              ],
+              "topicName": "શી જિનપિંગ",
+              "topicId": "cvjp258z025t",
+              "curationList": [
+                {
+                  "curationId": "85ed6167-03aa-444b-9f2f-1d9812d4d13b",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Xi Jinping",
+              "thingLabelLanguage": "gu",
+              "thingPreferredLabel": "Xi Jinping"
+            },
+            {
+              "thingLabel": "ભારત",
+              "thingUri": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
+              "thingId": "5a08f030-710f-4168-acee-67294a90fc75",
+              "thingType": [
+                "core:Thing",
+                "tagging:TagConcept",
+                "core:Place",
+                "geoname:Feature",
+                "geoname:GeoTagConcept"
+              ],
+              "thingSameAs": [
+                "http://sws.geonames.org/1269750/",
+                "http://dbpedia.org/resource/India",
+                "http://www.wikidata.org/entity/Q668"
+              ],
+              "topicName": "ભારત",
+              "topicId": "c06gq3993v3t",
+              "curationList": [
+                {
+                  "curationId": "67142ad7-b5b0-4d9e-ae76-29e90b33535e",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "India",
+              "thingLabelLanguage": "gu",
+              "thingPreferredLabel": "India"
+            },
+            {
+              "thingLabel": "ચીન",
+              "thingUri": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
+              "thingId": "6892384e-1966-4c03-9ce3-f694a8f9f69e",
+              "thingType": [
+                "core:Thing",
+                "tagging:TagConcept",
+                "core:Place",
+                "geoname:Feature",
+                "geoname:GeoTagConcept"
+              ],
+              "thingSameAs": [
+                "http://sws.geonames.org/1814991/",
+                "http://dbpedia.org/resource/China",
+                "http://www.wikidata.org/entity/Q148"
+              ],
+              "topicName": "ચીન",
+              "topicId": "cwr9j823krjt",
+              "curationList": [
+                {
+                  "curationId": "5468b2e4-b0e3-43b1-a267-c03782fe99e0",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "China",
+              "thingLabelLanguage": "gu",
+              "thingPreferredLabel": "China"
+            },
+            {
+              "thingLabel": "નરેન્દ્ર મોદી",
+              "thingUri": "http://www.bbc.co.uk/things/103fc7e4-3a8d-491c-9a75-3c37c299d48f#id",
+              "thingId": "103fc7e4-3a8d-491c-9a75-3c37c299d48f",
+              "thingType": [
+                "core:Thing",
+                "tagging:TagConcept",
+                "tagging:AmbiguousTerm",
+                "core:Person",
+                "tagging:Agent"
+              ],
+              "thingSameAs": [
+                "http://dbpedia.org/resource/Narendra_Modi",
+                "http://www.wikidata.org/entity/Q1058",
+                "https://www.imdb.com/name/nm5177533/"
+              ],
+              "topicName": "નરેન્દ્ર મોદી",
+              "topicId": "c1gdq29q08zt",
+              "curationList": [
+                {
+                  "curationId": "e2e126f9-9ab1-480d-8ef8-595f09877eb1",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Narendra Modi",
+              "thingLabelLanguage": "gu",
+              "thingPreferredLabel": "Narendra Modi"
+            },
+            {
+              "thingLabel": "પૂર",
+              "thingUri": "http://www.bbc.co.uk/things/7789f256-a806-479a-b6d0-50e3d4cd9abc#id",
+              "thingId": "7789f256-a806-479a-b6d0-50e3d4cd9abc",
+              "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+              "thingSameAs": [
+                "http://dbpedia.org/resource/Flood",
+                "http://www.wikidata.org/entity/Q8068"
+              ],
+              "topicName": "પૂર",
+              "topicId": "cnejrydjk62t",
+              "curationList": [
+                {
+                  "curationId": "b73cca57-8a8b-4253-992f-048a78d48115",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Flood",
+              "thingLabelLanguage": "gu",
+              "thingPreferredLabel": "Flood"
+            },
+            {
+              "thingLabel": "વાતાવરણ",
+              "thingUri": "http://www.bbc.co.uk/things/9b16a6c2-7c16-42b7-bff7-6549579622e8#id",
+              "thingId": "9b16a6c2-7c16-42b7-bff7-6549579622e8",
+              "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+              "thingSameAs": [
+                "http://dbpedia.org/resource/Severe_weather",
+                "http://www.wikidata.org/entity/Q741507"
+              ],
+              "topicName": "વાતાવરણ",
+              "topicId": "c404vn5xw5vt",
+              "curationList": [
+                {
+                  "curationId": "4551075a-319d-410b-a6a7-0e16d4bc2292",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Severe weather",
+              "thingLabelLanguage": "gu",
+              "thingPreferredLabel": "Severe weather"
+            }
+          ]
+        },
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "video",
+          "caption",
+          "image",
+          "altText",
+          "rawImage",
+          "aresMedia",
+          "aresMediaMetadata"
+        ],
+        "includeComments": false,
+        "topics": [
+          {
+            "topicName": "નેપાળ",
+            "topicId": "c404vn5789qt",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/1de7eccb-d633-4e93-97c2-1771b7841345#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "32bcce5b-99ed-48a0-99ed-ac2fe5cacefc",
+                "curationType": "vivo-stream",
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": [
+              "core:Thing",
+              "tagging:TagConcept",
+              "core:Place",
+              "geoname:Feature",
+              "geoname:GeoTagConcept"
+            ],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Gujarati",
+            "topicUrl": "/gujarati/topics/c404vn5789qt",
+            "meta": {
+              "created": "2019-06-13T09:03:26.922Z",
+              "updated": "2024-09-18T15:05:41.632Z",
+              "transliterated": false,
+              "script": "gu",
+              "variantId": "c404vn5789qt:gu"
+            }
+          },
+          {
+            "topicName": "શી જિનપિંગ",
+            "topicId": "cvjp258z025t",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/47172845-9973-40ac-8d1e-b18a302cabf0#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "85ed6167-03aa-444b-9f2f-1d9812d4d13b",
+                "curationType": "vivo-stream",
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": [
+              "core:Thing",
+              "tagging:TagConcept",
+              "tagging:AmbiguousTerm",
+              "core:Person",
+              "tagging:Agent"
+            ],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Gujarati",
+            "topicUrl": "/gujarati/topics/cvjp258z025t",
+            "meta": {
+              "created": "2019-06-13T09:04:50.040Z",
+              "updated": "2024-09-18T15:05:30.306Z",
+              "transliterated": false,
+              "script": "gu",
+              "variantId": "cvjp258z025t:gu"
+            }
+          },
+          {
+            "topicName": "ભારત",
+            "topicId": "c06gq3993v3t",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "67142ad7-b5b0-4d9e-ae76-29e90b33535e",
+                "curationType": "vivo-stream",
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": [
+              "core:Thing",
+              "tagging:TagConcept",
+              "core:Place",
+              "geoname:Feature",
+              "geoname:GeoTagConcept"
+            ],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Gujarati",
+            "topicUrl": "/gujarati/topics/c06gq3993v3t",
+            "meta": {
+              "created": "2019-06-13T09:01:09.838Z",
+              "updated": "2024-09-18T15:05:56.996Z",
+              "transliterated": false,
+              "script": "gu",
+              "variantId": "c06gq3993v3t:gu"
+            }
+          },
+          {
+            "topicName": "ચીન",
+            "topicId": "cwr9j823krjt",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "5468b2e4-b0e3-43b1-a267-c03782fe99e0",
+                "curationType": "vivo-stream",
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": [
+              "core:Thing",
+              "tagging:TagConcept",
+              "core:Place",
+              "geoname:Feature",
+              "geoname:GeoTagConcept"
+            ],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Gujarati",
+            "topicUrl": "/gujarati/topics/cwr9j823krjt",
+            "meta": {
+              "created": "2019-06-13T09:01:20.314Z",
+              "updated": "2024-09-18T15:05:55.916Z",
+              "transliterated": false,
+              "script": "gu",
+              "variantId": "cwr9j823krjt:gu"
+            }
+          },
+          {
+            "topicName": "નરેન્દ્ર મોદી",
+            "topicId": "c1gdq29q08zt",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/103fc7e4-3a8d-491c-9a75-3c37c299d48f#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "e2e126f9-9ab1-480d-8ef8-595f09877eb1",
+                "curationType": "vivo-stream",
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": [
+              "core:Thing",
+              "tagging:TagConcept",
+              "tagging:AmbiguousTerm",
+              "core:Person",
+              "tagging:Agent"
+            ],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Gujarati",
+            "topicUrl": "/gujarati/topics/c1gdq29q08zt",
+            "meta": {
+              "created": "2019-06-13T09:00:41.533Z",
+              "updated": "2024-09-18T15:06:00.748Z",
+              "transliterated": false,
+              "script": "gu",
+              "variantId": "c1gdq29q08zt:gu"
+            }
+          },
+          {
+            "topicName": "પૂર",
+            "topicId": "cnejrydjk62t",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/7789f256-a806-479a-b6d0-50e3d4cd9abc#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "b73cca57-8a8b-4253-992f-048a78d48115",
+                "curationType": "vivo-stream",
+                "position": 0,
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Gujarati",
+            "topicUrl": "/gujarati/topics/cnejrydjk62t",
+            "meta": {
+              "created": "2023-02-27T13:41:54.633Z",
+              "updated": "2024-09-18T14:48:54.344Z",
+              "transliterated": false,
+              "script": "gu",
+              "variantId": "cnejrydjk62t:gu"
+            }
+          },
+          {
+            "topicName": "વાતાવરણ",
+            "topicId": "c404vn5xw5vt",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/9b16a6c2-7c16-42b7-bff7-6549579622e8#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "4551075a-319d-410b-a6a7-0e16d4bc2292",
+                "curationType": "vivo-stream",
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Gujarati",
+            "topicUrl": "/gujarati/topics/c404vn5xw5vt",
+            "meta": {
+              "created": "2019-06-13T09:02:03.968Z",
+              "updated": "2024-09-18T15:05:49.995Z",
+              "transliterated": false,
+              "script": "gu",
+              "variantId": "c404vn5xw5vt:gu"
+            }
+          }
+        ],
+        "consumableAsSFV": true,
+        "allowAdvertising": true,
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false,
+        "breakingNews": { "isBreaking": false },
+        "useSensitiveOnwardJourneys": false,
+        "stats": { "readTime": 1, "wordCount": 257 },
+        "isTransliterated": false,
+        "isKeyPointsFormatAsset": false
+      },
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "1a9b27d0",
+              "type": "visuallyHiddenHeadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "39a081e1",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "7f74b9a6",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "નેપાળ : એવું ભયંકર પૂર આવ્યું કે વાહનો, પુલ, બિલ્ડિંગો તણાઈ ગયાં",
+                            "blocks": [
+                              {
+                                "id": "1cfac406",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "નેપાળ : એવું ભયંકર પૂર આવ્યું કે વાહનો, પુલ, બિલ્ડિંગો તણાઈ ગયાં",
+                                  "attributes": []
+                                },
+                                "position": [1, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [1, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [1, 1]
+                  }
+                ]
+              },
+              "position": [1]
+            },
+            {
+              "id": "b97ebee5",
+              "type": "video",
+              "model": {
+                "locator": "urn:bbc:pips:pid:p0p6c5gp",
+                "blocks": [
+                  {
+                    "id": "28c3a5c7",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "0f8a2954",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "7007b2a8",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "એવું ભયંકર પૂર આવ્યું કે વાહનો, પુલ, બિલ્ડિંગો તણાઈ ગઈ",
+                                  "blocks": [
+                                    {
+                                      "id": "b73909b7",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "એવું ભયંકર પૂર આવ્યું કે વાહનો, પુલ, બિલ્ડિંગો તણાઈ ગઈ",
+                                        "attributes": []
+                                      },
+                                      "position": [2, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [2, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [2, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [2, 1]
+                  },
+                  {
+                    "id": "bee67162",
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "e6fb3a43",
+                          "blockId": "urn:bbc:ares::clip:p0p6c5gp",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "p0p6c5gp",
+                            "subType": "clip",
+                            "format": "video",
+                            "title": "એવું ભયંકર પૂર આવ્યું કે વાહનો, પુલ, બિલ્ડિંગો તણાઈ ગઈ",
+                            "synopses": {
+                              "short": "એવું ભયંકર પૂર આવ્યું કે વાહનો, પુલ, બિલ્ડિંગો તણાઈ ગઈ",
+                              "long": "ચીન-નેપાળ સરહદ નજીક ભયંકર પૂરને કારણેી વાહનો, પુલ અને ઈમારતોને ભારે નુકસાન થયું છે. સીસીટીવી ફૂટેજમાં કાદવ અને પાણીનું ધસમસતું વહેણ રસ્તા અને ઈમારતોને પોતાની ઝપેટમાં લેતું જોવા મળે છે. નેપાળ ટુરિઝમ બોર્ડના જણાવ્યા અનુસાર, 291 વિદેશી નાગરિકો સહિત 384 લોકોનો સંપર્ક થઈ શક્યો નથી, જેમાં 100થી વધુ ભારતીયો છે. રસુવા જિલ્લામાં ભારે જાનહાનિની આશંકા વચ્ચે ચીનના રાષ્ટ્રપતિ શી જિનપિંગે ગુમ થયેલા લોકોની શોધ અને બચાવ કામગીરી ઝડપી બનાવવા સૂચના આપી છે."
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0p6c6m9.jpg",
+                            "imageCopyright": "BBC",
+                            "embedding": true,
+                            "advertising": true,
+                            "versions": [
+                              {
+                                "versionId": "p0p6c5gt",
+                                "types": ["Original"],
+                                "duration": 74,
+                                "durationISO8601": "PT1M14S",
+                                "warnings": {},
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableFrom": 1787748845000
+                              }
+                            ],
+                            "syndication": { "destinations": [] },
+                            "smpKind": "programme",
+                            "webcastVersions": []
+                          },
+                          "position": [2, 2, 1]
+                        },
+                        {
+                          "id": "023e9943",
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "b4e2a54d",
+                                "type": "rawImage",
+                                "model": {
+                                  "width": 1920,
+                                  "height": 1080,
+                                  "locator": "ichef.bbci.co.uk/images/ic/$widthxn/p0p6c6m9.jpg",
+                                  "originCode": "mpv",
+                                  "copyrightHolder": "BBC"
+                                },
+                                "position": [2, 2, 2, 1]
+                              },
+                              {
+                                "id": "14fddbef",
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "96d4df0b",
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "id": "016b6feb",
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "Keyframe #1",
+                                              "blocks": [
+                                                {
+                                                  "id": "eee5ec33",
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "Keyframe #1",
+                                                    "attributes": []
+                                                  },
+                                                  "position": [
+                                                    2, 2, 2, 2, 1, 1, 1
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            "position": [2, 2, 2, 2, 1, 1]
+                                          }
+                                        ]
+                                      },
+                                      "position": [2, 2, 2, 2, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [2, 2, 2, 2]
+                              }
+                            ]
+                          },
+                          "position": [2, 2, 2]
+                        }
+                      ]
+                    },
+                    "position": [2, 2]
+                  }
+                ]
+              },
+              "position": [2]
+            },
+            {
+              "id": "2a53567b",
+              "type": "fauxHeadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "dd6bf5c0",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "4a67df7f",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "નેપાળ : એવું ભયંકર પૂર આવ્યું કે વાહનો, પુલ, બિલ્ડિંગો તણાઈ ગયાં",
+                            "blocks": [
+                              {
+                                "id": "13e69fe6",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "નેપાળ : એવું ભયંકર પૂર આવ્યું કે વાહનો, પુલ, બિલ્ડિંગો તણાઈ ગયાં",
+                                  "attributes": []
+                                },
+                                "position": [3, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [3, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [3, 1]
+                  }
+                ]
+              },
+              "position": [3]
+            },
+            {
+              "id": "ebf0ca17",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1787750575569,
+                "lastPublished": 1787750575569
+              },
+              "position": [4]
+            },
+            {
+              "id": "548aecf9",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "94d1d2dd",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "ચીન-નેપાળ સરહદ નજીક ભયંકર પૂરને કારણે વાહનો, પુલ અને ઇમારતોને ભારે નુકસાન થયું છે. સીસીટીવી ફૂટેજમાં કાદવ અને પાણીનું ધસમસતું વહેણ રસ્તા અને ઇમારતોને પોતાની ચપેટમાં લેતું જોવા મળે છે. ",
+                      "blocks": [
+                        {
+                          "id": "ed6f6493",
+                          "type": "fragment",
+                          "model": {
+                            "text": "ચીન-નેપાળ સરહદ નજીક ભયંકર પૂરને કારણે વાહનો, પુલ અને ઇમારતોને ભારે નુકસાન થયું છે. સીસીટીવી ફૂટેજમાં કાદવ અને પાણીનું ધસમસતું વહેણ રસ્તા અને ઇમારતોને પોતાની ચપેટમાં લેતું જોવા મળે છે. ",
+                            "attributes": ["bold"]
+                          },
+                          "position": [5, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [5, 1]
+                  },
+                  {
+                    "id": "247fdda9",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "નેપાળ ટુરિઝમ બોર્ડના જણાવ્યા અનુસાર, 291 વિદેશી નાગરિકો સહિત 384 લોકોનો સંપર્ક થઈ શક્યો નથી, જેમાં 100થી વધુ ભારતીયો છે. રસુવા જિલ્લામાં ભારે જાનહાનિની આશંકા વચ્ચે ચીનના રાષ્ટ્રપતિ શી જિનપિંગે ગુમ થયેલા લોકોની શોધ અને બચાવ કામગીરી ઝડપી બનાવવા સૂચના આપી છે.",
+                      "blocks": [
+                        {
+                          "id": "5ac837fb",
+                          "type": "fragment",
+                          "model": {
+                            "text": "નેપાળ ટુરિઝમ બોર્ડના જણાવ્યા અનુસાર, 291 વિદેશી નાગરિકો સહિત 384 લોકોનો સંપર્ક થઈ શક્યો નથી, જેમાં 100થી વધુ ભારતીયો છે. રસુવા જિલ્લામાં ભારે જાનહાનિની આશંકા વચ્ચે ચીનના રાષ્ટ્રપતિ શી જિનપિંગે ગુમ થયેલા લોકોની શોધ અને બચાવ કામગીરી ઝડપી બનાવવા સૂચના આપી છે.",
+                            "attributes": []
+                          },
+                          "position": [5, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [5, 2]
+                  },
+                  {
+                    "id": "617b29e7",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "વડા પ્રધાન નરેન્દ્ર મોદીએ નેપાળમાં આવેલા ભયાનક પૂર બાદ નેપાળના વડા પ્રધાન બાલેન્દ્ર શાહ સાથે વાતચીત કરી હતી.",
+                      "blocks": [
+                        {
+                          "id": "8fb104dd",
+                          "type": "fragment",
+                          "model": {
+                            "text": "વડા પ્રધાન નરેન્દ્ર મોદીએ નેપાળમાં આવેલા ભયાનક પૂર બાદ નેપાળના વડા પ્રધાન બાલેન્દ્ર શાહ સાથે વાતચીત કરી હતી.",
+                            "attributes": []
+                          },
+                          "position": [5, 3, 1]
+                        }
+                      ]
+                    },
+                    "position": [5, 3]
+                  },
+                  {
+                    "id": "5622e6b6",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "પીએમ મોદીએ સોશિયલ મીડિયા પ્લૅટફૉપ્મ ઍક્સ પર તેની જાણકારી આપતા જણાવ્યું, \"વડા પ્રધાન બાલેન્દ્ર શાહ સાથે વાત કરી અને નેપાળમાં પૂરને કારણે થયેલી જાનહાનિ પર સંવેદના વ્યક્ત કરી. આ મુશ્કેલીના સમયમાં ભારતના લોકો નેપાળનાં પોતાનાં ભાઈ-બહેનો સાથે મજબૂતીથી ઊભા છે. ભારત નેપાળને તમામ સંભવ માનવીય સહાયતા આપવા માટે તૈયાર છે. અમારી ટીમો રાહત અને બચાવ કાર્યો માટે નેપાળના અધિકારીઓ સાથે મળીને કામ કરી રહી છે.\"",
+                      "blocks": [
+                        {
+                          "id": "447861fd",
+                          "type": "fragment",
+                          "model": {
+                            "text": "પીએમ મોદીએ સોશિયલ મીડિયા પ્લૅટફૉપ્મ ઍક્સ પર તેની જાણકારી આપતા જણાવ્યું, \"વડા પ્રધાન બાલેન્દ્ર શાહ સાથે વાત કરી અને નેપાળમાં પૂરને કારણે થયેલી જાનહાનિ પર સંવેદના વ્યક્ત કરી. આ મુશ્કેલીના સમયમાં ભારતના લોકો નેપાળનાં પોતાનાં ભાઈ-બહેનો સાથે મજબૂતીથી ઊભા છે. ભારત નેપાળને તમામ સંભવ માનવીય સહાયતા આપવા માટે તૈયાર છે. અમારી ટીમો રાહત અને બચાવ કાર્યો માટે નેપાળના અધિકારીઓ સાથે મળીને કામ કરી રહી છે.\"",
+                            "attributes": []
+                          },
+                          "position": [5, 4, 1]
+                        }
+                      ]
+                    },
+                    "position": [5, 4]
+                  }
+                ]
+              },
+              "position": [5]
+            },
+            {
+              "id": "f3f6c5a4",
+              "type": "continueReading",
+              "model": {},
+              "position": [6]
+            },
+            {
+              "id": "b9e7112b",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "ccfef1ac",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "નેપાળમાં બુધવારે વહેલી સવારે આવેલા પૂરમાં સંપત્તિને ભારે નુકસાન થયું હતું અને 95 લોકોનાં મૃત્યુની પુષ્ટિ થઈ હતી.",
+                      "blocks": [
+                        {
+                          "id": "d99ad92c",
+                          "type": "fragment",
+                          "model": {
+                            "text": "નેપાળમાં બુધવારે વહેલી સવારે આવેલા પૂરમાં સંપત્તિને ભારે નુકસાન થયું હતું અને 95 લોકોનાં મૃત્યુની પુષ્ટિ થઈ હતી.",
+                            "attributes": []
+                          },
+                          "position": [7, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [7, 1]
+                  },
+                  {
+                    "id": "48e3c26f",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "નેપાળની સરકારે લોકોને સાવધાની રાખવાનો આગ્રહ કરીને ક્હયું કે ત્રિશૂલી નદીનો તટીય વિસ્તાર ચિતવન સુધી જોખમમાં છે.",
+                      "blocks": [
+                        {
+                          "id": "72b6f933",
+                          "type": "fragment",
+                          "model": {
+                            "text": "નેપાળની સરકારે લોકોને સાવધાની રાખવાનો આગ્રહ કરીને ક્હયું કે ત્રિશૂલી નદીનો તટીય વિસ્તાર ચિતવન સુધી જોખમમાં છે.",
+                            "attributes": []
+                          },
+                          "position": [7, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [7, 2]
+                  }
+                ]
+              },
+              "position": [7]
+            },
+            {
+              "id": "48ef83ab",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "f4d669b7",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "f1b94a93",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "c5939e1e",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": " નેપાળમાં પૂરનું કારણ 'ગ્લૅશિયરમાં ભૂસ્ખલન' હોવાનું જણાવાઈ રહ્યું છે.",
+                                  "blocks": [
+                                    {
+                                      "id": "ede747f3",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": " નેપાળમાં પૂરનું કારણ 'ગ્લૅશિયરમાં ભૂસ્ખલન' હોવાનું જણાવાઈ રહ્યું છે.",
+                                        "attributes": []
+                                      },
+                                      "position": [8, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [8, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [8, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [8, 1]
+                  },
+                  {
+                    "id": "d6be7b65",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "4627cd47",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "39aea8cc",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "ચીન-નેપાળ સરહદ નજીક ભયંકર પૂરને કારણે વાહનો, પુલ અને ઇમારતોને ભારે નુકસાન થયું છે. સીસીટીવી ફૂટેજમાં કાદવ અને પાણીનું ધસમસતું વહેણ રસ્તા અને ઇમારતોને પોતાની ચપેટમાં લેતું જોવા મળે છે. ",
+                                  "blocks": [
+                                    {
+                                      "id": "20a4aea4",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "ચીન-નેપાળ સરહદ નજીક ભયંકર પૂરને કારણે વાહનો, પુલ અને ઇમારતોને ભારે નુકસાન થયું છે. સીસીટીવી ફૂટેજમાં કાદવ અને પાણીનું ધસમસતું વહેણ રસ્તા અને ઇમારતોને પોતાની ચપેટમાં લેતું જોવા મળે છે. ",
+                                        "attributes": []
+                                      },
+                                      "position": [8, 2, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [8, 2, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [8, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [8, 2]
+                  },
+                  {
+                    "id": "a848ea75",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 777,
+                      "height": 437,
+                      "locator": "e07a/live/169da890-a151-11f1-aed2-8d6da8d75094.jpg",
+                      "originCode": "cpsprodpb",
+                      "copyrightHolder": "RSS",
+                      "suitableForSyndication": true
+                    },
+                    "position": [8, 3]
+                  }
+                ]
+              },
+              "position": [8]
+            },
+            {
+              "id": "e92cc6c6",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "d34aee75",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "બીબીસી માટે કલેક્ટિવ ન્યૂઝરૂમનું પ્રકાશન",
+                      "blocks": [
+                        {
+                          "id": "9d6b85f7",
+                          "type": "fragment",
+                          "model": {
+                            "text": "બીબીસી માટે કલેક્ટિવ ન્યૂઝરૂમનું પ્રકાશન",
+                            "attributes": ["bold"]
+                          },
+                          "position": [9, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [9, 1]
+                  }
+                ]
+              },
+              "position": [9]
+            }
+          ]
+        }
+      },
+      "promo": {
+        "headlines": {
+          "seoHeadline": "નેપાળ : એવું ભયંકર પૂર આવ્યું કે વાહનો, પુલ, બિલ્ડિંગો તણાઈ ગયાં",
+          "promoHeadline": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "નેપાળ : એવું ભયંકર પૂર આવ્યું કે વાહનો, પુલ, બિલ્ડિંગો તણાઈ ગયાં",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "નેપાળ : એવું ભયંકર પૂર આવ્યું કે વાહનો, પુલ, બિલ્ડિંગો તણાઈ ગયાં",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "images": {
+          "defaultPromoImage": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": " નેપાળમાં પૂરનું કારણ 'ગ્લૅશિયરમાં ભૂસ્ખલન' હોવાનું જણાવાઈ રહ્યું છે.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": " નેપાળમાં પૂરનું કારણ 'ગ્લૅશિયરમાં ભૂસ્ખલન' હોવાનું જણાવાઈ રહ્યું છે.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "ચીન-નેપાળ સરહદ નજીક ભયંકર પૂરને કારણે વાહનો, પુલ અને ઇમારતોને ભારે નુકસાન થયું છે. સીસીટીવી ફૂટેજમાં કાદવ અને પાણીનું ધસમસતું વહેણ રસ્તા અને ઇમારતોને પોતાની ચપેટમાં લેતું જોવા મળે છે. ",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "ચીન-નેપાળ સરહદ નજીક ભયંકર પૂરને કારણે વાહનો, પુલ અને ઇમારતોને ભારે નુકસાન થયું છે. સીસીટીવી ફૂટેજમાં કાદવ અને પાણીનું ધસમસતું વહેણ રસ્તા અને ઇમારતોને પોતાની ચપેટમાં લેતું જોવા મળે છે. ",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 777,
+                  "height": 437,
+                  "locator": "e07a/live/169da890-a151-11f1-aed2-8d6da8d75094.jpg",
+                  "originCode": "cpsprodpb",
+                  "copyrightHolder": "RSS",
+                  "suitableForSyndication": true
+                }
+              }
+            ]
+          }
+        },
+        "summary": {
+          "blocks": [
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "ચીન-નેપાળ સરહદ નજીક ભયંકર પૂરને કારણે વાહનો, પુલ અને ઇમારતોને ભારે નુકસાન થયું છે. સીસીટીવી ફૂટેજમાં કાદવ અને પાણીનું ધસમસતું વહેણ રસ્તા અને ઇમારતોને પોતાની ચપેટમાં લેતું જોવા મળે છે. ",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": {
+                            "text": "ચીન-નેપાળ સરહદ નજીક ભયંકર પૂરને કારણે વાહનો, પુલ અને ઇમારતોને ભારે નુકસાન થયું છે. સીસીટીવી ફૂટેજમાં કાદવ અને પાણીનું ધસમસતું વહેણ રસ્તા અને ઇમારતોને પોતાની ચપેટમાં લેતું જોવા મળે છે. ",
+                            "attributes": []
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "serviceIdentifier": "Gujarati",
+        "breakingNews": { "isBreaking": false },
+        "consumableAsSFV": true,
+        "media": {
+          "blocks": [
+            {
+              "type": "video",
+              "model": {
+                "locator": "urn:bbc:pips:pid:p0p6c5gp",
+                "blocks": [
+                  {
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "એવું ભયંકર પૂર આવ્યું કે વાહનો, પુલ, બિલ્ડિંગો તણાઈ ગઈ",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "એવું ભયંકર પૂર આવ્યું કે વાહનો, પુલ, બિલ્ડિંગો તણાઈ ગઈ",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "blockId": "urn:bbc:ares::clip:p0p6c5gp",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "p0p6c5gp",
+                            "subType": "clip",
+                            "format": "video",
+                            "title": "એવું ભયંકર પૂર આવ્યું કે વાહનો, પુલ, બિલ્ડિંગો તણાઈ ગઈ",
+                            "synopses": {
+                              "short": "એવું ભયંકર પૂર આવ્યું કે વાહનો, પુલ, બિલ્ડિંગો તણાઈ ગઈ",
+                              "long": "ચીન-નેપાળ સરહદ નજીક ભયંકર પૂરને કારણેી વાહનો, પુલ અને ઈમારતોને ભારે નુકસાન થયું છે. સીસીટીવી ફૂટેજમાં કાદવ અને પાણીનું ધસમસતું વહેણ રસ્તા અને ઈમારતોને પોતાની ઝપેટમાં લેતું જોવા મળે છે. નેપાળ ટુરિઝમ બોર્ડના જણાવ્યા અનુસાર, 291 વિદેશી નાગરિકો સહિત 384 લોકોનો સંપર્ક થઈ શક્યો નથી, જેમાં 100થી વધુ ભારતીયો છે. રસુવા જિલ્લામાં ભારે જાનહાનિની આશંકા વચ્ચે ચીનના રાષ્ટ્રપતિ શી જિનપિંગે ગુમ થયેલા લોકોની શોધ અને બચાવ કામગીરી ઝડપી બનાવવા સૂચના આપી છે."
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0p6c6m9.jpg",
+                            "imageCopyright": "BBC",
+                            "embedding": true,
+                            "advertising": true,
+                            "versions": [
+                              {
+                                "versionId": "p0p6c5gt",
+                                "types": ["Original"],
+                                "duration": 74,
+                                "durationISO8601": "PT1M14S",
+                                "warnings": {},
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableFrom": 1787748845000
+                              }
+                            ],
+                            "syndication": { "destinations": [] },
+                            "smpKind": "programme",
+                            "webcastVersions": []
+                          }
+                        },
+                        {
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "rawImage",
+                                "model": {
+                                  "width": 1920,
+                                  "height": 1080,
+                                  "locator": "ichef.bbci.co.uk/images/ic/$widthxn/p0p6c6m9.jpg",
+                                  "originCode": "mpv",
+                                  "copyrightHolder": "BBC"
+                                }
+                              },
+                              {
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "Keyframe #1",
+                                              "blocks": [
+                                                {
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "Keyframe #1",
+                                                    "attributes": []
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "latestMedia": [
+        {
+          "type": "video",
+          "duration": "PT1M14S",
+          "isLive": false,
+          "title": "નેપાળ : એવું ભયંકર પૂર આવ્યું કે વાહનો, પુલ, બિલ્ડિંગો તણાઈ ગયાં",
+          "firstPublished": "2026-08-26T13:22:55.569Z",
+          "lastPublished": "2026-08-26T13:22:55.569Z",
+          "link": "https://www.bbc.com/gujarati/articles/cj4jdypqw9zo",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/e07a/live/169da890-a151-11f1-aed2-8d6da8d75094.jpg.webp",
+          "description": "ચીન-નેપાળ સરહદ નજીક ભયંકર પૂરને કારણે વાહનો, પુલ અને ઇમારતોને ભારે નુકસાન થયું છે. સીસીટીવી ફૂટેજમાં કાદવ અને પાણીનું ધસમસતું વહેણ રસ્તા અને ઇમારતોને પોતાની ચપેટમાં લેતું જોવા મળે છે. ",
+          "imageAlt": "ચીન-નેપાળ સરહદ નજીક ભયંકર પૂરને કારણે વાહનો, પુલ અને ઇમારતોને ભારે નુકસાન થયું છે. સીસીટીવી ફૂટેજમાં કાદવ અને પાણીનું ધસમસતું વહેણ રસ્તા અને ઇમારતોને પોતાની ચપેટમાં લેતું જોવા મળે છે. ",
+          "isPortraitImage": false,
+          "id": "cj4jdypqw9zo",
+          "attributions": [
+            {
+              "title": "Gujarati",
+              "link": {
+                "url": "https://www.bbc.co.uk/gujarati",
+                "scheme": "https",
+                "host": "www.bbc.co.uk",
+                "path": "/gujarati"
+              }
+            }
+          ],
+          "relatedTopic": {
+            "title": "નેપાળ",
+            "link": {
+              "url": "https://www.bbc.com/gujarati/topics/c404vn5789qt",
+              "scheme": "https",
+              "host": "www.bbc.com",
+              "path": "/gujarati/topics/c404vn5789qt"
+            }
+          }
+        },
+        {
+          "type": "video",
+          "duration": "PT1M52S",
+          "isLive": false,
+          "title": "સુરત : મચ્છી માર્કેટને નરેન્દ્ર મોદીનું નામ અપાતાં વિવાદ કેમ થયો?",
+          "firstPublished": "2026-08-26T09:23:59.017Z",
+          "lastPublished": "2026-08-26T09:23:59.017Z",
+          "link": "https://www.bbc.com/gujarati/articles/cx2zykpgnzwo",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/ed7f/live/b4284970-a12f-11f1-8c37-3f30331ac537.png.webp",
+          "description": "સુરતના નાનપુરા લક્કડકોટ વિસ્તારમાં ખૂલેલા ફિશ માર્કેટના નામકરણનો વિવાદ સર્જાયો છે. ",
+          "imageAlt": "સુરત",
+          "isPortraitImage": true,
+          "id": "cx2zykpgnzwo",
+          "attributions": [
+            {
+              "title": "Gujarati",
+              "link": {
+                "url": "https://www.bbc.co.uk/gujarati",
+                "scheme": "https",
+                "host": "www.bbc.co.uk",
+                "path": "/gujarati"
+              }
+            }
+          ],
+          "relatedTopic": {
+            "title": "સુરત",
+            "link": {
+              "url": "https://www.bbc.com/gujarati/topics/cnq68kz2v4dt",
+              "scheme": "https",
+              "host": "www.bbc.com",
+              "path": "/gujarati/topics/cnq68kz2v4dt"
+            }
+          }
+        },
+        {
+          "type": "video",
+          "duration": "PT2M48S",
+          "isLive": false,
+          "title": "દેવભૂમિ દ્વારકા: જિલ્લામાં દુષ્કાળનો ડર, ખેડૂતોએ શું માગ કરી?",
+          "firstPublished": "2026-08-26T07:34:02.478Z",
+          "lastPublished": "2026-08-26T07:34:02.478Z",
+          "link": "https://www.bbc.com/gujarati/articles/ce3rzv2enrko",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/a47f/live/5e80f0d0-a120-11f1-b109-879e35c24276.png.webp",
+          "description": "ગુજરાતમાં છેલ્લા ઘણા સમયથી વરસાદ અટકી ગયો છે, તો કેટલાક જિલ્લાઓમાં બિલકુલ દુષ્કાળ જેવી સ્થિતિ છે. ",
+          "imageAlt": "gujarat, devbhoomi dwarka, ગુજરાત, દેવભૂમિ દ્વારકા, બીબીસી ગુજરાતી",
+          "isPortraitImage": true,
+          "id": "ce3rzv2enrko",
+          "attributions": [
+            {
+              "title": "Gujarati",
+              "link": {
+                "url": "https://www.bbc.co.uk/gujarati",
+                "scheme": "https",
+                "host": "www.bbc.co.uk",
+                "path": "/gujarati"
+              }
+            }
+          ],
+          "relatedTopic": {
+            "title": "ગુજરાત",
+            "link": {
+              "url": "https://www.bbc.com/gujarati/topics/cz74kjn4j5wt",
+              "scheme": "https",
+              "host": "www.bbc.com",
+              "path": "/gujarati/topics/cz74kjn4j5wt"
+            }
+          }
+        },
+        {
+          "type": "video",
+          "duration": "PT48S",
+          "isLive": false,
+          "title": "ઑઇલ ભરેલું ટૅન્કર પલટી ગયું અને તેલ ભરવા લોકોની પડાપડી",
+          "firstPublished": "2026-08-26T07:30:25.965Z",
+          "lastPublished": "2026-08-26T07:30:25.965Z",
+          "link": "https://www.bbc.com/gujarati/articles/cdr7j5kr108o",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/e6e0/live/d8aef9c0-a11f-11f1-aed2-8d6da8d75094.png.webp",
+          "description": "રિફાઇન્ડ ઑઇલ ભરેલું ટૅન્કર પલટી ગયું અને તેમાંથી લેવા માટે લોકોએ પડાપડી કરી મૂકી.",
+          "imageAlt": "રિફાઇન્ડ ઑઇલ ભરેલું ટૅન્કર પલટી ગયું ",
+          "isPortraitImage": true,
+          "id": "cdr7j5kr108o",
+          "attributions": [
+            {
+              "title": "Gujarati",
+              "link": {
+                "url": "https://www.bbc.co.uk/gujarati",
+                "scheme": "https",
+                "host": "www.bbc.co.uk",
+                "path": "/gujarati"
+              }
+            }
+          ],
+          "relatedTopic": {
+            "title": "મધ્યપ્રદેશ",
+            "link": {
+              "url": "https://www.bbc.com/gujarati/topics/c340qryqzv3t",
+              "scheme": "https",
+              "host": "www.bbc.com",
+              "path": "/gujarati/topics/c340qryqzv3t"
+            }
+          }
+        }
+      ],
+      "portraitVideoItems": null,
+      "countryCuration": null,
+      "videoCuration": null,
+      "countryTopicIdToReorder": null
+    }
+  },
+  "contentType": "application/json; charset=utf-8",
+  "debug": {
+    "context": {
+      "runtimeContext": {
+        "lambdaBootstrapVersion": "5.8.0",
+        "runtimeVersion": "6.8.0",
+        "standardLibraryVersion": "6.8.0",
+        "moduleName": "simorgh-bff",
+        "moduleVersion": "0.0.2",
+        "sourceUrl": "https://github.com/bbc/fabl-modules/tree/e42c8266b3f9a038e107e84800b0a9dae1f89946/modules/application/simorgh-bff",
+        "cosmosReleaseUrl": "https://cosmos.tools.bbc.co.uk/lambdas/fabl-module-simorgh-bff/releases/670",
+        "buildTime": "2026-08-20T14:36:56.786Z",
+        "moduleType": "reads",
+        "traceId": "Root=1-6a8f2916-1a8dcd9c5fc88cb6ce1ae939;Parent=3bbfc81859d2b764;Sampled=1;Lineage=1:2829b227:0",
+        "moduleEnvironment": "production",
+        "personalisedRequest": "false",
+        "environment": "live",
+        "nodeJSVersion": "v22.23.2"
+      },
+      "systemContext": {
+        "service-env": "live",
+        "debug": "1",
+        "call-stack": "simorgh-bff",
+        "sandboxEnabled": true,
+        "logAllDebug": false,
+        "normaliseRequest": true
+      }
+    },
+    "serviceRequests": [
+      {
+        "response": {
+          "headers": {
+            "date": "Wed, 26 Aug 2026 17:57:42 GMT",
+            "content-type": "application/json;charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "etag": "\"3e599659c095c649be938a0ad84f1fac15a34aa6\"",
+            "last-modified": "Wed, 26 Aug 2026 14:27:20 GMT",
+            "cache-control": "no-transform,max-age=60",
+            "x-ares-tracking-id": "92c0fb07-a054-4416-b222-ea9679baeb18",
+            "expires": "Wed, 26 Aug 2026 14:28:20 GMT",
+            "content-encoding": "gzip",
+            "x-shared-cache": "STALE",
+            "x-local-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 2
+        },
+        "request": {
+          "service": "ares",
+          "path": "/article/cj4jdypqw9zo",
+          "timeout": 4000,
+          "url": "https://service-gateway.fabl.api.bbci.co.uk/service/ares/path/%2Farticle%2Fcj4jdypqw9zo"
+        }
+      }
+    ],
+    "moduleRequests": [
+      {
+        "response": {
+          "headers": {
+            "date": "Wed, 26 Aug 2026 17:57:42 GMT",
+            "content-type": "application/json; charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "vary": "Accept-Encoding, ctx-service-env, ctx-debug, ctx-unwrapped",
+            "cache-control": "max-age=5",
+            "expires": "Wed, 26 Aug 2026 17:57:45 GMT",
+            "content-encoding": "gzip",
+            "x-shared-cache": "HIT",
+            "x-local-cache": "EXPIRED"
+          },
+          "responseCode": 200,
+          "responseTime": 2
+        },
+        "request": {
+          "module": "content-summaries",
+          "params": {
+            "urn": "urn:bbc:vivo:curation:7c7fc1e5-cf2f-4fa0-b7d3-ebdf5b9b8741"
+          },
+          "timeout": 4000,
+          "url": "https://fabl.api.bbci.co.uk/module/content-summaries?urn=urn%3Abbc%3Avivo%3Acuration%3A7c7fc1e5-cf2f-4fa0-b7d3-ebdf5b9b8741"
+        }
+      }
+    ],
+    "tenantLogs": [
+      {
+        "timestamp": 1787767062170,
+        "message": "fetchTopicCuration [video]: service=gujarati topicId=null",
+        "code": "DEBUG"
+      }
+    ],
+    "privateContext": {},
+    "sandboxViolations": [],
+    "nonFatalErrors": [],
+    "params": {
+      "service": "gujarati",
+      "pageType": "article",
+      "id": "cj4jdypqw9zo"
+    }
+  }
+}

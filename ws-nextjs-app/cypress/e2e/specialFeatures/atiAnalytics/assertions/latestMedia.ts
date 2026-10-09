@@ -1,17 +1,12 @@
 /* eslint-disable import/no-relative-packages */
 import { interceptATIAnalyticsBeacons, COMPONENTS } from '../helpers';
-import {
-  assertATIComponentClickEvent,
-  assertATIComponentViewEvent,
-} from '../../../../../../cypress/e2e/specialFeatures/atiAnalytics/assertions';
+import { assertATIComponentClickEvent, assertATIComponentViewEvent } from '.';
 import { AtiAssertionFnProps } from './type';
 
 const { LATEST_MEDIA } = COMPONENTS;
 
 export const assertLatestMediaComponentView = ({
   pageIdentifier,
-  contentType,
-  useReverb,
   path,
   applicationType,
   siteId,
@@ -27,8 +22,6 @@ export const assertLatestMediaComponentView = ({
     assertATIComponentViewEvent({
       component: LATEST_MEDIA,
       pageIdentifier,
-      contentType,
-      useReverb,
       applicationType,
       siteId,
     });
@@ -37,8 +30,6 @@ export const assertLatestMediaComponentView = ({
 
 export const assertLatestMediaComponentClick = ({
   pageIdentifier,
-  contentType,
-  useReverb,
   path,
   applicationType,
   siteId,
@@ -57,8 +48,6 @@ export const assertLatestMediaComponentClick = ({
     assertATIComponentClickEvent({
       component: LATEST_MEDIA,
       pageIdentifier,
-      contentType,
-      useReverb,
       applicationType,
       siteId,
     });

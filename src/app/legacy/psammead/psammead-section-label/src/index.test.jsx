@@ -1,140 +1,135 @@
 /* eslint-disable no-console */
-import React from 'react';
+import { screen } from '@testing-library/react';
 import { render } from '../../../../components/react-testing-library-with-providers';
-import latin from '../../../../components/ThemeProvider/fontScripts/latin';
-import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';
 import SectionLabel from './index';
 
 describe('SectionLabel', () => {
   describe('With bar', () => {
     describe('With plain title', () => {
       it('should render correctly', () => {
-        const { container } = render(
-          'should render correctly',
-          <SectionLabel
-            script={latin}
-            labelId="test-section-label"
-            service="news"
-          >
+        render(
+          <SectionLabel labelId="test-section-label">
             This is text in a SectionLabel.
           </SectionLabel>,
         );
-        expect(container).toMatchSnapshot();
+        expect(
+          screen.getByText('This is text in a SectionLabel.'),
+        ).toBeInTheDocument();
       });
 
       it('should render correctly with explicitly showing the bar', () => {
-        const { container } = render(
-          <SectionLabel
-            script={latin}
-            labelId="test-section-label"
-            bar
-            service="news"
-          >
+        render(
+          <SectionLabel labelId="test-section-label" bar>
             This is text in a SectionLabel, and there is a bar over to the right
           </SectionLabel>,
         );
-        expect(container).toMatchSnapshot();
+        expect(
+          screen.getByText(
+            'This is text in a SectionLabel, and there is a bar over to the right',
+          ),
+        ).toBeInTheDocument();
       });
 
       it('should render correctly with mobileDivider set to false', () => {
-        const { container } = render(
-          <SectionLabel
-            script={latin}
-            labelId="test-section-label"
-            mobileDivider={false}
-            service="news"
-          >
+        render(
+          <SectionLabel labelId="test-section-label" mobileDivider={false}>
             This is text in a SectionLabel, and there is no mobile divider
           </SectionLabel>,
         );
-        expect(container).toMatchSnapshot();
+        expect(
+          screen.getByText(
+            'This is text in a SectionLabel, and there is no mobile divider',
+          ),
+        ).toBeInTheDocument();
       });
 
       it('should render correctly with explicit text direction', () => {
-        const { container } = render(
-          <SectionLabel
-            script={latin}
-            dir="ltr"
-            labelId="test-section-label"
-            service="news"
-          >
+        render(
+          <SectionLabel dir="ltr" labelId="test-section-label">
             This is text in a SectionLabel rendering in ltr mode.
           </SectionLabel>,
         );
-        expect(container).toMatchSnapshot();
+        expect(
+          screen.getByText(
+            'This is text in a SectionLabel rendering in ltr mode.',
+          ),
+        ).toBeInTheDocument();
       });
 
       it('should render correctly with arabic script typography values', () => {
-        const { container } = render(
-          <SectionLabel
-            script={arabic}
-            dir="rtl"
-            labelId="test-section-label"
-            service="persian"
-          >
+        render(
+          <SectionLabel dir="rtl" labelId="test-section-label">
             بعض محتوى النص
           </SectionLabel>,
           { service: 'persian' },
         );
-        expect(container).toMatchSnapshot();
+        expect(screen.getByText('بعض محتوى النص')).toBeInTheDocument();
       });
     });
 
     describe('With linking title', () => {
       it('should render correctly', () => {
-        const { container } = render(
+        render(
           <SectionLabel
-            script={latin}
             labelId="test-section-label"
-            service="news"
             href="/igbo/other-index"
             linkText="See All"
           >
             This is text in a linking SectionLabel.
           </SectionLabel>,
         );
-        expect(container).toMatchSnapshot();
+        expect(
+          screen.getByText('This is text in a linking SectionLabel.'),
+        ).toBeInTheDocument();
+        expect(screen.getByRole('link')).toHaveAttribute(
+          'href',
+          '/igbo/other-index',
+        );
       });
 
       it('should render correctly with explicitly showing the bar', () => {
-        const { container } = render(
+        render(
           <SectionLabel
-            script={latin}
             labelId="test-section-label"
             bar
-            service="news"
             href="/igbo/other-index"
             linkText="See All"
           >
             This is text in a SectionLabel, and there is a bar over to the right
           </SectionLabel>,
         );
-        expect(container).toMatchSnapshot();
+        expect(
+          screen.getByText(
+            'This is text in a SectionLabel, and there is a bar over to the right',
+          ),
+        ).toBeInTheDocument();
+        expect(screen.getByRole('link')).toBeInTheDocument();
       });
 
       it('should render correctly with explicit text direction', () => {
-        const { container } = render(
+        render(
           <SectionLabel
-            script={latin}
             dir="ltr"
             labelId="test-section-label"
-            service="news"
             href="/igbo/other-index"
             linkText="See All"
           >
             This is text in a SectionLabel rendering in ltr mode.
           </SectionLabel>,
         );
-        expect(container).toMatchSnapshot();
+        expect(
+          screen.getByText(
+            'This is text in a SectionLabel rendering in ltr mode.',
+          ),
+        ).toBeInTheDocument();
+        expect(screen.getByRole('link')).toBeInTheDocument();
       });
 
       it('should render correctly with arabic script typography values', () => {
-        const { container } = render(
+        render(
           <SectionLabel
-            script={arabic}
             dir="rtl"
             labelId="test-section-label"
-            service="persian"
             href="/igbo/other-index"
             linkText="See All"
           >
@@ -142,100 +137,92 @@ describe('SectionLabel', () => {
           </SectionLabel>,
           { service: 'persian' },
         );
-        expect(container).toMatchSnapshot();
+        expect(screen.getByText('بعض محتوى النص')).toBeInTheDocument();
+        expect(screen.getByRole('link')).toBeInTheDocument();
       });
     });
 
     describe('Without bar', () => {
       describe('With plain title', () => {
         it('should render correctly', () => {
-          const { container } = render(
-            <SectionLabel
-              script={latin}
-              bar={false}
-              labelId="test-section-label"
-              service="news"
-            >
+          render(
+            <SectionLabel bar={false} labelId="test-section-label">
               This is text in a SectionLabel.
             </SectionLabel>,
           );
-          expect(container).toMatchSnapshot();
+          expect(
+            screen.getByText('This is text in a SectionLabel.'),
+          ).toBeInTheDocument();
         });
 
         it('should render correctly with explicit text direction', () => {
-          const { container } = render(
-            <SectionLabel
-              script={latin}
-              dir="ltr"
-              bar={false}
-              labelId="test-section-label"
-              service="news"
-            >
+          render(
+            <SectionLabel dir="ltr" bar={false} labelId="test-section-label">
               This is text in a SectionLabel rendering in ltr mode.
             </SectionLabel>,
           );
-          expect(container).toMatchSnapshot();
+          expect(
+            screen.getByText(
+              'This is text in a SectionLabel rendering in ltr mode.',
+            ),
+          ).toBeInTheDocument();
         });
 
         it('should render correctly with arabic script typography values', () => {
-          const { container } = render(
-            <SectionLabel
-              script={arabic}
-              dir="rtl"
-              bar={false}
-              labelId="test-section-label"
-              service="persian"
-            >
+          render(
+            <SectionLabel dir="rtl" bar={false} labelId="test-section-label">
               بعض محتوى النص
             </SectionLabel>,
             { service: 'persian' },
           );
-          expect(container).toMatchSnapshot();
+          expect(screen.getByText('بعض محتوى النص')).toBeInTheDocument();
         });
       });
 
       describe('With linking title', () => {
         it('should render correctly', () => {
-          const { container } = render(
+          render(
             <SectionLabel
-              script={latin}
               bar={false}
               labelId="test-section-label"
-              service="news"
               href="/igbo/other-index"
               linkText="See All"
             >
               This is text in a SectionLabel.
             </SectionLabel>,
           );
-          expect(container).toMatchSnapshot();
+          expect(
+            screen.getByText('This is text in a SectionLabel.'),
+          ).toBeInTheDocument();
+          expect(screen.getByRole('link')).toBeInTheDocument();
         });
 
         it('should render correctly with explicit text direction', () => {
-          const { container } = render(
+          render(
             <SectionLabel
-              script={latin}
               dir="ltr"
               bar={false}
               labelId="test-section-label"
-              service="news"
               href="/igbo/other-index"
               linkText="See All"
             >
               This is text in a SectionLabel rendering in ltr mode.
             </SectionLabel>,
           );
-          expect(container).toMatchSnapshot();
+          expect(
+            screen.getByText(
+              'This is text in a SectionLabel rendering in ltr mode.',
+            ),
+          ).toBeInTheDocument();
+          expect(screen.getByRole('link')).toBeInTheDocument();
         });
 
         it('should render correctly with arabic script typography values', () => {
-          const { container } = render(
+          render(
             <SectionLabel
-              script={arabic}
               dir="rtl"
               bar={false}
               labelId="test-section-label"
-              service="persian"
               href="/igbo/other-index"
               linkText="See All"
             >
@@ -243,25 +230,22 @@ describe('SectionLabel', () => {
             </SectionLabel>,
             { service: 'persian' },
           );
-          expect(container).toMatchSnapshot();
+          expect(screen.getByText('بعض محتوى النص')).toBeInTheDocument();
+          expect(screen.getByRole('link')).toBeInTheDocument();
         });
       });
     });
 
     describe('When hideSectionHeader is true', () => {
       it('should add styling to hide SectionLabel for all breakpoints', () => {
-        const { container } = render(
-          <SectionLabel
-            script={latin}
-            bar={false}
-            visuallyHidden
-            labelId="test-section-label"
-            service="news"
-          >
+        render(
+          <SectionLabel bar={false} visuallyHidden labelId="test-section-label">
             This is the text in a SectionLabel
           </SectionLabel>,
         );
-        expect(container).toMatchSnapshot();
+        expect(
+          screen.getByText('This is the text in a SectionLabel'),
+        ).toBeInTheDocument();
       });
     });
 
@@ -269,11 +253,9 @@ describe('SectionLabel', () => {
       it('should add extra props passed to the component', () => {
         const { container } = render(
           <SectionLabel
-            script={latin}
             bar={false}
             visuallyHidden
             labelId="test-section-label"
-            service="news"
             data-section-divider="section_name"
           >
             This is the text in a SectionLabel
@@ -288,18 +270,18 @@ describe('SectionLabel', () => {
 
     describe('With heading overriden', () => {
       it('should render a span element instead of an h2', () => {
-        const { container } = render(
+        render(
           <SectionLabel
-            script={latin}
             bar={false}
             labelId="test-section-label"
-            service="news"
             overrideHeadingAs="strong"
           >
             This is text in a SectionLabel.
           </SectionLabel>,
         );
-        expect(container).toMatchSnapshot();
+        expect(
+          screen.getByText('This is text in a SectionLabel.').closest('strong'),
+        ).toBeInTheDocument();
       });
     });
   });

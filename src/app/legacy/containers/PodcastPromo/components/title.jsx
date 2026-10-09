@@ -1,13 +1,10 @@
-import React from 'react';
 import styled from '@emotion/styled';
 import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
 import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
-import { getGreatPrimer } from '#psammead/gel-foundations/src/typography';
-import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 
 const Heading = styled.h2`
-  ${({ script }) => getGreatPrimer(script)}
-  ${({ service }) => getSansRegular(service)}
+  ${({ theme: { fontSizes } }) => fontSizes.greatPrimer};
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
   display: inline;
   color: ${props => props.theme.palette.EBON};
 

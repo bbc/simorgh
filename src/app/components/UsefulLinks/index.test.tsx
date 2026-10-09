@@ -1,4 +1,3 @@
-import React from 'react';
 import { Summary } from '#app/models/types/curationData';
 import {
   render,

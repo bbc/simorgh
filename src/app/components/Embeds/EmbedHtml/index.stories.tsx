@@ -1,4 +1,3 @@
-import React from 'react';
 import EmbedHtml from '.';
 import {
   dataPicEmbedHtml,

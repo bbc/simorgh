@@ -22,8 +22,9 @@
         "id": "urn:bbc:optimo:asset:cw8ld1799d3o",
         "rank": 3,
         "title": "Cómo Guatemala pasó de ser un ejemplo contra la corrupción a criminalizar a jueces, periodistas y candidatos electorales",
-        "href": "https://www.bbc.com/mundo/articles/cw8ld1799d3o",
-        "timestamp": 1687180560339
+        "href": "https://www.bbc.com/mundo/live/cw8ld1799d3o",
+        "timestamp": 1687180560339,
+        "isLive": true
       },
       {
         "id": "9dd6100f-e62b-49a9-a531-4a5ea65c1409",

@@ -1,5 +1,5 @@
 import { Theme, css } from '@emotion/react';
-import pixelsToRem from '../../../../../../src/app/utilities/pixelsToRem';
+import pixelsToRem from '#app/utilities/pixelsToRem';
 
 export default {
   timeStamp: ({ palette, fontSizes, fontVariants, spacings }: Theme) =>
@@ -135,5 +135,12 @@ export default {
   videoPost: ({ spacings }: Theme) =>
     css({
       paddingBottom: `${spacings.FULL}rem`,
+    }),
+  portraitVideoPlayer: () =>
+    css({
+      '.media-container': {
+        margin: '20px auto 0',
+        width: `${pixelsToRem(247)}rem`,
+      },
     }),
 };

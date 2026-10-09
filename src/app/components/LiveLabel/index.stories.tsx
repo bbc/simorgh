@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from 'react';
+import { PropsWithChildren } from 'react';
 import Promo from '#app/legacy/components/Promo';
 import LiveLabel from './index';
 import readme from './README.md';

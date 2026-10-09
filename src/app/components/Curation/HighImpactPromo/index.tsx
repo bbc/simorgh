@@ -1,20 +1,15 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import { use } from 'react';
-import { Summary } from '#app/models/types/curationData';
+import { Summary, RelatedTopic } from '#app/models/types/curationData';
 import Promo from '#components/Promo';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { getBrandPath } from '#app/legacy/containers/Brand';
+import { HOMEPAGE_RELATED_TOPIC_EXPERIMENT } from '#app/lib/experiments/homepageRelatedTopicPromos';
 import styles from './index.styles';
 
-type Attribution = {
-  link: string;
-  text: string;
-};
 export interface HighImpactPromoProps extends Summary {
-  attribution?: Attribution;
+  relatedTopic?: RelatedTopic | null;
 }
 
 const HighImpactPromo = ({
@@ -25,17 +20,30 @@ const HighImpactPromo = ({
   link,
   headingLevel = 3,
   eventTrackingData,
-  attribution,
+  relatedTopic,
 }: HighImpactPromoProps) => {
   const { isAmp } = use(RequestContext);
   const { dir, service, brandName } = use(ServiceContext) || {};
 
-  const attributionLink =
-    attribution?.link || (service ? getBrandPath(service) : null);
-  const attributionText = attribution?.text || brandName;
-  const hasAttribution = attributionLink && attributionText;
+  const subjectLink =
+    relatedTopic?.link?.url || (service ? getBrandPath(service) : undefined);
+  const subjectText = relatedTopic?.title || brandName;
+  const hasSubject = Boolean(subjectLink && subjectText);
 
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
+  // experiment: keep topic and brand links out of article click metrics
+  const relatedTopicClickTrackerHandler = useClickTrackerHandler({
+    ...eventTrackingData,
+    itemTracker: {
+      ...eventTrackingData?.itemTracker,
+      type: 'simple-curation-grid-related-topic',
+      text: subjectText,
+    },
+  });
+  const subjectClickTrackerHandler =
+    eventTrackingData?.experimentName === HOMEPAGE_RELATED_TOPIC_EXPERIMENT
+      ? relatedTopicClickTrackerHandler
+      : clickTrackerHandler;
 
   return (
     <div data-testid="high-impact-promo" css={styles.promo} dir={dir}>
@@ -59,14 +67,14 @@ const HighImpactPromo = ({
             {title}
           </Promo.A>
         </Promo.Heading>
-        {hasAttribution && <div css={styles.divider} />}
-        {hasAttribution && (
+        {hasSubject && <div css={styles.divider} />}
+        {hasSubject && (
           <Promo.A
-            href={attributionLink}
+            href={subjectLink}
             css={styles.subject}
-            {...clickTrackerHandler}
+            {...subjectClickTrackerHandler}
           >
-            {attributionText}
+            {subjectText}
           </Promo.A>
         )}
       </div>

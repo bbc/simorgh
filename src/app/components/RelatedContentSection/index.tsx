@@ -1,7 +1,5 @@
-/** @jsx jsx */
-
 import { use } from 'react';
-import { jsx, useTheme } from '@emotion/react';
+import { useTheme } from '@emotion/react';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import pathOr from 'ramda/src/pathOr';
 import pathEq from 'ramda/src/pathEq';
@@ -42,8 +40,7 @@ type Props = {
 };
 
 const RelatedContentSection = ({ content, experimentProps }: Props) => {
-  const { translations, script, service } = use(ServiceContext);
-
+  const { translations } = use(ServiceContext);
   const {
     palette: { GREY_2 },
   } = useTheme();
@@ -114,12 +111,7 @@ const RelatedContentSection = ({ content, experimentProps }: Props) => {
       role="region"
       data-e2e={LABEL_ID}
     >
-      <SectionLabel
-        labelId={LABEL_ID}
-        backgroundColor={GREY_2}
-        script={script}
-        service={service}
-      >
+      <SectionLabel labelId={LABEL_ID} backgroundColor={GREY_2}>
         {title}
       </SectionLabel>
       {hasSingleContent ? (

@@ -11,26 +11,15 @@ The Headings are a set of two components, `Headline` and `SubHeading`. They use 
 
 ## Props
 
-<!-- prettier-ignore -->
-| Argument  | Type | Required | Default | Example |
-| --------- | ---- | -------- | ------- | ------- |
-| script    | object | yes | latin | { canon: { groupA: { fontSize: '28', lineHeight: '32',}, groupB: { fontSize: '32', lineHeight: '36', }, groupD: { fontSize: '44', lineHeight: '48', }, }, trafalgar: { groupA: { fontSize: '20', lineHeight: '24', }, groupB: { fontSize: '24', lineHeight: '28', }, groupD: { fontSize: '32', lineHeight: '36', }, }, }|
-| service | string | yes | N/A | `'news'` |
-
 ## Usage
 
 ```jsx
 import { Headline, SubHeading } from '#psammead/psammead-headings/src';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
 
 const Wrapper = () => (
   <Fragment>
-    <Heading script={latin} service="news">
-      Some headline
-    </Heading>
-    <SubHeading script={latin} service="news">
-      Some subheadline
-    </SubHeading>
+    <Heading>Some headline</Heading>
+    <SubHeading>Some subheadline</SubHeading>
   </Fragment>
 );
 ```
@@ -38,7 +27,7 @@ const Wrapper = () => (
 `SubHeading` components can be used as page anchors when passed an `id` prop. To take the above usage as an example:
 
 ```jsx
-<SubHeading id="some-subheadline" script={latin} service="news">
+<SubHeading id="some-subheadline" service="news">
   Some subheadline
 </SubHeading>
 ```

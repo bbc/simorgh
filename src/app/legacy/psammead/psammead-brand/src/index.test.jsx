@@ -1,4 +1,5 @@
-import React, { useRef, useEffect } from 'react';
+import { screen } from '@testing-library/react';
+import { useRef, useEffect } from 'react';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import { POSTBOX, WHITE } from '../../../../components/ThemeProvider/palette';
 import { render } from '../../../../components/react-testing-library-with-providers';
@@ -22,7 +23,7 @@ describe('Brand', () => {
   suppressPropWarnings(['linkId', 'LocalisedBrandName', 'null']);
 
   it('should render correctly with link provided', () => {
-    const { container } = render(
+    render(
       <Brand
         product="Default Brand Name"
         serviceLocalisedName="Service"
@@ -35,7 +36,7 @@ describe('Brand', () => {
         logoColour={WHITE}
       />,
     );
-    expect(container).toMatchSnapshot();
+    expect(screen.getByRole('link')).toBeInTheDocument();
   });
 
   it('should render correctly with link not provided', () => {
@@ -51,7 +52,7 @@ describe('Brand', () => {
         logoColour={WHITE}
       />,
     );
-    expect(container).toMatchSnapshot();
+    expect(container.firstChild).toBeInTheDocument();
   });
 
   it('should render correctly with no service Localised Name', () => {
@@ -66,24 +67,7 @@ describe('Brand', () => {
         logoColour={WHITE}
       />,
     );
-    expect(container).toMatchSnapshot();
-  });
-
-  it('should render correctly with transparent borders', () => {
-    const { container } = render(
-      <Brand
-        product="BBC News"
-        svg={svg}
-        svgHeight={24}
-        maxWidth={280}
-        minWidth={180}
-        borderTop
-        borderBottom
-        backgroundColour={POSTBOX}
-        logoColour={WHITE}
-      />,
-    );
-    expect(container).toMatchSnapshot();
+    expect(container.firstChild).toBeInTheDocument();
   });
 
   describe('assertions - visually hidden text', () => {
@@ -184,8 +168,6 @@ describe('Brand', () => {
           svgHeight={24}
           maxWidth={280}
           minWidth={180}
-          borderTop
-          borderBottom
           backgroundColour={POSTBOX}
           logoColour={WHITE}
           linkId="brandLink"

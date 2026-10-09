@@ -1,5 +1,4 @@
 /* eslint-disable jsx-a11y/aria-role */
-import React from 'react';
 import styled from '@emotion/styled';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -9,11 +8,6 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
-import {
-  getLongPrimer,
-  getDoublePica,
-} from '#psammead/gel-foundations/src/typography';
-import { getSansBold } from '#psammead/psammead-styles/src/font-styles';
 import { GHOST } from '#app/components/ThemeProvider/palette';
 
 const minClickableHeightPx = 44;
@@ -63,8 +57,9 @@ const titleMargins = `
 `;
 
 const Title = styled.span`
-  ${({ script }) => script && getDoublePica(script)};
-  ${({ service }) => getSansBold(service)}
+  ${({ theme: { fontSizes } }) => fontSizes.doublePica};
+  ${({ theme: { fontVariants } }) => fontVariants.sansBold};
+
   background-color: ${({ backgroundColor, theme }) =>
     theme.isDarkUi ? theme.palette.GREY_10 : backgroundColor};
   color: ${({ theme }) => theme.isDarkUi && theme.palette.GREY_2};
@@ -80,8 +75,8 @@ const Title = styled.span`
 `;
 
 const IndexLinkCta = styled.span`
-  ${({ script }) => script && getLongPrimer(script)};
-  ${({ service }) => getSansBold(service)};
+  ${({ theme: { fontSizes } }) => fontSizes.longPrimer};
+  ${({ theme: { fontVariants } }) => fontVariants.sansBold};
   ${titleMargins};
   color: ${props => props.theme.palette.EBON};
   background-color: ${props => props.backgroundColor};
@@ -97,19 +92,11 @@ export const PlainTitle = ({
   children: title,
   dir,
   labelId,
-  script,
-  service,
   backgroundColor = GHOST,
 }) => (
   <FlexColumn>
     <FlexRow>
-      <Title
-        script={script}
-        dir={dir}
-        id={labelId}
-        service={service}
-        backgroundColor={backgroundColor}
-      >
+      <Title dir={dir} id={labelId} backgroundColor={backgroundColor}>
         {title}
       </Title>
     </FlexRow>
@@ -122,8 +109,6 @@ export const LinkTitle = ({
   href,
   labelId,
   linkText,
-  script,
-  service,
   backgroundColor = GHOST,
 }) => (
   <SectionLabelLink
@@ -133,19 +118,11 @@ export const LinkTitle = ({
   >
     <FlexColumn>
       <FlexRow role="text">
-        <Title
-          id={labelId}
-          dir={dir}
-          script={script}
-          service={service}
-          backgroundColor={backgroundColor}
-        >
+        <Title id={labelId} dir={dir} backgroundColor={backgroundColor}>
           {title}
         </Title>
         <IndexLinkCta
           dir={dir}
-          script={script}
-          service={service}
           backgroundColor={backgroundColor}
           aria-hidden="true"
         >

@@ -11,6 +11,15 @@ export const pidginPromos = [
       'Here na reminder of wetin happun on di historic day when rioters storm di Capitol exactly one year ago.',
     imageAlt: 'January 6 timeline: Wetin happun for January 6 one year ago?',
     id: 'e2263a1c-8d5a-4a73-a00c-881acfa34381',
+    relatedTopic: {
+      title: 'Nigeria',
+      link: {
+        url: 'https://www.bbc.com/pidgin/topics/c2dwqd1zr92t',
+        scheme: 'https',
+        host: 'www.bbc.com',
+        path: '/pidgin/topics/c2dwqd1zr92t',
+      },
+    },
   },
   {
     title: 'Why Donald Trump say Bitcoin na scam',
@@ -282,5 +291,21 @@ export const pidginPromosWithMedia = [
       'One video wey serving corp member post wey condemn Nigerian President Bola Tinubu administration don generate conversation for Nigeria.',
     imageAlt: 'NYSC corps members',
     id: 'cgm1ekn44p1o',
+  },
+  {
+    type: 'video',
+    duration: 'PT5M21S',
+    isLive: false,
+    title:
+      "'Evribodi dey negotiate wit outlaws, including America' - Sheikh Gumi",
+    firstPublished: '2025-12-09T13:55:32.118Z',
+    lastPublished: '2025-12-09T13:55:32.118Z',
+    link: 'https://www.bbc.com/pidgin/articles/ce3zyp0z93do',
+    imageUrl:
+      'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/a5fb/live/a7edb960-d506-11f0-8c06-f5d460985095.jpg.webp',
+    imageAlt: 'Sheik Ahmad Gumi',
+    isPortraitImage: true,
+    id: 'ce3zyp0z93do',
+    readTime: 1,
   },
 ];

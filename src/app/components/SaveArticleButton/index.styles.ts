@@ -1,0 +1,24 @@
+import pixelsToRem from '#app/utilities/pixelsToRem';
+import { css, Theme } from '@emotion/react';
+
+const styles = {
+  buttonWrapper: ({ spacings, mq }: Theme) =>
+    css({
+      position: 'relative',
+      marginBlockStart: 0,
+      marginBlockEnd: `${spacings.DOUBLE}rem`,
+      marginInline: `${spacings.FULL}rem`,
+
+      [mq.GROUP_2_MIN_WIDTH]: {
+        marginInline: `${spacings.DOUBLE}rem`,
+      },
+      [mq.GROUP_3_MIN_WIDTH]: {
+        width: `${pixelsToRem(280)}rem`,
+      },
+      [mq.GROUP_4_MIN_WIDTH]: {
+        marginInline: 0,
+      },
+    }),
+};
+
+export default styles;

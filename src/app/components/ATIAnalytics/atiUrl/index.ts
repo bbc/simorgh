@@ -1,32 +1,28 @@
 import {
+  ACTIVATION_EVENT,
+  ACTIVATION_EVENT_INTERACTION_TYPE,
+  ACTIVATION_EVENT_SERVE_ACTION,
+  ACTIVATION_EVENT_SPEC_ID,
+  ACTIVATION_EVENT_SPEC_VERSION,
   CLICK_EVENT,
   VIEW_EVENT,
   VIEWABILITY_CLICK_EVENT,
 } from '#app/lib/analyticsUtils/analytics.const';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import { Platforms } from '#app/models/types/global';
 import {
-  getDestination,
   getAppType,
-  getScreenInfo,
-  getBrowserViewPort,
-  getCurrentTime,
-  getDeviceLanguage,
   getHref,
   getReferrer,
-  getAtUserId,
   isLocServeCookieSet,
   onOnionTld,
   sanitise,
-  getAtiUrl,
-  getEventInfo,
-  getCampaignType,
-  getATIMarketingString,
-  getRSSMarketingString,
 } from '../../../lib/analyticsUtils';
 import {
   ATIEventTrackingProps,
   ATIPageTrackingProps,
   ReverbBeaconConfig,
+  ResonanceBeaconConfig,
 } from '../types';
 
 /*
@@ -34,403 +30,57 @@ import {
  * https://github.com/ampproject/amphtml/blob/master/spec/amp-var-substitutions.md#device-and-browser
  */
 
-export const buildATIPageTrackPath = ({
+const RESONANCE_MODE = { LIVE: 'live', TEST: 'test' } as const;
+
+export const buildResonancePageViewModel = ({
   appName,
   contentId,
   contentType,
+  destinationSiteId,
+  hashedId,
   language,
   ldpThingIds,
   ldpThingLabels,
   pageIdentifier,
   pageTitle,
-  producerId,
-  libraryVersion,
   platform,
+  producerName,
   statsDestination,
   timePublished,
   timeUpdated,
-  categoryName,
-  campaigns,
-  nationsProducer,
-  ampExperimentName,
-  experimentVariant,
-}: ATIPageTrackingProps) => {
+}: ATIPageTrackingProps): ResonanceBeaconConfig => {
+  const env = getEnvConfig().SIMORGH_APP_ENV;
   const href = getHref(platform);
   const referrer = getReferrer(platform);
-  const campaignType = getCampaignType();
 
-  // on AMP, variable substitutions are used in the value and they cannot be
-  // encoded: https://github.com/ampproject/amphtml/blob/master/spec/amp-var-substitutions.md
-  const disableEncodingDueToAmpSubstitution = platform === 'amp';
-
-  // We use amp variable substitutes to get the href and referrer and these cannot be manipulated
-  // For canonical, we have a requirement to encode the x5 and x6 value twice. Source issue: https://github.com/bbc/simorgh/pull/6593
-  const x5Value = disableEncodingDueToAmpSubstitution
-    ? href
-    : href && encodeURIComponent(encodeURIComponent(href));
-  const x6Value = disableEncodingDueToAmpSubstitution
-    ? referrer
-    : referrer && encodeURIComponent(encodeURIComponent(referrer));
-
-  const pageViewBeaconValues = [
-    {
-      key: 's',
-      description: 'destination',
-      value: getDestination(platform, statsDestination),
-      wrap: false,
-      disableEncoding: disableEncodingDueToAmpSubstitution,
+  return {
+    resonanceProperties: {
+      mode: env === 'live' ? RESONANCE_MODE.LIVE : RESONANCE_MODE.TEST,
     },
-    {
-      key: 'idclient',
-      description: 'at user id',
-      value: getAtUserId(),
-      wrap: false,
+    baseProperties: {
+      app: {
+        name: platform === 'app' ? `${appName}-app` : appName,
+        type: getAppType(platform),
+      },
+      destination: statsDestination,
+      hashedUserId: hashedId ?? undefined,
+      pageName: pageIdentifier,
+      producer: producerName,
+      siteId: destinationSiteId,
     },
-    {
-      key: 's2',
-      description: 'producer',
-      value: producerId,
-      wrap: false,
+    pageviewProperties: {
+      contentId,
+      contentType,
+      language,
+      ...(href && { url: href }),
+      ...(referrer && { referrerUrl: referrer }),
+      ...(pageTitle && { pageTitle: sanitise(pageTitle) }),
+      ...(timePublished && { publicationDate: timePublished }),
+      ...(timeUpdated && { pubUpdateDate: timeUpdated }),
+      ...(ldpThingLabels && { ldpTags: ldpThingLabels }),
+      ...(ldpThingIds && { ldpIds: ldpThingIds }),
     },
-    {
-      key: 'p',
-      description: 'page identifier',
-      value: pageIdentifier,
-      wrap: false,
-    },
-    {
-      key: 'r',
-      description: 'screen resolution & colour depth',
-      value: getScreenInfo(platform),
-      wrap: false,
-      disableEncoding: disableEncodingDueToAmpSubstitution,
-    },
-    {
-      key: 're',
-      description: 'browser/viewport resolution',
-      value: getBrowserViewPort(platform),
-      wrap: false,
-      disableEncoding: disableEncodingDueToAmpSubstitution,
-    },
-    {
-      key: 'hl',
-      description: 'time',
-      value: getCurrentTime(platform),
-      wrap: false,
-      disableEncoding: disableEncodingDueToAmpSubstitution,
-    },
-    {
-      key: 'lng',
-      description: 'device language',
-      value: getDeviceLanguage(platform),
-      wrap: false,
-      disableEncoding: disableEncodingDueToAmpSubstitution,
-    },
-    { key: 'x1', description: 'content id', value: contentId, wrap: true },
-    {
-      key: 'x2',
-      description: 'app type',
-      value: getAppType(platform),
-      wrap: true,
-    },
-    {
-      key: 'x3',
-      description: 'app name',
-      value: platform === 'app' ? `${appName}-app` : appName,
-      wrap: true,
-    },
-    { key: 'x4', description: 'language', value: language, wrap: true },
-    {
-      key: 'x5',
-      description: 'url',
-      value: x5Value,
-      wrap: true,
-      disableEncoding: true,
-    },
-    {
-      key: 'x6',
-      description: 'referrer url',
-      value: x6Value,
-      wrap: true,
-      disableEncoding: true,
-    },
-    { key: 'x7', description: 'content type', value: contentType, wrap: true },
-    {
-      key: 'x8',
-      description: 'library version',
-      value: libraryVersion,
-      wrap: true,
-    },
-    {
-      key: 'x9',
-      description: 'page title',
-      value: sanitise(pageTitle),
-      wrap: true,
-    },
-    {
-      key: 'x10',
-      description: "Which home nation's editorial team produced the content",
-      value: nationsProducer,
-      wrap: true,
-    },
-    {
-      key: 'x11',
-      description: 'publication time',
-      value: timePublished,
-      wrap: true,
-    },
-    {
-      key: 'x12',
-      description: 'updated time',
-      value: timeUpdated,
-      wrap: true,
-    },
-    {
-      key: 'x13',
-      description: 'ldp things labels',
-      value: ldpThingLabels,
-      wrap: true,
-    },
-    {
-      key: 'x14',
-      description: 'ldp things ids',
-      value: ldpThingIds,
-      wrap: true,
-    },
-    {
-      key: 'x16',
-      description: 'campaigns',
-      value: (Array.isArray(campaigns) ? campaigns : [])
-        .map(({ campaignName }) => campaignName)
-        .join('~'),
-      wrap: true,
-    },
-    {
-      key: 'x17',
-      description: 'category',
-      value: categoryName,
-      wrap: true,
-    },
-    {
-      key: 'x18',
-      description: 'boolean - if locserve cookie value is defined',
-      value: isLocServeCookieSet(),
-      wrap: true,
-    },
-    {
-      key: 'xto',
-      description: 'marketing campaign',
-      value: getATIMarketingString(href, campaignType),
-      wrap: false,
-    },
-    ...(experimentVariant
-      ? [
-          {
-            key: 'mv_test',
-            description: 'Top Bar OJs experiment',
-            value: 'Top Bar OJs experiment',
-            wrap: false,
-            disableEncoding: true,
-          },
-          {
-            key: 'mv_creation',
-            description: 'Top Bar OJs variant',
-            value: `${experimentVariant}`,
-            wrap: false,
-            disableEncoding: true,
-          },
-        ]
-      : []),
-    ...(ampExperimentName
-      ? [
-          {
-            key: 'mv_test',
-            description: 'AMP experiment name',
-            value: `${ampExperimentName}`,
-            wrap: false,
-            disableEncoding: true,
-          },
-          {
-            key: 'mv_creation',
-            description: 'AMP experiment variant name',
-            value: `VARIANT(${ampExperimentName})`,
-            wrap: false,
-            disableEncoding: true,
-          },
-        ]
-      : []),
-    ...getRSSMarketingString(href, campaignType),
-    ...(onOnionTld()
-      ? [
-          {
-            key: 'product_platform',
-            description: 'onion url',
-            value: 'tor-bbc',
-          },
-        ]
-      : []),
-  ];
-
-  return getAtiUrl(
-    pageViewBeaconValues.concat({
-      // the ref param should always be the last param because ATI will interpret it as part of the referrer URL
-      key: 'ref',
-      description: 'referrer url',
-      value: getReferrer(platform),
-      wrap: false,
-      // disable encoding for this parameter as ati does not appear to support
-      // decoding of the ref parameter
-      disableEncoding: true,
-    }),
-  );
-};
-
-export const buildATIEventTrackUrl = ({
-  pageIdentifier,
-  producerId,
-  platform,
-  statsDestination,
-  componentName,
-  campaignID,
-  format,
-  type,
-  advertiserID,
-  url,
-  detailedPlacement,
-  experimentName,
-  experimentVariant,
-  ampExperimentName,
-  isStatic = false,
-}: ATIEventTrackingProps & {
-  isStatic?: boolean;
-}) => {
-  // on AMP, variable substitutions are used in the value and they cannot be
-  // encoded: https://github.com/ampproject/amphtml/blob/master/spec/amp-var-substitutions.md
-  const disableEncodingDueToAmpSubstitution = platform === 'amp';
-
-  const eventPublisher = type === 'view' ? 'ati' : 'atc';
-  const eventTrackingBeaconValues = [
-    {
-      key: 's',
-      description: 'destination',
-      value: getDestination(platform, statsDestination),
-      wrap: false,
-      disableEncoding: disableEncodingDueToAmpSubstitution,
-    },
-    {
-      key: 's2',
-      description: 'producer',
-      value: producerId,
-      wrap: false,
-    },
-    {
-      key: 'p',
-      description: 'page identifier',
-      value: pageIdentifier,
-      wrap: false,
-    },
-    {
-      key: eventPublisher,
-      description: 'event publisher',
-      value: getEventInfo({
-        campaignID,
-        componentName,
-        format,
-        pageIdentifier,
-        advertiserID,
-        url,
-        detailedPlacement,
-        experimentVariant: experimentVariant ?? '',
-      }),
-      wrap: false,
-      disableEncoding: true,
-    },
-    ...(isStatic
-      ? []
-      : [
-          {
-            key: 'idclient',
-            description: 'at user id',
-            value: getAtUserId(),
-            wrap: false,
-          },
-          {
-            key: 'hl',
-            description: 'time',
-            value: getCurrentTime(platform),
-            wrap: false,
-            disableEncoding: disableEncodingDueToAmpSubstitution,
-          },
-          {
-            key: 're',
-            description: 'browser/viewport resolution',
-            value: getBrowserViewPort(platform),
-            wrap: false,
-            disableEncoding: disableEncodingDueToAmpSubstitution,
-          },
-          {
-            key: 'r',
-            description: 'screen resolution & colour depth',
-            value: getScreenInfo(platform),
-            wrap: false,
-            disableEncoding: disableEncodingDueToAmpSubstitution,
-          },
-          {
-            key: 'lng',
-            description: 'device language',
-            value: getDeviceLanguage(platform),
-            wrap: false,
-            disableEncoding: disableEncodingDueToAmpSubstitution,
-          },
-        ]),
-    ...(experimentVariant && experimentName
-      ? [
-          {
-            key: 'mv_test',
-            description: 'Experiment name',
-            value: `${experimentName}`,
-            wrap: false,
-            disableEncoding: true,
-          },
-          {
-            key: 'mv_creation',
-            description: 'Experiment variant',
-            value: `${experimentVariant}`,
-            wrap: false,
-            disableEncoding: true,
-          },
-        ]
-      : []),
-    ...(ampExperimentName
-      ? [
-          {
-            key: 'mv_test',
-            description: 'AMP experiment project name',
-            value: `Google Discover`,
-            wrap: false,
-            disableEncoding: true,
-          },
-          {
-            key: 'mv_experiment_id',
-            description: 'AMP experiment name',
-            value: `${ampExperimentName}`,
-            wrap: false,
-            disableEncoding: true,
-          },
-          {
-            key: 'mv_creation',
-            description: 'AMP experiment variant name',
-            value: `VARIANT(${ampExperimentName})`,
-            wrap: false,
-            disableEncoding: true,
-          },
-        ]
-      : []),
-  ];
-
-  return `${getEnvConfig().SIMORGH_ATI_BASE_URL}${getAtiUrl(
-    eventTrackingBeaconValues,
-  )}&type=AT`;
+  } as ResonanceBeaconConfig;
 };
 
 export const buildReverbAnalyticsModel = ({
@@ -453,6 +103,9 @@ export const buildReverbAnalyticsModel = ({
   timeUpdated,
   experimentName,
   experimentVariant,
+  isSignedIn = false,
+  hashedId = null,
+  isPersonalisationOn = false,
 }: ATIPageTrackingProps): ReverbBeaconConfig => {
   const href = getHref(platform);
   const referrer = getReferrer(platform);
@@ -499,7 +152,9 @@ export const buildReverbAnalyticsModel = ({
         },
       },
       user: {
-        isSignedIn: false,
+        isSignedIn,
+        hashedId,
+        isPersonalisationOn,
       },
     },
     eventDetails,
@@ -522,6 +177,9 @@ export const buildReverbEventModel = ({
   itemTracker = {},
   groupTracker = {},
   eventGroupingName,
+  isSignedIn = false,
+  hashedId = null,
+  isPersonalisationOn = false,
 }: ATIEventTrackingProps): ReverbBeaconConfig => {
   const {
     type: itemType,
@@ -552,7 +210,9 @@ export const buildReverbEventModel = ({
         },
       },
       user: {
-        isSignedIn: false,
+        isSignedIn,
+        hashedId,
+        isPersonalisationOn,
       },
     },
     eventDetails: {
@@ -593,3 +253,136 @@ export const buildReverbEventModel = ({
     },
   };
 };
+
+type ActivationEventProps = {
+  pageIdentifier?: string;
+  platform?: Platforms;
+  appName?: string;
+  producerName?: string;
+  statsDestination?: string;
+  experimentName: string;
+  experimentVariant: string;
+  isSignedIn?: boolean;
+  hashedId?: string | null;
+  isPersonalisationOn?: boolean;
+};
+
+/**
+ * Builds the standalone Piano/Reverb "activation" beacon fired when a user is
+ * activated into an Optimizely experiment, decoupled from any view/click event.
+ * Follows the "Activation (v1.0.1) on Web" event-catalogue spec (viewability model),
+ * spec ID ACTIVATION_EVENT_SPEC_ID - see https://broxy.tools.bbc.co.uk/bbc-event-catalogue/xbbc/viewability-events/specs/experiment/activation-web/1.0.1/
+ */
+export const buildActivationEventModel = ({
+  pageIdentifier,
+  platform,
+  appName,
+  producerName,
+  statsDestination,
+  experimentName,
+  experimentVariant,
+  isSignedIn = false,
+  hashedId = null,
+  isPersonalisationOn = false,
+}: ActivationEventProps): ReverbBeaconConfig => ({
+  params: {
+    page: {
+      destination: statsDestination,
+      name: pageIdentifier,
+      producer: producerName,
+      additionalProperties: {
+        type: 'AT',
+        app_name: platform === 'app' ? `${appName}-app` : appName,
+        app_type: getAppType(platform),
+      },
+    },
+    user: {
+      isSignedIn,
+      hashedId,
+      isPersonalisationOn,
+    },
+  },
+  eventDetails: {
+    eventName: ACTIVATION_EVENT,
+    eventPublisher: 'viewability',
+    event: {
+      category: 'viewability',
+      action: ACTIVATION_EVENT_SERVE_ACTION,
+      // Identifies this 'serve' event as an activation event, pending a dedicated event_action value in the spec
+      interaction_type: ACTIVATION_EVENT_INTERACTION_TYPE,
+      spec_id: ACTIVATION_EVENT_SPEC_ID,
+      spec_version: ACTIVATION_EVENT_SPEC_VERSION,
+    },
+    group: {
+      type: 'experiment',
+      name: 'optimizely',
+    },
+    experience: {
+      engine_id: [`optimizely.${experimentName}.${experimentVariant}`],
+    },
+  },
+});
+
+type ErrorEventProps = {
+  pageIdentifier?: string;
+  producerName?: string;
+  statsDestination?: string;
+  feature: string;
+  errorName: string;
+  errorKey?: string;
+  errorMessage?: string;
+  statusCode?: number;
+  isSignedIn?: boolean;
+  hashedId?: string | null;
+  isPersonalisationOn?: boolean;
+};
+
+/**
+ * Builds a standalone Piano/Reverb "error" beacon reported when a client-side
+ * feature (e.g. UAS) fails. `feature` identifies the system and `errorName` the
+ * operation that failed; the optional service message/status add
+ * diagnostics without carrying PII or tokens.
+ */
+export const buildErrorEventModel = ({
+  pageIdentifier,
+  producerName,
+  statsDestination,
+  feature,
+  errorName,
+  errorKey,
+  errorMessage,
+  statusCode,
+  isSignedIn = false,
+  hashedId = null,
+  isPersonalisationOn = false,
+}: ErrorEventProps): ReverbBeaconConfig => ({
+  params: {
+    page: {
+      destination: statsDestination,
+      name: pageIdentifier,
+      producer: producerName,
+      additionalProperties: {
+        type: 'AT',
+      },
+    },
+    user: {
+      isSignedIn,
+      hashedId,
+      isPersonalisationOn,
+    },
+  },
+  eventDetails: {
+    eventName: 'error',
+    eventPublisher: 'viewability',
+    event: {
+      category: 'error',
+    },
+    error: {
+      engine: feature,
+      name: errorName,
+      ...(errorMessage && { message: errorMessage }),
+      ...(statusCode && { code: String(statusCode) }),
+      ...(errorKey && { type: errorKey }),
+    },
+  },
+});

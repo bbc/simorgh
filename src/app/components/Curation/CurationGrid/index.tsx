@@ -1,10 +1,8 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
+import { use } from 'react';
 import { VISUAL_PROMINENCE, Summary } from '#app/models/types/curationData';
 import extractWorldServiceFromUrl from '#app/lib/utilities/extractWorldServiceFromUrl';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import moment from 'moment';
-import { use } from 'react';
 import { RequestContext } from '#app/contexts/RequestContext';
 import isMedia from '#app/lib/utilities/isMedia';
 import styles from './index.styles';
@@ -20,8 +18,7 @@ const CurationGrid = ({
   isFirstCuration,
   headingLevel,
   eventTrackingData,
-  timeOfDayExperimentName,
-  timeOfDayVariant,
+  showRelatedTopicExperiment = false,
 }: CurationGridProps) => {
   const { isLite } = use(RequestContext);
 
@@ -36,19 +33,30 @@ const CurationGrid = ({
     promo => isHighImpact(promo) && !isMedia(promo.type),
   );
 
-  const buildPromoEventTrackingData = (promo: Summary, i: number) => ({
-    itemTracker: {
-      type: 'simple-curation-grid-promo',
-      text: promo.title,
-      position: i + 1,
-      resourceId: promo.id,
-      ...(promo.type && { mediaType: promo.type }),
-      ...(promo.duration && {
-        duration: moment.duration(promo.duration, 'seconds').asMilliseconds(),
-      }),
-    },
-    ...eventTrackingData,
-  });
+  const buildPromoEventTrackingData = (promo: Summary, i: number) => {
+    const componentName =
+      eventTrackingData?.componentName || 'simple-curation-grid';
+
+    const promoType = `${componentName}-promo`;
+    const trackingComponentName =
+      componentName === 'topic-discovery-curation-grid'
+        ? promoType
+        : componentName;
+    return {
+      itemTracker: {
+        type: promoType,
+        text: promo.title,
+        position: i + 1,
+        resourceId: promo.id,
+        ...(promo.type && { mediaType: promo.type }),
+        ...(promo.duration && {
+          duration: moment.duration(promo.duration, 'seconds').asMilliseconds(),
+        }),
+      },
+      ...eventTrackingData,
+      componentName: trackingComponentName,
+    };
+  };
 
   const renderPromo = (promo: Summary, index: number) => {
     const isFirstPromo = index === 0;
@@ -62,14 +70,12 @@ const CurationGrid = ({
       eventTrackingData: buildPromoEventTrackingData(promo, index),
       position: index,
     };
-
     if (!shouldUseHighImpact) {
       return (
         <CurationPromo
           {...commonProps}
           headingLevel={headingLevel}
-          timeOfDayExperimentName={timeOfDayExperimentName || undefined}
-          timeOfDayVariant={timeOfDayVariant}
+          showRelatedTopicExperiment={showRelatedTopicExperiment}
         />
       );
     }

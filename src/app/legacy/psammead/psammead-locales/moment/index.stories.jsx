@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import styled from '@emotion/styled';
 import moment from 'moment';
 import {
@@ -6,18 +6,18 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
-import { GEL_FF_REITH_SANS } from '#psammead/gel-foundations/src/typography';
 import {
   ServiceContext,
   ServiceContextProvider,
 } from '#app/contexts/ServiceContext';
-import services from '#src/server/utilities/serviceConfigs';
+import services from '#utilities/serviceConfigs';
 import PromoTimestamp from '#components/Promo/timestamp';
 import ArticleTimestamp from '#containers/ArticleTimestamp';
 import MostReadTimestamp from '#src/app/components/MostRead/Canonical/LastUpdated';
 
 import readme from '../README.md';
 import WithTimeMachine from '#src/testHelpers/withTimeMachine';
+import { REITH_SANS } from '../../../../components/ThemeProvider/fontFamilies';
 
 const ws = services.ws.default;
 
@@ -232,8 +232,6 @@ timeFunctions.push(
         <WithService service={service} variant={variant}>
           <MostReadTimestamp
             prefix={articleTimestampPrefix}
-            script={script}
-            service={service}
             timestamp={new Date(fixedTimestamp)}
             locale={locale}
             timezone={timezone}
@@ -388,7 +386,7 @@ years.forEach((year) => {
 const Table = styled.table`
   margin: ${GEL_SPACING_DBL};
   border: 1px solid ${(props) => props.theme.palette.PEBBLE};
-  font-family: ${GEL_FF_REITH_SANS};
+  font-family: ${REITH_SANS};
 
   & td,
   th {
@@ -398,7 +396,7 @@ const Table = styled.table`
 `;
 
 const Paragraph = styled.p`
-  font-family: ${GEL_FF_REITH_SANS};
+  font-family: ${REITH_SANS};
   margin: ${GEL_SPACING_DBL};
 `;
 

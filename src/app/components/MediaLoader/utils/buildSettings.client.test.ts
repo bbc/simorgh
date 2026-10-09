@@ -1,5 +1,6 @@
 import { PageTypes, Services } from '#app/models/types/global';
 import { data as hindiTvProgramme } from '#data/hindi/bbc_hindi_tv/tv_programmes/w13xttlw.json';
+import arabicSilverLiveStreamFixture from '#data/arabic/articles/c5y35dxlpv2o.json';
 import {
   AUDIO_PAGE,
   LIVE_PAGE,
@@ -27,6 +28,7 @@ import {
   legacyMediaBlock,
   livePageVideoClipMediaBlock,
   liveTvPageMediaBlock,
+  livePagePortraitVideoClipMediaBlock,
 } from '../fixture';
 import {
   BuildConfigProps,
@@ -48,6 +50,8 @@ const baseSettings = {
   statsDestination: 'WS_NEWS_LANGUAGES',
   producer: 'SERBIAN',
   id: 'serbian/lat/srbija-68707945',
+  defaultImage:
+    'https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png',
 } as BuildConfigProps;
 
 describe('buildSettings', () => {
@@ -121,6 +125,76 @@ describe('buildSettings', () => {
           translatedNoJSMessage:
             'This video cannot play in your browser. Please enable JavaScript or try a different browser.',
         },
+        orientation: 'landscape',
+        showAds: false,
+      } satisfies ConfigBuilderReturnProps);
+    });
+
+    it('Should process a portrait video ClipMedia block into a valid playlist item for a "Live" page.', () => {
+      const result = buildSettings({
+        ...baseSettings,
+        blocks: [livePagePortraitVideoClipMediaBlock as MediaBlock],
+        pageType: 'live',
+      });
+
+      expect(result).toStrictEqual({
+        mediaType: 'video',
+        playerConfig: {
+          autoplay: false,
+          product: 'news',
+          statsObject: {
+            clipPID: 'p01thw20',
+            destination: 'WS_NEWS_LANGUAGES',
+            producer: 'SERBIAN',
+          },
+          enableToucan: true,
+          externalEmbedUrl:
+            'https://www.bbc.com/serbian/lat/av-embeds/srbija-68707945/vpid/p01thw22',
+          appName: 'news-serbian',
+          appType: 'responsive',
+          counterName: 'live_coverage.testID.page',
+          superResponsive: true,
+          playlistObject: {
+            title:
+              "BBC launch trailer for We Know Our Place women's sport campaign",
+            summary: '',
+            holdingImageURL:
+              'https://ichef.test.bbci.co.uk/images/ic/512xn/p01thw3g.jpg.webp',
+            items: [
+              {
+                duration: 54,
+                kind: 'programme',
+                versionID: 'p01thw22',
+              },
+            ],
+            embedRights: 'allowed',
+          },
+          ui: {
+            skin: 'classic',
+            controls: { enabled: true },
+            locale: { lang: 'sr-latn' },
+            subtitles: { enabled: true, defaultOn: true },
+            fullscreen: { enabled: true },
+          },
+        },
+        placeholderConfig: {
+          mediaInfo: {
+            datetime: 'PT54S',
+            duration: '00:54',
+            durationSpoken: 'Duration 0,54',
+            guidanceMessage: null,
+            title:
+              "BBC launch trailer for We Know Our Place women's sport campaign",
+            type: 'video',
+          },
+          placeholderSrc:
+            'https://ichef.test.bbci.co.uk/images/ic/512xn/p01thw3g.jpg.webp',
+          placeholderSrcset:
+            'https://ichef.test.bbci.co.uk/images/ic/240xn/p01thw3g.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01thw3g.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01thw3g.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01thw3g.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01thw3g.jpg.webp 800w',
+          translatedNoJSMessage:
+            'This video cannot play in your browser. Please enable JavaScript or try a different browser.',
+        },
+        orientation: 'portrait',
         showAds: false,
       } satisfies ConfigBuilderReturnProps);
     });
@@ -339,6 +413,24 @@ describe('buildSettings', () => {
   });
 
   describe('AresMedia', () => {
+    it('uses a supplied holding image instead of the Ares media image', () => {
+      const holdingImageURL =
+        'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/promo-image.jpg.webp';
+      const result = buildSettings({
+        ...baseSettings,
+        blocks: aresMediaBlocks as MediaBlock[],
+        holdingImageURL,
+      });
+
+      expect(result?.playerConfig.playlistObject?.holdingImageURL).toBe(
+        holdingImageURL.replace('{width}', '512'),
+      );
+      expect(result?.placeholderConfig).toMatchObject({
+        placeholderSrc: holdingImageURL.replace('{width}', '512'),
+        placeholderSrcset: '',
+      });
+    });
+
     it('Should process an AresMedia block into a valid playlist item for an "article" page.', () => {
       const result = buildSettings({
         ...baseSettings,
@@ -514,6 +606,41 @@ describe('buildSettings', () => {
           fullscreen: { enabled: true },
         },
       });
+    });
+
+    it('should configure a Silver webcast without a live flag as live', () => {
+      const [videoBlock] =
+        arabicSilverLiveStreamFixture.data.article.promo.media.blocks;
+
+      const result = buildSettings({
+        ...baseSettings,
+        service: 'arabic',
+        lang: 'ar',
+        producer: 'ARABIC',
+        blocks: videoBlock.model.blocks as unknown as MediaBlock[],
+        adsEnabled: true,
+        showAdsBasedOnLocation: true,
+      });
+
+      expect(result?.playerConfig.playlistObject).toMatchObject({
+        items: [
+          {
+            kind: 'programme',
+            live: true,
+            versionID: 'l0058t2x',
+          },
+        ],
+        simulcast: true,
+      });
+      expect(result?.playerConfig.ui.cta).toEqual({ mode: null });
+      expect(result?.playerConfig.playlistObject?.items[0]).not.toHaveProperty(
+        'duration',
+      );
+      expect(result?.playerConfig.playlistObject?.items).not.toContainEqual({
+        kind: 'advert',
+      });
+      expect(result?.placeholderConfig?.mediaInfo.datetime).toBeUndefined();
+      expect(result?.showAds).toBe(false);
     });
 
     it('Should process a LegacyMediaBlock into a valid playlist item for a "MAP" page', () => {
@@ -1329,6 +1456,7 @@ describe('buildSettings', () => {
           counterName: 'live_coverage.c7dkx155e626t.page',
           enableToucan: true,
           superResponsive: true,
+          supportFakeFullscreen: true,
           playlistObject: {
             holdingImageURL:
               'https://ichef.bbci.co.uk/images/ic/$recipe/p0k31t4d.jpg',
@@ -1342,6 +1470,21 @@ describe('buildSettings', () => {
             ],
             summary: 'Toon in, kick back and relax to 100% cartoons!',
             title: 'Non-Stop Cartoons!',
+          },
+          plugins: {
+            toLoad: [
+              {
+                html: 'https://static.files.bbci.co.uk/dazzler-edge-plugin/v1_0_2/DazzlerEdgePlugin.min.js',
+                playerOnly: true,
+                data: {
+                  env: 'test',
+                  sid: 'cbbc',
+                  holdingImageURL:
+                    'https://ichef.bbci.co.uk/images/ic/$recipe/p0k31t4d.jpg',
+                  uiLanguage: 'es',
+                },
+              },
+            ],
           },
           product: 'news',
           statsObject: {
@@ -1429,6 +1572,7 @@ describe('buildSettings', () => {
           counterName: 'live_coverage.cvp5r6m6mgpt.page',
           enableToucan: true,
           superResponsive: true,
+          supportFakeFullscreen: true,
           playlistObject: {
             holdingImageURL:
               'https://ichef.bbci.co.uk/images/ic/$recipe/p08b23t4.png',
@@ -1442,6 +1586,21 @@ describe('buildSettings', () => {
             summary:
               'جولة إخبارية يومية تتناول أهم الأحداث العربية والعالمية في تقارير ولقاءات وتحليلات ',
             title: 'BBC Arabic TV',
+          },
+          plugins: {
+            toLoad: [
+              {
+                html: 'https://static.files.bbci.co.uk/dazzler-edge-plugin/v1_0_2/DazzlerEdgePlugin.min.js',
+                playerOnly: true,
+                data: {
+                  env: 'test',
+                  sid: 'bbc_arabic_tv',
+                  holdingImageURL:
+                    'https://ichef.bbci.co.uk/images/ic/$recipe/p08b23t4.png',
+                  uiLanguage: 'ar',
+                },
+              },
+            ],
           },
           product: 'news',
           statsObject: {
@@ -1534,6 +1693,32 @@ describe('buildSettings', () => {
         });
 
         expect(result?.playerConfig.autoplay).toBe(false);
+      });
+    });
+
+    describe('live tv ', () => {
+      it('should use deafultImage from service context when pageType is LIVE_TV_PAGE', () => {
+        const result = buildSettings({
+          ...baseSettings,
+          blocks: [liveTvPageMediaBlock as MediaBlock],
+          pageType: LIVE_TV_PAGE,
+        });
+
+        expect(result?.playerConfig?.playlistObject?.holdingImageURL).toBe(
+          'https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png',
+        );
+      });
+
+      it('should use default holdingImageURL when pageType is not LIVE_TV_PAGE', () => {
+        const result = buildSettings({
+          ...baseSettings,
+          blocks: [livePageVideoClipMediaBlock as MediaBlock],
+          pageType: LIVE_PAGE,
+        });
+
+        expect(result?.playerConfig?.playlistObject?.holdingImageURL).toBe(
+          'https://ichef.test.bbci.co.uk/images/ic/512xn/p01thw3g.jpg.webp',
+        );
       });
     });
   });

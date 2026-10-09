@@ -1,17 +1,12 @@
 /* eslint-disable import/no-relative-packages */
 import { interceptATIAnalyticsBeacons, COMPONENTS } from '../helpers';
-import {
-  assertATIComponentClickEvent,
-  assertATIComponentViewEvent,
-} from '../../../../../../cypress/e2e/specialFeatures/atiAnalytics/assertions';
+import { assertATIComponentClickEvent, assertATIComponentViewEvent } from '.';
 import { AtiAssertionFnProps } from './type';
 
 const { SOCIAL_EMBED } = COMPONENTS;
 
 export const assertSocialEmbedComponentView = ({
   pageIdentifier,
-  contentType,
-  useReverb,
   path,
   applicationType,
   siteId,
@@ -31,8 +26,6 @@ export const assertSocialEmbedComponentView = ({
     assertATIComponentViewEvent({
       component: SOCIAL_EMBED,
       pageIdentifier,
-      contentType,
-      useReverb,
       applicationType,
       siteId,
     });
@@ -41,8 +34,6 @@ export const assertSocialEmbedComponentView = ({
 
 export const assertSocialEmbedComponentClick = ({
   pageIdentifier,
-  contentType,
-  useReverb,
   path,
   applicationType,
   siteId,
@@ -61,8 +52,6 @@ export const assertSocialEmbedComponentClick = ({
     assertATIComponentClickEvent({
       component: SOCIAL_EMBED,
       pageIdentifier,
-      contentType,
-      useReverb,
       applicationType,
       siteId,
     });

@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news',
     atiAnalyticsProducerId: '64',
     atiAnalyticsProducerName: 'NEWS',
-    useReverb: true,
     chartbeatDomain: 'bbc.co.uk',
     brandName: 'BBC News',
     product: 'BBC News',
@@ -50,6 +49,10 @@ export const service: DefaultServiceConfig = {
       home: 'Home',
       currentPage: 'Current page',
       skipLinkText: 'Skip to content',
+      skipContent: {
+        text: 'Skip %title% and continue',
+        endTextVisuallyHidden: 'End of %title%',
+      },
       relatedContent: 'Related content',
       relatedTopics: 'Related topics',
       moreOnThis: '',

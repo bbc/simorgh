@@ -1,7 +1,7 @@
-import React, { forwardRef } from 'react';
+import { createContext, forwardRef } from 'react';
 
 // Used to make props passed to <EpisodeList> available to children
-export const EpisodeContext = React.createContext({});
+export const EpisodeContext = createContext({});
 export const withEpisodeContext = Component =>
   forwardRef((props, ref) => (
     <EpisodeContext.Consumer>

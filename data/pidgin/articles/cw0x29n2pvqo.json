@@ -7096,6 +7096,20 @@
           "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1a8b/live/c4ce3eb0-98a5-11ed-86bf-4b2f5da2cf01.jpg",
           "description": "Professor Mahmood Yakubu speak wit BBC on Inec plans to conduct free and fair elections.",
           "imageAlt": "Inec boss Prof. Mahmood Yakubu"
+        },
+        {
+          "id": "ce3zyp0z93do",
+          "type": "video",
+          "duration": "PT5M21S",
+          "isLive": false,
+          "title": "'Evribodi dey negotiate wit outlaws, including America' - Sheikh Gumi",
+          "firstPublished": "2025-12-09T13:55:32.118Z",
+          "lastPublished": "2025-12-09T13:55:32.118Z",
+          "link": "https://www.bbc.com/pidgin/articles/ce3zyp0z93do",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/a5fb/live/a7edb960-d506-11f0-8c06-f5d460985095.jpg.webp",
+          "imageAlt": "Sheik Ahmad Gumi",
+          "isPortraitImage": true,
+          "readTime": 1
         }
       ]
     }

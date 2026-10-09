@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import { Fragment } from 'react';
 import MediaIndicator from '#psammead/psammead-media-indicator/src';
 import {
   IndexAlsos,
@@ -23,23 +23,11 @@ const getMediaType = (cpsType, mediaType) => {
   return type;
 };
 
-const buildIndexAlsosMediaIndicator = ({
-  cpsType,
-  mediaType,
-  script,
-  service,
-  dir,
-}) => {
+const buildIndexAlsosMediaIndicator = ({ cpsType, mediaType, dir }) => {
   const indexAlsosMediaType = getMediaType(cpsType, mediaType);
 
   return indexAlsosMediaType ? (
-    <MediaIndicator
-      type={indexAlsosMediaType}
-      script={script}
-      service={service}
-      dir={dir}
-      isInline
-    />
+    <MediaIndicator type={indexAlsosMediaType} dir={dir} isInline />
   ) : null;
 };
 
@@ -70,8 +58,6 @@ const IndexAlsosContainer = ({ alsoItems, script, service, dir = 'ltr' }) => {
           return (
             <IndexAlsoItem
               key={id}
-              script={script}
-              service={service}
               url={url}
               dir={dir}
               mediaIndicator={indexAlsoMediaIndicator}

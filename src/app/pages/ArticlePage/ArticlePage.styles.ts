@@ -48,6 +48,9 @@ export default {
 
       [mq.GROUP_4_MIN_WIDTH]: {
         gridColumn: '9 / span 4',
+        // keep secondary column in the first desktop grid row
+        // so adaptive media curation can still sit before it in dom for mobile
+        gridRow: 1,
         marginTop: '2rem',
       },
     }),
@@ -56,9 +59,25 @@ export default {
       gridColumn: '1 / span 12',
       paddingBottom: '2rem',
     }),
+  collapsedArticleColumn: ({ mq }: Theme) =>
+    css({
+      paddingBottom: 0,
+
+      [`.${NO_JS_CLASSNAME} &, .${OPERA_MINI_CLASSNAME} &`]: {
+        paddingBottom: '2rem',
+      },
+
+      [mq.GROUP_4_MIN_WIDTH]: {
+        paddingBottom: '2rem',
+      },
+    }),
   mainContent: ({ palette, spacings, mq }: Theme) =>
     css({
       paddingBottom: `${spacings.TRIPLE}rem`,
+
+      [mq.GROUP_3_ONLY]: {
+        paddingBottom: `${spacings.FULL}rem`,
+      },
 
       // Hide content after Continue Reading button
       '[id="continue-reading-button"] ~ *': {
@@ -82,7 +101,31 @@ export default {
         },
       },
     }),
+  collapsedMainContent: ({ spacings, mq }: Theme) =>
+    css({
+      paddingBottom: 0,
+
+      [`.${NO_JS_CLASSNAME} &, .${OPERA_MINI_CLASSNAME} &`]: {
+        paddingBottom: `${spacings.TRIPLE}rem`,
+
+        [mq.GROUP_3_ONLY]: {
+          paddingBottom: `${spacings.FULL}rem`,
+        },
+      },
+
+      [mq.GROUP_4_MIN_WIDTH]: {
+        paddingBottom: `${spacings.TRIPLE}rem`,
+      },
+    }),
   hideRelatedTopics: ({ mq }: Theme) =>
+    css({
+      display: 'none',
+
+      [mq.GROUP_4_MIN_WIDTH]: {
+        display: 'block',
+      },
+    }),
+  hideTopicDiscovery: ({ mq }: Theme) =>
     css({
       display: 'none',
 
@@ -96,24 +139,17 @@ export default {
     }),
   mostReadSection: ({ spacings, mq, gridWidths }: Theme) =>
     css({
-      [mq.GROUP_1_MAX_WIDTH]: {
-        margin: `0 ${spacings.FULL}rem`,
-        paddingBottom: `${spacings.TRIPLE}rem`,
+      maxWidth: `${pixelsToRem(gridWidths[1008])}rem`,
+      margin: '0 auto',
+      padding: `0 ${spacings.FULL}rem ${spacings.TRIPLE}rem`,
+      [mq.GROUP_2_ONLY]: {
+        padding: `0 ${spacings.DOUBLE}rem ${spacings.QUADRUPLE}rem`,
       },
-      [mq.GROUP_2_MIN_WIDTH]: {
-        [mq.GROUP_3_MAX_WIDTH]: {
-          margin: `0 ${spacings.DOUBLE}rem`,
-          paddingBottom: `${spacings.QUADRUPLE}rem`,
-        },
+      [mq.GROUP_3_ONLY]: {
+        padding: `0 ${spacings.DOUBLE}rem ${spacings.QUINTUPLE}rem`,
       },
-      [mq.GROUP_4_ONLY]: {
-        margin: `0 ${spacings.DOUBLE}rem`,
-        paddingBottom: `${spacings.QUINTUPLE}rem`,
-      },
-      [mq.GROUP_5_MIN_WIDTH]: {
-        margin: '0 auto',
+      [mq.GROUP_4_MIN_WIDTH]: {
         padding: `0 ${spacings.DOUBLE}rem ${spacings.TRIPLE}rem`,
-        maxWidth: `${pixelsToRem(gridWidths[1280])}rem`,
       },
     }),
   relatedTopics: ({ spacings, mq }: Theme) =>
@@ -124,6 +160,19 @@ export default {
       [mq.GROUP_4_MIN_WIDTH]: {
         margin: `${spacings.QUADRUPLE}rem 0`,
         paddingBottom: `${spacings.QUADRUPLE}rem`,
+      },
+    }),
+  mediaCurationRow: ({ spacings, mq }: Theme) =>
+    css({
+      gridColumn: '1 / span 12',
+      margin: `${spacings.TRIPLE}rem ${spacings.FULL}rem ${spacings.TRIPLE}rem`,
+
+      [mq.GROUP_2_MIN_WIDTH]: {
+        margin: `${spacings.TRIPLE}rem ${spacings.DOUBLE}rem ${spacings.TRIPLE}rem`,
+      },
+
+      [mq.GROUP_4_MIN_WIDTH]: {
+        margin: `${spacings.TRIPLE}rem 0 ${spacings.TRIPLE}rem`,
       },
     }),
   featuresSection: ({ spacings, mq }: Theme) =>
@@ -176,9 +225,22 @@ export default {
     }),
     commonMarginSpacing,
   ],
-  // EXPERIMENT: Article Read Time
-  readTimePlaceholderBelowTimestamp: () =>
+  portraitVideoCarousel: ({ mq, spacings }: Theme) =>
     css({
-      marginBottom: `${pixelsToRem(18.5)}rem`,
+      padding: `0 ${pixelsToRem(8)}rem`,
+      marginBottom: `${spacings.DOUBLE}rem`,
+      marginTop: `${spacings.DOUBLE}rem`,
+      [mq.GROUP_1_MIN_WIDTH]: {
+        marginBottom: `${spacings.TRIPLE}rem`,
+      },
+      [mq.GROUP_2_MIN_WIDTH]: {
+        padding: `0 ${pixelsToRem(16)}rem`,
+      },
+      [mq.GROUP_3_MIN_WIDTH]: {
+        marginBottom: `${spacings.DOUBLE}rem`,
+      },
+      [mq.GROUP_4_MIN_WIDTH]: {
+        padding: 0,
+      },
     }),
 };

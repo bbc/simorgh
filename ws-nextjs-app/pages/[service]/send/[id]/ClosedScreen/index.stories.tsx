@@ -1,4 +1,3 @@
-import React from 'react';
 import ClosedScreen from '.';
 
 const Component = () => (

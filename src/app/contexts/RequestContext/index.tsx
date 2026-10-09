@@ -1,4 +1,4 @@
-import React, { PropsWithChildren, useMemo } from 'react';
+import { createContext, PropsWithChildren, useMemo } from 'react';
 import {
   Environments,
   Platforms,
@@ -36,19 +36,22 @@ export type RequestContextProps = {
   showAdsBasedOnLocation: boolean;
   showCookieBannerBasedOnCountry: boolean;
   statsDestination: string;
+  destinationSiteId: number | null;
   statusCode: number | null;
   timeOnServer: number | null;
   variant: Variants | null;
   country?: string | null;
+  primaryMediaType: string | null;
   nonce?: string | null;
   cspHeader: string | null;
 };
 
-export const RequestContext = React.createContext<RequestContextProps>(
+export const RequestContext = createContext<RequestContextProps>(
   {} as RequestContextProps,
 );
 
 type RequestProviderProps = {
+  primaryMediaType?: string | null;
   bbcOrigin?: string | null;
   derivedPageType?: string | null;
   id?: string | null;
@@ -93,6 +96,7 @@ export const RequestContextProvider = ({
   timeOnServer = null,
   variant = null,
   isUK = null,
+  primaryMediaType = null,
 }: PropsWithChildren<RequestProviderProps>) => {
   let { origin } = getOriginContext(bbcOrigin);
   const env: Environments = getEnv(origin);
@@ -113,11 +117,13 @@ export const RequestContextProvider = ({
   };
 
   const platform = getPlatform();
-  const statsDestination = getStatsDestination({
-    isUK: platform === 'amp' ? true : formattedIsUK, // getDestination requires that statsDestination is a PS variant on AMP
-    env,
-    service,
-  });
+
+  const { destinationName: statsDestination, destinationSiteId } =
+    getStatsDestination({
+      isUK: platform === 'amp' ? true : formattedIsUK, // getDestination requires that statsDestination is a PS variant on AMP
+      env,
+      service,
+    });
 
   const value = useMemo(
     () => ({
@@ -133,6 +139,7 @@ export const RequestContextProvider = ({
       isNextJs,
       platform,
       statsDestination,
+      destinationSiteId,
       statusCode,
       variant,
       timeOnServer,
@@ -145,6 +152,7 @@ export const RequestContextProvider = ({
       country,
       nonce,
       cspHeader,
+      primaryMediaType,
     }),
     [
       derivedPageType,
@@ -164,12 +172,14 @@ export const RequestContextProvider = ({
       showAdsBasedOnLocation,
       showCookieBannerBasedOnCountry,
       statsDestination,
+      destinationSiteId,
       statusCode,
       timeOnServer,
       variant,
       country,
       cspHeader,
       nonce,
+      primaryMediaType,
     ],
   );
 

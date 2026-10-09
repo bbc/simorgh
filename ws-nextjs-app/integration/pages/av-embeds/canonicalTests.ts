@@ -1,7 +1,7 @@
-import { runMediaPlayerTests } from '#src/integration/common';
 import runResponseHeaderTests from '#nextjs/integration/utils/responseHeaderTests';
+import { runMediaPlayerTests } from '../../common';
 
 export default () => {
   runResponseHeaderTests();
-  runMediaPlayerTests();
+  runMediaPlayerTests(pageType);
 };

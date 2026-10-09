@@ -1,6 +1,4 @@
-import React from 'react';
-import { JSDOM } from 'jsdom';
-
+import { createRef } from 'react';
 import {
   render,
   screen,
@@ -12,9 +10,13 @@ import BASE64_PLACEHOLDER_IMAGE from './base64Placeholder';
 import { SHADOW } from '../ThemeProvider/palette';
 
 const removeStyles = (el: HTMLElement) => {
-  const dom = new JSDOM(el.innerHTML.replace(/class=".+?"/gm, ''));
+  const clone = el.cloneNode(true) as HTMLElement;
 
-  return dom.window.document.body.firstChild;
+  clone
+    .querySelectorAll('[class]')
+    .forEach(node => node.removeAttribute('class'));
+
+  return clone.firstChild;
 };
 
 const Fixture = ({ ...props }) => (
@@ -152,6 +154,14 @@ describe('Image - Canonical', () => {
     expect(imageEl.parentNode).not.toHaveStyle({
       backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
     });
+  });
+
+  it('should attach imageRef to the native image element', () => {
+    const imageRef = createRef<HTMLImageElement>();
+
+    render(<Fixture imageRef={imageRef} />);
+
+    expect(imageRef.current).toBe(screen.getByAltText('Test image alt text'));
   });
 
   it('should render the container with an aspect ratio based on width and height', () => {

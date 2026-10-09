@@ -1,4 +1,3 @@
-import React from 'react';
 import PortraitVideoModal from '.';
 import blocks from './fixture';
 import readme from './README.md';

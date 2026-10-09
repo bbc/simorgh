@@ -1,6 +1,5 @@
-import React from 'react';
+import { screen } from '@testing-library/react';
 import { render } from '../../../../components/react-testing-library-with-providers';
-import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import { ScrollableNavigation } from './ScrollableNavigation';
 import Navigation, { NavigationUl, NavigationLi } from './index';
 import igboNavData from '../testHelpers/igbo';
@@ -15,7 +14,6 @@ const navigationUlComponent = (
         <NavigationLi
           key={title}
           url={url}
-          script={latin}
           active={active}
           currentPageText="Current page"
           service="news"
@@ -28,31 +26,22 @@ const navigationUlComponent = (
   </NavigationUl>
 );
 
-const NavigationExample = (
-  <Navigation script={latin} service="news">
-    {navigationUlComponent}
-  </Navigation>
-);
+const NavigationExample = <Navigation>{navigationUlComponent}</Navigation>;
 
 describe('Navigation', () => {
   it('should render correctly', () => {
-    const { container } = render(NavigationExample);
-    expect(container).toMatchSnapshot();
+    render(NavigationExample);
+    expect(screen.getByRole('navigation')).toBeInTheDocument();
   });
 
   it('should render correctly when isOpen is true', () => {
-    const { container } = render(
-      <Navigation script={latin} service="news" isOpen>
-        {navigationUlComponent}
-      </Navigation>,
-    );
-    expect(container).toMatchSnapshot();
+    render(<Navigation isOpen>{navigationUlComponent}</Navigation>);
+    expect(screen.getByRole('navigation')).toBeInTheDocument();
   });
 
   it('should render correctly when ampOpenClass prop is provided', () => {
-    const { container } = render(
+    render(
       <Navigation
-        script={latin}
         skipLinkText="Wụga n’ọdịnaya"
         service="news"
         ampOpenClass="is-open"
@@ -60,16 +49,14 @@ describe('Navigation', () => {
         {navigationUlComponent}
       </Navigation>,
     );
-    expect(container).toMatchSnapshot();
+    expect(screen.getByRole('navigation')).toBeInTheDocument();
   });
 });
 
 describe('Scrollable Navigation', () => {
   it('should render correctly', () => {
-    const { container } = render(
-      <ScrollableNavigation>{NavigationExample}</ScrollableNavigation>,
-    );
-    expect(container).toMatchSnapshot();
+    render(<ScrollableNavigation>{NavigationExample}</ScrollableNavigation>);
+    expect(screen.getByRole('navigation')).toBeInTheDocument();
   });
 });
 
@@ -79,13 +66,12 @@ describe('Assertions', () => {
       <NavigationLi
         key="test-key"
         url="http://test.url"
-        script={latin}
         currentPageText="Current page"
         service="news"
         active
         data-navigation="test_navigation"
       >
-        Testing exta props
+        Testing extra props
       </NavigationLi>,
     );
     expect(

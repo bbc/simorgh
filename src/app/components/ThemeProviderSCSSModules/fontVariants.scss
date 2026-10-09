@@ -1,0 +1,86 @@
+@mixin get-sans-regular {
+  font-family: var(--gel-font-variant-sans-regular-font-family);
+  font-style: var(--gel-font-variant-sans-regular-font-style);
+  font-weight: var(--gel-font-variant-sans-regular-font-weight);
+}
+
+@mixin get-sans-regular-italic {
+  font-family: var(--gel-font-variant-sans-regular-italic-font-family);
+  font-style: var(--gel-font-variant-sans-regular-italic-font-style);
+  font-weight: var(--gel-font-variant-sans-regular-italic-font-weight);
+}
+
+@mixin get-sans-bold {
+  font-family: var(--gel-font-variant-sans-bold-font-family);
+  font-style: var(--gel-font-variant-sans-bold-font-style);
+  font-weight: var(--gel-font-variant-sans-bold-font-weight);
+}
+
+@mixin get-sans-bold-italic {
+  font-family: var(--gel-font-variant-sans-bold-italic-font-family);
+  font-style: var(--gel-font-variant-sans-bold-italic-font-style);
+  font-weight: var(--gel-font-variant-sans-bold-italic-font-weight);
+}
+
+@mixin get-sans-light {
+  font-family: var(--gel-font-variant-sans-light-font-family);
+  font-style: var(--gel-font-variant-sans-light-font-style);
+  font-weight: var(--gel-font-variant-sans-light-font-weight);
+}
+
+@mixin get-serif-regular {
+  font-family: var(--gel-font-variant-serif-regular-font-family);
+  font-style: var(--gel-font-variant-serif-regular-font-style);
+  font-weight: var(--gel-font-variant-serif-regular-font-weight);
+}
+
+@mixin get-serif-medium {
+  font-family: var(--gel-font-variant-serif-medium-font-family);
+  font-style: var(--gel-font-variant-serif-medium-font-style);
+  font-weight: var(--gel-font-variant-serif-medium-font-weight);
+}
+
+@mixin get-serif-medium-italic {
+  font-family: var(--gel-font-variant-serif-medium-italic-font-family);
+  font-style: var(--gel-font-variant-serif-medium-italic-font-style);
+  font-weight: var(--gel-font-variant-serif-medium-italic-font-weight);
+}
+
+@mixin get-serif-bold {
+  font-family: var(--gel-font-variant-serif-bold-font-family);
+  font-style: var(--gel-font-variant-serif-bold-font-style);
+  font-weight: var(--gel-font-variant-serif-bold-font-weight);
+}
+
+@mixin get-serif-light {
+  font-family: var(--gel-font-variant-serif-light-font-family);
+  font-style: var(--gel-font-variant-serif-light-font-style);
+  font-weight: var(--gel-font-variant-serif-light-font-weight);
+}
+
+// Main mixin
+@mixin gel-font-variant($variant) {
+  @if $variant == 'sans-regular' {
+    @include get-sans-regular;
+  } @else if $variant == 'sans-regular-italic' {
+    @include get-sans-regular-italic;
+  } @else if $variant == 'sans-bold' {
+    @include get-sans-bold;
+  } @else if $variant == 'sans-bold-italic' {
+    @include get-sans-bold-italic;
+  } @else if $variant == 'sans-light' {
+    @include get-sans-light;
+  } @else if $variant == 'serif-regular' {
+    @include get-serif-regular;
+  } @else if $variant == 'serif-medium' {
+    @include get-serif-medium;
+  } @else if $variant == 'serif-medium-italic' {
+    @include get-serif-medium-italic;
+  } @else if $variant == 'serif-bold' {
+    @include get-serif-bold;
+  } @else if $variant == 'serif-light' {
+    @include get-serif-light;
+  } @else {
+    @include get-sans-regular;
+  }
+}

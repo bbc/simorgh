@@ -1,12 +1,18 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-import React, { use } from 'react';
-import { jsx } from '@emotion/react';
+import { Fragment, use } from 'react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
+import AccountPromotionalBannerHomePageExperiment from '#app/components/Account/AccountPromotionalBannerHomePageExperiment';
+import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import useOptimizelyVariation, {
   ExperimentType,
 } from '#app/hooks/useOptimizelyVariation';
-import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
+import {
+  HOMEPAGE_RELATED_TOPIC_EXPERIMENT,
+  HOMEPAGE_RELATED_TOPIC_SERVICES,
+  isHomepageRelatedTopicVariation,
+} from '#app/lib/experiments/homepageRelatedTopicPromos';
+import useScrollDepthTracker, {
+  getHomePageBounds,
+} from '#app/hooks/useScrollDepthTracker';
 import Riddle from '#app/components/Riddle';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import {
@@ -14,7 +20,6 @@ import {
   VisualProminence,
   VisualStyle,
 } from '../../models/types/curationData';
-import { ATIData } from '../../components/ATIAnalytics/types';
 import HomeCuration from '../../components/Curation';
 import Ad from '../../components/Ad';
 import MPU from '../../components/Ad/MPU';
@@ -26,7 +31,6 @@ import getItemList from '../../lib/seoUtils/getItemList';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import getNthCurationByStyleAndProminence from '../utils/getNthCurationByStyleAndProminence';
 import getIndexOfFirstNonBanner from '../utils/getIndexOfFirstNonBanner';
-import reorderCurations from './utils/reorderCurations';
 
 export interface HomePageProps {
   pageData: {
@@ -37,7 +41,6 @@ export interface HomePageProps {
     seoTitle?: string;
     seoDescription?: string;
     metadata: {
-      atiAnalytics: ATIData;
       type: string;
     };
   };
@@ -54,40 +57,43 @@ const HomePage = ({ pageData }: HomePageProps) => {
     service,
   } = use(ServiceContext);
   const { topStoriesTitle, home } = translations;
-  const {
-    title,
-    description,
-    seoTitle,
-    seoDescription,
-    metadata: { atiAnalytics },
-  } = pageData;
-  let { curations } = pageData;
+  const { title, description, seoTitle, seoDescription } = pageData;
+  const { curations } = pageData;
+
+  // experiment: newswb_ws_homepage_related_topic_promos
+  // read the server assignment before rendering and activate both groups on load
+  const relatedTopicVariant = useOptimizelyVariation({
+    experimentName: HOMEPAGE_RELATED_TOPIC_EXPERIMENT,
+    experimentType: ExperimentType.SERVER_SIDE,
+  });
+  const relatedTopicExperimentProps =
+    HOMEPAGE_RELATED_TOPIC_SERVICES.includes(service) &&
+    isHomepageRelatedTopicVariation(relatedTopicVariant)
+      ? {
+          experimentName: HOMEPAGE_RELATED_TOPIC_EXPERIMENT,
+          experimentVariant: relatedTopicVariant,
+          sendOptimizelyEvents: true,
+        }
+      : undefined;
+  const showRelatedTopicExperiment =
+    Boolean(relatedTopicExperimentProps) &&
+    relatedTopicVariant === 'related_topic';
+
+  const scrollDepthRef = useScrollDepthTracker(
+    'homepage-scroll-depth',
+    true,
+    getHomePageBounds,
+  );
 
   const metadataTitle = seoTitle || homePageTitle;
   const metadataDescription = seoDescription || description;
-
-  // EXPERIMENT: Homepage Time of Day Adaptive Curations
-  const timeOfDayExperimentName = 'newswb_ws_tod_homepage';
-  const timeOfDayVariant = useOptimizelyVariation({
-    experimentName: timeOfDayExperimentName,
-    experimentType: ExperimentType.CLIENT_SIDE,
-  });
-
-  // if variant is set to 'homepage_time_of_day_a' or 'homepage_time_of_day_b' then reorder curations
-  if (
-    timeOfDayVariant === 'homepage_time_of_day_a' ||
-    timeOfDayVariant === 'homepage_time_of_day_b'
-  ) {
-    curations = reorderCurations({
-      curations,
-      service,
-    });
-  }
 
   const itemList = getItemList({ curations, name: brandName });
 
   return (
     <>
+      {/* EXPERIMENT: newswb_ws_homepage_account_promo_banner_copy */}
+      <AccountPromotionalBannerHomePageExperiment />
       <ChartbeatAnalytics title={title} />
       <MetadataContainer
         title={metadataTitle}
@@ -103,8 +109,8 @@ const HomePage = ({ pageData }: HomePageProps) => {
         entities={[itemList]}
       />
       <Ad slotType="leaderboard" />
-      <main role="main" css={styles.main}>
-        <ATIAnalytics atiData={atiAnalytics} />
+      <main role="main" css={styles.main} ref={scrollDepthRef}>
+        <ATIAnalytics />
         <VisuallyHiddenText id="content" tabIndex={-1} as="h1">
           {/* eslint-disable-next-line jsx-a11y/aria-role */}
           <span role="text">
@@ -129,6 +135,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                   link,
                   position,
                   visualStyle,
+                  associatedContent: { uri } = {},
                   ...curationProps
                 }: Curation,
                 index: number,
@@ -143,7 +150,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                 const indexOfFirstNonBanner =
                   getIndexOfFirstNonBanner(curations);
                 return (
-                  <React.Fragment key={`${curationId}-${position}`}>
+                  <Fragment key={`${curationId}-${position}`}>
                     <HomeCuration
                       visualStyle={visualStyle as VisualStyle}
                       visualProminence={visualProminence as VisualProminence}
@@ -151,26 +158,27 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       title={curationTitle}
                       topStoriesTitle={topStoriesTitle}
                       position={position}
-                      link={link}
+                      link={link || uri}
                       curationLength={curations?.length}
                       nthCurationByStyleAndProminence={
                         nthCurationByStyleAndProminence
                       }
                       renderVisuallyHiddenH2Title={position === 0}
                       curationId={curationId}
-                      timeOfDayVariant={timeOfDayVariant}
                       {...curationProps}
+                      experimentProps={relatedTopicExperimentProps}
+                      showRelatedTopicExperiment={showRelatedTopicExperiment}
                     />
                     {index === indexOfFirstNonBanner && <MPU />}
-                  </React.Fragment>
+                  </Fragment>
                 );
               },
             )}
           </div>
         </div>
       </main>
-      {timeOfDayVariant && (
-        <OptimizelyPageMetrics trackPageView trackPageDepth />
+      {relatedTopicExperimentProps && (
+        <OptimizelyPageMetrics trackPageComplete trackPageDepth />
       )}
     </>
   );

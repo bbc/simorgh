@@ -1,14 +1,16 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
+import { use, useState, useEffect, useRef } from 'react';
 import Heading from '#app/components/Heading';
 import Text from '#app/components/Text';
 import LiveHeaderMedia from '#app/components/LiveHeaderMedia';
 import { MediaCollection } from '#app/components/MediaLoader/types';
-
-import MaskedImage from '#app/components/MaskedImage';
-import { useState } from 'react';
-import LiveLabelHeader from './LiveLabelHeader';
+import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
+import { ServiceContext } from '#app/contexts/ServiceContext';
+import Image from '#app/components/Image';
+import { createIchefSrcSet } from '#app/utilities/imageSrcSets';
+import getOriginCode from '#app/lib/utilities/imageSrcHelpers/originCode';
+import getLocator from '#app/lib/utilities/imageSrcHelpers/locator';
 import styles from './styles';
+import LiveLabelHeader from './LiveLabelHeader';
 
 const Header = ({
   showLiveLabel,
@@ -18,6 +20,7 @@ const Header = ({
   imageUrlTemplate,
   imageWidth,
   mediaCollections,
+  showSportData,
 }: {
   showLiveLabel: boolean;
   title: string;
@@ -26,14 +29,46 @@ const Header = ({
   imageUrlTemplate?: string;
   imageWidth?: number;
   mediaCollections?: MediaCollection[] | null;
+  showSportData?: boolean;
 }) => {
+  const imageRef = useRef<HTMLImageElement>(null);
+  const [isHeaderImageAlreadyLoaded, setIsHeaderImageAlreadyLoaded] =
+    useState(false);
+
   const [isMediaOpen, setLiveMediaOpen] = useState(false);
   const isHeaderImage = !!imageUrl && !!imageUrlTemplate && !!imageWidth;
   const isWithImageLayout = isHeaderImage || !!mediaCollections;
-
+  const {
+    translations: { sport: { matchSummary = 'Match Summary' } = {} },
+  } = use(ServiceContext);
   const watchVideoClickHandler = () => {
     setLiveMediaOpen(!isMediaOpen);
   };
+  const url = imageUrlTemplate?.split('{width}')[1];
+
+  const originCode = getOriginCode(url);
+  const locator = getLocator(url);
+
+  const {
+    src: srcWebp,
+    primarySrcset,
+    primaryMimeType,
+    fallbackSrcset,
+    fallbackMimeType,
+  } = createIchefSrcSet({
+    originCode,
+    locator,
+    originalImageWidth: imageWidth ?? 0,
+    srcResolution: 480,
+  });
+
+  useEffect(() => {
+    const image = imageRef.current;
+
+    setIsHeaderImageAlreadyLoaded(
+      Boolean(image?.complete && image.naturalWidth > 0),
+    );
+  }, [srcWebp, primarySrcset, isHeaderImage, showSportData]);
 
   const Title = (
     <span
@@ -43,29 +78,15 @@ const Header = ({
     </span>
   );
 
-  return (
-    <div css={styles.headerContainer}>
-      <div css={styles.backgroundContainer}>
-        <div css={styles.backgroundColor} />
-      </div>
-      <div css={styles.contentContainer}>
-        <div css={[isMediaOpen && styles.hideMaskedImage]}>
-          {isHeaderImage ? (
-            <MaskedImage
-              imageUrl={imageUrl}
-              imageUrlTemplate={imageUrlTemplate}
-              imageWidth={imageWidth}
-              isLivePageHeaderImage
-            />
-          ) : null}
+  if (showSportData) {
+    return (
+      <div css={styles.headerContainer}>
+        <div css={styles.backgroundContainer}>
+          <div
+            css={[styles.backgroundColor, styles.backgroundColorSportData]}
+          />
         </div>
-        <div
-          css={[
-            isWithImageLayout && styles.textContainerWithImage,
-            !isWithImageLayout && styles.textContainerWithoutImage,
-            mediaCollections && styles.fixedHeight,
-          ]}
-        >
+        <div css={styles.contentContainer}>
           <Heading
             size="trafalgar"
             level={1}
@@ -73,36 +94,109 @@ const Header = ({
             tabIndex={-1}
             css={styles.heading}
           >
-            {showLiveLabel ? (
-              <LiveLabelHeader isHeaderImage={isWithImageLayout}>
-                {Title}
-              </LiveLabelHeader>
-            ) : (
-              Title
-            )}
+            <div css={styles.sportTitleRow}>
+              {showLiveLabel && (
+                <LiveLabelHeader
+                  isHeaderImage={isWithImageLayout}
+                  showSportData={showSportData}
+                />
+              )}
+              <div css={styles.sportTitleText}>{title}</div>
+            </div>
           </Heading>
-          {description && (
-            <Text
-              as="p"
-              css={[
-                styles.description,
-                showLiveLabel &&
-                  !isWithImageLayout &&
-                  styles.layoutWithLiveLabelNoImage,
-              ]}
-            >
-              {description}
-            </Text>
-          )}
+          <VisuallyHiddenText as="h2">{matchSummary}</VisuallyHiddenText>
         </div>
-        {mediaCollections && (
-          <div css={[styles.liveMedia, isMediaOpen && styles.liveMediaOpen]}>
-            <LiveHeaderMedia
-              mediaCollection={mediaCollections}
-              clickCallback={watchVideoClickHandler}
+      </div>
+    );
+  }
+
+  return (
+    <div css={[styles.headerContainer, styles.headerContainerForcedColours]}>
+      <div css={styles.backgroundContainer}>
+        <div css={styles.backgroundColor} />
+      </div>
+      <div
+        css={[
+          isWithImageLayout
+            ? styles.contentWithImageContainer
+            : styles.contentContainer,
+          !isMediaOpen && isWithImageLayout && { gap: '2rem' },
+        ]}
+      >
+        {isHeaderImage ? (
+          <div css={[isMediaOpen ? styles.hideImage : styles.headerImage]}>
+            <Image
+              alt=""
+              src={srcWebp}
+              srcSet={primarySrcset || undefined}
+              fallbackSrcSet={fallbackSrcset || undefined}
+              mediaType={primaryMimeType || undefined}
+              fallbackMediaType={fallbackMimeType || undefined}
+              sizes="(min-width: 1008px) 660px, 100vw"
+              fetchPriority="high"
+              preload
+              placeholder={!isHeaderImageAlreadyLoaded}
+              imageRef={imageRef}
+              style={{ display: 'block' }}
             />
           </div>
-        )}
+        ) : null}
+
+        <div
+          css={[
+            mediaCollections && styles.liveMediaAndTextContainer,
+            isWithImageLayout && !isMediaOpen && styles.textWrapper,
+          ]}
+        >
+          <div
+            css={[
+              isWithImageLayout
+                ? styles.textContainerWithImage
+                : styles.textContainerWithoutImage,
+              mediaCollections && [styles.fixedHeight, { width: '100%' }],
+            ]}
+          >
+            <Heading
+              size="trafalgar"
+              level={1}
+              id="content"
+              tabIndex={-1}
+              css={styles.heading}
+            >
+              {showLiveLabel ? (
+                <LiveLabelHeader
+                  isHeaderImage={isWithImageLayout}
+                  showSportData={false}
+                >
+                  {Title}
+                </LiveLabelHeader>
+              ) : (
+                Title
+              )}
+            </Heading>
+            {description && (
+              <Text
+                as="p"
+                css={[
+                  styles.description,
+                  showLiveLabel &&
+                    !isWithImageLayout &&
+                    styles.layoutWithLiveLabelNoImage,
+                ]}
+              >
+                {description}
+              </Text>
+            )}
+          </div>
+          {mediaCollections && (
+            <div css={[styles.liveMedia, isMediaOpen && styles.liveMediaOpen]}>
+              <LiveHeaderMedia
+                mediaCollection={mediaCollections}
+                clickCallback={watchVideoClickHandler}
+              />
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

@@ -1,6 +1,5 @@
-/** @jsx jsx */
 import { render, act } from '@testing-library/react';
-import { jsx, css, Theme } from '@emotion/react';
+import { css, Theme } from '@emotion/react';
 
 import SERVICES from '#app/lib/config/services';
 import defaultServiceVariants from '#app/lib/config/services/defaultServiceVariants';
@@ -8,6 +7,8 @@ import { Services } from '#app/models/types/global';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import Brand from '#app/legacy/containers/Brand';
 import ThemeProvider from '.';
+
+const originalSimorghAppEnv = process.env.SIMORGH_APP_ENV;
 
 describe('ThemeProvider', () => {
   it('should provide the palette', async () => {
@@ -224,6 +225,16 @@ describe('ThemeProvider', () => {
   });
 
   describe.each(SERVICES)(`brandSVG for %s`, service => {
+    beforeAll(() => {
+      // TODO: Consider removing this one this check is removed: https://github.com/bbc/simorgh/blob/4bfea6e86e65e3fdd374ff5432bae575366a343b/src/app/legacy/psammead/psammead-brand/src/index.jsx#L155
+      process.env.SIMORGH_APP_ENV = 'live';
+    });
+
+    afterAll(() => {
+      process.env.SIMORGH_APP_ENV = originalSimorghAppEnv;
+    });
+
+    const children = <span data-testid="brand-child">child</span>;
     it(`should match chameleonLogos/${service}.tsx`, async () => {
       await act(async () => {
         render(
@@ -232,7 +243,7 @@ describe('ThemeProvider', () => {
             variant={defaultServiceVariants[service] || 'default'}
           >
             <ServiceContextProvider service={service as Services}>
-              <Brand />
+              <Brand>{children}</Brand>
             </ServiceContextProvider>
           </ThemeProvider>,
         );

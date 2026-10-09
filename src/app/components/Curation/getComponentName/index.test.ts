@@ -30,7 +30,7 @@ describe('getComponentName', () => {
     ${BANNER}       | ${MINIMUM}           | ${NOT_SUPPORTED}
     ${BANNER}       | ${LOW}               | ${NOT_SUPPORTED}
     ${BANNER}       | ${NORMAL}            | ${MESSAGE_BANNER}
-    ${BANNER}       | ${HIGH}              | ${NOT_SUPPORTED}
+    ${BANNER}       | ${HIGH}              | ${BILLBOARD}
     ${BANNER}       | ${MAXIMUM}           | ${BILLBOARD}
     ${NONE}         | ${NORMAL}            | ${SIMPLE_CURATION_GRID}
     ${NONE}         | ${HIGH}              | ${HIERARCHICAL_CURATION_GRID}
@@ -61,5 +61,10 @@ describe('getComponentName', () => {
   it('should return MEDIA_COLLECTION when a media collection is present', () => {
     const { mediaCollection } = dariHomePage.data.curations[5] as Curation;
     expect(getComponentName({ mediaCollection })).toBe(`${MEDIA_COLLECTION}`);
+  });
+  it('should return video-curation-grid when curationContentType is video', () => {
+    expect(getComponentName({ curationContentType: 'video' })).toBe(
+      'video-curation-grid',
+    );
   });
 });

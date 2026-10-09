@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import { getMostReadEndpoint } from '#app/lib/utilities/getUrlHelpers/getMostReadUrls';
@@ -17,7 +17,7 @@ import {
   CORRESPONDENT_STORY_PAGE,
   ARTICLE_PAGE,
 } from '../../routes/utils/pageTypes';
-import { PageTypes } from '../../models/types/global';
+import { ComponentExperimentProps, PageTypes } from '../../models/types/global';
 
 const mostReadAmpPageTypes: PageTypes[] = [
   STORY_PAGE,
@@ -26,6 +26,7 @@ const mostReadAmpPageTypes: PageTypes[] = [
 ];
 
 interface MostReadProps {
+  showSectionLabel?: boolean;
   data?: MostReadData;
   columnLayout?: ColumnLayout;
   size?: Size;
@@ -33,6 +34,7 @@ interface MostReadProps {
   headingBackgroundColour?: string;
   className?: string;
   eventTrackingData?: EventTrackingData;
+  experimentProps?: ComponentExperimentProps;
 }
 
 // We render amp on ONLY STY, CSP and ARTICLE pages using amp-list.
@@ -43,6 +45,7 @@ const AmpMostRead = ({
   headingBackgroundColour,
   endpoint,
   size,
+  showSectionLabel,
 }: {
   pageType: PageTypes;
   className: string;
@@ -50,13 +53,16 @@ const AmpMostRead = ({
   headingBackgroundColour: string;
   endpoint: string;
   size: Size;
+  showSectionLabel: boolean;
 }) =>
   mostReadAmpPageTypes.includes(pageType) ? (
     <MostReadSection {...(className ? { className } : undefined)}>
-      <MostReadSectionLabel
-        mobileDivider={mobileDivider}
-        backgroundColor={headingBackgroundColour}
-      />
+      {showSectionLabel && (
+        <MostReadSectionLabel
+          mobileDivider={mobileDivider}
+          backgroundColor={headingBackgroundColour}
+        />
+      )}
       <Amp
         endpoint={`${getEnvConfig().SIMORGH_MOST_READ_CDN_URL}${endpoint}`}
         size={size}
@@ -73,21 +79,25 @@ const CanonicalMostRead = ({
   columnLayout,
   size,
   eventTrackingData,
+  showSectionLabel,
 }: {
   data: MostReadData | undefined;
   className: string;
   mobileDivider: boolean;
   headingBackgroundColour: string;
-  columnLayout?: ColumnLayout;
+  showSectionLabel: boolean;
   size: Size;
+  columnLayout?: ColumnLayout;
   eventTrackingData?: EventTrackingData;
 }) =>
   data ? (
-    <MostReadSection className={className}>
-      <MostReadSectionLabel
-        mobileDivider={mobileDivider}
-        backgroundColor={headingBackgroundColour}
-      />
+    <MostReadSection className={className} showSectionLabel={showSectionLabel}>
+      {showSectionLabel && (
+        <MostReadSectionLabel
+          mobileDivider={mobileDivider}
+          backgroundColor={headingBackgroundColour}
+        />
+      )}
       <Canonical
         data={data}
         columnLayout={columnLayout}
@@ -98,12 +108,14 @@ const CanonicalMostRead = ({
   ) : null;
 
 const MostRead = ({
+  showSectionLabel = true,
   data,
   columnLayout = 'multiColumn',
   size = 'default',
   mobileDivider = false,
   headingBackgroundColour = WHITE,
   className = '',
+  experimentProps,
   eventTrackingData,
 }: MostReadProps) => {
   const { isAmp, pageType, variant } = use(RequestContext);
@@ -130,8 +142,14 @@ const MostRead = ({
     isBff,
   });
 
+  const trackingData = eventTrackingData || {
+    componentName: 'most-read',
+    ...(experimentProps && experimentProps),
+  };
+
   return isAmp ? (
     <AmpMostRead
+      showSectionLabel={showSectionLabel}
       pageType={pageType}
       className={className}
       mobileDivider={mobileDivider}
@@ -141,13 +159,14 @@ const MostRead = ({
     />
   ) : (
     <CanonicalMostRead
+      showSectionLabel={showSectionLabel}
       data={data}
       className={className}
       mobileDivider={mobileDivider}
       headingBackgroundColour={headingBackgroundColour}
       columnLayout={columnLayout}
       size={size}
-      eventTrackingData={eventTrackingData}
+      eventTrackingData={trackingData}
     />
   );
 };
