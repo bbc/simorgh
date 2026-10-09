@@ -69,7 +69,7 @@ export type ComponentProps = {
       sportDataEvent: HeadToHeadV2Data;
       title: string;
     } | null;
-    passportTaggings?: []; // TODO - type
+    passportTaggings?: { predicate: string; value: string }[]; // TODO
   };
 };
 
