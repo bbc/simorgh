@@ -10,16 +10,18 @@ const PersistentQueryProvider = dynamic(
     ),
 );
 
-// TanstackQuery Provider is only needed when personalization features are enabled.
-// This prevents the unnecessary loading of the Tanstack Query library and its dependencies
+// TanstackQuery Provider is only needed when personalization features are available.
+// This prevents the unnecessary loading of the Tanstack Query library and its dependencies.
+// Gated on availability rather than sign-in state so the tree shape never changes between
+// the server render, hydration and sign-in changes, which would remount the whole page.
 const QueryProvider = ({ children }: PropsWithChildren) => {
-  const { isArticlePersonalizationEnabled, isTopicPersonalizationEnabled } =
+  const { isArticlePersonalizationAvailable, isTopicPersonalizationAvailable } =
     use(AccountContext);
 
-  const isAnyPersonalizationEnabled =
-    isArticlePersonalizationEnabled || isTopicPersonalizationEnabled;
+  const isAnyPersonalizationAvailable =
+    isArticlePersonalizationAvailable || isTopicPersonalizationAvailable;
 
-  if (!isAnyPersonalizationEnabled) return children;
+  if (!isAnyPersonalizationAvailable) return children;
 
   return (
     <Suspense fallback={children}>
