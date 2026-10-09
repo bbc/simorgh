@@ -53,8 +53,6 @@ export const AccountProvider = ({
     setPageToReturnTo(window.location.href);
   }, []);
 
-  // Responses are publicly cached without varying on the sign-in header, so cookies are
-  // only read once hydration is complete to keep the first client render identical to the HTML.
   const getClientCookie = (cookieName: string) =>
     onClient() && isHydrated ? Cookie.get(cookieName) : undefined;
 

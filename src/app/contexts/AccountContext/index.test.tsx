@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { use } from 'react';
 import { IdctaConfig } from '#app/models/types/account';
+import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import useToggle from '#app/hooks/useToggle';
 import Cookie from 'js-cookie';
 import {
@@ -14,6 +15,7 @@ import {
   waitFor,
 } from '../../components/react-testing-library-with-providers';
 
+jest.mock('#app/hooks/useHydrationDetection');
 jest.mock('#app/hooks/useToggle');
 jest.mock('js-cookie');
 jest.mock('#app/lib/uasApi/tokenRefresh/tokenManager', () => ({
@@ -21,6 +23,7 @@ jest.mock('#app/lib/uasApi/tokenRefresh/tokenManager', () => ({
   getDecodedToken: jest.fn(),
 }));
 
+const mockUseHydrationDetection = jest.mocked(useHydrationDetection);
 const mockUseToggle = useToggle as jest.MockedFunction<typeof useToggle>;
 const mockGetDecodedToken = getDecodedToken as jest.MockedFunction<
   typeof getDecodedToken
@@ -44,6 +47,7 @@ describe('AccountContext', () => {
 
     mockCookieGet.mockReturnValue(undefined);
     mockGetDecodedToken.mockReturnValue(null);
+    mockUseHydrationDetection.mockReturnValue(true);
 
     mockUseToggle.mockImplementation(toggleName => {
       if (toggleName === 'uasPersonalization') {
@@ -159,6 +163,36 @@ describe('AccountContext', () => {
     expect(context.settingsUrl).toBe(mockIdctaConfig.unavailable_url);
     expect(context.signOutUrl).toBe(mockIdctaConfig.unavailable_url);
     expect(context.forYouUrl).toBe(mockIdctaConfig.unavailable_url);
+  });
+
+  it('should only read account cookies after hydration', () => {
+    mockUseHydrationDetection.mockReturnValue(false);
+    mockCookieGet.mockImplementation((cookieName: string) =>
+      cookieName === TOKEN_COOKIE_NAME ? 'signed-in-token' : undefined,
+    );
+
+    const { rerender } = render(<TestComponent />, {
+      idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: false },
+      service: 'hindi',
+    });
+
+    expect(mockCookieGet).not.toHaveBeenCalledWith(TOKEN_COOKIE_NAME);
+    expect(mockGetDecodedToken).not.toHaveBeenCalled();
+
+    const initialContext = JSON.parse(
+      screen.getByTestId('test-component').textContent as string,
+    );
+    expect(initialContext.isSignedIn).toBe(false);
+
+    mockUseHydrationDetection.mockReturnValue(true);
+    rerender(<TestComponent />);
+
+    const rerenderedContext = JSON.parse(
+      screen.getByTestId('test-component').textContent as string,
+    );
+
+    expect(mockCookieGet).toHaveBeenCalledWith(TOKEN_COOKIE_NAME);
+    expect(rerenderedContext.isSignedIn).toBe(true);
   });
 
   it('should set isSignedIn to true when IDCTA is available and initialIsSignedIn is true', () => {
