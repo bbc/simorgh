@@ -52,7 +52,8 @@ export const service: DefaultServiceConfig = {
       {
         thingIds: ['b91eaef4-fdf2-47a6-b3ec-05b5a55a4843'],
         linkHref: 'https://www.bbc.com/portuguese/articles/cm1dlv13yql9o',
-        heading: 'Lula x Flávio Bolsonaro: Quem está à frente nas pesquisas para presidente?',
+        heading: 
+          'Lula x Flávio Bolsonaro: Quem está à frente nas pesquisas para presidente?',
         description:
           ' Veja a intenção de voto no 2º turno no Agregador de Pesquisas da BBC News Brasil',
         linkText: 'Clique aqui',
@@ -72,7 +73,8 @@ export const service: DefaultServiceConfig = {
     ],
     podcastPromo: {
       title: 'Promoção Agregador de pesquisas',
-      brandTitle: 'Veja Agregador de Pesquisas da BBC News Brasil',
+      brandTitle: 
+        'Veja Agregador de Pesquisas da BBC News Brasil',
       brandDescription: 'Veja a intenção de voto no 2º turno no Agregador de Pesquisas da BBC News Brasil',
       image: {
         src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0njcpky.jpg',
