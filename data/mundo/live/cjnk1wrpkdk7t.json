@@ -456,7 +456,25 @@
         "timePublished": "2026-03-02T15:23:00.000Z",
         "timeUpdated": "2026-03-02T15:33:50.000Z"
       }
-    }
+    },
+    "passportTaggings": [
+      {
+        "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+        "value": "http://www.bbc.co.uk/things/75b68f5c-1da4-4347-8655-6cd6272eca97#id"
+      },
+      {
+        "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+        "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+      },
+      {
+        "predicate": "http://www.bbc.co.uk/ontologies/creativework/dateFirstReleased",
+        "value": "2026-03-02T15:33:18.222Z"
+      },
+      {
+        "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+        "value": "http://www.bbc.co.uk/things/19994837-27b8-463f-965d-fbb0ac1622a3#id"
+      }
+    ]
   },
   "contentType": "application/json; charset=utf-8"
 }
