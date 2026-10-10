@@ -8,7 +8,6 @@ import nodeLogger from '#lib/logger.node';
 import { ROUTING_INFORMATION } from '#app/lib/logger.const';
 import handleError from '#app/routes/utils/handleError';
 import fetchToggles from '#app/lib/utilities/fetchToggles';
-import isTest from '#app/lib/utilities/isTest';
 import getPodcastExternalLinks from './podcastExternalLinks';
 
 const logger = nodeLogger(__filename);
@@ -54,7 +53,7 @@ export default async (context: GetServerSidePropsContext) => {
     id: resolvedUrlWithoutQuery,
     service,
     variant: variant || undefined,
-    rendererEnv: isTest() ? 'live' : rendererEnv,
+    rendererEnv,
     resolvedUrl: resolvedUrlWithoutQuery,
     pageType: AUDIO_PAGE,
   });
@@ -100,11 +99,11 @@ export default async (context: GetServerSidePropsContext) => {
 
   const externalLinks = isPodcast
     ? await getPodcastExternalLinks({
-      service,
-      variant: variant || undefined,
-      brandId,
-      versionId: externalLinkVersionId,
-    })
+        service,
+        variant: variant || undefined,
+        brandId,
+        versionId: externalLinkVersionId,
+      })
     : [];
 
   context.res.setHeader(
