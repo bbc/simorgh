@@ -14,8 +14,15 @@ const assetPrefix =
   process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH;
 const optimoIdPattern = 'c[a-zA-Z0-9]{10,}o';
 
+const isrRolloutServices = (process.env.SIMORGH_ISR_ROLLOUT_SERVICES || '')
+  .split(',')
+  .map(value => value.trim())
+  .filter(Boolean);
+
 /** @type {import('next').NextConfig} */
 module.exports = {
+  cacheHandler: require.resolve('./cache-handler.js'),
+  cacheMaxMemorySize: 0,
   async headers() {
     return [
       {
@@ -58,6 +65,10 @@ module.exports = {
   },
   async rewrites() {
     return [
+      ...isrRolloutServices.map(service => ({
+        source: `/${service}/articles/:path*`,
+        destination: `/${service}/articles-isr/:path*`,
+      })),
       {
         source: '/:service/og/:id',
         destination: '/api/:service/og/:id',
