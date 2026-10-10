@@ -116,10 +116,10 @@ const preview: Preview = {
     },
     backgrounds: {
       options: {
-        dark: { name: 'Dark', value: '#141414' },
+        dark: { name: 'Dark', value: '#181818' },
         light: { name: 'Light', value: '#F7F9F2' },
         White: { name: 'White', value: '#FFFFFF' },
-        Optimo: { name: 'Optimo', value: '#F6F6F6' },
+        Optimo: { name: 'Optimo', value: '#F8F8F8' },
       },
     },
     chromatic: {
