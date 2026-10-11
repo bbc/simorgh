@@ -66,9 +66,6 @@ const puppeteerTests = {
   transform: {
     '^.+\\.[tj]sx?$': 'babel-jest',
   },
-  transformIgnorePatterns: [
-    'node_modules/(?!(puppeteer(?:-core)?|@puppeteer/browsers)/)',
-  ],
   displayName: 'Puppeteer Tests',
   testMatch: ['**/puppeteer/**/*.test.js'],
 };
