@@ -82,8 +82,7 @@ const MaskedImage = ({
         fallbackMediaType={fallbackMimeType || undefined}
         sizes="(min-width: 1008px) 660px, 100vw"
         {...(shouldFillHeight ? {} : { width: 800, height: 533 })}
-        fetchPriority={preload ? 'high' : undefined}
-        preload={preload}
+        {...(preload && { fetchPriority: 'high', preload })}
         placeholder={showPlaceholder}
       />
     </div>
