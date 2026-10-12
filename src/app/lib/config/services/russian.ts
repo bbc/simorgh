@@ -115,12 +115,6 @@ const headerFooterTranslations = {
 
 export const service: DefaultServiceConfig = {
   default: {
-    electionBanner: {
-      title: 'Выборы в Конгресс США 2026',
-      electionThingIds: ['19994837-27b8-463f-965d-fbb0ac1622a3'],
-      assocPressIframeSrc:
-        'https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/33043.html',
-    },
     translations: {
       and: 'и',
       readTime: {
@@ -270,6 +264,12 @@ export const service: DefaultServiceConfig = {
     iTunesAppId: 6761256736,
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    electionBanner: {
+      title: 'Выборы в Конгресс США 2026',
+      electionThingIds: ['19994837-27b8-463f-965d-fbb0ac1622a3'],
+      assocPressIframeSrc:
+        'https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/33043.html',
+    },
     googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     mostRead: {
       header: 'Популярное',
