@@ -1,5 +1,6 @@
-import { useEffect, useState, use } from 'react';
+import { useEffect, useRef, use } from 'react';
 import { RequestContext } from '#app/contexts/RequestContext';
+import { AccountContext } from '#app/contexts/AccountContext';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import { Helmet } from 'react-helmet';
 import { addSendStaticBeaconToWindow } from '#app/lib/analyticsUtils/staticATITracking/sendStaticBeacon';
@@ -43,6 +44,7 @@ const CanonicalATIAnalytics = ({
   resonanceParams,
 }: ATIAnalyticsProps) => {
   const { isLite, nonce } = use(RequestContext);
+  const { isHydrated } = use(AccountContext);
 
   usePWAInstallTracker();
 
@@ -50,12 +52,18 @@ const CanonicalATIAnalytics = ({
   useConnectionBackOnlineTracker();
   usePWAOfflineTracking();
 
-  const [reverbBeaconConfig] = useState(reverbParams);
-  const [resonanceBeaconConfig] = useState(resonanceParams);
+  // Cookie-derived values (e.g. hashedUserId) on AccountContext are only populated
+  // once isHydrated is true, to keep this component's first client render matching
+  // the server-rendered markup. Wait for that render before snapshotting the beacon
+  // payload, and use a ref (rather than state) to guarantee it's only ever sent once.
+  const hasSentBeacon = useRef(false);
 
   useEffect(() => {
-    if (!isOperaProxy()) sendBeacon(reverbBeaconConfig, resonanceBeaconConfig);
-  }, [reverbBeaconConfig, resonanceBeaconConfig]);
+    if (hasSentBeacon.current || !isHydrated || isOperaProxy()) return;
+
+    hasSentBeacon.current = true;
+    sendBeacon(reverbParams, resonanceParams);
+  }, [isHydrated, reverbParams, resonanceParams]);
 
   const liteSiteReverbURL = reverbUrlHelper.getLitePageViewUrl(reverbParams);
   const operaMiniPageViewReverbURL =

@@ -18,6 +18,7 @@ jest.mock('next/dynamic', () => () => {
 
 const accountContext: AccountContextProps = {
   isIdctaAvailable: true,
+  isHydrated: true,
   isRefreshAvailable: false,
   isSignedIn: false,
   isArticlePersonalizationAvailable: false,
