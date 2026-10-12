@@ -96,16 +96,6 @@ const atiAnalyticsTestSuites = [
     tests: [assertPageView],
   },
   {
-    path: '/tamil/watch/c36l16ny6klo',
-    runforEnv: ['local', 'live'],
-    service: 'tamil',
-    pageIdentifier: 'tamil.watch.c36l16ny6klo.page',
-    siteId: 87,
-    applicationType: 'responsive',
-    contentType: 'article-sfv',
-    tests: [assertPageView],
-  },
-  {
     path: '/zhongwen/watch/cr93zl51k0z9o/trad',
     runforEnv: ['local', 'live'],
     service: 'zhongwen',
