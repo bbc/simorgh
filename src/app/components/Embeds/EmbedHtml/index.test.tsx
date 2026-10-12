@@ -126,6 +126,28 @@ describe('EmbedHtml', () => {
     expect(container).toBeEmptyDOMElement();
   });
 
+  it('should append script tags after rendering HTML content', () => {
+    render(
+      <EmbedHtml embeddableContent="<div id='embed-target'>target</div><script>window.__embedTest = true;</script>" />,
+    );
+
+    const embedElement = screen.getByTestId('embed');
+    const targetElement = embedElement.querySelector('#embed-target');
+    const scriptElement = embedElement.querySelector(
+      'script.simorgh-embed-script',
+    );
+
+    expect(targetElement).toBeInTheDocument();
+    expect(scriptElement).toBeInTheDocument();
+
+    const childNodes = Array.from(embedElement.children);
+    const targetIndex = childNodes.indexOf(targetElement as Element);
+    const scriptIndex = childNodes.indexOf(scriptElement as Element);
+
+    expect(targetIndex).toBeGreaterThanOrEqual(0);
+    expect(scriptIndex).toBeGreaterThan(targetIndex);
+  });
+
   // TODO: Remove this logic after the US Elections
   describe('US Election Banner', () => {
     it('should render US Election banner when embed is US Election and Toggle is true', async () => {

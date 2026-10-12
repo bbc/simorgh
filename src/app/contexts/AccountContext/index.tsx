@@ -43,6 +43,12 @@ export const AccountProvider = ({
   const { locale, atiAnalyticsProducerName } = use(ServiceContext);
   const { isAmp = false, isApp = false, isLite = false } = use(RequestContext);
   const [pageToReturnTo, setPageToReturnTo] = useState<string | null>(null);
+  const [signedInToken, setSignedInToken] = useState<string | undefined>(
+    undefined,
+  );
+  const [hashedUserId, setHashedUserId] = useState<string | undefined>(
+    undefined,
+  );
   const { service } = use(ServiceContext);
   const { enabled: isPersonalizationToggleEnabled, value: accountService } =
     useToggle('uasPersonalization');
@@ -50,10 +56,15 @@ export const AccountProvider = ({
     enabled: topicUasPersonalizationEnabled,
     value: topicAccountService,
   } = useToggle('topicUasPersonalization');
+  const signedInCookieName =
+    initialConfig?.identity?.idSignedInCookieName || TOKEN_COOKIE_NAME;
 
   useEffect(() => {
     setPageToReturnTo(window.location.href);
-  }, []);
+
+    setSignedInToken(getClientCookie(signedInCookieName));
+    setHashedUserId(getClientCookie(USER_ID_COOKIE_KEY));
+  }, [signedInCookieName]);
 
   // IDCTA / UAS is not available on AMP, Lite or App platforms — ensure provider
   // centralises this logic so individual components don't need to check platform.
@@ -78,12 +89,6 @@ export const AccountProvider = ({
   const settingsUrl = buildAccountUrl(initialConfig?.settings_url);
   const signOutUrl = buildAccountUrl(initialConfig?.signout_url);
   const forYouUrl = buildAccountUrl(initialConfig?.foryou_url);
-
-  const signedInToken = getClientCookie(
-    initialConfig?.identity?.idSignedInCookieName || TOKEN_COOKIE_NAME,
-  );
-
-  const hashedUserId = getClientCookie(USER_ID_COOKIE_KEY);
 
   const isSignedIn =
     isIdctaAvailable &&
