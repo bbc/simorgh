@@ -1,7 +1,194 @@
 @use '@scss/themeTokens' as theme;
+@use '../../../components/ThemeProviderSCSSModules/fontVariants.scss' as *;
+
+// GEL groups: 0 <240, 1 240+, 2 400+, 3 600+, 4 1008+
+$group-1: 240px;
+$group-2: 400px;
+$group-3: 600px;
+$group-4: 1008px;
+
+$bg-top: #2d0a5c;
+$bg-bottom: #000;
+$text: #fff;
+$button-bg: rgba(255, 255, 255, 0.14);
+$live-colour: #4fd1c5;
+$label-bg: #f5e6e6;
+
+@mixin from($width) {
+  @media (min-width: #{$width}) {
+    @content;
+  }
+}
 
 .wrapper {
+  @include get-sans-bold;
   max-width: #{theme.pixelsToRem-px-to-rem(1008)};
   margin-inline: auto;
   padding-block: #{theme.$spacings-triple};
+  padding-inline: #{theme.pixelsToRem-px-to-rem(12)};
+  color: $text;
+  background: linear-gradient($bg-top 0%, $bg-bottom 100%);
+
+  @include from($group-2) {
+    padding-inline: #{theme.pixelsToRem-px-to-rem(16)};
+  }
+  @include from($group-3) {
+    padding-inline: #{theme.pixelsToRem-px-to-rem(24)};
+  }
+  @include from($group-4) {
+    padding-inline: #{theme.pixelsToRem-px-to-rem(40)};
+  }
+}
+
+.title {
+  margin: 0 0 #{theme.pixelsToRem-px-to-rem(16)};
+  font-size: #{theme.pixelsToRem-px-to-rem(28)};
+  line-height: 1.1;
+  font-weight: 700;
+
+  @include from($group-2) {
+    font-size: #{theme.pixelsToRem-px-to-rem(32)};
+  }
+  @include from($group-3) {
+    font-size: #{theme.pixelsToRem-px-to-rem(44)};
+  }
+  @include from($group-4) {
+    font-size: #{theme.pixelsToRem-px-to-rem(52)};
+  }
+}
+
+// Candidates and bars
+.candidates {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: #{theme.pixelsToRem-px-to-rem(12)};
+}
+
+.candidate {
+  display: grid;
+  gap: #{theme.pixelsToRem-px-to-rem(4)};
+}
+
+.name {
+  font-size: #{theme.pixelsToRem-px-to-rem(16)};
+  font-weight: 700;
+}
+
+.barRow {
+  --bar-max: 78%; // share of the row the longest bar may use
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  @include from($group-3) {
+    --bar-max: 80%;
+
+    flex-wrap: nowrap;
+    gap: 0; // bar and % label touch; spacing now lives on .spread
+  }
+}
+
+.bar {
+  height: #{theme.pixelsToRem-px-to-rem(22)};
+  width: calc(var(--bar-width) * var(--bar-max) / 100);
+  background: var(--party-colour, #bbb);
+}
+
+.percent {
+  box-sizing: border-box;
+  height: #{theme.pixelsToRem-px-to-rem(22)};
+  padding: 0 #{theme.pixelsToRem-px-to-rem(6)};
+  line-height: #{theme.pixelsToRem-px-to-rem(22)};
+  font-weight: 700;
+  color: #000;
+  background: $label-bg;
+  border-inline-start: #{theme.pixelsToRem-px-to-rem(1)} solid #000; // thin divider
+}
+
+.spread {
+  // groups 0-2: sits under the bar
+  flex-basis: 100%;
+  margin-top: #{theme.pixelsToRem-px-to-rem(2)};
+  font-size: #{theme.pixelsToRem-px-to-rem(14)};
+
+  // groups 3-4: sits to the right of the label
+  @include from($group-3) {
+    flex-basis: auto;
+    margin-top: 0;
+    margin-inline-start: #{theme.pixelsToRem-px-to-rem(8)}; // gap now lives here
+    white-space: nowrap;
+  }
+}
+
+.statesCounted {
+  margin: #{theme.pixelsToRem-px-to-rem(24)} 0 #{theme.pixelsToRem-px-to-rem(16)};
+  font-size: #{theme.pixelsToRem-px-to-rem(15)};
+}
+
+// Buttons
+.actions {
+  display: grid;
+  gap: #{theme.pixelsToRem-px-to-rem(12)};
+  grid-template-columns: 1fr; // group 0: stacked
+
+  @include from($group-1) {
+    grid-template-columns: 1fr 1fr; // groups 1-2: two across
+  }
+
+  @include from($group-3) {
+    grid-template-columns: auto auto 1fr; // groups 3-4: buttons left, link right
+    align-items: center;
+  }
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: #{theme.pixelsToRem-px-to-rem(14)} #{theme.pixelsToRem-px-to-rem(16)};
+  border-radius: #{theme.pixelsToRem-px-to-rem(8)};
+  color: $text;
+  text-decoration: none;
+  background: $button-bg;
+
+  @include from($group-3) {
+    padding-inline: #{theme.pixelsToRem-px-to-rem(32)};
+  }
+}
+
+.live strong {
+  color: $live-colour;
+}
+
+.liveDot {
+  width: #{theme.pixelsToRem-px-to-rem(12)};
+  height: #{theme.pixelsToRem-px-to-rem(12)};
+  margin-inline-end: #{theme.pixelsToRem-px-to-rem(8)};
+  border: 2px solid $live-colour;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 2px $bg-top, inset 0 0 0 10px $live-colour;
+}
+
+.howItWorks {
+  grid-column: 1 / -1; // groups 0-2: own row, centred
+  justify-self: center;
+  padding: #{theme.pixelsToRem-px-to-rem(8)};
+  color: $text;
+  font-size: #{theme.pixelsToRem-px-to-rem(16)};
+  background: none;
+  border: 0;
+  cursor: pointer;
+
+  @include from($group-3) {
+    grid-column: auto; // groups 3-4: same row, right aligned
+    justify-self: end;
+  }
+}
+
+.lastUpdated {
+  margin: #{theme.pixelsToRem-px-to-rem(16)} 0 0;
+  font-size: #{theme.pixelsToRem-px-to-rem(13)};
 }
