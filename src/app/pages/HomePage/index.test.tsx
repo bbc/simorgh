@@ -68,6 +68,36 @@ const pidginHomePageData = {
 describe('Home Page', () => {
   suppressPropWarnings(['children', 'string', 'MediaIcon']);
 
+  it('renders the election banner before the first curation when enabled', () => {
+    const { getByTestId, container } = render(
+      <HomePage pageData={afriqueHomePageData} />,
+      {
+        service: 'afrique',
+        pageType: 'home',
+        toggles: { electionBanner: { enabled: true } },
+      },
+    );
+
+    expect(
+      getByTestId('election-banner').compareDocumentPosition(
+        container.querySelector('section') as HTMLElement,
+      ),
+    ).toBe(Node.DOCUMENT_POSITION_FOLLOWING);
+  });
+
+  it('does not render the election banner when disabled', () => {
+    const { queryByTestId } = render(
+      <HomePage pageData={afriqueHomePageData} />,
+      {
+        service: 'afrique',
+        pageType: 'home',
+        toggles: { electionBanner: { enabled: false } },
+      },
+    );
+
+    expect(queryByTestId('election-banner')).not.toBeInTheDocument();
+  });
+
   it('should render a section for each curation with summaries', () => {
     const { container } = render(<HomePage pageData={afriqueHomePageData} />, {
       service: 'afrique',

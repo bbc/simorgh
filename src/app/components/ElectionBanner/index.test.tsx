@@ -10,6 +10,8 @@ import { ServiceConfig } from '#app/models/types/serviceConfig';
 import ElectionBanner, { DEFAULT_HEIGHTS_AP } from '.';
 
 const MOCK_ELECTION_THING_ID = '647d5613-e0e2-4ef5-b0ce-b491de38bdbd';
+const MOCK_ELECTION_CURATION_ID =
+  'urn:bbc:vivo:curation:874d2084-631c-4ee8-b582-f88920fcd960';
 const MOCK_TITLE = 'Elecciones de mitad de período en Estados Unidos 2026';
 const MOCK_IFRAME_LIVE_SRC =
   'include/vjafwest/1365-2024-us-presidential-election-banner/mundo/app';
@@ -58,6 +60,7 @@ const mockAssocPressServiceContext = {
   electionBanner: {
     title: MOCK_TITLE,
     electionThingIds: [MOCK_ELECTION_THING_ID],
+    electionCurationIds: [MOCK_ELECTION_CURATION_ID],
     iframeSrc: MOCK_IFRAME_LIVE_SRC,
     iframeDevSrc: MOCK_IFRAME_DEV_SRC,
     assocPressIframeSrc: MOCK_ASSOC_PRESS_IFRAME_SRC,
@@ -255,6 +258,97 @@ describe('ElectionBanner', () => {
   });
 
   describe('Association Press', () => {
+    it.each([
+      ['mundo', undefined, '33021'],
+      ['portuguese', undefined, '33042'],
+      ['arabic', undefined, '33031'],
+      ['russian', undefined, '33043'],
+      ['afrique', undefined, '33244'],
+      ['zhongwen', 'trad', '33245'],
+      ['zhongwen', 'simp', '33245'],
+    ] as const)(
+      'uses the supplied AP URL on the %s %s homepage',
+      (service, variant, layoutId) => {
+        process.env.SIMORGH_APP_ENV = 'live';
+        const { getByTestId } = render(<ElectionBanner />, {
+          service,
+          variant,
+          pageType: 'home',
+          toggles: { electionBanner: { enabled: true } },
+        });
+
+        const iframe = getByTestId(ELEMENT_ID).querySelector('iframe');
+        expect(iframe).toHaveAttribute(
+          'src',
+          `https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/${layoutId}.html`,
+        );
+        expect(iframe?.getAttribute('title')).toBeTruthy();
+      },
+    );
+
+    it('does not render on the pidgin homepage without an AP URL', () => {
+      const { queryByTestId } = render(<ElectionBanner />, {
+        service: 'pidgin',
+        pageType: 'home',
+        toggles: { electionBanner: { enabled: true } },
+      });
+
+      expect(queryByTestId(ELEMENT_ID)).not.toBeInTheDocument();
+    });
+
+    describe.each(['home', 'topic'] as const)('%s pages', pageType => {
+      it('renders on live when enabled without article tags', () => {
+        process.env.SIMORGH_APP_ENV = 'live';
+        const { getByTestId } = renderElectionBanner(
+          { curationIds: [MOCK_ELECTION_CURATION_ID] },
+          { pageType, toggles: { electionBanner: { enabled: true } } },
+          mockAssocPressServiceContext,
+        );
+
+        const iframe = getByTestId(ELEMENT_ID).querySelector('iframe');
+        expect(iframe).toHaveAttribute('src', MOCK_ASSOC_PRESS_IFRAME_SRC);
+        expect(iframe).toHaveAttribute('title', MOCK_TITLE);
+      });
+
+      it.each([false, null])('stays hidden when toggle is %s', enabled => {
+        const { queryByTestId } = renderElectionBanner(
+          { curationIds: [MOCK_ELECTION_CURATION_ID] },
+          {
+            pageType,
+            toggles: enabled === null ? {} : { electionBanner: { enabled } },
+          },
+          mockAssocPressServiceContext,
+        );
+
+        expect(queryByTestId(ELEMENT_ID)).not.toBeInTheDocument();
+      });
+    });
+
+    it('does not fall back to a VJ banner on the homepage without an AP URL', () => {
+      const { queryByTestId } = renderElectionBanner(
+        { aboutTags: mockAboutTags },
+        {
+          pageType: 'home',
+          toggles: { electionBanner: { enabled: true } },
+        },
+      );
+
+      expect(queryByTestId(ELEMENT_ID)).not.toBeInTheDocument();
+    });
+
+    it('stays hidden on topics with an unrelated curation despite matching article tags', () => {
+      const { queryByTestId } = renderElectionBanner(
+        { curationIds: ['unrelated-curation'], aboutTags: mockAboutTags },
+        {
+          pageType: 'topic',
+          toggles: { electionBanner: { enabled: true } },
+        },
+        mockAssocPressServiceContext,
+      );
+
+      expect(queryByTestId(ELEMENT_ID)).not.toBeInTheDocument();
+    });
+
     const renderAssocPressBanner = (isAmp: boolean) =>
       renderElectionBanner(
         { aboutTags: mockAboutTags, taggings: mockTaggings },

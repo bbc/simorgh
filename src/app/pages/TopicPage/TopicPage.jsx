@@ -1,6 +1,7 @@
 import { Fragment, use } from 'react';
 import path from 'ramda/src/path';
 import Curation from '#app/components/Curation';
+import ElectionBanner from '#app/components/ElectionBanner';
 import FollowTopicButton from '#app/components/FollowTopicButton';
 import parseRoute from '#app/routes/utils/parseRoute';
 import getTopicPageUrl from '#app/lib/utilities/getTopicPageUrl';
@@ -99,6 +100,9 @@ const TopicPage = ({ pageData }) => {
               />
             )}
           </div>
+          <ElectionBanner
+            curationIds={curations.map(({ curationId }) => curationId)}
+          />
           {curations.map(
             ({
               visualProminence,

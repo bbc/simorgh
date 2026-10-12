@@ -1,5 +1,6 @@
 import { Fragment, use } from 'react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
+import ElectionBanner from '#app/components/ElectionBanner';
 import AccountPromotionalBannerHomePageExperiment from '#app/components/Account/AccountPromotionalBannerHomePageExperiment';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import useOptimizelyVariation, {
@@ -118,6 +119,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
         </VisuallyHiddenText>
         <div css={styles.inner}>
           <div css={styles.margins}>
+            <ElectionBanner />
             {curations.map(
               (
                 {

@@ -12,8 +12,9 @@ import { MetadataTaggings } from '#app/models/types/metadata';
 import styles from './index.module.scss';
 
 type Props = {
-  aboutTags: Tag[];
-  taggings: MetadataTaggings;
+  aboutTags?: Tag[];
+  taggings?: MetadataTaggings;
+  curationIds?: string[];
 };
 
 type ToggleType = {
@@ -35,19 +36,33 @@ export const DEFAULT_HEIGHTS_AP = {
   mobile: 340,
 };
 
-export default function ElectionBanner({ aboutTags, taggings }: Props) {
+export default function ElectionBanner({
+  aboutTags,
+  taggings,
+  curationIds,
+}: Props) {
   const { electionBanner } = use(ServiceContext);
-  const { isAmp, isLite } = use(RequestContext);
+  const { isAmp, isLite, pageType } = use(RequestContext);
   const { enabled: electionBannerEnabled }: ToggleType =
     useToggle('electionBanner');
 
-  if (isLive() || isLite || !electionBanner) return null;
+  const isHomePage = pageType === 'home';
+  const isCollectionPage = isHomePage || pageType === 'topic';
+
+  if (
+    isLite ||
+    !electionBanner ||
+    (isCollectionPage && !electionBanner.assocPressIframeSrc) ||
+    (isLive() && !isCollectionPage)
+  )
+    return null;
 
   const {
     title,
     iframeSrc,
     iframeDevSrc,
     electionThingIds,
+    electionCurationIds,
     assocPressIframeSrc,
   } = electionBanner;
 
@@ -59,8 +74,15 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
     electionThingIds?.includes(thingId),
   );
 
+  const hasElectionCuration = curationIds?.some(curationId =>
+    electionCurationIds?.includes(curationId),
+  );
+  const isEligiblePage = isCollectionPage
+    ? isHomePage || hasElectionCuration
+    : validAboutTag;
+
   const showBanner =
-    !isEditoriallySensitive && validAboutTag && electionBannerEnabled;
+    !isEditoriallySensitive && isEligiblePage && electionBannerEnabled;
 
   if (!showBanner) return null;
 
@@ -79,11 +101,13 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
     }/${iframeSrcToUse}${isAmp ? '/amp' : ''}`;
 
   const hasTitle = isAssocPress && title;
+  const iframeTitle = validAboutTag?.thingLabel || title;
 
   if (isAmp) {
     return (
       <div
         data-testid="election-banner"
+        data-page-type={pageType}
         className={
           isAssocPress
             ? styles.assocPressElectionBannerWrapperAmp
@@ -99,7 +123,7 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
               src,
               image:
                 'https://news.files.bbci.co.uk/include/vjassets/img/app-launcher.png',
-              title: validAboutTag.thingLabel,
+              title: iframeTitle,
               ...(isAssocPress && { layout: 'fixed-height' as const }),
             }}
           />
@@ -111,6 +135,7 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
   return (
     <div
       data-testid="election-banner"
+      data-page-type={pageType}
       className={
         isAssocPress
           ? styles.assocPressElectionBannerWrapper
@@ -126,7 +151,7 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
               ? styles.assocPressElectionBannerIframe
               : styles.electionBannerIframe,
           )}
-          title={validAboutTag.thingLabel}
+          title={iframeTitle}
           src={src}
           scrolling="no"
           {...(!isAssocPress && { height: DEFAULT_HEIGHTS_VJ.desktop })}
