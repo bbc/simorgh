@@ -48,6 +48,12 @@ export const service: DefaultServiceConfig = {
     passportHomes: ['brasil'],
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    electionBanner: {
+      title: 'Eleições nos EUA 2026',
+      electionThingIds: ['19994837-27b8-463f-965d-fbb0ac1622a3'],
+      assocPressIframeSrc:
+        'https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/33042.html',
+    },
     articleMessageBanners: [
       {
         thingIds: ['b91eaef4-fdf2-47a6-b3ec-05b5a55a4843'],
@@ -88,11 +94,6 @@ export const service: DefaultServiceConfig = {
         text: 'Pule %title% e continue lendo',
         endTextVisuallyHidden: 'Fim da %title%',
       },
-    },
-    electionBanner: {
-      title: 'Eleições nos EUA 2026',
-      electionThingIds: ['19994837-27b8-463f-965d-fbb0ac1622a3'],
-      assocPressIframeSrc: '',
     },
     translations: {
       and: 'e',
