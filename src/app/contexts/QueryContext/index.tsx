@@ -1,19 +1,10 @@
-import { Suspense, use, type PropsWithChildren } from 'react';
-import dynamic from 'next/dynamic';
+import { use, type PropsWithChildren } from 'react';
 import { AccountContext } from '#app/contexts/AccountContext';
-
-const PersistentQueryProvider = dynamic(
-  () =>
-    import(
-      /* webpackChunkName: "query_provider" */
-      './lazy'
-    ),
-);
+import PersistentQueryProvider from './lazy';
 
 // TanstackQuery Provider is only needed when personalization features are available.
-// This prevents the unnecessary loading of the Tanstack Query library and its dependencies.
-// Gated on availability rather than sign-in state so the tree shape never changes between
-// the server render, hydration and sign-in changes, which would remount the whole page.
+// Keep the wrapper stable from first render when enabled, so children are not mounted
+// outside the provider first and then remounted once a lazy provider resolves.
 const QueryProvider = ({ children }: PropsWithChildren) => {
   const { isArticlePersonalizationAvailable, isTopicPersonalizationAvailable } =
     use(AccountContext);
@@ -23,11 +14,7 @@ const QueryProvider = ({ children }: PropsWithChildren) => {
 
   if (!isAnyPersonalizationAvailable) return children;
 
-  return (
-    <Suspense fallback={children}>
-      <PersistentQueryProvider>{children}</PersistentQueryProvider>
-    </Suspense>
-  );
+  return <PersistentQueryProvider>{children}</PersistentQueryProvider>;
 };
 
 export default QueryProvider;
