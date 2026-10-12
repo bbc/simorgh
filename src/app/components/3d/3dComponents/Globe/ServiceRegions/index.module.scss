@@ -1,0 +1,78 @@
+@use '@scss/themeTokens' as theme;
+
+.panel {
+  outline: 1px solid theme.$palette-grey-3;
+  background-color: theme.$palette-black;
+  color: theme.$palette-white;
+  padding: theme.$spacings-double;
+
+  .title,
+  .intro {
+    margin: 0;
+    color: theme.$palette-white;
+  }
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.panel .link,
+.panel .linkText {
+  color: theme.$palette-white;
+}
+
+.panel .link {
+  text-decoration: underline;
+}
+
+.panel .link:hover .linkText,
+.panel .link:focus-visible .linkText {
+  @include theme.fontVariants-gel-font-variant('sans-bold');
+}
+
+.panel .cta {
+  box-sizing: border-box;
+  display: inline-block;
+  max-width: 100%;
+  margin-block-start: theme.$spacings-double;
+  background-color: theme.$palette-white;
+  color: theme.$palette-black;
+  overflow-wrap: anywhere;
+
+  &:focus-visible {
+    outline: 2px solid theme.$palette-white;
+    outline-offset: 2px;
+  }
+}
+
+.panel .ctaText {
+  color: theme.$palette-black;
+}
+
+.ctaInner {
+  padding-block: theme.$spacings-double;
+  padding-inline: theme.$spacings-double;
+}
+
+.link {
+  @include theme.fontSizes-gel-font-size(pica);
+
+  display: block;
+  padding-block: theme.$spacings-full;
+  text-align: start;
+  overflow-wrap: anywhere;
+
+  &:hover {
+    text-decoration-thickness: 2px;
+  }
+
+  &:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+  }
+}
