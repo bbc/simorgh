@@ -19,8 +19,7 @@ const extractPromoImage = (blocks: OptimoBlock[]): PromoImageData => {
 
   const altTextBlock = filterForBlockType(blocks, 'altText');
   const rawBlock = filterForBlockType(blocks, 'rawImage') as
-    | OptimoRawImageBlock
-    | undefined;
+    OptimoRawImageBlock | undefined;
 
   const altText =
     altTextBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;

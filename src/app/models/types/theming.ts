@@ -496,9 +496,7 @@ export type ServicesWithNoVariantsWithPWATypography = {
 };
 
 export type ServicesWithVariantsWithPWATypography =
-  | SerbianService
-  | UzbekService
-  | UkrainianService;
+  SerbianService | UzbekService | UkrainianService;
 
 declare module '@emotion/react' {
   export interface Theme {

@@ -1,9 +1,7 @@
 import serialiseForScript from '../serialiseForScript';
 
 export type InlineScriptParameter =
-  | string
-  | Record<string, unknown>
-  | (() => boolean);
+  string | Record<string, unknown> | (() => boolean);
 
 export type InlineScriptProps = {
   script: string | { toString: () => string };

@@ -15254,7 +15254,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:3.8.1, prettier@npm:^3.7.1":
+"prettier@npm:3.9.9":
+  version: 3.9.9
+  resolution: "prettier@npm:3.9.9"
+  bin:
+    prettier: bin/prettier.cjs
+  checksum: 10/3d11a8095a7db50f0fbc8086ad96be676401154b63a2e9023e1274893457dccab19a9c211f4fb2cae7244e800bea2d5185d9bb6fc510f48a53017815e47d4e6d
+  languageName: node
+  linkType: hard
+
+"prettier@npm:^3.7.1":
   version: 3.8.1
   resolution: "prettier@npm:3.8.1"
   bin:
@@ -16764,7 +16773,7 @@ __metadata:
     moment: "npm:2.31.0"
     moment-timezone: "npm:0.6.0"
     npm-run-all2: "npm:8.0.4"
-    prettier: "npm:3.8.1"
+    prettier: "npm:3.9.9"
     puppeteer: "npm:24.22.3"
     ramda: "npm:0.32.0"
     react: "npm:19.2.8"

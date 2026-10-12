@@ -213,8 +213,7 @@ export type HeadToHeadV2Data = {
 export type Alignment = 'home' | 'away';
 
 export type BadgeSize =
-  | number
-  | { small?: number; medium?: number; large?: number };
+  number | { small?: number; medium?: number; large?: number };
 
 export interface HeadToHeadV2Props {
   initialSportData: HeadToHeadV2Data;

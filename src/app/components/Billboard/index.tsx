@@ -15,9 +15,7 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import BillboardCurationGrid from './BillboardCurationGrid';
 
 type BillboardProminence =
-  | typeof VISUAL_PROMINENCE.HIGH
-  | typeof VISUAL_PROMINENCE.MAXIMUM
-  | string;
+  typeof VISUAL_PROMINENCE.HIGH | typeof VISUAL_PROMINENCE.MAXIMUM | string;
 
 interface BillboardProps {
   heading: string;

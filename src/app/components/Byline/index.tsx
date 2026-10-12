@@ -20,8 +20,7 @@ import ArticleContributor from './ArticleContributor';
 import PostContributor from './PostContributor';
 
 type BylineBlock =
-  | OptimoBylineBlock['model']
-  | { blocks: LivePageContributor['model'][] };
+  OptimoBylineBlock['model'] | { blocks: LivePageContributor['model'][] };
 
 const Contributors = ({ contributorValues, isSingleContributor, pageType }) => {
   switch (pageType) {
