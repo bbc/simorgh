@@ -183,7 +183,7 @@ export default {
       color: palette.GREY_1,
       marginTop: `${spacings.HALF}rem`,
     }),
-  sportTitleRow: ({ mq, palette, spacings }: Theme) =>
+  singleColumnTitleRow: ({ mq, spacings }: Theme) =>
     css({
       display: 'flex',
       flexDirection: 'column',
@@ -197,6 +197,9 @@ export default {
         marginTop: `${spacings.DOUBLE}rem`,
         paddingBlockEnd: `${spacings.DOUBLE}rem`,
       },
+    }),
+  sportTitleRow: ({ palette, spacings }: Theme) =>
+    css({
       '&::after': {
         content: '""',
         position: 'absolute',
@@ -207,7 +210,7 @@ export default {
         borderBlockEnd: `${pixelsToRem(1)}rem solid ${palette.GREY_6}`,
       },
     }),
-  sportTitleText: ({ palette, spacings }: Theme) =>
+  singleColumnTitleText: ({ palette, spacings }: Theme) =>
     css({
       display: 'block',
       width: '100%',

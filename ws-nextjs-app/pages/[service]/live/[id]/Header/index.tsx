@@ -26,7 +26,6 @@ const Header = ({
   imageWidth,
   mediaCollections,
   showSportData,
-  // withElectionBanner,
   passportTaggings,
 }: {
   showLiveLabel: boolean;
@@ -97,148 +96,152 @@ const Header = ({
     ? styles.backgroundColorElectionBanner
     : styles.backgroundColorDefault;
 
-  const titleStyleWithoutElectionBanner = isWithImageLayout
-    ? styles.titleWithImage
-    : styles.titleWithoutImage;
-  const titleStyle = shouldShowElectionBanner
-    ? styles.titleWithoutImageElectionBanner
-    : titleStyleWithoutElectionBanner;
+  const Title = (
+    <span
+      css={isWithImageLayout ? styles.titleWithImage : styles.titleWithoutImage}
+    >
+      {title}
+    </span>
+  );
 
-  const Title = <span css={titleStyle}>{title}</span>;
-
-  if (showSportData) {
+  if (shouldShowElectionBanner || showSportData) {
     return (
-      <div css={styles.headerContainer}>
-        <div css={styles.backgroundContainer}>
-          <div
-            css={[
-              styles.background,
-              styles.backgroundColorDefault,
-              styles.backgroundColorSportData,
-            ]}
-          />
+      <>
+        <div css={styles.headerContainer}>
+          <div css={styles.backgroundContainer}>
+            <div
+              css={[
+                styles.background,
+                styles.backgroundColorDefault,
+                styles.backgroundColorSportData,
+                styles.backgroundColorElectionBanner,
+              ]}
+            />
+          </div>
+          <div css={styles.contentContainer}>
+            <Heading
+              size="trafalgar"
+              level={1}
+              id="content"
+              tabIndex={-1}
+              css={styles.heading}
+            >
+              <div
+                css={[
+                  styles.singleColumnTitleRow,
+                  showSportData && styles.sportTitleRow,
+                ]}
+              >
+                {showLiveLabel && (
+                  <LiveLabelHeader
+                    isHeaderImage={isWithImageLayout}
+                    showSportData={showSportData || shouldShowElectionBanner}
+                  />
+                )}
+                <div css={styles.singleColumnTitleText}>{title}</div>
+              </div>
+            </Heading>
+            {showSportData && (
+              <VisuallyHiddenText as="h2">{matchSummary}</VisuallyHiddenText>
+            )}
+          </div>
         </div>
-        <div css={styles.contentContainer}>
-          <Heading
-            size="trafalgar"
-            level={1}
-            id="content"
-            tabIndex={-1}
-            css={styles.heading}
-          >
-            <div css={styles.sportTitleRow}>
-              {showLiveLabel && (
-                <LiveLabelHeader
-                  isHeaderImage={isWithImageLayout}
-                  showSportData={showSportData}
-                />
-              )}
-              <div css={styles.sportTitleText}>{title}</div>
-            </div>
-          </Heading>
-          <VisuallyHiddenText as="h2">{matchSummary}</VisuallyHiddenText>
-        </div>
-      </div>
+        {shouldShowElectionBanner && (
+          <ElectionBanner taggings={electionBannerTaggings} />
+        )}
+      </>
     );
   }
 
   return (
-    <>
-      <div css={[styles.headerContainer, styles.headerContainerForcedColours]}>
-        <div css={styles.backgroundContainer}>
-          <div css={[styles.background, backgroundStyle]} />
-        </div>
+    <div css={[styles.headerContainer, styles.headerContainerForcedColours]}>
+      <div css={styles.backgroundContainer}>
+        <div css={[styles.background, backgroundStyle]} />
+      </div>
+      <div
+        css={[
+          isWithImageLayout
+            ? styles.contentWithImageContainer
+            : styles.contentContainer,
+          !isMediaOpen && isWithImageLayout && { gap: '2rem' },
+        ]}
+      >
+        {isHeaderImage ? (
+          <div css={[isMediaOpen ? styles.hideImage : styles.headerImage]}>
+            <Image
+              alt=""
+              src={srcWebp}
+              srcSet={primarySrcset || undefined}
+              fallbackSrcSet={fallbackSrcset || undefined}
+              mediaType={primaryMimeType || undefined}
+              fallbackMediaType={fallbackMimeType || undefined}
+              sizes="(min-width: 1008px) 660px, 100vw"
+              fetchPriority="high"
+              preload
+              placeholder={!isHeaderImageAlreadyLoaded}
+              imageRef={imageRef}
+              style={{ display: 'block' }}
+            />
+          </div>
+        ) : null}
+
         <div
           css={[
-            isWithImageLayout
-              ? styles.contentWithImageContainer
-              : styles.contentContainer,
-            !isMediaOpen && isWithImageLayout && { gap: '2rem' },
+            hasLiveMediaStream && styles.liveMediaAndTextContainer,
+            isWithImageLayout && !isMediaOpen && styles.textWrapper,
           ]}
         >
-          {isHeaderImage ? (
-            <div css={[isMediaOpen ? styles.hideImage : styles.headerImage]}>
-              <Image
-                alt=""
-                src={srcWebp}
-                srcSet={primarySrcset || undefined}
-                fallbackSrcSet={fallbackSrcset || undefined}
-                mediaType={primaryMimeType || undefined}
-                fallbackMediaType={fallbackMimeType || undefined}
-                sizes="(min-width: 1008px) 660px, 100vw"
-                fetchPriority="high"
-                preload
-                placeholder={!isHeaderImageAlreadyLoaded}
-                imageRef={imageRef}
-                style={{ display: 'block' }}
-              />
-            </div>
-          ) : null}
-
           <div
             css={[
-              hasLiveMediaStream && styles.liveMediaAndTextContainer,
-              isWithImageLayout && !isMediaOpen && styles.textWrapper,
+              isWithImageLayout
+                ? styles.textContainerWithImage
+                : styles.textContainerWithoutImage,
+              hasLiveMediaStream && [styles.fixedHeight, { width: '100%' }],
             ]}
           >
-            <div
-              css={[
-                isWithImageLayout
-                  ? styles.textContainerWithImage
-                  : styles.textContainerWithoutImage,
-                hasLiveMediaStream && [styles.fixedHeight, { width: '100%' }],
-              ]}
+            <Heading
+              size="trafalgar"
+              level={1}
+              id="content"
+              tabIndex={-1}
+              css={styles.heading}
             >
-              <Heading
-                size="trafalgar"
-                level={1}
-                id="content"
-                tabIndex={-1}
-                css={styles.heading}
-              >
-                {showLiveLabel ? (
-                  <LiveLabelHeader
-                    isHeaderImage={isWithImageLayout}
-                    showSportData={false}
-                    isElectionBanner={shouldShowElectionBanner}
-                  >
-                    {Title}
-                  </LiveLabelHeader>
-                ) : (
-                  Title
-                )}
-              </Heading>
-              {description && (
-                <Text
-                  as="p"
-                  css={[
-                    styles.description,
-                    showLiveLabel &&
-                      !isWithImageLayout &&
-                      styles.layoutWithLiveLabelNoImage,
-                  ]}
+              {showLiveLabel ? (
+                <LiveLabelHeader
+                  isHeaderImage={isWithImageLayout}
+                  showSportData={false}
                 >
-                  {description}
-                </Text>
+                  {Title}
+                </LiveLabelHeader>
+              ) : (
+                Title
               )}
-            </div>
-            {hasLiveMediaStream && (
-              <div
-                css={[styles.liveMedia, isMediaOpen && styles.liveMediaOpen]}
+            </Heading>
+            {description && (
+              <Text
+                as="p"
+                css={[
+                  styles.description,
+                  showLiveLabel &&
+                    !isWithImageLayout &&
+                    styles.layoutWithLiveLabelNoImage,
+                ]}
               >
-                <LiveHeaderMedia
-                  mediaCollection={mediaCollections ?? null}
-                  clickCallback={watchVideoClickHandler}
-                />
-              </div>
+                {description}
+              </Text>
             )}
           </div>
+          {hasLiveMediaStream && (
+            <div css={[styles.liveMedia, isMediaOpen && styles.liveMediaOpen]}>
+              <LiveHeaderMedia
+                mediaCollection={mediaCollections ?? null}
+                clickCallback={watchVideoClickHandler}
+              />
+            </div>
+          )}
         </div>
       </div>
-      {shouldShowElectionBanner && (
-        <ElectionBanner taggings={electionBannerTaggings} />
-      )}
-    </>
+    </div>
   );
 };
 
