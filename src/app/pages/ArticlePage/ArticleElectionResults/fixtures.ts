@@ -33,7 +33,7 @@ const candidate = ({
   },
 });
 
-const wireframeFixture: ElectionResults = {
+const electionResultsFixture: ElectionResults = {
   title: 'Presidential election 2027',
   stage: { current: null, maximum: null, label: null },
   status: null,
@@ -89,4 +89,4 @@ const wireframeFixture: ElectionResults = {
   ],
 };
 
-export default wireframeFixture;
+export default electionResultsFixture;

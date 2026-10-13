@@ -161,15 +161,52 @@ $label-bg: #f5e6e6;
 
 .live strong {
   color: $live-colour;
+  margin-top: 2px;
 }
 
 .liveDot {
-  width: #{theme.pixelsToRem-px-to-rem(12)};
-  height: #{theme.pixelsToRem-px-to-rem(12)};
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  width: #{theme.pixelsToRem-px-to-rem(14)};
+  height: #{theme.pixelsToRem-px-to-rem(14)};
   margin-inline-end: #{theme.pixelsToRem-px-to-rem(8)};
-  border: 2px solid $live-colour;
+  border: #{theme.pixelsToRem-px-to-rem(2)} solid $live-colour;
   border-radius: 50%;
-  box-shadow: inset 0 0 0 2px $bg-top, inset 0 0 0 10px $live-colour;
+
+  &::after {
+    content: '';
+    width: #{theme.pixelsToRem-px-to-rem(6)};
+    height: #{theme.pixelsToRem-px-to-rem(6)};
+    border-radius: 50%;
+    background-color: $live-colour;
+    transform-origin: center;
+
+    @media (forced-colors: active) {
+      background-color: CanvasText;
+    }
+  }
+}
+
+@keyframes live-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(0.5);
+    opacity: 0.4;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .liveDot::after {
+    animation: live-pulse 1.25s ease-in-out 3;
+  }
 }
 
 .howItWorks {

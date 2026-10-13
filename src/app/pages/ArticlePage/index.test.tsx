@@ -28,11 +28,11 @@ import { suppressPropWarnings } from '#app/legacy/psammead/psammead-test-helpers
 import { Services } from '#app/models/types/global';
 import { Curation } from '#app/models/types/curationData';
 import { Article, OptimoBlock } from '#app/models/types/optimo';
-import electionResultsFixture from '#app/components/ElectionResults/fixtures';
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import * as viewTracking from '#app/hooks/useViewTracker';
 import useScrollDepthTracker from '#app/hooks/useScrollDepthTracker';
 import useMediaQuery from '#hooks/useMediaQuery';
+import electionResultsFixture from './ArticleElectionResults/fixtures';
 import {
   render,
   screen,

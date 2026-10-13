@@ -27,7 +27,7 @@ const formatTime = (epochSeconds?: number | null) =>
       })
     : '';
 
-const ElectionResults = ({ results, aboutTags, taggings }: Props) => {
+const ArticleElectionResults = ({ results, aboutTags, taggings }: Props) => {
   if (!results) return null;
 
   // TEMP: local testing only. Revert before committing.
@@ -131,4 +131,4 @@ const ElectionResults = ({ results, aboutTags, taggings }: Props) => {
   );
 };
 
-export default ElectionResults;
+export default ArticleElectionResults;
