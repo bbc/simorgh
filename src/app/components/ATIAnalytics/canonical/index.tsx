@@ -1,6 +1,6 @@
 import { useEffect, useRef, use } from 'react';
 import { RequestContext } from '#app/contexts/RequestContext';
-import { AccountContext } from '#app/contexts/AccountContext';
+import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import { Helmet } from 'react-helmet';
 import { addSendStaticBeaconToWindow } from '#app/lib/analyticsUtils/staticATITracking/sendStaticBeacon';
@@ -44,7 +44,7 @@ const CanonicalATIAnalytics = ({
   resonanceParams,
 }: ATIAnalyticsProps) => {
   const { isLite, nonce } = use(RequestContext);
-  const { isHydrated } = use(AccountContext);
+  const isHydrated = useHydrationDetection();
 
   usePWAInstallTracker();
 
