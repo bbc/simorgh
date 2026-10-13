@@ -1,5 +1,5 @@
 import { css, Theme } from '@emotion/react';
-import pixelsToRem from '../../../../../../src/app/utilities/pixelsToRem';
+import pixelsToRem from '#app/utilities/pixelsToRem';
 
 export default {
   headerContainer: () =>
@@ -48,10 +48,6 @@ export default {
   backgroundColorElectionBanner: () =>
     css({
       backgroundColor: '#2d0059',
-    }),
-  backgroundColorElectionBannerWithMedia: ({ palette }: Theme) =>
-    css({
-      backgroundColor: palette.BLACK,
     }),
   backgroundColorSportData: ({ palette }: Theme) =>
     css({
@@ -179,6 +175,13 @@ export default {
         display: 'inline-flex',
         width: '75%',
       },
+    }),
+  titleWithoutImageElectionBanner: ({ palette, spacings }: Theme) =>
+    css({
+      display: 'block',
+      width: '100%',
+      color: palette.GREY_1,
+      marginTop: `${spacings.HALF}rem`,
     }),
   sportTitleRow: ({ mq, palette, spacings }: Theme) =>
     css({

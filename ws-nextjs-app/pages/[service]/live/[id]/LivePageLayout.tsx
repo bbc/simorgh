@@ -14,8 +14,6 @@ import { HeadToHeadV2Data } from '#app/components-webcore/SportDataHeader/head-t
 import { PortraitVideoItems } from '#app/models/types/optimo';
 import usePolling from '#app/hooks/usePolling';
 import useToggle from '#app/hooks/useToggle';
-// import ElectionBanner from '#app/components/ElectionBanner';
-// import isElectionBannerVisible from '#app/components/ElectionBanner/utilities';
 import {
   getImageFromPost,
   getHeadlineFromPost,
@@ -85,7 +83,6 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
     brandName,
     publishingPrinciples,
     service,
-    // electionBanner,
   } = use(ServiceContext);
   const { canonicalNonUkLink } = use(RequestContext);
   const { enabled: livePagePollingEnabled } = useToggle('livePagePolling');
@@ -205,16 +202,6 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
   const showPortraitVideoCarousel =
     portraitVideoItems && portraitVideoItems.portraitVideo.blocks.length > 0;
 
-  // const shouldShowElectionBanner = isElectionBannerVisible({
-  // //   electionBannerEnabled,
-  // //   electionThingIds: electionBanner?.electionThingIds,
-  // //   isLite,
-  // //   taggings: passportTaggings,
-  // });
-
-  // refactor - copied up
-  // const isHeaderImage = !!imageUrl && !!imageUrlTemplate && !!imageWidth;
-
   return (
     <>
       <ATIAnalytics />
@@ -250,9 +237,6 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
         })}
       />
       <main>
-        {/* {shouldShowElectionBanner && passportTaggings && mediaCollections && (
-          <ElectionBanner taggings={passportTaggings} />
-        )} */}
         <Header
           showLiveLabel={showSportData ? isSportDataLive : isLive}
           title={title}
@@ -262,8 +246,7 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
           imageWidth={imageWidth}
           mediaCollections={mediaCollections}
           showSportData={showSportData}
-          // withElectionBanner={shouldShowElectionBanner}
-          passportTaggings={passportTaggings} // to refactor - can we do shouldShowElectionBanner here and force show instead
+          passportTaggings={passportTaggings}
         />
         {showSportData && (
           <HeadToHeadV2
@@ -273,9 +256,6 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
             isSportDataLive={isSportDataLive}
           />
         )}
-        {/* {shouldShowElectionBanner && passportTaggings && !mediaCollections && (
-          <ElectionBanner taggings={passportTaggings} />
-        )} */}
         <div css={styles.outerGrid}>
           <div css={styles.firstSection}>
             {keyPoints && (

@@ -13,20 +13,9 @@ import isElectionBannerVisible from '#app/components/ElectionBanner/utilities';
 import { createIchefSrcSet } from '#app/utilities/imageSrcSets';
 import getOriginCode from '#app/lib/utilities/imageSrcHelpers/originCode';
 import getLocator from '#app/lib/utilities/imageSrcHelpers/locator';
+import { MetadataTaggings } from '#app/models/types/metadata';
 import styles from './styles';
 import LiveLabelHeader from './LiveLabelHeader';
-
-const getBackgroundStyle = ({
-  electionBannerPosition,
-}: {
-  electionBannerPosition?: string | null;
-}) => {
-  if (!electionBannerPosition) return styles.backgroundColorDefault;
-
-  return electionBannerPosition === 'above'
-    ? styles.backgroundColorElectionBannerWithMedia
-    : styles.backgroundColorElectionBanner;
-};
 
 const Header = ({
   showLiveLabel,
@@ -48,8 +37,7 @@ const Header = ({
   imageWidth?: number;
   mediaCollections?: MediaCollection[] | null;
   showSportData?: boolean;
-  // withElectionBanner?: boolean;
-  passportTaggings?: any; // to refactor
+  passportTaggings?: MetadataTaggings;
 }) => {
   const imageRef = useRef<HTMLImageElement>(null);
   const [isHeaderImageAlreadyLoaded, setIsHeaderImageAlreadyLoaded] =
@@ -58,8 +46,8 @@ const Header = ({
   const [isMediaOpen, setLiveMediaOpen] = useState(false);
   const { isLite } = use(RequestContext);
   const { enabled: electionBannerEnabled } = useToggle('electionBanner');
-  const isHeaderImage = !!imageUrl && !!imageUrlTemplate && !!imageWidth;
-  const isWithImageLayout = isHeaderImage || !!mediaCollections;
+  const hasHeaderImage = !!imageUrl && !!imageUrlTemplate && !!imageWidth;
+  const hasLiveMediaStream = Boolean(mediaCollections?.length);
   const {
     translations: { sport: { matchSummary = 'Match Summary' } = {} },
     electionBanner,
@@ -72,12 +60,17 @@ const Header = ({
   const originCode = getOriginCode(url);
   const locator = getLocator(url);
 
-  const shouldShowElectionBanner = isElectionBannerVisible({
-    electionBannerEnabled,
-    electionThingIds: electionBanner?.electionThingIds,
-    isLite,
-    taggings: passportTaggings,
-  });
+  const shouldShowElectionBanner =
+    isElectionBannerVisible({
+      electionBannerEnabled,
+      electionThingIds: electionBanner?.electionThingIds,
+      isLite,
+      taggings: passportTaggings,
+    }) && !hasLiveMediaStream;
+
+  const isHeaderImage = hasHeaderImage && !shouldShowElectionBanner;
+  const isWithImageLayout = isHeaderImage || hasLiveMediaStream;
+  const electionBannerTaggings = passportTaggings ?? [];
 
   const {
     src: srcWebp,
@@ -100,27 +93,18 @@ const Header = ({
     );
   }, [srcWebp, primarySrcset, isHeaderImage, showSportData]);
 
-  let electionBannerPosition: string | null = null;
+  const backgroundStyle = shouldShowElectionBanner
+    ? styles.backgroundColorElectionBanner
+    : styles.backgroundColorDefault;
 
-  if (shouldShowElectionBanner && mediaCollections) {
-    electionBannerPosition = 'above';
-  } else if (shouldShowElectionBanner && !mediaCollections && isHeaderImage) {
-    electionBannerPosition = 'above';
-  } else if (shouldShowElectionBanner && !mediaCollections && !isHeaderImage) {
-    electionBannerPosition = 'below';
-  }
+  const titleStyleWithoutElectionBanner = isWithImageLayout
+    ? styles.titleWithImage
+    : styles.titleWithoutImage;
+  const titleStyle = shouldShowElectionBanner
+    ? styles.titleWithoutImageElectionBanner
+    : titleStyleWithoutElectionBanner;
 
-  const backgroundStyle = getBackgroundStyle({
-    electionBannerPosition,
-  });
-
-  const Title = (
-    <span
-      css={isWithImageLayout ? styles.titleWithImage : styles.titleWithoutImage}
-    >
-      {title}
-    </span>
-  );
+  const Title = <span css={titleStyle}>{title}</span>;
 
   if (showSportData) {
     return (
@@ -160,9 +144,6 @@ const Header = ({
 
   return (
     <>
-      {electionBannerPosition === 'above' && (
-        <ElectionBanner taggings={passportTaggings} />
-      )}
       <div css={[styles.headerContainer, styles.headerContainerForcedColours]}>
         <div css={styles.backgroundContainer}>
           <div css={[styles.background, backgroundStyle]} />
@@ -196,7 +177,7 @@ const Header = ({
 
           <div
             css={[
-              mediaCollections && styles.liveMediaAndTextContainer,
+              hasLiveMediaStream && styles.liveMediaAndTextContainer,
               isWithImageLayout && !isMediaOpen && styles.textWrapper,
             ]}
           >
@@ -205,7 +186,7 @@ const Header = ({
                 isWithImageLayout
                   ? styles.textContainerWithImage
                   : styles.textContainerWithoutImage,
-                mediaCollections && [styles.fixedHeight, { width: '100%' }],
+                hasLiveMediaStream && [styles.fixedHeight, { width: '100%' }],
               ]}
             >
               <Heading
@@ -219,6 +200,7 @@ const Header = ({
                   <LiveLabelHeader
                     isHeaderImage={isWithImageLayout}
                     showSportData={false}
+                    isElectionBanner={shouldShowElectionBanner}
                   >
                     {Title}
                   </LiveLabelHeader>
@@ -240,12 +222,12 @@ const Header = ({
                 </Text>
               )}
             </div>
-            {mediaCollections && (
+            {hasLiveMediaStream && (
               <div
                 css={[styles.liveMedia, isMediaOpen && styles.liveMediaOpen]}
               >
                 <LiveHeaderMedia
-                  mediaCollection={mediaCollections}
+                  mediaCollection={mediaCollections ?? null}
                   clickCallback={watchVideoClickHandler}
                 />
               </div>
@@ -253,8 +235,8 @@ const Header = ({
           </div>
         </div>
       </div>
-      {electionBannerPosition === 'below' && (
-        <ElectionBanner taggings={passportTaggings} />
+      {shouldShowElectionBanner && (
+        <ElectionBanner taggings={electionBannerTaggings} />
       )}
     </>
   );
