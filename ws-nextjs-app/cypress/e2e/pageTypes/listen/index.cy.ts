@@ -86,10 +86,10 @@ const atiAnalyticsTestSuites = [
     tests: [assertPageView],
   },
   {
-    path: '/zhongwen/listen/cgn50l2wz6kqo/trad',
+    path: '/zhongwen/listen/cgn50l2wz6kqo/simp',
     runforEnv: ['local'],
     service: 'zhongwen',
-    pageIdentifier: 'zhongwen.listen.cgn50l2wz6kqo.trad.page',
+    pageIdentifier: 'zhongwen.listen.cgn50l2wz6kqo.simp.page',
     siteId: 38,
     applicationType: 'responsive',
     contentType: 'article-sfv',
