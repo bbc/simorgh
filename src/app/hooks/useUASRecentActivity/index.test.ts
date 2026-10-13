@@ -78,6 +78,7 @@ const mockSavedArticles: SavedArticle[] = [
     description: 'Hindi',
   },
 ];
+const hashedUserId = 'user-123';
 
 const mockHashedUserId = 'user-123';
 
