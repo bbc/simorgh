@@ -44,10 +44,10 @@ describe('getCspTier', () => {
       expect(tier).toBe('strict');
     });
 
-    it('should return strict when the country list is empty', () => {
+    it('should return strict when no country can be resolved even if list is empty', () => {
       const tier = getCspTier({
         ...defaultProps,
-        country: 'in',
+        country: '',
         toggles: toggles({
           relaxedCsp: { enabled: true, value: '' },
           adsNonce: { enabled: true, value: '' },
@@ -121,6 +121,18 @@ describe('getCspTier', () => {
 
       expect(tier).toBe('strict');
     });
+
+    it('should return strict for countries not listed in adsNonce when only specific nonce countries are configured', () => {
+      const tier = getCspTier({
+        ...defaultProps,
+        country: 'fr',
+        toggles: toggles({
+          adsNonce: { enabled: true, value: 'us,uk' },
+        }),
+      });
+
+      expect(tier).toBe('strict');
+    });
   });
 
   describe('relaxed', () => {
@@ -134,12 +146,12 @@ describe('getCspTier', () => {
       expect(tier).toBe('relaxed');
     });
 
-    it('should take precedence over the nonce list', () => {
+    it('should return relaxed when relaxedCsp is enabled with no countries configured', () => {
       const tier = getCspTier({
         ...defaultProps,
-        country: 'in',
+        country: 'br',
         toggles: toggles({
-          relaxedCsp: { enabled: true, value: 'in' },
+          relaxedCsp: { enabled: true, value: '' },
           adsNonce: { enabled: true, value: 'in' },
         }),
       });
@@ -149,6 +161,19 @@ describe('getCspTier', () => {
   });
 
   describe('nonce', () => {
+    it('should take precedence over relaxed when both lists contain the country', () => {
+      const tier = getCspTier({
+        ...defaultProps,
+        country: 'in',
+        toggles: toggles({
+          relaxedCsp: { enabled: true, value: 'in' },
+          adsNonce: { enabled: true, value: 'in' },
+        }),
+      });
+
+      expect(tier).toBe('nonce');
+    });
+
     it('should return nonce when the country is only in the nonce list', () => {
       const tier = getCspTier({
         ...defaultProps,
@@ -156,6 +181,18 @@ describe('getCspTier', () => {
         toggles: toggles({
           relaxedCsp: { enabled: true, value: 'in' },
           adsNonce: { enabled: true, value: 'ng,ke' },
+        }),
+      });
+
+      expect(tier).toBe('nonce');
+    });
+
+    it('should return nonce when adsNonce is enabled with no countries configured', () => {
+      const tier = getCspTier({
+        ...defaultProps,
+        country: 'ke',
+        toggles: toggles({
+          adsNonce: { enabled: true, value: '' },
         }),
       });
 

@@ -112,22 +112,24 @@ describe('CSP tiers', () => {
     );
   });
 
-  it('returns the strict CSP when relaxedCsp is enabled but has no values set', () => {
+  it('returns nonce tier when relaxedCsp and adsNonce are enabled with no values set', () => {
     const ctx = createDocumentContext('/pidgin/live/c7p765ynk9qt');
 
-    addCspHeader({
+    const { nonce } = addCspHeader({
       ctx,
       service: 'pidgin',
       toggles: {
+        ads: { enabled: true },
         relaxedCsp: { enabled: true, value: '' },
         adsNonce: { enabled: true, value: '' },
       },
       country: 'gb',
+      showAdsBasedOnLocation: true,
     });
 
-    expect(getCspHeader(ctx)).toEqual(
-      addElectionSourcesToExpectedCsp(expectedFullCsp),
-    );
+    expect(nonce).toBe(MOCK_NONCE);
+    expect(getCspHeader(ctx)).toBeUndefined();
+    expect(getRequestNonce(ctx.req)).toBe(MOCK_NONCE);
   });
 
   it('returns the strict CSP when the country is in neither allow list', () => {

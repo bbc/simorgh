@@ -10,11 +10,14 @@ const isCountryInList = (
 ) => {
   if (!country) return false;
 
-  return String(countryList ?? '')
+  const countries = String(countryList ?? '')
     .split(',')
     .map(entry => entry.trim().toLowerCase())
-    .filter(Boolean)
-    .includes(country.toLowerCase());
+    .filter(Boolean);
+
+  if (countries.length === 0) return true;
+
+  return countries.includes(country.toLowerCase());
 };
 
 type GetCspTierProps = {
@@ -26,8 +29,9 @@ type GetCspTierProps = {
   showAdsBasedOnLocation: boolean;
 };
 
-// Selects one of three CSP tiers per request when ads are enabled and available, using country allow lists.
-// Precedence: relaxed > nonce > strict (the default for unlisted countries, and always for AMP/Lite pages).
+// Selects one of three CSP tiers per request when ads are enabled and available.
+// Empty country values apply the toggle to all countries; comma-delimited values scope to listed countries.
+// Precedence: nonce > relaxed > strict (always strict for AMP/Lite pages).
 const getCspTier = ({
   service,
   country,
@@ -56,12 +60,12 @@ const getCspTier = ({
     return 'strict';
   }
 
-  if (relaxedCspEnabled && isCountryInList(relaxedCspCountries, country)) {
-    return 'relaxed';
-  }
-
   if (adsNonceEnabled && isCountryInList(adsNonceCountries, country)) {
     return 'nonce';
+  }
+
+  if (relaxedCspEnabled && isCountryInList(relaxedCspCountries, country)) {
+    return 'relaxed';
   }
 
   return 'strict';
