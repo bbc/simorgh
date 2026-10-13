@@ -171,7 +171,10 @@ describe('useUASFollowedTopics', () => {
   it('should be disabled when isTopicPersonalizationEnabled is false', () => {
     (use as jest.Mock).mockImplementation((context: unknown) => {
       if (context === AccountContext)
-        return { isTopicPersonalizationEnabled: false };
+        return {
+          hashedUserId: mockHashedUserId,
+          isTopicPersonalizationEnabled: false,
+        };
       return {};
     });
 

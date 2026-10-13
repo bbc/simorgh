@@ -188,7 +188,10 @@ describe('useUASRecentActivity', () => {
   it('should be disabled when isArticlePersonalizationEnabled is false', () => {
     (use as jest.Mock).mockImplementationOnce((context: unknown) => {
       if (context === AccountContext)
-        return { isArticlePersonalizationEnabled: false };
+        return {
+          hashedUserId: mockHashedUserId,
+          isArticlePersonalizationEnabled: false,
+        };
       return {};
     });
 
