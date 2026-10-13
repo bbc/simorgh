@@ -96,6 +96,7 @@ const directives = {
       'https://public.flourish.studio', // Flourish embeds
       'https://*.mapcreator.io', // Election includes
       'https://*.thomsonreuters.com', // Election includes
+      'https://*.userzoom.com', // UserZoom Intercept
       ...electionDirectives.frameSrc,
       ...advertisingDirectives.frameSrc,
       "'self'",
@@ -132,6 +133,7 @@ const directives = {
       'https://public.flourish.studio', // Flourish embeds
       'https://*.mapcreator.io', // Election includes
       'https://*.thomsonreuters.com', // Election includes
+      'https://*.userzoom.com', // UserZoom Intercept
       ...electionDirectives.frameSrc,
       ...advertisingDirectives.frameSrc,
       "'self'",
