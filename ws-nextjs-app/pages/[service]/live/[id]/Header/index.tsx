@@ -92,10 +92,6 @@ const Header = ({
     );
   }, [srcWebp, primarySrcset, isHeaderImage, showSportData]);
 
-  const backgroundStyle = shouldShowElectionBanner
-    ? styles.backgroundColorElectionBanner
-    : styles.backgroundColorDefault;
-
   const Title = (
     <span
       css={isWithImageLayout ? styles.titleWithImage : styles.titleWithoutImage}
@@ -111,10 +107,10 @@ const Header = ({
           <div css={styles.backgroundContainer}>
             <div
               css={[
-                styles.background,
-                styles.backgroundColorDefault,
-                styles.backgroundColorSportData,
-                styles.backgroundColorElectionBanner,
+                styles.backgroundColor,
+                showSportData && styles.backgroundColorSportData,
+                shouldShowElectionBanner &&
+                  styles.backgroundColorElectionBanner,
               ]}
             />
           </div>
@@ -156,7 +152,7 @@ const Header = ({
   return (
     <div css={[styles.headerContainer, styles.headerContainerForcedColours]}>
       <div css={styles.backgroundContainer}>
-        <div css={[styles.background, backgroundStyle]} />
+        <div css={styles.backgroundColor} />
       </div>
       <div
         css={[

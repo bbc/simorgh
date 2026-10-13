@@ -34,16 +34,13 @@ export default {
       width: '100%',
       overflow: 'hidden',
     }),
-  background: () =>
+  backgroundColor: ({ palette }: Theme) =>
     css({
+      backgroundColor: palette.GREY_10,
       width: '100%',
       top: 0,
       bottom: 0,
       position: 'absolute',
-    }),
-  backgroundColorDefault: ({ palette }: Theme) =>
-    css({
-      backgroundColor: palette.GREY_10,
     }),
   backgroundColorElectionBanner: () =>
     css({
@@ -175,13 +172,6 @@ export default {
         display: 'inline-flex',
         width: '75%',
       },
-    }),
-  titleWithoutImageElectionBanner: ({ palette, spacings }: Theme) =>
-    css({
-      display: 'block',
-      width: '100%',
-      color: palette.GREY_1,
-      marginTop: `${spacings.HALF}rem`,
     }),
   singleColumnTitleRow: ({ mq, spacings }: Theme) =>
     css({
