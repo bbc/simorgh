@@ -1,7 +1,7 @@
 import { ResonanceMode } from '@bbc/resonance';
 import { Platforms } from '#app/models/types/global';
 import * as getEnvConfigModule from '#app/lib/utilities/getEnvConfig';
-import * as genericLabelHelpers from '../../../lib/analyticsUtils';
+import * as genericLabelHelpers from '..';
 import {
   buildResonancePageViewModel,
   buildActivationEventModel,
