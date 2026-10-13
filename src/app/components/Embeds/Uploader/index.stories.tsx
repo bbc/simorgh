@@ -12,7 +12,7 @@ interface ComponentProps {
 const Component = ({ blocks }: PropsWithChildren<ComponentProps>) => (
   <div
     style={{
-      backgroundColor: '#f6f6f6',
+      backgroundColor: '#f8f8f8',
       padding: '1rem',
     }}
   >
