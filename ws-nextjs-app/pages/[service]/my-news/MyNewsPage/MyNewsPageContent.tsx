@@ -74,20 +74,31 @@ const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
       topicName: topic.title,
     }));
 
-  const renderContent = () => {
-    const hasArticles = savedArticles.length > 0;
+  const hasError = error || topicsError;
+
+  const renderFollowedTopicsContent = () => {
     const hasTopics = followedTopics.length > 0;
-    const hasError = error || topicsError;
 
-    if (hasError) {
-      return (
-        <Text size="doublePica" fontVariant="sansBold">
-          {errorText}
-        </Text>
-      );
-    }
+    return (
+      <section css={styles.section}>
+        <Heading level={2} css={styles.subheading} size="doublePica">
+          Followed Topics ({topicsTotal})
+        </Heading>
+        {!hasTopics ? (
+          <Text size="longPrimer" fontVariant="sansRegular">
+            You haven’t followed any topics yet
+          </Text>
+        ) : (
+          <TopicTags tags={transformTopicsForRelatedTopics()} />
+        )}
+      </section>
+    );
+  };
 
-    if (!hasArticles && !hasTopics) {
+  const renderSavedArticlesContent = () => {
+    const hasArticles = savedArticles.length > 0;
+
+    if (!hasArticles) {
       return (
         <Text size="doublePica" fontVariant="sansBold">
           {noArticles}
@@ -96,42 +107,29 @@ const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
     }
 
     return (
-      <>
-        {hasTopics && (
-          <section css={styles.section}>
-            <Heading level={2} css={styles.subheading} size="doublePica">
-              Followed Topics ({topicsTotal})
-            </Heading>
-            <TopicTags tags={transformTopicsForRelatedTopics()} />
-          </section>
-        )}
+      <section css={styles.section}>
+        <Heading level={2} css={styles.subheading} size="doublePica">
+          {description}
+        </Heading>
+        <CurationGrid
+          summaries={savedArticles}
+          headingLevel={3}
+          eventTrackingData={{
+            componentName: 'my-news-curation-grid',
+          }}
+        />
 
-        {hasArticles && (
-          <section css={styles.section}>
-            <Heading level={2} css={styles.subheading} size="doublePica">
-              {description}
-            </Heading>
-            <CurationGrid
-              summaries={savedArticles}
-              headingLevel={3}
-              eventTrackingData={{
-                componentName: 'my-news-curation-grid',
-              }}
-            />
-
-            {pageCount > 1 && (
-              <Pagination
-                activePage={activePage}
-                pageCount={pageCount}
-                pageXOfY={pageXOfY}
-                previousPage={previousPage}
-                nextPage={nextPage}
-                page={pageLabel}
-              />
-            )}
-          </section>
+        {pageCount > 1 && (
+          <Pagination
+            activePage={activePage}
+            pageCount={pageCount}
+            pageXOfY={pageXOfY}
+            previousPage={previousPage}
+            nextPage={nextPage}
+            page={pageLabel}
+          />
         )}
-      </>
+      </section>
     );
   };
 
@@ -146,7 +144,16 @@ const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
       <Heading level={1} id="content" tabIndex={-1} css={styles.heading}>
         {title}
       </Heading>
-      {renderContent()}
+      {hasError ? (
+        <Text size="doublePica" fontVariant="sansBold">
+          {errorText}
+        </Text>
+      ) : (
+        <>
+          {isTopicPersonalizationEnabled && renderFollowedTopicsContent()}
+          {isArticlePersonalizationEnabled && renderSavedArticlesContent()}
+        </>
+      )}
     </>
   );
 };
