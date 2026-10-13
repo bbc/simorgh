@@ -36,7 +36,7 @@ const styles = {
         minHeight: MIN_TAG_HEIGHT,
         padding: `${spacings.HALF}rem ${spacings.DOUBLE}rem`,
         alignItems: 'center',
-        backgroundColor: isDarkUi ? palette.GREY_7 : palette.WHITE,
+        backgroundColor: isDarkUi ? palette.GREY_7 : palette.GREY_2,
         border: 'none',
         textDecoration: 'none',
         color: isDarkUi ? palette.GREY_2 : palette.EBON,
