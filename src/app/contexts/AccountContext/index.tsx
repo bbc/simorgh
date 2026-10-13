@@ -126,7 +126,6 @@ export const AccountProvider = ({
   const value = useMemo(
     () => ({
       hashedUserId,
-      isHydrated,
       isIdctaAvailable,
       isRefreshAvailable,
       isSignedIn,
@@ -143,7 +142,6 @@ export const AccountProvider = ({
     }),
     [
       hashedUserId,
-      isHydrated,
       forYouUrl,
       isIdctaAvailable,
       isRefreshAvailable,
