@@ -1,0 +1,100 @@
+@use '@scss/themeTokens' as theme;
+
+.flexWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  @supports selector(a:has(> div)) and (mask-composite: exclude) {
+    :global(a):has(> &) {
+      position: relative;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      inset: -#{theme.pixelsToRem-px-to-rem(4)};
+      padding: #{theme.pixelsToRem-px-to-rem(4)};
+      border-radius: inherit;
+      pointer-events: none;
+      background: linear-gradient(
+        90deg,
+        theme.$palette-news-bright,
+        theme.$palette-sport-yellow,
+        theme.$palette-success-core,
+        theme.$palette-live-light,
+        theme.$palette-service-neutral-core,
+        theme.$palette-newsround-purple,
+        theme.$palette-news-bright
+      );
+      background-size: 200% 100%;
+      mask:
+        linear-gradient(theme.$palette-white 0 0) content-box,
+        linear-gradient(theme.$palette-white 0 0);
+      mask-composite: exclude;
+      opacity: 0;
+      animation: revealGlow 4s ease-out 3s;
+    }
+
+    &::after {
+      filter: blur(#{theme.pixelsToRem-px-to-rem(4)});
+    }
+
+    :global(a:focus-visible) > &::before,
+    :global(a:focus-visible) > &::after {
+      display: none;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      &::before,
+      &::after {
+        animation:
+          revealGlow 4s ease-out 3s,
+          sweepGlow 4s ease-in-out 3s;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      &::before,
+      &::after {
+        animation: staticGlow 4s step-end 3s;
+      }
+    }
+
+    @media (forced-colors: active) {
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+@keyframes revealGlow {
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  10%,
+  90% {
+    opacity: 1;
+  }
+}
+
+@keyframes staticGlow {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes sweepGlow {
+  50% {
+    background-position: 100% 50%;
+  }
+}
