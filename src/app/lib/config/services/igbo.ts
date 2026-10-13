@@ -85,6 +85,9 @@ export const service: DefaultServiceConfig = {
         moreAboutTopic: 'Ihe ndị ọzọzọ banyere {topic}',
         fetchErrorMessage: 'Ọ dara ịgbakwunye. Biko nwalee ọzọ',
       },
+      googlePreferredSource: {
+        linkText: 'Tinye dịka ebe isi mmalite a họọrọ na Google',
+      },
       continueReading: "Gaa n'ihu gụọ",
       currentPage: 'Peegi ị nọ ugbua',
       skipLinkText: 'Wụga n’ọdịnaya',
@@ -96,6 +99,13 @@ export const service: DefaultServiceConfig = {
       relatedTopics: 'Isiokwu ndị emetụtara',
       moreOnThis: '',
       navMenuText: 'Ngalaba',
+      liteSite: {
+        onboardingMessage:
+          'Ị na-ele ụdị ngosi nke weebụsaịtị a nke bụ naanị ederede nke na-eji obere data. Lee ụdị izizi nke weebụsaịtị, nke gụnyere foto na vidiyo niile.',
+        toMainSite: 'Kpọga m na weebụsaịtị izizi',
+        informationPage: 'Chọpụta ihe ọzọ gbasara ụdị a na-echekwa data',
+        dataSaving: 'Ụdị na-echekwa data',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',

@@ -47,6 +47,12 @@ export const service: DefaultServiceConfig = {
     iTunesAppId: 6761256736,
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    electionBanner: {
+      electionThingIds: ['19994837-27b8-463f-965d-fbb0ac1622a3'],
+      assocPressIframeSrc:
+        'https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/33031.html',
+      title: 'الانتخابات الأمريكية 2026',
+    },
     googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     podcastPromo: {
       title: 'البودكاست',
@@ -88,6 +94,9 @@ export const service: DefaultServiceConfig = {
         moreAboutTopic: 'المزيد عن {topic}',
         fetchErrorMessage: 'فشل في التحميل. يرجى المحاولة مرة أخرى',
       },
+      googlePreferredSource: {
+        linkText: 'أضف كمصدر مفضل على Google',
+      },
       continueReading: 'واصل القراءة',
       currentPage: 'الصفحة الحالية',
       skipLinkText: 'إذهب الى المحتوى',
@@ -99,6 +108,13 @@ export const service: DefaultServiceConfig = {
       relatedTopics: 'كلمات مفتاحية',
       moreOnThis: '',
       navMenuText: 'أقسام',
+      liteSite: {
+        onboardingMessage:
+          'أنت تشاهد نسخة نصية فقط من هذا الموقع تستخدم بيانات أقل. شاهد النسخة الرئيسية للموقع التي تتضمن جميع الصور ومقاطع الفيديو.',
+        toMainSite: 'انتقل إلى الموقع الرئيسي',
+        informationPage: 'اعرف المزيد عن هذه النسخة الموفرة للبيانات',
+        dataSaving: 'نسخة موفرة للبيانات',
+      },
       mediaAssetPage: {
         mediaPlayer: 'مشغل وسائط',
         audioPlayer: 'مشغل ملف صوتي',

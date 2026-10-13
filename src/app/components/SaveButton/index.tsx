@@ -1,8 +1,22 @@
 import { useState, useId } from 'react';
-import { BookmarkIcon, FilledBookmarkIcon, Close } from '#app/components/icons';
+import {
+  BookmarkIcon,
+  FilledBookmarkIcon,
+  Close,
+  PlusIcon,
+  TickIcon,
+} from '#app/components/icons';
 import Spinner from '#app/components/Spinner';
 import styles from './index.module.scss';
 import VisuallyHiddenText from '../VisuallyHiddenText';
+
+export const SAVE_BUTTON_VARIANTS = {
+  SAVE: 'save',
+  FOLLOW: 'follow',
+} as const;
+
+export type SaveButtonVariant =
+  (typeof SAVE_BUTTON_VARIANTS)[keyof typeof SAVE_BUTTON_VARIANTS];
 
 export interface SaveButtonProps {
   visualLabel: string;
@@ -11,6 +25,7 @@ export interface SaveButtonProps {
   isLoading?: boolean;
   isUpdating?: boolean;
   isSaved?: boolean;
+  variant?: SaveButtonVariant;
   onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
   testId?: string;
 }
@@ -22,10 +37,9 @@ const SaveButton = ({
   isLoading = false,
   isUpdating = false,
   isSaved = false,
+  variant = SAVE_BUTTON_VARIANTS.SAVE,
   onClick,
   testId,
-  // TODO :Ticket needed
-  //  Add a buttonType prop (e.g. follow, favourites) to determine which icon to display.
   ...rest
 }: SaveButtonProps) => {
   const [isFocusedOrHovered, setIsFocusedOrHovered] = useState(false);
@@ -47,6 +61,14 @@ const SaveButton = ({
 
   const getIcon = () => {
     if (isBusy) return <Spinner />;
+    if (variant === SAVE_BUTTON_VARIANTS.FOLLOW) {
+      if (!isSaved) return <PlusIcon />;
+      return showRemoveAffordance ? (
+        <Close width="20" height="20" />
+      ) : (
+        <TickIcon />
+      );
+    }
     if (!isSaved) return <BookmarkIcon />;
     return showRemoveAffordance ? (
       <Close width="20" height="20" />
@@ -55,9 +77,18 @@ const SaveButton = ({
     );
   };
 
+  const className = [
+    styles.buttonWrapper,
+    variant === SAVE_BUTTON_VARIANTS.FOLLOW && styles.followVariant,
+    variant === SAVE_BUTTON_VARIANTS.FOLLOW && isSaved && styles.savedState,
+    isUpdating && styles.updatingState,
+  ]
+    .filter(Boolean)
+    .join(' ');
+
   return (
     <button
-      className={`${styles.buttonWrapper}${isUpdating ? ` ${styles.updatingState}` : ''}`}
+      className={className}
       type="button"
       aria-labelledby={labelId}
       onClick={handleClick}

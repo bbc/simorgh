@@ -48,13 +48,20 @@ export const service: DefaultServiceConfig = {
     passportHomes: ['brasil'],
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    electionBanner: {
+      title: 'Eleições nos EUA 2026',
+      electionThingIds: ['19994837-27b8-463f-965d-fbb0ac1622a3'],
+      assocPressIframeSrc:
+        'https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/33042.html',
+    },
     articleMessageBanners: [
       {
         thingIds: ['b91eaef4-fdf2-47a6-b3ec-05b5a55a4843'],
-        linkHref: 'https://www.bbc.com/portuguese/articles/czd2prld130o',
-        heading: 'Quem está à frente nas pesquisas para presidente?',
+        linkHref: 'https://www.bbc.com/portuguese/articles/cm1dlv13yql9o',
+        heading:
+          'Lula x Flávio Bolsonaro: Quem está à frente nas pesquisas para presidente?',
         description:
-          'Veja as estimativas de intenção de voto no Agregador de Pesquisas da BBC News Brasil',
+          ' Veja a intenção de voto no 2º turno no Agregador de Pesquisas da BBC News Brasil',
         linkText: 'Clique aqui',
         image:
           'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/caa9/live/a04f7e60-4a1c-11f1-b55d-0f258dce1735.png.webp',
@@ -73,18 +80,19 @@ export const service: DefaultServiceConfig = {
     podcastPromo: {
       title: 'Promoção Agregador de pesquisas',
       brandTitle: 'Veja Agregador de Pesquisas da BBC News Brasil',
-      brandDescription: ' ',
+      brandDescription:
+        'Veja a intenção de voto no 2º turno no Agregador de Pesquisas da BBC News Brasil',
       image: {
         src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0njcpky.jpg',
-        alt: 'O agregador de pesquisas da BBC News Brasil',
+        alt: 'Agregador de Pesquisas da BBC News Brasil',
       },
       linkLabel: {
         text: 'Clique aqui',
-        href: 'https://www.bbc.com/portuguese/articles/czd2prld130o',
+        href: 'https://www.bbc.com/portuguese/articles/cm1dlv13yql9o',
       },
       skipLink: {
         text: 'Pule %title% e continue lendo',
-        endTextVisuallyHidden: 'Fim do %title%',
+        endTextVisuallyHidden: 'Fim da %title%',
       },
     },
     translations: {
@@ -111,6 +119,9 @@ export const service: DefaultServiceConfig = {
         moreAboutTopic: 'Mais sobre {topic}',
         fetchErrorMessage: 'Falha ao carregar. Tente novamente',
       },
+      googlePreferredSource: {
+        linkText: 'Adicionar como fonte preferida no Google',
+      },
       currentPage: 'Página atual',
       skipLinkText: 'Vá para o conteúdo',
       skipContent: {
@@ -121,6 +132,13 @@ export const service: DefaultServiceConfig = {
       relatedTopics: 'Tópicos relacionados',
       moreOnThis: '',
       navMenuText: 'Seções',
+      liteSite: {
+        onboardingMessage:
+          'Você está vendo uma versão somente texto deste site que usa menos dados. Veja a versão principal do site com todas as imagens e vídeos.',
+        toMainSite: 'Me leve para o site principal',
+        informationPage: 'Saiba mais sobre esta versão que economiza dados',
+        dataSaving: 'Versão que economiza dados',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',

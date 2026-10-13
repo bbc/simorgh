@@ -85,6 +85,17 @@ describe('CSP tiers', () => {
     jest.clearAllMocks();
   });
 
+  const addElectionSourcesToExpectedCsp = (csp: string) =>
+    csp
+      .replace(
+        'https://flo.uri.sh ',
+        'https://flo.uri.sh https://interactives.apelections.org ',
+      )
+      .replace(
+        'https://connect.facebook.net ',
+        'https://connect.facebook.net https://interactives.apelections.org ',
+      );
+
   const expectedRelaxedCsp =
     "default-src  *.bbc.co.uk *.bbc.com *.bbci.co.uk *.bbci.com https:;child-src  blob: https: 'self';connect-src  'self' https: ws: wss:;font-src  https: data: blob: 'self';frame-src  https: data:;img-src  https: data: blob:;script-src  https: 'unsafe-inline' 'unsafe-eval' blob: data: 'self';style-src  https: 'unsafe-inline';media-src  'self' blob: data: https:;worker-src  blob: data: 'self' *.bbc.co.uk *.bbc.com;report-to  worldsvc;upgrade-insecure-requests;";
 
@@ -96,7 +107,9 @@ describe('CSP tiers', () => {
 
     addCspHeader({ ctx, service: 'pidgin', toggles: {}, country: 'gb' });
 
-    expect(getCspHeader(ctx)).toEqual(expectedFullCsp);
+    expect(getCspHeader(ctx)).toEqual(
+      addElectionSourcesToExpectedCsp(expectedFullCsp),
+    );
   });
 
   it('returns the strict CSP when relaxedCsp is enabled but has no values set', () => {
@@ -112,7 +125,9 @@ describe('CSP tiers', () => {
       country: 'gb',
     });
 
-    expect(getCspHeader(ctx)).toEqual(expectedFullCsp);
+    expect(getCspHeader(ctx)).toEqual(
+      addElectionSourcesToExpectedCsp(expectedFullCsp),
+    );
   });
 
   it('returns the strict CSP when the country is in neither allow list', () => {
@@ -128,7 +143,9 @@ describe('CSP tiers', () => {
       country: 'gb',
     });
 
-    expect(getCspHeader(ctx)).toEqual(expectedFullCsp);
+    expect(getCspHeader(ctx)).toEqual(
+      addElectionSourcesToExpectedCsp(expectedFullCsp),
+    );
   });
 
   it('returns the strict CSP when no country can be resolved', () => {
@@ -141,7 +158,9 @@ describe('CSP tiers', () => {
       country: null,
     });
 
-    expect(getCspHeader(ctx)).toEqual(expectedFullCsp);
+    expect(getCspHeader(ctx)).toEqual(
+      addElectionSourcesToExpectedCsp(expectedFullCsp),
+    );
   });
 
   it('returns the relaxed CSP when the country is in the relaxedCsp allow list', () => {
@@ -157,7 +176,6 @@ describe('CSP tiers', () => {
       country: 'in',
       showAdsBasedOnLocation: true,
     });
-
     expect(getCspHeader(ctx)).toEqual(expectedRelaxedCsp);
   });
 

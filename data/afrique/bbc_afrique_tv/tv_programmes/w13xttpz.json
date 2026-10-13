@@ -1,0 +1,78 @@
+{
+  "data": {
+    "metadata": {
+      "type": "On Demand TV",
+      "atiAnalytics": {
+        "pageIdentifier": "afrique.bbc_afrique_tv.tv_programmes.w13xttmz.page",
+        "contentType": "player-episode",
+        "pageTitle": "BBC Info - BBC News Afrique",
+        "contentId": "urn:bbc:pips:w13xttmz"
+      }
+    },
+    "language": "fr",
+    "brandTitle": "BBC Info",
+    "episodeTitle": "BBC Info",
+    "headline": "BBC Info",
+    "shortSynopsis": "Le journal télévisé international de BBC Afrique.",
+    "mediumSynopsis": "Le journal télévisé international de BBC Afrique.",
+    "id": "urn:bbc:ares:ws_media:brand:bbc_afrique_tv/w13xttmz",
+    "brandId": "w13xttmz",
+    "episodeId": "w172yrnhsjqw4c9",
+    "masterBrand": "bbc_afrique_tv",
+    "releaseDateTimeStamp": "2023-03-17T00:00:00.000Z",
+    "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
+    "imageAltText": null,
+    "promoBrandTitle": "BBC Info",
+    "durationISO8601": "PT15M",
+    "thumbnailImageUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p08b22y1.png",
+    "episodeAvailability": "available",
+    "recentEpisodes": [],
+    "mediaBlocks": [
+      {
+        "type": "tv",
+        "model": {
+          "id": "w172yrnhsjqw4c9",
+          "subType": "episode",
+          "format": "Video",
+          "title": "BBC Info",
+          "synopses": {
+            "short": "Le journal télévisé international de BBC Afrique.",
+            "medium": "Le journal télévisé international de BBC Afrique."
+          },
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
+          "embedding": false,
+          "advertising": false,
+          "versions": [
+            {
+              "versionId": "w1msk0thd8j6rng",
+              "types": ["Original"],
+              "duration": 900,
+              "durationISO8601": "PT15M",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true,
+                "world": false
+              },
+              "availableFrom": "2023-03-17T19:30:00.000Z",
+              "availabilityStatus": "available",
+              "availableUntil": null
+            }
+          ],
+          "availability": "available",
+          "smpKind": "programme",
+          "episodeTitle": "BBC Info",
+          "type": "media"
+        }
+      },
+      {
+        "type": "mediaOverrides",
+        "model": {
+          "language": "fr",
+          "pageIdentifierOverride": "afrique.bbc_afrique_tv.tv.w172yrnhsjqw4c9.page"
+        }
+      }
+    ]
+  },
+  "contentType": "application/json; charset=utf-8"
+}

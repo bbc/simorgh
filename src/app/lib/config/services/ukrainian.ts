@@ -84,6 +84,9 @@ const baseServiceConfig = {
       moreAboutTopic: 'Більше про {topic}',
       fetchErrorMessage: 'Не вдалося завантажити. Спробуйте ще раз',
     },
+    googlePreferredSource: {
+      linkText: 'Додати як пріоритетне джерело в Google',
+    },
     currentPage: 'Поточна сторінка',
     skipLinkText: 'Перейти до змісту',
     skipContent: {
@@ -92,6 +95,13 @@ const baseServiceConfig = {
     },
     moreOnThis: '',
     navMenuText: 'Розділи',
+    liteSite: {
+      onboardingMessage:
+        'Ви переглядаєте текстову версію цього сайту, яка використовує менше даних. Перегляньте основну версію сайту з усіма зображеннями та відео.',
+      toMainSite: 'Перейти на основну версію сайту',
+      informationPage: 'Дізнатися більше про цю версію з економією трафіку',
+      dataSaving: 'Версія з економією трафіку',
+    },
     mediaAssetPage: {
       mediaPlayer: 'Медіаплеєр',
       audioPlayer: 'Аудіоплеєр',

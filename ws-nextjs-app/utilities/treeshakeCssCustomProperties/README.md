@@ -8,6 +8,8 @@ declare their full palette and font-variant token sets on `:root`, but any
 given page references only a fraction of them, so the rest are dead weight
 against AMP's 75KB inline-CSS limit.
 
-Safe because Simorgh never references custom properties from inline `style`
-attributes (only from stylesheets) and AMP runs no custom JS, so the final
-CSS string is the single source of truth for what is used.
+Runtime typography sets `--gel-*` custom properties in inline `style`
+attributes, so the stylesheet alone is not the full usage picture. Pass the
+rendered HTML as the second `usageSource` argument; any custom property it
+references is kept. Omitting it will silently drop tokens that only inline
+styles reference, and those declarations then fall back to `inherit`.

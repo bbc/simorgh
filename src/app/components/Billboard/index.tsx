@@ -4,9 +4,7 @@ import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { Summary, VISUAL_PROMINENCE } from '#app/models/types/curationData';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import Image from '#app/components/Image';
-import { createIchefSrcSet } from '#app/utilities/imageSrcSets';
-import getOriginCode from '#app/lib/utilities/imageSrcHelpers/originCode';
-import getLocator from '#app/lib/utilities/imageSrcHelpers/locator';
+import { prepareIchefImage } from '#app/utilities/imageSrcSets';
 import Heading from '../Heading';
 import MaskedImage from '../MaskedImage';
 import styles from './index.styles';
@@ -79,18 +77,14 @@ export default ({
       );
     }
 
-    const url = image.split('{width}')[1];
-    const originCode = getOriginCode(url);
-    const locator = getLocator(url);
     const {
       src: srcWebp,
       primarySrcset,
       primaryMimeType,
       fallbackSrcset,
       fallbackMimeType,
-    } = createIchefSrcSet({
-      originCode,
-      locator,
+    } = prepareIchefImage({
+      imageUrlTemplate: image,
       originalImageWidth: IMAGE_WIDTH,
       srcResolution: DEFAULT_IMAGE_RES,
     });

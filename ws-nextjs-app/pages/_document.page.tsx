@@ -55,9 +55,9 @@ type DocProps = {
   title: ReactElement;
 };
 
-const optimiseInlineCss = (css: string): string =>
+const optimiseInlineCss = (css: string, renderedHtml: string): string =>
   optimiseCssPrefixes(
-    trimFontFaceSourcesToWoff2(treeshakeCssCustomProperties(css)),
+    trimFontFaceSourcesToWoff2(treeshakeCssCustomProperties(css, renderedHtml)),
   );
 
 export default class AppDocument extends Document<DocProps> {
@@ -149,7 +149,9 @@ export default class AppDocument extends Document<DocProps> {
       };
     };
 
-    const inlineCss = optimiseInlineCss(css + getAmpLiteCss(getNextData()));
+    // Only AMP and Lite inline CSS, so canonical renders must not pay for this work.
+    const getInlineCss = () =>
+      optimiseInlineCss(css + getAmpLiteCss(getNextData()), this.props.html);
 
     switch (true) {
       case isAmp && pageType === 'article': {
@@ -161,7 +163,7 @@ export default class AppDocument extends Document<DocProps> {
             helmetScriptTags={helmetScriptTags}
             htmlAttrs={htmlAttrs}
             ids={ids}
-            styles={inlineCss}
+            styles={getInlineCss()}
             title={title}
           />
         );
@@ -174,7 +176,7 @@ export default class AppDocument extends Document<DocProps> {
             helmetMetaTags={helmetMetaTags}
             helmetScriptTags={helmetScriptTags}
             htmlAttrs={htmlAttrs}
-            styles={inlineCss}
+            styles={getInlineCss()}
             title={title}
           />
         );
