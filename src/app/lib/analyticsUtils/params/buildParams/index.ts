@@ -1,9 +1,9 @@
-import { LIBRARY_VERSION } from '../../../../lib/analyticsUtils';
+import { LIBRARY_VERSION } from '../..';
 import {
   buildReverbAnalyticsModel,
   buildResonancePageViewModel,
 } from '../../atiUrl';
-import { ATIDataWithContexts } from '../../types';
+import { ATIDataWithContexts } from '../../../../components/ATIAnalytics/types';
 
 export const buildPageATIParams = ({
   atiData,
