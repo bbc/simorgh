@@ -551,6 +551,18 @@ export const service: DefaultServiceConfig = {
           thirdPlaceFinal: 'तीसरा स्थान',
         },
       },
+      riddle: {
+        riddleOfTheDay: 'आज की पहेली',
+        expiresIn: 'समाप्त होगी',
+        attempts: 'प्रयास',
+        credits: 'क्रेडिट',
+        paid: 'भुगतान किया गया',
+        notEnoughCredits: 'पर्याप्त क्रेडिट नहीं हैं',
+        tooFast: 'बहुत जल्दी, फिर कोशिश करें',
+        answerHere: 'यहां अपना जवाब लिखें',
+        submit: 'भेजें',
+        outOfAttempts: 'आपके प्रयास समाप्त हो गए हैं!',
+      },
     },
     mostRead: {
       header: 'सबसे अधिक लोकप्रिय',

@@ -1,11 +1,13 @@
 import { use, useLayoutEffect, useRef, useState } from 'react';
 import Heading from '#app/components/Heading';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import Text from '../../../Text';
 import style from './index.styles';
 import Hint, { HintData } from '../HintButton';
 import Detail from '../Detail';
 import { GameState, RiddleContext } from '../../RiddleProvider';
 import { LocalStorageContext } from '../../LocalStorageProvider';
+import defaultTranslations from '../defaultTranslations';
 
 export type GameData = {
   expire: string;
@@ -42,6 +44,17 @@ export default () => {
     revealAnswer,
   } = use(RiddleContext);
   const { goes, coins } = use(LocalStorageContext);
+  const { translations } = use(ServiceContext);
+  const { riddle = defaultTranslations } = translations;
+  const {
+    riddleOfTheDay,
+    expiresIn,
+    attempts,
+    credits,
+    answerHere,
+    submit,
+    outOfAttempts,
+  } = riddle;
   const inputRef = useRef<HTMLInputElement>(null);
   const { question, hint1, hint2, answer, expire, funFact } = gameData;
   const failedMessageRef = useRef<HTMLHeadingElement>(null);
@@ -80,7 +93,7 @@ export default () => {
           fontVariant="sansBold"
           css={style.heading}
         >
-          Riddle of the day
+          {riddleOfTheDay}
         </Heading>
         <Text css={style.question} size="greatPrimer" fontVariant="sansBold">
           {question}
@@ -106,7 +119,7 @@ export default () => {
               <div css={style.inputUnderline}>
                 <input
                   type="text"
-                  placeholder="Answer here..."
+                  placeholder={answerHere}
                   css={style.input}
                   ref={inputRef}
                 />
@@ -127,7 +140,7 @@ export default () => {
                 }}
               >
                 <Text size="longPrimer" fontVariant="sansBold">
-                  Submit
+                  {submit}
                 </Text>
               </button>
             </form>
@@ -156,7 +169,7 @@ export default () => {
               ref={failedMessageRef}
               tabIndex={-1}
             >
-              {`You've run out of attempts!`}
+              {outOfAttempts}
             </Heading>
             <Hint
               title="Answer"
@@ -173,9 +186,9 @@ export default () => {
         )}
       </div>
       <div css={style.detailsArea}>
-        <Detail label="Expires in" content={timeString} as="time" />
-        <Detail label="Attempts" content={goesString} />
-        <Detail label="Credits" content={coinsString} />
+        <Detail label={expiresIn} content={timeString} as="time" />
+        <Detail label={attempts} content={goesString} />
+        <Detail label={credits} content={coinsString} />
       </div>
     </div>
   );

@@ -1,7 +1,9 @@
 import { use, useState } from 'react';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import Text from '../../../Text';
 import style from './index.styles';
 import { LocalStorageContext } from '../../LocalStorageProvider';
+import defaultTranslations from '../defaultTranslations';
 
 export type HintData = {
   title: string;
@@ -18,6 +20,9 @@ export default ({
   index,
 }: HintData & { index: number }) => {
   const { paidHints, buyHint, coins } = use(LocalStorageContext);
+  const { translations } = use(ServiceContext);
+  const { riddle = defaultTranslations } = translations;
+  const { paid, notEnoughCredits } = riddle;
   const [isInvoked, setIsInvoked] = useState(false);
   const priceText = `🪙 ${price}`;
   const paidStatus = paidHints[index];
@@ -49,13 +54,13 @@ export default ({
         </Text>
         <div css={style.paidIcon}>
           <Text size="minion" fontVariant="sansBold">
-            Paid
+            {paid}
           </Text>
         </div>
         {!paidStatus && !isAffordable && (
           <div css={style.notEnough}>
             <Text size="minion" fontVariant="sansBold">
-              Not enough credits
+              {notEnoughCredits}
             </Text>
           </div>
         )}

@@ -1,12 +1,18 @@
 import { use, useEffect, useState } from 'react';
 import onClient from '#app/lib/utilities/onClient';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import Text from '../../../Text';
 import style from './index.styles';
 import { LocalStorageContext } from '../../LocalStorageProvider';
+import defaultTranslations from '../defaultTranslations';
 
 const ReadMeter = ({ wordCount = 0 }: { wordCount?: number }) => {
   const { coins, addCoins } = use(LocalStorageContext);
   const [message, setMessage] = useState<null | string>(null);
+  const { translations } = use(ServiceContext);
+
+  const { riddle = defaultTranslations } = translations;
+  const { credits, tooFast } = riddle;
 
   useEffect(() => {
     let prevTime = new Date().getTime();
@@ -26,7 +32,7 @@ const ReadMeter = ({ wordCount = 0 }: { wordCount?: number }) => {
       if (rateOfScroll > 0 && rateOfScroll <= RATE_OF_SCROLL_THRESHOLD) {
         addCoins(wordsReadInScroll);
       } else if (rateOfScroll > 0) {
-        setMessage('TOO FAST!');
+        setMessage(tooFast);
         setTimeout(() => {
           setMessage(null);
         }, 2000);
@@ -35,17 +41,17 @@ const ReadMeter = ({ wordCount = 0 }: { wordCount?: number }) => {
       prevTime = currTime;
       prevScrollDepth = currScrollDepth;
     };
-    console.log('CHECK', wordCount);
+
     document.addEventListener('scrollend', listener);
     return () => {
       document.removeEventListener('scrollend', listener);
     };
-  }, [addCoins, wordCount]);
+  }, [addCoins, tooFast, wordCount]);
 
   return (
     <div css={style.container}>
       <Text css={style.heading} size="brevier" fontVariant="sansBold">
-        CREDITS
+        {credits}
       </Text>
       <Text css={style.guage} size="pica" fontVariant="serifLight">
         {message ?? coins}

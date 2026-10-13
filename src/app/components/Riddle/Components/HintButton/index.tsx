@@ -1,7 +1,9 @@
 import { use } from 'react';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import Text from '../../../Text';
 import style from './index.styles';
 import { LocalStorageContext } from '../../LocalStorageProvider';
+import defaultTranslations from '../defaultTranslations';
 
 export type HintData = {
   title: string;
@@ -19,10 +21,16 @@ export default ({
   onClickFn,
 }: HintData & { index: number; onClickFn?: () => void }) => {
   const { paidHints, buyHint, coins } = use(LocalStorageContext);
+  const { translations } = use(ServiceContext);
+
+  const { riddle = defaultTranslations } = translations;
+  const { paid, notEnoughCredits } = riddle;
+
   const priceText = `🪙 ${price}`;
   const paidStatus = paidHints[index];
 
   const isAffordable = price <= coins;
+
   return (
     <div css={style.hintContainer}>
       <button
@@ -39,7 +47,7 @@ export default ({
         {paidStatus && (
           <div css={style.paidIcon}>
             <Text size="minion" fontVariant="sansBold">
-              Paid
+              {paid}
             </Text>
           </div>
         )}
@@ -52,7 +60,7 @@ export default ({
         {!paidStatus && !isAffordable && (
           <div css={style.notEnough}>
             <Text size="minion" fontVariant="sansBold">
-              Not enough credits
+              {notEnoughCredits}
             </Text>
           </div>
         )}
