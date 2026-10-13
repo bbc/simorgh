@@ -13,6 +13,7 @@ import { MediaOverrides } from '#app/models/types/media';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import SaveArticleButton from '#app/components/SaveArticleButton';
 import extractSaveArticleProps from '#app/lib/utilities/extractSaveArticleProps';
+import UserZoomIntercept from '#app/components/UserZoomIntercept';
 import useToggle from '../../hooks/useToggle';
 import {
   getArticleId,
@@ -314,6 +315,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
           <main css={styles.mainContent} role="main">
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </main>
+          <UserZoomIntercept trigger="immediate" />
           <OptimizelyPageMetrics trackPageDepth />
           {showTopicDiscovery && <TopicDiscovery topics={topics} />}
           {showTopics && (
