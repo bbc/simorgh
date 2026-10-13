@@ -122,7 +122,7 @@ describe('Inline', () => {
           ...russianServiceConfig.default.podcastPromo,
           linkLabel: {
             ...russianServiceConfig.default.podcastPromo.linkLabel,
-            href: 'https://www.bbc.com/portuguese/articles/cwly7mke0mpdo',
+            href: 'https://www.bbc.com/portuguese/articles/cm1dlv13yql9o',
           },
         },
       },

@@ -48,16 +48,23 @@ export const service: DefaultServiceConfig = {
     passportHomes: ['brasil'],
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    electionBanner: {
+      title: 'Eleições nos EUA 2026',
+      electionThingIds: ['19994837-27b8-463f-965d-fbb0ac1622a3'],
+      assocPressIframeSrc:
+        'https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/33042.html',
+    },
     articleMessageBanners: [
       {
         thingIds: ['b91eaef4-fdf2-47a6-b3ec-05b5a55a4843'],
-        linkHref: 'https://www.bbc.com/portuguese/articles/cwly7mke0mpdo',
-        heading: 'Eleições 2026: resultados em tempo real',
+        linkHref: 'https://www.bbc.com/portuguese/articles/cm1dlv13yql9o',
+        heading:
+          'Lula x Flávio Bolsonaro: Quem está à frente nas pesquisas para presidente?',
         description:
-          'Acompanhe a apuração para presidente e governador em seu Estado e município com o mapa interativo da BBC News Brasil',
+          ' Veja a intenção de voto no 2º turno no Agregador de Pesquisas da BBC News Brasil',
         linkText: 'Clique aqui',
         image:
-          'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/3605/live/c8960690-bcaf-11f1-a64c-550be9e3c66b.png.webp',
+          'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/caa9/live/a04f7e60-4a1c-11f1-b55d-0f258dce1735.png.webp',
       },
       {
         thingIds: ['f30c1edd-b1de-449c-a57e-1003edc03174'],
@@ -71,16 +78,17 @@ export const service: DefaultServiceConfig = {
       },
     ],
     podcastPromo: {
-      title: 'Promoção da eleição 2026',
-      brandTitle: 'Acompanhe apuração em tempo real',
-      brandDescription: ' ',
+      title: 'Promoção Agregador de pesquisas',
+      brandTitle: 'Veja Agregador de Pesquisas da BBC News Brasil',
+      brandDescription:
+        'Veja a intenção de voto no 2º turno no Agregador de Pesquisas da BBC News Brasil',
       image: {
-        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0pd013r.png',
-        alt: 'Resultados da eleição 2026',
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0njcpky.jpg',
+        alt: 'Agregador de Pesquisas da BBC News Brasil',
       },
       linkLabel: {
         text: 'Clique aqui',
-        href: 'https://www.bbc.com/portuguese/articles/cwly7mke0mpdo',
+        href: 'https://www.bbc.com/portuguese/articles/cm1dlv13yql9o',
       },
       skipLink: {
         text: 'Pule %title% e continue lendo',
@@ -124,6 +132,13 @@ export const service: DefaultServiceConfig = {
       relatedTopics: 'Tópicos relacionados',
       moreOnThis: '',
       navMenuText: 'Seções',
+      liteSite: {
+        onboardingMessage:
+          'Você está vendo uma versão somente texto deste site que usa menos dados. Veja a versão principal do site com todas as imagens e vídeos.',
+        toMainSite: 'Me leve para o site principal',
+        informationPage: 'Saiba mais sobre esta versão que economiza dados',
+        dataSaving: 'Versão que economiza dados',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',

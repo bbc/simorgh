@@ -84,6 +84,14 @@ export const service: DefaultServiceConfig = {
       relatedTopics: 'İlgili Konular',
       moreOnThis: '',
       navMenuText: 'Kategoriler',
+      liteSite: {
+        onboardingMessage:
+          'Bu web sitesinin daha az veri kullanan yalnızca metin sürümünü görüntülüyorsunuz. Tüm görsel ve videoları içeren ana sürümü görüntüleyin.',
+        toMainSite: 'Beni ana web sitesine götür',
+        informationPage:
+          'Bu veri tasarrufu sağlayan sürüm hakkında daha fazla bilgi edinin',
+        dataSaving: 'Veri tasarrufu sürümü',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
