@@ -118,8 +118,8 @@ const HomePage = ({ pageData }: HomePageProps) => {
           </span>
         </VisuallyHiddenText>
         <div css={styles.inner}>
+          <ElectionBanner />
           <div css={styles.margins}>
-            <ElectionBanner />
             {curations.map(
               (
                 {

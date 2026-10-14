@@ -100,7 +100,7 @@ export default function ElectionBanner({
       isAmp ? SIMORGH_INCLUDES_BASE_AMP_URL : SIMORGH_INCLUDES_BASE_URL
     }/${iframeSrcToUse}${isAmp ? '/amp' : ''}`;
 
-  const hasTitle = isAssocPress && title;
+  const hasTitle = isAssocPress && title && pageType !== 'topic';
   const iframeTitle = validAboutTag?.thingLabel || title;
 
   if (isAmp) {

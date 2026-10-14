@@ -258,6 +258,43 @@ describe('ElectionBanner', () => {
   });
 
   describe('Association Press', () => {
+    it.each([false, true])(
+      'hides the visible title on topic pages but preserves the iframe title when isAmp is %s',
+      isAmp => {
+        const { getByTestId, queryByText } = renderElectionBanner(
+          { curationIds: [MOCK_ELECTION_CURATION_ID] },
+          {
+            pageType: 'topic',
+            isAmp,
+            toggles: { electionBanner: { enabled: true } },
+          },
+          mockAssocPressServiceContext,
+        );
+
+        expect(queryByText(MOCK_TITLE)).not.toBeInTheDocument();
+        expect(
+          getByTestId(ELEMENT_ID).querySelector('iframe, amp-iframe'),
+        ).toHaveAttribute('title', MOCK_TITLE);
+      },
+    );
+
+    it.each([false, true])(
+      'keeps the visible title on homepages when isAmp is %s',
+      isAmp => {
+        const { getByText } = renderElectionBanner(
+          {},
+          {
+            pageType: 'home',
+            isAmp,
+            toggles: { electionBanner: { enabled: true } },
+          },
+          mockAssocPressServiceContext,
+        );
+
+        expect(getByText(MOCK_TITLE)).toBeInTheDocument();
+      },
+    );
+
     it.each([
       ['mundo', undefined, '33021'],
       ['portuguese', undefined, '33042'],

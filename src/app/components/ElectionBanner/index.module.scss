@@ -91,8 +91,22 @@ $ap-election-banner-iframe-heights: (
   margin: 0 auto;
   border-bottom: solid #{theme.pixelsToRem-px-to-rem(1)} transparent;
 
-  @media #{theme.$mediaQueries-group-4-min-width} {
-    padding: #{theme.$spacings-double} #{theme.$spacings-double} 0;
+  &[data-page-type='topic'] {
+    margin-block-end: #{theme.$spacings-full};
+  }
+
+  &[data-page-type='home'],
+  &[data-page-type='topic'] {
+    margin-inline: calc(-1 * #{theme.$spacings-full});
+
+    @media #{theme.$mediaQueries-group-2-min-width} {
+      margin-inline: calc(-1 * #{theme.$spacings-double});
+    }
+
+    @media #{theme.$mediaQueries-group-4-min-width} {
+      margin-inline: auto;
+      margin-block-end: #{theme.$spacings-double};
+    }
   }
 }
 

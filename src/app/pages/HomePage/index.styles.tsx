@@ -30,6 +30,9 @@ const styles = {
       [mq.GROUP_4_MIN_WIDTH]: {
         margin: `${spacings.QUINTUPLE}rem 0`,
       },
+      '[data-page-type="home"] + &': {
+        marginTop: 0,
+      },
     }),
 };
 
