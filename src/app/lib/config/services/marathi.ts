@@ -96,6 +96,13 @@ export const service: DefaultServiceConfig = {
       relatedTopics: 'संबंधित विषय',
       moreOnThis: '',
       navMenuText: 'विभाग',
+      liteSite: {
+        onboardingMessage:
+          'तुम्ही या वेबसाइटची फक्त मजकूर असलेली आवृत्ती पाहत आहात, जी कमी डेटा वापरते. सर्व फोटो आणि व्हिडिओंसह वेबसाइटची मुख्य आवृत्ती पाहा.',
+        toMainSite: 'मला मुख्य वेबसाइटवर घेऊन चला',
+        informationPage: 'या डेटा-बचत आवृत्तीबद्दल अधिक जाणून घ्या',
+        dataSaving: 'डेटा-बचत आवृत्ती',
+      },
       mediaAssetPage: {
         mediaPlayer: 'मीडिया प्लेयर',
         audioPlayer: 'ऑडिओ प्लेयर',
