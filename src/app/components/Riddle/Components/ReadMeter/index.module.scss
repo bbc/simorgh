@@ -10,14 +10,15 @@
   bottom: 0.75rem;
   inset-inline-end: 0.75rem;
   z-index: 5;
-}
 
-.heading {
-  background: theme.$palette-white;
-}
 
-.guage {
-  color: theme.$palette-white;
-  display: block;
-  margin-top: #{theme.$spacings-half};
+  .heading {
+    background: theme.$palette-white;
+  }
+
+  .guage {
+    color: theme.$palette-white;
+    display: block;
+    margin-top: #{theme.$spacings-half};
+  }
 }

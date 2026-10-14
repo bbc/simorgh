@@ -7,26 +7,27 @@
   @media #{theme.$mediaQueries-group-3-min-width} {
     align-content: center;
   }
-}
 
-.detailLabel {
-  @include theme.typography-from-scale-and-variant(minion, 'sans-bold');
-  display: inline-block;
-  background: theme.$palette-black;
-  color: theme.$palette-white;
-  margin-bottom: #{theme.$spacings-full};
 
-  @media #{theme.$mediaQueries-group-3-min-width} {
-    @include theme.typography-from-scale-and-variant(greatPrimer, 'sans-bold');
+  .detailLabel {
+    @include theme.typography-from-scale-and-variant(minion, 'sans-bold');
+    display: inline-block;
+    background: theme.$palette-black;
+    color: theme.$palette-white;
+    margin-bottom: #{theme.$spacings-full};
+
+    @media #{theme.$mediaQueries-group-3-min-width} {
+      @include theme.typography-from-scale-and-variant(greatPrimer, 'sans-bold');
+    }
   }
-}
 
-.detailContent {
-  @include theme.typography-from-scale-and-variant(brevier, 'serif-light');
-  display: inline-block;
-  margin-bottom: #{theme.$spacings-full};
+  .detailContent {
+    @include theme.typography-from-scale-and-variant(brevier, 'serif-light');
+    display: inline-block;
+    margin-bottom: #{theme.$spacings-full};
 
-  @media #{theme.$mediaQueries-group-3-min-width} {
-    @include theme.typography-from-scale-and-variant(doublePica, 'serif-light');
+    @media #{theme.$mediaQueries-group-3-min-width} {
+      @include theme.typography-from-scale-and-variant(doublePica, 'serif-light');
+    }
   }
 }
