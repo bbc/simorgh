@@ -9,9 +9,8 @@ import {
 import { RequestContext } from '#app/contexts/RequestContext';
 import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import constructReverbUrl from '#app/lib/analyticsUtils/staticATITracking/constructReverbUrl';
-// UNCOMMENT FOR RESONANCE CLICK TRACKING , BLOCKED FOR NOW
-// import dispatchViewabilityEvent from '#app/components/ATIAnalytics/resonance/dispatchResonanceEvent';
-// import buildResonanceEventConfig from '#app/components/ATIAnalytics/resonance/buildResonanceEventConfig';
+import dispatchViewabilityEvent from '#app/components/ATIAnalytics/resonance/dispatchResonanceEvent';
+import buildResonanceEventConfig from '#app/components/ATIAnalytics/resonance/buildResonanceEventConfig';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import activateExperiment from '#app/hooks/useOptimizelyVariation/activateExperiment';
 import {
@@ -78,8 +77,7 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
   const { trackingIsEnabled } = useTrackingToggle(componentName);
   const [clickedIdentifier, setClickedIdentifier] = useState(null);
 
-  // UNCOMMENT FOR RESONANCE CLICK TRACKING , BLOCKED FOR NOW
-  const { service /* , resonanceEnabled */ } = use(ServiceContext);
+  const { service, resonanceEnabled } = use(ServiceContext);
   const { optimizely } = use(OptimizelyContext);
   const { service: pageService, pageType, isAmp } = use(RequestContext);
 
@@ -199,35 +197,35 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
                   experimentVariant,
                 }),
             });
-            // UNCOMMENT FOR RESONANCE CLICK TRACKING , BLOCKED FOR NOW
-            // if (resonanceEnabled) {
-            //   dispatchViewabilityEvent(
-            //     buildResonanceEventConfig({
-            //       type: CLICK_EVENT,
-            //       campaignID,
-            //       componentName,
-            //       format,
-            //       pageIdentifier,
-            //       platform,
-            //       producerId,
-            //       producerName,
-            //       service,
-            //       advertiserID,
-            //       statsDestination,
-            //       url: url || nextPageUrl,
-            //       detailedPlacement,
-            //       ...(groupTracker && { groupTracker }),
-            //       ...(itemTracker && { itemTracker }),
-            //       isSignedIn,
-            //       hashedId,
-            //       ...(experimentVariant &&
-            //         experimentVariant !== 'off' && {
-            //           experimentName,
-            //           experimentVariant,
-            //         }),
-            //     }),
-            //   );
-            // }
+            if (resonanceEnabled) {
+              console.log('CHECK REACHED', resonanceEnabled);
+              dispatchViewabilityEvent(
+                buildResonanceEventConfig({
+                  type: CLICK_EVENT,
+                  campaignID,
+                  componentName,
+                  format,
+                  pageIdentifier,
+                  platform,
+                  producerId,
+                  producerName,
+                  service,
+                  advertiserID,
+                  statsDestination,
+                  url: url || nextPageUrl,
+                  detailedPlacement,
+                  ...(groupTracker && { groupTracker }),
+                  ...(itemTracker && { itemTracker }),
+                  isSignedIn,
+                  hashedId,
+                  ...(experimentVariant &&
+                    experimentVariant !== 'off' && {
+                      experimentName,
+                      experimentVariant,
+                    }),
+                }),
+              );
+            }
           } finally {
             if (nextPageUrl && !preventNavigation) {
               if (optimizely) {
@@ -263,8 +261,7 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
       isSignedIn,
       hashedId,
       isPersonalisationOn,
-      // UNCOMMENT FOR RESONANCE CLICK TRACKING , BLOCKED FOR NOW
-      /* ,resonanceEnabled */
+      resonanceEnabled,
       preventNavigation,
       isHomepageArticlePromoClick,
     ],
