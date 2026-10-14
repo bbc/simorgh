@@ -91,6 +91,10 @@ $ap-election-banner-iframe-heights: (
   margin: 0 auto;
   border-bottom: solid #{theme.pixelsToRem-px-to-rem(1)} transparent;
 
+  @media #{theme.$mediaQueries-group-4-min-width} {
+    padding: #{theme.$spacings-double} #{theme.$spacings-double} 0;
+  }
+
   &[data-page-type='topic'] {
     margin-block-end: #{theme.$spacings-full};
   }
@@ -104,6 +108,7 @@ $ap-election-banner-iframe-heights: (
     }
 
     @media #{theme.$mediaQueries-group-4-min-width} {
+      padding: 0;
       margin-inline: auto;
       margin-block-end: #{theme.$spacings-double};
     }
