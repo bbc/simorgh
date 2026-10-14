@@ -27,8 +27,14 @@ const useUASFollowedTopics = ({
   itemsPerPage = 10,
   startIndex = 0,
 }: UseFollowedTopicsParams = {}): UseFollowedTopicsReturn => {
-  const { hashedUserId = '', isRefreshAvailable } = use(AccountContext);
+  const {
+    hashedUserId = '',
+    isRefreshAvailable,
+    isTopicPersonalizationEnabled,
+  } = use(AccountContext);
   const { service } = use(ServiceContext);
+
+  const isQueryEnabled = !!hashedUserId && isTopicPersonalizationEnabled;
 
   const trackError = useErrorTracking();
 
@@ -47,7 +53,7 @@ const useUASFollowedTopics = ({
         isRefreshAvailable,
         service,
       }),
-    enabled: !!hashedUserId,
+    enabled: isQueryEnabled,
   });
 
   useEffect(() => {

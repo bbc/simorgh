@@ -37,7 +37,10 @@ const mockUseFollowedTopics = useUASFollowedTopics as jest.MockedFunction<
 
 const renderOptions = {
   service: 'hindi' as const,
-  toggles: { uasPersonalization: { enabled: true, value: 'hindi' } },
+  toggles: {
+    uasPersonalization: { enabled: true, value: 'hindi' },
+    topicUasPersonalization: { enabled: true, value: 'hindi' },
+  },
   idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: true },
 };
 
@@ -229,7 +232,7 @@ describe('MyNewsPage', () => {
         screen.getByRole('link', { name: mockFollowedTopics[1].title }),
       ).toBeInTheDocument();
       expect(
-        screen.queryByText(myNewsTranslations.noArticles),
+        screen.queryByText('You haven’t followed any topics yet'),
       ).not.toBeInTheDocument();
     });
   });
