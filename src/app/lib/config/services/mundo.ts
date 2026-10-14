@@ -50,9 +50,6 @@ export const service: DefaultServiceConfig = {
     electionBanner: {
       title: 'Elecciones EE.UU. 2026',
       electionThingIds: ['19994837-27b8-463f-965d-fbb0ac1622a3'],
-      // TODO: Before merging, remove the temporary election override in
-      // data/mundo/topics/c7zp57yyz25t.json by restoring its curationId to
-      // urn:bbc:vivo:curation:3dbcb38a-f8c3-4661-a7fe-146105a493f9, then remove this reminder.
       electionCurationIds: [
         'urn:bbc:vivo:curation:874d2084-631c-4ee8-b582-f88920fcd960',
       ],
