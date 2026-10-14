@@ -1,4 +1,4 @@
-import onClient from '#app/lib/utilities/onClient';
+import { useEffect, useState } from 'react';
 import Card from './Components/Card';
 import RiddleProvider from './RiddleProvider';
 import DevControlPanel from './Components/DevControlPanel';
@@ -10,6 +10,7 @@ export type CachedGameData = {
 };
 
 export default () => {
+  const [isReadyToLoad, setReadyToLoad] = useState(false);
   const Game = (
     <RiddleProvider>
       <Card />
@@ -17,5 +18,9 @@ export default () => {
     </RiddleProvider>
   );
 
-  return onClient() ? Game : <Placeholder />;
+  useEffect(() => {
+    setReadyToLoad(true);
+  }, []);
+
+  return isReadyToLoad ? Game : <Placeholder />;
 };

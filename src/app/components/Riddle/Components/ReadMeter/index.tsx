@@ -1,5 +1,4 @@
 import { use, useEffect, useState } from 'react';
-import onClient from '#app/lib/utilities/onClient';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import Text from '../../../Text';
 import styles from './index.module.scss';
@@ -61,7 +60,13 @@ const ReadMeter = ({ wordCount = 0 }: { wordCount?: number }) => {
 };
 
 export default ({ wordCount }: { wordCount?: number }) => {
+  const [isReadyToLoad, setReadyToLoad] = useState(false);
+
+  useEffect(() => {
+    setReadyToLoad(true);
+  }, []);
+
   const ReadMeterWithProvider = <ReadMeter wordCount={wordCount} />;
 
-  return onClient() ? ReadMeterWithProvider : null;
+  return isReadyToLoad ? ReadMeterWithProvider : null;
 };
