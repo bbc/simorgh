@@ -2,7 +2,7 @@ import { use, useLayoutEffect, useRef, useState } from 'react';
 import Heading from '#app/components/Heading';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import Text from '../../../Text';
-import style from './index.styles';
+import styles from './index.module.scss';
 import Hint, { HintData } from '../HintButton';
 import Detail from '../Detail';
 import { GameState, RiddleContext } from '../../RiddleProvider';
@@ -85,22 +85,26 @@ export default () => {
   }, [isInvoked, gameState]);
 
   return (
-    <div css={style.container} key={gameIndex}>
-      <div css={style.playArea}>
+    <div className={styles.container} key={gameIndex}>
+      <div className={styles.playArea}>
         <Heading
           level={2}
           size="brevier"
           fontVariant="sansBold"
-          css={style.heading}
+          className={styles.heading}
         >
           {riddleOfTheDay}
         </Heading>
-        <Text css={style.question} size="greatPrimer" fontVariant="sansBold">
+        <Text
+          className={styles.question}
+          size="greatPrimer"
+          fontVariant="sansBold"
+        >
           {question}
         </Text>
         {gameState === GameState.PLAY && (
-          <div css={style.fixedHeight}>
-            <div css={style.hintsArea}>
+          <div className={styles.fixedHeight}>
+            <div className={styles.hintsArea}>
               <Hint {...hint1} index={0} />
               <Hint {...hint2} index={1} />
               <Hint
@@ -115,19 +119,19 @@ export default () => {
                 }}
               />
             </div>
-            <form css={style.inputContainer}>
-              <div css={style.inputUnderline}>
+            <form className={styles.inputContainer}>
+              <div className={styles.inputUnderline}>
                 <input
                   type="text"
                   placeholder={answerHere}
-                  css={style.input}
+                  className={styles.input}
                   ref={inputRef}
                 />
-                <div css={style.underline} />
+                <div className={styles.underline} />
               </div>
               <button
                 type="submit"
-                css={style.submitButton}
+                className={styles.submitButton}
                 onClick={event => {
                   event.preventDefault();
                   const userInput = inputRef.current?.value;
@@ -147,25 +151,25 @@ export default () => {
           </div>
         )}
         {gameState === GameState.WINNER && (
-          <div css={style.fixedHeight}>
+          <div className={styles.fixedHeight}>
             <Heading
               level={3}
-              css={style.answerHeading}
+              className={styles.answerHeading}
               ref={winnerMessageRef}
               tabIndex={-1}
             >
               {capitalise(answer)}
             </Heading>
-            <Text as="p" css={style.didYouKnow}>
+            <Text as="p" className={styles.didYouKnow}>
               {funFact}
             </Text>
           </div>
         )}
         {gameState === GameState.FAILED && (
-          <div css={style.fixedHeight}>
+          <div className={styles.fixedHeight}>
             <Heading
               level={3}
-              css={style.answerHeading}
+              className={styles.answerHeading}
               ref={failedMessageRef}
               tabIndex={-1}
             >
@@ -185,7 +189,7 @@ export default () => {
           </div>
         )}
       </div>
-      <div css={style.detailsArea}>
+      <div className={styles.detailsArea}>
         <Detail label={expiresIn} content={timeString} as="time" />
         <Detail label={attempts} content={goesString} />
         <Detail label={credits} content={coinsString} />

@@ -2,7 +2,7 @@ import { use, useEffect, useState } from 'react';
 import onClient from '#app/lib/utilities/onClient';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import Text from '../../../Text';
-import style from './index.styles';
+import styles from './index.module.scss';
 import { LocalStorageContext } from '../../LocalStorageProvider';
 import defaultTranslations from '../defaultTranslations';
 
@@ -49,11 +49,11 @@ const ReadMeter = ({ wordCount = 0 }: { wordCount?: number }) => {
   }, [addCoins, tooFast, wordCount]);
 
   return (
-    <div css={style.container}>
-      <Text css={style.heading} size="brevier" fontVariant="sansBold">
+    <div className={styles.container}>
+      <Text className={styles.heading} size="brevier" fontVariant="sansBold">
         {credits}
       </Text>
-      <Text css={style.guage} size="pica" fontVariant="serifLight">
+      <Text className={styles.guage} size="pica" fontVariant="serifLight">
         {message ?? coins}
       </Text>
     </div>

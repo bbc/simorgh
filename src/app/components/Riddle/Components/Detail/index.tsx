@@ -1,5 +1,5 @@
 import Text from '../../../Text';
-import style from './index.styles';
+import styles from './index.module.scss';
 
 export default ({
   as,
@@ -11,10 +11,10 @@ export default ({
   content: string;
 }) => {
   return (
-    <div css={style.detailContainer}>
-      <Text css={style.detailLabel}>{label}</Text>
+    <div className={styles.detailContainer}>
+      <Text className={styles.detailLabel}>{label}</Text>
       <div>
-        <Text {...(as && { as })} css={style.detailContent}>
+        <Text {...(as && { as })} className={styles.detailContent}>
           {content}
         </Text>
       </div>

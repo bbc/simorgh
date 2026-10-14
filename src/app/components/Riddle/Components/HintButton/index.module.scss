@@ -1,0 +1,60 @@
+@use '@scss/themeTokens' as theme;
+
+.hintContainer {
+  position: relative;
+  cursor: pointer;
+  margin: #{theme.$spacings-half} 0;
+}
+
+.hintButton {
+  all: unset;
+  display: flex;
+  width: 100%;
+
+  &:focus-visible {
+    outline: #{theme.pixelsToRem-px-to-rem(3)} solid theme.$palette-black;
+    box-shadow: 0 0 0 #{theme.pixelsToRem-px-to-rem(3)} theme.$palette-white;
+    outline-offset: #{theme.pixelsToRem-px-to-rem(3)};
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.hintSummaryText {
+  flex-grow: 1;
+  padding: 0.6rem #{theme.$spacings-full};
+  background: theme.$palette-ghost;
+}
+
+.hintPrice {
+  width: 4rem;
+  padding: 0.6rem 1rem;
+  background: theme.$palette-grey-3;
+  text-align: center;
+}
+
+.paidIcon {
+  position: absolute;
+  top: 0;
+  inset-inline-start: 0;
+  width: 2.5rem;
+  background: cyan;
+  text-align: center;
+}
+
+.notEnough {
+  position: absolute;
+  top: 0;
+  inset-inline-start: 0;
+  background: yellow;
+  text-align: center;
+}
+
+.hintAnswerText {
+  position: absolute;
+  top: 0;
+  inset-inline-end: 0;
+  inset-inline-start: 6rem;
+  padding: 0.6rem #{theme.$spacings-full};
+  background: #fefae0;
+}

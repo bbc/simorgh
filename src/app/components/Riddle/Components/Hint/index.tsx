@@ -1,7 +1,7 @@
 import { use, useState } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import Text from '../../../Text';
-import style from './index.styles';
+import styles from './index.module.scss';
 import { LocalStorageContext } from '../../LocalStorageProvider';
 import defaultTranslations from '../defaultTranslations';
 
@@ -30,7 +30,7 @@ export default ({
   const isAffordable = price <= coins;
   return (
     <details
-      css={style.hintContainer}
+      className={styles.hintContainer}
       {...((paidStatus || !isAffordable) && {
         disabled: true,
         'aria-hidden': 'true',
@@ -38,7 +38,7 @@ export default ({
       {...(paidStatus && !isInvoked && { open: true })}
     >
       <summary
-        css={style.hintSummary}
+        className={styles.hintSummary}
         onClick={event => {
           buyHint(index, price);
           setIsInvoked(true);
@@ -46,26 +46,34 @@ export default ({
         }}
         {...((paidStatus || !isAffordable) && { tabIndex: -1 })}
       >
-        <Text css={style.hintPrice} size="pica" fontVariant="serifLight">
+        <Text className={styles.hintPrice} size="pica" fontVariant="serifLight">
           {paidStatus ? paidSymbol : priceText}
         </Text>
-        <Text css={style.hintSummaryText} size="pica" fontVariant="sansBold">
+        <Text
+          className={styles.hintSummaryText}
+          size="pica"
+          fontVariant="sansBold"
+        >
           {title.length > 0 ? title : 'Hint'}
         </Text>
-        <div css={style.paidIcon}>
+        <div className={styles.paidIcon}>
           <Text size="minion" fontVariant="sansBold">
             {paid}
           </Text>
         </div>
         {!paidStatus && !isAffordable && (
-          <div css={style.notEnough}>
+          <div className={styles.notEnough}>
             <Text size="minion" fontVariant="sansBold">
               {notEnoughCredits}
             </Text>
           </div>
         )}
       </summary>
-      <Text css={style.hintAnswerText} size="pica" fontVariant="sansBold">
+      <Text
+        className={styles.hintAnswerText}
+        size="pica"
+        fontVariant="sansBold"
+      >
         {hintText}
       </Text>
     </details>

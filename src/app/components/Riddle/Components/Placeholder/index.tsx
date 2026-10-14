@@ -1,5 +1,5 @@
-import style from './index.styles';
+import styles from './index.module.scss';
 
 export default () => {
-  return <div css={style.placeholder} />;
+  return <div className={styles.placeholder} />;
 };

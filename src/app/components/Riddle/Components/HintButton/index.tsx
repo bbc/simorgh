@@ -1,7 +1,7 @@
 import { use } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import Text from '../../../Text';
-import style from './index.styles';
+import styles from './index.module.scss';
 import { LocalStorageContext } from '../../LocalStorageProvider';
 import defaultTranslations from '../defaultTranslations';
 
@@ -32,10 +32,10 @@ export default ({
   const isAffordable = price <= coins;
 
   return (
-    <div css={style.hintContainer}>
+    <div className={styles.hintContainer}>
       <button
         type="button"
-        css={style.hintButton}
+        className={styles.hintButton}
         onClick={() => {
           if (onClickFn) {
             onClickFn();
@@ -45,27 +45,35 @@ export default ({
         {...((paidStatus || !isAffordable) && { disabled: true })}
       >
         {paidStatus && (
-          <div css={style.paidIcon}>
+          <div className={styles.paidIcon}>
             <Text size="minion" fontVariant="sansBold">
               {paid}
             </Text>
           </div>
         )}
-        <Text css={style.hintPrice} size="pica" fontVariant="serifLight">
+        <Text className={styles.hintPrice} size="pica" fontVariant="serifLight">
           {paidStatus ? paidSymbol : priceText}
         </Text>
-        <Text css={style.hintSummaryText} size="pica" fontVariant="sansBold">
+        <Text
+          className={styles.hintSummaryText}
+          size="pica"
+          fontVariant="sansBold"
+        >
           {title.length > 0 ? title : 'Hint'}
         </Text>
         {!paidStatus && !isAffordable && (
-          <div css={style.notEnough}>
+          <div className={styles.notEnough}>
             <Text size="minion" fontVariant="sansBold">
               {notEnoughCredits}
             </Text>
           </div>
         )}
         {paidStatus && (
-          <Text css={style.hintAnswerText} size="pica" fontVariant="sansBold">
+          <Text
+            className={styles.hintAnswerText}
+            size="pica"
+            fontVariant="sansBold"
+          >
             {hintText}
           </Text>
         )}

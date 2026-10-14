@@ -1,0 +1,120 @@
+@use '@scss/themeTokens' as theme;
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    flex-direction: row;
+  }
+}
+
+.playArea {
+  flex: 1;
+  color: theme.$palette-ghost;
+  background: theme.$palette-postbox;
+  padding: #{theme.$spacings-full};
+}
+
+.fixedHeight {
+  min-height: 13.5rem;
+}
+
+.question {
+  background: theme.$palette-ghost;
+}
+
+.heading {
+  color: theme.$palette-white;
+  text-align: end;
+  margin-bottom: #{theme.$spacings-full};
+}
+
+.answerHeading {
+  margin: #{theme.$spacings-triple} 0;
+  color: theme.$palette-white;
+}
+
+.didYouKnow {
+  color: theme.$palette-white;
+}
+
+.inputContainer {
+  display: flex;
+  margin-bottom: #{theme.$spacings-full};
+}
+
+.inputUnderline {
+  display: flex;
+  position: relative;
+}
+
+.underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0.1rem;
+  background-color: theme.$palette-ghost;
+}
+
+.input {
+  @include theme.typography-from-scale-and-variant(greatPrimer, 'serif-light');
+  color: theme.$palette-ghost;
+  outline: 0;
+  border: 0;
+  background: theme.$palette-postbox;
+
+  &::placeholder {
+    @include theme.fontVariants-gel-font-variant('serif-light');
+    font-style: oblique;
+    color: theme.$palette-ghost;
+  }
+
+  &:focus + .underline {
+    height: 0.2rem;
+    background-color: theme.$palette-ghost;
+  }
+}
+
+.submitButton {
+  cursor: pointer;
+  padding: #{theme.$spacings-full};
+  margin-inline-start: #{theme.$spacings-full};
+  border: 0.15rem solid theme.$palette-ghost;
+  background: theme.$palette-postbox;
+
+  span {
+    color: theme.$palette-ghost;
+  }
+
+  &:hover {
+    background: theme.$palette-ghost;
+
+    span {
+      color: theme.$palette-black;
+    }
+  }
+}
+
+.hintsArea {
+  margin: #{theme.$spacings-triple} 0 2.5rem;
+}
+
+.detailsArea {
+  padding: #{theme.$spacings-full};
+  min-width: 100%;
+  background-color: theme.$palette-grey-2;
+  display: flex;
+  gap: #{theme.$spacings-full};
+
+  > * {
+    flex: 1;
+  }
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    min-width: #{theme.pixelsToRem-px-to-rem(200)};
+    flex-direction: column;
+  }
+}

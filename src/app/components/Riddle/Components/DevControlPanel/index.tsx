@@ -1,12 +1,12 @@
 import { PropsWithChildren, use } from 'react';
 import Text from '../../../Text';
-import style from './index.styles';
+import styles from './index.module.scss';
 import { LocalStorageContext } from '../../LocalStorageProvider';
 import { RiddleContext } from '../../RiddleProvider';
 
 const Option = ({ title, children }: PropsWithChildren<{ title: string }>) => {
   return (
-    <div css={style.optionContainer}>
+    <div className={styles.optionContainer}>
       <Text>{title}</Text>
       {children}
     </div>
@@ -25,16 +25,16 @@ export default () => {
 
   return (
     <>
-      <Text css={style.title} fontVariant="sansBold">
+      <Text className={styles.title} fontVariant="sansBold">
         Developer Tools
       </Text>
-      <Text css={style.date} fontVariant="sansBold">
+      <Text className={styles.date} fontVariant="sansBold">
         Sim Date: {devTime.toDateString()}
       </Text>
-      <Text css={style.date} fontVariant="sansBold">
+      <Text className={styles.date} fontVariant="sansBold">
         Game State: {gameState}
       </Text>
-      <div css={style.container}>
+      <div className={styles.container}>
         <Option title="Time Controls">
           <button type="button" onClick={() => forceTimeInc()}>
             +24h
