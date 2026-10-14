@@ -206,6 +206,12 @@ export const service: DefaultServiceConfig = {
         loading: 'Carregando',
         noJsDescription:
           'Ative o JavaScript ou use outro navegador para ver este conteúdo.',
+        followedTopicsTitle: 'Temas que você segue',
+        followedTopicsErrorText:
+          'Estamos tendo problemas para carregar os temas que você segue',
+        noFollowedTopics: 'Você ainda não segue nenhum tema',
+        seeMoreTopics: 'See more',
+        seeLessTopics: 'See less',
       },
       actionTooltip: {
         success: {

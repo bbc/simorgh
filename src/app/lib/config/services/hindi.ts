@@ -175,6 +175,12 @@ export const service: DefaultServiceConfig = {
         loading: 'लोडिंग',
         noJsDescription:
           'इस सामग्री को देखने के लिए जावास्क्रिप्ट चालू करें या किसी दूसरे ब्राउज़र का इस्तेमाल करें।',
+        followedTopicsTitle: 'फॉलो किए गए टॉपिक',
+        followedTopicsErrorText:
+          'आपके फ़ॉलो किए गए टॉपिक लोड करने में दिक्कत हो रही है',
+        noFollowedTopics: 'आपने अभी तक किसी टॉपिक को फ़ॉलो नहीं किया है',
+        seeMoreTopics: 'See more',
+        seeLessTopics: 'See less',
       },
       actionTooltip: {
         success: {

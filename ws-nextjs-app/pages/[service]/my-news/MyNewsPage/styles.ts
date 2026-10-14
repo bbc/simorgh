@@ -61,6 +61,49 @@ const styles = {
         fill: 'canvasText',
       },
     }),
+
+  seeMoreButton: ({
+    palette,
+    spacings,
+    fontVariants,
+    fontSizes,
+    isDarkUi,
+  }: Theme) =>
+    css({
+      ...fontVariants.sansBold,
+      ...fontSizes.pica,
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      textAlign: 'center',
+      width: 'fit-content',
+      minHeight: '2.75rem',
+      gap: `${spacings.FULL}rem`,
+      margin: `${spacings.DOUBLE}rem auto 0`,
+      padding: `${spacings.HALF}rem ${spacings.DOUBLE}rem`,
+      border: 'none',
+      borderRadius: 0,
+      background: 'none',
+      color: palette.POSTBOX,
+      cursor: 'pointer',
+      '&:hover, &:focus-visible': {
+        backgroundColor: isDarkUi ? palette.GREY_7 : palette.SPORT_SILVER,
+      },
+      '&:hover': {
+        textDecoration: 'underline',
+      },
+    }),
+
+  seeMoreIcon: css({
+    width: `${pixelsToRem(12)}rem`,
+    height: `${pixelsToRem(12)}rem`,
+    fill: 'currentColor',
+    transform: 'rotate(90deg)',
+  }),
+
+  seeMoreIconFlipped: css({
+    transform: 'rotate(-90deg)',
+  }),
 };
 
 export default styles;

@@ -94,6 +94,11 @@ export interface Translations {
     errorText: string;
     loading: string;
     noJsDescription: string;
+    followedTopicsTitle: string;
+    followedTopicsErrorText: string;
+    noFollowedTopics: string;
+    seeMoreTopics: string;
+    seeLessTopics: string;
   };
   actionTooltip?: {
     success: {

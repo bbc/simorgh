@@ -122,6 +122,12 @@ export const service: DefaultServiceConfig = {
         loading: 'Loading',
         noJsDescription:
           'Please enable JavaScript or use a different browser to view this content.',
+        followedTopicsTitle: 'Followed Topics',
+        followedTopicsErrorText:
+          "We're having trouble loading your followed topics",
+        noFollowedTopics: "You haven't followed any topics yet",
+        seeMoreTopics: 'See more',
+        seeLessTopics: 'See less',
       },
       actionTooltip: {
         success: {

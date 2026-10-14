@@ -97,9 +97,10 @@ describe('MyNewsPage', () => {
       render(<MyNewsPage />, renderOptions);
     });
 
-    const spinnerWrapper = screen.getByTestId('my-news-page-spinner');
+    const spinnerWrapper = screen.getByTestId('my-news-saved-articles-spinner');
     const spinnerSvg = spinnerWrapper.querySelector('svg');
 
+    expect(screen.getByText(myNewsTranslations.title)).toBeInTheDocument();
     expect(spinnerWrapper).toBeInTheDocument();
     expect(spinnerSvg).toBeInTheDocument();
   });
@@ -130,6 +131,9 @@ describe('MyNewsPage', () => {
     await waitFor(() => {
       expect(
         screen.getByText(myNewsTranslations.noArticles),
+      ).toBeInTheDocument();
+      expect(
+        screen.getByText(myNewsTranslations.noFollowedTopics),
       ).toBeInTheDocument();
     });
   });
@@ -220,7 +224,9 @@ describe('MyNewsPage', () => {
 
     await waitFor(() => {
       expect(
-        screen.getByText(`Followed Topics (${mockFollowedTopics.length})`),
+        screen.getByText(
+          `${myNewsTranslations.followedTopicsTitle} (${mockFollowedTopics.length})`,
+        ),
       ).toBeInTheDocument();
       expect(
         screen.getByRole('link', { name: mockFollowedTopics[0].title }),
@@ -229,8 +235,8 @@ describe('MyNewsPage', () => {
         screen.getByRole('link', { name: mockFollowedTopics[1].title }),
       ).toBeInTheDocument();
       expect(
-        screen.queryByText(myNewsTranslations.noArticles),
-      ).not.toBeInTheDocument();
+        screen.getByText(myNewsTranslations.noArticles),
+      ).toBeInTheDocument();
     });
   });
 
@@ -255,7 +261,9 @@ describe('MyNewsPage', () => {
     });
 
     await waitFor(() => {
-      expect(screen.getByText('Followed Topics (1)')).toBeInTheDocument();
+      expect(
+        screen.getByText(`${myNewsTranslations.followedTopicsTitle} (1)`),
+      ).toBeInTheDocument();
       expect(
         screen.getByRole('link', { name: singleFollowedTopic.title }),
       ).toBeInTheDocument();
@@ -276,7 +284,9 @@ describe('MyNewsPage', () => {
       render(<MyNewsPage />, renderOptions);
     });
 
-    expect(screen.getByTestId('my-news-page-spinner')).toBeInTheDocument();
+    expect(
+      screen.getByTestId('my-news-followed-topics-spinner'),
+    ).toBeInTheDocument();
   });
 
   it('should display error state when followed topics API fails', async () => {
@@ -293,8 +303,183 @@ describe('MyNewsPage', () => {
 
     await waitFor(() => {
       expect(
-        screen.getByText(myNewsTranslations.errorText),
+        screen.getByText(myNewsTranslations.followedTopicsErrorText),
       ).toBeInTheDocument();
     });
+  });
+
+  it('should show only the failed section error when followed topics fails and saved articles succeed', async () => {
+    mockUseRecentActivity.mockReturnValue({
+      savedArticles: mockSavedArticles,
+      total: 2,
+      isLoading: false,
+      error: null,
+    });
+    mockUseFollowedTopics.mockReturnValue({
+      followedTopics: [],
+      total: 0,
+      isLoading: false,
+      error: new Error('Failed to load topics'),
+    });
+
+    await act(async () => {
+      render(<MyNewsPage />, renderOptions);
+    });
+
+    await waitFor(() => {
+      expect(
+        screen.getByText(myNewsTranslations.followedTopicsErrorText),
+      ).toBeInTheDocument();
+      expect(screen.getByText('Saved Article One')).toBeInTheDocument();
+      expect(screen.getByText('Saved Article Two')).toBeInTheDocument();
+      expect(
+        screen.queryByText(myNewsTranslations.errorText),
+      ).not.toBeInTheDocument();
+    });
+  });
+
+  it('should show only the failed section error when saved articles fails and followed topics succeed', async () => {
+    mockUseRecentActivity.mockReturnValue({
+      savedArticles: [],
+      total: 0,
+      isLoading: false,
+      error: new Error('Failed to load articles'),
+    });
+    mockUseFollowedTopics.mockReturnValue({
+      followedTopics: mockFollowedTopics,
+      total: mockFollowedTopics.length,
+      isLoading: false,
+      error: null,
+    });
+
+    await act(async () => {
+      render(<MyNewsPage />, renderOptions);
+    });
+
+    await waitFor(() => {
+      expect(
+        screen.getByText(myNewsTranslations.errorText),
+      ).toBeInTheDocument();
+      expect(
+        screen.getByRole('link', { name: mockFollowedTopics[0].title }),
+      ).toBeInTheDocument();
+      expect(
+        screen.queryByText(myNewsTranslations.followedTopicsErrorText),
+      ).not.toBeInTheDocument();
+    });
+  });
+
+  it('should show an independent error state for each section when both requests fail', async () => {
+    mockUseRecentActivity.mockReturnValue({
+      savedArticles: [],
+      total: 0,
+      isLoading: false,
+      error: new Error('Failed to load articles'),
+    });
+    mockUseFollowedTopics.mockReturnValue({
+      followedTopics: [],
+      total: 0,
+      isLoading: false,
+      error: new Error('Failed to load topics'),
+    });
+
+    await act(async () => {
+      render(<MyNewsPage />, renderOptions);
+    });
+
+    await waitFor(() => {
+      expect(
+        screen.getByText(myNewsTranslations.errorText),
+      ).toBeInTheDocument();
+      expect(
+        screen.getByText(myNewsTranslations.followedTopicsErrorText),
+      ).toBeInTheDocument();
+    });
+  });
+
+  it('should not render a "see more" button when there are 9 or fewer followed topics', async () => {
+    mockUseFollowedTopics.mockReturnValue({
+      followedTopics: mockFollowedTopics,
+      total: mockFollowedTopics.length,
+      isLoading: false,
+      error: null,
+    });
+
+    await act(async () => {
+      render(<MyNewsPage />, renderOptions);
+    });
+
+    await waitFor(() => {
+      expect(
+        screen.getByRole('link', { name: mockFollowedTopics[0].title }),
+      ).toBeInTheDocument();
+    });
+
+    expect(
+      screen.queryByRole('button', { name: myNewsTranslations.seeMoreTopics }),
+    ).not.toBeInTheDocument();
+  });
+
+  it('should cap followed topics at 9 and toggle the rest via the "see more"/"see less" button', async () => {
+    const manyFollowedTopics = Array.from({ length: 13 }, (_, i) => ({
+      id: `topic-${i}`,
+      title: `Topic ${i}`,
+      service: 'hindi',
+    }));
+
+    mockUseFollowedTopics.mockReturnValue({
+      followedTopics: manyFollowedTopics,
+      total: manyFollowedTopics.length,
+      isLoading: false,
+      error: null,
+    });
+
+    await act(async () => {
+      render(<MyNewsPage />, renderOptions);
+    });
+
+    await waitFor(() => {
+      expect(
+        screen.getByRole('link', { name: manyFollowedTopics[8].title }),
+      ).toBeInTheDocument();
+    });
+
+    expect(
+      screen.queryByRole('link', { name: manyFollowedTopics[9].title }),
+    ).not.toBeInTheDocument();
+
+    const seeMoreButton = screen.getByRole('button', {
+      name: myNewsTranslations.seeMoreTopics,
+    });
+    expect(seeMoreButton).toHaveAttribute('aria-expanded', 'false');
+
+    await act(async () => {
+      seeMoreButton.click();
+    });
+
+    await waitFor(() => {
+      expect(
+        screen.getByRole('link', { name: manyFollowedTopics[12].title }),
+      ).toBeInTheDocument();
+    });
+
+    const seeLessButton = screen.getByRole('button', {
+      name: myNewsTranslations.seeLessTopics,
+    });
+    expect(seeLessButton).toHaveAttribute('aria-expanded', 'true');
+
+    await act(async () => {
+      seeLessButton.click();
+    });
+
+    await waitFor(() => {
+      expect(
+        screen.queryByRole('link', { name: manyFollowedTopics[9].title }),
+      ).not.toBeInTheDocument();
+    });
+
+    expect(
+      screen.getByRole('button', { name: myNewsTranslations.seeMoreTopics }),
+    ).toHaveAttribute('aria-expanded', 'false');
   });
 });
