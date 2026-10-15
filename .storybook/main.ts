@@ -3,7 +3,9 @@ import { dirname, join } from 'node:path';
 import dotenv from 'dotenv';
 import webpack from 'webpack';
 import { resolvePathInStorybookCache } from 'storybook/internal/common';
+import type { Options as StorybookOptions } from 'storybook/internal/types';
 import type { StorybookConfig } from '@storybook/react-webpack5';
+import type { Options as SwcOptions } from '@swc/types';
 
 import alias from '../dirAlias';
 
@@ -86,7 +88,7 @@ const storybookConfig: StorybookConfig = {
       },
     },
   ],
-  swc: (config, { configType }) => ({
+  swc: (config: SwcOptions, { configType }: StorybookOptions): SwcOptions => ({
     ...config,
     envName: configType === 'PRODUCTION' ? 'production' : 'development',
     jsc: {

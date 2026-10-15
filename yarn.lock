@@ -5442,21 +5442,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@swc/types@npm:0.1.28, @swc/types@npm:^0.1.28":
+  version: 0.1.28
+  resolution: "@swc/types@npm:0.1.28"
+  dependencies:
+    "@swc/counter": "npm:^0.1.3"
+  checksum: 10/9cd2b13a640c36d28235a30567dc38330e01dc54ba0ca6ff4000fc56f0be27252b91c3df4989a9ef019b9df9eb722e73fb273913675f8b891428981fb9cc9a0f
+  languageName: node
+  linkType: hard
+
 "@swc/types@npm:^0.1.26":
   version: 0.1.26
   resolution: "@swc/types@npm:0.1.26"
   dependencies:
     "@swc/counter": "npm:^0.1.3"
   checksum: 10/07de03b9da3928cdf69bda70bf2c809dd86f16ef23e357759e577bbd975529cb20218c2e54e72b00585abae2b5e04e39b8947cea7a6f4de2d40a7633be441919
-  languageName: node
-  linkType: hard
-
-"@swc/types@npm:^0.1.28":
-  version: 0.1.28
-  resolution: "@swc/types@npm:0.1.28"
-  dependencies:
-    "@swc/counter": "npm:^0.1.3"
-  checksum: 10/9cd2b13a640c36d28235a30567dc38330e01dc54ba0ca6ff4000fc56f0be27252b91c3df4989a9ef019b9df9eb722e73fb273913675f8b891428981fb9cc9a0f
   languageName: node
   linkType: hard
 
@@ -16285,6 +16285,7 @@ __metadata:
     "@storybook/cli": "npm:10.6.0"
     "@storybook/react-webpack5": "npm:10.6.0"
     "@swc/plugin-emotion": "npm:19.0.0"
+    "@swc/types": "npm:0.1.28"
     "@tanstack/query-async-storage-persister": "npm:5.99.2"
     "@tanstack/react-query": "npm:5.100.10"
     "@tanstack/react-query-persist-client": "npm:5.99.2"
