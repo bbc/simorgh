@@ -155,6 +155,8 @@ export default () => {
             <Heading
               level={3}
               className={styles.answerHeading}
+              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+              // @ts-expect-error Heading uses older React ref props
               ref={winnerMessageRef}
               tabIndex={-1}
             >
@@ -170,6 +172,8 @@ export default () => {
             <Heading
               level={3}
               className={styles.answerHeading}
+              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+              // @ts-expect-error Heading uses older React ref props
               ref={failedMessageRef}
               tabIndex={-1}
             >

@@ -1,10 +1,5 @@
 import onClient from '#app/lib/utilities/onClient';
-import React, {
-  createContext,
-  PropsWithChildren,
-  useMemo,
-  useState,
-} from 'react';
+import { createContext, PropsWithChildren, useMemo, useState } from 'react';
 
 export type LocalStorage = {
   goes: number;
