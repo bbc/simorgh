@@ -1,4 +1,4 @@
-import React, { useState, use, useEffect, useRef } from 'react';
+import React, { useState, use, useEffect, useRef, useCallback } from 'react';
 import Navigation from '#psammead/psammead-navigation/src';
 import { ScrollableNavigation } from '#psammead/psammead-navigation/src/ScrollableNavigation';
 import {
@@ -17,6 +17,8 @@ import { SERVICES_WITH_STICKY_NAV } from './config';
 import styles from './index.styles';
 
 const STICKY_NAV_CLEARANCE = 65;
+const STICKY_TRANSITION_DURATION = 400;
+const STICKY_MIN_WIDTH_QUERY = '(min-width: 300px)';
 const INITIAL_STICKY_STATE = { fixed: false, visible: false, height: 0 };
 
 type CanonicalNavigationContainerProps = {
@@ -41,18 +43,82 @@ const CanonicalNavigationContainer: React.FC<
   const { isLite, env, service, pageType } = use(RequestContext);
   const { enabled: topBarOJsEnabled } = useToggle('topBarOJs');
   const { enabled: stickyNavigationEnabled } = useToggle('stickyNavigation');
+  const [isStickyViewport, setIsStickyViewport] = useState(false);
   const enableStickyNavigation =
     stickyNavigationEnabled &&
     (env === 'test' || env === 'local') &&
     SERVICES_WITH_STICKY_NAV.includes(service) &&
+    isStickyViewport &&
     !isLite;
   const [isOpen, setIsOpen] = useState(false);
   const [stickyState, setStickyState] = useState(INITIAL_STICKY_STATE);
+  const [isStickyPositioned, setIsStickyPositioned] = useState(false);
+  const [isStickyVisible, setIsStickyVisible] = useState(false);
+  const [isStickyPrepared, setIsStickyPrepared] = useState(false);
 
   const navSlotRef = useRef<HTMLDivElement>(null);
   const navRef = useRef<HTMLDivElement>(null);
   const dropDownNavRef = useRef<HTMLDivElement>(null);
   const bottomScrollableNavRef = useRef<HTMLDivElement>(null);
+
+  const handleStickyViewportChange = useCallback(
+    ({ matches }: MediaQueryList | MediaQueryListEvent) => {
+      setIsStickyViewport(matches);
+      if (!matches) setIsOpen(false);
+    },
+    [],
+  );
+  useMediaQuery(STICKY_MIN_WIDTH_QUERY, handleStickyViewportChange);
+
+  useEffect(() => {
+    if (!isStickyPositioned) setIsStickyPrepared(false);
+  }, [isStickyPositioned]);
+
+  useEffect(() => {
+    if (!enableStickyNavigation) {
+      setIsStickyPositioned(false);
+      setIsStickyVisible(false);
+      return undefined;
+    }
+
+    const reducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)',
+    ).matches;
+
+    if (!stickyState.fixed) {
+      setIsStickyVisible(false);
+      if (reducedMotion) {
+        setIsStickyPositioned(false);
+        return undefined;
+      }
+      const timeout = window.setTimeout(
+        () => setIsStickyPositioned(false),
+        STICKY_TRANSITION_DURATION,
+      );
+      return () => window.clearTimeout(timeout);
+    }
+
+    setIsStickyPositioned(true);
+    if (!stickyState.visible || reducedMotion) {
+      setIsStickyPrepared(true);
+      setIsStickyVisible(stickyState.visible);
+      return undefined;
+    }
+
+    const animationFrames = { first: 0, second: 0 };
+    // Paint the fixed, off-screen position before starting the slide-in.
+    animationFrames.first = window.requestAnimationFrame(() => {
+      setIsStickyPrepared(true);
+      animationFrames.second = window.requestAnimationFrame(() => {
+        setIsStickyVisible(true);
+      });
+    });
+
+    return () => {
+      window.cancelAnimationFrame(animationFrames.first);
+      window.cancelAnimationFrame(animationFrames.second);
+    };
+  }, [enableStickyNavigation, stickyState.fixed, stickyState.visible]);
 
   useEffect(() => {
     setStickyState(INITIAL_STICKY_STATE);
@@ -90,8 +156,13 @@ const CanonicalNavigationContainer: React.FC<
           ? articleStart !== null &&
             articleStart.getBoundingClientRect().top <= 0
           : slot.getBoundingClientRect().bottom < -STICKY_NAV_CLEARANCE;
-      const fixed = reachedActivationPoint && !scrollState.keyboardNavigation;
-      const { height } = nav.getBoundingClientRect();
+      const fixed =
+        reachedActivationPoint &&
+        !scrollState.keyboardNavigation &&
+        (scrollingUp || scrollState.fixed);
+      const height =
+        nav.getBoundingClientRect().height ||
+        slot.getBoundingClientRect().height;
 
       if (scrollState.fixed && (!fixed || scrollingDown)) setIsOpen(false);
       scrollState.fixed = fixed;
@@ -122,6 +193,8 @@ const CanonicalNavigationContainer: React.FC<
         scrollState.keyboardNavigation = true;
         if (scrollState.fixed) setIsOpen(false);
         scrollState.fixed = false;
+        setIsStickyPositioned(false);
+        setIsStickyVisible(false);
         setStickyState(INITIAL_STICKY_STATE);
       }
     };
@@ -240,21 +313,31 @@ const CanonicalNavigationContainer: React.FC<
 
   if (!enableStickyNavigation) return navigation;
 
-  const hidden = stickyState.fixed && !stickyState.visible;
+  const hidden = isStickyPositioned && !isStickyVisible;
 
   return (
     <>
       <div
         ref={navSlotRef}
-        style={stickyState.fixed ? { height: stickyState.height } : undefined}
+        style={isStickyPositioned ? { height: stickyState.height } : undefined}
       >
         <div
           data-e2e="sticky-nav"
-          data-sticky-visible={stickyState.visible}
+          data-sticky-visible={isStickyVisible}
+          hidden={isStickyPositioned && !isStickyPrepared}
           css={[
-            stickyState.fixed && styles.stickyContainer,
-            stickyState.visible && styles.stickyVisible,
+            isStickyPositioned && styles.stickyContainer,
+            isStickyVisible && styles.stickyVisible,
           ]}
+          onTransitionEnd={event => {
+            if (
+              event.target === event.currentTarget &&
+              event.propertyName === 'transform' &&
+              !stickyState.fixed
+            ) {
+              setIsStickyPositioned(false);
+            }
+          }}
           aria-hidden={hidden || undefined}
           inert={hidden || undefined}
         >
