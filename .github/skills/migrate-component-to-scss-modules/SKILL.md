@@ -33,6 +33,10 @@ Before converting a shared component, search its consumers for Emotion `css` pro
 
 When a consumer owns a real DOM context for an override, express that relationship in SCSS rather than adding a wrapper solely to increase specificity. Use an ancestor selector (for example `.errorLinkWrapper .inlineLink`) or an element-qualified selector when the component fixes the element type (for example `p.copyright`). Exclude pseudo-states that remain owned by the shared component, such as `:visited`, `:hover`, and `:focus`. CSS Modules scopes class names but does not give a parent component automatic precedence. Use duplicated selectors only as a documented last resort when no meaningful context exists.
 
+Keep migrations focused on preserving existing behaviour and public APIs.
+Justify any API or typing changes separately using actual consumer needs;
+do not add speculative capabilities as part of a styling conversion.
+
 ## Step 2: Map Emotion theme values to SCSS tokens
 
 Theme tokens and mixins are forwarded from `@scss/themeTokens`. Add this import
@@ -301,6 +305,8 @@ yarn jest src/app/components/<ComponentName>
 - For a `data-*` enum, assert the attribute value rather than a generated class. For a compact inline CSS custom-property bridge, assert `element.style.getPropertyValue(...)` against explicit expected values in the `it.each` table; do not repeat the production value-conversion logic in the assertion.
 - Do not use `toHaveStyle` to validate declarations that only come from the mocked `.module.scss` stylesheet. Inline custom properties deliberately emitted by React are different: their values are present in jsdom and can be asserted directly.
 - Run `yarn build` from `ws-nextjs-app` once per PR (not per component). Jest only exercises files that import the component under test, so it won't catch a legacy page elsewhere still importing the deleted `index.styles.*` directly — the build's TypeScript check will.
+- Keep tests focused on observable output with explicit expected values rather than importing production style objects. Distinguish migration regression checks from additional general coverage.
+- Run relevant canonical, AMP and Lite integration suites against a fresh production build. Review snapshot updates for expected class/style changes, preserving markup, text and attributes. These checks inspect production-rendered HTML, not computed CSS; browser checks remain necessary for visual behaviour.
 
 ## Reference implementations
 
