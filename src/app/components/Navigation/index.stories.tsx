@@ -1,5 +1,6 @@
 import Navigation from '.';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
+import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 import type {
   Navigation as NavigationType,
   Services,
@@ -46,9 +47,10 @@ interface Props {
   navItems: NavigationType[];
   service: Services;
   isAmp?: boolean;
+  bbcOrigin?: string;
 }
 
-const Component = ({ isAmp = false, navItems, service }: Props) => {
+const Component = ({ isAmp = false, navItems, service, bbcOrigin }: Props) => {
   return (
     <ServiceContextProvider service={service}>
       <RequestContextProvider
@@ -56,6 +58,7 @@ const Component = ({ isAmp = false, navItems, service }: Props) => {
         service={service}
         pageType={HOME_PAGE}
         pathname="/pathname"
+        bbcOrigin={bbcOrigin}
       >
         <Navigation navItems={navItems} />
       </RequestContextProvider>
@@ -82,6 +85,32 @@ export const Pidgin = () => (
 
 export const PidginAmp = () => (
   <Component isAmp navItems={pidginNavItems} service="pidgin" />
+);
+
+export const StickyNavigation = () => (
+  <ToggleContextProvider toggles={{ stickyNavigation: { enabled: true } }}>
+    <Component
+      service="mundo"
+      bbcOrigin="https://www.test.bbc.com"
+      navItems={[
+        {
+          title: 'Noticias',
+          url: '/mundo',
+          subItems: [
+            { title: 'América Latina', url: '/mundo/america_latina' },
+            { title: 'Internacional', url: '/mundo/internacional' },
+            { title: 'Economía', url: '/mundo/economia' },
+            { title: 'Ciencia', url: '/mundo/ciencia' },
+          ],
+        },
+        { title: 'Videos', url: '/mundo/topics/cyx5krnw38vt', type: 'watch' },
+        { title: 'Podcasts', url: '/mundo/podcasts', type: 'listen' },
+      ]}
+    />
+    <main css={{ minHeight: '200vh' }}>
+      <p>Scroll down, then up to reveal the sticky navigation.</p>
+    </main>
+  </ToggleContextProvider>
 );
 
 PidginAmp.decorators = [AmpDecorator];
