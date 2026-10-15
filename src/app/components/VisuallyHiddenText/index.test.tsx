@@ -1,6 +1,5 @@
 import { render, screen } from '../react-testing-library-with-providers';
 import VisuallyHiddenText from './index';
-import styles from './index.module.scss';
 
 describe('VisuallyHiddenText', () => {
   it('should render off screen text for screen readers', () => {
@@ -10,7 +9,7 @@ describe('VisuallyHiddenText', () => {
 
     expect(hiddenText).toBeInTheDocument();
     expect(hiddenText.tagName).toBe('SPAN');
-    expect(hiddenText).toHaveClass(styles.visuallyHiddenText);
+    expect(hiddenText).toHaveClass('visuallyHiddenText');
   });
 
   it('should render off screen text for screen readers as an h1', () => {
@@ -28,7 +27,7 @@ describe('VisuallyHiddenText', () => {
     expect(heading).toBeInTheDocument();
     expect(heading).toHaveAttribute('id', 'content');
     expect(heading).toHaveAttribute('tabindex', '-1');
-    expect(heading).toHaveClass(styles.visuallyHiddenText);
+    expect(heading).toHaveClass('visuallyHiddenText');
   });
 
   it('should render off screen text for screen readers as an h1 with lang as en-GB', () => {
@@ -57,7 +56,7 @@ describe('VisuallyHiddenText', () => {
 
     expect(screen.getByText('Hidden text')).toHaveAttribute(
       'class',
-      styles.visuallyHiddenText,
+      'visuallyHiddenText',
     );
   });
 
