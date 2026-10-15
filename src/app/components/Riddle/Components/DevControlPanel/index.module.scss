@@ -1,0 +1,44 @@
+@use '@scss/themeTokens' as theme;
+
+$dev-font-family: '"Lucida Console", "Courier New", monospace';
+
+.title {
+  display: block;
+  margin-top: #{theme.$spacings-double};
+}
+
+.date {
+  font-family: $dev-font-family;
+  display: block;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.optionContainer {
+  font-family: $dev-font-family;
+  width: 11rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: start;
+  justify-content: center;
+
+  > span {
+    font-family: $dev-font-family;
+    text-align: center;
+    width: 100%;
+    padding: #{theme.$spacings-half};
+    background: theme.$palette-black;
+    color: theme.$palette-white;
+  }
+
+  button {
+    height: 3rem;
+    width: 100%;
+    background: theme.$palette-black;
+    color: theme.$palette-white;
+    cursor: pointer;
+  }
+}

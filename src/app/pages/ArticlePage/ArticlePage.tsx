@@ -65,6 +65,7 @@ import repositionCountryTopic from '#app/components/TopicDiscovery/RepositionCou
 import GooglePreferredSource from '#app/components/GooglePreferredSource/GooglePreferredSourceLink';
 import GooglePreferredSourceDivider from '#app/components/GooglePreferredSource/GooglePreferredSourceDivider';
 import isGoogleReferral from '#app/lib/utilities/isGoogleReferral';
+import ReadMeter from '#app/components/Riddle/Components/ReadMeter';
 import ArticleMessageBanner from './ArticleMessageBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -267,6 +268,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
+  const wordCount = pageData?.metadata?.stats?.wordCount;
 
   const { mostRead: mostReadInitialData } = pageData;
 
@@ -536,6 +538,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             />
             <OptimizelyPageMetrics trackPageComplete />
           </main>
+          <ReadMeter wordCount={wordCount} />
           <OptimizelyPageMetrics trackPageDepth />
           {showTopicDiscovery && (
             <TopicDiscovery

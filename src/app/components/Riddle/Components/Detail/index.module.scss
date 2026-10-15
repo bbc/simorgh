@@ -1,0 +1,33 @@
+@use '@scss/themeTokens' as theme;
+
+.detailContainer {
+  align-content: start;
+  text-align: center;
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    align-content: center;
+  }
+
+
+  .detailLabel {
+    @include theme.typography-from-scale-and-variant(minion, 'sans-bold');
+    display: inline-block;
+    background: theme.$palette-black;
+    color: theme.$palette-white;
+    margin-bottom: #{theme.$spacings-full};
+
+    @media #{theme.$mediaQueries-group-3-min-width} {
+      @include theme.typography-from-scale-and-variant(greatPrimer, 'sans-bold');
+    }
+  }
+
+  .detailContent {
+    @include theme.typography-from-scale-and-variant(brevier, 'serif-light');
+    display: inline-block;
+    margin-bottom: #{theme.$spacings-full};
+
+    @media #{theme.$mediaQueries-group-3-min-width} {
+      @include theme.typography-from-scale-and-variant(doublePica, 'serif-light');
+    }
+  }
+}
