@@ -20,6 +20,8 @@ const ConsentBannerWrapper = styled.div`
 
   body.${PLAYER_FULLSCREEN_CLASS} & {
     z-index: -1;
+    visibility: 'hidden';
+    pointer-events: 'none';
   }
 `;
 
