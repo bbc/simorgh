@@ -90,7 +90,6 @@ const storybookConfig: StorybookConfig = {
   ],
   swc: (config: SwcOptions, { configType }: StorybookOptions): SwcOptions => ({
     ...config,
-    envName: configType === 'PRODUCTION' ? 'production' : 'development',
     jsc: {
       ...config.jsc,
       transform: {
