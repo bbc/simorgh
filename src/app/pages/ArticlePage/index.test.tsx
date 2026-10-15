@@ -163,6 +163,19 @@ describe('Article Page', () => {
     jest.clearAllMocks();
   });
 
+  it('marks body paragraphs, rather than the headline, as sticky navigation anchors', () => {
+    const { container } = render(
+      <ArticlePage pageData={articleDataPersian} />,
+      { service: 'persian' },
+    );
+    const anchor = container.querySelector('main [data-sticky-nav-anchor]');
+
+    expect(anchor).toBeInTheDocument();
+    expect(anchor?.tagName).toBe('P');
+    expect(anchor).toHaveTextContent(/\S/);
+    expect(container.querySelector('h1 [data-sticky-nav-anchor]')).toBeNull();
+  });
+
   it.each([
     {
       testScenario:
