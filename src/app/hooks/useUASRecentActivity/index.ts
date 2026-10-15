@@ -55,7 +55,7 @@ const useUASRecentActivity = ({
     if (error) {
       trackError({
         error,
-        feature: ERROR_TRACKING_FEATURES.UAS,
+        feature: ERROR_TRACKING_FEATURES.SAVE_ARTICLE_UAS,
         action: UAS_ERROR_ACTIONS.RECENT_ACTIVITY,
       });
     }

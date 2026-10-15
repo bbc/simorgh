@@ -69,7 +69,7 @@ const useUASButton = ({
     if (error) {
       trackError({
         error,
-        feature: ERROR_TRACKING_FEATURES.UAS,
+        feature: ERROR_TRACKING_FEATURES.SAVE_ARTICLE_UAS,
         action: UAS_ERROR_ACTIONS.FETCH_STATUS,
       });
     }
@@ -115,7 +115,7 @@ const useUASButton = ({
       onError: mutationError =>
         trackError({
           error: mutationError,
-          feature: ERROR_TRACKING_FEATURES.UAS,
+          feature: ERROR_TRACKING_FEATURES.SAVE_ARTICLE_UAS,
           action: UAS_ERROR_ACTIONS.METADATA_SYNC,
         }),
     });
@@ -141,7 +141,7 @@ const useUASButton = ({
         setActionResult({ status: 'error', action });
         trackError({
           error: mutationError,
-          feature: ERROR_TRACKING_FEATURES.UAS,
+          feature: ERROR_TRACKING_FEATURES.SAVE_ARTICLE_UAS,
           action,
         });
       },

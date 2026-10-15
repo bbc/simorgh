@@ -1,15 +1,21 @@
-import { use } from 'react';
+import { use, useEffect } from 'react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useTopicFollowButton, {
   FollowAction,
 } from '#app/hooks/useTopicFollowButton';
+import useErrorTracking from '#app/hooks/useErrorTracking';
+import {
+  ERROR_TRACKING_FEATURES,
+  UAS_ERROR_ACTIONS,
+} from '#app/hooks/useErrorTracking/errorTracking.const';
 import useClickTracker from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
+import ErrorBoundary from '#app/components/ErrorBoundary';
 import SaveButton, { SAVE_BUTTON_VARIANTS } from '#app/components/SaveButton';
 
 import type { FollowTopicButtonProps } from '../index';
 
-const FollowTopicButtonAuthenticated = ({
+const FollowTopicButtonAuthenticatedInner = ({
   topicData,
 }: FollowTopicButtonProps) => {
   const { translations } = use(ServiceContext);
@@ -84,5 +90,32 @@ const FollowTopicButtonAuthenticated = ({
     />
   );
 };
+
+const FollowTopicButtonErrorFallback = ({ error }: { error: Error }) => {
+  const trackError = useErrorTracking();
+
+  useEffect(() => {
+    trackError({
+      error,
+      feature: ERROR_TRACKING_FEATURES.FOLLOW_TOPIC_UAS,
+      action: UAS_ERROR_ACTIONS.RENDER,
+    });
+  }, [error, trackError]);
+
+  return null;
+};
+
+const renderFollowTopicButtonErrorFallback = (error: Error) => (
+  <FollowTopicButtonErrorFallback error={error} />
+);
+
+const FollowTopicButtonAuthenticated = (props: FollowTopicButtonProps) => (
+  <ErrorBoundary
+    componentName="FollowTopicButtonAuthenticated"
+    fallback={renderFollowTopicButtonErrorFallback}
+  >
+    <FollowTopicButtonAuthenticatedInner {...props} />
+  </ErrorBoundary>
+);
 
 export default FollowTopicButtonAuthenticated;

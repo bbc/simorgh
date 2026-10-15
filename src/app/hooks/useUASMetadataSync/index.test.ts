@@ -6,6 +6,7 @@ import useUASMetadataSync from './index';
 jest.mock('#app/lib/uasApi/uasUtility');
 
 const mockBuildCurrentMetadata = uasUtility.buildCurrentMetadata as jest.Mock;
+const mockBuildTopicMetadata = uasUtility.buildTopicMetadata as jest.Mock;
 const mockCompareMetadataWithSaved =
   uasUtility.compareMetadataWithSaved as jest.Mock;
 
@@ -198,7 +199,8 @@ describe('useUASMetadataSync', () => {
     // Rerender with new articleId - should sync again
     rerender({ articleId: 'c987654321o' });
 
-    expect(mockCompareMetadataWithSaved).toHaveBeenCalledTimes(1);
+    expect(mockCompareMetadataWithSaved).toHaveBeenCalledTimes(2);
+    expect(stableCallback).toHaveBeenCalledTimes(2);
   });
 
   it('resets sync state when saved state changes from true to false', () => {
@@ -251,5 +253,138 @@ describe('useUASMetadataSync', () => {
         }),
       );
     }).not.toThrow();
+  });
+
+  describe('followed topics', () => {
+    const topicData = {
+      topicId: 'climate-change',
+      title: 'Climate change',
+      url: '/hindi/topics/climate-change',
+    };
+    const currentMetadata = {
+      topicId: topicData.topicId,
+      title: topicData.title,
+      locatorUrl: topicData.url,
+      service: 'hindi',
+    };
+    const topicParams = {
+      followTopicPageData: topicData,
+      topicId: topicData.topicId,
+      service: 'hindi' as const,
+      isFollowed: true,
+      savedTopicMetadata: { ...currentMetadata, title: 'Old title' },
+      onMetadataOutOfDate: mockOnMetadataOutOfDate,
+    };
+
+    beforeEach(() => {
+      mockBuildTopicMetadata.mockReturnValue(currentMetadata);
+    });
+
+    it('builds and compares topic metadata before syncing changes', () => {
+      mockCompareMetadataWithSaved.mockReturnValue({ hasChanges: true });
+
+      renderHook(() => useUASMetadataSync(topicParams));
+
+      expect(mockBuildTopicMetadata).toHaveBeenCalledWith(topicData, 'hindi');
+      expect(mockBuildCurrentMetadata).not.toHaveBeenCalled();
+      expect(mockCompareMetadataWithSaved).toHaveBeenCalledWith(
+        currentMetadata,
+        topicParams.savedTopicMetadata,
+      );
+      expect(mockOnMetadataOutOfDate).toHaveBeenCalledTimes(1);
+    });
+
+    it('does not sync unchanged topic metadata', () => {
+      renderHook(() => useUASMetadataSync(topicParams));
+
+      expect(mockCompareMetadataWithSaved).toHaveBeenCalledTimes(1);
+      expect(mockOnMetadataOutOfDate).not.toHaveBeenCalled();
+    });
+
+    it.each([{ isFollowed: false }, { savedTopicMetadata: undefined }])(
+      'does not compare or sync when unavailable: %o',
+      overrides => {
+        renderHook(() => useUASMetadataSync({ ...topicParams, ...overrides }));
+
+        expect(mockBuildTopicMetadata).not.toHaveBeenCalled();
+        expect(mockCompareMetadataWithSaved).not.toHaveBeenCalled();
+        expect(mockOnMetadataOutOfDate).not.toHaveBeenCalled();
+      },
+    );
+
+    it('prevents duplicate syncs when inputs are recreated', () => {
+      mockCompareMetadataWithSaved.mockReturnValue({ hasChanges: true });
+      const { rerender } = renderHook(() =>
+        useUASMetadataSync({
+          ...topicParams,
+          followTopicPageData: { ...topicData },
+          savedTopicMetadata: { ...topicParams.savedTopicMetadata },
+        }),
+      );
+
+      rerender();
+
+      expect(mockOnMetadataOutOfDate).toHaveBeenCalledTimes(1);
+      expect(mockCompareMetadataWithSaved).toHaveBeenCalledTimes(1);
+    });
+
+    it('allows syncing another topic', () => {
+      mockCompareMetadataWithSaved.mockReturnValue({ hasChanges: true });
+      const { rerender } = renderHook(
+        ({ topicId }) =>
+          useUASMetadataSync({
+            ...topicParams,
+            topicId,
+            followTopicPageData: { ...topicData, topicId },
+          }),
+        { initialProps: { topicId: topicData.topicId } },
+      );
+
+      rerender({ topicId: 'science' });
+
+      expect(mockOnMetadataOutOfDate).toHaveBeenCalledTimes(2);
+    });
+
+    it('allows syncing the same topic for a different service', () => {
+      mockCompareMetadataWithSaved.mockReturnValue({ hasChanges: true });
+      const { rerender } = renderHook(
+        ({ service }: { service: 'hindi' | 'arabic' }) =>
+          useUASMetadataSync({ ...topicParams, service }),
+        { initialProps: { service: 'hindi' } },
+      );
+
+      rerender({ service: 'arabic' });
+
+      expect(mockBuildTopicMetadata).toHaveBeenLastCalledWith(
+        topicData,
+        'arabic',
+      );
+      expect(mockOnMetadataOutOfDate).toHaveBeenCalledTimes(2);
+    });
+
+    it.each(['unfollowed', 'missing metadata'])(
+      'resets sync protection when %s',
+      state => {
+        mockCompareMetadataWithSaved.mockReturnValue({ hasChanges: true });
+        const { rerender } = renderHook(
+          ({ unavailable }) =>
+            useUASMetadataSync({
+              ...topicParams,
+              isFollowed: !(unavailable && state === 'unfollowed'),
+              savedTopicMetadata:
+                unavailable && state === 'missing metadata'
+                  ? undefined
+                  : topicParams.savedTopicMetadata,
+            }),
+          { initialProps: { unavailable: false } },
+        );
+
+        rerender({ unavailable: true });
+        expect(mockOnMetadataOutOfDate).toHaveBeenCalledTimes(1);
+
+        rerender({ unavailable: false });
+        expect(mockOnMetadataOutOfDate).toHaveBeenCalledTimes(2);
+      },
+    );
   });
 });

@@ -163,7 +163,7 @@ const SaveArticleButtonErrorFallback = ({ error }: { error: Error }) => {
   useEffect(() => {
     trackError({
       error,
-      feature: ERROR_TRACKING_FEATURES.UAS,
+      feature: ERROR_TRACKING_FEATURES.SAVE_ARTICLE_UAS,
       action: UAS_ERROR_ACTIONS.RENDER,
     });
   }, [error, trackError]);

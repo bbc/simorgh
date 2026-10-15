@@ -1,4 +1,4 @@
-import { use } from 'react';
+import { use, useEffect } from 'react';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import uasApiRequest from '#app/lib/uasApi';
 import {
@@ -8,9 +8,15 @@ import {
   buildGlobalId,
 } from '#app/lib/uasApi/uasUtility';
 import uasKeys from '#app/lib/uasApi/queryKeys';
+import useErrorTracking from '#app/hooks/useErrorTracking';
+import {
+  ERROR_TRACKING_FEATURES,
+  UAS_ERROR_ACTIONS,
+} from '#app/hooks/useErrorTracking/errorTracking.const';
 import { AccountContext } from '#app/contexts/AccountContext';
 import useTopicFollowStatus from '#app/hooks/useTopicFollowStatus';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import useUASMetadataSync from '../useUASMetadataSync';
 
 enum FollowAction {
   FOLLOW = 'follow',
@@ -32,7 +38,19 @@ const useTopicFollowButton = (
   const { service } = use(ServiceContext);
   const { hashedUserId = '', isRefreshAvailable } = use(AccountContext);
   const queryClient = useQueryClient();
-  const { isFollowed, isLoading, error } = useTopicFollowStatus(topicId);
+  const trackError = useErrorTracking();
+  const { isFollowed, isLoading, error, savedMetadata } =
+    useTopicFollowStatus(topicId);
+
+  useEffect(() => {
+    if (error) {
+      trackError({
+        error,
+        feature: ERROR_TRACKING_FEATURES.FOLLOW_TOPIC_UAS,
+        action: UAS_ERROR_ACTIONS.FETCH_STATUS,
+      });
+    }
+  }, [error, trackError]);
 
   const mutation = useMutation({
     mutationFn: async (action: FollowAction) => {
@@ -67,6 +85,25 @@ const useTopicFollowButton = (
         queryKey: uasKeys.followsList(hashedUserId),
       });
     },
+  });
+
+  const handleMetadataOutOfDate = () =>
+    mutation.mutate(FollowAction.FOLLOW, {
+      onError: mutationError =>
+        trackError({
+          error: mutationError,
+          feature: ERROR_TRACKING_FEATURES.FOLLOW_TOPIC_UAS,
+          action: UAS_ERROR_ACTIONS.METADATA_SYNC,
+        }),
+    });
+
+  useUASMetadataSync({
+    followTopicPageData: topicData,
+    topicId,
+    service,
+    isFollowed,
+    savedTopicMetadata: savedMetadata,
+    onMetadataOutOfDate: handleMetadataOutOfDate,
   });
 
   return {

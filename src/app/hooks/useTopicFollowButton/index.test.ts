@@ -18,6 +18,11 @@ import useTopicFollowButton, { FollowAction } from './index';
 
 jest.mock('#app/hooks/useTopicFollowStatus');
 jest.mock('#app/lib/uasApi');
+const mockTrackError = jest.fn();
+jest.mock('#app/hooks/useErrorTracking', () => ({
+  __esModule: true,
+  default: () => mockTrackError,
+}));
 jest.mock('#app/lib/uasApi/uasUtility', () => {
   const actual = jest.requireActual('#app/lib/uasApi/uasUtility');
   return {
@@ -101,7 +106,7 @@ describe('useTopicFollowButton', () => {
       isFollowed: false,
       isLoading: false,
       error: null,
-      metadata: undefined,
+      savedMetadata: undefined,
     });
 
     (use as jest.Mock).mockImplementation((context: unknown) => {
@@ -210,6 +215,54 @@ describe('useTopicFollowButton', () => {
     });
   });
 
+  it('refreshes stale metadata for an already followed topic', async () => {
+    mockUseTopicFollowStatus.mockReturnValue({
+      isFollowed: true,
+      isLoading: false,
+      error: null,
+      savedMetadata: {
+        topicId: topicData.topicId,
+        title: 'Old title',
+        locatorUrl: topicData.url,
+        service: 'hindi',
+      },
+    });
+
+    await act(async () => {
+      renderHook(() => useTopicFollowButton(topicData));
+    });
+
+    expect(mockCreateFollowsPayload).toHaveBeenCalledWith(topicData, 'hindi');
+    expect(mockUasApiRequest).toHaveBeenCalledTimes(1);
+    expect(mockUasApiRequest).toHaveBeenCalledWith(
+      'POST',
+      FOLLOWS_CONFIG.activityType,
+      {
+        body: expect.objectContaining({
+          metaData: {
+            topicId: topicData.topicId,
+            title: topicData.title,
+            locatorUrl: topicData.url,
+            service: 'hindi',
+          },
+        }),
+        isRefreshAvailable: true,
+      },
+    );
+    expect(mockSetQueryData).toHaveBeenCalledWith(
+      uasKeys.followStatus(mockHashedUserId, topicData.topicId),
+      {
+        isFollowed: true,
+        metadata: {
+          topicId: topicData.topicId,
+          title: topicData.title,
+          locatorUrl: topicData.url,
+          service: 'hindi',
+        },
+      },
+    );
+  });
+
   it('updates follow status cache and invalidates follows list after unfollow', async () => {
     const { result } = renderHook(() => useTopicFollowButton(topicData));
 
@@ -267,7 +320,7 @@ describe('useTopicFollowButton', () => {
       isFollowed: true,
       isLoading: true,
       error: statusError,
-      metadata: undefined,
+      savedMetadata: undefined,
     });
 
     const { result } = renderHook(() => useTopicFollowButton(topicData));
