@@ -2234,12 +2234,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@bbc/resonance@https://mybbc-analytics.files.bbci.co.uk/resonance/resonance-2.7.2.tgz":
-  version: 2.7.2
-  resolution: "@bbc/resonance@https://mybbc-analytics.files.bbci.co.uk/resonance/resonance-2.7.2.tgz"
+"@bbc/resonance@https://mybbc-analytics.files.bbci.co.uk/resonance/resonance-2.10.0.tgz":
+  version: 2.10.0
+  resolution: "@bbc/resonance@https://mybbc-analytics.files.bbci.co.uk/resonance/resonance-2.10.0.tgz"
   dependencies:
     uuid: "npm:14.0.0"
-  checksum: 10/b0bb7276ddb297c04373a3b7301f2958bf3914970309585f393bd856c27e44a04a7aff77e0310a704dcc392ad9cce14eea2f51496284e10ac462d4cd47dcf8ff
+  checksum: 10/58369df4749752e8c82f714a3df4e458bbb25efe8d6b937a38b22f805817ad0d447489d0dd1a0c48d8a090f8ad10f4f972bf4297b0e9c3a1ae35d495b44af62c
   languageName: node
   linkType: hard
 
@@ -16096,7 +16096,7 @@ __metadata:
     "@babel/preset-env": "npm:7.29.7"
     "@babel/preset-react": "npm:7.29.7"
     "@babel/preset-typescript": "npm:7.29.7"
-    "@bbc/resonance": "https://mybbc-analytics.files.bbci.co.uk/resonance/resonance-2.7.2.tgz"
+    "@bbc/resonance": "https://mybbc-analytics.files.bbci.co.uk/resonance/resonance-2.10.0.tgz"
     "@bbc/reverb-url-helper": "https://mybbc-analytics.files.bbci.co.uk/reverb-url-helper/bbc-reverb-url-helper-2.5.0.tgz"
     "@bbc/web-vitals": "npm:2.6.0"
     "@cypress/webpack-preprocessor": "npm:7.1.1"
