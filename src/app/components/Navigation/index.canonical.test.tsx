@@ -122,6 +122,14 @@ describe('Navigation - Canonical', () => {
   });
 
   describe('sticky navigation', () => {
+    const defaultMediaQuery = window.matchMedia('');
+    const enableMotion = () => {
+      jest.mocked(window.matchMedia).mockImplementation(query => ({
+        ...defaultMediaQuery,
+        media: query,
+        matches: query !== '(prefers-reduced-motion: reduce)',
+      }));
+    };
     const stickyOptions = {
       service: 'mundo' as Services,
       pageType: HOME_PAGE,
@@ -151,6 +159,9 @@ describe('Navigation - Canonical', () => {
 
     beforeEach(() => {
       jest.useFakeTimers();
+      jest
+        .mocked(window.matchMedia)
+        .mockImplementation(query => ({ ...defaultMediaQuery, media: query }));
       Object.defineProperty(window, 'scrollY', {
         configurable: true,
         value: 0,
@@ -177,6 +188,70 @@ describe('Navigation - Canonical', () => {
         configurable: true,
         value: 0,
       });
+    });
+
+    it.each([240, 299, 300, 301])(
+      'only permits sticky navigation from 300px upwards (viewport %spx)',
+      width => {
+        jest.mocked(window.matchMedia).mockImplementation(query => ({
+          ...defaultMediaQuery,
+          media: query,
+          matches: query === '(min-width: 300px)' ? width >= 300 : true,
+        }));
+        const { container } = render(navigation, stickyOptions);
+        scrollTo(500);
+        scrollTo(450);
+        const stickyNav = container.querySelector('[data-e2e="sticky-nav"]');
+
+        if (width < 300) {
+          expect(stickyNav).not.toBeInTheDocument();
+          expect(
+            screen.getByRole('button', { name: 'menu' }),
+          ).toBeInTheDocument();
+        } else {
+          expect(stickyNav).toHaveAttribute('data-sticky-visible', 'true');
+        }
+      },
+    );
+
+    it('restores normal navigation below 300px and allows sticky navigation again after widening', () => {
+      const addListener = jest.fn();
+      const mediaQuery = {
+        ...defaultMediaQuery,
+        media: '(min-width: 300px)',
+        addListener,
+      };
+      jest
+        .mocked(window.matchMedia)
+        .mockImplementation(query =>
+          query === mediaQuery.media
+            ? mediaQuery
+            : { ...defaultMediaQuery, media: query },
+        );
+      const { container } = render(navigation, stickyOptions);
+      scrollTo(500);
+      scrollTo(450);
+      fireEvent.click(screen.getByRole('button', { name: 'menu' }));
+      const handleChange = addListener.mock.calls[0][0];
+
+      act(() => {
+        handleChange({ ...mediaQuery, matches: false });
+      });
+
+      expect(container.querySelector('[data-e2e="sticky-nav"]')).toBeNull();
+      expect(screen.getByRole('button', { name: 'menu' })).toHaveAttribute(
+        'aria-expanded',
+        'false',
+      );
+
+      act(() => {
+        handleChange({ ...mediaQuery, matches: true });
+      });
+      scrollTo(400);
+
+      expect(
+        container.querySelector('[data-e2e="sticky-nav"]'),
+      ).toHaveAttribute('data-sticky-visible', 'true');
     });
 
     it.each<Services>([
@@ -226,6 +301,41 @@ describe('Navigation - Canonical', () => {
       },
     );
 
+    it('does not switch to fixed positioning while scrolling down across the article activation point', () => {
+      const { container } = render(articleNavigation, {
+        ...stickyOptions,
+        pageType: ARTICLE_PAGE,
+      });
+      const firstParagraph = screen.getByText(
+        'First line of article body text',
+      );
+      const paragraphBounds = jest.spyOn(
+        firstParagraph,
+        'getBoundingClientRect',
+      );
+      const bounds = firstParagraph.getBoundingClientRect();
+      const stickyNav = container.querySelector('[data-e2e="sticky-nav"]');
+
+      paragraphBounds.mockReturnValue({ ...bounds, top: 1 });
+      scrollTo(499);
+      paragraphBounds.mockReturnValue({ ...bounds, top: 0 });
+      scrollTo(500);
+      paragraphBounds.mockReturnValue({ ...bounds, top: -1 });
+      scrollTo(501);
+
+      expect(stickyNav).toHaveAttribute('data-sticky-visible', 'false');
+      expect(stickyNav).not.toHaveStyle({ position: 'fixed' });
+      expect(stickyNav).not.toHaveStyle({
+        transition: 'transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+      });
+      expect(stickyNav?.parentElement).not.toHaveStyle({ height: '88px' });
+
+      scrollTo(500);
+
+      expect(stickyNav).toHaveAttribute('data-sticky-visible', 'true');
+      expect(stickyNav).toHaveStyle({ position: 'fixed' });
+    });
+
     it('hides and closes sticky navigation when scrolling back above the first article line', () => {
       const { container } = render(articleNavigation, {
         ...stickyOptions,
@@ -258,6 +368,102 @@ describe('Navigation - Canonical', () => {
       });
       scrollTo(500);
       scrollTo(450);
+
+      expect(
+        container.querySelector('[data-e2e="sticky-nav"]'),
+      ).toHaveAttribute('data-sticky-visible', 'false');
+    });
+
+    it('paints off-screen before sliding in and completes the slide-out before restoring normal positioning', () => {
+      enableMotion();
+      const { container } = render(articleNavigation, {
+        ...stickyOptions,
+        pageType: ARTICLE_PAGE,
+      });
+      const stickyNav = container.querySelector('[data-e2e="sticky-nav"]');
+
+      scrollTo(500);
+      expect(stickyNav).not.toHaveStyle({ position: 'fixed' });
+
+      scrollTo(450);
+      expect(stickyNav).toHaveStyle({ position: 'fixed' });
+      expect(stickyNav).toHaveStyle({ transform: 'translateY(-100%)' });
+      expect(stickyNav).toHaveAttribute('data-sticky-visible', 'false');
+      expect(stickyNav).toHaveAttribute('hidden');
+
+      act(() => {
+        jest.advanceTimersByTime(16);
+      });
+      expect(stickyNav).not.toHaveAttribute('hidden');
+      expect(stickyNav).toHaveAttribute('data-sticky-visible', 'false');
+
+      act(() => {
+        jest.advanceTimersByTime(24);
+      });
+      expect(stickyNav).toHaveAttribute('data-sticky-visible', 'true');
+      expect(stickyNav).toHaveStyle({ transform: 'translateY(0)' });
+
+      const firstParagraph = screen.getByText(
+        'First line of article body text',
+      );
+      jest.spyOn(firstParagraph, 'getBoundingClientRect').mockReturnValue({
+        ...firstParagraph.getBoundingClientRect(),
+        top: 1,
+      });
+      scrollTo(400);
+
+      expect(stickyNav).toHaveAttribute('data-sticky-visible', 'false');
+      expect(stickyNav).toHaveStyle({ position: 'fixed' });
+      expect(stickyNav).toHaveStyle({ transform: 'translateY(-100%)' });
+      expect(stickyNav).toHaveAttribute('inert');
+      expect(stickyNav).not.toHaveAttribute('hidden');
+      expect(stickyNav?.parentElement).toHaveStyle({ height: '88px' });
+
+      act(() => {
+        jest.advanceTimersByTime(400);
+      });
+      expect(stickyNav).not.toHaveStyle({ position: 'fixed' });
+      expect(stickyNav?.parentElement).not.toHaveStyle({ height: '88px' });
+    });
+
+    it('does not hide the positioned navigation when preparing a repeat entrance', () => {
+      enableMotion();
+      const { container } = render(articleNavigation, {
+        ...stickyOptions,
+        pageType: ARTICLE_PAGE,
+      });
+      const stickyNav = container.querySelector('[data-e2e="sticky-nav"]');
+      scrollTo(500);
+      scrollTo(450);
+      act(() => {
+        jest.advanceTimersByTime(400);
+      });
+      scrollTo(460);
+      act(() => {
+        jest.advanceTimersByTime(400);
+      });
+      scrollTo(450);
+
+      expect(stickyNav).not.toHaveAttribute('hidden');
+      expect(stickyNav).toHaveAttribute('data-sticky-visible', 'false');
+      act(() => {
+        jest.advanceTimersByTime(40);
+      });
+      expect(stickyNav).toHaveAttribute('data-sticky-visible', 'true');
+    });
+
+    it('cancels the pending slide-in when the user starts scrolling down', () => {
+      enableMotion();
+      const { container } = render(articleNavigation, {
+        ...stickyOptions,
+        pageType: ARTICLE_PAGE,
+      });
+      scrollTo(500);
+      scrollTo(450);
+      scrollTo(460);
+      act(() => {
+        jest.advanceTimersByTime(400);
+      });
 
       expect(
         container.querySelector('[data-e2e="sticky-nav"]'),
@@ -330,14 +536,15 @@ describe('Navigation - Canonical', () => {
       expect(stickyNav).toHaveAttribute('data-sticky-visible', 'false');
       expect(stickyNav).not.toHaveAttribute('inert');
       scrollTo(500);
-      expect(stickyNav).toHaveAttribute('aria-hidden', 'true');
-      expect(stickyNav).toHaveAttribute('inert');
-      expect(stickyNav?.parentElement).toHaveStyle({ height: '88px' });
+      expect(stickyNav).not.toHaveAttribute('aria-hidden');
+      expect(stickyNav).not.toHaveAttribute('inert');
+      expect(stickyNav).not.toHaveStyle({ position: 'fixed' });
 
       scrollTo(450);
       expect(stickyNav).toHaveAttribute('data-sticky-visible', 'true');
       expect(stickyNav).not.toHaveAttribute('aria-hidden');
       expect(stickyNav).not.toHaveAttribute('inert');
+      expect(stickyNav?.parentElement).toHaveStyle({ height: '88px' });
       expect(getAllByTestId(scrollableTestId)).toHaveLength(2);
       expect(screen.getAllByRole('button', { name: 'menu' })).toHaveLength(1);
       expect(stickyNav).toHaveStyle({ position: 'fixed' });
