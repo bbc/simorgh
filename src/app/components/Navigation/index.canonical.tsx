@@ -126,12 +126,10 @@ const CanonicalNavigationContainer: React.FC<
 
     const scrollState: {
       lastScrollY: number;
-      keyboardNavigation: boolean;
       fixed: boolean;
       animationFrame: number | null;
     } = {
       lastScrollY: window.scrollY,
-      keyboardNavigation: false,
       fixed: false,
       animationFrame: null,
     };
@@ -157,9 +155,7 @@ const CanonicalNavigationContainer: React.FC<
             articleStart.getBoundingClientRect().top <= 0
           : slot.getBoundingClientRect().bottom < -STICKY_NAV_CLEARANCE;
       const fixed =
-        reachedActivationPoint &&
-        !scrollState.keyboardNavigation &&
-        (scrollingUp || scrollState.fixed);
+        reachedActivationPoint && (scrollingUp || scrollState.fixed);
       const height =
         nav.getBoundingClientRect().height ||
         slot.getBoundingClientRect().height;
@@ -188,32 +184,12 @@ const CanonicalNavigationContainer: React.FC<
         );
       }
     };
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Tab') {
-        scrollState.keyboardNavigation = true;
-        if (scrollState.fixed) setIsOpen(false);
-        scrollState.fixed = false;
-        setIsStickyPositioned(false);
-        setIsStickyVisible(false);
-        setStickyState(INITIAL_STICKY_STATE);
-      }
-    };
-    const handlePointer = () => {
-      scrollState.keyboardNavigation = false;
-    };
-
     window.addEventListener('scroll', handleScroll, { passive: true });
     window.addEventListener('resize', handleScroll);
-    window.addEventListener('keydown', handleKeyDown);
-    window.addEventListener('mousedown', handlePointer);
-    window.addEventListener('touchstart', handlePointer, { passive: true });
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', handleScroll);
-      window.removeEventListener('keydown', handleKeyDown);
-      window.removeEventListener('mousedown', handlePointer);
-      window.removeEventListener('touchstart', handlePointer);
       if (scrollState.animationFrame !== null) {
         window.cancelAnimationFrame(scrollState.animationFrame);
       }

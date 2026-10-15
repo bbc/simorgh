@@ -625,21 +625,44 @@ describe('Navigation - Canonical', () => {
       },
     );
 
-    it('disables sticky navigation for Tab and re-enables it after pointer interaction', () => {
+    it('keeps sticky navigation visible and its dropdown open when Tab is pressed', () => {
       const { container } = render(navigation, stickyOptions);
       const stickyNav = container.querySelector('[data-e2e="sticky-nav"]');
       scrollTo(500);
       scrollTo(450);
+      const menuButton = screen.getByRole('button', { name: 'menu' });
+      fireEvent.click(menuButton);
       fireEvent.keyDown(window, { key: 'Tab' });
       scrollTo(400);
 
-      expect(stickyNav).toHaveAttribute('data-sticky-visible', 'false');
-      expect(stickyNav).not.toHaveAttribute('inert');
-      expect(stickyNav).not.toHaveStyle({ position: 'fixed' });
-
-      fireEvent.mouseDown(window);
-      scrollTo(350);
       expect(stickyNav).toHaveAttribute('data-sticky-visible', 'true');
+      expect(stickyNav).not.toHaveAttribute('inert');
+      expect(stickyNav).toHaveStyle({ position: 'fixed' });
+      expect(menuButton).toHaveAttribute('aria-expanded', 'true');
+    });
+
+    it('allows sticky navigation to appear on scroll-up after keyboard navigation without pointer interaction', () => {
+      const { container } = render(navigation, stickyOptions);
+      fireEvent.keyDown(window, { key: 'Tab' });
+      scrollTo(500);
+      scrollTo(450);
+
+      expect(
+        container.querySelector('[data-e2e="sticky-nav"]'),
+      ).toHaveAttribute('data-sticky-visible', 'true');
+    });
+
+    it('keeps hidden sticky navigation inert when Tab is pressed', () => {
+      const { container } = render(navigation, stickyOptions);
+      scrollTo(500);
+      scrollTo(450);
+      scrollTo(460);
+      fireEvent.keyDown(window, { key: 'Tab' });
+
+      const stickyNav = container.querySelector('[data-e2e="sticky-nav"]');
+      expect(stickyNav).toHaveAttribute('data-sticky-visible', 'false');
+      expect(stickyNav).toHaveAttribute('inert');
+      expect(stickyNav).toHaveAttribute('aria-hidden', 'true');
     });
 
     it('does not close the original dropdown when tabbing through its links', () => {
