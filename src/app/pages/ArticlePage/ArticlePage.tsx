@@ -480,7 +480,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       />
       <ComscoreAnalytics />
       <NielsenAnalytics />
-      <UserZoomIntercept />
       <ArticleMetadata
         articleId={getArticleId(pageData)}
         title={headline}
@@ -533,16 +532,16 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             role="main"
             ref={scrollDepthRef}
           >
-            <Blocks
-              blocks={articleBlocks}
-              componentsToRender={componentsToRender}
-            />
             {/* Spike test CTA for UserZoom click-trigger - not a real feedback entry point */}
             <button type="button" ref={userZoomCtaRef}>
               Give feedback
             </button>
-            {/* <UserZoomIntercept trigger="click" targetRef={userZoomCtaRef} /> */}
-            {/* <UserZoomIntercept trigger="view" />  */}
+            <UserZoomIntercept trigger="click" targetRef={userZoomCtaRef} />
+            <Blocks
+              blocks={articleBlocks}
+              componentsToRender={componentsToRender}
+            />
+            <UserZoomIntercept trigger="view" /> 
             <OptimizelyPageMetrics trackPageComplete />
           </main>
           <OptimizelyPageMetrics trackPageDepth />

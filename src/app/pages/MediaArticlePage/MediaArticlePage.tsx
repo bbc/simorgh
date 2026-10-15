@@ -279,6 +279,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
       />
       <ComscoreAnalytics />
       <NielsenAnalytics />
+      <UserZoomIntercept trigger="immediate" />
       <ArticleMetadata
         articleId={getArticleId(pageData)}
         title={headline}
@@ -315,7 +316,6 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
           <main css={styles.mainContent} role="main">
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </main>
-          <UserZoomIntercept trigger="immediate" />
           <OptimizelyPageMetrics trackPageDepth />
           {showTopicDiscovery && <TopicDiscovery topics={topics} />}
           {showTopics && (
