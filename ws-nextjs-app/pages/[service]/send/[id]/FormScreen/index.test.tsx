@@ -183,6 +183,41 @@ describe('Form', () => {
     expect(errorSummmary).toBeNull();
   });
 
+  it('should preserve focus on privacy notice links when the form rerenders', async () => {
+    jest
+      .spyOn(FormContextModule, 'useFormContext')
+      .mockImplementation(() => mockContextValue);
+
+    const { container, rerender } = await act(() => {
+      return render(
+        <Form
+          title={title}
+          description={description}
+          privacyNotice={privacyNotice}
+          sections={sections}
+        />,
+      );
+    });
+    const privacyLink = container.querySelector(
+      'a[href="https://www.bbc.com/mundo/institucional-36400009"]',
+    );
+
+    privacyLink?.focus();
+
+    await act(() => {
+      rerender(
+        <Form
+          title={title}
+          description={description}
+          privacyNotice={privacyNotice}
+          sections={sections}
+        />,
+      );
+    });
+
+    expect(document.activeElement).toBe(privacyLink);
+  });
+
   it('should render every section and its fields', async () => {
     jest
       .spyOn(FormContextModule, 'useFormContext')
