@@ -8297,6 +8297,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"core-js-pure@npm:3.50.0":
+  version: 3.50.0
+  resolution: "core-js-pure@npm:3.50.0"
+  checksum: 10/4009d549c955dbd4274b58a6c36c7afce8a8f468a631bacb06708873bf503b1c91cbf5baa88c8605c2fff2ccc481fb337e9358c16c029c701d0fffa074e1706e
+  languageName: node
+  linkType: hard
+
 "core-js@npm:^3.49.0":
   version: 3.49.0
   resolution: "core-js@npm:3.49.0"
@@ -16070,6 +16077,7 @@ __metadata:
     "@testing-library/jest-dom": "npm:6.9.1"
     "@testing-library/react": "npm:16.3.1"
     autoprefixer: "npm:10.5.4"
+    core-js-pure: "npm:3.50.0"
     cypress: "npm:15.16.0"
     cypress-axe: "npm:1.7.0"
     cypress-multi-reporters: "npm:2.0.5"

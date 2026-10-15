@@ -32,3 +32,8 @@ declare namespace React.JSX {
     img: ImageProps;
   }
 }
+
+declare module 'core-js-pure/actual/promise' {
+  const Promise: PromiseConstructor;
+  export default Promise;
+}
