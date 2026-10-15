@@ -42,7 +42,7 @@ import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ArticlePage from './ArticlePage';
 import ThemeProvider from '../../components/ThemeProvider';
 import * as ReverbParamsContext from '../../contexts/ReverbParamsContext';
-import * as buildReverbParams from '../../components/ATIAnalytics/params';
+import * as buildReverbParams from '../../lib/analyticsUtils/params/buildParams';
 
 jest.mock('../../components/ThemeProvider');
 
@@ -61,7 +61,10 @@ const reverbParamsContextProviderSpy = jest.spyOn(
   'ReverbParamsContextProvider',
 );
 
-const buildReverbParamsSpy = jest.spyOn(buildReverbParams, 'default');
+const buildReverbParamsSpy = jest.spyOn(
+  buildReverbParams,
+  'buildAnalyticsParams',
+);
 
 jest.mock('#app/components/OptimizelyPageMetrics');
 jest.mock('#app/hooks/useOptimizelyVariation', () => ({
@@ -854,7 +857,11 @@ describe('Article Page', () => {
               name: null,
               producer: 'PIDGIN',
             },
-            user: { hashedId: null, isSignedIn: false },
+            user: {
+              hashedId: null,
+              isSignedIn: false,
+              isPersonalisationOn: false,
+            },
           },
         },
       });
@@ -930,7 +937,11 @@ describe('Article Page', () => {
               name: null,
               producer: 'PIDGIN',
             },
-            user: { hashedId: null, isSignedIn: false },
+            user: {
+              hashedId: null,
+              isSignedIn: false,
+              isPersonalisationOn: false,
+            },
           },
         },
       });

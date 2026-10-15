@@ -6,6 +6,14 @@ moment.updateLocale('sw', {
     'Januari_Februari_Machi_Aprili_Mei_Juni_Julai_Agosti_Septemba_Oktoba_Novemba_Disemba'.split(
       '_'
     ),
+  calendar: {
+    sameDay: '[leo saa] LT',
+    nextDay: '[kesho saa] LT',
+    nextWeek: '[wiki ijayo] dddd [saat] LT',
+    lastDay: '[jana] LT',
+    lastWeek: '[wiki iliyopita] dddd [saat] LT',
+    sameElse: 'L',
+  },
   relativeTime: {
     past: '%s',
     s(number, withoutSuffix, key, isFuture) {

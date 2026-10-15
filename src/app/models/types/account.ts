@@ -32,4 +32,5 @@ export type AccountContextProps = {
   isArticlePersonalizationAvailable: boolean;
   isTopicPersonalizationEnabled: boolean;
   isTopicPersonalizationAvailable: boolean;
+  isPersonalisationOn: boolean;
 };

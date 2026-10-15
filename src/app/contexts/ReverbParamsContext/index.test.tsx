@@ -12,7 +12,7 @@ import {
 } from '../../routes/utils/pageTypes';
 import { ReverbParamsContext, PageMetadata } from '.';
 import * as useOptimizelyVariation from '../../hooks/useOptimizelyVariation';
-import * as buildAnalyticsParamsModule from '../../components/ATIAnalytics/params';
+import * as buildAnalyticsParamsModule from '../../lib/analyticsUtils/params/buildParams';
 
 const pageMetadata = {
   atiAnalytics: {
@@ -97,6 +97,7 @@ describe('ReverbParamsContext', () => {
           user: {
             hashedId: null,
             isSignedIn: false,
+            isPersonalisationOn: false,
           },
         },
       },
@@ -149,6 +150,7 @@ describe('ReverbParamsContext', () => {
           user: {
             hashedId: null,
             isSignedIn: false,
+            isPersonalisationOn: false,
           },
         },
       },
@@ -201,6 +203,7 @@ describe('ReverbParamsContext', () => {
           user: {
             hashedId: null,
             isSignedIn: false,
+            isPersonalisationOn: false,
           },
         },
       },
@@ -253,6 +256,7 @@ describe('ReverbParamsContext', () => {
           user: {
             hashedId: null,
             isSignedIn: false,
+            isPersonalisationOn: false,
           },
         },
       },
@@ -309,6 +313,7 @@ describe('ReverbParamsContext', () => {
           user: {
             hashedId: null,
             isSignedIn: false,
+            isPersonalisationOn: false,
           },
         },
       },
@@ -341,16 +346,18 @@ describe('ReverbParamsContext', () => {
       },
     } as unknown as ResonanceBeaconConfig;
 
-    jest.spyOn(buildAnalyticsParamsModule, 'default').mockReturnValue({
-      reverbParams: {
-        params: {
-          page: { name: 'news::pidgin.news.story.51745682.page' },
-          user: { isSignedIn: false },
+    jest
+      .spyOn(buildAnalyticsParamsModule, 'buildAnalyticsParams')
+      .mockReturnValue({
+        reverbParams: {
+          params: {
+            page: { name: 'news::pidgin.news.story.51745682.page' },
+            user: { isSignedIn: false },
+          },
+          eventDetails: { eventName: 'pageView' },
         },
-        eventDetails: { eventName: 'pageView' },
-      },
-      resonanceParams: mockResonanceParams,
-    });
+        resonanceParams: mockResonanceParams,
+      });
 
     render(<TestComponent />, {
       pageMetadata,

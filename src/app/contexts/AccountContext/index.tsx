@@ -14,9 +14,16 @@ import onClient from '#app/lib/utilities/onClient';
 import Cookie from 'js-cookie';
 import { getIdctaUserOrigin } from '#app/lib/idcta/getIDCTAUserOrigin';
 import useToggle from '#app/hooks/useToggle';
+import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import isLocal from '#app/lib/utilities/isLocal';
 import { USER_ID_COOKIE_KEY } from '#app/lib/uasApi/uasUtility';
-import { TOKEN_COOKIE_NAME } from '#app/lib/uasApi/tokenRefresh/tokenManager';
+import {
+  TOKEN_COOKIE_NAME,
+  getDecodedToken,
+} from '#app/lib/uasApi/tokenRefresh/tokenManager';
+
+// Claim set by Account in the ckns_id JWT when a signed-in user opts out of personalisation
+const ENABLE_PERSONALISATION_CLAIM = 'ep';
 
 export const AccountContext = createContext<AccountContextProps>(
   {} as AccountContextProps,
@@ -26,10 +33,6 @@ type AccountProviderProps = {
   initialConfig: IdctaConfig | null;
 };
 
-const getClientCookie = (cookieName: string) => {
-  return onClient() ? Cookie.get(cookieName) : undefined;
-};
-
 export const AccountProvider = ({
   children,
   initialConfig,
@@ -37,6 +40,7 @@ export const AccountProvider = ({
   const { locale, atiAnalyticsProducerName } = use(ServiceContext);
   const { isAmp = false, isApp = false, isLite = false } = use(RequestContext);
   const [pageToReturnTo, setPageToReturnTo] = useState<string | null>(null);
+  const isHydrated = useHydrationDetection();
   const { service } = use(ServiceContext);
   const { enabled: isPersonalizationToggleEnabled, value: accountService } =
     useToggle('uasPersonalization');
@@ -48,6 +52,9 @@ export const AccountProvider = ({
   useEffect(() => {
     setPageToReturnTo(window.location.href);
   }, []);
+
+  const getClientCookie = (cookieName: string) =>
+    onClient() && isHydrated ? Cookie.get(cookieName) : undefined;
 
   // IDCTA / UAS is not available on AMP, Lite or App platforms — ensure provider
   // centralises this logic so individual components don't need to check platform.
@@ -105,6 +112,14 @@ export const AccountProvider = ({
   const isTopicPersonalizationEnabled =
     isTopicPersonalizationAvailable && isSignedIn;
 
+  const decodedIdToken = signedInToken ? getDecodedToken(signedInToken) : null;
+  const hasOptedOutOfPersonalisation =
+    decodedIdToken?.[ENABLE_PERSONALISATION_CLAIM] === false;
+
+  const isPersonalisationOn =
+    (isArticlePersonalizationEnabled || isTopicPersonalizationEnabled) &&
+    !hasOptedOutOfPersonalisation;
+
   const isRefreshAvailable =
     isIdctaAvailable && initialConfig?.availability?.refresh === 'GREEN';
 
@@ -123,6 +138,7 @@ export const AccountProvider = ({
       isArticlePersonalizationEnabled,
       isTopicPersonalizationAvailable,
       isTopicPersonalizationEnabled,
+      isPersonalisationOn,
     }),
     [
       hashedUserId,
@@ -138,6 +154,7 @@ export const AccountProvider = ({
       isArticlePersonalizationEnabled,
       isTopicPersonalizationAvailable,
       isTopicPersonalizationEnabled,
+      isPersonalisationOn,
     ],
   );
 

@@ -1,12 +1,34 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { use } from 'react';
 import { IdctaConfig } from '#app/models/types/account';
+import useHydrationDetection from '#app/hooks/useHydrationDetection';
+import useToggle from '#app/hooks/useToggle';
+import Cookie from 'js-cookie';
+import {
+  getDecodedToken,
+  TOKEN_COOKIE_NAME,
+} from '#app/lib/uasApi/tokenRefresh/tokenManager';
 import { AccountContext } from '.';
 import {
   render,
   screen,
   waitFor,
 } from '../../components/react-testing-library-with-providers';
+
+jest.mock('#app/hooks/useHydrationDetection');
+jest.mock('#app/hooks/useToggle');
+jest.mock('js-cookie');
+jest.mock('#app/lib/uasApi/tokenRefresh/tokenManager', () => ({
+  ...jest.requireActual('#app/lib/uasApi/tokenRefresh/tokenManager'),
+  getDecodedToken: jest.fn(),
+}));
+
+const mockUseHydrationDetection = jest.mocked(useHydrationDetection);
+const mockUseToggle = useToggle as jest.MockedFunction<typeof useToggle>;
+const mockGetDecodedToken = getDecodedToken as jest.MockedFunction<
+  typeof getDecodedToken
+>;
+const mockCookieGet = Cookie.get as jest.Mock;
 
 const mockIdctaConfig = {
   'id-availability': 'GREEN',
@@ -22,6 +44,22 @@ const mockIdctaConfig = {
 describe('AccountContext', () => {
   beforeEach(() => {
     jest.clearAllMocks();
+
+    mockCookieGet.mockReturnValue(undefined);
+    mockGetDecodedToken.mockReturnValue(null);
+    mockUseHydrationDetection.mockReturnValue(true);
+
+    mockUseToggle.mockImplementation(toggleName => {
+      if (toggleName === 'uasPersonalization') {
+        return { enabled: true, value: '' };
+      }
+
+      if (toggleName === 'topicUasPersonalization') {
+        return { enabled: false, value: '' };
+      }
+
+      return { enabled: false, value: '' };
+    });
 
     delete (window as any).location;
     window.location = { href: 'https://example.com/current-page' } as any;
@@ -125,6 +163,36 @@ describe('AccountContext', () => {
     expect(context.settingsUrl).toBe(mockIdctaConfig.unavailable_url);
     expect(context.signOutUrl).toBe(mockIdctaConfig.unavailable_url);
     expect(context.forYouUrl).toBe(mockIdctaConfig.unavailable_url);
+  });
+
+  it('should only read account cookies after hydration', () => {
+    mockUseHydrationDetection.mockReturnValue(false);
+    mockCookieGet.mockImplementation((cookieName: string) =>
+      cookieName === TOKEN_COOKIE_NAME ? 'signed-in-token' : undefined,
+    );
+
+    const { rerender } = render(<TestComponent />, {
+      idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: false },
+      service: 'hindi',
+    });
+
+    expect(mockCookieGet).not.toHaveBeenCalledWith(TOKEN_COOKIE_NAME);
+    expect(mockGetDecodedToken).not.toHaveBeenCalled();
+
+    const initialContext = JSON.parse(
+      screen.getByTestId('test-component').textContent as string,
+    );
+    expect(initialContext.isSignedIn).toBe(false);
+
+    mockUseHydrationDetection.mockReturnValue(true);
+    rerender(<TestComponent />);
+
+    const rerenderedContext = JSON.parse(
+      screen.getByTestId('test-component').textContent as string,
+    );
+
+    expect(mockCookieGet).toHaveBeenCalledWith(TOKEN_COOKIE_NAME);
+    expect(rerenderedContext.isSignedIn).toBe(true);
   });
 
   it('should set isSignedIn to true when IDCTA is available and initialIsSignedIn is true', () => {
@@ -261,5 +329,43 @@ describe('AccountContext', () => {
     const context = JSON.parse(testEl.textContent as string);
 
     expect(context.isRefreshAvailable).toBe(false);
+  });
+
+  it('should set isPersonalisationOn to false when token contains ep=false opt-out claim', () => {
+    mockCookieGet.mockImplementation((cookieName: string) =>
+      cookieName === TOKEN_COOKIE_NAME ? 'signed-in-token' : undefined,
+    );
+    mockGetDecodedToken.mockReturnValue({ ep: false });
+
+    render(<TestComponent />, {
+      idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: false },
+      service: 'hindi',
+    });
+
+    const testEl = screen.getByTestId('test-component');
+    const context = JSON.parse(testEl.textContent as string);
+
+    expect(context.isSignedIn).toBe(true);
+    expect(context.isArticlePersonalizationEnabled).toBe(true);
+    expect(context.isPersonalisationOn).toBe(false);
+  });
+
+  it('should set isPersonalisationOn to true when token does not opt out of personalisation', () => {
+    mockCookieGet.mockImplementation((cookieName: string) =>
+      cookieName === TOKEN_COOKIE_NAME ? 'signed-in-token' : undefined,
+    );
+    mockGetDecodedToken.mockReturnValue({ ep: true });
+
+    render(<TestComponent />, {
+      idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: false },
+      service: 'hindi',
+    });
+
+    const testEl = screen.getByTestId('test-component');
+    const context = JSON.parse(testEl.textContent as string);
+
+    expect(context.isSignedIn).toBe(true);
+    expect(context.isArticlePersonalizationEnabled).toBe(true);
+    expect(context.isPersonalisationOn).toBe(true);
   });
 });

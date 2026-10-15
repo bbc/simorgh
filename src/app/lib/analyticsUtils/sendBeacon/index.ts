@@ -93,7 +93,7 @@ const callReverb = async (eventDetails: ReverbEventDetails) => {
   );
 };
 
-const callResonance = (
+const initialiseResonance = (
   Resonance: typeof import('@bbc/resonance').Resonance,
   resonanceParams: ResonanceBeaconConfig,
 ) => {
@@ -126,7 +126,7 @@ const sendBeacon = async (
     if (resonanceBeaconConfig) {
       try {
         const { Resonance } = await import('@bbc/resonance');
-        callResonance(Resonance, resonanceBeaconConfig);
+        initialiseResonance(Resonance, resonanceBeaconConfig);
       } catch (error) {
         logger.error(ATI_LOGGING_ERROR, { error });
       }

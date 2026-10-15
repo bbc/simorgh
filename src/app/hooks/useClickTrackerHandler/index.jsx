@@ -9,6 +9,9 @@ import {
 import { RequestContext } from '#app/contexts/RequestContext';
 import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import constructReverbUrl from '#app/lib/analyticsUtils/staticATITracking/constructReverbUrl';
+// UNCOMMENT FOR RESONANCE CLICK TRACKING , BLOCKED FOR NOW
+// import dispatchViewabilityEvent from '#app/components/ATIAnalytics/resonance/dispatchResonanceEvent';
+// import buildResonanceEventConfig from '#app/components/ATIAnalytics/resonance/buildResonanceEventConfig';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import activateExperiment from '#app/hooks/useOptimizelyVariation/activateExperiment';
 import {
@@ -69,12 +72,14 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
     itemTracker,
     isSignedIn,
     hashedId,
+    isPersonalisationOn,
   } = extractATITrackingProps({ eventTrackingData, eventType: CLICK_EVENT });
 
   const { trackingIsEnabled } = useTrackingToggle(componentName);
   const [clickedIdentifier, setClickedIdentifier] = useState(null);
 
-  const { service } = use(ServiceContext);
+  // UNCOMMENT FOR RESONANCE CLICK TRACKING , BLOCKED FOR NOW
+  const { service /* , resonanceEnabled */ } = use(ServiceContext);
   const { optimizely } = use(OptimizelyContext);
   const { service: pageService, pageType, isAmp } = use(RequestContext);
 
@@ -187,12 +192,42 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
               ...(itemTracker && { itemTracker }),
               isSignedIn,
               hashedId,
+              isPersonalisationOn,
               ...(experimentVariant &&
                 experimentVariant !== 'off' && {
                   experimentName,
                   experimentVariant,
                 }),
             });
+            // UNCOMMENT FOR RESONANCE CLICK TRACKING , BLOCKED FOR NOW
+            // if (resonanceEnabled) {
+            //   dispatchViewabilityEvent(
+            //     buildResonanceEventConfig({
+            //       type: CLICK_EVENT,
+            //       campaignID,
+            //       componentName,
+            //       format,
+            //       pageIdentifier,
+            //       platform,
+            //       producerId,
+            //       producerName,
+            //       service,
+            //       advertiserID,
+            //       statsDestination,
+            //       url: url || nextPageUrl,
+            //       detailedPlacement,
+            //       ...(groupTracker && { groupTracker }),
+            //       ...(itemTracker && { itemTracker }),
+            //       isSignedIn,
+            //       hashedId,
+            //       ...(experimentVariant &&
+            //         experimentVariant !== 'off' && {
+            //           experimentName,
+            //           experimentVariant,
+            //         }),
+            //     }),
+            //   );
+            // }
           } finally {
             if (nextPageUrl && !preventNavigation) {
               if (optimizely) {
@@ -218,16 +253,19 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
       optimizely,
       experimentVariant,
       sendOptimizelyEvents,
+      experimentName,
       format,
       advertiserID,
       url,
       detailedPlacement,
       groupTracker,
       itemTracker,
-      experimentName,
-      preventNavigation,
       isSignedIn,
       hashedId,
+      isPersonalisationOn,
+      // UNCOMMENT FOR RESONANCE CLICK TRACKING , BLOCKED FOR NOW
+      /* ,resonanceEnabled */
+      preventNavigation,
       isHomepageArticlePromoClick,
     ],
   );

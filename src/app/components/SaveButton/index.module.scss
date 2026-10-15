@@ -50,6 +50,33 @@
       fill: currentColor;
     }
   }
+
+  &.followVariant {
+    border-width: #{theme.pixelsToRem-px-to-rem(2)};
+    border-color: theme.$palette-black;
+    color: theme.$palette-black;
+
+    &.savedState {
+      background-color: theme.$palette-news-bright;
+      border-color: theme.$palette-news-bright;
+      color: theme.$palette-white;
+    }
+
+    &:hover {
+      background-color: theme.$palette-postbox;
+      border-color: theme.$palette-postbox;
+      color: theme.$palette-white;
+    }
+
+    &.updatingState {
+      background-color: theme.$palette-postbox;
+      border-width: #{theme.pixelsToRem-px-to-rem(3)};
+      border-color: theme.$palette-white;
+      color: theme.$palette-white;
+      outline: #{theme.pixelsToRem-px-to-rem(3)} solid theme.$palette-black;
+      outline-offset: 0;
+    }
+  }
 }
 
 button[type='button'].buttonWrapper:focus-visible {
@@ -67,6 +94,13 @@ button[type='button'].buttonWrapper:focus-visible {
     outline-color: theme.$palette-white;
     border-color: theme.$palette-black;
   }
+}
+
+button[type='button'].buttonWrapper.followVariant:focus-visible {
+  background-color: theme.$palette-postbox;
+  color: theme.$palette-white;
+  outline-color: theme.$palette-black;
+  border-color: theme.$palette-white;
 }
 
 .iconText {

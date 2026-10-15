@@ -1,3 +1,5 @@
+import serialiseForScript from '../serialiseForScript';
+
 export type InlineScriptParameter =
   | string
   | Record<string, unknown>
@@ -18,7 +20,7 @@ export default ({ script, parameters, nonce }: InlineScriptProps) => {
         return param.toString();
       }
       if (typeof param === 'object' && param !== null) {
-        return JSON.stringify(param);
+        return serialiseForScript(param);
       }
       return `"${param}"`;
     })

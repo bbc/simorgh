@@ -9,7 +9,7 @@ import { RequestContext } from '#app/contexts/RequestContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { AccountContext } from '#app/contexts/AccountContext';
 import withOptimizelyProvider from '#app/legacy/containers/PageHandlers/withOptimizelyProvider';
-import buildAnalyticsParams from '#app/components/ATIAnalytics/params';
+import { buildAnalyticsParams } from '#app/lib/analyticsUtils/params/buildParams';
 import {
   ATIData,
   ReverbBeaconConfig,
@@ -84,7 +84,11 @@ const ReverbParamsContextProviderComponent = ({
 }: PropsWithChildren<ReverbParamsProviderProps>) => {
   const requestContext = use(RequestContext);
   const serviceContext = use(ServiceContext);
-  const { isSignedIn, hashedUserId: hashedId } = use(AccountContext);
+  const {
+    isSignedIn,
+    hashedUserId: hashedId,
+    isPersonalisationOn,
+  } = use(AccountContext);
 
   const enrichedAtiData = getEnrichedATIData({
     pageMetadata: metadata,
@@ -98,6 +102,7 @@ const ReverbParamsContextProviderComponent = ({
     atiData: enrichedAtiData,
     isSignedIn,
     hashedId,
+    isPersonalisationOn,
   });
 
   const {

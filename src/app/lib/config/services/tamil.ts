@@ -86,6 +86,9 @@ export const service: DefaultServiceConfig = {
         moreAboutTopic: '{topic} பற்றி மேலும்',
         fetchErrorMessage: 'ஏற்ற முடியவில்லை. மீண்டும் முயற்சிக்கவும்',
       },
+      googlePreferredSource: {
+        linkText: 'Google இல் விருப்பமான ஆதாரமாகச் சேர்க்கவும்',
+      },
       continueReading: 'தொடர்ந்து படியுங்கள்',
       currentPage: 'தற்போதுள்ள பக்கம்',
       skipLinkText: 'உள்ளடக்கத்துக்குத் தாண்டிச் செல்க',
@@ -97,6 +100,13 @@ export const service: DefaultServiceConfig = {
       relatedTopics: 'தொடர்புடைய தலைப்புகள்',
       moreOnThis: '',
       navMenuText: 'பிரிவுகள்',
+      liteSite: {
+        onboardingMessage:
+          'நீங்கள் இந்த இணையதளத்தின் எழுத்து மட்டும் கொண்ட பதிப்பைப் பார்க்கிறீர்கள், இது குறைவான டேட்டாவைப் பயன்படுத்துகிறது. அனைத்து படங்கள் மற்றும் வீடியோக்களுடன் கூடிய இணையதளத்தின் முக்கிய பதிப்பைப் பார்க்கவும்.',
+        toMainSite: 'என்னை முக்கிய இணையதளத்திற்கு அழைத்துச் செல்லுங்கள்',
+        informationPage: 'இந்த டேட்டா சேமிப்பு பதிப்பைப் பற்றி மேலும் அறியவும்',
+        dataSaving: 'டேட்டா சேமிப்பு பதிப்பு',
+      },
       mediaAssetPage: {
         mediaPlayer: 'ஊடக இயக்கி',
         audioPlayer: 'கேட்பொலி பிளேயர்',
