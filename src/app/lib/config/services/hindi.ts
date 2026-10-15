@@ -179,8 +179,8 @@ export const service: DefaultServiceConfig = {
         followedTopicsErrorText:
           'आपके फ़ॉलो किए गए टॉपिक लोड करने में दिक्कत हो रही है',
         noFollowedTopics: 'आपने अभी तक किसी टॉपिक को फ़ॉलो नहीं किया है',
-        seeMoreTopics: 'See more',
-        seeLessTopics: 'See less',
+        seeMoreTopics: 'और देखें',
+        seeLessTopics: 'कम देखें',
       },
       actionTooltip: {
         success: {

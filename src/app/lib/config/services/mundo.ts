@@ -207,8 +207,8 @@ export const service: DefaultServiceConfig = {
         followedTopicsErrorText:
           'Estamos teniendo problemas para cargar los temas que sigues',
         noFollowedTopics: 'Aún no has seguido ningún tema',
-        seeMoreTopics: 'See more',
-        seeLessTopics: 'See less',
+        seeMoreTopics: 'Ver más',
+        seeLessTopics: 'Ver menos',
       },
       actionTooltip: {
         success: {
