@@ -75,13 +75,15 @@ const mockSavedArticles: SavedArticle[] = [
   },
 ];
 
+const mockHashedUserId = 'user-123';
+
 describe('useUASRecentActivity', () => {
   beforeEach(() => {
     jest.clearAllMocks();
     mockUseQueryReturn = { data: undefined, isLoading: false, error: null };
 
     (use as jest.Mock).mockImplementation((context: unknown) => {
-      if (context === AccountContext) return { hashedUserId: 'user-123' };
+      if (context === AccountContext) return { hashedUserId: mockHashedUserId };
       return {};
     });
   });
@@ -185,12 +187,12 @@ describe('useUASRecentActivity', () => {
   it('should include hashedUserId and startIndex in the query key', () => {
     renderHook(() => useUASRecentActivity({ startIndex: 10 }));
 
-    expect(mockQueryKey).toEqual(uasKeys.favouritesPage('user-123', 10));
+    expect(mockQueryKey).toEqual(uasKeys.favouritesPage(mockHashedUserId, 10));
   });
 
   it('should include the current service in the query key and pass it to getRecentActivity', async () => {
     (use as jest.Mock).mockImplementation((context: unknown) => {
-      if (context === AccountContext) return { hashedUserId: 'user-123' };
+      if (context === AccountContext) return { hashedUserId: mockHashedUserId };
       if (context === ServiceContext) return { service: 'mundo' };
       return {};
     });
@@ -198,7 +200,7 @@ describe('useUASRecentActivity', () => {
     renderHook(() => useUASRecentActivity({ startIndex: 10 }));
 
     expect(mockQueryKey).toEqual(
-      uasKeys.favouritesPage('user-123', 10, 'mundo'),
+      uasKeys.favouritesPage(mockHashedUserId, 10, 'mundo'),
     );
 
     await mockQueryFn({ signal: new AbortController().signal });

@@ -11,19 +11,19 @@ import {
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { Platforms } from '#app/models/types/global';
 import {
+  ATIEventTrackingProps,
+  ATIPageTrackingProps,
+  ReverbBeaconConfig,
+  ResonanceBeaconConfig,
+} from '#app/components/ATIAnalytics/types';
+import {
   getAppType,
   getHref,
   getReferrer,
   isLocServeCookieSet,
   onOnionTld,
   sanitise,
-} from '../../../lib/analyticsUtils';
-import {
-  ATIEventTrackingProps,
-  ATIPageTrackingProps,
-  ReverbBeaconConfig,
-  ResonanceBeaconConfig,
-} from '../types';
+} from '..';
 
 /*
  * For AMP pages, certain browser and device values are determined
