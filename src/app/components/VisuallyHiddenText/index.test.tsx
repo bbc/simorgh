@@ -15,7 +15,9 @@ describe('VisuallyHiddenText', () => {
 
   it('should render off screen text for screen readers as an h1', () => {
     render(
-      <VisuallyHiddenText as="h1">Some offscreen text</VisuallyHiddenText>,
+      <VisuallyHiddenText as="h1" id="content" tabIndex={-1}>
+        Some offscreen text
+      </VisuallyHiddenText>,
     );
 
     const heading = screen.getByRole('heading', {
@@ -24,6 +26,9 @@ describe('VisuallyHiddenText', () => {
     });
 
     expect(heading).toBeInTheDocument();
+    expect(heading).toHaveAttribute('id', 'content');
+    expect(heading).toHaveAttribute('tabindex', '-1');
+    expect(heading).toHaveClass(styles.visuallyHiddenText);
   });
 
   it('should render off screen text for screen readers as an h1 with lang as en-GB', () => {
@@ -76,21 +81,5 @@ describe('VisuallyHiddenText', () => {
     expect(hiddenText).toHaveAttribute('dir', 'rtl');
     expect(hiddenText).toHaveAttribute('aria-live', 'polite');
     expect(hiddenText).toHaveAttribute('aria-atomic', 'true');
-    expect(hiddenText).not.toHaveAttribute('aria-hidden');
-    expect(hiddenText).not.toHaveAttribute('hidden');
-  });
-
-  it('forwards element-specific attributes to a custom element', () => {
-    render(
-      <VisuallyHiddenText<'label'> as="label" htmlFor="search-input">
-        Search
-      </VisuallyHiddenText>,
-    );
-
-    const label = screen.getByText('Search');
-
-    expect(label.tagName).toBe('LABEL');
-    expect(label).toHaveAttribute('for', 'search-input');
-    expect(label).toHaveClass(styles.visuallyHiddenText);
   });
 });

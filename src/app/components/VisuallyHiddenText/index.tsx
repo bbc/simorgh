@@ -10,7 +10,9 @@ interface VisuallyHiddenTextProps<T extends ElementType> {
   children?: ReactNode;
 }
 
-const VisuallyHiddenText = <T extends ElementType>({
+// `const T` preserves the chosen element type, e.g. `as="h1"` for the home page heading.
+// Without `as`, the type defaults to span, matching the rendered element.
+const VisuallyHiddenText = <const T extends ElementType = 'span'>({
   children,
   id,
   tabIndex,
