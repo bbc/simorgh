@@ -93,12 +93,6 @@ const storybookConfig: StorybookConfig = {
     envName: configType === 'PRODUCTION' ? 'production' : 'development',
     jsc: {
       ...config.jsc,
-      parser: {
-        ...config.jsc?.parser,
-        syntax: 'typescript',
-        tsx: true,
-        dynamicImport: true,
-      },
       transform: {
         ...config.jsc?.transform,
         react: {
@@ -122,10 +116,6 @@ const storybookConfig: StorybookConfig = {
           ],
         ],
       },
-    },
-    module: {
-      ...config.module,
-      type: 'es6',
     },
   }),
   env: config => ({
