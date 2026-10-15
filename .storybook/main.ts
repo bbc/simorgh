@@ -2,10 +2,7 @@ import { createRequire } from 'node:module';
 import { dirname, join } from 'node:path';
 import dotenv from 'dotenv';
 import webpack from 'webpack';
-import {
-  getProjectRoot,
-  resolvePathInStorybookCache,
-} from 'storybook/internal/common';
+import { resolvePathInStorybookCache } from 'storybook/internal/common';
 import type { StorybookConfig } from '@storybook/react-webpack5';
 
 import alias from '../dirAlias';
@@ -14,6 +11,19 @@ import { fontInfo } from '../src/app/components/ThemeProvider/fontFaces';
 const require = createRequire(import.meta.url);
 const MomentTimezoneInclude = require('../src/app/legacy/psammead/moment-timezone-include/src');
 const DOT_ENV_CONFIG = dotenv.config({ quiet: true });
+const storybookBrowserTargets = [
+  'chrome >= 53',
+  'firefox >= 45.0',
+  'ie >= 11',
+  'edge >= 100',
+  'safari >= 10',
+  'opera >= 40',
+  'op_mini >= 18',
+  'Android >= 7',
+  'and_chr >= 53',
+  'and_ff >= 49',
+  'ios_saf >= 10',
+];
 
 const storybookConfig: StorybookConfig = {
   previewHead(config) {
@@ -52,11 +62,10 @@ const storybookConfig: StorybookConfig = {
   ],
   addons: [
     getAbsolutePath('@storybook/addon-a11y'),
+    getAbsolutePath('@storybook/addon-webpack5-compiler-swc'),
     {
       name: getAbsolutePath('@storybook/addon-docs'),
       options: {
-        configureJSX: true,
-        babelOptions: {},
         sourceLoaderOptions: null,
         transcludeMarkdown: true,
       },
@@ -90,48 +99,64 @@ const storybookConfig: StorybookConfig = {
       },
     },
   ],
+  swc: (config, { configType }) => ({
+    ...config,
+    envName: configType === 'PRODUCTION' ? 'production' : 'development',
+    env: {
+      ...config.env,
+      bugfixes: false,
+      targets: {
+        browsers: storybookBrowserTargets,
+      },
+    },
+    jsc: {
+      ...config.jsc,
+      parser: {
+        ...config.jsc?.parser,
+        syntax: 'typescript',
+        tsx: true,
+        dynamicImport: true,
+      },
+      transform: {
+        ...config.jsc?.transform,
+        react: {
+          ...config.jsc?.transform?.react,
+          development: configType === 'DEVELOPMENT',
+          runtime: 'automatic',
+          importSource: '@emotion/react',
+        },
+      },
+      experimental: {
+        ...config.jsc?.experimental,
+        cacheRoot: resolvePathInStorybookCache('swc'),
+        plugins: [
+          ...(config.jsc?.experimental?.plugins ?? []),
+          [
+            '@swc/plugin-emotion',
+            {
+              autoLabel: 'dev-only',
+              labelFormat: '[local]',
+            },
+          ],
+        ],
+      },
+    },
+    module: {
+      ...config.module,
+      type: 'es6',
+    },
+  }),
   env: config => ({
     ...config,
     ...DOT_ENV_CONFIG.parsed,
   }),
-  webpackFinal: async (config, options) => {
-    const babelOptions = await options.presets.apply('babel', {}, options);
-    const typescriptOptions = await options.presets.apply(
-      'typescript',
-      {},
-      options,
-    );
-
-    config.module = {
-      ...(config.module || {}),
-      rules: [
-        ...(config.module?.rules || []),
-        {
-          test: typescriptOptions.skipCompiler
-            ? /\.((c|m)?jsx?)$/
-            : /\.((c|m)?(j|t)sx?)$/,
-          use: [
-            {
-              loader: require.resolve('babel-loader'),
-              options: {
-                cacheDirectory: resolvePathInStorybookCache('babel'),
-                ...babelOptions,
-              },
-            },
-          ],
-          include: [getProjectRoot()],
-          exclude: [/node_modules/],
-        },
-      ],
-    };
-
+  webpackFinal: async config => {
     config.plugins!.push(
       /*
        * This replaces calls to logger.node.js with logger.web.js, a client
        * side replacement. This mimics the behaviour of the client side
        * bundle generation in webpack.config.client.js
        */
-      // @ts-expect-error
       new webpack.NormalModuleReplacementPlugin(
         /(.*)logger.node(\.*)/,
         resource => {
