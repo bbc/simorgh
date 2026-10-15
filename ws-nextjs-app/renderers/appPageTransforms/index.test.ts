@@ -24,6 +24,20 @@ describe('appPageTransforms', () => {
       `);
     });
 
+    it('should append .app suffix to on-demand audio page hrefs', () => {
+      const html = `
+        <a href="https://www.bbc.com/arabic/podcasts/p02pc9qc/p08wtg4d">Podcast</a>
+        <a href="/arabic/bbc_arabic_radio/w3ct01yb">Audio</a>
+      `;
+
+      const modifiedHtml = appPageTransforms(html);
+
+      expect(modifiedHtml).toEqual(`
+        <a href="https://www.bbc.com/arabic/podcasts/p02pc9qc/p08wtg4d.app">Podcast</a>
+        <a href="/arabic/bbc_arabic_radio/w3ct01yb.app">Audio</a>
+      `);
+    });
+
     it('should not append .app suffix to non-article page types', () => {
       const originalHtml = `
         <a href="https://www.bbc.com/pidgin">Home</a>
