@@ -11,19 +11,6 @@ import { fontInfo } from '../src/app/components/ThemeProvider/fontFaces';
 const require = createRequire(import.meta.url);
 const MomentTimezoneInclude = require('../src/app/legacy/psammead/moment-timezone-include/src');
 const DOT_ENV_CONFIG = dotenv.config({ quiet: true });
-const storybookBrowserTargets = [
-  'chrome >= 53',
-  'firefox >= 45.0',
-  'ie >= 11',
-  'edge >= 100',
-  'safari >= 10',
-  'opera >= 40',
-  'op_mini >= 18',
-  'Android >= 7',
-  'and_chr >= 53',
-  'and_ff >= 49',
-  'ios_saf >= 10',
-];
 
 const storybookConfig: StorybookConfig = {
   previewHead(config) {
@@ -102,13 +89,6 @@ const storybookConfig: StorybookConfig = {
   swc: (config, { configType }) => ({
     ...config,
     envName: configType === 'PRODUCTION' ? 'production' : 'development',
-    env: {
-      ...config.env,
-      bugfixes: false,
-      targets: {
-        browsers: storybookBrowserTargets,
-      },
-    },
     jsc: {
       ...config.jsc,
       parser: {
