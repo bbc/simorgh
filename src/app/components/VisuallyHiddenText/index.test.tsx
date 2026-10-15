@@ -1,5 +1,6 @@
 import { render, screen } from '../react-testing-library-with-providers';
 import VisuallyHiddenText from './index';
+import styles from './index.module.scss';
 
 describe('VisuallyHiddenText', () => {
   it('should render off screen text for screen readers', () => {
@@ -9,6 +10,7 @@ describe('VisuallyHiddenText', () => {
 
     expect(hiddenText).toBeInTheDocument();
     expect(hiddenText.tagName).toBe('SPAN');
+    expect(hiddenText).toHaveClass(styles.visuallyHiddenText);
   });
 
   it('should render off screen text for screen readers as an h1', () => {
@@ -37,5 +39,58 @@ describe('VisuallyHiddenText', () => {
     });
 
     expect(heading).toHaveAttribute('lang', 'en-GB');
+  });
+
+  it('ignores unsupported classes passed through an attribute spread', () => {
+    const unsupportedAttributes = { className: 'consumerClass' };
+
+    render(
+      <VisuallyHiddenText {...unsupportedAttributes}>
+        Hidden text
+      </VisuallyHiddenText>,
+    );
+
+    expect(screen.getByText('Hidden text')).toHaveAttribute(
+      'class',
+      styles.visuallyHiddenText,
+    );
+  });
+
+  it('forwards live-region, direction and focus attributes', () => {
+    render(
+      <VisuallyHiddenText
+        id="loading-status"
+        tabIndex={-1}
+        dir="rtl"
+        aria-live="polite"
+        aria-atomic="true"
+      >
+        Loading
+      </VisuallyHiddenText>,
+    );
+
+    const hiddenText = screen.getByText('Loading');
+
+    expect(hiddenText).toHaveAttribute('id', 'loading-status');
+    expect(hiddenText).toHaveAttribute('tabindex', '-1');
+    expect(hiddenText).toHaveAttribute('dir', 'rtl');
+    expect(hiddenText).toHaveAttribute('aria-live', 'polite');
+    expect(hiddenText).toHaveAttribute('aria-atomic', 'true');
+    expect(hiddenText).not.toHaveAttribute('aria-hidden');
+    expect(hiddenText).not.toHaveAttribute('hidden');
+  });
+
+  it('forwards element-specific attributes to a custom element', () => {
+    render(
+      <VisuallyHiddenText<'label'> as="label" htmlFor="search-input">
+        Search
+      </VisuallyHiddenText>,
+    );
+
+    const label = screen.getByText('Search');
+
+    expect(label.tagName).toBe('LABEL');
+    expect(label).toHaveAttribute('for', 'search-input');
+    expect(label).toHaveClass(styles.visuallyHiddenText);
   });
 });
