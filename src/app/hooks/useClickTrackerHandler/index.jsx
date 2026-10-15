@@ -198,7 +198,6 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
                 }),
             });
             if (resonanceEnabled) {
-              console.log('CHECK REACHED', resonanceEnabled);
               dispatchViewabilityEvent(
                 buildResonanceEventConfig({
                   type: CLICK_EVENT,
