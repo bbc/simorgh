@@ -2,9 +2,12 @@ import CurationGrid from '#app/components/Curation/CurationGrid';
 import Heading from '#app/components/Heading';
 import Pagination from '#app/components/Pagination';
 import MetadataContainer from '#app/components/Metadata';
+import TopicTags from '#app/components/TopicTags';
+import { AccountContext } from '#app/contexts/AccountContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { use } from 'react';
 import useUASRecentActivity from '#app/hooks/useUASRecentActivity';
+import useUASFollowedTopics from '#app/hooks/useUASFollowedTopics';
 import Text from '#app/components/Text';
 import styles from './styles';
 import MyNewsPageLoading from './MyNewsPageLoading';
@@ -17,6 +20,8 @@ interface MyNewsPageContentProps {
 
 const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
   const { translations, lang } = use(ServiceContext);
+  const { isArticlePersonalizationEnabled, isTopicPersonalizationEnabled } =
+    use(AccountContext);
 
   const activePage = Math.max(1, Number(page) || 1);
   const startIndex = (activePage - 1) * ITEMS_PER_PAGE;
@@ -24,6 +29,15 @@ const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
   const { savedArticles, total, isLoading, error } = useUASRecentActivity({
     itemsPerPage: ITEMS_PER_PAGE,
     startIndex,
+  });
+
+  const {
+    followedTopics,
+    total: topicsTotal,
+    isLoading: topicsLoading,
+    error: topicsError,
+  } = useUASFollowedTopics({
+    itemsPerPage: 100, // Load all topics at once for now
   });
 
   const pageCount = Math.max(1, Math.ceil(total / ITEMS_PER_PAGE));
@@ -50,20 +64,41 @@ const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
 
   const metadataTitle = activePage >= 2 ? `${title}, ${translatedPage}` : title;
 
-  if (isLoading) {
+  if (isLoading || topicsLoading) {
     return <MyNewsPageLoading />;
   }
 
-  const renderContent = () => {
-    if (error) {
-      return (
-        <Text size="doublePica" fontVariant="sansBold">
-          {errorText}
-        </Text>
-      );
-    }
+  const transformTopicsForRelatedTopics = () =>
+    followedTopics.map(topic => ({
+      topicId: topic.id,
+      topicName: topic.title,
+    }));
 
-    if (!savedArticles.length) {
+  const hasError = error || topicsError;
+
+  const renderFollowedTopicsContent = () => {
+    const hasTopics = followedTopics.length > 0;
+
+    return (
+      <section css={styles.section}>
+        <Heading level={2} css={styles.subheading} size="doublePica">
+          Followed Topics ({topicsTotal})
+        </Heading>
+        {!hasTopics ? (
+          <Text size="longPrimer" fontVariant="sansRegular">
+            You haven’t followed any topics yet
+          </Text>
+        ) : (
+          <TopicTags tags={transformTopicsForRelatedTopics()} />
+        )}
+      </section>
+    );
+  };
+
+  const renderSavedArticlesContent = () => {
+    const hasArticles = savedArticles.length > 0;
+
+    if (!hasArticles) {
       return (
         <Text size="doublePica" fontVariant="sansBold">
           {noArticles}
@@ -72,13 +107,13 @@ const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
     }
 
     return (
-      <>
+      <section css={styles.section}>
         <Heading level={2} css={styles.subheading} size="doublePica">
           {description}
         </Heading>
         <CurationGrid
           summaries={savedArticles}
-          headingLevel={2}
+          headingLevel={3}
           eventTrackingData={{
             componentName: 'my-news-curation-grid',
           }}
@@ -94,7 +129,7 @@ const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
             page={pageLabel}
           />
         )}
-      </>
+      </section>
     );
   };
 
@@ -109,7 +144,16 @@ const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
       <Heading level={1} id="content" tabIndex={-1} css={styles.heading}>
         {title}
       </Heading>
-      {renderContent()}
+      {hasError ? (
+        <Text size="doublePica" fontVariant="sansBold">
+          {errorText}
+        </Text>
+      ) : (
+        <>
+          {isTopicPersonalizationEnabled && renderFollowedTopicsContent()}
+          {isArticlePersonalizationEnabled && renderSavedArticlesContent()}
+        </>
+      )}
     </>
   );
 };
