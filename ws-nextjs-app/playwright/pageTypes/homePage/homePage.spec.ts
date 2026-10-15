@@ -424,7 +424,7 @@ test.describe('homePage', () => {
 
             await gotoHomePage(page, testSuite.path);
 
-            const images = page.locator('img');
+            const images = page.locator('img:not([data-testid="embed"] img)');
             const imageCount = await images.count();
 
             // eslint-disable-next-line no-plusplus
@@ -528,15 +528,11 @@ test.describe('homePage', () => {
                     expectedNumberOfAdditionalItems,
                   );
                 } else {
-                  // eslint-disable-next-line no-await-in-loop
+ 
                   await expect(grid.locator('div.promo-image')).toHaveCount(1);
-                  // eslint-disable-next-line no-await-in-loop
-                  await expect(
-                    grid.locator('div.promo-image'),
-                  ).toBeVisible();
-                  // eslint-disable-next-line no-await-in-loop
+                  await expect(grid.locator('div.promo-image')).toBeVisible();
+
                   await expect(grid.locator('div.promo-text')).toHaveCount(1);
-                  // eslint-disable-next-line no-await-in-loop
                   await expect(grid.locator('div.promo-text')).toBeVisible();
                 }
               }
