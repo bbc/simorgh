@@ -5760,6 +5760,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/promise-polyfill@npm:6.0.6":
+  version: 6.0.6
+  resolution: "@types/promise-polyfill@npm:6.0.6"
+  checksum: 10/f1a7a296eeff3fe708853321aa82768b58eeda9abc5d277e6328227fc78316f093b56ec1a082d72a276ef2f2473a4269e331468aeb397ff08d32b3d5b6e4c966
+  languageName: node
+  linkType: hard
+
 "@types/ramda@npm:0.31.1":
   version: 0.31.1
   resolution: "@types/ramda@npm:0.31.1"
@@ -14799,6 +14806,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"promise-polyfill@npm:8.3.0":
+  version: 8.3.0
+  resolution: "promise-polyfill@npm:8.3.0"
+  checksum: 10/f735f59e464174f720fec9c41c5029ec1014e62e05d61e39d8d2290a0bc4dd7c36a0782d3202f1775d09d0b33a47fef289db38c437534769b187da22e03bfa23
+  languageName: node
+  linkType: hard
+
 "promise-retry@npm:^2.0.1":
   version: 2.0.1
   resolution: "promise-retry@npm:2.0.1"
@@ -16129,6 +16143,7 @@ __metadata:
     "@types/jest": "npm:30.0.0"
     "@types/js-cookie": "npm:^3.0.3"
     "@types/jsdom": "npm:27.0.0"
+    "@types/promise-polyfill": "npm:6.0.6"
     "@types/ramda": "npm:0.31.1"
     "@types/react": "npm:19.2.18"
     "@types/react-dom": "npm:19.2.4"
@@ -16186,6 +16201,7 @@ __metadata:
     moment-timezone: "npm:0.6.0"
     npm-run-all2: "npm:8.0.4"
     prettier: "npm:3.8.1"
+    promise-polyfill: "npm:8.3.0"
     puppeteer: "npm:25.0.2"
     ramda: "npm:0.32.0"
     react: "npm:19.2.8"

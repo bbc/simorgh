@@ -1,4 +1,5 @@
 /* eslint-disable no-underscore-dangle */
+import Promise from 'promise-polyfill';
 import { EnvConfig, getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import addInlineScript from '#app/lib/utilities/addInlineScript';
 
