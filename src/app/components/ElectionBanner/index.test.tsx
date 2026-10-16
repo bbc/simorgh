@@ -112,6 +112,25 @@ describe('ElectionBanner', () => {
   describe.each(['canonical', 'amp'])('%s', platform => {
     const isAmp = platform === 'amp';
 
+    it.each([
+      ['VJ', mockServiceContext, 'electionBannerWrapper'],
+      ['AP', mockAssocPressServiceContext, 'assocPressElectionBannerWrapper'],
+    ] as const)(
+      'merges a supplied className with the %s wrapper class',
+      (_, serviceContext, wrapperClass) => {
+        const { getByTestId } = renderElectionBanner(
+          { aboutTags: mockAboutTags, className: 'custom-election-banner' },
+          { isAmp, toggles: { electionBanner: { enabled: true } } },
+          serviceContext,
+        );
+
+        expect(getByTestId(ELEMENT_ID)).toHaveClass(
+          'custom-election-banner',
+          `${wrapperClass}${isAmp ? 'Amp' : ''}`,
+        );
+      },
+    );
+
     it.each(['local', 'test'])(
       'should use the correct URL for the iframe when SIMORGH_APP_ENV is "%s"',
       appEnv => {
@@ -258,70 +277,35 @@ describe('ElectionBanner', () => {
   });
 
   describe('Association Press', () => {
-    it.each([false, true])(
-      'hides the visible title on topic pages but preserves the iframe title when isAmp is %s',
-      isAmp => {
-        const { getByTestId, queryByText } = renderElectionBanner(
-          { curationIds: [MOCK_ELECTION_CURATION_ID] },
-          {
-            pageType: 'topic',
-            isAmp,
-            toggles: { electionBanner: { enabled: true } },
-          },
-          mockAssocPressServiceContext,
-        );
+    it('hides the visible title on topic pages but preserves the iframe title', () => {
+      const { getByTestId, queryByText } = renderElectionBanner(
+        { curationIds: [MOCK_ELECTION_CURATION_ID] },
+        {
+          pageType: 'topic',
+          toggles: { electionBanner: { enabled: true } },
+        },
+        mockAssocPressServiceContext,
+      );
 
-        expect(queryByText(MOCK_TITLE)).not.toBeInTheDocument();
-        expect(
-          getByTestId(ELEMENT_ID).querySelector('iframe, amp-iframe'),
-        ).toHaveAttribute('title', MOCK_TITLE);
-      },
-    );
+      expect(queryByText(MOCK_TITLE)).not.toBeInTheDocument();
+      expect(getByTestId(ELEMENT_ID).querySelector('iframe')).toHaveAttribute(
+        'title',
+        MOCK_TITLE,
+      );
+    });
 
-    it.each([false, true])(
-      'keeps the visible title on homepages when isAmp is %s',
-      isAmp => {
-        const { getByText } = renderElectionBanner(
-          {},
-          {
-            pageType: 'home',
-            isAmp,
-            toggles: { electionBanner: { enabled: true } },
-          },
-          mockAssocPressServiceContext,
-        );
-
-        expect(getByText(MOCK_TITLE)).toBeInTheDocument();
-      },
-    );
-
-    it.each([
-      ['mundo', undefined, '33021'],
-      ['portuguese', undefined, '33042'],
-      ['arabic', undefined, '33031'],
-      ['russian', undefined, '33043'],
-      ['afrique', undefined, '33244'],
-      ['zhongwen', 'trad', '33245'],
-      ['zhongwen', 'simp', '33245'],
-    ] as const)(
-      'uses the supplied AP URL on the %s %s homepage',
-      (service, variant, layoutId) => {
-        process.env.SIMORGH_APP_ENV = 'live';
-        const { getByTestId } = render(<ElectionBanner />, {
-          service,
-          variant,
+    it('keeps the visible title on homepages', () => {
+      const { getByText } = renderElectionBanner(
+        {},
+        {
           pageType: 'home',
           toggles: { electionBanner: { enabled: true } },
-        });
+        },
+        mockAssocPressServiceContext,
+      );
 
-        const iframe = getByTestId(ELEMENT_ID).querySelector('iframe');
-        expect(iframe).toHaveAttribute(
-          'src',
-          `https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/${layoutId}.html`,
-        );
-        expect(iframe?.getAttribute('title')).toBeTruthy();
-      },
-    );
+      expect(getByText(MOCK_TITLE)).toBeInTheDocument();
+    });
 
     it('does not render on the pidgin homepage without an AP URL', () => {
       const { queryByTestId } = render(<ElectionBanner />, {

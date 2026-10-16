@@ -95,12 +95,12 @@ $ap-election-banner-iframe-heights: (
     padding: #{theme.$spacings-double} #{theme.$spacings-double} 0;
   }
 
-  &[data-page-type='topic'] {
+  &:global(.topic-page-election-banner) {
     margin-block-end: #{theme.$spacings-full};
   }
 
-  &[data-page-type='home'],
-  &[data-page-type='topic'] {
+  &:global(.home-page-election-banner),
+  &:global(.topic-page-election-banner) {
     margin-inline: calc(-1 * #{theme.$spacings-full});
 
     @media #{theme.$mediaQueries-group-2-min-width} {

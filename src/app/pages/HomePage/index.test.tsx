@@ -78,11 +78,19 @@ describe('Home Page', () => {
       },
     );
 
+    expect(getByTestId('election-banner')).toHaveClass(
+      'home-page-election-banner',
+    );
     expect(
       getByTestId('election-banner').compareDocumentPosition(
         container.querySelector('section') as HTMLElement,
       ),
     ).toBe(Node.DOCUMENT_POSITION_FOLLOWING);
+    expect(
+      getByTestId('election-banner').nextElementSibling?.contains(
+        container.querySelector('section'),
+      ),
+    ).toBe(true);
   });
 
   it('does not render the election banner when disabled', () => {

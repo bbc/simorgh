@@ -101,6 +101,7 @@ const TopicPage = ({ pageData }) => {
             )}
           </div>
           <ElectionBanner
+            className="topic-page-election-banner"
             curationIds={curations.map(({ curationId }) => curationId)}
           />
           {curations.map(

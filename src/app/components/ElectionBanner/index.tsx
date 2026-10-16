@@ -12,6 +12,7 @@ import { MetadataTaggings } from '#app/models/types/metadata';
 import styles from './index.module.scss';
 
 type Props = {
+  className?: string;
   aboutTags?: Tag[];
   taggings?: MetadataTaggings;
   curationIds?: string[];
@@ -37,6 +38,7 @@ export const DEFAULT_HEIGHTS_AP = {
 };
 
 export default function ElectionBanner({
+  className,
   aboutTags,
   taggings,
   curationIds,
@@ -47,7 +49,7 @@ export default function ElectionBanner({
     useToggle('electionBanner');
 
   const isHomePage = pageType === 'home';
-  const isCollectionPage = isHomePage || pageType === 'topic';
+  const isCollectionPage = ['home', 'topic'].includes(pageType);
 
   if (
     isLite ||
@@ -74,12 +76,13 @@ export default function ElectionBanner({
     electionThingIds?.includes(thingId),
   );
 
-  const hasElectionCuration = curationIds?.some(curationId =>
-    electionCurationIds?.includes(curationId),
-  );
-  const isEligiblePage = isCollectionPage
-    ? isHomePage || hasElectionCuration
-    : validAboutTag;
+  const isEligibleTopic =
+    pageType === 'topic' &&
+    curationIds?.some(curationId => electionCurationIds?.includes(curationId));
+
+  const isEligibleArticle = !isCollectionPage && Boolean(validAboutTag);
+
+  const isEligiblePage = isHomePage || isEligibleTopic || isEligibleArticle;
 
   const showBanner =
     !isEditoriallySensitive && isEligiblePage && electionBannerEnabled;
@@ -107,12 +110,12 @@ export default function ElectionBanner({
     return (
       <div
         data-testid="election-banner"
-        data-page-type={pageType}
-        className={
+        className={clsx(
           isAssocPress
             ? styles.assocPressElectionBannerWrapperAmp
-            : styles.electionBannerWrapperAmp
-        }
+            : styles.electionBannerWrapperAmp,
+          className,
+        )}
       >
         <div className={styles.electionBannerContent}>
           {hasTitle && <span className={styles.title}>{title}</span>}
@@ -135,12 +138,12 @@ export default function ElectionBanner({
   return (
     <div
       data-testid="election-banner"
-      data-page-type={pageType}
-      className={
+      className={clsx(
         isAssocPress
           ? styles.assocPressElectionBannerWrapper
-          : styles.electionBannerWrapper
-      }
+          : styles.electionBannerWrapper,
+        className,
+      )}
     >
       <div className={styles.electionBannerContent}>
         {hasTitle && <span className={styles.title}>{title}</span>}

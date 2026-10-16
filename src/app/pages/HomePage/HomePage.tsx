@@ -118,7 +118,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
           </span>
         </VisuallyHiddenText>
         <div css={styles.inner}>
-          <ElectionBanner />
+          <ElectionBanner className="home-page-election-banner" />
           <div css={styles.margins}>
             {curations.map(
               (
