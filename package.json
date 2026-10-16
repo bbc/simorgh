@@ -5,7 +5,6 @@
   "sideEffects": [
     "./src/app/legacy/psammead/moment-timezone-include/**/*.*",
     "./src/app/legacy/psammead/psammead-locales/**/*.*",
-    "./cypress/**/*.*",
     "**/*.scss",
     "**/*.css"
   ],
@@ -28,7 +27,7 @@
     "storybook": "storybook dev -p 9001 -c .storybook",
     "test:local": "yarn test:lint && yarn test:dependencies && yarn test:unit && run-p --race start amp:validate",
     "test:dependencies": "node ./scripts/dependencyCheck",
-    "test:lint": "eslint --ext .js,jsx,json,ts,tsx ./src ./data ./cypress",
+    "test:lint": "eslint --ext .js,jsx,json,ts,tsx ./src ./data",
     "test:lint:fix": "eslint --fix --ext .js,jsx,json,ts,tsx ./src",
     "test:puppeteer": "jest --selectProjects='Puppeteer Tests' --ci --colors --verbose",
     "test:puppeteer:local": "PUPPETEER_APP_ENV=local yarn test:puppeteer",
