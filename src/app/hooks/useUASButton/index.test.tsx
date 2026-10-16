@@ -10,6 +10,7 @@ import uasKeys from '#app/lib/uasApi/queryKeys';
 import { AccountContext } from '#app/contexts/AccountContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import useUASMetadataSync from '#app/hooks/useUASMetadataSync/index';
+import { ERROR_TRACKING_FEATURES } from '#app/hooks/useErrorTracking/errorTracking.const';
 import useUASButton, { UASAction, UseUASButtonProps } from './index';
 
 jest.mock('#app/hooks/useUASFetchSaveStatus');
@@ -290,7 +291,7 @@ describe('useUASButton', () => {
 
       expect(mockTrackError).toHaveBeenCalledWith({
         error: expect.any(Error),
-        feature: 'uas',
+        feature: ERROR_TRACKING_FEATURES.SAVE_ARTICLE_UAS,
         action: UASAction.REMOVE,
       });
     });
@@ -317,7 +318,7 @@ describe('useUASButton', () => {
 
       expect(mockTrackError).toHaveBeenCalledWith({
         error: expect.any(Error),
-        feature: 'uas',
+        feature: ERROR_TRACKING_FEATURES.SAVE_ARTICLE_UAS,
         action: 'metadata-sync',
       });
     });
@@ -334,7 +335,7 @@ describe('useUASButton', () => {
 
       expect(mockTrackError).toHaveBeenCalledWith({
         error: expect.any(Error),
-        feature: 'uas',
+        feature: ERROR_TRACKING_FEATURES.SAVE_ARTICLE_UAS,
         action: 'fetch-status',
       });
     });
