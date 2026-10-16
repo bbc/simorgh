@@ -17,6 +17,7 @@ const CurationGrid = ({
   summaries,
   isFirstCuration,
   headingLevel,
+  isVideoCollection = false,
   eventTrackingData,
   showRelatedTopicExperiment = false,
 }: CurationGridProps) => {
@@ -98,13 +99,18 @@ const CurationGrid = ({
           data-testid="topic-promos"
         >
           {summaries.map((promo, index) => (
-            <li css={styles.item} key={promo.id}>
+            <li
+              css={isVideoCollection ? styles.videoCollection : styles.item}
+              key={promo.id}
+            >
               {renderPromo(promo, index)}
             </li>
           ))}
         </ul>
       ) : (
-        <div css={styles.item}>{renderPromo(firstPromo, 0)}</div>
+        <div css={isVideoCollection ? styles.videoCollection : styles.item}>
+          {renderPromo(firstPromo, 0)}
+        </div>
       )}
     </div>
   );
