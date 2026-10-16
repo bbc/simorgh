@@ -7,6 +7,7 @@ export type Block = Omit<OptimoBlock, 'model'> & {
 export type ComponentToRenderProps = {
   type: string;
   blocks: Block[];
+  position?: number[];
 };
 
 export type TimeStampProps = {

@@ -98,13 +98,21 @@ import {
 import LocationBasedTopicOJ from '../../components/LocationBasedTopicOJ';
 
 const getImageComponent =
-  (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (
-    <ImageWithCaption
-      {...props}
-      sizes="(min-width: 1008px) 760px, 100vw"
-      shouldPreload={preloadLeadImageToggle}
-    />
-  );
+  (preloadLeadImageToggle: boolean, leadImagePosition?: number) =>
+  (props: ComponentToRenderProps) => {
+    const { position } = props;
+
+    return (
+      <ImageWithCaption
+        {...props}
+        sizes="(min-width: 1008px) 760px, 100vw"
+        shouldPreload={preloadLeadImageToggle}
+        isLeadImage={
+          leadImagePosition !== undefined && position?.[0] === leadImagePosition
+        }
+      />
+    );
+  };
 
 const getTimestampComponent =
   (
@@ -391,6 +399,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const promoImage = (
     promoImageRawBlock?.model as { locator?: string } | undefined
   )?.locator;
+  const leadImagePosition = blocks.find(block => block.type === 'image')
+    ?.position?.[0];
 
   const componentsToRender = {
     visuallyHiddenHeadline,
@@ -399,7 +409,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     audio: MediaLoader,
     video: getVideoComponent(translations, blocks),
     text,
-    image: getImageComponent(preloadLeadImageToggle),
+    image: getImageComponent(preloadLeadImageToggle, leadImagePosition),
     timestamp: getTimestampComponent(
       hasByline,
       bylineContribBlocks,
