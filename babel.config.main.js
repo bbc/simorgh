@@ -1,10 +1,3 @@
-const plugins = ['@emotion/babel-plugin'];
-
-// allows dynamic `import()` in Node tests.
-if (process.env.NODE_ENV === 'test') {
-  plugins.push('dynamic-import-node');
-}
-
 const overrides = [
   {
     test: /.*logger\..*/,
@@ -53,7 +46,7 @@ module.exports = api => {
 
   return {
     presets,
-    plugins,
+    plugins: ['@emotion/babel-plugin'],
     overrides,
   };
 };

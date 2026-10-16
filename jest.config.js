@@ -1,7 +1,12 @@
+const nextJest = require('next/jest');
+
 const { jestDirAlias } = require('./dirAlias');
 
-const unitTests = {
-  preset: 'ts-jest',
+const nextTransformerPattern = '^.+\\.(js|jsx|ts|tsx|mjs)$';
+const puppeteerNodeModulesPattern =
+  'node_modules/(?!(puppeteer(?:-core)?|@puppeteer/browsers)/)';
+
+const commonConfig = {
   setupFiles: ['./src/testHelpers/jest-setup.js'],
   setupFilesAfterEnv: [
     './src/testHelpers/setupTests.js',
@@ -9,14 +14,15 @@ const unitTests = {
   ],
   moduleNameMapper: {
     ...jestDirAlias,
-    '\\.module\\.(css|scss)$': 'identity-obj-proxy',
+    '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy',
     '^@bbc/resonance$': '<rootDir>/src/testHelpers/resonanceMock.ts',
   },
-  testEnvironment: 'jsdom',
   snapshotSerializers: ['@emotion/jest/serializer'],
-  transform: {
-    '^.+\\.[tj]sx?$': 'babel-jest',
-  },
+};
+
+const unitTests = {
+  ...commonConfig,
+  testEnvironment: 'jsdom',
   displayName: 'Unit Tests',
   collectCoverageFrom: [
     '**/(src|scripts)/**/*.{js,jsx,ts,tsx}',
@@ -35,22 +41,8 @@ const unitTests = {
 };
 
 const clientUnitTests = {
-  preset: 'ts-jest',
-  setupFiles: ['./src/testHelpers/jest-setup.js'],
-  setupFilesAfterEnv: [
-    './src/testHelpers/setupTests.js',
-    'jest-expect-message',
-  ],
-  moduleNameMapper: {
-    ...jestDirAlias,
-    '\\.module\\.(css|scss)$': 'identity-obj-proxy',
-    '^@bbc/resonance$': '<rootDir>/src/testHelpers/resonanceMock.ts',
-  },
+  ...commonConfig,
   testEnvironment: '@happy-dom/jest-environment',
-  snapshotSerializers: ['@emotion/jest/serializer'],
-  transform: {
-    '^.+\\.[tj]sx?$': 'babel-jest',
-  },
   displayName: 'Unit Tests (Client)',
   testMatch: [
     '**/?(*.)+(client.test).{js,jsx,ts,tsx}',
@@ -60,21 +52,67 @@ const clientUnitTests = {
 };
 
 const puppeteerTests = {
-  preset: 'ts-jest',
   setupFiles: ['./puppeteer/jest-setup.js'],
   moduleNameMapper: jestDirAlias,
-  transform: {
-    '^.+\\.[tj]sx?$': 'babel-jest',
-  },
-  transformIgnorePatterns: [
-    'node_modules/(?!(puppeteer(?:-core)?|@puppeteer/browsers)/)',
-  ],
   displayName: 'Puppeteer Tests',
   testMatch: ['**/puppeteer/**/*.test.js'],
 };
 
-module.exports = {
-  projects: [unitTests, clientUnitTests, puppeteerTests],
+const createNextJestConfig = nextJest({});
+
+const withRootEmotion = config => {
+  const [transformer, options] = config.transform[nextTransformerPattern];
+
+  return {
+    ...config,
+    transform: {
+      ...config.transform,
+      [nextTransformerPattern]: [
+        transformer,
+        {
+          ...options,
+          compilerOptions: {
+            ...options.compilerOptions,
+            emotion: {
+              ...options.compilerOptions?.emotion,
+              autoLabel: 'always',
+            },
+          },
+          jsConfig: {
+            ...options.jsConfig,
+            compilerOptions: {
+              ...options.jsConfig?.compilerOptions,
+              jsxImportSource: '@emotion/react',
+            },
+          },
+        },
+      ],
+    },
+  };
+};
+
+const buildProject = async config => {
+  const resolvedConfig = await createNextJestConfig(config)();
+  return withRootEmotion(resolvedConfig);
+};
+
+const buildPuppeteerProject = async () => {
+  const resolvedConfig = await buildProject(puppeteerTests);
+
+  return {
+    ...resolvedConfig,
+    transformIgnorePatterns: resolvedConfig.transformIgnorePatterns
+      .filter(pattern => !pattern.includes('node_modules'))
+      .concat(puppeteerNodeModulesPattern),
+  };
+};
+
+module.exports = async () => ({
+  projects: [
+    await buildProject(unitTests),
+    await buildProject(clientUnitTests),
+    await buildPuppeteerProject(),
+  ],
   reporters: [
     'default',
     [
@@ -90,5 +128,6 @@ module.exports = {
   fakeTimers: {
     enableGlobally: true,
   },
+  coverageProvider: 'v8',
   workerIdleMemoryLimit: '512MB',
-};
+});
