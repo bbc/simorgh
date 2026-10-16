@@ -35,7 +35,6 @@
     "**/*.ts",
     "**/*.tsx",
     "../src/**/*.d.ts",
-    "../src/testHelpers/setupTests.js",
     "build/types/**/*.ts",
     "next.config.js",
     ".next/types/**/*.ts",
