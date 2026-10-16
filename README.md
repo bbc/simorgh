@@ -140,6 +140,10 @@ When viewing Video stories locally, make sure to use a BBC domain, as outlined i
 
 We also use [Chromatic QA](https://docs.chromaticqa.com/) to run cross-browser testing on our stories.
 
+Storybook compiles JavaScript, TypeScript and JSX with SWC, configured in [`.storybook/main.ts`](./.storybook/main.ts). It uses Emotion's JSX runtime and SWC plugin; it does not use the shared Babel configuration to compile stories. Babel remains in use by other tooling in the repository.
+
+When updating Storybook's SWC compiler or `@swc/plugin-emotion`, check their [plugin compatibility](https://swc.rs/docs/plugin/selecting-swc-core) and validate Emotion-styled stories as well as SCSS Modules and MDX documentation.
+
 Please also note that if you would like to see the components rendered with our fonts, you will need to force a repaint of the canvas. This is because our fonts all have the `font-display` property of `optional` or `swap` in accordance with the respective loading strategies here: https://ws-downloads.files.bbci.co.uk/fonts/index.html. The easiest way to force a repaint is just to move the divider between the preview window the and `Knobs` section or resize the browser window.
 
 ### Configuring the application to run on a local network
