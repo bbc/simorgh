@@ -89,6 +89,7 @@ const mockBuildGlobalId = buildGlobalId as jest.MockedFunction<
 >;
 
 const mockHashedUserId = 'user-123';
+const mockService = 'hindi';
 
 describe('useTopicFollowButton', () => {
   const topicData = {
@@ -110,7 +111,7 @@ describe('useTopicFollowButton', () => {
     });
 
     (use as jest.Mock).mockImplementation((context: unknown) => {
-      if (context === ServiceContext) return { service: 'hindi' };
+      if (context === ServiceContext) return { service: mockService };
       if (context === AccountContext)
         return {
           hashedUserId: mockHashedUserId,
@@ -124,12 +125,12 @@ describe('useTopicFollowButton', () => {
       activityType: FOLLOWS_CONFIG.activityType,
       action: 'followed',
       resourceType: FOLLOWS_CONFIG.resourceType,
-      resourceTitle: 'hindi',
+      resourceTitle: mockService,
       metaData: {
         topicId: topicData.topicId,
         title: topicData.title,
         locatorUrl: topicData.url,
-        service: 'hindi',
+        service: mockService,
       },
     });
 
@@ -153,7 +154,10 @@ describe('useTopicFollowButton', () => {
       await result.current.handleFollowAction(FollowAction.FOLLOW);
     });
 
-    expect(mockCreateFollowsPayload).toHaveBeenCalledWith(topicData, 'hindi');
+    expect(mockCreateFollowsPayload).toHaveBeenCalledWith(
+      topicData,
+      mockService,
+    );
     expect(mockUasApiRequest).toHaveBeenCalledWith(
       'POST',
       FOLLOWS_CONFIG.activityType,
@@ -206,7 +210,7 @@ describe('useTopicFollowButton', () => {
           topicId: topicData.topicId,
           title: topicData.title,
           locatorUrl: topicData.url,
-          service: 'hindi',
+          service: mockService,
         },
       },
     );
@@ -224,7 +228,7 @@ describe('useTopicFollowButton', () => {
         topicId: topicData.topicId,
         title: 'Old title',
         locatorUrl: topicData.url,
-        service: 'hindi',
+        service: mockService,
       },
     });
 
@@ -232,7 +236,10 @@ describe('useTopicFollowButton', () => {
       renderHook(() => useTopicFollowButton(topicData));
     });
 
-    expect(mockCreateFollowsPayload).toHaveBeenCalledWith(topicData, 'hindi');
+    expect(mockCreateFollowsPayload).toHaveBeenCalledWith(
+      topicData,
+      mockService,
+    );
     expect(mockUasApiRequest).toHaveBeenCalledTimes(1);
     expect(mockUasApiRequest).toHaveBeenCalledWith(
       'POST',
@@ -243,7 +250,7 @@ describe('useTopicFollowButton', () => {
             topicId: topicData.topicId,
             title: topicData.title,
             locatorUrl: topicData.url,
-            service: 'hindi',
+            service: mockService,
           },
         }),
         isRefreshAvailable: true,
@@ -257,7 +264,7 @@ describe('useTopicFollowButton', () => {
           topicId: topicData.topicId,
           title: topicData.title,
           locatorUrl: topicData.url,
-          service: 'hindi',
+          service: mockService,
         },
       },
     );
