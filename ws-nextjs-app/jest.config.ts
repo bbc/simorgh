@@ -36,7 +36,21 @@ export default async (): Promise<Config> => {
     moduleNameMapper,
     setupFilesAfterEnv: ['./setupTests.ts'],
     testMatch: ['**/integration/!(utils)/**/*.test.ts'],
-    testPathIgnorePatterns: ['.*lite\\.test\\.ts$', '.*amp\\.test\\.ts$'],
+    testPathIgnorePatterns: [
+      '.*/app/.*',
+      '.*lite\\.test\\.ts$',
+      '.*amp\\.test\\.ts$',
+    ],
+  });
+
+  const appIntegrationTests = await buildConfig({
+    displayName: 'Integration Tests - App',
+    testEnvironment: './integration/IntegrationTestEnvironment.ts',
+    testEnvironmentOptions: { platform: 'app' },
+    modulePaths: ['../'],
+    moduleNameMapper,
+    setupFilesAfterEnv: ['./setupTests.ts'],
+    testMatch: ['**/integration/!(utils)/**/app/**/*.test.ts'],
   });
 
   const ampIntegrationTests = await buildConfig({
@@ -80,6 +94,7 @@ export default async (): Promise<Config> => {
     projects: [
       unitTests,
       canonicalIntegrationTests,
+      appIntegrationTests,
       ampIntegrationTests,
       liteIntegrationTests,
     ],
