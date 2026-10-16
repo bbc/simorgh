@@ -209,7 +209,7 @@ The root Jest projects compile JavaScript, JSX, TypeScript and TSX with the SWC 
 
 SWC preserves read-only module exports. Tests that need to spy on or replace imported exports use explicit `jest.mock` factories rather than relying on Babel's writable exports. Existing implementations can be preserved with `jest.requireActual` and object spreading.
 
-Babel is still retained for the non-Jest Cypress, ESLint and Storybook toolchains (and remains transitive in Jest's own dependencies); removing the direct Jest transformer does not remove Babel from the repository.
+Babel is still retained for the non-Jest Cypress and ESLint toolchains (and remains transitive in Jest's own dependencies); removing the direct Jest transformer does not remove Babel from the repository.
 
 Jest coverage uses the V8 provider rather than Babel/Istanbul instrumentation. V8 coverage ranges and branch/function accounting can therefore differ from previous reports. Use `/* v8 ignore next */` (or the corresponding `start` and `stop` forms) for code that must be excluded from V8 coverage; Istanbul-only ignore comments are not a reliable replacement.
 
