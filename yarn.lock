@@ -2540,7 +2540,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/babel-plugin@npm:11.13.5, @emotion/babel-plugin@npm:^11.13.5":
+"@emotion/babel-plugin@npm:^11.13.5":
   version: 11.13.5
   resolution: "@emotion/babel-plugin@npm:11.13.5"
   dependencies:
@@ -16107,7 +16107,6 @@ __metadata:
     "@bbc/reverb-url-helper": "https://mybbc-analytics.files.bbci.co.uk/reverb-url-helper/bbc-reverb-url-helper-2.5.0.tgz"
     "@bbc/web-vitals": "npm:2.6.0"
     "@cypress/webpack-preprocessor": "npm:7.1.1"
-    "@emotion/babel-plugin": "npm:11.13.5"
     "@emotion/cache": "npm:11.14.0"
     "@emotion/jest": "npm:11.14.2"
     "@emotion/react": "npm:11.14.0"

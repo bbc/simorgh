@@ -102,7 +102,6 @@
     "@babel/preset-react": "7.29.7",
     "@babel/preset-typescript": "7.29.7",
     "@cypress/webpack-preprocessor": "7.1.1",
-    "@emotion/babel-plugin": "11.13.5",
     "@emotion/jest": "11.14.2",
     "@happy-dom/jest-environment": "20.14.5",
     "@jest/environment": "30.2.0",
