@@ -85,7 +85,7 @@ describe('useTopicFollowStatus', () => {
     );
 
     expect(result.current.isFollowed).toBe(true);
-    expect(result.current.metadata).toEqual({ title: 'Climate change' });
+    expect(result.current.savedMetadata).toEqual({ title: 'Climate change' });
     expect(result.current.error).toBeNull();
   });
 

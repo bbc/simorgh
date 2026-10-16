@@ -18,6 +18,11 @@ import useTopicFollowButton, { FollowAction } from './index';
 
 jest.mock('#app/hooks/useTopicFollowStatus');
 jest.mock('#app/lib/uasApi');
+const mockTrackError = jest.fn();
+jest.mock('#app/hooks/useErrorTracking', () => ({
+  __esModule: true,
+  default: () => mockTrackError,
+}));
 jest.mock('#app/lib/uasApi/uasUtility', () => {
   const actual = jest.requireActual('#app/lib/uasApi/uasUtility');
   return {
@@ -84,6 +89,7 @@ const mockBuildGlobalId = buildGlobalId as jest.MockedFunction<
 >;
 
 const mockHashedUserId = 'user-123';
+const mockService = 'hindi';
 
 describe('useTopicFollowButton', () => {
   const topicData = {
@@ -101,11 +107,11 @@ describe('useTopicFollowButton', () => {
       isFollowed: false,
       isLoading: false,
       error: null,
-      metadata: undefined,
+      savedMetadata: undefined,
     });
 
     (use as jest.Mock).mockImplementation((context: unknown) => {
-      if (context === ServiceContext) return { service: 'hindi' };
+      if (context === ServiceContext) return { service: mockService };
       if (context === AccountContext)
         return {
           hashedUserId: mockHashedUserId,
@@ -119,12 +125,12 @@ describe('useTopicFollowButton', () => {
       activityType: FOLLOWS_CONFIG.activityType,
       action: 'followed',
       resourceType: FOLLOWS_CONFIG.resourceType,
-      resourceTitle: 'hindi',
+      resourceTitle: mockService,
       metaData: {
         topicId: topicData.topicId,
         title: topicData.title,
         locatorUrl: topicData.url,
-        service: 'hindi',
+        service: mockService,
       },
     });
 
@@ -148,7 +154,10 @@ describe('useTopicFollowButton', () => {
       await result.current.handleFollowAction(FollowAction.FOLLOW);
     });
 
-    expect(mockCreateFollowsPayload).toHaveBeenCalledWith(topicData, 'hindi');
+    expect(mockCreateFollowsPayload).toHaveBeenCalledWith(
+      topicData,
+      mockService,
+    );
     expect(mockUasApiRequest).toHaveBeenCalledWith(
       'POST',
       FOLLOWS_CONFIG.activityType,
@@ -201,13 +210,64 @@ describe('useTopicFollowButton', () => {
           topicId: topicData.topicId,
           title: topicData.title,
           locatorUrl: topicData.url,
-          service: 'hindi',
+          service: mockService,
         },
       },
     );
     expect(mockInvalidateQueries).toHaveBeenCalledWith({
       queryKey: uasKeys.followsList(mockHashedUserId),
     });
+  });
+
+  it('refreshes stale metadata for an already followed topic', async () => {
+    mockUseTopicFollowStatus.mockReturnValue({
+      isFollowed: true,
+      isLoading: false,
+      error: null,
+      savedMetadata: {
+        topicId: topicData.topicId,
+        title: 'Old title',
+        locatorUrl: topicData.url,
+        service: mockService,
+      },
+    });
+
+    await act(async () => {
+      renderHook(() => useTopicFollowButton(topicData));
+    });
+
+    expect(mockCreateFollowsPayload).toHaveBeenCalledWith(
+      topicData,
+      mockService,
+    );
+    expect(mockUasApiRequest).toHaveBeenCalledTimes(1);
+    expect(mockUasApiRequest).toHaveBeenCalledWith(
+      'POST',
+      FOLLOWS_CONFIG.activityType,
+      {
+        body: expect.objectContaining({
+          metaData: {
+            topicId: topicData.topicId,
+            title: topicData.title,
+            locatorUrl: topicData.url,
+            service: mockService,
+          },
+        }),
+        isRefreshAvailable: true,
+      },
+    );
+    expect(mockSetQueryData).toHaveBeenCalledWith(
+      uasKeys.followStatus(mockHashedUserId, topicData.topicId),
+      {
+        isFollowed: true,
+        metadata: {
+          topicId: topicData.topicId,
+          title: topicData.title,
+          locatorUrl: topicData.url,
+          service: mockService,
+        },
+      },
+    );
   });
 
   it('updates follow status cache and invalidates follows list after unfollow', async () => {
@@ -267,7 +327,7 @@ describe('useTopicFollowButton', () => {
       isFollowed: true,
       isLoading: true,
       error: statusError,
-      metadata: undefined,
+      savedMetadata: undefined,
     });
 
     const { result } = renderHook(() => useTopicFollowButton(topicData));

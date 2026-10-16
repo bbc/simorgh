@@ -10,6 +10,10 @@ import uasKeys from '#app/lib/uasApi/queryKeys';
 import { AccountContext } from '#app/contexts/AccountContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import useUASMetadataSync from '#app/hooks/useUASMetadataSync/index';
+import {
+  ERROR_TRACKING_FEATURES,
+  UAS_ERROR_ACTIONS,
+} from '#app/hooks/useErrorTracking/errorTracking.const';
 import useUASButton, { UASAction, UseUASButtonProps } from './index';
 
 jest.mock('#app/hooks/useUASFetchSaveStatus');
@@ -118,6 +122,8 @@ const mockUasApiRequest = uasApiRequest as jest.Mock;
 const mockUseUASMetadataSync = useUASMetadataSync as jest.Mock;
 
 describe('useUASButton', () => {
+  const mockHashedUserId = 'user-123';
+
   const defaultProps = {
     articleId: '123',
     saveArticlePageData: {
@@ -138,7 +144,7 @@ describe('useUASButton', () => {
 
     (use as jest.Mock).mockImplementation(context => {
       if (context === AccountContext)
-        return { hashedUserId: 'user-123', isRefreshAvailable: true };
+        return { hashedUserId: mockHashedUserId, isRefreshAvailable: true };
       if (context === ServiceContext) return { service: 'hindi' };
       return {};
     });
@@ -149,7 +155,9 @@ describe('useUASButton', () => {
   it('passes articleId to useUASFetchSaveStatus', () => {
     renderHook(() => useUASButton(defaultProps));
 
-    expect(mockUseUASFetchSaveStatus).toHaveBeenCalledWith('123');
+    expect(mockUseUASFetchSaveStatus).toHaveBeenCalledWith(
+      defaultProps.articleId,
+    );
   });
 
   describe('handleSaveAction', () => {
@@ -184,7 +192,7 @@ describe('useUASButton', () => {
       });
 
       expect(mockSetQueryData).toHaveBeenCalledWith(
-        uasKeys.favouriteStatus('user-123', '123'),
+        uasKeys.favouriteStatus(mockHashedUserId, defaultProps.articleId),
         expect.objectContaining({
           isSaved: true,
         }),
@@ -199,7 +207,7 @@ describe('useUASButton', () => {
       });
 
       expect(mockUasApiRequest).toHaveBeenCalledWith('DELETE', 'favourites', {
-        globalId: 'urn:bbc:world-service-news:article:123',
+        globalId: `urn:bbc:world-service-news:article:${defaultProps.articleId}`,
         isRefreshAvailable: true,
       });
     });
@@ -212,7 +220,7 @@ describe('useUASButton', () => {
       });
 
       expect(mockSetQueryData).toHaveBeenCalledWith(
-        uasKeys.favouriteStatus('user-123', '123'),
+        uasKeys.favouriteStatus(mockHashedUserId, defaultProps.articleId),
         expect.objectContaining({
           isSaved: false,
         }),
@@ -243,7 +251,7 @@ describe('useUASButton', () => {
       });
 
       expect(mockInvalidateQueries).toHaveBeenCalledWith({
-        queryKey: uasKeys.favouritesList('user-123'),
+        queryKey: uasKeys.favouritesList(mockHashedUserId),
       });
     });
   });
@@ -290,7 +298,7 @@ describe('useUASButton', () => {
 
       expect(mockTrackError).toHaveBeenCalledWith({
         error: expect.any(Error),
-        feature: 'uas',
+        feature: ERROR_TRACKING_FEATURES.SAVE_ARTICLE_UAS,
         action: UASAction.REMOVE,
       });
     });
@@ -317,8 +325,8 @@ describe('useUASButton', () => {
 
       expect(mockTrackError).toHaveBeenCalledWith({
         error: expect.any(Error),
-        feature: 'uas',
-        action: 'metadata-sync',
+        feature: ERROR_TRACKING_FEATURES.SAVE_ARTICLE_UAS,
+        action: UAS_ERROR_ACTIONS.METADATA_SYNC,
       });
     });
 
@@ -334,8 +342,8 @@ describe('useUASButton', () => {
 
       expect(mockTrackError).toHaveBeenCalledWith({
         error: expect.any(Error),
-        feature: 'uas',
-        action: 'fetch-status',
+        feature: ERROR_TRACKING_FEATURES.SAVE_ARTICLE_UAS,
+        action: UAS_ERROR_ACTIONS.FETCH_STATUS,
       });
     });
 
@@ -365,7 +373,7 @@ describe('useUASButton', () => {
       expect(mockUseUASMetadataSync).toHaveBeenCalledWith(
         expect.objectContaining({
           saveArticlePageData: defaultProps.saveArticlePageData,
-          articleId: '123',
+          articleId: defaultProps.articleId,
           service: 'hindi',
           isSaved: true,
           savedArticleMetadata: mockMetadata,

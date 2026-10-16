@@ -157,7 +157,7 @@ describe('useUASRecentActivity', () => {
 
     expect(mockTrackError).toHaveBeenCalledWith({
       error,
-      feature: ERROR_TRACKING_FEATURES.UAS,
+      feature: ERROR_TRACKING_FEATURES.SAVE_ARTICLE_UAS,
       action: UAS_ERROR_ACTIONS.RECENT_ACTIVITY,
     });
   });

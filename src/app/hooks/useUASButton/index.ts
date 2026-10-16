@@ -1,4 +1,4 @@
-import { use, useEffect, useState } from 'react';
+import { use, useState } from 'react';
 import {
   onlineManager,
   useMutation,
@@ -7,6 +7,7 @@ import {
 import useUASFetchSaveStatus from '#app/hooks/useUASFetchSaveStatus';
 import useUASMetadataSync from '#app/hooks/useUASMetadataSync';
 import useErrorTracking from '#app/hooks/useErrorTracking';
+import useTrackErrorEffect from '#app/hooks/useTrackErrorEffect';
 import {
   ERROR_TRACKING_FEATURES,
   UAS_ERROR_ACTIONS,
@@ -65,15 +66,11 @@ const useUASButton = ({
   const { isSaved, isLoading, error, savedMetadata } =
     useUASFetchSaveStatus(articleId);
 
-  useEffect(() => {
-    if (error) {
-      trackError({
-        error,
-        feature: ERROR_TRACKING_FEATURES.UAS,
-        action: UAS_ERROR_ACTIONS.FETCH_STATUS,
-      });
-    }
-  }, [error, trackError]);
+  useTrackErrorEffect({
+    error,
+    feature: ERROR_TRACKING_FEATURES.SAVE_ARTICLE_UAS,
+    action: UAS_ERROR_ACTIONS.FETCH_STATUS,
+  });
 
   // Only set by handleSaveAction, never by the background metadata resync.
   const [actionResult, setActionResult] = useState<UASActionResult>(null);
@@ -115,7 +112,7 @@ const useUASButton = ({
       onError: mutationError =>
         trackError({
           error: mutationError,
-          feature: ERROR_TRACKING_FEATURES.UAS,
+          feature: ERROR_TRACKING_FEATURES.SAVE_ARTICLE_UAS,
           action: UAS_ERROR_ACTIONS.METADATA_SYNC,
         }),
     });
@@ -141,7 +138,7 @@ const useUASButton = ({
         setActionResult({ status: 'error', action });
         trackError({
           error: mutationError,
-          feature: ERROR_TRACKING_FEATURES.UAS,
+          feature: ERROR_TRACKING_FEATURES.SAVE_ARTICLE_UAS,
           action,
         });
       },

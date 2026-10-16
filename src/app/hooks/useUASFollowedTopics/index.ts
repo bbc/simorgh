@@ -1,11 +1,11 @@
-import { use, useEffect } from 'react';
+import { use } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import getFollowedTopics from '#app/lib/uasApi/getFollowedTopics';
 import type { FollowedTopic } from '#app/lib/uasApi/getFollowedTopics';
 import uasKeys from '#app/lib/uasApi/queryKeys';
 import { AccountContext } from '#app/contexts/AccountContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import useErrorTracking from '../useErrorTracking';
+import useTrackErrorEffect from '#app/hooks/useTrackErrorEffect';
 import {
   ERROR_TRACKING_FEATURES,
   UAS_ERROR_ACTIONS,
@@ -36,8 +36,6 @@ const useUASFollowedTopics = ({
 
   const isQueryEnabled = !!hashedUserId && isTopicPersonalizationEnabled;
 
-  const trackError = useErrorTracking();
-
   const { data, isLoading, error } = useQuery({
     queryKey: uasKeys.followsPage(
       hashedUserId,
@@ -56,15 +54,11 @@ const useUASFollowedTopics = ({
     enabled: isQueryEnabled,
   });
 
-  useEffect(() => {
-    if (error) {
-      trackError({
-        error,
-        feature: ERROR_TRACKING_FEATURES.UAS,
-        action: UAS_ERROR_ACTIONS.FOLLOWED_TOPICS,
-      });
-    }
-  }, [error, trackError]);
+  useTrackErrorEffect({
+    error,
+    feature: ERROR_TRACKING_FEATURES.FOLLOW_TOPIC_UAS,
+    action: UAS_ERROR_ACTIONS.FOLLOWED_TOPICS,
+  });
 
   return {
     followedTopics: data?.followedTopics ?? [],

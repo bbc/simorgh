@@ -3,6 +3,7 @@ import { renderHook } from '#app/components/react-testing-library-with-providers
 import uasApiRequest from '#app/lib/uasApi';
 import { buildGlobalId } from '#app/lib/uasApi/uasUtility';
 import { AccountContext } from '#app/contexts/AccountContext';
+import { ERROR_TRACKING_FEATURES } from '#app/hooks/useErrorTracking/errorTracking.const';
 import useUASStatusHook, { UASStatusField } from '.';
 
 jest.mock('#app/lib/uasApi');
@@ -85,7 +86,11 @@ describe('useUASStatusHook', () => {
             resourceDomain: 'world-service-news',
             resourceType: 'topic',
           },
-          queryKeyFn: (hashedUserId, topicId) => ['uas', hashedUserId, topicId],
+          queryKeyFn: (hashedUserId, topicId) => [
+            ERROR_TRACKING_FEATURES.FOLLOW_TOPIC_UAS,
+            hashedUserId,
+            topicId,
+          ],
           statusField: UASStatusField.FOLLOWED,
           enabledFn: (topicId, hashedUserId) => !!topicId && !!hashedUserId,
         }),
@@ -105,7 +110,11 @@ describe('useUASStatusHook', () => {
             resourceDomain: 'world-service-news',
             resourceType: 'topic',
           },
-          queryKeyFn: (hashedUserId, topicId) => ['uas', hashedUserId, topicId],
+          queryKeyFn: (hashedUserId, topicId) => [
+            ERROR_TRACKING_FEATURES.FOLLOW_TOPIC_UAS,
+            hashedUserId,
+            topicId,
+          ],
           statusField: UASStatusField.FOLLOWED,
           enabledFn: (topicId, hashedUserId) => !!topicId && !!hashedUserId,
         }),
@@ -133,7 +142,11 @@ describe('useUASStatusHook', () => {
             resourceDomain: 'world-service-news',
             resourceType: 'topic',
           },
-          queryKeyFn: (hashedUserId, topicId) => ['uas', hashedUserId, topicId],
+          queryKeyFn: (hashedUserId, topicId) => [
+            ERROR_TRACKING_FEATURES.FOLLOW_TOPIC_UAS,
+            hashedUserId,
+            topicId,
+          ],
           statusField: UASStatusField.FOLLOWED,
           enabledFn: (topicId, hashedUserId) => !!topicId && !!hashedUserId,
         }),
@@ -168,7 +181,11 @@ describe('useUASStatusHook', () => {
             resourceDomain: 'world-service-news',
             resourceType: 'topic',
           },
-          queryKeyFn: (hashedUserId, topicId) => ['uas', hashedUserId, topicId],
+          queryKeyFn: (hashedUserId, topicId) => [
+            ERROR_TRACKING_FEATURES.FOLLOW_TOPIC_UAS,
+            hashedUserId,
+            topicId,
+          ],
           statusField: UASStatusField.FOLLOWED,
           enabledFn: (topicId, hashedUserId) => !!topicId && !!hashedUserId,
         }),
@@ -196,7 +213,11 @@ describe('useUASStatusHook', () => {
             resourceDomain: 'world-service-news',
             resourceType: 'topic',
           },
-          queryKeyFn: (hashedUserId, topicId) => ['uas', hashedUserId, topicId],
+          queryKeyFn: (hashedUserId, topicId) => [
+            ERROR_TRACKING_FEATURES.FOLLOW_TOPIC_UAS,
+            hashedUserId,
+            topicId,
+          ],
           statusField: UASStatusField.FOLLOWED,
           enabledFn: (topicId, hashedUserId) => !!topicId && !!hashedUserId,
         }),
@@ -224,7 +245,11 @@ describe('useUASStatusHook', () => {
             resourceDomain: 'world-service-news',
             resourceType: 'topic',
           },
-          queryKeyFn: (hashedUserId, topicId) => ['uas', hashedUserId, topicId],
+          queryKeyFn: (hashedUserId, topicId) => [
+            ERROR_TRACKING_FEATURES.FOLLOW_TOPIC_UAS,
+            hashedUserId,
+            topicId,
+          ],
           statusField: UASStatusField.FOLLOWED,
           enabledFn: (topicId, hashedUserId) => !!topicId && !!hashedUserId,
         }),
@@ -245,7 +270,11 @@ describe('useUASStatusHook', () => {
             resourceDomain: 'world-service-news',
             resourceType: 'topic',
           },
-          queryKeyFn: (hashedUserId, topicId) => ['uas', hashedUserId, topicId],
+          queryKeyFn: (hashedUserId, topicId) => [
+            ERROR_TRACKING_FEATURES.FOLLOW_TOPIC_UAS,
+            hashedUserId,
+            topicId,
+          ],
           statusField: UASStatusField.FOLLOWED,
           enabledFn: (topicId, hashedUserId) => !!topicId && !!hashedUserId,
         }),
@@ -272,7 +301,7 @@ describe('useUASStatusHook', () => {
             resourceType: 'article',
           },
           queryKeyFn: (hashedUserId, articleId) => [
-            'uas',
+            ERROR_TRACKING_FEATURES.SAVE_ARTICLE_UAS,
             hashedUserId,
             articleId,
           ],
@@ -307,7 +336,7 @@ describe('useUASStatusHook', () => {
             resourceType: 'article',
           },
           queryKeyFn: (hashedUserId, articleId) => [
-            'uas',
+            ERROR_TRACKING_FEATURES.SAVE_ARTICLE_UAS,
             hashedUserId,
             articleId,
           ],
@@ -338,7 +367,7 @@ describe('useUASStatusHook', () => {
             resourceType: 'article',
           },
           queryKeyFn: (hashedUserId, articleId) => [
-            'uas',
+            ERROR_TRACKING_FEATURES.SAVE_ARTICLE_UAS,
             hashedUserId,
             articleId,
           ],
@@ -357,7 +386,7 @@ describe('useUASStatusHook', () => {
             resourceType: 'article',
           },
           queryKeyFn: (hashedUserId, articleId) => [
-            'uas',
+            ERROR_TRACKING_FEATURES.SAVE_ARTICLE_UAS,
             hashedUserId,
             articleId,
           ],

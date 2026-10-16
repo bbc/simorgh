@@ -1,5 +1,6 @@
 export const ERROR_TRACKING_FEATURES = {
-  UAS: 'uas',
+  SAVE_ARTICLE_UAS: 'save-article-uas',
+  FOLLOW_TOPIC_UAS: 'follow-topic-uas',
 } as const;
 
 export type ErrorTrackingFeature =
