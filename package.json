@@ -97,7 +97,6 @@
     "winston": "3.19.0"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "7.29.7",
     "@cypress/webpack-preprocessor": "7.1.1",
     "@emotion/jest": "11.14.2",
     "@happy-dom/jest-environment": "20.14.5",
