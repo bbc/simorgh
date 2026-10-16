@@ -55,13 +55,16 @@ yarn install
 ```
 
 ## Local Development
+
 Export a relevant BFF_PATH so that simorgh can connect to the relevant fabl instance:
+
 ```
 # For a local instance of fabl
 export BFF_PATH="http://localhost:3210/module/simorgh-bff"
 ```
 
 Start the application:
+
 ```
 cd ws-nextjs-app
 yarn dev
@@ -140,7 +143,7 @@ When viewing Video stories locally, make sure to use a BBC domain, as outlined i
 
 We also use [Chromatic QA](https://docs.chromaticqa.com/) to run cross-browser testing on our stories.
 
-Storybook compiles JavaScript, TypeScript and JSX with SWC, configured in [`.storybook/main.ts`](./.storybook/main.ts). It uses Emotion's JSX runtime and SWC plugin; it does not use the shared Babel configuration to compile stories. Babel remains in use by other tooling in the repository.
+Storybook compiles JavaScript, TypeScript and JSX with SWC, configured in [`.storybook/main.ts`](./.storybook/main.ts). It uses Emotion's JSX runtime and SWC plugin.
 
 When updating Storybook's SWC compiler or `@swc/plugin-emotion`, check their [plugin compatibility](https://swc.rs/docs/plugin/selecting-swc-core) and validate Emotion-styled stories as well as SCSS Modules and MDX documentation.
 
@@ -203,17 +206,13 @@ Every run of `yarn build` will update the bundle analysis files in the repo. To 
 
 We have linting with the [Airbnb styleguide](https://github.com/airbnb/javascript/tree/master/react) and we use [Prettier](https://github.com/prettier/prettier) as a code formatter. They can be run with `yarn test:lint`.
 
-ESLint parses JavaScript and JSX with its built-in parser and TypeScript and TSX with `@typescript-eslint/parser`. Neither requires a Babel configuration file.
+ESLint parses JavaScript and JSX with its built-in parser and TypeScript and TSX with `@typescript-eslint/parser`.
 
 We have [Jest](https://facebook.github.io/jest) unit tests that can be run with `yarn test:unit`.
 
 The root Jest projects compile JavaScript, JSX, TypeScript and TSX with the SWC compiler provided by `next/jest`, which is also used by `ws-nextjs-app`. The root configuration enables Emotion's automatic `@emotion/react` JSX runtime, `css` props, styled selectors and test labels without loading the Next application's configuration. No separate SWC transformer or WASM plugins are needed.
 
-SWC preserves read-only module exports. Tests that need to spy on or replace imported exports use explicit `jest.mock` factories rather than relying on Babel's writable exports. Existing implementations can be preserved with `jest.requireActual` and object spreading.
-
-Jest and ESLint no longer load Babel configuration. Babel packages remain in other tooling, including Cypress, and in transitive dependencies; this does not remove every Babel package from the repository.
-
-Jest coverage uses the V8 provider rather than Babel/Istanbul instrumentation. V8 coverage ranges and branch/function accounting can therefore differ from previous reports. Use `/* v8 ignore next */` (or the corresponding `start` and `stop` forms) for code that must be excluded from V8 coverage; Istanbul-only ignore comments are not a reliable replacement.
+SWC preserves read-only module exports. Tests that need to spy on or replace imported exports use explicit `jest.mock` factories to provide mockable exports. Existing implementations can be preserved with `jest.requireActual` and object spreading.
 
 `yarn test` runs both sets of these.
 
