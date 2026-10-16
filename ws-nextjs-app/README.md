@@ -18,13 +18,13 @@ For more information on Next.js and how to use the framework, see the [Next.js d
 
 ## Running Unit and E2E tests
 
-- Run `yarn test` to run all unit tests
+- Run `yarn test` to run the Next.js unit tests (`Unit Tests (Next)`) through the shared root `../jest.config.js`
 - Run `yarn test:e2e` to run all e2e tests
 
 ## Running Integration tests
 
 - Navigate to the root of the project (up one level from here)
-- Run `yarn test:integration` to run all integration tests for the app
+- Run `yarn test:integration` to run the Canonical, AMP and Lite integration projects through the shared root `../jest.config.js`
 - Run `yarn test:integration -u` to run all integration tests and update any snapshots for the app
 
 ## Running Storybook

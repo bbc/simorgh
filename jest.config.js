@@ -1,27 +1,52 @@
+const path = require('path');
+
 const nextJest = require('next/jest');
+const ts = require('typescript');
+const { pathsToModuleNameMapper } = require('ts-jest');
 
 const { jestDirAlias } = require('./dirAlias');
+
+const repoRoot = path.resolve(__dirname);
+const nextRoot = path.resolve(repoRoot, 'ws-nextjs-app');
+const nextTsConfigPath = path.resolve(nextRoot, 'tsconfig.json');
+const rootBuildPath = path.resolve(repoRoot, 'build');
+const nextBuildPath = path.resolve(nextRoot, 'build');
 
 const nextTransformerPattern = '^.+\\.(js|jsx|ts|tsx|mjs)$';
 const puppeteerNodeModulesPattern =
   'node_modules/(?!(puppeteer(?:-core)?|@puppeteer/browsers)/)';
 
-const commonConfig = {
-  setupFiles: ['./src/testHelpers/jest-setup.js'],
+const rootProjectPaths = {
+  rootDir: repoRoot,
+  testPathIgnorePatterns: [
+    `${nextRoot}/`,
+    `${rootBuildPath}/`,
+    `${nextBuildPath}/`,
+  ],
+  modulePathIgnorePatterns: [`${rootBuildPath}/`, `${nextBuildPath}/`],
+  watchPathIgnorePatterns: [`${rootBuildPath}/`, `${nextBuildPath}/`],
+};
+
+const commonRootConfig = {
+  ...rootProjectPaths,
+  setupFiles: [path.resolve(repoRoot, 'src/testHelpers/jest-setup.js')],
   setupFilesAfterEnv: [
-    './src/testHelpers/setupTests.js',
+    path.resolve(repoRoot, 'src/testHelpers/setupTests.js'),
     'jest-expect-message',
   ],
   moduleNameMapper: {
     ...jestDirAlias,
     '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy',
-    '^@bbc/resonance$': '<rootDir>/src/testHelpers/resonanceMock.ts',
+    '^@bbc/resonance$': path.resolve(
+      repoRoot,
+      'src/testHelpers/resonanceMock.ts',
+    ),
   },
   snapshotSerializers: ['@emotion/jest/serializer'],
 };
 
 const unitTests = {
-  ...commonConfig,
+  ...commonRootConfig,
   testEnvironment: 'jsdom',
   displayName: 'Unit Tests',
   collectCoverageFrom: [
@@ -41,7 +66,7 @@ const unitTests = {
 };
 
 const clientUnitTests = {
-  ...commonConfig,
+  ...commonRootConfig,
   testEnvironment: '@happy-dom/jest-environment',
   displayName: 'Unit Tests (Client)',
   testMatch: [
@@ -52,13 +77,15 @@ const clientUnitTests = {
 };
 
 const puppeteerTests = {
-  setupFiles: ['./puppeteer/jest-setup.js'],
+  ...rootProjectPaths,
+  setupFiles: [path.resolve(repoRoot, 'puppeteer/jest-setup.js')],
   moduleNameMapper: jestDirAlias,
   displayName: 'Puppeteer Tests',
   testMatch: ['**/puppeteer/**/*.test.js'],
 };
 
-const createNextJestConfig = nextJest({});
+const rootCreateJestConfig = nextJest({});
+const nextCreateJestConfig = nextJest({ dir: nextRoot });
 
 const withRootEmotion = config => {
   const [transformer, options] = config.transform[nextTransformerPattern];
@@ -91,13 +118,17 @@ const withRootEmotion = config => {
   };
 };
 
-const buildProject = async config => {
-  const resolvedConfig = await createNextJestConfig(config)();
+const buildRootProject = async config => {
+  const resolvedConfig = await rootCreateJestConfig({
+    ...config,
+    rootDir: repoRoot,
+  })();
+
   return withRootEmotion(resolvedConfig);
 };
 
 const buildPuppeteerProject = async () => {
-  const resolvedConfig = await buildProject(puppeteerTests);
+  const resolvedConfig = await buildRootProject(puppeteerTests);
 
   return {
     ...resolvedConfig,
@@ -107,11 +138,115 @@ const buildPuppeteerProject = async () => {
   };
 };
 
+const configFile = ts.readConfigFile(nextTsConfigPath, ts.sys.readFile);
+if (configFile.error) {
+  throw new Error(
+    `Unable to read TypeScript config ${nextTsConfigPath}: ${ts.flattenDiagnosticMessageText(
+      configFile.error.messageText,
+      '\n',
+    )}`,
+  );
+}
+
+const compilerOptions = configFile.config?.compilerOptions;
+if (!compilerOptions?.paths) {
+  throw new Error(
+    `TypeScript config ${nextTsConfigPath} must define compilerOptions.paths`,
+  );
+}
+
+const nextModuleNameMapper = {
+  ...pathsToModuleNameMapper(compilerOptions.paths, {
+    prefix: '<rootDir>/',
+  }),
+  '^@bbc/resonance$': path.resolve(
+    repoRoot,
+    'src/testHelpers/resonanceMock.ts',
+  ),
+};
+
+const buildNextProject = async config =>
+  nextCreateJestConfig({
+    ...config,
+    rootDir: nextRoot,
+    testPathIgnorePatterns: [
+      ...(config.testPathIgnorePatterns || []),
+      'build',
+      'node_modules',
+    ],
+    modulePathIgnorePatterns: [
+      ...(config.modulePathIgnorePatterns || []),
+      `${nextBuildPath}/`,
+    ],
+    watchPathIgnorePatterns: [
+      ...(config.watchPathIgnorePatterns || []),
+      `${nextBuildPath}/`,
+    ],
+  })();
+
+const nextCommonConfig = {
+  rootDir: nextRoot,
+  modulePaths: [repoRoot],
+  moduleNameMapper: nextModuleNameMapper,
+  setupFilesAfterEnv: [path.resolve(nextRoot, 'setupTests.ts')],
+};
+
+const nextUnitTests = {
+  ...nextCommonConfig,
+  displayName: 'Unit Tests (Next)',
+  setupFilesAfterEnv: [
+    path.resolve(nextRoot, 'setupTests.ts'),
+    'jest-expect-message',
+  ],
+  snapshotSerializers: ['@emotion/jest/serializer'],
+  testEnvironment: 'jsdom',
+  testMatch: [
+    '**/__tests__/**/*.{js,jsx,ts,tsx}',
+    '**/?(*.)+(spec|test).{js,jsx,ts,tsx}',
+    '!**/integration/!(utils)/**/*',
+    '!**/playwright/**/*',
+  ],
+};
+
+const nextIntegrationTestDescriptors = [
+  {
+    displayName: 'Integration Tests - Canonical',
+    platform: 'canonical',
+    testPathIgnorePatterns: ['.*lite\\.test\\.ts$', '.*amp\\.test\\.ts$'],
+  },
+  {
+    displayName: 'Integration Tests - AMP',
+    platform: 'amp',
+    testPathIgnorePatterns: ['.*lite\\.test\\.ts$', '.*canonical\\.test\\.ts$'],
+  },
+  {
+    displayName: 'Integration Tests - Lite',
+    platform: 'lite',
+    testPathIgnorePatterns: ['.*canonical\\.test\\.ts$', '.*amp\\.test\\.ts$'],
+  },
+];
+
+const nextIntegrationTests = nextIntegrationTestDescriptors.map(
+  ({ displayName, platform, testPathIgnorePatterns }) => ({
+    ...nextCommonConfig,
+    displayName,
+    testEnvironment: path.resolve(
+      nextRoot,
+      'integration/IntegrationTestEnvironment.ts',
+    ),
+    testEnvironmentOptions: { platform },
+    testMatch: ['**/integration/!(utils)/**/*.test.ts'],
+    testPathIgnorePatterns,
+  }),
+);
+
 module.exports = async () => ({
   projects: [
-    await buildProject(unitTests),
-    await buildProject(clientUnitTests),
+    await buildRootProject(unitTests),
+    await buildRootProject(clientUnitTests),
     await buildPuppeteerProject(),
+    await buildNextProject(nextUnitTests),
+    ...(await Promise.all(nextIntegrationTests.map(buildNextProject))),
   ],
   reporters: [
     'default',
@@ -119,14 +254,11 @@ module.exports = async () => ({
       'jest-junit',
       {
         suiteName: 'Jest Tests',
-        outputDirectory: 'reports/jest',
+        outputDirectory: path.resolve(repoRoot, 'reports/jest'),
         uniqueOutputName: 'true',
         ancestorSeparator: ' › ',
       },
     ],
   ],
-  fakeTimers: {
-    enableGlobally: true,
-  },
   workerIdleMemoryLimit: '512MB',
 });

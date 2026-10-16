@@ -210,11 +210,15 @@ ESLint parses JavaScript and JSX with its built-in parser and TypeScript and TSX
 
 We have [Jest](https://facebook.github.io/jest) unit tests that can be run with `yarn test:unit`.
 
-The root Jest projects compile JavaScript, JSX, TypeScript and TSX with the SWC compiler provided by `next/jest`, which is also used by `ws-nextjs-app`. The root configuration enables Emotion's automatic `@emotion/react` JSX runtime, `css` props, styled selectors and test labels without loading the Next application's configuration. No separate SWC transformer or WASM plugins are needed.
+The repository has one root `jest.config.js` containing seven named projects: `Unit Tests`, `Unit Tests (Client)`, `Puppeteer Tests`, `Unit Tests (Next)`, `Integration Tests - Canonical`, `Integration Tests - AMP` and `Integration Tests - Lite`. The root and Next project groups use the same SWC compiler with separate project-group options, setup files and test environments. Root projects use SWC without app-derived compiler options; Next projects retain the app-derived settings from the Next workspace.
+
+`yarn test:unit` selects the two root unit projects. The Next workspace's `yarn test` selects only `Unit Tests (Next)`, and its integration scripts select their named platform projects. All workspace commands explicitly use the root configuration so running them from either repository directory resolves the same projects. The root integration command continues to manage the app lifecycle through `ws-nextjs-app/integration/utils/runTests.ts`.
+
+Resolving the combined configuration initializes the Next app configuration and its `.env` files even when only root projects are selected. This is an intentional trade-off of keeping one configuration, so root test commands may observe app environment values during configuration resolution. A single global `jest-junit` reporter writes results to the repository root's `reports/jest` directory, regardless of the invocation directory.
 
 SWC preserves read-only module exports. Tests that need to spy on or replace imported exports use explicit `jest.mock` factories to provide mockable exports. Existing implementations can be preserved with `jest.requireActual` and object spreading.
 
-`yarn test` runs both sets of these.
+Use `yarn test:unit` for the root projects and run `yarn test` from `ws-nextjs-app` for the Next.js unit project.
 
 ### End-to-end tests
 
