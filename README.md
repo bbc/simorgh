@@ -140,7 +140,7 @@ When viewing Video stories locally, make sure to use a BBC domain, as outlined i
 
 We also use [Chromatic QA](https://docs.chromaticqa.com/) to run cross-browser testing on our stories.
 
-Storybook compiles JavaScript, TypeScript and JSX with SWC, configured in [`.storybook/main.ts`](./.storybook/main.ts). It uses Emotion's JSX runtime and SWC plugin while retaining the legacy browser targets from the shared Babel configuration; it does not use that Babel configuration to compile stories. Babel remains in use by other tooling in the repository.
+Storybook compiles JavaScript, TypeScript and JSX with SWC, configured in [`.storybook/main.ts`](./.storybook/main.ts). It uses Emotion's JSX runtime and SWC plugin; it does not use the shared Babel configuration to compile stories. Babel remains in use by other tooling in the repository.
 
 When updating Storybook's SWC compiler or `@swc/plugin-emotion`, check their [plugin compatibility](https://swc.rs/docs/plugin/selecting-swc-core) and validate Emotion-styled stories as well as SCSS Modules and MDX documentation.
 
