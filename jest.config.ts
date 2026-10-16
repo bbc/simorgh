@@ -1,15 +1,50 @@
-const path = require('path');
+import path from 'path';
+import type { Config as JestConfig } from 'jest';
+// Native Node TypeScript loading requires explicit extensions for these imports.
+// eslint-disable-next-line import/extensions
+import nextJest from 'next/jest.js';
+import type { NextConfig } from 'next';
+import ts, { type CompilerOptions } from 'typescript';
+import { pathsToModuleNameMapper } from 'ts-jest';
+import { fileURLToPath } from 'url';
 
-const nextJest = require('next/jest');
-const ts = require('typescript');
-const { pathsToModuleNameMapper } = require('ts-jest');
+// eslint-disable-next-line import/extensions
+import dirAlias from './dirAlias.js';
 
-const { jestDirAlias } = require('./dirAlias');
+const { jestDirAlias } = dirAlias;
 
-const repoRoot = path.resolve(__dirname);
+type JestProjectConfig = JestConfig;
+
+type NextJsConfig = {
+  compilerOptions: Record<string, unknown>;
+};
+
+type NextTransformerOptions = Record<string, unknown> & {
+  compilerOptions?: NextConfig['compiler'];
+  jsConfig?: NextJsConfig;
+};
+
+type RootTransformEntry = [string, NextTransformerOptions];
+
+type ResolvedRootJestConfig = Omit<
+  JestProjectConfig,
+  'transform' | 'transformIgnorePatterns'
+> & {
+  transform: Record<string, RootTransformEntry>;
+  transformIgnorePatterns: string[];
+};
+
+type IntegrationPlatform = 'canonical' | 'amp' | 'lite';
+
+type IntegrationTestDescriptor = {
+  displayName: string;
+  platform: IntegrationPlatform;
+  testPathIgnorePatterns: string[];
+};
+
+const repoRoot = path.dirname(fileURLToPath(import.meta.url));
 const nextRoot = path.resolve(repoRoot, 'ws-nextjs-app');
 const nextTsConfigPath = path.resolve(nextRoot, 'tsconfig.json');
-const rootBuildPath = path.resolve(repoRoot, 'build');
 const nextBuildPath = path.resolve(nextRoot, 'build');
 
 const nextTransformerPattern = '^.+\\.(js|jsx|ts|tsx|mjs)$';
@@ -18,14 +53,10 @@ const puppeteerNodeModulesPattern =
 
 const rootProjectPaths = {
   rootDir: repoRoot,
-  testPathIgnorePatterns: [
-    `${nextRoot}/`,
-    `${rootBuildPath}/`,
-    `${nextBuildPath}/`,
-  ],
-  modulePathIgnorePatterns: [`${rootBuildPath}/`, `${nextBuildPath}/`],
-  watchPathIgnorePatterns: [`${rootBuildPath}/`, `${nextBuildPath}/`],
-};
+  testPathIgnorePatterns: [`${nextRoot}/`, `${nextBuildPath}/`],
+  modulePathIgnorePatterns: [`${nextBuildPath}/`],
+  watchPathIgnorePatterns: [`${nextBuildPath}/`],
+} satisfies JestProjectConfig;
 
 const commonRootConfig = {
   ...rootProjectPaths,
@@ -43,7 +74,7 @@ const commonRootConfig = {
     ),
   },
   snapshotSerializers: ['@emotion/jest/serializer'],
-};
+} satisfies JestProjectConfig;
 
 const unitTests = {
   ...commonRootConfig,
@@ -63,7 +94,7 @@ const unitTests = {
     '!**/src/integration/!(utils)/**/*',
     '!**/puppeteer/**/*',
   ],
-};
+} satisfies JestProjectConfig;
 
 const clientUnitTests = {
   ...commonRootConfig,
@@ -74,7 +105,7 @@ const clientUnitTests = {
     '!**/src/integration/**/*',
     '!**/puppeteer/**/*',
   ],
-};
+} satisfies JestProjectConfig;
 
 const puppeteerTests = {
   ...rootProjectPaths,
@@ -82,52 +113,63 @@ const puppeteerTests = {
   moduleNameMapper: jestDirAlias,
   displayName: 'Puppeteer Tests',
   testMatch: ['**/puppeteer/**/*.test.js'],
-};
+} satisfies JestProjectConfig;
 
 const rootCreateJestConfig = nextJest({});
 const nextCreateJestConfig = nextJest({ dir: nextRoot });
 
-const withRootEmotion = config => {
+const withRootEmotion = (
+  config: ResolvedRootJestConfig,
+): ResolvedRootJestConfig => {
   const [transformer, options] = config.transform[nextTransformerPattern];
+  const emotionOptions =
+    typeof options.compilerOptions?.emotion === 'object' &&
+    options.compilerOptions.emotion !== null
+      ? options.compilerOptions.emotion
+      : {};
+  const compilerOptions: NextConfig['compiler'] = {
+    ...options.compilerOptions,
+    emotion: {
+      ...emotionOptions,
+      autoLabel: 'always',
+    },
+  };
+  const jsConfig: NextJsConfig = {
+    ...options.jsConfig,
+    compilerOptions: {
+      ...options.jsConfig?.compilerOptions,
+      jsxImportSource: '@emotion/react',
+    },
+  };
+  const transformedOptions: NextTransformerOptions = {
+    ...options,
+    compilerOptions,
+    jsConfig,
+  };
+  const transformEntry: RootTransformEntry = [transformer, transformedOptions];
 
   return {
     ...config,
     transform: {
       ...config.transform,
-      [nextTransformerPattern]: [
-        transformer,
-        {
-          ...options,
-          compilerOptions: {
-            ...options.compilerOptions,
-            emotion: {
-              ...options.compilerOptions?.emotion,
-              autoLabel: 'always',
-            },
-          },
-          jsConfig: {
-            ...options.jsConfig,
-            compilerOptions: {
-              ...options.jsConfig?.compilerOptions,
-              jsxImportSource: '@emotion/react',
-            },
-          },
-        },
-      ],
+      [nextTransformerPattern]: transformEntry,
     },
   };
 };
 
-const buildRootProject = async config => {
-  const resolvedConfig = await rootCreateJestConfig({
+const buildRootProject = async (
+  config: JestProjectConfig,
+): Promise<ResolvedRootJestConfig> => {
+  // Next's public factory type leaves its known SWC transform options opaque.
+  const resolvedConfig = (await rootCreateJestConfig({
     ...config,
     rootDir: repoRoot,
-  })();
+  })()) as ResolvedRootJestConfig;
 
   return withRootEmotion(resolvedConfig);
 };
 
-const buildPuppeteerProject = async () => {
+const buildPuppeteerProject = async (): Promise<ResolvedRootJestConfig> => {
   const resolvedConfig = await buildRootProject(puppeteerTests);
 
   return {
@@ -148,7 +190,8 @@ if (configFile.error) {
   );
 }
 
-const compilerOptions = configFile.config?.compilerOptions;
+const compilerOptions: CompilerOptions | undefined =
+  configFile.config?.compilerOptions;
 if (!compilerOptions?.paths) {
   throw new Error(
     `TypeScript config ${nextTsConfigPath} must define compilerOptions.paths`,
@@ -165,7 +208,9 @@ const nextModuleNameMapper = {
   ),
 };
 
-const buildNextProject = async config =>
+const buildNextProject = async (
+  config: JestProjectConfig,
+): Promise<JestProjectConfig> =>
   nextCreateJestConfig({
     ...config,
     rootDir: nextRoot,
@@ -189,7 +234,7 @@ const nextCommonConfig = {
   modulePaths: [repoRoot],
   moduleNameMapper: nextModuleNameMapper,
   setupFilesAfterEnv: [path.resolve(nextRoot, 'setupTests.ts')],
-};
+} satisfies JestProjectConfig;
 
 const nextUnitTests = {
   ...nextCommonConfig,
@@ -206,7 +251,7 @@ const nextUnitTests = {
     '!**/integration/!(utils)/**/*',
     '!**/playwright/**/*',
   ],
-};
+} satisfies JestProjectConfig;
 
 const nextIntegrationTestDescriptors = [
   {
@@ -224,41 +269,44 @@ const nextIntegrationTestDescriptors = [
     platform: 'lite',
     testPathIgnorePatterns: ['.*canonical\\.test\\.ts$', '.*amp\\.test\\.ts$'],
   },
-];
+] satisfies IntegrationTestDescriptor[];
 
-const nextIntegrationTests = nextIntegrationTestDescriptors.map(
-  ({ displayName, platform, testPathIgnorePatterns }) => ({
-    ...nextCommonConfig,
-    displayName,
-    testEnvironment: path.resolve(
-      nextRoot,
-      'integration/IntegrationTestEnvironment.ts',
-    ),
-    testEnvironmentOptions: { platform },
-    testMatch: ['**/integration/!(utils)/**/*.test.ts'],
-    testPathIgnorePatterns,
-  }),
-);
+const nextIntegrationTests: JestProjectConfig[] =
+  nextIntegrationTestDescriptors.map(
+    ({ displayName, platform, testPathIgnorePatterns }) => ({
+      ...nextCommonConfig,
+      displayName,
+      testEnvironment: path.resolve(
+        nextRoot,
+        'integration/IntegrationTestEnvironment.ts',
+      ),
+      testEnvironmentOptions: { platform },
+      testMatch: ['**/integration/!(utils)/**/*.test.ts'],
+      testPathIgnorePatterns,
+    }),
+  );
 
-module.exports = async () => ({
-  projects: [
-    await buildRootProject(unitTests),
-    await buildRootProject(clientUnitTests),
-    await buildPuppeteerProject(),
-    await buildNextProject(nextUnitTests),
-    ...(await Promise.all(nextIntegrationTests.map(buildNextProject))),
-  ],
-  reporters: [
-    'default',
-    [
-      'jest-junit',
-      {
-        suiteName: 'Jest Tests',
-        outputDirectory: path.resolve(repoRoot, 'reports/jest'),
-        uniqueOutputName: 'true',
-        ancestorSeparator: ' › ',
-      },
+export default async function createJestConfig(): Promise<JestConfig> {
+  return {
+    projects: [
+      await buildRootProject(unitTests),
+      await buildRootProject(clientUnitTests),
+      await buildPuppeteerProject(),
+      await buildNextProject(nextUnitTests),
+      ...(await Promise.all(nextIntegrationTests.map(buildNextProject))),
     ],
-  ],
-  workerIdleMemoryLimit: '512MB',
-});
+    reporters: [
+      'default',
+      [
+        'jest-junit',
+        {
+          suiteName: 'Jest Tests',
+          outputDirectory: path.resolve(repoRoot, 'reports/jest'),
+          uniqueOutputName: 'true',
+          ancestorSeparator: ' › ',
+        },
+      ],
+    ],
+    workerIdleMemoryLimit: '512MB',
+  };
+}

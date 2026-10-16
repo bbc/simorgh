@@ -210,7 +210,7 @@ ESLint parses JavaScript and JSX with its built-in parser and TypeScript and TSX
 
 We have [Jest](https://facebook.github.io/jest) unit tests that can be run with `yarn test:unit`.
 
-The repository has one root `jest.config.js` containing seven named projects: `Unit Tests`, `Unit Tests (Client)`, `Puppeteer Tests`, `Unit Tests (Next)`, `Integration Tests - Canonical`, `Integration Tests - AMP` and `Integration Tests - Lite`. The root and Next project groups use the same SWC compiler with separate project-group options, setup files and test environments. Root projects use SWC without app-derived compiler options; Next projects retain the app-derived settings from the Next workspace.
+The repository has one root `jest.config.ts` containing seven named projects: `Unit Tests`, `Unit Tests (Client)`, `Puppeteer Tests`, `Unit Tests (Next)`, `Integration Tests - Canonical`, `Integration Tests - AMP` and `Integration Tests - Lite`. The root and Next project groups use the same SWC compiler with separate project-group options, setup files and test environments. Root projects use SWC without app-derived compiler options; Next projects retain the app-derived settings from the Next workspace.
 
 `yarn test:unit` selects the two root unit projects. The Next workspace's `yarn test` selects only `Unit Tests (Next)`, and its integration scripts select their named platform projects. All workspace commands explicitly use the root configuration so running them from either repository directory resolves the same projects. The root integration command continues to manage the app lifecycle through `ws-nextjs-app/integration/utils/runTests.ts`.
 
