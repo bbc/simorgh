@@ -27,16 +27,6 @@ const enabledExperimentList: ServerSideExperimentConfig[] = [
     services: HOMEPAGE_RELATED_TOPIC_SERVICES,
     pageTypes: ['home'],
   },
-  {
-    name: 'newswb_ws_article_account_promo_banner',
-    services: ['hindi'],
-    pageTypes: ['article'],
-  },
-  {
-    name: 'newswb_ws_homepage_account_promo_banner_copy',
-    services: ['hindi'],
-    pageTypes: ['home'],
-  },
 ];
 
 export default enabledExperimentList;
