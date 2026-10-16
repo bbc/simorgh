@@ -128,6 +128,5 @@ module.exports = async () => ({
   fakeTimers: {
     enableGlobally: true,
   },
-  coverageProvider: 'v8',
   workerIdleMemoryLimit: '512MB',
 });

@@ -83,7 +83,6 @@ export default async (): Promise<Config> => {
       ampIntegrationTests,
       liteIntegrationTests,
     ],
-    coverageProvider: 'v8',
     workerIdleMemoryLimit: '512MB',
   };
 
