@@ -1,4 +1,4 @@
-import { use, useEffect } from 'react';
+import { use } from 'react';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import uasApiRequest from '#app/lib/uasApi';
 import {
@@ -9,6 +9,7 @@ import {
 } from '#app/lib/uasApi/uasUtility';
 import uasKeys from '#app/lib/uasApi/queryKeys';
 import useErrorTracking from '#app/hooks/useErrorTracking';
+import useTrackErrorEffect from '#app/hooks/useTrackErrorEffect';
 import {
   ERROR_TRACKING_FEATURES,
   UAS_ERROR_ACTIONS,
@@ -42,15 +43,11 @@ const useTopicFollowButton = (
   const { isFollowed, isLoading, error, savedMetadata } =
     useTopicFollowStatus(topicId);
 
-  useEffect(() => {
-    if (error) {
-      trackError({
-        error,
-        feature: ERROR_TRACKING_FEATURES.FOLLOW_TOPIC_UAS,
-        action: UAS_ERROR_ACTIONS.FETCH_STATUS,
-      });
-    }
-  }, [error, trackError]);
+  useTrackErrorEffect({
+    error,
+    feature: ERROR_TRACKING_FEATURES.FOLLOW_TOPIC_UAS,
+    action: UAS_ERROR_ACTIONS.FETCH_STATUS,
+  });
 
   const mutation = useMutation({
     mutationFn: async (action: FollowAction) => {

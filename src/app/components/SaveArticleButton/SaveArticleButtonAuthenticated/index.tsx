@@ -7,7 +7,7 @@ import useUASButton, {
   UASAction,
   UASActionResult,
 } from '#app/hooks/useUASButton';
-import useErrorTracking from '#app/hooks/useErrorTracking';
+import useTrackErrorEffect from '#app/hooks/useTrackErrorEffect';
 import {
   ERROR_TRACKING_FEATURES,
   UAS_ERROR_ACTIONS,
@@ -158,15 +158,11 @@ const SaveArticleButtonAuthenticatedInner = ({
 };
 
 const SaveArticleButtonErrorFallback = ({ error }: { error: Error }) => {
-  const trackError = useErrorTracking();
-
-  useEffect(() => {
-    trackError({
-      error,
-      feature: ERROR_TRACKING_FEATURES.SAVE_ARTICLE_UAS,
-      action: UAS_ERROR_ACTIONS.RENDER,
-    });
-  }, [error, trackError]);
+  useTrackErrorEffect({
+    error,
+    feature: ERROR_TRACKING_FEATURES.SAVE_ARTICLE_UAS,
+    action: UAS_ERROR_ACTIONS.RENDER,
+  });
 
   return null;
 };

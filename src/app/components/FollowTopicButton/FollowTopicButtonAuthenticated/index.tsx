@@ -1,9 +1,9 @@
-import { use, useEffect } from 'react';
+import { use } from 'react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useTopicFollowButton, {
   FollowAction,
 } from '#app/hooks/useTopicFollowButton';
-import useErrorTracking from '#app/hooks/useErrorTracking';
+import useTrackErrorEffect from '#app/hooks/useTrackErrorEffect';
 import {
   ERROR_TRACKING_FEATURES,
   UAS_ERROR_ACTIONS,
@@ -92,15 +92,11 @@ const FollowTopicButtonAuthenticatedInner = ({
 };
 
 const FollowTopicButtonErrorFallback = ({ error }: { error: Error }) => {
-  const trackError = useErrorTracking();
-
-  useEffect(() => {
-    trackError({
-      error,
-      feature: ERROR_TRACKING_FEATURES.FOLLOW_TOPIC_UAS,
-      action: UAS_ERROR_ACTIONS.RENDER,
-    });
-  }, [error, trackError]);
+  useTrackErrorEffect({
+    error,
+    feature: ERROR_TRACKING_FEATURES.FOLLOW_TOPIC_UAS,
+    action: UAS_ERROR_ACTIONS.RENDER,
+  });
 
   return null;
 };
