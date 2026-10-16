@@ -9,382 +9,420 @@ const mockBuildCurrentMetadata = uasUtility.buildCurrentMetadata as jest.Mock;
 const mockBuildTopicMetadata = uasUtility.buildTopicMetadata as jest.Mock;
 const mockCompareMetadataWithSaved =
   uasUtility.compareMetadataWithSaved as jest.Mock;
+const mockOnMetadataOutOfDate = jest.fn();
+const stableCallback = jest.fn();
 
 describe('useUASMetadataSync', () => {
-  const mockArticlePageData: SaveArticlePageData = {
-    canonicalUrl: 'https://bbc.com/article',
-  };
+  describe('for saved articles', () => {
+    const mockArticlePageData: SaveArticlePageData = {
+      canonicalUrl: 'https://bbc.com/article',
+    };
 
-  const mockSavedMetadata = {
-    title: 'Old Title',
-    promoImage: 'https://ichef.bbc.co.uk/image.jpg',
-    locatorUrl: 'https://bbc.com/article',
-  };
-
-  const mockOnMetadataOutOfDate = jest.fn();
-
-  beforeEach(() => {
-    jest.clearAllMocks();
-    mockBuildCurrentMetadata.mockReturnValue({
-      title: 'New Title',
+    const mockSavedMetadata = {
+      title: 'Old Title',
       promoImage: 'https://ichef.bbc.co.uk/image.jpg',
-    });
-    mockCompareMetadataWithSaved.mockReturnValue({
-      hasChanges: false,
-    });
-  });
+      locatorUrl: mockArticlePageData.canonicalUrl,
+    };
 
-  it('calls buildCurrentMetadata with correct arguments', () => {
-    renderHook(() =>
-      useUASMetadataSync({
-        saveArticlePageData: mockArticlePageData,
-        articleId: 'c123456789o',
-        service: 'hindi',
-        isSaved: true,
-        savedArticleMetadata: mockSavedMetadata,
-        onMetadataOutOfDate: mockOnMetadataOutOfDate,
-      }),
-    );
-
-    expect(mockBuildCurrentMetadata).toHaveBeenCalledWith(mockArticlePageData, {
+    const mockArticleParams = {
+      saveArticlePageData: mockArticlePageData,
       articleId: 'c123456789o',
-      service: 'hindi',
-    });
-  });
-
-  it('calls compareMetadataWithSaved with current and saved metadata', () => {
-    const currentMetadata = {
-      title: 'New Title',
-      promoImage: 'https://ichef.bbc.co.uk/image.jpg',
-    };
-    mockBuildCurrentMetadata.mockReturnValue(currentMetadata);
-
-    renderHook(() =>
-      useUASMetadataSync({
-        saveArticlePageData: mockArticlePageData,
-        articleId: 'c123456789o',
-        service: 'hindi',
-        isSaved: true,
-        savedArticleMetadata: mockSavedMetadata,
-        onMetadataOutOfDate: mockOnMetadataOutOfDate,
-      }),
-    );
-
-    expect(mockCompareMetadataWithSaved).toHaveBeenCalledWith(
-      currentMetadata,
-      mockSavedMetadata,
-    );
-  });
-
-  it('calls onMetadataOutOfDate when metadata has changes', () => {
-    mockCompareMetadataWithSaved.mockReturnValue({
-      hasChanges: true,
-    });
-
-    const mockCallback = jest.fn();
-
-    renderHook(() =>
-      useUASMetadataSync({
-        saveArticlePageData: mockArticlePageData,
-        articleId: 'c123456789o',
-        service: 'hindi',
-        isSaved: true,
-        savedArticleMetadata: mockSavedMetadata,
-        onMetadataOutOfDate: mockCallback,
-      }),
-    );
-
-    expect(mockCallback).toHaveBeenCalled();
-  });
-
-  it('does not call onMetadataOutOfDate when metadata has no changes', () => {
-    mockCompareMetadataWithSaved.mockReturnValue({
-      hasChanges: false,
-    });
-
-    renderHook(() =>
-      useUASMetadataSync({
-        saveArticlePageData: mockArticlePageData,
-        articleId: 'c123456789o',
-        service: 'hindi',
-        isSaved: true,
-        savedArticleMetadata: mockSavedMetadata,
-        onMetadataOutOfDate: mockOnMetadataOutOfDate,
-      }),
-    );
-
-    expect(mockOnMetadataOutOfDate).not.toHaveBeenCalled();
-  });
-
-  it('does not call onMetadataOutOfDate when article is not saved', () => {
-    renderHook(() =>
-      useUASMetadataSync({
-        saveArticlePageData: mockArticlePageData,
-        articleId: 'c123456789o',
-        service: 'hindi',
-        isSaved: false,
-        savedArticleMetadata: mockSavedMetadata,
-        onMetadataOutOfDate: mockOnMetadataOutOfDate,
-      }),
-    );
-
-    expect(mockOnMetadataOutOfDate).not.toHaveBeenCalled();
-  });
-
-  it('does not call onMetadataOutOfDate when savedArticleMetadata is missing', () => {
-    renderHook(() =>
-      useUASMetadataSync({
-        saveArticlePageData: mockArticlePageData,
-        articleId: 'c123456789o',
-        service: 'hindi',
-        isSaved: true,
-        savedArticleMetadata: undefined,
-        onMetadataOutOfDate: mockOnMetadataOutOfDate,
-      }),
-    );
-
-    expect(mockOnMetadataOutOfDate).not.toHaveBeenCalled();
-  });
-
-  it('prevents duplicate syncs on same article load', () => {
-    mockCompareMetadataWithSaved.mockReturnValue({
-      hasChanges: true,
-    });
-
-    const stableCallback = jest.fn();
-
-    const { rerender } = renderHook(() =>
-      useUASMetadataSync({
-        saveArticlePageData: mockArticlePageData,
-        articleId: 'c123456789o',
-        service: 'hindi',
-        isSaved: true,
-        savedArticleMetadata: mockSavedMetadata,
-        onMetadataOutOfDate: stableCallback,
-      }),
-    );
-
-    expect(mockCompareMetadataWithSaved).toHaveBeenCalledTimes(1);
-    expect(stableCallback).toHaveBeenCalledTimes(1);
-
-    // Rerender with same props - should not sync again due to hasSyncedRef
-    rerender();
-
-    expect(mockCompareMetadataWithSaved).toHaveBeenCalledTimes(1);
-    expect(stableCallback).toHaveBeenCalledTimes(1);
-  });
-
-  it('allows new sync when article changes', () => {
-    mockCompareMetadataWithSaved.mockReturnValue({
-      hasChanges: true,
-    });
-
-    const stableCallback = jest.fn();
-
-    const { rerender } = renderHook(
-      ({ articleId }: { articleId: string }) =>
-        useUASMetadataSync({
-          saveArticlePageData: mockArticlePageData,
-          articleId,
-          service: 'hindi',
-          isSaved: true,
-          savedArticleMetadata: mockSavedMetadata,
-          onMetadataOutOfDate: stableCallback,
-        }),
-      { initialProps: { articleId: 'c123456789o' } },
-    );
-
-    expect(mockCompareMetadataWithSaved).toHaveBeenCalledTimes(1);
-
-    // Rerender with new articleId - should sync again
-    rerender({ articleId: 'c987654321o' });
-
-    expect(mockCompareMetadataWithSaved).toHaveBeenCalledTimes(2);
-    expect(stableCallback).toHaveBeenCalledTimes(2);
-  });
-
-  it('resets sync state when saved state changes from true to false', () => {
-    mockCompareMetadataWithSaved.mockReturnValue({
-      hasChanges: true,
-    });
-
-    const stableCallback = jest.fn();
-
-    const { rerender } = renderHook(
-      ({ isSaved }: { isSaved: boolean }) =>
-        useUASMetadataSync({
-          saveArticlePageData: mockArticlePageData,
-          articleId: 'c123456789o',
-          service: 'hindi',
-          isSaved,
-          savedArticleMetadata: mockSavedMetadata,
-          onMetadataOutOfDate: stableCallback,
-        }),
-      { initialProps: { isSaved: true } },
-    );
-
-    expect(mockCompareMetadataWithSaved).toHaveBeenCalledTimes(1);
-
-    // Change to unsaved - should not call sync
-    rerender({ isSaved: false });
-
-    expect(mockCompareMetadataWithSaved).toHaveBeenCalledTimes(1);
-
-    // Change back to saved - should call sync again (hasSyncedRef reset)
-    rerender({ isSaved: true });
-
-    expect(mockCompareMetadataWithSaved).toHaveBeenCalledTimes(2);
-  });
-
-  it('handles missing onMetadataOutOfDate callback gracefully', () => {
-    mockCompareMetadataWithSaved.mockReturnValue({
-      hasChanges: true,
-    });
-
-    expect(() => {
-      renderHook(() =>
-        useUASMetadataSync({
-          saveArticlePageData: mockArticlePageData,
-          articleId: 'c123456789o',
-          service: 'hindi',
-          isSaved: true,
-          savedArticleMetadata: mockSavedMetadata,
-          onMetadataOutOfDate: undefined,
-        }),
-      );
-    }).not.toThrow();
-  });
-
-  describe('followed topics', () => {
-    const topicData = {
-      topicId: 'climate-change',
-      title: 'Climate change',
-      url: '/hindi/topics/climate-change',
-    };
-    const currentMetadata = {
-      topicId: topicData.topicId,
-      title: topicData.title,
-      locatorUrl: topicData.url,
-      service: 'hindi',
-    };
-    const topicParams = {
-      followTopicPageData: topicData,
-      topicId: topicData.topicId,
       service: 'hindi' as const,
-      isFollowed: true,
-      savedTopicMetadata: { ...currentMetadata, title: 'Old title' },
+      isSaved: true,
+      savedArticleMetadata: mockSavedMetadata,
       onMetadataOutOfDate: mockOnMetadataOutOfDate,
     };
 
     beforeEach(() => {
-      mockBuildTopicMetadata.mockReturnValue(currentMetadata);
+      jest.clearAllMocks();
+      mockBuildCurrentMetadata.mockReturnValue({
+        title: 'New Title',
+        promoImage: mockSavedMetadata.promoImage,
+      });
+      mockCompareMetadataWithSaved.mockReturnValue({
+        hasChanges: false,
+      });
     });
 
-    it('builds and compares topic metadata before syncing changes', () => {
-      mockCompareMetadataWithSaved.mockReturnValue({ hasChanges: true });
+    it('calls buildCurrentMetadata with correct arguments', () => {
+      renderHook(() => useUASMetadataSync(mockArticleParams));
 
-      renderHook(() => useUASMetadataSync(topicParams));
+      expect(mockBuildCurrentMetadata).toHaveBeenCalledWith(
+        mockArticlePageData,
+        {
+          articleId: mockArticleParams.articleId,
+          service: mockArticleParams.service,
+        },
+      );
+    });
 
-      expect(mockBuildTopicMetadata).toHaveBeenCalledWith(topicData, 'hindi');
-      expect(mockBuildCurrentMetadata).not.toHaveBeenCalled();
+    it('calls compareMetadataWithSaved with current and saved metadata', () => {
+      const currentMetadata = {
+        title: 'New Title',
+        promoImage: mockSavedMetadata.promoImage,
+      };
+      mockBuildCurrentMetadata.mockReturnValue(currentMetadata);
+
+      renderHook(() => useUASMetadataSync(mockArticleParams));
+
       expect(mockCompareMetadataWithSaved).toHaveBeenCalledWith(
         currentMetadata,
-        topicParams.savedTopicMetadata,
+        mockSavedMetadata,
       );
-      expect(mockOnMetadataOutOfDate).toHaveBeenCalledTimes(1);
     });
 
-    it('does not sync unchanged topic metadata', () => {
-      renderHook(() => useUASMetadataSync(topicParams));
+    it('calls onMetadataOutOfDate when metadata has changes', () => {
+      mockCompareMetadataWithSaved.mockReturnValue({
+        hasChanges: true,
+      });
 
-      expect(mockCompareMetadataWithSaved).toHaveBeenCalledTimes(1);
-      expect(mockOnMetadataOutOfDate).not.toHaveBeenCalled();
-    });
+      const mockCallback = jest.fn();
 
-    it.each([{ isFollowed: false }, { savedTopicMetadata: undefined }])(
-      'does not compare or sync when unavailable: %o',
-      overrides => {
-        renderHook(() => useUASMetadataSync({ ...topicParams, ...overrides }));
-
-        expect(mockBuildTopicMetadata).not.toHaveBeenCalled();
-        expect(mockCompareMetadataWithSaved).not.toHaveBeenCalled();
-        expect(mockOnMetadataOutOfDate).not.toHaveBeenCalled();
-      },
-    );
-
-    it('prevents duplicate syncs when inputs are recreated', () => {
-      mockCompareMetadataWithSaved.mockReturnValue({ hasChanges: true });
-      const { rerender } = renderHook(() =>
+      renderHook(() =>
         useUASMetadataSync({
-          ...topicParams,
-          followTopicPageData: { ...topicData },
-          savedTopicMetadata: { ...topicParams.savedTopicMetadata },
+          ...mockArticleParams,
+          onMetadataOutOfDate: mockCallback,
         }),
       );
 
+      expect(mockCallback).toHaveBeenCalled();
+    });
+
+    it('does not call onMetadataOutOfDate when metadata has no changes', () => {
+      mockCompareMetadataWithSaved.mockReturnValue({
+        hasChanges: false,
+      });
+
+      renderHook(() => useUASMetadataSync(mockArticleParams));
+
+      expect(mockOnMetadataOutOfDate).not.toHaveBeenCalled();
+    });
+
+    it('does not call onMetadataOutOfDate when article is not saved', () => {
+      renderHook(() =>
+        useUASMetadataSync({
+          ...mockArticleParams,
+          isSaved: false,
+        }),
+      );
+
+      expect(mockOnMetadataOutOfDate).not.toHaveBeenCalled();
+    });
+
+    it('does not call onMetadataOutOfDate when savedArticleMetadata is missing', () => {
+      renderHook(() =>
+        useUASMetadataSync({
+          ...mockArticleParams,
+          savedArticleMetadata: undefined,
+        }),
+      );
+
+      expect(mockOnMetadataOutOfDate).not.toHaveBeenCalled();
+    });
+
+    it('prevents duplicate syncs on same article load', () => {
+      mockCompareMetadataWithSaved.mockReturnValue({
+        hasChanges: true,
+      });
+
+      
+
+      const { rerender } = renderHook(() =>
+        useUASMetadataSync({
+          ...mockArticleParams,
+          onMetadataOutOfDate: stableCallback,
+        }),
+      );
+
+      expect(mockCompareMetadataWithSaved).toHaveBeenCalledTimes(1);
+      expect(stableCallback).toHaveBeenCalledTimes(1);
+
+      // Rerender with same props - should not sync again due to hasSyncedRef
       rerender();
 
-      expect(mockOnMetadataOutOfDate).toHaveBeenCalledTimes(1);
+      expect(mockCompareMetadataWithSaved).toHaveBeenCalledTimes(1);
+      expect(stableCallback).toHaveBeenCalledTimes(1);
+    });
+
+    it('allows new sync when article changes', () => {
+      mockCompareMetadataWithSaved.mockReturnValue({
+        hasChanges: true,
+      });
+
+      const { rerender } = renderHook(
+        ({ articleId }: { articleId: string }) =>
+          useUASMetadataSync({
+            ...mockArticleParams,
+            articleId,
+            onMetadataOutOfDate: stableCallback,
+          }),
+        { initialProps: { articleId: mockArticleParams.articleId } },
+      );
+
+      expect(mockCompareMetadataWithSaved).toHaveBeenCalledTimes(1);
+
+      // Rerender with new articleId - should sync again
+      rerender({ articleId: 'c987654321o' });
+
       expect(mockCompareMetadataWithSaved).toHaveBeenCalledTimes(1);
     });
 
-    it('allows syncing another topic', () => {
+    it('resets sync state when saved state changes from true to false', () => {
+      mockCompareMetadataWithSaved.mockReturnValue({
+        hasChanges: true,
+      });
+
+      const { rerender } = renderHook(
+        ({ isSaved }: { isSaved: boolean }) =>
+          useUASMetadataSync({
+            ...mockArticleParams,
+            isSaved,
+            onMetadataOutOfDate: stableCallback,
+          }),
+        { initialProps: { isSaved: true } },
+      );
+
+      expect(mockCompareMetadataWithSaved).toHaveBeenCalledTimes(1);
+
+      // Change to unsaved - should not call sync
+      rerender({ isSaved: false });
+
+      expect(mockCompareMetadataWithSaved).toHaveBeenCalledTimes(1);
+
+      // Change back to saved - should call sync again (hasSyncedRef reset)
+      rerender({ isSaved: true });
+
+      expect(mockCompareMetadataWithSaved).toHaveBeenCalledTimes(2);
+    });
+
+    it('handles missing onMetadataOutOfDate callback gracefully', () => {
+      mockCompareMetadataWithSaved.mockReturnValue({
+        hasChanges: true,
+      });
+
+      expect(() => {
+        renderHook(() =>
+          useUASMetadataSync({
+            ...mockArticleParams,
+            onMetadataOutOfDate: undefined,
+          }),
+        );
+      }).not.toThrow();
+    });
+  });
+
+  describe('for followed topics', () => {
+    const mockTopicPageData = {
+      topicId: 'climate-change',
+      title: 'Climate change',
+      url: '/hindi/topics/climate-change',
+    };
+
+    const mockSavedMetadata = {
+      topicId: mockTopicPageData.topicId,
+      title: mockTopicPageData.title,
+      locatorUrl: mockTopicPageData.url,
+      service: 'hindi',
+    };
+
+    const mockTopicParams = {
+      followTopicPageData: mockTopicPageData,
+      topicId: mockTopicPageData.topicId,
+      service: 'hindi' as const,
+      isFollowed: true,
+      savedTopicMetadata: { ...mockSavedMetadata, title: 'Old title' },
+      onMetadataOutOfDate: mockOnMetadataOutOfDate,
+    };
+
+    beforeEach(() => {
+      jest.clearAllMocks();
+      mockBuildTopicMetadata.mockReturnValue(mockSavedMetadata);
+      mockCompareMetadataWithSaved.mockReturnValue({
+        hasChanges: false,
+      });
+    });
+
+    it('calls buildTopicMetadata with correct arguments', () => {
+      renderHook(() => useUASMetadataSync(mockTopicParams));
+
+      expect(mockBuildTopicMetadata).toHaveBeenCalledWith(
+        mockTopicPageData,
+        mockTopicParams.service,
+      );
+    });
+
+    it('calls compareMetadataWithSaved with current and saved metadata', () => {
+      const currentMetadata = {
+        topicId: 'new-topic-id',
+        title: 'New topic title',
+        locatorUrl: mockTopicPageData.url,
+        service: 'hindi',
+      };
+      mockBuildTopicMetadata.mockReturnValue(currentMetadata);
+
+      renderHook(() => useUASMetadataSync(mockTopicParams));
+
+      expect(mockBuildCurrentMetadata).not.toHaveBeenCalled();
+      expect(mockCompareMetadataWithSaved).toHaveBeenCalledWith(
+        currentMetadata,
+        mockTopicParams.savedTopicMetadata,
+      );
+    });
+
+    it('calls onMetadataOutOfDate when metadata has changes', () => {
       mockCompareMetadataWithSaved.mockReturnValue({ hasChanges: true });
+
+      const mockCallback = jest.fn();
+
+      renderHook(() =>
+        useUASMetadataSync({
+          ...mockTopicParams,
+          onMetadataOutOfDate: mockCallback,
+        }),
+      );
+
+      expect(mockCallback).toHaveBeenCalled();
+    });
+
+    it('does not call onMetadataOutOfDate when metadata has no changes', () => {
+      mockCompareMetadataWithSaved.mockReturnValue({
+        hasChanges: false,
+      });
+
+      renderHook(() => useUASMetadataSync(mockTopicParams));
+
+      expect(mockOnMetadataOutOfDate).not.toHaveBeenCalled();
+    });
+
+    it('does not call onMetadataOutOfDate when topic is not followed', () => {
+      renderHook(() =>
+        useUASMetadataSync({
+          ...mockTopicParams,
+          isFollowed: false,
+        }),
+      );
+
+      expect(mockOnMetadataOutOfDate).not.toHaveBeenCalled();
+    });
+
+    it('does not call onMetadataOutOfDate when savedTopicMetadata is missing', () => {
+      renderHook(() =>
+        useUASMetadataSync({
+          ...mockTopicParams,
+          savedTopicMetadata: undefined,
+        }),
+      );
+
+      expect(mockOnMetadataOutOfDate).not.toHaveBeenCalled();
+    });
+
+    it('prevents duplicate syncs on same topic load', () => {
+      mockCompareMetadataWithSaved.mockReturnValue({ hasChanges: true });
+
+      const { rerender } = renderHook(() =>
+        useUASMetadataSync({
+          ...mockTopicParams,
+          onMetadataOutOfDate: stableCallback,
+        }),
+      );
+
+      expect(mockCompareMetadataWithSaved).toHaveBeenCalledTimes(1);
+      expect(stableCallback).toHaveBeenCalledTimes(1);
+
+      rerender();
+
+      expect(mockCompareMetadataWithSaved).toHaveBeenCalledTimes(1);
+      expect(stableCallback).toHaveBeenCalledTimes(1);
+    });
+
+    it('allows new sync when topic changes', () => {
+      mockCompareMetadataWithSaved.mockReturnValue({ hasChanges: true });
+
       const { rerender } = renderHook(
         ({ topicId }) =>
           useUASMetadataSync({
-            ...topicParams,
+            ...mockTopicParams,
             topicId,
-            followTopicPageData: { ...topicData, topicId },
+            followTopicPageData: { ...mockTopicPageData, topicId },
+            onMetadataOutOfDate: stableCallback,
           }),
-        { initialProps: { topicId: topicData.topicId } },
+        { initialProps: { topicId: mockTopicPageData.topicId } },
       );
+
+      expect(mockCompareMetadataWithSaved).toHaveBeenCalledTimes(1);
 
       rerender({ topicId: 'science' });
 
-      expect(mockOnMetadataOutOfDate).toHaveBeenCalledTimes(2);
+      expect(mockCompareMetadataWithSaved).toHaveBeenCalledTimes(1);
+      expect(stableCallback).toHaveBeenCalledTimes(1);
     });
 
-    it('allows syncing the same topic for a different service', () => {
+    it('allows new sync when service changes', () => {
       mockCompareMetadataWithSaved.mockReturnValue({ hasChanges: true });
+
       const { rerender } = renderHook(
-        ({ service }: { service: 'hindi' | 'arabic' }) =>
-          useUASMetadataSync({ ...topicParams, service }),
+        ({ service }: { service: 'hindi' | 'mundo' }) =>
+          useUASMetadataSync({
+            ...mockTopicParams,
+            service,
+            onMetadataOutOfDate: stableCallback,
+          }),
         { initialProps: { service: 'hindi' } },
       );
 
-      rerender({ service: 'arabic' });
+      expect(mockCompareMetadataWithSaved).toHaveBeenCalledTimes(1);
 
-      expect(mockBuildTopicMetadata).toHaveBeenLastCalledWith(
-        topicData,
-        'arabic',
-      );
-      expect(mockOnMetadataOutOfDate).toHaveBeenCalledTimes(2);
+      rerender({ service: 'mundo' });
+
+      expect(mockCompareMetadataWithSaved).toHaveBeenCalledTimes(1);
+      expect(stableCallback).toHaveBeenCalledTimes(1);
     });
 
     it.each(['unfollowed', 'missing metadata'])(
-      'resets sync protection when %s',
+      'resets sync state when %s',
       state => {
         mockCompareMetadataWithSaved.mockReturnValue({ hasChanges: true });
+
         const { rerender } = renderHook(
           ({ unavailable }) =>
             useUASMetadataSync({
-              ...topicParams,
+              ...mockTopicParams,
+              onMetadataOutOfDate: stableCallback,
               isFollowed: !(unavailable && state === 'unfollowed'),
               savedTopicMetadata:
                 unavailable && state === 'missing metadata'
                   ? undefined
-                  : topicParams.savedTopicMetadata,
+                  : mockTopicParams.savedTopicMetadata,
             }),
           { initialProps: { unavailable: false } },
         );
 
+        expect(mockCompareMetadataWithSaved).toHaveBeenCalledTimes(1);
+        expect(stableCallback).toHaveBeenCalledTimes(1);
+
         rerender({ unavailable: true });
-        expect(mockOnMetadataOutOfDate).toHaveBeenCalledTimes(1);
+
+        expect(mockCompareMetadataWithSaved).toHaveBeenCalledTimes(1);
+        expect(stableCallback).toHaveBeenCalledTimes(1);
 
         rerender({ unavailable: false });
-        expect(mockOnMetadataOutOfDate).toHaveBeenCalledTimes(2);
+
+        expect(mockCompareMetadataWithSaved).toHaveBeenCalledTimes(2);
+        expect(stableCallback).toHaveBeenCalledTimes(2);
       },
     );
+
+    it('handles missing onMetadataOutOfDate callback gracefully', () => {
+      mockCompareMetadataWithSaved.mockReturnValue({ hasChanges: true });
+
+      expect(() => {
+        renderHook(() =>
+          useUASMetadataSync({
+            ...mockTopicParams,
+            onMetadataOutOfDate: undefined,
+          }),
+        );
+      }).not.toThrow();
+    });
   });
 });
