@@ -65,7 +65,10 @@ Emotion `palette.SCREAMING_SNAKE` → `theme.$palette-kebab-case`.
 
 ### Spacings
 
-Emotion values are unitless numbers needing `rem`; SCSS values already include units, so interpolate directly.
+Emotion values are unitless numbers needing `rem`; SCSS values already include
+units, so use the Sass variables directly in CSS declarations. Interpolate a
+token only when constructing a string, selector or other value that requires
+Sass interpolation.
 
 | Emotion | SCSS |
 |---|---|
@@ -78,7 +81,7 @@ Emotion values are unitless numbers needing `rem`; SCSS values already include u
 | `spacings.SEXTUPLE` | `theme.$spacings-sextuple` |
 
 ```scss
-padding: #{theme.$spacings-double};
+margin-inline-end: theme.$spacings-full;
 ```
 
 ### Media queries
