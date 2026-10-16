@@ -59,19 +59,19 @@ body.simorgh-player-fullscreen .emotion-1 {
   border-bottom: solid 0.125rem transparent;
 }
 
-@media (max-width: 24.9375rem) {
+@media (max-width:24.9375rem) {
   .emotion-5 {
     padding: 2.75rem 1rem 0.5rem 1rem;
   }
 }
 
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
+@media (min-width:25rem) and (max-width:37.4375rem) {
   .emotion-5 {
     padding: 2.75rem 1rem 0.5rem 1rem;
   }
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-5 {
     padding: calc(2rem - 0.0625rem) 1rem 2rem 1rem;
   }
@@ -126,7 +126,7 @@ body.simorgh-player-fullscreen .emotion-1 {
   }
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-9 {
     margin-top: 1.5rem;
   }
@@ -185,7 +185,7 @@ body.simorgh-player-fullscreen .emotion-1 {
   justify-content: center;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-11 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
@@ -233,12 +233,6 @@ body.simorgh-player-fullscreen .emotion-1 {
   }
 }
 
-.emotion-13 button:focus,
-.emotion-13 button:hover {
-  color: #222222;
-  background-color: #F6A21D;
-}
-
 .emotion-13 button:hover,
 .emotion-13 button:focus {
   -webkit-text-decoration: underline;
@@ -249,7 +243,13 @@ body.simorgh-player-fullscreen .emotion-1 {
   outline: 0.1875rem solid #000000;
 }
 
-@media (min-width: 25rem) {
+.emotion-13 button:focus,
+.emotion-13 button:hover {
+  color: #222222;
+  background-color: #F6A21D;
+}
+
+@media (min-width:25rem) {
   .emotion-13 {
     width: 17.3125rem;
   }
@@ -320,21 +320,21 @@ body.simorgh-player-fullscreen .emotion-1 {
   z-index: 1;
 }
 
-@media (min-width: 15rem) {
+@media (min-width:15rem) {
   .emotion-18 {
     min-height: 3.75rem;
     padding: 0 0.5rem;
   }
 }
 
-@media (min-width: 25rem) {
+@media (min-width:25rem) {
   .emotion-18 {
     min-height: 3.75rem;
     padding: 0 1rem;
   }
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-18 {
     min-height: 4rem;
   }
@@ -344,7 +344,7 @@ body.simorgh-player-fullscreen .emotion-1 {
   fill: currentColor;
 }
 
-@media screen and (forced-colors: active) {
+@media screen and (forced-colors:active) {
   .emotion-18 svg {
     fill: linkText;
   }
@@ -416,19 +416,19 @@ body.simorgh-player-fullscreen .emotion-1 {
   max-width: 100%;
 }
 
-@media (min-width: 25rem) {
+@media (min-width:25rem) {
   .emotion-24 {
     height: 1.5rem;
   }
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-24 {
     height: 1.875rem;
   }
 }
 
-@media screen and (-ms-high-contrast: active),print {
+@media screen and (-ms-high-contrast:active),print {
   .emotion-24 {
     fill: windowText;
   }
@@ -450,7 +450,7 @@ body.simorgh-player-fullscreen .emotion-1 {
   position: absolute;
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
+  clip: rect(1px,1px,1px,1px);
   height: 1px;
   width: 1px;
   overflow: hidden;
@@ -491,13 +491,13 @@ body.simorgh-player-fullscreen .emotion-1 {
   left: 0;
 }
 
-@media (min-width: 25rem) {
+@media (min-width:25rem) {
   .emotion-27:focus {
     top: 0.5rem;
   }
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-27 {
     padding: 0.5rem;
   }
@@ -508,7 +508,7 @@ body.simorgh-player-fullscreen .emotion-1 {
   background-color: #FFFFFF;
 }
 
-@media (min-width: 62.9375rem) {
+@media (min-width:62.9375rem) {
   .emotion-29::after {
     content: '';
     position: absolute;
@@ -530,13 +530,13 @@ body.simorgh-player-fullscreen .emotion-1 {
   background-color: #FFFFFF;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-31 {
     margin: 0 0.8rem;
   }
 }
 
-@media (min-width: 66rem) {
+@media (min-width:66rem) {
   .emotion-31 {
     margin: 0 auto;
   }
@@ -574,14 +574,14 @@ body.simorgh-player-fullscreen .emotion-1 {
   border: 0.25rem solid #000000;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-35 {
     display: none;
     visibility: hidden;
   }
 }
 
-@media (min-width: 20rem) {
+@media (min-width:20rem) {
   .emotion-35 {
     height: 2.75rem;
     width: 2.75rem;
@@ -597,13 +597,13 @@ body.simorgh-player-fullscreen .emotion-1 {
   fill: currentColor;
 }
 
-@media screen and (forced-colors: active) {
+@media screen and (forced-colors:active) {
   .emotion-37 {
     fill: linkText;
   }
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-40 {
     white-space: nowrap;
     overflow-x: scroll;
@@ -614,7 +614,7 @@ body.simorgh-player-fullscreen .emotion-1 {
     -ms-overflow-style: none;
   }
 
-  @media (min-width: 25rem) {
+  @media (min-width:25rem) {
     .emotion-40 {
       scroll-padding-inline-end: 6rem;
     }
@@ -647,13 +647,11 @@ body.simorgh-player-fullscreen .emotion-1 {
     overflow: hidden;
     pointer-events: none;
     background: linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 1) 100%
+            to right,rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 1) 100%
           );
   }
 
-  @media (min-width: 25rem) {
+  @media (min-width:25rem) {
     .emotion-40:after {
       width: 6rem;
     }
@@ -667,7 +665,7 @@ body.simorgh-player-fullscreen .emotion-1 {
   position: relative;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-42 {
     overflow: hidden;
   }
@@ -681,13 +679,13 @@ body.simorgh-player-fullscreen .emotion-1 {
   margin-inline-end: 0.75rem;
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-44:last-child {
     margin-right: 3rem;
   }
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-44::after {
     content: '';
     position: absolute;
@@ -727,7 +725,7 @@ body.simorgh-player-fullscreen .emotion-1 {
   }
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-46 {
     padding: 0.75rem 0.5rem;
   }
@@ -771,18 +769,18 @@ body.simorgh-player-fullscreen .emotion-1 {
   height: 0;
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
-  transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
+  transition-timing-function: cubic-bezier(0,0,0.58,1);
   visibility: hidden;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-88 {
     display: none;
     visibility: hidden;
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion:reduce) {
   .emotion-88 {
     -webkit-transition: none;
     transition: none;
@@ -846,7 +844,7 @@ body.simorgh-player-fullscreen .emotion-1 {
   inset-inline-start: 0;
 }
 
-@media (min-width: 1041px) {
+@media (min-width:1041px) {
   .emotion-136 {
     width: calc(100vw + 0.8rem);
     inset-inline-start: calc(-1 * (100vw - 1014px) / 2);
@@ -862,7 +860,7 @@ body.simorgh-player-fullscreen .emotion-1 {
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 
-@media (min-width: 1008px) {
+@media (min-width:1008px) {
   .emotion-136 {
     display: none;
   }
@@ -881,25 +879,25 @@ body.simorgh-player-fullscreen .emotion-1 {
   contain-intrinsic-size: 33.125rem;
 }
 
-@media (min-width: 15rem) {
+@media (min-width:15rem) {
   .emotion-139 {
     contain-intrinsic-size: 26.563rem;
   }
 }
 
-@media (min-width: 20) {
+@media (min-width:20) {
   .emotion-139 {
     contain-intrinsic-size: 23.438rem;
   }
 }
 
-@media (min-width: 25rem) {
+@media (min-width:25rem) {
   .emotion-139 {
     contain-intrinsic-size: 21.875rem;
   }
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-139 {
     contain-intrinsic-size: 17.188rem;
   }
@@ -922,21 +920,21 @@ body.simorgh-player-fullscreen .emotion-1 {
   z-index: 1;
 }
 
-@media (min-width: 15rem) {
+@media (min-width:15rem) {
   .emotion-142 {
     min-height: 3.75rem;
     padding: 0 0.5rem;
   }
 }
 
-@media (min-width: 25rem) {
+@media (min-width:25rem) {
   .emotion-142 {
     min-height: 3.75rem;
     padding: 0 1rem;
   }
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-142 {
     min-height: 4rem;
   }
@@ -946,7 +944,7 @@ body.simorgh-player-fullscreen .emotion-1 {
   fill: currentColor;
 }
 
-@media screen and (forced-colors: active) {
+@media screen and (forced-colors:active) {
   .emotion-142 svg {
     fill: linkText;
   }
