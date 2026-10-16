@@ -1,4 +1,4 @@
-import { useState, useCallback, use } from 'react';
+import { useState, useCallback, useRef, use } from 'react';
 import { useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import useMediaQuery from '#hooks/useMediaQuery';
@@ -65,6 +65,7 @@ import repositionCountryTopic from '#app/components/TopicDiscovery/RepositionCou
 import GooglePreferredSource from '#app/components/GooglePreferredSource/GooglePreferredSourceLink';
 import GooglePreferredSourceDivider from '#app/components/GooglePreferredSource/GooglePreferredSourceDivider';
 import isGoogleReferral from '#app/lib/utilities/isGoogleReferral';
+import UserZoomIntercept from '#app/components/UserZoomIntercept';
 import ArticleMessageBanner from './ArticleMessageBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -381,6 +382,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     'article-scroll-depth',
     scrollDepthEnabled,
   );
+  const userZoomCtaRef = useRef<HTMLButtonElement>(null);
 
   const promoImageBlocks =
     pageData?.promo?.images?.defaultPromoImage?.blocks ?? [];
@@ -530,10 +532,16 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             role="main"
             ref={scrollDepthRef}
           >
+            {/* Spike test CTA for UserZoom click-trigger - not a real feedback entry point */}
+            <button type="button" ref={userZoomCtaRef}>
+              Give feedback
+            </button>
+            <UserZoomIntercept trigger="click" targetRef={userZoomCtaRef} />
             <Blocks
               blocks={articleBlocks}
               componentsToRender={componentsToRender}
             />
+            <UserZoomIntercept trigger="view" /> 
             <OptimizelyPageMetrics trackPageComplete />
           </main>
           <OptimizelyPageMetrics trackPageDepth />
