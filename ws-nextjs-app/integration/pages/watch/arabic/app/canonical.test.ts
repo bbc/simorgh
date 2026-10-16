@@ -1,6 +1,6 @@
 /**
  * @service arabic
- * @pathname /arabic/watch/c7vxryk46w0qo.app
+ * @pathname /arabic/watch/c7vxryk46w0qo
  */
 import runMediaPlayerTests from '../../../../common/mediaPlayer';
 import runCanonicalTests from '../../../articles/canonicalTests';
