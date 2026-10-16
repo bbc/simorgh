@@ -1,29 +1,61 @@
-import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+/* eslint-disable no-underscore-dangle */
+import PromisePolyfill from 'promise-polyfill';
+import isOperaProxy from '#app/lib/utilities/isOperaProxy';
+import { EnvConfig, getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import addInlineScript from '#app/lib/utilities/addInlineScript';
+
+// eslint-disable-next-line func-names
+const reverbScaffold = function (
+  envConfig: EnvConfig,
+  isOperaProxyFn: () => boolean,
+) {
+  if (isOperaProxyFn()) {
+    PromisePolyfill._immediateFn = function (fn) {
+      // @ts-expect-error: Overriding the immediate function for Opera proxy environments
+      fn(); // Execute synchronously for environments without solid timer loops
+    };
+  }
+
+  // eslint-disable-next-line vars-on-top, no-var
+  var CompartiblePromise = isOperaProxyFn() ? PromisePolyfill : Promise;
+
+  window.__reverb = {} as Window['__reverb'];
+
+  // eslint-disable-next-line func-names
+  window.__reverb.__reverbLoadedPromise = new CompartiblePromise(function (
+    resolve,
+    reject,
+  ) {
+    window.__reverb.__resolveReverbLoaded = resolve;
+    window.__reverb.__rejectReverbLoaded = reject;
+  });
+
+  // eslint-disable-next-line func-names
+  window.__reverb.__reverbTimeout = setTimeout(function () {
+    window.__reverb.__rejectReverbLoaded();
+  }, 5000);
+
+  // eslint-disable-next-line no-var, vars-on-top
+  var reverbScript = document.createElement('script');
+  // eslint-disable-next-line no-var, vars-on-top
+  var simorghReverbSource =
+    // eslint-disable-next-line @typescript-eslint/prefer-optional-chain
+    envConfig && envConfig.SIMORGH_REVERB_SOURCE
+      ? envConfig.SIMORGH_REVERB_SOURCE
+      : '';
+  reverbScript.setAttribute('src', simorghReverbSource);
+  document.head.appendChild(reverbScript);
+};
 
 const ReverbTemplate = ({ nonce }: { nonce?: string | null }) => {
   const envConfig = getEnvConfig();
 
-  return (
-    <script
-      {...(nonce ? { nonce } : {})}
-      // eslint-disable-next-line react/no-danger
-      dangerouslySetInnerHTML={{
-        __html: `
-            window.__reverb = {};
-            window.__reverb.__reverbLoadedPromise = new Promise((resolve, reject) => {
-              window.__reverb.__resolveReverbLoaded = resolve;
-              window.__reverb.__rejectReverbLoaded = reject;
-            });
-            window.__reverb.__reverbTimeout = setTimeout(() => {
-              window.__reverb.__rejectReverbLoaded();
-            }, 5000);
-            const reverbScript = document.createElement('script');
-            reverbScript.setAttribute('src','${envConfig?.SIMORGH_REVERB_SOURCE ?? ''}');
-            document.head.appendChild(reverbScript);
-            `,
-      }}
-    />
-  );
+  return addInlineScript({
+    script: reverbScaffold,
+    parameters: [envConfig, isOperaProxy],
+    nonce,
+    setInnerHTML: true,
+  });
 };
 
 export default ReverbTemplate;

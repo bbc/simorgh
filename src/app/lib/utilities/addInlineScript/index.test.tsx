@@ -1,4 +1,5 @@
 /* eslint-disable no-console */
+import { JSX } from 'react';
 import addInlineScript from '.';
 
 describe('addInlineScript', () => {
@@ -89,6 +90,17 @@ describe('addInlineScript', () => {
       return callback();
     })(${callback.toString()})`}
       </script>,
+    );
+  });
+
+  it('sets the script contents with dangerouslySetInnerHTML', () => {
+    const script = 'window.example = true;';
+
+    const element = addInlineScript({ script, setInnerHTML: true });
+
+    // eslint-disable-next-line no-underscore-dangle
+    expect((element as JSX.Element).props.dangerouslySetInnerHTML.__html).toBe(
+      script,
     );
   });
 
