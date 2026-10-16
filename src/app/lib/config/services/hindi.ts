@@ -170,7 +170,7 @@ export const service: DefaultServiceConfig = {
         guestDescription:
           'माई न्यूज़ में ख़बरें सेव करने के लिए साइन इन करें. उन्हें अपनी सुविधा से पढ़ें.',
         noArticles: 'आपने अभी तक कोई आर्टिकल सेव नहीं किया है',
-        errorText:
+        savedArticlesErrorText:
           'लगता है यह कंटेंट लोड नहीं हो रहा है. प्लीज़ बाद में कोशिश करें.',
         loading: 'लोडिंग',
         noJsDescription:

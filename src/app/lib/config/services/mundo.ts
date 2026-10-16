@@ -198,7 +198,7 @@ export const service: DefaultServiceConfig = {
         guestDescription:
           'Inicia sesión para seguir los temas que te interesan y guardar artículos para más tarde.',
         noArticles: 'Aún no has guardado ningún artículo',
-        errorText:
+        savedArticlesErrorText:
           'Parece que este contenido no se está cargando. Por favor, inténtalo de nuevo más tarde.',
         loading: 'Cargando',
         noJsDescription:

@@ -117,8 +117,8 @@ export const service: DefaultServiceConfig = {
         guestDescription:
           'Sign in to save stories to My News, and read them at your convenience.',
         noArticles: "You haven't saved any articles yet",
-        errorText:
-          'It looks like this content is not loading. Please try again later.',
+        savedArticlesErrorText:
+          "We're having trouble loading your saved articles",
         loading: 'Loading',
         noJsDescription:
           'Please enable JavaScript or use a different browser to view this content.',

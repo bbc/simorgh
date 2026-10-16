@@ -14,11 +14,14 @@ import Text from '#app/components/Text';
 import styles from './styles';
 
 const ITEMS_PER_PAGE = 24;
-const FOLLOWED_TOPICS_ITEMS_PER_PAGE = 100; // Load all topics at once for now
+// Topics are fetched and paginated server-side in batches of 100.
+const FOLLOWED_TOPICS_ITEMS_PER_PAGE = 100;
 const FOLLOWED_TOPICS_VISIBLE_LIMIT = 9;
 
 interface MyNewsPageContentProps {
   page?: string;
+  showSavedArticles: boolean;
+  showFollowedTopics: boolean;
 }
 
 interface SectionSpinnerProps {
@@ -33,9 +36,14 @@ const SectionSpinner = ({ label, testId }: SectionSpinnerProps) => (
   </div>
 );
 
-const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
+const MyNewsPageContent = ({
+  page,
+  showSavedArticles,
+  showFollowedTopics,
+}: MyNewsPageContentProps) => {
   const { translations, lang } = use(ServiceContext);
   const [areAllTopicsVisible, setAreAllTopicsVisible] = useState(false);
+  const [topicsPage, setTopicsPage] = useState(1);
   const wasTopicsExpandedRef = useRef(areAllTopicsVisible);
 
   useEffect(() => {
@@ -43,12 +51,19 @@ const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
     wasTopicsExpandedRef.current = areAllTopicsVisible;
 
     if (wasExpanded && !areAllTopicsVisible) {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      const hasReducedMotion = window.matchMedia(
+        '(prefers-reduced-motion: reduce)',
+      ).matches;
+      window.scrollTo({
+        top: 0,
+        behavior: hasReducedMotion ? 'auto' : 'smooth',
+      });
     }
   }, [areAllTopicsVisible]);
 
   const activePage = Math.max(1, Number(page) || 1);
   const startIndex = (activePage - 1) * ITEMS_PER_PAGE;
+  const topicsStartIndex = (topicsPage - 1) * FOLLOWED_TOPICS_ITEMS_PER_PAGE;
 
   const {
     savedArticles,
@@ -60,21 +75,21 @@ const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
     startIndex,
   });
 
-  const { isLoading: topicsLoading, error: topicsError } = useUASFollowedTopics(
-    {
-      itemsPerPage: FOLLOWED_TOPICS_ITEMS_PER_PAGE,
-    },
-  );
-
-  // TEMP: hardcoded fictitious topics to test the ~150 followed topics behaviour, remove before merging
-  const fictitiousFollowedTopics = Array.from({ length: 150 }, (_, index) => ({
-    id: `fictitious-topic-${index}`,
-    title: `Fictitious Topic ${index + 1}`,
-  }));
-  const followedTopics = fictitiousFollowedTopics;
-  const topicsTotal = fictitiousFollowedTopics.length;
+  const {
+    followedTopics,
+    total: topicsTotal,
+    isLoading: topicsLoading,
+    error: topicsError,
+  } = useUASFollowedTopics({
+    itemsPerPage: FOLLOWED_TOPICS_ITEMS_PER_PAGE,
+    startIndex: topicsStartIndex,
+  });
 
   const pageCount = Math.max(1, Math.ceil(total / ITEMS_PER_PAGE));
+  const topicsPageCount = Math.max(
+    1,
+    Math.ceil(topicsTotal / FOLLOWED_TOPICS_ITEMS_PER_PAGE),
+  );
 
   const {
     pageXOfY,
@@ -93,7 +108,7 @@ const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
   const {
     title,
     description,
-    errorText,
+    savedArticlesErrorText,
     noArticles,
     loading: loadingText,
     followedTopicsTitle,
@@ -106,6 +121,9 @@ const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
   const translatedPage = pageXOfY
     .replace('{x}', String(activePage))
     .replace('{y}', String(pageCount));
+  const translatedTopicsPage = pageXOfY
+    .replace('{x}', String(topicsPage))
+    .replace('{y}', String(topicsPageCount));
 
   const metadataTitle = activePage >= 2 ? `${title}, ${translatedPage}` : title;
 
@@ -122,6 +140,11 @@ const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
       topicId: topic.id,
       topicName: topic.title,
     }));
+
+  const goToTopicsPage = (nextPageNumber: number) => {
+    setTopicsPage(nextPageNumber);
+    setAreAllTopicsVisible(false);
+  };
 
   const renderFollowedTopicsSection = () => (
     <section css={styles.section}>
@@ -160,6 +183,30 @@ const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
               />
             </button>
           )}
+          {topicsPageCount > 1 && (
+            <nav
+              aria-label={translatedTopicsPage}
+              css={styles.topicsPaginationNav}
+            >
+              <button
+                type="button"
+                css={styles.topicsPaginationButton}
+                onClick={() => goToTopicsPage(topicsPage - 1)}
+                disabled={topicsPage <= 1}
+              >
+                {previousPage}
+              </button>
+              <Text size="brevier">{translatedTopicsPage}</Text>
+              <button
+                type="button"
+                css={styles.topicsPaginationButton}
+                onClick={() => goToTopicsPage(topicsPage + 1)}
+                disabled={topicsPage >= topicsPageCount}
+              >
+                {nextPage}
+              </button>
+            </nav>
+          )}
         </>
       )}
       {!topicsLoading && !topicsError && !hasTopics && (
@@ -183,7 +230,7 @@ const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
       )}
       {!articlesLoading && articlesError && (
         <Text size="doublePica" fontVariant="sansBold">
-          {errorText}
+          {savedArticlesErrorText}
         </Text>
       )}
       {!articlesLoading && !articlesError && hasArticles && (
@@ -227,8 +274,8 @@ const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
       <Heading level={1} id="content" tabIndex={-1} css={styles.heading}>
         {title}
       </Heading>
-      {renderFollowedTopicsSection()}
-      {renderSavedArticlesSection()}
+      {showFollowedTopics && renderFollowedTopicsSection()}
+      {showSavedArticles && renderSavedArticlesSection()}
     </>
   );
 };

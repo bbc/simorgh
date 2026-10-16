@@ -91,7 +91,7 @@ export interface Translations {
     description: string;
     guestDescription: string;
     noArticles: string;
-    errorText: string;
+    savedArticlesErrorText: string;
     loading: string;
     noJsDescription: string;
     followedTopicsTitle: string;

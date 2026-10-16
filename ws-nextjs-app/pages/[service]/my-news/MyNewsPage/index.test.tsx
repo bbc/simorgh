@@ -37,7 +37,10 @@ const mockUseFollowedTopics = useUASFollowedTopics as jest.MockedFunction<
 
 const renderOptions = {
   service: 'hindi' as const,
-  toggles: { uasPersonalization: { enabled: true, value: 'hindi' } },
+  toggles: {
+    uasPersonalization: { enabled: true, value: 'hindi' },
+    topicUasPersonalization: { enabled: true, value: 'hindi' },
+  },
   idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: true },
 };
 
@@ -70,6 +73,7 @@ const mockFollowedTopics = [
 describe('MyNewsPage', () => {
   beforeEach(() => {
     jest.clearAllMocks();
+    window.scrollTo = jest.fn();
     mockUseRecentActivity.mockReturnValue({
       savedArticles: [],
       total: 0,
@@ -152,7 +156,7 @@ describe('MyNewsPage', () => {
 
     await waitFor(() => {
       expect(
-        screen.getByText(myNewsTranslations.errorText),
+        screen.getByText(myNewsTranslations.savedArticlesErrorText),
       ).toBeInTheDocument();
     });
   });
@@ -308,7 +312,7 @@ describe('MyNewsPage', () => {
     });
   });
 
-  it('should show only the failed section error when followed topics fails and saved articles succeed', async () => {
+  it('should show only the failed Topics section error when followed topics fails and saved articles succeed', async () => {
     mockUseRecentActivity.mockReturnValue({
       savedArticles: mockSavedArticles,
       total: 2,
@@ -333,12 +337,12 @@ describe('MyNewsPage', () => {
       expect(screen.getByText('Saved Article One')).toBeInTheDocument();
       expect(screen.getByText('Saved Article Two')).toBeInTheDocument();
       expect(
-        screen.queryByText(myNewsTranslations.errorText),
+        screen.queryByText(myNewsTranslations.savedArticlesErrorText),
       ).not.toBeInTheDocument();
     });
   });
 
-  it('should show only the failed section error when saved articles fails and followed topics succeed', async () => {
+  it('should show only the failed Articles section error when saved articles fails and followed topics succeed', async () => {
     mockUseRecentActivity.mockReturnValue({
       savedArticles: [],
       total: 0,
@@ -358,7 +362,7 @@ describe('MyNewsPage', () => {
 
     await waitFor(() => {
       expect(
-        screen.getByText(myNewsTranslations.errorText),
+        screen.getByText(myNewsTranslations.savedArticlesErrorText),
       ).toBeInTheDocument();
       expect(
         screen.getByRole('link', { name: mockFollowedTopics[0].title }),
@@ -389,7 +393,7 @@ describe('MyNewsPage', () => {
 
     await waitFor(() => {
       expect(
-        screen.getByText(myNewsTranslations.errorText),
+        screen.getByText(myNewsTranslations.savedArticlesErrorText),
       ).toBeInTheDocument();
       expect(
         screen.getByText(myNewsTranslations.followedTopicsErrorText),
@@ -481,5 +485,111 @@ describe('MyNewsPage', () => {
     expect(
       screen.getByRole('button', { name: myNewsTranslations.seeMoreTopics }),
     ).toHaveAttribute('aria-expanded', 'false');
+    expect(window.scrollTo).toHaveBeenCalledWith({
+      top: 0,
+      behavior: 'smooth',
+    });
+  });
+
+  it('should scroll to top without animation when reduced motion is preferred', async () => {
+    Object.defineProperty(window, 'matchMedia', {
+      value: jest.fn().mockImplementation(query => ({
+        matches: true,
+        media: query,
+      })),
+      writable: true,
+    });
+
+    const manyFollowedTopics = Array.from({ length: 13 }, (_, i) => ({
+      id: `topic-${i}`,
+      title: `Topic ${i}`,
+      service: 'hindi',
+    }));
+
+    mockUseFollowedTopics.mockReturnValue({
+      followedTopics: manyFollowedTopics,
+      total: manyFollowedTopics.length,
+      isLoading: false,
+      error: null,
+    });
+
+    await act(async () => {
+      render(<MyNewsPage />, renderOptions);
+    });
+
+    await act(async () => {
+      screen
+        .getByRole('button', { name: myNewsTranslations.seeMoreTopics })
+        .click();
+    });
+
+    await act(async () => {
+      screen
+        .getByRole('button', { name: myNewsTranslations.seeLessTopics })
+        .click();
+    });
+
+    expect(window.scrollTo).toHaveBeenCalledWith({
+      top: 0,
+      behavior: 'auto',
+    });
+  });
+
+  it('should only render the saved articles section when topic personalization is disabled', async () => {
+    mockUseFollowedTopics.mockReturnValue({
+      followedTopics: mockFollowedTopics,
+      total: mockFollowedTopics.length,
+      isLoading: false,
+      error: null,
+    });
+
+    await act(async () => {
+      render(<MyNewsPage />, {
+        ...renderOptions,
+        toggles: {
+          uasPersonalization: { enabled: true, value: 'hindi' },
+          topicUasPersonalization: { enabled: false, value: 'hindi' },
+        },
+      });
+    });
+
+    await waitFor(() => {
+      expect(
+        screen.getByText(myNewsTranslations.description),
+      ).toBeInTheDocument();
+    });
+
+    expect(
+      screen.queryByRole('link', { name: mockFollowedTopics[0].title }),
+    ).not.toBeInTheDocument();
+  });
+
+  it('should only render the followed topics section when article personalization is disabled', async () => {
+    mockUseFollowedTopics.mockReturnValue({
+      followedTopics: mockFollowedTopics,
+      total: mockFollowedTopics.length,
+      isLoading: false,
+      error: null,
+    });
+
+    await act(async () => {
+      render(<MyNewsPage />, {
+        ...renderOptions,
+        toggles: {
+          uasPersonalization: { enabled: false, value: 'hindi' },
+          topicUasPersonalization: { enabled: true, value: 'hindi' },
+        },
+      });
+    });
+
+    await waitFor(() => {
+      expect(
+        screen.getByRole('link', { name: mockFollowedTopics[0].title }),
+      ).toBeInTheDocument();
+    });
+
+    expect(
+      screen.queryByText(myNewsTranslations.description),
+    ).not.toBeInTheDocument();
   });
 });

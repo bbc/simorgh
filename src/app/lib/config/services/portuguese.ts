@@ -201,7 +201,7 @@ export const service: DefaultServiceConfig = {
         guestDescription:
           'Faça login para salvar matérias e ler quando quiser.',
         noArticles: 'Você ainda não salvou nenhuma matéria',
-        errorText:
+        savedArticlesErrorText:
           'Parece que este conteúdo não está carregando. Tente novamente mais tarde.',
         loading: 'Carregando',
         noJsDescription:
