@@ -27,6 +27,16 @@ describe('Navigation', () => {
     { title: 'About', url: '/about' },
   ];
 
+  it('does not enable sticky navigation on AMP even when its toggle is enabled', () => {
+    const { container } = render(<Navigation navItems={navItems} />, {
+      service: 'mundo',
+      isAmp: true,
+      toggles: { stickyNavigation: { enabled: true } },
+    });
+
+    expect(container.querySelector('[data-e2e="sticky-nav"]')).toBeNull();
+  });
+
   it('should correctly render canonical navigation', () => {
     const { container } = render(<Navigation navItems={navItems} />, {
       bbcOrigin: 'https://www.test.bbc.co.uk',

@@ -1,4 +1,4 @@
-import React, { useState, use, useEffect, useRef } from 'react';
+import React, { useState, use, useEffect, useRef, useCallback } from 'react';
 import Navigation from '#psammead/psammead-navigation/src';
 import { ScrollableNavigation } from '#psammead/psammead-navigation/src/ScrollableNavigation';
 import {
@@ -12,7 +12,25 @@ import TopBarOJs from '#app/components/TopBarOJs';
 import useToggle from '#app/hooks/useToggle';
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import { Direction } from '#app/models/types/global';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { SERVICES_WITH_STICKY_NAV } from './config';
 import styles from './index.styles';
+
+const STICKY_NAV_CLEARANCE = 65;
+const STICKY_TRANSITION_DURATION = 400;
+const STICKY_MIN_WIDTH_QUERY = '(min-width: 300px)';
+const STICKY_MAX_WIDTH_QUERY = '(max-width: 1007px)';
+const STICKY_REDUCED_MOTION_QUERY = '(prefers-reduced-motion: reduce)';
+const STICKY_LANDSCAPE_QUERY =
+  '(orientation: landscape) and (max-height: 500px)';
+// Native focus-driven corrective scrolling (e.g. the browser nudging the
+// viewport to reveal a newly Tab-focused element) can span more than one
+// animation frame and may fire several 'scroll' events before it settles.
+// Ignore upward scroll direction for sticky nav activation for this long
+// after a forward Tab press so none of those events are mistaken for the
+// user intentionally scrolling up.
+const FORWARD_TAB_SCROLL_SUPPRESSION_MS = 400;
+const INITIAL_STICKY_STATE = { fixed: false, visible: false, height: 0 };
 
 type CanonicalNavigationContainerProps = {
   dir: Direction;
@@ -33,18 +51,222 @@ const CanonicalNavigationContainer: React.FC<
   dropdownListItems,
   blocks,
 }) => {
-  const { isLite } = use(RequestContext);
+  const { isLite, env, service, pageType } = use(RequestContext);
   const { enabled: topBarOJsEnabled } = useToggle('topBarOJs');
+  const { enabled: stickyNavigationEnabled } = useToggle('stickyNavigation');
+  const [isStickyViewport, setIsStickyViewport] = useState(false);
+  const [isWithinStickyMaxWidth, setIsWithinStickyMaxWidth] = useState(false);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+  const [isStickyLandscapeConstrained, setIsStickyLandscapeConstrained] =
+    useState(false);
+  const enableStickyNavigation =
+    stickyNavigationEnabled &&
+    env !== 'live' &&
+    SERVICES_WITH_STICKY_NAV.includes(service) &&
+    isStickyViewport &&
+    isWithinStickyMaxWidth &&
+    !prefersReducedMotion &&
+    !isStickyLandscapeConstrained &&
+    !isLite;
   const [isOpen, setIsOpen] = useState(false);
+  const [stickyState, setStickyState] = useState(INITIAL_STICKY_STATE);
+  const [isStickyPositioned, setIsStickyPositioned] = useState(false);
+  const [isStickyVisible, setIsStickyVisible] = useState(false);
+  const [isStickyPrepared, setIsStickyPrepared] = useState(false);
 
+  const navSlotRef = useRef<HTMLDivElement>(null);
+  const navRef = useRef<HTMLDivElement>(null);
   const dropDownNavRef = useRef<HTMLDivElement>(null);
   const bottomScrollableNavRef = useRef<HTMLDivElement>(null);
+  // Tabbing forward can make the browser nudge the viewport upward to reveal
+  // the newly focused element, which otherwise looks identical to a
+  // deliberate upward scroll. Holds the timestamp until which that should be
+  // ignored for sticky nav activation purposes.
+  const suppressForwardTabScrollUntilRef = useRef(0);
+
+  const handleStickyViewportChange = useCallback(
+    ({ matches }: MediaQueryList | MediaQueryListEvent) => {
+      setIsStickyViewport(matches);
+      if (!matches) setIsOpen(false);
+    },
+    [],
+  );
+  useMediaQuery(STICKY_MIN_WIDTH_QUERY, handleStickyViewportChange);
+
+  const handleStickyMaxWidthChange = useCallback(
+    ({ matches }: MediaQueryList | MediaQueryListEvent) => {
+      setIsWithinStickyMaxWidth(matches);
+      if (!matches) setIsOpen(false);
+    },
+    [],
+  );
+  useMediaQuery(STICKY_MAX_WIDTH_QUERY, handleStickyMaxWidthChange);
+
+  const handleReducedMotionChange = useCallback(
+    ({ matches }: MediaQueryList | MediaQueryListEvent) => {
+      setPrefersReducedMotion(matches);
+      if (matches) setIsOpen(false);
+    },
+    [],
+  );
+  useMediaQuery(STICKY_REDUCED_MOTION_QUERY, handleReducedMotionChange);
+
+  const handleStickyLandscapeChange = useCallback(
+    ({ matches }: MediaQueryList | MediaQueryListEvent) => {
+      setIsStickyLandscapeConstrained(matches);
+      if (matches) setIsOpen(false);
+    },
+    [],
+  );
+  useMediaQuery(STICKY_LANDSCAPE_QUERY, handleStickyLandscapeChange);
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key !== 'Tab' || event.shiftKey) return;
+      suppressForwardTabScrollUntilRef.current =
+        Date.now() + FORWARD_TAB_SCROLL_SUPPRESSION_MS;
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
+  useEffect(() => {
+    if (!isStickyPositioned) setIsStickyPrepared(false);
+  }, [isStickyPositioned]);
+
+  useEffect(() => {
+    if (!enableStickyNavigation) {
+      setIsStickyPositioned(false);
+      setIsStickyVisible(false);
+      return undefined;
+    }
+
+    if (!stickyState.fixed) {
+      setIsStickyVisible(false);
+      const timeout = window.setTimeout(
+        () => setIsStickyPositioned(false),
+        STICKY_TRANSITION_DURATION,
+      );
+      return () => window.clearTimeout(timeout);
+    }
+
+    setIsStickyPositioned(true);
+    if (!stickyState.visible) {
+      setIsStickyPrepared(true);
+      setIsStickyVisible(false);
+      return undefined;
+    }
+
+    const animationFrames = { first: 0, second: 0 };
+    // Paint the fixed, off-screen position before starting the slide-in.
+    animationFrames.first = window.requestAnimationFrame(() => {
+      setIsStickyPrepared(true);
+      animationFrames.second = window.requestAnimationFrame(() => {
+        setIsStickyVisible(true);
+      });
+    });
+
+    return () => {
+      window.cancelAnimationFrame(animationFrames.first);
+      window.cancelAnimationFrame(animationFrames.second);
+    };
+  }, [enableStickyNavigation, stickyState.fixed, stickyState.visible]);
+
+  useEffect(() => {
+    setStickyState(INITIAL_STICKY_STATE);
+    if (!enableStickyNavigation) return undefined;
+
+    const scrollState: {
+      lastScrollY: number;
+      fixed: boolean;
+      animationFrame: number | null;
+    } = {
+      lastScrollY: window.scrollY,
+      fixed: false,
+      animationFrame: null,
+    };
+
+    const updateStickyNavigation = () => {
+      scrollState.animationFrame = null;
+      const slot = navSlotRef.current;
+      const nav = navRef.current;
+      if (!slot || !nav) return;
+
+      const { scrollY } = window;
+      const scrollingUp =
+        scrollY < scrollState.lastScrollY &&
+        Date.now() >= suppressForwardTabScrollUntilRef.current;
+      const scrollingDown = scrollY > scrollState.lastScrollY;
+      scrollState.lastScrollY = scrollY;
+
+      const articleStart =
+        pageType === ARTICLE_PAGE
+          ? document.querySelector('main [data-sticky-nav-anchor]')
+          : null;
+      const reachedActivationPoint =
+        pageType === ARTICLE_PAGE
+          ? articleStart !== null &&
+            articleStart.getBoundingClientRect().top <= 0
+          : slot.getBoundingClientRect().bottom < -STICKY_NAV_CLEARANCE;
+      const fixed =
+        reachedActivationPoint && (scrollingUp || scrollState.fixed);
+      const height =
+        nav.getBoundingClientRect().height ||
+        slot.getBoundingClientRect().height;
+
+      if (scrollState.fixed && (!fixed || scrollingDown)) setIsOpen(false);
+      scrollState.fixed = fixed;
+
+      setStickyState(previous => {
+        const visible =
+          fixed && (scrollingUp || (!scrollingDown && previous.visible));
+        if (
+          previous.fixed === fixed &&
+          previous.visible === visible &&
+          previous.height === height
+        ) {
+          return previous;
+        }
+        return { fixed, visible, height };
+      });
+    };
+
+    const handleScroll = () => {
+      if (scrollState.animationFrame === null) {
+        scrollState.animationFrame = window.requestAnimationFrame(
+          updateStickyNavigation,
+        );
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('resize', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleScroll);
+      if (scrollState.animationFrame !== null) {
+        window.cancelAnimationFrame(scrollState.animationFrame);
+      }
+    };
+  }, [enableStickyNavigation, pageType]);
 
   useMediaQuery(`(max-width: ${GROUP_2_MAX_WIDTH_BP}rem)`, event => {
     if (!event.matches) {
       setIsOpen(false);
     }
   });
+
+  useEffect(() => {
+    const { documentElement } = document;
+    if (isStickyVisible) {
+      documentElement.style.scrollPaddingTop = `${stickyState.height}px`;
+    } else {
+      documentElement.style.scrollPaddingTop = '';
+    }
+    return () => {
+      documentElement.style.scrollPaddingTop = '';
+    };
+  }, [isStickyVisible, stickyState.height]);
 
   useEffect(() => {
     const handleOnBlur = (event: Event) => {
@@ -87,8 +309,9 @@ const CanonicalNavigationContainer: React.FC<
     };
   }, []);
 
-  return (
-    <Navigation dir={dir} isOpen={isOpen}>
+  const topBarOJs = topBarOJsEnabled && <TopBarOJs blocks={blocks ?? []} />;
+  const navigation = (
+    <Navigation dir={dir} isOpen={isOpen} ref={navRef}>
       <div css={styles.navStack}>
         <div css={{ position: 'relative', width: '100%' }}>
           <div css={styles.topRow}>
@@ -126,8 +349,49 @@ const CanonicalNavigationContainer: React.FC<
         </div>
       </div>
       <div css={styles.bottomDivider} />
-      {topBarOJsEnabled && <TopBarOJs blocks={blocks ?? []} />}
+      {!enableStickyNavigation && topBarOJs}
     </Navigation>
+  );
+
+  if (!enableStickyNavigation) return navigation;
+
+  const hidden = isStickyPositioned && !isStickyVisible;
+
+  return (
+    <>
+      <div
+        ref={navSlotRef}
+        style={isStickyPositioned ? { height: stickyState.height } : undefined}
+      >
+        <div
+          data-e2e="sticky-nav"
+          data-sticky-visible={isStickyVisible}
+          hidden={isStickyPositioned && !isStickyPrepared}
+          css={[
+            isStickyPositioned && styles.stickyContainer,
+            isStickyVisible && styles.stickyVisible,
+          ]}
+          onTransitionEnd={event => {
+            if (
+              event.target === event.currentTarget &&
+              event.propertyName === 'transform' &&
+              !stickyState.fixed
+            ) {
+              setIsStickyPositioned(false);
+            }
+          }}
+          aria-hidden={hidden || undefined}
+          inert={hidden || undefined}
+        >
+          {navigation}
+        </div>
+      </div>
+      {topBarOJs && (
+        <Navigation dir={dir} role="presentation">
+          {topBarOJs}
+        </Navigation>
+      )}
+    </>
   );
 };
 
