@@ -1,14 +1,28 @@
 /* eslint-disable no-underscore-dangle */
-import Promise from 'core-js-pure/actual/promise';
+import PromisePolyfill from 'promise-polyfill';
+import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import { EnvConfig, getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import addInlineScript from '#app/lib/utilities/addInlineScript';
 
 // eslint-disable-next-line func-names
-const reverbScaffold = function (envConfig: EnvConfig) {
+const reverbScaffold = function (
+  envConfig: EnvConfig,
+  isOperaProxyFn: () => boolean,
+) {
+  if (isOperaProxyFn()) {
+    PromisePolyfill._immediateFn = function (fn) {
+      // @ts-expect-error: Overriding the immediate function for Opera proxy environments
+      fn(); // Execute synchronously for environments without solid timer loops
+    };
+  }
+
+  // eslint-disable-next-line vars-on-top, no-var
+  var CompartiblePromise = isOperaProxyFn() ? PromisePolyfill : Promise;
+
   window.__reverb = {} as Window['__reverb'];
 
   // eslint-disable-next-line func-names
-  window.__reverb.__reverbLoadedPromise = new Promise(function (
+  window.__reverb.__reverbLoadedPromise = new CompartiblePromise(function (
     resolve,
     reject,
   ) {
@@ -38,7 +52,7 @@ const ReverbTemplate = ({ nonce }: { nonce?: string | null }) => {
 
   return addInlineScript({
     script: reverbScaffold,
-    parameters: [envConfig],
+    parameters: [envConfig, isOperaProxy],
     nonce,
     setInnerHTML: true,
   });

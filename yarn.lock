@@ -5760,6 +5760,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/promise-polyfill@npm:6.0.6":
+  version: 6.0.6
+  resolution: "@types/promise-polyfill@npm:6.0.6"
+  checksum: 10/f1a7a296eeff3fe708853321aa82768b58eeda9abc5d277e6328227fc78316f093b56ec1a082d72a276ef2f2473a4269e331468aeb397ff08d32b3d5b6e4c966
+  languageName: node
+  linkType: hard
+
 "@types/ramda@npm:0.31.1":
   version: 0.31.1
   resolution: "@types/ramda@npm:0.31.1"
@@ -8294,13 +8301,6 @@ __metadata:
   dependencies:
     browserslist: "npm:^4.28.1"
   checksum: 10/83c326dcfef5e174fd3f8f33c892c66e06d567ce27f323a1197a6c280c0178fe18d3e9c5fb95b00c18b98d6c53fba5c646def5fedaa77310a4297d16dfbe2029
-  languageName: node
-  linkType: hard
-
-"core-js-pure@npm:3.50.0":
-  version: 3.50.0
-  resolution: "core-js-pure@npm:3.50.0"
-  checksum: 10/4009d549c955dbd4274b58a6c36c7afce8a8f468a631bacb06708873bf503b1c91cbf5baa88c8605c2fff2ccc481fb337e9358c16c029c701d0fffa074e1706e
   languageName: node
   linkType: hard
 
@@ -14806,6 +14806,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"promise-polyfill@npm:8.3.0":
+  version: 8.3.0
+  resolution: "promise-polyfill@npm:8.3.0"
+  checksum: 10/f735f59e464174f720fec9c41c5029ec1014e62e05d61e39d8d2290a0bc4dd7c36a0782d3202f1775d09d0b33a47fef289db38c437534769b187da22e03bfa23
+  languageName: node
+  linkType: hard
+
 "promise-retry@npm:^2.0.1":
   version: 2.0.1
   resolution: "promise-retry@npm:2.0.1"
@@ -16076,8 +16083,8 @@ __metadata:
     "@swc/core": "npm:1.15.24"
     "@testing-library/jest-dom": "npm:6.9.1"
     "@testing-library/react": "npm:16.3.1"
+    "@types/promise-polyfill": "npm:6.0.6"
     autoprefixer: "npm:10.5.4"
-    core-js-pure: "npm:3.50.0"
     cypress: "npm:15.16.0"
     cypress-axe: "npm:1.7.0"
     cypress-multi-reporters: "npm:2.0.5"
@@ -16089,6 +16096,7 @@ __metadata:
     next-test-api-route-handler: "npm:5.0.5"
     npm-run-all2: "npm:8.0.4"
     postcss: "npm:8.5.24"
+    promise-polyfill: "npm:8.3.0"
     sharp: "npm:0.35.5"
     swc-loader: "npm:0.2.7"
     temporal-polyfill: "npm:0.3.0"
