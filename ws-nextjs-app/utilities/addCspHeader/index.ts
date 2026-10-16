@@ -3,7 +3,9 @@ import { cspDirectives } from '#utilities/cspHeader/directives';
 import getPathExtension from '#app/utilities/getPathExtension';
 import isLiveEnv from '#lib/utilities/isLive';
 import { Services, Toggles } from '#app/models/types/global';
-import SERVICES from '#app/lib/config/services';
+import getCspTier from './getCspTier';
+import createNonce from './createNonce';
+import { setRequestNonce } from './requestNonce';
 
 const LOCALHOST_DOMAINS = ['localhost', '127.0.0.1'];
 
@@ -20,30 +22,21 @@ const directiveToString = (directives: Record<string, string | string[]>) => {
   return cspValue;
 };
 
-const isRelaxedCspEnabled = (
-  countryList: string | number | undefined,
-  country: string,
-): boolean => {
-  if (!countryList || countryList.toString().trim() === '') {
-    return true;
-  }
-
-  const omittedCountriesList = countryList
-    .toString()
-    .split(',')
-    .map(s => s.trim().toLowerCase())
-    .filter(Boolean);
-
-  return !omittedCountriesList.includes(country.toLowerCase());
-};
-
 type AddCspHeaderProps = {
   ctx: NextPageContext;
   service: Services;
   toggles: Toggles;
+  country?: string | null;
+  showAdsBasedOnLocation?: boolean;
 };
 
-const addCspHeader = ({ ctx, service, toggles }: AddCspHeaderProps) => {
+const addCspHeader = ({
+  ctx,
+  service,
+  toggles,
+  country,
+  showAdsBasedOnLocation = false,
+}: AddCspHeaderProps) => {
   const hostname = ctx.req?.headers.host || '';
 
   const isLocalhost = LOCALHOST_DOMAINS.some(domain =>
@@ -52,39 +45,33 @@ const addCspHeader = ({ ctx, service, toggles }: AddCspHeaderProps) => {
 
   const PRODUCTION_ONLY = !isLocalhost && process.env.NODE_ENV === 'production';
 
-  if (!PRODUCTION_ONLY) return;
+  if (!PRODUCTION_ONLY) return { nonce: null, cspHeader: null };
 
   const reqUrl = ctx.req?.url || '';
-  const { isAmp } = getPathExtension(reqUrl);
+  const { isAmp, isLite } = getPathExtension(reqUrl);
   const isLive = isLiveEnv();
 
-  let hasAdsScripts = false;
-  let countryList = '';
+  const resolvedCountry = country?.toLowerCase() || '';
 
-  if (SERVICES.includes(service)) {
-    // @ts-expect-error - Toggles type issue
-    const adsNonceToggle = toggles?.adsNonce || { enabled: false, value: '' };
-    hasAdsScripts = adsNonceToggle.enabled;
-    countryList = adsNonceToggle.value;
-  }
+  const cspTier = getCspTier({
+    service,
+    country: resolvedCountry,
+    toggles,
+    isAmp,
+    isLite,
+    showAdsBasedOnLocation,
+  });
 
-  const countryHeader =
-    ctx?.req?.headers?.['x-country'] ||
-    ctx?.req?.headers?.['x-bbc-edge-country'] ||
-    '';
-  const country = Array.isArray(countryHeader)
-    ? countryHeader[0]
-    : countryHeader;
+  const nonce = cspTier === 'nonce' ? createNonce() : null;
 
-  const shouldServeRelaxedCsp =
-    hasAdsScripts &&
-    isRelaxedCspEnabled(countryList, (country as string) || '');
+  setRequestNonce(ctx.req, nonce);
 
   const { directives } = cspDirectives({
     isAmp,
     isLive,
-    shouldServeRelaxedCsp,
-    country,
+    nonce,
+    shouldServeRelaxedCsp: cspTier === 'relaxed',
+    country: resolvedCountry,
   });
 
   const contentSecurityPolicyHeaderValue = directiveToString({
@@ -106,10 +93,15 @@ const addCspHeader = ({ ctx, service, toggles }: AddCspHeaderProps) => {
     }),
   );
 
-  ctx.res?.setHeader(
-    'Content-Security-Policy',
-    contentSecurityPolicyHeaderValue,
-  );
+  // The nonce tier ships its policy as a meta tag (httpEquiv="Content-Security-Policy) instead
+  if (!nonce) {
+    ctx.res?.setHeader(
+      'Content-Security-Policy',
+      contentSecurityPolicyHeaderValue,
+    );
+  }
+
+  return { nonce, cspHeader: contentSecurityPolicyHeaderValue };
 };
 
 export default addCspHeader;
