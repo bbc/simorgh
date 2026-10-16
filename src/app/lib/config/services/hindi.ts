@@ -170,11 +170,17 @@ export const service: DefaultServiceConfig = {
         guestDescription:
           'माई न्यूज़ में ख़बरें सेव करने के लिए साइन इन करें. उन्हें अपनी सुविधा से पढ़ें.',
         noArticles: 'आपने अभी तक कोई आर्टिकल सेव नहीं किया है',
-        errorText:
+        savedArticlesErrorText:
           'लगता है यह कंटेंट लोड नहीं हो रहा है. प्लीज़ बाद में कोशिश करें.',
         loading: 'लोडिंग',
         noJsDescription:
           'इस सामग्री को देखने के लिए जावास्क्रिप्ट चालू करें या किसी दूसरे ब्राउज़र का इस्तेमाल करें।',
+        followedTopicsTitle: 'फॉलो किए गए टॉपिक',
+        followedTopicsErrorText:
+          'आपके फ़ॉलो किए गए टॉपिक लोड करने में दिक्कत हो रही है',
+        noFollowedTopics: 'आपने अभी तक किसी टॉपिक को फ़ॉलो नहीं किया है',
+        seeMoreTopics: 'और देखें',
+        seeLessTopics: 'कम देखें',
       },
       actionTooltip: {
         success: {

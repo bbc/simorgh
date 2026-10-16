@@ -325,7 +325,7 @@ describe('getFollowedTopics', () => {
     expect(result.followedTopics).toHaveLength(0);
   });
 
-  it('should report total as the filtered count, not the raw UAS total', async () => {
+  it('should report the raw UAS total for pagination, not the filtered count', async () => {
     const responseWithMixedServices = {
       total: 3,
       pagination: { startIndex: 0, itemsPerPage: 10 },
@@ -358,7 +358,41 @@ describe('getFollowedTopics', () => {
     });
 
     expect(result.followedTopics).toHaveLength(2);
-    expect(result.total).toBe(2);
+    expect(result.total).toBe(3);
+  });
+
+  it('should request a single page per call and not fetch further pages', async () => {
+    const onlyPageItems = Array.from({ length: 100 }, (_, index) => ({
+      activityType: 'follows',
+      resourceId: `topic${index}`,
+      resourceType: 'topic',
+      resourceDomain: 'world-service-news',
+      created: '2026-02-15T18:30:05Z',
+      action: 'followed',
+      metaData: {
+        service: 'hindi',
+        topicId: `topic${index}`,
+        title: `Topic Title ${index}`,
+      },
+      '@id': `urn:bbc:world-service-news:topic:topic${index}`,
+    })) as UasFollowItem[];
+
+    mockUasApiRequest.mockResolvedValueOnce({
+      json: jest.fn().mockResolvedValueOnce({
+        total: 150,
+        pagination: { startIndex: 0, itemsPerPage: 100 },
+        items: onlyPageItems,
+      }),
+    } as unknown as Response);
+
+    const result = await getFollowedTopics({
+      itemsPerPage: 100,
+      isRefreshAvailable: false,
+    });
+
+    expect(result.followedTopics).toHaveLength(100);
+    expect(result.total).toBe(150);
+    expect(mockUasApiRequest).toHaveBeenCalledTimes(1);
   });
 
   it('should pass signal for abort control', async () => {

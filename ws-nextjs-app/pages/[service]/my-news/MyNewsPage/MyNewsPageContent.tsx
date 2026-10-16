@@ -3,30 +3,74 @@ import Heading from '#app/components/Heading';
 import Pagination from '#app/components/Pagination';
 import MetadataContainer from '#app/components/Metadata';
 import TopicTags from '#app/components/TopicTags';
-import { AccountContext } from '#app/contexts/AccountContext';
+import Spinner from '#app/components/Spinner';
+import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
+import { RightChevron } from '#app/components/icons';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import { use } from 'react';
+import { use, useEffect, useRef, useState } from 'react';
 import useUASRecentActivity from '#app/hooks/useUASRecentActivity';
 import useUASFollowedTopics from '#app/hooks/useUASFollowedTopics';
 import Text from '#app/components/Text';
 import styles from './styles';
-import MyNewsPageLoading from './MyNewsPageLoading';
 
 const ITEMS_PER_PAGE = 24;
+// Topics are fetched and paginated server-side in batches of 100.
+const FOLLOWED_TOPICS_ITEMS_PER_PAGE = 100;
+const FOLLOWED_TOPICS_VISIBLE_LIMIT = 9;
 
 interface MyNewsPageContentProps {
   page?: string;
+  showSavedArticles: boolean;
+  showFollowedTopics: boolean;
 }
 
-const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
+interface SectionSpinnerProps {
+  label?: string;
+  testId: string;
+}
+
+const SectionSpinner = ({ label, testId }: SectionSpinnerProps) => (
+  <div css={styles.spinnerWrapper} data-testid={testId}>
+    <VisuallyHiddenText aria-live="polite">{label}</VisuallyHiddenText>
+    <Spinner css={styles.spinner} />
+  </div>
+);
+
+const MyNewsPageContent = ({
+  page,
+  showSavedArticles,
+  showFollowedTopics,
+}: MyNewsPageContentProps) => {
   const { translations, lang } = use(ServiceContext);
-  const { isArticlePersonalizationEnabled, isTopicPersonalizationEnabled } =
-    use(AccountContext);
+  const [areAllTopicsVisible, setAreAllTopicsVisible] = useState(false);
+  const [topicsPage, setTopicsPage] = useState(1);
+  const wasTopicsExpandedRef = useRef(areAllTopicsVisible);
+
+  useEffect(() => {
+    const wasExpanded = wasTopicsExpandedRef.current;
+    wasTopicsExpandedRef.current = areAllTopicsVisible;
+
+    if (wasExpanded && !areAllTopicsVisible) {
+      const hasReducedMotion = window.matchMedia(
+        '(prefers-reduced-motion: reduce)',
+      ).matches;
+      window.scrollTo({
+        top: 0,
+        behavior: hasReducedMotion ? 'auto' : 'smooth',
+      });
+    }
+  }, [areAllTopicsVisible]);
 
   const activePage = Math.max(1, Number(page) || 1);
   const startIndex = (activePage - 1) * ITEMS_PER_PAGE;
+  const topicsStartIndex = (topicsPage - 1) * FOLLOWED_TOPICS_ITEMS_PER_PAGE;
 
-  const { savedArticles, total, isLoading, error } = useUASRecentActivity({
+  const {
+    savedArticles,
+    total,
+    isLoading: articlesLoading,
+    error: articlesError,
+  } = useUASRecentActivity({
     itemsPerPage: ITEMS_PER_PAGE,
     startIndex,
   });
@@ -37,10 +81,15 @@ const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
     isLoading: topicsLoading,
     error: topicsError,
   } = useUASFollowedTopics({
-    itemsPerPage: 100, // Load all topics at once for now
+    itemsPerPage: FOLLOWED_TOPICS_ITEMS_PER_PAGE,
+    startIndex: topicsStartIndex,
   });
 
   const pageCount = Math.max(1, Math.ceil(total / ITEMS_PER_PAGE));
+  const topicsPageCount = Math.max(
+    1,
+    Math.ceil(topicsTotal / FOLLOWED_TOPICS_ITEMS_PER_PAGE),
+  );
 
   const {
     pageXOfY,
@@ -56,82 +105,163 @@ const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
   };
 
   if (!translations?.myNews) return null;
-  const { title, errorText, noArticles, description } = translations.myNews;
+  const {
+    title,
+    description,
+    savedArticlesErrorText,
+    noArticles,
+    loading: loadingText,
+    followedTopicsTitle,
+    followedTopicsErrorText,
+    noFollowedTopics,
+    seeMoreTopics,
+    seeLessTopics,
+  } = translations.myNews;
 
   const translatedPage = pageXOfY
     .replace('{x}', String(activePage))
     .replace('{y}', String(pageCount));
+  const translatedTopicsPage = pageXOfY
+    .replace('{x}', String(topicsPage))
+    .replace('{y}', String(topicsPageCount));
 
   const metadataTitle = activePage >= 2 ? `${title}, ${translatedPage}` : title;
 
-  if (isLoading || topicsLoading) {
-    return <MyNewsPageLoading />;
-  }
+  const hasArticles = savedArticles.length > 0;
+  const hasTopics = followedTopics.length > 0;
+  const hasMoreTopicsThanLimit =
+    followedTopics.length > FOLLOWED_TOPICS_VISIBLE_LIMIT;
+  const visibleTopics = areAllTopicsVisible
+    ? followedTopics
+    : followedTopics.slice(0, FOLLOWED_TOPICS_VISIBLE_LIMIT);
 
   const transformTopicsForRelatedTopics = () =>
-    followedTopics.map(topic => ({
+    visibleTopics.map(topic => ({
       topicId: topic.id,
       topicName: topic.title,
     }));
 
-  const hasError = error || topicsError;
-
-  const renderFollowedTopicsContent = () => {
-    const hasTopics = followedTopics.length > 0;
-
-    return (
-      <section css={styles.section}>
-        <Heading level={2} css={styles.subheading} size="doublePica">
-          Followed Topics ({topicsTotal})
-        </Heading>
-        {!hasTopics ? (
-          <Text size="longPrimer" fontVariant="sansRegular">
-            You haven’t followed any topics yet
-          </Text>
-        ) : (
-          <TopicTags tags={transformTopicsForRelatedTopics()} />
-        )}
-      </section>
-    );
+  const goToTopicsPage = (nextPageNumber: number) => {
+    setTopicsPage(nextPageNumber);
+    setAreAllTopicsVisible(false);
   };
 
-  const renderSavedArticlesContent = () => {
-    const hasArticles = savedArticles.length > 0;
+  const renderFollowedTopicsSection = () => (
+    <section css={styles.section}>
+      <Heading level={2} css={styles.subheading} size="doublePica">
+        {topicsLoading || topicsError || !hasTopics
+          ? followedTopicsTitle
+          : `${followedTopicsTitle} (${followedTopics.length})`}
+      </Heading>
+      {topicsLoading && (
+        <SectionSpinner
+          label={loadingText}
+          testId="my-news-followed-topics-spinner"
+        />
+      )}
+      {!topicsLoading && topicsError && (
+        <Text size="doublePica" fontVariant="sansBold">
+          {followedTopicsErrorText}
+        </Text>
+      )}
+      {!topicsLoading && !topicsError && hasTopics && (
+        <>
+          <TopicTags tags={transformTopicsForRelatedTopics()} />
+          {hasMoreTopicsThanLimit && (
+            <button
+              type="button"
+              css={styles.seeMoreButton}
+              aria-expanded={areAllTopicsVisible}
+              onClick={() => setAreAllTopicsVisible(!areAllTopicsVisible)}
+            >
+              {areAllTopicsVisible ? seeLessTopics : seeMoreTopics}
+              <RightChevron
+                css={[
+                  styles.seeMoreIcon,
+                  areAllTopicsVisible && styles.seeMoreIconFlipped,
+                ]}
+              />
+            </button>
+          )}
+          {topicsPageCount > 1 && (
+            <nav
+              aria-label={translatedTopicsPage}
+              css={styles.topicsPaginationNav}
+            >
+              <button
+                type="button"
+                css={styles.topicsPaginationButton}
+                onClick={() => goToTopicsPage(topicsPage - 1)}
+                disabled={topicsPage <= 1}
+              >
+                {previousPage}
+              </button>
+              <Text size="brevier">{translatedTopicsPage}</Text>
+              <button
+                type="button"
+                css={styles.topicsPaginationButton}
+                onClick={() => goToTopicsPage(topicsPage + 1)}
+                disabled={topicsPage >= topicsPageCount}
+              >
+                {nextPage}
+              </button>
+            </nav>
+          )}
+        </>
+      )}
+      {!topicsLoading && !topicsError && !hasTopics && (
+        <Text size="doublePica" fontVariant="sansBold">
+          {noFollowedTopics}
+        </Text>
+      )}
+    </section>
+  );
 
-    if (!hasArticles) {
-      return (
+  const renderSavedArticlesSection = () => (
+    <section css={styles.section}>
+      <Heading level={2} css={styles.subheading} size="doublePica">
+        {description}
+      </Heading>
+      {articlesLoading && (
+        <SectionSpinner
+          label={loadingText}
+          testId="my-news-saved-articles-spinner"
+        />
+      )}
+      {!articlesLoading && articlesError && (
+        <Text size="doublePica" fontVariant="sansBold">
+          {savedArticlesErrorText}
+        </Text>
+      )}
+      {!articlesLoading && !articlesError && hasArticles && (
+        <>
+          <CurationGrid
+            summaries={savedArticles}
+            headingLevel={3}
+            eventTrackingData={{
+              componentName: 'my-news-curation-grid',
+            }}
+          />
+
+          {pageCount > 1 && (
+            <Pagination
+              activePage={activePage}
+              pageCount={pageCount}
+              pageXOfY={pageXOfY}
+              previousPage={previousPage}
+              nextPage={nextPage}
+              page={pageLabel}
+            />
+          )}
+        </>
+      )}
+      {!articlesLoading && !articlesError && !hasArticles && (
         <Text size="doublePica" fontVariant="sansBold">
           {noArticles}
         </Text>
-      );
-    }
-
-    return (
-      <section css={styles.section}>
-        <Heading level={2} css={styles.subheading} size="doublePica">
-          {description}
-        </Heading>
-        <CurationGrid
-          summaries={savedArticles}
-          headingLevel={3}
-          eventTrackingData={{
-            componentName: 'my-news-curation-grid',
-          }}
-        />
-
-        {pageCount > 1 && (
-          <Pagination
-            activePage={activePage}
-            pageCount={pageCount}
-            pageXOfY={pageXOfY}
-            previousPage={previousPage}
-            nextPage={nextPage}
-            page={pageLabel}
-          />
-        )}
-      </section>
-    );
-  };
+      )}
+    </section>
+  );
 
   return (
     <>
@@ -144,16 +274,8 @@ const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
       <Heading level={1} id="content" tabIndex={-1} css={styles.heading}>
         {title}
       </Heading>
-      {hasError ? (
-        <Text size="doublePica" fontVariant="sansBold">
-          {errorText}
-        </Text>
-      ) : (
-        <>
-          {isTopicPersonalizationEnabled && renderFollowedTopicsContent()}
-          {isArticlePersonalizationEnabled && renderSavedArticlesContent()}
-        </>
-      )}
+      {showFollowedTopics && renderFollowedTopicsSection()}
+      {showSavedArticles && renderSavedArticlesSection()}
     </>
   );
 };
