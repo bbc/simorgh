@@ -46,6 +46,7 @@ const repoRoot = path.dirname(fileURLToPath(import.meta.url));
 const nextRoot = path.resolve(repoRoot, 'ws-nextjs-app');
 const nextTsConfigPath = path.resolve(nextRoot, 'tsconfig.json');
 const nextBuildPath = path.resolve(nextRoot, 'build');
+const sharedSetupPath = path.resolve(repoRoot, 'src/testHelpers/setupTests.js');
 
 const nextTransformerPattern = '^.+\\.(js|jsx|ts|tsx|mjs)$';
 const puppeteerNodeModulesPattern =
@@ -61,10 +62,7 @@ const rootProjectPaths = {
 const commonRootConfig = {
   ...rootProjectPaths,
   setupFiles: [path.resolve(repoRoot, 'src/testHelpers/jest-setup.js')],
-  setupFilesAfterEnv: [
-    path.resolve(repoRoot, 'src/testHelpers/setupTests.js'),
-    'jest-expect-message',
-  ],
+  setupFilesAfterEnv: [sharedSetupPath, 'jest-expect-message'],
   moduleNameMapper: {
     ...jestDirAlias,
     '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy',
@@ -233,14 +231,14 @@ const nextCommonConfig = {
   rootDir: nextRoot,
   modulePaths: [repoRoot],
   moduleNameMapper: nextModuleNameMapper,
-  setupFilesAfterEnv: [path.resolve(nextRoot, 'setupTests.ts')],
+  setupFilesAfterEnv: [sharedSetupPath],
 } satisfies JestProjectConfig;
 
 const nextUnitTests = {
   ...nextCommonConfig,
   displayName: 'Unit Tests (Next)',
   setupFilesAfterEnv: [
-    path.resolve(nextRoot, 'setupTests.ts'),
+    ...nextCommonConfig.setupFilesAfterEnv,
     'jest-expect-message',
   ],
   snapshotSerializers: ['@emotion/jest/serializer'],
