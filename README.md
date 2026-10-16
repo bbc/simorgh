@@ -201,6 +201,14 @@ We have linting with the [Airbnb styleguide](https://github.com/airbnb/javascrip
 
 We have [Jest](https://facebook.github.io/jest) unit tests that can be run with `yarn test:unit`.
 
+The root Jest projects compile JavaScript, JSX, TypeScript and TSX with the SWC compiler provided by `next/jest`, which is also used by `ws-nextjs-app`. The root configuration enables Emotion's automatic `@emotion/react` JSX runtime, `css` props, styled selectors and test labels without loading the Next application's configuration. No separate SWC transformer or WASM plugins are needed.
+
+SWC preserves read-only module exports. Tests that need to spy on or replace imported exports use explicit `jest.mock` factories rather than relying on Babel's writable exports. Existing implementations can be preserved with `jest.requireActual` and object spreading.
+
+Babel is still retained for the non-Jest Cypress, ESLint and Storybook toolchains (and remains transitive in Jest's own dependencies); removing the direct Jest transformer does not remove Babel from the repository.
+
+Jest coverage uses the V8 provider rather than Babel/Istanbul instrumentation. V8 coverage ranges and branch/function accounting can therefore differ from previous reports. Use `/* v8 ignore next */` (or the corresponding `start` and `stop` forms) for code that must be excluded from V8 coverage; Istanbul-only ignore comments are not a reliable replacement.
+
 `yarn test` runs both sets of these.
 
 ### End-to-end tests
