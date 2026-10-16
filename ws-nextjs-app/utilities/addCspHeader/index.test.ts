@@ -139,10 +139,12 @@ describe('CSP tiers', () => {
       ctx,
       service: 'pidgin',
       toggles: {
+        ads: { enabled: true },
         relaxedCsp: { enabled: true, value: 'in' },
         adsNonce: { enabled: true, value: 'ke' },
       },
       country: 'gb',
+      showAdsBasedOnLocation: true,
     });
 
     expect(getCspHeader(ctx)).toEqual(

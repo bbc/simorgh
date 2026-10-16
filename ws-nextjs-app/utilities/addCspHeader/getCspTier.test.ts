@@ -87,7 +87,7 @@ describe('getCspTier', () => {
         const tier = getCspTier({
           ...defaultProps,
           country: 'in',
-          toggles: { [toggleName]: { enabled: false, value: 'in' } } as Toggles,
+          toggles: { [toggleName]: { enabled: false, value: 'in' }, ads: { enabled: true } } as Toggles,
         });
 
         expect(tier).toBe('strict');
