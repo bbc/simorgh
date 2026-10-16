@@ -1,0 +1,695 @@
+{
+    "data": {
+        "article": {
+            "metadata": {
+                "atiAnalytics": {
+                    "categoryName": null,
+                    "contentId": "urn:bbc:optimo:asset:ck124pz8jz1yo",
+                    "contentType": "article-sfv",
+                    "language": "es",
+                    "ldpThingIds": null,
+                    "ldpThingLabels": null,
+                    "nationsProducer": null,
+                    "pageIdentifier": "mundo.listen.ck124pz8jz1yo.page",
+                    "pageTitle": "Test",
+                    "timePublished": "2026-10-16T14:44:54.193Z",
+                    "timeUpdated": "2026-10-16T14:44:54.193Z",
+                    "readTimeMilliseconds": 60000
+                },
+                "id": "urn:bbc:ares::article:ck124pz8jz1yo",
+                "locators": {
+                    "optimoUrn": "urn:bbc:optimo:asset:ck124pz8jz1yo",
+                    "canonicalUrl": "https://www.bbc.com/mundo/listen/ck124pz8jz1yo"
+                },
+                "type": "article",
+                "createdBy": "Mundo",
+                "language": "es",
+                "firstPublished": 1792161894193,
+                "lastPublished": 1792161894193,
+                "isOppm": false,
+                "options": {
+                    "includeComments": false
+                },
+                "analyticsLabels": {
+                    "contentId": "urn:bbc:optimo:asset:ck124pz8jz1yo",
+                    "producer": "Mundo",
+                    "page": "mundo.listen.ck124pz8jz1yo.page",
+                    "irisKeyword": null
+                },
+                "passport": {
+                    "language": "es",
+                    "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo",
+                    "taggings": [
+                        {
+                            "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                            "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+                        },
+                        {
+                            "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                            "value": "http://www.bbc.co.uk/things/fe1fbc8a-bb44-4bf8-8b12-52e58c6345a4#id"
+                        },
+                        {
+                            "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                            "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                        },
+                        {
+                            "predicate": "http://www.bbc.co.uk/ontologies/creativework/dateFirstReleased",
+                            "value": "2026-10-16T14:44:54.193Z"
+                        }
+                    ],
+                    "predicates": {
+                        "infoClass": [
+                            {
+                                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                                "type": "infoClass"
+                            }
+                        ],
+                        "primaryMediaType": [
+                            {
+                                "value": "http://www.bbc.co.uk/things/fe1fbc8a-bb44-4bf8-8b12-52e58c6345a4#id",
+                                "type": "primaryMediaType"
+                            }
+                        ],
+                        "assetType": [
+                            {
+                                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                                "type": "assetType"
+                            }
+                        ],
+                        "dateFirstReleased": [
+                            {
+                                "value": "2026-10-16T14:44:54.193Z",
+                                "type": "dateFirstReleased"
+                            }
+                        ]
+                    }
+                },
+                "blockTypes": [
+                    "headline",
+                    "text",
+                    "paragraph",
+                    "fragment",
+                    "audio",
+                    "caption",
+                    "aresMedia",
+                    "aresMediaMetadata",
+                    "image",
+                    "rawImage",
+                    "altText"
+                ],
+                "includeComments": false,
+                "consumableAsSFV": true,
+                "allowAdvertising": true,
+                "consumableOnRedButton": false,
+                "consumableOnlyOnRedButton": false,
+                "useSensitiveOnwardJourneys": false,
+                "stats": {
+                    "readTime": 1,
+                    "wordCount": 7
+                },
+                "isTransliterated": false,
+                "isKeyPointsFormatAsset": false
+            },
+            "content": {
+                "model": {
+                    "blocks": [
+                        {
+                            "id": "bd7d1d7f",
+                            "type": "visuallyHiddenHeadline",
+                            "model": {
+                                "blocks": [
+                                    {
+                                        "id": "c8761458",
+                                        "type": "text",
+                                        "model": {
+                                            "blocks": [
+                                                {
+                                                    "id": "fe0aa650",
+                                                    "type": "paragraph",
+                                                    "model": {
+                                                        "text": "syndication test run",
+                                                        "blocks": [
+                                                            {
+                                                                "id": "d130687d",
+                                                                "type": "fragment",
+                                                                "model": {
+                                                                    "text": "syndication test run",
+                                                                    "attributes": []
+                                                                },
+                                                                "position": [
+                                                                    1,
+                                                                    1,
+                                                                    1,
+                                                                    1
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    "position": [
+                                                        1,
+                                                        1,
+                                                        1
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "position": [
+                                            1,
+                                            1
+                                        ]
+                                    }
+                                ]
+                            },
+                            "position": [
+                                1
+                            ]
+                        },
+                        {
+                            "id": "abb20042",
+                            "type": "audio",
+                            "model": {
+                                "locator": "urn:bbc:pips:pid:p01xcmlm",
+                                "blocks": [
+                                    {
+                                        "id": "7d8e9a43",
+                                        "type": "caption",
+                                        "model": {
+                                            "blocks": [
+                                                {
+                                                    "id": "179a34f5",
+                                                    "type": "text",
+                                                    "model": {
+                                                        "blocks": [
+                                                            {
+                                                                "id": "49220397",
+                                                                "type": "paragraph",
+                                                                "model": {
+                                                                    "text": "the boop from slack",
+                                                                    "blocks": [
+                                                                        {
+                                                                            "id": "19af1132",
+                                                                            "type": "fragment",
+                                                                            "model": {
+                                                                                "text": "the boop from slack",
+                                                                                "attributes": []
+                                                                            },
+                                                                            "position": [
+                                                                                2,
+                                                                                1,
+                                                                                1,
+                                                                                1,
+                                                                                1
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                "position": [
+                                                                    2,
+                                                                    1,
+                                                                    1,
+                                                                    1
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    "position": [
+                                                        2,
+                                                        1,
+                                                        1
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "position": [
+                                            2,
+                                            1
+                                        ]
+                                    },
+                                    {
+                                        "id": "9669f144",
+                                        "type": "aresMedia",
+                                        "model": {
+                                            "blocks": [
+                                                {
+                                                    "id": "5e61a397",
+                                                    "blockId": "urn:bbc:ares::clip:p01xcmlm",
+                                                    "type": "aresMediaMetadata",
+                                                    "model": {
+                                                        "id": "p01xcmlm",
+                                                        "subType": "clip",
+                                                        "format": "audio",
+                                                        "title": "the boop from slack",
+                                                        "synopses": {
+                                                            "short": "the boop from slack"
+                                                        },
+                                                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01xcmls.png",
+                                                        "embedding": true,
+                                                        "advertising": false,
+                                                        "caption": "the boop from slack",
+                                                        "versions": [
+                                                            {
+                                                                "versionId": "p01xcmlp",
+                                                                "types": [
+                                                                    "Original"
+                                                                ],
+                                                                "duration": 2,
+                                                                "durationISO8601": "PT2S",
+                                                                "warnings": {},
+                                                                "availableTerritories": {
+                                                                    "uk": true,
+                                                                    "nonUk": true
+                                                                },
+                                                                "availableFrom": 1787763660000
+                                                            }
+                                                        ],
+                                                        "syndication": {
+                                                            "destinations": []
+                                                        },
+                                                        "smpKind": "radioProgramme",
+                                                        "webcastVersions": []
+                                                    },
+                                                    "position": [
+                                                        2,
+                                                        2,
+                                                        1
+                                                    ]
+                                                },
+                                                {
+                                                    "id": "4686f45f",
+                                                    "type": "image",
+                                                    "model": {
+                                                        "blocks": [
+                                                            {
+                                                                "id": "1e5e8683",
+                                                                "type": "rawImage",
+                                                                "model": {
+                                                                    "width": 1100,
+                                                                    "height": 550,
+                                                                    "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01xcmls.png",
+                                                                    "originCode": "mpv"
+                                                                },
+                                                                "position": [
+                                                                    2,
+                                                                    2,
+                                                                    2,
+                                                                    1
+                                                                ]
+                                                            },
+                                                            {
+                                                                "id": "a60a17d6",
+                                                                "type": "altText",
+                                                                "model": {
+                                                                    "blocks": [
+                                                                        {
+                                                                            "id": "84c12f71",
+                                                                            "type": "text",
+                                                                            "model": {
+                                                                                "blocks": [
+                                                                                    {
+                                                                                        "id": "5e5bae17",
+                                                                                        "type": "paragraph",
+                                                                                        "model": {
+                                                                                            "text": "the boop from slack",
+                                                                                            "blocks": [
+                                                                                                {
+                                                                                                    "id": "ffae3c55",
+                                                                                                    "type": "fragment",
+                                                                                                    "model": {
+                                                                                                        "text": "the boop from slack",
+                                                                                                        "attributes": []
+                                                                                                    },
+                                                                                                    "position": [
+                                                                                                        2,
+                                                                                                        2,
+                                                                                                        2,
+                                                                                                        2,
+                                                                                                        1,
+                                                                                                        1,
+                                                                                                        1
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        },
+                                                                                        "position": [
+                                                                                            2,
+                                                                                            2,
+                                                                                            2,
+                                                                                            2,
+                                                                                            1,
+                                                                                            1
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            "position": [
+                                                                                2,
+                                                                                2,
+                                                                                2,
+                                                                                2,
+                                                                                1
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                "position": [
+                                                                    2,
+                                                                    2,
+                                                                    2,
+                                                                    2
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    "position": [
+                                                        2,
+                                                        2,
+                                                        2
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "position": [
+                                            2,
+                                            2
+                                        ]
+                                    }
+                                ]
+                            },
+                            "position": [
+                                2
+                            ]
+                        },
+                        {
+                            "id": "08fea9eb",
+                            "type": "fauxHeadline",
+                            "model": {
+                                "blocks": [
+                                    {
+                                        "id": "206ea96c",
+                                        "type": "text",
+                                        "model": {
+                                            "blocks": [
+                                                {
+                                                    "id": "97e1353a",
+                                                    "type": "paragraph",
+                                                    "model": {
+                                                        "text": "syndication test run",
+                                                        "blocks": [
+                                                            {
+                                                                "id": "56757df5",
+                                                                "type": "fragment",
+                                                                "model": {
+                                                                    "text": "syndication test run",
+                                                                    "attributes": []
+                                                                },
+                                                                "position": [
+                                                                    3,
+                                                                    1,
+                                                                    1,
+                                                                    1
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    "position": [
+                                                        3,
+                                                        1,
+                                                        1
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "position": [
+                                            3,
+                                            1
+                                        ]
+                                    }
+                                ]
+                            },
+                            "position": [
+                                3
+                            ]
+                        },
+                        {
+                            "id": "4651763b",
+                            "type": "timestamp",
+                            "model": {
+                                "firstPublished": 1792161894193,
+                                "lastPublished": 1792161894193
+                            },
+                            "position": [
+                                4
+                            ]
+                        }
+                    ]
+                }
+            },
+            "promo": {
+                "headlines": {
+                    "seoHeadline": "Test",
+                    "promoHeadline": {
+                        "blocks": [
+                            {
+                                "type": "text",
+                                "model": {
+                                    "blocks": [
+                                        {
+                                            "type": "paragraph",
+                                            "model": {
+                                                "text": "syndication test run",
+                                                "blocks": [
+                                                    {
+                                                        "type": "fragment",
+                                                        "model": {
+                                                            "text": "syndication test run",
+                                                            "attributes": []
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                "images": {
+                    "defaultPromoImage": {
+                        "blocks": [
+                            {
+                                "type": "rawImage",
+                                "model": {
+                                    "width": 1100,
+                                    "height": 550,
+                                    "locator": "p01xcmls.png",
+                                    "originCode": "mpv"
+                                }
+                            },
+                            {
+                                "type": "altText",
+                                "model": {
+                                    "blocks": [
+                                        {
+                                            "type": "text",
+                                            "model": {
+                                                "blocks": [
+                                                    {
+                                                        "type": "paragraph",
+                                                        "model": {
+                                                            "text": "the boop from slack",
+                                                            "blocks": [
+                                                                {
+                                                                    "type": "fragment",
+                                                                    "model": {
+                                                                        "text": "the boop from slack",
+                                                                        "attributes": []
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                "summary": {
+                    "blocks": [
+                        {
+                            "type": "text",
+                            "model": {
+                                "blocks": [
+                                    {
+                                        "type": "paragraph",
+                                        "model": {
+                                            "text": "",
+                                            "blocks": [
+                                                {
+                                                    "type": "fragment",
+                                                    "model": {
+                                                        "text": "",
+                                                        "attributes": []
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                "serviceIdentifier": "Mundo",
+                "consumableAsSFV": true,
+                "media": {
+                    "blocks": [
+                        {
+                            "type": "audio",
+                            "model": {
+                                "locator": "urn:bbc:pips:pid:p01xcmlm",
+                                "blocks": [
+                                    {
+                                        "type": "caption",
+                                        "model": {
+                                            "blocks": [
+                                                {
+                                                    "type": "text",
+                                                    "model": {
+                                                        "blocks": [
+                                                            {
+                                                                "type": "paragraph",
+                                                                "model": {
+                                                                    "text": "the boop from slack",
+                                                                    "blocks": [
+                                                                        {
+                                                                            "type": "fragment",
+                                                                            "model": {
+                                                                                "text": "the boop from slack",
+                                                                                "attributes": []
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "type": "aresMedia",
+                                        "model": {
+                                            "blocks": [
+                                                {
+                                                    "blockId": "urn:bbc:ares::clip:p01xcmlm",
+                                                    "type": "aresMediaMetadata",
+                                                    "model": {
+                                                        "id": "p01xcmlm",
+                                                        "subType": "clip",
+                                                        "format": "audio",
+                                                        "title": "the boop from slack",
+                                                        "synopses": {
+                                                            "short": "the boop from slack"
+                                                        },
+                                                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01xcmls.png",
+                                                        "embedding": true,
+                                                        "advertising": false,
+                                                        "caption": "the boop from slack",
+                                                        "versions": [
+                                                            {
+                                                                "versionId": "p01xcmlp",
+                                                                "types": [
+                                                                    "Original"
+                                                                ],
+                                                                "duration": 2,
+                                                                "durationISO8601": "PT2S",
+                                                                "warnings": {},
+                                                                "availableTerritories": {
+                                                                    "uk": true,
+                                                                    "nonUk": true
+                                                                },
+                                                                "availableFrom": 1787763660000
+                                                            }
+                                                        ],
+                                                        "syndication": {
+                                                            "destinations": []
+                                                        },
+                                                        "smpKind": "radioProgramme",
+                                                        "webcastVersions": []
+                                                    }
+                                                },
+                                                {
+                                                    "type": "image",
+                                                    "model": {
+                                                        "blocks": [
+                                                            {
+                                                                "type": "rawImage",
+                                                                "model": {
+                                                                    "width": 1100,
+                                                                    "height": 550,
+                                                                    "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01xcmls.png",
+                                                                    "originCode": "mpv"
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "altText",
+                                                                "model": {
+                                                                    "blocks": [
+                                                                        {
+                                                                            "type": "text",
+                                                                            "model": {
+                                                                                "blocks": [
+                                                                                    {
+                                                                                        "type": "paragraph",
+                                                                                        "model": {
+                                                                                            "text": "the boop from slack",
+                                                                                            "blocks": [
+                                                                                                {
+                                                                                                    "type": "fragment",
+                                                                                                    "model": {
+                                                                                                        "text": "the boop from slack",
+                                                                                                        "attributes": []
+                                                                                                    }
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        "secondaryData": {
+            "topStories": null,
+            "features": null,
+            "mostRead": null,
+            "latestMedia": [],
+            "portraitVideoItems": null,
+            "electionBanner": null,
+            "countryCuration": null,
+            "videoCuration": null,
+            "countryTopicIdToReorder": null
+        }
+    },
+    "contentType": "application/json; charset=utf-8"
+}
