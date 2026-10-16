@@ -61,7 +61,7 @@ const CanonicalNavigationContainer: React.FC<
     useState(false);
   const enableStickyNavigation =
     stickyNavigationEnabled &&
-    (env === 'test' || env === 'local') &&
+    env !== 'live' &&
     SERVICES_WITH_STICKY_NAV.includes(service) &&
     isStickyViewport &&
     isWithinStickyMaxWidth &&
