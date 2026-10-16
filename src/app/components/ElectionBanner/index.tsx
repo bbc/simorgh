@@ -8,11 +8,12 @@ import { Tag } from '#app/components/Metadata/types';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import isLive from '#app/lib/utilities/isLive';
+import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import { MetadataTaggings } from '#app/models/types/metadata';
 import styles from './index.module.scss';
 
 type Props = {
-  aboutTags: Tag[];
+  aboutTags?: Tag[];
   taggings: MetadataTaggings;
 };
 
@@ -22,6 +23,7 @@ type ToggleType = {
 };
 
 const SENSITIVE_ARTICLE_ID = 'f2b5dd0e-dda0-454c-893d-792d46ff48c3';
+const ELECTION_BANNER_TITLE = 'Election banner';
 
 export const DEFAULT_HEIGHTS_VJ = {
   desktop: 350,
@@ -37,9 +39,10 @@ export const DEFAULT_HEIGHTS_AP = {
 
 export default function ElectionBanner({ aboutTags, taggings }: Props) {
   const { electionBanner } = use(ServiceContext);
-  const { isAmp, isLite } = use(RequestContext);
+  const { isAmp, isLite, pageType } = use(RequestContext);
   const { enabled: electionBannerEnabled }: ToggleType =
     useToggle('electionBanner');
+  const isLivePage = pageType === LIVE_PAGE;
 
   if (isLive() || isLite || !electionBanner) return null;
 
@@ -55,14 +58,23 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
     value.includes(SENSITIVE_ARTICLE_ID),
   );
 
+  // to do - refactor - now duplicated in src/app/components/ElectionBanner/utilities/index.ts
+  const hasValidTagLivePage = taggings?.some(({ value }) =>
+    electionThingIds?.some(electionThingId => value.includes(electionThingId)),
+  );
+
   const validAboutTag = aboutTags?.find(({ thingId }) =>
     electionThingIds?.includes(thingId),
   );
 
+  const hasValidElectionTag = Boolean(validAboutTag || hasValidTagLivePage);
+
   const showBanner =
-    !isEditoriallySensitive && validAboutTag && electionBannerEnabled;
+    !isEditoriallySensitive && hasValidElectionTag && electionBannerEnabled;
 
   if (!showBanner) return null;
+
+  const bannerTitle = validAboutTag?.thingLabel ?? ELECTION_BANNER_TITLE;
 
   const {
     SIMORGH_APP_ENV,
@@ -99,7 +111,7 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
               src,
               image:
                 'https://news.files.bbci.co.uk/include/vjassets/img/app-launcher.png',
-              title: validAboutTag.thingLabel,
+              title: bannerTitle,
               ...(isAssocPress && { layout: 'fixed-height' as const }),
             }}
           />
@@ -110,34 +122,49 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
 
   return (
     <div
-      data-testid="election-banner"
-      className={
-        isAssocPress
-          ? styles.assocPressElectionBannerWrapper
-          : styles.electionBannerWrapper
-      }
+      {...(isLivePage && {
+        className: styles.assocPressElectionBannerBackgroundLivePage,
+      })}
     >
-      <div className={styles.electionBannerContent}>
-        {hasTitle && <span className={styles.title}>{title}</span>}
-        <iframe
-          className={clsx(
-            isAssocPress && 'ap-embed',
-            isAssocPress
-              ? styles.assocPressElectionBannerIframe
-              : styles.electionBannerIframe,
-          )}
-          title={validAboutTag.thingLabel}
-          src={src}
-          scrolling="no"
-          {...(!isAssocPress && { height: DEFAULT_HEIGHTS_VJ.desktop })}
-          width="100%"
-        />
-        {isAssocPress && (
-          <Script
-            src="https://interactives.apelections.org/election-results/assets/microsite/resizeClient.js"
-            strategy="lazyOnload"
-          />
+      <div
+        data-testid="election-banner"
+        className={clsx(
+          isAssocPress
+            ? styles.assocPressElectionBannerWrapper
+            : styles.electionBannerWrapper,
+          isLivePage &&
+            (isAssocPress
+              ? styles.assocPressElectionBannerWrapperLivePage
+              : styles.electionBannerWrapperLive),
         )}
+      >
+        <div className={styles.electionBannerContent}>
+          {hasTitle && !isLivePage && (
+            <span className={styles.title}>{title}</span>
+          )}
+          <iframe
+            className={clsx(
+              isAssocPress && 'ap-embed',
+              isAssocPress
+                ? styles.assocPressElectionBannerIframe
+                : styles.electionBannerIframe,
+              isLivePage &&
+                isAssocPress &&
+                styles.assocPressElectionBannerIframeLivePage,
+            )}
+            title={bannerTitle}
+            src={src}
+            scrolling="no"
+            {...(!isAssocPress && { height: DEFAULT_HEIGHTS_VJ.desktop })}
+            width="100%"
+          />
+          {isAssocPress && (
+            <Script
+              src="https://interactives.apelections.org/election-results/assets/microsite/resizeClient.js"
+              strategy="lazyOnload"
+            />
+          )}
+        </div>
       </div>
     </div>
   );
