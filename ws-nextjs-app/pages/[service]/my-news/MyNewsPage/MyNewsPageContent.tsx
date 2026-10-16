@@ -151,7 +151,7 @@ const MyNewsPageContent = ({
       <Heading level={2} css={styles.subheading} size="doublePica">
         {topicsLoading || topicsError || !hasTopics
           ? followedTopicsTitle
-          : `${followedTopicsTitle} (${topicsTotal})`}
+          : `${followedTopicsTitle} (${followedTopics.length})`}
       </Heading>
       {topicsLoading && (
         <SectionSpinner

@@ -244,6 +244,27 @@ describe('MyNewsPage', () => {
     });
   });
 
+  it('should show the count of actually rendered topics, not the raw API total', async () => {
+    mockUseFollowedTopics.mockReturnValue({
+      followedTopics: mockFollowedTopics,
+      total: mockFollowedTopics.length + 1,
+      isLoading: false,
+      error: null,
+    });
+
+    await act(async () => {
+      render(<MyNewsPage />, renderOptions);
+    });
+
+    await waitFor(() => {
+      expect(
+        screen.getByText(
+          `${myNewsTranslations.followedTopicsTitle} (${mockFollowedTopics.length})`,
+        ),
+      ).toBeInTheDocument();
+    });
+  });
+
   it('should render followed topics alongside saved articles', async () => {
     const [singleFollowedTopic] = mockFollowedTopics;
 
