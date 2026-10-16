@@ -40,6 +40,18 @@ const FollowTopicButtonAuthenticatedInner = ({
     },
   });
 
+  // Temporary: uncomment for testing follow topic button render error
+  // Add ?testFollowTopicRenderError=1 to the topic page url
+
+  // if (
+  //   typeof window !== 'undefined' &&
+  //   new URLSearchParams(window.location.search).has(
+  //     'testFollowTopicRenderError',
+  //   )
+  // ) {
+  //   throw new Error('Test follow-topic render failure');
+  // }
+
   if (!followTopicButton) return null;
 
   const getVisualLabel = () => {

@@ -125,8 +125,6 @@ describe('useUASMetadataSync', () => {
         hasChanges: true,
       });
 
-      
-
       const { rerender } = renderHook(() =>
         useUASMetadataSync({
           ...mockArticleParams,
