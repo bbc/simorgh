@@ -14,7 +14,7 @@ exports[`Navigation Page-type navigation attribution announces Home when on a HO
   background-color: #FFFFFF;
 }
 
-@media (min-width: 62.9375rem) {
+@media (min-width:62.9375rem) {
   .emotion-1::after {
     content: '';
     position: absolute;
@@ -36,13 +36,13 @@ exports[`Navigation Page-type navigation attribution announces Home when on a HO
   background-color: #FFFFFF;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-3 {
     margin: 0 0.8rem;
   }
 }
 
-@media (min-width: 66rem) {
+@media (min-width:66rem) {
   .emotion-3 {
     margin: 0 auto;
   }
@@ -100,7 +100,7 @@ exports[`Navigation Page-type navigation attribution announces Home when on a HO
   pointer-events: none;
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-8 {
     white-space: nowrap;
     overflow-x: scroll;
@@ -111,7 +111,7 @@ exports[`Navigation Page-type navigation attribution announces Home when on a HO
     -ms-overflow-style: none;
   }
 
-  @media (min-width: 25rem) {
+  @media (min-width:25rem) {
     .emotion-8 {
       scroll-padding-inline-end: 6rem;
     }
@@ -144,13 +144,11 @@ exports[`Navigation Page-type navigation attribution announces Home when on a HO
     overflow: hidden;
     pointer-events: none;
     background: linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 1) 100%
+            to right,rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 1) 100%
           );
   }
 
-  @media (min-width: 25rem) {
+  @media (min-width:25rem) {
     .emotion-8:after {
       width: 6rem;
     }
@@ -230,7 +228,7 @@ exports[`Navigation Page-type navigation attribution announces Home when on a HO
   position: relative;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-10 {
     overflow: hidden;
   }
@@ -244,13 +242,13 @@ exports[`Navigation Page-type navigation attribution announces Home when on a HO
   margin-inline-end: 0.75rem;
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-12:last-child {
     margin-right: 3rem;
   }
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-12::after {
     content: '';
     position: absolute;
@@ -290,7 +288,7 @@ exports[`Navigation Page-type navigation attribution announces Home when on a HO
   }
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-14 {
     padding: 0.75rem 0.5rem;
   }
@@ -378,7 +376,7 @@ exports[`Navigation Page-type navigation attribution announces Home when on a HO
   }
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-21 {
     padding: 0.75rem 0.5rem;
   }
@@ -448,14 +446,14 @@ exports[`Navigation Page-type navigation attribution announces Home when on a HO
   border: 0.25rem solid #000000;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-27 {
     display: none;
     visibility: hidden;
   }
 }
 
-@media (min-width: 20rem) {
+@media (min-width:20rem) {
   .emotion-27 {
     height: 2.75rem;
     width: 2.75rem;
@@ -483,7 +481,7 @@ exports[`Navigation Page-type navigation attribution announces Home when on a HO
   fill: currentColor;
 }
 
-@media screen and (forced-colors: active) {
+@media screen and (forced-colors:active) {
   .emotion-29 {
     fill: linkText;
   }
@@ -496,7 +494,7 @@ exports[`Navigation Page-type navigation attribution announces Home when on a HO
   height: 0;
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
-  transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
+  transition-timing-function: cubic-bezier(0,0,0.58,1);
   visibility: hidden;
   position: absolute;
   top: 100%;
@@ -506,14 +504,14 @@ exports[`Navigation Page-type navigation attribution announces Home when on a HO
   border-bottom: 0.1875rem solid #B80000;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-32 {
     display: none;
     visibility: hidden;
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion:reduce) {
   .emotion-32 {
     -webkit-transition: none;
     transition: none;
@@ -622,7 +620,7 @@ exports[`Navigation Page-type navigation attribution announces Home when on a HO
   z-index: 1;
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-41 {
     white-space: nowrap;
     overflow-x: scroll;
@@ -633,7 +631,7 @@ exports[`Navigation Page-type navigation attribution announces Home when on a HO
     -ms-overflow-style: none;
   }
 
-  @media (min-width: 25rem) {
+  @media (min-width:25rem) {
     .emotion-41 {
       scroll-padding-inline-end: 6rem;
     }
@@ -666,13 +664,11 @@ exports[`Navigation Page-type navigation attribution announces Home when on a HO
     overflow: hidden;
     pointer-events: none;
     background: linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 1) 100%
+            to right,rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 1) 100%
           );
   }
 
-  @media (min-width: 25rem) {
+  @media (min-width:25rem) {
     .emotion-41:after {
       width: 6rem;
     }
@@ -916,7 +912,7 @@ exports[`Navigation Page-type navigation attribution highlights dropdown item wh
   background-color: #FFFFFF;
 }
 
-@media (min-width: 62.9375rem) {
+@media (min-width:62.9375rem) {
   .emotion-1::after {
     content: '';
     position: absolute;
@@ -938,13 +934,13 @@ exports[`Navigation Page-type navigation attribution highlights dropdown item wh
   background-color: #FFFFFF;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-3 {
     margin: 0 0.8rem;
   }
 }
 
-@media (min-width: 66rem) {
+@media (min-width:66rem) {
   .emotion-3 {
     margin: 0 auto;
   }
@@ -1002,7 +998,7 @@ exports[`Navigation Page-type navigation attribution highlights dropdown item wh
   pointer-events: none;
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-8 {
     white-space: nowrap;
     overflow-x: scroll;
@@ -1013,7 +1009,7 @@ exports[`Navigation Page-type navigation attribution highlights dropdown item wh
     -ms-overflow-style: none;
   }
 
-  @media (min-width: 25rem) {
+  @media (min-width:25rem) {
     .emotion-8 {
       scroll-padding-inline-end: 6rem;
     }
@@ -1046,13 +1042,11 @@ exports[`Navigation Page-type navigation attribution highlights dropdown item wh
     overflow: hidden;
     pointer-events: none;
     background: linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 1) 100%
+            to right,rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 1) 100%
           );
   }
 
-  @media (min-width: 25rem) {
+  @media (min-width:25rem) {
     .emotion-8:after {
       width: 6rem;
     }
@@ -1132,7 +1126,7 @@ exports[`Navigation Page-type navigation attribution highlights dropdown item wh
   position: relative;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-10 {
     overflow: hidden;
   }
@@ -1146,13 +1140,13 @@ exports[`Navigation Page-type navigation attribution highlights dropdown item wh
   margin-inline-end: 0.75rem;
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-12:last-child {
     margin-right: 3rem;
   }
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-12::after {
     content: '';
     position: absolute;
@@ -1192,7 +1186,7 @@ exports[`Navigation Page-type navigation attribution highlights dropdown item wh
   }
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-14 {
     padding: 0.75rem 0.5rem;
   }
@@ -1268,7 +1262,7 @@ exports[`Navigation Page-type navigation attribution highlights dropdown item wh
   }
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-20 {
     padding: 0.75rem 0.5rem;
   }
@@ -1338,14 +1332,14 @@ exports[`Navigation Page-type navigation attribution highlights dropdown item wh
   border: 0.25rem solid #000000;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-26 {
     display: none;
     visibility: hidden;
   }
 }
 
-@media (min-width: 20rem) {
+@media (min-width:20rem) {
   .emotion-26 {
     height: 2.75rem;
     width: 2.75rem;
@@ -1373,7 +1367,7 @@ exports[`Navigation Page-type navigation attribution highlights dropdown item wh
   fill: currentColor;
 }
 
-@media screen and (forced-colors: active) {
+@media screen and (forced-colors:active) {
   .emotion-28 {
     fill: linkText;
   }
@@ -1398,7 +1392,7 @@ exports[`Navigation Page-type navigation attribution highlights dropdown item wh
   height: 0;
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
-  transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
+  transition-timing-function: cubic-bezier(0,0,0.58,1);
   visibility: hidden;
   position: absolute;
   top: 100%;
@@ -1408,14 +1402,14 @@ exports[`Navigation Page-type navigation attribution highlights dropdown item wh
   border-bottom: 0.1875rem solid #B80000;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-31 {
     display: none;
     visibility: hidden;
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion:reduce) {
   .emotion-31 {
     -webkit-transition: none;
     transition: none;
@@ -1524,7 +1518,7 @@ exports[`Navigation Page-type navigation attribution highlights dropdown item wh
   z-index: 1;
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-44 {
     white-space: nowrap;
     overflow-x: scroll;
@@ -1535,7 +1529,7 @@ exports[`Navigation Page-type navigation attribution highlights dropdown item wh
     -ms-overflow-style: none;
   }
 
-  @media (min-width: 25rem) {
+  @media (min-width:25rem) {
     .emotion-44 {
       scroll-padding-inline-end: 6rem;
     }
@@ -1568,13 +1562,11 @@ exports[`Navigation Page-type navigation attribution highlights dropdown item wh
     overflow: hidden;
     pointer-events: none;
     background: linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 1) 100%
+            to right,rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 1) 100%
           );
   }
 
-  @media (min-width: 25rem) {
+  @media (min-width:25rem) {
     .emotion-44:after {
       width: 6rem;
     }
@@ -1858,7 +1850,7 @@ exports[`Navigation should correctly render amp navigation 1`] = `
   }
 }
 
-@media (min-width: 62.9375rem) {
+@media (min-width:62.9375rem) {
   .emotion-1::after {
     content: '';
     position: absolute;
@@ -1880,13 +1872,13 @@ exports[`Navigation should correctly render amp navigation 1`] = `
   background-color: #FFFFFF;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-3 {
     margin: 0 0.8rem;
   }
 }
 
-@media (min-width: 66rem) {
+@media (min-width:66rem) {
   .emotion-3 {
     margin: 0 auto;
   }
@@ -1944,7 +1936,7 @@ exports[`Navigation should correctly render amp navigation 1`] = `
   pointer-events: none;
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-8 {
     white-space: nowrap;
     overflow-x: scroll;
@@ -1955,7 +1947,7 @@ exports[`Navigation should correctly render amp navigation 1`] = `
     -ms-overflow-style: none;
   }
 
-  @media (min-width: 25rem) {
+  @media (min-width:25rem) {
     .emotion-8 {
       scroll-padding-inline-end: 6rem;
     }
@@ -1988,13 +1980,11 @@ exports[`Navigation should correctly render amp navigation 1`] = `
     overflow: hidden;
     pointer-events: none;
     background: linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 1) 100%
+            to right,rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 1) 100%
           );
   }
 
-  @media (min-width: 25rem) {
+  @media (min-width:25rem) {
     .emotion-8:after {
       width: 6rem;
     }
@@ -2081,7 +2071,7 @@ exports[`Navigation should correctly render amp navigation 1`] = `
   position: relative;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-10 {
     overflow: hidden;
   }
@@ -2095,13 +2085,13 @@ exports[`Navigation should correctly render amp navigation 1`] = `
   margin-inline-end: 0.75rem;
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-12:last-child {
     margin-right: 3rem;
   }
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-12::after {
     content: '';
     position: absolute;
@@ -2141,7 +2131,7 @@ exports[`Navigation should correctly render amp navigation 1`] = `
   }
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-14 {
     padding: 0.75rem 0.5rem;
   }
@@ -2229,7 +2219,7 @@ exports[`Navigation should correctly render amp navigation 1`] = `
   }
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-21 {
     padding: 0.75rem 0.5rem;
   }
@@ -2299,14 +2289,14 @@ exports[`Navigation should correctly render amp navigation 1`] = `
   border: 0.25rem solid #000000;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-23 {
     display: none;
     visibility: hidden;
   }
 }
 
-@media (min-width: 20rem) {
+@media (min-width:20rem) {
   .emotion-23 {
     height: 2.75rem;
     width: 2.75rem;
@@ -2334,7 +2324,7 @@ exports[`Navigation should correctly render amp navigation 1`] = `
   fill: currentColor;
 }
 
-@media screen and (forced-colors: active) {
+@media screen and (forced-colors:active) {
   .emotion-25 {
     fill: linkText;
   }
@@ -2351,7 +2341,7 @@ exports[`Navigation should correctly render amp navigation 1`] = `
   border-bottom: 0.1875rem solid #B80000;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-30 {
     display: none;
     visibility: hidden;
@@ -2460,7 +2450,7 @@ exports[`Navigation should correctly render amp navigation 1`] = `
   z-index: 1;
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-39 {
     white-space: nowrap;
     overflow-x: scroll;
@@ -2471,7 +2461,7 @@ exports[`Navigation should correctly render amp navigation 1`] = `
     -ms-overflow-style: none;
   }
 
-  @media (min-width: 25rem) {
+  @media (min-width:25rem) {
     .emotion-39 {
       scroll-padding-inline-end: 6rem;
     }
@@ -2504,13 +2494,11 @@ exports[`Navigation should correctly render amp navigation 1`] = `
     overflow: hidden;
     pointer-events: none;
     background: linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 1) 100%
+            to right,rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 1) 100%
           );
   }
 
-  @media (min-width: 25rem) {
+  @media (min-width:25rem) {
     .emotion-39:after {
       width: 6rem;
     }
@@ -2762,7 +2750,7 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
   }
 }
 
-@media (min-width: 62.9375rem) {
+@media (min-width:62.9375rem) {
   .emotion-1::after {
     content: '';
     position: absolute;
@@ -2784,13 +2772,13 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
   background-color: #FFFFFF;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-3 {
     margin: 0 0.8rem;
   }
 }
 
-@media (min-width: 66rem) {
+@media (min-width:66rem) {
   .emotion-3 {
     margin: 0 auto;
   }
@@ -2848,7 +2836,7 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
   pointer-events: none;
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-8 {
     white-space: nowrap;
     overflow-x: scroll;
@@ -2859,7 +2847,7 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
     -ms-overflow-style: none;
   }
 
-  @media (min-width: 25rem) {
+  @media (min-width:25rem) {
     .emotion-8 {
       scroll-padding-inline-end: 6rem;
     }
@@ -2892,13 +2880,11 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
     overflow: hidden;
     pointer-events: none;
     background: linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 1) 100%
+            to right,rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 1) 100%
           );
   }
 
-  @media (min-width: 25rem) {
+  @media (min-width:25rem) {
     .emotion-8:after {
       width: 6rem;
     }
@@ -2985,7 +2971,7 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
   position: relative;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-10 {
     overflow: hidden;
   }
@@ -2999,13 +2985,13 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
   margin-inline-end: 0.75rem;
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-12:last-child {
     margin-right: 3rem;
   }
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-12::after {
     content: '';
     position: absolute;
@@ -3045,7 +3031,7 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
   }
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-14 {
     padding: 0.75rem 0.5rem;
   }
@@ -3121,7 +3107,7 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
   }
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-20 {
     padding: 0.75rem 0.5rem;
   }
@@ -3191,14 +3177,14 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
   border: 0.25rem solid #000000;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-22 {
     display: none;
     visibility: hidden;
   }
 }
 
-@media (min-width: 20rem) {
+@media (min-width:20rem) {
   .emotion-22 {
     height: 2.75rem;
     width: 2.75rem;
@@ -3226,7 +3212,7 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
   fill: currentColor;
 }
 
-@media screen and (forced-colors: active) {
+@media screen and (forced-colors:active) {
   .emotion-24 {
     fill: linkText;
   }
@@ -3255,7 +3241,7 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
   border-bottom: 0.1875rem solid #B80000;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-29 {
     display: none;
     visibility: hidden;
@@ -3364,7 +3350,7 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
   z-index: 1;
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-38 {
     white-space: nowrap;
     overflow-x: scroll;
@@ -3375,7 +3361,7 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
     -ms-overflow-style: none;
   }
 
-  @media (min-width: 25rem) {
+  @media (min-width:25rem) {
     .emotion-38 {
       scroll-padding-inline-end: 6rem;
     }
@@ -3408,13 +3394,11 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
     overflow: hidden;
     pointer-events: none;
     background: linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 1) 100%
+            to right,rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 1) 100%
           );
   }
 
-  @media (min-width: 25rem) {
+  @media (min-width:25rem) {
     .emotion-38:after {
       width: 6rem;
     }
@@ -3657,7 +3641,7 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
   }
 }
 
-@media (min-width: 62.9375rem) {
+@media (min-width:62.9375rem) {
   .emotion-1::after {
     content: '';
     position: absolute;
@@ -3679,13 +3663,13 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
   background-color: #FFFFFF;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-3 {
     margin: 0 0.8rem;
   }
 }
 
-@media (min-width: 66rem) {
+@media (min-width:66rem) {
   .emotion-3 {
     margin: 0 auto;
   }
@@ -3743,7 +3727,7 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
   pointer-events: none;
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-8 {
     white-space: nowrap;
     overflow-x: scroll;
@@ -3754,7 +3738,7 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
     -ms-overflow-style: none;
   }
 
-  @media (min-width: 25rem) {
+  @media (min-width:25rem) {
     .emotion-8 {
       scroll-padding-inline-end: 6rem;
     }
@@ -3787,13 +3771,11 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
     overflow: hidden;
     pointer-events: none;
     background: linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 1) 100%
+            to right,rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 1) 100%
           );
   }
 
-  @media (min-width: 25rem) {
+  @media (min-width:25rem) {
     .emotion-8:after {
       width: 6rem;
     }
@@ -3880,7 +3862,7 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
   position: relative;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-10 {
     overflow: hidden;
   }
@@ -3894,13 +3876,13 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
   margin-inline-end: 0.75rem;
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-12:last-child {
     margin-right: 3rem;
   }
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-12::after {
     content: '';
     position: absolute;
@@ -3940,7 +3922,7 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
   }
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-14 {
     padding: 0.75rem 0.5rem;
   }
@@ -4006,7 +3988,7 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
   }
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-18 {
     padding: 0.75rem 0.5rem;
   }
@@ -4098,14 +4080,14 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
   border: 0.25rem solid #000000;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-23 {
     display: none;
     visibility: hidden;
   }
 }
 
-@media (min-width: 20rem) {
+@media (min-width:20rem) {
   .emotion-23 {
     height: 2.75rem;
     width: 2.75rem;
@@ -4133,7 +4115,7 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
   fill: currentColor;
 }
 
-@media screen and (forced-colors: active) {
+@media screen and (forced-colors:active) {
   .emotion-25 {
     fill: linkText;
   }
@@ -4150,7 +4132,7 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
   border-bottom: 0.1875rem solid #B80000;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-30 {
     display: none;
     visibility: hidden;
@@ -4259,7 +4241,7 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
   z-index: 1;
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-39 {
     white-space: nowrap;
     overflow-x: scroll;
@@ -4270,7 +4252,7 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
     -ms-overflow-style: none;
   }
 
-  @media (min-width: 25rem) {
+  @media (min-width:25rem) {
     .emotion-39 {
       scroll-padding-inline-end: 6rem;
     }
@@ -4303,13 +4285,11 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
     overflow: hidden;
     pointer-events: none;
     background: linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 1) 100%
+            to right,rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 1) 100%
           );
   }
 
-  @media (min-width: 25rem) {
+  @media (min-width:25rem) {
     .emotion-39:after {
       width: 6rem;
     }
@@ -4555,7 +4535,7 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
   background-color: #FFFFFF;
 }
 
-@media (min-width: 62.9375rem) {
+@media (min-width:62.9375rem) {
   .emotion-1::after {
     content: '';
     position: absolute;
@@ -4577,13 +4557,13 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
   background-color: #FFFFFF;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-3 {
     margin: 0 0.8rem;
   }
 }
 
-@media (min-width: 66rem) {
+@media (min-width:66rem) {
   .emotion-3 {
     margin: 0 auto;
   }
@@ -4641,7 +4621,7 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
   pointer-events: none;
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-8 {
     white-space: nowrap;
     overflow-x: scroll;
@@ -4652,7 +4632,7 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
     -ms-overflow-style: none;
   }
 
-  @media (min-width: 25rem) {
+  @media (min-width:25rem) {
     .emotion-8 {
       scroll-padding-inline-end: 6rem;
     }
@@ -4685,13 +4665,11 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
     overflow: hidden;
     pointer-events: none;
     background: linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 1) 100%
+            to right,rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 1) 100%
           );
   }
 
-  @media (min-width: 25rem) {
+  @media (min-width:25rem) {
     .emotion-8:after {
       width: 6rem;
     }
@@ -4771,7 +4749,7 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
   position: relative;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-10 {
     overflow: hidden;
   }
@@ -4785,13 +4763,13 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
   margin-inline-end: 0.75rem;
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-12:last-child {
     margin-right: 3rem;
   }
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-12::after {
     content: '';
     position: absolute;
@@ -4831,7 +4809,7 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
   }
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-14 {
     padding: 0.75rem 0.5rem;
   }
@@ -4919,7 +4897,7 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
   }
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-21 {
     padding: 0.75rem 0.5rem;
   }
@@ -4989,14 +4967,14 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
   border: 0.25rem solid #000000;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-23 {
     display: none;
     visibility: hidden;
   }
 }
 
-@media (min-width: 20rem) {
+@media (min-width:20rem) {
   .emotion-23 {
     height: 2.75rem;
     width: 2.75rem;
@@ -5024,7 +5002,7 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
   fill: currentColor;
 }
 
-@media screen and (forced-colors: active) {
+@media screen and (forced-colors:active) {
   .emotion-25 {
     fill: linkText;
   }
@@ -5037,7 +5015,7 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
   height: 0;
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
-  transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
+  transition-timing-function: cubic-bezier(0,0,0.58,1);
   visibility: hidden;
   position: absolute;
   top: 100%;
@@ -5047,14 +5025,14 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
   border-bottom: 0.1875rem solid #B80000;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-28 {
     display: none;
     visibility: hidden;
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion:reduce) {
   .emotion-28 {
     -webkit-transition: none;
     transition: none;
@@ -5163,7 +5141,7 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
   z-index: 1;
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-37 {
     white-space: nowrap;
     overflow-x: scroll;
@@ -5174,7 +5152,7 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
     -ms-overflow-style: none;
   }
 
-  @media (min-width: 25rem) {
+  @media (min-width:25rem) {
     .emotion-37 {
       scroll-padding-inline-end: 6rem;
     }
@@ -5207,13 +5185,11 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
     overflow: hidden;
     pointer-events: none;
     background: linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 1) 100%
+            to right,rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 1) 100%
           );
   }
 
-  @media (min-width: 25rem) {
+  @media (min-width:25rem) {
     .emotion-37:after {
       width: 6rem;
     }
@@ -5445,7 +5421,7 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
   background-color: #FFFFFF;
 }
 
-@media (min-width: 62.9375rem) {
+@media (min-width:62.9375rem) {
   .emotion-1::after {
     content: '';
     position: absolute;
@@ -5467,13 +5443,13 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
   background-color: #FFFFFF;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-3 {
     margin: 0 0.8rem;
   }
 }
 
-@media (min-width: 66rem) {
+@media (min-width:66rem) {
   .emotion-3 {
     margin: 0 auto;
   }
@@ -5531,7 +5507,7 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
   pointer-events: none;
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-8 {
     white-space: nowrap;
     overflow-x: scroll;
@@ -5542,7 +5518,7 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
     -ms-overflow-style: none;
   }
 
-  @media (min-width: 25rem) {
+  @media (min-width:25rem) {
     .emotion-8 {
       scroll-padding-inline-end: 6rem;
     }
@@ -5575,13 +5551,11 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
     overflow: hidden;
     pointer-events: none;
     background: linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 1) 100%
+            to right,rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 1) 100%
           );
   }
 
-  @media (min-width: 25rem) {
+  @media (min-width:25rem) {
     .emotion-8:after {
       width: 6rem;
     }
@@ -5661,7 +5635,7 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
   position: relative;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-10 {
     overflow: hidden;
   }
@@ -5675,13 +5649,13 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
   margin-inline-end: 0.75rem;
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-12:last-child {
     margin-right: 3rem;
   }
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-12::after {
     content: '';
     position: absolute;
@@ -5721,7 +5695,7 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
   }
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-14 {
     padding: 0.75rem 0.5rem;
   }
@@ -5797,7 +5771,7 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
   }
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-20 {
     padding: 0.75rem 0.5rem;
   }
@@ -5867,14 +5841,14 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
   border: 0.25rem solid #000000;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-22 {
     display: none;
     visibility: hidden;
   }
 }
 
-@media (min-width: 20rem) {
+@media (min-width:20rem) {
   .emotion-22 {
     height: 2.75rem;
     width: 2.75rem;
@@ -5902,7 +5876,7 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
   fill: currentColor;
 }
 
-@media screen and (forced-colors: active) {
+@media screen and (forced-colors:active) {
   .emotion-24 {
     fill: linkText;
   }
@@ -5927,7 +5901,7 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
   height: 0;
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
-  transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
+  transition-timing-function: cubic-bezier(0,0,0.58,1);
   visibility: hidden;
   position: absolute;
   top: 100%;
@@ -5937,14 +5911,14 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
   border-bottom: 0.1875rem solid #B80000;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-27 {
     display: none;
     visibility: hidden;
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion:reduce) {
   .emotion-27 {
     -webkit-transition: none;
     transition: none;
@@ -6053,7 +6027,7 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
   z-index: 1;
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-36 {
     white-space: nowrap;
     overflow-x: scroll;
@@ -6064,7 +6038,7 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
     -ms-overflow-style: none;
   }
 
-  @media (min-width: 25rem) {
+  @media (min-width:25rem) {
     .emotion-36 {
       scroll-padding-inline-end: 6rem;
     }
@@ -6097,13 +6071,11 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
     overflow: hidden;
     pointer-events: none;
     background: linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 1) 100%
+            to right,rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 1) 100%
           );
   }
 
-  @media (min-width: 25rem) {
+  @media (min-width:25rem) {
     .emotion-36:after {
       width: 6rem;
     }
@@ -6326,7 +6298,7 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
   background-color: #FFFFFF;
 }
 
-@media (min-width: 62.9375rem) {
+@media (min-width:62.9375rem) {
   .emotion-1::after {
     content: '';
     position: absolute;
@@ -6348,13 +6320,13 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
   background-color: #FFFFFF;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-3 {
     margin: 0 0.8rem;
   }
 }
 
-@media (min-width: 66rem) {
+@media (min-width:66rem) {
   .emotion-3 {
     margin: 0 auto;
   }
@@ -6412,7 +6384,7 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
   pointer-events: none;
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-8 {
     white-space: nowrap;
     overflow-x: scroll;
@@ -6423,7 +6395,7 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
     -ms-overflow-style: none;
   }
 
-  @media (min-width: 25rem) {
+  @media (min-width:25rem) {
     .emotion-8 {
       scroll-padding-inline-end: 6rem;
     }
@@ -6456,13 +6428,11 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
     overflow: hidden;
     pointer-events: none;
     background: linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 1) 100%
+            to right,rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 1) 100%
           );
   }
 
-  @media (min-width: 25rem) {
+  @media (min-width:25rem) {
     .emotion-8:after {
       width: 6rem;
     }
@@ -6542,7 +6512,7 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
   position: relative;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-10 {
     overflow: hidden;
   }
@@ -6556,13 +6526,13 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
   margin-inline-end: 0.75rem;
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-12:last-child {
     margin-right: 3rem;
   }
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-12::after {
     content: '';
     position: absolute;
@@ -6602,7 +6572,7 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
   }
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-14 {
     padding: 0.75rem 0.5rem;
   }
@@ -6668,7 +6638,7 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
   }
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-18 {
     padding: 0.75rem 0.5rem;
   }
@@ -6760,14 +6730,14 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
   border: 0.25rem solid #000000;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-23 {
     display: none;
     visibility: hidden;
   }
 }
 
-@media (min-width: 20rem) {
+@media (min-width:20rem) {
   .emotion-23 {
     height: 2.75rem;
     width: 2.75rem;
@@ -6795,7 +6765,7 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
   fill: currentColor;
 }
 
-@media screen and (forced-colors: active) {
+@media screen and (forced-colors:active) {
   .emotion-25 {
     fill: linkText;
   }
@@ -6808,7 +6778,7 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
   height: 0;
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
-  transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
+  transition-timing-function: cubic-bezier(0,0,0.58,1);
   visibility: hidden;
   position: absolute;
   top: 100%;
@@ -6818,14 +6788,14 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
   border-bottom: 0.1875rem solid #B80000;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-28 {
     display: none;
     visibility: hidden;
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion:reduce) {
   .emotion-28 {
     -webkit-transition: none;
     transition: none;
@@ -6934,7 +6904,7 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
   z-index: 1;
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-37 {
     white-space: nowrap;
     overflow-x: scroll;
@@ -6945,7 +6915,7 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
     -ms-overflow-style: none;
   }
 
-  @media (min-width: 25rem) {
+  @media (min-width:25rem) {
     .emotion-37 {
       scroll-padding-inline-end: 6rem;
     }
@@ -6978,13 +6948,11 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
     overflow: hidden;
     pointer-events: none;
     background: linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 1) 100%
+            to right,rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 1) 100%
           );
   }
 
-  @media (min-width: 25rem) {
+  @media (min-width:25rem) {
     .emotion-37:after {
       width: 6rem;
     }
