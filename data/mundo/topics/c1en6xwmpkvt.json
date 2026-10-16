@@ -1,7 +1,9 @@
 {
   "data": {
-    "title": "Colombia Peace Agreement",
+    "title": "Colombia Peace Agreement - non SEO",
     "description": "Peace agreement between the Colombian government and FARC",
+    "seoTitle": "Colombia Peace Peace Agreement Agreement",
+    "seoDescription": "Agreement Agreement Agreement Agreement Agreement Agreement Agreement Agreement Agreement Agreement Agreement. Much Agreement",
     "imageData": {
       "url": "https://ichef.bbci.co.uk/ace/standard/480/cpsdevpb/f407/test/75380e10-4f96-11ed-9488-854f10e82c4c.jpg",
       "urlTemplate": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/f407/test/75380e10-4f96-11ed-9488-854f10e82c4c.jpg",
@@ -16,84 +18,154 @@
       {
         "summaries": [
           {
-            "type": "article",
-            "title": "Edited New 1226 El conflictivo pasado con Venezuela de Rex Tillerson, nuevo secretario de Estado de EEUU",
-            "firstPublished": "2017-02-03T11:26:55.000Z",
-            "link": "https://www.bbc.com/mundo/23100317",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/167B2/test/_63528029_036820129-1.jpg",
-            "description": "Es posiblemente en lo único que se ponen de acuerdo gobierno y oposición en Venezuela: ambos tienen esperanzas en una mejor relación con Estados Unidos y que eso les ayude en sus objetivos contrapuestos.",
-            "imageAlt": "ExxonMobil Chairman and CEO Rex Tillerson speaks during the IHS CERAWeek 2015 energy conference in Houston, Texas April 21, 2015",
-            "id": "ff4f3677-0f70-574e-b129-6b3396788390"
-          },
-          {
             "type": "link",
+            "isLive": false,
             "title": "Promo: Testing Type URL for external sites",
             "firstPublished": "",
+            "lastPublished": "",
             "link": "https://www.theguardian.com/uk-news/2022/dec/08/first-coinage-featuring-king-charles-iii-released",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/3502/test/0c533a40-770b-11ed-bd83-8f15ba358e41.jpg",
-            "description": "",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/3502/test/0c533a40-770b-11ed-bd83-8f15ba358e41.jpg.webp",
             "imageAlt": "Testing Type URL (external) for promo item",
-            "id": "https%3A%2F%2Fwww.theguardian.com%2Fuk-news%2F2022%2Fdec%2F08%2Ffirst-coinage-featuring-king-charles-iii-released"
+            "isPortraitImage": false,
+            "id": "https%3A%2F%2Fwww.theguardian.com%2Fuk-news%2F2022%2Fdec%2F08%2Ffirst-coinage-featuring-king-charles-iii-released",
+            "visualProminence": "NORMAL",
+            "attributions": []
           },
           {
             "type": "link",
+            "isLive": false,
             "title": "Testing Type URL for promo item",
             "firstPublished": "",
+            "lastPublished": "",
             "link": "https://www.bbc.com/persian/resources/idt-8a2fc374-12d4-4875-8aa6-d3612d93af96",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/eff7/test/ccaf05b0-76f9-11ed-bd83-8f15ba358e41.jpg",
-            "description": "",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/eff7/test/ccaf05b0-76f9-11ed-bd83-8f15ba358e41.jpg.webp",
             "imageAlt": "Testing Type URL",
-            "id": "https%3A%2F%2Fwww.bbc.com%2Fpersian%2Fresources%2Fidt-8a2fc374-12d4-4875-8aa6-d3612d93af96"
-          },
-          {
-            "type": "audio",
-            "title": "Test audio",
-            "firstPublished": "2019-08-02T14:52:13.000Z",
-            "link": "https://www.test.bbc.com/mundo/23245765",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/f4f1/test/908c5110-6c03-11ed-9834-fbd1e7e99dd2.jpg",
-            "description": "Audio map page test",
-            "imageAlt": "eiffel tower",
-            "id": "4541d75e-8e91-0e4b-bf8e-3969f2ca6071"
-          },
-          {
-            "type": "video",
-            "title": "IDT url example",
-            "firstPublished": "2018-05-21T14:16:43.000Z",
-            "link": "https://www.bbc.com/persian/resources/idt-8a2fc374-12d4-4875-8aa6-d3612d93af96",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/3e77/test/f37cb210-76e4-11ed-bd83-8f15ba358e41.jpg",
-            "description": "Summary",
-            "imageAlt": "Football player",
-            "id": "4e2253b8-463b-5641-af77-07f92f84c701"
-          },
-          {
-            "type": "audio",
-            "title": "Test audio clip",
-            "firstPublished": "2022-11-22T16:43:47.000Z",
-            "link": "https://www.test.bbc.com/mundo/23539551",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/B27F/test/_63959654_p01tv72p.jpg",
-            "description": "Just testing as a demo",
-            "imageAlt": "test",
-            "id": "66e88726-1c7b-4333-a0e0-bdd58a59cd18"
+            "isPortraitImage": false,
+            "id": "https%3A%2F%2Fwww.bbc.com%2Fpersian%2Fresources%2Fidt-8a2fc374-12d4-4875-8aa6-d3612d93af96",
+            "visualProminence": "NORMAL",
+            "attributions": []
           },
           {
             "type": "article",
-            "title": "Test image gallery",
-            "firstPublished": "2022-11-22T17:23:05.000Z",
-            "link": "https://www.test.bbc.com/mundo/23539555",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/6847/test/_63959662_rogerio-toledo-redjtvanyh8-unsplash.jpg",
-            "description": "Testing image gallery for Tipo",
-            "imageAlt": "test",
-            "id": "5256bb09-a257-455a-a5c3-622702785bff"
+            "isLive": false,
+            "title": "Edited New 1226 El conflictivo pasado con Venezuela de Rex Tillerson, nuevo secretario de Estado de EEUU",
+            "firstPublished": "2017-02-03T11:26:55.000Z",
+            "lastPublished": "2017-06-20T09:30:22.000Z",
+            "link": "https://www.bbc.com/mundo/23100317",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/167B2/test/_63528029_036820129-1.jpg.webp",
+            "description": "Es posiblemente en lo único que se ponen de acuerdo gobierno y oposición en Venezuela: ambos tienen esperanzas en una mejor relación con Estados Unidos y que eso les ayude en sus objetivos contrapuestos.",
+            "imageAlt": "ExxonMobil Chairman and CEO Rex Tillerson speaks during the IHS CERAWeek 2015 energy conference in Houston, Texas April 21, 2015",
+            "isPortraitImage": false,
+            "id": "ff4f3677-0f70-574e-b129-6b3396788390",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Noticias",
+                "link": {
+                  "url": "https://www.bbc.co.uk/mundo/front_page",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/mundo/front_page"
+                }
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "isLive": false,
+            "title": "Test headline change - Test audio",
+            "firstPublished": "2019-08-02T14:52:13.000Z",
+            "lastPublished": "1990-01-01T00:00:00.000Z",
+            "link": "https://www.google.com/",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/f4f1/test/908c5110-6c03-11ed-9834-fbd1e7e99dd2.jpg.webp",
+            "description": "Test summary change - Audio map page test",
+            "imageAlt": "Test alt desc change - eiffel tower",
+            "isPortraitImage": false,
+            "id": "4541d75e-8e91-0e4b-bf8e-3969f2ca6071",
+            "visualProminence": "MINIMUM",
+            "attributions": [
+              {
+                "title": "Test attribution change"
+              }
+            ]
           },
           {
             "type": "video",
+            "duration": "PT14S",
+            "isLive": false,
+            "title": "IDT url example",
+            "firstPublished": "2018-05-21T14:16:43.000Z",
+            "lastPublished": "2018-05-21T14:16:43.000Z",
+            "link": "https://www.bbc.com/persian/resources/idt-8a2fc374-12d4-4875-8aa6-d3612d93af96",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/3e77/test/f37cb210-76e4-11ed-bd83-8f15ba358e41.jpg.webp",
+            "description": "Summary",
+            "imageAlt": "Football player",
+            "isPortraitImage": false,
+            "id": "4e2253b8-463b-5641-af77-07f92f84c701",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Internacional",
+                "link": {
+                  "url": "https://www.bbc.co.uk/mundo/internacional",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/mundo/internacional"
+                }
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "duration": "PT21S",
+            "isLive": false,
+            "title": "Test audio clip",
+            "firstPublished": "2022-11-22T16:43:47.000Z",
+            "lastPublished": "2022-11-22T16:43:47.000Z",
+            "link": "https://www.test.bbc.com/mundo/23539551",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/B27F/test/_63959654_p01tv72p.jpg.webp",
+            "description": "Just testing as a demo",
+            "imageAlt": "test",
+            "isPortraitImage": false,
+            "id": "66e88726-1c7b-4333-a0e0-bdd58a59cd18",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Noticias",
+                "link": {
+                  "url": "https://www.bbc.co.uk/mundo/front_page",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/mundo/front_page"
+                }
+              }
+            ]
+          },
+          {
+            "type": "video",
+            "duration": "PT53S",
+            "isLive": false,
             "title": "Test video article",
             "firstPublished": "2022-05-12T10:41:14.000Z",
+            "lastPublished": "2022-05-12T10:41:14.000Z",
             "link": "https://www.test.bbc.com/mundo/noticias-internacional-23452772",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/ABED/test/_63931044_p0182w7g.jpg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/ABED/test/_63931044_p0182w7g.jpg.webp",
             "description": "This is the summary",
             "imageAlt": "Keyframe #2",
-            "id": "2a8bce57-5456-4ca6-af4a-be5172718345"
+            "isPortraitImage": false,
+            "id": "2a8bce57-5456-4ca6-af4a-be5172718345",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Internacional",
+                "link": {
+                  "url": "https://www.bbc.co.uk/mundo/internacional",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/mundo/internacional"
+                }
+              }
+            ]
           }
         ],
         "activePage": 1,
@@ -102,51 +174,293 @@
         "curationId": "urn:bbc:tipo:list:d0348c91-39f5-4224-91cf-6ca9f2812376",
         "curationType": "tipo-curation",
         "position": 0,
+        "visualProminence": "MAXIMUM",
         "title": "Curation Title",
-        "visualProminence": "HIGH"
+        "visualStyle": "BANNER"
       },
       {
         "summaries": [
           {
             "type": "video",
+            "duration": "PT38S",
+            "isLive": false,
+            "title": "Mundo - Watch - Captain of HMS Ship  describes life on board",
+            "firstPublished": "2026-08-12T12:28:25.495Z",
+            "lastPublished": "2026-08-12T12:28:25.495Z",
+            "link": "https://www.bbc.com/mundo/articles/c9dkm7gg05kpo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/mpv/p01wxf61.jpg.webp",
+            "description": "Captain Ben Shipman tells people what it`s like to be at sea for months at a time.",
+            "imageAlt": "Captain on board HMS Ship",
+            "isPortraitImage": false,
+            "id": "c9dkm7gg05kpo",
+            "attributions": [
+              {
+                "title": "Mundo",
+                "link": {
+                  "url": "https://www.bbc.co.uk/mundo",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/mundo"
+                }
+              }
+            ]
+          },
+          {
+            "type": "video",
+            "duration": "PT26S",
+            "isLive": false,
+            "title": "Test SFV article Mundo",
+            "firstPublished": "2026-07-29T09:25:07.152Z",
+            "lastPublished": "2026-07-29T09:25:07.152Z",
+            "link": "https://www.bbc.com/mundo/articles/cpdkm6wyxzz2o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
+            "id": "cpdkm6wyxzz2o",
+            "attributions": [
+              {
+                "title": "Mundo",
+                "link": {
+                  "url": "https://www.bbc.co.uk/mundo",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/mundo"
+                }
+              }
+            ]
+          },
+          {
+            "type": "video",
+            "duration": "PT26S",
+            "isLive": false,
+            "title": "Test SFV article Mundo",
+            "firstPublished": "2026-07-28T08:29:48.583Z",
+            "lastPublished": "2026-07-28T08:29:48.583Z",
+            "link": "https://www.bbc.com/mundo/watch/cg1q21nll073o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
+            "id": "cg1q21nll073o",
+            "attributions": [
+              {
+                "title": "Mundo",
+                "link": {
+                  "url": "https://www.bbc.co.uk/mundo",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/mundo"
+                }
+              }
+            ]
+          },
+          {
+            "type": "video",
+            "duration": "PT30S",
+            "isLive": false,
+            "title": "Os antigos projetos secretos do Brasil para ter arma nuclear",
+            "firstPublished": "2026-03-02T15:31:02.857Z",
+            "lastPublished": "2026-03-02T15:31:02.857Z",
+            "link": "https://www.bbc.com/mundo/articles/ckpyln2dlwxo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/058d/test/c8a35930-164c-11f1-9ff6-35707aa308f2.png.webp",
+            "description": "test",
+            "imageAlt": "test",
+            "isPortraitImage": false,
+            "id": "ckpyln2dlwxo",
+            "attributions": [
+              {
+                "title": "Mundo",
+                "link": {
+                  "url": "https://www.bbc.co.uk/mundo",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/mundo"
+                }
+              }
+            ]
+          },
+          {
+            "type": "video",
+            "duration": "PT30S",
+            "isLive": false,
+            "title": "This a media article",
+            "firstPublished": "2025-05-09T09:33:36.099Z",
+            "lastPublished": "2025-05-09T09:33:36.099Z",
+            "link": "https://www.bbc.com/mundo/articles/c14rnzm8ydgo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/mpv/p01w67j6.jpg.webp",
+            "imageAlt": "Keyframe #2",
+            "isPortraitImage": false,
+            "id": "c14rnzm8ydgo",
+            "attributions": [
+              {
+                "title": "Mundo",
+                "link": {
+                  "url": "https://www.bbc.co.uk/mundo",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/mundo"
+                }
+              }
+            ]
+          },
+          {
+            "type": "video",
+            "duration": "PT14S",
+            "isLive": false,
+            "title": "test video",
+            "firstPublished": "2025-04-02T12:20:41.702Z",
+            "lastPublished": "2025-04-02T12:20:41.702Z",
+            "link": "https://www.bbc.com/mundo/articles/c88wpvnww61o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/mpv/p01wk3vr.jpg.webp",
+            "imageAlt": "Keyframe #5",
+            "isPortraitImage": true,
+            "id": "c88wpvnww61o",
+            "attributions": [
+              {
+                "title": "Mundo",
+                "link": {
+                  "url": "https://www.bbc.co.uk/mundo",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/mundo"
+                }
+              }
+            ]
+          },
+          {
+            "type": "video",
+            "duration": "PT14S",
+            "isLive": false,
+            "title": "test optimo map page v2",
+            "firstPublished": "2025-04-02T12:16:11.942Z",
+            "lastPublished": "2025-04-02T12:17:49.086Z",
+            "link": "https://www.bbc.com/mundo/articles/c9kg6lym6pqo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/mpv/p01wk3vr.jpg.webp",
+            "imageAlt": "Keyframe #5",
+            "isPortraitImage": true,
+            "id": "c9kg6lym6pqo",
+            "attributions": [
+              {
+                "title": "Mundo",
+                "link": {
+                  "url": "https://www.bbc.co.uk/mundo",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/mundo"
+                }
+              }
+            ]
+          },
+          {
+            "type": "video",
+            "duration": "PT13S",
+            "isLive": false,
+            "title": "Article with portrait video embed (1)",
+            "firstPublished": "2025-03-31T08:47:39.476Z",
+            "lastPublished": "2025-03-31T08:47:39.476Z",
+            "link": "https://www.bbc.com/mundo/articles/c2q7j652lneo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/mpv/p01wjx8s.jpg.webp",
+            "imageAlt": "Pelo menos 53 presos escaparam da prisão de Katacane, na Indonésia",
+            "isPortraitImage": true,
+            "id": "c2q7j652lneo",
+            "attributions": [
+              {
+                "title": "Mundo",
+                "link": {
+                  "url": "https://www.bbc.co.uk/mundo",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/mundo"
+                }
+              }
+            ]
+          },
+          {
+            "type": "video",
+            "duration": "PT13S",
+            "isLive": false,
+            "title": "Standalone portrait video",
+            "firstPublished": "2025-01-28T13:00:48.971Z",
+            "lastPublished": "2025-01-28T13:00:48.971Z",
+            "link": "https://www.bbc.com/mundo/articles/cw05jypnpl6o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/mpv/p01vzzf1.jpg.webp",
+            "imageAlt": "Keyframe #5",
+            "isPortraitImage": false,
+            "id": "cw05jypnpl6o",
+            "attributions": [
+              {
+                "title": "Mundo",
+                "link": {
+                  "url": "https://www.bbc.co.uk/mundo",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/mundo"
+                }
+              }
+            ]
+          },
+          {
+            "type": "video",
+            "duration": "PT59S",
+            "isLive": false,
+            "title": "Página de recursos de medios para el hackathon de servicios mundiales",
+            "firstPublished": "2023-12-13T17:56:14.192Z",
+            "lastPublished": "2023-12-13T17:56:14.192Z",
+            "link": "https://www.bbc.com/mundo/articles/c4ym969m7w1o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/mpv/p01vvs5g.jpg.webp",
+            "imageAlt": "Keyframe #1",
+            "isPortraitImage": false,
+            "id": "c4ym969m7w1o",
+            "attributions": [
+              {
+                "title": "Mundo",
+                "link": {
+                  "url": "https://www.bbc.co.uk/mundo",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/mundo"
+                }
+              }
+            ]
+          },
+          {
+            "type": "video",
+            "duration": "PT30S",
+            "isLive": false,
+            "title": "Video test",
+            "firstPublished": "2023-06-21T13:57:38.631Z",
+            "lastPublished": "2023-06-21T13:57:38.631Z",
+            "link": "https://www.bbc.com/mundo/articles/cj1jep0y2gwo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
+            "id": "cj1jep0y2gwo",
+            "attributions": [
+              {
+                "title": "Mundo",
+                "link": {
+                  "url": "https://www.bbc.co.uk/mundo",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/mundo"
+                }
+              }
+            ]
+          },
+          {
+            "type": "video",
             "duration": "PT54S",
+            "isLive": false,
             "title": "Mundo Media (use proxy to see ads)",
             "firstPublished": "2023-01-30T16:00:23.205Z",
+            "lastPublished": "2023-03-28T14:41:43.469Z",
             "link": "https://www.bbc.com/mundo/articles/c1ep2gnx45qo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "",
-            "imageAlt": "",
-            "id": "c1ep2gnx45qo"
-          },
-          {
-            "type": "video",
-            "title": "El video de prueba",
-            "firstPublished": "2022-05-12T10:41:21.000Z",
-            "link": "https://www.bbc.com/mundo/23048701",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/FA0D/test/_63931046_p00wjk8v.jpg",
-            "description": "Es porque le falta el sumario?",
-            "imageAlt": "Al Tag",
-            "id": "c696c8a1-8939-3e4b-b87b-5aa1de1b4c96"
-          },
-          {
-            "type": "video",
-            "title": "Anuncio del acuerdo",
-            "firstPublished": "2022-05-12T10:41:14.000Z",
-            "link": "https://www.bbc.com/mundo/noticias-internacional-23452772",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/ABED/test/_63931044_p0182w7g.jpg",
-            "description": "This is the summary",
-            "imageAlt": "Keyframe #2",
-            "id": "2a8bce57-5456-4ca6-af4a-be5172718345"
-          },
-          {
-            "type": "video",
-            "title": "Hippopotamos tomando el sol",
-            "firstPublished": "2022-05-12T10:41:02.000Z",
-            "link": "https://www.bbc.com/mundo/noticias-america-latina-23049956",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/1482D/test/_63931048_p012z4jy.jpg",
-            "description": "Two baby hippos have been born at a zoo in Mexico.",
-            "imageAlt": "Two baby hippos have been born at a zoo in Mexico.",
-            "id": "04107481-098f-6f49-a710-fc5494bf7991"
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
+            "id": "c1ep2gnx45qo",
+            "attributions": [
+              {
+                "title": "Mundo",
+                "link": {
+                  "url": "https://www.bbc.co.uk/mundo",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/mundo"
+                }
+              }
+            ]
           }
         ],
         "activePage": 1,
@@ -154,181 +468,143 @@
         "curationId": "urn:bbc:vivo:curation:22f2633b-f31e-4195-81d6-5dd5f766ca42",
         "curationType": "vivo-stream",
         "position": 1,
+        "visualProminence": "NORMAL",
         "title": "Video",
-        "visualProminence": "NORMAL"
+        "visualStyle": "NONE"
       },
       {
-        "summaries": [
-          {
-            "type": "article",
-            "title": "Edited New 1226 El conflictivo pasado con Venezuela de Rex Tillerson, nuevo secretario de Estado de EEUU",
-            "firstPublished": "2017-02-03T11:26:55.000Z",
-            "link": "https://www.bbc.com/mundo/23100317",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/167B2/test/_63528029_036820129-1.jpg",
-            "description": "Es posiblemente en lo único que se ponen de acuerdo gobierno y oposición en Venezuela: ambos tienen esperanzas en una mejor relación con Estados Unidos y que eso les ayude en sus objetivos contrapuestos.",
-            "imageAlt": "ExxonMobil Chairman and CEO Rex Tillerson speaks during the IHS CERAWeek 2015 energy conference in Houston, Texas April 21, 2015",
-            "id": "ff4f3677-0f70-574e-b129-6b3396788390"
-          },
-          {
-            "type": "link",
-            "title": "Promo: Testing Type URL for external sites",
-            "firstPublished": "",
-            "link": "https://www.theguardian.com/uk-news/2022/dec/08/first-coinage-featuring-king-charles-iii-released",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/3502/test/0c533a40-770b-11ed-bd83-8f15ba358e41.jpg",
-            "description": "",
-            "imageAlt": "Testing Type URL (external) for promo item",
-            "id": "https%3A%2F%2Fwww.theguardian.com%2Fuk-news%2F2022%2Fdec%2F08%2Ffirst-coinage-featuring-king-charles-iii-released"
-          },
-          {
-            "type": "link",
-            "title": "Testing Type URL for promo item",
-            "firstPublished": "",
-            "link": "https://www.bbc.com/persian/resources/idt-8a2fc374-12d4-4875-8aa6-d3612d93af96",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/eff7/test/ccaf05b0-76f9-11ed-bd83-8f15ba358e41.jpg",
-            "description": "",
-            "imageAlt": "Testing Type URL",
-            "id": "https%3A%2F%2Fwww.bbc.com%2Fpersian%2Fresources%2Fidt-8a2fc374-12d4-4875-8aa6-d3612d93af96"
-          },
-          {
-            "type": "video",
-            "title": "IDT url example",
-            "firstPublished": "2018-05-21T14:16:43.000Z",
-            "link": "https://www.bbc.com/persian/resources/idt-8a2fc374-12d4-4875-8aa6-d3612d93af96",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/3e77/test/f37cb210-76e4-11ed-bd83-8f15ba358e41.jpg",
-            "description": "Summary",
-            "imageAlt": "Football player",
-            "id": "4e2253b8-463b-5641-af77-07f92f84c701"
-          },
-          {
-            "type": "audio",
-            "title": "Test audio clip",
-            "firstPublished": "2022-11-22T16:43:47.000Z",
-            "link": "https://www.test.bbc.com/mundo/23539551",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/B27F/test/_63959654_p01tv72p.jpg",
-            "description": "Just testing as a demo",
-            "imageAlt": "test",
-            "id": "66e88726-1c7b-4333-a0e0-bdd58a59cd18"
-          },
-          {
-            "type": "article",
-            "title": "Test image gallery",
-            "firstPublished": "2022-11-22T17:23:05.000Z",
-            "link": "https://www.test.bbc.com/mundo/23539555",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/6847/test/_63959662_rogerio-toledo-redjtvanyh8-unsplash.jpg",
-            "description": "Testing image gallery for Tipo",
-            "imageAlt": "test",
-            "id": "5256bb09-a257-455a-a5c3-622702785bff"
-          },
-          {
-            "type": "video",
-            "title": "Test video article",
-            "firstPublished": "2022-05-12T10:41:14.000Z",
-            "link": "https://www.test.bbc.com/mundo/noticias-internacional-23452772",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/ABED/test/_63931044_p0182w7g.jpg",
-            "description": "This is the summary",
-            "imageAlt": "Keyframe #2",
-            "id": "2a8bce57-5456-4ca6-af4a-be5172718345"
-          },
-          {
-            "type": "article",
-            "title": "El poder del \"chilango\" llegó a Londres 14",
-            "firstPublished": "2016-05-05T07:38:30.000Z",
-            "link": "https://www.bbc.com/mundo/vert-earth-23038377",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/17654/test/_63482859_orange1.jpg",
-            "description": "A Los de Abajo los encontramos en el legendario Marquee de Londres, casa de grandes como Jimi Hendrix, U2, REM y The Who.",
-            "imageAlt": "Orange 1",
-            "id": "ae7c9f51-3144-ba4b-a881-f88822b36c8c"
-          }
-        ],
+        "summaries": [],
         "activePage": 1,
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:d0348c91-39f5-4224-91cf-6ca9f2812376",
         "curationType": "tipo-curation",
         "position": 2,
+        "visualProminence": "NORMAL",
         "title": "Analysis",
-        "visualProminence": "NORMAL"
+        "visualStyle": "NONE"
       },
       {
         "summaries": [
           {
             "type": "video",
+            "isLive": false,
             "title": "El video de prueba",
             "firstPublished": "2022-05-12T10:41:21.000Z",
+            "lastPublished": "2022-05-12T10:41:21.000Z",
             "link": "https://www.bbc.com/mundo/23048701",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/FA0D/test/_63931046_p00wjk8v.jpg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/FA0D/test/_63931046_p00wjk8v.jpg.webp",
             "description": "Es porque le falta el sumario?",
             "imageAlt": "Al Tag",
-            "id": "c696c8a1-8939-3e4b-b87b-5aa1de1b4c96"
+            "isPortraitImage": false,
+            "id": "c696c8a1-8939-3e4b-b87b-5aa1de1b4c96",
+            "attributions": [
+              {
+                "title": "Noticias",
+                "link": {
+                  "url": "https://www.bbc.co.uk/mundo/front_page",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/mundo/front_page"
+                }
+              }
+            ]
           },
           {
             "type": "video",
-            "title": "Anuncio del acuerdo",
-            "firstPublished": "2022-05-12T10:41:14.000Z",
-            "link": "https://www.bbc.com/mundo/noticias-internacional-23452772",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/ABED/test/_63931044_p0182w7g.jpg",
-            "description": "This is the summary",
-            "imageAlt": "Keyframe #2",
-            "id": "2a8bce57-5456-4ca6-af4a-be5172718345"
-          },
-          {
-            "type": "video",
+            "isLive": false,
             "title": "Hippopotamos tomando el sol",
             "firstPublished": "2022-05-12T10:41:02.000Z",
+            "lastPublished": "2022-05-12T10:41:02.000Z",
             "link": "https://www.bbc.com/mundo/noticias-america-latina-23049956",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/1482D/test/_63931048_p012z4jy.jpg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/1482D/test/_63931048_p012z4jy.jpg.webp",
             "description": "Two baby hippos have been born at a zoo in Mexico.",
             "imageAlt": "Two baby hippos have been born at a zoo in Mexico.",
-            "id": "04107481-098f-6f49-a710-fc5494bf7991"
+            "isPortraitImage": false,
+            "id": "04107481-098f-6f49-a710-fc5494bf7991",
+            "attributions": [
+              {
+                "title": "América Latina",
+                "link": {
+                  "url": "https://www.bbc.co.uk/mundo/america_latina",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/mundo/america_latina"
+                }
+              }
+            ]
           },
           {
             "type": "audio",
+            "duration": "PT2M7S",
+            "isLive": false,
             "title": "Un pagina de video de prueba",
             "firstPublished": "2020-04-01T13:44:41.000Z",
+            "lastPublished": "2020-04-01T13:44:41.000Z",
             "link": "https://www.bbc.com/mundo/media-23283126",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/0D05/test/_63733330_p01mt2kt.jpg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/0D05/test/_63733330_p01mt2kt.jpg.webp",
             "description": "test",
             "imageAlt": "England star Fran Kirby",
-            "id": "22720ea0-aaf8-8749-afa1-a0b36a632a71"
-          },
-          {
-            "type": "article",
-            "title": "¿Cuán viable es que el petro, la criptomoneda de Venezuela, sirva para aliviar la crisis en el país?",
-            "firstPublished": "2018-06-28T10:07:24.000Z",
-            "link": "https://www.bbc.com/mundo/noticias-america-latina-23206504",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/105E0/test/_63604076_000233729-1.jpg",
-            "description": "El presidente de Venezuela anuncia la creación del petro, una criptomoneda respaldada en \"petróleo, oro, gas y diamantes\"",
-            "imageAlt": "A group of venezuelan protesters with banners",
-            "id": "c9f32707-e700-ea45-b009-5834a3d27190"
-          },
-          {
-            "type": "article",
-            "title": "El conflictivo pasado con Venezuela de Rex Tillerson, nuevo secretario de Estado de EEUU",
-            "firstPublished": "2017-02-03T11:26:55.000Z",
-            "link": "https://www.bbc.com/mundo/23100317",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/167B2/test/_63528029_036820129-1.jpg",
-            "description": "Es posiblemente en lo único que se ponen de acuerdo gobierno y oposición en Venezuela: ambos tienen esperanzas en una mejor relación con Estados Unidos y que eso les ayude en sus objetivos contrapuestos.",
-            "imageAlt": "ExxonMobil Chairman and CEO Rex Tillerson speaks during the IHS CERAWeek 2015 energy conference in Houston, Texas April 21, 2015",
-            "id": "ff4f3677-0f70-574e-b129-6b3396788390"
+            "isPortraitImage": false,
+            "id": "22720ea0-aaf8-8749-afa1-a0b36a632a71",
+            "attributions": [
+              {
+                "title": "Media",
+                "link": {
+                  "url": "https://www.bbc.co.uk/mundo/media",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/mundo/media"
+                }
+              }
+            ]
           },
           {
             "type": "video",
+            "isLive": false,
             "title": "Otro video",
             "firstPublished": "2016-06-06T20:04:53.000Z",
+            "lastPublished": "2016-06-06T20:04:53.000Z",
             "link": "https://www.bbc.com/mundo/noticias-america-latina-23050039",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/79D4/test/_63488113_p013p2z1.jpg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/79D4/test/_63488113_p013p2z1.jpg.webp",
             "description": "Bu, tek başına hayatta kalma mücadelesi veren 16 yaşındaki Suriyeli bir göçmen çocuğun hikayesi...",
             "imageAlt": "Keyframe #1",
-            "id": "aa301157-71b6-2e48-a783-c873f7a15650"
+            "isPortraitImage": false,
+            "id": "aa301157-71b6-2e48-a783-c873f7a15650",
+            "attributions": [
+              {
+                "title": "América Latina",
+                "link": {
+                  "url": "https://www.bbc.co.uk/mundo/america_latina",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/mundo/america_latina"
+                }
+              }
+            ]
           },
           {
             "type": "audio",
+            "isLive": false,
             "title": "¿Por qué dejarán de sonar las campanas del Big Ben?",
             "firstPublished": "2016-05-04T12:42:40.000Z",
+            "lastPublished": "2016-05-04T12:42:40.000Z",
             "link": "https://www.bbc.com/mundo/deportes-23038138",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/17DC0/test/_63482779_p0133f26.jpg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/17DC0/test/_63482779_p0133f26.jpg.webp",
             "description": "En esta nueva serie, los periodistas de la BBC te ayudan a practicar inglés con los titulares de las noticias de la semana. Mira el video y aprende nuevo vocabulario.",
             "imageAlt": "Aprende inglés con las noticias",
-            "id": "fb03a8e4-6993-8e4e-9fc0-bd94eca3c31f"
+            "isPortraitImage": false,
+            "id": "fb03a8e4-6993-8e4e-9fc0-bd94eca3c31f",
+            "attributions": [
+              {
+                "title": "Deportes",
+                "link": {
+                  "url": "https://www.bbc.co.uk/mundo/deportes",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/mundo/deportes"
+                }
+              }
+            ]
           }
         ],
         "activePage": 1,
@@ -336,174 +612,48 @@
         "curationId": "urn:bbc:vivo:curation:8c1500fa-88b3-4465-98f0-76e69259ed9e",
         "curationType": "vivo-stream",
         "position": 3,
+        "visualProminence": "HIGH",
         "title": "Vivo Curation",
-        "visualProminence": "HIGH"
+        "visualStyle": "NONE"
       },
       {
-        "summaries": [
-          {
-            "type": "link",
-            "title": "Promo: Testing Type URL for external sites",
-            "firstPublished": "",
-            "link": "https://www.theguardian.com/uk-news/2022/dec/08/first-coinage-featuring-king-charles-iii-released",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/3502/test/0c533a40-770b-11ed-bd83-8f15ba358e41.jpg",
-            "description": "",
-            "imageAlt": "Testing Type URL (external) for promo item",
-            "id": "https%3A%2F%2Fwww.theguardian.com%2Fuk-news%2F2022%2Fdec%2F08%2Ffirst-coinage-featuring-king-charles-iii-released"
-          },
-          {
-            "type": "link",
-            "title": "Testing Type URL for promo item",
-            "firstPublished": "",
-            "link": "https://www.bbc.com/persian/resources/idt-8a2fc374-12d4-4875-8aa6-d3612d93af96",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/eff7/test/ccaf05b0-76f9-11ed-bd83-8f15ba358e41.jpg",
-            "description": "",
-            "imageAlt": "Testing Type URL",
-            "id": "https%3A%2F%2Fwww.bbc.com%2Fpersian%2Fresources%2Fidt-8a2fc374-12d4-4875-8aa6-d3612d93af96"
-          },
-          {
-            "type": "audio",
-            "title": "Test audio",
-            "firstPublished": "2019-08-02T14:52:13.000Z",
-            "link": "https://www.test.bbc.com/mundo/23245765",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/f4f1/test/908c5110-6c03-11ed-9834-fbd1e7e99dd2.jpg",
-            "description": "Audio map page test",
-            "imageAlt": "eiffel tower",
-            "id": "4541d75e-8e91-0e4b-bf8e-3969f2ca6071"
-          },
-          {
-            "type": "audio",
-            "title": "Test audio clip",
-            "firstPublished": "2022-11-22T16:43:47.000Z",
-            "link": "https://www.test.bbc.com/mundo/23539551",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/B27F/test/_63959654_p01tv72p.jpg",
-            "description": "Just testing as a demo",
-            "imageAlt": "test",
-            "id": "66e88726-1c7b-4333-a0e0-bdd58a59cd18"
-          },
-          {
-            "type": "article",
-            "title": "Test image gallery",
-            "firstPublished": "2022-11-22T17:23:05.000Z",
-            "link": "https://www.test.bbc.com/mundo/23539555",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/6847/test/_63959662_rogerio-toledo-redjtvanyh8-unsplash.jpg",
-            "description": "Testing image gallery for Tipo",
-            "imageAlt": "test",
-            "id": "5256bb09-a257-455a-a5c3-622702785bff"
-          },
-          {
-            "type": "video",
-            "title": "Test video article",
-            "firstPublished": "2022-05-12T10:41:14.000Z",
-            "link": "https://www.test.bbc.com/mundo/noticias-internacional-23452772",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/ABED/test/_63931044_p0182w7g.jpg",
-            "description": "This is the summary",
-            "imageAlt": "Keyframe #2",
-            "id": "2a8bce57-5456-4ca6-af4a-be5172718345"
-          },
-          {
-            "type": "article",
-            "title": "El poder del \"chilango\" llegó a Londres 14",
-            "firstPublished": "2016-05-05T07:38:30.000Z",
-            "link": "https://www.bbc.com/mundo/vert-earth-23038377",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/17654/test/_63482859_orange1.jpg",
-            "description": "A Los de Abajo los encontramos en el legendario Marquee de Londres, casa de grandes como Jimi Hendrix, U2, REM y The Who.",
-            "imageAlt": "Orange 1",
-            "id": "ae7c9f51-3144-ba4b-a881-f88822b36c8c"
-          }
-        ],
+        "summaries": [],
         "activePage": 1,
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:d0348c91-39f5-4224-91cf-6ca9f2812376",
         "curationType": "tipo-curation",
         "position": 4,
+        "visualProminence": "HIGH",
         "title": "Number 5",
-        "visualProminence": "HIGH"
+        "visualStyle": "NONE"
       },
       {
-        "summaries": [
-          {
-            "type": "link",
-            "title": "Promo: Testing Type URL for external sites",
-            "firstPublished": "",
-            "link": "https://www.theguardian.com/uk-news/2022/dec/08/first-coinage-featuring-king-charles-iii-released",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/3502/test/0c533a40-770b-11ed-bd83-8f15ba358e41.jpg",
-            "description": "",
-            "imageAlt": "Testing Type URL (external) for promo item",
-            "id": "https%3A%2F%2Fwww.theguardian.com%2Fuk-news%2F2022%2Fdec%2F08%2Ffirst-coinage-featuring-king-charles-iii-released"
-          },
-          {
-            "type": "link",
-            "title": "Testing Type URL for promo item",
-            "firstPublished": "",
-            "link": "https://www.bbc.com/persian/resources/idt-8a2fc374-12d4-4875-8aa6-d3612d93af96",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/eff7/test/ccaf05b0-76f9-11ed-bd83-8f15ba358e41.jpg",
-            "description": "",
-            "imageAlt": "Testing Type URL",
-            "id": "https%3A%2F%2Fwww.bbc.com%2Fpersian%2Fresources%2Fidt-8a2fc374-12d4-4875-8aa6-d3612d93af96"
-          },
-          {
-            "type": "video",
-            "title": "IDT url example",
-            "firstPublished": "2018-05-21T14:16:43.000Z",
-            "link": "https://www.bbc.com/persian/resources/idt-8a2fc374-12d4-4875-8aa6-d3612d93af96",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/3e77/test/f37cb210-76e4-11ed-bd83-8f15ba358e41.jpg",
-            "description": "Summary",
-            "imageAlt": "Football player",
-            "id": "4e2253b8-463b-5641-af77-07f92f84c701"
-          },
-          {
-            "type": "audio",
-            "title": "Test audio clip",
-            "firstPublished": "2022-11-22T16:43:47.000Z",
-            "link": "https://www.test.bbc.com/mundo/23539551",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/B27F/test/_63959654_p01tv72p.jpg",
-            "description": "Just testing as a demo",
-            "imageAlt": "test",
-            "id": "66e88726-1c7b-4333-a0e0-bdd58a59cd18"
-          },
-          {
-            "type": "article",
-            "title": "Test image gallery",
-            "firstPublished": "2022-11-22T17:23:05.000Z",
-            "link": "https://www.test.bbc.com/mundo/23539555",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/6847/test/_63959662_rogerio-toledo-redjtvanyh8-unsplash.jpg",
-            "description": "Testing image gallery for Tipo",
-            "imageAlt": "test",
-            "id": "5256bb09-a257-455a-a5c3-622702785bff"
-          },
-          {
-            "type": "video",
-            "title": "Test video article",
-            "firstPublished": "2022-05-12T10:41:14.000Z",
-            "link": "https://www.test.bbc.com/mundo/noticias-internacional-23452772",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/ABED/test/_63931044_p0182w7g.jpg",
-            "description": "This is the summary",
-            "imageAlt": "Keyframe #2",
-            "id": "2a8bce57-5456-4ca6-af4a-be5172718345"
-          },
-          {
-            "type": "article",
-            "title": "El poder del \"chilango\" llegó a Londres 14",
-            "firstPublished": "2016-05-05T07:38:30.000Z",
-            "link": "https://www.bbc.com/mundo/vert-earth-23038377",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/17654/test/_63482859_orange1.jpg",
-            "description": "A Los de Abajo los encontramos en el legendario Marquee de Londres, casa de grandes como Jimi Hendrix, U2, REM y The Who.",
-            "imageAlt": "Orange 1",
-            "id": "ae7c9f51-3144-ba4b-a881-f88822b36c8c"
-          }
-        ],
+        "summaries": [],
         "activePage": 1,
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:d0348c91-39f5-4224-91cf-6ca9f2812376",
         "curationType": "tipo-curation",
         "position": 5,
+        "visualProminence": "NORMAL",
         "title": "Number 6",
-        "visualProminence": "NORMAL"
+        "visualStyle": "NONE"
       }
     ],
     "activePage": 1,
-    "pageCount": 1
+    "pageCount": 1,
+    "metadata": {
+      "analytics": {
+        "name": "mundo.topics.c1en6xwmpkvt.page",
+        "producer": "MUNDO",
+        "contributors": ["Mundo", "Mundo - TOP"]
+      },
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:c1en6xwmpkvt",
+        "contentType": "index-category",
+        "pageIdentifier": "mundo.topics.c1en6xwmpkvt.page",
+        "pageTitle": "Colombia Peace Agreement - non SEO"
+      }
+    }
   },
   "contentType": "application/json; charset=utf-8"
 }

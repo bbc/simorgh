@@ -8,4 +8,5 @@ export interface CurationGridProps {
   eventTrackingData: EventTrackingData;
   // experiment: newswb_ws_homepage_related_topic_promos
   showRelatedTopicExperiment?: boolean;
+  isVideoCollection?: boolean;
 }

@@ -1,6 +1,50 @@
+import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
 
 const styles = {
+  videoCollection: ({ mq, palette, spacings }: Theme) =>
+    css({
+      '.promo-image': {
+        position: 'relative',
+        'div div:last-child': {
+          position: 'absolute',
+          bottom: 0,
+          insetInlineStart: 0,
+          zIndex: 1,
+          div: {
+            display: 'flex',
+            alignItems: 'center',
+            gap: '0.25rem',
+            backgroundColor: palette.WHITE,
+            svg: {
+              position: 'static',
+              color: palette.GREY_10,
+            },
+            time: {
+              margin: 0,
+              color: palette.GREY_10,
+            },
+          },
+        },
+        [mq.GROUP_0_MAX_WIDTH]: {
+          width: '100%',
+          display: 'inline-block',
+          verticalAlign: 'top',
+          paddingBottom: `${spacings.FULL}rem`,
+          'div div:last-child': {
+            div: {
+              width: `${pixelsToRem(77)}rem`,
+              height: `${pixelsToRem(34)}rem`,
+            },
+          },
+        },
+        // [mq.GROUP_1_MAX_WIDTH]: {
+        //   width: '100%',
+        //   display: 'inline-block',
+        //   verticalAlign: 'top',
+        // },
+      },
+    }),
   list: ({ isLite }: Theme) =>
     css({
       listStyleType: 'none',
