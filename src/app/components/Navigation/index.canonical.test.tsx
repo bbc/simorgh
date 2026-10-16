@@ -123,11 +123,21 @@ describe('Navigation - Canonical', () => {
 
   describe('sticky navigation', () => {
     const defaultMediaQuery = window.matchMedia('');
+    const REDUCED_MOTION_QUERY = '(prefers-reduced-motion: reduce)';
+    const LANDSCAPE_QUERY = '(orientation: landscape) and (max-height: 500px)';
+    const nonMatchingByDefault = [REDUCED_MOTION_QUERY, LANDSCAPE_QUERY];
+    const defaultMatchMediaImplementation = (query: string) => ({
+      ...defaultMediaQuery,
+      media: query,
+      matches: nonMatchingByDefault.includes(query)
+        ? false
+        : defaultMediaQuery.matches,
+    });
     const enableMotion = () => {
       jest.mocked(window.matchMedia).mockImplementation(query => ({
         ...defaultMediaQuery,
         media: query,
-        matches: query !== '(prefers-reduced-motion: reduce)',
+        matches: !nonMatchingByDefault.includes(query),
       }));
     };
     const stickyOptions = {
@@ -135,15 +145,23 @@ describe('Navigation - Canonical', () => {
       pageType: HOME_PAGE,
       toggles: toggleConfigs.test,
     };
-    const scrollTo = (scrollY: number) => {
+    // Settles the full, non-reduced-motion slide-in animation (scroll
+    // handler rAF + two nested position rAFs). Each animation frame is only
+    // scheduled once the previous one's effect has committed, so the advance
+    // is split across several separate `act` flushes rather than a single
+    // large one. Pass a lower `frames` count to inspect an intermediate,
+    // not-yet-animated state instead.
+    const scrollTo = (scrollY: number, frames = 4) => {
       Object.defineProperty(window, 'scrollY', {
         configurable: true,
         value: scrollY,
       });
       fireEvent.scroll(window);
-      act(() => {
-        jest.advanceTimersByTime(20);
-      });
+      for (let frame = 0; frame < frames; frame += 1) {
+        act(() => {
+          jest.advanceTimersByTime(20);
+        });
+      }
     };
 
     const articleNavigation = (
@@ -161,7 +179,7 @@ describe('Navigation - Canonical', () => {
       jest.useFakeTimers();
       jest
         .mocked(window.matchMedia)
-        .mockImplementation(query => ({ ...defaultMediaQuery, media: query }));
+        .mockImplementation(defaultMatchMediaImplementation);
       Object.defineProperty(window, 'scrollY', {
         configurable: true,
         value: 0,
@@ -196,7 +214,11 @@ describe('Navigation - Canonical', () => {
         jest.mocked(window.matchMedia).mockImplementation(query => ({
           ...defaultMediaQuery,
           media: query,
-          matches: query === '(min-width: 300px)' ? width >= 300 : true,
+          matches:
+            // eslint-disable-next-line no-nested-ternary
+            query === '(min-width: 300px)'
+              ? width >= 300
+              : !nonMatchingByDefault.includes(query),
         }));
         const { container } = render(navigation, stickyOptions);
         scrollTo(500);
@@ -226,7 +248,7 @@ describe('Navigation - Canonical', () => {
         .mockImplementation(query =>
           query === mediaQuery.media
             ? mediaQuery
-            : { ...defaultMediaQuery, media: query },
+            : defaultMatchMediaImplementation(query),
         );
       const { container } = render(navigation, stickyOptions);
       scrollTo(500);
@@ -252,6 +274,49 @@ describe('Navigation - Canonical', () => {
       expect(
         container.querySelector('[data-e2e="sticky-nav"]'),
       ).toHaveAttribute('data-sticky-visible', 'true');
+    });
+
+    it('disables sticky navigation above the 1007px desktop breakpoint', () => {
+      jest.mocked(window.matchMedia).mockImplementation(query => ({
+        ...defaultMediaQuery,
+        media: query,
+        matches:
+          // eslint-disable-next-line no-nested-ternary
+          query === '(max-width: 1007px)'
+            ? false
+            : !nonMatchingByDefault.includes(query),
+      }));
+      const { container } = render(navigation, stickyOptions);
+      scrollTo(500);
+      scrollTo(450);
+
+      expect(container.querySelector('[data-e2e="sticky-nav"]')).toBeNull();
+    });
+
+    it('disables sticky navigation in constrained-height landscape orientation', () => {
+      jest.mocked(window.matchMedia).mockImplementation(query => ({
+        ...defaultMediaQuery,
+        media: query,
+        matches: query === LANDSCAPE_QUERY,
+      }));
+      const { container } = render(navigation, stickyOptions);
+      scrollTo(500);
+      scrollTo(450);
+
+      expect(container.querySelector('[data-e2e="sticky-nav"]')).toBeNull();
+    });
+
+    it('disables sticky navigation entirely when the user prefers reduced motion', () => {
+      jest.mocked(window.matchMedia).mockImplementation(query => ({
+        ...defaultMediaQuery,
+        media: query,
+        matches: query === REDUCED_MOTION_QUERY,
+      }));
+      const { container } = render(navigation, stickyOptions);
+      scrollTo(500);
+      scrollTo(450);
+
+      expect(container.querySelector('[data-e2e="sticky-nav"]')).toBeNull();
     });
 
     it.each<Services>([
@@ -385,7 +450,7 @@ describe('Navigation - Canonical', () => {
       scrollTo(500);
       expect(stickyNav).not.toHaveStyle({ position: 'fixed' });
 
-      scrollTo(450);
+      scrollTo(450, 1);
       expect(stickyNav).toHaveStyle({ position: 'fixed' });
       expect(stickyNav).toHaveStyle({ transform: 'translateY(-100%)' });
       expect(stickyNav).toHaveAttribute('data-sticky-visible', 'false');
@@ -442,7 +507,7 @@ describe('Navigation - Canonical', () => {
       act(() => {
         jest.advanceTimersByTime(400);
       });
-      scrollTo(450);
+      scrollTo(450, 1);
 
       expect(stickyNav).not.toHaveAttribute('hidden');
       expect(stickyNav).toHaveAttribute('data-sticky-visible', 'false');
@@ -613,6 +678,9 @@ describe('Navigation - Canonical', () => {
         });
 
         scrollTo(400);
+        act(() => {
+          jest.advanceTimersByTime(400);
+        });
 
         expect(slot).not.toHaveStyle({ height: '88px' });
         expect(slot?.firstElementChild).not.toHaveStyle({
@@ -644,8 +712,67 @@ describe('Navigation - Canonical', () => {
     it('allows sticky navigation to appear on scroll-up after keyboard navigation without pointer interaction', () => {
       const { container } = render(navigation, stickyOptions);
       fireEvent.keyDown(window, { key: 'Tab' });
+      act(() => {
+        jest.advanceTimersByTime(500);
+      });
       scrollTo(500);
       scrollTo(450);
+
+      expect(
+        container.querySelector('[data-e2e="sticky-nav"]'),
+      ).toHaveAttribute('data-sticky-visible', 'true');
+    });
+
+    it('does not activate sticky navigation when a forward Tab press causes an incidental upward scroll correction', () => {
+      const { container } = render(navigation, stickyOptions);
+      scrollTo(500);
+      fireEvent.keyDown(window, { key: 'Tab' });
+      scrollTo(450);
+
+      expect(
+        container.querySelector('[data-e2e="sticky-nav"]'),
+      ).toHaveAttribute('data-sticky-visible', 'false');
+    });
+
+    it('still activates sticky navigation on scroll-up after Shift+Tab (backward) keyboard navigation', () => {
+      const { container } = render(navigation, stickyOptions);
+      scrollTo(500);
+      fireEvent.keyDown(window, { key: 'Tab', shiftKey: true });
+      scrollTo(450);
+
+      expect(
+        container.querySelector('[data-e2e="sticky-nav"]'),
+      ).toHaveAttribute('data-sticky-visible', 'true');
+    });
+
+    it.each(['ArrowUp', 'PageUp', 'Home'])(
+      'activates sticky navigation on scroll-up after purposeful %s keyboard navigation',
+      key => {
+        const { container } = render(navigation, stickyOptions);
+        scrollTo(500);
+        fireEvent.keyDown(window, { key });
+        scrollTo(450);
+
+        expect(
+          container.querySelector('[data-e2e="sticky-nav"]'),
+        ).toHaveAttribute('data-sticky-visible', 'true');
+      },
+    );
+
+    it('allows a later genuine scroll-up to activate sticky navigation once the forward Tab suppression window has elapsed', () => {
+      const { container } = render(navigation, stickyOptions);
+      scrollTo(500);
+      fireEvent.keyDown(window, { key: 'Tab' });
+      scrollTo(450);
+
+      expect(
+        container.querySelector('[data-e2e="sticky-nav"]'),
+      ).toHaveAttribute('data-sticky-visible', 'false');
+
+      act(() => {
+        jest.advanceTimersByTime(500);
+      });
+      scrollTo(400);
 
       expect(
         container.querySelector('[data-e2e="sticky-nav"]'),
@@ -683,6 +810,28 @@ describe('Navigation - Canonical', () => {
       const topBar = screen.getByTestId('top-bar-onward-journeys');
       expect(topBar.closest('[data-e2e="sticky-nav"]')).toBeNull();
       expect(container).toContainElement(topBar);
+    });
+
+    it('does not create a duplicate navigation landmark for Top Bar onward journeys', () => {
+      render(
+        // @ts-expect-error partial data for testing purposes
+        <CanonicalNavigation {...navigationProps} blocks={blocks} />,
+        stickyOptions,
+      );
+
+      expect(screen.getAllByRole('navigation')).toHaveLength(1);
+    });
+
+    it('offsets keyboard scrolling by the sticky nav height while it is visible', () => {
+      render(articleNavigation, { ...stickyOptions, pageType: ARTICLE_PAGE });
+      scrollTo(500);
+      scrollTo(450);
+
+      expect(document.documentElement.style.scrollPaddingTop).toBe('88px');
+
+      scrollTo(500);
+
+      expect(document.documentElement.style.scrollPaddingTop).toBe('');
     });
 
     it('cancels a pending scroll update when unmounted', () => {

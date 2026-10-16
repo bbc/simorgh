@@ -19,6 +19,17 @@ import styles from './index.styles';
 const STICKY_NAV_CLEARANCE = 65;
 const STICKY_TRANSITION_DURATION = 400;
 const STICKY_MIN_WIDTH_QUERY = '(min-width: 300px)';
+const STICKY_MAX_WIDTH_QUERY = '(max-width: 1007px)';
+const STICKY_REDUCED_MOTION_QUERY = '(prefers-reduced-motion: reduce)';
+const STICKY_LANDSCAPE_QUERY =
+  '(orientation: landscape) and (max-height: 500px)';
+// Native focus-driven corrective scrolling (e.g. the browser nudging the
+// viewport to reveal a newly Tab-focused element) can span more than one
+// animation frame and may fire several 'scroll' events before it settles.
+// Ignore upward scroll direction for sticky nav activation for this long
+// after a forward Tab press so none of those events are mistaken for the
+// user intentionally scrolling up.
+const FORWARD_TAB_SCROLL_SUPPRESSION_MS = 400;
 const INITIAL_STICKY_STATE = { fixed: false, visible: false, height: 0 };
 
 type CanonicalNavigationContainerProps = {
@@ -44,11 +55,18 @@ const CanonicalNavigationContainer: React.FC<
   const { enabled: topBarOJsEnabled } = useToggle('topBarOJs');
   const { enabled: stickyNavigationEnabled } = useToggle('stickyNavigation');
   const [isStickyViewport, setIsStickyViewport] = useState(false);
+  const [isWithinStickyMaxWidth, setIsWithinStickyMaxWidth] = useState(false);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+  const [isStickyLandscapeConstrained, setIsStickyLandscapeConstrained] =
+    useState(false);
   const enableStickyNavigation =
     stickyNavigationEnabled &&
     (env === 'test' || env === 'local') &&
     SERVICES_WITH_STICKY_NAV.includes(service) &&
     isStickyViewport &&
+    isWithinStickyMaxWidth &&
+    !prefersReducedMotion &&
+    !isStickyLandscapeConstrained &&
     !isLite;
   const [isOpen, setIsOpen] = useState(false);
   const [stickyState, setStickyState] = useState(INITIAL_STICKY_STATE);
@@ -60,6 +78,11 @@ const CanonicalNavigationContainer: React.FC<
   const navRef = useRef<HTMLDivElement>(null);
   const dropDownNavRef = useRef<HTMLDivElement>(null);
   const bottomScrollableNavRef = useRef<HTMLDivElement>(null);
+  // Tabbing forward can make the browser nudge the viewport upward to reveal
+  // the newly focused element, which otherwise looks identical to a
+  // deliberate upward scroll. Holds the timestamp until which that should be
+  // ignored for sticky nav activation purposes.
+  const suppressForwardTabScrollUntilRef = useRef(0);
 
   const handleStickyViewportChange = useCallback(
     ({ matches }: MediaQueryList | MediaQueryListEvent) => {
@@ -69,6 +92,43 @@ const CanonicalNavigationContainer: React.FC<
     [],
   );
   useMediaQuery(STICKY_MIN_WIDTH_QUERY, handleStickyViewportChange);
+
+  const handleStickyMaxWidthChange = useCallback(
+    ({ matches }: MediaQueryList | MediaQueryListEvent) => {
+      setIsWithinStickyMaxWidth(matches);
+      if (!matches) setIsOpen(false);
+    },
+    [],
+  );
+  useMediaQuery(STICKY_MAX_WIDTH_QUERY, handleStickyMaxWidthChange);
+
+  const handleReducedMotionChange = useCallback(
+    ({ matches }: MediaQueryList | MediaQueryListEvent) => {
+      setPrefersReducedMotion(matches);
+      if (matches) setIsOpen(false);
+    },
+    [],
+  );
+  useMediaQuery(STICKY_REDUCED_MOTION_QUERY, handleReducedMotionChange);
+
+  const handleStickyLandscapeChange = useCallback(
+    ({ matches }: MediaQueryList | MediaQueryListEvent) => {
+      setIsStickyLandscapeConstrained(matches);
+      if (matches) setIsOpen(false);
+    },
+    [],
+  );
+  useMediaQuery(STICKY_LANDSCAPE_QUERY, handleStickyLandscapeChange);
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key !== 'Tab' || event.shiftKey) return;
+      suppressForwardTabScrollUntilRef.current =
+        Date.now() + FORWARD_TAB_SCROLL_SUPPRESSION_MS;
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
 
   useEffect(() => {
     if (!isStickyPositioned) setIsStickyPrepared(false);
@@ -81,16 +141,8 @@ const CanonicalNavigationContainer: React.FC<
       return undefined;
     }
 
-    const reducedMotion = window.matchMedia(
-      '(prefers-reduced-motion: reduce)',
-    ).matches;
-
     if (!stickyState.fixed) {
       setIsStickyVisible(false);
-      if (reducedMotion) {
-        setIsStickyPositioned(false);
-        return undefined;
-      }
       const timeout = window.setTimeout(
         () => setIsStickyPositioned(false),
         STICKY_TRANSITION_DURATION,
@@ -99,9 +151,9 @@ const CanonicalNavigationContainer: React.FC<
     }
 
     setIsStickyPositioned(true);
-    if (!stickyState.visible || reducedMotion) {
+    if (!stickyState.visible) {
       setIsStickyPrepared(true);
-      setIsStickyVisible(stickyState.visible);
+      setIsStickyVisible(false);
       return undefined;
     }
 
@@ -141,7 +193,9 @@ const CanonicalNavigationContainer: React.FC<
       if (!slot || !nav) return;
 
       const { scrollY } = window;
-      const scrollingUp = scrollY < scrollState.lastScrollY;
+      const scrollingUp =
+        scrollY < scrollState.lastScrollY &&
+        Date.now() >= suppressForwardTabScrollUntilRef.current;
       const scrollingDown = scrollY > scrollState.lastScrollY;
       scrollState.lastScrollY = scrollY;
 
@@ -201,6 +255,18 @@ const CanonicalNavigationContainer: React.FC<
       setIsOpen(false);
     }
   });
+
+  useEffect(() => {
+    const { documentElement } = document;
+    if (isStickyVisible) {
+      documentElement.style.scrollPaddingTop = `${stickyState.height}px`;
+    } else {
+      documentElement.style.scrollPaddingTop = '';
+    }
+    return () => {
+      documentElement.style.scrollPaddingTop = '';
+    };
+  }, [isStickyVisible, stickyState.height]);
 
   useEffect(() => {
     const handleOnBlur = (event: Event) => {
@@ -320,7 +386,11 @@ const CanonicalNavigationContainer: React.FC<
           {navigation}
         </div>
       </div>
-      {topBarOJs && <Navigation dir={dir}>{topBarOJs}</Navigation>}
+      {topBarOJs && (
+        <Navigation dir={dir} role="presentation">
+          {topBarOJs}
+        </Navigation>
+      )}
     </>
   );
 };
