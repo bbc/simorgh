@@ -11,8 +11,33 @@ import {
   MOST_READ_PAGE,
 } from '../../routes/utils/pageTypes';
 import { ReverbParamsContext, PageMetadata } from '.';
-import * as useOptimizelyVariation from '../../hooks/useOptimizelyVariation';
-import * as buildAnalyticsParamsModule from '../../lib/analyticsUtils/params/buildParams';
+import useOptimizelyVariation from '../../hooks/useOptimizelyVariation';
+import { buildAnalyticsParams } from '../../lib/analyticsUtils/params/buildParams';
+
+jest.mock('../../hooks/useOptimizelyVariation', () => {
+  const actual = jest.requireActual('../../hooks/useOptimizelyVariation');
+
+  return {
+    __esModule: true,
+    ...actual,
+    default: jest.fn(actual.default),
+  };
+});
+
+jest.mock('../../lib/analyticsUtils/params/buildParams', () => {
+  const actual = jest.requireActual(
+    '../../lib/analyticsUtils/params/buildParams',
+  );
+
+  return {
+    __esModule: true,
+    ...actual,
+    buildAnalyticsParams: jest.fn(actual.buildAnalyticsParams),
+  };
+});
+
+const mockUseOptimizelyVariation = jest.mocked(useOptimizelyVariation);
+const mockBuildAnalyticsParams = jest.mocked(buildAnalyticsParams);
 
 const pageMetadata = {
   atiAnalytics: {
@@ -265,9 +290,7 @@ describe('ReverbParamsContext', () => {
   });
 
   it('should include experiment details when present', () => {
-    jest
-      .spyOn(useOptimizelyVariation, 'default')
-      .mockImplementation(() => 'experimentVariant');
+    mockUseOptimizelyVariation.mockImplementation(() => 'experimentVariant');
 
     render(<TestComponent />, {
       pageMetadata,
@@ -346,18 +369,16 @@ describe('ReverbParamsContext', () => {
       },
     } as unknown as ResonanceBeaconConfig;
 
-    jest
-      .spyOn(buildAnalyticsParamsModule, 'buildAnalyticsParams')
-      .mockReturnValue({
-        reverbParams: {
-          params: {
-            page: { name: 'news::pidgin.news.story.51745682.page' },
-            user: { isSignedIn: false },
-          },
-          eventDetails: { eventName: 'pageView' },
+    mockBuildAnalyticsParams.mockReturnValue({
+      reverbParams: {
+        params: {
+          page: { name: 'news::pidgin.news.story.51745682.page' },
+          user: { isSignedIn: false },
         },
-        resonanceParams: mockResonanceParams,
-      });
+        eventDetails: { eventName: 'pageView' },
+      },
+      resonanceParams: mockResonanceParams,
+    });
 
     render(<TestComponent />, {
       pageMetadata,

@@ -19,7 +19,8 @@ jest.mock('#app/hooks/useHydrationDetection');
 jest.mock('#app/hooks/useToggle');
 jest.mock('js-cookie');
 jest.mock('#app/lib/uasApi/tokenRefresh/tokenManager', () => ({
-  ...jest.requireActual('#app/lib/uasApi/tokenRefresh/tokenManager'),
+  __esModule: true,
+  TOKEN_COOKIE_NAME: 'ckns_id',
   getDecodedToken: jest.fn(),
 }));
 
