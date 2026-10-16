@@ -38,6 +38,7 @@ jest.mock('../../lib/analyticsUtils/params/buildParams', () => {
 
 const mockUseOptimizelyVariation = jest.mocked(useOptimizelyVariation);
 const mockBuildAnalyticsParams = jest.mocked(buildAnalyticsParams);
+const originalSimorghAppEnv = process.env.SIMORGH_APP_ENV;
 
 const pageMetadata = {
   atiAnalytics: {
@@ -69,7 +70,16 @@ const pageMetadata = {
 } as PageMetadata;
 
 beforeEach(() => {
+  delete process.env.SIMORGH_APP_ENV;
   jest.clearAllMocks();
+});
+
+afterEach(() => {
+  if (originalSimorghAppEnv === undefined) {
+    delete process.env.SIMORGH_APP_ENV;
+  } else {
+    process.env.SIMORGH_APP_ENV = originalSimorghAppEnv;
+  }
 });
 
 const TestComponent = () => {

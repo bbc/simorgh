@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { use } from 'react';
+import Cookie from 'js-cookie';
 import { IdctaConfig } from '#app/models/types/account';
 import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import useToggle from '#app/hooks/useToggle';
-import Cookie from 'js-cookie';
 import {
   getDecodedToken,
   TOKEN_COOKIE_NAME,
@@ -30,6 +30,7 @@ const mockGetDecodedToken = getDecodedToken as jest.MockedFunction<
   typeof getDecodedToken
 >;
 const mockCookieGet = Cookie.get as jest.Mock;
+const originalSimorghAppEnv = process.env.SIMORGH_APP_ENV;
 
 const mockIdctaConfig = {
   'id-availability': 'GREEN',
@@ -44,6 +45,7 @@ const mockIdctaConfig = {
 
 describe('AccountContext', () => {
   beforeEach(() => {
+    delete process.env.SIMORGH_APP_ENV;
     jest.clearAllMocks();
 
     mockCookieGet.mockReturnValue(undefined);
@@ -64,6 +66,14 @@ describe('AccountContext', () => {
 
     delete (window as any).location;
     window.location = { href: 'https://example.com/current-page' } as any;
+  });
+
+  afterEach(() => {
+    if (originalSimorghAppEnv === undefined) {
+      delete process.env.SIMORGH_APP_ENV;
+    } else {
+      process.env.SIMORGH_APP_ENV = originalSimorghAppEnv;
+    }
   });
 
   const TestComponent = () => {
