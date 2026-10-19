@@ -32,7 +32,7 @@ const extractHeaders = (headers: IncomingHttpHeaders) => {
     bbcOrigin: headers['bbc-origin'] || null,
     country: countryHeaderValue || edgeCountryHeaderValue || null,
     isUK,
-    showAdsBasedOnLocation: headers['bbc-adverts'] === 'true' || true,
+    showAdsBasedOnLocation: headers['bbc-adverts'] === 'true' || false,
     showCookieBannerBasedOnCountry,
   };
 };
