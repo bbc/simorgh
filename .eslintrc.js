@@ -162,7 +162,6 @@ module.exports = {
       files: [
         'src/app/components/MediaLoader/index.tsx',
         'src/app/components/PortraitVideoModal/index.tsx',
-        'src/app/hooks/usePolling/index.ts',
         'src/app/legacy/psammead/psammead-navigation/src/DropdownNavigation/index.jsx',
       ],
       rules: {
