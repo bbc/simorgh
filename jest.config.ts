@@ -125,32 +125,28 @@ const withRootEmotion = (
     options.compilerOptions.emotion !== null
       ? options.compilerOptions.emotion
       : {};
-  const compilerOptions: NextConfig['compiler'] = {
-    ...options.compilerOptions,
-    emotion: {
-      ...emotionOptions,
-      autoLabel: 'always',
-    },
-  };
-  const jsConfig: NextJsConfig = {
-    ...options.jsConfig,
-    compilerOptions: {
-      ...options.jsConfig?.compilerOptions,
-      jsxImportSource: '@emotion/react',
-    },
-  };
-  const transformedOptions: NextTransformerOptions = {
-    ...options,
-    compilerOptions,
-    jsConfig,
-  };
-  const transformEntry: RootTransformEntry = [transformer, transformedOptions];
 
   return {
     ...config,
     transform: {
       ...config.transform,
-      [nextTransformerPattern]: transformEntry,
+      [nextTransformerPattern]: [
+        transformer,
+        {
+          ...options,
+          compilerOptions: {
+            ...options.compilerOptions,
+            emotion: { ...emotionOptions, autoLabel: 'always' },
+          },
+          jsConfig: {
+            ...options.jsConfig,
+            compilerOptions: {
+              ...options.jsConfig?.compilerOptions,
+              jsxImportSource: '@emotion/react',
+            },
+          },
+        },
+      ],
     },
   };
 };
