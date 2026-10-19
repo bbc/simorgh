@@ -33,7 +33,7 @@ import setSimorghEnvVars from '#app/lib/utilities/setSimorghEnvVars';
 import removeNoJsClass from '#app/lib/utilities/removeNoJsClass';
 import ComponentTracking from '../renderers/ComponentTracking';
 import ReverbTemplate from '../renderers/ReverbTemplate';
-import appArticleTransforms from '../renderers/appArticleTransforms';
+import appPageTransforms from '../renderers/appPageTransforms';
 import litePageTransforms from '../renderers/litePageTransforms';
 import LiteRenderer from '../renderers/LiteRenderer';
 import AmpRenderer from '../renderers/AmpRenderer';
@@ -90,7 +90,7 @@ export default class AppDocument extends Document<DocProps> {
     }
 
     if (isApp) {
-      initialProps.html = appArticleTransforms(initialProps.html);
+      initialProps.html = appPageTransforms(initialProps.html);
     }
 
     const { css, ids } = extractCritical(initialProps.html);
