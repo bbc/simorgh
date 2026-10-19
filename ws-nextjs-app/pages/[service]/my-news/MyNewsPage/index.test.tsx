@@ -394,7 +394,7 @@ describe('MyNewsPage', () => {
     });
   });
 
-  it('should show an independent error state for each section when both requests fail', async () => {
+  it('should show a single combined error message when both sections fail', async () => {
     mockUseRecentActivity.mockReturnValue({
       savedArticles: [],
       total: 0,
@@ -414,11 +414,14 @@ describe('MyNewsPage', () => {
 
     await waitFor(() => {
       expect(
-        screen.getByText(myNewsTranslations.savedArticlesErrorText),
+        screen.getByText(myNewsTranslations.contentErrorText),
       ).toBeInTheDocument();
       expect(
-        screen.getByText(myNewsTranslations.followedTopicsErrorText),
-      ).toBeInTheDocument();
+        screen.queryByText(myNewsTranslations.savedArticlesErrorText),
+      ).not.toBeInTheDocument();
+      expect(
+        screen.queryByText(myNewsTranslations.followedTopicsErrorText),
+      ).not.toBeInTheDocument();
     });
   });
 

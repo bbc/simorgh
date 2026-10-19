@@ -43,7 +43,6 @@ const MyNewsPageContent = ({
 }: MyNewsPageContentProps) => {
   const { translations, lang } = use(ServiceContext);
   const [areAllTopicsVisible, setAreAllTopicsVisible] = useState(false);
-  const [topicsPage, setTopicsPage] = useState(1);
   const wasTopicsExpandedRef = useRef(areAllTopicsVisible);
 
   useEffect(() => {
@@ -63,7 +62,6 @@ const MyNewsPageContent = ({
 
   const activePage = Math.max(1, Number(page) || 1);
   const startIndex = (activePage - 1) * ITEMS_PER_PAGE;
-  const topicsStartIndex = (topicsPage - 1) * FOLLOWED_TOPICS_ITEMS_PER_PAGE;
 
   const {
     savedArticles,
@@ -77,19 +75,13 @@ const MyNewsPageContent = ({
 
   const {
     followedTopics,
-    total: topicsTotal,
     isLoading: topicsLoading,
     error: topicsError,
   } = useUASFollowedTopics({
     itemsPerPage: FOLLOWED_TOPICS_ITEMS_PER_PAGE,
-    startIndex: topicsStartIndex,
   });
 
   const pageCount = Math.max(1, Math.ceil(total / ITEMS_PER_PAGE));
-  const topicsPageCount = Math.max(
-    1,
-    Math.ceil(topicsTotal / FOLLOWED_TOPICS_ITEMS_PER_PAGE),
-  );
 
   const {
     pageXOfY,
@@ -116,19 +108,24 @@ const MyNewsPageContent = ({
     noFollowedTopics,
     seeMoreTopics,
     seeLessTopics,
+    contentErrorText,
   } = translations.myNews;
 
   const translatedPage = pageXOfY
     .replace('{x}', String(activePage))
     .replace('{y}', String(pageCount));
-  const translatedTopicsPage = pageXOfY
-    .replace('{x}', String(topicsPage))
-    .replace('{y}', String(topicsPageCount));
 
   const metadataTitle = activePage >= 2 ? `${title}, ${translatedPage}` : title;
 
   const hasArticles = savedArticles.length > 0;
   const hasTopics = followedTopics.length > 0;
+  const bothSectionsFailed =
+    showFollowedTopics &&
+    showSavedArticles &&
+    !articlesLoading &&
+    !topicsLoading &&
+    articlesError &&
+    topicsError;
   const hasMoreTopicsThanLimit =
     followedTopics.length > FOLLOWED_TOPICS_VISIBLE_LIMIT;
   const visibleTopics = areAllTopicsVisible
@@ -140,11 +137,6 @@ const MyNewsPageContent = ({
       topicId: topic.id,
       topicName: topic.title,
     }));
-
-  const goToTopicsPage = (nextPageNumber: number) => {
-    setTopicsPage(nextPageNumber);
-    setAreAllTopicsVisible(false);
-  };
 
   const renderFollowedTopicsSection = () => (
     <section css={styles.section}>
@@ -159,11 +151,7 @@ const MyNewsPageContent = ({
           testId="my-news-followed-topics-spinner"
         />
       )}
-      {!topicsLoading && topicsError && (
-        <Text size="doublePica" fontVariant="sansBold">
-          {followedTopicsErrorText}
-        </Text>
-      )}
+      {!topicsLoading && topicsError && <Text>{followedTopicsErrorText}</Text>}
       {!topicsLoading && !topicsError && hasTopics && (
         <>
           <TopicTags tags={transformTopicsForRelatedTopics()} />
@@ -183,36 +171,10 @@ const MyNewsPageContent = ({
               />
             </button>
           )}
-          {topicsPageCount > 1 && (
-            <nav
-              aria-label={translatedTopicsPage}
-              css={styles.topicsPaginationNav}
-            >
-              <button
-                type="button"
-                css={styles.topicsPaginationButton}
-                onClick={() => goToTopicsPage(topicsPage - 1)}
-                disabled={topicsPage <= 1}
-              >
-                {previousPage}
-              </button>
-              <Text size="brevier">{translatedTopicsPage}</Text>
-              <button
-                type="button"
-                css={styles.topicsPaginationButton}
-                onClick={() => goToTopicsPage(topicsPage + 1)}
-                disabled={topicsPage >= topicsPageCount}
-              >
-                {nextPage}
-              </button>
-            </nav>
-          )}
         </>
       )}
       {!topicsLoading && !topicsError && !hasTopics && (
-        <Text size="doublePica" fontVariant="sansBold">
-          {noFollowedTopics}
-        </Text>
+        <Text>{noFollowedTopics}</Text>
       )}
     </section>
   );
@@ -229,9 +191,7 @@ const MyNewsPageContent = ({
         />
       )}
       {!articlesLoading && articlesError && (
-        <Text size="doublePica" fontVariant="sansBold">
-          {savedArticlesErrorText}
-        </Text>
+        <Text>{savedArticlesErrorText}</Text>
       )}
       {!articlesLoading && !articlesError && hasArticles && (
         <>
@@ -256,9 +216,7 @@ const MyNewsPageContent = ({
         </>
       )}
       {!articlesLoading && !articlesError && !hasArticles && (
-        <Text size="doublePica" fontVariant="sansBold">
-          {noArticles}
-        </Text>
+        <Text>{noArticles}</Text>
       )}
     </section>
   );
@@ -274,8 +232,14 @@ const MyNewsPageContent = ({
       <Heading level={1} id="content" tabIndex={-1} css={styles.heading}>
         {title}
       </Heading>
-      {showFollowedTopics && renderFollowedTopicsSection()}
-      {showSavedArticles && renderSavedArticlesSection()}
+      {bothSectionsFailed ? (
+        <Text>{contentErrorText}</Text>
+      ) : (
+        <>
+          {showFollowedTopics && renderFollowedTopicsSection()}
+          {showSavedArticles && renderSavedArticlesSection()}
+        </>
+      )}
     </>
   );
 };

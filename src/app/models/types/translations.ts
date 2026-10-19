@@ -99,6 +99,7 @@ export interface Translations {
     noFollowedTopics: string;
     seeMoreTopics: string;
     seeLessTopics: string;
+    contentErrorText: string;
   };
   actionTooltip?: {
     success: {

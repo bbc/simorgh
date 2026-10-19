@@ -89,9 +89,6 @@ const styles = {
       '&:hover, &:focus-visible': {
         backgroundColor: isDarkUi ? palette.GREY_7 : palette.SPORT_SILVER,
       },
-      '&:hover': {
-        textDecoration: 'underline',
-      },
     }),
 
   seeMoreIcon: css({
@@ -104,33 +101,6 @@ const styles = {
   seeMoreIconFlipped: css({
     transform: 'rotate(-90deg)',
   }),
-
-  topicsPaginationNav: ({ spacings }: Theme) =>
-    css({
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      gap: `${spacings.DOUBLE}rem`,
-      marginTop: `${spacings.DOUBLE}rem`,
-    }),
-
-  topicsPaginationButton: ({ palette, fontVariants, fontSizes }: Theme) =>
-    css({
-      ...fontVariants.sansBold,
-      ...fontSizes.pica,
-      border: 'none',
-      background: 'none',
-      padding: 0,
-      color: palette.POSTBOX,
-      cursor: 'pointer',
-      '&:disabled': {
-        color: palette.GREY_3,
-        cursor: 'not-allowed',
-      },
-      '&:hover:not(:disabled), &:focus-visible:not(:disabled)': {
-        textDecoration: 'underline',
-      },
-    }),
 };
 
 export default styles;

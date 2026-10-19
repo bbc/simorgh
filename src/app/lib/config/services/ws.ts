@@ -128,6 +128,8 @@ export const service: DefaultServiceConfig = {
         noFollowedTopics: "You haven't followed any topics yet",
         seeMoreTopics: 'See more',
         seeLessTopics: 'See less',
+        contentErrorText:
+          "This content doesn't seem to be loading. Please try again later.",
       },
       actionTooltip: {
         success: {

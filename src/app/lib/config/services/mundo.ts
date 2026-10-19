@@ -199,7 +199,7 @@ export const service: DefaultServiceConfig = {
           'Inicia sesión para seguir los temas que te interesan y guardar artículos para más tarde.',
         noArticles: 'Aún no has guardado ningún artículo',
         savedArticlesErrorText:
-          'Parece que este contenido no se está cargando. Por favor, inténtalo de nuevo más tarde.',
+          'Estamos teniendo problemas para cargar tus artículos guardados',
         loading: 'Cargando',
         noJsDescription:
           'Habilita JavaScript o utiliza otro navegador para ver este contenido.',
@@ -209,6 +209,8 @@ export const service: DefaultServiceConfig = {
         noFollowedTopics: 'Aún no has seguido ningún tema',
         seeMoreTopics: 'Ver más',
         seeLessTopics: 'Ver menos',
+        contentErrorText:
+          'Parece que este contenido no se está cargando. Por favor, inténtalo de nuevo más tarde.',
       },
       actionTooltip: {
         success: {
