@@ -1,4 +1,6 @@
 import { test, expect, type Page } from '@playwright/test';
+import SERVICES_WITH_NEW_NAV from '#app/components/Navigation/config';
+import SERVICES from '#app/lib/config/services';
 import defaultToggles from '#app/lib/config/toggles';
 import appConfig from '../../../utilities/serviceConfigs';
 import { homePageSuites } from './suites';
@@ -27,6 +29,7 @@ import {
   assertScrollableNavigationComponentClick,
   assertScrollableNavigationComponentView,
 } from '../../specialFeatures/atiAnalytics/assertions';
+import { getATIUrls } from '../../specialFeatures/atiAnalytics/helpers';
 import type { AtiHomePageTestSuite } from './suites';
 
 type HomePageCuration = {
@@ -76,12 +79,77 @@ const canonicalHeaders = {
 const getServiceConfig = (service: string) =>
   appConfig[service as keyof typeof appConfig]?.default;
 
+const SERVICES_PATTERN = SERVICES.join('|');
+
+const VALID_HREF_REGEX = new RegExp(
+  `^https://www\\.bbc\\.com/(?:${SERVICES_PATTERN}|usingthebbc/[^/]+(?:/.*)?|programmes/[a-z0-9]{8,15})(?:/.*)?$`,
+);
+
+const excludedNavServices = ['magyarul', 'romania'];
+
+const twoTierNavServices: Record<typeof appEnvFromProcess, string[] | null> = {
+  local: null,
+  test: ['arabic', 'tamil'],
+  live: SERVICES_WITH_NEW_NAV.filter(
+    service => !excludedNavServices.includes(service),
+  ),
+};
+
+const shouldTestTwoTierNav = (service: string) => {
+  const serviceName = getServiceConfig(service)?.service ?? service;
+  return twoTierNavServices[appEnvFromProcess]?.includes(serviceName) ?? false;
+};
+
 const getHomePageData = async (page: Page) =>
   page.evaluate(() => {
     // eslint-disable-next-line no-underscore-dangle
     return (window as HomePageWindow).__NEXT_DATA__?.props?.pageProps
       ?.pageData;
   });
+
+const assertUrlValidation = async (page: Page) => {
+  const hrefs = await page
+    .locator('main a[href^="https://www.bbc.com"]')
+    .evaluateAll(links => links.map(link => link.getAttribute('href')));
+
+  hrefs.forEach(href => {
+    expect(href).toBeTruthy();
+    expect(href).not.toBe('');
+    expect(href).toMatch(VALID_HREF_REGEX);
+  });
+};
+
+const assertTwoTierNavigation = async ({
+  page,
+  viewport,
+}: {
+  page: Page;
+  viewport: { width: number; height: number };
+}) => {
+  await page.setViewportSize(viewport);
+
+  await expect(page.locator('[data-e2e="scrollable-nav"]')).toBeVisible();
+  await expect(
+    page.locator('[data-e2e="scrollable-nav-secondary"] ul'),
+  ).toBeVisible();
+
+  const primaryHrefs = await page
+    .locator('[data-e2e="scrollable-nav"] a')
+    .evaluateAll(links => links.map(link => link.getAttribute('href')));
+  const secondaryHrefs = await page
+    .locator('[data-e2e="scrollable-nav-secondary"] ul a')
+    .evaluateAll(links => links.map(link => link.getAttribute('href')));
+
+  [...primaryHrefs, ...secondaryHrefs].forEach(href => {
+    expect(href).toBeTruthy();
+    expect(href).not.toBe('');
+  });
+};
+
+const getSecondaryNavItemTexts = async (page: Page) =>
+  page
+    .locator('[data-e2e="scrollable-nav-secondary"] li a')
+    .allTextContents();
 
 const gotoHomePage = async (page: Page, path: string) => {
   await page.setExtraHTTPHeaders(canonicalHeaders);
@@ -411,6 +479,186 @@ test.describe('homePage', () => {
             path: testSuite.path,
             baseURL,
           });
+        });
+
+        test('all links within <main> element should be a valid World Service URL', async ({
+          page,
+        }) => {
+          test.skip(
+            !shouldRunForEnv(testSuite.runForEnv),
+            `Skipped for APP_ENV=${appEnvFromProcess}`,
+          );
+
+          await gotoHomePage(page, testSuite.path);
+          await assertUrlValidation(page);
+        });
+
+        test('should have a noscript img tag with the ati url', async ({
+          page,
+        }) => {
+          test.skip(
+            !shouldRunForEnv(testSuite.runForEnv) || !process.env.SMOKE,
+            `Skipped for APP_ENV=${appEnvFromProcess}`,
+          );
+
+          const { atiUrl } = getATIUrls(appEnvFromProcess);
+
+          await gotoHomePage(page, testSuite.path);
+
+          const noScriptText = await page
+            .locator('noscript[id="analytics-noscript"]')
+            .textContent();
+
+          if (noScriptText) {
+            expect(noScriptText).toContain(
+              `<img height="1px" width="1px" alt="" style="position:absolute" src="${atiUrl}`,
+            );
+          }
+        });
+
+        test('should show two tier navigation on desktop', async ({ page }) => {
+          test.skip(
+            !shouldRunForEnv(testSuite.runForEnv) ||
+              !shouldTestTwoTierNav(testSuite.service),
+            `Skipped for APP_ENV=${appEnvFromProcess}`,
+          );
+
+          await page.setViewportSize({ width: 1008, height: 900 });
+          await gotoHomePage(page, testSuite.path);
+          await assertTwoTierNavigation({
+            page,
+            viewport: { width: 1008, height: 900 },
+          });
+        });
+
+        test('should show two tier navigation on mobile', async ({ page }) => {
+          test.skip(
+            !shouldRunForEnv(testSuite.runForEnv) ||
+              !shouldTestTwoTierNav(testSuite.service),
+            `Skipped for APP_ENV=${appEnvFromProcess}`,
+          );
+
+          await page.setViewportSize({ width: 320, height: 480 });
+          await gotoHomePage(page, testSuite.path);
+          await assertTwoTierNavigation({
+            page,
+            viewport: { width: 320, height: 480 },
+          });
+        });
+
+        test('dropdown menu should open and close when the menu button is clicked', async ({
+          page,
+        }) => {
+          test.skip(
+            !shouldRunForEnv(testSuite.runForEnv) ||
+              !shouldTestTwoTierNav(testSuite.service),
+            `Skipped for APP_ENV=${appEnvFromProcess}`,
+          );
+
+          await page.setViewportSize({ width: 320, height: 480 });
+          await gotoHomePage(page, testSuite.path);
+
+          const menuButton = page.locator('nav button[aria-expanded]').first();
+
+          await expect(
+            page.locator('nav [data-e2e="scrollable-nav"]'),
+          ).toBeVisible();
+          await expect(menuButton).toHaveAttribute('aria-expanded', 'false');
+          await expect(
+            page.locator('nav [data-e2e="dropdown-nav"] ul'),
+          ).not.toBeVisible();
+
+          await menuButton.click();
+          await expect(menuButton).toHaveAttribute('aria-expanded', 'true');
+          await expect(
+            page.locator('nav [data-e2e="dropdown-nav"] ul'),
+          ).toBeVisible();
+
+          await menuButton.click();
+          await expect(menuButton).toHaveAttribute('aria-expanded', 'false');
+          await expect(
+            page.locator('nav [data-e2e="dropdown-nav"] ul'),
+          ).not.toBeVisible();
+        });
+
+        test('should stay on the same page when the brand link is clicked', async ({
+          page,
+        }) => {
+          test.skip(
+            !shouldRunForEnv(testSuite.runForEnv) ||
+              !shouldTestTwoTierNav(testSuite.service),
+            `Skipped for APP_ENV=${appEnvFromProcess}`,
+          );
+
+          await gotoHomePage(page, testSuite.path);
+          const initialPathname = new URL(page.url()).pathname;
+
+          await page.locator('a#topPage').click();
+
+          expect(new URL(page.url()).pathname).toBe(initialPathname);
+        });
+
+        test('navigates to a new page and secondary nav changes when clicking a non-home item in top nav', async ({
+          page,
+        }) => {
+          test.skip(
+            !shouldRunForEnv(testSuite.runForEnv) ||
+              !shouldTestTwoTierNav(testSuite.service),
+            `Skipped for APP_ENV=${appEnvFromProcess}`,
+          );
+
+          await gotoHomePage(page, testSuite.path);
+
+          const primaryNavItems = page.locator(
+            '[data-e2e="scrollable-nav"] li',
+          );
+          const primaryNavItemCount = await primaryNavItems.count();
+
+          test.skip(
+            primaryNavItemCount < 2,
+            'The primary navigation has fewer than two items',
+          );
+
+          const initialPathname = new URL(page.url()).pathname;
+          const initialSecondaryNavItemTexts =
+            await getSecondaryNavItemTexts(page);
+
+          await primaryNavItems.nth(1).locator('a').click();
+          await page.waitForURL(
+            url => new URL(url).pathname !== initialPathname,
+          );
+
+          expect(await getSecondaryNavItemTexts(page)).not.toEqual(
+            initialSecondaryNavItemTexts,
+          );
+        });
+
+        test('when first item top-nav item is clicked it navigates to the home page and secondary scrollable nav has corresponding items', async ({
+          page,
+        }) => {
+          test.skip(
+            !shouldRunForEnv(testSuite.runForEnv) ||
+              !shouldTestTwoTierNav(testSuite.service),
+            `Skipped for APP_ENV=${appEnvFromProcess}`,
+          );
+
+          await gotoHomePage(page, testSuite.path);
+
+          const initialSecondaryNavItemTexts =
+            await getSecondaryNavItemTexts(page);
+
+          await page
+            .locator('[data-e2e="scrollable-nav"] li')
+            .first()
+            .locator('a')
+            .click();
+          await page.waitForURL(url =>
+            new URL(url).pathname.includes(`/${testSuite.service}`),
+          );
+
+          expect(await getSecondaryNavItemTexts(page)).toEqual(
+            initialSecondaryNavItemTexts,
+          );
         });
 
         test.describe('Images', () => {
