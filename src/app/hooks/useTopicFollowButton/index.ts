@@ -103,12 +103,24 @@ const useTopicFollowButton = (
     onMetadataOutOfDate: handleMetadataOutOfDate,
   });
 
+  const handleFollowAction = (action: FollowAction) => {
+    return mutation.mutate(action, {
+      onError: mutationError => {
+        trackError({
+          error: mutationError,
+          feature: ERROR_TRACKING_FEATURES.FOLLOW_TOPIC_UAS,
+          action,
+        });
+      },
+    });
+  };
+
   return {
     isFollowed,
     isLoading,
     isUpdating: mutation.isPending && !mutation.isPaused,
     error: mutation.error || error,
-    handleFollowAction: mutation.mutate,
+    handleFollowAction,
   };
 };
 

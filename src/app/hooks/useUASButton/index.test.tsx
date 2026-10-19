@@ -121,6 +121,8 @@ const mockUseUASFetchSaveStatus = useUASFetchSaveStatus as jest.Mock;
 const mockUasApiRequest = uasApiRequest as jest.Mock;
 const mockUseUASMetadataSync = useUASMetadataSync as jest.Mock;
 
+const mockError = new Error('UAS request failed with status 500');
+
 describe('useUASButton', () => {
   const mockHashedUserId = 'user-123';
 
@@ -228,16 +230,14 @@ describe('useUASButton', () => {
     });
 
     it('does not update query cache when request fails', async () => {
-      mockUasApiRequest.mockRejectedValueOnce(
-        new Error('UAS request failed with status 500'),
-      );
+      mockUasApiRequest.mockRejectedValueOnce(mockError);
 
       const { result } = renderHook(() => useUASButton(defaultProps));
 
       await act(async () => {
         await expect(
           result.current.handleSaveAction(UASAction.REMOVE),
-        ).rejects.toThrow('UAS request failed with status 500');
+        ).rejects.toThrow(mockError);
       });
 
       expect(mockSetQueryData).not.toHaveBeenCalled();
@@ -284,16 +284,14 @@ describe('useUASButton', () => {
 
   describe('error tracking', () => {
     it('tracks a failed user-initiated save/remove action', async () => {
-      mockUasApiRequest.mockRejectedValueOnce(
-        new Error('UAS request failed with status 500'),
-      );
+      mockUasApiRequest.mockRejectedValueOnce(mockError);
 
       const { result } = renderHook(() => useUASButton(defaultProps));
 
       await act(async () => {
         await expect(
           result.current.handleSaveAction(UASAction.REMOVE),
-        ).rejects.toThrow('UAS request failed with status 500');
+        ).rejects.toThrow(mockError);
       });
 
       expect(mockTrackError).toHaveBeenCalledWith({
@@ -304,9 +302,7 @@ describe('useUASButton', () => {
     });
 
     it('tracks a failed background metadata resync', async () => {
-      mockUasApiRequest.mockRejectedValueOnce(
-        new Error('UAS request failed with status 500'),
-      );
+      mockUasApiRequest.mockRejectedValueOnce(mockError);
 
       let onMetadataOutOfDate: (() => unknown) | undefined;
       mockUseUASMetadataSync.mockImplementation(
@@ -405,13 +401,13 @@ describe('useUASButton', () => {
     });
 
     it('reflects a failed user-triggered remove', async () => {
-      mockUasApiRequest.mockRejectedValueOnce(new Error('UAS request failed'));
+      mockUasApiRequest.mockRejectedValueOnce(mockError);
       const { result, rerender } = renderHook(() => useUASButton(defaultProps));
 
       await act(async () => {
         await expect(
           result.current.handleSaveAction(UASAction.REMOVE),
-        ).rejects.toThrow('UAS request failed');
+        ).rejects.toThrow(mockError);
       });
       rerender();
 
@@ -469,18 +465,17 @@ describe('useUASButton', () => {
     });
 
     it('exposes the underlying error when a genuine request fails', async () => {
-      const failure = new Error('UAS request failed with status 500');
-      mockUasApiRequest.mockRejectedValueOnce(failure);
+      mockUasApiRequest.mockRejectedValueOnce(mockError);
       const { result, rerender } = renderHook(() => useUASButton(defaultProps));
 
       await act(async () => {
         await expect(
           result.current.handleSaveAction(UASAction.REMOVE),
-        ).rejects.toThrow('UAS request failed with status 500');
+        ).rejects.toThrow(mockError);
       });
       rerender();
 
-      expect(result.current.error).toBe(failure);
+      expect(result.current.error).toBe(mockError);
     });
   });
 });
