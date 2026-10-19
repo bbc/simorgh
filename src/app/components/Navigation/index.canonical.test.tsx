@@ -156,12 +156,12 @@ describe('Navigation - Canonical', () => {
         configurable: true,
         value: scrollY,
       });
-      act(() => {
-        fireEvent.scroll(window);
-        for (let frame = 0; frame < frames; frame += 1) {
+      fireEvent.scroll(window);
+      for (let frame = 0; frame < frames; frame += 1) {
+        act(() => {
           jest.advanceTimersByTime(20);
-        }
-      });
+        });
+      }
     };
 
     const articleNavigation = (
