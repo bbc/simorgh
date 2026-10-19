@@ -146,14 +146,5 @@ module.exports = {
         'react/no-unused-prop-types': 'off',
       },
     },
-    // Keep existing compiler findings visible; unaffected files and rules retain recommended severities.
-    {
-      files: [
-        'src/app/legacy/psammead/psammead-navigation/src/DropdownNavigation/index.jsx',
-      ],
-      rules: {
-        'react-hooks/refs': 'warn',
-      },
-    },
   ],
 };
