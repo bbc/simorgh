@@ -10,7 +10,12 @@ const getMediaQueries = () =>
   displayModes.map(mode => window.matchMedia(`(display-mode: ${mode})`));
 
 const getSnapshot = () =>
-  getMediaQueries().some(query => query.matches) ||
+  getMediaQueries().some(
+    query =>
+      query.matches &&
+      (query.media !== '(display-mode: fullscreen)' ||
+        !document.fullscreenElement),
+  ) ||
   (window.navigator as Navigator & { standalone?: boolean }).standalone ===
     true;
 
