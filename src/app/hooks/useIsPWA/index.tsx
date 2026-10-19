@@ -1,4 +1,4 @@
-import { useSyncExternalStore } from 'react';
+import { useState, useSyncExternalStore } from 'react';
 
 const displayModes = [
   'standalone',
@@ -9,15 +9,21 @@ const displayModes = [
 const getMediaQueries = () =>
   displayModes.map(mode => window.matchMedia(`(display-mode: ${mode})`));
 
-const getSnapshot = () =>
-  getMediaQueries().some(
-    query =>
-      query.matches &&
-      (query.media !== '(display-mode: fullscreen)' ||
-        !document.fullscreenElement),
-  ) ||
-  (window.navigator as Navigator & { standalone?: boolean }).standalone ===
-    true;
+const createGetSnapshot = () => {
+  let lastIsPWA = false;
+
+  return () => {
+    // Native fullscreen temporarily replaces the app's display mode.
+    if (!document.fullscreenElement) {
+      lastIsPWA =
+        getMediaQueries().some(query => query.matches) ||
+        (window.navigator as Navigator & { standalone?: boolean })
+          .standalone === true;
+    }
+
+    return lastIsPWA;
+  };
+};
 
 const getServerSnapshot = () => false;
 
@@ -43,6 +49,7 @@ const subscribe = (listener: () => void) => {
  */
 
 const useIsPWA = (): boolean => {
+  const [getSnapshot] = useState(createGetSnapshot);
   return useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 };
 

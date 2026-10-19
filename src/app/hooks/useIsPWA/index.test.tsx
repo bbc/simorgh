@@ -105,6 +105,54 @@ describe('useIsPWA', () => {
     expect(result.current).toBe(false);
   });
 
+  it.each([
+    '(display-mode: standalone)',
+    '(display-mode: minimal-ui)',
+    '(display-mode: fullscreen)',
+    '(display-mode: window-controls-overlay)',
+  ])('preserves established %s mode through video fullscreen', displayMode => {
+    mockMatchMedia({ [displayMode]: true });
+    const appQuery = window.matchMedia(displayMode);
+    const fullscreenQuery = window.matchMedia('(display-mode: fullscreen)');
+    const { result, rerender } = renderHook(() => useIsPWA());
+    expect(result.current).toBe(true);
+
+    act(() => {
+      Object.defineProperty(document, 'fullscreenElement', {
+        configurable: true,
+        value: document.createElement('video'),
+      });
+      Object.assign(appQuery, { matches: false });
+      Object.assign(fullscreenQuery, { matches: true });
+      appQuery.dispatchEvent(new Event('change'));
+      fullscreenQuery.dispatchEvent(new Event('change'));
+    });
+
+    expect(result.current).toBe(true);
+    rerender();
+    expect(result.current).toBe(true);
+
+    act(() => {
+      Object.defineProperty(document, 'fullscreenElement', {
+        configurable: true,
+        value: null,
+      });
+      Object.assign(fullscreenQuery, { matches: false });
+      Object.assign(appQuery, { matches: true });
+      fullscreenQuery.dispatchEvent(new Event('change'));
+      appQuery.dispatchEvent(new Event('change'));
+    });
+
+    expect(result.current).toBe(true);
+
+    act(() => {
+      Object.assign(appQuery, { matches: false });
+      appQuery.dispatchEvent(new Event('change'));
+    });
+
+    expect(result.current).toBe(false);
+  });
+
   it('preserves a saved install prompt across entering and exiting video fullscreen', async () => {
     mockMatchMedia({});
     jest.spyOn(isPWA, 'default').mockImplementation(useIsPWA);
