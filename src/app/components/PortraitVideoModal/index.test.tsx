@@ -1,3 +1,5 @@
+import * as swipeTracking from '#app/hooks/useSwipeTracker';
+import { MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import Component, {
   playlistLoadedCallback,
   statsNavigationCallback,
@@ -8,6 +10,7 @@ import {
   screen,
   render,
   fireEvent,
+  act,
 } from '../react-testing-library-with-providers';
 import blocks from './fixture';
 import { Player, SMPEvent } from '../MediaLoader/types';
@@ -30,6 +33,86 @@ const mockPlayer = {
 } satisfies Partial<Player>;
 
 describe('PortraitVideoModal', () => {
+  describe('committed event tracking', () => {
+    const originalRequirejs = window.requirejs;
+
+    afterEach(() => {
+      window.requirejs = originalRequirejs;
+      jest.restoreAllMocks();
+    });
+
+    it('uses updated tracking data and callbacks without reloading the player', async () => {
+      const firstSwipeTracker = jest.fn();
+      const nextSwipeTracker = jest.fn();
+      const swipeTrackerSpy = jest
+        .spyOn(swipeTracking, 'default')
+        .mockReturnValue(firstSwipeTracker);
+      const mockRequire = jest.fn();
+      const bind = jest.fn();
+      const mockBump = {
+        player: jest.fn(() => ({
+          bind,
+          load: jest.fn(),
+        })),
+      };
+      window.requirejs = mockRequire;
+      const { rerender } = render(
+        <Component
+          selectedVideoIndex={0}
+          blocks={blocks}
+          onClose={mockClose}
+          eventTrackingData={eventTrackingData}
+        />,
+        { pageType: MEDIA_ARTICLE_PAGE },
+      );
+
+      await act(async () => {
+        mockRequire.mock.calls[0][1](mockBump);
+      });
+      const navigationHandler = bind.mock.calls.find(
+        ([event]) => event === 'statsNavigation',
+      )?.[1];
+      swipeTrackerSpy.mockReturnValue(nextSwipeTracker);
+
+      rerender(
+        <Component
+          selectedVideoIndex={0}
+          blocks={blocks}
+          onClose={mockClose}
+          eventTrackingData={{
+            ...eventTrackingData,
+            groupTracker: { name: 'Updated group' },
+          }}
+        />,
+      );
+
+      await act(async () => {
+        await navigationHandler({
+          playlist: {
+            items: [{ versionID: blocks[0].model.video.version.id }],
+          },
+          direction: 'next',
+          method: 'wheel',
+        });
+      });
+
+      expect(mockRequire).toHaveBeenCalledTimes(1);
+      expect(mockBump.player).toHaveBeenCalledTimes(1);
+      expect(firstSwipeTracker).not.toHaveBeenCalled();
+      expect(nextSwipeTracker).toHaveBeenCalledWith(
+        expect.objectContaining({
+          groupTracker: {
+            name: 'Updated group',
+            type: 'portrait-video-modal',
+          },
+          itemTracker: expect.objectContaining({
+            resourceId: blocks[1].model.video.id,
+          }),
+        }),
+      );
+    });
+  });
+
   it('should render the modal when active', () => {
     render(
       <Component

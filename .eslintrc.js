@@ -149,18 +149,10 @@ module.exports = {
     // Keep existing compiler findings visible; unaffected files and rules retain recommended severities.
     {
       files: [
-        'src/app/components/MediaLoader/index.tsx',
-        'src/app/components/PortraitVideoModal/index.tsx',
         'src/app/legacy/psammead/psammead-navigation/src/DropdownNavigation/index.jsx',
       ],
       rules: {
         'react-hooks/refs': 'warn',
-      },
-    },
-    {
-      files: ['src/app/components/MediaLoader/index.tsx'],
-      rules: {
-        'react-hooks/set-state-in-effect': 'warn',
       },
     },
   ],

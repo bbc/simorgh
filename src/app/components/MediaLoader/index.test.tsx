@@ -19,7 +19,11 @@ import {
   onDemandTvBlocksWithOverrides,
 } from './fixture';
 import { MediaBlock } from './types';
-import { fakeFullscreenStyles } from './index.styles';
+import {
+  FAKE_FULLSCREEN_LAYER_CLASS,
+  FAKE_FULLSCREEN_ACTIVE_CLASS,
+  fakeFullscreenStyles,
+} from './index.styles';
 import * as buildConfig from './utils/buildSettings';
 
 jest.mock('react', () => ({
@@ -257,6 +261,59 @@ describe('MediaLoader', () => {
       expect(document.body.classList).not.toContain(
         'simorgh-player-fullscreen',
       );
+    });
+
+    it('keeps fullscreen callbacks working after rerender without reloading the player', async () => {
+      (useState as jest.Mock).mockImplementation(
+        jest.requireActual<typeof import('react')>('react').useState,
+      );
+      const mockRequire = jest.fn();
+      const bind = jest.fn();
+      const mockBump = {
+        player: jest.fn(() => ({
+          bind,
+          load: jest.fn(),
+        })),
+      };
+      window.requirejs = mockRequire;
+      const { rerender, unmount } = render(
+        <MediaPlayer
+          blocks={aresMediaBlocks as MediaBlock[]}
+          loadPlayerOnInitialRender
+        />,
+        { id: 'testId' },
+      );
+
+      await act(async () => {
+        mockRequire.mock.calls[0][1](mockBump);
+      });
+      const enterFakeFullscreen = bind.mock.calls.find(
+        ([event]) => event === 'enterFakeFullscreen',
+      )?.[1];
+
+      rerender(
+        <MediaPlayer
+          blocks={aresMediaBlocks as MediaBlock[]}
+          loadPlayerOnInitialRender
+        />,
+      );
+
+      act(() => {
+        enterFakeFullscreen({});
+      });
+
+      expect(mockRequire).toHaveBeenCalledTimes(1);
+      expect(mockBump.player).toHaveBeenCalledTimes(1);
+      expect(
+        document.body.querySelector(`.${FAKE_FULLSCREEN_LAYER_CLASS}`),
+      ).toHaveClass(FAKE_FULLSCREEN_ACTIVE_CLASS);
+
+      unmount();
+
+      expect(
+        document.body.querySelector(`.${FAKE_FULLSCREEN_LAYER_CLASS}`),
+      ).not.toBeInTheDocument();
+      expect(document.body).not.toHaveClass('simorgh-player-fullscreen');
     });
 
     it('composes caller fake fullscreen handlers with internal fullscreen handlers', async () => {
