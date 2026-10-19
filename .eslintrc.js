@@ -149,16 +149,6 @@ module.exports = {
     // Keep existing compiler findings visible; unaffected files and rules retain recommended severities.
     {
       files: [
-        'src/app/components/RelatedContentSection/index.tsx',
-        'src/app/pages/ArticlePage/PagePromoSections/TopStoriesSection/index.tsx',
-        'src/app/pages/MediaArticlePage/PagePromoSections/LatestMediaSection/index.tsx',
-      ],
-      rules: {
-        'react-hooks/immutability': 'warn',
-      },
-    },
-    {
-      files: [
         'src/app/components/MediaLoader/index.tsx',
         'src/app/components/PortraitVideoModal/index.tsx',
         'src/app/legacy/psammead/psammead-navigation/src/DropdownNavigation/index.jsx',
