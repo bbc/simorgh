@@ -9,13 +9,15 @@ import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import RadioSchedule from '.';
 import processRadioSchedule from '../utilities/processRadioSchedule';
 
+const timeOnServer = Date.parse('2020-03-26T12:00:00Z');
+
 const RadioScheduleWithContext = ({ radioSchedule, lang }) => (
   <RequestContextProvider
     isAmp={false}
     pageType={HOME_PAGE}
     service="arabic"
     pathname="/arabic"
-    timeOnServer={Date.now()}
+    timeOnServer={timeOnServer}
   >
     <ServiceContextProvider service="arabic">
       <RadioSchedule radioSchedule={radioSchedule} lang={lang} />
@@ -33,7 +35,7 @@ describe('RadioSchedule', () => {
       const initialData = processRadioSchedule(
         arabicRadioScheduleData,
         'arabic',
-        Date.now(),
+        timeOnServer,
       );
       let container;
       await act(async () => {
@@ -49,7 +51,7 @@ describe('RadioSchedule', () => {
       const initialData = processRadioSchedule(
         arabicRadioScheduleData,
         'arabic',
-        Date.now(),
+        timeOnServer,
       );
       let container;
 
@@ -70,7 +72,7 @@ describe('RadioSchedule', () => {
       const initialData = processRadioSchedule(
         radioSchedule2Programmes,
         'arabic',
-        Date.now(),
+        timeOnServer,
       );
 
       jest.spyOn(global, 'fetch').mockResolvedValueOnce({
@@ -95,7 +97,7 @@ describe('RadioSchedule', () => {
       const initialData = processRadioSchedule(
         { schedules: [] },
         'arabic',
-        Date.now(),
+        timeOnServer,
       );
       let container;
 

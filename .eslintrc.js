@@ -178,15 +178,5 @@ module.exports = {
         'react-hooks/set-state-in-effect': 'warn',
       },
     },
-    {
-      files: [
-        'src/app/legacy/components/Promo/index.test.jsx',
-        'src/app/legacy/containers/RadioSchedule/Canonical/index.test.jsx',
-        'src/app/legacy/containers/RadioSchedule/utilities/testHelpers.jsx',
-      ],
-      rules: {
-        'react-hooks/purity': 'warn',
-      },
-    },
   ],
 };
