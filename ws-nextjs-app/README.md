@@ -18,8 +18,6 @@ React Compiler automatically memoizes components and hooks when it can do so saf
 
 If a diagnosed compiler issue requires an opt-out, add `'use no memo';` at the beginning of the affected function (or module). Use this as a temporary, scoped escape hatch while the issue is investigated.
 
-ESLint enables all `plugin:react-hooks/recommended` rules without compiler-specific warning overrides.
-
 ---
 
 ## Setup
