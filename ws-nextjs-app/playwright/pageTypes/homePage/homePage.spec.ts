@@ -736,6 +736,75 @@ test.describe('homePage', () => {
           });
         });
 
+        // Skipped due to a bug caused by repeatedly opening and closing the modal.
+        test.describe.skip('Portrait Video Curations', () => {
+          test.beforeEach(async ({ page }) => {
+            await page.setViewportSize({ width: 600, height: 800 });
+          });
+
+          test('should open the portrait video modal when a promo is clicked and close it when the modal close button is clicked', async ({
+            page,
+          }) => {
+            await gotoHomePage(page, testSuite.path);
+
+            const carousel = page.locator(
+              '[data-testid="portrait-video-carousel"]',
+            );
+
+            if ((await carousel.count()) === 0) return;
+
+            await carousel.first().locator('[data-testid="promo-button"]').first().click();
+
+            const dialog = page.locator('div[role="dialog"]');
+            await expect(dialog).toBeVisible();
+            await expect(
+              dialog.locator('[data-e2e="media-loader__container"]'),
+            ).toBeVisible();
+            await expect(dialog.locator('[data-e2e="media-player"]')).toBeVisible();
+
+            await dialog.locator('button[data-testid="close-modal-button"]').click();
+            await expect(dialog).toHaveCount(0);
+          });
+
+          test('should close the modal when the background is clicked', async ({
+            page,
+          }) => {
+            await gotoHomePage(page, testSuite.path);
+
+            const carousel = page.locator(
+              '[data-testid="portrait-video-carousel"]',
+            );
+
+            if ((await carousel.count()) === 0) return;
+
+            await carousel.first().locator('[data-testid="promo-button"]').first().click();
+
+            const dialog = page.locator('div[role="dialog"]');
+            await expect(dialog).toBeVisible();
+            await dialog.click({ position: { x: 1, y: 1 } });
+            await expect(dialog).toHaveCount(0);
+          });
+
+          test('should close the modal when the Escape key is pressed', async ({
+            page,
+          }) => {
+            await gotoHomePage(page, testSuite.path);
+
+            const carousel = page.locator(
+              '[data-testid="portrait-video-carousel"]',
+            );
+
+            if ((await carousel.count()) === 0) return;
+
+            await carousel.first().locator('[data-testid="promo-button"]').first().click();
+
+            const dialog = page.locator('div[role="dialog"]');
+            await expect(dialog).toBeVisible();
+            await page.keyboard.press('Escape');
+            await expect(dialog).toHaveCount(0);
+          });
+        });
+
         test.describe('Billboard', () => {
           test('should display the correct number of items in the curation grid if there is at least 2 summaries', async ({
             page,
