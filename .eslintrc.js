@@ -158,11 +158,7 @@ module.exports = {
       },
     },
     {
-      files: [
-        'src/app/components-webcore/SportDataHeader/head-to-head-v2/components/fixture-time.tsx',
-        'src/app/components-webcore/SportDataHeader/head-to-head-v2/components/head-to-head-header.tsx',
-        'src/app/components/MediaLoader/index.tsx',
-      ],
+      files: ['src/app/components/MediaLoader/index.tsx'],
       rules: {
         'react-hooks/set-state-in-effect': 'warn',
       },
