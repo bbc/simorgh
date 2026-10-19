@@ -3,6 +3,7 @@ const { eslintDirAlias } = require('./dirAlias');
 module.exports = {
   extends: [
     'airbnb',
+    'plugin:react-hooks/recommended',
     'plugin:prettier/recommended',
     'plugin:jsx-a11y/recommended',
   ],
@@ -79,8 +80,6 @@ module.exports = {
       },
     ],
     'linebreak-style': process.platform === 'win32' ? 'off' : ['error', 'unix'],
-    'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn',
     'import/no-import-module-exports': [
       'error',
       {
@@ -145,6 +144,74 @@ module.exports = {
         '@typescript-eslint/prefer-optional-chain': ['error'],
         'react/require-default-props': 'off',
         'react/no-unused-prop-types': 'off',
+      },
+    },
+    // Keep existing compiler findings visible; unaffected files and rules retain recommended severities.
+    {
+      files: [
+        'src/app/components/Curation/Subhead/index.tsx',
+        'src/app/legacy/containers/PageHandlers/withOptimizelyProvider/index.client.test.tsx',
+      ],
+      rules: {
+        'react-hooks/static-components': 'warn',
+      },
+    },
+    {
+      files: ['src/app/contexts/ReverbParamsContext/index.tsx'],
+      rules: {
+        'react-hooks/preserve-manual-memoization': 'warn',
+      },
+    },
+    {
+      files: [
+        'src/app/components/RelatedContentSection/index.tsx',
+        'src/app/legacy/containers/PodcastExternalLinks/index.jsx',
+        'src/app/pages/ArticlePage/PagePromoSections/TopStoriesSection/index.tsx',
+        'src/app/pages/MediaArticlePage/PagePromoSections/LatestMediaSection/index.tsx',
+      ],
+      rules: {
+        'react-hooks/immutability': 'warn',
+      },
+    },
+    {
+      files: [
+        'src/app/components/MediaLoader/index.tsx',
+        'src/app/components/PortraitVideoModal/index.tsx',
+        'src/app/hooks/usePolling/index.ts',
+        'src/app/legacy/psammead/psammead-navigation/src/DropdownNavigation/index.jsx',
+      ],
+      rules: {
+        'react-hooks/refs': 'warn',
+      },
+    },
+    {
+      files: [
+        'src/app/components-webcore/SportDataHeader/head-to-head-v2/components/fixture-time.tsx',
+        'src/app/components-webcore/SportDataHeader/head-to-head-v2/components/head-to-head-header.tsx',
+        'src/app/components/MediaLoader/index.tsx',
+        'src/app/components/SaveArticleButton/SaveArticleButtonAuthenticated/index.tsx',
+        'src/app/contexts/AccountContext/index.tsx',
+        'src/app/hooks/useAdroidDetection/index.tsx',
+        'src/app/hooks/useImageColour/index.js',
+        'src/app/hooks/useIsPWA/index.tsx',
+        'src/app/hooks/useLocation/index.tsx',
+        'src/app/hooks/useOperaMiniDetection/index.jsx',
+        'src/app/hooks/useOptimizelyScrollDepth/index.tsx',
+        'src/app/hooks/usePWAInstallPrompt/index.ts',
+        'src/testHelpers/withTimeMachine.jsx',
+      ],
+      rules: {
+        'react-hooks/set-state-in-effect': 'warn',
+      },
+    },
+    {
+      files: [
+        'src/app/legacy/components/Promo/index.test.jsx',
+        'src/app/legacy/containers/RadioSchedule/Canonical/index.test.jsx',
+        'src/app/legacy/containers/RadioSchedule/utilities/testHelpers.jsx',
+      ],
+      rules: {
+        'react-hooks/purity': 'warn',
       },
     },
   ],
