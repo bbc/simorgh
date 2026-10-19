@@ -1,4 +1,8 @@
-import useUASButton from '#app/hooks/useUASButton';
+import { useState } from 'react';
+import useUASButton, {
+  UASAction,
+  UASActionResult,
+} from '#app/hooks/useUASButton';
 import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
 import extractArticleMetadata from '#app/lib/utilities/extractSaveArticleProps';
 import { Article } from '#app/models/types/optimo';
@@ -311,13 +315,22 @@ describe('SaveArticleButton', () => {
 
     it('closes the tooltip and resets the action result when the close button is clicked', async () => {
       const mockResetActionResult = jest.fn();
-      mockedUseUASButton.mockReturnValue({
-        isSaved: true,
-        isLoading: false,
-        isUpdating: false,
-        actionResult: { status: 'success', action: 'save' },
-        resetActionResult: mockResetActionResult,
-        handleSaveAction: mockHandleSaveAction,
+      mockedUseUASButton.mockImplementation(function useMockUASButton() {
+        const [actionResult, setActionResult] = useState<UASActionResult>({
+          status: 'success',
+          action: UASAction.SAVE,
+        });
+        return {
+          isSaved: true,
+          isLoading: false,
+          isUpdating: false,
+          actionResult,
+          resetActionResult: () => {
+            mockResetActionResult();
+            setActionResult(null);
+          },
+          handleSaveAction: mockHandleSaveAction,
+        };
       });
 
       await act(async () =>
@@ -329,6 +342,34 @@ describe('SaveArticleButton', () => {
 
       expect(mockResetActionResult).toHaveBeenCalledTimes(1);
       expect(screen.queryByTestId('action-tooltip')).not.toBeInTheDocument();
+    });
+
+    it('reflects action results that change after mounting', () => {
+      const { rerender } = render(
+        <SaveArticleButton {...defaultProps} />,
+        signedInRenderOptions,
+      );
+      expect(screen.queryByTestId('action-tooltip')).not.toBeInTheDocument();
+
+      mockedUseUASButton.mockReturnValue({
+        isSaved: true,
+        actionResult: { status: 'success', action: 'save' },
+      });
+      rerender(<SaveArticleButton {...defaultProps} />);
+      expect(screen.getByTestId('action-tooltip')).toBeInTheDocument();
+
+      mockedUseUASButton.mockReturnValue({ isSaved: true, actionResult: null });
+      rerender(<SaveArticleButton {...defaultProps} />);
+      expect(screen.queryByTestId('action-tooltip')).not.toBeInTheDocument();
+
+      mockedUseUASButton.mockReturnValue({
+        isSaved: false,
+        actionResult: { status: 'success', action: 'remove' },
+      });
+      rerender(<SaveArticleButton {...defaultProps} />);
+      expect(screen.getByTestId('action-tooltip')).toHaveTextContent(
+        actionTooltipTranslations.removed.title,
+      );
     });
 
     it('does not show a tooltip when there is no action result', async () => {

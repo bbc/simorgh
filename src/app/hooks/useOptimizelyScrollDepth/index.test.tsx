@@ -1,8 +1,9 @@
-import { PropsWithChildren } from 'react';
+import { PropsWithChildren, StrictMode } from 'react';
 import {
   renderHook,
   act,
   cleanup,
+  fireEvent,
 } from '#app/components/react-testing-library-with-providers';
 
 import { OptimizelyProvider, ReactSDKClient } from '@optimizely/react-sdk';
@@ -47,15 +48,17 @@ const wrapper = ({
 );
 
 describe('useOptimizelyScrollDepth', () => {
-  const addEventListenerSpy = jest.spyOn(document, 'addEventListener');
-  const removeEventListenerSpy = jest.spyOn(document, 'removeEventListener');
+  let addEventListenerSpy: jest.SpyInstance;
+  let removeEventListenerSpy: jest.SpyInstance;
 
   beforeEach(() => {
     jest.clearAllMocks();
+    addEventListenerSpy = jest.spyOn(document, 'addEventListener');
+    removeEventListenerSpy = jest.spyOn(document, 'removeEventListener');
   });
 
   afterEach(() => {
-    jest.resetAllMocks();
+    jest.restoreAllMocks();
   });
 
   it('should call add event listener with scroll', () => {
@@ -110,6 +113,51 @@ describe('useOptimizelyScrollDepth', () => {
       'scroll',
       scrollListener,
     );
+  });
+
+  it('tracks actual scroll events only once across StrictMode effect replay', () => {
+    jest
+      .spyOn(document.documentElement, 'scrollHeight', 'get')
+      .mockReturnValue(1000);
+    jest
+      .spyOn(document.documentElement, 'clientHeight', 'get')
+      .mockReturnValue(500);
+    jest
+      .spyOn(document.documentElement, 'scrollTop', 'get')
+      .mockReturnValue(500);
+
+    renderHook(() => useOptimizelyScrollDepth(), {
+      wrapper: ({ children }) => (
+        <StrictMode>{wrapper({ children })}</StrictMode>
+      ),
+    });
+
+    fireEvent.scroll(document);
+    fireEvent.scroll(document);
+
+    expect(optimizelyMock.track.mock.calls).toEqual([
+      ['scroll25'],
+      ['scroll50'],
+      ['scroll75'],
+      ['scroll100'],
+    ]);
+  });
+
+  it('does not retrack previously reported thresholds when the client changes', () => {
+    let client: Partial<ReactSDKClient> = optimizelyMock;
+    const { result, rerender } = renderHook(() => useOptimizelyScrollDepth(), {
+      wrapper: ({ children }) => wrapper({ children, mockOptimizely: client }),
+    });
+    act(() => result.current.setScrollDepth(100));
+
+    const nextClient = { ...optimizelyMock, track: jest.fn() };
+    client = nextClient;
+    rerender();
+    act(() => result.current.setScrollDepth(50));
+    act(() => result.current.setScrollDepth(100));
+
+    expect(optimizelyMock.track).toHaveBeenCalledTimes(4);
+    expect(nextClient.track).not.toHaveBeenCalled();
   });
 
   it('should fire event when scroll depth reaches 25% threshold', () => {
