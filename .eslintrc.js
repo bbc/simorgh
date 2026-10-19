@@ -148,15 +148,6 @@ module.exports = {
     },
     // Keep existing compiler findings visible; unaffected files and rules retain recommended severities.
     {
-      files: [
-        'src/app/components/Curation/Subhead/index.tsx',
-        'src/app/legacy/containers/PageHandlers/withOptimizelyProvider/index.client.test.tsx',
-      ],
-      rules: {
-        'react-hooks/static-components': 'warn',
-      },
-    },
-    {
       files: ['src/app/contexts/ReverbParamsContext/index.tsx'],
       rules: {
         'react-hooks/preserve-manual-memoization': 'warn',
